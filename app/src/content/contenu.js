@@ -4,15 +4,36 @@
 //   content/<matière>/<couche>.json une couche de contenu, indexée par thème
 //   content/commun/*.json           contenu qui ne dépend d'aucune matière
 // Le contenu se corrige dans ces fichiers, sans toucher au code.
+//
+// Chargement à la demande : au démarrage, seul l'index léger (noms, couleurs,
+// identifiants des thèmes et des exercices) et le contenu commun sont chargés.
+// Les fichiers d'une matière arrivent quand on l'ouvre (un fichier compilé par
+// matière, voir vite.config.js).
+import INDEX from 'virtual:contenu-index'
 import { genVerbEN, genVerbES, genGrammarEN, genGrammarES } from '../data/langgen.js'
 
-const FICHIERS = import.meta.glob('../../content/**/*.json', { eager: true, import: 'default' })
+const COMMUN = import.meta.glob('../../content/commun/*.json', { eager: true, import: 'default' })
+const FICHIERS = import.meta.glob(['../../content/*/*.json', '!../../content/commun/*.json'], { import: 'default' })
 
-function fichier(chemin) {
-  return FICHIERS[`../../content/${chemin}`]
+export const ORDRE_MATIERES = INDEX.ordre
+
+// Matières de l'index : objets complétés sur place au chargement.
+export const MATIERES = INDEX.matieres
+
+export function commun(nom) {
+  const data = COMMUN[`../../content/commun/${nom}.json`]
+  if (!data) throw new Error(`Contenu commun introuvable : content/commun/${nom}.json`)
+  return data
 }
 
-export const ORDRE_MATIERES = fichier('ordre.json')
+// Couches de contenu, indexées par thème, remplies au fil des chargements.
+export const NOMS_COUCHES = [
+  'cours-complets', 'cours-reels', 'enrichissements', 'philo-longue-duree',
+  'approfondi-1', 'approfondi-2', 'approfondi-3', 'approfondi-4', 'sic-si',
+  'histoire-approfondie', 'management-approfondi', 'definitions', 'pieges',
+  'cas-pratiques', 'etudes-documents', 'exercices-sections',
+]
+export const COUCHES = Object.fromEntries(NOMS_COUCHES.map((n) => [n, {}]))
 
 // Les exercices de langues générés à la volée (types « verbs » et « grammar »)
 // désignent leur générateur par son nom (« gen »: "genVerbEN") : on le remplace
@@ -28,25 +49,37 @@ function relierGenerateurs(m) {
       g.gen = GENERATEURS[g.gen]
     }
   }
+}
+
+// Remplace le contenu d'un objet en gardant son identité (les pages qui le
+// tiennent déjà voient la nouvelle version) et l'ordre des champs de la source.
+export function remplacerEnPlace(cible, source) {
+  for (const k of Object.keys(cible)) delete cible[k]
+  return Object.assign(cible, source)
+}
+
+// Charge les fichiers d'une matière : complète l'objet matière de l'index et
+// ses thèmes, et remplit les couches. Ne fait PAS l'assemblage (data/index.js).
+export async function chargerFichiers(id) {
+  const m = MATIERES.find((x) => x.id === id)
+  if (!m) throw new Error(`Matière inconnue : ${id}`)
+  const prefixe = `../../content/${id}/`
+  const chemins = Object.keys(FICHIERS).filter((p) => p.startsWith(prefixe))
+  const contenus = await Promise.all(chemins.map((p) => FICHIERS[p]()))
+  const parNom = {}
+  chemins.forEach((p, i) => { parNom[p.slice(prefixe.length, -'.json'.length)] = contenus[i] })
+  const complet = parNom.matiere
+  if (!complet) throw new Error(`Matière introuvable : content/${id}/matiere.json`)
+  // Copie profonde : le module JSON reste intact si l'app recharge la matière.
+  const source = JSON.parse(JSON.stringify(complet))
+  const themes = m.chapters
+  source.chapters.forEach((c, i) => {
+    const cible = themes.find((t) => t.id === c.id)
+    if (cible) { remplacerEnPlace(cible, c); themes[i] = cible } else themes[i] = c
+  })
+  themes.length = source.chapters.length
+  remplacerEnPlace(m, { ...source, chapters: themes })
+  relierGenerateurs(m)
+  for (const nom of NOMS_COUCHES) if (parNom[nom]) Object.assign(COUCHES[nom], parNom[nom])
   return m
-}
-
-export function matiere(id) {
-  const m = fichier(`${id}/matiere.json`)
-  if (!m) throw new Error(`Matière introuvable : content/${id}/matiere.json`)
-  return relierGenerateurs(m)
-}
-
-// Une couche (cours complets, cours approfondis, définitions…) réunie pour
-// toutes les matières : { [id de thème]: … }.
-export function couche(nom) {
-  const out = {}
-  for (const id of ORDRE_MATIERES) Object.assign(out, fichier(`${id}/${nom}.json`) || {})
-  return out
-}
-
-export function commun(nom) {
-  const data = fichier(`commun/${nom}.json`)
-  if (!data) throw new Error(`Contenu commun introuvable : content/commun/${nom}.json`)
-  return data
 }

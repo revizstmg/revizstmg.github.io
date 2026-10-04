@@ -107,22 +107,23 @@ transversales ont besoin de tout.
 ```
 app/
   content/                       le contenu, en JSON
-    index.json                   index léger (généré, ne pas modifier à la main)
+    ordre.json                   ordre d'affichage des matières
     commun/                      contenu qui ne dépend d'aucune matière
-      formules.json, methodo.json, glossaire.json, comprehension.json,
-      boutique.json, definitions-generiques.json
+      formules.json, methodo.json, glossaire.json, boutique.json,
+      definitions-matieres.json
     <id-matière>/                un dossier par matière (gestion-finance, droit…)
       matiere.json               la matière et ses thèmes de base
       cours-complets.json        couche lessons
       cours-reels.json           couche coursreels
       ...                        une couche = un fichier, seulement si la matière en a
   scripts/
-    contenu.mjs                  génère content/index.json et vérifie le contenu
+    plugin-contenu.mjs           fabrique l'index léger à la compilation
+    publier.mjs                  dépose la version compilée à la racine
     inventaire.mjs               inventaire du code (ce document)
   src/
     content/                     chargement et assemblage du contenu
-      registry.js                index, chargement par matière, assemblage
-      generate.js                génération des exercices et flashcards
+      contenu.js                 lecture des fichiers, chargement par matière
+      Contenu.jsx                attente du contenu dans les pages
     data/                        moteurs restants (study, srs, coachAI…)
     pages/, components/, games/  inchangés au départ
   tests/                         tests (contenu, logique, parcours)
@@ -134,27 +135,34 @@ Les clés des fichiers de couche restent les identifiants de thème actuels
 
 ### Chargement
 
-- `content/index.json` est importé au démarrage. Il donne, pour chaque matière et
-  chaque thème, ce dont le store et les menus ont besoin.
+- L'index léger (module `virtual:contenu-index`) est fabriqué à la compilation à
+  partir des `matiere.json`. Il donne, pour chaque matière et chaque thème, ce
+  dont le store et les menus ont besoin.
 - `loadSubject(id)` importe les fichiers de la matière (un fichier par matière
   après compilation), assemble les thèmes comme aujourd'hui et complète l'index.
   Les objets de l'index sont complétés sur place : les pages qui les ont déjà en
   main voient le contenu arriver.
 - `loadAll()` charge toutes les matières, pour les pages transversales.
-- Un composant `<ContentGate>` affiche un indicateur le temps du chargement.
+- Le composant `<Contenu>` affiche un indicateur le temps du chargement.
 - Les pages sont elles aussi chargées à la demande (`React.lazy`).
 
 ### Mise en ligne
 
 Le build produit `index.html` et un dossier `assets/` de fichiers nommés selon
-leur contenu (`assets/gestion-finance-3f2a9c.js`). Le workflow remplace la racine
-du dépôt par ce résultat après avoir lancé les tests.
+leur contenu (`assets/contenu-droit-DwRPmNwM.js`). Après les tests, le workflow
+dépose ce résultat à la racine du dépôt avec `scripts/publier.mjs`, qui garde les
+fichiers de la version précédente pour les élèves qui l'ont encore ouverte.
 
 ## 3. Étapes de la refonte
 
-1. **Tests** : figer le comportement actuel avant de toucher à quoi que ce soit.
-2. **Contenu en JSON** : déplacer les données, sans changer le résultat assemblé.
-3. **Chargement à la demande** : nouveau build, chargement par matière, service
-   worker adapté.
+1. ✅ **Tests** : figer le comportement actuel avant de toucher à quoi que ce soit.
+2. ✅ **Contenu en JSON** : 138 fichiers dans `app/content/`, résultat assemblé
+   identique (empreinte inchangée).
+3. ✅ **Chargement à la demande** : un fichier par page et par matière, index léger
+   fabriqué à la compilation (`scripts/plugin-contenu.mjs`), `<Contenu>` pour
+   attendre une matière, service worker qui met tout en cache. Démarrage : 590 Ko au
+   lieu de 2,64 Mo.
 4. Ensuite : trier les pages, ranger le code par fonctionnalité, unifier le moteur
-   d'exercices, design commun.
+   d'exercices, design commun. Le code commun (590 Ko) peut encore maigrir en
+   chargeant à la demande les panneaux du `Layout` (personnalisation,
+   dictionnaire, accueil).

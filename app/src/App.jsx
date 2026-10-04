@@ -1,35 +1,39 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route, Navigate, useParams } from 'react-router-dom'
 import { useStore } from './store.jsx'
 import Layout from './components/Layout.jsx'
-import Landing from './pages/Landing.jsx'
-import Home from './pages/Home.jsx'
-import Subject from './pages/Subject.jsx'
-import Theme from './pages/Theme.jsx'
-import Chapter from './pages/Chapter.jsx'
-import Favoris from './pages/Favoris.jsx'
-import Badges from './pages/Badges.jsx'
-import Leaderboard from './pages/Leaderboard.jsx'
-import Classe from './pages/Classe.jsx'
-import Profile from './pages/Profile.jsx'
-import Coach from './pages/Coach.jsx'
-import Revise from './pages/Revise.jsx'
-import Parent from './pages/Parent.jsx'
-import FlashcardsPage from './pages/FlashcardsPage.jsx'
 import { getLinkedChild } from './parent.js'
-import BacBlanc from './pages/BacBlanc.jsx'
-import Programme from './pages/Programme.jsx'
-import GrandOral from './pages/GrandOral.jsx'
-import CoachAI from './pages/CoachAI.jsx'
-import PhotoFiche from './pages/PhotoFiche.jsx'
-import DailyChallenge from './pages/DailyChallenge.jsx'
-import Express from './pages/Express.jsx'
-import Formulas from './pages/Formulas.jsx'
-import Methodo from './pages/Methodo.jsx'
-import Shop from './pages/Shop.jsx'
-import Privacy from './pages/Privacy.jsx'
-import Faq from './pages/Faq.jsx'
-import Guide from './pages/Guide.jsx'
-import Friends from './pages/Friends.jsx'
+import { Chargement, ContenuMatiere, ContenuFiliere } from './content/Contenu.jsx'
+
+// Chaque page est un fichier compilé à part, chargé quand on l'ouvre.
+const Landing = lazy(() => import('./pages/Landing.jsx'))
+const Home = lazy(() => import('./pages/Home.jsx'))
+const Subject = lazy(() => import('./pages/Subject.jsx'))
+const Theme = lazy(() => import('./pages/Theme.jsx'))
+const Chapter = lazy(() => import('./pages/Chapter.jsx'))
+const Favoris = lazy(() => import('./pages/Favoris.jsx'))
+const Badges = lazy(() => import('./pages/Badges.jsx'))
+const Leaderboard = lazy(() => import('./pages/Leaderboard.jsx'))
+const Classe = lazy(() => import('./pages/Classe.jsx'))
+const Profile = lazy(() => import('./pages/Profile.jsx'))
+const Coach = lazy(() => import('./pages/Coach.jsx'))
+const Revise = lazy(() => import('./pages/Revise.jsx'))
+const Parent = lazy(() => import('./pages/Parent.jsx'))
+const FlashcardsPage = lazy(() => import('./pages/FlashcardsPage.jsx'))
+const BacBlanc = lazy(() => import('./pages/BacBlanc.jsx'))
+const Programme = lazy(() => import('./pages/Programme.jsx'))
+const GrandOral = lazy(() => import('./pages/GrandOral.jsx'))
+const CoachAI = lazy(() => import('./pages/CoachAI.jsx'))
+const PhotoFiche = lazy(() => import('./pages/PhotoFiche.jsx'))
+const DailyChallenge = lazy(() => import('./pages/DailyChallenge.jsx'))
+const Express = lazy(() => import('./pages/Express.jsx'))
+const Formulas = lazy(() => import('./pages/Formulas.jsx'))
+const Methodo = lazy(() => import('./pages/Methodo.jsx'))
+const Shop = lazy(() => import('./pages/Shop.jsx'))
+const Privacy = lazy(() => import('./pages/Privacy.jsx'))
+const Faq = lazy(() => import('./pages/Faq.jsx'))
+const Guide = lazy(() => import('./pages/Guide.jsx'))
+const Friends = lazy(() => import('./pages/Friends.jsx'))
 
 // Rétro-compatibilité : les anciens liens /subject/:sid/chapter/:cid
 // (où le chapitre était en fait un thème) redirigent vers la page Thème.
@@ -54,13 +58,14 @@ function RootEntry() {
 export default function App() {
   return (
     <Layout>
+      <Suspense fallback={<Chargement />}>
       <Routes>
         <Route path="/" element={<RootEntry />} />
         <Route path="/changer" element={<Landing />} />
         <Route path="/accueil" element={<Home />} />
-        <Route path="/subject/:sid" element={<Subject />} />
-        <Route path="/subject/:sid/theme/:tid" element={<Theme />} />
-        <Route path="/subject/:sid/theme/:tid/chapter/:cidx" element={<Chapter />} />
+        <Route path="/subject/:sid" element={<ContenuMatiere><Subject /></ContenuMatiere>} />
+        <Route path="/subject/:sid/theme/:tid" element={<ContenuMatiere><Theme /></ContenuMatiere>} />
+        <Route path="/subject/:sid/theme/:tid/chapter/:cidx" element={<ContenuMatiere><Chapter /></ContenuMatiere>} />
         <Route path="/subject/:sid/chapter/:cid" element={<OldChapterRedirect />} />
         <Route path="/favoris" element={<Favoris />} />
         <Route path="/badges" element={<Badges />} />
@@ -70,13 +75,13 @@ export default function App() {
         <Route path="/revision" element={<Revise />} />
         <Route path="/revision/deck/:deckId" element={<FlashcardsPage />} />
         <Route path="/parent" element={<Parent />} />
-        <Route path="/bac-blanc" element={<BacBlanc />} />
+        <Route path="/bac-blanc" element={<ContenuFiliere><BacBlanc /></ContenuFiliere>} />
         <Route path="/programme" element={<Programme />} />
         <Route path="/grand-oral" element={<GrandOral />} />
-        <Route path="/coach-ia" element={<CoachAI />} />
+        <Route path="/coach-ia" element={<ContenuFiliere><CoachAI /></ContenuFiliere>} />
         <Route path="/fiches-photo" element={<PhotoFiche />} />
-        <Route path="/defi" element={<DailyChallenge />} />
-        <Route path="/express" element={<Express />} />
+        <Route path="/defi" element={<ContenuFiliere><DailyChallenge /></ContenuFiliere>} />
+        <Route path="/express" element={<ContenuFiliere><Express /></ContenuFiliere>} />
         <Route path="/formules" element={<Formulas />} />
         <Route path="/methodo" element={<Methodo />} />
         <Route path="/boutique" element={<Shop />} />
@@ -84,9 +89,10 @@ export default function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/classement" element={<Leaderboard />} />
-        <Route path="/amis" element={<Friends />} />
+        <Route path="/amis" element={<ContenuFiliere><Friends /></ContenuFiliere>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      </Suspense>
     </Layout>
   )
 }

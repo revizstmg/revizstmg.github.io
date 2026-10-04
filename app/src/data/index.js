@@ -1,26 +1,33 @@
-// Assemblage de toutes les matières à partir du contenu JSON (app/content/,
-// voir src/content/contenu.js). Pour ajouter un chapitre : l'ajouter dans
+// Assemblage des matières à partir du contenu JSON (app/content/, voir
+// src/content/contenu.js). Pour ajouter un chapitre : l'ajouter dans
 // content/<matière>/matiere.json. Rien d'autre à toucher dans l'application.
-import { ORDRE_MATIERES, matiere, couche } from '../content/contenu.js'
+//
+// Chargement à la demande : SUBJECTS et ALL_CHAPTERS sont disponibles dès le
+// démarrage dans leur version légère (noms, couleurs, identifiants des
+// exercices). chargerMatiere(id) charge les fichiers d'une matière, assemble ses
+// thèmes et complète ces objets SUR PLACE. Les fonctions qui lisent le contenu
+// (themeChapters, buildQuiz, decks…) supposent la matière chargée : les pages
+// qui s'en servent passent par <Contenu> (src/content/Contenu.jsx).
+import { ORDRE_MATIERES, MATIERES, COUCHES, chargerFichiers, remplacerEnPlace } from '../content/contenu.js'
 import { THEME_TERMS, subjectFallbackFor } from './keyterms.js'
 import { PIEGES } from './pieges.js'
 
-const LESSONS = couche('cours-complets')
-const COURS_REELS = couche('cours-reels')
-const ENRICH = couche('enrichissements')
-const PHILO_LONG = couche('philo-longue-duree')
-const APPROF = couche('approfondi-1')
-const APPROF2 = couche('approfondi-2')
-const APPROF3 = couche('approfondi-3')
-const APPROF4 = couche('approfondi-4')
-const SICSI = couche('sic-si')
-const HIST_DEEP = couche('histoire-approfondie')
-const MGMT_DEEP = couche('management-approfondi')
-const DOC_STUDIES = couche('etudes-documents')
-const CAS_PRATIQUES = couche('cas-pratiques')
-const GAME_SECTION = couche('exercices-sections')
+const LESSONS = COUCHES['cours-complets']
+const COURS_REELS = COUCHES['cours-reels']
+const ENRICH = COUCHES.enrichissements
+const PHILO_LONG = COUCHES['philo-longue-duree']
+const APPROF = COUCHES['approfondi-1']
+const APPROF2 = COUCHES['approfondi-2']
+const APPROF3 = COUCHES['approfondi-3']
+const APPROF4 = COUCHES['approfondi-4']
+const SICSI = COUCHES['sic-si']
+const HIST_DEEP = COUCHES['histoire-approfondie']
+const MGMT_DEEP = COUCHES['management-approfondi']
+const DOC_STUDIES = COUCHES['etudes-documents']
+const CAS_PRATIQUES = COUCHES['cas-pratiques']
+const GAME_SECTION = COUCHES['exercices-sections']
 
-export const SUBJECTS = ORDRE_MATIERES.map(matiere)
+export const SUBJECTS = MATIERES
 
 // Index chapitre -> { subject, ...chapitre } pour un accès direct par id.
 // Les « cours complets » de lessons.js (facultatifs) enrichissent chaque
@@ -144,85 +151,141 @@ function dedupeCourse(cours) {
   return out
 }
 
+// Index thème -> { ...thème, subjectId, subjectName, color } pour un accès
+// direct par id. Version légère au démarrage, complétée au chargement.
 export const ALL_CHAPTERS = {}
 for (const s of SUBJECTS) {
-  for (const c of s.chapters) {
-    const lesson = LESSONS[c.id]
-    if (lesson) {
-      if (lesson.intro) c.intro = lesson.intro
-      if (lesson.cours) c.cours = lesson.cours
-      if (lesson.resources) c.resources = lesson.resources
-      if (lesson.essentiel) c.essentiel = lesson.essentiel
-    }
-    // Cours « par l'exemple réel » (matières de gestion) : remplace le corps du
-    // cours par une explication ancrée dans un exemple concret. Les définitions
-    // ne sont plus dans le cours mais uniquement dans l'encadré « Définitions
-    // clés ». Appliqué après LESSONS pour bien remplacer.
-    if (COURS_REELS[c.id]?.length) c.cours = COURS_REELS[c.id]
-    // Enrichissement additif (exemples résolus, sections complémentaires,
-    // ressources) : on n'écrase rien, on ajoute à la fin.
-    const enr = ENRICH[c.id]
-    if (enr) {
-      if (enr.sections?.length) c.cours = [...(c.cours || []), ...enr.sections]
-      if (enr.resources?.length) c.resources = [...(c.resources || []), ...enr.resources]
-    }
-    // Cours « longue durée » de philosophie : sections supplémentaires ajoutées
-    // à la suite (définitions approfondies, thèses, textes commentés, dissertations).
-    const plong = PHILO_LONG[c.id]
-    if (plong?.length) c.cours = [...(c.cours || []), ...plong]
-    // Cours « approfondis » du tronc STMG (Gestion-Finance, Management, Droit,
-    // Économie, Maths) : plusieurs chapitres développés ajoutés à la suite.
-    // Chaque section reçoit un « group » (approf / methode / cas) pour être
-    // rangée dans une catégorie repliable sur la page du thème.
-    const appr = APPROF[c.id]
-    if (appr?.length) c.cours = [...(c.cours || []), ...appr.map((s) => ({ ...s, group: courseGroupOf(s.h) }))]
-    const appr2 = APPROF2[c.id]
-    if (appr2?.length) c.cours = [...(c.cours || []), ...appr2.map((s) => ({ ...s, group: courseGroupOf(s.h) }))]
-    const appr3 = APPROF3[c.id]
-    if (appr3?.length) c.cours = [...(c.cours || []), ...appr3.map((s) => ({ ...s, group: courseGroupOf(s.h) }))]
-    const appr4 = APPROF4[c.id]
-    if (appr4?.length) c.cours = [...(c.cours || []), ...appr4.map((s) => ({ ...s, group: courseGroupOf(s.h) }))]
-    // SIC & SI : chapitres du programme rattachés à la catégorie principale
-    // « 📘 Le cours » (pas de « group » → première catégorie, ouverte).
-    const sicsi = SICSI[c.id]
-    if (sicsi?.length) c.cours = [...(c.cours || []), ...sicsi]
-    // Histoire : chapitres approfondis (≈5-6 pages) placés EN TÊTE de la
-    // catégorie principale « 📘 Le cours » (pas de « group »).
-    const hdeep = HIST_DEEP[c.id]
-    if (hdeep?.length) c.cours = [...hdeep, ...(c.cours || [])]
-    // Management : cours complet (chapitres développés) en tête de la catégorie
-    // principale « 📘 Le cours » (pas de « group »).
-    const mdeep = MGMT_DEEP[c.id]
-    if (mdeep?.length) c.cours = [...mdeep, ...(c.cours || [])]
-    // Masquage des sections « prérequis de Première » (voir PREREQ_SECTIONS) :
-    // le cours de Terminale n'affiche que du niveau Terminale. Les notions
-    // restent dans la banque d'exercices → toujours mobilisables en exercice.
-    const prereq = PREREQ_SECTIONS[c.id]
-    if (prereq?.length && Array.isArray(c.cours)) {
-      c.cours = c.cours.filter((sec) => !prereq.some((rx) => rx.test(_strip(sec.h))))
-    }
-    // Dédoublonnage : un même sujet ne doit apparaître qu'une fois (version la
-    // plus complète). Voir dedupeCourse plus haut.
-    if (Array.isArray(c.cours) && c.cours.length > 1) c.cours = dedupeCourse(c.cours)
-    // Lisibilité : ouvrir le cours par son accroche concrète (les « cours réels »
-    // sont écrits comme des mises en situation d'introduction). On remonte ces
-    // sections en tête de la catégorie « 📘 Le cours ».
-    const hookHeads = new Set((COURS_REELS[c.id] || []).map((s) => s.h))
-    if (hookHeads.size && Array.isArray(c.cours) && c.cours.length > 1) {
-      const isHook = (s) => !s.group && hookHeads.has(s.h)
-      c.cours = [...c.cours.filter(isHook), ...c.cours.filter((s) => !isHook(s))]
-    }
-    // Filet universel « cours clair » : toute page de thème s'ouvre sur une intro
-    // et se referme sur un mémo « L'essentiel », même sans cours rédigé à la main.
-    if (!c.intro) { const i = synthIntro(c); if (i) c.intro = i }
-    if (!c.essentiel || !c.essentiel.length) { const e = synthEssentiel(c); if (e) c.essentiel = e }
-    // Étude de documents (Droit & Économie) : ajoutée aux jeux du thème.
-    const docStudy = DOC_STUDIES[c.id]
-    if (docStudy && !(c.games || []).some((g) => g.id === docStudy.id)) {
-      c.games = [...(c.games || []), docStudy]
-    }
-    ALL_CHAPTERS[c.id] = { ...c, subjectId: s.id, subjectName: s.name, color: s.color }
+  for (const c of s.chapters) ALL_CHAPTERS[c.id] = { ...c, subjectId: s.id, subjectName: s.name, color: s.color }
+}
+
+// Assemble un thème à partir de ses couches (ordre et règles inchangés).
+// Les « cours complets » (facultatifs) enrichissent chaque thème : introduction,
+// sections développées, exemples, ressources vidéos.
+function assemblerTheme(c) {
+  const lesson = LESSONS[c.id]
+  if (lesson) {
+    if (lesson.intro) c.intro = lesson.intro
+    if (lesson.cours) c.cours = lesson.cours
+    if (lesson.resources) c.resources = lesson.resources
+    if (lesson.essentiel) c.essentiel = lesson.essentiel
   }
+  // Cours « par l'exemple réel » (matières de gestion) : remplace le corps du
+  // cours par une explication ancrée dans un exemple concret. Les définitions
+  // ne sont plus dans le cours mais uniquement dans l'encadré « Définitions
+  // clés ». Appliqué après LESSONS pour bien remplacer.
+  if (COURS_REELS[c.id]?.length) c.cours = COURS_REELS[c.id]
+  // Enrichissement additif (exemples résolus, sections complémentaires,
+  // ressources) : on n'écrase rien, on ajoute à la fin.
+  const enr = ENRICH[c.id]
+  if (enr) {
+    if (enr.sections?.length) c.cours = [...(c.cours || []), ...enr.sections]
+    if (enr.resources?.length) c.resources = [...(c.resources || []), ...enr.resources]
+  }
+  // Cours « longue durée » de philosophie : sections supplémentaires ajoutées
+  // à la suite (définitions approfondies, thèses, textes commentés, dissertations).
+  const plong = PHILO_LONG[c.id]
+  if (plong?.length) c.cours = [...(c.cours || []), ...plong]
+  // Cours « approfondis » du tronc STMG (Gestion-Finance, Management, Droit,
+  // Économie, Maths) : plusieurs chapitres développés ajoutés à la suite.
+  // Chaque section reçoit un « group » (approf / methode / cas) pour être
+  // rangée dans une catégorie repliable sur la page du thème.
+  const appr = APPROF[c.id]
+  if (appr?.length) c.cours = [...(c.cours || []), ...appr.map((s) => ({ ...s, group: courseGroupOf(s.h) }))]
+  const appr2 = APPROF2[c.id]
+  if (appr2?.length) c.cours = [...(c.cours || []), ...appr2.map((s) => ({ ...s, group: courseGroupOf(s.h) }))]
+  const appr3 = APPROF3[c.id]
+  if (appr3?.length) c.cours = [...(c.cours || []), ...appr3.map((s) => ({ ...s, group: courseGroupOf(s.h) }))]
+  const appr4 = APPROF4[c.id]
+  if (appr4?.length) c.cours = [...(c.cours || []), ...appr4.map((s) => ({ ...s, group: courseGroupOf(s.h) }))]
+  // SIC & SI : chapitres du programme rattachés à la catégorie principale
+  // « 📘 Le cours » (pas de « group » → première catégorie, ouverte).
+  const sicsi = SICSI[c.id]
+  if (sicsi?.length) c.cours = [...(c.cours || []), ...sicsi]
+  // Histoire : chapitres approfondis (≈5-6 pages) placés EN TÊTE de la
+  // catégorie principale « 📘 Le cours » (pas de « group »).
+  const hdeep = HIST_DEEP[c.id]
+  if (hdeep?.length) c.cours = [...hdeep, ...(c.cours || [])]
+  // Management : cours complet (chapitres développés) en tête de la catégorie
+  // principale « 📘 Le cours » (pas de « group »).
+  const mdeep = MGMT_DEEP[c.id]
+  if (mdeep?.length) c.cours = [...mdeep, ...(c.cours || [])]
+  // Masquage des sections « prérequis de Première » (voir PREREQ_SECTIONS) :
+  // le cours de Terminale n'affiche que du niveau Terminale. Les notions
+  // restent dans la banque d'exercices → toujours mobilisables en exercice.
+  const prereq = PREREQ_SECTIONS[c.id]
+  if (prereq?.length && Array.isArray(c.cours)) {
+    c.cours = c.cours.filter((sec) => !prereq.some((rx) => rx.test(_strip(sec.h))))
+  }
+  // Dédoublonnage : un même sujet ne doit apparaître qu'une fois (version la
+  // plus complète). Voir dedupeCourse plus haut.
+  if (Array.isArray(c.cours) && c.cours.length > 1) c.cours = dedupeCourse(c.cours)
+  // Lisibilité : ouvrir le cours par son accroche concrète (les « cours réels »
+  // sont écrits comme des mises en situation d'introduction). On remonte ces
+  // sections en tête de la catégorie « 📘 Le cours ».
+  const hookHeads = new Set((COURS_REELS[c.id] || []).map((s) => s.h))
+  if (hookHeads.size && Array.isArray(c.cours) && c.cours.length > 1) {
+    const isHook = (s) => !s.group && hookHeads.has(s.h)
+    c.cours = [...c.cours.filter(isHook), ...c.cours.filter((s) => !isHook(s))]
+  }
+  // Filet universel « cours clair » : toute page de thème s'ouvre sur une intro
+  // et se referme sur un mémo « L'essentiel », même sans cours rédigé à la main.
+  if (!c.intro) { const i = synthIntro(c); if (i) c.intro = i }
+  if (!c.essentiel || !c.essentiel.length) { const e = synthEssentiel(c); if (e) c.essentiel = e }
+  // Étude de documents (Droit & Économie) : ajoutée aux jeux du thème.
+  const docStudy = DOC_STUDIES[c.id]
+  if (docStudy && !(c.games || []).some((g) => g.id === docStudy.id)) {
+    c.games = [...(c.games || []), docStudy]
+  }
+}
+
+const CHARGEMENTS = new Map()
+const CHARGEES = new Set()
+const ABONNES = new Set()
+
+export function matiereChargee(id) {
+  return CHARGEES.has(id)
+}
+
+// Charge une matière (une seule fois) et assemble ses thèmes.
+export function chargerMatiere(id) {
+  if (!CHARGEMENTS.has(id)) {
+    const p = (async () => {
+      const s = await chargerFichiers(id)
+      for (const c of s.chapters) {
+        assemblerTheme(c)
+        const entree = { ...c, subjectId: s.id, subjectName: s.name, color: s.color }
+        if (ALL_CHAPTERS[c.id]) remplacerEnPlace(ALL_CHAPTERS[c.id], entree)
+        else ALL_CHAPTERS[c.id] = entree
+      }
+      CHARGEES.add(id)
+      for (const fn of ABONNES) fn(id)
+      return s
+    })()
+    // Un échec (réseau coupé…) ne doit pas bloquer une nouvelle tentative.
+    p.catch(() => CHARGEMENTS.delete(id))
+    CHARGEMENTS.set(id, p)
+  }
+  return CHARGEMENTS.get(id)
+}
+
+export function chargerMatieres(ids) {
+  return Promise.all([...new Set(ids)].filter((id) => ORDRE_MATIERES.includes(id)).map(chargerMatiere))
+}
+
+export function chargerTout() {
+  return chargerMatieres(ORDRE_MATIERES)
+}
+
+// Charge la matière d'un thème (duels, favoris…).
+export function chargerPourTheme(themeId) {
+  const c = ALL_CHAPTERS[themeId]
+  return c ? chargerMatiere(c.subjectId) : Promise.resolve(null)
+}
+
+// Prévient quand une matière vient d'être chargée.
+export function surChargement(fn) {
+  ABONNES.add(fn)
+  return () => ABONNES.delete(fn)
 }
 
 export function getSubject(id) {

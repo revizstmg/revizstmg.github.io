@@ -6,13 +6,16 @@
 //   - ce n'était pas voulu : la refonte a changé ce que voit l'élève.
 // `EMPREINTE_DETAIL=1 npm test` écrit le détail de chaque thème dans
 // tests/.detail/ pour comparer deux versions.
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, beforeAll } from 'vitest'
 import { mkdirSync, writeFileSync } from 'node:fs'
 import * as C from '../src/data/index.js'
 import { avecGraine, empreinte, serialiser } from './outils.js'
 
 const DETAIL = process.env.EMPREINTE_DETAIL ? new URL('./.detail/', import.meta.url) : null
 if (DETAIL) mkdirSync(DETAIL, { recursive: true })
+
+// Le contenu se charge matière par matière : on charge tout avant l'empreinte.
+beforeAll(() => C.chargerTout())
 
 function ceQueVoitLEleve(themeId) {
   const theme = C.ALL_CHAPTERS[themeId]

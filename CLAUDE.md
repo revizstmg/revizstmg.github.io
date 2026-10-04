@@ -17,7 +17,7 @@ https://revizstmg.github.io. Documentation complète : `README.md`.
 cd app
 npm install
 npm run dev      # http://localhost:5173, routes sous /#/
-npm run build    # compile dans app/dist/
+npm run build    # compile dans app/dist/ (un fichier par page et par matière)
 npm test         # logique + empreinte du contenu (secondes)
 npm run test:parcours   # parcours navigateur, après un build (~3 min)
 ```
@@ -38,6 +38,10 @@ npm run test:parcours   # parcours navigateur, après un build (~3 min)
   « Le contenu »). On le corrige là, jamais dans le code.
 - `src/data/index.js` assemble les matières, applique les couches et génère les
   exercices et les flashcards à partir du texte des cours.
+- Le contenu d'une matière est chargé à la demande : au démarrage, `SUBJECTS` et
+  `ALL_CHAPTERS` n'ont que l'index léger (pas de `cours`, exercices réduits à leur
+  `id`). Toute page qui lit le contenu doit passer par `<ContenuMatiere>` ou
+  `<ContenuFiliere>` (`src/content/Contenu.jsx`), ou appeler `chargerMatiere`.
 - Les cours de Terminale ne contiennent que des notions de Terminale. Les notions de
   Première servent seulement à formuler des exercices.
 - N'inventez aucune notion : tout doit correspondre au programme officiel de STMG.

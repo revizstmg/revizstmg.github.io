@@ -87,15 +87,30 @@ l'onglet Actions.
 ## Comment c'est construit
 
 - **React 18**, **React Router 6** (`HashRouter`), **Tailwind CSS 3**, **Vite 5**.
-- `vite-plugin-singlefile` met tout le JavaScript, le CSS et le contenu dans un seul
-  `index.html` d'environ 2,7 Mo.
-- `pwa-postbuild.mjs` copie ensuite le dossier `app/pwa/` (manifest, service worker,
-  icônes) à côté, et ajoute dans `index.html` les balises d'installation et
-  l'enregistrement du service worker.
+- **Chargement à la demande.** Le build produit `index.html` et un dossier
+  `assets/` de fichiers dont le nom change avec le contenu :
+  - le code commun de l'app (~590 Ko, ~200 Ko compressés), chargé au démarrage
+    avec un **index léger du contenu** (noms, couleurs, identifiants des thèmes et
+    des exercices), fabriqué à la compilation par `scripts/plugin-contenu.mjs` ;
+  - un fichier par page (`React.lazy` dans `App.jsx`) ;
+  - un fichier de contenu par matière (`contenu-droit-….js`, de 11 à 156 Ko),
+    chargé quand l'élève ouvre la matière.
+- **Qui charge quoi.** Le store, l'accueil, les menus, la recherche et les scores
+  n'ont besoin que de l'index léger. Les pages d'une matière (matière, thème,
+  chapitre) attendent sa matière ; le bac blanc, la révision express, le coach IA,
+  le défi du jour et les duels attendent les matières de la filière de l'élève. Ces
+  attentes passent par `src/content/Contenu.jsx`, qui affiche « Chargement du
+  cours… » le temps nécessaire.
+- **Hors ligne.** `pwa-postbuild.mjs` copie `app/pwa/` (manifest, service worker,
+  icônes) et écrit dans le service worker la liste de tous les fichiers compilés.
+  À l'installation, il les met tous en cache : après la première visite, toute
+  l'app marche sans réseau.
+- **Mises à jour.** Le service worker va d'abord chercher la page sur le réseau,
+  ce qui donne toujours la dernière version. Le script de publication garde en
+  ligne les fichiers de la version précédente, et l'app se recharge une fois si un
+  fichier d'une ancienne version manque (`main.jsx`).
 - Avec `base: './'` et le routage par `#`, le site fonctionne depuis n'importe quelle
   adresse, sans configuration de serveur.
-- Le service worker (`app/pwa/sw.js`) va d'abord chercher la page sur le réseau, ce
-  qui donne toujours la dernière version, et garde icônes et polices en cache.
 
 ## Arborescence
 
@@ -106,9 +121,9 @@ index.html, sw.js, …           version compilée servie par GitHub Pages (gén
 app/
   content/              le contenu pédagogique, en JSON (voir plus bas)
   tests/                tests de la logique, du contenu et des parcours
-  scripts/              outils (inventaire du code)
+  scripts/              index léger du contenu, publication, inventaire du code
   index.html            page d'entrée de Vite
-  vite.config.js        build en fichier unique vers app/dist
+  vite.config.js        build vers app/dist (un fichier par page et par matière)
   pwa-postbuild.mjs     ajoute manifest, service worker et icônes après le build
   pwa/                  manifest.webmanifest, sw.js, icônes (gen-icons.mjs les régénère)
   src/
@@ -118,7 +133,7 @@ app/
     pages/              28 écrans (accueil, matière, thème, chapitre, bac blanc, coach IA, amis…)
     components/         mise en page, affichage des cours, outils transverses
     games/              un composant par type d'exercice, orchestrés par GameHost.jsx
-    content/contenu.js  lecture du contenu JSON
+    content/            lecture et chargement du contenu (contenu.js, Contenu.jsx)
     data/               assemblage du contenu et moteurs (voir plus bas)
     auth.js             comptes élève et prof (Supabase Auth + table profiles)
     classroom.js        espace Classe
@@ -232,6 +247,5 @@ de son dossier.
 
 ## Limites connues (ce que la refonte doit régler)
 
-- Toute l'application est chargée d'un bloc, en un seul fichier de 2,7 Mo.
 - Il n'y a pas de schéma à jour de la base.
 - RévizSTMG partage encore sa base Supabase avec NAH.

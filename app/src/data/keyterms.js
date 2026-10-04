@@ -1,8 +1,9 @@
 // Banque de « Définitions clés » par thème, et banque de secours par matière.
 // Contenu : content/<matière>/definitions.json et content/commun/definitions-matieres.json.
-import { couche, commun } from '../content/contenu.js'
+// Les définitions d'un thème arrivent avec sa matière (chargement à la demande).
+import { COUCHES, commun } from '../content/contenu.js'
 
-export const THEME_TERMS = couche('definitions')
+export const THEME_TERMS = COUCHES.definitions
 export const SUBJECT_FALLBACK = commun('definitions-matieres')
 
 export function subjectFallbackFor(subjectId) {

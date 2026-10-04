@@ -1,12 +1,19 @@
 /* RévizSTMG — Service Worker
  * Stratégie :
+ *  - À l'installation : tous les fichiers de l'app sont mis en cache (code,
+ *    pages, contenu de chaque matière), pour que l'app entière marche hors
+ *    ligne après la première visite. La liste et la version sont écrites par
+ *    pwa-postbuild.mjs à chaque compilation.
  *  - Navigations / HTML : network-first (on récupère toujours la dernière
  *    version en ligne, et on retombe sur le cache hors-ligne).
- *  - Autres fichiers même origine (icônes, manifest) : cache-first.
+ *  - Autres fichiers même origine : cache-first (leurs noms changent avec
+ *    leur contenu, une version en cache n'est donc jamais périmée).
  *  - Requêtes cross-origin (Supabase, Google Fonts…) : jamais interceptées,
  *    elles passent directement au réseau.
  */
-const CACHE = 'revizstmg-v2'
+const VERSION = '__VERSION__'
+const PRECACHE = /* __PRECACHE__ */ []
+const CACHE = 'revizstmg-' + VERSION
 const FONT_CACHE = 'revizstmg-fonts-v1'
 const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com']
 const CORE = [
@@ -25,7 +32,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE).then((cache) =>
       // addAll échoue si UN fichier manque : on ajoute donc un par un, tolérant.
-      Promise.all(CORE.map((url) => cache.add(url).catch(() => null)))
+      Promise.all([...CORE, ...PRECACHE].map((url) => cache.add(url).catch(() => null)))
     )
   )
 })

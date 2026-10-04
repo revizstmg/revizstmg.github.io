@@ -87,10 +87,10 @@ jobs:
         id: publish
         run: |
           set -e
-          files=$(cd dist && ls -A)
-          for f in $files; do cp -rf "dist/$f" "./"; done
+          # Garde aussi les fichiers de la version précédente (voir le script).
+          node app/scripts/publier.mjs dist .
           rm -rf dist
-          git add -A -- $files
+          git add -A
           if git diff --cached --quiet; then
             echo "La version en ligne est déjà à jour."
             echo "changed=false" >> "$GITHUB_OUTPUT"
