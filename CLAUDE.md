@@ -17,13 +17,20 @@ https://revizstmg.github.io. Documentation complète : `README.md`.
 cd app
 npm install
 npm run dev      # http://localhost:5173, routes sous /#/
-npm run build    # compile dans app/dist/ (fichier unique + PWA)
+npm run build    # compile dans app/dist/
+npm test         # logique + empreinte du contenu (secondes)
+npm run test:parcours   # parcours navigateur, après un build (~3 min)
 ```
 
-- Il n'y a pas de tests automatiques. Après une modification, vérifiez dans un
-  navigateur le parcours concerné.
+- Lancez `npm test` après chaque modification. Une empreinte de contenu qui change
+  alors que vous n'avez touché qu'au code signifie que l'élève verra autre chose :
+  ne mettez à jour les empreintes (`npm run test:maj`) que pour un changement de
+  contenu voulu.
+- Les parcours ne doivent jamais toucher la vraie base : ils bloquent tout accès
+  extérieur (voir `tests/parcours/eleve.js`).
 - La mise en ligne est automatique : quand `app/` change sur `main`, le workflow
-  compile et publie. Travaillez sur une branche, puis fusionnez dans `main`.
+  teste puis publie, seulement si tout est vert. Travaillez sur une branche, puis
+  fusionnez dans `main`. L'architecture est décrite dans `docs/ARCHITECTURE.md`.
 
 ## Contenu
 

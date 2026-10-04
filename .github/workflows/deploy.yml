@@ -1,27 +1,30 @@
-name: Construire et publier
+name: Tester et publier
 
-# À chaque modification du code (app/) sur main : compile l'application et dépose
-# la version compilée à la racine du dépôt. GitHub Pages sert cette racine sur
-# https://revizstmg.github.io (réglage Pages : « Deploy from a branch », main, /).
+# Sur chaque branche : tests de la logique et du contenu, compilation, puis
+# parcours dans un vrai navigateur. Sur main uniquement, et seulement si tout
+# est vert : la version compilée est déposée à la racine du dépôt, que GitHub
+# Pages sert sur https://revizstmg.github.io (réglage Pages : « Deploy from a
+# branch », main, /).
 on:
   push:
-    branches: [main]
     paths:
       - 'app/**'
       - '.github/workflows/deploy.yml'
+  pull_request:
+    paths:
+      - 'app/**'
   workflow_dispatch:
 
-permissions:
-  contents: write
-  pages: write
-
 concurrency:
-  group: deploy
-  cancel-in-progress: false
+  group: tests-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 jobs:
-  deploy:
+  tests:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
     steps:
       - uses: actions/checkout@v4
 
@@ -32,20 +35,62 @@ jobs:
           cache-dependency-path: app/package-lock.json
 
       - name: Installer les dépendances
-        working-directory: app
         run: npm ci
 
+      - name: Tests de la logique et du contenu
+        run: npm test
+
       - name: Compiler
-        working-directory: app
         run: npm run build
+
+      - name: Installer le navigateur des parcours
+        run: npx playwright install --with-deps chromium
+
+      - name: Parcours dans le navigateur
+        run: npm run test:parcours
+
+      - name: Garder le rapport en cas d'échec
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapport-parcours
+          path: app/test-results/
+          retention-days: 7
+
+      - name: Garder la version compilée
+        uses: actions/upload-artifact@v4
+        with:
+          name: version-compilee
+          path: app/dist/
+          retention-days: 1
+
+  publier:
+    needs: tests
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+    concurrency:
+      group: publier
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Récupérer la version compilée et testée
+        uses: actions/download-artifact@v4
+        with:
+          name: version-compilee
+          path: dist
 
       - name: Déposer la version compilée à la racine
         id: publish
         run: |
           set -e
-          files=$(cd app/dist && ls -A)
-          for f in $files; do cp -f "app/dist/$f" "./$f"; done
-          git add -- $files
+          files=$(cd dist && ls -A)
+          for f in $files; do cp -rf "dist/$f" "./"; done
+          rm -rf dist
+          git add -A -- $files
           if git diff --cached --quiet; then
             echo "La version en ligne est déjà à jour."
             echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -54,7 +99,7 @@ jobs:
           git config user.name "revizstmg-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Publication automatique (${GITHUB_SHA::7})"
-          # Si quelqu'un a poussé pendant la compilation, on se replace dessus.
+          # Si quelqu'un a poussé pendant les tests, on se replace dessus.
           git push origin HEAD:main || { git pull --rebase origin main && git push origin HEAD:main; }
           echo "changed=true" >> "$GITHUB_OUTPUT"
 

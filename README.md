@@ -46,18 +46,43 @@ npm run preview   # sert la version compilée pour la vérifier
 `app/dist/` n'est pas versionné : c'est le workflow de publication qui recopie son
 contenu à la racine.
 
+## Tests
+
+```bash
+cd app
+npm test              # logique et contenu (quelques secondes)
+npm run build && npm run test:parcours   # parcours dans un vrai navigateur (~3 min)
+```
+
+- **Contenu** (`tests/contenu.test.js`) : une empreinte de tout ce que voit l'élève,
+  thème par thème (cours assemblé, exercices générés, flashcards, définitions,
+  tests de thème, quiz). Le hasard des exercices est fixé, donc un même code donne
+  toujours la même empreinte. Si vous corrigez un cours exprès, mettez les
+  empreintes à jour avec `npm run test:maj`. Si l'empreinte change alors que vous
+  n'avez touché qu'au code, c'est que l'élève verra autre chose : cherchez pourquoi.
+  `EMPREINTE_DETAIL=1 npm test` écrit le détail de chaque thème dans
+  `tests/.detail/` pour comparer deux versions.
+- **Logique** (`tests/logique.test.js`) : niveaux, scores, répétition espacée,
+  récompenses, badges, calculs chiffrés, filières.
+- **Parcours** (`tests/parcours/`) : écran de connexion, accueil, un cours suivi
+  d'un QCM fait jusqu'au bout, les 25 pages de l'app, et chaque thème des 19
+  matières. Les parcours démarrent avec un élève fictif déjà inscrit et bloquent
+  tout accès extérieur : ils ne touchent jamais la vraie base Supabase.
+
 ## Mise en ligne
 
-Travaillez sur une branche, puis fusionnez dans `main`. À chaque modification de
-`app/` sur `main`, le workflow `.github/workflows/deploy.yml` :
+Travaillez sur une branche, puis fusionnez dans `main`. Le workflow
+`.github/workflows/deploy.yml` se lance à chaque envoi qui touche `app/` :
 
-1. installe les dépendances et compile l'application ;
-2. copie le contenu de `app/dist/` à la racine du dépôt et l'enregistre sur `main` ;
-3. demande à GitHub Pages de republier le site.
+1. sur **toutes les branches** : tests de la logique et du contenu, compilation,
+   parcours dans le navigateur ;
+2. sur **`main` seulement**, et si tous les tests sont verts : la version compilée
+   et testée est copiée à la racine du dépôt, puis GitHub Pages republie le site.
 
-Il n'y a aucun secret à configurer. Le réglage GitHub Pages est « Deploy from a
-branch », branche `main`, dossier `/`. Pour republier sans rien changer, lancez le
-workflow à la main depuis l'onglet Actions.
+Un test qui échoue bloque donc la mise en ligne. Il n'y a aucun secret à
+configurer. Le réglage GitHub Pages est « Deploy from a branch », branche `main`,
+dossier `/`. Pour republier sans rien changer, lancez le workflow à la main depuis
+l'onglet Actions.
 
 ## Comment c'est construit
 

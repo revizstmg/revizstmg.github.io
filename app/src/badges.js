@@ -424,8 +424,8 @@ export const BADGES = [
     check: (s) => totalTime(s) >= 5 * 3600,
   },
   {
-    id: 'collector',
-    name: 'Collectionneur',
+    id: 'deck_collector',
+    name: 'Collectionneur de paquets',
     icon: '🗂️',
     desc: 'Télécharger 5 paquets de flashcards.',
     check: (s) => (s.savedDecks?.length || 0) >= 5,
