@@ -1,0 +1,67 @@
+name: Construire et publier
+
+# À chaque modification du code (app/) sur main : compile l'application et dépose
+# la version compilée à la racine du dépôt. GitHub Pages sert cette racine sur
+# https://revizstmg.github.io (réglage Pages : « Deploy from a branch », main, /).
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'app/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Installer les dépendances
+        working-directory: app
+        run: npm ci
+
+      - name: Compiler
+        working-directory: app
+        run: npm run build
+
+      - name: Déposer la version compilée à la racine
+        id: publish
+        run: |
+          set -e
+          files=$(cd app/dist && ls -A)
+          for f in $files; do cp -f "app/dist/$f" "./$f"; done
+          git add -- $files
+          if git diff --cached --quiet; then
+            echo "La version en ligne est déjà à jour."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "revizstmg-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Publication automatique (${GITHUB_SHA::7})"
+          # Si quelqu'un a poussé pendant la compilation, on se replace dessus.
+          git push origin HEAD:main || { git pull --rebase origin main && git push origin HEAD:main; }
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Un envoi fait par le workflow lui-même ne relance pas toujours GitHub
+      # Pages : on demande la reconstruction explicitement.
+      - name: Reconstruire GitHub Pages
+        if: steps.publish.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "/repos/${{ github.repository }}/pages/builds"

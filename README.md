@@ -5,13 +5,14 @@ corrigés générés automatiquement, flashcards, bac blanc, coach IA, révision
 et en classe. Installable sur téléphone et utilisable hors ligne.
 
 - **En ligne :** https://revizstmg.github.io
-- **Aussi servie par ce dépôt :** https://gabriel-merlin.github.io/NAH/revision/
-- **Code source :** ce dossier, `revision-src/`
-- **Version compilée :** `../revision/`. Elle est générée par le build : ne la modifiez jamais à la main.
+- **Code source :** `app/`
+- **Version compilée :** les fichiers à la racine du dépôt (`index.html`, `sw.js`,
+  `manifest.webmanifest`, icônes). Le workflow de publication les régénère :
+  ne les modifiez jamais à la main.
 
-> Ce dépôt héberge aussi **NAH**, le site du lycée Marceau contre le harcèlement
-> (fichiers à la racine, voir `../README.md`). Les deux projets partagent le même
-> dépôt et le même projet Supabase.
+> Jusqu'en octobre 2026, l'application vivait dans le dépôt `Gabriel-Merlin/NAH`,
+> à côté du site du lycée contre le harcèlement. Elle a été déplacée ici avec tout
+> son historique. Les deux projets partagent encore le même projet Supabase.
 >
 > Ce document décrit l'application **avant la refonte d'octobre 2026**. Mettez-le à
 > jour à chaque étape de la refonte.
@@ -34,35 +35,52 @@ et en classe. Installable sur téléphone et utilisable hors ligne.
 Il faut Node.js 18 ou plus récent.
 
 ```bash
-cd revision-src
+cd app
 npm install
 npm run dev       # serveur de développement : http://localhost:5173 (pages sous /#/…)
-npm run build     # compile l'application dans ../revision/
+npm run build     # compile l'application dans app/dist/
 npm run preview   # sert la version compilée pour la vérifier
 ```
 
-`npm run build` **vide `../revision/`** avant d'y écrire, puis lance
-`pwa-postbuild.mjs`.
+`npm run build` vide `app/dist/` avant d'y écrire, puis lance `pwa-postbuild.mjs`.
+`app/dist/` n'est pas versionné : c'est le workflow de publication qui recopie son
+contenu à la racine.
+
+## Mise en ligne
+
+Travaillez sur une branche, puis fusionnez dans `main`. À chaque modification de
+`app/` sur `main`, le workflow `.github/workflows/deploy.yml` :
+
+1. installe les dépendances et compile l'application ;
+2. copie le contenu de `app/dist/` à la racine du dépôt et l'enregistre sur `main` ;
+3. demande à GitHub Pages de republier le site.
+
+Il n'y a aucun secret à configurer. Le réglage GitHub Pages est « Deploy from a
+branch », branche `main`, dossier `/`. Pour republier sans rien changer, lancez le
+workflow à la main depuis l'onglet Actions.
 
 ## Comment c'est construit
 
 - **React 18**, **React Router 6** (`HashRouter`), **Tailwind CSS 3**, **Vite 5**.
 - `vite-plugin-singlefile` met tout le JavaScript, le CSS et le contenu dans un seul
-  `revision/index.html` d'environ 2,7 Mo.
-- `pwa-postbuild.mjs` copie ensuite le dossier `pwa/` (manifest, service worker,
+  `index.html` d'environ 2,7 Mo.
+- `pwa-postbuild.mjs` copie ensuite le dossier `app/pwa/` (manifest, service worker,
   icônes) à côté, et ajoute dans `index.html` les balises d'installation et
   l'enregistrement du service worker.
 - Avec `base: './'` et le routage par `#`, le site fonctionne depuis n'importe quelle
   adresse, sans configuration de serveur.
-- Le service worker (`pwa/sw.js`) va d'abord chercher la page sur le réseau, ce qui
-  donne toujours la dernière version, et garde icônes et polices en cache.
+- Le service worker (`app/pwa/sw.js`) va d'abord chercher la page sur le réseau, ce
+  qui donne toujours la dernière version, et garde icônes et polices en cache.
 
 ## Arborescence
 
 ```
-revision-src/
+.github/workflows/deploy.yml   compile et publie à chaque modification de app/
+supabase/functions/fiche-vision/   fonction « fiche par photo » (Gemini ou Claude)
+index.html, sw.js, …           version compilée servie par GitHub Pages (générée)
+app/
   index.html            page d'entrée de Vite
-  vite.config.js        build en fichier unique vers ../revision
+  vite.config.js        build en fichier unique vers app/dist
   pwa-postbuild.mjs     ajoute manifest, service worker et icônes après le build
   pwa/                  manifest.webmanifest, sw.js, icônes (gen-icons.mjs les régénère)
   src/
@@ -84,7 +102,7 @@ revision-src/
     notify.js, pwa.js   rappels et installation
 ```
 
-## Le contenu (`src/data/`)
+## Le contenu (`app/src/data/`)
 
 **`index.js` assemble tout.** Il exporte la liste `SUBJECTS` et l'index
 `ALL_CHAPTERS`. Il génère aussi automatiquement les exercices et les flashcards à
@@ -99,8 +117,8 @@ programme) contient :
 - `formulas` : les formules ;
 - `games` : les exercices écrits à la main.
 
-**Pour ajouter un chapitre**, ajoutez un objet dans `chapters`, puis relancez
-`npm run build`. Les exercices automatiques sont créés à partir du cours.
+**Pour ajouter un chapitre**, ajoutez un objet dans `chapters`. Les exercices
+automatiques sont créés à partir du cours.
 
 **Des couches enrichissent les cours** au moment de l'assemblage :
 
@@ -147,9 +165,10 @@ Au total, le contenu pèse environ 2 Mo de JavaScript.
 
 ## Comptes et données (Supabase)
 
-**Configuration.** L'application utilise le même projet Supabase que NAH
-(`wyydagcjkbivtbuhbzon`), configuré dans `src/supabase.js`. La clé « anon » est
-publique par conception : la sécurité repose sur les règles RLS de chaque table.
+**Configuration.** L'application utilise le projet Supabase `wyydagcjkbivtbuhbzon`,
+qu'elle partage avec le site NAH. Il est configuré dans `app/src/supabase.js`. La clé
+« anon » est publique par conception : la sécurité repose sur les règles RLS de
+chaque table.
 
 **Sans compte**, tout fonctionne en local dans le navigateur. **Avec un compte**, la
 progression est aussi enregistrée dans la colonne `progress` de la ligne `profiles`
@@ -163,30 +182,19 @@ de l'élève, ce qui permet de la retrouver sur un autre appareil.
   `class_duel`, `class_group`, `class_ban`
 - `child_stats`
 
-**Attention :** `../supabase/schema.sql` ne contient pas toutes ces tables. La plupart
-ont été créées directement sur Supabase. Les remettre en migrations fait partie de la
-refonte.
+**Attention :** il n'existe pas encore de schéma à jour de ces tables. Le fichier
+`supabase/schema.sql` du dépôt NAH n'en contient qu'une, `child_stats`. Les autres
+ont été créées directement sur Supabase. Les remettre en migrations fait partie de la refonte.
 
-**Fonction `fiche-vision`** (`../supabase/functions/fiche-vision/`) : elle transforme
+**Fonction `fiche-vision`** (`supabase/functions/fiche-vision/`) : elle transforme
 des photos de cours en fiche structurée avec Gemini (gratuit) ou Claude. Le code est
 prêt, mais **elle n'est pas encore déployée**. La marche à suivre est dans le README
 de son dossier.
-
-## Mise en ligne
-
-1. Travaillez sur une branche, puis lancez `npm run build` pour mettre à jour
-   `../revision/`.
-2. Publiez en mettant `revision/` à jour sur la branche `main`. Deux workflows GitHub
-   prennent le relais :
-   - `rebuild-pages.yml` reconstruit GitHub Pages pour ce dépôt (site NAH et `/revision/`).
-   - `sync-revizstmg.yml` copie `revision/*` dans le dépôt `revizstmg/revizstmg.github.io`,
-     qui sert https://revizstmg.github.io. Il a besoin du secret `REVIZSTMG_DEPLOY_TOKEN`.
 
 ## Limites connues (ce que la refonte doit régler)
 
 - Toute l'application est chargée d'un bloc, en un seul fichier de 2,7 Mo.
 - Le contenu (2 Mo) est écrit dans des fichiers JavaScript, mélangé au code.
 - Il n'y a aucun test automatique.
-- `schema.sql` ne reflète pas la base réelle.
-- La mise en ligne passe par une copie manuelle de `revision/` sur `main`.
-- RévizSTMG partage son dépôt et sa base Supabase avec NAH.
+- Il n'y a pas de schéma à jour de la base.
+- RévizSTMG partage encore sa base Supabase avec NAH.

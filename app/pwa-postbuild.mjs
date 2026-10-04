@@ -1,5 +1,5 @@
 // Post-build PWA : rend l'app installable et hors-ligne.
-// Le build Vite inline TOUT dans revision/index.html ; on garde donc le
+// Le build Vite inline TOUT dans dist/index.html ; on garde donc le
 // manifest, le service worker et les icônes en fichiers séparés (copiés ici),
 // et on injecte les balises <head> + l'enregistrement du SW APRÈS le build
 // pour que Vite ne les transforme pas en data:URI.
@@ -9,7 +9,7 @@ import { dirname, join } from 'node:path'
 
 const ROOT = dirname(fileURLToPath(import.meta.url))
 const SRC = join(ROOT, 'pwa')
-const OUT = join(ROOT, '..', 'revision')
+const OUT = join(ROOT, 'dist')
 
 // 1) Copier les fichiers PWA (tout sauf les scripts de génération).
 const SKIP = new Set(['gen-icons.mjs'])
@@ -50,4 +50,4 @@ if (!html.includes(MARK)) {
 }
 
 console.log('[pwa-postbuild] fichiers copiés :', copied.join(', '))
-console.log('[pwa-postbuild] balises PWA injectées dans revision/index.html')
+console.log('[pwa-postbuild] balises PWA injectées dans dist/index.html')
