@@ -1,0 +1,13 @@
+{
+  "p1-mgmt-t1-flash": 0,
+  "p1-mgmt-t1-qcm": 1,
+  "p1-mgmt-t1-tri": 3,
+  "p1-mgmt-t1-tri2": 2,
+  "p1-mgmt-t2-flash": 1,
+  "p1-mgmt-t2-ordre": 0,
+  "p1-mgmt-t2-qcm": 2,
+  "p1-mgmt-t2-tri": 3,
+  "p1-mgmt-t3-flash": 2,
+  "p1-mgmt-t3-qcm": 0,
+  "p1-mgmt-t3-tri": 1
+}

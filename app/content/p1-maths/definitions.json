@@ -1,0 +1,184 @@
+{
+  "p1-math-c1": [
+    [
+      "Taux d’évolution",
+      "(Valeur finale − valeur initiale) / valeur initiale, en %."
+    ],
+    [
+      "Coefficient multiplicateur",
+      "CM = 1 + t (t décimal) ; multiplie la valeur initiale."
+    ],
+    [
+      "Évolutions successives",
+      "On multiplie les coefficients multiplicateurs."
+    ],
+    [
+      "Taux global",
+      "Évolution d’ensemble : CM global = produit des CM."
+    ],
+    [
+      "Taux moyen",
+      "Taux constant équivalent : CM moyen = (CM global)^(1/n)."
+    ],
+    [
+      "Indice base 100",
+      "(Valeur / valeur de référence) × 100."
+    ]
+  ],
+  "p1-math-c2": [
+    [
+      "Suite",
+      "Liste ordonnée de nombres indexés par des entiers (uₙ)."
+    ],
+    [
+      "Suite arithmétique",
+      "Ajout d’une raison r constante d’un terme au suivant."
+    ],
+    [
+      "Suite géométrique",
+      "Multiplication par une raison q constante d’un terme au suivant."
+    ],
+    [
+      "Raison",
+      "Nombre ajouté (r) ou multiplié (q) à chaque étape."
+    ],
+    [
+      "Récurrence",
+      "Définition d’un terme à partir du précédent (uₙ₊₁ en fonction de uₙ)."
+    ],
+    [
+      "Terme général",
+      "uₙ exprimé directement en fonction de n."
+    ]
+  ],
+  "p1-math-c3": [
+    [
+      "Fonction du second degré",
+      "Fonction de la forme f(x) = ax² + bx + c avec a ≠ 0."
+    ],
+    [
+      "Discriminant",
+      "Δ = b² − 4ac ; son signe donne le nombre de racines."
+    ],
+    [
+      "Racine",
+      "Valeur de x annulant f(x) (solution de ax² + bx + c = 0)."
+    ],
+    [
+      "Parabole",
+      "Courbe représentative de la fonction du second degré."
+    ],
+    [
+      "Sommet",
+      "Point extremum de la parabole, d’abscisse −b/2a."
+    ],
+    [
+      "Forme canonique",
+      "Écriture a(x − α)² + β mettant en évidence le sommet."
+    ]
+  ],
+  "p1-math-c4": [
+    [
+      "Taux de variation",
+      "(f(b) − f(a)) / (b − a) ; pente moyenne entre deux points."
+    ],
+    [
+      "Nombre dérivé",
+      "Limite du taux de variation en a ; pente de la tangente : f′(a)."
+    ],
+    [
+      "Fonction dérivée",
+      "Fonction f′ donnant le nombre dérivé en tout point."
+    ],
+    [
+      "Tangente",
+      "Droite touchant la courbe en un point, de coefficient directeur f′(a)."
+    ],
+    [
+      "Sens de variation",
+      "f croît si f′ > 0, décroît si f′ < 0."
+    ],
+    [
+      "Extremum",
+      "Maximum ou minimum, où f′ s’annule en changeant de signe."
+    ]
+  ],
+  "p1-math-c5": [
+    [
+      "Moyenne",
+      "Somme des valeurs divisée par leur nombre."
+    ],
+    [
+      "Médiane",
+      "Valeur qui partage la série ordonnée en deux moitiés égales."
+    ],
+    [
+      "Quartiles",
+      "Valeurs partageant la série en quatre parts égales (Q1, Q2, Q3)."
+    ],
+    [
+      "Étendue",
+      "Différence entre la plus grande et la plus petite valeur."
+    ],
+    [
+      "Écart-type",
+      "Mesure de la dispersion des valeurs autour de la moyenne."
+    ],
+    [
+      "Variance",
+      "Moyenne des carrés des écarts à la moyenne (carré de l’écart-type)."
+    ]
+  ],
+  "p1-math-c6": [
+    [
+      "Expérience aléatoire",
+      "Expérience dont on ne peut prévoir le résultat avec certitude."
+    ],
+    [
+      "Issue",
+      "Résultat possible d’une expérience aléatoire."
+    ],
+    [
+      "Univers",
+      "Ensemble de toutes les issues possibles."
+    ],
+    [
+      "Événement",
+      "Ensemble d’issues ; probabilité entre 0 et 1."
+    ],
+    [
+      "Événements incompatibles",
+      "Événements ne pouvant se réaliser en même temps (A∩B = ∅)."
+    ],
+    [
+      "Loi de probabilité",
+      "Attribution d’une probabilité à chaque issue (somme = 1)."
+    ]
+  ],
+  "p1-math-c7": [
+    [
+      "Algorithme",
+      "Suite d’instructions résolvant un problème."
+    ],
+    [
+      "Variable",
+      "Emplacement mémoire nommé stockant une valeur."
+    ],
+    [
+      "Affectation",
+      "Attribution d’une valeur à une variable (x = 5)."
+    ],
+    [
+      "Condition (if)",
+      "Instruction exécutée seulement si un test est vrai."
+    ],
+    [
+      "Boucle",
+      "Répétition d’instructions (for, while)."
+    ],
+    [
+      "Fonction",
+      "Bloc réutilisable qui renvoie un résultat (def en Python)."
+    ]
+  ]
+}

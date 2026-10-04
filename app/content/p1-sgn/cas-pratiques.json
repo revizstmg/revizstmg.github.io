@@ -1,0 +1,22 @@
+{
+  "p1-sgn-t3": [
+    {
+      "title": "Valeur créée et marge",
+      "context": "Un produit est vendu 120 €. Son coût de revient est de 90 €.",
+      "questions": [
+        {
+          "q": "Calcule la marge unitaire (en €).",
+          "a": "30",
+          "num": true,
+          "e": "Marge = prix de vente − coût de revient = 120 − 90 = 30 €."
+        },
+        {
+          "q": "Calcule le taux de marque (en %).",
+          "a": "25",
+          "num": true,
+          "e": "Taux de marque = marge / prix de vente = 30 / 120 = 25 %."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,465 @@
+{
+  "p1-droit-t2": {
+    "id": "p1-droit-t2-doc",
+    "type": "doc",
+    "title": "Étude de documents — Le litige, la preuve et le procès",
+    "icon": "📑",
+    "intro": "Comprendre à qui incombe la preuve et comment se déroule un procès. Lis les documents puis réponds.",
+    "documents": [
+      {
+        "id": 1,
+        "title": "Document 1 — La charge de la preuve",
+        "text": "En principe, c’est au **demandeur** — celui qui réclame l’exécution d’une obligation — d’en apporter la **preuve** : « Celui qui réclame l’exécution d’une obligation doit la prouver. » La preuve doit être obtenue **loyalement**."
+      },
+      {
+        "id": 2,
+        "title": "Document 2 — Preuves parfaites et imparfaites",
+        "text": "Les modes de preuve se classent selon leur force :\n• les **preuves parfaites**, dont la valeur est **fixée par la loi** et qui **s’imposent au juge** : l’**acte authentique** (reçu par un officier public, ex. un notaire), l’**acte sous signature privée** (écrit signé par les parties), l’**aveu** et le **serment** ;\n• les **preuves imparfaites**, laissées à la **libre appréciation** du juge : le **témoignage**, l’**indice**, la **présomption**."
+      },
+      {
+        "id": 3,
+        "title": "Document 3 — Le déroulement d’une instance",
+        "text": "En matière civile, le procès s’ouvre souvent par une **assignation** (acte convoquant le défendeur). L’affaire est examinée lors d’une **audience**, puis les juges se retirent en **délibéré**. La décision s’appelle un **jugement** (tribunal) ou un **arrêt** (cour d’appel, Cour de cassation)."
+      },
+      {
+        "id": 4,
+        "title": "Document 4 — Le litige de Sophie",
+        "text": "Sophie a prêté 3 000 € à un ami. Elle possède une **reconnaissance de dette écrite et signée** par lui. L’ami refuse de rembourser et prétend que « c’était un cadeau ». Sophie décide de saisir le tribunal."
+      }
+    ],
+    "questions": [
+      {
+        "doc": 1,
+        "q": "En principe, la charge de la preuve pèse sur…",
+        "choices": [
+          "le demandeur",
+          "le juge",
+          "le témoin",
+          "le défendeur"
+        ],
+        "answer": 0,
+        "explain": "C’est à celui qui réclame de prouver."
+      },
+      {
+        "doc": 2,
+        "q": "Un acte notarié (acte authentique) est une preuve…",
+        "choices": [
+          "parfaite",
+          "imparfaite",
+          "interdite",
+          "orale"
+        ],
+        "answer": 0,
+        "explain": "Sa valeur est fixée par la loi et s’impose au juge."
+      },
+      {
+        "doc": 2,
+        "q": "Un témoignage est une preuve…",
+        "choices": [
+          "imparfaite (libre appréciation du juge)",
+          "parfaite",
+          "qui s’impose au juge",
+          "authentique"
+        ],
+        "answer": 0,
+        "explain": "Les preuves imparfaites sont librement appréciées."
+      },
+      {
+        "doc": 3,
+        "q": "Une décision rendue par une cour d’appel s’appelle…",
+        "choices": [
+          "un arrêt",
+          "un jugement",
+          "une assignation",
+          "un délibéré"
+        ],
+        "answer": 0,
+        "explain": "Tribunal → jugement ; cour d’appel / Cour de cassation → arrêt."
+      },
+      {
+        "doc": [
+          1,
+          2,
+          4
+        ],
+        "q": "Grâce à sa reconnaissance de dette signée, Sophie dispose…",
+        "choices": [
+          "d’une preuve parfaite (acte sous signature privée)",
+          "d’un simple témoignage",
+          "d’aucune preuve",
+          "d’un aveu de sa part"
+        ],
+        "answer": 0,
+        "explain": "Un écrit signé par le débiteur est un acte sous signature privée : preuve parfaite."
+      },
+      {
+        "doc": 1,
+        "type": "redac",
+        "q": "Explique sur qui pèse la charge de la preuve et pourquoi c’est important.",
+        "answer": "La charge de la preuve pèse sur le **demandeur** : celui qui **réclame** l’exécution d’une obligation doit prouver qu’elle existe. C’est important car, faute de preuve, le demandeur perd son procès même s’il a raison sur le fond : « ne pas pouvoir prouver son droit, c’est comme ne pas l’avoir ». D’où l’intérêt de conserver des écrits."
+      },
+      {
+        "doc": [
+          2,
+          4
+        ],
+        "type": "redac",
+        "q": "La reconnaissance de dette de Sophie a-t-elle plus de valeur que la parole de l’ami ? Justifie.",
+        "answer": "Oui. La reconnaissance de dette est un **écrit signé** par le débiteur : c’est un **acte sous signature privée**, donc une **preuve parfaite** dont la valeur est fixée par la loi et **s’impose au juge**. La simple affirmation de l’ami (« c’était un cadeau ») n’est pas prouvée et ne suffit pas à écarter cet écrit. Sophie est donc en position favorable pour obtenir le remboursement."
+      },
+      {
+        "doc": 3,
+        "type": "redac",
+        "q": "Décris brièvement les étapes du procès civil que va suivre l’affaire de Sophie.",
+        "answer": "Sophie va d’abord faire **assigner** son ami (acte qui l’informe du procès et le convoque). L’affaire sera ensuite examinée lors d’une **audience**, où chacun présente ses arguments et ses preuves. Les juges se retireront en **délibéré**, puis rendront un **jugement**. Si l’une des parties n’est pas satisfaite, elle pourra faire **appel**, la cour d’appel rendant alors un **arrêt**."
+      }
+    ]
+  },
+  "p1-droit-t1": {
+    "id": "p1-droit-t1-doc",
+    "type": "doc",
+    "title": "Étude de documents — La règle de droit et ses sources",
+    "icon": "📑",
+    "intro": "Qu’est-ce qui distingue une règle de droit des autres règles, et comment s’organisent les sources ? Lis les documents puis réponds.",
+    "documents": [
+      {
+        "id": 1,
+        "title": "Document 1 — Les caractères de la règle de droit",
+        "text": "La règle de droit présente quatre caractères : elle est **générale** (elle s’applique à tous), **impersonnelle** (elle ne vise personne nommément), **obligatoire** et **coercitive** (assortie de la **contrainte / sanction de l’État** en cas de non-respect). Ses fonctions : organiser la société, pacifier les relations, protéger les personnes et sanctionner les manquements."
+      },
+      {
+        "id": 2,
+        "title": "Document 2 — Règle de droit et règle morale",
+        "text": "La règle **morale** relève de la conscience individuelle ; la règle **religieuse** relève de la croyance. Ni l’une ni l’autre n’est assortie de la **contrainte de l’État**. C’est précisément ce caractère **coercitif** (la sanction étatique) qui distingue la règle de droit de ces autres règles de conduite."
+      },
+      {
+        "id": 3,
+        "title": "Document 3 — La hiérarchie des normes",
+        "text": "Les sources du droit sont hiérarchisées : au sommet la **Constitution** (bloc de constitutionnalité), puis les **traités internationaux et le droit de l’Union européenne**, puis les **lois** (votées par le Parlement), enfin les **règlements** (décrets, arrêtés). Une norme inférieure doit respecter les normes supérieures. Le **Conseil constitutionnel** en contrôle le respect ; depuis 2010, la **QPC** permet à un justiciable de contester une loi en vigueur."
+      },
+      {
+        "id": 4,
+        "title": "Document 4 — L’arrêté du maire",
+        "text": "Un maire prend un **arrêté** (un règlement municipal) interdisant totalement et en toute circonstance de manifester dans sa commune. Un habitant conteste cet arrêté, estimant qu’il porte atteinte à la liberté de manifester garantie par la Constitution."
+      }
+    ],
+    "questions": [
+      {
+        "doc": 1,
+        "q": "La règle de droit est générale, impersonnelle, obligatoire et…",
+        "choices": [
+          "coercitive",
+          "facultative",
+          "secrète",
+          "religieuse"
+        ],
+        "answer": 0,
+        "explain": "Coercitive : assortie de la contrainte / sanction de l’État. C’est le 4ᵉ caractère."
+      },
+      {
+        "doc": 2,
+        "q": "Ce qui distingue une règle de droit d’une règle morale, c’est…",
+        "choices": [
+          "son caractère coercitif (la sanction de l’État)",
+          "sa longueur",
+          "son ancienneté",
+          "sa langue"
+        ],
+        "answer": 0,
+        "explain": "La morale relève de la conscience : elle n’est pas assortie de la contrainte étatique."
+      },
+      {
+        "doc": 3,
+        "q": "Au sommet de la hiérarchie des normes se trouve…",
+        "choices": [
+          "la Constitution",
+          "un arrêté municipal",
+          "une loi ordinaire",
+          "un contrat"
+        ],
+        "answer": 0,
+        "explain": "La Constitution prime sur toutes les autres normes."
+      },
+      {
+        "doc": 3,
+        "q": "La QPC permet à un justiciable de…",
+        "choices": [
+          "contester une loi qu’il juge contraire à la Constitution",
+          "écrire une nouvelle loi",
+          "juger un crime",
+          "signer un contrat"
+        ],
+        "answer": 0,
+        "explain": "Question Prioritaire de Constitutionnalité (depuis 2010)."
+      },
+      {
+        "doc": [
+          3,
+          4
+        ],
+        "q": "L’arrêté du maire est illégal car…",
+        "choices": [
+          "une norme inférieure doit respecter la loi et la Constitution",
+          "un maire ne peut jamais prendre d’arrêté",
+          "la manifestation est interdite partout",
+          "l’arrêté est trop court"
+        ],
+        "answer": 0,
+        "explain": "L’arrêté (règlement) ne peut contredire la Constitution, norme supérieure."
+      },
+      {
+        "doc": [
+          1,
+          2
+        ],
+        "type": "redac",
+        "q": "Qu’est-ce qui distingue la règle de droit d’une simple règle morale ?",
+        "answer": "La règle de droit partage certains caractères avec la règle morale (elle guide les conduites), mais elle est **générale, impersonnelle, obligatoire** et surtout **coercitive** : elle est assortie de la **contrainte / sanction de l’État**. La règle **morale**, elle, relève de la **conscience** et n’est pas sanctionnée par la puissance publique. C’est donc ce caractère **coercitif** (la sanction étatique) qui distingue le droit de la morale."
+      },
+      {
+        "doc": [
+          3,
+          4
+        ],
+        "type": "redac",
+        "q": "En t’appuyant sur la hiérarchie des normes, explique pourquoi l’arrêté du maire peut être annulé.",
+        "answer": "La **hiérarchie des normes** impose qu’une norme inférieure respecte les normes supérieures. L’**arrêté** du maire est un **règlement**, tout en bas de la pyramide : il doit respecter la **loi** et la **Constitution**, qui garantissent la liberté de manifester. Une interdiction **générale et absolue** est disproportionnée et **contraire** à ces normes supérieures : le juge administratif peut donc **annuler** l’arrêté. La hiérarchie des normes protège ainsi les libertés."
+      },
+      {
+        "doc": 1,
+        "type": "redac",
+        "q": "Cite et explique deux fonctions du droit.",
+        "answer": "Le droit **organise** la société et l’activité économique (il fixe des règles communes) et **pacifie** les relations en évitant la loi du plus fort (il permet de régler les conflits par le juge plutôt que par la force). On peut aussi citer sa fonction de **protection** des personnes et de leurs droits, et sa fonction de **sanction** des manquements."
+      }
+    ]
+  },
+  "p1-droit-t3": {
+    "id": "p1-droit-t3-doc",
+    "type": "doc",
+    "title": "Étude de documents — Les personnes et leur capacité",
+    "icon": "📑",
+    "intro": "Qui est sujet de droit et dans quelle mesure peut-on agir seul ? Lis les documents puis réponds.",
+    "documents": [
+      {
+        "id": 1,
+        "title": "Document 1 — La personnalité juridique",
+        "text": "La **personnalité juridique** est l’aptitude à être **titulaire de droits et d’obligations**. Elle est reconnue aux **personnes physiques** (les êtres humains, de la naissance à la mort, identifiés par un nom et un domicile) et aux **personnes morales** (groupements — société, association déclarée, État — dotés d’un patrimoine propre distinct de celui de leurs membres)."
+      },
+      {
+        "id": 2,
+        "title": "Document 2 — La capacité juridique",
+        "text": "On distingue la **capacité de jouissance** (avoir des droits) de la **capacité d’exercice** (pouvoir les exercer seul). Certaines personnes sont **incapables** et doivent être **représentées** ou **assistées** : les **mineurs** non émancipés (représentés par leurs parents) et les **majeurs protégés** (sauvegarde de justice, curatelle, tutelle)."
+      },
+      {
+        "id": 3,
+        "title": "Document 3 — Le patrimoine",
+        "text": "Le **patrimoine** est l’ensemble des **droits et obligations** d’une personne **évaluables en argent** : un **actif** (les biens) et un **passif** (les dettes). Principe d’**unicité** : toute personne a un patrimoine, et un seul. On distingue les droits **patrimoniaux** (cessibles, saisissables) des droits **extrapatrimoniaux** (vie privée, image, nom)."
+      },
+      {
+        "id": 4,
+        "title": "Document 4 — Le scooter de Tom",
+        "text": "Tom, **16 ans** (mineur non émancipé), achète seul un scooter d’occasion à 1 500 € auprès d’un particulier, sans en parler à ses parents. Ceux-ci, mécontents, souhaitent revenir sur cette opération."
+      }
+    ],
+    "questions": [
+      {
+        "doc": 1,
+        "q": "La personnalité juridique est l’aptitude à…",
+        "choices": [
+          "être titulaire de droits et d’obligations",
+          "voter une loi",
+          "juger un litige",
+          "produire des biens"
+        ],
+        "answer": 0,
+        "explain": "Elle fait de l’être un sujet de droit."
+      },
+      {
+        "doc": 1,
+        "q": "Une association déclarée est une personne…",
+        "choices": [
+          "morale",
+          "physique",
+          "sans patrimoine",
+          "incapable"
+        ],
+        "answer": 0,
+        "explain": "Elle a un patrimoine propre, distinct de celui de ses membres."
+      },
+      {
+        "doc": 2,
+        "q": "Pouvoir exercer soi-même ses droits, c’est la capacité…",
+        "choices": [
+          "d’exercice",
+          "de jouissance",
+          "de propriété",
+          "d’ester"
+        ],
+        "answer": 0,
+        "explain": "Jouissance = avoir des droits ; exercice = les exercer seul."
+      },
+      {
+        "doc": 3,
+        "q": "Le droit à l’image est un droit…",
+        "choices": [
+          "extrapatrimonial",
+          "patrimonial",
+          "cessible",
+          "saisissable"
+        ],
+        "answer": 0,
+        "explain": "Les droits de la personnalité sont extrapatrimoniaux."
+      },
+      {
+        "doc": [
+          2,
+          4
+        ],
+        "q": "L’achat du scooter par Tom peut être remis en cause car…",
+        "choices": [
+          "mineur, il n’a pas la pleine capacité d’exercice pour un tel acte",
+          "un mineur n’a aucun droit",
+          "le scooter est trop cher pour exister",
+          "les parents sont incapables"
+        ],
+        "answer": 0,
+        "explain": "Le mineur doit être représenté pour les actes importants."
+      },
+      {
+        "doc": 1,
+        "type": "redac",
+        "q": "Distingue la personne physique de la personne morale.",
+        "answer": "La **personne physique** est un **être humain**, sujet de droit de la **naissance à la mort**, identifié par un nom et un domicile. La **personne morale** est un **groupement** (société, association déclarée, État) auquel la loi reconnaît la personnalité juridique : elle a un **nom**, un **siège** et surtout un **patrimoine propre**, distinct de celui de ses membres, et peut agir en justice."
+      },
+      {
+        "doc": [
+          2,
+          4
+        ],
+        "type": "redac",
+        "q": "Les parents de Tom peuvent-ils faire annuler l’achat du scooter ? Justifie.",
+        "answer": "Oui, en principe. Tom, **mineur non émancipé**, a la **capacité de jouissance** (il peut être propriétaire) mais pas la pleine **capacité d’exercice** : l’achat d’un scooter à 1 500 € est un **acte de disposition** qui dépasse la gestion courante d’un mineur. Ses **parents**, qui le **représentent**, peuvent donc demander l’**annulation** de la vente. En revanche, un acte de la vie courante (acheter une place de cinéma) resterait valable."
+      },
+      {
+        "doc": 3,
+        "type": "redac",
+        "q": "Qu’est-ce que le patrimoine ? Explique le principe d’unicité.",
+        "answer": "Le **patrimoine** est l’ensemble des **droits et obligations** d’une personne **évaluables en argent** : un **actif** (ses biens) et un **passif** (ses dettes). Le principe d’**unicité** signifie que **toute personne a un patrimoine, et un seul** : ses biens répondent de ses dettes. La loi admet toutefois des exceptions (patrimoine d’affectation) pour protéger le patrimoine personnel de l’entrepreneur."
+      }
+    ]
+  },
+  "p1-droit-t4": {
+    "id": "p1-droit-t4-doc",
+    "type": "doc",
+    "title": "Étude de documents — Propriété, création et vie privée",
+    "icon": "📑",
+    "intro": "Comment le droit protège-t-il les biens, les créations et la personne ? Lis les documents puis réponds.",
+    "documents": [
+      {
+        "id": 1,
+        "title": "Document 1 — Le droit de propriété",
+        "text": "Le droit de propriété comporte trois attributs : l’**usus** (utiliser le bien), le **fructus** (en percevoir les revenus, ex. un loyer) et l’**abusus** (en disposer : vendre, détruire). On lui reconnaît trois caractères : **absolu, exclusif et perpétuel**. Il connaît toutefois des **limites** : intérêt général et respect du voisinage."
+      },
+      {
+        "id": 2,
+        "title": "Document 2 — Le trouble anormal du voisinage",
+        "text": "Nul ne doit causer à autrui un **trouble anormal du voisinage**. Des nuisances excessives (bruit, odeurs, fumées) qui dépassent les inconvénients normaux de la vie en collectivité engagent la **responsabilité** de leur auteur, même s’il ne commet aucune faute : c’est une **limite** au droit de propriété."
+      },
+      {
+        "id": 3,
+        "title": "Document 3 — La propriété intellectuelle",
+        "text": "Les créations sont protégées. La **propriété industrielle** protège la **marque** (signe distinctif) et le **brevet** (invention), en conférant un **monopole d’exploitation** ; toute copie constitue une **contrefaçon**, sanctionnée par une **action en contrefaçon**. Le **droit d’auteur** protège les œuvres et comprend un **droit moral** (respect de l’œuvre) et des **droits patrimoniaux** (en tirer des revenus)."
+      },
+      {
+        "id": 4,
+        "title": "Document 4 — La photo de Sarah",
+        "text": "Un ami publie sur un réseau social une photo de Sarah, prise en soirée, **sans lui demander son accord**. Sarah, gênée, veut obtenir le retrait de la photo. Le droit au respect de la **vie privée** et le **droit à l’image** sont des droits de la personnalité ; le **RGPD** encadre l’usage des données personnelles, sous le contrôle de la **CNIL**."
+      }
+    ],
+    "questions": [
+      {
+        "doc": 1,
+        "q": "Le droit de percevoir les revenus d’un bien (ex. un loyer) est…",
+        "choices": [
+          "le fructus",
+          "l’usus",
+          "l’abusus",
+          "l’usufruit"
+        ],
+        "answer": 0,
+        "explain": "Usus = utiliser ; fructus = revenus ; abusus = disposer."
+      },
+      {
+        "doc": 1,
+        "q": "Les caractères du droit de propriété sont…",
+        "choices": [
+          "absolu, exclusif, perpétuel",
+          "général, impersonnel, obligatoire",
+          "certain, direct, personnel",
+          "oral, écrit, tacite"
+        ],
+        "answer": 0,
+        "explain": "Trois caractères, avec toutefois des limites."
+      },
+      {
+        "doc": 3,
+        "q": "Reproduire une marque sans autorisation constitue…",
+        "choices": [
+          "une contrefaçon",
+          "un trouble du voisinage",
+          "un acte authentique",
+          "une preuve parfaite"
+        ],
+        "answer": 0,
+        "explain": "La contrefaçon est sanctionnée par une action en contrefaçon."
+      },
+      {
+        "doc": 4,
+        "q": "En France, l’organisme qui veille à la protection des données personnelles est…",
+        "choices": [
+          "la CNIL",
+          "la Cour de cassation",
+          "l’INSEE",
+          "l’Autorité de la concurrence"
+        ],
+        "answer": 0,
+        "explain": "La CNIL applique le RGPD."
+      },
+      {
+        "doc": [
+          2,
+          1
+        ],
+        "q": "Un voisin qui cause un bruit excessif et permanent…",
+        "choices": [
+          "dépasse les limites du droit de propriété (trouble anormal)",
+          "exerce normalement sa propriété",
+          "commet une contrefaçon",
+          "exerce son fructus"
+        ],
+        "answer": 0,
+        "explain": "Le trouble anormal du voisinage est une limite au droit de propriété."
+      },
+      {
+        "doc": 1,
+        "type": "redac",
+        "q": "Présente les trois attributs du droit de propriété avec un exemple pour chacun.",
+        "answer": "Le droit de propriété comporte : l’**usus** — le droit d’**utiliser** le bien (habiter sa maison) ; le **fructus** — le droit d’en **percevoir les revenus** (louer la maison et encaisser le loyer) ; l’**abusus** — le droit d’en **disposer** (vendre ou détruire le bien). Réunis, ces trois attributs font du propriétaire le maître le plus complet de son bien, sous réserve des limites (voisinage, intérêt général)."
+      },
+      {
+        "doc": [
+          3
+        ],
+        "type": "redac",
+        "q": "Distingue la propriété industrielle du droit d’auteur.",
+        "answer": "La **propriété industrielle** protège les créations utiles à l’activité économique — la **marque** (signe distinctif) et le **brevet** (invention) — en conférant un **monopole d’exploitation**, et suppose un dépôt. Le **droit d’auteur** protège les **œuvres de l’esprit** (livre, musique, logiciel) **dès leur création**, sans formalité ; il comprend un **droit moral** (perpétuel, respect de l’œuvre et du nom) et des **droits patrimoniaux** (exploiter l’œuvre et en tirer des revenus)."
+      },
+      {
+        "doc": 4,
+        "type": "redac",
+        "q": "Sarah peut-elle exiger le retrait de la photo publiée sans son accord ? Justifie.",
+        "answer": "Oui. Le **droit à l’image** et le droit au respect de la **vie privée** sont des **droits de la personnalité**, **inaliénables** : publier l’image d’une personne suppose son **accord**. Comme Sarah n’a pas consenti, elle peut exiger le **retrait** de la photo et, en cas de préjudice, une réparation. Le **RGPD** lui donne en outre un droit à l’**effacement** de ses données, dont la **CNIL** garantit le respect."
+      }
+    ]
+  }
+}

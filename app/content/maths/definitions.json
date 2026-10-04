@@ -1,0 +1,184 @@
+{
+  "math-c1": [
+    [
+      "Taux d’évolution",
+      "(Valeur finale − valeur initiale) / valeur initiale, exprimé en %."
+    ],
+    [
+      "Coefficient multiplicateur",
+      "Nombre par lequel on multiplie : CM = 1 + t (t en écriture décimale)."
+    ],
+    [
+      "Indice base 100",
+      "Rapport d’une valeur à une valeur de référence, multiplié par 100."
+    ],
+    [
+      "Taux d’évolution moyen",
+      "Taux constant qui, répété, donne l’évolution globale (CM moyen = CM global^(1/n))."
+    ],
+    [
+      "Évolutions successives",
+      "On multiplie les coefficients multiplicateurs (on n’additionne pas les taux)."
+    ],
+    [
+      "Évolution réciproque",
+      "Évolution qui annule la première : CM réciproque = 1 / CM."
+    ]
+  ],
+  "math-c2": [
+    [
+      "Suite numérique",
+      "Liste ordonnée de nombres (u₀, u₁, u₂, …) indexés par des entiers."
+    ],
+    [
+      "Suite arithmétique",
+      "On passe d’un terme au suivant en ajoutant une raison r constante."
+    ],
+    [
+      "Suite géométrique",
+      "On passe d’un terme au suivant en multipliant par une raison q constante."
+    ],
+    [
+      "Raison",
+      "Nombre ajouté (arithmétique) ou multiplié (géométrique) à chaque étape."
+    ],
+    [
+      "Terme général",
+      "Formule donnant uₙ en fonction de n : uₙ = u₀ + n·r ou uₙ = u₀ · qⁿ."
+    ],
+    [
+      "Sens de variation",
+      "Croissante si les termes augmentent, décroissante s’ils diminuent."
+    ]
+  ],
+  "math-c3": [
+    [
+      "Fonction",
+      "Relation qui à chaque nombre x associe un unique nombre f(x)."
+    ],
+    [
+      "Nombre dérivé",
+      "Coefficient directeur de la tangente à la courbe au point d’abscisse a : f′(a)."
+    ],
+    [
+      "Fonction dérivée",
+      "Fonction f′ qui donne le nombre dérivé en chaque point."
+    ],
+    [
+      "Tangente",
+      "Droite qui « touche » la courbe en un point, de pente f′(a)."
+    ],
+    [
+      "Sens de variation",
+      "f croissante quand f′ > 0, décroissante quand f′ < 0."
+    ],
+    [
+      "Extremum",
+      "Maximum ou minimum local, où la dérivée s’annule en changeant de signe."
+    ]
+  ],
+  "math-c4": [
+    [
+      "Série statistique double",
+      "Ensemble de couples (xᵢ, yᵢ) portant sur deux caractères."
+    ],
+    [
+      "Nuage de points",
+      "Représentation des couples (xᵢ, yᵢ) dans un repère."
+    ],
+    [
+      "Point moyen",
+      "Point G de coordonnées (x̄, ȳ), moyennes des deux séries."
+    ],
+    [
+      "Ajustement affine",
+      "Droite qui approche au mieux le nuage de points."
+    ],
+    [
+      "Droite des moindres carrés",
+      "Droite d’ajustement minimisant la somme des carrés des écarts."
+    ],
+    [
+      "Corrélation",
+      "Intensité de la liaison entre les deux variables."
+    ]
+  ],
+  "math-c5": [
+    [
+      "Probabilité conditionnelle",
+      "Probabilité de A sachant B : P_B(A) = P(A∩B) / P(B)."
+    ],
+    [
+      "Événements indépendants",
+      "La réalisation de l’un ne change pas la probabilité de l’autre : P(A∩B)=P(A)·P(B)."
+    ],
+    [
+      "Arbre pondéré",
+      "Schéma où chaque branche porte une probabilité ; on multiplie le long d’un chemin."
+    ],
+    [
+      "Probabilités totales",
+      "P(A) = somme des P(A∩Bᵢ) sur une partition (B₁, B₂, …)."
+    ],
+    [
+      "Intersection",
+      "Événement « A et B » réalisés en même temps (A∩B)."
+    ],
+    [
+      "Union",
+      "Événement « A ou B » : P(A∪B) = P(A) + P(B) − P(A∩B)."
+    ]
+  ],
+  "math-c6": [
+    [
+      "Épreuve de Bernoulli",
+      "Expérience à deux issues : succès (probabilité p) ou échec (1 − p)."
+    ],
+    [
+      "Schéma de Bernoulli",
+      "Répétition de n épreuves de Bernoulli identiques et indépendantes."
+    ],
+    [
+      "Loi binomiale",
+      "Loi du nombre de succès X sur n épreuves ; notée B(n, p)."
+    ],
+    [
+      "Coefficient binomial",
+      "Nombre de chemins à k succès parmi n, noté (n k)."
+    ],
+    [
+      "Espérance",
+      "Valeur moyenne attendue : E(X) = n·p pour une loi binomiale."
+    ],
+    [
+      "Paramètres n et p",
+      "n = nombre d’épreuves, p = probabilité de succès d’une épreuve."
+    ]
+  ],
+  "math-c7": [
+    [
+      "Loi normale",
+      "Loi continue en « cloche », symétrique autour de la moyenne μ."
+    ],
+    [
+      "Espérance et écart-type",
+      "μ situe le centre, σ mesure la dispersion autour de μ."
+    ],
+    [
+      "Intervalle de fluctuation",
+      "Intervalle où se situe une fréquence avec une probabilité donnée (souvent 95 %)."
+    ],
+    [
+      "Intervalle de confiance",
+      "Fourchette estimant une proportion inconnue à partir d’un échantillon."
+    ],
+    [
+      "Estimation",
+      "Approcher une proportion de la population à l’aide d’un échantillon."
+    ],
+    [
+      "Loi normale centrée réduite",
+      "Loi normale de moyenne 0 et d’écart-type 1."
+    ]
+  ]
+}

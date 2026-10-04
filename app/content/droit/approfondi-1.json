@@ -1,0 +1,754 @@
+{
+  "droit-t5": [
+    {
+      "h": "📜 Le contrat : définition et classifications",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **contrat** est un **accord de volontés** entre deux ou plusieurs personnes destiné à créer des **obligations** (article 1101 du Code civil). Dire « oui » à une offre suffit souvent à s’engager juridiquement : le contrat est la source d’obligations la plus courante de la vie économique (achat, location, travail, prêt)."
+        },
+        {
+          "t": "p",
+          "c": "Le droit des contrats repose sur deux grands principes hérités de la Révolution. L’**autonomie de la volonté** : on ne s’engage que parce qu’on l’a voulu. La **force obligatoire** (art. 1103) : « les contrats légalement formés tiennent lieu de loi à ceux qui les ont faits » — une fois conclu, le contrat s’impose comme une loi privée."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Classification",
+            "Un type",
+            "L’autre type"
+          ],
+          "rows": [
+            [
+              "Selon les obligations",
+              "Synallagmatique (obligations réciproques : vente)",
+              "Unilatéral (une seule partie s’oblige : donation)"
+            ],
+            [
+              "Selon le but",
+              "À titre onéreux (chacun reçoit une contrepartie)",
+              "À titre gratuit (sans contrepartie)"
+            ],
+            [
+              "Selon la forme",
+              "Consensuel (le seul accord suffit)",
+              "Solennel (un écrit est exigé : vente immobilière)"
+            ],
+            [
+              "Selon la négociation",
+              "De gré à gré (négocié)",
+              "D’adhésion (on accepte des clauses non négociables : abonnement)"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La plupart des contrats sont **consensuels** : ils se forment par le seul **échange des consentements**, sans écrit obligatoire. L’écrit sert alors surtout de **preuve**."
+        }
+      ]
+    },
+    {
+      "h": "✅ Les conditions de validité du contrat",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Depuis la réforme de 2016, l’article **1128** du Code civil pose **trois conditions** de validité. Si l’une manque, le contrat peut être **annulé** (nullité) : on considère qu’il n’a jamais existé, et chacun restitue ce qu’il a reçu."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Le consentement** des parties : il doit être **libre et éclairé** (donné en connaissance de cause, sans contrainte).",
+            "**La capacité** de contracter : être **majeur** et **non protégé** (les mineurs et majeurs sous tutelle/curatelle ont une capacité limitée).",
+            "**Un contenu licite et certain** : l’objet du contrat doit être **possible, déterminé et conforme à la loi** et à l’ordre public (on ne peut pas vendre de la drogue ou un organe)."
+          ]
+        },
+        {
+          "t": "example",
+          "h": "Application",
+          "c": "Un contrat de vente d’un produit interdit à la vente est **nul** pour contenu **illicite**. Un contrat signé par un enfant de 12 ans pour un achat important est **annulable** pour incapacité."
+        },
+        {
+          "t": "warning",
+          "h": "Piège fréquent",
+          "c": "La **capacité** est la règle, l’**incapacité** l’exception. Un mineur peut valablement conclure les **actes de la vie courante** (acheter du pain, un ticket de bus) : tout n’est pas nul."
+        },
+        {
+          "t": "tip",
+          "h": "Mémo",
+          "c": "Les 3 conditions : **Consentement – Capacité – Contenu licite**. Si l’une manque → **nullité** du contrat."
+        }
+      ]
+    },
+    {
+      "h": "⚠️ Les vices du consentement",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le consentement doit être **intègre**. S’il a été « faussé », on parle de **vice du consentement** : le contrat est alors **annulable** à la demande de la victime. Le Code civil en reconnaît trois (art. 1130 et suivants)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Vice",
+            "Définition",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Erreur",
+              "Se tromper sur une qualité essentielle",
+              "Acheter une copie en croyant acheter un original"
+            ],
+            [
+              "Dol",
+              "Être trompé par des manœuvres de l’autre partie",
+              "Un vendeur cache un défaut grave (mensonge, rétention d’info)"
+            ],
+            [
+              "Violence",
+              "Consentir sous la contrainte (physique, morale, économique)",
+              "Signer sous la menace"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Pour entraîner la nullité, le vice doit être **déterminant** : sans lui, la victime **n’aurait pas contracté** (ou à d’autres conditions). Le **dol** est particulièrement sanctionné car il suppose une **intention de tromper** : il vicie le consentement **et** constitue une faute ouvrant droit à des dommages-intérêts."
+        },
+        {
+          "t": "example",
+          "h": "Erreur vs dol",
+          "c": "Si l’acheteur se trompe tout seul → **erreur**. Si le vendeur l’a **volontairement induit en erreur** (mensonge, dissimulation) → **dol**. Le dol est « une erreur provoquée »."
+        },
+        {
+          "t": "warning",
+          "h": "Attention",
+          "c": "Une simple **erreur sur la valeur** (avoir payé trop cher) ou sur un **motif personnel** n’est en principe pas une cause de nullité. Seule l’erreur sur une **qualité essentielle** compte."
+        }
+      ]
+    },
+    {
+      "h": "🔗 Effets du contrat et sanctions de l’inexécution",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Un contrat valablement formé produit des **effets** : il **oblige** les parties (force obligatoire) et **n’engage qu’elles** (effet relatif : il ne crée d’obligation ni ne nuit aux tiers). Les parties doivent l’exécuter **de bonne foi** (art. 1104)."
+        },
+        {
+          "t": "p",
+          "c": "Si une partie **n’exécute pas** son obligation (inexécution totale, partielle ou tardive), la victime dispose de plusieurs **sanctions**, qu’elle peut parfois cumuler."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**L’exécution forcée** : contraindre le débiteur à tenir son engagement.",
+            "**La résolution** du contrat : l’anéantir et revenir à la situation antérieure.",
+            "**La réduction du prix** : payer moins si la prestation est incomplète.",
+            "**Les dommages-intérêts** : obtenir réparation du préjudice subi.",
+            "**L’exception d’inexécution** : refuser d’exécuter tant que l’autre n’exécute pas."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le débiteur peut s’exonérer en prouvant un cas de **force majeure** : un événement **imprévisible, irrésistible et extérieur** qui a rendu l’exécution impossible (art. 1218). Il est alors libéré sans devoir de dommages-intérêts."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Inexécution = choix de sanctions pour le créancier. Force majeure = cause d’**exonération** pour le débiteur. Ces deux notions structurent presque tous les cas pratiques sur le contrat."
+        }
+      ]
+    },
+    {
+      "h": "⚖️ Cas pratique guidé — la méthode du syllogisme",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Léa achète en ligne un téléphone décrit comme « neuf, sous garantie ». À la réception, l’appareil est visiblement reconditionné et rayé. Le vendeur le savait. Léa peut-elle annuler la vente ?"
+        },
+        {
+          "t": "p",
+          "c": "La résolution d’un cas pratique en droit suit le **syllogisme juridique** en trois temps : la **majeure** (la règle de droit), la **mineure** (les faits), la **conclusion** (l’application)."
+        },
+        {
+          "t": "example",
+          "h": "Majeure — la règle",
+          "c": "Le contrat exige un consentement **libre et éclairé** (art. 1128). Le **dol** (art. 1137) est une manœuvre ou une dissimulation volontaire d’une information déterminante par un contractant, qui provoque l’erreur de l’autre. Il rend le contrat **annulable** et ouvre droit à des dommages-intérêts."
+        },
+        {
+          "t": "example",
+          "h": "Mineure — les faits",
+          "c": "Le vendeur a décrit un appareil « neuf » alors qu’il le savait reconditionné et abîmé : il a **volontairement dissimulé** une information déterminante. Sans cette tromperie, Léa n’aurait pas acheté."
+        },
+        {
+          "t": "example",
+          "h": "Conclusion",
+          "c": "Les éléments du **dol** sont réunis (manœuvre + caractère déterminant + intention de tromper). Léa peut demander la **nullité** de la vente et la **restitution** du prix, ainsi que des **dommages-intérêts**."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Toujours : 1) **qualifier** juridiquement les faits, 2) énoncer la **règle** applicable (article, principe), 3) **appliquer** la règle aux faits, 4) **conclure** clairement. Ne jamais donner la conclusion sans la règle qui la fonde."
+        }
+      ]
+    }
+  ],
+  "droit-t6": [
+    {
+      "h": "🎯 Responsabilité civile et responsabilité pénale",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Être **responsable**, c’est devoir **répondre** de ses actes devant la justice. Le droit distingue deux grandes responsabilités, qui poursuivent des buts opposés et peuvent se cumuler pour un même fait."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Critère",
+            "Responsabilité civile",
+            "Responsabilité pénale"
+          ],
+          "rows": [
+            [
+              "But",
+              "Réparer le dommage de la victime",
+              "Punir l’auteur d’une infraction"
+            ],
+            [
+              "Qui agit",
+              "La victime (action en justice)",
+              "La société (le ministère public)"
+            ],
+            [
+              "Sanction",
+              "Dommages-intérêts (argent)",
+              "Amende, prison, peine"
+            ],
+            [
+              "Bénéficiaire",
+              "La victime",
+              "La société"
+            ],
+            [
+              "Tribunal",
+              "Civil (tribunal judiciaire)",
+              "Pénal (police, correctionnel, assises)"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Un même fait peut engager **les deux** responsabilités. Un conducteur qui blesse un piéton en grillant un feu rouge est **pénalement** responsable (il a commis une infraction, l’État le punit) **et civilement** responsable (il doit réparer le préjudice de la victime)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Civil = **réparer** (payer la victime). Pénal = **punir** (sanction au nom de la société). C’est la distinction fondamentale du thème."
+        }
+      ]
+    },
+    {
+      "h": "🧩 Les conditions de la responsabilité civile",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La responsabilité civile **délictuelle** (hors contrat) suppose la réunion de **trois conditions cumulatives** (art. 1240 : « tout fait quelconque de l’homme qui cause à autrui un dommage oblige celui par la faute duquel il est arrivé à le réparer »)."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Un fait générateur** : une **faute** (imprudence, négligence, acte volontaire), le fait d’une **chose** que l’on a sous sa garde, ou le fait d’**autrui**.",
+            "**Un dommage** (ou préjudice) : matériel (un bien détruit), corporel (une blessure) ou moral (une souffrance).",
+            "**Un lien de causalité** : le dommage doit être **la conséquence** du fait générateur."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Ces trois conditions sont **cumulatives** : s’il en manque une, la responsabilité n’est pas engagée. Sans dommage, pas de réparation ; sans lien de causalité, on ne peut imputer le dommage à la personne poursuivie."
+        },
+        {
+          "t": "example",
+          "h": "Application",
+          "c": "Un commerçant laisse le sol mouillé sans signalisation (fait/faute) ; un client glisse et se casse le poignet (dommage) ; la chute est due au sol glissant (lien de causalité). Les trois conditions sont réunies → responsabilité engagée."
+        },
+        {
+          "t": "tip",
+          "h": "Mémo",
+          "c": "Les 3 conditions : **Fait générateur – Dommage – Lien de causalité**. Un tableau à cocher pour chaque cas pratique."
+        }
+      ]
+    },
+    {
+      "h": "🚗 Les régimes : fait personnel, des choses, d’autrui",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le fait générateur prend trois formes, correspondant à trois **régimes** de responsabilité civile."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Régime",
+            "Fondement",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Fait personnel",
+              "Ma propre faute (art. 1240)",
+              "Je casse la vitrine du voisin"
+            ],
+            [
+              "Fait des choses",
+              "Une chose sous ma garde (art. 1242 al.1)",
+              "Mon chien mord un passant ; ma tuile tombe"
+            ],
+            [
+              "Fait d’autrui",
+              "Responsabilité pour une personne dont je réponds",
+              "Parents pour leur enfant mineur ; employeur pour son salarié"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La responsabilité du **fait des choses** et du **fait d’autrui** est souvent **sans faute** (dite objective) : la victime n’a pas à prouver une faute, seulement la garde de la chose ou le lien (parent/enfant, employeur/salarié). Cela **facilite** l’indemnisation de la victime."
+        },
+        {
+          "t": "example",
+          "h": "Fait d’autrui",
+          "c": "Un salarié livreur endommage un véhicule pendant son travail : l’**employeur** est civilement responsable (responsabilité du commettant du fait de son préposé) et devra indemniser, même sans faute de sa part."
+        },
+        {
+          "t": "warning",
+          "h": "Nuance",
+          "c": "La responsabilité **des parents** suppose que l’enfant soit **mineur** et **cohabite** avec eux. Elle est très difficile à écarter : c’est une protection forte pour les victimes."
+        }
+      ]
+    },
+    {
+      "h": "💶 La réparation du dommage",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La finalité de la responsabilité civile est la **réparation intégrale** : replacer la victime dans l’état où elle serait si le dommage ne s’était pas produit — ni plus, ni moins. La réparation prend le plus souvent la forme de **dommages-intérêts** (une somme d’argent)."
+        },
+        {
+          "t": "p",
+          "c": "Le dommage réparable doit être **certain** (pas seulement hypothétique), **direct** (conséquence du fait) et **personnel** (subi par celui qui demande réparation). On indemnise les préjudices **matériels**, **corporels** et **moraux**."
+        },
+        {
+          "t": "p",
+          "c": "Le rôle de l’**assurance** est central : l’assurance de responsabilité (ex. responsabilité civile, obligatoire pour un véhicule) prend en charge l’indemnisation à la place de l’auteur. Elle **mutualise** le risque et garantit que la victime sera indemnisée même si l’auteur est insolvable."
+        },
+        {
+          "t": "example",
+          "h": "Réparation",
+          "c": "Après l’accident, la victime obtient : le remboursement des frais médicaux (matériel), l’indemnisation de son incapacité (corporel) et une somme pour la souffrance endurée (moral)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Objectif = **réparer intégralement**, pas enrichir la victime ni punir l’auteur (ça, c’est le pénal). L’assurance garantit l’effectivité de cette réparation."
+        }
+      ]
+    },
+    {
+      "h": "⚖️ Cas pratique guidé — responsabilité civile",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Dans un supermarché, une bouteille explose sur le rayon et blesse un client au visage. Le client réclame réparation. Le supermarché est-il responsable ?"
+        },
+        {
+          "t": "example",
+          "h": "Majeure — la règle",
+          "c": "La responsabilité du **fait des choses** (art. 1242 al.1) rend responsable le **gardien** d’une chose (celui qui en a l’usage, la direction et le contrôle) des dommages qu’elle cause. Trois conditions : fait de la chose, dommage, lien de causalité. Aucune faute n’a à être prouvée."
+        },
+        {
+          "t": "example",
+          "h": "Mineure — les faits",
+          "c": "La bouteille (chose) était sous la **garde** du supermarché ; elle a explosé (fait de la chose) ; le client a été blessé au visage (dommage corporel) ; la blessure résulte directement de l’explosion (lien de causalité)."
+        },
+        {
+          "t": "example",
+          "h": "Conclusion",
+          "c": "Les conditions de la responsabilité du fait des choses sont réunies. Le supermarché, **gardien**, est **civilement responsable** et doit **réparer** le préjudice (via son assurance). Le client obtiendra des dommages-intérêts couvrant ses préjudices matériel, corporel et moral."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Identifier d’abord le **régime** (personnel ? des choses ? d’autrui ?), puis dérouler le **syllogisme** : règle → faits → conclusion. Vérifier les **trois conditions** systématiquement."
+        }
+      ]
+    }
+  ],
+  "droit-t7": [
+    {
+      "h": "🤝 Le contrat de travail et le lien de subordination",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **contrat de travail** est la convention par laquelle une personne (le **salarié**) met son activité au service d’une autre (l’**employeur**), sous sa **subordination**, en échange d’une **rémunération**. Il réunit donc trois éléments : une **prestation de travail**, une **rémunération** et un **lien de subordination**."
+        },
+        {
+          "t": "p",
+          "c": "Le **lien de subordination** est le **critère décisif** : c’est le pouvoir de l’employeur de **donner des ordres**, d’en **contrôler** l’exécution et de **sanctionner** les manquements. C’est lui qui distingue le salarié du travailleur **indépendant**, qui organise librement son travail."
+        },
+        {
+          "t": "example",
+          "h": "Salarié ou indépendant ? (l’affaire Uber)",
+          "c": "La Cour de cassation a requalifié en contrat de travail la relation d’un chauffeur avec sa plateforme : celle-ci fixait les tarifs, imposait un itinéraire, contrôlait et pouvait désactiver le compte. Ce **faisceau d’indices** révélait un **lien de subordination** — donc un vrai salariat, malgré l’étiquette « indépendant »."
+        },
+        {
+          "t": "warning",
+          "h": "Piège",
+          "c": "Ce n’est **pas le nom** donné au contrat qui compte, mais la **réalité** de la relation. Le juge recherche le lien de subordination par un **faisceau d’indices**."
+        }
+      ]
+    },
+    {
+      "h": "📄 CDI, CDD, intérim : la règle et l’exception",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **CDI (contrat à durée indéterminée)** est le contrat **de droit commun** : c’est la **règle**. Il n’a pas de terme fixé et offre la plus grande stabilité au salarié. Toute embauche est présumée en CDI sauf preuve du recours légal à un autre contrat."
+        },
+        {
+          "t": "p",
+          "c": "Le **CDD (contrat à durée déterminée)** est l’**exception** : il n’est possible que pour des **cas limités** prévus par la loi et pour une **tâche précise et temporaire**. Il ne peut avoir pour objet de pourvoir durablement un emploi lié à l’activité normale de l’entreprise."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Cas de recours au CDD** : remplacement d’un salarié absent, accroissement temporaire d’activité, emploi saisonnier.",
+            "**Formalisme strict** : le CDD doit être **écrit**, préciser son **motif** et son **terme**. À défaut d’écrit, il est **requalifié en CDI**.",
+            "**Fin du CDD** : à son terme, le salarié perçoit une **indemnité de fin de contrat** (prime de précarité)."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "L’**intérim** (travail temporaire) fait intervenir **trois acteurs** : le salarié, l’entreprise de travail temporaire (son employeur) et l’entreprise utilisatrice (où il travaille). Il obéit aux mêmes logiques de **cas de recours limités** que le CDD."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "CDI = **principe**, CDD/intérim = **exception encadrée**. Un CDD sans motif légal ou sans écrit est **requalifié en CDI** — une sanction très favorable au salarié."
+        }
+      ]
+    },
+    {
+      "h": "🚪 La rupture du contrat de travail",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Un CDI peut être rompu de plusieurs façons, selon qui prend l’initiative. La rupture est **encadrée** pour protéger le salarié : « on ne licencie pas parce que »."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Mode de rupture",
+            "À l’initiative de…",
+            "Condition clé"
+          ],
+          "rows": [
+            [
+              "Démission",
+              "Du salarié",
+              "Volonté claire et non équivoque"
+            ],
+            [
+              "Licenciement",
+              "De l’employeur",
+              "Cause réelle et sérieuse + procédure"
+            ],
+            [
+              "Rupture conventionnelle",
+              "Accord des deux",
+              "Convention homologuée par l’administration"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le **licenciement** doit reposer sur une **cause réelle et sérieuse**. « Réelle » = fondée sur des faits **exacts et vérifiables** ; « sérieuse » = suffisamment **grave** pour justifier la rupture. On distingue le licenciement pour motif **personnel** (lié au salarié : faute, insuffisance) et pour motif **économique** (lié à l’entreprise : difficultés, mutation technologique)."
+        },
+        {
+          "t": "p",
+          "c": "L’employeur doit aussi respecter une **procédure** : convocation à un entretien préalable, entretien, puis notification écrite et motivée. Le non-respect du fond (cause) ou de la forme (procédure) rend le licenciement **abusif** et ouvre droit à des **dommages-intérêts**."
+        },
+        {
+          "t": "warning",
+          "h": "Piège",
+          "c": "Un licenciement sans **cause réelle et sérieuse** est **abusif**, même si la procédure a été respectée. Fond **et** forme doivent être réunis."
+        }
+      ]
+    },
+    {
+      "h": "🛡️ Les droits collectifs du salarié",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le salarié n’est pas seul face à l’employeur : le droit du travail organise sa **protection collective**. Les sources de ses droits forment une **hiérarchie** (Constitution, lois, conventions collectives, contrat), avec un principe protecteur : la norme inférieure ne peut être **moins favorable** que la supérieure (principe de faveur, sauf exceptions)."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**La convention collective** : accord négocié par branche ou entreprise qui adapte et **améliore** le Code du travail (salaires minima, congés, primes).",
+            "**Les représentants du personnel** (CSE — Comité social et économique) : élus, ils défendent les intérêts des salariés et sont consultés sur les décisions importantes.",
+            "**Les syndicats** : ils négocient, informent et peuvent appeler à la **grève**, droit à valeur constitutionnelle."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Ces mécanismes rééquilibrent une relation par nature **inégalitaire** (le salarié est subordonné). Ils incarnent la fonction protectrice du droit du travail : garantir des conditions de travail dignes et une voix collective."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le droit du travail est un droit **protecteur** et **d’ordre public social** : on ne peut y déroger que dans un sens **plus favorable** au salarié."
+        }
+      ]
+    },
+    {
+      "h": "⚖️ Cas pratique guidé — le licenciement",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Un employeur licencie une salariée par un simple SMS, sans entretien, au motif qu’« elle ne lui plaît plus ». La salariée conteste. Que dit le droit ?"
+        },
+        {
+          "t": "example",
+          "h": "Majeure — la règle",
+          "c": "Tout licenciement exige une **cause réelle et sérieuse** (faits exacts, vérifiables et suffisamment graves) et le respect d’une **procédure** (convocation, entretien préalable, notification écrite et motivée). À défaut, le licenciement est **abusif** et donne lieu à des dommages-intérêts."
+        },
+        {
+          "t": "example",
+          "h": "Mineure — les faits",
+          "c": "Le motif (« elle ne me plaît plus ») n’est **ni réel ni sérieux** : il ne repose sur aucun fait objectif. De plus, la procédure n’a **pas** été respectée (SMS, pas d’entretien préalable, pas de notification motivée)."
+        },
+        {
+          "t": "example",
+          "h": "Conclusion",
+          "c": "Le licenciement est **abusif** (absence de cause réelle et sérieuse **et** vice de procédure). La salariée peut saisir le **conseil de prud’hommes** et obtenir des **dommages-intérêts** pour licenciement sans cause réelle et sérieuse."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Contrôler **deux niveaux** : le **fond** (la cause existe-t-elle et est-elle sérieuse ?) et la **forme** (la procédure a-t-elle été suivie ?). Conclure sur le tribunal compétent (**prud’hommes**)."
+        }
+      ]
+    }
+  ],
+  "droit-t8": [
+    {
+      "h": "🏗️ Choisir une forme juridique",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Entreprendre suppose de choisir un **cadre juridique**. La première grande distinction oppose l’**entreprise individuelle** (l’entrepreneur et l’entreprise ne font qu’un) et la **société** (une **personne morale** distincte, dotée de son propre patrimoine)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Forme",
+            "Associés",
+            "Responsabilité",
+            "Pour qui"
+          ],
+          "rows": [
+            [
+              "Entreprise individuelle (EI)",
+              "1 (l’entrepreneur)",
+              "Limitée au patrimoine professionnel (depuis 2022)",
+              "Se lancer seul, simplement"
+            ],
+            [
+              "EURL",
+              "1",
+              "Limitée aux apports",
+              "Seul, mais en société"
+            ],
+            [
+              "SARL",
+              "2 à 100",
+              "Limitée aux apports",
+              "PME familiale"
+            ],
+            [
+              "SAS / SASU",
+              "1 ou plusieurs",
+              "Limitée aux apports",
+              "Souplesse, levée de fonds"
+            ],
+            [
+              "SA",
+              "2 (ou 7 si cotée)",
+              "Limitée aux apports",
+              "Grandes entreprises"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le choix dépend de plusieurs critères : le **nombre d’associés**, le **capital** disponible, l’étendue de la **responsabilité** souhaitée, le **régime fiscal et social** du dirigeant, et les **perspectives de croissance** (une SAS facilite l’entrée d’investisseurs)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La **société** crée une **personne morale** distincte : elle a son nom, son patrimoine, sa responsabilité. C’est ce qui **protège** le patrimoine personnel des associés (responsabilité limitée aux apports)."
+        }
+      ]
+    },
+    {
+      "h": "🏠 Protéger le patrimoine de l’entrepreneur",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le grand risque de l’entrepreneur est que ses créanciers professionnels saisissent ses **biens personnels** (sa maison, ses comptes) en cas de dettes. Le droit a progressivement renforcé sa **protection**."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**La responsabilité limitée** en société : les associés ne perdent, au maximum, que leurs **apports**. Le patrimoine personnel est à l’abri (sauf faute de gestion ou caution personnelle).",
+            "**La séparation des patrimoines** de l’entrepreneur individuel : depuis 2022, le patrimoine **personnel** de l’entrepreneur individuel est de droit **séparé** de son patrimoine **professionnel** et protégé des créanciers professionnels.",
+            "**L’insaisissabilité de la résidence principale** de l’entrepreneur individuel, protégée de droit."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Cette protection n’est jamais absolue. Une **caution personnelle** demandée par la banque, ou une **faute de gestion** grave, peut faire tomber la barrière et engager le patrimoine personnel du dirigeant."
+        },
+        {
+          "t": "example",
+          "h": "Illustration",
+          "c": "Un gérant de SARL dont l’entreprise fait faillite ne perd en principe que son apport au capital ; mais s’il s’est porté **caution** d’un emprunt de la société, la banque pourra se retourner contre **ses biens personnels**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La protection du patrimoine repose sur deux idées : la **personnalité morale** de la société et la **séparation des patrimoines**. Mais **caution** et **faute de gestion** en sont les limites."
+        }
+      ]
+    },
+    {
+      "h": "💡 Protéger les créations : la propriété intellectuelle",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une idée seule ne se protège pas ; mais sa **mise en forme** (invention, marque, œuvre) peut faire l’objet d’un **droit de propriété intellectuelle**, qui confère à son titulaire un **monopole d’exploitation** temporaire."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Titre",
+            "Protège",
+            "Durée",
+            "Formalité"
+          ],
+          "rows": [
+            [
+              "Brevet",
+              "Une invention technique",
+              "20 ans",
+              "Dépôt à l’INPI"
+            ],
+            [
+              "Marque",
+              "Un signe distinctif (nom, logo)",
+              "10 ans renouvelables",
+              "Dépôt à l’INPI"
+            ],
+            [
+              "Droit d’auteur",
+              "Une œuvre de l’esprit (texte, musique, logiciel)",
+              "Vie de l’auteur + 70 ans",
+              "Aucune (protection automatique)"
+            ],
+            [
+              "Dessins et modèles",
+              "L’apparence d’un produit",
+              "5 ans (renouvelable jusqu’à 25)",
+              "Dépôt à l’INPI"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La **propriété industrielle** (brevet, marque, dessins) nécessite un **dépôt** auprès de l’**INPI** pour être protégée. Le **droit d’auteur** est différent : il naît **automatiquement** dès la création de l’œuvre, sans formalité. La contrefaçon (copier sans autorisation) est un **délit** sanctionné civilement et pénalement."
+        },
+        {
+          "t": "example",
+          "h": "Application",
+          "c": "Une créatrice qui invente un procédé technique dépose un **brevet** (20 ans de monopole) ; elle protège le nom de sa marque par un dépôt à l’INPI (**marque**) ; le texte de son site est protégé d’office par le **droit d’auteur**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Idée = non protégeable. **Invention → brevet ; nom/logo → marque ; œuvre → droit d’auteur (automatique)**. Le dépôt à l’INPI conditionne la propriété industrielle."
+        }
+      ]
+    },
+    {
+      "h": "🔄 La transmission de l’entreprise",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une entreprise a une vie qui peut dépasser celle de son fondateur : elle peut être **transmise**, par vente, par donation ou par **succession** (au décès). Le droit organise cette continuité pour préserver l’activité et les emplois."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**La cession (vente)** : le fonds de commerce ou les parts sociales sont vendus à un repreneur. Elle obéit à un formalisme protecteur (information des salariés, publicité).",
+            "**La donation** : transmission à titre gratuit, souvent aux enfants, avec des dispositifs fiscaux d’allègement (pacte Dutreil).",
+            "**La succession** : au décès, l’entreprise entre dans le patrimoine transmis aux héritiers selon les règles du droit des successions."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La forme juridique influence la transmission : dans une **société**, on transmet des **parts** ou **actions** (plus simple, la personne morale continue) ; dans une **entreprise individuelle**, c’est le patrimoine professionnel lui-même qui est transmis."
+        },
+        {
+          "t": "example",
+          "h": "Illustration (Lagerfeld)",
+          "c": "La question « la chatte Choupette peut-elle hériter ? » illustre les règles de succession : en droit français, un **animal** ne peut pas être héritier (il n’a pas la personnalité juridique) ; on peut en revanche charger un héritier de s’en occuper via un **legs**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Transmettre une **société** = céder des parts/actions (la personne morale survit). Anticiper la transmission (donation, pacte) évite qu’une succession subie ne mette en péril l’entreprise."
+        }
+      ]
+    },
+    {
+      "h": "⚖️ Cas pratique guidé — choisir une forme juridique",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Trois amis veulent créer ensemble une start-up ambitieuse, espèrent lever des fonds auprès d’investisseurs, et veulent tous **protéger leur patrimoine personnel**. Quelle forme leur conseiller ?"
+        },
+        {
+          "t": "example",
+          "h": "Majeure — les critères",
+          "c": "Le choix d’une forme juridique dépend du **nombre d’associés**, de la **responsabilité** (limitée ou non), de la **souplesse** de fonctionnement et de la capacité à **accueillir des investisseurs**."
+        },
+        {
+          "t": "example",
+          "h": "Mineure — les faits",
+          "c": "Ils sont **plusieurs** (exclut EI et EURL), veulent une **responsabilité limitée** (exclut certaines formes risquées), et surtout veulent **lever des fonds** et rester **souples** dans l’organisation."
+        },
+        {
+          "t": "example",
+          "h": "Conclusion",
+          "c": "La **SAS (société par actions simplifiée)** est la mieux adaptée : responsabilité **limitée aux apports** (patrimoine protégé), **grande souplesse** statutaire, et **facilité d’entrée d’investisseurs** au capital. La SARL, plus rigide, conviendrait moins à un projet cherchant des fonds."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Lister les **besoins** de l’entrepreneur → les **traduire** en critères juridiques → **comparer** les formes → **recommander** en justifiant par chaque critère. Ne jamais donner une forme sans expliquer **pourquoi**."
+        }
+      ]
+    }
+  ]
+}

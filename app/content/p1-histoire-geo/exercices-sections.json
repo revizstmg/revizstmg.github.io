@@ -1,0 +1,17 @@
+{
+  "p1-hg-g1-flash": 0,
+  "p1-hg-g1-qcm": 1,
+  "p1-hg-g1-vf": 0,
+  "p1-hg-g2-flash": 1,
+  "p1-hg-g2-qcm": 0,
+  "p1-hg-g2-vf": 0,
+  "p1-hg-g3-flash": 0,
+  "p1-hg-g3-qcm": 1,
+  "p1-hg-g3-vf": 0,
+  "p1-hg-h2-flash": 0,
+  "p1-hg-h2-qcm": 1,
+  "p1-hg-h2-vf": 0,
+  "p1-hg-h3-flash": 1,
+  "p1-hg-h3-qcm": 0,
+  "p1-hg-h3-vf": 1
+}

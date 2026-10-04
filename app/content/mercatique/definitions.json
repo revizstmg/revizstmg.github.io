@@ -1,0 +1,118 @@
+{
+  "mkg-t1": [
+    [
+      "Mercatique",
+      "Ensemble des actions visant à connaître, satisfaire et fidéliser le consommateur, avec profit."
+    ],
+    [
+      "Besoin",
+      "Sensation de manque que le consommateur cherche à combler (pyramide de Maslow)."
+    ],
+    [
+      "Motivation",
+      "Force positive qui pousse à l’achat."
+    ],
+    [
+      "Frein",
+      "Force négative qui retient ou empêche l’achat."
+    ],
+    [
+      "Comportement du consommateur",
+      "Ensemble des actes et décisions liés à l’achat et à la consommation."
+    ],
+    [
+      "Perception",
+      "Manière dont le consommateur interprète les informations sur un produit."
+    ],
+    [
+      "Fidélisation",
+      "Ensemble des actions pour conserver durablement un client."
+    ]
+  ],
+  "mkg-t2": [
+    [
+      "Marché",
+      "Lieu de rencontre de l’offre et de la demande d’un produit."
+    ],
+    [
+      "Segmentation",
+      "Découpage du marché en groupes homogènes de consommateurs."
+    ],
+    [
+      "Ciblage",
+      "Choix du ou des segments que l’entreprise veut conquérir."
+    ],
+    [
+      "Positionnement",
+      "Place voulue pour le produit dans l’esprit du consommateur, face aux concurrents."
+    ],
+    [
+      "Part de marché",
+      "Ventes de l’entreprise / ventes totales du marché (en %)."
+    ],
+    [
+      "Étude de marché",
+      "Collecte et analyse d’informations sur un marché avant de décider."
+    ],
+    [
+      "Demande",
+      "Quantité de biens que les consommateurs souhaitent et peuvent acheter."
+    ]
+  ],
+  "mkg-t3": [
+    [
+      "Plan de marchéage (mix)",
+      "Combinaison cohérente des 4P : Produit, Prix, Distribution, Communication."
+    ],
+    [
+      "Produit",
+      "Bien ou service proposé pour satisfaire un besoin (gamme, marque, qualité)."
+    ],
+    [
+      "Prix",
+      "Somme demandée au client ; fixé selon coûts, demande et concurrence."
+    ],
+    [
+      "Distribution (Place)",
+      "Ensemble des circuits amenant le produit au consommateur."
+    ],
+    [
+      "Communication",
+      "Actions informant et incitant à l’achat (publicité, promotion)."
+    ],
+    [
+      "Gamme",
+      "Ensemble des produits d’une même catégorie proposés par l’entreprise."
+    ],
+    [
+      "Marque",
+      "Signe distinctif identifiant les produits d’une entreprise."
+    ]
+  ],
+  "mkg-t4": [
+    [
+      "Mercatique durable",
+      "Démarche marketing intégrant les enjeux sociaux et environnementaux."
+    ],
+    [
+      "Consumérisme",
+      "Mouvement de défense des intérêts des consommateurs."
+    ],
+    [
+      "Greenwashing",
+      "Communication trompeuse présentant comme écologique un produit qui ne l’est pas."
+    ],
+    [
+      "Éthique",
+      "Respect de valeurs morales dans les pratiques commerciales."
+    ],
+    [
+      "Obsolescence programmée",
+      "Réduction volontaire de la durée de vie d’un produit pour le faire remplacer."
+    ],
+    [
+      "Responsabilité sociétale",
+      "Prise en compte par l’entreprise de ses impacts sur la société."
+    ]
+  ]
+}

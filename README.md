@@ -104,6 +104,9 @@ l'onglet Actions.
 supabase/functions/fiche-vision/   fonction « fiche par photo » (Gemini ou Claude)
 index.html, sw.js, …           version compilée servie par GitHub Pages (générée)
 app/
+  content/              le contenu pédagogique, en JSON (voir plus bas)
+  tests/                tests de la logique, du contenu et des parcours
+  scripts/              outils (inventaire du code)
   index.html            page d'entrée de Vite
   vite.config.js        build en fichier unique vers app/dist
   pwa-postbuild.mjs     ajoute manifest, service worker et icônes après le build
@@ -115,7 +118,8 @@ app/
     pages/              28 écrans (accueil, matière, thème, chapitre, bac blanc, coach IA, amis…)
     components/         mise en page, affichage des cours, outils transverses
     games/              un composant par type d'exercice, orchestrés par GameHost.jsx
-    data/               tout le contenu et les moteurs qui s'en servent (voir plus bas)
+    content/contenu.js  lecture du contenu JSON
+    data/               assemblage du contenu et moteurs (voir plus bas)
     auth.js             comptes élève et prof (Supabase Auth + table profiles)
     classroom.js        espace Classe
     friends.js          amis et duels
@@ -127,17 +131,25 @@ app/
     notify.js, pwa.js   rappels et installation
 ```
 
-## Le contenu (`app/src/data/`)
+## Le contenu (`app/content/`)
 
-**`index.js` assemble tout.** Il exporte la liste `SUBJECTS` et l'index
-`ALL_CHAPTERS`. Il génère aussi automatiquement les exercices et les flashcards à
-partir du texte des cours : `sectionExercises`, `flashcardsForSection`,
-`buildQuiz`, `buildThemeTest`.
+Le contenu pédagogique est en **JSON**, rangé par matière. On le corrige dans ces
+fichiers, sans toucher au code. Les tests de contenu (`npm test`) vérifient ensuite
+ce que l'élève verra.
 
-**Une matière = un fichier** (`gestion.js`, `droit.js`, `economie.js`…). Les matières
-de Première sont regroupées dans `premiere.js`. Dans chaque fichier, l'objet matière
-a un `id`, un `name` et un tableau `chapters`. Chaque chapitre (un thème du
-programme) contient :
+```
+content/
+  ordre.json                    ordre d'affichage des matières
+  <id-matière>/                 un dossier par matière : gestion-finance, droit,
+                                p1-maths (Première)…
+    matiere.json                la matière et ses thèmes de base
+    <couche>.json               une couche de contenu, indexée par id de thème
+  commun/                       formules, méthodologie, glossaire, boutique,
+                                définitions de secours par matière
+```
+
+**`matiere.json`** contient un `id`, un `name` et un tableau `chapters`. Chaque
+chapitre (un thème du programme) a :
 - `cours` : les sections du cours ;
 - `formulas` : les formules ;
 - `games` : les exercices écrits à la main.
@@ -145,29 +157,33 @@ programme) contient :
 **Pour ajouter un chapitre**, ajoutez un objet dans `chapters`. Les exercices
 automatiques sont créés à partir du cours.
 
-**Des couches enrichissent les cours** au moment de l'assemblage :
+**Les couches** enrichissent les thèmes au moment de l'assemblage. Une matière n'a
+que les couches qui la concernent.
 
 | Fichier | Rôle |
 |---|---|
-| `lessons.js` | cours complets |
-| `coursreels.js` | exemples réels d'entreprises |
-| `approfondir.js` à `approfondir4.js` | cours approfondis, méthodes de calcul, études de cas |
-| `enrich.js` | enrichissements transverses |
-| `histoiredeep.js`, `managementdeep.js`, `philocours.js`, `sicsi.js` | cours détaillés par matière |
+| `cours-complets.json` | remplace le cours de base par un cours complet |
+| `cours-reels.json` | cours « par l'exemple réel » (remplace le corps du cours) |
+| `enrichissements.json` | exemples résolus et sections ajoutés à la fin |
+| `approfondi-1.json` à `approfondi-4.json` | cours approfondis, méthodes de calcul, études de cas |
+| `philo-longue-duree.json`, `histoire-approfondie.json`, `management-approfondi.json`, `sic-si.json` | cours détaillés propres à une matière |
+| `definitions.json` | définitions clés par thème |
+| `pieges.json` | erreurs fréquentes |
+| `cas-pratiques.json` | cas d'entreprise chiffrés |
+| `etudes-documents.json` | études de documents (droit, économie) |
+| `exercices-sections.json` | section du cours à laquelle chaque exercice est rattaché |
 
-**Banques de contenu :**
+Les exercices de calcul désignent leur générateur par un nom (`"gen": "tva"`,
+voir `src/calc.js`), comme les exercices de langues générés (`"gen": "genVerbEN"`,
+voir `src/data/langgen.js`).
 
-| Fichier | Contenu |
-|---|---|
-| `keyterms.js` | définitions clés par thème |
-| `pieges.js` | erreurs fréquentes |
-| `caspratiques.js` | cas pratiques |
-| `docstudies.js` | études de documents |
-| `formulas.js` | formules |
-| `methodo.js` | méthodologie par épreuve |
-| `glossary.js` | glossaire |
+### Le code qui s'en sert
 
-**Moteurs :**
+- `src/content/contenu.js` lit les fichiers JSON.
+- `src/data/index.js` assemble les thèmes (couches dans l'ordre, masquage des
+  prérequis de Première, dédoublonnage) et génère les exercices, flashcards,
+  définitions clés, tests de thème et quiz à partir du texte des cours.
+- Les autres fichiers de `src/data/` sont des moteurs :
 
 | Fichier | Rôle |
 |---|---|
@@ -176,11 +192,9 @@ automatiques sont créés à partir du cours.
 | `coachAI.js` | analyse des résultats |
 | `dailyChallenge.js` | défi du jour |
 | `rewards.js` | récompenses de connexion |
-| `shop.js` | boutique |
-| `langgen.js` | exercices de langues |
+| `langgen.js` | exercices de langues générés |
 | `tracks.js` | niveaux et spécialités proposés à l'entrée |
-
-Au total, le contenu pèse environ 2 Mo de JavaScript.
+| `keyterms.js`, `pieges.js`, `formulas.js`, `methodo.js`, `glossary.js`, `shop.js` | accès au contenu correspondant |
 
 ### Règles de contenu
 
@@ -219,7 +233,5 @@ de son dossier.
 ## Limites connues (ce que la refonte doit régler)
 
 - Toute l'application est chargée d'un bloc, en un seul fichier de 2,7 Mo.
-- Le contenu (2 Mo) est écrit dans des fichiers JavaScript, mélangé au code.
-- Il n'y a aucun test automatique.
 - Il n'y a pas de schéma à jour de la base.
 - RévizSTMG partage encore sa base Supabase avec NAH.

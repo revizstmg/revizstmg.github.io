@@ -1,0 +1,158 @@
+{
+  "p1-hg-h1": [
+    [
+      "Révolution française",
+      "Renversement de la monarchie absolue à partir de 1789."
+    ],
+    [
+      "Monarchie constitutionnelle",
+      "Régime où le roi partage le pouvoir avec une assemblée (1791)."
+    ],
+    [
+      "République",
+      "Régime sans roi où le pouvoir vient du peuple (proclamée en 1792)."
+    ],
+    [
+      "Terreur",
+      "Période de répression politique (1793-1794)."
+    ],
+    [
+      "Empire",
+      "Régime autoritaire de Napoléon Bonaparte (1804-1815)."
+    ],
+    [
+      "Code civil",
+      "Recueil de lois de 1804 unifiant le droit privé français."
+    ]
+  ],
+  "p1-hg-h2": [
+    [
+      "Restauration",
+      "Retour de la monarchie après 1815."
+    ],
+    [
+      "Suffrage universel",
+      "Droit de vote accordé à tous les citoyens (masculin en 1848)."
+    ],
+    [
+      "IIe République",
+      "Régime républicain de 1848 à 1852."
+    ],
+    [
+      "Second Empire",
+      "Régime autoritaire puis libéral de Napoléon III (1852-1870)."
+    ],
+    [
+      "Révolution industrielle",
+      "Passage à la production mécanisée et à l’usine au XIXe siècle."
+    ],
+    [
+      "Prolétariat",
+      "Classe ouvrière née de l’industrialisation."
+    ]
+  ],
+  "p1-hg-h3": [
+    [
+      "IIIe République",
+      "Régime républicain durable (1870-1940)."
+    ],
+    [
+      "Laïcité",
+      "Séparation des Églises et de l’État (loi de 1905)."
+    ],
+    [
+      "Grande Guerre",
+      "Première Guerre mondiale (1914-1918)."
+    ],
+    [
+      "Guerre totale",
+      "Guerre mobilisant toutes les ressources d’un pays."
+    ],
+    [
+      "Tranchée",
+      "Fossé de combat caractéristique du front de 1914-1918."
+    ],
+    [
+      "Armistice",
+      "Accord de cessez-le-feu mettant fin aux combats (11 novembre 1918)."
+    ]
+  ],
+  "p1-hg-g1": [
+    [
+      "Métropolisation",
+      "Concentration des populations et des activités dans les grandes villes."
+    ],
+    [
+      "Métropole",
+      "Grande ville concentrant fonctions de commandement et richesses."
+    ],
+    [
+      "Aire urbaine",
+      "Ville-centre et couronnes dont les habitants y travaillent."
+    ],
+    [
+      "Étalement urbain",
+      "Extension spatiale des villes vers les périphéries."
+    ],
+    [
+      "Mondialisation",
+      "Mise en relation des territoires par les flux mondiaux."
+    ],
+    [
+      "Ségrégation socio-spatiale",
+      "Séparation des groupes sociaux dans l’espace urbain."
+    ]
+  ],
+  "p1-hg-g2": [
+    [
+      "Système productif",
+      "Ensemble des activités et acteurs qui produisent dans un territoire."
+    ],
+    [
+      "Délocalisation",
+      "Transfert d’une activité vers un pays à moindre coût."
+    ],
+    [
+      "Pôle de compétitivité",
+      "Regroupement d’entreprises et de laboratoires pour innover."
+    ],
+    [
+      "Agriculture productiviste",
+      "Agriculture intensive cherchant de forts rendements."
+    ],
+    [
+      "Acteur",
+      "Individu, entreprise ou collectivité qui aménage le territoire."
+    ],
+    [
+      "Aménagement",
+      "Action d’organiser l’espace pour le développer."
+    ]
+  ],
+  "p1-hg-g3": [
+    [
+      "Espace rural",
+      "Espace de faible densité, longtemps agricole, aux fonctions variées."
+    ],
+    [
+      "Périurbanisation",
+      "Extension des espaces urbains sur les campagnes proches."
+    ],
+    [
+      "Multifonctionnalité",
+      "Coexistence de fonctions agricole, résidentielle, touristique, industrielle."
+    ],
+    [
+      "Déprise",
+      "Abandon d’activités (agricoles) et déclin d’un espace rural."
+    ],
+    [
+      "Néoruraux",
+      "Nouveaux habitants venus des villes s’installer à la campagne."
+    ],
+    [
+      "Mitage",
+      "Dispersion des constructions dans l’espace rural."
+    ]
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "sig-t1": [
+    [
+      "Système d’information",
+      "Ensemble organisé de ressources qui collecte, stocke, traite et diffuse l’information."
+    ],
+    [
+      "Donnée",
+      "Élément brut (nombre, texte) sans interprétation."
+    ],
+    [
+      "Information",
+      "Donnée traitée et mise en contexte, porteuse de sens."
+    ],
+    [
+      "Processus",
+      "Enchaînement d’activités transformant des entrées en un résultat."
+    ],
+    [
+      "PGI / ERP",
+      "Progiciel de gestion intégré : logiciel unique partageant les données entre services."
+    ],
+    [
+      "Acteur du SI",
+      "Personne ou service qui produit ou utilise l’information."
+    ]
+  ],
+  "sig-t2": [
+    [
+      "Base de données",
+      "Ensemble structuré de données reliées, gérées par un SGBD."
+    ],
+    [
+      "Table",
+      "Structure en lignes et colonnes stockant des données de même nature."
+    ],
+    [
+      "Enregistrement",
+      "Une ligne d’une table (un individu, une commande…)."
+    ],
+    [
+      "Champ",
+      "Une colonne d’une table (un attribut : nom, prix…)."
+    ],
+    [
+      "Clé primaire",
+      "Champ identifiant de façon unique chaque enregistrement."
+    ],
+    [
+      "Clé étrangère",
+      "Champ faisant référence à la clé primaire d’une autre table (lien)."
+    ],
+    [
+      "Requête SQL",
+      "Instruction (SELECT…) qui interroge ou modifie la base de données."
+    ]
+  ],
+  "sig-t3": [
+    [
+      "Travail collaboratif",
+      "Travail en commun à distance grâce aux outils numériques."
+    ],
+    [
+      "Intelligence collective",
+      "Capacité d’un groupe à produire plus que la somme des individus."
+    ],
+    [
+      "Groupware",
+      "Logiciels facilitant le travail de groupe (agenda, partage de fichiers)."
+    ],
+    [
+      "Cloud",
+      "Stockage et services informatiques accessibles à distance via Internet."
+    ],
+    [
+      "Synchrone / asynchrone",
+      "En même temps (visio) / en différé (courriel, forum)."
+    ],
+    [
+      "Workflow",
+      "Automatisation d’un enchaînement de tâches et de validations."
+    ]
+  ],
+  "sig-t4": [
+    [
+      "Réseau",
+      "Ensemble d’équipements reliés pour échanger des données."
+    ],
+    [
+      "Protocole",
+      "Règles communes de communication entre machines (TCP/IP, HTTP)."
+    ],
+    [
+      "Adresse IP",
+      "Identifiant numérique unique d’une machine sur un réseau."
+    ],
+    [
+      "Cybersécurité",
+      "Protection des systèmes et données contre les attaques."
+    ],
+    [
+      "Pare-feu (firewall)",
+      "Dispositif filtrant les échanges pour bloquer les accès non autorisés."
+    ],
+    [
+      "Chiffrement",
+      "Transformation des données pour les rendre illisibles sans clé."
+    ],
+    [
+      "RGPD",
+      "Règlement européen protégeant les données personnelles."
+    ]
+  ]
+}

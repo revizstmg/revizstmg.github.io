@@ -1,0 +1,168 @@
+{
+  "mgmt-t1": [
+    {
+      "h": "Decathlon, les Restos du Cœur, un hôpital : trois logiques",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Trois organisations très différentes : Decathlon vend du matériel de sport, les Restos du Cœur distribuent des repas gratuits, un hôpital public soigne."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Organisation",
+            "Finalité",
+            "Production"
+          ],
+          "rows": [
+            [
+              "Decathlon (entreprise)",
+              "Réaliser un **profit** durable",
+              "Biens marchands (vendus)"
+            ],
+            [
+              "Restos du Cœur (association)",
+              "Une **cause** (aider les plus démunis)",
+              "Services non marchands"
+            ],
+            [
+              "Hôpital public",
+              "Une **mission de service public**",
+              "Services non marchands"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Elles produisent toutes quelque chose, mais leur raison d’être diffère : le profit n’est qu’une finalité **parmi d’autres**. On distingue les entreprises **privées** (finalité lucrative), les organisations **publiques** (intérêt général) et les **associations/OSBL** (une cause, sans but lucratif). C’est la première chose à identifier face à une organisation."
+        },
+        {
+          "t": "tip",
+          "h": "Caractériser",
+          "c": "Toujours par : **type** (privée/publique/OSBL) · **finalité** · **taille** · **champ d’action** (local → international) · **ressources** · **statut juridique**."
+        }
+      ]
+    },
+    {
+      "h": "Ce qui fait tourner une organisation",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Pour fonctionner, toute organisation combine des **ressources** : des personnes (salariés, bénévoles), de l’argent (ventes, subventions, dons) et des moyens matériels et immatériels (locaux, machines, savoir-faire, données). Bien les combiner, c’est déjà du management."
+        },
+        {
+          "t": "p",
+          "c": "Le management a **deux niveaux** : le **stratégique** (les dirigeants fixent le cap à long terme) et l’**opérationnel** (l’encadrement pilote le quotidien). Sa réussite se mesure par la **performance**, qui croise l’**efficacité** (atteindre l’objectif) et l’**efficience** (au moindre coût)."
+        },
+        {
+          "t": "tip",
+          "h": "Piège fréquent",
+          "c": "Ne confonds pas **finalité** (la raison d’être, durable) et **objectif** (un but précis, mesurable et daté, comme « ouvrir 10 magasins en 2 ans »). Ni **efficacité** (le résultat) et **efficience** (sans gaspiller)."
+        }
+      ]
+    }
+  ],
+  "mgmt-t2": [
+    {
+      "h": "Netflix vs Blockbuster : la stratégie qui tue",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas réel",
+          "c": "En 2000, le géant de la location de DVD Blockbuster a refusé de racheter le petit Netflix. Dix ans plus tard, Blockbuster faisait faillite, tandis que Netflix, passé au streaming, devenait un leader mondial."
+        },
+        {
+          "t": "p",
+          "c": "La différence ? La **stratégie** : Netflix a anticipé un changement (Internet) et bâti un **avantage concurrentiel** difficile à copier (technologie, données, catalogue). Blockbuster, prisonnier de ses magasins (coûts fixes), n’a pas su se réinventer. Une bonne stratégie engage l’organisation sur le **long terme**, au-delà des décisions du quotidien."
+        },
+        {
+          "t": "p",
+          "c": "Michael **Porter** distingue deux grandes stratégies : la **domination par les coûts** (proposer le prix le plus bas grâce aux volumes) et la **différenciation** (une offre perçue comme unique, que le client paie plus cher). Vouloir « le prix le plus bas ET le plus haut de gamme » est intenable : il faut **choisir**."
+        }
+      ]
+    },
+    {
+      "h": "Regarder avant de sauter : le diagnostic",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Avant de décider, on fait un **diagnostic** : à l’**intérieur**, ses **forces** et ses **faiblesses** (ce qu’on maîtrise) ; à l’**extérieur**, les **opportunités** et les **menaces** du marché (ce qu’on subit). Croiser les deux, c’est la matrice **SWOT**."
+        },
+        {
+          "t": "table",
+          "head": [
+            "",
+            "Positif",
+            "Négatif"
+          ],
+          "rows": [
+            [
+              "Interne",
+              "Forces",
+              "Faiblesses"
+            ],
+            [
+              "Externe",
+              "Opportunités",
+              "Menaces"
+            ]
+          ]
+        },
+        {
+          "t": "example",
+          "h": "Illustration",
+          "c": "Une petite marque bio : force = image authentique ; faiblesse = peu de moyens ; opportunité = mode du « naturel » ; menace = l’arrivée des grands groupes."
+        },
+        {
+          "t": "tip",
+          "h": "Avantage durable",
+          "c": "Une ressource ne donne un avantage concurrentiel que si elle est **rare et difficile à imiter** (une réputation, un savoir-faire unique). Ne confonds pas interne (forces/faiblesses) et externe (opportunités/menaces)."
+        }
+      ]
+    }
+  ],
+  "mgmt-t3": [
+    {
+      "h": "Patagonia offre son entreprise à la planète",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas réel",
+          "c": "En 2022, le fondateur de la marque de vêtements Patagonia a transféré la propriété de son entreprise à une structure dédiée à la lutte climatique : désormais, les bénéfices financent la protection de l’environnement."
+        },
+        {
+          "t": "p",
+          "c": "C’est une forme forte de **RSE** (responsabilité sociétale) : intégrer **volontairement** les enjeux sociaux et écologiques **au cœur** de la stratégie, pas comme un simple habillage. Elle applique à l’entreprise le **développement durable** et ses **trois piliers** (économique, social, environnemental)."
+        },
+        {
+          "t": "p",
+          "c": "La RSE n’est pas de la charité : elle nourrit la **performance globale** (image, fidélité des clients et des salariés, réduction des risques) et peut devenir un **avantage concurrentiel**. Elle suppose de prendre au sérieux **toutes** les **parties prenantes** (salariés, clients, riverains, ONG…), pas seulement les actionnaires."
+        }
+      ]
+    },
+    {
+      "h": "Greenwashing : la RSE de façade",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Une marque colle un logo « vert » et le mot « éco » sur ses produits, sans rien changer à sa production polluante."
+        },
+        {
+          "t": "p",
+          "c": "C’est du **greenwashing** (écoblanchiment) : communiquer « responsable » sans l’être. Les consommateurs, les ONG et la loi y sont de plus en plus attentifs ; le risque, c’est une **perte de confiance durable**. La parade : des engagements **prouvés** (labels, reporting extra-financier, norme ISO 26000)."
+        },
+        {
+          "t": "p",
+          "c": "Les organisations font aussi face à de profondes **mutations** : transition **numérique**, transition **écologique**, nouvelles attentes sociales. Chacune est à la fois une **menace** (pour qui la subit) et une **opportunité** (pour qui l’anticipe) : d’où l’importance de l’**agilité**."
+        },
+        {
+          "t": "warning",
+          "h": "Le numérique aussi",
+          "c": "Le numérique est une **opportunité** (productivité, nouveaux services) **et** un risque (cyberattaques, dépendance, impact écologique des data centers) : à nuancer."
+        }
+      ]
+    }
+  ]
+}

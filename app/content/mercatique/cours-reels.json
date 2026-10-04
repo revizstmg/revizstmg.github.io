@@ -1,0 +1,255 @@
+{
+  "mkg-t1": [
+    {
+      "h": "Pourquoi faire la queue toute une nuit pour un téléphone ?",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "À chaque sortie d’un nouvel iPhone, des clients campent devant les magasins et paient le prix fort, alors que leur ancien téléphone marche très bien."
+        },
+        {
+          "t": "p",
+          "c": "Leur achat ne répond pas qu’à un besoin fonctionnel (téléphoner) : il touche l’**image de soi**, l’envie d’appartenir, d’être reconnu. La **mercatique** (marketing) est justement l’ensemble des actions pour **détecter, analyser et satisfaire** les besoins des consommateurs — elle part du client, pas du produit."
+        },
+        {
+          "t": "p",
+          "c": "La pyramide de **Maslow** hiérarchise les besoins : physiologiques, sécurité, appartenance, estime, accomplissement. Un même produit peut en toucher plusieurs à la fois (un smartphone : communiquer **et** afficher un statut)."
+        },
+        {
+          "t": "tip",
+          "h": "Renversement",
+          "c": "La mercatique part du **client** (« qu’est-ce qu’il veut ? »), pas du produit (« j’ai fabriqué, je cherche à vendre »)."
+        }
+      ]
+    },
+    {
+      "h": "Ce qui pousse, ce qui freine",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Face à un achat, deux forces s’opposent : les **motivations** (ou mobiles) qui **poussent**, et les **freins** qui **retiennent**. Le rôle du marketing est d’**augmenter les mobiles** et de **lever les freins** — d’où les garanties, les facilités de paiement, les essais gratuits, les avis clients."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Mobiles (poussent)",
+            "Freins (retiennent)"
+          ],
+          "rows": [
+            [
+              "Hédoniste : se faire plaisir",
+              "Prix (frein financier)"
+            ],
+            [
+              "Oblatif : faire plaisir aux autres",
+              "Peur de se tromper (risque)"
+            ],
+            [
+              "Auto-expression : montrer qui l’on est",
+              "Culpabilité (inhibition)"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "L’achat se fait aussi en **étapes** : reconnaissance du besoin → recherche d’informations → évaluation → décision → **évaluation post-achat** (satisfaction ou regret). Un client satisfait revient et recommande ; un client déçu part et « fait du bruit »."
+        },
+        {
+          "t": "warning",
+          "h": "À ne pas inverser",
+          "c": "La **motivation** pousse à l’achat, le **frein** le retient. Ce sont deux notions **opposées** à ne pas confondre."
+        }
+      ]
+    },
+    {
+      "h": "On n’achète pas tous de la même façon",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Nos choix dépendent de facteurs **personnels** (perception, habitudes, personnalité, âge) et **socioculturels** (la culture, les proches, les groupes de référence, le milieu social). Deux personnes devant le même produit peuvent réagir de façon opposée : c’est pourquoi une marque doit connaître **qui** est en face."
+        },
+        {
+          "t": "p",
+          "c": "On distingue aussi des **types d’achat** : **réfléchi** (une voiture, choix long), **impulsif** (en caisse, sans réflexion), **routinier** (les courses habituelles). Chaque type appelle une mercatique différente. Pour connaître tout cela, l’entreprise mène des **études** : **quantitatives** (combien ? par sondage) et **qualitatives** (pourquoi ? par entretiens)."
+        },
+        {
+          "t": "tip",
+          "h": "Vers la suite",
+          "c": "Comprendre le consommateur mène naturellement à **découper** le marché en groupes homogènes : c’est la **segmentation**."
+        }
+      ]
+    }
+  ],
+  "mkg-t2": [
+    {
+      "h": "Vinted, Rolex, McDo : pas les mêmes clients",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Une montre à 20 € sur Vinted, une Rolex à 10 000 €, un menu à 8 € : trois offres, trois publics totalement différents."
+        },
+        {
+          "t": "p",
+          "c": "Aucune marque ne peut plaire à tout le monde. Elle **découpe** donc le marché en groupes homogènes (la **segmentation**), en **choisit** un ou plusieurs (le **ciblage**), puis construit une **image** qui la distingue des concurrents (le **positionnement**). Trois étapes, dans cet ordre : c’est la démarche **SCP**."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Étape",
+            "Question",
+            "Résultat"
+          ],
+          "rows": [
+            [
+              "Segmentation",
+              "Comment découper ?",
+              "Des segments homogènes"
+            ],
+            [
+              "Ciblage",
+              "Qui viser ?",
+              "La cible"
+            ],
+            [
+              "Positionnement",
+              "Quelle image ?",
+              "Une place dans l’esprit du client"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "Mémo",
+          "c": "**S**egmenter (découper) → **C**ibler (choisir) → **P**ositionner (image voulue). Un bon positionnement est **clair, distinctif et crédible**."
+        }
+      ]
+    },
+    {
+      "h": "Connaître son marché",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Un marché est la rencontre d’une **offre** et d’une **demande**. Ce n’est pas que les clients actuels : il y a aussi les concurrents, et les **non-consommateurs relatifs** qu’on pourrait convaincre demain (le potentiel de croissance). Analyser tout cela (taille, tendances, parts de marché) évite de foncer à l’aveugle."
+        },
+        {
+          "t": "p",
+          "c": "On situe sa position par la **part de marché** = ventes de l’entreprise ÷ ventes totales du marché × 100. Pour rester à jour, l’entreprise exerce une **veille** (surveillance continue de la concurrence et des tendances) et réalise des **études de marché** avant toute décision importante."
+        },
+        {
+          "t": "warning",
+          "h": "Deux mesures à distinguer",
+          "c": "La part de marché (en % du **marché total**) n’est pas la part de marché **relative** (comparée au **leader**)."
+        }
+      ]
+    }
+  ],
+  "mkg-t3": [
+    {
+      "h": "Pourquoi une Rolex n’est pas vendue en supermarché",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Imagine une Rolex à 10 000 € posée entre les paquets de pâtes, avec une pub criarde « −50 % ». Absurde, non ?"
+        },
+        {
+          "t": "p",
+          "c": "Parce que les quatre leviers du marketing — le **produit**, le **prix**, la **distribution**, la **communication** (les **4P**) — doivent former un tout **cohérent** avec le positionnement. Un produit de luxe → un prix élevé → des boutiques sélectives → une communication prestigieuse. Casser un seul de ces éléments détruit l’image."
+        },
+        {
+          "t": "table",
+          "head": [
+            "P",
+            "Décisions"
+          ],
+          "rows": [
+            [
+              "Produit",
+              "Gamme, qualité, marque, design"
+            ],
+            [
+              "Prix",
+              "Niveau, stratégie, réductions"
+            ],
+            [
+              "Distribution (Place)",
+              "Circuits, points de vente"
+            ],
+            [
+              "Communication (Promotion)",
+              "Publicité, réseaux, promotions"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "Les 4P",
+          "c": "Produit, Prix, Distribution (Place), Communication (Promotion) : c’est le plan de marchéage, et il se pense **ensemble**, jamais isolément."
+        }
+      ]
+    },
+    {
+      "h": "Le prix : bien plus qu’un chiffre",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le prix est le seul P qui **rapporte** de l’argent (les autres en coûtent) et il envoie un **signal** de qualité. Trop bas, il fait douter ; trop haut, il fait fuir. On le fixe en croisant trois éléments : le **coût** (il doit être couvert), la **demande** (ce que le client accepte de payer) et la **concurrence**."
+        },
+        {
+          "t": "p",
+          "c": "Au lancement, trois stratégies : l’**écrémage** (prix élevé, image premium), la **pénétration** (prix bas pour conquérir vite un large marché) ou l’**alignement** (se caler sur le marché). L’**élasticité-prix** mesure la sensibilité de la demande au prix."
+        },
+        {
+          "t": "warning",
+          "h": "Piège de calcul",
+          "c": "Ne confonds pas le taux de **marge** (calculé sur le **coût d’achat**) et le taux de **marque** (calculé sur le **prix de vente**)."
+        }
+      ]
+    }
+  ],
+  "mkg-t4": [
+    {
+      "h": "Amazon sait ce que tu veux avant toi",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "À peine connecté, un site te propose « pour toi » des produits étonnamment pertinents, en fonction de tes achats et de tes clics."
+        },
+        {
+          "t": "p",
+          "c": "C’est le marketing **numérique** : les **données** des clients permettent de **personnaliser** l’offre et la publicité (recommandations, ciblage), et de **mesurer** en temps réel (taux de clic, de conversion). Mais elles ne s’utilisent pas librement : le **RGPD** impose le **consentement**, une base légale, et le droit de faire **effacer** ses données."
+        },
+        {
+          "t": "p",
+          "c": "Le parcours d’achat est devenu **omnicanal** : le client passe du magasin au site à l’appli et aux réseaux sociaux. Il se renseigne en ligne, achète en boutique (ou l’inverse). Les **avis** et le **marketing d’influence** pèsent souvent plus que la publicité classique."
+        },
+        {
+          "t": "tip",
+          "h": "Cadre",
+          "c": "La donnée personnelle est protégée : la collecter **sans base légale** est interdit. Un usage **responsable** de la data renforce la **confiance**."
+        }
+      ]
+    },
+    {
+      "h": "Vert pour de vrai, ou greenwashing ?",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La mercatique **responsable** (ou durable) intègre l’environnement et l’éthique dans l’offre : éco-conception, transparence, circuits courts. Elle répond à une attente forte des consommateurs et peut devenir un **avantage concurrentiel**."
+        },
+        {
+          "t": "p",
+          "c": "Mais gare au **greenwashing** (écoblanchiment) : afficher un discours « écolo » sans changer ses pratiques. Les consommateurs, les ONG et la loi le repèrent de mieux en mieux, et la sanction est une **perte de confiance** durable. La **e-réputation** (avis, bad buzz) se surveille de près."
+        },
+        {
+          "t": "warning",
+          "h": "Vigilance",
+          "c": "Un argument écologique doit être **vrai et prouvé** (label, reporting), pas un simple habillage marketing."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "rh-t1": [
+    {
+      "h": "📊 Les théories de la motivation",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Théorie",
+            "Idée clé"
+          ],
+          "rows": [
+            [
+              "Taylor (OST)",
+              "La motivation passe par le salaire"
+            ],
+            [
+              "Maslow",
+              "Besoins hiérarchisés (pyramide)"
+            ],
+            [
+              "Herzberg",
+              "Facteurs d’hygiène ≠ facteurs de motivation"
+            ],
+            [
+              "Mayo",
+              "Reconnaissance et relations sociales motivent"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La distinction de **Herzberg** est centrale : le salaire et les conditions évitent le **mécontentement** (hygiène) mais ne motivent pas durablement ; la reconnaissance, l’intérêt et l’évolution **motivent** vraiment."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un bon salaire évite l’insatisfaction mais ne suffit pas à **motiver**."
+        }
+      ]
+    },
+    {
+      "h": "🎓 GPEC et développement des compétences",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **GPEC** (gestion prévisionnelle des emplois et des compétences) **anticipe** les besoins futurs : quels métiers vont évoluer, quelles compétences développer ? Elle évite de subir les changements."
+        },
+        {
+          "t": "p",
+          "c": "Leviers de développement : **formation**, **tutorat**, **mobilité** interne, **VAE**. La compétence = **savoir + savoir-faire + savoir-être**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "GPEC = anticiper les compétences. La formation adapte les salariés aux évolutions (et lutte contre le chômage structurel)."
+        }
+      ]
+    },
+    {
+      "h": "💶 La politique de rémunération",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Composante",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Salaire fixe",
+              "Base mensuelle"
+            ],
+            [
+              "Part variable",
+              "Primes, commissions"
+            ],
+            [
+              "Périphériques",
+              "Participation, intéressement, avantages"
+            ],
+            [
+              "Reconnaissance non monétaire",
+              "Évolution, autonomie"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Une rémunération perçue comme **équitable** (en interne et face au marché) motive ; un sentiment d’injustice démotive fortement."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La rémunération combine fixe, variable et périphériques ; son **équité** perçue est décisive."
+        }
+      ]
+    }
+  ],
+  "rh-t2": [
+    {
+      "h": "🤝 Groupe, équipe et culture d’entreprise",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une **équipe** est un groupe orienté vers un **objectif commun**, avec des rôles complémentaires. La **cohésion** l’unit ; la **culture d’entreprise** (valeurs, rites, histoire) renforce le sentiment d’appartenance."
+        },
+        {
+          "t": "warning",
+          "h": "Limite",
+          "c": "Une cohésion **excessive** crée du **conformisme** (pensée de groupe) : plus personne n’ose contredire, ce qui nuit aux décisions."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La cohésion est une force **jusqu’à un point** ; une bonne équipe reste **soudée ET critique**."
+        }
+      ]
+    },
+    {
+      "h": "⚔️ Typologie et résolution des conflits",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Type de conflit",
+            "Origine"
+          ],
+          "rows": [
+            [
+              "D’intérêts",
+              "Objectifs/avantages incompatibles"
+            ],
+            [
+              "De valeurs",
+              "Visions opposées"
+            ],
+            [
+              "De personnes",
+              "Incompatibilités relationnelles"
+            ],
+            [
+              "De pouvoir",
+              "Lutte d’influence"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Résolution, du plus subi au plus constructif : **recours hiérarchique** (le chef tranche), **négociation**, **médiation** (un tiers aide), **arbitrage** (un tiers décide)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Privilégier la **négociation gagnant-gagnant** ; un conflit bien géré peut être **constructif**."
+        }
+      ]
+    },
+    {
+      "h": "🧑‍💼 Étude de cas — gérer un conflit d’équipe",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Deux salariés s’opposent sur la répartition des tâches, ce qui bloque un projet. Que fait le manager ?"
+        },
+        {
+          "t": "example",
+          "h": "Démarche",
+          "c": "Identifier la nature (conflit **d’intérêts/organisation**, rôles mal définis) → réunir les parties en **médiation** → clarifier les rôles → poser des règles."
+        },
+        {
+          "t": "p",
+          "c": "**Conclusion.** Traité par le dialogue, le conflit renforce l’équipe ; ignoré, il pourrit le climat."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Identifier → choisir le mode de résolution (médiation) → prévenir la rechute."
+        }
+      ]
+    }
+  ],
+  "rh-t3": [
+    {
+      "h": "📣 Formes et canaux de communication",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Critère",
+            "Types"
+          ],
+          "rows": [
+            [
+              "Destinataire",
+              "Interne (salariés) / Externe (clients, public)"
+            ],
+            [
+              "Objet",
+              "Commerciale (vendre) / Institutionnelle (image)"
+            ],
+            [
+              "Cadre",
+              "Formelle (officielle) / Informelle (« radio couloir »)"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La **communication globale** vise la **cohérence** de tous ces messages. Le schéma : émetteur → message → canal → récepteur, avec du **feedback** et des **bruits** possibles."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Choisir le **canal** selon le sujet : réunion pour un sujet sensible, mail pour une info simple."
+        }
+      ]
+    },
+    {
+      "h": "🚨 La communication de crise",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Face à un **bad buzz** ou une crise, la règle est : **réagir vite**, être **transparent et honnête**, **assumer** et agir, **parler d’une seule voix**."
+        },
+        {
+          "t": "warning",
+          "h": "À éviter",
+          "c": "Le **silence** et le **mensonge** aggravent tout. Sur les réseaux, la réputation se joue en quelques heures."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Communication de crise = **vitesse + transparence + cohérence**."
+        }
+      ]
+    },
+    {
+      "h": "🧑‍💼 Étude de cas — communiquer un changement",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Une entreprise doit annoncer une réorganisation à ses salariés. Comment ?"
+        },
+        {
+          "t": "example",
+          "h": "Démarche",
+          "c": "Communication **interne, formelle**, sujet **sensible** → privilégier une **réunion** (canal riche) plutôt qu’un mail ; message **clair et honnête** ; temps de **questions** (feedback)."
+        },
+        {
+          "t": "p",
+          "c": "**Conclusion.** Bien communiquée, la réorganisation limite l’angoisse et les rumeurs ; mal communiquée, elle crée de la résistance."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Type/objectif → canal adapté → message clair → feedback."
+        }
+      ]
+    }
+  ],
+  "rh-t4": [
+    {
+      "h": "⚙️ Coordonner le travail (Mintzberg)",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Mécanisme",
+            "Principe"
+          ],
+          "rows": [
+            [
+              "Ajustement mutuel",
+              "On se coordonne en communiquant (petites équipes)"
+            ],
+            [
+              "Supervision directe",
+              "Un chef donne les ordres"
+            ],
+            [
+              "Standardisation des procédés",
+              "Procédures écrites"
+            ],
+            [
+              "Standardisation des résultats",
+              "On fixe des objectifs"
+            ],
+            [
+              "Standardisation des qualifications",
+              "On recrute des experts formés"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Petite structure → **ajustement mutuel** ; grande → **supervision** et **standardisation**."
+        }
+      ]
+    },
+    {
+      "h": "🏥 Conditions de travail et QVT",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Les **conditions de travail** (environnement, rythme, charge mentale, relations) influencent la santé, la motivation et la performance. La **QVT** (qualité de vie au travail) améliore à la fois le **bien-être** et l’**efficacité**."
+        },
+        {
+          "t": "p",
+          "c": "Enjeux actuels : prévention des **risques psychosociaux** (stress, burn-out, harcèlement), **télétravail**, **droit à la déconnexion**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "De bonnes conditions **améliorent la performance** (moins d’absentéisme, plus d’engagement) : bien-être et efficacité vont de pair."
+        }
+      ]
+    },
+    {
+      "h": "📊 Mesurer le climat social",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Indicateur",
+            "Ce qu’il révèle"
+          ],
+          "rows": [
+            [
+              "Taux d’absentéisme",
+              "Démotivation, mauvaises conditions"
+            ],
+            [
+              "Taux de turnover",
+              "Départs fréquents, malaise"
+            ],
+            [
+              "Conflits / grèves",
+              "Tensions sociales"
+            ],
+            [
+              "Accidents du travail",
+              "Problèmes de sécurité"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Rappel : le **coût du travail** (brut + charges patronales) dépasse largement le salaire **net** perçu."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le climat social se **pilote** avec des indicateurs ; c’est un **faisceau**, pas un seul chiffre."
+        }
+      ]
+    }
+  ]
+}

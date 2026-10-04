@@ -1,0 +1,665 @@
+{
+  "mgmt-t1": {
+    "essentiel": [
+      "Trois types d’organisations : **privée** (lucrative), **publique** (intérêt général), **société civile** (association, ONG).",
+      "**Efficacité** = atteindre l’objectif ; **efficience** = l’atteindre au **moindre coût**.",
+      "Ressources : financières, humaines, matérielles et **immatérielles** (marque, savoir-faire, brevets).",
+      "Compétitivité **prix** (prix bas) vs **hors-prix** (qualité, innovation, image, délais)."
+    ],
+    "intro": "Le management, c’est l’art de **piloter une organisation** pour qu’elle atteigne ses objectifs. Avant de savoir diriger, il faut comprendre : qu’est-ce qu’une organisation, quelle est sa **finalité**, avec quelles **ressources** crée-t-elle de la valeur, et comment reste-t-elle **compétitive** face aux autres ?",
+    "cours": [
+      {
+        "h": "Qu’est-ce qu’une organisation ? Types et finalités",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Une **organisation** est un groupe humain **structuré** — elle réunit des **moyens** (humains, matériels, financiers), une **division du travail** (chacun sa mission), une **hiérarchie** et des **règles** communes — pour atteindre un **but commun** qu’un individu seul n’atteindrait pas. Une entreprise, une mairie, un club de sport ou une association sont toutes des organisations."
+          },
+          {
+            "t": "p",
+            "c": "On les classe d’abord selon leur **finalité**, c’est-à-dire leur raison d’être profonde."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Type",
+              "Finalité",
+              "Ressources",
+              "Exemples"
+            ],
+            "rows": [
+              [
+                "Entreprise privée",
+                "Lucrative (réaliser un **profit**)",
+                "Capitaux privés, ventes",
+                "PME de meubles, multinationale"
+              ],
+              [
+                "Organisation publique",
+                "Non lucrative (**intérêt général**, service public)",
+                "Impôts, budget de l’État",
+                "Mairie, hôpital public, école"
+              ],
+              [
+                "Société civile (OSC)",
+                "Non lucrative (**défendre une cause**)",
+                "Cotisations, dons, bénévolat, subventions",
+                "Association, ONG, syndicat"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "Attention : « non lucratif » ne veut pas dire « sans argent ». Une association peut vendre des services ; simplement, ses **excédents** sont **réinvestis** dans sa cause, jamais distribués à des propriétaires."
+          },
+          {
+            "t": "p",
+            "c": "La finalité ne se réduit plus au seul profit. Beaucoup d’entreprises affichent aussi une finalité **sociétale** : prendre en compte les enjeux **sociaux** et **environnementaux** de leur activité (c’est la **RSE**, développée au thème 3). Une **entreprise à mission** inscrit même cette raison d’être dans ses statuts."
+          },
+          {
+            "t": "tip",
+            "c": "Ne confonds pas **finalité** (la raison d’être, durable : « pourquoi j’existe ? ») et **objectif** (un but précis et mesurable, à atteindre : « vendre 100 vélos ce trimestre »). La finalité se décline en objectifs."
+          }
+        ]
+      },
+      {
+        "h": "Efficacité et efficience : deux mesures de la performance",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La **performance** d’une organisation, c’est sa capacité à atteindre ses objectifs en utilisant bien ses ressources. On la juge sur **deux plans** qu’il ne faut jamais confondre."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Notion",
+              "Question posée",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "**Efficacité**",
+                "Ai-je atteint mon objectif ?",
+                "Atteindre le **résultat** fixé, quel qu’en soit le coût"
+              ],
+              [
+                "**Efficience**",
+                "À quel coût l’ai-je atteint ?",
+                "Atteindre l’objectif au **moindre coût** (meilleur usage des ressources)"
+              ]
+            ]
+          },
+          {
+            "t": "example",
+            "h": "Efficace n’est pas toujours efficient",
+            "c": "Deux équipes atteignent l’objectif de **100 ventes** : les deux sont **efficaces**.\nMais l’équipe B l’a fait avec **deux fois moins de budget** : elle est plus **efficiente**.\n→ On peut être efficace sans être efficient (objectif atteint mais en gaspillant), et l’inverse est impossible."
+          },
+          {
+            "t": "p",
+            "c": "La performance a **plusieurs dimensions** : **commerciale** (parts de marché, satisfaction client), **financière** (rentabilité), **sociale** (climat, faible turnover) et **environnementale**. Une organisation vise aujourd’hui une **performance globale**, qui concilie ces différents plans."
+          },
+          {
+            "t": "tip",
+            "c": "Moyen mnémotechnique : efficac**ité** = le résult**at** ; effici**ence** = les moy**ens**. « Efficient » contient l’idée d’**économie** de ressources."
+          }
+        ]
+      },
+      {
+        "h": "Les ressources et la création de valeur",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Pour agir, l’organisation combine **quatre types de ressources**. Les repérer dans un document est un classique du bac."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Ressource",
+              "Exemples",
+              "Particularité"
+            ],
+            "rows": [
+              [
+                "**Financières**",
+                "Capitaux, trésorerie, emprunts",
+                "Nécessaires pour investir et fonctionner"
+              ],
+              [
+                "**Humaines**",
+                "Salariés, compétences, savoir-faire",
+                "Au cœur de la performance sociale"
+              ],
+              [
+                "**Matérielles**",
+                "Locaux, machines, matières premières",
+                "Visibles au bilan (immobilisations, stocks)"
+              ],
+              [
+                "**Immatérielles**",
+                "Marque, image, brevets, réputation, données",
+                "Difficiles à copier → avantage durable"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "En enchaînant ses activités (approvisionnement → production → commercialisation → service après-vente), l’organisation forme une **chaîne de valeur** : chaque maillon doit **ajouter de la valeur** pour le client. La performance vient de la **cohérence** de l’ensemble."
+          },
+          {
+            "t": "example",
+            "h": "La valeur perçue",
+            "c": "Un vélo Vél’Oc coûte 40 € de matières de plus qu’un vélo standard, mais son design et sa marque font que le client accepte de payer **300 € de plus** : la valeur **créée** dépasse largement le coût des ressources ajoutées."
+          },
+          {
+            "t": "tip",
+            "c": "Les ressources **immatérielles** (marque, savoir-faire, brevets) sont souvent la vraie source d’un **avantage concurrentiel durable** : un concurrent peut racheter des machines, mais pas une réputation bâtie sur 20 ans."
+          }
+        ]
+      },
+      {
+        "h": "Être compétitif : par les prix ou hors-prix",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La **compétitivité** est la capacité d’une organisation à **s’imposer face à la concurrence** et à conserver ou gagner des clients. On distingue deux grandes voies, souvent complémentaires."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Compétitivité",
+              "On agit sur…",
+              "Comment ?"
+            ],
+            "rows": [
+              [
+                "**Prix**",
+                "Le **prix de vente**",
+                "Baisser les coûts (productivité, achats, automatisation) pour vendre moins cher"
+              ],
+              [
+                "**Hors-prix**",
+                "La **valeur** de l’offre",
+                "Qualité, **innovation**, image de marque, délais, service, design"
+              ]
+            ]
+          },
+          {
+            "t": "example",
+            "h": "Vél’Oc mise sur le hors-prix",
+            "c": "En se positionnant « haut de gamme », Vél’Oc joue la compétitivité **hors-prix** (qualité, image, innovation) plutôt que le prix le plus bas. Un hard-discounter, lui, jouerait la compétitivité-**prix**."
+          },
+          {
+            "t": "warning",
+            "c": "Piège fréquent : croire qu’il faut **toujours** baisser les prix. Pour une marque premium, casser les prix **détruirait** son image et sa marge. La bonne stratégie dépend du **positionnement** choisi."
+          },
+          {
+            "t": "p",
+            "c": "Gagner en compétitivité passe souvent par des **gains de productivité** (produire plus avec autant de moyens) et par l’**innovation**, qui permet de se différencier durablement."
+          },
+          {
+            "t": "p",
+            "c": "📖 **Définitions clés à mémoriser**"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Terme",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Organisation",
+                "Groupe humain structuré (moyens, division du travail, règles) réuni pour un but commun"
+              ],
+              [
+                "Finalité",
+                "Raison d’être durable de l’organisation (≠ objectif, but précis et mesurable)"
+              ],
+              [
+                "Efficacité",
+                "Atteindre l’objectif fixé"
+              ],
+              [
+                "Efficience",
+                "Atteindre l’objectif au moindre coût"
+              ],
+              [
+                "Ressource immatérielle",
+                "Actif non physique difficile à copier : marque, savoir-faire, brevet, réputation"
+              ],
+              [
+                "Chaîne de valeur",
+                "Enchaînement des activités qui créent de la valeur pour le client"
+              ],
+              [
+                "Compétitivité-prix",
+                "Capacité à s’imposer par un prix plus bas"
+              ],
+              [
+                "Compétitivité hors-prix",
+                "Capacité à s’imposer par la qualité, l’innovation, l’image, les délais"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "kind": "video",
+        "label": "Organisation, finalités et types",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=organisation%20entreprise%20finalit%C3%A9%20type%20management%20terminale%20STMG"
+      },
+      {
+        "kind": "video",
+        "label": "Efficacité et efficience",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=efficacit%C3%A9%20efficience%20performance%20organisation%20management%20STMG"
+      }
+    ]
+  },
+  "mgmt-t2": {
+    "essentiel": [
+      "Management **stratégique** (long terme, direction) vs **opérationnel** (court terme, encadrement).",
+      "**SWOT** : Forces/Faiblesses = **interne** ; Opportunités/Menaces = **externe**.",
+      "Choix stratégiques : spécialisation/diversification ; croissance **interne/externe** ; coûts/différenciation (**Porter**).",
+      "Motivation : **Maslow** (pyramide) ; **Herzberg** (hygiène/motivation) ; styles de direction de **Likert**."
+    ],
+    "intro": "Une organisation, ce sont des **acteurs** aux intérêts parfois divergents, qu’il faut **diagnostiquer**, **décider** et **mobiliser**. Ce thème réunit les outils stars du bac : le **SWOT**, les **choix stratégiques** et les théories de la **motivation**.",
+    "cours": [
+      {
+        "h": "Management stratégique et management opérationnel",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Manager, c’est **décider**. On distingue deux niveaux de décisions, selon leur **portée** et leur **horizon** de temps."
+          },
+          {
+            "t": "table",
+            "head": [
+              "",
+              "Management stratégique",
+              "Management opérationnel"
+            ],
+            "rows": [
+              [
+                "Horizon",
+                "**Long terme** (plusieurs années)",
+                "**Court terme** (jour, semaine)"
+              ],
+              [
+                "Qui décide ?",
+                "Direction générale",
+                "Encadrement, chefs d’équipe"
+              ],
+              [
+                "Portée",
+                "Engage toute l’organisation",
+                "Concerne une activité, un service"
+              ],
+              [
+                "Exemple",
+                "Se diversifier vers les trottinettes",
+                "Organiser le planning de la semaine"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "Les décisions **stratégiques** sont souvent **non programmées** (uniques, risquées, peu réversibles) ; les décisions **opérationnelles** sont plutôt **programmées** (répétitives, encadrées par des procédures). Les deux niveaux sont **complémentaires** : la stratégie fixe le cap, l’opérationnel le met en œuvre au quotidien."
+          },
+          {
+            "t": "tip",
+            "c": "Repère l’horizon de temps et l’auteur de la décision : « long terme + direction » ⇒ stratégique ; « court terme + terrain » ⇒ opérationnel."
+          }
+        ]
+      },
+      {
+        "h": "Le diagnostic stratégique : le SWOT",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Avant de décider, l’organisation réalise un **diagnostic stratégique** : elle fait le point sur elle-même et sur son environnement. L’outil-vedette est le **SWOT**, qui croise un diagnostic **interne** (ce que l’entreprise **maîtrise**) et **externe** (ce qu’elle **subit**)."
+          },
+          {
+            "t": "figure",
+            "name": "swot"
+          },
+          {
+            "t": "table",
+            "head": [
+              "",
+              "Positif",
+              "Négatif"
+            ],
+            "rows": [
+              [
+                "**Interne**",
+                "**Forces** (Strengths)",
+                "**Faiblesses** (Weaknesses)"
+              ],
+              [
+                "**Externe**",
+                "**Opportunités** (Opportunities)",
+                "**Menaces** (Threats)"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "Le diagnostic **interne** analyse les **ressources** et **compétences** (ce que l’entreprise sait faire). Le diagnostic **externe** étudie le marché, la concurrence et le macro-environnement — souvent résumé par **PESTEL** (Politique, Économique, Socioculturel, Technologique, Écologique, Légal)."
+          },
+          {
+            "t": "example",
+            "h": "SWOT de Vél’Oc",
+            "c": "Forces : savoir-faire, image haut de gamme.\nFaiblesses : turnover élevé, dépendance à un seul produit.\nOpportunités : marché de la mobilité douce en expansion, aides publiques.\nMenaces : concurrence, critiques environnementales."
+          },
+          {
+            "t": "warning",
+            "c": "Erreur classique : ranger un élément **externe** (ex. une aide de l’État, une nouvelle réglementation) dans les forces/faiblesses. Forces/faiblesses = **interne** ; opportunités/menaces = **externe**. Demande-toi : « l’entreprise peut-elle agir dessus ? » Si non, c’est externe."
+          }
+        ]
+      },
+      {
+        "h": "Les choix stratégiques",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "À partir du diagnostic, la direction fait des **choix stratégiques**. Trois grandes questions structurent le programme."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Choix",
+              "Option A",
+              "Option B"
+            ],
+            "rows": [
+              [
+                "Périmètre d’activité",
+                "**Spécialisation** (un seul métier) : expertise, mais **dépendance**",
+                "**Diversification** (plusieurs métiers) : risque réparti, mais ressources dispersées"
+              ],
+              [
+                "Mode de croissance",
+                "**Croissance interne** (par ses propres moyens) : maîtrisée mais lente",
+                "**Croissance externe** (rachat, fusion) : rapide mais coûteuse et risquée"
+              ],
+              [
+                "Avantage concurrentiel (**Porter**)",
+                "**Domination par les coûts** : être le moins cher",
+                "**Différenciation** : proposer une offre unique (ou **focalisation** sur une niche)"
+              ]
+            ]
+          },
+          {
+            "t": "example",
+            "h": "Deux stratégies opposées",
+            "c": "Une chaîne de hard-discount choisit la **domination par les coûts** (prix bas). Une maison de luxe choisit la **différenciation** (produit unique, image forte). Les deux peuvent réussir — mais pas avec les mêmes moyens."
+          },
+          {
+            "t": "tip",
+            "c": "Selon Porter, il faut **éviter d’être « coincé au milieu »** : ni le moins cher, ni vraiment différent. Une stratégie claire vaut mieux qu’un compromis mou."
+          }
+        ]
+      },
+      {
+        "h": "Mobiliser les acteurs et les parties prenantes",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Une organisation réunit de nombreuses **parties prenantes** : des acteurs **internes** (dirigeants, salariés) et **externes** (clients, fournisseurs, banques, État, riverains) qui ont un intérêt dans son activité — avec des attentes **parfois divergentes** (un salarié veut un bon salaire, un actionnaire un fort dividende). Manager, c’est aussi **arbitrer** entre ces intérêts et prévenir les **conflits**."
+          },
+          {
+            "t": "p",
+            "c": "Fédérer les salariés améliore la **performance sociale** (moins de turnover, moins d’absentéisme) et la **cohésion**. Plusieurs théories expliquent la **motivation** :"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Auteur",
+              "Idée clé"
+            ],
+            "rows": [
+              [
+                "**Maslow**",
+                "Pyramide des besoins : on cherche à satisfaire un besoin supérieur (estime, accomplissement) une fois les besoins inférieurs (physiologiques, sécurité) comblés"
+              ],
+              [
+                "**Herzberg**",
+                "Facteurs d’**hygiène** (salaire, conditions : leur absence démotive, mais ils ne motivent pas) vs facteurs de **motivation** (reconnaissance, responsabilités, intérêt du travail : eux motivent vraiment)"
+              ],
+              [
+                "**Likert**",
+                "Quatre styles de direction : autoritaire, paternaliste, consultatif, **participatif**"
+              ]
+            ]
+          },
+          {
+            "t": "figure",
+            "name": "maslow"
+          },
+          {
+            "t": "p",
+            "c": "Le **style de direction** influence l’implication : un management **participatif** (qui associe les équipes aux décisions) renforce souvent la motivation, là où un style autoritaire peut la brider. S’y ajoute la **culture d’entreprise** (valeurs et pratiques partagées) qui soude les acteurs."
+          },
+          {
+            "t": "tip",
+            "c": "Face à un turnover élevé, on cherche d’abord les facteurs de **motivation** manquants (reconnaissance, perspectives d’évolution) : augmenter le salaire (facteur d’hygiène) calme le mécontentement mais ne suffit pas à motiver durablement."
+          },
+          {
+            "t": "p",
+            "c": "📖 **Définitions clés à mémoriser**"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Terme",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Management stratégique",
+                "Décisions de long terme prises par la direction générale"
+              ],
+              [
+                "Management opérationnel",
+                "Décisions de court terme, au niveau de l’encadrement"
+              ],
+              [
+                "Diagnostic stratégique",
+                "Analyse interne (ressources) et externe (marché) avant de décider"
+              ],
+              [
+                "SWOT",
+                "Matrice Forces/Faiblesses (interne) et Opportunités/Menaces (externe)"
+              ],
+              [
+                "Spécialisation",
+                "Se concentrer sur un seul métier"
+              ],
+              [
+                "Diversification",
+                "Élargir l’offre à de nouveaux produits ou marchés"
+              ],
+              [
+                "Partie prenante",
+                "Acteur interne ou externe ayant un intérêt dans l’organisation"
+              ],
+              [
+                "Facteur de motivation (Herzberg)",
+                "Reconnaissance, responsabilités, intérêt du travail : motive vraiment"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "kind": "video",
+        "label": "Le diagnostic SWOT expliqué",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=matrice%20SWOT%20diagnostic%20strat%C3%A9gique%20management%20terminale%20STMG"
+      },
+      {
+        "kind": "video",
+        "label": "Les théories de la motivation (Maslow, Herzberg)",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=Maslow%20Herzberg%20motivation%20au%20travail%20management%20STMG"
+      }
+    ]
+  },
+  "mgmt-t3": {
+    "essentiel": [
+      "**RSE** = concilier **économique + social + environnemental** (développement durable).",
+      "La RSE = assumer l’**impact** des décisions de l’organisation sur la société et l’environnement.",
+      "Transformation numérique : exploitation des **données**, **cybersécurité**, automatisation, télétravail."
+    ],
+    "intro": "Une organisation n’évolue pas dans le vide : elle est **responsable** de son impact sur la société et l’environnement (la **RSE**) et bouleversée par le **numérique**. Deux thèmes quasi systématiques au bac.",
+    "cours": [
+      {
+        "h": "La responsabilité sociétale des entreprises (RSE)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La **RSE** (responsabilité sociétale des entreprises) consiste, pour une organisation, à **assumer l’impact de ses décisions** sur la société et l’environnement, **au-delà** de la seule recherche du profit et de ses obligations légales. C’est l’application, dans l’entreprise, du **développement durable** : concilier **trois piliers** dans la durée."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Pilier",
+              "Objectif",
+              "Exemples d’actions"
+            ],
+            "rows": [
+              [
+                "**Économique**",
+                "Être viable et pérenne",
+                "Assurer la rentabilité, payer ses fournisseurs, investir"
+              ],
+              [
+                "**Social**",
+                "Être équitable",
+                "Conditions de travail, égalité femmes-hommes, formation, dialogue social"
+              ],
+              [
+                "**Environnemental**",
+                "Être vivable",
+                "Réduire l’empreinte carbone, recycler, éco-concevoir, économiser les ressources"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "La RSE répond aussi à la **pression des parties prenantes** : clients attentifs à l’éthique, salariés en quête de sens, ONG, réglementations, investisseurs. Bien menée, elle devient un **atout** : meilleure **image**, **fidélité** des clients et des salariés, avantage concurrentiel durable."
+          },
+          {
+            "t": "example",
+            "h": "Le cas des batteries de Vél’Oc",
+            "c": "La critique sur l’empreinte carbone des batteries relève du pilier **environnemental**. Réponses RSE possibles : **recyclage/réemploi** des batteries, filière d’approvisionnement plus durable, éco-conception, communication transparente sur les progrès réalisés."
+          },
+          {
+            "t": "warning",
+            "c": "Attention au **greenwashing** (éco-blanchiment) : afficher des engagements écologiques **sans preuve** ni action réelle. Le retour de bâton (perte de confiance) est sévère. La RSE n’a de valeur que si elle est **sincère et vérifiable**."
+          }
+        ]
+      },
+      {
+        "h": "La transformation numérique",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Le numérique **bouleverse** les organisations : il fait naître de nouveaux **modèles économiques** (plateformes, abonnement, économie de la donnée), transforme la **relation client** (en ligne, personnalisée, permanente) et fait de la **donnée** une ressource stratégique majeure."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Enjeu",
+              "De quoi s’agit-il ?"
+            ],
+            "rows": [
+              [
+                "**Données (data)**",
+                "Ressource clé : mieux connaître et cibler, mais à collecter et protéger dans le respect du **RGPD**"
+              ],
+              [
+                "**Cybersécurité**",
+                "Protéger les systèmes d’information contre les attaques (virus, piratage, rançongiciels)"
+              ],
+              [
+                "**Automatisation / IA**",
+                "Confier des tâches à des machines : gains de productivité, mais évolution des métiers"
+              ],
+              [
+                "**Télétravail**",
+                "Travailler à distance : plus de souplesse, mais risques d’isolement et frontière vie pro/perso"
+              ]
+            ]
+          },
+          {
+            "t": "example",
+            "h": "Un nouveau modèle",
+            "c": "Une entreprise de vélos peut passer de la simple vente à un modèle d’**abonnement** (vélo + entretien + appli connectée), en exploitant les **données** d’usage pour améliorer son offre."
+          },
+          {
+            "t": "tip",
+            "c": "L’**éthique** et la **déontologie** (transparence, protection des données personnelles, usage responsable de l’IA) font partie intégrante d’une démarche RSE à l’ère numérique : innovation et responsabilité vont de pair."
+          },
+          {
+            "t": "p",
+            "c": "📖 **Définitions clés à mémoriser**"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Terme",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "RSE",
+                "Prise en compte par l’organisation de l’impact de ses décisions sur la société et l’environnement"
+              ],
+              [
+                "Développement durable",
+                "Concilier les piliers économique, social et environnemental dans la durée"
+              ],
+              [
+                "Déontologie",
+                "Ensemble des règles de bonne conduite propres à une profession"
+              ],
+              [
+                "Greenwashing",
+                "Afficher des engagements écologiques sans preuve ni action réelle"
+              ],
+              [
+                "Donnée (data)",
+                "Ressource stratégique à collecter et protéger (RGPD)"
+              ],
+              [
+                "Cybersécurité",
+                "Protection des systèmes d’information contre les menaces"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "kind": "video",
+        "label": "La RSE et le développement durable",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=RSE%20responsabilit%C3%A9%20soci%C3%A9tale%20entreprise%20d%C3%A9veloppement%20durable%20STMG"
+      },
+      {
+        "kind": "video",
+        "label": "La transformation numérique des organisations",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=transformation%20num%C3%A9rique%20organisation%20donn%C3%A9es%20management%20STMG"
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "p1-eco-t1-doc": 1,
+  "p1-eco-t1-flash": 0,
+  "p1-eco-t1-qcm": 2,
+  "p1-eco-t1-vf": 3,
+  "p1-eco-t2-doc": 5,
+  "p1-eco-t2-flash": 1,
+  "p1-eco-t2-qcm": 0,
+  "p1-eco-t2-vf": 2,
+  "p1-eco-t3-doc": 0,
+  "p1-eco-t3-flash": 2,
+  "p1-eco-t3-qcm": 3,
+  "p1-eco-t3-tri": 1,
+  "p1-eco-t4-doc": 0,
+  "p1-eco-t4-flash": 1,
+  "p1-eco-t4-qcm": 2,
+  "p1-eco-t4-tri": 4,
+  "p1-eco-t5-doc": 0,
+  "p1-eco-t5-flash": 2,
+  "p1-eco-t5-qcm": 1,
+  "p1-eco-t5-vf": 3
+}

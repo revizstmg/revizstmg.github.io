@@ -1,0 +1,223 @@
+{
+  "p1-math-c1": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — proportions et pourcentages",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Dans un lycée de 750 élèves, 60 % sont des filles, et 25 % des filles sont en STMG.\n1) Combien de filles ?\n2) Combien de filles en STMG ?\n3) Un article à 40 € subit +5 % puis −5 %. Prix final ?"
+          },
+          {
+            "t": "p",
+            "c": "**Résolution :**"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Filles** : 750 × 0,60 = **450 filles**.",
+              "**Filles en STMG** : 450 × 0,25 = **112,5** → on arrondit à **112 ou 113** (pourcentage d’un sous-ensemble).",
+              "**Prix final** : 40 × 1,05 × 0,95 = 40 × 0,9975 = **39,90 €** (une hausse puis une baisse du même taux ne se compensent pas exactement)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À retenir",
+            "c": "Prendre un pourcentage = multiplier par t/100. « Pourcentage de pourcentage » = on multiplie les coefficients."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-math-c2": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — suites",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Un capital de 2 000 € est placé à 3 % par an (intérêts composés).\n1) Quelle est la nature de la suite (Cₙ) des capitaux ?\n2) Calcule C₁ et C₂.\n3) Exprime Cₙ."
+          },
+          {
+            "t": "p",
+            "c": "**Résolution :**"
+          },
+          {
+            "t": "list",
+            "c": [
+              "Chaque année on **multiplie** par 1,03 → suite **géométrique** de raison q = 1,03, C₀ = 2 000.",
+              "C₁ = 2 000 × 1,03 = **2 060 €** ; C₂ = 2 060 × 1,03 = **2 121,80 €**.",
+              "Terme général : **Cₙ = 2 000 × 1,03ⁿ**."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Repère",
+            "c": "Intérêts composés, croissance en % → suite géométrique. Ajout d’un montant fixe → suite arithmétique."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-math-c3": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — second degré",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Résous l’équation x² − 5x + 6 = 0, puis étudie le signe de f(x) = x² − 5x + 6."
+          },
+          {
+            "t": "p",
+            "c": "**Résolution :**"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Discriminant** : Δ = b² − 4ac = (−5)² − 4 × 1 × 6 = 25 − 24 = **1** (> 0 → deux solutions).",
+              "**Racines** : x = (5 ± √1) / 2 → x₁ = (5 − 1)/2 = **2** et x₂ = (5 + 1)/2 = **3**.",
+              "**Signe** : a = 1 > 0, la parabole est « ouverte vers le haut » → f(x) > 0 à l’extérieur des racines (x < 2 ou x > 3), **négatif entre 2 et 3**."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Astuce signe",
+            "c": "« Du signe de a à l’extérieur des racines, du signe opposé à l’intérieur. »"
+          }
+        ]
+      }
+    ]
+  },
+  "p1-math-c4": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — dérivation",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Soit f(x) = 2x² − 8x + 3.\n1) Calcule f’(x).\n2) Dresse le tableau de variations.\n3) Quel est le minimum de f ?"
+          },
+          {
+            "t": "p",
+            "c": "**Résolution :**"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Dérivée** : f’(x) = 4x − 8.",
+              "**Signe** : f’(x) = 0 ⇔ x = 2 ; f’ < 0 avant 2, f’ > 0 après → f décroît puis croît.",
+              "**Minimum** en x = 2 : f(2) = 8 − 16 + 3 = **−5**."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Lien",
+            "c": "Le sommet d’une parabole correspond à f’(x) = 0 : dérivation et second degré racontent la même histoire."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-math-c5": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — statistiques",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Notes d’un élève : 8 · 10 · 12 · 12 · 13 · 15 · 18.\n1) Calcule la moyenne.\n2) Donne la médiane.\n3) Que dit l’étendue ?"
+          },
+          {
+            "t": "p",
+            "c": "**Résolution :**"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Moyenne** : (8+10+12+12+13+15+18) / 7 = 88 / 7 ≈ **12,6**.",
+              "**Médiane** : 7 valeurs ordonnées → la 4ᵉ valeur = **12** (autant de notes en dessous qu’au-dessus).",
+              "**Étendue** : 18 − 8 = **10** (mesure la dispersion : écart entre la meilleure et la moins bonne note)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Moyenne ≠ médiane",
+            "c": "La médiane est peu sensible aux valeurs extrêmes, la moyenne l’est beaucoup : une très mauvaise note tire la moyenne vers le bas, pas la médiane."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-math-c6": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — probabilités",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "On tire une carte dans un jeu de 32 cartes.\nA = « tirer un roi », B = « tirer un cœur ».\n1) P(A) et P(B) ?\n2) P(A ∩ B) ?\n3) P(A ∪ B) ?"
+          },
+          {
+            "t": "p",
+            "c": "**Résolution :**"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**P(A)** = 4/32 = 1/8 (4 rois) ; **P(B)** = 8/32 = 1/4 (8 cœurs).",
+              "**P(A ∩ B)** = 1/32 (un seul roi de cœur).",
+              "**P(A ∪ B)** = P(A) + P(B) − P(A ∩ B) = 4/32 + 8/32 − 1/32 = **11/32**."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Formule clé",
+            "c": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) : on retire l’intersection comptée deux fois."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-math-c7": {
+    "sections": [
+      {
+        "h": "🐍 Exemple traité — un algorithme en Python",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "On veut une fonction qui calcule le capital après n années à 3 % (intérêts composés), à partir d’un capital de départ."
+          },
+          {
+            "t": "p",
+            "c": "**Programme commenté :**"
+          },
+          {
+            "t": "formula",
+            "c": "def capital(depart, annees):\n    c = depart\n    for i in range(annees):\n        c = c * 1.03      # +3 % chaque année\n    return round(c, 2)\n\nprint(capital(2000, 2))   # affiche 2121.8"
+          },
+          {
+            "t": "list",
+            "c": [
+              "La **boucle for** répète l’opération `annees` fois.",
+              "La **variable c** est mise à jour à chaque tour (accumulation).",
+              "`round(c, 2)` arrondit à 2 décimales ; `range(n)` compte de 0 à n − 1."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Lien maths ↔ Python",
+            "c": "Cette boucle calcule exactement une suite géométrique : Python automatise le calcul des termes."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "gf-t1": [
+    "Ne confonds pas **charge** (appauvrit l’entreprise, au compte de résultat) et **dépense/décaissement** (sortie de trésorerie) : une charge n’est pas toujours payée tout de suite.",
+    "La **TVA n’est pas une charge** : l’entreprise la collecte pour l’État. Seule la TVA à décaisser est reversée.",
+    "Le **bilan** est une photo à une date (patrimoine) ; le **compte de résultat** couvre une période (activité). On ne les confond pas.",
+    "L’**amortissement** constate une perte de valeur : c’est une charge **sans décaissement**."
+  ],
+  "gf-t2": [
+    "Ne confonds pas **résultat** (comptable) et **trésorerie** : on peut être bénéficiaire et manquer de trésorerie (décalage encaissements/décaissements).",
+    "Le **BFR** n’est pas une charge : c’est un besoin de financement lié au cycle d’exploitation.",
+    "Une **trésorerie nette négative** ne veut pas dire « faillite » : elle signale un déséquilibre à financer (FRNG < BFR).",
+    "Au seuil de rentabilité, le **résultat est nul**, pas la marge : la MCV couvre exactement les coûts fixes."
+  ],
+  "gf-t3": [
+    "Le **coût variable** varie avec les quantités, le **coût fixe** non — mais le coût fixe **unitaire** diminue quand on produit plus.",
+    "Ne confonds pas **marge sur coût variable** (CA − CV) et **résultat** (après coûts fixes).",
+    "Un produit peut avoir une **marge unitaire positive** et l’entreprise être en perte si le volume est trop faible (coûts fixes non couverts)."
+  ]
+}

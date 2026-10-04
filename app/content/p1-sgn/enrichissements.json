@@ -1,0 +1,111 @@
+{
+  "p1-sgn-t1": {
+    "sections": [
+      {
+        "h": "💼 Exemple — de l’individu à l’acteur",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Dans un restaurant, Léa est serveuse : elle prend les commandes, conseille les clients et forme les nouveaux."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Statut** : sa position dans l’organisation (salariée, serveuse).",
+              "**Rôle** : le comportement attendu (accueillir, servir, conseiller) → elle devient un **acteur** par ce qu’elle fait.",
+              "**Compétences** : savoir (les plats), savoir-faire (le service), savoir-être (le relationnel)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Piège",
+            "c": "On ne réduit pas une personne à son statut : c’est par son **rôle** et ses **compétences** qu’elle agit dans l’organisation."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-sgn-t2": {
+    "sections": [
+      {
+        "h": "💻 Exemple — de la donnée à la connaissance",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Une caisse enregistre « 14/03, produit A, 3 unités, 12 € »."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Donnée** : brute, isolée (« 3 », « 12 € »).",
+              "**Information** : la donnée mise en contexte (« le 14/03, on a vendu 3 unités de A pour 12 € »).",
+              "**Connaissance** : mobilisable pour décider (« A se vend surtout le week-end → réassortir »).",
+              "Un **PGI/ERP** relie tout via une **base de données unique** → l’information circule sans ressaisie."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À retenir",
+            "c": "Donnée → information → connaissance : chaque étape ajoute du sens et de l’utilité."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-sgn-t3": {
+    "sections": [
+      {
+        "h": "💼 Exemple — valeur et performance",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Un artisan vend un meuble 800 €. Le bois et les fournitures lui ont coûté 300 €."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Valeur ajoutée** = valeur de la production − consommations intermédiaires = 800 − 300 = **500 €** (la richesse réellement créée).",
+              "**Efficacité** : atteindre l’objectif (le meuble est vendu).",
+              "**Efficience** : l’atteindre en économisant les moyens (moins de chutes de bois, moins de temps)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Ne pas confondre",
+            "c": "Efficacité = le résultat est atteint ; efficience = il est atteint **au meilleur coût**."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-sgn-t4": {
+    "sections": [
+      {
+        "h": "💼 Exemple — temps et risque",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Une entreprise investit 50 000 € dans une machine qui doit rapporter davantage… mais seulement dans quelques années."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Le temps** : un investissement engage l’avenir ; le gain est différé, pas immédiat.",
+              "**Le risque** : la machine peut tomber en panne, la demande peut baisser → le résultat est incertain.",
+              "Décider, c’est **arbitrer** entre un coût certain aujourd’hui et un gain incertain demain."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Idée clé",
+            "c": "Toute décision de gestion se prend dans l’incertitude : on cherche à réduire le risque, pas à le supprimer."
+          }
+        ]
+      }
+    ]
+  }
+}

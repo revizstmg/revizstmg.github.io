@@ -1,0 +1,701 @@
+{
+  "eco-t6": {
+    "essentiel": [
+      "Fonctions de l’État (**Musgrave**) : **allocation · redistribution · stabilisation**.",
+      "Défaillances du marché : **externalités**, biens collectifs, asymétries d’information, monopole.",
+      "Politiques : **budgétaire** et **monétaire** (conjoncturelles), **structurelle** (long terme)."
+    ],
+    "intro": "Le marché ne règle pas tout : l’**État** intervient pour produire ce que le marché ne fournit pas, réduire les inégalités et stabiliser l’économie. Comprendre **pourquoi** et **comment** il agit est la base de ce thème.",
+    "cours": [
+      {
+        "h": "Les trois fonctions de l’État (Musgrave)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Livré à lui-même, le marché ne produit pas tout, laisse se creuser les inégalités et connaît des crises. L’**État** intervient donc dans l’économie. L’économiste **Richard Musgrave** a résumé son rôle en **trois grandes fonctions**."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Fonction",
+              "Objectif",
+              "Exemple"
+            ],
+            "rows": [
+              [
+                "**Allocation**",
+                "Produire des **biens collectifs** et corriger les défaillances du marché",
+                "Financer les routes, l’école, la justice, la défense"
+              ],
+              [
+                "**Redistribution**",
+                "Réduire les **inégalités** via prélèvements et prestations",
+                "Impôt progressif → RSA, allocations, retraites"
+              ],
+              [
+                "**Stabilisation**",
+                "Agir sur la **conjoncture** (croissance, emploi, prix)",
+                "Relancer l’activité en période de crise"
+              ]
+            ]
+          },
+          {
+            "t": "figure",
+            "name": "etat-fonctions"
+          },
+          {
+            "t": "example",
+            "h": "La redistribution en action",
+            "c": "L’État prélève davantage sur les hauts revenus (impôt **progressif**) et verse des **prestations** aux ménages modestes (allocations, RSA). Résultat : les écarts de niveau de vie après redistribution sont **plus faibles** qu’avant."
+          },
+          {
+            "t": "tip",
+            "c": "Moyen mnémotechnique : **A-R-S** — **A**llouer les ressources, **R**edistribuer les revenus, **S**tabiliser l’économie."
+          }
+        ]
+      },
+      {
+        "h": "Pourquoi intervenir ? Les défaillances du marché",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Le marché est efficace… **sauf** dans plusieurs situations où il **défaille** : il ne conduit pas à l’optimum pour la collectivité. Ces défaillances **justifient** l’intervention publique."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Défaillance",
+              "Définition",
+              "Exemple"
+            ],
+            "rows": [
+              [
+                "**Externalité**",
+                "Effet (positif ou négatif) d’une activité sur un tiers, non pris en compte par le prix",
+                "La **pollution** d’une usine subie par les riverains"
+              ],
+              [
+                "**Bien collectif**",
+                "Bien **non rival** (l’usage de l’un ne prive pas l’autre) et **non excluable** (on ne peut en priver personne)",
+                "L’**éclairage public**, la défense nationale"
+              ],
+              [
+                "**Asymétrie d’information**",
+                "Une partie en sait plus que l’autre",
+                "Le vendeur d’une voiture d’occasion connaît ses défauts, pas l’acheteur"
+              ],
+              [
+                "**Monopole**",
+                "Un seul offreur qui impose ses prix",
+                "Un réseau d’eau unique sur un territoire"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "Face à une **externalité négative** comme la pollution, l’État peut **taxer** le pollueur (« pollueur-payeur »), fixer des **normes** ou instaurer des **quotas** pour internaliser ce coût."
+          },
+          {
+            "t": "warning",
+            "c": "Un **bien collectif** n’est pas la même chose qu’un bien gratuit : le marché ne le produit pas spontanément car personne ne veut payer pour un bien dont on ne peut exclure les « **passagers clandestins** » — d’où le financement par l’**impôt**."
+          }
+        ]
+      },
+      {
+        "h": "Comment intervenir ? Les politiques économiques",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Pour agir, l’État dispose de deux grands types de politiques, selon leur horizon."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Politique",
+              "Horizon",
+              "Leviers"
+            ],
+            "rows": [
+              [
+                "**Conjoncturelle — budgétaire**",
+                "Court terme",
+                "Dépenses publiques et **prélèvements** (le budget de l’État)"
+              ],
+              [
+                "**Conjoncturelle — monétaire**",
+                "Court terme",
+                "Monnaie et **taux d’intérêt** (menée par la BCE dans la zone euro)"
+              ],
+              [
+                "**Structurelle**",
+                "Long terme",
+                "Transformer l’économie : formation, concurrence, recherche, infrastructures"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "Une politique de **relance** (hausse des dépenses, baisse des impôts ou des taux) soutient l’activité en cas de crise ; une politique de **rigueur** cherche au contraire à réduire le déficit et l’inflation."
+          },
+          {
+            "t": "example",
+            "h": "Relance",
+            "c": "En récession, l’État augmente ses dépenses (grands travaux, aides) : la demande repart, les entreprises produisent plus et embauchent. Revers : cela **creuse le déficit**."
+          },
+          {
+            "t": "warning",
+            "c": "Quand les **dépenses** dépassent les **recettes**, le budget est en **déficit**. Répété année après année, ce déficit s’accumule en **dette publique** — qu’il faudra rembourser et qui pèse sur les marges de manœuvre futures."
+          },
+          {
+            "t": "p",
+            "c": "📖 **Définitions clés à mémoriser**"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Terme",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Externalité",
+                "Effet d’une activité sur un tiers, non pris en compte par le prix (ex. pollution)"
+              ],
+              [
+                "Bien collectif",
+                "Bien non rival et non excluable, que le marché ne produit pas spontanément"
+              ],
+              [
+                "Redistribution",
+                "Réduction des inégalités par prélèvements et prestations"
+              ],
+              [
+                "Politique conjoncturelle",
+                "Action de court terme sur l’activité (budgétaire, monétaire)"
+              ],
+              [
+                "Politique structurelle",
+                "Transformation de l’économie à long terme"
+              ],
+              [
+                "Déficit public",
+                "Excédent des dépenses de l’État sur ses recettes"
+              ],
+              [
+                "Dette publique",
+                "Accumulation des déficits successifs de l’État"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "kind": "video",
+        "label": "Les fonctions de l’État (Musgrave)",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=fonctions%20de%20l%20%C3%89tat%20allocation%20redistribution%20stabilisation%20Musgrave%20STMG"
+      },
+      {
+        "kind": "video",
+        "label": "Les défaillances du marché",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=d%C3%A9faillances%20du%20march%C3%A9%20externalit%C3%A9s%20biens%20collectifs%20%C3%A9conomie%20STMG"
+      }
+    ]
+  },
+  "eco-t7": {
+    "essentiel": [
+      "**Population active = personnes en emploi + chômeurs** ; **taux de chômage = chômeurs / population active**.",
+      "Types de chômage : **conjoncturel**, **structurel**, **frictionnel**.",
+      "Piège : une baisse du taux de chômage peut venir de **chômeurs découragés** quittant la population active."
+    ],
+    "intro": "Le **chômage** est au cœur du débat économique. Pour en parler juste, il faut d’abord maîtriser le **vocabulaire** (population active, taux de chômage) et savoir **lire les chiffres** sans se tromper.",
+    "cours": [
+      {
+        "h": "Le marché du travail",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Sur le **marché du travail** se rencontrent l’**offre de travail** (les ménages qui proposent leur force de travail) et la **demande de travail** (les entreprises qui cherchent à embaucher). Attention au vocabulaire : ici, ce sont les **ménages** qui offrent et les **entreprises** qui demandent — l’inverse du marché des biens."
+          },
+          {
+            "t": "p",
+            "c": "La rencontre entre offre et demande détermine, en théorie, un **salaire d’équilibre**. Mais le marché du travail est **régulé** : le **SMIC** fixe un salaire minimum, les conventions collectives et le droit du travail encadrent les relations. Ces règles protègent les salariés mais peuvent, selon certains, freiner l’embauche."
+          },
+          {
+            "t": "tip",
+            "c": "Ne confonds pas **offre** et **demande** de travail : sur ce marché, l’**offre** vient des travailleurs, la **demande** des employeurs."
+          }
+        ]
+      },
+      {
+        "h": "Les indicateurs à connaître",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Pour parler juste du chômage, il faut d’abord définir **qui compte dans quoi**. Au sens du **BIT** (Bureau international du travail), un **chômeur** est une personne sans emploi, **disponible** et qui **recherche activement** du travail."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Catégorie",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "**Actifs occupés**",
+                "Personnes qui ont un emploi"
+              ],
+              [
+                "**Chômeurs**",
+                "Sans emploi, disponibles et en recherche active"
+              ],
+              [
+                "**Inactifs**",
+                "Ni en emploi ni au chômage (étudiants, retraités, au foyer)"
+              ]
+            ]
+          },
+          {
+            "t": "formula",
+            "c": "Population active = actifs occupés + chômeurs"
+          },
+          {
+            "t": "formula",
+            "c": "Taux de chômage = chômeurs / population active"
+          },
+          {
+            "t": "formula",
+            "c": "Taux d’activité = population active / population en âge de travailler"
+          },
+          {
+            "t": "formula",
+            "c": "Taux d’emploi = actifs occupés / population en âge de travailler"
+          },
+          {
+            "t": "example",
+            "h": "Lecture de données",
+            "c": "Population en âge de travailler = 40 M ; emploi = 24 M ; chômeurs = 3 M.\n• Population active = 24 + 3 = **27 M**\n• Taux d’activité = 27 / 40 = **67,5 %**\n• Taux de chômage = 3 / 27 ≈ **11,1 %**\n• Taux d’emploi = 24 / 40 = **60 %**"
+          }
+        ]
+      },
+      {
+        "h": "Types de chômage et politiques de l’emploi",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Le chômage n’a pas une seule cause : on distingue trois grands types, qui n’appellent pas les mêmes remèdes."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Type",
+              "Cause",
+              "Remède privilégié"
+            ],
+            "rows": [
+              [
+                "**Conjoncturel**",
+                "Ralentissement de l’activité (crise, baisse de la demande)",
+                "Politique de **relance** (soutenir la demande)"
+              ],
+              [
+                "**Structurel**",
+                "Inadéquation durable entre compétences et emplois disponibles",
+                "**Formation**, adaptation des qualifications"
+              ],
+              [
+                "**Frictionnel**",
+                "Temps normal de transition entre deux emplois",
+                "Meilleure **information** sur le marché du travail"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "Les **politiques de l’emploi** combinent plusieurs leviers : baisser le **coût du travail** (allègements de charges), **former** les demandeurs d’emploi, favoriser la **flexibilité**, ou soutenir directement l’emploi (contrats aidés)."
+          },
+          {
+            "t": "warning",
+            "c": "Une baisse du taux de chômage ne signifie pas toujours une amélioration : si des **chômeurs découragés** cessent de chercher et quittent la population active, le taux baisse **mécaniquement** sans qu’un seul emploi ait été créé. C’est pourquoi on regarde aussi le **taux d’emploi**, plus robuste."
+          },
+          {
+            "t": "p",
+            "c": "📖 **Définitions clés à mémoriser**"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Terme",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Population active",
+                "Actifs occupés + chômeurs"
+              ],
+              [
+                "Chômeur (BIT)",
+                "Personne sans emploi, disponible et en recherche active"
+              ],
+              [
+                "Taux de chômage",
+                "Chômeurs / population active"
+              ],
+              [
+                "Taux d’emploi",
+                "Actifs occupés / population en âge de travailler"
+              ],
+              [
+                "Chômage conjoncturel",
+                "Lié au ralentissement de l’activité"
+              ],
+              [
+                "Chômage structurel",
+                "Lié à l’inadéquation durable entre compétences et emplois"
+              ],
+              [
+                "Chômage frictionnel",
+                "Lié au temps de transition entre deux emplois"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "kind": "video",
+        "label": "Population active, taux de chômage",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=population%20active%20taux%20ch%C3%B4mage%20taux%20emploi%20calcul%20%C3%A9conomie%20STMG"
+      },
+      {
+        "kind": "video",
+        "label": "Les types de chômage",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=types%20de%20ch%C3%B4mage%20conjoncturel%20structurel%20frictionnel%20%C3%A9conomie%20STMG"
+      }
+    ]
+  },
+  "eco-t8": {
+    "essentiel": [
+      "**Avantages comparatifs** (Ricardo) → spécialisation puis échange = richesse globale.",
+      "**Libre-échange** (ouverture) vs **protectionnisme** (droits de douane, barrières non tarifaires).",
+      "Le libre-échange fait des **perdants** ; régulation par l’**OMC**."
+    ],
+    "intro": "Pourquoi les pays échangent-ils ? Le **commerce international** repose sur la **spécialisation**, mais oppose partisans du **libre-échange** et du **protectionnisme**. Un classique de la question de réflexion.",
+    "cours": [
+      {
+        "h": "Les fondements : les avantages comparatifs (Ricardo)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Pourquoi les pays échangent-ils, même quand l’un semble « meilleur » en tout ? La réponse tient à la théorie des **avantages comparatifs** de **David Ricardo** : chaque pays a intérêt à se **spécialiser** dans la production pour laquelle il est **relativement le plus efficace** (là où il est « le moins mauvais »), puis à **échanger** le reste."
+          },
+          {
+            "t": "example",
+            "h": "L’intuition",
+            "c": "Un pays très productif en électronique **et** en textile a intérêt à se concentrer sur l’électronique (où son avance est la plus grande) et à **importer** le textile : il gagne plus en électronique qu’il ne perd en abandonnant le textile."
+          },
+          {
+            "t": "p",
+            "c": "Cette **division internationale du travail (DIT)** augmente la **richesse globale** : chaque pays produit ce qu’il fait de mieux, et tous accèdent à plus de biens à moindre coût."
+          },
+          {
+            "t": "tip",
+            "c": "Ne confonds pas avantage **absolu** (produire avec moins de ressources que les autres) et avantage **comparatif** (produire en sacrifiant le moins d’autres productions). C’est le comparatif qui fonde l’échange chez Ricardo."
+          }
+        ]
+      },
+      {
+        "h": "Libre-échange ou protectionnisme ?",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Le grand débat du commerce international oppose deux visions : **ouvrir** les frontières ou **protéger** la production nationale."
+          },
+          {
+            "t": "table",
+            "head": [
+              "",
+              "Libre-échange",
+              "Protectionnisme"
+            ],
+            "rows": [
+              [
+                "Principe",
+                "Ouvrir les marchés, **supprimer** les barrières",
+                "**Protéger** la production nationale"
+              ],
+              [
+                "Outils",
+                "Accords de libre-échange",
+                "Droits de **douane**, **quotas**, barrières non tarifaires (normes)"
+              ],
+              [
+                "Avantages",
+                "Baisse des prix, marchés élargis, croissance, choix pour le consommateur",
+                "Protège l’emploi et les industries « naissantes » ou stratégiques"
+              ],
+              [
+                "Risques",
+                "Fait des **perdants** (industries non compétitives), délocalisations",
+                "Représailles, prix plus élevés, moindre efficacité"
+              ]
+            ]
+          },
+          {
+            "t": "warning",
+            "c": "Le libre-échange **crée de la richesse globale** mais **ne profite pas également à tous** : il fait des **perdants** (secteurs, régions ou pays spécialisés dans des productions peu rémunératrices). D’où la nécessité d’**accompagner** les perdants (formation, reconversion)."
+          }
+        ]
+      },
+      {
+        "h": "La régulation du commerce mondial",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Le commerce mondial n’est pas un far-west : il est **encadré**. L’**OMC** (Organisation mondiale du commerce) fixe des règles communes et arbitre les litiges commerciaux entre États."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Accords commerciaux** bilatéraux ou multilatéraux (baisse des droits de douane).",
+              "**Intégrations régionales** comme l’**Union européenne** (marché unique, libre circulation).",
+              "**Firmes multinationales (FMN)** et **délocalisations** : acteurs majeurs qui organisent la production à l’échelle mondiale."
+            ]
+          },
+          {
+            "t": "example",
+            "h": "L’Union européenne",
+            "c": "Au sein de l’UE, marchandises, services, capitaux et personnes circulent **librement** : c’est une zone de libre-échange **intégrée**, avec une monnaie commune (l’euro) pour une partie des pays."
+          },
+          {
+            "t": "tip",
+            "c": "Un déséquilibre des échanges se lit dans la **balance commerciale** : **exportations − importations**. Positive = excédent ; négative = déficit."
+          },
+          {
+            "t": "p",
+            "c": "📖 **Définitions clés à mémoriser**"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Terme",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Avantage comparatif",
+                "Production pour laquelle un pays est relativement le plus efficace (Ricardo)"
+              ],
+              [
+                "Division internationale du travail (DIT)",
+                "Spécialisation des pays selon leurs avantages comparatifs"
+              ],
+              [
+                "Libre-échange",
+                "Ouverture des marchés et suppression des barrières commerciales"
+              ],
+              [
+                "Protectionnisme",
+                "Protéger la production nationale (droits de douane, quotas, normes)"
+              ],
+              [
+                "OMC",
+                "Organisation mondiale du commerce : fixe les règles et arbitre les litiges"
+              ],
+              [
+                "Balance commerciale",
+                "Exportations − importations de biens"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "kind": "video",
+        "label": "Les avantages comparatifs (Ricardo)",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=avantages%20comparatifs%20Ricardo%20sp%C3%A9cialisation%20commerce%20international%20STMG"
+      },
+      {
+        "kind": "video",
+        "label": "Libre-échange et protectionnisme",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=libre%20%C3%A9change%20protectionnisme%20avantages%20limites%20%C3%A9conomie%20STMG"
+      }
+    ]
+  },
+  "eco-t9": {
+    "essentiel": [
+      "La croissance se mesure par le **PIB**, indicateur **limité** du bien-être.",
+      "**Développement durable** = concilier **économique + social + environnemental**.",
+      "Instruments : économie **circulaire**, **collaborative**, taxation, quotas. (Thème surtout utile au **grand oral**.)"
+    ],
+    "intro": "La **croissance** est-elle toujours souhaitable ? Ce thème confronte le PIB à ses **limites** et introduit le **développement durable**. Il n’est pas évalué à l’écrit mais alimente le **grand oral**.",
+    "cours": [
+      {
+        "h": "La croissance et ses limites",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La **croissance économique** est l’augmentation durable de la production d’un pays, mesurée par l’évolution du **PIB** (produit intérieur brut = valeur des richesses créées sur un territoire en un an). Un taux de croissance positif signifie « on produit plus que l’an dernier »."
+          },
+          {
+            "t": "p",
+            "c": "Mais le PIB est un indicateur **limité du bien-être** : il ne dit rien des **inégalités** de répartition, ignore la dégradation de l’**environnement** (une marée noire peut même **augmenter** le PIB via les dépenses de dépollution !) et ne compte pas le **travail non marchand** (bénévolat, tâches domestiques)."
+          },
+          {
+            "t": "example",
+            "h": "Des indicateurs alternatifs",
+            "c": "L’**IDH** (indice de développement humain) complète le PIB en intégrant la **santé** (espérance de vie) et l’**éducation**. D’autres indicateurs mesurent l’empreinte écologique ou le bien-être ressenti."
+          },
+          {
+            "t": "tip",
+            "c": "Distingue **croissance** (quantitatif : plus de PIB) et **développement** (qualitatif : progrès de la santé, de l’éducation, du niveau de vie). Un pays peut croître sans se développer, et inversement."
+          }
+        ]
+      },
+      {
+        "h": "Le développement durable",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Le **développement durable** vise à « répondre aux besoins du présent **sans compromettre** la capacité des générations futures à répondre aux leurs » (rapport Brundtland, 1987). Il cherche à concilier **trois dimensions** indissociables."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Dimension",
+              "Idée"
+            ],
+            "rows": [
+              [
+                "**Économique**",
+                "Une croissance viable et durable"
+              ],
+              [
+                "**Sociale**",
+                "L’équité, la réduction des inégalités, l’accès aux besoins essentiels"
+              ],
+              [
+                "**Environnementale**",
+                "La préservation des ressources et des écosystèmes"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "Deux visions s’opposent sur la place du **capital naturel** (ressources, biodiversité) :"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Soutenabilité faible** : le capital naturel peut être **remplacé** par du capital produit (technologie, machines).",
+              "**Soutenabilité forte** : le capital naturel est **irremplaçable** et doit être préservé en priorité."
+            ]
+          },
+          {
+            "t": "tip",
+            "c": "Ce thème n’est pas évalué à l’écrit du bac, mais c’est une **mine de sujets pour le Grand Oral** (croissance verte, sobriété, transition écologique…)."
+          }
+        ]
+      },
+      {
+        "h": "Instruments et inégalités",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Pour rendre l’économie plus durable, plusieurs leviers existent, publics et privés."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Instrument",
+              "Principe"
+            ],
+            "rows": [
+              [
+                "**Économie circulaire**",
+                "Réduire, réutiliser, réparer, **recycler** pour boucler les cycles de matières (vs le modèle « extraire-produire-jeter »)"
+              ],
+              [
+                "**Économie collaborative**",
+                "Partage et mutualisation entre particuliers (covoiturage, location entre pairs)"
+              ],
+              [
+                "**Taxation / quotas**",
+                "Renchérir ou plafonner les activités polluantes pour internaliser les **externalités négatives**"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "Le développement durable a aussi une dimension **sociale** : lutter contre la pauvreté. On distingue la **pauvreté absolue** (vivre sous un seuil de subsistance) de la **pauvreté relative** (avoir un niveau de vie très inférieur au **niveau de vie médian** de son pays)."
+          },
+          {
+            "t": "warning",
+            "c": "Piège : la pauvreté **relative** dépend du pays. On peut être « pauvre » (au sens relatif) dans un pays riche tout en ayant un niveau de vie supérieur à la moyenne d’un pays pauvre. Les deux mesures se complètent."
+          },
+          {
+            "t": "p",
+            "c": "📖 **Définitions clés à mémoriser**"
+          },
+          {
+            "t": "table",
+            "head": [
+              "Terme",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Croissance économique",
+                "Augmentation durable de la production (mesurée par le PIB)"
+              ],
+              [
+                "PIB",
+                "Valeur des richesses créées sur un territoire en un an"
+              ],
+              [
+                "IDH",
+                "Indice de développement humain (revenu + santé + éducation)"
+              ],
+              [
+                "Développement durable",
+                "Répondre aux besoins présents sans compromettre ceux des générations futures"
+              ],
+              [
+                "Économie circulaire",
+                "Réduire, réutiliser, recycler pour boucler les cycles de matières"
+              ],
+              [
+                "Pauvreté relative",
+                "Niveau de vie très inférieur au niveau de vie médian du pays"
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "kind": "video",
+        "label": "PIB, croissance et ses limites",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=PIB%20croissance%20limites%20bien-%C3%AAtre%20d%C3%A9veloppement%20durable%20STMG"
+      },
+      {
+        "kind": "video",
+        "label": "Le développement durable",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=d%C3%A9veloppement%20durable%20soutenabilit%C3%A9%20%C3%A9conomie%20circulaire%20STMG"
+      }
+    ]
+  }
+}

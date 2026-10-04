@@ -1,0 +1,447 @@
+{
+  "mgmt-t1": [
+    {
+      "h": "🧩 Ressources et compétences de l’organisation",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Pour agir, une organisation mobilise des **ressources**. On les classe en plusieurs catégories, dont certaines sont **tangibles** (visibles, mesurables) et d’autres **intangibles** (immatérielles, souvent les plus précieuses)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Ressource",
+            "Exemples"
+          ],
+          "rows": [
+            [
+              "Humaines",
+              "Salariés, savoir-faire, motivation"
+            ],
+            [
+              "Matérielles",
+              "Machines, locaux, matières"
+            ],
+            [
+              "Financières",
+              "Capitaux, trésorerie, capacité d’emprunt"
+            ],
+            [
+              "Immatérielles",
+              "Marque, brevets, réputation, données, culture"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Les **compétences** sont la capacité à **combiner** ces ressources pour agir efficacement. Une **compétence distinctive** (rare, difficile à imiter) fonde un **avantage concurrentiel** durable. C’est souvent l’immatériel (une marque forte, un savoir-faire unique) qui fait la différence, car il ne s’achète pas."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Ressources **tangibles** (matériel, argent) vs **intangibles** (marque, savoir-faire, données). Ce sont surtout les ressources **rares et difficiles à imiter** qui créent l’avantage concurrentiel."
+        }
+      ]
+    },
+    {
+      "h": "📊 Mesurer la performance",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **performance** se pilote avec des **indicateurs** rassemblés dans un **tableau de bord**. On distingue des indicateurs selon la dimension mesurée, car une performance purement financière peut cacher des faiblesses sociales ou environnementales."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Dimension",
+            "Indicateurs"
+          ],
+          "rows": [
+            [
+              "Commerciale",
+              "Chiffre d’affaires, part de marché, satisfaction client"
+            ],
+            [
+              "Financière",
+              "Rentabilité, marge, endettement"
+            ],
+            [
+              "Sociale",
+              "Turnover, absentéisme, climat social"
+            ],
+            [
+              "Environnementale",
+              "Émissions, déchets, consommation d’énergie"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Rappel essentiel : la performance croise **efficacité** (atteindre l’objectif) et **efficience** (au moindre coût). Un bon tableau de bord suit **quelques indicateurs clés** (KPI) pertinents, pas une masse de chiffres. Il permet de **comparer** (objectif vs réalisé, année N vs N-1, face aux concurrents)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La performance est **globale** : économique, sociale ET environnementale. On la pilote avec des **indicateurs** comparés à un objectif ou à une référence."
+        }
+      ]
+    },
+    {
+      "h": "⚙️ Les structures organisationnelles",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **structure** définit comment le travail est **réparti** et **coordonné** : qui fait quoi, qui commande qui. Elle se représente par un **organigramme**. Plusieurs grands types existent, chacun avec ses forces et faiblesses."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Structure",
+            "Principe",
+            "Limite"
+          ],
+          "rows": [
+            [
+              "Fonctionnelle",
+              "Découpage par fonction (production, vente, RH)",
+              "Cloisonnement entre services"
+            ],
+            [
+              "Divisionnelle",
+              "Découpage par produit / zone / marché",
+              "Doublons, coûts"
+            ],
+            [
+              "Matricielle",
+              "Croise fonctions et projets",
+              "Double hiérarchie, conflits"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le choix dépend de la taille, de l’activité et de la stratégie. Une petite entreprise a une structure **simple** (le dirigeant décide de tout) ; une grande entreprise diversifiée adopte une structure **divisionnelle**. Les organisations agiles tendent vers des structures **plates** (moins de niveaux hiérarchiques) pour décider plus vite."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Fonctionnelle = par **métier** ; divisionnelle = par **produit/marché** ; matricielle = **les deux** (souple mais source de conflits). La structure doit servir la **stratégie**."
+        }
+      ]
+    },
+    {
+      "h": "🏭 Organiser la production",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Produire suppose des choix d’**organisation**. Selon les quantités et la standardisation, la production est **unitaire** (sur mesure, à l’unité), en **série** (lots identiques) ou **en continu** (flux ininterrompu, ex. raffinerie)."
+        },
+        {
+          "t": "p",
+          "c": "On distingue aussi le pilotage des flux. En **flux poussé**, on produit d’abord puis on stocke en attendant les commandes (risque de sur-stock). En **flux tiré** (juste-à-temps), on ne produit qu’à la **commande** : moins de stocks, mais plus de tension sur les délais et les fournisseurs."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Juste-à-temps (JAT)** : produire la bonne quantité, au bon moment → stocks minimaux, moins de gaspillage.",
+            "**Qualité** : viser le « zéro défaut » (démarche qualité, amélioration continue) car un défaut coûte cher.",
+            "**Productivité** : produire plus avec autant de ressources → compétitivité."
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Flux **poussé** (produire puis vendre, on stocke) vs flux **tiré / juste-à-temps** (produire à la commande, peu de stocks). Le JAT réduit les coûts mais accroît la dépendance aux fournisseurs."
+        }
+      ]
+    },
+    {
+      "h": "💼 Étude de cas guidée — performance et organisation",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Une entreprise industrielle veut réduire ses coûts et améliorer sa réactivité. Ses stocks sont élevés et sa structure très hiérarchique ralentit les décisions. Que recommander ?"
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Diagnostic",
+          "c": "Stocks élevés → coûts d’immobilisation et risque d’invendus (flux poussé). Structure très hiérarchique → décisions lentes, faible réactivité."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Leviers",
+          "c": "Passer en **flux tiré / juste-à-temps** pour réduire les stocks ; **aplatir** la structure (moins de niveaux) pour décider plus vite ; suivre des **indicateurs** de performance (rotation des stocks, délais)."
+        },
+        {
+          "t": "p",
+          "c": "**Commentaire.** Ces choix améliorent l’**efficience** (moins de coûts) et l’**efficacité** (meilleure réactivité). Limites à anticiper : le JAT rend vulnérable à une rupture fournisseur ; l’aplatissement exige plus d’autonomie des équipes."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Diagnostiquer (ressources, structure, production) → proposer des leviers **cohérents** → peser **avantages et risques**. Toujours relier à la **performance globale**."
+        }
+      ]
+    }
+  ],
+  "mgmt-t2": [
+    {
+      "h": "🧭 Les niveaux de décision",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Toutes les décisions n’ont pas la même portée. **Igor Ansoff** distingue trois niveaux, du plus engageant au plus quotidien. Bien les repérer est essentiel au bac."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Niveau",
+            "Horizon",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Stratégique",
+              "Long terme, engage toute l’organisation",
+              "Se lancer à l’international"
+            ],
+            [
+              "Tactique (administratif)",
+              "Moyen terme, organise les ressources",
+              "Recruter, réorganiser un service"
+            ],
+            [
+              "Opérationnel",
+              "Court terme, quotidien",
+              "Établir les plannings de la semaine"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La décision est rarement parfaitement **rationnelle** : Herbert **Simon** parle de **rationalité limitée** (temps, information et capacités de calcul limités) ; le décideur choisit une solution **satisfaisante**, pas optimale. Le **système d’information** aide à décider en fournissant les bonnes données."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Décision **stratégique** (rare, engageante, dirigeants) → **tactique** (organiser) → **opérationnelle** (quotidienne). La rationalité est **limitée** (Simon)."
+        }
+      ]
+    },
+    {
+      "h": "👑 Pouvoir et contre-pouvoirs",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **pouvoir** est la capacité d’un acteur à **influencer** les décisions et le comportement des autres. Il peut être **formel** (lié à la position hiérarchique, au statut) ou **informel** (lié à l’expertise, au contrôle d’une information ou d’une ressource rare, au charisme)."
+        },
+        {
+          "t": "p",
+          "c": "Face au pouvoir de la direction s’exercent des **contre-pouvoirs** qui l’équilibrent : les **syndicats** et représentants du personnel (CSE), les **actionnaires**, l’**État** (lois), les **ONG** et l’opinion, les **clients**. Ils empêchent les abus et obligent à tenir compte des parties prenantes."
+        },
+        {
+          "t": "example",
+          "h": "Illustration",
+          "c": "Un expert informatique détient un pouvoir **informel** important s’il est le seul à maîtriser un système clé : il influence des décisions bien au-delà de sa position hiérarchique."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Pouvoir **formel** (hiérarchie) ≠ **informel** (expertise, information). Les **contre-pouvoirs** (syndicats, actionnaires, État, ONG) équilibrent le pouvoir des dirigeants."
+        }
+      ]
+    },
+    {
+      "h": "♟️ Les modalités de développement",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Pour croître, une organisation choisit une **modalité de développement**. Le choix dépend de ses moyens, de sa rapidité voulue et du risque accepté."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Modalité",
+            "Principe",
+            "Atout / risque"
+          ],
+          "rows": [
+            [
+              "Croissance interne",
+              "Se développer par ses propres moyens",
+              "Maîtrisée mais lente"
+            ],
+            [
+              "Croissance externe",
+              "Racheter / fusionner avec une autre",
+              "Rapide mais coûteuse et risquée"
+            ],
+            [
+              "Alliance / partenariat",
+              "Coopérer sans fusionner",
+              "Partage des risques mais dépendance"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "On distingue aussi l’**intégration** (maîtriser la filière en amont — fournisseurs — ou en aval — distribution) et l’**externalisation** (confier une activité à un tiers pour se recentrer sur son métier). Chaque choix modifie le **périmètre** de l’organisation."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Croissance **interne** (soi-même, lent), **externe** (rachat, rapide/risqué) ou **alliance** (coopérer). L’**intégration** maîtrise la filière ; l’**externalisation** recentre sur le métier."
+        }
+      ]
+    },
+    {
+      "h": "💼 Étude de cas guidée — décision et pouvoir",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Le dirigeant d’une PME veut racheter un concurrent pour grandir vite, mais les salariés et un actionnaire important s’y opposent. Analysez."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Nature de la décision",
+          "c": "Rachat d’un concurrent = décision **stratégique** (long terme, engage toute l’entreprise) et modalité de **croissance externe**."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Les acteurs et le pouvoir",
+          "c": "Le dirigeant a le pouvoir **formel**, mais l’**actionnaire** important (contre-pouvoir financier) et les **salariés** (contre-pouvoir social) peuvent bloquer ou freiner."
+        },
+        {
+          "t": "p",
+          "c": "**Commentaire.** La croissance externe est **rapide** mais **risquée** (coût, intégration des équipes, endettement). Le dirigeant doit **négocier** avec les contre-pouvoirs (rassurer l’actionnaire sur la rentabilité, les salariés sur l’emploi) pour faire aboutir sa décision. Ignorer les contre-pouvoirs expose à l’échec."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Qualifier la **décision** (niveau, modalité) → identifier les **acteurs et pouvoirs** → montrer l’arbitrage → conclure sur les **conditions de réussite**."
+        }
+      ]
+    }
+  ],
+  "mgmt-t3": [
+    {
+      "h": "⚖️ La gouvernance de l’entreprise",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **gouvernance** désigne l’ensemble des mécanismes qui organisent la **direction** et le **contrôle** de l’entreprise : qui décide, au nom de qui, et qui vérifie. Deux grandes conceptions s’opposent."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Gouvernance",
+            "Priorité",
+            "Logique"
+          ],
+          "rows": [
+            [
+              "Actionnariale",
+              "Les actionnaires",
+              "Maximiser la valeur pour les propriétaires"
+            ],
+            [
+              "Partenariale",
+              "Toutes les parties prenantes",
+              "Équilibrer les intérêts (salariés, clients, société)"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La gouvernance **actionnariale** met la rentabilité et le dividende au premier plan. La gouvernance **partenariale** (cohérente avec la RSE) cherche à concilier les attentes de **toutes** les parties prenantes. De bons mécanismes (conseil d’administration, comités, transparence) **équilibrent les pouvoirs** et évitent les dérives."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Gouvernance **actionnariale** (priorité aux propriétaires) vs **partenariale** (toutes les parties prenantes). La seconde prolonge la logique **RSE**."
+        }
+      ]
+    },
+    {
+      "h": "📜 Normes, labels et reporting RSE",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Pour rendre la RSE **crédible** et **comparable**, il existe des **normes**, des **labels** et des obligations de **reporting** (rendre compte). Ils permettent de distinguer les engagements réels du **greenwashing**."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**ISO 26000** : norme internationale qui définit les lignes directrices de la responsabilité sociétale (mais elle ne se « certifie » pas).",
+            "**Labels** (commerce équitable, bio, RSE sectoriels) : garantissent le respect d’un cahier des charges par un tiers.",
+            "**Reporting extra-financier** : les grandes entreprises publient un rapport sur leurs impacts sociaux et environnementaux."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Ces dispositifs répondent à une exigence de **transparence** : les parties prenantes (clients, ONG, investisseurs) veulent des preuves, pas des slogans. Un label reconnu est un **avantage concurrentiel** ; un engagement non tenu, un **risque de réputation**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Normes (**ISO 26000**), **labels** et **reporting** rendent la RSE vérifiable. Ils sont la parade au **greenwashing** et une source de confiance."
+        }
+      ]
+    },
+    {
+      "h": "♻️ Nouveaux modèles : économie circulaire",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Face aux limites écologiques, les organisations font évoluer leur **modèle économique**. L’**économie circulaire** s’oppose au modèle linéaire « extraire → produire → jeter » : elle vise à **réduire, réutiliser, réparer, recycler** pour limiter le gaspillage des ressources."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Éco-conception** : concevoir des produits durables, réparables, recyclables.",
+            "**Réemploi et réparation** : allonger la durée de vie (seconde main, pièces détachées).",
+            "**Recyclage** : réintroduire la matière dans un nouveau cycle de production.",
+            "**Économie de la fonctionnalité** : vendre l’usage plutôt que le bien (louer plutôt que posséder)."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Ces modèles transforment la **création de valeur** : la performance environnementale devient un **avantage concurrentiel** et une réponse aux attentes des consommateurs et de la réglementation."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Économie **circulaire** (réduire, réutiliser, réparer, recycler) contre le modèle **linéaire** (jeter). Elle allie performance **économique** et **environnementale**."
+        }
+      ]
+    },
+    {
+      "h": "💼 Étude de cas guidée — mutation et RSE",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Une entreprise de mode « fast fashion » subit des critiques sur son impact environnemental et social. Ses ventes stagnent. Proposez une évolution de son modèle."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Le problème",
+          "c": "Modèle **linéaire** très polluant + manquements sociaux → **risque de réputation** et perte de clients sensibles à la RSE. Gouvernance jusqu’ici purement **actionnariale**."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Évolution proposée",
+          "c": "Basculer vers l’**économie circulaire** (éco-conception, reprise et recyclage, seconde main), viser un **label**, publier un **reporting** sincère, et adopter une gouvernance plus **partenariale**."
+        },
+        {
+          "t": "p",
+          "c": "**Commentaire.** Ces choix transforment une **menace** (critiques, réglementation) en **opportunité** (différenciation, fidélité, nouveaux marchés). Attention au **greenwashing** : les engagements doivent être **prouvés**, sous peine d’aggraver la crise de réputation."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Relier problème → attentes des **parties prenantes** → **modèle** (économie circulaire) et **gouvernance** → preuves (labels, reporting) → effet sur la **performance globale**."
+        }
+      ]
+    }
+  ]
+}

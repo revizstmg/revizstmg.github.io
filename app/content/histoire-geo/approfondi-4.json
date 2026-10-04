@@ -1,0 +1,279 @@
+{
+  "hg-g1": [
+    {
+      "h": "🚢 Étude de cas — un point de passage stratégique",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **canal de Suez** (Égypte) relie la Méditerranée à la mer Rouge : il évite le contournement de l’Afrique et fait gagner des milliers de kilomètres. Environ **10 % du commerce mondial** y transite."
+        },
+        {
+          "t": "p",
+          "c": "En 2021, le blocage du canal par un porte-conteneurs (l’*Ever Given*) a **paralysé** le commerce mondial plusieurs jours : preuve de la **vulnérabilité** de ces points de passage. Suez, Panama, Ormuz, Malacca sont des **verrous** stratégiques que les États cherchent à sécuriser."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un **point de passage** (détroit, canal) concentre les flux : stratégique **et** vulnérable (blocage, piraterie, tensions)."
+        }
+      ]
+    },
+    {
+      "h": "📊 Chiffres clés et acteurs de la maritimisation",
+      "blocks": [
+        {
+          "t": "list",
+          "c": [
+            "**≈ 80 %** du commerce mondial de marchandises passe par la mer.",
+            "La **conteneurisation** a standardisé et abaissé les coûts du transport.",
+            "Les **hubs** mondiaux : Shanghai, Singapour, Rotterdam.",
+            "Les **câbles sous-marins** portent l’essentiel des données d’Internet."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Acteurs : les **armateurs** (compagnies maritimes géantes), les **ports**, les **États** (ZEE, marines militaires) et les **firmes** qui organisent les chaînes logistiques mondiales."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La **maritimisation** = poids croissant de la mer dans l’économie mondialisée (marchandises, énergie, données)."
+        }
+      ]
+    },
+    {
+      "h": "📚 Vocabulaire de la géographie des océans",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Terme",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "ZEE",
+              "Zone économique exclusive (200 milles marins) : droits d’exploitation"
+            ],
+            [
+              "Maritimisation",
+              "Importance croissante de la mer dans l’économie"
+            ],
+            [
+              "Hub portuaire",
+              "Grand port de correspondance des flux"
+            ],
+            [
+              "Route maritime",
+              "Axe majeur de circulation des navires"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Associer chaque terme à un **exemple** (ZEE française outre-mer, hub = Singapour, route = Asie-Europe)."
+        }
+      ]
+    }
+  ],
+  "hg-g2": [
+    {
+      "h": "🌆 Étude de cas — une métropole mondiale",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une **métropole mondiale** (Londres, New York, Tokyo, Shanghai) concentre les fonctions de **commandement** : sièges sociaux, bourses, universités, aéroports internationaux. Elle est connectée aux autres métropoles plus qu’à son propre arrière-pays."
+        },
+        {
+          "t": "p",
+          "c": "Ces villes forment un **archipel mégalopolitain mondial** : un réseau de pôles reliés par les flux (capitaux, informations, personnes). C’est le cœur de la mondialisation."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La **métropolisation** concentre pouvoir et richesse dans quelques grandes villes connectées (l’**archipel mondial**)."
+        }
+      ]
+    },
+    {
+      "h": "🌍 La Triade et les émergents",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Groupe",
+            "Caractéristique"
+          ],
+          "rows": [
+            [
+              "Triade",
+              "Amérique du Nord, Europe, Asie de l’Est : pôles dominants"
+            ],
+            [
+              "Émergents (BRICS)",
+              "Chine, Inde, Brésil… : montée en puissance rapide"
+            ],
+            [
+              "En marge",
+              "Nombre de PMA, peu connectés aux flux"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La mondialisation est **sélective** : elle intègre fortement la Triade, intègre de plus en plus les **émergents** (surtout la Chine), et laisse des espaces **à l’écart**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Territoires **intégrés / émergents / en marge** : la mondialisation crée des gagnants et des perdants."
+        }
+      ]
+    },
+    {
+      "h": "📉 Les territoires en marge",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Certains espaces restent **à l’écart** de la mondialisation : nombre de **pays les moins avancés (PMA)**, mais aussi, à l’intérieur des pays riches, des régions rurales isolées ou d’anciennes zones industrielles en déclin."
+        },
+        {
+          "t": "p",
+          "c": "Les causes : enclavement, manque d’infrastructures, faible qualification, instabilité. Les inégalités se creusent **entre** pays et **à l’intérieur** des pays."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La mondialisation **fragmente** les territoires : des pôles gagnants, des marges perdantes, à toutes les échelles."
+        }
+      ]
+    },
+    {
+      "h": "📚 Vocabulaire clé de la mondialisation",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Terme",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Métropolisation",
+              "Concentration des activités et du pouvoir dans les grandes villes"
+            ],
+            [
+              "FTN",
+              "Firme transnationale : entreprise implantée dans plusieurs pays"
+            ],
+            [
+              "DIT",
+              "Division internationale du travail"
+            ],
+            [
+              "Archipel mondial",
+              "Réseau des métropoles connectées entre elles"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un vocabulaire précis + un exemple par notion = des points faciles à l’épreuve."
+        }
+      ]
+    }
+  ],
+  "hg-g3": [
+    {
+      "h": "🇪🇺 L’Union européenne : fonctionnement et enjeux",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "L’**Union européenne** (27 États) est une organisation d’intégration unique : un **marché unique** (libre circulation des biens, services, capitaux, personnes), une monnaie commune (l’**euro**) pour une partie des États, et des politiques communes."
+        },
+        {
+          "t": "p",
+          "c": "La France en est un **membre fondateur**. Repères : traité de **Rome** (1957), **Maastricht** (1992, création de l’UE), **euro** (2002). L’UE structure fortement le territoire français (échanges, aménagement, frontières ouvertes)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "UE = **marché unique** + intégration poussée. La France, membre fondateur, y réalise l’essentiel de ses échanges."
+        }
+      ]
+    },
+    {
+      "h": "🌐 Paris, ville mondiale (étude de cas)",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Paris** est la seule métropole française de rang mondial : fonctions de commandement (sièges, bourse), 1er pôle touristique mondial, hub aérien (Roissy), pôle universitaire et culturel. Elle connecte la France à la mondialisation."
+        },
+        {
+          "t": "p",
+          "c": "Mais Paris concentre aussi les richesses au détriment du reste du territoire (débat sur la « France périphérique »)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Paris = **métropole mondiale** et porte d’entrée de la France dans la mondialisation, mais source de **déséquilibres** territoriaux."
+        }
+      ]
+    },
+    {
+      "h": "🏭 Façades, frontières et territoires français",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La France s’insère dans la mondialisation par ses **façades maritimes** (Le Havre, Marseille), ses **frontières** ouvertes avec ses voisins de l’UE, et son vaste **domaine ultramarin** (2e ZEE mondiale)."
+        },
+        {
+          "t": "p",
+          "c": "Les territoires sont **inégalement intégrés** : métropoles et façades dynamiques d’un côté, espaces ruraux ou industriels en difficulté de l’autre."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Atouts : **façades**, **frontières UE**, **outre-mer** (ZEE). Mais une intégration **inégale** selon les territoires."
+        }
+      ]
+    },
+    {
+      "h": "📚 Vocabulaire clé — France et mondialisation",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Terme",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Marché unique",
+              "Espace de libre circulation dans l’UE"
+            ],
+            [
+              "Façade maritime",
+              "Littoral équipé de grands ports, ouvert sur le monde"
+            ],
+            [
+              "Ultramarin",
+              "Relatif aux territoires français d’outre-mer"
+            ],
+            [
+              "Attractivité",
+              "Capacité à attirer entreprises, talents, touristes"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Toujours illustrer : marché unique (UE), façade (Le Havre), ultramarin (ZEE), attractivité (Paris)."
+        }
+      ]
+    }
+  ]
+}

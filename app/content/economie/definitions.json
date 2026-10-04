@@ -1,0 +1,148 @@
+{
+  "eco-t6": [
+    [
+      "Politique économique",
+      "Ensemble des interventions de l’État pour orienter l’activité (croissance, emploi, prix)."
+    ],
+    [
+      "Politique budgétaire",
+      "Usage des dépenses publiques et des impôts pour agir sur l’économie."
+    ],
+    [
+      "Politique monétaire",
+      "Action de la banque centrale sur les taux et la quantité de monnaie."
+    ],
+    [
+      "Bien public",
+      "Bien non rival et non excluable, fourni par l’État (éclairage, défense)."
+    ],
+    [
+      "Externalité",
+      "Effet de l’activité d’un agent sur un tiers, sans compensation par le marché."
+    ],
+    [
+      "Redistribution",
+      "Prélèvements et prestations qui réduisent les inégalités de revenus."
+    ],
+    [
+      "Déficit public",
+      "Situation où les dépenses de l’État dépassent ses recettes sur une année."
+    ]
+  ],
+  "eco-t7": [
+    [
+      "Chômage",
+      "Situation d’une personne sans emploi, disponible et cherchant activement du travail."
+    ],
+    [
+      "Population active",
+      "Personnes en emploi + chômeurs (celles qui offrent leur travail)."
+    ],
+    [
+      "Taux de chômage",
+      "Part des chômeurs dans la population active (en %)."
+    ],
+    [
+      "Chômage structurel",
+      "Chômage durable lié à l’inadéquation entre offre et demande de travail (qualifications)."
+    ],
+    [
+      "Chômage conjoncturel",
+      "Chômage lié au ralentissement temporaire de l’activité économique."
+    ],
+    [
+      "Flexibilité du travail",
+      "Capacité d’adapter l’emploi et le temps de travail aux besoins de l’entreprise."
+    ],
+    [
+      "Salaire minimum (SMIC)",
+      "Rémunération horaire minimale légale."
+    ]
+  ],
+  "eco-t8": [
+    [
+      "Libre-échange",
+      "Commerce international sans obstacles (droits de douane, quotas)."
+    ],
+    [
+      "Protectionnisme",
+      "Mesures qui protègent la production nationale de la concurrence étrangère."
+    ],
+    [
+      "Avantage comparatif",
+      "Un pays gagne à se spécialiser là où son coût relatif est le plus faible (Ricardo)."
+    ],
+    [
+      "Balance commerciale",
+      "Différence entre les exportations et les importations de biens."
+    ],
+    [
+      "Mondialisation",
+      "Intégration croissante des économies par les échanges de biens, capitaux et informations."
+    ],
+    [
+      "Firme multinationale (FMN)",
+      "Entreprise implantée dans plusieurs pays."
+    ],
+    [
+      "Division internationale du travail",
+      "Répartition de la production entre pays selon leurs spécialisations."
+    ]
+  ],
+  "eco-t9": [
+    [
+      "Croissance économique",
+      "Augmentation durable de la production, mesurée par le PIB."
+    ],
+    [
+      "Produit intérieur brut (PIB)",
+      "Valeur de toutes les richesses produites dans un pays sur un an."
+    ],
+    [
+      "Développement",
+      "Amélioration durable des conditions de vie (santé, éducation, revenus)."
+    ],
+    [
+      "Développement durable",
+      "Concilier progrès économique, équité sociale et protection de l’environnement."
+    ],
+    [
+      "IDH",
+      "Indice de développement humain : synthèse de revenu, santé et éducation."
+    ],
+    [
+      "Développement soutenable",
+      "Croissance qui préserve les ressources pour les générations futures."
+    ],
+    [
+      "Capital naturel",
+      "Ensemble des ressources naturelles nécessaires à l’activité économique."
+    ]
+  ],
+  "eco-actu": [
+    [
+      "Inflation",
+      "Hausse générale et durable des prix, qui réduit le pouvoir d’achat."
+    ],
+    [
+      "Pouvoir d’achat",
+      "Quantité de biens et services que le revenu permet d’acheter."
+    ],
+    [
+      "Taux d’intérêt",
+      "Prix de l’argent emprunté ou rémunération de l’épargne."
+    ],
+    [
+      "Récession",
+      "Recul de l’activité économique (PIB) sur plusieurs trimestres."
+    ],
+    [
+      "Dette publique",
+      "Total des emprunts cumulés de l’État et des administrations."
+    ],
+    [
+      "Banque centrale",
+      "Institution qui pilote la monnaie et les taux (BCE en zone euro)."
+    ]
+  ]
+}

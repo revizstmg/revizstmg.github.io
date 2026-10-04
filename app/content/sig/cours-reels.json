@@ -1,0 +1,268 @@
+{
+  "sig-t1": [
+    {
+      "h": "Ta commande McDo dans le système",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Tu commandes sur la borne : ta commande part en cuisine, décompte le stock d’ingrédients, alimente la caisse et la comptabilité, et remonte dans les statistiques du restaurant."
+        },
+        {
+          "t": "p",
+          "c": "Tout cela est géré par le **système d’information (SI)** : l’ensemble des ressources (humaines, matérielles, logicielles) qui **collectent, stockent, traitent et diffusent** l’information. C’est le « système nerveux » de l’entreprise."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Fonction du SI",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Collecter",
+              "Saisir la commande"
+            ],
+            [
+              "Stocker",
+              "Base de données"
+            ],
+            [
+              "Traiter",
+              "Calculer, éditer la facture"
+            ],
+            [
+              "Diffuser",
+              "Envoyer l’info au bon service"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "Force du PGI",
+          "c": "Avec un **PGI/ERP** (une seule base partagée), l’information saisie **une fois** est disponible partout : un logiciel unique, une base unique → **fiabilité** et **temps réel**."
+        }
+      ]
+    },
+    {
+      "h": "De la donnée à la décision",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une **donnée** brute (« 3 », « 12 € ») ne dit rien seule. Remise dans son contexte, elle devient une **information** (« on a vendu 3 menus à 12 € le samedi »). Analysée, elle devient une **connaissance** utile pour décider (« le samedi soir marche fort → renforcer l’équipe »)."
+        },
+        {
+          "t": "p",
+          "c": "La finalité du SI est d’**aider à décider**, à tous les niveaux (opérationnel : suivre les stocks ; stratégique : tableaux de bord des dirigeants). Encore faut-il des données **fiables, à jour et sécurisées** : « garbage in, garbage out » — une donnée fausse mène à une mauvaise décision."
+        },
+        {
+          "t": "tip",
+          "h": "Chaîne",
+          "c": "Donnée → information → connaissance : chaque étape **ajoute du sens**. La qualité des données conditionne la qualité des décisions."
+        }
+      ]
+    }
+  ],
+  "sig-t2": [
+    {
+      "h": "Comment Spotify retrouve ta playlist",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Une appli musicale doit relier des millions d’utilisateurs, de titres et de playlists, et retrouver instantanément « les chansons de la playlist de Léa »."
+        },
+        {
+          "t": "p",
+          "c": "Impossible avec un simple tableur. On utilise une **base de données relationnelle** : des **tables** (utilisateurs, titres, playlists) reliées entre elles par des **clés**. Chaque table a une **clé primaire** (un identifiant unique) ; une **clé étrangère** fait le lien vers une autre table. C’est ce qui évite de tout réécrire et garde les données cohérentes."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Terme",
+            "Signification"
+          ],
+          "rows": [
+            [
+              "Table",
+              "Un tableau de données (ex. CLIENTS)"
+            ],
+            [
+              "Enregistrement",
+              "Une ligne (un client précis)"
+            ],
+            [
+              "Champ",
+              "Une colonne (nom, ville…)"
+            ],
+            [
+              "Clé primaire",
+              "Identifiant unique de la ligne"
+            ],
+            [
+              "Clé étrangère",
+              "Lien vers une autre table"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Base relationnelle = **tables** liées par des **clés**. Clé **primaire** = identifiant unique ; clé **étrangère** = lien vers une autre table."
+        }
+      ]
+    },
+    {
+      "h": "Poser une question à la base : le SQL",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Pour interroger la base, on écrit une **requête** en langage **SQL**. La structure de base : choisir les colonnes (**SELECT**), la table (**FROM**), filtrer (**WHERE**), trier (**ORDER BY**)."
+        },
+        {
+          "t": "example",
+          "h": "Requête",
+          "c": "Nom et ville des clients de Lyon, triés par nom :\nSELECT nom, ville\nFROM CLIENTS\nWHERE ville = 'Lyon'\nORDER BY nom ;"
+        },
+        {
+          "t": "p",
+          "c": "On peut aussi **calculer** avec les fonctions d’agrégation (COUNT, SUM, AVG…) et **croiser** deux tables par une **jointure** (égalité des clés). Ex. : `SELECT COUNT(*) FROM CLIENTS WHERE ville = 'Lyon'` compte les clients lyonnais."
+        },
+        {
+          "t": "warning",
+          "h": "Pièges classiques",
+          "c": "WHERE filtre **avant** regroupement, HAVING **après** un GROUP BY. Et sans condition de **jointure** entre deux tables, on obtient toutes les combinaisons (produit cartésien). Ne pas oublier le **point-virgule** et les **guillemets** autour du texte."
+        }
+      ]
+    }
+  ],
+  "sig-t3": [
+    {
+      "h": "Wikipédia : écrit par des millions de mains",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Un article de Wikipédia est modifié par des milliers de contributeurs, partout dans le monde, sans que le travail des uns efface celui des autres."
+        },
+        {
+          "t": "p",
+          "c": "C’est possible grâce aux outils **collaboratifs** : un espace **partagé**, la **coédition** (plusieurs personnes modifient en même temps) et surtout un **historique des versions** qui garde la trace de chaque modification et permet de revenir en arrière. Ces outils reposent souvent sur le **cloud** (serveurs distants accessibles via Internet)."
+        },
+        {
+          "t": "p",
+          "c": "Ils rendent possible l’**intelligence collective** : un groupe produit, ensemble, **plus** que la somme des individus (Wikipédia en est l’exemple). Mais cela exige des **règles** et une **modération** pour rester fiable (risque de désinformation)."
+        },
+        {
+          "t": "tip",
+          "h": "Bon réflexe",
+          "c": "Définir les **droits d’accès** (qui peut lire, qui peut modifier) est indispensable dès qu’on partage. Le cloud pose aussi des enjeux de **sécurité** et de **dépendance**."
+        }
+      ]
+    },
+    {
+      "h": "Le numérique transforme l’organisation",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Messageries, cloud, visioconférence, **télétravail** : le numérique change la façon de travailler ensemble — plus vite, à distance, en continu. De nouvelles formes d’organisation apparaissent, plus **agiles** et flexibles."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Opportunités",
+            "Risques"
+          ],
+          "rows": [
+            [
+              "Flexibilité, gain de temps",
+              "Frontière vie pro/perso brouillée"
+            ],
+            [
+              "Collaboration à distance",
+              "Isolement, perte de lien"
+            ],
+            [
+              "Automatisation des tâches",
+              "Surcharge d’informations, sécurité"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La transformation numérique offre **flexibilité et efficacité** mais exige de nouvelles **compétences** et un **droit à la déconnexion** pour protéger les salariés."
+        }
+      ]
+    }
+  ],
+  "sig-t4": [
+    {
+      "h": "Quand un hôpital est pris en otage",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas réel",
+          "c": "Plusieurs hôpitaux français ont été paralysés par des rançongiciels (ransomwares) : des pirates chiffrent les données et exigent une rançon. Résultat : blocs opératoires ralentis, dossiers inaccessibles."
+        },
+        {
+          "t": "p",
+          "c": "La sécurité d’un système d’information vise quatre objectifs (**DICP**) : que l’information reste **Disponible**, **Intègre** (non altérée), **Confidentielle** et **traçable** (Preuve). Une attaque peut viser n’importe lequel — et les conséquences sont parfois vitales."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Objectif",
+            "Signification"
+          ],
+          "rows": [
+            [
+              "Disponibilité",
+              "Accessible quand on en a besoin"
+            ],
+            [
+              "Intégrité",
+              "Non altérée, non falsifiée"
+            ],
+            [
+              "Confidentialité",
+              "Réservée aux personnes autorisées"
+            ],
+            [
+              "Preuve (traçabilité)",
+              "On sait qui a fait quoi"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "Bases de défense",
+          "c": "Sauvegardes régulières (et hors ligne), mises à jour, pare-feu/antivirus, droits d’accès stricts, **sensibilisation** : les fondamentaux qui limitent les dégâts. Ne **jamais payer** la rançon : restaurer depuis les sauvegardes."
+        }
+      ]
+    },
+    {
+      "h": "Le phishing : la faille, c’est souvent l’humain",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Un salarié reçoit un mail « urgent » imitant sa banque, lui demandant son mot de passe. Il clique…"
+        },
+        {
+          "t": "p",
+          "c": "C’est de l’**hameçonnage (phishing)** : la technique la plus courante, car elle vise l’**utilisateur**, pas la machine. C’est souvent la porte d’entrée d’un **ransomware**. Aucun antivirus ne remplace la vigilance : on ne communique **jamais** un mot de passe par mail, et on **vérifie l’expéditeur**."
+        },
+        {
+          "t": "p",
+          "c": "La protection des **données personnelles** est aussi une obligation légale : le **RGPD** impose consentement, finalité, minimisation, sécurité et droits des personnes (accès, effacement). Son non-respect expose à de lourdes **sanctions** (CNIL)."
+        },
+        {
+          "t": "warning",
+          "h": "À retenir",
+          "c": "La sécurité n’est pas que technique : le **comportement humain** est la **première protection**. La meilleure défense combine technique **et** vigilance."
+        }
+      ]
+    }
+  ]
+}

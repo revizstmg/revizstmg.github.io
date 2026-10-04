@@ -1,0 +1,118 @@
+{
+  "rh-t1": [
+    [
+      "Ressources humaines",
+      "Ensemble des salariés et de la gestion de leur potentiel dans l’organisation."
+    ],
+    [
+      "GPEC",
+      "Gestion prévisionnelle des emplois et des compétences : anticiper les besoins futurs."
+    ],
+    [
+      "Recrutement",
+      "Processus de recherche et de sélection d’un nouveau salarié."
+    ],
+    [
+      "Compétence",
+      "Combinaison de savoirs, savoir-faire et savoir-être mobilisée en situation."
+    ],
+    [
+      "Formation",
+      "Développement des compétences des salariés."
+    ],
+    [
+      "Motivation",
+      "Ensemble des facteurs poussant un salarié à s’impliquer (Maslow, Herzberg)."
+    ],
+    [
+      "Rémunération",
+      "Contrepartie du travail (salaire fixe, variable, avantages)."
+    ]
+  ],
+  "rh-t2": [
+    [
+      "Cohésion",
+      "Solidarité et unité des membres d’un groupe."
+    ],
+    [
+      "Groupe",
+      "Ensemble de personnes en interaction poursuivant un but commun."
+    ],
+    [
+      "Conflit",
+      "Opposition entre acteurs aux intérêts ou objectifs divergents."
+    ],
+    [
+      "Coopération",
+      "Travail en commun pour atteindre un objectif partagé."
+    ],
+    [
+      "Négociation",
+      "Recherche d’un accord entre parties en désaccord."
+    ],
+    [
+      "Médiation",
+      "Intervention d’un tiers neutre pour aider à résoudre un conflit."
+    ],
+    [
+      "Climat social",
+      "État des relations et du moral au sein de l’organisation."
+    ]
+  ],
+  "rh-t3": [
+    [
+      "Communication",
+      "Transmission d’un message d’un émetteur vers un récepteur."
+    ],
+    [
+      "Émetteur / récepteur",
+      "Celui qui envoie le message / celui qui le reçoit."
+    ],
+    [
+      "Canal",
+      "Support par lequel circule le message (oral, écrit, numérique)."
+    ],
+    [
+      "Feedback",
+      "Retour du récepteur qui vérifie la bonne réception du message."
+    ],
+    [
+      "Communication interne / externe",
+      "Vers les salariés / vers les partenaires extérieurs (clients, public)."
+    ],
+    [
+      "Communication formelle / informelle",
+      "Officielle et hiérarchisée / spontanée entre membres."
+    ],
+    [
+      "Bruit",
+      "Perturbation qui gêne la transmission du message."
+    ]
+  ],
+  "rh-t4": [
+    [
+      "Coordination",
+      "Organisation des tâches pour faire converger les efforts vers le but commun."
+    ],
+    [
+      "Organisation du travail",
+      "Manière de répartir et d’agencer les tâches (Taylor, travail en équipe)."
+    ],
+    [
+      "Conditions de travail",
+      "Environnement matériel, horaires et sécurité du poste."
+    ],
+    [
+      "Risques psychosociaux (RPS)",
+      "Risques pour la santé mentale liés au travail (stress, harcèlement)."
+    ],
+    [
+      "Qualité de vie au travail",
+      "Ensemble des actions améliorant le bien-être et l’efficacité au travail."
+    ],
+    [
+      "Ergonomie",
+      "Adaptation du travail et des outils aux capacités de l’humain."
+    ]
+  ]
+}

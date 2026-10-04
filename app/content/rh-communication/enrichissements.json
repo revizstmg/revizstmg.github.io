@@ -1,0 +1,154 @@
+{
+  "rh-t1": {
+    "sections": [
+      {
+        "h": "🧑‍💼 Exemple — motiver et développer les compétences",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Un manager veut impliquer davantage son équipe."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Facteurs de motivation** (Herzberg) : reconnaissance, responsabilités, intérêt du travail.",
+              "**Facteurs d’hygiène** : salaire, conditions — leur absence démotive, mais leur présence seule ne motive pas durablement.",
+              "**Compétence** = savoir + savoir-faire + savoir-être ; elle se démontre **en situation**."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Piège",
+            "c": "Motivation ≠ satisfaction : on peut être satisfait (bien payé) sans être motivé, et inversement."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "label": "travail-emploi.gouv.fr — contrat, compétences, formation",
+        "url": "https://travail-emploi.gouv.fr/",
+        "kind": "link"
+      },
+      {
+        "label": "Lumni — motivation et management",
+        "url": "https://www.lumni.fr/",
+        "kind": "video",
+        "note": "Maslow, Herzberg, la motivation au travail."
+      }
+    ]
+  },
+  "rh-t2": {
+    "sections": [
+      {
+        "h": "🧑‍💼 Cas — gérer un conflit",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Deux salariés se disputent en permanence sur la répartition des tâches."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Identifier la source** : ici un conflit d’**organisation** (répartition), pas seulement de personnes.",
+              "**Modes de résolution** : négociation directe, puis médiation (un tiers aide) ou arbitrage (un tiers tranche).",
+              "Bien géré, un conflit peut être **constructif** (il clarifie les rôles)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À distinguer",
+            "c": "Médiation = le tiers aide à trouver un accord ; arbitrage = le tiers impose la solution."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "label": "Lumni — groupes, cohésion et conflits",
+        "url": "https://www.lumni.fr/",
+        "kind": "video"
+      },
+      {
+        "label": "service-public.fr — représentants du personnel & dialogue social",
+        "url": "https://www.service-public.fr/",
+        "kind": "link"
+      }
+    ]
+  },
+  "rh-t3": {
+    "sections": [
+      {
+        "h": "🧑‍💼 Exemple — une communication efficace",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Une note de service importante n’est pas comprise par les équipes."
+          },
+          {
+            "t": "list",
+            "c": [
+              "Schéma : **émetteur → message → canal → récepteur**. Ici, un **bruit** (jargon, mauvais canal) a gêné la compréhension.",
+              "Améliorer : message clair, bon canal (réunion plutôt que mail ?), et un **retour** (feedback) pour vérifier.",
+              "Distinguer communication **interne** (salariés) et **externe** (clients, partenaires)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Voir le schéma",
+            "c": "Le « Schéma du thème » illustre l’émetteur, le message, le canal, le récepteur et le bruit."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "label": "Lumni — la communication dans l’organisation",
+        "url": "https://www.lumni.fr/",
+        "kind": "video",
+        "note": "Émetteur, message, canal, récepteur, bruit."
+      }
+    ]
+  },
+  "rh-t4": {
+    "sections": [
+      {
+        "h": "🧑‍💼 Exemple — coût du travail & climat social",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Un salarié touche 1 800 € net ; l’entreprise, elle, dépense bien plus pour ce poste."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Coût employeur** = salaire net + cotisations salariales + **cotisations patronales** → bien supérieur au net perçu.",
+              "**Climat social** : ne se mesure pas qu’au turnover ; on regarde aussi l’absentéisme, les conflits, les enquêtes de satisfaction."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À retenir",
+            "c": "Le coût pour l’employeur est très supérieur au salaire net : n’oublie pas les charges patronales."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "label": "travail-emploi.gouv.fr — rémunération & conditions de travail",
+        "url": "https://travail-emploi.gouv.fr/",
+        "kind": "link"
+      },
+      {
+        "label": "INSEE — emploi, salaires, climat social",
+        "url": "https://www.insee.fr/fr/statistiques",
+        "kind": "doc"
+      }
+    ]
+  }
+}

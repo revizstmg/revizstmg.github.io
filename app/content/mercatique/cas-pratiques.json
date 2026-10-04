@@ -1,0 +1,153 @@
+{
+  "mkg-t1": [
+    {
+      "title": "Élasticité-prix de la demande",
+      "context": "Une enseigne augmente le prix d'un jus de fruits de 10 %. Elle observe alors une baisse des quantités vendues de 20 %.",
+      "questions": [
+        {
+          "q": "Calcule l'élasticité-prix de la demande.",
+          "a": "-2",
+          "num": true,
+          "alt": [
+            "−2",
+            "-2.0"
+          ],
+          "e": "e = variation % des quantités / variation % du prix = −20 / +10 = −2."
+        },
+        {
+          "q": "La demande est-elle « élastique » ou « inélastique » ?",
+          "a": "élastique",
+          "alt": [
+            "elastique"
+          ],
+          "e": "|e| = 2 > 1 : la demande est élastique (très sensible au prix)."
+        }
+      ]
+    },
+    {
+      "title": "Taux de notoriété",
+      "context": "Sur 1 200 personnes interrogées, 900 déclarent connaître la marque.",
+      "questions": [
+        {
+          "q": "Calcule le taux de notoriété (en %).",
+          "a": "75",
+          "num": true,
+          "e": "Notoriété = 900 / 1 200 = 0,75 = 75 %."
+        }
+      ]
+    }
+  ],
+  "mkg-t2": [
+    {
+      "title": "Parts de marché",
+      "context": "L'entreprise VÉLIA vend pour 3 M€ de vélos. Le marché total représente 20 M€. Le leader détient 30 % du marché.",
+      "questions": [
+        {
+          "q": "Calcule la part de marché de VÉLIA (en %).",
+          "a": "15",
+          "num": true,
+          "e": "PDM = ventes de l’entreprise / ventes du marché = 3 / 20 = 15 %."
+        },
+        {
+          "q": "Calcule sa part de marché relative (par rapport au leader).",
+          "a": "0.5",
+          "num": true,
+          "alt": [
+            "0,5",
+            "50%",
+            "50"
+          ],
+          "e": "PDM relative = PDM entreprise / PDM leader = 15 / 30 = 0,5."
+        }
+      ]
+    },
+    {
+      "title": "Taux de pénétration",
+      "context": "VÉLIA compte 5 000 clients pour une cible estimée à 25 000 personnes.",
+      "questions": [
+        {
+          "q": "Calcule le taux de pénétration (en %).",
+          "a": "20",
+          "num": true,
+          "e": "Pénétration = clients / cible = 5 000 / 25 000 = 20 %."
+        }
+      ]
+    }
+  ],
+  "mkg-t3": [
+    {
+      "title": "Taux de marge et taux de marque",
+      "context": "Un article est acheté 40 € HT et revendu 60 € HT.",
+      "questions": [
+        {
+          "q": "Calcule la marge commerciale unitaire (en €).",
+          "a": "20",
+          "num": true,
+          "e": "Marge = prix de vente HT − coût d’achat HT = 60 − 40 = 20 €."
+        },
+        {
+          "q": "Calcule le taux de marge (en %).",
+          "a": "50",
+          "num": true,
+          "e": "Taux de marge = marge / coût d’achat = 20 / 40 = 50 %."
+        },
+        {
+          "q": "Calcule le taux de marque (en %).",
+          "a": "33.33",
+          "num": true,
+          "tol": 0.7,
+          "alt": [
+            "33.3",
+            "33,3",
+            "33"
+          ],
+          "e": "Taux de marque = marge / prix de vente = 20 / 60 ≈ 33,3 %."
+        }
+      ]
+    },
+    {
+      "title": "Prix après remise",
+      "context": "Un produit affiché 80 € bénéficie d'une remise de 25 %.",
+      "questions": [
+        {
+          "q": "Calcule le prix soldé (en €).",
+          "a": "60",
+          "num": true,
+          "e": "Prix soldé = 80 × (1 − 0,25) = 80 × 0,75 = 60 €."
+        }
+      ]
+    }
+  ],
+  "mkg-t4": [
+    {
+      "title": "Performance d'un site marchand",
+      "context": "Un site e-commerce reçoit 10 000 visiteurs sur un mois, réalise 300 commandes pour un chiffre d'affaires de 12 000 €.",
+      "questions": [
+        {
+          "q": "Calcule le taux de conversion (en %).",
+          "a": "3",
+          "num": true,
+          "e": "Conversion = commandes / visiteurs = 300 / 10 000 = 3 %."
+        },
+        {
+          "q": "Calcule le panier moyen (en €).",
+          "a": "40",
+          "num": true,
+          "e": "Panier moyen = CA / nombre de commandes = 12 000 / 300 = 40 €."
+        }
+      ]
+    },
+    {
+      "title": "Rentabilité d'une campagne",
+      "context": "Une campagne publicitaire a coûté 5 000 € et a généré 8 000 € de gain (marge supplémentaire).",
+      "questions": [
+        {
+          "q": "Calcule le retour sur investissement (ROI, en %).",
+          "a": "60",
+          "num": true,
+          "e": "ROI = (gain − coût) / coût = (8 000 − 5 000) / 5 000 = 60 %."
+        }
+      ]
+    }
+  ]
+}

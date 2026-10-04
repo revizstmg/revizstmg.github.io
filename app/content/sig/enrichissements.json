@@ -1,0 +1,148 @@
+{
+  "sig-t1": {
+    "sections": [
+      {
+        "h": "💻 Exemple — le système d’information à l’œuvre",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Un client passe commande sur un site : la commande, le stock, la facturation et la livraison doivent rester cohérents."
+          },
+          {
+            "t": "list",
+            "c": [
+              "Un **SI** collecte, stocke, traite et **diffuse** l’information entre les services.",
+              "Avec un **PGI/ERP** (base de données **unique**), la commande met à jour le stock, la compta et la logistique **sans ressaisie**.",
+              "Résultat : moins d’erreurs, information fiable et partagée en temps réel."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Clé",
+            "c": "PGI = un seul logiciel, une seule base → l’information saisie une fois est disponible partout."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "label": "Lumni — système d’information & numérique",
+        "url": "https://www.lumni.fr/",
+        "kind": "video"
+      }
+    ]
+  },
+  "sig-t2": {
+    "sections": [
+      {
+        "h": "💻 Exemple — écrire une requête SQL",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Besoin",
+            "c": "Table Client(id_client, nom, ville). On veut le nom des clients de Lyon, classés par ordre alphabétique."
+          },
+          {
+            "t": "formula",
+            "c": "SELECT nom\nFROM Client\nWHERE ville = 'Lyon'\nORDER BY nom ;"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**SELECT** choisit les colonnes ; **FROM** la table ; **WHERE** filtre les lignes ; **ORDER BY** trie.",
+              "Pour compter : SELECT COUNT(*) FROM Client WHERE ville = 'Lyon' ;"
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Piège",
+            "c": "WHERE filtre AVANT regroupement, HAVING filtre APRÈS un GROUP BY. Et n’oublie jamais la condition de jointure entre deux tables."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "label": "SQL.sh — cours et exercices SQL en français",
+        "url": "https://sql.sh/",
+        "kind": "link",
+        "note": "SELECT, WHERE, jointures, GROUP BY : la référence pour s’entraîner."
+      }
+    ]
+  },
+  "sig-t3": {
+    "sections": [
+      {
+        "h": "💻 Exemple — le travail collaboratif",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Trois élèves rédigent un dossier ensemble, à distance."
+          },
+          {
+            "t": "list",
+            "c": [
+              "Un **espace partagé** (cloud) permet d’écrire à plusieurs sur le même document.",
+              "L’**historique des versions** évite de perdre le travail ou de s’écraser mutuellement.",
+              "Le **numérique** transforme l’organisation : plus de collaboration, mais des enjeux (droits d’accès, sécurité)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Bon réflexe",
+            "c": "Définir qui peut lire / modifier (droits d’accès) est essentiel dès qu’on partage."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "label": "Lumni — travail collaboratif & outils numériques",
+        "url": "https://www.lumni.fr/",
+        "kind": "video"
+      }
+    ]
+  },
+  "sig-t4": {
+    "sections": [
+      {
+        "h": "💻 Exemple — sécuriser le système d’information",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Un employé reçoit un mail « urgent » lui demandant son mot de passe."
+          },
+          {
+            "t": "list",
+            "c": [
+              "C’est une tentative d’**hameçonnage (phishing)** : on ne donne **jamais** son mot de passe par mail.",
+              "La sécurité repose sur la **DICP** : Disponibilité, Intégrité, Confidentialité, Preuve (traçabilité).",
+              "Mesures : mot de passe **fort**, **sauvegardes** régulières, droits d’accès, sensibilisation."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À retenir",
+            "c": "La sécurité n’est pas que technique : la vigilance humaine est la première protection."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "label": "Cybermalveillance.gouv.fr — sécurité & bonnes pratiques",
+        "url": "https://www.cybermalveillance.gouv.fr/",
+        "kind": "link",
+        "note": "Mots de passe, sauvegardes, hameçonnage."
+      },
+      {
+        "label": "CNIL — protection des données (RGPD)",
+        "url": "https://www.cnil.fr/",
+        "kind": "link"
+      }
+    ]
+  }
+}

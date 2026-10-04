@@ -1,0 +1,110 @@
+{
+  "p1-droit-t1": {
+    "sections": [
+      {
+        "h": "⚖️ Exemple — droit et règle de droit",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Griller un feu rouge : est-ce une faute morale ou juridique ? Quelle différence ?"
+          },
+          {
+            "t": "list",
+            "c": [
+              "La **règle de droit** est **générale, obligatoire et sanctionnée** par l’État (amende, retrait de points).",
+              "La **morale**, elle, n’est pas sanctionnée par l’État (seulement par la conscience).",
+              "**Droit objectif** = l’ensemble des règles ; **droits subjectifs** = les prérogatives d’une personne (ex. droit de propriété)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À distinguer",
+            "c": "Ce qui caractérise le droit : la **sanction organisée par l’État**. C’est ce qui le sépare de la morale."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-droit-t2": {
+    "sections": [
+      {
+        "h": "⚖️ Exemple — le litige et sa résolution",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Un client n’est pas livré malgré son paiement : un litige naît avec le vendeur."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Les parties** : le demandeur (le client) et le défendeur (le vendeur).",
+              "**Modes de résolution** : à l’amiable (négociation, médiation, conciliation) ou en justice (procès).",
+              "**La preuve** : « qui allègue un fait doit le prouver » (facture, contrat, mails)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Réflexe",
+            "c": "Avant le procès, on privilégie les modes **amiables** (plus rapides et moins coûteux)."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-droit-t3": {
+    "sections": [
+      {
+        "h": "⚖️ Exemple — les personnes juridiques",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Une jeune femme de 25 ans crée une entreprise sous forme de société."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Personne physique** : un être humain, doté de la personnalité juridique de la naissance à la mort.",
+              "**Personne morale** : un groupement (société, association) qui a sa propre existence juridique.",
+              "**Capacité** : à 25 ans, elle est majeure et capable → elle peut contracter seule."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À retenir",
+            "c": "La société est une **personne morale** : son patrimoine est distinct de celui de ses associés."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-droit-t4": {
+    "sections": [
+      {
+        "h": "⚖️ Exemple — les droits des personnes",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Une personne possède une maison (bien) et a droit au respect de sa vie privée."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Droits patrimoniaux** : ils ont une valeur en argent et peuvent se vendre/transmettre (propriété, créances).",
+              "**Droits extrapatrimoniaux** : ils n’ont pas de prix et sont attachés à la personne (droit à la vie privée, à l’image, au nom).",
+              "Les seconds sont **incessibles** : on ne peut pas les vendre."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À distinguer",
+            "c": "Patrimonial = « chiffrable et cessible » ; extrapatrimonial = « attaché à la personne, non monnayable »."
+          }
+        ]
+      }
+    ]
+  }
+}

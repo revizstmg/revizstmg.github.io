@@ -1,0 +1,230 @@
+{
+  "rh-t1": [
+    {
+      "h": "Pourquoi certains adorent leur travail",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Deux salariés, même salaire. L’un s’ennuie et compte les heures ; l’autre est passionné et force de proposition. D’où vient la différence ?"
+        },
+        {
+          "t": "p",
+          "c": "Le salaire évite le mécontentement, mais il ne suffit pas à **motiver** durablement : c’est la distinction de **Herzberg** entre les **facteurs d’hygiène** (salaire, conditions — ils évitent l’insatisfaction) et les **facteurs de motivation** (reconnaissance, intérêt, responsabilités, évolution — ils donnent l’envie)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Facteurs d’hygiène",
+            "Facteurs de motivation"
+          ],
+          "rows": [
+            [
+              "Salaire, conditions, sécurité",
+              "Reconnaissance, autonomie"
+            ],
+            [
+              "Évitent le mécontentement",
+              "Donnent l’envie de s’investir"
+            ]
+          ]
+        },
+        {
+          "t": "warning",
+          "h": "À distinguer",
+          "c": "Motivation ≠ satisfaction : on peut être **satisfait** (bien payé) sans être **motivé**, et inversement. Un bon salaire seul ne motive pas."
+        }
+      ]
+    },
+    {
+      "h": "Être compétent, ça ne se résume pas à un diplôme",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Un bon vendeur connaît ses produits (**savoir**), sait mener un entretien de vente (**savoir-faire**) et met le client à l’aise (**savoir-être**). La **compétence** se démontre **en situation** : c’est la combinaison des trois, pas seulement le diplôme."
+        },
+        {
+          "t": "p",
+          "c": "L’entreprise **développe** les compétences par la formation, le tutorat, la mobilité. La **GPEC** (gestion prévisionnelle des emplois et des compétences) **anticipe** : quels métiers vont évoluer, quelles compétences faudra-t-il ? Elle permet de former **à l’avance** plutôt que de subir."
+        },
+        {
+          "t": "tip",
+          "h": "Enjeu RH",
+          "c": "Recruter, former, faire évoluer : tout part de l’identification des **compétences** dont l’organisation a besoin. Compétence = **savoir + savoir-faire + savoir-être**."
+        }
+      ]
+    }
+  ],
+  "rh-t2": [
+    {
+      "h": "Une équipe soudée gagne (mais attention)",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Une équipe de sport très soudée enchaîne les victoires. Mais à force de penser pareil, personne n’ose dire que la tactique ne marche plus."
+        },
+        {
+          "t": "p",
+          "c": "La **cohésion** renforce la performance : on se fait confiance, on coopère. Mais son excès crée du **conformisme** (la « pensée de groupe ») où plus personne ne remet en cause le groupe. Un bon manager entretient la cohésion **sans** étouffer les avis différents. La **culture d’entreprise** (valeurs, rites, histoire partagés) nourrit cette cohésion et le sentiment d’appartenance."
+        },
+        {
+          "t": "tip",
+          "h": "Nuance",
+          "c": "La cohésion est une **force** ; le conformisme aveugle, un **risque**. Une bonne équipe reste soudée **ET** critique."
+        }
+      ]
+    },
+    {
+      "h": "Un conflit n’est pas forcément une catastrophe",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Deux collègues se disputent sans cesse sur « qui fait quoi »."
+        },
+        {
+          "t": "p",
+          "c": "Souvent, la vraie cause n’est pas les personnes mais l’**organisation** (rôles mal définis). Les conflits ont des origines variées : d’**intérêts**, de **valeurs**, de **personnes**, de **pouvoir**. Bien géré, un conflit peut même être **constructif** : il oblige à clarifier."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Mode de résolution",
+            "Principe"
+          ],
+          "rows": [
+            [
+              "Recours hiérarchique",
+              "Le chef tranche"
+            ],
+            [
+              "Négociation",
+              "Les parties cherchent un accord"
+            ],
+            [
+              "Médiation",
+              "Un tiers neutre aide au dialogue"
+            ],
+            [
+              "Arbitrage",
+              "Un tiers impose la solution"
+            ]
+          ]
+        },
+        {
+          "t": "warning",
+          "h": "À distinguer",
+          "c": "Médiation = on **aide** à trouver un accord ; arbitrage = on **impose** la solution. La **négociation** gagnant-gagnant est souvent la plus durable."
+        }
+      ]
+    }
+  ],
+  "rh-t3": [
+    {
+      "h": "Le bad buzz : quand la communication dérape",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Une marque publie un message maladroit ; en quelques heures, les réseaux s’enflamment et l’image en prend un coup."
+        },
+        {
+          "t": "p",
+          "c": "La communication suit toujours le même schéma : un **émetteur** envoie un **message** (codé) par un **canal** à un **récepteur** (qui décode), en attendant un **retour** (feedback). Quand ça échoue, c’est souvent à cause d’un **bruit** (mot mal choisi, mauvais canal, contexte)."
+        },
+        {
+          "t": "p",
+          "c": "Face à une crise (bad buzz), la règle est : **réagir vite**, être **transparent et honnête**, **assumer** et agir, **parler d’une seule voix**. Le **silence** et le **mensonge** sont les pires réactions : sur les réseaux, l’e-réputation se joue en quelques heures."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Communiquer efficacement = message **clair**, **canal adapté** au sujet (une réunion pour un sujet sensible, pas un SMS), écoute du **feedback**, réduction des **bruits**."
+        }
+      ]
+    },
+    {
+      "h": "Parler à ses salariés ≠ parler à ses clients",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La communication **interne** (vers les salariés : notes, réunions, intranet) n’a ni la même cible ni les mêmes objectifs que la communication **externe** (vers les clients et partenaires : publicité, site, réseaux). Confondre les deux, c’est risquer le contresens."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Critère",
+            "Types"
+          ],
+          "rows": [
+            [
+              "Destinataire",
+              "Interne (salariés) / Externe (public)"
+            ],
+            [
+              "Objet",
+              "Commerciale (vendre) / Institutionnelle (image)"
+            ],
+            [
+              "Cadre",
+              "Formelle (officielle) / Informelle (« radio couloir »)"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "Cohérence",
+          "c": "La **communication globale** vise la **cohérence** de tous ces messages : ce qu’on dit en interne, aux clients et au public ne doit pas se contredire."
+        }
+      ]
+    }
+  ],
+  "rh-t4": [
+    {
+      "h": "1 800 € sur la fiche de paie, combien pour l’employeur ?",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Un salarié touche 1 800 € net. Pourtant, ce poste coûte bien plus cher à l’entreprise."
+        },
+        {
+          "t": "p",
+          "c": "Entre le net perçu et le **coût pour l’employeur**, il y a les **cotisations** : les **salariales** (~22 %, retenues sur le brut) et surtout les **patronales** (~42 % du brut, payées en plus). Elles financent la protection sociale (retraite, maladie, chômage)."
+        },
+        {
+          "t": "formula",
+          "c": "Salaire net = brut − cotisations salariales\nCoût employeur = brut + cotisations patronales"
+        },
+        {
+          "t": "p",
+          "c": "Pour un net de 1 800 € (brut ≈ 2 300 €), le coût réel pour l’employeur avoisine **3 260 €**. L’écart est considérable : c’est un point essentiel pour toute décision d’embauche et le débat sur le « coût du travail »."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Coût employeur = salaire brut + cotisations **patronales**. N’oublie jamais les charges patronales : le coût dépasse largement le net."
+        }
+      ]
+    },
+    {
+      "h": "Le climat social, ça se mesure",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Un bon **climat social** se **mesure** avec des **indicateurs** objectifs : le **turnover** (rotation, départs), l’**absentéisme**, le nombre de conflits/grèves, les accidents du travail, les enquêtes de satisfaction. Le manager les suit comme un tableau de bord."
+        },
+        {
+          "t": "p",
+          "c": "De bonnes **conditions de travail** et une démarche de **QVT** (qualité de vie au travail) améliorent la performance : moins d’absentéisme, plus d’engagement. À l’inverse, un mauvais climat coûte cher (remplacements, perte de compétences). Le **télétravail** ajoute l’enjeu de l’équilibre vie pro/perso et du **droit à la déconnexion**."
+        },
+        {
+          "t": "warning",
+          "h": "Piège",
+          "c": "Le climat social ne se résume pas au **turnover** : c’est un **faisceau d’indicateurs**. Bien-être et performance sont liés."
+        }
+      ]
+    }
+  ]
+}

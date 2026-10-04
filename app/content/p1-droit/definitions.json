@@ -1,0 +1,106 @@
+{
+  "p1-droit-t1": [
+    [
+      "Droit objectif",
+      "Ensemble des règles qui organisent la vie en société."
+    ],
+    [
+      "Droit subjectif",
+      "Prérogative reconnue à une personne (droit de propriété, de vote)."
+    ],
+    [
+      "Règle de droit",
+      "Règle générale, obligatoire et sanctionnée par l’État."
+    ],
+    [
+      "Source du droit",
+      "Origine des règles : Constitution, lois, règlements, jurisprudence."
+    ],
+    [
+      "Hiérarchie des normes",
+      "Classement des règles où chacune respecte celle qui lui est supérieure."
+    ],
+    [
+      "Jurisprudence",
+      "Ensemble des décisions rendues par les tribunaux."
+    ]
+  ],
+  "p1-droit-t2": [
+    [
+      "Litige",
+      "Désaccord entre personnes portant sur des droits."
+    ],
+    [
+      "Juridiction",
+      "Tribunal chargé de juger un litige."
+    ],
+    [
+      "Ordre judiciaire",
+      "Tribunaux réglant les litiges entre particuliers et jugeant les infractions."
+    ],
+    [
+      "Ordre administratif",
+      "Tribunaux réglant les litiges impliquant l’administration."
+    ],
+    [
+      "Preuve",
+      "Élément établissant l’existence d’un droit ou d’un fait."
+    ],
+    [
+      "Voie de recours",
+      "Moyen de contester une décision (appel, cassation)."
+    ]
+  ],
+  "p1-droit-t3": [
+    [
+      "Personne juridique",
+      "Être titulaire de droits et d’obligations."
+    ],
+    [
+      "Personne physique",
+      "Être humain, sujet de droit dès la naissance."
+    ],
+    [
+      "Personne morale",
+      "Groupement (société, association) doté de la personnalité juridique."
+    ],
+    [
+      "Capacité juridique",
+      "Aptitude à avoir des droits et à les exercer."
+    ],
+    [
+      "Patrimoine",
+      "Ensemble des biens, droits et obligations d’une personne."
+    ],
+    [
+      "Action en justice",
+      "Droit de saisir un tribunal pour faire valoir ses droits."
+    ]
+  ],
+  "p1-droit-t4": [
+    [
+      "Droits patrimoniaux",
+      "Droits évaluables en argent (propriété, créances)."
+    ],
+    [
+      "Droits extrapatrimoniaux",
+      "Droits sans valeur marchande (droit au nom, à l’image)."
+    ],
+    [
+      "Droit de propriété",
+      "Droit d’user, de jouir et de disposer d’un bien."
+    ],
+    [
+      "Droits de la personnalité",
+      "Droits protégeant la personne (vie privée, image, honneur)."
+    ],
+    [
+      "Respect de la vie privée",
+      "Droit à la protection de son intimité (art. 9 du Code civil)."
+    ],
+    [
+      "Propriété intellectuelle",
+      "Protection des créations de l’esprit (œuvres, inventions, marques)."
+    ]
+  ]
+}

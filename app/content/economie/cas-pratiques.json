@@ -1,0 +1,71 @@
+{
+  "eco-t7": [
+    {
+      "title": "Mesurer le chômage",
+      "context": "Dans un pays, on dénombre 2,8 millions de chômeurs pour une population active de 28 millions. La population en âge de travailler est de 40 millions.",
+      "questions": [
+        {
+          "q": "Calcule le taux de chômage (en %).",
+          "a": "10",
+          "num": true,
+          "e": "Taux de chômage = chômeurs / population active = 2,8 / 28 = 10 %."
+        },
+        {
+          "q": "Calcule le taux d'activité (en %).",
+          "a": "70",
+          "num": true,
+          "e": "Taux d’activité = population active / population en âge de travailler = 28 / 40 = 70 %."
+        }
+      ]
+    }
+  ],
+  "eco-t8": [
+    {
+      "title": "La balance commerciale",
+      "context": "Un pays exporte pour 480 milliards € et importe pour 550 milliards € de biens.",
+      "questions": [
+        {
+          "q": "Calcule le solde de la balance commerciale (en milliards €).",
+          "a": "-70",
+          "num": true,
+          "alt": [
+            "−70"
+          ],
+          "e": "Solde = exportations − importations = 480 − 550 = −70 Mds € : la balance est déficitaire."
+        },
+        {
+          "q": "Calcule le taux de couverture (en %).",
+          "a": "87.27",
+          "num": true,
+          "tol": 0.6,
+          "alt": [
+            "87.3",
+            "87,3",
+            "87"
+          ],
+          "e": "Taux de couverture = (exports / imports) × 100 = 480 / 550 ≈ 87,3 %."
+        }
+      ]
+    }
+  ],
+  "eco-t6": [
+    {
+      "title": "Déficit et dette publics",
+      "context": "Un pays enregistre un déficit public de 90 milliards € pour un PIB de 3 000 milliards €. Sa dette publique atteint 3 300 milliards €.",
+      "questions": [
+        {
+          "q": "Calcule le déficit rapporté au PIB (en %).",
+          "a": "3",
+          "num": true,
+          "e": "Déficit / PIB = 90 / 3 000 = 3 %."
+        },
+        {
+          "q": "Calcule le ratio dette / PIB (en %).",
+          "a": "110",
+          "num": true,
+          "e": "Dette / PIB = 3 300 / 3 000 = 110 %."
+        }
+      ]
+    }
+  ]
+}

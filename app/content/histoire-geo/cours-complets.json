@@ -1,0 +1,1425 @@
+{
+  "hg-h1": {
+    "intro": "Entre 1939 et 1945, le monde bascule dans une guerre d’un genre nouveau : une **guerre d’anéantissement** qui vise les populations elles-mêmes, et qui culmine avec un projet d’extermination, la **Shoah**. Comprendre ce basculement est essentiel.",
+    "cours": [
+      {
+        "h": "Les régimes totalitaires (fascisme, nazisme, stalinisme)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Dans l’entre-deux-guerres, sur fond de crise (traumatisme de 1914-1918, **krach de 1929**), s’imposent des **régimes totalitaires** qui veulent contrôler **tous** les aspects de la société : **parti unique**, **idéologie** officielle, **propagande** et culture de masse, **police politique** et **terreur**, **culte du chef**, **encadrement de la jeunesse**, économie dirigée."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Régime",
+              "Chef",
+              "Idéologie",
+              "Terreur / caractéristiques"
+            ],
+            "rows": [
+              [
+                "Italie fasciste (1922)",
+                "Mussolini (« Duce »)",
+                "Fascisme, nationalisme, corporatisme",
+                "Chemises noires, milice, parti unique"
+              ],
+              [
+                "URSS stalinienne",
+                "Staline",
+                "Communisme (marxisme-léninisme)",
+                "Grandes Purges, goulag, procès de Moscou, collectivisation forcée"
+              ],
+              [
+                "Allemagne nazie (1933)",
+                "Hitler (« Führer »)",
+                "Nazisme : racisme, antisémitisme, espace vital",
+                "Gestapo, SS, camps de concentration, lois de Nuremberg"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "Le **nazisme** se distingue par un **racisme** biologique et un **antisémitisme** d’État qui mènera au génocide. Le régime **stalinien** repose sur la terreur de masse (Grandes Purges de 1936-1938, **goulag**)."
+          }
+        ]
+      },
+      {
+        "h": "Chronologie : de la montée des périls à la guerre (1917-1939)",
+        "blocks": [
+          {
+            "t": "table",
+            "head": [
+              "Date",
+              "Événement"
+            ],
+            "rows": [
+              [
+                "1917",
+                "Révolution russe : les bolcheviks (Lénine) prennent le pouvoir"
+              ],
+              [
+                "1922",
+                "Marche sur Rome : Mussolini au pouvoir en Italie ; création de l’URSS"
+              ],
+              [
+                "1924",
+                "Mort de Lénine ; Staline s’impose peu à peu"
+              ],
+              [
+                "24 oct. 1929",
+                "Krach de Wall Street (« jeudi noir ») → crise économique mondiale"
+              ],
+              [
+                "30 janv. 1933",
+                "Hitler chancelier ; ouverture du camp de Dachau"
+              ],
+              [
+                "1935",
+                "Lois de Nuremberg (privation des droits des Juifs allemands)"
+              ],
+              [
+                "1936",
+                "Réoccupation de la Rhénanie ; guerre d’Espagne ; procès de Moscou ; Front populaire en France"
+              ],
+              [
+                "mars 1938",
+                "Anschluss : annexion de l’Autriche par l’Allemagne"
+              ],
+              [
+                "sept. 1938",
+                "Accords de Munich (reculade des démocraties face à Hitler)"
+              ],
+              [
+                "9-10 nov. 1938",
+                "Nuit de Cristal (pogrom contre les Juifs allemands)"
+              ],
+              [
+                "23 août 1939",
+                "Pacte germano-soviétique (non-agression Hitler-Staline)"
+              ],
+              [
+                "1er sept. 1939",
+                "Invasion de la Pologne ; le 3 sept., France et Royaume-Uni déclarent la guerre"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "h": "Une guerre mondiale et d’anéantissement (1939-1945)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La **Seconde Guerre mondiale** (1939-1945) oppose l’**Axe** (Allemagne, Italie, Japon) aux **Alliés** (Royaume-Uni, URSS, États-Unis, France libre…). C’est une **guerre totale** (économies, sociétés, sciences mobilisées) et **mondiale**."
+          },
+          {
+            "t": "p",
+            "c": "C’est aussi une **guerre d’anéantissement** : la **violence de masse** ne vise plus seulement les armées mais les **civils** (bombardements de villes, famines, exactions). À l’Est, elle est menée comme une guerre d’**extermination**."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Date",
+              "Événement"
+            ],
+            "rows": [
+              [
+                "juin 1940",
+                "Défaite de la France ; appel du 18 juin (de Gaulle) ; régime de Vichy (Pétain)"
+              ],
+              [
+                "22 juin 1941",
+                "Opération Barbarossa : l’Allemagne envahit l’URSS"
+              ],
+              [
+                "7 déc. 1941",
+                "Pearl Harbor : le Japon attaque les États-Unis, qui entrent en guerre"
+              ],
+              [
+                "20 janv. 1942",
+                "Conférence de Wannsee : organisation de la « solution finale »"
+              ],
+              [
+                "16-17 juil. 1942",
+                "Rafle du Vél’ d’Hiv à Paris (avec la police française)"
+              ],
+              [
+                "févr. 1943",
+                "Capitulation allemande à Stalingrad : tournant de la guerre"
+              ],
+              [
+                "6 juin 1944",
+                "Débarquement allié en Normandie (D-Day)"
+              ],
+              [
+                "25 août 1944",
+                "Libération de Paris"
+              ],
+              [
+                "27 janv. 1945",
+                "Libération du camp d’Auschwitz par l’Armée rouge"
+              ],
+              [
+                "8 mai 1945",
+                "Capitulation de l’Allemagne (fin de la guerre en Europe)"
+              ],
+              [
+                "6 et 9 août 1945",
+                "Bombes atomiques américaines sur Hiroshima et Nagasaki"
+              ],
+              [
+                "2 sept. 1945",
+                "Capitulation du Japon : fin de la Seconde Guerre mondiale"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "h": "La Shoah, un génocide planifié et industrialisé",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La **Shoah** est le **génocide des Juifs** d’Europe (avec aussi le génocide des **Tsiganes**) : une volonté de destruction **totale** d’un groupe, **planifiée** et **industrialisée**. Elle passe par les **ghettos**, les fusillades de masse des **Einsatzgruppen** (à partir de 1941), puis les **camps d’extermination** (Auschwitz-Birkenau, Treblinka…) et les chambres à gaz après la conférence de **Wannsee** (1942)."
+          },
+          {
+            "t": "p",
+            "c": "Bilan : environ **6 millions de Juifs** assassinés. En France, le régime de **Vichy** participe aux arrestations et déportations."
+          },
+          {
+            "t": "warning",
+            "c": "Un génocide n’est pas une « bavure » de guerre : c’est un projet **délibéré, planifié et organisé** d’extermination d’un groupe humain en raison de ce qu’il est."
+          }
+        ]
+      },
+      {
+        "h": "La France dans la guerre et le bilan",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Après la défaite de **1940**, le **régime de Vichy** (Pétain) choisit la **collaboration** avec l’occupant (rencontre de Montoire, oct. 1940). Face à lui, la **Résistance** intérieure et la **France libre** (de Gaulle) s’organisent ; leur unification (Jean Moulin, **CNR**, 1943) prépare la **Libération** (1944)."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Bilan de la guerre",
+              "Ordre de grandeur"
+            ],
+            "rows": [
+              [
+                "Morts (total)",
+                "≈ 50 à 60 millions, en majorité des civils"
+              ],
+              [
+                "Victimes de la Shoah",
+                "≈ 6 millions de Juifs"
+              ],
+              [
+                "Nouveauté",
+                "Arme nucléaire ; procès de Nuremberg (1945-1946)"
+              ]
+            ]
+          },
+          {
+            "t": "tip",
+            "c": "Repères à retenir absolument : **1933** (Hitler), **1939** (début), **1940** (défaite française, Vichy, appel du 18 juin), **1942** (Wannsee, Stalingrad), **1944** (débarquements), **1945** (capitulations, Hiroshima/Nagasaki)."
+          }
+        ]
+      },
+      {
+        "h": "Frise — Adolf Hitler (1889-1945)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Chronologie du dictateur nazi, à imprimer et mémoriser."
+          },
+          {
+            "t": "frise",
+            "title": "Adolf Hitler (1889-1945)",
+            "events": [
+              {
+                "date": "1889",
+                "label": "Naissance à Braunau (Autriche-Hongrie)"
+              },
+              {
+                "date": "1914-1918",
+                "label": "Soldat allemand pendant la Première Guerre mondiale"
+              },
+              {
+                "date": "1920",
+                "label": "Adhère et prend la tête du parti nazi (**NSDAP**)"
+              },
+              {
+                "date": "1923",
+                "label": "Putsch manqué de Munich → emprisonné"
+              },
+              {
+                "date": "1925",
+                "label": "Publie *Mein Kampf* (programme raciste et antisémite)"
+              },
+              {
+                "date": "30 janv. 1933",
+                "label": "Nommé **chancelier** du Reich"
+              },
+              {
+                "date": "1934",
+                "label": "Devient **Führer** ; Nuit des Longs Couteaux"
+              },
+              {
+                "date": "1935",
+                "label": "Lois de Nuremberg contre les Juifs"
+              },
+              {
+                "date": "1938",
+                "label": "Anschluss (Autriche) ; accords de Munich"
+              },
+              {
+                "date": "1939",
+                "label": "Pacte germano-soviétique ; invasion de la Pologne"
+              },
+              {
+                "date": "1941",
+                "label": "Invasion de l’URSS (opération Barbarossa)"
+              },
+              {
+                "date": "1942",
+                "label": "Conférence de Wannsee : la « solution finale »"
+              },
+              {
+                "date": "30 avr. 1945",
+                "label": "Suicide à Berlin, face à la défaite"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "h": "Frise — Joseph Staline (1878-1953)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Chronologie du dictateur soviétique."
+          },
+          {
+            "t": "frise",
+            "title": "Joseph Staline (1878-1953)",
+            "events": [
+              {
+                "date": "1878",
+                "label": "Naissance à Gori (Géorgie)"
+              },
+              {
+                "date": "1917",
+                "label": "Participe à la révolution bolchevique"
+              },
+              {
+                "date": "1922",
+                "label": "Devient **secrétaire général** du Parti communiste"
+              },
+              {
+                "date": "1924",
+                "label": "Mort de Lénine → il s’empare peu à peu du pouvoir"
+              },
+              {
+                "date": "1928",
+                "label": "Collectivisation des terres ; plans quinquennaux"
+              },
+              {
+                "date": "1936-1938",
+                "label": "Grandes Purges et procès de Moscou (terreur de masse)"
+              },
+              {
+                "date": "1939",
+                "label": "Pacte germano-soviétique avec Hitler"
+              },
+              {
+                "date": "1941-1945",
+                "label": "« Grande Guerre patriotique » : l’URSS bat l’Allemagne"
+              },
+              {
+                "date": "1945",
+                "label": "Conférences de Yalta et Potsdam (partage du monde)"
+              },
+              {
+                "date": "1953",
+                "label": "Mort de Staline"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "h": "Frise — Benito Mussolini (1883-1945)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Le fondateur du fascisme, premier régime totalitaire d’Europe."
+          },
+          {
+            "t": "frise",
+            "title": "Benito Mussolini (1883-1945)",
+            "events": [
+              {
+                "date": "1883",
+                "label": "Naissance à Predappio (Italie)"
+              },
+              {
+                "date": "1919",
+                "label": "Fonde les Faisceaux de combat (naissance du **fascisme**)"
+              },
+              {
+                "date": "oct. 1922",
+                "label": "**Marche sur Rome** : il devient chef du gouvernement"
+              },
+              {
+                "date": "1925-1926",
+                "label": "Instaure la dictature (« Duce », parti unique)"
+              },
+              {
+                "date": "1935",
+                "label": "Invasion de l’Éthiopie"
+              },
+              {
+                "date": "1936",
+                "label": "Axe Rome-Berlin avec Hitler"
+              },
+              {
+                "date": "1940",
+                "label": "Entre en guerre aux côtés de l’Allemagne"
+              },
+              {
+                "date": "1943",
+                "label": "Destitué et arrêté ; éphémère République de Salò"
+              },
+              {
+                "date": "28 avril 1945",
+                "label": "Exécuté par des résistants italiens"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "h": "Frise — Lénine (1870-1924)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Le fondateur de l’URSS et du régime communiste soviétique."
+          },
+          {
+            "t": "frise",
+            "title": "Lénine (1870-1924)",
+            "events": [
+              {
+                "date": "1870",
+                "label": "Naissance à Simbirsk (Russie)"
+              },
+              {
+                "date": "1895",
+                "label": "Militant marxiste, arrêté puis exilé en Sibérie"
+              },
+              {
+                "date": "1903",
+                "label": "Fonde le courant **bolchevique**"
+              },
+              {
+                "date": "oct. 1917",
+                "label": "**Révolution d’Octobre** : les bolcheviks prennent le pouvoir"
+              },
+              {
+                "date": "1918",
+                "label": "Paix de Brest-Litovsk ; début de la guerre civile russe"
+              },
+              {
+                "date": "1921",
+                "label": "NEP (nouvelle politique économique)"
+              },
+              {
+                "date": "1922",
+                "label": "Création de l’**URSS**"
+              },
+              {
+                "date": "1924",
+                "label": "Mort ; Staline lui succède"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "h": "Frise — Philippe Pétain (1856-1951)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Du « héros de Verdun » au chef du régime de Vichy et à la collaboration."
+          },
+          {
+            "t": "frise",
+            "title": "Philippe Pétain (1856-1951)",
+            "events": [
+              {
+                "date": "1856",
+                "label": "Naissance (Cauchy-à-la-Tour)"
+              },
+              {
+                "date": "1916",
+                "label": "« Vainqueur de Verdun » pendant la Première Guerre mondiale"
+              },
+              {
+                "date": "1918",
+                "label": "Maréchal de France, héros national"
+              },
+              {
+                "date": "juin 1940",
+                "label": "Demande l’armistice après la défaite"
+              },
+              {
+                "date": "10 juil. 1940",
+                "label": "Reçoit les pleins pouvoirs → **régime de Vichy**"
+              },
+              {
+                "date": "oct. 1940",
+                "label": "Poignée de main de Montoire : la **collaboration**"
+              },
+              {
+                "date": "1942",
+                "label": "Vichy participe aux rafles de Juifs (Vél’ d’Hiv)"
+              },
+              {
+                "date": "1945",
+                "label": "Jugé, condamné à mort (peine commuée en détention)"
+              },
+              {
+                "date": "1951",
+                "label": "Mort à l’île d’Yeu"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "h": "Frise — Jean Moulin (1899-1943)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Le grand unificateur de la Résistance intérieure française."
+          },
+          {
+            "t": "frise",
+            "title": "Jean Moulin (1899-1943)",
+            "events": [
+              {
+                "date": "1899",
+                "label": "Naissance à Béziers"
+              },
+              {
+                "date": "1940",
+                "label": "Préfet ; refuse de signer un faux document allemand"
+              },
+              {
+                "date": "1941",
+                "label": "Rejoint le général de Gaulle à Londres"
+              },
+              {
+                "date": "mai 1943",
+                "label": "Unifie la Résistance : préside le premier **CNR**"
+              },
+              {
+                "date": "21 juin 1943",
+                "label": "Arrêté à Caluire"
+              },
+              {
+                "date": "juil. 1943",
+                "label": "Meurt des suites de la torture ; au Panthéon depuis 1964"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "kind": "video",
+        "label": "Totalitarismes et Seconde Guerre mondiale",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=totalitarismes%20seconde%20guerre%20mondiale%20guerre%20an%C3%A9antissement%20terminale"
+      },
+      {
+        "kind": "video",
+        "label": "La Shoah",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=Shoah%20g%C3%A9nocide%20juifs%20seconde%20guerre%20mondiale%20histoire%20terminale"
+      }
+    ]
+  },
+  "hg-h2": {
+    "intro": "De 1945 à nos jours, l’ordre mondial change deux fois : d’abord figé par la **Guerre froide** (deux blocs), il s’ouvre avec la **décolonisation** puis bascule, après 1991, vers un monde **multipolaire**.",
+    "cours": [
+      {
+        "h": "1. Les origines de la Guerre froide (1945-1947)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "En 1945, les **États-Unis** et l’**URSS**, alliés pour vaincre le nazisme, sortent seuls vainqueurs. Mais tout les oppose : la **démocratie libérale** et le **capitalisme** d’un côté, le **communisme** et le parti unique de l’autre. Dès 1945-1947, la méfiance devient rivalité ouverte."
+          },
+          {
+            "t": "p",
+            "c": "Winston Churchill dénonce dès 1946 le « **rideau de fer** » qui coupe l’Europe en deux. En 1947, la rupture est consommée : les États-Unis proposent l’**endiguement** (containment) du communisme (doctrine Truman) et une aide économique (plan Marshall) ; l’URSS répond par la **doctrine Jdanov** et le **Kominform**."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Date",
+              "Événement"
+            ],
+            "rows": [
+              [
+                "4-11 févr. 1945",
+                "Conférence de Yalta (Roosevelt, Churchill, Staline) : organisation de l’après-guerre"
+              ],
+              [
+                "26 juin 1945",
+                "Signature de la Charte de l’ONU à San Francisco"
+              ],
+              [
+                "17 juil.-2 août 1945",
+                "Conférence de Potsdam (tensions déjà visibles)"
+              ],
+              [
+                "5 mars 1946",
+                "Discours de Fulton : Churchill dénonce le « rideau de fer »"
+              ],
+              [
+                "12 mars 1947",
+                "Doctrine Truman : politique d’endiguement (containment)"
+              ],
+              [
+                "5 juin 1947",
+                "Annonce du plan Marshall (aide économique à l’Europe)"
+              ],
+              [
+                "sept.-oct. 1947",
+                "Doctrine Jdanov et création du Kominform (réponse soviétique)"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "h": "2. La formation des blocs et les premières crises (1947-1953)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Chaque camp organise son **bloc**. À l’Ouest, l’**OTAN** (1949) fédère militairement les alliés des États-Unis ; à l’Est, l’URSS impose des « démocraties populaires ». **Berlin**, ville coupée en quatre au cœur de la zone soviétique, devient le premier point de crise."
+          },
+          {
+            "t": "p",
+            "c": "La Guerre froide se **mondialise** : la victoire de **Mao** en Chine (1949) et la **guerre de Corée** (1950-1953) l’étendent à l’Asie. La course aux armements s’emballe (bombe A soviétique en 1949, bombe H)."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Date",
+              "Événement"
+            ],
+            "rows": [
+              [
+                "24 juin 1948",
+                "Début du blocus de Berlin par l’URSS"
+              ],
+              [
+                "juin 1948-mai 1949",
+                "Pont aérien allié pour ravitailler Berlin-Ouest"
+              ],
+              [
+                "4 avril 1949",
+                "Création de l’OTAN"
+              ],
+              [
+                "mai / oct. 1949",
+                "Naissance de la RFA (Ouest) puis de la RDA (Est)"
+              ],
+              [
+                "29 août 1949",
+                "Première bombe atomique soviétique"
+              ],
+              [
+                "1er oct. 1949",
+                "Mao Zedong proclame la République populaire de Chine"
+              ],
+              [
+                "1950-1953",
+                "Guerre de Corée : première guerre « chaude » par procuration"
+              ],
+              [
+                "1952",
+                "Première bombe H (thermonucléaire) américaine"
+              ],
+              [
+                "5 mars 1953",
+                "Mort de Staline"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "h": "3. Coexistence pacifique et paroxysme des tensions (1953-1962)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Après la mort de Staline, **Khrouchtchev** prône la « **coexistence pacifique** » et amorce la **déstalinisation** (1956). Mais l’URSS réprime dans le sang toute contestation dans son bloc (**Budapest**, 1956), et la rivalité se déplace dans l’**espace** (course Spoutnik/Gagarine contre les États-Unis)."
+          },
+          {
+            "t": "p",
+            "c": "Les crises se multiplient jusqu’au **paroxysme** : le **mur de Berlin** (1961) fige la coupure, et la **crise des missiles de Cuba** (1962) amène le monde au bord de la guerre nucléaire."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Date",
+              "Événement"
+            ],
+            "rows": [
+              [
+                "1955",
+                "Pacte de Varsovie (alliance militaire de l’Est) ; conférence de Bandung"
+              ],
+              [
+                "1956",
+                "Rapport Khrouchtchev (déstalinisation) ; insurrection de Budapest écrasée ; crise de Suez"
+              ],
+              [
+                "4 oct. 1957",
+                "Lancement de Spoutnik (l’URSS ouvre la course à l’espace)"
+              ],
+              [
+                "12 avr. 1961",
+                "Gagarine, premier homme dans l’espace"
+              ],
+              [
+                "13 août 1961",
+                "Construction du mur de Berlin"
+              ],
+              [
+                "oct. 1962",
+                "Crise des missiles de Cuba : point de tension maximal (risque nucléaire)"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "h": "4. La Détente et ses limites (1962-1975)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Effrayés par Cuba, les deux Grands ouvrent un **dialogue** : c’est la **Détente**. On installe le « téléphone rouge », on signe des accords de **limitation des armements** (SALT) et de **non-prolifération**. Mais la rivalité continue : guerre du **Vietnam**, écrasement du **Printemps de Prague** (1968), course à la Lune."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Date",
+              "Événement"
+            ],
+            "rows": [
+              [
+                "1963",
+                "Téléphone rouge Washington-Moscou ; traité d’interdiction partielle des essais nucléaires"
+              ],
+              [
+                "1968",
+                "Printemps de Prague écrasé par l’URSS ; traité de non-prolifération (TNP)"
+              ],
+              [
+                "21 juil. 1969",
+                "Apollo 11 : les Américains sur la Lune"
+              ],
+              [
+                "1972",
+                "Accords SALT I ; visite de Nixon en Chine et à Moscou"
+              ],
+              [
+                "1973",
+                "Retrait américain du Vietnam"
+              ],
+              [
+                "1975",
+                "Chute de Saïgon (fin de la guerre du Vietnam) ; accords d’Helsinki"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "h": "5. La fin de la Guerre froide (1975-1991)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La tension repart (« **guerre fraîche** ») avec l’intervention soviétique en **Afghanistan** (1979) et la relance de la course aux armements par **Reagan**. Mais l’URSS, épuisée économiquement, ne peut plus suivre. **Gorbatchev** (1985) lance des réformes (**perestroïka**, **glasnost**) qui, en desserrant l’étau, précipitent l’**effondrement du bloc de l’Est**."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Date",
+              "Événement"
+            ],
+            "rows": [
+              [
+                "1979",
+                "Intervention soviétique en Afghanistan → « guerre fraîche »"
+              ],
+              [
+                "1983",
+                "Reagan lance le projet d’« guerre des étoiles » (IDS)"
+              ],
+              [
+                "1985",
+                "Gorbatchev au pouvoir : perestroïka et glasnost"
+              ],
+              [
+                "1986",
+                "Catastrophe de Tchernobyl ; sommet de Reykjavik"
+              ],
+              [
+                "1987",
+                "Traité FNI : destruction des missiles nucléaires intermédiaires"
+              ],
+              [
+                "9 nov. 1989",
+                "Chute du mur de Berlin ; révolutions dans les pays de l’Est"
+              ],
+              [
+                "3 oct. 1990",
+                "Réunification de l’Allemagne"
+              ],
+              [
+                "25 déc. 1991",
+                "Démission de Gorbatchev, éclatement de l’URSS : fin de la Guerre froide"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "h": "6. La décolonisation et l’émergence du tiers-monde",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Affaiblies par la guerre, les puissances coloniales doivent céder : les **colonies** d’Asie puis d’Afrique accèdent à l’**indépendance** (surtout 1945-1965). La décolonisation est parfois **négociée** (Inde), parfois **violente** (Indochine, Algérie)."
+          },
+          {
+            "t": "p",
+            "c": "De nombreux nouveaux États refusent de choisir un camp : c’est le **non-alignement** (conférence de **Bandung**, 1955) et la naissance de l’idée de « **tiers-monde** », qui réclame un développement plus juste."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Date",
+              "Événement"
+            ],
+            "rows": [
+              [
+                "1945",
+                "Massacres de Sétif en Algérie"
+              ],
+              [
+                "15 août 1947",
+                "Indépendance de l’Inde et du Pakistan (Gandhi, Nehru)"
+              ],
+              [
+                "1949",
+                "Indépendance de l’Indonésie"
+              ],
+              [
+                "1954",
+                "Défaite de Diên Biên Phu ; indépendance de l’Indochine (Genève) ; début de la guerre d’Algérie"
+              ],
+              [
+                "1955",
+                "Conférence de Bandung : non-alignés, « tiers-monde »"
+              ],
+              [
+                "1956",
+                "Indépendance du Maroc et de la Tunisie"
+              ],
+              [
+                "1957",
+                "Indépendance du Ghana (1re colonie d’Afrique noire)"
+              ],
+              [
+                "1960",
+                "« Année de l’Afrique » : 17 pays africains indépendants"
+              ],
+              [
+                "1962",
+                "Indépendance de l’Algérie (accords d’Évian)"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "h": "7. Un monde multipolaire (depuis 1991)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La disparition de l’URSS en **1991** laisse les **États-Unis** seule « **hyperpuissance** ». Mais ce moment est bref : de **nouvelles puissances** montent (la **Chine**, l’Inde, l’Union européenne, les pays émergents/BRICS). On parle d’un monde **multipolaire**, traversé par la **mondialisation** et par de nouvelles menaces (**terrorisme**)."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Date",
+              "Événement"
+            ],
+            "rows": [
+              [
+                "1991",
+                "Fin de l’URSS ; guerre du Golfe ; « nouvel ordre mondial »"
+              ],
+              [
+                "1993",
+                "Création de l’Union européenne (Maastricht, 1992)"
+              ],
+              [
+                "11 sept. 2001",
+                "Attentats aux États-Unis → « guerre contre le terrorisme »"
+              ],
+              [
+                "2003",
+                "Guerre d’Irak"
+              ],
+              [
+                "2008",
+                "Crise financière mondiale"
+              ],
+              [
+                "depuis 2010",
+                "Affirmation de la Chine ; monde multipolaire et instable"
+              ]
+            ]
+          },
+          {
+            "t": "tip",
+            "c": "Repères clés : **1947** (début) et **1991** (fin) de la Guerre froide ; **1949** (OTAN, RDA/RFA, Chine), **1962** (Cuba), **1975** (Helsinki), **1989** (chute du mur), **2001** (11 septembre)."
+          }
+        ]
+      },
+      {
+        "h": "Frise — Gandhi (1869-1948)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Le père de l’indépendance de l’Inde, apôtre de la non-violence."
+          },
+          {
+            "t": "frise",
+            "title": "Mahatma Gandhi (1869-1948)",
+            "events": [
+              {
+                "date": "1869",
+                "label": "Naissance à Porbandar (Inde)"
+              },
+              {
+                "date": "1893-1914",
+                "label": "Avocat en Afrique du Sud : lutte contre les discriminations"
+              },
+              {
+                "date": "1915",
+                "label": "Retour en Inde ; combat pour l’indépendance"
+              },
+              {
+                "date": "années 1920",
+                "label": "Désobéissance civile **non-violente** contre les Britanniques"
+              },
+              {
+                "date": "1930",
+                "label": "Marche du sel"
+              },
+              {
+                "date": "15 août 1947",
+                "label": "Indépendance de l’Inde (et du Pakistan)"
+              },
+              {
+                "date": "1948",
+                "label": "Assassiné"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "h": "Frise — Mikhaïl Gorbatchev (1931-2022)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Le dernier dirigeant de l’URSS, dont les réformes précipitent la fin de la Guerre froide."
+          },
+          {
+            "t": "frise",
+            "title": "Mikhaïl Gorbatchev (1931-2022)",
+            "events": [
+              {
+                "date": "1931",
+                "label": "Naissance dans le sud de la Russie"
+              },
+              {
+                "date": "1985",
+                "label": "Dirigeant de l’URSS : lance la **perestroïka** et la **glasnost**"
+              },
+              {
+                "date": "1986",
+                "label": "Catastrophe nucléaire de Tchernobyl"
+              },
+              {
+                "date": "1987",
+                "label": "Accords de désarmement avec les États-Unis"
+              },
+              {
+                "date": "1989",
+                "label": "Chute du mur de Berlin : il n’intervient pas"
+              },
+              {
+                "date": "1990",
+                "label": "Prix Nobel de la paix"
+              },
+              {
+                "date": "1991",
+                "label": "Éclatement de l’URSS : il démissionne"
+              },
+              {
+                "date": "2022",
+                "label": "Mort"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "kind": "video",
+        "label": "La Guerre froide expliquée",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=guerre%20froide%20monde%20bipolaire%20multipolaire%20terminale%20histoire"
+      },
+      {
+        "kind": "video",
+        "label": "La décolonisation",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=d%C3%A9colonisation%20Inde%20Alg%C3%A9rie%20tiers%20monde%20terminale%20histoire"
+      }
+    ]
+  },
+  "hg-h3": {
+    "intro": "Depuis 1945, la France cherche une **nouvelle place dans le monde** : elle se reconstruit, participe à la **construction européenne** et affirme un rôle international.",
+    "cours": [
+      {
+        "h": "La reconstruction et les Trente Glorieuses",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Au sortir de la guerre, la France se **reconstruit** (aidée par le **plan Marshall**, 1948) et connaît une longue période de forte croissance, les **Trente Glorieuses** (≈ 1945-1975) : modernisation, **plein emploi**, **société de consommation**, **État-providence**."
+          },
+          {
+            "t": "p",
+            "c": "À la Libération, le **GPRF** (de Gaulle) applique le programme du **CNR** : **droit de vote des femmes** (1944), **Sécurité sociale** (1945), nationalisations (banques, énergie). La croissance prend fin avec le **choc pétrolier** de 1973."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Date",
+              "Repère économique et social"
+            ],
+            "rows": [
+              [
+                "1944",
+                "Gouvernement provisoire (GPRF) ; nationalisations, presse"
+              ],
+              [
+                "1945",
+                "Création de la Sécurité sociale ; nationalisation de Renault"
+              ],
+              [
+                "1946",
+                "Nationalisations (EDF-GDF, Banque de France) ; institution du SMIG (1950)"
+              ],
+              [
+                "1947",
+                "Début des Trente Glorieuses ; plan Marshall (1948)"
+              ],
+              [
+                "années 1950-60",
+                "Société de consommation (automobile, électroménager, télévision)"
+              ],
+              [
+                "1968",
+                "Accords de Grenelle : forte hausse des salaires"
+              ],
+              [
+                "1973",
+                "Premier choc pétrolier : fin des Trente Glorieuses, montée du chômage"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "h": "Les mutations de la société française (femmes, jeunesse, immigration)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Les Trente Glorieuses transforment la société : émancipation des **femmes**, poids nouveau de la **jeunesse** (baby-boom), **immigration** de main-d’œuvre, exode rural. Mai **1968** cristallise ces aspirations à plus de liberté."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Date",
+              "Événement de société"
+            ],
+            "rows": [
+              [
+                "1944",
+                "Droit de vote des femmes"
+              ],
+              [
+                "1965",
+                "Les femmes peuvent travailler et ouvrir un compte sans l’accord du mari"
+              ],
+              [
+                "1967",
+                "Loi Neuwirth : autorisation de la contraception"
+              ],
+              [
+                "mai 1968",
+                "Contestation étudiante et ouvrière : grève générale, accords de Grenelle"
+              ],
+              [
+                "1974",
+                "Majorité civile abaissée à 18 ans ; arrêt de l’immigration de travail"
+              ],
+              [
+                "1975",
+                "Loi Veil : légalisation de l’avortement (IVG)"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "h": "Chronologie politique : de la IVe à la Ve République",
+        "blocks": [
+          {
+            "t": "table",
+            "head": [
+              "Date",
+              "Événement"
+            ],
+            "rows": [
+              [
+                "1944",
+                "Libération ; droit de vote accordé aux femmes (elles votent en 1945)"
+              ],
+              [
+                "1945",
+                "Création de la Sécurité sociale ; procès de Nuremberg"
+              ],
+              [
+                "1946",
+                "Proclamation de la IVe République"
+              ],
+              [
+                "1958",
+                "Crise algérienne : retour de De Gaulle ; fondation de la Ve République (pouvoir présidentiel renforcé)"
+              ],
+              [
+                "1962",
+                "Fin de la guerre d’Algérie ; élection du président au suffrage universel direct (référendum)"
+              ],
+              [
+                "mai 1968",
+                "Mai 68 : contestation étudiante et sociale, grève générale"
+              ],
+              [
+                "1969",
+                "Démission du général de Gaulle"
+              ],
+              [
+                "1974",
+                "Majorité à 18 ans ; Giscard d’Estaing président"
+              ],
+              [
+                "1981",
+                "François Mitterrand : première alternance (gauche) ; abolition de la peine de mort"
+              ],
+              [
+                "2000",
+                "Passage au quinquennat (mandat présidentiel de 5 ans)"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "h": "La construction européenne",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La France est un **moteur de la construction européenne**, pensée pour garantir la **paix** et la **prospérité** après 1945."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Date",
+              "Étape"
+            ],
+            "rows": [
+              [
+                "1950",
+                "Déclaration Schuman (9 mai) : projet d’une Europe unie"
+              ],
+              [
+                "1951",
+                "Traité de Paris : création de la CECA (charbon et acier)"
+              ],
+              [
+                "1957",
+                "Traité de Rome : création de la CEE (Marché commun) et de l’Euratom"
+              ],
+              [
+                "1979",
+                "Première élection du Parlement européen au suffrage universel"
+              ],
+              [
+                "1985",
+                "Accords de Schengen (libre circulation)"
+              ],
+              [
+                "1992",
+                "Traité de Maastricht : naissance de l’Union européenne"
+              ],
+              [
+                "2002",
+                "Mise en circulation de l’euro"
+              ],
+              [
+                "2016",
+                "Référendum du Brexit au Royaume-Uni"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "h": "Une puissance à rayonnement mondial",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La France affirme un **rôle international** : membre permanent du **Conseil de sécurité de l’ONU**, dotée de l’**arme nucléaire** (premier essai en **1960**), 2ᵉ domaine maritime du monde, importante **influence culturelle** (francophonie, aide au développement). C’est le **thème conclusif** de la partie histoire."
+          },
+          {
+            "t": "tip",
+            "c": "Repères : **1944** (vote des femmes), **1945** (Sécu), **1958** (Ve République), **1962** (suffrage universel), **1950-1957** (CECA/Rome), **1992** (Maastricht), **2002** (euro)."
+          }
+        ]
+      },
+      {
+        "h": "Frise — Charles de Gaulle (1890-1970)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Figure centrale de la France du XXe siècle : Résistance, fondation de la Ve République. À imprimer."
+          },
+          {
+            "t": "frise",
+            "title": "Charles de Gaulle (1890-1970)",
+            "events": [
+              {
+                "date": "1890",
+                "label": "Naissance à Lille"
+              },
+              {
+                "date": "1916",
+                "label": "Blessé et fait prisonnier à Verdun"
+              },
+              {
+                "date": "18 juin 1940",
+                "label": "Appel de Londres : refus de la défaite, naissance de la **France libre**"
+              },
+              {
+                "date": "1944",
+                "label": "Libération ; il dirige le Gouvernement provisoire (**GPRF**)"
+              },
+              {
+                "date": "1946",
+                "label": "Démissionne ; discours de Bayeux (sa vision des institutions)"
+              },
+              {
+                "date": "1958",
+                "label": "Rappelé au pouvoir (crise algérienne) → fonde la **Ve République**"
+              },
+              {
+                "date": "1959",
+                "label": "Premier président de la Ve République"
+              },
+              {
+                "date": "1962",
+                "label": "Fin de la guerre d’Algérie ; élection du président au suffrage universel"
+              },
+              {
+                "date": "1965",
+                "label": "Réélu au premier suffrage universel direct"
+              },
+              {
+                "date": "mai 1968",
+                "label": "Crise de Mai 68"
+              },
+              {
+                "date": "1969",
+                "label": "Démission après l’échec d’un référendum"
+              },
+              {
+                "date": "1970",
+                "label": "Mort à Colombey-les-Deux-Églises"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "kind": "video",
+        "label": "La France depuis 1945",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=France%20depuis%201945%20reconstruction%20Trente%20Glorieuses%20Ve%20R%C3%A9publique%20terminale"
+      },
+      {
+        "kind": "video",
+        "label": "La construction européenne",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=construction%20europ%C3%A9enne%20trait%C3%A9%20de%20Rome%20Maastricht%20euro%20terminale"
+      }
+    ]
+  },
+  "hg-g1": {
+    "intro": "Les **mers et océans** sont le grand théâtre de la mondialisation : par eux transite l’essentiel des marchandises, mais ils concentrent aussi des **ressources** et des **tensions**.",
+    "cours": [
+      {
+        "h": "Le support des échanges mondiaux",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Environ **80 % du commerce mondial** transite par voie **maritime**. La **conteneurisation** a massifié les échanges ; de grandes **routes** (Suez, Panama, Malacca) et de puissantes **façades maritimes** structurent le commerce. C’est la **maritimisation** des économies."
+          }
+        ]
+      },
+      {
+        "h": "Des espaces d’enjeux et de tensions",
+        "blocks": [
+          {
+            "t": "list",
+            "c": [
+              "**Ressources** : halieutiques (pêche), énergétiques, minérales.",
+              "**Câbles sous-marins** : ils font transiter les **données** mondiales.",
+              "**Tensions** : piraterie, rivalités géopolitiques (mer de Chine méridionale).",
+              "**Enjeux environnementaux** : pollution, surpêche."
+            ]
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "kind": "video",
+        "label": "Mers et océans dans la mondialisation",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=mers%20oc%C3%A9ans%20mondialisation%20maritimisation%20terminale%20g%C3%A9ographie"
+      }
+    ]
+  },
+  "hg-g2": {
+    "intro": "La mondialisation n’intègre pas les territoires de la même façon : certains concentrent la richesse (**métropolisation**), d’autres restent en **marge**.",
+    "cours": [
+      {
+        "h": "La métropolisation et les aires de puissance",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La **métropolisation** est la concentration des hommes, des activités et des pouvoirs (économique, politique, culturel) dans les grandes **métropoles**. Ces villes, connectées entre elles, commandent l’économie mondiale et forment des **aires de puissance** (Amérique du Nord, Europe, Asie de l’Est)."
+          },
+          {
+            "t": "p",
+            "c": "Ces métropoles concentrent les **fonctions de commandement** : sièges sociaux, bourses, universités, aéroports internationaux (les « hubs »)."
+          }
+        ]
+      },
+      {
+        "h": "Des territoires inégalement intégrés",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La mondialisation crée des **gagnants** et des **perdants**. À l’opposé des métropoles, des **territoires en marge** (espaces ruraux isolés, régions industrielles en déclin, pays les moins avancés) restent faiblement connectés aux flux mondiaux."
+          },
+          {
+            "t": "p",
+            "c": "Différents **acteurs** façonnent ces inégalités : les **États**, les **firmes multinationales (FMN)** qui choisissent où s’implanter, et les **organisations internationales**."
+          },
+          {
+            "t": "tip",
+            "c": "Idée clé : la mondialisation **hiérarchise** les territoires ; l’intégration est une question de **degré**, du cœur (métropoles) aux marges."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "kind": "video",
+        "label": "Territoires et mondialisation",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=territoires%20in%C3%A9galement%20int%C3%A9gr%C3%A9s%20mondialisation%20m%C3%A9tropolisation%20terminale"
+      }
+    ]
+  },
+  "hg-g3": {
+    "intro": "Dernier thème : la **France** et ses régions dans l’**Union européenne** et la mondialisation — un territoire aux **atouts** réels mais aux **contrastes** marqués.",
+    "cours": [
+      {
+        "h": "Les atouts et les contrastes du territoire français",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La France dispose de nombreux **atouts** : une **position** de carrefour en Europe, de grandes **métropoles** (Paris, ville mondiale), des **façades maritimes**, un vaste domaine grâce à ses territoires **ultramarins**, de bons réseaux de transport."
+          },
+          {
+            "t": "p",
+            "c": "Mais le territoire est **contrasté** : **inégalités régionales**, opposition entre métropoles dynamiques et espaces ruraux ou industriels en difficulté."
+          }
+        ]
+      },
+      {
+        "h": "Le rayonnement de la France dans l’UE et le monde",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Intégrée à l’**Union européenne** et à la mondialisation, la France **rayonne** sur les plans économique, scientifique et culturel."
+          },
+          {
+            "t": "example",
+            "h": "Kourou",
+            "c": "Le centre spatial de **Kourou** (Guyane) illustre le rayonnement **scientifique et technologique** de la France, au service de l’Europe spatiale — un atout majeur situé dans un territoire ultramarin."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "kind": "video",
+        "label": "La France dans l’UE et la mondialisation",
+        "note": "Vidéos — recherche YouTube",
+        "url": "https://www.youtube.com/results?search_query=France%20UE%20mondialisation%20r%C3%A9gions%20rayonnement%20terminale%20g%C3%A9ographie"
+      }
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "eco-actu": [
+    {
+      "h": "📊 Lire un graphique économique",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Un graphique se **décrit** avant de s’**interpréter**. On repère : le **titre**, les **axes** (unités !), la **source**, la **période**, puis la **tendance** générale (hausse, baisse, stabilité) et les **ruptures** (pics, chutes)."
+        },
+        {
+          "t": "warning",
+          "h": "Piège",
+          "c": "Bien distinguer une **valeur** (en euros, en %) d’un **taux d’évolution** (variation en %). Et vérifier si l’axe commence à zéro (sinon l’effet visuel est trompeur)."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Décrire (que montre le graphique ?) → chiffrer (donner des valeurs) → expliquer (avec le cours)."
+        }
+      ]
+    },
+    {
+      "h": "🔎 Où trouver des chiffres fiables",
+      "blocks": [
+        {
+          "t": "list",
+          "c": [
+            "**INSEE** : statistiques françaises (PIB, chômage, prix).",
+            "**Eurostat** : données de l’Union européenne.",
+            "**Banque de France / BCE** : monnaie, taux, inflation.",
+            "**OCDE, FMI, Banque mondiale** : comparaisons internationales."
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "Réflexe",
+          "c": "Citer une **source officielle** et une **date** renforce la crédibilité. Se méfier des chiffres sans source."
+        }
+      ]
+    },
+    {
+      "h": "🧭 Relier l’actualité aux chapitres du programme",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Actualité",
+            "Chapitre du cours"
+          ],
+          "rows": [
+            [
+              "Hausse des prix (inflation)",
+              "Rôle de l’État, politique monétaire (BCE)"
+            ],
+            [
+              "Plan de relance / déficit",
+              "Rôle de l’État, dette publique"
+            ],
+            [
+              "Chômage, réformes de l’emploi",
+              "Emploi et chômage"
+            ],
+            [
+              "Guerre commerciale, droits de douane",
+              "Commerce international"
+            ],
+            [
+              "Transition écologique, taxe carbone",
+              "Croissance et développement durable"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Une actu bien reliée à une **notion du cours** est très valorisée : montre que tu comprends, pas que tu récites."
+        }
+      ]
+    },
+    {
+      "h": "📚 Le vocabulaire économique de l’actualité",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Terme",
+            "Sens"
+          ],
+          "rows": [
+            [
+              "Inflation",
+              "Hausse générale et durable des prix"
+            ],
+            [
+              "Pouvoir d’achat",
+              "Ce que le revenu permet d’acheter"
+            ],
+            [
+              "Récession",
+              "Recul de l’activité (PIB) sur plusieurs trimestres"
+            ],
+            [
+              "Relance",
+              "Politique de soutien de l’activité"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Maîtriser ce vocabulaire permet de **comprendre un article** et de le relier au cours."
+        }
+      ]
+    },
+    {
+      "h": "✍️ Méthode — commenter un chiffre d’actualité",
+      "blocks": [
+        {
+          "t": "list",
+          "c": [
+            "**1.** Lire le chiffre **précisément** (valeur, unité, période, source).",
+            "**2.** Le **situer** : par rapport à l’an dernier ? à un objectif ? à un autre pays ?",
+            "**3.** L’**expliquer** avec une notion du cours.",
+            "**4.** En tirer une **conséquence** ou une limite."
+          ]
+        },
+        {
+          "t": "example",
+          "h": "Exemple",
+          "c": "« L’inflation atteint 5 % sur un an (INSEE). C’est élevé : le pouvoir d’achat baisse si les salaires suivent moins vite. La BCE peut relever ses taux pour la freiner. »"
+        },
+        {
+          "t": "tip",
+          "h": "Réflexe",
+          "c": "Ne jamais laisser un chiffre **seul** : le situer, l’expliquer, le nuancer."
+        }
+      ]
+    },
+    {
+      "h": "🗞️ Exemple d’actualité commentée",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Sujet : la hausse des prix de l’énergie.** Face à la flambée des prix du gaz et de l’électricité, l’État a mis en place un « bouclier tarifaire »."
+        },
+        {
+          "t": "p",
+          "c": "**Analyse.** C’est une intervention de l’État (fonction de **stabilisation** et de **répartition**) qui protège le pouvoir d’achat. **Limite** : le coût creuse le **déficit**, et plafonner les prix peut retarder les économies d’énergie."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Relier l’actu au cours (rôle de l’État), donner un **avantage** et une **limite** : c’est la structure attendue."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "gf-t1": [
+    [
+      "Comptabilité",
+      "Système d’enregistrement chiffré de toutes les opérations de l’entreprise."
+    ],
+    [
+      "Partie double",
+      "Chaque opération est enregistrée au débit d’un compte et au crédit d’un autre, pour un montant égal."
+    ],
+    [
+      "Bilan",
+      "Photographie du patrimoine à une date : l’actif (ce que l’on possède) et le passif (ce que l’on doit)."
+    ],
+    [
+      "Compte de résultat",
+      "Document qui compare produits et charges de l’exercice pour dégager un bénéfice ou une perte."
+    ],
+    [
+      "TVA à décaisser",
+      "TVA collectée sur les ventes − TVA déductible sur les achats ; ce que l’entreprise doit à l’État."
+    ],
+    [
+      "Amortissement",
+      "Répartition du coût d’une immobilisation sur sa durée d’utilisation (perte de valeur définitive)."
+    ],
+    [
+      "Immobilisation",
+      "Bien durable inscrit à l’actif et utilisé plus d’un an (machine, bâtiment, logiciel)."
+    ]
+  ],
+  "gf-t2": [
+    [
+      "Valeur ajoutée",
+      "Richesse créée par l’entreprise = production − consommations intermédiaires."
+    ],
+    [
+      "Excédent brut d’exploitation (EBE)",
+      "Ressource dégagée par la seule activité d’exploitation, avant amortissements et financement."
+    ],
+    [
+      "Capacité d’autofinancement (CAF)",
+      "Ressource interne dégagée par l’activité pour financer investissements et remboursements."
+    ],
+    [
+      "Fonds de roulement (FRNG)",
+      "Ressources stables − emplois stables ; marge de sécurité pour financer le cycle d’exploitation."
+    ],
+    [
+      "Besoin en fonds de roulement (BFR)",
+      "Argent immobilisé par le décalage entre encaissements et décaissements (stocks + créances − dettes)."
+    ],
+    [
+      "Trésorerie nette",
+      "FRNG − BFR ; liquidités réellement disponibles."
+    ],
+    [
+      "Seuil de rentabilité",
+      "Chiffre d’affaires à partir duquel l’entreprise couvre toutes ses charges (résultat nul)."
+    ]
+  ],
+  "gf-t3": [
+    [
+      "Coût fixe",
+      "Charge indépendante du volume produit (loyer, assurance)."
+    ],
+    [
+      "Coût variable",
+      "Charge qui varie avec les quantités produites ou vendues (matières, énergie)."
+    ],
+    [
+      "Marge sur coût variable",
+      "Chiffre d’affaires − coûts variables ; contribue à couvrir les coûts fixes."
+    ],
+    [
+      "Coût complet",
+      "Ensemble des charges (directes et indirectes) rattachées à un produit."
+    ],
+    [
+      "Coût marginal",
+      "Coût de production d’une unité supplémentaire."
+    ],
+    [
+      "Budget",
+      "Prévision chiffrée des recettes et dépenses servant à piloter l’activité."
+    ],
+    [
+      "Rentabilité",
+      "Aptitude à dégager un résultat au regard des moyens engagés."
+    ]
+  ]
+}

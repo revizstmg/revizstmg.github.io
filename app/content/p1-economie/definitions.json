@@ -1,0 +1,140 @@
+{
+  "p1-eco-t1": [
+    [
+      "Besoin",
+      "Sensation de manque que l’on cherche à satisfaire."
+    ],
+    [
+      "Bien / service",
+      "Produit matériel / prestation immatérielle satisfaisant un besoin."
+    ],
+    [
+      "Rareté",
+      "Ressources limitées face à des besoins illimités."
+    ],
+    [
+      "Agent économique",
+      "Acteur qui décide et agit (ménage, entreprise, État)."
+    ],
+    [
+      "Coût d’opportunité",
+      "Valeur de la meilleure option à laquelle on renonce en choisissant."
+    ],
+    [
+      "Circuit économique",
+      "Représentation des flux entre les agents économiques."
+    ]
+  ],
+  "p1-eco-t2": [
+    [
+      "Production",
+      "Création de biens et services par les agents économiques."
+    ],
+    [
+      "Valeur ajoutée",
+      "Richesse créée = production − consommations intermédiaires."
+    ],
+    [
+      "PIB",
+      "Somme des valeurs ajoutées produites dans un pays sur un an."
+    ],
+    [
+      "Facteurs de production",
+      "Moyens utilisés pour produire : travail et capital."
+    ],
+    [
+      "Productivité",
+      "Efficacité de la production : production / facteurs utilisés."
+    ],
+    [
+      "Croissance économique",
+      "Augmentation durable de la production (PIB)."
+    ]
+  ],
+  "p1-eco-t3": [
+    [
+      "Revenu primaire",
+      "Revenu tiré de la participation à la production (salaires, profits)."
+    ],
+    [
+      "Revenu de transfert",
+      "Revenu versé sans contrepartie de travail (allocations, retraites)."
+    ],
+    [
+      "Redistribution",
+      "Prélèvements et prestations réduisant les inégalités."
+    ],
+    [
+      "Revenu disponible",
+      "Revenu restant après impôts et prestations, destiné à la consommation/épargne."
+    ],
+    [
+      "Prélèvements obligatoires",
+      "Impôts et cotisations versés aux administrations."
+    ],
+    [
+      "Inégalités",
+      "Différences de revenus, de patrimoine ou de conditions de vie."
+    ]
+  ],
+  "p1-eco-t4": [
+    [
+      "Financement",
+      "Recherche des fonds nécessaires à l’activité et à l’investissement."
+    ],
+    [
+      "Autofinancement",
+      "Financement par les ressources propres de l’agent."
+    ],
+    [
+      "Crédit",
+      "Prêt d’argent remboursé avec intérêts."
+    ],
+    [
+      "Marché financier",
+      "Lieu d’émission et d’échange des actions et obligations."
+    ],
+    [
+      "Action",
+      "Titre de propriété d’une part d’entreprise, donnant droit à un dividende."
+    ],
+    [
+      "Obligation",
+      "Titre de créance : prêt à une entreprise ou à l’État, rémunéré par un intérêt."
+    ],
+    [
+      "Taux d’intérêt",
+      "Prix du crédit ou rémunération de l’épargne."
+    ]
+  ],
+  "p1-eco-t5": [
+    [
+      "Marché",
+      "Lieu de rencontre de l’offre et de la demande."
+    ],
+    [
+      "Offre",
+      "Quantité qu’un vendeur propose à un prix donné."
+    ],
+    [
+      "Demande",
+      "Quantité que les acheteurs souhaitent acquérir à un prix donné."
+    ],
+    [
+      "Prix d’équilibre",
+      "Prix qui égalise les quantités offertes et demandées."
+    ],
+    [
+      "Concurrence pure et parfaite",
+      "Marché idéal (atomicité, homogénéité, transparence, libre entrée, mobilité)."
+    ],
+    [
+      "Monopole",
+      "Marché où un seul vendeur fait face à de nombreux acheteurs."
+    ],
+    [
+      "Oligopole",
+      "Marché dominé par un petit nombre de vendeurs."
+    ]
+  ]
+}

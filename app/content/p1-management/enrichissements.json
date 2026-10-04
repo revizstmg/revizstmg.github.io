@@ -1,0 +1,97 @@
+{
+  "p1-mgmt-t1": {
+    "sections": [
+      {
+        "h": "💼 Exemple traité — reconnaître une organisation",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Une association sportive de quartier organise des tournois gratuits, financés par les cotisations et une subvention de la mairie."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Type d’organisation** : c’est une **organisation à but non lucratif** (association), pas une entreprise (elle ne cherche pas le profit).",
+              "**Finalité** (raison d’être durable) : proposer une activité sportive accessible à tous.",
+              "**Objectif** (précis, mesurable) : « organiser 4 tournois cette année ». On ne confond pas finalité et objectif.",
+              "**Ressources** : humaines (bénévoles), financières (cotisations, subvention), matérielles (terrain)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Piège classique",
+            "c": "Finalité = pourquoi l’organisation existe (durable) ; objectif = un but précis, chiffré et daté."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-mgmt-t2": {
+    "sections": [
+      {
+        "h": "💼 Exemple traité — un diagnostic SWOT",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Une petite chaîne de boulangeries locales bien connue veut se développer face à l’arrivée d’une grande enseigne."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Interne",
+              "Externe"
+            ],
+            "rows": [
+              [
+                "**Forces** : notoriété locale, qualité, savoir-faire",
+                "**Opportunités** : goût pour le « fait maison », circuits courts"
+              ],
+              [
+                "**Faiblesses** : peu de moyens financiers, peu digitalisée",
+                "**Menaces** : concurrence de la grande enseigne, hausse du coût des matières"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "Le **diagnostic interne** (forces/faiblesses) porte sur l’entreprise ; le **diagnostic externe** (opportunités/menaces) sur son environnement. Croiser les deux = le **SWOT**."
+          },
+          {
+            "t": "tip",
+            "h": "Décision",
+            "c": "La stratégie consiste à s’appuyer sur les forces pour saisir les opportunités et se protéger des menaces."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-mgmt-t3": {
+    "sections": [
+      {
+        "h": "💼 Exemple traité — choix stratégiques",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Un fabricant de vélos hésite : baisser ses prix pour vendre plus, ou proposer des vélos haut de gamme personnalisés."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Domination par les coûts** : prix bas grâce à des coûts réduits (volumes, standardisation) → viser un large marché.",
+              "**Différenciation** : une offre unique (qualité, design, personnalisation) que le client accepte de payer plus cher.",
+              "**Spécialisation** (rester sur les vélos) vs **diversification** (proposer aussi des trottinettes) : question de périmètre d’activité."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À justifier",
+            "c": "Il n’y a pas de « bonne » réponse universelle : le choix dépend des ressources de l’entreprise et de son marché."
+          }
+        ]
+      }
+    ]
+  }
+}

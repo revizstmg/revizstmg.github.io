@@ -1,0 +1,475 @@
+{
+  "droit-t5": {
+    "id": "droit-t5-doc",
+    "type": "doc",
+    "title": "Étude de documents — La formation et l’exécution du contrat",
+    "icon": "📑",
+    "intro": "À partir d’un cas et de textes de loi, applique les règles du contrat (méthode du syllogisme). Lis les documents puis réponds.",
+    "documents": [
+      {
+        "id": 1,
+        "title": "Document 1 — Les conditions de validité (Code civil)",
+        "text": "Article 1128 du Code civil : « Sont nécessaires à la validité d’un contrat : 1° le consentement des parties ; 2° leur capacité de contracter ; 3° un contenu licite et certain. » Le consentement doit être libre et éclairé, c’est-à-dire exempt de vices (erreur, dol, violence)."
+      },
+      {
+        "id": 2,
+        "title": "Document 2 — La force obligatoire",
+        "text": "Article 1103 du Code civil : « Les contrats légalement formés tiennent lieu de loi à ceux qui les ont faits. » Une fois valablement conclu, le contrat s’impose aux parties : chacune doit exécuter ses obligations de bonne foi."
+      },
+      {
+        "id": 3,
+        "title": "Document 3 — Le dol (tromperie)",
+        "text": "Le **dol** est le fait, pour une partie, d’obtenir le consentement de l’autre par des **manœuvres, un mensonge ou la dissimulation** d’une information déterminante. Le dol est un **vice du consentement** : il peut entraîner la **nullité** du contrat et l’octroi de dommages et intérêts."
+      },
+      {
+        "id": 4,
+        "title": "Document 4 — La situation de Marc",
+        "text": "Marc, majeur, achète une voiture d’occasion à un garage professionnel. Le vendeur affirme par écrit que le véhicule « n’a jamais eu d’accident ». Après l’achat, Marc découvre que la voiture a en réalité été gravement accidentée, ce que le garagiste savait et lui a caché."
+      }
+    ],
+    "questions": [
+      {
+        "doc": 1,
+        "q": "D’après l’article 1128, quelle condition n’est PAS exigée pour la validité d’un contrat ?",
+        "choices": [
+          "la présence obligatoire d’un notaire",
+          "le consentement",
+          "la capacité",
+          "un contenu licite et certain"
+        ],
+        "answer": 0,
+        "explain": "Les trois conditions sont consentement, capacité, contenu licite et certain — pas un notaire."
+      },
+      {
+        "doc": 2,
+        "q": "« Les contrats légalement formés tiennent lieu de loi » exprime…",
+        "choices": [
+          "la force obligatoire du contrat",
+          "la nullité",
+          "la liberté de ne pas exécuter",
+          "l’effet relatif"
+        ],
+        "answer": 0,
+        "explain": "Art. 1103 : force obligatoire — le contrat s’impose aux parties."
+      },
+      {
+        "doc": 3,
+        "q": "Le dol se définit comme…",
+        "choices": [
+          "une tromperie déterminante du consentement",
+          "une erreur involontaire du vendeur",
+          "un retard de paiement",
+          "une clause abusive"
+        ],
+        "answer": 0,
+        "explain": "Dol = manœuvre, mensonge ou réticence dolosive."
+      },
+      {
+        "doc": [
+          3,
+          4
+        ],
+        "q": "Dans la situation de Marc, le comportement du garagiste caractérise…",
+        "choices": [
+          "un dol (dissimulation d’une information déterminante)",
+          "une simple erreur de Marc",
+          "une violence",
+          "un cas de force majeure"
+        ],
+        "answer": 0,
+        "explain": "Le garagiste a sciemment caché l’accident : c’est un dol."
+      },
+      {
+        "doc": [
+          3,
+          4
+        ],
+        "q": "Quelle sanction Marc peut-il demander ?",
+        "choices": [
+          "la nullité du contrat et des dommages et intérêts",
+          "une peine de prison pour le garagiste",
+          "une amende pénale automatique",
+          "rien, la vente est définitive"
+        ],
+        "answer": 0,
+        "explain": "Le dol, vice du consentement, permet la nullité + dommages et intérêts."
+      },
+      {
+        "doc": 1,
+        "type": "redac",
+        "q": "Rappelle les trois conditions de validité d’un contrat (art. 1128) et explique brièvement chacune.",
+        "answer": "Les trois conditions sont : le **consentement** des parties (libre et éclairé, sans vice) ; la **capacité** de contracter (être juridiquement apte à s’engager, ex. majeur non protégé) ; et un **contenu licite et certain** (un objet légal et déterminé). Si l’une manque, le contrat peut être annulé."
+      },
+      {
+        "doc": [
+          3,
+          4
+        ],
+        "type": "redac",
+        "q": "En raisonnant par syllogisme, montre que Marc peut obtenir l’annulation de la vente.",
+        "answer": "**Règle (majeure)** : le dol — tromperie déterminante du consentement — est un vice qui entraîne la nullité du contrat (art. 1128, doc 3). **Faits (mineure)** : le garagiste a affirmé faussement, par écrit, que la voiture n’avait pas eu d’accident, alors qu’il savait le contraire ; cette information était déterminante pour Marc (doc 4). **Conclusion** : le dol est caractérisé ; Marc peut demander la **nullité** de la vente et des **dommages et intérêts**."
+      },
+      {
+        "doc": 2,
+        "type": "redac",
+        "q": "Que signifie la « force obligatoire » du contrat ? Quelle en est la limite dans le cas de Marc ?",
+        "answer": "La **force obligatoire** (art. 1103) signifie que le contrat valablement formé s’impose aux parties comme une loi : chacune doit exécuter ses obligations de bonne foi. Mais elle suppose un contrat **valable** : ici, le consentement de Marc a été vicié par le dol, donc le contrat n’est pas valablement formé et peut être annulé. La force obligatoire ne protège pas un contrat obtenu par tromperie."
+      }
+    ]
+  },
+  "droit-t6": {
+    "id": "droit-t6-doc",
+    "type": "doc",
+    "title": "Étude de documents — La responsabilité civile",
+    "icon": "📑",
+    "intro": "À partir d’un cas et des règles de la responsabilité, identifie les conditions de la réparation. Lis les documents puis réponds.",
+    "documents": [
+      {
+        "id": 1,
+        "title": "Document 1 — Réparer ou sanctionner",
+        "text": "La **responsabilité civile** a pour but de **réparer** le dommage causé à autrui (versement de dommages et intérêts). La **responsabilité pénale** a pour but de **sanctionner** l’auteur d’une **infraction** (peine), au nom de la société. Un même fait peut engager les deux."
+      },
+      {
+        "id": 2,
+        "title": "Document 2 — Les trois conditions",
+        "text": "La responsabilité civile suppose la réunion de trois éléments : un **fait générateur** (une faute, le fait d’une chose…), un **dommage** (ou préjudice) et un **lien de causalité** entre les deux. Le dommage réparable doit être **certain, direct et personnel**."
+      },
+      {
+        "id": 3,
+        "title": "Document 3 — Les moyens d’exonération",
+        "text": "Le responsable peut s’exonérer, totalement ou partiellement, en prouvant une **cause étrangère** : la **force majeure** (événement imprévisible, irrésistible et extérieur), le **fait d’un tiers** ou la **faute de la victime**."
+      },
+      {
+        "id": 4,
+        "title": "Document 4 — La chute au supermarché",
+        "text": "Un supermarché laisse le sol d’un rayon mouillé, sans aucune signalisation. Une cliente glisse, chute et se fracture le poignet ; elle doit être opérée et arrêtée trois semaines. Aucune consigne de sécurité n’avait été affichée."
+      }
+    ],
+    "questions": [
+      {
+        "doc": 1,
+        "q": "La responsabilité civile vise avant tout à…",
+        "choices": [
+          "réparer le dommage de la victime",
+          "emprisonner l’auteur",
+          "percevoir un impôt",
+          "annuler un contrat"
+        ],
+        "answer": 0,
+        "explain": "La civile répare ; la pénale sanctionne."
+      },
+      {
+        "doc": 2,
+        "q": "Les trois conditions de la responsabilité civile sont…",
+        "choices": [
+          "fait générateur, dommage, lien de causalité",
+          "faute, amende, peine",
+          "offre, acceptation, prix",
+          "salaire, contrat, subordination"
+        ],
+        "answer": 0,
+        "explain": "Il faut un fait générateur, un dommage et un lien de causalité."
+      },
+      {
+        "doc": 2,
+        "q": "Pour être réparable, le dommage doit notamment être…",
+        "choices": [
+          "certain, direct et personnel",
+          "ancien et oublié",
+          "ressenti par tous",
+          "sans gravité"
+        ],
+        "answer": 0,
+        "explain": "Caractères du dommage réparable : certain, direct, personnel."
+      },
+      {
+        "doc": 3,
+        "q": "La force majeure est un événement…",
+        "choices": [
+          "imprévisible, irrésistible et extérieur",
+          "prévu par le contrat",
+          "causé volontairement",
+          "sans conséquence"
+        ],
+        "answer": 0,
+        "explain": "C’est une cause étrangère exonératoire."
+      },
+      {
+        "doc": [
+          2,
+          4
+        ],
+        "q": "Dans le cas du supermarché, le fait générateur est…",
+        "choices": [
+          "le sol mouillé laissé sans signalisation",
+          "la fracture du poignet",
+          "l’opération",
+          "l’arrêt de travail"
+        ],
+        "answer": 0,
+        "explain": "Le fait générateur (la faute) est l’absence de signalisation ; la fracture est le dommage."
+      },
+      {
+        "doc": [
+          2,
+          4
+        ],
+        "type": "redac",
+        "q": "Montre que les trois conditions de la responsabilité civile sont réunies dans le cas de la cliente.",
+        "answer": "**Fait générateur** : le supermarché a laissé le sol mouillé sans signalisation (une faute de négligence). **Dommage** : la cliente subit une fracture du poignet, une opération et trois semaines d’arrêt (préjudice corporel certain, direct et personnel). **Lien de causalité** : la chute — et donc le dommage — résulte directement de l’absence de signalisation. Les trois conditions étant réunies, la cliente peut être **indemnisée**."
+      },
+      {
+        "doc": 1,
+        "type": "redac",
+        "q": "Distingue responsabilité civile et responsabilité pénale.",
+        "answer": "La responsabilité **civile** vise à **réparer** le dommage subi par la victime (dommages et intérêts), au profit de celle-ci. La responsabilité **pénale** vise à **sanctionner** l’auteur d’une **infraction** par une peine, au nom de la société. Un même fait (ex. une agression) peut engager les deux : une peine ET des dommages et intérêts."
+      },
+      {
+        "doc": 3,
+        "type": "redac",
+        "q": "Le supermarché pourrait-il s’exonérer en invoquant la force majeure ? Justifie.",
+        "answer": "Difficilement. La **force majeure** suppose un événement **imprévisible, irrésistible et extérieur**. Or un sol mouillé dans un magasin est un risque **prévisible** et **évitable** (il suffisait de signaler ou de nettoyer) : il n’est ni extérieur ni irrésistible. Le supermarché ne peut donc pas s’exonérer par la force majeure ; il pourrait tout au plus invoquer une éventuelle **faute de la victime** (ex. course imprudente), ce qui n’apparaît pas ici."
+      }
+    ]
+  },
+  "droit-t7": {
+    "id": "droit-t7-doc",
+    "type": "doc",
+    "title": "Étude de documents — Le contrat de travail et sa rupture",
+    "icon": "📑",
+    "intro": "Qualifier une relation de travail et vérifier la validité d’un licenciement. Lis les documents puis réponds.",
+    "documents": [
+      {
+        "id": 1,
+        "title": "Document 1 — Le lien de subordination",
+        "text": "Le **contrat de travail** existe dès qu’une personne fournit une **prestation de travail** contre une **rémunération**, sous l’**autorité** d’un employeur. Ce **lien de subordination** — pouvoir de donner des ordres, d’en contrôler l’exécution et de sanctionner — est le **critère déterminant** du contrat de travail."
+      },
+      {
+        "id": 2,
+        "title": "Document 2 — CDI et CDD",
+        "text": "Le **CDI** (contrat à durée indéterminée) est la forme **normale** de la relation de travail. Le **CDD** est l’exception : il doit être **établi par écrit** et reposer sur un **cas de recours** prévu par la loi (remplacement, accroissement temporaire d’activité…). À défaut, il peut être **requalifié en CDI**."
+      },
+      {
+        "id": 3,
+        "title": "Document 3 — Le licenciement",
+        "text": "Le licenciement à l’initiative de l’employeur n’est valable que s’il repose sur une **cause réelle et sérieuse** (objective et vérifiable) et respecte une **procédure** (entretien préalable, notification). À défaut, il est **abusif** et le juge peut accorder des indemnités au salarié."
+      },
+      {
+        "id": 4,
+        "title": "Document 4 — Le cas de Karim",
+        "text": "Karim travaille depuis deux ans pour une entreprise, avec des horaires imposés, un salaire mensuel et sous les ordres d’un responsable, mais sans contrat écrit. Un matin, son responsable lui annonce oralement qu’il est licencié « parce qu’il ne l’apprécie pas », sans entretien préalable."
+      }
+    ],
+    "questions": [
+      {
+        "doc": 1,
+        "q": "Le critère déterminant du contrat de travail est…",
+        "choices": [
+          "le lien de subordination",
+          "le lieu de travail",
+          "la durée du contrat",
+          "le montant du salaire"
+        ],
+        "answer": 0,
+        "explain": "C’est la subordination juridique (ordres, contrôle, sanction)."
+      },
+      {
+        "doc": 2,
+        "q": "La forme normale de la relation de travail est…",
+        "choices": [
+          "le CDI",
+          "le CDD",
+          "l’intérim",
+          "le stage"
+        ],
+        "answer": 0,
+        "explain": "Le CDI est le droit commun ; le CDD est l’exception écrite et motivée."
+      },
+      {
+        "doc": 2,
+        "q": "Un CDD sans écrit ni cas de recours valable peut être…",
+        "choices": [
+          "requalifié en CDI",
+          "annulé sans conséquence",
+          "transformé en stage",
+          "prolongé automatiquement"
+        ],
+        "answer": 0,
+        "explain": "La requalification en CDI sanctionne l’irrégularité."
+      },
+      {
+        "doc": [
+          1,
+          4
+        ],
+        "q": "La relation de Karim, malgré l’absence d’écrit, est…",
+        "choices": [
+          "un contrat de travail (subordination présente)",
+          "du bénévolat",
+          "un contrat commercial",
+          "nulle faute d’écrit"
+        ],
+        "answer": 0,
+        "explain": "Prestation + rémunération + subordination = contrat de travail (un CDI, faute d’écrit fixant un terme)."
+      },
+      {
+        "doc": [
+          3,
+          4
+        ],
+        "q": "Le licenciement de Karim est irrégulier car…",
+        "choices": [
+          "il n’a ni cause réelle et sérieuse ni procédure respectée",
+          "l’employeur a le droit de licencier sans motif",
+          "Karim a démissionné",
+          "le CDD est arrivé à terme"
+        ],
+        "answer": 0,
+        "explain": "« Ne pas l’apprécier » n’est pas une cause réelle et sérieuse ; la procédure n’a pas été suivie."
+      },
+      {
+        "doc": [
+          1,
+          4
+        ],
+        "type": "redac",
+        "q": "Qualifie juridiquement la relation de travail de Karim malgré l’absence de contrat écrit.",
+        "answer": "Karim fournit une **prestation de travail** (il travaille), reçoit une **rémunération** (salaire mensuel) et agit sous l’**autorité** d’un responsable qui lui impose des horaires et lui donne des ordres : le **lien de subordination** est caractérisé. La relation est donc un **contrat de travail**, présumé à durée indéterminée (**CDI**) faute d’écrit fixant un terme. Karim bénéficie de toute la protection du droit du travail."
+      },
+      {
+        "doc": [
+          3,
+          4
+        ],
+        "type": "redac",
+        "q": "Le licenciement de Karim est-il valable ? Justifie en droit.",
+        "answer": "Non. Un licenciement n’est valable que s’il repose sur une **cause réelle et sérieuse** (objective et vérifiable) et respecte une **procédure** (entretien préalable, notification écrite). Or le motif « je ne l’apprécie pas » n’est **ni réel ni sérieux**, et aucune procédure n’a été suivie (annonce orale, sans entretien). Le licenciement est donc **abusif** : saisi, le conseil de prud’hommes peut condamner l’employeur à verser des indemnités."
+      },
+      {
+        "doc": 3,
+        "type": "redac",
+        "q": "Qu’est-ce qu’une « cause réelle et sérieuse » de licenciement ?",
+        "answer": "C’est un motif à la fois **réel** (existant, objectif, vérifiable, et non un prétexte) et **sérieux** (suffisamment important pour justifier la rupture). Il peut être **personnel** (lié au salarié : faute, insuffisance) ou **économique** (lié à l’entreprise). Le juge en contrôle l’existence : à défaut, le licenciement est abusif."
+      }
+    ]
+  },
+  "droit-t8": {
+    "id": "droit-t8-doc",
+    "type": "doc",
+    "title": "Étude de documents — Choisir sa structure et respecter la concurrence",
+    "icon": "📑",
+    "intro": "Comparer entreprise individuelle et société, et repérer une concurrence déloyale. Lis les documents puis réponds.",
+    "documents": [
+      {
+        "id": 1,
+        "title": "Document 1 — L’entreprise individuelle",
+        "text": "Dans l’**entreprise individuelle**, il n’y a pas de personne morale nouvelle. **Depuis la réforme de 2022** (loi du 14 février 2022, statut unique en vigueur le 15 mai 2022), le **patrimoine professionnel** et le **patrimoine personnel** sont **séparés automatiquement** : le patrimoine personnel est en principe **protégé** des dettes professionnelles. *Avant 2022*, par le **principe d’unicité du patrimoine**, l’entrepreneur répondait des dettes sur **tout son patrimoine**, sauf **déclaration d’insaisissabilité** ou **EIRL**."
+      },
+      {
+        "id": 2,
+        "title": "Document 2 — La société (art. 1832)",
+        "text": "Article 1832 du Code civil : la société naît d’un **contrat** par lequel des associés « affectent à une entreprise commune des biens ou leur industrie en vue de partager le bénéfice ». Trois éléments : des **apports**, l’**affectio societatis** (volonté de collaborer) et le partage des **bénéfices**. La société est une **personne morale** dont la responsabilité des associés est en principe **limitée aux apports**."
+      },
+      {
+        "id": 3,
+        "title": "Document 3 — La concurrence déloyale",
+        "text": "La **libre concurrence** est encadrée. La **concurrence déloyale** (dénigrement, imitation créant la confusion, parasitisme, désorganisation) engage la **responsabilité civile** de son auteur : la victime doit prouver un **fait générateur** (le comportement déloyal), un **préjudice** et un **lien de causalité**."
+      },
+      {
+        "id": 4,
+        "title": "Document 4 — Deux situations",
+        "text": "A) Léa ouvre seule un salon de coiffure et emprunte 40 000 €. Elle hésite entre l’entreprise individuelle et la création d’une EURL.\nB) Un concurrent de Léa diffuse de fausses rumeurs affirmant que son salon « ne respecte pas l’hygiène » et copie son enseigne pour créer la confusion."
+      }
+    ],
+    "questions": [
+      {
+        "doc": 1,
+        "q": "Depuis la réforme de 2022, dans l’entreprise individuelle, le patrimoine personnel est…",
+        "choices": [
+          "séparé automatiquement du patrimoine professionnel et en principe protégé",
+          "toujours engagé pour toutes les dettes",
+          "transféré à une société",
+          "saisi par l’État"
+        ],
+        "answer": 0,
+        "explain": "Loi du 14 février 2022 : séparation automatique des patrimoines ; le patrimoine personnel est en principe protégé des dettes professionnelles."
+      },
+      {
+        "doc": 2,
+        "q": "Selon l’article 1832, la société suppose des apports, le partage des bénéfices et…",
+        "choices": [
+          "l’affectio societatis",
+          "un lien de subordination",
+          "un brevet",
+          "une clause pénale"
+        ],
+        "answer": 0,
+        "explain": "L’affectio societatis = volonté commune de collaborer."
+      },
+      {
+        "doc": 2,
+        "q": "Dans une société, la responsabilité des associés est en principe…",
+        "choices": [
+          "limitée à leurs apports",
+          "illimitée sur tout leur patrimoine",
+          "inexistante",
+          "reportée sur les clients"
+        ],
+        "answer": 0,
+        "explain": "La personnalité morale limite en principe la responsabilité aux apports."
+      },
+      {
+        "doc": 3,
+        "q": "La concurrence déloyale se sanctionne par…",
+        "choices": [
+          "une action en responsabilité civile",
+          "une peine de prison automatique",
+          "la dissolution de l’État",
+          "un brevet"
+        ],
+        "answer": 0,
+        "explain": "Il faut prouver fait générateur + préjudice + lien de causalité."
+      },
+      {
+        "doc": [
+          3,
+          4
+        ],
+        "q": "Diffuser de fausses rumeurs sur l’hygiène d’un concurrent constitue…",
+        "choices": [
+          "un dénigrement (concurrence déloyale)",
+          "une pratique loyale",
+          "une entente légale",
+          "un apport en société"
+        ],
+        "answer": 0,
+        "explain": "Le dénigrement est un acte de concurrence déloyale."
+      },
+      {
+        "doc": [
+          1,
+          2,
+          4
+        ],
+        "type": "redac",
+        "q": "Léa hésite entre entreprise individuelle et EURL : quelles conséquences sur son patrimoine ? Conseille-la.",
+        "answer": "En **entreprise individuelle**, depuis la réforme de **2022**, son **patrimoine personnel** (voiture, épargne) est **séparé automatiquement** du patrimoine professionnel et donc **en principe protégé** : les créanciers du salon se paient d’abord sur les **biens professionnels**. En **EURL** (société à associé unique), une **personne morale** distincte est créée : la responsabilité de Léa est **limitée à ses apports**. Les deux solutions protègent son patrimoine personnel ; l’EURL apporte un cadre de société (statuts, comptes) mais plus de formalisme. Compte tenu de l’emprunt de 40 000 €, Léa est désormais mieux protégée qu’avant 2022 dans les deux cas."
+      },
+      {
+        "doc": [
+          3,
+          4
+        ],
+        "type": "redac",
+        "q": "Montre que Léa peut agir contre son concurrent en concurrence déloyale.",
+        "answer": "La concurrence déloyale engage la **responsabilité civile** de son auteur. **Fait générateur** : le concurrent diffuse de **fausses rumeurs** (dénigrement) et **copie l’enseigne** pour créer la confusion (imitation). **Préjudice** : perte de clientèle et atteinte à la réputation de Léa. **Lien de causalité** : ces agissements détournent la clientèle. Léa peut donc engager une **action en concurrence déloyale** pour faire cesser ces pratiques et obtenir des dommages et intérêts."
+      },
+      {
+        "doc": 2,
+        "type": "redac",
+        "q": "Rappelle les trois éléments du contrat de société (art. 1832).",
+        "answer": "Le contrat de société suppose : des **apports** (en argent, en nature ou en industrie) faits par les associés ; l’**affectio societatis**, c’est-à-dire la **volonté commune de collaborer** à l’entreprise ; et la vocation à **partager les bénéfices** (et à contribuer aux pertes). La société ainsi créée est une **personne morale**."
+      }
+    ]
+  }
+}

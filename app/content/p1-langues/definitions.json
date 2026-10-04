@@ -1,0 +1,80 @@
+{
+  "p1-lng-en": [
+    [
+      "Present perfect",
+      "have + participe passé : lien entre passé et présent."
+    ],
+    [
+      "Preterit",
+      "Passé daté et révolu (V-ed / irrégulier)."
+    ],
+    [
+      "Modal",
+      "Verbe (can, must, should) exprimant capacité, obligation, conseil."
+    ],
+    [
+      "Gérondif (-ing)",
+      "Forme verbale en -ing utilisée comme nom ou après certaines structures."
+    ],
+    [
+      "Comparatif / superlatif",
+      "Comparer (…-er than) / exprimer le plus (the …-est)."
+    ],
+    [
+      "Auxiliaire",
+      "be, have, do : servent à conjuguer, nier et interroger."
+    ]
+  ],
+  "p1-lng-es": [
+    [
+      "Ser / Estar",
+      "Deux « être » : caractère durable (ser) / état ou lieu (estar)."
+    ],
+    [
+      "Pretérito perfecto",
+      "haber + participe : passé lié au présent."
+    ],
+    [
+      "Gerundio",
+      "Forme en -ando/-iendo pour l’action en cours."
+    ],
+    [
+      "Subjuntivo",
+      "Mode du souhait, du doute et de l’ordre."
+    ],
+    [
+      "Tuteo / usted",
+      "Tutoiement familier / vouvoiement de politesse."
+    ],
+    [
+      "Concordancia",
+      "Accord en genre et en nombre des mots."
+    ]
+  ],
+  "p1-lng-axes": [
+    [
+      "Axe culturel",
+      "Thème d’étude reliant langue et culture (au programme du cycle)."
+    ],
+    [
+      "Identités et échanges",
+      "Rencontres, migrations et circulation des personnes et des idées."
+    ],
+    [
+      "Espace privé / espace public",
+      "Frontière entre vie personnelle et vie collective."
+    ],
+    [
+      "Citoyenneté",
+      "Appartenance à une communauté et engagement dans la vie publique."
+    ],
+    [
+      "Fictions et réalités",
+      "Rapports entre l’imaginaire, les récits et le monde réel."
+    ],
+    [
+      "Art et pouvoir",
+      "Manière dont l’art exprime, sert ou conteste le pouvoir."
+    ]
+  ]
+}

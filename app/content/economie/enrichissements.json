@@ -1,0 +1,156 @@
+{
+  "eco-actu": {
+    "resources": [
+      {
+        "label": "INSEE — les chiffres à jour (croissance, chômage, inflation)",
+        "url": "https://www.insee.fr/fr/statistiques",
+        "kind": "doc",
+        "note": "La source officielle pour vérifier les chiffres avant de les citer."
+      },
+      {
+        "label": "Banque de France — ABC de l’économie",
+        "url": "https://abc-economie.banque-france.fr/",
+        "kind": "link",
+        "note": "Fiches courtes et fiables sur les grandes notions d’actualité."
+      },
+      {
+        "label": "Vie-publique.fr — politiques économiques",
+        "url": "https://www.vie-publique.fr/",
+        "kind": "link"
+      }
+    ],
+    "sections": [
+      {
+        "h": "🗞️ Exemple — relier une actu au cours",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Aux informations : « l’inflation ralentit à 2 % et la Banque centrale ajuste ses taux d’intérêt »."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Nommer la notion** : inflation (hausse générale des prix), politique monétaire (taux d’intérêt).",
+              "**Relier au cours** : rôle de la Banque centrale, action de l’État sur l’économie.",
+              "**Analyser** : cause (demande, énergie…) → conséquence (pouvoir d’achat) → réponse (hausse des taux pour freiner l’inflation)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Méthode copie",
+            "c": "Ne retiens pas le chiffre exact (il change) : retiens la **tendance** et **vérifie** sur l’INSEE. Un exemple d’actu bien relié au cours = des points en plus."
+          }
+        ]
+      }
+    ]
+  },
+  "eco-t6": {
+    "sections": [
+      {
+        "h": "💶 Exemple — pourquoi et comment l’État intervient",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "En période de fort chômage, faut-il que l’État intervienne dans l’économie ?"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Allouer** : l’État produit des **biens publics** (routes, école, défense) que le marché ne fournit pas seul.",
+              "**Redistribuer** : impôts et prestations réduisent les inégalités.",
+              "**Stabiliser** : face au chômage, il peut soutenir l’activité (dépense publique, baisse d’impôts) → politique de relance."
+            ]
+          },
+          {
+            "t": "warning",
+            "h": "Nuance",
+            "c": "L’intervention a un coût (déficit, dette). Ne confonds pas **déficit** (flux annuel) et **dette** (stock accumulé)."
+          }
+        ]
+      }
+    ]
+  },
+  "eco-t7": {
+    "sections": [
+      {
+        "h": "💶 Exemple chiffré — le taux de chômage",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Population active = 30 millions ; nombre de chômeurs = 2,4 millions. Calcule le taux de chômage."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Taux de chômage** = chômeurs / population active = 2,4 / 30 = 0,08 = **8 %**.",
+              "Rappel : un **chômeur au sens du BIT** est **sans emploi, disponible et à la recherche active** d’un emploi.",
+              "À ne pas confondre avec le **taux d’emploi** (part des personnes en emploi dans la population en âge de travailler)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Attention",
+            "c": "Un **inactif** (étudiant, retraité) n’est pas un chômeur : il ne fait pas partie de la population active."
+          }
+        ]
+      }
+    ]
+  },
+  "eco-t8": {
+    "sections": [
+      {
+        "h": "💶 Exemple chiffré — la balance commerciale",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Un pays exporte pour 500 milliards € et importe pour 560 milliards €. Que peut-on dire de sa balance commerciale ?"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Solde commercial** = exportations − importations = 500 − 560 = **−60 milliards €**.",
+              "Le solde est **négatif** → la balance commerciale est **déficitaire** (on importe plus qu’on n’exporte).",
+              "**Nuance** : le libre-échange fait des gagnants **et** des perdants → réponse à nuancer (théorie vs réalité sociale)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Signe",
+            "c": "Garde le **signe** : déficit = solde négatif, excédent = solde positif."
+          }
+        ]
+      }
+    ]
+  },
+  "eco-t9": {
+    "sections": [
+      {
+        "h": "💶 Exemple — croissance, développement, soutenabilité",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Un pays affiche une forte croissance du PIB, mais une pollution qui augmente et des inégalités qui se creusent. Est-ce un vrai « progrès » ?"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Croissance** = augmentation quantitative de la production (PIB) ; **développement** = amélioration qualitative des conditions de vie (mesurée par l’**IDH**).",
+              "La pollution est une **externalité négative** : le marché seul ne la corrige pas → intervention publique nécessaire.",
+              "**Soutenabilité** : une croissance n’est durable que si elle préserve l’environnement et les générations futures."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À distinguer",
+            "c": "PIB (richesse marchande) ≠ bien-être : il ignore les inégalités, l’environnement et le travail non rémunéré → d’où l’IDH."
+          }
+        ]
+      }
+    ]
+  }
+}

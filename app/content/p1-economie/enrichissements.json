@@ -1,0 +1,138 @@
+{
+  "p1-eco-t4": {
+    "sections": [
+      {
+        "h": "💶 Exemple traité — comment se financer ?",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Une PME veut acheter une nouvelle machine à 100 000 €. Comment financer cet investissement ?"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Financement interne** (autofinancement) : utiliser ses bénéfices mis en réserve → pas de dette, mais épuise la trésorerie.",
+              "**Financement externe direct** : émettre des actions/obligations (surtout pour les grandes entreprises) → se financer sur les marchés.",
+              "**Financement externe indirect** : emprunter auprès d’une **banque** (crédit) → solution la plus courante pour une PME, mais coût des intérêts."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À retenir",
+            "c": "Direct = passer par les marchés financiers ; indirect = passer par une banque (intermédiaire)."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-eco-t1": {
+    "sections": [
+      {
+        "h": "💶 Exemple — rareté et choix économiques",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Avec un budget de 50 €, un étudiant hésite entre des livres et des sorties."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Rareté** : les ressources (ici l’argent) sont limitées face à des besoins illimités.",
+              "**Choix & coût d’opportunité** : choisir les livres, c’est renoncer aux sorties (ce à quoi on renonce = coût d’opportunité).",
+              "**Les agents** (ménages, entreprises, État) font tous des choix sous contrainte de ressources."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Idée fondatrice",
+            "c": "L’économie étudie comment des agents font des **choix** face à la **rareté**."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-eco-t2": {
+    "sections": [
+      {
+        "h": "💶 Exemple chiffré — la valeur ajoutée",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Une boulangerie produit pour 300 000 € de pain sur l’année. Elle a acheté pour 110 000 € de farine, d’énergie et de fournitures."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Valeur ajoutée** = production − consommations intermédiaires = 300 000 − 110 000 = **190 000 €**.",
+              "La VA mesure la **richesse réellement créée** (pas le chiffre d’affaires).",
+              "La somme des VA de toutes les entreprises d’un pays = le **PIB**."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Piège",
+            "c": "Ne confonds pas production (300 000) et valeur ajoutée (190 000) : on retire ce qui a été acheté à d’autres (les consommations intermédiaires)."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-eco-t3": {
+    "sections": [
+      {
+        "h": "💶 Exemple — la répartition des revenus",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Un salarié gagne 1 800 € net, touche des allocations et paie des impôts."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Revenus primaires** : issus de la production — du travail (salaire) ou du capital (loyers, dividendes, intérêts).",
+              "**Redistribution** : l’État prélève (impôts, cotisations) et verse des **prestations** (allocations, retraites) → revenu disponible.",
+              "Objectif : réduire les **inégalités** et couvrir les risques sociaux."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Formule",
+            "c": "Revenu disponible = revenus primaires + prestations reçues − prélèvements obligatoires."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-eco-t5": {
+    "sections": [
+      {
+        "h": "💶 Exemple — le marché et le prix d’équilibre",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Sur un marché, quand le prix d’un produit baisse, les acheteurs sont plus nombreux mais les vendeurs moins motivés."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Demande** : elle **augmente** quand le prix baisse (courbe décroissante).",
+              "**Offre** : elle **augmente** quand le prix monte (courbe croissante).",
+              "**Prix d’équilibre** : là où offre = demande. Ce n’est pas l’État qui le fixe (marché concurrentiel).",
+              "**Élasticité** : mesure la sensibilité de la demande au prix (garde le signe, raisonne en %)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Voir le schéma",
+            "c": "Le « Schéma du thème » (offre/demande) illustre exactement ce point d’équilibre."
+          }
+        ]
+      }
+    ]
+  }
+}

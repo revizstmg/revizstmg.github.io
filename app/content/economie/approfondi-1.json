@@ -1,0 +1,709 @@
+{
+  "eco-t6": [
+    {
+      "h": "🏛️ Les trois fonctions de l’État (Musgrave)",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Dans une économie de marché, l’**État** intervient pour corriger et compléter le marché. L’économiste Richard **Musgrave** a résumé son action économique en **trois fonctions** complémentaires."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Fonction",
+            "Objectif",
+            "Exemples d’outils"
+          ],
+          "rows": [
+            [
+              "Allocation",
+              "Produire ce que le marché ne fournit pas bien",
+              "Écoles, routes, défense, justice (biens publics)"
+            ],
+            [
+              "Répartition",
+              "Réduire les inégalités",
+              "Impôts progressifs, prestations sociales, redistribution"
+            ],
+            [
+              "Stabilisation",
+              "Lisser les crises (croissance, emploi, prix)",
+              "Politiques budgétaire et monétaire"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La fonction d’**allocation** répond aux **défaillances du marché** : certains biens (l’éclairage public, la défense) ne seraient pas produits par le privé car nul ne peut en être exclu ni facturé. La fonction de **répartition** corrige les inégalités que le marché génère spontanément. La fonction de **stabilisation** lutte contre le chômage et l’inflation."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Les 3 fonctions : **Allocation – Répartition – Stabilisation** (A.R.S.). Elles justifient pourquoi, même dans une économie de marché, l’État a un rôle économique."
+        }
+      ]
+    },
+    {
+      "h": "⚖️ Pourquoi le marché « défaille »",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le marché est efficace, mais **pas toujours** : il connaît des **défaillances** qui justifient l’intervention publique. En comprendre les mécanismes est central pour ce thème."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Les biens publics** : biens **non rivaux** (l’usage de l’un n’empêche pas celui de l’autre) et **non excluables** (on ne peut empêcher personne d’en profiter). Personne ne veut les payer (« passager clandestin ») → l’État les finance (éclairage, défense).",
+            "**Les externalités** : effets d’une activité sur des tiers, non pris en compte par le prix. **Négative** (pollution d’une usine) ou **positive** (une vaccination qui protège tous). L’État taxe les premières, subventionne les secondes.",
+            "**Les asymétries d’information** : une partie en sait plus que l’autre (le vendeur de voiture d’occasion) → l’État impose transparence et normes.",
+            "**Les situations de monopole** : un seul offreur abuse de son pouvoir → l’État régule la concurrence."
+          ]
+        },
+        {
+          "t": "example",
+          "h": "Externalité négative",
+          "c": "Une usine rejette des déchets dans une rivière : elle ne paie pas ce coût, supporté par les riverains et l’environnement. L’État corrige par une **taxe** (principe pollueur-payeur) ou une **norme**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Défaillances de marché = **biens publics, externalités, asymétries d’information, monopoles**. Chacune justifie un type précis d’intervention de l’État."
+        }
+      ]
+    },
+    {
+      "h": "💶 Les politiques économiques",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Pour **stabiliser** l’économie, l’État conduit des **politiques économiques**. On les classe selon leur horizon : **conjoncturelles** (agir vite sur la situation présente) ou **structurelles** (transformer l’économie à long terme)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Politique",
+            "Outil",
+            "But"
+          ],
+          "rows": [
+            [
+              "Budgétaire",
+              "Dépenses publiques, impôts (budget de l’État)",
+              "Relancer ou freiner l’activité"
+            ],
+            [
+              "Monétaire",
+              "Taux d’intérêt, masse monétaire (BCE)",
+              "Maîtriser l’inflation, soutenir le crédit"
+            ],
+            [
+              "Structurelle",
+              "Réformes (formation, marché du travail, fiscalité)",
+              "Améliorer la compétitivité à long terme"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La **politique budgétaire** peut être de **relance** (augmenter les dépenses ou baisser les impôts pour soutenir la demande, quitte à creuser le déficit) ou de **rigueur** (réduire les dépenses pour maîtriser la dette). Le « **quoi qu’il en coûte** » de la crise Covid en est un exemple spectaculaire de relance."
+        },
+        {
+          "t": "p",
+          "c": "La **politique monétaire**, en zone euro, est confiée à la **Banque centrale européenne (BCE)**, indépendante des États. En **baissant ses taux**, elle rend le crédit moins cher et stimule l’activité ; en les **relevant**, elle freine l’inflation."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Conjoncturel = court terme (budgétaire + monétaire) ; structurel = long terme (réformes). En zone euro, la **monnaie** est gérée par la **BCE**, pas par chaque État."
+        }
+      ]
+    },
+    {
+      "h": "📉 Les limites de l’intervention",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "L’intervention de l’État a un **coût** et des **limites**. Les dépenses publiques se financent par l’**impôt** ou par l’**emprunt** ; ce dernier alimente le **déficit** (dépenses > recettes sur une année) puis la **dette publique** (accumulation des déficits passés)."
+        },
+        {
+          "t": "formula",
+          "c": "Déficit public = Dépenses publiques − Recettes publiques (sur une année)"
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Le poids de la dette** : plus elle est élevée, plus les intérêts pèsent, réduisant les marges pour d’autres dépenses. La dette d’aujourd’hui est un impôt de demain.",
+            "**L’effet d’éviction** : quand l’État emprunte beaucoup, il peut faire monter les taux et « évincer » l’investissement privé.",
+            "**Les règles européennes** : le traité fixe des repères (déficit et dette encadrés) qui limitent la liberté budgétaire des États.",
+            "**L’efficacité incertaine** : une relance peut « fuir » vers les importations plutôt que soutenir la production nationale."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Il existe donc un **débat** permanent : les partisans de l’intervention (inspirés de **Keynes**) défendent la relance en cas de crise ; les **libéraux** insistent sur les limites (dette, effet d’éviction, inefficacité) et préfèrent laisser jouer le marché."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Intervenir a un prix : **déficit → dette → intérêts**. Toute copie de bac équilibrée présente **les deux camps** du débat (Keynes vs libéraux)."
+        }
+      ]
+    },
+    {
+      "h": "💶 Exemple guidé — analyser une intervention",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Face à une hausse des prix de l’énergie, l’État instaure un « bouclier tarifaire » qui plafonne les prix, pour un coût de plusieurs milliards d’euros. Analysez cette mesure : fonction, justification, limites."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Quelle fonction ?",
+          "c": "Il s’agit surtout d’une fonction de **stabilisation** (soutenir le pouvoir d’achat et la demande) et de **répartition** (protéger les ménages les plus touchés)."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Justification",
+          "c": "La flambée des prix (choc externe) menace le pouvoir d’achat et pourrait déclencher une baisse de la consommation. L’État corrige cet effet par une politique **budgétaire de soutien**."
+        },
+        {
+          "t": "p",
+          "c": "**Étape 3 — Limites.** Le coût (plusieurs milliards) **creuse le déficit** et donc la **dette**. La mesure peut aussi **retarder** les économies d’énergie (le prix ne joue plus son rôle de signal). Enfin, plafonner un prix est une entorse au marché qui peut créer des effets pervers. **Conclusion** : mesure utile à court terme pour la stabilisation, mais **coûteuse et à durée limitée**."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Analyser une intervention : 1) **quelle fonction** de l’État ? 2) **quelle défaillance** ou quel objectif ? 3) **quels outils** ? 4) **quelles limites** (coût, dette, effets pervers) ? Toujours peser **avantages ET limites**."
+        }
+      ]
+    }
+  ],
+  "eco-t7": [
+    {
+      "h": "📊 Mesurer l’emploi et le chômage",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Mesurer le chômage suppose d’abord des **définitions précises**. La **population active** regroupe les personnes qui travaillent (**actifs occupés**) et celles qui cherchent un emploi (**chômeurs**). Les autres (étudiants, retraités, personnes au foyer) sont **inactifs**."
+        },
+        {
+          "t": "formula",
+          "c": "Population active = Actifs occupés + Chômeurs"
+        },
+        {
+          "t": "p",
+          "c": "Au sens du **BIT (Bureau International du Travail)**, est **chômeur** une personne qui, simultanément : est **sans emploi**, est **disponible** pour travailler, et **recherche activement** un emploi. Cette définition internationale permet de **comparer** les pays."
+        },
+        {
+          "t": "formula",
+          "c": "Taux de chômage = (Nombre de chômeurs ÷ Population active) × 100"
+        },
+        {
+          "t": "warning",
+          "h": "Piège",
+          "c": "Le taux de chômage se calcule sur la **population active**, **pas** sur la population totale ! Un étudiant ou un retraité n’entre pas dans le calcul."
+        },
+        {
+          "t": "tip",
+          "h": "À distinguer",
+          "c": "Le **halo du chômage** regroupe des personnes sans emploi qui ne sont **pas comptées** comme chômeurs au sens strict (elles ne cherchent pas activement, ou ne sont pas disponibles immédiatement). Le chômage « officiel » sous-estime donc le sous-emploi réel."
+        }
+      ]
+    },
+    {
+      "h": "🔎 Les différents types de chômage",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le chômage n’a pas une cause unique : selon son origine, on en distingue plusieurs types, qui appellent des **remèdes différents**."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Type",
+            "Cause",
+            "Exemple / remède"
+          ],
+          "rows": [
+            [
+              "Conjoncturel",
+              "Ralentissement de l’activité (crise)",
+              "Récession → politique de relance"
+            ],
+            [
+              "Structurel",
+              "Inadéquation durable offre/demande de travail",
+              "Compétences obsolètes → formation"
+            ],
+            [
+              "Frictionnel",
+              "Temps de transition entre deux emplois",
+              "Normal et incompressible"
+            ],
+            [
+              "Technologique",
+              "Machines/automatisation remplacent des postes",
+              "Reconversion, montée en compétences"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le **chômage conjoncturel** suit le cycle économique : il augmente en récession, recule en reprise. Le **chômage structurel** est plus profond : il tient à un décalage durable entre les emplois offerts et les qualifications disponibles, ou à des rigidités du marché du travail. C’est le plus difficile à résorber."
+        },
+        {
+          "t": "example",
+          "h": "Illustration",
+          "c": "La fermeture d’une usine sidérurgique crée du chômage **structurel** dans une région : les ouvriers ont des compétences qui ne correspondent plus aux emplois disponibles ailleurs. La solution passe par la **formation** et la **reconversion**, pas par une simple relance."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Conjoncturel → **relance** (agir sur la demande). Structurel → **formation et réformes** (agir sur l’offre de travail). Le bon remède dépend du bon diagnostic."
+        }
+      ]
+    },
+    {
+      "h": "🛠️ Les politiques de l’emploi",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Face au chômage, l’État mène des **politiques de l’emploi**, que l’on classe en deux grandes catégories selon leur logique."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Politiques actives** : agir sur les **causes** pour ramener vers l’emploi — formation, accompagnement, aides à l’embauche, contrats aidés, soutien à la création d’entreprise.",
+            "**Politiques passives** : atténuer les **conséquences** du chômage — indemnisation (allocations chômage), dispositifs de préretraite."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "D’autres leviers agissent sur le **coût du travail** : allègements de charges sociales pour inciter à embaucher, notamment sur les bas salaires. L’idée est de rendre l’embauche plus attractive pour l’employeur, surtout pour les emplois peu qualifiés les plus exposés."
+        },
+        {
+          "t": "p",
+          "c": "Ces politiques font débat. Trop d’indemnisation pourrait décourager la reprise d’emploi (débat sur les « trappes à inactivité ») ; mais une protection insuffisante fragilise les chômeurs et affaiblit la demande. L’enjeu est de **combiner** activation (former, accompagner) et **sécurité** (indemniser) — c’est la logique de la « flexisécurité »."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Actives = **s’attaquer aux causes** (formation, incitations). Passives = **soulager les conséquences** (indemnisation). Une bonne politique combine les deux."
+        }
+      ]
+    },
+    {
+      "h": "💼 Le fonctionnement du marché du travail",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **marché du travail** confronte une **offre de travail** (les personnes qui proposent leur travail) et une **demande de travail** (les entreprises qui recrutent). Attention au vocabulaire : ce sont les **salariés** qui « offrent » leur travail et les **entreprises** qui le « demandent »."
+        },
+        {
+          "t": "p",
+          "c": "Selon l’analyse **néoclassique**, le **salaire** est le prix qui équilibre ce marché : s’il est trop élevé (par exemple à cause d’un salaire minimum jugé trop haut), la demande de travail des entreprises baisse et un **chômage** apparaît. Selon l’analyse **keynésienne**, le chômage vient surtout d’une **demande globale** insuffisante : sans débouchés, les entreprises n’embauchent pas, quel que soit le salaire."
+        },
+        {
+          "t": "example",
+          "h": "Deux lectures d’un même fait",
+          "c": "Face au chômage, un libéral propose d’**assouplir** le marché du travail et de modérer les salaires ; un keynésien propose de **soutenir la demande** (relance, hausse du pouvoir d’achat). Ce désaccord structure tout le débat de politique économique."
+        },
+        {
+          "t": "warning",
+          "h": "Piège de vocabulaire",
+          "c": "Sur le marché du travail, l’**offre** vient des **travailleurs** et la **demande** des **entreprises** — c’est l’inverse du marché des biens. Ne pas se tromper de sens le jour du bac."
+        }
+      ]
+    },
+    {
+      "h": "💶 Exemple chiffré guidé — le taux de chômage",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Dans un pays : 25 millions d’actifs occupés, 2,5 millions de chômeurs, 15 millions d’inactifs. Calculez la population active et le taux de chômage, puis commentez."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Population active",
+          "c": "Population active = actifs occupés + chômeurs = 25 + 2,5 = **27,5 millions**."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Taux de chômage",
+          "c": "Taux = (chômeurs ÷ population active) × 100 = (2,5 ÷ 27,5) × 100 ≈ **9,1 %**."
+        },
+        {
+          "t": "p",
+          "c": "**Étape 3 — Commentaire.** Un taux d’environ 9 % est **élevé** : près d’un actif sur onze cherche un emploi sans en trouver. Il faut ensuite s’interroger sur sa **nature** (conjoncturel ? structurel ?) pour proposer le bon remède, et sur le **halo** du chômage (le chiffre officiel sous-estime le sous-emploi réel). Les 15 millions d’inactifs **n’entrent pas** dans le calcul."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "1) Bien identifier la **population active** (jamais la population totale). 2) Appliquer la formule. 3) **Interpréter** le niveau (élevé/faible) et s’interroger sur le **type** de chômage et le **halo**."
+        }
+      ]
+    }
+  ],
+  "eco-t8": [
+    {
+      "h": "🌍 Pourquoi les pays échangent : l’avantage comparatif",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **commerce international** est l’ensemble des échanges de biens et de services entre pays. Pourquoi les nations échangent-elles au lieu de tout produire elles-mêmes ? La réponse théorique majeure est la théorie de l’**avantage comparatif** de **David Ricardo** (1817)."
+        },
+        {
+          "t": "p",
+          "c": "L’idée est contre-intuitive : même un pays **plus performant en tout** a intérêt à se **spécialiser** dans ce qu’il produit **relativement** le mieux, et à **importer** le reste. Chaque pays se concentre sur sa spécialité, et l’échange **augmente la richesse totale** disponible."
+        },
+        {
+          "t": "example",
+          "h": "Illustration simplifiée",
+          "c": "Si le Portugal est très bon pour le vin et l’Angleterre pour le drap, chacun a intérêt à se spécialiser et à échanger, plutôt que de produire les deux médiocrement. Chacun obtient au final **plus** des deux biens."
+        },
+        {
+          "t": "p",
+          "c": "Cette spécialisation conduit à la **division internationale du travail (DIT)** : chaque pays occupe une place dans une chaîne mondiale de production. C’est ce qui explique qu’un smartphone soit conçu dans un pays, ses composants fabriqués dans plusieurs autres, et l’assemblage réalisé ailleurs encore."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Avantage **absolu** (Adam Smith) = être le meilleur. Avantage **comparatif** (Ricardo) = se spécialiser là où l’on est **relativement** le meilleur. C’est ce dernier qui fonde le gain à l’échange."
+        }
+      ]
+    },
+    {
+      "h": "📦 Balance commerciale et balance des paiements",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Les échanges d’un pays avec le reste du monde se mesurent par des **soldes**. La **balance commerciale** compare les **exportations** (ventes à l’étranger) et les **importations** (achats à l’étranger) de **biens**."
+        },
+        {
+          "t": "formula",
+          "c": "Solde commercial = Exportations − Importations"
+        },
+        {
+          "t": "list",
+          "c": [
+            "Solde **positif** → **excédent** commercial (on vend plus qu’on n’achète).",
+            "Solde **négatif** → **déficit** commercial (on importe plus qu’on n’exporte)."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La **balance des paiements** est plus large : elle enregistre **tous** les flux économiques et financiers d’un pays avec l’étranger (biens, services, revenus, capitaux). La balance commerciale n’en est qu’une partie."
+        },
+        {
+          "t": "p",
+          "c": "Un déficit commercial durable peut traduire un **manque de compétitivité** (les produits nationaux se vendent mal), mais aussi une **demande interne dynamique** (le pays consomme et importe beaucoup). L’interprétation dépend du contexte : un déficit n’est pas toujours un mauvais signe."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Balance **commerciale** = biens (exportations − importations). Balance des **paiements** = tous les flux (biens, services, revenus, capitaux). Excédent = +, déficit = −."
+        }
+      ]
+    },
+    {
+      "h": "⚔️ Libre-échange contre protectionnisme",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Faut-il ouvrir totalement les frontières (**libre-échange**) ou protéger la production nationale (**protectionnisme**) ? C’est l’un des grands débats de l’économie internationale."
+        },
+        {
+          "t": "table",
+          "head": [
+            "",
+            "Libre-échange",
+            "Protectionnisme"
+          ],
+          "rows": [
+            [
+              "Principe",
+              "Supprimer les barrières aux échanges",
+              "Protéger par des barrières"
+            ],
+            [
+              "Outils",
+              "Accords de libre-échange, OMC",
+              "Droits de douane, quotas, normes"
+            ],
+            [
+              "Avantages",
+              "Prix bas, choix, spécialisation, croissance",
+              "Protège l’emploi et les industries naissantes"
+            ],
+            [
+              "Risques",
+              "Concurrence dure, délocalisations, dépendance",
+              "Représailles, prix élevés, perte d’efficacité"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le libre-échange fait des **gagnants** (consommateurs, secteurs exportateurs) **et des perdants** (secteurs concurrencés, emplois délocalisés). D’où la nécessité de politiques d’**accompagnement** (formation, reconversion) pour ceux qui subissent l’ouverture."
+        },
+        {
+          "t": "p",
+          "c": "Le protectionnisme peut protéger temporairement une **industrie naissante** (argument de Friedrich List) ou un secteur stratégique, mais il expose à des **représailles** des partenaires et renchérit les prix pour les consommateurs. La plupart des économistes penchent pour un libre-échange **encadré**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le libre-échange **enrichit globalement** mais **redistribue les cartes** : il crée des gagnants et des perdants. Un bon devoir montre les **deux faces** et propose un accompagnement des perdants."
+        }
+      ]
+    },
+    {
+      "h": "🏭 Firmes multinationales et mondialisation",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **mondialisation** est l’intégration croissante des économies par les échanges de biens, de services, de capitaux et d’informations. Ses acteurs majeurs sont les **firmes multinationales (FMN)** : des entreprises qui implantent des filiales dans plusieurs pays."
+        },
+        {
+          "t": "p",
+          "c": "Les FMN organisent la production à l’échelle mondiale pour **optimiser leurs coûts** : elles localisent chaque étape là où c’est le plus avantageux (main-d’œuvre, fiscalité, proximité des marchés). C’est la logique des **chaînes de valeur mondiales**."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Avantages pour les pays d’accueil** : emplois, transferts de technologie, investissements.",
+            "**Risques** : dépendance, concurrence fiscale entre États, délocalisations, moindre pouvoir des États face à des géants mondiaux."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La mondialisation a **réduit les prix** et sorti des centaines de millions de personnes de la pauvreté, mais elle a aussi **accru certaines inégalités** et fragilisé des territoires touchés par les délocalisations. Elle pose enfin la question de la **souveraineté** (dépendance aux importations révélée par les crises récentes)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "FMN = actrices centrales de la mondialisation, qui organisent des **chaînes de valeur mondiales**. Bilan **contrasté** : gains de prix et de croissance, mais inégalités, dépendances et concurrence fiscale."
+        }
+      ]
+    },
+    {
+      "h": "💶 Exemple chiffré guidé — la balance commerciale",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Un pays exporte pour 480 milliards € de biens et en importe pour 540 milliards €. Calculez le solde commercial, dites s’il est excédentaire ou déficitaire, et proposez deux explications possibles."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Solde commercial",
+          "c": "Solde = Exportations − Importations = 480 − 540 = **− 60 milliards €**."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Interprétation",
+          "c": "Le solde est **négatif** : le pays est en **déficit** commercial (il importe plus qu’il n’exporte)."
+        },
+        {
+          "t": "p",
+          "c": "**Étape 3 — Explications possibles.** (1) Un **manque de compétitivité** : les produits nationaux se vendent mal à l’export, ou coûtent plus cher que les produits importés. (2) Une **demande intérieure forte** qui tire les importations (le pays consomme beaucoup, y compris des produits étrangers). (3) Une **facture énergétique** élevée (importations de pétrole/gaz). Le déficit n’est pas nécessairement un signe de faiblesse : tout dépend de sa **cause** et de sa **durée**."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Toujours : 1) **calculer** le solde (Exp − Imp), 2) **qualifier** (excédent/déficit), 3) **expliquer** par la compétitivité, la demande interne ou des facteurs particuliers (énergie). Nuancer : un déficit n’est pas toujours « mauvais »."
+        }
+      ]
+    }
+  ],
+  "eco-t9": [
+    {
+      "h": "📈 La croissance, le PIB et ses limites",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **croissance économique** est l’augmentation **durable** de la production de richesses d’un pays. On la mesure par la variation du **PIB (Produit Intérieur Brut)**, qui additionne toute la **valeur ajoutée** produite sur le territoire pendant une année."
+        },
+        {
+          "t": "formula",
+          "c": "Taux de croissance = ((PIB année N − PIB année N-1) ÷ PIB année N-1) × 100"
+        },
+        {
+          "t": "p",
+          "c": "Le PIB est un indicateur **puissant mais imparfait**. Il mesure ce qui se **vend**, mais ignore beaucoup de choses essentielles au bien-être — et compte parfois comme « richesse » ce qui n’en est pas."
+        },
+        {
+          "t": "list",
+          "c": [
+            "Il **ignore** le travail non marchand (bénévolat, travail domestique) et la production **gratuite**.",
+            "Il **ne dit rien** des **inégalités** : un PIB qui augmente peut cacher une richesse captée par une minorité.",
+            "Il **compte positivement** des activités néfastes : réparer les dégâts d’une catastrophe **augmente** le PIB.",
+            "Il **ignore l’épuisement** des ressources et la **dégradation** de l’environnement."
+          ]
+        },
+        {
+          "t": "warning",
+          "h": "« Le PIB ment-il ? »",
+          "c": "Le PIB mesure une **quantité** produite, pas la **qualité de vie** ni la **soutenabilité**. Une croissance forte peut s’accompagner d’une baisse du bien-être si elle détruit l’environnement ou creuse les inégalités."
+        }
+      ]
+    },
+    {
+      "h": "🌱 Le développement durable et ses trois piliers",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **développement durable** est « un développement qui répond aux besoins du présent **sans compromettre** la capacité des générations futures à répondre aux leurs » (rapport **Brundtland**, 1987). Il cherche à concilier **trois piliers** indissociables."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Pilier",
+            "Enjeu"
+          ],
+          "rows": [
+            [
+              "Économique",
+              "Produire des richesses, assurer la viabilité"
+            ],
+            [
+              "Social",
+              "Réduire les inégalités, garantir des conditions de vie dignes"
+            ],
+            [
+              "Environnemental",
+              "Préserver les ressources et les écosystèmes"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Il faut distinguer **croissance** (quantitatif : plus de production) et **développement** (qualitatif : amélioration durable des conditions de vie — santé, éducation, environnement). Une croissance qui détruit l’environnement ou creuse les inégalités n’est pas un vrai développement."
+        },
+        {
+          "t": "p",
+          "c": "Le débat oppose la **soutenabilité faible** (le capital naturel détruit peut être remplacé par du capital technique/humain — on peut « compenser ») et la **soutenabilité forte** (certaines ressources naturelles sont **irremplaçables** et doivent être **préservées** absolument)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "3 piliers : **économique, social, environnemental**. Croissance = quantité ; développement = qualité **durable**. Soutenabilité **faible** (compensable) vs **forte** (préservation)."
+        }
+      ]
+    },
+    {
+      "h": "🔄 Externalités et instruments pour la planète",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Les atteintes à l’environnement sont typiquement des **externalités négatives** : une pollution dont le coût n’est pas supporté par celui qui la produit, mais par la société. Le marché seul ne les corrige pas ; l’action publique dispose de plusieurs **instruments**."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Instrument",
+            "Principe",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Réglementation",
+              "Interdire ou fixer des normes",
+              "Normes anti-pollution, interdiction de produits"
+            ],
+            [
+              "Taxe (fiscalité verte)",
+              "Faire payer le pollueur (principe pollueur-payeur)",
+              "Taxe carbone"
+            ],
+            [
+              "Marché de quotas",
+              "Plafonner puis échanger des droits à polluer",
+              "Marché européen du carbone (ETS)"
+            ],
+            [
+              "Subvention",
+              "Encourager les comportements vertueux",
+              "Aide à la rénovation, au vélo"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La **taxe** (comme la taxe carbone) intègre le coût environnemental dans le prix : elle **incite** à moins polluer tout en dégageant des recettes. Le **marché de quotas** fixe un plafond global d’émissions et laisse les entreprises **échanger** des droits, ce qui oriente l’effort là où il coûte le moins cher. Ces instruments **économiques** complètent la **réglementation** classique."
+        },
+        {
+          "t": "example",
+          "h": "Illustration — la fast fashion",
+          "c": "Produire des vêtements très bon marché génère d’énormes coûts cachés (pollution, gaspillage d’eau, déchets) non payés par le vendeur ni l’acheteur : une **externalité négative** massive, que des taxes ou des normes pourraient internaliser."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Pollution = **externalité négative**. Instruments : **réglementation, taxe (pollueur-payeur), marché de quotas, subvention**. Les instruments économiques (taxe, quotas) agissent par le **prix**."
+        }
+      ]
+    },
+    {
+      "h": "🧭 Mesurer autrement : IDH et indicateurs alternatifs",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Puisque le PIB ne dit pas tout, des **indicateurs alternatifs** cherchent à mesurer le **développement** et le **bien-être** de façon plus complète."
+        },
+        {
+          "t": "p",
+          "c": "Le plus connu est l’**IDH (Indice de Développement Humain)**, créé par le PNUD. Il combine **trois dimensions** pour donner une note entre 0 et 1."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**La santé**, mesurée par l’**espérance de vie**.",
+            "**L’éducation**, mesurée par la durée de scolarisation.",
+            "**Le niveau de vie**, mesuré par le **revenu** par habitant."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "D’autres indicateurs vont plus loin : l’**empreinte écologique** (surface nécessaire pour soutenir un mode de vie), l’**indice de Gini** (mesure des inégalités), ou des indicateurs de **bien-être** subjectif. Aucun n’est parfait, mais **croiser plusieurs indicateurs** donne une image bien plus juste qu’un PIB seul."
+        },
+        {
+          "t": "example",
+          "h": "Comparaison",
+          "c": "Deux pays peuvent avoir un PIB par habitant proche mais un **IDH très différent** si l’un investit dans la santé et l’éducation et l’autre non. L’IDH révèle ce que le PIB masque."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "IDH = **santé + éducation + revenu** (entre 0 et 1). Pour juger le développement, **croiser** PIB, IDH, empreinte écologique et inégalités."
+        }
+      ]
+    },
+    {
+      "h": "💶 Exemple guidé — croissance et soutenabilité",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Le PIB d’un pays passe de 500 à 520 milliards € en un an, mais son empreinte écologique dépasse largement sa biocapacité et ses inégalités augmentent. Calculez la croissance et portez un jugement nuancé."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Taux de croissance",
+          "c": "Taux = ((520 − 500) ÷ 500) × 100 = (20 ÷ 500) × 100 = **+ 4 %**."
+        },
+        {
+          "t": "p",
+          "c": "**Étape 2 — Lecture économique.** Une croissance de +4 % est **soutenue** : la production de richesses augmente nettement, ce qui peut soutenir l’emploi et les recettes publiques."
+        },
+        {
+          "t": "p",
+          "c": "**Étape 3 — Jugement nuancé.** Mais cette croissance n’est **pas soutenable** : l’empreinte écologique dépasse la biocapacité (on épuise le capital naturel — logique de **soutenabilité forte** non respectée), et la hausse des **inégalités** signifie que la richesse profite inégalement. Le PIB progresse, mais le **développement durable**, lui, régresse. **Conclusion** : la croissance quantitative ne garantit ni le bien-être, ni l’avenir."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Calculer le taux, saluer l’aspect quantitatif, **puis** confronter aux **trois piliers** (social, environnemental) et à la **soutenabilité**. Un bon jugement est toujours **nuancé** : croissance ≠ développement durable."
+        }
+      ]
+    }
+  ]
+}

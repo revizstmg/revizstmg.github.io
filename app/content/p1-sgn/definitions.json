@@ -1,0 +1,114 @@
+{
+  "p1-sgn-t1": [
+    [
+      "Organisation",
+      "Groupe structuré d’acteurs coordonnant leurs actions vers un but commun."
+    ],
+    [
+      "Acteur",
+      "Individu ou groupe qui participe à la vie de l’organisation."
+    ],
+    [
+      "Statut",
+      "Position officielle d’un acteur dans l’organisation."
+    ],
+    [
+      "Rôle",
+      "Comportement attendu d’un acteur compte tenu de son statut."
+    ],
+    [
+      "Groupe",
+      "Ensemble de personnes en interaction partageant un objectif."
+    ],
+    [
+      "Communication",
+      "Échange d’informations entre les acteurs de l’organisation."
+    ],
+    [
+      "Identité numérique",
+      "Ensemble des traces et informations d’une personne sur Internet."
+    ]
+  ],
+  "p1-sgn-t2": [
+    [
+      "Donnée",
+      "Élément brut non interprété."
+    ],
+    [
+      "Information",
+      "Donnée traitée et porteuse de sens."
+    ],
+    [
+      "Connaissance",
+      "Information intégrée et mobilisable pour agir."
+    ],
+    [
+      "Système d’information",
+      "Dispositif qui collecte, stocke, traite et diffuse l’information."
+    ],
+    [
+      "PGI (ERP)",
+      "Progiciel intégré partageant une base de données unique entre services."
+    ],
+    [
+      "Big data",
+      "Traitement de très grands volumes de données variées et rapides."
+    ],
+    [
+      "Réseau social",
+      "Plateforme numérique reliant des individus et favorisant les échanges."
+    ]
+  ],
+  "p1-sgn-t3": [
+    [
+      "Valeur",
+      "Utilité perçue d’un bien ou service, source d’avantage pour l’organisation."
+    ],
+    [
+      "Valeur perçue",
+      "Valeur estimée par le client, qui justifie le prix accepté."
+    ],
+    [
+      "Performance",
+      "Atteinte des objectifs avec efficacité et efficience."
+    ],
+    [
+      "Indicateur",
+      "Mesure chiffrée servant à évaluer et piloter la performance."
+    ],
+    [
+      "Coût",
+      "Somme des charges liées à une activité ou à un produit."
+    ],
+    [
+      "Efficacité / efficience",
+      "Atteindre l’objectif / l’atteindre au moindre coût."
+    ]
+  ],
+  "p1-sgn-t4": [
+    [
+      "Risque",
+      "Événement incertain pouvant affecter l’activité de l’organisation."
+    ],
+    [
+      "Investissement",
+      "Dépense engagée aujourd’hui pour un gain futur."
+    ],
+    [
+      "Trésorerie",
+      "Ensemble des liquidités disponibles à court terme."
+    ],
+    [
+      "Cycle d’exploitation",
+      "Enchaînement achat → production → vente → encaissement."
+    ],
+    [
+      "Assurance",
+      "Mécanisme de couverture d’un risque contre une prime."
+    ],
+    [
+      "Amortissement",
+      "Étalement du coût d’un bien durable sur sa durée d’usage."
+    ]
+  ]
+}

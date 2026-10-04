@@ -1,0 +1,810 @@
+{
+  "math-c1": [
+    {
+      "h": "📊 Taux d’évolution et coefficient multiplicateur",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Un **taux d’évolution** mesure une variation **relative** (en pourcentage) entre une valeur de départ (**valeur initiale**, Vᵢ) et une valeur d’arrivée (**valeur finale**, V_f). C’est l’outil de base pour comparer des évolutions de tailles différentes."
+        },
+        {
+          "t": "formula",
+          "c": "Taux d’évolution : t = (V_f − V_i) ÷ V_i   (à convertir en %)"
+        },
+        {
+          "t": "p",
+          "c": "À chaque taux correspond un **coefficient multiplicateur (CM)** : le nombre par lequel on multiplie la valeur initiale pour obtenir la valeur finale. C’est souvent **plus rapide et plus sûr** que de manipuler les pourcentages."
+        },
+        {
+          "t": "formula",
+          "c": "CM = 1 + t   et   V_f = V_i × CM   donc   CM = V_f ÷ V_i"
+        },
+        {
+          "t": "table",
+          "head": [
+            "Évolution",
+            "Taux t",
+            "Coefficient multiplicateur"
+          ],
+          "rows": [
+            [
+              "+ 20 %",
+              "+0,20",
+              "1,20"
+            ],
+            [
+              "+ 5 %",
+              "+0,05",
+              "1,05"
+            ],
+            [
+              "− 30 %",
+              "−0,30",
+              "0,70"
+            ],
+            [
+              "− 100 %",
+              "−1",
+              "0"
+            ]
+          ]
+        },
+        {
+          "t": "example",
+          "h": "Exemple",
+          "c": "Un prix passe de 80 € à 100 €. CM = 100 ÷ 80 = 1,25 → t = 1,25 − 1 = 0,25 = **+ 25 %**."
+        },
+        {
+          "t": "warning",
+          "h": "Piège",
+          "c": "Une hausse de 20 % suivie d’une baisse de 20 % ne ramène **pas** au prix de départ : 1,20 × 0,80 = 0,96, soit **− 4 %** au total. Les pourcentages ne s’additionnent pas, les coefficients se **multiplient**."
+        }
+      ]
+    },
+    {
+      "h": "🔁 Évolutions successives et taux moyen",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Quand plusieurs évolutions **s’enchaînent**, on ne les additionne pas : on **multiplie leurs coefficients** pour obtenir le **coefficient global**."
+        },
+        {
+          "t": "formula",
+          "c": "CM global = CM₁ × CM₂ × … × CMₙ"
+        },
+        {
+          "t": "example",
+          "h": "Évolutions successives",
+          "c": "Un chiffre d’affaires augmente de 10 % puis de 30 %.\nCM global = 1,10 × 1,30 = 1,43 → soit une hausse **globale de + 43 %** (et non +40 %)."
+        },
+        {
+          "t": "p",
+          "c": "Le **taux moyen** répond à la question : « quelle évolution **identique**, répétée n fois, donnerait le même résultat global ? ». On cherche le coefficient moyen dont la puissance n-ième égale le coefficient global."
+        },
+        {
+          "t": "formula",
+          "c": "CM moyen = (CM global)^(1/n)   puis   t moyen = CM moyen − 1"
+        },
+        {
+          "t": "example",
+          "h": "Taux moyen",
+          "c": "Une population croît de 44 % en 2 ans. CM global = 1,44.\nCM moyen = 1,44^(1/2) = √1,44 = 1,20 → t moyen = **+ 20 % par an**.\nVérification : 1,20 × 1,20 = 1,44. ✓"
+        },
+        {
+          "t": "warning",
+          "h": "Piège",
+          "c": "Le taux moyen n’est **pas** la moyenne arithmétique des taux ! Pour +10 % puis +30 %, le taux moyen n’est pas 20 % : c’est √(1,10×1,30) − 1 ≈ **+ 19,6 %**."
+        }
+      ]
+    },
+    {
+      "h": "↩️ Taux réciproque et indice base 100",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **taux réciproque** est l’évolution qui **annule** une évolution donnée (pour revenir à la valeur de départ). Son coefficient est l’**inverse** du coefficient de départ."
+        },
+        {
+          "t": "formula",
+          "c": "CM réciproque = 1 ÷ CM   puis   t réciproque = CM réciproque − 1"
+        },
+        {
+          "t": "example",
+          "h": "Taux réciproque",
+          "c": "Un prix a augmenté de 25 % (CM = 1,25). Pour revenir au prix initial, il faut le multiplier par 1 ÷ 1,25 = 0,80, soit une baisse de **− 20 %** (et non −25 %)."
+        },
+        {
+          "t": "p",
+          "c": "Les **indices** permettent de suivre et comparer des évolutions en fixant une valeur de référence à **100**. L’indice d’une valeur se calcule par proportionnalité avec la valeur de référence."
+        },
+        {
+          "t": "formula",
+          "c": "Indice = (Valeur ÷ Valeur de référence) × 100"
+        },
+        {
+          "t": "example",
+          "h": "Indice base 100",
+          "c": "Base 2020 : un prix de 40 € en 2020 (indice 100) passe à 46 € en 2024.\nIndice 2024 = (46 ÷ 40) × 100 = 115 → le prix a augmenté de **15 %** entre 2020 et 2024."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un indice supérieur à 100 = hausse ; inférieur à 100 = baisse. L’écart de l’indice à 100 donne **directement** le pourcentage d’évolution depuis la base."
+        }
+      ]
+    },
+    {
+      "h": "🧮 Exercice type guidé + méthode",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Le loyer d’un studio est de 500 € en 2022. Il augmente de 4 % en 2023, puis de 6 % en 2024. Calculer le loyer en 2024, l’évolution globale et le taux annuel moyen."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Loyer 2024",
+          "c": "CM = 1,04 × 1,06 = 1,1024.\nLoyer 2024 = 500 × 1,1024 = **551,20 €**."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Évolution globale",
+          "c": "CM global = 1,1024 → t global = 0,1024 = **+ 10,24 %** entre 2022 et 2024."
+        },
+        {
+          "t": "example",
+          "h": "Étape 3 — Taux annuel moyen",
+          "c": "CM moyen = 1,1024^(1/2) = √1,1024 ≈ 1,04995.\nt moyen ≈ **+ 5,0 % par an**."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode « informations chiffrées »",
+          "c": "1) Traduire chaque évolution en **coefficient** (1 + t). 2) **Multiplier** les coefficients pour l’évolution globale. 3) Pour le taux moyen, prendre la **racine n-ième** du coefficient global. 4) Toujours **vérifier** l’ordre de grandeur et convertir en %."
+        },
+        {
+          "t": "warning",
+          "h": "Erreurs qui coûtent des points",
+          "c": "Additionner les pourcentages, oublier de repasser du coefficient au taux (CM − 1), ou confondre taux moyen et moyenne des taux."
+        }
+      ]
+    }
+  ],
+  "math-c2": [
+    {
+      "h": "🔢 Deux types de suites : arithmétique et géométrique",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une **suite** (uₙ) est une liste ordonnée de nombres, où chaque terme porte un **rang** n. On la définit souvent par **récurrence** : on donne le premier terme et une règle pour passer d’un terme au suivant. Deux modèles reviennent partout : l’arithmétique et la géométrique."
+        },
+        {
+          "t": "table",
+          "head": [
+            "",
+            "Arithmétique",
+            "Géométrique"
+          ],
+          "rows": [
+            [
+              "Passage au suivant",
+              "On ajoute une raison r",
+              "On multiplie par une raison q"
+            ],
+            [
+              "Récurrence",
+              "uₙ₊₁ = uₙ + r",
+              "uₙ₊₁ = uₙ × q"
+            ],
+            [
+              "Situation type",
+              "Évolution constante (+ 50 €/mois)",
+              "Évolution en pourcentage (+ 3 %/an)"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La différence fondamentale : dans une suite **arithmétique**, on **ajoute toujours le même nombre** (croissance **linéaire**) ; dans une suite **géométrique**, on **multiplie toujours par le même nombre** (croissance **exponentielle**). Une évolution en **pourcentage constant** est toujours **géométrique**."
+        },
+        {
+          "t": "tip",
+          "h": "Reconnaître",
+          "c": "Différence constante entre termes consécutifs → **arithmétique** (raison r = uₙ₊₁ − uₙ). Rapport constant entre termes consécutifs → **géométrique** (raison q = uₙ₊₁ ÷ uₙ)."
+        }
+      ]
+    },
+    {
+      "h": "📐 Terme général et somme",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **terme général** donne uₙ **directement** en fonction de n, sans calculer tous les termes précédents. C’est indispensable pour trouver un terme lointain (le 20ᵉ, le 100ᵉ)."
+        },
+        {
+          "t": "formula",
+          "c": "Arithmétique : uₙ = u₀ + n × r   (ou uₙ = u₁ + (n−1) × r)"
+        },
+        {
+          "t": "formula",
+          "c": "Géométrique : uₙ = u₀ × qⁿ   (ou uₙ = u₁ × q^(n−1))"
+        },
+        {
+          "t": "example",
+          "h": "Calcul d’un terme",
+          "c": "Arithmétique u₀ = 200, r = 15 : u₁₀ = 200 + 10 × 15 = **350**.\nGéométrique u₀ = 200, q = 1,05 : u₁₀ = 200 × 1,05¹⁰ ≈ **325,8**."
+        },
+        {
+          "t": "p",
+          "c": "On sait aussi **additionner** les premiers termes. Pour une suite **géométrique** de raison q ≠ 1, la somme des n premiers termes suit une formule très utile (calcul d’un capital, d’un cumul de ventes)."
+        },
+        {
+          "t": "formula",
+          "c": "Somme géométrique : S = u₀ × (1 − q^(n)) ÷ (1 − q)   (n = nombre de termes)"
+        },
+        {
+          "t": "warning",
+          "h": "Attention aux rangs",
+          "c": "Bien repérer si la suite commence à u₀ ou u₁ : cela change le « n » dans la formule du terme général. Compter le **nombre de pas** effectués depuis le premier terme."
+        }
+      ]
+    },
+    {
+      "h": "🧮 Exercice type guidé — arithmétique vs géométrique",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Deux placements de 1 000 €. Placement A : + 60 € chaque année. Placement B : + 5 % chaque année. Comparer leur valeur au bout de 10 ans."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Modéliser",
+          "c": "Placement A → suite **arithmétique** : a₀ = 1000, r = 60.\nPlacement B → suite **géométrique** : b₀ = 1000, q = 1,05."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Valeur à 10 ans",
+          "c": "A : a₁₀ = 1000 + 10 × 60 = **1 600 €**.\nB : b₁₀ = 1000 × 1,05¹⁰ ≈ 1000 × 1,6289 ≈ **1 628,90 €**."
+        },
+        {
+          "t": "p",
+          "c": "**Étape 3 — Interprétation.** Sur 10 ans, le placement **géométrique** (B) dépasse légèrement l’arithmétique (A). Surtout, l’écart **s’accentue avec le temps** : la croissance en pourcentage (géométrique) finit toujours par l’emporter sur une croissance à montant fixe (arithmétique). C’est la puissance des **intérêts composés**."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode « suites »",
+          "c": "1) **Identifier** le type (différence constante ? rapport constant ?). 2) Écrire la **récurrence** et le **terme général**. 3) Calculer le terme demandé avec la formule (pas terme par terme). 4) **Comparer/interpréter** en une phrase."
+        }
+      ]
+    }
+  ],
+  "math-c3": [
+    {
+      "h": "📈 Nombre dérivé et tangente",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **nombre dérivé** de f en a, noté **f ′(a)**, est le **coefficient directeur de la tangente** à la courbe au point d’abscisse a. Autrement dit, il mesure la **pente** de la courbe à cet endroit : la vitesse à laquelle f varie autour de a."
+        },
+        {
+          "t": "p",
+          "c": "La **tangente** est la droite qui « épouse » la courbe au point A(a ; f(a)). Son équation se déduit directement du nombre dérivé."
+        },
+        {
+          "t": "formula",
+          "c": "Équation de la tangente en a : y = f ′(a) × (x − a) + f(a)"
+        },
+        {
+          "t": "p",
+          "c": "La **fonction dérivée** f ′ associe à chaque x le nombre dérivé en ce point. On la calcule avec des **formules** à connaître par cœur."
+        },
+        {
+          "t": "table",
+          "head": [
+            "f(x)",
+            "f ′(x)"
+          ],
+          "rows": [
+            [
+              "k (constante)",
+              "0"
+            ],
+            [
+              "x",
+              "1"
+            ],
+            [
+              "x²",
+              "2x"
+            ],
+            [
+              "xⁿ",
+              "n·xⁿ⁻¹"
+            ],
+            [
+              "1/x",
+              "−1/x²"
+            ],
+            [
+              "k·u(x)",
+              "k·u ′(x)"
+            ]
+          ]
+        },
+        {
+          "t": "example",
+          "h": "Calcul",
+          "c": "f(x) = 3x² − 5x + 2. Alors f ′(x) = 6x − 5.\nEn a = 1 : f ′(1) = 1 (pente) et f(1) = 0 → tangente : y = 1(x − 1) + 0 = **x − 1**."
+        }
+      ]
+    },
+    {
+      "h": "📉 Du signe de la dérivée aux variations",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La dérivée est l’outil roi pour étudier les **variations** d’une fonction. La règle fondamentale relie le **signe de f ′** au sens de variation de f."
+        },
+        {
+          "t": "list",
+          "c": [
+            "Si **f ′(x) > 0** sur un intervalle → f est **croissante** sur cet intervalle.",
+            "Si **f ′(x) < 0** sur un intervalle → f est **décroissante** sur cet intervalle.",
+            "Si **f ′(x) = 0** et que f ′ **change de signe** → f admet un **extremum** (maximum ou minimum) en ce point."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Étudier les variations, c’est donc : calculer f ′, **étudier son signe**, puis dresser le **tableau de variations**. Un maximum correspond à un passage de f ′ du **positif au négatif** ; un minimum, du **négatif au positif**."
+        },
+        {
+          "t": "example",
+          "h": "Optimisation",
+          "c": "f(x) = −x² + 4x (bénéfice selon la quantité x).\nf ′(x) = −2x + 4. f ′(x) = 0 pour x = 2. f ′ passe de + à − → **maximum** en x = 2.\nBénéfice maximal : f(2) = −4 + 8 = **4**."
+        },
+        {
+          "t": "tip",
+          "h": "Lien avec la gestion",
+          "c": "La dérivée sert à **optimiser** : trouver la quantité qui **maximise le bénéfice** ou **minimise le coût**. On cherche là où f ′ s’annule en changeant de signe."
+        }
+      ]
+    },
+    {
+      "h": "🧮 Exercice type guidé — dérivée et optimisation",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Le bénéfice (en milliers €) d’une entreprise selon la quantité x (en centaines d’unités) est B(x) = −x² + 10x − 16, pour x ∈ [0 ; 10]. Déterminer la quantité qui maximise le bénéfice et ce bénéfice."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Dérivée",
+          "c": "B ′(x) = −2x + 10."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Signe de la dérivée",
+          "c": "B ′(x) = 0 ⇔ −2x + 10 = 0 ⇔ x = 5.\nB ′(x) > 0 pour x < 5 (croissant) ; B ′(x) < 0 pour x > 5 (décroissant)."
+        },
+        {
+          "t": "example",
+          "h": "Étape 3 — Maximum",
+          "c": "B ′ passe de + à − en x = 5 → **maximum** en x = 5.\nB(5) = −25 + 50 − 16 = **9**, soit **9 000 €** pour **500 unités**."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode « étude de fonction »",
+          "c": "1) Calculer **f ′(x)**. 2) Résoudre **f ′(x) = 0** et étudier son **signe**. 3) Dresser le **tableau de variations**. 4) Répondre à la question concrète (extremum, tangente) avec **unités**."
+        }
+      ]
+    }
+  ],
+  "math-c4": [
+    {
+      "h": "☁️ Nuage de points et ajustement affine",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "On étudie ici le **lien entre deux variables** (par exemple : le budget publicitaire et le chiffre d’affaires). Chaque couple de valeurs (xᵢ ; yᵢ) donne un **point** ; l’ensemble forme un **nuage de points**."
+        },
+        {
+          "t": "p",
+          "c": "Si les points sont **approximativement alignés**, on peut résumer le nuage par une **droite d’ajustement** (ou droite de régression) d’équation **y = a x + b**, obtenue par la méthode des **moindres carrés** (à la calculatrice en STMG). Elle permet de **modéliser** la relation et de **prévoir**."
+        },
+        {
+          "t": "p",
+          "c": "Cette droite passe toujours par le **point moyen G** du nuage, de coordonnées les moyennes de x et de y."
+        },
+        {
+          "t": "formula",
+          "c": "Point moyen : G ( x̄ ; ȳ )   où x̄ et ȳ sont les moyennes"
+        },
+        {
+          "t": "tip",
+          "h": "Avec la calculatrice",
+          "c": "On saisit les données dans deux listes, puis on utilise la fonction de **régression linéaire** (a x + b) : la calculatrice donne directement **a** (pente) et **b** (ordonnée à l’origine)."
+        }
+      ]
+    },
+    {
+      "h": "🔮 Interpoler, extrapoler et interpréter",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une fois l’équation **y = a x + b** obtenue, on l’utilise pour **estimer** une valeur de y correspondant à une valeur de x. On distingue deux situations."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Interpolation** : estimer une valeur **à l’intérieur** de la plage des données observées. Généralement **fiable**.",
+            "**Extrapolation** : estimer une valeur **au-delà** des données observées (prévoir le futur). **Plus risquée** : on suppose que la tendance se poursuit, ce qui n’est pas garanti."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le **coefficient a** s’interprète concrètement : c’est la variation de y quand x **augmente de 1**. Le **coefficient b** est la valeur de y quand x = 0. Toujours donner le **sens réel** de ces nombres dans le contexte de l’énoncé."
+        },
+        {
+          "t": "example",
+          "h": "Prévision",
+          "c": "Ajustement CA = 2,5 x + 40 (x = budget pub en k€, CA en k€).\nPour x = 20 : CA ≈ 2,5 × 20 + 40 = **90 k€**.\nInterprétation de a = 2,5 : chaque 1 000 € de pub supplémentaire rapporte **2 500 €** de CA."
+        },
+        {
+          "t": "warning",
+          "h": "Piège",
+          "c": "L’ajustement n’est valable **que si les points sont bien alignés**. Extrapoler très loin (x = 1000 alors que les données vont jusqu’à 30) donne un résultat **peu fiable** : à signaler dans la copie."
+        }
+      ]
+    },
+    {
+      "h": "🧮 Exercice type guidé — ajustement et prévision",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** On relève le nombre d’abonnés y (en milliers) d’un service selon l’année de rang x. La calculatrice donne l’ajustement affine y = 8x + 25. Prévoir le nombre d’abonnés pour x = 12 et interpréter la pente."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Prévision",
+          "c": "Pour x = 12 : y = 8 × 12 + 25 = 96 + 25 = **121 milliers d’abonnés**."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Interprétation de a",
+          "c": "a = 8 : chaque année, le service gagne en moyenne **8 000 abonnés** (la pente est le rythme de croissance annuel)."
+        },
+        {
+          "t": "p",
+          "c": "**Étape 3 — Regard critique.** La prévision suppose que la **tendance linéaire se poursuit**. Si x = 12 dépasse largement les données observées, c’est une **extrapolation** à prendre avec prudence (saturation possible du marché). Une prévision n’est jamais une certitude."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode « stats 2 variables »",
+          "c": "1) (Éventuellement) tracer le nuage et vérifier l’**alignement**. 2) Obtenir **y = a x + b** à la calculatrice. 3) **Remplacer** x pour prévoir. 4) **Interpréter** a et b dans le contexte, et signaler si l’on **extrapole**."
+        }
+      ]
+    }
+  ],
+  "math-c5": [
+    {
+      "h": "🌳 Probabilité conditionnelle et arbre pondéré",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une **probabilité conditionnelle** est la probabilité d’un événement B **sachant que** l’événement A est déjà réalisé. On la note **P_A(B)** (« probabilité de B sachant A »). Elle traduit l’idée qu’une information (A) modifie la probabilité de B."
+        },
+        {
+          "t": "formula",
+          "c": "P_A(B) = P(A ∩ B) ÷ P(A)   (avec P(A) ≠ 0)"
+        },
+        {
+          "t": "p",
+          "c": "L’**arbre pondéré** est l’outil visuel central. Chaque **branche** porte une probabilité. Deux **règles d’or** permettent de tout calculer."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Règle du produit** : la probabilité d’un **chemin** (une suite de branches) est le **produit** des probabilités rencontrées le long du chemin.",
+            "**Règle de la somme** : la somme des probabilités des branches **partant d’un même nœud** vaut **1**."
+          ]
+        },
+        {
+          "t": "example",
+          "h": "Lecture d’un chemin",
+          "c": "Si P(A) = 0,6 et P_A(B) = 0,3, alors P(A ∩ B) = P(A) × P_A(B) = 0,6 × 0,3 = **0,18** (produit le long du chemin A puis B)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Sur un arbre : on **multiplie** le long d’un chemin, on **additionne** les chemins qui mènent au même résultat. Les branches issues d’un nœud somment à 1."
+        }
+      ]
+    },
+    {
+      "h": "➕ Formule des probabilités totales",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Quand un événement B peut être atteint par **plusieurs chemins** (via A ou via son contraire Ā), sa probabilité est la **somme** des probabilités de ces chemins : c’est la **formule des probabilités totales**."
+        },
+        {
+          "t": "formula",
+          "c": "P(B) = P(A ∩ B) + P(Ā ∩ B) = P(A)×P_A(B) + P(Ā)×P_Ā(B)"
+        },
+        {
+          "t": "p",
+          "c": "Concrètement, on **repère tous les chemins de l’arbre qui aboutissent à B**, on calcule la probabilité de chacun (produit), puis on les **additionne**. C’est la question la plus fréquente au bac sur ce chapitre."
+        },
+        {
+          "t": "example",
+          "h": "Application",
+          "c": "Une usine a 2 machines. A fabrique 60 % des pièces avec 2 % de défauts ; l’autre (Ā) 40 % avec 5 % de défauts.\nP(défaut) = 0,60 × 0,02 + 0,40 × 0,05 = 0,012 + 0,020 = **0,032** (soit 3,2 %)."
+        },
+        {
+          "t": "p",
+          "c": "On peut ensuite « **remonter** » l’arbre avec la formule conditionnelle : par exemple, sachant qu’une pièce est défectueuse, quelle est la probabilité qu’elle vienne de A ? P_défaut(A) = P(A ∩ défaut) ÷ P(défaut) = 0,012 ÷ 0,032 = **0,375**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Probabilités totales = **somme de tous les chemins** menant à l’événement. Pour une « probabilité inversée » (remonter à la cause), utiliser P_B(A) = P(A ∩ B) ÷ P(B)."
+        }
+      ]
+    },
+    {
+      "h": "🔗 Indépendance de deux événements",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Deux événements sont **indépendants** lorsque la réalisation de l’un **ne change pas** la probabilité de l’autre. Savoir que A s’est produit n’apporte alors aucune information sur B."
+        },
+        {
+          "t": "formula",
+          "c": "A et B indépendants  ⇔  P(A ∩ B) = P(A) × P(B)   ⇔  P_A(B) = P(B)"
+        },
+        {
+          "t": "example",
+          "h": "Test d’indépendance",
+          "c": "P(A) = 0,5 ; P(B) = 0,4 ; P(A ∩ B) = 0,2.\nP(A) × P(B) = 0,5 × 0,4 = 0,2 = P(A ∩ B) → A et B sont **indépendants**.\nSi l’on avait trouvé P(A ∩ B) ≠ 0,2, ils seraient **dépendants**."
+        },
+        {
+          "t": "warning",
+          "h": "Ne pas confondre",
+          "c": "**Indépendants** (P(A∩B) = P(A)×P(B)) ≠ **incompatibles** (P(A∩B) = 0, ils ne peuvent se produire ensemble). Deux événements incompatibles de probabilités non nulles sont au contraire **dépendants** !"
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Pour prouver l’indépendance, **comparer** P(A ∩ B) avec le **produit** P(A) × P(B). Égalité → indépendants."
+        }
+      ]
+    },
+    {
+      "h": "🧮 Exercice type guidé — arbre et probabilité conditionnelle",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** 70 % des élèves d’une classe sont en spé Gestion (G), les autres en autre spé (Ḡ). 80 % des « G » sont inscrits à un tutorat, contre 40 % des « Ḡ ». On choisit un élève au hasard."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Arbre",
+          "c": "P(G) = 0,7 ; P_G(T) = 0,8 ; P(Ḡ) = 0,3 ; P_Ḡ(T) = 0,4 (T = « inscrit au tutorat »)."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Probabilité d’être en G ET au tutorat",
+          "c": "P(G ∩ T) = 0,7 × 0,8 = **0,56** (produit le long du chemin)."
+        },
+        {
+          "t": "example",
+          "h": "Étape 3 — Probabilité d’être au tutorat (totales)",
+          "c": "P(T) = 0,7 × 0,8 + 0,3 × 0,4 = 0,56 + 0,12 = **0,68**."
+        },
+        {
+          "t": "example",
+          "h": "Étape 4 — Probabilité inversée",
+          "c": "Sachant qu’un élève est au tutorat, probabilité qu’il soit en G :\nP_T(G) = P(G ∩ T) ÷ P(T) = 0,56 ÷ 0,68 ≈ **0,82**."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode « probas »",
+          "c": "1) **Construire l’arbre** avec toutes les probabilités. 2) **Produit** le long des chemins pour les intersections. 3) **Somme** des chemins pour un événement (probabilités totales). 4) Pour « remonter », diviser l’intersection par la probabilité totale."
+        }
+      ]
+    }
+  ],
+  "math-c6": [
+    {
+      "h": "🎯 L’épreuve et le schéma de Bernoulli",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une **épreuve de Bernoulli** est une expérience à **deux issues** seulement : le **succès** (de probabilité p) et l’**échec** (de probabilité 1 − p). Exemples : pile ou face, une pièce « conforme ou défectueuse », un client « qui achète ou non »."
+        },
+        {
+          "t": "p",
+          "c": "Un **schéma de Bernoulli** consiste à **répéter n fois**, de façon **identique et indépendante**, la même épreuve de Bernoulli. C’est la situation modélisée par la loi binomiale."
+        },
+        {
+          "t": "list",
+          "c": [
+            "Les **conditions** à vérifier : (1) chaque épreuve n’a que **deux issues** ; (2) les épreuves sont **indépendantes** ; (3) la probabilité de succès **p reste constante** ; (4) on répète **n fois**.",
+            "La variable aléatoire **X** compte alors le **nombre de succès** parmi les n épreuves."
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Avant d’utiliser la loi binomiale, **justifier** que l’on est bien dans un schéma de Bernoulli : n répétitions **indépendantes**, **deux issues**, **p constant**. C’est souvent la première question notée."
+        }
+      ]
+    },
+    {
+      "h": "📊 La loi binomiale B(n ; p)",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Si X compte le nombre de succès dans un schéma de Bernoulli à **n** épreuves de probabilité de succès **p**, alors X suit la **loi binomiale de paramètres n et p**, notée **X ~ B(n ; p)**."
+        },
+        {
+          "t": "formula",
+          "c": "P(X = k) = C(n, k) × pᵏ × (1 − p)ⁿ⁻ᵏ   pour k = 0, 1, …, n"
+        },
+        {
+          "t": "p",
+          "c": "Le coefficient **C(n, k)** (« combinaison de k parmi n ») compte le nombre de façons d’obtenir k succès parmi n épreuves. En STMG, on calcule **P(X = k)**, **P(X ≤ k)** et **P(X ≥ k)** à la **calculatrice** (fonctions binomFdp / binomFRép)."
+        },
+        {
+          "t": "p",
+          "c": "L’**espérance** E(X) donne le nombre **moyen** de succès attendu sur un grand nombre de répétitions : c’est un résultat très intuitif et souvent demandé."
+        },
+        {
+          "t": "formula",
+          "c": "Espérance : E(X) = n × p     Écart-type : σ(X) = √( n × p × (1 − p) )"
+        },
+        {
+          "t": "example",
+          "h": "Espérance",
+          "c": "On lance 50 fois une pièce (p = 0,5). Nombre moyen de « face » : E(X) = 50 × 0,5 = **25**."
+        },
+        {
+          "t": "warning",
+          "h": "Traduire les énoncés",
+          "c": "« au moins k succès » → P(X ≥ k) = 1 − P(X ≤ k − 1). « au plus k » → P(X ≤ k). « exactement k » → P(X = k). Bien traduire est la clé."
+        }
+      ]
+    },
+    {
+      "h": "🧮 Exercice type guidé — loi binomiale",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Une machine produit des pièces dont **5 %** sont défectueuses. On prélève un échantillon de **n = 20** pièces (production assez grande pour supposer l’indépendance). X = nombre de pièces défectueuses."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Modéliser",
+          "c": "Deux issues (défectueuse/conforme), n = 20 répétitions indépendantes, p = 0,05 constant → **X ~ B(20 ; 0,05)**."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Espérance",
+          "c": "E(X) = n × p = 20 × 0,05 = **1** pièce défectueuse en moyenne par échantillon."
+        },
+        {
+          "t": "example",
+          "h": "Étape 3 — Une probabilité (calculatrice)",
+          "c": "P(X = 0) = 0,95²⁰ ≈ **0,358** : environ 36 % des échantillons ne contiennent **aucune** pièce défectueuse.\nP(X ≥ 1) = 1 − P(X = 0) ≈ 1 − 0,358 = **0,642**."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode « binomiale »",
+          "c": "1) **Vérifier** les conditions du schéma de Bernoulli et écrire **X ~ B(n ; p)**. 2) **Traduire** la question (=, ≤, ≥). 3) **Calculatrice** pour la probabilité. 4) Donner **E(X) = np** si demandé et **interpréter**."
+        }
+      ]
+    }
+  ],
+  "math-c7": [
+    {
+      "h": "🔔 La loi normale : la courbe en cloche",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **loi normale** modélise de nombreux phénomènes « naturels » qui se répartissent **autour d’une valeur centrale** : tailles, poids, erreurs de mesure, durées. Sa représentation est la célèbre **courbe en cloche**, symétrique autour de la moyenne."
+        },
+        {
+          "t": "p",
+          "c": "Elle dépend de **deux paramètres** : la **moyenne μ** (centre de la cloche, axe de symétrie) et l’**écart-type σ** (dispersion : plus σ est grand, plus la cloche est **large et aplatie**). On note **X ~ N(μ ; σ)**."
+        },
+        {
+          "t": "p",
+          "c": "Une probabilité **P(a ≤ X ≤ b)** correspond à l’**aire sous la courbe** entre a et b. En STMG, on la calcule à la **calculatrice** (fonction normalFRép). L’aire totale sous la courbe vaut **1**."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Intervalle autour de μ",
+            "Probabilité ≈"
+          ],
+          "rows": [
+            [
+              "[ μ − σ ; μ + σ ]",
+              "0,68 (68 %)"
+            ],
+            [
+              "[ μ − 2σ ; μ + 2σ ]",
+              "0,95 (95 %)"
+            ],
+            [
+              "[ μ − 3σ ; μ + 3σ ]",
+              "0,997 (99,7 %)"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Courbe **symétrique** autour de μ : P(X ≤ μ) = P(X ≥ μ) = **0,5**. Les « plages » 68 % / 95 % / 99,7 % (règle empirique) sont à connaître."
+        }
+      ]
+    },
+    {
+      "h": "📏 Estimation et intervalle de confiance",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "On veut souvent **estimer** une proportion **inconnue** dans une population (le vrai taux de votants, de clients satisfaits…) à partir d’un **échantillon**. La proportion observée dans l’échantillon, notée **f** (fréquence), est une **estimation** de cette proportion."
+        },
+        {
+          "t": "p",
+          "c": "Comme un échantillon donne un résultat un peu différent à chaque fois, on ne donne pas une valeur unique mais un **intervalle de confiance** : une fourchette qui contient la vraie proportion avec un niveau de confiance de **95 %**."
+        },
+        {
+          "t": "formula",
+          "c": "Intervalle de confiance à 95 % :  [ f − 1/√n  ;  f + 1/√n ]"
+        },
+        {
+          "t": "p",
+          "c": "Deux idées clés. D’une part, la **largeur** de l’intervalle est 2/√n : plus l’échantillon est **grand** (n élevé), plus l’intervalle est **étroit** et l’estimation **précise**. D’autre part, « 95 % de confiance » signifie que la méthode donne un intervalle **contenant la vraie valeur** dans 95 % des cas."
+        },
+        {
+          "t": "example",
+          "h": "Calcul",
+          "c": "Sur n = 400 clients, f = 0,60 se disent satisfaits.\n1/√400 = 1/20 = 0,05.\nIntervalle : [0,60 − 0,05 ; 0,60 + 0,05] = **[0,55 ; 0,65]**.\nOn estime le taux réel de satisfaction entre **55 % et 65 %** (confiance 95 %)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Intervalle = **f ± 1/√n**. Amplitude = **2/√n**. Pour **diviser l’amplitude par 2**, il faut **multiplier n par 4** (car √n au dénominateur)."
+        }
+      ]
+    },
+    {
+      "h": "🧮 Exercice type guidé — loi normale et estimation",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** (A) La masse des paquets de café suit X ~ N(250 ; 4) (en grammes). Quelle proportion de paquets pèse entre 246 g et 254 g ? (B) Un sondage sur 625 personnes donne 52 % d’intentions favorables : donner l’intervalle de confiance à 95 %."
+        },
+        {
+          "t": "example",
+          "h": "Partie A — loi normale",
+          "c": "μ = 250, σ = 4. L’intervalle [246 ; 254] = [μ − σ ; μ + σ] → probabilité ≈ **0,68**.\nEnviron **68 %** des paquets pèsent entre 246 g et 254 g."
+        },
+        {
+          "t": "example",
+          "h": "Partie B — intervalle de confiance",
+          "c": "n = 625, f = 0,52. 1/√625 = 1/25 = 0,04.\nIntervalle : [0,52 − 0,04 ; 0,52 + 0,04] = **[0,48 ; 0,56]**."
+        },
+        {
+          "t": "p",
+          "c": "**Interprétation de B.** La vraie proportion d’intentions favorables est estimée entre **48 % et 56 %** avec 95 % de confiance. Comme l’intervalle **contient 50 %**, on ne peut pas affirmer que la majorité est favorable : le résultat n’est **pas significatif**."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode « normale / estimation »",
+          "c": "Loi normale → identifier **μ et σ**, reconnaître les plages 68/95/99,7 % ou utiliser la **calculatrice**. Estimation → **f ± 1/√n**, puis **interpréter** l’intervalle (précision, franchissement d’un seuil comme 50 %)."
+        }
+      ]
+    }
+  ]
+}

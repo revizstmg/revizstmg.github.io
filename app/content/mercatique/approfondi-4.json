@@ -1,0 +1,301 @@
+{
+  "mkg-t1": [
+    {
+      "h": "🧾 Mémo — les notions clés du consommateur",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Besoin",
+              "Sensation de manque (Maslow : 5 niveaux)"
+            ],
+            [
+              "Motivation / mobile",
+              "Force qui pousse à l’achat (hédoniste, oblatif, auto-expression)"
+            ],
+            [
+              "Frein",
+              "Force qui retient (peur, risque, inhibition)"
+            ],
+            [
+              "Attente",
+              "Ce que le client espère précisément"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un achat = équilibre **mobiles** (pousser) / **freins** (retenir). Le marketing renforce les uns et lève les autres."
+        }
+      ]
+    },
+    {
+      "h": "🧑‍💼 Étude de cas — analyser un comportement d’achat",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Une cliente hésite longuement puis achète une voiture électrique plus chère qu’une thermique équivalente. Analysez."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Besoins et mobiles",
+          "c": "Besoin de mobilité, mais aussi d’**estime** et mobile **d’auto-expression** (image écologique, valeurs)."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Freins",
+          "c": "Frein **financier** (prix élevé) et frein **risque** (autonomie, recharge), qui expliquent l’hésitation."
+        },
+        {
+          "t": "p",
+          "c": "**Conclusion.** Le vendeur doit **lever les freins** (aides à l’achat, garantie batterie, démonstration de l’autonomie) et **renforcer les mobiles** (valeurs, économies à l’usage). C’est un **achat réfléchi**."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Identifier besoin → mobiles → freins → montrer comment la mercatique agit dessus."
+        }
+      ]
+    }
+  ],
+  "mkg-t2": [
+    {
+      "h": "📐 Calculer et interpréter une part de marché",
+      "blocks": [
+        {
+          "t": "formula",
+          "c": "Part de marché (%) = Ventes de l’entreprise ÷ Ventes totales du marché × 100"
+        },
+        {
+          "t": "example",
+          "h": "Exemple",
+          "c": "Ventes 4,5 M€ ; marché 30 M€ → 4,5 ÷ 30 × 100 = **15 %**. L’entreprise détient 15 % du marché."
+        },
+        {
+          "t": "p",
+          "c": "La **part de marché relative** compare l’entreprise au **leader** : elle situe la position concurrentielle."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Part de marché = poids sur le marché total ; part **relative** = face au leader."
+        }
+      ]
+    },
+    {
+      "h": "🧭 Le positionnement : la carte perceptuelle",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **positionnement** est l’image que l’entreprise veut occuper dans l’esprit du client, par rapport aux concurrents. On le visualise avec une **carte perceptuelle** (deux axes, ex. prix et qualité)."
+        },
+        {
+          "t": "p",
+          "c": "Un bon positionnement est **clair, distinctif et crédible** : il répond à « pourquoi me choisir plutôt qu’un autre ? ». Il oriente ensuite tout le **mix**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Positionner = choisir une **place distinctive**. La carte perceptuelle montre les espaces libres face aux concurrents."
+        }
+      ]
+    },
+    {
+      "h": "🧑‍💼 Étude de cas — segmenter, cibler, positionner",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Une marque de cosmétiques veut lancer une gamme. Appliquez la démarche SCP."
+        },
+        {
+          "t": "example",
+          "h": "SCP",
+          "c": "**Segmenter** (âge, valeurs, budget) → **Cibler** un segment porteur (jeunes adultes, produits naturels) → **Positionner** (« cosmétique naturel et accessible »)."
+        },
+        {
+          "t": "p",
+          "c": "**Conclusion.** Cibler plutôt que viser « tout le monde » ; décliner le positionnement dans tout le mix (produit bio, prix moyen, distribution sélective, communication authentique)."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Toujours **Segmenter → Cibler → Positionner**, puis vérifier la cohérence avec le mix."
+        }
+      ]
+    }
+  ],
+  "mkg-t3": [
+    {
+      "h": "🏷️ La politique de produit",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **produit** se gère sur plusieurs plans : la **gamme** (ensemble des produits, largeur et profondeur), la **marque** (nom, logo, image), et le **cycle de vie**."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Phase du cycle de vie",
+            "Enjeu"
+          ],
+          "rows": [
+            [
+              "Lancement",
+              "Faire connaître, investir"
+            ],
+            [
+              "Croissance",
+              "Gagner des parts de marché"
+            ],
+            [
+              "Maturité",
+              "Fidéliser, se différencier"
+            ],
+            [
+              "Déclin",
+              "Relancer ou retirer"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un produit **naît, grandit, mûrit et décline** : la stratégie s’adapte à chaque phase."
+        }
+      ]
+    },
+    {
+      "h": "🚚 La politique de distribution",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **distribution** amène le produit au client via des **circuits** : **direct** (sans intermédiaire), **court** (un intermédiaire), **long** (plusieurs)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Intensité",
+            "Principe",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Intensive",
+              "Partout, un maximum de points de vente",
+              "Boissons, snacks"
+            ],
+            [
+              "Sélective",
+              "Points de vente choisis",
+              "Cosmétiques, électroménager"
+            ],
+            [
+              "Exclusive",
+              "Très peu de distributeurs",
+              "Luxe, automobile haut de gamme"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le choix du circuit et de l’intensité doit être **cohérent** avec le positionnement (le luxe ne se vend pas partout)."
+        }
+      ]
+    },
+    {
+      "h": "📣 La politique de communication",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **communication** fait connaître et aimer le produit. On distingue les moyens **média** (TV, radio, presse, affichage, internet) et **hors-média** (promotion des ventes, relations publiques, marketing direct, réseaux sociaux, influence)."
+        },
+        {
+          "t": "p",
+          "c": "La communication **commerciale** vise à vendre un produit ; la communication **institutionnelle** valorise l’image de l’entreprise."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Média (grand public) vs hors-média (ciblé). Aujourd’hui, **réseaux sociaux** et **influence** pèsent souvent plus que la pub classique."
+        }
+      ]
+    }
+  ],
+  "mkg-t4": [
+    {
+      "h": "📱 Marketing digital et réseaux sociaux",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **marketing digital** utilise le web, les applications et les réseaux sociaux pour toucher, engager et fidéliser les clients. Il permet un **ciblage précis** et une **mesure en temps réel** (taux de clic, de conversion)."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Référencement** (SEO/SEA) : être visible sur les moteurs de recherche.",
+            "**Réseaux sociaux** : communauté, contenu, influence.",
+            "**E-mailing / marketing direct** : messages ciblés."
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le digital = **ciblage** + **mesure** + **interactivité**. Le parcours client est devenu **omnicanal**."
+        }
+      ]
+    },
+    {
+      "h": "🔒 Données personnelles et RGPD (méthode)",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Exploiter les **données** clients est puissant mais encadré par le **RGPD**. Avant toute collecte, se poser les bonnes questions."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Finalité** : pour quel but précis ?",
+            "**Consentement** : la personne a-t-elle accepté ?",
+            "**Minimisation** : ne collecter que le nécessaire.",
+            "**Droits** : accès, rectification, effacement."
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Data = atout **et** responsabilité. Un usage **transparent et consenti** renforce la confiance ; le non-respect du RGPD expose à des sanctions."
+        }
+      ]
+    },
+    {
+      "h": "🌱 Étude de cas — marketing responsable",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Une marque de vêtements accusée de « fast fashion » veut redorer son image. Que proposer ?"
+        },
+        {
+          "t": "example",
+          "h": "Analyse",
+          "c": "Risque de **greenwashing** si la communication verte n’est pas suivie d’actes. Il faut des **preuves** : matières recyclées, reprise des vêtements, transparence, label."
+        },
+        {
+          "t": "p",
+          "c": "**Conclusion.** Une mercatique **responsable sincère** peut devenir un **avantage concurrentiel** ; un greenwashing découvert détruit la confiance."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Distinguer démarche **sincère** (prouvée) et **greenwashing** (façade). La e-réputation se surveille."
+        }
+      ]
+    }
+  ]
+}

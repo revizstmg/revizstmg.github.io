@@ -1,0 +1,106 @@
+{
+  "p1-fr-1": [
+    [
+      "Commentaire littéraire",
+      "Analyse organisée d’un texte montrant comment il produit du sens."
+    ],
+    [
+      "Problématique",
+      "Question centrale qui oriente l’analyse du texte."
+    ],
+    [
+      "Axe de lecture",
+      "Grande idée directrice organisant une partie du commentaire."
+    ],
+    [
+      "Procédé littéraire",
+      "Moyen d’écriture produisant un effet (figure de style, rythme, ponctuation)."
+    ],
+    [
+      "Figure de style",
+      "Écart expressif du langage (métaphore, antithèse, hyperbole)."
+    ],
+    [
+      "Champ lexical",
+      "Ensemble de mots se rapportant à un même thème."
+    ]
+  ],
+  "p1-fr-2": [
+    [
+      "Contraction de texte",
+      "Résumé fidèle réduisant un texte à un nombre de mots imposé."
+    ],
+    [
+      "Essai",
+      "Réflexion argumentée et personnelle sur une question posée."
+    ],
+    [
+      "Thèse",
+      "Idée principale défendue par l’auteur ou par le candidat."
+    ],
+    [
+      "Argument",
+      "Raison qui appuie une thèse."
+    ],
+    [
+      "Reformulation",
+      "Redire une idée avec ses propres mots, sans la déformer."
+    ],
+    [
+      "Connecteur logique",
+      "Mot de liaison structurant le raisonnement (donc, cependant, ainsi)."
+    ]
+  ],
+  "p1-fr-3": [
+    [
+      "Roman",
+      "Récit de fiction en prose développant personnages et intrigue."
+    ],
+    [
+      "Théâtre",
+      "Genre écrit pour être joué : dialogues et didascalies."
+    ],
+    [
+      "Poésie",
+      "Genre jouant sur les sons, le rythme et les images."
+    ],
+    [
+      "Registre",
+      "Tonalité d’un texte (comique, tragique, lyrique, pathétique)."
+    ],
+    [
+      "Argumentation",
+      "Discours visant à convaincre ou persuader."
+    ],
+    [
+      "Apologue",
+      "Récit court à visée argumentative et morale (fable, conte)."
+    ]
+  ],
+  "p1-fr-4": [
+    [
+      "Explication linéaire",
+      "Analyse d’un texte dans l’ordre, du début à la fin."
+    ],
+    [
+      "Mouvement du texte",
+      "Étape ou unité de sens dans la progression du texte."
+    ],
+    [
+      "Question de grammaire",
+      "Analyse grammaticale posée à l’oral de l’EAF."
+    ],
+    [
+      "Œuvre intégrale",
+      "Livre étudié en entier au programme."
+    ],
+    [
+      "Entretien",
+      "Seconde partie de l’oral : présentation et discussion d’une lecture."
+    ],
+    [
+      "Problématique",
+      "Question guidant l’explication du passage."
+    ]
+  ]
+}

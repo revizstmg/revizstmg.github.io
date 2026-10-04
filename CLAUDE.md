@@ -34,9 +34,10 @@ npm run test:parcours   # parcours navigateur, après un build (~3 min)
 
 ## Contenu
 
-- Le contenu est dans `app/src/data/`, avec un fichier par matière.
-- `data/index.js` assemble les matières, applique les couches d'enrichissement et
-  génère les exercices et les flashcards à partir du texte des cours.
+- Le contenu est en JSON dans `app/content/<matière>/` (voir README, section
+  « Le contenu »). On le corrige là, jamais dans le code.
+- `src/data/index.js` assemble les matières, applique les couches et génère les
+  exercices et les flashcards à partir du texte des cours.
 - Les cours de Terminale ne contiennent que des notions de Terminale. Les notions de
   Première servent seulement à formuler des exercices.
 - N'inventez aucune notion : tout doit correspondre au programme officiel de STMG.

@@ -1,0 +1,450 @@
+{
+  "eco-t6": {
+    "id": "eco-t6-doc",
+    "type": "doc",
+    "title": "Étude de documents — L’intervention de l’État dans l’économie",
+    "icon": "📑",
+    "intro": "Pourquoi et comment l’État intervient-il quand le marché ne suffit pas ? Lis les documents puis réponds.",
+    "documents": [
+      {
+        "id": 1,
+        "title": "Document 1 — Les fonctions de l’État (R. Musgrave)",
+        "text": "L’économiste Richard Musgrave distingue trois fonctions de l’État :\n• **allocation** : produire ce que le marché ne fournit pas (biens collectifs comme l’éclairage public, la défense) ;\n• **redistribution** : réduire les inégalités par les prélèvements et les prestations ;\n• **stabilisation** : agir sur l’activité (croissance, emploi, prix)."
+      },
+      {
+        "id": 2,
+        "title": "Document 2 — Les défaillances du marché",
+        "text": "Le marché ne règle pas tout. On parle de **défaillances** : les **externalités** (une usine qui pollue fait subir un coût à autrui), les **biens collectifs** (non rivaux, non excluables), les **asymétries d’information**, ou encore les situations de **monopole**. L’État intervient alors pour corriger ces défaillances."
+      },
+      {
+        "id": 3,
+        "title": "Document 3 — Politique conjoncturelle",
+        "text": "À court terme, l’État mène une **politique conjoncturelle** :\n• la **politique budgétaire** (dépenses publiques, impôts) ;\n• la **politique monétaire** (taux d’intérêt, pilotée par la banque centrale).\nUne politique de **relance** stimule la demande (hausse des dépenses, baisse des taux) ; une politique de **rigueur** freine l’activité pour lutter contre l’inflation ou les déficits."
+      },
+      {
+        "id": 4,
+        "title": "Document 4 — Politique structurelle",
+        "text": "À long terme, la **politique structurelle** transforme les structures de l’économie : investir dans l’éducation, la recherche, les infrastructures, soutenir l’innovation, encadrer la concurrence. Objectif : améliorer la croissance potentielle et la compétitivité du pays."
+      }
+    ],
+    "questions": [
+      {
+        "doc": 1,
+        "q": "Selon Musgrave, produire des biens collectifs (défense, éclairage public) relève de la fonction d’…",
+        "choices": [
+          "allocation",
+          "redistribution",
+          "stabilisation",
+          "spéculation"
+        ],
+        "answer": 0,
+        "explain": "La fonction d’allocation fournit ce que le marché ne produit pas."
+      },
+      {
+        "doc": 1,
+        "q": "Réduire les inégalités par impôts et prestations, c’est la fonction de…",
+        "choices": [
+          "redistribution",
+          "allocation",
+          "stabilisation",
+          "production"
+        ],
+        "answer": 0,
+        "explain": "La redistribution corrige la répartition primaire des revenus."
+      },
+      {
+        "doc": 2,
+        "q": "Une usine qui pollue et fait subir un coût aux riverains est un exemple d’…",
+        "choices": [
+          "externalité (négative)",
+          "bien collectif",
+          "monopole",
+          "inflation"
+        ],
+        "answer": 0,
+        "explain": "Une externalité est un effet, ici négatif, non pris en compte par le marché."
+      },
+      {
+        "doc": 3,
+        "q": "La politique monétaire est pilotée par…",
+        "choices": [
+          "la banque centrale",
+          "les entreprises",
+          "les ménages",
+          "les syndicats"
+        ],
+        "answer": 0,
+        "explain": "La banque centrale agit sur les taux d’intérêt ; le budget relève de l’État."
+      },
+      {
+        "doc": 3,
+        "q": "Baisser les taux d’intérêt et augmenter les dépenses publiques, c’est une politique de…",
+        "choices": [
+          "relance",
+          "rigueur",
+          "austérité",
+          "privatisation"
+        ],
+        "answer": 0,
+        "explain": "La relance stimule la demande à court terme."
+      },
+      {
+        "doc": [
+          1,
+          2
+        ],
+        "type": "redac",
+        "q": "À l’aide des documents 1 et 2, explique pourquoi l’État intervient dans l’économie.",
+        "answer": "L’État intervient parce que le marché connaît des **défaillances** (externalités, biens collectifs, asymétries d’information, monopoles) qu’il ne corrige pas seul. Selon Musgrave, il remplit alors trois fonctions : **allouer** les ressources (produire les biens collectifs), **redistribuer** les revenus pour réduire les inégalités, et **stabiliser** l’activité économique."
+      },
+      {
+        "doc": [
+          3,
+          4
+        ],
+        "type": "redac",
+        "q": "Distingue politique conjoncturelle et politique structurelle en donnant un exemple de chacune.",
+        "answer": "La politique **conjoncturelle** agit à **court terme** sur l’activité : ex. une relance budgétaire (hausse des dépenses) ou une baisse des taux d’intérêt. La politique **structurelle** agit à **long terme** sur les structures de l’économie : ex. investir dans l’éducation, la recherche ou les infrastructures pour élever la croissance potentielle."
+      },
+      {
+        "doc": 2,
+        "type": "redac",
+        "q": "Qu’est-ce qu’un « bien collectif » ? Donne un exemple et explique pourquoi le marché ne le produit pas spontanément.",
+        "answer": "Un **bien collectif** est **non rival** (l’usage par l’un n’empêche pas celui de l’autre) et **non excluable** (on ne peut pas empêcher quelqu’un d’en profiter), par exemple l’éclairage public ou la défense nationale. Comme personne ne peut être exclu, chacun est tenté de profiter du bien sans payer : le marché ne le produit pas spontanément, c’est donc à l’État de le financer."
+      }
+    ]
+  },
+  "eco-t7": {
+    "id": "eco-t7-doc",
+    "type": "doc",
+    "title": "Étude de documents — Emploi, chômage et politiques de l’emploi",
+    "icon": "📑",
+    "intro": "Comment mesure-t-on le chômage et comment le combat-on ? Lis les documents puis réponds.",
+    "documents": [
+      {
+        "id": 1,
+        "title": "Document 1 — Qui est chômeur ? (définition du BIT)",
+        "text": "Selon le Bureau international du travail (BIT), est **chômeur** toute personne qui, simultanément : est **sans emploi**, est **disponible** pour travailler, et **recherche activement** un emploi. Le **taux de chômage** = nombre de chômeurs / population active (actifs occupés + chômeurs)."
+      },
+      {
+        "id": 2,
+        "title": "Document 2 — Différents types de chômage",
+        "text": "On distingue plusieurs formes :\n• **conjoncturel** : lié au ralentissement de l’activité (baisse de la demande) ;\n• **structurel** : lié à l’inadéquation entre les qualifications offertes et demandées, ou au fonctionnement du marché du travail ;\n• **frictionnel** : le temps normal de transition entre deux emplois."
+      },
+      {
+        "id": 3,
+        "title": "Document 3 — Agir sur la demande de travail",
+        "text": "Pour réduire le chômage, l’État peut agir sur le **coût du travail** (allègements de cotisations pour inciter les entreprises à embaucher), soutenir l’**activité** (politique de relance), ou créer des **emplois aidés**. Ces politiques visent à augmenter la **demande de travail** des entreprises."
+      },
+      {
+        "id": 4,
+        "title": "Document 4 — Agir sur l’offre de travail et l’appariement",
+        "text": "D’autres politiques améliorent l’**employabilité** des actifs : **formation professionnelle**, accompagnement des demandeurs d’emploi, aide à la mobilité. Elles cherchent à mieux **apparier** l’offre et la demande de travail et à réduire le chômage structurel."
+      }
+    ],
+    "questions": [
+      {
+        "doc": 1,
+        "q": "Au sens du BIT, un chômeur doit à la fois être sans emploi, disponible et…",
+        "choices": [
+          "rechercher activement un emploi",
+          "avoir plus de 50 ans",
+          "toucher une allocation",
+          "être diplômé"
+        ],
+        "answer": 0,
+        "explain": "Les trois critères du BIT : sans emploi, disponible, en recherche active."
+      },
+      {
+        "doc": 1,
+        "q": "Le taux de chômage se calcule en rapportant les chômeurs à…",
+        "choices": [
+          "la population active",
+          "la population totale",
+          "les seuls salariés",
+          "les retraités"
+        ],
+        "answer": 0,
+        "explain": "Taux = chômeurs / population active (occupés + chômeurs)."
+      },
+      {
+        "doc": 2,
+        "q": "Un chômage dû à un ralentissement de l’activité est qualifié de…",
+        "choices": [
+          "conjoncturel",
+          "structurel",
+          "frictionnel",
+          "volontaire"
+        ],
+        "answer": 0,
+        "explain": "Le chômage conjoncturel suit la baisse de la demande."
+      },
+      {
+        "doc": 2,
+        "q": "L’inadéquation entre qualifications offertes et demandées relève d’un chômage…",
+        "choices": [
+          "structurel",
+          "conjoncturel",
+          "frictionnel",
+          "saisonnier"
+        ],
+        "answer": 0,
+        "explain": "Le chômage structurel tient au fonctionnement du marché du travail."
+      },
+      {
+        "doc": 3,
+        "q": "Alléger les cotisations sociales sur les bas salaires vise à…",
+        "choices": [
+          "réduire le coût du travail pour favoriser l’embauche",
+          "augmenter les impôts",
+          "réduire l’offre de travail",
+          "fermer des entreprises"
+        ],
+        "answer": 0,
+        "explain": "On agit sur le coût du travail pour stimuler la demande de travail."
+      },
+      {
+        "doc": 2,
+        "type": "redac",
+        "q": "Distingue le chômage conjoncturel du chômage structurel.",
+        "answer": "Le chômage **conjoncturel** est lié à la **baisse temporaire de l’activité** (moindre demande adressée aux entreprises) : il recule quand la croissance repart. Le chômage **structurel** tient au **fonctionnement durable** du marché du travail — inadéquation entre les qualifications, rigidités, évolutions technologiques — et ne disparaît pas avec une simple reprise."
+      },
+      {
+        "doc": [
+          3,
+          4
+        ],
+        "type": "redac",
+        "q": "Présente deux types de politiques de l’emploi en expliquant sur quoi chacune agit.",
+        "answer": "Une première catégorie agit sur la **demande de travail** des entreprises : baisse du **coût du travail** (allègements de cotisations), soutien de l’activité, emplois aidés. Une seconde agit sur l’**offre de travail** et l’**appariement** : **formation professionnelle**, accompagnement des demandeurs d’emploi, aide à la mobilité, pour améliorer l’employabilité et réduire le chômage structurel."
+      },
+      {
+        "doc": 1,
+        "type": "redac",
+        "q": "Un étudiant qui cherche un stage mais n’est pas disponible avant six mois est-il chômeur au sens du BIT ? Justifie.",
+        "answer": "Non : au sens du BIT, il faut être **sans emploi**, **en recherche active** ET **disponible immédiatement** (sous deux semaines). Comme l’étudiant n’est pas disponible avant six mois, l’un des trois critères manque : il n’est pas comptabilisé comme chômeur au sens du BIT."
+      }
+    ]
+  },
+  "eco-t8": {
+    "id": "eco-t8-doc",
+    "type": "doc",
+    "title": "Étude de documents — Les échanges internationaux",
+    "icon": "📑",
+    "intro": "Pourquoi les pays commercent-ils ? Quels sont les effets du libre-échange ? Lis les documents puis réponds.",
+    "documents": [
+      {
+        "id": 1,
+        "title": "Document 1 — L’avantage comparatif (D. Ricardo)",
+        "text": "David Ricardo montre au XIXᵉ siècle qu’un pays a intérêt à se **spécialiser** dans la production pour laquelle il est **relativement le plus efficace** (son **avantage comparatif**), puis à échanger. Même un pays désavantagé partout gagne à se spécialiser là où son désavantage est le plus faible."
+      },
+      {
+        "id": 2,
+        "title": "Document 2 — Libre-échange et protectionnisme",
+        "text": "Le **libre-échange** supprime les obstacles aux échanges (droits de douane, quotas) : il élargit les débouchés, fait baisser les prix et stimule la concurrence. Le **protectionnisme** protège au contraire les producteurs nationaux par des **droits de douane**, des **quotas** ou des normes, notamment pour défendre une industrie naissante ou des emplois."
+      },
+      {
+        "id": 3,
+        "title": "Document 3 — La firme multinationale (FMN)",
+        "text": "Une **firme multinationale** implante des unités de production dans plusieurs pays. Elle organise une **division internationale du travail** : conception ici, fabrication là où les coûts sont faibles. Ces choix expliquent une part importante du commerce mondial (échanges intra-firmes) et les **délocalisations**."
+      },
+      {
+        "id": 4,
+        "title": "Document 4 — Gagnants et perdants",
+        "text": "Le libre-échange profite globalement (prix plus bas, choix élargi, spécialisation), mais fait des **perdants** : certaines industries et emplois disparaissent face à la concurrence. D’où des politiques d’accompagnement (formation, reconversion) et des débats sur un commerce plus **régulé** et plus **durable**."
+      }
+    ],
+    "questions": [
+      {
+        "doc": 1,
+        "q": "Selon Ricardo, un pays a intérêt à se spécialiser là où il détient…",
+        "choices": [
+          "un avantage comparatif",
+          "le plus de population",
+          "le climat le plus chaud",
+          "le moins de ressources"
+        ],
+        "answer": 0,
+        "explain": "L’avantage comparatif : se spécialiser là où l’on est relativement le plus efficace."
+      },
+      {
+        "doc": 2,
+        "q": "Un droit de douane est un instrument…",
+        "choices": [
+          "protectionniste",
+          "de libre-échange",
+          "monétaire",
+          "social"
+        ],
+        "answer": 0,
+        "explain": "Les droits de douane et quotas relèvent du protectionnisme."
+      },
+      {
+        "doc": 2,
+        "q": "Le libre-échange tend, pour les consommateurs, à…",
+        "choices": [
+          "faire baisser les prix et élargir le choix",
+          "augmenter tous les prix",
+          "supprimer la concurrence",
+          "interdire les importations"
+        ],
+        "answer": 0,
+        "explain": "Ouverture = plus de concurrence, prix plus bas, choix élargi."
+      },
+      {
+        "doc": 3,
+        "q": "Une FMN qui répartit ses activités entre plusieurs pays organise…",
+        "choices": [
+          "une division internationale du travail",
+          "un monopole d’État",
+          "une autarcie",
+          "un quota"
+        ],
+        "answer": 0,
+        "explain": "La DIT : chaque étape est réalisée là où c’est le plus avantageux."
+      },
+      {
+        "doc": 4,
+        "q": "Le document 4 rappelle que le libre-échange…",
+        "choices": [
+          "fait aussi des perdants (emplois, industries)",
+          "ne profite à personne",
+          "supprime tout chômage",
+          "n’a aucun effet"
+        ],
+        "answer": 0,
+        "explain": "Gains globaux mais perdants sectoriels : d’où les politiques d’accompagnement."
+      },
+      {
+        "doc": 1,
+        "type": "redac",
+        "q": "Explique la théorie de l’avantage comparatif avec tes mots.",
+        "answer": "Un pays a intérêt à se **spécialiser** dans la production où il est **relativement le plus efficace** (ou le moins désavantagé), puis à **échanger** le reste. Même un pays moins performant partout gagne à se concentrer là où son désavantage est le plus faible : la spécialisation et l’échange augmentent la production totale et profitent à tous les partenaires."
+      },
+      {
+        "doc": 2,
+        "type": "redac",
+        "q": "Oppose libre-échange et protectionnisme en donnant un argument pour chacun.",
+        "answer": "Le **libre-échange** supprime les barrières : il élargit les débouchés, fait baisser les prix et stimule la concurrence et l’innovation. Le **protectionnisme** (droits de douane, quotas, normes) protège les producteurs nationaux : il peut défendre une **industrie naissante** ou préserver des **emplois** menacés par la concurrence étrangère."
+      },
+      {
+        "doc": [
+          3,
+          4
+        ],
+        "type": "redac",
+        "q": "À l’aide des documents 3 et 4, montre que la mondialisation a des effets contrastés.",
+        "answer": "Les **FMN** organisent une division internationale du travail et des **délocalisations** qui baissent les coûts et développent le commerce (doc 3). Mais ces choix font des **perdants** : industries et emplois disparaissent dans certains territoires face à la concurrence (doc 4). La mondialisation crée donc des gains globaux (prix, choix) tout en produisant des pertes locales, ce qui appelle des politiques d’accompagnement."
+      }
+    ]
+  },
+  "eco-t9": {
+    "id": "eco-t9-doc",
+    "type": "doc",
+    "title": "Étude de documents — Croissance et développement durable",
+    "icon": "📑",
+    "intro": "La croissance peut-elle durer sans épuiser la planète ? Lis les documents puis réponds.",
+    "documents": [
+      {
+        "id": 1,
+        "title": "Document 1 — Mesurer la croissance : le PIB",
+        "text": "La **croissance économique** est l’augmentation durable de la production, mesurée par le **PIB** (produit intérieur brut = somme des valeurs ajoutées). Le **taux de croissance** compare le PIB d’une année à l’autre. Le PIB par habitant sert d’indicateur de niveau de vie."
+      },
+      {
+        "id": 2,
+        "title": "Document 2 — Les limites du PIB",
+        "text": "Le PIB ne mesure ni le **bien-être**, ni les **inégalités**, ni la **qualité de l’environnement**. Il ignore le travail bénévole et domestique et compte parfois positivement des dépenses « défensives » (réparer une pollution). D’autres indicateurs le complètent : l’**IDH** (santé, éducation, revenu) ou l’**empreinte écologique**."
+      },
+      {
+        "id": 3,
+        "title": "Document 3 — Le développement durable",
+        "text": "Le **développement durable** répond « aux besoins du présent sans compromettre la capacité des générations futures à répondre aux leurs » (rapport Brundtland, 1987). Il repose sur trois piliers : **économique**, **social** et **environnemental**."
+      },
+      {
+        "id": 4,
+        "title": "Document 4 — Croissance et environnement",
+        "text": "La croissance s’accompagne d’**externalités négatives** : pollution, épuisement des ressources, émissions de gaz à effet de serre. Pour les limiter, les pouvoirs publics utilisent la **réglementation**, la **taxation** (taxe carbone), ou des **marchés de quotas d’émission**. On parle de croissance « **verte** » lorsqu’elle intègre ces contraintes."
+      }
+    ],
+    "questions": [
+      {
+        "doc": 1,
+        "q": "Le PIB additionne principalement…",
+        "choices": [
+          "les valeurs ajoutées produites",
+          "les salaires seulement",
+          "les importations",
+          "les impôts"
+        ],
+        "answer": 0,
+        "explain": "PIB = somme des valeurs ajoutées."
+      },
+      {
+        "doc": 2,
+        "q": "Parmi les limites du PIB citées, il ignore…",
+        "choices": [
+          "la qualité de l’environnement et les inégalités",
+          "la production des entreprises",
+          "les exportations",
+          "la consommation"
+        ],
+        "answer": 0,
+        "explain": "Le PIB ne dit rien du bien-être, des inégalités ni de l’environnement."
+      },
+      {
+        "doc": 2,
+        "q": "L’IDH prend notamment en compte…",
+        "choices": [
+          "la santé, l’éducation et le revenu",
+          "le seul PIB",
+          "la Bourse",
+          "la dette publique"
+        ],
+        "answer": 0,
+        "explain": "L’IDH combine espérance de vie, éducation et revenu."
+      },
+      {
+        "doc": 3,
+        "q": "La définition du développement durable (Brundtland) insiste sur…",
+        "choices": [
+          "les besoins des générations futures",
+          "la seule croissance du PIB",
+          "la baisse des salaires",
+          "la fin du commerce"
+        ],
+        "answer": 0,
+        "explain": "« Sans compromettre la capacité des générations futures »."
+      },
+      {
+        "doc": 4,
+        "q": "La taxe carbone est un instrument qui vise à…",
+        "choices": [
+          "réduire les émissions de gaz à effet de serre",
+          "augmenter la production polluante",
+          "supprimer l’impôt sur le revenu",
+          "financer les exportations"
+        ],
+        "answer": 0,
+        "explain": "Elle renchérit les activités émettrices pour les décourager."
+      },
+      {
+        "doc": 2,
+        "type": "redac",
+        "q": "Pourquoi le PIB est-il un indicateur insuffisant du bien-être d’un pays ?",
+        "answer": "Le PIB mesure la **production**, pas le **bien-être**. Il ignore les **inégalités** de revenus, la **qualité de l’environnement**, le travail **bénévole et domestique**, et peut compter positivement des dépenses « défensives » (réparer une pollution). Il faut donc le compléter par d’autres indicateurs comme l’**IDH** ou l’**empreinte écologique**."
+      },
+      {
+        "doc": 3,
+        "type": "redac",
+        "q": "Qu’est-ce que le développement durable ? Cite ses trois piliers.",
+        "answer": "Le développement durable répond **aux besoins du présent sans compromettre ceux des générations futures**. Il repose sur trois piliers : **économique** (une activité viable), **social** (équité, satisfaction des besoins) et **environnemental** (préserver les ressources et les écosystèmes)."
+      },
+      {
+        "doc": 4,
+        "type": "redac",
+        "q": "Comment les pouvoirs publics peuvent-ils concilier croissance et protection de l’environnement ?",
+        "answer": "Ils peuvent **réglementer** (normes, interdictions), **taxer** les activités polluantes (taxe carbone) pour intégrer le coût des **externalités négatives**, ou créer des **marchés de quotas d’émission**. En orientant ainsi les comportements vers des productions moins polluantes, ils cherchent une croissance « **verte** », compatible avec le développement durable."
+      }
+    ]
+  }
+}

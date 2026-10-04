@@ -1,0 +1,54 @@
+{
+  "rh-t1": [
+    {
+      "title": "Absentéisme d'un service",
+      "context": "Dans un service, on compte 320 heures d'absence pour 8 000 heures théoriques de travail sur le mois.",
+      "questions": [
+        {
+          "q": "Calcule le taux d'absentéisme (en %).",
+          "a": "4",
+          "num": true,
+          "e": "Absentéisme = heures d’absence / heures théoriques = 320 / 8 000 = 4 %."
+        }
+      ]
+    },
+    {
+      "title": "Rotation du personnel (turnover)",
+      "context": "Une entreprise a enregistré 6 départs sur l'année, pour un effectif moyen de 120 salariés.",
+      "questions": [
+        {
+          "q": "Calcule le taux de rotation du personnel (en %).",
+          "a": "5",
+          "num": true,
+          "e": "Turnover = départs / effectif moyen = 6 / 120 = 5 %."
+        }
+      ]
+    }
+  ],
+  "rh-t4": [
+    {
+      "title": "Coût employeur d’un salarié",
+      "context": "Un salarié perçoit un salaire brut de 2 000 €. Les charges patronales représentent 42 % du brut.",
+      "questions": [
+        {
+          "q": "Calcule le coût total employeur (en €).",
+          "a": "2840",
+          "num": true,
+          "e": "Coût employeur = brut × (1 + 42 %) = 2 000 × 1,42 = 2 840 €."
+        }
+      ]
+    },
+    {
+      "title": "Productivité du travail",
+      "context": "Un atelier produit 4 000 pièces en 500 heures de travail.",
+      "questions": [
+        {
+          "q": "Calcule la productivité horaire (en pièces/heure).",
+          "a": "8",
+          "num": true,
+          "e": "Productivité = production / heures = 4 000 / 500 = 8 pièces par heure."
+        }
+      ]
+    }
+  ]
+}

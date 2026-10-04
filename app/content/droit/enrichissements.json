@@ -1,0 +1,113 @@
+{
+  "droit-t5": {
+    "sections": [
+      {
+        "h": "⚖️ Cas pratique — la validité du contrat",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Un mineur de 16 ans achète seul, à crédit, une voiture. Le vendeur exige le paiement. Le contrat est-il valable ?"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Règle de droit (majeure)** : un contrat n’est valable que si les conditions sont réunies : consentement, **capacité juridique**, contenu licite et certain.",
+              "**Faits (mineure)** : l’acheteur est **mineur**, donc juridiquement **incapable** de conclure seul un tel contrat.",
+              "**Application** : une condition de validité (la capacité) manque.",
+              "**Conclusion** : le contrat encourt la **nullité** (il peut être annulé)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Méthode",
+            "c": "Cas pratique = **syllogisme** : règle de droit → faits → application → conclusion. C’est la structure attendue au bac."
+          }
+        ]
+      }
+    ]
+  },
+  "droit-t6": {
+    "sections": [
+      {
+        "h": "⚖️ Cas pratique — la responsabilité civile",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Un livreur, en reculant son camion, brise la vitrine d’un magasin. Le commerçant peut-il être indemnisé ?"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Règle** : la responsabilité civile suppose trois éléments réunis : **fait générateur + dommage + lien de causalité**.",
+              "**Faits** : fait générateur = la manœuvre du camion ; dommage = la vitrine brisée ; lien = la manœuvre a causé le bris.",
+              "**Application** : les trois conditions sont réunies.",
+              "**Conclusion** : la responsabilité est engagée → le commerçant a droit à **réparation** (indemnisation du préjudice)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À distinguer",
+            "c": "Responsabilité **civile** = réparer (indemniser) ; responsabilité **pénale** = punir. Ici, il s’agit d’indemniser."
+          }
+        ]
+      }
+    ]
+  },
+  "droit-t7": {
+    "sections": [
+      {
+        "h": "⚖️ Cas pratique — le licenciement",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Un salarié en CDI est licencié au motif que « son responsable ne l’apprécie pas ». Ce licenciement est-il régulier ?"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Règle** : tout licenciement doit reposer sur une **cause réelle et sérieuse** (motif objectif, vérifiable et suffisamment grave).",
+              "**Faits** : le motif invoqué est une simple **antipathie**, ni objective ni sérieuse.",
+              "**Application** : la cause réelle et sérieuse fait défaut.",
+              "**Conclusion** : le licenciement est **sans cause réelle et sérieuse** (abusif) → le salarié peut obtenir des indemnités."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Repère",
+            "c": "Le CDI est la norme ; le CDD est l’exception, encadrée et motivée. La rupture suit des procédures strictes."
+          }
+        ]
+      }
+    ]
+  },
+  "droit-t8": {
+    "sections": [
+      {
+        "h": "⚖️ Cas pratique — choisir une forme juridique",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Un entrepreneur veut lancer son activité tout en protégeant son patrimoine personnel en cas de dettes. Que lui conseiller ?"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Règle** : en **entreprise individuelle**, l’entrepreneur et l’entreprise ne forment qu’une personne (patrimoine plus exposé). En **société** (SARL, SAS), la société est une **personne morale** distincte : le patrimoine est séparé et la responsabilité est **limitée aux apports**.",
+              "**Application** : pour protéger son patrimoine personnel, il faut séparer les patrimoines.",
+              "**Conclusion** : créer une **société à responsabilité limitée** (SARL/SAS) est la solution adaptée."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À retenir",
+            "c": "La **propriété industrielle** (brevet, marque) protège l’innovation ; ne la confonds pas avec le droit d’auteur."
+          }
+        ]
+      }
+    ]
+  }
+}

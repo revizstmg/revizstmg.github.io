@@ -1,0 +1,122 @@
+{
+  "droit-t5": [
+    [
+      "Contrat",
+      "Accord de volontés créant des obligations entre les parties."
+    ],
+    [
+      "Consentement",
+      "Accord libre et éclairé de chaque partie ; sans vice (erreur, dol, violence)."
+    ],
+    [
+      "Capacité juridique",
+      "Aptitude à être titulaire de droits et à les exercer soi-même."
+    ],
+    [
+      "Obligation",
+      "Lien de droit contraignant une personne à donner, faire ou ne pas faire."
+    ],
+    [
+      "Force obligatoire",
+      "Le contrat tient lieu de loi aux parties : elles doivent l’exécuter."
+    ],
+    [
+      "Vice du consentement",
+      "Défaut (erreur, dol, violence) pouvant entraîner la nullité du contrat."
+    ],
+    [
+      "Nullité",
+      "Sanction qui anéantit rétroactivement un contrat mal formé."
+    ]
+  ],
+  "droit-t6": [
+    [
+      "Responsabilité civile",
+      "Obligation de réparer le dommage causé à autrui."
+    ],
+    [
+      "Responsabilité pénale",
+      "Obligation de répondre d’une infraction devant la société (peine)."
+    ],
+    [
+      "Dommage / préjudice",
+      "Atteinte subie par la victime (matérielle, corporelle ou morale)."
+    ],
+    [
+      "Fait générateur",
+      "Événement à l’origine du dommage (faute, fait d’une chose, fait d’autrui)."
+    ],
+    [
+      "Lien de causalité",
+      "Rapport direct de cause à effet entre le fait générateur et le dommage."
+    ],
+    [
+      "Réparation",
+      "Compensation du préjudice, en général par des dommages-intérêts."
+    ],
+    [
+      "Responsabilité contractuelle",
+      "Engagée en cas d’inexécution d’un contrat (≠ délictuelle, hors contrat)."
+    ]
+  ],
+  "droit-t7": [
+    [
+      "Contrat de travail",
+      "Convention par laquelle un salarié travaille pour un employeur, sous sa subordination, contre rémunération."
+    ],
+    [
+      "Lien de subordination",
+      "Pouvoir de l’employeur de donner des ordres, contrôler et sanctionner ; critère du salariat."
+    ],
+    [
+      "CDI / CDD",
+      "Contrat à durée indéterminée (la règle) / à durée déterminée (exception, motif précis)."
+    ],
+    [
+      "Convention collective",
+      "Accord de branche qui adapte le droit du travail à un secteur d’activité."
+    ],
+    [
+      "Licenciement",
+      "Rupture du contrat à l’initiative de l’employeur, pour motif réel et sérieux."
+    ],
+    [
+      "Rupture conventionnelle",
+      "Rupture du CDI d’un commun accord entre salarié et employeur."
+    ],
+    [
+      "Représentants du personnel",
+      "Élus (CSE) qui défendent les intérêts des salariés dans l’entreprise."
+    ]
+  ],
+  "droit-t8": [
+    [
+      "Entreprise individuelle",
+      "Entreprise exploitée par une personne physique, sans création de société."
+    ],
+    [
+      "Société",
+      "Personne morale créée par un ou plusieurs associés mettant en commun des apports."
+    ],
+    [
+      "Personnalité juridique",
+      "Aptitude à être sujet de droit (avoir un patrimoine, agir en justice)."
+    ],
+    [
+      "Patrimoine",
+      "Ensemble des biens, droits et dettes d’une personne."
+    ],
+    [
+      "Fonds de commerce",
+      "Ensemble des éléments (clientèle, matériel, enseigne) permettant l’exploitation commerciale."
+    ],
+    [
+      "Statut juridique",
+      "Forme légale choisie pour entreprendre (EI, EURL, SARL, SAS…)."
+    ],
+    [
+      "Responsabilité limitée",
+      "L’associé ne perd au plus que ses apports (protège son patrimoine personnel)."
+    ]
+  ]
+}

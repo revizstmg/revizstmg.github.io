@@ -1,49 +1,26 @@
-// Agrégation de toutes les matières. Pour ajouter une matière ou un chapitre :
-// il suffit d'ajouter/éditer un objet dans le fichier de la matière concernée,
-// puis de l'importer ici. Rien d'autre à toucher dans l'application.
-import { gestion } from './gestion.js'
-import { management } from './management.js'
-import { droit } from './droit.js'
-import { economie } from './economie.js'
-import { maths } from './maths.js'
-import { philosophie } from './philosophie.js'
-import { histoire } from './histoire.js'
-import { langues } from './langues.js'
-import { mercatique } from './mercatique.js'
-import { rh } from './rh.js'
-import { sig } from './sig.js'
-import { premiereSubjects } from './premiere.js'
-import { LESSONS } from './lessons.js'
-import { DOC_STUDIES } from './docstudies.js'
-import { GAME_SECTION } from './sections.js'
+// Assemblage de toutes les matières à partir du contenu JSON (app/content/,
+// voir src/content/contenu.js). Pour ajouter un chapitre : l'ajouter dans
+// content/<matière>/matiere.json. Rien d'autre à toucher dans l'application.
+import { ORDRE_MATIERES, matiere, couche } from '../content/contenu.js'
 import { THEME_TERMS, subjectFallbackFor } from './keyterms.js'
-import { CAS_PRATIQUES } from './caspratiques.js'
 import { PIEGES } from './pieges.js'
-import { ENRICH } from './enrich.js'
-import { COURS_REELS } from './coursreels.js'
-import { PHILO_LONG } from './philocours.js'
-import { APPROF } from './approfondir.js'
-import { APPROF2 } from './approfondir2.js'
-import { APPROF3 } from './approfondir3.js'
-import { APPROF4 } from './approfondir4.js'
-import { SICSI } from './sicsi.js'
-import { HIST_DEEP } from './histoiredeep.js'
-import { MGMT_DEEP } from './managementdeep.js'
 
-export const SUBJECTS = [
-  gestion,
-  management,
-  droit,
-  economie,
-  maths,
-  philosophie,
-  histoire,
-  langues,
-  mercatique,
-  rh,
-  sig,
-  ...premiereSubjects,
-]
+const LESSONS = couche('cours-complets')
+const COURS_REELS = couche('cours-reels')
+const ENRICH = couche('enrichissements')
+const PHILO_LONG = couche('philo-longue-duree')
+const APPROF = couche('approfondi-1')
+const APPROF2 = couche('approfondi-2')
+const APPROF3 = couche('approfondi-3')
+const APPROF4 = couche('approfondi-4')
+const SICSI = couche('sic-si')
+const HIST_DEEP = couche('histoire-approfondie')
+const MGMT_DEEP = couche('management-approfondi')
+const DOC_STUDIES = couche('etudes-documents')
+const CAS_PRATIQUES = couche('cas-pratiques')
+const GAME_SECTION = couche('exercices-sections')
+
+export const SUBJECTS = ORDRE_MATIERES.map(matiere)
 
 // Index chapitre -> { subject, ...chapitre } pour un accès direct par id.
 // Les « cours complets » de lessons.js (facultatifs) enrichissent chaque

@@ -1,0 +1,104 @@
+{
+  "mgmt-t1": {
+    "sections": [
+      {
+        "h": "💼 Exemple traité — caractériser une organisation",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Une entreprise privée fabrique et vend des vélos électriques ; un hôpital public soigne des patients ; une association distribue des repas."
+          },
+          {
+            "t": "table",
+            "head": [
+              "Organisation",
+              "Finalité",
+              "Production"
+            ],
+            "rows": [
+              [
+                "Entreprise (vélos)",
+                "Réaliser un **profit**",
+                "Biens marchands"
+              ],
+              [
+                "Hôpital public",
+                "Service public (santé)",
+                "Services non marchands"
+              ],
+              [
+                "Association",
+                "Cause / intérêt général",
+                "Services non marchands"
+              ]
+            ]
+          },
+          {
+            "t": "p",
+            "c": "On caractérise une organisation par son **type**, sa **finalité**, sa **production** (marchande/non marchande) et ses **ressources**."
+          },
+          {
+            "t": "tip",
+            "h": "Piège",
+            "c": "Toutes les organisations ne cherchent pas le profit : ne confonds pas finalité (raison d’être) et objectif (but précis)."
+          }
+        ]
+      }
+    ]
+  },
+  "mgmt-t2": {
+    "sections": [
+      {
+        "h": "💼 Exemple traité — diagnostic et avantage concurrentiel",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Une marque de cosmétiques bio, reconnue pour sa qualité, fait face à l’arrivée de grands groupes sur le marché du « naturel »."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Diagnostic interne** — forces : image « bio » forte, savoir-faire ; faiblesses : petite taille, budget limité.",
+              "**Diagnostic externe** — opportunités : marché du naturel en croissance ; menaces : grands concurrents, matières premières plus chères.",
+              "**Avantage concurrentiel** : sa réputation « bio authentique » est **rare et difficile à imiter** → à protéger et à mettre en avant."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "SWOT",
+            "c": "Interne = forces/faiblesses (l’entreprise) ; externe = opportunités/menaces (l’environnement). Une ressource devient un avantage seulement si elle est rare et difficile à copier."
+          }
+        ]
+      }
+    ]
+  },
+  "mgmt-t3": {
+    "sections": [
+      {
+        "h": "💼 Exemple traité — parties prenantes et RSE",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Une entreprise textile envisage de délocaliser sa production pour réduire ses coûts."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Parties prenantes** : salariés (emploi menacé), actionnaires (rentabilité), clients (prix, éthique), territoire (fermeture d’usine).",
+              "La **RSE** invite à intégrer les enjeux **sociaux et environnementaux** à la décision, pas seulement le coût.",
+              "Le **numérique** est une opportunité (productivité) **et** un risque (cybersécurité, dépendance) : à nuancer."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Nuance attendue",
+            "c": "La RSE n’est pas de la philanthropie : c’est une stratégie qui concilie performance économique et responsabilité."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "hg-h1": {
+    "sections": [
+      {
+        "h": "📝 Méthode + exemple — analyser un document de propagande",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Au bac, on te demande souvent d’**analyser un document**. Une méthode en 4 temps : **présenter → décrire → expliquer (contexte) → prendre du recul**."
+          },
+          {
+            "t": "example",
+            "h": "Document",
+            "c": "Une affiche de propagande d’un régime totalitaire des années 1930 : le chef est représenté seul, en surplomb, au-dessus d’une foule en rangs serrés, avec les symboles du parti unique."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Présenter** : nature = affiche de **propagande** ; émetteur = l’État / le parti unique ; date = années 1930 ; destinataire = toute la population.",
+              "**Décrire** : le chef domine, la foule est encadrée et uniforme, les symboles rappellent le parti → mise en scène du **culte du chef**.",
+              "**Expliquer** : c’est une caractéristique du **totalitarisme** (parti unique, idéologie officielle, embrigadement, terreur). L’image sert à obtenir l’adhésion et à supprimer l’individu au profit de la masse.",
+              "**Prendre du recul** : c’est une source **orientée** (but de manipulation). On la recoupe avec d’autres documents pour ne pas confondre le message de propagande et la réalité historique."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "À réutiliser",
+            "c": "Cette méthode « présenter → décrire → expliquer → critiquer » marche pour tout document (affiche, discours, photo, caricature)."
+          }
+        ]
+      }
+    ]
+  },
+  "hg-h2": {
+    "sections": [
+      {
+        "h": "📝 Exemple — analyser un texte de la Guerre froide",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Document",
+            "c": "Extrait d’un discours américain de 1947 annonçant une aide aux pays « menacés » par le communisme (esprit de la doctrine Truman)."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Présenter** : discours politique, chef d’État américain, 1947, début de la Guerre froide.",
+              "**Analyser** : il oppose « monde libre » et « communisme » → logique de **blocs** et d’**endiguement** (containment).",
+              "**Contexte** : la Guerre froide est un affrontement **indirect** (pas de guerre ouverte USA–URSS) mais total : idéologique, économique, militaire (course aux armements), spatial.",
+              "**Recul** : source engagée (vision américaine) ; l’URSS répond par sa propre doctrine → toujours confronter les deux points de vue."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Repère",
+            "c": "Bipolaire (1947–1991) → après la chute de l’URSS, monde **multipolaire** (plusieurs pôles), pas « fin de l’histoire »."
+          }
+        ]
+      }
+    ]
+  },
+  "hg-h3": {
+    "sections": [
+      {
+        "h": "📝 Exemple — la France depuis 1945 en une frise raisonnée",
+        "blocks": [
+          {
+            "t": "frise",
+            "title": "Grandes ruptures politiques",
+            "events": [
+              {
+                "date": "1946",
+                "label": "IVᵉ République",
+                "note": "instabilité gouvernementale"
+              },
+              {
+                "date": "1958",
+                "label": "Vᵉ République",
+                "note": "de Gaulle, pouvoir exécutif renforcé"
+              },
+              {
+                "date": "1962",
+                "label": "Élection du président au suffrage universel direct"
+              },
+              {
+                "date": "1981",
+                "label": "Alternance",
+                "note": "première alternance gauche/droite sous la Vᵉ"
+              }
+            ]
+          },
+          {
+            "t": "p",
+            "c": "Pour une question sur la vie politique française, structure ta réponse autour de ces **ruptures** : instabilité de la IVᵉ → renforcement de l’exécutif sous la Vᵉ → démocratisation (suffrage universel, alternances, décentralisation)."
+          },
+          {
+            "t": "tip",
+            "h": "Méthode",
+            "c": "Une frise bien choisie = une introduction déjà à moitié écrite : elle donne le plan chronologique."
+          }
+        ]
+      }
+    ]
+  },
+  "hg-g1": {
+    "sections": [
+      {
+        "h": "🌍 L’essentiel — mers et océans, cœur de la mondialisation",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Les mers et océans concentrent les **flux**, les **ressources** et les **tensions** de la mondialisation."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Maritimisation** : environ **80 % du commerce mondial** de marchandises transite par la mer, grâce à la **conteneurisation** (standardisation des boîtes → transport massif et bon marché).",
+              "**Routes stratégiques** et points de passage (« détroits » et canaux) : **Suez, Panama, Malacca, Ormuz, Gibraltar** — leur contrôle est un enjeu géopolitique majeur.",
+              "**Façades maritimes** majeures : Asie de l’Est, Northern Range (Europe du Nord-Ouest), côtes américaines.",
+              "**Ressources** : pêche, hydrocarbures offshore, **câbles sous-marins** (99 % des données mondiales), énergies marines.",
+              "**Tensions** : rivalités (mer de Chine méridionale), piraterie, surpêche, pollution, montée des eaux."
+            ]
+          }
+        ]
+      },
+      {
+        "h": "🌍 Étude de cas — le canal de Suez",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Situation",
+            "c": "Le canal de Suez (Égypte) relie la Méditerranée à la mer Rouge. Environ 10 % du commerce maritime mondial y transite. En mars 2021, l’échouage d’un porte-conteneurs géant (Ever Given) l’a bloqué plusieurs jours."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Enjeu économique** : raccourci vital entre l’Asie et l’Europe (évite le tour de l’Afrique) → gain de temps et de coûts.",
+              "**Vulnérabilité** : un seul incident bloque une part énorme du commerce → révèle la **dépendance** de la mondialisation à quelques passages.",
+              "**Enjeu géopolitique** : qui contrôle le détroit contrôle une route stratégique → source de rivalités."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Réutiliser",
+            "c": "Un exemple précis (Suez, Ever Given, Malacca) rend une copie de géo concrète : cite-le pour illustrer « maritimisation » et « vulnérabilité »."
+          }
+        ]
+      }
+    ]
+  },
+  "hg-g2": {
+    "sections": [
+      {
+        "h": "🌍 Étude de cas — la métropolisation",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La **métropolisation** est la concentration croissante des populations, des activités et du pouvoir dans les grandes villes (métropoles)."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Concentration** : les métropoles rassemblent sièges sociaux, universités, recherche, services de haut niveau → elles commandent l’économie.",
+              "**Mise en réseau** : elles sont reliées entre elles (transports, numérique) plus qu’à leur arrière-pays → un « archipel » mondial des grandes villes.",
+              "**Inégalités** : la métropolisation **accentue** les écarts — entre métropoles et territoires « en marge », et à l’intérieur des villes (quartiers riches / quartiers en difficulté)."
+            ]
+          },
+          {
+            "t": "warning",
+            "h": "Nuance attendue",
+            "c": "Un territoire « en marge » n’est pas « vide » : il a ses propres dynamiques (tourisme, agriculture, industrie). À ne pas caricaturer."
+          }
+        ]
+      }
+    ]
+  },
+  "hg-g3": {
+    "sections": [
+      {
+        "h": "🌍 L’essentiel — la France dans l’Union européenne et le monde",
+        "blocks": [
+          {
+            "t": "list",
+            "c": [
+              "**Puissance** : la France est une puissance **complète** (économique, diplomatique, militaire, culturelle) et le 2ᵉ **domaine maritime** mondial (grâce à ses territoires ultramarins).",
+              "**Dans l’UE** : membre fondateur, moteur de la construction européenne (avec l’Allemagne) ; l’UE est son premier partenaire commercial.",
+              "**Rayonnement** : langue (francophonie), siège permanent au Conseil de sécurité de l’ONU, réseau diplomatique mondial.",
+              "**Limites** : concurrence des puissances émergentes, débats sur la place dans la mondialisation."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Argument clé",
+            "c": "Insiste sur les **territoires ultramarins** : ils donnent à la France une présence sur tous les océans (ZEE immense)."
+          }
+        ]
+      }
+    ]
+  }
+}

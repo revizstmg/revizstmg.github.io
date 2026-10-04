@@ -1,0 +1,83 @@
+{
+  "gf-t1": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — TVA et enregistrement",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Une entreprise achète des marchandises : 2 000 € HT, TVA au taux de 20 %.\n1) Calcule la TVA et le montant TTC.\n2) Comment l’opération est-elle enregistrée (principe de la partie double) ?"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**TVA** = 2 000 × 0,20 = **400 €** ; **TTC** = 2 000 + 400 = **2 400 €**.",
+              "**Partie double** : on **débite** « Achats » (2 000) et « TVA déductible » (400), on **crédite** « Fournisseurs » (2 400). Débit = Crédit = 2 400 → l’équilibre est respecté.",
+              "La **TVA n’est pas une charge** : la TVA déductible est une **créance sur l’État** (l’entreprise la récupère)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Réflexe",
+            "c": "À chaque écriture : total des débits = total des crédits. Si ça ne tombe pas juste, il y a une erreur."
+          }
+        ]
+      }
+    ]
+  },
+  "gf-t2": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — FRNG, BFR, trésorerie",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Ressources stables = 500 000 € ; emplois stables (immobilisations) = 420 000 €.\nStocks + créances = 150 000 € ; dettes d’exploitation = 90 000 €.\nCalcule le FRNG, le BFR et la trésorerie nette."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**FRNG** = ressources stables − emplois stables = 500 000 − 420 000 = **80 000 €**.",
+              "**BFR** = (stocks + créances) − dettes d’exploitation = 150 000 − 90 000 = **60 000 €**.",
+              "**Trésorerie nette** = FRNG − BFR = 80 000 − 60 000 = **20 000 €** (> 0 : l’équilibre financier est sain)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Interprétation",
+            "c": "Trésorerie = FRNG − BFR. Une trésorerie négative (FRNG < BFR) n’est pas une faillite, mais un déséquilibre à financer."
+          }
+        ]
+      }
+    ]
+  },
+  "gf-t3": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — seuil de rentabilité",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "CA = 200 000 € ; charges variables = 120 000 € ; charges fixes = 50 000 €.\n1) Calcule la marge sur coût variable et son taux.\n2) Détermine le seuil de rentabilité.\n3) Quel est le résultat ?"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**MCV** = CA − charges variables = 200 000 − 120 000 = **80 000 €** ; **taux de MCV** = 80 000 / 200 000 = **0,40**.",
+              "**Seuil de rentabilité** = charges fixes / taux de MCV = 50 000 / 0,40 = **125 000 € de CA** (à partir de ce CA, l’entreprise couvre toutes ses charges).",
+              "**Résultat** = MCV − charges fixes = 80 000 − 50 000 = **30 000 €**."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Au seuil",
+            "c": "Au seuil de rentabilité, le résultat est **nul** (pas la marge) : la MCV couvre exactement les coûts fixes."
+          }
+        ]
+      }
+    ]
+  }
+}

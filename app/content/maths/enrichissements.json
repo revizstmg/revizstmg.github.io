@@ -1,0 +1,218 @@
+{
+  "math-c1": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — évolutions et indice",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Le chiffre d’affaires d’une entreprise passe de 80 000 € en 2023 à 92 000 € en 2024.\n1) Quel est le taux d’évolution 2023 → 2024 ?\n2) Le CA augmente encore de 15 % en 2025 : quelle est l’évolution globale 2023 → 2025 ?\n3) Donne l’indice base 100 (base 2023) du CA de 2024."
+          },
+          {
+            "t": "p",
+            "c": "**Résolution, étape par étape :**"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Taux** : t = (92 000 − 80 000) / 80 000 = 12 000 / 80 000 = **0,15 = +15 %**.",
+              "**Coefficient multiplicateur** : CM = 1 + 0,15 = **1,15**.",
+              "**Évolution globale** (deux hausses de 15 %) : CM global = 1,15 × 1,15 = **1,3225**, soit **+32,25 %** (et surtout pas +30 % : on multiplie les CM, on n’additionne pas les taux).",
+              "**Indice** base 100 : (92 000 / 80 000) × 100 = **115** → l’indice 115 confirme le +15 %."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Méthode",
+            "c": "Toujours passer par le coefficient multiplicateur (CM = 1 + t) pour enchaîner des évolutions : c’est la source d’erreur n°1 au bac."
+          }
+        ]
+      }
+    ]
+  },
+  "math-c2": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — arithmétique vs géométrique",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Une association compte 500 membres en 2024.\nScénario A : elle gagne 40 membres chaque année.\nScénario B : elle progresse de 6 % chaque année.\nCombien de membres dans 5 ans dans chaque scénario ?"
+          },
+          {
+            "t": "p",
+            "c": "**Résolution :**"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Scénario A — suite arithmétique** de premier terme u₀ = 500 et de raison r = 40 : uₙ = 500 + 40n. Pour n = 5 : u₅ = 500 + 40 × 5 = **700 membres**.",
+              "**Scénario B — suite géométrique** de raison q = 1,06 : uₙ = 500 × 1,06ⁿ. Pour n = 5 : u₅ = 500 × 1,06⁵ = 500 × 1,3382 ≈ **669 membres**.",
+              "Après 5 ans A (700) dépasse B (669), mais la suite **géométrique** finit toujours par l’emporter (croissance exponentielle) : dès n = 9, B repasse devant."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Repère",
+            "c": "Hausse de p % ⇒ q = 1 + p/100 ; baisse de p % ⇒ q = 1 − p/100. « On ajoute » = arithmétique ; « on multiplie / en % » = géométrique."
+          }
+        ]
+      }
+    ]
+  },
+  "math-c3": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — dérivée, tangente, optimisation",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Le coût de production (en milliers d’€) est modélisé par f(x) = x² − 6x + 10, où x est la quantité (en tonnes).\n1) Calcule f’(x).\n2) Étudie les variations et trouve la quantité qui minimise le coût.\n3) Donne l’équation de la tangente en x = 1."
+          },
+          {
+            "t": "p",
+            "c": "**Résolution :**"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Dérivée** : f’(x) = 2x − 6.",
+              "**Variations** : f’(x) = 0 ⇔ x = 3. f’ < 0 avant 3 (coût décroissant), f’ > 0 après 3 (coût croissant) → **minimum en x = 3**, avec f(3) = 9 − 18 + 10 = **1** (soit 1 000 €).",
+              "**Tangente en x = 1** : f’(1) = 2 − 6 = −4 et f(1) = 1 − 6 + 10 = 5, donc y = −4(x − 1) + 5 = **−4x + 9**."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Optimiser",
+            "c": "Minimiser un coût / maximiser un bénéfice = chercher où la dérivée s’annule EN CHANGEANT DE SIGNE. Le tableau de signes de f’ donne directement la réponse."
+          }
+        ]
+      }
+    ]
+  },
+  "math-c4": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — ajustement affine et prévision",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Ventes (en milliers) d’un produit sur 5 ans :\nAnnée (x) : 1 · 2 · 3 · 4 · 5\nVentes (y) : 12 · 15 · 17 · 20 · 26\n1) Donne les coordonnées du point moyen G.\n2) La calculatrice donne y = 3,3x + 8,1. Prévois les ventes de l’année 6."
+          },
+          {
+            "t": "p",
+            "c": "**Résolution :**"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Point moyen G** : x̄ = (1+2+3+4+5)/5 = 3 ; ȳ = (12+15+17+20+26)/5 = 90/5 = 18 → **G(3 ; 18)**. (La droite d’ajustement passe toujours par G.)",
+              "**Prévision année 6** (extrapolation) : y = 3,3 × 6 + 8,1 = 19,8 + 8,1 = **27,9 milliers**, soit environ **27 900 ventes**."
+            ]
+          },
+          {
+            "t": "warning",
+            "h": "Prudence",
+            "c": "Extrapoler (au-delà des données) est plus risqué qu’interpoler : la tendance passée peut ne pas se poursuivre. À justifier en analyse."
+          }
+        ]
+      }
+    ]
+  },
+  "math-c5": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — arbre pondéré et probabilité conditionnelle",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Une usine a deux machines. M1 fabrique 60 % des pièces, M2 les 40 % restants.\n3 % des pièces de M1 sont défectueuses, contre 5 % pour M2.\n1) Quelle est la probabilité qu’une pièce soit défectueuse ?\n2) Une pièce est défectueuse : quelle est la probabilité qu’elle vienne de M1 ?"
+          },
+          {
+            "t": "p",
+            "c": "**Résolution avec l’arbre :** P(M1)=0,6 ; P(D|M1)=0,03 ; P(M2)=0,4 ; P(D|M2)=0,05."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Probabilités totales** : P(D) = 0,6 × 0,03 + 0,4 × 0,05 = 0,018 + 0,020 = **0,038** (soit 3,8 %).",
+              "**Conditionnelle** : P(M1|D) = P(M1 ∩ D) / P(D) = 0,018 / 0,038 ≈ **0,474**, soit **47,4 %**."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Réflexe",
+            "c": "On MULTIPLIE le long d’un chemin ; on ADDITIONNE les chemins qui mènent au même événement. La question « sachant que… » = probabilité conditionnelle."
+          }
+        ]
+      }
+    ]
+  },
+  "math-c6": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — loi binomiale",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Un commercial conclut une vente avec une probabilité de 0,2 à chaque visite. Il effectue 10 visites indépendantes. On note X le nombre de ventes.\n1) Quelle loi suit X ?\n2) Combien de ventes en moyenne ?\n3) Quelle est la probabilité de ne conclure aucune vente, puis d’en conclure au moins une ?"
+          },
+          {
+            "t": "p",
+            "c": "**Résolution :**"
+          },
+          {
+            "t": "list",
+            "c": [
+              "X compte les succès sur 10 épreuves identiques et indépendantes à deux issues → **X suit B(10 ; 0,2)**.",
+              "**Espérance** : E(X) = n × p = 10 × 0,2 = **2 ventes** en moyenne.",
+              "**Aucune vente** : P(X = 0) = 0,8¹⁰ ≈ **0,107**. Donc **au moins une** : P(X ⩾ 1) = 1 − 0,107 = **0,893** (≈ 89 %)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Calculatrice",
+            "c": "P(X = k) et P(X ⩽ k) se lisent directement au menu « loi binomiale ». « Au moins un » = 1 − P(aucun)."
+          }
+        ]
+      }
+    ]
+  },
+  "math-c7": {
+    "sections": [
+      {
+        "h": "🧮 Exemple traité — intervalle de confiance",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Énoncé",
+            "c": "Lors d’un sondage, sur 400 personnes interrogées, 220 se déclarent favorables à un projet.\n1) Quelle est la fréquence observée f ?\n2) Donne un intervalle de confiance de la proportion au niveau de confiance de 95 %."
+          },
+          {
+            "t": "p",
+            "c": "**Résolution :**"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Fréquence** : f = 220 / 400 = **0,55** (55 %).",
+              "**Intervalle** : [f − 1/√n ; f + 1/√n] avec 1/√400 = 1/20 = 0,05 → IC = **[0,50 ; 0,60]**.",
+              "**Amplitude** : 2/√n = **0,10** (10 points). Interprétation : on estime, avec 95 % de confiance, que la proportion réelle de la population est comprise entre **50 % et 60 %**."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Précision",
+            "c": "Plus l’échantillon n est grand, plus 2/√n est petit, donc plus l’estimation est précise (fourchette resserrée)."
+          }
+        ]
+      }
+    ]
+  }
+}

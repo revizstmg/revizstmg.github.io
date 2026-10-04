@@ -1,0 +1,22 @@
+{
+  "p1-fr-1-flash": 4,
+  "p1-fr-1-ordre": 2,
+  "p1-fr-1-ordre-intro": 3,
+  "p1-fr-1-qcm": 0,
+  "p1-fr-1-vf": 1,
+  "p1-fr-2-flash": 2,
+  "p1-fr-2-ordre": 1,
+  "p1-fr-2-qcm": 3,
+  "p1-fr-2-tri": 0,
+  "p1-fr-2-vf": 4,
+  "p1-fr-3-assoc": 2,
+  "p1-fr-3-flash": 1,
+  "p1-fr-3-qcm": 3,
+  "p1-fr-3-tri": 2,
+  "p1-fr-3-trou": 0,
+  "p1-fr-4-assoc": 5,
+  "p1-fr-4-flash": 2,
+  "p1-fr-4-ordre": 0,
+  "p1-fr-4-qcm": 1,
+  "p1-fr-4-tri": 4
+}

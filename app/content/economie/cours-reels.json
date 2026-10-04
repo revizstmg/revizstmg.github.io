@@ -1,0 +1,279 @@
+{
+  "eco-t6": [
+    {
+      "h": "« Quoi qu’il en coûte » : l’État au secours de l’économie",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas réel",
+          "c": "Pendant la pandémie de Covid-19 (2020), des millions de salariés ne pouvaient plus travailler. L’État a payé une partie de leur salaire (chômage partiel) et aidé les entreprises, pour éviter l’effondrement."
+        },
+        {
+          "t": "p",
+          "c": "Cet épisode montre pourquoi l’État intervient : quand le marché seul ne suffit pas (crise, chômage), il peut **soutenir l’activité** pour amortir le choc. Le marché connaît en effet des **défaillances** : biens publics que personne ne veut payer, **externalités** (pollution), asymétries d’information, monopoles."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Même dans une économie de marché, l’État a un **rôle économique** car le marché **défaille** parfois. C’est l’une de ses grandes missions ; il en a d’autres, complémentaires."
+        }
+      ]
+    },
+    {
+      "h": "Trois missions, une même logique",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "L’économiste **Musgrave** résume l’action de l’État en **trois fonctions**. L’**allocation** : produire ce que le marché ne fournit pas seul (routes, écoles, sécurité — des biens utiles à tous). La **répartition** : prélever des impôts et verser des aides (allocations, retraites) pour réduire les inégalités. La **stabilisation** : face à une crise, relancer ; en cas de surchauffe, freiner."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Fonction",
+            "Objectif"
+          ],
+          "rows": [
+            [
+              "Allocation",
+              "Fournir les biens publics"
+            ],
+            [
+              "Répartition",
+              "Réduire les inégalités"
+            ],
+            [
+              "Stabilisation",
+              "Lisser les crises (emploi, prix)"
+            ]
+          ]
+        },
+        {
+          "t": "example",
+          "h": "Illustration",
+          "c": "Ton lycée (gratuit), la route devant chez toi, les allocations d’une famille modeste : trois formes différentes de l’intervention publique au quotidien."
+        }
+      ]
+    },
+    {
+      "h": "Mais à quel prix ?",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Dépenser plus qu’on ne gagne creuse le **déficit** chaque année ; les déficits accumulés forment la **dette**. La France s’endette pour financer ces politiques, ce qui alimente un débat permanent : jusqu’où l’État peut-il intervenir sans fragiliser ses finances ?"
+        },
+        {
+          "t": "p",
+          "c": "Les limites sont réelles : le **poids de la dette** (les intérêts pèsent sur le budget), l’**effet d’éviction** (l’État emprunte tant qu’il évince l’investissement privé), les **règles européennes**. Le débat oppose les héritiers de **Keynes** (relancer en cas de crise) aux **libéraux** (attention à la dette et à l’efficacité)."
+        },
+        {
+          "t": "warning",
+          "h": "À ne pas confondre",
+          "c": "Le **déficit** est un **flux** (le trou d’une année) ; la **dette** est un **stock** (tout ce qui reste à rembourser). On les rapporte au **PIB** (en %) pour comparer."
+        }
+      ]
+    }
+  ],
+  "eco-t7": [
+    {
+      "h": "Qui est vraiment « au chômage » ?",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Trois personnes sans emploi : un étudiant de terminale, un retraité, et une femme de 30 ans qui postule activement. Laquelle est « au chômage » au sens officiel ?"
+        },
+        {
+          "t": "p",
+          "c": "Seulement la troisième. Pour être compté comme chômeur (au sens du BIT), il faut trois choses en même temps : être **sans emploi**, être **disponible** pour travailler, et **rechercher activement**. L’étudiant et le retraité sont **inactifs** : ils ne font pas partie de la population active."
+        },
+        {
+          "t": "p",
+          "c": "On mesure la situation par le **taux de chômage** = chômeurs ÷ **population active** × 100 (la population active = actifs occupés + chômeurs). Attention : il ne se calcule **pas** sur toute la population."
+        },
+        {
+          "t": "tip",
+          "h": "Pourquoi ça compte",
+          "c": "Le **halo du chômage** regroupe des personnes sans emploi non comptées comme chômeurs (elles ne cherchent pas activement, ou ne sont pas disponibles) : le chiffre officiel **sous-estime** le sous-emploi réel."
+        }
+      ]
+    },
+    {
+      "h": "Quand une usine ferme",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La fermeture d’une usine jette d’un coup des centaines de personnes sur le marché du travail. Certaines retrouveront vite un poste ; d’autres, dont le métier disparaît, devront se **reconvertir** (formation). Le chômage n’a donc pas une seule cause."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Type de chômage",
+            "Cause",
+            "Remède"
+          ],
+          "rows": [
+            [
+              "Conjoncturel",
+              "Ralentissement (crise)",
+              "Relance"
+            ],
+            [
+              "Structurel",
+              "Compétences inadaptées",
+              "Formation"
+            ],
+            [
+              "Frictionnel",
+              "Transition entre 2 emplois",
+              "Normal"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Les **politiques de l’emploi** se répartissent en deux familles : **actives** (agir sur les causes : formation, aides à l’embauche, allègements de charges) et **passives** (atténuer les conséquences : indemnisation). Une bonne politique **combine** les deux."
+        },
+        {
+          "t": "tip",
+          "h": "Lien avec l’État",
+          "c": "Le bon remède dépend du bon diagnostic : le chômage **conjoncturel** appelle une **relance**, le chômage **structurel** appelle la **formation**."
+        }
+      ]
+    }
+  ],
+  "eco-t8": [
+    {
+      "h": "Ton téléphone a fait le tour du monde",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas réel",
+          "c": "Un smartphone haut de gamme est conçu aux États-Unis, ses composants viennent de Corée, du Japon et de Taïwan, il est assemblé en Chine, puis vendu partout. Un seul objet, des dizaines de pays."
+        },
+        {
+          "t": "p",
+          "c": "C’est la **mondialisation** : chaque pays se spécialise là où il est **relativement** le plus efficace (l’**avantage comparatif** de Ricardo), puis les biens s’échangent. Cette **division internationale du travail** rend les produits moins chers et plus variés… mais crée une forte **dépendance** entre économies (un blocage quelque part, et toute la chaîne s’enraye)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Avantage **absolu** (Smith) = être le meilleur ; avantage **comparatif** (Ricardo) = se spécialiser là où l’on est **relativement** le meilleur. C’est ce dernier qui fonde le gain à l’échange."
+        }
+      ]
+    },
+    {
+      "h": "Importer plus qu’on n’exporte",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Un pays qui achète à l’étranger plus qu’il ne vend a une **balance commerciale déficitaire**. C’est le cas de la France sur les biens depuis des années : elle importe beaucoup (énergie, produits manufacturés) et le solde est négatif."
+        },
+        {
+          "t": "formula",
+          "c": "Solde commercial = Exportations − Importations"
+        },
+        {
+          "t": "p",
+          "c": "Un déficit peut traduire un **manque de compétitivité** (nos produits se vendent mal) ou une **demande interne dynamique** (on consomme et on importe beaucoup) : ce n’est pas toujours un mauvais signe. La **balance commerciale** (les biens) n’est qu’une partie de la **balance des paiements** (tous les flux)."
+        },
+        {
+          "t": "warning",
+          "h": "Le signe compte",
+          "c": "Négatif = **déficit** ; positif = **excédent**. Garde toujours le **signe** et l’**unité** dans ta réponse."
+        }
+      ]
+    },
+    {
+      "h": "Le libre-échange fait des gagnants… et des perdants",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Illustration",
+          "c": "Ouvrir les frontières permet d’acheter des vêtements bon marché (gagnant : le consommateur), mais peut fermer une usine textile locale incapable de s’aligner sur ces prix (perdant : ces salariés)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "",
+            "Libre-échange",
+            "Protectionnisme"
+          ],
+          "rows": [
+            [
+              "Outils",
+              "Accords, OMC",
+              "Droits de douane, quotas"
+            ],
+            [
+              "Avantage",
+              "Prix bas, choix, croissance",
+              "Protège l’emploi local"
+            ],
+            [
+              "Risque",
+              "Délocalisations",
+              "Représailles, prix élevés"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "Nuance attendue",
+          "c": "Au bac, ne présente jamais le libre-échange comme « tout bon » ou « tout mauvais » : montre les gains **et** les coûts sociaux, et propose un **accompagnement** des perdants (formation, reconversion)."
+        }
+      ]
+    }
+  ],
+  "eco-t9": [
+    {
+      "h": "Le PIB ment-il ?",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Un pays double son PIB en exploitant à fond ses forêts et ses mines, mais l’air devient irrespirable et les inégalités explosent. « Va-t-il mieux » ?"
+        },
+        {
+          "t": "p",
+          "c": "Pas sûr. Le **PIB** mesure la richesse marchande produite (la somme des **valeurs ajoutées**), pas le bien-être. On calcule sa croissance par : ((PIB_N − PIB_N-1) ÷ PIB_N-1) × 100."
+        },
+        {
+          "t": "list",
+          "c": [
+            "Il **ignore** le travail bénévole et domestique.",
+            "Il **ne dit rien** des inégalités ni de la pollution.",
+            "Il compte même comme « richesse » la réparation d’une catastrophe."
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "Mesurer autrement",
+          "c": "On utilise aussi l’**IDH** (santé + éducation + revenu) pour parler de **développement**, et pas seulement de croissance. Croiser plusieurs indicateurs donne une image plus juste."
+        }
+      ]
+    },
+    {
+      "h": "La fast fashion et ses coûts cachés",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas réel",
+          "c": "Des enseignes de mode ultra-rapide (type Shein) sortent des milliers de nouveautés par jour à très bas prix. La croissance est réelle… mais elle s’accompagne de pollution, de déchets et de conditions de travail contestées."
+        },
+        {
+          "t": "p",
+          "c": "Ces dégâts que le prix ne reflète pas sont des **externalités négatives** : le marché seul ne les corrige pas, d’où la nécessité d’une intervention. L’État dispose d’**instruments** : normes, **taxe** (principe pollueur-payeur, taxe carbone), **marché de quotas**, subventions vertes."
+        },
+        {
+          "t": "p",
+          "c": "C’est tout l’enjeu du **développement durable** (rapport Brundtland) : concilier ses **trois piliers** — économique, social, environnemental. Le débat oppose la **soutenabilité faible** (le capital détruit est compensable) et **forte** (certaines ressources sont irremplaçables)."
+        },
+        {
+          "t": "tip",
+          "h": "Idée forte",
+          "c": "Une croissance n’est durable que si elle préserve l’environnement et les générations futures : croître **sans** détruire. Croissance (quantité) ≠ développement (qualité durable)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "p1-mgmt-t1": [
+    [
+      "Management",
+      "Ensemble des techniques de direction et de pilotage d’une organisation."
+    ],
+    [
+      "Organisation",
+      "Ensemble structuré de moyens et d’acteurs poursuivant un but."
+    ],
+    [
+      "Entreprise",
+      "Organisation produisant des biens/services marchands pour réaliser un profit."
+    ],
+    [
+      "Organisation publique",
+      "Organisation gérée par l’État/les collectivités, satisfaisant l’intérêt général."
+    ],
+    [
+      "Association",
+      "Organisation à but non lucratif poursuivant une mission d’intérêt collectif."
+    ],
+    [
+      "Finalité",
+      "Raison d’être et but ultime de l’organisation."
+    ]
+  ],
+  "p1-mgmt-t2": [
+    [
+      "Stratégie",
+      "Ensemble des choix de long terme engageant l’organisation."
+    ],
+    [
+      "Diagnostic stratégique",
+      "Analyse interne (forces/faiblesses) et externe (opportunités/menaces)."
+    ],
+    [
+      "SWOT",
+      "Matrice croisant forces, faiblesses, opportunités et menaces."
+    ],
+    [
+      "Objectif",
+      "But précis, mesurable et daté que l’organisation se fixe."
+    ],
+    [
+      "Domaine d’activité stratégique (DAS)",
+      "Sous-ensemble homogène d’activités relevant d’une même stratégie."
+    ],
+    [
+      "Avantage concurrentiel",
+      "Atout durable qui distingue l’organisation de ses concurrents."
+    ]
+  ],
+  "p1-mgmt-t3": [
+    [
+      "Spécialisation",
+      "Se concentrer sur un seul métier ou domaine d’activité."
+    ],
+    [
+      "Diversification",
+      "Se développer sur de nouveaux produits ou marchés."
+    ],
+    [
+      "Intégration",
+      "Prendre le contrôle d’activités situées en amont ou en aval."
+    ],
+    [
+      "Externalisation",
+      "Confier une activité à un prestataire extérieur."
+    ],
+    [
+      "Domination par les coûts",
+      "Stratégie visant les prix les plus bas grâce à des coûts réduits."
+    ],
+    [
+      "Différenciation",
+      "Stratégie proposant une offre perçue comme unique (qualité, image)."
+    ]
+  ]
+}

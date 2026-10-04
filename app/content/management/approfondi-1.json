@@ -1,0 +1,592 @@
+{
+  "mgmt-t1": [
+    {
+      "h": "🏢 Qu’est-ce qu’une organisation ? Les trois types",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une **organisation** est un ensemble de personnes qui **coordonnent** leurs actions pour atteindre des **buts communs**, en partageant des moyens et en se répartissant les tâches. Toute organisation se caractérise par : un **but** (sa raison d’être), des **ressources** (humaines, matérielles, financières), une **structure** (qui fait quoi) et une **nationalité/champ d’action**."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Type",
+            "Finalité principale",
+            "Ressources",
+            "Exemples"
+          ],
+          "rows": [
+            [
+              "Entreprise privée",
+              "Réaliser un profit (finalité lucrative)",
+              "Ventes, capitaux privés",
+              "Decathlon, une boulangerie"
+            ],
+            [
+              "Organisation publique",
+              "Servir l’intérêt général",
+              "Impôts, redevances",
+              "Hôpital, mairie, Pôle emploi"
+            ],
+            [
+              "OSBL / association",
+              "Servir une cause (non lucratif)",
+              "Cotisations, dons, subventions, bénévolat",
+              "Restos du Cœur, un club sportif"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La **finalité** est le but ultime, durable, qui justifie l’existence de l’organisation. Pour l’entreprise privée, c’est le **profit** (nécessaire à sa survie et à sa croissance), mais rarement le **seul** but : s’y ajoutent des finalités sociales et sociétales (emploi, bien-être, environnement)."
+        },
+        {
+          "t": "tip",
+          "h": "Caractériser une organisation",
+          "c": "Toujours par : **type** (privée/publique/OSBL) · **finalité** · **taille** (TPE, PME, ETI, grande entreprise) · **champ d’action** (local, national, international) · **ressources** · **statut juridique**."
+        }
+      ]
+    },
+    {
+      "h": "⚙️ Management stratégique et management opérationnel",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Manager, c’est **conduire** une organisation vers ses buts en mobilisant ses ressources. On distingue deux niveaux, complémentaires, qui n’engagent ni les mêmes personnes ni le même horizon de temps."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Critère",
+            "Management stratégique",
+            "Management opérationnel"
+          ],
+          "rows": [
+            [
+              "Horizon",
+              "Long terme (années)",
+              "Court terme (jour, mois)"
+            ],
+            [
+              "Qui",
+              "Dirigeants, direction générale",
+              "Encadrement intermédiaire, chefs d’équipe"
+            ],
+            [
+              "Portée",
+              "Engage toute l’organisation",
+              "Limitée à un service, une unité"
+            ],
+            [
+              "Réversibilité",
+              "Décisions difficiles à corriger",
+              "Décisions ajustables rapidement"
+            ],
+            [
+              "Exemple",
+              "Se lancer à l’international",
+              "Organiser les plannings de la semaine"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le stratégique **fixe le cap** (quels marchés, quels produits, quelle croissance), l’opérationnel **tient la barre au quotidien** (gérer les stocks, animer les équipes, respecter les délais). Une bonne stratégie mal exécutée échoue ; une exécution parfaite sans cap se disperse. Les deux niveaux doivent être **cohérents**."
+        },
+        {
+          "t": "tip",
+          "h": "Repère bac",
+          "c": "Décision **rare, coûteuse, engageante, prise par les dirigeants** = stratégique. Décision **fréquente, quotidienne, réversible, prise par l’encadrement** = opérationnelle."
+        }
+      ]
+    },
+    {
+      "h": "🎯 Finalité, performance et parties prenantes",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **performance** mesure l’atteinte des buts. Elle a deux visages complémentaires qu’il ne faut jamais confondre : l’**efficacité** (atteindre l’objectif) et l’**efficience** (l’atteindre en économisant les ressources)."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Efficacité** = atteindre le résultat visé. « Ai-je atteint mon objectif de ventes ? »",
+            "**Efficience** = atteindre ce résultat au **moindre coût**. « L’ai-je fait sans gaspiller ? »",
+            "**Performance globale** = efficacité + efficience, sur les plans **économique, social et environnemental**."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La performance ne se réduit pas au chiffre d’affaires. On distingue la performance **commerciale** (parts de marché, satisfaction client), **financière** (rentabilité), **sociale** (climat, turn-over, sécurité) et **sociétale/environnementale** (impact sur la société et la planète)."
+        },
+        {
+          "t": "p",
+          "c": "Les **parties prenantes** sont tous les acteurs qui **influencent** l’organisation ou sont **affectés** par elle : salariés, clients, fournisseurs, actionnaires, État, riverains, ONG. Elles ont des **attentes parfois contradictoires** (l’actionnaire veut du dividende, le salarié un meilleur salaire) : le manager doit **arbitrer**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un même résultat peut être efficace **sans** être efficient (objectif atteint mais en gaspillant). Au bac, distinguer les deux rapporte des points faciles."
+        }
+      ]
+    },
+    {
+      "h": "🏭 Produire : facteurs et combinaison productive",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Produire, c’est combiner des **facteurs de production** pour créer un bien ou un service qui a de la **valeur**. On en distingue traditionnellement deux, auxquels s’ajoutent des ressources immatérielles devenues décisives."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Travail** : la main-d’œuvre, ses compétences et son organisation.",
+            "**Capital technique** : les machines, bâtiments, outils, logiciels (le capital fixe) et les consommations (le capital circulant).",
+            "**Ressources immatérielles** : savoir-faire, brevets, image de marque, données — souvent le vrai avantage aujourd’hui."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La **combinaison productive** est le dosage choisi entre ces facteurs. Une entreprise peut être **intensive en travail** (artisanat) ou **intensive en capital** (usine automatisée). Le choix dépend du coût relatif des facteurs et de la technologie disponible."
+        },
+        {
+          "t": "p",
+          "c": "La **productivité** mesure l’efficience de la production : la richesse créée par unité de facteur utilisé. L’améliorer (par la formation, la mécanisation, une meilleure organisation) permet de produire plus avec autant — c’est un moteur de compétitivité."
+        },
+        {
+          "t": "formula",
+          "c": "Productivité du travail = Production ÷ Nombre d’heures travaillées"
+        },
+        {
+          "t": "tip",
+          "h": "Lien avec la performance",
+          "c": "Gagner en productivité, c’est gagner en **efficience** : c’est pourquoi les entreprises investissent (machines, numérique) et forment leurs salariés."
+        }
+      ]
+    },
+    {
+      "h": "💼 Étude de cas guidée — caractériser et diagnostiquer",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** « *Les Restos du Cœur* distribuent des repas aux plus démunis grâce à 70 000 bénévoles, financés par des dons et des subventions. » Caractérisez l’organisation, puis identifiez sa finalité et une partie prenante clé."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Type",
+          "c": "Association loi 1901 → **organisation à but non lucratif (OSBL)**."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Finalité",
+          "c": "Finalité **sociale / d’intérêt général** : aider les personnes en difficulté. Aucune recherche de profit."
+        },
+        {
+          "t": "example",
+          "h": "Étape 3 — Ressources et parties prenantes",
+          "c": "Ressources : **dons, subventions, bénévolat** (ressource humaine gratuite). Partie prenante clé : les **bénévoles**, sans qui l’activité s’arrête ; mais aussi les **donateurs** et l’**État** (subventions)."
+        },
+        {
+          "t": "p",
+          "c": "**Commentaire.** La performance ne se mesure pas ici en profit, mais en **nombre de repas distribués** et en **efficience** (coût par repas). Le principal risque de gestion est la **dépendance** aux dons et à la disponibilité des bénévoles."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Pour toute étude de cas de management : 1) **identifier** l’organisation (type, finalité), 2) **repérer** le problème de management, 3) **mobiliser** une notion du cours, 4) **conclure** par une recommandation argumentée."
+        }
+      ]
+    }
+  ],
+  "mgmt-t2": [
+    {
+      "h": "🔍 Le diagnostic stratégique : SWOT, PESTEL",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Avant toute décision stratégique, l’organisation réalise un **diagnostic** : un état des lieux honnête de sa situation. Il croise un regard **interne** (l’entreprise elle-même) et un regard **externe** (son environnement). L’outil de synthèse est la matrice **SWOT** (FFOM en français)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "",
+            "Positif",
+            "Négatif"
+          ],
+          "rows": [
+            [
+              "Interne",
+              "Forces (Strengths)",
+              "Faiblesses (Weaknesses)"
+            ],
+            [
+              "Externe",
+              "Opportunités (Opportunities)",
+              "Menaces (Threats)"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le **diagnostic interne** inventorie les **ressources** (financières, humaines, techniques) et les **compétences** de l’organisation : que sait-elle faire mieux que les autres ? Le **diagnostic externe** analyse le marché et le macro-environnement, souvent avec l’outil **PESTEL**."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**P**olitique · **É**conomique · **S**ocioculturel · **T**echnologique · **E**nvironnemental · **L**égal.",
+            "Il aide à repérer les **opportunités** (une nouvelle technologie, une tendance de consommation) et les **menaces** (une loi, une crise, un concurrent)."
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "Bien classer",
+          "c": "Forces/faiblesses = **ce que l’entreprise maîtrise** (interne). Opportunités/menaces = **ce qui vient de dehors** (externe, subi). Confondre les deux est l’erreur la plus fréquente."
+        }
+      ]
+    },
+    {
+      "h": "♟️ Les grandes stratégies",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "À partir du diagnostic, l’organisation choisit une **stratégie** : une orientation de long terme pour construire un **avantage concurrentiel** durable. Michael **Porter** a formalisé deux grandes stratégies « génériques »."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Domination par les coûts** : proposer le prix le plus bas grâce à des coûts maîtrisés (volumes, productivité). Exemples : Lidl, Ryanair. Risque : la guerre des prix.",
+            "**Différenciation** : proposer une offre **perçue comme unique** (qualité, image, innovation, service) que le client paie plus cher. Exemples : Apple, un restaurant étoilé. Risque : l’imitation."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "À ces stratégies concurrentielles s’ajoutent des choix de **périmètre** : la **spécialisation** (se concentrer sur un seul métier, un seul marché) ou la **diversification** (se développer sur de nouveaux produits/marchés pour répartir les risques)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Choix",
+            "Avantage",
+            "Risque"
+          ],
+          "rows": [
+            [
+              "Spécialisation",
+              "Expertise, image forte",
+              "Tout repose sur un seul marché"
+            ],
+            [
+              "Diversification",
+              "Répartition des risques",
+              "Dispersion, perte de cohérence"
+            ],
+            [
+              "Intégration",
+              "Maîtriser la filière (amont/aval)",
+              "Lourdeur, coûts fixes"
+            ],
+            [
+              "Externalisation",
+              "Se recentrer, réduire les coûts",
+              "Dépendance aux sous-traitants"
+            ]
+          ]
+        },
+        {
+          "t": "warning",
+          "h": "Piège",
+          "c": "Vouloir « le prix le plus bas ET le plus haut de gamme » est en général intenable : c’est l’« enlisement dans la voie médiane » dénoncé par Porter. Il faut **choisir**."
+        }
+      ]
+    },
+    {
+      "h": "👥 Décision, acteurs et pouvoir",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une décision engage des **acteurs** aux intérêts variés. Le **pouvoir** est la capacité d’un acteur à influencer les décisions. Il peut venir de la hiérarchie (pouvoir formel), mais aussi de l’expertise, du contrôle d’une information ou d’une ressource rare (pouvoir informel)."
+        },
+        {
+          "t": "p",
+          "c": "Le **style de direction** décrit la manière dont le dirigeant exerce ce pouvoir. Rensis **Likert** en a distingué quatre."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Style",
+            "Caractéristique"
+          ],
+          "rows": [
+            [
+              "Autoritaire",
+              "Décide seul, impose, ne consulte pas"
+            ],
+            [
+              "Paternaliste",
+              "Décide seul mais récompense la fidélité"
+            ],
+            [
+              "Consultatif",
+              "Demande l’avis avant de décider"
+            ],
+            [
+              "Participatif",
+              "Associe les équipes à la décision"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La décision est rarement parfaitement **rationnelle** : Herbert **Simon** parle de **rationalité limitée** — le décideur manque de temps, d’information et de capacités de calcul, et se contente d’une solution **satisfaisante** plutôt qu’optimale."
+        },
+        {
+          "t": "tip",
+          "h": "À mobiliser",
+          "c": "Face à un cas, relier le **style de direction** au **contexte** : l’autoritaire va vite en situation de crise ; le participatif mobilise et innove mais prend du temps."
+        }
+      ]
+    },
+    {
+      "h": "💡 Construire un avantage concurrentiel durable",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "L’**avantage concurrentiel** est ce qui permet à une organisation de **surpasser durablement** ses rivales : soit un coût plus bas, soit une valeur supérieure perçue par le client. Pour être **durable**, il doit être difficile à imiter."
+        },
+        {
+          "t": "p",
+          "c": "L’approche par les **ressources et compétences** explique qu’un avantage solide repose souvent sur des ressources **rares, précieuses, difficiles à copier et non substituables** : un savoir-faire unique, une marque puissante, un réseau, des données. Ce sont les **compétences distinctives**."
+        },
+        {
+          "t": "example",
+          "h": "Illustration — Netflix vs Blockbuster",
+          "c": "Blockbuster louait des DVD en magasin. Netflix a bâti un avantage sur le **streaming** et surtout sur ses **données** (algorithme de recommandation) et sa production propre. Blockbuster, prisonnier de son modèle de magasins (coûts fixes), n’a pas su se réinventer : il a disparu."
+        },
+        {
+          "t": "p",
+          "c": "Un avantage n’est jamais **définitif** : les concurrents imitent, les technologies changent. L’organisation doit donc **innover en continu** et surveiller son environnement pour renouveler son avantage."
+        },
+        {
+          "t": "tip",
+          "h": "Réflexe",
+          "c": "Pour repérer un avantage concurrentiel : « Qu’est-ce que cette entreprise fait que les autres ne peuvent pas facilement copier ? »"
+        }
+      ]
+    },
+    {
+      "h": "💼 Étude de cas guidée — diagnostic et stratégie",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Une chaîne de cafés de spécialité connaît un fort succès (produits premium, clientèle fidèle) mais fait face à l’arrivée de grands groupes et à la hausse du prix du café. Réalisez un mini-SWOT et recommandez une stratégie."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — SWOT",
+          "c": "Forces : qualité, image premium, clientèle fidèle. Faiblesses : coûts élevés, dépendance à un produit. Opportunités : engouement pour le « bien consommer ». Menaces : concurrence des grands groupes, flambée du prix des matières."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Choix stratégique",
+          "c": "La force est la **différenciation** (qualité, expérience). Se lancer dans une guerre des prix contre les grands groupes serait perdant. → Consolider la **différenciation** (traçabilité, service, ambiance)."
+        },
+        {
+          "t": "p",
+          "c": "**Étape 3 — Recommandation argumentée.** Renforcer l’avantage difficile à imiter (relation client, origine du café), fidéliser (programme, communauté), et sécuriser l’approvisionnement (contrats longs avec les producteurs) face à la menace sur les prix. La spécialisation est cohérente avec l’image, mais impose de bien maîtriser le **risque de mono-produit**."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Toujours **relier** la stratégie recommandée aux forces du diagnostic. Une reco « hors-sol », non justifiée par le SWOT, ne rapporte pas de points."
+        }
+      ]
+    }
+  ],
+  "mgmt-t3": [
+    {
+      "h": "🌍 La RSE et le développement durable",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **Responsabilité Sociétale des Entreprises (RSE)** est l’intégration **volontaire** par l’organisation des préoccupations **sociales, environnementales et éthiques** dans son activité et ses relations avec ses parties prenantes. C’est l’application du **développement durable** à l’entreprise."
+        },
+        {
+          "t": "p",
+          "c": "Le développement durable repose sur **trois piliers** qu’il faut concilier — c’est tout l’enjeu et toute la difficulté."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Pilier",
+            "Question posée"
+          ],
+          "rows": [
+            [
+              "Économique",
+              "L’activité est-elle viable et rentable ?"
+            ],
+            [
+              "Social",
+              "Est-elle juste pour les salariés et la société ?"
+            ],
+            [
+              "Environnemental",
+              "Préserve-t-elle la planète pour l’avenir ?"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La RSE dépasse le cadre légal : respecter la loi n’est pas de la RSE, c’est une obligation. La RSE commence là où l’entreprise fait **plus** que ce que la loi exige (réduire ses émissions au-delà des seuils, améliorer les conditions de travail, s’approvisionner de façon responsable)."
+        },
+        {
+          "t": "tip",
+          "h": "Lien avec la performance",
+          "c": "La RSE nourrit la **performance globale** : image, fidélité des clients et des salariés, réduction des risques. Elle peut donc être un **avantage concurrentiel**, pas seulement un coût."
+        }
+      ]
+    },
+    {
+      "h": "🤝 Les parties prenantes et leurs attentes",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une organisation est au centre d’un réseau de **parties prenantes** dont les attentes sont souvent **divergentes**. Les concilier est un exercice permanent d’arbitrage."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Partie prenante",
+            "Attente principale"
+          ],
+          "rows": [
+            [
+              "Actionnaires",
+              "Rentabilité, dividendes, valeur"
+            ],
+            [
+              "Salariés",
+              "Salaire, conditions de travail, sécurité de l’emploi"
+            ],
+            [
+              "Clients",
+              "Qualité, prix juste, service"
+            ],
+            [
+              "Fournisseurs",
+              "Paiement à temps, relation durable"
+            ],
+            [
+              "État / collectivités",
+              "Impôts, respect des lois, emploi local"
+            ],
+            [
+              "Riverains / ONG",
+              "Respect de l’environnement, transparence"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "On distingue les parties prenantes **internes** (salariés, dirigeants, actionnaires) et **externes** (clients, fournisseurs, État, société civile). Un bon management **hiérarchise** les attentes selon leur **pouvoir** et leur **importance**, sans négliger celles qui semblent faibles mais peuvent nuire à la réputation (ONG, riverains)."
+        },
+        {
+          "t": "example",
+          "h": "Conflit d’attentes",
+          "c": "Fermer une usine pour restaurer la rentabilité (attente des actionnaires) détruit des emplois (attente des salariés et de la collectivité). Le manager doit **arbitrer** et assumer un choix, souvent en cherchant un compromis (reclassement, plan social)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La RSE, c’est précisément prendre au sérieux les attentes de **toutes** les parties prenantes, pas seulement celles des actionnaires."
+        }
+      ]
+    },
+    {
+      "h": "⚖️ Éthique, gouvernance et valeur partagée",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "L’**éthique** des affaires désigne les principes moraux qui guident les décisions au-delà de la loi : honnêteté, respect, responsabilité. Une **charte éthique** formalise ces engagements. Le manquement (corruption, greenwashing, conditions de travail indignes) expose à un lourd risque de **réputation**."
+        },
+        {
+          "t": "p",
+          "c": "La **gouvernance** désigne l’ensemble des mécanismes qui encadrent la direction de l’organisation : qui décide, qui contrôle, au nom de qui ? Une bonne gouvernance vise à **équilibrer les pouvoirs** (conseil d’administration, assemblée des actionnaires, comités) et à rendre des comptes de façon **transparente**."
+        },
+        {
+          "t": "p",
+          "c": "La **création de valeur partagée** (Porter et Kramer) affirme que l’entreprise peut être **rentable ET utile à la société** en même temps : en résolvant un problème social ou environnemental, elle crée de nouveaux marchés et réduit ses risques. La RSE n’est alors plus un coût mais une **source de valeur**."
+        },
+        {
+          "t": "example",
+          "h": "Illustration",
+          "c": "Une entreprise qui aide ses fournisseurs agricoles à mieux produire améliore la **qualité** de sa matière première (valeur pour elle) tout en augmentant les **revenus** des producteurs (valeur pour la société) : c’est de la valeur partagée."
+        },
+        {
+          "t": "tip",
+          "h": "Nuance à connaître",
+          "c": "Le **greenwashing** (écoblanchiment) est l’inverse de la RSE sincère : communiquer sur des engagements verts sans les tenir. C’est un risque **éthique et réputationnel** majeur."
+        }
+      ]
+    },
+    {
+      "h": "🌱 Mutations : numérique, écologie, société",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Les organisations font face à des **mutations** profondes qui bousculent leurs modèles. Les anticiper est un enjeu stratégique majeur ; les subir peut être fatal."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Transition numérique** : automatisation, données, IA, plateformes. Elle transforme les métiers, les relations client et parfois le modèle économique entier.",
+            "**Transition écologique** : réglementations, attentes des consommateurs, raréfaction des ressources. Elle impose de repenser la production (économie circulaire, sobriété).",
+            "**Mutations sociales** : quête de sens au travail, télétravail, exigences de diversité et d’inclusion."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Face à ces mutations, l’organisation doit faire preuve d’**agilité** : capacité à s’adapter rapidement, à innover et à faire évoluer sa structure. Les organisations trop rigides (fortes hiérarchies, procédures lourdes) résistent mal au changement."
+        },
+        {
+          "t": "example",
+          "h": "Illustration — Patagonia",
+          "c": "La marque a fait de la protection de l’environnement le cœur de sa stratégie (produits durables, réparation, engagement du fondateur à « donner » l’entreprise à la cause climatique). L’écologie devient un **avantage concurrentiel** et une preuve de RSE sincère."
+        },
+        {
+          "t": "tip",
+          "h": "Réflexe bac",
+          "c": "Une mutation est à la fois une **menace** (pour qui la subit) et une **opportunité** (pour qui l’anticipe). Toujours montrer les deux faces."
+        }
+      ]
+    },
+    {
+      "h": "💼 Étude de cas guidée — RSE et parties prenantes",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Une entreprise textile est accusée par une ONG de faire travailler des sous-traitants dans de mauvaises conditions. Ses ventes baissent. Analysez la situation et proposez une démarche RSE."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Le problème",
+          "c": "Un manquement **éthique et sociétal** (conditions de travail) devient un **risque de réputation** : l’ONG et les consommateurs (parties prenantes) sanctionnent l’entreprise par la baisse des ventes."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Les parties prenantes en jeu",
+          "c": "ONG (alerte), consommateurs (boycott), salariés des sous-traitants (victimes), actionnaires (baisse de valeur). Attentes contradictoires : coûts bas vs conditions dignes."
+        },
+        {
+          "t": "p",
+          "c": "**Étape 3 — Démarche RSE proposée.** Auditer et sélectionner les sous-traitants sur des critères sociaux, publier un **rapport RSE transparent**, obtenir un **label** (ex. commerce équitable), et communiquer honnêtement (sans greenwashing). Ces actions relèvent du **pilier social** du développement durable et visent à **restaurer la confiance** — donc, à terme, la performance commerciale."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Relier systématiquement : problème → parties prenantes concernées → notion (RSE, éthique, développement durable) → **actions concrètes** → effet attendu sur la performance globale."
+        }
+      ]
+    }
+  ]
+}

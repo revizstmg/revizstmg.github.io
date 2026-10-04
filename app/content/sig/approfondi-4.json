@@ -1,0 +1,324 @@
+{
+  "sig-t1": [
+    {
+      "h": "💻 Composants et rôle du système d’information",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **système d’information (SI)** rassemble les ressources (humaines, matérielles, logicielles) qui **collectent, stockent, traitent et diffusent** l’information. C’est le « système nerveux » de l’organisation."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Fonction",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Collecter",
+              "Saisir une commande"
+            ],
+            [
+              "Stocker",
+              "Base de données"
+            ],
+            [
+              "Traiter",
+              "Calculer, éditer un document"
+            ],
+            [
+              "Diffuser",
+              "Transmettre au bon service"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "SI = **collecter → stocker → traiter → diffuser** l’information."
+        }
+      ]
+    },
+    {
+      "h": "📈 SI et aide à la décision (PGI)",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le SI aide à **décider** à tous les niveaux. Le **PGI (ERP)** est un logiciel unique autour d’une **base commune** : une saisie met à jour tous les services (fiabilité, temps réel)."
+        },
+        {
+          "t": "p",
+          "c": "On distingue **donnée** (fait brut) → **information** (donnée en contexte) → **connaissance** (information interprétée pour décider)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "PGI = base **commune**, une saisie unique. La **qualité des données** conditionne la qualité des décisions."
+        }
+      ]
+    },
+    {
+      "h": "🔗 Processus et représentation du SI",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Un **processus** est une suite d’activités transformant des entrées en sorties (ex. « traiter une commande »). Le **modéliser** (schéma de flux) aide à repérer les dysfonctionnements (ressaisies, étapes inutiles)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Représenter un processus permet de l’**améliorer** : supprimer les doublons, fluidifier l’information."
+        }
+      ]
+    }
+  ],
+  "sig-t2": [
+    {
+      "h": "🗄️ Le modèle relationnel",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Terme",
+            "Signification"
+          ],
+          "rows": [
+            [
+              "Table",
+              "Un tableau de données (CLIENTS)"
+            ],
+            [
+              "Enregistrement",
+              "Une ligne (un client)"
+            ],
+            [
+              "Champ",
+              "Une colonne (nom, ville)"
+            ],
+            [
+              "Clé primaire",
+              "Identifiant unique de la ligne"
+            ],
+            [
+              "Clé étrangère",
+              "Lien vers une autre table"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Base relationnelle = **tables liées par des clés**. Primaire = identifiant unique ; étrangère = lien."
+        }
+      ]
+    },
+    {
+      "h": "🔍 SQL — SELECT, FROM, WHERE, ORDER BY",
+      "blocks": [
+        {
+          "t": "formula",
+          "c": "SELECT colonnes FROM table WHERE condition ORDER BY colonne ;"
+        },
+        {
+          "t": "example",
+          "h": "Exemple",
+          "c": "SELECT nom, ville FROM CLIENTS WHERE ville = 'Lyon' ORDER BY nom ;"
+        },
+        {
+          "t": "warning",
+          "h": "Pièges",
+          "c": "Guillemets autour du texte, **point-virgule** final, WHERE filtre avant regroupement."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "SELECT (quoi) · FROM (où) · WHERE (condition) · ORDER BY (tri)."
+        }
+      ]
+    },
+    {
+      "h": "🧮 SQL — agrégation et jointures",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Fonction",
+            "Rôle"
+          ],
+          "rows": [
+            [
+              "COUNT()",
+              "Compter"
+            ],
+            [
+              "SUM()",
+              "Additionner"
+            ],
+            [
+              "AVG()",
+              "Moyenne"
+            ],
+            [
+              "MAX/MIN",
+              "Extremum"
+            ]
+          ]
+        },
+        {
+          "t": "example",
+          "h": "Jointure",
+          "c": "SELECT CLIENTS.nom, COMMANDES.montant FROM CLIENTS, COMMANDES WHERE CLIENTS.id = COMMANDES.id_client ;"
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Agrégation = **calculer** ; jointure = **croiser** deux tables via leur **clé commune**."
+        }
+      ]
+    }
+  ],
+  "sig-t3": [
+    {
+      "h": "🤝 Outils collaboratifs et cloud",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Les outils **collaboratifs** permettent de travailler ensemble : partage de fichiers, **coédition**, **historique des versions**, messagerie, visio. Ils reposent souvent sur le **cloud** (serveurs distants via Internet)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Cloud = accessibilité et mise à jour automatique, mais enjeux de **sécurité** et de **dépendance**. Définir les **droits d’accès**."
+        }
+      ]
+    },
+    {
+      "h": "🧠 L’intelligence collective",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "L’**intelligence collective** = un groupe produit **plus** que la somme des individus (ex. Wikipédia). Le numérique la démultiplie (crowdsourcing, communautés)."
+        },
+        {
+          "t": "warning",
+          "h": "Conditions",
+          "c": "Elle exige des **règles** et une **modération** pour rester fiable (risque de désinformation)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Intelligence collective = coopération à grande échelle, encadrée par des règles."
+        }
+      ]
+    },
+    {
+      "h": "🔄 La transformation numérique du travail",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Opportunités",
+            "Risques"
+          ],
+          "rows": [
+            [
+              "Flexibilité, télétravail",
+              "Frontière vie pro/perso brouillée"
+            ],
+            [
+              "Collaboration à distance",
+              "Isolement"
+            ],
+            [
+              "Automatisation",
+              "Surcharge, sécurité"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le numérique transforme le travail : plus de flexibilité, mais besoin de **nouvelles compétences** et d’un **droit à la déconnexion**."
+        }
+      ]
+    }
+  ],
+  "sig-t4": [
+    {
+      "h": "🌐 Réseaux et architecture client-serveur",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Un **réseau** relie des ordinateurs pour **communiquer** et **partager** des ressources. L’architecture la plus courante est le **client-serveur** : les **clients** demandent, le **serveur** fournit (ex. Internet)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Client-serveur : le client **demande**, le serveur **répond**. Un réseau élargit aussi la **surface d’attaque**."
+        }
+      ]
+    },
+    {
+      "h": "🔐 Sécurité : DICP et menaces",
+      "blocks": [
+        {
+          "t": "table",
+          "head": [
+            "Objectif",
+            "Signification"
+          ],
+          "rows": [
+            [
+              "Disponibilité",
+              "Accessible quand il le faut"
+            ],
+            [
+              "Intégrité",
+              "Non altérée"
+            ],
+            [
+              "Confidentialité",
+              "Réservée aux autorisés"
+            ],
+            [
+              "Preuve",
+              "Traçabilité des actions"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Menaces phares : **phishing** (hameçonnage), **ransomware** (rançongiciel), malwares, vol de données. La faille est souvent **humaine**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Sécurité = **DICP**. Menaces : phishing, ransomware. Premier rempart : la **vigilance** humaine."
+        }
+      ]
+    },
+    {
+      "h": "🛡️ Se protéger + RGPD",
+      "blocks": [
+        {
+          "t": "list",
+          "c": [
+            "Mots de passe forts, double authentification.",
+            "Sauvegardes régulières (et hors ligne).",
+            "Mises à jour, pare-feu, antivirus.",
+            "Gestion des droits d’accès, sensibilisation."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le **RGPD** encadre les **données personnelles** : consentement, finalité, minimisation, sécurité, droits (accès, effacement). Sanctions par la **CNIL**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Se protéger = **combiner** technique et humain. Traiter des données = respecter le **RGPD**."
+        }
+      ]
+    }
+  ]
+}

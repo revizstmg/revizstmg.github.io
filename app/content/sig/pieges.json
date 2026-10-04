@@ -1,0 +1,15 @@
+{
+  "sig-t1": [
+    "Un **PGI/ERP** repose sur une **base de données unique** : ne le confonds pas avec plusieurs logiciels séparés.",
+    "Donnée ≠ information ≠ connaissance : la donnée est brute, l’information a du sens, la connaissance est mobilisable."
+  ],
+  "sig-t2": [
+    "En SQL, **WHERE** filtre des lignes **avant** regroupement, **HAVING** filtre **après** un GROUP BY : ne les inverse pas.",
+    "Une **clé primaire** identifie de façon unique ; une **clé étrangère** référence une autre table.",
+    "N’oublie pas la condition de **jointure** : sans elle, tu obtiens un produit cartésien (toutes les combinaisons)."
+  ],
+  "sig-t4": [
+    "La **sécurité** du SI, ce n’est pas que l’antivirus : disponibilité, intégrité, confidentialité, traçabilité (DICT).",
+    "Un **mot de passe fort** ne suffit pas : sauvegardes, droits d’accès et sensibilisation comptent aussi."
+  ]
+}

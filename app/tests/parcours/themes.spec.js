@@ -1,8 +1,11 @@
 // Chaque thème de chaque matière s'ouvre sans erreur : page du thème, puis
 // son premier chapitre avec un vrai cours.
 import { test, expect } from '@playwright/test'
+import { readFileSync } from 'node:fs'
 import { preparer, attendreAccueil, etatEleve } from './eleve.js'
-import { SUBJECTS } from '../../src/data/index.js'
+
+const lire = (chemin) => JSON.parse(readFileSync(new URL(`../../content/${chemin}`, import.meta.url), 'utf8'))
+const SUBJECTS = lire('ordre.json').map((id) => lire(`${id}/matiere.json`))
 
 for (const matiere of SUBJECTS) {
   const themes = (matiere.chapters || []).filter((t) => !t.comingSoon)

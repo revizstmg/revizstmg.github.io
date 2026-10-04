@@ -1,0 +1,164 @@
+{
+  "gf-t1": [
+    {
+      "title": "La TVA du mois",
+      "context": "L'entreprise MOBILIA (vente de meubles) a, sur le mois de mars, collecté 8 400 € de TVA sur ses ventes et payé 5 100 € de TVA déductible sur ses achats.",
+      "questions": [
+        {
+          "q": "Calcule la TVA à décaisser (en €).",
+          "a": "3300",
+          "num": true,
+          "e": "TVA à décaisser = TVA collectée − TVA déductible = 8 400 − 5 100 = 3 300 €."
+        },
+        {
+          "q": "Cette somme est-elle « due à l'État » ou « récupérable » ?",
+          "a": "due",
+          "alt": [
+            "due à l’état",
+            "à décaisser",
+            "a decaisser"
+          ],
+          "e": "La TVA collectée dépasse la déductible : MOBILIA doit 3 300 € à l'État."
+        }
+      ]
+    },
+    {
+      "title": "Amortissement d’une machine",
+      "context": "MOBILIA achète une machine 24 000 € HT, amortie en linéaire sur 5 ans.",
+      "questions": [
+        {
+          "q": "Quelle est l'annuité d'amortissement (en €) ?",
+          "a": "4800",
+          "num": true,
+          "e": "Annuité = valeur / durée = 24 000 / 5 = 4 800 € par an."
+        },
+        {
+          "q": "Quelle est la valeur nette comptable (VNC) après 2 ans (en €) ?",
+          "a": "14400",
+          "num": true,
+          "e": "VNC = 24 000 − 2 × 4 800 = 24 000 − 9 600 = 14 400 €."
+        }
+      ]
+    },
+    {
+      "title": "Bénéfice ou perte ?",
+      "context": "Sur l'exercice, MOBILIA enregistre 150 000 € de produits et 138 000 € de charges.",
+      "questions": [
+        {
+          "q": "Calcule le résultat de l’exercice (en €).",
+          "a": "12000",
+          "num": true,
+          "e": "Résultat = produits − charges = 150 000 − 138 000 = 12 000 €."
+        },
+        {
+          "q": "S'agit-il d'un bénéfice ou d'une perte ?",
+          "a": "bénéfice",
+          "alt": [
+            "benefice"
+          ],
+          "e": "Les produits dépassent les charges : c’est un bénéfice de 12 000 €."
+        }
+      ]
+    }
+  ],
+  "gf-t2": [
+    {
+      "title": "Des soldes intermédiaires de gestion",
+      "context": "L'entreprise ATELIER75 réalise 500 000 € de chiffre d'affaires. Ses consommations en provenance de tiers (matières, énergie…) s'élèvent à 300 000 €, ses charges de personnel à 120 000 € et ses impôts et taxes à 10 000 €.",
+      "questions": [
+        {
+          "q": "Calcule la valeur ajoutée (en €).",
+          "a": "200000",
+          "num": true,
+          "e": "VA = production − consommations intermédiaires = 500 000 − 300 000 = 200 000 €."
+        },
+        {
+          "q": "Calcule l'excédent brut d'exploitation (EBE, en €).",
+          "a": "70000",
+          "num": true,
+          "e": "EBE = VA − charges de personnel − impôts et taxes = 200 000 − 120 000 − 10 000 = 70 000 €."
+        }
+      ]
+    },
+    {
+      "title": "Équilibre financier",
+      "context": "Au bilan d'ATELIER75 : ressources stables = 260 000 €, emplois stables = 200 000 €, et le besoin en fonds de roulement (BFR) est de 45 000 €.",
+      "questions": [
+        {
+          "q": "Calcule le fonds de roulement net global (FRNG, en €).",
+          "a": "60000",
+          "num": true,
+          "e": "FRNG = ressources stables − emplois stables = 260 000 − 200 000 = 60 000 €."
+        },
+        {
+          "q": "Calcule la trésorerie nette (en €).",
+          "a": "15000",
+          "num": true,
+          "e": "Trésorerie nette = FRNG − BFR = 60 000 − 45 000 = 15 000 €. Elle est positive : situation saine."
+        }
+      ]
+    },
+    {
+      "title": "Le seuil de rentabilité",
+      "context": "ATELIER75 : chiffre d'affaires 200 000 €, coûts variables 120 000 €, coûts fixes 50 000 €.",
+      "questions": [
+        {
+          "q": "Calcule la marge sur coût variable (en €).",
+          "a": "80000",
+          "num": true,
+          "e": "MCV = CA − coûts variables = 200 000 − 120 000 = 80 000 €."
+        },
+        {
+          "q": "Calcule le taux de marge sur coût variable (en %).",
+          "a": "40",
+          "num": true,
+          "e": "Taux de MCV = MCV / CA = 80 000 / 200 000 = 0,4 = 40 %."
+        },
+        {
+          "q": "Calcule le seuil de rentabilité (en €).",
+          "a": "125000",
+          "num": true,
+          "e": "SR = coûts fixes / taux de MCV = 50 000 / 0,4 = 125 000 €."
+        }
+      ]
+    }
+  ],
+  "gf-t3": [
+    {
+      "title": "Combien produire pour être rentable ?",
+      "context": "PRINT+ vend un article 50 € l'unité. Le coût variable unitaire est de 30 €, et les coûts fixes s'élèvent à 40 000 €.",
+      "questions": [
+        {
+          "q": "Calcule la marge sur coût variable unitaire (en €).",
+          "a": "20",
+          "num": true,
+          "e": "MCV unitaire = prix − coût variable unitaire = 50 − 30 = 20 €."
+        },
+        {
+          "q": "Combien d'unités faut-il vendre pour atteindre le seuil de rentabilité ?",
+          "a": "2000",
+          "num": true,
+          "e": "Quantité au seuil = coûts fixes / MCV unitaire = 40 000 / 20 = 2 000 unités."
+        }
+      ]
+    },
+    {
+      "title": "Coût complet et marge",
+      "context": "Pour un produit, PRINT+ supporte 18 € de charges directes et 7 € de charges indirectes. Il est vendu 40 €.",
+      "questions": [
+        {
+          "q": "Calcule le coût complet unitaire (en €).",
+          "a": "25",
+          "num": true,
+          "e": "Coût complet = charges directes + indirectes = 18 + 7 = 25 €."
+        },
+        {
+          "q": "Calcule la marge unitaire (en €).",
+          "a": "15",
+          "num": true,
+          "e": "Marge = prix − coût complet = 40 − 25 = 15 €."
+        }
+      ]
+    }
+  ]
+}

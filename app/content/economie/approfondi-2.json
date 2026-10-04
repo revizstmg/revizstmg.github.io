@@ -1,0 +1,384 @@
+{
+  "eco-t6": [
+    {
+      "h": "🏦 La politique monétaire de la BCE",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "En zone euro, la **monnaie** n’est pas gérée par les États mais par la **Banque centrale européenne (BCE)**, une institution **indépendante**. Son objectif principal est la **stabilité des prix** (une inflation proche de 2 %)."
+        },
+        {
+          "t": "p",
+          "c": "La BCE agit surtout par les **taux d’intérêt directeurs**, qui influencent le coût du crédit dans toute l’économie."
+        },
+        {
+          "t": "list",
+          "c": [
+            "La BCE **baisse ses taux** → le crédit devient moins cher → ménages et entreprises empruntent et dépensent plus → l’activité est **stimulée** (mais risque d’inflation).",
+            "La BCE **relève ses taux** → le crédit se renchérit → la demande ralentit → l’inflation est **freinée** (mais risque de ralentir la croissance)."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "C’est un **arbitrage** permanent entre soutenir l’activité et maîtriser l’inflation. La politique monétaire est **conjoncturelle** (elle agit à court terme) et **commune** à toute la zone euro, ce qui limite la marge de chaque État."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La **BCE** (indépendante) vise la **stabilité des prix**. Baisser les taux **stimule** l’activité ; les relever **freine l’inflation**. C’est un outil **conjoncturel** commun à la zone euro."
+        }
+      ]
+    },
+    {
+      "h": "🌡️ L’inflation : causes et conséquences",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "L’**inflation** est la **hausse générale et durable** des prix. On la mesure par l’indice des prix à la consommation (IPC). Une inflation modérée est normale ; une inflation forte ou une **déflation** (baisse des prix) sont dangereuses."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Cause",
+            "Mécanisme"
+          ],
+          "rows": [
+            [
+              "Par la demande",
+              "La demande dépasse l’offre → les prix montent"
+            ],
+            [
+              "Par les coûts",
+              "Hausse des coûts (énergie, salaires) répercutée sur les prix"
+            ],
+            [
+              "Monétaire",
+              "Trop de monnaie en circulation"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Conséquences : l’inflation **érode le pouvoir d’achat** (surtout des revenus fixes), crée de l’**incertitude**, et peut nuire à la **compétitivité**. Mais une inflation **modérée** accompagne la croissance ; à l’inverse, la **déflation** (baisse des prix) pousse à reporter les achats et peut enfoncer l’économie dans la récession."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Inflation = hausse **générale et durable** des prix. Causes : **demande**, **coûts**, **monnaie**. Elle érode le **pouvoir d’achat**. La BCE la combat en **relevant ses taux**."
+        }
+      ]
+    },
+    {
+      "h": "💶 MÉTHODE — Lire un déficit et une dette",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Les finances publiques se lisent avec deux notions à ne pas confondre : le **déficit** (un flux annuel) et la **dette** (un stock accumulé)."
+        },
+        {
+          "t": "formula",
+          "c": "Déficit public = Dépenses publiques − Recettes publiques (sur une année)\nDette publique = accumulation des déficits passés (moins les excédents)"
+        },
+        {
+          "t": "p",
+          "c": "On les rapporte souvent au **PIB** pour comparer les pays et juger de leur soutenabilité (un déficit de 50 Md€ ne pèse pas pareil dans une petite ou une grande économie)."
+        },
+        {
+          "t": "formula",
+          "c": "Ratio de déficit = Déficit ÷ PIB × 100\nRatio de dette = Dette ÷ PIB × 100"
+        },
+        {
+          "t": "example",
+          "h": "Exemple chiffré",
+          "c": "PIB 2 500 Md€ ; dépenses 1 400 Md€ ; recettes 1 300 Md€.\nDéficit = 1 400 − 1 300 = **100 Md€**.\nRatio de déficit = 100 ÷ 2 500 × 100 = **4 % du PIB**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Déficit = **flux** annuel (dépenses − recettes). Dette = **stock** (somme des déficits). On les rapporte au **PIB** (en %) pour comparer et juger de la soutenabilité."
+        }
+      ]
+    }
+  ],
+  "eco-t7": [
+    {
+      "h": "🎓 Capital humain et employabilité",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **capital humain** désigne l’ensemble des **connaissances, compétences et qualifications** d’une personne, qui accroissent sa productivité. La formation et l’expérience sont des **investissements** dans ce capital (théorie de Gary Becker)."
+        },
+        {
+          "t": "p",
+          "c": "Plus le capital humain est élevé, plus l’**employabilité** (capacité à trouver et garder un emploi) est forte. C’est pourquoi la **formation** est un levier majeur contre le **chômage structurel** : elle adapte les compétences aux emplois disponibles."
+        },
+        {
+          "t": "list",
+          "c": [
+            "Investir dans le capital humain → productivité, salaires et employabilité plus élevés.",
+            "Un déficit de qualification → chômage **structurel** (inadéquation offre/demande de travail).",
+            "La **formation tout au long de la vie** répond aux mutations technologiques."
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le **capital humain** (savoirs, compétences) se construit par la **formation** : c’est un investissement qui augmente la productivité et l’**employabilité**, et combat le chômage **structurel**."
+        }
+      ]
+    },
+    {
+      "h": "🤖 Numérisation et avenir du travail",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "L’**automatisation** et le **numérique** transforment le travail : certaines tâches disparaissent, d’autres se créent. Le débat oppose ceux qui craignent un chômage de masse (le « grand remplacement » par les machines) et ceux qui voient une **transformation** des emplois plutôt qu’une destruction nette."
+        },
+        {
+          "t": "p",
+          "c": "Historiquement, le **progrès technique** détruit des emplois dans certains secteurs mais en crée dans d’autres (destruction créatrice de **Schumpeter**). Le vrai enjeu est la **transition** : former et reconvertir ceux dont le métier disparaît, pour éviter un chômage **structurel** durable."
+        },
+        {
+          "t": "list",
+          "c": [
+            "Emplois **menacés** : tâches répétitives, automatisables.",
+            "Emplois **créés** : numérique, données, services, métiers relationnels.",
+            "Enjeu : **formation** et **reconversion** pour accompagner la transition."
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le numérique **transforme** le travail (destruction créatrice). Le risque n’est pas la fin du travail mais un chômage **structurel** si l’on ne **forme** pas aux nouveaux métiers."
+        }
+      ]
+    },
+    {
+      "h": "💶 MÉTHODE — Calculer les taux du marché du travail",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Trois taux mesurent le marché du travail. Attention à ne **pas** les confondre : ils n’ont pas la même base de calcul."
+        },
+        {
+          "t": "formula",
+          "c": "Taux de chômage = Chômeurs ÷ Population active × 100\nTaux d’activité = Population active ÷ Population en âge de travailler × 100\nTaux d’emploi = Actifs occupés ÷ Population en âge de travailler × 100"
+        },
+        {
+          "t": "p",
+          "c": "Rappel : Population active = **actifs occupés + chômeurs**. Le **taux de chômage** se calcule sur la **population active** ; les taux d’**activité** et d’**emploi** se calculent sur la **population en âge de travailler** (15-64 ans)."
+        },
+        {
+          "t": "example",
+          "h": "Exemple chiffré",
+          "c": "Population 15-64 ans = 40 M ; actifs occupés = 25 M ; chômeurs = 3 M.\nPopulation active = 25 + 3 = 28 M.\nTaux de chômage = 3 ÷ 28 × 100 ≈ **10,7 %**.\nTaux d’activité = 28 ÷ 40 × 100 = **70 %**.\nTaux d’emploi = 25 ÷ 40 × 100 = **62,5 %**."
+        },
+        {
+          "t": "warning",
+          "h": "Piège",
+          "c": "Le **taux de chômage** ne se calcule PAS sur la population totale ni sur les 15-64 ans, mais sur la **population active**. Les trois taux ont des dénominateurs différents."
+        }
+      ]
+    }
+  ],
+  "eco-t8": [
+    {
+      "h": "💱 Taux de change et compétitivité",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **taux de change** est le prix d’une monnaie exprimé dans une autre (ex. 1 € = 1,08 $). Il influence directement le **commerce international** en modifiant le prix des produits d’un pays à l’étranger."
+        },
+        {
+          "t": "list",
+          "c": [
+            "Un euro **fort** (qui s’apprécie) → nos exportations coûtent **plus cher** à l’étranger (moins compétitives), mais nos importations coûtent **moins cher**.",
+            "Un euro **faible** (qui se déprécie) → nos exportations deviennent **moins chères** (plus compétitives), mais les importations (énergie…) coûtent **plus cher**."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "On distingue la **compétitivité-prix** (vendre moins cher, influencée par le taux de change, les coûts, les salaires) et la **compétitivité hors-prix** (qualité, innovation, image, délais). Un pays qui ne peut jouer sur les prix mise sur la compétitivité **hors-prix**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Monnaie **faible** → exportations plus **compétitives** (mais importations chères). Compétitivité **prix** (le coût) vs **hors-prix** (qualité, innovation)."
+        }
+      ]
+    },
+    {
+      "h": "🏛️ Les institutions du commerce mondial",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le commerce international est **encadré** par des institutions qui fixent des règles et arbitrent les conflits, pour éviter le chaos et les guerres commerciales."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Institution",
+            "Rôle"
+          ],
+          "rows": [
+            [
+              "OMC",
+              "Organise et régule le commerce mondial, arbitre les litiges"
+            ],
+            [
+              "Union européenne",
+              "Marché unique, libre circulation entre États membres"
+            ],
+            [
+              "Zone euro / BCE",
+              "Monnaie unique, politique monétaire commune"
+            ],
+            [
+              "FMI",
+              "Stabilité financière, aide aux pays en difficulté"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "L’**OMC** promeut le **libre-échange** en réduisant les barrières (droits de douane, quotas) et en arbitrant les différends. L’**Union européenne** va plus loin : un **marché unique** avec libre circulation des biens, services, capitaux et personnes. Ces institutions organisent l’**interdépendance** croissante des économies."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "L’**OMC** régule le commerce mondial et arbitre les litiges. L’**UE** est un marché unique intégré. Ces institutions encadrent la **mondialisation**."
+        }
+      ]
+    },
+    {
+      "h": "💶 MÉTHODE — Balance commerciale et taux d’ouverture",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Deux calculs reviennent souvent sur le commerce international : le **solde commercial** et le **taux d’ouverture** (le degré d’insertion d’un pays dans le commerce mondial)."
+        },
+        {
+          "t": "formula",
+          "c": "Solde commercial = Exportations − Importations\nTaux de couverture = Exportations ÷ Importations × 100\nTaux d’ouverture = ((Exportations + Importations) ÷ 2) ÷ PIB × 100"
+        },
+        {
+          "t": "example",
+          "h": "Exemple chiffré",
+          "c": "Exportations 500 Md€ ; importations 560 Md€ ; PIB 2 500 Md€.\nSolde = 500 − 560 = **− 60 Md€** (déficit).\nTaux de couverture = 500 ÷ 560 × 100 ≈ **89 %** (on couvre 89 % des importations par les exportations).\nTaux d’ouverture = ((500 + 560) ÷ 2) ÷ 2 500 × 100 = **21,2 %**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Solde = Exp − Imp (excédent/déficit). Taux de **couverture** < 100 % = déficit. Taux d’**ouverture** = poids du commerce extérieur dans le PIB (insertion mondiale)."
+        }
+      ]
+    }
+  ],
+  "eco-t9": [
+    {
+      "h": "⚙️ Les sources de la croissance",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "D’où vient la **croissance** ? Elle provient d’abord de l’augmentation des **facteurs de production** (plus de travail, plus de capital), mais surtout de leur **meilleure utilisation** : c’est le **progrès technique** et l’**innovation**."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Croissance extensive** : produire plus en utilisant **plus** de facteurs (main-d’œuvre, machines).",
+            "**Croissance intensive** : produire plus grâce à des **gains de productivité** (mieux utiliser les facteurs) → c’est le moteur durable.",
+            "**Le progrès technique** (Schumpeter) : l’innovation crée de nouveaux produits et procédés (« destruction créatrice »)."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La **productivité globale des facteurs** (ce qui reste de la croissance non expliqué par la simple hausse des facteurs) mesure l’effet du progrès technique. L’**investissement**, la **recherche** et l’**éducation** (capital humain) sont donc au cœur de la croissance de long terme."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Croissance **extensive** (plus de facteurs) vs **intensive** (gains de productivité). Le moteur durable = **progrès technique et innovation** (Schumpeter), soutenus par l’investissement et l’éducation."
+        }
+      ]
+    },
+    {
+      "h": "📊 Mesurer les inégalités",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La croissance ne profite pas toujours à tous : il faut mesurer les **inégalités** de revenus et de richesses. Plusieurs outils existent pour les objectiver."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Le rapport interdécile** (D9/D1) : compare les 10 % les plus riches aux 10 % les plus pauvres.",
+            "**L’indice de Gini** : varie de 0 (égalité parfaite) à 1 (inégalité maximale). Plus il est élevé, plus les inégalités sont fortes.",
+            "**La courbe de Lorenz** : représente graphiquement la répartition des revenus."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Des inégalités **excessives** peuvent freiner la croissance et la cohésion sociale ; c’est pourquoi l’**État** intervient par la **redistribution** (impôts progressifs, prestations). Mais un certain niveau d’inégalité est parfois vu comme une incitation à l’effort : c’est un **débat**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Inégalités mesurées par le **rapport interdécile** et l’**indice de Gini** (0 = égalité, 1 = inégalité max). L’État les corrige par la **redistribution**."
+        }
+      ]
+    },
+    {
+      "h": "♻️ Transition écologique et découplage",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Concilier **croissance** et **environnement** est le grand défi contemporain. L’idéal serait le **découplage** : continuer à créer de la richesse tout en **réduisant** les émissions et la consommation de ressources."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Découplage** : la croissance du PIB progresse plus vite que la pression environnementale (voire celle-ci diminue).",
+            "**Soutenabilité faible** : le capital naturel détruit peut être compensé par du capital technique.",
+            "**Soutenabilité forte** : certaines ressources sont **irremplaçables** et doivent être préservées."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Les **instruments** de la transition (taxe carbone, marché de quotas, normes, subventions vertes) visent à **internaliser** le coût environnemental (externalités négatives). Le débat oppose les partisans d’une **croissance verte** (découplage possible) et ceux de la **décroissance** ou de la sobriété."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le **découplage** vise à séparer croissance et pollution. Soutenabilité **faible** (compensable) vs **forte** (préservation). Instruments : **taxe carbone, quotas, normes**."
+        }
+      ]
+    },
+    {
+      "h": "💶 MÉTHODE — Croissance et PIB par habitant",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Deux calculs clés : le **taux de croissance** du PIB et le **PIB par habitant** (un meilleur indicateur du niveau de vie que le PIB total)."
+        },
+        {
+          "t": "formula",
+          "c": "Taux de croissance = ((PIB_N − PIB_N-1) ÷ PIB_N-1) × 100\nPIB par habitant = PIB ÷ Population"
+        },
+        {
+          "t": "example",
+          "h": "Exemple chiffré",
+          "c": "PIB : 500 Md€ (N-1) → 515 Md€ (N). Population : 10 M.\nTaux de croissance = ((515 − 500) ÷ 500) × 100 = **+ 3 %**.\nPIB par habitant (N) = 515 Md€ ÷ 10 M = **51 500 € / habitant**."
+        },
+        {
+          "t": "p",
+          "c": "Attention : une croissance du PIB de +3 % avec une population qui augmente de +3 % laisse le PIB **par habitant** inchangé. Pour juger du niveau de vie, c’est le PIB **par habitant** qui compte — et il faut aussi tenir compte des **inégalités** et de la **soutenabilité** (le PIB ne mesure ni le bien-être ni l’environnement)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Taux de croissance = variation du PIB en %. **PIB par habitant** = PIB ÷ population (niveau de vie moyen). Toujours nuancer : le PIB **ignore** inégalités et environnement."
+        }
+      ]
+    }
+  ]
+}

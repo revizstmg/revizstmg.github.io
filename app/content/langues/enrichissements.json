@@ -1,0 +1,140 @@
+{
+  "lng-en-gram": {
+    "resources": [
+      {
+        "label": "Lingolia English — grammaire (règles + exercices)",
+        "url": "https://english.lingolia.com/en/grammar",
+        "kind": "link"
+      },
+      {
+        "label": "BBC Learning English",
+        "url": "https://www.bbc.co.uk/learningenglish",
+        "kind": "video"
+      }
+    ]
+  },
+  "lng-en-voc": {
+    "resources": [
+      {
+        "label": "BBC Learning English — vocabulary",
+        "url": "https://www.bbc.co.uk/learningenglish",
+        "kind": "video"
+      }
+    ]
+  },
+  "lng-en-verbs": {
+    "resources": [
+      {
+        "label": "Lingolia — irregular verbs (liste + exercices)",
+        "url": "https://english.lingolia.com/en/grammar/verbs/irregular-verbs",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-en-grammar-ex": {
+    "resources": [
+      {
+        "label": "Lingolia English — exercices de grammaire",
+        "url": "https://english.lingolia.com/en/grammar",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-en-comp": {
+    "resources": [
+      {
+        "label": "BBC Learning English — 6 Minute English",
+        "url": "https://www.bbc.co.uk/learningenglish",
+        "kind": "video",
+        "note": "S’entraîner à comprendre un texte / un audio."
+      }
+    ],
+    "sections": [
+      {
+        "h": "📖 Méthode — comprendre un texte en anglais",
+        "blocks": [
+          {
+            "t": "list",
+            "c": [
+              "**Repère d’abord** le titre, la source et la date : ils donnent le thème.",
+              "**Ne bloque pas sur chaque mot** : devine le sens grâce au contexte et aux mots transparents (information, situation…).",
+              "**Cherche les mots-clés** (qui ? quoi ? où ? quand ? pourquoi ?) et les connecteurs (but, because, however, so).",
+              "**Reformule** chaque paragraphe en une phrase, en français puis en anglais."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "ETLV / STMG",
+            "c": "Le dictionnaire intégré 📖 traduit aussi les phrases : sers-t’en pour vérifier, pas pour tout traduire mot à mot."
+          }
+        ]
+      }
+    ]
+  },
+  "lng-es-gram": {
+    "resources": [
+      {
+        "label": "Lingolia Español — gramática (reglas + ejercicios)",
+        "url": "https://espanol.lingolia.com/es/gramatica",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-es-voc": {
+    "resources": [
+      {
+        "label": "Lingolia Español — vocabulario",
+        "url": "https://espanol.lingolia.com/es/vocabulario",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-es-verbs": {
+    "resources": [
+      {
+        "label": "Lingolia — verbos irregulares (conjugación)",
+        "url": "https://espanol.lingolia.com/es/gramatica/verbos",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-es-grammar-ex": {
+    "resources": [
+      {
+        "label": "Lingolia Español — ejercicios",
+        "url": "https://espanol.lingolia.com/es/gramatica",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-es-comp": {
+    "resources": [
+      {
+        "label": "Lingolia Español — comprensión & gramática",
+        "url": "https://espanol.lingolia.com/es",
+        "kind": "link"
+      }
+    ],
+    "sections": [
+      {
+        "h": "📖 Méthode — comprendre un texte en espagnol",
+        "blocks": [
+          {
+            "t": "list",
+            "c": [
+              "**Repère** le titre, la source, la date → le thème.",
+              "**Appuie-toi sur les mots transparents** (información, situación, economía) et le contexte.",
+              "**Attention aux faux-amis** (ex. « éxito » = succès, pas sortie) et aux connecteurs (pero, porque, sin embargo).",
+              "**Reformule** chaque paragraphe en une phrase simple."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Astuce",
+            "c": "Les terminaisons des verbes indiquent la personne et le temps : identifie-les pour comprendre qui fait quoi et quand."
+          }
+        ]
+      }
+    ]
+  }
+}

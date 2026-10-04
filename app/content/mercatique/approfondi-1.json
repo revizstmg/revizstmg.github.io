@@ -1,0 +1,595 @@
+{
+  "mkg-t1": [
+    {
+      "h": "🧠 Comprendre le consommateur : besoins et mobiles",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **mercatique** (ou marketing) est l’ensemble des actions destinées à **détecter, analyser et satisfaire les besoins** des consommateurs, dans le but d’atteindre les objectifs de l’entreprise (vendre, fidéliser, se différencier). Tout part donc de la compréhension du **consommateur**."
+        },
+        {
+          "t": "p",
+          "c": "Un **besoin** est une sensation de manque. **Maslow** les hiérarchise en une pyramide : besoins physiologiques, de sécurité, d’appartenance, d’estime, d’accomplissement. Un produit peut répondre à plusieurs niveaux à la fois (une voiture = se déplacer, mais aussi statut social)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Besoin",
+              "Sensation de manque (dormir, se nourrir, appartenir)"
+            ],
+            [
+              "Motivation / mobile",
+              "Force qui POUSSE à l’achat"
+            ],
+            [
+              "Frein",
+              "Force qui RETIENT (peur, risque, prix)"
+            ],
+            [
+              "Attente",
+              "Ce que le client espère précisément du produit"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Les **mobiles** d’achat sont classés : **hédonistes** (se faire plaisir), **oblatifs** (faire plaisir aux autres, offrir) et d’**auto-expression** (montrer qui l’on est). Les **freins** sont les **peurs** (risque perçu), les **inhibitions** (culpabilité) et les **risques** (financier, de performance)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un achat = équilibre entre **mobiles** (qui poussent) et **freins** (qui retiennent). Le rôle de la mercatique est de **renforcer les mobiles** et de **lever les freins** (essai gratuit, garantie, avis clients)."
+        }
+      ]
+    },
+    {
+      "h": "🛒 Le processus et les facteurs d’achat",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "L’achat n’est pas instantané : c’est un **processus** en plusieurs étapes que la mercatique cherche à accompagner à chaque instant."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**1. Reconnaissance du besoin** : le consommateur prend conscience d’un manque.",
+            "**2. Recherche d’informations** : avis, comparateurs, publicité, entourage.",
+            "**3. Évaluation des solutions** : comparaison des offres selon des critères.",
+            "**4. Décision d’achat** : le passage à l’acte.",
+            "**5. Évaluation post-achat** : satisfaction ou regret → fidélité ou non."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La décision est influencée par des **facteurs** : **individuels** (âge, personnalité, style de vie), **psychologiques** (perception, apprentissage) et **socioculturels** (famille, groupes de référence, culture, effets de mode). D’où le fait qu’« on n’achète pas tous de la même façon »."
+        },
+        {
+          "t": "p",
+          "c": "On distingue aussi les **types d’achat** : **réfléchi** (voiture, choix long), **impulsif** (en caisse, sans réflexion), **routinier** (courses habituelles). Chaque type appelle une mercatique différente."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La satisfaction **post-achat** est décisive : un client satisfait revient et recommande ; un client déçu part et « fait du bruit ». Fidéliser coûte moins cher que conquérir."
+        }
+      ]
+    },
+    {
+      "h": "📊 Étudier le comportement : les études",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Pour connaître les consommateurs, l’entreprise réalise des **études de marché**. On les classe en deux grandes familles complémentaires."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Étude",
+            "Question",
+            "Outils"
+          ],
+          "rows": [
+            [
+              "Quantitative",
+              "COMBIEN ? (mesurer)",
+              "Sondage, questionnaire sur grand échantillon"
+            ],
+            [
+              "Qualitative",
+              "POURQUOI ? (comprendre)",
+              "Entretiens, réunions de groupe (focus group)"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "L’étude **quantitative** donne des chiffres représentatifs (part de marché, taux de notoriété) ; l’étude **qualitative** explore les motivations profondes et les freins. Les données peuvent être **primaires** (recueillies pour l’étude) ou **secondaires** (déjà existantes : INSEE, rapports)."
+        },
+        {
+          "t": "p",
+          "c": "Aujourd’hui, le **big data** et les traces numériques (historique d’achat, navigation) complètent ces études : l’entreprise connaît le consommateur « en temps réel »."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Quanti = **mesurer** (combien) ; quali = **comprendre** (pourquoi). Les deux se complètent : on explore en quali, on valide en quanti."
+        }
+      ]
+    },
+    {
+      "h": "🛍️ Étude de cas guidée — comprendre un achat",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Des clients font la queue toute une nuit pour acheter le dernier smartphone d’une grande marque. Analysez les besoins, mobiles et freins en jeu."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Besoins",
+          "c": "Besoin fonctionnel (communiquer) mais surtout besoins d’**estime** et d’**appartenance** (posséder l’objet à la mode, appartenir à la communauté de la marque)."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Mobiles",
+          "c": "Mobile **hédoniste** (plaisir de la nouveauté), mobile d’**auto-expression** (montrer son statut, son appartenance à une « tribu » de fans)."
+        },
+        {
+          "t": "example",
+          "h": "Étape 3 — Freins",
+          "c": "Frein **financier** (prix élevé) et **risque** (attente, rupture de stock), largement compensés ici par la force des mobiles et l’effet de rareté organisé."
+        },
+        {
+          "t": "p",
+          "c": "**Commentaire.** La marque a transformé l’achat en **événement** : la file d’attente devient une preuve sociale qui renforce le désir. C’est une mercatique de la **désirabilité** qui joue sur l’image et l’appartenance bien plus que sur la fonction."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Pour analyser un achat : identifier le **besoin** (Maslow), les **mobiles**, les **freins**, puis montrer comment la mercatique **agit** dessus."
+        }
+      ]
+    }
+  ],
+  "mkg-t2": [
+    {
+      "h": "🎯 Le marché : offre, demande, environnement",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **marché** est le lieu (physique ou non) de rencontre entre une **offre** (les entreprises qui vendent) et une **demande** (les clients qui achètent). L’analyser, c’est mesurer sa taille, sa structure et son évolution."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**La demande** : clients actuels + non-consommateurs relatifs (qui pourraient acheter) ; on écarte les non-consommateurs absolus (qui n’achèteront jamais).",
+            "**L’offre** : les concurrents (directs et indirects) et leur pouvoir de marché.",
+            "**L’environnement** : facteurs PESTEL (politique, économique, socioculturel, technologique, écologique, légal) qui influencent le marché."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "On mesure sa position par la **part de marché** : la place de l’entreprise sur son marché."
+        },
+        {
+          "t": "formula",
+          "c": "Part de marché (%) = (Ventes de l’entreprise ÷ Ventes totales du marché) × 100"
+        },
+        {
+          "t": "example",
+          "h": "Calcul",
+          "c": "Ventes de l’entreprise 3 M€ ; ventes totales du marché 25 M€.\nPart de marché = 3 ÷ 25 × 100 = **12 %**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La demande ne se limite pas aux clients actuels : les **non-consommateurs relatifs** sont le potentiel de croissance. La **part de marché** situe l’entreprise face à ses concurrents."
+        }
+      ]
+    },
+    {
+      "h": "✂️ Segmenter, cibler, positionner (SCP)",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une entreprise ne peut pas plaire à tout le monde. La démarche **SCP** structure son approche du marché en trois temps."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Étape",
+            "Question",
+            "Résultat"
+          ],
+          "rows": [
+            [
+              "Segmentation",
+              "Comment découper le marché ?",
+              "Des groupes homogènes (segments)"
+            ],
+            [
+              "Ciblage",
+              "Quel(s) segment(s) viser ?",
+              "La cible"
+            ],
+            [
+              "Positionnement",
+              "Quelle image donner ?",
+              "Une place claire dans l’esprit du client"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La **segmentation** découpe le marché en groupes homogènes selon des critères (âge, revenu, style de vie, usage). Le **ciblage** choisit le ou les segments à conquérir. Le **positionnement** définit l’image et la place que l’on veut occuper dans l’esprit du client, par rapport aux concurrents."
+        },
+        {
+          "t": "example",
+          "h": "Illustration",
+          "c": "Vinted (occasion, budget serré, éco-responsable), Rolex (luxe, statut), McDo (rapide, familial, prix bas) ne visent **pas la même cible** et ont chacun un **positionnement** très distinct. C’est ce qui évite qu’ils se concurrencent frontalement."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "SCP = **Segmenter → Cibler → Positionner**. Un bon positionnement est **clair, distinctif et crédible** : il répond à « pourquoi me choisir plutôt qu’un autre ? »."
+        }
+      ]
+    },
+    {
+      "h": "🔎 La veille et l’étude de marché",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le marché évolue en permanence : l’entreprise doit exercer une **veille** (surveillance continue de la concurrence, des tendances, des technologies) pour ne pas se faire dépasser. La veille alimente les décisions stratégiques."
+        },
+        {
+          "t": "p",
+          "c": "Avant de lancer un produit ou d’entrer sur un marché, on réalise une **étude de marché** qui croise l’analyse de la **demande**, de l’**offre** et de l’**environnement**. Elle réduit le risque en vérifiant qu’il existe bien des clients prêts à acheter."
+        },
+        {
+          "t": "list",
+          "c": [
+            "Analyser la **demande** : qui, combien, quels besoins, quel budget ?",
+            "Analyser l’**offre** : quels concurrents, à quels prix, quelle différenciation possible ?",
+            "Analyser l’**environnement** : réglementation, tendances, technologies."
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La **veille** est continue ; l’**étude de marché** est ponctuelle (avant une décision). Toutes deux visent à **décider en connaissance de cause**, pas au hasard."
+        }
+      ]
+    },
+    {
+      "h": "🛍️ Étude de cas guidée — segmenter et cibler",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Une marque de vêtements veut lancer une nouvelle ligne. Elle hésite entre viser « tout le monde » ou un segment précis. Que recommander ?"
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Segmentation",
+          "c": "Découper le marché : par âge (ados / jeunes actifs / seniors), par style (sportif / chic / éco-responsable), par budget. On obtient des **segments homogènes**."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Ciblage",
+          "c": "Viser « tout le monde » dilue le message et le budget. Mieux vaut **cibler** un segment porteur (ex. jeunes actifs sensibles à l’éco-responsabilité) où la marque peut se différencier."
+        },
+        {
+          "t": "p",
+          "c": "**Étape 3 — Positionnement.** Adopter un positionnement clair (« mode responsable et accessible ») et le décliner dans tout le mix (produit, prix, distribution, communication). **Recommandation** : cibler plutôt que s’éparpiller, car un positionnement fort attire une clientèle fidèle."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Toujours : **segmenter** (critères) → **cibler** (choix justifié) → **positionner** (image distinctive) → vérifier la **cohérence** avec le mix."
+        }
+      ]
+    }
+  ],
+  "mkg-t3": [
+    {
+      "h": "🎁 Le marketing mix : les 4P",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **mercatique opérationnelle** met en œuvre la stratégie par des actions concrètes, résumées par le **marketing mix** ou les **4P** : Product, Price, Place, Promotion. La clé est leur **cohérence** : les 4P doivent « raconter la même histoire »."
+        },
+        {
+          "t": "table",
+          "head": [
+            "P",
+            "En français",
+            "Décisions"
+          ],
+          "rows": [
+            [
+              "Product",
+              "Produit",
+              "Gamme, qualité, design, marque, services"
+            ],
+            [
+              "Price",
+              "Prix",
+              "Niveau, stratégie, réductions"
+            ],
+            [
+              "Place",
+              "Distribution",
+              "Circuits, points de vente, logistique"
+            ],
+            [
+              "Promotion",
+              "Communication",
+              "Publicité, promotions, réseaux sociaux"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La **cohérence** est essentielle : une Rolex (produit de luxe) doit avoir un **prix** élevé, une **distribution** sélective (boutiques exclusives) et une **communication** haut de gamme. La vendre en supermarché à prix cassé détruirait son image."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Les 4P = **Produit, Prix, Distribution (Place), Communication (Promotion)**. Ils doivent être **cohérents** entre eux et avec le **positionnement**."
+        }
+      ]
+    },
+    {
+      "h": "🏷️ La politique de prix",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **prix** est le seul P qui **rapporte** de l’argent (les autres en coûtent). Il envoie aussi un signal de **qualité** et de **positionnement**. Trois grandes stratégies existent au lancement."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Stratégie",
+            "Principe",
+            "Quand"
+          ],
+          "rows": [
+            [
+              "Écrémage",
+              "Prix élevé, cibler une clientèle prête à payer",
+              "Produit innovant, image premium"
+            ],
+            [
+              "Pénétration",
+              "Prix bas pour conquérir vite un large marché",
+              "Marché de masse, volumes"
+            ],
+            [
+              "Alignement",
+              "Se caler sur le prix du marché",
+              "Marché concurrentiel banalisé"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le prix se fixe en tenant compte de trois éléments : le **coût** (il doit couvrir le coût de revient), la **demande** (ce que le client est prêt à payer), et la **concurrence**. L’**élasticité-prix** mesure la sensibilité de la demande : si une hausse de prix fait beaucoup chuter les ventes, la demande est **élastique**."
+        },
+        {
+          "t": "example",
+          "h": "Écrémage vs pénétration",
+          "c": "Un smartphone haut de gamme lancé cher = **écrémage** (marge élevée, image). Un abonnement streaming lancé à prix cassé pour capter vite des millions d’abonnés = **pénétration**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Prix = coût + demande + concurrence. **Écrémage** (prix haut, image) vs **pénétration** (prix bas, volume). Le prix doit rester **cohérent** avec le positionnement."
+        }
+      ]
+    },
+    {
+      "h": "📦 Produit, distribution et communication",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La **politique de produit** gère la **gamme** (l’ensemble des produits), le **cycle de vie** (lancement → croissance → maturité → déclin) et la **marque** (nom, logo, image, promesse). La marque crée de la valeur et fidélise."
+        },
+        {
+          "t": "p",
+          "c": "La **politique de distribution** choisit les **circuits** pour amener le produit au client : circuit **direct** (du producteur au client, sans intermédiaire), **court** (un intermédiaire), **long** (plusieurs). L’intensité peut être **intensive** (partout), **sélective** (points choisis) ou **exclusive** (rares distributeurs)."
+        },
+        {
+          "t": "p",
+          "c": "La **politique de communication** fait connaître et aimer le produit. On distingue les moyens **média** (TV, radio, presse, affichage, internet) et **hors-média** (promotion des ventes, relations publiques, marketing direct, réseaux sociaux)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Circuit",
+            "Intermédiaires",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Direct",
+              "Aucun",
+              "Vente à la ferme, site du fabricant"
+            ],
+            [
+              "Court",
+              "Un",
+              "Producteur → détaillant"
+            ],
+            [
+              "Long",
+              "Plusieurs",
+              "Producteur → grossiste → détaillant"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Produit (gamme, cycle de vie, marque) + Distribution (circuits, intensité) + Communication (média/hors-média). Chaque choix doit rester **cohérent** avec les trois autres P."
+        }
+      ]
+    },
+    {
+      "h": "🛍️ Étude de cas guidée — la cohérence du mix",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Une marque de café haut de gamme veut se lancer. Proposez un mix cohérent (4P)."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Produit** : café d’origine, torréfaction artisanale, packaging soigné, marque évocatrice.",
+            "**Prix** : stratégie d’**écrémage** (prix élevé) cohérent avec le positionnement premium.",
+            "**Distribution** : **sélective** (épiceries fines, boutique, site propre), pas la grande distribution discount.",
+            "**Communication** : storytelling sur l’origine et le savoir-faire, réseaux sociaux esthétiques, dégustations."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "**Commentaire.** Les 4P « racontent la même histoire » : le premium. Un seul P incohérent (ex. vendre en hard-discount) suffirait à **détruire** le positionnement. La force d’un mix vient de sa **cohérence d’ensemble**."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Construire un mix = décliner les **4P** en veillant à leur **cohérence** avec le **positionnement** choisi. Justifier chaque choix."
+        }
+      ]
+    }
+  ],
+  "mkg-t4": [
+    {
+      "h": "📱 La mercatique numérique et les données",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le numérique a **transformé** la mercatique. L’entreprise dispose désormais d’une masse de **données** (data) sur les consommateurs : historique d’achat, navigation, géolocalisation, réseaux sociaux. Elle peut personnaliser ses offres « one-to-one »."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Personnalisation** : recommandations sur mesure (« vous aimerez aussi… »).",
+            "**Ciblage publicitaire** : publicités adaptées à chaque profil.",
+            "**Relation client** : réseaux sociaux, chatbots, e-mails ciblés.",
+            "**Mesure en temps réel** : taux de clic, de conversion, panier moyen."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Cette puissance soulève des **enjeux** : protection de la **vie privée**, encadrée par le **RGPD** (consentement, droit à l’effacement), et risque de **manipulation** (« Amazon sait ce que tu veux avant toi »). La donnée est un atout **et** une responsabilité."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La data permet une mercatique **personnalisée et mesurable**, mais impose le respect du **RGPD** et de l’éthique. Le consentement du consommateur est obligatoire."
+        }
+      ]
+    },
+    {
+      "h": "🌱 Mercatique durable et éthique",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Les consommateurs attendent des entreprises qu’elles soient **responsables**. La **mercatique durable** intègre les préoccupations sociales et environnementales dans l’offre : produits éco-conçus, circuits courts, transparence."
+        },
+        {
+          "t": "p",
+          "c": "Mais attention au **greenwashing** (écoblanchiment) : communiquer sur des engagements verts sans les tenir réellement. C’est un **risque majeur** de réputation : les consommateurs et les ONG le débusquent vite, et le retour de bâton peut être violent."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Démarche sincère",
+            "Greenwashing"
+          ],
+          "rows": [
+            [
+              "Engagements mesurés et prouvés",
+              "Slogans vagues (« éco », « vert »)"
+            ],
+            [
+              "Transparence sur les limites",
+              "On cache l’essentiel"
+            ],
+            [
+              "Cohérence sur toute l’activité",
+              "Une action verte, le reste polluant"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La **e-réputation** (image sur internet) est devenue centrale : avis clients, commentaires, bad buzz. Une entreprise doit la **surveiller** et y répondre. Un « bad buzz » peut détruire des années d’efforts en quelques heures."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Mercatique durable **sincère** = avantage concurrentiel ; **greenwashing** = risque de réputation. La e-réputation se **surveille** et se **cultive**."
+        }
+      ]
+    },
+    {
+      "h": "🔗 Les nouveaux parcours d’achat",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le parcours d’achat est devenu **omnicanal** : le client passe sans cesse du magasin au site, à l’application, aux réseaux sociaux. Il se renseigne en ligne et achète en boutique (ou l’inverse). L’entreprise doit offrir une **expérience fluide** sur tous les canaux."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Web-to-store** : chercher en ligne, acheter en magasin (click & collect).",
+            "**Store-to-web** : voir en magasin, acheter en ligne.",
+            "**Marketing d’influence** : des créateurs de contenu recommandent des produits à leur communauté."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Les **réseaux sociaux** sont à la fois un canal de **communication**, de **vente** (social commerce) et de **service client**. L’influence et les avis pèsent souvent plus que la publicité traditionnelle, jugée moins crédible."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le consommateur est **omnicanal** : il faut une expérience **cohérente et fluide** en ligne et en magasin. L’**influence** et les **avis** sont devenus des leviers majeurs."
+        }
+      ]
+    },
+    {
+      "h": "🛍️ Étude de cas guidée — data et éthique",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Un site e-commerce utilise les données de navigation pour recommander des produits et cibler ses publicités. Analysez les avantages et les limites."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Avantages",
+          "c": "Personnalisation (meilleure expérience client), efficacité publicitaire (moins de gaspillage), fidélisation, mesure en temps réel des performances."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Limites et risques",
+          "c": "Atteinte à la **vie privée**, sentiment de surveillance, dépendance aux algorithmes, risque juridique si le **RGPD** n’est pas respecté (consentement, sécurité des données)."
+        },
+        {
+          "t": "p",
+          "c": "**Recommandation.** Exploiter la data **dans le respect du RGPD** : recueillir le consentement, être transparent, sécuriser les données, laisser le choix au client. Une exploitation éthique **renforce la confiance** — donc, à terme, la performance."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Pour tout sujet « numérique/data » : peser **avantages** (personnalisation, mesure) et **limites** (vie privée, RGPD, éthique), puis recommander un usage **responsable**."
+        }
+      ]
+    }
+  ]
+}

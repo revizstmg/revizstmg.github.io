@@ -1,0 +1,47 @@
+{
+  "p1-eco-t2": [
+    {
+      "title": "Créer et mesurer la richesse",
+      "context": "Une entreprise a une production de 300 000 € et des consommations intermédiaires de 110 000 €. Par ailleurs, le PIB du pays passe de 2 500 milliards € à 2 550 milliards €.",
+      "questions": [
+        {
+          "q": "Calcule la valeur ajoutée de l’entreprise (en €).",
+          "a": "190000",
+          "num": true,
+          "e": "VA = production − consommations intermédiaires = 300 000 − 110 000 = 190 000 €."
+        },
+        {
+          "q": "Calcule le taux de croissance du PIB (en %).",
+          "a": "2",
+          "num": true,
+          "e": "Taux = (2 550 − 2 500) / 2 500 = 50 / 2 500 = 2 %."
+        }
+      ]
+    }
+  ],
+  "p1-eco-t5": [
+    {
+      "title": "Le marché et l’élasticité",
+      "context": "Sur le marché d'un bien, le prix augmente de 5 %. On observe alors une baisse des quantités demandées de 15 %.",
+      "questions": [
+        {
+          "q": "Calcule l'élasticité-prix de la demande.",
+          "a": "-3",
+          "num": true,
+          "alt": [
+            "−3"
+          ],
+          "e": "e = variation % des quantités / variation % du prix = −15 / +5 = −3."
+        },
+        {
+          "q": "La demande est-elle « élastique » ou « inélastique » ?",
+          "a": "élastique",
+          "alt": [
+            "elastique"
+          ],
+          "e": "|e| = 3 > 1 : la demande est très sensible au prix, donc élastique."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,403 @@
+{
+  "droit-t5": [
+    {
+      "h": "Un « oui » qui vous engage",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Quand tu réserves une place de concert en ligne et que tu cliques sur « J’accepte », il se passe quelque chose de juridique : le site te fait une **offre** (la place, à un prix), et tu l’**acceptes**. À cet instant précis, un **contrat** est né — sans notaire, sans signature manuscrite."
+        },
+        {
+          "t": "p",
+          "c": "Le contrat est défini par le Code civil comme un **accord de volontés** destiné à créer des **obligations**. Il repose sur deux piliers hérités de la Révolution : l’**autonomie de la volonté** (on ne s’engage que parce qu’on l’a voulu) et la **force obligatoire** (une fois conclu, il s’impose comme une loi privée)."
+        },
+        {
+          "t": "p",
+          "c": "Ce contrat te lie vraiment : tu dois payer, le vendeur doit te fournir la place. C’est la **force obligatoire** : « le contrat tient lieu de loi » à ceux qui l’ont conclu. On ne peut pas se rétracter sur un coup de tête (sauf droit de rétractation prévu, par ex. 14 jours pour un achat à distance)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Type de contrat",
+            "Ce qui le caractérise"
+          ],
+          "rows": [
+            [
+              "Synallagmatique",
+              "Obligations réciproques (vente)"
+            ],
+            [
+              "À titre onéreux",
+              "Chacun reçoit une contrepartie"
+            ],
+            [
+              "Consensuel",
+              "Le seul accord suffit, sans écrit"
+            ],
+            [
+              "D’adhésion",
+              "On accepte des clauses non négociées (abonnement)"
+            ]
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "L’idée à retenir",
+          "c": "Un contrat, ce n’est pas forcément un gros document signé : c’est la rencontre de deux volontés (offre + acceptation). Un clic, une poignée de main, un ticket de caisse… peuvent suffire. L’écrit sert surtout de **preuve**."
+        }
+      ]
+    },
+    {
+      "h": "Quand on vous a trompé : le consentement vicié",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas réel",
+          "c": "Tu achètes sur une petite annonce une montre présentée comme une « Rolex authentique ». Une fois payée, tu découvres que c’est une contrefaçon. As-tu vraiment voulu acheter… une fausse ?"
+        },
+        {
+          "t": "p",
+          "c": "Non : tu as dit « oui », mais ton accord a été obtenu par une **tromperie**. Le droit considère alors que ton consentement est « vicié » : tu peux demander au juge d’**annuler** le contrat. Pour être valable, un contrat exige en effet un consentement **libre et éclairé** (art. 1128)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Vice",
+            "Définition",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Erreur",
+              "Se tromper sur une qualité essentielle",
+              "Croire acheter un original"
+            ],
+            [
+              "Dol",
+              "Être trompé par des manœuvres",
+              "Le vendeur cache un défaut grave"
+            ],
+            [
+              "Violence",
+              "Consentir sous la contrainte",
+              "Signer sous la menace"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Ici, le vendeur a menti volontairement : c’est un **dol** (« une erreur provoquée »). Le dol est particulièrement sanctionné car il suppose une **intention de tromper** : il permet la **nullité** du contrat **et** des dommages-intérêts."
+        },
+        {
+          "t": "warning",
+          "h": "Nullité ≠ résiliation",
+          "c": "Annuler pour vice, c’est effacer le contrat depuis le début (comme s’il n’avait jamais existé). Ce n’est pas la même chose que « résilier » (arrêter pour l’avenir un contrat valable). Attention aussi : une simple erreur sur la **valeur** ne suffit pas."
+        }
+      ]
+    },
+    {
+      "h": "Pourquoi un ado ne peut pas tout signer",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Un lycéen de 16 ans achète seul, à crédit, un scooter à 2 000 €. Ses parents découvrent la facture."
+        },
+        {
+          "t": "p",
+          "c": "Le vendeur risque de ne jamais être payé : un mineur n’a pas la **capacité juridique** pour s’engager seul sur un tel achat. La **capacité** est la règle, l’**incapacité** l’exception (mineurs, majeurs sous tutelle/curatelle)."
+        },
+        {
+          "t": "p",
+          "c": "Un contrat n’est solide que si **trois conditions** sont réunies **en même temps** (art. 1128) : le **consentement**, la **capacité** et un **contenu licite et certain**. Il suffit qu’**une seule** manque (ici, la capacité) pour qu’un juge puisse l’**annuler**."
+        },
+        {
+          "t": "warning",
+          "h": "Nuance",
+          "c": "Un mineur peut valablement conclure les **actes de la vie courante** (acheter du pain, un ticket de bus) : tout n’est pas nul, seulement les engagements importants."
+        },
+        {
+          "t": "tip",
+          "h": "Réflexe bac",
+          "c": "Devant un cas, coche les 3 conditions : **Consentement – Capacité – Contenu licite**. Si une case manque, le contrat est **annulable**."
+        }
+      ]
+    }
+  ],
+  "droit-t6": [
+    {
+      "h": "Casser, c’est réparer",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Le chien d’un voisin, mal tenu, mord un passant qui doit aller à l’hôpital. Qui paie les soins ?"
+        },
+        {
+          "t": "p",
+          "c": "Le maître du chien. Pour que sa **responsabilité civile** soit engagée, il faut réunir **trois éléments cumulatifs** : un **fait générateur** (le chien a mordu), un **dommage** (la blessure) et un **lien de causalité** entre les deux. Les trois ensemble → le maître doit **réparer**, c’est-à-dire indemniser la victime."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Condition",
+            "Ici"
+          ],
+          "rows": [
+            [
+              "Fait générateur",
+              "Le fait d’une chose/animal sous sa garde"
+            ],
+            [
+              "Dommage",
+              "La blessure (préjudice corporel)"
+            ],
+            [
+              "Lien de causalité",
+              "La morsure a causé la blessure"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Ici, le maître est le **gardien** de l’animal : il en répond même **sans faute** (responsabilité du fait des choses). C’est une protection forte pour la victime, qui n’a pas à prouver une négligence. La réparation vise à la **replacer** dans l’état où elle serait sans le dommage (réparation intégrale)."
+        },
+        {
+          "t": "tip",
+          "h": "La règle des 3",
+          "c": "Fait générateur + dommage + lien de causalité. S’il en manque un seul (par ex. aucun dommage réel), il n’y a **pas** de responsabilité civile."
+        }
+      ]
+    },
+    {
+      "h": "Payer la victime OU être puni : deux logiques",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Un conducteur ivre renverse un piéton. Il passe devant deux juges différents."
+        },
+        {
+          "t": "p",
+          "c": "Devant le juge **pénal**, la société le sanctionne (amende, retrait de permis, voire prison) : le but est de **punir** un comportement interdit. Devant le juge **civil**, il doit **indemniser** le piéton pour ses blessures : le but est de **réparer** le préjudice d’une victime."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Critère",
+            "Civile",
+            "Pénale"
+          ],
+          "rows": [
+            [
+              "But",
+              "Réparer",
+              "Punir"
+            ],
+            [
+              "Qui agit",
+              "La victime",
+              "La société (ministère public)"
+            ],
+            [
+              "Sanction",
+              "Dommages-intérêts",
+              "Amende, prison"
+            ],
+            [
+              "Bénéficiaire",
+              "La victime",
+              "La société"
+            ]
+          ]
+        },
+        {
+          "t": "warning",
+          "h": "Ne confonds pas",
+          "c": "Responsabilité **civile** = réparer (de l’argent pour la victime). Responsabilité **pénale** = punir (une peine au nom de la société). Un même acte peut relever **des deux** en même temps."
+        }
+      ]
+    }
+  ],
+  "droit-t7": [
+    {
+      "h": "Chauffeur Uber : salarié ou indépendant ?",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas réel",
+          "c": "En 2020, la Cour de cassation a examiné la situation d’un chauffeur Uber. Officiellement « indépendant », il ne fixait pas ses prix, ne choisissait pas librement ses courses, et pouvait être déconnecté par la plateforme."
+        },
+        {
+          "t": "p",
+          "c": "Les juges ont estimé qu’il travaillait en réalité sous les ordres d’Uber : il y avait un **lien de subordination**. Or c’est ce lien qui fait le **contrat de travail** — peu importe le nom écrit sur le papier. Résultat : le chauffeur a été reconnu **salarié**, avec les protections qui vont avec (congés, sécurité sociale…)."
+        },
+        {
+          "t": "p",
+          "c": "Le **contrat de travail** repose sur trois éléments : une **prestation de travail**, une **rémunération**, et surtout un **lien de subordination** — le pouvoir de l’employeur de donner des ordres, de contrôler et de sanctionner. C’est ce dernier qui fait toute la différence avec le travailleur **indépendant**, qui organise librement son activité."
+        },
+        {
+          "t": "tip",
+          "h": "Le critère clé",
+          "c": "Ce qui distingue un salarié d’un indépendant, ce n’est pas le **titre** du contrat mais la **réalité** : le **lien de subordination**. Le juge le recherche par un **faisceau d’indices** (ordres, contrôle, horaires imposés)."
+        }
+      ]
+    },
+    {
+      "h": "CDI, CDD : la règle et l’exception",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Quand une entreprise embauche, la norme est le **CDI** (durée indéterminée) : c’est la **règle**, la plus protectrice. Le **CDD** est une **exception** : on ne peut y recourir que pour un **motif précis** prévu par la loi (remplacer un salarié absent, faire face à un pic d’activité, emploi saisonnier) et pour une tâche **temporaire**."
+        },
+        {
+          "t": "p",
+          "c": "Le CDD obéit à un **formalisme strict** : il doit être **écrit**, préciser son **motif** et son **terme**. À la fin, le salarié touche une **prime de précarité**. L’**intérim** suit la même logique de cas de recours limités, mais fait intervenir trois acteurs (salarié, agence, entreprise utilisatrice)."
+        },
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Un supermarché embauche en CDD « pour surcroît d’activité » pendant les fêtes : c’est justifié. Mais s’il enchaîne des CDD toute l’année sur le **même poste permanent**, un juge peut le **requalifier en CDI**."
+        },
+        {
+          "t": "warning",
+          "h": "À retenir",
+          "c": "Un CDD **sans motif légal** ou **sans écrit** est **requalifié en CDI** — une sanction très favorable au salarié."
+        }
+      ]
+    },
+    {
+      "h": "On ne licencie pas « parce que »",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Un salarié est licencié au motif que « son chef ne l’apprécie pas ». Est-ce légal ?"
+        },
+        {
+          "t": "p",
+          "c": "Non. Un licenciement doit reposer sur une **cause réelle et sérieuse** : « réelle » = fondée sur des faits **exacts et vérifiables** ; « sérieuse » = assez **grave** pour justifier la rupture (fautes répétées, difficultés économiques réelles…). Une simple antipathie ne suffit pas."
+        },
+        {
+          "t": "p",
+          "c": "L’employeur doit aussi respecter une **procédure** : convocation à un entretien préalable, entretien, puis notification écrite et **motivée**. Le non-respect du **fond** (la cause) **ou** de la **forme** (la procédure) rend le licenciement **abusif**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Licenciement abusif → le salarié saisit le **conseil de prud’hommes** et obtient des **dommages-intérêts**. Il faut contrôler **deux niveaux** : le fond ET la forme."
+        }
+      ]
+    }
+  ],
+  "droit-t8": [
+    {
+      "h": "Choupette peut-elle hériter ? (Karl Lagerfeld)",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas réel",
+          "c": "Le couturier Karl Lagerfeld adorait sa chatte Choupette et avait déclaré vouloir lui laisser une partie de sa fortune. Juridiquement… c’est impossible. Pourquoi ?"
+        },
+        {
+          "t": "p",
+          "c": "Parce qu’en droit, seule une **personne** peut posséder un **patrimoine** et hériter. Une personne peut être **physique** (un être humain) ou **morale** (une société, une association). Un animal, lui, n’est pas une personne juridique : c’est un **bien**. Un bien ne peut pas être propriétaire d’autres biens."
+        },
+        {
+          "t": "p",
+          "c": "Concrètement, on ne peut donc pas léguer directement à un chat : on lègue à une **personne** (ou à une fondation) en la chargeant de s’occuper de l’animal. C’est ce type de montage qui permet à Choupette de vivre dans le luxe — grâce à des humains, pas en son nom propre."
+        },
+        {
+          "t": "tip",
+          "h": "La notion cachée",
+          "c": "Cette histoire illustre la **personnalité juridique** : avoir des droits (posséder, hériter, contracter) suppose d’être une personne, physique ou morale."
+        }
+      ]
+    },
+    {
+      "h": "Protéger sa maison quand on crée son entreprise",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Léa lance sa marque de vêtements. Si l’affaire échoue et accumule des dettes, risque-t-elle de perdre sa maison personnelle ?"
+        },
+        {
+          "t": "p",
+          "c": "Cela dépend de la **forme juridique**. En entreprise individuelle, l’entrepreneur et l’entreprise ne font (souvent) qu’un : le patrimoine personnel est plus exposé (même si, depuis 2022, la loi sépare de droit le patrimoine professionnel du personnel et protège la résidence principale). En créant une **société** (SARL, SAS), elle donne naissance à une **personne morale** distincte : les patrimoines sont séparés et sa responsabilité est en principe **limitée à ses apports**."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Forme",
+            "Responsabilité"
+          ],
+          "rows": [
+            [
+              "Entreprise individuelle",
+              "Patrimoine pro séparé du perso (2022)"
+            ],
+            [
+              "SARL / SAS",
+              "Limitée aux apports (personne morale)"
+            ]
+          ]
+        },
+        {
+          "t": "warning",
+          "h": "La limite",
+          "c": "La protection n’est jamais absolue : une **caution personnelle** demandée par la banque, ou une **faute de gestion** grave, peut faire tomber la barrière et engager les biens personnels du dirigeant."
+        },
+        {
+          "t": "tip",
+          "h": "Le bon réflexe",
+          "c": "Choisir une forme juridique, c’est d’abord choisir comment on **engage** (ou on **protège**) son patrimoine."
+        }
+      ]
+    },
+    {
+      "h": "Une idée, ça se protège",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Léa crée un logo original et un nom de marque. Un concurrent les copie. Peut-elle réagir ?"
+        },
+        {
+          "t": "p",
+          "c": "Oui, si elle a **déposé sa marque** (à l’INPI). La **propriété industrielle** (marque, brevet, dessin) donne un **monopole d’exploitation** et permet d’attaquer les copieurs en **contrefaçon**. C’est différent du **droit d’auteur**, qui protège les œuvres (un texte, une musique, un site) **automatiquement**, sans dépôt."
+        },
+        {
+          "t": "table",
+          "head": [
+            "On protège…",
+            "Par…",
+            "Durée"
+          ],
+          "rows": [
+            [
+              "Une invention technique",
+              "Brevet (INPI)",
+              "20 ans"
+            ],
+            [
+              "Un nom, un logo",
+              "Marque (INPI)",
+              "10 ans renouvelables"
+            ],
+            [
+              "Une œuvre (texte, musique)",
+              "Droit d’auteur (auto.)",
+              "Vie + 70 ans"
+            ]
+          ]
+        },
+        {
+          "t": "warning",
+          "h": "Attention",
+          "c": "Une **idée** seule ne se protège pas : c’est sa **mise en forme** (invention, marque, œuvre) qui est protégeable. Sans **dépôt**, un nom se défend beaucoup plus difficilement : protéger, c’est anticiper."
+        }
+      ]
+    }
+  ]
+}

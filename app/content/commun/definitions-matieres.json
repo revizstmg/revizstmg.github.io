@@ -1,0 +1,244 @@
+{
+  "gestion-finance": [
+    [
+      "Charge",
+      "Dépense consommée sur l’exercice, qui diminue le résultat."
+    ],
+    [
+      "Produit",
+      "Recette de l’exercice, qui augmente le résultat."
+    ],
+    [
+      "Résultat",
+      "Produits − charges : bénéfice si positif, perte si négatif."
+    ],
+    [
+      "Rentabilité",
+      "Aptitude à dégager un résultat au regard des moyens engagés."
+    ],
+    [
+      "Solvabilité",
+      "Capacité à rembourser ses dettes."
+    ]
+  ],
+  "management": [
+    [
+      "Objectif",
+      "But précis et mesurable que se fixe l’organisation."
+    ],
+    [
+      "Décision",
+      "Choix entre plusieurs options pour atteindre un but."
+    ],
+    [
+      "Stratégie",
+      "Ensemble des choix engageant l’organisation sur le long terme."
+    ],
+    [
+      "Ressource",
+      "Moyen mobilisé par l’organisation (humain, financier, matériel)."
+    ],
+    [
+      "Structure",
+      "Manière dont l’organisation répartit tâches et pouvoirs."
+    ]
+  ],
+  "droit": [
+    [
+      "Règle de droit",
+      "Règle générale, obligatoire et sanctionnée par l’État."
+    ],
+    [
+      "Obligation",
+      "Lien de droit contraignant à donner, faire ou ne pas faire."
+    ],
+    [
+      "Responsabilité",
+      "Obligation de répondre de ses actes et d’en réparer les conséquences."
+    ],
+    [
+      "Juridiction",
+      "Tribunal compétent pour trancher un litige."
+    ],
+    [
+      "Contrat",
+      "Accord de volontés créant des obligations."
+    ]
+  ],
+  "economie": [
+    [
+      "Agent économique",
+      "Acteur qui produit, consomme ou redistribue (ménage, entreprise, État)."
+    ],
+    [
+      "Marché",
+      "Lieu de rencontre de l’offre et de la demande."
+    ],
+    [
+      "PIB",
+      "Valeur des richesses produites dans un pays sur un an."
+    ],
+    [
+      "Inflation",
+      "Hausse générale et durable des prix."
+    ],
+    [
+      "Croissance",
+      "Augmentation durable de la production."
+    ]
+  ],
+  "mercatique": [
+    [
+      "Marché",
+      "Rencontre de l’offre et de la demande d’un produit."
+    ],
+    [
+      "Cible",
+      "Groupe de consommateurs que l’entreprise cherche à toucher."
+    ],
+    [
+      "Positionnement",
+      "Place du produit dans l’esprit du consommateur."
+    ],
+    [
+      "Mix (4P)",
+      "Produit, Prix, Distribution, Communication."
+    ],
+    [
+      "Fidélisation",
+      "Actions pour conserver durablement les clients."
+    ]
+  ],
+  "rh-communication": [
+    [
+      "Compétence",
+      "Savoirs, savoir-faire et savoir-être mobilisés en situation."
+    ],
+    [
+      "Motivation",
+      "Facteurs poussant le salarié à s’impliquer."
+    ],
+    [
+      "Communication",
+      "Transmission d’un message entre émetteur et récepteur."
+    ],
+    [
+      "Conflit",
+      "Opposition entre acteurs aux intérêts divergents."
+    ],
+    [
+      "Cohésion",
+      "Solidarité et unité d’un groupe."
+    ]
+  ],
+  "sig": [
+    [
+      "Donnée",
+      "Élément brut non interprété."
+    ],
+    [
+      "Information",
+      "Donnée traitée et porteuse de sens."
+    ],
+    [
+      "Système d’information",
+      "Dispositif qui collecte, stocke, traite et diffuse l’information."
+    ],
+    [
+      "Base de données",
+      "Ensemble structuré de données géré par un SGBD."
+    ],
+    [
+      "Réseau",
+      "Ensemble d’équipements reliés pour échanger des données."
+    ]
+  ],
+  "maths": [
+    [
+      "Fonction",
+      "Relation associant à chaque x un unique f(x)."
+    ],
+    [
+      "Probabilité",
+      "Nombre entre 0 et 1 mesurant la chance qu’un événement se réalise."
+    ],
+    [
+      "Moyenne",
+      "Somme des valeurs divisée par leur nombre."
+    ],
+    [
+      "Pourcentage",
+      "Proportion rapportée à 100."
+    ],
+    [
+      "Équation",
+      "Égalité contenant une inconnue à déterminer."
+    ]
+  ],
+  "philosophie": [
+    [
+      "Concept",
+      "Idée générale et abstraite définie avec précision."
+    ],
+    [
+      "Argument",
+      "Raison qui justifie une thèse."
+    ],
+    [
+      "Thèse",
+      "Position défendue dans une réflexion."
+    ],
+    [
+      "Problématique",
+      "Question précise structurant la réflexion."
+    ],
+    [
+      "Raison",
+      "Faculté de penser, de juger et de démontrer."
+    ]
+  ],
+  "histoire-geo": [
+    [
+      "Mondialisation",
+      "Mise en relation des territoires par les flux mondiaux."
+    ],
+    [
+      "Territoire",
+      "Espace approprié et organisé par une société."
+    ],
+    [
+      "Démocratie",
+      "Régime où le pouvoir appartient au peuple."
+    ],
+    [
+      "Puissance",
+      "Capacité d’un État à influencer les autres."
+    ],
+    [
+      "Frontière",
+      "Limite entre deux États."
+    ]
+  ],
+  "langues": [
+    [
+      "Auxiliaire",
+      "Verbe outil servant à conjuguer, nier ou interroger."
+    ],
+    [
+      "Temps verbal",
+      "Forme du verbe situant l’action (présent, passé, futur)."
+    ],
+    [
+      "Faux-ami",
+      "Mot ressemblant au français mais de sens différent."
+    ],
+    [
+      "Connecteur",
+      "Mot de liaison organisant le discours."
+    ],
+    [
+      "Registre",
+      "Niveau de langue adapté à la situation."
+    ]
+  ]
+}

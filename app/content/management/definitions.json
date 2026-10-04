@@ -1,0 +1,124 @@
+{
+  "mgmt-t1": [
+    [
+      "Organisation",
+      "Groupe structuré de personnes qui coordonnent leurs actions vers un but commun."
+    ],
+    [
+      "Efficacité",
+      "Capacité à atteindre les objectifs fixés."
+    ],
+    [
+      "Efficience",
+      "Capacité à atteindre les objectifs en utilisant le moins de ressources possible."
+    ],
+    [
+      "Performance",
+      "Combinaison de l’efficacité et de l’efficience."
+    ],
+    [
+      "Compétitivité",
+      "Capacité à faire face à la concurrence (par les prix ou par la qualité/l’innovation)."
+    ],
+    [
+      "Valeur",
+      "Utilité qu’un bien ou service apporte au client, justifiant son prix."
+    ],
+    [
+      "Productivité",
+      "Rapport entre la production obtenue et les moyens utilisés (travail, capital)."
+    ],
+    [
+      "Finalité",
+      "Raison d’être durable d’une organisation (lucrative, non lucrative ou sociétale)."
+    ],
+    [
+      "Objectif",
+      "But précis, chiffré et daté fixé au service de la finalité."
+    ],
+    [
+      "Entreprise privée",
+      "Organisation à finalité lucrative : réaliser et pérenniser un profit."
+    ],
+    [
+      "Organisation publique",
+      "Organisation rendant un service public d’intérêt général (mairie, hôpital, État)."
+    ],
+    [
+      "Organisation de la société civile",
+      "Organisation non lucrative défendant une cause (association, ONG, syndicat)."
+    ],
+    [
+      "Mission",
+      "Ce que fait l’organisation et pour qui elle le fait (traduit sa finalité)."
+    ],
+    [
+      "Valeur ajoutée",
+      "Richesse créée = valeur de la production − consommations intermédiaires externes."
+    ],
+    [
+      "Chaîne de valeur",
+      "Ensemble des activités qui créent de la valeur pour le client (Porter)."
+    ],
+    [
+      "Performance globale",
+      "Combinaison des performances économique, sociale et environnementale."
+    ]
+  ],
+  "mgmt-t2": [
+    [
+      "Partie prenante",
+      "Acteur ayant un intérêt dans l’organisation (salariés, clients, actionnaires, État…)."
+    ],
+    [
+      "Décision stratégique",
+      "Choix engageant l’organisation sur le long terme, pris par la direction."
+    ],
+    [
+      "Style de direction",
+      "Manière d’exercer le pouvoir (autoritaire, paternaliste, consultatif, participatif — Likert)."
+    ],
+    [
+      "Pouvoir",
+      "Capacité d’un acteur à imposer sa volonté et à influencer les décisions."
+    ],
+    [
+      "Contre-pouvoir",
+      "Force qui limite le pouvoir de la direction (syndicats, associations)."
+    ],
+    [
+      "Décentralisation",
+      "Délégation du pouvoir de décision vers les niveaux inférieurs."
+    ],
+    [
+      "Management participatif",
+      "Mode de direction qui associe les salariés aux décisions."
+    ]
+  ],
+  "mgmt-t3": [
+    [
+      "Responsabilité sociétale (RSE)",
+      "Intégration volontaire des enjeux sociaux et environnementaux dans l’activité de l’organisation."
+    ],
+    [
+      "Développement durable",
+      "Développement qui répond aux besoins présents sans compromettre ceux des générations futures."
+    ],
+    [
+      "Éthique",
+      "Ensemble de valeurs et de règles morales guidant les comportements de l’organisation."
+    ],
+    [
+      "Parties prenantes",
+      "Acteurs internes et externes concernés par l’activité de l’organisation."
+    ],
+    [
+      "Norme",
+      "Règle ou référentiel (ex. ISO) encadrant les pratiques de l’organisation."
+    ],
+    [
+      "Externalité",
+      "Conséquence de l’activité subie par un tiers sans compensation (pollution, nuisances)."
+    ]
+  ]
+}

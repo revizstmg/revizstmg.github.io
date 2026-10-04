@@ -1,0 +1,16 @@
+{
+  "mgmt-t1-assoc": 2,
+  "mgmt-t1-flash": 1,
+  "mgmt-t1-qcm": 3,
+  "mgmt-t1-tri": 0,
+  "mgmt-t1-vf": 0,
+  "mgmt-t2-assoc": 3,
+  "mgmt-t2-flash": 0,
+  "mgmt-t2-qcm": 2,
+  "mgmt-t2-tri": 1,
+  "mgmt-t2-vf": 1,
+  "mgmt-t3-flash": 1,
+  "mgmt-t3-qcm": 0,
+  "mgmt-t3-tri": 0,
+  "mgmt-t3-vf": 1
+}

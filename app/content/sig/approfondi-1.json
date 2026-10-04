@@ -1,0 +1,549 @@
+{
+  "sig-t1": [
+    {
+      "h": "💻 Qu’est-ce qu’un système d’information ?",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **système d’information (SI)** est l’ensemble des ressources (humaines, matérielles, logicielles) qui permettent de **collecter, stocker, traiter et diffuser** l’information dans une organisation. C’est le « système nerveux » de l’entreprise : sans lui, impossible de décider et de coordonner."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Fonction du SI",
+            "Exemple"
+          ],
+          "rows": [
+            [
+              "Collecter",
+              "Saisir une commande, scanner un produit"
+            ],
+            [
+              "Stocker",
+              "Enregistrer dans une base de données"
+            ],
+            [
+              "Traiter",
+              "Calculer un total, éditer une facture"
+            ],
+            [
+              "Diffuser",
+              "Envoyer l’info au bon service, au client"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Il faut distinguer **donnée**, **information** et **connaissance** : la **donnée** est un fait brut (« 42 »), l’**information** est une donnée mise en contexte (« 42 ventes aujourd’hui »), la **connaissance** est l’information interprétée pour décider (« les ventes montent, il faut réapprovisionner »)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le SI = **collecter → stocker → traiter → diffuser** l’information. Il transforme des **données** brutes en **information** utile puis en **connaissance** pour décider."
+        }
+      ]
+    },
+    {
+      "h": "📈 Le SI, outil d’aide à la décision",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "La finalité du SI est d’**aider à la décision** à tous les niveaux. Un bon SI fournit la **bonne information**, à la **bonne personne**, au **bon moment**, sous une forme **exploitable**."
+        },
+        {
+          "t": "list",
+          "c": [
+            "Au niveau **opérationnel** : suivre les stocks, les commandes, la production au quotidien.",
+            "Au niveau **stratégique** : tableaux de bord, analyses de tendances pour les dirigeants."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le **PGI (progiciel de gestion intégré)**, ou ERP, est un logiciel unique qui gère toutes les fonctions de l’entreprise (ventes, achats, stocks, comptabilité, RH) autour d’une **base de données commune**. Avantage : une **seule saisie** met à jour tous les services → cohérence et gain de temps ; inconvénient : coût et rigidité."
+        },
+        {
+          "t": "p",
+          "c": "Un SI de **qualité** repose sur des données **fiables, à jour, complètes et sécurisées**. Une donnée fausse (« garbage in, garbage out ») mène à une mauvaise décision."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un **PGI/ERP** centralise l’information dans une **base commune** : une saisie, tous les services à jour. La **qualité des données** conditionne la qualité des décisions."
+        }
+      ]
+    },
+    {
+      "h": "🔗 Processus et représentation du SI",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le fonctionnement de l’organisation s’analyse en **processus** : une suite d’activités qui transforment des entrées en sorties (ex. le processus « traiter une commande » : réception → vérification stock → préparation → facturation → expédition)."
+        },
+        {
+          "t": "p",
+          "c": "On **représente** ces processus par des schémas (diagrammes de flux) qui montrent qui fait quoi, dans quel ordre, et quelles informations circulent. Cette modélisation aide à **repérer les dysfonctionnements** (étapes inutiles, ressaisies, goulots) et à **améliorer** l’organisation."
+        },
+        {
+          "t": "example",
+          "h": "Illustration — une commande",
+          "c": "Une commande McDo : saisie sur la borne (collecte) → transmission en cuisine (diffusion) → suivi de préparation (traitement) → encaissement (traitement) → mise à jour des stocks (stockage). Le SI relie tous ces maillons en temps réel."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un **processus** transforme des entrées en sorties via une suite d’activités. Le **modéliser** permet de repérer et corriger les dysfonctionnements."
+        }
+      ]
+    },
+    {
+      "h": "💻 Étude de cas guidée — le SI à l’œuvre",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Un commerce constate des erreurs de stock (ruptures et sur-stocks) car chaque service (caisse, réserve, achats) tient ses propres tableaux. Analysez et proposez."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Le problème",
+          "c": "Des **données éclatées et non partagées** : chaque service a sa version, d’où des incohérences. Le SI ne remplit pas sa fonction de diffusion d’une information fiable et commune."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Solution",
+          "c": "Mettre en place un **PGI** (base de données commune) : une vente en caisse met à jour **automatiquement** le stock et alerte les achats. Une seule information, partagée, à jour."
+        },
+        {
+          "t": "p",
+          "c": "**Commentaire.** Le PGI supprime les ressaisies et les incohérences, fiabilise les stocks et aide à décider (réapprovisionnement au bon moment). Coût et conduite du changement sont les principales limites à anticiper."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Repérer le **dysfonctionnement du SI** (données non partagées, ressaisies) → proposer une solution (PGI, base commune) → peser **avantages et limites**."
+        }
+      ]
+    }
+  ],
+  "sig-t2": [
+    {
+      "h": "🗄️ Le modèle relationnel",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Une **base de données** organise et stocke l’information de façon structurée pour la retrouver facilement. Le modèle le plus répandu est le **modèle relationnel** : les données sont rangées dans des **tables** (comme des tableaux)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Terme",
+            "Signification"
+          ],
+          "rows": [
+            [
+              "Table (relation)",
+              "Un tableau de données (ex. CLIENTS)"
+            ],
+            [
+              "Enregistrement (ligne)",
+              "Un élément (ex. un client précis)"
+            ],
+            [
+              "Champ (colonne)",
+              "Une caractéristique (nom, ville, email)"
+            ],
+            [
+              "Clé primaire",
+              "Identifiant unique de chaque enregistrement (ex. id_client)"
+            ],
+            [
+              "Clé étrangère",
+              "Champ qui référence la clé primaire d’une autre table (lien)"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "La **clé primaire** identifie de façon **unique** chaque ligne (deux clients ne peuvent avoir le même id). La **clé étrangère** crée les **relations** entre tables : par exemple, une table COMMANDES contient l’id_client (clé étrangère) qui pointe vers la table CLIENTS. C’est ce qui évite de tout répéter."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Base relationnelle = **tables** liées par des **clés**. Clé **primaire** = identifiant unique ; clé **étrangère** = lien vers une autre table."
+        }
+      ]
+    },
+    {
+      "h": "🔍 Le langage SQL : interroger la base",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **SQL (Structured Query Language)** est le langage qui permet de **poser des questions** à une base de données (« requêtes »). La requête de base sélectionne des colonnes, dans une table, selon une condition."
+        },
+        {
+          "t": "formula",
+          "c": "SELECT colonnes\nFROM table\nWHERE condition\nORDER BY colonne ;"
+        },
+        {
+          "t": "list",
+          "c": [
+            "**SELECT** : les colonnes à afficher (SELECT * = toutes).",
+            "**FROM** : la table concernée.",
+            "**WHERE** : la condition de filtrage (=, <, >, AND, OR, LIKE).",
+            "**ORDER BY** : le tri (ASC croissant, DESC décroissant)."
+          ]
+        },
+        {
+          "t": "example",
+          "h": "Requête simple",
+          "c": "Afficher le nom et la ville des clients de Paris, triés par nom :\nSELECT nom, ville\nFROM CLIENTS\nWHERE ville = 'Paris'\nORDER BY nom ;"
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Structure de base : **SELECT** (quoi) **FROM** (où) **WHERE** (quelle condition) **ORDER BY** (quel tri). Ne pas oublier le **point-virgule** final et les **guillemets** autour du texte."
+        }
+      ]
+    },
+    {
+      "h": "🧮 Fonctions d’agrégation et jointures",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le SQL permet aussi de **calculer** sur des ensembles de lignes grâce aux **fonctions d’agrégation**, et de **croiser** plusieurs tables avec les **jointures**."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Fonction",
+            "Rôle"
+          ],
+          "rows": [
+            [
+              "COUNT()",
+              "Compter le nombre de lignes"
+            ],
+            [
+              "SUM()",
+              "Additionner une colonne"
+            ],
+            [
+              "AVG()",
+              "Calculer une moyenne"
+            ],
+            [
+              "MAX() / MIN()",
+              "Valeur maximale / minimale"
+            ]
+          ]
+        },
+        {
+          "t": "example",
+          "h": "Agrégation",
+          "c": "Chiffre d’affaires total des commandes :\nSELECT SUM(montant) FROM COMMANDES ;\nNombre de clients parisiens :\nSELECT COUNT(*) FROM CLIENTS WHERE ville = 'Paris' ;"
+        },
+        {
+          "t": "p",
+          "c": "La **jointure** relie deux tables via leur clé commune pour combiner leurs informations. On précise l’égalité des clés dans le WHERE (ou avec JOIN … ON)."
+        },
+        {
+          "t": "example",
+          "h": "Jointure",
+          "c": "Nom du client et montant de ses commandes :\nSELECT CLIENTS.nom, COMMANDES.montant\nFROM CLIENTS, COMMANDES\nWHERE CLIENTS.id_client = COMMANDES.id_client ;"
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Agrégation = **calculer** (COUNT, SUM, AVG…). Jointure = **croiser** deux tables via leur **clé commune**. Souvent combinées avec GROUP BY pour des totaux par catégorie."
+        }
+      ]
+    },
+    {
+      "h": "💻 Étude de cas guidée — écrire une requête SQL",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Base avec une table PRODUITS(id_produit, nom, prix, categorie). Écrire les requêtes demandées."
+        },
+        {
+          "t": "example",
+          "h": "Q1 — Produits de moins de 10 €, triés par prix",
+          "c": "SELECT nom, prix\nFROM PRODUITS\nWHERE prix < 10\nORDER BY prix ASC ;"
+        },
+        {
+          "t": "example",
+          "h": "Q2 — Nombre de produits dans la catégorie « Boissons »",
+          "c": "SELECT COUNT(*)\nFROM PRODUITS\nWHERE categorie = 'Boissons' ;"
+        },
+        {
+          "t": "example",
+          "h": "Q3 — Prix moyen des produits par catégorie",
+          "c": "SELECT categorie, AVG(prix)\nFROM PRODUITS\nGROUP BY categorie ;"
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Traduire la question en SQL : **quoi** afficher (SELECT), **où** (FROM), **quelle condition** (WHERE), **quel tri/regroupement** (ORDER BY / GROUP BY). Vérifier guillemets et point-virgule."
+        }
+      ]
+    }
+  ],
+  "sig-t3": [
+    {
+      "h": "🤝 Le travail collaboratif et ses outils",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **travail collaboratif** consiste à travailler **ensemble**, à plusieurs, sur un objectif commun, en s’appuyant sur des **outils numériques** qui permettent de partager, coéditer et communiquer à distance et en temps réel."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Partage de fichiers** : cloud (Drive, espaces partagés) accessibles partout.",
+            "**Coédition** : plusieurs personnes modifient le même document simultanément.",
+            "**Communication** : messagerie, visioconférence, espaces de discussion.",
+            "**Gestion de projet** : agendas partagés, tableaux de tâches, suivi."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Ces outils reposent souvent sur le **cloud** (informatique « en nuage ») : les données et applications sont hébergées sur des serveurs distants, accessibles via internet. Avantages : accessibilité, mise à jour automatique, pas d’installation ; limites : dépendance à la connexion et au prestataire, questions de **sécurité**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le travail collaboratif = **partager, coéditer, communiquer** grâce au numérique (souvent via le **cloud**). Il gagne en efficacité mais pose des enjeux de sécurité et de dépendance."
+        }
+      ]
+    },
+    {
+      "h": "🧠 L’intelligence collective",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "L’**intelligence collective** est la capacité d’un groupe à produire, ensemble, plus et mieux que la somme des individus. Le numérique la démultiplie en connectant des contributeurs du monde entier."
+        },
+        {
+          "t": "example",
+          "h": "Illustration — Wikipédia",
+          "c": "Wikipédia est écrite et corrigée par des **millions de contributeurs** bénévoles. Aucun individu ne pourrait produire une telle encyclopédie : c’est l’**intelligence collective**, organisée par des outils numériques et des règles communes."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Conditions de réussite** : objectif partagé, règles claires, outils adaptés, diversité des contributeurs, modération.",
+            "**Risques** : désinformation, contributions de mauvaise qualité, conflits, besoin de **contrôle** et de **validation**."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Pour l’entreprise, l’intelligence collective se traduit par le **crowdsourcing** (faire appel à la foule), les plateformes d’idées internes, les communautés de clients. Bien encadrée, elle stimule l’**innovation**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Intelligence collective = le groupe produit **plus que la somme** des individus, grâce au numérique. Elle exige des **règles** et une **modération** pour rester fiable."
+        }
+      ]
+    },
+    {
+      "h": "🔄 La transformation numérique du travail",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le numérique **transforme** en profondeur l’organisation du travail. De nouvelles formes apparaissent : **télétravail**, flexibilité des horaires et des lieux, automatisation des tâches répétitives, nouveaux métiers."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Opportunités",
+            "Risques"
+          ],
+          "rows": [
+            [
+              "Flexibilité, gain de temps",
+              "Frontière vie pro/perso brouillée"
+            ],
+            [
+              "Collaboration à distance",
+              "Isolement, perte de lien social"
+            ],
+            [
+              "Automatisation des tâches pénibles",
+              "Disparition de certains emplois"
+            ],
+            [
+              "Accès à l’information partout",
+              "Surcharge informationnelle, sécurité"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Cette transformation appelle de nouvelles **compétences numériques** et une **conduite du changement** : accompagner les salariés, former, préserver le lien social et le **droit à la déconnexion**. Subie, elle fragilise ; anticipée, elle est une opportunité."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La transformation numérique offre **flexibilité et efficacité** mais brouille les frontières et exige de nouvelles compétences. Le **droit à la déconnexion** protège l’équilibre des salariés."
+        }
+      ]
+    },
+    {
+      "h": "💻 Étude de cas guidée — le travail collaboratif",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Une PME dont les équipes sont réparties sur plusieurs sites peine à coordonner ses projets (versions de fichiers multiples, mails perdus). Que proposer ?"
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Le problème",
+          "c": "Absence d’outils collaboratifs : fichiers en plusieurs versions, information éparpillée, coordination difficile entre sites distants."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Solution",
+          "c": "Déployer une **plateforme collaborative** (cloud partagé + coédition + gestion de tâches + visioconférence) : un seul document à jour, un suivi de projet commun, une communication centralisée."
+        },
+        {
+          "t": "p",
+          "c": "**Commentaire.** Les gains : fin des versions multiples, collaboration en temps réel, meilleure coordination. À anticiper : la **formation** des équipes, la **sécurité** des données (cloud) et l’**accompagnement du changement**."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Repérer le **problème de coordination** → proposer des **outils collaboratifs** adaptés → peser **bénéfices** (temps réel, cohérence) et **limites** (sécurité, formation)."
+        }
+      ]
+    }
+  ],
+  "sig-t4": [
+    {
+      "h": "🌐 Réseaux et architecture",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Un **réseau** relie des ordinateurs pour qu’ils **communiquent** et **partagent** des ressources (fichiers, imprimantes, accès internet). Sans réseau, pas de SI moderne, pas de travail collaboratif, pas d’internet."
+        },
+        {
+          "t": "p",
+          "c": "L’architecture la plus courante est le modèle **client-serveur** : des postes **clients** (ordinateurs, téléphones) envoient des requêtes à un **serveur** (une machine puissante) qui les traite et renvoie les réponses. Internet en est l’exemple géant."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Client** : demande un service (afficher une page, ouvrir un fichier).",
+            "**Serveur** : fournit le service (héberge le site, la base, les fichiers).",
+            "**Protocole** : les règles communes de communication (HTTP, IP…)."
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Modèle **client-serveur** : le client **demande**, le serveur **fournit**. Un réseau permet de **partager** ressources et informations — mais élargit aussi la **surface d’attaque**."
+        }
+      ]
+    },
+    {
+      "h": "🔐 La sécurité du système d’information",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Plus le SI est connecté, plus il est **vulnérable**. La sécurité vise trois objectifs, souvent résumés par le triangle **DIC** (ou CIA)."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Objectif",
+            "Signification"
+          ],
+          "rows": [
+            [
+              "Disponibilité",
+              "L’information est accessible quand on en a besoin"
+            ],
+            [
+              "Intégrité",
+              "L’information n’est pas altérée ou falsifiée"
+            ],
+            [
+              "Confidentialité",
+              "Seules les personnes autorisées y accèdent"
+            ]
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Les **menaces** sont nombreuses : **phishing** (hameçonnage : faux message pour voler des identifiants), **ransomware** (rançongiciel : chiffre les données et exige une rançon), **malwares** (virus), vol de données, pannes. « La faille, c’est souvent l’**humain** » : un clic imprudent suffit."
+        },
+        {
+          "t": "example",
+          "h": "Illustration",
+          "c": "Un hôpital paralysé par un **ransomware** : ses données sont chiffrées, les soins perturbés. L’attaque a souvent commencé par un simple **e-mail de phishing** ouvert par un employé."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Sécurité = **Disponibilité + Intégrité + Confidentialité (DIC)**. Menaces phares : **phishing** et **ransomware**. Le maillon faible est souvent **humain**."
+        }
+      ]
+    },
+    {
+      "h": "🛡️ Se protéger et le cadre légal (RGPD)",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Face aux menaces, l’organisation met en place des **mesures de protection** techniques et humaines. Aucune n’est suffisante seule : c’est leur **combinaison** qui protège."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Mots de passe forts** et authentification à deux facteurs.",
+            "**Sauvegardes régulières** (pour restaurer après une attaque ou une panne).",
+            "**Pare-feu** et **antivirus** à jour.",
+            "**Mises à jour** des logiciels (corriger les failles).",
+            "**Sensibilisation** des utilisateurs (reconnaître un phishing).",
+            "**Gestion des droits d’accès** (chacun n’accède qu’à ce qui le concerne)."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le **RGPD (Règlement Général sur la Protection des Données)** encadre le traitement des **données personnelles** en Europe. Il impose : le **consentement**, la **finalité** (n’utiliser les données que dans le but annoncé), la **minimisation** (ne collecter que le nécessaire), la **sécurité**, et les **droits** des personnes (accès, rectification, effacement). Son non-respect expose à de lourdes **sanctions**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Se protéger = **combiner** sauvegardes, mots de passe, pare-feu, mises à jour et **sensibilisation**. Le **RGPD** impose consentement, finalité, minimisation, sécurité et droits des personnes."
+        }
+      ]
+    },
+    {
+      "h": "💻 Étude de cas guidée — sécuriser le SI",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "**Énoncé.** Une entreprise a subi une attaque : un salarié a cliqué sur un lien frauduleux, des données ont été chiffrées et une rançon est réclamée. Analysez et proposez un plan de prévention."
+        },
+        {
+          "t": "example",
+          "h": "Étape 1 — Identifier l’attaque",
+          "c": "Un **ransomware**, déclenché par un **phishing** (le lien frauduleux). Les objectifs de sécurité touchés : **disponibilité** (données inaccessibles) et potentiellement **confidentialité**."
+        },
+        {
+          "t": "example",
+          "h": "Étape 2 — Réagir",
+          "c": "Isoler les machines infectées, ne pas payer la rançon (aucune garantie), **restaurer** à partir des **sauvegardes**, prévenir la CNIL si des données personnelles sont concernées (RGPD)."
+        },
+        {
+          "t": "p",
+          "c": "**Étape 3 — Prévention.** Sauvegardes régulières et **hors ligne**, mises à jour, pare-feu/antivirus, mots de passe forts, gestion des droits, et surtout **sensibilisation** des salariés au phishing. **Commentaire** : la meilleure défense combine **technique** et **humain**, car la faille initiale est presque toujours humaine."
+        },
+        {
+          "t": "tip",
+          "h": "Méthode",
+          "c": "Identifier l’**attaque** et l’objectif DIC touché → **réagir** (isoler, restaurer, alerter) → **prévenir** par des mesures combinées (technique + humaine)."
+        }
+      ]
+    }
+  ]
+}

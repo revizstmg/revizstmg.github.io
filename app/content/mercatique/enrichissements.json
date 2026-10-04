@@ -1,0 +1,164 @@
+{
+  "mkg-t1": {
+    "sections": [
+      {
+        "h": "🛍️ Exemple — comprendre un achat",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Un client achète un smartphone haut de gamme d’une grande marque, plus cher que les autres."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Motivation** (pousse à l’achat) : besoin d’estime, image de soi (motivation d’auto-expression).",
+              "**Frein** (retient) : le prix élevé (frein financier), la peur de se tromper (risque perçu).",
+              "**Besoin** (Maslow) : ici un besoin d’**estime**, pas seulement un besoin fonctionnel."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Rôle du marketing",
+            "c": "Le marketing cherche à renforcer les motivations et à lever les freins (garantie, facilités de paiement)."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "label": "Lumni — vidéos d’économie-gestion",
+        "url": "https://www.lumni.fr/",
+        "kind": "video",
+        "note": "Cherche « marketing », « besoins », « consommation »."
+      },
+      {
+        "label": "CNIL — données personnelles des consommateurs",
+        "url": "https://www.cnil.fr/",
+        "kind": "link",
+        "note": "Ce que dit la loi sur la collecte des données clients."
+      }
+    ]
+  },
+  "mkg-t2": {
+    "sections": [
+      {
+        "h": "🛍️ Exemple — segmenter, cibler, positionner",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Une marque lance une nouvelle boisson énergisante."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Segmentation** : découper le marché (âge, mode de vie, sportifs…).",
+              "**Ciblage** : choisir le segment « jeunes actifs sportifs ».",
+              "**Positionnement** : l’image voulue (« énergie naturelle et saine ») pour se distinguer des concurrents."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "3 étapes distinctes",
+            "c": "Segmenter (découper) → cibler (choisir) → positionner (image). On ne les confond pas."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "label": "INSEE — études de marché & données",
+        "url": "https://www.insee.fr/fr/statistiques",
+        "kind": "doc",
+        "note": "Segmenter un marché avec de vraies données (CSP, âge, région)."
+      },
+      {
+        "label": "Lumni — le marché et la concurrence",
+        "url": "https://www.lumni.fr/",
+        "kind": "video"
+      }
+    ]
+  },
+  "mkg-t3": {
+    "sections": [
+      {
+        "h": "🛍️ Exemple — la cohérence des 4P",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Une marque de montres de luxe."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Produit** : haut de gamme, finitions soignées.",
+              "**Prix** : élevé (cohérent avec l’image).",
+              "**Distribution** : boutiques sélectives, pas en supermarché.",
+              "**Communication** : magazines haut de gamme, ambassadeurs."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Cohérence",
+            "c": "Un prix « premium » avec une distribution « discount » serait incohérent : les 4P forment un tout."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "label": "Lumni — les 4P et la stratégie commerciale",
+        "url": "https://www.lumni.fr/",
+        "kind": "video",
+        "note": "Produit, prix, distribution, communication."
+      },
+      {
+        "label": "economie.gouv.fr — fixation des prix, soldes, promotions",
+        "url": "https://www.economie.gouv.fr/",
+        "kind": "link"
+      }
+    ]
+  },
+  "mkg-t4": {
+    "sections": [
+      {
+        "h": "🛍️ Exemple — mercatique numérique & données",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Un site e-commerce recommande des produits à partir de l’historique d’achat."
+          },
+          {
+            "t": "list",
+            "c": [
+              "Les **données clients** permettent de personnaliser l’offre (recommandations, publicités ciblées).",
+              "Leur collecte est encadrée par le **RGPD** : consentement, base légale, droit à l’effacement.",
+              "Attention au **greenwashing** : un argument « écologique » doit être vrai et prouvé."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Éthique",
+            "c": "La donnée personnelle n’est pas une marchandise comme une autre : la loi protège le consommateur."
+          }
+        ]
+      }
+    ],
+    "resources": [
+      {
+        "label": "CNIL — marketing numérique & cookies",
+        "url": "https://www.cnil.fr/",
+        "kind": "link",
+        "note": "Consentement, ciblage publicitaire, RGPD."
+      },
+      {
+        "label": "ADEME — publicité responsable / anti-greenwashing",
+        "url": "https://www.ademe.fr/",
+        "kind": "link"
+      }
+    ]
+  }
+}

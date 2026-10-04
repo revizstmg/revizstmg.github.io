@@ -1,0 +1,166 @@
+{
+  "hg-h1": [
+    [
+      "Totalitarisme",
+      "Régime qui contrôle totalement la société par un parti unique, la terreur et la propagande."
+    ],
+    [
+      "Nazisme",
+      "Idéologie totalitaire de Hitler fondée sur le racisme, l’antisémitisme et l’espace vital."
+    ],
+    [
+      "Stalinisme",
+      "Régime totalitaire soviétique de Staline : parti unique, planification, terreur."
+    ],
+    [
+      "Génocide",
+      "Destruction planifiée et systématique d’un groupe humain."
+    ],
+    [
+      "Shoah",
+      "Extermination des Juifs d’Europe par le régime nazi (1941-1945)."
+    ],
+    [
+      "Propagande",
+      "Diffusion massive d’idées pour orienter l’opinion et soutenir le régime."
+    ],
+    [
+      "Guerre d’anéantissement",
+      "Guerre visant la destruction totale de l’ennemi, civils compris."
+    ]
+  ],
+  "hg-h2": [
+    [
+      "Guerre froide",
+      "Affrontement idéologique indirect USA / URSS (1947-1991), sans conflit direct."
+    ],
+    [
+      "Bloc",
+      "Ensemble de pays alignés sur une superpuissance (bloc de l’Ouest / bloc de l’Est)."
+    ],
+    [
+      "Décolonisation",
+      "Accession à l’indépendance des anciennes colonies."
+    ],
+    [
+      "Détente",
+      "Période d’apaisement des tensions entre les deux blocs (années 1960-70)."
+    ],
+    [
+      "Monde multipolaire",
+      "Ordre mondial où plusieurs puissances coexistent (après 1991)."
+    ],
+    [
+      "Superpuissance",
+      "État dominant militairement, économiquement et culturellement."
+    ],
+    [
+      "Rideau de fer",
+      "Ligne séparant l’Europe de l’Ouest de l’Europe de l’Est communiste."
+    ]
+  ],
+  "hg-h3": [
+    [
+      "Ve République",
+      "Régime français depuis 1958, marqué par un exécutif fort (De Gaulle)."
+    ],
+    [
+      "État-providence",
+      "État qui assure protection sociale et réduction des inégalités."
+    ],
+    [
+      "Cohabitation",
+      "Président et gouvernement de bords politiques opposés."
+    ],
+    [
+      "Décolonisation",
+      "Fin de l’empire colonial français (Indochine, Algérie)."
+    ],
+    [
+      "Construction européenne",
+      "Processus d’intégration des pays européens (CEE puis UE)."
+    ],
+    [
+      "Alternance",
+      "Passage du pouvoir d’un camp politique à l’autre par les élections."
+    ]
+  ],
+  "hg-g1": [
+    [
+      "Mondialisation",
+      "Mise en relation des territoires par les flux (marchandises, capitaux, informations)."
+    ],
+    [
+      "Façade maritime",
+      "Littoral doté de grands ports concentrant les échanges mondiaux."
+    ],
+    [
+      "Route maritime",
+      "Axe de circulation des navires reliant les pôles économiques."
+    ],
+    [
+      "ZEE",
+      "Zone économique exclusive : espace maritime (200 milles) où l’État exploite les ressources."
+    ],
+    [
+      "Ressource halieutique",
+      "Ressource liée à la pêche (poissons, produits de la mer)."
+    ],
+    [
+      "Point de passage stratégique",
+      "Détroit ou canal essentiel au commerce mondial (Suez, Malacca)."
+    ]
+  ],
+  "hg-g2": [
+    [
+      "Territoire",
+      "Espace approprié et organisé par une société."
+    ],
+    [
+      "Intégration à la mondialisation",
+      "Degré de participation d’un territoire aux échanges mondiaux."
+    ],
+    [
+      "Pays émergent",
+      "Pays en forte croissance qui s’intègre rapidement à l’économie mondiale."
+    ],
+    [
+      "PMA",
+      "Pays les moins avancés : États les plus pauvres, en marge de la mondialisation."
+    ],
+    [
+      "Métropolisation",
+      "Concentration des populations et activités dans les grandes villes."
+    ],
+    [
+      "Interface",
+      "Zone de contact et d’échanges entre deux espaces."
+    ]
+  ],
+  "hg-g3": [
+    [
+      "Union européenne",
+      "Organisation d’intégration économique et politique de pays européens."
+    ],
+    [
+      "Métropolisation",
+      "Concentration des hommes et des fonctions dans les grandes agglomérations."
+    ],
+    [
+      "Attractivité",
+      "Capacité d’un territoire à attirer populations, entreprises et capitaux."
+    ],
+    [
+      "Aire urbaine",
+      "Ville et couronnes dont les habitants travaillent dans le pôle central."
+    ],
+    [
+      "Frontière",
+      "Limite entre deux États ; dans l’UE, souvent ouverte (espace Schengen)."
+    ],
+    [
+      "Aménagement du territoire",
+      "Politiques visant un développement équilibré des espaces."
+    ]
+  ]
+}

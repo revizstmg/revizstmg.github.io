@@ -1,0 +1,28 @@
+{
+  "mgmt-t2": [
+    {
+      "title": "Croissance du chiffre d’affaires",
+      "context": "Le chiffre d'affaires d'une PME passe de 800 000 € (année N−1) à 920 000 € (année N).",
+      "questions": [
+        {
+          "q": "Calcule le taux de croissance du CA (en %).",
+          "a": "15",
+          "num": true,
+          "e": "Taux = (CA_N − CA_N−1) / CA_N−1 = (920 000 − 800 000) / 800 000 = 15 %."
+        }
+      ]
+    },
+    {
+      "title": "Dynamique d’un marché",
+      "context": "Un marché est passé de 500 000 unités vendues à 560 000 unités en un an.",
+      "questions": [
+        {
+          "q": "Calcule le taux de croissance du marché (en %).",
+          "a": "12",
+          "num": true,
+          "e": "Taux = (560 000 − 500 000) / 500 000 = 60 000 / 500 000 = 12 %."
+        }
+      ]
+    }
+  ]
+}

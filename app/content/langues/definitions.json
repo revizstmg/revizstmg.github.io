@@ -1,0 +1,238 @@
+{
+  "lng-en-gram": [
+    [
+      "Present simple",
+      "Habitudes et vérités générales : I work, he works (+s à la 3ᵉ personne)."
+    ],
+    [
+      "Present continuous",
+      "Action en cours : be + V-ing (I am working)."
+    ],
+    [
+      "Preterit",
+      "Passé daté et révolu : V-ed ou forme irrégulière (I worked, I went)."
+    ],
+    [
+      "Present perfect",
+      "Lien passé-présent : have + participe passé (I have worked)."
+    ],
+    [
+      "Auxiliaire",
+      "Verbe outil (be, have, do) servant à conjuguer, nier, interroger."
+    ],
+    [
+      "Modal",
+      "Verbe (can, must, should…) exprimant capacité, obligation, conseil."
+    ]
+  ],
+  "lng-en-voc": [
+    [
+      "Faux-ami",
+      "Mot ressemblant au français mais de sens différent (actually = en fait)."
+    ],
+    [
+      "Phrasal verb",
+      "Verbe + particule au sens global (give up = abandonner)."
+    ],
+    [
+      "Collocation",
+      "Association habituelle de mots (make a decision, do homework)."
+    ],
+    [
+      "Registre",
+      "Niveau de langue (formal / informal) adapté à la situation."
+    ],
+    [
+      "Connecteur logique",
+      "Mot de liaison (however, therefore, moreover) structurant le discours."
+    ],
+    [
+      "Synonyme",
+      "Mot de sens proche permettant d’enrichir et de varier l’expression."
+    ]
+  ],
+  "lng-en-verbs": [
+    [
+      "Verbe irrégulier",
+      "Verbe dont le preterit et le participe passé ne suivent pas la règle en -ed."
+    ],
+    [
+      "Base verbale",
+      "Forme du verbe sans terminaison (go, take)."
+    ],
+    [
+      "Preterit",
+      "2ᵉ colonne (went, took) : passé simple révolu."
+    ],
+    [
+      "Participe passé",
+      "3ᵉ colonne (gone, taken) : utilisé avec have et au passif."
+    ],
+    [
+      "Present perfect",
+      "have + participe passé, pour un lien avec le présent."
+    ]
+  ],
+  "lng-en-grammar-ex": [
+    [
+      "Question tag",
+      "Petite question en fin de phrase (…, isn’t it ?)."
+    ],
+    [
+      "Comparatif",
+      "Comparaison : -er than / more … than."
+    ],
+    [
+      "Superlatif",
+      "Le plus … : the -est / the most …."
+    ],
+    [
+      "Voix passive",
+      "Sujet subissant l’action : be + participe passé."
+    ],
+    [
+      "Discours indirect",
+      "Rapporter des propos (He said that…), avec recul des temps."
+    ]
+  ],
+  "lng-en-comp": [
+    [
+      "Skimming",
+      "Lecture rapide pour saisir l’idée générale d’un texte."
+    ],
+    [
+      "Scanning",
+      "Lecture ciblée pour repérer une information précise."
+    ],
+    [
+      "Main idea",
+      "Idée principale d’un paragraphe ou d’un document."
+    ],
+    [
+      "Inférer",
+      "Déduire une information implicite à partir du contexte."
+    ],
+    [
+      "Paraphraser",
+      "Reformuler une idée avec ses propres mots."
+    ]
+  ],
+  "lng-es-gram": [
+    [
+      "Ser / Estar",
+      "Deux verbes « être » : ser (identité durable) / estar (état, lieu)."
+    ],
+    [
+      "Presente",
+      "Présent de l’indicatif : hablo, como, vivo."
+    ],
+    [
+      "Pretérito perfecto",
+      "Passé lié au présent : he hablado (haber + participe)."
+    ],
+    [
+      "Pretérito indefinido",
+      "Passé simple révolu : hablé, comí."
+    ],
+    [
+      "Gerundio",
+      "Forme en -ando/-iendo exprimant l’action en cours (estoy hablando)."
+    ],
+    [
+      "Subjuntivo",
+      "Mode du souhait, du doute, de l’ordre (que hables)."
+    ]
+  ],
+  "lng-es-voc": [
+    [
+      "Falso amigo",
+      "Mot trompeur (embarazada = enceinte, pas embarrassée)."
+    ],
+    [
+      "Ser vs Estar",
+      "Choix du bon « être » selon caractère durable ou passager."
+    ],
+    [
+      "Género",
+      "Genre du nom (el / la) déterminant les accords."
+    ],
+    [
+      "Conector",
+      "Mot de liaison (sin embargo, por lo tanto) organisant le discours."
+    ],
+    [
+      "Registro",
+      "Niveau de langue (tú familier / usted formel)."
+    ],
+    [
+      "Sinónimo",
+      "Mot de sens proche pour varier le vocabulaire."
+    ]
+  ],
+  "lng-es-verbs": [
+    [
+      "Verbo irregular",
+      "Verbe dont le radical change à la conjugaison (tener → tengo)."
+    ],
+    [
+      "Diptongación",
+      "Voyelle du radical devenant diphtongue (poder → puedo)."
+    ],
+    [
+      "Participio",
+      "Participe passé (hablado, hecho) utilisé avec haber."
+    ],
+    [
+      "Gerundio",
+      "Forme en -ando/-iendo pour l’action en cours."
+    ],
+    [
+      "Pretérito indefinido",
+      "Passé simple, souvent irrégulier (hice, fui)."
+    ]
+  ],
+  "lng-es-grammar-ex": [
+    [
+      "Concordancia",
+      "Accord en genre et en nombre entre noms, adjectifs et articles."
+    ],
+    [
+      "Comparativo",
+      "Comparaison : más … que / menos … que."
+    ],
+    [
+      "Superlativo",
+      "Le plus … : el más … ; superlatif absolu en -ísimo."
+    ],
+    [
+      "Voz pasiva",
+      "ser + participe (fue construido) ou passive avec se."
+    ],
+    [
+      "Estilo indirecto",
+      "Rapporter des propos (dijo que…), avec changement des temps."
+    ]
+  ],
+  "lng-es-comp": [
+    [
+      "Idea principal",
+      "Idée centrale d’un texte ou d’un paragraphe."
+    ],
+    [
+      "Inferir",
+      "Déduire une information implicite du contexte."
+    ],
+    [
+      "Palabra clave",
+      "Mot porteur du sens, utile au repérage."
+    ],
+    [
+      "Parafrasear",
+      "Reformuler une idée avec ses propres mots."
+    ],
+    [
+      "Cognado",
+      "Mot transparent, proche du français (información)."
+    ]
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "p1-hg-h1": {
+    "sections": [
+      {
+        "h": "📝 Exemple — la Révolution française, points de repère",
+        "blocks": [
+          {
+            "t": "frise",
+            "title": "De la monarchie à l’Empire",
+            "events": [
+              {
+                "date": "1789",
+                "label": "Prise de la Bastille · Déclaration des droits de l’homme et du citoyen"
+              },
+              {
+                "date": "1792",
+                "label": "Proclamation de la Ière République"
+              },
+              {
+                "date": "1799",
+                "label": "Coup d’État de Bonaparte"
+              },
+              {
+                "date": "1804",
+                "label": "Napoléon empereur · Code civil"
+              }
+            ]
+          },
+          {
+            "t": "p",
+            "c": "La Révolution met fin à la **monarchie absolue** et à la société d’ordres, et pose les principes de **liberté** et d’**égalité** (DDHC de 1789). L’Empire les prolonge sur certains points (Code civil) mais rétablit un pouvoir personnel fort."
+          },
+          {
+            "t": "tip",
+            "h": "À maîtriser",
+            "c": "Sache dater et expliquer 1789, 1792, 1804 : ce sont les repères attendus."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-hg-h2": {
+    "sections": [
+      {
+        "h": "📝 Exemple — la France industrielle au XIXᵉ siècle",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Document",
+            "c": "Une gravure d’usine du XIXᵉ siècle : hautes cheminées, machines à vapeur, ouvriers nombreux, longues journées de travail."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Décrire** : concentration d’ouvriers, machines, énergie (charbon, vapeur) → **industrialisation**.",
+              "**Expliquer** : naissance d’un nouveau monde du travail (usine, salariat, patronat) et de nouvelles inégalités (« question sociale »).",
+              "**Mettre en perspective** : progrès techniques ET conditions de travail difficiles → à nuancer."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Notion clé",
+            "c": "Industrialisation → urbanisation → apparition de la classe ouvrière : une chaîne de causes à retenir."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-hg-h3": {
+    "sections": [
+      {
+        "h": "📝 Exemple — la Grande Guerre (1914-1918)",
+        "blocks": [
+          {
+            "t": "list",
+            "c": [
+              "**Une guerre totale** : mobilisation des soldats **et** de l’arrière (économie, femmes à l’usine, propagande).",
+              "**Une violence de masse** : guerre de tranchées, batailles meurtrières (Verdun, 1916), millions de morts.",
+              "**Des conséquences durables** : bilan humain et matériel, traité de Versailles (1919), fragilisation des démocraties."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Mot-clé",
+            "c": "« Guerre totale » = tout le pays et toutes ses ressources sont engagés, pas seulement l’armée."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-hg-g1": {
+    "sections": [
+      {
+        "h": "🌍 Étude de cas — la métropolisation en France",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "La **métropolisation** concentre populations, emplois qualifiés et pouvoir dans les grandes aires urbaines."
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Paris** domine (aire urbaine de plus de 12 millions d’habitants) : c’est une métropole de rang mondial.",
+              "Quelques **métropoles régionales** (Lyon, Marseille, Toulouse, Lille, Bordeaux…) structurent le territoire.",
+              "**Inégalités** : la métropolisation renforce l’écart avec les espaces ruraux et les villes petites/moyennes (« France périphérique »)."
+            ]
+          },
+          {
+            "t": "warning",
+            "h": "Nuance",
+            "c": "Les espaces ruraux ne sont pas condamnés : périurbanisation, tourisme, télétravail leur donnent de nouvelles dynamiques."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-hg-g2": {
+    "sections": [
+      {
+        "h": "🌍 L’essentiel — les espaces productifs français",
+        "blocks": [
+          {
+            "t": "list",
+            "c": [
+              "Un **espace productif** = un espace aménagé pour produire (agricole, industriel ou de services).",
+              "**Agricoles** : grandes plaines céréalières (Bassin parisien), vignobles, élevage → une agriculture productive et exportatrice.",
+              "**Industriels** : recomposition (désindustrialisation de certaines régions, technopôles ailleurs).",
+              "**De services** : de plus en plus dominants (tourisme, finance, numérique), surtout dans les métropoles."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Idée forte",
+            "c": "La France est de plus en plus une économie de **services** : les espaces productifs se recomposent autour des métropoles."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-hg-g3": {
+    "sections": [
+      {
+        "h": "🌍 L’essentiel — les espaces ruraux, multifonctionnels",
+        "blocks": [
+          {
+            "t": "list",
+            "c": [
+              "Les espaces ruraux ne servent plus qu’à produire : ils sont **multifonctionnels** (agriculture, résidence, tourisme, nature).",
+              "**Dynamiques** : certains gagnent des habitants (périurbanisation, cadre de vie) ; d’autres se dépeuplent (« diagonale du vide »).",
+              "**Enjeux** : accès aux services publics, mobilités, préservation de l’environnement."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Mot-clé",
+            "c": "« Multifonctionnalité » : un même espace rural remplit plusieurs rôles à la fois."
+          }
+        ]
+      }
+    ]
+  }
+}

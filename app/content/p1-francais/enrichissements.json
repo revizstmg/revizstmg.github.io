@@ -1,0 +1,98 @@
+{
+  "p1-fr-3": {
+    "sections": [
+      {
+        "h": "✒️ Exemple traité — repérer une figure de style",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Phrase",
+            "c": "« Cette ville est une fourmilière où chacun court sans se voir. »"
+          },
+          {
+            "t": "list",
+            "c": [
+              "**Identifier** : « une fourmilière » compare la ville à un nid de fourmis sans outil de comparaison → c’est une **métaphore**.",
+              "**Expliquer l’effet** : elle souligne l’agitation, la foule, l’anonymat de la vie urbaine.",
+              "**Nommer d’autres figures utiles** : comparaison (avec « comme »), personnification, hyperbole (exagération), anaphore (répétition en début de phrase)."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Méthode commentaire",
+            "c": "Une figure de style ne se contente pas de se nommer : dis toujours **quel effet** elle produit sur le sens."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-fr-4": {
+    "sections": [
+      {
+        "h": "🎤 Exemple — réussir l’oral de français (EAF)",
+        "blocks": [
+          {
+            "t": "list",
+            "c": [
+              "**Lecture** du texte à voix haute (soigne le rythme et la ponctuation).",
+              "**Explication linéaire** : suivre le texte dans l’ordre en montrant comment il produit du sens (mouvements, procédés).",
+              "**Question de grammaire** posée par l’examinateur.",
+              "**Entretien** sur une œuvre choisie : présente-la, défends ton avis, sois précis."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Conseil",
+            "c": "Prépare une phrase d’introduction et une de conclusion par texte : ce sont les moments qui rassurent et qui font la meilleure impression."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-fr-1": {
+    "sections": [
+      {
+        "h": "✒️ Méthode — construire un commentaire",
+        "blocks": [
+          {
+            "t": "list",
+            "c": [
+              "**Lire et repérer les mouvements** du texte (ses grandes étapes de sens).",
+              "**Analyser les procédés** (figures, ponctuation, champs lexicaux) → toujours dire **quel effet** ils produisent.",
+              "**Bâtir un plan** : 2 ou 3 axes de lecture (ex. « un portrait élogieux » / « une critique voilée »).",
+              "**Rédiger** : chaque paragraphe = une idée + une citation + une analyse."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Erreur à éviter",
+            "c": "Ne pas paraphraser (redire le texte). Le commentaire **explique comment** le texte produit du sens."
+          }
+        ]
+      }
+    ]
+  },
+  "p1-fr-2": {
+    "sections": [
+      {
+        "h": "✒️ Méthode — contraction & essai",
+        "blocks": [
+          {
+            "t": "list",
+            "c": [
+              "**Contraction** : réduire le texte (souvent au **quart**) en gardant les idées et l’ordre, sans citer ni commenter.",
+              "Rester **fidèle** : ne rien ajouter, ne rien juger ; reformuler avec ses propres mots.",
+              "**Essai** : donner un avis **argumenté** sur une question liée au texte, avec des exemples.",
+              "Compter ses mots : le respect du nombre de mots est noté."
+            ]
+          },
+          {
+            "t": "tip",
+            "h": "Piège",
+            "c": "Contraction = fidélité (pas d’avis) ; essai = argumentation (ton avis, justifié). Ne mélange pas les deux exercices."
+          }
+        ]
+      }
+    ]
+  }
+}
