@@ -5,7 +5,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "Chaque jour, une entreprise réalise des dizaines d’opérations : elle achète des matières, paie ses salariés, vend ses produits, encaisse ses clients, règle ses fournisseurs. Le **système d’information comptable (SIC)** est l’ensemble des **outils, des procédures et des personnes** qui permettent de **collecter, saisir, classer, enregistrer et restituer** ces opérations. Sa mission : donner une **image fidèle** du patrimoine, de la situation financière et du résultat de l’entreprise (art. 120-1 du **PCG**)."
+          "c": "Chaque jour, une entreprise réalise des dizaines d’opérations : elle achète des matières, paie ses salariés, vend ses produits, encaisse ses clients, règle ses fournisseurs. Le **système d’information comptable (SIC)** est l’ensemble des **outils, des procédures et des personnes** qui permettent de **collecter, saisir, classer, enregistrer et restituer** ces opérations. Sa mission : donner une **image fidèle** du patrimoine, de la situation financière et du résultat de l’entreprise (art. 121-1 du **PCG**)."
         },
         {
           "t": "p",
@@ -120,7 +120,7 @@
         {
           "t": "tip",
           "h": "À retenir",
-          "c": "Le **SIC** collecte → saisit → classe → traite → restitue les opérations pour donner une **image fidèle** (art. 120-1 PCG). Usage **interne** (décider) et **externe** (prouver, imposer). Il s’appuie sur le **PCG/ANC**, se **dématérialise**, et doit être **sécurisé** (D.I.C.T.)."
+          "c": "Le **SIC** collecte → saisit → classe → traite → restitue les opérations pour donner une **image fidèle** (art. 121-1 PCG). Usage **interne** (décider) et **externe** (prouver, imposer). Il s’appuie sur le **PCG/ANC**, se **dématérialise**, et doit être **sécurisé** (D.I.C.T.)."
         }
       ]
     },

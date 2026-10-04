@@ -15,7 +15,7 @@
         {
           "h": "Le système d’information comptable (SIC)",
           "points": [
-            "Le SIC saisit, classe et enregistre les opérations pour produire une **image fidèle** du patrimoine, de la situation financière et du résultat (art. 120-1 du PCG).",
+            "Le SIC saisit, classe et enregistre les opérations pour produire une **image fidèle** du patrimoine, de la situation financière et du résultat (art. 121-1 du PCG).",
             "En **interne** : aide à la décision. En **externe** : preuve et calcul des impôts.",
             "**PGI / ERP** : un logiciel unique à base de données unique → fiabilité de l’information.",
             "**Dématérialisation** (factures électroniques) → automatisation ; l’humain contrôle et valide.",
@@ -85,7 +85,7 @@
                 "La liste des clients mécontents"
               ],
               "answer": 0,
-              "explain": "Le SIC produit une image fidèle du patrimoine, de la situation financière et du résultat (art. 120-1 du PCG)."
+              "explain": "Le SIC produit une image fidèle du patrimoine, de la situation financière et du résultat (art. 121-1 du PCG)."
             },
             {
               "q": "Que signifie un PGI (ou ERP) ?",

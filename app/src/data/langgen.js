@@ -116,7 +116,7 @@ const EN_GRAMMAR = [
   () => {
     const items = [['go', 'goes'], ['watch', 'watches'], ['study', 'studies'], ['play', 'plays'], ['do', 'does'], ['fix', 'fixes'], ['carry', 'carries'], ['have', 'has'], ['miss', 'misses'], ['fly', 'flies']]
     const [v, a] = pick(items)
-    return { prompt: `🇬🇧 Présent simple : He ____ (${v}) every day.`, answer: a, alt: [], explain: `3ᵉ pers. sing. : « He ${a} ». (+s ; +es après ch/sh/x/o ; y→ies).` }
+    return { prompt: `🇬🇧 Présent simple : He ____ (${v}) every day.`, answer: a, alt: [], explain: `3ᵉ pers. sing. : « He ${a} ». (+s ; +es après s/ss/ch/sh/x/o ; consonne + y → ies, mais voyelle + y → +s : plays ; have → has).` }
   },
   // comparative
   () => {

@@ -54,7 +54,7 @@
           },
           {
             "t": "p",
-            "c": "Au **XVIIIᵉ siècle**, **Kant** fonde l’**esthétique** comme discipline : le beau n’est ni l’agréable (qui flatte les sens) ni le bon (qui satisfait la raison morale) ; il procure un « plaisir désintéressé » et, chose remarquable, prétend valoir **pour tout le monde** sans reposer sur un concept. **Hegel**, lui, voit dans l’art l’une des voies par lesquelles l’**Esprit** prend conscience de lui-même : l’œuvre n’imite pas, elle **manifeste** une vérité sensible sur l’humanité. Puis le XXᵉ siècle fait exploser toutes les certitudes : avec la *Fontaine* de **Duchamp** (1917), ce n’est plus l’objet ni le métier qui font l’œuvre, mais le **geste** de l’artiste et l’**institution** qui l’expose."
+            "c": "Au **XVIIIᵉ siècle**, l’**esthétique** devient une discipline (Baumgarten forge le mot), et **Kant** en pose les fondements : le beau n’est ni l’agréable (qui flatte les sens) ni le bon (qui satisfait la raison morale) ; il procure un « plaisir désintéressé » et, chose remarquable, prétend valoir **pour tout le monde** sans reposer sur un concept. **Hegel**, lui, voit dans l’art l’une des voies par lesquelles l’**Esprit** prend conscience de lui-même : l’œuvre n’imite pas, elle **manifeste** une vérité sensible sur l’humanité. Puis le XXᵉ siècle fait exploser toutes les certitudes : avec la *Fontaine* de **Duchamp** (1917), ce n’est plus l’objet ni le métier qui font l’œuvre, mais le **geste** de l’artiste et l’**institution** qui l’expose."
           },
           {
             "t": "tip",
@@ -225,7 +225,7 @@
           },
           {
             "t": "p",
-            "c": "L’âge classique oppose deux camps. Pour **Descartes**, la liberté est une évidence : le libre arbitre est « la plus haute perfection de l’homme », si grand qu’il nous rend « en quelque façon semblables à Dieu ». Pour **Spinoza**, au contraire, cette liberté est une **illusion** : nous nous croyons libres parce que nous avons conscience de nos actions, mais nous **ignorons les causes** qui nous déterminent — telle la pierre lancée qui, si elle pensait, se croirait libre de tomber. Le **déterminisme** (tout a une cause) semble ainsi menacer la liberté."
+            "c": "L’âge classique oppose deux camps. Pour **Descartes**, la liberté est une évidence : le libre arbitre est « la principale perfection de l’homme », si grand qu’il nous rend « en quelque façon semblables à Dieu ». Pour **Spinoza**, au contraire, cette liberté est une **illusion** : nous nous croyons libres parce que nous avons conscience de nos actions, mais nous **ignorons les causes** qui nous déterminent — telle la pierre lancée qui, si elle pensait, se croirait libre de tomber. Le **déterminisme** (tout a une cause) semble ainsi menacer la liberté."
           },
           {
             "t": "table",
@@ -243,7 +243,7 @@
               [
                 "Descartes",
                 "Le libre arbitre est une évidence",
-                "« La plus haute perfection de l’homme »"
+                "« La principale perfection de l’homme »"
               ],
               [
                 "Spinoza",
@@ -536,7 +536,7 @@
         "blocks": [
           {
             "t": "p",
-            "c": "La technique est l’ensemble des **procédés efficaces** par lesquels l’homme transforme la nature pour produire de l’**utile** — à distinguer de l’art (qui vise le beau) et de la science (qui vise le vrai). Le mythe grec de **Prométhée** l’exprime : l’homme, seul animal sans griffes, sans fourrure ni rapidité, reçoit en compensation le **feu** — la technique — volé aux dieux. La technique n’est donc pas un supplément : elle est **constitutive** de l’humanité. **Bergson** dira que l’intelligence est d’abord « la faculté de fabriquer des outils » ; l’homme est *homo faber* avant d’être *homo sapiens*."
+            "c": "La technique est l’ensemble des **procédés efficaces** par lesquels l’homme transforme la nature pour produire de l’**utile** — à distinguer de l’art (qui vise le beau) et de la science (qui vise le vrai). Le mythe grec de **Prométhée** l’exprime : l’homme, seul animal sans griffes, sans fourrure ni rapidité, reçoit en compensation le **feu** — la technique — volé aux dieux. La technique n’est donc pas un supplément : elle est **constitutive** de l’humanité. **Bergson** dira que l’intelligence est d’abord « la faculté de fabriquer des objets artificiels, en particulier des outils à faire des outils » ; l’homme est *homo faber* avant d’être *homo sapiens*."
           },
           {
             "t": "p",
@@ -826,7 +826,7 @@
               ],
               [
                 "Aristote",
-                "La justice comme équité ; l’homme « animal politique »",
+                "Justice distributive et corrective, l’équité qui corrige la loi ; l’homme « animal politique »",
                 "Justice"
               ],
               [

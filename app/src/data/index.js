@@ -89,7 +89,8 @@ const PREREQ_SECTIONS = {
     /Produire[^]*facteurs et combinaison productive/i,
     /Étude de cas guidée[^]*caractériser et diagnostiquer/i,
     /Mesurer la performance/i,
-    /Organiser la production/i,
+    // « Organiser la production » reste affiché : c'est la question 1.3 du
+    // programme de Terminale (flexibilité, qualité, maîtrise des coûts).
   ],
 }
 

@@ -490,7 +490,7 @@
         {
           "h": "La rupture du contrat",
           "points": [
-            "**Démission** (salarié), **licenciement** (employeur : **motif réel et sérieux** + procédure), **rupture conventionnelle** (accord homologué).",
+            "**Démission** (salarié), **licenciement** (employeur : **cause réelle et sérieuse** + procédure), **rupture conventionnelle** (accord homologué).",
             "Le licenciement peut être **pour motif personnel** ou **pour motif économique**."
           ]
         }
@@ -552,13 +552,13 @@
             {
               "q": "Un licenciement n’est régulier que s’il repose sur…",
               "choices": [
-                "un motif réel et sérieux, avec respect d’une procédure",
+                "une cause réelle et sérieuse, avec respect d’une procédure",
                 "la seule volonté de l’employeur",
                 "une décision du salarié",
                 "un tirage au sort"
               ],
               "answer": 0,
-              "explain": "Le licenciement exige un motif réel et sérieux (personnel ou économique) et une procédure."
+              "explain": "Le licenciement, pour motif personnel ou économique, exige une cause réelle et sérieuse et une procédure."
             },
             {
               "q": "Parmi les sources du droit du travail figurent notamment…",
@@ -585,7 +585,7 @@
             },
             {
               "left": "Licenciement",
-              "right": "Rupture par l’employeur (motif réel et sérieux)"
+              "right": "Rupture par l’employeur (cause réelle et sérieuse)"
             },
             {
               "left": "Rupture conventionnelle",
@@ -661,7 +661,7 @@
             {
               "statement": "L’employeur peut licencier un salarié sans aucun motif.",
               "answer": false,
-              "explain": "Faux : il faut un motif réel et sérieux et une procédure."
+              "explain": "Faux : il faut une cause réelle et sérieuse et une procédure."
             },
             {
               "statement": "Une convention collective peut compléter le Code du travail pour une branche.",
