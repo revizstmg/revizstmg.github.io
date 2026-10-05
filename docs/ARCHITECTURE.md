@@ -65,9 +65,12 @@ S'y ajoutent `ThemeTest`, `Exam` (bac blanc), `CoachSession`, `KahootQuiz`.
 6. fabrique une intro et un mémo « L'essentiel » quand il en manque ;
 7. ajoute l'étude de documents aux exercices.
 
-La page d'un thème range les chapitres en quatre catégories, selon le champ
-`group` de chaque section : aucun (« Le cours »), `approf`, `methode`, `cas`.
-Pour les couches `approfondir`, le `group` écrit dans le JSON l'emporte ;
+La page d'un thème range les chapitres en trois catégories, selon le champ
+`group` de chaque section : « Le cours » (aucun `group`, ou `approf` : les
+chapitres approfondis font partie du cours), « Méthodes & calculs » (`methode`)
+et « Études de cas » (`cas`). Le mémo, le bac blanc du thème, les erreurs
+fréquentes, les ressources, les flashcards et les notes sont dans l'onglet
+« Outils ». Pour les couches `approfondir`, le `group` écrit dans le JSON l'emporte ;
 sinon il est déduit du titre (`courseGroupOf` : « MÉTHODE » → `methode`,
 « Étude de cas » / « Cas pratique » → `cas`). Les exemples traités et les
 dissertations guidées sont rangés dans `cas` (dans `methode` en maths), pour que
