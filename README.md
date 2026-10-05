@@ -84,6 +84,18 @@ configurer. Le réglage GitHub Pages est « Deploy from a branch », branche `ma
 dossier `/`. Pour republier sans rien changer, lancez le workflow à la main depuis
 l'onglet Actions.
 
+## Statistiques
+
+[`statistiques/STATISTIQUES.md`](statistiques/STATISTIQUES.md) donne les chiffres
+principaux : utilisation (comptes, comptes actifs, niveaux et spécialités,
+classes, défis entre amis, suivi des parents), contenu (thèmes, chapitres,
+exercices, flashcards), tests, CI et mise en ligne, et l'évolution sur 14 jours.
+Le workflow `.github/workflows/statistiques.yml` le met à jour chaque matin à 6 h,
+heure de Paris (`app/scripts/statistiques.mjs`) ; `statistiques/historique.json`
+garde une ligne par jour. Les chiffres d'utilisation viennent de la fonction
+Supabase `revizstmg_statistiques()`, qui ne renvoie que des nombres agrégés.
+Pour une mise à jour immédiate, lancez le workflow à la main depuis l'onglet Actions.
+
 ## Comment c'est construit
 
 - **React 18**, **React Router 6** (`HashRouter`), **Tailwind CSS 3**, **Vite 5**.

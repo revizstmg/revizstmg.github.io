@@ -1,0 +1,83 @@
+name: Statistiques
+
+# Chaque matin à 6 h, heure de Paris : compte le contenu, lit l'utilisation
+# (comptages agrégés par la fonction Supabase revizstmg_statistiques), l'état de
+# la CI et de la mise en ligne, puis met à jour statistiques/STATISTIQUES.md et
+# statistiques/historique.json sur main.
+# GitHub ne connaît que l'heure UTC : 6 h à Paris, c'est 4 h UTC l'été et 5 h UTC
+# l'hiver. Les deux passages sont programmés, et seul celui qui tombe à 6 h à
+# Paris travaille (le test porte sur l'heure prévue, pas sur l'heure de départ,
+# car GitHub démarre parfois avec quelques minutes de retard).
+on:
+  schedule:
+    - cron: '0 4 * * *'
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: statistiques
+  cancel-in-progress: false
+
+jobs:
+  statistiques:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Garder le passage de 6 h, heure de Paris
+        id: heure
+        run: |
+          decalage=$(TZ=Europe/Paris date +%z)   # +0200 l'été, +0100 l'hiver
+          prevu="${{ github.event.schedule }}"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] \
+            || { [ "$prevu" = "0 4 * * *" ] && [ "$decalage" = "+0200" ]; } \
+            || { [ "$prevu" = "0 5 * * *" ] && [ "$decalage" = "+0100" ]; }; then
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Pas 6 h à Paris pour ce passage ($prevu, décalage $decalage) : rien à faire."
+            echo "go=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.heure.outputs.go == 'true'
+
+      - uses: actions/setup-node@v4
+        if: steps.heure.outputs.go == 'true'
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Installer les dépendances
+        if: steps.heure.outputs.go == 'true'
+        working-directory: app
+        run: npm ci
+
+      - name: Tests du contenu et de la logique
+        id: tests
+        if: steps.heure.outputs.go == 'true'
+        continue-on-error: true
+        working-directory: app
+        run: npm test
+
+      - name: Calculer les statistiques
+        if: steps.heure.outputs.go == 'true'
+        working-directory: app
+        env:
+          RESULTAT_TESTS: ${{ steps.tests.outcome }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: npx vite-node scripts/statistiques.mjs
+
+      - name: Enregistrer sur main
+        if: steps.heure.outputs.go == 'true'
+        run: |
+          set -e
+          git add statistiques
+          if git diff --cached --quiet; then
+            echo "Statistiques inchangées."
+            exit 0
+          fi
+          git config user.name "revizstmg-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Statistiques du $(TZ=Europe/Paris date +%d/%m/%Y)"
+          git push origin HEAD:main || { git pull --rebase origin main && git push origin HEAD:main; }
