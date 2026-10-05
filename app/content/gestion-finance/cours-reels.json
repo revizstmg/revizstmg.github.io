@@ -1,7 +1,7 @@
 {
   "gf-t1": [
     {
-      "h": "Un café à 2,40 € : où passe la TVA ?",
+      "h": "La TVA : collectée, déductible, à décaisser",
       "blocks": [
         {
           "t": "example",
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "h": "Une pizzeria, un four, et le temps qui passe",
+      "h": "Les immobilisations et l’amortissement",
       "blocks": [
         {
           "t": "example",
@@ -165,7 +165,7 @@
   ],
   "gf-t2": [
     {
-      "h": "Rentable… mais sans un sou en caisse",
+      "h": "Résultat et trésorerie : le besoin en fonds de roulement",
       "blocks": [
         {
           "t": "example",
@@ -240,7 +240,7 @@
   ],
   "gf-t3": [
     {
-      "h": "Le food-truck : à partir de combien de burgers je gagne ?",
+      "h": "La marge sur coût variable et le seuil de rentabilité",
       "blocks": [
         {
           "t": "example",
@@ -272,7 +272,7 @@
       ]
     },
     {
-      "h": "Fixe ou variable ? La décision en dépend",
+      "h": "Classer les charges pour décider",
       "blocks": [
         {
           "t": "p",

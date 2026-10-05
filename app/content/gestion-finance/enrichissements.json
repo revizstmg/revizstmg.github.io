@@ -3,6 +3,7 @@
     "sections": [
       {
         "h": "🧮 Exemple traité — TVA et enregistrement",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -30,6 +31,7 @@
     "sections": [
       {
         "h": "🧮 Exemple traité — FRNG, BFR, trésorerie",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -57,6 +59,7 @@
     "sections": [
       {
         "h": "🧮 Exemple traité — seuil de rentabilité",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
