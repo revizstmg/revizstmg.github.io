@@ -15,6 +15,7 @@ import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import * as C from '../src/data/index.js'
 import { SUPA_URL, SUPA_ANON } from '../src/supabase.js'
+import { avecGraine } from '../tests/outils.js'
 
 const RACINE = resolve(dirname(fileURLToPath(import.meta.url)), '../..')
 const DOSSIER = resolve(RACINE, 'statistiques')
@@ -44,12 +45,14 @@ async function contenu() {
       const theme = C.ALL_CHAPTERS[t.id]
       if (!theme || theme.comingSoon) continue
       c.themes++
-      for (const ch of C.themeChapters(theme)) {
+      // Hasard fixé par thème, comme dans les tests : le total ne bouge que
+      // si le contenu change.
+      for (const ch of avecGraine(t.id, () => C.themeChapters(theme))) {
         c.chapitres++
         c.series += ch.games.length
         c.questions += ch.games.reduce((a, j) => a + questions(j), 0)
       }
-      c.flashcards += C.deckForTheme(t.id)?.cards?.length || 0
+      c.flashcards += avecGraine(t.id, () => C.deckForTheme(t.id))?.cards?.length || 0
     }
   }
   return c
