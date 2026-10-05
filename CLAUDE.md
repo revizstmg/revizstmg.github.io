@@ -9,7 +9,8 @@ https://revizstmg.github.io. Documentation complète : `README.md`.
 - La racine (`index.html`, `sw.js`, `manifest.webmanifest`, icônes) : la version
   compilée que sert GitHub Pages. Elle est générée par le workflow
   `.github/workflows/deploy.yml` : ne la modifiez jamais à la main.
-- `supabase/functions/fiche-vision/` : la fonction « fiche par photo ».
+- `supabase/migrations/` : le schéma de la base ; `supabase/functions/fiche-vision/` :
+  la fonction « fiche par photo ».
 
 ## Commandes
 
@@ -53,5 +54,9 @@ npm run test:parcours   # parcours navigateur, après un build (~3 min)
   `Gabriel-Merlin/NAH`). Ne touchez pas aux tables de NAH (`candidatures`,
   `signalements`, `questions_anonymes`, `sondages`…).
 - La clé « anon » est publique : chaque table doit avoir des règles RLS.
-- Il n'existe pas de schéma à jour : avant de modifier la base, vérifiez son état
-  réel sur Supabase.
+- Le schéma est dans `supabase/migrations/`. Toute modification de la base passe par
+  un nouveau fichier de migration, appliqué sur Supabase sous le même nom
+  (`supabase/README.md`).
+- Sauf `profiles`, les tables sociales sont ouvertes à tous (`using (true)`) : n'y
+  ajoutez pas de données sensibles avant d'avoir appliqué les corrections de
+  l'audit (`supabase/README.md`).

@@ -116,6 +116,7 @@ l'onglet Actions.
 
 ```
 .github/workflows/deploy.yml   compile et publie à chaque modification de app/
+supabase/migrations/           migrations des 17 tables (voir supabase/README.md)
 supabase/functions/fiche-vision/   fonction « fiche par photo » (Gemini ou Claude)
 index.html, sw.js, …           version compilée servie par GitHub Pages (générée)
 app/
@@ -228,17 +229,20 @@ chaque table.
 progression est aussi enregistrée dans la colonne `progress` de la ligne `profiles`
 de l'élève, ce qui permet de la retrouver sur un autre appareil.
 
-**Tables utilisées par l'application :**
+**Tables utilisées par l'application (17) :**
 - `profiles`
 - `leaderboard`
 - `friend_user`, `friend_request`, `friend_duel`
 - `class_member`, `class_meta`, `class_wall`, `class_quiz`, `class_quiz_result`,
   `class_duel`, `class_group`, `class_ban`
+- `teacher_class`, `live_session`, `live_player`
 - `child_stats`
 
-**Attention :** il n'existe pas encore de schéma à jour de ces tables. Le fichier
-`supabase/schema.sql` du dépôt NAH n'en contient qu'une, `child_stats`. Les autres
-ont été créées directement sur Supabase. Les remettre en migrations fait partie de la refonte.
+**Schéma :** les migrations de ces tables sont dans `supabase/migrations/`, identiques
+à celles appliquées sur Supabase. La marche à suivre pour modifier la base et l'audit
+de sécurité sont dans `supabase/README.md`. **À corriger avant d'ouvrir l'application
+à des classes :** sauf `profiles`, ces tables sont lisibles et modifiables par
+n'importe qui possédant la clé publique.
 
 **Fonction `fiche-vision`** (`supabase/functions/fiche-vision/`) : elle transforme
 des photos de cours en fiche structurée avec Gemini (gratuit) ou Claude. Le code est
@@ -247,5 +251,6 @@ de son dossier.
 
 ## Limites connues (ce que la refonte doit régler)
 
-- Il n'y a pas de schéma à jour de la base.
+- Les règles RLS des tables sociales (classe, amis, parent) laissent tout lire et
+  tout modifier avec la clé publique (voir `supabase/README.md`).
 - RévizSTMG partage encore sa base Supabase avec NAH.
