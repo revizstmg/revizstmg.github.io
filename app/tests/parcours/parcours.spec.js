@@ -55,7 +55,7 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
 // Toutes les pages de l'app s'ouvrent sans erreur.
 const PAGES = [
   ['/accueil', /Léa/],
-  ['/subject/gestion-finance', /Thème/],
+  ['/subject/gestion-finance', /Appliquer les règles comptables/],
   ['/subject/gestion-finance/theme/gf-t1', /Thème 1/],
   ['/favoris', /./],
   ['/badges', /Badge|badge/],

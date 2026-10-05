@@ -6,6 +6,8 @@ import { preparer, attendreAccueil, etatEleve } from './eleve.js'
 
 const lire = (chemin) => JSON.parse(readFileSync(new URL(`../../content/${chemin}`, import.meta.url), 'utf8'))
 const SUBJECTS = lire('ordre.json').map((id) => lire(`${id}/matiere.json`))
+// Sur la page matière, « Thème 5 — Le contrat » s'affiche « Le contrat » (le 5 est dans la pastille).
+const titreSansNumero = (nom) => nom.replace(/^(?:Thème|Chapitre)\s+\d+\s*[—–-]\s*/, '')
 
 for (const matiere of SUBJECTS) {
   const themes = (matiere.chapters || []).filter((t) => !t.comingSoon)
@@ -18,10 +20,10 @@ for (const matiere of SUBJECTS) {
     await page.goto('./')
     await attendreAccueil(page)
     await page.goto(`./#/subject/${matiere.id}`)
-    await expect(page.locator('main')).toContainText(themes[0].short || themes[0].name)
+    await expect(page.locator('main')).toContainText(titreSansNumero(themes[0].name))
     for (const t of themes) {
       await page.goto(`./#/subject/${matiere.id}/theme/${t.id}`)
-      await expect(page.locator('main'), `page du thème ${t.id}`).toContainText(t.short || t.name)
+      await expect(page.locator('main'), `page du thème ${t.id}`).toContainText(t.name)
       await page.goto(`./#/subject/${matiere.id}/theme/${t.id}/chapter/0`)
       await expect(page.getByRole('heading', { level: 1 }), `chapitre 1 de ${t.id}`).toBeVisible()
       const texte = await page.locator('main').innerText()

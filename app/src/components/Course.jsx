@@ -310,51 +310,60 @@ export function Definitions({ sec, themeId, subjectId, sectionIdx = 0, color }) 
   )
 }
 
-export function Essentiel({ items, color }) {
+// `nu` : la liste seule, sans cadre ni titre (pour un bloc repliable).
+export function Essentiel({ items, color, nu = false }) {
   const t = useT()
   if (!items?.length) return null
+  const liste = (
+    <ul className="space-y-2">
+      {items.map((e, i) => (
+        <li key={i} className="flex gap-2 text-[15px] leading-relaxed">
+          <span className="mt-0.5 font-bold" style={{ color }}>✔</span>
+          <span><CourseText text={e} /></span>
+        </li>
+      ))}
+    </ul>
+  )
+  if (nu) return liste
   return (
     <section className="rounded-2xl border-2 p-5 shadow-sm" style={{ borderColor: color, background: color + '10' }}>
       <h2 className="mb-3 flex items-center gap-2 font-display text-xl font-semibold">
         <span>🧠</span> {t('memoSheet')}
       </h2>
-      <ul className="space-y-2">
-        {items.map((e, i) => (
-          <li key={i} className="flex gap-2 text-[15px] leading-relaxed">
-            <span className="mt-0.5 font-bold" style={{ color }}>✔</span>
-            <span><CourseText text={e} /></span>
-          </li>
-        ))}
-      </ul>
+      {liste}
     </section>
   )
 }
 
-export function Resources({ items }) {
+export function Resources({ items, nu = false }) {
   const t = useT()
   if (!items?.length) return null
+  const liens = (
+    <div className="space-y-2">
+      {items.map((r, i) => (
+        <a
+          key={i}
+          href={r.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 rounded-xl border border-slate-200 p-3 transition hover:border-violet-300 hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800"
+        >
+          <span className="text-xl">{r.kind === 'video' ? '▶️' : r.kind === 'doc' ? '📄' : '🔗'}</span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-sm font-semibold leading-tight">{r.label}</span>
+            {r.note && <span className="block text-xs text-slate-400">{r.note}</span>}
+          </span>
+          <span className="text-slate-300" aria-hidden>↗</span>
+        </a>
+      ))}
+    </div>
+  )
+  if (nu) return liens
   return (
     <section className="card p-5">
       <h2 className="mb-1 font-display text-xl font-semibold">🎥 {t('goFurther')}</h2>
       <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">{t('goFurtherSub')}</p>
-      <div className="space-y-2">
-        {items.map((r, i) => (
-          <a
-            key={i}
-            href={r.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 rounded-xl border border-slate-200 p-3 transition hover:border-violet-300 hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800"
-          >
-            <span className="text-xl">{r.kind === 'video' ? '▶️' : r.kind === 'doc' ? '📄' : '🔗'}</span>
-            <span className="min-w-0 flex-1">
-              <span className="block text-sm font-semibold leading-tight">{r.label}</span>
-              {r.note && <span className="block text-xs text-slate-400">{r.note}</span>}
-            </span>
-            <span className="text-slate-300" aria-hidden>↗</span>
-          </a>
-        ))}
-      </div>
+      {liens}
     </section>
   )
 }

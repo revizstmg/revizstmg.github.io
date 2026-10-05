@@ -1,76 +1,70 @@
 import { Link, useParams, Navigate } from 'react-router-dom'
 import { getSubject, deckForSubject } from '../data/index.js'
-import { useStore, chapterScore, starsFromScore, subjectScore } from '../store.jsx'
-import { ProgressBar, Stars } from '../components/ui.jsx'
+import { useStore, chapterScore } from '../store.jsx'
+import { ProgressBar } from '../components/ui.jsx'
 import { CourseText } from '../components/Course.jsx'
 import { DeckDownload } from '../components/DeckDownload.jsx'
-import { SkillTree } from '../components/SkillTree.jsx'
 import { useT } from '../i18n.js'
 
+// « Thème 5 — Quel est le rôle du contrat ? » → numéro 5 dans la pastille,
+// « Quel est le rôle du contrat ? » en titre. Sans numéro dans le nom, on
+// numérote dans l'ordre.
+function numeroEtTitre(nom, i) {
+  const m = String(nom || '').match(/^(?:Thème|Chapitre)\s+(\d+)\s*[—–-]\s*(.+)$/)
+  return m ? [m[1], m[2]] : [String(i + 1), nom]
+}
+
+// Page d'une matière : d'abord la liste des thèmes, une ligne par thème.
 export default function Subject() {
   const { sid } = useParams()
   const subject = getSubject(sid)
-  const { state, toggleFavorite } = useStore()
+  const { state } = useStore()
   const t = useT()
   if (!subject) return <Navigate to="/" replace />
-  const pct = subjectScore(state, sid)
+  const color = subject.color
 
   return (
-    <div className="animate-lux space-y-5">
-      <header className="flex items-center gap-4">
-        <span className="grid h-16 w-16 shrink-0 place-items-center rounded-3xl text-3xl" style={{ backgroundColor: subject.color + '18', boxShadow: `inset 0 0 0 1px ${subject.color}40` }}>{subject.icon}</span>
-        <div className="flex-1">
-          <h1 className="font-display text-3xl font-medium leading-tight">{subject.name}</h1>
-          <p className="text-sm text-slate-500 dark:text-slate-400"><CourseText text={subject.tagline} /></p>
-          <div className="mt-2 flex items-center gap-2">
-            <ProgressBar value={pct} color={subject.color} className="max-w-[200px]" />
-            <span className="text-sm font-bold" style={{ color: subject.color }}>{pct}%</span>
-          </div>
-        </div>
+    <div className="animate-lux space-y-4">
+      <header className="flex items-center gap-3">
+        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-2xl" style={{ backgroundColor: color + '18' }} aria-hidden>{subject.icon}</span>
+        <h1 className="font-display text-2xl font-medium leading-tight">{subject.name}</h1>
       </header>
-      <hr className="rule-gold" />
 
-      <SkillTree subject={subject} />
-
-      <DeckDownload deck={deckForSubject(sid)} color={subject.color} label={t('downloadSubjectDeck')} />
-
-      <div className="space-y-3">
-        {subject.chapters.map((c) => {
+      <ol className="space-y-2.5">
+        {subject.chapters.map((c, i) => {
           const score = chapterScore(state, c.id)
-          const stars = starsFromScore(score)
-          const fav = state.favorites.includes(c.id)
+          const done = score >= 90
+          const [numero, titre] = numeroEtTitre(c.name, i)
           return (
-            <div key={c.id} className="card relative overflow-hidden p-4">
-              <span className="absolute inset-y-0 left-0 w-1.5" style={{ backgroundColor: subject.color }} />
-              <div className="pl-2">
-                <div className="flex items-start justify-between gap-2">
-                  <Link to={`/subject/${sid}/theme/${c.id}`} className="min-w-0 flex-1">
-                    <h3 className="font-bold leading-snug hover:underline"><CourseText text={c.name} /></h3>
-                    <div className="mt-1 flex items-center gap-2">
-                      <Stars count={stars} />
-                      <span className="text-xs text-slate-500 dark:text-slate-400">{c.cours?.length || 0} {t('chapters')} · {c.games.length} {t('gamePlur')} · {score}%</span>
-                    </div>
-                  </Link>
-                  <button
-                    onClick={() => toggleFavorite(c.id)}
-                    className={`grid h-9 w-9 shrink-0 place-items-center rounded-full text-lg transition ${fav ? 'text-amber-400' : 'text-slate-300 hover:text-amber-400 dark:text-slate-600'}`}
-                    aria-label={fav ? t('removeFav') : t('addFav')}
-                    aria-pressed={fav}
-                  >
-                    {fav ? '★' : '☆'}
-                  </button>
-                </div>
-                <div className="mt-3 flex items-center gap-3">
-                  <ProgressBar value={score} color={subject.color} />
-                  <Link to={`/subject/${sid}/theme/${c.id}`} className="btn shrink-0 !min-h-0 !px-4 !py-2 text-sm text-white" style={{ backgroundColor: subject.color }}>
-                    {t('reviseBtn')} →
-                  </Link>
-                </div>
-              </div>
-            </div>
+            <li key={c.id}>
+              <Link
+                to={`/subject/${sid}/theme/${c.id}`}
+                className="card group flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <span
+                  className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-sm font-black text-white shadow-sm"
+                  style={{ backgroundColor: done ? '#16a34a' : color }}
+                  aria-hidden
+                >
+                  {done ? '✓' : numero}
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block font-semibold leading-snug"><CourseText text={titre} /></span>
+                  {score > 0 && (
+                    <span className="mt-1.5 flex max-w-[240px] items-center gap-2">
+                      <ProgressBar value={score} color={done ? '#16a34a' : color} />
+                      <span className="text-xs font-semibold text-slate-400">{score}%</span>
+                    </span>
+                  )}
+                </span>
+                <span className="text-lg text-slate-300 transition group-hover:translate-x-0.5" aria-hidden>›</span>
+              </Link>
+            </li>
           )
         })}
-      </div>
+      </ol>
+
+      <DeckDownload deck={deckForSubject(sid)} color={color} label={t('downloadSubjectDeck')} />
     </div>
   )
 }

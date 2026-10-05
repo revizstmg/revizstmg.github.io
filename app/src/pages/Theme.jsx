@@ -12,6 +12,9 @@ import ThemeTest from '../games/ThemeTest.jsx'
 import Exam from '../games/Exam.jsx'
 import { useT, useGameLabel } from '../i18n.js'
 
+// Dans la liste, le numéro suffit : on retire l'émoji placé en tête de certains titres.
+const sansEmoji = (titre) => String(titre || '').replace(/^(?:(?:\p{Extended_Pictographic}|\p{Regional_Indicator}{2})[\u200d\ufe0f\p{Extended_Pictographic}\u{1F3FB}-\u{1F3FF}]*\s*)+/u, '')
+
 const TABS = [
   { id: 'chapitres', key: 'tabChapters', icon: '📚' },
   { id: 'test', key: 'tabTest', icon: '🏁' },
@@ -62,32 +65,24 @@ export default function Theme() {
 
   return (
     <div className="animate-lux space-y-4">
-      <nav className="no-print text-xs text-slate-500 dark:text-slate-400">
-        <Link to={`/subject/${sid}`} className="hover:underline" style={{ color }}>{subject.name}</Link>
-        <span className="mx-1">›</span>
-        <span className="font-semibold">{theme.short || t('theme')}</span>
-      </nav>
-
-      <header>
-        <div className="flex items-start justify-between gap-2">
-          <div>
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em]" style={{ color }}>{subject.name}</p>
-            <h1 className="font-display text-2xl font-medium leading-tight"><CourseText text={theme.name} /></h1>
-          </div>
-          <button
-            onClick={() => toggleFavorite(tid)}
-            className={`no-print grid h-10 w-10 shrink-0 place-items-center rounded-full text-xl ${fav ? 'text-amber-400' : 'text-slate-300 hover:text-amber-400 dark:text-slate-600'}`}
-            aria-label={fav ? t('removeFav') : t('addFav')}
-            aria-pressed={fav}
-          >
-            {fav ? '★' : '☆'}
-          </button>
+      <header className="flex items-start justify-between gap-2">
+        <div className="min-w-0">
+          <h1 className="font-display text-2xl font-medium leading-tight"><CourseText text={theme.name} /></h1>
+          {score > 0 && (
+            <div className="mt-2 flex max-w-[240px] items-center gap-2">
+              <ProgressBar value={score} color={color} height={6} />
+              <span className="text-xs font-semibold text-slate-400">{score}%</span>
+            </div>
+          )}
         </div>
-        <div className="mt-2 flex items-center gap-2">
-          <Stars count={starsFromScore(score)} />
-          <ProgressBar value={score} color={color} className="max-w-[180px]" />
-          <span className="text-sm font-bold" style={{ color }}>{score}%</span>
-        </div>
+        <button
+          onClick={() => toggleFavorite(tid)}
+          className={`no-print grid h-10 w-10 shrink-0 place-items-center rounded-full text-xl ${fav ? 'text-amber-400' : 'text-slate-300 hover:text-amber-400 dark:text-slate-600'}`}
+          aria-label={fav ? t('removeFav') : t('addFav')}
+          aria-pressed={fav}
+        >
+          {fav ? '★' : '☆'}
+        </button>
       </header>
 
       <div className="no-print sticky top-[52px] z-30 -mx-4 border-b border-slate-200 bg-slate-50/90 px-4 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
@@ -110,14 +105,9 @@ export default function Theme() {
       </div>
 
       {tab === 'chapitres' && (
-        <div className="space-y-5">
-          {/* LE COURS — chapitres rangés par catégories repliables */}
+        <div className="space-y-6">
+          {/* Les chapitres, rangés par catégories repliables */}
           <section className="space-y-3">
-            <div className="flex items-baseline justify-between gap-2 px-1">
-              <h2 className="font-display text-lg font-semibold">📖 {t('courseInChapters')}</h2>
-              <span className="shrink-0 text-xs font-semibold text-slate-400">{chapters.length} {t(chapters.length > 1 ? 'chaptersWord' : 'chapterWord')}</span>
-            </div>
-            <p className="px-1 text-xs text-slate-500 dark:text-slate-400">{t('chooseChapterHint')}</p>
 
             {(() => {
               const CATS = [
@@ -134,7 +124,6 @@ export default function Theme() {
               const renderChapter = (c, n) => {
                 const prog = chapterProgress(c)
                 const done = prog != null && prog >= 90
-                const nEx = c.games.length
                 return (
                   <Link
                     key={c.id}
@@ -149,11 +138,7 @@ export default function Theme() {
                       {done ? '✓' : n}
                     </span>
                     <span className="min-w-0 flex-1">
-                      <span className="block font-semibold leading-snug"><CourseText text={c.title} /></span>
-                      <span className="mt-0.5 flex items-center gap-2 text-xs text-slate-400">
-                        <span>📘 {t('course')}</span>
-                        {nEx > 0 && <span>· 🎮 {nEx} {t(nEx > 1 ? 'exercisesWord' : 'exerciseWord')}</span>}
-                      </span>
+                      <span className="block font-semibold leading-snug"><CourseText text={sansEmoji(c.title)} /></span>
                       {prog != null && prog > 0 && (
                         <span className="mt-1.5 block max-w-[220px]"><ProgressBar value={prog} color={done ? '#16a34a' : color} /></span>
                       )}
@@ -191,44 +176,44 @@ export default function Theme() {
             })()}
           </section>
 
-          <Essentiel items={theme.essentiel} color={color} />
-
-          {/* Aller plus loin : test du thème, pièges, ressources, notes */}
-          {themeExamSize(tid) >= 4 && (
-            <button onClick={() => setThemeExam(buildThemeExam(tid))} className="card card-lux flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md">
-              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: color + '22' }}>📝</span>
-              <span className="min-w-0 flex-1">
-                <span className="block font-display font-semibold leading-tight">{t('themeExam')}</span>
-                <span className="block text-xs text-slate-500 dark:text-slate-400">{t('themeExamSub')}</span>
-              </span>
-              <span className="text-slate-300" aria-hidden>›</span>
-            </button>
-          )}
-          {PIEGES[tid]?.length > 0 && (
-            <section className="rounded-2xl border-2 p-4" style={{ borderColor: '#f59e0b', background: '#f59e0b12' }}>
-              <h3 className="mb-2 flex items-center gap-2 font-display text-base font-semibold text-amber-700 dark:text-amber-300">⚠️ {t('commonMistakes')}</h3>
-              <ul className="space-y-1.5">
-                {PIEGES[tid].map((p, i) => (
-                  <li key={i} className="flex gap-2 text-[14px] leading-relaxed text-slate-700 dark:text-slate-200">
-                    <span className="mt-0.5 shrink-0" style={{ color: '#f59e0b' }}>•</span><span><Rich text={p} /></span>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
-          <Resources items={theme.resources} />
-          <DeckDownload deck={deckForTheme(tid)} color={color} label={t('downloadThemeDeck')} />
-          {/* Notes personnelles de l'élève sur ce thème (sauvegardées & synchronisées) */}
-          <section className="card p-4">
-            <h3 className="mb-2 flex items-center gap-2 font-display text-base font-semibold">📝 {t('myNotes')}</h3>
-            <textarea
-              value={state.notes?.[tid] || ''}
-              onChange={(e) => setNote(tid, e.target.value)}
-              rows={4}
-              placeholder={t('myNotesPlaceholder')}
-              className="w-full resize-y rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm outline-none focus:border-[color:var(--c-accent)] dark:border-slate-700 dark:bg-slate-800"
-            />
-            <p className="mt-1.5 text-xs text-slate-400">💾 {t('myNotesHint')}</p>
+          {/* Pour réviser tout le thème : une ligne par outil, dépliée à la demande */}
+          <section key={tid} className="space-y-2.5">
+            {themeExamSize(tid) >= 4 && (
+              <button onClick={() => setThemeExam(buildThemeExam(tid))} className="card group flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md">
+                <span className="w-6 shrink-0 text-center text-lg" aria-hidden>📝</span>
+                <span className="min-w-0 flex-1 font-semibold leading-snug">{t('themeExam')}</span>
+                <span className="text-lg text-slate-300 transition group-hover:translate-x-0.5" aria-hidden>›</span>
+              </button>
+            )}
+            {theme.essentiel?.length > 0 && (
+              <Repli icone="🧠" titre={t('memoSheet')}><Essentiel items={theme.essentiel} color={color} nu /></Repli>
+            )}
+            {PIEGES[tid]?.length > 0 && (
+              <Repli icone="⚠️" titre={t('commonMistakes')}>
+                <ul className="space-y-1.5">
+                  {PIEGES[tid].map((p, i) => (
+                    <li key={i} className="flex gap-2 text-[14px] leading-relaxed text-slate-700 dark:text-slate-200">
+                      <span className="mt-0.5 shrink-0" style={{ color: '#f59e0b' }}>•</span><span><Rich text={p} /></span>
+                    </li>
+                  ))}
+                </ul>
+              </Repli>
+            )}
+            {theme.resources?.length > 0 && (
+              <Repli icone="🎥" titre={t('goFurther')}><Resources items={theme.resources} nu /></Repli>
+            )}
+            <DeckDownload deck={deckForTheme(tid)} color={color} label={t('downloadThemeDeck')} />
+            {/* Notes personnelles de l'élève sur ce thème (sauvegardées & synchronisées) */}
+            <Repli icone="✏️" titre={t('myNotes')} ouvert={!!state.notes?.[tid]}>
+              <textarea
+                value={state.notes?.[tid] || ''}
+                onChange={(e) => setNote(tid, e.target.value)}
+                rows={4}
+                placeholder={t('myNotesPlaceholder')}
+                className="w-full resize-y rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm outline-none focus:border-[color:var(--c-accent)] dark:border-slate-700 dark:bg-slate-800"
+              />
+              <p className="mt-1.5 text-xs text-slate-400">💾 {t('myNotesHint')}</p>
+            </Repli>
           </section>
         </div>
       )}
@@ -237,6 +222,21 @@ export default function Theme() {
 
       {tab === 'progression' && <ProgressionTab theme={theme} rec={rec} color={color} score={score} />}
     </div>
+  )
+}
+
+// Une ligne qui se déplie : titre court, contenu seulement à la demande.
+function Repli({ icone, titre, ouvert = false, children }) {
+  const [open, setOpen] = useState(ouvert)
+  return (
+    <section className="card">
+      <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} className="flex w-full items-center gap-3 p-4 text-left">
+        <span className="w-6 shrink-0 text-center text-lg" aria-hidden>{icone}</span>
+        <span className="min-w-0 flex-1 font-semibold leading-snug">{titre}</span>
+        <span className={`text-lg text-slate-300 transition ${open ? 'rotate-90' : ''}`} aria-hidden>›</span>
+      </button>
+      {open && <div className="px-4 pb-4">{children}</div>}
+    </section>
   )
 }
 
