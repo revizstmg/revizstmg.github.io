@@ -46,7 +46,7 @@ function Calculator({ t }) {
       <p className="kicker mb-2">🧮 {t('calcTitle')}</p>
       <div className="mb-3 rounded-xl bg-slate-50 px-3 py-2 text-right dark:bg-slate-800/60">
         <div className="min-h-[1.25rem] break-all font-mono text-sm text-slate-500 dark:text-slate-400">{expr || '0'}</div>
-        <div className="font-mono text-2xl font-bold" style={{ color: 'var(--c-accent)' }}>{result !== null ? result : (expr ? '…' : '0')}</div>
+        <div className="font-mono text-2xl font-bold" style={{ color: 'var(--c-accent-texte)' }}>{result !== null ? result : (expr ? '…' : '0')}</div>
       </div>
       <div className="grid grid-cols-4 gap-2">
         {keys.map((k) => {
@@ -58,9 +58,9 @@ function Calculator({ t }) {
               onClick={() => onKey(k)}
               className="rounded-xl py-3 text-lg font-semibold transition active:scale-95"
               style={eq
-                ? { gridColumn: 'span 1', background: 'var(--c-accent)', color: '#fff' }
+                ? { gridColumn: 'span 1', background: 'var(--c-accent-fort)', color: '#fff' }
                 : op
-                  ? { background: 'color-mix(in srgb, var(--c-accent) 16%, transparent)', color: 'var(--c-accent)' }
+                  ? { background: 'color-mix(in srgb, var(--c-accent) 16%, transparent)', color: 'var(--c-accent-texte)' }
                   : { boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 20%, transparent)' }}
             >
               {k}
@@ -100,7 +100,7 @@ export default function Formulas() {
 
       {cats.map((c) => (
         <section key={c.cat} className="space-y-2">
-          <h2 className="px-1 font-display text-lg font-semibold" style={{ color: c.color }}>{c.icon} {c.cat}</h2>
+          <h2 className="px-1 font-display text-lg font-semibold texte-matiere" style={{ '--mc': c.color }}>{c.icon} {c.cat}</h2>
           <div className="card divide-y divide-slate-100 p-0 dark:divide-slate-800">
             {c.items.map((it) => (
               <div key={it.name} className="flex flex-col gap-0.5 p-3.5 sm:flex-row sm:items-center sm:justify-between sm:gap-3">

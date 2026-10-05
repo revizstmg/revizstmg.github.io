@@ -13,6 +13,11 @@
     --c-ink: #1c1813;     /* texte & titres */
     --c-accent: #c8a24e;  /* accent / rubriques / dorures */
     --c-card: #fffdf8;    /* surface des écrins (cartes) */
+    /* Accent foncé pour un fond sous du texte blanc (contraste ≥ 4,5:1, même avec
+       un accent personnalisé). */
+    --c-accent-fort: color-mix(in srgb, var(--c-accent) 70%, #000);
+    /* Accent pour du texte sur le fond de la page ou d'une carte (contraste ≥ 4,5:1). */
+    --c-accent-texte: color-mix(in srgb, var(--c-accent) 62%, #000);
   }
   html.dark {
     color-scheme: dark;
@@ -20,6 +25,7 @@
     --c-ink: #f1e9dc;
     --c-accent: #c8a24e;
     --c-card: #201c15;
+    --c-accent-texte: color-mix(in srgb, var(--c-accent) 70%, #fff);
   }
   html {
     -webkit-text-size-adjust: 100%;
@@ -115,6 +121,9 @@
     color: var(--c-card);
     box-shadow: 0 8px 22px -12px rgba(28, 24, 19, 0.7), inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 32%, transparent);
   }
+  /* Bouton principal rempli d'une couleur (matière, accent foncé) : texte blanc.
+     Ces couleurs sont choisies pour un contraste ≥ 4,5:1 avec le blanc. */
+  .btn-primary[style*='background'] { color: #fff; }
   .btn-primary:hover {
     transform: translateY(-1px);
     box-shadow: 0 12px 26px -12px rgba(28, 24, 19, 0.75), inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 55%, transparent);
@@ -173,7 +182,7 @@
     text-transform: uppercase;
     letter-spacing: 0.28em;
     font-size: 0.7rem;
-    color: color-mix(in srgb, var(--c-accent) 78%, var(--c-ink));
+    color: var(--c-accent-texte);
   }
 }
 
@@ -405,7 +414,7 @@ button, a { transition: transform 0.15s cubic-bezier(0.22, 0.68, 0.24, 1); }
   letter-spacing: 0.42em;
   text-indent: 0.42em;
   text-transform: uppercase;
-  color: #b79b5b;
+  color: #7c693e;
   opacity: 0;
   animation: welcome-soft 1.4s ease-out 0.1s both;
 }
@@ -448,7 +457,7 @@ button, a { transition: transform 0.15s cubic-bezier(0.22, 0.68, 0.24, 1); }
   letter-spacing: 0.28em;
   text-indent: 0.28em;
   text-transform: uppercase;
-  color: #a8a29e;
+  color: #6d6967;
   opacity: 0;
   animation: welcome-soft 1.2s ease-out 3s both;
 }
@@ -483,7 +492,7 @@ button, a { transition: transform 0.15s cubic-bezier(0.22, 0.68, 0.24, 1); }
   text-indent: 0.32em;
   text-transform: uppercase;
   font-size: 0.72rem;
-  color: #b79b5b;
+  color: #7c693e;
   text-align: center;
 }
 .welcome-h {
@@ -496,7 +505,7 @@ button, a { transition: transform 0.15s cubic-bezier(0.22, 0.68, 0.24, 1); }
 }
 .welcome-sub {
   text-align: center;
-  color: #8b857d;
+  color: #6f6a64;
   font-size: 0.9rem;
   margin-top: 0.4rem;
 }
@@ -505,7 +514,7 @@ button, a { transition: transform 0.15s cubic-bezier(0.22, 0.68, 0.24, 1); }
   font-size: 0.7rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #a8a29e;
+  color: #6d6967;
   margin: 1.25rem 0 0.4rem;
   font-weight: 600;
 }
@@ -585,7 +594,7 @@ button, a { transition: transform 0.15s cubic-bezier(0.22, 0.68, 0.24, 1); }
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #b79b5b;
+  color: #7c693e;
 }
 .welcome-chap {
   display: block;
@@ -616,12 +625,12 @@ button, a { transition: transform 0.15s cubic-bezier(0.22, 0.68, 0.24, 1); }
   margin-top: 0.9rem;
   background: none;
   border: none;
-  color: #a8a29e;
+  color: #6d6967;
   font-size: 0.85rem;
   cursor: pointer;
 }
 .welcome-skip:hover { color: #7a5f1f; text-decoration: underline; }
-.welcome-hint-sm { text-align: center; color: #b0aaa1; font-size: 0.78rem; margin-top: 0.5rem; }
+.welcome-hint-sm { text-align: center; color: #6d6967; font-size: 0.78rem; margin-top: 0.5rem; }
 
 @media (prefers-reduced-motion: reduce) {
   .welcome-kicker, .welcome-title, .welcome-name, .welcome-rule, .welcome-hint,
@@ -704,7 +713,7 @@ html.dark .frise-mid::after { box-shadow: 0 0 0 3px #2a2312; }
   padding-top: 0.02rem;
 }
 html.dark .frise-label { color: #d4ccbd; }
-.frise-note { display: block; font-size: 0.78rem; color: #8b857d; margin-top: 0.1rem; }
+.frise-note { display: block; font-size: 0.78rem; color: #6f6a64; margin-top: 0.1rem; }
 
 @media print {
   .frise { border-color: #d8cbae; background: #fffdf8 !important; }
@@ -748,3 +757,24 @@ html.dark .frise-label { color: #d4ccbd; }
   .reader-print-page .formula { font-size: 13pt; }
   .reader-a4 .space-y-5 > * + * { margin-top: 14px; }
 }
+
+/* Contraste (WCAG AA, 4,5:1). En mode clair, les gris de texte « slate-400 » et
+   « slate-500 » de la palette chaude sont trop pâles sur le papier crème : on les
+   fonce, pour le texte seulement. :where() garde la priorité d'une classe
+   Tailwind, donc les effets de survol (hover:text-…) s'appliquent toujours. Le
+   mode sombre garde ses teintes, déjà lisibles sur fond foncé. */
+:where(html:not(.dark)) .text-slate-400 { color: #6f695e; }
+:where(html:not(.dark)) .text-slate-500 { color: #5f594f; }
+
+/* Couleur d'une matière en texte : la couleur est passée par --mc
+   (style={{ '--mc': couleur }}). En mode sombre, elle est éclaircie pour rester
+   lisible sur les cartes sombres. */
+.texte-matiere { color: var(--mc); }
+html.dark .texte-matiere { color: color-mix(in srgb, var(--mc) 55%, #fff); }
+
+/* Formulaire de compte : aide sous un champ, erreur, piège à robots invisible. */
+.welcome-aide { font-size: 0.78rem; line-height: 1.35; margin-top: 0.4rem; color: #6d6967; }
+.welcome-aide.ok { color: #047857; }
+.welcome-aide.erreur { color: #be123c; font-weight: 600; }
+.welcome-input[aria-invalid='true'] { border-color: #be123c; }
+.welcome-piege { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }

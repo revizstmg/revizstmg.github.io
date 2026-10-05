@@ -36,7 +36,7 @@ export default function Methodo() {
                   ))}
                 </ol>
                 <div className="rounded-xl border-l-4 p-3" style={{ borderColor: m.color, background: m.color + '10' }}>
-                  <p className="mb-1 text-xs font-bold uppercase tracking-wide" style={{ color: m.color }}>💡 {m.example.h}</p>
+                  <p className="mb-1 text-xs font-bold uppercase tracking-wide texte-matiere" style={{ '--mc': m.color }}>💡 {m.example.h}</p>
                   <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-200">{m.example.c}</p>
                 </div>
               </div>

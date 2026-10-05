@@ -53,12 +53,13 @@ export function Rich({ text, className = '' }) {
   )
 }
 
-export function ProgressBar({ value = 0, color = '#7c3aed', className = '', height = 8 }) {
+export function ProgressBar({ value = 0, color = '#7c3aed', className = '', height = 8, label = 'Progression' }) {
   return (
     <div
       className={`w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800 ${className}`}
       style={{ height }}
       role="progressbar"
+      aria-label={label}
       aria-valuenow={Math.round(value)}
       aria-valuemin={0}
       aria-valuemax={100}

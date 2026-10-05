@@ -13,7 +13,7 @@ const SRC = join(ROOT, 'pwa')
 const OUT = join(ROOT, 'dist')
 
 // 1) Copier les fichiers PWA (tout sauf les scripts de génération).
-const SKIP = new Set(['gen-icons.mjs'])
+const SKIP = new Set(['gen-icons.mjs', 'gen-og-image.mjs'])
 const copied = []
 for (const f of readdirSync(SRC)) {
   if (SKIP.has(f)) continue
@@ -22,7 +22,9 @@ for (const f of readdirSync(SRC)) {
 }
 
 // 2) Liste des fichiers compilés (noms dépendant du contenu) et version.
-const assets = readdirSync(join(OUT, 'assets')).sort().map((f) => `./assets/${f}`)
+// Les polices existent en woff2 et en woff : tous les navigateurs actuels lisent le
+// woff2, on ne met donc pas les woff en cache (ils restent servis si besoin).
+const assets = readdirSync(join(OUT, 'assets')).filter((f) => !f.endsWith('.woff')).sort().map((f) => `./assets/${f}`)
 const version = createHash('sha256').update(assets.join('\n')).update(readFileSync(join(OUT, 'index.html'))).digest('hex').slice(0, 10)
 const swPath = join(OUT, 'sw.js')
 let sw = readFileSync(swPath, 'utf8')

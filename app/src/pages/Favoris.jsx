@@ -29,7 +29,7 @@ export default function Favoris() {
                 <span className="absolute inset-y-0 left-0 w-1.5" style={{ backgroundColor: c.color }} />
                 <div className="flex items-center gap-3 pl-2">
                   <Link to={`/subject/${c.subjectId}/theme/${c.id}`} className="min-w-0 flex-1">
-                    <p className="text-xs font-semibold" style={{ color: c.color }}>{c.subjectName}</p>
+                    <p className="text-xs font-semibold texte-matiere" style={{ '--mc': c.color }}>{c.subjectName}</p>
                     <h3 className="font-bold leading-snug hover:underline"><CourseText text={c.name} /></h3>
                     <div className="mt-1.5 flex items-center gap-2">
                       <Stars count={starsFromScore(score)} />

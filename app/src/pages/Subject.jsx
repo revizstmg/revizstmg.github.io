@@ -1,4 +1,5 @@
-import { Link, useParams, Navigate } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import Introuvable from './Introuvable.jsx'
 import { getSubject, deckForSubject } from '../data/index.js'
 import { useStore, chapterScore } from '../store.jsx'
 import { ProgressBar } from '../components/ui.jsx'
@@ -20,7 +21,7 @@ export default function Subject() {
   const subject = getSubject(sid)
   const { state } = useStore()
   const t = useT()
-  if (!subject) return <Navigate to="/" replace />
+  if (!subject) return <Introuvable />
   const color = subject.color
 
   return (

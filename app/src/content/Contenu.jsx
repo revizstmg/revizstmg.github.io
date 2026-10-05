@@ -4,6 +4,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { chargerMatieres, matiereChargee, ALL_CHAPTERS } from '../data/index.js'
+import { ORDRE_MATIERES } from './contenu.js'
 import { subjectsForTrack } from '../data/tracks.js'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
@@ -28,7 +29,9 @@ export function Chargement({ erreur, onReessayer }) {
 }
 
 export default function Contenu({ matieres, children }) {
-  const ids = (matieres || []).filter(Boolean)
+  // Une matière inconnue (lien erroné) n'est jamais chargée : la page affichera
+  // « introuvable » au lieu d'attendre indéfiniment.
+  const ids = (matieres || []).filter((id) => id && ORDRE_MATIERES.includes(id))
   const cle = ids.join(',')
   const toutesChargees = ids.every(matiereChargee)
   const [pret, setPret] = useState(toutesChargees)

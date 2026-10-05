@@ -107,6 +107,7 @@ export default function Parent() {
             <input
               value={code}
               onChange={(e) => setCode(e.target.value.toUpperCase())}
+              aria-label={t('parentCodePlaceholder')}
               onKeyDown={(e) => e.key === 'Enter' && doLink()}
               placeholder={t('parentCodePlaceholder')}
               maxLength={6}
@@ -190,7 +191,7 @@ export default function Parent() {
                       <div className="mb-1 flex items-baseline justify-between gap-2">
                         <span className="min-w-0 flex-1 truncate text-sm font-medium">{s.short}</span>
                         <span className="shrink-0 text-xs text-slate-400">{fmtDuration(s.time || 0, t)}</span>
-                        <span className="shrink-0 text-xs font-semibold tabular-nums" style={{ color: s.color || accent }}>{s.score || 0}%</span>
+                        <span className="shrink-0 text-xs font-semibold tabular-nums texte-matiere" style={{ '--mc': s.color || accent }}>{s.score || 0}%</span>
                       </div>
                       <ProgressBar value={s.score || 0} color={s.color || accent} />
                     </div>

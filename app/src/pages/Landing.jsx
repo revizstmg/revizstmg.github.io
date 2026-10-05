@@ -35,7 +35,7 @@ export default function Landing() {
         >
           <span className="text-2xl">{trackIcon(state.track)}</span>
           <span className="flex-1">
-            <span className="block text-xs uppercase tracking-wide text-white/70">{t('resume')}</span>
+            <span className="block text-xs uppercase tracking-wide text-white/90">{t('resume')}</span>
             <span className="block font-bold">{trackLabel(state.track)}</span>
           </span>
           <span aria-hidden>▶</span>

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useInstall } from '../pwa.js'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
+import { useInfoCookiesLue } from './BandeauCookies.jsx'
 
 // --- Petites illustrations (maquettes) minimalistes -------------------------
 function AppMark({ size = 52 }) {
@@ -25,7 +26,7 @@ const SafariGlyph = () => <svg viewBox="0 0 24 24" {...G} width="22" height="22"
 function Step({ n, children, glyph }) {
   return (
     <li className="flex items-start gap-3">
-      <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full text-sm font-bold text-white" style={{ backgroundColor: 'var(--c-accent)' }}>{n}</span>
+      <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full text-sm font-bold text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }}>{n}</span>
       <span className="flex-1 pt-0.5 text-sm leading-snug text-slate-700 dark:text-slate-200">{children}</span>
       {glyph && <span className="shrink-0 pt-0.5 text-slate-400 dark:text-slate-500" aria-hidden>{glyph}</span>}
     </li>
@@ -50,10 +51,10 @@ export function InstallGuide({ onClose }) {
     <>
       {/* Aide pour passer sur Safari (seul navigateur qui installe sur iPhone). */}
       <div className="mb-4 space-y-2">
-        <button onClick={openSafari} className="w-full rounded-2xl px-4 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90" style={{ backgroundColor: 'var(--c-accent)' }}>
+        <button onClick={openSafari} className="w-full rounded-2xl px-4 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90" style={{ backgroundColor: 'var(--c-accent-fort)' }}>
           {t('openInSafari')}
         </button>
-        <button onClick={copyLink} className="w-full rounded-2xl border-2 px-4 py-2.5 text-sm font-semibold transition hover:bg-slate-50 dark:hover:bg-slate-800" style={{ borderColor: 'color-mix(in srgb, var(--c-accent) 45%, transparent)', color: 'var(--c-accent)' }}>
+        <button onClick={copyLink} className="w-full rounded-2xl border-2 px-4 py-2.5 text-sm font-semibold transition hover:bg-slate-50 dark:hover:bg-slate-800" style={{ borderColor: 'color-mix(in srgb, var(--c-accent) 45%, transparent)', color: 'var(--c-accent-texte)' }}>
           {copied ? t('linkCopied') : t('copyLink')}
         </button>
       </div>
@@ -72,7 +73,7 @@ export function InstallGuide({ onClose }) {
         <button
           onClick={async () => { const r = await promptInstall(); if (r === 'accepted') onClose() }}
           className="mb-4 w-full rounded-2xl px-4 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90"
-          style={{ backgroundColor: 'var(--c-accent)' }}
+          style={{ backgroundColor: 'var(--c-accent-fort)' }}
         >
           {t('installNow')}
         </button>
@@ -133,7 +134,7 @@ export function AppBadge() {
   const t = useT()
   return (
     <span className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[0.6rem] font-bold uppercase tracking-wide"
-      style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 18%, transparent)', color: 'var(--c-accent)' }}>
+      style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 18%, transparent)', color: 'var(--c-accent-texte)' }}>
       🔒 {t('appOnlyBadge')}
     </span>
   )
@@ -152,7 +153,7 @@ export function InstallLock({ title }) {
         </span>
         <h2 className="mt-4 font-display text-xl font-semibold">{title || t('appOnlyTitle')}</h2>
         <p className="mx-auto mt-2 max-w-sm text-sm text-slate-500 dark:text-slate-400">{t('appOnlyBody')}</p>
-        <button onClick={() => setGuide(true)} className="mt-5 w-full max-w-xs rounded-2xl px-4 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90" style={{ backgroundColor: 'var(--c-accent)' }}>
+        <button onClick={() => setGuide(true)} className="mt-5 w-full max-w-xs rounded-2xl px-4 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90" style={{ backgroundColor: 'var(--c-accent-fort)' }}>
           {t('installBtn')}
         </button>
       </div>
@@ -170,7 +171,7 @@ export function InstallCard() {
   if (standalone) {
     return (
       <div className="card p-4" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 35%, transparent)' }}>
-        <h3 className="flex items-center gap-2 font-display font-semibold" style={{ color: 'var(--c-accent)' }}>
+        <h3 className="flex items-center gap-2 font-display font-semibold" style={{ color: 'var(--c-accent-texte)' }}>
           <span aria-hidden>✓</span> {t('installDone')}
         </h3>
         <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{t('installDoneHint')}</p>
@@ -185,7 +186,7 @@ export function InstallCard() {
           <h3 className="font-display font-semibold">{t('installApp')}</h3>
           <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">{t('installAppHint')}</p>
         </div>
-        <button onClick={() => setGuide(true)} className="shrink-0 rounded-xl px-3 py-2 text-sm font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: 'var(--c-accent)' }}>
+        <button onClick={() => setGuide(true)} className="shrink-0 rounded-xl px-3 py-2 text-sm font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: 'var(--c-accent-fort)' }}>
           {t('installBtn')}
         </button>
       </div>
@@ -206,7 +207,8 @@ export function InstallBanner() {
   const [guide, setGuide] = useState(false)
 
   const signedIn = !!state.profile?.firstName
-  const show = signedIn && mobile && !standalone && !dismissed
+  const cookiesLu = useInfoCookiesLue() // un bandeau à la fois, celui des cookies d'abord
+  const show = signedIn && mobile && !standalone && !dismissed && cookiesLu
 
   const close = () => {
     try { localStorage.setItem(DISMISS_KEY, '1') } catch { /* */ }
@@ -221,7 +223,7 @@ export function InstallBanner() {
             style={{ backgroundColor: 'color-mix(in srgb, var(--c-bg) 94%, var(--c-accent) 6%)', borderColor: 'color-mix(in srgb, var(--c-accent) 30%, transparent)' }}>
             <span className="shrink-0 overflow-hidden rounded-xl"><AppMark size={40} /></span>
             <p className="min-w-0 flex-1 text-sm font-semibold">{t('installBannerText')}</p>
-            <button onClick={() => setGuide(true)} className="shrink-0 rounded-xl px-3 py-2 text-sm font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: 'var(--c-accent)' }}>
+            <button onClick={() => setGuide(true)} className="shrink-0 rounded-xl px-3 py-2 text-sm font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: 'var(--c-accent-fort)' }}>
               {t('installBtn')}
             </button>
             <button onClick={close} className="shrink-0 rounded-lg px-2 py-1 text-xs text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100" aria-label={t('later')}>✕</button>

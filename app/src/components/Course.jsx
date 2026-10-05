@@ -36,7 +36,7 @@ export function ReadAloud({ getText, className = '' }) {
   return (
     <button onClick={toggle} title={t('readAloud')} aria-label={t('readAloud')}
       className={`grid h-8 w-8 shrink-0 place-items-center rounded-full text-sm transition ${className}`}
-      style={{ backgroundColor: on ? 'var(--c-accent)' : 'color-mix(in srgb, var(--c-accent) 14%, transparent)', color: on ? '#fff' : 'var(--c-accent)' }}>
+      style={{ backgroundColor: on ? 'var(--c-accent-fort)' : 'color-mix(in srgb, var(--c-accent) 14%, transparent)', color: on ? '#fff' : 'var(--c-accent-texte)' }}>
       {on ? '⏹' : '🔊'}
     </button>
   )
@@ -225,15 +225,13 @@ export function PaginatedCourse({ sec, color, prevLabel, nextLabel, onPrev, onNe
         <div className="print-title"><CourseText text={sec.h || ''} /></div>
       </div>
 
-      {/* Feuille A4 (vue normale) — grande page « papier », on appuie pour l'ouvrir en plein écran */}
+      {/* Feuille A4 (vue normale) — grande page « papier », on appuie pour l'ouvrir en
+          plein écran. La feuille n'est pas un bouton (un lecteur d'écran lirait son
+          libellé au lieu du cours) : au clavier, on passe par le bouton du bas. */}
       <div
-        role="button"
-        tabIndex={0}
         onClick={() => setFull(true)}
-        onKeyDown={(e) => { if (e.key === 'Enter') setFull(true) }}
         className="reader-a4 reader-sheet card relative cursor-zoom-in overflow-hidden !rounded-2xl p-6 sm:p-9"
         style={{ boxShadow: '0 24px 60px -34px rgba(0,0,0,.4)' }}
-        aria-label={t('tapToOpen')}
       >
         <span className="pointer-events-none absolute inset-x-0 top-0 h-1" style={{ background: `linear-gradient(90deg, transparent, ${color}, transparent)` }} aria-hidden />
         <div className="no-print absolute right-4 top-4" onClick={(e) => e.stopPropagation()}>
@@ -247,7 +245,7 @@ export function PaginatedCourse({ sec, color, prevLabel, nextLabel, onPrev, onNe
           ))}
         </div>
         <div className="no-print mt-6 flex items-center justify-between gap-2 border-t border-slate-100 pt-3 text-[11px] font-medium text-slate-400 dark:border-slate-800">
-          <span className="flex items-center gap-1">⤢ {t('tapToOpen')}</span>
+          <button type="button" onClick={(e) => { e.stopPropagation(); setFull(true) }} className="flex items-center gap-1 rounded hover:underline">⤢ {t('tapToOpen')}</button>
           <span>{t('pageWord')} {page + 1} / {list.length}</span>
         </div>
       </div>

@@ -156,7 +156,7 @@ function SelfEval() {
                   aria-label={`${c.label} : ${n} sur 5`}
                   aria-pressed={notes[c.key] === n}
                   className="grid h-8 w-8 place-items-center rounded-lg text-sm font-semibold transition"
-                  style={notes[c.key] >= n ? { backgroundColor: 'var(--c-accent)', color: '#fff' } : { backgroundColor: 'color-mix(in srgb, var(--c-accent) 12%, transparent)', color: 'var(--c-accent)' }}
+                  style={notes[c.key] >= n ? { backgroundColor: 'var(--c-accent-fort)', color: '#fff' } : { backgroundColor: 'color-mix(in srgb, var(--c-accent) 12%, transparent)', color: 'var(--c-accent-texte)' }}
                 >
                   {n}
                 </button>
@@ -242,15 +242,15 @@ export default function GrandOral() {
         <h2 className="mb-3 font-display text-xl font-medium">📋 L’épreuve en bref</h2>
         <div className="mb-4 grid grid-cols-3 gap-2 text-center">
           <div className="rounded-xl p-3" style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 10%, transparent)' }}>
-            <p className="font-display text-2xl font-bold" style={{ color: 'var(--c-accent)' }}>20 min</p>
+            <p className="font-display text-2xl font-bold" style={{ color: 'var(--c-accent-texte)' }}>20 min</p>
             <p className="text-xs text-slate-500 dark:text-slate-400">de préparation</p>
           </div>
           <div className="rounded-xl p-3" style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 10%, transparent)' }}>
-            <p className="font-display text-2xl font-bold" style={{ color: 'var(--c-accent)' }}>20 min</p>
+            <p className="font-display text-2xl font-bold" style={{ color: 'var(--c-accent-texte)' }}>20 min</p>
             <p className="text-xs text-slate-500 dark:text-slate-400">de passage</p>
           </div>
           <div className="rounded-xl p-3" style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 10%, transparent)' }}>
-            <p className="font-display text-2xl font-bold" style={{ color: 'var(--c-accent)' }}>coef. 14</p>
+            <p className="font-display text-2xl font-bold" style={{ color: 'var(--c-accent-texte)' }}>coef. 14</p>
             <p className="text-xs text-slate-500 dark:text-slate-400">en STMG</p>
           </div>
         </div>
@@ -330,7 +330,7 @@ export default function GrandOral() {
               key={key}
               onClick={() => setBankSpec(key)}
               className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${bankSpec === key ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`}
-              style={bankSpec === key ? { backgroundColor: 'var(--c-accent)' } : undefined}
+              style={bankSpec === key ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}
             >
               {v.icon} {v.label}{key === mySpec ? ' ★' : ''}
             </button>
@@ -344,12 +344,12 @@ export default function GrandOral() {
                 <button
                   onClick={() => useQuestion(it.q)}
                   className="shrink-0 rounded-lg px-2 py-1 text-xs font-semibold text-white transition hover:opacity-90"
-                  style={{ backgroundColor: 'var(--c-accent)' }}
+                  style={{ backgroundColor: 'var(--c-accent-fort)' }}
                 >
                   Utiliser
                 </button>
               </div>
-              <p className="mt-1.5 text-sm text-slate-600 dark:text-slate-300"><span className="font-semibold" style={{ color: 'var(--c-accent)' }}>Angle :</span> {it.angle}</p>
+              <p className="mt-1.5 text-sm text-slate-600 dark:text-slate-300"><span className="font-semibold" style={{ color: 'var(--c-accent-texte)' }}>Angle :</span> {it.angle}</p>
             </div>
           ))}
         </div>
@@ -366,7 +366,7 @@ export default function GrandOral() {
               key={p.key}
               onClick={() => pickPractice(p.min)}
               className={`rounded-xl px-2 py-2 text-center text-xs font-semibold transition ${activeMin === p.min ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`}
-              style={activeMin === p.min ? { backgroundColor: 'var(--c-accent)' } : undefined}
+              style={activeMin === p.min ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}
             >
               {p.label}<br /><span className="opacity-70">{p.min} min</span>
             </button>
@@ -387,7 +387,7 @@ export default function GrandOral() {
             size={200}
             label={
               <span className="flex flex-col items-center">
-                <span className="font-display text-5xl font-semibold tabular-nums" style={{ color: left === 0 ? '#3f9d6d' : 'var(--c-accent)' }}>{two(Math.floor(left / 60))}:{two(left % 60)}</span>
+                <span className="font-display text-5xl font-semibold tabular-nums" style={{ color: left === 0 ? '#3f9d6d' : 'var(--c-accent-texte)' }}>{two(Math.floor(left / 60))}:{two(left % 60)}</span>
                 <span className="mt-1 text-xs uppercase tracking-widest text-slate-400">{left === 0 ? 'Terminé' : running ? 'En cours' : 'Prêt'}</span>
               </span>
             }
@@ -396,7 +396,7 @@ export default function GrandOral() {
             <button
               onClick={() => { if (left === 0) pickPractice(activeMin); setRunning((r) => !r) }}
               className="flex-1 rounded-2xl px-4 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90"
-              style={{ backgroundColor: 'var(--c-accent)' }}
+              style={{ backgroundColor: 'var(--c-accent-fort)' }}
             >
               {running ? '⏸ Pause' : left === 0 ? '↺ Recommencer' : '▶ Démarrer'}
             </button>
@@ -421,7 +421,7 @@ export default function GrandOral() {
         <div className="grid gap-3 sm:grid-cols-2">
           {ETAPES.map((e) => (
             <div key={e.h} className="card p-4">
-              <p className="flex items-center gap-2 font-display font-semibold"><span className="text-lg" style={{ color: 'var(--c-accent)' }} aria-hidden>{e.icon}</span> {e.h}</p>
+              <p className="flex items-center gap-2 font-display font-semibold"><span className="text-lg" style={{ color: 'var(--c-accent-texte)' }} aria-hidden>{e.icon}</span> {e.h}</p>
               <p className="mt-1.5 text-sm text-slate-600 dark:text-slate-300">{e.c}</p>
             </div>
           ))}

@@ -138,7 +138,7 @@ export default function Home() {
             {nm && (
               <div className="sm:w-56">
                 <div className="mb-1 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-                  <span className="truncate">{nm.icon} {nm.day} {t(nm.day > 1 ? 'daysStreakP' : 'daysStreakS')} · <span className="font-semibold" style={{ color: 'var(--c-accent)' }}>+{nm.xp} XP</span></span>
+                  <span className="truncate">{nm.icon} {nm.day} {t(nm.day > 1 ? 'daysStreakP' : 'daysStreakS')} · <span className="font-semibold" style={{ color: 'var(--c-accent-texte)' }}>+{nm.xp} XP</span></span>
                   <span className="shrink-0 pl-2">{nm.daysLeft} {t(nm.daysLeft > 1 ? 'daysLeftP' : 'daysLeftS')}</span>
                 </div>
                 <ProgressBar value={nm.pct} color="var(--c-accent)" />
@@ -162,7 +162,7 @@ export default function Home() {
             {done ? (
               <span className="chip shrink-0 bg-emerald-100 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">✓</span>
             ) : (
-              <span className="chip shrink-0 text-white" style={{ background: 'var(--c-accent)' }}>{t('challengeStart')}</span>
+              <span className="chip shrink-0 text-white" style={{ background: 'var(--c-accent-fort)' }}>{t('challengeStart')}</span>
             )}
           </Link>
         )
@@ -184,7 +184,7 @@ export default function Home() {
       <section>
         <div className="mb-3 flex items-center justify-between gap-3 px-1">
           <h2 className="font-display text-lg font-semibold text-slate-700 dark:text-slate-200">{t('mySubjects')}</h2>
-          <Link to="/changer" className="shrink-0 text-xs font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]">{t('change')}</Link>
+          <Link to="/changer" className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('change')}</Link>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {subjects.map((s) => {
@@ -210,7 +210,7 @@ export default function Home() {
                     <h3 className="font-display text-[1.05rem] font-semibold leading-tight">{s.name}</h3>
                     <p className="mb-2.5 truncate text-xs text-slate-500 dark:text-slate-400">{s.chapters.length} {t('chapters')} · {s.tagline}</p>
                     <ProgressBar value={pct} color={s.color} />
-                    <p className="mt-1.5 text-right text-xs font-semibold" style={{ color: s.color }}>{pct}%</p>
+                    <p className="mt-1.5 text-right text-xs font-semibold texte-matiere" style={{ '--mc': s.color }}>{pct}%</p>
                   </div>
                 </div>
               </Link>

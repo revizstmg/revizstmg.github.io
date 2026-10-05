@@ -13,7 +13,7 @@ export default function Express() {
   useStudyTimer() // le temps de la révision express compte pour les récompenses
   const t = useT()
   const navigate = useNavigate()
-  const accent = '#c8a24e'
+  const accent = '#84671b' // or foncé : lisible sous du texte blanc
 
   const pool = useMemo(() => (state.track ? buildExam(state, state.track, null, 60).questions : []), [state.track]) // eslint-disable-line react-hooks/exhaustive-deps
   const [phase, setPhase] = useState('intro') // intro | run | result
@@ -83,10 +83,10 @@ export default function Express() {
         <div className="card card-lux p-6">
           <Confetti show={great} />
           <div className="animate-bounce-in text-5xl">{great ? '🎉' : pct >= 50 ? '👍' : '💪'}</div>
-          <div className="score-pop my-3 text-4xl font-extrabold" style={{ color: accent }}>{correct}</div>
+          <div className="score-pop my-3 text-4xl font-extrabold" style={{ color: 'var(--c-accent-texte)' }}>{correct}</div>
           <p className="text-sm text-slate-500 dark:text-slate-400">{t('expressResult').replace('{c}', correct).replace('{n}', answered)}</p>
           <div className="mt-2"><Stars count={pct >= 80 ? 3 : pct >= 50 ? 2 : 1} size="text-2xl" /></div>
-          <p className="mt-2 text-sm"><span className="pop-badge font-semibold" style={{ color: accent }}>+{gain} XP</span></p>
+          <p className="mt-2 text-sm"><span className="pop-badge font-semibold" style={{ color: 'var(--c-accent-texte)' }}>+{gain} XP</span></p>
         </div>
         <button onClick={() => navigate('/accueil')} className="btn-gold w-full !py-3 text-sm">{t('done')}</button>
       </div>
@@ -99,7 +99,7 @@ export default function Express() {
       <div className="animate-lux mx-auto max-w-md space-y-4">
         <div className="flex items-center justify-between px-1">
           <span className="chip bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">✅ {correct}</span>
-          <span className="font-display text-xl font-bold tabular-nums" style={{ color: left <= 30 ? '#e11d48' : accent }}>⏱ {fmt(left)}</span>
+          <span className="font-display text-xl font-bold tabular-nums" style={{ color: left <= 30 ? '#e11d48' : 'var(--c-accent-texte)' }}>⏱ {fmt(left)}</span>
         </div>
         <div className="h-1.5 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
           <div className="h-full bg-amber-400 transition-all duration-200 ease-linear" style={{ width: `${(left / DURATION) * 100}%` }} />

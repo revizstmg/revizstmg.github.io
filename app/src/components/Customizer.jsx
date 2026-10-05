@@ -295,7 +295,7 @@ export default function Customizer({ onClose }) {
                 <input type="color" value={ct.banner || '#c8a24e'} onChange={(e) => setCustomTheme({ banner: e.target.value })} className="sr-only" aria-label={t('secBanner')} />
               </label>
             </div>
-            <button type="button" onClick={() => setCustomTheme({ banner: null })} className="mt-3 text-xs font-semibold text-slate-400 underline hover:text-[#98761f] dark:hover:text-[#d9bd77]">
+            <button type="button" onClick={() => setCustomTheme({ banner: null })} className="mt-3 text-xs font-semibold text-slate-400 underline hover:text-[#84671b] dark:hover:text-[#d9bd77]">
               {t('bannerReset')}
             </button>
           </div>
@@ -401,12 +401,12 @@ export default function Customizer({ onClose }) {
                 </div>
               </>
             )}
-            <button type="button" onClick={() => setTabs(null)} className="mt-3 text-xs font-semibold text-slate-400 underline hover:text-[#98761f] dark:hover:text-[#d9bd77]">
+            <button type="button" onClick={() => setTabs(null)} className="mt-3 text-xs font-semibold text-slate-400 underline hover:text-[#84671b] dark:hover:text-[#d9bd77]">
               {t('tabsReset')}
             </button>
           </div>
 
-          <button onClick={resetCustomTheme} className="w-full text-center text-xs font-semibold text-slate-400 underline hover:text-[#98761f] dark:hover:text-[#d9bd77]">
+          <button onClick={resetCustomTheme} className="w-full text-center text-xs font-semibold text-slate-400 underline hover:text-[#84671b] dark:hover:text-[#d9bd77]">
             {t('resetAllAppearance')}
           </button>
         </div>

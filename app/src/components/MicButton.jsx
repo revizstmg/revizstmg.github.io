@@ -37,7 +37,7 @@ export default function MicButton({ onResult, disabled }) {
       title={listening ? t('listening') : t('voiceInput')}
       aria-label={listening ? t('listening') : t('voiceInput')}
       className={`grid h-12 w-12 shrink-0 place-items-center rounded-xl text-lg transition ${listening ? 'animate-pulse' : ''}`}
-      style={{ background: listening ? '#e11d48' : 'color-mix(in srgb, var(--c-accent) 14%, transparent)', color: listening ? '#fff' : 'var(--c-accent)' }}
+      style={{ background: listening ? '#e11d48' : 'color-mix(in srgb, var(--c-accent) 14%, transparent)', color: listening ? '#fff' : 'var(--c-accent-texte)' }}
     >
       {listening ? '⏺' : '🎤'}
     </button>

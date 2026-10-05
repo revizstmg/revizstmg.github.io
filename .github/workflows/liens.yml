@@ -1,0 +1,24 @@
+name: Vérifier les liens
+
+# Chaque lundi matin : ouvre chaque lien vers un autre site cité dans le contenu
+# et le code de l'app (app/scripts/verifier-liens.mjs). Un lien cassé fait échouer
+# le passage, et GitHub prévient par e-mail ; la liste est dans le résumé du
+# passage. Les liens internes de l'app sont vérifiés par `npm test`.
+on:
+  schedule:
+    - cron: '17 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  liens:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Vérifier les liens externes
+        run: node app/scripts/verifier-liens.mjs

@@ -5,6 +5,7 @@ import { StoreProvider } from './store.jsx'
 import { FocusProvider } from './focus.jsx'
 import App from './App.jsx'
 import { initPwa } from './pwa.js'
+import './polices.css'
 import './index.css'
 
 // Capture l'invite d'installation « Ajouter à l'écran d'accueil » dès le départ.

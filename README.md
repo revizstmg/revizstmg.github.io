@@ -96,6 +96,30 @@ garde une ligne par jour. Les chiffres d'utilisation viennent de la fonction
 Supabase `revizstmg_statistiques()`, qui ne renvoie que des nombres agrégés.
 Pour une mise à jour immédiate, lancez le workflow à la main depuis l'onglet Actions.
 
+**Mesure d'audience.** `app/src/mesure.js` compte les écrans affichés (un compteur
+par jour et par écran, sans cookie ni identifiant) et le fichier de statistiques
+en donne les visites. Elle est prête mais **inactive** : la table et les deux
+fonctions côté base attendent un accord (`supabase/a-valider/`). Une fois
+appliquées, passer `MESURE_ACTIVE` à `true`.
+
+## Règles de l'interface
+
+- **Contraste (WCAG AA, 4,5:1).** Pour écrire en couleur d'accent :
+  `var(--c-accent-texte)` ; pour un fond sous du texte blanc : `var(--c-accent-fort)`.
+  Pour écrire dans la couleur d'une matière : classe `texte-matiere` et
+  `style={{ '--mc': couleur }}` (éclaircie en mode sombre). Les couleurs des
+  matières (`matiere.json`) sont choisies pour rester lisibles sous du texte blanc.
+- **Formulaires.** Les règles (e-mail, mot de passe, prénom, messages des espaces
+  partagés, pièges à robots) sont dans `app/src/formulaires.js`, testées par
+  `tests/formulaires.test.js`. Une erreur s'affiche sous le champ concerné.
+- **Liens.** `npm test` vérifie que chaque lien interne mène à une route
+  (`tests/liens.test.js`). Le workflow « Vérifier les liens » ouvre chaque lundi
+  les liens vers d'autres sites et échoue si l'un est cassé.
+- **Adresse inconnue.** Dans l'app, `pages/Introuvable.jsx` (avec un lien vers le
+  niveau qui existe encore). Hors de l'app, GitHub Pages sert `app/pwa/404.html`,
+  qui renvoie `revizstmg.github.io/cgu` vers `/#/cgu` ; sa liste de routes doit
+  suivre `App.jsx` (vérifié par le test des liens).
+
 ## Comment c'est construit
 
 - **React 18**, **React Router 6** (`HashRouter`), **Tailwind CSS 3**, **Vite 5**.

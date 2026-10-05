@@ -1,3 +1,5 @@
+// Les PNG produits ont ensuite été compressés en palette (sharp, qualité 90) :
+// −85 % sans différence visible. Refaire cette étape après une régénération.
 import pw from '/opt/node22/lib/node_modules/playwright/index.js'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'

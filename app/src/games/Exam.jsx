@@ -106,7 +106,7 @@ export default function Exam({ questions, durationSec = 1200, color = '#7c3aed',
                     <span className="min-w-0 flex-1">
                       <span className="mb-1 flex items-center justify-between gap-2">
                         <span className="truncate text-sm font-medium">{r.name}</span>
-                        <span className="shrink-0 text-xs font-semibold tabular-nums" style={{ color: col }}>{r.c}/{r.n} · {r.pct}%</span>
+                        <span className="shrink-0 text-xs font-semibold tabular-nums texte-matiere" style={{ '--mc': col }}>{r.c}/{r.n} · {r.pct}%</span>
                       </span>
                       <ProgressBar value={r.pct} color={col} height={7} />
                     </span>
@@ -138,7 +138,7 @@ export default function Exam({ questions, durationSec = 1200, color = '#7c3aed',
                 <div key={qi} className="rounded-xl p-3" style={{ backgroundColor: good ? 'color-mix(in srgb, #10b981 10%, transparent)' : 'color-mix(in srgb, #f43f5e 9%, transparent)' }}>
                   <p className="text-sm font-semibold">{good ? '✅' : '❌'} {qi + 1}. {q.q}</p>
                   {!good && <p className="mt-1 text-xs text-slate-600 dark:text-slate-300">{t('yourAnswer')} {answers[qi] != null ? q.choices[answers[qi]] : '—'}</p>}
-                  <p className="mt-0.5 text-xs" style={{ color: 'var(--c-accent)' }}>✔ {q.choices[q.answer]}</p>
+                  <p className="mt-0.5 text-xs" style={{ color: 'var(--c-accent-texte)' }}>✔ {q.choices[q.answer]}</p>
                   {q.explain && <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">💡 {q.explain}</p>}
                 </div>
               )

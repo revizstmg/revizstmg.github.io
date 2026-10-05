@@ -102,7 +102,7 @@
     "id": "raisonnement-eco",
     "title": "Raisonnement économique (A-E-I)",
     "icon": "📈",
-    "color": "#ea580c",
+    "color": "#c2410c",
     "intro": "Pour expliquer un mécanisme économique, structure ta réponse : Affirmation, Explication, Illustration.",
     "steps": [
       {
@@ -131,7 +131,7 @@
     "id": "grand-oral",
     "title": "Grand Oral",
     "icon": "🎓",
-    "color": "#c8a24e",
+    "color": "#84671b",
     "intro": "Un exposé de 5 minutes, debout et sans notes, clairement structuré.",
     "steps": [
       {

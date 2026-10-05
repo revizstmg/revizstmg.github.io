@@ -136,8 +136,12 @@ function rediger(u, c, p, histo) {
     l.push(`| Quiz de classe | ${nb(u.quiz_de_classe)} · sessions en direct : ${nb(u.sessions_live)} |`)
     l.push(`| Amis | ${nb(u.joueurs_amis)} joueurs · ${nb(u.defis_amis)} défis (${nb(u.defis_amis_7j)} cette semaine) |`)
     l.push(`| Suivi des parents | ${nb(u.suivis_parents)} élèves suivis (${nb(u.suivis_parents_actifs_7j)} actifs cette semaine) |`)
+    if (u.visites_7j != null) {
+      l.push(`| Visites | ${nb(u.visites_hier)} hier (${nb(u.vues_hier)} pages vues) · ${nb(u.visites_7j)} en 7 jours (${nb(u.vues_7j)} pages vues) |`)
+      l.push(`| Écrans les plus vus (7 jours) | ${repartition(u.ecrans_7j, (k) => k)} |`)
+    }
     l.push('')
-    l.push("> Un compte est « actif » quand sa progression a été synchronisée. Les élèves qui révisent sans compte ne sont pas comptés : leur progression reste sur leur téléphone.", '')
+    l.push("> Un compte est « actif » quand sa progression a été synchronisée. Les visites sont comptées sans cookie ni identifiant (une visite = un onglet ouvert sur le site).", '')
   }
 
   l.push('## 📚 Contenu', '')
@@ -160,10 +164,10 @@ function rediger(u, c, p, histo) {
   const recents = histo.slice(-14).reverse()
   if (recents.length > 1) {
     l.push('## 📈 Évolution (14 derniers jours)', '')
-    l.push('| Date | Comptes | Actifs 7 j | Nouveaux 7 j | Chapitres | Questions |', '|---|---|---|---|---|---|')
+    l.push('| Date | Comptes | Actifs 7 j | Nouveaux 7 j | Visites la veille | Chapitres | Questions |', '|---|---|---|---|---|---|---|')
     for (const h of recents) {
       const d = new Date(`${h.date}T12:00:00Z`).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' })
-      l.push(`| ${d} | ${nb(h.comptes)} | ${nb(h.actifs_7j)} | ${nb(h.nouveaux_7j)} | ${nb(h.chapitres)} | ${nb(h.questions)} |`)
+      l.push(`| ${d} | ${nb(h.comptes)} | ${nb(h.actifs_7j)} | ${nb(h.nouveaux_7j)} | ${nb(h.visites)} | ${nb(h.chapitres)} | ${nb(h.questions)} |`)
     }
     l.push('')
   }
@@ -178,7 +182,7 @@ try { if (existsSync(HISTORIQUE)) histo = JSON.parse(readFileSync(HISTORIQUE, 'u
 const entree = {
   date: jour,
   comptes: u.comptes ?? null, eleves: u.eleves ?? null, profs: u.profs ?? null,
-  actifs_7j: u.actifs_7j ?? null, nouveaux_7j: u.nouveaux_7j ?? null,
+  actifs_7j: u.actifs_7j ?? null, nouveaux_7j: u.nouveaux_7j ?? null, visites: u.visites_hier ?? null,
   themes: c.themes, chapitres: c.chapitres, questions: c.questions, flashcards: c.flashcards,
 }
 histo = [...histo.filter((h) => h.date !== jour), entree].slice(-400)

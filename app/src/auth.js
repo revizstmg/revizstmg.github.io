@@ -28,14 +28,37 @@ export function clearSession() {
 }
 export function isSignedIn() { return !!getSession()?.token }
 
+// Messages de Supabase Auth (en anglais) traduits pour l'élève.
+const MESSAGES_AUTH = [
+  [/invalid login credentials|invalid_grant/i, 'E-mail ou mot de passe incorrect.'],
+  [/already registered|already exists/i, 'Un compte existe déjà avec cette adresse : connecte-toi.'],
+  [/email not confirmed/i, 'Confirme d’abord ton adresse e-mail grâce au lien reçu.'],
+  [/password.*(should|weak|short|pwned|leaked|known)/i, 'Mot de passe trop faible : 8 caractères minimum, avec des lettres et des chiffres.'],
+  [/rate limit|too many|only request this after|for security purposes/i, 'Trop de tentatives : réessaie dans quelques minutes.'],
+  [/invalid.*email|email.*invalid|unable to validate email/i, 'Adresse e-mail invalide.'],
+  [/(token|otp|code).*(expired|invalid)/i, 'Code invalide ou expiré.'],
+  [/signups? (not allowed|disabled)/i, 'Les inscriptions sont fermées pour le moment.'],
+]
+export function messageAuth(status, brut) {
+  const trouve = MESSAGES_AUTH.find(([motif]) => motif.test(brut || ''))
+  if (trouve) return trouve[1]
+  if (status === 429) return 'Trop de tentatives : réessaie dans quelques minutes.'
+  return brut || `Erreur ${status}`
+}
+
 async function gotrue(path, body) {
-  const res = await fetch(`${SUPA_URL}/auth/v1/${path}`, {
-    method: 'POST',
-    headers: { apikey: SUPA_ANON, 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
-  })
+  let res
+  try {
+    res = await fetch(`${SUPA_URL}/auth/v1/${path}`, {
+      method: 'POST',
+      headers: { apikey: SUPA_ANON, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    })
+  } catch {
+    throw new Error('Pas de connexion : réessaie une fois en ligne.')
+  }
   const data = await res.json().catch(() => ({}))
-  if (!res.ok) throw new Error(data.error_description || data.msg || data.message || `Erreur ${res.status}`)
+  if (!res.ok) throw new Error(messageAuth(res.status, data.error_description || data.msg || data.message || data.error_code))
   return data
 }
 

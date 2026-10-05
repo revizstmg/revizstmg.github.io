@@ -16,6 +16,7 @@ import {
   createTeacherClass, fetchTeacherClasses, banStudent, isBanned,
 } from '../classroom.js'
 import { upsertProfile, isSignedIn } from '../auth.js'
+import { problemeMessage, noterMessage } from '../formulaires.js'
 
 const initialsOf = (name) => {
   const p = String(name || '').trim().split(/\s+/)
@@ -136,7 +137,7 @@ export default function Classe() {
             {blason ? `${classCode} · ` : ''}{role === 'prof' ? `🧑‍🏫 ${t('roleTeacher')} · ${t('shareCodeHint')}` : `🎓 ${t('roleStudent')}`}
           </p>
         </div>
-        {role !== 'prof' && <button onClick={() => setClassCode('')} className="shrink-0 text-xs font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]">{t('leaveClass')}</button>}
+        {role !== 'prof' && <button onClick={() => setClassCode('')} className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('leaveClass')}</button>}
       </header>
 
       {role === 'prof' && (
@@ -145,7 +146,7 @@ export default function Classe() {
 
       {meta?.announcement && (
         <div className="card border-l-4 p-3.5" style={{ borderColor: 'var(--c-accent)', background: 'color-mix(in srgb, var(--c-accent) 8%, transparent)' }}>
-          <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: 'var(--c-accent)' }}>📣 {t('announcement')}{meta.announcement_by ? ` · ${meta.announcement_by}` : ''}</p>
+          <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: 'var(--c-accent-texte)' }}>📣 {t('announcement')}{meta.announcement_by ? ` · ${meta.announcement_by}` : ''}</p>
           <p className="mt-0.5 text-sm">{meta.announcement}</p>
         </div>
       )}
@@ -202,8 +203,8 @@ function JoinForm({ onJoin, t }) {
       <div className="card card-lux p-5">
         <h2 className="font-display text-xl font-semibold">{t('enterClassCode')}</h2>
         <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t('classCodeHint')}</p>
-        <label className="mt-4 block text-xs font-semibold uppercase tracking-wide text-slate-400">{t('classCodeField')}</label>
-        <input value={code} onChange={(e) => setCode(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && join()}
+        <label htmlFor="classe-code" className="mt-4 block text-xs font-semibold uppercase tracking-wide text-slate-400">{t('classCodeField')}</label>
+        <input id="classe-code" value={code} onChange={(e) => setCode(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && join()}
           placeholder="ex : marceau-tstmg2" maxLength={24} autoFocus
           className="mt-1 w-full rounded-xl border border-[color-mix(in_srgb,var(--c-accent)_30%,transparent)] bg-transparent px-3 py-2.5 text-base outline-none focus:border-[var(--c-accent)]" />
         <button onClick={join} disabled={!ok} className="btn-primary mt-4 w-full">{t('joinBtn')}</button>
@@ -225,14 +226,14 @@ function TeacherBar({ classes, active, onSwitch, onCreate, creating, t }) {
       {classes.length > 1 && (
         <div className="flex flex-wrap gap-1.5">
           {classes.map((c) => (
-            <button key={c.code} onClick={() => onSwitch(c.code)} className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${c.code === active ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={c.code === active ? { backgroundColor: 'var(--c-accent)' } : undefined}>{c.label || c.code}</button>
+            <button key={c.code} onClick={() => onSwitch(c.code)} className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${c.code === active ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={c.code === active ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>{c.label || c.code}</button>
           ))}
         </div>
       )}
       <div className="flex items-center justify-between gap-3">
         <div className="min-w-0">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">🔑 {t('classCodeField')}{cur?.label ? ` · ${cur.label}` : ''}</p>
-          <p className="font-display text-2xl font-bold tracking-wide" style={{ color: 'var(--c-accent)' }}>{active}</p>
+          <p className="font-display text-2xl font-bold tracking-wide" style={{ color: 'var(--c-accent-texte)' }}>{active}</p>
           <p className="text-[0.7rem] text-slate-400">{t('codeNotEditable')}</p>
         </div>
         <button onClick={copy} className="btn-ghost shrink-0 !min-h-0 !py-2 text-sm">{copied ? `✓ ${t('copied')}` : `📋 ${t('copy')}`}</button>
@@ -295,7 +296,7 @@ function RankTab({ classCode, track, t }) {
         {SEGS.map((s) => (
           <button key={s.id} onClick={() => setSeg(s.id)}
             className={`whitespace-nowrap rounded-full px-3 py-1.5 font-semibold transition ${seg === s.id ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`}
-            style={seg === s.id ? { backgroundColor: 'var(--c-accent)' } : undefined}>{s.label}</button>
+            style={seg === s.id ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>{s.label}</button>
         ))}
       </div>
 
@@ -321,7 +322,7 @@ function RankTab({ classCode, track, t }) {
                 <span className="min-w-0 flex-1"><span className="block text-sm font-semibold leading-tight">{s.name}</span>
                   <span className="block truncate text-xs text-slate-500 dark:text-slate-400">{best ? `🥇 ${best.m.name || t('roleStudent')}` : t('podiumNobody')}</span>
                 </span>
-                {best && <span className="shrink-0 font-display text-lg font-semibold" style={{ color: s.color }}>{best.v}%</span>}
+                {best && <span className="shrink-0 font-display text-lg font-semibold texte-matiere" style={{ '--mc': s.color }}>{best.v}%</span>}
               </div>
             )
           })}
@@ -338,9 +339,9 @@ function RankTab({ classCode, track, t }) {
               const me = c.class_code === normalizeCode(classCode)
               return (
                 <div key={c.class_code} className="card flex items-center gap-3 p-3" style={me ? { boxShadow: 'inset 0 0 0 2px var(--c-accent)' } : undefined}>
-                  <span className="w-7 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent)' }}>{medal(i)}</span>
+                  <span className="w-7 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent-texte)' }}>{medal(i)}</span>
                   <span className="min-w-0 flex-1 truncate font-semibold">{c.class_code}{me && <span className="ml-1 text-xs font-normal text-slate-400">· {t('yourClassLabel')}</span>}</span>
-                  <span className="shrink-0 text-right"><span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent)' }}>{c.total}</span><span className="block text-[0.65rem] uppercase tracking-wide text-slate-400">{c.members} {t('membersCount')}</span></span>
+                  <span className="shrink-0 text-right"><span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{c.total}</span><span className="block text-[0.65rem] uppercase tracking-wide text-slate-400">{c.members} {t('membersCount')}</span></span>
                 </div>
               )
             })}
@@ -357,12 +358,12 @@ function RankList({ rows, myId, value, unit, empty, t }) {
     const me = r.device_id === myId
     return (
       <div key={r.device_id} className="card flex items-center gap-3 p-3" style={me ? { boxShadow: 'inset 0 0 0 2px var(--c-accent)' } : undefined}>
-        <span className="w-7 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent)' }}>{medal(i)}</span>
+        <span className="w-7 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent-texte)' }}>{medal(i)}</span>
         <span className="monogram grid h-10 w-10 shrink-0 place-items-center overflow-hidden text-sm">
           {r.photo ? <img src={r.photo} alt="" className="h-full w-full rounded-full object-cover" /> : initialsOf(r.name)}
         </span>
         <span className="min-w-0 flex-1 truncate font-semibold">{r.name || t('roleStudent')}{me && <span className="ml-1 text-xs font-normal text-slate-400">· {t('youLabel')}</span>}</span>
-        <span className="shrink-0 text-right"><span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent)' }}>{value(r)}</span><span className="block text-[0.65rem] uppercase tracking-wide text-slate-400">{unit}</span></span>
+        <span className="shrink-0 text-right"><span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{value(r)}</span><span className="block text-[0.65rem] uppercase tracking-wide text-slate-400">{unit}</span></span>
       </div>
     )
   })
@@ -380,10 +381,10 @@ function GroupStandings({ groups, students, t }) {
       <p className="text-xs text-slate-400">{t('groupsHint')}</p>
       {rows.map((r, i) => (
         <div key={r.g.id} className="card flex items-center gap-3 p-3.5" style={{ boxShadow: `inset 0 0 0 1px ${(r.g.color || '#999')}55` }}>
-          <span className="w-7 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent)' }}>{medal(i)}</span>
+          <span className="w-7 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent-texte)' }}>{medal(i)}</span>
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: (r.g.color || '#999') + '22' }}>{r.g.emoji || '🏳️'}</span>
-          <span className="min-w-0 flex-1"><span className="block truncate font-display font-semibold" style={{ color: r.g.color || undefined }}>{r.g.name || t('groupUnnamed')}</span><span className="block text-xs text-slate-400">{r.count} {t('membersCount')}</span></span>
-          <span className="shrink-0 text-right"><span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent)' }}>{r.total}</span><span className="block text-[0.65rem] uppercase tracking-wide text-slate-400">{t('coursesThisWeek')}</span></span>
+          <span className="min-w-0 flex-1"><span className="block truncate font-display font-semibold texte-matiere" style={{ '--mc': r.g.color || undefined }}>{r.g.name || t('groupUnnamed')}</span><span className="block text-xs text-slate-400">{r.count} {t('membersCount')}</span></span>
+          <span className="shrink-0 text-right"><span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{r.total}</span><span className="block text-[0.65rem] uppercase tracking-wide text-slate-400">{t('coursesThisWeek')}</span></span>
         </div>
       ))}
       {unassigned > 0 && <p className="pt-1 text-center text-xs text-slate-400">{unassigned} {t('withoutGroup')}</p>}
@@ -440,7 +441,7 @@ function GoalTab({ classCode, meta, state, derived, setCustomTheme, t }) {
       <div className="card card-lux p-5">
         <div className="flex items-center justify-between gap-2">
           <h2 className="font-display text-xl font-semibold">🎯 {t('collectiveGoal')}</h2>
-          {target > 0 && <span className="font-display text-lg font-semibold" style={{ color: 'var(--c-accent)' }}>{total}/{target}</span>}
+          {target > 0 && <span className="font-display text-lg font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{total}/{target}</span>}
         </div>
         {target > 0 ? (
           <>
@@ -459,7 +460,7 @@ function GoalTab({ classCode, meta, state, derived, setCustomTheme, t }) {
       <div className="card p-5">
         <div className="flex items-center justify-between gap-2">
           <h2 className="font-display text-xl font-semibold">🔥 {t('collectiveStreak')}</h2>
-          <span className={`font-display text-lg font-semibold ${streakOn ? '' : 'text-slate-400'}`} style={streakOn ? { color: 'var(--c-accent)' } : undefined}>{streakPct}%</span>
+          <span className={`font-display text-lg font-semibold ${streakOn ? '' : 'text-slate-400'}`} style={streakOn ? { color: 'var(--c-accent-texte)' } : undefined}>{streakPct}%</span>
         </div>
         <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{streakOn ? t('streakOn') : t('streakOff')}</p>
         <p className="mt-1 text-xs text-slate-400">{activeToday}/{students.length || 0} {t('activeToday')}</p>
@@ -478,12 +479,12 @@ function GoalTab({ classCode, meta, state, derived, setCustomTheme, t }) {
       <div className="card p-5">
         <div className="flex items-center justify-between gap-2">
           <h2 className="font-display text-xl font-semibold">🎟️ {t('reviewBingo')}</h2>
-          <span className="font-display text-lg font-semibold" style={{ color: 'var(--c-accent)' }}>{bingoDone}/9</span>
+          <span className="font-display text-lg font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{bingoDone}/9</span>
         </div>
         <p className="mt-1 text-xs text-slate-400">{t('bingoHint')}</p>
         <div className="mt-3 grid grid-cols-3 gap-2">
           {cells.map((c) => (
-            <div key={c.k} className={`flex aspect-square flex-col items-center justify-center rounded-xl p-2 text-center text-[0.7rem] font-semibold leading-tight transition ${c.done ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={c.done ? { backgroundColor: 'var(--c-accent)' } : undefined}>
+            <div key={c.k} className={`flex aspect-square flex-col items-center justify-center rounded-xl p-2 text-center text-[0.7rem] font-semibold leading-tight transition ${c.done ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={c.done ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
               <span className="mb-0.5 text-base">{c.done ? '✓' : '○'}</span>{c.label}
             </div>
           ))}
@@ -503,7 +504,7 @@ function QuizTab({ classCode, role, name, photo, accountId, jumpLive, t }) {
         {[{ id: 'quiz', label: t('segQuizzes') }, { id: 'duel', label: t('segDuels') }, { id: 'direct', label: `🔴 ${t('segLive')}` }].map((s) => (
           <button key={s.id} onClick={() => setSeg(s.id)}
             className={`whitespace-nowrap rounded-full px-3 py-1.5 font-semibold transition ${seg === s.id ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`}
-            style={seg === s.id ? { backgroundColor: 'var(--c-accent)' } : undefined}>{s.label}</button>
+            style={seg === s.id ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>{s.label}</button>
         ))}
       </div>
       {seg === 'quiz' && <QuizList classCode={classCode} role={role} name={name} accountId={accountId} t={t} />}
@@ -612,7 +613,7 @@ function QuizTake({ quiz, name, t, onDone, onBack }) {
   }
   return (
     <div className="space-y-3">
-      <button onClick={onBack} className="text-sm font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]">← {t('backToQuizzes')}</button>
+      <button onClick={onBack} className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">← {t('backToQuizzes')}</button>
       <h2 className="font-display text-xl font-semibold">{quiz.title || t('quizUntitled')}</h2>
       <Qcm game={game} mode="training" color="var(--c-accent)" onDone={handleDone} />
     </div>
@@ -630,7 +631,7 @@ function QuizResults({ quiz, role, accountId, t, onBack, onReplay }) {
   useEffect(() => { load() }, [load])
   return (
     <div className="space-y-3">
-      <button onClick={onBack} className="text-sm font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]">← {t('backToQuizzes')}</button>
+      <button onClick={onBack} className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">← {t('backToQuizzes')}</button>
       <div className="flex items-end justify-between gap-3">
         <h2 className="font-display text-xl font-semibold">{t('quizRanking')} · {quiz.title || t('quizUntitled')}</h2>
         <button onClick={onReplay} disabled={!quiz.questions?.length} className="btn-ghost shrink-0 !min-h-0 !py-2 text-sm">{t('playQuiz')}</button>
@@ -643,10 +644,10 @@ function QuizResults({ quiz, role, accountId, t, onBack, onReplay }) {
         const pct = r.total ? Math.round((r.score / r.total) * 100) : 0
         return (
           <div key={r.device_id} className="card flex items-center gap-3 p-3" style={me ? { boxShadow: 'inset 0 0 0 2px var(--c-accent)' } : undefined}>
-            <span className="w-7 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent)' }}>{medal(i)}</span>
+            <span className="w-7 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent-texte)' }}>{medal(i)}</span>
             <span className="monogram grid h-10 w-10 shrink-0 place-items-center overflow-hidden text-sm">{initialsOf(r.name)}</span>
             <span className="min-w-0 flex-1 truncate font-semibold">{r.name || t('roleStudent')}{me && <span className="ml-1 text-xs font-normal text-slate-400">· {t('youLabel')}</span>}</span>
-            <span className="shrink-0 text-right"><span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent)' }}>{r.score}/{r.total}</span><span className="block text-[0.65rem] uppercase tracking-wide text-slate-400">{pct}%</span></span>
+            <span className="shrink-0 text-right"><span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{r.score}/{r.total}</span><span className="block text-[0.65rem] uppercase tracking-wide text-slate-400">{pct}%</span></span>
           </div>
         )
       })}
@@ -709,7 +710,7 @@ function QuizBuilder({ classCode, authorName, accountId, propose, t, onCancel, o
   }
   return (
     <div className="space-y-4">
-      <button onClick={onCancel} className="text-sm font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]">← {t('backToQuizzes')}</button>
+      <button onClick={onCancel} className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">← {t('backToQuizzes')}</button>
       <h2 className="font-display text-2xl font-medium">{propose ? t('proposeQuestion') : t('createQuiz')}</h2>
       {propose && <p className="-mt-2 text-sm text-slate-500 dark:text-slate-400">{t('proposeHint')}</p>}
       <div className="card p-4">
@@ -787,7 +788,7 @@ function DuelList({ classCode, name, t }) {
   if (view === 'pickQuiz') {
     return (
       <div className="space-y-3">
-        <button onClick={() => setView('list')} className="text-sm font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]">← {t('back')}</button>
+        <button onClick={() => setView('list')} className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">← {t('back')}</button>
         <h2 className="font-display text-xl font-semibold">{t('pickQuizForDuel')}</h2>
         {quizzes.length === 0 && <Empty>{t('noQuizForDuel')}</Empty>}
         {quizzes.map((qz) => (
@@ -811,7 +812,7 @@ function DuelList({ classCode, name, t }) {
     }
     return (
       <div className="space-y-3">
-        <button onClick={() => { setCtx(null); setView('list') }} className="text-sm font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]">← {t('back')}</button>
+        <button onClick={() => { setCtx(null); setView('list') }} className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">← {t('back')}</button>
         <h2 className="font-display text-xl font-semibold">⚔️ {ctx.quiz.title || t('quizUntitled')}</h2>
         <Qcm game={game} mode="training" color="var(--c-accent)" onDone={onDone} />
       </div>
@@ -880,6 +881,7 @@ function WallTab({ classCode, role, name, track, t }) {
   const [chapter, setChapter] = useState('')
   const [anon, setAnon] = useState(false)
   const [busy, setBusy] = useState(false)
+  const [alerte, setAlerte] = useState('')
 
   const load = useCallback(async () => {
     setStatus('loading')
@@ -888,12 +890,15 @@ function WallTab({ classCode, role, name, track, t }) {
   useEffect(() => { load() }, [load])
 
   const submit = async () => {
-    if (!text.trim()) return
-    setBusy(true)
+    const espace = `mur:${classCode}`
+    const probleme = problemeMessage(espace, text, { max: 1000 })
+    if (probleme) { setAlerte(t(probleme)); return }
+    setBusy(true); setAlerte('')
     try {
       await postWall({ classCode, name, kind, text: text.trim(), chapterLabel: kind === 'sos' ? chapter : '', isAnon: kind !== 'announce' && anon })
+      noterMessage(espace, text)
       setText(''); setChapter(''); await load()
-    } catch { /* */ } finally { setBusy(false) }
+    } catch { setAlerte(t('postFailed')) } finally { setBusy(false) }
   }
   const react = async (id, e) => { try { const r = await reactWall(id, e); setItems((its) => its.map((it) => it.id === id ? { ...it, reactions: r } : it)) } catch { /* */ } }
 
@@ -906,16 +911,18 @@ function WallTab({ classCode, role, name, track, t }) {
       <div className="card p-4">
         <div className="flex flex-wrap gap-1.5">
           {KINDS.map((k) => (
-            <button key={k.id} onClick={() => setKind(k.id)} className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${kind === k.id ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={kind === k.id ? { backgroundColor: 'var(--c-accent)' } : undefined}>{k.label}</button>
+            <button key={k.id} onClick={() => setKind(k.id)} className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${kind === k.id ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={kind === k.id ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>{k.label}</button>
           ))}
         </div>
         {kind === 'sos' && (
           <input value={chapter} onChange={(e) => setChapter(e.target.value)} maxLength={120} placeholder={t('sosChapterPlaceholder')}
             className="mt-2 w-full rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm outline-none focus:border-[var(--c-accent)] dark:border-slate-700" />
         )}
-        <textarea value={text} onChange={(e) => setText(e.target.value)} maxLength={1000} rows={2}
+        <textarea value={text} onChange={(e) => { setText(e.target.value); setAlerte('') }} maxLength={1000} rows={2}
+          aria-label={t('questionWallPlaceholder')} aria-describedby={alerte ? 'mur-alerte' : undefined}
           placeholder={kind === 'announce' ? t('announcePlaceholder') : kind === 'sos' ? t('sosPlaceholder') : t('questionWallPlaceholder')}
           className="mt-2 w-full resize-none rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm outline-none focus:border-[var(--c-accent)] dark:border-slate-700" />
+        {alerte && <p id="mur-alerte" role="alert" className="mt-1 text-xs font-semibold text-rose-700 dark:text-rose-400">{alerte}</p>}
         <div className="mt-2 flex items-center justify-between gap-2">
           {kind !== 'announce'
             ? <label className="flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400"><input type="checkbox" checked={anon} onChange={(e) => setAnon(e.target.checked)} /> {t('postAnon')}</label>
@@ -934,7 +941,7 @@ function WallTab({ classCode, role, name, track, t }) {
         return (
           <div key={it.id} className={`card p-4 ${it.kind === 'announce' ? 'border-l-4' : ''}`} style={it.kind === 'announce' ? { borderColor: 'var(--c-accent)' } : undefined}>
             <div className="flex items-center justify-between gap-2">
-              <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: 'var(--c-accent)' }}>{badge}</p>
+              <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: 'var(--c-accent-texte)' }}>{badge}</p>
               {canManage && <button onClick={async () => { try { await deleteWall(it.id) } catch { /* */ } load() }} className="text-xs text-slate-400 hover:text-rose-500">✕</button>}
             </div>
             {it.kind === 'sos' && it.chapter_label && <p className="mt-1 text-sm font-semibold">📚 {it.chapter_label}</p>}
@@ -942,7 +949,7 @@ function WallTab({ classCode, role, name, track, t }) {
             <p className="mt-1 text-xs text-slate-400">— {author}{it.resolved ? ` · ✓ ${t('resolved')}` : ''}</p>
             {it.answer && (
               <div className="mt-2 rounded-xl bg-[color-mix(in_srgb,var(--c-accent)_8%,transparent)] p-2.5 text-sm">
-                <span className="font-semibold" style={{ color: 'var(--c-accent)' }}>↳ {it.answered_by || t('roleTeacher')}: </span>{it.answer}
+                <span className="font-semibold" style={{ color: 'var(--c-accent-texte)' }}>↳ {it.answered_by || t('roleTeacher')}: </span>{it.answer}
               </div>
             )}
             <div className="mt-2 flex flex-wrap items-center gap-1.5">
@@ -964,14 +971,23 @@ function WallTab({ classCode, role, name, track, t }) {
 function AnswerButton({ it, name, t, onDone }) {
   const [open, setOpen] = useState(false)
   const [val, setVal] = useState(it.answer || '')
+  const [alerte, setAlerte] = useState('')
+  const envoyer = async () => {
+    const espace = `reponse:${it.id}`
+    const probleme = problemeMessage(espace, val, { max: 1000 })
+    if (probleme) { setAlerte(t(probleme)); return }
+    try { await answerWall(it.id, val, name); noterMessage(espace, val) } catch { setAlerte(t('postFailed')); return }
+    setOpen(false); onDone()
+  }
   if (!open) return <button onClick={() => setOpen(true)} className="text-xs font-semibold text-[var(--c-accent)] hover:underline">💬 {t('reply')}</button>
   return (
     <div className="mt-1 w-full">
-      <textarea value={val} onChange={(e) => setVal(e.target.value)} rows={2} maxLength={1000} placeholder={t('replyPlaceholder')}
+      <textarea value={val} onChange={(e) => { setVal(e.target.value); setAlerte('') }} rows={2} maxLength={1000} placeholder={t('replyPlaceholder')} aria-label={t('replyPlaceholder')}
         className="w-full resize-none rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm outline-none focus:border-[var(--c-accent)] dark:border-slate-700" />
+      {alerte && <p role="alert" className="mt-1 text-xs font-semibold text-rose-700 dark:text-rose-400">{alerte}</p>}
       <div className="mt-1 flex gap-2">
         <button onClick={() => setOpen(false)} className="text-xs font-semibold text-slate-400">{t('cancel')}</button>
-        <button onClick={async () => { try { await answerWall(it.id, val, name) } catch { /* */ } setOpen(false); onDone() }} className="btn-primary !min-h-0 !py-1.5 text-xs">{t('sendReply')}</button>
+        <button onClick={envoyer} className="btn-primary !min-h-0 !py-1.5 text-xs">{t('sendReply')}</button>
       </div>
     </div>
   )
@@ -1029,7 +1045,7 @@ function ProfTab({ classCode, name, track, meta, reloadMeta, t }) {
     <div className="space-y-3">
       <div className="flex gap-1.5 text-xs">
         {SUBS.map((s) => (
-          <button key={s.id} onClick={() => setSub(s.id)} className={`whitespace-nowrap rounded-full px-3 py-1.5 font-semibold transition ${sub === s.id ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={sub === s.id ? { backgroundColor: 'var(--c-accent)' } : undefined}>{s.label}</button>
+          <button key={s.id} onClick={() => setSub(s.id)} className={`whitespace-nowrap rounded-full px-3 py-1.5 font-semibold transition ${sub === s.id ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={sub === s.id ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>{s.label}</button>
         ))}
       </div>
       {sub === 'board' && <ProfDashboard classCode={classCode} track={track} t={t} />}
@@ -1137,7 +1153,7 @@ function ProfDashboard({ classCode, track, t }) {
           </div>
         </div>
         <div className="mt-3 grid grid-cols-2 gap-2 text-center sm:grid-cols-4">
-          <div><div className="font-display text-2xl font-semibold" style={{ color: 'var(--c-accent)' }}>{students.length}</div><div className="text-[0.62rem] uppercase tracking-wide text-slate-400">{t('membersCount')}</div></div>
+          <div><div className="font-display text-2xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{students.length}</div><div className="text-[0.62rem] uppercase tracking-wide text-slate-400">{t('membersCount')}</div></div>
           <div><div className="font-display text-2xl font-semibold" style={{ color: heatColor(classAvg) }}>{classAvg}%</div><div className="text-[0.62rem] uppercase tracking-wide text-slate-400">{t('classAvg')}</div></div>
           <div><div className="font-display text-2xl font-semibold" style={{ color: heatColor(median) }}>{median}%</div><div className="text-[0.62rem] uppercase tracking-wide text-slate-400">{t('medianLabel')}</div></div>
           <div><div className="font-display text-2xl font-semibold" style={{ color: atRiskCount ? '#c0392b' : '#16a085' }}>{atRiskCount}</div><div className="text-[0.62rem] uppercase tracking-wide text-slate-400">{t('atRisk')}</div></div>
@@ -1248,7 +1264,7 @@ function ProfDashboard({ classCode, track, t }) {
           <div className="flex gap-1.5 overflow-x-auto text-xs">
             <span className="shrink-0 self-center text-slate-400">{t('sortBy')} :</span>
             {SORTS.map((s) => (
-              <button key={s.id} onClick={() => setSort(s.id)} className={`whitespace-nowrap rounded-full px-2.5 py-1 font-semibold transition ${sort === s.id ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={sort === s.id ? { backgroundColor: 'var(--c-accent)' } : undefined}>{s.label}</button>
+              <button key={s.id} onClick={() => setSort(s.id)} className={`whitespace-nowrap rounded-full px-2.5 py-1 font-semibold transition ${sort === s.id ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={sort === s.id ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>{s.label}</button>
             ))}
           </div>
           {list.length === 0 && <Empty>{riskOnly ? t('noAtRisk') : t('noMemberYet')}</Empty>}
@@ -1331,7 +1347,7 @@ function ProfGroups({ classCode, t }) {
       {groups.map((g) => (
         <div key={g.id} className="card p-3.5">
           <div className="flex items-center justify-between gap-2">
-            <span className="inline-flex items-center gap-2 font-display font-semibold" style={{ color: g.color || undefined }}><span className="text-lg">{g.emoji}</span>{g.name}</span>
+            <span className="inline-flex items-center gap-2 font-display font-semibold texte-matiere" style={{ '--mc': g.color || undefined }}><span className="text-lg">{g.emoji}</span>{g.name}</span>
             <button onClick={async () => { if (confirm(t('deleteGroupConfirm'))) { try { await deleteGroup(g.id) } catch { /* */ } load() } }} className="text-xs font-semibold text-rose-600 hover:underline">{t('delete')}</button>
           </div>
           <p className="mt-1 text-xs text-slate-400">{students.filter((m) => m.group_id === g.id).length} {t('membersCount')}</p>
@@ -1378,7 +1394,16 @@ function ProfSettings({ classCode, name, track, meta, reloadMeta, t }) {
   const flash = (msg) => { setSaved(msg); setTimeout(() => setSaved(''), 2500) }
   const saveBlason = async () => { try { await upsertMeta(classCode, { blason_name: bname.trim(), blason_emoji: bemoji, blason_color: bcolor }) ; flash(t('saved')); reloadMeta() } catch { /* */ } }
   const saveGoal = async () => { try { await upsertMeta(classCode, { goal_target: Math.max(0, Math.min(100000, Math.round(Number(goal) || 0))) }); flash(t('saved')); reloadMeta() } catch { /* */ } }
-  const saveAnnounce = async () => { try { await upsertMeta(classCode, { announcement: announce.trim(), announcement_by: name, announcement_at: new Date().toISOString() }); flash(t('saved')); reloadMeta() } catch { /* */ } }
+  const saveAnnounce = async () => {
+    const espace = `annonce:${classCode}`
+    const probleme = announce.trim() ? problemeMessage(espace, announce, { max: 500 }) : null
+    if (probleme) { flash(t(probleme)); return }
+    try {
+      await upsertMeta(classCode, { announcement: announce.trim(), announcement_by: name, announcement_at: new Date().toISOString() })
+      if (announce.trim()) noterMessage(espace, announce)
+      flash(t('saved')); reloadMeta()
+    } catch { flash(t('postFailed')) }
+  }
   const saveChallenge = async () => {
     const ch = trackSubjects.find((s) => s.id === csid)?.chapters?.find((c) => c.id === ctid)
     const label = ch ? `${chosenSubj?.name} — ${ch.short || ch.name}` : ''

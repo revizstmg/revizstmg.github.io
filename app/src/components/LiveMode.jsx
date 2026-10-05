@@ -123,7 +123,7 @@ function HostView({ session: initial, t, onExit }) {
         {Header}
         <div className="card card-lux p-6 text-center">
           <p className="kicker">{t('joinWithCode')}</p>
-          <p className="my-2 font-display text-4xl font-bold tracking-wide" style={{ color: 'var(--c-accent)' }}>{session.class_code}</p>
+          <p className="my-2 font-display text-4xl font-bold tracking-wide" style={{ color: 'var(--c-accent-texte)' }}>{session.class_code}</p>
           <p className="text-sm text-slate-500 dark:text-slate-400">{t('playersJoining')}</p>
           <p className="mt-3 font-display text-2xl font-semibold">{players.length} 👥</p>
         </div>
@@ -191,7 +191,7 @@ function HostView({ session: initial, t, onExit }) {
             <div key={p.device_id} className="flex items-center gap-2 py-1">
               <span className="w-6 text-center font-semibold">{medal(i)}</span>
               <span className="min-w-0 flex-1 truncate text-sm font-semibold">{p.name || '—'}</span>
-              <span className="font-display font-semibold" style={{ color: 'var(--c-accent)' }}>{p.score}</span>
+              <span className="font-display font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{p.score}</span>
             </div>
           ))}
           {top.length === 0 && <p className="text-sm text-slate-400">—</p>}
@@ -215,7 +215,7 @@ function HostView({ session: initial, t, onExit }) {
           <span className="w-8 text-center font-display text-xl font-semibold">{medal(i)}</span>
           <span className="monogram grid h-10 w-10 shrink-0 place-items-center overflow-hidden text-sm">{p.photo ? <img src={p.photo} alt="" className="h-full w-full rounded-full object-cover" /> : initialsOf(p.name)}</span>
           <span className="min-w-0 flex-1 truncate font-semibold">{p.name || '—'}</span>
-          <span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent)' }}>{p.score}</span>
+          <span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{p.score}</span>
         </div>
       ))}
       <button onClick={close} className="btn-primary w-full">{t('close')}</button>
@@ -335,7 +335,7 @@ function PlayerView({ session: initial, name, photo, t, onExit }) {
       <div className="card card-lux p-8 text-center">
         <div className="text-4xl">🏁</div>
         <h2 className="mt-2 font-display text-2xl font-semibold">{rank === 1 ? `🥇 ${t('youWon')}` : t('gameOver')}</h2>
-        <p className="mt-2 font-display text-3xl font-bold" style={{ color: 'var(--c-accent)' }}>{myScore} pts</p>
+        <p className="mt-2 font-display text-3xl font-bold" style={{ color: 'var(--c-accent-texte)' }}>{myScore} pts</p>
         {rank ? <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{medal(rank - 1)} {t('yourRank')}</p> : null}
       </div>
       <button onClick={onExit} className="btn-ghost w-full">{t('close')}</button>

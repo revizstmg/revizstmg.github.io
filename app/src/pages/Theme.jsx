@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Link, useParams, Navigate, useSearchParams } from 'react-router-dom'
+import { Link, useParams, useSearchParams } from 'react-router-dom'
+import Introuvable from './Introuvable.jsx'
 import { getChapter, getSubject, themeChapters, deckForTheme } from '../data/index.js'
 import { buildThemeExam, themeExamSize } from '../data/study.js'
 import { PIEGES } from '../data/pieges.js'
@@ -46,7 +47,8 @@ export default function Theme() {
 
   useEffect(() => { setTab(ongletDemande(searchParams.get('tab'))) }, [tid, searchParams])
 
-  if (!subject || !theme) return <Navigate to="/" replace />
+  if (!subject) return <Introuvable />
+  if (!theme) return <Introuvable retour={{ to: `/subject/${sid}`, label: subject.short || subject.name }} />
   const color = subject.color
   const chapters = themeChapters(theme)
   const score = chapterScore(state, tid)
@@ -128,26 +130,27 @@ export default function Theme() {
               const prog = chapterProgress(c)
               const done = prog != null && prog >= 90
               return (
-                <Link
-                  key={c.id}
-                  to={`/subject/${sid}/theme/${tid}/chapter/${c.idx}`}
-                  className="card group flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md"
-                >
-                  <span
-                    className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-sm font-black text-white shadow-sm"
-                    style={{ backgroundColor: done ? '#16a34a' : color }}
-                    aria-hidden
+                <li key={c.id}>
+                  <Link
+                    to={`/subject/${sid}/theme/${tid}/chapter/${c.idx}`}
+                    className="card group flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md"
                   >
-                    {done ? '✓' : n}
-                  </span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block font-semibold leading-snug"><CourseText text={sansEmoji(c.title)} /></span>
-                    {prog != null && prog > 0 && (
-                      <span className="mt-1.5 block max-w-[220px]"><ProgressBar value={prog} color={done ? '#16a34a' : color} /></span>
-                    )}
-                  </span>
-                  <span className="text-lg text-slate-300 transition group-hover:translate-x-0.5" aria-hidden>›</span>
-                </Link>
+                    <span
+                      className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-sm font-black text-white shadow-sm"
+                      style={{ backgroundColor: done ? '#15803d' : color }}
+                      aria-hidden
+                    >
+                      {done ? '✓' : n}
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block font-semibold leading-snug"><CourseText text={sansEmoji(c.title)} /></span>
+                      {prog != null && prog > 0 && (
+                        <span className="mt-1.5 block max-w-[220px]"><ProgressBar value={prog} color={done ? '#15803d' : color} /></span>
+                      )}
+                    </span>
+                    <span className="text-lg text-slate-300 transition group-hover:translate-x-0.5" aria-hidden>›</span>
+                  </Link>
+                </li>
               )
             }
 

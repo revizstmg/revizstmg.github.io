@@ -12,7 +12,7 @@ function Step({ n, title, children }) {
       <div className="flex items-start gap-4">
         <span
           className="grid h-10 w-10 shrink-0 place-items-center rounded-full font-display text-lg font-semibold"
-          style={{ color: 'var(--c-accent)', border: '1.5px solid color-mix(in srgb, var(--c-accent) 40%, transparent)' }}
+          style={{ color: 'var(--c-accent-texte)', border: '1.5px solid color-mix(in srgb, var(--c-accent) 40%, transparent)' }}
           aria-hidden
         >
           {n}
@@ -43,7 +43,7 @@ export default function Guide() {
       <div className="card card-lux flex flex-wrap items-center justify-between gap-3 p-5">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">Adresse du site</p>
-          <p className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent)' }}>{SITE}</p>
+          <p className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{SITE}</p>
         </div>
         <p className="text-xs text-slate-500 dark:text-slate-400">Ouvre-le dans ton navigateur pour commencer.</p>
       </div>
@@ -72,7 +72,7 @@ export default function Guide() {
               <li>Choisis <b>« Sur l’écran d’accueil »</b></li>
               <li>Touche <b>Ajouter</b></li>
             </ol>
-            <p className="mt-2 rounded-lg px-2 py-1.5 text-xs" style={{ backgroundColor: 'color-mix(in srgb, #c8a24e 16%, transparent)', color: '#8a6a1e' }}>⚠️ Sur iPhone, ça marche <b>uniquement dans Safari</b> — pas dans Chrome.</p>
+            <p className="mt-2 rounded-lg px-2 py-1.5 text-xs" style={{ backgroundColor: 'color-mix(in srgb, #c8a24e 16%, transparent)', color: 'var(--c-accent-texte)' }}>⚠️ Sur iPhone, ça marche <b>uniquement dans Safari</b> — pas dans Chrome.</p>
           </div>
           <div className="rounded-xl border border-slate-200 p-3 dark:border-slate-700">
             <p className="mb-1.5 flex items-center gap-2 font-semibold"><span aria-hidden>🤖</span> Android</p>
@@ -95,14 +95,14 @@ export default function Guide() {
       <div className="card flex items-center gap-4 p-5" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 30%, transparent)' }}>
         <span className="text-3xl" aria-hidden>🔑</span>
         <p className="text-sm text-slate-600 dark:text-slate-300">
-          <b>Un code de classe ?</b> Si ton prof t’en donne un, saisis-le dans <Link to="/classement" className="font-semibold text-[#98761f] underline dark:text-[#d9bd77]">Classement</Link> pour rejoindre ta classe et suivre le classement de la semaine.
+          <b>Un code de classe ?</b> Si ton prof t’en donne un, saisis-le dans <Link to="/classement" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">Classement</Link> pour rejoindre ta classe et suivre le classement de la semaine.
         </p>
       </div>
 
       <div className="card card-lux p-5 text-center">
         <h2 className="font-display text-lg font-semibold">Une question ?</h2>
         <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">Écris-nous, on te répond :</p>
-        <a href="mailto:revizstmg@gmail.com" className="mt-2 inline-block font-semibold text-[#98761f] underline dark:text-[#d9bd77]">revizstmg@gmail.com</a>
+        <a href="mailto:revizstmg@gmail.com" className="mt-2 inline-block font-semibold text-[#84671b] underline dark:text-[#d9bd77]">revizstmg@gmail.com</a>
       </div>
 
       <div className="flex flex-wrap gap-2 pt-1">

@@ -47,7 +47,7 @@ export function ProgressCurve({ history }) {
     <div className="card p-4">
       <div className="mb-1 flex items-baseline justify-between">
         <span className="text-xs uppercase tracking-wide text-slate-400">{fmtDay(days[0][0])} → {fmtDay(days[n - 1][0])}</span>
-        <span className="text-xs font-semibold" style={{ color: 'var(--c-accent)' }}>+{gained} XP</span>
+        <span className="text-xs font-semibold" style={{ color: 'var(--c-accent-texte)' }}>+{gained} XP</span>
       </div>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" preserveAspectRatio="none" role="img" aria-label={t('progressCurve')} style={{ display: 'block' }}>
         <defs>

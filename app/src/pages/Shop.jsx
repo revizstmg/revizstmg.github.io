@@ -83,7 +83,7 @@ export default function Shop() {
       <section className="card card-lux flex items-center justify-between p-5">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">{t('yourBalance')}</p>
-          <p className="font-display text-3xl font-extrabold" style={{ color: 'var(--c-accent)' }}>🪙 {coins}</p>
+          <p className="font-display text-3xl font-extrabold" style={{ color: 'var(--c-accent-texte)' }}>🪙 {coins}</p>
         </div>
         <p className="max-w-[55%] text-right text-xs text-slate-500 dark:text-slate-400">{t('howToEarnCoins')}</p>
       </section>
@@ -96,7 +96,7 @@ export default function Shop() {
             <div className="mb-3 flex items-center justify-between px-1">
               <h2 className="font-display text-lg font-semibold text-slate-700 dark:text-slate-200">{cat.icon} {t(cat.key)}</h2>
               {cat.id === 'theme' && (state.customTheme?.accent || state.customTheme?.avatar) && (
-                <button onClick={resetCustomTheme} className="text-xs font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]">{t('resetTheme')}</button>
+                <button onClick={resetCustomTheme} className="text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('resetTheme')}</button>
               )}
             </div>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">

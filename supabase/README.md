@@ -7,7 +7,18 @@ RévizSTMG uniquement.
 ```
 migrations/        l'historique des migrations des 17 tables de RévizSTMG
 functions/         la fonction « fiche-vision » (pas encore déployée)
+a-valider/         modifications prêtes mais pas encore appliquées (accord à donner)
 ```
+
+## En attente d'accord (`a-valider/`)
+
+Ces fichiers ne sont **pas** appliqués sur Supabase. Une fois l'accord donné, chacun
+est déplacé dans `migrations/` (avec son horodatage) et appliqué sous son nom.
+
+- `revizstmg_statistiques.sql` : la mesure d'audience sans cookie (table
+  `revizstmg_visites`, fonction `revizstmg_compter_vue`) et la fonction
+  `revizstmg_statistiques()` lue par le fichier de statistiques du matin. Après
+  application, passer `MESURE_ACTIVE` à `true` dans `app/src/mesure.js`.
 
 ## Les migrations
 

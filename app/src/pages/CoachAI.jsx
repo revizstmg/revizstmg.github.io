@@ -73,7 +73,7 @@ export default function CoachAI() {
         <section className="card card-lux p-6 text-center">
           <div className="text-4xl">🧭</div>
           <p className="mx-auto mt-3 max-w-sm text-sm text-slate-600 dark:text-slate-300">{t('aiNoData')}</p>
-          <Link to="/revision" className="btn-primary mt-5 inline-flex" style={{ backgroundColor: 'var(--c-accent)' }}>{t('aiNoDataCta')}</Link>
+          <Link to="/revision" className="btn-primary mt-5 inline-flex" style={{ backgroundColor: 'var(--c-accent-fort)' }}>{t('aiNoDataCta')}</Link>
         </section>
       ) : (
         <>
@@ -95,7 +95,7 @@ export default function CoachAI() {
             {/* mini-stats */}
             <div className="mt-4 grid grid-cols-3 gap-2 text-center">
               <div className="rounded-xl bg-slate-50 p-2.5 dark:bg-slate-800/60">
-                <div className="text-lg font-bold" style={{ color: 'var(--c-accent)' }}>{a.coverage}%</div>
+                <div className="text-lg font-bold" style={{ color: 'var(--c-accent-texte)' }}>{a.coverage}%</div>
                 <div className="text-[11px] leading-tight text-slate-500 dark:text-slate-400">{t('aiCoverage')}</div>
               </div>
               <div className="rounded-xl bg-slate-50 p-2.5 dark:bg-slate-800/60">
@@ -165,7 +165,7 @@ export default function CoachAI() {
               {[2, 3, 4].map((n) => (
                 <button key={n} onClick={() => setPerDay(n)} aria-pressed={perDay === n}
                   className={`rounded-lg px-2.5 py-1 text-xs font-semibold transition ${perDay === n ? 'text-white' : 'bg-slate-100 text-slate-500 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`}
-                  style={perDay === n ? { backgroundColor: 'var(--c-accent)' } : undefined}>
+                  style={perDay === n ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
                   {n}/jour
                 </button>
               ))}
@@ -180,7 +180,7 @@ export default function CoachAI() {
                     <div key={d.date} className={`card p-3.5 ${d.isToday ? 'ring-2 ring-offset-2 ring-offset-transparent' : ''}`} style={d.isToday ? { '--tw-ring-color': 'var(--c-accent)' } : undefined}>
                       <div className="mb-2 flex items-center gap-2">
                         <span className="text-sm font-semibold">{d.isToday ? t('aiToday') : d.dayOffset === 1 ? t('aiTomorrow') : fmtDay(d.date)}</span>
-                        {d.isToday && <span className="chip" style={{ backgroundColor: 'var(--c-accent)22', color: 'var(--c-accent)' }}>{t('aiToday')}</span>}
+                        {d.isToday && <span className="chip" style={{ backgroundColor: 'var(--c-accent)22', color: 'var(--c-accent-texte)' }}>{t('aiToday')}</span>}
                         <span className="ml-auto text-xs text-slate-400">{d.items.length} thème{d.items.length > 1 ? 's' : ''}</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
@@ -269,7 +269,7 @@ export default function CoachAI() {
               {[{ n: 8, l: 'Express' }, { n: 12, l: 'Standard' }, { n: 20, l: 'Intensif' }].map((o) => (
                 <button key={o.n} onClick={() => setSessionLen(o.n)} aria-pressed={sessionLen === o.n}
                   className={`rounded-xl px-2 py-2 text-center text-xs font-semibold transition ${sessionLen === o.n ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`}
-                  style={sessionLen === o.n ? { backgroundColor: 'var(--c-accent)' } : undefined}>
+                  style={sessionLen === o.n ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
                   {o.l}<br /><span className="opacity-70">{o.n} questions</span>
                 </button>
               ))}

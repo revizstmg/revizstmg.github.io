@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Routes, Route, Navigate, useParams } from 'react-router-dom'
 import { useStore } from './store.jsx'
 import Layout from './components/Layout.jsx'
+import Introuvable from './pages/Introuvable.jsx'
 import { getLinkedChild } from './parent.js'
 import { Chargement, ContenuMatiere, ContenuFiliere } from './content/Contenu.jsx'
 
@@ -31,6 +32,7 @@ const Formulas = lazy(() => import('./pages/Formulas.jsx'))
 const Methodo = lazy(() => import('./pages/Methodo.jsx'))
 const Shop = lazy(() => import('./pages/Shop.jsx'))
 const Privacy = lazy(() => import('./pages/Privacy.jsx'))
+const Cgu = lazy(() => import('./pages/Cgu.jsx'))
 const Faq = lazy(() => import('./pages/Faq.jsx'))
 const Guide = lazy(() => import('./pages/Guide.jsx'))
 const Friends = lazy(() => import('./pages/Friends.jsx'))
@@ -86,11 +88,12 @@ export default function App() {
         <Route path="/methodo" element={<Methodo />} />
         <Route path="/boutique" element={<Shop />} />
         <Route path="/confidentialite" element={<Privacy />} />
+        <Route path="/cgu" element={<Cgu />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/classement" element={<Leaderboard />} />
         <Route path="/amis" element={<ContenuFiliere><Friends /></ContenuFiliere>} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Introuvable />} />
       </Routes>
       </Suspense>
     </Layout>

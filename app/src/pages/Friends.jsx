@@ -185,7 +185,7 @@ export default function Friends() {
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{d.chapter_label} · {(d.questions || []).length} {t('questionsShort')}</p>
           <p className="mt-2 text-sm">{t('duelConfirmHint')}</p>
           <div className="mt-5 flex justify-center gap-2">
-            <button onClick={() => acceptInvite(d)} disabled={busy} className="btn-primary" style={{ backgroundColor: '#3f9d6d' }}>▶ {t('duelAcceptPlay')}</button>
+            <button onClick={() => acceptInvite(d)} disabled={busy} className="btn-primary" style={{ backgroundColor: '#34825a' }}>▶ {t('duelAcceptPlay')}</button>
             <button onClick={() => remove(d.id)} disabled={busy} className="btn-ghost">{t('duelDecline')}</button>
           </div>
         </div>
@@ -219,11 +219,11 @@ export default function Friends() {
           <h1 className="mt-2 font-display text-2xl font-bold">{win ? t('duelWin') : draw ? t('duelDraw') : t('duelLoss')}</h1>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{flow.label}</p>
           <div className="mt-4 flex items-center justify-center gap-6">
-            <div><p className="text-xs text-slate-400">{t('you')}</p><p className="font-display text-4xl font-extrabold" style={{ color: 'var(--c-accent)' }}>{flow.mine}</p><p className="text-xs text-slate-400">{flow.myCorrect}/{flow.total}</p></div>
+            <div><p className="text-xs text-slate-400">{t('you')}</p><p className="font-display text-4xl font-extrabold" style={{ color: 'var(--c-accent-texte)' }}>{flow.mine}</p><p className="text-xs text-slate-400">{flow.myCorrect}/{flow.total}</p></div>
             <span className="font-display text-2xl text-slate-400">—</span>
             <div><p className="text-xs text-slate-400">{flow.opp || 'Élève'}</p><p className="font-display text-4xl font-extrabold">{flow.theirs}</p><p className="text-xs text-slate-400">{flow.theirCorrect}/{flow.total}</p></div>
           </div>
-          <button onClick={() => { setFlow(null); setView('duels') }} className="btn-primary mt-6" style={{ backgroundColor: 'var(--c-accent)' }}>{t('done')}</button>
+          <button onClick={() => { setFlow(null); setView('duels') }} className="btn-primary mt-6" style={{ backgroundColor: 'var(--c-accent-fort)' }}>{t('done')}</button>
         </div>
       </div>
     )
@@ -234,7 +234,7 @@ export default function Friends() {
       {[['amis', `🤝 ${t('friends')}`], ['duels', `⚔️ ${t('duels')}`]].map(([k, lbl]) => {
         const badge = k === 'duels' ? duelInv.length + liveToPlay.length : 0
         return (
-          <button key={k} onClick={() => setView(k)} className={`flex-1 rounded-xl px-3 py-2 text-sm font-semibold transition ${view === k ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`} style={view === k ? { backgroundColor: 'var(--c-accent)' } : undefined}>
+          <button key={k} onClick={() => setView(k)} className={`flex-1 rounded-xl px-3 py-2 text-sm font-semibold transition ${view === k ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`} style={view === k ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
             {lbl}{badge > 0 ? ` (${badge})` : ''}
           </button>
         )
@@ -258,7 +258,7 @@ export default function Friends() {
         <>
           <section className="card card-lux p-5 text-center">
             <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">{t('myFriendCode')}</p>
-            <p className="my-1 font-display text-4xl font-extrabold tracking-[0.2em]" style={{ color: 'var(--c-accent)' }}>{code}</p>
+            <p className="my-1 font-display text-4xl font-extrabold tracking-[0.2em]" style={{ color: 'var(--c-accent-texte)' }}>{code}</p>
             <button onClick={copy} className="btn-ghost !min-h-0 !py-2 text-sm">{copied ? `✓ ${t('copied')}` : `📋 ${t('copyCode')}`}</button>
             <p className="mt-2 text-xs text-slate-400">{t('friendCodeHint')}</p>
           </section>
@@ -268,7 +268,7 @@ export default function Friends() {
             <div className="flex gap-2">
               <input value={input} onChange={(e) => setInput(normFriendCode(e.target.value))} onKeyDown={(e) => e.key === 'Enter' && add()} placeholder={t('friendCodePlaceholder')} maxLength={6}
                 className="flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-display text-lg font-semibold uppercase tracking-widest outline-none focus:border-[color:var(--c-accent)] dark:border-slate-700 dark:bg-slate-800" aria-label={t('addFriend')} />
-              <button onClick={add} disabled={busy || normFriendCode(input).length < 4} className="btn-primary shrink-0 disabled:opacity-40" style={{ backgroundColor: 'var(--c-accent)' }}>{t('send')}</button>
+              <button onClick={add} disabled={busy || normFriendCode(input).length < 4} className="btn-primary shrink-0 disabled:opacity-40" style={{ backgroundColor: 'var(--c-accent-fort)' }}>{t('send')}</button>
             </div>
             {msg && <p className={`mt-2 text-sm ${msg.kind === 'ok' ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}>{msg.text}</p>}
           </section>
@@ -301,7 +301,7 @@ export default function Friends() {
                 const rec = record[f.device_id]
                 return (
                   <div key={f.device_id} className="card flex items-center gap-3 p-3">
-                    <span className="w-6 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent)' }}>{medal(i)}</span>
+                    <span className="w-6 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent-texte)' }}>{medal(i)}</span>
                     <span className="monogram grid h-10 w-10 shrink-0 place-items-center overflow-hidden text-sm">
                       {f.photo ? <img src={f.photo} alt="" className="h-full w-full rounded-full object-cover" /> : initialsOf(f.name)}
                     </span>
@@ -309,7 +309,7 @@ export default function Friends() {
                       <span className="block truncate font-semibold">{f.name || 'Élève'}</span>
                       <span className="block text-xs text-slate-400">🔥 {f.streak || 0} · {f.xp || 0} XP{rec ? ` · ⚔️ ${rec.w}${t('duelWinShort')}-${rec.l}${t('duelLossShort')}` : ''}</span>
                     </span>
-                    <button onClick={() => openSetup(f)} disabled={busy} className="shrink-0 rounded-lg px-3 py-1.5 text-sm font-semibold text-white" style={{ backgroundColor: 'var(--c-accent)' }}>⚔️ {t('challenge')}</button>
+                    <button onClick={() => openSetup(f)} disabled={busy} className="shrink-0 rounded-lg px-3 py-1.5 text-sm font-semibold text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }}>⚔️ {t('challenge')}</button>
                     <button onClick={() => drop(f.device_id)} disabled={busy} className="shrink-0 text-slate-300 hover:text-rose-500" title={t('friendRemove')} aria-label={t('friendRemove')}>✕</button>
                   </div>
                 )
@@ -375,7 +375,7 @@ export default function Friends() {
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <p className="text-sm">{t('duelWith')} <b>{flow.friend.name || 'Élève'}</b></p>
-                  <button onClick={() => randomDuel(flow.friend)} disabled={busy} className="rounded-full px-3 py-1.5 text-xs font-semibold text-white" style={{ backgroundColor: 'var(--c-accent)' }}>🎲 {t('duelRandom')}</button>
+                  <button onClick={() => randomDuel(flow.friend)} disabled={busy} className="rounded-full px-3 py-1.5 text-xs font-semibold text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }}>🎲 {t('duelRandom')}</button>
                 </div>
                 <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">{t('duelPickThemes')}</p>
                 <div className="max-h-64 space-y-3 overflow-y-auto rounded-xl bg-slate-50 p-3 dark:bg-slate-800/40">
@@ -386,7 +386,7 @@ export default function Friends() {
                         {(s.chapters || []).map((th) => {
                           const on = sel.has(th.id)
                           return (
-                            <button key={th.id} onClick={() => toggleTheme(th.id)} className={`rounded-full px-2.5 py-1 text-xs font-semibold transition ${on ? 'text-white' : 'bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-100 dark:bg-slate-800 dark:text-slate-300 dark:ring-slate-700'}`} style={on ? { backgroundColor: 'var(--c-accent)' } : undefined}>
+                            <button key={th.id} onClick={() => toggleTheme(th.id)} className={`rounded-full px-2.5 py-1 text-xs font-semibold transition ${on ? 'text-white' : 'bg-white text-slate-600 ring-1 ring-slate-200 hover:bg-slate-100 dark:bg-slate-800 dark:text-slate-300 dark:ring-slate-700'}`} style={on ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
                               {on ? '✓ ' : ''}{th.short || th.name}
                             </button>
                           )
@@ -396,7 +396,7 @@ export default function Friends() {
                   ))}
                 </div>
                 <div className="flex items-center gap-2">
-                  <button onClick={() => launch(flow.friend)} disabled={busy || sel.size === 0} className="btn-primary flex-1 disabled:opacity-40" style={{ backgroundColor: 'var(--c-accent)' }}>📨 {t('duelInviteBtn')} {sel.size > 0 ? `(${sel.size})` : ''}</button>
+                  <button onClick={() => launch(flow.friend)} disabled={busy || sel.size === 0} className="btn-primary flex-1 disabled:opacity-40" style={{ backgroundColor: 'var(--c-accent-fort)' }}>📨 {t('duelInviteBtn')} {sel.size > 0 ? `(${sel.size})` : ''}</button>
                   <button onClick={() => { setFlow(null); setSel(new Set()) }} className="btn-ghost">{t('cancel')}</button>
                 </div>
                 {msg && msg.kind === 'err' && <p className="text-sm text-rose-600 dark:text-rose-400">{msg.text}</p>}

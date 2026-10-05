@@ -95,7 +95,7 @@ export default function Profile() {
           {stats.map((s) => (
             <div key={s.label} className="card flex flex-col items-center justify-center p-4 text-center">
               <span className="text-2xl" aria-hidden>{s.icon}</span>
-              <span className="mt-1 font-display text-2xl font-semibold" style={{ color: 'var(--c-accent)' }}>{s.value}</span>
+              <span className="mt-1 font-display text-2xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{s.value}</span>
               <span className="mt-0.5 text-[0.65rem] uppercase tracking-wide text-slate-400">{s.label}</span>
             </div>
           ))}
@@ -121,7 +121,7 @@ export default function Profile() {
                 <div key={s.id}>
                   <div className="mb-1 flex items-baseline justify-between gap-2">
                     <span className="min-w-0 flex-1 truncate text-sm font-medium">{s.icon || '📘'} {s.short || s.name}</span>
-                    <span className="shrink-0 text-xs font-semibold tabular-nums" style={{ color: s.color }}>{sc}%</span>
+                    <span className="shrink-0 text-xs font-semibold tabular-nums texte-matiere" style={{ '--mc': s.color }}>{sc}%</span>
                   </div>
                   <ProgressBar value={sc} color={s.color} height={7} />
                 </div>
@@ -135,7 +135,7 @@ export default function Profile() {
       <section>
         <div className="mb-3 flex items-end justify-between px-1">
           <h2 className="font-display text-xl font-medium">{t('myBadges')}</h2>
-          <Link to="/badges" className="text-xs font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]">{t('seeAll')}</Link>
+          <Link to="/badges" className="text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('seeAll')}</Link>
         </div>
         {earnedBadges.length === 0 ? (
           <div className="card p-5 text-center text-sm text-slate-500 dark:text-slate-400">{t('noBadgeYet')}</div>
@@ -206,7 +206,7 @@ export default function Profile() {
           <div className="flex items-center gap-3 p-4">
             <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-slate-100 text-lg dark:bg-slate-800" aria-hidden>📅</span>
             <span className="min-w-0 flex-1"><span className="block font-display font-semibold">{t('prefBac')}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{bacDays != null && bacDays >= 0 ? `J-${bacDays} · ${t('prefBacHint')}` : t('prefBacHint')}</span></span>
-            <input type="date" value={state.bacDate || ''} onChange={(e) => setBacDate(e.target.value)} className="shrink-0 rounded-lg border border-slate-200 bg-white px-2 py-1.5 text-xs dark:border-slate-700 dark:bg-slate-800" />
+            <input type="date" aria-label={t('prefBac')} value={state.bacDate || ''} onChange={(e) => setBacDate(e.target.value)} className="shrink-0 rounded-lg border border-slate-200 bg-white px-2 py-1.5 text-xs dark:border-slate-700 dark:bg-slate-800" />
           </div>
         </div>
       </section>
@@ -225,7 +225,7 @@ export default function Profile() {
 
       {/* Confidentialité & suppression du compte (RGPD) */}
       <section className="space-y-2 pt-2">
-        <Link to="/confidentialite" className="text-sm font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]">{t('privacyPolicy')}</Link>
+        <Link to="/confidentialite" className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('privacyPolicy')}</Link>
         <div className="card p-4" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, #e11d48 40%, transparent)' }}>
           <h3 className="font-display font-semibold text-rose-600 dark:text-rose-400">{t('dangerZone')}</h3>
           <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{t('deleteAccountHint')}</p>
@@ -274,8 +274,8 @@ function ReminderCard({ t }) {
       {r.on && (
         <div className="flex items-center gap-3">
           <label className="text-sm font-semibold">{t('reminderTime')}</label>
-          <input type="time" value={r.time || '18:00'} onChange={(e) => setReminder({ time: e.target.value })} className="rounded-xl border border-slate-200 bg-transparent px-3 py-2 dark:border-slate-700" />
-          <button onClick={test} className="ml-auto rounded-xl px-3 py-2 text-sm font-semibold text-white" style={{ backgroundColor: 'var(--c-accent)' }}>{t('testNotif')}</button>
+          <input type="time" aria-label={t('reminderTime')} value={r.time || '18:00'} onChange={(e) => setReminder({ time: e.target.value })} className="rounded-xl border border-slate-200 bg-transparent px-3 py-2 dark:border-slate-700" />
+          <button onClick={test} className="ml-auto rounded-xl px-3 py-2 text-sm font-semibold text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }}>{t('testNotif')}</button>
         </div>
       )}
       {msg && <p className="text-xs text-slate-500 dark:text-slate-400">{msg}</p>}

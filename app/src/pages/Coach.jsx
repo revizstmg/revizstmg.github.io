@@ -173,12 +173,12 @@ export default function Coach() {
               key={p.key}
               onClick={() => f.applyPreset(p.s, p.b)}
               className={`rounded-xl px-2 py-2 text-center text-xs font-semibold transition ${activePreset === p.key ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`}
-              style={activePreset === p.key ? { backgroundColor: 'var(--c-accent)' } : undefined}
+              style={activePreset === p.key ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}
             >
               {t('preset_' + p.key)}<br /><span className="opacity-70">{p.s}/{p.b}</span>
             </button>
           ))}
-          <span className={`flex items-center justify-center rounded-xl px-2 py-2 text-center text-xs font-semibold ${activePreset === 'custom' ? 'text-white' : 'bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400'}`} style={activePreset === 'custom' ? { backgroundColor: 'var(--c-accent)' } : undefined}>
+          <span className={`flex items-center justify-center rounded-xl px-2 py-2 text-center text-xs font-semibold ${activePreset === 'custom' ? 'text-white' : 'bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400'}`} style={activePreset === 'custom' ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
             {t('preset_custom')}
           </span>
         </div>
@@ -224,7 +224,7 @@ export default function Coach() {
               onClick={() => setShowResults(true)}
               disabled={!allAnswered}
               className="w-full rounded-2xl px-4 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90 disabled:opacity-40"
-              style={{ backgroundColor: 'var(--c-accent)' }}
+              style={{ backgroundColor: 'var(--c-accent-fort)' }}
             >
               {t('seeResults')}
             </button>
@@ -241,7 +241,7 @@ export default function Coach() {
                   </div>
                 ))}
               </div>
-              <button onClick={() => { setShowResults(false); setAnswers({}) }} className="mt-4 text-sm font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]">↺ {t('restartQuiz')}</button>
+              <button onClick={() => { setShowResults(false); setAnswers({}) }} className="mt-4 text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">↺ {t('restartQuiz')}</button>
             </div>
           </div>
         )}

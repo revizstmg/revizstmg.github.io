@@ -48,6 +48,15 @@ npm run test:parcours   # parcours navigateur, après un build (~3 min)
 - N'inventez aucune notion : tout doit correspondre au programme officiel de STMG.
 - L'interface et le contenu sont en français.
 
+## Interface
+
+- Contraste AA : texte en couleur d'accent → `var(--c-accent-texte)`, fond sous du
+  texte blanc → `var(--c-accent-fort)`, texte dans la couleur d'une matière →
+  classe `texte-matiere` + `style={{ '--mc': couleur }}` (README, « Règles de
+  l'interface »).
+- Validation des formulaires et anti-spam : `src/formulaires.js`. Mesure
+  d'audience sans cookie : `src/mesure.js` (inactive, en attente d'accord).
+
 ## Supabase
 
 - Le projet `wyydagcjkbivtbuhbzon` est partagé avec le site NAH (dépôt

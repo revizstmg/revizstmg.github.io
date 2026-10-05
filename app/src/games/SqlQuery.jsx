@@ -31,7 +31,7 @@ function Schema({ schema }) {
       <div className="space-y-1.5">
         {schema.map((tb) => (
           <p key={tb.name} className="font-mono text-[13px] leading-snug">
-            <span className="font-bold" style={{ color: 'var(--c-accent)' }}>{tb.name}</span>
+            <span className="font-bold" style={{ color: 'var(--c-accent-texte)' }}>{tb.name}</span>
             <span className="text-slate-500 dark:text-slate-400"> ({tb.cols.join(', ')})</span>
           </p>
         ))}

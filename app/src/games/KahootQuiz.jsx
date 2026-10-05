@@ -60,7 +60,7 @@ export default function KahootQuiz({ questions, onDone }) {
         <span className="rounded-full bg-slate-100 px-3 py-1 text-slate-600 dark:bg-slate-800 dark:text-slate-300 tabular-nums">
           {Math.min(i + 1, questions.length)} / {questions.length}
         </span>
-        <span className="rounded-full px-3 py-1 tabular-nums text-white" style={{ backgroundColor: 'var(--c-accent)' }}>
+        <span className="rounded-full px-3 py-1 tabular-nums text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }}>
           {points} pts
         </span>
       </div>
@@ -113,7 +113,7 @@ export default function KahootQuiz({ questions, onDone }) {
             {picked === 'timeout' ? `⏱ ${t('timeUp')}` : ok ? `✅ +${gain} pts` : `❌ ${t('feedbackBad')}`}
           </p>
           {q.explain && <p className="mx-auto mt-1 max-w-md text-sm text-slate-500 dark:text-slate-400">{q.explain}</p>}
-          <button onClick={next} className="btn-primary mt-4" style={{ backgroundColor: 'var(--c-accent)' }}>
+          <button onClick={next} className="btn-primary mt-4" style={{ backgroundColor: 'var(--c-accent-fort)' }}>
             {i + 1 >= questions.length ? t('seeScore') : `${t('next')} →`}
           </button>
         </div>

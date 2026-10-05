@@ -20,7 +20,7 @@ export default function DailyChallenge() {
   const questions = useMemo(() => (state.track ? buildDailyChallenge(state.track, today) : []), [state.track, today])
   const [phase, setPhase] = useState('intro') // intro | run | result
   const [result, setResult] = useState(null)
-  const accent = '#c8a24e'
+  const accent = '#84671b' // or foncé : lisible sous du texte blanc
 
   if (!state.track) return <Navigate to="/" replace />
 
@@ -40,7 +40,7 @@ export default function DailyChallenge() {
           <div className="text-5xl">✅</div>
           <h2 className="mt-2 font-display text-xl font-semibold">{t('challengeDoneToday')}</h2>
           <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{t('challengeComeBack')}</p>
-          <div className="mt-4 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold" style={{ background: 'color-mix(in srgb, var(--c-accent) 14%, transparent)', color: 'var(--c-accent)' }}>
+          <div className="mt-4 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold" style={{ background: 'color-mix(in srgb, var(--c-accent) 14%, transparent)', color: 'var(--c-accent-texte)' }}>
             🔥 {t('challengeStreak')} : {dc.streak || 0} · 🏆 {t('best')} : {dc.best || 0}
           </div>
         </div>
@@ -68,12 +68,12 @@ export default function DailyChallenge() {
         <div className="card card-lux p-6">
           <Confetti show={great} />
           <div className="animate-bounce-in text-5xl">{great ? '🎉' : result.pct >= 50 ? '👍' : '💪'}</div>
-          <div className="score-pop my-3 text-4xl font-extrabold" style={{ color: accent }}>{result.pct}%</div>
+          <div className="score-pop my-3 text-4xl font-extrabold" style={{ color: 'var(--c-accent-texte)' }}>{result.pct}%</div>
           <Stars count={result.pct >= 80 ? 3 : result.pct >= 50 ? 2 : 1} size="text-2xl" />
           <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
-            {result.correct} / {result.total} · <span className="pop-badge font-semibold" style={{ color: accent }}>+{bonus} XP</span>
+            {result.correct} / {result.total} · <span className="pop-badge font-semibold" style={{ color: 'var(--c-accent-texte)' }}>+{bonus} XP</span>
           </p>
-          <div className="mt-3 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold" style={{ background: 'color-mix(in srgb, var(--c-accent) 14%, transparent)', color: 'var(--c-accent)' }}>
+          <div className="mt-3 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold" style={{ background: 'color-mix(in srgb, var(--c-accent) 14%, transparent)', color: 'var(--c-accent-texte)' }}>
             🔥 {t('challengeStreak')} : {state.dailyChallenge?.streak || 0}
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function DailyChallenge() {
         <h2 className="mt-2 font-display text-xl font-semibold">{t('challengeIntroTitle')}</h2>
         <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{t('challengeIntroSub').replace('{n}', questions.length)}</p>
         {(dc.streak || 0) > 0 && (
-          <p className="mt-3 text-sm font-semibold" style={{ color: 'var(--c-accent)' }}>🔥 {t('challengeStreak')} : {dc.streak}</p>
+          <p className="mt-3 text-sm font-semibold" style={{ color: 'var(--c-accent-texte)' }}>🔥 {t('challengeStreak')} : {dc.streak}</p>
         )}
         <button onClick={() => setPhase('run')} className="btn-gold mt-5 w-full !py-3 text-base">▶ {t('challengeStart')}</button>
       </div>

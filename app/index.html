@@ -7,15 +7,34 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <!-- Typographie de luxe : serif Didone (titres) + Inter (texte) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Playfair+Display:wght@500;600;700&family=Marcellus&family=EB+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
-    <title>RévizStMG — Réviser en s'amusant</title>
-    <meta name="description" content="Site de révision interactif et ludique pour la Terminale STMG : fiches, jeux et quiz par matière et par chapitre." />
+    <!-- Sécurité : toute ressource demandée en http:// passe en https:// ; les sites
+         ouverts depuis l'app ne reçoivent que l'adresse du site, pas la page. -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>RévizSTMG — réviser le bac STMG</title>
+    <meta name="description" content="Révise le bac STMG, en Première et en Terminale : cours clairs, exercices, flashcards et bacs blancs, matière par matière. Gratuit et sans publicité." />
+    <link rel="canonical" href="https://revizstmg.github.io/" />
+
+    <!-- Aperçu quand on partage le lien (WhatsApp, Instagram, Discord, X…) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RévizSTMG" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="https://revizstmg.github.io/" />
+    <meta property="og:title" content="RévizSTMG — réviser le bac STMG" />
+    <meta property="og:description" content="Cours clairs, exercices, flashcards et bacs blancs pour la Première et la Terminale STMG. Gratuit." />
+    <meta property="og:image" content="https://revizstmg.github.io/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="RévizSTMG, l'application de révision du bac STMG" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RévizSTMG — réviser le bac STMG" />
+    <meta name="twitter:description" content="Cours clairs, exercices, flashcards et bacs blancs pour la Première et la Terminale STMG. Gratuit." />
+    <meta name="twitter:image" content="https://revizstmg.github.io/og-image.jpg" />
   </head>
   <body>
     <div id="root"></div>
+    <noscript>RévizSTMG a besoin de JavaScript pour fonctionner : active-le dans ton navigateur.</noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

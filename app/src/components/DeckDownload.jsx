@@ -16,7 +16,7 @@ export function DeckDownload({ deck, color = 'var(--c-accent)', label }) {
       <span className="w-6 shrink-0 text-center text-lg" aria-hidden>🃏</span>
       <span className="min-w-0 flex-1 font-semibold leading-snug">{label || t('downloadDeckTitle')}</span>
       {saved ? (
-        <Link to="/revision" title={t('deckSavedWhere')} className="shrink-0 text-sm font-semibold" style={{ color: col }}>
+        <Link to="/revision" title={t('deckSavedWhere')} className="shrink-0 text-sm font-semibold texte-matiere" style={{ '--mc': col }}>
           ✓ {t('deckSaved')} →
         </Link>
       ) : (

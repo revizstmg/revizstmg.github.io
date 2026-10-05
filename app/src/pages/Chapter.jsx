@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link, useParams, Navigate, useNavigate } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
+import Introuvable from './Introuvable.jsx'
 import { getChapter, getSubject, themeChapters, flashcardsForSection, sectionDefinitions } from '../data/index.js'
 import { useStore, useThemeTimer } from '../store.jsx'
 import { PaginatedCourse, CourseText, saveFiche } from '../components/Course.jsx'
@@ -41,7 +42,9 @@ export default function Chapter() {
     window.scrollTo(0, 0)
   }, [tid, cidx])
 
-  if (!subject || !theme || !chapter) return <Navigate to="/" replace />
+  if (!subject) return <Introuvable />
+  if (!theme) return <Introuvable retour={{ to: `/subject/${sid}`, label: subject.short || subject.name }} />
+  if (!chapter) return <Introuvable retour={{ to: `/subject/${sid}/theme/${tid}`, label: theme.short || theme.name }} />
   const color = subject.color
   const i = chapter.idx
   const prev = chapters[i - 1]

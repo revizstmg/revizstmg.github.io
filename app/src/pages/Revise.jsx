@@ -159,7 +159,7 @@ export default function Revise() {
                 </div>
                 <div className="min-w-0">
                   <span className="block truncate font-display text-sm font-semibold leading-tight">{s.short || s.name}</span>
-                  <span className="block text-xs" style={{ color: s.color }}>{inProgress ? t('continueChip') : t('startChip')}</span>
+                  <span className="block text-xs texte-matiere" style={{ '--mc': s.color }}>{inProgress ? t('continueChip') : t('startChip')}</span>
                 </div>
               </Link>
             )
@@ -212,7 +212,7 @@ export default function Revise() {
       <section className="card p-4">
         <div className="mb-2 flex items-center justify-between">
           <span className="font-display font-semibold">🎯 {t('weeklyGoal')}</span>
-          <span className="text-sm font-semibold" style={{ color: 'var(--c-accent)' }}>{Math.min(weekDone, WEEKLY_GOAL)} / {WEEKLY_GOAL}</span>
+          <span className="text-sm font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{Math.min(weekDone, WEEKLY_GOAL)} / {WEEKLY_GOAL}</span>
         </div>
         <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
           <div className="h-full rounded-full transition-all" style={{ width: `${weekPct}%`, backgroundColor: 'var(--c-accent)' }} />

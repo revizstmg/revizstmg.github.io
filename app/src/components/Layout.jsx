@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useStore, levelFromXp } from '../store.jsx'
@@ -8,14 +8,17 @@ import { badgeById } from '../badges.js'
 import { Confetti, Icon } from './ui.jsx'
 import Welcome from './Welcome.jsx'
 import Dictionary from './Dictionary.jsx'
-import Customizer from './Customizer.jsx'
+// Le personnaliseur ne s'ouvre qu'à la demande : chargé à ce moment-là.
+const Customizer = lazy(() => import('./Customizer.jsx'))
 import Accessibility from './Accessibility.jsx'
 import ReminderScheduler from './ReminderScheduler.jsx'
 import { InstallBanner } from './InstallApp.jsx'
+import { BandeauCookies } from './BandeauCookies.jsx'
 import { useT, useLang } from '../i18n.js'
 import { signOut } from '../auth.js'
 import { useFocus } from '../focus.jsx'
 import { useInstall } from '../pwa.js'
+import { compterEcran } from '../mesure.js'
 
 const LANGS = [{ code: 'fr', label: 'Français' }, { code: 'en', label: 'English' }, { code: 'es', label: 'Español' }, { code: 'it', label: 'Italiano' }, { code: 'ar', label: 'العربية' }]
 
@@ -27,6 +30,12 @@ export default function Layout({ children }) {
   const { standalone } = useInstall() // masque le guide d'installation dans l'app installée
   const { pathname } = useLocation()
   const navigate = useNavigate()
+  // Mesure d'audience sans cookie (src/mesure.js) : un écran compte s'il reste
+  // affiché 1,5 s (les redirections ne comptent pas).
+  useEffect(() => {
+    const id = setTimeout(() => compterEcran(pathname), 1500)
+    return () => clearTimeout(id)
+  }, [pathname])
   // Bouton « retour » (croix) universel : présent sur toute page où l'on a
   // cliqué pour entrer, jamais sur l'accueil / l'écran de choix de filière.
   const isHomeLike = pathname === '/' || pathname === '/accueil' || pathname === '/changer'
@@ -102,7 +111,7 @@ export default function Layout({ children }) {
               title={t('coach')}
               className="flex items-center gap-1 rounded-full px-2 py-1 text-xs font-semibold tabular-nums"
               style={{
-                color: focus.phase === 'break' ? '#2f8a5e' : 'var(--c-accent)',
+                color: focus.phase === 'break' ? '#2f8a5e' : 'var(--c-accent-texte)',
                 backgroundColor: focus.phase === 'break' ? 'color-mix(in srgb, #3f9d6d 16%, transparent)' : 'color-mix(in srgb, var(--c-accent) 16%, transparent)',
               }}
             >
@@ -195,7 +204,7 @@ export default function Layout({ children }) {
                       <div className="border-b border-slate-100 px-3 py-2 dark:border-slate-800">
                         <p className="truncate text-sm font-semibold">{`${first} ${last}`.trim()}</p>
                         {state.account?.email && <p className="truncate text-xs text-slate-400">{state.account.email}</p>}
-                        <p className="mt-0.5 text-xs" style={{ color: 'var(--c-accent)' }}>
+                        <p className="mt-0.5 text-xs" style={{ color: 'var(--c-accent-texte)' }}>
                           {state.account?.role === 'prof' ? `🧑‍🏫 ${t('roleTeacher')}` : `🎓 ${t('roleStudent')}`}
                         </p>
                       </div>
@@ -254,6 +263,7 @@ export default function Layout({ children }) {
             <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
               {!standalone && <Link to="/guide" className="hover:text-[color:var(--c-accent)] hover:underline">{t('startGuide')}</Link>}
               <Link to="/confidentialite" className="hover:text-[color:var(--c-accent)] hover:underline">{t('privacyPolicy')}</Link>
+              <Link to="/cgu" className="hover:text-[color:var(--c-accent)] hover:underline">{t('termsOfUse')}</Link>
               <Link to="/faq" className="hover:text-[color:var(--c-accent)] hover:underline">{t('faq')}</Link>
               <button onClick={() => window.dispatchEvent(new CustomEvent('stmg-open-a11y'))} className="hover:text-[color:var(--c-accent)] hover:underline">♿ {t('accessibility')}</button>
               <a href="mailto:revizstmg@gmail.com" className="hover:text-[color:var(--c-accent)] hover:underline">{t('contactUs')} · revizstmg@gmail.com</a>
@@ -270,10 +280,11 @@ export default function Layout({ children }) {
 
       {searchOpen && <SearchOverlay onClose={() => setSearchOpen(false)} />}
       {dictOpen && <Dictionary onClose={() => setDictOpen(false)} />}
-      {custOpen && <Customizer onClose={() => setCustOpen(false)} />}
+      {custOpen && <Suspense fallback={null}><Customizer onClose={() => setCustOpen(false)} /></Suspense>}
       {a11yOpen && <Accessibility onClose={() => setA11yOpen(false)} />}
       <BadgeToast />
       <DailyRewardModal />
+      <BandeauCookies />
       <InstallBanner />
       <ReminderScheduler />
       <Welcome />
@@ -336,7 +347,7 @@ function MobileMenu({ className = '', state, isDark, standalone, lang, first, la
                 </span>
                 <div className="min-w-0">
                   <p className="truncate text-sm font-semibold">{`${first} ${last}`.trim()}</p>
-                  <p className="text-xs" style={{ color: 'var(--c-accent)' }}>
+                  <p className="text-xs" style={{ color: 'var(--c-accent-texte)' }}>
                     {state.account?.role === 'prof' ? `🧑‍🏫 ${t('roleTeacher')}` : `🎓 ${t('roleStudent')}`}
                   </p>
                 </div>
@@ -379,7 +390,7 @@ function MobileMenu({ className = '', state, isDark, standalone, lang, first, la
                     key={l.code}
                     onClick={() => onLang(l.code)}
                     className={`flex-1 rounded-lg px-2 py-1.5 text-xs font-semibold uppercase transition ${lang === l.code ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`}
-                    style={lang === l.code ? { backgroundColor: 'var(--c-accent)' } : undefined}
+                    style={lang === l.code ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}
                   >
                     {l.code}
                   </button>
@@ -397,6 +408,13 @@ function MobileMenu({ className = '', state, isDark, standalone, lang, first, la
       )}
     </div>
   )
+}
+
+// Pages sans sous-niveau : chemin → libellé (fil d'Ariane et titre de l'onglet).
+const PAGES_SIMPLES = {
+  confidentialite: 'privacyPolicy', cgu: 'termsOfUse', faq: 'faq', formules: 'formulasTitle',
+  methodo: 'methodoTitle', express: 'expressMode', defi: 'dailyChallenge', boutique: 'shop',
+  'fiches-photo': 'photoFiche', 'coach-ia': 'coachAI',
 }
 
 function Breadcrumb() {
@@ -438,9 +456,17 @@ function Breadcrumb() {
       items.push({ label: t('friends'), to: '/amis' })
     } else if (parts[0] === 'parent') {
       items.push({ label: t('parentSpace'), to: '/parent' })
+    } else if (PAGES_SIMPLES[parts[0]]) {
+      items.push({ label: t(PAGES_SIMPLES[parts[0]]), to: `/${parts[0]}` })
     }
     return items
   }, [pathname, t])
+
+  // Titre de l'onglet : la page en cours, puis le nom du site.
+  const dernier = crumbs.length > 1 ? crumbs[crumbs.length - 1].label : ''
+  useEffect(() => {
+    document.title = dernier ? `${dernier} — RévizSTMG` : 'RévizSTMG — réviser le bac STMG'
+  }, [dernier])
 
   if (crumbs.length <= 1) return null
   return (
@@ -580,7 +606,7 @@ function BottomNav() {
               to={tab.to}
               aria-current={on ? 'page' : undefined}
               className="flex flex-1 flex-col items-center gap-1 py-1.5 text-[10px] font-semibold"
-              style={{ color: on ? 'var(--c-accent)' : undefined }}
+              style={{ color: on ? 'var(--c-accent-texte)' : undefined }}
             >
               <span
                 className="tab-pill grid place-items-center rounded-full leading-none"
@@ -613,13 +639,13 @@ function DailyRewardModal() {
           <div className="text-5xl">{milestone ? milestone.icon : '🔥'}</div>
           <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-amber-500">{t('dailyRewardTitle')}</p>
           <h2 className="mt-1 font-display text-2xl font-bold">{count} {t(count > 1 ? 'daysStreakP' : 'daysStreakS')}</h2>
-          <div className="my-4 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-lg font-extrabold text-white" style={{ backgroundColor: 'var(--c-accent)' }}>
+          <div className="my-4 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-lg font-extrabold text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }}>
             +{xp} XP
           </div>
           {milestone
             ? <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400">🎉 {milestone.icon} {t('milestoneReached')} !</p>
             : <p className="text-sm text-slate-500 dark:text-slate-400">{t('comeBackTomorrow')}</p>}
-          <button onClick={clearDailyReward} className="btn-primary mt-5 w-full" style={{ backgroundColor: 'var(--c-accent)' }}>{t('awesome')}</button>
+          <button onClick={clearDailyReward} className="btn-primary mt-5 w-full" style={{ backgroundColor: 'var(--c-accent-fort)' }}>{t('awesome')}</button>
         </div>
       </div>
     </>,

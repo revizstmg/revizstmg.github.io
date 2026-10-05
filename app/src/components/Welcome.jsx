@@ -6,6 +6,7 @@ import { useT } from '../i18n.js'
 import { signUp, signIn, fetchProfile, upsertProfile, getSession, requestPasswordReset, verifyRecovery, updatePassword, signInWithOAuth, hasOAuthRedirect, consumeOAuthRedirect, fetchAuthProviders } from '../auth.js'
 import { normalizeCode } from '../leaderboard.js'
 import { createTeacherClass, fetchTeacherClasses } from '../classroom.js'
+import { emailValide, motDePasseValide, nomValide, inscriptionSuspecte, pauseConnexion } from '../formulaires.js'
 
 // Ce qu'un professeur peut enseigner (matières communes + spécialités STMG).
 const TAUGHT = [
@@ -70,6 +71,14 @@ export default function Welcome() {
   const [busy, setBusy] = useState(false)
   const [err, setErr] = useState('')
   const [info, setInfo] = useState('')
+  // Champs déjà quittés une fois : leurs erreurs s'affichent (pas pendant la frappe).
+  const [vu, setVu] = useState({})
+  const quitte = (champ) => () => setVu((v) => ({ ...v, [champ]: true }))
+  // Anti-robots : champ invisible et heure d'ouverture du formulaire d'inscription.
+  const [piege, setPiege] = useState('')
+  const debutInscription = useRef(Date.now())
+  // Connexion : échecs successifs (pause après plusieurs échecs).
+  const echecs = useRef({ n: 0, quand: 0 })
 
   // Étape « plan »
   const [chosen, setChosen] = useState({})
@@ -128,13 +137,17 @@ export default function Welcome() {
   const chosenLevel = LEVELS.find((l) => l.id === level) || null
   const needsSpecialty = !!chosenLevel?.specialties
   const specialtyOk = !needsSpecialty || !!specialty
-  const emailOk = /\S+@\S+\.\S+/.test(email.trim())
-  const passOk = password.length >= 6
+  const emailOk = emailValide(email)
+  // À la connexion, les anciens mots de passe de 6 caractères restent acceptés.
+  const passOk = authMode === 'login' ? password.length >= 6 : motDePasseValide(password)
+  const emailFaux = Boolean(vu.email && email.trim() && !emailOk)
+  const prenomOk = nomValide(firstName)
+  const nomOk = nomValide(lastName, { obligatoire: false })
   const isProf = role === 'prof'
   const isParent = role === 'parent'
   const idOk = isProf
-    ? (firstName.trim().length > 0 && !!chosenLevel?.available && taught.length > 0 && nClasses >= 1)
-    : (firstName.trim().length > 0 && !!chosenLevel?.available && specialtyOk)
+    ? (prenomOk && nomOk && !!chosenLevel?.available && taught.length > 0 && nClasses >= 1)
+    : (prenomOk && nomOk && !!chosenLevel?.available && specialtyOk)
   const canSubmit = authMode === 'login'
     ? (emailOk && passOk)
     : (oauthNew ? (idOk && consent) : (emailOk && passOk && idOk && consent))
@@ -171,11 +184,23 @@ export default function Welcome() {
     setErr(''); setInfo('')
     const track = { level, specialty: needsSpecialty ? specialty : null }
     const cc = normalizeCode(classCodeInput)
+    if (authMode === 'login') {
+      const attente = pauseConnexion(echecs.current.n, echecs.current.quand)
+      if (attente > 0) { setErr(t('loginPaused').replace('{s}', Math.ceil(attente / 1000))); return }
+    } else if (!oauthNew && inscriptionSuspecte({ piege, debut: debutInscription.current })) {
+      setErr(t('signupBlocked')); return
+    }
 
     setBusy(true)
     try {
       if (authMode === 'login') {
-        await signIn({ email: email.trim(), password })
+        try {
+          await signIn({ email: email.trim(), password })
+        } catch (e) {
+          echecs.current = { n: echecs.current.n + 1, quand: Date.now() }
+          throw e
+        }
+        echecs.current = { n: 0, quand: 0 }
         const prof = await fetchProfile()
         const uid = getSession()?.user?.id
         const nm = (prof?.name || '').trim()
@@ -269,7 +294,7 @@ export default function Welcome() {
   const doReset = async () => {
     setErr(''); setInfo('')
     if (code.trim().length < 4) { setErr(t('resetNeedCode')); return }
-    if (newPass.length < 6) { setErr(t('resetNeedPass')); return }
+    if (!motDePasseValide(newPass)) { setErr(t('resetNeedPass')); return }
     setBusy(true)
     try {
       await verifyRecovery({ email: email.trim(), token: code })
@@ -372,10 +397,10 @@ export default function Welcome() {
 
   // Validité par étape de l'inscription.
   const step1Ok = emailOk && passOk
-  const step2Ok = firstName.trim().length > 0
+  const step2Ok = prenomOk && nomOk
   const step3Ok = consent && (isProf ? (!!chosenLevel?.available && taught.length > 0 && nClasses >= 1) : (!!chosenLevel?.available && specialtyOk))
   const goLogin = () => { setAuthMode('login'); setOauthNew(false); setSignupStep(1); setErr(''); setInfo(''); setRecoverStep(null) }
-  const goCreate = () => { setAuthMode('create'); setSignupStep(1); setErr(''); setInfo(''); setRecoverStep(null) }
+  const goCreate = () => { setAuthMode('create'); setSignupStep(1); setErr(''); setInfo(''); setRecoverStep(null); debutInscription.current = Date.now() }
   const backBtn = 'rounded-2xl border border-slate-300 px-5 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 dark:border-slate-600 dark:text-slate-300 dark:hover:bg-slate-800'
   const stepDots = (
     <div className="mb-1 mt-2 flex items-center justify-center gap-1.5" aria-hidden>
@@ -396,18 +421,20 @@ export default function Welcome() {
             <h1 className="welcome-h">{t('forgotPassword')}</h1>
             <p className="welcome-sub">{recoverStep === 'request' ? t('resetIntro') : t('resetCodeIntro')}</p>
             <label className="welcome-label" htmlFor="w-email">{t('emailField')}</label>
-            <input id="w-email" className="welcome-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="prenom.nom@exemple.fr" autoComplete="email" maxLength={80} disabled={recoverStep === 'code'} />
+            <input id="w-email" className="welcome-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} onBlur={quitte('email')} aria-invalid={emailFaux} aria-describedby={emailFaux ? 'w-email-aide' : undefined} placeholder="prenom.nom@exemple.fr" autoComplete="email" maxLength={80} disabled={recoverStep === 'code'} />
+            {emailFaux && <p id="w-email-aide" className="welcome-aide erreur">{t('emailHint')}</p>}
             {recoverStep === 'code' && (
               <>
                 <label className="welcome-label" htmlFor="w-code">{t('recoveryCode')}</label>
                 <input id="w-code" className="welcome-input" value={code} onChange={(e) => setCode(e.target.value)} placeholder="123456" inputMode="numeric" autoComplete="one-time-code" maxLength={12} />
                 <label className="welcome-label" htmlFor="w-newpass">{t('newPassword')}</label>
-                <input id="w-newpass" className="welcome-input" type="password" value={newPass} onChange={(e) => setNewPass(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && !busy && doReset()} placeholder="••••••••" autoComplete="new-password" maxLength={72} />
+                <input id="w-newpass" className="welcome-input" aria-describedby="w-newpass-aide" type="password" value={newPass} onChange={(e) => setNewPass(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && !busy && doReset()} placeholder="••••••••" autoComplete="new-password" maxLength={72} />
+                <p id="w-newpass-aide" className={`welcome-aide ${motDePasseValide(newPass) ? 'ok' : ''}`}>{motDePasseValide(newPass) ? '✓ ' : ''}{t('passwordRule')}</p>
               </>
             )}
             {err && <p className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
             {info && <p className="mt-3 text-sm font-semibold text-emerald-700">{info}</p>}
-            <button type="button" className="welcome-cta" disabled={busy || (recoverStep === 'request' ? !emailOk : (code.trim().length < 4 || newPass.length < 6))} onClick={() => (recoverStep === 'request' ? sendReset() : doReset())}>
+            <button type="button" className="welcome-cta" disabled={busy || (recoverStep === 'request' ? !emailOk : (code.trim().length < 4 || !motDePasseValide(newPass)))} onClick={() => (recoverStep === 'request' ? sendReset() : doReset())}>
               {busy ? t('pleaseWait') : recoverStep === 'request' ? t('sendResetCode') : t('resetPassword')}
             </button>
             {recoverStep === 'code' && <button type="button" className="welcome-skip" disabled={busy} onClick={sendReset}>{t('resendCode')}</button>}
@@ -420,10 +447,11 @@ export default function Welcome() {
             <p className="welcome-sub">{t('loginSub')}</p>
             {oauthButtons}
             <label className="welcome-label" htmlFor="w-email">{t('emailField')}</label>
-            <input id="w-email" className="welcome-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="prenom.nom@exemple.fr" autoComplete="email" maxLength={80} />
+            <input id="w-email" className="welcome-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} onBlur={quitte('email')} aria-invalid={emailFaux} aria-describedby={emailFaux ? 'w-email-aide' : undefined} placeholder="prenom.nom@exemple.fr" autoComplete="email" maxLength={80} />
+            {emailFaux && <p id="w-email-aide" className="welcome-aide erreur">{t('emailHint')}</p>}
             <label className="welcome-label" htmlFor="w-pass">{t('passwordField')}</label>
             <input id="w-pass" className="welcome-input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && step1Ok && !busy && submitForm()} placeholder="••••••••" autoComplete="current-password" maxLength={72} />
-            <button type="button" className="mt-2 text-left text-sm font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]" onClick={() => { setRecoverStep('request'); setErr(''); setInfo('') }}>{t('forgotPassword')}</button>
+            <button type="button" className="mt-2 text-left text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]" onClick={() => { setRecoverStep('request'); setErr(''); setInfo('') }}>{t('forgotPassword')}</button>
             {err && <p className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
             {info && <p className="mt-3 text-sm font-semibold text-emerald-700">{info}</p>}
             <button type="button" className="welcome-cta" disabled={!step1Ok || busy} onClick={() => submitForm()}>{busy ? t('pleaseWait') : t('loginTab')}</button>
@@ -453,9 +481,16 @@ export default function Welcome() {
                   <>
                     {oauthButtons}
                     <label className="welcome-label" htmlFor="w-email">{t('emailField')}</label>
-                    <input id="w-email" className="welcome-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="prenom.nom@exemple.fr" autoComplete="email" maxLength={80} />
+                    <input id="w-email" className="welcome-input" type="email" value={email} onChange={(e) => setEmail(e.target.value)} onBlur={quitte('email')} aria-invalid={emailFaux} aria-describedby={emailFaux ? 'w-email-aide' : undefined} placeholder="prenom.nom@exemple.fr" autoComplete="email" maxLength={80} />
+                    {emailFaux && <p id="w-email-aide" className="welcome-aide erreur">{t('emailHint')}</p>}
                     <label className="welcome-label" htmlFor="w-pass">{t('passwordField')}</label>
-                    <input id="w-pass" className="welcome-input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && step1Ok && setSignupStep(2)} placeholder="••••••••" autoComplete="new-password" maxLength={72} />
+                    <input id="w-pass" className="welcome-input" aria-describedby="w-pass-aide" type="password" value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && step1Ok && setSignupStep(2)} placeholder="••••••••" autoComplete="new-password" maxLength={72} />
+                    <p id="w-pass-aide" className={`welcome-aide ${passOk ? 'ok' : ''}`}>{passOk ? '✓ ' : ''}{t('passwordRule')}</p>
+                    {/* Piège à robots : invisible pour un humain, rempli par un robot. */}
+                    <div className="welcome-piege" aria-hidden="true">
+                      <label htmlFor="w-site">Laisser vide</label>
+                      <input id="w-site" name="w-controle" type="text" tabIndex={-1} autoComplete="off" value={piege} onChange={(e) => setPiege(e.target.value)} />
+                    </div>
                     {err && <p className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
                     <button type="button" className="welcome-cta" disabled={!step1Ok} onClick={() => { setErr(''); setSignupStep(2) }}>{t('next')}</button>
                   </>
@@ -467,9 +502,11 @@ export default function Welcome() {
               <>
                 {oauthNew && <p className="mt-2 rounded-xl bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300">✓ {getSession()?.user?.email || ''}</p>}
                 <label className="welcome-label" htmlFor="w-first">{t('firstName')}</label>
-                <input id="w-first" className="welcome-input" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder={t('yourFirstName')} autoComplete="given-name" maxLength={40} />
+                <input id="w-first" className="welcome-input" value={firstName} onBlur={quitte('prenom')} aria-invalid={Boolean(vu.prenom && firstName.trim() && !prenomOk)} aria-describedby={vu.prenom && firstName.trim() && !prenomOk ? 'w-first-aide' : undefined} onChange={(e) => setFirstName(e.target.value)} placeholder={t('yourFirstName')} autoComplete="given-name" maxLength={40} />
+                {vu.prenom && firstName.trim() && !prenomOk && <p id="w-first-aide" className="welcome-aide erreur">{t('nameRule')}</p>}
                 <label className="welcome-label" htmlFor="w-last">{t('lastName')}</label>
-                <input id="w-last" className="welcome-input" value={lastName} onChange={(e) => setLastName(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && step2Ok && setSignupStep(3)} placeholder={t('yourLastName')} autoComplete="family-name" maxLength={40} />
+                <input id="w-last" className="welcome-input" value={lastName} onBlur={quitte('nom')} aria-invalid={Boolean(vu.nom && lastName.trim() && !nomOk)} aria-describedby={vu.nom && lastName.trim() && !nomOk ? 'w-last-aide' : undefined} onChange={(e) => setLastName(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && step2Ok && setSignupStep(3)} placeholder={t('yourLastName')} autoComplete="family-name" maxLength={40} />
+                {vu.nom && lastName.trim() && !nomOk && <p id="w-last-aide" className="welcome-aide erreur">{t('nameRule')}</p>}
                 <div className="mt-3 flex gap-2">
                   {!oauthNew && <button type="button" className={backBtn} onClick={() => setSignupStep(1)}>{t('back')}</button>}
                   <button type="button" className="welcome-cta !mt-0 flex-1" disabled={!step2Ok} onClick={() => setSignupStep(3)}>{t('next')}</button>
@@ -514,9 +551,18 @@ export default function Welcome() {
                 <div className="mt-3">
                   <label className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-300">
                     <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-0.5 h-4 w-4 shrink-0" />
-                    <span>{t('consentText')}{' '}<button type="button" onClick={() => setShowPrivacy((v) => !v)} className="font-semibold text-[#98761f] underline dark:text-[#d9bd77]">{t('readPrivacy')}</button></span>
+                    <span>{t('consentText')}{' '}<button type="button" onClick={() => setShowPrivacy((v) => !v)} className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">{t('readPrivacy')}</button></span>
                   </label>
-                  {showPrivacy && <div className="mt-2 max-h-40 overflow-y-auto rounded-xl bg-black/5 p-3 text-xs leading-relaxed text-slate-600 dark:bg-white/5 dark:text-slate-300">{t('privacySummary')}</div>}
+                  {showPrivacy && (
+                    <div className="mt-2 max-h-40 overflow-y-auto rounded-xl bg-black/5 p-3 text-xs leading-relaxed text-slate-600 dark:bg-white/5 dark:text-slate-300">
+                      {t('privacySummary')}
+                      {/* Textes complets, dans un nouvel onglet pour ne pas quitter l'inscription */}
+                      <span className="mt-2 flex gap-3 font-semibold">
+                        <a href="./#/cgu" target="_blank" rel="noopener" className="text-[#84671b] underline dark:text-[#d9bd77]">{t('termsOfUse')}</a>
+                        <a href="./#/confidentialite" target="_blank" rel="noopener" className="text-[#84671b] underline dark:text-[#d9bd77]">{t('privacyPolicy')}</a>
+                      </span>
+                    </div>
+                  )}
                 </div>
                 {err && <p className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
                 {info && <p className="mt-3 text-sm font-semibold text-emerald-700">{info}</p>}

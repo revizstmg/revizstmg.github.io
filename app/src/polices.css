@@ -1,0 +1,26 @@
+/* Polices hébergées avec le site (paquets @fontsource), et non plus chargées
+   depuis Google Fonts : aucune adresse IP de visiteur n'est transmise à Google.
+   Seul le jeu de caractères latin est inclus : il couvre le français (é, à, œ…),
+   l'anglais, l'espagnol et l'italien. Le navigateur ne télécharge que les
+   polices réellement affichées.
+   Par défaut : Cormorant Garamond (titres) et Inter (texte). Les autres sont
+   proposées dans « Personnaliser » (Customizer.jsx). */
+@import '@fontsource/cormorant-garamond/latin-500.css';
+@import '@fontsource/cormorant-garamond/latin-600.css';
+@import '@fontsource/cormorant-garamond/latin-700.css';
+@import '@fontsource/cormorant-garamond/latin-500-italic.css';
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/latin-500.css';
+@import '@fontsource/inter/latin-600.css';
+@import '@fontsource/inter/latin-700.css';
+@import '@fontsource/playfair-display/latin-500.css';
+@import '@fontsource/playfair-display/latin-600.css';
+@import '@fontsource/playfair-display/latin-700.css';
+@import '@fontsource/marcellus/latin-400.css';
+@import '@fontsource/eb-garamond/latin-500.css';
+@import '@fontsource/eb-garamond/latin-600.css';
+@import '@fontsource/nunito/latin-400.css';
+@import '@fontsource/nunito/latin-600.css';
+@import '@fontsource/nunito/latin-700.css';
+@import '@fontsource/lato/latin-400.css';
+@import '@fontsource/lato/latin-700.css';

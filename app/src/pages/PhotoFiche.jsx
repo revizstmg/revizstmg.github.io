@@ -9,7 +9,7 @@ import { useT } from '../i18n.js'
 // Petit titre de section de fiche.
 function SecHead({ icon, children }) {
   return (
-    <h3 className="mb-2.5 flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.12em]" style={{ color: 'var(--c-accent)' }}>
+    <h3 className="mb-2.5 flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.12em]" style={{ color: 'var(--c-accent-texte)' }}>
       <span aria-hidden>{icon}</span>{children}
     </h3>
   )
@@ -29,7 +29,7 @@ function FicheView({ fiche }) {
           <ol className="space-y-2.5">
             {fiche.questions.map((q, i) => (
               <li key={i} className="flex gap-3">
-                <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full text-[11px] font-bold text-white" style={{ backgroundColor: 'var(--c-accent)' }}>{i + 1}</span>
+                <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full text-[11px] font-bold text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }}>{i + 1}</span>
                 <span className="text-sm font-medium leading-relaxed text-slate-800 dark:text-slate-100">{q}</span>
               </li>
             ))}
@@ -203,7 +203,7 @@ export default function PhotoFiche() {
               <span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" />ou<span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" />
             </div>
 
-            <button onClick={runOcr} disabled={ocr.status === 'running'} className="w-full rounded-xl border-2 px-4 py-2.5 text-sm font-semibold transition hover:bg-slate-50 disabled:opacity-60 dark:hover:bg-slate-800" style={{ borderColor: 'color-mix(in srgb, var(--c-accent) 40%, var(--c-line, #ddd))', color: 'var(--c-accent)' }}>
+            <button onClick={runOcr} disabled={ocr.status === 'running'} className="w-full rounded-xl border-2 px-4 py-2.5 text-sm font-semibold transition hover:bg-slate-50 disabled:opacity-60 dark:hover:bg-slate-800" style={{ borderColor: 'color-mix(in srgb, var(--c-accent) 40%, var(--c-line, #ddd))', color: 'var(--c-accent-texte)' }}>
               {ocr.status === 'running' ? `Lecture classique… ${ocr.progress}%` : '🔎 Lecture classique (hors ligne)'}
             </button>
             {ocr.status === 'running' && (
@@ -238,7 +238,7 @@ export default function PhotoFiche() {
             <>
               <div className="mb-1 flex items-start justify-between gap-2">
                 <h2 className="font-display text-2xl font-semibold leading-tight">{fiche.title}</h2>
-                <span className="chip shrink-0" style={{ backgroundColor: 'var(--c-accent)22', color: 'var(--c-accent)' }}>{ficheSource === 'ia' ? '✨ IA' : ficheSource === 'ocr' ? '🔎 OCR' : '✍️ Fiche'}</span>
+                <span className="chip shrink-0" style={{ backgroundColor: 'var(--c-accent)22', color: 'var(--c-accent-texte)' }}>{ficheSource === 'ia' ? '✨ IA' : ficheSource === 'ocr' ? '🔎 OCR' : '✍️ Fiche'}</span>
               </div>
               <span className="mb-4 block h-0.5 w-16 rounded-full" style={{ backgroundColor: 'var(--c-accent)' }} />
               {fiche.lowQuality && (
@@ -248,8 +248,8 @@ export default function PhotoFiche() {
               )}
               <FicheView fiche={fiche} />
               <div className="mt-5 flex flex-col gap-2 sm:flex-row">
-                <button onClick={doSave} className="btn-primary flex-1 text-white" style={{ backgroundColor: 'var(--c-accent)' }}>💾 Enregistrer la fiche</button>
-                {fiche.flashcards?.length > 0 && <button onClick={() => makeDeck(fiche)} className="flex-1 rounded-xl border-2 px-4 py-2.5 text-sm font-semibold transition hover:bg-slate-50 dark:hover:bg-slate-800" style={{ borderColor: 'var(--c-accent)', color: 'var(--c-accent)' }}>🃏 Créer {fiche.flashcards.length} flashcards</button>}
+                <button onClick={doSave} className="btn-primary flex-1 text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }}>💾 Enregistrer la fiche</button>
+                {fiche.flashcards?.length > 0 && <button onClick={() => makeDeck(fiche)} className="flex-1 rounded-xl border-2 px-4 py-2.5 text-sm font-semibold transition hover:bg-slate-50 dark:hover:bg-slate-800" style={{ borderColor: 'var(--c-accent)', color: 'var(--c-accent-texte)' }}>🃏 Créer {fiche.flashcards.length} flashcards</button>}
               </div>
               {msg && <p className="mt-3 text-center text-sm font-semibold text-emerald-600 dark:text-emerald-400">{msg}</p>}
             </>
@@ -285,7 +285,7 @@ export default function PhotoFiche() {
       )}
 
       <div className="text-center">
-        <Link to="/revision" className="text-sm font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]">← Retour à la révision</Link>
+        <Link to="/revision" className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">← Retour à la révision</Link>
       </div>
     </div>
   )

@@ -43,7 +43,7 @@ export default function Programme() {
         ) : (
           <>
             <p className="mb-2 text-sm">{t('setBacDate')}</p>
-            <input type="date" value={draft} onChange={(e) => setDraft(e.target.value)} className="rounded-xl border-0 px-3 py-2 text-slate-800" />
+            <input type="date" aria-label={t('setBacDate')} value={draft} onChange={(e) => setDraft(e.target.value)} className="rounded-xl border-0 bg-white px-3 py-2 text-slate-800 [color-scheme:light]" />
             <button onClick={save} className="btn-gold mt-3 block w-full !py-2.5">{t('save')}</button>
           </>
         )}
@@ -59,7 +59,7 @@ export default function Programme() {
           {plan.length === 0 && <div className="card p-4 text-center text-sm text-slate-500 dark:text-slate-400">{t('allCaughtUp')}</div>}
           {plan.map((p) => (
             <button key={p.themeId} onClick={() => navigate(`/subject/${p.subjectId}/theme/${p.themeId}`)} className="card flex w-full items-center gap-3 p-3.5 text-left transition hover:-translate-y-0.5 hover:shadow-md">
-              <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-full text-sm ${p.done ? 'text-white' : ''}`} style={{ backgroundColor: p.done ? '#3f9d6d' : 'color-mix(in srgb, var(--c-accent) 16%, transparent)', color: p.done ? '#fff' : 'var(--c-accent)' }} aria-hidden>{p.done ? '✓' : '○'}</span>
+              <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-full text-sm ${p.done ? 'text-white' : ''}`} style={{ backgroundColor: p.done ? '#3f9d6d' : 'color-mix(in srgb, var(--c-accent) 16%, transparent)', color: p.done ? '#fff' : 'var(--c-accent-texte)' }} aria-hidden>{p.done ? '✓' : '○'}</span>
               <span className="min-w-0 flex-1">
                 <span className={`block truncate text-sm font-semibold ${p.done ? 'text-slate-400 line-through' : ''}`}>{p.themeName}</span>
                 <span className="block text-xs text-slate-400">{p.subjectName}</span>
@@ -74,7 +74,7 @@ export default function Programme() {
       <section className="card p-5">
         <div className="mb-1 flex items-center justify-between text-sm">
           <span className="font-semibold">{t('overallProgress')}</span>
-          <span style={{ color: 'var(--c-accent)' }}>{derived.chaptersMastered} / {themesTotal} {t('themes')}</span>
+          <span style={{ color: 'var(--c-accent-texte)' }}>{derived.chaptersMastered} / {themesTotal} {t('themes')}</span>
         </div>
         <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
           <div className="h-full rounded-full" style={{ width: `${masteredPct}%`, backgroundColor: 'var(--c-accent)' }} />

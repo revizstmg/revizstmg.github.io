@@ -61,14 +61,14 @@ export default function Leaderboard() {
       <button
         onClick={() => setView('class')}
         className={`flex-1 rounded-xl px-3 py-2 text-sm font-semibold transition ${view === 'class' ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`}
-        style={view === 'class' ? { backgroundColor: 'var(--c-accent)' } : undefined}
+        style={view === 'class' ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}
       >
         🏆 {t('myClass')}
       </button>
       <button
         onClick={() => setView('league')}
         className={`flex-1 rounded-xl px-3 py-2 text-sm font-semibold transition ${view === 'league' ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`}
-        style={view === 'league' ? { backgroundColor: 'var(--c-accent)' } : undefined}
+        style={view === 'league' ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}
       >
         🏟️ {t('league')}
       </button>
@@ -111,7 +111,7 @@ export default function Leaderboard() {
                   className={`card flex items-center gap-3 p-3 ${mine ? 'ring-2' : ''}`}
                   style={mine ? { boxShadow: 'inset 0 0 0 2px var(--c-accent)' } : undefined}
                 >
-                  <span className="w-7 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent)' }}>{medal(i)}</span>
+                  <span className="w-7 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent-texte)' }}>{medal(i)}</span>
                   <span className="min-w-0 flex-1">
                     <span className="block truncate font-semibold">
                       {c.code}{mine && <span className="ml-1 text-xs font-normal text-slate-400">· {t('myClass')}</span>}
@@ -119,7 +119,7 @@ export default function Leaderboard() {
                     <span className="block text-xs text-slate-400">{c.members} {c.members > 1 ? t('membersP') : t('membersS')} · {t('avgPerStudent')} {c.avg}</span>
                   </span>
                   <span className="shrink-0 text-right">
-                    <span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent)' }}>{c.total}</span>
+                    <span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{c.total}</span>
                     <span className="block text-[0.65rem] uppercase tracking-wide text-slate-400">{t('totalCourses')}</span>
                   </span>
                 </div>
@@ -145,8 +145,9 @@ export default function Leaderboard() {
         <div className="card card-lux p-5">
           <h2 className="font-display text-xl font-semibold">{t('joinClass')}</h2>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t('classCodeHint')}</p>
-          <label className="mt-4 block text-xs font-semibold uppercase tracking-wide text-slate-400">{t('classCodeField')}</label>
+          <label htmlFor="lb-code" className="mt-4 block text-xs font-semibold uppercase tracking-wide text-slate-400">{t('classCodeField')}</label>
           <input
+            id="lb-code"
             value={code}
             onChange={(e) => setCode(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && normalizeCode(code).length >= 2 && setClassCode(normalizeCode(code))}
@@ -177,7 +178,7 @@ export default function Leaderboard() {
           <p className="kicker">{t('classLabel')} · {classCode}</p>
           <h1 className="font-display text-3xl font-medium leading-tight">🏆 {t('weeklyRanking')}</h1>
         </div>
-        <button onClick={() => { setClassCode(''); setRows(null) }} className="shrink-0 text-xs font-semibold text-[#98761f] hover:underline dark:text-[#d9bd77]">{t('leaveClass')}</button>
+        <button onClick={() => { setClassCode(''); setRows(null) }} className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('leaveClass')}</button>
       </header>
       <Tabs />
       <hr className="rule-gold" />
@@ -206,7 +207,7 @@ export default function Leaderboard() {
                 className={`card flex items-center gap-3 p-3 ${me ? 'ring-2' : ''}`}
                 style={me ? { boxShadow: 'inset 0 0 0 2px var(--c-accent)' } : undefined}
               >
-                <span className="w-7 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent)' }}>{medal(i)}</span>
+                <span className="w-7 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent-texte)' }}>{medal(i)}</span>
                 <span className="monogram grid h-10 w-10 shrink-0 place-items-center overflow-hidden text-sm">
                   {r.photo ? <img src={r.photo} alt="" className="h-full w-full rounded-full object-cover" /> : initialsOf(r.name)}
                 </span>
@@ -214,7 +215,7 @@ export default function Leaderboard() {
                   {r.name || 'Élève'}{me && <span className="ml-1 text-xs font-normal text-slate-400">· {t('youLabel')}</span>}
                 </span>
                 <span className="shrink-0 text-right">
-                  <span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent)' }}>{r.courses}</span>
+                  <span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{r.courses}</span>
                   <span className="block text-[0.65rem] uppercase tracking-wide text-slate-400">{t('coursesThisWeek')}</span>
                 </span>
               </div>
