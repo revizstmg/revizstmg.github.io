@@ -89,10 +89,12 @@ async function publication() {
     if (run) p.ci = { etat: run.conclusion, date: run.updated_at }
   } catch { /* indisponible */ }
   try {
-    const dep = (await github('/deployments?per_page=1'))[0]
-    if (dep) {
+    // Dernière mise en ligne réussie. Un déploiement remplacé par un plus récent
+    // est annulé et GitHub le note « error » : ce n'est pas une panne (la
+    // vérification de 6 h surveille les vraies pannes).
+    for (const dep of await github('/deployments?per_page=10')) {
       const st = (await github(`/deployments/${dep.id}/statuses?per_page=1`))[0]
-      p.miseEnLigne = { etat: st?.state, date: st?.created_at || dep.created_at }
+      if (st?.state === 'success') { p.miseEnLigne = { etat: 'success', date: st.created_at }; break }
     }
   } catch { /* indisponible */ }
   try {
@@ -148,7 +150,7 @@ function rediger(u, c, p, histo) {
   const tests = process.env.RESULTAT_TESTS
   l.push(`- Tests du contenu et de la logique : ${tests ? `${etatIcone(tests)} ${tests === 'success' ? 'réussis' : 'en échec'}` : '—'}`)
   l.push(`- Dernière CI sur main : ${p.ci ? `${etatIcone(p.ci.etat)} ${dateFr(p.ci.date)}` : '—'}`)
-  l.push(`- Dernière mise en ligne : ${p.miseEnLigne ? `${etatIcone(p.miseEnLigne.etat)} ${dateFr(p.miseEnLigne.date)}` : '—'}`)
+  l.push(`- Dernière mise en ligne réussie : ${p.miseEnLigne ? `${etatIcone(p.miseEnLigne.etat)} ${dateFr(p.miseEnLigne.date)}` : '—'}`)
   l.push(`- Modifications de l'app ces 7 derniers jours : ${nb(p.modifications7j)}`)
   l.push('')
 
