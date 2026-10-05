@@ -1,0 +1,134 @@
+[
+  {
+    "id": "t6-01",
+    "ref": "[C6.2]",
+    "citation": "Fait des choses | Une chose sous ma garde (art. 1242 al.1) | Mon chien mord un passant ; ma tuile tombe",
+    "categorie": "fond",
+    "probleme": "La morsure d’un chien ne relève pas de l’art. 1242 al. 1 (fait des choses) mais d’un texte spécial, l’art. 1243 (fait des animaux). Le thème se contredit lui-même : [C10.3] cite bien l’art. 1243 pour le même cas, et [ESS4]/[E13] présentent « des animaux » comme un régime distinct. La même confusion revient en [C1.4] (« il en répond même sans faute (responsabilité du fait des choses) »), puis dans les exercices générés [E66]/[E73], [E231] et le corrigé [E416]. Le caractère « sans faute » reste juste ; c’est le rattachement (article et nom du régime) qui est faux.",
+    "correction": "[C6.2] : « Fait des choses | Une chose sous ma garde (art. 1242 al. 1) | Ma tuile tombe sur un passant ; mon pot de fleurs chute du balcon », puis ajouter sous le tableau : « Le dommage causé par un animal relève d’un texte spécial, l’art. 1243 (responsabilité du fait des animaux) : le propriétaire, ou celui qui s’en sert, en répond sans faute, comme pour une chose. » [C1.4] : « … il en répond même **sans faute** (responsabilité du fait des animaux, art. 1243, proche de celle du fait des choses). »",
+    "source": "C. civ., art. 1243 : « Le propriétaire d’un animal, ou celui qui s’en sert, pendant qu’il est à son usage, est responsable du dommage que l’animal a causé, soit que l’animal fût sous sa garde, soit qu’il fût égaré ou échappé. » L’art. 1242 al. 1 vise le fait des choses en général. Le thème lui-même cite l’art. 1243 en [C10.3].",
+    "fichier_source": "app/content/droit/approfondi-1.json (droit-t6, section « 🚗 Les régimes : fait personnel, des choses, d’autrui », tableau) ; app/content/droit/cours-reels.json (droit-t6, section « Casser, c’est réparer », paragraphe « Ici, le maître est le gardien… »)",
+    "confiance": "haute"
+  },
+  {
+    "id": "t6-02",
+    "ref": "[C1.D1]",
+    "citation": "[C1.D1] Fait générateur : Le fait d’une chose/animal sous sa garde",
+    "categorie": "exercice",
+    "probleme": "Le tableau « Condition | Ici » de [C1.3] applique les conditions au cas du chien. Le générateur l’a pris pour un tableau « terme → définition ». L’encadré affiche donc comme définitions de simples exemples : « Fait générateur : Le fait d’une chose/animal sous sa garde », « Dommage : La blessure (préjudice corporel) », « Lien de causalité : La morsure a causé la blessure ». Ces « définitions » contredisent [C2.D2] (un fait générateur peut être une faute, le fait d’une chose ou le fait d’autrui). Les exercices en sont faussés : [E33] (« Quelle est la bonne définition de « Fait générateur » ? ✔ Le fait d’une chose/animal sous sa garde »), [E32], [E34], [E39], [E42], [E55]–[E57], [E63], les flashcards [E397]–[E399] (qui contredisent [E404]/[E405] pour les mêmes termes) et les explications de [E49], [E52], [E53].",
+    "correction": "Ne pas tirer de définitions de ce tableau d’application : le transformer en bloc « example » ou en liste sans motif « terme : définition », ou bien exclure du générateur de définitions les tableaux dont la 2e colonne s’intitule « Ici » ou « Exemple ». Les seules définitions à garder sont celles de definitions.json (« Fait générateur : Événement à l’origine du dommage (faute, fait d’une chose, fait d’autrui) », etc.).",
+    "source": "Le texte de [C1.3] lui-même (colonne « Ici ») et la définition de [C2.D2]. Côté code : app/src/data/index.js, sectionPairs()/twoColKind(), qui classe en « def » un tableau à 2 colonnes « Condition / Ici ».",
+    "fichier_source": "app/content/droit/cours-reels.json (droit-t6, section « Casser, c’est réparer », tableau head [Condition, Ici]) ; générateur app/src/data/index.js",
+    "confiance": "haute"
+  },
+  {
+    "id": "t6-03",
+    "ref": "[E43]",
+    "citation": "Cas concret — on observe : « La blessure (préjudice corporel) ». De quelle notion s'agit-il ? A. Réparation B. Dommage / préjudice ✔ C. Dommage D. Responsabilité pénale",
+    "categorie": "exercice",
+    "probleme": "« Dommage » (tiré du tableau de [C1]) et « Dommage / préjudice » (definitions.json) désignent la même notion. En [E43], B est aussi juste que C. En [E41] (« Atteinte subie par la victime… » ✔ B. Dommage / préjudice), le choix C « Dommage » est lui aussi correct. Dans l’association [E63], « Dommage » et « Dommage / préjudice » peuvent s’échanger leurs définitions sans erreur de fond, mais l’élève est compté faux.",
+    "correction": "Supprimer la notion « Dommage » issue du tableau [C1.3] (voir t6-02) et ne garder que « Dommage / préjudice » : il n’y aura plus deux réponses justes.",
+    "source": "Raisonnement : un QCM ne peut pas avoir deux réponses justes ; dommage et préjudice sont employés comme synonymes dans tout le thème ([C2.D1], [C5.2], [E11]).",
+    "fichier_source": "app/content/droit/cours-reels.json (tableau [C1.3]) ; app/content/droit/definitions.json (droit-t6, « Dommage / préjudice »)",
+    "confiance": "haute"
+  },
+  {
+    "id": "t6-04",
+    "ref": "[E340]",
+    "citation": "Cas concret — on observe : « le dommage découle-t-il bien du fait générateur ? ». De quelle notion s'agit-il ? A. Lien de causalité B. Dommage / préjudice ✔ C. 4. Le lien de causalité D. Responsabilité pénale",
+    "categorie": "exercice",
+    "probleme": "Le générateur transforme en « notions » les puces des listes de [C5] (« Un fait générateur », « Un dommage (ou préjudice) », « Un lien de causalité ») et de [C10] (« 2. Le fait générateur », « 3. Le dommage », « 4. Le lien de causalité »). Elles font doublon avec les notions « Fait générateur », « Lien de causalité » et « Dommage / préjudice ». Conséquences : (1) des QCM à deux réponses justes : [E340] (A aussi juste), [E341] (C « 4. Le lien de causalité » aussi juste), [E343] (C « Fait générateur » aussi juste), [E331] (C « Événement à l’origine du dommage… » aussi juste), [E332] (C aussi juste), [E335] (C aussi juste), [E339] (A aussi juste) ; (2) un vrai/faux à la réponse attendue fausse : [E352] « « Lien de causalité » : le dommage découle-t-il bien du fait générateur ? → FAUX », alors que c’est exactement le lien de causalité (réponse : VRAI) ; (3) des associations où les paires s’échangent ([E200] Fait générateur / Un fait générateur, [E356] Dommage / préjudice / 3. Le dommage) ; (4) des saisies qui exigent « 3. Le dommage », « 2. Le fait générateur », « Un lien de causalité », « Un fait générateur » ([E354], [E355], [E197], [E199]). La comparaison des réponses est exacte (common.jsx, answerMatches), donc « dommage », « fait générateur » ou « lien de causalité » sont refusés ; (5) des flashcards dont la « définition » est une question ([E409]–[E411]).",
+    "correction": "Exclure ces deux listes du générateur de notions : par exemple, réécrire les puces de [C10.2] sans le motif « **terme** : … » (« **1. Quel régime ?** Contractuel ou délictuel ? » est déjà correct ; faire de même pour 2 à 4), et celles de [C5.2] en « Un **fait générateur**, c’est-à-dire une faute… ». À défaut, retirer du terme les articles et numéros (« Un », « 2. ») et fusionner avec les notions existantes avant de générer les distracteurs. [E352] doit attendre VRAI.",
+    "source": "Raisonnement sur les exercices : deux options équivalentes et une réponse V/F contraire à la définition du cours ([C2.D3] : lien de causalité = rapport de cause à effet). Côté code : app/src/data/index.js, sectionPairs() (bloc notionItems, regex « terme : définition ») et common.jsx answerMatches (égalité stricte).",
+    "fichier_source": "app/content/droit/approfondi-2.json (droit-t6, section « ⚖️ MÉTHODE — Caractériser une responsabilité civile », liste) ; app/content/droit/approfondi-1.json (droit-t6, section « 🧩 Les conditions de la responsabilité civile », liste)",
+    "confiance": "haute"
+  },
+  {
+    "id": "t6-05",
+    "ref": "[E68]",
+    "citation": "TROU : aucun dommage réel), il n’y a ____ de responsabilité civile. → mot attendu : « pas »",
+    "categorie": "exercice",
+    "probleme": "Le générateur de textes à trous coupe les phrases après chaque « . » ou « ? », y compris dans les abréviations « par ex. », « ex. », « art. » et dans les questions entre parenthèses. Il en sort des fragments sans sens ou dont le mot attendu est impossible à deviner : [E68]/[E71] (« aucun dommage réel), il n’y a ____ »), [E129]/[E137] (« La responsabilité du ____ (art. »), [E130]/[E135] (« 1242 al.1) rend responsable le ____ »), [E132]/[E139] (« Identifier d’abord le ____ (personnel ? »), [E133]/[E140] (« d’autrui ?), puis dérouler le ____ »), [E263]/[E266] (« … l’assurance de responsabilité (ex. »), [E318]/[E329], [E386]/[E394] et [E201]/[E207] (phrases coupées à « (art. »), [E359]/[E363] (« Est-il ____ ? » → « certain, direct et personnel », sans aucun contexte), [E360]/[E365] (« Fait générateur : ____ sous la garde du maître (art. » → « fait d’une chose/animal », barre oblique comprise : la réponse « fait d’un animal », juste, est refusée).",
+    "correction": "Protéger les abréviations dans le découpage (art., al., ex., par ex.) et ne pas couper sur un « ? » situé dans une parenthèse. Ou bien réécrire les textes sources (« article 1242, alinéa 1 », « par exemple »). Supprimer [E359]/[E363] et [E360]/[E365].",
+    "source": "app/src/data/index.js, trouFromBold() : split(/(?<=[.!?…])\\s+/) ; les fragments cités sont visibles tels quels par l’élève.",
+    "fichier_source": "app/content/droit/cours-reels.json (C1, encadré « La règle des 3 ») ; app/content/droit/approfondi-1.json (C3, C5.1, C7.3) ; app/content/droit/approfondi-2.json (C9.1, C10, C11.2)",
+    "confiance": "haute"
+  },
+  {
+    "id": "t6-06",
+    "ref": "[E128]",
+    "citation": "TROU : ____ Dans un supermarché, une bouteille explose sur le rayon et blesse un client au visage. → mot attendu : « Énoncé. »",
+    "categorie": "exercice",
+    "probleme": "Le libellé en gras « **Énoncé.** » des cas pratiques est pris pour une notion à retrouver. [E128]/[E138] et [E385]/[E393] demandent de taper « Énoncé. » : aucun contenu juridique, et la réponse est impossible à deviner.",
+    "correction": "Retirer le gras de « Énoncé. » dans les deux cas pratiques (ou le mettre en titre du bloc). À défaut, exclure ce mot du générateur de trous.",
+    "source": "app/src/data/index.js, trouFromBold() (masque le premier terme en gras de chaque phrase).",
+    "fichier_source": "app/content/droit/approfondi-1.json (droit-t6, « ⚖️ Cas pratique guidé — responsabilité civile ») ; app/content/droit/approfondi-2.json (droit-t6, « ⚖️ Cas pratique guidé — la responsabilité de l’employeur »)",
+    "confiance": "haute"
+  },
+  {
+    "id": "t6-07",
+    "ref": "[E96]",
+    "citation": "Critère — « Qui agit » : ? A. Dommages-intérêts — Amende, prison B. La victime — La société C. Réparer — Punir ✔ D. La victime — La société (ministère public)",
+    "categorie": "exercice",
+    "probleme": "Les lignes « Qui agit » et « Bénéficiaire » des tableaux [C2.3]/[C4.2] ont presque le même contenu (« La victime — La société (ministère public) » / « La victime — La société »). Dans [E96] et [E161] (« Qui agit »), le choix B « La victime — La société » est juste lui aussi, puisque le cours dit que c’est la société qui agit. Dans [E95] (« Bénéficiaire »), le choix C ne diffère du bon que par la parenthèse « (ministère public) ». L’élève ne peut pas trancher sur le fond.",
+    "correction": "Rendre les deux lignes nettement différentes, par exemple : « Qui agit | La victime (action en justice) | Le ministère public (procureur), au nom de la société » et « Bénéficiaire | La victime (indemnisée) | La société (amende versée au Trésor public) ». Ou bien interdire comme distracteur une ligne du même tableau dont le texte est inclus dans la bonne réponse.",
+    "source": "Raisonnement : deux options également justes. Tableaux [C2.3] et [C4.2].",
+    "fichier_source": "app/content/droit/cours-reels.json (droit-t6, « Payer la victime OU être puni », tableau) ; app/content/droit/approfondi-1.json (droit-t6, « 🎯 Responsabilité civile et responsabilité pénale », tableau)",
+    "confiance": "haute"
+  },
+  {
+    "id": "t6-08",
+    "ref": "[E426]",
+    "citation": "CAS (test du thème) : {\"prompt\":\"Cas\",\"answer\":\"Le chien d’un voisin, mal tenu, mord un passant qui doit aller à l’hôpital. Qui paie les soins ?\"}",
+    "categorie": "exercice",
+    "probleme": "Dans le test du thème (ThemeTest.jsx), l’élève lit « Analyse ce cas : Cas » ou « Analyse ce cas : Majeure — la règle » sans aucun énoncé. La « correction » affichée ensuite est l’énoncé lui-même ([E426], [E427]) ou un morceau de raisonnement ([E428], [E429]). Dans [E418] (« Présente et explique : ⚖️ Cas pratique guidé — responsabilité civile »), le corrigé ne contient que l’énoncé et la méthode, car les blocs « example » (majeure, mineure, conclusion) sont exclus : il ne répond pas à la question « Le supermarché est-il responsable ? ». Enfin, [E419] et [E420] (« Définis / explique : Fait générateur » → corrigé « Le sol laissé mouillé sans signalisation ») présentent comme définitions les exemples de l’association « Condition ↔ exemple (cas du sol mouillé) ».",
+    "correction": "CAS : prendre l’énoncé (bloc « Cas ») comme sujet et la suite de la section comme corrigé. Pour [E426], sujet « Le chien d’un voisin, mal tenu, mord un passant… Qui paie les soins ? », corrigé = [C1.2] et [C1.4]. Ne pas proposer « Majeure », « Mineure » ou « Conclusion » comme cas séparés. [E418] : inclure les blocs « example » dans le corrigé. [E419]/[E420] : ne pas convertir l’association « Condition ↔ exemple » en questions « Définis », ou formuler « Dans le cas du sol mouillé, quel est le fait générateur ? ».",
+    "source": "app/src/data/index.js, buildThemeTest() (cas.push({ prompt: b.h, answer: b.c }) ; redac depuis les associations) et sectionPlainText() (ignore les blocs « example ») ; app/src/games/ThemeTest.jsx (affichage « Analyse ce cas : » + prompt, puis réponse en correction).",
+    "fichier_source": "app/content/droit/cours-reels.json (blocs « Cas ») ; app/content/droit/approfondi-1.json (C3 cas pratique) ; app/content/droit/matiere.json (droit-t6-assoc)",
+    "confiance": "haute"
+  },
+  {
+    "id": "t6-09",
+    "ref": "[C11.1]",
+    "citation": "**Énoncé.** Un livreur, salarié d’une entreprise, percute et endommage la voiture d’un tiers pendant sa tournée. Le tiers réclame réparation. Qui est responsable ?",
+    "categorie": "fond",
+    "probleme": "Un livreur qui « percute » une voiture pendant sa tournée, normalement au volant d’un véhicule de livraison, cause un accident de la circulation impliquant un véhicule terrestre à moteur. C’est la loi Badinter du 5 juillet 1985 qui s’applique, et elle exclut le droit commun (art. 1240 et suivants, donc aussi l’art. 1242 al. 5) : le cas pratique enseigne le mauvais régime pour ces faits, alors que [ESS4] range lui-même l’accident de la circulation parmi les régimes spéciaux. Même problème, plus léger, en [C6.4] (« Un salarié livreur endommage un véhicule pendant son travail ») et dans l’exemple de [C8.2] « Un piéton renversé par un inconnu » rattaché à « Art. 1240 et s. » (le classement en extracontractuel reste juste).",
+    "correction": "Changer les faits pour sortir de la circulation routière, par exemple [C11.1] : « Un livreur, salarié d’une entreprise, laisse tomber un colis lourd en le déchargeant et brise la vitrine d’un commerçant pendant sa tournée. » ; [C6.4] : « Un salarié livreur, en manœuvrant un diable, casse la vitrine d’un commerçant pendant son travail… » ; [C8.2] : « Un passant blessé par la chute d’un pot de fleurs ». Ou garder les faits en ajoutant : « Si un véhicule à moteur est impliqué, c’est la loi Badinter du 5 juillet 1985 (accidents de la circulation) qui s’applique. »",
+    "source": "Loi n° 85-677 du 5 juillet 1985 ; Cass. 2e civ., 4 mai 1987 (l’indemnisation de la victime d’un accident de la circulation ne peut être fondée que sur la loi de 1985, à l’exclusion des art. 1382 et s., devenus 1240 et s.) ; Cass. 2e civ., 28 mai 2009, n° 08-13.310 (préposé conducteur d’un véhicule de l’employeur). Confiance moyenne : l’énoncé ne précise pas le moyen de locomotion, et cet exemple est courant dans les manuels.",
+    "fichier_source": "app/content/droit/approfondi-2.json (droit-t6, « ⚖️ Cas pratique guidé — la responsabilité de l’employeur » ; tableau de « 🧩 Responsabilité contractuelle et délictuelle ») ; app/content/droit/approfondi-1.json (droit-t6, exemple « Fait d’autrui »)",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "t6-10",
+    "ref": "[C3.3]",
+    "citation": "La bouteille (chose) était sous la **garde** du supermarché ; elle a explosé (fait de la chose) ; le client a été blessé au visage (dommage corporel) ; la blessure résulte directement de l’explosion (lien de causalité).",
+    "categorie": "fond",
+    "probleme": "Une bouteille qui explose sur le rayon est l’exemple type du défaut d’un produit. Le cas pratique conclut sans nuance que le supermarché est responsable comme gardien (art. 1242 al. 1), ce qui pose deux problèmes. D’abord, pour une chose dotée d’un dynamisme propre, la jurisprudence distingue la garde de la structure et la garde du comportement : le fabricant peut rester gardien de la structure, donc la qualité de gardien du supermarché n’est pas certaine. Ensuite, le régime des produits défectueux (art. 1245 et s.), enseigné dans le même thème en [C9], s’applique à ces faits ; le juge doit l’examiner d’office, et le distributeur n’en répond que si le producteur reste inconnu. Il y a donc une tension avec [C9].",
+    "correction": "Soit choisir une chose sans défaut de fabrication (« Dans un supermarché, un présentoir mal fixé par le personnel tombe sur un client et le blesse au visage. »), soit ajouter à la conclusion [C3.4] : « Si l’explosion est due à un défaut de la bouteille, le client peut aussi agir contre le fabricant sur le fondement de la responsabilité du fait des produits défectueux (art. 1245 et s.). »",
+    "source": "Cass. 2e civ., 5 janv. 1956, Oxygène liquide (garde de la structure / du comportement) ; C. civ., art. 1245, 1245-6 ; Cass. ch. mixte, 7 juill. 2017, n° 15-25.651 (le juge doit appliquer d’office le régime des produits défectueux quand les faits en relèvent). Confiance moyenne : au niveau du bac, le raisonnement sur le fait des choses reste défendable ; c’est surtout le choix de l’exemple qui pose problème.",
+    "fichier_source": "app/content/droit/approfondi-1.json (droit-t6, « ⚖️ Cas pratique guidé — responsabilité civile »)",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "t6-11",
+    "ref": "[E295]",
+    "citation": "TROU : Pas de contrat → responsabilité ____. → mot attendu : « délictuelle »",
+    "categorie": "exercice",
+    "probleme": "« extracontractuelle » est tout aussi juste, et le cours l’emploie lui-même ([C8.2] « Délictuelle (extra-contractuelle) », [E4], [E13]). Mais la comparaison des réponses est exacte et aucune variante n’est acceptée : l’élève qui écrit « extracontractuelle » est compté faux. Même problème en [E297] (saisie), et en [E201]/[E207] (« La responsabilité civile ____ (hors contrat) … » → « délictuelle »).",
+    "correction": "Accepter aussi « extracontractuelle » et « extra-contractuelle » (alt) pour ces quatre exercices.",
+    "source": "Synonymie admise en droit des obligations (responsabilité délictuelle = extracontractuelle, art. 1240 et s.) ; app/src/games/common.jsx answerMatches (égalité stricte après normalisation).",
+    "fichier_source": "app/content/droit/approfondi-2.json (droit-t6, encadré « À retenir » de « 🧩 Responsabilité contractuelle et délictuelle ») ; app/content/droit/approfondi-1.json (droit-t6, [C5.1])",
+    "confiance": "haute"
+  },
+  {
+    "id": "t6-12",
+    "ref": "[E66]",
+    "citation": "TROU : Ici, le maître est le ____ de l’animal : il en répond même sans faute (responsabilité du fait des choses). → mot attendu : « gardien »",
+    "categorie": "exercice",
+    "probleme": "Le mot « propriétaire » convient aussi : c’est même le terme de l’art. 1243 (« Le propriétaire d’un animal… »). Il est pourtant refusé ([E66]/[E73]). De même, [E388]/[E395] (« Le dommage a été causé par le salarié ____ (dans l’exercice de ses fonctions). » → « pendant sa tournée ») masque un détail de fait, pas une notion : « pendant son travail » ou « pendant son service », tout aussi justes, sont refusés.",
+    "correction": "[E66]/[E73] : accepter « propriétaire » (ou retirer le gras de « gardien » dans [C1.4] si l’on corrige t6-01). [E388]/[E395] : retirer le gras de « pendant sa tournée » dans [C11.3] pour que ce fragment ne devienne pas un trou.",
+    "source": "C. civ., art. 1243 ; comparaison exacte des réponses (common.jsx). Confiance moyenne : la consigne « mot exact » peut viser la mémorisation du texte du cours.",
+    "fichier_source": "app/content/droit/cours-reels.json (droit-t6, [C1.4]) ; app/content/droit/approfondi-2.json (droit-t6, [C11.3])",
+    "confiance": "moyenne"
+  }
+]

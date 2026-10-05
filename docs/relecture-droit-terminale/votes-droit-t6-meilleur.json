@@ -1,0 +1,86 @@
+[
+  {
+    "id": "t6-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[C6.2] : « Fait des choses | Une chose sous ma garde (art. 1242 al. 1) | Mon pot de fleurs tombe du balcon sur un passant ; une branche de mon arbre tombe sur la voiture du voisin », puis sous le tableau : « Le dommage causé par un animal relève d’un texte spécial, l’art. 1243 (responsabilité du fait des animaux) : le propriétaire, ou celui qui s’en sert, en répond sans faute, comme le gardien d’une chose. » [C1.4] : « Ici, le maître est le **gardien** de l’animal : il en répond même **sans faute** (responsabilité du fait des animaux, art. 1243, proche de celle du fait des choses). »",
+    "justification": "La morsure d’un chien ne relève pas de l’art. 1242 al. 1 mais du texte spécial de l’art. 1243. Le cours lui-même range « des animaux » à part, comme le programme ([ESS4], [E13]), et cite l’art. 1243 en [C10.3] : la version A se contredit et donne un fondement faux. La version B est exacte : elle paraphrase fidèlement l’art. 1243, et le régime du fait des animaux est bien une responsabilité de plein droit. Il reste une imprécision qu’elle conserve : « ma tuile tombe ». La chute d’une tuile est une ruine partielle du bâtiment, qui relève en principe contre le propriétaire de l’art. 1244, autre régime que le cours cite à part. Il vaut donc mieux la remplacer par un exemple sans ambiguïté.",
+    "source": "C. civ., art. 1242 al. 1, 1243 et 1244 ; art. 515-14 (l’animal, être vivant soumis au régime des biens) ; Cass. 2e civ., 4 mai 2000 (chute de tuile = ruine partielle) ; programme de droit de Terminale STMG (responsabilité du fait des animaux distincte)."
+  },
+  {
+    "id": "t6-02",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "L’encadré présente comme définition du fait générateur une simple application au cas du chien. Cette définition est fausse par réduction : elle omet la faute et le fait d’autrui, et le fait des animaux n’est pas un fait de chose au sens de l’art. 1242. Elle se diffuse dans [E33], [E39], [E52], [E55], [E63] et [E397], qui l’enseignent comme la bonne définition, et il en va de même pour « Dommage » et « Lien de causalité » ([E32], [E34], [E49]). Un élève qui la reprendrait au bac serait sanctionné. La correction envisagée va dans le bon sens : le tableau [C1.3] reste une bonne application, mais ne doit pas alimenter le générateur de définitions. Les définitions générales de definitions.json sont exactes au niveau du bac.",
+    "source": "Raisonnement juridique : le fait générateur est l’événement à l’origine du dommage (fait personnel, fait des choses, fait d’autrui, fait des animaux) ; C. civ., art. 1240 à 1243."
+  },
+  {
+    "id": "t6-03",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "« Dommage » et « Dommage / préjudice » désignent la même notion. Une blessure étant un dommage corporel, les deux propositions sont justes, et l’élève qui coche celle que le générateur n’a pas retenue est sanctionné à tort ; le même défaut touche [E41]. Supprimer la notion « Dommage » tirée du tableau [C1.3] fait disparaître le doublon et va dans le bon sens, de manière cohérente avec t6-02. Le générateur devrait plus largement traiter comme une seule notion « Dommage », « Dommage / préjudice », « Un dommage (ou préjudice) » et « 3. Le dommage ».",
+    "source": "Raisonnement : synonymie dommage/préjudice au niveau du bac ; le dommage corporel est une catégorie du dommage réparable."
+  },
+  {
+    "id": "t6-04",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le QCM a deux bonnes réponses : « Lien de causalité » (A), qui est la notion exacte, et « 4. Le lien de causalité » (C), seule acceptée. Cette dernière n’est qu’un artefact de la numérotation de la liste [C10.2]. Le même vice se retrouve dans [E341], [E343] et [E335]. Surtout, [E352] attend FAUX pour l’affirmation « Lien de causalité : le dommage découle-t-il bien du fait générateur ? », alors qu’elle est juste : la bonne réponse y est refusée. Réécrire les puces de [C5.2] et de [C10.2] sans le motif « terme : … », ou normaliser et fusionner les termes, règle le problème, et [E352] doit bien attendre VRAI.",
+    "source": "Raisonnement : le lien de causalité est le rapport de cause à effet entre le fait générateur et le dommage ; la question « le dommage découle-t-il du fait générateur ? » en est l’expression même."
+  },
+  {
+    "id": "t6-05",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Protéger dans le découpage les abréviations « art. », « al. », « ex. », « par ex. » et « et s. », et ne pas couper sur un « ? » situé à l’intérieur d’une parenthèse ; à défaut, écrire en toutes lettres dans les sources (« article 1242, alinéa 1 », « par exemple »). Supprimer [E359]/[E363] (« Est-il ____ ? » reste sans contexte même après correction) et [E360]/[E365] (réponse attendue « fait d’une chose/animal », qui refuserait « fait d’un animal »).",
+    "justification": "Le découpage a coupé la phrase de [C1.5] sur l’abréviation « ex. ». L’élève voit un fragment qui commence par une parenthèse orpheline et perd la règle testée (« s’il en manque un seul »). Pour [E68] seul, le mot « pas » reste devinable : la gêne est réelle mais limitée. Le même défaut rend en revanche d’autres items mutilés ([E129]/[E137] « (art. », [E130]/[E135] qui commencent par « 1242 al.1) », [E132]/[E133] coupés sur un « ? » entre parenthèses) ou impossibles à résoudre ([E359]). La correction proposée est techniquement juste et sans risque pour le fond.",
+    "source": "Raisonnement sur le texte source [C1.5], [C3.2], [C3.5], [C10.2] et [C10.3]."
+  },
+  {
+    "id": "t6-06",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le trou porte sur l’étiquette « Énoncé. », qui n’est ni une notion juridique ni déductible de la phrase. Un élève qui écrit « Cas », « Faits » ou « Situation » est refusé alors qu’il n’existe aucune bonne réponse objective. L’exercice n’a aucune valeur pédagogique, et le même défaut touche [E138], [E385] et [E393]. Retirer le gras de « Énoncé. », en faire le titre du bloc ou l’exclure du générateur de trous va dans le bon sens.",
+    "source": "Raisonnement sur [C3.1] et [C11.1]."
+  },
+  {
+    "id": "t6-07",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Dans [C2.3] et aussi dans [C4.2] : « Qui agit | La victime (action en justice) | Le ministère public (procureur), au nom de la société » et « Bénéficiaire | La victime (indemnisée) | La société (l’amende est versée au Trésor public) ». En plus, interdire dans le générateur un distracteur dont le texte est inclus dans celui de la bonne réponse.",
+    "justification": "Pour « Qui agit », la proposition B « La victime — La société » est substantiellement juste : le ministère public exerce l’action publique au nom de la société. Elle n’est refusée qu’à cause de la parenthèse « (ministère public) ». Le piège inverse existe pour « Bénéficiaire » ([E95]), et le même défaut se trouve dans [E161], tiré du tableau [C4.2] (« La victime — La société » contre « … (le ministère public) »). La rédaction proposée est exacte : action publique exercée par le ministère public, amende recouvrée au profit de l’État. Il faut toutefois l’étendre à [C4.2].",
+    "source": "C. proc. pén., art. 1er et 31 (le ministère public exerce l’action publique et requiert l’application de la loi) ; C. pén., art. 131-13 et s. (amendes)."
+  },
+  {
+    "id": "t6-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "L’exercice est cassé : la consigne est le mot « Cas » et le « corrigé » est l’énoncé lui-même, qui pose une question sans y répondre. [E428]/[E429] isolent la majeure et la mineure sans le sujet, et [E418] omet le raisonnement du corrigé. La correction va dans le bon sens : sujet = énoncé, corrigé = [C1.2] + [C1.4], pas de « Majeure », « Mineure » ou « Conclusion » comme cas séparés, et [E419]/[E420] reformulés en questions d’application. Attention : le corrigé de [E426] doit reprendre [C1.4] une fois corrigé (t6-01), c’est-à-dire l’art. 1243 et non « responsabilité du fait des choses ».",
+    "source": "Raisonnement sur [C1.1] à [C1.5], [C3.1] à [C3.5] et [E418] à [E429] ; C. civ., art. 1243."
+  },
+  {
+    "id": "t6-09",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[C11.1] : « **Énoncé.** Un livreur, salarié d’une entreprise, manœuvre son diable chargé de colis sur le trottoir et brise la vitrine d’une boutique voisine pendant sa tournée. Le commerçant, qui n’a aucun contrat avec l’entreprise, réclame réparation. Qui est responsable ? » ; [C6.4] : « Un salarié livreur, en manœuvrant un diable pendant son travail, brise la vitrine d’un commerçant voisin : l’**employeur** est civilement responsable (responsabilité du commettant du fait de son préposé) et devra indemniser, même sans faute de sa part. » ; [C8.2] (souhaitable) : « Un passant blessé par la chute d’un pot de fleurs ». Écarter l’option qui garde la collision en ajoutant seulement une note sur la loi Badinter.",
+    "justification": "Un livreur en tournée qui « percute » une voiture conduit selon toute vraisemblance un véhicule terrestre à moteur. L’indemnisation relève alors exclusivement de la loi du 5 juillet 1985, à l’exclusion des art. 1240 et suivants : la majeure (art. 1242 al. 5) est donc inapplicable, même si c’est bien l’employeur, gardien du véhicule, et son assureur qui paieront. L’idée de B de changer les faits est la bonne, mais deux points sont à ajuster. « En le déchargeant » réintroduit le véhicule, et l’on pourrait discuter d’un accident de la circulation. Un commerçant destinataire du colis serait partie au contrat de transport, ce qui pose la question contractuelle. Il faut donc un objet sans moteur et une victime clairement tierce. L’option « garder les faits + note Badinter » laisserait une majeure contredite par les faits.",
+    "source": "Loi n° 85-677 du 5 juillet 1985, art. 1er et 5 ; Cass. 2e civ., 4 mai 1987 (exclusivité de la loi de 1985) ; Cass. 2e civ., 28 mai 2009, n° 08-13.310 (préposé conducteur) ; C. civ., art. 1242 al. 5 ; C. com., art. L. 132-8."
+  },
+  {
+    "id": "t6-10",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[C3.1] : « **Énoncé.** Dans un supermarché, un présentoir chargé de marchandises bascule et tombe sur un client, qu’il blesse au visage. Le client réclame réparation. Le supermarché est-il responsable ? » ; [C3.3] : « Le présentoir (chose) était sous la **garde** du supermarché, qui en a l’usage, la direction et le contrôle ; il est tombé sur le client (fait de la chose) ; le client a été blessé au visage (dommage corporel) ; la blessure résulte directement de la chute du présentoir (lien de causalité). » Ne pas écrire « mal fixé par le personnel » : cela ferait apparaître une faute (art. 1240 ou 1242 al. 5), alors que le cas illustre une responsabilité sans faute.",
+    "justification": "La bouteille de boisson gazeuse qui explose est l’exemple même où la jurisprudence a refusé la garde au distributeur : le fabricant reste gardien de la structure, et le vendeur a été mis hors de cause (Cass. 1re civ., 12 nov. 1975). C’est aussi l’hypothèse type d’un produit défectueux. Le juge doit alors examiner d’office les art. 1245 et s., régime qui exclut les régimes fondés sur le défaut, et le distributeur n’en répond qu’à titre subsidiaire (art. 1245-6). La conclusion « le supermarché, gardien, est responsable » est donc juridiquement fragile. L’option 2 de B (« le client peut aussi agir contre le fabricant ») ne suffit pas, car elle conserve cette conclusion. L’option 1 est la bonne, sans la mention d’une faute du personnel.",
+    "source": "C. civ., art. 1242 al. 1, 1245 et s., 1245-6 ; Cass. 2e civ., 5 janv. 1956 (Oxygène liquide) ; Cass. 1re civ., 12 nov. 1975, n° 74-10.386 ; Cass. 1re civ., 17 mars 2016, n° 13-18.876 ; Cass. ch. mixte, 7 juill. 2017, n° 15-25.651."
+  },
+  {
+    "id": "t6-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "« Extracontractuelle » est non seulement juste mais c’est l’intitulé légal depuis 2016 (sous-titre « La responsabilité extracontractuelle », art. 1240 et s.). Le cours l’emploie lui-même ([ESS4], [E4], [C8.2]). Refuser cette réponse revient à refuser une bonne réponse. Il faut l’accepter, avec la graphie « extra-contractuelle », pour [E201], [E207], [E295] et [E297]. En revanche, il ne faut pas accepter « quasi-délictuelle », qui n’en désigne qu’une partie.",
+    "source": "C. civ., livre III, titre III, sous-titre II « La responsabilité extracontractuelle » (ord. n° 2016-131 du 10 févr. 2016), art. 1240 et s."
+  },
+  {
+    "id": "t6-12",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[E66]/[E73] : accepter « propriétaire » en plus de « gardien », et régénérer la phrase à partir de [C1.4] corrigé (t6-01), qui ne doit plus dire « responsabilité du fait des choses ». [C11.3] : retirer le gras de « pendant sa tournée » ; pour garder un trou utile, mettre plutôt en gras « dans l’exercice de ses fonctions », la notion clé de l’art. 1242 al. 5.",
+    "justification": "L’art. 1243 désigne expressément « le propriétaire d’un animal, ou celui qui s’en sert ». « Ici, le maître est le propriétaire de l’animal » est donc une réponse juridiquement exacte, refusée à tort. « Gardien » reste juste, la jurisprudence appliquant la notion de garde aux animaux. La phrase de l’exercice reproduit en outre l’erreur de t6-01 (« fait des choses »). [E388]/[E395] attendent un détail factuel (« pendant sa tournée ») là où « pendant son travail » ou « pendant son service » seraient refusés. Les deux corrections vont dans le bon sens.",
+    "source": "C. civ., art. 1243 et 1242 al. 5 (« dans les fonctions auxquelles ils les ont employés »)."
+  }
+]

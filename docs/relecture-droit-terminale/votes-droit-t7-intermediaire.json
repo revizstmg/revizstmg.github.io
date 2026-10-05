@@ -1,0 +1,93 @@
+[
+  {
+    "id": "t7-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "L'employeur doit aussi respecter une **procédure** : convocation à un entretien préalable, entretien, puis notification écrite et **motivée**. Si la cause réelle et sérieuse fait défaut, le licenciement est **abusif**. Si seule la procédure n'est pas respectée, il est **irrégulier**.",
+    "justification": "La distinction abusif/irrégulier est fondamentale en droit français. Un licenciement sans cause réelle et sérieuse est abusif (code du travail art. L1235-1). Un vice de procédure seul le rend irrégulier, avec une indemnité moindre. La version A amalgame les deux, ce qui induit l'élève en erreur sur les conséquences juridiques.",
+    "source": "Code du travail français, articles L1235-1 et L1235-3 ; jurisprudence constante (Cass. soc.)"
+  },
+  {
+    "id": "t7-02",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Ce n'est pas une simple recommandation : c'est une **obligation de moyens renforcée**. L'employeur doit prendre toutes les mesures de prévention prévues par la loi ; il n'échappe à sa responsabilité que s'il prouve les avoir prises.",
+    "justification": "L'obligation de sécurité-santé est classiquement qualifiée de « moyens renforcée », non de « résultat ». L'employeur n'est pas responsable de tout accident, mais doit avoir mis en œuvre les mesures légales. La formulation en « obligation de résultat » induirait l'élève en erreur sur la nature juridique de cette obligation.",
+    "source": "Droit du travail (L2 droit du travail), article L4121-1 du Code du travail ; jurisprudence (Cass. soc., régulièrement sur cette distinction)"
+  },
+  {
+    "id": "t7-03",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Le droit du travail est un droit **protecteur** et **d'ordre public social** : en principe, on n'y déroge que dans un sens plus favorable au salarié. Cependant, depuis les réformes de 2016 et 2017, la loi permet à l'accord d'entreprise de prévoir des règles différentes du Code du travail dans certains domaines (durée du travail, aménagement du temps de travail) ; de plus, l'accord d'entreprise prime désormais sur l'accord de branche dans de nombreux domaines.",
+    "justification": "La formulation actuelle est simplifiée et ne reflète plus la réalité légale post-2017. Les lois Travail (2016) et Pacte (2019) ont permis aux accords d'entreprise de fixer des règles moins favorables dans certains domaines spécifiques. Un élève de Terminale doit comprendre que le « principe de faveur » souffre d'exceptions modernes importantes.",
+    "source": "Loi Travail du 8 août 2016, Loi Pacte du 22 mai 2019 ; articles L2254-2 et s. du Code du travail"
+  },
+  {
+    "id": "t7-04",
+    "verdict": "CORRIGER",
+    "version_ajustee": "• **Fin du CDD** : à son terme, le salarié perçoit en principe une **indemnité de fin de contrat** (prime de précarité, 10 %), sauf exceptions (CDD saisonnier, refus d'un CDI proposé, embauche directe en CDI à la suite du CDD).",
+    "justification": "La phrase actuelle est trop affirmative (« perçoit »). Il existe des exceptions légales : CDD saisonnier, refus du CDI proposé, embauche à la suite. Un élève pourrait penser que tous les CDD donnent droit à l'indemnité, ce qui est faux. La version proposée liste les exceptions pertinentes.",
+    "source": "Code du travail, articles L1243-8 et L1243-11"
+  },
+  {
+    "id": "t7-05",
+    "verdict": "CORRIGER",
+    "version_ajustee": "• **Accidents du travail et maladies professionnelles** : pris en charge par la Sécurité sociale (indemnisation forfaitaire, sans avoir à prouver une faute) ; en cas de **faute inexcusable** de l'employeur, le salarié obtient une indemnisation complémentaire.",
+    "justification": "La version actuelle est incomplète. Elle amalgame indemnisation et responsabilité employeur. La Sécurité sociale indemnise sans condition de faute (système forfaitaire). La faute inexcusable ouvre droit à indemnités supplémentaires. L'élève doit distinguer ces deux régimes d'indemnisation.",
+    "source": "Code de la Sécurité sociale, articles L411-1 et s. ; Code du travail, articles L4624-1 et s."
+  },
+  {
+    "id": "t7-06",
+    "verdict": "CORRIGER",
+    "version_ajustee": "**CDI** = norme (clauses générales + spécifiques : mobilité, non-concurrence, télétravail ; **CDI de chantier ou d'opération** est aussi un CDI avec terme convenu) ; **CDD, saisonnier, intérim** = l'exception écrite.",
+    "justification": "Le CDI de chantier est un CDI (pas une exception), simplement conclu pour la durée d'un projet. La mention « chantier » dans la liste des exceptions crée une confusion. La version proposée clarifie que c'est un type de CDI, non une alternative au CDI.",
+    "source": "Code du travail, article L1221-8 (CDI de chantier ou d'opération)"
+  },
+  {
+    "id": "t7-07",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "L'exercice pose un vrai problème : il demande d'identifier le libellé « Règle » à partir d'une définition extraite automatiquement. Le problème n'est pas dans le contenu (la définition est correcte), mais dans le format d'extraction qui confond notions et définitions. Les corrections proposées vont dans le bon sens : soit reformater le contenu (pas de gras), soit adapter le générateur.",
+    "source": "Analyse technique des exercices générés"
+  },
+  {
+    "id": "t7-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "• **CSE (comité social et économique)** : représentants élus du personnel, ils défendent les intérêts des salariés et sont consultés sur les décisions importantes.",
+    "justification": "Le problème vient du formatage du libellé en cours : « **Les représentants du personnel** (CSE — Comité social et économique) ». L'extraction automatique produit « Les représentants du personnel (CSE » comme bonne réponse, ce qui est étrange pour l'élève. Reformuler sans tiret ni article défini (« **CSE (comité social et économique)** ») résout le problème.",
+    "source": "Structure du contenu dans [C7.2] et extraction [E245]"
+  },
+  {
+    "id": "t7-09",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "L'exercice pose effectivement un vrai problème : « Énoncé. » en gras en tête de phrase est extrait comme mot à compléter. C'est une erreur de conception du générateur, pas du contenu du cours. Les solutions proposées (pas de gras, bloc titre) vont dans le bon sens. L'élève peut être injustement pénalisé si le générateur accepte « Énoncé » plutôt que « Énoncé. » (ponctuation).",
+    "source": "Conception du générateur de textes à trous"
+  },
+  {
+    "id": "t7-10",
+    "verdict": "CORRIGER",
+    "version_ajustee": "• **Convention collective** : accord négocié par branche ou entreprise qui adapte et améliore le Code du travail (salaires minima, congés, primes).",
+    "justification": "Le problème vient du tiret « — » dans « **La convention collective** — ... » qui est extrait comme partie du libellé. L'élève doit répondre « La convention collective » mais l'extraction donne « La convention collective — accord... ». Reformuler sans article et sans tiret (« **Convention collective** : accord... ») résout le problème d'extraction.",
+    "source": "Formatage du contenu et extraction automatique [E260]"
+  },
+  {
+    "id": "t7-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Ajouter des variantes acceptées (alt) aux saisies de texte, par exemple: « principe » / « règle » / « norme » pour CDI/CDD ; « prud'hommes » / « conseil de prud'hommes » pour le tribunal.",
+    "justification": "La saisie demande un mot exact (« principe »), mais l'élève peut légitimement écrire « règle » ou « norme » (synonymes valables en contexte de droit du travail). Le refuser serait incorrect pédagogiquement. Les solutions proposées (accepter plusieurs variantes ou retirer la saisie) sont appropriées.",
+    "source": "Exercice [E131] et problématique de rigidité"
+  },
+  {
+    "id": "t7-12",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Au-delà de la durée légale, les heures travaillées sont des **heures supplémentaires majorées**.",
+    "justification": "La phrase source « Au-delà → heures supplémentaires majorées » est un fragment sans verbe ; le générateur crée une saisie décontextualisée qui n'est pas compréhensible seule. Reformuler la phrase pour qu'elle soit autonome (verbe, sujet) permet une saisie cohérente que l'élève peut répondre sans confusion.",
+    "source": "Conception du générateur [E347]"
+  },
+  {
+    "id": "t7-13",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Dans definitions.json, reformuler « CDI / CDD » : « Contrat de travail conclu sans terme fixé (CDI = règle) ou avec un terme précis (CDD = exception) », au lieu de « Convention par laquelle... contre rémunération. » qui décrit le contrat de travail, pas la distinction CDI/CDD.",
+    "justification": "L'exercice crée un faux vrai/faux : la phrase donnée est la définition du CONTRAT DE TRAVAIL, pas de CDI/CDD. Le VRAI vrai/faux devrait opposer deux notions distinctes. Reformuler la définition de CDI/CDD pour qu'elle insiste sur la durée résout le problème croisement entre deux concepts différents.",
+    "source": "Exercice [E156] et definitions.json"
+  }
+]

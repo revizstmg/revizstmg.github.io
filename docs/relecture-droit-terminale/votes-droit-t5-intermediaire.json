@@ -1,0 +1,128 @@
+[
+  {
+    "id": "t5-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Solennel (une forme est exigée pour la validité du contrat, par ex. un écrit pour la vente immobilière, un acte notarié pour une donation ou un contrat de mariage)",
+    "justification": "La version A cite la vente immobilière, qui n'exige qu'un écrit (pas obligatoirement un acte notarié). La version B est plus précise et illustre mieux la notion de « forme exigée » avec des cas où elle est réellement requise pour la validité. Pour un élève de Terminale, cette distinction est importante.",
+    "source": "Article 1108 du Code civil (contrats solennels) ; distinction entre écrit de preuve et formalités substantielles"
+  },
+  {
+    "id": "t5-02",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Le débiteur peut s'exonérer en prouvant un cas de force majeure : un événement imprévisible à la conclusion du contrat, irrésistible et extérieur au débiteur, qui a rendu l'exécution impossible (art. 1218)",
+    "justification": "La version A omet que l'imprévisibilité doit exister « à la conclusion du contrat », ce qui est juridiquement important pour distinguer de ce qui était déjà connu mais inévitable. La version B précise correctement ce critère, conforme à la jurisprudence et à la compréhension des élèves.",
+    "source": "Article 1218 du Code civil ; jurisprudence sur les critères de la force majeure"
+  },
+  {
+    "id": "t5-03",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Formation : offre + acceptation (échange des consentements) + consentement, capacité, contenu licite et certain (art. 1128)",
+    "justification": "La version A dit « objet » mais l'article 1128 du Code civil énonce « contenu licite et certain ». Cette distinction est fondamentale : le contenu doit non seulement exister (objet) mais aussi être légal et déterminé. La version B est conforme au texte légal et aux formulations du cours ([F1]).",
+    "source": "Article 1128 du Code civil ; Formule [F1] du cours"
+  },
+  {
+    "id": "t5-04",
+    "verdict": "CORRIGER",
+    "version_ajustee": "On ne peut pas se rétracter sur un coup de tête. Le droit de rétractation de 14 jours s'applique à la plupart des achats à distance (en ligne), mais avec des exceptions : les billets d'événements datés (concerts, spectacles) en sont exclus, ainsi que certains services.",
+    "justification": "La version A est incomplète et risque d'induire l'élève en erreur : elle suggère implicitement qu'on peut toujours annuler un achat en ligne en 14 jours. La version B ajoute une nuance pédagogique cruciale sur les exclusions légales, particulièrement les loisirs datés.",
+    "source": "Code de la consommation français ; articles L. 121-21 et suivants (exceptions au droit de rétractation)"
+  },
+  {
+    "id": "t5-05",
+    "verdict": "CORRIGER",
+    "version_ajustee": "La résolution d'un cas pratique suit le syllogisme juridique : 1) Faits (résumer les faits utiles) 2) Qualification (traduire en termes de droit) 3) Règle (majeure) : énoncer la règle applicable 4) Application (mineure) : appliquer la règle aux faits qualifiés 5) Conclusion : répondre au problème. Pour les cas simples, on peut regrouper : majeure (règle), mineure (faits qualifiés et application), conclusion.",
+    "justification": "Le cours présente deux approches incompatibles : [C9.2] parle de 3 étapes (majeure, mineure, conclusion), tandis que [C13.2] en détaille 6 (faits, qualification, problème, majeure, mineure, conclusion). Cette confusion pédagogique doit être harmonisée pour que l'élève ne soit pas pénalisé. La version B suggère une bonne harmonisation.",
+    "source": "Sections [C9.2], [C13.2], [C4.2] du cours ; méthode du syllogisme juridique"
+  },
+  {
+    "id": "t5-06",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Sanctions de l'inexécution (art. 1217) : exécution forcée, réduction du prix, résolution/résiliation, exception d'inexécution, dommages et intérêts (éventuellement fixés par une clause pénale). Préalable en principe : la mise en demeure.",
+    "justification": "La version A omet deux sanctions importantes listées dans [C8.3] et [ESS5] : l'« exception d'inexécution » et la « réduction du prix ». De plus, elle place « mise en demeure » comme élément de la liste des sanctions, alors que c'est plutôt un préalable. La version B corrige ces deux imprécisions.",
+    "source": "Article 1217 du Code civil ; sections [C8.3] et [ESS5] du cours"
+  },
+  {
+    "id": "t5-07",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Force obligatoire (art. 1103) → « Les contrats légalement formés tiennent lieu de loi à ceux qui les ont faits » (adage : le contrat fait la loi des parties)",
+    "justification": "La version A se limite à l'adage familier, tandis que la version B cite le texte exact de l'article 1103, suivi de l'adage. Pour un élève en droit, citer la source officielle renforce la compréhension et la rigueur. La citation directe de l'article est pédagogiquement pertinente.",
+    "source": "Article 1103 du Code civil ; sections [E13], [E606], [E607] du cours"
+  },
+  {
+    "id": "t5-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Le consentement est une condition de validité du contrat (art. 1128) ; le dol, qui est une tromperie ou une manœuvre déterminante du consentement (art. 1137), est un vice du consentement. Il entraîne une nullité relative du contrat (art. 1131) et peut ouvrir droit à des dommages et intérêts.",
+    "justification": "La version A de l'exercice (majeure simple) est trop minimaliste et risque de rejeter des réponses plus complètes et exactes de l'élève. La version B enrichit le contexte en ajoutant les références légales précises et la distinction entre nullité relative et absolue, ce qui est conforme au niveau de Terminale.",
+    "source": "Articles 1128, 1131, 1137 du Code civil ; sections [C6], [C7], [C9.3] du cours"
+  },
+  {
+    "id": "t5-09",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Supprimer la redondance entre [C6.D1] « Le consentement des parties » et sa reformulation proche. Fusionner les définitions ou exclure l'une des deux de l'encadré « Définitions clés ». Si on garde un exercice, ne proposer qu'une seule formulation comme réponse attendue et accepter « consentement » et « accord » comme synonymes.",
+    "justification": "Il existe une confusion entre deux énoncés quasi-identiques : [C6.D1] et une autre définition de « Consentement ». Les distracteurs et les réponses acceptées chevauchent, ce qui bloque l'élève même s'il répond correctement. La suppression ou la fusion éliminera l'ambiguïté.",
+    "source": "Sections [C6.D1] et comparaison avec les énoncés des exercices [E220], [E241]"
+  },
+  {
+    "id": "t5-10",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retirer la redondance entre [C6.D2] « La capacité de contracter » et les définitions générales de « Capacité juridique ». Fusionner en une seule définition ou exclure la formulation au gras de l'encadré. Ajouter « capacité » et « capacité juridique » aux réponses acceptées, en expliquant que « capacité de contracter » en est une synonyme dans ce contexte.",
+    "justification": "Les exercices confondent « La capacité de contracter » (spécifique : être majeur, non protégé) et « Capacité juridique » (générale : aptitude à avoir des droits). L'élève peut être bloqué même en donnant une réponse juridiquement correcte. Harmoniser les définitions et les réponses acceptées lèvera l'ambiguïté.",
+    "source": "Sections [C6.D2] et comparaison des exercices [E224], [E225], [E242]"
+  },
+  {
+    "id": "t5-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retirer les blocs de [C4.D1]–[C4.D4] de l'encadré « Définitions clés » (marquer la section « skip »). Ce ne sont pas des notions clés mais les étapes d'une seule méthode (cas particulier). Si un exercice sur ces étapes est nécessaire, le formater comme exercice d'ordre ou d'association du syllogisme, pas comme une liste de définitions.",
+    "justification": "Les étapes du syllogisme (« Règle de droit », « Faits », « Application », « Conclusion ») ne sont pas des « notions » à définir isolément. Les présenter comme définitions crée une confusion pédagogique et incite le générateur d'exercices à poser des questions mal formées.",
+    "source": "Sections [C4.D1]–[C4.D4] ; structure méthodologique vs notions clés"
+  },
+  {
+    "id": "t5-12",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retirer la numérotation du gras dans [C13.2], par exemple réécrire « 5. La mineure : appliquer la règle aux faits » en « La mineure : appliquer la règle aux faits » ou en « Mineure (étape 5) : appliquer la règle aux faits ». Accepter « mineure », « la mineure », « application », « qualification » et « conclusion » comme réponses valides.",
+    "justification": "La numérotation « 5. La mineure » crée une réponse artificiellement complexe. L'élève doit mémoriser « 5. » + le terme, ce qui ajoute une barrière non pédagogique. Retirer ou reformuler la numérotation simplifie l'exercice et accepte les variantes correctes.",
+    "source": "Exercices [E514]–[E517] générés à partir de [C13.2]"
+  },
+  {
+    "id": "t5-13",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Modifier le split du texte pour ne pas couper après les abréviations « art. », « al. », « ex. » etc. Exemple corrigé : « La ____ (art. 1103) : « les contrats légalement formés... » » → réponse attendue : « force obligatoire », plutôt que « La ____ (art. » → réponse attendue : « force obligatoire ».",
+    "justification": "Le découpage actuel du texte par le générateur crée un trou mal placé après l'abréviation « art. », rendant l'exercice confus et imprécis. L'élève doit compléter une phrase incomplète. Retirer la coupure après les abréviations recrée des phrases complètes et intelligibles.",
+    "source": "Fonction trouFromBold en app/src/data/index.js ; exercices [E211], [E214]"
+  },
+  {
+    "id": "t5-14",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Exclure ces trous. Écrire les intertitres (« Énoncé », « Majeure », « Mineure », « Conclusion ») sans gras, ou les placer dans un champ dédié (comme « h » pour heading), ou configurer le générateur pour ignorer le gras en tête de bloc terminé par un point.",
+    "justification": "Le gras « Énoncé. » en début de bloc crée un trou artificiel pour un mot-label qui n'est pas une notion du cours. C'est un bug d'extraction. L'élève ne doit pas mémoriser « Énoncé » comme réponse ; c'est une structure du document.",
+    "source": "Exercices [E363], [E374], [E548], [E554] ; structure des blocs exemple"
+  },
+  {
+    "id": "t5-15",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Garder le contexte : « Faits : un vendeur cache un défaut grave. Qualification : ____. » → réponse attendue : « dol ». Ou supprimer ce trou isolé si le contexte n'est pas fourni.",
+    "justification": "« Qualification : ____ » sans contexte est trop vague pour l'élève. Quelle qualification ? De quels faits ? L'ajouter au texte précédent (« Faits : un vendeur cache un défaut grave ») rend la question intelligible et pédagogiquement valide.",
+    "source": "Exercices [E521], [E530] générés à partir d'une section de cas pratique"
+  },
+  {
+    "id": "t5-16",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Le consentement doit être **intègre**, c'est-à-dire **libre et éclairé** (exempt de vice). Ajouter « libre et éclairé » aux réponses acceptées de [E278] et [E286].",
+    "justification": "« Intègre » est une formulation synthétique [C7.1], mais « libre et éclairé » est la formulation officielle de l'article 1128. Un élève répondant « libre et éclairé » donne une réponse exacte et ne devrait pas être pénalisé. Accepter les deux formulations reconnaît les deux expressions légales.",
+    "source": "Article 1128 du Code civil ; section [C7.1] du cours"
+  },
+  {
+    "id": "t5-17",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Ajouter aux réponses acceptées de [E320] : « dommages-intérêts », « dommages et intérêts », « les dommages-intérêts ». Plus généralement, faire ignorer l'article initial (le, la, les, l') dans la normalisation des réponses.",
+    "justification": "La réponse « dommages-intérêts » (sans article) ou « dommages et intérêts » (variante courante) sont correctes mais refusées. Les articles définis (« Les dommages-intérêts ») ne changent pas la notion. Normaliser les réponses accepte les variantes légitimes.",
+    "source": "Exercice [E320] et comparaison avec d'autres exercices [E66], [E145], [E375], [E292] similaires"
+  },
+  {
+    "id": "t5-18",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Afficher l'énoncé du cas (b.c) comme question et prendre le corrigé dans les blocs d'analyse qui suivent : par ex. [C2.1] et [C2.4] pour le cas Rolex, [C3.1] et [C3.3] pour le scooter, [C4.1] et [C4.2] pour la voiture. Ne pas transformer en cas les blocs « Application ».",
+    "justification": "L'exercice affiche le corrigé JSON du cas (« Tu achètes... contrefaçon ») comme cas du test, sans laisser à l'élève l'opportunité de résoudre le cas lui-même. C'est un bug d'affichage. Seul l'énoncé du cas doit être affiché ; l'analyse du corpus du cours fournit le corrigé.",
+    "source": "Exercices [E612]–[E615] ; sections [C2.1], [C2.4], [C3.1], [C3.3], [C4.1], [C4.2]"
+  }
+]

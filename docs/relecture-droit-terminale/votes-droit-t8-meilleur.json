@@ -1,0 +1,156 @@
+[
+  {
+    "id": "t8-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Depuis la loi du 16 février 2015, l’art. 515-14 C. civ. qualifie les animaux d’« êtres vivants doués de sensibilité » qui, « sous réserve des lois qui les protègent », sont « soumis au régime des biens » ; l’art. 528 ne les range plus parmi les meubles par nature. Écrire « c’est un bien » reprend donc la qualification d’avant 2015, que l’élève a vue corrigée en Première. La version B est exacte et garde la conclusion : sans personnalité juridique, l’animal ne peut ni être propriétaire ni hériter. Elle supprime à juste titre « un bien ne peut pas être propriétaire d’autres biens ». La reformulation des trous E57/E60 (« soumis au régime des ____ » → « biens ») est cohérente.",
+    "source": "Art. 515-14 C. civ. (loi n° 2015-177 du 16 févr. 2015) ; art. 528 C. civ. dans sa rédaction de 2015 ; art. 725 et 906 C. civ. (seule une personne peut succéder ou recevoir à titre gratuit)."
+  },
+  {
+    "id": "t8-02",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[C2.2] Cela dépend de la forme juridique. En entreprise individuelle, l’entrepreneur et l’entreprise ne font qu’une seule personne : le patrimoine personnel est plus exposé (même si, depuis 2015, la résidence principale est insaisissable de droit par les créanciers professionnels et si, depuis 2022, la loi sépare de droit le patrimoine professionnel du patrimoine personnel). […] — Document 1 : « Avant 2022, par le principe d’unicité du patrimoine, l’entrepreneur répondait des dettes professionnelles sur tout son patrimoine, à l’exception de sa résidence principale (insaisissable de droit depuis 2015), sauf déclaration d’insaisissabilité de ses autres biens fonciers non professionnels ou choix de l’EIRL. »",
+    "justification": "La version A date de 2022 la protection de la résidence principale. Or son insaisissabilité de droit envers les créanciers professionnels vient de la loi Macron du 6 août 2015 (art. L. 526-1 C. com.) ; la loi du 14 février 2022 a, elle, créé la séparation de plein droit des patrimoines (art. L. 526-22). Le Document 1 est aussi inexact pour 2015-2022 : l’entrepreneur ne répondait pas sur « tout son patrimoine », puisque sa résidence principale était déjà insaisissable. La version B corrige exactement ces deux points. J’ajoute seulement « par les créanciers professionnels » et je supprime « (souvent) » : en EI, l’entrepreneur et l’entreprise sont toujours une seule et même personne.",
+    "source": "Art. L. 526-1 C. com. (loi n° 2015-990 du 6 août 2015) ; art. L. 526-22 C. com. (loi n° 2022-172 du 14 févr. 2022, en vigueur le 15 mai 2022) ; déclaration notariée d’insaisissabilité (loi du 1er août 2003) ; EIRL (loi du 15 juin 2010)."
+  },
+  {
+    "id": "t8-03",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Société = personne morale née d’un **contrat de société** (art. 1832) : **apports** + **affectio societatis** + partage des bénéfices (et contribution aux pertes) ; responsabilité des associés **en principe limitée aux apports** (SARL/EURL, SAS/SASU, SA), mais **indéfinie et solidaire** dans la SNC ; forme coopérative = **SCOP**.",
+    "justification": "Présentée comme un caractère de toute société, la « responsabilité limitée aux apports » est inexacte. Dans la SNC, les associés répondent indéfiniment et solidairement des dettes sociales (art. L. 221-1 C. com.) ; dans la société civile, indéfiniment, à proportion de leurs parts (art. 1857 C. civ.). Le cours et les exercices disent d’ailleurs « en principe » ou « généralement » (E5, E16), ce que le mémo oublie. La version B est exacte, y compris l’ajout de la contribution aux pertes (art. 1832 al. 3). Elle laisse toutefois tomber la mention de la SCOP, qui est au programme (8.2) et doit rester. La flashcard E11 appelle la même correction.",
+    "source": "Art. 1832 C. civ. (al. 1 et 3) ; art. L. 221-1 C. com. (SNC) ; art. L. 223-1, L. 225-1 et L. 227-1 C. com. ; art. 1857 C. civ."
+  },
+  {
+    "id": "t8-04",
+    "verdict": "CORRIGER",
+    "version_ajustee": "En entreprise individuelle, depuis la réforme de 2022, son patrimoine personnel est séparé de plein droit de son patrimoine professionnel : les créanciers du salon ne peuvent en principe saisir que les biens professionnels, sauf si Léa renonce à cette protection pour un engagement précis, à la demande d’un créancier. En EURL (société à associé unique), une personne morale distincte est créée : la responsabilité de Léa est limitée à ses apports, protection qui existait déjà avant 2022. Les deux solutions protègent donc son patrimoine personnel ; l’EURL impose plus de formalisme (statuts, comptes annuels). Attention : pour l’emprunt de 40 000 €, la banque exigera souvent une garantie qui engagera son patrimoine personnel. En EURL, Léa devra se porter caution du prêt de la société. En entreprise individuelle, elle devra renoncer à la séparation des patrimoines pour ce prêt ou donner une sûreté sur un bien personnel.",
+    "justification": "Le corrigé contient deux erreurs. (1) « Les créanciers du salon se paient d’abord sur les biens professionnels » laisse croire qu’ils pourraient ensuite saisir les biens personnels ; or l’art. L. 526-22 C. com. réduit leur gage au seul patrimoine professionnel, sauf renonciation ou sûreté conventionnelle. (2) « Mieux protégée qu’avant 2022 dans les deux cas » est faux pour l’EURL, dont la responsabilité limitée existe depuis 1985. La version B corrige les deux points. Mais « caution personnelle ou renonciation » doit être réparti selon la forme : en EI, Léa ne peut pas se porter caution de sa propre dette (la banque demandera une renonciation, art. L. 526-25, ou une sûreté) ; en EURL, elle se porte caution de la société.",
+    "source": "Art. L. 526-22 et L. 526-25 C. com. (loi n° 2022-172 du 14 févr. 2022) ; loi n° 85-697 du 11 juill. 1985 (EURL), art. L. 223-1 C. com. ; art. 2288 C. civ. (le cautionnement garantit la dette d’autrui)."
+  },
+  {
+    "id": "t8-05",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Consigne : « Le couturier Karl Lagerfeld adorait sa chatte Choupette et avait déclaré vouloir lui laisser une partie de sa fortune. Juridiquement, c’est impossible. Pourquoi ? » — Corrigé : « Parce que seule une personne juridique (physique ou morale) peut avoir un patrimoine et hériter. L’animal, être vivant doué de sensibilité soumis au régime des biens (art. 515-14 C. civ.), n’a pas la personnalité juridique. On peut seulement léguer à une personne (ou à une fondation) en la chargeant de s’occuper de l’animal. »",
+    "justification": "Le générateur du test (buildThemeTest) prend l’intitulé du bloc « example » comme consigne et son texte comme corrigé. L’élève lit donc « Analyse ce cas : Cas réel », sans énoncé, et le « corrigé » affiché est la question elle-même (« … Pourquoi ? ») : l’exercice est inutilisable. La correction envisagée va dans le bon sens : l’énoncé devient le texte de l’exemple, le corrigé le paragraphe qui suit, et les blocs Majeure/Mineure/Conclusion sont exclus (cf. E475). Le corrigé doit répondre à « Pourquoi ? » (« Parce que… » plutôt que « Non : … ») et reprendre la qualification corrigée de l’animal (t8-01).",
+    "source": "Code de l’application (app/src/data/index.js, buildThemeTest : cas = { prompt: b.h, answer: b.c }) ; art. 515-14, 725 et 906 C. civ."
+  },
+  {
+    "id": "t8-06",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le mot à trouver est l’étiquette typographique « Énoncé. », pas une notion : aucun élève ne peut le deviner, et l’exercice n’évalue rien. E286/E290 ont un défaut voisin : ils commencent par « » illustre… », un fragment coupé au « ? » placé entre guillemets. La correction envisagée est la bonne : ne pas faire de trou sur les étiquettes en gras, et couper la phrase à partir de « La question « … » illustre… ».",
+    "source": "Raisonnement sur les exercices générés ([C4.1], [C12.1], [C8.4])."
+  },
+  {
+    "id": "t8-07",
+    "verdict": "CORRIGER",
+    "version_ajustee": "« Entreprendre suppose de choisir un ____ : entreprise individuelle ou société. » → accepter « cadre juridique », « statut juridique » (et « cadre », « statut »).",
+    "justification": "Sans contexte, la phrase admet plusieurs réponses justes. Le cours définit lui-même le « statut juridique » comme la « forme légale choisie pour entreprendre » ([C3.D2]), et cette réponse est pourtant refusée. La correction B donne le contexte et élargit les réponses acceptées, ce qui règle le problème. « Forme juridique », nom féminin, ne peut pas suivre « un ».",
+    "source": "[C3.D2], [C5.1] ; raisonnement."
+  },
+  {
+    "id": "t8-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "« Pour savoir si l’entrepreneur risque sa maison, tout dépend de la ____ choisie (EI, SARL, SAS…). » → « forme juridique » (accepter aussi « structure juridique »).",
+    "justification": "« Cela dépend de la ____ » n’a ni antécédent ni contexte : la réponse est impossible à deviner (« situation » ou « loi » seraient aussi grammaticaux). La phrase proposée en B se comprend seule et appelle bien « forme juridique ». Le second exemple de B (« renforcé la ____ du patrimoine » → « protection ») est correct lui aussi.",
+    "source": "[C2.2], [C6.1] ; raisonnement."
+  },
+  {
+    "id": "t8-09",
+    "verdict": "CORRIGER",
+    "version_ajustee": "« Léa peut agir en contrefaçon contre le concurrent qui copie son nom de marque si elle a ____ à l’INPI. » → « déposé sa marque » (accepter aussi « déposé », « enregistré sa marque », « fait enregistrer sa marque »).",
+    "justification": "Tronquée, la phrase « Oui, si elle a ____ (à l’INPI) » ne dit ni de qui on parle, ni à quelle question elle répond, ni de quelle création il s’agit. « Déposé un brevet » ou « déposé son logo » seraient aussi plausibles, et seraient refusés. La correction B rétablit le contexte et élargit les réponses acceptées. Je précise « contrefaçon » et « nom de marque » : un logo original est protégé sans dépôt par le droit d’auteur (voir t8-18).",
+    "source": "Art. L. 712-1 CPI (la propriété de la marque s’acquiert par l’enregistrement) ; art. L. 716-4 CPI (contrefaçon) ; art. L. 111-1 CPI."
+  },
+  {
+    "id": "t8-10",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "« Limitée aux apports (personne morale) » est une cellule du tableau comparatif [C2.3], pas une définition. Elle décrit naturellement la notion « Responsabilité limitée », proposée comme distracteur, qui est au moins aussi juste que « SARL / SAS », lequel n’est pas une notion. L’élève qui répond B, à raison, est sanctionné. Le remède de fond de B (ne pas tirer de définitions du tableau) est le bon ; retirer seulement le distracteur ne serait qu’un pis-aller.",
+    "source": "Raisonnement ; [C2.3], [C3.D3]."
+  },
+  {
+    "id": "t8-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "La SARL et la SAS sont des sociétés qui peuvent compter un ou plusieurs associés. La proposition C (définition de la « Société ») les décrit donc exactement, et mieux que le fragment de tableau attendu (B). Deux réponses sont défendables, et la meilleure est refusée. Retirer la pseudo-notion « SARL / SAS » de la banque de définitions règle le problème à la racine.",
+    "source": "Art. 1832 C. civ. ; art. L. 223-1 et L. 227-1 C. com. (SARL et SAS, possibles avec un seul associé)."
+  },
+  {
+    "id": "t8-12",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "La définition proposée est celle de « Société », bonne réponse attendue. Mais le distracteur « SARL / SAS » n’est pas faux : SARL et SAS sont bien des personnes morales créées par un ou plusieurs associés qui mettent en commun des apports. Or un distracteur doit être clairement faux. Le défaut est moins grave qu’en t8-10 et t8-11, puisque la réponse générique reste la meilleure, et il disparaît avec la même correction (retrait de la pseudo-notion).",
+    "source": "Art. L. 223-1 et L. 227-1 C. com. ; raisonnement."
+  },
+  {
+    "id": "t8-13",
+    "verdict": "CORRIGER",
+    "version_ajustee": "« Citez une forme de société dans laquelle la responsabilité des associés est limitée à leurs apports. » → accepter EURL, SARL, SAS, SASU, SA (ou supprimer la saisie).",
+    "justification": "Devant « Limitée aux apports (personne morale) », la réponse la plus naturelle, « responsabilité limitée », est refusée, tout comme « EURL », « SA » ou « SASU », pourtant exactes. La consigne reformulée en B est juridiquement exacte : dans toutes ces formes, la responsabilité des associés est limitée aux apports.",
+    "source": "Art. L. 223-1, L. 225-1 et L. 227-1 C. com. ; [C5.2]."
+  },
+  {
+    "id": "t8-14",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "« Patrimoine pro séparé du perso (2022) » décrit un trait du régime de l’entrepreneur individuel, pas l’entreprise individuelle elle-même ; présenté comme « la bonne définition », il est faux. Il contredit en outre l’encadré [C1.D1] et l’exercice E129, qui donnent la vraie définition. La version B est exacte : l’entreprise individuelle est exploitée par une personne physique en son nom propre, sans personne morale distincte. Les encadrés [C2.D1]/[C2.D2] doivent afficher de vraies définitions ; pour [C2.D2], « Responsabilité limitée » ou « Société » plutôt que « SARL / SAS ».",
+    "source": "Art. L. 526-22 al. 1 C. com. (« personne physique qui exerce en son nom propre une ou plusieurs activités professionnelles indépendantes ») ; [C1.D1], E129."
+  },
+  {
+    "id": "t8-15",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Les propositions B (« La responsabilité limitée en société ») et D (« Responsabilité limitée ») désignent la même notion : l’élève qui coche D a raison et il est pourtant sanctionné. Le doublon vient de la puce [C6.2], que le générateur a prise pour une définition ([C6.D1]). Les remèdes proposés en B (fusionner les entrées, reformuler la puce) conviennent.",
+    "source": "Raisonnement ; [C6.2], [C6.D1], [C3.D3]."
+  },
+  {
+    "id": "t8-16",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Exclure ce vrai/faux (et ceux où le terme est un exemple de la définition proposée). Dans les explications, citer la vraie définition : « Entreprise individuelle : entreprise exploitée par une personne physique en son nom propre, sans création de société. »",
+    "justification": "L’énoncé « Entreprise individuelle : forme légale choisie pour entreprendre (EI, EURL, SARL, SAS…) » est en réalité vrai : l’EI est l’une de ces formes, et elle figure même dans la parenthèse. Attendre « FAUX » sanctionne une réponse juste, et l’explication renvoie à une pseudo-définition (« Patrimoine pro séparé du perso »). L’exclusion proposée en B est la bonne solution. Sa reformulation de repli (« … est la définition de “Entreprise individuelle” ? ») reste ambiguë et ne devrait pas être retenue.",
+    "source": "Raisonnement ; [C3.D2], [C1.D1]."
+  },
+  {
+    "id": "t8-17",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Définition : « Contrat de sous-traitance : contrat par lequel un entrepreneur confie, sous sa responsabilité, à un autre (le sous-traitant) l’exécution de tout ou partie du contrat qu’il a conclu avec son client. » Saisie : accepter « contrat de sous-traitance », « sous-traitance », « sous-traité ».",
+    "justification": "« Confier une tâche à un tiers » est trop vague : la formule convient aussi au contrat d’entreprise, au mandat ou à toute prestation de services, et « sous-traitance » seul risque d’être refusé. La définition de B reprend fidèlement la loi du 31 décembre 1975 ; on peut y ajouter « sous sa responsabilité ». Une fois la définition précisée, la réponse attendue est la sous-traitance. Le contrat d’entreprise, catégorie générale (art. 1710 et 1779 C. civ.), ne devrait être accepté que si l’on garde la définition vague.",
+    "source": "Loi n° 75-1334 du 31 déc. 1975 relative à la sous-traitance, art. 1er ; art. 1710 et 1779 C. civ. (louage d’ouvrage / contrat d’entreprise)."
+  },
+  {
+    "id": "t8-18",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[Rappel de Première — thème 4] Oui. Si elle a déposé sa marque à l’INPI, elle peut agir en contrefaçon : la propriété industrielle (marque, brevet, dessins et modèles) donne un monopole d’exploitation. Même sans dépôt, son logo, s’il est original, est protégé automatiquement par le droit d’auteur, et elle peut agir en concurrence déloyale si la copie crée une confusion dans l’esprit de la clientèle.",
+    "justification": "Le programme de Terminale (8.1 entrepreneur individuel, 8.2 société commerciale, 8.3 concurrence, 8.4 partenariats contractuels) ne traite pas de la propriété intellectuelle, étudiée en Première (thème 4 : droit de propriété, biens incorporels, marque, droit d’auteur). Trois sections ([C3], [C7], [C12]) occupent le cours de Terminale, alors que la concurrence (8.3) en est absente (t8-22). La mention « rappel de Première » est la bonne option de B, car ces notions restent utiles (contrefaçon / concurrence déloyale, marque dans la franchise). Sur le fond, « Oui, si elle a déposé sa marque » est incomplet : un logo original est protégé sans dépôt par le droit d’auteur, et, même sans dépôt, Léa peut agir en concurrence déloyale.",
+    "source": "Programmes de droit STMG : Première (BO spécial n° 1 du 22 janv. 2019, thème 4) et Terminale (BO spécial n° 8 du 25 juill. 2019, thème 8) ; art. L. 111-1, L. 112-2, L. 712-1 et L. 716-4 CPI ; art. 1240 C. civ."
+  },
+  {
+    "id": "t8-19",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Signaler [C11] comme « Rappel de Première — thème 4 (droits extrapatrimoniaux : vie privée et données personnelles) », sans exercices générés dans le thème 8. Le texte lui-même peut rester inchangé.",
+    "justification": "Le contenu est exact : le RGPD (règlement UE 2016/679) s’applique depuis le 25 mai 2018, et la CNIL, autorité de contrôle, peut prononcer des sanctions. Mais la protection des données à caractère personnel appartient au programme de Première (thème 4, droits extrapatrimoniaux, respect de la vie privée), pas au thème 8 de Terminale. B a raison de déplacer la section ou de la signaler comme rappel de Première. L’application masque d’ailleurs déjà, ailleurs, les sections « prérequis de Première » des cours de Terminale (PREREQ_SECTIONS).",
+    "source": "Règlement (UE) 2016/679 ; loi n° 78-17 du 6 janv. 1978 ; programme de Première STMG, thème 4 ; programme de Terminale, thème 8 (8.1 à 8.4)."
+  },
+  {
+    "id": "t8-20",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le texte n’est pas faux : le pacte Dutreil (art. 787 B et 787 C CGI) exonère de droits de mutation 75 % de la valeur transmise par donation ou succession, sous engagements de conservation. Mais la transmission de l’entreprise n’entre dans aucune des quatre parties du thème 8 (8.1 à 8.4), et ce dispositif fiscal dépasse le niveau attendu. Garder [C8] comme « pour aller plus loin » non évalué, sans exercices générés (E286-E292…), est la bonne mesure ; la suppression serait aussi acceptable.",
+    "source": "Programme de Terminale STMG, thème 8 (BO spécial n° 8 du 25 juill. 2019) ; art. 787 B et 787 C CGI."
+  },
+  {
+    "id": "t8-21",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le contenu est exact : selon l’art. L. 145-4 C. com., le bail dure au moins neuf ans, le preneur pouvant donner congé à chaque période triennale ; le droit au renouvellement est compensé, en cas de refus, par une indemnité d’éviction (art. L. 145-14). Mais la partie 8.4 du programme ne vise que les partenariats contractuels (contrat d’entreprise, sous-traitance, franchise) : le bail commercial et la vente commerciale n’y figurent pas. B est exact : garder la franchise et la sous-traitance en les développant (obligations des parties), et signaler le bail commercial et la vente commerciale comme hors programme au lieu de les évaluer.",
+    "source": "Art. L. 145-4, L. 145-8 et suiv., L. 145-14 C. com. ; programme de Terminale STMG, thème 8.4."
+  },
+  {
+    "id": "t8-22",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Réafficher les quatre sections de cours-complets.json (8.1 liberté d’entreprendre et entreprise individuelle ; 8.2 société commerciale ; 8.3 respect de la concurrence ; 8.4 partenariats contractuels) dans la catégorie principale du cours, les sections « cours réels » gardant leur rôle d’accroche. En même temps, corriger ces sections : remplacer « les créanciers professionnels se paient d’abord sur le patrimoine professionnel » par « ne peuvent en principe saisir que le patrimoine professionnel » ; ajouter à l’encadré « Avant 2022 » que la résidence principale est insaisissable de droit depuis 2015 ; définir la sous-traitance comme l’exécution de tout ou partie du contrat conclu avec le client, sans la confondre avec le contrat d’entreprise en général.",
+    "justification": "Vérifié dans le code (app/src/data/index.js, assemblerTheme) : « if (COURS_REELS[c.id]?.length) c.cours = COURS_REELS[c.id] » remplace les quatre sections de cours-complets.json. Le cours affiché ([C1]-[C12]) ne parle plus de la liberté d’entreprendre, de l’art. 1832 (affectio societatis, contribution aux pertes), de la SCOP, ni de la concurrence déloyale, de l’entente ou de l’abus de position dominante : toute la partie 8.3 manque, alors que le mémo, les documents et plusieurs exercices (E6, E7, E21, E22, E24) l’évaluent. La correction B est exacte et nécessaire. Ces sections répètent toutefois l’erreur du « d’abord » (t8-04) et l’oubli de 2015 (t8-02) : il faut les corriger au moment de les réafficher.",
+    "source": "Code de l’application (app/src/data/index.js, assemblerTheme ; app/content/droit/cours-complets.json et cours-reels.json) ; programme de Terminale STMG, thème 8 (8.1 à 8.4) ; art. L. 526-1 et L. 526-22 C. com."
+  }
+]

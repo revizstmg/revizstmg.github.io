@@ -32,7 +32,7 @@
             [
               "Selon la forme",
               "Consensuel (le seul accord suffit)",
-              "Solennel (un écrit est exigé : vente immobilière)"
+              "Solennel (une forme est exigée pour la validité : acte notarié pour une donation ou un contrat de mariage)"
             ],
             [
               "Selon la négociation",
@@ -59,7 +59,7 @@
           "t": "list",
           "c": [
             "**Le consentement** des parties : il doit être **libre et éclairé** (donné en connaissance de cause, sans contrainte).",
-            "**La capacité** de contracter : être **majeur** et **non protégé** (les mineurs et majeurs sous tutelle/curatelle ont une capacité limitée).",
+            "**La capacité juridique** de contracter : être **majeur** et **non protégé** (les mineurs et majeurs sous tutelle/curatelle ont une capacité limitée).",
             "**Un contenu licite et certain** : l’objet du contrat doit être **possible, déterminé et conforme à la loi** et à l’ordre public (on ne peut pas vendre de la drogue ou un organe)."
           ]
         },
@@ -151,7 +151,7 @@
         },
         {
           "t": "p",
-          "c": "Le débiteur peut s’exonérer en prouvant un cas de **force majeure** : un événement **imprévisible, irrésistible et extérieur** qui a rendu l’exécution impossible (art. 1218). Il est alors libéré sans devoir de dommages-intérêts."
+          "c": "Le débiteur peut s’exonérer en prouvant un cas de **force majeure** : un événement **échappant à son contrôle**, **imprévisible** lors de la conclusion du contrat et **irrésistible**, qui empêche l’exécution (art. 1218). Il est alors libéré sans devoir de dommages-intérêts."
         },
         {
           "t": "tip",
@@ -169,7 +169,7 @@
         },
         {
           "t": "p",
-          "c": "La résolution d’un cas pratique en droit suit le **syllogisme juridique** en trois temps : la **majeure** (la règle de droit), la **mineure** (les faits), la **conclusion** (l’application)."
+          "c": "La résolution d’un cas pratique en droit suit le **syllogisme juridique** en trois temps : la **majeure** (la règle de droit), la **mineure** (les faits qualifiés juridiquement et confrontés à la règle), la **conclusion** (la solution du problème posé)."
         },
         {
           "t": "example",
@@ -217,8 +217,8 @@
             ],
             [
               "Qui agit",
-              "La victime (action en justice)",
-              "La société (le ministère public)"
+              "La victime (elle saisit le juge civil)",
+              "Le ministère public (il poursuit au nom de la société)"
             ],
             [
               "Sanction",
@@ -227,8 +227,8 @@
             ],
             [
               "Bénéficiaire",
-              "La victime",
-              "La société"
+              "La victime, qui est indemnisée",
+              "La société, dont l’ordre est protégé"
             ],
             [
               "Tribunal",
@@ -301,8 +301,13 @@
             ],
             [
               "Fait des choses",
-              "Une chose sous ma garde (art. 1242 al.1)",
-              "Mon chien mord un passant ; ma tuile tombe"
+              "Une chose sous ma garde (art. 1242 al. 1)",
+              "Mon pot de fleurs tombe du balcon sur un passant ; une branche de mon arbre tombe sur la voiture du voisin"
+            ],
+            [
+              "Fait des animaux",
+              "Un animal dont je suis propriétaire ou que j’utilise (art. 1243)",
+              "Mon chien mord un passant"
             ],
             [
               "Fait d’autrui",
@@ -318,7 +323,7 @@
         {
           "t": "example",
           "h": "Fait d’autrui",
-          "c": "Un salarié livreur endommage un véhicule pendant son travail : l’**employeur** est civilement responsable (responsabilité du commettant du fait de son préposé) et devra indemniser, même sans faute de sa part."
+          "c": "Un salarié livreur, en manœuvrant un diable pendant son travail, brise la vitrine d’un commerçant voisin : l’**employeur** est civilement responsable (responsabilité du commettant du fait de son préposé) et devra indemniser, même sans faute de sa part."
         },
         {
           "t": "warning",
@@ -423,7 +428,7 @@
           "t": "list",
           "c": [
             "**Cas de recours au CDD** : remplacement d’un salarié absent, accroissement temporaire d’activité, emploi saisonnier.",
-            "**Formalisme strict** : le CDD doit être **écrit**, préciser son **motif** et son **terme**. À défaut d’écrit, il est **requalifié en CDI**.",
+            "**Formalisme strict** : le CDD doit être **écrit**, préciser son **motif** et son **terme**. Un CDD conclu sans écrit est **requalifié en CDI**.",
             "**Fin du CDD** : à son terme, le salarié perçoit une **indemnité de fin de contrat** (prime de précarité)."
           ]
         },
@@ -476,7 +481,7 @@
         },
         {
           "t": "p",
-          "c": "L’employeur doit aussi respecter une **procédure** : convocation à un entretien préalable, entretien, puis notification écrite et motivée. Le non-respect du fond (cause) ou de la forme (procédure) rend le licenciement **abusif** et ouvre droit à des **dommages-intérêts**."
+          "c": "L’employeur doit aussi respecter une **procédure** : convocation à un entretien préalable, entretien, puis notification écrite et motivée. L’absence de cause réelle et sérieuse (fond) rend le licenciement **abusif** et ouvre droit à des **dommages-intérêts** ; un simple vice de procédure (forme) le rend **irrégulier** : indemnité d’au plus un mois de salaire."
         },
         {
           "t": "warning",
@@ -495,8 +500,8 @@
         {
           "t": "list",
           "c": [
-            "**La convention collective** : accord négocié par branche ou entreprise qui adapte et **améliore** le Code du travail (salaires minima, congés, primes).",
-            "**Les représentants du personnel** (CSE — Comité social et économique) : élus, ils défendent les intérêts des salariés et sont consultés sur les décisions importantes.",
+            "**La convention collective** : accord négocié par branche ou entreprise qui adapte le Code du travail, le plus souvent en l’améliorant (salaires minima, congés, primes).",
+            "**Représentants du personnel** : élus au CSE (comité social et économique), ils défendent les intérêts des salariés et sont consultés sur les décisions importantes.",
             "**Les syndicats** : ils négocient, informent et peuvent appeler à la **grève**, droit à valeur constitutionnelle."
           ]
         },
@@ -507,7 +512,7 @@
         {
           "t": "tip",
           "h": "À retenir",
-          "c": "Le droit du travail est un droit **protecteur** et **d’ordre public social** : on ne peut y déroger que dans un sens **plus favorable** au salarié."
+          "c": "Le droit du travail est un droit **protecteur** et **d’ordre public social** : en principe, on n’y déroge que dans un sens **plus favorable** au salarié (principe de faveur). Mais la loi admet des exceptions : un accord collectif peut parfois prévoir une règle moins favorable que la règle légale applicable par défaut (ex. : majoration des heures supplémentaires d’au moins 10 % au lieu de 25 %), et depuis les réformes de 2016-2017, l’accord d’entreprise prime sur l’accord de branche dans de nombreux domaines."
         }
       ]
     },
@@ -521,7 +526,7 @@
         {
           "t": "example",
           "h": "Majeure — la règle",
-          "c": "Tout licenciement exige une **cause réelle et sérieuse** (faits exacts, vérifiables et suffisamment graves) et le respect d’une **procédure** (convocation, entretien préalable, notification écrite et motivée). À défaut, le licenciement est **abusif** et donne lieu à des dommages-intérêts."
+          "c": "Tout licenciement exige une **cause réelle et sérieuse** (faits exacts, vérifiables et suffisamment graves) et le respect d’une **procédure** (convocation, entretien préalable, notification écrite et motivée). Sans cause réelle et sérieuse, le licenciement est **abusif** et donne lieu à des dommages-intérêts ; un simple vice de procédure le rend **irrégulier** (indemnité d’au plus un mois de salaire)."
         },
         {
           "t": "example",

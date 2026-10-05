@@ -1,0 +1,156 @@
+[
+  {
+    "id": "t8-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Un animal n’est pas une personne juridique : depuis 2015 (art. 515-14 du Code civil), c’est un **être vivant doué de sensibilité**, mais il reste **soumis au régime des biens**. Il ne peut donc ni être propriétaire ni hériter. (Trous E57/E60 : « … il reste soumis au régime des ____ » → « biens ».)",
+    "justification": "L’article 515-14 dit que les animaux sont « des êtres vivants doués de sensibilité » et que, sous réserve des lois qui les protègent, ils sont « soumis au régime des biens » : écrire simplement « c’est un bien » est moins exact. Surtout, le cours de Première (thème 3) enseigne déjà cette formule exacte (« être vivant doué de sensibilité, mais soumis au régime des biens ») et un QCM y demande « Depuis 2015, l’animal est reconnu comme… » (réponse : être vivant doué de sensibilité) : le thème 8 doit parler comme Première. La version B est exacte (la conclusion « ne peut ni être propriétaire ni hériter » reste vraie).",
+    "source": "Code civil, art. 515-14 (loi du 16 février 2015) ; cours de l’app : p1-droit/matiere.json, thème 3 « Qui peut faire valoir ses droits ? » (encadré « Le statut de l’animal », mémo et quiz)."
+  },
+  {
+    "id": "t8-02",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "La phrase actuelle est vraie : depuis 2022 le patrimoine personnel (résidence principale comprise) est protégé de droit des créanciers professionnels. Elle ne dit pas que la résidence principale était sans protection avant 2022 ; la dater de 2015 (loi Macron, art. L.526-1 C. com.) est une précision exacte mais facultative au niveau du bac. La version B est exacte, mais en ne modifiant que le Document 1 elle le mettrait en désaccord avec le mémo ESS2, l’explication de E2, la flashcard E10 et matiere.json, qui disent tous « avant : tout le patrimoine / unicité du patrimoine ». Aucun autre cours de l’app ne traite de ce point (Première ne parle que de l’unicité et du patrimoine d’affectation).",
+    "source": "C. com., L.526-1 (insaisissabilité de droit de la résidence principale, loi du 6 août 2015), L.526-22 s. (loi du 14 février 2022) ; app : droit/cours-reels.json, droit/etudes-documents.json, p1-droit/matiere.json (thème 3, patrimoine)."
+  },
+  {
+    "id": "t8-03",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Société = personne morale née d’un **contrat de société** (art. 1832) : **apports** + **affectio societatis** + partage des bénéfices (et contribution aux pertes) ; **responsabilité en principe limitée aux apports** (SARL/EURL, SAS/SASU, SA), mais indéfinie et solidaire dans la SNC ; forme coopérative = **SCOP**.",
+    "justification": "Présenter « responsabilité limitée aux apports » comme un élément de la définition de la société est faux en général : dans la SNC (art. L.221-1 C. com.) et dans les sociétés civiles (SCI par exemple) les associés répondent indéfiniment des dettes. Les exercices du thème disent déjà « en principe » (E5, E16, E20) et le cours dit « généralement » : seuls le mémo ESS3 et la flashcard E11 sont catégoriques. L’art. 1832 al. 3 prévoit bien la contribution aux pertes. Aucun autre cours de l’app ne cite SARL, SAS ou SNC : pas de conflit. Si l’on veut rester au niveau du programme, « en principe limitée aux apports » suffit ; la mention de la SNC est un plus utile mais facultative.",
+    "source": "Code civil, art. 1832 (al. 1 et 3) ; Code de commerce, art. L.221-1 (SNC) ; app : droit/cours-complets.json (« Généralement, la responsabilité… »), exercices E5, E16, E20."
+  },
+  {
+    "id": "t8-04",
+    "verdict": "CORRIGER",
+    "version_ajustee": "En **entreprise individuelle**, depuis la réforme de **2022**, son **patrimoine personnel** (voiture, épargne) est **séparé automatiquement** du patrimoine professionnel : les créanciers du salon ne peuvent en principe saisir que les **biens professionnels** (sauf exceptions, notamment la renonciation de Léa à la demande d’un créancier). En **EURL** (société à associé unique), une **personne morale** distincte est créée : la responsabilité de Léa est **limitée à ses apports** (cette protection existait déjà avant 2022). Les deux solutions protègent en principe son patrimoine personnel ; l’EURL apporte un cadre de société (statuts, comptes) mais plus de formalisme. La réforme de 2022 améliore donc surtout la situation de l’entreprise individuelle. **Attention** : pour l’emprunt de 40 000 €, la banque exigera souvent une caution personnelle ou une renonciation à la protection, qui engageraient alors son patrimoine personnel.",
+    "justification": "Le corrigé affirme que Léa est « désormais mieux protégée qu’avant 2022 dans les deux cas » : c’est faux pour l’EURL, dont la responsabilité était déjà limitée aux apports avant 2022. « Se paient d’abord sur les biens professionnels » laisse croire qu’ils peuvent ensuite viser les biens personnels, alors que la règle est qu’ils ne le peuvent en principe pas. La version B corrige ces deux points ; la mise en garde sur la caution est cohérente avec C2.4 et C6.3 (« la protection n’est jamais absolue »). J’ai gardé « sauf exceptions, notamment la renonciation » plutôt que de lister les autres exceptions (fraude, manquements fiscaux et sociaux).",
+    "source": "C. com., L.526-22 s. (patrimoine professionnel insaisissable des biens personnels sauf renonciation et exceptions) ; app : droit/etudes-documents.json (question « Léa hésite… »), droit/approfondi-1.json (C6.3, C6.4), droit/cours-reels.json (C2.4)."
+  },
+  {
+    "id": "t8-05",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Pour chaque cas, prendre comme consigne le texte du bloc « example » (titre + énoncé) et comme corrigé le ou les paragraphes qui suivent. Exemple E472 : consigne « Karl Lagerfeld adorait sa chatte Choupette et voulait lui laisser une partie de sa fortune. Pourquoi est-ce juridiquement impossible ? » ; corrigé « Seule une personne (physique ou morale) peut avoir un patrimoine et hériter ; l’animal n’a pas la personnalité juridique (être vivant doué de sensibilité, il est soumis au régime des biens) ; on peut seulement charger une personne de s’en occuper. » Exclure du générateur les blocs « Majeure / Mineure / Conclusion » des cas guidés, qui sont des étapes de corrigé et non des énoncés.",
+    "justification": "Le code (buildThemeTest, data/index.js) fabrique chaque « cas » avec prompt = titre du bloc et answer = texte du bloc : l’élève lit « Analyse ce cas : Cas réel », sans énoncé, puis la « correction » est l’énoncé lui-même (« … Pourquoi ? ») sans réponse. L’exercice est donc inutilisable. Les blocs Majeure/Mineure/Conclusion (E475…) produisent le même défaut. La correction envisagée va dans le bon sens et son corrigé Lagerfeld est exact ; je l’aligne seulement sur t8-01.",
+    "source": "app/src/data/index.js, buildThemeTest (cas : { prompt: b.h, answer: b.c }) ; app/src/games/ThemeTest.jsx (WrittenPart : « Analyse ce cas : » + prompt) ; droit/cours-reels.json et approfondi-1.json (blocs example)."
+  },
+  {
+    "id": "t8-06",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Ne pas générer de trou à partir des étiquettes « Énoncé. » : enlever le gras de « **Énoncé.** » dans C4.1 et C12.1 (ou exclure ce mot dans le générateur, ce qui règle aussi les cas guidés des autres matières). Pour E286/E290 (C8.4), réécrire la phrase sans point d’interrogation entre guillemets, par exemple : « Illustration (Lagerfeld) — En droit français, un **animal** ne peut pas hériter (il n’a pas la personnalité juridique) ; on peut en revanche charger un héritier de s’en occuper par un **legs**. », pour que le découpage en phrases ne laisse pas un fragment commençant par « » illustre… ».",
+    "justification": "Le trou « ____ Trois amis veulent créer… » a pour réponse l’étiquette « Énoncé. » : personne ne peut la deviner, l’exercice est invalide. Les trous E286/E290 commencent par un guillemet fermant orphelin (« » illustre les règles… ») parce que la phrase est coupée après « hériter ? », et le blanc « un ____ ne peut pas être héritier » admet aussi « chat », « chien », « robot ». La correction envisagée va dans le bon sens ; sa seconde partie (« couper la phrase… ») est floue, d’où ma reformulation.",
+    "source": "app/src/data/index.js, trouFromBold (découpage en phrases après . ! ? …) ; droit/approfondi-1.json (C8.4), approfondi-2.json (C4.1, C12.1) ; même gras « **Énoncé.** » dans management/approfondi-1.json."
+  },
+  {
+    "id": "t8-07",
+    "verdict": "CORRIGER",
+    "version_ajustee": "« Entreprendre suppose de choisir un ____ : entreprise individuelle ou société. » ; réponses acceptées : « cadre juridique », « statut juridique », « forme juridique ».",
+    "justification": "La phrase isolée est ambiguë : le thème parle indifféremment de cadre, de forme et de statut juridique, et l’app définit « Statut juridique » comme « forme légale choisie pour entreprendre ». Une élève qui écrit « statut juridique » ou « forme juridique » donne une bonne réponse mais est refusée, car la saisie compare le texte exactement (answerMatches, sans synonymes). Le contexte et les variantes proposés par B règlent le problème.",
+    "source": "app/src/games/common.jsx (answerMatches : égalité stricte) ; droit/definitions.json (Statut juridique) ; droit/approfondi-1.json (C5.1)."
+  },
+  {
+    "id": "t8-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "« Pour savoir si l’entrepreneur risque sa maison, tout dépend de la ____ choisie (EI, SARL, SAS…). » → « forme juridique » (accepter aussi « statut juridique ») ; « Le droit a progressivement renforcé la ____ du patrimoine de l’entrepreneur. » → « protection ».",
+    "justification": "« Cela dépend de la ____ » est incompréhensible hors contexte : « cela » renvoie à la question de Léa, absente de l’exercice. De plus « statut juridique » est un synonyme que l’app enseigne (définition) et qui serait refusé. La version B est la bonne direction ; j’ajoute l’acceptation de « statut juridique » car le contexte « (EI, SARL, SAS…) » reprend la définition du statut juridique.",
+    "source": "droit/cours-reels.json (C2.2) ; droit/definitions.json (Statut juridique) ; app/src/games/common.jsx (answerMatches)."
+  },
+  {
+    "id": "t8-09",
+    "verdict": "CORRIGER",
+    "version_ajustee": "« Léa peut agir contre le copieur de son logo et de son nom si elle a ____ à l’INPI. » → « déposé sa marque » ; accepter aussi « déposé », « déposé la marque », « enregistré sa marque ».",
+    "justification": "Sans l’énoncé (logo et nom copiés), « Oui, si elle a ____ (à l’INPI) » n’a pas de sens ; la réponse attendue est une expression de trois mots comparée exactement, donc « déposé » ou « enregistré sa marque » seraient refusés alors qu’ils sont justes. L’énoncé du cours (dépôt de la marque, monopole d’exploitation, contrefaçon) est exact et cohérent avec Première (thème 4). La correction envisagée est la bonne.",
+    "source": "Code de la propriété intellectuelle (droit sur la marque par l’enregistrement à l’INPI) ; p1-droit/matiere.json thème 4 ; droit/cours-reels.json (C3.2)."
+  },
+  {
+    "id": "t8-10",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Ne plus tirer de « définitions » du tableau [C2.3] (comparaison de deux formes, pas un glossaire) : le passer à 3 colonnes (Forme | Personne morale ? | Responsabilité) ou changer ses en-têtes pour qu’il ne soit plus lu comme « terme → définition ». À défaut, retirer « SARL / SAS » de la banque de notions du thème.",
+    "justification": "Réponse attendue « SARL / SAS » pour « Limitée aux apports (personne morale) », alors que « Responsabilité limitée » (choix B) est une bonne réponse, et même la plus naturelle (l’app la définit : « l’associé ne perd au plus que ses apports »). Une élève qui répond juste est donc sanctionnée. « SARL / SAS » n’est pas une notion définie par cette phrase, c’est une paire du tableau [C2.3] (en-têtes « Forme | Responsabilité ») prise à tort pour un glossaire par le générateur. La correction envisagée est la bonne ; la suppression de la paire règle aussi t8-11, t8-12, t8-13 et t8-14.",
+    "source": "app/src/data/index.js (twoColKind, sectionPairs : tableau 2 colonnes non reconnu comme comparaison → defPairs) ; droit/definitions.json (Responsabilité limitée)."
+  },
+  {
+    "id": "t8-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Supprimer la paire « SARL / SAS → Limitée aux apports (personne morale) » de la banque de notions (cause : tableau [C2.3], voir t8-10).",
+    "justification": "Une SARL ou une SAS est une société, donc « Personne morale créée par un ou plusieurs associés mettant en commun des apports » (choix C) la décrit aussi correctement : deux réponses justes pour une seule attendue (B). De plus « Limitée aux apports (personne morale) » n’est pas une définition de « SARL / SAS ». La suppression de la pseudo-notion est la bonne correction ; retirer seulement la définition de « Société » des distracteurs serait un pansement.",
+    "source": "droit/definitions.json (Société : personne morale créée par des associés…) ; droit/cours-reels.json (tableau C2.3) ; app/src/data/index.js (sectionPairs)."
+  },
+  {
+    "id": "t8-12",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retirer « SARL / SAS » de la banque de notions (voir t8-10) ; les distracteurs restent alors Patrimoine, Personnalité juridique, Fonds de commerce, Entreprise individuelle…",
+    "justification": "La définition donnée (« Personne morale créée par un ou plusieurs associés mettant en commun des apports ») s’applique aussi à une SARL ou une SAS, qui sont des sociétés : le distracteur D n’est pas franchement faux, ce qui peut troubler une élève qui connaît bien le thème. Le défaut vient de la pseudo-notion « SARL / SAS » ; la correction envisagée est la bonne, mais il suffit de supprimer la paire à la source.",
+    "source": "droit/definitions.json (Société) ; droit/cours-reels.json (C2.2 : « En créant une société (SARL, SAS)… »)."
+  },
+  {
+    "id": "t8-13",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Supprimer cette saisie (pseudo-définition tirée du tableau [C2.3]). Si on la garde : « Citez une forme de société dont les associés ne perdent au plus que leurs apports » ; réponses acceptées : EURL, SARL, SAS, SASU, SA.",
+    "justification": "« Limitée aux apports (personne morale) » est un fragment de tableau, pas une définition : « Responsabilité limitée » (la notion que l’app définit ainsi), « Société », « EURL », « SA » ou « SASU » sont aussi de bonnes réponses, et seules « SARL / SAS », « SARL » et « SAS » sont acceptées. L’élève qui répond juste est refusée. La correction envisagée va dans le bon sens ; ma seule réserve est que la liste des réponses acceptées ne sera jamais exhaustive (SELARL, SCOP…), ce qui plaide pour la suppression pure et simple.",
+    "source": "droit/definitions.json (Responsabilité limitée) ; droit/approfondi-1.json (C5.2 : EURL, SASU, SA aussi à responsabilité limitée) ; app/src/data/index.js (saisie « Quel terme correspond… »)."
+  },
+  {
+    "id": "t8-14",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retirer les lignes du tableau [C2.3] de la banque de définitions, pour que l’encadré [C2.D1] affiche « Entreprise individuelle : entreprise exploitée par une personne physique, sans création de société » et que [C2.D2] n’affiche plus « SARL / SAS : Limitée aux apports (personne morale) » (supprimer cette ligne, ou la remplacer par « SARL / SAS : formes de société — société à responsabilité limitée, société par actions simplifiée — dont les associés ne supportent les pertes qu’à hauteur de leurs apports »).",
+    "justification": "Dans cette série, « Patrimoine pro séparé du perso (2022) » est donné comme bonne définition de l’entreprise individuelle, alors que dans les autres séries du même thème (E29, E129) la bonne définition est « Entreprise exploitée par une personne physique, sans création de société » : l’élève voit deux définitions différentes du même terme. La séparation des patrimoines est un effet de la réforme, pas la définition de l’EI. Les encadrés « Définitions clés » C2.D1 et C2.D2 affichent la même pseudo-définition. La version B est exacte.",
+    "source": "droit/definitions.json (Entreprise individuelle) ; exercices E29, E70, E129 ; app/src/data/index.js (sectionPairs)."
+  },
+  {
+    "id": "t8-15",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Dans C6.2, reformuler les puces pour qu’elles ne soient plus du type « terme : définition » (par exemple « En société, la **responsabilité** est limitée : les associés ne perdent, au maximum, que leurs **apports**… ») ou donner au terme exactement le nom « Responsabilité limitée » pour que le dédoublonnage les fusionne ; ne pas garder deux notions quasi identiques dans la banque.",
+    "justification": "« La responsabilité limitée en société » (puce de C6.2) et « Responsabilité limitée » (définition) décrivent exactement la même notion : B et D sont donc deux bonnes réponses, et l’élève qui choisit D est sanctionnée. Le défaut vient du fait que la puce est prise pour une définition par le générateur. La correction envisagée (fusionner, garder « Responsabilité limitée ») est la bonne ; la formulation « écrire La responsabilité limitée en société : … » en gras ne règle rien (la puce l’est déjà en partie), d’où ma reformulation.",
+    "source": "droit/approfondi-1.json (C6.2) ; droit/definitions.json (Responsabilité limitée) ; app/src/data/index.js (sectionPairs : puces « **terme** : définition »)."
+  },
+  {
+    "id": "t8-16",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Exclure des vrai/faux les paires où le terme figure parmi les exemples de la définition proposée, ou poser : « « Forme légale choisie pour entreprendre (EI, EURL, SARL, SAS…) » est la définition de « Entreprise individuelle » ? » (réponse : faux, c’est celle de « Statut juridique »).",
+    "justification": "L’énoncé « Entreprise individuelle : forme légale choisie pour entreprendre (EI, EURL, SARL, SAS…) » est vrai au sens courant : l’EI est une forme choisie pour entreprendre et figure dans la parenthèse. Le corrigé « FAUX » sanctionne donc une élève qui raisonne juste. Les autres lignes (E84 Personnalité juridique, E85 Responsabilité limitée) ne posent pas ce problème. Les deux options envisagées corrigent le défaut ; la seconde (« est la définition de… ») est plus propre.",
+    "source": "droit/definitions.json (Statut juridique : « Forme légale choisie pour entreprendre (EI, EURL, SARL, SAS…) ») ; droit/approfondi-1.json (C5.1 : l’EI est une forme juridique) ; app/src/data/index.js (vraiFauxFromDefs)."
+  },
+  {
+    "id": "t8-17",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Définition [C10.2] : « Contrat de sous-traitance : un entrepreneur confie, sous sa responsabilité, à un autre (le sous-traitant) l’exécution de tout ou partie du contrat qu’il a conclu avec son client. » Réponses acceptées dans la saisie : « contrat de sous-traitance », « sous-traitance », « contrat d’entreprise ».",
+    "justification": "« Confier une tâche à un tiers » est trop vague : c’est aussi la définition de l’externalisation enseignée en Première (« confier une activité à un partenaire extérieur ») et du contrat d’entreprise du thème 7 (prestation par un indépendant). Surtout, la saisie n’accepte que « Contrat de sous-traitance » : « sous-traitance » seul, ou « contrat d’entreprise » (le programme écrit « contrat d’entreprise (sous-traitance) »), sont refusés. La définition proposée est exacte (loi du 31 décembre 1975, art. 1) ; j’ajoute « sous sa responsabilité » qui en est un élément.",
+    "source": "Loi n° 75-1334 du 31 décembre 1975, art. 1 ; app : p1-management/matiere.json (externalisation), droit/cours-complets.json (thème 7 : contrat d’entreprise ; thème 8 : « contrat d’entreprise (sous-traitance) »), droit/approfondi-2.json (C10.2)."
+  },
+  {
+    "id": "t8-18",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "Le texte de C3.2 est exact : le dépôt à l’INPI fonde le monopole sur la marque, la contrefaçon sanctionne la copie et le droit d’auteur est automatique ; les durées de C3.3 et C7.2 sont justes. La version B est un choix éditorial, pas la correction d’une erreur. Constat de cohérence : la propriété intellectuelle (marque, brevet, monopole, contrefaçon, droit d’auteur) est déjà enseignée au thème 4 de Première, sans contradiction avec le thème 8, qui ajoute les durées et les formalités ; elle ne figure pas au programme du thème 8 (liberté du commerce et de l’industrie, société commerciale, concurrence, partenariats contractuels). Si le propriétaire veut appliquer la règle « Terminale = notions de Terminale » (PREREQ_SECTIONS), il peut masquer ou signaler C3, C7 et C12 comme rappel de Première, mais ce n’est pas une correction d’exactitude.",
+    "source": "app : p1-droit/matiere.json thème 4 (propriété intellectuelle) ; app/src/data/index.js (PREREQ_SECTIONS) ; docs/RELECTURE.md (règle « Terminale = notions de Terminale »)."
+  },
+  {
+    "id": "t8-19",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "Le texte de C11.1 est exact (RGPD, sanction par la CNIL) ; il n’y a pas d’erreur à corriger. Constat de cohérence : le RGPD et la CNIL sont déjà enseignés au thème 4 de Première (droits de la personnalité et données personnelles), puis en SGN de Première, en management, mercatique et SIG, avec les mêmes principes (finalité, minimisation, consentement, sécurité, droits). C11 n’est donc pas contradictoire mais redondant, et hors programme du thème 8. Le signaler comme rappel de Première est possible, c’est un choix éditorial.",
+    "source": "app : p1-droit/matiere.json thème 4 ; p1-sgn/matiere.json ; management/management-approfondi.json ; mercatique/approfondi-1.json ; sig/approfondi-1.json."
+  },
+  {
+    "id": "t8-20",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "La phrase est exacte : la donation est une transmission à titre gratuit, et le pacte Dutreil (art. 787 B du CGI) est bien un dispositif d’allègement fiscal pour la transmission d’entreprise (donation ou succession). Le reste de C8 (cession avec information des salariés, succession, transmission de parts) est juste aussi. La section n’est pas au programme du thème 8 et n’est enseignée dans aucun autre cours de l’app, donc ce n’est pas un doublon ; la garder comme « pour aller plus loin » est un choix éditorial. Les défauts d’exercices de C8 (E286/E290) sont traités en t8-06.",
+    "source": "CGI, art. 787 B (pacte Dutreil) ; C. com., L.141-23 et L.23-10-1 (information des salariés en cas de cession) ; droit/approfondi-1.json (C8)."
+  },
+  {
+    "id": "t8-21",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "La phrase est exacte : le bail commercial dure au moins 9 ans (le preneur peut en sortir à l’issue de chaque période triennale) et le locataire bénéficie d’un droit au renouvellement (L.145-4 et L.145-8 C. com.). B propose de retirer bail et vente commerciale, hors programme du thème 8 (qui retient franchise et contrat d’entreprise/sous-traitance) : c’est un choix de périmètre, pas une correction d’erreur. Ces deux contrats ne sont enseignés nulle part ailleurs dans l’app. À améliorer plutôt : la définition de la sous-traitance (voir t8-17), vague et source d’un exercice refusant de bonnes réponses.",
+    "source": "C. com., L.145-4 (durée minimale de 9 ans, faculté de résiliation triennale) et L.145-8 (droit au renouvellement) ; droit/approfondi-2.json (C10)."
+  },
+  {
+    "id": "t8-22",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Réafficher les 4 sections de cours-complets.json pour droit-t8 (8.1 liberté d’entreprendre et entreprise individuelle ; 8.2 société commerciale ; 8.3 respect de la concurrence ; 8.4 partenariats contractuels), en les ajoutant au cours affiché au lieu de les remplacer par les cours réels, de préférence avant les sections d’approfondissement ; vérifier que dedupeCourse ne les supprime pas et relire au passage le titre « Évolution à connaître (2019 → 2022) » (la date 2019 n’est pas justifiée dans le texte).",
+    "justification": "Dans assemblerTheme, cours-reels.json remplace le corps du cours de cours-complets.json : le cours affiché (C1 à C12) ne contient plus l’art. 1832 et l’affectio societatis, ni la concurrence déloyale, l’entente, l’abus de position dominante, ni la liberté d’entreprendre, ni la sous-traitance et la franchise (une ligne de tableau dans C10.2). Ces notions n’existent plus que dans le mémo, les formules et les exercices, alors que les exercices et l’étude de documents les interrogent : il faut donc les réafficher. Plusieurs des douze sections affichées portent sur des contenus hors programme ou déjà vus en Première (propriété intellectuelle, RGPD, personnalité juridique, transmission). La version B règle ce défaut.",
+    "source": "app/src/data/index.js, assemblerTheme (COURS_REELS remplace c.cours) ; droit/cours-complets.json droit-t8 (4 sections) ; droit-t8.md (recherche de « 1832 », « déloyale », « entente » dans la partie Cours : aucun résultat) ; programme de droit de Terminale STMG, thème 8 (8.1 à 8.4)."
+  }
+]

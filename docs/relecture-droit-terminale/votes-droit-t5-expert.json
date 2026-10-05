@@ -1,0 +1,127 @@
+[
+  {
+    "id": "t5-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "La version A donne un exemple faux : la vente immobilière n’est pas un contrat solennel. Elle est parfaite dès l’accord sur la chose et le prix (art. 1583) ; l’acte notarié n’est exigé que pour la publicité foncière, donc pour l’opposabilité aux tiers, et non pour la validité. Par ailleurs, le contrat solennel se définit par une forme exigée à peine de nullité, pas seulement par « un écrit ». La version B est exacte : la donation et le contrat de mariage exigent un acte notarié à peine de nullité.",
+    "source": "Art. 1109 al. 2 et 1172 C. civ. (contrat solennel : validité subordonnée à des formes déterminées par la loi) ; art. 1583 C. civ. ; art. 931 C. civ. (donation devant notaire, sous peine de nullité) ; art. 1394 C. civ. (conventions matrimoniales par acte notarié) ; décret n° 55-22 du 4 janvier 1955, art. 4 (acte authentique exigé pour la publicité foncière)."
+  },
+  {
+    "id": "t5-02",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "La version A attribue à l’article 1218 la triade jurisprudentielle d’avant 2016 (imprévisibilité, irrésistibilité, extériorité). Or ce texte ne retient pas l’extériorité : il exige un événement « échappant au contrôle du débiteur », raisonnablement imprévisible lors de la conclusion du contrat et dont les effets ne peuvent être évités. La version B reprend fidèlement ces trois critères. Une simplification reste acceptable dans la phrase suivante (« Il est alors libéré ») : en cas d’empêchement seulement temporaire, l’exécution est suspendue (art. 1218 al. 2).",
+    "source": "Art. 1218 C. civ., issu de l’ordonnance n° 2016-131 du 10 février 2016 ; art. 1231-1 C. civ. (pas de dommages et intérêts en cas de force majeure) ; rapport au Président de la République sur l’ordonnance n° 2016-131 (abandon exprès de l’extériorité) ; Cass. ass. plén., 14 avril 2006 (extériorité déjà écartée en matière contractuelle)."
+  },
+  {
+    "id": "t5-03",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Depuis 2016, l’article 1128 énumère : le consentement, la capacité et « un contenu licite et certain ». « Objet » est le vocabulaire de l’ancien article 1108 (objet certain, cause licite) ; l’attribuer à l’article 1128 est inexact. Le terme contredit aussi la formule [F1] et le reste du thème. La version B reprend exactement le texte en vigueur.",
+    "source": "Art. 1128 C. civ. (rédaction issue de l’ordonnance de 2016) ; ancien art. 1108 C. civ. ; art. 1162 à 1171 C. civ. (section « Le contenu du contrat »)."
+  },
+  {
+    "id": "t5-04",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Pris isolément, le texte A n’est pas faux. Mais dans son contexte ([C1.1] : place de concert réservée en ligne), il laisse croire à l’élève qu’il dispose de 14 jours pour se rétracter de ce billet. C’est faux : l’article L221-28, 12° exclut du droit de rétractation les prestations d’activités de loisirs fournies à une date ou à une période déterminée. La version B est exacte et corrige précisément cette erreur induite.",
+    "source": "Art. L221-18 (délai de 14 jours) et L221-28, 12° C. consom. ; directive 2011/83/UE, art. 16 l) ; CJUE, 31 mars 2022, CTS Eventim, C-96/21 (exclusion applicable aux billets de concert vendus en ligne, même par un intermédiaire)."
+  },
+  {
+    "id": "t5-05",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "« Conclusion (l’application) » est une simplification qu’on trouve dans certains manuels de STMG. Mais le thème se contredit : [C9.2], [E7] et [E364] placent l’application dans la conclusion, alors que [C13.2], [C13.3] et [E515] en font la mineure (« appliquer la règle aux faits »). L’élève est donc noté de façon contradictoire d’un exercice à l’autre. Le schéma B correspond à la structure rigoureuse du syllogisme : la mineure présente les faits qualifiés et confrontés à la règle, la conclusion déduit la solution. Il est exact et cohérent avec [C13].",
+    "source": "Raisonnement : structure logique du syllogisme juridique (majeure, mineure, conclusion) ; comparaison interne de [C9.2], [E7] et [E364] avec [C13.2], [C13.3] et [E515]."
+  },
+  {
+    "id": "t5-06",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "La mise en demeure n’est pas une sanction de l’inexécution : c’est un préalable, exigé en principe avant les dommages et intérêts, l’exécution forcée, la réduction du prix et la résolution par notification. La liste A oublie aussi deux des cinq remèdes de l’article 1217 (exception d’inexécution, réduction du prix), alors que [C8.3] et [C14.2] les citent. La version B reprend exactement l’article 1217, place correctement la clause pénale (évaluation forfaitaire des dommages et intérêts) et nuance à juste titre le préalable par « en principe ». [ESS5] mérite la même correction.",
+    "source": "Art. 1217 C. civ. ; art. 1219-1220 (exception d’inexécution) ; art. 1221 et 1223 (« après mise en demeure ») ; art. 1225-1226 ; art. 1229 (résiliation) ; art. 1231 (mise en demeure préalable aux dommages et intérêts) ; art. 1231-5 (clause pénale)."
+  },
+  {
+    "id": "t5-07",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "« Le contrat fait la loi des parties » est l’adage classique qui exprime la force obligatoire, et l’article 1103 en est bien le fondement : le fond est exact. La citation littérale figure déjà ailleurs dans le thème ([C5.2], document 2, [E24]), et un élève qui écrirait l’adage au bac ne serait pas pénalisé. La version B est juste et légèrement plus rigoureuse, mais la version A n’est pas une erreur. Si l’on harmonise malgré tout, B peut être reprise telle quelle.",
+    "source": "Art. 1103 C. civ. : « Les contrats légalement formés tiennent lieu de loi à ceux qui les ont faits » ; adage « le contrat est la loi des parties »."
+  },
+  {
+    "id": "t5-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le corrigé modèle cite l’article 1128 comme fondement du dol, ce qui est faux : l’article 1128 pose les conditions de validité, le dol est défini à l’article 1137 et sanctionné par la nullité relative (art. 1131). Un exercice de syllogisme qui enseigne un mauvais fondement pose un vrai problème. La version B est juridiquement exacte : consentement (art. 1128), dol (art. 1137), nullité relative (art. 1131), dommages et intérêts possibles en plus de la nullité.",
+    "source": "Art. 1128, 1130, 1131 et 1137 C. civ. ; art. 1178 al. 4 C. civ. (réparation du dommage en plus de l’annulation)."
+  },
+  {
+    "id": "t5-09",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "« Consentement » et « Le consentement des parties » désignent la même condition de validité (art. 1128, 1°) mais sont traités comme deux notions distinctes. Il y a donc plusieurs bonnes réponses : [E229] propose les options A et D, toutes deux justes ; [E220] (option B) et [E221] (option A) donnent comme distracteur une définition exacte. [E241] refuse « consentement », pourtant juste. La correction proposée (fusion, ou exclusion mutuelle des distracteurs et ajout de « consentement » aux réponses acceptées) va dans le bon sens.",
+    "source": "Art. 1128, 1° C. civ. ; raisonnement sur les exercices [E220], [E221], [E229] et [E241]."
+  },
+  {
+    "id": "t5-10",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le cours lui-même ([C3.2]) appelle « capacité juridique » l’aptitude d’un mineur à s’engager seul. Dans [E235], « Capacité juridique » (option B) est donc une réponse défendable, à côté de « La capacité de contracter » ; [E225] présente le même chevauchement (option C). [E242] refuse « capacité » ou « capacité juridique ». La correction proposée va dans le bon sens. Simplification acceptable au passage : « majeur non protégé » ignore que le mineur émancipé (art. 413-6) et le majeur sous sauvegarde de justice (art. 435) conservent leur capacité.",
+    "source": "Art. 1128, 2°, 1145 et 1146 C. civ. ; art. 413-6 et 435 C. civ."
+  },
+  {
+    "id": "t5-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Les étapes d’un cas particulier ([C4.2]) sont présentées comme des définitions : « Conclusion » y serait défini comme « le contrat encourt la nullité », et « Faits (mineure) » comme « l’acheteur est mineur ». C’est juridiquement absurde et trompeur, car la conclusion d’un syllogisme n’est pas la nullité, et l’exercice prête à confusion entre « mineure » (prémisse du raisonnement) et « mineur » (âge). La proposition (sortir ces blocs de l’encadré, ou en faire un exercice d’ordre ou d’association sur le syllogisme) est la bonne.",
+    "source": "Raisonnement : méthode du syllogisme juridique ; exercices [E154] à [E158], [E162] à [E185] et [E570] à [E573]."
+  },
+  {
+    "id": "t5-12",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retirer la numérotation du terme attendu (par ex. « 1. **Les faits** : … » dans [C13.2], ou faire ôter le préfixe « n. » par le générateur). Réponses acceptées, exercice par exercice : E514 → « conclusion », « la conclusion » ; E515 → « mineure », « la mineure » ; E516 → « qualification », « qualification juridique », « la qualification juridique » ; E517 → « majeure », « la majeure ». Ne jamais accepter « majeure » pour E515 ni « mineure » pour E517.",
+    "source": "Raisonnement : un élève ne tape pas « 5. » devant le terme, donc une bonne réponse est refusée. Le contenu (« mineure : appliquer la règle aux faits ») est exact et cohérent avec [C13.3]."
+  },
+  {
+    "id": "t5-13",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "La phrase est coupée après l’abréviation « art. » et devient incompréhensible (« La ____ (art. ») : l’élève n’a aucun indice pour répondre. Le même défaut touche les autres exercices cités. L’exemple corrigé reprend exactement l’article 1103 et la réponse « force obligatoire » est juste.",
+    "source": "Art. 1103 C. civ. : « Les contrats légalement formés tiennent lieu de loi à ceux qui les ont faits » ; raisonnement sur le découpage des phrases."
+  },
+  {
+    "id": "t5-14",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le mot attendu, « Énoncé. », est un intertitre typographique et non une notion de droit : l’exercice n’a pas de sens et aucune réponse juridique n’est possible. Il faut exclure ces trous, comme le propose la correction.",
+    "source": "Raisonnement : [C9.1] et [C14.1], où « Énoncé. » est un intertitre en gras."
+  },
+  {
+    "id": "t5-15",
+    "verdict": "CORRIGER",
+    "version_ajustee": "« Faits : un vendeur cache volontairement un défaut grave à l’acheteur. Qualification : ____. » → dol (accepter aussi « réticence dolosive »).",
+    "justification": "Sans les faits, « Qualification : ____ » admet n’importe quelle réponse : l’exercice est insoluble. Rétablir le contexte, comme le propose B, est la bonne solution. J’ajoute « volontairement », parce que la réticence dolosive suppose une dissimulation intentionnelle (art. 1137 al. 2) ; sinon, « vice caché » (garantie des art. 1641 et suivants) devient une réponse concurrente défendable. « Réticence dolosive » est le terme exact et doit être accepté.",
+    "source": "Art. 1137 al. 2 C. civ. (dissimulation intentionnelle d’une information déterminante) ; art. 1641 C. civ. (garantie des vices cachés)."
+  },
+  {
+    "id": "t5-16",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Ajouter dans tous les cas « libre et éclairé » aux réponses acceptées ; on peut en plus réécrire la source : « Le consentement doit être **intègre**, c’est-à-dire exempt de vice (erreur, dol, violence). »",
+    "justification": "Hors contexte, « libre et éclairé » est une réponse juste : c’est la formule que le thème répète partout ([C2.2], [C6.2], [C3.D5], document 1). La refuser, c’est refuser une bonne réponse. La seule réécriture de la source ne suffit pas, car « libre et éclairé, c’est-à-dire exempt de vice » resterait juste. Il faut donc accepter cette réponse.",
+    "source": "Art. 1128, 1° et 1130 à 1144 C. civ. (vices du consentement) ; formule doctrinale du consentement « libre et éclairé »."
+  },
+  {
+    "id": "t5-17",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le Code civil emploie lui-même « dommages et intérêts » (art. 1217, 1231-1) : refuser cette réponse, ou « dommages-intérêts » sans article, c’est refuser le terme légal. « Contrat d’adhésion » est le terme de l’article 1110 ; « capacité » complète correctement la phrase de [E145] ; « dissimulé » ou « caché » ([E375]) et « induit en erreur » ou « trompé » ([E292]) décrivent bien le dol, l’intention étant portée par le contexte. Les ajouts proposés sont juridiquement exacts.",
+    "source": "Art. 1217, 1231-1 et 1231-5 C. civ. (« dommages et intérêts ») ; art. 1110 al. 2 C. civ. (contrat d’adhésion) ; art. 1137 C. civ. (dol) ; art. 1145-1146 C. civ. (capacité)."
+  },
+  {
+    "id": "t5-18",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Afficher l’énoncé comme question et puiser le corrigé dans les blocs d’analyse, comme proposé. Pour le cas Rolex ([E612]), l’énoncé ne dit pas si le vendeur savait : le corrigé doit donc distinguer deux hypothèses. S’il savait, c’est un dol (art. 1137), qui permet la nullité et des dommages et intérêts. S’il l’ignorait, c’est une erreur sur une qualité essentielle, l’authenticité (art. 1132-1133). Dans les deux cas, nullité relative (art. 1131). Ne pas transformer [E615] (« Application ») en cas.",
+    "justification": "Tel qu’il est affiché, l’exercice montre « Cas réel » comme question et l’énoncé lui-même comme « réponse » : il n’y a aucun corrigé, l’exercice est vide de sens. La correction va dans le bon sens. Les corrigés tirés de [C3.2], [C3.3] et [C4.2] sont exacts : achat important d’un mineur, hors actes courants, donc nullité relative. En revanche, [C2.4] affirme que le vendeur « a menti volontairement », ce que l’énoncé ne dit pas : d’où la précision ajoutée sur le cas Rolex.",
+    "source": "Art. 1131, 1132, 1133, 1137 et 1139 C. civ. (vices du consentement) ; art. 1146, 1147 et 1148 C. civ. (incapacité du mineur, actes courants)."
+  }
+]

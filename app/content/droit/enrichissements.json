@@ -13,15 +13,14 @@
             "t": "list",
             "c": [
               "**Règle de droit (majeure)** : un contrat n’est valable que si les conditions sont réunies : consentement, **capacité juridique**, contenu licite et certain.",
-              "**Faits (mineure)** : l’acheteur est **mineur**, donc juridiquement **incapable** de conclure seul un tel contrat.",
-              "**Application** : une condition de validité (la capacité) manque.",
+              "**Faits et application (mineure)** : l’acheteur est **mineur**, donc juridiquement **incapable** de conclure seul un tel contrat ; une condition de validité (la capacité) manque.",
               "**Conclusion** : le contrat encourt la **nullité** (il peut être annulé)."
             ]
           },
           {
             "t": "tip",
             "h": "Méthode",
-            "c": "Cas pratique = **syllogisme** : règle de droit → faits → application → conclusion. C’est la structure attendue au bac."
+            "c": "Cas pratique = **syllogisme** : règle de droit (majeure) → faits qualifiés et application (mineure) → conclusion. C’est la structure attendue au bac."
           }
         ]
       }

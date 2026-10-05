@@ -1,0 +1,93 @@
+[
+  {
+    "id": "t7-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[C2.3] : « L’employeur doit aussi respecter une **procédure** : convocation à un entretien préalable, entretien, puis notification écrite et **motivée**. Si la **cause** manque (fond), le licenciement est **abusif** (sans cause réelle et sérieuse) : le salarié peut obtenir des dommages-intérêts (dans les limites d’un barème légal). Si seule la **procédure** n’a pas été respectée (forme), le licenciement est **irrégulier** : le salarié obtient une indemnité d’au plus un mois de salaire. » Idem pour [C6.4] (« l’absence de cause le rend abusif (dommages-intérêts) ; un vice de procédure le rend irrégulier (indemnité d’au plus un mois de salaire) »), [C11.2] point 5, [C2.4], le Document 3 et la phrase « À défaut, le licenciement est abusif » de [C8.2] (à reformuler en « À défaut de cause réelle et sérieuse… »). Penser aussi à l’explication de E25 (« irrégulier car il n’a ni cause réelle et sérieuse ni procédure respectée » : écrire « abusif (pas de cause réelle et sérieuse) et irrégulier (procédure non suivie) »).",
+    "justification": "La version A met sur le même plan le défaut de cause et le vice de procédure (« abusif »). En droit, seul le défaut de cause réelle et sérieuse rend le licenciement abusif ; le vice de procédure seul le rend irrégulier et ouvre droit à une indemnité plafonnée à un mois de salaire (art. L1235-2). La distinction est classique en STMG et un élève qui écrit « abusif » pour un simple vice de forme se trompe sur la sanction. La version B est exacte ; il faut seulement l’étendre aux autres passages (C2.4, C8.2, E25) pour qu’ils restent cohérents avec le nouveau vocabulaire.",
+    "source": "Code du travail, art. L1235-2 (irrégularité de procédure, indemnité d’au plus un mois de salaire) et L1235-3 (licenciement sans cause réelle et sérieuse, barème) ; service-public.fr (licenciement irrégulier / sans cause réelle et sérieuse)."
+  },
+  {
+    "id": "t7-02",
+    "verdict": "INCERTAIN",
+    "version_ajustee": "Ce n’est pas une simple recommandation : c’est une **obligation de sécurité renforcée**. L’employeur doit prendre toutes les mesures de prévention prévues par la loi et pouvoir prouver qu’il les a prises.",
+    "justification": "Depuis l’arrêt Air France (Cass. soc., 25 nov. 2015), la Cour de cassation n’exige plus un résultat absolu : l’employeur échappe à sa responsabilité s’il justifie avoir pris toutes les mesures des articles L4121-1 et L4121-2, ce que la doctrine appelle une obligation de moyens renforcée. La formule « obligation de résultat renforcée » est donc un hybride dépassé, et la version B est exacte en droit. Mais de nombreux cours de Terminale STMG, et la jurisprudence sur la faute inexcusable, parlent encore d’obligation de sécurité « de résultat » : je ne peux pas garantir qu’un correcteur du bac pénaliserait l’une ou l’autre étiquette. Si l’on modifie, une formulation sans l’étiquette contestée (version ajustée) évite le litige.",
+    "source": "Cass. soc., 25 novembre 2015, n° 14-24.444 (Air France) ; Code du travail, art. L4121-1 et L4121-2 ; programme de droit de Terminale STMG (thème « Comment le droit encadre-t-il le travail salarié ? »), qui parle d’obligation de sécurité sans trancher l’étiquette."
+  },
+  {
+    "id": "t7-03",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "« On ne peut déroger que dans un sens plus favorable » est la définition classique de l’ordre public social, attendue au bac, et [C7.1] précise déjà « sauf exceptions » pour le principe de faveur. La version B est exacte (majoration d’au moins 10 % par accord, 25 % puis 50 % à défaut ; primauté de l’accord d’entreprise depuis 2017), mais elle introduit des notions hors programme qui alourdissent une fiche « À retenir » sans corriger une erreur. Les changements de C7.2 (« adapte et améliore ») et de C9.2 compliquent le cours sans bénéfice pour l’élève.",
+    "source": "Programme de droit Terminale STMG (droit du travail protecteur, ordre public social) ; Code du travail, art. L2251-1 et L3121-33 ; ordonnances du 22 septembre 2017."
+  },
+  {
+    "id": "t7-04",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "Au niveau du bac, la règle (indemnité de fin de contrat de 10 %, prime de précarité) est ce qu’on attend, et les exceptions (saisonnier, refus d’un CDI, embauche en CDI à la suite) ne sont pas exigibles. La version B est exacte (art. L1243-8 et L1243-10) et pourrait être adoptée sans dommage, mais la version A n’est pas une erreur : c’est une simplification normale qui ne fait pas perdre de points. Seule réserve mineure : l’emploi saisonnier est cité comme cas de recours dans la même liste alors qu’il est une exception à l’indemnité.",
+    "source": "Code du travail, art. L1243-8 (indemnité de fin de contrat) et L1243-10 (exceptions) ; programme de droit Terminale STMG (formes du contrat de travail)."
+  },
+  {
+    "id": "t7-05",
+    "verdict": "CORRIGER",
+    "version_ajustee": "• **Accidents du travail et maladies professionnelles** : pris en charge par la Sécurité sociale (réparation forfaitaire, sans avoir à prouver une faute de l’employeur) ; en cas de **faute inexcusable** de l’employeur (il aurait dû avoir conscience du danger et n’a pas pris les mesures nécessaires), le salarié obtient une indemnisation complémentaire (majorée).",
+    "justification": "« Engagent la responsabilité de l’employeur en cas de faute » est inexact : le régime AT-MP est une réparation forfaitaire par la Sécurité sociale et l’employeur ne répond pas de sa faute ordinaire, seulement de sa faute inexcusable (ou intentionnelle). La notion de faute inexcusable est classique dans les cours de Terminale STMG sur l’obligation de sécurité, et un élève qui écrit simplement « faute » passe à côté du terme attendu. La version B est exacte ; je l’ai juste précisée par la définition de la faute inexcusable.",
+    "source": "Code de la sécurité sociale, art. L411-1 (présomption d’imputabilité), L451-1 (pas d’action de droit commun) et L452-1 à L452-3 (faute inexcusable, majoration et réparation complémentaire)."
+  },
+  {
+    "id": "t7-06",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "Le CDI de chantier ou d’opération est bien un CDI au sens du Code du travail (art. L1223-8), mais c’est un contrat atypique dont le terme est lié à l’achèvement du chantier : le ranger parmi les contrats dérogatoires à la norme du CDI, comme le fait le mémo, n’est pas une erreur au niveau du bac. La flashcard E11 du même thème emploie déjà « CDI de chantier » dans « Autres contrats », ce que la version B contredirait. « Saisonnier » est un CDD (cas de recours), donc le garder en liste ne trompe pas l’élève ; la version B est exacte mais n’apporte pas de correction nécessaire.",
+    "source": "Code du travail, art. L1223-8 et L1236-8 (CDI de chantier ou d’opération) ; art. L1242-2 3° (CDD saisonnier)."
+  },
+  {
+    "id": "t7-07",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Priorité à la solution générale : exclure du générateur (sectionPairs et trouFromBold) les libellés de méthode « Règle / Faits / Application / Conclusion / Énoncé / Majeure / Mineure » et ceux qui commencent par un numéro (« 2. »), car ces libellés ne sont pas des notions juridiques. Réécrire en même temps [C4.2] sans la forme « **Libellé** : texte » (par exemple « Règle — tout licenciement… » sans gras), pour éviter les exercices voisins E157, E160 à E164 et E167 et les « définitions clés » C4.D1 à C4.D4 et C11.D1 (« 2. Le motif… »).",
+    "justification": "L’énoncé demande « Quel terme correspond à cette définition ? » et la phrase définie est la règle du licenciement : l’élève répondra légitimement « licenciement » ou « cause réelle et sérieuse » et sera compté faux, alors que « Règle » n’est qu’une étape de la méthode du cas pratique. La réponse attendue est introuvable et le jeu ne teste aucune connaissance juridique. La saisie compare par égalité exacte après normalisation (casse, accents), donc aucune réponse sensée ne passera. La correction envisagée va dans le bon sens ; la solution dans le générateur est préférable car elle règle aussi les autres étapes (Faits, Application, Conclusion).",
+    "source": "Raisonnement sur l’exercice ; code de l’app (sectionPairs, saisieFromItems, answerMatches dans common.jsx : égalité stricte après normalisation)."
+  },
+  {
+    "id": "t7-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Réécrire la puce de [C7.2] : « **CSE (comité social et économique)** : représentants élus du personnel, ils défendent les intérêts des salariés et sont consultés sur les décisions importantes. » (pas de tiret cadratin ni de deux-points dans la parenthèse), ce qui corrige aussi l’association E261 dont le terme est coupé « Les représentants du personnel (CSE ↔ … ».",
+    "justification": "Le générateur coupe la puce au tiret cadratin de la parenthèse : la question devient « Quelle est la bonne définition de « Les représentants du personnel (CSE » ? » avec une parenthèse non fermée, et la bonne réponse commence par « Comité social et économique) : élus… ». L’élève peut deviner par élimination, mais l’énoncé est incompréhensible et la parenthèse mal fermée est un défaut visible (même défaut dans E261). La réécriture proposée est exacte (CSE = comité social et économique, instance élue du personnel) et règle le problème.",
+    "source": "Code du travail, art. L2311-1 et suivants (CSE) ; code de l’app (sectionPairs découpe sur [:—–])."
+  },
+  {
+    "id": "t7-09",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Dans [C8.1] et [C12.1], retirer le gras sur « Énoncé. » (ou en faire le titre d’un bloc), et exclure du générateur de trous les mots en gras en tête de phrase suivis d’un point. En complément, accepter la variante sans point, car la comparaison est stricte.",
+    "justification": "Le texte à trous du jeu Trou est une saisie libre, sans liste de choix : l’élève voit « ____ Un employeur licencie une salariée par un simple SMS… » et ne peut pas deviner qu’il faut écrire « Énoncé. » (avec le point : normalize ne retire pas la ponctuation, donc « énoncé » seul serait refusé). L’exercice ne teste aucune connaissance et est injuste. La correction envisagée (ne plus mettre le mot en gras, ou exclure ces mots du générateur) va dans le bon sens.",
+    "source": "Raisonnement sur l’exercice ; code de l’app (trouFromBold, Trou.jsx, answerMatches : égalité stricte après normalisation sans retrait de la ponctuation)."
+  },
+  {
+    "id": "t7-10",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retirer les articles des libellés de [C7.2] (« **Convention collective** : … », « **Syndicats** : … », « **CSE (comité social et économique)** : … »). Plus robuste : faire retirer l’article initial (le, la, les, l’, un, une, des) dans termVariants, pour que « convention collective » soit accepté quelle que soit la source ; le problème se reproduira sinon avec tout libellé à article.",
+    "justification": "La réponse attendue est « La convention collective », sans variante acceptée : termVariants ne retire pas l’article et answerMatches fait une égalité stricte après normalisation. Un élève qui écrit « convention collective », la bonne réponse naturelle (et celle que l’exercice voisin E50 attend), est donc refusé. Les deux solutions proposées vont dans le bon sens ; la correction dans termVariants est la plus complète.",
+    "source": "Code de l’app (termVariants dans data/index.js, answerMatches dans games/common.jsx) ; raisonnement sur l’exercice."
+  },
+  {
+    "id": "t7-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Ajouter des réponses acceptées aux saisies des textes à trous (strou), au moins pour cette phrase : « principe », « le principe », « règle », « la règle », « règle générale », « norme », « la norme », « droit commun ». Sinon retirer cette phrase des saisies et la garder en texte à trous.",
+    "justification": "Le cours emploie trois mots pour la même idée : le CDI est « la règle » (définitions clés, [C12.2]), « la norme » (mémo [ESS3]) et « le principe » ([C3.5]). L’élève qui écrit « règle » ou « norme » donne une bonne réponse, mais la saisie n’accepte que « principe » (les saisies de textes à trous n’ont pas de variantes et la comparaison est stricte). La correction envisagée va dans le bon sens.",
+    "source": "Code de l’app (strou sans alt dans sectionExercises, answerMatches) ; programme de droit Terminale STMG (CDI = forme normale et générale de la relation de travail)."
+  },
+  {
+    "id": "t7-12",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[C9.4] : « Au-delà de la durée légale, les heures effectuées sont des **heures supplémentaires majorées**. » ; [C12.2] : « À défaut, le CDD est **requalifié en CDI**. » (ou « À défaut de cas de recours légal ou d’écrit, le CDD est… »). Ajouter aussi des réponses acceptées : « heures supplémentaires », « requalifié », « requalifié en CDI ».",
+    "justification": "L’indice « Au-delà → ____ » est amputé de son contexte (au-delà de quoi ?), et la réponse attendue est une expression de trois mots que l’élève doit deviner mot pour mot (« heures supplémentaires » seul serait refusé, la comparaison étant stricte). La phrase est incompréhensible hors du cours et l’élève est bloqué sans raison. Réécrire les phrases sources pour qu’elles se suffisent à elles-mêmes va dans le bon sens ; la correction proposée est exacte (durée légale de 35 h, heures supplémentaires majorées).",
+    "source": "Code du travail, art. L3121-27 et L3121-36 (durée légale, heures supplémentaires majorées), L1245-1 (requalification du CDD en CDI) ; code de l’app (trouFromBold et saisie)."
+  },
+  {
+    "id": "t7-13",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Exclure du générateur vraiFauxFromDefs les couples croisés « CDI / CDD » ↔ « Contrat de travail », dans les deux sens (E156 et E45). Reformuler seulement la définition de « CDI / CDD » ne suffit pas : l’énoncé affiché reste la définition du contrat de travail, qui est vraie d’un CDI ou d’un CDD.",
+    "justification": "L’énoncé « CDI / CDD : convention par laquelle un salarié travaille pour un employeur, sous sa subordination, contre rémunération » est défendable comme vrai : un CDI et un CDD sont des contrats de travail et correspondent à cette définition. Un élève qui raisonne juste est compté faux, ce qui est un vrai problème pour un vrai/faux. La solution d’exclure le couple est la bonne ; la reformulation de la définition de CDI/CDD, elle, ne règle pas le cas (même défaut dans E45, couple inverse).",
+    "source": "Raisonnement juridique : le CDI et le CDD sont deux espèces du contrat de travail (art. L1221-1 et L1221-2 du Code du travail) ; code de l’app (vraiFauxFromDefs)."
+  }
+]

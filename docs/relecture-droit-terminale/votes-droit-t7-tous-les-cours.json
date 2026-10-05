@@ -1,0 +1,93 @@
+[
+  {
+    "id": "t7-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[C2.3] : « … Si la cause manque (fond), le licenciement est abusif (sans cause réelle et sérieuse) : dommages-intérêts selon le barème. Si seule la procédure n’a pas été respectée (forme), il est irrégulier : indemnité d’au plus un mois de salaire. » [C6.4] : « Le non-respect du fond (absence de cause réelle et sérieuse) rend le licenciement abusif et ouvre droit à des dommages-intérêts ; le non-respect de la seule procédure le rend irrégulier et ouvre droit à une indemnité d’au plus un mois de salaire. » [C11.2] point 5 et Document 3 : comme dans la version B. À ajouter à la liste de B : [C8.2] (« À défaut, le licenciement est abusif » → « À défaut de cause réelle et sérieuse, il est abusif ; à défaut de procédure, il est irrégulier ») et l’avertissement de app/content/droit/cours-complets.json (« sans cause réelle et sérieuse ou sans respect de la procédure est abusif »). Le QCM [E25] (« irrégulier car ni cause ni procédure ») reste acceptable mais gagnerait à dire « abusif et irrégulier ».",
+    "justification": "La version A affirme qu’un simple vice de procédure rend le licenciement « abusif » : c’est inexact. Le Code du travail distingue le licenciement sans cause réelle et sérieuse (fond ; indemnité selon le barème de l’article L1235-3) de l’irrégularité de procédure (forme ; indemnité d’au plus un mois de salaire, article L1235-2, et sans cumul avec la précédente). La version B est exacte, mais elle oublie [C8.2] et le bloc d’avertissement de cours-complets.json, qui répètent la même confusion, et laisse « ouvre droit à des dommages-intérêts » en [C6.4], ce qui est faux pour la seule irrégularité de forme.",
+    "source": "Code du travail, art. L1235-2 (irrégularité de procédure : indemnité ≤ 1 mois de salaire) et L1235-3 (licenciement sans cause réelle et sérieuse : barème) ; vocabulaire usuel des manuels de droit STMG (abusif = sans cause réelle et sérieuse, irrégulier = procédure). Cohérence app : [C6.5] (« sans cause réelle et sérieuse est abusif, même si la procédure a été respectée ») reste exact et s’accorde avec B ; app/content/commun/methodo.json emploie « irrégulier » pour une rupture anticipée de CDD, sans lien avec cette distinction."
+  },
+  {
+    "id": "t7-02",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "« Obligation de résultat renforcée » est une qualification périmée (arrêt amiante de 2002) et mal formée : une obligation de résultat n’a pas à être « renforcée ». Depuis l’arrêt Air France (Cass. soc., 25 novembre 2015, n° 14-24.444), l’employeur ne manque pas à son obligation de sécurité s’il justifie avoir pris toutes les mesures des articles L4121-1 et L4121-2 : c’est une obligation de moyens renforcée (charge de la preuve sur l’employeur). La version B est exacte et reste cohérente avec le tableau du thème 5 (moyens : pas de garantie du résultat) grâce au mot « renforcée » et à la preuve mise à la charge de l’employeur. Les exercices [E375] et [E382] (réponse « obligation de résultat ») se régénéreront à partir du texte corrigé.",
+    "source": "Cass. soc., 25 novembre 2015, n° 14-24.444 (Légifrance) ; Code du travail, art. L4121-1 et L4121-2 ; cours de l’app : droit/cours-complets.json (thème 5 : obligations de moyens / de résultat ; thème 6 : « obligation de sécurité » sans qualification), donc aucune contradiction avec B."
+  },
+  {
+    "id": "t7-03",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "L’énoncé absolu « on ne peut y déroger que dans un sens plus favorable » est faux depuis les réformes de 2016-2017 : un accord collectif peut fixer le taux de majoration des heures supplémentaires à 10 % au minimum (L3121-33, contre 25 % / 50 % par défaut), et l’accord d’entreprise prime sur l’accord de branche, même moins favorable, hors matières réservées (L2253-1 à L2253-3). Il contredit aussi [C7.1] de l’app (« principe de faveur, sauf exceptions »). La version B est exacte : « en principe », exemple des 10 %, primauté de l’accord d’entreprise « dans de nombreux domaines ». Les retouches de [C7.2] (« souvent en l’améliorant ») et de [C9.2] (25 % puis 50 % à défaut d’accord, au moins 10 % par accord) sont justes.",
+    "source": "Code du travail, art. L2251-1, L2253-1 à L2253-3, L3121-33 ; ordonnance n° 2017-1385 du 22 septembre 2017 ; cours de l’app : droit/cours-complets.json et approfondi-1.json ([C7.1] « sauf exceptions »), p1-droit/matiere.json (« ordre public » : règles auxquelles on ne peut pas déroger par contrat), qui reste compatible avec « ordre public social »."
+  },
+  {
+    "id": "t7-04",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "« À son terme, le salarié perçoit une indemnité de fin de contrat » énonce la règle générale (10 % de la rémunération brute totale, L1243-8) : c’est une simplification normale au niveau du bac, dont le programme limite l’étude du CDD à ses caractéristiques essentielles. Les exceptions (saisonnier, refus d’un CDI, embauche en CDI à la suite : L1243-10) sont exactes dans la version B, mais elles ne corrigent pas une erreur. Si le coordinateur souhaite quand même nuancer, un simple « en principe » suffit et ne contredit rien, mais ce n’est pas une correction nécessaire.",
+    "source": "Code du travail, art. L1243-8 et L1243-10 ; programme de droit de Terminale STMG (autres formes de contrat : caractéristiques essentielles) ; cours de l’app : aucune autre mention de la prime de précarité dans les autres matières (grep sur app/content)."
+  },
+  {
+    "id": "t7-05",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "La version A est incomplète (elle n’indique pas que la Sécurité sociale indemnise sans recherche de faute), mais pas fausse : la responsabilité de l’employeur peut bien être engagée en cas de faute (faute inexcusable pour l’indemnisation complémentaire, responsabilité pénale pour blessures involontaires). La version B est exacte (réparation forfaitaire, faute inexcusable : L452-1 du Code de la sécurité sociale) et plus précise, donc elle peut être retenue comme enrichissement facultatif ; l’erreur n’est toutefois pas certaine. Le thème 6 de l’app présente déjà l’accident du travail comme un régime spécial à règles d’indemnisation propres, sans contradiction avec A.",
+    "source": "Code de la sécurité sociale, art. L451-1 et L452-1 ; Code du travail, art. L4121-1 ; cours de l’app : droit/cours-complets.json (thème 6 : « régimes spéciaux : accident du travail… chacun a ses propres règles d’indemnisation »)."
+  },
+  {
+    "id": "t7-06",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "La version A reprend le regroupement du programme de Terminale STMG, qui range le contrat de chantier parmi les « autres formes » de contrat, à côté du CDD et du travail temporaire, par opposition au CDI de droit commun. Elle est cohérente avec le reste de l’app : [E11] (« Autres contrats : CDD, CDI de chantier, saisonnier, intérim ») et le texte de droit/cours-complets.json. La version B est juridiquement défendable (le contrat de chantier ou d’opération est un CDI à terme incertain, L1223-8), mais elle déplace « chantier » hors de la liste des exceptions écrites dans [ESS3] seulement, ce qui crée une incohérence avec [E11] et le cours sans corriger d’erreur certaine.",
+    "source": "Programme de droit de Terminale STMG, thème 7 (autres formes de contrat : CDD, contrat de chantier, travail temporaire) ; Code du travail, art. L1223-8 ; droit/cours-complets.json (section « Les formes du contrat de travail ») et droit/matiere.json (flashcard « Autres contrats »)."
+  },
+  {
+    "id": "t7-07",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Corriger dans le générateur plutôt que dans le texte du cours : dans sectionPairs (app/src/data/index.js), écarter les libellés de méthode « Règle / Faits / Application / Conclusion / Énoncé / Majeure / Mineure » et ceux qui commencent par un numéro (« 2. Le motif… »). Cette correction règle aussi les encadrés « Définitions clés » de [C4] et [C11], et les exercices [E157], [E160]-[E163], [E170], [E172], [E406], [E411], [E463], [E477]. Réécrire seulement [C4.2], comme le propose B, laisserait [C11.2] intact.",
+    "justification": "Oui, il y a un vrai problème : l’élève voit la définition de l’exigence de cause réelle et sérieuse et doit répondre « Règle », un simple libellé de la méthode du syllogisme que rien dans la question ne permet de deviner (« Licenciement » ou « Cause réelle et sérieuse » seraient refusés, et la comparaison d’une saisie exacte ne tolère aucune variante). L’origine est l’expression régulière de sectionPairs, qui transforme chaque puce « **Libellé** : texte » en notion → définition. La correction envisagée va dans le bon sens ; la seconde option (filtrer dans sectionPairs) est préférable car elle traite toutes les occurrences, y compris les libellés numérotés de [C11.2].",
+    "source": "app/src/data/index.js, fonction sectionPairs (regex /^(.{3,60}?)\\s*[:—–]\\s+(.+)$/ sur les puces en gras) et answerMatches dans app/src/games/common.jsx (égalité stricte après normalisation) ; contenu : [C4.2], [C4.D1]-[C4.D4], [C11.D1]-[C11.D4]."
+  },
+  {
+    "id": "t7-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Réécrire la puce de [C7.2] avec le même libellé que la banque de notions du thème (droit/definitions.json : « Représentants du personnel »), sans tiret ni deux-points dans le libellé : « **Représentants du personnel** : élus du CSE (comité social et économique), ils défendent les intérêts des salariés et sont consultés sur les décisions importantes. » Ainsi le doublon avec la définition « Représentants du personnel : Élus (CSE)… » de la banque disparaît (dédoublonnage par terme), ce que la version B ne garantit pas avec le libellé « CSE (comité social et économique) ».",
+    "justification": "Oui, le problème est réel : la puce « (CSE — Comité social et économique) : … » est coupée au tiret par la regex de sectionPairs, ce qui donne la question « Les représentants du personnel (CSE » (parenthèse ouverte) et une bonne réponse qui commence par « Comité social et économique) : … ». La phrase est mal formée, et la définition tronquée sert aussi de distracteur dans d’autres QCM (par exemple [E243], [E244]). Comme la banque contient déjà « Représentants du personnel » avec une définition équivalente, un tirage aléatoire peut présenter deux bonnes réponses dans un même QCM. La correction envisagée va dans le bon sens, et ma version supprime en plus le doublon.",
+    "source": "app/src/data/index.js, sectionPairs (le premier « : », « — » ou « – » suivi d’une espace coupe le libellé), enrichedDefPool (dédoublonnage par terme en minuscules) et qcmFromPairs (distracteurs tirés au hasard parmi les autres définitions) ; droit/definitions.json."
+  },
+  {
+    "id": "t7-09",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Corriger dans le générateur : dans trouFromBold (app/src/data/index.js), ne jamais masquer un terme en gras placé en tête de phrase et suivi d’un point (ou une liste de libellés de méthode : « Énoncé. », « Conclusion. », « Méthode. »…). Le motif « **Énoncé.** » existe dans 13 fichiers de contenu d’autres matières (gestion-finance, maths, management, SIG, mercatique, économie, RH…) : modifier seulement [C8.1] et [C12.1] n’y changerait rien. À défaut, déplacer le point à l’extérieur du gras (« **Énoncé**. ») ne suffit pas : le trou resterait sans contexte.",
+    "justification": "Oui, il y a un vrai problème : le texte à trous « ____ Un employeur licencie une salariée par un simple SMS… » demande un mot qui n’est pas une notion de droit et que rien ne permet de deviner. En saisie, la réponse attendue est « Énoncé. » avec le point, car la comparaison ne retire pas la ponctuation, donc « Énoncé » serait refusé. La correction envisagée va dans le bon sens ; la solution au niveau du générateur est la plus robuste, vu la fréquence du motif.",
+    "source": "app/src/data/index.js, trouFromBold (accepte tout terme en gras de 3 à 45 caractères sans « = » ni « : ») ; app/src/games/common.jsx, normalize et answerMatches (la ponctuation est conservée) ; recherche du motif « **Énoncé.** » dans app/content."
+  },
+  {
+    "id": "t7-10",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retirer les articles des libellés de [C7.2] : « **Convention collective** : accord négocié par branche ou entreprise qui adapte (souvent en l’améliorant) le Code du travail (salaires minima, congés, primes). », « **Syndicats** : organisations qui négocient, informent et peuvent appeler à la grève, droit à valeur constitutionnelle. », et pour le CSE le libellé de t7-08. Un libellé identique à celui de la banque (« Convention collective ») permet aussi de supprimer le doublon avec la définition de droit/definitions.json. Compléter par un correctif générique : faire retirer l’article initial (le, la, les, l’, un, une) par termVariants, qui ne le fait pas aujourd’hui.",
+    "justification": "Oui, il y a un vrai problème : la réponse attendue est « La convention collective », et la comparaison est une égalité stricte après normalisation (minuscules, accents, espaces) : un élève qui écrit « convention collective » est refusé, alors que c’est la bonne réponse. termVariants ne retire pas les articles, donc aucune variante n’est acceptée. La correction envisagée va dans le bon sens ; comme les libellés avec article se retrouvent dans d’autres puces et d’autres thèmes, le correctif dans termVariants est le plus sûr, en plus de la réécriture des libellés.",
+    "source": "app/src/games/common.jsx (normalize / answerMatches), app/src/data/index.js (termVariants : parenthèses et « / » seulement) ; droit/definitions.json (terme « Convention collective » sans article)."
+  },
+  {
+    "id": "t7-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Ajouter la possibilité de réponses acceptées aux saisies issues des textes à trous (strou), avec une liste fournie pour chaque phrase : pour [E131], accepter « principe », « règle », « norme », « droit commun » (avec ou sans article). Pour [E66] : « titre » et « nom » ; pour [E96] et [E93] : « conseil de prud’hommes » et « prud’hommes ». Pour [E347], voir t7-12 : accepter « heures supplémentaires ». À défaut, ne garder ces phrases qu’en texte à trous à choix.",
+    "justification": "Oui, il y a un vrai problème : dans [E131] le cours emploie indifféremment « principe » ([C3.5]), « règle » ([C1.D3], [C12.2]), « norme » ([ESS3], [C4.3]) et « droit commun » ([C3.1]), mais seule la réponse « principe » est acceptée, les bonnes réponses « règle » ou « norme » sont donc refusées. Le code confirme que les saisies de textes à trous (strou) n’ont pas de champ alt, alors que les saisies de définitions en ont. La correction envisagée va dans le bon sens, à condition que la liste soit écrite à la main phrase par phrase.",
+    "source": "app/src/data/index.js ligne 723 (saisie issue de strou sans alt) contre ligne 697 (alt: termVariants) ; app/src/games/common.jsx (answerMatches) ; passages du cours cités ci-dessus."
+  },
+  {
+    "id": "t7-12",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[C9.4] : « Au-delà de la durée légale (35 h), les heures effectuées sont des **heures supplémentaires**, majorées. » (le trou porte sur « heures supplémentaires », réponse courte) ; [C12.2] : « Un CDD qui pourvoit durablement un emploi lié à l’activité normale et permanente de l’entreprise est **requalifié en CDI**. » ; [C3.3] : « À défaut d’écrit, le CDD est **requalifié en CDI**. » (même défaut de pronom dans [E133]). Dans le générateur, accepter « heures supplémentaires » comme réponse alternative si la formulation d’origine est gardée.",
+    "justification": "Oui, il y a un vrai problème : « Au-delà → ____ » n’a aucun contexte (au-delà de quoi ?) et attend l’expression exacte « heures supplémentaires majorées », alors que « heures supplémentaires » serait refusé. Le même défaut touche les phrases qui commencent par « À défaut, il est… » ([E133] avec le pronom « il »). La correction envisagée va dans le bon sens ; ma version ajustée garde la phrase d’origine exacte (au-delà de 35 h hebdomadaires, les heures sont des heures supplémentaires majorées ou compensées) et évite la réponse à rallonge. Pour [C12.2], la formule « À défaut, le CDD est requalifié » reste ambiguë, car on ne sait pas de quel défaut il s’agit ; une phrase conditionnelle complète est plus claire.",
+    "source": "Code du travail, art. L3121-28, L3121-33 (heures supplémentaires, majoration) et L1245-1, L1242-12 (requalification en CDI) ; app/src/data/index.js, trouFromBold (le contexte n’est pas contrôlé) et app/src/games/common.jsx (comparaison stricte)."
+  },
+  {
+    "id": "t7-13",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Exclure ce couple dans vraiFauxFromDefs (et dans les distracteurs de QCM : [E29], [E45], [E156]) plutôt que reformuler la définition de « CDI / CDD » : la reformulation proposée en B ne règle rien, car l’affirmation « CDI / CDD : convention par laquelle un salarié travaille pour un employeur… » reste vraie quelle que soit la définition de « CDI / CDD ». Liste d’exclusion à prévoir pour le thème 7 : « Contrat de travail » × « CDI / CDD » (dans les deux sens).",
+    "justification": "Oui, le problème est réel : un CDI ou un CDD est un contrat de travail, donc « Convention par laquelle un salarié travaille pour un employeur, sous sa subordination, contre rémunération » est une définition qui lui convient, et l’énoncé est donc vrai. Le marquer FAUX refuse la bonne réponse et contredit le cours ([E2], [E24] : un contrat de travail est présumé CDI faute d’écrit). La correction envisagée va dans le bon sens pour sa première idée (ne pas croiser ces deux notions) ; la reformulation de la définition, elle, ne suffit pas.",
+    "source": "app/src/data/index.js, vraiFauxFromDefs (la fausse affirmation associe le terme à la définition d’une autre notion, tirée au hasard) ; cours de l’app : droit/cours-complets.json (« Les formes du contrat de travail », le CDI et le CDD sont des formes du contrat de travail) ; droit/definitions.json."
+  }
+]

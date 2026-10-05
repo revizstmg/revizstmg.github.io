@@ -1,0 +1,200 @@
+[
+  {
+    "id": "t5-01",
+    "ref": "[C5.3]",
+    "citation": "Solennel (un écrit est exigé : vente immobilière)",
+    "categorie": "fond",
+    "probleme": "La vente immobilière n'est pas un contrat solennel : elle est parfaite dès l'accord sur la chose et le prix (art. 1583 et 1589 C. civ.). L'acte notarié sert à la publicité foncière, donc à l'opposabilité aux tiers, et non à la validité. L'exemple fausse la notion de contrat solennel, où la forme est exigée à peine de nullité. L'erreur est reprise dans les QCM E205 à E208, dont l'un des choix cite cette ligne.",
+    "correction": "Solennel (une forme est exigée pour la validité, par ex. un acte notarié pour une donation ou un contrat de mariage)",
+    "source": "Art. 1172 C. civ. (contrats solennels), art. 931 C. civ. (donation par acte notarié), art. 1583 et 1589 C. civ. (vente consensuelle, la promesse de vente vaut vente), art. 710-1 C. civ. et décret du 4 janvier 1955 (acte authentique exigé pour la publicité foncière). Confiance moyenne : l'exemple de la vente immobilière figure dans certains manuels de STMG. Juridiquement il est inexact, et la correction proposée est sans risque.",
+    "fichier_source": "app/content/droit/approfondi-1.json",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "t5-02",
+    "ref": "[C8.4]",
+    "citation": "Le débiteur peut s’exonérer en prouvant un cas de **force majeure** : un événement **imprévisible, irrésistible et extérieur** qui a rendu l’exécution impossible (art. 1218).",
+    "categorie": "fond",
+    "probleme": "En matière contractuelle, l'article 1218 issu de la réforme de 2016 ne retient plus l'extériorité. Il exige un événement « échappant au contrôle du débiteur », qui « ne pouvait être raisonnablement prévu » et dont les effets « ne peuvent être évités par des mesures appropriées ». Le rapport au Président de la République sur l'ordonnance du 10 février 2016 dit expressément que le critère d'extériorité est abandonné. Le passage est repris tel quel dans E334 et E339.",
+    "correction": "Le débiteur peut s’exonérer en prouvant un cas de **force majeure** : un événement **échappant à son contrôle**, **imprévisible** lors de la conclusion du contrat et **irrésistible**, qui empêche l’exécution (art. 1218).",
+    "source": "Art. 1218 al. 1 C. civ. ; rapport au Président de la République relatif à l'ordonnance n° 2016-131 du 10 février 2016 ; Cass. ass. plén., 14 avril 2006. Le triptyque « imprévisible, irrésistible, extérieur » reste couramment enseigné en responsabilité extracontractuelle, mais ici le texte cite l'art. 1218.",
+    "fichier_source": "app/content/droit/approfondi-1.json",
+    "confiance": "haute"
+  },
+  {
+    "id": "t5-03",
+    "ref": "[ESS2]",
+    "citation": "Formation : **offre + acceptation** (échange des consentements) + **consentement, capacité, objet** (art. 1128).",
+    "categorie": "fond",
+    "probleme": "L'article 1128 issu de la réforme de 2016 ne parle plus d'« objet » mais d'un « contenu licite et certain ». « Objet » est le vocabulaire de l'ancien article 1108, aujourd'hui périmé. Le mémo contredit aussi la formule [F1] et le reste du thème ([C3.3], [C6.1], [DOC] 1), qui disent « contenu licite et certain ».",
+    "correction": "Formation : **offre + acceptation** (échange des consentements) + **consentement, capacité, contenu licite et certain** (art. 1128).",
+    "source": "Art. 1128 C. civ. (rédaction issue de l'ordonnance du 10 février 2016) ; ancien art. 1108 C. civ. (objet certain, cause licite).",
+    "fichier_source": "app/content/droit/cours-complets.json",
+    "confiance": "haute"
+  },
+  {
+    "id": "t5-04",
+    "ref": "[C1.3]",
+    "citation": "On ne peut pas se rétracter sur un coup de tête (sauf droit de rétractation prévu, par ex. 14 jours pour un achat à distance).",
+    "categorie": "fond",
+    "probleme": "Tout le bloc [C1] repose sur une place de concert réservée en ligne. Pour l'élève, ce billet est donc un « achat à distance » ouvrant droit aux 14 jours de rétractation. C'est faux : la loi exclut le droit de rétractation pour les activités de loisirs fournies à une date déterminée (concerts, spectacles). L'exemple induit en erreur sur un cas très courant. Le passage est repris dans le corrigé de E602.",
+    "correction": "On ne peut pas se rétracter sur un coup de tête. Il existe des exceptions légales, comme les 14 jours de rétractation pour la plupart des achats à distance, mais pas pour un billet de concert à date fixe : les activités de loisirs datées en sont exclues.",
+    "source": "Art. L221-18 C. consom. (délai de 14 jours) ; art. L221-28, 12° C. consom. (exclusion des prestations d'activités de loisirs fournies à une date ou à une période déterminée). Confiance moyenne : le texte ne dit pas expressément que le billet ouvre droit à rétractation, mais il le laisse penser.",
+    "fichier_source": "app/content/droit/cours-reels.json",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "t5-05",
+    "ref": "[C9.2] / [E7] / [C4.2] / [C13.2]",
+    "citation": "La résolution d’un cas pratique en droit suit le **syllogisme juridique** en trois temps : la **majeure** (la règle de droit), la **mineure** (les faits), la **conclusion** (l’application).",
+    "categorie": "contradiction",
+    "probleme": "Le thème donne trois versions incompatibles du syllogisme. [C9.2] et l'exercice d'ordre [E7] (« Conclusion : application de la règle aux faits ») font de la conclusion l'application, ce qui est faux : la conclusion est la solution. [C4.2] et [C4.3] séparent « Faits (mineure) », « Application » et « Conclusion ». [C13.2], [E494] et [E515] disent au contraire « 5. La mineure : appliquer la règle aux faits », les faits étant une étape distincte. Selon le bloc, l'élève apprend que la mineure est « les faits » ou « l'application », et que la conclusion est « l'application » ou « la réponse ».",
+    "correction": "Harmoniser sur un seul schéma. [C9.2] : « … la **majeure** (la règle de droit), la **mineure** (les faits qualifiés juridiquement et confrontés à la règle), la **conclusion** (la solution du problème posé). » [E7] : « Conclusion : solution du problème de droit ». [C4.2] : fusionner « Faits (mineure) » et « Application » en « **Faits et application (mineure)** ».",
+    "source": "Méthode du cas pratique attendue au bac STMG : majeure = règle de droit ; mineure = faits qualifiés et application de la règle aux faits ; conclusion = réponse au problème de droit. La définition de [C13.2] est déjà cohérente avec ce schéma.",
+    "fichier_source": "app/content/droit/approfondi-1.json ([C9.2]) ; app/content/droit/matiere.json (exercice droit-t5-ordre, [E7]) ; app/content/droit/enrichissements.json ([C4.2]) ; app/content/droit/approfondi-2.json ([C13.2])",
+    "confiance": "haute"
+  },
+  {
+    "id": "t5-06",
+    "ref": "[E16] / [E608]",
+    "citation": "Sanctions de l’inexécution → Mise en demeure, exécution forcée, résolution/résiliation, dommages et intérêts (clause pénale).",
+    "categorie": "fond",
+    "probleme": "La mise en demeure n'est pas une sanction de l'inexécution. C'est une formalité préalable qui interpelle le débiteur avant la plupart des sanctions. L'art. 1217 ne la cite pas parmi les sanctions et omet ici la réduction du prix et l'exception d'inexécution, que le cours ([C8.3], [C14.2]) présente bien comme des sanctions.",
+    "correction": "Sanctions de l’inexécution (art. 1217) : exception d’inexécution, exécution forcée, réduction du prix, résolution/résiliation, dommages et intérêts (éventuellement fixés par une clause pénale). Préalable en principe : la mise en demeure.",
+    "source": "Art. 1217 C. civ. (liste des sanctions) ; art. 1344 C. civ. (mise en demeure) ; art. 1221, 1223, 1226 et 1231 C. civ. (mise en demeure préalable).",
+    "fichier_source": "app/content/droit/matiere.json (flashcard droit-t5-flash)",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "t5-07",
+    "ref": "[E13] / [E4] / [E606] / [E607]",
+    "citation": "Force obligatoire (art. 1103) → « Le contrat fait la loi des parties ».",
+    "categorie": "fond",
+    "probleme": "Les guillemets et la référence présentent l'adage « le contrat fait la loi des parties » comme le texte de l'article 1103. Or l'article 1103 dispose : « Les contrats légalement formés tiennent lieu de loi à ceux qui les ont faits ». Le thème le cite d'ailleurs correctement en [C5.2] et en [DOC] 2. Un élève qui reprend la flashcard citera l'article de façon inexacte.",
+    "correction": "Force obligatoire (art. 1103) → « Les contrats légalement formés tiennent lieu de loi à ceux qui les ont faits » (adage : le contrat fait la loi des parties).",
+    "source": "Art. 1103 C. civ. Confiance moyenne : l'adage est juste sur le fond, seule l'attribution littérale à l'article est inexacte.",
+    "fichier_source": "app/content/droit/matiere.json (flashcard droit-t5-flash, explication du QCM droit-t5-qcm, bloc cours « Définition et validité »)",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "t5-08",
+    "ref": "[E29]",
+    "citation": "**Règle (majeure)** : le dol — tromperie déterminante du consentement — est un vice qui entraîne la nullité du contrat (art. 1128, doc 3).",
+    "categorie": "exercice",
+    "probleme": "Le corrigé fonde la règle sur le dol sur l'article 1128, qui ne fait qu'énumérer les conditions de validité. Le dol est défini à l'art. 1137 et sa sanction figure aux art. 1130 et 1131, comme le dit le cours lui-même en [C9.3] et [C13.3]. Le corrigé apprend à mal citer le fondement dans la majeure.",
+    "correction": "**Règle (majeure)** : le consentement est une condition de validité du contrat (art. 1128, doc 1) ; le dol, tromperie déterminante du consentement (art. 1137, doc 3), est un vice qui entraîne la nullité relative du contrat (art. 1131) et peut ouvrir droit à des dommages et intérêts.",
+    "source": "Art. 1128, 1130, 1131 et 1137 C. civ.",
+    "fichier_source": "app/content/droit/etudes-documents.json",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "t5-09",
+    "ref": "[E220] / [E221] / [E229] / [E241] (issus de [C6.D1])",
+    "citation": "« Le consentement des parties » : quelle proposition est correcte ?",
+    "categorie": "exercice",
+    "probleme": "Le générateur crée deux notions quasi identiques : « Le consentement des parties » ([C6.D1], tiré de la liste [C6.2]) et « Consentement » (définitions.json). Les QCM ont donc deux bonnes réponses. En E220, B (« Accord libre et éclairé… ») est aussi juste que D. En E221, A (« il doit être libre et éclairé… ») est aussi juste que D. En E229, A (« Consentement ») est aussi juste que D (« Le consentement des parties »). En E241, la saisie n'accepte que « Le consentement des parties » : « consentement » est refusé, car la comparaison est exacte, sans variante.",
+    "correction": "Supprimer [C6.D1] de l'encadré, ou le renommer « Consentement » pour le fusionner avec la définition existante. À défaut, ne jamais proposer l'autre formulation comme distracteur et ajouter « consentement » aux réponses acceptées de E241.",
+    "source": "Raisonnement : les deux définitions désignent la même notion (consentement libre et éclairé, art. 1128 et 1130 C. civ.). Vérifié dans app/src/games/common.jsx (answerMatches : égalité stricte après normalisation) et app/src/data/index.js (termVariants ne produit aucune variante ici).",
+    "fichier_source": "app/content/droit/approfondi-1.json (liste [C6.2]) + app/content/droit/definitions.json ; génération dans app/src/data/index.js",
+    "confiance": "haute"
+  },
+  {
+    "id": "t5-10",
+    "ref": "[E224] / [E225] / [E235] / [E242] (issus de [C6.D2])",
+    "citation": "Cas concret — on observe : « être majeur et non protégé (les mineurs et majeurs sous tutelle/curatelle ont une capacité limitée) ». De quelle notion s'agit-il ?",
+    "categorie": "exercice",
+    "probleme": "Même défaut avec « La capacité de contracter » ([C6.D2]) et « Capacité juridique ». En E235, « Capacité juridique » (B) est une réponse aussi défendable que « La capacité de contracter » (A). En E224, la définition « Aptitude à être titulaire de droits et à les exercer soi-même » (C) convient aussi à « La capacité de contracter ». En E225, « être majeur et non protégé » (C) décrit aussi la capacité juridique d'exercice. En E242, seule « La capacité de contracter » est acceptée : « capacité » ou « capacité juridique » sont refusées.",
+    "correction": "Retirer [C6.D2] de l'encadré, ou le fusionner avec « Capacité juridique ». Exclure l'une des deux notions des distracteurs de l'autre et ajouter « capacité » et « capacité juridique » aux réponses acceptées de E242.",
+    "source": "Art. 1145 à 1148 C. civ. : la capacité de contracter est la capacité juridique appliquée au contrat. Comparaison stricte vérifiée dans app/src/games/common.jsx.",
+    "fichier_source": "app/content/droit/approfondi-1.json (liste [C6.2]) + app/content/droit/definitions.json ; génération dans app/src/data/index.js",
+    "confiance": "haute"
+  },
+  {
+    "id": "t5-11",
+    "ref": "[C4.D1]–[C4.D4] (→ E154–E158, E162–E185, E570–E573)",
+    "citation": "Quel terme correspond à cette définition ? ⏎ « le contrat encourt la nullité (il peut être annulé) » → réponse attendue : « Conclusion »",
+    "categorie": "exercice",
+    "probleme": "Les étapes du cas pratique de [C4.2] ont été transformées en « Définitions clés » génériques. Les exercices affirment donc des définitions fausses. E155 donne pour « la bonne définition de Conclusion » : « le contrat encourt la nullité ». E167 marque VRAI « Conclusion : le contrat encourt la nullité ». Les saisies ont des réponses inattendues : E172 attend « Conclusion » là où l'élève répondra « nullité ». E173 attend « Application » pour « une condition de validité (la capacité) manque », où l'élève répondra « incapacité » ou « nullité ». E174 attend « Faits (mineure) » pour « l'acheteur est mineur… », où l'élève répondra « incapacité ».",
+    "correction": "Exclure les blocs de [C4.2] de l'encadré « Définitions clés » (marquer la section skip) : ce sont les étapes d'un cas particulier, pas des notions. Si on garde un exercice, en faire un exercice d'ordre ou d'association sur le syllogisme, sans la présenter comme une définition.",
+    "source": "Raisonnement : « conclusion », « application » et « mineure » sont des étapes de méthode. « Le contrat encourt la nullité » est la conclusion d'un cas, pas la définition du mot « conclusion ».",
+    "fichier_source": "app/content/droit/enrichissements.json (liste [C4.2]) ; génération des définitions dans app/src/data/index.js",
+    "confiance": "haute"
+  },
+  {
+    "id": "t5-12",
+    "ref": "[E514] / [E515] / [E516] / [E517] (issus de [C13.D])",
+    "citation": "Quel terme correspond à cette définition ? ⏎ « appliquer la règle aux faits » → réponse attendue : « 5. La mineure »",
+    "categorie": "exercice",
+    "probleme": "Les termes extraits de la liste numérotée de [C13.2] gardent leur numéro. La saisie exige « 5. La mineure », « 4. La majeure », « 6. La conclusion » ou « 2. La qualification juridique », numéro compris, sans autre variante acceptée. « mineure », « la mineure », « majeure » ou « qualification juridique » sont donc comptés faux. Les QCM et associations dérivés (E492–E509, E518, E591–E596) affichent aussi ces numéros comme partie du terme.",
+    "correction": "Retirer la numérotation du gras dans [C13.2], par exemple « 1. **Les faits** : … », ou faire ôter le préfixe « n. » par le générateur. Accepter « mineure », « la mineure », « majeure », « conclusion », « qualification » et « qualification juridique ».",
+    "source": "Comparaison stricte vérifiée dans app/src/games/common.jsx (answerMatches) et app/src/data/index.js (termVariants ne retire que les parenthèses).",
+    "fichier_source": "app/content/droit/approfondi-2.json (liste [C13.2]) ; génération dans app/src/data/index.js",
+    "confiance": "haute"
+  },
+  {
+    "id": "t5-13",
+    "ref": "[E211] / [E214] (aussi E106, E111, E138, E139, E144, E146, E327, E334, E339, E341, E365, E373, E522, E531)",
+    "citation": "La ____ (art. → mot attendu : « force obligatoire »",
+    "categorie": "exercice",
+    "probleme": "Le générateur de textes à trous découpe les phrases à chaque point suivi d'un espace. Il coupe donc après l'abréviation « art. ». On obtient des phrases tronquées : « La ____ (art. », impossible à compléter sans deviner, ou « Un contrat n’est solide que si ____ sont réunies en même temps (art. ». On obtient aussi des phrases qui commencent par « 1128) : le ____, … » ou « 1137) vicie le consentement et rend le contrat ____. » Ces phrases n'ont plus de sens.",
+    "correction": "Ne pas couper après les abréviations « art. », « al. », « ex. », etc. dans trouFromBold (app/src/data/index.js, découpage split(/(?<=[.!?…])\\s+/)). Exemple corrigé : « La ____ (art. 1103) : « les contrats légalement formés tiennent lieu de loi à ceux qui les ont faits » » → force obligatoire.",
+    "source": "Constat sur le rendu ; cause dans app/src/data/index.js, fonction trouFromBold.",
+    "fichier_source": "app/content/droit/approfondi-1.json ([C5.2], [C8.1], [C8.4], [C9.3]) ; app/content/droit/cours-reels.json ([C2.2], [C3.3]) ; app/content/droit/approfondi-2.json ([C13.3]) ; générateur app/src/data/index.js",
+    "confiance": "haute"
+  },
+  {
+    "id": "t5-14",
+    "ref": "[E363] / [E374] / [E548] / [E554]",
+    "citation": "____ Léa achète en ligne un téléphone décrit comme « neuf, sous garantie ». → mot attendu : « Énoncé. »",
+    "categorie": "exercice",
+    "probleme": "Le générateur a pris l'intertitre en gras « **Énoncé.** » des cas pratiques guidés pour un mot à trouver. Le texte à trous ou la saisie demandent de taper « Énoncé. », ce qui n'a aucun sens pédagogique et que personne ne peut deviner. Même chose pour « ____ Un prestataire livre un site internet… ».",
+    "correction": "Exclure ces trous. Écrire l'intertitre sans gras, ou en champ h du bloc, ou faire ignorer par le générateur un gras placé en tête de bloc et terminé par un point.",
+    "source": "Constat sur le rendu ; cause dans app/src/data/index.js, fonction trouFromBold.",
+    "fichier_source": "app/content/droit/approfondi-1.json ([C9.1]) ; app/content/droit/approfondi-2.json ([C14.1])",
+    "confiance": "haute"
+  },
+  {
+    "id": "t5-15",
+    "ref": "[E521] / [E530]",
+    "citation": "Qualification : ____. → mot attendu : « dol »",
+    "categorie": "exercice",
+    "probleme": "Une fois la phrase isolée, il ne reste que « Qualification : ____. », sans les faits (« un vendeur cache un défaut grave »), qui sont dans la phrase précédente. La réponse attendue ne peut pas être déduite, et n'importe quelle qualification serait aussi plausible.",
+    "correction": "Supprimer ce trou, ou garder le contexte : « Faits : un vendeur cache un défaut grave. Qualification : ____. » → dol.",
+    "source": "Constat sur le rendu (découpage par phrases dans app/src/data/index.js).",
+    "fichier_source": "app/content/droit/approfondi-2.json ([C13.3])",
+    "confiance": "haute"
+  },
+  {
+    "id": "t5-16",
+    "ref": "[E278] / [E286]",
+    "citation": "Complète par le mot exact : ⏎ Le consentement doit être ____. → réponse attendue : « intègre »",
+    "categorie": "exercice",
+    "probleme": "Coupée de son contexte, la phrase appelle surtout « libre et éclairé », la formule répétée partout dans le thème ([C2.2], [C6.2], [DOC] 1, E106, E365…). Or seul « intègre » est accepté, et la comparaison est stricte. Un élève qui a bien appris le cours est compté faux.",
+    "correction": "Ajouter « libre et éclairé » aux réponses acceptées, ou réécrire la source : « Le consentement doit être **intègre**, c’est-à-dire exempt de vice. »",
+    "source": "Art. 1128 et 1130 C. civ. ; comparaison stricte vérifiée dans app/src/games/common.jsx.",
+    "fichier_source": "app/content/droit/approfondi-1.json ([C7.1])",
+    "confiance": "haute"
+  },
+  {
+    "id": "t5-17",
+    "ref": "[E320] (aussi E66, E145, E292, E375)",
+    "citation": "Quel terme correspond à cette définition ? ⏎ « obtenir réparation du préjudice subi » → réponse attendue : « Les dommages-intérêts »",
+    "categorie": "exercice",
+    "probleme": "Plusieurs saisies refusent des réponses justes, car la comparaison est stricte et sans variante. E320 refuse « dommages et intérêts », la graphie employée ailleurs dans le thème ([ESS5], E6, E16), ainsi que « dommages-intérêts » sans article. E66 refuse « contrat d’adhésion » et « adhésion ». E145 refuse « capacité ». E375 (« il a ____ une information déterminante ») refuse « dissimulé » et n'accepte que « volontairement dissimulé ». E292 refuse « trompé » et n'accepte que « volontairement induit en erreur ».",
+    "correction": "Ajouter des réponses acceptées : E320 « dommages-intérêts », « dommages et intérêts » ; E66 « adhésion », « contrat d’adhésion » ; E145 « capacité » ; E375 « dissimulé », « caché » ; E292 « induit en erreur », « trompé ». Plus généralement, faire ignorer l'article initial (le, la, les, l’) dans normalize.",
+    "source": "app/src/games/common.jsx (answerMatches : égalité stricte après normalisation, articles conservés) ; app/src/data/index.js (termVariants).",
+    "fichier_source": "app/content/droit/approfondi-1.json ([C8.3], [C9.4], [C7.4]) ; app/content/droit/cours-reels.json ([C1.4], [C3.2])",
+    "confiance": "haute"
+  },
+  {
+    "id": "t5-18",
+    "ref": "[E612] / [E613] / [E614] / [E615]",
+    "citation": "CAS (test du thème) : {\"prompt\":\"Cas réel\",\"answer\":\"Tu achètes sur une petite annonce une montre présentée comme une « Rolex authentique ». Une fois payée, tu découvres que c’est une contrefaçon. As-tu vraiment voulu acheter… une fausse ?\"}",
+    "categorie": "exercice",
+    "probleme": "Dans le test du thème, chaque « cas pratique » affiche seulement « Analyse ce cas : Cas réel », ou « Cas », « Situation », « Application ». Le « corrigé » révélé est l'énoncé du cas lui-même, sans aucune analyse. L'élève doit analyser un cas qu'il ne voit pas, puis s'auto-évaluer sur un corrigé qui ne répond à rien. E615 (« Application ») n'est même pas un cas mais une conclusion déjà rédigée.",
+    "correction": "Afficher l'énoncé (b.c) comme question et prendre le corrigé dans les blocs d'analyse qui suivent : par ex. [C2.2] et [C2.4] pour le cas Rolex, [C3.2] et [C3.3] pour le scooter, [C4.2] pour la voiture. Ne pas transformer en cas les blocs « Application ».",
+    "source": "app/src/data/index.js, buildThemeTest (l. 906-911 : cas.push({ prompt: b.h || 'Analyse ce cas', answer: b.c })) ; app/src/games/ThemeTest.jsx (prompt = « Analyse ce cas : » + it.prompt, corrigé = it.answer).",
+    "fichier_source": "app/content/droit/cours-reels.json ([C2.1], [C3.1]) ; app/content/droit/enrichissements.json ([C4.1]) ; app/content/droit/approfondi-1.json ([C6.3]) ; générateur app/src/data/index.js",
+    "confiance": "haute"
+  }
+]

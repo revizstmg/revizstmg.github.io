@@ -19,6 +19,28 @@ export function answerMatches(input, answer, alt = []) {
   return [answer, ...alt].some((a) => normalize(a) === n)
 }
 
+// Réponse débarrassée de ce qui n'est pas la notion elle-même : article,
+// numéro de liste, trait d'union, ponctuation finale.
+export function sansHabillage(s) {
+  return normalize(s)
+    .replace(/^\d+\s*[.)]\s*/, '')
+    .replace(/^(l'|d'|le |la |les |un |une |des |du |de la |de l')/, '')
+    .replace(/[-‐‑]/g, ' ')
+    .replace(/[\s.;:!?…,]+$/, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+// Exercices de cours (saisie, texte à trous, cas) : « convention collective »
+// vaut « La convention collective », « mineure » vaut « 5. La mineure ».
+// Pas pour les langues, où l'article fait partie de la réponse.
+export function answerMatchesCours(input, answer, alt = []) {
+  if (answerMatches(input, answer, alt)) return true
+  const n = sansHabillage(input)
+  if (!n) return false
+  return [answer, ...alt].some((a) => sansHabillage(a) === n)
+}
+
 export function shuffle(arr) {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {

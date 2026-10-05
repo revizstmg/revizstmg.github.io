@@ -2,7 +2,7 @@
   "droit-t5": {
     "essentiel": [
       "Contrat = **accord de volontés** créant des obligations ; parties : **consommateur / consommatrice** et **professionnel / professionnelle**, **débiteur / débitrice** et **créancier / créancière**.",
-      "Formation : **offre + acceptation** (échange des consentements) + **consentement, capacité, objet** (art. 1128).",
+      "Formation : **offre + acceptation** (échange des consentements) + **consentement, capacité, contenu licite et certain** (art. 1128).",
       "Vices du consentement (**erreur, dol, violence**) → **nullité relative** ; contenu illicite → **nullité absolue**.",
       "Principes : **liberté contractuelle, force obligatoire, effet relatif, bonne foi** ; obligation de **moyens** vs de **résultat**.",
       "Inexécution → **mise en demeure**, **exécution forcée**, **exception d’inexécution**, **résolution/résiliation**, dommages et intérêts (+ **clause pénale**)."
@@ -456,7 +456,7 @@
           },
           {
             "t": "warning",
-            "c": "Un licenciement sans **cause réelle et sérieuse** ou sans respect de la **procédure** est **abusif** : le juge peut le sanctionner."
+            "c": "Un licenciement sans **cause réelle et sérieuse** est **abusif** ; un licenciement fondé mais sans respect de la **procédure** est **irrégulier**. Dans les deux cas, le juge peut le sanctionner."
           },
           {
             "t": "example",
@@ -513,9 +513,9 @@
     "essentiel": [
       "**Liberté d’entreprendre** et **liberté du commerce et de l’industrie** ; choix : **entreprise individuelle** ou **société**.",
       "Entreprise individuelle : **depuis la réforme de 2022** (loi du 14 février 2022, statut unique en vigueur le 15 mai 2022), **séparation automatique** des patrimoines professionnel et personnel — le patrimoine personnel est en principe **protégé** (avant : **unicité du patrimoine**) ; l’**EURL** crée une personne morale à responsabilité limitée.",
-      "Société = personne morale née d’un **contrat de société** (art. 1832) : **apports** + **affectio societatis** + partage des bénéfices ; **responsabilité limitée aux apports** ; forme coopérative = **SCOP**.",
+      "Société = personne morale née d’un **contrat de société** (art. 1832) : **apports** + **affectio societatis** + partage des bénéfices (et contribution aux pertes) ; responsabilité des associés **en principe limitée aux apports** (SARL/EURL, SAS/SASU, SA), mais **indéfinie et solidaire** dans la SNC ; forme coopérative = **SCOP**.",
       "**Concurrence déloyale** (parasitisme, dénigrement, imitation, désorganisation) → **action** fondée sur la responsabilité civile ; **entente** et **abus de position dominante** interdits (Autorité de la concurrence).",
-      "Partenariats : **contrat d’entreprise (sous-traitance)**, **franchise** — sans lien de subordination."
+      "Partenariats : **contrat d’entreprise** et **sous-traitance**, **franchise** — sans lien de subordination."
     ],
     "intro": "Entreprendre est une **liberté**, mais elle s’exerce dans un cadre juridique. Le choix de la **structure** a des conséquences majeures sur le **patrimoine** et la **responsabilité** ; l’activité se développe dans le respect de la **concurrence** et peut s’organiser par des **partenariats**.",
     "cours": [
@@ -533,7 +533,7 @@
           {
             "t": "warning",
             "h": "Évolution à connaître (2019 → 2022)",
-            "c": "**Avant 2022**, par le **principe d’unicité du patrimoine**, l’entrepreneur individuel répondait des dettes de son activité sur **tout son patrimoine personnel** ; il devait, pour se protéger, faire une **déclaration d’insaisissabilité** ou créer une **EIRL** (patrimoine d’affectation). **Depuis 2022, cette séparation est automatique** : c’est une évolution récente, souvent attendue dans les cas pratiques."
+            "c": "**Avant 2022**, par le **principe d’unicité du patrimoine**, l’entrepreneur individuel répondait des dettes de son activité sur **tout son patrimoine**, à l’exception de sa **résidence principale**, insaisissable de droit par les créanciers professionnels depuis 2015 ; pour protéger ses autres biens, il devait faire une **déclaration d’insaisissabilité** ou créer une **EIRL** (patrimoine d’affectation). **Depuis 2022, cette séparation est automatique** : c’est une évolution récente, souvent attendue dans les cas pratiques."
           },
           {
             "t": "p",
@@ -542,7 +542,7 @@
           {
             "t": "example",
             "h": "Léa hésite : entreprise individuelle ou EURL ?",
-            "c": "Léa ouvre un salon de coiffure et emprunte 40 000 €. \n→ En **entreprise individuelle**, depuis la réforme de **2022**, son **patrimoine personnel** (voiture, épargne) est **en principe protégé** : les créanciers professionnels se paient d’abord sur le **patrimoine professionnel**. \n→ En **EURL**, une **personne morale** distincte est créée : sa responsabilité est **limitée à ses apports**. Les deux protègent son patrimoine personnel, mais l’EURL impose plus de formalisme (statuts, comptes)."
+            "c": "Léa ouvre un salon de coiffure et emprunte 40 000 €. \n→ En **entreprise individuelle**, depuis la réforme de **2022**, son **patrimoine personnel** (voiture, épargne) est **en principe protégé** : les créanciers professionnels ne peuvent en principe saisir que le **patrimoine professionnel** (sauf renonciation de Léa pour un engagement précis). \n→ En **EURL**, une **personne morale** distincte est créée : sa responsabilité est **limitée à ses apports**. Les deux protègent son patrimoine personnel, mais l’EURL impose plus de formalisme (statuts, comptes)."
           }
         ]
       },
@@ -599,7 +599,7 @@
           {
             "t": "list",
             "c": [
-              "le **contrat d’entreprise (sous-traitance)** : un **entrepreneur** / une **entrepreneuse** confie tout ou partie de son activité à un autre ;",
+              "le **contrat d’entreprise** : un entrepreneur s’engage, en toute indépendance, à réaliser un travail pour un client moyennant un prix ; dans la **sous-traitance**, il confie, sous sa responsabilité, l’exécution de tout ou partie de ce contrat à un **sous-traitant** ;",
               "le **contrat de franchise** : un **franchisé** / une **franchisée** exploite le concept, la marque et le savoir-faire d’un **franchiseur** / d’une **franchiseuse**, en échange d’une redevance."
             ]
           },

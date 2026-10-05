@@ -1,0 +1,86 @@
+[
+  {
+    "id": "t6-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[C6.2] ligne « Fait des choses | Une chose sous ma garde (art. 1242 al. 1) | Mon pot de fleurs tombe du balcon sur un passant ; ma machine à laver déborde et inonde le voisin » (retirer « ma tuile tombe » : la chute d’une tuile est une ruine partielle du bâtiment, art. 1244, pas le fait d’une chose de l’art. 1242 al. 1). Sous le tableau : « Le dommage causé par un animal relève d’un texte spécial, l’art. 1243 (responsabilité du fait des animaux) : le propriétaire de l’animal, ou celui qui s’en sert, en répond sans faute, comme pour une chose (ex. : mon chien mord un passant). » [C1.4] comme proposé en B : « … il en répond même **sans faute** (responsabilité du fait des animaux, art. 1243, proche de celle du fait des choses). » (le mot « gardien » reste acceptable, mais voir t6-12 : « propriétaire » doit aussi être accepté).",
+    "justification": "Dans la version A, le chien est rangé sous « fait des choses (art. 1242 al. 1) » : c’est inexact, le dommage causé par un animal relève de l’art. 1243 (« le propriétaire d’un animal, ou celui qui s’en sert… est responsable du dommage que l’animal a causé, soit que l’animal fût sous sa garde, soit qu’il fût égaré ou échappé »). L’app se contredit elle-même : [C10.3] cite l’art. 1243 pour le chien, et le cours principal (cours-complets.json, droit-t6, « essentiel » et « régimes ») liste « fait des animaux » comme régime distinct du fait des choses. La version B est exacte sur les animaux, mais garde « Ma tuile tombe » : une tuile qui se détache du toit relève de la ruine du bâtiment (art. 1244, jurisprudence : ruine partielle), d’où l’ajustement.",
+    "source": "Code civil art. 1242 al. 1, 1243, 1244 (ordonnance du 10 février 2016 : ex-1384 al. 1, 1385, 1386) ; app/content/droit/approfondi-2.json ([C10.3] : art. 1243) ; app/content/droit/cours-complets.json (droit-t6 : « fait des animaux, ruine des bâtiments »)."
+  },
+  {
+    "id": "t6-02",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "L’encadré « Définitions clés » de [C1] affiche « Fait générateur : Le fait d’une chose/animal sous sa garde » : c’est une application au cas du chien, pas une définition, et elle est trop étroite (une faute est aussi un fait générateur). Elle contredit la définition correcte vue dans le même thème ([C2.D2], [C4.D5], definitions.json : « Événement à l’origine du dommage (faute, fait d’une chose, fait d’autrui) ») et alimente E33 (« bonne définition de Fait générateur ») avec une fausse définition. Même défaut pour [C1.D2] et [C1.D3] (« La blessure », « La morsure a causé la blessure »). La correction envisagée (ne plus tirer de définitions d’un tableau « Condition | Ici ») va dans le bon sens ; l’exclusion côté générateur est préférable car d’autres thèmes ont le même motif de tableau.",
+    "source": "app/content/droit/definitions.json (droit-t6) ; app/content/droit/cours-reels.json ([C1.3], tableau « Condition | Ici ») ; app/src/data/index.js (sectionPairs : tout tableau à 2 colonnes non « comparaison » devient des paires terme → définition)."
+  },
+  {
+    "id": "t6-03",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Deux réponses sont justes : « La blessure (préjudice corporel) » est un dommage corporel, donc « Dommage / préjudice » (la notion officielle de definitions.json) est exact, alors que seule « Dommage » est validée ; un élève qui choisit la bonne notion est sanctionné. Même doublon dans E41 (« Dommage / préjudice » et « Dommage » en distracteur). Supprimer la notion « Dommage » issue du tableau [C1.3] (cause commune avec t6-02) règle le problème.",
+    "source": "app/content/droit/definitions.json (« Dommage / préjudice ») ; [C1.3] ; raisonnement (deux libellés d’une même notion présentés comme réponse juste et distracteur)."
+  },
+  {
+    "id": "t6-04",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "E340 a deux bonnes réponses : « Lien de causalité » (A) et « 4. Le lien de causalité » (C), qui est la validée ; l’élève qui répond correctement (A) a faux. Le numéro « 4. » et l’article viennent des puces de [C10.2] et [C5.2] (motif « **terme** : … ») prises pour des définitions. Corriger en réécrivant ces puces sans ce motif (modèle de la puce 1 de [C10.2], qui ne produit aucune notion) va dans le bon sens ; E352 (« Lien de causalité : le dommage découle-t-il bien du fait générateur ? » attendu FAUX) est une affirmation vraie notée fausse et disparaît avec la réécriture.",
+    "source": "[C10.2], [C5.2] ; app/content/droit/definitions.json ; app/src/data/index.js (génération des notions à partir des puces « **terme** : définition »)."
+  },
+  {
+    "id": "t6-05",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le découpage en phrases coupe après « par ex. » dans [C1.5] : l’élève voit un fragment commençant par « aucun dommage réel), … » avec une parenthèse fermante orpheline. La réponse « pas » reste devinable, donc défaut de présentation plutôt qu’erreur de fond, mais la cause (coupure sur une abréviation) est certaine et produit aussi des trous mutilés ailleurs (E129, E130, E360/E365 « Fait générateur : ____ sous la garde du maître (art. » attendu « fait d’une chose/animal », réponse non devinable). Remplacer « par ex. » par « par exemple » dans [C1.5] et supprimer E359/E363 et E360/E365 est inoffensif et exact.",
+    "source": "app/src/data/index.js (trouFromBold : découpe sur /(?<=[.!?…])\\s+/, donc après « ex. », « art. », « al. ») ; [C1.5], [C10.2], [C10.3]."
+  },
+  {
+    "id": "t6-06",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le trou masque l’étiquette « Énoncé. » mise en gras au début du cas pratique : rien dans la phrase ne permet de la deviner (Cas, Faits, Situation…) et la saisie exacte exige « Énoncé. » avec son point. C’est un exercice sans intérêt et pratiquement infaisable ; même chose pour E393 ([C11.1]). Retirer le gras ou exclure ce mot du générateur est la bonne direction ; comme l’étiquette « **Énoncé.** » est présente dans les cas pratiques de presque toutes les matières (gestion-finance, maths, management, mercatique, droit…), la règle d’exclusion dans le générateur est plus sûre qu’une correction thème par thème.",
+    "source": "app/src/data/index.js (trouFromBold : tout terme en gras ≤ 45 caractères devient un trou) ; grep « **Énoncé.** » dans app/content (13 fichiers)."
+  },
+  {
+    "id": "t6-07",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Les options B « La victime — La société » et D « La victime — La société (ministère public) » disent la même chose : B est même la ligne « Bénéficiaire » du tableau et reste vraie pour « Qui agit » (le ministère public agit au nom de la société), donc deux réponses valables. Rendre les lignes nettement différentes comme proposé est exact : le ministère public (procureur) agit au nom de la société, et l’amende pénale est versée à l’État (Trésor public). Interdire en distracteur une ligne dont le texte est inclus dans la bonne réponse (aussi vrai pour E95) est une bonne mesure complémentaire.",
+    "source": "[C2.3] et [C4.2] ; code de procédure pénale art. 1er (l’action publique est mise en mouvement par le ministère public) ; raisonnement."
+  },
+  {
+    "id": "t6-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le test du thème fabrique chaque cas depuis un bloc « example » : l’intitulé du bloc ([C1.1] a pour titre « Cas ») devient la consigne (« Analyse le cas : Cas ») et le contenu devient le corrigé. L’élève n’a donc aucun énoncé et le « corrigé » est l’énoncé lui-même (sans la réponse, qui est dans [C1.2] et [C1.4]). Utiliser l’énoncé comme sujet et la suite de la section comme corrigé est la bonne direction, comme ne pas isoler « Majeure », « Mineure », « Conclusion » et corriger E418–E420 (« corrigé » = énoncé + méthode, ou exemple du sol mouillé donné comme définition de « Dommage »).",
+    "source": "app/src/data/index.js (buildThemeTest : cas.push({ prompt: b.h || 'Analyse ce cas', answer: b.c })) ; app/src/games/ThemeTest.jsx (consigne « Analyse le cas : » + prompt) ; [C1.1]."
+  },
+  {
+    "id": "t6-09",
+    "verdict": "INCERTAIN",
+    "version_ajustee": "",
+    "justification": "Si le livreur conduit un véhicule à moteur, l’accident relève de la loi du 5 juillet 1985 (régime spécial, qui couvre aussi les dommages aux biens), et le cours principal du thème enseigne justement « accident de la circulation = régime spécial » (cours-complets.json, droit-t6) : le cas [C11] fondé sur l’art. 1242 al. 5 pour un choc entre véhicules est donc en tension avec un autre cours de l’app. Mais l’énoncé ne dit pas qu’un véhicule à moteur est en cause, et la conclusion (l’employeur répond, via son assurance) est exacte dans les deux régimes ; ce n’est pas une erreur certaine. Les deux options de B sont exactes (changer les faits est inoffensif ; la phrase sur Badinter est correcte), mais rien n’impose de les appliquer.",
+    "source": "Loi n° 85-677 du 5 juillet 1985 art. 1er ; Code civil art. 1242 al. 5 ; app/content/droit/cours-complets.json (droit-t6 : régimes spéciaux, « L’accident de la circulation ») ; app/content/droit/approfondi-2.json ([C11.1])."
+  },
+  {
+    "id": "t6-10",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "L’analyse de A est juridiquement correcte : le supermarché, qui a la bouteille sur son rayon (usage, direction, contrôle), en est le gardien et répond du fait de la chose sans faute (art. 1242 al. 1) ; l’énoncé ne parle d’aucun défaut. L’existence d’une action possible contre le producteur (art. 1245 et s.) ne rend pas l’analyse fausse : l’art. 1245-17 laisse subsister les autres fondements de responsabilité. La phrase ajoutée en B est exacte, mais optionnelle : elle ne corrige aucune erreur.",
+    "source": "Code civil art. 1242 al. 1, 1245 et s., 1245-17 ; app/content/droit/approfondi-2.json ([C9], produits défectueux : section distincte du même thème)."
+  },
+  {
+    "id": "t6-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "« Extracontractuelle » est un synonyme exact de « délictuelle » et l’app l’emploie elle-même ([C8.2] « Délictuelle (extra-contractuelle) », E4, E13, [ESS4]). Le trou est saisi au clavier et comparé exactement (aucune alternative n’est prévue pour les trous) : un élève qui écrit « extracontractuelle » est refusé à tort. Accepter « extracontractuelle » et « extra-contractuelle » (le trait d’union n’est pas normalisé) pour E201, E207, E295 et E297 est exact.",
+    "source": "app/src/games/common.jsx (normalize / answerMatches : comparaison exacte, tiret conservé) ; app/src/games/Trou.jsx (pas d’alt pour les trous) ; [C8.2], [E4], [E13]."
+  },
+  {
+    "id": "t6-12",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[E66]/[E73] : accepter « propriétaire » en plus de « gardien » (ou, si [C1.4] est réécrit selon t6-01, mettre « propriétaire » en gras et accepter « gardien » en alternative). [E388]/[E395] : retirer le gras de « pendant sa tournée » dans [C11.3].",
+    "justification": "Dans « le maître est le ____ de l’animal », « propriétaire » est la réponse la plus naturelle et c’est le mot même de l’art. 1243 (« le propriétaire d’un animal, ou celui qui s’en sert ») ; la saisie exacte ne valide que « gardien » et refuse une bonne réponse. Dans E388/E395, « pendant sa tournée » est un fragment d’énoncé sans équivalent devinable (« pendant son travail » est refusé) : retirer le gras dans [C11.3] est la bonne solution. La correction envisagée est exacte.",
+    "source": "Code civil art. 1243 ; app/src/games/Trou.jsx et app/src/games/common.jsx (comparaison exacte) ; app/src/data/index.js (trouFromBold) ; [C1.4], [C11.3]."
+  }
+]

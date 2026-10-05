@@ -190,7 +190,7 @@
             [
               "Exemple",
               "Un transporteur livre en retard",
-              "Un piéton renversé par un inconnu"
+              "Un passant blessé par la chute d’un pot de fleurs"
             ]
           ]
         },
@@ -262,7 +262,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "**Énoncé.** Un livreur, salarié d’une entreprise, percute et endommage la voiture d’un tiers pendant sa tournée. Le tiers réclame réparation. Qui est responsable ?"
+          "c": "**Énoncé.** Un livreur, salarié d’une entreprise, manœuvre son diable chargé de colis sur le trottoir et brise la vitrine d’une boutique voisine pendant sa tournée. Le commerçant, qui n’a aucun contrat avec l’entreprise, réclame réparation. Qui est responsable ?"
         },
         {
           "t": "example",
@@ -272,12 +272,12 @@
         {
           "t": "example",
           "h": "Mineure — les faits",
-          "c": "Le dommage a été causé par le salarié **pendant sa tournée** (dans l’exercice de ses fonctions). Le lien employeur/préposé et le rattachement au travail sont établis."
+          "c": "Le dommage a été causé par le salarié pendant sa tournée, donc **dans l’exercice de ses fonctions**. Le lien employeur/préposé et le rattachement au travail sont établis."
         },
         {
           "t": "example",
           "h": "Conclusion",
-          "c": "L’**employeur** est civilement responsable et doit **réparer** le préjudice du tiers (via son assurance). La victime est ainsi certaine d’être indemnisée, même si le salarié est insolvable."
+          "c": "L’**employeur** est civilement responsable et doit **réparer** le préjudice du commerçant (via son assurance). La victime est ainsi certaine d’être indemnisée, même si le salarié est insolvable."
         },
         {
           "t": "tip",
@@ -308,7 +308,7 @@
             ],
             [
               "Heures supplémentaires",
-              "Au-delà de 35 h, majorées (25 % puis 50 %)"
+              "Au-delà de 35 h, majorées (25 % puis 50 % à défaut d’accord ; au moins 10 % si un accord le prévoit)"
             ],
             [
               "Durée maximale",
@@ -327,7 +327,7 @@
         {
           "t": "tip",
           "h": "À retenir",
-          "c": "Durée **légale** = 35 h (pas un maximum). Au-delà → **heures supplémentaires majorées**. La loi impose des **plafonds** et des **repos** pour protéger la santé."
+          "c": "Durée **légale** = 35 h (pas un maximum). Au-delà de la durée légale, les heures effectuées sont des **heures supplémentaires majorées**. La loi impose des **plafonds** et des **repos** pour protéger la santé."
         }
       ]
     },
@@ -336,14 +336,14 @@
       "blocks": [
         {
           "t": "p",
-          "c": "L’employeur a une **obligation de sécurité** envers ses salariés : il doit prendre les mesures nécessaires pour **protéger leur santé physique et mentale**. Ce n’est pas une simple recommandation, c’est une **obligation de résultat** renforcée."
+          "c": "L’employeur a une **obligation de sécurité** envers ses salariés : il doit prendre les mesures nécessaires pour **protéger leur santé physique et mentale**. Ce n’est pas une simple recommandation : c’est une **obligation de moyens renforcée**. L’employeur doit prendre toutes les mesures de prévention prévues par la loi, et n’échappe à sa responsabilité que s’il prouve les avoir prises."
         },
         {
           "t": "list",
           "c": [
             "**Prévention des risques** : évaluer les risques (document unique), former, équiper.",
             "**Risques psychosociaux** : prévenir le stress, le harcèlement, le burn-out.",
-            "**Accidents du travail et maladies professionnelles** : indemnisés, et engagent la responsabilité de l’employeur en cas de faute."
+            "**Accidents du travail et maladies professionnelles** : pris en charge par la Sécurité sociale (indemnisation forfaitaire, sans avoir à prouver une faute de l’employeur) ; en cas de **faute inexcusable** de l’employeur, le salarié peut obtenir une indemnisation complémentaire."
           ]
         },
         {
@@ -371,7 +371,7 @@
             "**2. Le motif** (si licenciement) : personnel (faute, insuffisance) ou économique ?",
             "**3. Le fond** : la cause est-elle **réelle et sérieuse** ?",
             "**4. La forme** : la **procédure** a-t-elle été respectée (convocation, entretien, notification écrite motivée) ?",
-            "**5. La sanction** : si fond ou forme manquent → licenciement **abusif** → dommages-intérêts (prud’hommes)."
+            "**5. La sanction** : fond manquant → licenciement **abusif** → dommages-intérêts (prud’hommes) ; forme seule manquante → licenciement **irrégulier** → indemnité d’au plus un mois de salaire."
           ]
         },
         {
@@ -396,7 +396,7 @@
         {
           "t": "example",
           "h": "Majeure — la règle",
-          "c": "Le **CDI est la règle**, le **CDD l’exception**, réservé à une tâche **précise et temporaire** (remplacement, accroissement temporaire, saisonnier). Un CDD ne peut pourvoir durablement un emploi lié à l’**activité normale et permanente**. À défaut, il est **requalifié en CDI**."
+          "c": "Le **CDI est la règle**, le **CDD l’exception**, réservé à une tâche **précise et temporaire** (remplacement, accroissement temporaire, saisonnier). Un CDD ne peut pourvoir durablement un emploi lié à l’**activité normale et permanente**. Un CDD qui pourvoit durablement un tel emploi est **requalifié en CDI**."
         },
         {
           "t": "example",
@@ -487,7 +487,7 @@
             ],
             [
               "Contrat de sous-traitance",
-              "Confier une tâche à un tiers"
+              "Confier, sous sa responsabilité, à un autre entrepreneur l’exécution de tout ou partie d’un contrat conclu avec un client"
             ]
           ]
         },

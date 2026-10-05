@@ -1,0 +1,145 @@
+[
+  {
+    "id": "t7-01",
+    "ref": "[C2.3]",
+    "citation": "L’employeur doit aussi respecter une **procédure** : convocation à un entretien préalable, entretien, puis notification écrite et **motivée**. Le non-respect du **fond** (la cause) **ou** de la **forme** (la procédure) rend le licenciement **abusif**.",
+    "categorie": "fond",
+    "probleme": "Un vice de procédure seul ne rend pas le licenciement « abusif » (= sans cause réelle et sérieuse). Si la cause est réelle et sérieuse, le licenciement est seulement « irrégulier » : le salarié a droit à une indemnité d’au plus un mois de salaire (art. L1235-2). Seule l’absence de cause réelle et sérieuse le rend abusif, avec les indemnités du barème (art. L1235-3). La même erreur revient dans [C6.4], [C11.2] point 5, [C11.D4], le Document 3 et le corrigé [E27], ainsi que dans les exercices générés [E92], [E98], [E230], [E231], [E386], [E399], [E406], [E411], [E477] et [E483].",
+    "correction": "[C2.3] : « … Si la cause manque (fond), le licenciement est **abusif** (sans cause réelle et sérieuse) : dommages-intérêts selon le barème. Si seule la procédure n’a pas été respectée (forme), il est **irrégulier** : indemnité d’au plus un mois de salaire. » Corriger de la même façon [C6.4] (« … rend le licenciement abusif » → « l’absence de cause le rend abusif ; un vice de procédure le rend irrégulier »), [C11.2] point 5 (« fond manquant → abusif ; forme seule manquante → irrégulier (indemnité ≤ 1 mois) ») et le Document 3 (« À défaut de cause réelle et sérieuse, il est abusif ; si la procédure n’est pas respectée, il est irrégulier »).",
+    "source": "C. trav., art. L1235-2 dernier alinéa (rédaction de l’ordonnance n° 2017-1387 du 22 sept. 2017) et L1235-3 (barème). Le cas de [C8] et [C11.3] reste juste, puisque la cause y fait aussi défaut.",
+    "fichier_source": "app/content/droit/cours-reels.json ([C2.3]) ; app/content/droit/approfondi-1.json ([C6.4]) ; app/content/droit/approfondi-2.json ([C11.2]) ; app/content/droit/etudes-documents.json (Document 3, réponse [E27]) ; même formule dans app/content/droit/cours-complets.json (bloc warning de « La rupture du contrat de travail »)",
+    "confiance": "haute"
+  },
+  {
+    "id": "t7-02",
+    "ref": "[C10.1]",
+    "citation": "Ce n’est pas une simple recommandation, c’est une **obligation de résultat** renforcée.",
+    "categorie": "fond",
+    "probleme": "Depuis l’arrêt Air France de 2015, l’obligation de sécurité de l’employeur n’est plus une obligation de résultat. C’est une obligation de moyens renforcée : l’employeur s’exonère s’il prouve avoir pris toutes les mesures de prévention prévues par les art. L4121-1 et L4121-2. L’expression « obligation de résultat renforcée » mélange deux régimes et n’existe pas. Les exercices [E375] et [E382] demandent « obligation de résultat ».",
+    "correction": "« Ce n’est pas une simple recommandation : c’est une **obligation de moyens renforcée**. L’employeur doit prendre toutes les mesures de prévention prévues par la loi ; il n’échappe à sa responsabilité que s’il prouve les avoir prises. »",
+    "source": "Cass. soc., 25 nov. 2015, n° 14-24.444 (Air France), confirmé ensuite (notamment Cass. ass. plén., 5 avr. 2019, n° 18-17.442) ; C. trav., art. L4121-1 et L4121-2.",
+    "fichier_source": "app/content/droit/approfondi-2.json (section « Santé et sécurité au travail »)",
+    "confiance": "haute"
+  },
+  {
+    "id": "t7-03",
+    "ref": "[C7.4]",
+    "citation": "Le droit du travail est un droit **protecteur** et **d’ordre public social** : on ne peut y déroger que dans un sens **plus favorable** au salarié.",
+    "categorie": "fond",
+    "probleme": "Cette affirmation absolue est inexacte. Le Code du travail distingue l’ordre public, le champ de la négociation collective et les dispositions supplétives. Dans le champ de la négociation, un accord peut fixer une règle moins favorable que la règle légale supplétive : par exemple, une majoration des heures supplémentaires de 10 % au lieu de 25 % (L3121-33), alors que [C9.2] présente 25 % puis 50 % comme la règle. Depuis les ordonnances de 2017, l’accord d’entreprise l’emporte aussi sur l’accord de branche, même s’il est moins favorable, hors des blocs 1 et 2 (L2253-3). Le cours se contredit : [C7.1] dit « principe de faveur, sauf exceptions », et [C7.2] dit que la convention collective « améliore » le Code du travail. La phrase est reprise dans [E271].",
+    "correction": "« Le droit du travail est un droit **protecteur** et **d’ordre public social** : en principe, on n’y déroge que dans un sens plus favorable au salarié. Mais la loi permet parfois à un accord collectif de fixer d’autres règles (ex. : taux de majoration des heures supplémentaires d’au moins 10 %), et depuis 2017, l’accord d’entreprise prime sur l’accord de branche dans de nombreux domaines. » Dans [C7.2], remplacer « adapte et **améliore** » par « adapte (souvent en l’améliorant) ». Dans [C9.2], écrire « majorées de 25 % puis 50 % à défaut d’accord (au moins 10 % si un accord le prévoit) ».",
+    "source": "C. trav., art. L2251-1, L2253-1 à L2253-3, L3121-33 et L3121-36 ; loi n° 2016-1088 du 8 août 2016 ; ordonnance n° 2017-1385 du 22 sept. 2017.",
+    "fichier_source": "app/content/droit/approfondi-1.json (section « Les droits collectifs du salarié ») ; app/content/droit/approfondi-2.json (tableau [C9.2])",
+    "confiance": "haute"
+  },
+  {
+    "id": "t7-04",
+    "ref": "[C3.3]",
+    "citation": "• **Fin du CDD** : à son terme, le salarié perçoit une **indemnité de fin de contrat** (prime de précarité).",
+    "categorie": "fond",
+    "probleme": "La phrase est présentée comme toujours vraie alors que la ligne juste au-dessus cite l’« emploi saisonnier » parmi les cas de recours. Or l’indemnité de fin de contrat n’est pas due pour un CDD saisonnier (ni pour un CDD d’usage, un job de vacances d’étudiant, un refus de CDI ou un CDD suivi d’un CDI). Le vrai/faux [E121] attend « VRAI » sans nuance. Il en va de même pour [C3.D3], [E100], [E112], [E123], [E127], [E134] et [E459].",
+    "correction": "« • **Fin du CDD** : à son terme, le salarié perçoit en principe une **indemnité de fin de contrat** (prime de précarité, 10 %), sauf exceptions (CDD saisonnier, refus d’un CDI proposé, embauche en CDI à la suite…). »",
+    "source": "C. trav., art. L1243-8 et L1243-10 (1° vise les contrats conclus au titre du 3° de l’art. L1242-2 : emplois saisonniers et d’usage).",
+    "fichier_source": "app/content/droit/approfondi-1.json (section « CDI, CDD, intérim : la règle et l’exception ») ; formule proche dans app/content/droit/cours-reels.json (« À la fin, le salarié touche une prime de précarité »)",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "t7-05",
+    "ref": "[C10.2]",
+    "citation": "• **Accidents du travail et maladies professionnelles** : indemnisés, et engagent la responsabilité de l’employeur en cas de faute.",
+    "categorie": "fond",
+    "probleme": "La formule est inexacte. Un AT/MP est indemnisé de façon forfaitaire par la Sécurité sociale, sans qu’il faille prouver une faute. L’employeur bénéficie d’une immunité civile : il ne doit une indemnisation complémentaire qu’en cas de faute inexcusable (ou intentionnelle), pas pour « une faute » quelconque. La phrase sert aussi de « définition » dans [E355], [E363], [E370], [E373] et [E473].",
+    "correction": "« • **Accidents du travail et maladies professionnelles** : pris en charge par la Sécurité sociale (indemnisation forfaitaire, sans avoir à prouver une faute) ; en cas de **faute inexcusable** de l’employeur, le salarié obtient une indemnisation complémentaire. »",
+    "source": "Code de la sécurité sociale, art. L411-1, L451-1 (immunité de l’employeur) et L452-1 (faute inexcusable).",
+    "fichier_source": "app/content/droit/approfondi-2.json (section « Santé et sécurité au travail »)",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "t7-06",
+    "ref": "[ESS3]",
+    "citation": "**CDI** = norme (clauses générales + spécifiques : mobilité, non-concurrence, télétravail) ; **CDD, chantier, saisonnier, intérim** = l’exception écrite.",
+    "categorie": "fond",
+    "probleme": "Le contrat de chantier (ou d’opération) est un CDI particulier, et non un contrat à durée déterminée. Le ranger avec le CDD dans « l’exception » laisse croire qu’il s’agit d’un contrat à terme. Les flashcards [E11] et [E491] disent pourtant bien « CDI de chantier ».",
+    "correction": "« **CDI** = norme (clauses générales + spécifiques : mobilité, non-concurrence, télétravail ; variante : **CDI de chantier ou d’opération**) ; **CDD, saisonnier, intérim** = l’exception écrite. »",
+    "source": "C. trav., art. L1223-8 et L1223-9 (contrat de chantier ou d’opération, issu de l’ordonnance n° 2017-1387) ; [E11] et [E491] du même thème.",
+    "fichier_source": "app/content/droit/cours-complets.json (droit-t7.essentiel)",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "t7-07",
+    "ref": "[E165]",
+    "citation": "SAISIE : Quel terme correspond à cette définition ? ⏎ « tout licenciement doit reposer sur une cause réelle et sérieuse (motif objectif, vérifiable et suffisamment grave) » → réponse attendue : « Règle »",
+    "categorie": "exercice",
+    "probleme": "Le générateur a pris les étapes d’un raisonnement pour des notions à définir : « Règle », « Faits », « Application », « Conclusion » dans [C4.2], et « 2. Le motif (si licenciement) », « 3. Le fond », « 4. La forme », « 5. La sanction » dans [C11.2]. Il en sort des questions absurdes : « Que signifie : « Conclusion » ? », « Quel terme correspond à « la cause réelle et sérieuse fait défaut » ? » → « Application », un vrai/faux « « 3. Le fond » : Accord négocié… » ou une saisie qui exige « 4. La forme » au caractère près. Un élève qui répond « cause réelle et sérieuse » ou « licenciement » est compté faux. Exercices touchés : [E138], [E140], [E145], [E147], [E151], [E153], [E157], [E160]–[E165], [E167]–[E174], [E386], [E390]–[E392], [E397], [E399], [E400], [E406], [E407], [E409]–[E412], [E460]–[E463], [E474]–[E477]. Le même mécanisme fait de « prévenir le stress, le harcèlement, le burn-out » la définition des « Risques psychosociaux » ([E356], [E366], [E371]).",
+    "correction": "Dans le contenu, ne plus écrire ces étapes sous la forme « **Libellé** : texte » qui déclenche l’extraction notion → définition. Par exemple « Règle — tout licenciement… » sans gras, ou un bloc « example » par étape comme dans [C8]/[C12]. Autre solution : dans sectionPairs (src/data/index.js), ignorer les libellés « Règle / Faits / Application / Conclusion » et ceux qui commencent par un numéro (« 2. »).",
+    "source": "Raisonnement : ces libellés sont des étapes de méthode (syllogisme), pas des notions juridiques. L’extraction se fait par la regex de sectionPairs, dans src/data/index.js.",
+    "fichier_source": "app/content/droit/enrichissements.json ([C4] Cas pratique — le licenciement) ; app/content/droit/approfondi-2.json ([C11] MÉTHODE — Analyser une rupture)",
+    "confiance": "haute"
+  },
+  {
+    "id": "t7-08",
+    "ref": "[E245]",
+    "citation": "Quelle est la bonne définition de « Les représentants du personnel (CSE » ? … ✔ C. Comité social et économique) : élus, ils défendent les intérêts des salariés et sont consultés sur les décisions importantes",
+    "categorie": "exercice",
+    "probleme": "La puce « **Les représentants du personnel** (CSE — Comité social et économique) : élus… » est coupée au tiret « — ». Le terme devient « Les représentants du personnel (CSE », avec une parenthèse ouverte, et la définition commence par « Comité social et économique) : … ». Les énoncés et les réponses sont tronqués et incompréhensibles dans [E243]–[E246], [E251], [E254], [E255], [E261] et [E465]. On a aussi deux « notions » en doublon : « Représentants du personnel » et « Les représentants du personnel (CSE ».",
+    "correction": "Réécrire la puce de [C7.2] sans tiret ni deux-points dans la parenthèse, par exemple : « **CSE (comité social et économique)** : représentants élus du personnel, ils défendent les intérêts des salariés et sont consultés sur les décisions importantes. »",
+    "source": "Raisonnement : la regex /^(.{3,60}?)\\s*[:—–]\\s+(.+)$/ de sectionPairs (src/data/index.js) coupe au premier « : » ou « — ».",
+    "fichier_source": "app/content/droit/approfondi-1.json (section « Les droits collectifs du salarié »)",
+    "confiance": "haute"
+  },
+  {
+    "id": "t7-09",
+    "ref": "[E293]",
+    "citation": "TROU : ____ Un employeur licencie une salariée par un simple SMS, sans entretien, au motif qu’« elle ne lui plaît plus ». → mot attendu : « Énoncé. »",
+    "categorie": "exercice",
+    "probleme": "Le mot en gras « **Énoncé.** » qui ouvre le cas pratique est pris pour un mot à trouver. Le trou n’a aucun sens juridique et la saisie exige « Énoncé. » avec le point, au caractère près. Exercices touchés : [E293], [E302], [E437] et [E443].",
+    "correction": "Dans [C8.1] et [C12.1], ne plus mettre « Énoncé. » en gras (ou utiliser un bloc avec titre « h »: « Énoncé »). Autre solution : dans le générateur de textes à trous, exclure les mots en gras placés en tête de phrase et suivis d’un point.",
+    "source": "Raisonnement (défaut du générateur ; il touche aussi d’autres matières qui utilisent « **Énoncé.** »).",
+    "fichier_source": "app/content/droit/approfondi-1.json ([C8.1]) ; app/content/droit/approfondi-2.json ([C12.1])",
+    "confiance": "haute"
+  },
+  {
+    "id": "t7-10",
+    "ref": "[E260]",
+    "citation": "SAISIE : Quel terme correspond à cette définition ? ⏎ « accord négocié par branche ou entreprise qui adapte et améliore le Code du travail (salaires minima, congés, primes) » → réponse attendue : « La convention collective »",
+    "categorie": "exercice",
+    "probleme": "La saisie se corrige au mot près (answerMatches dans src/games/common.jsx), et l’article fait partie de la réponse attendue. Un élève qui écrit « Convention collective » est compté faux en [E260], alors que [E50] attend exactement cette forme pour une définition presque identique. Même problème pour [E259] (« Les syndicats »), [E268] (« La convention collective »), [E273] (« Les syndicats ») et [E274] (« Les représentants du personnel », alors que [E55] attend « Représentants du personnel »).",
+    "correction": "Dans [C7.2], retirer les articles des libellés en gras : « **Convention collective** : … », « **Syndicats** : … », « **CSE (comité social et économique)** : … » (voir t7-08). Autre solution : faire accepter par termVariants la forme sans article.",
+    "source": "Raisonnement : comparaison stricte après normalisation (src/games/common.jsx) ; termVariants (src/data/index.js) ne retire pas les articles.",
+    "fichier_source": "app/content/droit/approfondi-1.json (section « Les droits collectifs du salarié »)",
+    "confiance": "haute"
+  },
+  {
+    "id": "t7-11",
+    "ref": "[E131]",
+    "citation": "SAISIE : Complète par le mot exact : ⏎ CDI = ____, CDD/intérim = exception encadrée. → réponse attendue : « principe »",
+    "categorie": "exercice",
+    "probleme": "Ces saisies n’acceptent qu’une seule réponse, alors que d’autres mots du cours conviennent aussi. [E131] : « règle » et « norme » sont justes ; le cours écrit d’ailleurs « c’est la règle » en [C3.1] et « CDI = norme » en [ESS3]. [E66] : « nom » convient autant que « titre », et [C5.4] dit « pas le nom donné au contrat ». [E305] et [E421] attendent « prud’hommes » mais refusent « conseil de prud’hommes », la forme attendue en [E298] et [E308]. [E447] : « CDI est la norme » ou « CDI est le principe » sont refusés.",
+    "correction": "Ajouter des réponses acceptées (alt) aux saisies de textes à trous, qui n’en ont pas aujourd’hui (strou dans src/data/index.js), par exemple principe/règle/norme, titre/nom, prud’hommes/conseil de prud’hommes. Sinon, retirer ces phrases des saisies et ne les garder qu’en texte à trous avec choix.",
+    "source": "Raisonnement : comparaison stricte (answerMatches) ; les synonymes sont employés ailleurs dans le thème même ([C3.1], [ESS3], [C5.4], [E298]).",
+    "fichier_source": "app/content/droit/approfondi-1.json ([C3.5], [C8.5]) ; app/content/droit/cours-reels.json ([C1.4]) ; app/content/droit/approfondi-2.json ([C11.4], [C12.2])",
+    "confiance": "haute"
+  },
+  {
+    "id": "t7-12",
+    "ref": "[E347]",
+    "citation": "SAISIE : Complète par le mot exact : ⏎ Au-delà → ____. → réponse attendue : « heures supplémentaires majorées »",
+    "categorie": "exercice",
+    "probleme": "Une fois la phrase coupée de son contexte, elle n’a plus de sens. « Au-delà » de quoi ? La réponse attendue fait trois mots, exigés au caractère près. Même défaut, moins grave, pour d’autres phrases dont le sujet a disparu : [E342] (même phrase), [E126]/[E133] « À défaut d’écrit, il est ____. », [E440]/[E444] « À défaut, il est ____. » et [E129]/[E135] « Il obéit aux mêmes logiques de ____ que le CDD. » (où « cas de recours » seul est refusé).",
+    "correction": "Réécrire les phrases sources pour qu’elles se suffisent à elles-mêmes, par exemple [C9.4] : « Au-delà de la durée légale, les heures sont des **heures supplémentaires majorées**. » et [C12.2] : « À défaut, le CDD est **requalifié en CDI**. » Autre solution : écarter du générateur les phrases qui commencent par un pronom ou par « Au-delà / À défaut ».",
+    "source": "Raisonnement (découpage des phrases par le générateur de textes à trous).",
+    "fichier_source": "app/content/droit/approfondi-2.json ([C9.4], [C12.2]) ; app/content/droit/approfondi-1.json ([C3.3], [C3.4])",
+    "confiance": "moyenne"
+  },
+  {
+    "id": "t7-13",
+    "ref": "[E156]",
+    "citation": "VRAI/FAUX : « CDI / CDD » : Convention par laquelle un salarié travaille pour un employeur, sous sa subordination, contre rémunération. → réponse attendue : FAUX",
+    "categorie": "exercice",
+    "probleme": "L’affirmation est juste sur le fond : un CDI comme un CDD est une convention par laquelle un salarié travaille sous la subordination d’un employeur contre rémunération, puisque ce sont des contrats de travail. Attendre « FAUX » pénalise un élève qui raisonne en droit. Le générateur associe au hasard deux notions emboîtées (« CDI / CDD » est une espèce de « contrat de travail »). Même ambiguïté, moins nette, pour [E45] (« Contrat de travail » : CDI/CDD → FAUX).",
+    "correction": "Ne pas produire de vrai/faux croisés entre « CDI / CDD » et « Contrat de travail ». Par exemple, reformuler la définition de « CDI / CDD » dans definitions.json pour qu’elle insiste sur la durée (« contrat de travail conclu sans terme (règle) / avec un terme pour un motif précis (exception) »), ou exclure ce couple dans vraiFauxFromDefs.",
+    "source": "Raisonnement : CDI et CDD sont les deux formes du contrat de travail (C. trav., art. L1221-2 et L1242-1).",
+    "fichier_source": "app/content/droit/definitions.json (droit-t7)",
+    "confiance": "moyenne"
+  }
+]

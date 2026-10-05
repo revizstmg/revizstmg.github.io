@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { shuffle, Feedback, GameProgress, answerMatches } from './common.jsx'
+import { shuffle, Feedback, GameProgress, answerMatchesCours as answerMatches } from './common.jsx'
 import { useT } from '../i18n.js'
 
 export default function Trou({ game, color, onDone }) {

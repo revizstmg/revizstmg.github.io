@@ -161,7 +161,10 @@ content/
     matiere.json                la matière et ses thèmes de base
     <couche>.json               une couche de contenu, indexée par id de thème
   commun/                       formules, méthodologie, glossaire, boutique,
-                                définitions de secours par matière
+                                définitions de secours par matière,
+                                réponses acceptées en plus du mot attendu
+                                (reponses-acceptees.json), notions liées à ne
+                                pas opposer dans un exercice (notions-liees.json)
 ```
 
 **`matiere.json`** contient un `id`, un `name` et un tableau `chapters`. Chaque

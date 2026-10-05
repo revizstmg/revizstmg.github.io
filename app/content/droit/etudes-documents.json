@@ -107,7 +107,7 @@
         ],
         "type": "redac",
         "q": "En raisonnant par syllogisme, montre que Marc peut obtenir l’annulation de la vente.",
-        "answer": "**Règle (majeure)** : le dol — tromperie déterminante du consentement — est un vice qui entraîne la nullité du contrat (art. 1128, doc 3). **Faits (mineure)** : le garagiste a affirmé faussement, par écrit, que la voiture n’avait pas eu d’accident, alors qu’il savait le contraire ; cette information était déterminante pour Marc (doc 4). **Conclusion** : le dol est caractérisé ; Marc peut demander la **nullité** de la vente et des **dommages et intérêts**."
+        "answer": "**Règle (majeure)** : le contrat n’est valable que si le consentement est libre et éclairé (art. 1128, doc 1). Le dol — manœuvres, mensonges ou dissimulation intentionnelle d’une information déterminante (art. 1137, doc 3) — vicie le consentement : c’est une cause de **nullité relative** du contrat (art. 1131). **Faits (mineure)** : le garagiste a affirmé faussement, par écrit, que la voiture n’avait pas eu d’accident, alors qu’il savait le contraire ; cette information était déterminante pour Marc (doc 4). **Conclusion** : le dol est caractérisé ; Marc peut demander la **nullité** de la vente et des **dommages et intérêts**."
       },
       {
         "doc": 2,
@@ -252,7 +252,7 @@
       {
         "id": 3,
         "title": "Document 3 — Le licenciement",
-        "text": "Le licenciement à l’initiative de l’employeur n’est valable que s’il repose sur une **cause réelle et sérieuse** (objective et vérifiable) et respecte une **procédure** (entretien préalable, notification). À défaut, il est **abusif** et le juge peut accorder des indemnités au salarié."
+        "text": "Le licenciement à l’initiative de l’employeur n’est valable que s’il repose sur une **cause réelle et sérieuse** (objective et vérifiable) et respecte une **procédure** (entretien préalable, notification). À défaut de cause réelle et sérieuse, il est **abusif** et le juge peut accorder des dommages-intérêts au salarié ; si seule la procédure n’est pas respectée, il est **irrégulier** (indemnité d’au plus un mois de salaire)."
       },
       {
         "id": 4,
@@ -317,7 +317,7 @@
           3,
           4
         ],
-        "q": "Le licenciement de Karim est irrégulier car…",
+        "q": "Le licenciement de Karim est abusif et irrégulier car…",
         "choices": [
           "il n’a ni cause réelle et sérieuse ni procédure respectée",
           "l’employeur a le droit de licencier sans motif",
@@ -325,7 +325,7 @@
           "le CDD est arrivé à terme"
         ],
         "answer": 0,
-        "explain": "« Ne pas l’apprécier » n’est pas une cause réelle et sérieuse ; la procédure n’a pas été suivie."
+        "explain": "« Ne pas l’apprécier » n’est pas une cause réelle et sérieuse (licenciement abusif) ; la procédure n’a pas été suivie (licenciement irrégulier)."
       },
       {
         "doc": [
@@ -363,7 +363,7 @@
       {
         "id": 1,
         "title": "Document 1 — L’entreprise individuelle",
-        "text": "Dans l’**entreprise individuelle**, il n’y a pas de personne morale nouvelle. **Depuis la réforme de 2022** (loi du 14 février 2022, statut unique en vigueur le 15 mai 2022), le **patrimoine professionnel** et le **patrimoine personnel** sont **séparés automatiquement** : le patrimoine personnel est en principe **protégé** des dettes professionnelles. *Avant 2022*, par le **principe d’unicité du patrimoine**, l’entrepreneur répondait des dettes sur **tout son patrimoine**, sauf **déclaration d’insaisissabilité** ou **EIRL**."
+        "text": "Dans l’**entreprise individuelle**, il n’y a pas de personne morale nouvelle. **Depuis la réforme de 2022** (loi du 14 février 2022, statut unique en vigueur le 15 mai 2022), le **patrimoine professionnel** et le **patrimoine personnel** sont **séparés automatiquement** : le patrimoine personnel est en principe **protégé** des dettes professionnelles. *Avant 2022*, par le **principe d’unicité du patrimoine**, l’entrepreneur répondait des dettes professionnelles sur **tout son patrimoine**, à l’exception de sa **résidence principale** (insaisissable de droit depuis 2015), sauf **déclaration d’insaisissabilité** ou **EIRL**."
       },
       {
         "id": 2,
@@ -453,7 +453,7 @@
         ],
         "type": "redac",
         "q": "Léa hésite entre entreprise individuelle et EURL : quelles conséquences sur son patrimoine ? Conseille-la.",
-        "answer": "En **entreprise individuelle**, depuis la réforme de **2022**, son **patrimoine personnel** (voiture, épargne) est **séparé automatiquement** du patrimoine professionnel et donc **en principe protégé** : les créanciers du salon se paient d’abord sur les **biens professionnels**. En **EURL** (société à associé unique), une **personne morale** distincte est créée : la responsabilité de Léa est **limitée à ses apports**. Les deux solutions protègent son patrimoine personnel ; l’EURL apporte un cadre de société (statuts, comptes) mais plus de formalisme. Compte tenu de l’emprunt de 40 000 €, Léa est désormais mieux protégée qu’avant 2022 dans les deux cas."
+        "answer": "En **entreprise individuelle**, depuis la réforme de **2022**, son **patrimoine personnel** est **séparé de plein droit** de son patrimoine professionnel : les créanciers du salon ne peuvent en principe saisir que les **biens professionnels**, sauf si Léa renonce à cette protection pour un engagement précis, à la demande d’un créancier. En **EURL** (société à associé unique), une **personne morale** distincte est créée : la responsabilité de Léa est **limitée à ses apports**, protection qui existait déjà avant 2022. Les deux solutions protègent donc son patrimoine personnel ; l’EURL impose plus de formalisme (statuts, comptes annuels). Attention : pour l’emprunt de 40 000 €, la banque exigera souvent une garantie qui engagera son patrimoine personnel. En EURL, Léa devra se porter caution du prêt de la société ; en entreprise individuelle, elle devra renoncer à la séparation des patrimoines pour ce prêt ou donner une sûreté sur un bien personnel."
       },
       {
         "doc": [

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "t6-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[C6.2] (table) | Régime | Fondement | Exemple | | Fait personnel | Ma propre faute (art. 1240) | Je casse la vitrine du voisin | | Fait des choses | Une chose sous ma garde (art. 1242 al.1) | Ma tuile tombe sur un passant ; mon pot de fleurs chute du balcon | | Fait d'autrui | Responsabilité pour une personne dont je réponds | Parents pour leur enfant mineur ; employeur pour son salarié | Puis ajouter en [C6.3] ou créer [C6.3bis] : « Les animaux constituent un cas particulier : la responsabilité du fait des animaux (art. 1243) s'en rapproche (responsabilité sans faute du propriétaire ou de celui qui s'en sert) mais relève d'un régime spécial. »",
+    "justification": "La version A mélange le chien avec la tuile sous le régime du « fait des choses », ce qui est imprécis : la responsabilité du fait des animaux (art. 1243) est techniquement un régime distinct, même si elle fonctionne sans faute comme celle des choses. Pour un élève de Terminale, cette confusion risque d'induire en erreur sur la structure des régimes. La version B corrige en séparant les exemples et en clarifiant que l'animal relève d'un régime spécial proche mais autonome.",
+    "source": "Art. 1242 al. 1 (fait des choses) et art. 1243 (fait des animaux) du Code civil français ; ces articles sont distincts et traitent de régimes autonomes, même si tous deux sans faute."
+  },
+  {
+    "id": "t6-02",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Modifier le tableau [C1.D1] en le retirant du générateur de définitions, ou reformuler sans le motif « Fait générateur : ... ». Par exemple : [C1.D1] (encadré, pas un bloc de définition générique) : « Ici, le fait générateur est le fait d'une chose/animal sous la garde du maître. »",
+    "justification": "L'exercice [E43] génère « Fait générateur : Le fait d'une chose/animal sous sa garde » comme s'il s'agissait d'une définition générique du terme « Fait générateur », alors que c'est seulement l'exemple du cas. L'élève apprendra une définition trop étroite et fausse (« fait générateur = fait des choses »). Les définitions génériques doivent venir de definitions.json ou de [C2.D2] / [C5.D2] qui donnent « Fait générateur : Événement à l'origine du dommage (faute, fait d'une chose, fait d'autrui) ».",
+    "source": "Distinction pédagogique entre une définition générique (fait générateur peut être une faute, une chose ou autrui) et un exemple spécifique au cas concret ; [C2.D2] et [C5.D2] donnent la bonne définition."
+  },
+  {
+    "id": "t6-03",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Supprimer « Dommage » comme option distracteur pour [E43]. Garder : A. Réparation, B. Dommage / préjudice (bonne réponse), C. [suppression], D. Responsabilité pénale. Justification : « Dommage / préjudice » est la définition correcte puisque [C2.D1] dit « Dommage / préjudice : Atteinte subie par la victime (matérielle, corporelle ou morale) » et s'applique bien à « La blessure ». Le mot « Dommage » seul, qui provient du [C1.D2], est trop étroit et issu du même tableau.",
+    "justification": "L'exercice [E43] présente deux options exactes : C. « Dommage » (via [C1.D2]) et B. « Dommage / préjudice » (via [C2.D1]). Pour un élève, c'est injuste : les deux semblent correctes. Il faut choisir l'une ou l'autre. « Dommage / préjudice » est la définition générale et pédagogiquement plus complète (elle explique qu'c'est une atteinte matérielle, corporelle ou morale). « Dommage » seul est seulement un exemple du cas.",
+    "source": "Cohérence pédagogique : une seule bonne réponse par QCM, et elle doit être la définition générique, pas l'exemple du tableau du cas concret."
+  },
+  {
+    "id": "t6-04",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Exclure le tableau [C10.2] du générateur de distracteurs QCM. Reformuler en : « **1. Quel régime ?** Contractuel ou délictuel ? » sans « **1.** » en gras, ou transformer en liste à puces simple. Pour [E340] en particulier, garder seulement A. Lien de causalité comme distracteur potentiel, pas C. « 4. Le lien de causalité ». Ou accepter les deux comme correctes et supprimer l'exercice.",
+    "justification": "L'exercice [E340] propose deux réponses exactes : A. « Lien de causalité » et C. « 4. Le lien de causalité ». La phrase « le dommage découle-t-il bien du fait générateur ? » provient exactement de [C10.2], qui la numérote « 4. ». C'est une ambiguïté générée automatiquement. L'élève ne peut pas être blâmé de choisir l'une ou l'autre. Le générateur de QCM ne devrait pas tirer les deux versions du même contenu.",
+    "source": "Problème de génération automatique : [C10.2] contient numéros et phrases que le générateur duplique sans dédoublonner par rapport aux définitions génériques."
+  },
+  {
+    "id": "t6-05",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Protéger les abréviations (art., al., ex., par ex., etc.) et ne pas découper sur un point situé dans une parenthèse ou imédiatement après une parenthèse fermante. [E68] devrait proposer : « S'il en manque un seul (par exemple aucun dommage réel), il n'y a ____ de responsabilité civile. » avec mot attendu « pas ». Supprimer ou corriger [E359], [E360], [E363], [E365] qui découpent de la même manière.",
+    "justification": "Le trou [E68] crée une phrase agrammaticale et incompréhensible : « aucun dommage réel), il n'y a ____ de responsabilité civile. » La parenthèse fermante orpheline rend impossible une compréhension. L'élève ne peut pas répondre correctement car la phrase elle-même n'a pas de sens. C'est un défaut de découpage qui bloque l'exercice. Même problème pour [E359] « Est-il ____ ? » qui n'a pas de verbe.",
+    "source": "Règles élémentaires de découpage de texte : ne pas briser à l'intérieur d'une parenthèse, ne pas laisser de ponctuation orpheline."
+  },
+  {
+    "id": "t6-06",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retirer le gras de « Énoncé. » dans [C3.1] (et [C11.1] si applicable) ou le mettre en titre du bloc au lieu de le gras à l'intérieur. Reformuler en : « **Énoncé :** Dans un supermarché... » ou « Énoncé : » sur sa propre ligne. À défaut, exclure ce mot du générateur de trous.",
+    "justification": "L'exercice [E128] propose « Énoncé. » comme mot à trouver, ce qui n'a aucune valeur pédagogique : c'est un label de section, pas une notion ou un concept du droit. Un élève peut connaître parfaitement la responsabilité civile et ne pas reconstituer cette phrase. C'est un problème de balisage : « Énoncé » ne devrait pas être un mot-clé dans le contenu pédagogique.",
+    "source": "Distinction entre balisage structurel (titres, labels) et contenu pédagogique (concepts, faits) ; les générateurs de trous ne doivent s'appliquer qu'au contenu pédagogique."
+  },
+  {
+    "id": "t6-07",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Modifier [C2.3] / [C4.2] pour rendre les deux lignes nettement différentes. Exemple : Ligne 1 : « Qui agit | La victime (action en justice) | Le ministère public (procureur), au nom de la société ». Ligne 2 : « Bénéficiaire | La victime (indemnisée) | La société (amende versée au Trésor public) ». Ou bien interdire au générateur de proposer comme distracteur une ligne du même tableau dont le texte est inclus dans la bonne réponse (ex. B ⊂ D).",
+    "justification": "L'exercice [E96] propose deux réponses quasi-identiques : B. « La victime — La société » et D. « La victime — La société (ministère public) ». La seule différence est la précision « (ministère public) ». Pour un élève, B semble aussi correcte que D, surtout si le cours n'insiste pas clairement sur le rôle du ministère public. C'est une ambiguïté légitime qu'il faut trancher en rendant les réponses plus distinctes.",
+    "source": "Principes de construction de QCM : éviter que deux options soient quasi-identiques ; les distracteurs doivent être clairement différents de la bonne réponse et entre eux."
+  },
+  {
+    "id": "t6-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Restructurer [E426] (et [E427] à [E430]) pour prendre les blocs [C1.1], [C2.1] etc. comme sujets (format « Cas ») et les conclusions ([C1.2], [C2.2]) comme corrigés. Exemple : Sujet [E426] : « Cas : Le chien d'un voisin, mal tenu, mord un passant qui doit aller à l'hôpital. Qui paie les soins ? » Corrigé : « [C1.2] et [C1.4] : Le maître du chien est responsable... » Ne pas proposer « Majeure », « Mineure », « Conclusion » comme des cas séparés ; inclure [E418] (bloc « example ») dans le corrigé si applicable.",
+    "justification": "Le format actuel de [E426] est confus : prompt = « Cas » et answer = « Le chien d'un voisin... ». Cela ne crée pas un exercice testable pour l'élève. Un cas pratique efficace doit avoir un énoncé clair (sujet) et un corrigé pédagogique (comment analyser et conclure). Le format proposé aide à distinguer ce qui est donnée (le cas) de ce qui est attendu de l'élève (l'analyse).",
+    "source": "Pédagogie des cas pratiques : séparation claire entre l'énoncé (ce qui est donné à l'élève) et le corrigé (comment résoudre et ce qu'on attend de l'élève)."
+  },
+  {
+    "id": "t6-09",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Remplacer le cas [C11.1] par : « Un livreur, salarié d'une entreprise, laisse tomber un colis lourd en le déchargeant et brise la vitrine d'un commerçant pendant sa tournée. Le commerçant réclame réparation. Qui est responsable ? » ou tout autre exemple sortant de la circulation routière (chute d'objet, dommage à un bien). Ajouter une note : « NB. Si un véhicule à moteur est impliqué dans un accident, c'est la loi Badinter du 5 juillet 1985 (régime spécial des accidents de la circulation) qui s'applique, non pas le régime du fait d'autrui. »",
+    "justification": "Le cas [C11.1] décrit un livreur qui « percute et endommage une voiture ». Cela implique un véhicule à moteur et relève donc de la loi Badinter, pas du régime normal du fait d'autrui (art. 1242 al. 5). Or, [C11.2] l'analyse comme un fait d'autrui classique. C'est induire l'élève en erreur en lui faisant croire que c'est le bon cadre juridique. La loi Badinter s'applique quasi-automatiquement dès qu'un véhicule terrestre à moteur est impliqué, indépendamment des règles normales.",
+    "source": "Loi Badinter du 5 juillet 1985 relative à l'indemnisation des victimes d'accidents de la circulation ; elle est un régime spécial qui prime sur les règles ordinaires dès lors qu'un VTM est impliqué."
+  },
+  {
+    "id": "t6-10",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Soit modifier [C3.3] en remplaçant l'exemple de la bouteille qui explose par : « Dans un supermarché, un présentoir mal fixé par le personnel tombe sur un client et le blesse au visage » (élimine toute ambiguïté sur défaut de fabrication). Soit garder la bouteille mais ajouter en [C3.4] : « Note : Si l'explosion est due à un défaut de fabrication de la bouteille, le client pourrait aussi agir contre le fabricant sur le fondement de la responsabilité du fait des produits défectueux (art. 1245 et s.), qui s'appliquerait parallèlement. Ici, on se concentre sur la responsabilité du gardien du supermarché. »",
+    "justification": "Le cas [C3.3] mentionne « une bouteille [qui] explose ». Pour un élève, c'est ambigu : une explosion peut être due à un défaut de fabrication (bouteille mal conçue, verre défectueux) ou à une circonstance externe (choc, température). Si c'est un défaut, le régime applicable n'est pas le fait des choses mais la responsabilité du fait des produits défectueux (art. 1245), plus favorable à la victime. Sans clarification, l'élève ne sait pas quel régime appliquer. Soit on choisit un exemple sans ambiguïté, soit on explicite.",
+    "source": "Art. 1242 al. 1 (fait des choses) et art. 1245 et s. (responsabilité du fait des produits défectueux) ; ces deux régimes peuvent se superposer en cas d'atteinte par un produit, d'où la nécessité de clarifier le cadre."
+  },
+  {
+    "id": "t6-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Modifier [E295] (et [E297]) pour accepter aussi « extracontractuelle » et « extra-contractuelle » comme réponses correctes, en plus de « délictuelle ». Cela signifie ajouter aux réponses acceptées : « délictuelle » (acceptée) ; « extracontractuelle » (alt) ; « extra-contractuelle » (alt).",
+    "justification": "L'exercice [E295] demande « Pas de contrat → responsabilité ____ » avec réponse attendue « délictuelle ». Or, en droit français, « délictuelle » et « extracontractuelle » sont synonymes et souvent utilisés indifféremment pour désigner la responsabilité en dehors de tout contrat. L'élève qui répond « extracontractuelle » donne une réponse correcte et même peut-être plus couramment utilisée dans certains contextes. Refuser cette réponse serait injuste. Le terme « délictuelle » (stricto sensu = délit) est plus technique et renvoie aux délits pénaux, tandis que « extracontractuelle » est plus général.",
+    "source": "Usage du droit français : « responsabilité extracontractuelle » et « responsabilité délictuelle » sont des termes employés de manière interchangeable en Terminale ; une bonne notation doit accepter les deux."
+  },
+  {
+    "id": "t6-12",
+    "verdict": "INCERTAIN",
+    "version_ajustee": "Si on corrige t6-01 (en séparant animaux et choses), retirer le gras de « gardien » dans [C1.4] pour que le générateur ne le propose plus. Sinon, accepter aussi « propriétaire » comme réponse à [E66] et [E73]. Le signalant note aussi que [E388]/[E395] ont un problème avec « pendant sa tournée » en gras dans [C11.3], qui ne devrait pas être un trou pédagogique.",
+    "justification": "L'exercice [E66] demande « Ici, le maître est le ____ de l'animal : il en répond même sans faute. » avec réponse attendue « gardien ». Techniquement, « propriétaire » est aussi correct : le propriétaire d'un animal en répond (art. 1243). Or, le cours distingue « gardien » et « propriétaire » dans [C1.4] et ailleurs. La distinction est fine : le gardien est celui qui a la garde (usage, direction, contrôle), pas nécessairement le propriétaire. Mais pour un élève, cette distinction peut être floue. En droit français, on dit souvent « propriétaire ou celui qui s'en sert ». C'est INCERTAIN car cela dépend du niveau de précision attendu : si on veut « gardien » pour bien distinguer du propriétaire, c'est juste ; si on accepte les deux, c'est aussi pédagogiquement acceptable.",
+    "source": "Art. 1243 du Code civil : « Le propriétaire d'un animal, ou celui qui s'en sert, pendant qu'il est à son usage, est responsable du dommage que l'animal a causé » — « propriétaire » et « celui qui s'en sert » (gardien) sont les deux termes clés, souvent utilisés ensemble."
+  }
+]

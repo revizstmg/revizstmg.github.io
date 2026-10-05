@@ -1,0 +1,86 @@
+[
+  {
+    "id": "t6-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le dommage causé par un animal ne relève pas de l’art. 1242 al. 1 mais d’un texte spécial, l’art. 1243 (ancien 1385) : « Le propriétaire d’un animal, ou celui qui s’en sert, pendant qu’il est à son usage, est responsable du dommage que l’animal a causé, soit que l’animal fût sous sa garde, soit qu’il fût égaré ou échappé. » Citer l’art. 1242 al. 1 pour une morsure de chien est une erreur de fondement, et le cours se contredit lui-même : [C10.3] cite bien l’art. 1243 et [ESS4] range « des animaux » à part. La version B est exacte : responsabilité de plein droit (sans faute), exonération seulement par la force majeure ou la faute de la victime, notion de garde reprise par la jurisprudence, d’où « proche de celle du fait des choses ». Remarque facultative : « ma tuile tombe » peut aussi relever de l’art. 1244 (ruine du bâtiment due à un défaut d’entretien ou à un vice de construction). Ce n’est pas une erreur, car l’art. 1242 al. 1 reste applicable hors de ces conditions, mais « la branche de mon arbre tombe sur la voiture du voisin » serait un exemple plus net.",
+    "source": "C. civ., art. 1242 al. 1, 1243 et 1244 (numérotation issue de l’ordonnance n° 2016-131) ; Cass. 2e civ., 22 oct. 2009 (art. 1242 al. 1 applicable lorsque les conditions de la ruine ne sont pas réunies)."
+  },
+  {
+    "id": "t6-02",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "L’encadré « Définitions clés » présente comme définition du fait générateur « Le fait d’une chose/animal sous sa garde ». C’est l’application au cas du chien, pas une définition : le fait générateur peut aussi être une faute (art. 1240) ou le fait d’autrui (art. 1242 al. 4 et 5). La flashcard [E397] et les exercices [E52] et [E55] font donc apprendre une définition fausse parce que trop étroite, qui en outre concurrence la vraie définition de [C2.D2]. Il est juste de ne pas tirer de définitions du tableau d’application et de garder la définition générale, qui est exacte.",
+    "source": "C. civ., art. 1240 à 1244 (faits générateurs : fait personnel, fait des choses, fait d’autrui, fait des animaux, ruine des bâtiments)."
+  },
+  {
+    "id": "t6-03",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Dans le cours, « dommage » et « préjudice » sont employés comme synonymes ([C5.2] : « Un dommage (ou préjudice) ») ; la doctrine les distingue parfois, mais pas à ce niveau. Une blessure est un dommage corporel, donc « Dommage » et « Dommage / préjudice » sont tous deux justes, et l’élève peut être sanctionné pour une bonne réponse (le fichier de questions coche B, le document coche C, ce qui confirme l’ambiguïté). Supprimer la notion « Dommage » tirée du tableau d’application va dans le bon sens.",
+    "source": "Raisonnement juridique : synonymie dommage/préjudice retenue par le cours ; C. civ., art. 1240."
+  },
+  {
+    "id": "t6-04",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Se demander si le dommage découle bien du fait générateur, c’est exactement vérifier le lien de causalité. Les options « Lien de causalité » et « 4. Le lien de causalité » sont donc toutes deux justes, et la seconde n’est pas une notion juridique (numéro de liste). [E352] attend FAUX alors que l’association « Lien de causalité ↔ le dommage découle-t-il bien du fait générateur ? » est juridiquement vraie : la réponse attendue est fausse. La correction (ne plus extraire de notions des listes [C5.2] et [C10.2], et faire attendre VRAI à [E352]) est la bonne.",
+    "source": "Raisonnement juridique : le lien de causalité est le rapport de cause à effet entre le fait générateur et le dommage (C. civ., art. 1240 : « qui cause à autrui un dommage »)."
+  },
+  {
+    "id": "t6-05",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "La phrase est coupée après l’abréviation « par ex. » : l’élève voit un fragment qui commence par « aucun dommage réel) », sans contexte. Le même découpage coupe les références d’articles (« (art. » / « 1242 al.1) rend responsable… » en [E129]/[E130], « sous la garde du maître (art. » en [E360]), ce qui masque le fondement légal, et produit des trous sans objet comme « Est-il ____ ? » en [E359]. Le contenu juridique (« pas de responsabilité sans dommage ») est exact ; c’est la présentation qui le rend incompréhensible. Protéger les abréviations, ne pas couper dans les parenthèses et supprimer les fragments sans contexte va dans le bon sens.",
+    "source": "Raisonnement (qualité de l’exercice) ; le fond est exact : l’absence de dommage exclut la responsabilité civile (C. civ., art. 1240)."
+  },
+  {
+    "id": "t6-06",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le mot attendu, « Énoncé. », est l’étiquette du cas pratique, pas une notion de droit : aucun élève ne peut le deviner, et l’exercice n’évalue rien. Le même défaut touche [E385]/[E393] dans le cas du livreur. Retirer le gras de « Énoncé. », ou en faire le titre du bloc, supprime ces trous absurdes.",
+    "source": "Raisonnement (qualité de l’exercice)."
+  },
+  {
+    "id": "t6-07",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "L’option « La victime — La société » (ligne « Bénéficiaire ») est aussi une réponse exacte, simplifiée, au critère « Qui agit » : au civil, c’est la victime qui agit ; au pénal, la société par la voix du ministère public. Il y a donc deux bonnes réponses. La version B est juridiquement exacte : l’action publique est exercée par le ministère public (procureur de la République) au nom de la société, et l’amende pénale est versée au Trésor public (l’État). On pourrait préciser que la victime peut aussi mettre en mouvement l’action publique en se constituant partie civile, mais cette simplification est acceptable au bac.",
+    "source": "C. proc. pén., art. 1er (action publique mise en mouvement et exercée par le ministère public, et aussi par la partie lésée) et art. 2 (action civile) ; C. civ., art. 1240."
+  },
+  {
+    "id": "t6-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Prendre l’énoncé comme sujet et la suite de la section comme corrigé, comme proposé. Pour [E426], le corrigé = [C1.2] + [C1.4] dans sa version corrigée (t6-01) : « … il en répond même sans faute (responsabilité du fait des animaux, art. 1243, proche de celle du fait des choses) ». Le reste de la proposition est inchangé (pas de cas séparés « Majeure », « Mineure » ou « Conclusion » ; [E418] avec les blocs « example » ; [E419]/[E420] reformulés en questions d’application).",
+    "justification": "L’élève voit du JSON brut, et le « corrigé » ([answer]) n’est autre que la question du cas : l’exercice est inutilisable. La proposition va dans le bon sens. Seule réserve : le corrigé repris de [C1.4] contient l’erreur signalée en t6-01, puisque la morsure relève de l’art. 1243 (fait des animaux) et non du fait des choses. Il faut donc le reprendre une fois [C1.4] corrigé. De même, [E419]/[E420] font passer des faits d’application pour des définitions, ce qui est trompeur.",
+    "source": "C. civ., art. 1243 ; raisonnement (qualité de l’exercice)."
+  },
+  {
+    "id": "t6-09",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Changer les faits, sans retenir l’option « garder les faits + phrase Badinter ». [C11.1] : « **Énoncé.** Un livreur, salarié d’une entreprise, laisse tomber un colis lourd en le portant à pied et brise la vitrine d’un magasin devant lequel il passe, pendant sa tournée. Le commerçant réclame réparation. Qui est responsable ? » [C6.4] : « Un salarié livreur, en manœuvrant un diable, casse la vitrine d’un magasin voisin pendant son travail : l’employeur est civilement responsable (responsabilité du commettant du fait de son préposé) et devra indemniser, même sans faute de sa part. » [C8.2] : « Un passant blessé par la chute d’un pot de fleurs ». Si l’on veut évoquer la loi Badinter, ce sera dans une remarque séparée : « Lorsqu’un véhicule terrestre à moteur est impliqué dans un accident de la circulation, la victime est indemnisée sur le fondement de la loi du 5 juillet 1985, à l’exclusion des articles 1240 et suivants. »",
+    "justification": "Un livreur qui « percute » une voiture pendant sa tournée conduit presque certainement un véhicule terrestre à moteur. Or la loi du 5 juillet 1985 s’applique alors exclusivement : la jurisprudence écarte les art. 1382 et suivants (devenus 1240 et s.), dont l’art. 1242 al. 5. L’employeur paie bien en pratique, mais en tant que gardien du véhicule et par son assureur, si bien que la majeure du cas (art. 1242 al. 5) n’est pas la bonne règle. Ajouter une phrase en gardant les faits laisserait une analyse contredite par cette phrase : il faut changer les faits. Les faits proposés en B sont exacts, avec une précaution : la vitrine brisée doit appartenir à un tiers, et non au client livré. Si le commerçant est le destinataire de la livraison, il est lié par un contrat (vente ou transport), et la règle du non-cumul ferait jouer la responsabilité contractuelle au lieu de l’art. 1242 al. 5.",
+    "source": "Loi n° 85-677 du 5 juillet 1985, art. 1er à 6 ; Cass. 2e civ., 4 mai 1987 (exclusivité de la loi de 1985 par rapport aux art. 1382 et s.) ; C. civ., art. 1242 al. 5 ; principe du non-cumul des responsabilités contractuelle et délictuelle."
+  },
+  {
+    "id": "t6-10",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "Retenir le supermarché comme gardien de la bouteille posée sur son rayon (usage, direction et contrôle, arrêt Franck) et appliquer l’art. 1242 al. 1 est le raisonnement attendu au bac : ce n’est pas une erreur certaine. Une nuance existe pour un juriste : la bouteille qui explose est l’hypothèse classique de la garde de la structure (Oxygène liquide) et du régime des produits défectueux, mais ce n’est pas au programme et cela ne rend pas la mineure fausse. La phrase de l’option 2 est exacte (art. 1245 : le producteur répond du défaut de son produit, qu’il soit ou non lié par un contrat avec la victime) et peut s’ajouter en enrichissement facultatif. En revanche, l’option 1 (« présentoir mal fixé par le personnel ») introduit une faute qui brouille la démonstration d’une responsabilité sans faute.",
+    "source": "C. civ., art. 1242 al. 1 et 1245 et s. ; Cass. ch. réunies, 2 déc. 1941, Franck ; Cass. 2e civ., 5 janv. 1956, Oxygène liquide (garde de la structure)."
+  },
+  {
+    "id": "t6-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "« Extracontractuelle » n’est pas seulement acceptable : c’est le terme du Code civil depuis 2016 (Livre III, Titre III, Sous-titre II « La responsabilité extracontractuelle », art. 1240 à 1252). « Délictuelle » en est le synonyme usuel. Le cours emploie lui-même les deux ([ESS4], [C8.2], [E4]). Refuser « extracontractuelle » revient à refuser une bonne réponse : il faut accepter « extracontractuelle » et « extra-contractuelle » dans les quatre exercices.",
+    "source": "C. civ., Sous-titre II « La responsabilité extracontractuelle » (art. 1240 et s.), issu de l’ordonnance n° 2016-131 du 10 février 2016."
+  },
+  {
+    "id": "t6-12",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "L’art. 1243 désigne expressément « le propriétaire d’un animal, ou celui qui s’en sert » : « propriétaire » est donc une réponse juridiquement exacte, qui doit être acceptée. « Gardien » reste juste aussi, car la jurisprudence raisonne en termes de garde pour l’art. 1243, et il vaut mieux accepter les deux réponses que retirer le gras. La phrase source doit au passage être corrigée comme en t6-01 (« responsabilité du fait des animaux, art. 1243 » au lieu de « du fait des choses »). Pour [E388]/[E395], « pendant sa tournée » est un détail factuel impossible à deviner, alors que l’élève répondrait légitimement « dans l’exercice de ses fonctions » ou « pendant son travail » : retirer le gras est justifié.",
+    "source": "C. civ., art. 1243 et 1242 al. 5 (dommage causé par le préposé « dans les fonctions auxquelles ils les ont employés »)."
+  }
+]

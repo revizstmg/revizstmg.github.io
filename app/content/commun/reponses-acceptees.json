@@ -1,0 +1,27 @@
+{
+  "toutes": {
+    "délictuelle": ["extracontractuelle", "extra-contractuelle"],
+    "extracontractuelle": ["délictuelle"],
+    "dommages-intérêts": ["dommages et intérêts"],
+    "dommages et intérêts": ["dommages-intérêts"],
+    "conseil de prud’hommes": ["prud’hommes"],
+    "prud’hommes": ["conseil de prud’hommes"],
+    "capacité juridique": ["capacité"],
+    "contrat de sous-traitance": ["sous-traitance"]
+  },
+  "droit-t5": {
+    "d’adhésion": ["contrat d’adhésion"],
+    "volontairement induit en erreur": ["induit en erreur", "trompé"],
+    "volontairement dissimulé": ["dissimulé", "caché"]
+  },
+  "droit-t7": {
+    "principe": ["règle", "norme", "droit commun"],
+    "titre": ["nom"],
+    "heures supplémentaires majorées": ["heures supplémentaires"]
+  },
+  "droit-t8": {
+    "cadre juridique": ["statut juridique", "forme juridique"],
+    "forme juridique": ["structure juridique", "statut juridique"],
+    "déposé sa marque": ["déposé", "enregistré sa marque", "fait enregistrer sa marque"]
+  }
+}

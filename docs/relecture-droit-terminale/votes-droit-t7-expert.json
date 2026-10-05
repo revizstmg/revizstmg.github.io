@@ -1,0 +1,93 @@
+[
+  {
+    "id": "t7-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Version B sans changement de fond pour [C2.3], [C6.4], [C11.2] point 5 et le Document 3. Corriger aussi [C8.2], qui reprend la même erreur : « … À défaut de cause réelle et sérieuse, le licenciement est **abusif** (dommages-intérêts selon le barème) ; si seule la procédure n’est pas respectée, il est **irrégulier** (indemnité d’au plus un mois de salaire). » Harmoniser enfin [E25] (« Le licenciement de Karim est abusif et irrégulier car… ») pour que « irrégulier » garde le sens de vice de procédure.",
+    "justification": "La version A est fausse : depuis les ordonnances de 2017, le seul vice de procédure ne prive pas le licenciement de cause réelle et sérieuse. Il le rend irrégulier et ouvre droit à une indemnité d’au plus un mois de salaire, à condition que le licenciement repose par ailleurs sur une cause réelle et sérieuse. Seule l’absence de cause rend le licenciement « abusif », c’est-à-dire sans cause réelle et sérieuse, indemnisé selon le barème. La version B est exacte, mais [C8.2] contient la même erreur et doit être corrigé aussi.",
+    "source": "C. trav., art. L. 1235-2 (dernier alinéa : irrégularité de procédure, licenciement pour une cause réelle et sérieuse, indemnité ≤ 1 mois) et art. L. 1235-3 (barème, ordonnance n° 2017-1387) ; barème jugé applicable par Cass. soc., 11 mai 2022, n° 21-14.490 et n° 21-15.247."
+  },
+  {
+    "id": "t7-02",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "La notion d’« obligation de sécurité de résultat » (arrêts amiante de 2002) est abandonnée depuis l’arrêt Air France de 2015. L’employeur ne manque pas à son obligation de sécurité s’il justifie avoir pris toutes les mesures prévues par les articles L. 4121-1 et L. 4121-2. La doctrine parle donc d’une obligation de moyens renforcée. L’expression « obligation de résultat renforcée » de la version A ne correspond à aucune qualification connue, et la version B traduit fidèlement le droit positif.",
+    "source": "C. trav., art. L. 4121-1 et L. 4121-2 ; Cass. soc., 25 nov. 2015, n° 14-24.444 (Air France) ; Cass. soc., 1er juin 2016, n° 14-19.702 ; Cass. 2e civ., 8 oct. 2020, n° 18-25.021 (la faute inexcusable n’est plus rattachée à une obligation « de résultat »)."
+  },
+  {
+    "id": "t7-03",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "La version A, formulée de façon absolue, est inexacte en droit positif. Plusieurs règles légales sont supplétives : par exemple, un accord peut fixer la majoration des heures supplémentaires à 10 %, au lieu des 25 % puis 50 % prévus à défaut d’accord. De plus, depuis l’ordonnance de 2017, l’accord d’entreprise prime sur l’accord de branche hors des blocs 1 et 2, même s’il est moins favorable. Le cours le reconnaît déjà en [C7.1] (« principe de faveur, sauf exceptions »). Les trois retouches proposées ([C7.4], [C7.2], [C9.2]) sont exactes.",
+    "source": "C. trav., art. L. 2251-1 ; art. L. 3121-33 (taux conventionnel ≥ 10 %) et L. 3121-36 (25 % / 50 % à défaut d’accord) ; art. L. 2253-1 à L. 2253-3 (ordonnance n° 2017-1385) ; Cons. const., n° 2004-494 DC du 29 avril 2004 (le principe de faveur n’a pas valeur constitutionnelle)."
+  },
+  {
+    "id": "t7-04",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "L’indemnité de fin de contrat n’est pas due dans plusieurs cas. Elle ne l’est pas pour un CDD saisonnier ou d’usage, que le même bloc cite pourtant comme cas de recours. Elle ne l’est pas non plus en cas de refus d’un CDI équivalent, de poursuite de la relation en CDI, ni de rupture anticipée à l’initiative du salarié ou pour faute grave. Telle qu’elle est rédigée, la version A est donc fausse pour un cas présenté dans le même passage. La version B est exacte : son taux de 10 % est le taux légal, qu’un accord peut abaisser à 6 % en contrepartie d’un accès à la formation.",
+    "source": "C. trav., art. L. 1243-8 (10 % de la rémunération totale brute, sauf poursuite en CDI), L. 1243-9 et L. 1243-10 (exclusions : saisonnier/usage, jeunes en vacances scolaires, refus d’un CDI, rupture anticipée)."
+  },
+  {
+    "id": "t7-05",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "La version A est inexacte : une faute simple de l’employeur n’engage pas sa responsabilité civile envers la victime d’un accident du travail ou d’une maladie professionnelle. Le régime de sécurité sociale prévoit une prise en charge automatique et forfaitaire, sans preuve de faute. En contrepartie, l’employeur bénéficie d’une immunité civile, sauf faute inexcusable ou intentionnelle. La version B décrit exactement ce mécanisme : la faute inexcusable ouvre droit à une majoration de la rente et à la réparation des autres préjudices.",
+    "source": "CSS, art. L. 411-1, L. 451-1 (immunité civile), L. 452-1 à L. 452-3 (faute inexcusable) ; Cons. const., QPC n° 2010-8 du 18 juin 2010 ; Cass. 2e civ., 8 oct. 2020, n° 18-25.021 (définition de la faute inexcusable : conscience du danger et absence de mesures)."
+  },
+  {
+    "id": "t7-06",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "Le contrat de chantier ou d’opération est bien juridiquement un CDI, rompu par un licenciement à la fin du chantier. Mais c’est un CDI dérogatoire au CDI de droit commun : il n’est possible que si un accord de branche étendu le prévoit, ou dans les secteurs où il était d’usage au 1er janvier 2017. Le ranger parmi les contrats d’exception n’est donc pas une erreur, d’autant que la version A ne le qualifie pas de contrat à durée déterminée. La version B est également exacte, mais elle ne corrige pas d’erreur. On pourrait seulement, par cohérence avec la fiche [E11], écrire « CDI de chantier » dans la liste des exceptions.",
+    "source": "C. trav., art. L. 1223-8 et L. 1223-9 (ordonnance n° 2017-1387), art. L. 1236-8 (rupture en fin de chantier = cause réelle et sérieuse) ; art. L. 1221-2 (le CDI est la forme normale et générale de la relation de travail)."
+  },
+  {
+    "id": "t7-07",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "« Règle » n’est pas une notion de droit du travail. C’est l’étiquette de la majeure du syllogisme, et la phrase citée n’en est pas la définition. L’élève répondra naturellement « cause réelle et sérieuse » ou « licenciement », et sa réponse sera refusée, alors que la réponse attendue est impossible à deviner. Les deux solutions proposées (changer la mise en forme, ou filtrer les libellés Règle/Faits/Application/Conclusion et ceux qui commencent par un numéro dans sectionPairs) vont dans le bon sens. Elles feraient aussi disparaître les faux encadrés « Définitions clés » [C4.D1-D4], [C11.D1-D4] et les exercices liés ([E157], [E160]-[E162], [E167]-[E170]).",
+    "source": "Raisonnement pédagogique ; vérifié dans le code : la saisie « Écris le terme » prend directement le libellé en gras comme réponse attendue."
+  },
+  {
+    "id": "t7-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[C7.2] : « • **CSE (comité social et économique)** : instance composée de représentants élus du personnel (obligatoire dès 11 salariés) ; elle défend les intérêts des salariés et est consultée sur les décisions importantes. »",
+    "justification": "Le découpage au premier « : » ou « — » produit un terme tronqué (« Les représentants du personnel (CSE ») et une réponse qui commence par « Comité social et économique) ». La question est peu lisible, même si la bonne réponse se devine. Réécrire la puce sans ponctuation interne règle le problème. En droit, le CSE est une instance de représentation (présidée par l’employeur, avec une délégation élue du personnel) plutôt que « les représentants » eux-mêmes ; d’où la formulation légèrement ajustée. La consultation sur les décisions importantes concerne surtout les entreprises d’au moins 50 salariés, simplification acceptable au niveau du bac.",
+    "source": "C. trav., art. L. 2311-2 (CSE dès 11 salariés), L. 2314-1 (composition), L. 2312-5 et L. 2312-8 (attributions selon l’effectif) ; ordonnance n° 2017-1386."
+  },
+  {
+    "id": "t7-09",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le trou porte sur le titre « Énoncé. », qui ne fait pas partie de la phrase : il n’y a rien à comprendre ni à déduire, et en saisie libre ([E302]) la réponse est introuvable. L’exercice est absurde pour l’élève. Retirer le gras ou mettre « Énoncé » en titre de bloc dans [C8.1] et [C12.1], ou exclure du générateur les mots en gras placés en tête et suivis d’un point, règle le problème.",
+    "source": "Raisonnement pédagogique (l’exercice n’évalue aucune notion juridique)."
+  },
+  {
+    "id": "t7-10",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "La réponse attendue est « La convention collective », avec l’article. termVariants ne produit aucune variante sans article et la comparaison est stricte une fois la casse et les accents normalisés, je l’ai vérifié dans le code. La réponse juste « convention collective » est donc refusée. Retirer les articles des libellés en gras de [C7.2] règle le problème à la source et évite un doublon avec la définition « Convention collective ». Cette définition doit aussi intégrer la nuance de t7-03 (« adapte, souvent en l’améliorant »).",
+    "source": "Code de l’app : termVariants (src/data/index.js) et answerMatches/normalize (common.jsx) ; C. trav., art. L. 2221-2 (convention et accord collectifs)."
+  },
+  {
+    "id": "t7-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Réponses acceptées pour [E131] : principe / règle / norme / droit commun / forme normale.",
+    "justification": "Le cours emploie lui-même « règle » ([C3.1], [C12.2]), « norme » ([ESS3], [C4.3]), « droit commun » et « principe » pour désigner le CDI. Le Code du travail parle de « forme normale et générale de la relation de travail ». Or les saisies de textes à trous n’ont aucune réponse acceptée en plus (pas d’alt dans strou, vérifié dans le code) : l’élève qui écrit « règle » ou « norme » voit refuser une réponse juste. Les deux solutions proposées (ajouter des alt, ou ne garder ces phrases qu’en texte à trous avec choix) vont dans le bon sens.",
+    "source": "C. trav., art. L. 1221-2 ; code de l’app (saisieFromItems appelé pour strou sans alt)."
+  },
+  {
+    "id": "t7-12",
+    "verdict": "CORRIGER",
+    "version_ajustee": "[C9.4] : « Au-delà de la durée légale, les heures accomplies sont des **heures supplémentaires majorées**. » ; [C12.2] : « Un CDD qui pourvoit durablement un emploi lié à l’activité normale et permanente de l’entreprise est **requalifié en CDI**. » (sans « À défaut », qui reste incompréhensible hors contexte).",
+    "justification": "« Au-delà → ____ » ne dit pas au-delà de quoi : sans le contexte de la durée légale de 35 h, la phrase est incompréhensible. En saisie stricte, « heures supplémentaires » seul est en plus refusé. Réécrire la phrase source pour qu’elle se suffise à elle-même est la bonne direction, et la rédaction proposée pour [C9.4] est juridiquement exacte. En revanche, la version proposée pour [C12.2] commence encore par « À défaut » et ne se suffit toujours pas à elle-même ; d’où la version ajustée.",
+    "source": "C. trav., art. L. 3121-27 (durée légale 35 h), L. 3121-28 (heures supplémentaires au-delà de la durée légale), L. 1242-1 et L. 1245-1 (requalification du CDD)."
+  },
+  {
+    "id": "t7-13",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retenir la seconde solution : exclure dans vraiFauxFromDefs les couples où une notion englobe l’autre (« Contrat de travail » ↔ « CDI / CDD », dans les deux sens, donc aussi [E45] ; de même « Représentants du personnel » ↔ libellé du CSE). Reformuler seulement la définition de « CDI / CDD » ne suffit pas, car l’énoncé faux reprend la définition de « Contrat de travail », qui resterait inchangée.",
+    "justification": "Le CDI et le CDD sont des contrats de travail : la définition du contrat de travail (prestation, rémunération, subordination) leur convient donc exactement. L’élève qui répond VRAI n’a pas tort en droit, et la réponse attendue FAUX est contestable. La correction va dans le bon sens, mais seule l’exclusion du couple dans le générateur règle le problème. Le code associe en effet le terme d’une notion à la définition d’une autre, si bien qu’une nouvelle rédaction de la définition « CDI / CDD » ne modifierait pas l’énoncé de [E156].",
+    "source": "C. trav., art. L. 1221-1, L. 1221-2 et L. 1242-1 (CDI et CDD sont des contrats de travail) ; Cass. soc., 13 nov. 1996, n° 94-13.187 (Société générale : définition du lien de subordination) ; code de l’app (vraiFauxFromDefs)."
+  }
+]

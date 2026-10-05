@@ -116,10 +116,10 @@
           "instruction": "Remets les étapes du raisonnement juridique dans l’ordre.",
           "steps": [
             "Majeure : la règle de droit",
-            "Mineure : les faits qualifiés",
-            "Conclusion : application de la règle aux faits"
+            "Mineure : les faits qualifiés et confrontés à la règle",
+            "Conclusion : solution du problème de droit"
           ],
-          "explain": "Syllogisme : règle de droit (majeure) → faits qualifiés (mineure) → conclusion."
+          "explain": "Syllogisme : règle de droit (majeure) → faits qualifiés et confrontés à la règle (mineure) → conclusion (solution du problème)."
         },
         {
           "id": "droit-t5-flash",
@@ -161,7 +161,7 @@
             },
             {
               "front": "Sanctions de l’inexécution",
-              "back": "Mise en demeure, exécution forcée, résolution/résiliation, dommages et intérêts (clause pénale)."
+              "back": "Exception d’inexécution, exécution forcée, réduction du prix, résolution/résiliation, dommages et intérêts (art. 1217) ; en principe après une mise en demeure."
             }
           ]
         },
@@ -683,14 +683,14 @@
           "points": [
             "**Liberté d’entreprendre** (à valeur constitutionnelle) et **liberté du commerce et de l’industrie**.",
             "Entreprise individuelle : **pas de personne morale nouvelle**. **Depuis la réforme de 2022** (loi du 14 février 2022, statut unique de l’entrepreneur individuel entré en vigueur le 15 mai 2022), le **patrimoine professionnel** et le **patrimoine personnel** sont **séparés automatiquement** : le patrimoine personnel est en principe **protégé** des dettes professionnelles.",
-            "**Avant 2022** : par le **principe d’unicité du patrimoine**, l’entrepreneur répondait des dettes sur **tout son patrimoine** ; il fallait une **déclaration d’insaisissabilité** ou l’**EIRL** (patrimoine d’affectation) pour se protéger.",
+            "**Avant 2022** : par le **principe d’unicité du patrimoine**, l’entrepreneur répondait des dettes sur **tout son patrimoine** (sauf sa résidence principale, insaisissable de droit depuis 2015) ; il fallait une **déclaration d’insaisissabilité** ou l’**EIRL** (patrimoine d’affectation) pour se protéger.",
             "L’**EURL** crée une **personne morale** à associé unique, dont la **responsabilité est limitée aux apports**."
           ]
         },
         {
           "h": "La société et le respect de la concurrence",
           "points": [
-            "La **société** naît d’un **contrat de société** (art. **1832**) : **apports** + **affectio societatis** + partage des bénéfices ; **responsabilité limitée aux apports**. Forme coopérative = **SCOP**.",
+            "La **société** naît d’un **contrat de société** (art. **1832**) : **apports** + **affectio societatis** + partage des bénéfices (et contribution aux pertes). La responsabilité des associés est **en principe limitée aux apports** (SARL/EURL, SAS/SASU, SA), mais **indéfinie et solidaire** dans la SNC. Forme coopérative = **SCOP**.",
             "**Concurrence déloyale** (parasitisme, dénigrement, imitation, désorganisation) → **action** fondée sur la **responsabilité civile**.",
             "**Entente** et **abus de position dominante** interdits (Autorité de la concurrence). Partenariats sans subordination : **sous-traitance**, **franchise**."
           ]
@@ -829,7 +829,7 @@
             },
             {
               "front": "Contrat de société (art. 1832)",
-              "back": "Apports + affectio societatis + partage des bénéfices ; responsabilité limitée aux apports."
+              "back": "Apports + affectio societatis + partage des bénéfices (et contribution aux pertes)."
             },
             {
               "front": "SCOP",

@@ -8,7 +8,7 @@
 // thèmes et complète ces objets SUR PLACE. Les fonctions qui lisent le contenu
 // (themeChapters, buildQuiz, decks…) supposent la matière chargée : les pages
 // qui s'en servent passent par <Contenu> (src/content/Contenu.jsx).
-import { ORDRE_MATIERES, MATIERES, COUCHES, chargerFichiers, remplacerEnPlace } from '../content/contenu.js'
+import { ORDRE_MATIERES, MATIERES, COUCHES, commun, chargerFichiers, remplacerEnPlace } from '../content/contenu.js'
 import { THEME_TERMS, subjectFallbackFor } from './keyterms.js'
 import { PIEGES } from './pieges.js'
 
@@ -79,6 +79,10 @@ function synthEssentiel(chapter) {
 // les EXERCICES peuvent toujours les mobiliser pour formuler des questions de
 // Terminale — mais l'élève ne relit plus ces bases dans le cours.
 // Pour en masquer d'autres : ajouter un motif (titre de section) au thème concerné.
+// Droit, thème 8 : les cours réels ne traitent ni la concurrence (8.3) ni les
+// partenariats (8.4) ; les sections du cours complet restent affichées.
+const COURS_COMPLET_AUSSI = new Set(['droit-t8'])
+
 const PREREQ_SECTIONS = {
   'mgmt-t1': [
     /Decathlon.*trois logiques/i,
@@ -174,7 +178,9 @@ function assemblerTheme(c) {
   // cours par une explication ancrée dans un exemple concret. Les définitions
   // ne sont plus dans le cours mais uniquement dans l'encadré « Définitions
   // clés ». Appliqué après LESSONS pour bien remplacer.
-  if (COURS_REELS[c.id]?.length) c.cours = COURS_REELS[c.id]
+  // Pour les thèmes de COURS_COMPLET_AUSSI, les cours réels ne couvrent pas
+  // tout le programme : on garde aussi les sections du cours complet.
+  if (COURS_REELS[c.id]?.length) c.cours = COURS_COMPLET_AUSSI.has(c.id) ? [...COURS_REELS[c.id], ...(c.cours || [])] : COURS_REELS[c.id]
   // Enrichissement additif (exemples résolus, sections complémentaires,
   // ressources) : on n'écrase rien, on ajoute à la fin.
   const enr = ENRICH[c.id]
@@ -357,16 +363,107 @@ function stripMd(s) {
   return String(s || '').replace(/\*\*/g, '').replace(/\*/g, '').trim()
 }
 
+// Découpe un texte en phrases sans couper après une abréviation (« art. 1103 »,
+// « al. 1 », « par ex. », « cf. »…) ni avant une suite en minuscule.
+const ABREV_RE = /(?:^|[\s(«'’])(?:art|al|ex|cf|etc|env|av|apr|n°|p|pp|s|vol|chap|M|Mme|MM|Dr|St|Ste|C|civ|com|trav|consom)\.$/i
+function phrases(text) {
+  const t = String(text || '')
+  const out = []
+  let debut = 0
+  const re = /[.!?…]+(?=\s)/g
+  let m
+  while ((m = re.exec(t))) {
+    const fin = m.index + m[0].length
+    const avant = t.slice(debut, fin)
+    const suite = t.slice(fin).trimStart()
+    if (m[0] === '.' && ABREV_RE.test(avant)) continue
+    if (suite && !/^[A-ZÀ-ÖØ-Þ«"“(0-9*•–—-]/.test(suite)) continue
+    out.push(avant)
+    debut = fin
+  }
+  out.push(t.slice(debut))
+  return out.map((s) => s.trim()).filter(Boolean)
+}
+
+// Clé de comparaison d'une réponse : minuscules, sans accents, sans article,
+// sans numéro de liste ni ponctuation finale.
+function cleReponse(s) {
+  return _accents(stripMd(String(s || ''))).toLowerCase()
+    .replace(/[’']/g, "'")
+    .replace(/^\d+\s*[.)]\s*/, '')
+    .replace(/^(l'|d'|le |la |les |un |une |des |du |de la |de l')/, '')
+    .replace(/[-‐‑]/g, ' ')
+    .replace(/[\s.;:!?…,]+$/, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+// Autres réponses justes à accepter dans les exercices à écrire
+// (content/commun/reponses-acceptees.json : « toutes » les matières, ou un thème).
+let _REPONSES = null
+function reponsesAcceptees(terme, themeId) {
+  if (!_REPONSES) {
+    _REPONSES = {}
+    for (const [portee, table] of Object.entries(commun('reponses-acceptees') || {})) {
+      _REPONSES[portee] = {}
+      for (const [k, v] of Object.entries(table)) _REPONSES[portee][cleReponse(k)] = v
+    }
+  }
+  const k = cleReponse(terme)
+  return [...(_REPONSES.toutes?.[k] || []), ...(_REPONSES[themeId]?.[k] || [])]
+}
+
+// Deux libellés de la même notion : identiques, l'un est une variante de
+// l'autre (« Dommage » / « Dommage / préjudice »), ou le plus long ne fait
+// qu'ajouter un complément (« Consentement » / « Le consentement des parties »,
+// « Capacité juridique » / « La capacité juridique de contracter »). Ils ne
+// doivent pas coexister dans un exercice, sinon il y a deux bonnes réponses.
+// « Chômage » et « Taux de chômage » ou « Chômage structurel » restent distincts.
+function libelleNotion(terme) {
+  return cleReponse(String(terme || '').replace(/\([^)]*\)/g, ' '))
+}
+function memeNotion(a, b) {
+  const A = libelleNotion(a)
+  const B = libelleNotion(b)
+  if (!A || !B) return false
+  if (A === B) return true
+  const variantes = (s) => s.split(/\s*\/\s*/).map((x) => x.trim()).filter(Boolean)
+  if (variantes(A).includes(B) || variantes(B).includes(A)) return true
+  const [court, long] = A.length <= B.length ? [A, B] : [B, A]
+  return new RegExp(`^${court.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')} (de|des|du|d'|en)\\b`).test(long)
+}
+
+// Notions dont l'une englobe l'autre (content/commun/notions-liees.json) :
+// la définition de l'une est vraie aussi de l'autre.
+let _LIEES = null
+function notionsLiees(a, b) {
+  if (memeNotion(a, b)) return true
+  if (!_LIEES) _LIEES = (commun('notions-liees') || []).map(([x, y]) => [cleReponse(x), cleReponse(y)])
+  const ka = cleReponse(a)
+  const kb = cleReponse(b)
+  return _LIEES.some(([x, y]) => (x === ka && y === kb) || (x === kb && y === ka))
+}
+
+// Étapes d'un raisonnement (« Faits », « Application », « Conclusion »,
+// « Règle de droit (majeure) »…) : ce ne sont pas des notions à définir.
+const ETAPES_METHODE = new Set(['faits', 'enonce', 'application', 'conclusion', 'qualification', 'solution', 'probleme', 'probleme juridique', 'probleme de droit', 'question', 'question de droit', 'regle', 'reponse', 'analyse', 'situation', 'corrige'])
+function estEtapeMethode(terme) {
+  if (/\((majeure|mineure)\)/i.test(terme)) return true
+  return ETAPES_METHODE.has(cleReponse(String(terme).replace(/\([^)]*\)/g, ' ')))
+}
+
 // Construit un QCM à partir de paires { q (énoncé), a (bonne réponse), e }.
 // Les mauvaises réponses (distracteurs) sont tirées des AUTRES réponses de la
 // même section → l'exercice reste propre au chapitre.
-function qcmFromPairs(pairs, id, title) {
+// exclut(p, a) : vrai si la réponse a ne peut pas servir de distracteur pour p
+// (notion liée : elle serait aussi juste).
+function qcmFromPairs(pairs, id, title, exclut = null) {
   const answers = [...new Set(pairs.map((p) => p.a).filter((a) => a && a.length))]
   if (answers.length < 2) return null
   const questions = shuffle(pairs)
     .slice(0, 8)
     .map((p) => {
-      const distractors = shuffle(answers.filter((a) => a !== p.a)).slice(0, 3)
+      const distractors = shuffle(answers.filter((a) => a !== p.a && !(exclut && exclut(p, a)))).slice(0, 3)
       const choices = shuffle([p.a, ...distractors])
       return { q: p.q, choices, answer: choices.indexOf(p.a), explain: p.e || `${p.q} → ${p.a}` }
     })
@@ -377,15 +474,18 @@ function qcmFromPairs(pairs, id, title) {
 // Génère des « textes à trous » à partir des termes en gras des paragraphes /
 // puces de la SECTION (on masque le terme mis en valeur dans sa phrase). Les
 // longues phrases sont réduites à une fenêtre de contexte autour du trou.
-function trouFromBold(sec) {
+function trouFromBold(sec, themeId) {
   const out = []
   const seen = new Set()
   const addFrom = (text) => {
-    for (const sRaw of String(text).split(/(?<=[.!?…])\s+/)) {
+    for (const sRaw of phrases(text)) {
       const bm = sRaw.match(/\*\*(.+?)\*\*/)
       if (!bm) continue
       const term = bm[1].trim()
       if (term.length < 3 || term.length > 45 || /^\d+$/.test(term)) continue
+      // Une étiquette (« Énoncé. », « Qualification : », « **Conclusion** : »)
+      // n'est pas un mot à trouver.
+      if (/[.:;!?]$/.test(term) || estEtapeMethode(term)) continue
       // Clarté : un « trou » ne doit masquer qu'UNE notion. On écarte les
       // fragments de phrase (plus de 4 mots) et les mnémotechniques « X = Y »
       // ou « X : Y », qui rendent la réponse impossible à deviner proprement.
@@ -408,8 +508,12 @@ function trouFromBold(sec) {
         text2 = (start > 0 ? '… ' : '') + plain.slice(start, at) + '____' + plain.slice(at + term.length, end) + (end < plain.length ? ' …' : '')
       }
       if (!text2.includes('____')) continue
+      // Assez de contexte pour deviner le mot : au moins 5 mots autour du trou
+      // (« Qualification : ____. » ou « Au-delà → ____. » ne se comprennent pas seuls).
+      const contexte = text2.replace('____', ' ').split(/\s+/).filter((w) => /[\p{L}\d]/u.test(w))
+      if (contexte.length < 5) continue
       seen.add(key)
-      out.push({ text: text2, answer: term, explain: `Le mot manquant : « ${term} ».` })
+      out.push({ text: text2, answer: term, alt: reponsesAcceptees(term, themeId), explain: `Le mot manquant : « ${term} ».` })
     }
   }
   for (const b of sec.blocks || []) {
@@ -439,6 +543,9 @@ function twoColKind(head) {
   // 1) Vraie définition (priorité) : l'entête l'annonce explicitement.
   if (/definition|\bsens\b|signif|designe|veut dire|c.?est quoi/.test(h1)) return 'def'
   if (/\bnotion|\bterme|\bmot\b|concept|vocabulaire|sigle|acronyme/.test(h0)) return 'def'
+  // Application à un cas (« Condition | Ici ») ou caractéristique (« Forme |
+  // Responsabilité ») : la colonne de droite n'est pas une définition.
+  if (/^(ici|en l.espece|dans (ce|le|notre) cas|application|cas|exemples?|illustrations?|responsabilite|patrimoine|capital|associes?|regime|duree|delai|montant|taux|sanctions?|consequences?|effets?)\b/.test(h1)) return 'case'
   // 2) Comparaison : marqueur de contraste, opposition gauche↔droite, entête
   //    temporel « avant / après », ou mot fort commun aux deux titres.
   if (CONTRAST_RE.test(h0) || CONTRAST_RE.test(h1)) return 'compare'
@@ -477,7 +584,9 @@ function sectionPairs(sec) {
     } else if (b.t === 'frise') {
       for (const e of b.events || []) if (e.date && e.label) datePairs.push({ d: stripMd(e.date), e: stripMd(e.label) })
     } else if (b.t === 'table' && (b.head || []).length === 2 && !isDateHead((b.head || [])[0])) {
-      if (twoColKind(b.head) === 'compare') {
+      const kind = twoColKind(b.head)
+      if (kind === 'case') continue
+      if (kind === 'compare') {
         const labelA = stripMd(String((b.head || [])[0] || ''))
         const labelB = stripMd(String((b.head || [])[1] || ''))
         const itemsA = []
@@ -517,8 +626,10 @@ function sectionPairs(sec) {
     if (!s.includes('**')) continue
     const m = s.match(/^(.{3,60}?)\s*[:—–]\s+(.+)$/)
     if (!m) continue
-    const term = stripMd(m[1]).replace(/[;,.]$/, '').trim()
+    // « 5. La mineure » → « La mineure » : le numéro de liste n'est pas la notion.
+    const term = stripMd(m[1]).replace(/[;,.]$/, '').replace(/^\d+\s*[.)]\s*/, '').trim()
     const def = stripMd(m[2]).replace(/[;.]$/, '').trim()
+    if (estEtapeMethode(term)) continue
     if (term && def.length > 3 && term.length <= 50) defPairs.push({ term, def })
   }
   // Un « repère chronologique » n'est pas une définition : si le terme OU la
@@ -530,9 +641,9 @@ function sectionPairs(sec) {
     if (isBareDate(p.def)) { datePairs.push({ d: p.def, e: p.term }); defPairs.splice(i, 1) }
     else if (isBareDate(p.term)) { datePairs.push({ d: p.term, e: p.def }); defPairs.splice(i, 1) }
   }
-  // Dédoublonnage des définitions (même terme répété).
-  const seen = new Set()
-  const uniqDefs = defPairs.filter((p) => { const k = p.term.toLowerCase(); if (seen.has(k)) return false; seen.add(k); return true })
+  // Dédoublonnage des définitions (même notion sous deux libellés).
+  const uniqDefs = []
+  for (const p of defPairs) if (!uniqDefs.some((u) => memeNotion(u.term, p.term))) uniqDefs.push(p)
   return { datePairs, defPairs: uniqDefs, widePairs, compareTables }
 }
 
@@ -598,7 +709,8 @@ function vraiFauxFromDefs(defPairs, id, title) {
     if (k % 2 === 0) {
       qs.push({ statement: `« ${p.term} » : ${p.def}`, answer: true, explain: `Exact. ${p.term} → ${p.def}` })
     } else {
-      const other = pool.find((o) => o.term !== p.term && o.def !== p.def)
+      // L'autre définition ne doit pas être vraie aussi pour ce terme (notion liée).
+      const other = pool.find((o) => o.term !== p.term && o.def !== p.def && !notionsLiees(o.term, p.term))
       if (other) qs.push({ statement: `« ${p.term} » : ${other.def}`, answer: false, explain: `Faux. ${p.term} → ${p.def}` })
     }
   })
@@ -634,12 +746,10 @@ function enrichedDefPool(defPairs, themeId, idx) {
   const bank = (THEME_TERMS[themeId] || []).map(([term, def]) => ({ term, def }))
   const start = bank.length ? (idx * 3) % bank.length : 0
   const rotated = [...bank.slice(start), ...bank.slice(0, start)]
-  const seen = new Set()
   const out = []
   for (const p of [...defPairs, ...rotated]) {
-    const k = String(p.term || '').toLowerCase().trim()
-    if (!p.term || !p.def || seen.has(k)) continue
-    seen.add(k); out.push({ term: p.term, def: p.def })
+    if (!p.term || !p.def || out.some((o) => memeNotion(o.term, p.term))) continue
+    out.push({ term: p.term, def: p.def })
   }
   return out
 }
@@ -672,35 +782,40 @@ function sectionExercises(sec, theme, idx) {
   //    (situation → notion, sens inverse), vrai/faux, écris le terme, association.
   if (richDefs.length >= 2) {
     // QCM notion → définition, avec une formulation qui tourne d'un item à l'autre.
-    const defItems = shuffle(richDefs).map((p, i) => ({ q: QDEF_TEMPLATES[i % QDEF_TEMPLATES.length](p.term), a: p.def, e: `${p.term} → ${p.def}` }))
+    const defItems = shuffle(richDefs).map((p, i) => ({ q: QDEF_TEMPLATES[i % QDEF_TEMPLATES.length](p.term), a: p.def, e: `${p.term} → ${p.def}`, term: p.term }))
+    // Une définition ne sert pas de distracteur à une notion liée (elle serait juste aussi).
+    const termeDeDef = new Map(richDefs.map((p) => [p.def, p.term]))
+    const exclutDef = (p, a) => notionsLiees(p.term, termeDeDef.get(a) || '')
     if (defItems.length >= 10) {
       const half = Math.ceil(defItems.length / 2)
-      const qa = qcmFromPairs(defItems.slice(0, half), `${base}::qdef0`, 'QCM — notions (série 1)')
-      const qb = qcmFromPairs(defItems.slice(half), `${base}::qdef1`, 'QCM — notions (série 2)')
+      const qa = qcmFromPairs(defItems.slice(0, half), `${base}::qdef0`, 'QCM — notions (série 1)', exclutDef)
+      const qb = qcmFromPairs(defItems.slice(half), `${base}::qdef1`, 'QCM — notions (série 2)', exclutDef)
       if (qa && qa.questions.length >= 3) out.push(qa)
       if (qb && qb.questions.length >= 3) out.push(qb)
     } else {
-      const qDef = qcmFromPairs(defItems, `${base}::qdef`, 'QCM — les notions du chapitre')
+      const qDef = qcmFromPairs(defItems, `${base}::qdef`, 'QCM — les notions du chapitre', exclutDef)
       if (qDef && qDef.questions.length >= 3) out.push(qDef)
     }
 
     // Cas concret : on décrit une situation (la définition) et l'élève retrouve
     // la bonne notion parmi plusieurs — l'inverse du QCM précédent.
     const casItems = richDefs.map((p) => ({ q: `Cas concret — on observe : « ${p.def} ». De quelle notion s'agit-il ?`, a: p.term, e: `${p.term} : ${p.def}` }))
-    const qCas = qcmFromPairs(casItems, `${base}::qcas`, 'Cas concrets — trouve la notion')
+    const qCas = qcmFromPairs(casItems, `${base}::qcas`, 'Cas concrets — trouve la notion', (p, a) => notionsLiees(p.a, a))
     if (qCas && qCas.questions.length >= 3) { qCas.icon = '🧩'; out.push(qCas) }
 
     const vf = vraiFauxFromDefs(richDefs, `${base}::vf`, 'Vrai ou faux — les notions')
     if (vf) out.push(vf)
 
     const shortTerms = richDefs.filter((p) => isCleanTerm(p.term))
-    const sTerm = saisieFromItems(shortTerms.map((p) => ({ prompt: `Quel terme correspond à cette définition ?\n« ${p.def} »`, answer: p.term, alt: termVariants(p.term), explain: `${p.term} : ${p.def}` })), `${base}::sterm`, 'Écris le terme — ce chapitre', '🔤')
+    const sTerm = saisieFromItems(shortTerms.map((p) => ({ prompt: `Quel terme correspond à cette définition ?\n« ${p.def} »`, answer: p.term, alt: [...termVariants(p.term), ...reponsesAcceptees(p.term, theme.id)], explain: `${p.term} : ${p.def}` })), `${base}::sterm`, 'Écris le terme — ce chapitre', '🔤')
     if (sTerm) out.push(sTerm)
 
     if (richDefs.length >= 3) {
       // Association notion ↔ définition (définitions abrégées pour tenir à l'écran).
+      // Jamais deux notions liées dans la même association.
       const rseen = new Set()
       const pairs = shuffle(richDefs)
+        .filter((p, i, tous) => !tous.slice(0, i).some((q) => notionsLiees(q.term, p.term)))
         .map((p) => ({ left: p.term, right: shortenDef(p.def, 90) }))
         .filter((p) => { const k = p.right.toLowerCase(); if (rseen.has(k)) return false; rseen.add(k); return true })
         .slice(0, 6)
@@ -713,14 +828,14 @@ function sectionExercises(sec, theme, idx) {
   if (qWide && qWide.questions.length >= 3) out.push(qWide)
 
   // 4) Textes à trous : découpés en plusieurs lots + une version « à écrire ».
-  const trou = trouFromBold(sec)
+  const trou = trouFromBold(sec, theme.id)
   if (trou.length >= 2) {
     const batches = []
     for (let k = 0; k < trou.length; k += 6) batches.push(trou.slice(k, k + 6))
     batches.slice(0, 3).forEach((b, bi) => {
       if (b.length >= 2) out.push({ id: `${base}::trou${bi}`, type: 'trou', title: batches.length > 1 ? `Texte à trous — série ${bi + 1}` : 'Texte à trous — ce chapitre', icon: '✏️', questions: b })
     })
-    const sTrou = saisieFromItems(trou.map((q) => ({ prompt: `Complète par le mot exact :\n${q.text}`, answer: q.answer, explain: q.explain })), `${base}::strou`, 'Complète — à écrire', '✍️')
+    const sTrou = saisieFromItems(trou.map((q) => ({ prompt: `Complète par le mot exact :\n${q.text}`, answer: q.answer, alt: q.alt, explain: q.explain })), `${base}::strou`, 'Complète — à écrire', '✍️')
     if (sTrou) out.push(sTrou)
   }
 
@@ -826,13 +941,11 @@ function hasHandDefinitions(sec) {
 export function sectionDefinitions(sec, themeId, subjectId, sectionIdx = 0, count = 5) {
   if (!sec || hasHandDefinitions(sec)) return { skip: true, defs: [] }
   const out = []
-  const seen = new Set()
   const add = (term, def) => {
     const t = stripMd(String(term || '')).trim()
     const d = stripMd(String(def || '')).trim()
-    const k = t.toLowerCase()
-    if (!t || !d || t.length > 48 || seen.has(k) || out.length >= count) return
-    seen.add(k); out.push({ term: t, def: d })
+    if (!t || !d || t.length > 48 || out.length >= count || out.some((o) => memeNotion(o.term, t))) return
+    out.push({ term: t, def: d })
   }
   // 1) Définitions propres à la section (les plus pertinentes).
   for (const p of sectionPairs(sec).defPairs) add(p.term, p.def)
@@ -903,11 +1016,26 @@ export function buildThemeTest(themeId) {
   shuffle(redac).forEach(push)
   sectionRedac.slice(3).forEach(push)
 
+  // Cas pratiques : l'énoncé d'un exemple sert de sujet, et les blocs qui le
+  // suivent dans la section (règle, faits, analyse, conclusion) de corrigé.
+  // Les blocs « Majeure », « Conclusion »… sont des étapes du corrigé, pas des sujets.
+  const ETAPE_RE = /majeure|mineure|r[èe]gle|faits|application|conclusion|solution|corrig|analyse|m[ée]thode|retenir/i
   const cas = []
   for (const sec of theme.cours || []) {
-    for (const b of sec.blocks || []) {
-      if (b.t === 'example') cas.push({ prompt: b.h || 'Analyse ce cas', answer: b.c })
-    }
+    const blocks = sec.blocks || []
+    blocks.forEach((b, j) => {
+      if (b.t !== 'example' || !b.c || ETAPE_RE.test(b.h || '')) return
+      const corrige = []
+      for (const nb of blocks.slice(j + 1)) {
+        if (nb.t === 'example' && !ETAPE_RE.test(nb.h || '')) break
+        const txt = nb.t === 'example' ? nb.c : sectionPlainText({ blocks: [nb] })
+        if (txt) corrige.push(nb.h ? `**${stripMd(nb.h)}** — ${txt}` : txt)
+        if (corrige.length >= 4) break
+      }
+      const answer = corrige.join('\n\n')
+      const prompt = stripMd(String(b.c).replace(/^\s*\*\*[^*]{1,30}[.:]\*\*\s*/, ''))
+      if (answer.length >= 60 && prompt.length >= 20) cas.push({ prompt, answer })
+    })
   }
   return {
     qcm: shuffle(qcm).slice(0, 8),

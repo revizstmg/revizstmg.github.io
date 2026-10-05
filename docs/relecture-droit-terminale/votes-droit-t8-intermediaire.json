@@ -1,0 +1,156 @@
+[
+  {
+    "id": "t8-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Un animal n'est pas une personne juridique : c'est un être vivant doué de sensibilité (art. 515-14 C. civ.), soumis au régime des biens. Il ne peut donc pas être propriétaire ni hériter.",
+    "justification": "La loi française (art. 515-14) reconnaît depuis 2015 les animaux comme « êtres vivants doués de sensibilité », pas simplement comme des biens. Cette précision est pertinente pour un élève de Terminale, bien que les animaux restent soumis au régime juridique des biens.",
+    "source": "Art. 515-14 du Code civil français (modifié en 2015)"
+  },
+  {
+    "id": "t8-02",
+    "verdict": "CORRIGER",
+    "version_ajustee": "… (même si, depuis 2015, la résidence principale est insaisissable de droit et, depuis 2022, la loi sépare de droit le patrimoine professionnel du patrimoine personnel)",
+    "justification": "La version A omet la date clé de 2015 pour l'insaisissabilité de la résidence principale. C'est une réforme antérieure et distincte de celle de 2022. Distinguer les deux dates aide l'élève à comprendre l'évolution progressive du droit.",
+    "source": "Loi du 15 juin 2015 (insaisissabilité de la résidence principale) et Loi du 14 février 2022 (séparation des patrimoines)"
+  },
+  {
+    "id": "t8-03",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "La formule « responsabilité limitée aux apports » est une simplification acceptable au niveau de l'essentiel (ESS3). La SNC (exception avec responsabilité indéfinie) est un cas particulier moins courant et peut être traitée séparément ou en approfondissement, sans surcharger le synthétique.",
+    "source": "Art. 1832 du Code civil ; distinction des formes de sociétés commerciales"
+  },
+  {
+    "id": "t8-04",
+    "verdict": "CORRIGER",
+    "version_ajustee": "… les créanciers du salon ne peuvent en principe saisir que les biens professionnels (sauf renonciation de Léa, à la demande d'un créancier). En EURL, sa responsabilité est limitée à ses apports (cette protection existait déjà avant 2022). La réforme de 2022 améliore donc surtout la situation de l'entreprise individuelle. Attention : pour l'emprunt de 40 000 €, la banque exigera souvent une caution personnelle ou une renonciation, qui engageraient alors son patrimoine personnel.",
+    "justification": "L'exercice actuel suggère une protection quasi-absolue qui peut induire l'élève en erreur. Les limites essentielles (caution personnelle, renonciation) doivent être explicites pour éviter une mauvaise compréhension du droit réel.",
+    "source": "Loi du 14 février 2022 ; pratique bancaire (cautions personnelles)"
+  },
+  {
+    "id": "t8-05",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le générateur produit un exercice mal structuré sans contexte clair (prompt vs. answer non distingués). La correction proposée (préciser la consigne et exclure les blocs « Majeure/Mineure ») va dans le bon sens pour rendre l'exercice pédagogiquement pertinent.",
+    "source": "Problème de structure du générateur d'exercices"
+  },
+  {
+    "id": "t8-06",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Ne pas générer de trou à partir des étiquettes « Énoncé. » ; enlever le gras ou l'exclure du générateur.",
+    "justification": "« Énoncé. » n'est pas un concept juridique mais une étiquette de structure. Un exercice dont la réponse attendue est une étiquette de texte n'est pas pédagogique et frustre l'élève.",
+    "source": "Conception des exercices d'apprentissage"
+  },
+  {
+    "id": "t8-07",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Accepter « statut juridique » et « cadre juridique » comme réponses valables, ou fournir plus de contexte : « Entreprendre suppose de choisir un ____ : entreprise individuelle ou société ».",
+    "justification": "« Statut juridique » et « cadre juridique » sont utilisés de manière quasi-interchangeable dans le cours. Accepter les deux réponses est pertinent. Un trou isolé peut aussi sembler vague sans contexte.",
+    "source": "Utilisation dans le cours (C5.1, ESS1)"
+  },
+  {
+    "id": "t8-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Ajouter du contexte : « Pour savoir si l'entrepreneur risque sa maison, tout dépend de la ____ choisie (EI, SARL, SAS…) » ou reformuler pour un contexte clair.",
+    "justification": "La phrase isolée « Cela dépend de la ____ » est trop vague sans contexte. L'élève ne sait pas ce qui « dépend ». Ajouter le contexte rend l'exercice pertinent.",
+    "source": "Pédagogie de la saisie"
+  },
+  {
+    "id": "t8-09",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Accepter « déposé », « déposé sa marque », « enregistré sa marque » comme réponses valables.",
+    "justification": "Le verbe « enregistrer » est aussi utilisé légalement pour les marques (à l'INPI). Accepter les variantes de formulation est pédagogiquement pertinent et ne diminue pas la rigueur.",
+    "source": "Terminologie juridique courante pour les marques"
+  },
+  {
+    "id": "t8-10",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Ne pas tirer de définitions du tableau de comparaison [C2.3]. Soit renommer les en-têtes pour qu'ils ne ressemblent pas à des définitions, soit exclure « Responsabilité limitée » comme distracteur quand elle n'est pas la bonne réponse.",
+    "justification": "Le tableau [C2.3] compare des formes, pas des notions. L'utiliser comme banque de définitions crée une confusion : l'élève peut lire les lignes du tableau comme des définitions de notion.",
+    "source": "Conception des exercices (ne pas confondre tableau comparatif et glossaire)"
+  },
+  {
+    "id": "t8-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retirer « SARL / SAS » de la banque de définitions de notions. Ce n'est pas une notion à définir mais une forme juridique à connaître.",
+    "justification": "« SARL / SAS » n'est pas une notion du type « Responsabilité limitée » ou « Patrimoine ». C'est une énumération de formes. Le confondre avec les vraies notions induit l'élève en erreur sur la structure conceptuelle du droit.",
+    "source": "Distinction entre notion (concept) et forme juridique (application)"
+  },
+  {
+    "id": "t8-12",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Remplacer la saisie par : « Citez une forme de société où la responsabilité des associés est limitée aux apports » en acceptant EURL, SARL, SAS, SASU, SA comme réponses.",
+    "justification": "La pseudo-définition tirée du tableau [C2.3] n'est pas une vraie saisie. Demander une application (citer une forme) est plus pédagogique et teste la compréhension plutôt que la récitation.",
+    "source": "Pédagogie de la saisie"
+  },
+  {
+    "id": "t8-13",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Supprimer cette saisie ou demander : « Citez une forme de société où la responsabilité des associés est limitée aux apports » en acceptant EURL, SARL, SAS, SASU, SA.",
+    "justification": "La « définition » « Limitée aux apports (personne morale) » est tirée du tableau de comparaison [C2.3], pas du glossaire de notions. L'élève reçoit un signal confus : ce n'est pas une vraie notion à apprendre, c'est une caractéristique de formes. Remplacer par un exercice applicatif (citer une forme) teste mieux la compréhension.",
+    "source": "Pédagogie : ne pas utiliser tableau comparatif comme banque de définitions"
+  },
+  {
+    "id": "t8-14",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Utiliser les vraies définitions du glossaire ([C1.D1] : « Entreprise exploitée par une personne physique, sans création de société »), pas les lignes du tableau [C2.3] (« Patrimoine pro séparé du perso (2022) »).",
+    "justification": "La réponse « Patrimoine pro séparé du perso (2022) » vient du tableau de comparaison, pas d'une définition de notion. Le QCM mélange deux catégories : les vraies notions à connaître et le contenu d'un tableau de comparaison. Cela induit l'élève en erreur sur ce qu'il doit apprendre.",
+    "source": "Cohérence entre glossaire et exercices"
+  },
+  {
+    "id": "t8-15",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Fusionner « La responsabilité limitée en société » et « Responsabilité limitée » en une seule entrée, ou exclure « Responsabilité limitée » (D) des distracteurs quand « La responsabilité limitée en société » (B) est la bonne réponse.",
+    "justification": "Deux entrées différentes pour la même notion créent une ambiguïté : l'élève ne sait pas s'il s'agit de deux concepts distincts ou d'une redondance. Cela peut le bloquer ou le confondre lors de l'exercice. Fusionner clarifie.",
+    "source": "Unicité des définitions de notion"
+  },
+  {
+    "id": "t8-16",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "Le vrai/faux est bien construit : la phrase « Forme légale choisie pour entreprendre » est une fausse définition (c'est celle de « Statut juridique », pas d'« Entreprise individuelle »). L'exercice teste correctement la distinction entre deux notions proches.",
+    "source": "Analyse pédagogique"
+  },
+  {
+    "id": "t8-17",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Accepter « contrat d'entreprise » et « sous-traitance » en plus de « Contrat de sous-traitance ». Ou enrichir la définition proposée : « Contrat de sous-traitance : un entrepreneur confie à un autre l'exécution de tout ou partie du contrat qu'il a conclu avec son client ».",
+    "justification": "La définition « Confier une tâche à un tiers » est très vague. L'élève pourrait logiquement répondre « contrat d'entreprise » qui est également une réponse pertinente. Ces deux termes sont utilisés de façon quasi-interchangeable en droit des affaires. Accepter les variantes ou préciser est nécessaire.",
+    "source": "Droit des affaires : contrat d'entreprise (art. 1779 C. civ.) vs contrat de sous-traitance"
+  },
+  {
+    "id": "t8-18",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "La section [C3] (Propriété industrielle) est pertinente au thème 8 : elle est citée dans l'intro du thème (« l'activité se développe dans le respect de la concurrence »). De plus, la version A ne contient aucune erreur juridique sur le fond. La version B propose un déplacement pédagogique vers Première, mais ce n'est pas une « correction » d'erreur.",
+    "source": "Intro du thème 8 : « respect de la concurrence » ; pertinence thématique"
+  },
+  {
+    "id": "t8-19",
+    "verdict": "INCERTAIN",
+    "version_ajustee": "",
+    "justification": "Le RGPD ([C11]) est une obligation majeure pour tout entrepreneur. Cependant, il pourrait être dans un thème de Première déjà. Sans voir le programme officiel de Terminale T8, impossible de trancher : l'inclure n'est pas une erreur, mais c'est possiblement hors du cœur du thème 8.",
+    "source": "RGPD (Rgpd est transversal, applicable à tous)"
+  },
+  {
+    "id": "t8-20",
+    "verdict": "INCERTAIN",
+    "version_ajustee": "",
+    "justification": "La transmission de l'entreprise ([C8]) est un sujet complet qui mériterait un thème propre ou un approfondissement séparé. Pour Terminale T8 « comment entreprendre », elle n'est pas centrale : elle concerne plutôt la « fin » de l'activité. Mais ce n'est pas une erreur de l'inclure. À vérifier avec le programme officiel.",
+    "source": "Pertinence thématique du thème 8"
+  },
+  {
+    "id": "t8-21",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "Garder [C10] (Contrats de l'entreprise, y compris bail commercial). Ces contrats sont essentiels à la vie quotidienne d'une entreprise. Le bail commercial, en particulier, est central pour comprendre la protection du fonds de commerce et les obligations de l'entrepreneur.",
+    "source": "Pertinence pour « comment entreprendre »"
+  },
+  {
+    "id": "t8-22",
+    "verdict": "INCERTAIN",
+    "version_ajustee": "",
+    "justification": "La proposition de réafficher les sections 8.1 à 8.4 est une question de structure/affichage du générateur, pas une erreur de contenu. C'est un problème d'UX plutôt qu'une erreur juridique. Si le cours complet est bien structuré, cela n'affecte pas l'apprentissage substantiel.",
+    "source": "Conception technique du générateur"
+  }
+]

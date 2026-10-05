@@ -8,6 +8,7 @@ import { BADGES } from '../src/badges.js'
 import { CALC, makeCalcSet } from '../src/calc.js'
 import { LEVELS, subjectsForTrack, trackLabel } from '../src/data/tracks.js'
 import { ALL_CHAPTERS, SUBJECTS } from '../src/data/index.js'
+import { answerMatches, answerMatchesCours } from '../src/games/common.jsx'
 import { avecGraine, empreinte } from './outils.js'
 
 const vide = () => ({ xp: 0, streak: { count: 0 }, badges: [], chapters: {}, favorites: [], themeTime: {}, totalAnswers: 0, correctAnswers: 0 })
@@ -164,4 +165,17 @@ describe('filières', () => {
     expect(subs.every((s) => s.niveau === 'premiere')).toBe(true)
   })
   it('pas de filière, pas de matière', () => expect(subjectsForTrack(null)).toEqual([]))
+})
+
+describe('correction des réponses écrites', () => {
+  it('exercices de cours : article, numéro et ponctuation ne comptent pas', () => {
+    expect(answerMatchesCours('convention collective', 'La convention collective')).toBe(true)
+    expect(answerMatchesCours('mineure', '5. La mineure')).toBe(true)
+    expect(answerMatchesCours('Dommages intérêts.', 'Les dommages-intérêts')).toBe(true)
+    expect(answerMatchesCours('extracontractuelle', 'délictuelle', ['extracontractuelle'])).toBe(true)
+    expect(answerMatchesCours('majeure', '5. La mineure')).toBe(false)
+  })
+  it('langues : l’article reste exigé', () => {
+    expect(answerMatches('casa', 'la casa')).toBe(false)
+  })
 })

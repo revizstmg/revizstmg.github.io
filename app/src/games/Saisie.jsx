@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from 'react'
-import { Feedback, GameProgress, useStopwatch, answerMatches, normalize, shuffle } from './common.jsx'
+import { Feedback, GameProgress, useStopwatch, answerMatchesCours as answerMatches, normalize, shuffle } from './common.jsx'
 import MicButton from '../components/MicButton.jsx'
 import { useT } from '../i18n.js'
 

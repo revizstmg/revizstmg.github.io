@@ -110,7 +110,7 @@ app/
     ordre.json                   ordre d'affichage des matières
     commun/                      contenu qui ne dépend d'aucune matière
       formules.json, methodo.json, glossaire.json, boutique.json,
-      definitions-matieres.json
+      definitions-matieres.json, reponses-acceptees.json, notions-liees.json
     <id-matière>/                un dossier par matière (gestion-finance, droit…)
       matiere.json               la matière et ses thèmes de base
       cours-complets.json        couche lessons

@@ -1,0 +1,128 @@
+[
+  {
+    "id": "t5-01",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "La vente immobilière n'est pas un contrat solennel : la vente est parfaite par l'accord sur la chose et le prix, et peut être faite « par acte authentique ou sous seing privé » (art. 1582 et 1583 C. civ.) ; l'acte notarié sert à la publicité foncière, sauf cas particuliers comme la VEFA. En outre, un contrat solennel exige une forme prescrite par la loi à peine de nullité (art. 1172 al. 2), pas un simple « écrit ». La version B est exacte : donation (art. 931) et contrat de mariage (art. 1394) sont les exemples classiques, et elle reste cohérente avec le tableau (donation = unilatéral) et avec E19 (« certains contrats exigent un écrit »).",
+    "source": "Code civil art. 1172 al. 2, 1582, 1583, 931, 1394 ; app/content/droit/approfondi-1.json (seule occurrence de « solennel » dans l'app, aucune contradiction avec p1-droit ou d'autres cours)."
+  },
+  {
+    "id": "t5-02",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "La triade « imprévisible, irrésistible et extérieur » est la présentation classique de la force majeure et résume fidèlement l'art. 1218 (événement échappant au contrôle du débiteur, non raisonnablement prévisible lors de la conclusion, dont les effets ne peuvent être évités par des mesures appropriées). C'est une simplification normale au niveau du bac, et la version B n'apporte pas de correction d'une erreur. De plus, le thème 6 enseigne la même définition (imprévisible, irrésistible et extérieur) : changer la formulation en T5 créerait une différence de vocabulaire entre deux thèmes.",
+    "source": "Code civil art. 1218 ; app/content/droit/cours-complets.json (T6, exonération), droit/etudes-documents.json (QCM sur la force majeure), droit/approfondi-1.json."
+  },
+  {
+    "id": "t5-03",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "L'art. 1128 (issu de la réforme de 2016) exige « le consentement des parties, leur capacité de contracter, un contenu licite et certain » ; « objet » est le vocabulaire de l'ancien art. 1108. L'essentiel ESS2 est donc inexact et contredit la formule F1, [C3.3], [C6.1], [C6.2], [E2] et le Document 1 du même thème, qui disent tous « contenu licite et certain ». La version B est exacte et alignée sur ces passages.",
+    "source": "Code civil art. 1128 ; app/content/droit/cours-complets.json ligne 5 (seule occurrence de « objet » comme condition de validité), droit/matiere.json (F1, E2), droit/etudes-documents.json (Doc 1)."
+  },
+  {
+    "id": "t5-04",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "L'exemple de la section est justement un billet de concert acheté en ligne, or l'art. L221-28, 12° du Code de la consommation exclut le droit de rétractation pour les activités de loisirs à fournir à une date ou une période déterminée. La phrase A, placée juste après cet exemple, laisse croire que les 14 jours s'y appliquent, ce qui est un piège classique de cas pratique. La version B est exacte (14 jours : L221-18 ; exclusion : L221-28 12°) et ne contredit pas [C11] ni cours-complets (« souvent 14 jours »), qui sont des simplifications compatibles avec « la plupart des achats à distance ».",
+    "source": "Code de la consommation art. L221-18 et L221-28 12° (vérifié par recherche web) ; app/content/droit/cours-reels.json (C1.3), droit/approfondi-2.json (C11), droit/cours-complets.json."
+  },
+  {
+    "id": "t5-05",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retenir B en limitant la correction aux incohérences réelles. [C9.2] : « … la majeure (la règle de droit), la mineure (les faits qualifiés juridiquement et confrontés à la règle, c'est-à-dire l'application), la conclusion (la solution du problème posé). » [E7] : « Mineure : les faits qualifiés et rapprochés de la règle » puis « Conclusion : solution du problème de droit ». [C4.2] : « Faits et application (mineure) : l'acheteur est mineur, donc juridiquement incapable de conclure seul un tel contrat ; une condition de validité (la capacité) manque. » avec [C4.3] adapté (« règle de droit → faits et application → conclusion ») et le même changement dans app/content/droit/enrichissements.json. [C13.2] ne change pas.",
+    "justification": "Le thème se contredit : [C9.2] et [E7] font de l'application le contenu de la conclusion, alors que [C13.2] (et E515) la rangent dans la mineure (« appliquer la règle aux faits ») et que [C4.2] en fait une étape distincte. Dans la méthode générale de l'app (commun/methodo.json), l'étape s'appelle « L'application (mineure) », et cours-complets.json dit « faits qualifiés (mineure) » : B s'aligne sur ces deux sources. La conclusion est la réponse au problème posé, pas l'application ; B est exacte.",
+    "source": "app/content/commun/methodo.json (cas-droit), droit/cours-complets.json (méthode du syllogisme), droit/approfondi-1.json (C9.2, C13.2), droit/matiere.json (E7), droit/enrichissements.json (C4)."
+  },
+  {
+    "id": "t5-06",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "La mise en demeure n'est pas une sanction mais un préalable (art. 1221, 1223, 1226, 1231), et la clause pénale n'est pas une sanction à part (art. 1231-5) ; la fiche A omet en outre l'exception d'inexécution et la réduction du prix, pourtant enseignées en [C8.3], [C14.2] et dans la fiche E15. La version B suit l'art. 1217 et place correctement la mise en demeure comme préalable « en principe » (elle n'est pas requise, par exemple, pour l'exception d'inexécution). Elle est exacte et cohérente avec cours-complets.json, où la mise en demeure précède la liste des sanctions.",
+    "source": "Code civil art. 1217, 1219, 1221, 1223, 1226, 1231, 1231-5 ; app/content/droit/cours-complets.json (section L'inexécution du contrat), droit/approfondi-1.json (C8.3), droit/approfondi-2.json (C14.2), droit/matiere.json (E15, E16)."
+  },
+  {
+    "id": "t5-07",
+    "verdict": "GARDER",
+    "version_ajustee": "",
+    "justification": "« Le contrat fait la loi des parties » est l'adage universellement utilisé pour résumer l'art. 1103, c'est une simplification acceptable au niveau du bac. Le texte exact de l'article figure déjà en [C5.2] et dans le Document 2, et les exercices portent sur la notion de force obligatoire, pas sur la citation littérale. B est exacte mais n'apporte pas de correction d'une erreur, et il faudrait harmoniser plusieurs fiches (E4, E13, E17, E606, E607, cours-complets) pour un gain minime.",
+    "source": "Code civil art. 1103 ; app/content/droit/matiere.json, droit/cours-complets.json, droit/etudes-documents.json (Doc 2 donne la formule exacte)."
+  },
+  {
+    "id": "t5-08",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le corrigé cite « art. 1128, doc 3 » pour la règle sur le dol : l'art. 1128 (doc 1) liste les conditions de validité et ne définit pas le dol, qui relève de l'art. 1137, comme l'app l'enseigne en [C9.3] et [C13.3]. Il y a donc une référence fausse et une contradiction interne. La version B est exacte : art. 1128 pour le consentement, art. 1137 pour le dol, art. 1131 pour la nullité relative (cohérent avec ESS3), et les dommages et intérêts sont bien prévus (doc 3, art. 1178 al. 4). Les quatre documents sont tous affichés dans l'exercice, la référence au doc 1 est donc lisible.",
+    "source": "Code civil art. 1128, 1131, 1137, 1178 ; app/content/droit/approfondi-1.json (C9.3), droit/approfondi-2.json (C13.3), droit/etudes-documents.json ; src/games/DocStudy.jsx (tous les documents sont affichés)."
+  },
+  {
+    "id": "t5-09",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retirer [C6.D1] (et [C6.D2], voir t5-10) de l'encadré « Définitions clés » de [C6], plutôt que de les renommer : « Consentement » est déjà défini en [C5.D1], dans droit/definitions.json et dans six autres encadrés, et une fusion par renommage créerait deux définitions concurrentes du même terme. Garder [C6.D3] « Un contenu licite et certain », qui n'a pas de doublon.",
+    "justification": "Le problème est réel : dans E220 et E221 deux propositions sont justes (la définition « Accord libre et éclairé… » et « il doit être libre et éclairé… »), dans E229 « Consentement » et « Le consentement des parties » sont tous deux corrects, et en saisie E241 l'élève qui écrit « consentement » est refusé. L'élève bien informé est donc pénalisé. La correction envisagée va dans le bon sens ; la suppression est plus sûre que la fusion.",
+    "source": "Lecture des exercices E220, E221, E229, E241 ; app/content/droit/definitions.json et [C5.D1] ; src/games/common.jsx (normalize ne tolère aucune variante)."
+  },
+  {
+    "id": "t5-10",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Retirer [C6.D2] de l'encadré de [C6] (suppression plutôt que fusion), car « être majeur et non protégé » décrit une condition d'exercice et non une définition, et entrerait en conflit avec la définition existante de « Capacité juridique » ([C2.D1], [C5.D2], droit/definitions.json). Si on conserve [C6.D2], accepter « capacité » et « capacité juridique » pour E242 et ne jamais associer les deux termes dans les mêmes choix.",
+    "justification": "Dans E224 la définition « Aptitude à être titulaire de droits et à les exercer soi-même » est une bonne réponse pour « La capacité de contracter » (capacité d'exercice, cf. p1-droit), et dans E235 « Capacité juridique » est aussi défendable que « La capacité de contracter ». En saisie (E242), « capacité » ou « capacité juridique » est refusé. C'est un vrai défaut d'exercice (plusieurs bonnes réponses, bonne réponse refusée) ; la correction envisagée va dans le bon sens.",
+    "source": "Lecture de E224, E225, E235, E242 ; app/content/p1-droit/matiere.json (capacité de jouissance / d'exercice) ; droit/definitions.json."
+  },
+  {
+    "id": "t5-11",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Marquer skip les définitions [C4.D1] à [C4.D4] (garder [C4.D5] Nullité), ce qui supprime aussi les flashcards E570 à E573. Si l'on veut un exercice sur le syllogisme, utiliser un exercice d'ordre ou d'association (comme E7), sans la forme « terme → définition », et après avoir harmonisé la place de « Application » (voir t5-05).",
+    "justification": "Les quatre « définitions » sont les étapes d'un cas particulier (la voiture du mineur), pas des définitions des notions. En saisie (E172), l'énoncé « le contrat encourt la nullité (il peut être annulé) » appelle naturellement « nullité » (terme défini juste à côté), alors que la réponse attendue est « Conclusion » : impossible à deviner et bonne réponse refusée. Les QCM E155 et E158 enseignent de plus qu'une conclusion ou une application se définit par un fait précis, et l'« Application » distincte contredit [C13.2].",
+    "source": "Lecture de E154 à E185 et E570 à E573 ; [C13.2] et app/content/commun/methodo.json (place de l'application dans le syllogisme)."
+  },
+  {
+    "id": "t5-12",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Placer la numérotation hors du gras dans [C13.2] (« 1. **Les faits** : … ») pour que les réponses attendues soient « La mineure », « La majeure », etc. Pour chaque question, accepter uniquement la forme nue de son propre terme (E515 : « mineure », « la mineure » ; E517 : « majeure », « la majeure » ; E514 : « conclusion », « la conclusion » ; E516 : « qualification », « qualification juridique », « la qualification juridique »), sans mélanger les termes entre questions.",
+    "justification": "La réponse attendue « 5. La mineure » contient le numéro ; comme normalize ne retire ni les chiffres ni les articles et que termVariants ne produit aucune variante, l'élève qui écrit « la mineure » ou « mineure » est refusé alors que sa réponse est juste. L'énoncé de la correction envisagée va dans le bon sens, mais « accepter … majeure, conclusion » pour toutes les questions serait faux : il faut accepter la forme nue de chaque terme seulement.",
+    "source": "src/games/common.jsx (normalize, answerMatches) ; src/data/index.js (termVariants) ; [C13.2], E514 à E517."
+  },
+  {
+    "id": "t5-13",
+    "verdict": "CORRIGER",
+    "version_ajustee": "",
+    "justification": "Le découpage en phrases coupe après « art. » : l'élève voit « La ____ (art. » et ne peut pas deviner « force obligatoire » (cela pourrait être la bonne foi, art. 1104, ou la liberté contractuelle). Le même défaut produit d'autres items tronqués (E106, E138, E139, E327, E334, E365, E522…). La correction envisagée est la bonne (ne pas couper après les abréviations) et son exemple est exact : art. 1103 cite bien « les contrats légalement formés tiennent lieu de loi à ceux qui les ont faits ».",
+    "source": "src/data/index.js, fonction trouFromBold (split sur /(?<=[.!?…])\\s+/) ; [C5.2] ; Code civil art. 1103."
+  },
+  {
+    "id": "t5-14",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Le plus simple : retirer le gras de « Énoncé. » dans [C9.1] et [C14.1] (ou le mettre en champ h du bloc). À défaut, faire ignorer au générateur un gras en tête de bloc terminé par un point.",
+    "justification": "Le trou masque un simple intitulé (« Énoncé. »), impossible à deviner d'après la phrase (« Cas », « Situation » ou « Faits » conviendraient aussi). Comme normalize ne retire pas la ponctuation, même la bonne réponse « énoncé » sans point serait refusée. Il s'agit d'un exercice sans valeur pédagogique que la correction envisagée supprime à raison.",
+    "source": "src/data/index.js (trouFromBold) ; src/games/common.jsx (normalize) ; [C9.1], [C14.1]."
+  },
+  {
+    "id": "t5-15",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Si on garde l'exercice, regrouper les faits et la qualification dans une même phrase (par ex. « Faits : un vendeur cache un défaut grave, ce qui se qualifie de **dol**. ») pour que le trou conserve son contexte ; sinon exclure ce trou.",
+    "justification": "Le découpage isole « Qualification : ____. » de la phrase précédente (« Faits : un vendeur cache un défaut grave. »), de sorte que l'élève n'a aucun fait à qualifier : « erreur », « violence » ou « contrat de vente » seraient aussi plausibles. La correction envisagée, qui garde le contexte, est bonne et la qualification « dol » est exacte au regard de [C7.2] et de l'art. 1137 al. 2.",
+    "source": "[C13.3] ; src/data/index.js (trouFromBold) ; Code civil art. 1137 ; [C7.2]."
+  },
+  {
+    "id": "t5-16",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Réécrire [C7.1] : « Le consentement doit être **libre et éclairé**. S'il a été « faussé » (on parle aussi d'intégrité du consentement), on parle de **vice du consentement** … ». Ainsi le trou « Le consentement doit être ____ » attend l'expression de l'art. 1128 utilisée partout ailleurs dans le thème. À défaut, garder « intègre » et accepter « libre et éclairé », « libre », « exempt de vice » et « sans vice ».",
+    "justification": "Dans tout le thème (art. 1128, [C2.2], [C6.2], Doc 1, E106, E365), le consentement est « libre et éclairé » ; « intègre » n'apparaît qu'en [C7.1]. L'élève qui répond « libre et éclairé » est donc refusé, alors qu'il donne l'expression légale. La réécriture B (« intègre, c'est-à-dire exempt de vice ») ne règle pas tout : « libre et éclairé, c'est-à-dire exempt de vice » resterait une bonne réponse, d'où l'ajustement.",
+    "source": "Code civil art. 1128 ; [C2.2], [C6.2], Doc 1 (« libre et éclairé, c'est-à-dire exempt de vices ») ; E278, E286."
+  },
+  {
+    "id": "t5-17",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Ajouter les variantes proposées (E320 : « dommages-intérêts », « dommages et intérêts », « dommages intérêts » ; E66 : « adhésion », « contrat d'adhésion » ; E145 : « capacité » ; E375 : « dissimulé », « caché » ; E292 : « induit en erreur », « trompé »), mais traiter l'article initial dans termVariants (src/data/index.js), qui ajoute la variante sans article (le, la, les, l', un, une, des), plutôt que dans normalize, partagé avec SqlQuery et CasPratique. Ne pas traiter « d' » comme un article (E66 : « D'adhésion » doit rester couvert par la variante « adhésion » ajoutée à la main).",
+    "justification": "Le terme attendu « Les dommages-intérêts » contient l'article, et normalize ne tolère pas la variante « dommages et intérêts » pourtant utilisée partout dans le thème : une bonne réponse est refusée. Même problème pour « D'adhésion » (E66), « capacité juridique » (E145), « volontairement dissimulé » (E375) et « volontairement induit en erreur » (E292). Les variantes proposées sont justes ; leur mise en œuvre au niveau du générateur est plus sûre qu'au niveau de normalize.",
+    "source": "src/games/common.jsx (normalize, answerMatches) ; src/data/index.js (termVariants, saisieFromItems) ; E320, E66, E145, E292, E375."
+  },
+  {
+    "id": "t5-18",
+    "verdict": "CORRIGER",
+    "version_ajustee": "Dans le test du thème, afficher l'énoncé comme question et prendre le corrigé dans les blocs d'analyse : Rolex = [C2.2] et [C2.4] (en précisant que c'est un dol si le vendeur savait la montre fausse, sinon une erreur sur une qualité essentielle) ; scooter = [C3.2] et [C3.3] ; voiture = [C4.2]. Ne pas transformer en cas le bloc « Application » ([C6.3] → E615).",
+    "justification": "L'élève voit « Analyse ce cas : Cas réel » (l'intitulé du bloc, pas l'énoncé), puis le corrigé affiché est l'énoncé lui-même : la question n'a pas de contenu et la correction ne corrige rien. E615 est pire, car le bloc « Application » ne contient pas de question. La correction envisagée va dans le bon sens ; l'énoncé Rolex ne dit pas que le vendeur sait que la montre est fausse, d'où la nuance dol / erreur à ajouter.",
+    "source": "src/games/ThemeTest.jsx (prompt = « Analyse ce cas : » + it.prompt, correction = it.answer) ; E612 à E615 ; [C2.1], [C2.2], [C2.4], [C3.1], [C4.1]."
+  }
+]
