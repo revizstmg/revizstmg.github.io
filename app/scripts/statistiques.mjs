@@ -83,9 +83,10 @@ async function github(chemin) {
 async function publication() {
   const p = {}
   try {
-    const runs = await github('/actions/workflows/deploy.yml/runs?branch=main&per_page=1')
+    // Dernier passage terminé : un passage encore en cours n'a pas de résultat.
+    const runs = await github('/actions/workflows/deploy.yml/runs?branch=main&status=completed&per_page=1')
     const run = runs.workflow_runs?.[0]
-    if (run) p.ci = { etat: run.status === 'completed' ? run.conclusion : run.status, date: run.updated_at }
+    if (run) p.ci = { etat: run.conclusion, date: run.updated_at }
   } catch { /* indisponible */ }
   try {
     const dep = (await github('/deployments?per_page=1'))[0]
