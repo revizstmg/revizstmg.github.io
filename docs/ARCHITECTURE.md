@@ -51,6 +51,12 @@ celle qu'il n'ouvrira jamais.
 S'y ajoutent `ThemeTest`, `Exam` (bac blanc), `CoachSession`, `KahootQuiz`.
 **`DuelQuiz.jsx` n'est importé nulle part** : c'est le seul fichier mort de l'app.
 
+Les flashcards d'un chapitre (`games/Flashcards.jsx`) et celles d'un paquet
+enregistré (`pages/FlashcardsPage.jsx`) partagent `components/PileCartes.jsx` :
+la pile de cartes (retourner, glisser à droite « Je savais », à gauche « À
+revoir », boutons et flèches du clavier, animation d'envol) et le déroulé d'une
+série (`useSerieCartes`).
+
 ### Le contenu (`src/data/`)
 
 `data/index.js` (954 lignes) importe 30 fichiers et, pour chaque thème :

@@ -65,7 +65,7 @@ export default function Layout({ children }) {
   const mono = avatar || initials
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-clip">
       <header
         className="no-print sticky top-0 z-40 border-b backdrop-blur"
         style={{
