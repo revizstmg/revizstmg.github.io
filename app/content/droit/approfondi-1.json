@@ -1,7 +1,7 @@
 {
   "droit-t5": [
     {
-      "h": "📜 Le contrat : définition et classifications",
+      "h": "📜 Le contrat : accord de volontés, force obligatoire et classifications",
       "blocks": [
         {
           "t": "p",
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "h": "✅ Les conditions de validité du contrat",
+      "h": "✅ Les conditions de validité : consentement, capacité, contenu licite et certain",
       "blocks": [
         {
           "t": "p",
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "h": "⚠️ Les vices du consentement",
+      "h": "⚠️ Les vices du consentement : erreur, dol, violence",
       "blocks": [
         {
           "t": "p",
@@ -129,7 +129,7 @@
       ]
     },
     {
-      "h": "🔗 Effets du contrat et sanctions de l’inexécution",
+      "h": "🔗 Force obligatoire, effet relatif et sanctions de l’inexécution",
       "blocks": [
         {
           "t": "p",
@@ -161,7 +161,7 @@
       ]
     },
     {
-      "h": "⚖️ Cas pratique guidé — la méthode du syllogisme",
+      "h": "⚖️ Cas pratique guidé — la méthode du syllogisme : majeure, mineure, conclusion",
       "blocks": [
         {
           "t": "p",
@@ -196,7 +196,7 @@
   ],
   "droit-t6": [
     {
-      "h": "🎯 Responsabilité civile et responsabilité pénale",
+      "h": "🎯 Responsabilité civile et responsabilité pénale : réparer ou punir",
       "blocks": [
         {
           "t": "p",
@@ -249,7 +249,7 @@
       ]
     },
     {
-      "h": "🧩 Les conditions de la responsabilité civile",
+      "h": "🧩 Les conditions de la responsabilité délictuelle : fait générateur, dommage, causalité",
       "blocks": [
         {
           "t": "p",
@@ -280,7 +280,7 @@
       ]
     },
     {
-      "h": "🚗 Les régimes : fait personnel, des choses, d’autrui",
+      "h": "🚗 Les régimes de responsabilité : fait personnel, fait des choses, fait d’autrui",
       "blocks": [
         {
           "t": "p",
@@ -333,7 +333,7 @@
       ]
     },
     {
-      "h": "💶 La réparation du dommage",
+      "h": "💶 La réparation intégrale : dommage certain, direct, personnel et assurance",
       "blocks": [
         {
           "t": "p",
@@ -360,7 +360,8 @@
       ]
     },
     {
-      "h": "⚖️ Cas pratique guidé — responsabilité civile",
+      "h": "⚖️ Cas pratique guidé — responsabilité du fait des choses et garde",
+      "group": "cas",
       "blocks": [
         {
           "t": "p",
@@ -391,7 +392,7 @@
   ],
   "droit-t7": [
     {
-      "h": "🤝 Le contrat de travail et le lien de subordination",
+      "h": "🤝 Le contrat de travail : prestation, rémunération, subordination",
       "blocks": [
         {
           "t": "p",
@@ -414,7 +415,7 @@
       ]
     },
     {
-      "h": "📄 CDI, CDD, intérim : la règle et l’exception",
+      "h": "📄 CDI, CDD, intérim : la règle, l’exception et la requalification",
       "blocks": [
         {
           "t": "p",
@@ -444,7 +445,7 @@
       ]
     },
     {
-      "h": "🚪 La rupture du contrat de travail",
+      "h": "🚪 La rupture du CDI : démission, licenciement, rupture conventionnelle",
       "blocks": [
         {
           "t": "p",
@@ -491,7 +492,7 @@
       ]
     },
     {
-      "h": "🛡️ Les droits collectifs du salarié",
+      "h": "🛡️ Les droits collectifs : convention collective, représentants du personnel, syndicats, grève",
       "blocks": [
         {
           "t": "p",
@@ -517,7 +518,7 @@
       ]
     },
     {
-      "h": "⚖️ Cas pratique guidé — le licenciement",
+      "h": "⚖️ Cas pratique guidé — licenciement par SMS : le fond et la procédure",
       "blocks": [
         {
           "t": "p",
@@ -548,7 +549,7 @@
   ],
   "droit-t8": [
     {
-      "h": "🏗️ Choisir une forme juridique",
+      "h": "🏗️ Choisir une forme juridique : entreprise individuelle ou société",
       "blocks": [
         {
           "t": "p",
@@ -607,7 +608,7 @@
       ]
     },
     {
-      "h": "🏠 Protéger le patrimoine de l’entrepreneur",
+      "h": "🏠 Protéger le patrimoine de l’entrepreneur : séparation des patrimoines, caution",
       "blocks": [
         {
           "t": "p",
@@ -638,7 +639,7 @@
       ]
     },
     {
-      "h": "💡 Protéger les créations : la propriété intellectuelle",
+      "h": "💡 Protéger les créations : brevet, marque, droit d’auteur (INPI)",
       "blocks": [
         {
           "t": "p",
@@ -696,7 +697,7 @@
       ]
     },
     {
-      "h": "🔄 La transmission de l’entreprise",
+      "h": "🔄 La transmission de l’entreprise : cession, donation, succession",
       "blocks": [
         {
           "t": "p",
@@ -727,7 +728,8 @@
       ]
     },
     {
-      "h": "⚖️ Cas pratique guidé — choisir une forme juridique",
+      "h": "⚖️ Cas pratique guidé — choisir une forme juridique : SAS et responsabilité limitée",
+      "group": "cas",
       "blocks": [
         {
           "t": "p",

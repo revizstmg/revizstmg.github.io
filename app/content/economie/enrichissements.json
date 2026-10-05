@@ -21,7 +21,8 @@
     ],
     "sections": [
       {
-        "h": "🗞️ Exemple — relier une actu au cours",
+        "h": "🗞️ Exemple — l’inflation ralentit : nommer, relier, analyser",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -48,7 +49,8 @@
   "eco-t6": {
     "sections": [
       {
-        "h": "💶 Exemple — pourquoi et comment l’État intervient",
+        "h": "💶 Exemple — face au chômage : allouer, redistribuer, stabiliser",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -75,7 +77,8 @@
   "eco-t7": {
     "sections": [
       {
-        "h": "💶 Exemple chiffré — le taux de chômage",
+        "h": "💶 Exemple chiffré guidé — population active et taux de chômage",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -102,7 +105,8 @@
   "eco-t8": {
     "sections": [
       {
-        "h": "💶 Exemple chiffré — la balance commerciale",
+        "h": "💶 Exemple chiffré guidé — calculer et expliquer un déficit commercial",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -129,7 +133,8 @@
   "eco-t9": {
     "sections": [
       {
-        "h": "💶 Exemple — croissance, développement, soutenabilité",
+        "h": "💶 Exemple guidé — une croissance forte mais non soutenable",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",

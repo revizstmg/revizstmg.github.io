@@ -1,7 +1,7 @@
 {
   "philo-art": [
     {
-      "h": "🔎 Définitions & distinctions approfondies",
+      "h": "🔎 Définitions : beau et agréable, art et technique, sublime",
       "blocks": [
         {
           "t": "p",
@@ -49,7 +49,7 @@
       ]
     },
     {
-      "h": "⚔️ Les grandes thèses en débat",
+      "h": "⚔️ Les grandes thèses : imitation (Platon), catharsis (Aristote), Esprit (Hegel)",
       "blocks": [
         {
           "t": "p",
@@ -71,7 +71,7 @@
       ]
     },
     {
-      "h": "📜 Textes clés commentés",
+      "h": "📜 Textes commentés : Platon (l’imitation) et Klee (rendre visible)",
       "blocks": [
         {
           "t": "example",
@@ -99,7 +99,7 @@
       ]
     },
     {
-      "h": "🌍 Prolongements — l’art aujourd’hui",
+      "h": "🌍 L’art aujourd’hui : reproductibilité, marché de l’art, IA générative",
       "blocks": [
         {
           "t": "p",
@@ -136,12 +136,13 @@
           "h": "Conclusion",
           "c": "L’art nous détourne du réel banal pour mieux nous en rapprocher : son « inutilité » est une manière supérieure de nous rendre au monde et à nous-mêmes."
         }
-      ]
+      ],
+      "group": "cas"
     }
   ],
   "philo-justice": [
     {
-      "h": "🔎 Définitions & distinctions approfondies",
+      "h": "🔎 Définitions : vertu, institution, idéal ; légal et légitime ; équité",
       "blocks": [
         {
           "t": "p",
@@ -189,7 +190,7 @@
       ]
     },
     {
-      "h": "⚔️ Les grandes thèses — de quoi la justice est-elle faite ?",
+      "h": "⚔️ Les grandes thèses : loi du plus fort, contrat social, équité (Rawls)",
       "blocks": [
         {
           "t": "p",
@@ -211,7 +212,7 @@
       ]
     },
     {
-      "h": "📜 Textes & cas commentés",
+      "h": "📜 Textes et cas commentés : Rousseau (la force et le droit), Rosa Parks",
       "blocks": [
         {
           "t": "example",
@@ -234,7 +235,7 @@
       ]
     },
     {
-      "h": "🌍 Prolongements — justice sociale et mondiale",
+      "h": "🌍 Justice sociale, pénale et mondiale ; la banalité du mal (Arendt)",
       "blocks": [
         {
           "t": "p",
@@ -267,12 +268,13 @@
           "h": "Conclusion",
           "c": "Le respect des lois est la forme ordinaire de la justice, non son essence : c’est parce qu’il existe une idée de justice supérieure aux lois que l’on peut les vouloir plus justes."
         }
-      ]
+      ],
+      "group": "cas"
     }
   ],
   "philo-liberte": [
     {
-      "h": "🔎 Définitions & distinctions approfondies",
+      "h": "🔎 Définitions : liberté d’action, de la volonté, libre arbitre, autonomie",
       "blocks": [
         {
           "t": "p",
@@ -320,7 +322,7 @@
       ]
     },
     {
-      "h": "⚔️ Les grandes thèses — sommes-nous libres ?",
+      "h": "⚔️ Les grandes thèses : libre arbitre (Descartes), illusion (Spinoza), autonomie (Kant), Sartre",
       "blocks": [
         {
           "t": "p",
@@ -338,7 +340,7 @@
       ]
     },
     {
-      "h": "📜 Textes clés commentés",
+      "h": "📜 Textes commentés : Spinoza (l’illusion de liberté), Sartre (condamné à être libre)",
       "blocks": [
         {
           "t": "example",
@@ -361,7 +363,7 @@
       ]
     },
     {
-      "h": "🌍 Prolongements — liberté, société, neurosciences",
+      "h": "🌍 Liberté, neurosciences et conditionnement social",
       "blocks": [
         {
           "t": "p",
@@ -394,12 +396,13 @@
           "h": "Conclusion",
           "c": "Nous ne choisissons pas notre point de départ, mais nous répondons de notre trajet : la responsabilité ne suppose pas une liberté absolue, seulement le pouvoir réel de délibérer et d’agir."
         }
-      ]
+      ],
+      "group": "cas"
     }
   ],
   "philo-nature": [
     {
-      "h": "🔎 Définitions & distinctions approfondies",
+      "h": "🔎 Définitions : nature, essence, inné et acquis, fait et valeur",
       "blocks": [
         {
           "t": "p",
@@ -442,7 +445,7 @@
       ]
     },
     {
-      "h": "⚔️ Les grandes thèses — l’homme, la nature et la culture",
+      "h": "⚔️ Les grandes thèses : culture (Rousseau), maîtrise (Descartes), responsabilité (Jonas)",
       "blocks": [
         {
           "t": "p",
@@ -464,7 +467,7 @@
       ]
     },
     {
-      "h": "📜 Textes & cas commentés",
+      "h": "📜 Textes et cas commentés : Descartes (maîtres et possesseurs), le barrage",
       "blocks": [
         {
           "t": "example",
@@ -487,7 +490,7 @@
       ]
     },
     {
-      "h": "🌍 Prolongements — l’âge écologique",
+      "h": "🌍 L’âge écologique : anthropocène, écologie profonde, générations futures",
       "blocks": [
         {
           "t": "p",
@@ -520,12 +523,13 @@
           "h": "Conclusion",
           "c": "La culture ne s’oppose pas à la nature de l’homme : elle en est la réalisation. Reste à la vouloir digne de ce qu’elle prétend cultiver — l’humanité en l’homme."
         }
-      ]
+      ],
+      "group": "cas"
     }
   ],
   "philo-religion": [
     {
-      "h": "🔎 Définitions & distinctions approfondies",
+      "h": "🔎 Définitions : sacré et profane, croire et savoir, foi, laïcité",
       "blocks": [
         {
           "t": "p",
@@ -573,7 +577,7 @@
       ]
     },
     {
-      "h": "⚔️ Les grandes thèses — foi, raison et critique",
+      "h": "⚔️ Les grandes thèses : le cœur (Pascal), l’illusion (Marx, Freud, Nietzsche), le fait social (Durkheim)",
       "blocks": [
         {
           "t": "p",
@@ -595,7 +599,7 @@
       ]
     },
     {
-      "h": "📜 Textes & cas commentés",
+      "h": "📜 Textes et cas commentés : Pascal (les deux ordres), Galilée",
       "blocks": [
         {
           "t": "example",
@@ -618,7 +622,7 @@
       ]
     },
     {
-      "h": "🌍 Prolongements — croire à l’âge de la science",
+      "h": "🌍 Croire à l’âge de la science : désenchantement, tolérance, laïcité",
       "blocks": [
         {
           "t": "p",
@@ -651,12 +655,13 @@
           "h": "Conclusion",
           "c": "Croire n’est renoncer à la raison que lorsque la croyance se fait dogme intouchable. Distinguées et humbles, foi et raison peuvent cohabiter dans un même esprit."
         }
-      ]
+      ],
+      "group": "cas"
     }
   ],
   "philo-technique": [
     {
-      "h": "🔎 Définitions & distinctions approfondies",
+      "h": "🔎 Définitions : technique, science, art, technoscience ; outil et machine",
       "blocks": [
         {
           "t": "p",
@@ -704,7 +709,7 @@
       ]
     },
     {
-      "h": "⚔️ Les grandes thèses — la technique libère-t-elle ?",
+      "h": "⚔️ Les grandes thèses : travail (Hegel), aliénation (Marx), fonds (Heidegger), responsabilité (Jonas)",
       "blocks": [
         {
           "t": "p",
@@ -726,7 +731,7 @@
       ]
     },
     {
-      "h": "📜 Textes & cas commentés",
+      "h": "📜 Textes et cas commentés : Bergson (homo faber), le smartphone",
       "blocks": [
         {
           "t": "example",
@@ -749,7 +754,7 @@
       ]
     },
     {
-      "h": "🌍 Prolongements — IA, bioéthique, écologie",
+      "h": "🌍 La technique aujourd’hui : intelligence artificielle, bioéthique, écologie",
       "blocks": [
         {
           "t": "p",
@@ -782,12 +787,13 @@
           "h": "Conclusion",
           "c": "Le progrès technique augmente notre puissance, non notre bonté. Il rend l’homme meilleur seulement si une conscience éthique en gouverne l’usage : le vrai progrès est d’abord celui de la responsabilité."
         }
-      ]
+      ],
+      "group": "cas"
     }
   ],
   "philo-verite": [
     {
-      "h": "🔎 Définitions & distinctions approfondies",
+      "h": "🔎 Définitions : vérité et réalité, certitude, vraisemblance, vérités de raison et de fait",
       "blocks": [
         {
           "t": "p",
@@ -835,7 +841,7 @@
       ]
     },
     {
-      "h": "⚔️ Les grandes thèses — comment atteindre le vrai ?",
+      "h": "⚔️ Les grandes thèses : caverne (Platon), doute (Descartes), réfutabilité (Popper), Bachelard",
       "blocks": [
         {
           "t": "p",
@@ -857,7 +863,7 @@
       ]
     },
     {
-      "h": "📜 Textes & cas commentés",
+      "h": "📜 Textes et cas commentés : le cogito (Descartes), « la Terre est plate »",
       "blocks": [
         {
           "t": "example",
@@ -880,7 +886,7 @@
       ]
     },
     {
-      "h": "🌍 Prolongements — vérité, sciences et post-vérité",
+      "h": "🌍 Post-vérité et fake news : une vérité provisoire et rectifiable",
       "blocks": [
         {
           "t": "p",
@@ -913,7 +919,8 @@
           "h": "Conclusion",
           "c": "On peut mettre tout en doute, sauf l’acte même de douter : le doute, loin de ruiner la vérité, en est le chemin, à condition de viser, au bout, une certitude."
         }
-      ]
+      ],
+      "group": "cas"
     }
   ],
   "philo-methode": [
@@ -965,7 +972,7 @@
       ]
     },
     {
-      "h": "🎯 Trouver la problématique : la méthode pas à pas",
+      "h": "🎯 Trouver la problématique : thèse spontanée, objection, problème",
       "blocks": [
         {
           "t": "p",
@@ -1048,7 +1055,7 @@
       ]
     },
     {
-      "h": "🚫 Les erreurs qui coûtent le plus au bac",
+      "h": "🚫 Les erreurs qui coûtent cher : hors-sujet, récitation, juxtaposition, exemples plaqués",
       "blocks": [
         {
           "t": "list",

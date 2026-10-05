@@ -1,7 +1,7 @@
 {
   "mkg-t1": [
     {
-      "h": "Pourquoi faire la queue toute une nuit pour un téléphone ?",
+      "h": "La mercatique : satisfaire les besoins (Maslow) et l’image de soi",
       "blocks": [
         {
           "t": "example",
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "h": "Ce qui pousse, ce qui freine",
+      "h": "Motivations et freins : le processus d’achat",
       "blocks": [
         {
           "t": "p",
@@ -63,7 +63,7 @@
       ]
     },
     {
-      "h": "On n’achète pas tous de la même façon",
+      "h": "Facteurs et types d’achat, études de marché et segmentation",
       "blocks": [
         {
           "t": "p",
@@ -83,7 +83,7 @@
   ],
   "mkg-t2": [
     {
-      "h": "Vinted, Rolex, McDo : pas les mêmes clients",
+      "h": "Segmentation, ciblage, positionnement : la démarche SCP",
       "blocks": [
         {
           "t": "example",
@@ -127,7 +127,7 @@
       ]
     },
     {
-      "h": "Connaître son marché",
+      "h": "Connaître son marché : non-consommateurs, part de marché, veille",
       "blocks": [
         {
           "t": "p",
@@ -147,7 +147,7 @@
   ],
   "mkg-t3": [
     {
-      "h": "Pourquoi une Rolex n’est pas vendue en supermarché",
+      "h": "La cohérence des 4P : produit, prix, distribution, communication",
       "blocks": [
         {
           "t": "example",
@@ -191,7 +191,7 @@
       ]
     },
     {
-      "h": "Le prix : bien plus qu’un chiffre",
+      "h": "Le prix : coût, demande, concurrence ; écrémage ou pénétration",
       "blocks": [
         {
           "t": "p",
@@ -211,7 +211,7 @@
   ],
   "mkg-t4": [
     {
-      "h": "Amazon sait ce que tu veux avant toi",
+      "h": "Personnaliser grâce aux données : consentement, RGPD et omnicanal",
       "blocks": [
         {
           "t": "example",
@@ -234,7 +234,7 @@
       ]
     },
     {
-      "h": "Vert pour de vrai, ou greenwashing ?",
+      "h": "La mercatique responsable face au greenwashing",
       "blocks": [
         {
           "t": "p",

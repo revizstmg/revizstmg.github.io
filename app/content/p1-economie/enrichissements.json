@@ -2,7 +2,8 @@
   "p1-eco-t4": {
     "sections": [
       {
-        "h": "💶 Exemple traité — comment se financer ?",
+        "h": "💶 Exemple traité — financer une machine : interne, direct ou indirect",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -29,7 +30,8 @@
   "p1-eco-t1": {
     "sections": [
       {
-        "h": "💶 Exemple — rareté et choix économiques",
+        "h": "💶 Exemple — un budget de 50 € : rareté et coût d’opportunité",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -56,7 +58,8 @@
   "p1-eco-t2": {
     "sections": [
       {
-        "h": "💶 Exemple chiffré — la valeur ajoutée",
+        "h": "💶 Exemple chiffré — une boulangerie : calculer la valeur ajoutée",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -83,7 +86,8 @@
   "p1-eco-t3": {
     "sections": [
       {
-        "h": "💶 Exemple — la répartition des revenus",
+        "h": "💶 Exemple — un salarié à 1 800 € : revenus primaires et redistribution",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -110,7 +114,8 @@
   "p1-eco-t5": {
     "sections": [
       {
-        "h": "💶 Exemple — le marché et le prix d’équilibre",
+        "h": "💶 Exemple — une baisse de prix : demande, offre et prix d’équilibre",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",

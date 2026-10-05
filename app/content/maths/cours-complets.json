@@ -78,7 +78,7 @@
     "intro": "Une **suite** est une liste de nombres qui se suivent selon une règle. En STMG, elles modélisent des évolutions : un capital qui grossit, une machine qui perd de la valeur. Deux modèles à distinguer absolument : **arithmétique** et **géométrique**.",
     "cours": [
       {
-        "h": "Deux types de suites",
+        "h": "Arithmétique ou géométrique : raison, formule et croissance",
         "blocks": [
           {
             "t": "table",
@@ -108,7 +108,7 @@
         ]
       },
       {
-        "h": "Reconnaître et calculer",
+        "h": "Pourcentage constant et suite géométrique : la raison q",
         "blocks": [
           {
             "t": "p",
@@ -249,7 +249,7 @@
         ]
       },
       {
-        "h": "Indépendance",
+        "h": "Indépendance : P(A ∩ B) = P(A) × P(B)",
         "blocks": [
           {
             "t": "p",
@@ -319,7 +319,7 @@
     "intro": "La **loi normale** décrit une multitude de phénomènes « en cloche » (tailles, mesures, erreurs). Associée à l’**estimation**, elle permet d’interpréter les sondages et le contrôle qualité.",
     "cours": [
       {
-        "h": "La courbe en cloche",
+        "h": "La loi normale : moyenne μ, écart-type σ et dispersion",
         "blocks": [
           {
             "t": "p",

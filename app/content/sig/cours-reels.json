@@ -1,7 +1,7 @@
 {
   "sig-t1": [
     {
-      "h": "Ta commande McDo dans le système",
+      "h": "Le système d’information et le PGI : une saisie unique, en temps réel",
       "blocks": [
         {
           "t": "example",
@@ -45,7 +45,7 @@
       ]
     },
     {
-      "h": "De la donnée à la décision",
+      "h": "Donnée, information, connaissance : de la donnée à la décision",
       "blocks": [
         {
           "t": "p",
@@ -65,7 +65,7 @@
   ],
   "sig-t2": [
     {
-      "h": "Comment Spotify retrouve ta playlist",
+      "h": "La base de données relationnelle : tables, clés primaires et étrangères",
       "blocks": [
         {
           "t": "example",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "h": "Poser une question à la base : le SQL",
+      "h": "Interroger la base en SQL : requêtes, calculs et jointures",
       "blocks": [
         {
           "t": "p",
@@ -138,7 +138,7 @@
   ],
   "sig-t3": [
     {
-      "h": "Wikipédia : écrit par des millions de mains",
+      "h": "Outils collaboratifs et intelligence collective : coédition, cloud, modération",
       "blocks": [
         {
           "t": "example",
@@ -161,7 +161,7 @@
       ]
     },
     {
-      "h": "Le numérique transforme l’organisation",
+      "h": "Le numérique transforme le travail : télétravail, agilité, droit à la déconnexion",
       "blocks": [
         {
           "t": "p",
@@ -198,7 +198,7 @@
   ],
   "sig-t4": [
     {
-      "h": "Quand un hôpital est pris en otage",
+      "h": "Rançongiciels et sécurité du SI : les critères DICP",
       "blocks": [
         {
           "t": "example",
@@ -242,7 +242,7 @@
       ]
     },
     {
-      "h": "Le phishing : la faille, c’est souvent l’humain",
+      "h": "Le phishing et le RGPD : le facteur humain",
       "blocks": [
         {
           "t": "example",

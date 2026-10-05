@@ -180,7 +180,7 @@
       "keywords": "suite arithmétique géométrique raison croissance linéaire exponentielle",
       "cours": [
         {
-          "h": "Deux types de suites",
+          "h": "Arithmétique ou géométrique : raison, formule et croissance",
           "points": [
             "Arithmétique (on ajoute la raison r) : u_n = u_0 + n·r (croissance linéaire).",
             "Géométrique (on multiplie par la raison q) : u_n = u_0 × q^n (croissance exponentielle).",

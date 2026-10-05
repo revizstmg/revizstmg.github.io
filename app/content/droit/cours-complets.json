@@ -520,7 +520,7 @@
     "intro": "Entreprendre est une **liberté**, mais elle s’exerce dans un cadre juridique. Le choix de la **structure** a des conséquences majeures sur le **patrimoine** et la **responsabilité** ; l’activité se développe dans le respect de la **concurrence** et peut s’organiser par des **partenariats**.",
     "cours": [
       {
-        "h": "La liberté d’entreprendre et l’entreprise individuelle",
+        "h": "La liberté d’entreprendre et l’entreprise individuelle : deux patrimoines séparés",
         "blocks": [
           {
             "t": "p",
@@ -547,7 +547,7 @@
         ]
       },
       {
-        "h": "La société commerciale",
+        "h": "La société : contrat de société, apports, affectio societatis",
         "blocks": [
           {
             "t": "p",
@@ -568,7 +568,7 @@
         ]
       },
       {
-        "h": "Le respect de la concurrence",
+        "h": "La concurrence : concurrence déloyale, ententes, abus de position dominante",
         "blocks": [
           {
             "t": "p",
@@ -590,7 +590,7 @@
         ]
       },
       {
-        "h": "Les partenariats contractuels",
+        "h": "Les partenariats : contrat d’entreprise, sous-traitance et franchise",
         "blocks": [
           {
             "t": "p",

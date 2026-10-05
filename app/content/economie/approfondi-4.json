@@ -1,7 +1,7 @@
 {
   "eco-actu": [
     {
-      "h": "📊 Lire un graphique économique",
+      "h": "📊 Lire un graphique économique : titre, axes, source, tendance",
       "blocks": [
         {
           "t": "p",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "h": "🔎 Où trouver des chiffres fiables",
+      "h": "🔎 Les sources fiables : INSEE, Eurostat, Banque de France, OCDE",
       "blocks": [
         {
           "t": "list",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "h": "✍️ Méthode — commenter un chiffre d’actualité",
+      "h": "✍️ Méthode — commenter un chiffre : le citer, le situer, l’expliquer",
       "blocks": [
         {
           "t": "list",
@@ -137,7 +137,8 @@
       ]
     },
     {
-      "h": "🗞️ Exemple d’actualité commentée",
+      "h": "🗞️ Exemple d’actualité commentée — le bouclier tarifaire",
+      "group": "cas",
       "blocks": [
         {
           "t": "p",

@@ -40,7 +40,7 @@
       ]
     },
     {
-      "h": "📈 SI et aide à la décision (PGI)",
+      "h": "📈 SI et aide à la décision (PGI) : base commune et qualité des données",
       "blocks": [
         {
           "t": "p",
@@ -58,7 +58,7 @@
       ]
     },
     {
-      "h": "🔗 Processus et représentation du SI",
+      "h": "🔗 Les processus : modéliser pour repérer les dysfonctionnements",
       "blocks": [
         {
           "t": "p",
@@ -74,7 +74,7 @@
   ],
   "sig-t2": [
     {
-      "h": "🗄️ Le modèle relationnel",
+      "h": "🗄️ Le modèle relationnel : clé primaire, clé étrangère, relations",
       "blocks": [
         {
           "t": "table",
@@ -179,7 +179,7 @@
   ],
   "sig-t3": [
     {
-      "h": "🤝 Outils collaboratifs et cloud",
+      "h": "🤝 Outils collaboratifs et cloud : coédition, versions, droits d’accès",
       "blocks": [
         {
           "t": "p",
@@ -193,7 +193,7 @@
       ]
     },
     {
-      "h": "🧠 L’intelligence collective",
+      "h": "🧠 L’intelligence collective : conditions de réussite et risques",
       "blocks": [
         {
           "t": "p",
@@ -212,7 +212,7 @@
       ]
     },
     {
-      "h": "🔄 La transformation numérique du travail",
+      "h": "🔄 La transformation numérique du travail : télétravail et conduite du changement",
       "blocks": [
         {
           "t": "table",

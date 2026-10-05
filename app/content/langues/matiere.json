@@ -14,7 +14,7 @@
       "intro": "Tous les temps anglais, à consulter et à réviser : présent, passé, futur, modaux, conditionnels, voix passive et la liste des verbes irréguliers.",
       "cours": [
         {
-          "h": "Le présent (simple & continu)",
+          "h": "Le présent simple et le présent continu (be + V-ing)",
           "blocks": [
             {
               "t": "table",
@@ -79,7 +79,7 @@
           ]
         },
         {
-          "h": "Le passé (preterit vs present perfect)",
+          "h": "Le passé : prétérit ou present perfect",
           "blocks": [
             {
               "t": "table",
@@ -144,7 +144,7 @@
           ]
         },
         {
-          "h": "Plus-que-parfait & le futur",
+          "h": "Le past perfect et le futur : will, be going to, be + V-ing",
           "blocks": [
             {
               "t": "table",
@@ -184,7 +184,7 @@
           ]
         },
         {
-          "h": "Les modaux",
+          "h": "Les modaux : can, may, must, should, would + base verbale",
           "blocks": [
             {
               "t": "table",
@@ -233,7 +233,7 @@
           ]
         },
         {
-          "h": "Conditionnels & voix passive",
+          "h": "Les conditionnels (if) et la voix passive (be + participe passé)",
           "blocks": [
             {
               "t": "table",
@@ -2066,7 +2066,7 @@
       "intro": "🇬🇧 Entraîne-toi aux verbes irréguliers : chaque partie tire de nouveaux verbes et de nouvelles questions — jamais deux fois les mêmes.",
       "cours": [
         {
-          "h": "Verbes irréguliers — l’essentiel",
+          "h": "Verbes irréguliers : base, prétérit, participe passé",
           "blocks": [
             {
               "t": "table",
@@ -2141,7 +2141,7 @@
       "intro": "🇬🇧 Les règles de grammaire en exercices générés : articles, présent, comparatifs, some/any, temps du passé… De nouveaux items à chaque fois.",
       "cours": [
         {
-          "h": "Règles clés",
+          "h": "Règles clés : a / an, 3ᵉ personne en -s, comparatif, some / any, much / many",
           "blocks": [
             {
               "t": "list",
@@ -2534,7 +2534,7 @@
       "intro": "Toutes les conjugaisons espagnoles : ser/estar, présent, passés, futur, conditionnel, subjonctif, impératif, gérondif et les verbes irréguliers clés.",
       "cours": [
         {
-          "h": "Ser / Estar & le présent",
+          "h": "Ser et estar, le présent et ses irréguliers",
           "blocks": [
             {
               "t": "table",
@@ -2623,7 +2623,7 @@
           ]
         },
         {
-          "h": "Les passés (indefinido & imperfecto)",
+          "h": "Le passé simple (indefinido) et l’imparfait (imperfecto)",
           "blocks": [
             {
               "t": "table",
@@ -2712,7 +2712,7 @@
           ]
         },
         {
-          "h": "Passé composé & plus-que-parfait",
+          "h": "Le passé composé et le plus-que-parfait (haber + participe)",
           "blocks": [
             {
               "t": "table",
@@ -2782,7 +2782,7 @@
           ]
         },
         {
-          "h": "Futur & conditionnel",
+          "h": "Le futur et le conditionnel : terminaisons et radicaux irréguliers",
           "blocks": [
             {
               "t": "table",
@@ -2831,7 +2831,7 @@
           ]
         },
         {
-          "h": "Subjonctif présent & impératif",
+          "h": "Le subjonctif présent et l’impératif",
           "blocks": [
             {
               "t": "table",
@@ -2905,7 +2905,7 @@
           ]
         },
         {
-          "h": "Gérondif, obligation & gustar",
+          "h": "Le gérondif, l’obligation (tener que, hay que) et gustar",
           "blocks": [
             {
               "t": "table",
@@ -4529,7 +4529,7 @@
       "intro": "🇪🇸 Entraîne-toi aux verbes irréguliers espagnols (présent « yo » et passé simple) : de nouveaux verbes à chaque partie.",
       "cours": [
         {
-          "h": "Verbes irréguliers — l’essentiel",
+          "h": "Verbes irréguliers : racines e → ie, o → ue et passés irréguliers",
           "blocks": [
             {
               "t": "table",
@@ -4604,7 +4604,7 @@
       "intro": "🇪🇸 Les règles de grammaire en exercices générés : ser/estar, por/para, articles, gustar, muy/mucho… De nouveaux items à chaque fois.",
       "cours": [
         {
-          "h": "Règles clés",
+          "h": "Règles clés : ser / estar, por / para, articles el / la, gustar",
           "blocks": [
             {
               "t": "list",

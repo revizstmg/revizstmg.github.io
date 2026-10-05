@@ -50,7 +50,8 @@
   "mgmt-t2": {
     "sections": [
       {
-        "h": "💼 Exemple traité — diagnostic et avantage concurrentiel",
+        "h": "💼 Exemple traité — diagnostic d’une marque bio et avantage concurrentiel",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -77,7 +78,8 @@
   "mgmt-t3": {
     "sections": [
       {
-        "h": "💼 Exemple traité — parties prenantes et RSE",
+        "h": "💼 Exemple traité — délocaliser la production : arbitrer entre parties prenantes",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",

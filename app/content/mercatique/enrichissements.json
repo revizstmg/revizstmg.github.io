@@ -2,7 +2,8 @@
   "mkg-t1": {
     "sections": [
       {
-        "h": "🛍️ Exemple — comprendre un achat",
+        "h": "🛍️ Exemple — un smartphone haut de gamme : besoin, motivation, frein",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -43,7 +44,8 @@
   "mkg-t2": {
     "sections": [
       {
-        "h": "🛍️ Exemple — segmenter, cibler, positionner",
+        "h": "🛍️ Exemple — une boisson énergisante : segmenter, cibler, positionner",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -83,7 +85,8 @@
   "mkg-t3": {
     "sections": [
       {
-        "h": "🛍️ Exemple — la cohérence des 4P",
+        "h": "🛍️ Exemple — des montres de luxe : la cohérence des 4P",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -124,7 +127,8 @@
   "mkg-t4": {
     "sections": [
       {
-        "h": "🛍️ Exemple — mercatique numérique & données",
+        "h": "🛍️ Exemple — recommandations personnalisées : données clients et RGPD",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",

@@ -1,7 +1,7 @@
 {
   "eco-t6": [
     {
-      "h": "🏦 La politique monétaire de la BCE",
+      "h": "🏦 La politique monétaire de la BCE : taux directeurs et stabilité des prix",
       "blocks": [
         {
           "t": "p",
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "h": "🌡️ L’inflation : causes et conséquences",
+      "h": "🌡️ L’inflation : mesure, causes et effets sur le pouvoir d’achat",
       "blocks": [
         {
           "t": "p",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "h": "💶 MÉTHODE — Lire un déficit et une dette",
+      "h": "💶 MÉTHODE — Déficit (flux) et dette (stock) en % du PIB",
       "blocks": [
         {
           "t": "p",
@@ -102,7 +102,7 @@
   ],
   "eco-t7": [
     {
-      "h": "🎓 Capital humain et employabilité",
+      "h": "🎓 Capital humain, formation et employabilité",
       "blocks": [
         {
           "t": "p",
@@ -128,7 +128,7 @@
       ]
     },
     {
-      "h": "🤖 Numérisation et avenir du travail",
+      "h": "🤖 Automatisation, progrès technique et avenir de l’emploi",
       "blocks": [
         {
           "t": "p",
@@ -154,7 +154,7 @@
       ]
     },
     {
-      "h": "💶 MÉTHODE — Calculer les taux du marché du travail",
+      "h": "💶 MÉTHODE — Taux de chômage, taux d’activité et taux d’emploi",
       "blocks": [
         {
           "t": "p",
@@ -183,7 +183,7 @@
   ],
   "eco-t8": [
     {
-      "h": "💱 Taux de change et compétitivité",
+      "h": "💱 Taux de change, compétitivité-prix et hors-prix",
       "blocks": [
         {
           "t": "p",
@@ -208,7 +208,7 @@
       ]
     },
     {
-      "h": "🏛️ Les institutions du commerce mondial",
+      "h": "🏛️ Les institutions du commerce mondial : OMC et Union européenne",
       "blocks": [
         {
           "t": "p",
@@ -251,7 +251,7 @@
       ]
     },
     {
-      "h": "💶 MÉTHODE — Balance commerciale et taux d’ouverture",
+      "h": "💶 MÉTHODE — Solde commercial, taux de couverture et taux d’ouverture",
       "blocks": [
         {
           "t": "p",
@@ -276,7 +276,7 @@
   ],
   "eco-t9": [
     {
-      "h": "⚙️ Les sources de la croissance",
+      "h": "⚙️ Les sources de la croissance : facteurs de production et progrès technique",
       "blocks": [
         {
           "t": "p",
@@ -302,7 +302,7 @@
       ]
     },
     {
-      "h": "📊 Mesurer les inégalités",
+      "h": "📊 Mesurer les inégalités : rapport interdécile, indice de Gini, courbe de Lorenz",
       "blocks": [
         {
           "t": "p",
@@ -328,7 +328,7 @@
       ]
     },
     {
-      "h": "♻️ Transition écologique et découplage",
+      "h": "♻️ Transition écologique : découplage, croissance verte ou décroissance",
       "blocks": [
         {
           "t": "p",
@@ -354,7 +354,7 @@
       ]
     },
     {
-      "h": "💶 MÉTHODE — Croissance et PIB par habitant",
+      "h": "💶 MÉTHODE — Taux de croissance et PIB par habitant",
       "blocks": [
         {
           "t": "p",

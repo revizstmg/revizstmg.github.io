@@ -2,7 +2,8 @@
   "p1-droit-t1": {
     "sections": [
       {
-        "h": "⚖️ Exemple — droit et règle de droit",
+        "h": "⚖️ Exemple — griller un feu rouge : règle de droit ou règle morale ?",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -29,7 +30,8 @@
   "p1-droit-t2": {
     "sections": [
       {
-        "h": "⚖️ Exemple — le litige et sa résolution",
+        "h": "⚖️ Exemple — un client non livré : parties, preuve, modes de résolution",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -56,7 +58,8 @@
   "p1-droit-t3": {
     "sections": [
       {
-        "h": "⚖️ Exemple — les personnes juridiques",
+        "h": "⚖️ Exemple — créer une société : personne physique, personne morale, capacité",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -83,7 +86,8 @@
   "p1-droit-t4": {
     "sections": [
       {
-        "h": "⚖️ Exemple — les droits des personnes",
+        "h": "⚖️ Exemple — une maison et une vie privée : droits patrimoniaux et extrapatrimoniaux",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",

@@ -2,7 +2,8 @@
   "p1-math-c1": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — proportions et pourcentages",
+        "h": "🧮 Exemple traité — proportion d’un sous-ensemble et évolutions successives",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",
@@ -33,7 +34,8 @@
   "p1-math-c2": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — suites",
+        "h": "🧮 Exemple traité — intérêts composés : une suite géométrique",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",
@@ -64,7 +66,8 @@
   "p1-math-c3": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — second degré",
+        "h": "🧮 Exemple traité — discriminant, racines et signe d’un trinôme",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",
@@ -95,7 +98,8 @@
   "p1-math-c4": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — dérivation",
+        "h": "🧮 Exemple traité — dérivée, tableau de variations et minimum",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",
@@ -126,7 +130,8 @@
   "p1-math-c5": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — statistiques",
+        "h": "🧮 Exemple traité — moyenne, médiane et étendue d’une série de notes",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",
@@ -157,7 +162,8 @@
   "p1-math-c6": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — probabilités",
+        "h": "🧮 Exemple traité — un jeu de 32 cartes : intersection et réunion",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",
@@ -188,7 +194,8 @@
   "p1-math-c7": {
     "sections": [
       {
-        "h": "🐍 Exemple traité — un algorithme en Python",
+        "h": "🐍 Exemple traité — une fonction Python pour les intérêts composés (boucle for)",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",

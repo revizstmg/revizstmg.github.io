@@ -1,7 +1,7 @@
 {
   "rh-t1": [
     {
-      "h": "💪 La motivation au travail",
+      "h": "💪 Mobiliser les salariés : motivation, hygiène et leviers",
       "blocks": [
         {
           "t": "p",
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "h": "🎓 Les compétences et leur développement",
+      "h": "🎓 Développer les compétences : formation, tutorat, mobilité",
       "blocks": [
         {
           "t": "p",
@@ -78,7 +78,7 @@
       ]
     },
     {
-      "h": "💶 Rémunération et parcours professionnel",
+      "h": "💶 Rémunération équitable et parcours professionnel",
       "blocks": [
         {
           "t": "p",
@@ -121,7 +121,7 @@
       ]
     },
     {
-      "h": "🧑‍💼 Étude de cas guidée — motiver une équipe",
+      "h": "🧑‍💼 Étude de cas guidée — turnover et démotivation : agir sur l’hygiène et la motivation",
       "blocks": [
         {
           "t": "p",
@@ -151,7 +151,7 @@
   ],
   "rh-t2": [
     {
-      "h": "🤝 Le groupe, l’équipe et la cohésion",
+      "h": "🤝 Groupe, équipe et cohésion : le risque de la pensée de groupe",
       "blocks": [
         {
           "t": "p",
@@ -180,7 +180,7 @@
       ]
     },
     {
-      "h": "⚔️ Comprendre et gérer les conflits",
+      "h": "⚔️ Comprendre et gérer les conflits : négociation, médiation, arbitrage",
       "blocks": [
         {
           "t": "p",
@@ -228,7 +228,7 @@
       ]
     },
     {
-      "h": "🌐 La culture et le climat d’équipe",
+      "h": "🌐 La culture d’entreprise : valeurs, rites, symboles",
       "blocks": [
         {
           "t": "p",
@@ -253,7 +253,7 @@
       ]
     },
     {
-      "h": "🧑‍💼 Étude de cas guidée — gérer un conflit",
+      "h": "🧑‍💼 Étude de cas guidée — un conflit ouvert : médiation et prévention",
       "blocks": [
         {
           "t": "p",
@@ -341,7 +341,7 @@
       ]
     },
     {
-      "h": "🔄 Le processus et les canaux",
+      "h": "🔄 Le processus de communication : émetteur, canal, récepteur, feed-back, bruits",
       "blocks": [
         {
           "t": "p",
@@ -370,7 +370,7 @@
       ]
     },
     {
-      "h": "🚨 La communication de crise",
+      "h": "🚨 La communication de crise : réagir vite, être transparent, parler d’une voix",
       "blocks": [
         {
           "t": "p",
@@ -398,7 +398,7 @@
       ]
     },
     {
-      "h": "🧑‍💼 Étude de cas guidée — une communication efficace",
+      "h": "🧑‍💼 Étude de cas guidée — annoncer une réorganisation : canal adapté et feed-back",
       "blocks": [
         {
           "t": "p",
@@ -428,7 +428,7 @@
   ],
   "rh-t4": [
     {
-      "h": "⚙️ Coordonner le travail",
+      "h": "⚙️ Coordonner le travail : les mécanismes de Mintzberg",
       "blocks": [
         {
           "t": "p",
@@ -475,7 +475,7 @@
       ]
     },
     {
-      "h": "🏥 Conditions de travail et QVT",
+      "h": "🏥 Conditions de travail et QVT : santé, risques psychosociaux, performance",
       "blocks": [
         {
           "t": "p",
@@ -552,7 +552,7 @@
       ]
     },
     {
-      "h": "🧑‍💼 Étude de cas guidée — coût du travail & climat",
+      "h": "🧑‍💼 Étude de cas guidée — absentéisme et turnover : les coûts cachés d’un climat dégradé",
       "blocks": [
         {
           "t": "p",

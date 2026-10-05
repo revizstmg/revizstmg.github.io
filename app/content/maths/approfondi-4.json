@@ -1,7 +1,7 @@
 {
   "math-c1": [
     {
-      "h": "🔢 Calculer un pourcentage d’une valeur",
+      "h": "🔢 Appliquer un pourcentage et calculer une proportion",
       "blocks": [
         {
           "t": "p",
@@ -59,7 +59,8 @@
       ]
     },
     {
-      "h": "🧮 Exercices variés — informations chiffrées",
+      "h": "🧮 Exercices variés — hausse puis baisse, taux moyen, indice",
+      "group": "methode",
       "blocks": [
         {
           "t": "example",
@@ -86,7 +87,7 @@
   ],
   "math-c2": [
     {
-      "h": "🔼 Sens de variation d’une suite",
+      "h": "🔼 Sens de variation d’une suite : le rôle de la raison",
       "blocks": [
         {
           "t": "p",
@@ -144,7 +145,7 @@
       ]
     },
     {
-      "h": "➕ Calculer une somme de termes",
+      "h": "➕ Somme des termes d’une suite géométrique",
       "blocks": [
         {
           "t": "p",
@@ -167,7 +168,7 @@
       ]
     },
     {
-      "h": "🧮 Suites au tableur",
+      "h": "🧮 Suites au tableur : formule de récurrence recopiée",
       "blocks": [
         {
           "t": "p",
@@ -188,7 +189,7 @@
   ],
   "math-c3": [
     {
-      "h": "📐 Les formules de dérivation",
+      "h": "📐 Les formules de dérivation : fonctions usuelles, somme, produit par un réel",
       "blocks": [
         {
           "t": "p",
@@ -287,7 +288,7 @@
       ]
     },
     {
-      "h": "👀 Lecture graphique",
+      "h": "👀 Lecture graphique : signe de f ′ et tangentes",
       "blocks": [
         {
           "t": "p",
@@ -307,7 +308,7 @@
   ],
   "math-c4": [
     {
-      "h": "📈 Le point moyen et l’ajustement affine",
+      "h": "📈 Le point moyen G et la droite des moindres carrés",
       "blocks": [
         {
           "t": "p",
@@ -325,7 +326,7 @@
       ]
     },
     {
-      "h": "🧮 Régression à la calculatrice (pas à pas)",
+      "h": "🧮 Régression linéaire à la calculatrice : obtenir a et b",
       "blocks": [
         {
           "t": "list",
@@ -430,7 +431,7 @@
       ]
     },
     {
-      "h": "🧮 Du tableau croisé aux probabilités",
+      "h": "🧮 Tableau croisé d’effectifs et probabilités",
       "blocks": [
         {
           "t": "p",
@@ -491,7 +492,7 @@
       ]
     },
     {
-      "h": "📊 Espérance et écart-type",
+      "h": "📊 Espérance E(X) = np et écart-type",
       "blocks": [
         {
           "t": "formula",
@@ -510,7 +511,8 @@
       ]
     },
     {
-      "h": "🧩 Exercice type — contrôle qualité",
+      "h": "🧩 Exercice type — contrôle qualité : au moins une pièce défectueuse",
+      "group": "methode",
       "blocks": [
         {
           "t": "p",
@@ -608,7 +610,8 @@
       ]
     },
     {
-      "h": "🧮 Exercice type — sondage",
+      "h": "🧮 Exercice type — sondage : un résultat non significatif",
+      "group": "methode",
       "blocks": [
         {
           "t": "p",

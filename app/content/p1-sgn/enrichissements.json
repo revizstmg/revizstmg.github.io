@@ -2,7 +2,8 @@
   "p1-sgn-t1": {
     "sections": [
       {
-        "h": "💼 Exemple — de l’individu à l’acteur",
+        "h": "💼 Exemple — Léa, serveuse : statut, rôle et compétences",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -29,7 +30,8 @@
   "p1-sgn-t2": {
     "sections": [
       {
-        "h": "💻 Exemple — de la donnée à la connaissance",
+        "h": "💻 Exemple — un ticket de caisse : donnée, information, connaissance",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -57,7 +59,8 @@
   "p1-sgn-t3": {
     "sections": [
       {
-        "h": "💼 Exemple — valeur et performance",
+        "h": "💼 Exemple — un meuble artisanal : valeur ajoutée, efficacité, efficience",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -84,7 +87,8 @@
   "p1-sgn-t4": {
     "sections": [
       {
-        "h": "💼 Exemple — temps et risque",
+        "h": "💼 Exemple — investir dans une machine : arbitrer entre temps et risque",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",

@@ -1,7 +1,7 @@
 {
   "mgmt-t1": [
     {
-      "h": "🎯 La création de valeur et la performance globale",
+      "h": "🎯 La création de valeur : valeur ajoutée, chaîne de valeur et performance globale",
       "blocks": [
         {
           "t": "p",
@@ -67,7 +67,7 @@
       ]
     },
     {
-      "h": "🧩 Les ressources et les compétences de l’organisation",
+      "h": "🧩 Ressources, compétences distinctives et avantage concurrentiel",
       "blocks": [
         {
           "t": "p",
@@ -190,7 +190,7 @@
       ]
     },
     {
-      "h": "⚔️ La compétitivité et l’avantage concurrentiel",
+      "h": "⚔️ La compétitivité : prix ou hors-prix, coûts ou différenciation",
       "blocks": [
         {
           "t": "p",
@@ -254,7 +254,7 @@
       ]
     },
     {
-      "h": "🔧 Produire durablement : contraintes, innovation, adaptation",
+      "h": "🔧 Produire durablement : innovation, faire ou faire faire, éco-conception",
       "blocks": [
         {
           "t": "p",
@@ -336,7 +336,7 @@
   ],
   "mgmt-t2": [
     {
-      "h": "🧭 Décider dans l’organisation : niveaux et processus",
+      "h": "🧭 La décision : niveaux, processus IMC et rationalité limitée (Simon)",
       "blocks": [
         {
           "t": "p",
@@ -496,7 +496,7 @@
       ]
     },
     {
-      "h": "♟️ Les choix stratégiques",
+      "h": "♟️ Les choix stratégiques : spécialisation ou diversification, intégration ou externalisation",
       "blocks": [
         {
           "t": "p",
@@ -583,7 +583,7 @@
       ]
     },
     {
-      "h": "👑 Le pouvoir, la gouvernance et les parties prenantes",
+      "h": "👑 Pouvoir, autorité et gouvernance : arbitrer entre les parties prenantes",
       "blocks": [
         {
           "t": "p",
@@ -640,7 +640,7 @@
       ]
     },
     {
-      "h": "🗣️ Styles de direction et motivation des acteurs",
+      "h": "🗣️ Styles de direction (Likert) et motivation (Maslow, Herzberg)",
       "blocks": [
         {
           "t": "p",
@@ -721,7 +721,7 @@
       ]
     },
     {
-      "h": "🏗️ Structurer et coordonner l’action collective",
+      "h": "🏗️ Structure et coordination : organigramme et mécanismes de Mintzberg",
       "blocks": [
         {
           "t": "p",
@@ -792,7 +792,7 @@
   ],
   "mgmt-t3": [
     {
-      "h": "🌍 La RSE et le développement durable",
+      "h": "🌍 RSE et développement durable : trois piliers, ISO 26000 et rapport RSE",
       "blocks": [
         {
           "t": "p",
@@ -862,7 +862,7 @@
       ]
     },
     {
-      "h": "⚖️ Performance globale, éthique et intérêt collectif",
+      "h": "⚖️ Performance globale : externalités, éthique et intérêt collectif",
       "blocks": [
         {
           "t": "p",
@@ -947,7 +947,7 @@
       ]
     },
     {
-      "h": "🤝 L’économie sociale et solidaire (ESS)",
+      "h": "🤝 L’économie sociale et solidaire : finalité sociale, gouvernance démocratique, lucrativité limitée",
       "blocks": [
         {
           "t": "p",
@@ -1012,7 +1012,7 @@
       ]
     },
     {
-      "h": "💻 La transformation numérique des organisations",
+      "h": "💻 La transformation numérique : données, nouveaux modèles économiques, relation client",
       "blocks": [
         {
           "t": "p",
@@ -1077,7 +1077,7 @@
       ]
     },
     {
-      "h": "🔐 Numérique : enjeux, risques et responsabilité",
+      "h": "🔐 Les risques du numérique : cybersécurité, RGPD et intelligence artificielle",
       "blocks": [
         {
           "t": "p",
@@ -1146,7 +1146,7 @@
       ]
     },
     {
-      "h": "🧑‍💻 Les mutations du travail et des modes de vie",
+      "h": "🧑‍💻 Les mutations du travail : télétravail, qualité de vie au travail, ubérisation",
       "blocks": [
         {
           "t": "p",

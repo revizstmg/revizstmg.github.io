@@ -3,6 +3,7 @@
     "sections": [
       {
         "h": "📝 Méthode + exemple — analyser un document de propagande",
+        "group": "methode",
         "blocks": [
           {
             "t": "p",
@@ -34,7 +35,8 @@
   "hg-h2": {
     "sections": [
       {
-        "h": "📝 Exemple — analyser un texte de la Guerre froide",
+        "h": "📝 Exemple — analyser un texte de 1947 : doctrine Truman et endiguement",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -62,7 +64,8 @@
   "hg-h3": {
     "sections": [
       {
-        "h": "📝 Exemple — la France depuis 1945 en une frise raisonnée",
+        "h": "📝 Exemple — la vie politique depuis 1945 : une frise raisonnée des ruptures",
+        "group": "cas",
         "blocks": [
           {
             "t": "frise",
@@ -105,7 +108,7 @@
   "hg-g1": {
     "sections": [
       {
-        "h": "🌍 L’essentiel — mers et océans, cœur de la mondialisation",
+        "h": "🌍 L’essentiel — mers et océans : flux, ressources et tensions",
         "blocks": [
           {
             "t": "p",
@@ -124,7 +127,8 @@
         ]
       },
       {
-        "h": "🌍 Étude de cas — le canal de Suez",
+        "h": "🌍 Étude de cas — le canal de Suez : enjeux économiques et géopolitiques",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -151,7 +155,8 @@
   "hg-g2": {
     "sections": [
       {
-        "h": "🌍 Étude de cas — la métropolisation",
+        "h": "🌍 Étude de cas — la métropolisation : concentration, mise en réseau, inégalités",
+        "group": "cas",
         "blocks": [
           {
             "t": "p",
@@ -177,7 +182,7 @@
   "hg-g3": {
     "sections": [
       {
-        "h": "🌍 L’essentiel — la France dans l’Union européenne et le monde",
+        "h": "🌍 L’essentiel — la France dans l’UE et le monde : puissance, rayonnement, limites",
         "blocks": [
           {
             "t": "list",

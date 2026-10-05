@@ -1,7 +1,7 @@
 {
   "sig-t1": [
     {
-      "h": "💻 Qu’est-ce qu’un système d’information ?",
+      "h": "💻 Le système d’information : collecter, stocker, traiter, diffuser",
       "blocks": [
         {
           "t": "p",
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "h": "📈 Le SI, outil d’aide à la décision",
+      "h": "📈 Le SI, outil d’aide à la décision : la bonne information au bon moment",
       "blocks": [
         {
           "t": "p",
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "h": "🔗 Processus et représentation du SI",
+      "h": "🔗 Les processus : modéliser pour repérer les dysfonctionnements",
       "blocks": [
         {
           "t": "p",
@@ -96,7 +96,7 @@
       ]
     },
     {
-      "h": "💻 Étude de cas guidée — le SI à l’œuvre",
+      "h": "💻 Étude de cas guidée — données éclatées entre services : passer à un PGI",
       "blocks": [
         {
           "t": "p",
@@ -126,7 +126,7 @@
   ],
   "sig-t2": [
     {
-      "h": "🗄️ Le modèle relationnel",
+      "h": "🗄️ Le modèle relationnel : clé primaire, clé étrangère, relations",
       "blocks": [
         {
           "t": "p",
@@ -258,7 +258,7 @@
       ]
     },
     {
-      "h": "💻 Étude de cas guidée — écrire une requête SQL",
+      "h": "💻 Étude de cas guidée — requêtes sur une table PRODUITS : filtrer, trier, regrouper",
       "blocks": [
         {
           "t": "p",
@@ -289,7 +289,7 @@
   ],
   "sig-t3": [
     {
-      "h": "🤝 Le travail collaboratif et ses outils",
+      "h": "🤝 Le travail collaboratif : partager, coéditer, communiquer",
       "blocks": [
         {
           "t": "p",
@@ -316,7 +316,7 @@
       ]
     },
     {
-      "h": "🧠 L’intelligence collective",
+      "h": "🧠 L’intelligence collective : conditions de réussite et risques",
       "blocks": [
         {
           "t": "p",
@@ -346,7 +346,7 @@
       ]
     },
     {
-      "h": "🔄 La transformation numérique du travail",
+      "h": "🔄 La transformation numérique du travail : télétravail et conduite du changement",
       "blocks": [
         {
           "t": "p",
@@ -389,7 +389,7 @@
       ]
     },
     {
-      "h": "💻 Étude de cas guidée — le travail collaboratif",
+      "h": "💻 Étude de cas guidée — une PME multisite : plateforme collaborative et accompagnement",
       "blocks": [
         {
           "t": "p",
@@ -419,7 +419,7 @@
   ],
   "sig-t4": [
     {
-      "h": "🌐 Réseaux et architecture",
+      "h": "🌐 Les réseaux : partager des ressources, protocoles, surface d’attaque",
       "blocks": [
         {
           "t": "p",
@@ -445,7 +445,7 @@
       ]
     },
     {
-      "h": "🔐 La sécurité du système d’information",
+      "h": "🔐 La sécurité du SI : objectifs DIC et menaces (phishing, ransomware)",
       "blocks": [
         {
           "t": "p",
@@ -489,7 +489,7 @@
       ]
     },
     {
-      "h": "🛡️ Se protéger et le cadre légal (RGPD)",
+      "h": "🛡️ Se protéger : mots de passe, sauvegardes, pare-feu, RGPD",
       "blocks": [
         {
           "t": "p",
@@ -518,7 +518,7 @@
       ]
     },
     {
-      "h": "💻 Étude de cas guidée — sécuriser le SI",
+      "h": "💻 Étude de cas guidée — une attaque par rançongiciel : restaurer et prévenir",
       "blocks": [
         {
           "t": "p",

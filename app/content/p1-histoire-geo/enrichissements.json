@@ -2,7 +2,7 @@
   "p1-hg-h1": {
     "sections": [
       {
-        "h": "📝 Exemple — la Révolution française, points de repère",
+        "h": "📝 L’essentiel — la Révolution et l’Empire : fin de la monarchie absolue, liberté, égalité",
         "blocks": [
           {
             "t": "frise",
@@ -42,7 +42,8 @@
   "p1-hg-h2": {
     "sections": [
       {
-        "h": "📝 Exemple — la France industrielle au XIXᵉ siècle",
+        "h": "📝 Exemple — analyser une gravure d’usine : l’industrialisation au XIXᵉ siècle",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -69,7 +70,7 @@
   "p1-hg-h3": {
     "sections": [
       {
-        "h": "📝 Exemple — la Grande Guerre (1914-1918)",
+        "h": "📝 L’essentiel — la Grande Guerre : guerre totale, violence de masse, conséquences",
         "blocks": [
           {
             "t": "list",
@@ -91,7 +92,8 @@
   "p1-hg-g1": {
     "sections": [
       {
-        "h": "🌍 Étude de cas — la métropolisation en France",
+        "h": "🌍 Étude de cas — la métropolisation en France : Paris et les métropoles régionales",
+        "group": "cas",
         "blocks": [
           {
             "t": "p",
@@ -117,7 +119,7 @@
   "p1-hg-g2": {
     "sections": [
       {
-        "h": "🌍 L’essentiel — les espaces productifs français",
+        "h": "🌍 L’essentiel — les espaces productifs français : agricoles, industriels, de services",
         "blocks": [
           {
             "t": "list",

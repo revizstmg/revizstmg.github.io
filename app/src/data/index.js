@@ -195,15 +195,16 @@ function assemblerTheme(c) {
   // Cours « approfondis » du tronc STMG (Gestion-Finance, Management, Droit,
   // Économie, Maths) : plusieurs chapitres développés ajoutés à la suite.
   // Chaque section reçoit un « group » (approf / methode / cas) pour être
-  // rangée dans une catégorie repliable sur la page du thème.
+  // rangée dans une catégorie repliable sur la page du thème : celui écrit dans
+  // le JSON s'il existe, sinon celui déduit du titre.
   const appr = APPROF[c.id]
-  if (appr?.length) c.cours = [...(c.cours || []), ...appr.map((s) => ({ ...s, group: courseGroupOf(s.h) }))]
+  if (appr?.length) c.cours = [...(c.cours || []), ...appr.map((s) => ({ ...s, group: s.group || courseGroupOf(s.h) }))]
   const appr2 = APPROF2[c.id]
-  if (appr2?.length) c.cours = [...(c.cours || []), ...appr2.map((s) => ({ ...s, group: courseGroupOf(s.h) }))]
+  if (appr2?.length) c.cours = [...(c.cours || []), ...appr2.map((s) => ({ ...s, group: s.group || courseGroupOf(s.h) }))]
   const appr3 = APPROF3[c.id]
-  if (appr3?.length) c.cours = [...(c.cours || []), ...appr3.map((s) => ({ ...s, group: courseGroupOf(s.h) }))]
+  if (appr3?.length) c.cours = [...(c.cours || []), ...appr3.map((s) => ({ ...s, group: s.group || courseGroupOf(s.h) }))]
   const appr4 = APPROF4[c.id]
-  if (appr4?.length) c.cours = [...(c.cours || []), ...appr4.map((s) => ({ ...s, group: courseGroupOf(s.h) }))]
+  if (appr4?.length) c.cours = [...(c.cours || []), ...appr4.map((s) => ({ ...s, group: s.group || courseGroupOf(s.h) }))]
   // SIC & SI : chapitres du programme rattachés à la catégorie principale
   // « 📘 Le cours » (pas de « group » → première catégorie, ouverte).
   const sicsi = SICSI[c.id]

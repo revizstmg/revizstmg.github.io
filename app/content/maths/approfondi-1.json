@@ -134,7 +134,8 @@
       ]
     },
     {
-      "h": "🧮 Exercice type guidé + méthode",
+      "h": "🧮 Exercice type guidé — évolutions successives et taux moyen",
+      "group": "methode",
       "blocks": [
         {
           "t": "p",
@@ -170,7 +171,7 @@
   ],
   "math-c2": [
     {
-      "h": "🔢 Deux types de suites : arithmétique et géométrique",
+      "h": "🔢 Les suites arithmétiques et géométriques : rang et récurrence",
       "blocks": [
         {
           "t": "p",
@@ -213,7 +214,7 @@
       ]
     },
     {
-      "h": "📐 Terme général et somme",
+      "h": "📐 Le terme général uₙ et la somme des termes",
       "blocks": [
         {
           "t": "p",
@@ -248,7 +249,8 @@
       ]
     },
     {
-      "h": "🧮 Exercice type guidé — arithmétique vs géométrique",
+      "h": "🧮 Exercice type guidé — deux placements : suite arithmétique ou géométrique",
+      "group": "methode",
       "blocks": [
         {
           "t": "p",
@@ -368,7 +370,8 @@
       ]
     },
     {
-      "h": "🧮 Exercice type guidé — dérivée et optimisation",
+      "h": "🧮 Exemple traité — dérivée, variations et coût minimal",
+      "group": "methode",
       "blocks": [
         {
           "t": "p",
@@ -455,7 +458,8 @@
       ]
     },
     {
-      "h": "🧮 Exercice type guidé — ajustement et prévision",
+      "h": "🧮 Exercice type guidé — ajustement affine et prévision par extrapolation",
+      "group": "methode",
       "blocks": [
         {
           "t": "p",
@@ -578,7 +582,8 @@
       ]
     },
     {
-      "h": "🧮 Exercice type guidé — arbre et probabilité conditionnelle",
+      "h": "🧮 Exercice type guidé — arbre pondéré et probabilité conditionnelle",
+      "group": "methode",
       "blocks": [
         {
           "t": "p",
@@ -674,7 +679,8 @@
       ]
     },
     {
-      "h": "🧮 Exercice type guidé — loi binomiale",
+      "h": "🧮 Exercice type guidé — loi binomiale : P(X = 0), P(X ≥ 1) et espérance",
+      "group": "methode",
       "blocks": [
         {
           "t": "p",
@@ -779,7 +785,8 @@
       ]
     },
     {
-      "h": "🧮 Exercice type guidé — loi normale et estimation",
+      "h": "🧮 Exercice type guidé — loi normale et estimation d’une proportion",
+      "group": "methode",
       "blocks": [
         {
           "t": "p",

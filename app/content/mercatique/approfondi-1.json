@@ -1,7 +1,7 @@
 {
   "mkg-t1": [
     {
-      "h": "🧠 Comprendre le consommateur : besoins et mobiles",
+      "h": "🧠 Besoins, mobiles et freins du consommateur",
       "blocks": [
         {
           "t": "p",
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "h": "🛒 Le processus et les facteurs d’achat",
+      "h": "🛒 Le processus d’achat en cinq étapes et ses facteurs",
       "blocks": [
         {
           "t": "p",
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "h": "📊 Étudier le comportement : les études",
+      "h": "📊 Les études de marché : quantitatives ou qualitatives, primaires ou secondaires",
       "blocks": [
         {
           "t": "p",
@@ -122,7 +122,7 @@
       ]
     },
     {
-      "h": "🛍️ Étude de cas guidée — comprendre un achat",
+      "h": "🛍️ Étude de cas guidée — une nuit de queue : besoins, mobiles et freins",
       "blocks": [
         {
           "t": "p",
@@ -266,7 +266,7 @@
       ]
     },
     {
-      "h": "🛍️ Étude de cas guidée — segmenter et cibler",
+      "h": "🛍️ Étude de cas guidée — viser tout le monde ou un segment : cible et positionnement",
       "blocks": [
         {
           "t": "p",
@@ -296,7 +296,7 @@
   ],
   "mkg-t3": [
     {
-      "h": "🎁 Le marketing mix : les 4P",
+      "h": "🎁 Le marketing mix : les 4P de la mercatique opérationnelle",
       "blocks": [
         {
           "t": "p",
@@ -344,7 +344,7 @@
       ]
     },
     {
-      "h": "🏷️ La politique de prix",
+      "h": "🏷️ La politique de prix : élasticité, écrémage, pénétration, alignement",
       "blocks": [
         {
           "t": "p",
@@ -392,7 +392,7 @@
       ]
     },
     {
-      "h": "📦 Produit, distribution et communication",
+      "h": "📦 Produit, distribution et communication : gamme, circuits, médias",
       "blocks": [
         {
           "t": "p",
@@ -439,7 +439,7 @@
       ]
     },
     {
-      "h": "🛍️ Étude de cas guidée — la cohérence du mix",
+      "h": "🛍️ Étude de cas guidée — lancer un café haut de gamme : un mix cohérent",
       "blocks": [
         {
           "t": "p",
@@ -468,7 +468,7 @@
   ],
   "mkg-t4": [
     {
-      "h": "📱 La mercatique numérique et les données",
+      "h": "📱 La mercatique numérique : personnalisation, ciblage, mesure en temps réel",
       "blocks": [
         {
           "t": "p",
@@ -495,7 +495,7 @@
       ]
     },
     {
-      "h": "🌱 Mercatique durable et éthique",
+      "h": "🌱 Mercatique durable et éthique : sincérité et e-réputation",
       "blocks": [
         {
           "t": "p",
@@ -538,7 +538,7 @@
       ]
     },
     {
-      "h": "🔗 Les nouveaux parcours d’achat",
+      "h": "🔗 Les nouveaux parcours d’achat : omnicanal, web-to-store, influence",
       "blocks": [
         {
           "t": "p",
@@ -564,7 +564,7 @@
       ]
     },
     {
-      "h": "🛍️ Étude de cas guidée — data et éthique",
+      "h": "🛍️ Étude de cas guidée — cibler grâce aux données : avantages, limites, RGPD",
       "blocks": [
         {
           "t": "p",

@@ -2,7 +2,8 @@
   "p1-mgmt-t1": {
     "sections": [
       {
-        "h": "💼 Exemple traité — reconnaître une organisation",
+        "h": "💼 Exemple traité — une association sportive : type, finalité, ressources",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -30,7 +31,8 @@
   "p1-mgmt-t2": {
     "sections": [
       {
-        "h": "💼 Exemple traité — un diagnostic SWOT",
+        "h": "💼 Exemple traité — des boulangeries face à une grande enseigne : le SWOT",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -70,7 +72,8 @@
   "p1-mgmt-t3": {
     "sections": [
       {
-        "h": "💼 Exemple traité — choix stratégiques",
+        "h": "💼 Exemple traité — un fabricant de vélos : coûts ou différenciation",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",

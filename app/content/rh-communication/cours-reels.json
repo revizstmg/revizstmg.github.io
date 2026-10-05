@@ -1,7 +1,7 @@
 {
   "rh-t1": [
     {
-      "h": "Pourquoi certains adorent leur travail",
+      "h": "La motivation selon Herzberg : facteurs d’hygiène et de motivation",
       "blocks": [
         {
           "t": "example",
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "h": "Être compétent, ça ne se résume pas à un diplôme",
+      "h": "La compétence : savoir, savoir-faire, savoir-être et GPEC",
       "blocks": [
         {
           "t": "p",
@@ -57,7 +57,7 @@
   ],
   "rh-t2": [
     {
-      "h": "Une équipe soudée gagne (mais attention)",
+      "h": "La cohésion d’équipe : une force, un risque de conformisme",
       "blocks": [
         {
           "t": "example",
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "h": "Un conflit n’est pas forcément une catastrophe",
+      "h": "Les conflits : sources et modes de résolution",
       "blocks": [
         {
           "t": "example",
@@ -122,7 +122,7 @@
   ],
   "rh-t3": [
     {
-      "h": "Le bad buzz : quand la communication dérape",
+      "h": "Le schéma de communication à l’épreuve du bad buzz",
       "blocks": [
         {
           "t": "example",
@@ -145,7 +145,7 @@
       ]
     },
     {
-      "h": "Parler à ses salariés ≠ parler à ses clients",
+      "h": "Communication interne et externe : une communication globale",
       "blocks": [
         {
           "t": "p",
@@ -182,7 +182,7 @@
   ],
   "rh-t4": [
     {
-      "h": "1 800 € sur la fiche de paie, combien pour l’employeur ?",
+      "h": "Le coût du travail : salaire net, cotisations salariales et patronales",
       "blocks": [
         {
           "t": "example",
@@ -209,7 +209,7 @@
       ]
     },
     {
-      "h": "Le climat social, ça se mesure",
+      "h": "Le climat social et les conditions de travail : turnover, absentéisme, QVT",
       "blocks": [
         {
           "t": "p",

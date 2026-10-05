@@ -1,7 +1,7 @@
 {
   "droit-t5": [
     {
-      "h": "Un « oui » qui vous engage",
+      "h": "La formation du contrat : offre, acceptation et force obligatoire",
       "blocks": [
         {
           "t": "p",
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "h": "Quand on vous a trompé : le consentement vicié",
+      "h": "Le consentement vicié : le dol et la nullité du contrat",
       "blocks": [
         {
           "t": "example",
@@ -96,7 +96,7 @@
       ]
     },
     {
-      "h": "Pourquoi un ado ne peut pas tout signer",
+      "h": "La capacité juridique du mineur et les trois conditions de validité",
       "blocks": [
         {
           "t": "example",
@@ -126,7 +126,7 @@
   ],
   "droit-t6": [
     {
-      "h": "Casser, c’est réparer",
+      "h": "La responsabilité civile : réparer le dommage causé à autrui",
       "blocks": [
         {
           "t": "example",
@@ -170,7 +170,7 @@
       ]
     },
     {
-      "h": "Payer la victime OU être puni : deux logiques",
+      "h": "Indemniser la victime ou punir l’auteur : civil ou pénal",
       "blocks": [
         {
           "t": "example",
@@ -221,7 +221,7 @@
   ],
   "droit-t7": [
     {
-      "h": "Chauffeur Uber : salarié ou indépendant ?",
+      "h": "Salarié ou indépendant : le lien de subordination et le faisceau d’indices",
       "blocks": [
         {
           "t": "example",
@@ -267,7 +267,7 @@
       ]
     },
     {
-      "h": "On ne licencie pas « parce que »",
+      "h": "Le licenciement : cause réelle et sérieuse et procédure",
       "blocks": [
         {
           "t": "example",
@@ -292,7 +292,7 @@
   ],
   "droit-t8": [
     {
-      "h": "Choupette peut-elle hériter ? (Karl Lagerfeld)",
+      "h": "La personnalité juridique et le statut de l’animal",
       "blocks": [
         {
           "t": "example",
@@ -315,7 +315,7 @@
       ]
     },
     {
-      "h": "Protéger sa maison quand on crée son entreprise",
+      "h": "Forme juridique et patrimoine personnel : la responsabilité limitée aux apports",
       "blocks": [
         {
           "t": "example",
@@ -356,7 +356,7 @@
       ]
     },
     {
-      "h": "Une idée, ça se protège",
+      "h": "La propriété intellectuelle : marque, droit d’auteur et contrefaçon",
       "blocks": [
         {
           "t": "example",

@@ -15,7 +15,7 @@
       "intro": "Une **organisation** naît du besoin de **structurer une action collective**. Le **management** est l’art de la **conduire** pour qu’elle atteigne ses buts et **dure**. On découvre aussi les grandes **formes** d’organisations et leurs **finalités**.",
       "cours": [
         {
-          "h": "Qu’est-ce qu’une organisation ?",
+          "h": "L’organisation : un groupe, des ressources, un but commun",
           "blocks": [
             {
               "t": "p",
@@ -38,7 +38,7 @@
           ]
         },
         {
-          "h": "Qu’est-ce que le management ?",
+          "h": "Le management : fixer des objectifs, organiser, animer, contrôler",
           "blocks": [
             {
               "t": "p",
@@ -54,7 +54,7 @@
           ]
         },
         {
-          "h": "Deux niveaux de management",
+          "h": "Deux niveaux de management : stratégique et opérationnel",
           "blocks": [
             {
               "t": "table",
@@ -84,7 +84,7 @@
           ]
         },
         {
-          "h": "Les différentes formes d’organisations",
+          "h": "Les formes d’organisations : entreprises, organisations publiques, société civile",
           "blocks": [
             {
               "t": "p",
@@ -362,7 +362,7 @@
           ]
         },
         {
-          "h": "Le diagnostic externe : l’environnement de l’organisation",
+          "h": "Le diagnostic externe : macro-environnement (PESTEL) et micro-environnement",
           "blocks": [
             {
               "t": "p",
@@ -385,7 +385,7 @@
           ]
         },
         {
-          "h": "Le diagnostic interne",
+          "h": "Le diagnostic interne : ressources, compétences distinctives, forces et faiblesses",
           "blocks": [
             {
               "t": "p",
@@ -615,7 +615,7 @@
       "intro": "Une fois le diagnostic posé et les objectifs fixés, l’organisation doit faire des **choix stratégiques** pour se donner un **avantage concurrentiel** durable. Ces choix diffèrent selon la **finalité** de l’organisation.",
       "cours": [
         {
-          "h": "Rechercher un avantage concurrentiel",
+          "h": "L’avantage concurrentiel et la compétence distinctive",
           "blocks": [
             {
               "t": "p",

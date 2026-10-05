@@ -2,7 +2,8 @@
   "sig-t1": {
     "sections": [
       {
-        "h": "💻 Exemple — le système d’information à l’œuvre",
+        "h": "💻 Exemple — une commande en ligne : stock, facturation, livraison et PGI",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -36,7 +37,8 @@
   "sig-t2": {
     "sections": [
       {
-        "h": "💻 Exemple — écrire une requête SQL",
+        "h": "💻 Exemple — les clients de Lyon : SELECT, WHERE, ORDER BY",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -74,7 +76,8 @@
   "sig-t3": {
     "sections": [
       {
-        "h": "💻 Exemple — le travail collaboratif",
+        "h": "💻 Exemple — un dossier à trois, à distance : espace partagé et versions",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -108,7 +111,8 @@
   "sig-t4": {
     "sections": [
       {
-        "h": "💻 Exemple — sécuriser le système d’information",
+        "h": "💻 Exemple — un mail « urgent » demande un mot de passe : réagir au phishing",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",

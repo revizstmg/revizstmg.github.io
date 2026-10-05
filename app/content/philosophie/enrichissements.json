@@ -2,7 +2,7 @@
   "philo-art": {
     "sections": [
       {
-        "h": "🏛️ Aux sources — une histoire de l’idée d’art",
+        "h": "🏛️ Histoire de l’idée d’art : tekhnê, imitation, catharsis, esthétique",
         "blocks": [
           {
             "t": "p",
@@ -64,7 +64,7 @@
         ]
       },
       {
-        "h": "📖 L’art dans la littérature et les arts",
+        "h": "📖 L’art en littérature : beauté et morale (Wilde), salut par l’art (Proust)",
         "blocks": [
           {
             "t": "p",
@@ -106,7 +106,8 @@
             "h": "Conclusion rédigée",
             "c": "L’utile peut être beau, mais la beauté ne se laisse jamais **enfermer** dans l’utilité : elle commence précisément là où cesse le calcul des fins. C’est pourquoi l’art, souverainement inutile, est peut-être ce dont l’homme a le plus besoin."
           }
-        ]
+        ],
+        "group": "cas"
       }
     ],
     "resources": [
@@ -121,7 +122,7 @@
   "philo-justice": {
     "sections": [
       {
-        "h": "🏛️ Aux sources — justice, loi et cité",
+        "h": "🏛️ Justice et cité : Platon, Aristote, le contrat (Hobbes, Rousseau), Rawls",
         "blocks": [
           {
             "t": "p",
@@ -164,7 +165,7 @@
         ]
       },
       {
-        "h": "📖 La justice en littérature — de l’injustice à la révolte",
+        "h": "📖 La justice en littérature : Hugo, Kafka, Antigone, Camus",
         "blocks": [
           {
             "t": "p",
@@ -202,7 +203,8 @@
             "h": "Ouverture",
             "c": "La vraie obéissance n’est pas la soumission : c’est l’adhésion réfléchie à des lois que l’on peut, en conscience, reconnaître comme justes — et, quand elles ne le sont pas, le courage de les contester dans les formes du droit."
           }
-        ]
+        ],
+        "group": "cas"
       }
     ],
     "resources": [
@@ -217,7 +219,7 @@
   "philo-liberte": {
     "sections": [
       {
-        "h": "🏛️ Aux sources — sommes-nous libres ?",
+        "h": "🏛️ Libre arbitre et déterminisme : stoïciens, Descartes, Spinoza, Kant",
         "blocks": [
           {
             "t": "p",
@@ -274,7 +276,7 @@
         ]
       },
       {
-        "h": "📖 La liberté en littérature et en histoire",
+        "h": "📖 La liberté en littérature : Orwell, Huxley, Sartre, Camus",
         "blocks": [
           {
             "t": "p",
@@ -312,7 +314,8 @@
             "h": "Conclusion",
             "c": "Faire ce que l’on veut n’est qu’une liberté apparente si l’on ne sait pas **pourquoi** on le veut. La liberté accomplie est celle d’un sujet autonome, maître de ses désirs et responsable de ses choix."
           }
-        ]
+        ],
+        "group": "cas"
       }
     ],
     "resources": [
@@ -327,7 +330,7 @@
   "philo-nature": {
     "sections": [
       {
-        "h": "🏛️ Aux sources — nature, culture et condition humaine",
+        "h": "🏛️ Nature et culture : perfectibilité (Rousseau), Lévi-Strauss, principe responsabilité",
         "blocks": [
           {
             "t": "p",
@@ -374,7 +377,7 @@
         ]
       },
       {
-        "h": "📖 La nature dans la littérature et la pensée",
+        "h": "📖 La nature en littérature : les romantiques, Spinoza, l’inquiétude écologique",
         "blocks": [
           {
             "t": "p",
@@ -412,7 +415,8 @@
             "h": "Conclusion",
             "c": "« Dominer » la nature au sens de la piller est une impasse ; la vraie maîtrise est celle de nos propres pouvoirs — savoir **limiter** notre puissance au nom de ce qui nous dépasse et nous suit."
           }
-        ]
+        ],
+        "group": "cas"
       }
     ],
     "resources": [
@@ -427,7 +431,7 @@
   "philo-religion": {
     "sections": [
       {
-        "h": "🏛️ Aux sources — foi, raison et sacré",
+        "h": "🏛️ Foi, raison et sacré : religare, le pari de Pascal, la critique de Marx",
         "blocks": [
           {
             "t": "p",
@@ -479,7 +483,7 @@
         ]
       },
       {
-        "h": "📖 La religion en littérature et en histoire",
+        "h": "📖 La religion en littérature et en histoire : Galilée, Voltaire, Dostoïevski, laïcité",
         "blocks": [
           {
             "t": "p",
@@ -517,7 +521,8 @@
             "h": "Conclusion",
             "c": "La foi n’est contraire à la raison que lorsqu’elle prétend se substituer à elle sur son propre terrain (les faits). Distinguées, elles peuvent coexister ; confondues, elles s’égarent l’une l’autre."
           }
-        ]
+        ],
+        "group": "cas"
       }
     ],
     "resources": [
@@ -532,7 +537,7 @@
   "philo-technique": {
     "sections": [
       {
-        "h": "🏛️ Aux sources — l’homme, l’outil et le travail",
+        "h": "🏛️ L’homme, l’outil et le travail : Prométhée, Bergson, Hegel, Marx, Heidegger",
         "blocks": [
           {
             "t": "p",
@@ -589,7 +594,7 @@
         ]
       },
       {
-        "h": "📖 La technique en littérature et au cinéma",
+        "h": "📖 La technique en littérature et au cinéma : Frankenstein, Huxley, Rousseau",
         "blocks": [
           {
             "t": "p",
@@ -627,7 +632,8 @@
             "h": "Conclusion",
             "c": "La technique nous libère des contraintes naturelles, mais ne nous rend pas libres par elle-même : elle nous met en demeure de **choisir** ce que nous voulons en faire — et c’est là, précisément, que se joue notre liberté."
           }
-        ]
+        ],
+        "group": "cas"
       }
     ],
     "resources": [
@@ -642,7 +648,7 @@
   "philo-verite": {
     "sections": [
       {
-        "h": "🏛️ Aux sources — vérité, opinion et démonstration",
+        "h": "🏛️ Vérité, opinion et démonstration : adéquation, caverne, doute, axiomes",
         "blocks": [
           {
             "t": "p",
@@ -694,7 +700,7 @@
         ]
       },
       {
-        "h": "📖 La vérité en littérature et dans les sciences",
+        "h": "📖 La vérité en littérature et en sciences : Molière, Orwell, vérité révisable",
         "blocks": [
           {
             "t": "p",
@@ -732,7 +738,8 @@
             "h": "Conclusion",
             "c": "Toutes les opinions ont un droit égal à s’exprimer, mais elles n’ont pas une valeur égale devant la vérité : c’est même parce que la vérité existe que la discussion vaut la peine d’être menée."
           }
-        ]
+        ],
+        "group": "cas"
       }
     ],
     "resources": [
@@ -747,7 +754,7 @@
   "philo-methode": {
     "sections": [
       {
-        "h": "🧭 La dissertation — méthode complète et détaillée",
+        "h": "🧭 La dissertation en détail : analyser, problématiser, plan progressif, argumenter",
         "blocks": [
           {
             "t": "p",
@@ -776,7 +783,7 @@
         ]
       },
       {
-        "h": "📖 L’explication de texte — méthode et exemple traité",
+        "h": "📖 L’explication de texte en détail : dégager la thèse, les mouvements, discuter",
         "blocks": [
           {
             "t": "p",
@@ -805,7 +812,7 @@
         ]
       },
       {
-        "h": "👤 Galerie d’auteurs — une idée par philosophe",
+        "h": "👤 Galerie d’auteurs : une idée, une formule par philosophe",
         "blocks": [
           {
             "t": "p",

@@ -1,7 +1,7 @@
 {
   "eco-t6": [
     {
-      "h": "🏛️ Les trois fonctions de l’État (Musgrave)",
+      "h": "🏛️ Les fonctions de l’État selon Musgrave : corriger et compléter le marché",
       "blocks": [
         {
           "t": "p",
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "h": "⚖️ Pourquoi le marché « défaille »",
+      "h": "⚖️ Les défaillances du marché : biens publics, externalités, asymétries d’information, monopole",
       "blocks": [
         {
           "t": "p",
@@ -72,7 +72,7 @@
       ]
     },
     {
-      "h": "💶 Les politiques économiques",
+      "h": "💶 Les politiques économiques : budgétaire et monétaire, conjoncturelles et structurelles",
       "blocks": [
         {
           "t": "p",
@@ -119,7 +119,7 @@
       ]
     },
     {
-      "h": "📉 Les limites de l’intervention",
+      "h": "📉 Les limites de l’intervention : dette, effet d’éviction, règles européennes",
       "blocks": [
         {
           "t": "p",
@@ -150,7 +150,8 @@
       ]
     },
     {
-      "h": "💶 Exemple guidé — analyser une intervention",
+      "h": "💶 Exemple guidé — le bouclier tarifaire : fonction, outils et limites",
+      "group": "cas",
       "blocks": [
         {
           "t": "p",
@@ -180,7 +181,7 @@
   ],
   "eco-t7": [
     {
-      "h": "📊 Mesurer l’emploi et le chômage",
+      "h": "📊 Mesurer l’emploi et le chômage : population active, actifs occupés, inactifs",
       "blocks": [
         {
           "t": "p",
@@ -211,7 +212,7 @@
       ]
     },
     {
-      "h": "🔎 Les différents types de chômage",
+      "h": "🔎 Les types de chômage : conjoncturel et structurel",
       "blocks": [
         {
           "t": "p",
@@ -264,7 +265,7 @@
       ]
     },
     {
-      "h": "🛠️ Les politiques de l’emploi",
+      "h": "🛠️ Agir contre le chômage : politiques actives et passives, coût du travail",
       "blocks": [
         {
           "t": "p",
@@ -293,7 +294,7 @@
       ]
     },
     {
-      "h": "💼 Le fonctionnement du marché du travail",
+      "h": "💼 Le marché du travail : offre, demande, analyses néoclassique et keynésienne",
       "blocks": [
         {
           "t": "p",
@@ -316,7 +317,8 @@
       ]
     },
     {
-      "h": "💶 Exemple chiffré guidé — le taux de chômage",
+      "h": "💶 Exemple chiffré guidé — population active et taux de chômage",
+      "group": "cas",
       "blocks": [
         {
           "t": "p",
@@ -346,7 +348,7 @@
   ],
   "eco-t8": [
     {
-      "h": "🌍 Pourquoi les pays échangent : l’avantage comparatif",
+      "h": "🌍 L’avantage comparatif de Ricardo : se spécialiser pour échanger",
       "blocks": [
         {
           "t": "p",
@@ -373,7 +375,7 @@
       ]
     },
     {
-      "h": "📦 Balance commerciale et balance des paiements",
+      "h": "📦 Balance commerciale et balance des paiements : exportations, importations, soldes",
       "blocks": [
         {
           "t": "p",
@@ -406,7 +408,7 @@
       ]
     },
     {
-      "h": "⚔️ Libre-échange contre protectionnisme",
+      "h": "⚔️ Libre-échange ou protectionnisme : arguments et représailles",
       "blocks": [
         {
           "t": "p",
@@ -458,7 +460,7 @@
       ]
     },
     {
-      "h": "🏭 Firmes multinationales et mondialisation",
+      "h": "🏭 Firmes multinationales et chaînes de valeur mondiales",
       "blocks": [
         {
           "t": "p",
@@ -487,7 +489,8 @@
       ]
     },
     {
-      "h": "💶 Exemple chiffré guidé — la balance commerciale",
+      "h": "💶 Exemple chiffré guidé — calculer et expliquer un déficit commercial",
+      "group": "cas",
       "blocks": [
         {
           "t": "p",
@@ -517,7 +520,7 @@
   ],
   "eco-t9": [
     {
-      "h": "📈 La croissance, le PIB et ses limites",
+      "h": "📈 La croissance économique : mesure par le PIB et limites",
       "blocks": [
         {
           "t": "p",
@@ -548,7 +551,7 @@
       ]
     },
     {
-      "h": "🌱 Le développement durable et ses trois piliers",
+      "h": "🌱 Le développement durable : trois piliers, soutenabilité faible ou forte",
       "blocks": [
         {
           "t": "p",
@@ -591,7 +594,7 @@
       ]
     },
     {
-      "h": "🔄 Externalités et instruments pour la planète",
+      "h": "🔄 Les instruments contre les externalités : taxe, quotas, réglementation",
       "blocks": [
         {
           "t": "p",
@@ -644,7 +647,7 @@
       ]
     },
     {
-      "h": "🧭 Mesurer autrement : IDH et indicateurs alternatifs",
+      "h": "🧭 L’IDH et les indicateurs alternatifs au PIB",
       "blocks": [
         {
           "t": "p",
@@ -679,7 +682,8 @@
       ]
     },
     {
-      "h": "💶 Exemple guidé — croissance et soutenabilité",
+      "h": "💶 Exemple guidé — une croissance forte mais non soutenable",
+      "group": "cas",
       "blocks": [
         {
           "t": "p",

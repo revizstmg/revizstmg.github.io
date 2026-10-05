@@ -14,7 +14,7 @@
       "intro": "Un urinoir industriel signé peut-il devenir une œuvre exposée dans les plus grands musées ? La notion d’art interroge ce qui fait une œuvre, ce à quoi elle sert, et si le beau vaut pour tous ou seulement pour moi.",
       "cours": [
         {
-          "h": "🎨 Comprendre — l’art par l’exemple (la « Fontaine » de Duchamp)",
+          "h": "🎨 L’art : œuvre et objet utile, beau et agréable",
           "blocks": [
             {
               "t": "example",
@@ -37,7 +37,7 @@
           ]
         },
         {
-          "h": "🤔 Le problème — l’art imite-t-il ou crée-t-il ?",
+          "h": "🤔 Imiter ou révéler : Platon, Hegel et le goût selon Kant",
           "blocks": [
             {
               "t": "p",
@@ -59,7 +59,7 @@
           ]
         },
         {
-          "h": "🎓 Approfondir & au bac",
+          "h": "🎓 Au bac : la fonction de l’art, plan type et pièges",
           "blocks": [
             {
               "t": "list",
@@ -238,7 +238,7 @@
       "intro": "En 1955, Rosa Parks enfreint une loi bien réelle en refusant de céder sa place… mais une loi que l’histoire jugera injuste. La justice interroge le rapport entre la loi, l’équité et ce qui est vraiment juste.",
       "cours": [
         {
-          "h": "⚖️ Comprendre — la justice par l’exemple (Rosa Parks)",
+          "h": "⚖️ La justice : légal et légitime, égalité et équité",
           "blocks": [
             {
               "t": "example",
@@ -261,7 +261,7 @@
           ]
         },
         {
-          "h": "🤔 Le problème — peut-il être juste de désobéir ?",
+          "h": "🤔 Obéir ou désobéir : désobéissance civile et droit du plus fort (Rousseau)",
           "blocks": [
             {
               "t": "list",
@@ -279,7 +279,7 @@
           ]
         },
         {
-          "h": "🎓 Approfondir & au bac",
+          "h": "🎓 Au bac : égalité ou équité, plan type et pièges",
           "blocks": [
             {
               "t": "list",
@@ -458,7 +458,7 @@
       "intro": "« Je suis libre de fumer si je veux » — mais le fumeur dépendant agit-il librement, ou son addiction décide-t-elle à sa place ? La liberté interroge ce que signifie vraiment agir par soi-même.",
       "cours": [
         {
-          "h": "🕊️ Comprendre — la liberté par l’exemple (le fumeur)",
+          "h": "🕊️ La liberté : licence ou autonomie, liberté et déterminisme",
           "blocks": [
             {
               "t": "example",
@@ -481,7 +481,7 @@
           ]
         },
         {
-          "h": "🤔 Le problème — sommes-nous vraiment libres ?",
+          "h": "🤔 Sommes-nous libres ? Responsabilité (Sartre), liberté et loi (Montesquieu)",
           "blocks": [
             {
               "t": "list",
@@ -499,7 +499,7 @@
           ]
         },
         {
-          "h": "🎓 Approfondir & au bac",
+          "h": "🎓 Au bac : liberté et responsabilité, plan type et pièges",
           "blocks": [
             {
               "t": "list",
@@ -678,7 +678,7 @@
       "intro": "Un barrage produit une électricité « propre » mais noie une vallée entière. Faut-il maîtriser la nature ou la respecter ? Et « c’est naturel » veut-il dire « c’est bien » ?",
       "cours": [
         {
-          "h": "🌿 Comprendre — la nature par l’exemple (le barrage)",
+          "h": "🌿 La nature : trois sens du mot, inné et acquis, nature et culture",
           "blocks": [
             {
               "t": "example",
@@ -701,7 +701,7 @@
           ]
         },
         {
-          "h": "🤔 Le problème — maîtriser ou respecter la nature ?",
+          "h": "🤔 Maîtriser ou respecter la nature : Descartes, Jonas et le piège du « naturel »",
           "blocks": [
             {
               "t": "list",
@@ -719,7 +719,7 @@
           ]
         },
         {
-          "h": "🎓 Approfondir & au bac",
+          "h": "🎓 Au bac : nature et culture, dominer la nature, plan type",
           "blocks": [
             {
               "t": "list",
@@ -898,7 +898,7 @@
       "intro": "En 1633, Galilée est condamné pour avoir soutenu, preuves à l’appui, que la Terre tourne. Un cas d’école du rapport — parfois tendu — entre la foi et la raison.",
       "cours": [
         {
-          "h": "✝️ Comprendre — la religion par l’exemple (Galilée)",
+          "h": "✝️ La religion : croyances, pratiques et sacré ; croire et savoir",
           "blocks": [
             {
               "t": "example",
@@ -921,7 +921,7 @@
           ]
         },
         {
-          "h": "🤔 Le problème — foi et raison s’opposent-elles ?",
+          "h": "🤔 Foi et raison : Pascal, la critique (Marx, Freud), le lien social (Durkheim)",
           "blocks": [
             {
               "t": "list",
@@ -939,7 +939,7 @@
           ]
         },
         {
-          "h": "🎓 Approfondir & au bac",
+          "h": "🎓 Au bac : croire et savoir, plan type et pièges",
           "blocks": [
             {
               "t": "list",
@@ -1118,7 +1118,7 @@
       "intro": "Le smartphone nous libère (tout savoir, partout) et nous asservit (dépendance, surveillance). Une seule technique, deux visages : nous libère-t-elle ou nous asservit-elle ?",
       "cours": [
         {
-          "h": "🔧 Comprendre — la technique par l’exemple (le smartphone)",
+          "h": "🔧 La technique : procédés efficaces, moyen et fin, l’usage",
           "blocks": [
             {
               "t": "example",
@@ -1141,7 +1141,7 @@
           ]
         },
         {
-          "h": "🤔 Le problème — nous libère-t-elle ou nous asservit-elle ?",
+          "h": "🤔 Libère-t-elle ou asservit-elle ? Heidegger, Jonas et le progrès moral",
           "blocks": [
             {
               "t": "list",
@@ -1159,7 +1159,7 @@
           ]
         },
         {
-          "h": "🎓 Approfondir & au bac",
+          "h": "🎓 Au bac : moyen et fin, plan type et pièges",
           "blocks": [
             {
               "t": "list",
@@ -1338,7 +1338,7 @@
       "intro": "« La Terre est plate » fut longtemps une opinion répandue. Mais une vérité ne se décide pas à la majorité : elle se démontre ou se vérifie. Qu’est-ce donc que la vérité ?",
       "cours": [
         {
-          "h": "🔍 Comprendre — la vérité par l’exemple (« la Terre est plate »)",
+          "h": "🔍 La vérité : accord de la pensée avec l’objet, opinion et savoir",
           "blocks": [
             {
               "t": "example",
@@ -1361,7 +1361,7 @@
           ]
         },
         {
-          "h": "🤔 Le problème — peut-on tout démontrer ?",
+          "h": "🤔 Peut-on tout démontrer ? La caverne (Platon), les axiomes, le doute (Descartes)",
           "blocks": [
             {
               "t": "list",
@@ -1379,7 +1379,7 @@
           ]
         },
         {
-          "h": "🎓 Approfondir & au bac",
+          "h": "🎓 Au bac : opinion et savoir, plan type et pièges",
           "blocks": [
             {
               "t": "list",
@@ -1558,7 +1558,7 @@
       "intro": "Au bac, on choisit entre une dissertation et une explication de texte. Dans les deux cas, la note récompense la méthode et l’argumentation, pas la récitation. Voici comment structurer un devoir — et les auteurs à mobiliser.",
       "cours": [
         {
-          "h": "✍️ La dissertation, étape par étape",
+          "h": "✍️ La dissertation en bref : définir, problématiser, argumenter",
           "blocks": [
             {
               "t": "p",
@@ -1605,7 +1605,7 @@
           ]
         },
         {
-          "h": "📖 L’explication de texte — l’exemple du « roseau pensant »",
+          "h": "📖 L’explication de texte pas à pas : le « roseau pensant » de Pascal",
           "blocks": [
             {
               "t": "example",
@@ -1629,7 +1629,7 @@
           ]
         },
         {
-          "h": "👤 Les auteurs & les citations à mobiliser",
+          "h": "👤 Les citations à mobiliser : une idée, un exemple par auteur",
           "blocks": [
             {
               "t": "table",

@@ -1,7 +1,7 @@
 {
   "mgmt-t1": [
     {
-      "h": "🧩 Ressources et compétences de l’organisation",
+      "h": "🧩 Ressources et compétences distinctives : la source de l’avantage concurrentiel",
       "blocks": [
         {
           "t": "p",
@@ -87,7 +87,7 @@
       ]
     },
     {
-      "h": "⚙️ Les structures organisationnelles",
+      "h": "⚙️ Les structures : fonctionnelle, divisionnelle, matricielle, plate",
       "blocks": [
         {
           "t": "p",
@@ -130,7 +130,7 @@
       ]
     },
     {
-      "h": "🏭 Organiser la production",
+      "h": "🏭 Organiser la production : flux poussé, flux tiré, juste-à-temps et qualité",
       "blocks": [
         {
           "t": "p",
@@ -156,7 +156,7 @@
       ]
     },
     {
-      "h": "💼 Étude de cas guidée — performance et organisation",
+      "h": "💼 Étude de cas guidée — juste-à-temps, structure plate et performance",
       "blocks": [
         {
           "t": "p",
@@ -186,7 +186,7 @@
   ],
   "mgmt-t2": [
     {
-      "h": "🧭 Les niveaux de décision",
+      "h": "🧭 Les niveaux de décision d’Ansoff : stratégique, tactique, opérationnelle",
       "blocks": [
         {
           "t": "p",
@@ -229,7 +229,7 @@
       ]
     },
     {
-      "h": "👑 Pouvoir et contre-pouvoirs",
+      "h": "👑 Pouvoir formel, pouvoir informel et contre-pouvoirs",
       "blocks": [
         {
           "t": "p",
@@ -252,7 +252,7 @@
       ]
     },
     {
-      "h": "♟️ Les modalités de développement",
+      "h": "♟️ Les modalités de développement : croissance interne, externe et alliances",
       "blocks": [
         {
           "t": "p",
@@ -295,7 +295,7 @@
       ]
     },
     {
-      "h": "💼 Étude de cas guidée — décision et pouvoir",
+      "h": "💼 Étude de cas guidée — croissance externe, acteurs et pouvoirs",
       "blocks": [
         {
           "t": "p",
@@ -325,7 +325,7 @@
   ],
   "mgmt-t3": [
     {
-      "h": "⚖️ La gouvernance de l’entreprise",
+      "h": "⚖️ La gouvernance : actionnariale ou partenariale",
       "blocks": [
         {
           "t": "p",
@@ -363,7 +363,7 @@
       ]
     },
     {
-      "h": "📜 Normes, labels et reporting RSE",
+      "h": "📜 Normes, labels et reporting extra-financier : rendre la RSE crédible",
       "blocks": [
         {
           "t": "p",
@@ -389,7 +389,7 @@
       ]
     },
     {
-      "h": "♻️ Nouveaux modèles : économie circulaire",
+      "h": "♻️ L’économie circulaire : éco-conception, réemploi, recyclage, fonctionnalité",
       "blocks": [
         {
           "t": "p",
@@ -416,7 +416,7 @@
       ]
     },
     {
-      "h": "💼 Étude de cas guidée — mutation et RSE",
+      "h": "💼 Étude de cas guidée — passer à l’économie circulaire sans greenwashing",
       "blocks": [
         {
           "t": "p",

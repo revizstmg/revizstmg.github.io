@@ -2,7 +2,8 @@
   "rh-t1": {
     "sections": [
       {
-        "h": "🧑‍💼 Exemple — motiver et développer les compétences",
+        "h": "🧑‍💼 Exemple — impliquer une équipe : facteurs de motivation et compétences",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -42,7 +43,8 @@
   "rh-t2": {
     "sections": [
       {
-        "h": "🧑‍💼 Cas — gérer un conflit",
+        "h": "🧑‍💼 Cas — la répartition des tâches : identifier la source du conflit",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -81,7 +83,8 @@
   "rh-t3": {
     "sections": [
       {
-        "h": "🧑‍💼 Exemple — une communication efficace",
+        "h": "🧑‍💼 Exemple — une note de service mal comprise : bruit et feed-back",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -116,7 +119,8 @@
   "rh-t4": {
     "sections": [
       {
-        "h": "🧑‍💼 Exemple — coût du travail & climat social",
+        "h": "🧑‍💼 Exemple — 1 800 € net : le coût employeur et les cotisations patronales",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",

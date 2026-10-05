@@ -65,6 +65,21 @@ S'y ajoutent `ThemeTest`, `Exam` (bac blanc), `CoachSession`, `KahootQuiz`.
 6. fabrique une intro et un mémo « L'essentiel » quand il en manque ;
 7. ajoute l'étude de documents aux exercices.
 
+La page d'un thème range les chapitres en quatre catégories, selon le champ
+`group` de chaque section : aucun (« Le cours »), `approf`, `methode`, `cas`.
+Pour les couches `approfondir`, le `group` écrit dans le JSON l'emporte ;
+sinon il est déduit du titre (`courseGroupOf` : « MÉTHODE » → `methode`,
+« Étude de cas » / « Cas pratique » → `cas`). Les exemples traités et les
+dissertations guidées sont rangés dans `cas` (dans `methode` en maths), pour que
+« Le cours » ne contienne que des chapitres de cours.
+
+Un titre de chapitre nomme ses notions essentielles (« La politique de prix :
+élasticité, écrémage, pénétration, alignement »), pas une mise en situation.
+Changer un titre n'est pas anodin : `dedupeCourse` fusionne deux sections de même
+nature dont les titres partagent assez de mots, et `courseGroupOf` lit le titre.
+Après un renommage, comparer le nombre de chapitres et leur catégorie avant et
+après (`EMPREINTE_DETAIL=1 npm test`, voir le README).
+
 Les exercices de chaque chapitre ne sont pas stockés : `themeChapters()` les
 **génère à l'affichage** à partir du texte du cours (QCM, trous, tri…), avec
 `shuffle()`. Chaque visite tire donc des questions différentes.

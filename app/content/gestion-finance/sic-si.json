@@ -1,7 +1,7 @@
 {
   "gf-t1": [
     {
-      "h": "🗂️ Le système d’information comptable (SIC)",
+      "h": "🗂️ Le système d’information comptable (SIC) : collecter, saisir, classer, traiter, restituer",
       "blocks": [
         {
           "t": "p",
@@ -125,7 +125,7 @@
       ]
     },
     {
-      "h": "💾 Le système d’information (SI) de l’organisation",
+      "h": "💾 Le système d’information (SI) : ses ressources et ses fonctions",
       "blocks": [
         {
           "t": "p",

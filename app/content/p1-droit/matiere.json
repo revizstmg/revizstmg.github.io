@@ -314,7 +314,7 @@
       "intro": "Quand un désaccord dégénère, il devient un **litige**. Le droit offre des moyens de le résoudre : d’abord en **prouvant** son droit, puis, si besoin, en **saisissant le juge** — dont les décisions peuvent faire l’objet de **voies de recours**.",
       "cours": [
         {
-          "h": "Le litige et les parties",
+          "h": "Le litige : demandeur, défendeur et prétentions",
           "blocks": [
             {
               "t": "p",
@@ -402,7 +402,7 @@
           ]
         },
         {
-          "h": "Le déroulement d’une instance",
+          "h": "Le déroulement d’une instance : assignation, audience, jugement",
           "blocks": [
             {
               "t": "p",
@@ -636,7 +636,7 @@
       "intro": "Pour avoir des droits, il faut être un **sujet de droit**, c’est-à-dire disposer de la **personnalité juridique**. On étudie qui la possède, dans quelle mesure on peut agir seul (la **capacité**), et ce qu’est le **patrimoine**.",
       "cours": [
         {
-          "h": "La personnalité juridique",
+          "h": "La personnalité juridique : personnes physiques et morales, statut de l’animal",
           "blocks": [
             {
               "t": "p",
@@ -674,7 +674,7 @@
           ]
         },
         {
-          "h": "La capacité juridique",
+          "h": "La capacité juridique : jouissance, exercice, mineurs et majeurs protégés",
           "blocks": [
             {
               "t": "p",
@@ -699,7 +699,7 @@
           ]
         },
         {
-          "h": "Le patrimoine",
+          "h": "Le patrimoine : actif, passif et principes",
           "blocks": [
             {
               "t": "p",
@@ -921,7 +921,7 @@
       "intro": "Les personnes disposent de **droits**. On étudie ici le **droit de propriété** (y compris la **propriété intellectuelle**) et les **droits de la personnalité**, essentiels à l’ère numérique (**données personnelles**).",
       "cours": [
         {
-          "h": "Le droit de propriété",
+          "h": "Le droit de propriété : usus, fructus, abusus",
           "blocks": [
             {
               "t": "p",
@@ -946,7 +946,7 @@
           ]
         },
         {
-          "h": "La propriété intellectuelle",
+          "h": "La propriété intellectuelle : marque, brevet, droit d’auteur",
           "blocks": [
             {
               "t": "p",

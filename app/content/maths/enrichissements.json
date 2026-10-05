@@ -2,7 +2,8 @@
   "math-c1": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — évolutions et indice",
+        "h": "🧮 Exemple traité — taux d’évolution, coefficient et indice base 100",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",
@@ -34,7 +35,8 @@
   "math-c2": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — arithmétique vs géométrique",
+        "h": "🧮 Exercice type guidé — deux placements : suite arithmétique ou géométrique",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",
@@ -65,7 +67,8 @@
   "math-c3": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — dérivée, tangente, optimisation",
+        "h": "🧮 Exemple traité — dérivée, variations et coût minimal",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",
@@ -96,7 +99,8 @@
   "math-c4": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — ajustement affine et prévision",
+        "h": "🧮 Exercice type guidé — ajustement affine et prévision par extrapolation",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",
@@ -126,7 +130,8 @@
   "math-c5": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — arbre pondéré et probabilité conditionnelle",
+        "h": "🧮 Exercice type guidé — arbre pondéré et probabilité conditionnelle",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",
@@ -156,7 +161,8 @@
   "math-c6": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — loi binomiale",
+        "h": "🧮 Exercice type guidé — loi binomiale : P(X = 0), P(X ≥ 1) et espérance",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",
@@ -187,7 +193,8 @@
   "math-c7": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — intervalle de confiance",
+        "h": "🧮 Exemple traité — sondage : fréquence observée et intervalle de confiance",
+        "group": "methode",
         "blocks": [
           {
             "t": "example",

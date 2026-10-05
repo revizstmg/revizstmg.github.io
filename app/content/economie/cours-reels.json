@@ -1,7 +1,7 @@
 {
   "eco-t6": [
     {
-      "h": "« Quoi qu’il en coûte » : l’État au secours de l’économie",
+      "h": "Le rôle économique de l’État : soutenir l’activité, corriger les défaillances",
       "blocks": [
         {
           "t": "example",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "h": "Trois missions, une même logique",
+      "h": "Les trois fonctions de l’État : allocation, répartition, stabilisation",
       "blocks": [
         {
           "t": "p",
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "h": "Mais à quel prix ?",
+      "h": "Déficit et dette publics : le coût de l’intervention",
       "blocks": [
         {
           "t": "p",
@@ -75,7 +75,7 @@
   ],
   "eco-t7": [
     {
-      "h": "Qui est vraiment « au chômage » ?",
+      "h": "Le chômage au sens du BIT : taux de chômage et halo",
       "blocks": [
         {
           "t": "example",
@@ -98,7 +98,7 @@
       ]
     },
     {
-      "h": "Quand une usine ferme",
+      "h": "Types de chômage et politiques de l’emploi : relance ou formation",
       "blocks": [
         {
           "t": "p",
@@ -143,7 +143,7 @@
   ],
   "eco-t8": [
     {
-      "h": "Ton téléphone a fait le tour du monde",
+      "h": "Mondialisation et avantage comparatif : la division internationale du travail",
       "blocks": [
         {
           "t": "example",
@@ -162,7 +162,7 @@
       ]
     },
     {
-      "h": "Importer plus qu’on n’exporte",
+      "h": "Le solde de la balance commerciale : déficit ou excédent",
       "blocks": [
         {
           "t": "p",
@@ -184,7 +184,7 @@
       ]
     },
     {
-      "h": "Le libre-échange fait des gagnants… et des perdants",
+      "h": "Les effets du libre-échange : gagnants, perdants et accompagnement",
       "blocks": [
         {
           "t": "example",
@@ -226,7 +226,7 @@
   ],
   "eco-t9": [
     {
-      "h": "Le PIB ment-il ?",
+      "h": "PIB et IDH : la croissance ne mesure pas le développement",
       "blocks": [
         {
           "t": "example",
@@ -253,7 +253,7 @@
       ]
     },
     {
-      "h": "La fast fashion et ses coûts cachés",
+      "h": "Externalités négatives et soutenabilité : taxes et quotas",
       "blocks": [
         {
           "t": "example",

@@ -2,7 +2,8 @@
   "droit-t5": {
     "sections": [
       {
-        "h": "⚖️ Cas pratique — la validité du contrat",
+        "h": "⚖️ Cas pratique — capacité du mineur et nullité du contrat",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -29,7 +30,8 @@
   "droit-t6": {
     "sections": [
       {
-        "h": "⚖️ Cas pratique — la responsabilité civile",
+        "h": "⚖️ Cas pratique guidé — responsabilité du fait des choses et garde",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -57,7 +59,8 @@
   "droit-t7": {
     "sections": [
       {
-        "h": "⚖️ Cas pratique — le licenciement",
+        "h": "⚖️ Cas pratique — licenciement pour antipathie : la cause réelle et sérieuse",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
@@ -85,7 +88,8 @@
   "droit-t8": {
     "sections": [
       {
-        "h": "⚖️ Cas pratique — choisir une forme juridique",
+        "h": "⚖️ Cas pratique guidé — choisir une forme juridique : SAS et responsabilité limitée",
+        "group": "cas",
         "blocks": [
           {
             "t": "example",
