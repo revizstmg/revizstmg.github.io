@@ -10,12 +10,12 @@
           {
             "name": "Montant de la TVA",
             "f": "Prix HT × Taux de TVA",
-            "note": "taux en décimal : 20 % → 0,20"
+            "note": "taux en décimal : 20 % → 0,20"
           },
           {
             "name": "Prix TTC",
             "f": "Prix HT × (1 + Taux de TVA)",
-            "note": "à 20 % : HT × 1,20"
+            "note": "à 20 % : HT × 1,20"
           },
           {
             "name": "Prix HT",
@@ -25,7 +25,7 @@
           {
             "name": "TVA à décaisser",
             "f": "TVA collectée − TVA déductible",
-            "note": "si la déductible dépasse la collectée : crédit de TVA"
+            "note": "si la déductible dépasse la collectée : crédit de TVA"
           },
           {
             "name": "Net commercial",
@@ -146,7 +146,7 @@
           {
             "name": "Trésorerie nette",
             "f": "FRNG − BFR",
-            "note": "vérification : Trésorerie active − Trésorerie passive"
+            "note": "vérification : Trésorerie active − Trésorerie passive"
           }
         ]
       },
@@ -237,7 +237,7 @@
           {
             "name": "Seuil de rentabilité (en €)",
             "f": "Charges fixes ÷ Taux de MCV",
-            "note": "taux en décimal : 40 % → 0,40"
+            "note": "taux en décimal : 40 % → 0,40"
           },
           {
             "name": "Seuil de rentabilité (en quantité)",
@@ -292,60 +292,323 @@
     ]
   },
   {
-    "cat": "Mercatique",
-    "icon": "🛍️",
-    "color": "#c2410c",
+    "cat": "Management",
+    "icon": "🏢",
+    "color": "#4f46e5",
     "parts": [
       {
-        "title": "Marché et demande",
+        "title": "Création de valeur et performance",
         "items": [
           {
-            "name": "Demande en valeur",
-            "f": "Quantités vendues × Prix",
-            "note": "c’est le CA ; en volume = les quantités"
+            "name": "Valeur ajoutée",
+            "f": "Valeur de la production − Consommations intermédiaires externes",
+            "note": "la richesse créée par l’organisation"
           },
           {
-            "name": "Part de marché (PDM)",
-            "f": "Ventes de l’entreprise ÷ Ventes totales du marché × 100"
+            "name": "Productivité du travail",
+            "f": "Production ÷ Nombre d’heures travaillées"
           },
           {
-            "name": "Part de marché relative",
-            "f": "PDM de l’entreprise ÷ PDM du leader"
+            "name": "Taux de croissance du CA",
+            "f": "(CA N − CA N−1) ÷ CA N−1 × 100"
           },
           {
-            "name": "Taux de pénétration",
-            "f": "Clients ÷ Cible × 100"
+            "name": "Taux de croissance du marché",
+            "f": "(Marché N − Marché N−1) ÷ Marché N−1 × 100"
           },
           {
-            "name": "Taux de notoriété",
-            "f": "Personnes qui connaissent la marque ÷ Personnes interrogées × 100"
+            "name": "Efficacité et efficience",
+            "f": "Efficacité = atteindre l’objectif ; Efficience = l’atteindre au moindre coût"
           },
           {
-            "name": "Élasticité-prix de la demande",
-            "f": "Variation des quantités (en %) ÷ Variation du prix (en %)",
-            "note": "si |e| > 1 : demande élastique"
+            "name": "Performance globale",
+            "f": "Économique + Sociale + Environnementale",
+            "note": "efficacité et efficience sur les trois plans"
+          },
+          {
+            "name": "Compétitivité",
+            "f": "Prix (coûts maîtrisés) + Hors-prix (qualité, innovation, image)"
           }
         ]
       },
       {
-        "title": "Prix et vente en ligne",
+        "title": "Indicateurs du tableau de bord",
         "items": [
           {
-            "name": "Prix après réduction",
-            "f": "Prix initial × (1 − Taux de réduction)",
-            "note": "−25 % → × 0,75"
+            "name": "Part de marché",
+            "f": "Ventes de l’entreprise ÷ Ventes totales du marché × 100",
+            "note": "performance commerciale"
           },
           {
-            "name": "Taux de conversion",
-            "f": "Commandes ÷ Visiteurs × 100"
+            "name": "Rentabilité financière",
+            "f": "Résultat net ÷ Capitaux propres × 100",
+            "note": "performance financière"
           },
           {
-            "name": "Panier moyen",
-            "f": "Chiffre d’affaires ÷ Nombre de commandes"
+            "name": "Taux d’endettement",
+            "f": "Dettes financières ÷ Capitaux propres",
+            "note": "performance financière"
           },
           {
-            "name": "Retour sur investissement (ROI)",
-            "f": "(Gain − Coût) ÷ Coût × 100"
+            "name": "Taux d’absentéisme",
+            "f": "Heures d’absence ÷ Heures théoriques × 100",
+            "note": "performance sociale"
+          },
+          {
+            "name": "Taux de rotation (turnover)",
+            "f": "Départs ÷ Effectif moyen × 100",
+            "note": "performance sociale"
+          }
+        ]
+      },
+      {
+        "title": "Organisation et ressources",
+        "items": [
+          {
+            "name": "Organisation",
+            "f": "Individus + Ressources pilotées + Structure hiérarchisée + Statut juridique + But commun",
+            "note": "vouée à durer"
+          },
+          {
+            "name": "Ressources",
+            "f": "Humaines + Financières + Matérielles + Immatérielles + Technologiques"
+          },
+          {
+            "name": "Finalité et objectif",
+            "f": "Finalité = pourquoi l’organisation existe ; Objectif = but précis, chiffré et daté"
+          },
+          {
+            "name": "Faire ou faire faire",
+            "f": "Intégration (faire soi-même) ou Externalisation (faire faire)"
+          },
+          {
+            "name": "Structures",
+            "f": "Fonctionnelle (par métier) ; Divisionnelle (par produit ou marché) ; Matricielle (les deux)"
+          },
+          {
+            "name": "Coordination (Mintzberg)",
+            "f": "Ajustement mutuel + Supervision directe + Standardisation"
+          }
+        ]
+      },
+      {
+        "title": "Diagnostic et choix stratégiques",
+        "items": [
+          {
+            "name": "Diagnostic interne",
+            "f": "Ressources + Compétences distinctives → Forces / Faiblesses"
+          },
+          {
+            "name": "Diagnostic externe",
+            "f": "PESTEL + Micro-environnement → Opportunités / Menaces"
+          },
+          {
+            "name": "SWOT",
+            "f": "Forces + Faiblesses (interne) + Opportunités + Menaces (externe)",
+            "note": "synthèse des deux diagnostics"
+          },
+          {
+            "name": "PESTEL",
+            "f": "Politique, Économique, Socioculturel, Technologique, Écologique, Légal",
+            "note": "macro-environnement"
+          },
+          {
+            "name": "Avantage concurrentiel (Porter)",
+            "f": "Domination par les coûts ou Différenciation"
+          },
+          {
+            "name": "Choix de périmètre",
+            "f": "Spécialisation (un seul métier) ou Diversification (nouveaux produits ou marchés)"
+          },
+          {
+            "name": "Modalités de croissance",
+            "f": "Interne (lente) ; Externe (rachat, rapide mais risquée) ; Alliance (coopérer)"
+          }
+        ]
+      },
+      {
+        "title": "Décision, pouvoir et motivation",
+        "items": [
+          {
+            "name": "Niveaux de décision (Ansoff)",
+            "f": "Stratégique (long terme, direction) → Tactique (moyen terme, encadrement) → Opérationnelle (court terme, exécution)"
+          },
+          {
+            "name": "Processus de décision (Simon)",
+            "f": "IMC : Intelligence → Modélisation → Choix"
+          },
+          {
+            "name": "Rationalité limitée (Simon)",
+            "f": "Information + temps + capacités de calcul limités → solution satisfaisante, pas optimale"
+          },
+          {
+            "name": "Pouvoir et autorité",
+            "f": "Pouvoir = imposer sa volonté ; Autorité = pouvoir légitime"
+          },
+          {
+            "name": "Styles de direction (Likert)",
+            "f": "Autoritaire → Paternaliste → Consultatif → Participatif"
+          },
+          {
+            "name": "Besoins (Maslow)",
+            "f": "Physiologiques → Sécurité → Appartenance → Estime → Accomplissement"
+          },
+          {
+            "name": "Motivation (Herzberg)",
+            "f": "Facteurs d’hygiène (évitent l’insatisfaction) + Facteurs de motivation (motivent)"
+          },
+          {
+            "name": "Théories X et Y (McGregor)",
+            "f": "X : fuit le travail → contrôle ; Y : aime se réaliser → autonomie"
+          }
+        ]
+      },
+      {
+        "title": "Organisations et société",
+        "items": [
+          {
+            "name": "RSE",
+            "f": "Économique + Social + Environnemental",
+            "note": "les trois piliers du développement durable"
+          },
+          {
+            "name": "Développement durable",
+            "f": "Répondre aux besoins du présent sans compromettre ceux des générations futures",
+            "note": "rapport Brundtland, 1987"
+          },
+          {
+            "name": "Économie sociale et solidaire (ESS)",
+            "f": "Utilité sociale + Gouvernance démocratique (1 personne = 1 voix) + Lucrativité limitée"
+          }
+        ]
+      },
+      {
+        "title": "Sciences de gestion et numérique (1re)",
+        "items": [
+          {
+            "name": "Compétence",
+            "f": "Savoirs + Savoir-faire + Savoir-être"
+          },
+          {
+            "name": "Rétribution",
+            "f": "Rémunération + Reconnaissance, carrière, conditions de travail"
+          },
+          {
+            "name": "Marge",
+            "f": "Prix de vente − Coût"
+          },
+          {
+            "name": "Risque",
+            "f": "Probabilité × Impact",
+            "note": "pour évaluer un risque avant de le traiter"
+          },
+          {
+            "name": "Sécurité de l’information",
+            "f": "Disponibilité + Intégrité + Confidentialité (DIC)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cat": "Droit",
+    "icon": "⚖️",
+    "color": "#b45309",
+    "parts": [
+      {
+        "title": "Le contrat",
+        "items": [
+          {
+            "name": "Formation du contrat",
+            "f": "Offre + Acceptation",
+            "note": "la rencontre des volontés"
+          },
+          {
+            "name": "Validité du contrat (art. 1128)",
+            "f": "Consentement + Capacité + Contenu licite et certain"
+          },
+          {
+            "name": "Dol",
+            "f": "Manœuvre + Caractère déterminant + Intention de tromper",
+            "note": "vice du consentement : nullité + dommages et intérêts"
+          }
+        ]
+      },
+      {
+        "title": "La responsabilité",
+        "items": [
+          {
+            "name": "Responsabilité civile",
+            "f": "Fait générateur + Dommage + Lien de causalité",
+            "note": "les trois conditions réunies"
+          },
+          {
+            "name": "Dommage réparable",
+            "f": "Certain + Direct + Personnel + Légitime"
+          },
+          {
+            "name": "Produit défectueux",
+            "f": "Défaut + Dommage + Lien de causalité",
+            "note": "à prouver par la victime"
+          },
+          {
+            "name": "Civile ou pénale",
+            "f": "Civile = réparer ; Pénale = punir"
+          }
+        ]
+      },
+      {
+        "title": "Le travail salarié",
+        "items": [
+          {
+            "name": "Contrat de travail",
+            "f": "Prestation de travail + Rémunération + Lien de subordination",
+            "note": "la subordination est le critère déterminant"
+          },
+          {
+            "name": "Lien de subordination",
+            "f": "Donner des ordres + En contrôler l’exécution + Sanctionner"
+          },
+          {
+            "name": "Licenciement",
+            "f": "Cause réelle et sérieuse + Procédure"
+          }
+        ]
+      },
+      {
+        "title": "Entreprendre",
+        "items": [
+          {
+            "name": "Contrat de société (art. 1832)",
+            "f": "Apports + Affectio societatis + Partage des bénéfices",
+            "note": "et contribution aux pertes"
+          }
+        ]
+      },
+      {
+        "title": "Bases du droit (1re)",
+        "items": [
+          {
+            "name": "Règle de droit",
+            "f": "Générale + Impersonnelle + Obligatoire + Coercitive"
+          },
+          {
+            "name": "Patrimoine",
+            "f": "Actif (biens) + Passif (dettes)"
+          },
+          {
+            "name": "Droit de propriété",
+            "f": "Usus + Fructus + Abusus",
+            "note": "utiliser, en tirer les revenus, en disposer"
+          },
+          {
+            "name": "Droit d’auteur",
+            "f": "Droit moral (perpétuel) + Droits patrimoniaux (exploitation)",
+            "note": "vie de l’auteur + 70 ans"
+          },
+          {
+            "name": "Cas pratique (syllogisme)",
+            "f": "Majeure (règle) → Mineure (faits qualifiés) → Conclusion"
           }
         ]
       }
@@ -433,12 +696,12 @@
           {
             "name": "Solde commercial",
             "f": "Exportations − Importations",
-            "note": "positif : excédent ; négatif : déficit"
+            "note": "positif : excédent ; négatif : déficit"
           },
           {
             "name": "Taux de couverture",
             "f": "Exportations ÷ Importations × 100",
-            "note": "moins de 100 % : déficit"
+            "note": "moins de 100 % : déficit"
           },
           {
             "name": "Taux d’ouverture",
@@ -464,37 +727,43 @@
             "note": "la dette est le stock des déficits passés"
           }
         ]
-      }
-    ]
-  },
-  {
-    "cat": "Ressources humaines",
-    "icon": "🧑‍💼",
-    "color": "#db2777",
-    "parts": [
+      },
       {
-        "title": "Rémunération et indicateurs sociaux",
+        "title": "Formules à retenir",
         "items": [
           {
-            "name": "Salaire net",
-            "f": "Salaire brut − Cotisations salariales"
+            "name": "Prix d’équilibre",
+            "f": "Quantité offerte = Quantité demandée"
           },
           {
-            "name": "Coût total employeur",
-            "f": "Salaire brut + Cotisations patronales",
-            "note": "ou Brut × (1 + Taux de cotisations patronales)"
+            "name": "Facteurs de production",
+            "f": "Travail + Capital (fixe et circulant)"
           },
           {
-            "name": "Rémunération",
-            "f": "Salaire de base + Primes + Périphériques"
+            "name": "Revenus primaires",
+            "f": "Revenus du travail + Revenus du capital + Revenus mixtes",
+            "note": "salaires ; intérêts, loyers, dividendes ; indépendants"
           },
           {
-            "name": "Taux d’absentéisme",
-            "f": "Heures d’absence ÷ Heures théoriques × 100"
+            "name": "Concurrence pure et parfaite",
+            "f": "Atomicité + Homogénéité + Libre entrée et sortie + Transparence + Mobilité"
           },
           {
-            "name": "Taux de rotation (turnover)",
-            "f": "Départs ÷ Effectif moyen × 100"
+            "name": "Fonctions de l’État (Musgrave)",
+            "f": "Allocation + Redistribution + Stabilisation"
+          },
+          {
+            "name": "Défaillances de marché",
+            "f": "Biens publics, externalités, asymétries d’information, monopoles"
+          },
+          {
+            "name": "Développement durable",
+            "f": "Économique + Social + Environnemental"
+          },
+          {
+            "name": "IDH",
+            "f": "Santé + Éducation + Revenu",
+            "note": "entre 0 et 1"
           }
         ]
       }
@@ -524,7 +793,7 @@
           {
             "name": "Coefficient multiplicateur",
             "f": "CM = 1 + t",
-            "note": "+8 % → 1,08 ; −8 % → 0,92"
+            "note": "+8 % → 1,08 ; −8 % → 0,92"
           },
           {
             "name": "Valeur d’arrivée",
@@ -538,7 +807,7 @@
           },
           {
             "name": "Taux moyen",
-            "f": "CM moyen = (CM global)^(1/n) ; t moyen = CM moyen − 1"
+            "f": "CM moyen = (CM global)^(1/n) ; t moyen = CM moyen − 1"
           },
           {
             "name": "Évolution réciproque",
@@ -571,7 +840,7 @@
           {
             "name": "Suite géométrique (récurrence)",
             "f": "uₙ₊₁ = uₙ × q",
-            "note": "évolution de p % : q = 1 + p/100"
+            "note": "évolution de p % : q = 1 + p/100"
           },
           {
             "name": "Suite géométrique (terme général)",
@@ -585,11 +854,11 @@
           },
           {
             "name": "Variations d’une suite arithmétique",
-            "f": "r > 0 : croissante ; r < 0 : décroissante"
+            "f": "r > 0 : croissante ; r < 0 : décroissante"
           },
           {
             "name": "Variations d’une suite géométrique",
-            "f": "q > 1 : croissante ; 0 < q < 1 : décroissante",
+            "f": "q > 1 : croissante ; 0 < q < 1 : décroissante",
             "note": "avec u₀ > 0"
           }
         ]
@@ -600,12 +869,12 @@
           {
             "name": "Fonction du second degré",
             "f": "f(x) = ax² + bx + c",
-            "note": "a ≠ 0, courbe : parabole"
+            "note": "a ≠ 0, courbe : parabole"
           },
           {
             "name": "Discriminant",
             "f": "Δ = b² − 4ac",
-            "note": "Δ > 0 : 2 racines ; Δ = 0 : 1 ; Δ < 0 : aucune"
+            "note": "Δ > 0 : 2 racines ; Δ = 0 : 1 ; Δ < 0 : aucune"
           },
           {
             "name": "Racines (Δ > 0)",
@@ -655,8 +924,8 @@
           },
           {
             "name": "Sens de variation",
-            "f": "f′ > 0 : croissante ; f′ < 0 : décroissante",
-            "note": "f′ s’annule en changeant de signe : extremum"
+            "f": "f′ > 0 : croissante ; f′ < 0 : décroissante",
+            "note": "f′ s’annule en changeant de signe : extremum"
           }
         ]
       },
@@ -677,13 +946,13 @@
           },
           {
             "name": "Point moyen",
-            "f": "G(x̄ ; ȳ)",
+            "f": "G(x̄ ; ȳ)",
             "note": "moyenne des x, moyenne des y"
           },
           {
             "name": "Droite d’ajustement",
             "f": "y = ax + b",
-            "note": "moindres carrés, à la calculatrice ; passe par G"
+            "note": "moindres carrés, à la calculatrice ; passe par G"
           }
         ]
       },
@@ -760,12 +1029,143 @@
           },
           {
             "name": "Intervalle de confiance à 95 %",
-            "f": "[f − 1/√n ; f + 1/√n]",
-            "note": "f : fréquence observée, n : taille de l’échantillon"
+            "f": "[f − 1/√n ; f + 1/√n]",
+            "note": "f : fréquence observée, n : taille de l’échantillon"
           },
           {
             "name": "Amplitude de l’intervalle",
             "f": "2 ÷ √n"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cat": "Mercatique",
+    "icon": "🛍️",
+    "color": "#c2410c",
+    "parts": [
+      {
+        "title": "Marché et demande",
+        "items": [
+          {
+            "name": "Demande en valeur",
+            "f": "Quantités vendues × Prix",
+            "note": "c’est le CA ; en volume = les quantités"
+          },
+          {
+            "name": "Part de marché (PDM)",
+            "f": "Ventes de l’entreprise ÷ Ventes totales du marché × 100"
+          },
+          {
+            "name": "Part de marché relative",
+            "f": "PDM de l’entreprise ÷ PDM du leader"
+          },
+          {
+            "name": "Taux de pénétration",
+            "f": "Clients ÷ Cible × 100"
+          },
+          {
+            "name": "Taux de notoriété",
+            "f": "Personnes qui connaissent la marque ÷ Personnes interrogées × 100"
+          },
+          {
+            "name": "Élasticité-prix de la demande",
+            "f": "Variation des quantités (en %) ÷ Variation du prix (en %)",
+            "note": "si |e| > 1 : demande élastique"
+          }
+        ]
+      },
+      {
+        "title": "Prix et vente en ligne",
+        "items": [
+          {
+            "name": "Prix après réduction",
+            "f": "Prix initial × (1 − Taux de réduction)",
+            "note": "−25 % → × 0,75"
+          },
+          {
+            "name": "Taux de conversion",
+            "f": "Commandes ÷ Visiteurs × 100"
+          },
+          {
+            "name": "Panier moyen",
+            "f": "Chiffre d’affaires ÷ Nombre de commandes"
+          },
+          {
+            "name": "Retour sur investissement (ROI)",
+            "f": "(Gain − Coût) ÷ Coût × 100"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cat": "Ressources humaines",
+    "icon": "🧑‍💼",
+    "color": "#db2777",
+    "parts": [
+      {
+        "title": "Rémunération et indicateurs sociaux",
+        "items": [
+          {
+            "name": "Salaire net",
+            "f": "Salaire brut − Cotisations salariales"
+          },
+          {
+            "name": "Coût total employeur",
+            "f": "Salaire brut + Cotisations patronales",
+            "note": "ou Brut × (1 + Taux de cotisations patronales)"
+          },
+          {
+            "name": "Rémunération",
+            "f": "Salaire de base + Primes + Périphériques"
+          },
+          {
+            "name": "Taux d’absentéisme",
+            "f": "Heures d’absence ÷ Heures théoriques × 100"
+          },
+          {
+            "name": "Taux de rotation (turnover)",
+            "f": "Départs ÷ Effectif moyen × 100"
+          }
+        ]
+      },
+      {
+        "title": "Formules à retenir",
+        "items": [
+          {
+            "name": "Compétence",
+            "f": "Savoirs + Savoir-faire + Savoir-être",
+            "note": "la qualification, elle, est la reconnaissance officielle"
+          },
+          {
+            "name": "Statut et rôle",
+            "f": "Statut = position occupée ; Rôle = comportements attendus"
+          },
+          {
+            "name": "Besoins (Maslow)",
+            "f": "Physiologiques → Sécurité → Appartenance → Estime → Accomplissement"
+          },
+          {
+            "name": "Motivation (Herzberg)",
+            "f": "Facteurs d’hygiène (évitent l’insatisfaction) + Facteurs de motivation (motivent)"
+          },
+          {
+            "name": "Communication efficace",
+            "f": "Message clair + Canal adapté + Feed-back + Réduction des bruits"
+          },
+          {
+            "name": "Écoute active",
+            "f": "Attention + Empathie + Reformulation"
+          },
+          {
+            "name": "Communication de crise",
+            "f": "Vitesse + Transparence + Cohérence"
+          },
+          {
+            "name": "Médiation et arbitrage",
+            "f": "Médiation = le tiers aide à trouver un accord ; Arbitrage = le tiers impose la solution"
           }
         ]
       }
@@ -781,11 +1181,11 @@
         "items": [
           {
             "name": "Sélection",
-            "f": "SELECT colonnes FROM table WHERE condition ORDER BY colonne ;"
+            "f": "SELECT colonnes FROM table WHERE condition ORDER BY colonne ;"
           },
           {
             "name": "Toutes les colonnes",
-            "f": "SELECT * FROM table ;"
+            "f": "SELECT * FROM table ;"
           },
           {
             "name": "Tri",
@@ -795,7 +1195,7 @@
           {
             "name": "Conditions",
             "f": "=  <  >  <=  >=  <>  AND  OR",
-            "note": "<> : différent"
+            "note": "<> : différent"
           },
           {
             "name": "Recherche partielle",
@@ -804,7 +1204,7 @@
           },
           {
             "name": "Compter des lignes",
-            "f": "SELECT COUNT(*) FROM table WHERE condition ;"
+            "f": "SELECT COUNT(*) FROM table WHERE condition ;"
           },
           {
             "name": "Fonctions de calcul",
@@ -812,7 +1212,7 @@
           },
           {
             "name": "Regrouper",
-            "f": "SELECT ville, COUNT(*) FROM CLIENT GROUP BY ville ;",
+            "f": "SELECT ville, COUNT(*) FROM CLIENT GROUP BY ville ;",
             "note": "WHERE filtre avant, HAVING après le regroupement"
           },
           {
