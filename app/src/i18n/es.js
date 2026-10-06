@@ -265,6 +265,7 @@ export default {
   privacySummary: 'RévizSTMG usa tu nombre, apellido, correo y (si quieres) tu foto, así como tu clase y tu progreso, únicamente para que la aplicación funcione. Los datos se alojan en la Unión Europea (Supabase). Tu nombre, foto y puntuaciones son visibles para tus compañeros; tu correo solo se usa para iniciar sesión. Sin publicidad, sin reventa. Puedes modificar o eliminar tus datos cuando quieras desde «Mi espacio». Para un alumno menor, se requiere el consentimiento del centro y/o del representante legal.',
   backToChapters: 'Volver a los capítulos', savePdf: 'Guardar (PDF)', gamesOfChapter: 'Juegos de este capítulo', keyDefs: 'Definiciones clave',
   notionsDefs: 'Nociones y definiciones', notionCol: 'Noción', definitionCol: 'Definición',
+  exoUnit: 'ejercicio', exoUnitP: 'ejercicios', notionUnit: 'noción', notionUnitP: 'nociones',
   previous: 'Anterior', nextChapter: 'Capítulo siguiente', takeTest: 'Hacer la prueba del tema', pageWord: 'Página', tapToOpen: 'Pulsa para leer a pantalla completa',
   new: 'Nuevo', tabChapters: 'Capítulos', tabTest: 'Prueba del tema', tabProgress: 'Progreso', tabTools: 'Herramientas', tabLesson: 'Curso', tabDefs: 'Definiciones', tabExercises: 'Ejercicios', noDefsHere: 'Las definiciones clave de este tema están en los otros capítulos.', lessonLabel: 'El curso', exercisesLabel: 'Ejercicios',
   chooseChapter: 'Elige un capítulo para leer la lección y practicar.', course: 'Lección',

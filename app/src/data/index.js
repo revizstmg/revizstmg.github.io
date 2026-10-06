@@ -870,6 +870,24 @@ function sectionExercises(sec, theme, idx) {
 // Flashcards d'une section (recto = terme, verso = définition). RÉSERVÉ à
 // l'application installée : on ne les ajoute JAMAIS dans le navigateur. Les
 // cartes sont mélangées à chaque partie par le composant.
+// Exercices de l'onglet « Exercices » d'un chapitre : ses jeux, plus un paquet
+// de flashcards tiré de ses notions quand il y en a assez.
+export function jeuxDuChapitre(chapter, theme) {
+  if (!chapter) return []
+  const base = chapter.games || []
+  const fc = flashcardsForSection(chapter.section, theme, chapter.idx)
+  return fc ? [...base, fc] : base
+}
+
+// Ce qu'annonce la liste des chapitres : nombre d'exercices et de notions (les
+// lignes du tableau « Notions et définitions » qui termine le cours).
+export function comptesDuChapitre(chapter, theme, subjectId) {
+  return {
+    exercices: jeuxDuChapitre(chapter, theme).length,
+    notions: sectionDefinitions(chapter.section, theme.id, subjectId, chapter.idx).defs.length,
+  }
+}
+
 export function flashcardsForSection(sec, theme, idx) {
   const { defPairs, datePairs } = sectionPairs(sec)
   const cards = []

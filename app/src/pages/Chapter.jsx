@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import Introuvable from './Introuvable.jsx'
-import { getChapter, getSubject, themeChapters, flashcardsForSection, sectionDefinitions } from '../data/index.js'
+import { getChapter, getSubject, themeChapters, jeuxDuChapitre, sectionDefinitions } from '../data/index.js'
 import { useStore, useThemeTimer } from '../store.jsx'
 import { PaginatedCourse, CourseText, saveFiche } from '../components/Course.jsx'
 import GameHost from '../games/GameHost.jsx'
@@ -27,12 +27,7 @@ export default function Chapter() {
 
   // Jeux affichés : ceux du chapitre + des flashcards générées à partir des
   // notions de la section (disponibles partout, pas seulement dans l'app).
-  const games = useMemo(() => {
-    if (!chapter) return []
-    const base = chapter.games || []
-    const fc = flashcardsForSection(chapter.section, theme, chapter.idx)
-    return fc ? [...base, fc] : base
-  }, [chapter, theme])
+  const games = useMemo(() => jeuxDuChapitre(chapter, theme), [chapter, theme])
 
   // Nouveau chapitre : on referme tout jeu ouvert, on revient à l'onglet Cours
   // et on remonte en haut.

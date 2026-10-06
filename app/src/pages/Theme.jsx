@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import Introuvable from './Introuvable.jsx'
-import { getChapter, getSubject, themeChapters, deckForTheme } from '../data/index.js'
+import { getChapter, getSubject, themeChapters, deckForTheme, comptesDuChapitre } from '../data/index.js'
 import { buildThemeExam, themeExamSize } from '../data/study.js'
 import { PIEGES } from '../data/pieges.js'
 import { useStore, useThemeTimer, chapterScore, starsFromScore } from '../store.jsx'
@@ -126,6 +126,13 @@ export default function Theme() {
               .filter((g) => g.items.length)
             const single = groups.length <= 1
 
+            // « 9 exercices · 6 notions » sous le titre de chaque chapitre.
+            const descriptionChapitre = (c) => {
+              const { exercices, notions } = comptesDuChapitre(c, theme, sid)
+              const unite = (n, cle) => `${n} ${t(n > 1 ? cle + 'P' : cle)}`
+              return [unite(exercices, 'exoUnit'), notions ? unite(notions, 'notionUnit') : null].filter(Boolean).join(' · ')
+            }
+
             const renderChapter = (c, n) => {
               const prog = chapterProgress(c)
               const done = prog != null && prog >= 90
@@ -144,6 +151,7 @@ export default function Theme() {
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="block font-semibold leading-snug"><CourseText text={sansEmoji(c.title)} /></span>
+                      <span className="mt-0.5 block text-xs text-slate-500 dark:text-slate-400">{descriptionChapitre(c)}</span>
                       {prog != null && prog > 0 && (
                         <span className="mt-1.5 block max-w-[220px]"><ProgressBar value={prog} color={done ? '#15803d' : color} /></span>
                       )}
