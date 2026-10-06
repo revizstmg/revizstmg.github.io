@@ -939,8 +939,22 @@ function hasHandDefinitions(sec) {
 // à l'autre) par la banque du thème puis, en dernier recours, la banque de la
 // matière. Renvoie { skip, defs }. skip = true si la section a déjà son propre
 // encadré de définitions écrit à la main.
+// Tableau « Notions et définitions » écrit à la main à la fin d'un chapitre.
+export function tableauDefinitionsFinal(sec) {
+  const blocks = sec?.blocks || []
+  const b = blocks[blocks.length - 1]
+  if (b?.t !== 'table' || (b.head || []).length !== 2) return null
+  return twoColKind(b.head) === 'def' ? b : null
+}
+
 export function sectionDefinitions(sec, themeId, subjectId, sectionIdx = 0, count = 5) {
-  if (!sec || hasHandDefinitions(sec)) return { skip: true, defs: [] }
+  if (!sec) return { skip: true, defs: [] }
+  if (hasHandDefinitions(sec)) {
+    // Définitions écrites dans le cours : on les reprend (onglet « Définitions »).
+    const fin = tableauDefinitionsFinal(sec)
+    const defs = (fin?.rows || []).map((r) => ({ term: stripMd(String(r[0] || '')), def: stripMd(String(r[1] || '')) })).filter((d) => d.term && d.def)
+    return { skip: true, defs }
+  }
   const out = []
   const add = (term, def) => {
     const t = stripMd(String(term || '')).trim()

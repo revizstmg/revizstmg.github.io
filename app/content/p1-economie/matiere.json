@@ -26,25 +26,38 @@
               "c": "Pour les satisfaire, on utilise des **biens** et des **services** :"
             },
             {
-              "t": "table",
-              "head": [
-                "Bien",
-                "Service"
-              ],
-              "rows": [
-                [
-                  "**Matériel**, on peut le toucher, le stocker",
-                  "**Immatériel**, consommé au moment où il est produit"
-                ],
-                [
-                  "Un pain, un ordinateur, une voiture",
-                  "Une coupe de cheveux, un cours, un trajet en bus"
-                ]
-              ]
+              "t": "p",
+              "c": "Un **bien** est **matériel** : on peut le **toucher** et le **stocker**, comme un pain, un ordinateur ou une voiture. Un **service** est **immatériel** : il est **consommé au moment même où il est produit**, comme une coupe de cheveux, un cours ou un trajet en bus."
             },
             {
               "t": "p",
               "c": "Un bien peut être **libre** (gratuit et abondant, comme l’air) ou **économique** (rare, il a un prix). L’économie ne s’intéresse qu’aux biens **économiques**."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Besoin",
+                  "Sensation de manque qu’on cherche à satisfaire"
+                ],
+                [
+                  "Bien",
+                  "Produit matériel, qu’on peut toucher et stocker"
+                ],
+                [
+                  "Service",
+                  "Prestation immatérielle, consommée au moment où elle est produite"
+                ],
+                [
+                  "Bien libre / économique",
+                  "Gratuit et abondant (l’air) / rare, il a un prix"
+                ]
+              ]
             }
           ]
         },
@@ -117,23 +130,36 @@
               "c": "Un **agent économique** est un acteur qui prend des décisions économiques. La comptabilité nationale les regroupe en **six** grandes catégories (les **secteurs institutionnels**), selon leur **fonction principale** :"
             },
             {
+              "t": "p",
+              "c": "Les **ménages** **consomment**, **fournissent leur travail** et **épargnent**. Les **entreprises**, ou sociétés non financières, **produisent des biens et des services marchands**. Les **institutions financières**, comme les banques et les assurances, **financent l’économie** en accordant des crédits et en gérant des placements."
+            },
+            {
+              "t": "p",
+              "c": "Les **administrations publiques** (APU) **produisent des services non marchands** et **redistribuent** les revenus. Les **ISBLSM**, institutions sans but lucratif au service des ménages, regroupent les associations et les syndicats. Enfin, le **reste du monde** représente l’ensemble des **échanges avec l’étranger**, importations et exportations."
+            },
+            {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Agent",
-                "Rôle principal"
+                "Notion",
+                "Définition"
               ],
               "rows": [
+                [
+                  "Agent économique",
+                  "Acteur qui prend des décisions économiques"
+                ],
                 [
                   "Ménages",
                   "Consomment, fournissent du travail, épargnent"
                 ],
                 [
-                  "Entreprises (sociétés non financières)",
+                  "Entreprises (SNF)",
                   "Produisent des biens et services marchands"
                 ],
                 [
-                  "Institutions (sociétés) financières",
-                  "Financent l’économie (crédits, placements) : banques, assurances"
+                  "Institutions financières",
+                  "Financent l’économie (banques, assurances)"
                 ],
                 [
                   "Administrations publiques (APU)",
@@ -145,7 +171,7 @@
                 ],
                 [
                   "Reste du monde",
-                  "Réalise les échanges avec l’étranger (import/export)"
+                  "Échanges avec l’étranger (importations, exportations)"
                 ]
               ]
             }
@@ -306,29 +332,34 @@
               "c": "**Produire**, c’est créer des **biens** et des **services** pour satisfaire des besoins. On distingue deux types de production :"
             },
             {
-              "t": "table",
-              "head": [
-                "Production marchande",
-                "Production non marchande"
-              ],
-              "rows": [
-                [
-                  "Vendue sur un **marché** à un prix",
-                  "Fournie **gratuitement** ou quasi gratuitement"
-                ],
-                [
-                  "Couvre ses coûts par les recettes",
-                  "Financée par les **impôts** et cotisations"
-                ],
-                [
-                  "Une baguette, une place de cinéma",
-                  "L’école publique, la justice, l’éclairage public"
-                ]
-              ]
+              "t": "p",
+              "c": "La **production marchande** est **vendue sur un marché** à un prix qui doit **couvrir ses coûts** : une baguette, une place de cinéma. La **production non marchande** est **fournie gratuitement**, ou presque, et **financée par les impôts et les cotisations** : l’école publique, la justice, l’éclairage public."
             },
             {
               "t": "p",
               "c": "La production non marchande (assurée surtout par les **administrations publiques**) est essentielle mais ne se vend pas : on la mesure par son **coût** de production."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Produire",
+                  "Créer des biens et des services pour satisfaire des besoins"
+                ],
+                [
+                  "Production marchande",
+                  "Vendue sur un marché à un prix qui couvre ses coûts"
+                ],
+                [
+                  "Production non marchande",
+                  "Fournie gratuitement, financée par les impôts et cotisations"
+                ]
+              ]
             }
           ]
         },
@@ -340,25 +371,42 @@
               "c": "Pour produire, on combine deux **facteurs de production** :"
             },
             {
-              "t": "table",
-              "head": [
-                "Facteur travail",
-                "Facteur capital"
-              ],
-              "rows": [
-                [
-                  "La **main-d’œuvre** (les salariés)",
-                  "Les moyens matériels durables"
-                ],
-                [
-                  "Heures travaillées, qualification",
-                  "Machines, bâtiments, outils, logiciels"
-                ]
-              ]
+              "t": "p",
+              "c": "Le **facteur travail** correspond à la **main-d’œuvre**, c’est-à-dire aux salariés ; on le mesure en **heures travaillées** et en **qualification**. Le **facteur capital** correspond aux **moyens matériels durables** de la production : les **machines**, les **bâtiments**, les **outils**, les **logiciels**."
             },
             {
               "t": "p",
               "c": "On distingue le **capital fixe** (machines, bâtiments, qui durent plusieurs cycles) du **capital circulant** (matières premières, consommées dans la production). Augmenter le stock de capital, c’est **investir**."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Facteurs de production",
+                  "Travail et capital combinés pour produire"
+                ],
+                [
+                  "Facteur travail",
+                  "Main-d’œuvre (heures travaillées, qualification)"
+                ],
+                [
+                  "Facteur capital",
+                  "Moyens matériels durables (machines, bâtiments, logiciels)"
+                ],
+                [
+                  "Capital fixe / circulant",
+                  "Dure plusieurs cycles (machines) / consommé dans la production (matières)"
+                ],
+                [
+                  "Investir",
+                  "Augmenter le stock de capital"
+                ]
+              ]
             }
           ]
         },
@@ -625,33 +673,42 @@
           "h": "Les revenus primaires : du travail, du capital et mixtes",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Type de revenu",
-                "Rémunère…",
-                "Exemples"
-              ],
-              "rows": [
-                [
-                  "Revenus du **travail**",
-                  "Le facteur travail",
-                  "Salaires, traitements"
-                ],
-                [
-                  "Revenus du **capital**",
-                  "Le facteur capital / propriété",
-                  "Intérêts, loyers, dividendes"
-                ],
-                [
-                  "Revenus **mixtes**",
-                  "Travail **et** capital ensemble",
-                  "Bénéfices des indépendants (artisan, médecin)"
-                ]
-              ]
+              "t": "p",
+              "c": "Les **revenus du travail** rémunèrent le **facteur travail** : ce sont les **salaires** et les **traitements** des fonctionnaires. Les **revenus du capital** rémunèrent le **facteur capital** ou la **propriété** : ce sont les **intérêts**, les **loyers** et les **dividendes**."
+            },
+            {
+              "t": "p",
+              "c": "Les **revenus mixtes** rémunèrent **à la fois le travail et le capital** : c’est le **bénéfice des indépendants**, comme un artisan ou un médecin libéral, qui apportent leur travail et ont investi dans leur activité."
             },
             {
               "t": "p",
               "c": "Les revenus **mixtes** concernent les **indépendants** : leur bénéfice rémunère à la fois leur travail et le capital qu’ils ont investi — impossible de séparer les deux."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Revenus primaires",
+                  "Revenus tirés de la participation à la production"
+                ],
+                [
+                  "Revenus du travail",
+                  "Salaires, traitements"
+                ],
+                [
+                  "Revenus du capital",
+                  "Intérêts, loyers, dividendes"
+                ],
+                [
+                  "Revenus mixtes",
+                  "Bénéfices des indépendants : rémunèrent travail et capital"
+                ]
+              ]
             }
           ]
         },
@@ -895,29 +952,34 @@
               "c": "Sur une période, un agent économique peut être dans deux situations opposées selon que ses **dépenses** dépassent ou non ses **ressources** :"
             },
             {
-              "t": "table",
-              "head": [
-                "Besoin de financement",
-                "Capacité de financement"
-              ],
-              "rows": [
-                [
-                  "Dépenses **>** ressources",
-                  "Ressources **>** dépenses"
-                ],
-                [
-                  "Il faut **trouver** des fonds",
-                  "Il reste de l’**épargne** à placer"
-                ],
-                [
-                  "Souvent : entreprises, État",
-                  "Souvent : ménages"
-                ]
-              ]
+              "t": "p",
+              "c": "Un agent est en **besoin de financement** quand ses **dépenses dépassent ses ressources** : il doit **trouver des fonds**. C’est souvent le cas des **entreprises** et de l’**État**. Il est en **capacité de financement** quand ses **ressources dépassent ses dépenses** : il lui reste de l’**épargne à placer**, ce qui est souvent le cas des **ménages**."
             },
             {
               "t": "p",
               "c": "Le **système financier** a pour rôle de **mettre en relation** ceux qui ont un besoin de financement avec ceux qui ont une capacité de financement (les épargnants)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Besoin de financement",
+                  "Dépenses > ressources : il faut trouver des fonds (entreprises, État)"
+                ],
+                [
+                  "Capacité de financement",
+                  "Ressources > dépenses : épargne à placer (ménages)"
+                ],
+                [
+                  "Système financier",
+                  "Met en relation agents à besoin et agents à capacité de financement"
+                ]
+              ]
             }
           ]
         },
@@ -958,33 +1020,42 @@
               "c": "Sur le marché financier, on émet deux grands types de titres, très différents :"
             },
             {
-              "t": "table",
-              "head": [
-                "Action",
-                "Obligation"
-              ],
-              "rows": [
-                [
-                  "Titre de **propriété** (part de l’entreprise)",
-                  "Titre de **dette** (un prêt)"
-                ],
-                [
-                  "Rapporte un **dividende** (variable)",
-                  "Rapporte un **intérêt** (fixé d’avance)"
-                ],
-                [
-                  "L’actionnaire est **copropriétaire**",
-                  "L’obligataire est **créancier**"
-                ],
-                [
-                  "Risqué (pas de garantie)",
-                  "Plus sûr (remboursement prévu)"
-                ]
-              ]
+              "t": "p",
+              "c": "L’**action** est un **titre de propriété** : elle représente une part de l’entreprise, et l’actionnaire en devient **copropriétaire**. Elle rapporte un **dividende**, dont le montant **varie** selon les résultats ; c’est un placement **risqué**, sans garantie."
+            },
+            {
+              "t": "p",
+              "c": "L’**obligation** est un **titre de dette** : elle correspond à un **prêt** fait à l’entreprise ou à l’État, et l’obligataire est un **créancier**. Elle rapporte un **intérêt fixé d’avance** et son **remboursement est prévu** : c’est un placement **plus sûr**."
             },
             {
               "t": "warning",
               "c": "Piège classique : **action = propriété**, **obligation = dette**. Acheter une action, c’est devenir **copropriétaire** ; acheter une obligation, c’est **prêter** de l’argent."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Action",
+                  "Titre de propriété ; rapporte un dividende variable ; risqué"
+                ],
+                [
+                  "Obligation",
+                  "Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr"
+                ],
+                [
+                  "Dividende",
+                  "Part du bénéfice versée aux actionnaires"
+                ],
+                [
+                  "Marché financier",
+                  "Marché où s’échangent actions et obligations"
+                ]
+              ]
             }
           ]
         },
@@ -1022,29 +1093,46 @@
               "c": "La **banque centrale** (la **BCE**, Banque Centrale Européenne, pour la zone euro) supervise les banques et pilote la **politique monétaire**. Son principal outil : les **taux directeurs**, le taux auquel les banques se refinancent auprès d’elle."
             },
             {
-              "t": "table",
-              "head": [
-                "La BCE baisse ses taux",
-                "La BCE augmente ses taux"
-              ],
-              "rows": [
-                [
-                  "Le crédit devient **moins cher**",
-                  "Le crédit devient **plus cher**"
-                ],
-                [
-                  "On emprunte plus → activité **stimulée**",
-                  "On emprunte moins → activité **freinée**"
-                ],
-                [
-                  "Objectif : relancer l’économie",
-                  "Objectif : **freiner l’inflation**"
-                ]
-              ]
+              "t": "p",
+              "c": "Quand la **BCE baisse ses taux**, le crédit devient **moins cher** : les ménages et les entreprises **empruntent davantage**, ce qui **stimule l’activité**. L’objectif est alors de **relancer l’économie**."
+            },
+            {
+              "t": "p",
+              "c": "Quand la **BCE augmente ses taux**, le crédit devient **plus cher** : on **emprunte moins**, ce qui **freine l’activité**. L’objectif est alors de **freiner l’inflation**."
             },
             {
               "t": "p",
               "c": "La mission principale de la BCE est de **maintenir la stabilité des prix** (une inflation faible et maîtrisée)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Banque centrale (BCE)",
+                  "Supervise les banques et pilote la politique monétaire de la zone euro"
+                ],
+                [
+                  "Taux directeur",
+                  "Taux auquel les banques se refinancent auprès de la banque centrale"
+                ],
+                [
+                  "Baisse des taux",
+                  "Crédit moins cher, activité stimulée (relance)"
+                ],
+                [
+                  "Hausse des taux",
+                  "Crédit plus cher, activité freinée (lutte contre l’inflation)"
+                ],
+                [
+                  "Stabilité des prix",
+                  "Mission principale de la BCE : une inflation faible et maîtrisée"
+                ]
+              ]
             }
           ]
         }
@@ -1207,25 +1295,34 @@
               "c": "L’**offre** et la **demande** réagissent au **prix**, mais en sens **opposé** :"
             },
             {
-              "t": "table",
-              "head": [
-                "Quand le prix augmente…",
-                "Effet"
-              ],
-              "rows": [
-                [
-                  "La **demande**",
-                  "diminue (les acheteurs renoncent)"
-                ],
-                [
-                  "L’**offre**",
-                  "augmente (produire devient plus rentable)"
-                ]
-              ]
+              "t": "p",
+              "c": "Quand le prix augmente, la **demande diminue** : certains acheteurs renoncent, car le produit leur paraît trop cher. Dans le même temps, l’**offre augmente** : produire devient plus rentable, donc les vendeurs proposent davantage."
             },
             {
               "t": "p",
               "c": "C’est la **loi de l’offre et de la demande** : la demande est **décroissante** avec le prix, l’offre est **croissante** avec le prix."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Demande",
+                  "Quantité que les acheteurs souhaitent acheter ; décroissante avec le prix"
+                ],
+                [
+                  "Offre",
+                  "Quantité que les vendeurs souhaitent vendre ; croissante avec le prix"
+                ],
+                [
+                  "Loi de l’offre et de la demande",
+                  "La demande baisse et l’offre augmente quand le prix monte"
+                ]
+              ]
             }
           ]
         },
@@ -1258,29 +1355,42 @@
               "c": "L’**élasticité-prix de la demande** mesure la **sensibilité de la demande à une variation de prix** : « de combien la demande baisse-t-elle quand le prix augmente ? »"
             },
             {
-              "t": "table",
-              "head": [
-                "Demande élastique",
-                "Demande peu élastique"
-              ],
-              "rows": [
-                [
-                  "**Très sensible** au prix",
-                  "Peu sensible au prix"
-                ],
-                [
-                  "Une hausse fait **beaucoup** baisser la demande",
-                  "La demande change peu"
-                ],
-                [
-                  "Produits non essentiels, avec substituts",
-                  "Produits de **première nécessité** (pain, essence, médicaments)"
-                ]
-              ]
+              "t": "p",
+              "c": "Une **demande élastique** est **très sensible au prix** : une hausse fait **beaucoup baisser** les achats. C’est le cas des **produits non essentiels** ou de ceux pour lesquels il existe des **substituts**."
+            },
+            {
+              "t": "p",
+              "c": "Une **demande peu élastique** est **peu sensible au prix** : même quand le prix monte, les achats **changent peu**. C’est le cas des **produits de première nécessité**, comme le pain, l’essence ou les médicaments."
             },
             {
               "t": "p",
               "c": "C’est une notion clé pour fixer les prix : sur un produit à demande **peu élastique**, une hausse de prix fait peu fuir les clients."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Élasticité-prix de la demande",
+                  "Sensibilité de la demande à une variation de prix"
+                ],
+                [
+                  "Demande élastique",
+                  "Très sensible au prix (produits non essentiels, avec substituts)"
+                ],
+                [
+                  "Demande peu élastique",
+                  "Peu sensible au prix (pain, essence, médicaments)"
+                ],
+                [
+                  "Substitut",
+                  "Produit qui peut en remplacer un autre"
+                ]
+              ]
             }
           ]
         },
@@ -1328,33 +1438,42 @@
               "c": "En pratique, la concurrence est souvent **imparfaite** : certains acteurs ont un **pouvoir de marché** (capacité à influencer le prix)."
             },
             {
-              "t": "table",
-              "head": [
-                "Structure",
-                "Nombre de vendeurs",
-                "Exemple"
-              ],
-              "rows": [
-                [
-                  "**Monopole**",
-                  "Un **seul** vendeur",
-                  "La distribution d’eau d’une commune"
-                ],
-                [
-                  "**Oligopole**",
-                  "**Quelques** vendeurs",
-                  "Téléphonie mobile, carburants"
-                ],
-                [
-                  "Concurrence monopolistique",
-                  "Beaucoup, mais produits **différenciés**",
-                  "Restaurants, vêtements de marque"
-                ]
-              ]
+              "t": "p",
+              "c": "Dans un **monopole**, il n’y a qu’**un seul vendeur** : c’est le cas de la distribution d’eau dans une commune. Dans un **oligopole**, il y a **quelques vendeurs** seulement, comme dans la téléphonie mobile ou les carburants."
+            },
+            {
+              "t": "p",
+              "c": "Dans la **concurrence monopolistique**, les vendeurs sont **nombreux**, mais chacun propose un **produit différencié**, ce qui lui donne un petit pouvoir sur son prix : c’est le cas des restaurants ou des vêtements de marque."
             },
             {
               "t": "p",
               "c": "Moins il y a de vendeurs, plus ils ont de **pouvoir sur les prix** — au détriment, souvent, du consommateur."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Pouvoir de marché",
+                  "Capacité à influencer le prix"
+                ],
+                [
+                  "Monopole",
+                  "Un seul vendeur (distribution d’eau d’une commune)"
+                ],
+                [
+                  "Oligopole",
+                  "Quelques vendeurs (téléphonie mobile, carburants)"
+                ],
+                [
+                  "Concurrence monopolistique",
+                  "Beaucoup de vendeurs, produits différenciés (restaurants, marques)"
+                ]
+              ]
             }
           ]
         },

@@ -82,6 +82,15 @@ sinon il est déduit du titre (`courseGroupOf` : « MÉTHODE » → `methode`,
 dissertations guidées sont rangés dans `cas` (dans `methode` en maths), pour que
 « Le cours » ne contienne que des chapitres de cours.
 
+Le cours est **rédigé en texte** : aucun tableau au milieu d’un chapitre. Seul un
+tableau « Notions et définitions » (en-tête `Notion | Définition`, ou
+`Notion ou repère | Définition ou événement` en histoire, `Mot | Sens` en langues)
+peut terminer un chapitre ; il reprend les notions à retenir. Si un chapitre n’en
+a pas, le lecteur de cours (`PaginatedCourse`) en fabrique un à partir des
+définitions du chapitre puis du thème (`sectionDefinitions`). Le test « aucun
+tableau au milieu d’un chapitre » (`tests/contenu.test.js`) y veille. Ce tableau
+final alimente aussi les exercices (paires notion → définition, dates).
+
 Un titre de chapitre nomme ses notions essentielles (« La politique de prix :
 élasticité, écrémage, pénétration, alignement »), pas une mise en situation.
 Changer un titre n'est pas anodin : `dedupeCourse` fusionne deux sections de même

@@ -4,7 +4,21 @@
       "h": "🧾 Mémo — les notions clés du consommateur",
       "blocks": [
         {
+          "t": "p",
+          "c": "Pour réviser, retiens ces quatre notions et leurs nuances. Le **besoin** est une sensation de manque ; Maslow les range en **cinq niveaux**, des besoins physiologiques jusqu’à l’accomplissement. La **motivation**, ou **mobile**, est la force qui pousse à l’achat : elle peut être **hédoniste** (se faire plaisir), **oblative** (faire plaisir aux autres) ou d’**auto-expression** (montrer qui l’on est)."
+        },
+        {
+          "t": "p",
+          "c": "Le **frein** est la force qui retient l’achat : une **peur**, un **risque** perçu ou une **inhibition** comme la culpabilité. L’**attente**, enfin, est ce que le client espère précisément obtenir du produit."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un achat = équilibre **mobiles** (pousser) / **freins** (retenir). Le marketing renforce les uns et lève les autres."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
             "Notion",
             "Définition"
@@ -27,11 +41,6 @@
               "Ce que le client espère précisément"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Un achat = équilibre **mobiles** (pousser) / **freins** (retenir). Le marketing renforce les uns et lève les autres."
         }
       ]
     },
@@ -139,15 +148,37 @@
           "c": "Le **produit** se gère sur plusieurs plans : la **gamme** (ensemble des produits, largeur et profondeur), la **marque** (nom, logo, image), et le **cycle de vie**."
         },
         {
+          "t": "p",
+          "c": "Au **lancement**, le produit est inconnu : l’enjeu est de le **faire connaître**, ce qui demande d’**investir** beaucoup en communication alors que les ventes sont encore faibles. En phase de **croissance**, les ventes progressent vite et l’enjeu devient de **gagner des parts de marché** avant que les concurrents ne s’installent."
+        },
+        {
+          "t": "p",
+          "c": "En **maturité**, les ventes se stabilisent et le marché est disputé : il faut **fidéliser** les clients et **se différencier** des concurrents. Au **déclin**, les ventes baissent : l’entreprise doit choisir entre **relancer** le produit, en le modernisant, ou le **retirer** du marché."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un produit **naît, grandit, mûrit et décline** : la stratégie s’adapte à chaque phase."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Phase du cycle de vie",
-            "Enjeu"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
+              "Gamme",
+              "Ensemble des produits d’une entreprise (largeur et profondeur)"
+            ],
+            [
+              "Cycle de vie du produit",
+              "Lancement, croissance, maturité, déclin"
+            ],
+            [
               "Lancement",
-              "Faire connaître, investir"
+              "Faire connaître le produit, investir"
             ],
             [
               "Croissance",
@@ -159,14 +190,9 @@
             ],
             [
               "Déclin",
-              "Relancer ou retirer"
+              "Relancer ou retirer le produit"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Un produit **naît, grandit, mûrit et décline** : la stratégie s’adapte à chaque phase."
         }
       ]
     },
@@ -178,34 +204,43 @@
           "c": "La **distribution** amène le produit au client via des **circuits** : **direct** (sans intermédiaire), **court** (un intermédiaire), **long** (plusieurs)."
         },
         {
-          "t": "table",
-          "head": [
-            "Intensité",
-            "Principe",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Intensive",
-              "Partout, un maximum de points de vente",
-              "Boissons, snacks"
-            ],
-            [
-              "Sélective",
-              "Points de vente choisis",
-              "Cosmétiques, électroménager"
-            ],
-            [
-              "Exclusive",
-              "Très peu de distributeurs",
-              "Luxe, automobile haut de gamme"
-            ]
-          ]
+          "t": "p",
+          "c": "L’entreprise choisit aussi l’**intensité** de sa distribution. La **distribution intensive** consiste à être présent **partout**, dans un maximum de points de vente : c’est le cas des boissons et des snacks, que l’on achète sans réfléchir là où l’on se trouve."
+        },
+        {
+          "t": "p",
+          "c": "La **distribution sélective** limite la vente à des **points de vente choisis**, capables de conseiller le client, comme pour les cosmétiques ou l’électroménager. La **distribution exclusive** confie le produit à **très peu de distributeurs**, souvent un seul par zone : c’est la règle pour le luxe ou l’automobile haut de gamme, dont l’image exige de la rareté."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "Le choix du circuit et de l’intensité doit être **cohérent** avec le positionnement (le luxe ne se vend pas partout)."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Circuit direct / court / long",
+              "Aucun / un / plusieurs intermédiaires entre producteur et consommateur"
+            ],
+            [
+              "Distribution intensive",
+              "Un maximum de points de vente (boissons, snacks)"
+            ],
+            [
+              "Distribution sélective",
+              "Points de vente choisis (cosmétiques, électroménager)"
+            ],
+            [
+              "Distribution exclusive",
+              "Très peu de distributeurs (luxe, automobile haut de gamme)"
+            ]
+          ]
         }
       ]
     },

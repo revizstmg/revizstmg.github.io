@@ -27,10 +27,20 @@
           "c": "L’économiste **Musgrave** résume l’action de l’État en **trois fonctions**. L’**allocation** : produire ce que le marché ne fournit pas seul (routes, écoles, sécurité — des biens utiles à tous). La **répartition** : prélever des impôts et verser des aides (allocations, retraites) pour réduire les inégalités. La **stabilisation** : face à une crise, relancer ; en cas de surchauffe, freiner."
         },
         {
+          "t": "p",
+          "c": "Chacune des trois fonctions a un objectif précis. L’**allocation** vise à **fournir les biens publics** que le marché ne produirait pas. La **répartition** vise à **réduire les inégalités**. La **stabilisation** vise à **lisser les crises**, en protégeant l’emploi et en contenant la hausse des prix."
+        },
+        {
+          "t": "example",
+          "h": "Illustration",
+          "c": "Ton lycée (gratuit), la route devant chez toi, les allocations d’une famille modeste : trois formes différentes de l’intervention publique au quotidien."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Fonction",
-            "Objectif"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
@@ -46,11 +56,6 @@
               "Lisser les crises (emploi, prix)"
             ]
           ]
-        },
-        {
-          "t": "example",
-          "h": "Illustration",
-          "c": "Ton lycée (gratuit), la route devant chez toi, les allocations d’une famille modeste : trois formes différentes de l’intervention publique au quotidien."
         }
       ]
     },
@@ -105,29 +110,8 @@
           "c": "La fermeture d’une usine jette d’un coup des centaines de personnes sur le marché du travail. Certaines retrouveront vite un poste ; d’autres, dont le métier disparaît, devront se **reconvertir** (formation). Le chômage n’a donc pas une seule cause."
         },
         {
-          "t": "table",
-          "head": [
-            "Type de chômage",
-            "Cause",
-            "Remède"
-          ],
-          "rows": [
-            [
-              "Conjoncturel",
-              "Ralentissement (crise)",
-              "Relance"
-            ],
-            [
-              "Structurel",
-              "Compétences inadaptées",
-              "Formation"
-            ],
-            [
-              "Frictionnel",
-              "Transition entre 2 emplois",
-              "Normal"
-            ]
-          ]
+          "t": "p",
+          "c": "Le **chômage conjoncturel** est causé par un **ralentissement** de l’économie, une crise ; on le combat par la **relance**. Le **chômage structurel** vient de **compétences inadaptées** aux emplois proposés ; on le combat par la **formation**. Le **chômage frictionnel** correspond à la **transition entre deux emplois** : il est **normal** dans une économie où les gens changent de poste."
         },
         {
           "t": "p",
@@ -137,6 +121,36 @@
           "t": "tip",
           "h": "Lien avec l’État",
           "c": "Le bon remède dépend du bon diagnostic : le chômage **conjoncturel** appelle une **relance**, le chômage **structurel** appelle la **formation**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Chômage conjoncturel",
+              "Ralentissement (crise) ; remède : relance"
+            ],
+            [
+              "Chômage structurel",
+              "Compétences inadaptées ; remède : formation"
+            ],
+            [
+              "Chômage frictionnel",
+              "Transition entre deux emplois ; normal"
+            ],
+            [
+              "Politiques actives de l’emploi",
+              "Agissent sur les causes (formation, aides à l’embauche)"
+            ],
+            [
+              "Politiques passives de l’emploi",
+              "Atténuent les conséquences (indemnisation)"
+            ]
+          ]
         }
       ]
     }
@@ -192,34 +206,39 @@
           "c": "Ouvrir les frontières permet d’acheter des vêtements bon marché (gagnant : le consommateur), mais peut fermer une usine textile locale incapable de s’aligner sur ces prix (perdant : ces salariés)."
         },
         {
-          "t": "table",
-          "head": [
-            "",
-            "Libre-échange",
-            "Protectionnisme"
-          ],
-          "rows": [
-            [
-              "Outils",
-              "Accords, OMC",
-              "Droits de douane, quotas"
-            ],
-            [
-              "Avantage",
-              "Prix bas, choix, croissance",
-              "Protège l’emploi local"
-            ],
-            [
-              "Risque",
-              "Délocalisations",
-              "Représailles, prix élevés"
-            ]
-          ]
+          "t": "p",
+          "c": "Les deux options se comparent point par point. Le **libre-échange** s’appuie sur des **accords** entre pays et sur l’**OMC** ; il apporte des **prix bas**, du **choix** et de la **croissance**, mais il fait courir le risque de **délocalisations**."
+        },
+        {
+          "t": "p",
+          "c": "Le **protectionnisme** utilise les **droits de douane** et les **quotas** ; il **protège l’emploi local**, mais il expose aux **représailles** des autres pays et fait monter les **prix**."
         },
         {
           "t": "tip",
           "h": "Nuance attendue",
           "c": "Au bac, ne présente jamais le libre-échange comme « tout bon » ou « tout mauvais » : montre les gains **et** les coûts sociaux, et propose un **accompagnement** des perdants (formation, reconversion)."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Libre-échange",
+              "Accords, OMC ; prix bas, choix, croissance ; risque de délocalisations"
+            ],
+            [
+              "Protectionnisme",
+              "Droits de douane, quotas ; protège l’emploi local ; risque de représailles et de prix élevés"
+            ],
+            [
+              "Accompagnement",
+              "Formation et reconversion pour les perdants de l’ouverture"
+            ]
+          ]
         }
       ]
     }

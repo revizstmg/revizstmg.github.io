@@ -40,21 +40,12 @@
             "c": "Une petite chaîne de boulangeries locales bien connue veut se développer face à l’arrivée d’une grande enseigne."
           },
           {
-            "t": "table",
-            "head": [
-              "Interne",
-              "Externe"
-            ],
-            "rows": [
-              [
-                "**Forces** : notoriété locale, qualité, savoir-faire",
-                "**Opportunités** : goût pour le « fait maison », circuits courts"
-              ],
-              [
-                "**Faiblesses** : peu de moyens financiers, peu digitalisée",
-                "**Menaces** : concurrence de la grande enseigne, hausse du coût des matières"
-              ]
-            ]
+            "t": "p",
+            "c": "Sur le plan **interne**, les **forces** de la chaîne de boulangeries sont sa **notoriété locale**, la **qualité** de ses produits et son **savoir-faire**. Ses **faiblesses** sont son **manque de moyens financiers** et une **faible présence numérique**."
+          },
+          {
+            "t": "p",
+            "c": "Sur le plan **externe**, les **opportunités** viennent du **goût croissant pour le « fait maison »** et pour les **circuits courts**. Les **menaces** sont la **concurrence de la grande enseigne** qui s’installe et la **hausse du coût des matières premières**."
           },
           {
             "t": "p",
@@ -64,6 +55,36 @@
             "t": "tip",
             "h": "Décision",
             "c": "La stratégie consiste à s’appuyer sur les forces pour saisir les opportunités et se protéger des menaces."
+          },
+          {
+            "t": "table",
+            "h": "Notions et définitions",
+            "head": [
+              "Notion",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Forces",
+                "Notoriété locale, qualité, savoir-faire"
+              ],
+              [
+                "Faiblesses",
+                "Peu de moyens financiers, peu digitalisée"
+              ],
+              [
+                "Opportunités",
+                "Goût pour le « fait maison », circuits courts"
+              ],
+              [
+                "Menaces",
+                "Concurrence de la grande enseigne, hausse du coût des matières"
+              ],
+              [
+                "SWOT",
+                "Croisement du diagnostic interne et du diagnostic externe"
+              ]
+            ]
           }
         ]
       }

@@ -637,47 +637,48 @@
           "h": "Relier l’actualité aux chapitres du programme",
           "blocks": [
             {
+              "t": "p",
+              "c": "Chaque grand sujet d’actualité se rattache à un chapitre du programme. L’**inflation** et la hausse des prix renvoient au **rôle de l’État** et au **pouvoir d’achat** : la hausse des prix réduit le pouvoir d’achat et appelle une réponse, par des aides ou par la politique monétaire. Les **taux d’intérêt de la BCE** renvoient au **financement** et à la **politique monétaire** : relever les taux freine l’inflation mais rend le crédit plus cher."
+            },
+            {
+              "t": "p",
+              "c": "Le **chômage**, l’emploi des jeunes ou le SMIC servent à illustrer les **formes de chômage** et les **politiques de l’emploi** (thème 7). Le **déficit** et la **dette publics** permettent de discuter les **limites de l’intervention de l’État** et le financement des dépenses (thème 6). Les **droits de douane** et les **relocalisations** permettent d’opposer **libre-échange et protectionnisme** à partir d’un cas récent (thème 8)."
+            },
+            {
+              "t": "p",
+              "c": "La **transition écologique** et les questions d’énergie montrent la **tension entre croissance et soutenabilité** (thème 9). Enfin, l’**intelligence artificielle** nourrit un débat sur l’emploi et la croissance : elle **détruit et crée des emplois** et apporte des **gains de productivité**."
+            },
+            {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Sujet d’actualité",
-                "Chapitre du programme",
-                "Comment l’utiliser"
+                "Notion",
+                "Définition"
               ],
               "rows": [
                 [
-                  "Inflation, hausse des prix",
-                  "Rôle de l’État · pouvoir d’achat",
-                  "La hausse des prix réduit le pouvoir d’achat et appelle une réponse (aides, politique monétaire)."
+                  "Inflation (actualité)",
+                  "Rôle de l’État et pouvoir d’achat"
                 ],
                 [
-                  "Taux d’intérêt de la BCE",
-                  "Financement · politique monétaire",
-                  "Relever les taux freine l’inflation mais renchérit le crédit."
+                  "Taux de la BCE (actualité)",
+                  "Politique monétaire : freiner l’inflation, mais crédit plus cher"
                 ],
                 [
-                  "Chômage, emploi des jeunes, SMIC",
-                  "Emploi et chômage (Thème 7)",
-                  "Illustrer les formes de chômage et les politiques de l’emploi."
+                  "Chômage, SMIC (actualité)",
+                  "Formes de chômage et politiques de l’emploi (thème 7)"
                 ],
                 [
-                  "Déficit et dette publics",
-                  "Rôle de l’État (Thème 6)",
-                  "Discuter les limites de l’intervention de l’État et le financement des dépenses."
+                  "Déficit et dette (actualité)",
+                  "Limites de l’intervention de l’État (thème 6)"
                 ],
                 [
-                  "Droits de douane, relocalisations",
-                  "Commerce international (Thème 8)",
-                  "Opposer libre-échange et protectionnisme à partir d’un cas récent."
+                  "Droits de douane (actualité)",
+                  "Libre-échange ou protectionnisme (thème 8)"
                 ],
                 [
-                  "Transition écologique, énergies",
-                  "Croissance et développement durable (Thème 9)",
-                  "Montrer la tension entre croissance et soutenabilité."
-                ],
-                [
-                  "Intelligence artificielle et emploi",
-                  "Emploi · croissance",
-                  "Débattre : destruction et création d’emplois, gains de productivité."
+                  "Transition écologique (actualité)",
+                  "Croissance et soutenabilité (thème 9)"
                 ]
               ]
             }
@@ -687,37 +688,46 @@
           "h": "Suivre l’actualité : quelle source pour quel chapitre",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Source",
-                "Pour quoi faire"
-              ],
-              "rows": [
-                [
-                  "INSEE (insee.fr)",
-                  "Inflation, chômage, croissance (PIB), pouvoir d’achat — chiffres officiels."
-                ],
-                [
-                  "Banque de France",
-                  "Monnaie, crédit, taux d’intérêt, financement de l’économie."
-                ],
-                [
-                  "Vie-publique / economie.gouv.fr",
-                  "Budget, déficit et dette publics, politiques de l’État."
-                ],
-                [
-                  "OMC",
-                  "Commerce international, droits de douane, échanges mondiaux."
-                ],
-                [
-                  "ADEME",
-                  "Transition écologique, énergie, développement durable."
-                ]
-              ]
+              "t": "p",
+              "c": "Pour chaque chapitre, une source fiable permet de trouver des chiffres à jour. L’**INSEE** (insee.fr) publie les chiffres officiels de l’**inflation**, du **chômage**, de la **croissance** (PIB) et du **pouvoir d’achat**. La **Banque de France** renseigne sur la **monnaie**, le **crédit**, les **taux d’intérêt** et le financement de l’économie."
+            },
+            {
+              "t": "p",
+              "c": "**Vie-publique** et **economie.gouv.fr** expliquent le **budget**, le **déficit** et la **dette publics** ainsi que les politiques de l’État. Le site de l’**OMC** couvre le **commerce international** et les **droits de douane**. L’**ADEME** traite de la **transition écologique**, de l’**énergie** et du **développement durable**."
             },
             {
               "t": "tip",
               "c": "Suis 5 min d’actu éco par semaine (journal, radio, podcast) et note **un fait par chapitre**. Le dictionnaire intégré 📖 t’aide pour un mot ou une phrase."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "INSEE",
+                  "Chiffres officiels : inflation, chômage, croissance, pouvoir d’achat"
+                ],
+                [
+                  "Banque de France",
+                  "Monnaie, crédit, taux d’intérêt"
+                ],
+                [
+                  "Vie-publique / economie.gouv.fr",
+                  "Budget, déficit et dette publics, politiques de l’État"
+                ],
+                [
+                  "OMC",
+                  "Commerce international, droits de douane"
+                ],
+                [
+                  "ADEME",
+                  "Transition écologique, énergie, développement durable"
+                ]
+              ]
             }
           ]
         }

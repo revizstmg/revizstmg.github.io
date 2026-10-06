@@ -31,25 +31,12 @@
           "c": "Face à un achat, deux forces s’opposent : les **motivations** (ou mobiles) qui **poussent**, et les **freins** qui **retiennent**. Le rôle du marketing est d’**augmenter les mobiles** et de **lever les freins** — d’où les garanties, les facilités de paiement, les essais gratuits, les avis clients."
         },
         {
-          "t": "table",
-          "head": [
-            "Mobiles (poussent)",
-            "Freins (retiennent)"
-          ],
-          "rows": [
-            [
-              "Hédoniste : se faire plaisir",
-              "Prix (frein financier)"
-            ],
-            [
-              "Oblatif : faire plaisir aux autres",
-              "Peur de se tromper (risque)"
-            ],
-            [
-              "Auto-expression : montrer qui l’on est",
-              "Culpabilité (inhibition)"
-            ]
-          ]
+          "t": "p",
+          "c": "Les **mobiles** se rangent en trois familles. Le mobile **hédoniste** pousse à **se faire plaisir**. Le mobile **oblatif** pousse à **faire plaisir aux autres**, par exemple en offrant un cadeau. Le mobile d’**auto-expression** pousse à **montrer qui l’on est**, à travers les produits qu’on choisit."
+        },
+        {
+          "t": "p",
+          "c": "Face à eux, trois **freins** reviennent souvent. Le **prix** est un frein financier. La **peur de se tromper** traduit le **risque** perçu. La **culpabilité**, enfin, est une **inhibition** : on se retient d’acheter parce qu’on juge l’achat déraisonnable. Les garanties, les facilités de paiement et les avis clients servent justement à lever ces freins."
         },
         {
           "t": "p",
@@ -59,6 +46,36 @@
           "t": "warning",
           "h": "À ne pas inverser",
           "c": "La **motivation** pousse à l’achat, le **frein** le retient. Ce sont deux notions **opposées** à ne pas confondre."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Mobile hédoniste",
+              "Se faire plaisir"
+            ],
+            [
+              "Mobile oblatif",
+              "Faire plaisir aux autres"
+            ],
+            [
+              "Mobile d’auto-expression",
+              "Montrer qui l’on est"
+            ],
+            [
+              "Frein",
+              "Force qui retient l’achat : prix, peur de se tromper (risque), culpabilité (inhibition)"
+            ],
+            [
+              "Évaluation post-achat",
+              "Dernière étape du processus d’achat : satisfaction ou regret"
+            ]
+          ]
         }
       ]
     },
@@ -95,34 +112,39 @@
           "c": "Aucune marque ne peut plaire à tout le monde. Elle **découpe** donc le marché en groupes homogènes (la **segmentation**), en **choisit** un ou plusieurs (le **ciblage**), puis construit une **image** qui la distingue des concurrents (le **positionnement**). Trois étapes, dans cet ordre : c’est la démarche **SCP**."
         },
         {
-          "t": "table",
-          "head": [
-            "Étape",
-            "Question",
-            "Résultat"
-          ],
-          "rows": [
-            [
-              "Segmentation",
-              "Comment découper ?",
-              "Des segments homogènes"
-            ],
-            [
-              "Ciblage",
-              "Qui viser ?",
-              "La cible"
-            ],
-            [
-              "Positionnement",
-              "Quelle image ?",
-              "Une place dans l’esprit du client"
-            ]
-          ]
+          "t": "p",
+          "c": "Chaque étape répond à une question et produit un résultat. La **segmentation** répond à « comment découper ? » et donne des **segments homogènes**. Le **ciblage** répond à « qui viser ? » et désigne **la cible**."
+        },
+        {
+          "t": "p",
+          "c": "Le **positionnement** répond à « quelle image ? » et donne au produit **une place dans l’esprit du client**. L’ordre compte : on ne peut pas choisir une image avant de savoir à qui l’on parle."
         },
         {
           "t": "tip",
           "h": "Mémo",
           "c": "**S**egmenter (découper) → **C**ibler (choisir) → **P**ositionner (image voulue). Un bon positionnement est **clair, distinctif et crédible**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Segmentation",
+              "Découper le marché en segments homogènes"
+            ],
+            [
+              "Ciblage",
+              "Choisir le ou les segments à viser : la cible"
+            ],
+            [
+              "Positionnement",
+              "Image voulue, place dans l’esprit du client ; doit être clair, distinctif et crédible"
+            ]
+          ]
         }
       ]
     },
@@ -159,12 +181,30 @@
           "c": "Parce que les quatre leviers du marketing — le **produit**, le **prix**, la **distribution**, la **communication** (les **4P**) — doivent former un tout **cohérent** avec le positionnement. Un produit de luxe → un prix élevé → des boutiques sélectives → une communication prestigieuse. Casser un seul de ces éléments détruit l’image."
         },
         {
+          "t": "p",
+          "c": "Chaque P correspond à un ensemble de décisions. Pour le **produit**, on décide de la **gamme**, de la **qualité**, de la **marque** et du **design**. Pour le **prix**, on fixe le **niveau**, la **stratégie** et les **réductions** éventuelles."
+        },
+        {
+          "t": "p",
+          "c": "Pour la **distribution** (Place), on choisit les **circuits** et les **points de vente**. Pour la **communication** (Promotion), on décide de la **publicité**, de la présence sur les **réseaux** et des **promotions**. Ces quatre séries de décisions doivent toutes servir le même positionnement."
+        },
+        {
+          "t": "tip",
+          "h": "Les 4P",
+          "c": "Produit, Prix, Distribution (Place), Communication (Promotion) : c’est le plan de marchéage, et il se pense **ensemble**, jamais isolément."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "P",
-            "Décisions"
+            "Notion",
+            "Définition"
           ],
           "rows": [
+            [
+              "Plan de marchéage (4P)",
+              "Produit, prix, distribution, communication, pensés ensemble"
+            ],
             [
               "Produit",
               "Gamme, qualité, marque, design"
@@ -182,11 +222,6 @@
               "Publicité, réseaux, promotions"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "Les 4P",
-          "c": "Produit, Prix, Distribution (Place), Communication (Promotion) : c’est le plan de marchéage, et il se pense **ensemble**, jamais isolément."
         }
       ]
     },

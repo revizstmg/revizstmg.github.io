@@ -81,27 +81,32 @@
         "h": "Arithmétique ou géométrique : raison, formule et croissance",
         "blocks": [
           {
+            "t": "p",
+            "c": "Les deux types de suites se comparent sur trois points. D’abord, pour **passer d’un terme à l’autre**, on **ajoute la raison r** dans une suite arithmétique, alors qu’on **multiplie par la raison q** dans une suite géométrique."
+          },
+          {
+            "t": "p",
+            "c": "Ensuite, la **formule explicite**, qui donne directement le terme de rang n sans calculer tous les précédents, s’écrit **uₙ = u₀ + n × r** pour une suite arithmétique et **uₙ = u₀ × qⁿ** pour une suite géométrique. Enfin, la **croissance** est **linéaire** dans le premier cas, car les points de la représentation sont alignés, et **exponentielle** dans le second : pour q > 1, l’écart entre deux termes consécutifs grandit de plus en plus vite."
+          },
+          {
             "t": "table",
+            "h": "Notions et définitions",
             "head": [
-              "",
-              "Arithmétique",
-              "Géométrique"
+              "Notion",
+              "Définition"
             ],
             "rows": [
               [
-                "On passe d’un terme à l’autre en…",
-                "ajoutant la raison r",
-                "multipliant par la raison q"
+                "Suite arithmétique",
+                "On ajoute la raison r ; uₙ = u₀ + n × r ; croissance linéaire"
               ],
               [
-                "Formule",
-                "u_n = u_0 + n × r",
-                "u_n = u_0 × q^n"
+                "Suite géométrique",
+                "On multiplie par la raison q ; uₙ = u₀ × qⁿ ; croissance exponentielle"
               ],
               [
-                "Type de croissance",
-                "linéaire",
-                "exponentielle"
+                "Formule explicite",
+                "Formule qui donne uₙ directement en fonction de n"
               ]
             ]
           }

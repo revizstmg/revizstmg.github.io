@@ -8,10 +8,28 @@
           "c": "Au-delà des mentions de base, un contrat peut contenir des **clauses particulières** qui aménagent les droits et obligations des parties. En connaître les principales aide à analyser un contrat au bac."
         },
         {
+          "t": "p",
+          "c": "Quatre clauses particulières reviennent souvent. La **clause pénale** fixe **à l’avance le montant de l’indemnité** due si l’une des parties n’exécute pas son obligation. La **clause résolutoire** prévoit la **rupture automatique du contrat** en cas de manquement, sans avoir à passer par le juge."
+        },
+        {
+          "t": "p",
+          "c": "La **clause limitative de responsabilité** **plafonne la réparation** que devra verser la partie fautive. La **clause de confidentialité** **interdit de divulguer** certaines informations échangées pendant l’exécution du contrat."
+        },
+        {
+          "t": "p",
+          "c": "Ces clauses sont valables tant qu’elles respectent l’**ordre public** et ne créent pas de **déséquilibre significatif** (surtout dans les contrats d’adhésion et de consommation, où une clause **abusive** est réputée non écrite). Le juge peut **réviser** une clause pénale manifestement excessive."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Les clauses aménagent le contrat mais ne peuvent pas violer l’**ordre public** ni être **abusives**. Une clause abusive est **réputée non écrite**."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Clause",
-            "Effet"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
@@ -29,17 +47,12 @@
             [
               "Clause de confidentialité",
               "Interdit de divulguer certaines informations"
+            ],
+            [
+              "Clause abusive",
+              "Clause qui crée un déséquilibre significatif ; réputée non écrite"
             ]
           ]
-        },
-        {
-          "t": "p",
-          "c": "Ces clauses sont valables tant qu’elles respectent l’**ordre public** et ne créent pas de **déséquilibre significatif** (surtout dans les contrats d’adhésion et de consommation, où une clause **abusive** est réputée non écrite). Le juge peut **réviser** une clause pénale manifestement excessive."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Les clauses aménagent le contrat mais ne peuvent pas violer l’**ordre public** ni être **abusives**. Une clause abusive est **réputée non écrite**."
         }
       ]
     },
@@ -165,34 +178,12 @@
           "c": "La responsabilité civile a **deux régimes**, selon qu’un contrat lie ou non les parties. Bien les distinguer est le premier réflexe d’un cas pratique sur la responsabilité."
         },
         {
-          "t": "table",
-          "head": [
-            "",
-            "Contractuelle",
-            "Délictuelle (extra-contractuelle)"
-          ],
-          "rows": [
-            [
-              "Situation",
-              "Un contrat lie les parties",
-              "Aucun contrat entre elles"
-            ],
-            [
-              "Origine",
-              "Inexécution d’une obligation du contrat",
-              "Faute, chose, fait d’autrui"
-            ],
-            [
-              "Fondement",
-              "Art. 1231 et s.",
-              "Art. 1240 et s."
-            ],
-            [
-              "Exemple",
-              "Un transporteur livre en retard",
-              "Un passant blessé par la chute d’un pot de fleurs"
-            ]
-          ]
+          "t": "p",
+          "c": "La **responsabilité contractuelle** suppose qu’**un contrat lie les parties**. Elle naît de l’**inexécution d’une obligation prévue par ce contrat** et se fonde sur les **articles 1231 et suivants** du Code civil. Exemple : un transporteur livre une marchandise en retard."
+        },
+        {
+          "t": "p",
+          "c": "La **responsabilité délictuelle**, ou extra-contractuelle, s’applique quand **aucun contrat** ne lie la victime et l’auteur du dommage. Elle naît d’une **faute**, du **fait d’une chose** ou du **fait d’autrui**, et se fonde sur les **articles 1240 et suivants**. Exemple : un passant blessé par la chute d’un pot de fleurs."
         },
         {
           "t": "p",
@@ -202,6 +193,28 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Contrat entre les parties → responsabilité **contractuelle**. Pas de contrat → responsabilité **délictuelle**. Toujours vérifier ce point **en premier**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Responsabilité contractuelle",
+              "Un contrat lie les parties ; inexécution d’une obligation du contrat (art. 1231 et s.)"
+            ],
+            [
+              "Responsabilité délictuelle",
+              "Aucun contrat ; faute, chose ou fait d’autrui (art. 1240 et s.)"
+            ],
+            [
+              "Conditions de la responsabilité civile",
+              "Un dommage, un fait générateur et un lien de causalité"
+            ]
+          ]
         }
       ]
     },
@@ -296,29 +309,12 @@
           "c": "Le droit du travail encadre strictement le **temps de travail** pour protéger la santé du salarié. Les repères de base sont fixés par la loi, puis adaptés par les conventions collectives."
         },
         {
-          "t": "table",
-          "head": [
-            "Notion",
-            "Repère"
-          ],
-          "rows": [
-            [
-              "Durée légale",
-              "35 heures par semaine"
-            ],
-            [
-              "Heures supplémentaires",
-              "Au-delà de 35 h, majorées (25 % puis 50 % à défaut d’accord ; au moins 10 % si un accord le prévoit)"
-            ],
-            [
-              "Durée maximale",
-              "10 h/jour, 48 h/semaine (plafonds)"
-            ],
-            [
-              "Repos",
-              "Minimum 11 h consécutives entre deux journées"
-            ]
-          ]
+          "t": "p",
+          "c": "La **durée légale** du travail est de **35 heures par semaine**. Ce n’est pas un maximum : au-delà, le salarié effectue des **heures supplémentaires**, qui sont **majorées**. À défaut d’accord collectif, la majoration est de **25 %** pour les premières heures puis de **50 %** ; un accord peut prévoir un autre taux, mais jamais **inférieur à 10 %**."
+        },
+        {
+          "t": "p",
+          "c": "Il existe en revanche des **durées maximales** qui ne peuvent pas être dépassées : **10 heures par jour** et **48 heures par semaine**. Enfin, le salarié a droit à un **repos minimum de 11 heures consécutives** entre deux journées de travail."
         },
         {
           "t": "p",
@@ -328,6 +324,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Durée **légale** = 35 h (pas un maximum). Au-delà de la durée légale, les heures effectuées sont des **heures supplémentaires majorées**. La loi impose des **plafonds** et des **repos** pour protéger la santé."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Durée légale",
+              "35 heures par semaine (seuil de déclenchement des heures supplémentaires)"
+            ],
+            [
+              "Heures supplémentaires",
+              "Heures au-delà de 35 h, majorées (25 % puis 50 % ; au moins 10 % par accord)"
+            ],
+            [
+              "Durées maximales",
+              "10 h par jour, 48 h par semaine"
+            ],
+            [
+              "Repos quotidien",
+              "11 heures consécutives minimum entre deux journées"
+            ]
+          ]
         }
       ]
     },
@@ -425,24 +447,12 @@
           "c": "Le droit ne reconnaît de droits et d’obligations qu’aux **personnes juridiques**. Il en existe deux sortes, distinction fondamentale pour comprendre l’entreprise."
         },
         {
-          "t": "table",
-          "head": [
-            "Personne",
-            "Définition",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Physique",
-              "Un être humain",
-              "Un entrepreneur individuel"
-            ],
-            [
-              "Morale",
-              "Un groupement doté de la personnalité juridique",
-              "Une société, une association, une commune"
-            ]
-          ]
+          "t": "p",
+          "c": "La **personne physique** est un **être humain** : un entrepreneur individuel, par exemple, exerce son activité en tant que personne physique. La **personne morale** est un **groupement doté de la personnalité juridique** : une société, une association ou une commune."
+        },
+        {
+          "t": "p",
+          "c": "Comme une personne physique, la personne morale peut être titulaire de droits et d’obligations : signer des contrats, posséder des biens, agir en justice."
         },
         {
           "t": "p",
@@ -456,6 +466,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Personne **physique** (humain) vs **morale** (société, association). La personne morale a un **patrimoine propre** → elle protège le patrimoine des associés."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Personnalité juridique",
+              "Aptitude à être titulaire de droits et d’obligations"
+            ],
+            [
+              "Personne physique",
+              "Un être humain (entrepreneur individuel)"
+            ],
+            [
+              "Personne morale",
+              "Groupement doté de la personnalité juridique (société, association, commune)"
+            ],
+            [
+              "Patrimoine",
+              "Ensemble des biens et des dettes d’une personne"
+            ]
+          ]
         }
       ]
     },
@@ -467,29 +503,12 @@
           "c": "Pour exercer, l’entreprise conclut de nombreux **contrats** spécifiques, encadrés par le droit des affaires. En connaître quelques-uns aide à analyser la vie d’une entreprise."
         },
         {
-          "t": "table",
-          "head": [
-            "Contrat",
-            "Objet"
-          ],
-          "rows": [
-            [
-              "Bail commercial",
-              "Louer un local pour exploiter un fonds de commerce"
-            ],
-            [
-              "Contrat de vente commerciale",
-              "Vendre des marchandises entre professionnels"
-            ],
-            [
-              "Contrat de franchise",
-              "Exploiter une enseigne et un savoir-faire"
-            ],
-            [
-              "Contrat de sous-traitance",
-              "Confier, sous sa responsabilité, à un autre entrepreneur l’exécution de tout ou partie d’un contrat conclu avec un client"
-            ]
-          ]
+          "t": "p",
+          "c": "Le **bail commercial** permet de **louer un local** pour y **exploiter un fonds de commerce**. Le **contrat de vente commerciale** organise la **vente de marchandises entre professionnels**."
+        },
+        {
+          "t": "p",
+          "c": "Le **contrat de franchise** permet à un commerçant indépendant d’**exploiter l’enseigne et le savoir-faire** d’un réseau, en échange d’une redevance. Le **contrat de sous-traitance**, enfin, permet à une entreprise de **confier à un autre entrepreneur**, **sous sa propre responsabilité**, l’exécution de tout ou partie d’un contrat qu’elle a conclu avec un client."
         },
         {
           "t": "p",
@@ -499,6 +518,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "L’entreprise vit par ses **contrats** (bail commercial, vente, franchise, sous-traitance). Le **bail commercial** protège le commerçant (durée, renouvellement)."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Bail commercial",
+              "Location d’un local pour exploiter un fonds de commerce (9 ans minimum)"
+            ],
+            [
+              "Vente commerciale",
+              "Vente de marchandises entre professionnels"
+            ],
+            [
+              "Franchise",
+              "Exploitation de l’enseigne et du savoir-faire d’un réseau"
+            ],
+            [
+              "Sous-traitance",
+              "Confier à un autre entrepreneur, sous sa responsabilité, l’exécution d’un contrat"
+            ]
+          ]
         }
       ]
     },

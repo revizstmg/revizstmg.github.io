@@ -4,10 +4,28 @@
       "h": "📊 Les théories de la motivation",
       "blocks": [
         {
+          "t": "p",
+          "c": "Pour **Taylor** et l’OST, la motivation passe par le **salaire**. Pour **Maslow**, elle naît de **besoins hiérarchisés** en pyramide, des besoins physiologiques jusqu’à l’accomplissement."
+        },
+        {
+          "t": "p",
+          "c": "**Herzberg** sépare les **facteurs d’hygiène**, qui évitent le mécontentement, des **facteurs de motivation**, qui donnent l’envie. **Mayo** montre que la **reconnaissance** et les **relations sociales** motivent elles aussi."
+        },
+        {
+          "t": "p",
+          "c": "La distinction de **Herzberg** est centrale : le salaire et les conditions évitent le **mécontentement** (hygiène) mais ne motivent pas durablement ; la reconnaissance, l’intérêt et l’évolution **motivent** vraiment."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un bon salaire évite l’insatisfaction mais ne suffit pas à **motiver**."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Théorie",
-            "Idée clé"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
@@ -27,15 +45,6 @@
               "Reconnaissance et relations sociales motivent"
             ]
           ]
-        },
-        {
-          "t": "p",
-          "c": "La distinction de **Herzberg** est centrale : le salaire et les conditions évitent le **mécontentement** (hygiène) mais ne motivent pas durablement ; la reconnaissance, l’intérêt et l’évolution **motivent** vraiment."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Un bon salaire évite l’insatisfaction mais ne suffit pas à **motiver**."
         }
       ]
     },
@@ -61,10 +70,28 @@
       "h": "💶 La politique de rémunération : l’équité interne et externe",
       "blocks": [
         {
+          "t": "p",
+          "c": "La rémunération comprend le **salaire fixe**, c’est-à-dire la base mensuelle, et une **part variable** faite de **primes** et de **commissions**. S’y ajoutent les **périphériques** : **participation**, **intéressement** et divers **avantages**."
+        },
+        {
+          "t": "p",
+          "c": "Elle comprend enfin une **reconnaissance non monétaire**, faite de perspectives d’**évolution** et d’**autonomie**. L’**équité interne** compare les salaires au sein de l’entreprise ; l’**équité externe** les compare à ceux du marché."
+        },
+        {
+          "t": "p",
+          "c": "Une rémunération perçue comme **équitable** (en interne et face au marché) motive ; un sentiment d’injustice démotive fortement."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La rémunération combine fixe, variable et périphériques ; son **équité** perçue est décisive."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Composante",
-            "Exemple"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
@@ -82,17 +109,12 @@
             [
               "Reconnaissance non monétaire",
               "Évolution, autonomie"
+            ],
+            [
+              "Équité interne / externe",
+              "Rémunération juste par rapport aux collègues / par rapport au marché"
             ]
           ]
-        },
-        {
-          "t": "p",
-          "c": "Une rémunération perçue comme **équitable** (en interne et face au marché) motive ; un sentiment d’injustice démotive fortement."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "La rémunération combine fixe, variable et périphériques ; son **équité** perçue est décisive."
         }
       ]
     }
@@ -121,29 +143,8 @@
       "h": "⚔️ Typologie et résolution des conflits",
       "blocks": [
         {
-          "t": "table",
-          "head": [
-            "Type de conflit",
-            "Origine"
-          ],
-          "rows": [
-            [
-              "D’intérêts",
-              "Objectifs/avantages incompatibles"
-            ],
-            [
-              "De valeurs",
-              "Visions opposées"
-            ],
-            [
-              "De personnes",
-              "Incompatibilités relationnelles"
-            ],
-            [
-              "De pouvoir",
-              "Lutte d’influence"
-            ]
-          ]
+          "t": "p",
+          "c": "Un conflit **d’intérêts** oppose des objectifs ou des avantages incompatibles. Un conflit **de valeurs** oppose des visions du monde. Un conflit **de personnes** naît d’incompatibilités relationnelles. Un conflit **de pouvoir** est une lutte d’influence."
         },
         {
           "t": "p",
@@ -153,6 +154,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Privilégier la **négociation gagnant-gagnant** ; un conflit bien géré peut être **constructif**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Conflit d’intérêts",
+              "Objectifs ou avantages incompatibles"
+            ],
+            [
+              "Conflit de valeurs",
+              "Visions opposées"
+            ],
+            [
+              "Conflit de personnes",
+              "Incompatibilités relationnelles"
+            ],
+            [
+              "Conflit de pouvoir",
+              "Lutte d’influence"
+            ],
+            [
+              "Médiation",
+              "Un tiers aide à trouver un accord"
+            ],
+            [
+              "Arbitrage",
+              "Un tiers décide"
+            ]
+          ]
         }
       ]
     },
@@ -321,10 +356,28 @@
       "h": "📊 Le climat social : un faisceau d’indicateurs",
       "blocks": [
         {
+          "t": "p",
+          "c": "Le climat social se lit dans plusieurs indicateurs à la fois. Le **taux d’absentéisme** signale démotivation ou mauvaises conditions. Le **taux de turnover** signale des départs fréquents et un malaise."
+        },
+        {
+          "t": "p",
+          "c": "Les **conflits et les grèves** traduisent des tensions sociales, et les **accidents du travail** des problèmes de sécurité."
+        },
+        {
+          "t": "p",
+          "c": "Rappel : le **coût du travail** (brut + charges patronales) dépasse largement le salaire **net** perçu."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le climat social se **pilote** avec des indicateurs ; c’est un **faisceau**, pas un seul chiffre."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Indicateur",
-            "Ce qu’il révèle"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
@@ -342,17 +395,12 @@
             [
               "Accidents du travail",
               "Problèmes de sécurité"
+            ],
+            [
+              "Coût du travail",
+              "Salaire brut + charges patronales"
             ]
           ]
-        },
-        {
-          "t": "p",
-          "c": "Rappel : le **coût du travail** (brut + charges patronales) dépasse largement le salaire **net** perçu."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Le climat social se **pilote** avec des indicateurs ; c’est un **faisceau**, pas un seul chiffre."
         }
       ]
     }

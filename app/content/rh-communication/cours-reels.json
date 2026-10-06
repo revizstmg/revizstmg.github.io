@@ -13,26 +13,39 @@
           "c": "Le salaire évite le mécontentement, mais il ne suffit pas à **motiver** durablement : c’est la distinction de **Herzberg** entre les **facteurs d’hygiène** (salaire, conditions — ils évitent l’insatisfaction) et les **facteurs de motivation** (reconnaissance, intérêt, responsabilités, évolution — ils donnent l’envie)."
         },
         {
-          "t": "table",
-          "head": [
-            "Facteurs d’hygiène",
-            "Facteurs de motivation"
-          ],
-          "rows": [
-            [
-              "Salaire, conditions, sécurité",
-              "Reconnaissance, autonomie"
-            ],
-            [
-              "Évitent le mécontentement",
-              "Donnent l’envie de s’investir"
-            ]
-          ]
+          "t": "p",
+          "c": "Les **facteurs d’hygiène** sont le **salaire**, les **conditions de travail** et la **sécurité** de l’emploi. Quand ils sont insuffisants, ils provoquent du mécontentement ; quand ils sont bons, ils **évitent le mécontentement**, sans plus."
+        },
+        {
+          "t": "p",
+          "c": "Les **facteurs de motivation** sont la **reconnaissance**, l’**autonomie**, l’intérêt du travail et les perspectives d’évolution. Ce sont eux qui **donnent l’envie de s’investir**. Un manager qui ne joue que sur les premiers obtient des salariés satisfaits mais pas forcément motivés."
         },
         {
           "t": "warning",
           "h": "À distinguer",
           "c": "Motivation ≠ satisfaction : on peut être **satisfait** (bien payé) sans être **motivé**, et inversement. Un bon salaire seul ne motive pas."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Facteurs d’hygiène (Herzberg)",
+              "Salaire, conditions, sécurité : évitent le mécontentement"
+            ],
+            [
+              "Facteurs de motivation (Herzberg)",
+              "Reconnaissance, autonomie, intérêt du travail : donnent l’envie de s’investir"
+            ],
+            [
+              "Satisfaction ≠ motivation",
+              "On peut être satisfait (bien payé) sans être motivé"
+            ]
+          ]
         }
       ]
     },
@@ -88,10 +101,24 @@
           "c": "Souvent, la vraie cause n’est pas les personnes mais l’**organisation** (rôles mal définis). Les conflits ont des origines variées : d’**intérêts**, de **valeurs**, de **personnes**, de **pouvoir**. Bien géré, un conflit peut même être **constructif** : il oblige à clarifier."
         },
         {
+          "t": "p",
+          "c": "Quatre modes de résolution existent, du plus subi au plus constructif. Avec le **recours hiérarchique**, **le chef tranche** : c’est rapide, mais la décision est imposée. Avec la **négociation**, **les parties cherchent elles-mêmes un accord**."
+        },
+        {
+          "t": "p",
+          "c": "Avec la **médiation**, un **tiers neutre aide au dialogue**, sans décider à la place des parties. Avec l’**arbitrage**, un **tiers impose la solution**, que les parties s’engagent à respecter."
+        },
+        {
+          "t": "warning",
+          "h": "À distinguer",
+          "c": "Médiation = on **aide** à trouver un accord ; arbitrage = on **impose** la solution. La **négociation** gagnant-gagnant est souvent la plus durable."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Mode de résolution",
-            "Principe"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
@@ -111,11 +138,6 @@
               "Un tiers impose la solution"
             ]
           ]
-        },
-        {
-          "t": "warning",
-          "h": "À distinguer",
-          "c": "Médiation = on **aide** à trouver un accord ; arbitrage = on **impose** la solution. La **négociation** gagnant-gagnant est souvent la plus durable."
         }
       ]
     }
@@ -152,30 +174,43 @@
           "c": "La communication **interne** (vers les salariés : notes, réunions, intranet) n’a ni la même cible ni les mêmes objectifs que la communication **externe** (vers les clients et partenaires : publicité, site, réseaux). Confondre les deux, c’est risquer le contresens."
         },
         {
-          "t": "table",
-          "head": [
-            "Critère",
-            "Types"
-          ],
-          "rows": [
-            [
-              "Destinataire",
-              "Interne (salariés) / Externe (public)"
-            ],
-            [
-              "Objet",
-              "Commerciale (vendre) / Institutionnelle (image)"
-            ],
-            [
-              "Cadre",
-              "Formelle (officielle) / Informelle (« radio couloir »)"
-            ]
-          ]
+          "t": "p",
+          "c": "Trois critères permettent de classer une communication. Selon le **destinataire**, elle est **interne**, tournée vers les salariés, ou **externe**, tournée vers le public, les clients et les partenaires. Selon l’**objet**, elle est **commerciale** quand elle cherche à vendre, ou **institutionnelle** quand elle travaille l’image de l’organisation."
+        },
+        {
+          "t": "p",
+          "c": "Selon le **cadre**, elle est **formelle** quand elle est officielle, ou **informelle** quand elle circule de façon spontanée, comme la « radio couloir »."
         },
         {
           "t": "tip",
           "h": "Cohérence",
           "c": "La **communication globale** vise la **cohérence** de tous ces messages : ce qu’on dit en interne, aux clients et au public ne doit pas se contredire."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Communication interne / externe",
+              "Vers les salariés / vers le public, les clients et les partenaires"
+            ],
+            [
+              "Communication commerciale / institutionnelle",
+              "Pour vendre / pour valoriser l’image"
+            ],
+            [
+              "Communication formelle / informelle",
+              "Officielle / spontanée (« radio couloir »)"
+            ],
+            [
+              "Communication globale",
+              "Cohérence de tous les messages de l’organisation"
+            ]
+          ]
         }
       ]
     }

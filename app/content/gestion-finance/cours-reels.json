@@ -17,25 +17,12 @@
           "c": "Le commerçant ne fait que **collecter** cette TVA pour l’État, puis la lui **reverse**. Il n’est qu’un **intermédiaire** : la TVA n’est donc **pas une charge** pour lui. Mieux : il **déduit** la TVA qu’il a lui-même payée sur ses achats (le café en grains, les gobelets…). Il ne reverse à l’État que la **différence**."
         },
         {
-          "t": "table",
-          "head": [
-            "Les 3 TVA",
-            "Ce que c’est"
-          ],
-          "rows": [
-            [
-              "TVA collectée",
-              "Sur les ventes → dette envers l’État"
-            ],
-            [
-              "TVA déductible",
-              "Sur les achats → créance sur l’État"
-            ],
-            [
-              "TVA à décaisser",
-              "Collectée − déductible = ce qu’on reverse"
-            ]
-          ]
+          "t": "p",
+          "c": "Il y a donc **trois TVA** à distinguer. La **TVA collectée** est celle que l’entreprise facture **sur ses ventes** : elle ne lui appartient pas, c’est une **dette envers l’État**. La **TVA déductible** est celle qu’elle a payée **sur ses achats** : l’État la lui doit, c’est une **créance sur l’État**."
+        },
+        {
+          "t": "p",
+          "c": "La **TVA à décaisser** est la **différence entre la TVA collectée et la TVA déductible** : c’est la somme que l’entreprise reverse effectivement à l’État, en général chaque mois."
         },
         {
           "t": "example",
@@ -51,6 +38,32 @@
           "t": "warning",
           "h": "Le piège",
           "c": "Pour retrouver le HT à partir du TTC, on **divise par 1,20** (à 20 %) — on ne « retire pas 20 % ». 2,40 ÷ 1,20 = 2,00 € (juste) ; 2,40 − 20 % = 1,92 € (faux)."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "TVA collectée",
+              "Sur les ventes → dette envers l’État"
+            ],
+            [
+              "TVA déductible",
+              "Sur les achats → créance sur l’État"
+            ],
+            [
+              "TVA à décaisser",
+              "Collectée − déductible = ce qu’on reverse"
+            ],
+            [
+              "Prix HT / TTC",
+              "Hors taxes / toutes taxes comprises (HT + TVA)"
+            ]
+          ]
         }
       ]
     },
@@ -66,33 +79,12 @@
           "c": "Pour que tout le monde parle le même langage, la comptabilité est **normalisée** : toutes les entreprises suivent le **Plan comptable général (PCG)**, qui range les comptes par **classes** numérotées. C’est ce qui rend deux bilans **comparables**."
         },
         {
-          "t": "table",
-          "head": [
-            "Classe",
-            "Contenu"
-          ],
-          "rows": [
-            [
-              "1",
-              "Capitaux (capital, emprunts)"
-            ],
-            [
-              "2",
-              "Immobilisations (machines, locaux)"
-            ],
-            [
-              "4",
-              "Tiers (clients 411, fournisseurs 401, État)"
-            ],
-            [
-              "5",
-              "Financier (banque 512, caisse 53)"
-            ],
-            [
-              "6 / 7",
-              "Charges / Produits"
-            ]
-          ]
+          "t": "p",
+          "c": "Les comptes sont rangés par classes. La **classe 1** regroupe les **capitaux** : le capital et les emprunts. La **classe 2** regroupe les **immobilisations**, comme les machines et les locaux. La **classe 4** est celle des **tiers** : les clients (compte 411), les fournisseurs (compte 401) et l’État."
+        },
+        {
+          "t": "p",
+          "c": "La **classe 5** est celle des comptes **financiers** : la banque (512) et la caisse (53). Enfin, la **classe 6** enregistre les **charges** et la **classe 7** les **produits**."
         },
         {
           "t": "p",
@@ -107,6 +99,44 @@
           "t": "tip",
           "h": "Réflexe",
           "c": "Débit = crédit, **toujours**. C’est le garde-fou de toute la comptabilité : si ça ne tombe pas juste, il y a une erreur."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Image fidèle",
+              "Objectif de la comptabilité : représenter fidèlement le patrimoine et le résultat"
+            ],
+            [
+              "Classe 1",
+              "Capitaux (capital, emprunts)"
+            ],
+            [
+              "Classe 2",
+              "Immobilisations (machines, locaux)"
+            ],
+            [
+              "Classe 4",
+              "Tiers (clients 411, fournisseurs 401, État)"
+            ],
+            [
+              "Classe 5",
+              "Financier (banque 512, caisse 53)"
+            ],
+            [
+              "Classes 6 / 7",
+              "Charges / produits"
+            ],
+            [
+              "Partie double",
+              "Chaque opération est notée au débit d’un compte et au crédit d’un autre, pour le même montant"
+            ]
+          ]
         }
       ]
     },
@@ -131,34 +161,39 @@
           "c": "Chaque année, on enregistre **2 000 €** de charge (« dotation aux amortissements »). Point important : c’est une charge **sans sortie d’argent** — l’argent est déjà parti à l’achat. L’amortissement ne fait que **constater la perte de valeur** du four qui vieillit. Sa **valeur nette comptable** baisse d’autant : 12 000 → 10 000 → 8 000… → 0 au bout de 6 ans."
         },
         {
-          "t": "table",
-          "head": [
-            "Année",
-            "Dotation",
-            "Valeur nette"
-          ],
-          "rows": [
-            [
-              "1",
-              "2 000",
-              "10 000"
-            ],
-            [
-              "2",
-              "2 000",
-              "8 000"
-            ],
-            [
-              "6",
-              "2 000",
-              "0"
-            ]
-          ]
+          "t": "p",
+          "c": "Le plan d’amortissement du four se lit ainsi : à la fin de la **première année**, après une **dotation de 2 000 €**, la valeur nette est de **10 000 €** ; à la fin de la **deuxième**, après une nouvelle dotation de 2 000 €, elle est de **8 000 €**. La valeur continue de baisser de 2 000 € par an jusqu’à la **sixième année**, où elle atteint **0** : le four est entièrement amorti."
         },
         {
           "t": "tip",
           "h": "À distinguer",
           "c": "Une **immobilisation** (durable, comme le four) s’**amortit** sur plusieurs années ; une **charge** (consommée dans l’année, comme la farine) passe **en une fois**. Confondre les deux fausse le résultat."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Immobilisation",
+              "Bien durable utilisé plusieurs années (le four)"
+            ],
+            [
+              "Dotation aux amortissements",
+              "Charge annuelle sans sortie d’argent qui constate la perte de valeur"
+            ],
+            [
+              "Valeur nette comptable",
+              "Valeur d’origine − amortissements cumulés"
+            ],
+            [
+              "Charge",
+              "Consommation de l’année, enregistrée en une fois (la farine)"
+            ]
+          ]
         }
       ]
     }
@@ -279,21 +314,8 @@
           "c": "Pour décider, on ne classe plus les charges par nature, mais selon leur **comportement face à l’activité**. Les **charges variables** montent avec le volume (plus de burgers = plus de pain, de viande) ; les **charges fixes** ne bougent pas à court terme (le loyer est le même qu’on vende 10 ou 1 000 burgers)."
         },
         {
-          "t": "table",
-          "head": [
-            "Si l’activité double…",
-            "Exemples"
-          ],
-          "rows": [
-            [
-              "Charges variables → doublent",
-              "Matières, ingrédients, emballages"
-            ],
-            [
-              "Charges fixes → ne bougent pas",
-              "Loyer, assurance, salaire fixe"
-            ]
-          ]
+          "t": "p",
+          "c": "Si l’activité double, les **charges variables doublent** : les matières, les ingrédients et les emballages suivent le volume vendu. Les **charges fixes**, elles, **ne bougent pas** : le loyer, l’assurance et le salaire fixe restent les mêmes."
         },
         {
           "t": "p",
@@ -307,6 +329,28 @@
           "t": "warning",
           "h": "Piège",
           "c": "Un produit peut avoir une **marge positive** et l’entreprise **perdre** quand même, si le volume ne suffit pas à couvrir les **charges fixes**. Marge ≠ bénéfice tant que le seuil n’est pas franchi."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Charges variables",
+              "Doublent si l’activité double (matières, ingrédients, emballages)"
+            ],
+            [
+              "Charges fixes",
+              "Ne bougent pas à court terme (loyer, assurance, salaire fixe)"
+            ],
+            [
+              "Raisonnement à la marge",
+              "Une vente dont le prix couvre le coût variable contribue aux charges fixes"
+            ]
+          ]
         }
       ]
     }

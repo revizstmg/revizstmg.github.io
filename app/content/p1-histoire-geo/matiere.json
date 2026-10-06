@@ -22,39 +22,52 @@
               "c": "En 1789, la France de l’**Ancien Régime** (monarchie absolue de droit divin, société d’**ordres** : clergé, noblesse, tiers état) est en crise financière et sociale. La **Révolution** proclame des principes nouveaux : **liberté, égalité, souveraineté de la nation** (Déclaration des droits de l’homme et du citoyen)."
             },
             {
+              "t": "p",
+              "c": "L’année 1789 bascule en quelques mois. Le **5 mai**, les **États généraux** s’ouvrent à Versailles. Le **17 juin**, le **tiers état se proclame Assemblée nationale**. Le **20 juin**, par le **serment du Jeu de paume**, les députés jurent de ne pas se séparer avant d’avoir donné une Constitution à la France. Le **14 juillet**, le peuple parisien **prend la Bastille**, symbole de l’arbitraire royal."
+            },
+            {
+              "t": "p",
+              "c": "Dans la nuit du **4 août**, l’Assemblée **abolit les privilèges**. Le **26 août**, elle adopte la **Déclaration des droits de l’homme et du citoyen** (DDHC). Les **5 et 6 octobre**, enfin, le **roi est ramené de Versailles à Paris** par la foule."
+            },
+            {
               "t": "table",
+              "h": "Notions et repères",
               "head": [
-                "Date (1789)",
-                "Événement"
+                "Notion ou repère",
+                "Définition ou événement"
               ],
               "rows": [
                 [
-                  "5 mai",
-                  "Ouverture des États généraux à Versailles"
+                  "5 mai 1789",
+                  "Ouverture des États généraux"
                 ],
                 [
-                  "17 juin",
+                  "17 juin 1789",
                   "Le tiers état se proclame Assemblée nationale"
                 ],
                 [
-                  "20 juin",
-                  "Serment du Jeu de paume (ne pas se séparer avant une Constitution)"
+                  "20 juin 1789",
+                  "Serment du Jeu de paume"
                 ],
                 [
-                  "14 juillet",
-                  "Prise de la Bastille (symbole de l’arbitraire royal)"
+                  "14 juillet 1789",
+                  "Prise de la Bastille"
                 ],
                 [
-                  "4 août",
+                  "4 août 1789",
                   "Abolition des privilèges"
                 ],
                 [
-                  "26 août",
-                  "Déclaration des droits de l’homme et du citoyen (DDHC)"
+                  "26 août 1789",
+                  "Déclaration des droits de l’homme et du citoyen"
                 ],
                 [
-                  "5-6 octobre",
-                  "Le roi est ramené de Versailles à Paris"
+                  "5-6 octobre 1789",
+                  "Le roi ramené de Versailles à Paris"
+                ],
+                [
+                  "Ancien Régime",
+                  "Monarchie absolue de droit divin et société d’ordres"
                 ]
               ]
             }
@@ -64,19 +77,36 @@
           "h": "De la monarchie constitutionnelle à la République (1790-1799)",
           "blocks": [
             {
+              "t": "p",
+              "c": "En **juillet 1790**, la **Constitution civile du clergé** est adoptée le 12, et la **fête de la Fédération** célèbre l’unité nationale le 14. En **juin 1791**, la **fuite de Varennes** échoue : le roi, qui tentait de quitter la France, est arrêté. En **septembre 1791**, la **Constitution** établit une **monarchie constitutionnelle**."
+            },
+            {
+              "t": "p",
+              "c": "Le **10 août 1792**, la **prise des Tuileries** entraîne la **chute de la monarchie**. Le **20 septembre 1792**, la **victoire de Valmy** repousse les armées étrangères, et le **22 septembre** la **Ire République** est proclamée : c’est l’an I. Le **21 janvier 1793**, **Louis XVI est exécuté**."
+            },
+            {
+              "t": "p",
+              "c": "En **1793-1794**, c’est la **Terreur**, conduite par le **Comité de salut public** et **Robespierre**. Le **27 juillet 1794**, le **9 Thermidor**, Robespierre tombe et la Terreur prend fin. En **1795**, la **Constitution de l’an III** installe le **Directoire**."
+            },
+            {
+              "t": "warning",
+              "c": "Ne confonds pas : **1789** = début de la Révolution (fin de la monarchie absolue) ; **1792** = proclamation de la **République** ; **1793** = exécution du roi et Terreur."
+            },
+            {
               "t": "table",
+              "h": "Notions et repères",
               "head": [
-                "Date",
-                "Événement"
+                "Notion ou repère",
+                "Définition ou événement"
               ],
               "rows": [
                 [
                   "juil. 1790",
-                  "Constitution civile du clergé (12 juillet) ; fête de la Fédération (14 juillet)"
+                  "Constitution civile du clergé ; fête de la Fédération"
                 ],
                 [
                   "juin 1791",
-                  "Fuite de Varennes : le roi tente de fuir, il est arrêté"
+                  "Fuite de Varennes"
                 ],
                 [
                   "sept. 1791",
@@ -88,33 +118,29 @@
                 ],
                 [
                   "20 sept. 1792",
-                  "Victoire de Valmy contre les armées étrangères"
+                  "Victoire de Valmy"
                 ],
                 [
                   "22 sept. 1792",
-                  "Proclamation de la Ire République (an I)"
+                  "Proclamation de la Ire République"
                 ],
                 [
                   "21 janv. 1793",
-                  "Exécution du roi Louis XVI"
+                  "Exécution de Louis XVI"
                 ],
                 [
                   "1793-1794",
-                  "La Terreur : Comité de salut public, Robespierre"
+                  "La Terreur (Comité de salut public, Robespierre)"
                 ],
                 [
                   "27 juil. 1794",
-                  "9 Thermidor : chute de Robespierre, fin de la Terreur"
+                  "9 Thermidor : chute de Robespierre"
                 ],
                 [
                   "1795",
-                  "Le Directoire (Constitution de l’an III)"
+                  "Le Directoire"
                 ]
               ]
-            },
-            {
-              "t": "warning",
-              "c": "Ne confonds pas : **1789** = début de la Révolution (fin de la monarchie absolue) ; **1792** = proclamation de la **République** ; **1793** = exécution du roi et Terreur."
             }
           ]
         },
@@ -126,35 +152,40 @@
               "c": "**Napoléon Bonaparte**, jeune général né en Corse, profite de l’instabilité du Directoire pour prendre le pouvoir par un **coup d’État**, puis fonde l’**Empire**."
             },
             {
+              "t": "p",
+              "c": "Napoléon Bonaparte naît le **15 août 1769 à Ajaccio**, en Corse. En **1784-1785**, il étudie à l’**École militaire de Paris** et devient officier d’artillerie. En **décembre 1793**, il se distingue au **siège de Toulon** et devient général. Le **5 octobre 1795**, lors du **13 Vendémiaire**, il réprime une insurrection royaliste à Paris."
+            },
+            {
+              "t": "p",
+              "c": "En **1796**, il épouse **Joséphine de Beauharnais** et commence la **campagne d’Italie**, faite de victoires, qui aboutit au **traité de Campo-Formio** en 1797. En **1798-1799**, il mène la **campagne d’Égypte**. Les **9 et 10 novembre 1799**, le **coup d’État du 18 Brumaire** installe le **Consulat**, dont il est **Premier consul**."
+            },
+            {
+              "t": "p",
+              "c": "En **1800**, il remporte la **victoire de Marengo** et crée la **Banque de France**. En **1801**, le **Concordat** signé avec le pape rétablit la paix religieuse. En **1802**, il devient **consul à vie**, crée la **Légion d’honneur** et les **lycées**, et signe la **paix d’Amiens**."
+            },
+            {
               "t": "table",
+              "h": "Notions et repères",
               "head": [
-                "Date",
-                "Événement"
+                "Notion ou repère",
+                "Définition ou événement"
               ],
               "rows": [
                 [
                   "15 août 1769",
-                  "Naissance à Ajaccio (Corse)"
-                ],
-                [
-                  "1784-1785",
-                  "École militaire de Paris ; officier d’artillerie"
+                  "Naissance de Napoléon à Ajaccio"
                 ],
                 [
                   "déc. 1793",
-                  "Siège de Toulon : il se distingue, devient général"
+                  "Siège de Toulon : il devient général"
                 ],
                 [
                   "5 oct. 1795",
-                  "13 Vendémiaire : il réprime une insurrection royaliste à Paris"
-                ],
-                [
-                  "1796",
-                  "Mariage avec Joséphine de Beauharnais ; début de la campagne d’Italie"
+                  "13 Vendémiaire : répression d’une insurrection royaliste"
                 ],
                 [
                   "1796-1797",
-                  "Campagne d’Italie (victoires) ; traité de Campo-Formio (1797)"
+                  "Campagne d’Italie ; traité de Campo-Formio"
                 ],
                 [
                   "1798-1799",
@@ -162,19 +193,19 @@
                 ],
                 [
                   "9-10 nov. 1799",
-                  "18 Brumaire : coup d’État → le Consulat (Premier consul)"
+                  "18 Brumaire : coup d’État, Consulat"
                 ],
                 [
                   "1800",
-                  "Victoire de Marengo ; création de la Banque de France"
+                  "Marengo ; création de la Banque de France"
                 ],
                 [
                   "1801",
-                  "Concordat avec le pape (paix religieuse)"
+                  "Concordat avec le pape"
                 ],
                 [
                   "1802",
-                  "Consul à vie ; Légion d’honneur ; création des lycées ; paix d’Amiens"
+                  "Consul à vie ; Légion d’honneur ; lycées ; paix d’Amiens"
                 ]
               ]
             }
@@ -188,31 +219,48 @@
               "c": "Devenu **empereur**, Napoléon réorganise durablement la France (**Code civil** de 1804, préfets, franc germinal, université) et domine l’Europe par la guerre, avant l’effondrement."
             },
             {
+              "t": "p",
+              "c": "Le **21 mars 1804**, le **Code civil** est promulgué. Le **2 décembre 1804**, Napoléon est **sacré empereur** à Notre-Dame, en présence du pape Pie VII. Le **21 octobre 1805**, la flotte française est battue à **Trafalgar** par l’Anglais Nelson, mais le **2 décembre 1805**, Napoléon remporte à **Austerlitz** la « bataille des Trois Empereurs ». En **1806**, il gagne à **Iéna** et décrète le **Blocus continental** contre le Royaume-Uni. En **1807**, les **traités de Tilsit** marquent l’apogée de l’Empire."
+            },
+            {
+              "t": "p",
+              "c": "En **1808**, l’intervention en **Espagne** tourne à l’enlisement. En **1809**, il bat l’Autriche à **Wagram**, puis épouse **Marie-Louise d’Autriche** en **1810** ; leur fils, l’« **Aiglon** », roi de Rome, naît en **1811**. En **1812**, la **campagne de Russie** tourne au désastre : la Moskova, l’incendie de Moscou, la retraite et la Bérézina. En **octobre 1813**, la défaite de **Leipzig**, la « bataille des Nations », est très lourde."
+            },
+            {
+              "t": "p",
+              "c": "Le **6 avril 1814**, Napoléon **abdique** une première fois et part en exil à l’**île d’Elbe** ; les Bourbons reviennent avec **Louis XVIII**. Le **1er mars 1815**, il revient : ce sont les **Cent-Jours**. Le **18 juin 1815**, il est battu à **Waterloo** par Wellington et Blücher ; il abdique une seconde fois et est exilé à **Sainte-Hélène**, où il meurt le **5 mai 1821**."
+            },
+            {
+              "t": "tip",
+              "c": "Héritage de Napoléon toujours présent : **Code civil**, **préfets**, **lycées**, **Légion d’honneur**, **Banque de France**, **baccalauréat** (1808)."
+            },
+            {
               "t": "table",
+              "h": "Notions et repères",
               "head": [
-                "Date",
-                "Événement"
+                "Notion ou repère",
+                "Définition ou événement"
               ],
               "rows": [
                 [
                   "21 mars 1804",
-                  "Promulgation du Code civil (Code Napoléon)"
+                  "Code civil"
                 ],
                 [
                   "2 déc. 1804",
-                  "Sacre : Napoléon empereur à Notre-Dame (en présence du pape Pie VII)"
+                  "Sacre de Napoléon"
                 ],
                 [
                   "21 oct. 1805",
-                  "Trafalgar : défaite navale face aux Anglais (Nelson)"
+                  "Défaite navale de Trafalgar"
                 ],
                 [
                   "2 déc. 1805",
-                  "Austerlitz : grande victoire (« bataille des Trois Empereurs »)"
+                  "Victoire d’Austerlitz"
                 ],
                 [
                   "1806",
-                  "Victoire d’Iéna ; Blocus continental contre le Royaume-Uni"
+                  "Iéna ; Blocus continental"
                 ],
                 [
                   "1807",
@@ -220,53 +268,37 @@
                 ],
                 [
                   "1808",
-                  "Intervention en Espagne (guerre d’Espagne, enlisement)"
+                  "Guerre d’Espagne"
                 ],
                 [
                   "1809",
-                  "Victoire de Wagram (contre l’Autriche)"
-                ],
-                [
-                  "1810",
-                  "Mariage avec Marie-Louise d’Autriche"
-                ],
-                [
-                  "1811",
-                  "Naissance de son fils, l’« Aiglon » (roi de Rome)"
+                  "Victoire de Wagram"
                 ],
                 [
                   "1812",
-                  "Campagne de Russie : Moskova, incendie de Moscou, retraite, Bérézina"
+                  "Campagne de Russie"
                 ],
                 [
                   "oct. 1813",
-                  "Leipzig (« bataille des Nations ») : lourde défaite"
+                  "Défaite de Leipzig"
                 ],
                 [
                   "6 avril 1814",
-                  "Première abdication ; exil à l’île d’Elbe ; retour des Bourbons (Louis XVIII)"
+                  "Première abdication, île d’Elbe ; Louis XVIII"
                 ],
                 [
                   "1er mars 1815",
-                  "Retour de l’île d’Elbe : les Cent-Jours"
+                  "Retour : les Cent-Jours"
                 ],
                 [
                   "18 juin 1815",
-                  "Défaite de Waterloo (Wellington, Blücher)"
-                ],
-                [
-                  "juin 1815",
-                  "Seconde abdication ; exil à Sainte-Hélène"
+                  "Défaite de Waterloo ; exil à Sainte-Hélène"
                 ],
                 [
                   "5 mai 1821",
-                  "Mort à Sainte-Hélène"
+                  "Mort de Napoléon"
                 ]
               ]
-            },
-            {
-              "t": "tip",
-              "c": "Héritage de Napoléon toujours présent : **Code civil**, **préfets**, **lycées**, **Légion d’honneur**, **Banque de France**, **baccalauréat** (1808)."
             }
           ]
         },
@@ -606,35 +638,48 @@
               "c": "Après Napoléon, la **monarchie** revient avec les **Bourbons**. Louis XVIII accorde une **Charte** (1814) : le régime est une monarchie limitée, mais son frère **Charles X**, plus autoritaire, provoque une révolution. Les **Trois Glorieuses** (1830) portent au pouvoir **Louis-Philippe** et la « monarchie de Juillet », proche de la **bourgeoisie**."
             },
             {
+              "t": "p",
+              "c": "En **1814**, c’est la **Restauration** : **Louis XVIII** devient roi et octroie la **Charte constitutionnelle**. En **1815**, après les **Cent-Jours** de Napoléon, vient la **seconde Restauration**. En **1824**, à la mort de Louis XVIII, son frère **Charles X** devient roi."
+            },
+            {
+              "t": "p",
+              "c": "Les **27, 28 et 29 juillet 1830**, les **Trois Glorieuses**, une révolution parisienne, renversent Charles X. En **août 1830**, **Louis-Philippe** devient « roi des Français » : c’est la **monarchie de Juillet**. En **1846-1847**, une **grave crise économique et sociale** fragilise le régime."
+            },
+            {
               "t": "table",
+              "h": "Notions et repères",
               "head": [
-                "Date",
-                "Événement"
+                "Notion ou repère",
+                "Définition ou événement"
               ],
               "rows": [
                 [
                   "1814",
-                  "Restauration : Louis XVIII, roi ; il octroie la Charte constitutionnelle"
+                  "Restauration : Louis XVIII, Charte constitutionnelle"
                 ],
                 [
                   "1815",
-                  "Cent-Jours de Napoléon, puis seconde Restauration"
+                  "Cent-Jours, puis seconde Restauration"
                 ],
                 [
                   "1824",
-                  "Mort de Louis XVIII ; Charles X devient roi"
+                  "Charles X roi"
                 ],
                 [
-                  "27-28-29 juil. 1830",
-                  "Les Trois Glorieuses : révolution parisienne, chute de Charles X"
+                  "27-29 juil. 1830",
+                  "Les Trois Glorieuses : chute de Charles X"
                 ],
                 [
                   "août 1830",
-                  "Louis-Philippe, « roi des Français » : monarchie de Juillet"
+                  "Louis-Philippe : monarchie de Juillet"
                 ],
                 [
                   "1846-1847",
                   "Grave crise économique et sociale"
+                ],
+                [
+                  "Restauration",
+                  "Retour des Bourbons au pouvoir après Napoléon"
                 ]
               ]
             }
@@ -648,19 +693,24 @@
               "c": "La **révolution de février 1848** renverse la monarchie et proclame la **IIe République**, porteuse d’espoirs sociaux et démocratiques : **suffrage universel masculin** et **abolition de l’esclavage**. Mais l’écrasement des ouvriers en **juin 1848** puis l’élection de **Louis-Napoléon Bonaparte** ouvrent la voie à un nouvel Empire."
             },
             {
+              "t": "p",
+              "c": "Du **22 au 24 février 1848**, une révolution pousse **Louis-Philippe à abdiquer** et la **IIe République** est proclamée. Dès février, elle reconnaît le « **droit au travail** » et crée les **ateliers nationaux**. Le **27 avril 1848**, l’**esclavage est aboli**, grâce à Victor Schœlcher. En **avril 1848** ont lieu les premières élections au **suffrage universel masculin**."
+            },
+            {
+              "t": "p",
+              "c": "En **juin 1848**, les **Journées de Juin**, une insurrection ouvrière, sont écrasées. Le **10 décembre 1848**, **Louis-Napoléon Bonaparte** est élu **président de la République**. Le **2 décembre 1851**, il fait un **coup d’État**, et le **2 décembre 1852**, il rétablit l’**Empire** et devient **Napoléon III**."
+            },
+            {
               "t": "table",
+              "h": "Notions et repères",
               "head": [
-                "Date",
-                "Événement"
+                "Notion ou repère",
+                "Définition ou événement"
               ],
               "rows": [
                 [
                   "22-24 févr. 1848",
-                  "Révolution : abdication de Louis-Philippe, proclamation de la IIe République"
-                ],
-                [
-                  "févr. 1848",
-                  "Reconnaissance du « droit au travail » ; ateliers nationaux"
+                  "Révolution : proclamation de la IIe République"
                 ],
                 [
                   "27 avr. 1848",
@@ -668,7 +718,7 @@
                 ],
                 [
                   "avril 1848",
-                  "Premières élections au **suffrage universel masculin**"
+                  "Premières élections au suffrage universel masculin"
                 ],
                 [
                   "juin 1848",
@@ -676,7 +726,7 @@
                 ],
                 [
                   "10 déc. 1848",
-                  "Louis-Napoléon Bonaparte élu président de la République"
+                  "Louis-Napoléon Bonaparte élu président"
                 ],
                 [
                   "2 déc. 1851",
@@ -685,6 +735,10 @@
                 [
                   "2 déc. 1852",
                   "Rétablissement de l’Empire : Napoléon III"
+                ],
+                [
+                  "Suffrage universel masculin",
+                  "Droit de vote pour tous les hommes adultes"
                 ]
               ]
             }
@@ -698,43 +752,52 @@
               "c": "Le **Second Empire** commence **autoritaire** : pouvoir personnel de Napoléon III, censure, candidatures officielles, répression des opposants (**loi de sûreté générale** de 1858 après l’attentat d’Orsini). Puis, à partir de 1860, il se **libéralise** : libertés élargies, essor économique (**Haussmann** transforme Paris, chemins de fer, banques)."
             },
             {
+              "t": "p",
+              "c": "En **1852**, Napoléon III devient empereur : l’Empire est d’abord **autoritaire**. **Dès 1853**, le baron **Haussmann** engage les grands travaux qui transforment Paris, et le **chemin de fer** connaît un essor rapide. Le **14 janvier 1858**, l’**attentat d’Orsini** vise Napoléon III ; en réaction, la **loi de sûreté générale**, adoptée le 19 février puis promulguée le 27 février 1858, organise la **répression des opposants**."
+            },
+            {
+              "t": "p",
+              "c": "À partir de **1860**, le régime se libéralise : un **traité de libre-échange** est signé avec le Royaume-Uni et le **droit d’adresse** est accordé aux assemblées ; c’est le début de l’**Empire libéral**. En **1864**, le **droit de grève** est reconnu. En **1868**, les libertés de la **presse** et de **réunion** sont élargies. En **mai 1870**, un **plébiscite** semble marquer l’apogée de l’Empire libéral."
+            },
+            {
               "t": "table",
+              "h": "Notions et repères",
               "head": [
-                "Date",
-                "Événement"
+                "Notion ou repère",
+                "Définition ou événement"
               ],
               "rows": [
                 [
                   "1852",
-                  "Napoléon III empereur : Empire **autoritaire**"
+                  "Napoléon III empereur : Empire autoritaire"
                 ],
                 [
                   "dès 1853",
-                  "Grands travaux d’Haussmann à Paris ; essor du chemin de fer"
+                  "Grands travaux d’Haussmann ; essor du chemin de fer"
                 ],
                 [
                   "14 janv. 1858",
-                  "Attentat d’Orsini contre Napoléon III"
+                  "Attentat d’Orsini"
                 ],
                 [
-                  "19 et 27 févr. 1858",
-                  "**Loi de sûreté générale** : répression des opposants (adoptée puis promulguée)"
+                  "févr. 1858",
+                  "Loi de sûreté générale : répression des opposants"
                 ],
                 [
                   "1860",
-                  "Traité de libre-échange avec le Royaume-Uni ; droit d’adresse → Empire **libéral**"
+                  "Traité de libre-échange ; droit d’adresse : Empire libéral"
                 ],
                 [
                   "1864",
-                  "Reconnaissance du **droit de grève**"
+                  "Reconnaissance du droit de grève"
                 ],
                 [
                   "1868",
-                  "Libertés de la **presse** et de **réunion** élargies"
+                  "Libertés de la presse et de réunion élargies"
                 ],
                 [
                   "mai 1870",
-                  "Plébiscite : apogée apparente de l’Empire libéral"
+                  "Plébiscite"
                 ]
               ]
             }
@@ -748,10 +811,19 @@
               "c": "La **guerre contre la Prusse** provoque la chute de l’Empire (défaite de **Sedan**) et la proclamation de la **IIIe République**. Dans un Paris assiégé et meurtri, l’insurrection de la **Commune** (1871) est écrasée dans le sang."
             },
             {
+              "t": "p",
+              "c": "Le **19 juillet 1870**, la France **déclare la guerre à la Prusse**. Le **2 septembre**, la **défaite de Sedan** entraîne la capture de Napoléon III, et le **4 septembre**, la **IIIe République** est proclamée. En **janvier 1871**, l’**Empire allemand** est proclamé dans la galerie des Glaces de **Versailles** le 18, et **Paris assiégé capitule** le 28."
+            },
+            {
+              "t": "p",
+              "c": "Du **18 mars au 28 mai 1871**, la **Commune de Paris** se soulève ; elle est écrasée lors de la « **Semaine sanglante** »."
+            },
+            {
               "t": "table",
+              "h": "Notions et repères",
               "head": [
-                "Date",
-                "Événement"
+                "Notion ou repère",
+                "Définition ou événement"
               ],
               "rows": [
                 [
@@ -768,11 +840,11 @@
                 ],
                 [
                   "janv. 1871",
-                  "Proclamation de l’Empire allemand à Versailles (18 janvier) ; capitulation de Paris assiégé (28 janvier)"
+                  "Empire allemand proclamé à Versailles ; capitulation de Paris"
                 ],
                 [
                   "18 mars-28 mai 1871",
-                  "La Commune de Paris, écrasée lors de la « Semaine sanglante »"
+                  "Commune de Paris, écrasée lors de la Semaine sanglante"
                 ]
               ]
             }
@@ -795,10 +867,19 @@
               ]
             },
             {
+              "t": "p",
+              "c": "Les premières lois sociales arrivent lentement. En **1841**, une **première loi limite le travail des enfants**. En **1864**, le **droit de grève** est reconnu. En **1884**, la **loi Waldeck-Rousseau** autorise les **syndicats**. En **1892**, une nouvelle **loi encadre le travail des femmes et des enfants**."
+            },
+            {
+              "t": "tip",
+              "c": "Repères clés : **1830** et **1848** (révolutions), **1848** (suffrage universel masculin + abolition de l’esclavage), **1852-1870** (Second Empire), **1870** (IIIe République), **1871** (Commune)."
+            },
+            {
               "t": "table",
+              "h": "Notions et repères",
               "head": [
-                "Date",
-                "Repère social"
+                "Notion ou repère",
+                "Définition ou événement"
               ],
               "rows": [
                 [
@@ -811,17 +892,21 @@
                 ],
                 [
                   "1884",
-                  "Loi Waldeck-Rousseau : les syndicats sont autorisés"
+                  "Loi Waldeck-Rousseau : syndicats autorisés"
                 ],
                 [
                   "1892",
                   "Loi sur le travail des femmes et des enfants"
+                ],
+                [
+                  "Exode rural",
+                  "Départ des campagnes vers les villes industrielles"
+                ],
+                [
+                  "Mouvement ouvrier",
+                  "Syndicats, socialisme : organisation des ouvriers pour défendre leurs droits"
                 ]
               ]
-            },
-            {
-              "t": "tip",
-              "c": "Repères clés : **1830** et **1848** (révolutions), **1848** (suffrage universel masculin + abolition de l’esclavage), **1852-1870** (Second Empire), **1870** (IIIe République), **1871** (Commune)."
             }
           ]
         }
@@ -936,31 +1021,44 @@
               "c": "Née dans la défaite de **1870**, la **IIIe République** s’installe durablement et ancre la République dans la société par des lois **fondatrices** : école, libertés, laïcité."
             },
             {
+              "t": "p",
+              "c": "En **1875**, des **lois constitutionnelles** fondent la IIIe République. En **1881-1882**, les **lois Ferry** rendent l’**école primaire gratuite, obligatoire et laïque**. En **1884**, une loi **autorise les syndicats**, et le **divorce est rétabli**. En **1889**, l’**Exposition universelle** de Paris donne naissance à la **tour Eiffel**."
+            },
+            {
+              "t": "p",
+              "c": "De **1894 à 1906**, l’**affaire Dreyfus** divise la France ; Zola publie « **J’accuse** » en 1898. En **1901**, la **loi sur la liberté d’association** est votée. En **1905**, la **loi de séparation des Églises et de l’État** fonde la **laïcité**."
+            },
+            {
+              "t": "p",
+              "c": "La France se dote aussi d’un vaste **empire colonial** (deuxième du monde), au nom d’une prétendue « mission civilisatrice » aujourd’hui critiquée."
+            },
+            {
               "t": "table",
+              "h": "Notions et repères",
               "head": [
-                "Date",
-                "Événement"
+                "Notion ou repère",
+                "Définition ou événement"
               ],
               "rows": [
                 [
                   "1875",
-                  "Lois constitutionnelles fondant la IIIe République"
+                  "Lois constitutionnelles de la IIIe République"
                 ],
                 [
                   "1881-1882",
-                  "Lois Ferry : école primaire gratuite, obligatoire et laïque"
+                  "Lois Ferry : école gratuite, obligatoire et laïque"
                 ],
                 [
                   "1884",
-                  "Loi autorisant les syndicats ; rétablissement du divorce"
+                  "Syndicats autorisés ; divorce rétabli"
                 ],
                 [
                   "1889",
-                  "Exposition universelle de Paris (tour Eiffel)"
+                  "Exposition universelle (tour Eiffel)"
                 ],
                 [
                   "1894-1906",
-                  "Affaire Dreyfus (Zola, « J’accuse » en 1898)"
+                  "Affaire Dreyfus (« J’accuse », 1898)"
                 ],
                 [
                   "1901",
@@ -968,13 +1066,13 @@
                 ],
                 [
                   "1905",
-                  "Loi de séparation des Églises et de l’État (laïcité)"
+                  "Séparation des Églises et de l’État (laïcité)"
+                ],
+                [
+                  "Laïcité",
+                  "Neutralité de l’État en matière religieuse, liberté de conscience"
                 ]
               ]
-            },
-            {
-              "t": "p",
-              "c": "La France se dote aussi d’un vaste **empire colonial** (deuxième du monde), au nom d’une prétendue « mission civilisatrice » aujourd’hui critiquée."
             }
           ]
         },
@@ -986,27 +1084,40 @@
               "c": "La **Grande Guerre** est une **guerre totale** : elle mobilise les sociétés entières — soldats au front, **économie de guerre**, femmes à l’usine, **propagande**, emprunts. C’est une **guerre industrielle** d’une violence inédite (tranchées, gaz, artillerie)."
             },
             {
+              "t": "p",
+              "c": "Le **28 juin 1914**, l’**attentat de Sarajevo** déclenche la crise. En **août 1914**, la **mobilisation générale** est décrétée et la guerre commence ; c’est d’abord une **guerre de mouvement**. En **septembre 1914**, la **bataille de la Marne** stoppe l’avancée allemande : le front se stabilise et les soldats s’enterrent dans les **tranchées**."
+            },
+            {
+              "t": "p",
+              "c": "En **1915-1916**, c’est la **guerre de position**, marquée en **1916** par les batailles meurtrières de **Verdun** et de la **Somme**. En **1917**, les **États-Unis entrent en guerre**, la Russie connaît deux **révolutions** et des **mutineries** éclatent. Le **11 novembre 1918**, l’**armistice** met fin aux combats, et le **traité de Versailles** est signé en **1919**."
+            },
+            {
+              "t": "tip",
+              "c": "Bilan : environ **10 millions de morts**, des millions de blessés et de « gueules cassées ». Repères : **1875** (lois constitutionnelles), **1881-1882** (Ferry), **1905** (laïcité), **1914-1918** (guerre), **1916** (Verdun), **1918** (armistice)."
+            },
+            {
               "t": "table",
+              "h": "Notions et repères",
               "head": [
-                "Date",
-                "Événement"
+                "Notion ou repère",
+                "Définition ou événement"
               ],
               "rows": [
                 [
                   "28 juin 1914",
-                  "Attentat de Sarajevo (déclencheur)"
+                  "Attentat de Sarajevo"
                 ],
                 [
                   "août 1914",
-                  "Mobilisation générale, entrée en guerre ; guerre de mouvement"
+                  "Mobilisation générale ; guerre de mouvement"
                 ],
                 [
                   "sept. 1914",
-                  "Bataille de la Marne (front stabilisé → tranchées)"
+                  "Bataille de la Marne ; début des tranchées"
                 ],
                 [
-                  "1915-1916",
-                  "Guerre de position ; Verdun et la Somme (1916), batailles meurtrières"
+                  "1916",
+                  "Verdun et la Somme"
                 ],
                 [
                   "1917",
@@ -1014,17 +1125,17 @@
                 ],
                 [
                   "11 nov. 1918",
-                  "Armistice : fin des combats"
+                  "Armistice"
                 ],
                 [
                   "1919",
                   "Traité de Versailles"
+                ],
+                [
+                  "Guerre totale",
+                  "Guerre qui mobilise toute la société (front, économie, propagande)"
                 ]
               ]
-            },
-            {
-              "t": "tip",
-              "c": "Bilan : environ **10 millions de morts**, des millions de blessés et de « gueules cassées ». Repères : **1875** (lois constitutionnelles), **1881-1882** (Ferry), **1905** (laïcité), **1914-1918** (guerre), **1916** (Verdun), **1918** (armistice)."
             }
           ]
         },
@@ -1040,33 +1151,12 @@
               "c": "Après l’**attentat d’Orsini** contre Napoléon III (14 janvier 1858), le régime durcit la répression. Le **19 février 1858**, le Corps législatif **adopte** la **loi de sûreté générale** (« loi des suspects ») ; elle est **promulguée le 27 février 1858**. Elle permet d’**interner, exiler ou déporter sans jugement** les opposants et divise la France en circonscriptions militaires : c’est le symbole de l’**Empire autoritaire**."
             },
             {
-              "t": "table",
-              "head": [
-                "État autoritaire (début)",
-                "État libéral / démocratique (ensuite)"
-              ],
-              "rows": [
-                [
-                  "Pouvoir concentré (exécutif fort, empereur)",
-                  "Séparation des pouvoirs, Parlement puissant"
-                ],
-                [
-                  "Élections encadrées (candidatures officielles)",
-                  "Suffrage libre, pluralisme des partis"
-                ],
-                [
-                  "Presse censurée, réunions interdites",
-                  "Liberté de la presse (1881), de réunion"
-                ],
-                [
-                  "Opposants réprimés (loi de sûreté générale, 1858)",
-                  "Libertés garanties, droit de grève, syndicats (1884)"
-                ],
-                [
-                  "Ex. : Empire autoritaire (1852-1860)",
-                  "Ex. : Empire libéral (1860-70), IIIe République"
-                ]
-              ]
+              "t": "p",
+              "c": "Dans l’**État autoritaire**, le **pouvoir est concentré** entre les mains d’un exécutif fort, l’empereur. Les **élections sont encadrées** par les candidatures officielles, la **presse est censurée**, les **réunions interdites**, et les **opposants réprimés**, comme le montre la loi de sûreté générale de 1858. C’est le cas de l’**Empire autoritaire**, de 1852 à 1860."
+            },
+            {
+              "t": "p",
+              "c": "Dans l’**État libéral** puis démocratique, les **pouvoirs sont séparés** et le **Parlement** est puissant. Le **suffrage est libre** et les **partis** sont multiples. La **presse est libre**, surtout après la loi de **1881**, tout comme les **réunions**. Les **libertés sont garanties**, avec le **droit de grève** et les **syndicats**, autorisés en **1884**. C’est le cas de l’**Empire libéral**, de 1860 à 1870, puis de la **IIIe République**."
             },
             {
               "t": "frise",
@@ -1141,6 +1231,36 @@
             {
               "t": "tip",
               "c": "À retenir : **1858** = loi de sûreté générale (répression, Empire **autoritaire**) ; puis libéralisation (Empire **libéral** dès 1860, IIIe République, libertés de 1881-1884). « Autoritaire au départ, plus libéral ensuite »."
+            },
+            {
+              "t": "table",
+              "h": "Notions et repères",
+              "head": [
+                "Notion ou repère",
+                "Définition ou événement"
+              ],
+              "rows": [
+                [
+                  "État autoritaire",
+                  "Pouvoir concentré, élections encadrées, presse censurée, opposants réprimés"
+                ],
+                [
+                  "État libéral",
+                  "Séparation des pouvoirs, suffrage libre, libertés de presse et de réunion"
+                ],
+                [
+                  "Loi de sûreté générale (1858)",
+                  "Permet d’interner, exiler ou déporter sans jugement les opposants"
+                ],
+                [
+                  "1881",
+                  "Loi sur la liberté de la presse"
+                ],
+                [
+                  "1884",
+                  "Syndicats autorisés"
+                ]
+              ]
             }
           ]
         }

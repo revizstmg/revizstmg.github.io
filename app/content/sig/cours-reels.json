@@ -13,19 +13,33 @@
           "c": "Tout cela est géré par le **système d’information (SI)** : l’ensemble des ressources (humaines, matérielles, logicielles) qui **collectent, stockent, traitent et diffusent** l’information. C’est le « système nerveux » de l’entreprise."
         },
         {
+          "t": "p",
+          "c": "Dans une entreprise, ces quatre fonctions sont très concrètes. On **collecte** quand on saisit la commande d’un client. On **stocke** quand cette commande est enregistrée dans la base de données. On **traite** quand le système calcule le montant et édite la facture. On **diffuse** quand l’information est envoyée au bon service, par exemple à l’entrepôt pour préparer la livraison ou à la comptabilité pour suivre le paiement."
+        },
+        {
+          "t": "tip",
+          "h": "Force du PGI",
+          "c": "Avec un **PGI/ERP** (une seule base partagée), l’information saisie **une fois** est disponible partout : un logiciel unique, une base unique → **fiabilité** et **temps réel**."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Fonction du SI",
-            "Exemple"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
+              "Système d’information (SI)",
+              "Ressources qui collectent, stockent, traitent et diffusent l’information"
+            ],
+            [
               "Collecter",
-              "Saisir la commande"
+              "Saisir l’information (la commande)"
             ],
             [
               "Stocker",
-              "Base de données"
+              "L’enregistrer dans une base de données"
             ],
             [
               "Traiter",
@@ -33,14 +47,13 @@
             ],
             [
               "Diffuser",
-              "Envoyer l’info au bon service"
+              "Envoyer l’information au bon service"
+            ],
+            [
+              "PGI (ERP)",
+              "Progiciel de gestion intégré : un logiciel et une base de données uniques pour tous les services"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "Force du PGI",
-          "c": "Avec un **PGI/ERP** (une seule base partagée), l’information saisie **une fois** est disponible partout : un logiciel unique, une base unique → **fiabilité** et **temps réel**."
         }
       ]
     },
@@ -77,15 +90,33 @@
           "c": "Impossible avec un simple tableur. On utilise une **base de données relationnelle** : des **tables** (utilisateurs, titres, playlists) reliées entre elles par des **clés**. Chaque table a une **clé primaire** (un identifiant unique) ; une **clé étrangère** fait le lien vers une autre table. C’est ce qui évite de tout réécrire et garde les données cohérentes."
         },
         {
+          "t": "p",
+          "c": "Quelques mots suffisent à décrire une base relationnelle. Une **table** est un tableau de données sur un même sujet, comme CLIENTS. Un **enregistrement** est une ligne de cette table, qui correspond à un client précis. Un **champ** est une colonne, qui décrit une caractéristique comme le nom ou la ville."
+        },
+        {
+          "t": "p",
+          "c": "La **clé primaire** est l’identifiant unique de chaque ligne : aucune autre ligne ne peut avoir la même valeur. La **clé étrangère** est le lien vers une autre table : elle reprend la clé primaire de cette autre table."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Base relationnelle = **tables** liées par des **clés**. Clé **primaire** = identifiant unique ; clé **étrangère** = lien vers une autre table."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Terme",
-            "Signification"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
+              "Base de données relationnelle",
+              "Ensemble de tables reliées entre elles par des clés"
+            ],
+            [
               "Table",
-              "Un tableau de données (ex. CLIENTS)"
+              "Tableau de données sur un même sujet (ex. CLIENTS)"
             ],
             [
               "Enregistrement",
@@ -104,11 +135,6 @@
               "Lien vers une autre table"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Base relationnelle = **tables** liées par des **clés**. Clé **primaire** = identifiant unique ; clé **étrangère** = lien vers une autre table."
         }
       ]
     },
@@ -168,30 +194,47 @@
           "c": "Messageries, cloud, visioconférence, **télétravail** : le numérique change la façon de travailler ensemble — plus vite, à distance, en continu. De nouvelles formes d’organisation apparaissent, plus **agiles** et flexibles."
         },
         {
-          "t": "table",
-          "head": [
-            "Opportunités",
-            "Risques"
-          ],
-          "rows": [
-            [
-              "Flexibilité, gain de temps",
-              "Frontière vie pro/perso brouillée"
-            ],
-            [
-              "Collaboration à distance",
-              "Isolement, perte de lien"
-            ],
-            [
-              "Automatisation des tâches",
-              "Surcharge d’informations, sécurité"
-            ]
-          ]
+          "t": "p",
+          "c": "Les **opportunités** sont nombreuses : plus de **flexibilité** et un **gain de temps**, la possibilité de **collaborer à distance** avec des collègues éloignés, et l’**automatisation des tâches** répétitives, qui libère du temps pour un travail plus utile."
+        },
+        {
+          "t": "p",
+          "c": "Les **risques** sont l’envers de ces avantages. La **frontière entre vie professionnelle et vie personnelle** se brouille, le travail à distance peut provoquer **isolement** et **perte de lien** avec l’équipe, et la masse de messages et d’outils entraîne une **surcharge d’informations** ainsi que des enjeux de **sécurité**."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "La transformation numérique offre **flexibilité et efficacité** mais exige de nouvelles **compétences** et un **droit à la déconnexion** pour protéger les salariés."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Télétravail",
+              "Travail hors des locaux de l’employeur grâce aux outils numériques"
+            ],
+            [
+              "Organisation agile",
+              "Organisation flexible, qui s’adapte vite grâce au numérique"
+            ],
+            [
+              "Opportunités du numérique",
+              "Flexibilité, gain de temps, collaboration à distance, automatisation"
+            ],
+            [
+              "Risques du numérique",
+              "Vie pro/perso brouillée, isolement, surcharge d’informations, sécurité"
+            ],
+            [
+              "Droit à la déconnexion",
+              "Droit de ne pas être joignable en dehors du temps de travail"
+            ]
+          ]
         }
       ]
     }
@@ -210,34 +253,51 @@
           "c": "La sécurité d’un système d’information vise quatre objectifs (**DICP**) : que l’information reste **Disponible**, **Intègre** (non altérée), **Confidentielle** et **traçable** (Preuve). Une attaque peut viser n’importe lequel — et les conséquences sont parfois vitales."
         },
         {
-          "t": "table",
-          "head": [
-            "Objectif",
-            "Signification"
-          ],
-          "rows": [
-            [
-              "Disponibilité",
-              "Accessible quand on en a besoin"
-            ],
-            [
-              "Intégrité",
-              "Non altérée, non falsifiée"
-            ],
-            [
-              "Confidentialité",
-              "Réservée aux personnes autorisées"
-            ],
-            [
-              "Preuve (traçabilité)",
-              "On sait qui a fait quoi"
-            ]
-          ]
+          "t": "p",
+          "c": "Chacun des quatre critères protège quelque chose de précis. La **disponibilité** garantit que l’information est accessible quand on en a besoin : un rançongiciel qui bloque les ordinateurs d’un hôpital s’attaque d’abord à elle. L’**intégrité** garantit que l’information n’est ni altérée ni falsifiée."
+        },
+        {
+          "t": "p",
+          "c": "La **confidentialité** garantit que l’information reste réservée aux personnes autorisées, ce qui est essentiel pour des données médicales ou bancaires. La **preuve**, ou **traçabilité**, garantit qu’on sait qui a fait quoi dans le système, ce qui permet de comprendre une attaque après coup."
         },
         {
           "t": "tip",
           "h": "Bases de défense",
           "c": "Sauvegardes régulières (et hors ligne), mises à jour, pare-feu/antivirus, droits d’accès stricts, **sensibilisation** : les fondamentaux qui limitent les dégâts. Ne **jamais payer** la rançon : restaurer depuis les sauvegardes."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "DICP",
+              "Disponibilité, intégrité, confidentialité, preuve"
+            ],
+            [
+              "Disponibilité",
+              "Information accessible quand on en a besoin"
+            ],
+            [
+              "Intégrité",
+              "Information non altérée, non falsifiée"
+            ],
+            [
+              "Confidentialité",
+              "Information réservée aux personnes autorisées"
+            ],
+            [
+              "Preuve (traçabilité)",
+              "On sait qui a fait quoi"
+            ],
+            [
+              "Rançongiciel (ransomware)",
+              "Logiciel malveillant qui chiffre les données et exige une rançon"
+            ]
+          ]
         }
       ]
     },

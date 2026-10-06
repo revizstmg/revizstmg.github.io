@@ -297,6 +297,7 @@ const FR = {
   privacySummary: 'RévizSTMG utilise ton prénom, ton nom, ton e-mail et (si tu le souhaites) ta photo, ainsi que ta classe et ta progression, uniquement pour faire fonctionner l’application. Les données sont hébergées dans l’Union européenne (Supabase). Ton prénom, ta photo et tes scores sont partagés dans ta classe, les défis entre amis et le classement ; ton e-mail sert seulement à la connexion. Aucune publicité, aucune revente. Tu peux modifier ou supprimer tes données à tout moment depuis « Mon espace ». Pour un élève mineur, l’accord de l’établissement et/ou du représentant légal est requis.',
   // chapitre / thème
   backToChapters: 'Revenir aux chapitres', savePdf: 'Enregistrer (PDF)', gamesOfChapter: 'Jeux de ce chapitre', keyDefs: 'Définitions clés',
+  notionsDefs: 'Notions et définitions', notionCol: 'Notion', definitionCol: 'Définition',
   previous: 'Précédent', nextChapter: 'Chapitre suivant', takeTest: 'Passer le test du thème', pageWord: 'Page', tapToOpen: 'Appuyer pour lire en plein écran',
   new: 'Nouveau', tabChapters: 'Chapitres', tabTest: 'Test du thème', tabProgress: 'Progression', tabTools: 'Outils', tabLesson: 'Cours', tabDefs: 'Définitions', tabExercises: 'Exercices', noDefsHere: 'Les définitions clés de ce thème se trouvent dans les autres chapitres.', lessonLabel: 'Le cours', exercisesLabel: 'Exercices',
   chooseChapter: 'Choisis un chapitre pour lire le cours et t’entraîner.', course: 'Cours',

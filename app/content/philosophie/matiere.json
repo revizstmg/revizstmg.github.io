@@ -1565,33 +1565,12 @@
               "c": "La dissertation répond à **une question** par une argumentation **progressive**. On ne récite pas le cours : on **s’en sert** pour raisonner."
             },
             {
-              "t": "table",
-              "head": [
-                "Étape",
-                "Ce qu’on fait"
-              ],
-              "rows": [
-                [
-                  "1. Analyser",
-                  "Décortiquer le sujet, **définir** chaque terme important"
-                ],
-                [
-                  "2. Problématiser",
-                  "Dégager le **paradoxe**, le vrai problème (la tension entre deux réponses)"
-                ],
-                [
-                  "3. Plan",
-                  "Construire un plan **progressif** (souvent thèse → antithèse → dépassement)"
-                ],
-                [
-                  "4. Argumenter",
-                  "Chaque partie = une idée + un **argument** + un **exemple** ou un **auteur**"
-                ],
-                [
-                  "5. Conclure",
-                  "Répondre **clairement** au problème, ouvrir sur une nouvelle question"
-                ]
-              ]
+              "t": "p",
+              "c": "La dissertation se construit en cinq étapes. On commence par **analyser** le sujet : on le décortique et on **définit** chacun des termes importants. On le **problématise** ensuite, en dégageant le **paradoxe**, c’est-à-dire la tension entre deux réponses possibles, qui constitue le vrai problème."
+            },
+            {
+              "t": "p",
+              "c": "On construit alors un **plan progressif**, souvent en trois temps : une thèse, une antithèse, puis un dépassement. Dans chaque partie, on **argumente** : une idée, un **argument** qui la justifie, puis un **exemple** ou un **auteur** qui l’illustre. Enfin, on **conclut** en **répondant clairement** au problème posé, et l’on peut ouvrir sur une nouvelle question."
             },
             {
               "t": "example",
@@ -1601,6 +1580,36 @@
             {
               "t": "warning",
               "c": "Les deux pièges qui plombent une copie : le **hors-sujet** (on n’a pas analysé le sujet) et la **récitation** (on déroule le cours sans problématiser). Reviens sans cesse à **la** question posée."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Analyser le sujet",
+                  "Décortiquer la question et définir chaque terme important"
+                ],
+                [
+                  "Problématiser",
+                  "Dégager le paradoxe, la tension entre deux réponses"
+                ],
+                [
+                  "Plan progressif",
+                  "Thèse → antithèse → dépassement"
+                ],
+                [
+                  "Argumenter",
+                  "Une idée + un argument + un exemple ou un auteur"
+                ],
+                [
+                  "Conclure",
+                  "Répondre clairement au problème, ouvrir sur une nouvelle question"
+                ]
+              ]
             }
           ]
         },
@@ -1632,54 +1641,55 @@
           "h": "👤 Les citations à mobiliser : une idée, un exemple par auteur",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Auteur",
-                "Idée clé",
-                "Notions"
-              ],
-              "rows": [
-                [
-                  "Platon",
-                  "Allégorie de la caverne : des apparences à la vérité",
-                  "Vérité, art"
-                ],
-                [
-                  "Aristote",
-                  "Justice distributive et corrective, l’équité qui corrige la loi ; l’homme « animal politique »",
-                  "Justice"
-                ],
-                [
-                  "Descartes",
-                  "Doute méthodique, cogito, maîtrise de la nature",
-                  "Vérité, technique"
-                ],
-                [
-                  "Pascal",
-                  "Le « roseau pensant » ; les raisons du cœur",
-                  "Religion, nature"
-                ],
-                [
-                  "Rousseau",
-                  "Nature / culture ; le contrat social",
-                  "Justice, liberté"
-                ],
-                [
-                  "Kant",
-                  "L’autonomie ; le jugement de goût",
-                  "Liberté, art"
-                ],
-                [
-                  "Sartre",
-                  "L’existence précède l’essence : liberté-responsabilité",
-                  "Liberté"
-                ]
-              ]
+              "t": "p",
+              "c": "Quelques auteurs bien choisis suffisent. **Platon**, avec l’**allégorie de la caverne**, montre le passage des apparences à la vérité. **Aristote** distingue **justice distributive et corrective** et défend l’**équité** ; il définit l’homme comme un « animal politique ». **Descartes** apporte le **doute méthodique**, le **cogito** et l’idée de **maîtrise de la nature**."
+            },
+            {
+              "t": "p",
+              "c": "**Pascal** parle du « **roseau pensant** » et des **raisons du cœur**. **Rousseau** pense la **nature et la culture** et le **contrat social**. **Kant** définit la liberté comme **autonomie** et analyse le **jugement de goût**. **Sartre**, enfin, affirme que « **l’existence précède l’essence** », ce qui fait de la liberté une responsabilité."
             },
             {
               "t": "tip",
               "h": "Stratégie",
               "c": "Mieux vaut **quelques auteurs bien maîtrisés** (une idée, un exemple chacun) que dix noms récités."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Platon",
+                  "Allégorie de la caverne (vérité, art)"
+                ],
+                [
+                  "Aristote",
+                  "Justice distributive et corrective, équité (justice)"
+                ],
+                [
+                  "Descartes",
+                  "Doute méthodique, cogito, maîtrise de la nature (vérité, technique)"
+                ],
+                [
+                  "Pascal",
+                  "Roseau pensant, raisons du cœur (religion, nature)"
+                ],
+                [
+                  "Rousseau",
+                  "Nature / culture, contrat social (justice, liberté)"
+                ],
+                [
+                  "Kant",
+                  "Autonomie, jugement de goût (liberté, art)"
+                ],
+                [
+                  "Sartre",
+                  "L’existence précède l’essence (liberté)"
+                ]
+              ]
             }
           ]
         }

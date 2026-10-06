@@ -64,25 +64,34 @@
               "c": "Le **plan** regroupe tes remarques en **2 ou 3 axes** (grandes parties), chacun divisé en **sous-parties**. Un axe = une **grande idée** qui répond à la problématique."
             },
             {
-              "t": "table",
-              "head": [
-                "Bon axe",
-                "Mauvais axe"
-              ],
-              "rows": [
-                [
-                  "Une **idée d’interprétation** (« un éloge paradoxal »)",
-                  "Un simple thème (« la nature »)"
-                ],
-                [
-                  "Se prouve par des procédés variés",
-                  "Se contente de lister le texte"
-                ]
-              ]
+              "t": "p",
+              "c": "Un **bon axe** est une **idée d’interprétation**, par exemple « un éloge paradoxal », qui se **prouve par des procédés variés** relevés dans le texte. Un **mauvais axe** n’est qu’un **simple thème**, comme « la nature », et se contente de **lister le contenu du texte** sans l’interpréter."
             },
             {
               "t": "warning",
               "c": "Évite le plan « procédés / puis effets » ou « forme / puis fond » : mélange toujours **le fond et la forme** dans chaque partie."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Problématique",
+                  "Question qui guide l’analyse du texte"
+                ],
+                [
+                  "Axe",
+                  "Grande partie du plan : une idée d’interprétation qui répond à la problématique"
+                ],
+                [
+                  "Mauvais axe",
+                  "Simple thème qui liste le contenu du texte"
+                ]
+              ]
             }
           ]
         },
@@ -116,25 +125,12 @@
               "c": "Chaque **paragraphe** de développement suit la structure **AIE** :"
             },
             {
-              "t": "table",
-              "head": [
-                "Étape",
-                "Contenu"
-              ],
-              "rows": [
-                [
-                  "**A — Affirmation**",
-                  "L’idée que je vais prouver (phrase claire)"
-                ],
-                [
-                  "**I — Illustration**",
-                  "La **citation** exacte du texte (entre guillemets)"
-                ],
-                [
-                  "**E — Explication**",
-                  "Le **procédé** repéré + l’**effet** produit / l’interprétation"
-                ]
-              ]
+              "t": "p",
+              "c": "Le paragraphe commence par une **affirmation** : une phrase claire qui pose **l’idée que l’on va prouver**. Vient ensuite l’**illustration** : la **citation exacte** du texte, entre guillemets."
+            },
+            {
+              "t": "p",
+              "c": "Le paragraphe s’achève par l’**explication** : on nomme le **procédé** repéré dans la citation, puis on dit l’**effet** qu’il produit et l’interprétation qu’on en tire."
             },
             {
               "t": "p",
@@ -143,6 +139,32 @@
             {
               "t": "tip",
               "c": "Cite **court et exact** : quelques mots entre guillemets suffisent. Toute citation doit être **analysée** (jamais posée seule)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Paragraphe AIE",
+                  "Affirmation, illustration, explication"
+                ],
+                [
+                  "Affirmation",
+                  "L’idée à prouver, en une phrase claire"
+                ],
+                [
+                  "Illustration",
+                  "Citation exacte du texte, entre guillemets"
+                ],
+                [
+                  "Explication",
+                  "Procédé repéré + effet produit / interprétation"
+                ]
+              ]
             }
           ]
         },
@@ -408,29 +430,42 @@
               "c": "La **contraction** consiste à **réduire un texte au quart** (¼) de sa longueur, **sans le trahir**. On garde **les idées essentielles** et leur **enchaînement**, on supprime les exemples, les répétitions et les détails."
             },
             {
-              "t": "table",
-              "head": [
-                "On GARDE",
-                "On SUPPRIME"
-              ],
-              "rows": [
-                [
-                  "La **thèse** et les idées principales",
-                  "Les exemples et illustrations"
-                ],
-                [
-                  "L’**ordre** et la logique du texte",
-                  "Les répétitions, les digressions"
-                ],
-                [
-                  "Le système de **l’auteur** (le « je » de l’auteur)",
-                  "Ses propres commentaires / avis"
-                ]
-              ]
+              "t": "p",
+              "c": "Ce que l’on **garde** : la **thèse** et les **idées principales** de l’auteur, l’**ordre** et la **logique** de son raisonnement, et son **système d’énonciation** — s’il dit « je », la contraction dit « je » aussi."
+            },
+            {
+              "t": "p",
+              "c": "Ce que l’on **supprime** : les **exemples** et les **illustrations**, les **répétitions** et les **digressions**, et bien sûr **tout commentaire personnel** ou avis de celui qui contracte."
             },
             {
               "t": "warning",
               "c": "Règles d’or : rester **fidèle** (ne rien ajouter, ne rien commenter), **reformuler avec ses propres mots** (pas de copié-collé de phrases), respecter le **nombre de mots** imposé (± 10 %) et l’**indiquer** à la fin."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Contraction de texte",
+                  "Réduire un texte au quart de sa longueur sans le trahir"
+                ],
+                [
+                  "À garder",
+                  "Thèse, idées principales, ordre et logique, système d’énonciation de l’auteur"
+                ],
+                [
+                  "À supprimer",
+                  "Exemples, répétitions, digressions, avis personnels"
+                ],
+                [
+                  "Nombre de mots",
+                  "Respecter le nombre imposé (± 10 %) et l’indiquer à la fin"
+                ]
+              ]
             }
           ]
         },
@@ -495,29 +530,38 @@
               "c": "On construit un **plan** (souvent en **2 parties**, parfois dialectique). Chaque partie contient des **arguments**, et chaque argument est **appuyé par un exemple** précis :"
             },
             {
-              "t": "table",
-              "head": [
-                "Élément",
-                "Rôle"
-              ],
-              "rows": [
-                [
-                  "**Thèse**",
-                  "L’idée générale que tu défends"
-                ],
-                [
-                  "**Argument**",
-                  "Une raison qui soutient la thèse"
-                ],
-                [
-                  "**Exemple**",
-                  "Un fait précis : œuvre, actualité, expérience, histoire"
-                ]
-              ]
+              "t": "p",
+              "c": "Trois éléments s’emboîtent dans un essai. La **thèse** est l’**idée générale que tu défends** en réponse à la question. Chaque **argument** est **une raison qui soutient la thèse**. Chaque **exemple** est un **fait précis** qui appuie un argument : une œuvre, un fait d’actualité, une expérience, un événement historique."
             },
             {
               "t": "p",
               "c": "Les **exemples** peuvent venir de la **littérature**, de l’**actualité**, de l’**histoire**, de ta **culture personnelle**. Plus ils sont précis, plus l’argument est convaincant."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Thèse",
+                  "Idée générale défendue"
+                ],
+                [
+                  "Argument",
+                  "Raison qui soutient la thèse"
+                ],
+                [
+                  "Exemple",
+                  "Fait précis : œuvre, actualité, expérience, histoire"
+                ],
+                [
+                  "Plan dialectique",
+                  "Plan qui confronte deux points de vue avant de conclure"
+                ]
+              ]
             }
           ]
         },
@@ -745,41 +789,50 @@
               "c": "Le **roman** (et plus largement le **récit**, du Moyen Âge au XXIᵉ) est l’art de **raconter une histoire**. Vocabulaire de base :"
             },
             {
+              "t": "p",
+              "c": "Le **narrateur** est **celui qui raconte** l’histoire ; il ne faut pas le confondre avec l’auteur. L’**intrigue** est l’**enchaînement des événements**, et une **péripétie** est un **rebondissement** de l’action."
+            },
+            {
+              "t": "p",
+              "c": "L’**incipit** désigne le **début** du roman, et le **dénouement** sa **fin**, le moment où l’intrigue se résout. On parle enfin de **récit cadre** et de **récit enchâssé** quand **une histoire est racontée à l’intérieur d’une autre**."
+            },
+            {
+              "t": "warning",
+              "c": "Ne confonds jamais l’**auteur** (la personne réelle qui écrit) et le **narrateur** (la voix qui raconte, qui peut être un personnage inventé)."
+            },
+            {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Terme",
+                "Notion",
                 "Définition"
               ],
               "rows": [
                 [
                   "Narrateur",
-                  "Celui qui **raconte** (≠ l’auteur !)"
+                  "Celui qui raconte (≠ l’auteur)"
                 ],
                 [
                   "Intrigue",
-                  "L’enchaînement des événements de l’histoire"
+                  "Enchaînement des événements de l’histoire"
                 ],
                 [
                   "Péripétie",
-                  "Un rebondissement de l’action"
+                  "Rebondissement de l’action"
                 ],
                 [
                   "Incipit",
-                  "Le **début** du roman"
+                  "Début du roman"
                 ],
                 [
                   "Dénouement",
-                  "La **fin**, la résolution"
+                  "Fin, résolution de l’intrigue"
                 ],
                 [
                   "Récit cadre / enchâssé",
-                  "Une histoire racontée à l’intérieur d’une autre"
+                  "Histoire racontée à l’intérieur d’une autre"
                 ]
               ]
-            },
-            {
-              "t": "warning",
-              "c": "Ne confonds jamais l’**auteur** (la personne réelle qui écrit) et le **narrateur** (la voix qui raconte, qui peut être un personnage inventé)."
             }
           ]
         },
@@ -791,29 +844,46 @@
               "c": "Le **point de vue** (ou **focalisation**) désigne « par quels yeux » on voit l’histoire :"
             },
             {
-              "t": "table",
-              "head": [
-                "Point de vue",
-                "Ce qu’on sait"
-              ],
-              "rows": [
-                [
-                  "Focalisation **interne**",
-                  "On suit **un personnage**, on connaît ses pensées"
-                ],
-                [
-                  "Focalisation **externe**",
-                  "On voit de l’extérieur, comme une caméra (pas les pensées)"
-                ],
-                [
-                  "Focalisation **zéro** (omnisciente)",
-                  "Le narrateur **sait tout** de tous les personnages"
-                ]
-              ]
+              "t": "p",
+              "c": "En **focalisation interne**, on suit **un personnage** et l’on connaît **ses pensées** : on voit le monde par ses yeux. En **focalisation externe**, on voit l’action **de l’extérieur**, comme une **caméra**, sans accès aux pensées des personnages."
+            },
+            {
+              "t": "p",
+              "c": "En **focalisation zéro**, ou point de vue **omniscient**, le narrateur **sait tout de tous les personnages** : leur passé, leurs pensées, ce qui va leur arriver."
             },
             {
               "t": "p",
               "c": "On distingue aussi le **narrateur interne** (« je », un personnage raconte) du **narrateur externe** (« il/elle », extérieur à l’histoire). Le **rythme** du récit varie : **sommaire** (on résume), **scène** (temps réel, dialogue), **ellipse** (on saute une période), **pause** (description)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Point de vue (focalisation)",
+                  "« Par quels yeux » on voit l’histoire"
+                ],
+                [
+                  "Focalisation interne",
+                  "On suit un personnage et on connaît ses pensées"
+                ],
+                [
+                  "Focalisation externe",
+                  "On voit de l’extérieur, comme une caméra"
+                ],
+                [
+                  "Focalisation zéro (omnisciente)",
+                  "Le narrateur sait tout de tous les personnages"
+                ],
+                [
+                  "Ellipse",
+                  "Période passée sous silence dans le récit"
+                ]
+              ]
             }
           ]
         },
@@ -825,45 +895,54 @@
               "c": "Le **théâtre** (XVIIᵉ-XXIᵉ) est un texte fait pour être **joué**. Vocabulaire spécifique :"
             },
             {
+              "t": "p",
+              "c": "Au théâtre, une **réplique** est **ce que dit un personnage** quand il prend la parole. Une **tirade** est une **longue réplique** ininterrompue. Un **monologue** est le discours d’un personnage **seul en scène**, qui se parle à lui-même. Un **aparté** est une phrase dite **à part**, que le **public seul** est censé entendre."
+            },
+            {
+              "t": "p",
+              "c": "La **stichomythie** est un échange de **répliques très courtes**, qui crée un dialogue rapide et tendu. Les **didascalies** sont les **indications scéniques** — décor, gestes, ton — écrites en italique. La pièce, enfin, se divise en **actes** et en **scènes**."
+            },
+            {
+              "t": "tip",
+              "c": "La **double énonciation** est propre au théâtre : un personnage parle à un autre personnage **et**, en même temps, à travers lui, l’auteur parle au **public**."
+            },
+            {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Terme",
+                "Notion",
                 "Définition"
               ],
               "rows": [
                 [
                   "Réplique",
-                  "Ce que dit un personnage (sa prise de parole)"
+                  "Prise de parole d’un personnage"
                 ],
                 [
                   "Tirade",
-                  "Une **longue** réplique ininterrompue"
+                  "Longue réplique ininterrompue"
                 ],
                 [
                   "Monologue",
-                  "Un personnage **seul** se parle à lui-même"
+                  "Personnage seul qui se parle à lui-même"
                 ],
                 [
                   "Aparté",
-                  "Des mots dits **à part**, entendus du public seul"
+                  "Mots dits à part, entendus du public seul"
                 ],
                 [
                   "Stichomythie",
-                  "Échange de répliques **très courtes** (dialogue rapide, tension)"
+                  "Échange de répliques très courtes"
                 ],
                 [
                   "Didascalie",
-                  "Les **indications scéniques** (décor, gestes, ton) en italique"
+                  "Indication scénique (décor, gestes, ton)"
                 ],
                 [
-                  "Acte / scène",
-                  "Les grandes divisions de la pièce"
+                  "Double énonciation",
+                  "Le personnage parle à un autre personnage et, à travers lui, au public"
                 ]
               ]
-            },
-            {
-              "t": "tip",
-              "c": "La **double énonciation** est propre au théâtre : un personnage parle à un autre personnage **et**, en même temps, à travers lui, l’auteur parle au **public**."
             }
           ]
         },
@@ -896,27 +975,40 @@
               "c": "La **poésie** (XIXᵉ-XXIᵉ) travaille le **langage** : sa musique, ses images, sa forme. La **versification** est la technique du vers."
             },
             {
+              "t": "p",
+              "c": "Un **vers** est une **ligne de poème**, et une **strophe** un **groupe de vers** : un tercet en compte trois, un quatrain quatre. Le **mètre** est le **nombre de syllabes** d’un vers ; les plus fréquents sont l’**octosyllabe** (8 syllabes), le **décasyllabe** (10) et l’**alexandrin** (12)."
+            },
+            {
+              "t": "p",
+              "c": "La **rime** est le **retour du même son en fin de vers**. Dans l’alexandrin, la **césure** est la **coupe** qui partage le vers en deux **hémistiches** de six syllabes. Il y a **enjambement** quand la phrase **déborde d’un vers sur le suivant** ; le **rejet** est le court élément ainsi renvoyé au vers suivant."
+            },
+            {
+              "t": "tip",
+              "c": "Attention au **e muet** : il se compte s’il est suivi d’une consonne (« une rose épanouie »). C’est essentiel pour compter les syllabes d’un alexandrin."
+            },
+            {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Terme",
+                "Notion",
                 "Définition"
               ],
               "rows": [
                 [
                   "Vers",
-                  "Une ligne de poème"
+                  "Ligne de poème"
                 ],
                 [
                   "Strophe",
-                  "Un groupe de vers (tercet = 3, quatrain = 4)"
+                  "Groupe de vers (tercet = 3, quatrain = 4)"
                 ],
                 [
                   "Mètre",
-                  "Le nombre de **syllabes** d’un vers"
+                  "Nombre de syllabes d’un vers"
                 ],
                 [
                   "Octosyllabe / décasyllabe / alexandrin",
-                  "Vers de **8 / 10 / 12** syllabes"
+                  "Vers de 8 / 10 / 12 syllabes"
                 ],
                 [
                   "Rime",
@@ -924,17 +1016,13 @@
                 ],
                 [
                   "Césure / hémistiche",
-                  "La coupe / la moitié de l’alexandrin (6+6)"
+                  "Coupe / moitié de l’alexandrin (6 + 6)"
                 ],
                 [
                   "Enjambement / rejet",
                   "La phrase déborde d’un vers sur le suivant"
                 ]
               ]
-            },
-            {
-              "t": "tip",
-              "c": "Attention au **e muet** : il se compte s’il est suivi d’une consonne (« une rose épanouie »). C’est essentiel pour compter les syllabes d’un alexandrin."
             }
           ]
         },
@@ -971,27 +1059,40 @@
               "c": "La **littérature d’idées** (XVIᵉ-XVIIIᵉ) regroupe les textes qui **défendent des idées** et cherchent à **convaincre** ou **persuader**."
             },
             {
+              "t": "p",
+              "c": "La **thèse** est **l’idée défendue** par l’auteur, et un **argument** est **une raison qui appuie** cette thèse. **Convaincre**, c’est emporter l’adhésion par la **raison** : la logique, les preuves. **Persuader**, c’est l’emporter par les **émotions**. **Réfuter**, c’est **démonter la thèse adverse**."
+            },
+            {
+              "t": "p",
+              "c": "L’**argumentation directe** énonce clairement les idées, alors que l’**argumentation indirecte** les fait passer **à travers une fiction**."
+            },
+            {
+              "t": "p",
+              "c": "L’argumentation **indirecte** passe par une **fiction** : l’**apologue** (récit à visée morale), la **fable**, le **conte philosophique** (Voltaire), l’**utopie**."
+            },
+            {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Terme",
+                "Notion",
                 "Définition"
               ],
               "rows": [
                 [
                   "Thèse",
-                  "L’idée défendue par l’auteur"
+                  "Idée défendue par l’auteur"
                 ],
                 [
                   "Argument",
-                  "Une raison qui appuie la thèse"
+                  "Raison qui appuie la thèse"
                 ],
                 [
                   "Convaincre",
-                  "Emporter l’adhésion par la **raison** (logique, preuves)"
+                  "Emporter l’adhésion par la raison"
                 ],
                 [
                   "Persuader",
-                  "Emporter l’adhésion par les **émotions**"
+                  "Emporter l’adhésion par les émotions"
                 ],
                 [
                   "Réfuter",
@@ -1000,12 +1101,12 @@
                 [
                   "Argumentation directe / indirecte",
                   "Idées énoncées clairement / passant par une fiction"
+                ],
+                [
+                  "Apologue",
+                  "Récit à visée morale (fable, conte philosophique)"
                 ]
               ]
-            },
-            {
-              "t": "p",
-              "c": "L’argumentation **indirecte** passe par une **fiction** : l’**apologue** (récit à visée morale), la **fable**, le **conte philosophique** (Voltaire), l’**utopie**."
             }
           ]
         },
@@ -1017,25 +1118,42 @@
               "c": "Les grandes **formes** de la littérature d’idées : l’**essai** (Montaigne), le **dialogue**, la **lettre** (les *Lettres persanes*), le **pamphlet**, la **maxime**, l’**article** (l’*Encyclopédie*)."
             },
             {
-              "t": "table",
-              "head": [
-                "Mouvement",
-                "Idées clés"
-              ],
-              "rows": [
-                [
-                  "**Humanisme** (XVIᵉ)",
-                  "Confiance en l’homme, savoir, tolérance, retour à l’Antiquité"
-                ],
-                [
-                  "**Lumières** (XVIIIᵉ)",
-                  "Raison, progrès, liberté, critique des injustices et du fanatisme"
-                ]
-              ]
+              "t": "p",
+              "c": "Deux grands mouvements nourrissent la littérature d’idées. L’**humanisme**, au **XVIᵉ siècle**, place sa **confiance dans l’homme** et dans le **savoir** ; il prône la **tolérance** et le **retour aux textes de l’Antiquité**. Les **Lumières**, au **XVIIIᵉ siècle**, défendent la **raison**, le **progrès** et la **liberté**, et **critiquent les injustices** et le **fanatisme**."
             },
             {
               "t": "p",
               "c": "Registres associés : **polémique** (attaque violente), **satirique** (critique par le rire), **didactique** (qui cherche à instruire)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Humanisme (XVIᵉ)",
+                  "Confiance en l’homme, savoir, tolérance, retour à l’Antiquité"
+                ],
+                [
+                  "Lumières (XVIIIᵉ)",
+                  "Raison, progrès, liberté, critique des injustices et du fanatisme"
+                ],
+                [
+                  "Registre polémique",
+                  "Attaque violente"
+                ],
+                [
+                  "Registre satirique",
+                  "Critique par le rire"
+                ],
+                [
+                  "Registre didactique",
+                  "Cherche à instruire"
+                ]
+              ]
             }
           ]
         },
@@ -1047,43 +1165,56 @@
               "c": "Les **figures de style** sont des procédés qui donnent de la force et du sens. À connaître et à savoir **nommer** :"
             },
             {
+              "t": "p",
+              "c": "La **comparaison** rapproche deux éléments à l’aide d’un **outil** comme « comme » ; la **métaphore** les rapproche **sans outil** : « une mer de larmes ». La **personnification** prête des **traits humains à une chose** : « le vent murmure ». L’**hyperbole** **exagère** : « mourir de faim ». La **litote** **dit peu pour suggérer beaucoup** : « ce n’est pas mauvais ». L’**euphémisme** **atténue une réalité dure** : « il nous a quittés »."
+            },
+            {
+              "t": "p",
+              "c": "L’**anaphore** **répète un mot en début de vers ou de phrase** pour insister. L’**antithèse** **oppose des idées**, et l’**oxymore** associe **deux mots contradictoires** : « soleil noir ». La **gradation** est une **énumération d’intensité croissante**. L’**ironie**, enfin, consiste à **dire le contraire de ce qu’on pense** pour critiquer."
+            },
+            {
+              "t": "tip",
+              "c": "Règle absolue en analyse : associer **le procédé + son effet**. Ex. : « l’**anaphore** de “je me souviens” insiste sur l’obsession du souvenir ». Nommer sans expliquer ne rapporte rien."
+            },
+            {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Figure",
+                "Notion",
                 "Définition"
               ],
               "rows": [
                 [
                   "Comparaison",
-                  "Rapproche deux éléments avec un **outil** (« comme »)"
+                  "Rapprochement avec un outil (« comme »)"
                 ],
                 [
                   "Métaphore",
-                  "Rapprochement **sans** outil (« une mer de larmes »)"
+                  "Rapprochement sans outil (« une mer de larmes »)"
                 ],
                 [
                   "Personnification",
-                  "Traits humains à une chose (« le vent murmure »)"
+                  "Traits humains prêtés à une chose"
                 ],
                 [
                   "Hyperbole",
-                  "Exagération (« mourir de faim »)"
+                  "Exagération"
                 ],
                 [
                   "Litote",
-                  "Dire peu pour suggérer beaucoup (« ce n’est pas mauvais »)"
+                  "Dire peu pour suggérer beaucoup"
                 ],
                 [
                   "Euphémisme",
-                  "Atténuer une réalité dure (« il nous a quittés »)"
+                  "Atténuer une réalité dure"
                 ],
                 [
                   "Anaphore",
-                  "Répétition en début de vers/phrase (insistance)"
+                  "Répétition en début de vers ou de phrase"
                 ],
                 [
                   "Antithèse / oxymore",
-                  "Opposition d’idées / deux mots contradictoires (« soleil noir »)"
+                  "Opposition d’idées / deux mots contradictoires"
                 ],
                 [
                   "Gradation",
@@ -1094,10 +1225,6 @@
                   "Dire le contraire de ce qu’on pense pour critiquer"
                 ]
               ]
-            },
-            {
-              "t": "tip",
-              "c": "Règle absolue en analyse : associer **le procédé + son effet**. Ex. : « l’**anaphore** de “je me souviens” insiste sur l’obsession du souvenir ». Nommer sans expliquer ne rapporte rien."
             }
           ]
         }
@@ -1393,28 +1520,34 @@
               "c": "L’oral dure environ **20 minutes** (après **30 min de préparation**) et se déroule en deux parties :"
             },
             {
-              "t": "table",
-              "head": [
-                "Partie",
-                "Contenu",
-                "Durée"
-              ],
-              "rows": [
-                [
-                  "**Partie 1**",
-                  "Lecture + **explication linéaire** d’un texte du descriptif, puis **question de grammaire**",
-                  "~12 min"
-                ],
-                [
-                  "**Partie 2**",
-                  "Présentation d’une **œuvre** choisie, puis **entretien** avec l’examinateur",
-                  "~8 min"
-                ]
-              ]
+              "t": "p",
+              "c": "La **première partie**, d’environ **12 minutes**, comprend la **lecture** et l’**explication linéaire** d’un texte du descriptif, suivies d’une **question de grammaire**. La **seconde partie**, d’environ **8 minutes**, consiste à **présenter une œuvre** choisie, puis à échanger avec l’examinateur lors d’un **entretien**."
             },
             {
               "t": "p",
               "c": "On apporte son **descriptif** (la liste des textes étudiés) et les **œuvres**. L’examinateur choisit le texte de la partie 1."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Partie 1 de l’oral (~12 min)",
+                  "Lecture, explication linéaire, question de grammaire"
+                ],
+                [
+                  "Partie 2 de l’oral (~8 min)",
+                  "Présentation d’une œuvre choisie, entretien"
+                ],
+                [
+                  "Descriptif",
+                  "Liste des textes étudiés pendant l’année"
+                ]
+              ]
             }
           ]
         },
@@ -1455,136 +1588,122 @@
               "c": "**① L’interrogation**"
             },
             {
-              "t": "table",
-              "head": [
-                "Type",
-                "Exemple",
-                "Phrase type à dire à l’oral"
-              ],
-              "rows": [
-                [
-                  "Interrogation **totale**",
-                  "« Viendras-tu à la fête ? »",
-                  "C’est une interrogation **totale** : elle porte sur **toute la phrase** et appelle une réponse par **oui ou par non** ; elle est marquée par l’**inversion du sujet** (« viendras-tu »)."
-                ],
-                [
-                  "Interrogation **partielle**",
-                  "« **Où** vas-tu ? »",
-                  "C’est une interrogation **partielle** : elle porte sur **un seul élément** (ici le lieu) et est introduite par le **mot interrogatif** « où »."
-                ],
-                [
-                  "Interrogation **directe**",
-                  "« Que veux-tu ? »",
-                  "C’est une interrogation **directe** : la question est posée telle quelle, avec un **point d’interrogation** et l’**inversion du sujet**."
-                ],
-                [
-                  "Interrogation **indirecte**",
-                  "« Je me demande **ce que** tu veux. »",
-                  "C’est une interrogation **indirecte** : la question est **enchâssée dans une subordonnée**, **sans** point d’interrogation ni inversion (introduite par « ce que »)."
-                ]
-              ]
+              "t": "p",
+              "c": "L’**interrogation totale** porte sur **toute la phrase** et appelle une réponse par **oui ou par non**. Dans « Viendras-tu à la fête ? », on dira : c’est une interrogation totale, marquée par l’**inversion du sujet** (« viendras-tu »). L’**interrogation partielle** porte sur **un seul élément** et commence par un **mot interrogatif** : « **Où** vas-tu ? » interroge sur le lieu."
+            },
+            {
+              "t": "p",
+              "c": "L’**interrogation directe** pose la question telle quelle, avec un **point d’interrogation** et souvent l’**inversion du sujet** : « Que veux-tu ? ». L’**interrogation indirecte** est **enchâssée dans une subordonnée**, **sans point d’interrogation ni inversion** : « Je me demande **ce que** tu veux »."
             },
             {
               "t": "p",
               "c": "**② La négation**"
             },
             {
-              "t": "table",
-              "head": [
-                "Type",
-                "Exemple",
-                "Phrase type à dire à l’oral"
-              ],
-              "rows": [
-                [
-                  "Négation **totale**",
-                  "« Il **ne** viendra **pas**. »",
-                  "C’est une négation **totale** : elle nie **toute la phrase**, marquée par l’adverbe de négation « **ne… pas** »."
-                ],
-                [
-                  "Négation **partielle**",
-                  "« Il **ne** voit **personne**. »",
-                  "C’est une négation **partielle** : elle ne nie qu’**une partie** de la phrase, marquée ici par « ne… **personne** » (on pourrait avoir *jamais, rien, aucun, plus*)."
-                ],
-                [
-                  "Négation **restrictive**",
-                  "« Il **ne** mange **que** des fruits. »",
-                  "Ce n’est pas une vraie négation mais une **restriction** : « ne… **que** » signifie « **seulement** »."
-                ],
-                [
-                  "Négation **lexicale**",
-                  "« Ce projet est **irréalisable**. »",
-                  "La négation est **lexicale** : elle est portée par un **mot** (le préfixe « ir- »), et non par une tournure grammaticale."
-                ]
-              ]
+              "t": "p",
+              "c": "La **négation totale** nie **toute la phrase**, avec « **ne… pas** » : « Il ne viendra pas ». La **négation partielle** ne nie qu’**une partie** de la phrase : « Il ne voit **personne** » ; on la trouve aussi avec *jamais*, *rien*, *aucun* ou *plus*."
+            },
+            {
+              "t": "p",
+              "c": "La **négation restrictive**, « **ne… que** », n’est pas une vraie négation : elle signifie « **seulement** » — « Il ne mange que des fruits ». La **négation lexicale**, enfin, est portée par un **mot**, souvent grâce à un préfixe : « **ir**réalisable »."
             },
             {
               "t": "p",
               "c": "**③ Les propositions subordonnées** (chaque type, avec sa fonction)"
             },
             {
-              "t": "table",
-              "head": [
-                "Type de subordonnée",
-                "Exemple",
-                "Phrase type à dire à l’oral"
-              ],
-              "rows": [
-                [
-                  "**Relative**",
-                  "« Le livre **que** je lis est passionnant. »",
-                  "C’est une subordonnée **relative** : introduite par le **pronom relatif** « que », elle complète le nom « livre » (son **antécédent**) ; fonction : **complément de l’antécédent** (comme un adjectif épithète)."
-                ],
-                [
-                  "**Conjonctive complétive**",
-                  "« Je pense **que** tu as raison. »",
-                  "C’est une subordonnée **conjonctive complétive** : introduite par la conjonction « que », elle est **COD** du verbe « pense »."
-                ],
-                [
-                  "**Interrogative indirecte**",
-                  "« Je me demande **si** tu viendras. »",
-                  "C’est une subordonnée **interrogative indirecte** : introduite par « si » (ou un mot interrogatif), elle est **COD** du verbe « me demande »."
-                ],
-                [
-                  "Circonstancielle de **temps**",
-                  "« **Quand** le jour se lève, les oiseaux chantent. »",
-                  "C’est une subordonnée circonstancielle de **temps** : introduite par « quand », elle indique le **moment** de l’action (**CC de temps**)."
-                ],
-                [
-                  "Circonstancielle de **cause**",
-                  "« Il reste chez lui **parce qu’**il est malade. »",
-                  "C’est une circonstancielle de **cause** : introduite par « parce que », elle exprime la **raison** de l’action (**CC de cause**)."
-                ],
-                [
-                  "Circonstancielle de **conséquence**",
-                  "« Il pleut **si** fort **qu’**il inonde la rue. »",
-                  "C’est une circonstancielle de **conséquence** : introduite par « si… que / si bien que », elle exprime le **résultat** (**CC de conséquence**)."
-                ],
-                [
-                  "Circonstancielle de **but**",
-                  "« Il travaille **afin qu’**elle réussisse. »",
-                  "C’est une circonstancielle de **but** : introduite par « afin que / pour que » (+ **subjonctif**), elle exprime l’**objectif** visé (**CC de but**)."
-                ],
-                [
-                  "Circonstancielle de **condition**",
-                  "« **Si** tu viens, je serai content. »",
-                  "C’est une circonstancielle de **condition** : introduite par « si / à condition que », elle pose une **hypothèse** (**CC de condition**)."
-                ],
-                [
-                  "Circonstancielle de **concession**",
-                  "« **Bien qu’**il pleuve, il sort. »",
-                  "C’est une circonstancielle de **concession** (opposition) : introduite par « bien que / quoique » (+ **subjonctif**), elle exprime un **obstacle** qui n’empêche pas l’action."
-                ],
-                [
-                  "Circonstancielle de **comparaison**",
-                  "« Il agit **comme** son père agissait. »",
-                  "C’est une circonstancielle de **comparaison** : introduite par « comme / ainsi que », elle établit une **comparaison** (**CC de comparaison**)."
-                ]
-              ]
+              "t": "p",
+              "c": "La **subordonnée relative** est introduite par un **pronom relatif** et complète un nom, son **antécédent** : dans « Le livre **que** je lis est passionnant », elle complète « livre ». La **conjonctive complétive**, introduite par la conjonction « **que** », est le plus souvent **COD** du verbe : « Je pense **que** tu as raison ». L’**interrogative indirecte**, introduite par « **si** » ou un mot interrogatif, est aussi **COD** : « Je me demande **si** tu viendras »."
+            },
+            {
+              "t": "p",
+              "c": "Les **circonstancielles** jouent le rôle d’un complément circonstanciel. Celle de **temps** indique le moment (« **Quand** le jour se lève… »). Celle de **cause** donne la raison (« **parce qu’**il est malade »). Celle de **conséquence** exprime le résultat (« **si** fort **qu’**il inonde la rue »). Celle de **but** exprime l’objectif, avec le **subjonctif** (« **afin qu’**elle réussisse »). Celle de **condition** pose une hypothèse (« **Si** tu viens… »). Celle de **concession** exprime un obstacle qui n’empêche pas l’action, avec le **subjonctif** (« **Bien qu’**il pleuve, il sort »). Celle de **comparaison**, enfin, établit un rapprochement (« **comme** son père agissait »)."
             },
             {
               "t": "tip",
               "c": "Méthode : **repérer les verbes conjugués** (autant de verbes conjugués = autant de propositions), puis, pour chaque proposition, **nommer sa nature** (à l’aide du tableau) et **donner sa fonction** en citant le **mot qui l’introduit**."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Interrogation totale",
+                  "Porte sur toute la phrase, réponse oui / non (« Viendras-tu ? »)"
+                ],
+                [
+                  "Interrogation partielle",
+                  "Porte sur un élément, introduite par un mot interrogatif (« Où vas-tu ? »)"
+                ],
+                [
+                  "Interrogation directe",
+                  "Point d’interrogation, inversion du sujet (« Que veux-tu ? »)"
+                ],
+                [
+                  "Interrogation indirecte",
+                  "Dans une subordonnée, sans point d’interrogation (« Je me demande ce que tu veux »)"
+                ],
+                [
+                  "Négation totale",
+                  "Nie toute la phrase (« ne… pas »)"
+                ],
+                [
+                  "Négation partielle",
+                  "Nie une partie (« ne… personne / jamais / rien »)"
+                ],
+                [
+                  "Négation restrictive",
+                  "« ne… que » = seulement"
+                ],
+                [
+                  "Négation lexicale",
+                  "Portée par un mot (préfixe « ir- », « in- »)"
+                ],
+                [
+                  "Subordonnée relative",
+                  "Introduite par un pronom relatif, complète l’antécédent"
+                ],
+                [
+                  "Conjonctive complétive",
+                  "Introduite par « que », souvent COD du verbe"
+                ],
+                [
+                  "Interrogative indirecte",
+                  "Introduite par « si » ou un mot interrogatif, COD"
+                ],
+                [
+                  "Circonstancielle de temps",
+                  "« quand », « lorsque » : moment de l’action"
+                ],
+                [
+                  "Circonstancielle de cause",
+                  "« parce que » : raison"
+                ],
+                [
+                  "Circonstancielle de conséquence",
+                  "« si… que », « si bien que » : résultat"
+                ],
+                [
+                  "Circonstancielle de but",
+                  "« afin que », « pour que » + subjonctif : objectif"
+                ],
+                [
+                  "Circonstancielle de condition",
+                  "« si », « à condition que » : hypothèse"
+                ],
+                [
+                  "Circonstancielle de concession",
+                  "« bien que », « quoique » + subjonctif : obstacle"
+                ],
+                [
+                  "Circonstancielle de comparaison",
+                  "« comme », « ainsi que » : comparaison"
+                ]
+              ]
             }
           ]
         },
@@ -1609,15 +1728,28 @@
               "c": "Un **registre** est la **tonalité** d’un texte, l’émotion qu’il cherche à produire. À savoir reconnaître :"
             },
             {
+              "t": "p",
+              "c": "Le registre **lyrique** exprime des **sentiments personnels**, comme l’amour ou la mélancolie. Le registre **tragique** met en scène la **fatalité**, la souffrance et une mort inévitable. Le registre **comique** cherche à **faire rire**, par la farce, la satire ou l’ironie. Le registre **pathétique** cherche à **émouvoir** et à susciter la **pitié**."
+            },
+            {
+              "t": "p",
+              "c": "Le registre **épique** **amplifie** et célèbre un **exploit**, avec un souffle héroïque. Les registres **polémique** et **satirique** **attaquent** et critiquent, par la violence ou par le rire. Le registre **fantastique**, enfin, fait naître le **doute** et l’**inquiétude** face à un événement inexplicable."
+            },
+            {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Registre",
-                "Effet recherché"
+                "Notion",
+                "Définition"
               ],
               "rows": [
                 [
+                  "Registre",
+                  "Tonalité d’un texte, émotion qu’il cherche à produire"
+                ],
+                [
                   "Lyrique",
-                  "Exprimer des **sentiments** personnels (amour, mélancolie)"
+                  "Expression des sentiments personnels"
                 ],
                 [
                   "Tragique",
@@ -1625,23 +1757,23 @@
                 ],
                 [
                   "Comique",
-                  "Faire **rire** (farce, satire, ironie)"
+                  "Faire rire"
                 ],
                 [
                   "Pathétique",
-                  "Émouvoir, susciter la **pitié**"
+                  "Émouvoir, susciter la pitié"
                 ],
                 [
                   "Épique",
-                  "Amplifier, célébrer un exploit (souffle héroïque)"
+                  "Amplifier, célébrer un exploit"
                 ],
                 [
                   "Polémique / satirique",
-                  "**Attaquer**, critiquer (par la violence ou le rire)"
+                  "Attaquer, critiquer"
                 ],
                 [
                   "Fantastique",
-                  "Faire naître le **doute**, l’inquiétude"
+                  "Faire naître le doute, l’inquiétude"
                 ]
               ]
             }
@@ -1655,51 +1787,51 @@
               "c": "Situer un texte dans son **mouvement** aide à l’interpréter. Grands repères du XVIᵉ au XXᵉ :"
             },
             {
+              "t": "p",
+              "c": "L’**humanisme**, au **XVIᵉ siècle**, a confiance en l’homme, dans le savoir et la tolérance. Le **baroque**, de la **fin du XVIᵉ au XVIIᵉ siècle**, aime le mouvement, l’instabilité, l’illusion et la démesure. Le **classicisme**, au **XVIIᵉ siècle**, recherche au contraire la mesure, la raison, le respect des règles et l’équilibre. Les **Lumières**, au **XVIIIᵉ siècle**, défendent la raison, le progrès et la liberté, et pratiquent la critique."
+            },
+            {
+              "t": "p",
+              "c": "Au **XIXᵉ siècle**, le **romantisme** exalte les sentiments, le « je », la nature et la mélancolie, tandis que le **réalisme** et le **naturalisme** veulent peindre le réel et la société avec précision. À la **fin du XIXᵉ siècle**, le **symbolisme** cherche à suggérer plutôt qu’à dire, par la musique du langage et les symboles. Au **XXᵉ siècle**, le **surréalisme** explore le rêve, l’inconscient et l’écriture automatique."
+            },
+            {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Mouvement",
-                "Siècle",
-                "Idées clés"
+                "Notion",
+                "Définition"
               ],
               "rows": [
                 [
-                  "Humanisme",
-                  "XVIᵉ",
+                  "Humanisme (XVIᵉ)",
                   "Confiance en l’homme, savoir, tolérance"
                 ],
                 [
-                  "Baroque",
-                  "fin XVIᵉ-XVIIᵉ",
+                  "Baroque (fin XVIᵉ-XVIIᵉ)",
                   "Mouvement, instabilité, illusion, démesure"
                 ],
                 [
-                  "Classicisme",
-                  "XVIIᵉ",
+                  "Classicisme (XVIIᵉ)",
                   "Mesure, raison, règles, équilibre"
                 ],
                 [
-                  "Lumières",
-                  "XVIIIᵉ",
+                  "Lumières (XVIIIᵉ)",
                   "Raison, progrès, liberté, critique"
                 ],
                 [
-                  "Romantisme",
-                  "XIXᵉ",
+                  "Romantisme (XIXᵉ)",
                   "Sentiments, « je », nature, mélancolie"
                 ],
                 [
-                  "Réalisme / Naturalisme",
-                  "XIXᵉ",
-                  "Peindre le réel, la société, avec précision"
+                  "Réalisme / naturalisme (XIXᵉ)",
+                  "Peindre le réel et la société avec précision"
                 ],
                 [
-                  "Symbolisme",
-                  "fin XIXᵉ",
+                  "Symbolisme (fin XIXᵉ)",
                   "Suggérer, musique du langage, symboles"
                 ],
                 [
-                  "Surréalisme",
-                  "XXᵉ",
+                  "Surréalisme (XXᵉ)",
                   "Rêve, inconscient, écriture automatique"
                 ]
               ]

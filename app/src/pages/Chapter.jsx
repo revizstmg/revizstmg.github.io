@@ -133,6 +133,9 @@ export default function Chapter() {
         <PaginatedCourse
           sec={chapter.section}
           color={color}
+          themeId={tid}
+          subjectId={sid}
+          sectionIdx={chapter.idx}
           prevLabel={prev ? t('previous') : null}
           nextLabel={next ? t('nextChapter') : t('takeTest')}
           onPrev={prev ? () => navigate(`/subject/${sid}/theme/${tid}/chapter/${prev.idx}`) : null}

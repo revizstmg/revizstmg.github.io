@@ -12,39 +12,63 @@
           "c": "Le droit des contrats repose sur deux grands principes hérités de la Révolution. L’**autonomie de la volonté** : on ne s’engage que parce qu’on l’a voulu. La **force obligatoire** (art. 1103) : « les contrats légalement formés tiennent lieu de loi à ceux qui les ont faits » — une fois conclu, le contrat s’impose comme une loi privée."
         },
         {
-          "t": "table",
-          "head": [
-            "Classification",
-            "Un type",
-            "L’autre type"
-          ],
-          "rows": [
-            [
-              "Selon les obligations",
-              "Synallagmatique (obligations réciproques : vente)",
-              "Unilatéral (une seule partie s’oblige : donation)"
-            ],
-            [
-              "Selon le but",
-              "À titre onéreux (chacun reçoit une contrepartie)",
-              "À titre gratuit (sans contrepartie)"
-            ],
-            [
-              "Selon la forme",
-              "Consensuel (le seul accord suffit)",
-              "Solennel (une forme est exigée pour la validité : acte notarié pour une donation ou un contrat de mariage)"
-            ],
-            [
-              "Selon la négociation",
-              "De gré à gré (négocié)",
-              "D’adhésion (on accepte des clauses non négociables : abonnement)"
-            ]
-          ]
+          "t": "p",
+          "c": "Les contrats se classent selon quatre critères. Selon les **obligations** qu’il crée, un contrat est **synallagmatique** quand les parties s’obligent **réciproquement**, comme dans une vente où l’un livre et l’autre paie, ou **unilatéral** quand **une seule partie** s’oblige, comme dans une donation. Selon son **but**, il est **à titre onéreux** quand chacun reçoit une **contrepartie**, ou **à titre gratuit** quand l’un donne sans rien recevoir en échange."
+        },
+        {
+          "t": "p",
+          "c": "Selon sa **forme**, un contrat est **consensuel** quand le **seul accord** des parties suffit à le former, ou **solennel** quand une **forme particulière est exigée** pour qu’il soit valable : un **acte notarié** pour une donation ou un contrat de mariage. Selon la **négociation**, enfin, il est **de gré à gré** quand les parties en ont discuté les clauses, ou **d’adhésion** quand l’une d’elles accepte des **clauses non négociables**, fixées à l’avance par l’autre, comme dans un abonnement téléphonique."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "La plupart des contrats sont **consensuels** : ils se forment par le seul **échange des consentements**, sans écrit obligatoire. L’écrit sert alors surtout de **preuve**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Force obligatoire (art. 1103)",
+              "Le contrat légalement formé tient lieu de loi à ceux qui l’ont fait"
+            ],
+            [
+              "Contrat synallagmatique",
+              "Obligations réciproques (vente)"
+            ],
+            [
+              "Contrat unilatéral",
+              "Une seule partie s’oblige (donation)"
+            ],
+            [
+              "Contrat à titre onéreux",
+              "Chacun reçoit une contrepartie"
+            ],
+            [
+              "Contrat à titre gratuit",
+              "Sans contrepartie"
+            ],
+            [
+              "Contrat consensuel",
+              "Le seul accord suffit"
+            ],
+            [
+              "Contrat solennel",
+              "Une forme est exigée pour la validité (acte notarié)"
+            ],
+            [
+              "Contrat de gré à gré",
+              "Clauses négociées entre les parties"
+            ],
+            [
+              "Contrat d’adhésion",
+              "Clauses non négociables, acceptées en bloc (abonnement)"
+            ]
+          ]
         }
       ]
     },
@@ -88,29 +112,12 @@
           "c": "Le consentement doit être **intègre**. S’il a été « faussé », on parle de **vice du consentement** : le contrat est alors **annulable** à la demande de la victime. Le Code civil en reconnaît trois (art. 1130 et suivants)."
         },
         {
-          "t": "table",
-          "head": [
-            "Vice",
-            "Définition",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Erreur",
-              "Se tromper sur une qualité essentielle",
-              "Acheter une copie en croyant acheter un original"
-            ],
-            [
-              "Dol",
-              "Être trompé par des manœuvres de l’autre partie",
-              "Un vendeur cache un défaut grave (mensonge, rétention d’info)"
-            ],
-            [
-              "Violence",
-              "Consentir sous la contrainte (physique, morale, économique)",
-              "Signer sous la menace"
-            ]
-          ]
+          "t": "p",
+          "c": "Le Code civil reconnaît trois vices du consentement. L’**erreur** consiste à **se tromper sur une qualité essentielle** de la prestation, par exemple acheter une copie en croyant acheter un original. Le **dol** consiste à **être trompé par des manœuvres de l’autre partie** : mensonge, mise en scène, ou simple silence sur une information décisive, comme un vendeur qui cache un défaut grave."
+        },
+        {
+          "t": "p",
+          "c": "La **violence**, enfin, consiste à **consentir sous la contrainte**, qu’elle soit **physique**, **morale** ou **économique** : signer sous la menace en est l’exemple type. Dans les trois cas, la victime n’a pas donné un consentement libre et éclairé, et elle peut demander la **nullité** du contrat."
         },
         {
           "t": "p",
@@ -125,6 +132,36 @@
           "t": "warning",
           "h": "Attention",
           "c": "Une simple **erreur sur la valeur** (avoir payé trop cher) ou sur un **motif personnel** n’est en principe pas une cause de nullité. Seule l’erreur sur une **qualité essentielle** compte."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Vice du consentement",
+              "Consentement faussé qui rend le contrat annulable à la demande de la victime"
+            ],
+            [
+              "Erreur",
+              "Se tromper sur une qualité essentielle (acheter une copie en croyant acheter un original)"
+            ],
+            [
+              "Dol",
+              "Être trompé par des manœuvres de l’autre partie (défaut grave caché)"
+            ],
+            [
+              "Violence",
+              "Consentir sous la contrainte physique, morale ou économique"
+            ],
+            [
+              "Vice déterminant",
+              "Sans lui, la victime n’aurait pas contracté"
+            ]
+          ]
         }
       ]
     },
@@ -203,39 +240,12 @@
           "c": "Être **responsable**, c’est devoir **répondre** de ses actes devant la justice. Le droit distingue deux grandes responsabilités, qui poursuivent des buts opposés et peuvent se cumuler pour un même fait."
         },
         {
-          "t": "table",
-          "head": [
-            "Critère",
-            "Responsabilité civile",
-            "Responsabilité pénale"
-          ],
-          "rows": [
-            [
-              "But",
-              "Réparer le dommage de la victime",
-              "Punir l’auteur d’une infraction"
-            ],
-            [
-              "Qui agit",
-              "La victime (elle saisit le juge civil)",
-              "Le ministère public (il poursuit au nom de la société)"
-            ],
-            [
-              "Sanction",
-              "Dommages-intérêts (argent)",
-              "Amende, prison, peine"
-            ],
-            [
-              "Bénéficiaire",
-              "La victime, qui est indemnisée",
-              "La société, dont l’ordre est protégé"
-            ],
-            [
-              "Tribunal",
-              "Civil (tribunal judiciaire)",
-              "Pénal (police, correctionnel, assises)"
-            ]
-          ]
+          "t": "p",
+          "c": "Les deux responsabilités s’opposent sur tous les points. La **responsabilité civile** a pour **but** de **réparer le dommage** subi par la victime. C’est **la victime qui agit**, en saisissant le **juge civil**, en général le **tribunal judiciaire**. La **sanction** prend la forme de **dommages-intérêts**, c’est-à-dire une somme d’argent, et c’est **la victime qui en bénéficie** puisqu’elle est indemnisée."
+        },
+        {
+          "t": "p",
+          "c": "La **responsabilité pénale** a pour **but** de **punir l’auteur d’une infraction**. C’est le **ministère public** qui agit, en poursuivant l’auteur **au nom de la société**. La **sanction** est une **peine** : amende, prison. Le **bénéficiaire** est **la société**, dont l’ordre est protégé, et l’affaire est jugée par une **juridiction pénale** : tribunal de police, tribunal correctionnel ou cour d’assises selon la gravité."
         },
         {
           "t": "p",
@@ -245,6 +255,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Civil = **réparer** (payer la victime). Pénal = **punir** (sanction au nom de la société). C’est la distinction fondamentale du thème."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Responsabilité civile",
+              "Obligation de réparer le dommage causé à la victime (dommages-intérêts, juge civil)"
+            ],
+            [
+              "Responsabilité pénale",
+              "Obligation de répondre d’une infraction devant la société (peine, juge pénal)"
+            ],
+            [
+              "Ministère public",
+              "Magistrats qui poursuivent l’auteur d’une infraction au nom de la société"
+            ],
+            [
+              "Dommages-intérêts",
+              "Somme d’argent versée à la victime pour réparer son préjudice"
+            ]
+          ]
         }
       ]
     },
@@ -287,34 +323,12 @@
           "c": "Le fait générateur prend trois formes, correspondant à trois **régimes** de responsabilité civile."
         },
         {
-          "t": "table",
-          "head": [
-            "Régime",
-            "Fondement",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Fait personnel",
-              "Ma propre faute (art. 1240)",
-              "Je casse la vitrine du voisin"
-            ],
-            [
-              "Fait des choses",
-              "Une chose sous ma garde (art. 1242 al. 1)",
-              "Mon pot de fleurs tombe du balcon sur un passant ; une branche de mon arbre tombe sur la voiture du voisin"
-            ],
-            [
-              "Fait des animaux",
-              "Un animal dont je suis propriétaire ou que j’utilise (art. 1243)",
-              "Mon chien mord un passant"
-            ],
-            [
-              "Fait d’autrui",
-              "Responsabilité pour une personne dont je réponds",
-              "Parents pour leur enfant mineur ; employeur pour son salarié"
-            ]
-          ]
+          "t": "p",
+          "c": "Le premier régime est la responsabilité du **fait personnel** : on répond de **sa propre faute** (art. 1240 du Code civil). Si je casse la vitrine de mon voisin, je dois réparer. Le deuxième est la responsabilité du **fait des choses** : on répond des dommages causés par **une chose dont on a la garde** (art. 1242, alinéa 1), comme un pot de fleurs qui tombe de mon balcon sur un passant ou une branche de mon arbre qui tombe sur la voiture du voisin."
+        },
+        {
+          "t": "p",
+          "c": "Le troisième vise le **fait des animaux** : le propriétaire d’un animal, ou celui qui l’utilise, répond des dommages qu’il cause (art. 1243), par exemple si son chien mord un passant. Le quatrième est la responsabilité du **fait d’autrui** : on répond des dommages causés par **une personne dont on a la charge**, comme les **parents pour leur enfant mineur** ou l’**employeur pour son salarié**."
         },
         {
           "t": "p",
@@ -329,6 +343,36 @@
           "t": "warning",
           "h": "Nuance",
           "c": "La responsabilité **des parents** suppose que l’enfant soit **mineur** et **cohabite** avec eux. Elle est très difficile à écarter : c’est une protection forte pour les victimes."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Fait personnel (art. 1240)",
+              "Responsabilité pour sa propre faute"
+            ],
+            [
+              "Fait des choses (art. 1242 al. 1)",
+              "Responsabilité pour une chose sous sa garde"
+            ],
+            [
+              "Fait des animaux (art. 1243)",
+              "Responsabilité du propriétaire ou de l’utilisateur d’un animal"
+            ],
+            [
+              "Fait d’autrui",
+              "Responsabilité pour une personne dont on répond (parents, employeur)"
+            ],
+            [
+              "Responsabilité sans faute (objective)",
+              "La victime n’a pas à prouver une faute, seulement la garde ou le lien"
+            ]
+          ]
         }
       ]
     },
@@ -452,29 +496,12 @@
           "c": "Un CDI peut être rompu de plusieurs façons, selon qui prend l’initiative. La rupture est **encadrée** pour protéger le salarié : « on ne licencie pas parce que »."
         },
         {
-          "t": "table",
-          "head": [
-            "Mode de rupture",
-            "À l’initiative de…",
-            "Condition clé"
-          ],
-          "rows": [
-            [
-              "Démission",
-              "Du salarié",
-              "Volonté claire et non équivoque"
-            ],
-            [
-              "Licenciement",
-              "De l’employeur",
-              "Cause réelle et sérieuse + procédure"
-            ],
-            [
-              "Rupture conventionnelle",
-              "Accord des deux",
-              "Convention homologuée par l’administration"
-            ]
-          ]
+          "t": "p",
+          "c": "Trois modes de rupture du CDI sont à connaître. La **démission** est à l’initiative **du salarié** ; elle suppose une **volonté claire et non équivoque** de quitter l’entreprise : une démission donnée sous le coup de la colère peut être contestée. Le **licenciement** est à l’initiative **de l’employeur** ; il doit reposer sur une **cause réelle et sérieuse** et respecter une **procédure**, avec entretien préalable et lettre de licenciement."
+        },
+        {
+          "t": "p",
+          "c": "La **rupture conventionnelle** repose sur l’**accord des deux parties**, qui signent une **convention** fixant les conditions du départ. Cette convention doit être **homologuée par l’administration**, qui vérifie que le salarié a donné un accord libre."
         },
         {
           "t": "p",
@@ -488,6 +515,36 @@
           "t": "warning",
           "h": "Piège",
           "c": "Un licenciement sans **cause réelle et sérieuse** est **abusif**, même si la procédure a été respectée. Fond **et** forme doivent être réunis."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Démission",
+              "Rupture du CDI à l’initiative du salarié (volonté claire et non équivoque)"
+            ],
+            [
+              "Licenciement",
+              "Rupture à l’initiative de l’employeur (cause réelle et sérieuse + procédure)"
+            ],
+            [
+              "Rupture conventionnelle",
+              "Rupture d’un commun accord, convention homologuée par l’administration"
+            ],
+            [
+              "Cause réelle et sérieuse",
+              "Motif fondé sur des faits exacts et vérifiables, assez grave pour justifier la rupture"
+            ],
+            [
+              "Licenciement pour motif personnel / économique",
+              "Lié au salarié (faute, insuffisance) / lié à l’entreprise (difficultés)"
+            ]
+          ]
         }
       ]
     },
@@ -556,45 +613,12 @@
           "c": "Entreprendre suppose de choisir un **cadre juridique**. La première grande distinction oppose l’**entreprise individuelle** (l’entrepreneur et l’entreprise ne font qu’un) et la **société** (une **personne morale** distincte, dotée de son propre patrimoine)."
         },
         {
-          "t": "table",
-          "head": [
-            "Forme",
-            "Associés",
-            "Responsabilité",
-            "Pour qui"
-          ],
-          "rows": [
-            [
-              "Entreprise individuelle (EI)",
-              "1 (l’entrepreneur)",
-              "Limitée au patrimoine professionnel (depuis 2022)",
-              "Se lancer seul, simplement"
-            ],
-            [
-              "EURL",
-              "1",
-              "Limitée aux apports",
-              "Seul, mais en société"
-            ],
-            [
-              "SARL",
-              "2 à 100",
-              "Limitée aux apports",
-              "PME familiale"
-            ],
-            [
-              "SAS / SASU",
-              "1 ou plusieurs",
-              "Limitée aux apports",
-              "Souplesse, levée de fonds"
-            ],
-            [
-              "SA",
-              "2 (ou 7 si cotée)",
-              "Limitée aux apports",
-              "Grandes entreprises"
-            ]
-          ]
+          "t": "p",
+          "c": "L’**entreprise individuelle** (EI) ne compte qu’**une personne**, l’entrepreneur. Depuis 2022, sa responsabilité est **limitée à son patrimoine professionnel**, séparé de son patrimoine personnel : c’est la forme la plus simple pour **se lancer seul**. L’**EURL** permet aussi d’entreprendre seul, mais **en société** : l’associé unique ne risque que ses **apports**."
+        },
+        {
+          "t": "p",
+          "c": "La **SARL** réunit **de 2 à 100 associés**, dont la responsabilité est **limitée aux apports** ; c’est la forme classique de la **PME familiale**. La **SAS**, ou **SASU** si elle n’a qu’un associé, accepte **un ou plusieurs associés** et laisse une grande **souplesse** dans l’organisation, ce qui facilite les **levées de fonds**. La **SA**, enfin, exige au moins **2 actionnaires**, ou **7 si elle est cotée en Bourse**, et convient aux **grandes entreprises**. Dans toutes ces sociétés, la responsabilité des associés est limitée à leurs apports."
         },
         {
           "t": "p",
@@ -604,6 +628,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "La **société** crée une **personne morale** distincte : elle a son nom, son patrimoine, sa responsabilité. C’est ce qui **protège** le patrimoine personnel des associés (responsabilité limitée aux apports)."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Entreprise individuelle (EI)",
+              "Un entrepreneur ; responsabilité limitée au patrimoine professionnel (2022)"
+            ],
+            [
+              "EURL",
+              "Société à un associé, responsabilité limitée aux apports"
+            ],
+            [
+              "SARL",
+              "2 à 100 associés, responsabilité limitée aux apports (PME familiale)"
+            ],
+            [
+              "SAS / SASU",
+              "Un ou plusieurs associés, grande souplesse, levée de fonds facilitée"
+            ],
+            [
+              "SA",
+              "2 actionnaires minimum (7 si cotée), grandes entreprises"
+            ],
+            [
+              "Responsabilité limitée aux apports",
+              "L’associé ne peut perdre que ce qu’il a apporté à la société"
+            ]
+          ]
         }
       ]
     },
@@ -646,39 +704,12 @@
           "c": "Une idée seule ne se protège pas ; mais sa **mise en forme** (invention, marque, œuvre) peut faire l’objet d’un **droit de propriété intellectuelle**, qui confère à son titulaire un **monopole d’exploitation** temporaire."
         },
         {
-          "t": "table",
-          "head": [
-            "Titre",
-            "Protège",
-            "Durée",
-            "Formalité"
-          ],
-          "rows": [
-            [
-              "Brevet",
-              "Une invention technique",
-              "20 ans",
-              "Dépôt à l’INPI"
-            ],
-            [
-              "Marque",
-              "Un signe distinctif (nom, logo)",
-              "10 ans renouvelables",
-              "Dépôt à l’INPI"
-            ],
-            [
-              "Droit d’auteur",
-              "Une œuvre de l’esprit (texte, musique, logiciel)",
-              "Vie de l’auteur + 70 ans",
-              "Aucune (protection automatique)"
-            ],
-            [
-              "Dessins et modèles",
-              "L’apparence d’un produit",
-              "5 ans (renouvelable jusqu’à 25)",
-              "Dépôt à l’INPI"
-            ]
-          ]
+          "t": "p",
+          "c": "Le **brevet** protège une **invention technique** pendant **20 ans**, à condition d’avoir été **déposé à l’INPI**. La **marque** protège un **signe distinctif**, comme un nom ou un logo, pendant **10 ans renouvelables** indéfiniment, après **dépôt à l’INPI**."
+        },
+        {
+          "t": "p",
+          "c": "Le **droit d’auteur** protège une **œuvre de l’esprit** : un texte, une musique, un logiciel. Il dure **toute la vie de l’auteur et 70 ans après sa mort**, et il ne demande **aucune formalité** : la protection est automatique dès la création. Les **dessins et modèles**, enfin, protègent l’**apparence d’un produit** pendant **5 ans**, renouvelables jusqu’à **25 ans**, après dépôt à l’INPI."
         },
         {
           "t": "p",
@@ -693,6 +724,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Idée = non protégeable. **Invention → brevet ; nom/logo → marque ; œuvre → droit d’auteur (automatique)**. Le dépôt à l’INPI conditionne la propriété industrielle."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Propriété intellectuelle",
+              "Droits qui donnent un monopole d’exploitation temporaire sur une création"
+            ],
+            [
+              "Brevet",
+              "Protège une invention technique, 20 ans, dépôt à l’INPI"
+            ],
+            [
+              "Marque",
+              "Protège un signe distinctif (nom, logo), 10 ans renouvelables, dépôt à l’INPI"
+            ],
+            [
+              "Droit d’auteur",
+              "Protège une œuvre de l’esprit, vie de l’auteur + 70 ans, sans formalité"
+            ],
+            [
+              "Dessins et modèles",
+              "Protègent l’apparence d’un produit, 5 ans renouvelables jusqu’à 25"
+            ],
+            [
+              "Contrefaçon",
+              "Reproduire ou utiliser une création protégée sans autorisation"
+            ]
+          ]
         }
       ]
     },

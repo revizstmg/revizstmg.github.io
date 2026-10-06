@@ -90,24 +90,8 @@
           "c": "Avant de décider, on fait un **diagnostic** : à l’**intérieur**, ses **forces** et ses **faiblesses** (ce qu’on maîtrise) ; à l’**extérieur**, les **opportunités** et les **menaces** du marché (ce qu’on subit). Croiser les deux, c’est la matrice **SWOT**."
         },
         {
-          "t": "table",
-          "head": [
-            "",
-            "Positif",
-            "Négatif"
-          ],
-          "rows": [
-            [
-              "Interne",
-              "Forces",
-              "Faiblesses"
-            ],
-            [
-              "Externe",
-              "Opportunités",
-              "Menaces"
-            ]
-          ]
+          "t": "p",
+          "c": "La matrice se lit en croisant deux axes. À l’**intérieur** de l’organisation, ce qui est **positif** forme ses **forces** et ce qui est **négatif** ses **faiblesses**. À l’**extérieur**, ce qui est **positif** forme les **opportunités** et ce qui est **négatif** les **menaces**."
         },
         {
           "t": "example",
@@ -118,6 +102,36 @@
           "t": "tip",
           "h": "Avantage durable",
           "c": "Une ressource ne donne un avantage concurrentiel que si elle est **rare et difficile à imiter** (une réputation, un savoir-faire unique). Ne confonds pas interne (forces/faiblesses) et externe (opportunités/menaces)."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Forces",
+              "Interne et positif"
+            ],
+            [
+              "Faiblesses",
+              "Interne et négatif"
+            ],
+            [
+              "Opportunités",
+              "Externe et positif"
+            ],
+            [
+              "Menaces",
+              "Externe et négatif"
+            ],
+            [
+              "Matrice SWOT",
+              "Croisement du diagnostic interne et du diagnostic externe"
+            ]
+          ]
         }
       ]
     }

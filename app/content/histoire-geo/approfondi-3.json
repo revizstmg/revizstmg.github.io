@@ -8,37 +8,12 @@
           "c": "Un **régime totalitaire** ne se contente pas d’être une dictature : il cherche à contrôler **la totalité** de la vie des individus — la politique, l’économie, la culture, les loisirs, jusqu’aux pensées. L’historienne Hannah Arendt en a fait l’analyse de référence."
         },
         {
-          "t": "table",
-          "head": [
-            "Caractéristique",
-            "Traduction concrète"
-          ],
-          "rows": [
-            [
-              "Parti unique",
-              "Un seul parti, fusionné avec l’État"
-            ],
-            [
-              "Chef charismatique",
-              "Culte du chef (Führer, Duce, « Petit Père des peuples »)"
-            ],
-            [
-              "Idéologie officielle",
-              "Une doctrine imposée à tous"
-            ],
-            [
-              "Terreur et police politique",
-              "Gestapo, NKVD, OVRA : arrestations, camps"
-            ],
-            [
-              "Propagande et embrigadement",
-              "Presse, radio, jeunesses, censure"
-            ],
-            [
-              "Économie dirigée",
-              "Au service de l’État et du réarmement"
-            ]
-          ]
+          "t": "p",
+          "c": "Un régime totalitaire se reconnaît à six caractéristiques. Il repose sur un **parti unique**, fusionné avec l’État : aucun autre parti n’est toléré. Il organise le **culte d’un chef charismatique**, présenté comme un guide infaillible : le Führer en Allemagne, le Duce en Italie, le « Petit Père des peuples » en URSS. Il impose une **idéologie officielle**, une doctrine que chacun doit adopter."
+        },
+        {
+          "t": "p",
+          "c": "Il fait régner la **terreur** grâce à une **police politique** — la Gestapo en Allemagne, le NKVD en URSS, l’OVRA en Italie — qui arrête et envoie dans des camps. Il pratique la **propagande** et l’**embrigadement**, en contrôlant la presse et la radio, en encadrant la jeunesse et en censurant toute critique. Enfin, il dirige l’**économie**, mise au service de l’État et du réarmement."
         },
         {
           "t": "p",
@@ -48,6 +23,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Dictature = confiscation du pouvoir politique. **Totalitarisme** = contrôle **total** de la société **et** des consciences, par la propagande **et** la terreur."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Totalitarisme",
+              "Régime qui veut contrôler la totalité de la vie des individus, jusqu’aux pensées"
+            ],
+            [
+              "Parti unique",
+              "Un seul parti autorisé, fusionné avec l’État"
+            ],
+            [
+              "Culte du chef",
+              "Glorification d’un chef présenté comme infaillible (Führer, Duce, « Petit Père des peuples »)"
+            ],
+            [
+              "Police politique",
+              "Gestapo, NKVD, OVRA : arrestations, camps"
+            ],
+            [
+              "Propagande et embrigadement",
+              "Contrôle de la presse, de la radio, de la jeunesse ; censure"
+            ],
+            [
+              "Économie dirigée",
+              "Économie au service de l’État et du réarmement"
+            ]
+          ]
         }
       ]
     },
@@ -59,39 +68,12 @@
           "c": "Les trois grands régimes totalitaires de l’entre-deux-guerres partagent des méthodes, mais poursuivent des **idéologies** différentes. Les comparer est un classique de l’épreuve."
         },
         {
-          "t": "table",
-          "head": [
-            "",
-            "Italie fasciste",
-            "Allemagne nazie",
-            "URSS stalinienne"
-          ],
-          "rows": [
-            [
-              "Chef",
-              "Mussolini (1922)",
-              "Hitler (1933)",
-              "Staline (fin années 1920)"
-            ],
-            [
-              "Idéologie",
-              "Nationalisme, État fort",
-              "Racisme, antisémitisme, espace vital",
-              "Communisme, lutte des classes"
-            ],
-            [
-              "Ennemi désigné",
-              "L’opposant politique",
-              "Les Juifs, les « races inférieures »",
-              "Les « ennemis du peuple », koulaks"
-            ],
-            [
-              "Police",
-              "OVRA",
-              "Gestapo, SS",
-              "NKVD"
-            ]
-          ]
+          "t": "p",
+          "c": "En **Italie**, le régime fasciste s’installe avec l’arrivée au pouvoir de **Mussolini en 1922**. Son idéologie est un **nationalisme** exalté qui veut un **État fort**, et ses ennemis désignés sont les **opposants politiques**, traqués par la police politique, l’**OVRA**."
+        },
+        {
+          "t": "p",
+          "c": "En **Allemagne**, **Hitler** arrive au pouvoir en **1933**. L’idéologie nazie repose sur le **racisme**, l’**antisémitisme** et la conquête d’un **espace vital** ; elle désigne comme ennemis les **Juifs** et les prétendues « **races inférieures** », pourchassés par la **Gestapo** et la **SS**. En **URSS**, **Staline** s’impose **à la fin des années 1920**. L’idéologie est le **communisme** fondé sur la **lutte des classes** ; les ennemis désignés sont les « **ennemis du peuple** », notamment les **koulaks**, ces paysans aisés, et la police politique est le **NKVD**."
         },
         {
           "t": "p",
@@ -101,6 +83,36 @@
           "t": "warning",
           "h": "Piège",
           "c": "Ne pas mettre un signe « égal » entre les trois : mêmes **méthodes** totalitaires, mais **idéologies** et **victimes** différentes. Le nazisme mène au génocide."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Italie fasciste",
+              "Mussolini (1922) ; nationalisme, État fort ; police OVRA"
+            ],
+            [
+              "Allemagne nazie",
+              "Hitler (1933) ; racisme, antisémitisme, espace vital ; Gestapo, SS"
+            ],
+            [
+              "URSS stalinienne",
+              "Staline (fin des années 1920) ; communisme, lutte des classes ; NKVD"
+            ],
+            [
+              "Koulaks",
+              "Paysans aisés désignés comme « ennemis du peuple » en URSS"
+            ],
+            [
+              "Espace vital (Lebensraum)",
+              "Territoires à conquérir à l’Est selon l’idéologie nazie"
+            ]
+          ]
         }
       ]
     },
@@ -229,34 +241,12 @@
           "c": "Après 1945, les deux vainqueurs, les **États-Unis** et l’**URSS**, deviennent rivaux : c’est la **guerre froide** (1947-1991), un affrontement idéologique, politique et militaire… **sans guerre directe** entre eux (d’où « froide »), par peur de l’arme nucléaire (« équilibre de la terreur »)."
         },
         {
-          "t": "table",
-          "head": [
-            "",
-            "Bloc de l’Ouest",
-            "Bloc de l’Est"
-          ],
-          "rows": [
-            [
-              "Leader",
-              "États-Unis",
-              "URSS"
-            ],
-            [
-              "Modèle",
-              "Démocratie libérale, capitalisme",
-              "Parti unique, communisme"
-            ],
-            [
-              "Alliance militaire",
-              "OTAN (1949)",
-              "Pacte de Varsovie (1955)"
-            ],
-            [
-              "Aide économique",
-              "Plan Marshall (1947)",
-              "Kominform / CAEM"
-            ]
-          ]
+          "t": "p",
+          "c": "Le **bloc de l’Ouest** a pour leader les **États-Unis**. Son modèle est la **démocratie libérale** et le **capitalisme**. Son alliance militaire est l’**OTAN**, créée en **1949**, et son principal outil d’aide économique est le **plan Marshall**, lancé en **1947** pour reconstruire l’Europe."
+        },
+        {
+          "t": "p",
+          "c": "Le **bloc de l’Est** a pour leader l’**URSS**. Son modèle est le **parti unique** et le **communisme**. Son alliance militaire est le **pacte de Varsovie**, créé en **1955**, et il organise sa coopération à travers le **Kominform**, qui coordonne les partis communistes, et le **CAEM**, qui organise l’économie du bloc."
         },
         {
           "t": "p",
@@ -266,6 +256,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Guerre froide = affrontement **indirect** de deux modèles, par pays interposés (Corée, Vietnam, Cuba…), sous la menace nucléaire."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Guerre froide",
+              "Affrontement idéologique, politique et militaire entre États-Unis et URSS (1947-1991), sans guerre directe"
+            ],
+            [
+              "Bloc de l’Ouest",
+              "États-Unis ; démocratie libérale, capitalisme ; OTAN (1949) ; plan Marshall (1947)"
+            ],
+            [
+              "Bloc de l’Est",
+              "URSS ; parti unique, communisme ; pacte de Varsovie (1955) ; Kominform, CAEM"
+            ],
+            [
+              "Rideau de fer",
+              "Expression de Churchill pour la coupure de l’Europe en deux"
+            ]
+          ]
         }
       ]
     },
@@ -277,33 +293,12 @@
           "c": "La guerre froide alterne des phases de **tension** et de **détente**, jusqu’à l’effondrement du bloc soviétique."
         },
         {
-          "t": "table",
-          "head": [
-            "Date",
-            "Événement"
-          ],
-          "rows": [
-            [
-              "1947",
-              "Doctrines Truman / Jdanov : le monde se divise"
-            ],
-            [
-              "1948-49",
-              "Blocus de Berlin ; création de l’OTAN"
-            ],
-            [
-              "1962",
-              "Crise des missiles de Cuba (au bord du nucléaire)"
-            ],
-            [
-              "1989",
-              "Chute du mur de Berlin"
-            ],
-            [
-              "1991",
-              "Dislocation de l’URSS → fin de la guerre froide"
-            ]
-          ]
+          "t": "p",
+          "c": "La guerre froide commence en **1947**, quand les **doctrines Truman et Jdanov** divisent le monde en deux camps. En **1948-1949**, le **blocus de Berlin** par l’URSS provoque la première grande crise, et l’**OTAN** est créée. En **1962**, la **crise des missiles de Cuba** amène le monde au bord de la guerre nucléaire."
+        },
+        {
+          "t": "p",
+          "c": "La fin arrive brutalement : en **1989**, le **mur de Berlin** tombe, puis en **1991** l’**URSS se disloque**, ce qui met fin à la guerre froide."
         },
         {
           "t": "p",
@@ -313,6 +308,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Trois bornes essentielles : **1947** (début), **1962** (Cuba, apogée de la tension), **1989-1991** (fin)."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "1947",
+              "Doctrines Truman et Jdanov : le monde se divise"
+            ],
+            [
+              "1948-1949",
+              "Blocus de Berlin ; création de l’OTAN"
+            ],
+            [
+              "1962",
+              "Crise des missiles de Cuba"
+            ],
+            [
+              "1989",
+              "Chute du mur de Berlin"
+            ],
+            [
+              "1991",
+              "Dislocation de l’URSS, fin de la guerre froide"
+            ],
+            [
+              "Détente",
+              "Phase d’apaisement et de négociations entre les deux blocs"
+            ]
+          ]
         }
       ]
     },
@@ -447,10 +476,20 @@
           "c": "En histoire, la **précision chronologique** distingue une bonne copie. Il faut **mémoriser** un petit nombre de dates-repères et savoir **situer** un événement dans son contexte."
         },
         {
+          "t": "p",
+          "c": "Quatre dates structurent l’histoire politique de la France après 1944. En **1944**, les **femmes obtiennent le droit de vote**. En **1958** naît la **Ve République**. En **1962**, la **guerre d’Algérie prend fin** et le **président est désormais élu au suffrage universel direct**. En **1981**, l’élection de **François Mitterrand** marque la première **alternance** : la gauche arrive au pouvoir sous la Ve République."
+        },
+        {
+          "t": "tip",
+          "h": "Réflexe",
+          "c": "Apprends les dates par **blocs de sens** (une date + un événement + sa portée), pas comme une liste vide. Une date bien placée vaut mieux que dix approximatives."
+        },
+        {
           "t": "table",
+          "h": "Notions et repères",
           "head": [
-            "Date clé",
-            "À associer"
+            "Notion ou repère",
+            "Définition ou événement"
           ],
           "rows": [
             [
@@ -459,22 +498,17 @@
             ],
             [
               "1958",
-              "Ve République"
+              "Naissance de la Ve République"
             ],
             [
               "1962",
-              "Fin de la guerre d’Algérie ; président au SUD"
+              "Fin de la guerre d’Algérie ; élection du président au suffrage universel direct"
             ],
             [
               "1981",
-              "Alternance (Mitterrand)"
+              "Alternance : élection de François Mitterrand"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "Réflexe",
-          "c": "Apprends les dates par **blocs de sens** (une date + un événement + sa portée), pas comme une liste vide. Une date bien placée vaut mieux que dix approximatives."
         }
       ]
     }

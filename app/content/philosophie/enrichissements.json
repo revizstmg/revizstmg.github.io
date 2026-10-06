@@ -13,44 +13,12 @@
             "c": "Dès l’Antiquité, deux grandes conceptions s’affrontent. Pour **Platon**, l’art est **imitation** (*mimésis*) : le peintre copie un lit particulier, qui n’est lui-même que la copie de l’Idée de lit ; l’œuvre est donc une « copie de copie », deux fois éloignée de la vérité, et le poète, qui flatte les passions, est même banni de la cité idéale de *La République*. Pour **Aristote**, au contraire, l’imitation est naturelle et instructive : la tragédie, en représentant des actions terribles, produit une **catharsis**, une purgation des émotions qui élève l’âme. Ces deux positions — l’art qui trompe / l’art qui forme — traversent toute l’histoire de la pensée."
           },
           {
-            "t": "table",
-            "head": [
-              "Époque",
-              "Ce que devient l’art",
-              "Idée directrice"
-            ],
-            "rows": [
-              [
-                "Antiquité",
-                "Imitation (mimésis) et savoir-faire",
-                "Platon (méfiance) / Aristote (catharsis)"
-              ],
-              [
-                "Moyen Âge",
-                "Art sacré au service de la foi",
-                "L’œuvre élève l’âme vers Dieu"
-              ],
-              [
-                "Renaissance",
-                "Perspective, anatomie, « génie »",
-                "L’artiste égale le savant (Vinci)"
-              ],
-              [
-                "XVIIIᵉ s.",
-                "Naissance de l’esthétique",
-                "Kant : le jugement de goût"
-              ],
-              [
-                "XIXᵉ s.",
-                "L’art pour l’art, le génie romantique",
-                "Hugo, Baudelaire, Hegel"
-              ],
-              [
-                "XXᵉ s.",
-                "Ruptures : abstraction, ready-made",
-                "Duchamp, Kandinsky, l’art conceptuel"
-              ]
-            ]
+            "t": "p",
+            "c": "L’idée d’art a profondément changé au fil des siècles. Dans l’**Antiquité**, l’art est pensé comme **imitation** (*mimésis*) et comme **savoir-faire** (*tekhnê*) : **Platon** s’en méfie, parce qu’il éloigne de la vérité, tandis qu’**Aristote** lui reconnaît une fonction de **catharsis**, une purification des passions. Au **Moyen Âge**, l’art devient un **art sacré** au service de la foi : l’œuvre doit **élever l’âme vers Dieu**."
+          },
+          {
+            "t": "p",
+            "c": "À la **Renaissance**, la maîtrise de la **perspective** et de l’**anatomie** fait naître l’idée de **génie** : l’artiste se veut l’égal du savant, comme **Léonard de Vinci**. Au **XVIIIᵉ siècle** naît l’**esthétique** comme discipline, et **Kant** analyse le **jugement de goût**. Au **XIXᵉ siècle**, le romantisme exalte le **génie** de l’artiste et l’on défend **l’art pour l’art** : on pense à **Hugo**, à **Baudelaire**, et **Hegel** voit dans l’art une manifestation de l’Esprit. Le **XXᵉ siècle**, enfin, est celui des **ruptures** : l’**abstraction** de **Kandinsky**, le **ready-made** de **Duchamp**, l’**art conceptuel**."
           },
           {
             "t": "p",
@@ -60,6 +28,40 @@
             "t": "tip",
             "h": "À retenir",
             "c": "L’idée d’« art » a une **histoire** : opposer « avant on savait faire, aujourd’hui n’importe quoi est de l’art » est un cliché ; la vraie question est de savoir **ce qui fait la valeur** d’une œuvre à chaque époque."
+          },
+          {
+            "t": "table",
+            "h": "Notions et définitions",
+            "head": [
+              "Notion",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Mimésis",
+                "Imitation : pour Platon, l’art copie des apparences (« copie de copie »)"
+              ],
+              [
+                "Catharsis (Aristote)",
+                "Purification des passions par l’œuvre, notamment la tragédie"
+              ],
+              [
+                "Tekhnê",
+                "Savoir-faire : sens antique du mot « art »"
+              ],
+              [
+                "Esthétique",
+                "Discipline qui étudie le beau et le jugement de goût (XVIIIᵉ siècle)"
+              ],
+              [
+                "Jugement de goût (Kant)",
+                "Le beau procure un plaisir désintéressé qui prétend valoir pour tous"
+              ],
+              [
+                "Ready-made (Duchamp)",
+                "Objet ordinaire exposé comme œuvre d’art"
+              ]
+            ]
           }
         ]
       },
@@ -129,29 +131,12 @@
             "c": "La question de la justice naît avec la **cité** grecque. Dans *La République*, **Platon** fait dire au sophiste **Thrasymaque** que « la justice n’est que l’intérêt du plus fort » : les lois seraient toujours faites par les puissants pour les puissants. Toute la philosophie politique va s’efforcer de réfuter ce **cynisme** — de montrer que le juste ne se réduit pas au rapport de force. Pour Platon, la justice est l’**harmonie** de l’âme et de la cité, où chacun est à sa place ; pour **Aristote**, elle est une **vertu** et se dit de deux façons."
           },
           {
-            "t": "table",
-            "head": [
-              "Forme de justice (Aristote)",
-              "Principe",
-              "Exemple"
-            ],
-            "rows": [
-              [
-                "Justice distributive",
-                "À chacun selon son mérite (égalité proportionnelle)",
-                "Répartir des récompenses selon le travail fourni"
-              ],
-              [
-                "Justice corrective / commutative",
-                "Rétablir l’égalité rompue",
-                "Réparer un tort, punir un vol"
-              ],
-              [
-                "Équité (epieikeia)",
-                "Corriger la loi générale dans le cas particulier",
-                "Adoucir une peine injuste au regard des circonstances"
-              ]
-            ]
+            "t": "p",
+            "c": "**Aristote** distingue trois formes de justice. La **justice distributive** répartit les biens et les honneurs **selon le mérite** de chacun : c’est une **égalité proportionnelle**, comme lorsqu’on répartit des récompenses selon le travail fourni. La **justice corrective**, ou **commutative**, cherche à **rétablir l’égalité rompue** entre deux personnes : réparer un tort, punir un vol."
+          },
+          {
+            "t": "p",
+            "c": "L’**équité** (*epieikeia*) vient **corriger la loi générale dans un cas particulier** : la loi, parce qu’elle est générale, ne peut pas tout prévoir, et son application mécanique produirait parfois une injustice. Le juge équitable peut ainsi **adoucir une peine** qui serait injuste au regard des circonstances."
           },
           {
             "t": "p",
@@ -161,6 +146,36 @@
             "t": "tip",
             "h": "Distinction essentielle",
             "c": "**Légal** (conforme à la loi) ≠ **légitime** (conforme à la justice). Tout le débat politique tient dans cet écart : une loi peut être légale sans être juste."
+          },
+          {
+            "t": "table",
+            "h": "Notions et définitions",
+            "head": [
+              "Notion",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Justice distributive",
+                "À chacun selon son mérite (égalité proportionnelle)"
+              ],
+              [
+                "Justice corrective / commutative",
+                "Rétablir l’égalité rompue (réparer un tort, punir un vol)"
+              ],
+              [
+                "Équité (epieikeia)",
+                "Corriger la loi générale dans le cas particulier"
+              ],
+              [
+                "Contrat social",
+                "Pacte par lequel les hommes fondent la société et l’autorité politique (Hobbes, Rousseau)"
+              ],
+              [
+                "État de nature (Hobbes)",
+                "Situation sans État : « la guerre de tous contre tous »"
+              ]
+            ]
           }
         ]
       },
@@ -230,39 +245,12 @@
             "c": "L’âge classique oppose deux camps. Pour **Descartes**, la liberté est une évidence : le libre arbitre est « la principale perfection de l’homme », si grand qu’il nous rend « en quelque façon semblables à Dieu ». Pour **Spinoza**, au contraire, cette liberté est une **illusion** : nous nous croyons libres parce que nous avons conscience de nos actions, mais nous **ignorons les causes** qui nous déterminent — telle la pierre lancée qui, si elle pensait, se croirait libre de tomber. Le **déterminisme** (tout a une cause) semble ainsi menacer la liberté."
           },
           {
-            "t": "table",
-            "head": [
-              "Penseur",
-              "Thèse sur la liberté",
-              "Formule"
-            ],
-            "rows": [
-              [
-                "Épictète",
-                "Liberté = maîtrise de ce qui dépend de nous",
-                "« Ce qui dépend de nous… »"
-              ],
-              [
-                "Descartes",
-                "Le libre arbitre est une évidence",
-                "« La principale perfection de l’homme »"
-              ],
-              [
-                "Spinoza",
-                "La liberté est une illusion (déterminisme)",
-                "La pierre qui se croit libre"
-              ],
-              [
-                "Kant",
-                "Liberté = autonomie (se donner sa loi)",
-                "Agir par devoir, non par penchant"
-              ],
-              [
-                "Sartre",
-                "L’homme est condamné à être libre",
-                "« L’existence précède l’essence »"
-              ]
-            ]
+            "t": "p",
+            "c": "Cinq auteurs balisent le débat sur la liberté. Pour **Épictète**, philosophe stoïcien, la liberté consiste à **maîtriser ce qui dépend de nous** — nos jugements, nos désirs — et à accepter le reste. Pour **Descartes**, le **libre arbitre est une évidence** que chacun éprouve en lui ; il en fait « la principale perfection de l’homme ». Pour **Spinoza**, au contraire, la liberté est une **illusion** : tout est **déterminé**, et nous ressemblons à une pierre lancée qui se croirait libre parce qu’elle a conscience de son mouvement, sans connaître la cause qui la pousse."
+          },
+          {
+            "t": "p",
+            "c": "Pour **Kant**, la liberté est **autonomie** : être libre, c’est **se donner à soi-même sa loi** et agir **par devoir**, non par penchant. Pour **Sartre**, enfin, l’homme est « **condamné à être libre** » : puisque « **l’existence précède l’essence** », aucune nature ne fixe ce que nous sommes, et nous sommes responsables de ce que nous faisons de nous-mêmes."
           },
           {
             "t": "p",
@@ -272,6 +260,36 @@
             "t": "tip",
             "h": "Distinction clé",
             "c": "**Liberté ≠ licence.** Faire tout ce qui passe par la tête, c’est être l’esclave de ses désirs ; l’autonomie (se donner sa loi) est une liberté supérieure."
+          },
+          {
+            "t": "table",
+            "h": "Notions et définitions",
+            "head": [
+              "Notion",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Libre arbitre",
+                "Pouvoir de choisir entre plusieurs possibles (Descartes : « la principale perfection de l’homme »)"
+              ],
+              [
+                "Déterminisme",
+                "Tout fait a une cause ; la liberté serait une illusion (Spinoza)"
+              ],
+              [
+                "Autonomie (Kant)",
+                "Se donner à soi-même sa propre loi, agir par devoir"
+              ],
+              [
+                "Épictète (stoïcisme)",
+                "La liberté est la maîtrise de ce qui dépend de nous"
+              ],
+              [
+                "Sartre",
+                "« L’existence précède l’essence » : l’homme est condamné à être libre"
+              ]
+            ]
           }
         ]
       },
@@ -341,29 +359,12 @@
             "c": "La grande question anthropologique est celle du couple **nature / culture**. **Rousseau**, dans le *Discours sur l’origine de l’inégalité*, imagine un « homme de la nature » — non pour affirmer qu’il a existé, mais pour **distinguer** ce qui, en nous, vient de la nature et ce qui vient de la société. La **perfectibilité** (la capacité de se transformer, d’apprendre, d’inventer) est ce qui arrache l’homme à l’animalité. **Lévi-Strauss**, plus tard, montrera que l’interdit de l’inceste, universel mais variable, marque précisément le **passage** de la nature à la culture."
           },
           {
-            "t": "table",
-            "head": [
-              "Sens de « nature »",
-              "Opposé",
-              "Exemple"
-            ],
-            "rows": [
-              [
-                "L’environnement, le monde non produit par l’homme",
-                "L’artificiel, la technique",
-                "Une forêt vierge / un barrage"
-              ],
-              [
-                "L’essence d’une chose",
-                "L’accident, le contingent",
-                "« La nature du cercle »"
-              ],
-              [
-                "L’inné",
-                "L’acquis (la culture)",
-                "Un réflexe / une langue apprise"
-              ]
-            ]
+            "t": "p",
+            "c": "Le mot « nature » a trois sens principaux, qu’il faut distinguer dans une copie. Au premier sens, la nature est l’**environnement**, le **monde qui n’est pas produit par l’homme** ; elle s’oppose alors à l’**artificiel** et à la **technique**, comme une forêt vierge s’oppose à un barrage."
+          },
+          {
+            "t": "p",
+            "c": "Au deuxième sens, la nature d’une chose est son **essence**, ce qu’elle est fondamentalement ; elle s’oppose à l’**accident**, à ce qui pourrait être autrement : on parle ainsi de « la nature du cercle ». Au troisième sens, la nature désigne l’**inné**, ce qu’on possède dès la naissance ; elle s’oppose à l’**acquis**, c’est-à-dire à la culture : un réflexe est naturel, une langue est apprise."
           },
           {
             "t": "p",
@@ -373,6 +374,40 @@
             "t": "warning",
             "h": "Le piège du « naturel »",
             "c": "Passer du fait (« c’est naturel ») à la valeur (« c’est bien ») est un **sophisme naturaliste**. Beaucoup de comportements dits « naturels » sont en réalité **culturels**, donc modifiables."
+          },
+          {
+            "t": "table",
+            "h": "Notions et définitions",
+            "head": [
+              "Notion",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Nature (environnement)",
+                "Le monde non produit par l’homme, opposé à l’artificiel"
+              ],
+              [
+                "Nature (essence)",
+                "Ce qu’une chose est fondamentalement, opposé à l’accident"
+              ],
+              [
+                "Nature (inné)",
+                "Ce qu’on possède dès la naissance, opposé à l’acquis"
+              ],
+              [
+                "Culture",
+                "Tout ce que l’homme ajoute à la nature : langage, techniques, lois, arts, mœurs"
+              ],
+              [
+                "Perfectibilité (Rousseau)",
+                "Capacité de l’homme à se transformer, à apprendre, à inventer"
+              ],
+              [
+                "Principe responsabilité (Jonas)",
+                "Agir de façon à préserver la vie humaine future"
+              ]
+            ]
           }
         ]
       },
@@ -442,34 +477,12 @@
             "c": "La distinction décisive est celle du **croire** et du **savoir**. **Croire**, c’est adhérer **sans preuve** (la foi) ; **savoir**, c’est tenir pour vrai **avec preuve** (démonstration, expérience). La foi n’est donc pas un savoir défaillant, un savoir « raté » : c’est un **autre rapport** à la vérité. **Pascal**, savant et croyant, l’exprime d’une formule célèbre : « le cœur a ses raisons que la raison ne connaît point » — il existe un ordre du cœur, irréductible à celui de la démonstration. Son fameux **pari** invite le sceptique à parier sur l’existence de Dieu, l’enjeu (l’infini) valant le risque."
           },
           {
-            "t": "table",
-            "head": [
-              "Penseur",
-              "Regard sur la religion",
-              "Idée"
-            ],
-            "rows": [
-              [
-                "Pascal",
-                "La foi dépasse la raison sans la nier",
-                "« Le cœur a ses raisons… » ; le pari"
-              ],
-              [
-                "Marx",
-                "Critique sociale",
-                "« Opium du peuple » : consolation qui endort"
-              ],
-              [
-                "Freud",
-                "Critique psychologique",
-                "Illusion née d’un désir de protection"
-              ],
-              [
-                "Durkheim",
-                "Approche sociologique",
-                "Fonction de lien social, ciment du groupe"
-              ]
-            ]
+            "t": "p",
+            "c": "Quatre penseurs offrent des regards très différents sur la religion. **Pascal** montre que la **foi dépasse la raison sans la nier** : « le cœur a ses raisons que la raison ne connaît point », et son célèbre **pari** invite à miser sur l’existence de Dieu. **Marx** en fait une **critique sociale** : la religion est « l’**opium du peuple** », une consolation qui endort les opprimés au lieu de les pousser à changer leur condition."
+          },
+          {
+            "t": "p",
+            "c": "**Freud** en propose une **critique psychologique** : la religion est une **illusion**, née du désir d’être protégé comme par un père. **Durkheim**, enfin, adopte une **approche sociologique** : sans se prononcer sur la vérité des croyances, il montre que la religion remplit une **fonction de lien social** et sert de **ciment** au groupe."
           },
           {
             "t": "p",
@@ -479,6 +492,40 @@
             "t": "warning",
             "h": "Piège à éviter",
             "c": "Opposer bêtement « religion = obscurantisme » et « science = vérité ». Le sujet demande de **distinguer les plans** (croire / savoir), pas de disqualifier l’un par l’autre."
+          },
+          {
+            "t": "table",
+            "h": "Notions et définitions",
+            "head": [
+              "Notion",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Croire / savoir",
+                "Tenir pour vrai sans preuve / avec preuve"
+              ],
+              [
+                "Pari de Pascal",
+                "Argument qui invite à miser sur l’existence de Dieu ; « le cœur a ses raisons… »"
+              ],
+              [
+                "Opium du peuple (Marx)",
+                "La religion comme consolation qui détourne de transformer sa condition"
+              ],
+              [
+                "Illusion (Freud)",
+                "Croyance née d’un désir de protection"
+              ],
+              [
+                "Durkheim",
+                "La religion comme lien social, ciment du groupe"
+              ],
+              [
+                "Religare",
+                "Relier : origine possible du mot religion"
+              ]
+            ]
           }
         ]
       },
@@ -548,39 +595,12 @@
             "c": "Le **travail**, activité par laquelle l’homme transforme la nature en se transformant lui-même, est au cœur de la réflexion. **Hegel**, dans la « dialectique du maître et de l’esclave », montre que c’est l’**esclave** — celui qui travaille et façonne le monde — qui accède à la conscience de soi, tandis que le maître, purement consommateur, en reste dépendant. **Marx** en tire une critique de l’**aliénation** : dans le travail industriel, l’ouvrier, dépossédé du produit et du sens de son activité, devient étranger à lui-même."
           },
           {
-            "t": "table",
-            "head": [
-              "Penseur",
-              "Sur la technique / le travail",
-              "Idée"
-            ],
-            "rows": [
-              [
-                "Bergson",
-                "L’homme est homo faber",
-                "L’intelligence fabrique des outils"
-              ],
-              [
-                "Hegel",
-                "Dialectique maître / esclave",
-                "Le travail humanise et libère"
-              ],
-              [
-                "Marx",
-                "Critique de l’aliénation",
-                "Le travail industriel peut déshumaniser"
-              ],
-              [
-                "Heidegger",
-                "Critique de la technique moderne",
-                "La nature réduite à un « fonds » exploitable"
-              ],
-              [
-                "Jonas",
-                "Éthique du futur",
-                "Le principe responsabilité"
-              ]
-            ]
+            "t": "p",
+            "c": "Plusieurs auteurs ont pensé la technique et le travail. Pour **Bergson**, l’homme est ***homo faber*** : son intelligence est d’abord la faculté de **fabriquer des outils**. **Hegel**, avec la **dialectique du maître et de l’esclave**, montre que le **travail humanise et libère** : c’est l’esclave, en transformant le monde, qui prend conscience de lui-même."
+          },
+          {
+            "t": "p",
+            "c": "**Marx** fait la **critique de l’aliénation** : le **travail industriel** peut **déshumaniser** l’ouvrier, dépossédé du produit et du sens de son travail. **Heidegger** critique la **technique moderne**, qui réduit la nature à un « **fonds** » exploitable. **Jonas**, enfin, propose une **éthique du futur**, le **principe responsabilité**, face à une puissance technique capable de menacer les générations à venir."
           },
           {
             "t": "p",
@@ -590,6 +610,36 @@
             "t": "tip",
             "h": "Distinction clé",
             "c": "**Moyen / fin.** La technique est un **moyen** ; un même couteau soigne ou tue. La vraie question n’est pas « pour ou contre la technique », mais « quel **usage** en faisons-nous ? »."
+          },
+          {
+            "t": "table",
+            "h": "Notions et définitions",
+            "head": [
+              "Notion",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Homo faber (Bergson)",
+                "L’homme se définit par sa capacité à fabriquer des outils"
+              ],
+              [
+                "Dialectique du maître et de l’esclave (Hegel)",
+                "Le travail humanise et libère celui qui travaille"
+              ],
+              [
+                "Aliénation (Marx)",
+                "Le travailleur dépossédé du produit et du sens de son travail"
+              ],
+              [
+                "Fonds (Heidegger)",
+                "La nature réduite par la technique moderne à une réserve exploitable"
+              ],
+              [
+                "Principe responsabilité (Jonas)",
+                "Éthique qui tient compte des générations futures"
+              ]
+            ]
           }
         ]
       },
@@ -659,34 +709,12 @@
             "c": "C’est le sens de la célèbre **allégorie de la caverne** de **Platon** : des prisonniers enchaînés prennent les **ombres** projetées sur une paroi pour la réalité ; l’un d’eux se libère, sort, découvre le soleil (l’Idée du Bien, la vérité), puis revient — et on ne le croit pas. Philosopher, c’est cette **conversion** du regard, ce difficile passage de l’apparence au réel, de l’opinion au savoir. **Descartes**, à l’aube de la modernité, propose une autre méthode : le **doute méthodique**. Douter volontairement de tout — des sens, des raisonnements, du monde — jusqu’à trouver une première certitude que le doute ne peut emporter : « je pense, donc je suis » (*cogito*)."
           },
           {
-            "t": "table",
-            "head": [
-              "Distinction",
-              "Sens",
-              "Exemple"
-            ],
-            "rows": [
-              [
-                "Vérité / réalité",
-                "Propriété du jugement / ce qui est",
-                "« Il pleut » est vrai si, de fait, il pleut"
-              ],
-              [
-                "Opinion / savoir",
-                "Croyance non fondée / connaissance justifiée",
-                "Croire vs démontrer"
-              ],
-              [
-                "Vérités de raison / de fait (Leibniz)",
-                "Logiques, nécessaires / vérifiées par l’expérience",
-                "2 + 2 = 4 / « César a franchi le Rubicon »"
-              ],
-              [
-                "Objectif / subjectif",
-                "Vaut pour l’objet, pour tous / dépend du sujet",
-                "« 20 °C » / « il fait bon »"
-              ]
-            ]
+            "t": "p",
+            "c": "Quatre distinctions organisent la notion de vérité. La **vérité** n’est pas la **réalité** : la réalité, c’est ce qui est ; la vérité est une **propriété du jugement** que l’on porte sur elle. « Il pleut » est vrai si, de fait, il pleut. L’**opinion** n’est pas le **savoir** : l’opinion est une **croyance non fondée**, le savoir une **connaissance justifiée** ; c’est toute la différence entre croire et démontrer."
+          },
+          {
+            "t": "p",
+            "c": "**Leibniz** distingue les **vérités de raison**, **logiques et nécessaires**, comme 2 + 2 = 4, et les **vérités de fait**, **vérifiées par l’expérience**, comme « César a franchi le Rubicon ». Enfin, est **objectif** ce qui vaut pour l’objet et donc pour tous, comme « il fait 20 °C », alors qu’est **subjectif** ce qui dépend du sujet, comme « il fait bon »."
           },
           {
             "t": "p",
@@ -696,6 +724,40 @@
             "t": "warning",
             "h": "Le piège du relativisme",
             "c": "« À chacun sa vérité » confond le **goût** (subjectif) et la **vérité** (qui prétend valoir pour tous). Une vérité ne se décide pas au vote : la Terre ne s’est pas mise à tourner quand la majorité l’a admis."
+          },
+          {
+            "t": "table",
+            "h": "Notions et définitions",
+            "head": [
+              "Notion",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Vérité / réalité",
+                "Propriété du jugement / ce qui est"
+              ],
+              [
+                "Opinion / savoir",
+                "Croyance non fondée / connaissance justifiée"
+              ],
+              [
+                "Vérités de raison / de fait (Leibniz)",
+                "Nécessaires et logiques / contingentes, vérifiées par l’expérience"
+              ],
+              [
+                "Objectif / subjectif",
+                "Vaut pour tous / dépend du sujet"
+              ],
+              [
+                "Axiome",
+                "Principe de départ d’une démonstration, admis sans être démontré"
+              ],
+              [
+                "Allégorie de la caverne (Platon)",
+                "Passer des ombres (apparences) à la vérité"
+              ]
+            ]
           }
         ]
       },
@@ -819,99 +881,99 @@
             "c": "Inutile de connaître des dizaines d’auteurs : quelques-uns, **bien maîtrisés** (une idée, une formule, un exemple chacun), suffisent à nourrir n’importe quelle copie. Voici une galerie de repères, de l’Antiquité au XXᵉ siècle."
           },
           {
-            "t": "table",
-            "head": [
-              "Auteur",
-              "Idée clé",
-              "Notions concernées"
-            ],
-            "rows": [
-              [
-                "Platon",
-                "Allégorie de la caverne : des ombres à la vérité",
-                "Vérité, art"
-              ],
-              [
-                "Aristote",
-                "Justice distributive et corrective, l’équité qui corrige la loi ; l’homme « animal politique »",
-                "Justice"
-              ],
-              [
-                "Épictète",
-                "Distinguer ce qui dépend de nous",
-                "Liberté, bonheur"
-              ],
-              [
-                "Descartes",
-                "Doute méthodique, cogito, maîtrise de la nature",
-                "Vérité, technique"
-              ],
-              [
-                "Pascal",
-                "Le « roseau pensant » ; les raisons du cœur",
-                "Religion, nature"
-              ],
-              [
-                "Spinoza",
-                "La liberté comme illusion (déterminisme)",
-                "Liberté"
-              ],
-              [
-                "Rousseau",
-                "Nature / culture ; le contrat social",
-                "Justice, liberté, nature"
-              ],
-              [
-                "Kant",
-                "L’autonomie ; le jugement de goût désintéressé",
-                "Liberté, art"
-              ],
-              [
-                "Hegel",
-                "Dialectique maître / esclave ; l’art manifeste l’Esprit",
-                "Technique, art"
-              ],
-              [
-                "Marx",
-                "Aliénation ; religion « opium du peuple »",
-                "Technique, religion"
-              ],
-              [
-                "Nietzsche",
-                "Critique de la morale et des « arrière-mondes »",
-                "Vérité, religion"
-              ],
-              [
-                "Freud",
-                "L’inconscient ; la religion comme illusion",
-                "Conscience, religion"
-              ],
-              [
-                "Heidegger",
-                "La technique moderne réduit le monde à un « fonds »",
-                "Technique"
-              ],
-              [
-                "Sartre",
-                "L’existence précède l’essence : liberté et responsabilité",
-                "Liberté"
-              ],
-              [
-                "Arendt",
-                "La « banalité du mal » ; l’action politique",
-                "Justice, politique"
-              ],
-              [
-                "Jonas",
-                "Le principe responsabilité envers l’avenir",
-                "Nature, technique"
-              ]
-            ]
+            "t": "p",
+            "c": "Voici une galerie de seize auteurs, chacun avec une idée à retenir. Dans l’Antiquité, **Platon** est l’auteur de l’**allégorie de la caverne**, qui décrit le passage des ombres à la vérité ; il nourrit les notions de vérité et d’art. **Aristote** distingue la **justice distributive et corrective**, défend l’**équité** qui corrige la loi et définit l’homme comme un « **animal politique** ». **Épictète** apprend à **distinguer ce qui dépend de nous** de ce qui n’en dépend pas, pour penser la liberté et le bonheur."
+          },
+          {
+            "t": "p",
+            "c": "À l’âge classique, **Descartes** pratique le **doute méthodique**, aboutit au **cogito** et veut rendre l’homme « comme maître et possesseur de la nature » (vérité, technique). **Pascal** voit l’homme comme un « **roseau pensant** » et parle des **raisons du cœur** (religion, nature). **Spinoza** fait de la **liberté une illusion** produite par l’ignorance des causes. **Rousseau** pense le couple **nature / culture** et le **contrat social** (justice, liberté, nature). **Kant** définit la liberté comme **autonomie** et analyse le **jugement de goût désintéressé** (liberté, art)."
+          },
+          {
+            "t": "p",
+            "c": "Au XIXᵉ siècle, **Hegel** décrit la **dialectique du maître et de l’esclave** et voit dans l’art une manifestation de l’Esprit (technique, art). **Marx** analyse l’**aliénation** et qualifie la religion d’« **opium du peuple** ». **Nietzsche** critique la **morale** et les « **arrière-mondes** » (vérité, religion). **Freud** découvre l’**inconscient** et voit dans la religion une **illusion** (conscience, religion)."
+          },
+          {
+            "t": "p",
+            "c": "Au XXᵉ siècle, **Heidegger** montre que la **technique moderne réduit le monde à un « fonds »**. **Sartre** affirme que « **l’existence précède l’essence** », ce qui lie liberté et responsabilité. **Arendt** analyse la « **banalité du mal** » et l’action politique (justice, politique). **Jonas**, enfin, formule le **principe responsabilité** envers l’avenir (nature, technique)."
           },
           {
             "t": "tip",
             "h": "Stratégie payante",
             "c": "Reliez chaque auteur à **une notion** et à **un exemple**. Le jour du bac, vous mobiliserez la bonne référence au bon endroit, expliquée — jamais plaquée."
+          },
+          {
+            "t": "table",
+            "h": "Notions et définitions",
+            "head": [
+              "Notion",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Platon",
+                "Allégorie de la caverne : des ombres à la vérité"
+              ],
+              [
+                "Aristote",
+                "Justice distributive et corrective, équité ; l’homme « animal politique »"
+              ],
+              [
+                "Épictète",
+                "Distinguer ce qui dépend de nous"
+              ],
+              [
+                "Descartes",
+                "Doute méthodique, cogito, maîtrise de la nature"
+              ],
+              [
+                "Pascal",
+                "Le « roseau pensant » ; les raisons du cœur"
+              ],
+              [
+                "Spinoza",
+                "La liberté comme illusion (déterminisme)"
+              ],
+              [
+                "Rousseau",
+                "Nature / culture ; le contrat social"
+              ],
+              [
+                "Kant",
+                "L’autonomie ; le jugement de goût désintéressé"
+              ],
+              [
+                "Hegel",
+                "Dialectique du maître et de l’esclave ; l’art manifeste l’Esprit"
+              ],
+              [
+                "Marx",
+                "Aliénation ; religion « opium du peuple »"
+              ],
+              [
+                "Nietzsche",
+                "Critique de la morale et des « arrière-mondes »"
+              ],
+              [
+                "Freud",
+                "L’inconscient ; la religion comme illusion"
+              ],
+              [
+                "Heidegger",
+                "La technique moderne réduit le monde à un « fonds »"
+              ],
+              [
+                "Sartre",
+                "L’existence précède l’essence : liberté et responsabilité"
+              ],
+              [
+                "Arendt",
+                "La « banalité du mal » ; l’action politique"
+              ],
+              [
+                "Jonas",
+                "Le principe responsabilité envers l’avenir"
+              ]
+            ]
           }
         ]
       }

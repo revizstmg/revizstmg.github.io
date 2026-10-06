@@ -46,6 +46,8 @@ npm run test:parcours   # parcours navigateur, après un build (~3 min)
 - Les cours de Terminale ne contiennent que des notions de Terminale. Les notions de
   Première servent seulement à formuler des exercices.
 - N'inventez aucune notion : tout doit correspondre au programme officiel de STMG.
+- Un cours est rédigé en texte, sans tableau au milieu : seul un tableau
+  « Notions et définitions » peut terminer un chapitre (docs/ARCHITECTURE.md).
 - L'interface et le contenu sont en français.
 
 ## Interface

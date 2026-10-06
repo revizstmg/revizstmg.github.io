@@ -16,34 +16,47 @@
           "c": "Ce contrat te lie vraiment : tu dois payer, le vendeur doit te fournir la place. C’est la **force obligatoire** : « le contrat tient lieu de loi » à ceux qui l’ont conclu. On ne peut pas se rétracter sur un coup de tête. La loi prévoit des exceptions, comme les 14 jours de rétractation pour la plupart des achats à distance, mais pas pour un billet de concert à date fixe : les activités de loisirs datées en sont exclues."
         },
         {
-          "t": "table",
-          "head": [
-            "Type de contrat",
-            "Ce qui le caractérise"
-          ],
-          "rows": [
-            [
-              "Synallagmatique",
-              "Obligations réciproques (vente)"
-            ],
-            [
-              "À titre onéreux",
-              "Chacun reçoit une contrepartie"
-            ],
-            [
-              "Consensuel",
-              "Le seul accord suffit, sans écrit"
-            ],
-            [
-              "D’adhésion",
-              "On accepte des clauses non négociées (abonnement)"
-            ]
-          ]
+          "t": "p",
+          "c": "Le contrat d’achat d’un billet se classe facilement. Il est **synallagmatique**, puisque les obligations sont **réciproques**, comme dans toute vente : tu paies, le vendeur te fournit la place. Il est **à titre onéreux**, car **chacun reçoit une contrepartie**."
+        },
+        {
+          "t": "p",
+          "c": "Il est **consensuel** : le **seul accord** suffit à le former, sans écrit. Et il est **d’adhésion**, car tu acceptes des **conditions générales que tu n’as pas négociées**, comme pour un abonnement."
         },
         {
           "t": "tip",
           "h": "L’idée à retenir",
           "c": "Un contrat, ce n’est pas forcément un gros document signé : c’est la rencontre de deux volontés (offre + acceptation). Un clic, une poignée de main, un ticket de caisse… peuvent suffire. L’écrit sert surtout de **preuve**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Contrat synallagmatique",
+              "Obligations réciproques (vente)"
+            ],
+            [
+              "Contrat à titre onéreux",
+              "Chacun reçoit une contrepartie"
+            ],
+            [
+              "Contrat consensuel",
+              "Le seul accord suffit, sans écrit"
+            ],
+            [
+              "Contrat d’adhésion",
+              "Clauses non négociées (abonnement)"
+            ],
+            [
+              "Formation du contrat",
+              "Rencontre d’une offre et d’une acceptation"
+            ]
+          ]
         }
       ]
     },
@@ -60,29 +73,8 @@
           "c": "Non : tu as dit « oui », mais ton accord a été obtenu par une **tromperie**. Le droit considère alors que ton consentement est « vicié » : tu peux demander au juge d’**annuler** le contrat. Pour être valable, un contrat exige en effet un consentement **libre et éclairé** (art. 1128)."
         },
         {
-          "t": "table",
-          "head": [
-            "Vice",
-            "Définition",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Erreur",
-              "Se tromper sur une qualité essentielle",
-              "Croire acheter un original"
-            ],
-            [
-              "Dol",
-              "Être trompé par des manœuvres",
-              "Le vendeur cache un défaut grave"
-            ],
-            [
-              "Violence",
-              "Consentir sous la contrainte",
-              "Signer sous la menace"
-            ]
-          ]
+          "t": "p",
+          "c": "Trois vices peuvent fausser le consentement. L’**erreur**, c’est **se tromper sur une qualité essentielle**, comme croire acheter un original. Le **dol**, c’est **être trompé par des manœuvres** de l’autre partie, comme un vendeur qui cache un défaut grave. La **violence**, c’est **consentir sous la contrainte**, par exemple signer sous la menace."
         },
         {
           "t": "p",
@@ -92,6 +84,36 @@
           "t": "warning",
           "h": "Nullité ≠ résiliation",
           "c": "Annuler pour vice, c’est effacer le contrat depuis le début (comme s’il n’avait jamais existé). Ce n’est pas la même chose que « résilier » (arrêter pour l’avenir un contrat valable). Attention aussi : une simple erreur sur la **valeur** ne suffit pas."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Consentement libre et éclairé (art. 1128)",
+              "Condition de validité du contrat"
+            ],
+            [
+              "Erreur",
+              "Se tromper sur une qualité essentielle"
+            ],
+            [
+              "Dol",
+              "Être trompé par des manœuvres ; ouvre droit à la nullité et à des dommages-intérêts"
+            ],
+            [
+              "Violence",
+              "Consentir sous la contrainte"
+            ],
+            [
+              "Nullité",
+              "Annulation du contrat par le juge"
+            ]
+          ]
         }
       ]
     },
@@ -138,25 +160,12 @@
           "c": "Le maître du chien. Pour que sa **responsabilité civile** soit engagée, il faut réunir **trois éléments cumulatifs** : un **fait générateur** (le chien a mordu), un **dommage** (la blessure) et un **lien de causalité** entre les deux. Les trois ensemble → le maître doit **réparer**, c’est-à-dire indemniser la victime."
         },
         {
-          "t": "table",
-          "head": [
-            "Condition",
-            "Ici"
-          ],
-          "rows": [
-            [
-              "Fait générateur",
-              "Le fait d’une chose/animal sous sa garde"
-            ],
-            [
-              "Dommage",
-              "La blessure (préjudice corporel)"
-            ],
-            [
-              "Lien de causalité",
-              "La morsure a causé la blessure"
-            ]
-          ]
+          "t": "p",
+          "c": "Appliquons les trois conditions au cas. Le **fait générateur** est ici le **fait d’un animal placé sous la garde** de son maître : c’est le chien qui a mordu. Le **dommage** est la **blessure** de la victime, un **préjudice corporel**."
+        },
+        {
+          "t": "p",
+          "c": "Le **lien de causalité** est évident : c’est **la morsure qui a causé la blessure**. Les trois conditions étant réunies, la responsabilité civile du maître est engagée."
         },
         {
           "t": "p",
@@ -166,6 +175,32 @@
           "t": "tip",
           "h": "La règle des 3",
           "c": "Fait générateur + dommage + lien de causalité. S’il en manque un seul (par ex. aucun dommage réel), il n’y a **pas** de responsabilité civile."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Fait générateur",
+              "Fait à l’origine du dommage (faute, chose, animal, fait d’autrui)"
+            ],
+            [
+              "Dommage (préjudice)",
+              "Atteinte subie par la victime (corporelle, matérielle, morale)"
+            ],
+            [
+              "Lien de causalité",
+              "Le fait générateur a causé le dommage"
+            ],
+            [
+              "Réparation intégrale",
+              "Replacer la victime dans l’état où elle serait sans le dommage"
+            ]
+          ]
         }
       ]
     },
@@ -182,39 +217,35 @@
           "c": "Devant le juge **pénal**, la société le sanctionne (amende, retrait de permis, voire prison) : le but est de **punir** un comportement interdit. Devant le juge **civil**, il doit **indemniser** le piéton pour ses blessures : le but est de **réparer** le préjudice d’une victime."
         },
         {
-          "t": "table",
-          "head": [
-            "Critère",
-            "Civile",
-            "Pénale"
-          ],
-          "rows": [
-            [
-              "But",
-              "Réparer",
-              "Punir"
-            ],
-            [
-              "Qui agit",
-              "La victime (elle saisit le juge civil)",
-              "Le ministère public (au nom de la société)"
-            ],
-            [
-              "Sanction",
-              "Dommages-intérêts",
-              "Amende, prison"
-            ],
-            [
-              "Bénéficiaire",
-              "La victime, qui est indemnisée",
-              "La société, dont l’ordre est protégé"
-            ]
-          ]
+          "t": "p",
+          "c": "La **responsabilité civile** a pour but de **réparer** : c’est **la victime qui agit** en saisissant le juge civil, elle obtient des **dommages-intérêts** et c’est **elle qui est indemnisée**."
+        },
+        {
+          "t": "p",
+          "c": "La **responsabilité pénale** a pour but de **punir** : c’est le **ministère public qui agit, au nom de la société** ; la sanction est une **amende** ou une peine de **prison**, et c’est **la société** dont l’ordre est protégé."
         },
         {
           "t": "warning",
           "h": "Ne confonds pas",
           "c": "Responsabilité **civile** = réparer (de l’argent pour la victime). Responsabilité **pénale** = punir (une peine au nom de la société). Un même acte peut relever **des deux** en même temps."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Responsabilité civile",
+              "Réparer : la victime agit et reçoit des dommages-intérêts"
+            ],
+            [
+              "Responsabilité pénale",
+              "Punir : le ministère public agit au nom de la société (amende, prison)"
+            ]
+          ]
         }
       ]
     }
@@ -327,21 +358,8 @@
           "c": "Tout dépend de la **forme juridique** choisie pour l’entreprise (entreprise individuelle ou société). En entreprise individuelle, l’entrepreneur et l’entreprise ne font (souvent) qu’un : le patrimoine personnel est plus exposé (même si, depuis 2015, la résidence principale est insaisissable de droit par les créanciers professionnels et, depuis 2022, la loi sépare de droit le patrimoine professionnel du patrimoine personnel). En créant une **société** (SARL, SAS), elle donne naissance à une **personne morale** distincte : les patrimoines sont séparés et sa responsabilité est en principe **limitée à ses apports**."
         },
         {
-          "t": "table",
-          "head": [
-            "Forme",
-            "Responsabilité"
-          ],
-          "rows": [
-            [
-              "Entreprise individuelle",
-              "Patrimoine pro séparé du perso (2022)"
-            ],
-            [
-              "SARL / SAS",
-              "Limitée aux apports (personne morale)"
-            ]
-          ]
+          "t": "p",
+          "c": "Pour l’**entreprise individuelle**, la loi de 2022 **sépare de droit le patrimoine professionnel du patrimoine personnel** : les créanciers professionnels ne peuvent saisir que les biens utiles à l’activité. Dans une **SARL** ou une **SAS**, la société est une **personne morale** distincte : la responsabilité des associés est **limitée à leurs apports**."
         },
         {
           "t": "warning",
@@ -352,6 +370,28 @@
           "t": "tip",
           "h": "Le bon réflexe",
           "c": "Choisir une forme juridique, c’est d’abord choisir comment on **engage** (ou on **protège**) son patrimoine."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Entreprise individuelle (depuis 2022)",
+              "Patrimoine professionnel séparé du patrimoine personnel"
+            ],
+            [
+              "SARL / SAS",
+              "Responsabilité limitée aux apports (personne morale)"
+            ],
+            [
+              "Caution personnelle",
+              "Engagement du dirigeant à payer sur ses biens si la société ne paie pas"
+            ]
+          ]
         }
       ]
     },
@@ -368,34 +408,43 @@
           "c": "Oui : Léa peut agir en contrefaçon contre le concurrent qui copie son nom de marque si elle a **déposé sa marque** à l’INPI. La **propriété industrielle** (marque, brevet, dessin) donne un **monopole d’exploitation** et permet d’attaquer les copieurs en **contrefaçon**. C’est différent du **droit d’auteur**, qui protège les œuvres (un texte, une musique, un site) **automatiquement**, sans dépôt."
         },
         {
-          "t": "table",
-          "head": [
-            "On protège…",
-            "Par…",
-            "Durée"
-          ],
-          "rows": [
-            [
-              "Une invention technique",
-              "Brevet (INPI)",
-              "20 ans"
-            ],
-            [
-              "Un nom, un logo",
-              "Marque (INPI)",
-              "10 ans renouvelables"
-            ],
-            [
-              "Une œuvre (texte, musique)",
-              "Droit d’auteur (auto.)",
-              "Vie + 70 ans"
-            ]
-          ]
+          "t": "p",
+          "c": "Pour protéger **une invention technique**, on dépose un **brevet** à l’INPI ; la protection dure **20 ans**. Pour protéger **un nom ou un logo**, on dépose une **marque** à l’INPI, protégée **10 ans renouvelables**."
+        },
+        {
+          "t": "p",
+          "c": "Pour **une œuvre**, comme un texte ou une musique, c’est le **droit d’auteur** qui s’applique, **automatiquement** et sans dépôt, pendant **toute la vie de l’auteur et 70 ans après**."
         },
         {
           "t": "warning",
           "h": "Attention",
           "c": "Une **idée** seule ne se protège pas : c’est sa **mise en forme** (invention, marque, œuvre) qui est protégeable. Sans **dépôt**, un nom se défend beaucoup plus difficilement : protéger, c’est anticiper."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Brevet",
+              "Invention technique, dépôt INPI, 20 ans"
+            ],
+            [
+              "Marque",
+              "Nom, logo, dépôt INPI, 10 ans renouvelables"
+            ],
+            [
+              "Droit d’auteur",
+              "Œuvre de l’esprit, protection automatique, vie + 70 ans"
+            ],
+            [
+              "Contrefaçon",
+              "Copie d’une création protégée sans autorisation"
+            ]
+          ]
         }
       ]
     }

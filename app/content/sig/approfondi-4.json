@@ -8,19 +8,37 @@
           "c": "Le **système d’information (SI)** rassemble les ressources (humaines, matérielles, logicielles) qui **collectent, stockent, traitent et diffusent** l’information. C’est le « système nerveux » de l’organisation."
         },
         {
+          "t": "p",
+          "c": "Chacune des quatre fonctions se reconnaît à un geste concret. **Collecter**, c’est faire entrer l’information, par exemple en saisissant une commande. **Stocker**, c’est la conserver de façon organisée, en général dans une base de données."
+        },
+        {
+          "t": "p",
+          "c": "**Traiter**, c’est transformer l’information pour qu’elle serve : calculer un total, éditer un document comme une facture. **Diffuser**, enfin, c’est la transmettre au bon service ou à la bonne personne, pour qu’elle puisse agir ou décider."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "SI = **collecter → stocker → traiter → diffuser** l’information."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Fonction",
-            "Exemple"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
+              "Système d’information (SI)",
+              "Ressources qui collectent, stockent, traitent et diffusent l’information"
+            ],
+            [
               "Collecter",
-              "Saisir une commande"
+              "Faire entrer l’information (saisir une commande)"
             ],
             [
               "Stocker",
-              "Base de données"
+              "Conserver l’information (base de données)"
             ],
             [
               "Traiter",
@@ -28,14 +46,9 @@
             ],
             [
               "Diffuser",
-              "Transmettre au bon service"
+              "Transmettre l’information au bon service"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "SI = **collecter → stocker → traiter → diffuser** l’information."
         }
       ]
     },
@@ -140,29 +153,12 @@
       "h": "🧮 SQL — agrégation et jointures",
       "blocks": [
         {
-          "t": "table",
-          "head": [
-            "Fonction",
-            "Rôle"
-          ],
-          "rows": [
-            [
-              "COUNT()",
-              "Compter"
-            ],
-            [
-              "SUM()",
-              "Additionner"
-            ],
-            [
-              "AVG()",
-              "Moyenne"
-            ],
-            [
-              "MAX/MIN",
-              "Extremum"
-            ]
-          ]
+          "t": "p",
+          "c": "Les fonctions d’agrégation résument un ensemble de lignes en un seul nombre. **COUNT()** sert à compter les lignes, **SUM()** à additionner les valeurs d’une colonne, **AVG()** à en calculer la moyenne, et **MAX()** ou **MIN()** à trouver la plus grande ou la plus petite valeur, c’est-à-dire un extremum."
+        },
+        {
+          "t": "p",
+          "c": "On les combine souvent avec une condition WHERE pour ne calculer que sur certaines lignes, par exemple le total des commandes d’un seul client."
         },
         {
           "t": "example",
@@ -173,6 +169,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Agrégation = **calculer** ; jointure = **croiser** deux tables via leur **clé commune**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "COUNT()",
+              "Compte les lignes"
+            ],
+            [
+              "SUM()",
+              "Additionne une colonne"
+            ],
+            [
+              "AVG()",
+              "Calcule la moyenne d’une colonne"
+            ],
+            [
+              "MAX / MIN",
+              "Donne la valeur la plus grande / la plus petite (extremum)"
+            ],
+            [
+              "Jointure",
+              "Croisement de deux tables par l’égalité clé primaire = clé étrangère"
+            ]
+          ]
         }
       ]
     }
@@ -262,29 +288,12 @@
       "h": "🔐 Sécurité : DICP et menaces",
       "blocks": [
         {
-          "t": "table",
-          "head": [
-            "Objectif",
-            "Signification"
-          ],
-          "rows": [
-            [
-              "Disponibilité",
-              "Accessible quand il le faut"
-            ],
-            [
-              "Intégrité",
-              "Non altérée"
-            ],
-            [
-              "Confidentialité",
-              "Réservée aux autorisés"
-            ],
-            [
-              "Preuve",
-              "Traçabilité des actions"
-            ]
-          ]
+          "t": "p",
+          "c": "La sécurité du SI poursuit quatre objectifs, résumés par le sigle **DICP**. La **disponibilité** veut que l’information soit accessible quand il le faut. L’**intégrité** veut qu’elle ne soit pas altérée. La **confidentialité** veut qu’elle soit réservée aux personnes autorisées."
+        },
+        {
+          "t": "p",
+          "c": "Le quatrième objectif, la **preuve**, porte sur la **traçabilité** des actions : on doit pouvoir savoir qui a fait quoi, et quand, dans le système. C’est indispensable pour retrouver l’origine d’une erreur ou d’une fraude."
         },
         {
           "t": "p",
@@ -294,6 +303,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Sécurité = **DICP**. Menaces : phishing, ransomware. Premier rempart : la **vigilance** humaine."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "DICP",
+              "Disponibilité, intégrité, confidentialité, preuve : les objectifs de la sécurité du SI"
+            ],
+            [
+              "Disponibilité",
+              "Information accessible quand il le faut"
+            ],
+            [
+              "Intégrité",
+              "Information non altérée"
+            ],
+            [
+              "Confidentialité",
+              "Information réservée aux personnes autorisées"
+            ],
+            [
+              "Preuve",
+              "Traçabilité des actions : savoir qui a fait quoi"
+            ]
+          ]
         }
       ]
     },

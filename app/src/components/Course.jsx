@@ -147,15 +147,28 @@ function paginateBlocks(blocks, max = 3.6) {
 // Lecteur de cours paginé, épuré et « luxueux » : une poignée de blocs par page,
 // pagination élégante, transitions douces. À l'impression, toutes les pages sont
 // dépliées (fiche PDF complète).
-export function PaginatedCourse({ sec, color, prevLabel, nextLabel, onPrev, onNext }) {
+// Le cours se termine par un tableau « Notions et définitions » : celui écrit à
+// la fin du chapitre s'il existe, sinon un tableau fabriqué à partir des
+// définitions du chapitre (puis du thème). Ailleurs, le cours n'est que du texte.
+function avecTableauFinal(sec, themeId, subjectId, sectionIdx, t) {
+  const blocks = sectionToBlocks(sec)
+  if (!themeId || blocks[blocks.length - 1]?.t === 'table') return blocks
+  const { skip, defs } = sectionDefinitions(sec, themeId, subjectId, sectionIdx)
+  if (skip || !defs.length) return blocks
+  return [...blocks, { t: 'table', h: t('notionsDefs'), head: [t('notionCol'), t('definitionCol')], rows: defs.map((d) => [d.term, d.def]) }]
+}
+
+export function PaginatedCourse({ sec, color, prevLabel, nextLabel, onPrev, onNext, themeId, subjectId, sectionIdx = 0 }) {
   const t = useT()
   // Pages recalculées à chaque changement de section (nouveau chapitre).
-  const [list, setList] = useState(() => paginateBlocks(sectionToBlocks(sec)))
+  const feuilles = () => paginateBlocks(avecTableauFinal(sec, themeId, subjectId, sectionIdx, t))
+  const [list, setList] = useState(feuilles)
   const [page, setPage] = useState(0)
   const [full, setFull] = useState(false) // lecture plein écran « feuille »
   const bodyRef = useRef(null)
   const fullRef = useRef(null)
-  useEffect(() => { setList(paginateBlocks(sectionToBlocks(sec))); setPage(0) }, [sec])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => { setList(feuilles()); setPage(0) }, [sec, themeId])
   const last = list.length - 1
   const toTop = (ref) => { try { (ref?.current || window).scrollTo({ top: 0, behavior: 'smooth' }) } catch { (ref?.current || window).scrollTo(0, 0) } }
   const goPrev = () => { if (page > 0) { setPage(page - 1); toTop(full ? fullRef : null) } else { setFull(false); onPrev?.() } }
@@ -476,6 +489,7 @@ export function Block({ b, color }) {
     case 'table':
       return (
         <div className="overflow-x-auto">
+          {b.h && <p className="mb-2 font-display text-lg font-semibold">📚 <CourseText text={b.h} /></p>}
           <table className="w-full border-collapse text-sm">
             <thead>
               <tr>

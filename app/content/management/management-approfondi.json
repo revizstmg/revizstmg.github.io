@@ -25,25 +25,12 @@
           "c": "La performance ne se réduit plus à l’aspect financier. On parle aujourd’hui de **performance globale** : elle combine **trois dimensions** complémentaires, et parfois en tension, que le management doit chercher à concilier."
         },
         {
-          "t": "table",
-          "head": [
-            "Dimension de la performance",
-            "Ce qu’elle mesure"
-          ],
-          "rows": [
-            [
-              "Économique / financière",
-              "Rentabilité, chiffre d’affaires, profit, part de marché"
-            ],
-            [
-              "Sociale",
-              "Conditions de travail, motivation, faible turnover, climat social"
-            ],
-            [
-              "Environnementale",
-              "Empreinte écologique, économies d’énergie, éco-conception"
-            ]
-          ]
+          "t": "p",
+          "c": "La dimension **économique et financière** mesure la **rentabilité**, le **chiffre d’affaires**, le **profit** et la **part de marché**. La dimension **sociale** mesure les **conditions de travail**, la **motivation** des salariés, un **faible turnover** et un bon **climat social**."
+        },
+        {
+          "t": "p",
+          "c": "La dimension **environnementale**, enfin, mesure l’**empreinte écologique** de l’organisation, ses **économies d’énergie** et ses efforts d’**éco-conception**."
         },
         {
           "t": "p",
@@ -63,6 +50,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "L’organisation **crée de la valeur** en transformant des ressources ; la **valeur ajoutée** = valeur de la production − consommations externes. La **chaîne de valeur** (Porter) repère les activités créatrices de valeur. La **performance globale** combine l’**économique**, le **social** et l’**environnemental**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Performance globale",
+              "Combinaison des performances économique, sociale et environnementale"
+            ],
+            [
+              "Performance économique / financière",
+              "Rentabilité, chiffre d’affaires, profit, part de marché"
+            ],
+            [
+              "Performance sociale",
+              "Conditions de travail, motivation, faible turnover, climat social"
+            ],
+            [
+              "Performance environnementale",
+              "Empreinte écologique, économies d’énergie, éco-conception"
+            ],
+            [
+              "Valeur ajoutée",
+              "Richesse créée par l’organisation"
+            ]
+          ]
         }
       ]
     },
@@ -78,33 +95,12 @@
           "c": "Les **ressources** sont les **moyens** dont dispose l’organisation. On les classe en grandes catégories."
         },
         {
-          "t": "table",
-          "head": [
-            "Ressource",
-            "Exemples"
-          ],
-          "rows": [
-            [
-              "Humaines",
-              "Salariés, dirigeants, bénévoles — leur nombre et leurs qualifications"
-            ],
-            [
-              "Financières",
-              "Capitaux, trésorerie, capacité d’emprunt"
-            ],
-            [
-              "Matérielles",
-              "Locaux, machines, matières premières, équipements"
-            ],
-            [
-              "Immatérielles",
-              "Marque, image, brevets, savoir-faire, réputation, données"
-            ],
-            [
-              "Technologiques",
-              "Outils numériques, procédés, innovations"
-            ]
-          ]
+          "t": "p",
+          "c": "Les **ressources humaines** sont les **salariés**, les **dirigeants** ou les **bénévoles**, comptés en nombre mais surtout en **qualifications**. Les **ressources financières** sont les **capitaux**, la **trésorerie** et la **capacité d’emprunt**. Les **ressources matérielles** sont les **locaux**, les **machines**, les **matières premières** et les **équipements**."
+        },
+        {
+          "t": "p",
+          "c": "Les **ressources immatérielles** sont la **marque**, l’**image**, les **brevets**, le **savoir-faire**, la **réputation** et les **données**. Les **ressources technologiques**, enfin, sont les **outils numériques**, les **procédés** de fabrication et les **innovations**."
         },
         {
           "t": "p",
@@ -132,6 +128,44 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Ressources = moyens (**humaines, financières, matérielles, immatérielles, technologiques**). Les **immatérielles** (marque, savoir-faire, brevets) sont clés. Les **compétences** combinent les ressources ; les **compétences distinctives** fondent l’**avantage concurrentiel**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Ressources",
+              "Moyens dont dispose l’organisation"
+            ],
+            [
+              "Ressources humaines",
+              "Salariés, dirigeants, bénévoles et leurs qualifications"
+            ],
+            [
+              "Ressources financières",
+              "Capitaux, trésorerie, capacité d’emprunt"
+            ],
+            [
+              "Ressources matérielles",
+              "Locaux, machines, matières premières, équipements"
+            ],
+            [
+              "Ressources immatérielles",
+              "Marque, image, brevets, savoir-faire, réputation, données"
+            ],
+            [
+              "Ressources technologiques",
+              "Outils numériques, procédés, innovations"
+            ],
+            [
+              "Compétence distinctive",
+              "Savoir-faire que l’organisation maîtrise mieux que ses concurrents"
+            ]
+          ]
         }
       ]
     },
@@ -201,24 +235,12 @@
           "c": "On distingue **deux grandes formes** de compétitivité, qui correspondent à deux façons de séduire le client."
         },
         {
-          "t": "table",
-          "head": [
-            "Compétitivité",
-            "Sur quoi elle joue",
-            "Exemples"
-          ],
-          "rows": [
-            [
-              "Compétitivité-prix",
-              "Proposer un **prix plus bas** que les concurrents",
-              "Hard discount, low cost, production en grande série"
-            ],
-            [
-              "Compétitivité hors-prix",
-              "Se démarquer autrement que par le prix",
-              "Qualité, innovation, image de marque, délais, service, design"
-            ]
-          ]
+          "t": "p",
+          "c": "La **compétitivité-prix** consiste à **proposer un prix plus bas** que les concurrents. C’est la stratégie du **hard discount**, du **low cost** ou de la **production en grande série**."
+        },
+        {
+          "t": "p",
+          "c": "La **compétitivité hors-prix** consiste à **se démarquer autrement que par le prix** : par la **qualité**, l’**innovation**, l’**image de marque**, les **délais**, le **service** ou le **design**. Le client accepte alors de payer plus cher pour ce qu’il ne trouve pas ailleurs."
         },
         {
           "t": "p",
@@ -250,6 +272,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "La **compétitivité** = capacité à résister à la concurrence. Deux formes : **prix** (coûts maîtrisés, prix bas) et **hors-prix** (qualité, innovation, image). L’**avantage concurrentiel** (Porter) vient des **coûts**, de la **différenciation** ou de la **focalisation** (niche) ; il faut l’entretenir par l’innovation."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Compétitivité",
+              "Capacité à affronter la concurrence et à gagner des clients"
+            ],
+            [
+              "Compétitivité-prix",
+              "Prix plus bas que les concurrents (low cost, grande série)"
+            ],
+            [
+              "Compétitivité hors-prix",
+              "Qualité, innovation, image, délais, service, design"
+            ],
+            [
+              "Différenciation",
+              "Offrir ce que le client valorise et ne trouve pas ailleurs"
+            ]
+          ]
         }
       ]
     },
@@ -265,29 +313,12 @@
           "c": "L’organisation subit de nombreuses **contraintes** qui pèsent sur sa production et ses choix."
         },
         {
-          "t": "table",
-          "head": [
-            "Type de contrainte",
-            "Exemples"
-          ],
-          "rows": [
-            [
-              "Économiques",
-              "Coûts, concurrence, pouvoir d’achat des clients"
-            ],
-            [
-              "Juridiques",
-              "Réglementation, normes, droit du travail"
-            ],
-            [
-              "Technologiques",
-              "Rythme de l’innovation, obsolescence"
-            ],
-            [
-              "Environnementales et sociales",
-              "Limiter la pollution, attentes des salariés et de la société"
-            ]
-          ]
+          "t": "p",
+          "c": "Les **contraintes économiques** sont les **coûts**, la **concurrence** et le **pouvoir d’achat** des clients. Les **contraintes juridiques** sont la **réglementation**, les **normes** et le **droit du travail**."
+        },
+        {
+          "t": "p",
+          "c": "Les **contraintes technologiques** tiennent au **rythme de l’innovation** et à l’**obsolescence** rapide des équipements. Les **contraintes environnementales et sociales**, enfin, obligent à **limiter la pollution** et à répondre aux **attentes des salariés et de la société**."
         },
         {
           "t": "p",
@@ -298,24 +329,12 @@
           "c": "L’organisation doit aussi choisir **comment** elle produit : tout faire elle-même (**intégration**) ou confier certaines activités à d’autres (**externalisation / sous-traitance**). C’est l’arbitrage « **faire ou faire faire** »."
         },
         {
-          "t": "table",
-          "head": [
-            "Choix",
-            "Avantages",
-            "Limites"
-          ],
-          "rows": [
-            [
-              "Intégrer (faire soi-même)",
-              "Contrôle, maîtrise de la qualité et du savoir-faire",
-              "Coût, rigidité, investissements lourds"
-            ],
-            [
-              "Externaliser (faire faire)",
-              "Souplesse, coûts réduits, recentrage sur le cœur de métier",
-              "Dépendance, perte de contrôle, risque social"
-            ]
-          ]
+          "t": "p",
+          "c": "**Intégrer**, c’est **faire soi-même**. Cela donne le **contrôle** de l’activité et la **maîtrise de la qualité et du savoir-faire**, mais cela coûte cher, rend l’organisation plus **rigide** et demande des **investissements lourds**."
+        },
+        {
+          "t": "p",
+          "c": "**Externaliser**, c’est **faire faire** par un autre. Cela apporte de la **souplesse**, **réduit les coûts** et permet de **se recentrer sur son cœur de métier**, mais cela crée une **dépendance**, entraîne une **perte de contrôle** et comporte un **risque social** pour les emplois concernés."
         },
         {
           "t": "example",
@@ -330,6 +349,52 @@
           "t": "tip",
           "h": "À retenir",
           "c": "L’organisation produit sous **contraintes** (économiques, juridiques, technologiques, environnementales). Elle **innove** (produit / procédé) et arbitre entre **intégrer** et **externaliser** (« faire ou faire faire »). Produire **durablement** = concilier production, société et environnement."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Contraintes économiques",
+              "Coûts, concurrence, pouvoir d’achat des clients"
+            ],
+            [
+              "Contraintes juridiques",
+              "Réglementation, normes, droit du travail"
+            ],
+            [
+              "Contraintes technologiques",
+              "Rythme de l’innovation, obsolescence"
+            ],
+            [
+              "Contraintes environnementales et sociales",
+              "Limiter la pollution, attentes des salariés et de la société"
+            ],
+            [
+              "Innovation de produit / de procédé",
+              "Nouveau produit / nouvelle façon de produire"
+            ],
+            [
+              "Faire ou faire faire",
+              "Arbitrage entre intégrer une activité et l’externaliser"
+            ],
+            [
+              "Intégrer",
+              "Contrôle, maîtrise de la qualité / coût, rigidité, investissements lourds"
+            ],
+            [
+              "Externaliser (sous-traiter)",
+              "Souplesse, coûts réduits, recentrage / dépendance, perte de contrôle"
+            ],
+            [
+              "Éco-conception",
+              "Concevoir un produit en réduisant son impact environnemental"
+            ]
+          ]
         }
       ]
     }
@@ -347,33 +412,12 @@
           "c": "On distingue **trois niveaux de décision**, selon leur portée et leur horizon de temps."
         },
         {
-          "t": "table",
-          "head": [
-            "Niveau",
-            "Qui décide",
-            "Horizon",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Stratégique",
-              "Direction générale",
-              "Long terme (années)",
-              "Lancer un nouveau marché, racheter un concurrent"
-            ],
-            [
-              "Tactique / de gestion",
-              "Encadrement intermédiaire",
-              "Moyen terme (mois)",
-              "Fixer un budget, recruter une équipe"
-            ],
-            [
-              "Opérationnel",
-              "Personnel d’exécution",
-              "Court terme (jour)",
-              "Planifier une tournée, passer une commande"
-            ]
-          ]
+          "t": "p",
+          "c": "Les **décisions stratégiques** sont prises par la **direction générale** et portent sur le **long terme**, à l’échelle de plusieurs années : lancer un nouveau marché, racheter un concurrent. Les **décisions tactiques**, ou de gestion, sont prises par l’**encadrement intermédiaire** et portent sur le **moyen terme**, quelques mois : fixer un budget, recruter une équipe."
+        },
+        {
+          "t": "p",
+          "c": "Les **décisions opérationnelles** sont prises par le **personnel d’exécution** et portent sur le **court terme**, la journée : planifier une tournée de livraison, passer une commande."
         },
         {
           "t": "p",
@@ -409,6 +453,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Trois niveaux de décision : **stratégique** (LT, direction), **tactique** (MT, encadrement), **opérationnel** (CT, exécution). Processus de **Simon (IMC)** : Intelligence → Modélisation → Choix. Le décideur a une **rationalité limitée** → il choisit une solution **satisfaisante**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Décision stratégique",
+              "Direction générale, long terme (lancer un marché, racheter un concurrent)"
+            ],
+            [
+              "Décision tactique / de gestion",
+              "Encadrement intermédiaire, moyen terme (budget, recrutement)"
+            ],
+            [
+              "Décision opérationnelle",
+              "Personnel d’exécution, court terme (tournée, commande)"
+            ],
+            [
+              "Processus IMC (Simon)",
+              "Intelligence, modélisation, choix : les étapes de la décision"
+            ]
+          ]
         }
       ]
     },
@@ -424,48 +494,20 @@
           "c": "Le diagnostic a **deux volets** complémentaires : le diagnostic **interne** (ce que l’organisation possède) et le diagnostic **externe** (ce qui l’entoure)."
         },
         {
-          "t": "table",
-          "head": [
-            "Diagnostic",
-            "On analyse",
-            "On cherche"
-          ],
-          "rows": [
-            [
-              "Interne",
-              "Ressources et compétences de l’organisation",
-              "Ses **forces** et ses **faiblesses**"
-            ],
-            [
-              "Externe",
-              "Marché, concurrence, environnement",
-              "Les **opportunités** et les **menaces**"
-            ]
-          ]
+          "t": "p",
+          "c": "Le **diagnostic interne** analyse les **ressources et les compétences** de l’organisation, pour faire apparaître ses **forces** et ses **faiblesses**. Le **diagnostic externe** analyse le **marché**, la **concurrence** et l’**environnement**, pour repérer les **opportunités** et les **menaces**."
         },
         {
           "t": "p",
           "c": "Ces quatre éléments se synthétisent dans la matrice **SWOT** (de l’anglais Strengths, Weaknesses, Opportunities, Threats), l’outil de diagnostic le plus courant."
         },
         {
-          "t": "table",
-          "head": [
-            "",
-            "Positif",
-            "Négatif"
-          ],
-          "rows": [
-            [
-              "Interne",
-              "Forces (Strengths)",
-              "Faiblesses (Weaknesses)"
-            ],
-            [
-              "Externe",
-              "Opportunités (Opportunities)",
-              "Menaces (Threats)"
-            ]
-          ]
+          "t": "p",
+          "c": "La matrice SWOT croise deux questions : l’élément est-il **interne** ou **externe** à l’organisation, et est-il **positif** ou **négatif** pour elle ? Ce qui est interne et positif constitue les **forces** (*Strengths*) ; ce qui est interne et négatif, les **faiblesses** (*Weaknesses*)."
+        },
+        {
+          "t": "p",
+          "c": "Ce qui est externe et positif constitue les **opportunités** (*Opportunities*), et ce qui est externe et négatif, les **menaces** (*Threats*). Les forces et les faiblesses dépendent de l’organisation ; les opportunités et les menaces s’imposent à elle."
         },
         {
           "t": "p",
@@ -492,6 +534,48 @@
           "t": "tip",
           "h": "À retenir",
           "c": "**Diagnostic interne** → forces / faiblesses ; **diagnostic externe** → opportunités / menaces. Synthèse = **SWOT**. L’environnement externe s’analyse avec **PESTEL** (6 facteurs). Objectif : repérer les **facteurs clés de succès** pour bâtir la stratégie."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Diagnostic interne",
+              "Ressources et compétences → forces et faiblesses"
+            ],
+            [
+              "Diagnostic externe",
+              "Marché, concurrence, environnement → opportunités et menaces"
+            ],
+            [
+              "SWOT",
+              "Strengths, Weaknesses, Opportunities, Threats"
+            ],
+            [
+              "Diagnostic stratégique",
+              "État des lieux interne (ressources, compétences) et externe (environnement)"
+            ],
+            [
+              "SWOT (FFOM)",
+              "Forces, faiblesses (interne) ; opportunités, menaces (externe)"
+            ],
+            [
+              "Forces / faiblesses",
+              "Éléments internes positifs / négatifs"
+            ],
+            [
+              "Opportunités / menaces",
+              "Éléments externes positifs / négatifs"
+            ],
+            [
+              "PESTEL",
+              "Analyse du macro-environnement : politique, économique, socioculturel, technologique, écologique, légal"
+            ]
+          ]
         }
       ]
     },
@@ -507,24 +591,8 @@
           "c": "Premier choix : **spécialisation** ou **diversification** — combien de métiers exercer ?"
         },
         {
-          "t": "table",
-          "head": [
-            "Stratégie",
-            "Principe",
-            "Avantages / Risques"
-          ],
-          "rows": [
-            [
-              "Spécialisation",
-              "Se concentrer sur un seul métier",
-              "Expertise, économies d’échelle / dépendance à un marché"
-            ],
-            [
-              "Diversification",
-              "Ajouter de nouveaux produits/marchés",
-              "Répartit le risque, croissance / dispersion des ressources"
-            ]
-          ]
+          "t": "p",
+          "c": "La **spécialisation** consiste à **se concentrer sur un seul métier**. Elle apporte de l’**expertise** et des **économies d’échelle**, mais rend l’organisation **dépendante d’un seul marché**. La **diversification** consiste à **ajouter de nouveaux produits ou de nouveaux marchés**. Elle **répartit le risque** et ouvre des relais de **croissance**, mais elle peut **disperser les ressources**."
         },
         {
           "t": "p",
@@ -546,29 +614,8 @@
           "c": "Enfin, pour **grandir**, l’organisation choisit un **mode de développement**."
         },
         {
-          "t": "table",
-          "head": [
-            "Mode de croissance",
-            "Comment",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Croissance interne (organique)",
-              "Par ses propres moyens",
-              "Ouvrir de nouveaux magasins, embaucher"
-            ],
-            [
-              "Croissance externe",
-              "Par rachat / fusion",
-              "Racheter un concurrent"
-            ],
-            [
-              "Internationalisation",
-              "S’implanter à l’étranger",
-              "Exporter, ouvrir des filiales"
-            ]
-          ]
+          "t": "p",
+          "c": "Trois modes de développement s’offrent à l’organisation. La **croissance interne**, ou organique, se fait **par ses propres moyens**, comme ouvrir de nouveaux magasins ou embaucher. La **croissance externe** se fait **par rachat ou fusion**, par exemple en rachetant un concurrent. L’**internationalisation**, enfin, consiste à **s’implanter à l’étranger**, en exportant ou en ouvrant des filiales."
         },
         {
           "t": "example",
@@ -579,6 +626,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Choix stratégiques : **spécialisation / diversification** ; avantage concurrentiel par les **coûts** ou la **différenciation** (Porter) ; **intégration / externalisation** (faire ou faire faire) ; croissance **interne / externe / internationalisation**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Spécialisation",
+              "Un seul métier : expertise, économies d’échelle / dépendance à un marché"
+            ],
+            [
+              "Diversification",
+              "Nouveaux produits ou marchés : risque réparti, croissance / dispersion"
+            ],
+            [
+              "Croissance interne (organique)",
+              "Par ses propres moyens (ouvrir des magasins, embaucher)"
+            ],
+            [
+              "Croissance externe",
+              "Par rachat ou fusion (racheter un concurrent)"
+            ],
+            [
+              "Internationalisation",
+              "S’implanter à l’étranger (exporter, ouvrir des filiales)"
+            ],
+            [
+              "Avantage concurrentiel (Porter)",
+              "Domination par les coûts ou différenciation"
+            ]
+          ]
         }
       ]
     },
@@ -607,21 +688,8 @@
           "c": "Autour de l’organisation gravitent de nombreux acteurs aux intérêts variés : les **parties prenantes** (stakeholders). Chacune attend quelque chose de l’organisation et peut exercer une influence."
         },
         {
-          "t": "table",
-          "head": [
-            "Parties prenantes internes",
-            "Parties prenantes externes"
-          ],
-          "rows": [
-            [
-              "Dirigeants, salariés, actionnaires",
-              "Clients, fournisseurs, banques"
-            ],
-            [
-              "Représentants du personnel",
-              "État, collectivités, associations, riverains"
-            ]
-          ]
+          "t": "p",
+          "c": "Les **parties prenantes internes** font partie de l’organisation : les **dirigeants**, les **salariés**, les **actionnaires** et les **représentants du personnel**. Les **parties prenantes externes** sont en dehors : les **clients**, les **fournisseurs**, les **banques**, l’**État**, les **collectivités**, les **associations** et les **riverains**."
         },
         {
           "t": "p",
@@ -636,6 +704,28 @@
           "t": "tip",
           "h": "À retenir",
           "c": "**Pouvoir** = imposer sa volonté ; **autorité** = pouvoir légitime. La **gouvernance** = règles de direction et de contrôle. Les **parties prenantes** (internes/externes) ont des intérêts **divergents** ; les **contre-pouvoirs** encadrent les dirigeants."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Parties prenantes internes",
+              "Dirigeants, salariés, actionnaires, représentants du personnel"
+            ],
+            [
+              "Parties prenantes externes",
+              "Clients, fournisseurs, banques, État, collectivités, associations, riverains"
+            ],
+            [
+              "Contre-pouvoirs",
+              "Syndicats, associations, médias qui limitent le pouvoir des dirigeants"
+            ]
+          ]
         }
       ]
     },
@@ -651,29 +741,12 @@
           "c": "Rensis **Likert** a distingué **quatre styles de direction**, selon le degré de participation laissé aux salariés."
         },
         {
-          "t": "table",
-          "head": [
-            "Style",
-            "Caractéristique"
-          ],
-          "rows": [
-            [
-              "Autoritaire",
-              "Le dirigeant décide seul, impose, contrôle"
-            ],
-            [
-              "Paternaliste",
-              "Autorité forte mais bienveillante, récompenses et sanctions"
-            ],
-            [
-              "Consultatif",
-              "Le dirigeant consulte avant de décider"
-            ],
-            [
-              "Participatif",
-              "Les décisions sont prises en groupe, forte implication"
-            ]
-          ]
+          "t": "p",
+          "c": "Avec le style **autoritaire**, le dirigeant **décide seul**, **impose** et **contrôle**. Avec le style **paternaliste**, l’autorité reste **forte mais bienveillante** : le dirigeant manie **récompenses et sanctions**."
+        },
+        {
+          "t": "p",
+          "c": "Avec le style **consultatif**, le dirigeant **consulte** ses équipes **avant de décider**. Avec le style **participatif**, les décisions sont **prises en groupe**, ce qui suppose une **forte implication** des salariés."
         },
         {
           "t": "p",
@@ -684,25 +757,12 @@
           "c": "La **motivation** est ce qui pousse un individu à agir et à s’impliquer. Plusieurs théories l’expliquent."
         },
         {
-          "t": "table",
-          "head": [
-            "Auteur",
-            "Idée clé"
-          ],
-          "rows": [
-            [
-              "Maslow",
-              "Pyramide des besoins : on cherche à satisfaire des besoins du plus vital (physiologique) au plus élevé (accomplissement)"
-            ],
-            [
-              "Herzberg",
-              "Facteurs d’hygiène (salaire, conditions) évitent l’insatisfaction ; facteurs de motivation (reconnaissance, responsabilités) motivent vraiment"
-            ],
-            [
-              "McGregor",
-              "Théorie X (l’individu fuit le travail → contrôle) vs théorie Y (l’individu aime se réaliser → autonomie)"
-            ]
-          ]
+          "t": "p",
+          "c": "Pour **Maslow**, l’individu cherche à satisfaire une **pyramide de besoins**, du plus vital, les besoins **physiologiques**, au plus élevé, l’**accomplissement**. Pour **Herzberg**, les **facteurs d’hygiène**, comme le salaire et les conditions de travail, **évitent l’insatisfaction**, tandis que les **facteurs de motivation**, comme la reconnaissance et les responsabilités, **motivent vraiment**."
+        },
+        {
+          "t": "p",
+          "c": "Pour **McGregor**, tout dépend de l’idée que le manager se fait des salariés. Selon la **théorie X**, l’individu **fuit le travail**, et il faut donc le **contrôler**. Selon la **théorie Y**, l’individu **aime se réaliser**, et il faut donc lui laisser de l’**autonomie**."
         },
         {
           "t": "example",
@@ -717,6 +777,52 @@
           "t": "tip",
           "h": "À retenir",
           "c": "**Likert** : 4 styles (autoritaire, paternaliste, consultatif, participatif), liés à la (dé)centralisation. Motivation : **Maslow** (besoins), **Herzberg** (hygiène / motivation), **McGregor** (X / Y). La motivation nourrit la **performance sociale**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Style autoritaire",
+              "Le dirigeant décide seul, impose, contrôle"
+            ],
+            [
+              "Style paternaliste",
+              "Autorité forte mais bienveillante, récompenses et sanctions"
+            ],
+            [
+              "Style consultatif",
+              "Le dirigeant consulte avant de décider"
+            ],
+            [
+              "Style participatif",
+              "Décisions prises en groupe, forte implication"
+            ],
+            [
+              "Centralisation / décentralisation",
+              "Décisions concentrées au sommet / déléguées aux équipes"
+            ],
+            [
+              "Motivation",
+              "Ce qui pousse un individu à agir et à s’impliquer"
+            ],
+            [
+              "Maslow",
+              "Pyramide des besoins, du physiologique à l’accomplissement"
+            ],
+            [
+              "Herzberg",
+              "Facteurs d’hygiène (évitent l’insatisfaction) / facteurs de motivation (motivent)"
+            ],
+            [
+              "McGregor",
+              "Théorie X (fuit le travail → contrôle) / théorie Y (aime se réaliser → autonomie)"
+            ]
+          ]
         }
       ]
     },
@@ -732,29 +838,12 @@
           "c": "La **structure** est la façon dont l’organisation **divise le travail** et **répartit le pouvoir**. On la représente par un **organigramme**. Il existe plusieurs grands types de structures."
         },
         {
-          "t": "table",
-          "head": [
-            "Structure",
-            "Principe",
-            "Quand l’utiliser"
-          ],
-          "rows": [
-            [
-              "Fonctionnelle",
-              "Découpage par grandes fonctions (production, vente, RH…)",
-              "Petites et moyennes organisations"
-            ],
-            [
-              "Divisionnelle",
-              "Découpage par produits, marchés ou zones",
-              "Grandes organisations diversifiées"
-            ],
-            [
-              "Matricielle",
-              "Croisement fonctions × projets",
-              "Organisations complexes, gestion par projet"
-            ]
-          ]
+          "t": "p",
+          "c": "La **structure fonctionnelle** découpe l’organisation par **grandes fonctions** : production, vente, ressources humaines. Elle convient aux **petites et moyennes organisations**. La **structure divisionnelle** la découpe par **produits**, par **marchés** ou par **zones** ; elle convient aux **grandes organisations diversifiées**."
+        },
+        {
+          "t": "p",
+          "c": "La **structure matricielle** **croise les fonctions et les projets** ; elle convient aux **organisations complexes** qui travaillent en **gestion de projet**."
         },
         {
           "t": "p",
@@ -786,6 +875,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "La **structure** divise le travail (fonctionnelle, divisionnelle, matricielle — l’**organigramme**). **Mintzberg** : coordination par **ajustement mutuel**, **supervision directe** ou **standardisation**. La **culture** (valeurs partagées) fédère ; les **conflits** se gèrent (négociation, médiation). Selon **Chandler**, « la structure suit la stratégie »."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Organigramme",
+              "Représentation graphique de la structure"
+            ],
+            [
+              "Structure fonctionnelle",
+              "Par grandes fonctions (PME)"
+            ],
+            [
+              "Structure divisionnelle",
+              "Par produits, marchés ou zones (grandes organisations diversifiées)"
+            ],
+            [
+              "Structure matricielle",
+              "Croisement fonctions × projets (organisations complexes)"
+            ],
+            [
+              "Mécanismes de coordination (Mintzberg)",
+              "Ajustement mutuel, supervision directe, standardisation"
+            ]
+          ]
         }
       ]
     }
@@ -807,29 +926,12 @@
           "c": "Le **développement durable** est un développement qui « **répond aux besoins du présent sans compromettre la capacité des générations futures à répondre aux leurs** » (rapport Brundtland, 1987). Il repose sur **trois piliers** à concilier."
         },
         {
-          "t": "table",
-          "head": [
-            "Pilier",
-            "Objectif",
-            "Exemples d’actions"
-          ],
-          "rows": [
-            [
-              "Économique",
-              "Assurer la rentabilité et la pérennité",
-              "Rester rentable, investir, créer des emplois"
-            ],
-            [
-              "Social",
-              "Prendre soin des personnes",
-              "Bonnes conditions de travail, égalité, formation"
-            ],
-            [
-              "Environnemental",
-              "Préserver la planète",
-              "Réduire les émissions, recycler, éco-concevoir"
-            ]
-          ]
+          "t": "p",
+          "c": "Le pilier **économique** vise à **assurer la rentabilité et la pérennité** de l’organisation : rester rentable, investir, créer des emplois. Le pilier **social** vise à **prendre soin des personnes** : offrir de bonnes conditions de travail, garantir l’égalité, former."
+        },
+        {
+          "t": "p",
+          "c": "Le pilier **environnemental** vise à **préserver la planète** : réduire les émissions, recycler, éco-concevoir les produits."
         },
         {
           "t": "p",
@@ -858,6 +960,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "**RSE** = intégration volontaire (et de plus en plus encadrée) des enjeux **sociaux et environnementaux** dans l’activité. Elle applique le **développement durable** et ses **3 piliers** (économique, social, environnemental). Référentiel : **ISO 26000**. Elle peut être un **atout** (image, talents). Attention au **greenwashing**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Développement durable",
+              "Répond aux besoins du présent sans compromettre ceux des générations futures (Brundtland, 1987)"
+            ],
+            [
+              "Pilier économique",
+              "Rentabilité et pérennité (investir, créer des emplois)"
+            ],
+            [
+              "Pilier social",
+              "Prendre soin des personnes (conditions de travail, égalité, formation)"
+            ],
+            [
+              "Pilier environnemental",
+              "Préserver la planète (réduire les émissions, recycler)"
+            ],
+            [
+              "RSE",
+              "Responsabilité sociétale des entreprises : démarche volontaire au-delà de la loi"
+            ],
+            [
+              "ISO 26000",
+              "Norme internationale qui guide les démarches de RSE"
+            ]
+          ]
         }
       ]
     },
@@ -873,25 +1009,8 @@
           "c": "La **performance globale** combine trois performances indissociables, en écho aux piliers du développement durable."
         },
         {
-          "t": "table",
-          "head": [
-            "Performance",
-            "On mesure"
-          ],
-          "rows": [
-            [
-              "Économique",
-              "Rentabilité, profit, pérennité"
-            ],
-            [
-              "Sociale",
-              "Bien-être des salariés, égalité, faible turnover"
-            ],
-            [
-              "Environnementale",
-              "Réduction de l’empreinte écologique"
-            ]
-          ]
+          "t": "p",
+          "c": "La performance **économique** se mesure par la **rentabilité**, le **profit** et la **pérennité** de l’organisation. La performance **sociale** se mesure par le **bien-être des salariés**, l’**égalité** et un **faible turnover**. La performance **environnementale** se mesure par la **réduction de l’empreinte écologique**."
         },
         {
           "t": "p",
@@ -915,12 +1034,42 @@
           "c": "Concilier les attentes des différentes **parties prenantes** est un exercice d’**arbitrage** permanent pour le management : ce qui satisfait les uns peut mécontenter les autres."
         },
         {
+          "t": "p",
+          "c": "Les **actionnaires** attendent de la **rentabilité** et des **dividendes**. Les **salariés** attendent un **salaire**, de **bonnes conditions** de travail et un travail qui a du **sens**. Les **clients** attendent de la **qualité**, un bon **prix** et du **service**."
+        },
+        {
+          "t": "p",
+          "c": "La **société**, et au-delà **la planète**, attendent des **emplois locaux** et le **respect de l’environnement**. Ces attentes divergent souvent, et le management doit arbitrer entre elles."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La **performance globale** = économique + sociale + environnementale. L’activité génère des **externalités** (positives ou négatives). Enjeu : concilier **intérêt individuel** et **intérêt collectif** en **arbitrant** entre parties prenantes, grâce à l’**éthique** (valeurs) et à la **déontologie** (règles d’un métier)."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Partie prenante",
-            "Ce qu’elle attend"
+            "Notion",
+            "Définition"
           ],
           "rows": [
+            [
+              "Performance économique",
+              "Rentabilité, profit, pérennité"
+            ],
+            [
+              "Performance sociale",
+              "Bien-être des salariés, égalité, faible turnover"
+            ],
+            [
+              "Performance environnementale",
+              "Réduction de l’empreinte écologique"
+            ],
+            [
+              "Externalité",
+              "Effet positif ou négatif d’une activité sur des tiers, hors de l’échange marchand"
+            ],
             [
               "Actionnaires",
               "Rentabilité, dividendes"
@@ -936,13 +1085,16 @@
             [
               "Société et planète",
               "Emplois locaux, respect de l’environnement"
+            ],
+            [
+              "Éthique",
+              "Valeurs morales qui guident l’action"
+            ],
+            [
+              "Déontologie",
+              "Règles propres à un métier"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "La **performance globale** = économique + sociale + environnementale. L’activité génère des **externalités** (positives ou négatives). Enjeu : concilier **intérêt individuel** et **intérêt collectif** en **arbitrant** entre parties prenantes, grâce à l’**éthique** (valeurs) et à la **déontologie** (règles d’un métier)."
         }
       ]
     },
@@ -958,29 +1110,12 @@
           "c": "L’**ESS** regroupe les organisations qui exercent une activité économique mais avec une **finalité sociale** prioritaire sur le profit. Elles réinvestissent leurs excédents dans le projet plutôt que de les distribuer, et fonctionnent souvent de façon **démocratique** (une personne = une voix)."
         },
         {
-          "t": "table",
-          "head": [
-            "Forme de l’ESS",
-            "Caractéristique"
-          ],
-          "rows": [
-            [
-              "Associations",
-              "But non lucratif, souvent d’intérêt général"
-            ],
-            [
-              "Coopératives",
-              "Détenues et gérées par leurs membres (salariés, clients…)"
-            ],
-            [
-              "Mutuelles",
-              "Solidarité entre adhérents (santé, assurance)"
-            ],
-            [
-              "Fondations",
-              "Financement d’une cause d’intérêt général"
-            ]
-          ]
+          "t": "p",
+          "c": "L’ESS prend quatre formes principales. Les **associations** poursuivent un **but non lucratif**, souvent d’**intérêt général**. Les **coopératives** sont **détenues et gérées par leurs membres**, qui peuvent être ses salariés ou ses clients."
+        },
+        {
+          "t": "p",
+          "c": "Les **mutuelles** organisent la **solidarité entre leurs adhérents**, notamment en matière de **santé** et d’**assurance**. Les **fondations**, enfin, **financent une cause d’intérêt général** grâce à des fonds qui leur ont été confiés."
         },
         {
           "t": "p",
@@ -1008,6 +1143,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "L’**ESS** = organisations à **finalité sociale** prioritaire sur le profit : **associations, coopératives, mutuelles, fondations** (≈ 10 % de l’emploi). Principes : utilité sociale, **gouvernance démocratique** (1 personne = 1 voix), **lucrativité limitée**. Elle concilie économie et solidarité."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "ESS",
+              "Économie sociale et solidaire : activité économique à finalité sociale prioritaire"
+            ],
+            [
+              "Association",
+              "But non lucratif, souvent d’intérêt général"
+            ],
+            [
+              "Coopérative",
+              "Détenue et gérée par ses membres (salariés, clients…)"
+            ],
+            [
+              "Mutuelle",
+              "Solidarité entre adhérents (santé, assurance)"
+            ],
+            [
+              "Fondation",
+              "Financement d’une cause d’intérêt général"
+            ],
+            [
+              "Lucrativité limitée",
+              "Les excédents sont réinvestis dans le projet plutôt que distribués"
+            ]
+          ]
         }
       ]
     },
@@ -1023,25 +1192,12 @@
           "c": "Le numérique fait apparaître de **nouveaux modèles économiques** : plateformes (mise en relation), abonnement, gratuité financée par la publicité, économie collaborative. Il modifie la façon de produire, de vendre et de communiquer."
         },
         {
-          "t": "table",
-          "head": [
-            "Avant",
-            "Avec le numérique"
-          ],
-          "rows": [
-            [
-              "Vente en magasin uniquement",
-              "E-commerce, vente en ligne, phygital"
-            ],
-            [
-              "Communication descendante",
-              "Réseaux sociaux, interaction, avis clients"
-            ],
-            [
-              "Décisions à l’intuition",
-              "Décisions guidées par les données (data)"
-            ]
-          ]
+          "t": "p",
+          "c": "Le numérique a changé trois choses. Hier, on vendait **uniquement en magasin** ; aujourd’hui, on vend aussi **en ligne**, par l’**e-commerce**, et l’on combine les deux dans le **phygital**. Hier, la communication était **descendante**, de l’entreprise vers le client ; aujourd’hui, elle passe par les **réseaux sociaux**, l’**interaction** et les **avis clients**."
+        },
+        {
+          "t": "p",
+          "c": "Enfin, les décisions se prenaient souvent **à l’intuition** ; elles sont désormais **guidées par les données** (*data*), collectées et analysées en masse."
         },
         {
           "t": "p",
@@ -1073,6 +1229,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "La **transformation numérique** crée de **nouveaux modèles** (plateformes, abonnement, vente directe…), place la **donnée (data)** au centre des décisions et transforme la **relation client**. Elle ouvre des marchés mais **mondialise la concurrence** ; elle exige d’investir et d’**accompagner le changement**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "E-commerce",
+              "Vente en ligne"
+            ],
+            [
+              "Phygital",
+              "Combinaison du magasin physique et du numérique"
+            ],
+            [
+              "Data (données)",
+              "Informations collectées et analysées pour décider : ressource stratégique"
+            ],
+            [
+              "Plateforme",
+              "Modèle économique de mise en relation"
+            ]
+          ]
         }
       ]
     },
@@ -1092,29 +1274,12 @@
           "c": "Deuxième enjeu : la **protection des données personnelles**. Le **RGPD** (Règlement général sur la protection des données) impose aux organisations de collecter les données de façon **loyale**, avec le **consentement** des personnes, pour une **finalité précise**, et de les **sécuriser**. La **CNIL** veille au respect de ces règles."
         },
         {
-          "t": "table",
-          "head": [
-            "Enjeu numérique",
-            "Réponse de l’organisation"
-          ],
-          "rows": [
-            [
-              "Cyberattaques",
-              "Sécuriser les systèmes, sauvegarder, former le personnel"
-            ],
-            [
-              "Données personnelles",
-              "Respecter le RGPD (consentement, finalité, sécurité)"
-            ],
-            [
-              "Automatisation / IA",
-              "Accompagner les salariés, faire évoluer les métiers"
-            ],
-            [
-              "Fracture numérique",
-              "Ne pas exclure les publics éloignés du numérique"
-            ]
-          ]
+          "t": "p",
+          "c": "Face aux **cyberattaques**, l’organisation doit **sécuriser ses systèmes**, **sauvegarder** ses données et **former son personnel**. Pour les **données personnelles**, elle doit **respecter le RGPD** : recueillir le **consentement**, définir une **finalité** précise et assurer la **sécurité** des données."
+        },
+        {
+          "t": "p",
+          "c": "Face à l’**automatisation** et à l’**intelligence artificielle**, elle doit **accompagner les salariés** et **faire évoluer les métiers**. Face à la **fracture numérique**, enfin, elle doit veiller à **ne pas exclure les publics éloignés du numérique**."
         },
         {
           "t": "p",
@@ -1142,6 +1307,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Enjeux du numérique : **cybersécurité** (la faille est souvent **humaine**), **protection des données** (RGPD, CNIL), **automatisation/IA** (évolution des emplois), **fracture numérique** et **éthique**. La maîtrise de ces risques fait partie de la **responsabilité** de l’organisation."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Cybersécurité",
+              "Protection des systèmes : sécuriser, sauvegarder, former"
+            ],
+            [
+              "RGPD",
+              "Règlement qui protège les données personnelles (consentement, finalité, sécurité)"
+            ],
+            [
+              "CNIL",
+              "Autorité qui veille au respect des règles sur les données personnelles"
+            ],
+            [
+              "Fracture numérique",
+              "Inégalité d’accès ou d’usage du numérique"
+            ]
+          ]
         }
       ]
     },
@@ -1157,25 +1348,12 @@
           "c": "Le **télétravail** s’est fortement développé grâce aux outils numériques. Il offre de l’**autonomie** et une meilleure conciliation vie privée / vie professionnelle, mais comporte des **risques** (isolement, perte de cohésion, difficulté à déconnecter) que l’organisation doit gérer."
         },
         {
-          "t": "table",
-          "head": [
-            "Atouts du télétravail",
-            "Risques du télétravail"
-          ],
-          "rows": [
-            [
-              "Autonomie, flexibilité",
-              "Isolement, perte de lien social"
-            ],
-            [
-              "Moins de trajets, gain de temps",
-              "Frontière vie pro / perso floue"
-            ],
-            [
-              "Économies de locaux",
-              "Cohésion d’équipe plus difficile"
-            ]
-          ]
+          "t": "p",
+          "c": "Le télétravail a des **atouts** : il donne de l’**autonomie** et de la **flexibilité**, réduit les **trajets** et fait **gagner du temps**, et permet à l’organisation de faire des **économies de locaux**."
+        },
+        {
+          "t": "p",
+          "c": "Il a aussi des **risques** : l’**isolement** et la **perte de lien social**, une **frontière floue entre vie professionnelle et vie personnelle**, et une **cohésion d’équipe plus difficile** à entretenir."
         },
         {
           "t": "p",
@@ -1207,6 +1385,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Le travail se transforme : **télétravail** (autonomie mais isolement), nouvelles **organisations** (autonomie, projet), **qualité de vie au travail (QVT)**, **ubérisation**. Bien accompagnées, ces mutations servent la **performance sociale** et l’**attractivité** (marque employeur) de l’organisation."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Télétravail",
+              "Travail hors des locaux de l’employeur grâce au numérique"
+            ],
+            [
+              "Atouts du télétravail",
+              "Autonomie, flexibilité, moins de trajets, économies de locaux"
+            ],
+            [
+              "Risques du télétravail",
+              "Isolement, frontière vie pro/perso floue, cohésion plus difficile"
+            ],
+            [
+              "Qualité de vie au travail (QVT)",
+              "Conditions qui permettent aux salariés de bien travailler et de trouver du sens"
+            ],
+            [
+              "Ubérisation",
+              "Remplacement de salariés par des travailleurs indépendants via des plateformes"
+            ]
+          ]
         }
       ]
     }

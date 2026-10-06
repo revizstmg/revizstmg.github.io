@@ -57,29 +57,30 @@
           "h": "Deux niveaux de management : stratégique et opérationnel",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Management stratégique",
-                "Management opérationnel"
-              ],
-              "rows": [
-                [
-                  "Long terme",
-                  "Court terme"
-                ],
-                [
-                  "Direction générale",
-                  "Encadrement intermédiaire"
-                ],
-                [
-                  "Ouvrir une filiale, lancer une activité",
-                  "Organiser les plannings, gérer un stock"
-                ]
-              ]
+              "t": "p",
+              "c": "Le **management stratégique** porte sur le **long terme** et relève de la **direction générale** : ouvrir une filiale, lancer une nouvelle activité. Le **management opérationnel** porte sur le **court terme** et relève de l’**encadrement intermédiaire** : organiser les plannings, gérer un stock."
             },
             {
               "t": "tip",
               "c": "Les deux sont complémentaires : la **stratégie fixe le cap**, l’**opérationnel le met en pratique**."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Management stratégique",
+                  "Long terme, direction générale (ouvrir une filiale)"
+                ],
+                [
+                  "Management opérationnel",
+                  "Court terme, encadrement intermédiaire (plannings, stock)"
+                ]
+              ]
             }
           ]
         },
@@ -91,29 +92,12 @@
               "c": "Les organisations se distinguent surtout par leur **finalité** (leur raison d’être). On en distingue **trois grandes formes** :"
             },
             {
-              "t": "table",
-              "head": [
-                "Type",
-                "Finalité",
-                "Exemples"
-              ],
-              "rows": [
-                [
-                  "Entreprise privée",
-                  "Lucrative (profit) + dimension sociétale (RSE)",
-                  "Boulangerie, start-up, multinationale"
-                ],
-                [
-                  "Organisation publique",
-                  "Intérêt général (service public, non marchand)",
-                  "Mairie, hôpital, lycée, police"
-                ],
-                [
-                  "Organisation de la société civile",
-                  "Non lucrative (objet social)",
-                  "Association, ONG, syndicat, mutuelle"
-                ]
-              ]
+              "t": "p",
+              "c": "L’**entreprise privée** a une finalité **lucrative** : elle cherche le **profit**, tout en intégrant une dimension sociétale à travers la **RSE**. Une boulangerie, une start-up ou une multinationale en sont des exemples. L’**organisation publique** poursuit l’**intérêt général** en rendant un **service public**, souvent non marchand : une mairie, un hôpital, un lycée, la police."
+            },
+            {
+              "t": "p",
+              "c": "L’**organisation de la société civile** a une finalité **non lucrative** : elle poursuit un **objet social**, comme une association, une ONG, un syndicat ou une mutuelle."
             },
             {
               "t": "p",
@@ -125,6 +109,32 @@
                 "**Parties prenantes** : tous ceux qui ont un intérêt dans l’organisation (salariés, clients, actionnaires, État, fournisseurs, riverains…).",
                 "**Champ d’action** : local, national ou international ; **marchand** ou **non marchand**.",
                 "La **performance** se mesure selon la **finalité** : un profit pour l’entreprise, un service rendu pour l’organisation publique."
+              ]
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Finalité",
+                  "Raison d’être d’une organisation"
+                ],
+                [
+                  "Entreprise privée",
+                  "Finalité lucrative (profit) + RSE"
+                ],
+                [
+                  "Organisation publique",
+                  "Intérêt général, service public (mairie, hôpital, lycée)"
+                ],
+                [
+                  "Organisation de la société civile",
+                  "Non lucrative, objet social (association, ONG, syndicat, mutuelle)"
+                ]
               ]
             }
           ]
@@ -631,29 +641,34 @@
               "c": "Pour un domaine d’activité donné, l’organisation choisit **comment** affronter la concurrence :"
             },
             {
-              "t": "table",
-              "head": [
-                "Domination par les coûts",
-                "Différenciation"
-              ],
-              "rows": [
-                [
-                  "Prix plus bas que les concurrents",
-                  "Offre perçue comme unique"
-                ],
-                [
-                  "Économies d’échelle, productivité",
-                  "Qualité, image, innovation, service"
-                ],
-                [
-                  "Ex. enseigne discount",
-                  "Ex. marque de luxe / haut de gamme"
-                ]
-              ]
+              "t": "p",
+              "c": "La **domination par les coûts** consiste à proposer des **prix plus bas** que les concurrents, grâce aux **économies d’échelle** et à la **productivité** : c’est la stratégie d’une enseigne discount. La **différenciation** consiste à proposer une **offre perçue comme unique**, par sa **qualité**, son **image**, son **innovation** ou son **service** : c’est la stratégie d’une marque de luxe ou haut de gamme."
             },
             {
               "t": "warning",
               "c": "On choisit son terrain : il est difficile d’être à la fois **le moins cher** et **le plus différencié**."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Domination par les coûts",
+                  "Prix plus bas grâce aux économies d’échelle et à la productivité"
+                ],
+                [
+                  "Différenciation",
+                  "Offre perçue comme unique (qualité, image, innovation, service)"
+                ],
+                [
+                  "Économies d’échelle",
+                  "Baisse du coût unitaire quand le volume produit augmente"
+                ]
+              ]
             }
           ]
         },

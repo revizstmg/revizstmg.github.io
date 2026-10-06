@@ -12,29 +12,12 @@
           "c": "La **Grande Guerre** a été une guerre totale, d’une violence inédite. Elle laisse une Europe ruinée, endeuillée et profondément déstabilisée, où la démocratie libérale apparaît à beaucoup comme incapable de répondre aux crises."
         },
         {
-          "t": "table",
-          "head": [
-            "Domaine",
-            "Conséquences de 1914-1918"
-          ],
-          "rows": [
-            [
-              "Humain",
-              "Environ 10 millions de morts, des millions d’invalides, une génération sacrifiée"
-            ],
-            [
-              "Économique",
-              "Pays ruinés, endettés, appauvris ; l’Europe perd sa place centrale au profit des États-Unis"
-            ],
-            [
-              "Politique",
-              "Chute des empires (allemand, austro-hongrois, russe, ottoman) ; nouvelles frontières contestées"
-            ],
-            [
-              "Moral",
-              "Brutalisation des sociétés, banalisation de la violence, deuil de masse"
-            ]
-          ]
+          "t": "p",
+          "c": "Le bilan **humain** de la Grande Guerre est effroyable : **environ 10 millions de morts**, des millions d’**invalides**, une **génération sacrifiée**. Le bilan **économique** est lourd : les pays sont **ruinés**, **endettés** et appauvris, et l’**Europe perd sa place centrale** au profit des **États-Unis**."
+        },
+        {
+          "t": "p",
+          "c": "Sur le plan **politique**, quatre **empires s’effondrent** — allemand, austro-hongrois, russe et ottoman — et les **nouvelles frontières** sont contestées. Sur le plan **moral**, enfin, la guerre entraîne une **brutalisation** des sociétés : la violence se banalise et le **deuil de masse** marque tous les pays."
         },
         {
           "t": "p",
@@ -68,33 +51,8 @@
           ]
         },
         {
-          "t": "table",
-          "head": [
-            "Régime",
-            "Pays",
-            "Chef",
-            "Arrivée au pouvoir"
-          ],
-          "rows": [
-            [
-              "Fascisme",
-              "Italie",
-              "Mussolini (le « Duce »)",
-              "1922"
-            ],
-            [
-              "Stalinisme",
-              "URSS",
-              "Staline",
-              "1924-1929"
-            ],
-            [
-              "Nazisme",
-              "Allemagne",
-              "Hitler (le « Führer »)",
-              "1933"
-            ]
-          ]
+          "t": "p",
+          "c": "Trois régimes totalitaires s’installent en Europe. Le **fascisme** s’impose en **Italie** avec **Mussolini**, le « Duce », arrivé au pouvoir en **1922**. Le **stalinisme** s’impose en **URSS** avec **Staline**, qui prend progressivement tout le pouvoir entre **1924 et 1929**. Le **nazisme** s’impose en **Allemagne** avec **Hitler**, le « Führer », arrivé au pouvoir en **1933**."
         },
         {
           "t": "warning",
@@ -109,6 +67,52 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Les totalitarismes naissent du **traumatisme de 1914-1918**, de l’**humiliation de Versailles**, de la **crise de 1929** et de la **fragilité des démocraties**. Ils partagent : parti unique, chef, idéologie, terreur, encadrement, propagande."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Bilan humain de 1914-1918",
+              "Environ 10 millions de morts, des millions d’invalides"
+            ],
+            [
+              "Bilan économique",
+              "Pays ruinés et endettés ; l’Europe perd sa place au profit des États-Unis"
+            ],
+            [
+              "Bilan politique",
+              "Chute des empires allemand, austro-hongrois, russe, ottoman"
+            ],
+            [
+              "Brutalisation",
+              "Banalisation de la violence dans les sociétés d’après-guerre"
+            ],
+            [
+              "Traité de Versailles (1919)",
+              "Paix imposée à l’Allemagne, vécue comme un « Diktat »"
+            ],
+            [
+              "Fascisme",
+              "Italie, Mussolini (« Duce »), 1922"
+            ],
+            [
+              "Stalinisme",
+              "URSS, Staline, 1924-1929"
+            ],
+            [
+              "Nazisme",
+              "Allemagne, Hitler (« Führer »), 1933"
+            ],
+            [
+              "Autoritaire / totalitaire",
+              "Faire taire l’opposition / contrôler jusqu’à la vie privée et créer un « homme nouveau »"
+            ]
+          ]
         }
       ]
     },
@@ -128,33 +132,12 @@
           "c": "Le régime repose sur un **parti unique** (le Parti communiste) confondu avec l’État. L’idéologie officielle, le **marxisme-léninisme**, prétend construire une société sans classes, mais sert surtout à justifier le pouvoir absolu du chef."
         },
         {
-          "t": "table",
-          "head": [
-            "Pilier",
-            "Concrètement"
-          ],
-          "rows": [
-            [
-              "Parti-État",
-              "Le Parti communiste contrôle toute l’administration et l’armée"
-            ],
-            [
-              "Idéologie",
-              "Le marxisme-léninisme, enseigné et imposé partout"
-            ],
-            [
-              "Économie dirigée",
-              "L’État possède et planifie tout (plans quinquennaux)"
-            ],
-            [
-              "Terreur",
-              "Police politique (NKVD), camps du Goulag"
-            ],
-            [
-              "Propagande",
-              "Culte du chef, contrôle de la presse, de l’art, de l’école"
-            ]
-          ]
+          "t": "p",
+          "c": "Le totalitarisme stalinien repose sur cinq piliers. Le **Parti-État** : le Parti communiste contrôle toute l’administration et l’armée. L’**idéologie** : le marxisme-léninisme est enseigné et imposé partout. L’**économie dirigée** : l’État possède et **planifie** tout, à travers les **plans quinquennaux**."
+        },
+        {
+          "t": "p",
+          "c": "La **terreur** : la police politique, le **NKVD**, arrête et envoie dans les camps du **Goulag**. La **propagande**, enfin, organise le **culte du chef** et contrôle la presse, l’art et l’école."
         },
         {
           "t": "p",
@@ -195,6 +178,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Staline (1924-1953) : **parti unique**, **économie planifiée** (plans quinquennaux, collectivisation, kolkhozes), **terreur** (NKVD, Goulag, Grande Terreur de 1937-38) et **culte de la personnalité**. Un totalitarisme au nom de l’égalité, mais fondé sur la peur."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Parti-État",
+              "Le Parti communiste contrôle l’administration et l’armée"
+            ],
+            [
+              "Marxisme-léninisme",
+              "Idéologie officielle de l’URSS"
+            ],
+            [
+              "Plan quinquennal",
+              "Plan de production sur cinq ans fixé par l’État"
+            ],
+            [
+              "NKVD",
+              "Police politique soviétique"
+            ],
+            [
+              "Goulag",
+              "Camps de travail forcé"
+            ]
+          ]
         }
       ]
     },
@@ -214,33 +227,12 @@
           "c": "Commence alors la **mise au pas** (Gleichschaltung) de la société : interdiction des autres partis et des syndicats, parti unique (NSDAP), contrôle de la presse et de la justice. À la mort de Hindenburg (1934), Hitler cumule tous les pouvoirs et devient le **Führer** (le « guide »)."
         },
         {
-          "t": "table",
-          "head": [
-            "Fondement de l’idéologie nazie",
-            "Signification"
-          ],
-          "rows": [
-            [
-              "Racisme",
-              "Croyance en une « race aryenne » supérieure appelée à dominer"
-            ],
-            [
-              "Antisémitisme",
-              "Haine des Juifs, désignés comme ennemis à éliminer"
-            ],
-            [
-              "Espace vital (Lebensraum)",
-              "Volonté de conquérir des territoires à l’Est pour le peuple allemand"
-            ],
-            [
-              "Anticommunisme",
-              "Rejet violent du marxisme et de l’URSS"
-            ],
-            [
-              "Culte du chef",
-              "Obéissance absolue au Führer, incarnation de la nation"
-            ]
-          ]
+          "t": "p",
+          "c": "L’idéologie nazie repose sur cinq fondements. Le **racisme** : la croyance en une « **race aryenne** » supérieure, appelée à dominer les autres. L’**antisémitisme** : la haine des **Juifs**, désignés comme des ennemis à éliminer. L’**espace vital** (*Lebensraum*) : la volonté de **conquérir des territoires à l’Est** pour le peuple allemand."
+        },
+        {
+          "t": "p",
+          "c": "L’**anticommunisme** : le rejet violent du marxisme et de l’URSS. Le **culte du chef**, enfin : l’**obéissance absolue au Führer**, présenté comme l’incarnation de la nation."
         },
         {
           "t": "p",
@@ -264,34 +256,12 @@
           "c": "L’**économie** est orientée vers le **réarmement** et la préparation de la guerre. De grands travaux (autoroutes) et l’industrie d’armement font reculer le chômage, ce qui renforce la popularité du régime tout en le préparant à la conquête."
         },
         {
-          "t": "table",
-          "head": [
-            "Comparaison",
-            "Nazisme",
-            "Stalinisme"
-          ],
-          "rows": [
-            [
-              "Ennemi désigné",
-              "Les Juifs, les « races inférieures »",
-              "Les « ennemis de classe » (koulaks, opposants)"
-            ],
-            [
-              "But affiché",
-              "Domination raciale, espace vital",
-              "Société communiste sans classes"
-            ],
-            [
-              "Économie",
-              "Privée mais dirigée, tournée vers la guerre",
-              "Étatisée et planifiée"
-            ],
-            [
-              "Point commun",
-              "Parti unique, chef, terreur, propagande",
-              "Parti unique, chef, terreur, propagande"
-            ]
-          ]
+          "t": "p",
+          "c": "Nazisme et stalinisme diffèrent sur trois points. L’**ennemi désigné** : les **Juifs** et les prétendues « **races inférieures** » pour le nazisme, les « **ennemis de classe** », koulaks et opposants, pour le stalinisme. Le **but affiché** : la **domination raciale** et la conquête de l’**espace vital** d’un côté, une **société communiste sans classes** de l’autre. L’**économie** : **privée mais dirigée**, tournée vers la guerre, en Allemagne ; **étatisée et planifiée** en URSS."
+        },
+        {
+          "t": "p",
+          "c": "Ils partagent en revanche les mêmes méthodes : **parti unique**, **chef** tout-puissant, **terreur** et **propagande**."
         },
         {
           "t": "warning",
@@ -302,6 +272,48 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Hitler, chancelier le **30 janvier 1933**, installe un totalitarisme **raciste** et **antisémite** : parti unique, Führer, terreur (Gestapo, SS, camps dès 1933), embrigadement, propagande (Goebbels), persécution des Juifs (**Nuremberg 1935**, Nuit de Cristal 1938) et préparation de la guerre."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Racisme (nazi)",
+              "Croyance en une « race aryenne » supérieure appelée à dominer"
+            ],
+            [
+              "Antisémitisme",
+              "Haine des Juifs, désignés comme ennemis à éliminer"
+            ],
+            [
+              "Espace vital (Lebensraum)",
+              "Conquête de territoires à l’Est pour le peuple allemand"
+            ],
+            [
+              "Anticommunisme",
+              "Rejet violent du marxisme et de l’URSS"
+            ],
+            [
+              "Mise au pas (Gleichschaltung)",
+              "Interdiction des partis et syndicats, contrôle de la presse et de la justice"
+            ],
+            [
+              "Nazisme : ennemi et but",
+              "Juifs, « races inférieures » ; domination raciale, espace vital"
+            ],
+            [
+              "Stalinisme : ennemi et but",
+              "Ennemis de classe ; société communiste sans classes"
+            ],
+            [
+              "Points communs nazisme / stalinisme",
+              "Parti unique, chef, terreur, propagande"
+            ]
+          ]
         }
       ]
     },
@@ -321,78 +333,24 @@
           "c": "Le régime supprime les libertés, instaure le **parti unique** (le Parti national fasciste), muselle la presse et réprime les opposants. Il encadre la société (jeunesse, loisirs, travail via le **corporatisme**) et déploie une **propagande** célébrant le Duce et la grandeur retrouvée de Rome."
         },
         {
-          "t": "table",
-          "head": [
-            "Caractéristique du fascisme",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Culte du chef",
-              "Le « Duce a toujours raison »"
-            ],
-            [
-              "Nationalisme extrême",
-              "Rêve d’un nouvel Empire romain, conquête de l’Éthiopie (1935)"
-            ],
-            [
-              "Parti unique & violence",
-              "Chemises noires, répression des opposants"
-            ],
-            [
-              "Encadrement",
-              "Jeunesse fasciste, organisation des loisirs"
-            ],
-            [
-              "Propagande",
-              "Slogans, défilés, contrôle des médias"
-            ]
-          ]
+          "t": "p",
+          "c": "Le fascisme italien présente cinq traits. Le **culte du chef** : « le **Duce a toujours raison** ». Un **nationalisme extrême** : le rêve d’un **nouvel Empire romain**, qui conduit à la **conquête de l’Éthiopie en 1935**. Le **parti unique** et la **violence** : les **Chemises noires** répriment les opposants."
+        },
+        {
+          "t": "p",
+          "c": "L’**encadrement** de la société, avec la **jeunesse fasciste** et l’organisation des loisirs. La **propagande**, enfin, faite de slogans, de défilés et du contrôle des médias."
         },
         {
           "t": "p",
           "c": "Malgré leurs différences, les trois régimes partagent une même **logique totalitaire** : refus de la démocratie, culte du chef, parti unique, encadrement des masses et recours à la violence d’État. C’est ce qui permet de les regrouper sous le terme de totalitarismes."
         },
         {
-          "t": "table",
-          "head": [
-            "Critère",
-            "Fascisme (Italie)",
-            "Nazisme (Allemagne)",
-            "Stalinisme (URSS)"
-          ],
-          "rows": [
-            [
-              "Chef",
-              "Mussolini (Duce)",
-              "Hitler (Führer)",
-              "Staline"
-            ],
-            [
-              "Date clé",
-              "Marche sur Rome, 1922",
-              "Chancelier, 1933",
-              "Pouvoir absolu, 1929"
-            ],
-            [
-              "Idéologie",
-              "Nationalisme, corporatisme",
-              "Racisme, antisémitisme, espace vital",
-              "Marxisme-léninisme"
-            ],
-            [
-              "Ennemi désigné",
-              "Opposants, socialistes",
-              "Juifs, « races inférieures »",
-              "Ennemis de classe"
-            ],
-            [
-              "Violence extrême",
-              "Répression, colonies",
-              "Camps, génocide",
-              "Goulag, Grande Terreur"
-            ]
-          ]
+          "t": "p",
+          "c": "Comparons les trois régimes. Le **fascisme** a pour chef **Mussolini**, le Duce, arrivé au pouvoir avec la **marche sur Rome en 1922** ; son idéologie est le **nationalisme** et le **corporatisme**, ses ennemis sont les **opposants** et les **socialistes**, et sa violence passe par la **répression** et les guerres **coloniales**."
+        },
+        {
+          "t": "p",
+          "c": "Le **nazisme** a pour chef **Hitler**, le Führer, nommé **chancelier en 1933** ; son idéologie est le **racisme**, l’**antisémitisme** et l’**espace vital**, ses ennemis sont les **Juifs** et les « races inférieures », et sa violence extrême aboutit aux **camps** et au **génocide**. Le **stalinisme** a pour chef **Staline**, qui détient le **pouvoir absolu à partir de 1929** ; son idéologie est le **marxisme-léninisme**, ses ennemis sont les « **ennemis de classe** », et sa violence passe par le **Goulag** et la **Grande Terreur**."
         },
         {
           "t": "p",
@@ -417,6 +375,48 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Fascisme : **Mussolini**, Marche sur Rome **1922**, parti unique, corporatisme, nationalisme. Les trois totalitarismes partagent chef + parti + idéologie + terreur, mais seul le **nazisme** est fondé sur le racisme et débouche sur un génocide."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Duce",
+              "Titre de Mussolini, objet d’un culte (« le Duce a toujours raison »)"
+            ],
+            [
+              "Chemises noires",
+              "Milices fascistes qui répriment les opposants"
+            ],
+            [
+              "Conquête de l’Éthiopie (1935)",
+              "Expression du nationalisme fasciste"
+            ],
+            [
+              "Corporatisme",
+              "Organisation du travail qui encadre patrons et ouvriers sous le contrôle de l’État"
+            ],
+            [
+              "Fascisme (Italie)",
+              "Mussolini, 1922 ; nationalisme, corporatisme ; répression, colonies"
+            ],
+            [
+              "Nazisme (Allemagne)",
+              "Hitler, 1933 ; racisme, antisémitisme ; camps, génocide"
+            ],
+            [
+              "Stalinisme (URSS)",
+              "Staline, 1929 ; marxisme-léninisme ; Goulag, Grande Terreur"
+            ],
+            [
+              "Grande Terreur",
+              "Vague de répression stalinienne de 1936-1938"
+            ]
+          ]
         }
       ]
     },
@@ -432,29 +432,12 @@
           "c": "Elle éclate le **1er septembre 1939** avec l’invasion de la **Pologne** par l’Allemagne nazie. La France et le Royaume-Uni déclarent la guerre à l’Allemagne. Hitler a préparé le terrain par une série de coups de force et un pacte avec l’URSS (pacte germano-soviétique, août 1939)."
         },
         {
-          "t": "table",
-          "head": [
-            "Phase",
-            "Dates",
-            "Évolution"
-          ],
-          "rows": [
-            [
-              "Victoires de l’Axe",
-              "1939-1941",
-              "L’Allemagne et ses alliés dominent l’Europe ; guerre-éclair (Blitzkrieg)"
-            ],
-            [
-              "Le tournant",
-              "1942-1943",
-              "Défaites de l’Axe : Stalingrad, El-Alamein, Midway"
-            ],
-            [
-              "La victoire alliée",
-              "1944-1945",
-              "Débarquements, libération de l’Europe, capitulations"
-            ]
-          ]
+          "t": "p",
+          "c": "La guerre se déroule en trois phases. De **1939 à 1941**, ce sont les **victoires de l’Axe** : l’Allemagne et ses alliés dominent l’Europe grâce à la **guerre-éclair** (*Blitzkrieg*). En **1942-1943**, c’est le **tournant** : l’Axe subit ses premières grandes défaites, à **Stalingrad**, à **El-Alamein** et à **Midway**."
+        },
+        {
+          "t": "p",
+          "c": "En **1944-1945**, c’est la **victoire alliée** : les débarquements, la **libération de l’Europe** et les **capitulations** de l’Allemagne puis du Japon."
         },
         {
           "t": "p",
@@ -483,29 +466,8 @@
           "c": "La guerre s’achève en deux temps. En Europe, l’Allemagne **capitule le 8 mai 1945**. Dans le Pacifique, les États-Unis larguent deux **bombes atomiques** sur **Hiroshima (6 août)** et **Nagasaki (9 août 1945)** : le Japon capitule le **2 septembre 1945**. L’arme nucléaire inaugure une ère nouvelle et terrifiante."
         },
         {
-          "t": "table",
-          "head": [
-            "Bilan de la guerre",
-            "Ampleur"
-          ],
-          "rows": [
-            [
-              "Morts",
-              "Environ 50 à 60 millions, en majorité des civils"
-            ],
-            [
-              "Génocide",
-              "La Shoah : extermination de près de 6 millions de Juifs"
-            ],
-            [
-              "Matériel",
-              "Villes détruites, Europe ruinée"
-            ],
-            [
-              "Géopolitique",
-              "Deux « super-grands » dominent : États-Unis et URSS"
-            ]
-          ]
+          "t": "p",
+          "c": "Le bilan de la guerre est sans précédent. Elle a fait **environ 50 à 60 millions de morts**, en **majorité des civils**. Elle a été le théâtre de la **Shoah**, l’**extermination de près de 6 millions de Juifs**. Sur le plan **matériel**, les **villes sont détruites** et l’**Europe est ruinée**. Sur le plan **géopolitique**, enfin, deux « **super-grands** », les **États-Unis** et l’**URSS**, dominent désormais le monde."
         },
         {
           "t": "warning",
@@ -516,6 +478,56 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Guerre **totale** et **mondiale** (1939-1945) : victoires de l’Axe (1939-41), tournant (1942-43, Stalingrad), victoire alliée (1944-45, Débarquement). Fin : **8 mai 1945** (Europe), bombes atomiques et **2 septembre 1945** (Japon). Bilan : 50-60 millions de morts, surtout des civils."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "1939-1941",
+              "Victoires de l’Axe, guerre-éclair (Blitzkrieg)"
+            ],
+            [
+              "1942-1943",
+              "Tournant : Stalingrad, El-Alamein, Midway"
+            ],
+            [
+              "1944-1945",
+              "Victoire alliée : débarquements, libération, capitulations"
+            ],
+            [
+              "Axe",
+              "Alliance de l’Allemagne, de l’Italie et du Japon"
+            ],
+            [
+              "Guerre totale",
+              "Guerre qui mobilise toutes les ressources et touche les civils"
+            ],
+            [
+              "Bilan humain de 1939-1945",
+              "Environ 50 à 60 millions de morts, en majorité des civils"
+            ],
+            [
+              "Shoah",
+              "Extermination de près de 6 millions de Juifs"
+            ],
+            [
+              "8 mai 1945",
+              "Capitulation allemande (fin de la guerre en Europe)"
+            ],
+            [
+              "2 sept. 1945",
+              "Capitulation japonaise (fin de la Seconde Guerre mondiale)"
+            ],
+            [
+              "Super-grands",
+              "États-Unis et URSS, qui dominent le monde après 1945"
+            ]
+          ]
         }
       ]
     },
@@ -535,29 +547,12 @@
           "c": "La Shoah est l’aboutissement d’un processus par **étapes**, qui va de la discrimination à l’extermination. Il ne s’agit pas d’un déchaînement soudain, mais d’une **radicalisation progressive** encadrée par l’État nazi."
         },
         {
-          "t": "table",
-          "head": [
-            "Étape",
-            "Contenu"
-          ],
-          "rows": [
-            [
-              "Discrimination",
-              "Lois antijuives (Nuremberg, 1935), exclusion de la société"
-            ],
-            [
-              "Concentration",
-              "Regroupement des Juifs dans des ghettos (ex. Varsovie)"
-            ],
-            [
-              "« Shoah par balles »",
-              "Fusillades de masse à l’Est par les Einsatzgruppen (dès 1941)"
-            ],
-            [
-              "Extermination industrielle",
-              "Camps de la mort, chambres à gaz (à partir de 1942)"
-            ]
-          ]
+          "t": "p",
+          "c": "La première étape est la **discrimination** : les **lois antijuives**, comme les **lois de Nuremberg en 1935**, excluent les Juifs de la société. La deuxième est la **concentration** : les Juifs sont regroupés dans des **ghettos**, comme celui de **Varsovie**."
+        },
+        {
+          "t": "p",
+          "c": "La troisième est la « **Shoah par balles** » : à partir de **1941**, les **Einsatzgruppen** fusillent en masse les Juifs à l’Est. La quatrième est l’**extermination industrielle** : à partir de **1942**, les **camps de la mort** et leurs **chambres à gaz** tuent des millions de personnes."
         },
         {
           "t": "p",
@@ -593,6 +588,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Shoah = **génocide** des Juifs d’Europe. Étapes : discrimination → ghettos → « Shoah par balles » (Einsatzgruppen, 1941) → extermination industrielle (**Wannsee, 1942**, chambres à gaz). Distingue **concentration** (travail forcé) et **extermination** (mise à mort immédiate). Bilan : ~6 millions de Juifs."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Discrimination",
+              "Lois antijuives (Nuremberg, 1935), exclusion de la société"
+            ],
+            [
+              "Ghetto",
+              "Quartier où les Juifs sont enfermés (Varsovie)"
+            ],
+            [
+              "Einsatzgruppen",
+              "Unités mobiles de tuerie à l’Est (« Shoah par balles », dès 1941)"
+            ],
+            [
+              "Extermination industrielle",
+              "Camps de la mort et chambres à gaz (à partir de 1942)"
+            ],
+            [
+              "Génocide",
+              "Extermination volontaire et programmée d’un peuple"
+            ]
+          ]
         }
       ]
     },
@@ -624,29 +649,8 @@
           "c": "Vichy participe activement à la **Shoah**. Dès **octobre 1940**, un « statut des Juifs » les exclut de nombreux emplois, sans même que l’occupant l’exige. En juillet 1942, la police française organise la **rafle du Vél d’Hiv** à Paris : plus de 13 000 Juifs, dont des milliers d’enfants, arrêtés puis déportés vers les camps de la mort."
         },
         {
-          "t": "table",
-          "head": [
-            "Le régime de Vichy",
-            "Caractéristiques"
-          ],
-          "rows": [
-            [
-              "Nature",
-              "Régime autoritaire, fin de la République"
-            ],
-            [
-              "Devise",
-              "Travail, Famille, Patrie"
-            ],
-            [
-              "Politique",
-              "Révolution nationale, collaboration avec l’Allemagne"
-            ],
-            [
-              "Antisémitisme",
-              "Statut des Juifs (1940), participation à la déportation"
-            ]
-          ]
+          "t": "p",
+          "c": "Le régime de Vichy est un **régime autoritaire** qui met **fin à la République**. Sa devise, « **Travail, Famille, Patrie** », remplace « Liberté, Égalité, Fraternité ». Sa politique est celle de la **Révolution nationale** et de la **collaboration** avec l’Allemagne. Il est profondément **antisémite** : il adopte le **statut des Juifs** en **1940** et **participe à la déportation**."
         },
         {
           "t": "p",
@@ -674,6 +678,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Défaite et **armistice du 22 juin 1940** → **Vichy** (Pétain, « Travail, Famille, Patrie », collaboration, participation à la Shoah : rafle du Vél d’Hiv 1942). Face à lui : **De Gaulle** (appel du **18 juin 1940**, France libre) et la Résistance unifiée par **Jean Moulin** (CNR, 1943). Libération en 1944."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Régime de Vichy",
+              "Régime autoritaire de Pétain (1940-1944), fin de la République"
+            ],
+            [
+              "« Travail, Famille, Patrie »",
+              "Devise de Vichy"
+            ],
+            [
+              "Révolution nationale",
+              "Programme idéologique de Vichy"
+            ],
+            [
+              "Collaboration",
+              "Coopération de Vichy avec l’Allemagne nazie"
+            ],
+            [
+              "Statut des Juifs (1940)",
+              "Loi de Vichy qui exclut les Juifs de nombreux emplois"
+            ],
+            [
+              "Appel du 18 juin 1940",
+              "Appel de de Gaulle à poursuivre le combat ; naissance de la France libre"
+            ]
+          ]
         }
       ]
     }
@@ -691,29 +729,12 @@
           "c": "En 1945, les Alliés fondent l’**ONU** (Organisation des Nations unies) pour maintenir la paix. Mais très vite, les vainqueurs se divisent. Deux modèles opposés s’affrontent : la **démocratie libérale et le capitalisme** (États-Unis) contre le **communisme et l’économie planifiée** (URSS)."
         },
         {
-          "t": "table",
-          "head": [
-            "Bloc de l’Ouest (États-Unis)",
-            "Bloc de l’Est (URSS)"
-          ],
-          "rows": [
-            [
-              "Démocratie libérale, pluralisme",
-              "Parti unique communiste"
-            ],
-            [
-              "Capitalisme, économie de marché",
-              "Économie planifiée, collectivisée"
-            ],
-            [
-              "Liberté individuelle, propriété privée",
-              "Priorité au collectif, propriété d’État"
-            ],
-            [
-              "Alliance : OTAN (1949)",
-              "Alliance : pacte de Varsovie (1955)"
-            ]
-          ]
+          "t": "p",
+          "c": "Le **bloc de l’Ouest**, mené par les **États-Unis**, défend la **démocratie libérale** et le **pluralisme** politique, le **capitalisme** et l’**économie de marché**, la **liberté individuelle** et la **propriété privée** ; son alliance militaire est l’**OTAN**, créée en **1949**."
+        },
+        {
+          "t": "p",
+          "c": "Le **bloc de l’Est**, mené par l’**URSS**, repose sur le **parti unique communiste**, l’**économie planifiée** et **collectivisée**, la **priorité au collectif** et la **propriété d’État** ; son alliance militaire est le **pacte de Varsovie**, créé en **1955**."
         },
         {
           "t": "p",
@@ -737,29 +758,8 @@
           "c": "Cette crise débouche en 1949 sur la **division de l’Allemagne** en deux États : la **RFA** (République fédérale, à l’Ouest) et la **RDA** (République démocratique, à l’Est). La même année naît l’alliance militaire occidentale, l’**OTAN**. Les blocs sont désormais constitués."
         },
         {
-          "t": "table",
-          "head": [
-            "Repère",
-            "Date"
-          ],
-          "rows": [
-            [
-              "Création de l’ONU",
-              "1945"
-            ],
-            [
-              "Doctrines Truman et Jdanov, plan Marshall",
-              "1947"
-            ],
-            [
-              "Blocus de Berlin",
-              "1948-1949"
-            ],
-            [
-              "Division de l’Allemagne (RFA/RDA), OTAN",
-              "1949"
-            ]
-          ]
+          "t": "p",
+          "c": "Quatre repères résument cette période : l’**ONU** est créée en **1945** ; en **1947**, les **doctrines Truman et Jdanov** et le **plan Marshall** consomment la rupture ; le **blocus de Berlin** dure de **1948 à 1949** ; en **1949**, l’**Allemagne est divisée** entre la RFA et la RDA, et l’**OTAN** est fondée."
         },
         {
           "t": "warning",
@@ -770,6 +770,52 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Guerre froide = affrontement indirect **États-Unis / URSS** (deux modèles opposés). Mise en place en **1947** (doctrines Truman & Jdanov, plan Marshall), première crise majeure : **blocus de Berlin (1948-49)**, puis **division de l’Allemagne** et **OTAN** en 1949."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Bloc de l’Ouest",
+              "Démocratie libérale, capitalisme, propriété privée ; OTAN (1949)"
+            ],
+            [
+              "Bloc de l’Est",
+              "Parti unique, économie planifiée, propriété d’État ; pacte de Varsovie (1955)"
+            ],
+            [
+              "ONU",
+              "Organisation des Nations unies, fondée en 1945 pour maintenir la paix"
+            ],
+            [
+              "Doctrine Truman",
+              "Endiguement du communisme (1947)"
+            ],
+            [
+              "Doctrine Jdanov",
+              "Réponse soviétique qui dénonce l’impérialisme américain (1947)"
+            ],
+            [
+              "1945",
+              "Création de l’ONU"
+            ],
+            [
+              "1947",
+              "Doctrines Truman et Jdanov, plan Marshall"
+            ],
+            [
+              "1948-1949",
+              "Blocus de Berlin"
+            ],
+            [
+              "1949",
+              "Division de l’Allemagne (RFA/RDA), OTAN"
+            ]
+          ]
         }
       ]
     },
@@ -793,34 +839,8 @@
           "c": "La première grande **guerre par procuration** est la **guerre de Corée (1950-1953)**. La péninsule, divisée en deux, devient un champ de bataille : la Corée du Nord communiste (soutenue par l’URSS et la Chine) contre la Corée du Sud (soutenue par l’ONU et les États-Unis). Le conflit fige la division du pays, toujours en vigueur."
         },
         {
-          "t": "table",
-          "head": [
-            "Crise",
-            "Date",
-            "Enjeu"
-          ],
-          "rows": [
-            [
-              "Blocus de Berlin",
-              "1948-1949",
-              "Contrôle de Berlin"
-            ],
-            [
-              "Guerre de Corée",
-              "1950-1953",
-              "Affrontement indirect en Asie"
-            ],
-            [
-              "Construction du mur de Berlin",
-              "1961",
-              "Fuite des Allemands de l’Est"
-            ],
-            [
-              "Crise de Cuba",
-              "1962",
-              "Missiles soviétiques près des États-Unis"
-            ]
-          ]
+          "t": "p",
+          "c": "Quatre crises jalonnent cette période. Le **blocus de Berlin**, en **1948-1949**, a pour enjeu le **contrôle de la ville**. La **guerre de Corée**, de **1950 à 1953**, est un **affrontement indirect en Asie**. La **construction du mur de Berlin**, en **1961**, vise à stopper la **fuite des Allemands de l’Est** vers l’Ouest. La **crise de Cuba**, en **1962**, éclate à cause de **missiles soviétiques installés près des États-Unis**."
         },
         {
           "t": "p",
@@ -854,26 +874,55 @@
           "c": "Berlin-Ouest, îlot de prospérité au cœur du bloc de l’Est, devient une vitrine du modèle occidental. Sa réussite attire les Allemands de l’Est : c’est pour stopper cette fuite que la RDA construit le mur en 1961. La ville concentre à elle seule tout l’enjeu de la Guerre froide."
         },
         {
-          "t": "table",
-          "head": [
-            "Camp",
-            "Son « arme » idéologique"
-          ],
-          "rows": [
-            [
-              "Ouest (États-Unis)",
-              "Liberté, abondance, société de consommation"
-            ],
-            [
-              "Est (URSS)",
-              "Égalité, plein emploi, puissance industrielle"
-            ]
-          ]
+          "t": "p",
+          "c": "Chaque camp met en avant son « arme » idéologique. L’**Ouest**, autour des États-Unis, vante la **liberté**, l’**abondance** et la **société de consommation**. L’**Est**, autour de l’URSS, met en avant l’**égalité**, le **plein emploi** et la **puissance industrielle**."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "Monde **bipolaire** : deux modèles, deux alliances (OTAN 1949 / pacte de Varsovie 1955), course aux armements. Crises majeures : **Corée (1950-53)**, **mur de Berlin (1961)**, **crise de Cuba (1962)**, apogée de la peur nucléaire."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Blocus de Berlin (1948-1949)",
+              "Contrôle de Berlin"
+            ],
+            [
+              "Guerre de Corée (1950-1953)",
+              "Affrontement indirect en Asie"
+            ],
+            [
+              "Mur de Berlin (1961)",
+              "Stopper la fuite des Allemands de l’Est"
+            ],
+            [
+              "Crise de Cuba (1962)",
+              "Missiles soviétiques près des États-Unis"
+            ],
+            [
+              "Coexistence pacifique",
+              "Coexister sans renoncer à la rivalité (après 1953)"
+            ],
+            [
+              "Modèle de l’Ouest",
+              "Liberté, abondance, société de consommation"
+            ],
+            [
+              "Modèle de l’Est",
+              "Égalité, plein emploi, puissance industrielle"
+            ],
+            [
+              "Monde bipolaire",
+              "Monde organisé autour de deux pôles rivaux"
+            ]
+          ]
         }
       ]
     },
@@ -901,29 +950,8 @@
           "c": "En 1985, **Mikhaïl Gorbatchev** arrive au pouvoir et tente de réformer le régime : la **perestroïka** (restructuration économique) et la **glasnost** (transparence, liberté d’expression). Mais ces réformes, au lieu de sauver le système, en révèlent les failles et l’accélèrent vers l’effondrement."
         },
         {
-          "t": "table",
-          "head": [
-            "Phase",
-            "Dates",
-            "Caractéristique"
-          ],
-          "rows": [
-            [
-              "Détente",
-              "1962-1975",
-              "Négociations, limitation des armements"
-            ],
-            [
-              "Guerre fraîche",
-              "1975-1985",
-              "Regain de tensions (Afghanistan)"
-            ],
-            [
-              "Réformes et effondrement",
-              "1985-1991",
-              "Gorbatchev, chute du mur, fin de l’URSS"
-            ]
-          ]
+          "t": "p",
+          "c": "La fin de la guerre froide se déroule en trois phases. De **1962 à 1975**, la **Détente** est faite de **négociations** et de **limitation des armements**. De **1975 à 1985**, la « **guerre fraîche** » voit un **regain de tensions**, notamment avec l’invasion soviétique de l’**Afghanistan**. De **1985 à 1991**, enfin, les **réformes de Gorbatchev**, la **chute du mur** et la **fin de l’URSS** mettent un terme à l’affrontement."
         },
         {
           "t": "p",
@@ -947,6 +975,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Après Cuba : **Détente** (accords sur les armes), puis « guerre fraîche ». L’URSS, en crise, est réformée par **Gorbatchev** (perestroïka, glasnost). Chute du **mur de Berlin (1989)**, réunification allemande (1990), **disparition de l’URSS (1991)** : fin de la Guerre froide."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Détente (1962-1975)",
+              "Négociations, limitation des armements"
+            ],
+            [
+              "Guerre fraîche (1975-1985)",
+              "Regain de tensions (Afghanistan)"
+            ],
+            [
+              "1985-1991",
+              "Réformes de Gorbatchev, chute du mur, fin de l’URSS"
+            ],
+            [
+              "Perestroïka",
+              "Restructuration économique"
+            ],
+            [
+              "Glasnost",
+              "Transparence, liberté d’expression"
+            ]
+          ]
         }
       ]
     },
@@ -966,34 +1024,12 @@
           "c": "La décolonisation prend deux **formes** principales : parfois **pacifique** et négociée, parfois **violente**, par la guerre. Le résultat dépend de l’attitude de la métropole et de l’importance de la présence coloniale."
         },
         {
-          "t": "table",
-          "head": [
-            "Exemple",
-            "Forme",
-            "Année"
-          ],
-          "rows": [
-            [
-              "Inde (Royaume-Uni)",
-              "Indépendance négociée, non-violence (Gandhi)",
-              "1947"
-            ],
-            [
-              "Indochine (France)",
-              "Guerre, défaite française (Diên Biên Phu)",
-              "1954"
-            ],
-            [
-              "Algérie (France)",
-              "Guerre longue et douloureuse",
-              "1954-1962"
-            ],
-            [
-              "Afrique subsaharienne",
-              "Indépendances majoritairement négociées",
-              "vers 1960"
-            ]
-          ]
+          "t": "p",
+          "c": "Quelques exemples montrent la diversité des décolonisations. L’**Inde**, colonie britannique, obtient une **indépendance négociée** en **1947**, au terme de la lutte **non-violente** menée par **Gandhi**. L’**Indochine**, colonie française, s’émancipe par la **guerre** : la **défaite française de Diên Biên Phu** en **1954** y met fin."
+        },
+        {
+          "t": "p",
+          "c": "L’**Algérie** connaît une **guerre longue et douloureuse**, de **1954 à 1962**. En **Afrique subsaharienne**, enfin, les **indépendances**, obtenues **vers 1960**, sont **majoritairement négociées**."
         },
         {
           "t": "example",
@@ -1026,6 +1062,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Décolonisation (1945-années 60) : fin des empires européens, formes **pacifiques** (Inde, **Gandhi**, 1947) ou **violentes** (Algérie, 1954-1962). Naissance du **Tiers-Monde** (Bandung 1955, non-alignement) et d’un clivage **Nord-Sud**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Décolonisation",
+              "Accès à l’indépendance des anciennes colonies"
+            ],
+            [
+              "Inde (1947)",
+              "Indépendance négociée, non-violence (Gandhi)"
+            ],
+            [
+              "Indochine (1954)",
+              "Guerre, défaite française de Diên Biên Phu"
+            ],
+            [
+              "Algérie (1954-1962)",
+              "Guerre longue et douloureuse"
+            ],
+            [
+              "Afrique subsaharienne (vers 1960)",
+              "Indépendances majoritairement négociées"
+            ],
+            [
+              "Tiers-Monde",
+              "Pays pauvres, souvent issus de la décolonisation, non alignés"
+            ]
+          ]
         }
       ]
     },
@@ -1045,29 +1115,8 @@
           "c": "Mais cette domination est vite contestée. De **nouvelles puissances** montent en force, au premier rang desquelles la **Chine**, qui devient l’« atelier du monde » et la deuxième économie mondiale. D’autres pôles s’affirment : l’**Union européenne**, l’Inde, le Brésil, la Russie… On regroupe certains sous le sigle **BRICS**."
         },
         {
-          "t": "table",
-          "head": [
-            "Pôle de puissance",
-            "Atout principal"
-          ],
-          "rows": [
-            [
-              "États-Unis",
-              "Puissance militaire, économique et culturelle"
-            ],
-            [
-              "Chine",
-              "Puissance économique et démographique, montée rapide"
-            ],
-            [
-              "Union européenne",
-              "Puissance économique et commerciale"
-            ],
-            [
-              "Puissances émergentes (BRICS)",
-              "Croissance, poids démographique et régional"
-            ]
-          ]
+          "t": "p",
+          "c": "Plusieurs pôles de puissance comptent désormais. Les **États-Unis** restent la première puissance, **militaire**, **économique** et **culturelle**. La **Chine** est une **puissance économique et démographique** en **montée rapide**. L’**Union européenne** est une grande **puissance économique et commerciale**. Les **puissances émergentes**, regroupées sous le sigle **BRICS**, s’appuient sur leur **croissance** et leur **poids démographique et régional**."
         },
         {
           "t": "p",
@@ -1101,26 +1150,59 @@
           "c": "En quelques décennies, la Chine est passée du statut de pays pauvre à celui de deuxième puissance économique mondiale et de grande rivale des États-Unis. Sa réussite illustre parfaitement le basculement d’un monde dominé par l’Occident vers un monde à plusieurs centres."
         },
         {
-          "t": "table",
-          "head": [
-            "Type de puissance",
-            "Sur quoi elle repose"
-          ],
-          "rows": [
-            [
-              "« Hard power » (force)",
-              "Puissance militaire et économique"
-            ],
-            [
-              "« Soft power » (influence)",
-              "Culture, cinéma, langue, valeurs, mode de vie"
-            ]
-          ]
+          "t": "p",
+          "c": "La puissance prend deux formes. Le **hard power** repose sur la **force** : la **puissance militaire** et **économique**. Le **soft power** repose sur l’**influence** : la **culture**, le **cinéma**, la **langue**, les **valeurs** et le **mode de vie** qui séduisent le reste du monde."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "Depuis 1991 : d’abord **hyperpuissance américaine** (unipolaire), puis monde **multipolaire** (Chine, UE, émergents/BRICS). Nouvelles menaces (**terrorisme**, **11 septembre 2001**), tentatives de **gouvernance mondiale** (ONU, G20, climat) dans un monde plus complexe."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Monde multipolaire",
+              "Monde où plusieurs puissances comptent"
+            ],
+            [
+              "États-Unis",
+              "Puissance militaire, économique et culturelle"
+            ],
+            [
+              "Chine",
+              "Puissance économique et démographique, en montée rapide"
+            ],
+            [
+              "Union européenne",
+              "Puissance économique et commerciale"
+            ],
+            [
+              "BRICS",
+              "Puissances émergentes : croissance, poids démographique et régional"
+            ],
+            [
+              "Hard power",
+              "Puissance par la force : militaire et économique"
+            ],
+            [
+              "Soft power",
+              "Puissance par l’influence : culture, cinéma, langue, valeurs"
+            ],
+            [
+              "Hyperpuissance",
+              "Domination américaine sans rival après 1991"
+            ],
+            [
+              "11 septembre 2001",
+              "Attentats terroristes aux États-Unis"
+            ]
+          ]
         }
       ]
     },
@@ -1136,10 +1218,53 @@
           "c": "Commençons par les **notions clés**, qu’il faut savoir définir en une phrase précise."
         },
         {
+          "t": "p",
+          "c": "La **guerre froide** est l’**affrontement indirect** entre les États-Unis et l’URSS, de **1947 à 1991**, **sans guerre directe** entre eux. Elle organise un **monde bipolaire**, structuré autour de **deux pôles rivaux**, chacun entouré d’un **bloc**, c’est-à-dire d’un ensemble de pays regroupés autour d’un des deux Grands."
+        },
+        {
+          "t": "p",
+          "c": "La **coexistence pacifique** consiste à **accepter de coexister sans renoncer à la rivalité** ; la **Détente** est une **période d’apaisement et de négociations** entre les blocs. La **décolonisation** est l’**accès à l’indépendance** des anciennes colonies, qui forment pour beaucoup le **Tiers-Monde** : des pays **pauvres** et souvent **non alignés**. Depuis 1991, le monde est devenu **multipolaire** : **plusieurs puissances** y comptent."
+        },
+        {
+          "t": "p",
+          "c": "Il faut aussi connaître les grands **acteurs** de la période et ce qu’ils incarnent."
+        },
+        {
+          "t": "p",
+          "c": "**Truman**, président des États-Unis, formule en **1947** la doctrine de l’**endiguement** du communisme. **Staline** et **Jdanov** y répondent la même année par la **doctrine soviétique** face à l’Ouest. **Khrouchtchev**, dirigeant soviétique, est l’un des protagonistes de la **crise de Cuba** en **1962**."
+        },
+        {
+          "t": "p",
+          "c": "**Gorbatchev** engage les réformes de la **perestroïka** et de la **glasnost**, qui conduisent à la **fin de l’URSS**. **Gandhi**, enfin, obtient l’**indépendance de l’Inde** en **1947** par la **non-violence**."
+        },
+        {
+          "t": "p",
+          "c": "Enfin, voici la **chronologie** à mémoriser absolument. Ces repères structurent tout le thème et tombent régulièrement."
+        },
+        {
+          "t": "p",
+          "c": "En **1945**, la guerre prend fin et l’**ONU** est créée. En **1947** commence la **guerre froide**, avec les doctrines et le plan Marshall, et l’**Inde devient indépendante**. En **1948-1949**, le **blocus de Berlin** conduit à la **division de l’Allemagne** et à la création de l’**OTAN**. De **1950 à 1953** se déroule la **guerre de Corée**."
+        },
+        {
+          "t": "p",
+          "c": "En **1955** se tiennent la **conférence de Bandung** et la signature du **pacte de Varsovie**. En **1961**, le **mur de Berlin** est construit, et en **1962** éclate la **crise de Cuba**. En **1989**, le **mur de Berlin tombe**, et en **1991**, l’**URSS disparaît**."
+        },
+        {
+          "t": "example",
+          "h": "Comment utiliser ces repères",
+          "c": "Dans une réponse, ne te contente pas de citer une date : explique-la. « En 1947, le plan Marshall marque le début de la Guerre froide car il divise l’Europe en deux camps » vaut bien mieux que « 1947 : plan Marshall »."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Maîtrise trois choses : les **notions** (savoir définir), les **acteurs** (savoir qui fait quoi) et la **chronologie** (savoir dater et expliquer). C’est le socle de toute bonne copie sur ce thème."
+        },
+        {
           "t": "table",
+          "h": "Notions et repères",
           "head": [
-            "Notion",
-            "Définition"
+            "Notion ou repère",
+            "Définition ou événement"
           ],
           "rows": [
             [
@@ -1173,20 +1298,7 @@
             [
               "Multipolaire",
               "Monde où plusieurs puissances comptent"
-            ]
-          ]
-        },
-        {
-          "t": "p",
-          "c": "Il faut aussi connaître les grands **acteurs** de la période et ce qu’ils incarnent."
-        },
-        {
-          "t": "table",
-          "head": [
-            "Acteur",
-            "Rôle"
-          ],
-          "rows": [
+            ],
             [
               "Truman",
               "Président américain, doctrine de l’endiguement (1947)"
@@ -1201,36 +1313,19 @@
             ],
             [
               "Gorbatchev",
-              "Réformes (perestroïka, glasnost), fin de l’URSS"
+              "Perestroïka, glasnost, fin de l’URSS"
             ],
             [
               "Gandhi",
               "Indépendance de l’Inde par la non-violence (1947)"
-            ]
-          ]
-        },
-        {
-          "t": "p",
-          "c": "Enfin, voici la **chronologie** à mémoriser absolument. Ces repères structurent tout le thème et tombent régulièrement."
-        },
-        {
-          "t": "table",
-          "head": [
-            "Date",
-            "Événement"
-          ],
-          "rows": [
+            ],
             [
               "1945",
               "Fin de la guerre, création de l’ONU"
             ],
             [
               "1947",
-              "Début de la Guerre froide (doctrines, plan Marshall)"
-            ],
-            [
-              "1947",
-              "Indépendance de l’Inde"
+              "Début de la guerre froide ; indépendance de l’Inde"
             ],
             [
               "1948-1949",
@@ -1261,16 +1356,6 @@
               "Disparition de l’URSS"
             ]
           ]
-        },
-        {
-          "t": "example",
-          "h": "Comment utiliser ces repères",
-          "c": "Dans une réponse, ne te contente pas de citer une date : explique-la. « En 1947, le plan Marshall marque le début de la Guerre froide car il divise l’Europe en deux camps » vaut bien mieux que « 1947 : plan Marshall »."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Maîtrise trois choses : les **notions** (savoir définir), les **acteurs** (savoir qui fait quoi) et la **chronologie** (savoir dater et expliquer). C’est le socle de toute bonne copie sur ce thème."
         }
       ]
     }
@@ -1292,29 +1377,8 @@
           "c": "En 1945 est créée la **Sécurité sociale**, pilier de l’**État-providence** : assurance maladie, retraites, allocations familiales. L’objectif est de protéger tous les citoyens « du berceau au tombeau » contre les grands risques de la vie."
         },
         {
-          "t": "table",
-          "head": [
-            "Aspect",
-            "Les Trente Glorieuses (1945-1975)"
-          ],
-          "rows": [
-            [
-              "Croissance",
-              "Forte croissance économique continue"
-            ],
-            [
-              "Emploi",
-              "Plein emploi, besoin de main-d’œuvre"
-            ],
-            [
-              "Consommation",
-              "Société de consommation de masse"
-            ],
-            [
-              "Population",
-              "Baby-boom, exode rural, urbanisation"
-            ]
-          ]
+          "t": "p",
+          "c": "Les Trente Glorieuses, de **1945 à 1975**, se caractérisent par une **forte croissance économique continue** et par le **plein emploi**, au point que la France manque de main-d’œuvre. C’est l’essor de la **société de consommation de masse**. Côté population, c’est le temps du **baby-boom**, de l’**exode rural** et de l’**urbanisation**."
         },
         {
           "t": "p",
@@ -1352,30 +1416,59 @@
           "c": "Pour loger une population qui afflue vers les villes, on construit à toute vitesse de vastes ensembles d’immeubles en banlieue. D’abord perçus comme un progrès (eau courante, chauffage, confort moderne), ils poseront plus tard des problèmes d’isolement et d’entretien."
         },
         {
-          "t": "table",
-          "head": [
-            "Repère",
-            "Date"
-          ],
-          "rows": [
-            [
-              "Création de la Sécurité sociale",
-              "1945"
-            ],
-            [
-              "Trente Glorieuses",
-              "1945-1975"
-            ],
-            [
-              "Premier choc pétrolier",
-              "1973"
-            ]
-          ]
+          "t": "p",
+          "c": "Trois repères encadrent la période : la **création de la Sécurité sociale** en **1945**, les **Trente Glorieuses** de **1945 à 1975**, et le **premier choc pétrolier** de **1973**, qui y met fin."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "Après 1945 : **reconstruction** menée par l’État (planification, nationalisations, **Sécurité sociale** en 1945). Puis **Trente Glorieuses (1945-1975)** : forte croissance, plein emploi, **société de consommation**, baby-boom, exode rural, immigration. Fin avec les **chocs pétroliers** (1973-74)."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Trente Glorieuses (1945-1975)",
+              "Forte croissance, plein emploi, société de consommation"
+            ],
+            [
+              "Sécurité sociale (1945)",
+              "Assurance maladie, retraites, allocations familiales"
+            ],
+            [
+              "État-providence",
+              "État qui protège les citoyens contre les grands risques de la vie"
+            ],
+            [
+              "Exode rural",
+              "Départ massif des habitants des campagnes vers les villes"
+            ],
+            [
+              "Baby-boom",
+              "Forte hausse des naissances après 1945"
+            ],
+            [
+              "1945",
+              "Création de la Sécurité sociale"
+            ],
+            [
+              "1945-1975",
+              "Trente Glorieuses"
+            ],
+            [
+              "1973",
+              "Premier choc pétrolier"
+            ],
+            [
+              "Grands ensembles",
+              "Vastes immeubles construits en banlieue pour loger les nouveaux urbains"
+            ]
+          ]
         }
       ]
     },
@@ -1395,29 +1488,8 @@
           "c": "La **IVe République (1946-1958)** est un régime parlementaire : le pouvoir appartient surtout à l’Assemblée. Elle réussit la reconstruction et lance la construction européenne, mais souffre d’une grande **instabilité** : les gouvernements se succèdent très vite, ce qui la fragilise."
         },
         {
-          "t": "table",
-          "head": [
-            "République",
-            "Période",
-            "Caractéristique"
-          ],
-          "rows": [
-            [
-              "GPRF",
-              "1944-1946",
-              "Rétablir la démocratie, grandes réformes"
-            ],
-            [
-              "IVe République",
-              "1946-1958",
-              "Régime parlementaire, instable"
-            ],
-            [
-              "Ve République",
-              "depuis 1958",
-              "Pouvoir exécutif fort, président central"
-            ]
-          ]
+          "t": "p",
+          "c": "De **1944 à 1946**, le **GPRF**, le Gouvernement provisoire, **rétablit la démocratie** et engage de **grandes réformes**. De **1946 à 1958**, la **IVe République** est un **régime parlementaire** marqué par une forte **instabilité** gouvernementale. **Depuis 1958**, la **Ve République** repose sur un **pouvoir exécutif fort**, dans lequel le **président** occupe une place **centrale**."
         },
         {
           "t": "p",
@@ -1455,34 +1527,55 @@
           "c": "De Gaulle accepte le pouvoir à condition de doter la France d’une nouvelle Constitution. Adoptée par référendum en septembre 1958, elle fonde la Ve République et instaure un exécutif fort. C’est la naissance du régime encore en vigueur aujourd’hui."
         },
         {
-          "t": "table",
-          "head": [
-            "Repère",
-            "Date"
-          ],
-          "rows": [
-            [
-              "Droit de vote des femmes",
-              "1944"
-            ],
-            [
-              "Naissance de la Ve République",
-              "1958"
-            ],
-            [
-              "Président élu au suffrage universel direct",
-              "1962"
-            ],
-            [
-              "Alternance (élection de Mitterrand)",
-              "1981"
-            ]
-          ]
+          "t": "p",
+          "c": "Quatre dates sont à retenir : le **droit de vote des femmes** en **1944**, la **naissance de la Ve République** en **1958**, l’**élection du président au suffrage universel direct** à partir de **1962**, et la **première alternance**, avec l’élection de **Mitterrand**, en **1981**."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "GPRF (De Gaulle, réformes, **vote des femmes 1944**) → **IVe République** (1946-1958, parlementaire, instable) → **Ve République** (1958, De Gaulle, exécutif fort, président élu au **suffrage universel direct en 1962**). Alternance en 1981, cohabitations."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "GPRF (1944-1946)",
+              "Rétablir la démocratie, grandes réformes"
+            ],
+            [
+              "IVe République (1946-1958)",
+              "Régime parlementaire, instable"
+            ],
+            [
+              "Ve République (depuis 1958)",
+              "Pouvoir exécutif fort, président central"
+            ],
+            [
+              "1944",
+              "Droit de vote des femmes"
+            ],
+            [
+              "1958",
+              "Naissance de la Ve République"
+            ],
+            [
+              "1962",
+              "Président élu au suffrage universel direct"
+            ],
+            [
+              "1981",
+              "Alternance (élection de Mitterrand)"
+            ],
+            [
+              "Cohabitation",
+              "Président et Premier ministre de bords politiques opposés"
+            ]
+          ]
         }
       ]
     },
@@ -1498,29 +1591,8 @@
           "c": "L’une des évolutions majeures concerne la **place des femmes**. Elles obtiennent le **droit de vote en 1944**, entrent massivement sur le marché du **travail**, et conquièrent de nouveaux droits, comme la maîtrise de la contraception puis le droit à l’**IVG (loi Veil, 1975)**."
         },
         {
-          "t": "table",
-          "head": [
-            "Étape",
-            "Avancée pour les femmes"
-          ],
-          "rows": [
-            [
-              "1944",
-              "Droit de vote"
-            ],
-            [
-              "Années 1960-70",
-              "Accès au travail, autonomie financière"
-            ],
-            [
-              "1975",
-              "Loi Veil : droit à l’IVG"
-            ],
-            [
-              "Depuis",
-              "Lois sur la parité et l’égalité professionnelle"
-            ]
-          ]
+          "t": "p",
+          "c": "Les femmes conquièrent leurs droits par étapes. En **1944**, elles obtiennent le **droit de vote**. Dans les **années 1960 et 1970**, elles accèdent plus largement au **travail** et à l’**autonomie financière**. En **1975**, la **loi Veil** leur reconnaît le **droit à l’IVG**. **Depuis**, des **lois sur la parité** et l’**égalité professionnelle** prolongent ce mouvement."
         },
         {
           "t": "p",
@@ -1558,30 +1630,43 @@
           "c": "Portée par Simone Veil, ministre de la Santé, la loi de 1975 autorise l’interruption volontaire de grossesse (IVG). Votée au terme de débats houleux, elle symbolise l’avancée des droits des femmes et l’évolution des mœurs de la société française."
         },
         {
-          "t": "table",
-          "head": [
-            "Repère",
-            "Date"
-          ],
-          "rows": [
-            [
-              "Droit de vote des femmes",
-              "1944"
-            ],
-            [
-              "Mai 68",
-              "1968"
-            ],
-            [
-              "Loi Veil (IVG)",
-              "1975"
-            ]
-          ]
+          "t": "p",
+          "c": "Trois dates jalonnent ces mutations : le **droit de vote des femmes** en **1944**, **mai 68** en **1968**, et la **loi Veil** sur l’**IVG** en **1975**."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "Mutations depuis 1945 : émancipation des **femmes** (vote 1944, travail, **IVG 1975**), affirmation de la **jeunesse** (**mai 1968**), rôle de l’**immigration**, transformation des **modes de vie** (urbanisation, loisirs, sécularisation), mais aussi tensions (chômage, inégalités)."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "1944",
+              "Droit de vote des femmes"
+            ],
+            [
+              "Années 1960-70",
+              "Accès au travail, autonomie financière"
+            ],
+            [
+              "1975",
+              "Loi Veil : droit à l’IVG"
+            ],
+            [
+              "Parité",
+              "Égal accès des femmes et des hommes aux mandats et fonctions"
+            ],
+            [
+              "1968",
+              "Mai 68"
+            ]
+          ]
         }
       ]
     },
@@ -1601,34 +1686,12 @@
           "c": "La première étape est la **CECA (1951)**, qui met en commun le charbon et l’acier de six pays, dont la France et l’Allemagne. C’est une initiative largement portée par des Français (Robert Schuman, Jean Monnet)."
         },
         {
-          "t": "table",
-          "head": [
-            "Étape",
-            "Date",
-            "Contenu"
-          ],
-          "rows": [
-            [
-              "CECA",
-              "1951",
-              "Marché commun du charbon et de l’acier (6 pays)"
-            ],
-            [
-              "Traité de Rome (CEE)",
-              "1957",
-              "Marché commun, libre circulation"
-            ],
-            [
-              "Traité de Maastricht",
-              "1992",
-              "Union européenne, projet de monnaie unique"
-            ],
-            [
-              "Passage à l’euro",
-              "2002",
-              "Monnaie unique en circulation"
-            ]
-          ]
+          "t": "p",
+          "c": "La construction européenne avance par étapes. En **1951**, la **CECA** crée un **marché commun du charbon et de l’acier** entre **six pays**. En **1957**, le **traité de Rome** fonde la **CEE**, un **marché commun** fondé sur la **libre circulation**."
+        },
+        {
+          "t": "p",
+          "c": "En **1992**, le **traité de Maastricht** crée l’**Union européenne** et lance le **projet de monnaie unique**. En **2002**, l’**euro** entre en circulation."
         },
         {
           "t": "p",
@@ -1666,34 +1729,63 @@
           "c": "La libre circulation se concrétise avec l’espace Schengen : on voyage d’un pays à l’autre sans contrôle aux frontières intérieures. Pour beaucoup d’Européens, c’est le visage le plus concret et le plus quotidien de la construction européenne."
         },
         {
-          "t": "table",
-          "head": [
-            "Repère",
-            "Date"
-          ],
-          "rows": [
-            [
-              "CECA",
-              "1951"
-            ],
-            [
-              "Traité de Rome (CEE)",
-              "1957"
-            ],
-            [
-              "Traité de Maastricht (UE)",
-              "1992"
-            ],
-            [
-              "Passage à l’euro",
-              "2002"
-            ]
-          ]
+          "t": "p",
+          "c": "Quatre repères suffisent pour situer la construction européenne : la **CECA** en **1951**, le **traité de Rome** qui crée la **CEE** en **1957**, le **traité de Maastricht** qui fonde l’**Union européenne** en **1992**, et le **passage à l’euro** en **2002**."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "La France, au cœur de l’Europe pour la paix et la réconciliation **franco-allemande** : **CECA (1951)** → **traité de Rome / CEE (1957)** → **traité de l’Élysée (1963)** → **Maastricht / UE (1992)** → **euro (2002)**. Un choix majeur, mais débattu."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "CECA (1951)",
+              "Marché commun du charbon et de l’acier (6 pays)"
+            ],
+            [
+              "Traité de Rome (1957)",
+              "Création de la CEE : marché commun, libre circulation"
+            ],
+            [
+              "Traité de Maastricht (1992)",
+              "Union européenne, projet de monnaie unique"
+            ],
+            [
+              "Euro (2002)",
+              "Monnaie unique en circulation"
+            ],
+            [
+              "PAC",
+              "Politique agricole commune"
+            ],
+            [
+              "1951",
+              "CECA"
+            ],
+            [
+              "1957",
+              "Traité de Rome (CEE)"
+            ],
+            [
+              "1992",
+              "Traité de Maastricht (UE)"
+            ],
+            [
+              "2002",
+              "Passage à l’euro"
+            ],
+            [
+              "Espace Schengen",
+              "Libre circulation sans contrôle aux frontières intérieures"
+            ]
+          ]
         }
       ]
     },
@@ -1713,29 +1805,12 @@
           "c": "Pour rester une puissance qui compte, la France mise sur plusieurs atouts. Elle se dote de l’**arme nucléaire** (dès 1960) et d’une diplomatie indépendante, notamment sous De Gaulle, qui veut une voix française distincte de celle des États-Unis."
         },
         {
-          "t": "table",
-          "head": [
-            "Atout de la France",
-            "Illustration"
-          ],
-          "rows": [
-            [
-              "Diplomatie",
-              "Membre permanent du Conseil de sécurité de l’ONU"
-            ],
-            [
-              "Dissuasion",
-              "Arme nucléaire (depuis 1960)"
-            ],
-            [
-              "Rayonnement culturel",
-              "Francophonie, langue et culture françaises"
-            ],
-            [
-              "Présence mondiale",
-              "DOM-TOM sur plusieurs océans"
-            ]
-          ]
+          "t": "p",
+          "c": "La France dispose de quatre atouts. Sa **diplomatie** s’appuie sur son statut de **membre permanent du Conseil de sécurité de l’ONU**. Sa **dissuasion** repose sur l’**arme nucléaire**, dont elle dispose **depuis 1960**."
+        },
+        {
+          "t": "p",
+          "c": "Son **rayonnement culturel** passe par la **francophonie**, la langue et la culture françaises. Sa **présence mondiale**, enfin, est assurée par ses territoires d’**outre-mer**, répartis sur **plusieurs océans**."
         },
         {
           "t": "p",
@@ -1769,30 +1844,51 @@
           "c": "La France est l’un des cinq membres permanents du Conseil de sécurité de l’ONU, avec un droit de veto. Ce statut, hérité de 1945, lui donne une influence diplomatique sans commune mesure avec son poids démographique réel."
         },
         {
-          "t": "table",
-          "head": [
-            "Atout",
-            "Repère"
-          ],
-          "rows": [
-            [
-              "Arme nucléaire",
-              "depuis 1960"
-            ],
-            [
-              "Membre permanent de l’ONU",
-              "depuis 1945"
-            ],
-            [
-              "Francophonie",
-              "langue partagée sur les 5 continents"
-            ]
-          ]
+          "t": "p",
+          "c": "Trois repères résument la puissance française : l’**arme nucléaire** **depuis 1960**, le statut de **membre permanent de l’ONU** **depuis 1945**, et la **francophonie**, une langue partagée sur les **cinq continents**."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "Après la **décolonisation** (Indochine, Algérie), la France reste une puissance influente : **membre permanent de l’ONU**, **arme nucléaire** (1960), **francophonie**, présence outre-mer. Puissance **moyenne** dont le poids passe de plus en plus par l’**Europe**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et repères",
+          "head": [
+            "Notion ou repère",
+            "Définition ou événement"
+          ],
+          "rows": [
+            [
+              "Membre permanent du Conseil de sécurité",
+              "Siège avec droit de veto à l’ONU (depuis 1945)"
+            ],
+            [
+              "Dissuasion nucléaire",
+              "Arme nucléaire française depuis 1960"
+            ],
+            [
+              "Francophonie",
+              "Ensemble des pays et des populations qui parlent français"
+            ],
+            [
+              "Outre-mer",
+              "Territoires français répartis sur plusieurs océans"
+            ],
+            [
+              "Arme nucléaire",
+              "Depuis 1960"
+            ],
+            [
+              "Membre permanent de l’ONU",
+              "Depuis 1945, avec droit de veto"
+            ],
+            [
+              "Puissance moyenne",
+              "Puissance influente dont le poids passe de plus en plus par l’Europe"
+            ]
+          ]
         }
       ]
     },
@@ -1812,29 +1908,8 @@
           "c": "La conséquence la plus visible est la montée d’un **chômage de masse**. Le plein emploi des Trente Glorieuses disparaît ; le chômage devient durable et touche particulièrement les jeunes et les moins qualifiés."
         },
         {
-          "t": "table",
-          "head": [
-            "Avant (1945-1975)",
-            "Après (depuis 1974)"
-          ],
-          "rows": [
-            [
-              "Forte croissance",
-              "Croissance faible et irrégulière"
-            ],
-            [
-              "Plein emploi",
-              "Chômage de masse durable"
-            ],
-            [
-              "Industrie puissante",
-              "Désindustrialisation, essor des services"
-            ],
-            [
-              "Optimisme",
-              "Incertitudes, débats sur le modèle social"
-            ]
-          ]
+          "t": "p",
+          "c": "Le contraste entre les deux périodes est saisissant. De **1945 à 1975**, la France connaît une **forte croissance** ; **depuis 1974**, la croissance est **faible et irrégulière**. Le **plein emploi** a laissé place à un **chômage de masse durable**. L’**industrie puissante** a cédé la place à la **désindustrialisation** et à l’**essor des services**. L’**optimisme**, enfin, a été remplacé par les **incertitudes** et les **débats sur le modèle social**."
         },
         {
           "t": "p",
@@ -1872,14 +1947,40 @@
           "c": "Dans le Nord et l’Est, la fermeture des mines et des usines sidérurgiques oblige des régions entières à se réinventer (services, tourisme, nouvelles activités). Cette reconversion est longue et douloureuse pour les populations concernées."
         },
         {
+          "t": "p",
+          "c": "Trois repères marquent cette période : les **chocs pétroliers** de **1973** et **1979**, le **chômage de masse** qui s’installe **depuis les années 1970**, et la **désindustrialisation** qui s’accélère **depuis les années 1980**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Depuis **1974** : **chocs pétroliers** (1973, 1979) → fin des Trente Glorieuses, **chômage de masse**, **désindustrialisation** et essor des services, insertion dans la **mondialisation** et l’**UE**. De nouveaux défis (protection sociale, inégalités, écologie) pour un modèle à réinventer."
+        },
+        {
           "t": "table",
+          "h": "Notions et repères",
           "head": [
-            "Repère",
-            "Fait"
+            "Notion ou repère",
+            "Définition ou événement"
           ],
           "rows": [
             [
-              "1973 & 1979",
+              "Avant 1975",
+              "Forte croissance, plein emploi, industrie puissante, optimisme"
+            ],
+            [
+              "Depuis 1974",
+              "Croissance faible, chômage de masse, désindustrialisation, incertitudes"
+            ],
+            [
+              "Désindustrialisation",
+              "Déclin des industries traditionnelles"
+            ],
+            [
+              "Tertiarisation",
+              "Essor du secteur des services"
+            ],
+            [
+              "1973 et 1979",
               "Chocs pétroliers"
             ],
             [
@@ -1889,13 +1990,12 @@
             [
               "Depuis les années 1980",
               "Désindustrialisation"
+            ],
+            [
+              "Reconversion",
+              "Transformation des régions industrielles vers de nouvelles activités"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Depuis **1974** : **chocs pétroliers** (1973, 1979) → fin des Trente Glorieuses, **chômage de masse**, **désindustrialisation** et essor des services, insertion dans la **mondialisation** et l’**UE**. De nouveaux défis (protection sociale, inégalités, écologie) pour un modèle à réinventer."
         }
       ]
     }

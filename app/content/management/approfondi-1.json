@@ -55,39 +55,12 @@
           "c": "Manager, c’est **conduire** une organisation vers ses buts en mobilisant ses ressources. On distingue deux niveaux, complémentaires, qui n’engagent ni les mêmes personnes ni le même horizon de temps."
         },
         {
-          "t": "table",
-          "head": [
-            "Critère",
-            "Management stratégique",
-            "Management opérationnel"
-          ],
-          "rows": [
-            [
-              "Horizon",
-              "Long terme (années)",
-              "Court terme (jour, mois)"
-            ],
-            [
-              "Qui",
-              "Dirigeants, direction générale",
-              "Encadrement intermédiaire, chefs d’équipe"
-            ],
-            [
-              "Portée",
-              "Engage toute l’organisation",
-              "Limitée à un service, une unité"
-            ],
-            [
-              "Réversibilité",
-              "Décisions difficiles à corriger",
-              "Décisions ajustables rapidement"
-            ],
-            [
-              "Exemple",
-              "Se lancer à l’international",
-              "Organiser les plannings de la semaine"
-            ]
-          ]
+          "t": "p",
+          "c": "Le **management stratégique** travaille sur le **long terme**, à l’échelle de plusieurs années. Il est l’affaire des **dirigeants** et de la **direction générale**, et ses décisions **engagent toute l’organisation**. Elles sont **difficiles à corriger** une fois prises : se lancer à l’international, par exemple, mobilise des moyens considérables et ne se défait pas du jour au lendemain."
+        },
+        {
+          "t": "p",
+          "c": "Le **management opérationnel** travaille sur le **court terme**, au jour le jour ou au mois. Il est assuré par l’**encadrement intermédiaire** et les **chefs d’équipe**, et sa portée est **limitée à un service** ou à une unité. Ses décisions sont **ajustables rapidement** : organiser les plannings de la semaine en est un exemple typique."
         },
         {
           "t": "p",
@@ -97,6 +70,28 @@
           "t": "tip",
           "h": "Repère bac",
           "c": "Décision **rare, coûteuse, engageante, prise par les dirigeants** = stratégique. Décision **fréquente, quotidienne, réversible, prise par l’encadrement** = opérationnelle."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Management",
+              "Conduire une organisation vers ses buts en mobilisant ses ressources"
+            ],
+            [
+              "Management stratégique",
+              "Long terme, dirigeants, engage toute l’organisation, difficile à corriger (se lancer à l’international)"
+            ],
+            [
+              "Management opérationnel",
+              "Court terme, encadrement intermédiaire, limité à un service, ajustable (plannings de la semaine)"
+            ]
+          ]
         }
       ]
     },
@@ -207,24 +202,12 @@
           "c": "Avant toute décision stratégique, l’organisation réalise un **diagnostic** : un état des lieux honnête de sa situation. Il croise un regard **interne** (l’entreprise elle-même) et un regard **externe** (son environnement). L’outil de synthèse est la matrice **SWOT** (FFOM en français)."
         },
         {
-          "t": "table",
-          "head": [
-            "",
-            "Positif",
-            "Négatif"
-          ],
-          "rows": [
-            [
-              "Interne",
-              "Forces (Strengths)",
-              "Faiblesses (Weaknesses)"
-            ],
-            [
-              "Externe",
-              "Opportunités (Opportunities)",
-              "Menaces (Threats)"
-            ]
-          ]
+          "t": "p",
+          "c": "La matrice SWOT croise deux questions : l’élément est-il **interne** ou **externe** à l’organisation, et est-il **positif** ou **négatif** pour elle ? Ce qui est interne et positif constitue les **forces** (*Strengths*) ; ce qui est interne et négatif, les **faiblesses** (*Weaknesses*)."
+        },
+        {
+          "t": "p",
+          "c": "Ce qui est externe et positif constitue les **opportunités** (*Opportunities*), et ce qui est externe et négatif, les **menaces** (*Threats*). Les forces et les faiblesses dépendent de l’organisation ; les opportunités et les menaces s’imposent à elle."
         },
         {
           "t": "p",
@@ -241,6 +224,36 @@
           "t": "tip",
           "h": "Bien classer",
           "c": "Forces/faiblesses = **ce que l’entreprise maîtrise** (interne). Opportunités/menaces = **ce qui vient de dehors** (externe, subi). Confondre les deux est l’erreur la plus fréquente."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Diagnostic stratégique",
+              "État des lieux interne (ressources, compétences) et externe (environnement)"
+            ],
+            [
+              "SWOT (FFOM)",
+              "Forces, faiblesses (interne) ; opportunités, menaces (externe)"
+            ],
+            [
+              "Forces / faiblesses",
+              "Éléments internes positifs / négatifs"
+            ],
+            [
+              "Opportunités / menaces",
+              "Éléments externes positifs / négatifs"
+            ],
+            [
+              "PESTEL",
+              "Analyse du macro-environnement : politique, économique, socioculturel, technologique, écologique, légal"
+            ]
+          ]
         }
       ]
     },
@@ -263,39 +276,47 @@
           "c": "À ces stratégies concurrentielles s’ajoutent des choix de **périmètre** : la **spécialisation** (se concentrer sur un seul métier, un seul marché) ou la **diversification** (se développer sur de nouveaux produits/marchés pour répartir les risques)."
         },
         {
-          "t": "table",
-          "head": [
-            "Choix",
-            "Avantage",
-            "Risque"
-          ],
-          "rows": [
-            [
-              "Spécialisation",
-              "Expertise, image forte",
-              "Tout repose sur un seul marché"
-            ],
-            [
-              "Diversification",
-              "Répartition des risques",
-              "Dispersion, perte de cohérence"
-            ],
-            [
-              "Intégration",
-              "Maîtriser la filière (amont/aval)",
-              "Lourdeur, coûts fixes"
-            ],
-            [
-              "Externalisation",
-              "Se recentrer, réduire les coûts",
-              "Dépendance aux sous-traitants"
-            ]
-          ]
+          "t": "p",
+          "c": "Chaque choix de périmètre a son avantage et son risque. La **spécialisation** apporte une forte **expertise** et une **image** claire, mais **tout repose sur un seul marché** : s’il s’effondre, l’entreprise est en danger. La **diversification** **répartit les risques** sur plusieurs activités, mais elle peut conduire à la **dispersion** des moyens et à une **perte de cohérence**."
+        },
+        {
+          "t": "p",
+          "c": "L’**intégration** permet de **maîtriser la filière**, en amont vers les fournisseurs ou en aval vers la distribution, mais elle alourdit l’organisation et augmente les **coûts fixes**. L’**externalisation**, enfin, permet de **se recentrer** sur son métier et de **réduire les coûts**, au prix d’une **dépendance** envers les sous-traitants."
         },
         {
           "t": "warning",
           "h": "Piège",
           "c": "Vouloir « le prix le plus bas ET le plus haut de gamme » est en général intenable : c’est l’« enlisement dans la voie médiane » dénoncé par Porter. Il faut **choisir**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Spécialisation",
+              "Un seul métier : expertise, image forte / tout repose sur un seul marché"
+            ],
+            [
+              "Diversification",
+              "Nouveaux produits ou marchés : répartition des risques / dispersion"
+            ],
+            [
+              "Intégration",
+              "Maîtriser la filière (amont/aval) / lourdeur, coûts fixes"
+            ],
+            [
+              "Externalisation",
+              "Confier une activité à un tiers : recentrage, coûts réduits / dépendance"
+            ],
+            [
+              "Enlisement dans la voie médiane (Porter)",
+              "Vouloir à la fois le prix le plus bas et le haut de gamme"
+            ]
+          ]
         }
       ]
     },
@@ -311,29 +332,12 @@
           "c": "Le **style de direction** décrit la manière dont le dirigeant exerce ce pouvoir. Rensis **Likert** en a distingué quatre."
         },
         {
-          "t": "table",
-          "head": [
-            "Style",
-            "Caractéristique"
-          ],
-          "rows": [
-            [
-              "Autoritaire",
-              "Décide seul, impose, ne consulte pas"
-            ],
-            [
-              "Paternaliste",
-              "Décide seul mais récompense la fidélité"
-            ],
-            [
-              "Consultatif",
-              "Demande l’avis avant de décider"
-            ],
-            [
-              "Participatif",
-              "Associe les équipes à la décision"
-            ]
-          ]
+          "t": "p",
+          "c": "Likert distingue quatre styles, du plus fermé au plus ouvert. Le dirigeant **autoritaire** **décide seul**, **impose** ses décisions et **ne consulte pas**. Le dirigeant **paternaliste** décide aussi seul, mais il **récompense la fidélité** de ses salariés et se montre bienveillant."
+        },
+        {
+          "t": "p",
+          "c": "Le dirigeant **consultatif** **demande l’avis** de ses équipes **avant de décider**, même s’il garde la décision finale. Le dirigeant **participatif**, enfin, **associe les équipes à la décision** elle-même."
         },
         {
           "t": "p",
@@ -343,6 +347,36 @@
           "t": "tip",
           "h": "À mobiliser",
           "c": "Face à un cas, relier le **style de direction** au **contexte** : l’autoritaire va vite en situation de crise ; le participatif mobilise et innove mais prend du temps."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Style autoritaire",
+              "Décide seul, impose, ne consulte pas"
+            ],
+            [
+              "Style paternaliste",
+              "Décide seul mais récompense la fidélité"
+            ],
+            [
+              "Style consultatif",
+              "Demande l’avis avant de décider"
+            ],
+            [
+              "Style participatif",
+              "Associe les équipes à la décision"
+            ],
+            [
+              "Rationalité limitée (Simon)",
+              "Faute de temps, d’information et de calcul, le décideur retient une solution satisfaisante"
+            ]
+          ]
         }
       ]
     },
@@ -454,12 +488,39 @@
           "c": "Une organisation est au centre d’un réseau de **parties prenantes** dont les attentes sont souvent **divergentes**. Les concilier est un exercice permanent d’arbitrage."
         },
         {
+          "t": "p",
+          "c": "Chaque partie prenante a son attente principale. Les **actionnaires** veulent de la **rentabilité**, des **dividendes** et une hausse de la **valeur** de leurs actions. Les **salariés** attendent un bon **salaire**, de bonnes **conditions de travail** et la **sécurité de leur emploi**. Les **clients** recherchent la **qualité**, un **prix juste** et un bon **service**."
+        },
+        {
+          "t": "p",
+          "c": "Les **fournisseurs** souhaitent être **payés à temps** et nouer une **relation durable**. L’**État** et les **collectivités** attendent des **impôts**, le **respect des lois** et des **emplois locaux**. Les **riverains** et les **ONG**, enfin, exigent le **respect de l’environnement** et la **transparence**."
+        },
+        {
+          "t": "p",
+          "c": "On distingue les parties prenantes **internes** (salariés, dirigeants, actionnaires) et **externes** (clients, fournisseurs, État, société civile). Un bon management **hiérarchise** les attentes selon leur **pouvoir** et leur **importance**, sans négliger celles qui semblent faibles mais peuvent nuire à la réputation (ONG, riverains)."
+        },
+        {
+          "t": "example",
+          "h": "Conflit d’attentes",
+          "c": "Fermer une usine pour restaurer la rentabilité (attente des actionnaires) détruit des emplois (attente des salariés et de la collectivité). Le manager doit **arbitrer** et assumer un choix, souvent en cherchant un compromis (reclassement, plan social)."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La RSE, c’est précisément prendre au sérieux les attentes de **toutes** les parties prenantes, pas seulement celles des actionnaires."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Partie prenante",
-            "Attente principale"
+            "Notion",
+            "Définition"
           ],
           "rows": [
+            [
+              "Partie prenante",
+              "Acteur concerné par l’activité de l’organisation et qui peut l’influencer"
+            ],
             [
               "Actionnaires",
               "Rentabilité, dividendes, valeur"
@@ -485,20 +546,6 @@
               "Respect de l’environnement, transparence"
             ]
           ]
-        },
-        {
-          "t": "p",
-          "c": "On distingue les parties prenantes **internes** (salariés, dirigeants, actionnaires) et **externes** (clients, fournisseurs, État, société civile). Un bon management **hiérarchise** les attentes selon leur **pouvoir** et leur **importance**, sans négliger celles qui semblent faibles mais peuvent nuire à la réputation (ONG, riverains)."
-        },
-        {
-          "t": "example",
-          "h": "Conflit d’attentes",
-          "c": "Fermer une usine pour restaurer la rentabilité (attente des actionnaires) détruit des emplois (attente des salariés et de la collectivité). Le manager doit **arbitrer** et assumer un choix, souvent en cherchant un compromis (reclassement, plan social)."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "La RSE, c’est précisément prendre au sérieux les attentes de **toutes** les parties prenantes, pas seulement celles des actionnaires."
         }
       ]
     },

@@ -12,49 +12,12 @@
           "c": "La comptabilité française est **normalisée** : toutes les entreprises suivent le **Plan comptable général (PCG)**, un référentiel commun qui fixe la liste des **comptes** (numérotés par classes de 1 à 7) et les règles d’enregistrement. Cette normalisation garantit que le bilan de deux entreprises différentes se lit de la même façon — c’est la condition de la **comparabilité**."
         },
         {
-          "t": "table",
-          "head": [
-            "Classe",
-            "Nature",
-            "Exemples de comptes"
-          ],
-          "rows": [
-            [
-              "1",
-              "Capitaux",
-              "101 Capital · 164 Emprunts"
-            ],
-            [
-              "2",
-              "Immobilisations",
-              "215 Matériel · 213 Constructions"
-            ],
-            [
-              "3",
-              "Stocks",
-              "37 Stocks de marchandises"
-            ],
-            [
-              "4",
-              "Tiers",
-              "401 Fournisseurs · 411 Clients · 44 État"
-            ],
-            [
-              "5",
-              "Financier",
-              "512 Banque · 53 Caisse"
-            ],
-            [
-              "6",
-              "Charges",
-              "607 Achats · 641 Salaires"
-            ],
-            [
-              "7",
-              "Produits",
-              "707 Ventes de marchandises"
-            ]
-          ]
+          "t": "p",
+          "c": "Le PCG range les comptes en sept classes, et le premier chiffre d’un compte indique toujours sa classe. La **classe 1** regroupe les **capitaux** : le capital apporté par les associés (compte 101) et les emprunts (164). La **classe 2** contient les **immobilisations**, ces biens durables comme le matériel (215) ou les constructions (213). La **classe 3** est celle des **stocks**, par exemple les stocks de marchandises (37)."
+        },
+        {
+          "t": "p",
+          "c": "La **classe 4** regroupe les **tiers**, c’est-à-dire les personnes avec qui l’entreprise a des créances ou des dettes : les fournisseurs (401), les clients (411) et l’État (44). La **classe 5** est celle des comptes **financiers** : la banque (512) et la caisse (53). Les deux dernières servent au compte de résultat : la **classe 6** enregistre les **charges**, comme les achats (607) ou les salaires (641), et la **classe 7** les **produits**, comme les ventes de marchandises (707). Les classes 1 à 5 forment le bilan."
         },
         {
           "t": "p",
@@ -73,6 +36,48 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Débit à gauche, crédit à droite. Pour un compte d’**actif** (ce que l’entreprise possède), une **augmentation** se met au **débit**. Pour un compte de **passif** ou de **produit**, une augmentation se met au **crédit**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Plan comptable général (PCG)",
+              "Référentiel commun qui fixe la liste des comptes et les règles d’enregistrement"
+            ],
+            [
+              "Classe 1",
+              "Capitaux (101 Capital, 164 Emprunts)"
+            ],
+            [
+              "Classe 2",
+              "Immobilisations (213 Constructions, 215 Matériel)"
+            ],
+            [
+              "Classe 3",
+              "Stocks (37 Stocks de marchandises)"
+            ],
+            [
+              "Classe 4",
+              "Tiers (401 Fournisseurs, 411 Clients, 44 État)"
+            ],
+            [
+              "Classe 5",
+              "Financier (512 Banque, 53 Caisse)"
+            ],
+            [
+              "Classes 6 et 7",
+              "Charges (607 Achats, 641 Salaires) et produits (707 Ventes de marchandises)"
+            ],
+            [
+              "Partie double",
+              "Chaque opération est enregistrée au débit d’un compte et au crédit d’un autre, pour le même montant"
+            ]
+          ]
         }
       ]
     },
@@ -100,29 +105,12 @@
           "c": "L’entreprise ne reverse donc la taxe **que sur la valeur qu’elle a ajoutée**. C’est là tout le génie du système : à chaque étape de la chaîne (producteur → grossiste → détaillant), chacun ne paie l’impôt que sur sa propre marge, et le poids total repose sur l’acheteur final."
         },
         {
-          "t": "table",
-          "head": [
-            "Taux",
-            "S’applique à…"
-          ],
-          "rows": [
-            [
-              "20 % (normal)",
-              "La plupart des biens et services"
-            ],
-            [
-              "10 % (intermédiaire)",
-              "Restauration, transport, travaux de rénovation"
-            ],
-            [
-              "5,5 % (réduit)",
-              "Produits alimentaires, livres, énergie de base"
-            ],
-            [
-              "2,1 % (particulier)",
-              "Médicaments remboursés, presse"
-            ]
-          ]
+          "t": "p",
+          "c": "En France, quatre taux de TVA coexistent. Le **taux normal de 20 %** s’applique à **la plupart des biens et services** : vêtements, appareils, services courants. Le **taux intermédiaire de 10 %** concerne notamment la **restauration**, le **transport** de voyageurs et les **travaux de rénovation** des logements."
+        },
+        {
+          "t": "p",
+          "c": "Le **taux réduit de 5,5 %** porte sur les biens de première nécessité : la plupart des **produits alimentaires**, les **livres** et certaines **dépenses d’énergie de base**. Le **taux particulier de 2,1 %**, enfin, s’applique aux **médicaments remboursés** par la Sécurité sociale et à la **presse**."
         },
         {
           "t": "example",
@@ -133,6 +121,40 @@
           "t": "warning",
           "h": "Piège classique",
           "c": "Pour retrouver le HT à partir du TTC, on **divise par 1,20** (et non « on retire 20 % »). Retirer 20 % de 120 donnerait 96 €, ce qui est **faux**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "TVA",
+              "Impôt indirect sur la consommation, supporté par le consommateur final"
+            ],
+            [
+              "Taux normal (20 %)",
+              "La plupart des biens et services"
+            ],
+            [
+              "Taux intermédiaire (10 %)",
+              "Restauration, transport, travaux de rénovation"
+            ],
+            [
+              "Taux réduit (5,5 %)",
+              "Produits alimentaires, livres, énergie de base"
+            ],
+            [
+              "Taux particulier (2,1 %)",
+              "Médicaments remboursés, presse"
+            ],
+            [
+              "Prix TTC",
+              "Prix HT × (1 + taux de TVA) ; HT = TTC ÷ 1,20 à 20 %"
+            ]
+          ]
         }
       ]
     },
@@ -185,44 +207,51 @@
           "c": "Machine achetée 20 000 €, durée 5 ans (amortissement linéaire).\nAnnuité = 20 000 ÷ 5 = 4 000 € par an.\nAprès 2 ans : cumul = 8 000 € ; valeur nette comptable (VNC) = 20 000 − 8 000 = 12 000 €."
         },
         {
-          "t": "table",
-          "head": [
-            "Année",
-            "Annuité",
-            "Cumul",
-            "VNC"
-          ],
-          "rows": [
-            [
-              "1",
-              "4 000",
-              "4 000",
-              "16 000"
-            ],
-            [
-              "2",
-              "4 000",
-              "8 000",
-              "12 000"
-            ],
-            [
-              "3",
-              "4 000",
-              "12 000",
-              "8 000"
-            ],
-            [
-              "5",
-              "4 000",
-              "20 000",
-              "0"
-            ]
-          ]
+          "t": "p",
+          "c": "Déroulons le plan d’amortissement de cette machine année par année. À la fin de la **première année**, on a enregistré une **annuité de 4 000 €** : le **cumul** des amortissements est de 4 000 € et la **valeur nette comptable** (VNC) tombe à 20 000 − 4 000 = **16 000 €**. La **deuxième année**, une nouvelle annuité de 4 000 € porte le cumul à **8 000 €** et la VNC à **12 000 €**."
+        },
+        {
+          "t": "p",
+          "c": "La **troisième année**, le cumul atteint **12 000 €** et la VNC **8 000 €** ; la **quatrième**, le cumul est de **16 000 €** et la VNC de **4 000 €**. À la fin de la **cinquième et dernière année**, le cumul est égal à la valeur d’origine, **20 000 €**, et la VNC est **nulle** : la machine est entièrement amortie. Dans un amortissement linéaire, l’annuité est la même chaque année ; c’est le cumul qui grandit et la VNC qui diminue d’autant."
         },
         {
           "t": "warning",
           "h": "Ne pas confondre",
           "c": "L’**amortissement** est une perte **définitive et prévisible** (usure). La **dépréciation** est une perte **réversible** (ex. un stock invendu qui perd de la valeur mais pourrait se revendre). Toutes deux respectent le principe de **prudence**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Amortissement",
+              "Constatation de la perte de valeur définitive et prévisible d’une immobilisation (usure)"
+            ],
+            [
+              "Annuité (linéaire)",
+              "Valeur d’origine ÷ durée d’utilisation (20 000 ÷ 5 = 4 000 €)"
+            ],
+            [
+              "Cumul des amortissements",
+              "Somme des annuités déjà enregistrées"
+            ],
+            [
+              "Valeur nette comptable (VNC)",
+              "Valeur d’origine − cumul des amortissements"
+            ],
+            [
+              "Dépréciation",
+              "Perte de valeur réversible (stock invendu)"
+            ],
+            [
+              "Prudence",
+              "Principe qui impose d’enregistrer les pertes probables"
+            ]
+          ]
         }
       ]
     },
@@ -242,25 +271,12 @@
           "c": "Total Actif = Total Passif (toujours)"
         },
         {
-          "t": "table",
-          "head": [
-            "ACTIF (emplois)",
-            "PASSIF (ressources)"
-          ],
-          "rows": [
-            [
-              "Actif immobilisé (machines, bâtiments)",
-              "Capitaux propres (capital, résultat)"
-            ],
-            [
-              "Actif circulant (stocks, créances)",
-              "Dettes financières (emprunts)"
-            ],
-            [
-              "Trésorerie (banque, caisse)",
-              "Dettes d’exploitation (fournisseurs, État)"
-            ]
-          ]
+          "t": "p",
+          "c": "Le bilan se lit en deux colonnes. À gauche, l’**actif** décrit les **emplois**, c’est-à-dire ce que l’entreprise possède. On y trouve d’abord l’**actif immobilisé**, les biens durables comme les machines et les bâtiments ; puis l’**actif circulant**, qui se renouvelle avec l’activité, comme les stocks et les créances sur les clients ; enfin la **trésorerie**, l’argent disponible en banque et en caisse."
+        },
+        {
+          "t": "p",
+          "c": "À droite, le **passif** décrit les **ressources**, c’est-à-dire l’origine des fonds. On y trouve d’abord les **capitaux propres**, apportés par les associés ou laissés dans l’entreprise : le capital et le résultat. Viennent ensuite les **dettes financières**, comme les emprunts bancaires, puis les **dettes d’exploitation**, envers les fournisseurs ou l’État. Le total de l’actif est toujours égal au total du passif."
         },
         {
           "t": "p",
@@ -274,6 +290,48 @@
           "t": "tip",
           "h": "Le lien entre les deux",
           "c": "Le **résultat** calculé dans le compte de résultat se **reporte au passif** du bilan (dans les capitaux propres). Un bénéfice enrichit l’entreprise ; une perte l’appauvrit. Les deux documents sont donc reliés."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Bilan",
+              "Photographie du patrimoine à une date : actif (emplois) = passif (ressources)"
+            ],
+            [
+              "Actif immobilisé",
+              "Biens durables (machines, bâtiments)"
+            ],
+            [
+              "Actif circulant",
+              "Stocks, créances clients"
+            ],
+            [
+              "Trésorerie (actif)",
+              "Banque, caisse"
+            ],
+            [
+              "Capitaux propres",
+              "Capital et résultat"
+            ],
+            [
+              "Dettes financières",
+              "Emprunts"
+            ],
+            [
+              "Dettes d’exploitation",
+              "Dettes envers les fournisseurs, l’État"
+            ],
+            [
+              "Compte de résultat",
+              "Produits (classe 7) − charges (classe 6) = résultat de l’exercice"
+            ]
+          ]
         }
       ]
     },
@@ -322,29 +380,12 @@
           "c": "On distingue les **réductions commerciales** (les « 3 R ») et la **réduction financière**. Les réductions commerciales se déduisent d’abord et **ne s’enregistrent pas séparément** : c’est le **net commercial** qui est comptabilisé. La réduction financière, elle, **s’enregistre à part**."
         },
         {
-          "t": "table",
-          "head": [
-            "Réduction",
-            "Motif"
-          ],
-          "rows": [
-            [
-              "Rabais",
-              "Défaut de qualité, retard, non-conformité"
-            ],
-            [
-              "Remise",
-              "Importance de la commande, fidélité du client"
-            ],
-            [
-              "Ristourne",
-              "Sur le total des achats d’une période"
-            ],
-            [
-              "Escompte",
-              "Réduction financière pour paiement rapide (ou comptant)"
-            ]
-          ]
+          "t": "p",
+          "c": "Les trois réductions commerciales ont chacune leur motif. Le **rabais** compense un **défaut de qualité**, un **retard de livraison** ou une **non-conformité** de la marchandise. La **remise** récompense l’**importance de la commande** ou la **fidélité** du client. La **ristourne** est calculée **sur le total des achats d’une période**, par exemple sur le chiffre d’affaires réalisé avec le client dans l’année."
+        },
+        {
+          "t": "p",
+          "c": "L’**escompte** est d’une autre nature : c’est une **réduction financière**, accordée au client qui **paie rapidement** ou au comptant. C’est pourquoi il se calcule après les réductions commerciales, sur le net commercial, et s’enregistre à part en comptabilité."
         },
         {
           "t": "formula",
@@ -364,6 +405,44 @@
           "t": "warning",
           "h": "Piège",
           "c": "Les réductions **commerciales** ne se comptabilisent pas dans un compte à part : on enregistre directement le **net commercial**. Seul l’**escompte** (réduction financière) a son propre compte."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Rabais",
+              "Réduction pour défaut de qualité, retard, non-conformité"
+            ],
+            [
+              "Remise",
+              "Réduction pour importance de la commande ou fidélité"
+            ],
+            [
+              "Ristourne",
+              "Réduction sur le total des achats d’une période"
+            ],
+            [
+              "Escompte",
+              "Réduction financière pour paiement rapide ou comptant"
+            ],
+            [
+              "Net commercial",
+              "Brut − (rabais + remise + ristourne)"
+            ],
+            [
+              "Net financier",
+              "Net commercial − escompte"
+            ],
+            [
+              "Net à payer TTC",
+              "Net financier + TVA"
+            ]
+          ]
         }
       ]
     },
@@ -389,34 +468,43 @@
           "c": "La logique est toujours la même : **encaisser** augmente un compte financier (au débit) et **fait disparaître une créance** (au crédit) ; **décaisser** diminue un compte financier (au crédit) et **fait disparaître une dette** (au débit)."
         },
         {
-          "t": "table",
-          "head": [
-            "Opération",
-            "Débit",
-            "Crédit"
-          ],
-          "rows": [
-            [
-              "Le client paie",
-              "512 Banque",
-              "411 Clients"
-            ],
-            [
-              "On paie le fournisseur",
-              "401 Fournisseurs",
-              "512 Banque"
-            ],
-            [
-              "Vente au comptant (espèces)",
-              "530 Caisse",
-              "707 + 44571"
-            ]
-          ]
+          "t": "p",
+          "c": "Trois écritures de règlement reviennent constamment. Quand **le client paie** par virement ou par chèque, l’argent arrive en banque : on **débite le compte 512 Banque** et on **crédite le compte 411 Clients**, ce qui fait disparaître la créance."
+        },
+        {
+          "t": "p",
+          "c": "Quand **on paie le fournisseur**, c’est l’inverse : on **débite le compte 401 Fournisseurs**, ce qui éteint la dette, et on **crédite le compte 512 Banque**, puisque l’argent sort. Pour une **vente au comptant en espèces**, enfin, on **débite le compte 530 Caisse** du montant encaissé et on **crédite** à la fois le compte **707** Ventes de marchandises, pour le montant hors taxes, et le compte **44571** TVA collectée."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "Le règlement ne crée **ni charge ni produit** (sauf escompte) : il ne fait que **transformer** une créance ou une dette en mouvement de trésorerie. C’est pourquoi il n’apparaît pas au compte de résultat."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Encaissement d’un client",
+              "Débit 512 Banque / crédit 411 Clients"
+            ],
+            [
+              "Paiement d’un fournisseur",
+              "Débit 401 Fournisseurs / crédit 512 Banque"
+            ],
+            [
+              "Vente au comptant (espèces)",
+              "Débit 530 Caisse / crédit 707 Ventes et 44571 TVA collectée"
+            ],
+            [
+              "Règlement",
+              "Opération de trésorerie qui éteint une créance ou une dette, sans charge ni produit"
+            ]
+          ]
         }
       ]
     },
@@ -610,10 +698,32 @@
           "c": "La comptabilité suit une **chaîne rigoureuse** qui va de la pièce justificative aux documents de synthèse. Chaque étape a un rôle précis et permet un **contrôle**."
         },
         {
+          "t": "p",
+          "c": "Tout part de la **pièce justificative**, qui est la **preuve** de l’opération : une facture, un relevé bancaire, un bulletin de paie. Sans pièce, pas d’écriture. L’opération est ensuite enregistrée dans le **journal**, qui recense toutes les écritures **dans l’ordre chronologique**."
+        },
+        {
+          "t": "p",
+          "c": "Les écritures sont reportées dans le **grand livre**, qui les **regroupe compte par compte** : on y voit par exemple tous les mouvements du compte Banque. La **balance** liste ensuite **tous les comptes** avec leurs totaux au débit, au crédit et leur solde : c’est un outil de **contrôle**. Enfin, à la clôture de l’exercice, on établit les **documents de synthèse** : le **bilan** et le **compte de résultat**."
+        },
+        {
+          "t": "p",
+          "c": "La **balance** joue un rôle de vérification capital : le **total des débits doit égaler le total des crédits**, et le total des soldes débiteurs doit égaler le total des soldes créditeurs. Si ce n’est pas le cas, il y a une **erreur** à corriger avant d’établir le bilan."
+        },
+        {
+          "t": "p",
+          "c": "Aujourd’hui, un **logiciel comptable** ou un **PGI (progiciel de gestion intégré)** automatise cette chaîne : une seule saisie alimente journal, grand livre et balance, et sécurise les contrôles."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Ordre à connaître : **pièce → journal → grand livre → balance → documents de synthèse**. La balance est l’outil de **contrôle** de l’équilibre débit/crédit."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Étape",
-            "Rôle"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
@@ -630,26 +740,13 @@
             ],
             [
               "Balance",
-              "Liste tous les comptes avec débits/crédits/soldes (contrôle)"
+              "Liste de tous les comptes avec débits, crédits et soldes (contrôle)"
             ],
             [
               "Documents de synthèse",
-              "Bilan + compte de résultat (à la clôture)"
+              "Bilan et compte de résultat, établis à la clôture"
             ]
           ]
-        },
-        {
-          "t": "p",
-          "c": "La **balance** joue un rôle de vérification capital : le **total des débits doit égaler le total des crédits**, et le total des soldes débiteurs doit égaler le total des soldes créditeurs. Si ce n’est pas le cas, il y a une **erreur** à corriger avant d’établir le bilan."
-        },
-        {
-          "t": "p",
-          "c": "Aujourd’hui, un **logiciel comptable** ou un **PGI (progiciel de gestion intégré)** automatise cette chaîne : une seule saisie alimente journal, grand livre et balance, et sécurise les contrôles."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Ordre à connaître : **pièce → journal → grand livre → balance → documents de synthèse**. La balance est l’outil de **contrôle** de l’équilibre débit/crédit."
         }
       ]
     },
@@ -662,10 +759,28 @@
           "c": "La comptabilité obéit à des **principes** qui garantissent la **fiabilité** et la **comparabilité** des comptes. Les connaître permet de **justifier** presque toutes les règles d’enregistrement."
         },
         {
+          "t": "p",
+          "c": "Six principes comptables sont à connaître. La **prudence** impose d’**anticiper les pertes probables**, mais **jamais les gains** qui ne sont pas encore réalisés. Le **coût historique** impose d’enregistrer les biens à leur **valeur d’achat**, même si leur prix de marché change ensuite. L’**indépendance des exercices** impose de **rattacher chaque charge et chaque produit à l’exercice** qui le concerne, même si le paiement a lieu plus tard."
+        },
+        {
+          "t": "p",
+          "c": "La **continuité d’exploitation** consiste à **supposer que l’activité va se poursuivre** : on évalue les biens comme des outils de travail, pas à leur prix de liquidation. La **permanence des méthodes** impose de **garder les mêmes méthodes** d’une année à l’autre, pour que les comptes restent comparables. La **non-compensation**, enfin, interdit de **compenser une dette avec une créance** : chacune doit apparaître pour son montant."
+        },
+        {
+          "t": "p",
+          "c": "Ces principes servent un objectif supérieur : donner une **image fidèle** du patrimoine et du résultat de l’entreprise. Par exemple, la **permanence des méthodes** évite qu’une entreprise change de règles chaque année pour « embellir » ses comptes ; la **prudence** évite de présenter des bénéfices qui ne sont pas encore réalisés."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Chaque écriture d’inventaire s’explique par un principe : amortissements et dépréciations = **prudence** + **indépendance des exercices** ; maintien de la valeur d’achat = **coût historique**."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Principe",
-            "Ce qu’il impose"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
@@ -691,17 +806,12 @@
             [
               "Non-compensation",
               "Ne pas compenser une dette avec une créance"
+            ],
+            [
+              "Image fidèle",
+              "Objectif des comptes : représenter fidèlement le patrimoine et le résultat"
             ]
           ]
-        },
-        {
-          "t": "p",
-          "c": "Ces principes servent un objectif supérieur : donner une **image fidèle** du patrimoine et du résultat de l’entreprise. Par exemple, la **permanence des méthodes** évite qu’une entreprise change de règles chaque année pour « embellir » ses comptes ; la **prudence** évite de présenter des bénéfices qui ne sont pas encore réalisés."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Chaque écriture d’inventaire s’explique par un principe : amortissements et dépréciations = **prudence** + **indépendance des exercices** ; maintien de la valeur d’achat = **coût historique**."
         }
       ]
     },
@@ -773,34 +883,12 @@
           "c": "Attention au **taux applicable** : il change selon le produit. On multiplie toujours par le **bon** coefficient."
         },
         {
-          "t": "table",
-          "head": [
-            "Taux",
-            "Coefficient (1+taux)",
-            "Exemples"
-          ],
-          "rows": [
-            [
-              "20 %",
-              "1,20",
-              "La plupart des biens et services"
-            ],
-            [
-              "10 %",
-              "1,10",
-              "Restauration, transport"
-            ],
-            [
-              "5,5 %",
-              "1,055",
-              "Alimentation, livres"
-            ],
-            [
-              "2,1 %",
-              "1,021",
-              "Médicaments remboursés, presse"
-            ]
-          ]
+          "t": "p",
+          "c": "Pour passer du HT au TTC, on multiplie par le coefficient **1 + taux**. À **20 %**, le coefficient est **1,20** ; c’est le cas de la plupart des biens et services. À **10 %**, il est de **1,10**, pour la restauration ou le transport. À **5,5 %**, il est de **1,055**, pour l’alimentation ou les livres. À **2,1 %**, il est de **1,021**, pour les médicaments remboursés ou la presse."
+        },
+        {
+          "t": "p",
+          "c": "Pour faire le chemin inverse, du TTC au HT, on **divise** par ce même coefficient : un repas facturé 33 € TTC au taux de 10 % vaut 33 ÷ 1,10 = 30 € HT, et la TVA s’élève donc à 3 €."
         },
         {
           "t": "example",
@@ -811,6 +899,40 @@
           "t": "tip",
           "h": "Astuce calculatrice",
           "c": "HT → TTC : « × 1,20 ». TTC → HT : « ÷ 1,20 ». TTC → TVA seule : « × 20 ÷ 120 » (soit ÷ 6 à 20 %). Vérifie toujours : HT + TVA doit **redonner** le TTC."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Coefficient TTC",
+              "1 + taux de TVA : TTC = HT × coefficient ; HT = TTC ÷ coefficient"
+            ],
+            [
+              "TVA à 20 %",
+              "Coefficient 1,20"
+            ],
+            [
+              "TVA à 10 %",
+              "Coefficient 1,10"
+            ],
+            [
+              "TVA à 5,5 %",
+              "Coefficient 1,055"
+            ],
+            [
+              "TVA à 2,1 %",
+              "Coefficient 1,021"
+            ],
+            [
+              "TVA à décaisser",
+              "TVA collectée − TVA déductible"
+            ]
+          ]
         }
       ]
     },
@@ -872,50 +994,43 @@
           "c": "Machine : 20 000 € + 2 000 € d’installation = **22 000 €** de valeur d’origine, durée 5 ans.\nAnnuité = 22 000 ÷ 5 = **4 400 €/an**."
         },
         {
-          "t": "table",
-          "head": [
-            "Année",
-            "Annuité",
-            "Cumul",
-            "VNC"
-          ],
-          "rows": [
-            [
-              "1",
-              "4 400",
-              "4 400",
-              "17 600"
-            ],
-            [
-              "2",
-              "4 400",
-              "8 800",
-              "13 200"
-            ],
-            [
-              "3",
-              "4 400",
-              "13 200",
-              "8 800"
-            ],
-            [
-              "4",
-              "4 400",
-              "17 600",
-              "4 400"
-            ],
-            [
-              "5",
-              "4 400",
-              "22 000",
-              "0"
-            ]
-          ]
+          "t": "p",
+          "c": "Avec une annuité de 4 400 €, le plan se déroule ainsi. Fin de la **première année** : cumul **4 400 €**, VNC 22 000 − 4 400 = **17 600 €**. Fin de la **deuxième** : cumul **8 800 €**, VNC **13 200 €**. Fin de la **troisième** : cumul **13 200 €**, VNC **8 800 €**."
+        },
+        {
+          "t": "p",
+          "c": "Fin de la **quatrième année** : cumul **17 600 €**, VNC **4 400 €**. Fin de la **cinquième** : cumul **22 000 €**, VNC **0 €**. Chaque année, le cumul augmente exactement de l’annuité et la VNC diminue du même montant ; à la dernière ligne, le cumul retrouve la valeur d’origine."
         },
         {
           "t": "tip",
           "h": "Contrôle",
           "c": "En fin de plan, le cumul des amortissements = valeur d’origine, et la **VNC = 0**. Si ce n’est pas le cas, il y a une erreur dans l’annuité ou la durée."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Valeur d’origine",
+              "Prix d’achat HT + frais nécessaires à la mise en service (installation)"
+            ],
+            [
+              "Annuité linéaire",
+              "Valeur d’origine ÷ durée (22 000 ÷ 5 = 4 400 €)"
+            ],
+            [
+              "Cumul des amortissements",
+              "Somme des annuités déjà passées"
+            ],
+            [
+              "VNC",
+              "Valeur d’origine − cumul ; égale à 0 en fin de plan"
+            ]
+          ]
         }
       ]
     }
@@ -929,25 +1044,12 @@
           "c": "Le bilan comptable classe les postes par **nature juridique**. Pour **analyser la santé financière**, on le réorganise en **bilan fonctionnel**, qui regroupe les postes par **fonction** : investir, financer, exploiter. L’idée est de vérifier une règle d’or : les emplois **durables** doivent être financés par des ressources **durables**."
         },
         {
-          "t": "table",
-          "head": [
-            "Emplois (actif)",
-            "Ressources (passif)"
-          ],
-          "rows": [
-            [
-              "Emplois stables (immobilisations brutes)",
-              "Ressources stables (capitaux propres + amortissements + dettes financières)"
-            ],
-            [
-              "Actif circulant d’exploitation (stocks, créances clients)",
-              "Passif circulant d’exploitation (dettes fournisseurs, dettes fiscales)"
-            ],
-            [
-              "Trésorerie active (banque, caisse)",
-              "Trésorerie passive (découverts)"
-            ]
-          ]
+          "t": "p",
+          "c": "Le bilan fonctionnel se lit en trois étages. En haut, les **emplois stables** sont les **immobilisations**, prises pour leur **valeur brute** ; en face, les **ressources stables** regroupent les **capitaux propres**, les **amortissements** et les **dettes financières**. Au milieu, l’**actif circulant d’exploitation** (stocks, créances clients) fait face au **passif circulant d’exploitation** (dettes fournisseurs, dettes fiscales)."
+        },
+        {
+          "t": "p",
+          "c": "En bas, la **trésorerie active**, c’est-à-dire l’argent en banque et en caisse, fait face à la **trésorerie passive**, constituée des **découverts** bancaires. La règle d’or veut que les emplois stables soient financés par les ressources stables : un investissement durable ne doit pas reposer sur un découvert."
         },
         {
           "t": "p",
@@ -957,6 +1059,40 @@
           "t": "tip",
           "h": "Logique à retenir",
           "c": "Haut du bilan = **long terme** (investissement + financement stable). Bas du bilan = **court terme** (exploitation quotidienne + trésorerie). L’équilibre financier se lit dans le rapport entre les deux."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Bilan fonctionnel",
+              "Bilan réorganisé par fonction : investir, financer, exploiter"
+            ],
+            [
+              "Emplois stables",
+              "Immobilisations en valeur brute"
+            ],
+            [
+              "Ressources stables",
+              "Capitaux propres + amortissements + dettes financières"
+            ],
+            [
+              "Actif circulant d’exploitation",
+              "Stocks, créances clients"
+            ],
+            [
+              "Passif circulant d’exploitation",
+              "Dettes fournisseurs, dettes fiscales"
+            ],
+            [
+              "Trésorerie active / passive",
+              "Banque et caisse / découverts bancaires"
+            ]
+          ]
         }
       ]
     },
@@ -1030,39 +1166,12 @@
           "c": "Un **ratio** rapproche deux grandeurs pour rendre un chiffre **interprétable** et **comparable** (dans le temps, ou face à un concurrent). On distingue les ratios de **structure** (solidité), de **rotation** (rapidité du cycle) et de **rentabilité** (efficacité)."
         },
         {
-          "t": "table",
-          "head": [
-            "Ratio",
-            "Formule",
-            "Ce qu’il mesure"
-          ],
-          "rows": [
-            [
-              "Autonomie financière",
-              "Capitaux propres ÷ Total passif",
-              "Indépendance vis-à-vis des banques"
-            ],
-            [
-              "Taux d’endettement",
-              "Dettes financières ÷ Capitaux propres",
-              "Poids des dettes (idéal < 1)"
-            ],
-            [
-              "Rotation des stocks",
-              "Stock moyen ÷ Achats × 360",
-              "Durée de stockage (en jours)"
-            ],
-            [
-              "Délai clients",
-              "Créances ÷ CA TTC × 360",
-              "Délai moyen de paiement des clients"
-            ],
-            [
-              "Rentabilité commerciale",
-              "Résultat ÷ CA × 100",
-              "Marge nette (%)"
-            ]
-          ]
+          "t": "p",
+          "c": "Deux ratios mesurent la **structure** financière. L’**autonomie financière** rapporte les **capitaux propres au total du passif** : elle mesure l’**indépendance** de l’entreprise vis-à-vis des banques. Le **taux d’endettement** rapporte les **dettes financières aux capitaux propres** : il mesure le **poids des dettes**, et l’idéal est qu’il reste **inférieur à 1**."
+        },
+        {
+          "t": "p",
+          "c": "Deux ratios mesurent la **rotation**. La **rotation des stocks**, égale au **stock moyen divisé par les achats, multiplié par 360**, donne la **durée de stockage en jours**. Le **délai clients**, égal aux **créances divisées par le chiffre d’affaires TTC, multiplié par 360**, donne le **délai moyen de paiement** des clients. Enfin, la **rentabilité commerciale**, égale au **résultat divisé par le chiffre d’affaires, multiplié par 100**, donne la **marge nette** en pourcentage."
         },
         {
           "t": "p",
@@ -1077,6 +1186,40 @@
           "t": "tip",
           "h": "Au bac",
           "c": "On ne demande jamais un ratio « pour le calcul » : on demande de **conclure**. Structure : « Le ratio vaut X. Cela signifie que… C’est donc (bon/inquiétant) car… »."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Ratio",
+              "Rapport entre deux grandeurs qui rend un chiffre interprétable et comparable"
+            ],
+            [
+              "Autonomie financière",
+              "Capitaux propres ÷ total du passif (indépendance vis-à-vis des banques)"
+            ],
+            [
+              "Taux d’endettement",
+              "Dettes financières ÷ capitaux propres (idéal < 1)"
+            ],
+            [
+              "Rotation des stocks",
+              "Stock moyen ÷ achats × 360 (durée de stockage en jours)"
+            ],
+            [
+              "Délai clients",
+              "Créances ÷ CA TTC × 360 (délai moyen de paiement)"
+            ],
+            [
+              "Rentabilité commerciale",
+              "Résultat ÷ CA × 100 (marge nette en %)"
+            ]
+          ]
         }
       ]
     },
@@ -1121,44 +1264,12 @@
           "c": "Le résultat net ne dit pas **d’où vient** la performance. Les **soldes intermédiaires de gestion (SIG)** décomposent la formation du résultat, étage par étage, pour comprendre **comment** l’entreprise gagne (ou perd) de l’argent. On les lit « en cascade », du chiffre d’affaires jusqu’au résultat net."
         },
         {
-          "t": "table",
-          "head": [
-            "Solde",
-            "Calcul (simplifié)",
-            "Ce qu’il montre"
-          ],
-          "rows": [
-            [
-              "Marge commerciale",
-              "Ventes de marchandises − Coût d’achat des marchandises vendues",
-              "Performance de l’activité de négoce"
-            ],
-            [
-              "Valeur ajoutée",
-              "Production − Consommations en provenance de tiers",
-              "Richesse créée par l’entreprise"
-            ],
-            [
-              "EBE",
-              "VA + subventions − impôts et taxes − charges de personnel",
-              "Performance d’exploitation « pure »"
-            ],
-            [
-              "Résultat d’exploitation",
-              "EBE − dotations + autres produits/charges",
-              "Performance du métier"
-            ],
-            [
-              "Résultat courant",
-              "Résultat d’exploitation ± résultat financier",
-              "Avant l’exceptionnel"
-            ],
-            [
-              "Résultat net",
-              "Résultat courant ± exceptionnel − impôt",
-              "Ce qui reste pour l’entreprise"
-            ]
-          ]
+          "t": "p",
+          "c": "Les SIG se calculent en cascade. La **marge commerciale** est égale aux **ventes de marchandises moins le coût d’achat des marchandises vendues** : elle mesure la performance de l’activité de **négoce**, c’est-à-dire de revente. La **valeur ajoutée** est égale à la **production moins les consommations en provenance de tiers** : elle mesure la **richesse créée** par l’entreprise elle-même."
+        },
+        {
+          "t": "p",
+          "c": "L’**excédent brut d’exploitation** (EBE) s’obtient en partant de la valeur ajoutée, en ajoutant les **subventions** d’exploitation et en retirant les **impôts et taxes** et les **charges de personnel** : il mesure la performance d’exploitation « pure ». Le **résultat d’exploitation** retire de l’EBE les **dotations** aux amortissements et ajoute les autres produits et charges : il mesure la performance du **métier**. Le **résultat courant** y ajoute le **résultat financier** ; c’est le résultat avant les éléments exceptionnels. Le **résultat net**, enfin, tient compte de l’**exceptionnel** et retire l’**impôt** : c’est ce qui reste réellement à l’entreprise."
         },
         {
           "t": "p",
@@ -1168,6 +1279,44 @@
           "t": "tip",
           "h": "À retenir",
           "c": "L’**EBE** est le solde le plus « pur » : il ne dépend ni de la politique d’amortissement, ni des dettes, ni des impôts. Deux entreprises se comparent d’abord sur leur EBE."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Soldes intermédiaires de gestion (SIG)",
+              "Étapes de la formation du résultat, du CA au résultat net"
+            ],
+            [
+              "Marge commerciale",
+              "Ventes de marchandises − coût d’achat des marchandises vendues"
+            ],
+            [
+              "Valeur ajoutée",
+              "Production − consommations en provenance de tiers (richesse créée)"
+            ],
+            [
+              "EBE",
+              "VA + subventions − impôts et taxes − charges de personnel"
+            ],
+            [
+              "Résultat d’exploitation",
+              "EBE − dotations ± autres produits et charges"
+            ],
+            [
+              "Résultat courant",
+              "Résultat d’exploitation ± résultat financier"
+            ],
+            [
+              "Résultat net",
+              "Résultat courant ± exceptionnel − impôt"
+            ]
+          ]
         }
       ]
     },
@@ -1311,34 +1460,12 @@
           "c": "Pour financer ses investissements, l’entreprise dispose de plusieurs sources, à combiner selon leur coût, leur disponibilité et le niveau de risque acceptable. On les classe en financement **interne** et **externe**."
         },
         {
-          "t": "table",
-          "head": [
-            "Source",
-            "Type",
-            "Avantage / limite"
-          ],
-          "rows": [
-            [
-              "Autofinancement (CAF)",
-              "Interne",
-              "Gratuit, autonome / limité par la CAF"
-            ],
-            [
-              "Augmentation de capital",
-              "Externe (fonds propres)",
-              "Pas de remboursement / dilue le pouvoir"
-            ],
-            [
-              "Emprunt bancaire",
-              "Externe (dette)",
-              "Effet de levier / coût + risque"
-            ],
-            [
-              "Crédit-bail (leasing)",
-              "Externe",
-              "Pas d’apport, souple / plus cher au total"
-            ]
-          ]
+          "t": "p",
+          "c": "L’**autofinancement**, permis par la **CAF** (capacité d’autofinancement), est un financement **interne** : il est **gratuit** et préserve l’**autonomie** de l’entreprise, mais il est **limité** au montant de la CAF. L’**augmentation de capital** est un financement **externe** par **fonds propres** : les associés apportent de l’argent qui **n’a pas à être remboursé**, mais l’arrivée de nouveaux associés **dilue le pouvoir** des anciens."
+        },
+        {
+          "t": "p",
+          "c": "L’**emprunt bancaire** est un financement **externe par dette** : il permet de profiter de l’**effet de levier**, mais il a un **coût**, les intérêts, et augmente le **risque**. Le **crédit-bail**, ou leasing, est aussi un financement **externe** : l’entreprise **loue le bien** avec une option d’achat ; il ne demande **pas d’apport** et reste **souple**, mais il revient **plus cher au total** qu’un achat."
         },
         {
           "t": "p",
@@ -1352,6 +1479,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Financement **interne** (CAF) = autonomie ; **fonds propres** (capital) = pas de remboursement mais dilution ; **dette** = effet de levier mais risque. Le bon choix **combine** les trois selon le projet."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Autofinancement (CAF)",
+              "Financement interne : gratuit, autonome, mais limité par la CAF"
+            ],
+            [
+              "Augmentation de capital",
+              "Fonds propres externes : pas de remboursement, mais dilution du pouvoir"
+            ],
+            [
+              "Emprunt bancaire",
+              "Dette : effet de levier, mais coût et risque"
+            ],
+            [
+              "Crédit-bail (leasing)",
+              "Location avec option d’achat : pas d’apport, souple, plus cher au total"
+            ],
+            [
+              "CAF",
+              "Capacité d’autofinancement : ressources dégagées par l’activité"
+            ]
+          ]
         }
       ]
     },
@@ -1363,34 +1520,12 @@
           "c": "Deux notions à ne pas confondre mesurent la **solidité** financière. La **liquidité** est la capacité à payer ses dettes **à court terme** (à l’échéance) ; la **solvabilité** est la capacité à rembourser **l’ensemble** de ses dettes, y compris en cas de cessation d’activité."
         },
         {
-          "t": "table",
-          "head": [
-            "Ratio",
-            "Formule",
-            "Repère"
-          ],
-          "rows": [
-            [
-              "Liquidité générale",
-              "Actif circulant ÷ Dettes court terme",
-              "> 1 souhaitable"
-            ],
-            [
-              "Autonomie financière",
-              "Capitaux propres ÷ Total du bilan",
-              "> 30 % rassurant"
-            ],
-            [
-              "Capacité de remboursement",
-              "Dettes financières ÷ CAF",
-              "< 4 ans recommandé"
-            ],
-            [
-              "Solvabilité générale",
-              "Total actif ÷ Total des dettes",
-              "> 1 obligatoire"
-            ]
-          ]
+          "t": "p",
+          "c": "La **liquidité générale** rapporte l’**actif circulant aux dettes à court terme** : un ratio **supérieur à 1** est souhaitable, car il signifie que les actifs qui vont se transformer rapidement en argent couvrent les dettes à payer bientôt. L’**autonomie financière** rapporte les **capitaux propres au total du bilan** : au-delà de **30 %**, la situation est rassurante."
+        },
+        {
+          "t": "p",
+          "c": "La **capacité de remboursement** rapporte les **dettes financières à la CAF** : elle indique combien d’années de CAF il faudrait pour rembourser les emprunts, et l’on recommande de rester **sous 4 ans**. La **solvabilité générale**, enfin, rapporte le **total de l’actif au total des dettes** : elle doit **impérativement être supérieure à 1**, sinon l’entreprise doit plus qu’elle ne possède."
         },
         {
           "t": "p",
@@ -1405,6 +1540,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Liquidité = payer **à temps** (court terme) ; solvabilité = pouvoir **tout rembourser** (long terme). Toujours interpréter un ratio par rapport à un **repère** et à son **évolution**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Liquidité",
+              "Capacité à payer ses dettes à court terme"
+            ],
+            [
+              "Solvabilité",
+              "Capacité à rembourser l’ensemble de ses dettes"
+            ],
+            [
+              "Liquidité générale",
+              "Actif circulant ÷ dettes à court terme (> 1 souhaitable)"
+            ],
+            [
+              "Autonomie financière",
+              "Capitaux propres ÷ total du bilan (> 30 % rassurant)"
+            ],
+            [
+              "Capacité de remboursement",
+              "Dettes financières ÷ CAF (< 4 ans recommandé)"
+            ],
+            [
+              "Solvabilité générale",
+              "Total actif ÷ total des dettes (> 1 obligatoire)"
+            ]
+          ]
         }
       ]
     },
@@ -1518,39 +1687,12 @@
           "c": "Un ratio ne « vaut » que si on l’**interprète**. La méthode : poser la formule, calculer, puis conclure par une phrase (« cela signifie que… donc c’est bon/inquiétant car… »)."
         },
         {
-          "t": "table",
-          "head": [
-            "Ratio",
-            "Formule",
-            "Bon repère"
-          ],
-          "rows": [
-            [
-              "Taux de marge nette",
-              "Résultat net ÷ CA × 100",
-              "Le plus élevé possible"
-            ],
-            [
-              "Autonomie financière",
-              "Capitaux propres ÷ Total bilan",
-              "> 30 %"
-            ],
-            [
-              "Taux d’endettement",
-              "Dettes financières ÷ Capitaux propres",
-              "< 1"
-            ],
-            [
-              "Délai clients",
-              "Créances ÷ CA TTC × 360",
-              "Le plus court possible"
-            ],
-            [
-              "Capacité de remboursement",
-              "Dettes financières ÷ CAF",
-              "< 4 ans"
-            ]
-          ]
+          "t": "p",
+          "c": "Pour chaque ratio, retiens la formule et le sens du bon résultat. Le **taux de marge nette**, égal au **résultat net divisé par le chiffre d’affaires, multiplié par 100**, doit être **le plus élevé possible**. L’**autonomie financière**, égale aux **capitaux propres divisés par le total du bilan**, doit dépasser **30 %**. Le **taux d’endettement**, égal aux **dettes financières divisées par les capitaux propres**, doit rester **inférieur à 1**."
+        },
+        {
+          "t": "p",
+          "c": "Le **délai clients**, égal aux **créances divisées par le chiffre d’affaires TTC, multiplié par 360**, doit être **le plus court possible**. La **capacité de remboursement**, égale aux **dettes financières divisées par la CAF**, doit rester **inférieure à 4 ans**. Un ratio ne s’arrête jamais au calcul : on conclut toujours par une phrase qui dit ce qu’il signifie pour l’entreprise."
         },
         {
           "t": "example",
@@ -1561,6 +1703,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Toujours 3 temps : **formule → calcul (avec unité) → interprétation**. Un ratio calculé mais non commenté ne rapporte que la moitié des points."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Taux de marge nette",
+              "Résultat net ÷ CA × 100 (le plus élevé possible)"
+            ],
+            [
+              "Autonomie financière",
+              "Capitaux propres ÷ total bilan (> 30 %)"
+            ],
+            [
+              "Taux d’endettement",
+              "Dettes financières ÷ capitaux propres (< 1)"
+            ],
+            [
+              "Délai clients",
+              "Créances ÷ CA TTC × 360 (le plus court possible)"
+            ],
+            [
+              "Capacité de remboursement",
+              "Dettes financières ÷ CAF (< 4 ans)"
+            ],
+            [
+              "BFR",
+              "Besoin de financement né du décalage entre encaissements et décaissements"
+            ]
+          ]
         }
       ]
     }
@@ -1581,29 +1757,39 @@
           ]
         },
         {
-          "t": "table",
-          "head": [
-            "Type",
-            "Si l’activité double",
-            "Exemples"
-          ],
-          "rows": [
-            [
-              "Variables",
-              "Elles doublent",
-              "Matières, marchandises, énergie machine"
-            ],
-            [
-              "Fixes",
-              "Elles ne bougent pas",
-              "Loyer, assurance, salaire du gérant"
-            ]
-          ]
+          "t": "p",
+          "c": "Le test le plus simple pour classer une charge est de se demander ce qui se passe **si l’activité double**. Les **charges variables doublent** elles aussi : les matières premières, les marchandises achetées, l’énergie consommée par les machines."
+        },
+        {
+          "t": "p",
+          "c": "Les **charges fixes**, elles, **ne bougent pas** : le loyer, l’assurance ou le salaire du gérant restent identiques, que l’on vende peu ou beaucoup."
         },
         {
           "t": "warning",
           "h": "Attention",
           "c": "Une charge fixe est fixe **par période**, pas « par unité » : ramenée à une unité, elle **diminue** quand on produit plus (on répartit le loyer sur davantage de produits). C’est tout l’intérêt de produire en volume : diluer les charges fixes."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Charges variables",
+              "Varient proportionnellement à l’activité (matières, marchandises, énergie machine)"
+            ],
+            [
+              "Charges fixes (de structure)",
+              "Stables quel que soit le volume (loyer, assurance, salaire du gérant)"
+            ],
+            [
+              "Charge fixe unitaire",
+              "Diminue quand le volume augmente (on répartit la charge sur plus de produits)"
+            ]
+          ]
         }
       ]
     },
@@ -1843,39 +2029,12 @@
           "c": "Le **compte de résultat différentiel** réorganise les charges par **comportement** (variables / fixes) plutôt que par nature, pour faire apparaître la **marge sur coût variable** et le **résultat**. C’est l’outil de synthèse du raisonnement « coûts pour décider »."
         },
         {
-          "t": "table",
-          "head": [
-            "Élément",
-            "Montant",
-            "% du CA"
-          ],
-          "rows": [
-            [
-              "Chiffre d’affaires",
-              "200 000",
-              "100 %"
-            ],
-            [
-              "− Charges variables",
-              "120 000",
-              "60 %"
-            ],
-            [
-              "= Marge sur coût variable",
-              "80 000",
-              "40 %"
-            ],
-            [
-              "− Charges fixes",
-              "60 000",
-              ""
-            ],
-            [
-              "= Résultat",
-              "20 000",
-              ""
-            ]
-          ]
+          "t": "p",
+          "c": "Prenons un exemple chiffré. L’entreprise réalise un **chiffre d’affaires de 200 000 €**, qui représente 100 %. Ses **charges variables** s’élèvent à **120 000 €**, soit **60 %** du chiffre d’affaires. La **marge sur coût variable** (MCV) est donc de 200 000 − 120 000 = **80 000 €**, soit **40 %** du chiffre d’affaires : c’est le **taux de MCV**."
+        },
+        {
+          "t": "p",
+          "c": "On retire ensuite les **charges fixes**, de **60 000 €**, pour obtenir le **résultat** : 80 000 − 60 000 = **20 000 €** de bénéfice."
         },
         {
           "t": "p",
@@ -1890,6 +2049,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Le résultat différentiel met en évidence la **MCV** et son **taux**. Il relie directement coûts variables, seuil de rentabilité et prévision de résultat."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Compte de résultat différentiel",
+              "Classe les charges en variables et fixes pour faire apparaître la MCV"
+            ],
+            [
+              "Marge sur coût variable (MCV)",
+              "Chiffre d’affaires − charges variables"
+            ],
+            [
+              "Taux de MCV",
+              "MCV ÷ CA (ici 40 %)"
+            ],
+            [
+              "Résultat",
+              "MCV − charges fixes"
+            ],
+            [
+              "Seuil de rentabilité",
+              "CA pour lequel le résultat est nul : charges fixes ÷ taux de MCV"
+            ]
+          ]
         }
       ]
     },

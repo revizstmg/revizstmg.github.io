@@ -8,29 +8,12 @@
           "c": "Dans une économie de marché, l’**État** intervient pour corriger et compléter le marché. L’économiste Richard **Musgrave** a résumé son action économique en **trois fonctions** complémentaires."
         },
         {
-          "t": "table",
-          "head": [
-            "Fonction",
-            "Objectif",
-            "Exemples d’outils"
-          ],
-          "rows": [
-            [
-              "Allocation",
-              "Produire ce que le marché ne fournit pas bien",
-              "Écoles, routes, défense, justice (biens publics)"
-            ],
-            [
-              "Répartition",
-              "Réduire les inégalités",
-              "Impôts progressifs, prestations sociales, redistribution"
-            ],
-            [
-              "Stabilisation",
-              "Lisser les crises (croissance, emploi, prix)",
-              "Politiques budgétaire et monétaire"
-            ]
-          ]
+          "t": "p",
+          "c": "La première fonction est l’**allocation** des ressources. Son objectif est de **produire ce que le marché ne fournit pas bien**, ou pas du tout : les **biens publics** comme les écoles, les routes, la défense ou la justice. Personne ne pourrait les financer en les vendant, car on ne peut empêcher personne d’en profiter."
+        },
+        {
+          "t": "p",
+          "c": "La deuxième est la **répartition**, qui vise à **réduire les inégalités**. L’État utilise pour cela des **impôts progressifs**, dont le taux augmente avec le revenu, et des **prestations sociales** : c’est la **redistribution**. La troisième est la **stabilisation**, qui cherche à **lisser les crises**, c’est-à-dire à soutenir la croissance et l’emploi et à contenir la hausse des prix. Ses outils sont la **politique budgétaire** et la **politique monétaire**."
         },
         {
           "t": "p",
@@ -40,6 +23,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Les 3 fonctions : **Allocation – Répartition – Stabilisation** (A.R.S.). Elles justifient pourquoi, même dans une économie de marché, l’État a un rôle économique."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Fonction d’allocation",
+              "Produire ce que le marché ne fournit pas bien (biens publics : écoles, routes, défense, justice)"
+            ],
+            [
+              "Fonction de répartition",
+              "Réduire les inégalités (impôts progressifs, prestations sociales)"
+            ],
+            [
+              "Fonction de stabilisation",
+              "Lisser les crises : croissance, emploi, prix (politiques budgétaire et monétaire)"
+            ],
+            [
+              "Bien public",
+              "Bien dont personne ne peut être exclu, que le marché ne produit pas spontanément"
+            ],
+            [
+              "Redistribution",
+              "Prélèvements et prestations qui réduisent les écarts de revenus"
+            ]
+          ]
         }
       ]
     },
@@ -79,29 +92,12 @@
           "c": "Pour **stabiliser** l’économie, l’État conduit des **politiques économiques**. On les classe selon leur horizon : **conjoncturelles** (agir vite sur la situation présente) ou **structurelles** (transformer l’économie à long terme)."
         },
         {
-          "t": "table",
-          "head": [
-            "Politique",
-            "Outil",
-            "But"
-          ],
-          "rows": [
-            [
-              "Budgétaire",
-              "Dépenses publiques, impôts (budget de l’État)",
-              "Relancer ou freiner l’activité"
-            ],
-            [
-              "Monétaire",
-              "Taux d’intérêt, masse monétaire (BCE)",
-              "Maîtriser l’inflation, soutenir le crédit"
-            ],
-            [
-              "Structurelle",
-              "Réformes (formation, marché du travail, fiscalité)",
-              "Améliorer la compétitivité à long terme"
-            ]
-          ]
+          "t": "p",
+          "c": "La **politique budgétaire** utilise le budget de l’État, c’est-à-dire les **dépenses publiques** et les **impôts**. Selon les choix, elle sert à **relancer** l’activité, en dépensant plus ou en prélevant moins, ou à la **freiner**. La **politique monétaire** est conduite dans la zone euro par la **BCE** : elle agit sur les **taux d’intérêt** et sur la **masse monétaire** pour **maîtriser l’inflation** et **soutenir le crédit**."
+        },
+        {
+          "t": "p",
+          "c": "Ces deux politiques sont **conjoncturelles** : elles agissent vite sur la situation présente. Les **politiques structurelles**, elles, passent par des **réformes** de fond, sur la formation, le marché du travail ou la fiscalité, pour **améliorer la compétitivité à long terme**."
         },
         {
           "t": "p",
@@ -115,6 +111,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Conjoncturel = court terme (budgétaire + monétaire) ; structurel = long terme (réformes). En zone euro, la **monnaie** est gérée par la **BCE**, pas par chaque État."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Politique conjoncturelle",
+              "Agit vite sur la situation présente (budgétaire, monétaire)"
+            ],
+            [
+              "Politique structurelle",
+              "Réformes qui transforment l’économie à long terme (formation, marché du travail, fiscalité)"
+            ],
+            [
+              "Politique budgétaire",
+              "Utilise dépenses publiques et impôts pour relancer ou freiner l’activité"
+            ],
+            [
+              "Politique monétaire",
+              "La BCE agit sur les taux d’intérêt et la masse monétaire (inflation, crédit)"
+            ],
+            [
+              "Politique de relance",
+              "Hausse des dépenses ou baisse des impôts pour soutenir la demande"
+            ],
+            [
+              "Politique de rigueur",
+              "Baisse des dépenses pour maîtriser la dette"
+            ]
+          ]
         }
       ]
     },
@@ -219,34 +249,12 @@
           "c": "Le chômage n’a pas une cause unique : selon son origine, on en distingue plusieurs types, qui appellent des **remèdes différents**."
         },
         {
-          "t": "table",
-          "head": [
-            "Type",
-            "Cause",
-            "Exemple / remède"
-          ],
-          "rows": [
-            [
-              "Conjoncturel",
-              "Ralentissement de l’activité (crise)",
-              "Récession → politique de relance"
-            ],
-            [
-              "Structurel",
-              "Inadéquation durable offre/demande de travail",
-              "Compétences obsolètes → formation"
-            ],
-            [
-              "Frictionnel",
-              "Temps de transition entre deux emplois",
-              "Normal et incompressible"
-            ],
-            [
-              "Technologique",
-              "Machines/automatisation remplacent des postes",
-              "Reconversion, montée en compétences"
-            ]
-          ]
+          "t": "p",
+          "c": "Le **chômage conjoncturel** est causé par un **ralentissement de l’activité** : en période de crise, les entreprises produisent moins et embauchent moins. Une **récession** fait monter ce chômage, et le remède adapté est une **politique de relance**. Le **chômage structurel** vient d’une **inadéquation durable** entre l’offre et la demande de travail : les emplois proposés ne correspondent pas aux compétences disponibles, par exemple parce que certaines **compétences sont devenues obsolètes**. Le remède principal est la **formation**."
+        },
+        {
+          "t": "p",
+          "c": "Le **chômage frictionnel** correspond au **temps de transition entre deux emplois**, le temps de chercher et de trouver un nouveau poste : il est **normal** et **incompressible**. Le **chômage technologique**, enfin, apparaît quand des **machines** ou l’**automatisation** remplacent des postes ; il appelle la **reconversion** et la **montée en compétences** des salariés concernés."
         },
         {
           "t": "p",
@@ -261,6 +269,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Conjoncturel → **relance** (agir sur la demande). Structurel → **formation et réformes** (agir sur l’offre de travail). Le bon remède dépend du bon diagnostic."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Chômage conjoncturel",
+              "Dû à un ralentissement de l’activité (crise) ; remède : relance"
+            ],
+            [
+              "Chômage structurel",
+              "Inadéquation durable entre offre et demande de travail ; remède : formation"
+            ],
+            [
+              "Chômage frictionnel",
+              "Temps de transition entre deux emplois ; normal et incompressible"
+            ],
+            [
+              "Chômage technologique",
+              "Postes remplacés par des machines ; remède : reconversion"
+            ]
+          ]
         }
       ]
     },
@@ -415,34 +449,12 @@
           "c": "Faut-il ouvrir totalement les frontières (**libre-échange**) ou protéger la production nationale (**protectionnisme**) ? C’est l’un des grands débats de l’économie internationale."
         },
         {
-          "t": "table",
-          "head": [
-            "",
-            "Libre-échange",
-            "Protectionnisme"
-          ],
-          "rows": [
-            [
-              "Principe",
-              "Supprimer les barrières aux échanges",
-              "Protéger par des barrières"
-            ],
-            [
-              "Outils",
-              "Accords de libre-échange, OMC",
-              "Droits de douane, quotas, normes"
-            ],
-            [
-              "Avantages",
-              "Prix bas, choix, spécialisation, croissance",
-              "Protège l’emploi et les industries naissantes"
-            ],
-            [
-              "Risques",
-              "Concurrence dure, délocalisations, dépendance",
-              "Représailles, prix élevés, perte d’efficacité"
-            ]
-          ]
+          "t": "p",
+          "c": "Le **libre-échange** a pour principe de **supprimer les barrières** aux échanges. Il s’appuie sur des **accords de libre-échange** entre pays et sur les règles de l’**OMC**. Ses avantages sont des **prix plus bas**, un **choix** plus large pour les consommateurs, la **spécialisation** de chaque pays dans ce qu’il fait le mieux et un surcroît de **croissance**. Ses risques sont une **concurrence** très dure, des **délocalisations** et une **dépendance** envers d’autres pays."
+        },
+        {
+          "t": "p",
+          "c": "Le **protectionnisme** a pour principe de **protéger la production nationale par des barrières**. Ses outils sont les **droits de douane**, qui renchérissent les importations, les **quotas**, qui en limitent la quantité, et les **normes**, qui en compliquent l’entrée. Il **protège l’emploi** et les **industries naissantes**, encore trop jeunes pour affronter la concurrence. Mais il expose à des **représailles** des autres pays, fait payer des **prix plus élevés** aux consommateurs et entraîne une **perte d’efficacité**."
         },
         {
           "t": "p",
@@ -456,6 +468,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Le libre-échange **enrichit globalement** mais **redistribue les cartes** : il crée des gagnants et des perdants. Un bon devoir montre les **deux faces** et propose un accompagnement des perdants."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Libre-échange",
+              "Suppression des barrières aux échanges (accords, OMC) : prix bas, choix, spécialisation"
+            ],
+            [
+              "Protectionnisme",
+              "Protection de la production nationale par des barrières (droits de douane, quotas, normes)"
+            ],
+            [
+              "Droit de douane",
+              "Taxe sur un produit importé"
+            ],
+            [
+              "Quota",
+              "Limite de la quantité importée"
+            ],
+            [
+              "Représailles",
+              "Mesures protectionnistes prises en riposte par un autre pays"
+            ],
+            [
+              "Délocalisation",
+              "Transfert d’une production vers un autre pays"
+            ]
+          ]
         }
       ]
     },
@@ -558,25 +604,12 @@
           "c": "Le **développement durable** est « un développement qui répond aux besoins du présent **sans compromettre** la capacité des générations futures à répondre aux leurs » (rapport **Brundtland**, 1987). Il cherche à concilier **trois piliers** indissociables."
         },
         {
-          "t": "table",
-          "head": [
-            "Pilier",
-            "Enjeu"
-          ],
-          "rows": [
-            [
-              "Économique",
-              "Produire des richesses, assurer la viabilité"
-            ],
-            [
-              "Social",
-              "Réduire les inégalités, garantir des conditions de vie dignes"
-            ],
-            [
-              "Environnemental",
-              "Préserver les ressources et les écosystèmes"
-            ]
-          ]
+          "t": "p",
+          "c": "Le pilier **économique** consiste à **produire des richesses** et à assurer la **viabilité** de l’activité : sans entreprises rentables, pas d’emplois ni de revenus. Le pilier **social** consiste à **réduire les inégalités** et à **garantir des conditions de vie dignes** à tous."
+        },
+        {
+          "t": "p",
+          "c": "Le pilier **environnemental** consiste à **préserver les ressources** naturelles et les **écosystèmes**. Ces trois piliers sont indissociables : un projet n’est durable que s’il est à la fois viable, équitable et vivable."
         },
         {
           "t": "p",
@@ -590,6 +623,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "3 piliers : **économique, social, environnemental**. Croissance = quantité ; développement = qualité **durable**. Soutenabilité **faible** (compensable) vs **forte** (préservation)."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Développement durable",
+              "Répond aux besoins du présent sans compromettre ceux des générations futures (Brundtland, 1987)"
+            ],
+            [
+              "Pilier économique",
+              "Produire des richesses, assurer la viabilité"
+            ],
+            [
+              "Pilier social",
+              "Réduire les inégalités, garantir des conditions de vie dignes"
+            ],
+            [
+              "Pilier environnemental",
+              "Préserver les ressources et les écosystèmes"
+            ],
+            [
+              "Croissance / développement",
+              "Hausse quantitative de la production / amélioration qualitative et durable des conditions de vie"
+            ]
+          ]
         }
       ]
     },
@@ -601,34 +664,12 @@
           "c": "Les atteintes à l’environnement sont typiquement des **externalités négatives** : une pollution dont le coût n’est pas supporté par celui qui la produit, mais par la société. Le marché seul ne les corrige pas ; l’action publique dispose de plusieurs **instruments**."
         },
         {
-          "t": "table",
-          "head": [
-            "Instrument",
-            "Principe",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Réglementation",
-              "Interdire ou fixer des normes",
-              "Normes anti-pollution, interdiction de produits"
-            ],
-            [
-              "Taxe (fiscalité verte)",
-              "Faire payer le pollueur (principe pollueur-payeur)",
-              "Taxe carbone"
-            ],
-            [
-              "Marché de quotas",
-              "Plafonner puis échanger des droits à polluer",
-              "Marché européen du carbone (ETS)"
-            ],
-            [
-              "Subvention",
-              "Encourager les comportements vertueux",
-              "Aide à la rénovation, au vélo"
-            ]
-          ]
+          "t": "p",
+          "c": "Quatre instruments sont à la disposition des pouvoirs publics. La **réglementation** consiste à **interdire** certaines pratiques ou à **fixer des normes**, comme les normes anti-pollution des véhicules ou l’interdiction de certains produits. La **taxe**, ou **fiscalité verte**, consiste à **faire payer le pollueur** selon le **principe pollueur-payeur** : c’est le cas de la **taxe carbone**."
+        },
+        {
+          "t": "p",
+          "c": "Le **marché de quotas** commence par **plafonner** le total des émissions, puis permet aux entreprises d’**échanger des droits à polluer** ; le **marché européen du carbone** (ETS) fonctionne ainsi. Enfin, la **subvention** **encourage les comportements vertueux**, par exemple une aide à la rénovation des logements ou à l’achat d’un vélo."
         },
         {
           "t": "p",
@@ -643,6 +684,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Pollution = **externalité négative**. Instruments : **réglementation, taxe (pollueur-payeur), marché de quotas, subvention**. Les instruments économiques (taxe, quotas) agissent par le **prix**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Externalité négative",
+              "Effet nuisible d’une activité sur des tiers, dont le coût n’est pas payé par son auteur"
+            ],
+            [
+              "Réglementation",
+              "Interdire ou fixer des normes (normes anti-pollution)"
+            ],
+            [
+              "Taxe (fiscalité verte)",
+              "Faire payer le pollueur : principe pollueur-payeur (taxe carbone)"
+            ],
+            [
+              "Marché de quotas",
+              "Plafonner les émissions puis échanger des droits à polluer (ETS européen)"
+            ],
+            [
+              "Subvention",
+              "Aide qui encourage les comportements vertueux (rénovation, vélo)"
+            ]
+          ]
         }
       ]
     },

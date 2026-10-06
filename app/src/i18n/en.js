@@ -264,6 +264,7 @@ export default {
   faq: 'FAQ', startGuide: 'Getting started', contactUs: 'Contact us', createdBy: 'Created by',
   privacySummary: 'RévizSTMG uses your first name, last name, email and (optionally) your photo, along with your class and progress, only to run the app. Data is hosted in the European Union (Supabase). Your first name, photo and scores are visible to your classmates; your email is only used for sign-in. No ads, no reselling. You can edit or delete your data anytime from “My space”. For a minor, the school’s and/or legal guardian’s consent is required.',
   backToChapters: 'Back to chapters', savePdf: 'Save (PDF)', gamesOfChapter: 'Games of this chapter', keyDefs: 'Key definitions',
+  notionsDefs: 'Key terms and definitions', notionCol: 'Term', definitionCol: 'Definition',
   previous: 'Previous', nextChapter: 'Next chapter', takeTest: 'Take the theme test', pageWord: 'Page', tapToOpen: 'Tap to read full screen',
   new: 'New', tabChapters: 'Chapters', tabTest: 'Theme test', tabProgress: 'Progress', tabTools: 'Tools', tabLesson: 'Lesson', tabDefs: 'Definitions', tabExercises: 'Exercises', noDefsHere: 'The key definitions for this topic are in the other chapters.', lessonLabel: 'The lesson', exercisesLabel: 'Exercises',
   chooseChapter: 'Choose a chapter to read the lesson and practise.', course: 'Lesson',

@@ -37,25 +37,12 @@
           "c": "L’**inflation** est la **hausse générale et durable** des prix. On la mesure par l’indice des prix à la consommation (IPC). Une inflation modérée est normale ; une inflation forte ou une **déflation** (baisse des prix) sont dangereuses."
         },
         {
-          "t": "table",
-          "head": [
-            "Cause",
-            "Mécanisme"
-          ],
-          "rows": [
-            [
-              "Par la demande",
-              "La demande dépasse l’offre → les prix montent"
-            ],
-            [
-              "Par les coûts",
-              "Hausse des coûts (énergie, salaires) répercutée sur les prix"
-            ],
-            [
-              "Monétaire",
-              "Trop de monnaie en circulation"
-            ]
-          ]
+          "t": "p",
+          "c": "L’inflation peut avoir trois causes. Dans l’**inflation par la demande**, la **demande dépasse l’offre** : les entreprises ne peuvent pas produire assez pour satisfaire tous les acheteurs, et les prix montent. Dans l’**inflation par les coûts**, ce sont les **coûts de production** qui augmentent, par exemple l’énergie ou les salaires, et les entreprises **répercutent** cette hausse sur leurs prix."
+        },
+        {
+          "t": "p",
+          "c": "L’**inflation monétaire**, enfin, apparaît quand il y a **trop de monnaie en circulation** par rapport aux biens disponibles : chaque unité de monnaie perd de sa valeur, ce qui se traduit par une hausse des prix."
         },
         {
           "t": "p",
@@ -65,6 +52,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Inflation = hausse **générale et durable** des prix. Causes : **demande**, **coûts**, **monnaie**. Elle érode le **pouvoir d’achat**. La BCE la combat en **relevant ses taux**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Inflation",
+              "Hausse générale et durable des prix, mesurée par l’IPC"
+            ],
+            [
+              "Déflation",
+              "Baisse générale et durable des prix"
+            ],
+            [
+              "Inflation par la demande",
+              "La demande dépasse l’offre, les prix montent"
+            ],
+            [
+              "Inflation par les coûts",
+              "Hausse des coûts (énergie, salaires) répercutée sur les prix"
+            ],
+            [
+              "Inflation monétaire",
+              "Trop de monnaie en circulation"
+            ],
+            [
+              "Pouvoir d’achat",
+              "Quantité de biens et services qu’un revenu permet d’acheter"
+            ]
+          ]
         }
       ]
     },
@@ -215,10 +236,28 @@
           "c": "Le commerce international est **encadré** par des institutions qui fixent des règles et arbitrent les conflits, pour éviter le chaos et les guerres commerciales."
         },
         {
+          "t": "p",
+          "c": "L’**OMC** (Organisation mondiale du commerce) **organise et régule le commerce mondial** et **arbitre les litiges** entre pays. L’**Union européenne** a créé un **marché unique**, avec la **libre circulation** des biens, des services, des capitaux et des personnes entre les États membres."
+        },
+        {
+          "t": "p",
+          "c": "La **zone euro** partage une **monnaie unique**, et sa banque centrale, la **BCE**, y conduit une **politique monétaire commune**. Le **FMI** (Fonds monétaire international), enfin, veille à la **stabilité financière** mondiale et **aide les pays en difficulté**."
+        },
+        {
+          "t": "p",
+          "c": "L’**OMC** promeut le **libre-échange** en réduisant les barrières (droits de douane, quotas) et en arbitrant les différends. L’**Union européenne** va plus loin : un **marché unique** avec libre circulation des biens, services, capitaux et personnes. Ces institutions organisent l’**interdépendance** croissante des économies."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "L’**OMC** régule le commerce mondial et arbitre les litiges. L’**UE** est un marché unique intégré. Ces institutions encadrent la **mondialisation**."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Institution",
-            "Rôle"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
@@ -238,15 +277,6 @@
               "Stabilité financière, aide aux pays en difficulté"
             ]
           ]
-        },
-        {
-          "t": "p",
-          "c": "L’**OMC** promeut le **libre-échange** en réduisant les barrières (droits de douane, quotas) et en arbitrant les différends. L’**Union européenne** va plus loin : un **marché unique** avec libre circulation des biens, services, capitaux et personnes. Ces institutions organisent l’**interdépendance** croissante des économies."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "L’**OMC** régule le commerce mondial et arbitre les litiges. L’**UE** est un marché unique intégré. Ces institutions encadrent la **mondialisation**."
         }
       ]
     },

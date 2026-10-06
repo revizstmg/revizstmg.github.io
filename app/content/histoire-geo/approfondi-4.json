@@ -45,15 +45,29 @@
       "h": "📚 Vocabulaire de la géographie des océans",
       "blocks": [
         {
+          "t": "p",
+          "c": "La **zone économique exclusive** (ZEE) s’étend jusqu’à **200 milles marins** des côtes : l’État y dispose des **droits d’exploitation** des ressources, comme la pêche ou les hydrocarbures. La **maritimisation** désigne l’**importance croissante de la mer** dans l’économie mondiale, puisque l’essentiel des marchandises voyage par bateau."
+        },
+        {
+          "t": "p",
+          "c": "Un **hub portuaire** est un **grand port de correspondance**, où les marchandises passent d’un navire à l’autre pour être redistribuées, comme Singapour. Une **route maritime** est un **axe majeur de circulation des navires**, comme la route qui relie l’Asie à l’Europe."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Associer chaque terme à un **exemple** (ZEE française outre-mer, hub = Singapour, route = Asie-Europe)."
+        },
+        {
           "t": "table",
+          "h": "Notions et repères",
           "head": [
-            "Terme",
-            "Définition"
+            "Notion ou repère",
+            "Définition ou événement"
           ],
           "rows": [
             [
               "ZEE",
-              "Zone économique exclusive (200 milles marins) : droits d’exploitation"
+              "Zone économique exclusive (200 milles marins) : droits d’exploitation des ressources"
             ],
             [
               "Maritimisation",
@@ -61,18 +75,13 @@
             ],
             [
               "Hub portuaire",
-              "Grand port de correspondance des flux"
+              "Grand port de correspondance des flux (Singapour)"
             ],
             [
               "Route maritime",
-              "Axe majeur de circulation des navires"
+              "Axe majeur de circulation des navires (Asie-Europe)"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Associer chaque terme à un **exemple** (ZEE française outre-mer, hub = Singapour, route = Asie-Europe)."
         }
       ]
     }
@@ -100,10 +109,28 @@
       "h": "🌍 Une mondialisation sélective : la Triade, les émergents, les marges",
       "blocks": [
         {
+          "t": "p",
+          "c": "La **Triade**, formée par l’**Amérique du Nord**, l’**Europe** et l’**Asie de l’Est**, regroupe les **pôles dominants** de la mondialisation. Les **pays émergents**, souvent regroupés sous le sigle **BRICS** (Brésil, Russie, Inde, Chine, Afrique du Sud), connaissent une **montée en puissance rapide**."
+        },
+        {
+          "t": "p",
+          "c": "Enfin, de nombreux territoires restent **en marge** : c’est le cas de beaucoup de **pays les moins avancés** (PMA), **peu connectés aux flux** mondiaux."
+        },
+        {
+          "t": "p",
+          "c": "La mondialisation est **sélective** : elle intègre fortement la Triade, intègre de plus en plus les **émergents** (surtout la Chine), et laisse des espaces **à l’écart**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Territoires **intégrés / émergents / en marge** : la mondialisation crée des gagnants et des perdants."
+        },
+        {
           "t": "table",
+          "h": "Notions et repères",
           "head": [
-            "Groupe",
-            "Caractéristique"
+            "Notion ou repère",
+            "Définition ou événement"
           ],
           "rows": [
             [
@@ -115,19 +142,14 @@
               "Chine, Inde, Brésil… : montée en puissance rapide"
             ],
             [
-              "En marge",
-              "Nombre de PMA, peu connectés aux flux"
+              "PMA",
+              "Pays les moins avancés, souvent en marge de la mondialisation"
+            ],
+            [
+              "Mondialisation sélective",
+              "Elle intègre inégalement les territoires"
             ]
           ]
-        },
-        {
-          "t": "p",
-          "c": "La mondialisation est **sélective** : elle intègre fortement la Triade, intègre de plus en plus les **émergents** (surtout la Chine), et laisse des espaces **à l’écart**."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Territoires **intégrés / émergents / en marge** : la mondialisation crée des gagnants et des perdants."
         }
       ]
     },
@@ -153,10 +175,20 @@
       "h": "📚 Vocabulaire clé de la mondialisation",
       "blocks": [
         {
+          "t": "p",
+          "c": "La **métropolisation** est la **concentration des activités et du pouvoir dans les grandes villes**. Une **FTN**, ou **firme transnationale**, est une **entreprise implantée dans plusieurs pays**. La **DIT**, ou **division internationale du travail**, désigne la répartition des activités de production entre les pays selon leurs atouts. L’**archipel mondial**, enfin, est le **réseau des métropoles connectées entre elles**, qui commandent l’économie mondiale."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Un vocabulaire précis + un exemple par notion = des points faciles à l’épreuve."
+        },
+        {
           "t": "table",
+          "h": "Notions et repères",
           "head": [
-            "Terme",
-            "Définition"
+            "Notion ou repère",
+            "Définition ou événement"
           ],
           "rows": [
             [
@@ -176,11 +208,6 @@
               "Réseau des métropoles connectées entre elles"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Un vocabulaire précis + un exemple par notion = des points faciles à l’épreuve."
         }
       ]
     }
@@ -244,10 +271,24 @@
       "h": "📚 Vocabulaire clé — France et mondialisation",
       "blocks": [
         {
+          "t": "p",
+          "c": "Le **marché unique** est l’**espace de libre circulation** des marchandises, des services, des capitaux et des personnes au sein de l’Union européenne. Une **façade maritime** est un **littoral équipé de grands ports** et **ouvert sur le monde**, comme la façade de la Manche avec Le Havre."
+        },
+        {
+          "t": "p",
+          "c": "Le mot **ultramarin** désigne ce qui se rapporte aux **territoires français d’outre-mer**, qui donnent à la France une immense ZEE. L’**attractivité**, enfin, est la **capacité d’un territoire à attirer** des entreprises, des talents et des touristes, comme Paris."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Toujours illustrer : marché unique (UE), façade (Le Havre), ultramarin (ZEE), attractivité (Paris)."
+        },
+        {
           "t": "table",
+          "h": "Notions et repères",
           "head": [
-            "Terme",
-            "Définition"
+            "Notion ou repère",
+            "Définition ou événement"
           ],
           "rows": [
             [
@@ -256,7 +297,7 @@
             ],
             [
               "Façade maritime",
-              "Littoral équipé de grands ports, ouvert sur le monde"
+              "Littoral équipé de grands ports, ouvert sur le monde (Le Havre)"
             ],
             [
               "Ultramarin",
@@ -267,11 +308,6 @@
               "Capacité à attirer entreprises, talents, touristes"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Toujours illustrer : marché unique (UE), façade (Le Havre), ultramarin (ZEE), attractivité (Paris)."
         }
       ]
     }

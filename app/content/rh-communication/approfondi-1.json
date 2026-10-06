@@ -8,29 +8,12 @@
           "c": "Une entreprise ne vaut que par les femmes et les hommes qui la font vivre. **Mobiliser les ressources humaines**, c’est donner aux salariés l’envie et les moyens de s’investir. Au cœur : la **motivation**, ce qui pousse une personne à agir et à se dépasser."
         },
         {
-          "t": "table",
-          "head": [
-            "Théorie",
-            "Idée clé"
-          ],
-          "rows": [
-            [
-              "Taylor (OST)",
-              "La motivation = le salaire (« l’homme au travail »)"
-            ],
-            [
-              "Maslow",
-              "On est motivé par des besoins hiérarchisés (pyramide)"
-            ],
-            [
-              "Herzberg",
-              "Facteurs d’hygiène (évitent l’insatisfaction) ≠ facteurs de motivation (donnent l’envie)"
-            ],
-            [
-              "Mayo",
-              "Les relations sociales et la reconnaissance motivent (effet Hawthorne)"
-            ]
-          ]
+          "t": "p",
+          "c": "Quatre auteurs ont marqué la réflexion sur la motivation. Pour **Taylor**, fondateur de l’**organisation scientifique du travail (OST)**, l’homme au travail est d’abord motivé par le **salaire** : on obtient l’effort en payant au rendement. **Maslow**, lui, explique que l’on est motivé par des **besoins hiérarchisés**, rangés en pyramide : une fois les besoins de base satisfaits, ce sont les besoins d’appartenance, d’estime puis d’accomplissement qui poussent à agir."
+        },
+        {
+          "t": "p",
+          "c": "**Herzberg** distingue deux familles de facteurs : les **facteurs d’hygiène** évitent l’insatisfaction, tandis que les **facteurs de motivation** donnent réellement l’envie de s’investir. **Mayo**, enfin, a montré avec l’**effet Hawthorne** que les **relations sociales** et la **reconnaissance** motivent : des ouvrières observées et considérées travaillaient mieux, quelles que soient les conditions matérielles."
         },
         {
           "t": "p",
@@ -44,6 +27,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Un bon salaire évite l’insatisfaction (facteur d’**hygiène**) mais ne suffit pas à **motiver** : la reconnaissance, l’intérêt du travail et l’évolution (facteurs de **motivation**) sont décisifs."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Motivation",
+              "Ce qui pousse une personne à agir et à se dépasser"
+            ],
+            [
+              "Taylor (OST)",
+              "La motivation passe par le salaire"
+            ],
+            [
+              "Maslow",
+              "On est motivé par des besoins hiérarchisés (pyramide)"
+            ],
+            [
+              "Herzberg",
+              "Facteurs d’hygiène (évitent l’insatisfaction) ≠ facteurs de motivation (donnent l’envie)"
+            ],
+            [
+              "Mayo (effet Hawthorne)",
+              "Les relations sociales et la reconnaissance motivent"
+            ]
+          ]
         }
       ]
     },
@@ -85,29 +98,12 @@
           "c": "La **rémunération** est à la fois un coût pour l’entreprise, un revenu pour le salarié et un puissant outil de **motivation** et de **fidélisation**. Elle ne se limite pas au salaire de base."
         },
         {
-          "t": "table",
-          "head": [
-            "Composante",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Salaire fixe",
-              "Le salaire de base mensuel"
-            ],
-            [
-              "Part variable",
-              "Primes d’objectifs, commissions"
-            ],
-            [
-              "Périphériques",
-              "Participation, intéressement, avantages en nature"
-            ],
-            [
-              "Reconnaissance non monétaire",
-              "Évolution, autonomie, remerciements"
-            ]
-          ]
+          "t": "p",
+          "c": "La rémunération se compose de plusieurs éléments. Le **salaire fixe** est le salaire de base, versé chaque mois quels que soient les résultats. La **part variable** dépend de la performance : **primes d’objectifs** ou **commissions** sur les ventes."
+        },
+        {
+          "t": "p",
+          "c": "Les **périphériques de rémunération** s’y ajoutent : **participation** et **intéressement**, qui associent les salariés aux résultats de l’entreprise, et **avantages en nature** comme un véhicule ou un téléphone. Enfin, la **reconnaissance non monétaire** compte autant : perspectives d’**évolution**, **autonomie**, simples **remerciements**."
         },
         {
           "t": "p",
@@ -117,6 +113,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "La rémunération motive **si elle est perçue comme équitable**. La combiner avec des perspectives d’**évolution** (parcours) est bien plus efficace que le seul salaire."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Salaire fixe",
+              "Salaire de base mensuel"
+            ],
+            [
+              "Part variable",
+              "Primes d’objectifs, commissions liées à la performance"
+            ],
+            [
+              "Périphériques de rémunération",
+              "Participation, intéressement, avantages en nature"
+            ],
+            [
+              "Reconnaissance non monétaire",
+              "Évolution, autonomie, remerciements"
+            ],
+            [
+              "Équité",
+              "Rémunération jugée juste, en interne et face au marché"
+            ],
+            [
+              "Parcours professionnel",
+              "Évolution, promotions et mobilité du salarié dans l’organisation"
+            ]
+          ]
         }
       ]
     },
@@ -187,29 +217,12 @@
           "c": "Le **conflit** est une opposition entre des personnes ou des groupes. Il n’est pas forcément négatif : un conflit bien géré peut **révéler des problèmes** et faire progresser. Mal géré, il dégrade le climat et la performance."
         },
         {
-          "t": "table",
-          "head": [
-            "Type de conflit",
-            "Origine"
-          ],
-          "rows": [
-            [
-              "D’intérêts",
-              "Objectifs ou avantages incompatibles"
-            ],
-            [
-              "De valeurs",
-              "Visions ou principes opposés"
-            ],
-            [
-              "De personnes",
-              "Incompatibilités relationnelles"
-            ],
-            [
-              "De pouvoir",
-              "Lutte pour l’influence ou les ressources"
-            ]
-          ]
+          "t": "p",
+          "c": "On distingue quatre types de conflits selon leur origine. Le **conflit d’intérêts** naît d’objectifs ou d’avantages **incompatibles**, par exemple deux services qui se disputent le même budget. Le **conflit de valeurs** oppose des **visions** ou des **principes** différents sur ce qui est juste ou important."
+        },
+        {
+          "t": "p",
+          "c": "Le **conflit de personnes** vient d’**incompatibilités relationnelles** entre individus. Le **conflit de pouvoir**, enfin, est une **lutte pour l’influence** ou pour le contrôle des ressources. Identifier le type de conflit est la première étape pour choisir le bon mode de résolution."
         },
         {
           "t": "p",
@@ -224,6 +237,48 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Un conflit peut être **constructif** s’il est géré. Privilégier la **négociation/médiation** (gagnant-gagnant) au recours hiérarchique, qui règle vite mais laisse des rancœurs."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Conflit",
+              "Opposition entre des personnes ou des groupes"
+            ],
+            [
+              "Conflit d’intérêts",
+              "Objectifs ou avantages incompatibles"
+            ],
+            [
+              "Conflit de valeurs",
+              "Visions ou principes opposés"
+            ],
+            [
+              "Conflit de personnes",
+              "Incompatibilités relationnelles"
+            ],
+            [
+              "Conflit de pouvoir",
+              "Lutte pour l’influence ou les ressources"
+            ],
+            [
+              "Négociation",
+              "Les parties cherchent elles-mêmes un accord"
+            ],
+            [
+              "Médiation",
+              "Un tiers neutre aide les parties à dialoguer"
+            ],
+            [
+              "Arbitrage",
+              "Un tiers décide et impose la solution"
+            ]
+          ]
         }
       ]
     },
@@ -290,44 +345,12 @@
           "c": "La **communication** est l’ensemble des échanges d’informations au sein et autour de l’organisation. Bien communiquer est vital : cela mobilise les équipes, construit l’image et prévient les crises. On distingue plusieurs formes."
         },
         {
-          "t": "table",
-          "head": [
-            "Critère",
-            "Type",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Destinataire",
-              "Interne",
-              "Vers les salariés (note, intranet, réunion)"
-            ],
-            [
-              "Destinataire",
-              "Externe",
-              "Vers les clients, partenaires, public"
-            ],
-            [
-              "Objet",
-              "Commerciale",
-              "Vendre un produit (publicité)"
-            ],
-            [
-              "Objet",
-              "Institutionnelle",
-              "Valoriser l’image de l’organisation"
-            ],
-            [
-              "Cadre",
-              "Formelle",
-              "Officielle, écrite, hiérarchique"
-            ],
-            [
-              "Cadre",
-              "Informelle",
-              "Spontanée (« radio couloir »)"
-            ]
-          ]
+          "t": "p",
+          "c": "On classe les formes de communication selon trois critères. Selon le **destinataire**, la communication est **interne** quand elle s’adresse aux salariés, par une note, l’intranet ou une réunion, et **externe** quand elle vise les clients, les partenaires ou le grand public."
+        },
+        {
+          "t": "p",
+          "c": "Selon son **objet**, elle est **commerciale** quand elle cherche à vendre un produit, comme une publicité, et **institutionnelle** quand elle valorise l’image de l’organisation elle-même. Selon son **cadre**, enfin, elle est **formelle** quand elle est officielle, écrite et passe par la hiérarchie, et **informelle** quand elle est spontanée, comme la « radio couloir »."
         },
         {
           "t": "p",
@@ -337,6 +360,44 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Interne (salariés) ≠ externe (public) ; commerciale (vendre) ≠ institutionnelle (image). La **communication globale** vise la **cohérence** de tous les messages."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Communication interne",
+              "Vers les salariés (note, intranet, réunion)"
+            ],
+            [
+              "Communication externe",
+              "Vers les clients, partenaires et le public"
+            ],
+            [
+              "Communication commerciale",
+              "Vise à vendre un produit"
+            ],
+            [
+              "Communication institutionnelle",
+              "Vise à valoriser l’image de l’organisation"
+            ],
+            [
+              "Communication formelle",
+              "Officielle, écrite, hiérarchique"
+            ],
+            [
+              "Communication informelle",
+              "Spontanée (« radio couloir »)"
+            ],
+            [
+              "Communication globale",
+              "Cohérence de tous les messages de l’organisation"
+            ]
+          ]
         }
       ]
     },
@@ -435,33 +496,12 @@
           "c": "Dès qu’une organisation grandit, il faut **coordonner** le travail réparti entre les personnes et les services. **Mintzberg** a identifié plusieurs **mécanismes de coordination**."
         },
         {
-          "t": "table",
-          "head": [
-            "Mécanisme",
-            "Principe"
-          ],
-          "rows": [
-            [
-              "Ajustement mutuel",
-              "On se coordonne en communiquant directement (petites équipes)"
-            ],
-            [
-              "Supervision directe",
-              "Un chef donne les ordres et contrôle"
-            ],
-            [
-              "Standardisation des procédés",
-              "Des procédures écrites (mode opératoire)"
-            ],
-            [
-              "Standardisation des résultats",
-              "On fixe des objectifs, libre à chacun de les atteindre"
-            ],
-            [
-              "Standardisation des qualifications",
-              "On recrute des experts formés (hôpital)"
-            ]
-          ]
+          "t": "p",
+          "c": "Mintzberg décrit cinq mécanismes de coordination. Dans l’**ajustement mutuel**, les personnes se coordonnent en **communiquant directement** entre elles ; c’est le mode des petites équipes. Dans la **supervision directe**, un **chef donne les ordres** et contrôle leur exécution."
+        },
+        {
+          "t": "p",
+          "c": "Les trois autres reposent sur la **standardisation**. La **standardisation des procédés** fixe des **procédures écrites**, un mode opératoire à suivre. La **standardisation des résultats** fixe des **objectifs** et laisse chacun libre de la manière de les atteindre. La **standardisation des qualifications** consiste à **recruter des experts formés**, qui savent déjà comment agir : c’est le cas des médecins à l’hôpital."
         },
         {
           "t": "p",
@@ -471,6 +511,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Coordonner = faire travailler ensemble. Petites équipes → **ajustement mutuel** ; grandes organisations → **supervision** et **standardisation**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Coordination",
+              "Organisation du travail réparti entre les personnes et les services"
+            ],
+            [
+              "Ajustement mutuel",
+              "Coordination par communication directe (petites équipes)"
+            ],
+            [
+              "Supervision directe",
+              "Un chef donne les ordres et contrôle"
+            ],
+            [
+              "Standardisation des procédés",
+              "Procédures écrites (mode opératoire)"
+            ],
+            [
+              "Standardisation des résultats",
+              "Objectifs fixés, liberté sur les moyens"
+            ],
+            [
+              "Standardisation des qualifications",
+              "Recrutement d’experts formés (hôpital)"
+            ]
+          ]
         }
       ]
     },
@@ -507,29 +581,12 @@
           "c": "Le **climat social** est l’ambiance générale des relations dans l’entreprise. Il ne se « ressent » pas seulement : il se **mesure** avec des **indicateurs** objectifs, que le manager surveille comme un tableau de bord."
         },
         {
-          "t": "table",
-          "head": [
-            "Indicateur",
-            "Ce qu’il révèle"
-          ],
-          "rows": [
-            [
-              "Taux d’absentéisme",
-              "Démotivation, mauvaises conditions"
-            ],
-            [
-              "Taux de turnover (rotation)",
-              "Départs fréquents = malaise, perte de talents"
-            ],
-            [
-              "Nombre de conflits / grèves",
-              "Tensions sociales"
-            ],
-            [
-              "Taux d’accidents du travail",
-              "Problèmes de sécurité/conditions"
-            ]
-          ]
+          "t": "p",
+          "c": "Quatre indicateurs servent à mesurer le climat social. Un **taux d’absentéisme** élevé révèle souvent de la **démotivation** ou de **mauvaises conditions de travail**. Un **taux de turnover**, ou taux de rotation du personnel, élevé signifie que les salariés partent souvent : c’est le signe d’un **malaise** et d’une **perte de talents**."
+        },
+        {
+          "t": "p",
+          "c": "Le **nombre de conflits et de grèves** traduit l’intensité des **tensions sociales**. Enfin, le **taux d’accidents du travail** révèle des **problèmes de sécurité** ou de conditions de travail. Aucun indicateur ne suffit seul : c’est leur évolution conjointe qui permet de juger le climat."
         },
         {
           "t": "p",
@@ -548,6 +605,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Un climat social se **pilote** avec des indicateurs (absentéisme, turnover). Le **coût du travail** (brut + charges patronales) est bien supérieur au net versé."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Climat social",
+              "Ambiance générale des relations dans l’entreprise"
+            ],
+            [
+              "Taux d’absentéisme",
+              "Révèle démotivation ou mauvaises conditions"
+            ],
+            [
+              "Taux de turnover (rotation)",
+              "Départs fréquents : malaise, perte de talents"
+            ],
+            [
+              "Conflits / grèves",
+              "Révèlent des tensions sociales"
+            ],
+            [
+              "Taux d’accidents du travail",
+              "Révèle des problèmes de sécurité ou de conditions"
+            ],
+            [
+              "Coût du travail",
+              "Salaire brut + cotisations patronales, bien supérieur au salaire net"
+            ]
+          ]
         }
       ]
     },

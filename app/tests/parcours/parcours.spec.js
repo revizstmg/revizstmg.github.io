@@ -32,20 +32,30 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
 
   // Onglet Exercices, puis un QCM en mode entraînement.
   await page.getByRole('button', { name: /Exercices/ }).click()
-  await page.getByRole('button', { name: /QCM — les notions du chapitre/ }).click()
+  await page.getByRole('button', { name: /QCM — (les )?notions/ }).first().click()
   await page.getByRole('button', { name: /Entraînement/ }).click()
   await expect(page.locator('main')).toContainText(/Question 1 \//)
 
   const xpAvant = (await etat(page)).xp || 0
-  for (let i = 0; i < 40; i++) {
-    const choix = page.getByRole('button', { name: /^[A-D] /, disabled: false })
-    const suite = page.getByRole('button', { name: /suivant|suivante|résultat|score|terminer|continuer/i })
-    if (await suite.count()) await suite.first().click()
-    else if (await choix.count()) await choix.first().click()
-    else break
+  // On répond toujours la première proposition : les choix étant mélangés, une
+  // partie peut finir sans bonne réponse, donc sans XP. On rejoue alors.
+  for (let partie = 0; partie < 5; partie++) {
+    for (let i = 0; i < 40; i++) {
+      const choix = page.getByRole('button', { name: /^[A-D] /, disabled: false })
+      const suite = page.getByRole('button', { name: /suivant|suivante|résultat|score|terminer|continuer/i })
+      if (await suite.count()) await suite.first().click()
+      else if (await choix.count()) await choix.first().click()
+      else break
+    }
+    // Fin de partie : score affiché.
+    await expect(page.locator('main')).toContainText(/%|score|bravo|résultat/i)
+    await page.waitForTimeout(300)
+    if (((await etat(page)).xp || 0) > xpAvant) break
+    await page.getByRole('button', { name: 'Rejouer' }).click()
+    const entrainement = page.getByRole('button', { name: /Entraînement/ })
+    if (await entrainement.count()) await entrainement.click()
   }
-  // Fin de partie : score affiché et XP gagnée.
-  await expect(page.locator('main')).toContainText(/%|score|bravo|résultat/i)
+  // XP gagnée.
   await expect.poll(async () => (await etat(page)).xp || 0).toBeGreaterThan(xpAvant)
   const ch = (await etat(page)).chapters?.['gf-t1']
   expect(ch?.games && Object.keys(ch.games).length).toBeGreaterThan(0)

@@ -18,38 +18,42 @@
           "h": "Les temps : prétérit ou present perfect",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Temps",
-                "Emploi",
-                "Exemple"
-              ],
-              "rows": [
-                [
-                  "Present simple",
-                  "Habitude, vérité générale (+ -s à la 3e pers.)",
-                  "She works in Paris"
-                ],
-                [
-                  "Present continuous (be + -ing)",
-                  "Action en cours",
-                  "They are working now"
-                ],
-                [
-                  "Preterit",
-                  "Action passée datée et terminée",
-                  "We went to London in 2019"
-                ],
-                [
-                  "Present perfect (have/has + PP)",
-                  "Lien passé-présent (for, since, ever…)",
-                  "I have visited London"
-                ]
-              ]
+              "t": "p",
+              "c": "Le **present simple** exprime une **habitude** ou une **vérité générale**, avec un **-s à la troisième personne** : *She works in Paris.* Le **present continuous**, formé avec **be + -ing**, exprime une **action en cours** : *They are working now.*"
+            },
+            {
+              "t": "p",
+              "c": "Le **prétérit** exprime une **action passée, datée et terminée** : *We went to London in 2019.* Le **present perfect**, formé avec **have / has + participe passé**, exprime un **lien entre le passé et le présent**, souvent avec *for*, *since* ou *ever* : *I have visited London.*"
             },
             {
               "t": "tip",
               "c": "Une **date précise** (in 2019, yesterday) impose le **preterit** ; *for/since/ever/already/yet* appellent le **present perfect**."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Present simple",
+                  "Habitude, vérité générale (+ -s à la 3ᵉ personne)"
+                ],
+                [
+                  "Present continuous",
+                  "be + -ing : action en cours"
+                ],
+                [
+                  "Preterit",
+                  "Action passée datée et terminée"
+                ],
+                [
+                  "Present perfect",
+                  "have / has + participe passé : lien passé-présent (for, since, ever)"
+                ]
+              ]
             }
           ]
         },
@@ -179,25 +183,42 @@
           "h": "Ser / Estar et les passés",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "SER",
-                "ESTAR"
-              ],
-              "rows": [
-                [
-                  "Caractéristique permanente, identité, profession, heure",
-                  "État passager, lieu, situation"
-                ],
-                [
-                  "Soy estudiante · Es alto",
-                  "Estoy cansado · Madrid está en España"
-                ]
-              ]
+              "t": "p",
+              "c": "**Ser** exprime une **caractéristique permanente**, l’**identité**, la **profession** ou l’**heure** : *Soy estudiante*, *Es alto*. **Estar** exprime un **état passager**, un **lieu** ou une **situation** : *Estoy cansado*, *Madrid está en España*."
             },
             {
               "t": "p",
               "c": "**Indefinido** = action passée **datée** (« Ayer comí ») ; **imperfecto** = **description/habitude** (« Cuando era niño, jugaba ») ; **pretérito perfecto** (he/has/ha + participe) = passé récent lié au présent (« Hoy he comido »)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Ser",
+                  "Caractéristique permanente, identité, profession, heure (Soy estudiante)"
+                ],
+                [
+                  "Estar",
+                  "État passager, lieu, situation (Estoy cansado)"
+                ],
+                [
+                  "Indefinido",
+                  "Action passée datée (Ayer comí)"
+                ],
+                [
+                  "Imperfecto",
+                  "Description, habitude (Cuando era niño, jugaba)"
+                ],
+                [
+                  "Pretérito perfecto",
+                  "Passé récent lié au présent (Hoy he comido)"
+                ]
+              ]
             }
           ]
         },

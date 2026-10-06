@@ -55,34 +55,12 @@
               "c": "Elle se compose de plusieurs éléments :"
             },
             {
-              "t": "table",
-              "head": [
-                "Élément",
-                "Définition",
-                "Exemple"
-              ],
-              "rows": [
-                [
-                  "Traits de caractère",
-                  "Des dispositions durables",
-                  "Être calme, sociable, rigoureux, anxieux"
-                ],
-                [
-                  "Tempérament",
-                  "La part liée au « naturel », à la sensibilité",
-                  "Être plutôt réservé ou plutôt expansif"
-                ],
-                [
-                  "Valeurs",
-                  "Ce qui compte pour la personne, ses priorités",
-                  "L’honnêteté, la réussite, la solidarité, la sécurité"
-                ],
-                [
-                  "Besoins",
-                  "Ce que la personne cherche à satisfaire",
-                  "Être reconnu, être autonome, appartenir à un groupe"
-                ]
-              ]
+              "t": "p",
+              "c": "Les **traits de caractère** sont des **dispositions durables** de la personne : être calme, sociable, rigoureux ou anxieux. Le **tempérament** correspond à la part liée au « **naturel** » et à la **sensibilité** : être plutôt réservé ou plutôt expansif."
+            },
+            {
+              "t": "p",
+              "c": "Les **valeurs** sont **ce qui compte** pour la personne, ses **priorités** : l’honnêteté, la réussite, la solidarité, la sécurité. Les **besoins**, enfin, sont **ce que la personne cherche à satisfaire** : être reconnue, être autonome, appartenir à un groupe."
             },
             {
               "t": "p",
@@ -96,6 +74,40 @@
               "t": "example",
               "h": "Personnalité et poste de travail",
               "c": "Pour un poste d’accueil, un manager recherche une personnalité **sociable, patiente et à l’écoute**. Pour un poste de contrôle qualité, il privilégie la **rigueur** et le sens du détail. \n→ Le même individu très sociable mais peu minutieux sera excellent à l’accueil et en difficulté au contrôle : il n’y a pas de « bonne » ou de « mauvaise » personnalité en soi, mais une adéquation avec le poste."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Personnalité",
+                  "Ensemble des traits de caractère, du tempérament, des valeurs et des besoins"
+                ],
+                [
+                  "Traits de caractère",
+                  "Dispositions durables (calme, sociable, rigoureux)"
+                ],
+                [
+                  "Tempérament",
+                  "Part liée au naturel, à la sensibilité"
+                ],
+                [
+                  "Valeurs",
+                  "Ce qui compte pour la personne, ses priorités"
+                ],
+                [
+                  "Besoins",
+                  "Ce que la personne cherche à satisfaire"
+                ],
+                [
+                  "Socialisation primaire / secondaire",
+                  "Famille et école dans l’enfance / travail et groupes à l’âge adulte"
+                ]
+              ]
             }
           ]
         },
@@ -137,33 +149,12 @@
               "c": "Parce qu’elle est subjective, la perception produit des **biais** : des **erreurs de jugement** systématiques dont il faut se méfier, surtout en management (recrutement, évaluation, relation client)."
             },
             {
-              "t": "table",
-              "head": [
-                "Biais",
-                "Mécanisme"
-              ],
-              "rows": [
-                [
-                  "Stéréotype",
-                  "Attribuer à une personne les caractéristiques supposées de son groupe (âge, origine, sexe…)"
-                ],
-                [
-                  "Effet de halo",
-                  "Se fier à un seul trait (une bonne présentation) pour juger toute la personne"
-                ],
-                [
-                  "Première impression",
-                  "Se forger un avis dès les premières secondes et ne plus en changer"
-                ],
-                [
-                  "Projection",
-                  "Prêter à l’autre ses propres pensées ou intentions"
-                ],
-                [
-                  "Effet de contexte",
-                  "Juger différemment selon l’ambiance ou l’ordre des informations"
-                ]
-              ]
+              "t": "p",
+              "c": "Le **stéréotype** consiste à **attribuer à une personne les caractéristiques supposées de son groupe** : son âge, son origine, son sexe. L’**effet de halo** consiste à **se fier à un seul trait**, par exemple une bonne présentation, pour juger toute la personne. La **première impression** fige un avis dès les premières secondes, sans plus le remettre en cause."
+            },
+            {
+              "t": "p",
+              "c": "La **projection** consiste à **prêter à l’autre ses propres pensées ou intentions**. L’**effet de contexte**, enfin, conduit à **juger différemment selon l’ambiance** ou selon l’ordre dans lequel arrivent les informations."
             },
             {
               "t": "p",
@@ -172,6 +163,44 @@
             {
               "t": "warning",
               "c": "Un stéréotype n’est pas neutre : « les jeunes ne sont pas fiables », « les seniors ne savent pas utiliser le numérique »… sont des jugements **faux et discriminatoires** qui privent l’organisation de talents et sont **interdits par la loi**."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Biais de perception",
+                  "Erreur de jugement systématique"
+                ],
+                [
+                  "Stéréotype",
+                  "Attribuer à une personne les caractéristiques supposées de son groupe"
+                ],
+                [
+                  "Effet de halo",
+                  "Juger toute la personne à partir d’un seul trait"
+                ],
+                [
+                  "Première impression",
+                  "Se forger un avis en quelques secondes et ne plus en changer"
+                ],
+                [
+                  "Projection",
+                  "Prêter à l’autre ses propres pensées ou intentions"
+                ],
+                [
+                  "Effet de contexte",
+                  "Juger différemment selon l’ambiance ou l’ordre des informations"
+                ],
+                [
+                  "Discrimination",
+                  "Traitement défavorable fondé sur un critère illégitime"
+                ]
+              ]
             }
           ]
         },
@@ -216,29 +245,8 @@
               "c": "Le **comportement** est l’**action observable** qui découle de l’attitude (« je m’implique dans la tâche, j’arrive en avance »). C’est ce que l’on peut réellement **constater**."
             },
             {
-              "t": "table",
-              "head": [
-                "",
-                "Attitude",
-                "Comportement"
-              ],
-              "rows": [
-                [
-                  "Nature",
-                  "Intérieure, cachée",
-                  "Extérieure, observable"
-                ],
-                [
-                  "Exemple",
-                  "Aimer le travail en équipe",
-                  "Proposer son aide à un collègue"
-                ],
-                [
-                  "Se mesure par",
-                  "Ce que la personne ressent / pense",
-                  "Ce que la personne fait"
-                ]
-              ]
+              "t": "p",
+              "c": "L’**attitude** est **intérieure** et **cachée** : c’est une disposition d’esprit, comme aimer le travail en équipe, qui se mesure par **ce que la personne ressent ou pense**. Le **comportement** est **extérieur** et **observable** : c’est un acte, comme proposer son aide à un collègue, qui se mesure par **ce que la personne fait**."
             },
             {
               "t": "p",
@@ -247,6 +255,24 @@
             {
               "t": "warning",
               "c": "Erreur classique en devoir : écrire « attitude » à la place de « comportement ». Retiens : **attitude = intérieur** (opinion, intention) ; **comportement = extérieur** (action visible)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Attitude",
+                  "Disposition intérieure, cachée (aimer le travail en équipe)"
+                ],
+                [
+                  "Comportement",
+                  "Action extérieure, observable (proposer son aide)"
+                ]
+              ]
             }
           ]
         },
@@ -258,24 +284,12 @@
               "c": "Un individu ne reste pas passif : dès qu’il **agit, communique et interagit** dans l’organisation, il en devient un **acteur** — une personne qui **influence** le fonctionnement de l’organisation autant qu’elle en est influencée. On passe ainsi « de l’individu à l’acteur »."
             },
             {
-              "t": "table",
-              "head": [
-                "Notion",
-                "Définition",
-                "Exemple"
-              ],
-              "rows": [
-                [
-                  "Statut",
-                  "La **position** occupée dans l’organisation (fonction, place hiérarchique, reconnaissance)",
-                  "Chef de rayon, comptable, apprenti, délégué du personnel"
-                ],
-                [
-                  "Rôle",
-                  "L’ensemble des **comportements attendus** de celui qui occupe ce statut",
-                  "On attend d’un chef de rayon qu’il anime, organise et contrôle son équipe"
-                ]
-              ]
+              "t": "p",
+              "c": "Le **statut** est la **position** qu’occupe une personne dans l’organisation : sa fonction, sa place hiérarchique, la reconnaissance qui y est attachée. Chef de rayon, comptable, apprenti ou délégué du personnel sont des statuts."
+            },
+            {
+              "t": "p",
+              "c": "Le **rôle** est l’**ensemble des comportements attendus** de celui qui occupe ce statut. On attend ainsi d’un chef de rayon qu’il anime, organise et contrôle son équipe."
             },
             {
               "t": "p",
@@ -288,6 +302,28 @@
             {
               "t": "tip",
               "c": "L’individu devient acteur par les **compétences** qu’il mobilise et par les **relations** (formelles et informelles) qu’il noue. La performance de l’organisation dépend donc largement de la **qualité des relations humaines**, pas seulement des procédures écrites."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Acteur",
+                  "Personne qui influence l’organisation autant qu’elle en est influencée"
+                ],
+                [
+                  "Statut",
+                  "Position occupée dans l’organisation (chef de rayon, comptable)"
+                ],
+                [
+                  "Rôle",
+                  "Comportements attendus de celui qui occupe un statut"
+                ]
+              ]
             }
           ]
         },
@@ -299,45 +335,12 @@
               "c": "La **communication** est l’**échange d’informations** entre des personnes. C’est elle qui fait « tenir » le collectif : sans communication, pas de coordination ni de relations. La **communication interpersonnelle** (entre deux individus) obéit à un **schéma** que l’on doit savoir décrire et repérer sur un cas."
             },
             {
-              "t": "table",
-              "head": [
-                "Élément",
-                "Rôle"
-              ],
-              "rows": [
-                [
-                  "Émetteur",
-                  "Celui qui **envoie** le message (l’expéditeur)"
-                ],
-                [
-                  "Récepteur",
-                  "Celui qui **reçoit** le message (le destinataire)"
-                ],
-                [
-                  "Message",
-                  "L’**information** transmise (le contenu)"
-                ],
-                [
-                  "Code",
-                  "Le système de signes commun : langue, symboles, jargon"
-                ],
-                [
-                  "Canal",
-                  "Le **support** : voix, téléphone, mail, affichage, visioconférence"
-                ],
-                [
-                  "Feedback",
-                  "La **rétroaction** : la réponse du récepteur, qui devient à son tour émetteur"
-                ],
-                [
-                  "Référent",
-                  "Le **sujet**, le contexte de l’échange"
-                ],
-                [
-                  "Bruit",
-                  "Tout ce qui **gêne** ou déforme le message (bruit réel, stress, malentendu)"
-                ]
-              ]
+              "t": "p",
+              "c": "Le schéma de la communication compte huit éléments. L’**émetteur** est celui qui **envoie** le message, et le **récepteur** celui qui le **reçoit**. Le **message** est l’**information transmise**. Le **code** est le **système de signes** commun aux deux : une langue, des symboles, un jargon. Le **canal** est le **support** du message : la voix, le téléphone, un mail, un affichage, une visioconférence."
+            },
+            {
+              "t": "p",
+              "c": "Le **feedback**, ou **rétroaction**, est la **réponse du récepteur**, qui devient à son tour émetteur. Le **référent** est le **sujet** et le **contexte** de l’échange. Le **bruit**, enfin, désigne **tout ce qui gêne ou déforme** le message : un bruit réel, le stress, un malentendu."
             },
             {
               "t": "p",
@@ -346,6 +349,48 @@
             {
               "t": "warning",
               "c": "Communiquer ≠ informer. **Informer**, c’est envoyer un message dans un seul sens (une note de service). **Communiquer**, c’est un **échange** avec du feedback : le récepteur réagit et l’émetteur ajuste."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Émetteur",
+                  "Celui qui envoie le message"
+                ],
+                [
+                  "Récepteur",
+                  "Celui qui reçoit le message"
+                ],
+                [
+                  "Message",
+                  "Information transmise"
+                ],
+                [
+                  "Code",
+                  "Système de signes commun (langue, symboles, jargon)"
+                ],
+                [
+                  "Canal",
+                  "Support du message (voix, téléphone, mail)"
+                ],
+                [
+                  "Feedback",
+                  "Rétroaction : réponse du récepteur"
+                ],
+                [
+                  "Référent",
+                  "Sujet, contexte de l’échange"
+                ],
+                [
+                  "Bruit",
+                  "Tout ce qui gêne ou déforme le message"
+                ]
+              ]
             }
           ]
         },
@@ -357,29 +402,8 @@
               "c": "Quand on communique, on utilise **trois registres en même temps**, et le message perçu dépend surtout de leur **cohérence**."
             },
             {
-              "t": "table",
-              "head": [
-                "Registre",
-                "De quoi s’agit-il ?",
-                "Exemples"
-              ],
-              "rows": [
-                [
-                  "Verbal",
-                  "Les **mots**, ce que l’on dit ou écrit",
-                  "Le vocabulaire, les phrases, le message écrit"
-                ],
-                [
-                  "Non verbal",
-                  "Le **corps**",
-                  "Gestes, regard, posture, expressions du visage, tenue, distance"
-                ],
-                [
-                  "Para-verbal",
-                  "La **voix**",
-                  "Ton, débit, volume, intonation, silences"
-                ]
-              ]
+              "t": "p",
+              "c": "Le registre **verbal** concerne les **mots** : ce que l’on dit ou écrit, le vocabulaire, les phrases. Le registre **non verbal** concerne le **corps** : les gestes, le regard, la posture, les expressions du visage, la tenue, la distance. Le registre **para-verbal** concerne la **voix** : le ton, le débit, le volume, l’intonation et les silences."
             },
             {
               "t": "p",
@@ -393,6 +417,32 @@
               "t": "example",
               "h": "Quand le non-verbal contredit les mots",
               "c": "Un manager dit « je vous fais totalement confiance » (verbal), mais regarde sa montre, croise les bras (non-verbal) et parle d’un ton sec (para-verbal). \n→ Le récepteur retient surtout le **non-verbal** et le **para-verbal** : il perçoit de la méfiance. Le message réellement reçu est l’inverse du message voulu."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Verbal",
+                  "Les mots, ce que l’on dit ou écrit"
+                ],
+                [
+                  "Non verbal",
+                  "Le corps : gestes, regard, posture, distance"
+                ],
+                [
+                  "Para-verbal",
+                  "La voix : ton, débit, volume, intonation, silences"
+                ],
+                [
+                  "Proxémie",
+                  "Distance physique entre deux personnes qui communiquent"
+                ]
+              ]
             }
           ]
         },
@@ -430,29 +480,12 @@
               "c": "Dans une organisation, la communication circule de deux façons **complémentaires** :"
             },
             {
-              "t": "table",
-              "head": [
-                "Communication formelle",
-                "Communication informelle"
-              ],
-              "rows": [
-                [
-                  "Officielle, **organisée** par l’entreprise",
-                  "Spontanée, **non prévue**"
-                ],
-                [
-                  "Réunions, notes de service, mails pros, affichage",
-                  "Discussions à la pause, messages entre collègues, « bruits de couloir »"
-                ],
-                [
-                  "Suit les **canaux hiérarchiques**",
-                  "Suit les **affinités** et les réseaux personnels"
-                ],
-                [
-                  "Assure la **coordination** et la traçabilité",
-                  "Crée du **lien**, fait circuler vite l’information, renforce la cohésion"
-                ]
-              ]
+              "t": "p",
+              "c": "La **communication formelle** est **officielle** et **organisée** par l’entreprise : réunions, notes de service, mails professionnels, affichage. Elle **suit les canaux hiérarchiques** et assure la **coordination** et la **traçabilité** des décisions."
+            },
+            {
+              "t": "p",
+              "c": "La **communication informelle** est **spontanée** et **non prévue** : discussions à la pause, messages entre collègues, « bruits de couloir ». Elle **suit les affinités** et les réseaux personnels ; elle **crée du lien**, fait **circuler vite l’information** et renforce la **cohésion**."
             },
             {
               "t": "p",
@@ -469,6 +502,32 @@
             {
               "t": "warning",
               "c": "La communication informelle n’est **pas inutile** : elle fait circuler énormément d’informations et soude le groupe. Mais mal maîtrisée, elle diffuse aussi des **rumeurs** qui déforment les messages : le manager a intérêt à bien informer pour éviter que la rumeur ne remplace l’information officielle."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Communication formelle",
+                  "Officielle, organisée, suit la hiérarchie ; assure coordination et traçabilité"
+                ],
+                [
+                  "Communication informelle",
+                  "Spontanée, suit les affinités ; crée du lien, fait circuler vite l’information"
+                ],
+                [
+                  "Communication descendante / ascendante",
+                  "De la direction vers les salariés / des salariés vers la direction"
+                ],
+                [
+                  "Communication transversale",
+                  "Entre services de même niveau"
+                ]
+              ]
             }
           ]
         },
@@ -480,25 +539,12 @@
               "c": "L’**activité de travail** est l’ensemble des **tâches** réalisées par un individu pour l’organisation, en mobilisant ses compétences. On distingue deux niveaux essentiels :"
             },
             {
-              "t": "table",
-              "head": [
-                "Travail prescrit",
-                "Travail réel"
-              ],
-              "rows": [
-                [
-                  "Ce qui est **demandé** : la consigne, la procédure officielle, la fiche de poste",
-                  "Ce que la personne **fait vraiment** pour atteindre le résultat"
-                ],
-                [
-                  "Défini à l’avance par l’organisation",
-                  "S’adapte aux imprévus, aux clients, aux pannes"
-                ],
-                [
-                  "« Ce qu’il faudrait faire »",
-                  "« Ce qu’on fait réellement »"
-                ]
-              ]
+              "t": "p",
+              "c": "Le **travail prescrit** est **ce qui est demandé** : la consigne, la procédure officielle, la fiche de poste. Il est **défini à l’avance** par l’organisation et décrit « **ce qu’il faudrait faire** »."
+            },
+            {
+              "t": "p",
+              "c": "Le **travail réel** est **ce que la personne fait vraiment** pour atteindre le résultat. Il **s’adapte aux imprévus**, aux clients, aux pannes : c’est « **ce qu’on fait réellement** »."
             },
             {
               "t": "p",
@@ -508,6 +554,32 @@
               "t": "example",
               "h": "L’écart prescrit / réel",
               "c": "La procédure prescrit à un vendeur de suivre un script de vente précis. \n→ Face à un client pressé, le vendeur **raccourcit** le script et va à l’essentiel ; face à un client hésitant, il **développe** et rassure. \nCe **travail réel**, adapté à chaque situation, fait la différence — et n’apparaît nulle part dans la fiche de poste."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Activité de travail",
+                  "Ensemble des tâches réalisées en mobilisant ses compétences"
+                ],
+                [
+                  "Travail prescrit",
+                  "Ce qui est demandé (consigne, procédure, fiche de poste)"
+                ],
+                [
+                  "Travail réel",
+                  "Ce que la personne fait vraiment, en s’adaptant aux imprévus"
+                ],
+                [
+                  "Écart prescrit / réel",
+                  "Révèle l’expérience et les compétences du salarié"
+                ]
+              ]
             }
           ]
         },
@@ -523,29 +595,12 @@
               "c": "On la décompose classiquement en **trois savoirs** :"
             },
             {
-              "t": "table",
-              "head": [
-                "Composante",
-                "Signification",
-                "Exemple (un vendeur)"
-              ],
-              "rows": [
-                [
-                  "**Savoirs**",
-                  "Les **connaissances** théoriques",
-                  "Connaître les produits, les prix, la réglementation"
-                ],
-                [
-                  "**Savoir-faire**",
-                  "La **pratique**, les gestes techniques, la méthode",
-                  "Utiliser le logiciel de caisse, présenter un produit, encaisser"
-                ],
-                [
-                  "**Savoir-être**",
-                  "Le **comportement**, les attitudes relationnelles",
-                  "Être souriant, patient, à l’écoute, ponctuel"
-                ]
-              ]
+              "t": "p",
+              "c": "Prenons l’exemple d’un vendeur. Ses **savoirs** sont ses **connaissances théoriques** : il connaît les produits, les prix et la réglementation. Ses **savoir-faire** relèvent de la **pratique**, des gestes techniques et de la méthode : il sait utiliser le logiciel de caisse, présenter un produit, encaisser."
+            },
+            {
+              "t": "p",
+              "c": "Ses **savoir-être**, enfin, désignent son **comportement** et ses **attitudes relationnelles** : il est souriant, patient, à l’écoute et ponctuel."
             },
             {
               "t": "p",
@@ -558,6 +613,36 @@
             {
               "t": "warning",
               "c": "Une compétence n’est pas une simple connaissance : **connaître** le code de la route (savoir) ne rend pas **capable de conduire** en ville (savoir-faire + savoir-être). C’est la **mise en action** qui fait la compétence."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Compétence",
+                  "Combinaison de savoirs, savoir-faire et savoir-être"
+                ],
+                [
+                  "Savoirs",
+                  "Connaissances théoriques"
+                ],
+                [
+                  "Savoir-faire",
+                  "Pratique, gestes techniques, méthode"
+                ],
+                [
+                  "Savoir-être",
+                  "Comportement, attitudes relationnelles"
+                ],
+                [
+                  "Potentiel",
+                  "Compétences qu’un individu pourrait développer"
+                ]
+              ]
             }
           ]
         },
@@ -633,25 +718,8 @@
               "c": "La **rémunération** se compose de plusieurs éléments :"
             },
             {
-              "t": "table",
-              "head": [
-                "Élément",
-                "Description"
-              ],
-              "rows": [
-                [
-                  "Salaire de base",
-                  "La partie **fixe**, prévue au contrat (souvent liée à la qualification)"
-                ],
-                [
-                  "Primes / part variable",
-                  "Liées à la **performance**, aux résultats, à l’ancienneté"
-                ],
-                [
-                  "Périphériques",
-                  "Mutuelle, tickets restaurant, **intéressement**, participation, avantages en nature"
-                ]
-              ]
+              "t": "p",
+              "c": "La rémunération comprend d’abord le **salaire de base**, la partie **fixe** prévue au contrat et souvent liée à la qualification. S’y ajoutent les **primes**, ou **part variable**, liées à la **performance**, aux résultats ou à l’ancienneté. Viennent enfin les **périphériques** : la mutuelle, les tickets restaurant, l’**intéressement**, la **participation** et les **avantages en nature**."
             },
             {
               "t": "p",
@@ -665,6 +733,32 @@
               "t": "example",
               "h": "Rétribution et équité",
               "c": "Deux salariés font le même travail avec les mêmes résultats, mais l’un est mieux payé sans raison apparente. \n→ Le second ressent un **sentiment d’injustice** (iniquité) : sa motivation baisse, même si son salaire n’a pas changé. \nLa **perception d’équité** compte parfois autant que le montant lui-même."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Salaire de base",
+                  "Partie fixe prévue au contrat"
+                ],
+                [
+                  "Primes / part variable",
+                  "Liées à la performance, aux résultats, à l’ancienneté"
+                ],
+                [
+                  "Périphériques",
+                  "Mutuelle, tickets restaurant, intéressement, participation, avantages en nature"
+                ],
+                [
+                  "Rétribution globale",
+                  "Rémunération + éléments non financiers (reconnaissance, carrière, formation)"
+                ]
+              ]
             }
           ]
         },
@@ -676,25 +770,12 @@
               "c": "C’est la **deuxième grande question** du thème. L’activité humaine peut être vue de deux façons opposées… qui sont en réalité **complémentaires**."
             },
             {
-              "t": "table",
-              "head": [
-                "Le travail vu comme une CHARGE",
-                "Le travail vu comme une RESSOURCE"
-              ],
-              "rows": [
-                [
-                  "Une **charge de personnel** à payer (coût du travail)",
-                  "Un **capital humain**, source de valeur et de performance"
-                ],
-                [
-                  "Vision **comptable**, à court terme",
-                  "Vision **stratégique**, à long terme"
-                ],
-                [
-                  "On cherche à **réduire** le coût",
-                  "On cherche à **développer** et à fidéliser"
-                ]
-              ]
+              "t": "p",
+              "c": "Vu comme une **charge**, le travail est une **charge de personnel** à payer, c’est-à-dire un **coût du travail**. C’est une vision **comptable**, à **court terme**, dans laquelle on cherche à **réduire** ce coût."
+            },
+            {
+              "t": "p",
+              "c": "Vu comme une **ressource**, le travail est un **capital humain**, source de **valeur** et de **performance**. C’est une vision **stratégique**, à **long terme**, dans laquelle on cherche à **développer** les compétences et à **fidéliser** les salariés."
             },
             {
               "t": "p",
@@ -708,6 +789,28 @@
               "t": "example",
               "h": "Charge ou investissement ?",
               "c": "Une entreprise dépense 3 000 € pour former un salarié à un nouveau logiciel. \n→ **À court terme**, c’est une **charge** (coût de la formation + temps non travaillé). \n→ **À long terme**, c’est un **investissement** : le salarié est plus efficace, fait moins d’erreurs, forme ses collègues et reste dans l’entreprise. \nConsidérer l’humain comme une simple charge à réduire est souvent **contre-productif**."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Charge de personnel",
+                  "Le travail comme coût à payer (vision comptable, court terme)"
+                ],
+                [
+                  "Capital humain",
+                  "Le travail comme source de valeur (vision stratégique, long terme)"
+                ],
+                [
+                  "Coût du travail",
+                  "Salaire brut + cotisations sociales patronales"
+                ]
+              ]
             }
           ]
         },
@@ -723,39 +826,12 @@
               "c": "**Abraham Maslow** classe les besoins humains dans une **pyramide** : on ne cherche à satisfaire un besoin **supérieur** qu’une fois les besoins **inférieurs** globalement comblés."
             },
             {
-              "t": "table",
-              "head": [
-                "Niveau (de la base au sommet)",
-                "Besoin",
-                "Au travail"
-              ],
-              "rows": [
-                [
-                  "1. Physiologiques",
-                  "Manger, dormir, vivre",
-                  "Salaire suffisant, pauses, cantine"
-                ],
-                [
-                  "2. Sécurité",
-                  "Se protéger",
-                  "CDI, sécurité de l’emploi, conditions sûres"
-                ],
-                [
-                  "3. Appartenance",
-                  "Faire partie d’un groupe",
-                  "Bonne ambiance, esprit d’équipe, intégration"
-                ],
-                [
-                  "4. Estime",
-                  "Être reconnu, respecté",
-                  "Reconnaissance, responsabilités, statut, titres"
-                ],
-                [
-                  "5. Accomplissement",
-                  "Se réaliser, se dépasser",
-                  "Autonomie, projets, développement personnel"
-                ]
-              ]
+              "t": "p",
+              "c": "À la base de la pyramide se trouvent les **besoins physiologiques** : manger, dormir, vivre. Au travail, ils correspondent à un **salaire suffisant**, à des **pauses**, à une cantine. Viennent ensuite les **besoins de sécurité** : se protéger, ce qui passe par un **CDI**, la **sécurité de l’emploi** et des conditions de travail sûres."
+            },
+            {
+              "t": "p",
+              "c": "Au troisième niveau, les **besoins d’appartenance** poussent à faire partie d’un groupe : une **bonne ambiance**, l’**esprit d’équipe**, une bonne intégration. Au quatrième, les **besoins d’estime** poussent à être reconnu et respecté : **reconnaissance**, **responsabilités**, statut. Au sommet, les **besoins d’accomplissement** poussent à se réaliser et à se dépasser : **autonomie**, **projets**, développement personnel."
             },
             {
               "t": "p",
@@ -775,6 +851,40 @@
             {
               "t": "warning",
               "c": "Conséquence de Herzberg à bien comprendre : **augmenter le salaire** supprime l’insatisfaction mais **ne motive pas durablement**. La vraie motivation vient surtout de l’**intérêt du travail** et de la **reconnaissance**."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Pyramide de Maslow",
+                  "Hiérarchie des besoins : on satisfait un besoin supérieur une fois les inférieurs comblés"
+                ],
+                [
+                  "Besoins physiologiques",
+                  "Manger, dormir (salaire suffisant, pauses)"
+                ],
+                [
+                  "Besoins de sécurité",
+                  "Se protéger (CDI, sécurité de l’emploi)"
+                ],
+                [
+                  "Besoins d’appartenance",
+                  "Faire partie d’un groupe (ambiance, esprit d’équipe)"
+                ],
+                [
+                  "Besoins d’estime",
+                  "Être reconnu (reconnaissance, responsabilités)"
+                ],
+                [
+                  "Besoins d’accomplissement",
+                  "Se réaliser (autonomie, projets)"
+                ]
+              ]
             }
           ]
         },
@@ -786,29 +896,12 @@
               "c": "Au-delà des théories, plusieurs **leviers concrets** entretiennent la motivation au quotidien."
             },
             {
-              "t": "table",
-              "head": [
-                "Notion",
-                "Définition"
-              ],
-              "rows": [
-                [
-                  "Reconnaissance",
-                  "Le fait de **valoriser** l’individu et son travail (remerciements, feedback positif, promotion)"
-                ],
-                [
-                  "Implication",
-                  "Le **degré d’attachement** et d’engagement du salarié envers son organisation"
-                ],
-                [
-                  "Satisfaction",
-                  "Le sentiment de **contentement** tiré du travail et de ses conditions"
-                ],
-                [
-                  "QVT",
-                  "La **qualité de vie au travail** : conditions, ambiance, équilibre vie pro / perso, sens"
-                ]
-              ]
+              "t": "p",
+              "c": "La **reconnaissance** consiste à **valoriser** l’individu et son travail, par des remerciements, un retour positif ou une promotion. L’**implication** désigne le **degré d’attachement** et d’engagement du salarié envers son organisation."
+            },
+            {
+              "t": "p",
+              "c": "La **satisfaction** est le sentiment de **contentement** que l’on tire de son travail et de ses conditions. La **qualité de vie au travail** (QVT), enfin, recouvre les conditions de travail, l’ambiance, l’équilibre entre vie professionnelle et vie personnelle, et le **sens** donné au travail."
             },
             {
               "t": "p",
@@ -821,6 +914,32 @@
             {
               "t": "tip",
               "c": "La reconnaissance ne coûte pas forcément de l’argent : un **merci sincère**, un **feedback constructif**, de l’**autonomie** ou une **responsabilité** confiée sont des marques de reconnaissance puissantes (facteurs de motivation au sens de Herzberg)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Reconnaissance",
+                  "Valoriser l’individu et son travail"
+                ],
+                [
+                  "Implication",
+                  "Degré d’attachement et d’engagement envers l’organisation"
+                ],
+                [
+                  "Satisfaction",
+                  "Contentement tiré du travail et de ses conditions"
+                ],
+                [
+                  "QVT",
+                  "Qualité de vie au travail : conditions, ambiance, équilibre, sens"
+                ]
+              ]
             }
           ]
         },
@@ -832,25 +951,8 @@
               "c": "Un **groupe** est un ensemble d’individus **en interaction**, qui poursuivent un **but commun** et partagent un **sentiment d’appartenance**. On travaille rarement seul : l’organisation est faite de multiples groupes."
             },
             {
-              "t": "table",
-              "head": [
-                "Groupe formel",
-                "Groupe informel"
-              ],
-              "rows": [
-                [
-                  "**Créé par l’organisation**",
-                  "Né **spontanément** des affinités"
-                ],
-                [
-                  "Un service, une équipe projet, un comité",
-                  "Des collègues qui déjeunent ensemble, un groupe d’amis au travail"
-                ],
-                [
-                  "A un objectif officiel et des règles écrites",
-                  "A des règles implicites, fondées sur la sympathie"
-                ]
-              ]
+              "t": "p",
+              "c": "Le **groupe formel** est **créé par l’organisation** : un service, une équipe projet, un comité. Il a un **objectif officiel** et des **règles écrites**. Le **groupe informel** naît **spontanément** des affinités : des collègues qui déjeunent ensemble, un groupe d’amis au travail. Ses **règles sont implicites** et fondées sur la sympathie."
             },
             {
               "t": "p",
@@ -864,6 +966,36 @@
               "t": "example",
               "h": "La force du groupe",
               "c": "Une équipe soudée où chacun connaît son rôle et se fait confiance encaisse mieux les coups durs (surcharge, imprévu) qu’un ensemble d’individus talentueux mais isolés. \n→ La **cohésion** transforme un groupe en véritable **équipe** : c’est un atout que le management cherche à construire (intégration, projets communs, moments d’échange)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Groupe",
+                  "Individus en interaction, avec un but commun et un sentiment d’appartenance"
+                ],
+                [
+                  "Groupe formel",
+                  "Créé par l’organisation, objectif officiel, règles écrites"
+                ],
+                [
+                  "Groupe informel",
+                  "Né des affinités, règles implicites"
+                ],
+                [
+                  "Dynamique de groupe",
+                  "Relations, rôles, normes et cohésion qui font vivre le groupe"
+                ],
+                [
+                  "Cohésion",
+                  "Sentiment d’appartenance qui soude le groupe"
+                ]
+              ]
             }
           ]
         },
@@ -879,21 +1011,8 @@
               "c": "Le conflit **n’est pas forcément négatif** :"
             },
             {
-              "t": "table",
-              "head": [
-                "Conflit mal géré",
-                "Conflit bien géré"
-              ],
-              "rows": [
-                [
-                  "Dégrade l’ambiance et la performance",
-                  "Fait **émerger des idées**, clarifie les désaccords"
-                ],
-                [
-                  "Blocage, démotivation, départs",
-                  "Débouche sur une **solution nouvelle** ou un compromis"
-                ]
-              ]
+              "t": "p",
+              "c": "Un **conflit mal géré** **dégrade l’ambiance** et la **performance** ; il conduit au **blocage**, à la **démotivation** et parfois aux **départs**. Un **conflit bien géré**, au contraire, fait **émerger des idées** et **clarifie les désaccords** ; il débouche sur une **solution nouvelle** ou sur un **compromis**."
             },
             {
               "t": "p",
@@ -916,6 +1035,28 @@
             {
               "t": "tip",
               "c": "Un bon manager ne cherche pas à **supprimer** tous les conflits (impossible et parfois nuisible), mais à les **réguler** et à favoriser la **coopération** pour en tirer du positif."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Conflit mal géré",
+                  "Dégrade l’ambiance et la performance : blocage, démotivation, départs"
+                ],
+                [
+                  "Conflit bien géré",
+                  "Fait émerger des idées, débouche sur une solution ou un compromis"
+                ],
+                [
+                  "Coopération",
+                  "Travail commun vers un même objectif"
+                ]
+              ]
             }
           ]
         },
@@ -931,29 +1072,12 @@
               "c": "Le psychologue **Kurt Lewin** distingue **trois styles** de leadership :"
             },
             {
-              "t": "table",
-              "head": [
-                "Style",
-                "Fonctionnement",
-                "Effets"
-              ],
-              "rows": [
-                [
-                  "Autoritaire (directif)",
-                  "Le leader **décide seul** et donne des ordres",
-                  "Efficace dans l’urgence, mais **démotivant** sur la durée"
-                ],
-                [
-                  "Démocratique (participatif)",
-                  "Le leader **associe** le groupe aux décisions",
-                  "Le plus favorable à la **motivation** et à la **cohésion**"
-                ],
-                [
-                  "Laisser-faire (délégatif)",
-                  "Le leader laisse une **grande autonomie**",
-                  "Efficace avec une équipe **experte**, risqué (flou) sinon"
-                ]
-              ]
+              "t": "p",
+              "c": "Avec le style **autoritaire**, ou directif, le leader **décide seul** et donne des ordres : c’est **efficace dans l’urgence**, mais **démotivant sur la durée**. Avec le style **démocratique**, ou participatif, le leader **associe le groupe aux décisions** : c’est le style **le plus favorable à la motivation et à la cohésion**."
+            },
+            {
+              "t": "p",
+              "c": "Avec le style **laisser-faire**, ou délégatif, le leader laisse une **grande autonomie** à l’équipe : c’est **efficace avec une équipe experte**, mais **risqué** sinon, car l’organisation devient floue."
             },
             {
               "t": "p",
@@ -962,6 +1086,36 @@
             {
               "t": "tip",
               "c": "Bilan du thème : l’**individu** (personnalité, perception, émotions) **devient acteur** en communiquant, en mobilisant ses **compétences** et en nouant des **relations** au sein d’un **groupe**. Bien managée (motivation, reconnaissance, cohésion, gestion des conflits, leadership adapté), l’activité humaine est la **première ressource** de l’organisation."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Leadership",
+                  "Capacité à influencer et à entraîner un groupe"
+                ],
+                [
+                  "Style autoritaire (Lewin)",
+                  "Le leader décide seul : efficace dans l’urgence, démotivant sur la durée"
+                ],
+                [
+                  "Style démocratique (Lewin)",
+                  "Le leader associe le groupe : favorable à la motivation et à la cohésion"
+                ],
+                [
+                  "Style laisser-faire (Lewin)",
+                  "Grande autonomie : efficace avec des experts, risqué sinon"
+                ],
+                [
+                  "Management situationnel",
+                  "Adapter son style à la situation et à l’équipe"
+                ]
+              ]
             }
           ]
         }
@@ -1533,33 +1687,34 @@
               "c": "Le numérique manipule d’abord des **données**, qui deviennent utiles lorsqu’elles sont mises en sens. Trois niveaux à bien distinguer :"
             },
             {
-              "t": "table",
-              "head": [
-                "Niveau",
-                "Définition",
-                "Exemple"
-              ],
-              "rows": [
-                [
-                  "**Donnée**",
-                  "Élément **brut**, isolé, sans interprétation",
-                  "« 35 »"
-                ],
-                [
-                  "**Information**",
-                  "Donnée **mise en contexte**, qui a du sens",
-                  "« Le projet X a nécessité 35 heures »"
-                ],
-                [
-                  "**Connaissance**",
-                  "Information **assimilée et mobilisable** pour agir",
-                  "« Nos projets de ce type prennent ~35 h : il faut les facturer au moins tel montant »"
-                ]
-              ]
+              "t": "p",
+              "c": "La **donnée** est un **élément brut**, isolé, sans interprétation : « 35 ». L’**information** est une **donnée mise en contexte**, qui prend un sens : « Le projet X a nécessité 35 heures ». La **connaissance** est une **information assimilée et mobilisable pour agir** : « Nos projets de ce type prennent environ 35 heures ; il faut donc les facturer au moins à tel montant »."
             },
             {
               "t": "p",
               "c": "La **connaissance** appartient aux personnes et à l’organisation : c’est elle qui permet de **décider** et d’**agir**. Tout l’enjeu du numérique est de faire circuler la donnée jusqu’à la connaissance."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Donnée",
+                  "Élément brut, isolé, sans interprétation (« 35 »)"
+                ],
+                [
+                  "Information",
+                  "Donnée mise en contexte, qui a du sens"
+                ],
+                [
+                  "Connaissance",
+                  "Information assimilée et mobilisable pour agir"
+                ]
+              ]
             }
           ]
         },
@@ -1619,33 +1774,46 @@
               "c": "Le SI remplit **quatre fonctions** principales :"
             },
             {
-              "t": "table",
-              "head": [
-                "Fonction",
-                "Rôle"
-              ],
-              "rows": [
-                [
-                  "**Collecter**",
-                  "Saisir / acquérir les données (ventes, stocks…)"
-                ],
-                [
-                  "**Stocker**",
-                  "Conserver durablement et en sécurité (bases de données)"
-                ],
-                [
-                  "**Traiter**",
-                  "Trier, calculer, croiser les données"
-                ],
-                [
-                  "**Diffuser**",
-                  "Mettre l’information à disposition des bonnes personnes"
-                ]
-              ]
+              "t": "p",
+              "c": "**Collecter**, c’est **saisir** ou **acquérir** les données, par exemple les ventes ou l’état des stocks. **Stocker**, c’est les **conserver durablement** et en **sécurité**, dans des bases de données."
+            },
+            {
+              "t": "p",
+              "c": "**Traiter**, c’est **trier**, **calculer** et **croiser** les données pour en tirer des informations. **Diffuser**, enfin, c’est **mettre l’information à disposition des bonnes personnes**."
             },
             {
               "t": "p",
               "c": "Le SI **structure** l’organisation, **relie les services** entre eux et sert de support à la **prise de décision** à tous les niveaux."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Système d’information (SI)",
+                  "Organisation qui collecte, stocke, traite et diffuse l’information"
+                ],
+                [
+                  "Collecter",
+                  "Saisir, acquérir les données"
+                ],
+                [
+                  "Stocker",
+                  "Conserver durablement et en sécurité (bases de données)"
+                ],
+                [
+                  "Traiter",
+                  "Trier, calculer, croiser les données"
+                ],
+                [
+                  "Diffuser",
+                  "Mettre l’information à disposition des bonnes personnes"
+                ]
+              ]
             }
           ]
         },
@@ -1674,30 +1842,39 @@
               "c": "Le **PGI** (Progiciel de Gestion Intégré, en anglais **ERP**) est un **logiciel unique** qui gère toutes les fonctions de l’entreprise (ventes, achats, stocks, comptabilité, paie…) en s’appuyant sur une **base de données unique** partagée."
             },
             {
-              "t": "table",
-              "head": [
-                "Avantages du PGI",
-                "Limites du PGI"
-              ],
-              "rows": [
-                [
-                  "Une **seule saisie** (pas de double saisie)",
-                  "Coût d’achat et d’installation élevé"
-                ],
-                [
-                  "Information **cohérente** et à jour partout",
-                  "Projet long et complexe à déployer"
-                ],
-                [
-                  "Meilleure **coordination** entre services",
-                  "Rigidité, forte dépendance au logiciel"
-                ]
-              ]
+              "t": "p",
+              "c": "Le PGI présente trois **avantages**. Une **seule saisie** suffit, ce qui supprime la double saisie. L’information est **cohérente et à jour** dans tous les services. Et les services se **coordonnent mieux**, puisqu’ils travaillent sur les mêmes données."
+            },
+            {
+              "t": "p",
+              "c": "Il a aussi trois **limites** : un **coût d’achat et d’installation élevé**, un **projet long et complexe** à déployer, et une certaine **rigidité**, avec une forte **dépendance** au logiciel."
             },
             {
               "t": "example",
               "h": "L’effet d’un PGI",
               "c": "Une vente saisie en caisse met **automatiquement** à jour le stock, déclenche la facturation et l’écriture comptable. \n→ Plus de **double saisie**, information **fiabilisée** et disponible en temps réel pour tous les services."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "PGI (ERP)",
+                  "Progiciel de gestion intégré : logiciel unique, base de données unique"
+                ],
+                [
+                  "Avantages du PGI",
+                  "Saisie unique, information cohérente, meilleure coordination"
+                ],
+                [
+                  "Limites du PGI",
+                  "Coût élevé, déploiement long et complexe, rigidité, dépendance"
+                ]
+              ]
             }
           ]
         },
@@ -1748,29 +1925,38 @@
               "c": "Concentrer l’information crée des **risques** : panne, piratage, virus, vol ou perte de données, erreur humaine. Protéger le SI, c’est garantir **trois exigences** (le triptyque **DIC**) :"
             },
             {
-              "t": "table",
-              "head": [
-                "Exigence",
-                "Signification"
-              ],
-              "rows": [
-                [
-                  "**Disponibilité**",
-                  "L’information est accessible **quand on en a besoin**"
-                ],
-                [
-                  "**Intégrité**",
-                  "L’information est **exacte** et non modifiée par erreur ou malveillance"
-                ],
-                [
-                  "**Confidentialité**",
-                  "Seules les **personnes autorisées** y ont accès"
-                ]
-              ]
+              "t": "p",
+              "c": "La **disponibilité** garantit que l’information est accessible **quand on en a besoin**. L’**intégrité** garantit qu’elle est **exacte**, sans modification due à une erreur ou à une malveillance. La **confidentialité** garantit que **seules les personnes autorisées** y ont accès."
             },
             {
               "t": "p",
               "c": "Moyens de protection : **mots de passe** et droits d’accès, **antivirus** et pare-feu, **sauvegardes** régulières, **chiffrement**, sensibilisation des salariés."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "DIC",
+                  "Disponibilité, intégrité, confidentialité : exigences de la sécurité du SI"
+                ],
+                [
+                  "Disponibilité",
+                  "Information accessible quand on en a besoin"
+                ],
+                [
+                  "Intégrité",
+                  "Information exacte, non modifiée"
+                ],
+                [
+                  "Confidentialité",
+                  "Accès réservé aux personnes autorisées"
+                ]
+              ]
             }
           ]
         },
@@ -2094,25 +2280,38 @@
               "c": "Une **partie prenante** est tout acteur concerné par l’activité de l’organisation :"
             },
             {
-              "t": "table",
-              "head": [
-                "Parties prenantes internes",
-                "Parties prenantes externes"
-              ],
-              "rows": [
-                [
-                  "Salariés, dirigeants, actionnaires",
-                  "Clients, fournisseurs, banques"
-                ],
-                [
-                  "",
-                  "État, collectivités, associations, riverains"
-                ]
-              ]
+              "t": "p",
+              "c": "Les **parties prenantes internes** sont les **salariés**, les **dirigeants** et les **actionnaires**. Les **parties prenantes externes** sont les **clients**, les **fournisseurs**, les **banques**, l’**État**, les **collectivités**, les **associations** et les **riverains**."
             },
             {
               "t": "p",
               "c": "Chaque partie prenante attend sa part : salaire, dividende, impôt, produit de qualité… Créer de la valeur **partenariale**, c’est chercher à satisfaire durablement cet ensemble d’acteurs."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Partie prenante",
+                  "Acteur concerné par l’activité de l’organisation"
+                ],
+                [
+                  "Parties prenantes internes",
+                  "Salariés, dirigeants, actionnaires"
+                ],
+                [
+                  "Parties prenantes externes",
+                  "Clients, fournisseurs, banques, État, collectivités, associations, riverains"
+                ],
+                [
+                  "Valeur partenariale",
+                  "Valeur créée pour l’ensemble des parties prenantes"
+                ]
+              ]
             }
           ]
         },
@@ -2142,21 +2341,8 @@
               "c": "La **performance**, c’est atteindre ses **objectifs**. Mais bien piloter suppose de distinguer deux notions souvent confondues :"
             },
             {
-              "t": "table",
-              "head": [
-                "Efficacité",
-                "Efficience"
-              ],
-              "rows": [
-                [
-                  "**Atteindre l’objectif** fixé",
-                  "Atteindre l’objectif **au moindre coût** (moins de moyens)"
-                ],
-                [
-                  "« Ai-je réussi ? »",
-                  "« À quel prix / avec quels moyens ai-je réussi ? »"
-                ]
-              ]
+              "t": "p",
+              "c": "L’**efficacité** consiste à **atteindre l’objectif fixé** ; elle répond à la question « **ai-je réussi ?** ». L’**efficience** consiste à atteindre l’objectif **au moindre coût**, avec le moins de moyens possible ; elle répond à la question « **à quel prix, avec quels moyens ai-je réussi ?** »."
             },
             {
               "t": "p",
@@ -2165,6 +2351,28 @@
             {
               "t": "warning",
               "c": "On peut être **efficace sans être efficient** : livrer à temps (efficace) mais en gaspillant énormément de moyens (peu efficient). La vraie performance combine les deux."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Performance",
+                  "Atteindre ses objectifs"
+                ],
+                [
+                  "Efficacité",
+                  "Atteindre l’objectif fixé"
+                ],
+                [
+                  "Efficience",
+                  "Atteindre l’objectif au moindre coût"
+                ]
+              ]
             }
           ]
         },
@@ -2193,33 +2401,46 @@
               "c": "La performance n’est pas que financière : elle est **globale** et se mesure sur plusieurs dimensions."
             },
             {
-              "t": "table",
-              "head": [
-                "Dimension",
-                "Exemples d’indicateurs"
-              ],
-              "rows": [
-                [
-                  "Commerciale",
-                  "Clients, part de marché, satisfaction, fidélité"
-                ],
-                [
-                  "Financière",
-                  "Résultat, marge, chiffre d’affaires, rentabilité"
-                ],
-                [
-                  "Sociale",
-                  "Satisfaction des salariés, turnover, formation, climat"
-                ],
-                [
-                  "Environnementale",
-                  "Énergie, déchets, empreinte carbone"
-                ]
-              ]
+              "t": "p",
+              "c": "La performance **commerciale** se mesure par le nombre de **clients**, la **part de marché**, la **satisfaction** et la **fidélité**. La performance **financière** se mesure par le **résultat**, la **marge**, le **chiffre d’affaires** et la **rentabilité**."
+            },
+            {
+              "t": "p",
+              "c": "La performance **sociale** se mesure par la **satisfaction des salariés**, le **turnover**, la **formation** et le **climat social**. La performance **environnementale** se mesure par la consommation d’**énergie**, les **déchets** et l’**empreinte carbone**."
             },
             {
               "t": "p",
               "c": "Prendre en compte les dimensions **sociale** et **environnementale** relève de la **RSE** (Responsabilité Sociétale des Entreprises) : l’organisation intègre volontairement des préoccupations sociales et écologiques, au-delà du seul profit. C’est un axe de **valeur partenariale** durable."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Performance commerciale",
+                  "Clients, part de marché, satisfaction, fidélité"
+                ],
+                [
+                  "Performance financière",
+                  "Résultat, marge, chiffre d’affaires, rentabilité"
+                ],
+                [
+                  "Performance sociale",
+                  "Satisfaction des salariés, turnover, formation, climat"
+                ],
+                [
+                  "Performance environnementale",
+                  "Énergie, déchets, empreinte carbone"
+                ],
+                [
+                  "RSE",
+                  "Responsabilité sociétale : intégrer volontairement le social et l’écologie"
+                ]
+              ]
             }
           ]
         }
@@ -2392,25 +2613,34 @@
               "c": "Gérer, c’est agir **dans le temps**. Le temps a une double nature :"
             },
             {
-              "t": "table",
-              "head": [
-                "Le temps comme RESSOURCE",
-                "Le temps comme CONTRAINTE"
-              ],
-              "rows": [
-                [
-                  "On peut l’**organiser** et le **planifier**",
-                  "Les **délais** s’imposent à nous"
-                ],
-                [
-                  "« De combien de temps je dispose ? »",
-                  "« La commande doit partir vendredi »"
-                ]
-              ]
+              "t": "p",
+              "c": "Le temps est une **ressource** quand on peut l’**organiser** et le **planifier** : la question est alors « de combien de temps je dispose ? ». Il devient une **contrainte** quand des **délais** s’imposent : « la commande doit partir vendredi »."
             },
             {
               "t": "p",
               "c": "Le temps intervient partout : **délais** de réaction et de livraison, **cycles** (production, vie d’un produit), **échéances** (paiement, déclaration). Bien le gérer, c’est un **avantage concurrentiel** (livrer plus vite, réagir avant les autres)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Temps ressource",
+                  "Temps que l’on peut organiser et planifier"
+                ],
+                [
+                  "Temps contrainte",
+                  "Délais qui s’imposent"
+                ],
+                [
+                  "Échéance",
+                  "Date limite (paiement, déclaration)"
+                ]
+              ]
             }
           ]
         },
@@ -2422,33 +2652,38 @@
               "c": "Une décision ne se raisonne pas sur la même durée selon son importance. On distingue trois **horizons** :"
             },
             {
-              "t": "table",
-              "head": [
-                "Horizon",
-                "Durée",
-                "Exemple de décision"
-              ],
-              "rows": [
-                [
-                  "Court terme",
-                  "Jours à un an",
-                  "Gérer les stocks, planifier la semaine"
-                ],
-                [
-                  "Moyen terme",
-                  "De 1 à ~3 ans",
-                  "Recruter, lancer un produit"
-                ],
-                [
-                  "Long terme",
-                  "Plusieurs années",
-                  "Ouvrir une usine, changer de stratégie"
-                ]
-              ]
+              "t": "p",
+              "c": "Le **court terme** couvre quelques **jours à un an** : on y gère les stocks ou on planifie la semaine. Le **moyen terme** couvre **de un à trois ans environ** : on y décide de recruter ou de lancer un produit. Le **long terme** couvre **plusieurs années** : on y décide d’ouvrir une usine ou de changer de stratégie."
             },
             {
               "t": "p",
               "c": "Plus l’horizon est **lointain**, plus l’avenir est **incertain** — donc plus la décision comporte de **risque**. C’est le lien entre les deux notions du thème."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Court terme",
+                  "Jours à un an (gérer les stocks, planifier la semaine)"
+                ],
+                [
+                  "Moyen terme",
+                  "1 à 3 ans environ (recruter, lancer un produit)"
+                ],
+                [
+                  "Long terme",
+                  "Plusieurs années (ouvrir une usine, changer de stratégie)"
+                ],
+                [
+                  "Incertitude",
+                  "Plus l’horizon est lointain, plus la décision est risquée"
+                ]
+              ]
             }
           ]
         },
@@ -2477,19 +2712,36 @@
               "c": "Beaucoup de phénomènes se répètent dans le temps : ce sont des **cycles**. En gestion, on suit notamment le **cycle d’exploitation** (acheter → produire → vendre → encaisser) et le **cycle de vie d’un produit**."
             },
             {
+              "t": "p",
+              "c": "Au **lancement**, il faut **faire connaître** le produit et **investir**. En phase de **croissance**, il faut **augmenter les ventes** et la **capacité** de production. En **maturité**, il faut **défendre sa position** et **optimiser** les coûts. Au **déclin**, il faut **retirer** le produit ou le **relancer**."
+            },
+            {
+              "t": "p",
+              "c": "Connaître la phase permet d’**anticiper** : préparer un nouveau produit **avant** que l’actuel ne décline."
+            },
+            {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Phase du cycle de vie",
-                "Enjeu"
+                "Notion",
+                "Définition"
               ],
               "rows": [
+                [
+                  "Cycle d’exploitation",
+                  "Acheter → produire → vendre → encaisser"
+                ],
+                [
+                  "Cycle de vie du produit",
+                  "Lancement, croissance, maturité, déclin"
+                ],
                 [
                   "Lancement",
                   "Faire connaître, investir"
                 ],
                 [
                   "Croissance",
-                  "Augmenter les ventes, la capacité"
+                  "Augmenter les ventes et la capacité"
                 ],
                 [
                   "Maturité",
@@ -2500,10 +2752,6 @@
                   "Retirer ou relancer le produit"
                 ]
               ]
-            },
-            {
-              "t": "p",
-              "c": "Connaître la phase permet d’**anticiper** : préparer un nouveau produit **avant** que l’actuel ne décline."
             }
           ]
         },
@@ -2532,31 +2780,44 @@
               "c": "Une organisation est exposée à de nombreux risques, qu’on classe par nature :"
             },
             {
+              "t": "p",
+              "c": "Le **risque financier** apparaît quand un **client ne paie pas** ou quand la **trésorerie manque**. Le **risque commercial**, quand un **produit ne se vend pas** ou qu’on **perd un gros client**. Le **risque humain ou social**, avec un **accident du travail**, le **départ d’un salarié clé**, un **conflit** ou une **grève**."
+            },
+            {
+              "t": "p",
+              "c": "Le **risque numérique** recouvre la **perte de données**, les **cyberattaques** et les **pannes informatiques**. Le **risque environnemental ou juridique**, enfin, tient à une **pollution**, à un **procès** ou à un **changement de réglementation**."
+            },
+            {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Type de risque",
-                "Exemples"
+                "Notion",
+                "Définition"
               ],
               "rows": [
                 [
-                  "Financier",
-                  "Client qui ne paie pas (impayé), manque de trésorerie"
+                  "Risque",
+                  "Événement incertain qui peut nuire à l’organisation"
                 ],
                 [
-                  "Commercial",
+                  "Risque financier",
+                  "Impayé, manque de trésorerie"
+                ],
+                [
+                  "Risque commercial",
                   "Produit qui ne se vend pas, perte d’un gros client"
                 ],
                 [
-                  "Humain / social",
-                  "Accident du travail, départ d’un salarié clé, conflit, grève"
+                  "Risque humain / social",
+                  "Accident, départ d’un salarié clé, conflit, grève"
                 ],
                 [
-                  "Numérique",
-                  "Perte de données, cyberattaque, panne informatique"
+                  "Risque numérique",
+                  "Perte de données, cyberattaque, panne"
                 ],
                 [
-                  "Environnemental / juridique",
-                  "Pollution, procès, changement de réglementation"
+                  "Risque environnemental / juridique",
+                  "Pollution, procès, nouvelle réglementation"
                 ]
               ]
             }

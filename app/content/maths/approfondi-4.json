@@ -94,24 +94,12 @@
           "c": "Une suite est **croissante** si chaque terme est plus grand que le précédent, **décroissante** sinon. On le détermine avec la raison."
         },
         {
-          "t": "table",
-          "head": [
-            "Type",
-            "Croissante si…",
-            "Décroissante si…"
-          ],
-          "rows": [
-            [
-              "Arithmétique (raison r)",
-              "r > 0",
-              "r < 0"
-            ],
-            [
-              "Géométrique (u₀ > 0, raison q)",
-              "q > 1",
-              "0 < q < 1"
-            ]
-          ]
+          "t": "p",
+          "c": "Pour une **suite arithmétique** de raison r, le sens de variation se lit sur le signe de la raison. Si **r > 0**, on ajoute un nombre positif à chaque étape : la suite est **croissante**. Si **r < 0**, on retire quelque chose à chaque étape : la suite est **décroissante**. Si r = 0, tous les termes sont égaux et la suite est constante."
+        },
+        {
+          "t": "p",
+          "c": "Pour une **suite géométrique** dont le premier terme est positif (u₀ > 0), on compare la raison q à 1. Si **q > 1**, chaque terme est plus grand que le précédent : la suite est **croissante**. Si **0 < q < 1**, chaque terme n’est qu’une fraction du précédent : la suite est **décroissante**. Si q = 1, la suite est constante."
         },
         {
           "t": "example",
@@ -122,6 +110,28 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Arithmétique : le signe de **r** décide. Géométrique (termes positifs) : **q > 1** croît, **q < 1** décroît."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Suite croissante",
+              "Chaque terme est plus grand que le précédent : uₙ₊₁ > uₙ"
+            ],
+            [
+              "Suite arithmétique : sens de variation",
+              "Croissante si r > 0, décroissante si r < 0"
+            ],
+            [
+              "Suite géométrique (u₀ > 0) : sens de variation",
+              "Croissante si q > 1, décroissante si 0 < q < 1"
+            ]
+          ]
         }
       ]
     },
@@ -196,33 +206,12 @@
           "c": "La **dérivée** f ′ se calcule avec des formules à connaître, et des règles d’opérations."
         },
         {
-          "t": "table",
-          "head": [
-            "f(x)",
-            "f ′(x)"
-          ],
-          "rows": [
-            [
-              "k (constante)",
-              "0"
-            ],
-            [
-              "x",
-              "1"
-            ],
-            [
-              "x²",
-              "2x"
-            ],
-            [
-              "xⁿ",
-              "n·xⁿ⁻¹"
-            ],
-            [
-              "1/x",
-              "−1/x²"
-            ]
-          ]
+          "t": "p",
+          "c": "Les dérivées des fonctions usuelles se retiennent par cœur. Une **constante** k a pour dérivée **0**, la fonction **x** a pour dérivée **1** et la fonction **x²** a pour dérivée **2x**. La règle générale pour une puissance est : la dérivée de **xⁿ** est **n·xⁿ⁻¹** ; ainsi, la dérivée de x³ est 3x² et celle de x⁴ est 4x³. Enfin, la dérivée de **1/x** est **−1/x²** (pour x ≠ 0)."
+        },
+        {
+          "t": "p",
+          "c": "Ces formules se combinent : on dérive une somme terme à terme, et un nombre placé devant une fonction reste devant sa dérivée. Avec f(x) = 4x³ − 2x + 7, on obtient f ′(x) = 4 × 3x² − 2 × 1 + 0 = 12x² − 2."
         },
         {
           "t": "formula",
@@ -237,6 +226,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "On dérive **terme par terme** : chaque puissance descend son exposant (n·xⁿ⁻¹), une constante disparaît."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Dérivée d’une constante k",
+              "0"
+            ],
+            [
+              "Dérivée de x",
+              "1"
+            ],
+            [
+              "Dérivée de 1/x",
+              "−1/x²"
+            ],
+            [
+              "Dérivée d’une somme",
+              "(u + v)′ = u′ + v′"
+            ],
+            [
+              "Dérivée d’un produit par un réel",
+              "(k·u)′ = k·u′"
+            ]
+          ]
         }
       ]
     },
@@ -554,25 +573,12 @@
       "h": "📏 Les plages 68 / 95 / 99,7 %",
       "blocks": [
         {
-          "t": "table",
-          "head": [
-            "Intervalle",
-            "Probabilité"
-          ],
-          "rows": [
-            [
-              "[ μ − σ ; μ + σ ]",
-              "≈ 0,68"
-            ],
-            [
-              "[ μ − 2σ ; μ + 2σ ]",
-              "≈ 0,95"
-            ],
-            [
-              "[ μ − 3σ ; μ + 3σ ]",
-              "≈ 0,997"
-            ]
-          ]
+          "t": "p",
+          "c": "Pour une variable X qui suit une loi normale de moyenne μ et d’écart type σ, trois « plages » donnent directement une probabilité. L’intervalle **[μ − σ ; μ + σ]** contient environ **68 %** des valeurs : sa probabilité vaut environ 0,68. L’intervalle **[μ − 2σ ; μ + 2σ]** en contient environ **95 %**, soit une probabilité d’environ 0,95. L’intervalle **[μ − 3σ ; μ + 3σ]** en contient environ **99,7 %**, soit 0,997."
+        },
+        {
+          "t": "p",
+          "c": "Pour utiliser ces plages, on commence toujours par repérer μ et σ, puis on regarde de combien d’écarts types les bornes s’éloignent de la moyenne. Si elles sont exactement à un, deux ou trois écarts types, la plage donne la réponse ; sinon, on passe par la calculatrice."
         },
         {
           "t": "example",
@@ -583,6 +589,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Ces trois plages (68/95/99,7 %) sont à connaître par cœur : elles évitent parfois la calculatrice."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Écart type σ",
+              "Mesure de la dispersion des valeurs autour de la moyenne μ"
+            ],
+            [
+              "Plage μ ± σ",
+              "Probabilité ≈ 0,68"
+            ],
+            [
+              "Plage μ ± 2σ",
+              "Probabilité ≈ 0,95"
+            ],
+            [
+              "Plage μ ± 3σ",
+              "Probabilité ≈ 0,997"
+            ]
+          ]
         }
       ]
     },

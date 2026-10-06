@@ -20,34 +20,12 @@
           "c": "CM = 1 + t   et   V_f = V_i × CM   donc   CM = V_f ÷ V_i"
         },
         {
-          "t": "table",
-          "head": [
-            "Évolution",
-            "Taux t",
-            "Coefficient multiplicateur"
-          ],
-          "rows": [
-            [
-              "+ 20 %",
-              "+0,20",
-              "1,20"
-            ],
-            [
-              "+ 5 %",
-              "+0,05",
-              "1,05"
-            ],
-            [
-              "− 30 %",
-              "−0,30",
-              "0,70"
-            ],
-            [
-              "− 100 %",
-              "−1",
-              "0"
-            ]
-          ]
+          "t": "p",
+          "c": "Pour passer d’un pourcentage d’évolution au coefficient multiplicateur, on écrit le taux sous forme décimale, puis on lui ajoute 1. Une **hausse de 20 %** correspond à un taux t = +0,20, donc à un **coefficient multiplicateur de 1,20** : la valeur finale vaut 1,20 fois la valeur de départ. De la même façon, une **hausse de 5 %** (t = +0,05) donne un coefficient de **1,05**."
+        },
+        {
+          "t": "p",
+          "c": "Pour une baisse, le taux est négatif et le coefficient devient inférieur à 1. Une **baisse de 30 %** (t = −0,30) donne CM = 1 − 0,30 = **0,70** : il reste 70 % de la valeur de départ. Une **baisse de 100 %** (t = −1) donne CM = **0** : la valeur disparaît entièrement. Retiens la règle : un coefficient **supérieur à 1** traduit une hausse, un coefficient **compris entre 0 et 1** traduit une baisse, et un taux d’évolution ne peut jamais descendre sous −100 %."
         },
         {
           "t": "example",
@@ -58,6 +36,24 @@
           "t": "warning",
           "h": "Piège",
           "c": "Une hausse de 20 % suivie d’une baisse de 20 % ne ramène **pas** au prix de départ : 1,20 × 0,80 = 0,96, soit **− 4 %** au total. Les pourcentages ne s’additionnent pas, les coefficients se **multiplient**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Taux d’évolution t",
+              "Variation relative : t = (V_f − V_i) ÷ V_i, écrite en décimal (+20 % → 0,20 ; −30 % → −0,30)"
+            ],
+            [
+              "Coefficient multiplicateur (CM)",
+              "CM = 1 + t et V_f = V_i × CM (+20 % → 1,20 ; +5 % → 1,05 ; −30 % → 0,70 ; −100 % → 0)"
+            ]
+          ]
         }
       ]
     },
@@ -178,29 +174,12 @@
           "c": "Une **suite** (uₙ) est une liste ordonnée de nombres, où chaque terme porte un **rang** n. On la définit souvent par **récurrence** : on donne le premier terme et une règle pour passer d’un terme au suivant. Deux modèles reviennent partout : l’arithmétique et la géométrique."
         },
         {
-          "t": "table",
-          "head": [
-            "",
-            "Arithmétique",
-            "Géométrique"
-          ],
-          "rows": [
-            [
-              "Passage au suivant",
-              "On ajoute une raison r",
-              "On multiplie par une raison q"
-            ],
-            [
-              "Récurrence",
-              "uₙ₊₁ = uₙ + r",
-              "uₙ₊₁ = uₙ × q"
-            ],
-            [
-              "Situation type",
-              "Évolution constante (+ 50 €/mois)",
-              "Évolution en pourcentage (+ 3 %/an)"
-            ]
-          ]
+          "t": "p",
+          "c": "Les deux modèles se distinguent d’abord par la façon de **passer d’un terme au suivant**. Dans une **suite arithmétique**, on **ajoute** toujours le même nombre, appelé **raison r** : la relation de récurrence s’écrit **uₙ₊₁ = uₙ + r**. C’est le modèle d’une évolution **constante en valeur**, comme une épargne qui augmente de 50 € chaque mois."
+        },
+        {
+          "t": "p",
+          "c": "Dans une **suite géométrique**, on **multiplie** toujours par le même nombre, appelé **raison q** : la récurrence s’écrit **uₙ₊₁ = uₙ × q**. C’est le modèle d’une évolution **en pourcentage constant**, comme un loyer qui augmente de 3 % par an : chaque année, on multiplie la valeur précédente par q = 1,03."
         },
         {
           "t": "p",
@@ -210,6 +189,32 @@
           "t": "tip",
           "h": "Reconnaître",
           "c": "Différence constante entre termes consécutifs → **arithmétique** (raison r = uₙ₊₁ − uₙ). Rapport constant entre termes consécutifs → **géométrique** (raison q = uₙ₊₁ ÷ uₙ)."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Suite",
+              "Liste ordonnée de nombres (uₙ), chaque terme portant un rang n"
+            ],
+            [
+              "Récurrence",
+              "Définition d’une suite par son premier terme et la règle qui donne le terme suivant"
+            ],
+            [
+              "Suite arithmétique",
+              "On ajoute la raison r : uₙ₊₁ = uₙ + r (évolution constante, + 50 €/mois)"
+            ],
+            [
+              "Suite géométrique",
+              "On multiplie par la raison q : uₙ₊₁ = uₙ × q (évolution en %, + 3 %/an → q = 1,03)"
+            ]
+          ]
         }
       ]
     },
@@ -299,42 +304,47 @@
           "c": "La **fonction dérivée** f ′ associe à chaque x le nombre dérivé en ce point. On la calcule avec des **formules** à connaître par cœur."
         },
         {
-          "t": "table",
-          "head": [
-            "f(x)",
-            "f ′(x)"
-          ],
-          "rows": [
-            [
-              "k (constante)",
-              "0"
-            ],
-            [
-              "x",
-              "1"
-            ],
-            [
-              "x²",
-              "2x"
-            ],
-            [
-              "xⁿ",
-              "n·xⁿ⁻¹"
-            ],
-            [
-              "1/x",
-              "−1/x²"
-            ],
-            [
-              "k·u(x)",
-              "k·u ′(x)"
-            ]
-          ]
+          "t": "p",
+          "c": "Voici les formules de dérivation à connaître par cœur. La dérivée d’une **constante** k est **0** : une fonction qui ne varie pas a une pente nulle partout. La dérivée de **x** est **1**, et celle de **x²** est **2x**. Plus généralement, la dérivée de **xⁿ** est **n·xⁿ⁻¹** : on fait « descendre » l’exposant devant x et on retire 1 à l’exposant ; pour x³, on obtient ainsi 3x²."
+        },
+        {
+          "t": "p",
+          "c": "La dérivée de **1/x** est **−1/x²**, pour x différent de 0. Enfin, lorsqu’une fonction est multipliée par un nombre k, sa dérivée est multipliée par ce même nombre : la dérivée de **k·u(x)** est **k·u′(x)**. Par exemple, la dérivée de 3x² est 3 × 2x = 6x, et celle de −5x est −5."
         },
         {
           "t": "example",
           "h": "Calcul",
           "c": "f(x) = 3x² − 5x + 2. Alors f ′(x) = 6x − 5.\nEn a = 1 : f ′(1) = 1 (pente) et f(1) = 0 → tangente : y = 1(x − 1) + 0 = **x − 1**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Fonction dérivée f ′",
+              "Fonction qui associe à chaque x le nombre dérivé f ′(x), pente de la tangente en ce point"
+            ],
+            [
+              "Dérivée d’une constante k",
+              "0"
+            ],
+            [
+              "Dérivée de x",
+              "1"
+            ],
+            [
+              "Dérivée de 1/x",
+              "−1/x²"
+            ],
+            [
+              "Dérivée de k·u",
+              "k·u′"
+            ]
+          ]
         }
       ]
     },
@@ -726,30 +736,47 @@
           "c": "Une probabilité **P(a ≤ X ≤ b)** correspond à l’**aire sous la courbe** entre a et b. En STMG, on la calcule à la **calculatrice** (fonction normalFRép). L’aire totale sous la courbe vaut **1**."
         },
         {
-          "t": "table",
-          "head": [
-            "Intervalle autour de μ",
-            "Probabilité ≈"
-          ],
-          "rows": [
-            [
-              "[ μ − σ ; μ + σ ]",
-              "0,68 (68 %)"
-            ],
-            [
-              "[ μ − 2σ ; μ + 2σ ]",
-              "0,95 (95 %)"
-            ],
-            [
-              "[ μ − 3σ ; μ + 3σ ]",
-              "0,997 (99,7 %)"
-            ]
-          ]
+          "t": "p",
+          "c": "Trois intervalles centrés sur la moyenne μ sont à connaître, car ils permettent de répondre sans calculatrice. Environ **68 %** des valeurs se trouvent entre **μ − σ et μ + σ** : P(μ − σ ≤ X ≤ μ + σ) ≈ 0,68. Environ **95 %** se trouvent entre **μ − 2σ et μ + 2σ**, soit une probabilité proche de 0,95. Et presque toutes, environ **99,7 %**, se trouvent entre **μ − 3σ et μ + 3σ**, avec une probabilité d’environ 0,997."
+        },
+        {
+          "t": "p",
+          "c": "Plus on s’éloigne de la moyenne, plus les valeurs sont rares : une valeur située à plus de trois écarts types de μ n’apparaît que dans 0,3 % des cas environ. L’écart type σ mesure donc la **dispersion** : plus σ est grand, plus la cloche est large et aplatie."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "Courbe **symétrique** autour de μ : P(X ≤ μ) = P(X ≥ μ) = **0,5**. Les « plages » 68 % / 95 % / 99,7 % (règle empirique) sont à connaître."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Loi normale N(μ ; σ)",
+              "Loi d’une variable dont la courbe en cloche est symétrique autour de la moyenne μ"
+            ],
+            [
+              "Probabilité P(a ≤ X ≤ b)",
+              "Aire sous la courbe entre a et b (aire totale = 1)"
+            ],
+            [
+              "Plage μ ± σ",
+              "Contient environ 68 % des valeurs (probabilité ≈ 0,68)"
+            ],
+            [
+              "Plage μ ± 2σ",
+              "Contient environ 95 % des valeurs (probabilité ≈ 0,95)"
+            ],
+            [
+              "Plage μ ± 3σ",
+              "Contient environ 99,7 % des valeurs (probabilité ≈ 0,997)"
+            ]
+          ]
         }
       ]
     },

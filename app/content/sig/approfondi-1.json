@@ -8,29 +8,12 @@
           "c": "Le **système d’information (SI)** est l’ensemble des ressources (humaines, matérielles, logicielles) qui permettent de **collecter, stocker, traiter et diffuser** l’information dans une organisation. C’est le « système nerveux » de l’entreprise : sans lui, impossible de décider et de coordonner."
         },
         {
-          "t": "table",
-          "head": [
-            "Fonction du SI",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Collecter",
-              "Saisir une commande, scanner un produit"
-            ],
-            [
-              "Stocker",
-              "Enregistrer dans une base de données"
-            ],
-            [
-              "Traiter",
-              "Calculer un total, éditer une facture"
-            ],
-            [
-              "Diffuser",
-              "Envoyer l’info au bon service, au client"
-            ]
-          ]
+          "t": "p",
+          "c": "Le SI remplit quatre fonctions, qui s’enchaînent toujours dans le même ordre. Il commence par **collecter** l’information, c’est-à-dire la faire entrer dans le système : un vendeur saisit une commande, une caissière scanne un produit. Il doit ensuite la **stocker**, en l’enregistrant de façon durable, en général dans une base de données, pour pouvoir la retrouver plus tard."
+        },
+        {
+          "t": "p",
+          "c": "Vient alors le **traitement** : le SI transforme l’information pour la rendre utile, par exemple en calculant le total d’une commande ou en éditant une facture. Enfin, il la **diffuse**, en la transmettant au bon service ou au client, au bon moment. Si l’une de ces fonctions est défaillante, toute la chaîne de décision en souffre."
         },
         {
           "t": "p",
@@ -40,6 +23,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Le SI = **collecter → stocker → traiter → diffuser** l’information. Il transforme des **données** brutes en **information** utile puis en **connaissance** pour décider."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Système d’information (SI)",
+              "Ressources humaines, matérielles et logicielles qui collectent, stockent, traitent et diffusent l’information"
+            ],
+            [
+              "Collecter",
+              "Faire entrer l’information dans le SI (saisir une commande, scanner un produit)"
+            ],
+            [
+              "Stocker",
+              "Enregistrer l’information durablement, dans une base de données"
+            ],
+            [
+              "Traiter",
+              "Transformer l’information (calculer un total, éditer une facture)"
+            ],
+            [
+              "Diffuser",
+              "Transmettre l’information au bon service ou au client"
+            ]
+          ]
         }
       ]
     },
@@ -133,33 +146,12 @@
           "c": "Une **base de données** organise et stocke l’information de façon structurée pour la retrouver facilement. Le modèle le plus répandu est le **modèle relationnel** : les données sont rangées dans des **tables** (comme des tableaux)."
         },
         {
-          "t": "table",
-          "head": [
-            "Terme",
-            "Signification"
-          ],
-          "rows": [
-            [
-              "Table (relation)",
-              "Un tableau de données (ex. CLIENTS)"
-            ],
-            [
-              "Enregistrement (ligne)",
-              "Un élément (ex. un client précis)"
-            ],
-            [
-              "Champ (colonne)",
-              "Une caractéristique (nom, ville, email)"
-            ],
-            [
-              "Clé primaire",
-              "Identifiant unique de chaque enregistrement (ex. id_client)"
-            ],
-            [
-              "Clé étrangère",
-              "Champ qui référence la clé primaire d’une autre table (lien)"
-            ]
-          ]
+          "t": "p",
+          "c": "Le modèle relationnel a son propre vocabulaire. Une **table**, aussi appelée **relation**, est un tableau de données consacré à un seul sujet, par exemple la table CLIENTS. Chaque **enregistrement**, ou ligne, correspond à un élément précis de ce sujet : un client donné. Chaque **champ**, ou colonne, décrit une caractéristique commune à tous les enregistrements : le nom, la ville, l’adresse e-mail."
+        },
+        {
+          "t": "p",
+          "c": "Deux champs jouent un rôle particulier. La **clé primaire** est l’identifiant unique de chaque enregistrement, par exemple id_client : deux lignes ne peuvent jamais avoir la même valeur. La **clé étrangère** est un champ d’une table qui reprend la clé primaire d’une autre table ; c’est elle qui crée le lien entre les deux."
         },
         {
           "t": "p",
@@ -169,6 +161,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Base relationnelle = **tables** liées par des **clés**. Clé **primaire** = identifiant unique ; clé **étrangère** = lien vers une autre table."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Table (relation)",
+              "Tableau de données sur un même sujet (ex. CLIENTS)"
+            ],
+            [
+              "Enregistrement (ligne)",
+              "Un élément précis de la table (ex. un client)"
+            ],
+            [
+              "Champ (colonne)",
+              "Une caractéristique des enregistrements (nom, ville, e-mail)"
+            ],
+            [
+              "Clé primaire",
+              "Identifiant unique de chaque enregistrement (ex. id_client)"
+            ],
+            [
+              "Clé étrangère",
+              "Champ qui reprend la clé primaire d’une autre table et crée le lien entre les tables"
+            ]
+          ]
         }
       ]
     },
@@ -212,29 +234,12 @@
           "c": "Le SQL permet aussi de **calculer** sur des ensembles de lignes grâce aux **fonctions d’agrégation**, et de **croiser** plusieurs tables avec les **jointures**."
         },
         {
-          "t": "table",
-          "head": [
-            "Fonction",
-            "Rôle"
-          ],
-          "rows": [
-            [
-              "COUNT()",
-              "Compter le nombre de lignes"
-            ],
-            [
-              "SUM()",
-              "Additionner une colonne"
-            ],
-            [
-              "AVG()",
-              "Calculer une moyenne"
-            ],
-            [
-              "MAX() / MIN()",
-              "Valeur maximale / minimale"
-            ]
-          ]
+          "t": "p",
+          "c": "Quatre fonctions d’agrégation sont à connaître. **COUNT()** compte le nombre de lignes qui répondent à la requête : combien de clients habitent à Paris, combien de commandes ont été passées. **SUM()** additionne les valeurs d’une colonne numérique, par exemple les montants pour obtenir le chiffre d’affaires total."
+        },
+        {
+          "t": "p",
+          "c": "**AVG()** calcule la moyenne d’une colonne, comme le panier moyen. Enfin, **MAX()** et **MIN()** renvoient respectivement la plus grande et la plus petite valeur d’une colonne, comme la commande la plus élevée ou le prix le plus bas. Une fonction d’agrégation renvoie un seul résultat pour tout un ensemble de lignes."
         },
         {
           "t": "example",
@@ -254,6 +259,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Agrégation = **calculer** (COUNT, SUM, AVG…). Jointure = **croiser** deux tables via leur **clé commune**. Souvent combinées avec GROUP BY pour des totaux par catégorie."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Fonction d’agrégation",
+              "Fonction SQL qui calcule un seul résultat à partir d’un ensemble de lignes"
+            ],
+            [
+              "COUNT()",
+              "Compte le nombre de lignes"
+            ],
+            [
+              "SUM()",
+              "Additionne les valeurs d’une colonne"
+            ],
+            [
+              "AVG()",
+              "Calcule la moyenne d’une colonne"
+            ],
+            [
+              "MAX() / MIN()",
+              "Renvoie la valeur maximale / minimale d’une colonne"
+            ],
+            [
+              "Jointure",
+              "Requête qui croise plusieurs tables grâce à la clé étrangère"
+            ]
+          ]
         }
       ]
     },
@@ -353,29 +392,12 @@
           "c": "Le numérique **transforme** en profondeur l’organisation du travail. De nouvelles formes apparaissent : **télétravail**, flexibilité des horaires et des lieux, automatisation des tâches répétitives, nouveaux métiers."
         },
         {
-          "t": "table",
-          "head": [
-            "Opportunités",
-            "Risques"
-          ],
-          "rows": [
-            [
-              "Flexibilité, gain de temps",
-              "Frontière vie pro/perso brouillée"
-            ],
-            [
-              "Collaboration à distance",
-              "Isolement, perte de lien social"
-            ],
-            [
-              "Automatisation des tâches pénibles",
-              "Disparition de certains emplois"
-            ],
-            [
-              "Accès à l’information partout",
-              "Surcharge informationnelle, sécurité"
-            ]
-          ]
+          "t": "p",
+          "c": "Cette transformation apporte de réelles **opportunités**. Elle donne de la **flexibilité** et fait **gagner du temps**, par exemple en supprimant des trajets. Elle permet de **collaborer à distance** grâce aux outils partagés et à la visioconférence. Elle **automatise les tâches pénibles** ou répétitives, et elle donne **accès à l’information partout**, à tout moment."
+        },
+        {
+          "t": "p",
+          "c": "Elle comporte aussi des **risques**, qui répondent presque point par point à ces avantages. La **frontière entre vie professionnelle et vie personnelle** se brouille quand on peut être joint à toute heure. Le travail à distance peut créer de l’**isolement** et une **perte de lien social**. L’automatisation fait **disparaître certains emplois**. Enfin, l’accès permanent à l’information entraîne une **surcharge informationnelle** et pose des problèmes de **sécurité** des données."
         },
         {
           "t": "p",
@@ -385,6 +407,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "La transformation numérique offre **flexibilité et efficacité** mais brouille les frontières et exige de nouvelles compétences. Le **droit à la déconnexion** protège l’équilibre des salariés."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Télétravail",
+              "Travail effectué hors des locaux de l’employeur grâce aux outils numériques"
+            ],
+            [
+              "Opportunités du numérique",
+              "Flexibilité, gain de temps, collaboration à distance, automatisation des tâches pénibles, information accessible partout"
+            ],
+            [
+              "Risques du numérique",
+              "Frontière vie pro/perso brouillée, isolement, disparition d’emplois, surcharge informationnelle, sécurité"
+            ],
+            [
+              "Droit à la déconnexion",
+              "Droit du salarié de ne pas être joignable en dehors de son temps de travail"
+            ]
+          ]
         }
       ]
     },
@@ -452,25 +500,12 @@
           "c": "Plus le SI est connecté, plus il est **vulnérable**. La sécurité vise trois objectifs, souvent résumés par le triangle **DIC** (ou CIA)."
         },
         {
-          "t": "table",
-          "head": [
-            "Objectif",
-            "Signification"
-          ],
-          "rows": [
-            [
-              "Disponibilité",
-              "L’information est accessible quand on en a besoin"
-            ],
-            [
-              "Intégrité",
-              "L’information n’est pas altérée ou falsifiée"
-            ],
-            [
-              "Confidentialité",
-              "Seules les personnes autorisées y accèdent"
-            ]
-          ]
+          "t": "p",
+          "c": "Le premier objectif est la **disponibilité** : l’information doit être accessible au moment où l’on en a besoin. Une panne de serveur ou une attaque qui bloque le site d’une enseigne porte atteinte à la disponibilité."
+        },
+        {
+          "t": "p",
+          "c": "Le deuxième est l’**intégrité** : l’information ne doit être ni altérée ni falsifiée, qu’il s’agisse d’une erreur ou d’une modification volontaire. Le troisième est la **confidentialité** : seules les personnes autorisées doivent pouvoir accéder à l’information, ce qui suppose des identifiants et des droits d’accès bien gérés."
         },
         {
           "t": "p",
@@ -485,6 +520,40 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Sécurité = **Disponibilité + Intégrité + Confidentialité (DIC)**. Menaces phares : **phishing** et **ransomware**. Le maillon faible est souvent **humain**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "DIC",
+              "Les trois objectifs de la sécurité du SI : disponibilité, intégrité, confidentialité"
+            ],
+            [
+              "Disponibilité",
+              "L’information est accessible quand on en a besoin"
+            ],
+            [
+              "Intégrité",
+              "L’information n’est ni altérée ni falsifiée"
+            ],
+            [
+              "Confidentialité",
+              "Seules les personnes autorisées accèdent à l’information"
+            ],
+            [
+              "Phishing (hameçonnage)",
+              "Faux message qui cherche à voler des identifiants"
+            ],
+            [
+              "Ransomware (rançongiciel)",
+              "Logiciel qui chiffre les données et exige une rançon"
+            ]
+          ]
         }
       ]
     },

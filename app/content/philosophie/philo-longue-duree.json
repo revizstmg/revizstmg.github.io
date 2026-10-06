@@ -12,39 +12,43 @@
           "c": "La deuxième distinction sépare l’**art** de la **technique** (et de l’artisanat). L’artisan produit un objet **utile** en suivant un modèle reproductible ; l’artiste crée une œuvre **unique** dont la fin est en elle-même. Une troisième distinction, plus subtile, oppose le **beau** au **sublime** : le beau apaise et plaît par sa forme harmonieuse ; le sublime (une tempête, la haute montagne, l’immensité du ciel) nous dépasse, mêle plaisir et effroi, et révèle en nous une grandeur morale — c’est la thèse de Kant dans la *Critique de la faculté de juger*."
         },
         {
-          "t": "table",
-          "head": [
-            "Distinction",
-            "Un côté",
-            "L’autre côté"
-          ],
-          "rows": [
-            [
-              "Beau / agréable",
-              "Prétend valoir pour tous",
-              "Ne vaut que pour moi"
-            ],
-            [
-              "Art / artisanat",
-              "Œuvre singulière, fin en soi",
-              "Objet utile, reproductible"
-            ],
-            [
-              "Beau / sublime",
-              "Harmonie, plaisir paisible",
-              "Démesure, plaisir mêlé d’effroi"
-            ],
-            [
-              "Imiter / créer",
-              "Reproduire le réel",
-              "Révéler, transfigurer"
-            ]
-          ]
+          "t": "p",
+          "c": "Le **beau** se distingue de l’**agréable** : quand je dis qu’une chose est belle, je **prétends que mon jugement vaut pour tous**, alors que l’agréable **ne vaut que pour moi** — j’aime ce plat, mais je n’exige pas que tout le monde l’aime. L’**art** se distingue de l’**artisanat** : l’œuvre d’art est **singulière** et a sa **fin en elle-même**, tandis que l’objet artisanal est **utile** et **reproductible**."
+        },
+        {
+          "t": "p",
+          "c": "Le **beau** se distingue du **sublime** : le beau plaît par son **harmonie** et procure un **plaisir paisible** ; le sublime naît de la **démesure**, comme une tempête ou la haute montagne, et procure un **plaisir mêlé d’effroi**. Enfin, **imiter**, c’est **reproduire le réel**, alors que **créer**, c’est le **révéler** ou le **transfigurer**."
         },
         {
           "t": "tip",
           "h": "Au bac",
           "c": "Ouvrir une copie sur une **distinction précise** (beau/agréable, art/technique) montre immédiatement que l’on ne confond pas les termes du sujet."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Beau / agréable",
+              "Prétend valoir pour tous / ne vaut que pour moi"
+            ],
+            [
+              "Art / artisanat",
+              "Œuvre singulière, fin en soi / objet utile, reproductible"
+            ],
+            [
+              "Beau / sublime",
+              "Harmonie, plaisir paisible / démesure, plaisir mêlé d’effroi"
+            ],
+            [
+              "Imiter / créer",
+              "Reproduire le réel / le révéler, le transfigurer"
+            ]
+          ]
         }
       ]
     },
@@ -153,39 +157,43 @@
           "c": "La distinction reine est celle du **légal** et du **légitime** : est légal ce qui est conforme à la loi positive en vigueur ; est légitime ce qui est conforme à la justice, à ce qui **devrait** être le droit. Tout l’espace de la critique politique tient dans cet écart. S’ajoute la distinction du **droit** (les règles) et du **fait** (la force) : « la force fait-elle le droit ? » — non, répond Rousseau, sinon « le plus fort » n’aurait jamais qu’une puissance, jamais une autorité légitime."
         },
         {
-          "t": "table",
-          "head": [
-            "Distinction",
-            "Sens",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Légal / légitime",
-              "Conforme à la loi / à la justice",
-              "Une loi injuste est légale mais illégitime"
-            ],
-            [
-              "Égalité / équité",
-              "La même chose pour tous / adapter au cas",
-              "Même impôt vs impôt proportionnel"
-            ],
-            [
-              "Droit / fait",
-              "Ce qui doit être / ce qui est (la force)",
-              "Le vol réussit (fait) mais reste injuste (droit)"
-            ],
-            [
-              "Justice commutative / distributive",
-              "Échanges égaux / répartition selon le mérite",
-              "Un contrat équitable / une récompense méritée"
-            ]
-          ]
+          "t": "p",
+          "c": "Est **légal** ce qui est **conforme à la loi** en vigueur ; est **légitime** ce qui est **conforme à la justice**. Une loi injuste peut donc être légale mais illégitime. L’**égalité** consiste à donner **la même chose à tous**, alors que l’**équité** consiste à **adapter** la règle à chaque cas : on peut opposer un même impôt pour tous à un impôt proportionnel aux revenus."
+        },
+        {
+          "t": "p",
+          "c": "Le **droit** désigne **ce qui doit être**, le **fait** ce qui est, souvent imposé par la force : un vol peut réussir en fait, il reste injuste en droit. Enfin, la **justice commutative** veille à l’**égalité dans les échanges**, comme dans un contrat équitable, tandis que la **justice distributive** répartit les biens **selon le mérite**, comme une récompense méritée."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "L’**équité** (Aristote) corrige la loi générale quand son application mécanique produirait, dans un cas particulier, une injustice."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Légal / légitime",
+              "Conforme à la loi / conforme à la justice"
+            ],
+            [
+              "Égalité / équité",
+              "La même chose pour tous / adapter la règle au cas"
+            ],
+            [
+              "Droit / fait",
+              "Ce qui doit être / ce qui est (la force)"
+            ],
+            [
+              "Justice commutative / distributive",
+              "Échanges égaux / répartition selon le mérite"
+            ]
+          ]
         }
       ]
     },
@@ -285,39 +293,43 @@
           "c": "Il faut distinguer la liberté de la **licence** (faire n’importe quoi selon ses caprices) : suivre tous ses désirs, c’est souvent en être l’esclave. Il faut aussi distinguer **contrainte** (obstacle extérieur qui empêche) et **obligation** (devoir intérieur qui engage) : la loi juste n’est pas une contrainte mais une obligation qui garantit la liberté de tous. Enfin, le débat central oppose **liberté** et **déterminisme** (tout a une cause) : le déterminisme rend-il la liberté impossible ?"
         },
         {
-          "t": "table",
-          "head": [
-            "Distinction",
-            "Un côté",
-            "L’autre côté"
-          ],
-          "rows": [
-            [
-              "Autonomie / licence",
-              "Se donner sa loi",
-              "Faire n’importe quoi"
-            ],
-            [
-              "Contrainte / obligation",
-              "Obstacle extérieur",
-              "Devoir intérieur"
-            ],
-            [
-              "Liberté / libre arbitre",
-              "Pouvoir agir",
-              "Pouvoir choisir"
-            ],
-            [
-              "Libre / déterminé",
-              "Cause en soi",
-              "Effet de causes antérieures"
-            ]
-          ]
+          "t": "p",
+          "c": "L’**autonomie** consiste à **se donner sa propre loi**, alors que la **licence** consiste à **faire n’importe quoi**, au gré de ses caprices. La **contrainte** est un **obstacle extérieur** qui m’empêche d’agir, alors que l’**obligation** est un **devoir intérieur** que je reconnais et qui m’engage."
+        },
+        {
+          "t": "p",
+          "c": "La **liberté** au sens courant est le **pouvoir d’agir**, alors que le **libre arbitre** est le **pouvoir de choisir**. Enfin, être **libre**, c’est être **cause de soi-même**, à l’origine de ses actes, alors qu’être **déterminé**, c’est être l’**effet de causes antérieures**."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "On peut être **déterminé** et pourtant **responsable** : reconnaître les causes qui nous poussent (éducation, désirs) n’efface pas notre pouvoir de délibérer et de choisir."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Autonomie / licence",
+              "Se donner sa loi / faire n’importe quoi"
+            ],
+            [
+              "Contrainte / obligation",
+              "Obstacle extérieur / devoir intérieur"
+            ],
+            [
+              "Liberté / libre arbitre",
+              "Pouvoir agir / pouvoir choisir"
+            ],
+            [
+              "Libre / déterminé",
+              "Cause de soi / effet de causes antérieures"
+            ]
+          ]
         }
       ]
     },
@@ -413,34 +425,43 @@
           "c": "La grande opposition anthropologique est **nature / culture**. La culture, c’est tout ce que l’homme ajoute à la nature : le langage, les techniques, les lois, les arts, les mœurs. Elle varie d’une société à l’autre (ce qui est « bien élevé » ici ne l’est pas ailleurs), tandis que la nature est universelle. Attention : beaucoup de comportements qu’on croit « naturels » (les rôles, les goûts) sont en réalité **culturels**, donc appris et modifiables."
         },
         {
-          "t": "table",
-          "head": [
-            "Sens de « nature »",
-            "S’oppose à",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "L’environnement, le monde donné",
-              "L’artificiel, la technique",
-              "Une forêt / une autoroute"
-            ],
-            [
-              "L’essence d’une chose",
-              "L’accidentel",
-              "« La nature de l’homme »"
-            ],
-            [
-              "L’inné",
-              "L’acquis (la culture)",
-              "Un réflexe / une politesse apprise"
-            ]
-          ]
+          "t": "p",
+          "c": "Le mot « nature » prend trois sens. Comme **environnement**, le **monde donné**, elle s’oppose à l’**artificiel** et à la **technique** : une forêt face à une autoroute. Comme **essence** d’une chose, elle s’oppose à l’**accidentel** : on parle de « la nature de l’homme »."
+        },
+        {
+          "t": "p",
+          "c": "Comme **inné**, enfin, elle s’oppose à l’**acquis**, c’est-à-dire à la culture : un réflexe est inné, une règle de politesse est apprise."
         },
         {
           "t": "warning",
           "h": "Sophisme naturaliste",
           "c": "Passer du **fait** (« c’est naturel ») à la **valeur** (« c’est donc bien ») est une erreur logique. La nature décrit ce qui est, non ce qui doit être."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Nature / artificiel",
+              "Le monde donné / ce que l’homme fabrique"
+            ],
+            [
+              "Essence / accident",
+              "Ce qu’une chose est fondamentalement / ce qui pourrait être autrement"
+            ],
+            [
+              "Inné / acquis",
+              "Présent dès la naissance / appris par la culture"
+            ],
+            [
+              "Sophisme naturaliste",
+              "Passer de « c’est naturel » à « c’est donc bien »"
+            ]
+          ]
         }
       ]
     },
@@ -540,39 +561,47 @@
           "c": "La distinction philosophique décisive oppose **croire** et **savoir**. **Croire**, c’est tenir pour vrai **sans preuve** suffisante — soit par confiance (la foi religieuse), soit par simple opinion. **Savoir**, c’est tenir pour vrai **avec preuve** (démonstration, expérience vérifiable). La foi n’est donc pas un savoir raté : c’est un autre rapport à la vérité, qui engage la personne entière. À ne pas confondre non plus : la **foi** (adhésion vécue) et la **religion** (institution, dogme) ; on peut avoir l’une sans l’autre."
         },
         {
-          "t": "table",
-          "head": [
-            "Distinction",
-            "Un côté",
-            "L’autre côté"
-          ],
-          "rows": [
-            [
-              "Croire / savoir",
-              "Sans preuve (foi, opinion)",
-              "Avec preuve (science)"
-            ],
-            [
-              "Sacré / profane",
-              "Mis à part, objet de respect",
-              "Ordinaire, usuel"
-            ],
-            [
-              "Foi / religion",
-              "Adhésion personnelle",
-              "Institution, dogme, rite"
-            ],
-            [
-              "Croyance / superstition",
-              "Adhésion réfléchie",
-              "Crainte irrationnelle"
-            ]
-          ]
+          "t": "p",
+          "c": "**Croire**, c’est tenir pour vrai **sans preuve**, par la foi ou par simple opinion ; **savoir**, c’est tenir pour vrai **avec preuve**, comme dans la science. Le **sacré** est ce qui est **mis à part** et fait l’objet d’un **respect** particulier ; le **profane** est l’**ordinaire**, l’usuel."
+        },
+        {
+          "t": "p",
+          "c": "La **foi** est une **adhésion personnelle**, alors que la **religion** est une **institution**, avec ses **dogmes** et ses **rites**. Enfin, la **croyance** peut être une **adhésion réfléchie**, alors que la **superstition** est une **crainte irrationnelle**."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "La **laïcité** n’est pas l’athéisme : c’est la neutralité de l’État, qui garantit à chacun la liberté de croire ou de ne pas croire."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Croire / savoir",
+              "Sans preuve (foi, opinion) / avec preuve (science)"
+            ],
+            [
+              "Sacré / profane",
+              "Mis à part, objet de respect / ordinaire, usuel"
+            ],
+            [
+              "Foi / religion",
+              "Adhésion personnelle / institution, dogme, rite"
+            ],
+            [
+              "Croyance / superstition",
+              "Adhésion réfléchie / crainte irrationnelle"
+            ],
+            [
+              "Laïcité",
+              "Neutralité de l’État, qui garantit la liberté de croire ou de ne pas croire"
+            ]
+          ]
         }
       ]
     },
@@ -672,39 +701,47 @@
           "c": "La distinction décisive pour juger la technique est celle du **moyen** et de la **fin** : la technique est un **moyen**, neutre en soi ; sa valeur dépend de la **fin** poursuivie et de l’**usage**. Un même savoir (la chimie, le nucléaire, l’informatique) peut soigner ou détruire. S’ajoutent la distinction **outil / machine** (l’outil prolonge la main, la machine remplace le geste et rend l’homme surveillant) et la notion d’**aliénation** (être dépossédé du sens de son activité)."
         },
         {
-          "t": "table",
-          "head": [
-            "Distinction",
-            "Un côté",
-            "L’autre côté"
-          ],
-          "rows": [
-            [
-              "Technique / science",
-              "Vise l’efficace, l’utile",
-              "Vise le vrai, la connaissance"
-            ],
-            [
-              "Moyen / fin",
-              "La technique (neutre)",
-              "L’usage, le but (jugés)"
-            ],
-            [
-              "Outil / machine",
-              "Prolonge le geste humain",
-              "Remplace le geste, l’automatise"
-            ],
-            [
-              "Travail / aliénation",
-              "Se réaliser en produisant",
-              "Se perdre dans un travail vidé de sens"
-            ]
-          ]
+          "t": "p",
+          "c": "La **technique** vise l’**efficace** et l’**utile**, alors que la **science** vise le **vrai** et la **connaissance**. La technique est un **moyen**, neutre en lui-même ; ce qu’on juge, c’est la **fin** poursuivie et l’**usage** qu’on en fait."
+        },
+        {
+          "t": "p",
+          "c": "L’**outil** **prolonge le geste humain**, alors que la **machine** **remplace ce geste** et l’**automatise**. Enfin, le **travail** peut être l’occasion de **se réaliser en produisant**, mais il devient **aliénation** quand on **se perd** dans un travail **vidé de sens**."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "L’homme est *homo faber* (Bergson) : la technique n’est pas un accessoire de l’humanité, elle en est **constitutive**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Technique / science",
+              "Vise l’efficace, l’utile / vise le vrai, la connaissance"
+            ],
+            [
+              "Moyen / fin",
+              "La technique, neutre / l’usage et le but, qui se jugent"
+            ],
+            [
+              "Outil / machine",
+              "Prolonge le geste / remplace le geste, l’automatise"
+            ],
+            [
+              "Travail / aliénation",
+              "Se réaliser en produisant / se perdre dans un travail vidé de sens"
+            ],
+            [
+              "Homo faber (Bergson)",
+              "La technique est constitutive de l’humanité"
+            ]
+          ]
         }
       ]
     },
@@ -804,39 +841,47 @@
           "c": "Deux distinctions structurent la notion. D’abord **opinion / savoir** : l’opinion (*doxa*) est une croyance non fondée, même partagée ; le savoir (*épistémè*) est justifié. Ensuite, avec **Leibniz**, **vérités de raison** (nécessaires, universelles, comme les mathématiques : leur contraire est impossible) et **vérités de fait** (contingentes, vérifiées par l’expérience : « César a franchi le Rubicon » — cela aurait pu ne pas être). On ne prouve pas les secondes comme les premières."
         },
         {
-          "t": "table",
-          "head": [
-            "Distinction",
-            "Un côté",
-            "L’autre côté"
-          ],
-          "rows": [
-            [
-              "Vérité / réalité",
-              "Propriété du jugement",
-              "Ce qui est"
-            ],
-            [
-              "Vérité / certitude",
-              "Accord avec l’objet",
-              "Conviction subjective (faillible)"
-            ],
-            [
-              "Opinion / savoir",
-              "Croyance non fondée",
-              "Connaissance justifiée"
-            ],
-            [
-              "Vérités de raison / de fait",
-              "Nécessaires (logique)",
-              "Contingentes (expérience)"
-            ]
-          ]
+          "t": "p",
+          "c": "La **vérité** est une **propriété du jugement**, alors que la **réalité** est **ce qui est**. La vérité est l’**accord du jugement avec son objet**, alors que la **certitude** n’est qu’une **conviction subjective**, qui peut se tromper : on peut être certain et avoir tort."
+        },
+        {
+          "t": "p",
+          "c": "L’**opinion** est une **croyance non fondée**, alors que le **savoir** est une **connaissance justifiée**. Enfin, avec Leibniz, les **vérités de raison** sont **nécessaires** et relèvent de la **logique**, alors que les **vérités de fait** sont **contingentes** et relèvent de l’**expérience**."
         },
         {
           "t": "warning",
           "h": "Relativisme",
           "c": "« À chacun sa vérité » confond le **goût** (subjectif, légitime) et la **vérité** (qui prétend valoir pour tous). Sur un fait, toutes les opinions ne se valent pas."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Vérité / réalité",
+              "Propriété du jugement / ce qui est"
+            ],
+            [
+              "Vérité / certitude",
+              "Accord avec l’objet / conviction subjective (faillible)"
+            ],
+            [
+              "Opinion / savoir",
+              "Croyance non fondée / connaissance justifiée"
+            ],
+            [
+              "Vérités de raison / de fait",
+              "Nécessaires (logique) / contingentes (expérience)"
+            ],
+            [
+              "Relativisme",
+              "« À chacun sa vérité » : confond le goût et la vérité"
+            ]
+          ]
         }
       ]
     },
@@ -932,42 +977,55 @@
           "c": "Une copie de philosophie se reconnaît à sa **langue**. Quelques réflexes de vocabulaire font gagner des points : « **problématiser** » (montrer la tension), « **une distinction** » (préciser deux sens d’un mot), « **un présupposé** » (ce que le sujet tient pour acquis), « **une objection** », « **une nuance** ». On évite « je pense que », « de nos jours », « depuis la nuit des temps », les généralités et le « bla-bla »."
         },
         {
-          "t": "table",
-          "head": [
-            "Pour…",
-            "Connecteurs à utiliser"
-          ],
-          "rows": [
-            [
-              "Ajouter un argument",
-              "de plus, en outre, par ailleurs"
-            ],
-            [
-              "Opposer (antithèse)",
-              "mais, cependant, toutefois, or"
-            ],
-            [
-              "Conclure une étape",
-              "donc, ainsi, par conséquent"
-            ],
-            [
-              "Nuancer",
-              "certes… mais, dans une certaine mesure"
-            ],
-            [
-              "Illustrer",
-              "par exemple, ainsi, comme le montre"
-            ],
-            [
-              "Dépasser",
-              "en réalité, plus profondément, il faut alors distinguer"
-            ]
-          ]
+          "t": "p",
+          "c": "Chaque connecteur a une fonction précise. Pour **ajouter un argument**, on écrit « de plus », « en outre » ou « par ailleurs ». Pour **opposer**, notamment au moment de l’antithèse, on utilise « mais », « cependant », « toutefois » ou « or ». Pour **conclure une étape** du raisonnement, on écrit « donc », « ainsi » ou « par conséquent »."
+        },
+        {
+          "t": "p",
+          "c": "Pour **nuancer**, on emploie « certes… mais » ou « dans une certaine mesure ». Pour **illustrer**, « par exemple », « ainsi » ou « comme le montre ». Pour **dépasser** une opposition, enfin, on écrit « en réalité », « plus profondément » ou « il faut alors distinguer »."
         },
         {
           "t": "tip",
           "h": "Structure d’un paragraphe",
           "c": "Une **idée** (la phrase-clé) + un **argument** (pourquoi c’est vrai) + un **exemple ou un auteur** (qui l’illustre) + une **transition** vers la suite. Toujours dans cet ordre."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Connecteurs d’addition",
+              "De plus, en outre, par ailleurs"
+            ],
+            [
+              "Connecteurs d’opposition",
+              "Mais, cependant, toutefois, or"
+            ],
+            [
+              "Connecteurs de conclusion",
+              "Donc, ainsi, par conséquent"
+            ],
+            [
+              "Connecteurs de nuance",
+              "Certes… mais, dans une certaine mesure"
+            ],
+            [
+              "Connecteurs d’illustration",
+              "Par exemple, ainsi, comme le montre"
+            ],
+            [
+              "Connecteurs de dépassement",
+              "En réalité, plus profondément, il faut alors distinguer"
+            ],
+            [
+              "Présupposé",
+              "Ce que le sujet tient pour acquis sans le dire"
+            ]
+          ]
         }
       ]
     },
@@ -1003,54 +1061,55 @@
       "h": "🗂️ Banque de sujets par notion (avec problématiques)",
       "blocks": [
         {
-          "t": "table",
-          "head": [
-            "Notion",
-            "Sujet possible",
-            "Tension à dégager"
-          ],
-          "rows": [
-            [
-              "L’art",
-              "L’art n’a-t-il pour but que le beau ?",
-              "Plaire / dire une vérité, déranger"
-            ],
-            [
-              "La justice",
-              "Est-il toujours juste d’obéir à la loi ?",
-              "Légal / légitime"
-            ],
-            [
-              "La liberté",
-              "Être libre, est-ce faire ce que l’on veut ?",
-              "Licence / autonomie"
-            ],
-            [
-              "La nature",
-              "L’homme doit-il dominer la nature ?",
-              "Maîtrise / responsabilité"
-            ],
-            [
-              "La religion",
-              "La foi est-elle contraire à la raison ?",
-              "Croire / savoir"
-            ],
-            [
-              "La technique",
-              "La technique nous libère-t-elle ?",
-              "Moyen / fin, libération / aliénation"
-            ],
-            [
-              "La vérité",
-              "Toutes les opinions se valent-elles ?",
-              "Opinion / savoir"
-            ]
-          ]
+          "t": "p",
+          "c": "Pour chaque notion, un sujet type et sa tension. Sur **l’art** : « L’art n’a-t-il pour but que le beau ? » — l’art doit-il **plaire**, ou peut-il **dire une vérité** et **déranger** ? Sur **la justice** : « Est-il toujours juste d’obéir à la loi ? » — toute la tension tient dans l’écart entre le **légal** et le **légitime**. Sur **la liberté** : « Être libre, est-ce faire ce que l’on veut ? » — on oppose la **licence** à l’**autonomie**."
+        },
+        {
+          "t": "p",
+          "c": "Sur **la nature** : « L’homme doit-il dominer la nature ? » — la **maîtrise** s’oppose à la **responsabilité**. Sur **la religion** : « La foi est-elle contraire à la raison ? » — on travaille la distinction entre **croire et savoir**. Sur **la technique** : « La technique nous libère-t-elle ? » — on joue sur **moyen et fin**, **libération et aliénation**. Sur **la vérité**, enfin : « Toutes les opinions se valent-elles ? » — on oppose l’**opinion** au **savoir**."
         },
         {
           "t": "tip",
           "h": "Entraînement",
           "c": "Pour chaque sujet, entraîne-toi à écrire **seulement l’introduction** (amener → définir → problématiser → annoncer). C’est l’exercice le plus rentable."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "L’art (sujet type)",
+              "« L’art n’a-t-il pour but que le beau ? » : plaire / dire une vérité, déranger"
+            ],
+            [
+              "La justice (sujet type)",
+              "« Est-il toujours juste d’obéir à la loi ? » : légal / légitime"
+            ],
+            [
+              "La liberté (sujet type)",
+              "« Être libre, est-ce faire ce que l’on veut ? » : licence / autonomie"
+            ],
+            [
+              "La nature (sujet type)",
+              "« L’homme doit-il dominer la nature ? » : maîtrise / responsabilité"
+            ],
+            [
+              "La religion (sujet type)",
+              "« La foi est-elle contraire à la raison ? » : croire / savoir"
+            ],
+            [
+              "La technique (sujet type)",
+              "« La technique nous libère-t-elle ? » : moyen / fin, libération / aliénation"
+            ],
+            [
+              "La vérité (sujet type)",
+              "« Toutes les opinions se valent-elles ? » : opinion / savoir"
+            ]
+          ]
         }
       ]
     },

@@ -94,29 +94,12 @@
           "c": "La **structure** définit comment le travail est **réparti** et **coordonné** : qui fait quoi, qui commande qui. Elle se représente par un **organigramme**. Plusieurs grands types existent, chacun avec ses forces et faiblesses."
         },
         {
-          "t": "table",
-          "head": [
-            "Structure",
-            "Principe",
-            "Limite"
-          ],
-          "rows": [
-            [
-              "Fonctionnelle",
-              "Découpage par fonction (production, vente, RH)",
-              "Cloisonnement entre services"
-            ],
-            [
-              "Divisionnelle",
-              "Découpage par produit / zone / marché",
-              "Doublons, coûts"
-            ],
-            [
-              "Matricielle",
-              "Croise fonctions et projets",
-              "Double hiérarchie, conflits"
-            ]
-          ]
+          "t": "p",
+          "c": "La **structure fonctionnelle** découpe l’organisation **par grande fonction** : production, vente, ressources humaines. Elle favorise la spécialisation, mais elle crée un **cloisonnement entre services**, qui communiquent mal. La **structure divisionnelle** découpe l’organisation **par produit, par zone géographique ou par marché** ; chaque division fonctionne presque comme une entreprise, ce qui entraîne des **doublons** et des **coûts** supplémentaires."
+        },
+        {
+          "t": "p",
+          "c": "La **structure matricielle** **croise les fonctions et les projets** : un salarié dépend à la fois de son chef de service et de son chef de projet. Cette **double hiérarchie** est source de souplesse, mais aussi de **conflits**."
         },
         {
           "t": "p",
@@ -126,6 +109,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Fonctionnelle = par **métier** ; divisionnelle = par **produit/marché** ; matricielle = **les deux** (souple mais source de conflits). La structure doit servir la **stratégie**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Structure",
+              "Répartition et coordination du travail, représentée par un organigramme"
+            ],
+            [
+              "Structure fonctionnelle",
+              "Découpage par fonction / cloisonnement entre services"
+            ],
+            [
+              "Structure divisionnelle",
+              "Découpage par produit, zone ou marché / doublons, coûts"
+            ],
+            [
+              "Structure matricielle",
+              "Croise fonctions et projets / double hiérarchie, conflits"
+            ],
+            [
+              "Structure plate",
+              "Peu de niveaux hiérarchiques, pour décider plus vite"
+            ]
+          ]
         }
       ]
     },
@@ -193,29 +206,12 @@
           "c": "Toutes les décisions n’ont pas la même portée. **Igor Ansoff** distingue trois niveaux, du plus engageant au plus quotidien. Bien les repérer est essentiel au bac."
         },
         {
-          "t": "table",
-          "head": [
-            "Niveau",
-            "Horizon",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Stratégique",
-              "Long terme, engage toute l’organisation",
-              "Se lancer à l’international"
-            ],
-            [
-              "Tactique (administratif)",
-              "Moyen terme, organise les ressources",
-              "Recruter, réorganiser un service"
-            ],
-            [
-              "Opérationnel",
-              "Court terme, quotidien",
-              "Établir les plannings de la semaine"
-            ]
-          ]
+          "t": "p",
+          "c": "La **décision stratégique** porte sur le **long terme** et **engage toute l’organisation** : se lancer à l’international en est un exemple. La **décision tactique**, qu’Ansoff appelle aussi **administrative**, porte sur le **moyen terme** et **organise les ressources** : recruter, réorganiser un service."
+        },
+        {
+          "t": "p",
+          "c": "La **décision opérationnelle** porte sur le **court terme** et concerne le **quotidien** : établir les plannings de la semaine."
         },
         {
           "t": "p",
@@ -225,6 +221,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Décision **stratégique** (rare, engageante, dirigeants) → **tactique** (organiser) → **opérationnelle** (quotidienne). La rationalité est **limitée** (Simon)."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Décision stratégique",
+              "Long terme, engage toute l’organisation (se lancer à l’international)"
+            ],
+            [
+              "Décision tactique (administrative)",
+              "Moyen terme, organise les ressources (recruter, réorganiser)"
+            ],
+            [
+              "Décision opérationnelle",
+              "Court terme, quotidien (plannings de la semaine)"
+            ],
+            [
+              "Rationalité limitée (Simon)",
+              "Le décideur choisit une solution satisfaisante, pas optimale"
+            ]
+          ]
         }
       ]
     },
@@ -259,29 +281,12 @@
           "c": "Pour croître, une organisation choisit une **modalité de développement**. Le choix dépend de ses moyens, de sa rapidité voulue et du risque accepté."
         },
         {
-          "t": "table",
-          "head": [
-            "Modalité",
-            "Principe",
-            "Atout / risque"
-          ],
-          "rows": [
-            [
-              "Croissance interne",
-              "Se développer par ses propres moyens",
-              "Maîtrisée mais lente"
-            ],
-            [
-              "Croissance externe",
-              "Racheter / fusionner avec une autre",
-              "Rapide mais coûteuse et risquée"
-            ],
-            [
-              "Alliance / partenariat",
-              "Coopérer sans fusionner",
-              "Partage des risques mais dépendance"
-            ]
-          ]
+          "t": "p",
+          "c": "La **croissance interne** consiste à **se développer par ses propres moyens** : ouvrir de nouveaux sites, embaucher, investir. Elle est **maîtrisée**, mais **lente**. La **croissance externe** consiste à **racheter une autre entreprise** ou à **fusionner** avec elle : elle est **rapide**, mais **coûteuse** et **risquée**, car il faut réussir l’intégration de deux organisations."
+        },
+        {
+          "t": "p",
+          "c": "L’**alliance**, ou **partenariat**, permet de **coopérer sans fusionner** : les partenaires **partagent les risques**, mais deviennent **dépendants** les uns des autres."
         },
         {
           "t": "p",
@@ -291,6 +296,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Croissance **interne** (soi-même, lent), **externe** (rachat, rapide/risqué) ou **alliance** (coopérer). L’**intégration** maîtrise la filière ; l’**externalisation** recentre sur le métier."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Croissance interne",
+              "Par ses propres moyens : maîtrisée mais lente"
+            ],
+            [
+              "Croissance externe",
+              "Rachat ou fusion : rapide mais coûteuse et risquée"
+            ],
+            [
+              "Alliance / partenariat",
+              "Coopérer sans fusionner : partage des risques mais dépendance"
+            ],
+            [
+              "Intégration amont / aval",
+              "Maîtriser les fournisseurs / la distribution"
+            ],
+            [
+              "Externalisation",
+              "Confier une activité à un tiers pour se recentrer"
+            ]
+          ]
         }
       ]
     },
@@ -332,24 +367,8 @@
           "c": "La **gouvernance** désigne l’ensemble des mécanismes qui organisent la **direction** et le **contrôle** de l’entreprise : qui décide, au nom de qui, et qui vérifie. Deux grandes conceptions s’opposent."
         },
         {
-          "t": "table",
-          "head": [
-            "Gouvernance",
-            "Priorité",
-            "Logique"
-          ],
-          "rows": [
-            [
-              "Actionnariale",
-              "Les actionnaires",
-              "Maximiser la valeur pour les propriétaires"
-            ],
-            [
-              "Partenariale",
-              "Toutes les parties prenantes",
-              "Équilibrer les intérêts (salariés, clients, société)"
-            ]
-          ]
+          "t": "p",
+          "c": "La **gouvernance actionnariale** donne la **priorité aux actionnaires** : sa logique est de **maximiser la valeur** pour les propriétaires de l’entreprise. La **gouvernance partenariale** prend en compte **toutes les parties prenantes** : sa logique est d’**équilibrer les intérêts** des actionnaires, des salariés, des clients et de la société."
         },
         {
           "t": "p",
@@ -359,6 +378,28 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Gouvernance **actionnariale** (priorité aux propriétaires) vs **partenariale** (toutes les parties prenantes). La seconde prolonge la logique **RSE**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Gouvernance",
+              "Mécanismes qui organisent la direction et le contrôle de l’entreprise"
+            ],
+            [
+              "Gouvernance actionnariale",
+              "Priorité aux actionnaires : maximiser la valeur pour les propriétaires"
+            ],
+            [
+              "Gouvernance partenariale",
+              "Toutes les parties prenantes : équilibrer les intérêts"
+            ]
+          ]
         }
       ]
     },

@@ -69,6 +69,19 @@ describe('contenu', () => {
     }
   })
 
+  // Le cours est rédigé en texte ; les tableaux n'ont leur place qu'à la fin
+  // d'un chapitre (« Notions et définitions »).
+  it('aucun tableau au milieu d’un chapitre', () => {
+    for (const [id, th] of Object.entries(C.ALL_CHAPTERS)) {
+      for (const sec of th.cours || []) {
+        const blocs = sec.blocks || []
+        const dernierTexte = blocs.map((b) => b.t !== 'table').lastIndexOf(true)
+        const auMilieu = blocs.filter((b, i) => b.t === 'table' && i < dernierTexte)
+        expect.soft(auMilieu.length, `${id} « ${sec.h} »`).toBe(0)
+      }
+    }
+  })
+
   it('identifiants de thème uniques', () => {
     const ids = C.SUBJECTS.flatMap((s) => (s.chapters || []).map((c) => c.id))
     expect(new Set(ids).size).toBe(ids.length)

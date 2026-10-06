@@ -17,62 +17,60 @@
           "h": "Le présent simple et le présent continu (be + V-ing)",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Present simple",
-                "Structure",
-                "Exemple"
-              ],
-              "rows": [
-                [
-                  "Affirmative",
-                  "sujet + base (+ **-s** à la 3ᵉ pers.)",
-                  "She work**s** every day."
-                ],
-                [
-                  "Négative",
-                  "don't / doesn't + base",
-                  "He does**n't** work on Sundays."
-                ],
-                [
-                  "Interrogative",
-                  "Do / Does + sujet + base ?",
-                  "Do you work here?"
-                ],
-                [
-                  "Emploi",
-                  "habitudes, vérités générales",
-                  "Water boils at 100 °C."
-                ]
-              ]
+              "t": "p",
+              "c": "Le **present simple** se forme avec la **base verbale**, à laquelle on ajoute un **-s à la troisième personne du singulier** : *She work**s** every day.* À la forme **négative**, on utilise l’auxiliaire **don’t**, ou **doesn’t** à la troisième personne, suivi de la base : *He does**n’t** work on Sundays.* Le -s passe alors sur l’auxiliaire, et le verbe reste à la base."
+            },
+            {
+              "t": "p",
+              "c": "À la forme **interrogative**, on place **Do** ou **Does** devant le sujet, puis la base verbale : *Do you work here?* On emploie le present simple pour parler des **habitudes** et des **vérités générales**, comme *Water boils at 100 °C.*"
+            },
+            {
+              "t": "p",
+              "c": "Le **present continuous** se forme avec l’auxiliaire **be** conjugué au présent (**am, is, are**) suivi du verbe en **-ing** : *They are work**ing** now.* À la forme **négative**, on ajoute **not** après l’auxiliaire : *I’m not working today.* À la forme **interrogative**, on place l’auxiliaire devant le sujet : *Are you listening?*"
+            },
+            {
+              "t": "p",
+              "c": "On l’emploie pour une **action en cours** au moment où l’on parle, ou pour une situation **temporaire** : *She is studying for her exam.*"
             },
             {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Present continuous",
-                "Structure",
-                "Exemple"
+                "Notion",
+                "Définition"
               ],
               "rows": [
                 [
-                  "Affirmative",
-                  "am / is / are + **V-ing**",
-                  "They are work**ing** now."
+                  "Present simple (affirmative)",
+                  "Sujet + base, avec -s à la 3ᵉ personne du singulier (She works)"
                 ],
                 [
-                  "Négative",
-                  "am / is / are + not + V-ing",
-                  "I'm not working today."
+                  "Present simple (négative)",
+                  "don’t / doesn’t + base (He doesn’t work)"
                 ],
                 [
-                  "Interrogative",
-                  "Am / Is / Are + sujet + V-ing ?",
-                  "Are you listening?"
+                  "Present simple (interrogative)",
+                  "Do / Does + sujet + base ? (Do you work here?)"
                 ],
                 [
-                  "Emploi",
-                  "action en cours, temporaire",
-                  "She is studying for her exam."
+                  "Emploi du present simple",
+                  "Habitudes, vérités générales"
+                ],
+                [
+                  "Present continuous (affirmative)",
+                  "am / is / are + V-ing (They are working)"
+                ],
+                [
+                  "Present continuous (négative)",
+                  "am / is / are + not + V-ing"
+                ],
+                [
+                  "Present continuous (interrogative)",
+                  "Am / Is / Are + sujet + V-ing ?"
+                ],
+                [
+                  "Emploi du present continuous",
+                  "Action en cours, situation temporaire"
                 ]
               ]
             }
@@ -82,62 +80,60 @@
           "h": "Le passé : prétérit ou present perfect",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Preterit",
-                "Structure",
-                "Exemple"
-              ],
-              "rows": [
-                [
-                  "Affirmative",
-                  "base + **-ed** (ou verbe irrégulier)",
-                  "We visit**ed** Rome. / I **went** home."
-                ],
-                [
-                  "Négative",
-                  "didn't + base",
-                  "They did**n't** come."
-                ],
-                [
-                  "Interrogative",
-                  "Did + sujet + base ?",
-                  "Did you see it?"
-                ],
-                [
-                  "Emploi",
-                  "action passée **datée** et terminée",
-                  "She was born in 2007."
-                ]
-              ]
+              "t": "p",
+              "c": "Le **prétérit** se forme en ajoutant **-ed** à la base des verbes réguliers, *We visit**ed** Rome*, ou en utilisant la forme propre des **verbes irréguliers**, *I **went** home.* À la forme **négative**, on emploie **didn’t** suivi de la **base** : *They did**n’t** come* — l’auxiliaire porte déjà la marque du passé. À la forme **interrogative**, on place **Did** devant le sujet : *Did you see it?*"
+            },
+            {
+              "t": "p",
+              "c": "On emploie le prétérit pour une **action passée, datée et terminée**, sans lien avec le présent : *She was born in 2007.*"
+            },
+            {
+              "t": "p",
+              "c": "Le **present perfect** se forme avec **have** ou **has** suivi du **participe passé** : *I have finish**ed**.* À la forme **négative**, on emploie **haven’t** ou **hasn’t** : *He has**n’t** arrived.* À la forme **interrogative**, on place **Have** ou **Has** devant le sujet : *Have you eaten?*"
+            },
+            {
+              "t": "p",
+              "c": "On l’emploie pour marquer un **lien entre le passé et le présent** : une action passée dont le résultat compte maintenant, ou une situation qui dure encore. Il s’accompagne souvent de **for**, **since**, **already**, **yet** ou **ever** : *I’ve known her **for** years.*"
             },
             {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Present perfect",
-                "Structure",
-                "Exemple"
+                "Notion",
+                "Définition"
               ],
               "rows": [
                 [
-                  "Affirmative",
-                  "have / has + **participe passé**",
-                  "I have finish**ed**."
+                  "Prétérit (affirmative)",
+                  "Base + -ed, ou forme irrégulière (We visited / I went)"
                 ],
                 [
-                  "Négative",
-                  "haven't / hasn't + PP",
-                  "He has**n't** arrived."
+                  "Prétérit (négative)",
+                  "didn’t + base"
                 ],
                 [
-                  "Interrogative",
-                  "Have / Has + sujet + PP ?",
-                  "Have you eaten?"
+                  "Prétérit (interrogative)",
+                  "Did + sujet + base ?"
                 ],
                 [
-                  "Emploi",
-                  "lien passé-présent (for, since, already, yet, ever)",
-                  "I've known her **for** years."
+                  "Emploi du prétérit",
+                  "Action passée, datée et terminée"
+                ],
+                [
+                  "Present perfect (affirmative)",
+                  "have / has + participe passé"
+                ],
+                [
+                  "Present perfect (négative)",
+                  "haven’t / hasn’t + participe passé"
+                ],
+                [
+                  "Present perfect (interrogative)",
+                  "Have / Has + sujet + participe passé ?"
+                ],
+                [
+                  "Emploi du present perfect",
+                  "Lien passé-présent (for, since, already, yet, ever)"
                 ]
               ]
             }
@@ -147,37 +143,40 @@
           "h": "Le past perfect et le futur : will, be going to, be + V-ing",
           "blocks": [
             {
+              "t": "p",
+              "c": "Le **past perfect** se forme avec **had** suivi du **participe passé** ; il sert à exprimer une action antérieure à une autre action passée : *She **had left** before I arrived.* Pour le futur, l’anglais dispose de plusieurs formes. **Will + base** exprime une prédiction ou une décision prise sur le moment : *I **will** call you*, *I’ll help.* **Be going to + base** exprime une intention ou une prévision fondée sur des indices : *It’s **going to** rain.*"
+            },
+            {
+              "t": "p",
+              "c": "**Be + V-ing**, le present continuous, exprime un **projet** déjà organisé : *I’m meeting him tomorrow.* Le **future perfect**, enfin, se forme avec **will have + participe passé** et décrit une action qui sera accomplie avant un moment futur : *By 2030, he **will have** graduated.*"
+            },
+            {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Temps",
-                "Structure",
-                "Exemple"
+                "Notion",
+                "Définition"
               ],
               "rows": [
                 [
                   "Past perfect",
-                  "had + **participe passé**",
-                  "She **had left** before I arrived."
+                  "had + participe passé (action antérieure à une autre action passée)"
                 ],
                 [
-                  "Futur (will)",
-                  "will + base",
-                  "I **will** call you. / I'll help."
+                  "Futur avec will",
+                  "will + base (prédiction, décision immédiate)"
                 ],
                 [
-                  "Futur (be going to)",
-                  "am / is / are going to + base",
-                  "It's **going to** rain."
+                  "Futur avec be going to",
+                  "am / is / are going to + base (intention, prévision)"
                 ],
                 [
-                  "Futur (projet)",
-                  "be + V-ing",
-                  "I'm meeting him tomorrow."
+                  "Futur de projet",
+                  "be + V-ing (I’m meeting him tomorrow)"
                 ],
                 [
                   "Future perfect",
-                  "will have + PP",
-                  "By 2030, he **will have** graduated."
+                  "will have + participe passé"
                 ]
               ]
             }
@@ -187,48 +186,54 @@
           "h": "Les modaux : can, may, must, should, would + base verbale",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Modal",
-                "Sens",
-                "Exemple"
-              ],
-              "rows": [
-                [
-                  "can / could",
-                  "capacité, possibilité",
-                  "I **can** swim. / **Could** you help?"
-                ],
-                [
-                  "may / might",
-                  "probabilité, permission",
-                  "It **may** rain. / You **may** go."
-                ],
-                [
-                  "must",
-                  "obligation forte, quasi-certitude",
-                  "You **must** stop. / He **must** be tired."
-                ],
-                [
-                  "have to",
-                  "obligation (extérieure)",
-                  "I **have to** work tomorrow."
-                ],
-                [
-                  "should / ought to",
-                  "conseil",
-                  "You **should** rest."
-                ],
-                [
-                  "would",
-                  "hypothèse, politesse",
-                  "I **would** like a coffee."
-                ]
-              ]
+              "t": "p",
+              "c": "Chaque modal a son sens. **Can** et **could** expriment la **capacité** ou la **possibilité** : *I **can** swim*, et *could* sert aussi à demander poliment, *Could you help?* **May** et **might** expriment la **probabilité**, *It **may** rain*, ou la **permission**, *You **may** go.* **Must** exprime une **obligation forte**, *You **must** stop*, ou une **quasi-certitude**, *He **must** be tired.*"
+            },
+            {
+              "t": "p",
+              "c": "**Have to** exprime une obligation qui vient de l’**extérieur** : *I **have to** work tomorrow.* **Should** et **ought to** expriment le **conseil** : *You **should** rest.* **Would**, enfin, exprime l’**hypothèse** ou la **politesse** : *I **would** like a coffee.*"
             },
             {
               "t": "p",
               "c": "**Règle** : un modal est toujours suivi de la **base verbale** (pas de « to », pas de « -s », pas de « -ed »)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "can / could",
+                  "Capacité, possibilité (demande polie avec could)"
+                ],
+                [
+                  "may / might",
+                  "Probabilité, permission"
+                ],
+                [
+                  "must",
+                  "Obligation forte, quasi-certitude"
+                ],
+                [
+                  "have to",
+                  "Obligation extérieure"
+                ],
+                [
+                  "should / ought to",
+                  "Conseil"
+                ],
+                [
+                  "would",
+                  "Hypothèse, politesse"
+                ],
+                [
+                  "Modal + base verbale",
+                  "Jamais de to, de -s ni de -ed après un modal"
+                ]
+              ]
             }
           ]
         },
@@ -236,67 +241,68 @@
           "h": "Les conditionnels (if) et la voix passive (be + participe passé)",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Conditionnel",
-                "Structure",
-                "Exemple"
-              ],
-              "rows": [
-                [
-                  "Type 0 (général)",
-                  "If + present, present",
-                  "If you heat ice, it melts."
-                ],
-                [
-                  "Type 1 (réel)",
-                  "If + present, **will** + base",
-                  "If it rains, we **will** stay."
-                ],
-                [
-                  "Type 2 (irréel présent)",
-                  "If + preterit, **would** + base",
-                  "If I **were** rich, I **would** travel."
-                ],
-                [
-                  "Type 3 (irréel passé)",
-                  "If + past perfect, **would have** + PP",
-                  "If I had known, I **would have** come."
-                ]
-              ]
+              "t": "p",
+              "c": "On distingue quatre types de phrases conditionnelles. Le **type 0** exprime une **vérité générale** : *if* + présent, puis présent — *If you heat ice, it melts.* Le **type 1** exprime une condition **réelle**, qui peut se réaliser : *if* + présent, puis **will** + base — *If it rains, we **will** stay.*"
+            },
+            {
+              "t": "p",
+              "c": "Le **type 2** exprime une condition **irréelle dans le présent** : *if* + prétérit, puis **would** + base — *If I **were** rich, I **would** travel.* Le **type 3** exprime une condition **irréelle dans le passé**, un regret : *if* + past perfect, puis **would have** + participe passé — *If I had known, I **would have** come.*"
+            },
+            {
+              "t": "p",
+              "c": "La voix passive se forme toujours avec **be** conjugué au temps voulu, suivi du **participe passé**. Au **présent** : *am, is, are* + participe passé — *The office **is cleaned** every day.* Au **prétérit** : *was, were* + participe passé — *The report **was written** yesterday.* Au **present perfect** : *has* ou *have been* + participe passé — *It **has been** done.*"
+            },
+            {
+              "t": "p",
+              "c": "Au **futur** : *will be* + participe passé — *It **will be** finished soon.* Avec un **modal** : modal + *be* + participe passé — *It **must be** checked.* On met en avant ce qui subit l’action ; l’auteur, s’il est précisé, est introduit par *by*."
             },
             {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Voix passive",
-                "Structure",
-                "Exemple"
+                "Notion",
+                "Définition"
               ],
               "rows": [
                 [
-                  "Présent",
-                  "am / is / are + PP",
-                  "The office **is cleaned** every day."
+                  "Conditionnel type 0",
+                  "If + présent, présent (vérité générale)"
                 ],
                 [
-                  "Preterit",
-                  "was / were + PP",
-                  "The report **was written** yesterday."
+                  "Conditionnel type 1",
+                  "If + présent, will + base (réel)"
                 ],
                 [
-                  "Present perfect",
-                  "has / have been + PP",
-                  "It **has been** done."
+                  "Conditionnel type 2",
+                  "If + prétérit, would + base (irréel présent)"
                 ],
                 [
-                  "Futur",
-                  "will be + PP",
-                  "It **will be** finished soon."
+                  "Conditionnel type 3",
+                  "If + past perfect, would have + participe passé (irréel passé)"
                 ],
                 [
-                  "Modal",
-                  "modal + be + PP",
-                  "It **must be** checked."
+                  "Voix passive",
+                  "be (au temps voulu) + participe passé"
+                ],
+                [
+                  "Passif au présent",
+                  "am / is / are + participe passé"
+                ],
+                [
+                  "Passif au prétérit",
+                  "was / were + participe passé"
+                ],
+                [
+                  "Passif au present perfect",
+                  "has / have been + participe passé"
+                ],
+                [
+                  "Passif au futur",
+                  "will be + participe passé"
+                ],
+                [
+                  "Passif avec un modal",
+                  "modal + be + participe passé"
                 ]
               ]
             }
@@ -306,342 +312,243 @@
           "h": "Les verbes irréguliers (liste)",
           "blocks": [
             {
+              "t": "p",
+              "c": "Les verbes irréguliers se retiennent mieux par familles. Certains **ne changent pas du tout** : *cost – cost – cost*, *cut – cut – cut*, *put – put – put*, *read – read – read* (seule la prononciation change pour *read*). D’autres ont **le même prétérit et le même participe passé**, souvent en -ght ou en -t : *bring – brought*, *buy – bought*, *catch – caught*, *teach – taught*, *think – thought*, ou encore *keep – kept*, *sleep – slept*, *feel – felt*, *leave – left*, *meet – met*, *spend – spent*, *send – sent*, *build – built*."
+            },
+            {
+              "t": "p",
+              "c": "Une autre famille alterne les voyelles i – a – u : *begin – began – begun*, *drink – drank – drunk*, *sing – sang – sung*, *run – ran – run*. Beaucoup de verbes très courants ont un participe en -en ou -n : *break – broke – broken*, *choose – chose – chosen*, *drive – drove – driven*, *eat – ate – eaten*, *fall – fell – fallen*, *forget – forgot – forgotten*, *give – gave – given*, *speak – spoke – spoken*, *take – took – taken*, *write – wrote – written*, *know – knew – known*, *grow – grew – grown*, *fly – flew – flown*, *see – saw – seen*, *show – showed – shown*."
+            },
+            {
+              "t": "p",
+              "c": "Quelques verbes sont à connaître à part, car ils sont partout : *be – was / were – been*, *have – had – had*, *do – did – done*, *go – went – gone*, *come – came – come*, *become – became – become*, *get – got – got* (ou *gotten* en anglais américain), *make – made – made*, *say – said – said*, *tell – told – told*. La liste complète, avec le sens de chaque verbe, se trouve dans le tableau final."
+            },
+            {
               "t": "table",
+              "h": "Verbes irréguliers à retenir",
               "head": [
-                "Base",
-                "Preterit",
-                "Participe passé",
+                "Verbe (base – prétérit – participe passé)",
                 "Sens"
               ],
               "rows": [
                 [
-                  "be",
-                  "was / were",
-                  "been",
+                  "be – was / were – been",
                   "être"
                 ],
                 [
-                  "become",
-                  "became",
-                  "become",
+                  "become – became – become",
                   "devenir"
                 ],
                 [
-                  "begin",
-                  "began",
-                  "begun",
+                  "begin – began – begun",
                   "commencer"
                 ],
                 [
-                  "break",
-                  "broke",
-                  "broken",
+                  "break – broke – broken",
                   "casser"
                 ],
                 [
-                  "bring",
-                  "brought",
-                  "brought",
+                  "bring – brought – brought",
                   "apporter"
                 ],
                 [
-                  "build",
-                  "built",
-                  "built",
+                  "build – built – built",
                   "construire"
                 ],
                 [
-                  "buy",
-                  "bought",
-                  "bought",
+                  "buy – bought – bought",
                   "acheter"
                 ],
                 [
-                  "catch",
-                  "caught",
-                  "caught",
+                  "catch – caught – caught",
                   "attraper"
                 ],
                 [
-                  "choose",
-                  "chose",
-                  "chosen",
+                  "choose – chose – chosen",
                   "choisir"
                 ],
                 [
-                  "come",
-                  "came",
-                  "come",
+                  "come – came – come",
                   "venir"
                 ],
                 [
-                  "cost",
-                  "cost",
-                  "cost",
+                  "cost – cost – cost",
                   "coûter"
                 ],
                 [
-                  "cut",
-                  "cut",
-                  "cut",
+                  "cut – cut – cut",
                   "couper"
                 ],
                 [
-                  "do",
-                  "did",
-                  "done",
+                  "do – did – done",
                   "faire"
                 ],
                 [
-                  "drink",
-                  "drank",
-                  "drunk",
+                  "drink – drank – drunk",
                   "boire"
                 ],
                 [
-                  "drive",
-                  "drove",
-                  "driven",
+                  "drive – drove – driven",
                   "conduire"
                 ],
                 [
-                  "eat",
-                  "ate",
-                  "eaten",
+                  "eat – ate – eaten",
                   "manger"
                 ],
                 [
-                  "fall",
-                  "fell",
-                  "fallen",
+                  "fall – fell – fallen",
                   "tomber"
                 ],
                 [
-                  "feel",
-                  "felt",
-                  "felt",
+                  "feel – felt – felt",
                   "ressentir"
                 ],
                 [
-                  "find",
-                  "found",
-                  "found",
+                  "find – found – found",
                   "trouver"
                 ],
                 [
-                  "fly",
-                  "flew",
-                  "flown",
+                  "fly – flew – flown",
                   "voler"
                 ],
                 [
-                  "forget",
-                  "forgot",
-                  "forgotten",
+                  "forget – forgot – forgotten",
                   "oublier"
                 ],
                 [
-                  "get",
-                  "got",
-                  "got / gotten",
+                  "get – got – got / gotten",
                   "obtenir"
                 ],
                 [
-                  "give",
-                  "gave",
-                  "given",
+                  "give – gave – given",
                   "donner"
                 ],
                 [
-                  "go",
-                  "went",
-                  "gone",
+                  "go – went – gone",
                   "aller"
                 ],
                 [
-                  "grow",
-                  "grew",
-                  "grown",
+                  "grow – grew – grown",
                   "grandir"
                 ],
                 [
-                  "have",
-                  "had",
-                  "had",
+                  "have – had – had",
                   "avoir"
                 ],
                 [
-                  "hear",
-                  "heard",
-                  "heard",
+                  "hear – heard – heard",
                   "entendre"
                 ],
                 [
-                  "keep",
-                  "kept",
-                  "kept",
+                  "keep – kept – kept",
                   "garder"
                 ],
                 [
-                  "know",
-                  "knew",
-                  "known",
+                  "know – knew – known",
                   "savoir"
                 ],
                 [
-                  "leave",
-                  "left",
-                  "left",
+                  "leave – left – left",
                   "partir"
                 ],
                 [
-                  "lose",
-                  "lost",
-                  "lost",
+                  "lose – lost – lost",
                   "perdre"
                 ],
                 [
-                  "make",
-                  "made",
-                  "made",
+                  "make – made – made",
                   "fabriquer"
                 ],
                 [
-                  "meet",
-                  "met",
-                  "met",
+                  "meet – met – met",
                   "rencontrer"
                 ],
                 [
-                  "pay",
-                  "paid",
-                  "paid",
+                  "pay – paid – paid",
                   "payer"
                 ],
                 [
-                  "put",
-                  "put",
-                  "put",
+                  "put – put – put",
                   "mettre"
                 ],
                 [
-                  "read",
-                  "read",
-                  "read",
+                  "read – read – read",
                   "lire"
                 ],
                 [
-                  "run",
-                  "ran",
-                  "run",
+                  "run – ran – run",
                   "courir"
                 ],
                 [
-                  "say",
-                  "said",
-                  "said",
+                  "say – said – said",
                   "dire"
                 ],
                 [
-                  "see",
-                  "saw",
-                  "seen",
+                  "see – saw – seen",
                   "voir"
                 ],
                 [
-                  "sell",
-                  "sold",
-                  "sold",
+                  "sell – sold – sold",
                   "vendre"
                 ],
                 [
-                  "send",
-                  "sent",
-                  "sent",
+                  "send – sent – sent",
                   "envoyer"
                 ],
                 [
-                  "show",
-                  "showed",
-                  "shown",
+                  "show – showed – shown",
                   "montrer"
                 ],
                 [
-                  "sing",
-                  "sang",
-                  "sung",
+                  "sing – sang – sung",
                   "chanter"
                 ],
                 [
-                  "sit",
-                  "sat",
-                  "sat",
+                  "sit – sat – sat",
                   "s'asseoir"
                 ],
                 [
-                  "sleep",
-                  "slept",
-                  "slept",
+                  "sleep – slept – slept",
                   "dormir"
                 ],
                 [
-                  "speak",
-                  "spoke",
-                  "spoken",
+                  "speak – spoke – spoken",
                   "parler"
                 ],
                 [
-                  "spend",
-                  "spent",
-                  "spent",
+                  "spend – spent – spent",
                   "dépenser"
                 ],
                 [
-                  "take",
-                  "took",
-                  "taken",
+                  "take – took – taken",
                   "prendre"
                 ],
                 [
-                  "teach",
-                  "taught",
-                  "taught",
+                  "teach – taught – taught",
                   "enseigner"
                 ],
                 [
-                  "tell",
-                  "told",
-                  "told",
+                  "tell – told – told",
                   "raconter"
                 ],
                 [
-                  "think",
-                  "thought",
-                  "thought",
+                  "think – thought – thought",
                   "penser"
                 ],
                 [
-                  "understand",
-                  "understood",
-                  "understood",
+                  "understand – understood – understood",
                   "comprendre"
                 ],
                 [
-                  "wear",
-                  "wore",
-                  "worn",
+                  "wear – wore – worn",
                   "porter (un vêtement)"
                 ],
                 [
-                  "win",
-                  "won",
-                  "won",
+                  "win – won – won",
                   "gagner"
                 ],
                 [
-                  "write",
-                  "wrote",
-                  "written",
+                  "write – wrote – written",
                   "écrire"
                 ]
               ]
@@ -959,10 +866,23 @@
           "h": "Vie quotidienne & famille",
           "blocks": [
             {
+              "t": "p",
+              "c": "Pour parler de ta **family** (la famille), tu peux évoquer tes **parents**, tes **siblings** (tes frères et sœurs), c’est-à-dire ton **brother** et ta **sister**, ou encore un **child** (un enfant). Autour de la famille gravitent ton **friend** (ton ami) et ton **neighbour** (ton voisin)."
+            },
+            {
+              "t": "p",
+              "c": "Ton **home** (ton foyer) peut être une **house** (une maison) ou un **flat** (un appartement), avec plusieurs **rooms** (pièces) : la **kitchen** (la cuisine), la **bedroom** (la chambre). Une journée type commence quand tu **wake up** (te réveilles) et **get dressed** (t’habilles), puis vient le **breakfast** (le petit-déjeuner), premier **meal** (repas) de la journée. Il y a aussi les **chores** (les corvées) à la maison."
+            },
+            {
+              "t": "p",
+              "c": "Le **weekend** et les **holidays** (les vacances) laissent du temps pour un **hobby** (un loisir) : on aime **spend time** (passer du temps) **together** (ensemble), ce qui entretient une bonne **relationship** (relation)."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Anglais",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -1073,10 +993,19 @@
           "h": "École, études & travail",
           "blocks": [
             {
+              "t": "p",
+              "c": "À l’**school** (l’école) puis à la **high school** (le lycée), le **student** (l’élève) suit les cours d’un **teacher** (professeur) dans chaque **subject** (matière). Il fait ses **homework** (devoirs), passe des **exams** (examens) et reçoit des **grades** (notes). Pour obtenir un **degree** (un diplôme), éventuellement à l’**university** (l’université), il faut **learn** (apprendre) et **study** (étudier) ; on peut **pass an exam** (réussir un examen) ou **fail** (échouer)."
+            },
+            {
+              "t": "p",
+              "c": "Les études apportent des **skills** (compétences) et des **knowledge** (connaissances), complétées par la **training** (la formation). Pour trouver un **job** (un emploi) et construire sa **career** (carrière), on fait souvent un **internship** (un stage), puis on **applies** (postule) et on passe un **interview** (entretien). L’employeur peut alors **hire** (embaucher) le candidat, qui rejoint ses **colleagues** (collègues) sur son **workplace** (lieu de travail) et touche un **salary** (salaire)."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Anglais",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -1191,10 +1120,19 @@
           "h": "Entreprise, gestion & finance (STMG / ETLV)",
           "blocks": [
             {
+              "t": "p",
+              "c": "Une **company** (entreprise) fait du **business** (des affaires) sur un **market** (marché) où elle cherche à gagner des **market shares** (parts de marché) face à ses **competitors** (concurrents). Elle vend à des **customers** (clients) et achète à des **suppliers** (fournisseurs) au sein de sa **supply chain** (chaîne d’approvisionnement). Sa **brand** (marque) et sa **strategy** (stratégie) soutiennent sa **growth** (croissance), dans le respect de sa **CSR** (RSE)."
+            },
+            {
+              "t": "p",
+              "c": "Côté finances, le **turnover** (chiffre d’affaires) et le **revenue** (revenu) doivent couvrir chaque **cost** (coût) pour dégager un **profit** (bénéfice) plutôt qu’une **loss** (perte) ; le **break-even point** (seuil de rentabilité) marque ce point d’équilibre. Le **balance sheet** (bilan) et le **cash flow** (la trésorerie) renseignent sur sa santé. Pour financer un **investment** (investissement) prévu au **budget**, elle peut contracter un **loan** (emprunt) ou faire appel à ses **shareholders** (actionnaires), qui sont l’une de ses **stakeholders** (parties prenantes)."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Anglais",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -1305,10 +1243,19 @@
           "h": "Société, politique & médias",
           "blocks": [
             {
+              "t": "p",
+              "c": "Dans une **society** (société) démocratique, chaque **citizen** (citoyen) a le **right** (droit) de **vote** (voter) lors d’une **election** (élection) pour désigner le **government** (gouvernement). La **law** (loi) garantit l’**equality** (égalité) et la **freedom** (liberté), et combat la **discrimination**. Les grands enjeux, ou **issues**, sont la **poverty** (pauvreté) face à la **wealth** (richesse), le **gap** (l’écart) entre les deux, le **welfare** (la protection sociale), l’**immigration** et le contrôle de la **border** (frontière). Quand ils sont mécontents, les citoyens organisent une **protest** (manifestation)."
+            },
+            {
+              "t": "p",
+              "c": "Les **media** (médias), comme le **newspaper** (journal), **broadcast** (diffusent) les **news** (informations) et influencent la **public opinion** (l’opinion publique), aux côtés de l’**advertising** (la publicité). Il faut se méfier des **fake news** (fausses informations)."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Anglais",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -1419,10 +1366,19 @@
           "h": "Environnement & sciences",
           "blocks": [
             {
+              "t": "p",
+              "c": "Protéger l’**environment** (l’environnement) est devenu urgent face au **climate change** (changement climatique) et au **global warming** (réchauffement climatique), causés par les **greenhouse gases** (gaz à effet de serre). La **pollution** et les **waste** (déchets) menacent la **wildlife** (la faune), la **forest** (forêt) et la **biodiversity** (biodiversité) : de nombreuses **species** (espèces) sont **endangered** (en voie de disparition). Les catastrophes se multiplient, comme la **drought** (sécheresse) ou la **flood** (inondation)."
+            },
+            {
+              "t": "p",
+              "c": "Pour **protect** (protéger) la planète, il faut **reduce** (réduire) son **carbon footprint** (empreinte carbone), **recycle** (recycler), éviter de **pollute** (polluer), économiser chaque **resource** (ressource) et développer les **renewable energies** (énergies renouvelables) pour une **energy** plus **sustainable** (durable). La **research** (recherche) et chaque **discovery** (découverte) scientifique y contribuent."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Anglais",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -1529,10 +1485,19 @@
           "h": "Numérique & technologies",
           "blocks": [
             {
+              "t": "p",
+              "c": "La **technology** (technologie) est partout : sur le **computer** (ordinateur), le **smartphone** ou tout autre **device** (appareil), on passe des heures devant un **screen** (écran). On est **online** (en ligne), connecté à un **network** (réseau), sur les **social media** (réseaux sociaux), un **website** (site web) ou une **app** (application). On **browse** (navigue), on **download** (télécharge) et on **upload** (téléverse) des fichiers, et il faut régulièrement **update** (mettre à jour) ses **software** (logiciels)."
+            },
+            {
+              "t": "p",
+              "c": "Chaque **user** (utilisateur) laisse des **data** (données) : la protection de sa **privacy** (vie privée) passe par un bon **password** (mot de passe) et par la **cybersecurity** (cybersécurité). Les **algorithms** (algorithmes) et l’**artificial intelligence** (intelligence artificielle) transforment le monde **digital** (numérique), qui peut aussi créer une **addiction** (dépendance)."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Anglais",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -1639,10 +1604,19 @@
           "h": "Verbes courants & phrasal verbs",
           "blocks": [
             {
+              "t": "p",
+              "c": "Les verbes de base, **to be** (être), **to have** (avoir), **to do** (faire), **to make** (fabriquer), **to go** (aller) et **to get** (obtenir), servent dans presque toutes les phrases. Les **phrasal verbs** associent un verbe et une particule qui en change le sens : **to give up** (abandonner), **to give back** (rendre), **to look for** (chercher), **to look after** (s’occuper de), **to find out** (découvrir), **to figure out** (comprendre)."
+            },
+            {
+              "t": "p",
+              "c": "D’autres sont très utiles à l’écrit : **to point out** (souligner), **to carry out** (réaliser), **to deal with** (traiter, gérer), **to come up with** (proposer), **to take part in** (participer à), **to bring up** (évoquer), **to rely on** (compter sur). Dans la vie courante, on **grows up** (grandit), on **turns down** (refuse) une offre, on **sets up** (crée) une entreprise, on **puts off** (reporte) un rendez-vous, on **runs out of** (manque de) temps, et une machine peut **break down** (tomber en panne)."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Anglais",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -1753,10 +1727,19 @@
           "h": "Mots de liaison & exprimer son opinion",
           "blocks": [
             {
+              "t": "p",
+              "c": "Pour organiser un texte, on annonce les étapes avec **first** (d’abord), **then** (ensuite) et **finally** (enfin). On ajoute un argument avec **moreover** (de plus) ou **in addition** (en outre), on s’oppose avec **however** (cependant), **nevertheless** (néanmoins) ou **whereas** (tandis que), et on concède avec **although** (bien que). On explique avec **because** (parce que) et **indeed** (en effet), on tire une conséquence avec **therefore** (donc) ou **as a result** (par conséquent), et on illustre avec **for instance** (par exemple). Pour comparer deux idées : **on the one hand** (d’une part)… **on the other hand** (d’autre part)."
+            },
+            {
+              "t": "p",
+              "c": "Pour donner son avis, on écrit **in my opinion** (à mon avis) ou **I think that** (je pense que), on dit **I agree** (je suis d’accord) ou **I disagree** (je ne suis pas d’accord), et l’on cite une source avec **according to** (selon). Pour conclure, on utilise **to sum up** (pour résumer), **in conclusion** (en conclusion), **on the whole** (dans l’ensemble) ou **in fact** (en fait)."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Anglais",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -2069,55 +2052,46 @@
           "h": "Verbes irréguliers : base, prétérit, participe passé",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Base",
-                "Prétérit",
-                "Participe passé",
-                "Sens"
-              ],
-              "rows": [
-                [
-                  "go",
-                  "went",
-                  "gone",
-                  "aller"
-                ],
-                [
-                  "see",
-                  "saw",
-                  "seen",
-                  "voir"
-                ],
-                [
-                  "take",
-                  "took",
-                  "taken",
-                  "prendre"
-                ],
-                [
-                  "make",
-                  "made",
-                  "made",
-                  "fabriquer"
-                ],
-                [
-                  "come",
-                  "came",
-                  "come",
-                  "venir"
-                ],
-                [
-                  "write",
-                  "wrote",
-                  "written",
-                  "écrire"
-                ]
-              ]
+              "t": "p",
+              "c": "Chaque verbe irrégulier s’apprend avec ses trois formes : base, prétérit, participe passé. **Go** donne *went* puis *gone* (aller) ; **see** donne *saw* puis *seen* (voir) ; **take** donne *took* puis *taken* (prendre). **Make** donne *made* puis *made* (fabriquer) ; **come** donne *came* puis *come* (venir) ; **write** donne *wrote* puis *written* (écrire)."
             },
             {
               "t": "tip",
               "c": "Structure : **base – prétérit – participe passé**. Le mieux : les réviser par familles de sons."
+            },
+            {
+              "t": "table",
+              "h": "Verbes irréguliers à retenir",
+              "head": [
+                "Verbe (base – prétérit – participe passé)",
+                "Sens"
+              ],
+              "rows": [
+                [
+                  "go – went – gone",
+                  "aller"
+                ],
+                [
+                  "see – saw – seen",
+                  "voir"
+                ],
+                [
+                  "take – took – taken",
+                  "prendre"
+                ],
+                [
+                  "make – made – made",
+                  "fabriquer"
+                ],
+                [
+                  "come – came – come",
+                  "venir"
+                ],
+                [
+                  "write – wrote – written",
+                  "écrire"
+                ]
+              ]
             }
           ]
         }
@@ -2537,88 +2511,66 @@
           "h": "Ser et estar, le présent et ses irréguliers",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "SER (présent)",
-                "ESTAR (présent)",
-                "Emploi"
-              ],
-              "rows": [
-                [
-                  "soy",
-                  "estoy",
-                  "SER = permanent · ESTAR = état/lieu"
-                ],
-                [
-                  "eres",
-                  "estás",
-                  "identité, origine, heure / état passager"
-                ],
-                [
-                  "es",
-                  "está",
-                  "profession / situation"
-                ],
-                [
-                  "somos",
-                  "estamos",
-                  "Soy español · Estoy cansado"
-                ],
-                [
-                  "sois",
-                  "estáis",
-                  "Son las tres · Está en Madrid"
-                ],
-                [
-                  "son",
-                  "están",
-                  ""
-                ]
-              ]
+              "t": "p",
+              "c": "Au présent, **ser** se conjugue *soy, eres, es, somos, sois, son*, et **estar** se conjugue *estoy, estás, está, estamos, estáis, están*. Les deux verbes se traduisent par « être », mais ils ne s’emploient pas de la même façon."
             },
             {
-              "t": "table",
-              "head": [
-                "Présent régulier",
-                "-ar (hablar)",
-                "-er (comer) / -ir (vivir)"
-              ],
-              "rows": [
-                [
-                  "yo",
-                  "hablo",
-                  "como / vivo"
-                ],
-                [
-                  "tú",
-                  "hablas",
-                  "comes / vives"
-                ],
-                [
-                  "él/ella",
-                  "habla",
-                  "come / vive"
-                ],
-                [
-                  "nosotros",
-                  "hablamos",
-                  "comemos / vivimos"
-                ],
-                [
-                  "vosotros",
-                  "habláis",
-                  "coméis / vivís"
-                ],
-                [
-                  "ellos",
-                  "hablan",
-                  "comen / viven"
-                ]
-              ]
+              "t": "p",
+              "c": "**Ser** exprime ce qui est **permanent** ou définit la personne : l’**identité**, l’**origine**, la **profession**, l’**heure** — *Soy español*, *Son las tres*. **Estar** exprime un **état passager** ou une **situation dans l’espace** — *Estoy cansado* (je suis fatigué), *Está en Madrid* (il est à Madrid)."
+            },
+            {
+              "t": "p",
+              "c": "Au présent, les verbes réguliers en **-ar**, comme *hablar*, se conjuguent *hablo, hablas, habla, hablamos, habláis, hablan*. Les verbes en **-er**, comme *comer*, donnent *como, comes, come, comemos, coméis, comen*."
+            },
+            {
+              "t": "p",
+              "c": "Les verbes en **-ir**, comme *vivir*, ont les mêmes terminaisons que les verbes en -er, sauf à *nosotros* et *vosotros* : *vivo, vives, vive, vivimos, vivís, viven*."
             },
             {
               "t": "p",
               "c": "**Irréguliers fréquents au présent** : tener → *tengo, tienes, tiene…* · ir → *voy, vas, va, vamos, vais, van* · hacer → *hago* · poder → *puedo, puedes…* · querer → *quiero…*"
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Ser (présent)",
+                  "soy, eres, es, somos, sois, son"
+                ],
+                [
+                  "Estar (présent)",
+                  "estoy, estás, está, estamos, estáis, están"
+                ],
+                [
+                  "Emploi de ser",
+                  "Permanent : identité, origine, profession, heure (Soy español, Son las tres)"
+                ],
+                [
+                  "Emploi de estar",
+                  "État passager, lieu (Estoy cansado, Está en Madrid)"
+                ],
+                [
+                  "Présent en -ar (hablar)",
+                  "hablo, hablas, habla, hablamos, habláis, hablan"
+                ],
+                [
+                  "Présent en -er (comer)",
+                  "como, comes, come, comemos, coméis, comen"
+                ],
+                [
+                  "Présent en -ir (vivir)",
+                  "vivo, vives, vive, vivimos, vivís, viven"
+                ],
+                [
+                  "Irréguliers fréquents au présent",
+                  "tener → tengo ; ir → voy ; hacer → hago ; poder → puedo ; querer → quiero"
+                ]
+              ]
             }
           ]
         },
@@ -2626,88 +2578,58 @@
           "h": "Le passé simple (indefinido) et l’imparfait (imperfecto)",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Indefinido",
-                "-ar (hablar)",
-                "-er/-ir (comer)"
-              ],
-              "rows": [
-                [
-                  "yo",
-                  "hablé",
-                  "comí"
-                ],
-                [
-                  "tú",
-                  "hablaste",
-                  "comiste"
-                ],
-                [
-                  "él/ella",
-                  "habló",
-                  "comió"
-                ],
-                [
-                  "nosotros",
-                  "hablamos",
-                  "comimos"
-                ],
-                [
-                  "vosotros",
-                  "hablasteis",
-                  "comisteis"
-                ],
-                [
-                  "ellos",
-                  "hablaron",
-                  "comieron"
-                ]
-              ]
+              "t": "p",
+              "c": "Au passé simple, l’***indefinido***, les verbes en **-ar** comme *hablar* se conjuguent *hablé, hablaste, habló, hablamos, hablasteis, hablaron* ; attention aux accents de *hablé* et *habló*, qui distinguent ces formes du présent."
             },
             {
-              "t": "table",
-              "head": [
-                "Imperfecto",
-                "-ar (hablar)",
-                "-er/-ir (comer)"
-              ],
-              "rows": [
-                [
-                  "yo",
-                  "hablaba",
-                  "comía"
-                ],
-                [
-                  "tú",
-                  "hablabas",
-                  "comías"
-                ],
-                [
-                  "él/ella",
-                  "hablaba",
-                  "comía"
-                ],
-                [
-                  "nosotros",
-                  "hablábamos",
-                  "comíamos"
-                ],
-                [
-                  "vosotros",
-                  "hablabais",
-                  "comíais"
-                ],
-                [
-                  "ellos",
-                  "hablaban",
-                  "comían"
-                ]
-              ]
+              "t": "p",
+              "c": "Les verbes en **-er** et en **-ir** partagent les mêmes terminaisons : *comí, comiste, comió, comimos, comisteis, comieron*."
+            },
+            {
+              "t": "p",
+              "c": "À l’imparfait, l’***imperfecto***, les verbes en **-ar** prennent des terminaisons en **-aba** : *hablaba, hablabas, hablaba, hablábamos, hablabais, hablaban*. Les verbes en **-er** et en **-ir** prennent des terminaisons en **-ía** : *comía, comías, comía, comíamos, comíais, comían*. Seuls trois verbes sont irréguliers à l’imparfait : *ser* (era), *ir* (iba) et *ver* (veía)."
             },
             {
               "t": "p",
               "c": "**Emploi** : *indefinido* = action **datée et ponctuelle** ; *imperfecto* = **décor, description, habitude**. Indefinidos irréguliers : ser/ir → *fui*, tener → *tuve*, hacer → *hice*, estar → *estuve*, poder → *pude*, decir → *dije*."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Indefinido en -ar (hablar)",
+                  "hablé, hablaste, habló, hablamos, hablasteis, hablaron"
+                ],
+                [
+                  "Indefinido en -er/-ir (comer)",
+                  "comí, comiste, comió, comimos, comisteis, comieron"
+                ],
+                [
+                  "Imperfecto en -ar (hablar)",
+                  "hablaba, hablabas, hablaba, hablábamos, hablabais, hablaban"
+                ],
+                [
+                  "Imperfecto en -er/-ir (comer)",
+                  "comía, comías, comía, comíamos, comíais, comían"
+                ],
+                [
+                  "Emploi de l’indefinido",
+                  "Action datée et ponctuelle"
+                ],
+                [
+                  "Emploi de l’imperfecto",
+                  "Décor, description, habitude"
+                ],
+                [
+                  "Indefinidos irréguliers",
+                  "ser/ir → fui ; tener → tuve ; hacer → hice ; estar → estuve ; poder → pude ; decir → dije"
+                ]
+              ]
             }
           ]
         },
@@ -2715,67 +2637,48 @@
           "h": "Le passé composé et le plus-que-parfait (haber + participe)",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Pretérito perfecto",
-                "haber + participio",
-                "Pluscuamperfecto"
-              ],
-              "rows": [
-                [
-                  "yo",
-                  "he hablado",
-                  "había hablado"
-                ],
-                [
-                  "tú",
-                  "has hablado",
-                  "habías hablado"
-                ],
-                [
-                  "él/ella",
-                  "ha hablado",
-                  "había hablado"
-                ],
-                [
-                  "nosotros",
-                  "hemos hablado",
-                  "habíamos hablado"
-                ],
-                [
-                  "vosotros",
-                  "habéis hablado",
-                  "habíais hablado"
-                ],
-                [
-                  "ellos",
-                  "han hablado",
-                  "habían hablado"
-                ]
-              ]
+              "t": "p",
+              "c": "Le **passé composé** (*pretérito perfecto*) se forme avec l’auxiliaire **haber** au présent suivi du **participe passé** : *he hablado, has hablado, ha hablado, hemos hablado, habéis hablado, han hablado*."
+            },
+            {
+              "t": "p",
+              "c": "Le **plus-que-parfait** (*pluscuamperfecto*) se forme avec **haber à l’imparfait** suivi du participe : *había hablado, habías hablado, había hablado, habíamos hablado, habíais hablado, habían hablado*. Le participe passé régulier se termine en **-ado** pour les verbes en -ar et en **-ido** pour les verbes en -er et -ir, et il reste invariable."
+            },
+            {
+              "t": "p",
+              "c": "Plusieurs participes passés sont irréguliers et doivent être appris par cœur : **hacer** donne *hecho*, **decir** donne *dicho*, **ver** donne *visto*, **escribir** donne *escrito*, **poner** donne *puesto*, **volver** donne *vuelto*, **abrir** donne *abierto*, **romper** donne *roto* et **morir** donne *muerto*."
             },
             {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Participios irregulares",
-                "",
-                ""
+                "Notion",
+                "Définition"
               ],
               "rows": [
                 [
-                  "hacer → hecho",
-                  "decir → dicho",
-                  "ver → visto"
+                  "Pretérito perfecto",
+                  "haber au présent + participe (he, has, ha, hemos, habéis, han hablado)"
                 ],
                 [
-                  "escribir → escrito",
-                  "poner → puesto",
-                  "volver → vuelto"
+                  "Pluscuamperfecto",
+                  "haber à l’imparfait + participe (había, habías, había, habíamos, habíais, habían hablado)"
                 ],
                 [
-                  "abrir → abierto",
-                  "romper → roto",
-                  "morir → muerto"
+                  "Participe passé régulier",
+                  "-ado (hablar → hablado) ; -ido (comer → comido)"
+                ],
+                [
+                  "Participes irréguliers",
+                  "hacer → hecho ; decir → dicho ; ver → visto"
+                ],
+                [
+                  "Participes irréguliers (suite)",
+                  "escribir → escrito ; poner → puesto ; volver → vuelto"
+                ],
+                [
+                  "Participes irréguliers (fin)",
+                  "abrir → abierto ; romper → roto ; morir → muerto"
                 ]
               ]
             }
@@ -2785,48 +2688,38 @@
           "h": "Le futur et le conditionnel : terminaisons et radicaux irréguliers",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Personne",
-                "Futuro (hablar)",
-                "Condicional (hablar)"
-              ],
-              "rows": [
-                [
-                  "yo",
-                  "hablaré",
-                  "hablaría"
-                ],
-                [
-                  "tú",
-                  "hablarás",
-                  "hablarías"
-                ],
-                [
-                  "él/ella",
-                  "hablará",
-                  "hablaría"
-                ],
-                [
-                  "nosotros",
-                  "hablaremos",
-                  "hablaríamos"
-                ],
-                [
-                  "vosotros",
-                  "hablaréis",
-                  "hablaríais"
-                ],
-                [
-                  "ellos",
-                  "hablarán",
-                  "hablarían"
-                ]
-              ]
+              "t": "p",
+              "c": "Le **futur** se forme en ajoutant à l’infinitif les terminaisons *-é, -ás, -á, -emos, -éis, -án* : *hablaré, hablarás, hablará, hablaremos, hablaréis, hablarán*."
+            },
+            {
+              "t": "p",
+              "c": "Le **conditionnel** se forme de la même façon, avec les terminaisons *-ía, -ías, -ía, -íamos, -íais, -ían* : *hablaría, hablarías, hablaría, hablaríamos, hablaríais, hablarían*. Les deux temps partagent les mêmes terminaisons pour les trois groupes de verbes."
             },
             {
               "t": "p",
               "c": "On ajoute les terminaisons à **l’infinitif**. **Radicaux irréguliers** (communs au futur et au conditionnel) : tener → *tendr-*, poder → *podr-*, hacer → *har-*, decir → *dir-*, poner → *pondr-*, salir → *saldr-*, venir → *vendr-*, querer → *querr-*, saber → *sabr-*, haber → *habr-*."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Futuro (hablar)",
+                  "hablaré, hablarás, hablará, hablaremos, hablaréis, hablarán"
+                ],
+                [
+                  "Condicional (hablar)",
+                  "hablaría, hablarías, hablaría, hablaríamos, hablaríais, hablarían"
+                ],
+                [
+                  "Radicaux irréguliers du futur et du conditionnel",
+                  "tendr-, podr-, har-, dir-, pondr-, saldr-, vendr-, querr-, sabr-, habr-"
+                ]
+              ]
             }
           ]
         },
@@ -2834,71 +2727,56 @@
           "h": "Le subjonctif présent et l’impératif",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Subjuntivo presente",
-                "-ar (hablar)",
-                "-er/-ir (comer)"
-              ],
-              "rows": [
-                [
-                  "yo",
-                  "hable",
-                  "coma"
-                ],
-                [
-                  "tú",
-                  "hables",
-                  "comas"
-                ],
-                [
-                  "él/ella",
-                  "hable",
-                  "coma"
-                ],
-                [
-                  "nosotros",
-                  "hablemos",
-                  "comamos"
-                ],
-                [
-                  "vosotros",
-                  "habléis",
-                  "comáis"
-                ],
-                [
-                  "ellos",
-                  "hablen",
-                  "coman"
-                ]
-              ]
+              "t": "p",
+              "c": "Au **subjonctif présent**, les verbes en **-ar** prennent des terminaisons en **-e** : *hable, hables, hable, hablemos, habléis, hablen*. Les verbes en **-er** et en **-ir** prennent des terminaisons en **-a** : *coma, comas, coma, comamos, comáis, coman*. C’est l’« échange » des voyelles qui permet de le reconnaître."
             },
             {
               "t": "p",
               "c": "**Emploi du subjonctif** : souhait, doute, nécessité, ordre négatif — après *que*, *ojalá*, *es necesario que*, *quiero que*… (les terminaisons « s’échangent » : -ar prend des -e, -er/-ir des -a)."
             },
             {
+              "t": "p",
+              "c": "À l’**impératif affirmatif**, la forme de **tú** est identique à la troisième personne du présent : *habla, come, vive*. La forme de **usted** emprunte le subjonctif : *hable, coma, viva*. La forme de **vosotros** se construit en remplaçant le -r de l’infinitif par un **-d** : *hablad, comed, vivid*."
+            },
+            {
+              "t": "p",
+              "c": "À l’**impératif négatif**, on utilise toujours le **subjonctif** précédé de *no* : *no hables, no comas, no vivas* pour tú ; *no hable, no coma, no viva* pour usted ; *no habléis, no comáis, no viváis* pour vosotros."
+            },
+            {
               "t": "table",
+              "h": "Notions et définitions",
               "head": [
-                "Impératif",
-                "Affirmatif",
-                "Négatif"
+                "Notion",
+                "Définition"
               ],
               "rows": [
                 [
-                  "tú",
-                  "habla / come / vive",
-                  "no hables / comas / vivas"
+                  "Subjuntivo presente en -ar (hablar)",
+                  "hable, hables, hable, hablemos, habléis, hablen"
                 ],
                 [
-                  "usted",
-                  "hable / coma / viva",
-                  "no hable / coma / viva"
+                  "Subjuntivo presente en -er/-ir (comer)",
+                  "coma, comas, coma, comamos, comáis, coman"
                 ],
                 [
-                  "vosotros",
-                  "hablad / comed / vivid",
-                  "no habléis / comáis / viváis"
+                  "Emploi du subjonctif",
+                  "Souhait, doute, nécessité, ordre négatif (que, ojalá, es necesario que, quiero que)"
+                ],
+                [
+                  "Impératif affirmatif (tú)",
+                  "habla / come / vive"
+                ],
+                [
+                  "Impératif affirmatif (usted)",
+                  "hable / coma / viva"
+                ],
+                [
+                  "Impératif affirmatif (vosotros)",
+                  "hablad / comed / vivid"
+                ],
+                [
+                  "Impératif négatif",
+                  "no + subjonctif (no hables, no hable, no habléis)"
                 ]
               ]
             }
@@ -2908,53 +2786,54 @@
           "h": "Le gérondif, l’obligation (tener que, hay que) et gustar",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Gérondif",
-                "Formation",
-                "Emploi"
-              ],
-              "rows": [
-                [
-                  "-ar → -ando",
-                  "hablar → hablando",
-                  "estar + gérondif = être en train de"
-                ],
-                [
-                  "-er/-ir → -iendo",
-                  "comer → comiendo, vivir → viviendo",
-                  "Estoy comiendo (je suis en train de manger)"
-                ]
-              ]
+              "t": "p",
+              "c": "Le **gérondif** se forme en remplaçant la terminaison de l’infinitif : **-ar** devient **-ando** (*hablar → hablando*) et **-er** ou **-ir** deviennent **-iendo** (*comer → comiendo*, *vivir → viviendo*). Avec **estar**, il exprime une action **en train de se dérouler** : *Estoy comiendo*, je suis en train de manger."
             },
             {
-              "t": "table",
-              "head": [
-                "Obligation",
-                "Structure",
-                "Exemple"
-              ],
-              "rows": [
-                [
-                  "tener que + inf.",
-                  "personnelle",
-                  "Tengo que estudiar."
-                ],
-                [
-                  "hay que + inf.",
-                  "impersonnelle",
-                  "Hay que trabajar."
-                ],
-                [
-                  "deber + inf.",
-                  "devoir",
-                  "Debes descansar."
-                ]
-              ]
+              "t": "p",
+              "c": "L’espagnol exprime l’obligation de trois façons. **Tener que** + infinitif exprime une obligation **personnelle** : *Tengo que estudiar*, je dois étudier. **Hay que** + infinitif exprime une obligation **impersonnelle**, valable pour tous : *Hay que trabajar*, il faut travailler. **Deber** + infinitif signifie « **devoir** », souvent avec une nuance de conseil : *Debes descansar*, tu dois te reposer."
             },
             {
               "t": "p",
               "c": "**Verbes type *gustar*** : le sujet est la chose aimée → *Me **gusta** el cine* (sing.) / *Me **gustan** los libros* (plur.). Même construction : *encantar, interesar, doler, faltar*."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Gérondif en -ar",
+                  "-ando (hablar → hablando)"
+                ],
+                [
+                  "Gérondif en -er/-ir",
+                  "-iendo (comer → comiendo, vivir → viviendo)"
+                ],
+                [
+                  "Estar + gérondif",
+                  "Être en train de (Estoy comiendo)"
+                ],
+                [
+                  "Tener que + infinitif",
+                  "Obligation personnelle (Tengo que estudiar)"
+                ],
+                [
+                  "Hay que + infinitif",
+                  "Obligation impersonnelle (Hay que trabajar)"
+                ],
+                [
+                  "Deber + infinitif",
+                  "Devoir (Debes descansar)"
+                ],
+                [
+                  "Verbes type gustar",
+                  "Le sujet est la chose aimée : me gusta el cine / me gustan los libros"
+                ]
+              ]
             }
           ]
         },
@@ -2962,133 +2841,100 @@
           "h": "Verbes irréguliers clés (liste)",
           "blocks": [
             {
+              "t": "p",
+              "c": "Les verbes irréguliers les plus fréquents changent souvent à la première personne du présent : *tengo* (tener), *hago* (hacer), *digo* (decir), *pongo* (poner), *vengo* (venir), *salgo* (salir), *traigo* (traer), *oigo* (oír), *conduzco* (conducir), *doy* (dar), *veo* (ver), *sé* (saber). D’autres changent leur radical : *puedo* (poder), *quiero* (querer), *vuelvo* (volver). *Ser* donne *soy*, *estar* donne *estoy*, *ir* donne *voy* et *haber* donne *he*."
+            },
+            {
+              "t": "p",
+              "c": "Au passé simple, beaucoup ont un radical irrégulier : *estuve* (estar), *tuve* (tener), *hube* (haber), *hice* (hacer), *dije* (decir), *pude* (poder), *puse* (poner), *quise* (querer), *supe* (saber), *vine* (venir), *traje* (traer), *conduje* (conducir). *Ser* et *ir* ont la même forme, *fui* ; *ver* donne *vi* et *dar* donne *di*, tandis que *salí*, *leí*, *oí* et *volví* restent réguliers. Côté participes, retiens *hecho*, *visto*, *dicho*, *puesto* et *vuelto* ; les autres sont réguliers, comme *sido*, *estado*, *tenido* ou *ido*."
+            },
+            {
               "t": "table",
+              "h": "Verbes irréguliers à retenir",
               "head": [
-                "Infinitif",
-                "Présent (yo)",
-                "Indefinido (yo)",
-                "Participio"
+                "Verbe (présent yo, indefinido yo, participe)",
+                "Sens"
               ],
               "rows": [
                 [
-                  "ser",
-                  "soy",
-                  "fui",
-                  "sido"
+                  "ser (soy, fui, sido)",
+                  "être (permanent)"
                 ],
                 [
-                  "estar",
-                  "estoy",
-                  "estuve",
-                  "estado"
+                  "estar (estoy, estuve, estado)",
+                  "être (état, lieu)"
                 ],
                 [
-                  "tener",
-                  "tengo",
-                  "tuve",
-                  "tenido"
+                  "tener (tengo, tuve, tenido)",
+                  "avoir"
                 ],
                 [
-                  "haber",
-                  "he",
-                  "hube",
-                  "habido"
+                  "haber (he, hube, habido)",
+                  "avoir (auxiliaire)"
                 ],
                 [
-                  "hacer",
-                  "hago",
-                  "hice",
-                  "hecho"
+                  "hacer (hago, hice, hecho)",
+                  "faire"
                 ],
                 [
-                  "ir",
-                  "voy",
-                  "fui",
-                  "ido"
+                  "ir (voy, fui, ido)",
+                  "aller"
                 ],
                 [
-                  "ver",
-                  "veo",
-                  "vi",
-                  "visto"
+                  "ver (veo, vi, visto)",
+                  "voir"
                 ],
                 [
-                  "dar",
-                  "doy",
-                  "di",
-                  "dado"
+                  "dar (doy, di, dado)",
+                  "donner"
                 ],
                 [
-                  "decir",
-                  "digo",
-                  "dije",
-                  "dicho"
+                  "decir (digo, dije, dicho)",
+                  "dire"
                 ],
                 [
-                  "poder",
-                  "puedo",
-                  "pude",
-                  "podido"
+                  "poder (puedo, pude, podido)",
+                  "pouvoir"
                 ],
                 [
-                  "poner",
-                  "pongo",
-                  "puse",
-                  "puesto"
+                  "poner (pongo, puse, puesto)",
+                  "mettre"
                 ],
                 [
-                  "querer",
-                  "quiero",
-                  "quise",
-                  "querido"
+                  "querer (quiero, quise, querido)",
+                  "vouloir, aimer"
                 ],
                 [
-                  "saber",
-                  "sé",
-                  "supe",
-                  "sabido"
+                  "saber (sé, supe, sabido)",
+                  "savoir"
                 ],
                 [
-                  "venir",
-                  "vengo",
-                  "vine",
-                  "venido"
+                  "venir (vengo, vine, venido)",
+                  "venir"
                 ],
                 [
-                  "salir",
-                  "salgo",
-                  "salí",
-                  "salido"
+                  "salir (salgo, salí, salido)",
+                  "sortir"
                 ],
                 [
-                  "traer",
-                  "traigo",
-                  "traje",
-                  "traído"
+                  "traer (traigo, traje, traído)",
+                  "apporter"
                 ],
                 [
-                  "leer",
-                  "leo",
-                  "leí",
-                  "leído"
+                  "leer (leo, leí, leído)",
+                  "lire"
                 ],
                 [
-                  "oír",
-                  "oigo",
-                  "oí",
-                  "oído"
+                  "oír (oigo, oí, oído)",
+                  "entendre"
                 ],
                 [
-                  "volver",
-                  "vuelvo",
-                  "volví",
-                  "vuelto"
+                  "volver (vuelvo, volví, vuelto)",
+                  "revenir"
                 ],
                 [
-                  "conducir",
-                  "conduzco",
-                  "conduje",
-                  "conducido"
+                  "conducir (conduzco, conduje, conducido)",
+                  "conduire"
                 ]
               ]
             }
@@ -3457,10 +3303,19 @@
           "h": "La vida cotidiana y la familia",
           "blocks": [
             {
+              "t": "p",
+              "c": "Pour parler de **la familia** (la famille), on présente **los padres** (les parents), **el hermano** (le frère) et **la hermana** (la sœur), **el hijo** (le fils) et **la hija** (la fille). Autour d’elle, il y a **el amigo** (l’ami) et **el vecino** (le voisin)."
+            },
+            {
+              "t": "p",
+              "c": "On vit dans **la casa** (la maison) ou dans **el piso** (l’appartement), avec **la habitación** (la chambre) et **la cocina** (la cuisine). **La vida cotidiana** (la vie quotidienne) commence quand on va **despertarse** (se réveiller) et **vestirse** (s’habiller), puis vient **el desayuno** (le petit-déjeuner), premier repas, **la comida**. Il y a aussi **la tarea** (la tâche) à accomplir. **El fin de semana** (le week-end) et **las vacaciones** (les vacances) sont consacrés à **el ocio** (les loisirs) : on aime **pasar tiempo** (passer du temps) **juntos** (ensemble), ce qui renforce **la relación** (la relation)."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Español",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -3567,10 +3422,19 @@
           "h": "Estudios y trabajo",
           "blocks": [
             {
+              "t": "p",
+              "c": "Au **colegio** (l’école) puis à l’**instituto** (le lycée), **el alumno** (l’élève) suit les cours de **el profesor** (le professeur) dans chaque **asignatura** (matière). Il fait **los deberes** (les devoirs), passe **el examen** (l’examen) et reçoit **la nota** (la note). Pour obtenir **el título** (le diplôme), parfois à **la universidad** (l’université), il faut **aprender** (apprendre) et **estudiar** (étudier) ; on peut **aprobar** (réussir) ou **suspender** (échouer)."
+            },
+            {
+              "t": "p",
+              "c": "Les études donnent **la competencia** (la compétence) et **los conocimientos** (les connaissances), complétées par **la formación** (la formation). Pour trouver **el empleo** (l’emploi) ou **el trabajo** (le travail) et construire **la carrera** (la carrière), on fait **las prácticas** (le stage), puis on passe **la entrevista** (l’entretien). L’employeur peut **contratar** (embaucher) le candidat, qui rejoint **el compañero** (le collègue) et touche **el sueldo** (le salaire). Le contraire, c’est **el paro** (le chômage)."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Español",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -3685,10 +3549,19 @@
           "h": "La empresa y la economía (STMG)",
           "blocks": [
             {
+              "t": "p",
+              "c": "**La empresa** (l’entreprise) fait **los negocios** (les affaires) sur **el mercado** (le marché), où elle vise **la cuota de mercado** (la part de marché) face à **la competencia** (la concurrence). Elle vend **el producto** (le produit) à **el cliente** (le client) et au **consumidor** (consommateur), et achète à **el proveedor** (le fournisseur). **La venta** (la vente) dépend de **la oferta** (l’offre) et de **la demanda** (la demande) ; **la marca** (la marque) et **la estrategia** (la stratégie) soutiennent **el crecimiento** (la croissance)."
+            },
+            {
+              "t": "p",
+              "c": "Côté finances, **el volumen de negocio** (le chiffre d’affaires) et **los ingresos** (les revenus) doivent couvrir **el coste** (le coût) pour dégager **el beneficio** (le bénéfice) et non **la pérdida** (la perte). **El balance** (le bilan) et **la tesorería** (la trésorerie) renseignent sur sa santé. Pour financer **la inversión** (l’investissement) prévue dans **el presupuesto** (le budget), elle peut recourir à **el préstamo** (l’emprunt) ou à **el accionista** (l’actionnaire)."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Español",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -3803,10 +3676,19 @@
           "h": "Sociedad, memoria y política",
           "blocks": [
             {
+              "t": "p",
+              "c": "Dans **la sociedad** (la société) démocratique, **el ciudadano** (le citoyen) a **el derecho** (le droit) de **votar** (voter) lors de **las elecciones** (les élections) qui désignent **el gobierno** (le gouvernement). **La ley** (la loi) défend **la igualdad** (l’égalité) et **la libertad** (la liberté), et combat **la desigualdad** (l’inégalité) et **la pobreza** (la pauvreté). **La inmigración** (l’immigration) et le contrôle de **la frontera** (la frontière) font débat ; les mécontentements s’expriment par **la manifestación** (la manifestation) ou **la huelga** (la grève), relayées par **los medios** (les médias) et **las noticias** (les informations)."
+            },
+            {
+              "t": "p",
+              "c": "En Espagne et en Amérique latine, **la memoria** (la mémoire) est un thème central : le passage de **la dictadura** (la dictature) à **la democracia** (la démocratie), le souvenir de **la guerra** (la guerre) et de **el exilio** (l’exil), la recherche de **la paz** (la paix) et la protection de **el patrimonio** (le patrimoine)."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Español",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -3913,10 +3795,19 @@
           "h": "Medio ambiente y ciencia",
           "blocks": [
             {
+              "t": "p",
+              "c": "Protéger **el medio ambiente** (l’environnement) est urgent face à **el cambio climático** (le changement climatique) et à **el calentamiento global** (le réchauffement climatique). **La contaminación** (la pollution) et **los residuos** (les déchets) menacent **la naturaleza** (la nature), **el bosque** (la forêt), **la biodiversidad** (la biodiversité) et chaque **especie** (espèce) de **el planeta** (la planète). Les catastrophes se multiplient : **la sequía** (la sécheresse), **la inundación** (l’inondation)."
+            },
+            {
+              "t": "p",
+              "c": "Pour **proteger** (protéger) la planète, il faut **reducir** (réduire) **la huella de carbono** (l’empreinte carbone), **reciclar** (recycler), cesser de **contaminar** (polluer), économiser chaque **recurso** (ressource) et développer **las energías renovables** (les énergies renouvelables) pour une **energía** plus **sostenible** (durable). **La ciencia** (la science), **la investigación** (la recherche) et chaque **descubrimiento** (découverte) y contribuent."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Español",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -4023,10 +3914,19 @@
           "h": "Tecnología e internet",
           "blocks": [
             {
+              "t": "p",
+              "c": "**La tecnología** (la technologie) est partout : sur **el ordenador** (l’ordinateur), **el móvil** (le portable) ou tout autre **aparato** (appareil), on passe des heures devant **la pantalla** (l’écran). On est **en línea** (en ligne), sur **la red** (le réseau), **las redes sociales** (les réseaux sociaux), **la página web** (le site web) ou **la aplicación** (l’application). On aime **navegar** (naviguer), **descargar** (télécharger), **compartir** (partager) et **conectarse** (se connecter), et il faut **actualizar** (mettre à jour) **el programa** (le logiciel)."
+            },
+            {
+              "t": "p",
+              "c": "Chaque **usuario** (utilisateur) laisse **los datos** (les données) : protéger **la privacidad** (la vie privée) passe par **la contraseña** (le mot de passe) et **la ciberseguridad** (la cybersécurité). **La inteligencia artificial** (l’intelligence artificielle) transforme le monde **digital** (numérique), qui peut créer **la adicción** (la dépendance)."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Español",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -4133,10 +4033,19 @@
           "h": "Verbos frecuentes",
           "blocks": [
             {
+              "t": "p",
+              "c": "Deux verbes traduisent « être » : **ser** et **estar** ; deux traduisent « avoir » : **tener**, qui exprime la possession, et **haber**, qui sert d’auxiliaire. Les verbes les plus courants sont ensuite **hacer** (faire), **ir** (aller), **poder** (pouvoir), **querer** (vouloir, aimer), **saber** (savoir), **decir** (dire), **ver** (voir), **dar** (donner), **poner** (mettre), **salir** (sortir), **venir** (venir) et **llegar** (arriver)."
+            },
+            {
+              "t": "p",
+              "c": "Parmi les verbes réguliers, retiens les modèles **hablar** (parler), **comer** (manger) et **vivir** (vivre), ainsi que **trabajar** (travailler), **comprar** (acheter), **vender** (vendre), **terminar** (finir). Attention à **empezar** (commencer), **pensar** (penser) et **entender** (comprendre), dont le radical change au présent : *empiezo*, *pienso*, *entiendo*."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Español",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -4251,10 +4160,19 @@
           "h": "Conectores y expresar la opinión",
           "blocks": [
             {
+              "t": "p",
+              "c": "Pour organiser un texte, on enchaîne **primero** (d’abord), **luego** (ensuite), **después** (après) et **por fin** (enfin). On ajoute avec **además** (de plus), on s’oppose avec **sin embargo** (cependant), **en cambio** (en revanche) ou **mientras que** (tandis que), et on concède avec **aunque** (bien que). On explique avec **porque** (parce que), **es decir** (c’est-à-dire) et **de hecho** (en fait), on conclut une étape avec **por lo tanto** (donc), et on illustre avec **por ejemplo** (par exemple). Pour comparer : **por un lado** (d’une part)… **por otro lado** (d’autre part)."
+            },
+            {
+              "t": "p",
+              "c": "Pour donner son avis : **en mi opinión** (à mon avis), **creo que** (je pense que), **estoy de acuerdo** (je suis d’accord) ou **no estoy de acuerdo** (je ne suis pas d’accord), **es verdad que** (il est vrai que), et **según** (selon) pour citer une source. Pour finir : **en resumen** (en résumé) et **en conclusión** (en conclusion)."
+            },
+            {
               "t": "table",
+              "h": "Vocabulaire à retenir",
               "head": [
-                "Español",
-                "Français"
+                "Mot",
+                "Sens"
               ],
               "rows": [
                 [
@@ -4532,55 +4450,46 @@
           "h": "Verbes irréguliers : racines e → ie, o → ue et passés irréguliers",
           "blocks": [
             {
-              "t": "table",
-              "head": [
-                "Infinitif",
-                "Présent (yo)",
-                "Indéfini (él)",
-                "Sens"
-              ],
-              "rows": [
-                [
-                  "ser",
-                  "soy",
-                  "fue",
-                  "être"
-                ],
-                [
-                  "tener",
-                  "tengo",
-                  "tuvo",
-                  "avoir"
-                ],
-                [
-                  "hacer",
-                  "hago",
-                  "hizo",
-                  "faire"
-                ],
-                [
-                  "ir",
-                  "voy",
-                  "fue",
-                  "aller"
-                ],
-                [
-                  "poder",
-                  "puedo",
-                  "pudo",
-                  "pouvoir"
-                ],
-                [
-                  "decir",
-                  "digo",
-                  "dijo",
-                  "dire"
-                ]
-              ]
+              "t": "p",
+              "c": "Les verbes les plus irréguliers changent à la fois au présent et au passé simple. **Ser** donne *soy* au présent et *fue* au passé simple à la troisième personne ; **ir** donne *voy* et la même forme *fue*. **Tener** donne *tengo* et *tuvo* ; **hacer** donne *hago* et *hizo* ; **poder** donne *puedo* et *pudo* ; **decir** donne *digo* et *dijo*."
             },
             {
               "t": "tip",
               "c": "Beaucoup changent la **racine** (e→ie, o→ue) ou sont totalement irréguliers au passé simple."
+            },
+            {
+              "t": "table",
+              "h": "Verbes irréguliers à retenir",
+              "head": [
+                "Verbe (présent yo, indefinido él)",
+                "Sens"
+              ],
+              "rows": [
+                [
+                  "ser (soy, fue)",
+                  "être"
+                ],
+                [
+                  "tener (tengo, tuvo)",
+                  "avoir"
+                ],
+                [
+                  "hacer (hago, hizo)",
+                  "faire"
+                ],
+                [
+                  "ir (voy, fue)",
+                  "aller"
+                ],
+                [
+                  "poder (puedo, pudo)",
+                  "pouvoir"
+                ],
+                [
+                  "decir (digo, dijo)",
+                  "dire"
+                ]
+              ]
             }
           ]
         }

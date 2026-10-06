@@ -12,24 +12,12 @@
           "c": "Le SIC n’est pas qu’une obligation administrative : c’est une **source d’information stratégique**. Il répond à deux logiques complémentaires — un usage **interne** (piloter, décider) et un usage **externe** (informer et prouver aux tiers)."
         },
         {
-          "t": "table",
-          "head": [
-            "Usage",
-            "À quoi il sert",
-            "Pour qui"
-          ],
-          "rows": [
-            [
-              "Interne",
-              "Piloter l’activité, mesurer le résultat, décider (investir, embaucher…)",
-              "Dirigeants, managers"
-            ],
-            [
-              "Externe",
-              "Prouver, calculer l’impôt, informer sur la santé de l’entreprise",
-              "État (fisc), banques, associés, salariés"
-            ]
-          ]
+          "t": "p",
+          "c": "En **interne**, le SIC sert à **piloter l’activité**, à **mesurer le résultat** et à **décider**, par exemple d’investir ou d’embaucher ; ses utilisateurs sont les **dirigeants** et les **managers**."
+        },
+        {
+          "t": "p",
+          "c": "En **externe**, il sert à **prouver** les opérations, à **calculer l’impôt** et à **informer sur la santé de l’entreprise** ; ses destinataires sont l’**État** (le fisc), les **banques**, les **associés** et les **salariés**."
         },
         {
           "t": "p",
@@ -55,29 +43,12 @@
           "c": "Le SIC s’appuie sur un **cadre normatif** strict, qui garantit que tous les comptes se lisent de la même façon d’une entreprise à l’autre."
         },
         {
-          "t": "table",
-          "head": [
-            "Élément",
-            "Rôle"
-          ],
-          "rows": [
-            [
-              "PCG (Plan Comptable Général)",
-              "Liste et numérote tous les comptes, fixe les règles d’enregistrement"
-            ],
-            [
-              "ANC (Autorité des Normes Comptables)",
-              "Établit les normes comptables françaises"
-            ],
-            [
-              "Code de commerce",
-              "Impose l’obligation de tenir une comptabilité"
-            ],
-            [
-              "Expert-comptable / CAC",
-              "Établit ou contrôle et certifie les comptes"
-            ]
-          ]
+          "t": "p",
+          "c": "Quatre acteurs encadrent la comptabilité. Le **PCG** (Plan comptable général) **liste et numérote tous les comptes** et fixe les règles d’enregistrement. L’**ANC** (Autorité des normes comptables) **établit les normes comptables françaises**."
+        },
+        {
+          "t": "p",
+          "c": "Le **Code de commerce** **impose aux commerçants l’obligation de tenir une comptabilité**. Enfin, l’**expert-comptable** **établit** les comptes pour le compte de l’entreprise, tandis que le **commissaire aux comptes** (CAC) les **contrôle et les certifie**."
         },
         {
           "t": "p",
@@ -93,34 +64,79 @@
           "c": "Enfin, l’information comptable doit être **protégée**. La **sécurité du SIC** repose sur quatre exigences, faciles à retenir par leurs initiales **D.I.C.T.**"
         },
         {
+          "t": "p",
+          "c": "La **disponibilité** garantit que l’information comptable est **accessible quand on en a besoin**, par exemple au moment de déclarer la TVA. L’**intégrité** garantit qu’elle **n’est pas altérée**, ni par une erreur ni par une fraude."
+        },
+        {
+          "t": "p",
+          "c": "La **confidentialité** garantit que **seules les personnes autorisées** y accèdent. La **traçabilité**, enfin, permet de **prouver qui a fait quoi, et quand** : c’est la **piste d’audit**, qui permet de remonter de chaque chiffre du bilan jusqu’à la pièce justificative."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Le **SIC** collecte → saisit → classe → traite → restitue les opérations pour donner une **image fidèle** (art. 121-1 PCG). Usage **interne** (décider) et **externe** (prouver, imposer). Il s’appuie sur le **PCG/ANC**, se **dématérialise**, et doit être **sécurisé** (D.I.C.T.)."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Exigence",
-            "Ce qu’elle garantit"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
+              "Système d’information comptable (SIC)",
+              "Collecte, saisit, classe, traite et restitue les opérations comptables"
+            ],
+            [
+              "Usage interne du SIC",
+              "Piloter, mesurer le résultat, décider (dirigeants, managers)"
+            ],
+            [
+              "Usage externe du SIC",
+              "Prouver, calculer l’impôt, informer (fisc, banques, associés, salariés)"
+            ],
+            [
+              "PCG",
+              "Liste et numérote les comptes, fixe les règles d’enregistrement"
+            ],
+            [
+              "ANC",
+              "Autorité des normes comptables : établit les normes françaises"
+            ],
+            [
+              "Code de commerce",
+              "Impose l’obligation de tenir une comptabilité"
+            ],
+            [
+              "Expert-comptable",
+              "Établit les comptes"
+            ],
+            [
+              "Commissaire aux comptes (CAC)",
+              "Contrôle et certifie les comptes"
+            ],
+            [
+              "D.I.C.T.",
+              "Disponibilité, intégrité, confidentialité, traçabilité : la sécurité du SIC"
+            ],
+            [
               "Disponibilité",
-              "L’information est accessible quand on en a besoin"
+              "Information accessible quand on en a besoin"
             ],
             [
               "Intégrité",
-              "L’information n’est pas altérée (pas d’erreur ni de fraude)"
+              "Information non altérée (ni erreur ni fraude)"
             ],
             [
               "Confidentialité",
               "Seules les personnes autorisées y accèdent"
             ],
             [
-              "Traçabilité",
-              "On peut prouver qui a fait quoi, et quand (piste d’audit)"
+              "Traçabilité (piste d’audit)",
+              "Prouver qui a fait quoi, et quand"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Le **SIC** collecte → saisit → classe → traite → restitue les opérations pour donner une **image fidèle** (art. 121-1 PCG). Usage **interne** (décider) et **externe** (prouver, imposer). Il s’appuie sur le **PCG/ANC**, se **dématérialise**, et doit être **sécurisé** (D.I.C.T.)."
         }
       ]
     },
@@ -136,29 +152,12 @@
           "c": "Avant de définir le SI, il faut distinguer trois niveaux, du plus brut au plus utile."
         },
         {
-          "t": "table",
-          "head": [
-            "Niveau",
-            "Définition",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Donnée",
-              "Un élément brut, isolé, sans interprétation",
-              "« 240 »"
-            ],
-            [
-              "Information",
-              "Une donnée mise en contexte, qui a un sens",
-              "« Facture n°12 : 240 € TTC »"
-            ],
-            [
-              "Connaissance",
-              "De l’information analysée, qui guide l’action",
-              "« Nos ventes montent de 10 %, réapprovisionnons »"
-            ]
-          ]
+          "t": "p",
+          "c": "Au premier niveau, la **donnée** est un **élément brut**, isolé, **sans interprétation** : « 240 » ne veut rien dire seul. Au deuxième niveau, l’**information** est une **donnée mise en contexte**, qui prend un sens : « Facture n° 12 : 240 € TTC »."
+        },
+        {
+          "t": "p",
+          "c": "Au troisième niveau, la **connaissance** est de l’**information analysée**, qui **guide l’action** : « Nos ventes montent de 10 %, réapprovisionnons ». Le rôle du SI est précisément de faire passer l’entreprise de la donnée à la connaissance."
         },
         {
           "t": "p",
@@ -179,29 +178,12 @@
           "c": "Le SI remplit **quatre grandes fonctions**. Le SIC en est une application spécialisée au domaine comptable."
         },
         {
-          "t": "table",
-          "head": [
-            "Fonction du SI",
-            "Exemple côté comptable (SIC)"
-          ],
-          "rows": [
-            [
-              "Collecter",
-              "Récupérer les factures, relevés, pièces"
-            ],
-            [
-              "Stocker / mémoriser",
-              "Conserver les écritures dans une base de données"
-            ],
-            [
-              "Traiter",
-              "Calculer la TVA, éditer la balance"
-            ],
-            [
-              "Diffuser",
-              "Transmettre le bilan aux dirigeants, à la banque, au fisc"
-            ]
-          ]
+          "t": "p",
+          "c": "Appliquées à la comptabilité, les quatre fonctions du SI deviennent très concrètes. **Collecter**, c’est récupérer les **factures**, les **relevés** et les autres **pièces**. **Stocker** ou **mémoriser**, c’est **conserver les écritures** dans une base de données."
+        },
+        {
+          "t": "p",
+          "c": "**Traiter**, c’est par exemple **calculer la TVA** ou **éditer la balance**. **Diffuser**, enfin, c’est **transmettre le bilan** aux dirigeants, à la banque ou à l’administration fiscale."
         },
         {
           "t": "p",
@@ -213,25 +195,12 @@
           "c": "Une vente saisie en caisse met **automatiquement** à jour le stock, déclenche la facturation ET génère l’écriture comptable (le SIC). Une seule saisie, trois services servis (ventes, logistique, comptabilité), zéro ressaisie, une information **cohérente** et **en temps réel**."
         },
         {
-          "t": "table",
-          "head": [
-            "Avantages du PGI",
-            "Limites du PGI"
-          ],
-          "rows": [
-            [
-              "Une seule saisie → gain de temps",
-              "Coût d’achat et d’installation élevé"
-            ],
-            [
-              "Information cohérente et à jour",
-              "Rigidité, conduite du changement"
-            ],
-            [
-              "Suppression des ressaisies et erreurs",
-              "Dépendance à un seul fournisseur / à la panne"
-            ]
-          ]
+          "t": "p",
+          "c": "Le PGI présente trois **avantages** majeurs. Comme l’information n’est **saisie qu’une fois**, on **gagne du temps**. Comme tous les services partagent la même base, l’information est **cohérente et à jour**. Et comme on ne **ressaisit** plus, on supprime les **erreurs** de recopie."
+        },
+        {
+          "t": "p",
+          "c": "Il a aussi des **limites**. Son **coût d’achat et d’installation** est **élevé**. Il est **rigide** et impose une **conduite du changement**, car les salariés doivent adapter leurs habitudes. Enfin, il crée une **dépendance** envers un seul fournisseur et rend l’entreprise vulnérable en cas de **panne**."
         },
         {
           "t": "p",
@@ -258,6 +227,64 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Donnée → information → connaissance. Le **SI** = ressources (personnes, matériel, logiciels, données, procédures) qui **collectent, stockent, traitent, diffusent** l’information. Le **PGI/ERP** centralise tout dans une **base unique**. Le **SIC est le sous-système comptable du SI** : c’est le lien à connaître entre les deux."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Donnée",
+              "Élément brut, isolé, sans interprétation (« 240 »)"
+            ],
+            [
+              "Information",
+              "Donnée mise en contexte, qui a un sens (« Facture n° 12 : 240 € TTC »)"
+            ],
+            [
+              "Connaissance",
+              "Information analysée qui guide l’action"
+            ],
+            [
+              "Système d’information (SI)",
+              "Ensemble organisé de ressources qui collecte, stocke, traite et diffuse l’information"
+            ],
+            [
+              "Collecter",
+              "Récupérer factures, relevés, pièces"
+            ],
+            [
+              "Stocker / mémoriser",
+              "Conserver les écritures dans une base de données"
+            ],
+            [
+              "Traiter",
+              "Calculer la TVA, éditer la balance"
+            ],
+            [
+              "Diffuser",
+              "Transmettre le bilan aux dirigeants, à la banque, au fisc"
+            ],
+            [
+              "PGI (ERP)",
+              "Progiciel de gestion intégré : un logiciel unique, une base de données unique"
+            ],
+            [
+              "Avantages du PGI",
+              "Saisie unique, information cohérente et à jour, plus de ressaisies ni d’erreurs"
+            ],
+            [
+              "Limites du PGI",
+              "Coût élevé, rigidité, conduite du changement, dépendance à un fournisseur et à la panne"
+            ],
+            [
+              "Conduite du changement",
+              "Accompagnement des salariés dans l’adoption d’une nouvelle organisation ou d’un nouvel outil"
+            ]
+          ]
         }
       ]
     }

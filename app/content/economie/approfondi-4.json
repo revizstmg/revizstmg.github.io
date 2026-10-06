@@ -81,10 +81,24 @@
       "h": "📚 Le vocabulaire économique de l’actualité",
       "blocks": [
         {
+          "t": "p",
+          "c": "Quatre mots reviennent sans cesse dans l’actualité économique. L’**inflation** est la **hausse générale et durable des prix**. Le **pouvoir d’achat** est **ce que le revenu permet d’acheter** : il recule quand les prix augmentent plus vite que les revenus."
+        },
+        {
+          "t": "p",
+          "c": "La **récession** est un **recul de l’activité**, mesurée par le PIB, sur plusieurs trimestres. La **relance** est une **politique de soutien de l’activité**, par des dépenses publiques ou des baisses d’impôts."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Maîtriser ce vocabulaire permet de **comprendre un article** et de le relier au cours."
+        },
+        {
           "t": "table",
+          "h": "Notions et définitions",
           "head": [
-            "Terme",
-            "Sens"
+            "Notion",
+            "Définition"
           ],
           "rows": [
             [
@@ -104,11 +118,6 @@
               "Politique de soutien de l’activité"
             ]
           ]
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Maîtriser ce vocabulaire permet de **comprendre un article** et de le relier au cours."
         }
       ]
     },

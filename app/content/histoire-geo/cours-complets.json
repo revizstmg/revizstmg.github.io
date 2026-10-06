@@ -10,37 +10,46 @@
             "c": "Dans l’entre-deux-guerres, sur fond de crise (traumatisme de 1914-1918, **krach de 1929**), s’imposent des **régimes totalitaires** qui veulent contrôler **tous** les aspects de la société : **parti unique**, **idéologie** officielle, **propagande** et culture de masse, **police politique** et **terreur**, **culte du chef**, **encadrement de la jeunesse**, économie dirigée."
           },
           {
-            "t": "table",
-            "head": [
-              "Régime",
-              "Chef",
-              "Idéologie",
-              "Terreur / caractéristiques"
-            ],
-            "rows": [
-              [
-                "Italie fasciste (1922)",
-                "Mussolini (« Duce »)",
-                "Fascisme, nationalisme, corporatisme",
-                "Chemises noires, milice, parti unique"
-              ],
-              [
-                "URSS stalinienne",
-                "Staline",
-                "Communisme (marxisme-léninisme)",
-                "Grandes Purges, goulag, procès de Moscou, collectivisation forcée"
-              ],
-              [
-                "Allemagne nazie (1933)",
-                "Hitler (« Führer »)",
-                "Nazisme : racisme, antisémitisme, espace vital",
-                "Gestapo, SS, camps de concentration, lois de Nuremberg"
-              ]
-            ]
+            "t": "p",
+            "c": "L’**Italie fasciste** naît en **1922** avec **Mussolini**, le « Duce ». Son idéologie mêle **fascisme**, **nationalisme** et **corporatisme** ; sa violence passe par les **Chemises noires**, la **milice** et le **parti unique**. L’**URSS stalinienne**, dirigée par **Staline**, se réclame du **communisme** sous sa forme **marxiste-léniniste** ; elle pratique la terreur de masse avec les **Grandes Purges**, le **goulag**, les **procès de Moscou** et la **collectivisation forcée** des terres."
+          },
+          {
+            "t": "p",
+            "c": "L’**Allemagne nazie** naît en **1933** avec **Hitler**, le « Führer ». Le **nazisme** repose sur le **racisme**, l’**antisémitisme** et la conquête d’un **espace vital** ; il s’appuie sur la **Gestapo**, la **SS**, les **camps de concentration** et les **lois de Nuremberg**, qui privent les Juifs de leurs droits."
           },
           {
             "t": "p",
             "c": "Le **nazisme** se distingue par un **racisme** biologique et un **antisémitisme** d’État qui mènera au génocide. Le régime **stalinien** repose sur la terreur de masse (Grandes Purges de 1936-1938, **goulag**)."
+          },
+          {
+            "t": "table",
+            "h": "Notions et repères",
+            "head": [
+              "Notion ou repère",
+              "Définition ou événement"
+            ],
+            "rows": [
+              [
+                "Italie fasciste (1922)",
+                "Mussolini ; fascisme, nationalisme, corporatisme ; Chemises noires"
+              ],
+              [
+                "URSS stalinienne",
+                "Staline ; marxisme-léninisme ; Grandes Purges, goulag, collectivisation forcée"
+              ],
+              [
+                "Allemagne nazie (1933)",
+                "Hitler ; racisme, antisémitisme, espace vital ; Gestapo, SS, camps"
+              ],
+              [
+                "Goulag",
+                "Système des camps de travail forcé en URSS"
+              ],
+              [
+                "Lois de Nuremberg (1935)",
+                "Lois qui privent les Juifs allemands de leurs droits"
+              ]
+            ]
           }
         ]
       },
@@ -48,10 +57,23 @@
         "h": "Chronologie : de la montée des périls à la guerre (1917-1939)",
         "blocks": [
           {
+            "t": "p",
+            "c": "Tout commence en **1917** avec la **révolution russe** : les bolcheviks de **Lénine** prennent le pouvoir. En **1922**, la **marche sur Rome** porte **Mussolini** au pouvoir en Italie, et l’**URSS** est créée. En **1924**, **Lénine meurt** et **Staline** s’impose peu à peu. Le **24 octobre 1929**, le **krach de Wall Street**, le « jeudi noir », déclenche une **crise économique mondiale** qui fragilise les démocraties."
+          },
+          {
+            "t": "p",
+            "c": "Le **30 janvier 1933**, **Hitler devient chancelier** ; dès mars, le camp de **Dachau** est ouvert. En **1935**, les **lois de Nuremberg** privent les Juifs allemands de leurs droits. **1936** est une année chargée : Hitler **réoccupe la Rhénanie**, la **guerre d’Espagne** éclate, les **procès de Moscou** commencent et le **Front populaire** arrive au pouvoir en France."
+          },
+          {
+            "t": "p",
+            "c": "En **mars 1938**, l’**Anschluss** rattache l’Autriche à l’Allemagne. En **septembre 1938**, les **accords de Munich** marquent la reculade des démocraties face à Hitler. Dans la nuit du **9 au 10 novembre 1938**, la **Nuit de Cristal** est un pogrom contre les Juifs allemands. Le **23 août 1939**, le **pacte germano-soviétique** scelle la non-agression entre Hitler et Staline. Le **1er septembre 1939**, l’Allemagne **envahit la Pologne** ; le **3 septembre**, la France et le Royaume-Uni lui déclarent la guerre."
+          },
+          {
             "t": "table",
+            "h": "Notions et repères",
             "head": [
-              "Date",
-              "Événement"
+              "Notion ou repère",
+              "Définition ou événement"
             ],
             "rows": [
               [
@@ -60,7 +82,7 @@
               ],
               [
                 "1922",
-                "Marche sur Rome : Mussolini au pouvoir en Italie ; création de l’URSS"
+                "Marche sur Rome : Mussolini au pouvoir ; création de l’URSS"
               ],
               [
                 "1924",
@@ -68,7 +90,7 @@
               ],
               [
                 "24 oct. 1929",
-                "Krach de Wall Street (« jeudi noir ») → crise économique mondiale"
+                "Krach de Wall Street (« jeudi noir »), crise mondiale"
               ],
               [
                 "30 janv. 1933",
@@ -76,31 +98,31 @@
               ],
               [
                 "1935",
-                "Lois de Nuremberg (privation des droits des Juifs allemands)"
+                "Lois de Nuremberg"
               ],
               [
                 "1936",
-                "Réoccupation de la Rhénanie ; guerre d’Espagne ; procès de Moscou ; Front populaire en France"
+                "Rhénanie réoccupée ; guerre d’Espagne ; procès de Moscou ; Front populaire"
               ],
               [
                 "mars 1938",
-                "Anschluss : annexion de l’Autriche par l’Allemagne"
+                "Anschluss : annexion de l’Autriche"
               ],
               [
                 "sept. 1938",
-                "Accords de Munich (reculade des démocraties face à Hitler)"
+                "Accords de Munich"
               ],
               [
                 "9-10 nov. 1938",
-                "Nuit de Cristal (pogrom contre les Juifs allemands)"
+                "Nuit de Cristal"
               ],
               [
                 "23 août 1939",
-                "Pacte germano-soviétique (non-agression Hitler-Staline)"
+                "Pacte germano-soviétique"
               ],
               [
                 "1er sept. 1939",
-                "Invasion de la Pologne ; le 3 sept., France et Royaume-Uni déclarent la guerre"
+                "Invasion de la Pologne ; le 3, la France et le Royaume-Uni déclarent la guerre"
               ]
             ]
           }
@@ -118,23 +140,40 @@
             "c": "C’est aussi une **guerre d’anéantissement** : la **violence de masse** ne vise plus seulement les armées mais les **civils** (bombardements de villes, famines, exactions). À l’Est, elle est menée comme une guerre d’**extermination**."
           },
           {
+            "t": "p",
+            "c": "En **juin 1940**, la **France est vaincue** : le 18 juin, **de Gaulle** lance son appel depuis Londres, tandis que **Pétain** installe le **régime de Vichy**. Le **22 juin 1941**, l’Allemagne envahit l’URSS : c’est l’**opération Barbarossa**. Le **7 décembre 1941**, le Japon attaque la flotte américaine à **Pearl Harbor**, et les **États-Unis** entrent en guerre."
+          },
+          {
+            "t": "p",
+            "c": "Le **20 janvier 1942**, la **conférence de Wannsee** organise la « **solution finale** », l’extermination des Juifs d’Europe. Les **16 et 17 juillet 1942**, la **rafle du Vél’ d’Hiv** a lieu à Paris, avec le concours de la police française. En **février 1943**, la **capitulation allemande à Stalingrad** marque le **tournant** de la guerre."
+          },
+          {
+            "t": "p",
+            "c": "Le **6 juin 1944**, les Alliés **débarquent en Normandie** ; **Paris est libéré le 25 août 1944**. Le **27 janvier 1945**, l’Armée rouge **libère le camp d’Auschwitz**. Le **8 mai 1945**, l’Allemagne **capitule** : la guerre est finie en Europe. Les **6 et 9 août 1945**, les États-Unis larguent des **bombes atomiques** sur **Hiroshima** et **Nagasaki**, et le **2 septembre 1945**, la **capitulation du Japon** met fin à la Seconde Guerre mondiale."
+          },
+          {
             "t": "table",
+            "h": "Notions et repères",
             "head": [
-              "Date",
-              "Événement"
+              "Notion ou repère",
+              "Définition ou événement"
             ],
             "rows": [
               [
+                "Guerre d’anéantissement",
+                "Guerre qui vise aussi les civils, menée comme une extermination à l’Est"
+              ],
+              [
                 "juin 1940",
-                "Défaite de la France ; appel du 18 juin (de Gaulle) ; régime de Vichy (Pétain)"
+                "Défaite de la France ; appel du 18 juin ; régime de Vichy"
               ],
               [
                 "22 juin 1941",
-                "Opération Barbarossa : l’Allemagne envahit l’URSS"
+                "Opération Barbarossa : invasion de l’URSS"
               ],
               [
                 "7 déc. 1941",
-                "Pearl Harbor : le Japon attaque les États-Unis, qui entrent en guerre"
+                "Pearl Harbor : les États-Unis entrent en guerre"
               ],
               [
                 "20 janv. 1942",
@@ -142,7 +181,7 @@
               ],
               [
                 "16-17 juil. 1942",
-                "Rafle du Vél’ d’Hiv à Paris (avec la police française)"
+                "Rafle du Vél’ d’Hiv"
               ],
               [
                 "févr. 1943",
@@ -150,7 +189,7 @@
               ],
               [
                 "6 juin 1944",
-                "Débarquement allié en Normandie (D-Day)"
+                "Débarquement en Normandie"
               ],
               [
                 "25 août 1944",
@@ -158,19 +197,19 @@
               ],
               [
                 "27 janv. 1945",
-                "Libération du camp d’Auschwitz par l’Armée rouge"
+                "Libération d’Auschwitz par l’Armée rouge"
               ],
               [
                 "8 mai 1945",
-                "Capitulation de l’Allemagne (fin de la guerre en Europe)"
+                "Capitulation de l’Allemagne"
               ],
               [
                 "6 et 9 août 1945",
-                "Bombes atomiques américaines sur Hiroshima et Nagasaki"
+                "Bombes atomiques sur Hiroshima et Nagasaki"
               ],
               [
                 "2 sept. 1945",
-                "Capitulation du Japon : fin de la Seconde Guerre mondiale"
+                "Capitulation du Japon : fin de la guerre"
               ]
             ]
           }
@@ -568,39 +607,52 @@
             "c": "Winston Churchill dénonce dès 1946 le « **rideau de fer** » qui coupe l’Europe en deux. En 1947, la rupture est consommée : les États-Unis proposent l’**endiguement** (containment) du communisme (doctrine Truman) et une aide économique (plan Marshall) ; l’URSS répond par la **doctrine Jdanov** et le **Kominform**."
           },
           {
+            "t": "p",
+            "c": "Du **4 au 11 février 1945**, la **conférence de Yalta** réunit Roosevelt, Churchill et Staline pour organiser l’après-guerre. Le **26 juin 1945**, la **Charte de l’ONU** est signée à San Francisco. À la **conférence de Potsdam**, du **17 juillet au 2 août 1945**, les tensions entre Alliés sont déjà visibles."
+          },
+          {
+            "t": "p",
+            "c": "Le **5 mars 1946**, à **Fulton**, Churchill dénonce le « **rideau de fer** ». Le **12 mars 1947**, la **doctrine Truman** lance la politique d’**endiguement** (containment). Le **5 juin 1947**, le **plan Marshall** est annoncé pour aider l’Europe. En **septembre-octobre 1947**, l’URSS répond avec la **doctrine Jdanov** et la création du **Kominform**."
+          },
+          {
             "t": "table",
+            "h": "Notions et repères",
             "head": [
-              "Date",
-              "Événement"
+              "Notion ou repère",
+              "Définition ou événement"
             ],
             "rows": [
               [
                 "4-11 févr. 1945",
-                "Conférence de Yalta (Roosevelt, Churchill, Staline) : organisation de l’après-guerre"
+                "Conférence de Yalta : organisation de l’après-guerre"
               ],
               [
                 "26 juin 1945",
-                "Signature de la Charte de l’ONU à San Francisco"
+                "Charte de l’ONU signée à San Francisco"
               ],
               [
-                "17 juil.-2 août 1945",
-                "Conférence de Potsdam (tensions déjà visibles)"
+                "juil.-août 1945",
+                "Conférence de Potsdam"
               ],
               [
                 "5 mars 1946",
-                "Discours de Fulton : Churchill dénonce le « rideau de fer »"
+                "Discours de Fulton : le « rideau de fer »"
               ],
               [
                 "12 mars 1947",
-                "Doctrine Truman : politique d’endiguement (containment)"
+                "Doctrine Truman : endiguement (containment)"
               ],
               [
                 "5 juin 1947",
-                "Annonce du plan Marshall (aide économique à l’Europe)"
+                "Annonce du plan Marshall"
               ],
               [
                 "sept.-oct. 1947",
-                "Doctrine Jdanov et création du Kominform (réponse soviétique)"
+                "Doctrine Jdanov et Kominform"
+              ],
+              [
+                "Endiguement (containment)",
+                "Politique américaine visant à contenir l’expansion du communisme"
               ]
             ]
           }
@@ -618,19 +670,28 @@
             "c": "La Guerre froide se **mondialise** : la victoire de **Mao** en Chine (1949) et la **guerre de Corée** (1950-1953) l’étendent à l’Asie. La course aux armements s’emballe (bombe A soviétique en 1949, bombe H)."
           },
           {
+            "t": "p",
+            "c": "Le **24 juin 1948**, l’URSS commence le **blocus de Berlin** ; de **juin 1948 à mai 1949**, un **pont aérien** allié ravitaille Berlin-Ouest. Le **4 avril 1949**, l’**OTAN** est créée. En **mai puis octobre 1949** naissent la **RFA** à l’Ouest et la **RDA** à l’Est. Le **29 août 1949**, l’URSS fait exploser sa **première bombe atomique**, et le **1er octobre 1949**, **Mao Zedong** proclame la **République populaire de Chine**."
+          },
+          {
+            "t": "p",
+            "c": "De **1950 à 1953**, la **guerre de Corée** est la première guerre « chaude » menée par procuration. En **1952**, les États-Unis font exploser la première **bombe H**, thermonucléaire. Le **5 mars 1953**, la **mort de Staline** ouvre une nouvelle période."
+          },
+          {
             "t": "table",
+            "h": "Notions et repères",
             "head": [
-              "Date",
-              "Événement"
+              "Notion ou repère",
+              "Définition ou événement"
             ],
             "rows": [
               [
                 "24 juin 1948",
-                "Début du blocus de Berlin par l’URSS"
+                "Début du blocus de Berlin"
               ],
               [
-                "juin 1948-mai 1949",
-                "Pont aérien allié pour ravitailler Berlin-Ouest"
+                "1948-1949",
+                "Pont aérien allié vers Berlin-Ouest"
               ],
               [
                 "4 avril 1949",
@@ -638,7 +699,7 @@
               ],
               [
                 "mai / oct. 1949",
-                "Naissance de la RFA (Ouest) puis de la RDA (Est)"
+                "Naissance de la RFA puis de la RDA"
               ],
               [
                 "29 août 1949",
@@ -646,19 +707,23 @@
               ],
               [
                 "1er oct. 1949",
-                "Mao Zedong proclame la République populaire de Chine"
+                "Proclamation de la République populaire de Chine"
               ],
               [
                 "1950-1953",
-                "Guerre de Corée : première guerre « chaude » par procuration"
+                "Guerre de Corée"
               ],
               [
                 "1952",
-                "Première bombe H (thermonucléaire) américaine"
+                "Première bombe H américaine"
               ],
               [
                 "5 mars 1953",
                 "Mort de Staline"
+              ],
+              [
+                "Guerre par procuration",
+                "Conflit où les deux Grands s’affrontent indirectement par des alliés"
               ]
             ]
           }
@@ -676,23 +741,32 @@
             "c": "Les crises se multiplient jusqu’au **paroxysme** : le **mur de Berlin** (1961) fige la coupure, et la **crise des missiles de Cuba** (1962) amène le monde au bord de la guerre nucléaire."
           },
           {
+            "t": "p",
+            "c": "En **1955**, l’Est se dote d’une alliance militaire, le **pacte de Varsovie**, tandis que la **conférence de Bandung** réunit les pays du Tiers-Monde. En **1956**, le **rapport Khrouchtchev** lance la **déstalinisation**, mais l’**insurrection de Budapest** est écrasée par l’URSS, et la **crise de Suez** éclate."
+          },
+          {
+            "t": "p",
+            "c": "Le **4 octobre 1957**, le lancement de **Spoutnik** ouvre la course à l’espace, et le **12 avril 1961**, **Gagarine** devient le premier homme dans l’espace. Le **13 août 1961**, la RDA construit le **mur de Berlin**. En **octobre 1962**, la **crise des missiles de Cuba** marque le point de tension maximal, avec un risque de guerre nucléaire."
+          },
+          {
             "t": "table",
+            "h": "Notions et repères",
             "head": [
-              "Date",
-              "Événement"
+              "Notion ou repère",
+              "Définition ou événement"
             ],
             "rows": [
               [
                 "1955",
-                "Pacte de Varsovie (alliance militaire de l’Est) ; conférence de Bandung"
+                "Pacte de Varsovie ; conférence de Bandung"
               ],
               [
                 "1956",
-                "Rapport Khrouchtchev (déstalinisation) ; insurrection de Budapest écrasée ; crise de Suez"
+                "Rapport Khrouchtchev ; insurrection de Budapest écrasée ; crise de Suez"
               ],
               [
                 "4 oct. 1957",
-                "Lancement de Spoutnik (l’URSS ouvre la course à l’espace)"
+                "Lancement de Spoutnik"
               ],
               [
                 "12 avr. 1961",
@@ -704,7 +778,11 @@
               ],
               [
                 "oct. 1962",
-                "Crise des missiles de Cuba : point de tension maximal (risque nucléaire)"
+                "Crise des missiles de Cuba"
+              ],
+              [
+                "Coexistence pacifique",
+                "Accepter de coexister sans renoncer à la rivalité"
               ]
             ]
           }
@@ -718,19 +796,28 @@
             "c": "Effrayés par Cuba, les deux Grands ouvrent un **dialogue** : c’est la **Détente**. On installe le « téléphone rouge », on signe des accords de **limitation des armements** (SALT) et de **non-prolifération**. Mais la rivalité continue : guerre du **Vietnam**, écrasement du **Printemps de Prague** (1968), course à la Lune."
           },
           {
+            "t": "p",
+            "c": "En **1963**, le **téléphone rouge** relie Washington et Moscou, et un **traité interdit partiellement les essais nucléaires**. En **1968**, l’URSS écrase le **Printemps de Prague**, mais le **traité de non-prolifération** (TNP) est signé. Le **21 juillet 1969**, avec la mission **Apollo 11**, les Américains marchent sur la Lune."
+          },
+          {
+            "t": "p",
+            "c": "En **1972**, les **accords SALT I** limitent les armements, et **Nixon** se rend en **Chine** puis à **Moscou**. En **1973**, les États-Unis **se retirent du Vietnam**. En **1975**, la **chute de Saïgon** met fin à la guerre du Vietnam, et les **accords d’Helsinki** sont signés."
+          },
+          {
             "t": "table",
+            "h": "Notions et repères",
             "head": [
-              "Date",
-              "Événement"
+              "Notion ou repère",
+              "Définition ou événement"
             ],
             "rows": [
               [
                 "1963",
-                "Téléphone rouge Washington-Moscou ; traité d’interdiction partielle des essais nucléaires"
+                "Téléphone rouge ; traité d’interdiction partielle des essais nucléaires"
               ],
               [
                 "1968",
-                "Printemps de Prague écrasé par l’URSS ; traité de non-prolifération (TNP)"
+                "Printemps de Prague écrasé ; traité de non-prolifération (TNP)"
               ],
               [
                 "21 juil. 1969",
@@ -738,7 +825,7 @@
               ],
               [
                 "1972",
-                "Accords SALT I ; visite de Nixon en Chine et à Moscou"
+                "Accords SALT I ; Nixon en Chine et à Moscou"
               ],
               [
                 "1973",
@@ -746,7 +833,11 @@
               ],
               [
                 "1975",
-                "Chute de Saïgon (fin de la guerre du Vietnam) ; accords d’Helsinki"
+                "Chute de Saïgon ; accords d’Helsinki"
+              ],
+              [
+                "Détente",
+                "Période de dialogue et de limitation des armements (1962-1975)"
               ]
             ]
           }
@@ -760,19 +851,28 @@
             "c": "La tension repart (« **guerre fraîche** ») avec l’intervention soviétique en **Afghanistan** (1979) et la relance de la course aux armements par **Reagan**. Mais l’URSS, épuisée économiquement, ne peut plus suivre. **Gorbatchev** (1985) lance des réformes (**perestroïka**, **glasnost**) qui, en desserrant l’étau, précipitent l’**effondrement du bloc de l’Est**."
           },
           {
+            "t": "p",
+            "c": "En **1979**, l’**intervention soviétique en Afghanistan** relance les tensions : c’est la « **guerre fraîche** ». En **1983**, **Reagan** lance le projet de « **guerre des étoiles** » (IDS). En **1985**, **Gorbatchev** arrive au pouvoir et lance la **perestroïka** et la **glasnost**. En **1986**, la **catastrophe de Tchernobyl** révèle les failles du système soviétique, et le **sommet de Reykjavik** rapproche les deux Grands."
+          },
+          {
+            "t": "p",
+            "c": "En **1987**, le **traité FNI** organise la destruction des missiles nucléaires de portée intermédiaire. Le **9 novembre 1989**, le **mur de Berlin tombe** et les révolutions se succèdent dans les pays de l’Est. Le **3 octobre 1990**, l’**Allemagne est réunifiée**. Le **25 décembre 1991**, la **démission de Gorbatchev** et l’**éclatement de l’URSS** mettent fin à la guerre froide."
+          },
+          {
             "t": "table",
+            "h": "Notions et repères",
             "head": [
-              "Date",
-              "Événement"
+              "Notion ou repère",
+              "Définition ou événement"
             ],
             "rows": [
               [
                 "1979",
-                "Intervention soviétique en Afghanistan → « guerre fraîche »"
+                "Intervention soviétique en Afghanistan : « guerre fraîche »"
               ],
               [
                 "1983",
-                "Reagan lance le projet de « guerre des étoiles » (IDS)"
+                "Projet de « guerre des étoiles » (IDS) de Reagan"
               ],
               [
                 "1985",
@@ -780,15 +880,15 @@
               ],
               [
                 "1986",
-                "Catastrophe de Tchernobyl ; sommet de Reykjavik"
+                "Tchernobyl ; sommet de Reykjavik"
               ],
               [
                 "1987",
-                "Traité FNI : destruction des missiles nucléaires intermédiaires"
+                "Traité FNI"
               ],
               [
                 "9 nov. 1989",
-                "Chute du mur de Berlin ; révolutions dans les pays de l’Est"
+                "Chute du mur de Berlin"
               ],
               [
                 "3 oct. 1990",
@@ -796,7 +896,11 @@
               ],
               [
                 "25 déc. 1991",
-                "Démission de Gorbatchev, éclatement de l’URSS : fin de la Guerre froide"
+                "Démission de Gorbatchev, éclatement de l’URSS"
+              ],
+              [
+                "Perestroïka / glasnost",
+                "Restructuration économique / transparence"
               ]
             ]
           }
@@ -1027,15 +1131,24 @@
             "c": "À la Libération, le **GPRF** (de Gaulle) applique le programme du **CNR** : **droit de vote des femmes** (1944), **Sécurité sociale** (1945), nationalisations (banques, énergie). La croissance prend fin avec le **choc pétrolier** de 1973."
           },
           {
+            "t": "p",
+            "c": "En **1944**, le **Gouvernement provisoire** (GPRF) s’installe et lance des **nationalisations** ; la presse est réorganisée. En **1945**, la **Sécurité sociale** est créée et **Renault** est nationalisé. En **1946**, l’électricité et le gaz (**EDF-GDF**) ainsi que la **Banque de France** sont nationalisés ; le **SMIG**, salaire minimum, sera institué en **1950**."
+          },
+          {
+            "t": "p",
+            "c": "En **1947** démarre le **premier plan de modernisation**, le **plan Monnet**, et l’aide du **plan Marshall** arrive dès **1948**. Les **années 1950-1960** voient naître la **société de consommation** : automobile, électroménager, télévision. En **1968**, les **accords de Grenelle** accordent une forte hausse des salaires. En **1973**, le **premier choc pétrolier** met fin aux Trente Glorieuses, et le chômage commence à monter."
+          },
+          {
             "t": "table",
+            "h": "Notions et repères",
             "head": [
-              "Date",
-              "Repère économique et social"
+              "Notion ou repère",
+              "Définition ou événement"
             ],
             "rows": [
               [
                 "1944",
-                "Gouvernement provisoire (GPRF) ; nationalisations, presse"
+                "GPRF ; nationalisations"
               ],
               [
                 "1945",
@@ -1043,14 +1156,14 @@
               ],
               [
                 "1946",
-                "Nationalisations (EDF-GDF, Banque de France) ; institution du SMIG (1950)"
+                "Nationalisations (EDF-GDF, Banque de France)"
               ],
               [
                 "1947",
-                "Premier plan de modernisation (plan Monnet) ; aide du plan Marshall dès 1948"
+                "Plan Monnet ; aide du plan Marshall dès 1948"
               ],
               [
-                "années 1950-60",
+                "Années 1950-60",
                 "Société de consommation (automobile, électroménager, télévision)"
               ],
               [
@@ -1059,7 +1172,15 @@
               ],
               [
                 "1973",
-                "Premier choc pétrolier : fin des Trente Glorieuses, montée du chômage"
+                "Premier choc pétrolier : fin des Trente Glorieuses"
+              ],
+              [
+                "État-providence",
+                "État qui protège les citoyens contre les grands risques (Sécurité sociale)"
+              ],
+              [
+                "CNR",
+                "Conseil national de la Résistance, dont le programme inspire les réformes de 1944-1946"
               ]
             ]
           }
@@ -1073,10 +1194,19 @@
             "c": "Les Trente Glorieuses transforment la société : émancipation des **femmes**, poids nouveau de la **jeunesse** (baby-boom), **immigration** de main-d’œuvre, exode rural. Mai **1968** cristallise ces aspirations à plus de liberté."
           },
           {
+            "t": "p",
+            "c": "En **1944**, les **femmes obtiennent le droit de vote**. En **1965**, elles peuvent **travailler** et **ouvrir un compte bancaire sans l’accord de leur mari**. En **1967**, la **loi Neuwirth** autorise la **contraception**."
+          },
+          {
+            "t": "p",
+            "c": "En **mai 1968**, la **contestation étudiante et ouvrière** débouche sur une **grève générale** et sur les **accords de Grenelle**. En **1974**, la **majorité civile est abaissée à 18 ans** et l’**immigration de travail est arrêtée**. En **1975**, la **loi Veil** légalise l’**avortement** (IVG)."
+          },
+          {
             "t": "table",
+            "h": "Notions et repères",
             "head": [
-              "Date",
-              "Événement de société"
+              "Notion ou repère",
+              "Définition ou événement"
             ],
             "rows": [
               [
@@ -1089,19 +1219,23 @@
               ],
               [
                 "1967",
-                "Loi Neuwirth : autorisation de la contraception"
+                "Loi Neuwirth : contraception autorisée"
               ],
               [
                 "mai 1968",
-                "Contestation étudiante et ouvrière : grève générale, accords de Grenelle"
+                "Contestation étudiante et ouvrière, grève générale, accords de Grenelle"
               ],
               [
                 "1974",
-                "Majorité civile abaissée à 18 ans ; arrêt de l’immigration de travail"
+                "Majorité à 18 ans ; arrêt de l’immigration de travail"
               ],
               [
                 "1975",
-                "Loi Veil : légalisation de l’avortement (IVG)"
+                "Loi Veil : légalisation de l’IVG"
+              ],
+              [
+                "Baby-boom",
+                "Forte hausse des naissances après 1945"
               ]
             ]
           }
@@ -1111,35 +1245,44 @@
         "h": "Chronologie politique : de la IVe à la Ve République",
         "blocks": [
           {
+            "t": "p",
+            "c": "En **1944**, la France est libérée et les **femmes obtiennent le droit de vote** ; elles votent pour la première fois en 1945. En **1945**, la **Sécurité sociale** est créée et le **procès de Nuremberg** juge les dirigeants nazis. En **1946**, la **IVe République** est proclamée. En **1958**, la **crise algérienne** ramène **de Gaulle** au pouvoir et la **Ve République** est fondée, avec un pouvoir présidentiel renforcé."
+          },
+          {
+            "t": "p",
+            "c": "En **1962**, la **guerre d’Algérie prend fin** et un référendum instaure l’**élection du président au suffrage universel direct**. En **mai 1968**, la contestation étudiante et sociale débouche sur une **grève générale**. En **1969**, **de Gaulle démissionne**. En **1974**, la **majorité passe à 18 ans** et **Valéry Giscard d’Estaing** est élu président. En **1981**, **François Mitterrand** incarne la **première alternance** ; la **peine de mort est abolie**. En **2000**, le **quinquennat** réduit le mandat présidentiel à cinq ans."
+          },
+          {
             "t": "table",
+            "h": "Notions et repères",
             "head": [
-              "Date",
-              "Événement"
+              "Notion ou repère",
+              "Définition ou événement"
             ],
             "rows": [
               [
                 "1944",
-                "Libération ; droit de vote accordé aux femmes (elles votent en 1945)"
+                "Libération ; droit de vote des femmes"
               ],
               [
                 "1945",
-                "Création de la Sécurité sociale ; procès de Nuremberg"
+                "Sécurité sociale ; procès de Nuremberg"
               ],
               [
                 "1946",
-                "Proclamation de la IVe République"
+                "IVe République"
               ],
               [
                 "1958",
-                "Crise algérienne : retour de De Gaulle ; fondation de la Ve République (pouvoir présidentiel renforcé)"
+                "Retour de de Gaulle ; Ve République"
               ],
               [
                 "1962",
-                "Fin de la guerre d’Algérie ; élection du président au suffrage universel direct (référendum)"
+                "Fin de la guerre d’Algérie ; président élu au suffrage universel direct"
               ],
               [
                 "mai 1968",
-                "Mai 68 : contestation étudiante et sociale, grève générale"
+                "Contestation étudiante et sociale, grève générale"
               ],
               [
                 "1969",
@@ -1151,11 +1294,11 @@
               ],
               [
                 "1981",
-                "François Mitterrand : première alternance (gauche) ; abolition de la peine de mort"
+                "Mitterrand : première alternance ; abolition de la peine de mort"
               ],
               [
                 "2000",
-                "Passage au quinquennat (mandat présidentiel de 5 ans)"
+                "Passage au quinquennat"
               ]
             ]
           }

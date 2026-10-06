@@ -12,29 +12,12 @@
           "c": "Un **besoin** est une sensation de manque. **Maslow** les hiérarchise en une pyramide : besoins physiologiques, de sécurité, d’appartenance, d’estime, d’accomplissement. Un produit peut répondre à plusieurs niveaux à la fois (une voiture = se déplacer, mais aussi statut social)."
         },
         {
-          "t": "table",
-          "head": [
-            "Notion",
-            "Définition"
-          ],
-          "rows": [
-            [
-              "Besoin",
-              "Sensation de manque (dormir, se nourrir, appartenir)"
-            ],
-            [
-              "Motivation / mobile",
-              "Force qui POUSSE à l’achat"
-            ],
-            [
-              "Frein",
-              "Force qui RETIENT (peur, risque, prix)"
-            ],
-            [
-              "Attente",
-              "Ce que le client espère précisément du produit"
-            ]
-          ]
+          "t": "p",
+          "c": "Quatre notions décrivent ce qui se passe dans la tête du consommateur. Le **besoin** est une sensation de manque : dormir, se nourrir, appartenir à un groupe. La **motivation**, qu’on appelle aussi **mobile**, est la force qui **pousse** à acheter pour satisfaire ce besoin."
+        },
+        {
+          "t": "p",
+          "c": "À l’inverse, le **frein** est la force qui **retient** d’acheter : la peur de se tromper, le risque perçu, un prix jugé trop élevé. Enfin, l’**attente** est ce que le client espère précisément du produit, par exemple une batterie qui tient toute la journée. Un achat a lieu quand les mobiles l’emportent sur les freins et que le produit semble répondre aux attentes."
         },
         {
           "t": "p",
@@ -44,6 +27,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Un achat = équilibre entre **mobiles** (qui poussent) et **freins** (qui retiennent). Le rôle de la mercatique est de **renforcer les mobiles** et de **lever les freins** (essai gratuit, garantie, avis clients)."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Besoin",
+              "Sensation de manque (dormir, se nourrir, appartenir) ; Maslow les classe en 5 niveaux"
+            ],
+            [
+              "Motivation / mobile",
+              "Force qui pousse à l’achat (hédoniste, oblatif, auto-expression)"
+            ],
+            [
+              "Frein",
+              "Force qui retient d’acheter (peur, risque, prix, inhibition)"
+            ],
+            [
+              "Attente",
+              "Ce que le client espère précisément du produit"
+            ]
+          ]
         }
       ]
     },
@@ -87,24 +96,12 @@
           "c": "Pour connaître les consommateurs, l’entreprise réalise des **études de marché**. On les classe en deux grandes familles complémentaires."
         },
         {
-          "t": "table",
-          "head": [
-            "Étude",
-            "Question",
-            "Outils"
-          ],
-          "rows": [
-            [
-              "Quantitative",
-              "COMBIEN ? (mesurer)",
-              "Sondage, questionnaire sur grand échantillon"
-            ],
-            [
-              "Qualitative",
-              "POURQUOI ? (comprendre)",
-              "Entretiens, réunions de groupe (focus group)"
-            ]
-          ]
+          "t": "p",
+          "c": "L’**étude quantitative** répond à la question **« combien ? »** : elle cherche à **mesurer**. Elle repose sur un **sondage** ou un **questionnaire** passé auprès d’un **grand échantillon**, ce qui permet d’obtenir des chiffres représentatifs, comme la part des Français qui connaissent une marque."
+        },
+        {
+          "t": "p",
+          "c": "L’**étude qualitative** répond à la question **« pourquoi ? »** : elle cherche à **comprendre** les motivations et les freins. Elle utilise des **entretiens individuels** approfondis et des **réunions de groupe** (focus groups), menés auprès d’un petit nombre de personnes. Les deux études se complètent : la qualitative fait apparaître des idées, la quantitative vérifie leur poids."
         },
         {
           "t": "p",
@@ -118,6 +115,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Quanti = **mesurer** (combien) ; quali = **comprendre** (pourquoi). Les deux se complètent : on explore en quali, on valide en quanti."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Étude quantitative",
+              "Mesure (« combien ? ») par sondage ou questionnaire sur un grand échantillon"
+            ],
+            [
+              "Étude qualitative",
+              "Comprend (« pourquoi ? ») par entretiens et réunions de groupe"
+            ],
+            [
+              "Données primaires",
+              "Données recueillies spécialement pour l’étude"
+            ],
+            [
+              "Données secondaires",
+              "Données qui existent déjà (INSEE, rapports)"
+            ]
+          ]
         }
       ]
     },
@@ -199,29 +222,12 @@
           "c": "Une entreprise ne peut pas plaire à tout le monde. La démarche **SCP** structure son approche du marché en trois temps."
         },
         {
-          "t": "table",
-          "head": [
-            "Étape",
-            "Question",
-            "Résultat"
-          ],
-          "rows": [
-            [
-              "Segmentation",
-              "Comment découper le marché ?",
-              "Des groupes homogènes (segments)"
-            ],
-            [
-              "Ciblage",
-              "Quel(s) segment(s) viser ?",
-              "La cible"
-            ],
-            [
-              "Positionnement",
-              "Quelle image donner ?",
-              "Une place claire dans l’esprit du client"
-            ]
-          ]
+          "t": "p",
+          "c": "La **segmentation** répond à la question « comment découper le marché ? ». Elle aboutit à des **groupes homogènes** de consommateurs, les **segments**, qui se ressemblent par leur âge, leur revenu, leur style de vie ou leur usage du produit."
+        },
+        {
+          "t": "p",
+          "c": "Le **ciblage** répond à la question « quel segment viser ? » : son résultat est la **cible**, c’est-à-dire le ou les segments que l’entreprise décide de conquérir. Le **positionnement**, enfin, répond à la question « quelle image donner ? » : il donne au produit une **place claire dans l’esprit du client**, différente de celle des concurrents."
         },
         {
           "t": "p",
@@ -236,6 +242,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "SCP = **Segmenter → Cibler → Positionner**. Un bon positionnement est **clair, distinctif et crédible** : il répond à « pourquoi me choisir plutôt qu’un autre ? »."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Segmentation",
+              "Découpage du marché en groupes homogènes de consommateurs (segments)"
+            ],
+            [
+              "Ciblage",
+              "Choix du ou des segments à viser : la cible"
+            ],
+            [
+              "Positionnement",
+              "Image et place que l’on veut occuper dans l’esprit du client, face aux concurrents"
+            ],
+            [
+              "Démarche SCP",
+              "Segmenter, puis cibler, puis positionner"
+            ]
+          ]
         }
       ]
     },
@@ -303,34 +335,12 @@
           "c": "La **mercatique opérationnelle** met en œuvre la stratégie par des actions concrètes, résumées par le **marketing mix** ou les **4P** : Product, Price, Place, Promotion. La clé est leur **cohérence** : les 4P doivent « raconter la même histoire »."
         },
         {
-          "t": "table",
-          "head": [
-            "P",
-            "En français",
-            "Décisions"
-          ],
-          "rows": [
-            [
-              "Product",
-              "Produit",
-              "Gamme, qualité, design, marque, services"
-            ],
-            [
-              "Price",
-              "Prix",
-              "Niveau, stratégie, réductions"
-            ],
-            [
-              "Place",
-              "Distribution",
-              "Circuits, points de vente, logistique"
-            ],
-            [
-              "Promotion",
-              "Communication",
-              "Publicité, promotions, réseaux sociaux"
-            ]
-          ]
+          "t": "p",
+          "c": "Le premier P, **Product** ou **produit**, regroupe les décisions sur la **gamme**, la **qualité**, le **design**, la **marque** et les **services** associés. Le deuxième, **Price** ou **prix**, porte sur le **niveau** de prix, la **stratégie** choisie et les éventuelles **réductions**."
+        },
+        {
+          "t": "p",
+          "c": "Le troisième, **Place** ou **distribution**, concerne les **circuits**, les **points de vente** et la **logistique** qui amène le produit au client. Le quatrième, **Promotion** ou **communication**, rassemble la **publicité**, les **promotions** et la présence sur les **réseaux sociaux**. Aucun de ces P ne se décide seul : chacun doit être cohérent avec les trois autres et avec le positionnement."
         },
         {
           "t": "p",
@@ -340,6 +350,36 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Les 4P = **Produit, Prix, Distribution (Place), Communication (Promotion)**. Ils doivent être **cohérents** entre eux et avec le **positionnement**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Marketing mix (4P)",
+              "Les quatre leviers de la mercatique opérationnelle : produit, prix, distribution, communication"
+            ],
+            [
+              "Produit (Product)",
+              "Gamme, qualité, design, marque, services"
+            ],
+            [
+              "Prix (Price)",
+              "Niveau, stratégie, réductions"
+            ],
+            [
+              "Distribution (Place)",
+              "Circuits, points de vente, logistique"
+            ],
+            [
+              "Communication (Promotion)",
+              "Publicité, promotions, réseaux sociaux"
+            ]
+          ]
         }
       ]
     },
@@ -351,29 +391,12 @@
           "c": "Le **prix** est le seul P qui **rapporte** de l’argent (les autres en coûtent). Il envoie aussi un signal de **qualité** et de **positionnement**. Trois grandes stratégies existent au lancement."
         },
         {
-          "t": "table",
-          "head": [
-            "Stratégie",
-            "Principe",
-            "Quand"
-          ],
-          "rows": [
-            [
-              "Écrémage",
-              "Prix élevé, cibler une clientèle prête à payer",
-              "Produit innovant, image premium"
-            ],
-            [
-              "Pénétration",
-              "Prix bas pour conquérir vite un large marché",
-              "Marché de masse, volumes"
-            ],
-            [
-              "Alignement",
-              "Se caler sur le prix du marché",
-              "Marché concurrentiel banalisé"
-            ]
-          ]
+          "t": "p",
+          "c": "La stratégie d’**écrémage** consiste à fixer un **prix élevé** pour viser une clientèle prête à payer cher. On la choisit pour un **produit innovant** ou une marque à l’**image premium** : le prix élevé renforce l’idée de qualité et permet de rentabiliser vite l’innovation."
+        },
+        {
+          "t": "p",
+          "c": "La stratégie de **pénétration** consiste au contraire à fixer un **prix bas** pour **conquérir rapidement** un large marché. Elle convient à un **marché de masse**, où l’entreprise compte sur les **volumes** vendus. Enfin, l’**alignement** consiste à **se caler sur le prix du marché** : c’est le choix logique sur un **marché très concurrentiel** où les produits se ressemblent beaucoup."
         },
         {
           "t": "p",
@@ -388,6 +411,32 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Prix = coût + demande + concurrence. **Écrémage** (prix haut, image) vs **pénétration** (prix bas, volume). Le prix doit rester **cohérent** avec le positionnement."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Écrémage",
+              "Prix élevé pour une clientèle prête à payer (produit innovant, image premium)"
+            ],
+            [
+              "Pénétration",
+              "Prix bas pour conquérir vite un large marché (marché de masse, volumes)"
+            ],
+            [
+              "Alignement",
+              "Prix calé sur celui du marché (marché concurrentiel banalisé)"
+            ],
+            [
+              "Élasticité-prix",
+              "Sensibilité de la demande à une variation du prix"
+            ]
+          ]
         }
       ]
     },
@@ -407,34 +456,47 @@
           "c": "La **politique de communication** fait connaître et aimer le produit. On distingue les moyens **média** (TV, radio, presse, affichage, internet) et **hors-média** (promotion des ventes, relations publiques, marketing direct, réseaux sociaux)."
         },
         {
-          "t": "table",
-          "head": [
-            "Circuit",
-            "Intermédiaires",
-            "Exemple"
-          ],
-          "rows": [
-            [
-              "Direct",
-              "Aucun",
-              "Vente à la ferme, site du fabricant"
-            ],
-            [
-              "Court",
-              "Un",
-              "Producteur → détaillant"
-            ],
-            [
-              "Long",
-              "Plusieurs",
-              "Producteur → grossiste → détaillant"
-            ]
-          ]
+          "t": "p",
+          "c": "Un **circuit de distribution** se définit par le nombre d’intermédiaires entre le producteur et le consommateur. Dans un **circuit direct**, il n’y en a **aucun** : c’est la vente à la ferme ou sur le site internet du fabricant."
+        },
+        {
+          "t": "p",
+          "c": "Dans un **circuit court**, il y a **un seul intermédiaire**, en général un **détaillant** qui achète au producteur et revend au client. Dans un **circuit long**, il y a **plusieurs intermédiaires**, typiquement un **grossiste** puis un **détaillant**. Plus le circuit est long, plus le produit peut être diffusé largement, mais plus chaque intermédiaire prend une marge."
         },
         {
           "t": "tip",
           "h": "À retenir",
           "c": "Produit (gamme, cycle de vie, marque) + Distribution (circuits, intensité) + Communication (média/hors-média). Chaque choix doit rester **cohérent** avec les trois autres P."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Circuit direct",
+              "Aucun intermédiaire (vente à la ferme, site du fabricant)"
+            ],
+            [
+              "Circuit court",
+              "Un intermédiaire (producteur → détaillant)"
+            ],
+            [
+              "Circuit long",
+              "Plusieurs intermédiaires (producteur → grossiste → détaillant)"
+            ],
+            [
+              "Communication média",
+              "TV, radio, presse, affichage, internet"
+            ],
+            [
+              "Communication hors-média",
+              "Promotion des ventes, relations publiques, marketing direct, réseaux sociaux"
+            ]
+          ]
         }
       ]
     },
@@ -506,25 +568,12 @@
           "c": "Mais attention au **greenwashing** (écoblanchiment) : communiquer sur des engagements verts sans les tenir réellement. C’est un **risque majeur** de réputation : les consommateurs et les ONG le débusquent vite, et le retour de bâton peut être violent."
         },
         {
-          "t": "table",
-          "head": [
-            "Démarche sincère",
-            "Greenwashing"
-          ],
-          "rows": [
-            [
-              "Engagements mesurés et prouvés",
-              "Slogans vagues (« éco », « vert »)"
-            ],
-            [
-              "Transparence sur les limites",
-              "On cache l’essentiel"
-            ],
-            [
-              "Cohérence sur toute l’activité",
-              "Une action verte, le reste polluant"
-            ]
-          ]
+          "t": "p",
+          "c": "Une **démarche sincère** se reconnaît à trois signes. Ses **engagements sont mesurés et prouvés**, avec des chiffres vérifiables. Elle est **transparente sur ses limites** et dit ce qui reste à améliorer. Enfin, elle est **cohérente sur toute l’activité** de l’entreprise, pas seulement sur un produit vitrine."
+        },
+        {
+          "t": "p",
+          "c": "Le **greenwashing** présente les défauts inverses. Il repose sur des **slogans vagues**, avec des mots comme « éco » ou « vert » sans preuve. Il **cache l’essentiel**, en mettant en avant un détail positif. Et il met en scène **une action verte isolée** pendant que **le reste de l’activité pollue**."
         },
         {
           "t": "p",
@@ -534,6 +583,28 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Mercatique durable **sincère** = avantage concurrentiel ; **greenwashing** = risque de réputation. La e-réputation se **surveille** et se **cultive**."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Greenwashing (écoblanchiment)",
+              "Communiquer sur des engagements écologiques sans les tenir réellement"
+            ],
+            [
+              "Démarche sincère",
+              "Engagements mesurés et prouvés, transparence sur les limites, cohérence sur toute l’activité"
+            ],
+            [
+              "E-réputation",
+              "Image d’une entreprise sur internet (avis, commentaires, bad buzz)"
+            ]
+          ]
         }
       ]
     },
