@@ -1,0 +1,10 @@
+# RévizSTMG — https://revizstmg.github.io
+User-agent: *
+Allow: /
+# Dossiers de travail du dépôt, servis aussi par GitHub Pages : rien à indexer.
+Disallow: /app/
+Disallow: /docs/
+Disallow: /supabase/
+Disallow: /statistiques/
+
+Sitemap: https://revizstmg.github.io/sitemap.xml
