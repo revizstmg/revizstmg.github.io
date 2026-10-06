@@ -1,200 +1,825 @@
 [
   {
     "cat": "Gestion & Finance",
-    "icon": "💶",
-    "color": "#0f766e",
-    "items": [
+    "icon": "💰",
+    "color": "#047857",
+    "parts": [
       {
-        "name": "TVA à décaisser",
-        "f": "TVA collectée − TVA déductible"
+        "title": "TVA et facture",
+        "items": [
+          {
+            "name": "Montant de la TVA",
+            "f": "Prix HT × Taux de TVA",
+            "note": "taux en décimal : 20 % → 0,20"
+          },
+          {
+            "name": "Prix TTC",
+            "f": "Prix HT × (1 + Taux de TVA)",
+            "note": "à 20 % : HT × 1,20"
+          },
+          {
+            "name": "Prix HT",
+            "f": "Prix TTC ÷ (1 + Taux de TVA)",
+            "note": "on divise par 1,20, on ne retire pas 20 %"
+          },
+          {
+            "name": "TVA à décaisser",
+            "f": "TVA collectée − TVA déductible",
+            "note": "si la déductible dépasse la collectée : crédit de TVA"
+          },
+          {
+            "name": "Net commercial",
+            "f": "Brut HT − Rabais − Remise − Ristourne"
+          },
+          {
+            "name": "Net financier",
+            "f": "Net commercial − Escompte"
+          },
+          {
+            "name": "Net à payer TTC",
+            "f": "Net financier + TVA",
+            "note": "TVA = Net financier × taux"
+          },
+          {
+            "name": "Partie double",
+            "f": "Total des débits = Total des crédits"
+          }
+        ]
       },
       {
-        "name": "Résultat",
-        "f": "Produits − Charges"
+        "title": "Stocks et immobilisations",
+        "items": [
+          {
+            "name": "Coût d’achat des marchandises vendues",
+            "f": "Achats + Stock initial − Stock final"
+          },
+          {
+            "name": "Coût d’acquisition",
+            "f": "Prix d’achat HT − Réductions + Frais accessoires",
+            "note": "transport, installation…"
+          },
+          {
+            "name": "Taux d’amortissement linéaire",
+            "f": "1 ÷ Durée d’utilisation",
+            "note": "5 ans → 20 %"
+          },
+          {
+            "name": "Annuité d’amortissement",
+            "f": "Valeur d’origine × Taux linéaire",
+            "note": "soit Valeur d’origine ÷ Durée"
+          },
+          {
+            "name": "Annuité de la 1re année",
+            "f": "Annuité pleine × Nombre de mois ÷ 12",
+            "note": "prorata temporis"
+          },
+          {
+            "name": "Valeur nette comptable (VNC)",
+            "f": "Valeur d’origine − Cumul des amortissements",
+            "note": "VNC = 0 en fin de plan"
+          }
+        ]
       },
       {
-        "name": "Valeur ajoutée (VA)",
-        "f": "Production − Consommations intermédiaires"
+        "title": "Bilan et compte de résultat",
+        "items": [
+          {
+            "name": "Équilibre du bilan",
+            "f": "Total Actif = Total Passif"
+          },
+          {
+            "name": "Résultat de l’exercice",
+            "f": "Total des produits − Total des charges",
+            "note": "produits (classe 7) − charges (classe 6)"
+          },
+          {
+            "name": "Marge commerciale",
+            "f": "Ventes de marchandises − Coût d’achat des marchandises vendues"
+          },
+          {
+            "name": "Valeur ajoutée (VA)",
+            "f": "Marge commerciale + Production − Consommations en provenance des tiers"
+          },
+          {
+            "name": "Excédent brut d’exploitation (EBE)",
+            "f": "VA + Subventions d’exploitation − Impôts et taxes − Charges de personnel"
+          },
+          {
+            "name": "Résultat d’exploitation",
+            "f": "EBE + Autres produits − Dotations − Autres charges"
+          },
+          {
+            "name": "Résultat courant avant impôts (RCAI)",
+            "f": "Résultat d’exploitation + Résultat financier"
+          },
+          {
+            "name": "Résultat net",
+            "f": "RCAI + Résultat exceptionnel − Participation − Impôt sur les bénéfices"
+          },
+          {
+            "name": "Capacité d’autofinancement (CAF)",
+            "f": "Résultat net + Dotations − Reprises + VNC des éléments cédés − Produits de cession",
+            "note": "méthode additive"
+          }
+        ]
       },
       {
-        "name": "Excédent brut d'exploitation",
-        "f": "VA + Subventions d’exploitation − Impôts et taxes − Charges de personnel"
+        "title": "Équilibre financier",
+        "items": [
+          {
+            "name": "Ressources stables",
+            "f": "Capitaux propres + Amortissements et dépréciations + Provisions + Dettes financières"
+          },
+          {
+            "name": "Emplois stables",
+            "f": "Actif immobilisé brut"
+          },
+          {
+            "name": "Fonds de roulement net global (FRNG)",
+            "f": "Ressources stables − Emplois stables"
+          },
+          {
+            "name": "Besoin en fonds de roulement (BFR)",
+            "f": "Actif circulant d’exploitation − Passif circulant d’exploitation",
+            "note": "soit (Stocks + Créances clients) − Dettes fournisseurs"
+          },
+          {
+            "name": "Trésorerie nette",
+            "f": "FRNG − BFR",
+            "note": "vérification : Trésorerie active − Trésorerie passive"
+          }
+        ]
       },
       {
-        "name": "Fonds de roulement (FRNG)",
-        "f": "Ressources stables − Emplois stables"
+        "title": "Rentabilité et ratios",
+        "items": [
+          {
+            "name": "Rentabilité économique",
+            "f": "Résultat d’exploitation ÷ Capitaux investis × 100",
+            "note": "vision du dirigeant"
+          },
+          {
+            "name": "Rentabilité financière",
+            "f": "Résultat net ÷ Capitaux propres × 100",
+            "note": "vision de l’associé"
+          },
+          {
+            "name": "Profitabilité (rentabilité commerciale)",
+            "f": "Résultat net ÷ Chiffre d’affaires × 100"
+          },
+          {
+            "name": "Autonomie financière",
+            "f": "Capitaux propres ÷ Total du bilan × 100",
+            "note": "rassurant au-dessus de 30 %"
+          },
+          {
+            "name": "Taux d’endettement",
+            "f": "Dettes financières ÷ Capitaux propres",
+            "note": "idéalement inférieur à 1"
+          },
+          {
+            "name": "Capacité de remboursement",
+            "f": "Dettes financières ÷ CAF",
+            "note": "en années, moins de 4 ans recommandé"
+          },
+          {
+            "name": "Liquidité générale",
+            "f": "Actif circulant ÷ Dettes à court terme",
+            "note": "supérieur à 1 souhaitable"
+          },
+          {
+            "name": "Solvabilité générale",
+            "f": "Total actif ÷ Total des dettes",
+            "note": "supérieur à 1 obligatoire"
+          },
+          {
+            "name": "Rotation des stocks",
+            "f": "Stock moyen ÷ Coût d’achat des marchandises vendues × 360",
+            "note": "en jours"
+          },
+          {
+            "name": "Délai clients",
+            "f": "Créances clients TTC ÷ CA TTC × 360",
+            "note": "en jours"
+          },
+          {
+            "name": "Délai fournisseurs",
+            "f": "Dettes fournisseurs TTC ÷ Achats TTC × 360",
+            "note": "en jours"
+          },
+          {
+            "name": "Délai de récupération d’un investissement",
+            "f": "Montant investi ÷ Gain annuel",
+            "note": "si les gains sont constants"
+          }
+        ]
       },
       {
-        "name": "Trésorerie nette",
-        "f": "FRNG − BFR"
-      },
-      {
-        "name": "Marge sur coût variable",
-        "f": "CA − Coûts variables"
-      },
-      {
-        "name": "Taux de marge sur CV",
-        "f": "MCV ÷ CA × 100",
-        "note": "en %"
-      },
-      {
-        "name": "Seuil de rentabilité",
-        "f": "Coûts fixes ÷ Taux de MCV",
-        "note": "taux en décimal (40 % → 0,4)"
-      },
-      {
-        "name": "Taux de marge",
-        "f": "Marge ÷ Coût d’achat × 100",
-        "note": "en %"
-      },
-      {
-        "name": "Taux de marque",
-        "f": "Marge ÷ Prix de vente × 100",
-        "note": "en %"
-      },
-      {
-        "name": "Amortissement linéaire",
-        "f": "Valeur d’origine ÷ Durée d’utilisation"
+        "title": "Coûts, marges et seuil de rentabilité",
+        "items": [
+          {
+            "name": "Marge sur coût variable (MCV)",
+            "f": "Chiffre d’affaires − Charges variables"
+          },
+          {
+            "name": "Taux de MCV",
+            "f": "MCV ÷ Chiffre d’affaires",
+            "note": "× 100 pour l’avoir en %"
+          },
+          {
+            "name": "MCV unitaire",
+            "f": "Prix de vente unitaire − Coût variable unitaire"
+          },
+          {
+            "name": "Résultat (coûts partiels)",
+            "f": "MCV − Charges fixes"
+          },
+          {
+            "name": "Seuil de rentabilité (en €)",
+            "f": "Charges fixes ÷ Taux de MCV",
+            "note": "taux en décimal : 40 % → 0,40"
+          },
+          {
+            "name": "Seuil de rentabilité (en quantité)",
+            "f": "Charges fixes ÷ MCV unitaire"
+          },
+          {
+            "name": "Point mort",
+            "f": "Seuil de rentabilité ÷ CA annuel × 360",
+            "note": "date en jours"
+          },
+          {
+            "name": "Marge de sécurité",
+            "f": "Chiffre d’affaires − Seuil de rentabilité"
+          },
+          {
+            "name": "Coût complet",
+            "f": "Charges directes + Charges indirectes réparties"
+          },
+          {
+            "name": "Coût de l’unité d’œuvre",
+            "f": "Total du centre ÷ Nombre d’unités d’œuvre"
+          },
+          {
+            "name": "Marge unitaire",
+            "f": "Prix de vente HT − Coût d’achat HT"
+          },
+          {
+            "name": "Taux de marge",
+            "f": "Marge ÷ Coût d’achat HT × 100",
+            "note": "par rapport au coût d’achat"
+          },
+          {
+            "name": "Taux de marque",
+            "f": "Marge ÷ Prix de vente HT × 100",
+            "note": "par rapport au prix de vente"
+          },
+          {
+            "name": "Prix de vente avec un taux de marge",
+            "f": "Coût × (1 + Taux de marge)"
+          },
+          {
+            "name": "Budget des ventes",
+            "f": "Quantités prévues × Prix prévus"
+          },
+          {
+            "name": "Écart",
+            "f": "Réel − Prévu",
+            "note": "favorable ou défavorable"
+          }
+        ]
       }
     ]
   },
   {
     "cat": "Mercatique",
     "icon": "🛍️",
-    "color": "#7c3aed",
-    "items": [
+    "color": "#c2410c",
+    "parts": [
       {
-        "name": "Part de marché",
-        "f": "Ventes entreprise ÷ Ventes du marché × 100",
-        "note": "en %"
+        "title": "Marché et demande",
+        "items": [
+          {
+            "name": "Demande en valeur",
+            "f": "Quantités vendues × Prix",
+            "note": "c’est le CA ; en volume = les quantités"
+          },
+          {
+            "name": "Part de marché (PDM)",
+            "f": "Ventes de l’entreprise ÷ Ventes totales du marché × 100"
+          },
+          {
+            "name": "Part de marché relative",
+            "f": "PDM de l’entreprise ÷ PDM du leader"
+          },
+          {
+            "name": "Taux de pénétration",
+            "f": "Clients ÷ Cible × 100"
+          },
+          {
+            "name": "Taux de notoriété",
+            "f": "Personnes qui connaissent la marque ÷ Personnes interrogées × 100"
+          },
+          {
+            "name": "Élasticité-prix de la demande",
+            "f": "Variation des quantités (en %) ÷ Variation du prix (en %)",
+            "note": "si |e| > 1 : demande élastique"
+          }
+        ]
       },
       {
-        "name": "Part de marché relative",
-        "f": "PDM entreprise ÷ PDM du leader"
-      },
-      {
-        "name": "Taux de pénétration",
-        "f": "Clients ÷ Cible × 100",
-        "note": "en %"
-      },
-      {
-        "name": "Élasticité-prix",
-        "f": "% variation des quantités ÷ % variation du prix"
-      },
-      {
-        "name": "Taux de conversion",
-        "f": "Achats ÷ Visiteurs × 100",
-        "note": "en %"
-      },
-      {
-        "name": "Panier moyen",
-        "f": "Chiffre d’affaires ÷ Nombre de commandes"
-      },
-      {
-        "name": "Retour sur investissement",
-        "f": "(Gain − Coût) ÷ Coût × 100",
-        "note": "en %"
+        "title": "Prix et vente en ligne",
+        "items": [
+          {
+            "name": "Prix après réduction",
+            "f": "Prix initial × (1 − Taux de réduction)",
+            "note": "−25 % → × 0,75"
+          },
+          {
+            "name": "Taux de conversion",
+            "f": "Commandes ÷ Visiteurs × 100"
+          },
+          {
+            "name": "Panier moyen",
+            "f": "Chiffre d’affaires ÷ Nombre de commandes"
+          },
+          {
+            "name": "Retour sur investissement (ROI)",
+            "f": "(Gain − Coût) ÷ Coût × 100"
+          }
+        ]
       }
     ]
   },
   {
     "cat": "Économie",
     "icon": "📈",
-    "color": "#2b6cb0",
-    "items": [
+    "color": "#dc2626",
+    "parts": [
       {
-        "name": "Taux d’évolution",
-        "f": "(Valeur finale − Valeur initiale) ÷ Valeur initiale × 100",
-        "note": "en %"
+        "title": "Production et croissance",
+        "items": [
+          {
+            "name": "Valeur ajoutée",
+            "f": "Production − Consommations intermédiaires"
+          },
+          {
+            "name": "PIB",
+            "f": "Somme des valeurs ajoutées",
+            "note": "sur un territoire, en un an"
+          },
+          {
+            "name": "Taux de croissance du PIB",
+            "f": "(PIB N − PIB N−1) ÷ PIB N−1 × 100"
+          },
+          {
+            "name": "PIB par habitant",
+            "f": "PIB ÷ Population"
+          },
+          {
+            "name": "Productivité du travail",
+            "f": "Production ÷ Nombre d’heures travaillées",
+            "note": "ou ÷ nombre de travailleurs"
+          },
+          {
+            "name": "Profit",
+            "f": "Recettes − Coûts"
+          }
+        ]
       },
       {
-        "name": "Coefficient multiplicateur",
-        "f": "1 + (Taux ÷ 100)"
+        "title": "Revenus et épargne",
+        "items": [
+          {
+            "name": "Revenu disponible",
+            "f": "Revenus primaires − Prélèvements obligatoires + Revenus de transfert"
+          },
+          {
+            "name": "Épargne",
+            "f": "Revenu disponible − Consommation"
+          },
+          {
+            "name": "Taux d’épargne",
+            "f": "Épargne ÷ Revenu disponible × 100"
+          }
+        ]
       },
       {
-        "name": "Taux de chômage",
-        "f": "Chômeurs ÷ Population active × 100",
-        "note": "en %"
+        "title": "Emploi et chômage",
+        "items": [
+          {
+            "name": "Population active",
+            "f": "Actifs occupés + Chômeurs"
+          },
+          {
+            "name": "Taux de chômage",
+            "f": "Chômeurs ÷ Population active × 100",
+            "note": "sur la population active, pas la population totale"
+          },
+          {
+            "name": "Taux d’activité",
+            "f": "Population active ÷ Population en âge de travailler × 100",
+            "note": "15-64 ans"
+          },
+          {
+            "name": "Taux d’emploi",
+            "f": "Actifs occupés ÷ Population en âge de travailler × 100"
+          }
+        ]
       },
       {
-        "name": "Taux d’activité",
-        "f": "Population active ÷ Population en âge de travailler × 100",
-        "note": "en %"
+        "title": "Échanges internationaux",
+        "items": [
+          {
+            "name": "Solde commercial",
+            "f": "Exportations − Importations",
+            "note": "positif : excédent ; négatif : déficit"
+          },
+          {
+            "name": "Taux de couverture",
+            "f": "Exportations ÷ Importations × 100",
+            "note": "moins de 100 % : déficit"
+          },
+          {
+            "name": "Taux d’ouverture",
+            "f": "(Exportations + Importations) ÷ 2 ÷ PIB × 100"
+          }
+        ]
       },
       {
-        "name": "Balance commerciale",
-        "f": "Exportations − Importations"
-      },
-      {
-        "name": "Taux de couverture",
-        "f": "Exportations ÷ Importations × 100",
-        "note": "en %"
+        "title": "Finances publiques",
+        "items": [
+          {
+            "name": "Déficit public",
+            "f": "Dépenses publiques − Recettes publiques",
+            "note": "flux sur une année"
+          },
+          {
+            "name": "Ratio de déficit",
+            "f": "Déficit public ÷ PIB × 100"
+          },
+          {
+            "name": "Ratio de dette",
+            "f": "Dette publique ÷ PIB × 100",
+            "note": "la dette est le stock des déficits passés"
+          }
+        ]
       }
     ]
   },
   {
     "cat": "Ressources humaines",
-    "icon": "👥",
+    "icon": "🧑‍💼",
     "color": "#db2777",
-    "items": [
+    "parts": [
       {
-        "name": "Taux d’absentéisme",
-        "f": "Heures d’absence ÷ Heures théoriques × 100",
-        "note": "en %"
-      },
-      {
-        "name": "Taux de rotation (turnover)",
-        "f": "Départs ÷ Effectif moyen × 100",
-        "note": "en %"
-      },
-      {
-        "name": "Coût employeur",
-        "f": "Salaire brut × (1 + Taux de charges)",
-        "note": "charges en décimal"
-      },
-      {
-        "name": "Productivité horaire",
-        "f": "Production ÷ Heures travaillées"
+        "title": "Rémunération et indicateurs sociaux",
+        "items": [
+          {
+            "name": "Salaire net",
+            "f": "Salaire brut − Cotisations salariales"
+          },
+          {
+            "name": "Coût total employeur",
+            "f": "Salaire brut + Cotisations patronales",
+            "note": "ou Brut × (1 + Taux de cotisations patronales)"
+          },
+          {
+            "name": "Rémunération",
+            "f": "Salaire de base + Primes + Périphériques"
+          },
+          {
+            "name": "Taux d’absentéisme",
+            "f": "Heures d’absence ÷ Heures théoriques × 100"
+          },
+          {
+            "name": "Taux de rotation (turnover)",
+            "f": "Départs ÷ Effectif moyen × 100"
+          }
+        ]
       }
     ]
   },
   {
     "cat": "Mathématiques",
-    "icon": "🔢",
-    "color": "#c2410c",
-    "items": [
+    "icon": "🧮",
+    "color": "#2563eb",
+    "parts": [
       {
-        "name": "Pourcentage d’une valeur",
-        "f": "Valeur × (Pourcentage ÷ 100)"
+        "title": "Pourcentages et évolutions",
+        "items": [
+          {
+            "name": "Proportion",
+            "f": "Partie ÷ Tout × 100"
+          },
+          {
+            "name": "x % d’une valeur V",
+            "f": "V × x ÷ 100"
+          },
+          {
+            "name": "Taux d’évolution",
+            "f": "t = (V arrivée − V départ) ÷ V départ",
+            "note": "× 100 pour l’avoir en %"
+          },
+          {
+            "name": "Coefficient multiplicateur",
+            "f": "CM = 1 + t",
+            "note": "+8 % → 1,08 ; −8 % → 0,92"
+          },
+          {
+            "name": "Valeur d’arrivée",
+            "f": "V arrivée = V départ × CM",
+            "note": "donc CM = V arrivée ÷ V départ"
+          },
+          {
+            "name": "Évolutions successives",
+            "f": "CM global = CM₁ × CM₂ × … × CMₙ",
+            "note": "on n’additionne jamais les taux"
+          },
+          {
+            "name": "Taux moyen",
+            "f": "CM moyen = (CM global)^(1/n) ; t moyen = CM moyen − 1"
+          },
+          {
+            "name": "Évolution réciproque",
+            "f": "CM réciproque = 1 ÷ CM",
+            "note": "+25 % s’annule par −20 %"
+          },
+          {
+            "name": "Indice base 100",
+            "f": "Valeur ÷ Valeur de référence × 100"
+          },
+          {
+            "name": "Écart entre deux pourcentages",
+            "f": "Pourcentage 2 − Pourcentage 1",
+            "note": "en points de pourcentage"
+          }
+        ]
       },
       {
-        "name": "Taux d’évolution global",
-        "f": "(1 + t₁) × (1 + t₂) − 1",
-        "note": "évolutions successives"
+        "title": "Suites",
+        "items": [
+          {
+            "name": "Suite arithmétique (récurrence)",
+            "f": "uₙ₊₁ = uₙ + r"
+          },
+          {
+            "name": "Suite arithmétique (terme général)",
+            "f": "uₙ = u₀ + n × r",
+            "note": "ou uₙ = u₁ + (n − 1) × r"
+          },
+          {
+            "name": "Suite géométrique (récurrence)",
+            "f": "uₙ₊₁ = uₙ × q",
+            "note": "évolution de p % : q = 1 + p/100"
+          },
+          {
+            "name": "Suite géométrique (terme général)",
+            "f": "uₙ = u₀ × qⁿ",
+            "note": "ou uₙ = u₁ × qⁿ⁻¹"
+          },
+          {
+            "name": "Somme de termes géométriques",
+            "f": "S = u₀ × (1 − qⁿ) ÷ (1 − q)",
+            "note": "n = nombre de termes, q ≠ 1"
+          },
+          {
+            "name": "Variations d’une suite arithmétique",
+            "f": "r > 0 : croissante ; r < 0 : décroissante"
+          },
+          {
+            "name": "Variations d’une suite géométrique",
+            "f": "q > 1 : croissante ; 0 < q < 1 : décroissante",
+            "note": "avec u₀ > 0"
+          }
+        ]
       },
       {
-        "name": "Taux moyen",
-        "f": "(Coefficient global)^(1 ÷ n) − 1"
+        "title": "Second degré et dérivation",
+        "items": [
+          {
+            "name": "Fonction du second degré",
+            "f": "f(x) = ax² + bx + c",
+            "note": "a ≠ 0, courbe : parabole"
+          },
+          {
+            "name": "Discriminant",
+            "f": "Δ = b² − 4ac",
+            "note": "Δ > 0 : 2 racines ; Δ = 0 : 1 ; Δ < 0 : aucune"
+          },
+          {
+            "name": "Racines (Δ > 0)",
+            "f": "x = (−b ± √Δ) ÷ (2a)"
+          },
+          {
+            "name": "Abscisse du sommet",
+            "f": "α = −b ÷ (2a)"
+          },
+          {
+            "name": "Dérivée d’une constante",
+            "f": "(k)′ = 0"
+          },
+          {
+            "name": "Dérivée de x",
+            "f": "(x)′ = 1"
+          },
+          {
+            "name": "Dérivée de x²",
+            "f": "(x²)′ = 2x"
+          },
+          {
+            "name": "Dérivée de xⁿ",
+            "f": "(xⁿ)′ = n·xⁿ⁻¹"
+          },
+          {
+            "name": "Dérivée de 1/x",
+            "f": "(1/x)′ = −1/x²",
+            "note": "x ≠ 0"
+          },
+          {
+            "name": "Dérivée d’un trinôme",
+            "f": "(ax² + bx + c)′ = 2ax + b"
+          },
+          {
+            "name": "Dérivée d’une somme",
+            "f": "(u + v)′ = u′ + v′"
+          },
+          {
+            "name": "Dérivée de k·u",
+            "f": "(k·u)′ = k·u′"
+          },
+          {
+            "name": "Tangente au point d’abscisse a",
+            "f": "y = f′(a)(x − a) + f(a)",
+            "note": "f′(a) = coefficient directeur"
+          },
+          {
+            "name": "Sens de variation",
+            "f": "f′ > 0 : croissante ; f′ < 0 : décroissante",
+            "note": "f′ s’annule en changeant de signe : extremum"
+          }
+        ]
       },
       {
-        "name": "Suite arithmétique",
-        "f": "uₙ = u₀ + n × r"
+        "title": "Statistiques",
+        "items": [
+          {
+            "name": "Moyenne",
+            "f": "Somme des valeurs ÷ Effectif total"
+          },
+          {
+            "name": "Étendue",
+            "f": "Maximum − Minimum"
+          },
+          {
+            "name": "Écart interquartile",
+            "f": "Q3 − Q1"
+          },
+          {
+            "name": "Point moyen",
+            "f": "G(x̄ ; ȳ)",
+            "note": "moyenne des x, moyenne des y"
+          },
+          {
+            "name": "Droite d’ajustement",
+            "f": "y = ax + b",
+            "note": "moindres carrés, à la calculatrice ; passe par G"
+          }
+        ]
       },
       {
-        "name": "Suite géométrique",
-        "f": "uₙ = u₀ × qⁿ"
+        "title": "Probabilités",
+        "items": [
+          {
+            "name": "Probabilité conditionnelle",
+            "f": "P_A(B) = P(A ∩ B) ÷ P(A)"
+          },
+          {
+            "name": "Probabilité d’un chemin",
+            "f": "P(A ∩ B) = P(A) × P_A(B)",
+            "note": "on multiplie le long des branches"
+          },
+          {
+            "name": "Probabilités totales",
+            "f": "P(B) = P(A) × P_A(B) + P(Ā) × P_Ā(B)"
+          },
+          {
+            "name": "Réunion",
+            "f": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B)"
+          },
+          {
+            "name": "Indépendance",
+            "f": "P(A ∩ B) = P(A) × P(B)",
+            "note": "équivaut à P_A(B) = P(B)"
+          },
+          {
+            "name": "Espérance d’une variable aléatoire",
+            "f": "E(X) = Somme des (valeur × probabilité)"
+          }
+        ]
       },
       {
-        "name": "Moyenne",
-        "f": "Somme des valeurs ÷ Nombre de valeurs"
-      },
+        "title": "Loi binomiale, loi normale et estimation",
+        "items": [
+          {
+            "name": "Loi binomiale B(n ; p)",
+            "f": "P(X = k) = C(n, k) × pᵏ × (1 − p)ⁿ⁻ᵏ",
+            "note": "à la calculatrice"
+          },
+          {
+            "name": "Au moins k succès",
+            "f": "P(X ≥ k) = 1 − P(X ≤ k − 1)"
+          },
+          {
+            "name": "Espérance (loi binomiale)",
+            "f": "E(X) = n × p"
+          },
+          {
+            "name": "Variance (loi binomiale)",
+            "f": "V(X) = n × p × (1 − p)"
+          },
+          {
+            "name": "Écart-type (loi binomiale)",
+            "f": "σ(X) = √(n × p × (1 − p))"
+          },
+          {
+            "name": "Loi normale N(μ ; σ) : à 1 σ",
+            "f": "P(μ − σ ≤ X ≤ μ + σ) ≈ 0,68"
+          },
+          {
+            "name": "Loi normale N(μ ; σ) : à 2 σ",
+            "f": "P(μ − 2σ ≤ X ≤ μ + 2σ) ≈ 0,95"
+          },
+          {
+            "name": "Loi normale N(μ ; σ) : à 3 σ",
+            "f": "P(μ − 3σ ≤ X ≤ μ + 3σ) ≈ 0,997"
+          },
+          {
+            "name": "Symétrie de la loi normale",
+            "f": "P(X ≤ μ) = P(X ≥ μ) = 0,5"
+          },
+          {
+            "name": "Intervalle de confiance à 95 %",
+            "f": "[f − 1/√n ; f + 1/√n]",
+            "note": "f : fréquence observée, n : taille de l’échantillon"
+          },
+          {
+            "name": "Amplitude de l’intervalle",
+            "f": "2 ÷ √n"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "cat": "Systèmes d’information",
+    "icon": "💻",
+    "color": "#0369a1",
+    "parts": [
       {
-        "name": "Probabilité conditionnelle",
-        "f": "P_A(B) = P(A ∩ B) ÷ P(A)"
-      },
-      {
-        "name": "Espérance (loi binomiale)",
-        "f": "E(X) = n × p"
+        "title": "Requêtes SQL",
+        "items": [
+          {
+            "name": "Sélection",
+            "f": "SELECT colonnes FROM table WHERE condition ORDER BY colonne ;"
+          },
+          {
+            "name": "Toutes les colonnes",
+            "f": "SELECT * FROM table ;"
+          },
+          {
+            "name": "Tri",
+            "f": "ORDER BY colonne ASC | DESC",
+            "note": "croissant | décroissant"
+          },
+          {
+            "name": "Conditions",
+            "f": "=  <  >  <=  >=  <>  AND  OR",
+            "note": "<> : différent"
+          },
+          {
+            "name": "Recherche partielle",
+            "f": "WHERE nom LIKE \"A%\"",
+            "note": "commence par A"
+          },
+          {
+            "name": "Compter des lignes",
+            "f": "SELECT COUNT(*) FROM table WHERE condition ;"
+          },
+          {
+            "name": "Fonctions de calcul",
+            "f": "COUNT, SUM, AVG, MIN, MAX"
+          },
+          {
+            "name": "Regrouper",
+            "f": "SELECT ville, COUNT(*) FROM CLIENT GROUP BY ville ;",
+            "note": "WHERE filtre avant, HAVING après le regroupement"
+          },
+          {
+            "name": "Jointure",
+            "f": "WHERE table1.clé_étrangère = table2.clé_primaire"
+          }
+        ]
       }
     ]
   }
