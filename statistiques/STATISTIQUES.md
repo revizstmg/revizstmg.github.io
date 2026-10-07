@@ -1,6 +1,6 @@
 # 📊 Statistiques de RévizSTMG
 
-Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **6 octobre 2026 à 13:06**.
+Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **7 octobre 2026 à 12:55**.
 
 ## 👥 Utilisation
 
@@ -19,14 +19,15 @@ Indisponible aujourd'hui : la fonction de comptage revizstmg_statistiques() n’
 ## ✅ Qualité et mise en ligne
 
 - Tests du contenu et de la logique : ✅ réussis
-- Dernière CI sur main : ✅ 6 octobre 2026 à 07:48
-- Dernière mise en ligne réussie : ✅ 6 octobre 2026 à 07:49
-- Modifications de l'app ces 7 derniers jours : 22
+- Dernière CI sur main : ✅ 6 octobre 2026 à 23:01
+- Dernière mise en ligne réussie : ✅ 6 octobre 2026 à 23:01
+- Modifications de l'app ces 7 derniers jours : 24
 
 ## 📈 Évolution (14 derniers jours)
 
 | Date | Comptes | Actifs 7 j | Nouveaux 7 j | Visites la veille | Chapitres | Questions |
 |---|---|---|---|---|---|---|
+| 7 oct. | — | — | — | — | 807 | 39 263 |
 | 6 oct. | — | — | — | — | 807 | 39 263 |
 | 5 oct. | — | — | — | — | 807 | 36 341 |
 
