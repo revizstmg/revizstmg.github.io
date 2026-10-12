@@ -14,21 +14,22 @@ et en classe. Installable sur téléphone et utilisable hors ligne.
 > à côté du site du lycée contre le harcèlement. Elle a été déplacée ici avec tout
 > son historique. Les deux projets partagent encore le même projet Supabase.
 >
-> Ce document décrit l'application **avant la refonte d'octobre 2026**. Mettez-le à
-> jour à chaque étape de la refonte.
+> Ce document décrit l'application après la refonte d'octobre 2026 : mettez-le à
+> jour à chaque changement visible par l'élève.
 
 ## Ce que fait l'application
 
 | Domaine | Contenu |
 |---|---|
 | Matières | 11 matières de Terminale : tronc commun (management, droit, économie, maths, philosophie, histoire-géo, langues) et spécialités (gestion-finance, mercatique, RH & communication, SIG). Plus les matières de Première. |
-| Parcours | Matière → thème → chapitre, avec les onglets Cours, Définitions et Exercices. |
+| Parcours | Matière → thème → chapitre, avec les onglets Cours, Définitions et Exercices. Chaque chapitre annonce son nombre d'exercices et de notions ; le cours se termine par un tableau « Notions et définitions ». |
 | Exercices | Une vingtaine de types : QCM, vrai/faux, texte à trous, saisie, tri, association, remise en ordre, calcul, memory, requêtes SQL, cas pratique, étude de documents, compréhension en langue… |
-| Révision | Flashcards à répétition espacée, révision express de 5 minutes, défi du jour, bac blanc chronométré, programme, formulaire, méthodologie par épreuve, Grand Oral. |
+| Révision | Flashcards et répétition espacée (planifiée d'après le résultat de chaque séance), carnet d'erreurs (les questions ratées, à refaire jusqu'à les réussir), révision express de 5 minutes, défi du jour, bac blanc chronométré et sujets au format des épreuves écrites de spécialité (4 h), programme avec les dates officielles des épreuves, formulaire de 225 formules, méthodologie par épreuve, Grand Oral. |
 | IA | Coach IA qui analyse les résultats et propose un plan. Fiches créées à partir de photos de cours (fonction `fiche-vision`, pas encore déployée). |
-| Social | Comptes élève et prof, classes (mur, quiz, duels, groupes), amis et duels, classement hebdomadaire et ligues, espace parent. |
+| Social | Comptes élève et prof, classes (mur, quiz, duels, groupes), amis et duels, classement hebdomadaire et ligues, espace parent (seulement si l'élève active le partage). |
 | Motivation | XP, niveaux, badges, série de jours, boutique de pièces, objectifs de la semaine. |
-| Confort | Application installable (PWA), hors ligne, rappels de révision, interface en français, anglais et espagnol, réglages d'accessibilité (dys, contraste, lecture audio). |
+| Confort | Application installable (PWA), hors ligne, rappels de révision, interface en français, anglais, espagnol, italien et arabe, réglages d'accessibilité (dys, contraste, lecture audio), écran de secours si une page plante. |
+| Données | « Télécharger mes données » (fichier JSON) et « Supprimer mon compte » (progression, classe, amis, duels, suivi parent) dans Mon espace. L'adresse e-mail de connexion est supprimée sur demande. |
 
 ## Démarrer
 
@@ -207,7 +208,8 @@ content/
                                 définitions de secours par matière,
                                 réponses acceptées en plus du mot attendu
                                 (reponses-acceptees.json), notions liées à ne
-                                pas opposer dans un exercice (notions-liees.json)
+                                pas opposer dans un exercice (notions-liees.json),
+                                dates des épreuves de la session (epreuves.json)
 ```
 
 **`matiere.json`** contient un `id`, un `name` et un tableau `chapters`. Chaque
@@ -250,6 +252,8 @@ voir `src/data/langgen.js`).
 | Fichier | Rôle |
 |---|---|
 | `srs.js` | répétition espacée |
+| `epreuves.js` | dates des épreuves de la session (`content/commun/epreuves.json`, à mettre à jour chaque année d'après le Bulletin officiel) |
+| `sujetBac.js` | sujets au format des épreuves écrites de spécialité, composés à partir des études de documents et des cas pratiques |
 | `study.js` | file de révision, bac blanc |
 | `coachAI.js` | analyse des résultats |
 | `dailyChallenge.js` | défi du jour |

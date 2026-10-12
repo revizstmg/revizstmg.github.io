@@ -5,15 +5,17 @@ import { saveProgress, isSignedIn, refreshSession, fetchProfile, getSession } fr
 import { srsUpdate, todayKey as srsToday } from './data/srs.js'
 import { dailyRewardFor } from './data/rewards.js'
 import { subjectsForTrack, trackLabel } from './data/tracks.js'
-import { publishChildStats, PARENT_READY } from './parent.js'
+import { publishChildStats, deleteMyChildStats, PARENT_READY } from './parent.js'
 
 // Modes transverses qui touchent plein de thèmes d'un coup (bac blanc, coach IA,
 // défi, express) : ils enregistrent un score mais NE marquent PAS un thème comme
 // « travaillé », sinon « À réviser » se remplit de thèmes jamais étudiés.
-const CROSS_GAMES = new Set(['exam', 'coach-ia', 'daily', 'express'])
+const CROSS_GAMES = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac'])
 
 // Champs de progression synchronisés sur le compte (multi-appareil).
-const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral']
+const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs']
+// Carnet d'erreurs : au plus tant de questions ratées, les plus récentes d'abord.
+export const CARNET_MAX = 150
 function pickProgress(s) {
   const out = {}
   for (const k of PROGRESS_KEYS) out[k] = s[k]
@@ -93,7 +95,29 @@ export function mergeProgress(a, b) {
   const grandOral = {}
   for (const k of new Set([...Object.keys(ga), ...Object.keys(gb)])) grandOral[k] = (gb[k] || '').length > (ga[k] || '').length ? gb[k] : ga[k]
   out.grandOral = grandOral
+  // Carnet d'erreurs : union par question, la plus récente d'abord.
+  const erreurs = new Map()
+  for (const e of [...(a.erreurs || []), ...(b.erreurs || [])]) {
+    if (!e || !e.id) continue
+    const prev = erreurs.get(e.id)
+    if (!prev || (e.le || '') > (prev.le || '')) erreurs.set(e.id, e)
+  }
+  out.erreurs = [...erreurs.values()].sort((x, y) => (y.le || '').localeCompare(x.le || '')).slice(0, CARNET_MAX)
   return out
+}
+
+// Carnet d'erreurs : une question ratée y entre, une question réussie en sort.
+// La clé repose sur le type d'exercice et l'énoncé, pour retrouver la même
+// question d'un exercice à l'autre.
+export function cleErreur(type, q) {
+  return `${type}|${String(q?.q || q?.text || q?.statement || '').slice(0, 200)}`
+}
+export function majCarnet(erreurs, { themeId, type, ratees = [], reussies = [] }, jour) {
+  const sortent = new Set(reussies.map((q) => cleErreur(type, q)))
+  const nouvelles = ratees.map((q) => ({ id: cleErreur(type, q), themeId, type, q, le: jour }))
+  const entrent = new Set(nouvelles.map((e) => e.id))
+  const restent = (erreurs || []).filter((e) => !sortent.has(e.id) && !entrent.has(e.id))
+  return [...nouvelles, ...restent].slice(0, CARNET_MAX)
 }
 
 // ---------------------------------------------------------------------------
@@ -140,7 +164,9 @@ const emptyState = () => ({
   bacDate: null, // date du bac (programme de révision)
   a11y: { dys: false, contrast: false, big: false }, // accessibilité (local)
   reminder: { on: false, time: '18:00' }, // rappel de révision (local)
+  parentShare: false, // partage volontaire de la progression avec les parents (local)
   grandOral: { spec: '', q1: '', q2: '', notes: '' }, // préparation du Grand Oral (sauvegardée sur le compte)
+  erreurs: [], // carnet d'erreurs : questions ratées à refaire
   examSeen: {}, // bac blanc : { [sélection]: [clés d'énoncés déjà tombés] } (local)
   coins: 0, // pièces 🪙 dépensables en boutique (gagnées avec l'XP)
   owned: [], // ids d'articles cosmétiques achetés (boutique)
@@ -272,12 +298,21 @@ export function StoreProvider({ children }) {
   // Espace parent : l'élève publie un instantané de ses stats (temps, série,
   // XP, matières, badges…) sous son « code parent ». Anti-rebond ~3 s, silencieux
   // et facultatif — c'est ce que le parent relié consulte en lecture seule.
+  // Rien n'est publié tant que l'élève n'a pas activé le partage (Mon espace).
   useEffect(() => {
-    if (!PARENT_READY || !state.track) return
+    if (!PARENT_READY || !state.track || !state.parentShare) return
     const id = setTimeout(() => { publishChildStats(buildChildSnapshot(state, deriveAll(state))).catch(() => {}) }, 3000)
     return () => clearTimeout(id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.track, state.xp, state.streak, state.chapters, state.themeTime, state.weekly, state.badges, state.bacDate, state.profile])
+  }, [state.track, state.parentShare, state.xp, state.streak, state.chapters, state.themeTime, state.weekly, state.badges, state.bacDate, state.profile])
+
+  // Partage désactivé : on efface l'instantané déjà publié par cet appareil (une
+  // fois ; le marqueur évite de le redemander à chaque ouverture).
+  useEffect(() => {
+    if (!PARENT_READY || !state.track || state.parentShare) return
+    try { if (localStorage.getItem('stmg_parent_efface')) return } catch { return }
+    deleteMyChildStats().then((ok) => { try { if (ok) localStorage.setItem('stmg_parent_efface', '1') } catch { /* stockage indisponible */ } })
+  }, [state.track, state.parentShare])
 
   const evaluateBadges = useCallback((next) => {
     const derived = deriveAll(next)
@@ -351,8 +386,11 @@ export function StoreProvider({ children }) {
         const wk = isoWeekKey()
         if (!next.weekly || next.weekly.week !== wk) next.weekly = { week: wk, done: [] }
         if (chapterId && !next.weekly.done.includes(chapterId)) next.weekly.done = [...next.weekly.done, chapterId]
-        // Répétition espacée : planifie la prochaine révision de ce thème.
-        if (chapterId) next.srs = { ...(next.srs || {}), [chapterId]: srsUpdate(next.srs?.[chapterId], chapterScore(next, chapterId), srsToday()) }
+        // Répétition espacée : planifie la prochaine révision de ce thème selon le
+        // résultat de CETTE séance. Le score du thème garde le meilleur résultat et
+        // ne baisse jamais : avec lui, une révision ratée ne rapprochait pas la
+        // suivante, et l'oubli passait inaperçu.
+        if (chapterId) next.srs = { ...(next.srs || {}), [chapterId]: srsUpdate(next.srs?.[chapterId], pct, srsToday()) }
         return evaluateBadges(next)
       })
     },
@@ -589,6 +627,11 @@ export function StoreProvider({ children }) {
   const setA11y = useCallback((patch) => setState((p) => ({ ...p, a11y: { ...(p.a11y || {}), ...patch } })), [])
   const setReminder = useCallback((patch) => setState((p) => ({ ...p, reminder: { ...(p.reminder || {}), ...patch } })), [])
   const setGrandOral = useCallback((patch) => setState((p) => ({ ...p, grandOral: { ...(p.grandOral || {}), ...patch } })), [])
+  const noterReponses = useCallback((r) => setState((p) => ({ ...p, erreurs: majCarnet(p.erreurs, r, srsToday()) })), [])
+  const setParentShare = useCallback((on) => {
+    try { if (on) localStorage.removeItem('stmg_parent_efface') } catch { /* stockage indisponible */ }
+    setState((p) => ({ ...p, parentShare: !!on }))
+  }, [])
   // Bac blanc : mémorise les énoncés déjà tombés pour cette sélection, afin de
   // ne jamais reproposer le même sujet deux fois de suite (fenêtre glissante).
   const recordExamSeen = useCallback((selection, keys) => setState((p) => {
@@ -615,6 +658,8 @@ export function StoreProvider({ children }) {
     setA11y,
     setReminder,
     setGrandOral,
+    setParentShare,
+    noterReponses,
     recordExamSeen,
     toggleFavorite,
     setLastChapter,

@@ -8,6 +8,7 @@ import { reviewQueue, collectQuestions } from './study.js'
 import { shuffle } from './index.js'
 import { subjectsForTrack } from './tracks.js'
 import { daysUntil, todayKey, addDays, defaultBacDate } from './srs.js'
+import { premiereEpreuve } from './epreuves.js'
 
 // Mélange les propositions d'une question (l'indice de la bonne réponse suit).
 function shuffleChoices(q) {
@@ -93,7 +94,7 @@ export function analyzeStudent(state, track) {
 
   const strengths = practiced.filter((q) => q.score >= 80).sort((a, b) => b.score - a.score).slice(0, 4)
   const momentum = computeMomentum(state, today)
-  const bac = state.bacDate || defaultBacDate()
+  const bac = state.bacDate || premiereEpreuve(state.track?.level) || defaultBacDate()
   const daysToBac = daysUntil(bac, today)
   const lvl = levelLabel(acc, coverage)
 
@@ -129,7 +130,7 @@ export function coachAdvice(a) {
 // { days:[{date,dayOffset,isToday,items}], bac, horizon, perDay }.
 export function buildStudyPlan(state, track, { perDay = 3, maxDays = 30 } = {}) {
   const today = todayKey()
-  const bac = state.bacDate || defaultBacDate()
+  const bac = state.bacDate || premiereEpreuve(state.track?.level) || defaultBacDate()
   let horizon = daysUntil(bac, today)
   if (horizon == null || horizon < 1) horizon = maxDays
   const days = Math.min(maxDays, Math.max(3, horizon))

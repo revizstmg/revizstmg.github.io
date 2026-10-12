@@ -6,7 +6,9 @@ import { subjectsForTrack } from '../data/tracks.js'
 import { ProgressBar } from '../components/ui.jsx'
 import AudioReview from '../components/AudioReview.jsx'
 import { encodeDeck, decodeDeck } from '../deckShare.js'
-import { useT } from '../i18n.js'
+import { useT, useGameLabel } from '../i18n.js'
+import { ALL_CHAPTERS, SUBJECTS } from '../data/index.js'
+import GameHost from '../games/GameHost.jsx'
 
 // Étiquette d'état d'un thème commencé (jamais « nouveau » ici : on ne liste que
 // ce que l'élève a déjà travaillé).
@@ -34,12 +36,14 @@ function RevisePage() {
   const [importCode, setImportCode] = useState('')
   const [importMsg, setImportMsg] = useState('')
   const [showImport, setShowImport] = useState(false)
+  const [carnet, setCarnet] = useState(null) // exercice du carnet d'erreurs en cours
+  const gameLabel = useGameLabel()
 
   const queue = useMemo(() => reviewQueue(state, state.track), [state])
   // Un thème n'est « commencé » que si sa LEÇON a été travaillée directement :
   // un exercice du thème, ou le test du thème. Les activités transversales (bac
   // blanc, coach IA, défi, express) ne suffisent PAS à le faire apparaître ici.
-  const CROSS = new Set(['exam', 'coach-ia', 'daily', 'express'])
+  const CROSS = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac'])
   const hasRealLesson = (themeId) => {
     const rec = state.chapters[themeId]
     if (!rec) return false
@@ -55,6 +59,17 @@ function RevisePage() {
   const subjects = useMemo(() => subjectsForTrack(state.track).filter((s) => s && !s.comingSoon && (s.chapters || []).length), [state.track])
   const startedSubjects = useMemo(() => new Set(started.map((s) => s.subjectId)), [started])
   const decks = state.savedDecks || []
+  // Carnet d'erreurs : les questions ratées, regroupées par thème et par type
+  // d'exercice (un exercice ne mélange pas les types).
+  const groupesCarnet = useMemo(() => {
+    const groupes = new Map()
+    for (const e of state.erreurs || []) {
+      const cle = `${e.themeId}|${e.type}`
+      if (!groupes.has(cle)) groupes.set(cle, { cle, themeId: e.themeId, type: e.type, questions: [] })
+      groupes.get(cle).questions.push(e.q)
+    }
+    return [...groupes.values()]
+  }, [state.erreurs])
 
   const wk = isoWeekKey()
   const weekDone = state.weekly?.week === wk ? (state.weekly.done?.length || 0) : 0
@@ -74,6 +89,14 @@ function RevisePage() {
     if (!deck) { setImportMsg(t('importError')); return }
     saveDeck({ id: `import-${Date.now()}`, title: deck.title, subjectId: null, themeId: null, color: '#7c3aed', cards: deck.cards })
     setImportCode(''); setImportMsg(`✅ ${deck.title} (${deck.cards.length} ${t('cardsCount')})`)
+  }
+
+  if (carnet) {
+    return (
+      <div className="animate-lux mx-auto max-w-2xl">
+        <GameHost game={carnet} chapterId={carnet.themeId} color={carnet.color} onExit={() => setCarnet(null)} />
+      </div>
+    )
   }
 
   return (
@@ -148,6 +171,33 @@ function RevisePage() {
                 <span className="hidden w-14 sm:block"><ProgressBar value={item.score} color={item.color} /></span>
                 <span className={`chip shrink-0 ${r.bg}`}>{item.reason === 'review' ? `${item.score}%` : t(r.key)}</span>
               </Link>
+            )
+          })}
+        </section>
+      )}
+
+      {/* CARNET D'ERREURS — les questions ratées, à refaire jusqu'à les réussir */}
+      {groupesCarnet.length > 0 && (
+        <section className="space-y-2.5">
+          <h2 className="px-1 font-display text-lg font-semibold">📒 {t('notebookTitle')}</h2>
+          <p className="px-1 text-sm text-slate-500 dark:text-slate-400">{t('notebookSub')}</p>
+          {groupesCarnet.slice(0, 12).map((g) => {
+            const theme = ALL_CHAPTERS[g.themeId]
+            const couleur = SUBJECTS.find((x) => x.id === theme?.subjectId)?.color || '#7c3aed'
+            return (
+              <div key={g.cle} className="card flex items-center gap-3 p-3.5">
+                <span className="min-w-0 flex-1">
+                  <span className="block truncate text-sm font-semibold">{theme?.name || g.themeId}</span>
+                  <span className="block text-xs text-slate-500 dark:text-slate-400">{gameLabel(g.type)} · {t(g.questions.length > 1 ? 'notebookCountP' : 'notebookCountS').replace('{n}', g.questions.length)}</span>
+                </span>
+                <button
+                  onClick={() => setCarnet({ id: `carnet-${g.type}`, type: g.type, title: `📒 ${t('notebookTitle')}`, questions: g.questions.slice(0, 10), themeId: g.themeId, color: couleur })}
+                  className="btn-primary shrink-0 !px-3 !py-1.5 text-sm"
+                  style={{ backgroundColor: 'var(--c-accent-fort)' }}
+                >
+                  {t('notebookRedo')}
+                </button>
+              </div>
             )
           })}
         </section>

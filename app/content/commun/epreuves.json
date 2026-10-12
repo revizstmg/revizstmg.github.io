@@ -1,0 +1,13 @@
+{
+  "session": 2027,
+  "source": "Calendrier officiel du baccalauréat 2027 (Bulletin officiel spécial n° 2 du 25 août 2026)",
+  "lien": "https://www.education.gouv.fr/reussir-au-lycee/baccalaureat-brevet-cap-le-calendrier-2027-341384",
+  "epreuves": [
+    { "id": "philo", "niveau": "terminale", "nom": "Philosophie", "debut": "2027-06-14" },
+    { "id": "specialites", "niveau": "terminale", "nom": "Épreuves écrites de spécialité : droit et économie ; management, sciences de gestion et numérique", "debut": "2027-06-16", "fin": "2027-06-17", "note": "une spécialité chaque matin : vérifie l'ordre sur ta convocation" },
+    { "id": "grand-oral", "niveau": "terminale", "nom": "Grand Oral", "debut": "2027-06-21", "fin": "2027-07-02", "note": "ton jour de passage est fixé par ton académie" },
+    { "id": "francais-ecrit", "niveau": "premiere", "nom": "Français, épreuve anticipée écrite", "debut": "2027-06-15" },
+    { "id": "maths-anticipee", "niveau": "premiere", "nom": "Mathématiques, épreuve anticipée", "debut": "2027-06-21" },
+    { "id": "francais-oral", "niveau": "premiere", "nom": "Français, épreuve anticipée orale", "note": "dates fixées par ton académie, à partir de fin juin" }
+  ]
+}

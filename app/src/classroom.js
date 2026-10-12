@@ -261,6 +261,11 @@ export async function fetchClassByCode(code) {
   return rows[0] || null
 }
 export async function deleteTeacherClass(id) { await send('DELETE', `teacher_class?id=eq.${enc(id)}`) }
+// Suppression du compte d'un professeur : ses classes disparaissent avec lui.
+export async function deleteMyTeacherClasses(ownerId) {
+  if (!ownerId) return true
+  try { await send('DELETE', `teacher_class?owner_id=eq.${enc(ownerId)}`); return true } catch { return false }
+}
 
 // --- Exclusion d'élèves ----------------------------------------------------
 export async function banStudent({ classCode, deviceId: dev }) {

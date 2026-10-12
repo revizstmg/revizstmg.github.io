@@ -64,7 +64,7 @@ const NO_MODE = new Set(['doc', 'comprehension', 'sql', 'caspratique'])
 const HAS_MODES = true
 
 export default function GameHost({ game, chapterId, color, quiz = false, onExit }) {
-  const { recordResult } = useStore()
+  const { recordResult, noterReponses } = useStore()
   const t = useT()
   const [mode, setMode] = useState(NO_MODE.has(game.type) ? 'solo' : null)
   const [result, setResult] = useState(null)
@@ -72,11 +72,13 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit 
 
   const Comp = COMPONENTS[game.type]
 
-  const handleDone = ({ correct, total, timeBonus = 0 }) => {
+  const handleDone = ({ correct, total, timeBonus = 0, ratees, reussies }) => {
     const pct = total ? Math.round((correct / total) * 100) : 0
     const base = mode === 'defi' ? 15 : 10
     const xp = correct * base + (mode === 'defi' ? timeBonus : 0)
     recordResult({ chapterId, gameId: game.id, quiz, pct, correct, total, xp })
+    // Carnet d'erreurs : les questions ratées y entrent, les réussies en sortent.
+    if (chapterId && (ratees?.length || reussies?.length)) noterReponses({ themeId: chapterId, type: game.type, ratees, reussies })
     setResult({ correct, total, pct, xp })
   }
 

@@ -172,3 +172,17 @@ export function duelOutcome(d, me = deviceId()) {
   else if (mine < theirs) result = 'loss'
   return { mine: mine ?? 0, theirs: theirs ?? 0, opp, result, iAmA }
 }
+
+// Suppression du compte : efface la fiche ami de cet appareil (prénom, photo, XP),
+// ses demandes d'amis et ses duels, envoyés comme reçus.
+export async function deleteMyFriendData() {
+  if (!FRIENDS_READY) return false
+  const me = enc(deviceId())
+  const del = (p) => fetch(rest(p), { method: 'DELETE', headers: H() }).then((r) => r.ok, () => false)
+  const ok = await Promise.all([
+    del(`friend_user?device_id=eq.${me}`),
+    del(`friend_request?or=(from_device.eq.${me},to_device.eq.${me})`),
+    del(`friend_duel?or=(a_device.eq.${me},b_device.eq.${me})`),
+  ])
+  return ok.every(Boolean)
+}

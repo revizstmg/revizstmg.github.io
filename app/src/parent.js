@@ -70,10 +70,11 @@ export async function publishChildStats(snap) {
   await send('POST', 'child_stats?on_conflict=device_id', [row], 'resolution=merge-duplicates,return=minimal')
 }
 
-// ÉLÈVE — supprime son instantané (rompre le suivi côté enfant).
+// ÉLÈVE — supprime son instantané (rompre le suivi côté enfant). Renvoie vrai si
+// la suppression a abouti, pour pouvoir la retenter plus tard sinon.
 export async function deleteMyChildStats() {
-  if (!PARENT_READY) return
-  try { await send('DELETE', `child_stats?device_id=eq.${enc(deviceId())}`) } catch { /* best effort */ }
+  if (!PARENT_READY) return false
+  try { await send('DELETE', `child_stats?device_id=eq.${enc(deviceId())}`); return true } catch { return false }
 }
 
 // PARENT — lit l'instantané d'un enfant par son code.

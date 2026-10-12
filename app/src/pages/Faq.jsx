@@ -12,7 +12,7 @@ export default function Faq() {
     ['Ma progression est‑elle sauvegardée ?', <>Oui. Elle est enregistrée sur <b>ton compte</b> : connecte‑toi et tu la retrouves sur <b>tous tes appareils</b> (téléphone, ordinateur…).</>],
     ['Comment changer ma photo ou l\'apparence du site ?', <>Clique sur <b>ton initiale en haut à droite</b> → <b>« Personnaliser mon profil »</b> (couleurs, police, avatar, photo…).</>],
     ['Qui voit mes informations ?', <>Dans ta classe, ton <b>prénom, ta photo et tes scores</b> sont visibles par tes camarades et ton professeur. Ton <b>e‑mail</b> sert uniquement à la connexion. Détails dans la <Link to="/confidentialite" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">Politique de confidentialité</Link>.</>],
-    ['Comment supprimer mon compte ?', <>Va dans <Link to="/moi" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">« Mon espace »</Link> → tout en bas → <b>« Supprimer mon compte »</b>. Toutes tes données sont effacées.</>],
+    ['Comment supprimer mon compte ?', <>Va dans <Link to="/moi" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">« Mon espace »</Link> → tout en bas → <b>« Supprimer mon compte »</b>. Ta progression, ta classe, tes amis, tes duels et le suivi parent sont effacés. Pour supprimer aussi ton adresse e-mail de connexion, écris à <a href="mailto:revizstmg@gmail.com" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">revizstmg@gmail.com</a>.</>],
     ['Le site est‑il gratuit ?', <>Oui, RévizSTMG est entièrement gratuit.</>],
   ]
   return (

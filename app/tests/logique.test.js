@@ -1,8 +1,9 @@
 // Logique de l'app : niveaux, scores, répétition espacée, récompenses, badges,
 // calculs chiffrés, filières.
 import { describe, it, expect } from 'vitest'
-import { levelFromXp, chapterScore, starsFromScore, subjectScore, globalScore, isoWeekKey, mergeProgress } from '../src/store.jsx'
+import { levelFromXp, chapterScore, starsFromScore, subjectScore, globalScore, isoWeekKey, mergeProgress, majCarnet, cleErreur, CARNET_MAX } from '../src/store.jsx'
 import { srsUpdate, addDays, daysUntil, defaultBacDate } from '../src/data/srs.js'
+import { CALENDRIER, epreuvesAVenir, premiereEpreuve } from '../src/data/epreuves.js'
 import { dailyBase, dailyRewardFor, nextMilestone, MILESTONES } from '../src/data/rewards.js'
 import { BADGES } from '../src/badges.js'
 import { CALC, makeCalcSet } from '../src/calc.js'
@@ -110,6 +111,55 @@ describe('fusion appareil ↔ compte', () => {
     const neuf = { ...vide(), grandOral: { spec: '', q1: '', q2: '', notes: '' } }
     const compte = { ...progression(), grandOral: { spec: 'gestion-finance', q1: 'Question 1', q2: 'Question 2', notes: 'Plan en deux parties' } }
     expect(mergeProgress(neuf, compte).grandOral).toEqual(compte.grandOral)
+  })
+})
+
+describe('dates des épreuves', () => {
+  it('chaque date du calendrier est une vraie date, la fin après le début', () => {
+    for (const e of CALENDRIER.epreuves) {
+      for (const d of [e.debut, e.fin].filter(Boolean)) expect(new Date(d + 'T00:00:00').toISOString().slice(0, 10), e.id).toBe(d)
+      if (e.fin) expect(e.fin >= e.debut, e.id).toBe(true)
+      expect(['terminale', 'premiere']).toContain(e.niveau)
+      expect(e.debut || e.note, `${e.id} : une date ou une explication`).toBeTruthy()
+    }
+  })
+  it('le compte à rebours part de la première épreuve écrite du niveau', () => {
+    expect(premiereEpreuve('terminale-stmg', '2026-10-12')).toBe('2027-06-14')
+    expect(premiereEpreuve('premiere-stmg', '2026-10-12')).toBe('2027-06-15')
+    const tle = epreuvesAVenir('terminale-stmg', '2026-10-12')
+    expect(tle.map((e) => e.id)).toEqual(['philo', 'specialites', 'grand-oral'])
+    expect(tle[0].jours).toBe(daysUntil('2027-06-14', '2026-10-12'))
+  })
+  it('une fois la session passée, plus d’épreuve ni de date par défaut', () => {
+    expect(epreuvesAVenir('terminale-stmg', '2027-07-10')).toEqual([])
+    expect(premiereEpreuve('terminale-stmg', '2027-07-10')).toBeNull()
+  })
+})
+
+describe('carnet d’erreurs', () => {
+  const q = (n) => ({ q: `Question ${n}`, choices: ['A', 'B'], answer: 0 })
+  it('une question ratée entre, une question réussie sort', () => {
+    let c = majCarnet([], { themeId: 'gf-t1', type: 'qcm', ratees: [q(1), q(2)] }, '2026-10-01')
+    expect(c.map((e) => e.q.q)).toEqual(['Question 1', 'Question 2'])
+    c = majCarnet(c, { themeId: 'gf-t1', type: 'qcm', reussies: [q(1)] }, '2026-10-02')
+    expect(c.map((e) => e.q.q)).toEqual(['Question 2'])
+  })
+  it('ratée deux fois, une question n’apparaît qu’une fois, en tête', () => {
+    let c = majCarnet([], { themeId: 'gf-t1', type: 'qcm', ratees: [q(1), q(2)] }, '2026-10-01')
+    c = majCarnet(c, { themeId: 'gf-t1', type: 'qcm', ratees: [q(2)] }, '2026-10-03')
+    expect(c.map((e) => [e.q.q, e.le])).toEqual([['Question 2', '2026-10-03'], ['Question 1', '2026-10-01']])
+  })
+  it('même énoncé, types différents : deux entrées distinctes', () => {
+    expect(cleErreur('qcm', { q: 'X' })).not.toBe(cleErreur('trou', { text: 'X' }))
+  })
+  it('le carnet a une taille limitée', () => {
+    const beaucoup = Array.from({ length: CARNET_MAX + 30 }, (_, i) => q(i))
+    expect(majCarnet([], { themeId: 'gf-t1', type: 'qcm', ratees: beaucoup }, '2026-10-01')).toHaveLength(CARNET_MAX)
+  })
+  it('fusion appareil ↔ compte : union sans doublon', () => {
+    const a = { ...vide(), erreurs: majCarnet([], { themeId: 'gf-t1', type: 'qcm', ratees: [q(1)] }, '2026-10-01') }
+    const b = { ...vide(), erreurs: majCarnet([], { themeId: 'gf-t1', type: 'qcm', ratees: [q(1), q(2)] }, '2026-10-02') }
+    expect(mergeProgress(a, b).erreurs.map((e) => e.q.q).sort()).toEqual(['Question 1', 'Question 2'])
   })
 })
 

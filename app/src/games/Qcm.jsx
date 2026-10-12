@@ -10,6 +10,7 @@ export default function Qcm({ game, mode, color, onDone }) {
     () =>
       shuffle(game.questions).map((q) => ({
         ...q,
+        orig: q, // la question telle qu'écrite, pour le carnet d'erreurs
         choices: shuffle(q.choices.map((c, i) => ({ text: c, correct: i === q.answer }))),
       })),
     [game],
@@ -20,6 +21,7 @@ export default function Qcm({ game, mode, color, onDone }) {
   const [left, setLeft] = useState(PER_Q)
   const elapsed = useStopwatch(mode === 'defi')
   const tick = useRef(null)
+  const bilan = useRef({ ratees: [], reussies: [] }) // pour le carnet d'erreurs
   const q = questions[i]
   const answered = picked !== null
 
@@ -48,9 +50,10 @@ export default function Qcm({ game, mode, color, onDone }) {
   }
 
   const next = () => {
+    bilan.current[q.choices[picked]?.correct ? 'reussies' : 'ratees'].push(q.orig)
     if (i + 1 >= questions.length) {
       const timeBonus = Math.max(0, questions.length * 6 - elapsed)
-      onDone({ correct, total: questions.length, timeBonus })
+      onDone({ correct, total: questions.length, timeBonus, ...bilan.current })
     } else {
       setI((v) => v + 1)
       setPicked(null)

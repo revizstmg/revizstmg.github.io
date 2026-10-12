@@ -3,7 +3,10 @@ import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { dailyPlan, realThemes } from '../data/study.js'
 import { daysUntil, defaultBacDate } from '../data/srs.js'
+import { CALENDRIER, epreuvesAVenir, premiereEpreuve } from '../data/epreuves.js'
 import { useT } from '../i18n.js'
+
+const dateCourte = (d) => new Date(d + 'T00:00:00').toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'long' })
 
 // Sans filière (élève déconnecté), retour à l'accueil. Le test se fait ici, avant
 // tout hook de la page : React exige les mêmes hooks à chaque affichage, sinon la
@@ -20,7 +23,8 @@ function ProgrammePage() {
   const navigate = useNavigate()
 
   const [editing, setEditing] = useState(!state.bacDate)
-  const [draft, setDraft] = useState(state.bacDate || defaultBacDate())
+  const [draft, setDraft] = useState(state.bacDate || premiereEpreuve(state.track.level) || defaultBacDate())
+  const epreuves = useMemo(() => epreuvesAVenir(state.track.level), [state.track.level])
   const dLeft = daysUntil(state.bacDate)
 
   const plan = useMemo(() => dailyPlan(state, state.track, undefined, 4), [state])
@@ -56,6 +60,29 @@ function ProgrammePage() {
           </>
         )}
       </section>
+
+      {/* Les épreuves de la session, avec leur propre compte à rebours */}
+      {epreuves.length > 0 && (
+        <section>
+          <h2 className="mb-2 px-1 font-display text-lg font-medium">🗓️ {t('examsTitle').replace('{n}', CALENDRIER.session)}</h2>
+          <div className="card divide-y divide-slate-100 p-0 dark:divide-slate-800">
+            {epreuves.map((e) => (
+              <div key={e.id} className="flex items-center gap-3 p-3.5">
+                <span className="min-w-0 flex-1">
+                  <span className="block text-sm font-semibold">{e.nom}</span>
+                  <span className="block text-xs text-slate-500 dark:text-slate-400">
+                    {e.debut ? dateCourte(e.debut) : ''}{e.fin ? ` → ${dateCourte(e.fin)}` : ''}{e.note ? `${e.debut ? ' · ' : ''}${e.note}` : ''}
+                  </span>
+                </span>
+                {e.jours != null && <span className="chip shrink-0" style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 14%, transparent)', color: 'var(--c-accent-texte)' }}>{e.jours > 0 ? `J-${e.jours}` : t('itsToday')}</span>}
+              </div>
+            ))}
+          </div>
+          <p className="mt-2 px-1 text-xs text-slate-500 dark:text-slate-400">
+            {t('examsSource')} <a href={CALENDRIER.lien} target="_blank" rel="noopener noreferrer" className="font-semibold underline" style={{ color: 'var(--c-accent-texte)' }}>{CALENDRIER.source}</a>
+          </p>
+        </section>
+      )}
 
       {/* Objectifs du jour */}
       <section>

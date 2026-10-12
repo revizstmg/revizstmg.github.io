@@ -59,6 +59,9 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
   await expect.poll(async () => (await etat(page)).xp || 0).toBeGreaterThan(xpAvant)
   const ch = (await etat(page)).chapters?.['gf-t1']
   expect(ch?.games && Object.keys(ch.games).length).toBeGreaterThan(0)
+  // Toujours la première proposition : des questions sont ratées, elles entrent
+  // dans le carnet d'erreurs.
+  await expect.poll(async () => ((await etat(page)).erreurs || []).length).toBeGreaterThan(0)
   expect(erreurs).toEqual([])
 })
 

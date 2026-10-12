@@ -13,6 +13,7 @@ export default function VraiFaux({ game, mode, color, onDone }) {
   const [left, setLeft] = useState(PER_Q)
   const elapsed = useStopwatch(mode === 'defi')
   const tick = useRef(null)
+  const bilan = useRef({ ratees: [], reussies: [] }) // pour le carnet d'erreurs
   const q = items[i]
   const answered = picked !== null
 
@@ -40,9 +41,10 @@ export default function VraiFaux({ game, mode, color, onDone }) {
   }
 
   const next = () => {
+    bilan.current[picked === q.answer ? 'reussies' : 'ratees'].push(q)
     if (i + 1 >= items.length) {
       const timeBonus = Math.max(0, items.length * 4 - elapsed)
-      onDone({ correct, total: items.length, timeBonus })
+      onDone({ correct, total: items.length, timeBonus, ...bilan.current })
     } else {
       setI((v) => v + 1)
       setPicked(null)

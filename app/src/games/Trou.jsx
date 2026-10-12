@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { shuffle, Feedback, GameProgress, answerMatchesCours as answerMatches } from './common.jsx'
 import { useT } from '../i18n.js'
 
@@ -9,6 +9,7 @@ export default function Trou({ game, color, onDone }) {
   const [correct, setCorrect] = useState(0)
   const [val, setVal] = useState('')
   const [checked, setChecked] = useState(false)
+  const bilan = useRef({ ratees: [], reussies: [] }) // pour le carnet d'erreurs
   const q = items[i]
   const [before, after] = useMemo(() => q.text.split(/_{2,}/), [q])
   const ok = checked && answerMatches(val, q.answer, q.alt)
@@ -19,7 +20,8 @@ export default function Trou({ game, color, onDone }) {
     if (answerMatches(val, q.answer, q.alt)) setCorrect((c) => c + 1)
   }
   const next = () => {
-    if (i + 1 >= items.length) onDone({ correct, total: items.length })
+    bilan.current[ok ? 'reussies' : 'ratees'].push(q)
+    if (i + 1 >= items.length) onDone({ correct, total: items.length, ...bilan.current })
     else {
       setI((v) => v + 1)
       setVal('')

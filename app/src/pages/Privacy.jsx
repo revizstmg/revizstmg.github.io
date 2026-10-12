@@ -88,7 +88,8 @@ export default function Privacy() {
       <Section title="6. Visibilité au sein de ta classe">
         <p>Si tu rejoins une classe, un défi entre amis, le classement ou l'espace parent, ton <b>prénom, ta
         photo et tes scores</b> sont partagés (classement, entraide, QCM). Ton <b>adresse e-mail n'est jamais
-        montrée</b>. Tu peux quitter une classe à tout moment.</p>
+        montrée</b>. Tu peux quitter une classe à tout moment. Le suivi parent n'est actif que si tu
+        l'actives dans « Mon espace » ; le désactiver efface ce qui avait été partagé.</p>
         <p>Les règles qui protègent ces espaces partagés doivent encore être renforcées : aujourd'hui, ces
         informations peuvent être lues par d'autres utilisateurs de l'application que ta classe. N'y mets rien de
         sensible (utilise un prénom ou un surnom, la photo est facultative).</p>
@@ -97,8 +98,9 @@ export default function Privacy() {
       <Section title="7. Durée de conservation">
         <p>Tes données sont conservées <b>tant que ton compte existe</b>. Un compte resté <b>inactif plus de
         24 mois</b> peut être supprimé après information. À la suppression du compte, tes données personnelles
-        sont <b>effacées</b> (des sauvegardes techniques transitoires peuvent subsister quelques jours avant
-        rotation).</p>
+        sont <b>effacées</b> : progression, classe et contributions, amis et duels, suivi parent (des sauvegardes
+        techniques transitoires peuvent subsister quelques jours avant rotation). Ton <b>adresse e-mail de
+        connexion</b> est supprimée sur demande à <a href="mailto:revizstmg@gmail.com" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">revizstmg@gmail.com</a>.</p>
       </Section>
 
       <Section title="8. Sécurité">
@@ -114,7 +116,8 @@ export default function Privacy() {
         <ul className="list-disc space-y-1 pl-5">
           <li><b>Accéder / rectifier</b> tes informations depuis « Personnaliser mon profil ».</li>
           <li><b>Supprimer ton compte et tes données</b> depuis <Link to="/moi" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">Mon espace</Link> (bouton « Supprimer mon compte »).</li>
-          <li><b>Exporter</b> ta progression ou exercer un autre droit : écris à <a href="mailto:revizstmg@gmail.com" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">revizstmg@gmail.com</a>.</li>
+          <li><b>Télécharger tes données</b> depuis <Link to="/moi" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">Mon espace</Link> (bouton « Télécharger mes données »).</li>
+          <li><b>Exercer un autre droit</b> : écris à <a href="mailto:revizstmg@gmail.com" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">revizstmg@gmail.com</a>.</li>
         </ul>
         <p>Nous répondons dans un délai maximal d'<b>un mois</b>. Tu peux aussi introduire une réclamation auprès
         de la <b>CNIL</b> (<a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">www.cnil.fr</a>).</p>

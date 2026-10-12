@@ -6,17 +6,32 @@ import { badgeById } from '../badges.js'
 import { Ring, ProgressBar, Icon } from '../components/ui.jsx'
 import { useT } from '../i18n.js'
 import { signOut, deleteMyProfile } from '../auth.js'
-import { deleteMyClassData } from '../classroom.js'
+import { deleteMyClassData, deleteMyTeacherClasses } from '../classroom.js'
+import { deleteMyFriendData } from '../friends.js'
 import { InstallCard, AppBadge } from '../components/InstallApp.jsx'
 import { ProgressCurve, ThemeTimeBars } from '../components/StatsCharts.jsx'
 import { isStandalone } from '../pwa.js'
 import { ensurePermission, notify, notifSupported } from '../notify.js'
-import { parentCode, PARENT_READY } from '../parent.js'
+import { parentCode, deleteMyChildStats, PARENT_READY } from '../parent.js'
+
+// Droit à la portabilité (RGPD) : tout ce que l'app garde sur cet appareil pour
+// l'élève, dans un fichier JSON lisible, sans passer par un e-mail.
+function telechargerMesDonnees(state) {
+  const donnees = { application: 'RévizSTMG', exporte_le: new Date().toISOString(), donnees: state }
+  const url = URL.createObjectURL(new Blob([JSON.stringify(donnees, null, 2)], { type: 'application/json' }))
+  const a = document.createElement('a')
+  a.href = url
+  a.download = `revizstmg-mes-donnees-${new Date().toISOString().slice(0, 10)}.json`
+  document.body.appendChild(a)
+  a.click()
+  a.remove()
+  setTimeout(() => URL.revokeObjectURL(url), 1000)
+}
 
 // « Mon espace » : la page personnelle de l'élève — identité, statistiques,
 // badges, favoris et accès rapide. Distincte de la personnalisation (apparence).
 export default function Profile() {
-  const { state, derived, resetAll, setBacDate } = useStore()
+  const { state, derived, resetAll, setBacDate, setParentShare } = useStore()
   const t = useT()
   const [busy, setBusy] = useState(false)
   const bacDays = state.bacDate ? Math.ceil((new Date(state.bacDate + 'T00:00:00') - Date.now()) / 86400000) : null
@@ -31,8 +46,15 @@ export default function Profile() {
     if (busy) return
     if (!confirm(t('deleteAccountConfirm'))) return
     setBusy(true)
-    try { await deleteMyProfile() } catch { /* */ }
-    try { await deleteMyClassData() } catch { /* */ }
+    // Tout ce que l'app a publié pour cet élève : profil et progression, classe,
+    // amis et duels, suivi parent, et les classes d'un professeur.
+    await Promise.all([
+      deleteMyProfile(),
+      deleteMyClassData(),
+      deleteMyFriendData(),
+      deleteMyChildStats(),
+      state.account?.role === 'prof' ? deleteMyTeacherClasses(state.account.id) : true,
+    ].map((p) => Promise.resolve(p).catch(() => false)))
     signOut()
     resetAll()
   }
@@ -150,15 +172,24 @@ export default function Profile() {
         )}
       </section>
 
-      {/* Suivi parental : code à donner à ses parents */}
+      {/* Suivi parental : partage volontaire, puis code à donner à ses parents */}
       {PARENT_READY && (
         <section className="card p-5">
-          <h2 className="font-display text-xl font-medium">👨‍👩‍👧 {t('studentParentCard')}</h2>
-          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t('studentParentHelp')}</p>
-          <div className="mt-3 flex items-center gap-3">
-            <span className="rounded-xl bg-slate-100 px-4 py-2 font-mono text-xl font-bold tracking-widest dark:bg-slate-800">{parentCode()}</span>
-            <button onClick={copyParentCode} className="btn-ghost text-sm">{codeCopied ? `✓ ${t('copied')}` : t('copyCode')}</button>
+          <div className="flex items-start gap-3">
+            <div className="min-w-0 flex-1">
+              <h2 className="font-display text-xl font-medium">👨‍👩‍👧 {t('studentParentCard')}</h2>
+              <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t(state.parentShare ? 'studentParentHelp' : 'parentShareOff')}</p>
+            </div>
+            <button onClick={() => setParentShare(!state.parentShare)} role="switch" aria-checked={!!state.parentShare} aria-label={t('parentShareLabel')} className="relative mt-1 h-6 w-11 shrink-0 rounded-full transition" style={{ backgroundColor: state.parentShare ? 'var(--c-accent)' : 'color-mix(in srgb, currentColor 20%, transparent)' }}>
+              <span className="absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-all" style={{ left: state.parentShare ? '1.4rem' : '0.125rem' }} />
+            </button>
           </div>
+          {state.parentShare && (
+            <div className="mt-3 flex items-center gap-3">
+              <span className="rounded-xl bg-slate-100 px-4 py-2 font-mono text-xl font-bold tracking-widest dark:bg-slate-800">{parentCode()}</span>
+              <button onClick={copyParentCode} className="btn-ghost text-sm">{codeCopied ? `✓ ${t('copied')}` : t('copyCode')}</button>
+            </div>
+          )}
         </section>
       )}
 
@@ -225,7 +256,10 @@ export default function Profile() {
 
       {/* Confidentialité & suppression du compte (RGPD) */}
       <section className="space-y-2 pt-2">
-        <Link to="/confidentialite" className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('privacyPolicy')}</Link>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <Link to="/confidentialite" className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('privacyPolicy')}</Link>
+          <button onClick={() => telechargerMesDonnees(state)} className="btn-ghost text-sm">⬇️ {t('downloadMyData')}</button>
+        </div>
         <div className="card p-4" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, #e11d48 40%, transparent)' }}>
           <h3 className="font-display font-semibold text-rose-600 dark:text-rose-400">{t('dangerZone')}</h3>
           <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{t('deleteAccountHint')}</p>

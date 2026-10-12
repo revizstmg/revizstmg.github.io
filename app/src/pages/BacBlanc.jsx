@@ -3,6 +3,8 @@ import { Navigate } from 'react-router-dom'
 import { useStore, useStudyTimer } from '../store.jsx'
 import { buildExam, examSubjects } from '../data/study.js'
 import Exam from '../games/Exam.jsx'
+import SujetBac from '../games/SujetBac.jsx'
+import { composerSujet, sujetsDisponibles } from '../data/sujetBac.js'
 import { useT } from '../i18n.js'
 
 const DURATIONS = [
@@ -31,6 +33,10 @@ function BacBlancPage() {
   const [subjectId, setSubjectId] = useState('all') // 'all' | subjectId
   const [dur, setDur] = useState(DURATIONS[2])
   const [exam, setExam] = useState(null) // { questions, durationSec }
+  const [sujet, setSujet] = useState(null) // sujet au format de l'épreuve en cours
+  const [sansSujet, setSansSujet] = useState(false)
+  const sujets = sujetsDisponibles(state.track)
+  const lancerSujet = (id) => { const s = composerSujet(id, state.track); setSansSujet(!s); setSujet(s) }
 
   const start = () => {
     const ids = subjectId === 'all' ? null : [subjectId]
@@ -40,6 +46,8 @@ function BacBlancPage() {
     recordExamSeen(subjectId, keys) // mémorise ce sujet pour ne pas le répéter
     setExam({ questions, durationSec: dur.min * 60 })
   }
+
+  if (sujet) return <SujetBac sujet={sujet} onExit={() => setSujet(null)} />
 
   if (exam && exam.questions.length >= 4) {
     return <Exam questions={exam.questions} durationSec={exam.durationSec} color="var(--c-accent)" onExit={() => setExam(null)} />
@@ -83,6 +91,24 @@ function BacBlancPage() {
         <button onClick={start} className="btn-gold mt-6 w-full !py-3.5 text-base">⏱ {t('startExam')}</button>
         <p className="mt-3 text-center text-xs text-slate-400">{t('examNote')}</p>
       </section>
+
+      {/* Sujets au format des épreuves écrites de spécialité (Terminale) */}
+      {sujets.length > 0 && (
+        <section className="card p-5">
+          <h2 className="font-display text-xl font-medium">📜 {t('sujetTitle')}</h2>
+          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t('sujetSub')}</p>
+          <div className="mt-4 grid gap-2">
+            {sujets.map((s) => (
+              <button key={s.id} onClick={() => lancerSujet(s.id)} className="flex items-center gap-3 rounded-xl bg-slate-100 p-3.5 text-left transition hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700">
+                <span className="text-2xl" aria-hidden>{s.icon}</span>
+                <span className="min-w-0 flex-1"><span className="block font-semibold">{s.titre}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{t('sujetDuration')}</span></span>
+                <span className="text-slate-400" aria-hidden>›</span>
+              </button>
+            ))}
+          </div>
+          {sansSujet && <p className="mt-3 text-sm text-rose-600 dark:text-rose-400">{t('sujetNoContent')}</p>}
+        </section>
+      )}
     </div>
   )
 }
