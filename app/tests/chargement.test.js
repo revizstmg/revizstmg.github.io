@@ -25,6 +25,18 @@ describe('chargement à la demande', () => {
     expect(chapterScore(etat, 'gf-t1')).toBe(100)
   })
 
+  it('le score d’un thème est le même avant et après le chargement de sa matière', async () => {
+    // L'index léger garde le type des exercices : il sait lesquels se lancent seuls.
+    const id = 'sig-t2'
+    const jouables = C.jeuxJouablesDuTheme(id)
+    expect(jouables.length).toBeGreaterThan(0)
+    const etat = { chapters: { [id]: { games: { [jouables[0].id]: 100 }, quiz: 50 } } }
+    const avant = chapterScore(etat, id)
+    await C.chargerMatiere('sig')
+    expect(C.jeuxJouablesDuTheme(id).map((g) => g.id)).toEqual(jouables.map((g) => g.id))
+    expect(chapterScore(etat, id)).toBe(avant)
+  })
+
   it('charger une matière complète les objets déjà en main, une seule fois', async () => {
     const matiere = C.getSubject('droit')
     const theme = matiere.chapters[0]

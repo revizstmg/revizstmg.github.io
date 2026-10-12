@@ -8,7 +8,16 @@ import { useT } from '../i18n.js'
 const DURATION = 300 // 5 minutes
 const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.max(0, s % 60)).padStart(2, '0')}`
 
+// Sans filière (élève déconnecté), retour à l'accueil. Le test se fait ici, avant
+// tout hook de la page : React exige les mêmes hooks à chaque affichage, sinon la
+// déconnexion depuis cette page laisse un écran blanc.
 export default function Express() {
+  const { state } = useStore()
+  if (!state.track) return <Navigate to="/" replace />
+  return <ExpressPage />
+}
+
+function ExpressPage() {
   const { state, addXp } = useStore()
   useStudyTimer() // le temps de la révision express compte pour les récompenses
   const t = useT()
@@ -25,7 +34,6 @@ export default function Express() {
   const endRef = useRef(0)
   const finishRef = useRef(false)
 
-  if (!state.track) return <Navigate to="/" replace />
 
   const q = pool[i] || null
 

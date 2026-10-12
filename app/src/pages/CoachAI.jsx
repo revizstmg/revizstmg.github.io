@@ -25,7 +25,16 @@ function fmtDay(dateStr) {
   } catch { return dateStr }
 }
 
+// Sans filière (élève déconnecté), retour à l'accueil. Le test se fait ici, avant
+// tout hook de la page : React exige les mêmes hooks à chaque affichage, sinon la
+// déconnexion depuis cette page laisse un écran blanc.
 export default function CoachAI() {
+  const { state } = useStore()
+  if (!state.track) return <Navigate to="/" replace />
+  return <CoachAIPage />
+}
+
+function CoachAIPage() {
   const { state, setBacDate } = useStore()
   const t = useT()
   useStudyTimer() // le temps de l'entraînement coach IA compte pour les récompenses
@@ -34,7 +43,6 @@ export default function CoachAI() {
   const [planOpen, setPlanOpen] = useState(false)
   const [perDay, setPerDay] = useState(3) // intensité du plan : thèmes par jour
   const [sessionLen, setSessionLen] = useState(12) // nombre de questions par entraînement
-  if (!state.track) return <Navigate to="/" replace />
 
   const a = useMemo(() => analyzeStudent(state, state.track), [state])
   const plan = useMemo(() => buildStudyPlan(state, state.track, { perDay, maxDays: 30 }), [state, perDay])

@@ -1,13 +1,13 @@
 // Logique de l'app : niveaux, scores, répétition espacée, récompenses, badges,
 // calculs chiffrés, filières.
 import { describe, it, expect } from 'vitest'
-import { levelFromXp, chapterScore, starsFromScore, subjectScore, globalScore, isoWeekKey } from '../src/store.jsx'
+import { levelFromXp, chapterScore, starsFromScore, subjectScore, globalScore, isoWeekKey, mergeProgress } from '../src/store.jsx'
 import { srsUpdate, addDays, daysUntil, defaultBacDate } from '../src/data/srs.js'
 import { dailyBase, dailyRewardFor, nextMilestone, MILESTONES } from '../src/data/rewards.js'
 import { BADGES } from '../src/badges.js'
 import { CALC, makeCalcSet } from '../src/calc.js'
 import { LEVELS, subjectsForTrack, trackLabel } from '../src/data/tracks.js'
-import { ALL_CHAPTERS, SUBJECTS } from '../src/data/index.js'
+import { ALL_CHAPTERS, SUBJECTS, jeuxJouablesDuTheme } from '../src/data/index.js'
 import { answerMatches, answerMatchesCours } from '../src/games/common.jsx'
 import { avecGraine, empreinte } from './outils.js'
 
@@ -37,13 +37,29 @@ describe('scores', () => {
     expect(chapterScore(vide(), themeId)).toBe(0)
     expect(chapterScore(vide(), 'theme-inexistant')).toBe(0)
   })
-  it('moyenne des exercices et du quiz, exercices non faits comptés 0', () => {
-    const n = theme.games.length + 1
+  it('moyenne des exercices jouables et du quiz, exercices non faits comptés 0', () => {
+    const id = Object.keys(ALL_CHAPTERS).find((x) => jeuxJouablesDuTheme(x).length >= 2)
+    const jouables = jeuxJouablesDuTheme(id)
+    const n = jouables.length + 1
     const s = vide()
-    s.chapters[themeId] = { games: { [theme.games[0].id]: 100 }, quiz: 100 }
-    expect(chapterScore(s, themeId)).toBe(Math.round(200 / n))
-    s.chapters[themeId] = { games: Object.fromEntries(theme.games.map((g) => [g.id, 100])), quiz: 100 }
-    expect(chapterScore(s, themeId)).toBe(100)
+    s.chapters[id] = { games: { [jouables[0].id]: 100 }, quiz: 100 }
+    expect(chapterScore(s, id)).toBe(Math.round(200 / n))
+    s.chapters[id] = { games: Object.fromEntries(ALL_CHAPTERS[id].games.map((g) => [g.id, 100])), quiz: 100 }
+    expect(chapterScore(s, id)).toBe(100)
+    // Un thème sans exercice jouable seul : le test du thème fait tout le score.
+    s.chapters[themeId] = { games: {}, quiz: 80 }
+    expect(chapterScore(s, themeId)).toBe(jeuxJouablesDuTheme(themeId).length ? Math.round(80 / (jeuxJouablesDuTheme(themeId).length + 1)) : 80)
+  })
+  // Les QCM, vrai/faux et associations du thème ne se lancent pas seuls (ils
+  // nourrissent le test du thème) : un élève qui fait tout ce qu'il peut lancer
+  // doit pouvoir atteindre 100 %, dans chaque thème.
+  it('chaque thème peut atteindre 100 %', () => {
+    const plafonnes = Object.keys(ALL_CHAPTERS).filter((id) => {
+      const s = vide()
+      s.chapters[id] = { games: Object.fromEntries(jeuxJouablesDuTheme(id).map((g) => [g.id, 100])), quiz: 100 }
+      return chapterScore(s, id) !== 100
+    })
+    expect(plafonnes).toEqual([])
   })
   it('étoiles', () => {
     expect([0, 24, 25, 59, 60, 89, 90, 100].map(starsFromScore)).toEqual([0, 0, 1, 1, 2, 2, 3, 3])
@@ -60,6 +76,40 @@ describe('scores', () => {
     expect(isoWeekKey(new Date(2026, 0, 1))).toBe('2026-W01')
     expect(isoWeekKey(new Date(2026, 9, 4))).toBe('2026-W40')
     expect(isoWeekKey(new Date(2027, 0, 1))).toBe('2026-W53')
+  })
+})
+
+// Fusion de la progression de l'appareil et de celle du compte (au démarrage et
+// à la connexion). Le compte et l'appareil gardent chacun une copie : fusionner
+// deux fois la même progression ne doit rien changer.
+describe('fusion appareil ↔ compte', () => {
+  const progression = () => ({
+    ...vide(),
+    xp: 420,
+    themeTime: { 'gf-t1': 1800, 'droit-t5': 600 },
+    notes: { 'gf-t1': 'TVA : HT × taux' },
+    grandOral: { spec: 'gestion-finance', q1: 'Pourquoi les entreprises ?', q2: '', notes: '' },
+  })
+  it('fusionner une progression avec sa propre copie ne la change pas', () => {
+    const p = progression()
+    const f = mergeProgress(progression(), progression())
+    expect(f.themeTime).toEqual(p.themeTime)
+    expect(f.xp).toBe(p.xp)
+    expect(f.grandOral).toEqual(p.grandOral)
+    // Ouvrir l'app trois fois de suite ne fait pas grimper le temps.
+    let s = progression()
+    for (let i = 0; i < 3; i++) s = mergeProgress(s, progression())
+    expect(s.themeTime).toEqual(p.themeTime)
+  })
+  it('le temps de chaque thème garde la valeur la plus grande', () => {
+    const appareil = { ...progression(), themeTime: { 'gf-t1': 2400 } }
+    const compte = { ...progression(), themeTime: { 'gf-t1': 1800, 'droit-t5': 600 } }
+    expect(mergeProgress(appareil, compte).themeTime).toEqual({ 'gf-t1': 2400, 'droit-t5': 600 })
+  })
+  it('la préparation du Grand Oral est récupérée depuis le compte', () => {
+    const neuf = { ...vide(), grandOral: { spec: '', q1: '', q2: '', notes: '' } }
+    const compte = { ...progression(), grandOral: { spec: 'gestion-finance', q1: 'Question 1', q2: 'Question 2', notes: 'Plan en deux parties' } }
+    expect(mergeProgress(neuf, compte).grandOral).toEqual(compte.grandOral)
   })
 })
 

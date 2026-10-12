@@ -49,6 +49,25 @@ describe('contenu', () => {
     expect(empreintes).toMatchSnapshot()
   })
 
+  // Une étiquette du cours (« Thèse 1 », « Étape 2 », « III. Dépassement »,
+  // « Piège », « La distinction clé ») n'est jamais une notion : si elle devient
+  // la bonne réponse, l'élève qui donne la vraie notion est compté faux.
+  it('aucune étiquette du cours comme bonne réponse ou comme notion', () => {
+    const ETIQUETTE = /^(?:(?:th[eè]se|antith[eè]se|[ée]tape)\s+\d|[IVX]+\.\s|(?:le |la )?pi[eè]ge\b|(?:la )?distinction (?:cl|d[ée]cisive)|attention\b)/i
+    const fautes = []
+    const voir = (v, id) => {
+      if (Array.isArray(v)) return v.forEach((x) => voir(x, id))
+      if (!v || typeof v !== 'object') return
+      const bonne = typeof v.answer === 'number' && Array.isArray(v.choices) ? v.choices[v.answer] : v.answer
+      for (const x of [bonne, v.term, v.front, v.left]) {
+        if (typeof x === 'string' && ETIQUETTE.test(x.trim())) fautes.push(`${id} : ${x}`)
+      }
+      Object.values(v).forEach((x) => voir(x, id))
+    }
+    for (const id of Object.keys(C.ALL_CHAPTERS)) voir(ceQueVoitLEleve(id), id)
+    expect(fautes).toEqual([])
+  })
+
   it('paquets de flashcards par matière', () => {
     const empreintes = {}
     for (const s of C.SUBJECTS) empreintes[s.id] = empreinte(avecGraine(s.id, () => C.deckForSubject(s.id)))

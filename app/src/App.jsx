@@ -1,7 +1,8 @@
 import { lazy, Suspense } from 'react'
-import { Routes, Route, Navigate, useParams } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom'
 import { useStore } from './store.jsx'
 import Layout from './components/Layout.jsx'
+import EcranSecours from './components/EcranSecours.jsx'
 import Introuvable from './pages/Introuvable.jsx'
 import { getLinkedChild } from './parent.js'
 import { Chargement, ContenuMatiere, ContenuFiliere } from './content/Contenu.jsx'
@@ -58,8 +59,10 @@ function RootEntry() {
 }
 
 export default function App() {
+  const { pathname } = useLocation()
   return (
     <Layout>
+      <EcranSecours cle={pathname}>
       <Suspense fallback={<Chargement />}>
       <Routes>
         <Route path="/" element={<RootEntry />} />
@@ -96,6 +99,7 @@ export default function App() {
         <Route path="*" element={<Introuvable />} />
       </Routes>
       </Suspense>
+      </EcranSecours>
     </Layout>
   )
 }

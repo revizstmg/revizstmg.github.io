@@ -5,11 +5,19 @@ import { dailyPlan, realThemes } from '../data/study.js'
 import { daysUntil, defaultBacDate } from '../data/srs.js'
 import { useT } from '../i18n.js'
 
+// Sans filière (élève déconnecté), retour à l'accueil. Le test se fait ici, avant
+// tout hook de la page : React exige les mêmes hooks à chaque affichage, sinon la
+// déconnexion depuis cette page laisse un écran blanc.
 export default function Programme() {
+  const { state } = useStore()
+  if (!state.track) return <Navigate to="/" replace />
+  return <ProgrammePage />
+}
+
+function ProgrammePage() {
   const { state, derived, setBacDate } = useStore()
   const t = useT()
   const navigate = useNavigate()
-  if (!state.track) return <Navigate to="/" replace />
 
   const [editing, setEditing] = useState(!state.bacDate)
   const [draft, setDraft] = useState(state.bacDate || defaultBacDate())

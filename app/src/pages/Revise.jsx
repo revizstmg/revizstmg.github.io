@@ -16,7 +16,16 @@ const REASON = {
   review: { key: 'reasonReview', bg: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300', icon: '✅' },
 }
 
+// Sans filière (élève déconnecté), retour à l'accueil. Le test se fait ici, avant
+// tout hook de la page : React exige les mêmes hooks à chaque affichage, sinon la
+// déconnexion depuis cette page laisse un écran blanc.
 export default function Revise() {
+  const { state } = useStore()
+  if (!state.track) return <Navigate to="/" replace />
+  return <RevisePage />
+}
+
+function RevisePage() {
   const { state, removeDeck, saveDeck, claimWeekly } = useStore()
   const t = useT()
   const navigate = useNavigate()
@@ -25,7 +34,6 @@ export default function Revise() {
   const [importCode, setImportCode] = useState('')
   const [importMsg, setImportMsg] = useState('')
   const [showImport, setShowImport] = useState(false)
-  if (!state.track) return <Navigate to="/" replace />
 
   const queue = useMemo(() => reviewQueue(state, state.track), [state])
   // Un thème n'est « commencé » que si sa LEÇON a été travaillée directement :

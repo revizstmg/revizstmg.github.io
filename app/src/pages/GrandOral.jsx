@@ -187,10 +187,18 @@ const PRACTICE = [
   { key: 'projet', label: 'Projet', min: 5 },
 ]
 
+// Sans filière (élève déconnecté), retour à l'accueil. Le test se fait ici, avant
+// tout hook de la page : React exige les mêmes hooks à chaque affichage, sinon la
+// déconnexion depuis cette page laisse un écran blanc.
 export default function GrandOral() {
+  const { state } = useStore()
+  if (!state.track) return <Navigate to="/" replace />
+  return <GrandOralPage />
+}
+
+function GrandOralPage() {
   const { state, setGrandOral } = useStore()
   const t = useT()
-  if (!state.track) return <Navigate to="/" replace />
 
   const go = state.grandOral || { spec: '', q1: '', q2: '', notes: '' }
   const set = (patch) => setGrandOral(patch)

@@ -55,7 +55,16 @@ const PRESETS = [
 
 function two(n) { return String(n).padStart(2, '0') }
 
+// Sans filière (élève déconnecté), retour à l'accueil. Le test se fait ici, avant
+// tout hook de la page : React exige les mêmes hooks à chaque affichage, sinon la
+// déconnexion depuis cette page laisse un écran blanc.
 export default function Coach() {
+  const { state } = useStore()
+  if (!state.track) return <Navigate to="/" replace />
+  return <CoachPage />
+}
+
+function CoachPage() {
   const { state } = useStore()
   const f = useFocus()
   const t = useT()
@@ -64,7 +73,6 @@ export default function Coach() {
   const [showResults, setShowResults] = useState(false)
   const [fullscreen, setFullscreen] = useState(false)
 
-  if (!state.track) return <Navigate to="/" replace />
 
   // Exclusivité de l'app installée : hors installation, on invite à installer.
   if (!standalone) {

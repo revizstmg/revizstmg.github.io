@@ -26,10 +26,18 @@ function resultFromDuel(d) {
   return { result: o.result, mine: o.mine, theirs: o.theirs, myCorrect: o.iAmA ? d.a_total : d.b_total, theirCorrect: o.iAmA ? d.b_total : d.a_total, total, opp: o.opp, label: d.chapter_label }
 }
 
+// Sans filière (élève déconnecté), retour à l'accueil. Le test se fait ici, avant
+// tout hook de la page : React exige les mêmes hooks à chaque affichage, sinon la
+// déconnexion depuis cette page laisse un écran blanc.
 export default function Friends() {
+  const { state } = useStore()
+  if (!state.track) return <Navigate to="/" replace />
+  return <FriendsPage />
+}
+
+function FriendsPage() {
   const { state, derived } = useStore()
   const t = useT()
-  if (!state.track) return <Navigate to="/" replace />
 
   const myName = `${state.profile?.firstName || ''} ${state.profile?.lastName || ''}`.trim() || 'Élève'
   const code = friendCode()

@@ -302,9 +302,16 @@ export function getSubject(id) {
 export function getChapter(id) {
   return ALL_CHAPTERS[id] || null
 }
+// Exercices écrits à la main qu'on peut lancer seuls, depuis un chapitre. Les
+// autres (QCM, vrai/faux, associations du thème) n'alimentent que le test du
+// thème, déjà compté à part : les compter ici plafonnait la maîtrise (20 % au
+// plus en philosophie, même tout réussi).
+export function jeuxJouablesDuTheme(themeId) {
+  const c = ALL_CHAPTERS[themeId]
+  return c ? (c.games || []).filter((g) => CHAPTER_GAME_TYPES.has(g.type)) : []
+}
 export function chapterGameCount(chapterId) {
-  const c = ALL_CHAPTERS[chapterId]
-  return c ? (c.games?.length || 0) : 0
+  return jeuxJouablesDuTheme(chapterId).length
 }
 
 // ---------------------------------------------------------------------------
@@ -448,8 +455,14 @@ function notionsLiees(a, b) {
 // Étapes d'un raisonnement (« Faits », « Application », « Conclusion »,
 // « Règle de droit (majeure) »…) : ce ne sont pas des notions à définir.
 const ETAPES_METHODE = new Set(['faits', 'enonce', 'application', 'conclusion', 'qualification', 'solution', 'probleme', 'probleme juridique', 'probleme de droit', 'question', 'question de droit', 'regle', 'reponse', 'analyse', 'situation', 'corrige'])
-function estEtapeMethode(terme) {
+// Étiquettes de plan ou d'encadré (« Thèse 1 », « Étape 2 », « III. Dépassement »,
+// « Piège », « La distinction clé », « Attention au… ») : elles annoncent un passage
+// du cours. Prises pour des notions, elles devenaient la « bonne réponse » d'un
+// exercice à la place de la vraie notion.
+const ETIQUETTES_COURS = /^(?:(?:th[eè]se|antith[eè]se|[ée]tape|temps|moment)\s+\d+\b|[IVX]+\.\s|(?:le\s+|la\s+)?pi[eè]ge\b|(?:la\s+)?distinction\s+(?:cl[ée]|d[ée]cisive)(?![a-zà-ÿ])|attention\b)/i
+export function estEtapeMethode(terme) {
   if (/\((majeure|mineure)\)/i.test(terme)) return true
+  if (ETIQUETTES_COURS.test(stripMd(String(terme)).trim())) return true
   return ETAPES_METHODE.has(cleReponse(String(terme).replace(/\([^)]*\)/g, ' ')))
 }
 

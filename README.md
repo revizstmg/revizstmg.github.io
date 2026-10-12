@@ -62,12 +62,19 @@ npm run build && npm run test:parcours   # parcours dans un vrai navigateur (~3 
   n'avez touché qu'au code, c'est que l'élève verra autre chose : cherchez pourquoi.
   `EMPREINTE_DETAIL=1 npm test` écrit le détail de chaque thème dans
   `tests/.detail/` pour comparer deux versions.
-- **Logique** (`tests/logique.test.js`) : niveaux, scores, répétition espacée,
-  récompenses, badges, calculs chiffrés, filières.
+- **Logique** (`tests/logique.test.js`) : niveaux, scores (chaque thème peut
+  atteindre 100 %), fusion de la progression de l'appareil et du compte,
+  répétition espacée, récompenses, badges, calculs chiffrés, filières.
+- **Règle des hooks** (`tests/hooks.test.js`) : aucun composant n'appelle un hook
+  React après un `if (…) return`, ce qui laisse un écran blanc quand la condition
+  change (par exemple à la déconnexion).
 - **Parcours** (`tests/parcours/`) : écran de connexion, accueil, un cours suivi
   d'un QCM fait jusqu'au bout, les 25 pages de l'app, et chaque thème des 19
   matières. Les parcours démarrent avec un élève fictif déjà inscrit et bloquent
   tout accès extérieur : ils ne touchent jamais la vraie base Supabase.
+  `secours.spec.js` vérifie la déconnexion depuis chaque page réservée aux élèves
+  et l'écran de secours (`components/EcranSecours.jsx`) qui remplace une page
+  plantée sans emporter le reste du site.
 
 ## Mise en ligne
 

@@ -13,11 +13,19 @@ const DURATIONS = [
   { min: 60, q: 40 },
 ]
 
+// Sans filière (élève déconnecté), retour à l'accueil. Le test se fait ici, avant
+// tout hook de la page : React exige les mêmes hooks à chaque affichage, sinon la
+// déconnexion depuis cette page laisse un écran blanc.
 export default function BacBlanc() {
+  const { state } = useStore()
+  if (!state.track) return <Navigate to="/" replace />
+  return <BacBlancPage />
+}
+
+function BacBlancPage() {
   const { state, recordExamSeen } = useStore()
   const t = useT()
   useStudyTimer() // le temps du bac blanc compte pour les récompenses
-  if (!state.track) return <Navigate to="/" replace />
 
   const subjects = examSubjects(state.track)
   const [subjectId, setSubjectId] = useState('all') // 'all' | subjectId

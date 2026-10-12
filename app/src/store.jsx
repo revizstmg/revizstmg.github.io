@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback } from 'react'
-import { SUBJECTS, ALL_CHAPTERS, chapterGameCount } from './data/index.js'
+import { SUBJECTS, ALL_CHAPTERS, chapterGameCount, jeuxJouablesDuTheme } from './data/index.js'
 import { BADGES } from './badges.js'
 import { saveProgress, isSignedIn, refreshSession, fetchProfile, getSession } from './auth.js'
 import { srsUpdate, todayKey as srsToday } from './data/srs.js'
@@ -13,14 +13,14 @@ import { publishChildStats, PARENT_READY } from './parent.js'
 const CROSS_GAMES = new Set(['exam', 'coach-ia', 'daily', 'express'])
 
 // Champs de progression synchronisés sur le compte (multi-appareil).
-const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches']
+const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral']
 function pickProgress(s) {
   const out = {}
   for (const k of PROGRESS_KEYS) out[k] = s[k]
   return out
 }
 // Fusion locale ↔ serveur (on garde le meilleur des deux — même utilisateur).
-function mergeProgress(a, b) {
+export function mergeProgress(a, b) {
   if (!b || typeof b !== 'object' || !Object.keys(b).length) return a
   const out = { ...a }
   out.xp = Math.max(a.xp || 0, b.xp || 0)
@@ -58,9 +58,11 @@ function mergeProgress(a, b) {
   const hist = { ...(a.history || {}) }
   for (const [d, xp] of Object.entries(b.history || {})) hist[d] = Math.max(hist[d] || 0, xp || 0)
   out.history = hist
-  // Temps de révision : par thème, on additionne les deux appareils.
+  // Temps de révision : par thème, on garde le plus grand. Les additionner
+  // comptait deux fois le même temps, puisque le compte et l'appareil en
+  // gardent chacun une copie : le temps doublait à chaque ouverture de l'app.
   const tt = { ...(a.themeTime || {}) }
-  for (const [tid, s] of Object.entries(b.themeTime || {})) tt[tid] = (tt[tid] || 0) + (s || 0)
+  for (const [tid, s] of Object.entries(b.themeTime || {})) tt[tid] = Math.max(tt[tid] || 0, s || 0)
   out.themeTime = tt
   // Flashcards téléchargées : union par id (on garde la version la plus récente).
   const decks = new Map()
@@ -86,6 +88,11 @@ function mergeProgress(a, b) {
   const notes = { ...(a.notes || {}) }
   for (const [k, v] of Object.entries(b.notes || {})) if (!notes[k] || (v || '').length > (notes[k] || '').length) notes[k] = v
   out.notes = notes
+  // Préparation du Grand Oral : champ par champ, le texte le plus complet.
+  const ga = a.grandOral || {}, gb = b.grandOral || {}
+  const grandOral = {}
+  for (const k of new Set([...Object.keys(ga), ...Object.keys(gb)])) grandOral[k] = (gb[k] || '').length > (ga[k] || '').length ? gb[k] : ga[k]
+  out.grandOral = grandOral
   return out
 }
 
@@ -133,7 +140,7 @@ const emptyState = () => ({
   bacDate: null, // date du bac (programme de révision)
   a11y: { dys: false, contrast: false, big: false }, // accessibilité (local)
   reminder: { on: false, time: '18:00' }, // rappel de révision (local)
-  grandOral: { spec: '', q1: '', q2: '', notes: '' }, // préparation du Grand Oral (local)
+  grandOral: { spec: '', q1: '', q2: '', notes: '' }, // préparation du Grand Oral (sauvegardée sur le compte)
   examSeen: {}, // bac blanc : { [sélection]: [clés d'énoncés déjà tombés] } (local)
   coins: 0, // pièces 🪙 dépensables en boutique (gagnées avec l'XP)
   owned: [], // ids d'articles cosmétiques achetés (boutique)
@@ -400,7 +407,7 @@ export function StoreProvider({ children }) {
   // Les préférences d'affichage (langue, thème) restent locales.
   const logout = useCallback(() => setState((p) => {
     if (p.account?.id) { try { saveProgress(pickProgress(p)) } catch { /* best effort */ } }
-    return { ...emptyState(), lang: p.lang, theme: p.theme, customTheme: p.customTheme, a11y: p.a11y, reminder: p.reminder, grandOral: p.grandOral, examSeen: p.examSeen, tabs: p.tabs }
+    return { ...emptyState(), lang: p.lang, theme: p.theme, customTheme: p.customTheme, a11y: p.a11y, reminder: p.reminder, examSeen: p.examSeen, tabs: p.tabs }
   }), [])
 
   // Restaure la progression du compte (fusion avec l'éventuel local du même
@@ -699,17 +706,15 @@ export function useThemeTimer(themeId) { useActivityTimer(themeId || null) }
 export function useStudyTimer(themeId = null) { useActivityTimer(themeId || STUDY_BUCKET) }
 
 // ---- Calculs de progression dérivés de l'état ----------------------------
-// Score d'un chapitre = moyenne des meilleurs scores de ses jeux + quiz
+// Score d'un chapitre = moyenne des meilleurs scores de ses jeux jouables + quiz
 // (les jeux non joués comptent 0), pour une progression toujours visible.
 export function chapterScore(state, chapterId) {
-  const meta = ALL_CHAPTERS[chapterId]
-  if (!meta) return 0
-  const nGames = chapterGameCount(chapterId)
-  const items = nGames + 1 // + le quiz
+  if (!ALL_CHAPTERS[chapterId]) return 0
+  const items = chapterGameCount(chapterId) + 1 // + le quiz
   const rec = state.chapters[chapterId]
   if (!rec) return 0
   let sum = 0
-  for (const g of meta.games || []) sum += rec.games?.[g.id] || 0
+  for (const g of jeuxJouablesDuTheme(chapterId)) sum += rec.games?.[g.id] || 0
   sum += rec.quiz || 0
   return Math.round(sum / items)
 }

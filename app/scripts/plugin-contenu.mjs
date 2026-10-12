@@ -33,12 +33,14 @@ export function construireIndex() {
       chapters: (chapters || []).map((c) => {
         const leger = {}
         for (const [k, v] of Object.entries(c)) if (!CHAMPS_LOURDS.has(k)) leger[k] = v
-        // Identifiants des exercices du thème une fois assemblé : exercices de
-        // base, plus l'étude de documents (même règle que data/index.js).
-        const jeux = (c.games || []).map((g) => g.id)
+        // Identifiant et type des exercices du thème une fois assemblé :
+        // exercices de base, plus l'étude de documents (même règle que
+        // data/index.js). Le type dit si l'exercice se lance seul, ce dont le
+        // score a besoin avant le chargement de la matière.
+        const jeux = (c.games || []).map((g) => ({ id: g.id, type: g.type }))
         const etude = etudes[c.id]
-        if (etude && !jeux.includes(etude.id)) jeux.push(etude.id)
-        leger.games = jeux.map((gid) => ({ id: gid }))
+        if (etude && !jeux.some((g) => g.id === etude.id)) jeux.push({ id: etude.id, type: etude.type })
+        leger.games = jeux
         return leger
       }),
     }
