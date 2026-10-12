@@ -4,9 +4,10 @@ import { preparer, attendreAccueil, etatEleve } from './eleve.js'
 
 // Un élève de Première ouvre l'étude de gestion depuis l'accueil : les consignes
 // sont rangées en catégories qui se déploient ; il écrit sa problématique, ajoute
-// une source, construit un argument A-E-I relié à cette source, l'évalue, retrouve
-// tout après rechargement et télécharge son dossier.
-test('étude de gestion : catégories, source, argument A-E-I évalué, dossier', async ({ page }) => {
+// une source, analyse son organisation (caractérisation, diagnostic, PESTEL),
+// construit un argument A-E-I relié à cette source, l'évalue, retrouve tout après
+// rechargement et télécharge son dossier.
+test('étude de gestion : catégories, source, analyse, argument A-E-I évalué, dossier', async ({ page }) => {
   const erreurs = await preparer(page, etatEleve({ track: { level: 'premiere-stmg' } }))
   await page.goto('./')
   await attendreAccueil(page)
@@ -39,6 +40,23 @@ test('étude de gestion : catégories, source, argument A-E-I évalué, dossier'
   await expect(page.getByRole('button', { name: /\[1\] Entretien avec la gérante/ })).toContainText('Fiabilité 1/3')
   await page.getByRole('button', { name: /\[1\] Entretien avec la gérante/ }).click()
   await expect(page.getByText('Mme Martin, « Entretien avec la gérante », mars 2026')).toBeVisible()
+
+  // L'analyse : tableau de caractérisation, diagnostic interne et externe, PESTEL.
+  await page.getByRole('tab', { name: /Analyse/ }).click()
+  await expect(page.getByLabel('Organisation étudiée')).toHaveValue('Boulangerie Martin')
+  await page.getByRole('button', { name: /Tableau de caractérisation/ }).click()
+  await expect(page.getByRole('table')).toBeVisible()
+  await page.getByLabel('Type', { exact: true }).fill('Entreprise privée')
+  await page.getByLabel('Taille', { exact: true }).fill('TPE')
+  await expect(page.getByRole('button', { name: /Tableau de caractérisation/ })).toContainText('2 / 8 lignes remplies')
+  await page.getByRole('button', { name: /Diagnostic interne et externe/ }).click()
+  await page.getByRole('button', { name: 'Interne ou externe ?' }).click()
+  await expect(page.getByText(/peut-elle agir dessus/)).toBeVisible()
+  await page.getByLabel(/Forces/).fill('Clientèle fidèle\nSavoir-faire reconnu')
+  await page.getByLabel(/Menaces/).fill('Nouvelle boulangerie industrielle')
+  await page.getByRole('button', { name: /^PESTEL/ }).click()
+  await page.getByLabel('Légal').fill('Normes d’hygiène')
+  await expect(page.getByRole('button', { name: /^PESTEL/ })).toContainText('1 / 6 facteurs analysés')
 
   // Un argument A-E-I relié à la source.
   await page.getByRole('tab', { name: /Arguments/ }).click()
@@ -74,6 +92,9 @@ test('étude de gestion : catégories, source, argument A-E-I évalué, dossier'
   expect(contenu).toContain('Illustration : Marge de 40 % sur le pain en mars. [source 1]')
   expect(contenu).toContain('Auto-évaluation : 5/5')
   expect(contenu).toContain('Note de mes arguments (auto-évaluation) : 20/20')
+  expect(contenu).toContain('Type : Entreprise privée')
+  expect(contenu).toContain('Forces :\n   - Clientèle fidèle\n   - Savoir-faire reconnu')
+  expect(contenu).toContain('L — Légal :\n   - Normes d’hygiène')
   expect(erreurs).toEqual([])
 })
 

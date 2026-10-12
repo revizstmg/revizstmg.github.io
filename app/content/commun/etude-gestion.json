@@ -1,5 +1,5 @@
 {
-  "intro": "Ton projet de Première, pas à pas : les règles, tes sources, tes arguments.",
+  "intro": "Ton projet de Première, pas à pas : les règles, tes sources, l'analyse de ton organisation et tes arguments.",
   "regles": [
     {
       "h": "Le sujet",
@@ -128,32 +128,6 @@
       }
     ]
   },
-  "typesSources": [
-    "Article de presse",
-    "Site web",
-    "Rapport ou étude",
-    "Livre ou manuel",
-    "Document de l'organisation",
-    "Entretien",
-    "Questionnaire",
-    "Observation",
-    "Vidéo ou podcast",
-    "Autre"
-  ],
-  "fiabilite": [
-    {
-      "id": "auteur",
-      "label": "Auteur ou organisme identifié"
-    },
-    {
-      "id": "date",
-      "label": "Date connue et récente"
-    },
-    {
-      "id": "croisee",
-      "label": "Information vérifiée dans une autre source"
-    }
-  ],
   "references": [
     {
       "titre": "Programme de sciences de gestion et numérique, Première STMG (BO spécial n° 1 du 22 janvier 2019)",

@@ -2,10 +2,13 @@
 // dossier exporté et fusion appareil ↔ compte.
 import { describe, it, expect } from 'vitest'
 import { commun } from '../src/content/contenu.js'
-import { citation, dossierTexte, noteArgument, noteGlobale } from '../src/pages/EtudeGestion.jsx'
+import { dossierTexte } from '../src/pages/EtudeGestion.jsx'
+import { citation, noteArgument as noteArg, noteGlobale as noteGlob } from '../src/components/DossierProjet.jsx'
 import { mergeProgress, etudeGestionVide } from '../src/store.jsx'
 
 const C = commun('etude-gestion')
+const noteArgument = (arg, sources) => noteArg(arg, sources, C.aei.grille)
+const noteGlobale = (args, sources) => noteGlob(args, sources, C.aei.grille)
 const source = { id: 's1', type: 'Entretien', titre: 'Entretien avec la gérante', auteur: 'Mme Martin', date: 'mars 2026', lien: '' }
 
 describe('étude de gestion', () => {
@@ -35,6 +38,26 @@ describe('étude de gestion', () => {
     expect(txt).toContain('[1] Entretien — Mme Martin, « Entretien avec la gérante », mars 2026')
     expect(txt).toContain('Auto-évaluation : 2/5')
     expect(txt).toContain('Note de mes arguments (auto-évaluation) : 8/20')
+    // Sans analyse remplie, pas de section vide.
+    expect(txt).not.toContain('CARACTÉRISATION')
+    expect(txt).not.toContain('PESTEL')
+  })
+  it('le dossier exporté reprend la caractérisation, le diagnostic et le PESTEL', () => {
+    const eg = {
+      ...etudeGestionVide(),
+      analyse: {
+        carac: { type: 'Entreprise privée', taille: 'TPE', ressources: '4 salariés\nun four' },
+        swot: { forces: 'Clientèle fidèle\n\n Savoir-faire ', menaces: 'Nouveau concurrent' },
+        pestel: { legal: 'Normes d’hygiène', economique: '' },
+      },
+    }
+    const txt = dossierTexte(eg)
+    expect(txt).toContain("CARACTÉRISATION DE L'ORGANISATION\nType : Entreprise privée\nTaille : TPE\nRessources : 4 salariés ; un four")
+    expect(txt).toContain('DIAGNOSTIC INTERNE\nForces :\n   - Clientèle fidèle\n   - Savoir-faire')
+    expect(txt).toContain('DIAGNOSTIC EXTERNE\nMenaces :\n   - Nouveau concurrent')
+    expect(txt).not.toContain('Faiblesses')
+    expect(txt).toContain('PESTEL\nL — Légal :\n   - Normes d’hygiène')
+    expect(txt).not.toContain('Économique')
   })
   it('grille A-E-I : 5 critères, dont 2 vérifiés automatiquement', () => {
     expect(C.aei.grille.map((c) => c.etape)).toEqual(['A', 'E', 'E', 'I', 'I'])

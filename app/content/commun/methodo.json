@@ -132,15 +132,15 @@
     "title": "Grand Oral",
     "icon": "🎓",
     "color": "#84671b",
-    "intro": "Un exposé de 5 minutes, debout et sans notes, clairement structuré.",
+    "intro": "Une présentation de 10 minutes, sans notes et clairement structurée, puis 10 minutes d'échange avec le jury.",
     "steps": [
       {
         "h": "Accroche",
         "c": "Une phrase qui capte l’attention : un chiffre, une actualité, une anecdote."
       },
       {
-        "h": "Problématique",
-        "c": "Transforme ta question en un vrai problème à résoudre."
+        "h": "Pourquoi cette question",
+        "c": "Explique pourquoi tu as choisi cette question : le jury l’attend en début de présentation."
       },
       {
         "h": "Plan annoncé",
@@ -148,16 +148,16 @@
       },
       {
         "h": "2 à 3 parties",
-        "c": "Une idée + un exemple concret par partie."
+        "c": "Une idée, son explication et un exemple concret par partie (méthode A-E-I)."
       },
       {
-        "h": "Conclusion + projet",
-        "c": "Réponds, ouvre, puis relie la question à ton projet d’orientation."
+        "h": "Conclusion",
+        "c": "Réponds clairement à la question, puis ouvre sur une piste que l’échange pourra prolonger."
       }
     ],
     "example": {
       "h": "Astuce",
-      "c": "Entraîne-toi à voix haute avec l’enregistreur de la page Grand Oral : réécoute-toi pour corriger le débit, les « euh » et les silences."
+      "c": "Prépare ton Grand Oral dans la page qui lui est consacrée : tes questions, tes sources, l’analyse de ton organisation, tes arguments, et un enregistreur pour corriger le débit, les « euh » et les silences."
     }
   }
 ]

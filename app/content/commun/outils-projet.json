@@ -1,0 +1,177 @@
+{
+  "typesSources": [
+    "Article de presse",
+    "Site web",
+    "Rapport ou étude",
+    "Livre ou manuel",
+    "Document de l'organisation",
+    "Entretien",
+    "Questionnaire",
+    "Observation",
+    "Vidéo ou podcast",
+    "Autre"
+  ],
+  "fiabilite": [
+    {
+      "id": "auteur",
+      "label": "Auteur ou organisme identifié"
+    },
+    {
+      "id": "date",
+      "label": "Date connue et récente"
+    },
+    {
+      "id": "croisee",
+      "label": "Information vérifiée dans une autre source"
+    }
+  ],
+  "caracterisation": {
+    "intro": "Caractériser une organisation, c'est la décrire toujours par les mêmes critères : son type, sa finalité, sa taille, son champ d'action, ses ressources et son statut juridique.",
+    "lignes": [
+      {
+        "id": "activite",
+        "label": "Activité",
+        "aide": "Ce qu'elle produit : des biens ou des services.",
+        "exemple": "Ex. : vente de pain"
+      },
+      {
+        "id": "type",
+        "label": "Type",
+        "aide": "Entreprise privée, organisation publique ou organisation de la société civile (association, ONG, syndicat, mutuelle).",
+        "choix": ["Entreprise privée", "Organisation publique", "Organisation de la société civile"]
+      },
+      {
+        "id": "finalite",
+        "label": "Finalité",
+        "aide": "Sa raison d'être : le profit (lucrative), l'intérêt général (service public) ou un objet social (non lucrative).",
+        "choix": ["Lucrative : réaliser un profit", "Intérêt général : rendre un service public", "Non lucrative : poursuivre un objet social"]
+      },
+      {
+        "id": "statut",
+        "label": "Statut juridique",
+        "aide": "Sa forme juridique : entreprise individuelle, société, association, administration…",
+        "choix": ["Entreprise individuelle", "SARL", "SAS", "SA", "Association", "Administration publique"]
+      },
+      {
+        "id": "taille",
+        "label": "Taille",
+        "aide": "D'après son effectif et son chiffre d'affaires : TPE, PME, ETI ou grande entreprise.",
+        "choix": ["TPE", "PME", "ETI", "Grande entreprise"]
+      },
+      {
+        "id": "champ",
+        "label": "Champ d'action",
+        "aide": "Là où elle agit : local, national ou international.",
+        "choix": ["Local", "Régional", "National", "International"]
+      },
+      {
+        "id": "production",
+        "label": "Production",
+        "aide": "Marchande : vendue sur un marché à un prix qui couvre ses coûts. Non marchande : fournie gratuitement ou presque.",
+        "choix": ["Marchande", "Non marchande"]
+      },
+      {
+        "id": "ressources",
+        "label": "Ressources",
+        "aide": "Ses moyens : humains, financiers, matériels et immatériels (marque, savoir-faire, brevets…).",
+        "exemple": "Ex. : 4 salariés, un four, une marque connue dans le quartier",
+        "long": true
+      }
+    ]
+  },
+  "diagnostic": {
+    "methode": [
+      {
+        "h": "Interne ou externe ?",
+        "c": "Demande-toi : « l'organisation peut-elle agir dessus ? » Si oui, c'est **interne** (une force ou une faiblesse). Si non, c'est **externe** (une opportunité ou une menace)."
+      },
+      {
+        "h": "Le diagnostic interne",
+        "c": "Il analyse ce que l'organisation possède et sait faire : ses **ressources** (financières, humaines, matérielles, immatérielles) et ses **compétences distinctives**, ce qu'elle sait faire mieux que ses concurrents. Il révèle ses **forces** et ses **faiblesses**."
+      },
+      {
+        "h": "Le diagnostic externe",
+        "c": "Il analyse l'environnement : le **macro-environnement** avec le **PESTEL**, et le **micro-environnement**, c'est-à-dire les concurrents actuels, les clients, les fournisseurs, les nouveaux entrants potentiels et les produits de substitution. Il fait ressortir des **opportunités** et des **menaces**."
+      },
+      {
+        "h": "La synthèse : la matrice SWOT",
+        "c": "On réunit les deux diagnostics dans un tableau : **forces et faiblesses** (interne), **opportunités et menaces** (externe). Le diagnostic sert ensuite à fixer des **objectifs** cohérents avec la finalité de l'organisation."
+      }
+    ],
+    "cases": [
+      {
+        "id": "forces",
+        "label": "Forces",
+        "cote": "Interne · favorable",
+        "aide": "Ses atouts : ressources, compétences distinctives.",
+        "exemple": "Ex. : savoir-faire reconnu, clientèle fidèle",
+        "signe": "+"
+      },
+      {
+        "id": "faiblesses",
+        "label": "Faiblesses",
+        "cote": "Interne · défavorable",
+        "aide": "Ses points faibles, sur lesquels elle peut agir.",
+        "exemple": "Ex. : peu de présence en ligne",
+        "signe": "−"
+      },
+      {
+        "id": "opportunites",
+        "label": "Opportunités",
+        "cote": "Externe · favorable",
+        "aide": "Ce qui, dans son environnement, peut l'aider.",
+        "exemple": "Ex. : essor de la mobilité douce et aides publiques",
+        "signe": "+"
+      },
+      {
+        "id": "menaces",
+        "label": "Menaces",
+        "cote": "Externe · défavorable",
+        "aide": "Ce qui, dans son environnement, peut la gêner.",
+        "exemple": "Ex. : arrivée d'un nouveau concurrent",
+        "signe": "−"
+      }
+    ]
+  },
+  "pestel": {
+    "intro": "Le macro-environnement regroupe les grandes forces générales qui s'imposent à toutes les organisations, et sur lesquelles une organisation seule n'a pas de prise. Pour chaque facteur, note ce qui touche ton organisation, puis range-le en opportunité ou en menace dans le diagnostic externe.",
+    "facteurs": [
+      {
+        "id": "politique",
+        "lettre": "P",
+        "label": "Politique",
+        "aide": "Décisions des pouvoirs publics, aides, fiscalité, stabilité politique."
+      },
+      {
+        "id": "economique",
+        "lettre": "E",
+        "label": "Économique",
+        "aide": "Croissance, inflation, taux d'intérêt, pouvoir d'achat, chômage."
+      },
+      {
+        "id": "socioculturel",
+        "lettre": "S",
+        "label": "Socioculturel",
+        "aide": "Démographie, modes de vie, habitudes de consommation, valeurs."
+      },
+      {
+        "id": "technologique",
+        "lettre": "T",
+        "label": "Technologique",
+        "aide": "Innovations, numérique, nouveaux procédés de production."
+      },
+      {
+        "id": "ecologique",
+        "lettre": "E",
+        "label": "Écologique",
+        "aide": "Climat, ressources naturelles, attentes environnementales, déchets."
+      },
+      {
+        "id": "legal",
+        "lettre": "L",
+        "label": "Légal",
+        "aide": "Lois et réglementations : droit du travail, normes, RGPD."
+      }
+    ]
+  }
+}

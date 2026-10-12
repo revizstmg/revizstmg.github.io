@@ -1,0 +1,447 @@
+{
+  "intro": "Ton Grand Oral, pas à pas : l'épreuve, tes sources, l'analyse de ton organisation et tes arguments.",
+  "enBref": [
+    {
+      "v": "20 min",
+      "l": "de préparation"
+    },
+    {
+      "v": "20 min",
+      "l": "devant le jury"
+    },
+    {
+      "v": "coef. 12",
+      "l": "en voie technologique"
+    }
+  ],
+  "regles": [
+    {
+      "h": "Tes deux questions",
+      "c": "Pendant l'année, tu prépares **deux questions** avec tes professeurs. En STMG, elles s'appuient sur l'enseignement de spécialité **management, sciences de gestion et numérique** : ton enseignement spécifique (gestion et finance, mercatique, ressources humaines et communication, ou systèmes d'information de gestion) et l'étude que tu mènes en Terminale. Le jour de l'épreuve, tu remets au jury la feuille où elles figurent, signée par tes professeurs."
+    },
+    {
+      "h": "Le jour J : 20 minutes de préparation",
+      "c": "Le jury **choisit une des deux questions**. Tu as alors **20 minutes** pour mettre en ordre tes idées et, si tu le veux, préparer un **support** (un plan, un schéma) que tu remettras au jury. Ce support **n'est pas noté**."
+    },
+    {
+      "h": "Premier temps : la présentation (10 minutes)",
+      "c": "Tu expliques **pourquoi tu as choisi cette question**, puis tu la développes et tu y réponds. Tu parles **sans notes**, en t'aidant seulement de ton support, et en principe **debout** (sauf aménagement)."
+    },
+    {
+      "h": "Second temps : l'échange avec le jury (10 minutes)",
+      "c": "Le jury t'interroge pour te faire **préciser et approfondir** ta pensée. Ses questions peuvent dépasser ta question et porter sur **d'autres parties du programme** de ta spécialité : il vérifie la **solidité de tes connaissances** et ta **capacité à argumenter**."
+    },
+    {
+      "h": "La note",
+      "c": "Le jury, composé de **deux professeurs de disciplines différentes**, te note **sur 20**. À partir de la session 2027, le Grand Oral compte **coefficient 12** dans la voie technologique (14 jusqu'en 2026)."
+    },
+    {
+      "h": "Ce qui a changé",
+      "c": "L'épreuve ne comporte plus de temps consacré au **projet d'orientation**. Les fiches qui annoncent un découpage « 5 + 10 + 5 minutes » sont anciennes : aujourd'hui, c'est **10 minutes de présentation**, puis **10 minutes d'échange**."
+    }
+  ],
+  "jury": {
+    "criteres": [
+      {
+        "icon": "🗣️",
+        "h": "La qualité orale",
+        "c": "Ta voix porte, ton débit est posé, tu regardes le jury : tu captes son attention."
+      },
+      {
+        "icon": "⏱️",
+        "h": "La prise de parole en continu",
+        "c": "Pendant 10 minutes, tu parles de façon fluide, sans lire, en suivant un plan clair."
+      },
+      {
+        "icon": "📚",
+        "h": "Les connaissances",
+        "c": "Tu maîtrises les notions de ta spécialité liées à la question et tu les utilises avec précision."
+      },
+      {
+        "icon": "💬",
+        "h": "L'interaction",
+        "c": "Pendant l'échange, tu écoutes les questions, tu y réponds vraiment et tu sais rebondir."
+      },
+      {
+        "icon": "🧩",
+        "h": "L'argumentation",
+        "c": "Ta réponse est construite : des arguments justifiés et illustrés, une conclusion qui répond à la question."
+      }
+    ],
+    "note": "Ces attendus reprennent les critères de la grille d'évaluation indicative du Grand Oral. Demande à ton professeur la grille de la session 2027."
+  },
+  "demarche": [
+    {
+      "h": "Choisir tes questions",
+      "c": "Avec tes professeurs, pendant l'année. Une bonne question est précise, appelle une réponse argumentée (pas un simple oui ou non) et s'appuie sur le programme."
+    },
+    {
+      "h": "Choisir une organisation",
+      "c": "Une organisation réelle qui illustre ta question. Caractérise-la et fais son diagnostic dans l'onglet Analyse."
+    },
+    {
+      "h": "Chercher des sources",
+      "c": "Presse, rapports, sites officiels, documents de l'organisation, données chiffrées : note chacune dans l'onglet Sources."
+    },
+    {
+      "h": "Construire ta réponse",
+      "c": "Une introduction qui dit pourquoi tu as choisi la question, un plan en deux ou trois parties, chaque partie bâtie avec la méthode A-E-I, une conclusion qui répond."
+    },
+    {
+      "h": "Préparer l'échange",
+      "c": "Liste les notions du programme proches de ta question et les questions que le jury pourrait te poser, puis révise-les."
+    },
+    {
+      "h": "T'entraîner à voix haute",
+      "c": "Debout, sans notes, chronométré : 10 minutes de présentation, puis fais-toi interroger 10 minutes par un proche."
+    }
+  ],
+  "conseils": [
+    "Commence par dire pourquoi tu as choisi la question : c'est attendu, et c'est une entrée en matière naturelle.",
+    "Annonce ton plan (« Je vais répondre en deux temps… ») : le jury te suit mieux quand il sait où tu vas.",
+    "Un exemple précis par idée : une organisation réelle, un chiffre, un fait daté, tirés de tes sources.",
+    "Pendant les 20 minutes de préparation, écris un plan court et des mots-clés plutôt que des phrases : tu ne pourras pas les lire.",
+    "Regarde le jury et respire avant de commencer : un court silence vaut mieux qu'un « euh ».",
+    "Pour l'échange, révise aussi les notions voisines de ta question : le jury peut élargir à tout le programme de ta spécialité."
+  ],
+  "aei": {
+    "intro": "Chaque argument répond à une partie de ta question. Il se construit en trois temps, et tu dois pouvoir le dire à voix haute, sans lire.",
+    "etapes": [
+      {
+        "id": "a",
+        "lettre": "A",
+        "h": "Affirmation",
+        "c": "L'idée que tu défends, en une phrase claire, qui répond à une partie de ta question.",
+        "exemple": "Une entreprise peut faire des bénéfices et manquer de trésorerie."
+      },
+      {
+        "id": "e",
+        "lettre": "E",
+        "h": "Explication",
+        "c": "Pourquoi et comment c'est vrai : déroule le raisonnement en mobilisant une notion de ta spécialité.",
+        "exemple": "Le résultat compare produits et charges sans tenir compte de la date à laquelle l'argent entre ou sort : si les clients paient plus tard que l'entreprise ne règle ses fournisseurs, elle doit financer ce décalage, c'est le besoin en fonds de roulement."
+      },
+      {
+        "id": "i",
+        "lettre": "I",
+        "h": "Illustration",
+        "c": "Un fait, un chiffre ou un exemple d'organisation tiré de tes sources, qui prouve l'affirmation.",
+        "exemple": "Une entreprise qui laisse 60 jours à ses clients pour payer mais règle ses fournisseurs à 30 jours doit avancer un mois de dépenses, même si elle est rentable."
+      }
+    ],
+    "grille": [
+      {
+        "id": "a",
+        "etape": "A",
+        "label": "L'affirmation répond à une partie de la question, en une phrase claire"
+      },
+      {
+        "id": "e",
+        "etape": "E",
+        "label": "L'explication est construite : pourquoi, comment"
+      },
+      {
+        "id": "notion",
+        "etape": "E",
+        "label": "Une notion de la spécialité est mobilisée",
+        "auto": "notion"
+      },
+      {
+        "id": "i",
+        "etape": "I",
+        "label": "L'illustration est précise : un fait, un chiffre, un exemple d'organisation"
+      },
+      {
+        "id": "source",
+        "etape": "I",
+        "label": "L'illustration vient d'une source citée",
+        "auto": "source"
+      },
+      {
+        "id": "oral",
+        "etape": "Oral",
+        "champ": "a",
+        "label": "Je sais le présenter à voix haute, sans lire"
+      }
+    ]
+  },
+  "autoEval": [
+    {
+      "key": "oral",
+      "icon": "🗣️",
+      "label": "Qualité orale",
+      "tip": "Répète debout, ralentis le débit, fais des pauses au lieu des « euh » et regarde devant toi."
+    },
+    {
+      "key": "continu",
+      "icon": "⏱️",
+      "label": "Prise de parole en continu",
+      "tip": "Chronomètre-toi sur 10 minutes sans notes : un plan court en tête, une idée par partie."
+    },
+    {
+      "key": "connais",
+      "icon": "📚",
+      "label": "Connaissances",
+      "tip": "Révise les notions de ta spécialité liées à ta question, et celles qui en sont proches."
+    },
+    {
+      "key": "interaction",
+      "icon": "💬",
+      "label": "Interaction avec le jury",
+      "tip": "Fais-toi interroger par un proche : écoute toute la question, reformule-la, puis réponds."
+    },
+    {
+      "key": "argu",
+      "icon": "🧩",
+      "label": "Argumentation",
+      "tip": "Annonce ton plan, puis une idée, une explication et un exemple par partie, et une conclusion qui répond."
+    }
+  ],
+  "pratique": [
+    {
+      "key": "preparation",
+      "label": "Préparation",
+      "min": 20
+    },
+    {
+      "key": "presentation",
+      "label": "Présentation",
+      "min": 10
+    },
+    {
+      "key": "echange",
+      "label": "Échange",
+      "min": 10
+    }
+  ],
+  "banque": {
+    "rh-communication": {
+      "label": "RH & Communication",
+      "icon": "🧑‍💼",
+      "items": [
+        {
+          "q": "La rémunération suffit-elle à motiver durablement les salariés ?",
+          "angle": "Oppose facteurs d’hygiène et de motivation (Herzberg) : le salaire évite l’insatisfaction, mais reconnaissance et intérêt du travail motivent vraiment."
+        },
+        {
+          "q": "Comment le management peut-il transformer un conflit en opportunité ?",
+          "angle": "Distingue conflit latent/ouvert, puis les modes de résolution (négociation, médiation, arbitrage). Illustre avec un cas d’entreprise."
+        },
+        {
+          "q": "La communication interne améliore-t-elle vraiment la cohésion d’une équipe ?",
+          "angle": "Relie communication formelle/informelle, schéma de communication et performance sociale (turnover, absentéisme)."
+        },
+        {
+          "q": "Le télétravail renforce-t-il ou fragilise-t-il l’implication des salariés ?",
+          "angle": "Pèse autonomie et qualité de vie contre risques d’isolement et de perte de cohésion. Nuance selon les métiers."
+        },
+        {
+          "q": "La marque employeur est-elle un levier de recrutement décisif ?",
+          "angle": "Relie image externe, attractivité et fidélisation. Montre qu’une bonne réputation attire mais doit être tenue en interne."
+        },
+        {
+          "q": "Peut-on manager efficacement sans autorité hiérarchique ?",
+          "angle": "Distingue pouvoir et autorité ; mobilise les styles de management (Likert) et le management participatif / le leadership."
+        },
+        {
+          "q": "La formation est-elle un coût ou un investissement pour l’entreprise ?",
+          "angle": "Oppose la vue comptable (charge) et la vue stratégique (compétences, employabilité, performance). Parle de GPEC."
+        },
+        {
+          "q": "La reconnaissance au travail est-elle plus efficace qu’une prime ?",
+          "angle": "Mobilise Maslow / Herzberg : reconnaissance = besoin d’estime. Nuance selon les profils et les situations."
+        },
+        {
+          "q": "La diversité en entreprise est-elle une contrainte ou une richesse ?",
+          "angle": "Relie non-discrimination (cadre légal), performance collective et image. Montre l’intérêt managérial de la diversité."
+        },
+        {
+          "q": "Le bien-être au travail améliore-t-il vraiment la performance ?",
+          "angle": "Relie QVT, motivation, absentéisme et productivité. Nuance : conditions nécessaires mais pas suffisantes."
+        }
+      ]
+    },
+    "mercatique": {
+      "label": "Mercatique",
+      "icon": "🛍️",
+      "items": [
+        {
+          "q": "Les réseaux sociaux ont-ils transformé la relation client ?",
+          "angle": "Montre le passage d’une communication descendante à l’interaction/co-création. Parle e-réputation, avis clients et fidélisation."
+        },
+        {
+          "q": "Fidéliser coûte-t-il vraiment moins cher que conquérir de nouveaux clients ?",
+          "angle": "Compare coûts d’acquisition et de fidélisation, valeur à vie du client, programmes de fidélité. Appuie-toi sur des chiffres."
+        },
+        {
+          "q": "Le marketing responsable est-il un argument commercial ou une conviction ?",
+          "angle": "Interroge la frontière avec le greenwashing ; relie mercatique responsable, image de marque et attentes des consommateurs."
+        },
+        {
+          "q": "Comment une marque crée-t-elle de la valeur perçue aux yeux du consommateur ?",
+          "angle": "Mobilise le mix (4P), le positionnement et la valeur perçue vs valeur réelle. Prends une marque que tu connais."
+        },
+        {
+          "q": "Le prix est-il vraiment le premier critère d’achat ?",
+          "angle": "Oppose prix et valeur perçue, image, qualité, engagement. Montre des cas où le consommateur paie plus cher volontairement."
+        },
+        {
+          "q": "Le marketing d’influence est-il efficace et éthique ?",
+          "angle": "Pèse portée/ciblage/authenticité contre risques (manque de transparence, faux avis, obligation de mention publicitaire)."
+        },
+        {
+          "q": "La personnalisation de l’offre est-elle une chance ou une intrusion ?",
+          "angle": "Relie données clients, expérience sur-mesure et RGPD / vie privée. Trouve l’équilibre pertinence / respect."
+        },
+        {
+          "q": "Le marketing peut-il créer un besoin de toutes pièces ?",
+          "angle": "Distingue besoin (Maslow) et désir/demande. Le marketing révèle et oriente plus qu’il ne crée un besoin fondamental."
+        },
+        {
+          "q": "Les avis clients font-ils la pluie et le beau temps d’une marque ?",
+          "angle": "Relie e-réputation, preuve sociale, décision d’achat. Nuance : faux avis, gestion des avis négatifs."
+        },
+        {
+          "q": "L’expérience en magasin résiste-t-elle au e-commerce ?",
+          "angle": "Oppose et combine physique/digital (phygital, drive, click & collect). Montre le rôle de l’expérience et du conseil."
+        }
+      ]
+    },
+    "gestion-finance": {
+      "label": "Gestion et Finance",
+      "icon": "💰",
+      "items": [
+        {
+          "q": "Un résultat positif suffit-il à garantir la santé financière d’une entreprise ?",
+          "angle": "Sépare résultat (comptable) et trésorerie (encaissements réels). Une entreprise rentable peut manquer de liquidités."
+        },
+        {
+          "q": "Pourquoi la trésorerie est-elle vitale, même pour une entreprise rentable ?",
+          "angle": "Explique le décalage encaissements/décaissements, le BFR et le risque de cessation de paiement."
+        },
+        {
+          "q": "L’endettement est-il toujours un risque pour l’entreprise ?",
+          "angle": "Distingue effet de levier (l’endettement finance la croissance) et surendettement. Relie au coût du capital."
+        },
+        {
+          "q": "Comment les documents comptables aident-ils à la prise de décision ?",
+          "angle": "Montre le rôle du bilan, du compte de résultat et des SIG comme outils d’analyse et de pilotage."
+        },
+        {
+          "q": "La rentabilité est-elle le seul objectif d’une entreprise ?",
+          "angle": "Oppose performance financière et performances sociale/environnementale (RSE, parties prenantes). Élargis la notion de performance."
+        },
+        {
+          "q": "Le seuil de rentabilité est-il un outil de décision fiable ?",
+          "angle": "Explique charges fixes/variables, marge sur coût variable, point mort. Montre ses limites (hypothèses, court terme)."
+        },
+        {
+          "q": "Faut-il toujours investir pour se développer ?",
+          "angle": "Relie investissement, financement, rentabilité attendue et risque. Nuance : croissance maîtrisée vs fuite en avant."
+        },
+        {
+          "q": "La performance financière est-elle compatible avec la RSE ?",
+          "angle": "Montre les coûts à court terme et les gains à long terme (image, fidélité, économies, financement responsable)."
+        },
+        {
+          "q": "Le besoin en fonds de roulement (BFR) est-il un ennemi de l’entreprise ?",
+          "angle": "Explique BFR = stocks + créances − dettes ; montre que le maîtriser (délais, stocks) protège la trésorerie."
+        },
+        {
+          "q": "Comment financer sa croissance sans mettre l’entreprise en danger ?",
+          "angle": "Compare autofinancement, emprunt, augmentation de capital ; relie au FRNG, à l’équilibre financier et au risque."
+        }
+      ]
+    },
+    "sig": {
+      "label": "Systèmes d’information de gestion",
+      "icon": "💻",
+      "items": [
+        {
+          "q": "Le partage des données améliore-t-il vraiment la prise de décision ?",
+          "angle": "Relie SI, intelligence collective et information de qualité (fiable, pertinente, actuelle). Nuance avec la surcharge d’information."
+        },
+        {
+          "q": "Faut-il tout dématérialiser dans une organisation ?",
+          "angle": "Balance gains (temps, place, workflow) et limites (sécurité, valeur juridique, fracture numérique)."
+        },
+        {
+          "q": "La sécurité des systèmes d’information est-elle d’abord un problème technique ou humain ?",
+          "angle": "Mobilise le triptyque D.I.C. puis montre que la faille est souvent humaine (phishing, mot de passe faible)."
+        },
+        {
+          "q": "Un PGI rend-il l’entreprise plus performante ou plus dépendante ?",
+          "angle": "Oppose intégration/cohérence des données et coût/dépendance au fournisseur. Conclus sur un arbitrage."
+        },
+        {
+          "q": "Les données personnelles sont-elles suffisamment protégées ?",
+          "angle": "Mobilise le RGPD (consentement, finalité, droit à l’oubli) et le rôle de la CNIL. Nuance entre droit et pratiques réelles."
+        },
+        {
+          "q": "L’intelligence artificielle va-t-elle remplacer les métiers de la gestion ?",
+          "angle": "Distingue tâches automatisables et compétences humaines (jugement, relation). Parle transformation plutôt que disparition."
+        },
+        {
+          "q": "Le cloud est-il une opportunité ou un risque pour l’entreprise ?",
+          "angle": "Pèse accessibilité/coût/souplesse contre dépendance, sécurité et localisation des données."
+        },
+        {
+          "q": "La qualité des données conditionne-t-elle la qualité des décisions ?",
+          "angle": "« Garbage in, garbage out » : relie fiabilité, actualité, complétude des données et pertinence des décisions."
+        },
+        {
+          "q": "Trop d’information tue-t-elle l’information ?",
+          "angle": "Aborde l’infobésité, le tri, les tableaux de bord et l’aide à la décision. L’enjeu : la bonne info au bon moment."
+        },
+        {
+          "q": "Une base de données est-elle le vrai patrimoine de l’entreprise ?",
+          "angle": "Montre la valeur stratégique des données (clients, ventes) et les enjeux de protection, de sauvegarde et d’exploitation."
+        }
+      ]
+    },
+    "transversal": {
+      "label": "Transversales",
+      "icon": "🔀",
+      "items": [
+        {
+          "q": "Le numérique transforme-t-il en profondeur les organisations ?",
+          "angle": "Croise SI, mercatique digitale, télétravail et nouveaux modèles. Montre les gains ET les bouleversements (emplois, compétences)."
+        },
+        {
+          "q": "La RSE est-elle un coût ou un avantage concurrentiel ?",
+          "angle": "Relie développement durable, image, attentes des parties prenantes et performance globale. Prends un exemple d’entreprise."
+        },
+        {
+          "q": "La performance d’une organisation se mesure-t-elle seulement en chiffres ?",
+          "angle": "Oppose performance financière et performances sociale/environnementale. Élargis avec les parties prenantes."
+        },
+        {
+          "q": "Le client a-t-il vraiment le pouvoir dans l’entreprise d’aujourd’hui ?",
+          "angle": "Croise avis en ligne, personnalisation, co-création. Nuance : le pouvoir est réel mais encadré par les stratégies des marques."
+        },
+        {
+          "q": "L’humain reste-t-il la première richesse de l’organisation ?",
+          "angle": "Relie GRH, motivation, compétences et automatisation. Montre la complémentarité humain / technologie."
+        },
+        {
+          "q": "Une entreprise peut-elle concilier profit et éthique ?",
+          "angle": "Croise RSE, gouvernance, image et rentabilité. Montre que l’éthique peut devenir un levier de performance durable."
+        }
+      ]
+    }
+  },
+  "references": [
+    {
+      "titre": "Épreuve orale terminale dite « Grand oral » du baccalauréat technologique, note de service du 10 septembre 2026 (BO spécial n° 4 du 17 septembre 2026)",
+      "lien": "https://www.education.gouv.fr/bo/2026/Special4/MENE2622701N"
+    },
+    {
+      "titre": "Présentation du Grand oral (Éduscol)",
+      "lien": "https://eduscol.education.gouv.fr/5661/presentation-du-grand-oral"
+    },
+    {
+      "titre": "Baccalauréat : comment se passe le Grand oral ? (ministère de l'Éducation nationale)",
+      "lien": "https://www.education.gouv.fr/reussir-au-lycee/baccalaureat-comment-se-passe-le-grand-oral-100028"
+    }
+  ]
+}

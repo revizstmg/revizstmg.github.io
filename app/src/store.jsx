@@ -90,11 +90,16 @@ export function mergeProgress(a, b) {
   const notes = { ...(a.notes || {}) }
   for (const [k, v] of Object.entries(b.notes || {})) if (!notes[k] || (v || '').length > (notes[k] || '').length) notes[k] = v
   out.notes = notes
-  // Préparation du Grand Oral : champ par champ, le texte le plus complet.
+  // Préparation du Grand Oral : depuis qu'elle contient sources, analyse et
+  // arguments, la version modifiée en dernier l'emporte (`maj`). Une ancienne
+  // préparation sans date se fusionne champ par champ (le texte le plus complet).
   const ga = a.grandOral || {}, gb = b.grandOral || {}
-  const grandOral = {}
-  for (const k of new Set([...Object.keys(ga), ...Object.keys(gb)])) grandOral[k] = (gb[k] || '').length > (ga[k] || '').length ? gb[k] : ga[k]
-  out.grandOral = grandOral
+  if (ga.maj || gb.maj) out.grandOral = { ...grandOralVide(), ...((gb.maj || 0) > (ga.maj || 0) ? gb : ga) }
+  else {
+    const grandOral = {}
+    for (const k of new Set([...Object.keys(ga), ...Object.keys(gb)])) grandOral[k] = String(gb[k] || '').length > String(ga[k] || '').length ? gb[k] : ga[k]
+    out.grandOral = grandOral
+  }
   // Carnet d'erreurs : union par question, la plus récente d'abord.
   const erreurs = new Map()
   for (const e of [...(a.erreurs || []), ...(b.erreurs || [])]) {
@@ -113,7 +118,14 @@ export function mergeProgress(a, b) {
 // `maj` date la dernière modification, pour garder la version la plus récente
 // quand l'appareil et le compte diffèrent.
 export function etudeGestionVide() {
-  return { theme: '', organisation: '', problematique: '', coches: {}, sources: [], arguments: [], maj: 0 }
+  return { theme: '', organisation: '', problematique: '', coches: {}, sources: [], analyse: {}, arguments: [], maj: 0 }
+}
+
+// Grand Oral (Terminale) : les deux questions et le plan, puis, comme pour
+// l'étude de gestion, l'organisation qui les illustre, les sources, l'analyse
+// et les arguments A-E-I (chacun rattaché à la question 1 ou 2).
+export function grandOralVide() {
+  return { spec: '', q1: '', q2: '', notes: '', organisation: '', sources: [], analyse: {}, arguments: [], maj: 0 }
 }
 
 // Carnet d'erreurs : une question ratée y entre, une question réussie en sort.
@@ -175,7 +187,7 @@ const emptyState = () => ({
   a11y: { dys: false, contrast: false, big: false }, // accessibilité (local)
   reminder: { on: false, time: '18:00' }, // rappel de révision (local)
   parentShare: false, // partage volontaire de la progression avec les parents (local)
-  grandOral: { spec: '', q1: '', q2: '', notes: '' }, // préparation du Grand Oral (sauvegardée sur le compte)
+  grandOral: grandOralVide(), // Grand Oral : questions, sources, analyse, arguments (sauvegardé sur le compte)
   erreurs: [], // carnet d'erreurs : questions ratées à refaire
   etudeGestion: etudeGestionVide(), // étude de gestion (Première) : projet, sources, arguments
   examSeen: {}, // bac blanc : { [sélection]: [clés d'énoncés déjà tombés] } (local)
@@ -637,7 +649,11 @@ export function StoreProvider({ children }) {
   }), [])
   const setA11y = useCallback((patch) => setState((p) => ({ ...p, a11y: { ...(p.a11y || {}), ...patch } })), [])
   const setReminder = useCallback((patch) => setState((p) => ({ ...p, reminder: { ...(p.reminder || {}), ...patch } })), [])
-  const setGrandOral = useCallback((patch) => setState((p) => ({ ...p, grandOral: { ...(p.grandOral || {}), ...patch } })), [])
+  const setGrandOral = useCallback((maj) => setState((p) => {
+    const avant = { ...grandOralVide(), ...(p.grandOral || {}) }
+    const apres = typeof maj === 'function' ? maj(avant) : { ...avant, ...maj }
+    return { ...p, grandOral: { ...apres, maj: Date.now() } }
+  }), [])
   const setEtudeGestion = useCallback((maj) => setState((p) => {
     const avant = { ...etudeGestionVide(), ...(p.etudeGestion || {}) }
     const apres = typeof maj === 'function' ? maj(avant) : { ...avant, ...maj }
