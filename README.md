@@ -107,7 +107,8 @@ Supabase `revizstmg_statistiques()`, qui ne renvoie que des nombres agrégés.
 Pour une mise à jour immédiate, lancez le workflow à la main depuis l'onglet Actions.
 
 **Rapport par mail.** Chaque matin, la routine de vérification (Claude) contrôle le
-site puis envoie un rapport à revizstmg@gmail.com : la vérification (construction,
+site puis envoie un rapport à revizstmg@gmail.com (objet « Rapport du JJ/MM/AAAA », rangé
+sous le libellé Gmail « Rapports Claude ») : la vérification (construction,
 tests, CI, mise en ligne, problèmes trouvés), les chiffres clés, un tableau
 analytique (valeur et écart sur 7 et 30 jours), la répartition des élèves et des
 graphiques d'évolution (comptes inscrits, comptes actifs, visites). Le HTML est

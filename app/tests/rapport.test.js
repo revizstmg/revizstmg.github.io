@@ -25,7 +25,7 @@ describe('rapport par mail', () => {
   })
   it('tout va bien : verdict, sujet, tableau analytique et graphiques', () => {
     const r = construireRapport(base)
-    expect(r.sujet).toBe('RévizSTMG · 12 oct. · ✅ Rien à signaler · 12 inscrits')
+    expect(r.sujet).toBe('Rapport du 12/10/2026 · RévizSTMG · ✅ Rien à signaler · 12 inscrits')
     expect(r.html).toContain('Rien à signaler.')
     expect(r.html).toContain('Tableau analytique')
     expect(r.html).toContain('▲ +3') // comptes sur 7 jours
@@ -48,7 +48,7 @@ describe('rapport par mail', () => {
   })
   it('sans relevé d’utilisation ni vérification, le rapport reste lisible', () => {
     const r = construireRapport({ ...base, verif: null, releve: { utilisation: { erreur: 'Supabase injoignable' } } })
-    expect(r.sujet).toBe('RévizSTMG · 12 oct. · ℹ️ Vérification non fournie')
+    expect(r.sujet).toBe('Rapport du 12/10/2026 · RévizSTMG · ℹ️ Vérification non fournie')
     expect(r.html).toContain('Chiffres d’utilisation indisponibles (Supabase injoignable)')
     expect(r.html).toContain('Questions d’exercices')
   })

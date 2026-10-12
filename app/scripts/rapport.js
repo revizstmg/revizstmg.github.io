@@ -299,7 +299,8 @@ export function construireRapport({ jour, verif = null, releve = null, contenu =
   t.push('', releveTexte, '', `Site : ${site}`)
 
   return {
-    sujet: `RévizSTMG · ${dateCourte(jour)} · ${verdict.icone} ${verdict.texte}${inscrits}`,
+    // « Rapport du 29/10/2026 » en tête : les rapports se rangent et se retrouvent par date.
+    sujet: `Rapport du ${jour.split('-').reverse().join('/')} · RévizSTMG · ${verdict.icone} ${verdict.texte}${inscrits}`,
     html,
     texte: t.join('\n') + '\n',
   }
