@@ -549,13 +549,18 @@
   "comptes": 10,
   "eleves": 7,
   "profs": 3,
-  "actifs_7j": null,
+  "actifs_7j": 1,
   "nouveaux_7j": 0,
-  "visites": null,
+  "visites": 0,
+  "actifs_1j": 1,
+  "actifs_30j": 2,
+  "vues": 0,
+  "classes": 1,
+  "defis_amis": 3,
+  "suivis_parents": 1,
   "themes": 94,
   "chapitres": 807,
   "questions": 39034,
-  "flashcards": 2625,
-  "reconstitue": true
+  "flashcards": 2625
  }
 ]

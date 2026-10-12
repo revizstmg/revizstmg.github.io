@@ -1,0 +1,58 @@
+{
+ "date": "2026-10-12",
+ "heure": "2026-10-12T18:20:15.690Z",
+ "utilisation": {
+  "profs": 3,
+  "eleves": 7,
+  "classes": 1,
+  "comptes": 10,
+  "niveaux": {
+   "premiere-stmg": 1,
+   "terminale-stmg": 6
+  },
+  "vues_7j": 0,
+  "actifs_1j": 1,
+  "actifs_7j": 1,
+  "ecrans_7j": {},
+  "vues_hier": 0,
+  "actifs_30j": 2,
+  "defis_amis": 3,
+  "visites_7j": 0,
+  "nouveaux_7j": 0,
+  "specialites": {
+   "gestion-finance": 5,
+   "rh-communication": 1
+  },
+  "joueurs_amis": 2,
+  "nouveaux_30j": 0,
+  "visites_hier": 0,
+  "defis_amis_7j": 0,
+  "sessions_live": 0,
+  "quiz_de_classe": 0,
+  "suivis_parents": 1,
+  "eleves_en_classe": 2,
+  "suivis_parents_actifs_7j": 1
+ },
+ "contenu": {
+  "matieres": 19,
+  "terminale": 11,
+  "premiere": 8,
+  "themes": 94,
+  "chapitres": 807,
+  "series": 6290,
+  "questions": 39034,
+  "flashcards": 2625
+ },
+ "publication": {
+  "ci": {
+   "etat": "success",
+   "date": "2026-10-12T12:48:31Z"
+  },
+  "miseEnLigne": {
+   "etat": "success",
+   "date": "2026-10-12T12:48:57Z"
+  },
+  "modifications7j": 16
+ },
+ "tests": "success"
+}
