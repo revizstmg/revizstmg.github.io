@@ -1,5 +1,5 @@
 {
-  "intro": "En Première STMG, l'étude de gestion te fait enquêter sur une vraie organisation pour répondre à une problématique tirée du programme de sciences de gestion et numérique. Ici, tu suis les règles, tu ranges tes sources et tu construis tes arguments.",
+  "intro": "Ton projet de Première, pas à pas : les règles, tes sources, tes arguments.",
   "regles": [
     {
       "h": "Le sujet",
@@ -19,12 +19,30 @@
     }
   ],
   "demarche": [
-    { "h": "Choisir", "c": "Un thème du programme qui t'intéresse et une organisation que tu peux observer (stage, emploi d'un proche, commerce de ton quartier, association, entreprise connue)." },
-    { "h": "Problématiser", "c": "Formule une question précise, qui part d'une question de gestion du programme et appelle une réponse argumentée, pas un simple oui ou non." },
-    { "h": "Collecter", "c": "Rassemble des sources variées : documents (presse, sites officiels, rapports, documents de l'organisation) et sources de terrain (entretien, questionnaire, observation)." },
-    { "h": "Analyser", "c": "Relie ce que tu observes aux notions du cours : c'est ce qui transforme un récit en analyse de gestion." },
-    { "h": "Argumenter", "c": "Construis chaque argument avec la méthode A-E-I : une affirmation, son explication, une illustration tirée de tes sources." },
-    { "h": "Conclure et présenter", "c": "Réponds clairement à ta problématique, avec ses limites, puis entraîne-toi à présenter ton travail en 10 minutes." }
+    {
+      "h": "Choisir",
+      "c": "Un thème du programme qui t'intéresse et une organisation que tu peux observer (stage, emploi d'un proche, commerce de ton quartier, association, entreprise connue)."
+    },
+    {
+      "h": "Problématiser",
+      "c": "Formule une question précise, qui part d'une question de gestion du programme et appelle une réponse argumentée, pas un simple oui ou non."
+    },
+    {
+      "h": "Collecter",
+      "c": "Rassemble des sources variées : documents (presse, sites officiels, rapports, documents de l'organisation) et sources de terrain (entretien, questionnaire, observation)."
+    },
+    {
+      "h": "Analyser",
+      "c": "Relie ce que tu observes aux notions du cours : c'est ce qui transforme un récit en analyse de gestion."
+    },
+    {
+      "h": "Argumenter",
+      "c": "Construis chaque argument avec la méthode A-E-I : une affirmation, son explication, une illustration tirée de tes sources."
+    },
+    {
+      "h": "Conclure et présenter",
+      "c": "Réponds clairement à ta problématique, avec ses limites, puis entraîne-toi à présenter ton travail en 10 minutes."
+    }
   ],
   "conseils": [
     "Note chaque source dès que tu l'utilises : auteur ou organisme, titre, date, lien. Tu ne la retrouveras pas plus tard.",
@@ -34,29 +52,120 @@
     "Garde une trace de tes étapes (dates, rencontres, difficultés) : elles nourrissent la partie « démarche » du dossier et l'entretien."
   ],
   "dossier": [
-    { "id": "choix", "label": "Les raisons du choix de la problématique" },
-    { "id": "organisation", "label": "Les caractéristiques de l'organisation observée" },
-    { "id": "sources", "label": "Les sources utilisées" },
-    { "id": "demarche", "label": "La démarche d'analyse" },
-    { "id": "conclusions", "label": "Les conclusions" }
+    {
+      "id": "choix",
+      "label": "Les raisons du choix de la problématique"
+    },
+    {
+      "id": "organisation",
+      "label": "Les caractéristiques de l'organisation observée"
+    },
+    {
+      "id": "sources",
+      "label": "Les sources utilisées"
+    },
+    {
+      "id": "demarche",
+      "label": "La démarche d'analyse"
+    },
+    {
+      "id": "conclusions",
+      "label": "Les conclusions"
+    }
   ],
   "aei": {
     "intro": "Chaque argument répond à une partie de ta problématique. Il se construit en trois temps.",
     "etapes": [
-      { "id": "a", "lettre": "A", "h": "Affirmation", "c": "L'idée que tu défends, en une phrase claire, qui répond à une partie de ta problématique.", "exemple": "Le travail collaboratif en ligne améliore la coordination de l'équipe." },
-      { "id": "e", "lettre": "E", "h": "Explication", "c": "Pourquoi et comment c'est vrai : déroule le raisonnement et appuie-toi sur une notion du cours.", "exemple": "Les outils partagés donnent à chacun la même information au même moment : c'est l'intelligence collective, qui réduit les doublons et les oublis." },
-      { "id": "i", "lettre": "I", "h": "Illustration", "c": "Un fait, un chiffre ou un exemple concret tiré de tes sources, qui prouve l'affirmation dans ton organisation.", "exemple": "Depuis qu'elle utilise un agenda et des documents partagés, l'association étudiée a cessé les doubles réservations de salles (entretien avec la présidente)." }
+      {
+        "id": "a",
+        "lettre": "A",
+        "h": "Affirmation",
+        "c": "L'idée que tu défends, en une phrase claire, qui répond à une partie de ta problématique.",
+        "exemple": "Le travail collaboratif en ligne améliore la coordination de l'équipe."
+      },
+      {
+        "id": "e",
+        "lettre": "E",
+        "h": "Explication",
+        "c": "Pourquoi et comment c'est vrai : déroule le raisonnement et appuie-toi sur une notion du cours.",
+        "exemple": "Les outils partagés donnent à chacun la même information au même moment : c'est l'intelligence collective, qui réduit les doublons et les oublis."
+      },
+      {
+        "id": "i",
+        "lettre": "I",
+        "h": "Illustration",
+        "c": "Un fait, un chiffre ou un exemple concret tiré de tes sources, qui prouve l'affirmation dans ton organisation.",
+        "exemple": "Depuis qu'elle utilise un agenda et des documents partagés, l'association étudiée a cessé les doubles réservations de salles (entretien avec la présidente)."
+      }
+    ],
+    "grille": [
+      {
+        "id": "a",
+        "etape": "A",
+        "label": "L'affirmation répond à une partie de la problématique, en une phrase claire"
+      },
+      {
+        "id": "e",
+        "etape": "E",
+        "label": "L'explication déroule le raisonnement : pourquoi, comment"
+      },
+      {
+        "id": "notion",
+        "etape": "E",
+        "label": "Une notion du cours est utilisée",
+        "auto": "notion"
+      },
+      {
+        "id": "i",
+        "etape": "I",
+        "label": "L'illustration est concrète : un fait, un chiffre ou un exemple de l'organisation"
+      },
+      {
+        "id": "source",
+        "etape": "I",
+        "label": "L'illustration vient d'une source citée",
+        "auto": "source"
+      }
     ]
   },
-  "typesSources": ["Article de presse", "Site web", "Rapport ou étude", "Livre ou manuel", "Document de l'organisation", "Entretien", "Questionnaire", "Observation", "Vidéo ou podcast", "Autre"],
+  "typesSources": [
+    "Article de presse",
+    "Site web",
+    "Rapport ou étude",
+    "Livre ou manuel",
+    "Document de l'organisation",
+    "Entretien",
+    "Questionnaire",
+    "Observation",
+    "Vidéo ou podcast",
+    "Autre"
+  ],
   "fiabilite": [
-    { "id": "auteur", "label": "Auteur ou organisme identifié" },
-    { "id": "date", "label": "Date connue et récente" },
-    { "id": "croisee", "label": "Information vérifiée dans une autre source" }
+    {
+      "id": "auteur",
+      "label": "Auteur ou organisme identifié"
+    },
+    {
+      "id": "date",
+      "label": "Date connue et récente"
+    },
+    {
+      "id": "croisee",
+      "label": "Information vérifiée dans une autre source"
+    }
   ],
   "references": [
-    { "titre": "Programme de sciences de gestion et numérique, Première STMG (BO spécial n° 1 du 22 janvier 2019)", "lien": "https://www.education.gouv.fr/sites/default/files/document/Sciences%20de%20gestion%20et%20num%C3%A9rique-235962.pdf" },
-    { "titre": "Évaluation ponctuelle de la spécialité suivie uniquement en Première, voie technologique (BO n° 31 du 29 juillet 2021)", "lien": "https://www.education.gouv.fr/bo/21/Hebdo31/MENE2121285N.htm" },
-    { "titre": "Modalités d'évaluation des candidats à compter de la session 2022 (BO n° 30 du 29 juillet 2021)", "lien": "https://www.education.gouv.fr/bo/21/Hebdo30/MENE2121270N.htm" }
+    {
+      "titre": "Programme de sciences de gestion et numérique, Première STMG (BO spécial n° 1 du 22 janvier 2019)",
+      "lien": "https://www.education.gouv.fr/sites/default/files/document/Sciences%20de%20gestion%20et%20num%C3%A9rique-235962.pdf"
+    },
+    {
+      "titre": "Évaluation ponctuelle de la spécialité suivie uniquement en Première, voie technologique (BO n° 31 du 29 juillet 2021)",
+      "lien": "https://www.education.gouv.fr/bo/21/Hebdo31/MENE2121285N.htm"
+    },
+    {
+      "titre": "Modalités d'évaluation des candidats à compter de la session 2022 (BO n° 30 du 29 juillet 2021)",
+      "lien": "https://www.education.gouv.fr/bo/21/Hebdo30/MENE2121270N.htm"
+    }
   ]
 }

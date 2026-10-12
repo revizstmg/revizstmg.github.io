@@ -2,7 +2,7 @@
 // dossier exporté et fusion appareil ↔ compte.
 import { describe, it, expect } from 'vitest'
 import { commun } from '../src/content/contenu.js'
-import { citation, dossierTexte } from '../src/pages/EtudeGestion.jsx'
+import { citation, dossierTexte, noteArgument, noteGlobale } from '../src/pages/EtudeGestion.jsx'
 import { mergeProgress, etudeGestionVide } from '../src/store.jsx'
 
 const C = commun('etude-gestion')
@@ -33,6 +33,25 @@ describe('étude de gestion', () => {
     expect(txt).toContain('Explication : La marge mesure la valeur créée. (notion : marge)')
     expect(txt).toContain('Illustration : Marge de 40 % sur le pain. [source 1]')
     expect(txt).toContain('[1] Entretien — Mme Martin, « Entretien avec la gérante », mars 2026')
+    expect(txt).toContain('Auto-évaluation : 2/5')
+    expect(txt).toContain('Note de mes arguments (auto-évaluation) : 8/20')
+  })
+  it('grille A-E-I : 5 critères, dont 2 vérifiés automatiquement', () => {
+    expect(C.aei.grille.map((c) => c.etape)).toEqual(['A', 'E', 'E', 'I', 'I'])
+    const arg = { a: 'Elle suit sa marge.', e: 'La marge mesure la valeur créée.', notion: 'marge', i: 'Marge de 40 %.', sourceId: 's1', eval: {} }
+    expect(noteArgument(arg, [source])).toBe(2) // notion + source reliée
+    expect(noteArgument({ ...arg, eval: { a: true, e: true, i: true } }, [source])).toBe(5)
+    // Une case cochée ne compte pas si la partie n'est pas écrite ; une source supprimée non plus.
+    expect(noteArgument({ ...arg, e: '', eval: { a: true, e: true, i: true } }, [source])).toBe(4)
+    expect(noteArgument({ ...arg, eval: { a: true, e: true, i: true } }, [])).toBe(4)
+  })
+  it('note globale sur 20 : la moyenne des grilles, au demi-point', () => {
+    const plein = { a: 'A', e: 'E', notion: 'n', i: 'I', sourceId: 's1', eval: { a: true, e: true, i: true } }
+    const vide = { a: 'A', e: '', notion: '', i: '', sourceId: '', eval: {} }
+    expect(noteGlobale([], [source])).toBeNull()
+    expect(noteGlobale([plein], [source])).toBe(20)
+    expect(noteGlobale([plein, vide], [source])).toBe(10)
+    expect(noteGlobale([{ ...vide, eval: { a: true } }], [source])).toBe(4)
   })
   it('entre l’appareil et le compte, la version modifiée en dernier l’emporte', () => {
     const ancien = { ...etudeGestionVide(), problematique: 'Ancienne ?', maj: 100 }
