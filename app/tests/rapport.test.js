@@ -70,3 +70,14 @@ describe('rapport par mail', () => {
     expect(new Set(dates).size).toBe(dates.length)
   })
 })
+
+describe('taille du mail', () => {
+  it('reste léger (moins de 40 Ko, Gmail coupe à 102 Ko), même avec 60 jours d’historique', () => {
+    const long = Array.from({ length: 60 }, (_, k) => {
+      const d = new Date(Date.UTC(2026, 7, 14 + k)).toISOString().slice(0, 10)
+      return { date: d, comptes: 100 + k, eleves: 80 + k, profs: 20, actifs_7j: 30 + (k % 7), visites: 50 + (k % 13), questions: 39000 }
+    })
+    const r = construireRapport({ ...base, jour: '2026-10-12', historique: long })
+    expect(Buffer.byteLength(r.html)).toBeLessThan(40 * 1024)
+  })
+})
