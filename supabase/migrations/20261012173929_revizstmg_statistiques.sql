@@ -1,18 +1,3 @@
--- EN ATTENTE D'ACCORD : rien de ce fichier n'est encore appliqué sur Supabase.
--- Une fois validé, il devient migrations/<AAAAMMJJHHMMSS>_revizstmg_statistiques.sql
--- et il est appliqué sous le nom « revizstmg_statistiques ». Dans l'app, passer
--- alors MESURE_ACTIVE à true (app/src/mesure.js).
---
--- Contenu :
--- 1. revizstmg_visites : la mesure d'audience sans cookie. Un compteur par jour
---    et par écran (« accueil », « chapitre »…) : aucun identifiant, aucune
---    adresse IP, aucun appareil. Ni lisible ni modifiable directement (RLS sans
---    règle) : l'app ajoute 1 par la fonction revizstmg_compter_vue().
--- 2. revizstmg_statistiques() : des comptages déjà agrégés (aucun nom, aucune
---    adresse e-mail), lus chaque matin par le workflow « Statistiques ».
--- Les deux fonctions sont appelables avec la clé publique : quelqu'un pourrait
--- gonfler les compteurs de visites, pas lire ni modifier autre chose.
-
 -- ---- 1. Mesure d'audience ----
 create table if not exists public.revizstmg_visites (
   jour date not null,

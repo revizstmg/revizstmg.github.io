@@ -5,7 +5,7 @@ site NAH (dépôt `Gabriel-Merlin/NAH`). Ce dossier contient ce qui concerne
 RévizSTMG uniquement.
 
 ```
-migrations/        l'historique des migrations des 17 tables de RévizSTMG
+migrations/        l'historique des migrations des 18 tables de RévizSTMG
 functions/         la fonction « fiche-vision » (pas encore déployée)
 a-valider/         modifications prêtes mais pas encore appliquées (accord à donner)
 ```
@@ -14,15 +14,29 @@ a-valider/         modifications prêtes mais pas encore appliquées (accord à 
 
 Ces fichiers ne sont **pas** appliqués sur Supabase. Une fois l'accord donné, chacun
 est déplacé dans `migrations/` (avec son horodatage) et appliqué sous son nom.
+Aucun fichier n'y attend pour l'instant.
 
-- `revizstmg_statistiques.sql` : la mesure d'audience sans cookie (table
-  `revizstmg_visites`, fonction `revizstmg_compter_vue`) et la fonction
-  `revizstmg_statistiques()` lue par le fichier de statistiques du matin. Après
-  application, passer `MESURE_ACTIVE` à `true` dans `app/src/mesure.js`.
+## Comptage et mesure d'audience (appliqué le 12 octobre 2026)
+
+`migrations/20261012173929_revizstmg_statistiques.sql`, appliqué avec l'accord du
+propriétaire du projet :
+
+- `revizstmg_visites` : un compteur de vues et de visites par jour et par écran,
+  sans aucun identifiant. RLS activée sans règle : personne ne la lit ni ne
+  l'écrit directement.
+- `revizstmg_compter_vue(page, visite)` : ajoute 1 au compteur du jour (l'app,
+  `app/src/mesure.js`, avec `MESURE_ACTIVE = true`).
+- `revizstmg_statistiques()` : des comptages déjà agrégés (aucun nom, aucune
+  adresse), lus chaque matin par le workflow « Statistiques ».
+
+Les deux fonctions sont `security definer` et appelables avec la clé publique :
+c'est voulu, et l'Advisor le signale (« anon security definer function
+executable »). Quelqu'un pourrait gonfler les compteurs de visites ou lire les
+totaux, pas lire ni modifier autre chose.
 
 ## Les migrations
 
-Les 13 fichiers de `migrations/` sont la copie exacte des migrations appliquées sur
+Les 14 fichiers de `migrations/` sont la copie exacte des migrations appliquées sur
 Supabase (table `supabase_migrations.schema_migrations`). Chaque fichier a été
 comparé au serveur par empreinte md5 le 5 octobre 2026 : ils sont identiques.
 
@@ -31,10 +45,11 @@ mêmes colonnes, mêmes 61 règles RLS, RLS activée sur les 17 tables, et aucun
 trigger, aucune fonction et aucune publication Realtime sur ces tables. Rien n'a
 été modifié « à la main » en dehors des migrations.
 
-**Tables de RévizSTMG (17) :** `profiles`, `leaderboard`, `friend_user`,
+**Tables de RévizSTMG (18) :** `profiles`, `leaderboard`, `friend_user`,
 `friend_request`, `friend_duel`, `class_quiz`, `class_quiz_result`, `class_member`,
 `class_group`, `class_meta`, `class_wall`, `class_duel`, `class_ban`,
-`live_session`, `live_player`, `teacher_class`, `child_stats`.
+`live_session`, `live_player`, `teacher_class`, `child_stats`, et depuis le
+12 octobre 2026 `revizstmg_visites` (voir plus haut).
 
 **Ce qui n'est pas ici :** l'historique commun contient aussi les migrations de NAH
 (avant septembre 2026), plus deux migrations de septembre qui ne concernent que

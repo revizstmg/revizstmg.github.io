@@ -6,11 +6,12 @@
 // de consentement (CNIL). Elle est sautée si le navigateur demande « ne pas me
 // suivre » (Do Not Track, Global Privacy Control).
 //
-// La table et la fonction côté base sont dans supabase/a-valider/ : tant
-// qu'elles ne sont pas installées, MESURE_ACTIVE reste à false et rien ne part.
+// La table et la fonction côté base : supabase/migrations/
+// 20261012173929_revizstmg_statistiques.sql (installées le 12 octobre 2026).
+// MESURE_ACTIVE = false coupe toute la mesure.
 import { SUPA_URL, SUPA_ANON } from './supabase.js'
 
-export const MESURE_ACTIVE = false
+export const MESURE_ACTIVE = true
 
 // Noms d'écran comptés. La fonction SQL n'accepte que ceux-là
 // (vérifié par tests/liens.test.js).

@@ -84,7 +84,7 @@ describe('liens internes', () => {
     }
     expect(nomEcran('/existe-pas')).toBe('introuvable')
     expect(nomEcran('/subject/droit/theme/droit-t5/chapter/3')).toBe('chapitre')
-    const sql = readFileSync(join(APP, '../supabase/a-valider/revizstmg_statistiques.sql'), 'utf8')
+    const sql = readFileSync(join(APP, '../supabase/migrations/20261012173929_revizstmg_statistiques.sql'), 'utf8')
     const liste = sql.match(/p_page !~ '\^\(([^)]*)\)\$'/)[1].split('|')
     expect(liste.sort()).toEqual([...ECRANS].sort())
   })

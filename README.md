@@ -106,11 +106,20 @@ garde une ligne par jour. Les chiffres d'utilisation viennent de la fonction
 Supabase `revizstmg_statistiques()`, qui ne renvoie que des nombres agrégés.
 Pour une mise à jour immédiate, lancez le workflow à la main depuis l'onglet Actions.
 
+**Rapport par mail.** Chaque matin, la routine de vérification (Claude) contrôle le
+site puis envoie un rapport à revizstmg@gmail.com : la vérification (construction,
+tests, CI, mise en ligne, problèmes trouvés), les chiffres clés, un tableau
+analytique (valeur et écart sur 7 et 30 jours), la répartition des élèves et des
+graphiques d'évolution (comptes inscrits, comptes actifs, visites). Le HTML est
+produit par `app/scripts/rapport-mail.mjs` (rendu : `app/scripts/rapport.js`, testé
+par `tests/rapport.test.js`) à partir de `statistiques/dernier.json` (le relevé
+complet du workflow) et de `statistiques/historique.json`. Les comptes antérieurs
+au 12 octobre 2026 y sont reconstitués d'après leur date de création.
+
 **Mesure d'audience.** `app/src/mesure.js` compte les écrans affichés (un compteur
 par jour et par écran, sans cookie ni identifiant) et le fichier de statistiques
-en donne les visites. Elle est prête mais **inactive** : la table et les deux
-fonctions côté base attendent un accord (`supabase/a-valider/`). Une fois
-appliquées, passer `MESURE_ACTIVE` à `true`.
+en donne les visites. Elle est active depuis le 12 octobre 2026 (table et
+fonctions : `supabase/migrations/20261012173929_revizstmg_statistiques.sql`).
 
 ## Règles de l'interface
 
