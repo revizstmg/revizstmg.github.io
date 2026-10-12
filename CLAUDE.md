@@ -57,10 +57,12 @@ npm run test:parcours   # parcours navigateur, après un build (~3 min)
   classe `texte-matiere` + `style={{ '--mc': couleur }}` (README, « Règles de
   l'interface »).
 - Validation des formulaires et anti-spam : `src/formulaires.js`. Mesure
-  d'audience sans cookie : `src/mesure.js` (inactive, en attente d'accord).
+  d'audience sans cookie : `src/mesure.js` (active depuis le 12 octobre 2026).
 
 ## Supabase
 
+- Lecture libre, mais aucune modification de la base (migration, donnée, réglage)
+  sans l'accord explicite du propriétaire du projet.
 - Le projet `wyydagcjkbivtbuhbzon` est partagé avec le site NAH (dépôt
   `Gabriel-Merlin/NAH`). Ne touchez pas aux tables de NAH (`candidatures`,
   `signalements`, `questions_anonymes`, `sondages`…).
@@ -71,3 +73,13 @@ npm run test:parcours   # parcours navigateur, après un build (~3 min)
 - Sauf `profiles`, les tables sociales sont ouvertes à tous (`using (true)`) : n'y
   ajoutez pas de données sensibles avant d'avoir appliqué les corrections de
   l'audit (`supabase/README.md`).
+
+## Rapport du matin
+
+- Chaque matin, la routine claude.ai « Vérification quotidienne de RévizSTMG et
+  rapport par mail » vérifie le site et envoie un rapport à revizstmg@gmail.com :
+  objet « Rapport du JJ/MM/AAAA », rangé sous le libellé Gmail « Rapports Claude ».
+- Le mail est produit par `app/scripts/rapport-mail.mjs` (rendu :
+  `app/scripts/rapport.js`) à partir de `statistiques/dernier.json` et
+  `statistiques/historique.json`, écrits par le workflow « Statistiques »
+  (`.github/workflows/statistiques.yml`, lançable à la main).
