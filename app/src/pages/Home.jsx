@@ -229,6 +229,7 @@ export default function Home() {
           <Tile to="/programme" icon="📅" label={t('studyPlan')} sub={t('todayGoals')} accent="#0284c7" />
           <Tile to="/coach" icon="🎯" label={t('coach')} accent="#f59e0b" />
           <Tile to="/grand-oral" icon="🎓" label={t('grandOral')} accent="#8a6d1e" />
+          {state.track?.level === 'premiere-stmg' && <Tile to="/etude-de-gestion" icon="🔎" label={t('egTitle')} sub={t('egTileSub')} accent="#4f46e5" />}
           <Tile to="/fiches-photo" icon="📸" label={t('photoFiche')} sub={t('photoFicheSub')} accent="#16a34a" />
         </div>
       </section>

@@ -32,7 +32,7 @@ set search_path = ''
 as $$
 begin
   -- Seuls les écrans de l'app sont comptés (liste ECRANS de app/src/mesure.js).
-  if p_page is null or p_page !~ '^(entree|accueil|matiere|theme|chapitre|favoris|badges|classe|moi|coach|revision|paquet|parent|bac-blanc|programme|grand-oral|coach-ia|fiches-photo|defi|express|formules|methodo|boutique|confidentialite|cgu|faq|guide|classement|amis|introuvable)$' then
+  if p_page is null or p_page !~ '^(entree|accueil|matiere|theme|chapitre|favoris|badges|classe|moi|coach|revision|paquet|parent|bac-blanc|programme|grand-oral|etude-de-gestion|coach-ia|fiches-photo|defi|express|formules|methodo|boutique|confidentialite|cgu|faq|guide|classement|amis|introuvable)$' then
     return;
   end if;
   insert into public.revizstmg_visites as v (jour, page, vues, visites)

@@ -25,6 +25,7 @@ const FlashcardsPage = lazy(() => import('./pages/FlashcardsPage.jsx'))
 const BacBlanc = lazy(() => import('./pages/BacBlanc.jsx'))
 const Programme = lazy(() => import('./pages/Programme.jsx'))
 const GrandOral = lazy(() => import('./pages/GrandOral.jsx'))
+const EtudeGestion = lazy(() => import('./pages/EtudeGestion.jsx'))
 const CoachAI = lazy(() => import('./pages/CoachAI.jsx'))
 const PhotoFiche = lazy(() => import('./pages/PhotoFiche.jsx'))
 const DailyChallenge = lazy(() => import('./pages/DailyChallenge.jsx'))
@@ -83,6 +84,7 @@ export default function App() {
         <Route path="/bac-blanc" element={<ContenuFiliere><BacBlanc /></ContenuFiliere>} />
         <Route path="/programme" element={<Programme />} />
         <Route path="/grand-oral" element={<GrandOral />} />
+        <Route path="/etude-de-gestion" element={<EtudeGestion />} />
         <Route path="/coach-ia" element={<ContenuFiliere><CoachAI /></ContenuFiliere>} />
         <Route path="/fiches-photo" element={<PhotoFiche />} />
         <Route path="/defi" element={<ContenuFiliere><DailyChallenge /></ContenuFiliere>} />

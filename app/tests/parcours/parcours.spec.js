@@ -78,6 +78,7 @@ const PAGES = [
   ['/bac-blanc', /bac blanc|Bac blanc/i],
   ['/programme', /./],
   ['/grand-oral', /Grand Oral/i],
+  ['/etude-de-gestion', /Étude de gestion/],
   ['/coach-ia', /./],
   ['/fiches-photo', /./],
   ['/defi', /./],

@@ -16,7 +16,7 @@ export const MESURE_ACTIVE = false
 // (vérifié par tests/liens.test.js).
 export const ECRANS = [
   'entree', 'accueil', 'matiere', 'theme', 'chapitre', 'favoris', 'badges', 'classe', 'moi', 'coach',
-  'revision', 'paquet', 'parent', 'bac-blanc', 'programme', 'grand-oral', 'coach-ia', 'fiches-photo',
+  'revision', 'paquet', 'parent', 'bac-blanc', 'programme', 'grand-oral', 'etude-de-gestion', 'coach-ia', 'fiches-photo',
   'defi', 'express', 'formules', 'methodo', 'boutique', 'confidentialite', 'cgu', 'faq', 'guide',
   'classement', 'amis', 'introuvable',
 ]

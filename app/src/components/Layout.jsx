@@ -450,6 +450,8 @@ function Breadcrumb() {
       items.push({ label: t('studyPlan'), to: '/programme' })
     } else if (parts[0] === 'grand-oral') {
       items.push({ label: t('grandOral'), to: '/grand-oral' })
+    } else if (parts[0] === 'etude-de-gestion') {
+      items.push({ label: t('egTitle'), to: '/etude-de-gestion' })
     } else if (parts[0] === 'guide') {
       items.push({ label: t('startGuide'), to: '/guide' })
     } else if (parts[0] === 'amis') {

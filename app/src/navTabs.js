@@ -18,6 +18,7 @@ export const ALL_TABS = {
   badges: { icon: '🏅', labelKey: 'badges', to: '/badges', match: ['/badges'] },
   favoris: { icon: '⭐', labelKey: 'favorites', to: '/favoris', match: ['/favoris'] },
   grandoral: { icon: '🎓', labelKey: 'grandOral', to: '/grand-oral', match: ['/grand-oral'] },
+  etudegestion: { icon: '🔎', labelKey: 'egTitle', to: '/etude-de-gestion', match: ['/etude-de-gestion'] },
   profil: { icon: '👤', labelKey: 'mySpace', to: '/moi', match: ['/moi'] },
 }
 

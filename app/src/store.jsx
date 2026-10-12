@@ -13,7 +13,7 @@ import { publishChildStats, deleteMyChildStats, PARENT_READY } from './parent.js
 const CROSS_GAMES = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac'])
 
 // Champs de progression synchronisés sur le compte (multi-appareil).
-const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs']
+const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion']
 // Carnet d'erreurs : au plus tant de questions ratées, les plus récentes d'abord.
 export const CARNET_MAX = 150
 function pickProgress(s) {
@@ -103,7 +103,17 @@ export function mergeProgress(a, b) {
     if (!prev || (e.le || '') > (prev.le || '')) erreurs.set(e.id, e)
   }
   out.erreurs = [...erreurs.values()].sort((x, y) => (y.le || '').localeCompare(x.le || '')).slice(0, CARNET_MAX)
+  // Étude de gestion : un seul dossier, on garde la version modifiée en dernier.
+  const ea = a.etudeGestion, eb = b.etudeGestion
+  out.etudeGestion = (eb?.maj || 0) > (ea?.maj || 0) ? eb : (ea || eb || etudeGestionVide())
   return out
+}
+
+// Étude de gestion (Première STMG) : le projet, les sources et les arguments A-E-I.
+// `maj` date la dernière modification, pour garder la version la plus récente
+// quand l'appareil et le compte diffèrent.
+export function etudeGestionVide() {
+  return { theme: '', organisation: '', problematique: '', coches: {}, sources: [], arguments: [], maj: 0 }
 }
 
 // Carnet d'erreurs : une question ratée y entre, une question réussie en sort.
@@ -167,6 +177,7 @@ const emptyState = () => ({
   parentShare: false, // partage volontaire de la progression avec les parents (local)
   grandOral: { spec: '', q1: '', q2: '', notes: '' }, // préparation du Grand Oral (sauvegardée sur le compte)
   erreurs: [], // carnet d'erreurs : questions ratées à refaire
+  etudeGestion: etudeGestionVide(), // étude de gestion (Première) : projet, sources, arguments
   examSeen: {}, // bac blanc : { [sélection]: [clés d'énoncés déjà tombés] } (local)
   coins: 0, // pièces 🪙 dépensables en boutique (gagnées avec l'XP)
   owned: [], // ids d'articles cosmétiques achetés (boutique)
@@ -627,6 +638,11 @@ export function StoreProvider({ children }) {
   const setA11y = useCallback((patch) => setState((p) => ({ ...p, a11y: { ...(p.a11y || {}), ...patch } })), [])
   const setReminder = useCallback((patch) => setState((p) => ({ ...p, reminder: { ...(p.reminder || {}), ...patch } })), [])
   const setGrandOral = useCallback((patch) => setState((p) => ({ ...p, grandOral: { ...(p.grandOral || {}), ...patch } })), [])
+  const setEtudeGestion = useCallback((maj) => setState((p) => {
+    const avant = { ...etudeGestionVide(), ...(p.etudeGestion || {}) }
+    const apres = typeof maj === 'function' ? maj(avant) : { ...avant, ...maj }
+    return { ...p, etudeGestion: { ...apres, maj: Date.now() } }
+  }), [])
   const noterReponses = useCallback((r) => setState((p) => ({ ...p, erreurs: majCarnet(p.erreurs, r, srsToday()) })), [])
   const setParentShare = useCallback((on) => {
     try { if (on) localStorage.removeItem('stmg_parent_efface') } catch { /* stockage indisponible */ }
@@ -660,6 +676,7 @@ export function StoreProvider({ children }) {
     setGrandOral,
     setParentShare,
     noterReponses,
+    setEtudeGestion,
     recordExamSeen,
     toggleFavorite,
     setLastChapter,
