@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { Feedback, GameProgress, useStopwatch } from './common.jsx'
-import { makeCalcSet } from '../calc.js'
+import { makeCalcSet, makeCalcMix } from '../calc.js'
 import { useT } from '../i18n.js'
 
 // Analyse une saisie chiffrée à la française (« 7 000 », « 8,45 »).
@@ -43,7 +43,7 @@ function Figure({ fig, color }) {
 export default function Calcul({ game, mode, color, onDone }) {
   const t = useT()
   const set = useMemo(
-    () => (game.gen ? makeCalcSet(game.gen, game.count || 5) : game.questions || []),
+    () => (game.gens ? makeCalcMix(game.gens, game.count || 6) : game.gen ? makeCalcSet(game.gen, game.count || 5) : game.questions || []),
     [game],
   )
   const [i, setI] = useState(0)

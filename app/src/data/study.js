@@ -3,6 +3,7 @@
 import { SUBJECTS, ALL_CHAPTERS, shuffle } from './index.js'
 import { subjectsForTrack } from './tracks.js'
 import { chapterScore } from '../store.jsx'
+import { instancierQuestion } from '../qcmgen.js'
 import { todayKey, daysUntil, defaultBacDate } from './srs.js'
 export { todayKey, daysUntil, defaultBacDate }
 
@@ -54,12 +55,15 @@ export function reviewStats(queue, today = todayKey()) {
 }
 
 // --- Bac blanc : assemblage de questions QCM à partir des matières ----------
+// Une question chiffrée garde son « gen » : elle est refaite avec de nouveaux
+// nombres au moment d'être servie (instancierQuestion), après la sélection,
+// qui repose sur l'énoncé écrit.
 export function collectQuestions(themeId) {
   const th = ALL_CHAPTERS[themeId]
   if (!th) return []
   const out = []
   for (const g of th.games || []) {
-    if (g.type === 'qcm') for (const q of g.questions || []) out.push({ q: q.q, choices: q.choices, answer: q.answer, explain: q.explain, themeId })
+    if (g.type === 'qcm') for (const q of g.questions || []) out.push({ q: q.q, choices: q.choices, answer: q.answer, explain: q.explain, themeId, ...(q.gen ? { gen: q.gen } : {}) })
     else if (g.type === 'vraifaux') for (const q of g.questions || []) out.push({ q: q.statement, choices: ['Vrai', 'Faux'], answer: q.answer ? 0 : 1, explain: q.explain, themeId })
   }
   return out
@@ -99,7 +103,7 @@ export function buildExam(state, track, subjectIds, count = 20, seen = []) {
   stale.sort((a, b) => (rank.get(a.k) ?? 0) - (rank.get(b.k) ?? 0))
   const chosen = [...fresh, ...stale].slice(0, count)
   return {
-    questions: chosen.map((x) => shuffleChoices(x.q)),
+    questions: chosen.map((x) => shuffleChoices(instancierQuestion(x.q))),
     keys: chosen.map((x) => x.k),
   }
 }
@@ -121,7 +125,7 @@ export function buildThemeExam(themeId, count = 12) {
     if (!byKey.has(k)) byKey.set(k, q)
   }
   const arr = shuffleInPlace([...byKey.values()])
-  return arr.slice(0, count).map(shuffleChoices)
+  return arr.slice(0, count).map((q) => shuffleChoices(instancierQuestion(q)))
 }
 
 // Assez de questions pour un bac blanc de thème ?

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { shuffle, Feedback, GameProgress, useStopwatch } from './common.jsx'
 import { useT } from '../i18n.js'
+import { instancierQuestion } from '../qcmgen.js'
 
 const PER_Q = 20 // secondes par question en mode Défi
 
@@ -8,9 +9,10 @@ export default function Qcm({ game, mode, color, onDone }) {
   const t = useT()
   const questions = useMemo(
     () =>
-      shuffle(game.questions).map((q) => ({
+      // Une question chiffrée (« gen ») est refaite avec de nouveaux nombres.
+      shuffle(game.questions.map((q) => instancierQuestion(q))).map((q) => ({
         ...q,
-        orig: q, // la question telle qu'écrite, pour le carnet d'erreurs
+        orig: q, // la question telle que jouée, pour le carnet d'erreurs
         choices: shuffle(q.choices.map((c, i) => ({ text: c, correct: i === q.answer }))),
       })),
     [game],

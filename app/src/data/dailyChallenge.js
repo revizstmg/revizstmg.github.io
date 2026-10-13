@@ -2,6 +2,7 @@
 // pour la journée (mêmes questions si on recharge) mais différente chaque jour,
 // et identique pour tous (tirage déterministe semé par la date). Auto-corrigé.
 import { realThemes, collectQuestions } from './study.js'
+import { instancierQuestion } from '../qcmgen.js'
 
 // RNG déterministe (mulberry32) semé par une chaîne (la date).
 function seedFromString(s) {
@@ -44,7 +45,10 @@ export function buildDailyChallenge(track, dateKey, n = 6) {
   if (arr.length < 3) return []
   const chosen = seededShuffle(arr, rnd).slice(0, Math.min(n, arr.length))
   // On mélange aussi (de façon déterministe) les propositions de chaque question.
-  return chosen.map((q) => {
+  // Une question chiffrée est tirée avec le même aléa semé : mêmes nombres pour
+  // tous, toute la journée.
+  return chosen.map((q0) => {
+    const q = instancierQuestion(q0, rnd)
     const order = seededShuffle(q.choices.map((_, i) => i), rnd)
     return { q: q.q, choices: order.map((i) => q.choices[i]), answer: order.indexOf(q.answer), explain: q.explain }
   })

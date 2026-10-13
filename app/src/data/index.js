@@ -11,6 +11,7 @@
 import { ORDRE_MATIERES, MATIERES, COUCHES, commun, chargerFichiers, remplacerEnPlace } from '../content/contenu.js'
 import { THEME_TERMS, subjectFallbackFor } from './keyterms.js'
 import { PIEGES } from './pieges.js'
+import { instancierQuestion } from '../qcmgen.js'
 
 const LESSONS = COUCHES['cours-complets']
 const COURS_REELS = COUCHES['cours-reels']
@@ -324,7 +325,15 @@ export function chapterGameCount(chapterId) {
 // chapitre (rattachés à leur section). Les jeux de SYNTHÈSE (qcm, vrai/faux,
 // association) et les anciennes flashcards couvraient tout le thème : ils ne
 // sont plus placés sur un chapitre (ils alimentent le « Test du thème »).
+// Matières où chaque chapitre doit proposer des calculs à données aléatoires.
+const MATIERES_CALCUL = new Set(['maths', 'p1-maths'])
 const CHAPTER_GAME_TYPES = new Set(['calcul', 'trou', 'tri', 'ordre', 'memory', 'doc', 'verbs', 'grammar', 'comprehension', 'sql'])
+
+// Générateurs de calcul d'un thème de mathématiques ([] pour les autres matières).
+export function gensCalculDuTheme(theme) {
+  if (!theme || !MATIERES_CALCUL.has(ALL_CHAPTERS[theme.id]?.subjectId ?? theme.subjectId)) return []
+  return [...new Set((theme.games || []).filter((g) => g.type === 'calcul' && g.gen).map((g) => g.gen))]
+}
 
 export function themeChapters(theme) {
   if (!theme) return []
@@ -360,6 +369,16 @@ export function themeChapters(theme) {
     const autres = parSection.filter((_, j) => j !== ch.idx)
     const gen = sectionExercises(ch.section, theme, ch.idx, { defsTheme: autres.flatMap((x) => x.defs), motsTheme: autres.flatMap((x) => x.mots) })
     for (const g of gen) if (!ch.games.some((x) => x.id === g.id)) ch.games.push(g)
+  }
+  // Mathématiques : chaque chapitre a au moins un calcul à nombres tirés au
+  // hasard. Celui qui n'en a pas (exemple traité, exercice type…) reçoit les
+  // calculs du thème, mêlés : de nouvelles données à chaque partie.
+  const gensDuTheme = gensCalculDuTheme(theme)
+  if (gensDuTheme.length) {
+    for (const ch of chapters) {
+      if (ch.games.some((g) => g.type === 'calcul')) continue
+      ch.games.unshift({ id: `${theme.id}::${ch.idx}::calc`, type: 'calcul', title: 'Calculs du chapitre — nouveaux nombres à chaque partie', icon: '🔢', gens: gensDuTheme, count: 6 })
+    }
   }
   // Mini-cas d'entreprise chiffrés (rédigés à la main) : rattachés en tête du
   // premier chapitre du thème quand ils existent.
@@ -1215,7 +1234,8 @@ export function buildQuiz(chapterId) {
   const out = []
   for (const g of c.games || []) {
     if (g.type === 'qcm') {
-      for (const q of g.questions) out.push({ ...q })
+      // Les deux joueurs d'un duel reçoivent les mêmes nombres.
+      for (const q of g.questions) out.push(instancierQuestion({ ...q }))
     } else if (g.type === 'vraifaux') {
       for (const q of g.questions)
         out.push({

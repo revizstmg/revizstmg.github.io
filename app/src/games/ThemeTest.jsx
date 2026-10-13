@@ -1,10 +1,12 @@
 // Test du thème : évaluation globale de fin de thème, mélangeant
 // - des QCM auto-corrigés (repris des mini-jeux du thème) ;
 // - des questions à RÉDIGER (dérivées des flashcards) ;
-// - des CAS PRATIQUES à analyser (dérivés des exemples travaillés du cours).
+// - des CAS PRATIQUES à analyser (dérivés des exemples travaillés du cours ;
+//   en mathématiques, des calculs du thème avec de nouveaux nombres à chaque test).
 // Les parties rédigées se corrigent en auto-évaluation (corrigé révélé).
 import { useMemo, useState } from 'react'
-import { buildThemeTest } from '../data/index.js'
+import { buildThemeTest, gensCalculDuTheme, ALL_CHAPTERS } from '../data/index.js'
+import { makeCalcMix } from '../calc.js'
 import { useStore, starsFromScore } from '../store.jsx'
 import { Stars, Confetti, Rich } from '../components/ui.jsx'
 import { useT } from '../i18n.js'
@@ -13,7 +15,22 @@ import Qcm from './Qcm.jsx'
 export default function ThemeTest({ theme, color, onExit }) {
   const { recordResult } = useStore()
   const t = useT()
-  const test = useMemo(() => buildThemeTest(theme.id), [theme.id])
+  const [tirage, setTirage] = useState(0) // « Refaire le test » : nouveau tirage
+  const test = useMemo(() => {
+    const base = buildThemeTest(theme.id)
+    const gens = gensCalculDuTheme(ALL_CHAPTERS[theme.id] || theme)
+    if (!gens.length) return base
+    // Les exemples du cours restent dans le cours : le test les remplace par des
+    // calculs tirés au hasard (sans graphique, qui ne se rédige pas ici).
+    const cas = makeCalcMix(gens, 8)
+      .filter((ex) => !ex.figure)
+      .slice(0, 4)
+      .map((ex) => ({
+        prompt: ex.prompt,
+        answer: `**Résultat : ${Number(ex.answer).toLocaleString('fr-FR')}${ex.unit ? `\u00a0${ex.unit}` : ''}**\n\n${ex.explain}`,
+      }))
+    return cas.length ? { ...base, cas } : base
+  }, [theme.id, tirage]) // eslint-disable-line react-hooks/exhaustive-deps
   const written = useMemo(
     () => [
       ...test.redac.map((r) => ({ ...r, kind: 'redac' })),
@@ -116,7 +133,7 @@ export default function ThemeTest({ theme, color, onExit }) {
       </p>
       <p className="mx-auto mt-2 max-w-md text-xs text-slate-400">{t('selfEvalNote2')}</p>
       <div className="mt-5 flex flex-wrap justify-center gap-2">
-        <button onClick={() => { setStep('intro'); setResult(null); setQcmScore({ correct: 0, total: 0 }); setWrittenOk(0) }} className="btn-primary" style={{ backgroundColor: color }}>{t('retakeTest')}</button>
+        <button onClick={() => { setTirage((n) => n + 1); setStep('intro'); setResult(null); setQcmScore({ correct: 0, total: 0 }); setWrittenOk(0) }} className="btn-primary" style={{ backgroundColor: color }}>{t('retakeTest')}</button>
         <button onClick={onExit} className="btn-ghost">{t('done')}</button>
       </div>
     </div>

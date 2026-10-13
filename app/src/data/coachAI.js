@@ -6,6 +6,7 @@
 // faiblesse, planifie les révisions et adapte l'entraînement en direct.
 import { reviewQueue, collectQuestions } from './study.js'
 import { shuffle } from './index.js'
+import { instancierQuestion } from '../qcmgen.js'
 import { subjectsForTrack } from './tracks.js'
 import { daysUntil, todayKey, addDays, defaultBacDate } from './srs.js'
 import { premiereEpreuve } from './epreuves.js'
@@ -185,7 +186,7 @@ export function buildTraining(state, track, n = 12, subjectId = null) {
     const uniq = []
     for (const q of qs) { const k = (q.q || '').toLowerCase().trim(); if (k && !seen.has(k)) { seen.add(k); uniq.push(q) } }
     if (!uniq.length) continue
-    banks[item.themeId] = shuffle(uniq).map(shuffleChoices)
+    banks[item.themeId] = shuffle(uniq).map((q) => shuffleChoices(instancierQuestion(q)))
     weightByTheme[item.themeId] = weaknessWeight(item)
     meta[item.themeId] = { themeId: item.themeId, name: item.themeName, subject: item.subjectName, color: item.color, score: item.practiced ? item.score : null, reason: item.reason }
   }

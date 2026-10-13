@@ -513,3 +513,15 @@ export function makeCalcSet(id, count = 5) {
   if (!gen) return []
   return Array.from({ length: count }, () => gen())
 }
+
+// Renvoie `count` exercices tirés à tour de rôle de plusieurs générateurs
+// (dans un ordre mélangé) : un calcul de chapitre qui balaie ses méthodes.
+export function makeCalcMix(ids, count = 6) {
+  const gens = ids.filter((id) => CALC[id])
+  for (let i = gens.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[gens[i], gens[j]] = [gens[j], gens[i]]
+  }
+  if (!gens.length) return []
+  return Array.from({ length: count }, (_, k) => CALC[gens[k % gens.length]]())
+}

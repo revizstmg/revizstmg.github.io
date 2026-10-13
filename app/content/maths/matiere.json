@@ -44,6 +44,7 @@
           "questions": [
             {
               "q": "Une valeur passe de 200 à 250. Quel est le taux d’évolution ?",
+              "gen": "taux_evolution",
               "choices": [
                 "+25 %",
                 "+50 %",
@@ -55,6 +56,7 @@
             },
             {
               "q": "À une hausse de 25 % correspond quel coefficient multiplicateur ?",
+              "gen": "coef_multiplicateur",
               "choices": [
                 "1,25",
                 "0,25",
@@ -77,6 +79,7 @@
             },
             {
               "q": "Une hausse de 20 % suivie d’une baisse de 20 %, cela donne au total…",
+              "gen": "evolutions_successives",
               "choices": [
                 "Une baisse d’environ 4 %",
                 "Aucun changement",
@@ -88,6 +91,7 @@
             },
             {
               "q": "Un indice base 100 vaut 130. Cela signifie que la valeur a…",
+              "gen": "indice_base100",
               "choices": [
                 "Augmenté de 30 % depuis la référence",
                 "Été multipliée par 130",
@@ -228,6 +232,7 @@
             },
             {
               "q": "Une augmentation de 5 % chaque année se modélise par une suite géométrique de raison…",
+              "gen": "raison_hausse",
               "choices": [
                 "1,05",
                 "0,05",
@@ -239,6 +244,7 @@
             },
             {
               "q": "Une baisse de 8 % par an correspond à une raison q égale à…",
+              "gen": "raison_baisse",
               "choices": [
                 "0,92",
                 "1,08",

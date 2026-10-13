@@ -251,7 +251,12 @@ que les couches qui la concernent.
 
 Les exercices de calcul désignent leur générateur par un nom (`"gen": "tva"`,
 voir `src/calc.js`), comme les exercices de langues générés (`"gen": "genVerbEN"`,
-voir `src/data/langgen.js`).
+voir `src/data/langgen.js`). Une question de QCM chiffrée peut aussi porter un
+`"gen"` (`"taux_evolution"`, `"raison_baisse"`…, voir `src/qcmgen.js`) : elle est
+refaite avec de nouveaux nombres à chaque partie, et le texte écrit sert de
+secours. En mathématiques, un chapitre sans calcul (exemple traité, exercice
+type) reçoit les calculs de son thème, et le test du thème remplace les exemples
+du cours par des calculs tirés au hasard.
 
 ### Le code qui s'en sert
 
