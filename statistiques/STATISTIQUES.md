@@ -1,24 +1,10 @@
 # 📊 Statistiques de RévizSTMG
 
-Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **12 octobre 2026 à 20:20**.
+Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **13 octobre 2026 à 13:33**.
 
 ## 👥 Utilisation
 
-| | |
-|---|---|
-| Comptes | **10** — 7 élèves, 3 professeurs |
-| Nouveaux comptes | 0 cette semaine · 0 en 30 jours |
-| Comptes actifs | 1 en 24 h · 1 en 7 jours · 2 en 30 jours |
-| Élèves par niveau | Terminale 6 · Première 1 |
-| Élèves par spécialité | Gestion et Finance 5 · Ressources humaines & Communication 1 |
-| Classes | 1 classes de professeurs · 2 élèves inscrits |
-| Quiz de classe | 0 · sessions en direct : 0 |
-| Amis | 2 joueurs · 3 défis (0 cette semaine) |
-| Suivi des parents | 1 élèves suivis (1 actifs cette semaine) |
-| Visites | 0 hier (0 pages vues) · 0 en 7 jours (0 pages vues) |
-| Écrans les plus vus (7 jours) | — |
-
-> Un compte est « actif » quand sa progression a été synchronisée. Les visites sont comptées sans cookie ni identifiant (une visite = un onglet ouvert sur le site).
+Indisponible aujourd'hui : Supabase injoignable (fetch failed).
 
 ## 📚 Contenu
 
@@ -27,20 +13,21 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 | Matières | 19 (11 en Terminale, 8 en Première) |
 | Thèmes | 94 |
 | Chapitres de cours | 807 |
-| Séries d'exercices | 6 290 (39 034 questions) |
-| Flashcards | 2 625 |
+| Séries d'exercices | 12 153 (83 265 questions) |
+| Flashcards | 2 620 |
 
 ## ✅ Qualité et mise en ligne
 
 - Tests du contenu et de la logique : ✅ réussis
-- Dernière CI sur main : ✅ 12 octobre 2026 à 14:48
-- Dernière mise en ligne réussie : ✅ 12 octobre 2026 à 14:48
-- Modifications de l'app ces 7 derniers jours : 16
+- Dernière CI sur main : —
+- Dernière mise en ligne réussie : ✅ 13 octobre 2026 à 13:21
+- Modifications de l'app ces 7 derniers jours : 13
 
 ## 📈 Évolution (14 derniers jours)
 
 | Date | Comptes | Actifs 7 j | Nouveaux 7 j | Visites la veille | Chapitres | Questions |
 |---|---|---|---|---|---|---|
+| 13 oct. | — | — | — | — | 807 | 83 265 |
 | 12 oct. | 10 | 1 | 0 | 0 | 807 | 39 034 |
 | 11 oct. | 10 | — | 0 | — | 807 | 39 263 |
 | 10 oct. | 10 | — | 0 | — | 807 | 39 263 |
@@ -54,5 +41,4 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 | 2 oct. | 10 | — | 0 | — | — | — |
 | 1 oct. | 10 | — | 0 | — | — | — |
 | 30 sept. | 10 | — | 0 | — | — | — |
-| 29 sept. | 10 | — | 0 | — | — | — |
 
