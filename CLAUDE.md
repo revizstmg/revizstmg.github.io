@@ -88,3 +88,9 @@ npm run test:parcours   # parcours navigateur, après un build (~3 min)
   `npm run rapport -- --verif … --sortie …`). Ils sont autorisés sans demande dans
   `.claude/settings.json` : sans cette liste, le mode automatique refuse `npm ci`.
   Gardez les deux en accord si vous changez une commande.
+
+## Skills du projet
+
+`.claude/skills/` : `ajouter-contenu`, `nouvelle-page`, `publier`,
+`migration-supabase`. Au démarrage d'une session cloud, `.claude/hooks/session-start.sh`
+installe les dépendances de `app/`.
