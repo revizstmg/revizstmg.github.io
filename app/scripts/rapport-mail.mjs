@@ -1,5 +1,6 @@
 // Prépare le rapport du matin envoyé par mail (sujet, HTML, texte) :
-//   npx vite-node scripts/rapport-mail.mjs -- --verif /tmp/verif.json --sortie /tmp/rapport
+//   npm run rapport -- --verif /tmp/verif.json --sortie /tmp/rapport
+//   (soit NODE_USE_ENV_PROXY=1 vite-node scripts/rapport-mail.mjs -- …)
 // (--releve chemin : un autre relevé que statistiques/dernier.json, pour essayer)
 // La routine de vérification quotidienne écrit d'abord le résultat de ses
 // contrôles dans verif.json, lance ce script, puis envoie sortie/email.html
@@ -15,7 +16,8 @@
 //   "problemes": [{ "gravite": "grave|moyen|mineur", "titre": "…", "ou": "…", "correction": "…" }],
 //   "ci": { "etat": "success", "date": "ISO" }, "miseEnLigne": { "etat": "success", "date": "ISO" } }
 // (ci et miseEnLigne ne servent que si l'API GitHub ne répond pas au script.)
-// Derrière un proxy (environnement des routines), lancer avec NODE_USE_ENV_PROXY=1.
+// NODE_USE_ENV_PROXY=1 (dans le script npm) fait passer les requêtes par le proxy
+// de l'environnement des routines.
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { tmpdir } from 'node:os'

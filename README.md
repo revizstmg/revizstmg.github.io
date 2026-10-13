@@ -63,8 +63,8 @@ npm run build && npm run test:parcours   # parcours dans un vrai navigateur (~3 
   toujours la même empreinte. Si vous corrigez un cours exprès, mettez les
   empreintes à jour avec `npm run test:maj`. Si l'empreinte change alors que vous
   n'avez touché qu'au code, c'est que l'élève verra autre chose : cherchez pourquoi.
-  `EMPREINTE_DETAIL=1 npm test` écrit le détail de chaque thème dans
-  `tests/.detail/` pour comparer deux versions.
+  `EMPREINTE_DETAIL=1 npm test` (ou `npm run test:detail`, plus court) écrit le
+  détail de chaque thème dans `tests/.detail/` pour comparer deux versions.
 - **Logique** (`tests/logique.test.js`) : niveaux, scores (chaque thème peut
   atteindre 100 %), fusion de la progression de l'appareil et du compte,
   répétition espacée, récompenses, badges, calculs chiffrés, filières.
@@ -116,6 +116,8 @@ produit par `app/scripts/rapport-mail.mjs` (rendu : `app/scripts/rapport.js`, te
 par `tests/rapport.test.js`) à partir de `statistiques/dernier.json` (le relevé
 complet du workflow) et de `statistiques/historique.json`. Les comptes antérieurs
 au 12 octobre 2026 y sont reconstitués d'après leur date de création.
+La routine ne lance que des scripts npm (`npm run rapport -- --verif … --sortie …`
+pour le mail), autorisés sans demande dans `.claude/settings.json`.
 
 **Mesure d'audience.** `app/src/mesure.js` compte les écrans affichés (un compteur
 par jour et par écran, sans cookie ni identifiant) et le fichier de statistiques

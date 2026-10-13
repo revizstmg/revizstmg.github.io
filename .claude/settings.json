@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm ci)",
+      "Bash(npm ci:*)",
+      "Bash(npm run build)",
+      "Bash(npm test)",
+      "Bash(npm test:*)",
+      "Bash(npm run test:parcours)",
+      "Bash(npm run test:parcours:*)",
+      "Bash(npm run test:detail)",
+      "Bash(npm run preview)",
+      "Bash(npm run preview:*)",
+      "Bash(npm run rapport:*)",
+      "Bash(npx vitest run:*)",
+      "Bash(npx playwright test:*)"
+    ]
+  }
+}

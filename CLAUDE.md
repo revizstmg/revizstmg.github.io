@@ -83,3 +83,8 @@ npm run test:parcours   # parcours navigateur, après un build (~3 min)
   `app/scripts/rapport.js`) à partir de `statistiques/dernier.json` et
   `statistiques/historique.json`, écrits par le workflow « Statistiques »
   (`.github/workflows/statistiques.yml`, lançable à la main).
+- La routine lance uniquement des scripts npm (`npm ci`, `npm run build`,
+  `npm test`, `npm run test:parcours`, `npm run test:detail`, `npm run preview`,
+  `npm run rapport -- --verif … --sortie …`). Ils sont autorisés sans demande dans
+  `.claude/settings.json` : sans cette liste, le mode automatique refuse `npm ci`.
+  Gardez les deux en accord si vous changez une commande.
