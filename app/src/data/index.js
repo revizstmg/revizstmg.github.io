@@ -352,8 +352,13 @@ export function themeChapters(theme) {
   // lots, « réponse à écrire »…) : on multiplie ainsi par ~5 le nombre
   // d'exercices par chapitre, et le contenu est mélangé/retiré à chaque partie —
   // jamais deux fois le même. Aucune flashcard ici (réservée à l'app installée).
+  // Notions et mots mis en valeur des AUTRES sections du thème : ils complètent
+  // un chapitre qui en a trop peu pour une deuxième série, ou pour proposer quatre
+  // mots dans un QCM « mot manquant ». Tout reste tiré du cours du thème.
+  const parSection = cours.map((sec) => ({ defs: sectionPairs(sec).defPairs, mots: trouFromBold(sec, theme.id).map((q) => q.answer) }))
   for (const ch of chapters) {
-    const gen = sectionExercises(ch.section, theme, ch.idx)
+    const autres = parSection.filter((_, j) => j !== ch.idx)
+    const gen = sectionExercises(ch.section, theme, ch.idx, { defsTheme: autres.flatMap((x) => x.defs), motsTheme: autres.flatMap((x) => x.mots) })
     for (const g of gen) if (!ch.games.some((x) => x.id === g.id)) ch.games.push(g)
   }
   // Mini-cas d'entreprise chiffrés (rédigés à la main) : rattachés en tête du
@@ -454,7 +459,7 @@ function notionsLiees(a, b) {
 
 // Étapes d'un raisonnement (« Faits », « Application », « Conclusion »,
 // « Règle de droit (majeure) »…) : ce ne sont pas des notions à définir.
-const ETAPES_METHODE = new Set(['faits', 'enonce', 'application', 'conclusion', 'qualification', 'solution', 'probleme', 'probleme juridique', 'probleme de droit', 'question', 'question de droit', 'regle', 'reponse', 'analyse', 'situation', 'corrige'])
+const ETAPES_METHODE = new Set(['faits', 'enonce', 'application', 'conclusion', 'qualification', 'solution', 'probleme', 'probleme juridique', 'probleme de droit', 'question', 'question de droit', 'regle', 'reponse', 'analyse', 'situation', 'corrige', 'presenter', 'presenter le document', 'situer le document'])
 // Étiquettes de plan ou d'encadré (« Thèse 1 », « Étape 2 », « III. Dépassement »,
 // « Piège », « La distinction clé », « Attention au… ») : elles annoncent un passage
 // du cours. Prises pour des notions, elles devenaient la « bonne réponse » d'un
@@ -581,7 +586,7 @@ function isBareDate(s) {
   const t = String(s || '').trim()
   if (!t || t.length > 28) return false
   return /^(vers\s+|env\.?\s+|~|avant\s+|apr[èe]s\s+|d[èe]s\s+)?-?\d{3,4}(\s*[-–—/]\s*\d{2,4})?$/i.test(t)
-    || /^(\d{1,2}(er)?\s+)?[a-zàâéèêîïôûçäëüö]+\s+-?\d{3,4}$/i.test(t)
+    || /^(\d{1,2}(er)?\s+)?[a-zàâéèêîïôûçäëüö]+\.?\s+-?\d{3,4}$/i.test(t) // « 7 déc. 1941 »
     || /^(le\s+)?\d{1,2}[\/.]\d{1,2}[\/.]\d{2,4}$/.test(t)
 }
 
@@ -756,16 +761,72 @@ const QDEF_TEMPLATES = [
 // du thème (décalée selon la section), dédoublonnées par terme. On ne recycle
 // plus les 5 mêmes définitions : le pool est bien plus large, et comme chaque
 // exercice mélange puis tronque ce pool à chaque visite, le contenu change.
-function enrichedDefPool(defPairs, themeId, idx) {
+function enrichedDefPool(defPairs, themeId, idx, defsTheme = []) {
   const bank = (THEME_TERMS[themeId] || []).map(([term, def]) => ({ term, def }))
   const start = bank.length ? (idx * 3) % bank.length : 0
   const rotated = [...bank.slice(start), ...bank.slice(0, start)]
   const out = []
-  for (const p of [...defPairs, ...rotated]) {
+  for (const p of [...defPairs, ...rotated, ...defsTheme]) {
     if (!p.term || !p.def || out.some((o) => memeNotion(o.term, p.term))) continue
     out.push({ term: p.term, def: p.def })
   }
   return out
+}
+
+// Une notion sur deux (k = 0 ou 1) : deux séries sans notion commune.
+const moitie = (liste, k) => liste.filter((_, i) => i % 2 === k)
+
+// Notions mélangées, sans deux notions liées ni deux définitions identiques :
+// dans une association ou un memory, chaque carte n'a qu'une seule paire.
+function sansNotionsLiees(liste) {
+  const vues = new Set()
+  return shuffle(liste)
+    .filter((p, i, tous) => !tous.slice(0, i).some((q) => notionsLiees(q.term, p.term)))
+    .filter((p) => { const k = String(p.def).toLowerCase(); if (vues.has(k)) return false; vues.add(k); return true })
+}
+
+// Vrai / Faux sur les dates : une affirmation sur deux associe l'événement à
+// une AUTRE date de la section (jamais une date qui tomberait la même année).
+function vraiFauxFromDates(datePairs, id, title) {
+  const annee = (d) => String(d).match(/-?\d{3,4}/)?.[0] || String(d)
+  const uniq = []
+  for (const p of datePairs) if (p.d && p.e && !uniq.some((u) => u.e === p.e || annee(u.d) === annee(p.d))) uniq.push(p)
+  if (uniq.length < 4) return null
+  const pool = shuffle(uniq).slice(0, 8)
+  const qs = pool.map((p, k) => {
+    if (k % 2 === 0) return { statement: `${p.d} : ${p.e}.`, answer: true, explain: `Exact. ${p.d} : ${p.e}.` }
+    const autre = pool.find((o) => annee(o.d) !== annee(p.d))
+    return autre ? { statement: `${autre.d} : ${p.e}.`, answer: false, explain: `Faux. ${p.e} : ${p.d}.` } : null
+  }).filter(Boolean)
+  return qs.length >= 4 ? { id, type: 'vraifaux', title, icon: '📅', questions: shuffle(qs) } : null
+}
+
+// QCM « le mot manquant » à partir des textes à trous de la section : le bon mot
+// et trois autres mots mis en valeur dans la section ou, s'il en manque, dans
+// les autres sections du thème. Une notion liée au bon mot n'est jamais proposée.
+function qcmMotManquant(trou, id, motsTheme = []) {
+  if (trou.length < 3) return null
+  const pool = []
+  for (const m of [...trou.map((q) => q.answer), ...motsTheme]) if (!pool.some((x) => cleReponse(x) === cleReponse(m))) pool.push(m)
+  const questions = shuffle(trou).slice(0, 8).map((q) => {
+    const proches = shuffle(pool.filter((m) => cleReponse(m) !== cleReponse(q.answer) && !notionsLiees(m, q.answer)))
+    // D'abord les mots de la même section (plus proches), puis ceux du thème.
+    const memeSection = proches.filter((m) => trou.some((t) => t.answer === m))
+    const distracteurs = [...memeSection, ...proches.filter((m) => !memeSection.includes(m))].slice(0, 3)
+    if (distracteurs.length < 3) return null
+    const choices = shuffle([q.answer, ...distracteurs])
+    return { q: `Quel mot complète la phrase ?\n${q.text}`, choices, answer: choices.indexOf(q.answer), explain: q.explain }
+  }).filter(Boolean)
+  return questions.length >= 3 ? { id, type: 'qcm', title: 'QCM — le mot manquant', icon: '🧠', questions } : null
+}
+
+// Quiz du chapitre : deux ou trois questions de chaque QCM déjà généré (notions,
+// cas concrets, mot manquant, dates, tableau), mêlées en une seule série.
+function quizMele(jeux, id) {
+  const qcms = jeux.filter((g) => g.type === 'qcm' && g.questions?.length)
+  if (qcms.length < 2) return null
+  const questions = shuffle(qcms.flatMap((g) => shuffle(g.questions).slice(0, 3))).slice(0, 10)
+  return questions.length >= 6 ? { id, type: 'qcm', title: 'Quiz du chapitre — questions mêlées', icon: '🎯', questions } : null
 }
 
 // Génère un ENSEMBLE d'exercices propres au chapitre (jamais de flashcard),
@@ -773,10 +834,10 @@ function enrichedDefPool(defPairs, themeId, idx) {
 // beaucoup d'exercices ET du contenu varié (plusieurs formes de questions, cas
 // concrets). Chaque exercice a un id stable et distinct (pour la progression) ;
 // le contenu, lui, est mélangé/tronqué à chaque partie — jamais deux fois le même.
-function sectionExercises(sec, theme, idx) {
+function sectionExercises(sec, theme, idx, { defsTheme = [], motsTheme = [] } = {}) {
   const base = `${theme.id}::${idx}`
   const { datePairs, defPairs, widePairs, compareTables } = sectionPairs(sec)
-  const richDefs = enrichedDefPool(defPairs, theme.id, idx)
+  const richDefs = enrichedDefPool(defPairs, theme.id, idx, defsTheme)
   const out = []
   const uniqEvents = [...new Set(datePairs.map((p) => p.e))]
 
@@ -788,6 +849,8 @@ function sectionExercises(sec, theme, idx) {
     if (sDate) out.push(sDate)
     const ord = ordreFromDates(datePairs, `${base}::ordre`, 'Remets dans l’ordre — chronologie')
     if (ord) out.push(ord)
+    const vfDate = vraiFauxFromDates(datePairs, `${base}::vfdate`, 'Vrai ou faux — les dates')
+    if (vfDate) out.push(vfDate)
   }
 
   // 2) Notions : pool élargi (section + banque du thème). Plusieurs formes de
@@ -813,27 +876,50 @@ function sectionExercises(sec, theme, idx) {
 
     // Cas concret : on décrit une situation (la définition) et l'élève retrouve
     // la bonne notion parmi plusieurs — l'inverse du QCM précédent.
-    const casItems = richDefs.map((p) => ({ q: `Cas concret — on observe : « ${p.def} ». De quelle notion s'agit-il ?`, a: p.term, e: `${p.term} : ${p.def}` }))
-    const qCas = qcmFromPairs(casItems, `${base}::qcas`, 'Cas concrets — trouve la notion', (p, a) => notionsLiees(p.a, a))
-    if (qCas && qCas.questions.length >= 3) { qCas.icon = '🧩'; out.push(qCas) }
+    // Quand la section a assez de notions, chaque forme d'exercice existe en deux
+    // séries portant sur des notions différentes (une sur deux), pour arriver à
+    // une dizaine d'exercices par chapitre sans répéter les mêmes questions.
+    const deuxSeries = (min) => (richDefs.length >= min ? [moitie(richDefs, 0), moitie(richDefs, 1)] : [richDefs])
+    // (min = 8 : chaque série garde au moins 4 notions.)
+    const serie = (titre, k, n) => (n > 1 ? `${titre} (série ${k + 1})` : titre)
+    const idSerie = (nom, k) => `${base}::${nom}${k ? k : ''}`
 
-    const vf = vraiFauxFromDefs(richDefs, `${base}::vf`, 'Vrai ou faux — les notions')
-    if (vf) out.push(vf)
+    const casSeries = deuxSeries(8)
+    casSeries.forEach((liste, k) => {
+      const casItems = liste.map((p) => ({ q: `Cas concret — on observe : « ${p.def} ». De quelle notion s'agit-il ?`, a: p.term, e: `${p.term} : ${p.def}` }))
+      const qCas = qcmFromPairs(casItems, idSerie('qcas', k), serie('Cas concrets — trouve la notion', k, casSeries.length), (p, a) => notionsLiees(p.a, a))
+      if (qCas && qCas.questions.length >= 3) { qCas.icon = '🧩'; out.push(qCas) }
+    })
+
+    const vfSeries = deuxSeries(8)
+    vfSeries.forEach((liste, k) => {
+      const vf = vraiFauxFromDefs(liste, idSerie('vf', k), serie('Vrai ou faux — les notions', k, vfSeries.length))
+      if (vf) out.push(vf)
+    })
 
     const shortTerms = richDefs.filter((p) => isCleanTerm(p.term))
-    const sTerm = saisieFromItems(shortTerms.map((p) => ({ prompt: `Quel terme correspond à cette définition ?\n« ${p.def} »`, answer: p.term, alt: [...termVariants(p.term), ...reponsesAcceptees(p.term, theme.id)], explain: `${p.term} : ${p.def}` })), `${base}::sterm`, 'Écris le terme — ce chapitre', '🔤')
-    if (sTerm) out.push(sTerm)
+    const termSeries = shortTerms.length >= 8 ? [moitie(shortTerms, 0), moitie(shortTerms, 1)] : [shortTerms]
+    termSeries.forEach((liste, k) => {
+      const sTerm = saisieFromItems(liste.map((p) => ({ prompt: `Quel terme correspond à cette définition ?\n« ${p.def} »`, answer: p.term, alt: [...termVariants(p.term), ...reponsesAcceptees(p.term, theme.id)], explain: `${p.term} : ${p.def}` })), idSerie('sterm', k), serie('Écris le terme — ce chapitre', k, termSeries.length), '🔤')
+      if (sTerm) out.push(sTerm)
+    })
 
     if (richDefs.length >= 3) {
       // Association notion ↔ définition (définitions abrégées pour tenir à l'écran).
       // Jamais deux notions liées dans la même association.
-      const rseen = new Set()
-      const pairs = shuffle(richDefs)
-        .filter((p, i, tous) => !tous.slice(0, i).some((q) => notionsLiees(q.term, p.term)))
-        .map((p) => ({ left: p.term, right: shortenDef(p.def, 90) }))
-        .filter((p) => { const k = p.right.toLowerCase(); if (rseen.has(k)) return false; rseen.add(k); return true })
+      const assocSeries = deuxSeries(8)
+      assocSeries.forEach((liste, k) => {
+        const pairs = sansNotionsLiees(liste)
+          .map((p) => ({ left: p.term, right: shortenDef(p.def, 90) }))
+          .slice(0, 6)
+        if (pairs.length >= 3) out.push({ id: idSerie('assoc', k), type: 'association', title: serie('Association — notions du chapitre', k, assocSeries.length), icon: '🔗', pairs })
+      })
+      // Memory : retrouver les paires notion ↔ définition courte, cartes retournées.
+      const paires = sansNotionsLiees(richDefs)
+        .map((p) => ({ a: p.term, b: shortenDef(p.def, 60) }))
+        .filter((p) => p.a.length <= 40)
         .slice(0, 6)
-      if (pairs.length >= 3) out.push({ id: `${base}::assoc`, type: 'association', title: 'Association — notions du chapitre', icon: '🔗', pairs })
+      if (paires.length >= 4) out.push({ id: `${base}::memory`, type: 'memory', title: 'Memory — notions du chapitre', icon: '🃏', pairs: paires })
     }
   }
 
@@ -851,7 +937,15 @@ function sectionExercises(sec, theme, idx) {
     })
     const sTrou = saisieFromItems(trou.map((q) => ({ prompt: `Complète par le mot exact :\n${q.text}`, answer: q.answer, alt: q.alt, explain: q.explain })), `${base}::strou`, 'Complète — à écrire', '✍️')
     if (sTrou) out.push(sTrou)
+    // Le même texte, mais on choisit le mot parmi quatre (les autres mots mis en
+    // valeur dans la section). Une notion liée au bon mot n'est jamais proposée.
+    const qTrou = qcmMotManquant(trou, `${base}::qtrou`, motsTheme)
+    if (qTrou) out.push(qTrou)
   }
+
+  // 5 bis) Quiz du chapitre : des questions de chaque forme, mêlées.
+  const mix = quizMele(out, `${base}::mix`)
+  if (mix) out.push(mix)
 
   // 5) Tri (classification) à partir des tableaux de COMPARAISON du cours (deux
   //    colonnes parallèles : atouts / risques, interne / externe, actif / passif,

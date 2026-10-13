@@ -42,7 +42,9 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
   for (let partie = 0; partie < 5; partie++) {
     for (let i = 0; i < 40; i++) {
       const choix = page.getByRole('button', { name: /^[A-D] /, disabled: false })
-      const suite = page.getByRole('button', { name: /suivant|suivante|résultat|score|terminer|continuer/i })
+      // Bouton pour avancer — jamais une proposition (« A … », « B … ») dont le
+      // texte contiendrait par hasard « résultat » ou « score ».
+      const suite = page.getByRole('button', { name: /^(?![A-D] ).*(suivant|suivante|résultat|score|terminer|continuer)/i, disabled: false })
       if (await suite.count()) await suite.first().click()
       else if (await choix.count()) await choix.first().click()
       else break
