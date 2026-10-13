@@ -10,11 +10,33 @@ functions/         la fonction « fiche-vision » (pas encore déployée)
 a-valider/         modifications prêtes mais pas encore appliquées (accord à donner)
 ```
 
-## En attente d'accord (`a-valider/`)
+## En attente d'application (`a-valider/`)
 
-Ces fichiers ne sont **pas** appliqués sur Supabase. Une fois l'accord donné, chacun
-est déplacé dans `migrations/` (avec son horodatage) et appliqué sous son nom.
-Aucun fichier n'y attend pour l'instant.
+Ces fichiers ne sont **pas encore** appliqués sur Supabase. L'accord est donné
+(13 octobre 2026), mais ils retirent ou remplacent des éléments : l'outil de
+Claude exige alors une confirmation qu'il ne peut pas obtenir. Le propriétaire les
+applique en collant `a-valider/A_COLLER_DANS_SUPABASE.sql` (les trois fichiers
+numérotés, dans une transaction) dans Supabase → SQL Editor. Ensuite, chaque
+fichier passe dans `migrations/` avec l'horodatage de son application.
+
+1. `1_revizstmg_securite_0_nettoyage.sql` : retire 9 lignes de test d'avant les
+   comptes (identifiants d'appareil qui ne correspondent à aucun compte).
+2. `2_revizstmg_securite_2_regles.sql` : remplace les règles « ouvertes à tous »
+   des 16 tables sociales (voir « Règles d'accès » plus bas).
+3. `3_revizstmg_suppression_compte.sql` : `revizstmg_supprimer_compte()`, la
+   suppression complète du compte par l'élève (e-mail de connexion compris).
+
+Tant qu'ils ne sont pas appliqués, l'application fonctionne avec les anciennes
+règles, mais « Supprimer mon compte » échoue proprement (message d'erreur, compte
+intact).
+
+## Tester les règles d'accès
+
+`supabase/tests/lancer.sh [a-valider/A_COLLER_DANS_SUPABASE.sql]` monte une base
+PostgreSQL locale et jetable, imite Supabase (`imitation-supabase.sql`), applique
+toutes les migrations et joue `regles-acces.sql` : un élève, un autre élève hors de
+la classe, le professeur, un parent sans compte et la suppression du compte. Rien
+ne touche la vraie base.
 
 ## Comptage et mesure d'audience (appliqué le 12 octobre 2026)
 
@@ -92,7 +114,31 @@ Au 5 octobre 2026, ces tables ne contiennent que quelques lignes de test (10 com
 dans `profiles`). Le risque est faible aujourd'hui, mais **il faut le corriger avant
 d'ouvrir l'application à des classes** : il s'agit de données de mineurs.
 
-### Corrections recommandées (pas encore appliquées)
+### Règles d'accès (13 octobre 2026)
+
+Les corrections ci-dessous sont faites (fichiers `20261013*` et `a-valider/`) :
+
+- **Compte obligatoire** pour les tables sociales : la clé publique seule (anon)
+  n'y a plus aucun droit. L'identifiant public d'un élève (`device_id`,
+  `*_device`) est l'identifiant de son compte : chacun n'écrit que ses lignes.
+- **Classe** visible de ses seuls membres et de son professeur ; les actions du
+  professeur (réglages, groupes, exclusions, QCM approuvés, direct, annonces)
+  réservées au propriétaire de la classe (`teacher_class.owner_id`).
+- **Codes** : une classe, un ami ou le suivi d'un enfant se trouvent par leur code
+  exact via `revizstmg_classe`, `revizstmg_trouver_ami`, `revizstmg_stats_enfant`
+  (cette dernière ouverte aux parents sans compte). Les ligues
+  (`revizstmg_ligue`, `revizstmg_ligue_classe`) masquent les codes des autres
+  classes.
+- **Déclencheurs** : un élève ne modifie chez un autre que ce qui lui revient
+  (réactions du mur, relever un duel, accepter une demande ou un défi qu'on lui
+  adresse) ; codes ami et parent figés ; limites d'envoi (mur : 1 message par
+  15 s et 20 par 10 min ; demandes d'ami : 20/h ; défis : 30/h ; QCM : 30/h par
+  classe ; classes : 30 par professeur ; signalements : 10/h par compte).
+- **Tailles maximales** (textes, photos, questions) par contraintes `check`.
+- Les fonctions d'aide sont dans le schéma `revizstmg_prive`, que l'API n'expose
+  pas.
+
+### Corrections recommandées le 5 octobre (historique)
 
 1. **Espace parent et codes amis** : retirer la lecture directe de `child_stats` et
    `friend_user`. À la place, une fonction `security definer` qui ne renvoie que la

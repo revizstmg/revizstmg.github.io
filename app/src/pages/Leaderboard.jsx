@@ -107,7 +107,7 @@ export default function Leaderboard() {
               const mine = myCode && c.code === myCode
               return (
                 <div
-                  key={c.code}
+                  key={c.cle || c.code}
                   className={`card flex items-center gap-3 p-3 ${mine ? 'ring-2' : ''}`}
                   style={mine ? { boxShadow: 'inset 0 0 0 2px var(--c-accent)' } : undefined}
                 >

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useStore, starsFromScore } from '../store.jsx'
 import { Stars, Confetti, Icon } from '../components/ui.jsx'
 import { useT } from '../i18n.js'
+import SignalerErreur from '../components/SignalerErreur.jsx'
 import Qcm from './Qcm.jsx'
 import VraiFaux from './VraiFaux.jsx'
 import Flashcards from './Flashcards.jsx'
@@ -145,6 +146,9 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit 
         </span>
       </div>
       <Comp key={runKey} game={game} mode={mode} color={color} onDone={handleDone} />
+      <div className="mt-3 text-right">
+        <SignalerErreur themeId={chapterId} exercice={`${game.title || ''} (${game.id || game.type})`} libelle="Signaler une erreur dans cet exercice" />
+      </div>
     </div>
   )
 }

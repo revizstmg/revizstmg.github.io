@@ -50,6 +50,7 @@ function rediger(u, c, p, histo) {
     l.push(`| Quiz de classe | ${nb(u.quiz_de_classe)} · sessions en direct : ${nb(u.sessions_live)} |`)
     l.push(`| Amis | ${nb(u.joueurs_amis)} joueurs · ${nb(u.defis_amis)} défis (${nb(u.defis_amis_7j)} cette semaine) |`)
     l.push(`| Suivi des parents | ${nb(u.suivis_parents)} élèves suivis (${nb(u.suivis_parents_actifs_7j)} actifs cette semaine) |`)
+    if (u.signalements_a_traiter != null) l.push(`| Erreurs signalées | ${nb(u.signalements_a_traiter)} à traiter · ${nb(u.signalements_7j)} reçues cette semaine |`)
     if (u.visites_7j != null) {
       l.push(`| Visites | ${nb(u.visites_hier)} hier (${nb(u.vues_hier)} pages vues) · ${nb(u.visites_7j)} en 7 jours (${nb(u.vues_7j)} pages vues) |`)
       l.push(`| Écrans les plus vus (7 jours) | ${repartition(u.ecrans_7j, (k) => k)} |`)
@@ -99,6 +100,7 @@ const entree = {
   actifs_7j: u.actifs_7j ?? null, nouveaux_7j: u.nouveaux_7j ?? null, visites: u.visites_hier ?? null,
   actifs_1j: u.actifs_1j ?? null, actifs_30j: u.actifs_30j ?? null, vues: u.vues_hier ?? null,
   classes: u.classes ?? null, defis_amis: u.defis_amis ?? null, suivis_parents: u.suivis_parents ?? null,
+  signalements: u.signalements_a_traiter ?? null,
   themes: c.themes, chapitres: c.chapitres, questions: c.questions, flashcards: c.flashcards,
 }
 histo = [...histo.filter((h) => h.date !== jour), entree].slice(-400)

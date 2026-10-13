@@ -5,14 +5,13 @@ import { trackLabel, trackIcon, subjectsForTrack } from '../data/tracks.js'
 import { badgeById } from '../badges.js'
 import { Ring, ProgressBar, Icon } from '../components/ui.jsx'
 import { useT } from '../i18n.js'
-import { signOut, deleteMyProfile } from '../auth.js'
-import { deleteMyClassData, deleteMyTeacherClasses } from '../classroom.js'
-import { deleteMyFriendData } from '../friends.js'
+import { signOut, supprimerCompte, isSignedIn } from '../auth.js'
 import { InstallCard, AppBadge } from '../components/InstallApp.jsx'
 import { ProgressCurve, ThemeTimeBars } from '../components/StatsCharts.jsx'
 import { isStandalone } from '../pwa.js'
 import { ensurePermission, notify, notifSupported } from '../notify.js'
-import { parentCode, deleteMyChildStats, PARENT_READY } from '../parent.js'
+import { parentCode, PARENT_READY } from '../parent.js'
+import { estEnEssai, creerMonCompte } from '../components/CompteRequis.jsx'
 
 // Droit à la portabilité (RGPD) : tout ce que l'app garde sur cet appareil pour
 // l'élève, dans un fichier JSON lisible, sans passer par un e-mail.
@@ -46,15 +45,18 @@ export default function Profile() {
     if (busy) return
     if (!confirm(t('deleteAccountConfirm'))) return
     setBusy(true)
-    // Tout ce que l'app a publié pour cet élève : profil et progression, classe,
-    // amis et duels, suivi parent, et les classes d'un professeur.
-    await Promise.all([
-      deleteMyProfile(),
-      deleteMyClassData(),
-      deleteMyFriendData(),
-      deleteMyChildStats(),
-      state.account?.role === 'prof' ? deleteMyTeacherClasses(state.account.id) : true,
-    ].map((p) => Promise.resolve(p).catch(() => false)))
+    // La base efface tout ce que l'app a publié pour cet élève (profil et
+    // progression, classe, amis et duels, suivi parent, classes d'un
+    // professeur), puis le compte de connexion lui-même.
+    // Sans session (essai sans compte), il n'y a rien en ligne : on efface
+    // seulement ce qui est sur l'appareil.
+    try {
+      if (isSignedIn()) await supprimerCompte()
+    } catch {
+      setBusy(false)
+      alert(t('deleteAccountFailed'))
+      return
+    }
     signOut()
     resetAll()
   }
@@ -172,8 +174,16 @@ export default function Profile() {
         )}
       </section>
 
-      {/* Suivi parental : partage volontaire, puis code à donner à ses parents */}
-      {PARENT_READY && (
+      {/* Suivi parental : partage volontaire, puis code à donner à ses parents
+          (avec un compte : la base n'accepte la publication que d'un compte connecté). */}
+      {PARENT_READY && estEnEssai(state) && (
+        <section className="card p-5">
+          <h2 className="font-display text-xl font-medium">👨‍👩‍👧 {t('studentParentCard')}</h2>
+          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Pour que tes parents suivent ta progression, crée d’abord ton compte : ta progression d’essai y sera gardée.</p>
+          <button type="button" onClick={creerMonCompte} className="btn-primary mt-3 text-sm">Créer mon compte</button>
+        </section>
+      )}
+      {PARENT_READY && !estEnEssai(state) && (
         <section className="card p-5">
           <div className="flex items-start gap-3">
             <div className="min-w-0 flex-1">

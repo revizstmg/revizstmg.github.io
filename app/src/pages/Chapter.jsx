@@ -5,6 +5,7 @@ import { getChapter, getSubject, themeChapters, jeuxDuChapitre, sectionDefinitio
 import { useStore, useThemeTimer } from '../store.jsx'
 import { PaginatedCourse, CourseText, saveFiche } from '../components/Course.jsx'
 import GameHost from '../games/GameHost.jsx'
+import SignalerErreur from '../components/SignalerErreur.jsx'
 import { useT, useGameLabel } from '../i18n.js'
 
 export default function Chapter() {
@@ -136,6 +137,9 @@ export default function Chapter() {
           onPrev={prev ? () => navigate(`/subject/${sid}/theme/${tid}/chapter/${prev.idx}`) : null}
           onNext={() => navigate(next ? `/subject/${sid}/theme/${tid}/chapter/${next.idx}` : `/subject/${sid}/theme/${tid}?tab=test`)}
         />
+        <div className="no-print mt-4 text-center">
+          <SignalerErreur themeId={tid} exercice={`Cours : ${chapter.title || ''}`} defaut="cours" libelle="Une erreur dans ce cours ? Signale-la" />
+        </div>
       </div>
 
       {/* ONGLET DÉFINITIONS (imprimé dans la fiche PDF) */}

@@ -64,6 +64,7 @@ export default function Welcome() {
   const [taught, setTaught] = useState([]) // matières/spécialités enseignées (prof)
   const [nClasses, setNClasses] = useState(1) // nombre de classes (prof)
   const [recoverStep, setRecoverStep] = useState(null) // null | 'request' | 'code'
+  const [essai, setEssai] = useState(false) // écran « Essayer sans compte »
   const [code, setCode] = useState('')
   const [newPass, setNewPass] = useState('')
   const [consent, setConsent] = useState(false) // acceptation politique de confidentialité
@@ -106,6 +107,21 @@ export default function Welcome() {
     const id = setTimeout(() => finishRef.current(), 4600)
     return () => clearTimeout(id)
   }, [phase])
+
+  // Essai sans compte → « Créer mon compte » (bandeau, espaces partagés) : on
+  // rouvre l'inscription ; prénom, nom et filière sont déjà remplis, et la
+  // progression de l'essai passe sur le compte dès sa création.
+  useEffect(() => {
+    const ouvrir = () => {
+      setEssai(false); setRecoverStep(null); setOauthNew(false); setRole('eleve')
+      setFirstName(state.profile?.firstName || ''); setLastName(state.profile?.lastName || '')
+      if (state.track?.level) { setLevel(state.track.level); setSpecialty(state.track.specialty || null) }
+      setAuthMode('create'); setSignupStep(1); setErr(''); setInfo(''); debutInscription.current = Date.now()
+      setLeaving(false); setPhase('form')
+    }
+    window.addEventListener('stmg-creer-compte', ouvrir)
+    return () => window.removeEventListener('stmg-creer-compte', ouvrir)
+  }, [state.profile?.firstName, state.profile?.lastName, state.track?.level, state.track?.specialty])
 
   // Quels fournisseurs OAuth sont réellement activés : on n'affiche que
   // ces boutons-là (sinon un clic renverrait « provider is not enabled »).
@@ -258,6 +274,17 @@ export default function Welcome() {
     } finally {
       setBusy(false)
     }
+  }
+
+  // Essai sans compte : prénom et filière, puis l'application, avec une
+  // progression gardée sur l'appareil (aucune donnée envoyée).
+  const essaiOk = prenomOk && !!chosenLevel?.available && specialtyOk
+  const commencerEssai = () => {
+    if (!essaiOk) return
+    setAccount(null)
+    applyOnboarding({ profile: { firstName: firstName.trim(), lastName: '', photo: state.profile?.photo }, track: { level, specialty: needsSpecialty ? specialty : null } })
+    setEssai(false)
+    setPhase('plan')
   }
 
   // Connexion à partir d'une session déjà ouverte (login ou récupération).
@@ -415,8 +442,34 @@ export default function Welcome() {
       <div className="welcome-card">
         <p className="welcome-brand">RévizSTMG</p>
 
-        {/* ---------- Mot de passe oublié ---------- */}
-        {recoverStep ? (
+        {/* ---------- Essai sans compte ---------- */}
+        {essai ? (
+          <>
+            <h1 className="welcome-h">Essayer sans compte</h1>
+            <p className="welcome-sub">Ta progression restera sur cet appareil. Crée ton compte quand tu veux pour la retrouver partout, rejoindre ta classe et ajouter des amis : rien ne sera perdu.</p>
+            <label className="welcome-label" htmlFor="w-essai-prenom">{t('firstName')}</label>
+            <input id="w-essai-prenom" className="welcome-input" value={firstName} onChange={(e) => setFirstName(e.target.value)} onBlur={quitte('prenom')} aria-invalid={Boolean(vu.prenom && firstName.trim() && !prenomOk)} placeholder={t('yourFirstName')} autoComplete="given-name" maxLength={40} />
+            {vu.prenom && firstName.trim() && !prenomOk && <p className="welcome-aide erreur">{t('nameRule')}</p>}
+            <span className="welcome-label">{t('yourClass')}</span>
+            <div className="flex flex-wrap gap-2">
+              {LEVELS.map((l) => (
+                <button key={l.id} type="button" disabled={!l.available} onClick={() => pickLevel(l)} className={seg(level === l.id)}>{l.icon} {l.name}{!l.available && ` · ${t('soon')}`}</button>
+              ))}
+            </div>
+            {needsSpecialty && (
+              <>
+                <span className="welcome-label">{t('yourSpecialty')}</span>
+                <div className="flex flex-wrap gap-2">
+                  {chosenLevel.specialties.map((sp) => (
+                    <button key={sp.id} type="button" disabled={!sp.available} onClick={() => sp.available && setSpecialty(sp.id)} className={seg(specialty === sp.id)}>{sp.icon} {sp.name}{!sp.available && ` · ${t('toCome')}`}</button>
+                  ))}
+                </div>
+              </>
+            )}
+            <button type="button" className="welcome-cta" disabled={!essaiOk} onClick={commencerEssai}>Commencer l’essai</button>
+            <button type="button" className="welcome-skip" onClick={() => setEssai(false)}>{t('backToLogin')}</button>
+          </>
+        ) : recoverStep ? (
           <>
             <h1 className="welcome-h">{t('forgotPassword')}</h1>
             <p className="welcome-sub">{recoverStep === 'request' ? t('resetIntro') : t('resetCodeIntro')}</p>
@@ -456,6 +509,7 @@ export default function Welcome() {
             {info && <p className="mt-3 text-sm font-semibold text-emerald-700">{info}</p>}
             <button type="button" className="welcome-cta" disabled={!step1Ok || busy} onClick={() => submitForm()}>{busy ? t('pleaseWait') : t('loginTab')}</button>
             <button type="button" className="welcome-skip" disabled={busy} onClick={goCreate}>{t('noAccountYet')}</button>
+            <button type="button" className="welcome-skip" disabled={busy} onClick={() => { setEssai(true); setErr(''); setInfo('') }}>Essayer sans compte</button>
           </>
         ) : (
           /* ---------- Inscription en étapes ---------- */

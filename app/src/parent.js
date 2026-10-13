@@ -4,13 +4,13 @@
 // consulte, en lecture seule, la progression de son enfant (temps de révision,
 // connexion/série, XP, matières, badges…). Le lien est mémorisé localement sur
 // l'appareil du parent → une fois relié, l'espace s'ouvre automatiquement.
-import { SUPA_URL, SUPA_ANON, SUPA_READY } from './supabase.js'
+// L'élève publie avec son compte ; le parent, sans compte, lit l'instantané par
+// la fonction revizstmg_stats_enfant, qui ne renvoie que la ligne du code donné.
+import { SUPA_READY } from './supabase.js'
 import { deviceId } from './leaderboard.js'
+import { enc, send, rpc } from './reseau.js'
 
 export const PARENT_READY = SUPA_READY
-const H = () => ({ apikey: SUPA_ANON, Authorization: 'Bearer ' + SUPA_ANON, 'Content-Type': 'application/json' })
-const rest = (p) => `${SUPA_URL}/rest/v1/${p}`
-const enc = encodeURIComponent
 const clampInt = (v, min, max) => Math.max(min, Math.min(max, Math.round(v || 0)))
 
 // Code à donner à ses parents (6 caractères lisibles, préfixe P pour le repérer).
@@ -27,17 +27,6 @@ export function parentCode() {
 }
 export function normParentCode(s) {
   return String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6)
-}
-
-async function getJSON(url) {
-  const r = await fetch(url, { headers: H() })
-  if (!r.ok) throw new Error('GET ' + r.status)
-  return r.json()
-}
-async function send(method, path, body, prefer) {
-  const r = await fetch(rest(path), { method, headers: { ...H(), ...(prefer ? { Prefer: prefer } : {}) }, body: body ? JSON.stringify(body) : undefined })
-  if (!r.ok) throw new Error(method + ' ' + r.status)
-  return r
 }
 
 // ÉLÈVE — publie / met à jour l'instantané lu par le parent.
@@ -67,7 +56,12 @@ export async function publishChildStats(snap) {
     last_active: new Date().toISOString(),
     updated_at: new Date().toISOString(),
   }
-  await send('POST', 'child_stats?on_conflict=device_id', [row], 'resolution=merge-duplicates,return=minimal')
+  const res = await send('POST', 'child_stats?on_conflict=device_id', [row], 'resolution=merge-duplicates,return=representation')
+  // La base garde le premier code du compte : depuis un autre appareil, on
+  // reprend ce code-là pour montrer à l'élève celui que ses parents connaissent.
+  const rows = await res.json().catch(() => [])
+  const code = rows?.[0]?.code
+  if (code && code !== parentCode()) { try { localStorage.setItem('stmg_parent_code', code) } catch { /* stockage indisponible */ } }
 }
 
 // ÉLÈVE — supprime son instantané (rompre le suivi côté enfant). Renvoie vrai si
@@ -81,8 +75,8 @@ export async function deleteMyChildStats() {
 export async function fetchChildByCode(code) {
   const c = normParentCode(code)
   if (c.length < 4) return null
-  const rows = await getJSON(rest(`child_stats?select=*&code=eq.${enc(c)}&order=updated_at.desc&limit=1`))
-  return rows[0] || null
+  const rows = await rpc('revizstmg_stats_enfant', { p_code: c })
+  return rows?.[0] || null
 }
 
 // Lien parent ↔ enfant, mémorisé localement sur l'appareil du parent.

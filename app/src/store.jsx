@@ -323,7 +323,7 @@ export function StoreProvider({ children }) {
   // et facultatif — c'est ce que le parent relié consulte en lecture seule.
   // Rien n'est publié tant que l'élève n'a pas activé le partage (Mon espace).
   useEffect(() => {
-    if (!PARENT_READY || !state.track || !state.parentShare) return
+    if (!PARENT_READY || !state.track || !state.parentShare || !isSignedIn()) return
     const id = setTimeout(() => { publishChildStats(buildChildSnapshot(state, deriveAll(state))).catch(() => {}) }, 3000)
     return () => clearTimeout(id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -332,7 +332,7 @@ export function StoreProvider({ children }) {
   // Partage désactivé : on efface l'instantané déjà publié par cet appareil (une
   // fois ; le marqueur évite de le redemander à chaque ouverture).
   useEffect(() => {
-    if (!PARENT_READY || !state.track || state.parentShare) return
+    if (!PARENT_READY || !state.track || state.parentShare || !isSignedIn()) return
     try { if (localStorage.getItem('stmg_parent_efface')) return } catch { return }
     deleteMyChildStats().then((ok) => { try { if (ok) localStorage.setItem('stmg_parent_efface', '1') } catch { /* stockage indisponible */ } })
   }, [state.track, state.parentShare])

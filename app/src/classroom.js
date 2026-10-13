@@ -1,31 +1,15 @@
 // Espace « Classe » partagé (par code de classe) via Supabase.
-// Le site reste statique : on parle directement à l'API REST (PostgREST) avec
-// la clé publique « anon » (protégée par des règles RLS permissives : la classe
-// est un espace collaboratif entre camarades identifiés par leur code).
-import { SUPA_URL, SUPA_ANON, SUPA_READY } from './supabase.js'
+// Le site reste statique : on parle directement à l'API REST (PostgREST), avec
+// le jeton du compte connecté (reseau.js). La base ne montre une classe qu'à ses
+// membres et à son professeur, et réserve à celui-ci les actions de gestion
+// (supabase/README.md) : connaître le code suffit pour rejoindre la classe.
+import { SUPA_READY } from './supabase.js'
+import { authFetch } from './auth.js'
 import { deviceId, normalizeCode, isoWeekKey } from './leaderboard.js'
+import { rest, enc, getJSON, send, rpc } from './reseau.js'
 
 export const CLASSROOM_READY = SUPA_READY
 export { deviceId, normalizeCode, isoWeekKey }
-
-const H = () => ({ apikey: SUPA_ANON, Authorization: 'Bearer ' + SUPA_ANON, 'Content-Type': 'application/json' })
-const enc = encodeURIComponent
-const rest = (path) => `${SUPA_URL}/rest/v1/${path}`
-
-async function getJSON(url) {
-  const res = await fetch(url, { headers: H() })
-  if (!res.ok) throw new Error('GET ' + res.status)
-  return res.json()
-}
-async function send(method, path, body, prefer) {
-  const res = await fetch(rest(path), {
-    method,
-    headers: { ...H(), ...(prefer ? { Prefer: prefer } : {}) },
-    body: body ? JSON.stringify(body) : undefined,
-  })
-  if (!res.ok) throw new Error(method + ' ' + res.status)
-  return res
-}
 
 export function todayKey() { return new Date().toISOString().slice(0, 10) }
 
@@ -240,9 +224,9 @@ export function genClassCode() {
 export async function createTeacherClass({ ownerId, ownerName, label, subject }) {
   for (let attempt = 0; attempt < 8; attempt++) {
     const code = genClassCode()
-    const res = await fetch(rest('teacher_class'), {
+    const res = await authFetch(rest('teacher_class'), {
       method: 'POST',
-      headers: { ...H(), Prefer: 'return=representation' },
+      headers: { Prefer: 'return=representation' },
       body: JSON.stringify([{ code, owner_id: ownerId || null, owner_name: String(ownerName || '').slice(0, 60), label: String(label || '').slice(0, 60), subject: String(subject || '').slice(0, 200) }]),
     })
     if (res.status === 409) continue // code déjà pris : on réessaie
@@ -256,16 +240,13 @@ export async function fetchTeacherClasses(ownerId) {
   if (!ownerId) return []
   return getJSON(rest(`teacher_class?select=id,code,label,subject,created_at&owner_id=eq.${enc(ownerId)}&order=created_at.asc&limit=50`))
 }
+// Classe d'un professeur à partir de son code (fonction de la base : on ne
+// peut pas lister les classes des autres).
 export async function fetchClassByCode(code) {
-  const rows = await getJSON(rest(`teacher_class?select=id,code,label,owner_id,owner_name,subject&code=eq.${enc(normalizeCode(code))}&limit=1`))
-  return rows[0] || null
+  const rows = await rpc('revizstmg_classe', { p_code: normalizeCode(code) })
+  return rows?.[0] || null
 }
 export async function deleteTeacherClass(id) { await send('DELETE', `teacher_class?id=eq.${enc(id)}`) }
-// Suppression du compte d'un professeur : ses classes disparaissent avec lui.
-export async function deleteMyTeacherClasses(ownerId) {
-  if (!ownerId) return true
-  try { await send('DELETE', `teacher_class?owner_id=eq.${enc(ownerId)}`); return true } catch { return false }
-}
 
 // --- Exclusion d'élèves ----------------------------------------------------
 export async function banStudent({ classCode, deviceId: dev }) {
@@ -281,38 +262,10 @@ export async function isBanned(classCode, dev) {
   return rows.length > 0
 }
 
-// --- RGPD : efface toutes les données de classe rattachées à cet appareil ---
-export async function deleteMyClassData() {
-  const dev = deviceId()
-  const q = `device_id=eq.${enc(dev)}`
-  const del = (path) => fetch(rest(path), { method: 'DELETE', headers: H() }).catch(() => {})
-  await Promise.all([
-    del(`class_member?${q}`),
-    del(`leaderboard?${q}`),
-    del(`class_quiz_result?${q}`),
-    del(`class_wall?${q}`),
-    del(`class_duel?challenger_device=eq.${enc(dev)}`),
-    del(`live_player?${q}`),
-  ])
-  return true
-}
-
 // --- Ligue : les classes d'un même professeur s'affrontent -----------------
+// Totaux de la semaine calculés par la base (revizstmg_ligue_classe), pour les
+// membres de la classe : libellé des classes sœurs, codes masqués sauf le sien.
 export async function fetchLeague(classCode) {
-  const wk = isoWeekKey()
-  const me = await fetchClassByCode(classCode)
-  let siblings = []
-  if (me?.owner_id) siblings = await getJSON(rest(`teacher_class?select=code,label&owner_id=eq.${enc(me.owner_id)}&limit=50`))
-  if (siblings.length <= 1) return [] // pas de ligue avec une seule classe
-  const labelOf = Object.fromEntries(siblings.map((s) => [s.code, s.label || s.code]))
-  const codes = siblings.map((s) => s.code)
-  const rows = await getJSON(rest(`class_member?select=class_code,courses_week,role&class_code=in.(${codes.map(enc).join(',')})&week=eq.${wk}&limit=2000`))
-  const by = {}
-  for (const c of codes) by[c] = { class_code: c, label: labelOf[c], total: 0, members: 0 }
-  for (const r of rows) {
-    if (r.role === 'prof' || !by[r.class_code]) continue
-    by[r.class_code].total += r.courses_week || 0
-    by[r.class_code].members += 1
-  }
-  return Object.values(by).sort((a, b) => b.total - a.total || b.members - a.members)
+  const rows = (await rpc('revizstmg_ligue_classe', { p_code: normalizeCode(classCode), p_semaine: isoWeekKey() })) || []
+  return rows.map((r) => ({ class_code: r.class_code, label: r.label, total: Number(r.total) || 0, members: Number(r.members) || 0 }))
 }

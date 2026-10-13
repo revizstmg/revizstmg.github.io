@@ -1,14 +1,13 @@
 // Amis (demandes mutuelles) via Supabase. Modèle « code ami » : chaque élève
 // a un code court à partager ; on envoie une demande à un code, l'ami
-// l'accepte, puis chacun voit la progression de l'autre. Anonyme par appareil
-// (clé anon + device_id), comme l'espace classe.
-import { SUPA_URL, SUPA_ANON, SUPA_READY } from './supabase.js'
+// l'accepte, puis chacun voit la progression de l'autre. Il faut un compte : la
+// base ne montre une fiche qu'à son auteur et à ses amis, et ne trouve une fiche
+// par son code que via la fonction revizstmg_trouver_ami (supabase/README.md).
+import { SUPA_READY } from './supabase.js'
 import { deviceId, isoWeekKey } from './leaderboard.js'
+import { rest, enc, getJSON, send, rpc } from './reseau.js'
 
 export const FRIENDS_READY = SUPA_READY
-const H = () => ({ apikey: SUPA_ANON, Authorization: 'Bearer ' + SUPA_ANON, 'Content-Type': 'application/json' })
-const rest = (p) => `${SUPA_URL}/rest/v1/${p}`
-const enc = encodeURIComponent
 
 // Code ami stable, stocké localement (6 caractères sans risque de confusion).
 export function friendCode() {
@@ -26,17 +25,6 @@ export function normFriendCode(s) {
   return String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6)
 }
 
-async function getJSON(url) {
-  const r = await fetch(url, { headers: H() })
-  if (!r.ok) throw new Error('GET ' + r.status)
-  return r.json()
-}
-async function send(method, path, body, prefer) {
-  const r = await fetch(rest(path), { method, headers: { ...H(), ...(prefer ? { Prefer: prefer } : {}) }, body: body ? JSON.stringify(body) : undefined })
-  if (!r.ok) throw new Error(method + ' ' + r.status)
-  return r
-}
-
 // Publie / met à jour ma fiche pour que mes amis voient mes stats à jour.
 export async function upsertMe({ name, photo, xp, streak, coursesWeek }) {
   const row = {
@@ -48,14 +36,19 @@ export async function upsertMe({ name, photo, xp, streak, coursesWeek }) {
     courses_week: Math.max(0, Math.min(1000, Math.round(coursesWeek || 0))),
     week: isoWeekKey(), updated_at: new Date().toISOString(),
   }
-  await send('POST', 'friend_user?on_conflict=device_id', [row], 'resolution=merge-duplicates,return=minimal')
+  const res = await send('POST', 'friend_user?on_conflict=device_id', [row], 'resolution=merge-duplicates,return=representation')
+  // La base garde le premier code du compte : depuis un autre appareil, on
+  // reprend ce code-là pour afficher le bon.
+  const rows = await res.json().catch(() => [])
+  const code = rows?.[0]?.code
+  if (code && code !== friendCode()) { try { localStorage.setItem('stmg_friend_code', code) } catch { /* stockage indisponible */ } }
 }
 
 export async function findByCode(code) {
   const c = normFriendCode(code)
   if (c.length < 4) return null
-  const rows = await getJSON(rest(`friend_user?select=device_id,code,name,photo,xp,streak,courses_week&code=eq.${enc(c)}&limit=1`))
-  return rows[0] || null
+  const rows = await rpc('revizstmg_trouver_ami', { p_code: c })
+  return rows?.[0] || null
 }
 
 // Envoie une demande. Retourne : 'sent' | 'self' | 'notfound' | 'exists' | 'accepted'
@@ -171,18 +164,4 @@ export function duelOutcome(d, me = deviceId()) {
   if (mine > theirs) result = 'win'
   else if (mine < theirs) result = 'loss'
   return { mine: mine ?? 0, theirs: theirs ?? 0, opp, result, iAmA }
-}
-
-// Suppression du compte : efface la fiche ami de cet appareil (prénom, photo, XP),
-// ses demandes d'amis et ses duels, envoyés comme reçus.
-export async function deleteMyFriendData() {
-  if (!FRIENDS_READY) return false
-  const me = enc(deviceId())
-  const del = (p) => fetch(rest(p), { method: 'DELETE', headers: H() }).then((r) => r.ok, () => false)
-  const ok = await Promise.all([
-    del(`friend_user?device_id=eq.${me}`),
-    del(`friend_request?or=(from_device.eq.${me},to_device.eq.${me})`),
-    del(`friend_duel?or=(a_device.eq.${me},b_device.eq.${me})`),
-  ])
-  return ok.every(Boolean)
 }

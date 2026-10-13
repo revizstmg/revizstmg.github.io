@@ -94,6 +94,9 @@ const PREREQ_SECTIONS = {
     /Produire[^]*facteurs et combinaison productive/i,
     /Étude de cas guidée[^]*caractériser et diagnostiquer/i,
     /Mesurer la performance/i,
+    // Management stratégique / opérationnel : notion du thème 1 de Première
+    // (« Qu'est-ce que le management des organisations ? »).
+    /Management stratégique et opérationnel/i,
     // « Organiser la production » reste affiché : c'est la question 1.3 du
     // programme de Terminale (flexibilité, qualité, maîtrise des coûts).
   ],

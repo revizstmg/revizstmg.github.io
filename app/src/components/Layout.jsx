@@ -14,6 +14,7 @@ import Accessibility from './Accessibility.jsx'
 import ReminderScheduler from './ReminderScheduler.jsx'
 import { InstallBanner } from './InstallApp.jsx'
 import { BandeauCookies } from './BandeauCookies.jsx'
+import { BandeauEssai } from './CompteRequis.jsx'
 import { useT, useLang } from '../i18n.js'
 import { signOut } from '../auth.js'
 import { useFocus } from '../focus.jsx'
@@ -249,6 +250,7 @@ export default function Layout({ children }) {
         <Breadcrumb />
       </header>
 
+      <BandeauEssai />
       <main className="mx-auto max-w-4xl px-4 pb-16 pt-4">
         <div key={pathname} className="page-enter">{children}</div>
       </main>

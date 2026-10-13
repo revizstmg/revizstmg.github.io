@@ -5,6 +5,7 @@ import Layout from './components/Layout.jsx'
 import EcranSecours from './components/EcranSecours.jsx'
 import Introuvable from './pages/Introuvable.jsx'
 import { getLinkedChild } from './parent.js'
+import AvecCompte from './components/CompteRequis.jsx'
 import { Chargement, ContenuMatiere, ContenuFiliere } from './content/Contenu.jsx'
 
 // Chaque page est un fichier compilé à part, chargé quand on l'ouvre.
@@ -75,7 +76,7 @@ export default function App() {
         <Route path="/subject/:sid/chapter/:cid" element={<OldChapterRedirect />} />
         <Route path="/favoris" element={<Favoris />} />
         <Route path="/badges" element={<Badges />} />
-        <Route path="/classe" element={<Classe />} />
+        <Route path="/classe" element={<AvecCompte quoi="rejoindre ta classe"><Classe /></AvecCompte>} />
         <Route path="/moi" element={<Profile />} />
         <Route path="/coach" element={<Coach />} />
         <Route path="/revision" element={<Revise />} />
@@ -96,8 +97,8 @@ export default function App() {
         <Route path="/cgu" element={<Cgu />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/guide" element={<Guide />} />
-        <Route path="/classement" element={<Leaderboard />} />
-        <Route path="/amis" element={<ContenuFiliere><Friends /></ContenuFiliere>} />
+        <Route path="/classement" element={<AvecCompte quoi="apparaître au classement"><Leaderboard /></AvecCompte>} />
+        <Route path="/amis" element={<AvecCompte quoi="ajouter des amis et les défier"><ContenuFiliere><Friends /></ContenuFiliere></AvecCompte>} />
         <Route path="*" element={<Introuvable />} />
       </Routes>
       </Suspense>

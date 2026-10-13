@@ -1,9 +1,10 @@
 // Classement hebdomadaire partagé (par code de classe) via Supabase.
 // Le site reste statique : on parle directement à l'API REST (PostgREST) de
-// Supabase avec la clé publique « anon » (protégée par des règles RLS).
-import { SUPA_URL, SUPA_ANON, SUPA_READY } from './supabase.js'
+// Supabase, avec le jeton du compte connecté (reseau.js).
+import { SUPA_READY } from './supabase.js'
+import { getSession } from './auth.js'
+import { rest, enc, getJSON, send, rpc } from './reseau.js'
 
-const SUPA_KEY = SUPA_ANON
 export const LEADERBOARD_READY = SUPA_READY
 
 // Clé de semaine ISO (identique au store) : « 2026-W36 ».
@@ -16,8 +17,13 @@ export function isoWeekKey(d = new Date()) {
   return `${date.getUTCFullYear()}-W${String(weekNo).padStart(2, '0')}`
 }
 
-// Identifiant d'appareil (anonyme, stable) — pour ne pas créer de doublons.
+// Identifiant public de l'élève dans les espaces partagés (classe, amis,
+// parent, classement). Connecté, c'est l'identifiant de son compte : la base
+// vérifie que chacun n'écrit que ses lignes, et l'élève garde la même identité
+// d'un appareil à l'autre. Sans compte, un identifiant d'appareil anonyme.
 export function deviceId() {
+  const compte = getSession()?.user?.id
+  if (compte) return compte
   try {
     let id = localStorage.getItem('stmg_device')
     if (!id) {
@@ -34,8 +40,6 @@ export function normalizeCode(code) {
   return String(code || '').trim().toLowerCase().replace(/\s+/g, '-').slice(0, 24)
 }
 
-const headers = () => ({ apikey: SUPA_KEY, Authorization: 'Bearer ' + SUPA_KEY, 'Content-Type': 'application/json' })
-
 // Envoie / met à jour mon score de la semaine dans ma classe (upsert).
 export async function submitScore({ classCode, name, photo, courses }) {
   const row = {
@@ -47,47 +51,25 @@ export async function submitScore({ classCode, name, photo, courses }) {
     courses: Math.max(0, Math.min(1000, Math.round(courses || 0))),
     updated_at: new Date().toISOString(),
   }
-  const res = await fetch(`${SUPA_URL}/rest/v1/leaderboard?on_conflict=class_code,device_id,week`, {
-    method: 'POST',
-    headers: { ...headers(), Prefer: 'resolution=merge-duplicates,return=minimal' },
-    body: JSON.stringify([row]),
-  })
-  if (!res.ok) throw new Error('submit ' + res.status)
+  await send('POST', 'leaderboard?on_conflict=class_code,device_id,week', [row], 'resolution=merge-duplicates,return=minimal')
 }
 
 // Lit le classement de la semaine en cours pour une classe (top 100).
 export async function fetchRanking(classCode) {
   const wk = isoWeekKey()
-  const url = `${SUPA_URL}/rest/v1/leaderboard?select=name,photo,courses,device_id,updated_at&class_code=eq.${encodeURIComponent(normalizeCode(classCode))}&week=eq.${wk}&order=courses.desc,updated_at.asc&limit=100`
-  const res = await fetch(url, { headers: headers() })
-  if (!res.ok) throw new Error('fetch ' + res.status)
-  return await res.json()
+  return getJSON(rest(`leaderboard?select=name,photo,courses,device_id,updated_at&class_code=eq.${enc(normalizeCode(classCode))}&week=eq.${wk}&order=courses.desc,updated_at.asc&limit=100`))
 }
 
-// Ligue inter-classes : agrège les scores de la semaine en cours par classe.
-// On ne lit que des données déjà « publiques » (code de classe + nombre de
-// cours), jamais les noms : la ligue n'affiche que des totaux par classe.
+// Ligue inter-classes : totaux de la semaine par classe, calculés par la base
+// (revizstmg_ligue). Aucun nom ; les codes des autres classes sont masqués
+// (« stmg-k••• ») pour qu'on ne puisse pas les rejoindre sans y être invité.
 export async function fetchLeague() {
-  const wk = isoWeekKey()
-  const url = `${SUPA_URL}/rest/v1/leaderboard?select=class_code,courses,device_id&week=eq.${wk}&limit=2000`
-  const res = await fetch(url, { headers: headers() })
-  if (!res.ok) throw new Error('league ' + res.status)
-  const rows = await res.json()
-  const by = new Map()
-  for (const r of rows) {
-    const code = r.class_code
-    if (!code) continue
-    const g = by.get(code) || { code, members: new Set(), total: 0 }
-    g.members.add(r.device_id)
-    g.total += Math.max(0, Math.round(r.courses || 0))
-    by.set(code, g)
-  }
-  const list = [...by.values()].map((g) => ({
-    code: g.code,
-    members: g.members.size,
-    total: g.total,
-    avg: g.members.size ? Math.round((g.total / g.members.size) * 10) / 10 : 0,
-  }))
+  const rows = (await rpc('revizstmg_ligue', { p_semaine: isoWeekKey() })) || []
+  const list = rows.map((r, i) => {
+    const members = Number(r.members) || 0
+    const total = Number(r.total) || 0
+    return { code: r.code, cle: `${r.code}-${i}`, members, total, avg: members ? Math.round((total / members) * 10) / 10 : 0 }
+  })
   // Classement principal : total de cours de la classe (l'effort collectif).
   list.sort((a, b) => b.total - a.total || b.avg - a.avg)
   return list

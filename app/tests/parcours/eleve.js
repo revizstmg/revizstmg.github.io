@@ -5,6 +5,9 @@ export const AUJOURDHUI = new Date().toISOString().slice(0, 10)
 export function etatEleve(extra = {}) {
   return {
     profile: { firstName: 'Léa', lastName: 'Test' },
+    // Un compte (fictif) : sans lui, l'élève serait en « essai sans compte »
+    // et les espaces partagés (classe, amis) l'inviteraient à s'inscrire.
+    account: { id: '00000000-0000-4000-8000-000000000001', email: 'lea@test.fr', role: 'eleve' },
     track: { level: 'terminale-stmg', specialty: 'gestion-finance' },
     onboarded: true,
     streak: { count: 1, last: AUJOURDHUI },

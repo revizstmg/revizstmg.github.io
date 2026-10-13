@@ -338,9 +338,9 @@ function RankTab({ classCode, track, t }) {
             {league.map((c, i) => {
               const me = c.class_code === normalizeCode(classCode)
               return (
-                <div key={c.class_code} className="card flex items-center gap-3 p-3" style={me ? { boxShadow: 'inset 0 0 0 2px var(--c-accent)' } : undefined}>
+                <div key={`${c.class_code}-${i}`} className="card flex items-center gap-3 p-3" style={me ? { boxShadow: 'inset 0 0 0 2px var(--c-accent)' } : undefined}>
                   <span className="w-7 shrink-0 text-center font-display text-lg font-semibold" style={{ color: i < 3 ? undefined : 'var(--c-accent-texte)' }}>{medal(i)}</span>
-                  <span className="min-w-0 flex-1 truncate font-semibold">{c.class_code}{me && <span className="ml-1 text-xs font-normal text-slate-400">· {t('yourClassLabel')}</span>}</span>
+                  <span className="min-w-0 flex-1 truncate font-semibold">{c.label || c.class_code}{me && <span className="ml-1 text-xs font-normal text-slate-400">· {t('yourClassLabel')}</span>}</span>
                   <span className="shrink-0 text-right"><span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{c.total}</span><span className="block text-[0.65rem] uppercase tracking-wide text-slate-400">{c.members} {t('membersCount')}</span></span>
                 </div>
               )

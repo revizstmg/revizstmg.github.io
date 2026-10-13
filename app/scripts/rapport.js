@@ -245,6 +245,11 @@ export function construireRapport({ jour, verif = null, releve = null, contenu =
       ligneU('Défis entre amis', 'defis_amis', u.defis_amis),
       ligneU('Élèves suivis par leurs parents', 'suivis_parents', u.suivis_parents),
     ] })
+    // « Signaler une erreur » (depuis le 13/10/2026) : à relire dans Supabase.
+    if (u.signalements_a_traiter != null) groupes.push({ titre: 'Erreurs signalées', lignes: [
+      ligneU('Signalements à traiter', 'signalements', u.signalements_a_traiter),
+      ligneU('Signalements reçus (7 jours)', null, u.signalements_7j),
+    ] })
   }
   groupes.push({ titre: 'Contenu', lignes: [
     ligneC('Thèmes', 'themes'), ligneC('Chapitres de cours', 'chapitres'),

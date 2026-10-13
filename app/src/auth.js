@@ -107,8 +107,9 @@ export async function getValidToken() {
 }
 
 // Requête REST/Auth authentifiée : jeton frais + une nouvelle tentative après
-// rafraîchissement si le serveur répond 401 (jeton expiré entre-temps).
-async function authFetch(url, opts = {}) {
+// rafraîchissement si le serveur répond 401 (jeton expiré entre-temps). Sans
+// session, la requête part avec la clé publique seule (rôle anon).
+export async function authFetch(url, opts = {}) {
   const token = await getValidToken()
   const build = (t) => ({
     ...opts,
@@ -128,8 +129,11 @@ async function authFetch(url, opts = {}) {
 }
 
 // Crée un compte. Renvoie { needsConfirm } si l'e-mail doit être confirmé.
+// redirect_to : le lien de confirmation ramène sur RévizSTMG. Sans lui, Supabase
+// renvoie vers l'adresse par défaut du projet, qui est celle de NAH (projet
+// partagé). L'adresse doit figurer dans les « Redirect URLs » de Supabase.
 export async function signUp({ email, password }) {
-  const data = await gotrue('signup', { email, password })
+  const data = await gotrue(`signup?redirect_to=${encodeURIComponent(oauthRedirectTarget())}`, { email, password })
   if (data.access_token) { saveSession(data); return { needsConfirm: false } }
   return { needsConfirm: true }
 }
@@ -254,15 +258,15 @@ export async function saveProgress(progress) {
   return res.ok
 }
 
-// RGPD : supprime la fiche profil de l'utilisateur (nom, e-mail, photo, progression).
-export async function deleteMyProfile() {
+// RGPD : supprime le compte et tout ce que l'élève a publié (profil et
+// progression, classe, amis et duels, suivi parent, classes d'un professeur),
+// e-mail de connexion compris (fonction revizstmg_supprimer_compte de la base).
+export async function supprimerCompte() {
   const s = getSession()
-  if (!s?.token || !s.user?.id) return false
-  const res = await authFetch(`${SUPA_URL}/rest/v1/profiles?id=eq.${s.user.id}`, {
-    method: 'DELETE',
-    headers: { Prefer: 'return=minimal' },
-  })
-  return res.ok
+  if (!s?.token) throw new Error('no session')
+  const res = await authFetch(`${SUPA_URL}/rest/v1/rpc/revizstmg_supprimer_compte`, { method: 'POST', body: '{}' })
+  if (!res.ok) throw new Error('suppression ' + res.status)
+  return true
 }
 
 export async function fetchProfile() {
