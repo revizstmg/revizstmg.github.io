@@ -15,3 +15,9 @@ grant usage on schema public to anon, authenticated;
 alter default privileges in schema public grant all on tables to anon, authenticated, service_role;
 alter default privileges in schema public grant all on functions to anon, authenticated, service_role;
 alter default privileges in schema public grant all on sequences to anon, authenticated, service_role;
+-- pg_cron et pg_net n'existent que sur Supabase : de simples bouchons suffisent ici
+-- (lancer.sh retire la ligne « create extension pg_cron »).
+create schema if not exists cron;
+create or replace function cron.schedule(nom text, quand text, commande text) returns bigint language sql as $$ select 1::bigint $$;
+create schema if not exists net;
+create or replace function net.http_post(url text, body jsonb default '{}', params jsonb default '{}', headers jsonb default '{}', timeout_milliseconds integer default 5000) returns bigint language sql as $$ select 1::bigint $$;

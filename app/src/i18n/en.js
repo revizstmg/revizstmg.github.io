@@ -253,7 +253,7 @@ export default {
   reminders: 'Revision reminders', dailyReminder: 'Daily reminder', dailyReminderHint: 'A gentle “time to revise” notification.',
   reminderTime: 'Time', testNotif: 'Test', reminderTitle: 'RévizSTMG', reminderBody: 'Time to revise! 📚',
   notifDenied: 'Notifications blocked — allow them in your browser settings.', notifSent: 'Notification sent ✓', notifUnsupported: 'Notifications aren’t available on this device.',
-  reminderLimit: 'App open: reminder guaranteed. App closed: possible on installed Android; on iPhone, keep the app open in the background.',
+  reminderLimit: 'With an account, the reminder arrives even when your phone is locked, only if you haven’t revised yet that day. On iPhone, first add the app to your home screen (iOS 16.4 or later).',
   dropoutAlert: 'Students dropping off', dropoutHint: 'Reach out first.', noWorkWeek: 'Inactive this week',
   bulkImport: 'Quick import (paste several questions)', bulkAdd: 'Add the questions', bulkNone: 'No question detected — check the format.',
   bulkHelp: '1 block = 1 question (blank line between blocks).\nLine 1: the question · next lines: the choices (put * before the correct one) · line “= …”: explanation.',

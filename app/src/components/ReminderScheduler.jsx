@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
 import { notify, registerPeriodicReminder } from '../notify.js'
+import { activerRappelsPush } from '../push.js'
 
 const todayKey = () => new Date().toISOString().slice(0, 10)
 
@@ -19,6 +20,14 @@ export default function ReminderScheduler() {
   const timer = useRef(null)
   const r = state.reminder || {}
   const studiedToday = state.streak?.last === todayKey()
+
+  // Rappel téléphone fermé (compte connecté) : l'abonnement de cet appareil est
+  // rafraîchi au lancement, au cas où le navigateur l'aurait renouvelé.
+  useEffect(() => {
+    if (!r.on) return
+    const id = setTimeout(() => { activerRappelsPush(r.time).catch(() => {}) }, 4000)
+    return () => clearTimeout(id)
+  }, [r.on, r.time])
 
   useEffect(() => {
     clearTimeout(timer.current)

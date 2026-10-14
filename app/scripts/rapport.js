@@ -238,6 +238,7 @@ export function construireRapport({ jour, verif = null, releve = null, contenu =
       ligneU('Visites la veille', 'visites', u.visites_hier),
       ligneU('Pages vues la veille', 'vues', u.vues_hier),
       ligneU('Visites sur 7 jours', null, u.visites_7j),
+      ...(u.rappels_push != null ? [ligneU('Appareils avec rappel téléphone', null, u.rappels_push)] : []),
     ] })
     groupes.push({ titre: 'Classes et entraide', lignes: [
       ligneU('Classes de professeurs', 'classes', u.classes),

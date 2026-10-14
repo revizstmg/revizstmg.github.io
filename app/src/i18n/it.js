@@ -253,7 +253,7 @@ export default {
   reminders: 'Promemoria di ripasso', dailyReminder: 'Promemoria quotidiano', dailyReminderHint: 'Una notifica gentile « è ora di ripassare ».',
   reminderTime: 'Ora', testNotif: 'Prova', reminderTitle: 'RévizSTMG', reminderBody: 'È ora di ripassare! 📚',
   notifDenied: 'Notifiche rifiutate — autorizzale nelle impostazioni del tuo browser.', notifSent: 'Notifica inviata ✓', notifUnsupported: 'Notifiche non disponibili su questo dispositivo.',
-  reminderLimit: 'App aperta: promemoria garantito. App chiusa: possibile su Android installato; su iPhone, tieni l’app aperta in background.',
+  reminderLimit: 'Con un account, il promemoria arriva anche a telefono bloccato, solo se quel giorno non hai ancora ripassato. Su iPhone, aggiungi prima l’app alla schermata Home (iOS 16.4 o successivo).',
   dropoutAlert: 'Studenti a rischio abbandono', dropoutHint: 'Da richiamare in via prioritaria.', noWorkWeek: 'Inattivo questa settimana',
   bulkImport: 'Importazione rapida (incolla più domande)', bulkAdd: 'Aggiungi le domande', bulkNone: 'Nessuna domanda rilevata — controlla il formato.',
   bulkHelp: '1 blocco = 1 domanda (riga vuota tra i blocchi).\nRiga 1: la domanda · righe seguenti: le opzioni (metti * davanti a quella giusta) · riga « = … »: spiegazione.',

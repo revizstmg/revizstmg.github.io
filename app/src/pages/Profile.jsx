@@ -6,6 +6,7 @@ import { badgeById } from '../badges.js'
 import { Ring, ProgressBar, Icon } from '../components/ui.jsx'
 import { useT } from '../i18n.js'
 import { signOut, supprimerCompte, isSignedIn } from '../auth.js'
+import { pushPossible, activerRappelsPush, desactiverRappelsPush } from '../push.js'
 import { InstallCard, AppBadge } from '../components/InstallApp.jsx'
 import { ProgressCurve, ThemeTimeBars } from '../components/StatsCharts.jsx'
 import { isStandalone } from '../pwa.js'
@@ -289,12 +290,26 @@ function ReminderCard({ t }) {
   const [msg, setMsg] = useState('')
   if (!notifSupported()) return <div className="card p-4 text-sm text-slate-500 dark:text-slate-400">{t('notifUnsupported')}</div>
 
+  // Avec un compte, le rappel passe aussi par une notification « push » : il
+  // arrive même téléphone fermé (push.js).
+  const brancherPush = async (heure) => {
+    if (!pushPossible() || !isSignedIn()) return
+    try {
+      const ok = await activerRappelsPush(heure)
+      setMsg(ok ? 'Rappel activé, même téléphone fermé.' : '')
+    } catch { setMsg('Le rappel téléphone fermé n’a pas pu être activé ici : il arrivera quand l’app est ouverte.') }
+  }
   const toggle = async () => {
     if (!r.on) {
       const perm = await ensurePermission()
       if (perm !== 'granted') { setMsg(perm === 'denied' ? t('notifDenied') : t('notifUnsupported')); return }
       setReminder({ on: true }); setMsg('')
-    } else { setReminder({ on: false }); setMsg('') }
+      brancherPush(r.time || '18:00')
+    } else { setReminder({ on: false }); setMsg(''); desactiverRappelsPush() }
+  }
+  const changerHeure = (heure) => {
+    setReminder({ time: heure })
+    brancherPush(heure)
   }
   const test = async () => {
     const perm = await ensurePermission()
@@ -318,7 +333,7 @@ function ReminderCard({ t }) {
       {r.on && (
         <div className="flex items-center gap-3">
           <label className="text-sm font-semibold">{t('reminderTime')}</label>
-          <input type="time" aria-label={t('reminderTime')} value={r.time || '18:00'} onChange={(e) => setReminder({ time: e.target.value })} className="rounded-xl border border-slate-200 bg-transparent px-3 py-2 dark:border-slate-700" />
+          <input type="time" aria-label={t('reminderTime')} value={r.time || '18:00'} onChange={(e) => changerHeure(e.target.value)} className="rounded-xl border border-slate-200 bg-transparent px-3 py-2 dark:border-slate-700" />
           <button onClick={test} className="ml-auto rounded-xl px-3 py-2 text-sm font-semibold text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }}>{t('testNotif')}</button>
         </div>
       )}

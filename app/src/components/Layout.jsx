@@ -17,6 +17,7 @@ import { BandeauCookies } from './BandeauCookies.jsx'
 import { BandeauEssai } from './CompteRequis.jsx'
 import { useT, useLang } from '../i18n.js'
 import { signOut } from '../auth.js'
+import { desactiverRappelsPush } from '../push.js'
 import { useFocus } from '../focus.jsx'
 import { useInstall } from '../pwa.js'
 import { compterEcran } from '../mesure.js'
@@ -216,7 +217,7 @@ export default function Layout({ children }) {
                     <button onClick={() => { setProfileOpen(false); setCustOpen(true) }} className="flex w-full items-center gap-2 px-3 py-2.5 text-left text-sm hover:bg-slate-100 dark:hover:bg-slate-800">
                       <span aria-hidden>🎨</span> {t('customizeProfile')}
                     </button>
-                    <button onClick={() => { setProfileOpen(false); signOut(); logout() }} className="flex w-full items-center gap-2 border-t border-slate-100 px-3 py-2.5 text-left text-sm font-semibold text-rose-600 hover:bg-rose-50 dark:border-slate-800 dark:hover:bg-rose-950/40">
+                    <button onClick={async () => { setProfileOpen(false); await desactiverRappelsPush(); signOut(); logout() }} className="flex w-full items-center gap-2 border-t border-slate-100 px-3 py-2.5 text-left text-sm font-semibold text-rose-600 hover:bg-rose-50 dark:border-slate-800 dark:hover:bg-rose-950/40">
                       <span aria-hidden>🚪</span> {t('signOut')}
                     </button>
                   </div>
@@ -244,7 +245,7 @@ export default function Layout({ children }) {
             onA11y={() => setA11yOpen(true)}
             onToggleTheme={() => setTheme(isDark ? 'light' : 'dark')}
             onLang={setLang}
-            onSignOut={() => { signOut(); logout() }}
+            onSignOut={async () => { await desactiverRappelsPush(); signOut(); logout() }}
           />
         </div>
         <Breadcrumb />

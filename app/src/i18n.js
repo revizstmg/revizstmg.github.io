@@ -285,7 +285,7 @@ const FR = {
   reminders: 'Rappels de révision', dailyReminder: 'Rappel quotidien', dailyReminderHint: 'Une notification douce « c’est l’heure de réviser ».',
   reminderTime: 'Heure', testNotif: 'Tester', reminderTitle: 'RévizSTMG', reminderBody: 'C’est l’heure de réviser ! 📚',
   notifDenied: 'Notifications refusées — autorise-les dans les réglages de ton navigateur.', notifSent: 'Notification envoyée ✓', notifUnsupported: 'Notifications non disponibles sur cet appareil.',
-  reminderLimit: 'App ouverte : rappel garanti. App fermée : possible sur Android installé ; sur iPhone, garde l’app ouverte en arrière-plan.',
+  reminderLimit: 'Avec un compte, le rappel arrive même téléphone fermé, seulement si tu n’as pas encore révisé ce jour-là. Sur iPhone, installe d’abord l’app sur l’écran d’accueil (iOS 16.4 ou plus).',
   dropoutAlert: 'Élèves en décrochage', dropoutHint: 'À relancer en priorité.', noWorkWeek: 'Inactif cette semaine',
   bulkImport: 'Import rapide (coller plusieurs questions)', bulkAdd: 'Ajouter les questions', bulkNone: 'Aucune question détectée — vérifie le format.',
   bulkHelp: '1 bloc = 1 question (ligne vide entre les blocs).\nLigne 1 : la question · lignes suivantes : les choix (mets * devant la bonne) · ligne « = … » : explication.',

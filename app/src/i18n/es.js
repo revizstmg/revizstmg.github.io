@@ -253,7 +253,7 @@ export default {
   reminders: 'Recordatorios de repaso', dailyReminder: 'Recordatorio diario', dailyReminderHint: 'Una notificación suave «hora de repasar».',
   reminderTime: 'Hora', testNotif: 'Probar', reminderTitle: 'RévizSTMG', reminderBody: '¡Hora de repasar! 📚',
   notifDenied: 'Notificaciones bloqueadas — permítelas en los ajustes del navegador.', notifSent: 'Notificación enviada ✓', notifUnsupported: 'Las notificaciones no están disponibles en este dispositivo.',
-  reminderLimit: 'App abierta: recordatorio garantizado. App cerrada: posible en Android instalado; en iPhone, deja la app abierta en segundo plano.',
+  reminderLimit: 'Con una cuenta, el recordatorio llega incluso con el teléfono bloqueado, solo si aún no has repasado ese día. En iPhone, instala antes la app en la pantalla de inicio (iOS 16.4 o posterior).',
   dropoutAlert: 'Alumnos que se descuelgan', dropoutHint: 'Contáctalos primero.', noWorkWeek: 'Inactivo esta semana',
   bulkImport: 'Importación rápida (pega varias preguntas)', bulkAdd: 'Añadir las preguntas', bulkNone: 'Ninguna pregunta detectada — revisa el formato.',
   bulkHelp: '1 bloque = 1 pregunta (línea vacía entre bloques).\nLínea 1: la pregunta · líneas siguientes: las opciones (pon * antes de la correcta) · línea «= …»: explicación.',

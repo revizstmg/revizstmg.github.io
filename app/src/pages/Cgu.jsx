@@ -34,9 +34,11 @@ export default function Cgu() {
       <Section title="2. Accès au service">
         <ul className="list-disc space-y-1 pl-5">
           <li>L’application est <b>gratuite</b>, sans publicité.</li>
-          <li>Elle demande un <b>compte</b> (adresse e-mail et mot de passe), qui sauvegarde ta progression, te
-          permet de la retrouver sur plusieurs appareils et de rejoindre une classe. Les informations données
-          doivent être exactes ; le mot de passe est personnel et ne doit pas être partagé.</li>
+          <li>Elle s’essaie <b>sans compte</b> : la progression reste alors sur l’appareil. Un <b>compte</b>
+          (adresse e-mail et mot de passe, ou Google) sauvegarde ta progression, te permet de la retrouver sur
+          plusieurs appareils et donne accès aux espaces partagés (classe, amis, classement, suivi parent) et au
+          rappel téléphone fermé. Les informations données doivent être exactes ; le mot de passe est personnel et
+          ne doit pas être partagé.</li>
           <li>Pour un élève mineur, l’utilisation suppose l’accord de l’établissement ou du représentant légal.</li>
           <li>Le service est fourni « en l’état ». Les éditeurs font de leur mieux pour qu’il reste disponible, sans
           pouvoir le garantir (maintenance, panne d’un hébergeur).</li>
@@ -59,7 +61,8 @@ export default function Cgu() {
       <Section title="4. Contenu pédagogique">
         <p>Les cours et exercices suivent le programme officiel de STMG et sont relus avec soin. Ils peuvent
         malgré tout contenir des erreurs : ils complètent le cours du professeur sans le remplacer. Une erreur
-        repérée ? Écris-nous, elle sera corrigée.</p>
+        repérée ? Utilise le bouton « Signaler une erreur » sous l’exercice ou le chapitre, ou écris-nous : elle
+        sera corrigée.</p>
         <p>Les vidéos et documents proposés en lien appartiennent à leurs auteurs et s’ouvrent sur leur propre
         site, sous leurs propres conditions.</p>
       </Section>

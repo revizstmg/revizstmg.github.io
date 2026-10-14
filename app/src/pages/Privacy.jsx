@@ -37,6 +37,10 @@ export default function Privacy() {
           <li><b>Contributions</b> : QCM créés, messages de classe, réponses partagées avec ta classe.</li>
           <li><b>Photos de cours</b> envoyées à la « fiche par photo » : analysées pour créer la fiche, elles ne sont
           <b> pas conservées</b> par RévizSTMG.</li>
+          <li><b>Signalements d'erreurs</b> (bouton « Signaler une erreur ») : ton message, la page concernée et,
+          si tu es connecté, l'identifiant de ton compte (pour limiter les abus).</li>
+          <li><b>Rappel de révision sur le téléphone</b>, seulement si tu l'actives avec un compte : l'adresse
+          d'abonnement fournie par ton navigateur, l'heure choisie et ton fuseau horaire.</li>
           <li><b>Données techniques minimales</b> : celles nécessaires au bon fonctionnement et à la sécurité
           (journalisation technique par notre hébergeur). Nous n'utilisons <b>aucun cookie publicitaire</b>.</li>
         </ul>
@@ -54,7 +58,9 @@ export default function Privacy() {
         <p>RévizSTMG ne dépose <b>aucun cookie publicitaire ni cookie de mesure d'audience</b>. Ton navigateur
         garde sur ton appareil (stockage local) ce qui fait fonctionner l'application : ta progression, ta
         session de connexion, tes préférences (thème, langue, affichage), tes notes et tes paquets de flashcards.
-        Ta progression est en plus sauvegardée dans ton compte, pour la retrouver sur un autre appareil. Ce
+        Ta progression est en plus sauvegardée dans ton compte, pour la retrouver sur un autre appareil. En
+        <b> essai sans compte</b>, rien n'est envoyé : tout reste sur ton appareil jusqu'à ce que tu crées un
+        compte. Ce
         stockage est strictement nécessaire au service : il ne demande
         pas de consentement (article 82 de la loi « Informatique et Libertés »). Il disparaît si tu effaces les
         données du site.</p>
@@ -78,6 +84,9 @@ export default function Privacy() {
           reçus pour améliorer ses services : n'envoie pas de photo qui contient des informations personnelles.</li>
           <li><b>MyMemory</b> (Translated, Italie), seulement si l'interface est dans une autre langue que le
           français : les textes de l'application lui sont envoyés pour être traduits, pas tes données.</li>
+          <li><b>Le service de notification de ton navigateur</b> (Google pour Chrome et Android, Apple pour Safari
+          et l'iPhone, Mozilla pour Firefox), seulement si tu actives le rappel téléphone fermé : il achemine le
+          rappel, qui ne contient aucune donnée (le texte affiché est toujours le même).</li>
           <li><b>Cloudflare</b> (cdnjs), seulement si tu lis le texte d'une photo sur ton appareil : le module de
           lecture est téléchargé depuis ce service.</li>
         </ul>
@@ -101,6 +110,9 @@ export default function Privacy() {
         sont <b>effacées</b> : progression, classe et contributions, amis et duels, suivi parent (des sauvegardes
         techniques transitoires peuvent subsister quelques jours avant rotation). Ton <b>adresse e-mail de
         connexion</b> est supprimée sur demande à <a href="mailto:revizstmg@gmail.com" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">revizstmg@gmail.com</a>.</p>
+        <p>L'abonnement au rappel téléphone est désactivé dès que tu arrêtes le rappel ou que tu te déconnectes, et
+        effacé avec ton compte. Les signalements d'erreurs sont gardés le temps de corriger le contenu ; à la
+        suppression du compte, ils n'y sont plus rattachés.</p>
       </Section>
 
       <Section title="8. Sécurité">

@@ -63,6 +63,19 @@ self.addEventListener('periodicsync', (event) => {
   }
 })
 
+// Rappel « push » envoyé par la fonction Edge revizstmg-rappels (sans contenu :
+// le texte est fixe ; il n'arrive que si l'élève n'a pas encore révisé ce jour).
+self.addEventListener('push', (event) => {
+  let d = {}
+  try { d = event.data ? event.data.json() : {} } catch { d = {} }
+  event.waitUntil(
+    self.registration.showNotification(d.title || 'RévizSTMG', {
+      body: d.body || 'C’est l’heure de réviser ! Quelques minutes suffisent pour garder ta série. 📚',
+      icon: './icon-192.png', badge: './favicon.png', tag: 'revision-reminder', renotify: true,
+    })
+  )
+})
+
 // Clic sur une notification : ouvre / réactive l'app.
 self.addEventListener('notificationclick', (event) => {
   event.notification.close()

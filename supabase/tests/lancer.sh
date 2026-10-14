@@ -20,7 +20,9 @@ sleep 1
 P="psql -h $DOSSIER -p $PORT -U postgres -q -v ON_ERROR_STOP=1"
 $P -c "drop database if exists essai" -c "create database essai" >/dev/null 2>&1
 $P -d essai -f "$ICI/imitation-supabase.sql" >/dev/null
-for f in "$RACINE"/migrations/*.sql "$@"; do $P -d essai -f "$f" >/dev/null 2>&1 || { echo "ÉCHEC : $f"; $P -d essai -f "$f"; exit 1; }; done
+for f in "$RACINE"/migrations/*.sql "$@"; do
+  grep -v "create extension if not exists pg_cron" "$f" | $P -d essai >/dev/null 2>&1 || { echo "ÉCHEC : $f"; grep -v "create extension if not exists pg_cron" "$f" | $P -d essai; exit 1; }
+done
 $P -d essai >/dev/null <<'SQL'
 insert into auth.users values ('aaaaaaaa-0000-4000-8000-000000000001','a@t.fr'),('bbbbbbbb-0000-4000-8000-000000000002','b@t.fr'),('cccccccc-0000-4000-8000-000000000003','prof@t.fr');
 insert into public.profiles (id, role, name) values ('aaaaaaaa-0000-4000-8000-000000000001','eleve','A'),('bbbbbbbb-0000-4000-8000-000000000002','eleve','B'),('cccccccc-0000-4000-8000-000000000003','prof','P');

@@ -30,6 +30,15 @@ Tant qu'ils ne sont pas appliqués, l'application fonctionne avec les anciennes
 règles, mais « Supprimer mon compte » échoue proprement (message d'erreur, compte
 intact).
 
+## Rappels sur le téléphone (appliqué le 13 octobre 2026)
+
+`migrations/20261013175723_revizstmg_notifications.sql` et `functions/revizstmg-rappels/` :
+abonnements « push » (schéma `revizstmg_prive`, accessibles seulement par les
+fonctions `revizstmg_push_*`), clés VAPID créées par la fonction Edge et gardées en
+base, tâche pg_cron toutes les 10 minutes qui appelle la fonction avec un secret
+gardé en base. Le rappel ne contient aucune donnée et n'est envoyé que si l'élève
+n'a pas encore révisé ce jour-là.
+
 ## Tester les règles d'accès
 
 `supabase/tests/lancer.sh [a-valider/A_COLLER_DANS_SUPABASE.sql]` monte une base

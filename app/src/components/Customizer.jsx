@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
 import { signIn, signUp, signOut, fetchProfile, upsertProfile, getSession } from '../auth.js'
+import { desactiverRappelsPush } from '../push.js'
 import { ALL_TABS, TAB_ORDER, resolveTabs } from '../navTabs.js'
 import { normalizeCode } from '../leaderboard.js'
 import { isStandalone } from '../pwa.js'
@@ -92,7 +93,7 @@ export default function Customizer({ onClose }) {
       setAEmail(''); setAPass('')
     } catch (e) { setAErr(e?.message || 'Erreur') } finally { setABusy(false) }
   }
-  const logout = () => { signOut(); setAccount(null) }
+  const logout = async () => { await desactiverRappelsPush(); signOut(); setAccount(null) }
 
   // Importe une photo → recadrée/réduite à 160px (JPEG) pour tenir en local.
   const onFile = (e) => {
