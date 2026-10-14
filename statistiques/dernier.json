@@ -1,6 +1,6 @@
 {
- "date": "2026-10-13",
- "heure": "2026-10-13T11:33:08.386Z",
+ "date": "2026-10-14",
+ "heure": "2026-10-14T09:23:13.985Z",
  "utilisation": {
   "erreur": "Supabase injoignable (fetch failed)"
  },
@@ -9,17 +9,17 @@
   "terminale": 11,
   "premiere": 8,
   "themes": 94,
-  "chapitres": 807,
-  "series": 12153,
-  "questions": 83265,
-  "flashcards": 2620
+  "chapitres": 806,
+  "series": 12188,
+  "questions": 83194,
+  "flashcards": 2617
  },
  "publication": {
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-10-13T11:21:46Z"
+   "date": "2026-10-14T04:49:28Z"
   },
-  "modifications7j": 13
+  "modifications7j": 14
  },
  "tests": "success"
 }
