@@ -1,6 +1,6 @@
 {
- "date": "2026-10-15",
- "heure": "2026-10-15T09:01:41.571Z",
+ "date": "2026-10-16",
+ "heure": "2026-10-16T08:52:26.792Z",
  "utilisation": {
   "erreur": "Supabase injoignable (fetch failed)"
  },
@@ -17,7 +17,7 @@
  "publication": {
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-10-14T09:24:14Z"
+   "date": "2026-10-15T09:03:33Z"
   },
   "modifications7j": 14
  },
