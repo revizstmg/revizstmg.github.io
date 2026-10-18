@@ -49,7 +49,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | I18N-20261019-CODEX-01 | Codex | Traductions sur toutes les pages, boutique/catalogue, moteur, accessibilité et tests | Terminé | `fix/traductions-partout`, PR #12 | Fusion et publication suivies dans la PR |
 
-| DOC-20261018-CLAUDE-01 | Claude | Répartition des tâches demandée par le propriétaire : `docs/TACHES.md` (nouveau) et lien depuis ce journal | Terminé | `claude/repartition-taches` | Le propriétaire relit et ajuste la répartition ; Claude attend sa décision sur C01 (comptes partagés avec NAH) |
+| DOC-20261018-CLAUDE-01 | Claude | Répartition des tâches demandée par le propriétaire : `docs/TACHES.md` (nouveau) et lien depuis ce journal | Terminé, à fusionner par le propriétaire | `claude/repartition-taches`, [PR #13](https://github.com/revizstmg/revizstmg.github.io/pull/13) | Le propriétaire relit, ajuste et fusionne ; Claude attend sa décision sur C01 (comptes partagés avec NAH) |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -247,6 +247,7 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   le compte de connexion partagé avec NAH, à décider avant C01 ; la branche
   `claude/competences-demandes-60d791` (13/10, hors journal) modifie
   `.claude/settings.json` et `CLAUDE.md` et entrerait en conflit avec `main`.
+- PR #13, non fusionnée : la fusion revient au propriétaire après relecture.
 - Prochaine action : C01 après la décision du propriétaire sur les comptes NAH.
 
 ### Modèle à copier pour une nouvelle tâche
