@@ -45,7 +45,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | SHOP-20261018-CODEX-01 | Codex | Refonte boutique : catalogue, niveaux, paliers de mérite, store, profil, tests et README | Terminé | `feat/refonte-boutique`, PR #11 | Fusion et publication suivies dans la PR |
 
-| I18N-20261019-CODEX-01 | Codex | Traductions sur toutes les pages, boutique/catalogue, moteur, accessibilité et tests | À relire | `fix/traductions-partout`, PR #12 | Valider les cinq langues et les régressions du site |
+| I18N-20261019-CODEX-01 | Codex | Traductions sur toutes les pages, boutique/catalogue, moteur, accessibilité et tests | Terminé | `fix/traductions-partout`, PR #12 | Fusion et publication suivies dans la PR |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -213,9 +213,13 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 - Moteur : sources IT/AR corrigées, fichiers par langue, cache/regroupement des
   requêtes, deux requêtes simultanées, découpage UTF-8 sous la limite du service,
   absence de réponse périmée après bascule de langue, panne/quota signalés avec relance.
-- Vérifications initiales : 182 tests unitaires réussis. Tests navigateur ajoutés
-  pour les cinq langues, achats, bascule sans rechargement, confidentialité et
-  panne du service. Résultats finaux dans la PR #12 et ses Actions.
+- Vérifications : 182 tests unitaires réussis, compilation réussie et 12 parcours
+  navigateur ciblés réussis : cinq langues, achats/équipement/réservations, bascule
+  sans rechargement, confidentialité du profil et des brouillons, panne et relance.
+  Régression sur les accents vérifiée à la compilation. Consignes et conseils
+  publics des projets/coach annotés ; brouillons conservés dans leur langue.
+  CI complète sur le code `39f2d06` : 182 tests unitaires et 105 parcours
+  navigateur réussis (Actions `39171897995`). Publication suivie dans la PR #12.
 - Portée : interface et textes publics ; les contenus publics hors catalogue
   intégré dépendent toujours du service en ligne. Les messages privés et les
   saisies ne sont pas traduits automatiquement. Aucun changement Supabase.

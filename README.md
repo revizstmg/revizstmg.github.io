@@ -49,7 +49,7 @@ payante ou date de lancement inventée. La validation et l’activation commerci
 ne sont pas automatisées côté client. Conditions détaillées dans les CGU.
 
 La traduction couvre FR/EN/ES/IT/AR. Toutes les clés de l’interface sont présentes
-pour les quatre langues étrangères ; 246 textes publics supplémentaires et le
+pour les quatre langues étrangères ; 262 textes publics supplémentaires et le
 catalogue complet de la boutique sont intégrés dans des fichiers chargés à la
 demande (`src/localisation/public.*.json`). La langue change les dates, nombres,
 libellés accessibles et le sens de lecture arabe sans modifier les identifiants,
@@ -61,7 +61,7 @@ compilation et tests, prend en charge les littéraux publics du JSX oubliés par
 remplacées par des marqueurs : les noms et saisies restent dans le navigateur.
 Les valeurs des champs, le code, les formules, les URL, les marques et les
 éléments `translate="no"` ne sont pas traduits. Les chaînes dynamiques publiques
-(catalogues, cours) sont explicitement annotées avec `usePublicText` ou
+(catalogues, cours) sont explicitement annotées avec `usePublicText`, `TextePublic` ou
 `CourseText` ; ne jamais appliquer la traduction automatique à un message privé.
 
 Les textes publics non intégrés utilisent MyMemory avec cache, regroupement des
