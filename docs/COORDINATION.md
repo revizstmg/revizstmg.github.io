@@ -4,6 +4,8 @@ Ce fichier sert de relais entre les sessions. Il ne déclenche aucun agent et ne
 constitue pas une messagerie en temps réel. Chaque participant doit avoir accès
 au dépôt GitHub et lire la version à jour pour voir les annonces des autres.
 Le propriétaire décide des priorités et tranche les désaccords.
+La répartition des tâches et des fichiers entre Claude et Codex est dans
+`docs/TACHES.md` : chacun travaille dans son couloir de fichiers.
 
 ## À chaque session
 
@@ -46,6 +48,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 | SHOP-20261018-CODEX-01 | Codex | Refonte boutique : catalogue, niveaux, paliers de mérite, store, profil, tests et README | Terminé | `feat/refonte-boutique`, PR #11 | Fusion et publication suivies dans la PR |
 
 | I18N-20261019-CODEX-01 | Codex | Traductions sur toutes les pages, boutique/catalogue, moteur, accessibilité et tests | Terminé | `fix/traductions-partout`, PR #12 | Fusion et publication suivies dans la PR |
+
+| DOC-20261018-CLAUDE-01 | Claude | Répartition des tâches demandée par le propriétaire : `docs/TACHES.md` (nouveau) et lien depuis ce journal | Terminé | `claude/repartition-taches` | Le propriétaire relit et ajuste la répartition ; Claude attend sa décision sur C01 (comptes partagés avec NAH) |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -223,6 +227,27 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 - Portée : interface et textes publics ; les contenus publics hors catalogue
   intégré dépendent toujours du service en ligne. Les messages privés et les
   saisies ne sont pas traduits automatiquement. Aucun changement Supabase.
+
+### DOC-20261018-CLAUDE-01 — Claude — 18 octobre 2026, soir (heure de Paris)
+
+- Demande du propriétaire : un fichier qui répartit de nombreuses tâches entre
+  Codex et Claude pour qu'ils ne se gênent pas.
+- Réalisé : `docs/TACHES.md`, deux couloirs de fichiers (Supabase, comptes,
+  sauvegarde, dates, exploitation, pages légales et projets accompagnés pour
+  Claude ; contenu, moteur d'exercices, scores, traductions et pages de révision
+  pour Codex), fichiers communs à annoncer, 18 tâches Claude (C01-C18) et
+  16 tâches Codex proposées (X01-X16), dépendances entre couloirs. Les tâches de
+  Codex sont des propositions du propriétaire : Codex les annonce lui-même ici
+  quand il les commence. Lien ajouté en tête de ce journal.
+- Vérifications : relecture de l'audit, des PR ouvertes (#6) et de l'état réel de
+  Supabase en lecture seule (règles d'accès finales et suppression du compte non
+  appliquées ; rappels push installés, aucun abonné). Documentation uniquement :
+  aucun changement du site ni de Supabase.
+- Points signalés au propriétaire : la suppression du compte prévue efface aussi
+  le compte de connexion partagé avec NAH, à décider avant C01 ; la branche
+  `claude/competences-demandes-60d791` (13/10, hors journal) modifie
+  `.claude/settings.json` et `CLAUDE.md` et entrerait en conflit avec `main`.
+- Prochaine action : C01 après la décision du propriétaire sur les comptes NAH.
 
 ### Modèle à copier pour une nouvelle tâche
 
