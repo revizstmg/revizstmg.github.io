@@ -7,7 +7,9 @@
     "name": "Gel de série",
     "icon": "🧊",
     "price": 200,
-    "desc": "Protège ta série si tu rates un jour. Utilisé automatiquement."
+    "desc": "Protège ta série si tu rates un jour. Utilisé automatiquement.",
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "pal-ocean",
@@ -21,7 +23,9 @@
       "ink": "#0f2a3d",
       "accent": "#1e88c7",
       "card": "#ffffff"
-    }
+    },
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "pal-foret",
@@ -35,7 +39,9 @@
       "ink": "#153021",
       "accent": "#2f9e5f",
       "card": "#ffffff"
-    }
+    },
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "pal-corail",
@@ -49,7 +55,9 @@
       "ink": "#3d1a18",
       "accent": "#e5573f",
       "card": "#ffffff"
-    }
+    },
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "pal-lavande",
@@ -63,7 +71,9 @@
       "ink": "#26183f",
       "accent": "#7c5cd6",
       "card": "#ffffff"
-    }
+    },
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "pal-menthe",
@@ -77,7 +87,9 @@
       "ink": "#0f3028",
       "accent": "#12a37a",
       "card": "#ffffff"
-    }
+    },
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "pal-rose",
@@ -91,7 +103,9 @@
       "ink": "#3a1526",
       "accent": "#db3f86",
       "card": "#ffffff"
-    }
+    },
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "pal-or",
@@ -105,7 +119,9 @@
       "ink": "#2c2410",
       "accent": "#c8a24e",
       "card": "#fffdf7"
-    }
+    },
+    "rarity": "rare",
+    "minXp": 2500
   },
   {
     "id": "pal-nuit",
@@ -119,7 +135,9 @@
       "ink": "#e8eaf7",
       "accent": "#6d8bff",
       "card": "#191d2e"
-    }
+    },
+    "rarity": "rare",
+    "minXp": 2500
   },
   {
     "id": "av-fox",
@@ -128,7 +146,9 @@
     "name": "Renard",
     "icon": "🦊",
     "price": 150,
-    "avatar": "🦊"
+    "avatar": "🦊",
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "av-panda",
@@ -137,7 +157,9 @@
     "name": "Panda",
     "icon": "🐼",
     "price": 150,
-    "avatar": "🐼"
+    "avatar": "🐼",
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "av-owl",
@@ -146,7 +168,9 @@
     "name": "Chouette",
     "icon": "🦉",
     "price": 150,
-    "avatar": "🦉"
+    "avatar": "🦉",
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "av-cat",
@@ -155,7 +179,9 @@
     "name": "Chat",
     "icon": "🐱",
     "price": 150,
-    "avatar": "🐱"
+    "avatar": "🐱",
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "av-rocket",
@@ -164,7 +190,9 @@
     "name": "Fusée",
     "icon": "🚀",
     "price": 250,
-    "avatar": "🚀"
+    "avatar": "🚀",
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "av-brain",
@@ -173,7 +201,9 @@
     "name": "Cerveau",
     "icon": "🧠",
     "price": 250,
-    "avatar": "🧠"
+    "avatar": "🧠",
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "av-star",
@@ -182,7 +212,9 @@
     "name": "Étoile",
     "icon": "⭐",
     "price": 300,
-    "avatar": "⭐"
+    "avatar": "⭐",
+    "rarity": "commun",
+    "minXp": 0
   },
   {
     "id": "av-dragon",
@@ -191,7 +223,9 @@
     "name": "Dragon",
     "icon": "🐉",
     "price": 500,
-    "avatar": "🐉"
+    "avatar": "🐉",
+    "rarity": "rare",
+    "minXp": 0
   },
   {
     "id": "av-crown",
@@ -200,6 +234,426 @@
     "name": "Couronne",
     "icon": "👑",
     "price": 600,
-    "avatar": "👑"
+    "avatar": "👑",
+    "rarity": "rare",
+    "minXp": 0
+  },
+  {
+    "id": "pal-sakura",
+    "type": "palette",
+    "category": "theme",
+    "name": "Sakura",
+    "icon": "🌸",
+    "price": 550,
+    "rarity": "rare",
+    "minXp": 1000,
+    "desc": "Une ambiance complète pour ton espace de révision.",
+    "theme": {
+      "bg": "#fff1f5",
+      "ink": "#421b30",
+      "accent": "#a52d60",
+      "card": "#fffafb"
+    }
+  },
+  {
+    "id": "pal-glacier",
+    "type": "palette",
+    "category": "theme",
+    "name": "Glacier",
+    "icon": "🏔️",
+    "price": 550,
+    "rarity": "rare",
+    "minXp": 1000,
+    "desc": "Une ambiance complète pour ton espace de révision.",
+    "theme": {
+      "bg": "#eef7ff",
+      "ink": "#15334b",
+      "accent": "#28678b",
+      "card": "#ffffff"
+    }
+  },
+  {
+    "id": "pal-cafe",
+    "type": "palette",
+    "category": "theme",
+    "name": "Café crème",
+    "icon": "☕",
+    "price": 550,
+    "rarity": "rare",
+    "minXp": 1000,
+    "desc": "Une ambiance complète pour ton espace de révision.",
+    "theme": {
+      "bg": "#f6efe5",
+      "ink": "#38291e",
+      "accent": "#835532",
+      "card": "#fffaf3"
+    }
+  },
+  {
+    "id": "pal-nebuleuse",
+    "type": "palette",
+    "category": "theme",
+    "name": "Nébuleuse",
+    "icon": "🔮",
+    "price": 1200,
+    "rarity": "épique",
+    "minXp": 5000,
+    "desc": "Une ambiance complète pour ton espace de révision.",
+    "theme": {
+      "bg": "#171329",
+      "ink": "#f4ecff",
+      "accent": "#b49bf4",
+      "card": "#241d38"
+    }
+  },
+  {
+    "id": "pal-aurore",
+    "type": "palette",
+    "category": "theme",
+    "name": "Aurore boréale",
+    "icon": "🌠",
+    "price": 1200,
+    "rarity": "épique",
+    "minXp": 5000,
+    "desc": "Une ambiance complète pour ton espace de révision.",
+    "theme": {
+      "bg": "#0e2324",
+      "ink": "#e5fff5",
+      "accent": "#78d4b1",
+      "card": "#183334"
+    }
+  },
+  {
+    "id": "pal-obsidienne",
+    "type": "palette",
+    "category": "theme",
+    "name": "Obsidienne",
+    "icon": "🖤",
+    "price": 1200,
+    "rarity": "épique",
+    "minXp": 5000,
+    "desc": "Une ambiance complète pour ton espace de révision.",
+    "theme": {
+      "bg": "#171719",
+      "ink": "#f4eee6",
+      "accent": "#e0be7b",
+      "card": "#252528"
+    }
+  },
+  {
+    "id": "av-axolotl",
+    "type": "avatar",
+    "category": "avatar",
+    "name": "Axolotl",
+    "avatar": "🦎",
+    "icon": "🦎",
+    "price": 300,
+    "minXp": 0,
+    "rarity": "rare",
+    "desc": "Affiché sur ton profil et dans ton menu."
+  },
+  {
+    "id": "av-astronaute",
+    "type": "avatar",
+    "category": "avatar",
+    "name": "Astronaute",
+    "avatar": "🧑‍🚀",
+    "icon": "🧑‍🚀",
+    "price": 600,
+    "minXp": 1000,
+    "rarity": "rare",
+    "desc": "Affiché sur ton profil et dans ton menu."
+  },
+  {
+    "id": "av-loup",
+    "type": "avatar",
+    "category": "avatar",
+    "name": "Loup polaire",
+    "avatar": "🐺",
+    "icon": "🐺",
+    "price": 700,
+    "minXp": 1500,
+    "rarity": "rare",
+    "desc": "Affiché sur ton profil et dans ton menu."
+  },
+  {
+    "id": "av-licorne",
+    "type": "avatar",
+    "category": "avatar",
+    "name": "Licorne",
+    "avatar": "🦄",
+    "icon": "🦄",
+    "price": 900,
+    "minXp": 2500,
+    "rarity": "rare",
+    "desc": "Affiché sur ton profil et dans ton menu."
+  },
+  {
+    "id": "av-tigre",
+    "type": "avatar",
+    "category": "avatar",
+    "name": "Tigre",
+    "avatar": "🐯",
+    "icon": "🐯",
+    "price": 1000,
+    "minXp": 4000,
+    "rarity": "rare",
+    "desc": "Affiché sur ton profil et dans ton menu."
+  },
+  {
+    "id": "av-phenix",
+    "type": "avatar",
+    "category": "avatar",
+    "name": "Phénix",
+    "avatar": "🔥",
+    "icon": "🔥",
+    "price": 2000,
+    "minXp": 12200,
+    "rarity": "légendaire",
+    "desc": "Affiché sur ton profil et dans ton menu."
+  },
+  {
+    "id": "av-diamant",
+    "type": "avatar",
+    "category": "avatar",
+    "name": "Diamant",
+    "avatar": "💎",
+    "icon": "💎",
+    "price": 2500,
+    "minXp": 20000,
+    "rarity": "légendaire",
+    "desc": "Affiché sur ton profil et dans ton menu."
+  },
+  {
+    "id": "av-galaxie",
+    "type": "avatar",
+    "category": "avatar",
+    "name": "Voyageur des étoiles",
+    "avatar": "🪐",
+    "icon": "🪐",
+    "price": 3500,
+    "minXp": 35500,
+    "rarity": "légendaire",
+    "desc": "Affiché sur ton profil et dans ton menu."
+  },
+  {
+    "id": "banner-atlantique",
+    "type": "banner",
+    "category": "banner",
+    "name": "Atlantique",
+    "icon": "🌊",
+    "color": "#28678b",
+    "price": 450,
+    "minXp": 0,
+    "rarity": "rare",
+    "desc": "Habille le bandeau de ton accueil."
+  },
+  {
+    "id": "banner-jardin",
+    "type": "banner",
+    "category": "banner",
+    "name": "Jardin secret",
+    "icon": "🍃",
+    "color": "#33705b",
+    "price": 600,
+    "minXp": 1000,
+    "rarity": "rare",
+    "desc": "Habille le bandeau de ton accueil."
+  },
+  {
+    "id": "banner-amethyste",
+    "type": "banner",
+    "category": "banner",
+    "name": "Améthyste",
+    "icon": "🔮",
+    "color": "#7353a6",
+    "price": 750,
+    "minXp": 2500,
+    "rarity": "rare",
+    "desc": "Habille le bandeau de ton accueil."
+  },
+  {
+    "id": "banner-braise",
+    "type": "banner",
+    "category": "banner",
+    "name": "Braise",
+    "icon": "🔥",
+    "color": "#a84b32",
+    "price": 900,
+    "minXp": 4000,
+    "rarity": "rare",
+    "desc": "Habille le bandeau de ton accueil."
+  },
+  {
+    "id": "banner-royal",
+    "type": "banner",
+    "category": "banner",
+    "name": "Héritage doré",
+    "icon": "⚜️",
+    "color": "#a17b32",
+    "price": 1600,
+    "minXp": 10000,
+    "rarity": "épique",
+    "desc": "Habille le bandeau de ton accueil."
+  },
+  {
+    "id": "banner-cosmique",
+    "type": "banner",
+    "category": "banner",
+    "name": "Horizon cosmique",
+    "icon": "🌌",
+    "color": "#5e52a3",
+    "price": 2400,
+    "minXp": 23500,
+    "rarity": "épique",
+    "desc": "Habille le bandeau de ton accueil."
+  },
+  {
+    "id": "title-curieux",
+    "type": "title",
+    "category": "title",
+    "name": "Esprit curieux",
+    "icon": "🔎",
+    "title": "Esprit curieux",
+    "price": 200,
+    "minXp": 0,
+    "rarity": "rare",
+    "desc": "Un titre visible sur ton profil."
+  },
+  {
+    "id": "title-regulier",
+    "type": "title",
+    "category": "title",
+    "name": "Toujours au rendez-vous",
+    "icon": "📅",
+    "title": "Toujours au rendez-vous",
+    "price": 400,
+    "minXp": 700,
+    "rarity": "rare",
+    "desc": "Un titre visible sur ton profil."
+  },
+  {
+    "id": "title-stratege",
+    "type": "title",
+    "category": "title",
+    "name": "Stratège",
+    "icon": "♟️",
+    "title": "Stratège",
+    "price": 650,
+    "minXp": 1500,
+    "rarity": "rare",
+    "desc": "Un titre visible sur ton profil."
+  },
+  {
+    "id": "title-inspire",
+    "type": "title",
+    "category": "title",
+    "name": "Esprit inspiré",
+    "icon": "💡",
+    "title": "Esprit inspiré",
+    "price": 800,
+    "minXp": 2500,
+    "rarity": "rare",
+    "desc": "Un titre visible sur ton profil."
+  },
+  {
+    "id": "title-ambitieux",
+    "type": "title",
+    "category": "title",
+    "name": "Cap sur le bac",
+    "icon": "🎯",
+    "title": "Cap sur le bac",
+    "price": 1000,
+    "minXp": 4000,
+    "rarity": "rare",
+    "desc": "Un titre visible sur ton profil."
+  },
+  {
+    "id": "title-erudit",
+    "type": "title",
+    "category": "title",
+    "name": "Érudit",
+    "icon": "📚",
+    "title": "Érudit",
+    "price": 1400,
+    "minXp": 6500,
+    "rarity": "rare",
+    "desc": "Un titre visible sur ton profil."
+  },
+  {
+    "id": "title-elite",
+    "type": "title",
+    "category": "title",
+    "name": "Élite STMG",
+    "icon": "💠",
+    "title": "Élite STMG",
+    "price": 2200,
+    "minXp": 20000,
+    "rarity": "légendaire",
+    "desc": "Un titre visible sur ton profil."
+  },
+  {
+    "id": "title-legende",
+    "type": "title",
+    "category": "title",
+    "name": "Légende des révisions",
+    "icon": "🏆",
+    "title": "Légende des révisions",
+    "price": 4000,
+    "minXp": 52000,
+    "rarity": "légendaire",
+    "desc": "Un titre visible sur ton profil."
+  },
+  {
+    "id": "freeze-pack",
+    "type": "consumable",
+    "grant": "freeze",
+    "quantity": 3,
+    "category": "boost",
+    "name": "Réserve de sérénité",
+    "icon": "🧊",
+    "price": 540,
+    "minXp": 1000,
+    "rarity": "rare",
+    "desc": "3 gels de série. Pour les journées où la vie passe avant les révisions."
+  },
+  {
+    "id": "freeze-pack-5",
+    "type": "consumable",
+    "grant": "freeze",
+    "quantity": 5,
+    "category": "boost",
+    "name": "Pack longue distance",
+    "icon": "❄️",
+    "price": 850,
+    "minXp": 4000,
+    "rarity": "épique",
+    "desc": "5 gels de série pour protéger ta régularité."
+  },
+  {
+    "id": "title-confirme",
+    "type": "title",
+    "category": "title",
+    "name": "Réviseur confirmé",
+    "title": "Réviseur confirmé",
+    "icon": "🎓",
+    "price": 0,
+    "minXp": 3200,
+    "rarity": "exclusif",
+    "rewardOnly": true,
+    "desc": "Cadeau du palier confirmé. À récupérer dans Récompenses."
+  },
+  {
+    "id": "banner-ambre",
+    "type": "banner",
+    "category": "banner",
+    "name": "Ambre exclusive",
+    "color": "#a26827",
+    "icon": "🌅",
+    "price": 0,
+    "minXp": 8200,
+    "rarity": "exclusif",
+    "rewardOnly": true,
+    "desc": "Une bannière réservée au palier Ambassadeur."
   }
 ]

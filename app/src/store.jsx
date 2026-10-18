@@ -1,3 +1,4 @@
+import { SHOP_LEVELS, purchaseItem, equipItem, collectReward } from './data/shop.js'
 import { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback } from 'react'
 import { SUBJECTS, ALL_CHAPTERS, chapterGameCount, jeuxJouablesDuTheme } from './data/index.js'
 import { BADGES } from './badges.js'
@@ -13,7 +14,7 @@ import { publishChildStats, deleteMyChildStats, PARENT_READY } from './parent.js
 const CROSS_GAMES = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac'])
 
 // Champs de progression synchronisés sur le compte (multi-appareil).
-const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion']
+const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'shopRewards']
 // Carnet d'erreurs : au plus tant de questions ratées, les plus récentes d'abord.
 export const CARNET_MAX = 150
 function pickProgress(s) {
@@ -53,6 +54,8 @@ export function mergeProgress(a, b) {
   out.srs = srs
   out.bacDate = a.bacDate || b.bacDate || null
   // Boutique : on garde le meilleur solde, l'union des articles, le max de gels.
+  // Les paliers sont uniques, y compris après synchronisation sur un autre appareil.
+  out.shopRewards = { ...(a.shopRewards || {}), ...(b.shopRewards || {}) }
   out.coins = Math.max(a.coins || 0, b.coins || 0)
   out.owned = Array.from(new Set([...(a.owned || []), ...(b.owned || [])]))
   out.freezes = Math.max(a.freezes || 0, b.freezes || 0)
@@ -191,6 +194,7 @@ const emptyState = () => ({
   erreurs: [], // carnet d'erreurs : questions ratées à refaire
   etudeGestion: etudeGestionVide(), // étude de gestion (Première) : projet, sources, arguments
   examSeen: {}, // bac blanc : { [sélection]: [clés d'énoncés déjà tombés] } (local)
+  shopRewards: {}, // récompenses uniques ; offres futures réservées, jamais activées ici
   coins: 0, // pièces 🪙 dépensables en boutique (gagnées avec l'XP)
   owned: [], // ids d'articles cosmétiques achetés (boutique)
   freezes: 0, // gels de série disponibles (protègent la série un jour manqué)
@@ -222,6 +226,10 @@ export function isoWeekKey(d = new Date()) {
 function withoutAccount(s) {
   const out = emptyState()
   for (const key of ['lang', 'theme', 'customTheme', 'a11y', 'tabs']) out[key] = s[key]
+  if (out.customTheme) {
+    out.customTheme = { ...out.customTheme }
+    for (const key of ['avatar', 'title', 'banner']) delete out.customTheme[key]
+  }
   return out
 }
 
@@ -264,7 +272,7 @@ function daysBetween(a, b) {
 }
 
 // Niveaux : paliers d'XP cumulés.
-const LEVELS = [0, 100, 250, 450, 700, 1000, 1400, 1900, 2500, 3200, 4000, 5000]
+const LEVELS = SHOP_LEVELS
 export function levelFromXp(xp) {
   let lvl = 1
   for (let i = 0; i < LEVELS.length; i++) if (xp >= LEVELS[i]) lvl = i + 1
@@ -344,7 +352,7 @@ export function StoreProvider({ children }) {
     }, 2000)
     return () => clearTimeout(id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.account?.id, state.xp, state.chapters, state.badges, state.favorites, state.streak, state.weekly, state.totalAnswers, state.correctAnswers, state.lastChapter])
+  }, [state.account?.id, state.xp, state.chapters, state.badges, state.favorites, state.streak, state.weekly, state.totalAnswers, state.correctAnswers, state.lastChapter, state.coins, state.owned, state.freezes, state.shopRewards])
 
   // Espace parent : l'élève publie un instantané de ses stats (temps, série,
   // XP, matières, badges…) sous son « code parent ». Anti-rebond ~3 s, silencieux
@@ -666,30 +674,10 @@ export function StoreProvider({ children }) {
     return evaluateBadges({ ...p, xp: p.xp + g, coins: (p.coins || 0) + g })
   }), [evaluateBadges])
 
-  // Boutique : acheter un article. Renvoie true si l'achat a réussi.
-  const buy = useCallback((item) => {
-    if (!item) return false
-    let ok = false
-    setState((p) => {
-      const price = item.price || 0
-      const already = item.type !== 'consumable' && (p.owned || []).includes(item.id)
-      if (already || (p.coins || 0) < price) return p
-      ok = true
-      const next = { ...p, coins: (p.coins || 0) - price }
-      if (item.type === 'consumable' && item.grant === 'freeze') next.freezes = (p.freezes || 0) + 1
-      else next.owned = Array.from(new Set([...(p.owned || []), item.id]))
-      return next
-    })
-    return ok
-  }, [])
-
-  // Équiper un article cosmétique déjà acheté (palette de couleurs ou avatar).
-  const equip = useCallback((item) => setState((p) => {
-    if (!item || !(p.owned || []).includes(item.id)) return p
-    if (item.type === 'palette') return { ...p, customTheme: { ...(p.customTheme || {}), ...item.theme } }
-    if (item.type === 'avatar') return { ...p, customTheme: { ...(p.customTheme || {}), avatar: item.avatar } }
-    return p
-  }), [])
+  // Résolution depuis le catalogue : prix et conditions ne viennent pas du bouton.
+  const buy = useCallback((item) => setState((p) => purchaseItem(p, item?.id)), [])
+  const equip = useCallback((item) => setState((p) => equipItem(p, item?.id)), [])
+  const claimShopReward = useCallback((id) => setState((p) => collectReward(p, id)), [])
   const setA11y = useCallback((patch) => setState((p) => ({ ...p, a11y: { ...(p.a11y || {}), ...patch } })), [])
   const setReminder = useCallback((patch) => setState((p) => ({ ...p, reminder: { ...(p.reminder || {}), ...patch } })), [])
   const setGrandOral = useCallback((maj) => setState((p) => {
@@ -727,6 +715,7 @@ export function StoreProvider({ children }) {
     clearDailyReward,
     buy,
     equip,
+    claimShopReward,
     recordResult,
     setBacDate,
     addXp,
