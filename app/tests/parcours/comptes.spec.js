@@ -1,11 +1,11 @@
 import { test, expect } from '@playwright/test'
-import { preparer, attendreAccueil, etat, etatEleve } from './eleve.js'
+import { preparer, attendreAccueil, etat, etatEleve, AUJOURDHUI } from './eleve.js'
 
 const eleve = '00000000-0000-4000-8000-000000000001'
 const prof = '00000000-0000-4000-8000-000000000002'
 const profils = () => ({
-  [eleve]: { id: eleve, name: 'Léa Élève', email: 'eleve@test.fr', role: 'eleve', level: 'premiere-stmg', class_code: null, progress: { xp: 20 } },
-  [prof]: { id: prof, name: 'Paul Professeur', email: 'prof@test.fr', role: 'prof', level: 'terminale-stmg', specialty: 'gestion-finance', class_code: 'stmg-prof', progress: { xp: 800 } },
+  [eleve]: { id: eleve, name: 'Léa Élève', email: 'eleve@test.fr', role: 'eleve', level: 'premiere-stmg', class_code: null, progress: { xp: 20, streak: { count: 1, last: AUJOURDHUI } } },
+  [prof]: { id: prof, name: 'Paul Professeur', email: 'prof@test.fr', role: 'prof', level: 'terminale-stmg', specialty: 'gestion-finance', class_code: 'stmg-prof', progress: { xp: 800, streak: { count: 1, last: AUJOURDHUI } } },
 })
 const session = (id, data) => ({ token: id, refresh: id, expires_at: Math.floor(Date.now() / 1000) + 3600, user: { id, email: data[id].email } })
 
@@ -61,6 +61,7 @@ for (const autreId of [false, true]) {
 }
 
 test('élève → déconnexion → professeur → déconnexion → élève sur le même PC', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 })
   const data = profils()
   const erreurs = await preparer(page, etatEleve({ account: { id: eleve, email: data[eleve].email, role: 'eleve' }, xp: 20 }))
   await page.addInitScript((s) => {
