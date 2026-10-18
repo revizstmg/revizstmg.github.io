@@ -25,7 +25,8 @@
       "card": "#ffffff"
     },
     "rarity": "commun",
-    "minXp": 0
+    "minXp": 0,
+    "mode": "light"
   },
   {
     "id": "pal-foret",
@@ -41,7 +42,8 @@
       "card": "#ffffff"
     },
     "rarity": "commun",
-    "minXp": 0
+    "minXp": 0,
+    "mode": "light"
   },
   {
     "id": "pal-corail",
@@ -57,7 +59,8 @@
       "card": "#ffffff"
     },
     "rarity": "commun",
-    "minXp": 0
+    "minXp": 0,
+    "mode": "light"
   },
   {
     "id": "pal-lavande",
@@ -73,7 +76,8 @@
       "card": "#ffffff"
     },
     "rarity": "commun",
-    "minXp": 0
+    "minXp": 0,
+    "mode": "light"
   },
   {
     "id": "pal-menthe",
@@ -89,7 +93,8 @@
       "card": "#ffffff"
     },
     "rarity": "commun",
-    "minXp": 0
+    "minXp": 0,
+    "mode": "light"
   },
   {
     "id": "pal-rose",
@@ -105,7 +110,8 @@
       "card": "#ffffff"
     },
     "rarity": "commun",
-    "minXp": 0
+    "minXp": 0,
+    "mode": "light"
   },
   {
     "id": "pal-or",
@@ -121,7 +127,8 @@
       "card": "#fffdf7"
     },
     "rarity": "rare",
-    "minXp": 2500
+    "minXp": 2500,
+    "mode": "light"
   },
   {
     "id": "pal-nuit",
@@ -137,7 +144,8 @@
       "card": "#191d2e"
     },
     "rarity": "rare",
-    "minXp": 2500
+    "minXp": 2500,
+    "mode": "dark"
   },
   {
     "id": "av-fox",
@@ -253,7 +261,8 @@
       "ink": "#421b30",
       "accent": "#a52d60",
       "card": "#fffafb"
-    }
+    },
+    "mode": "light"
   },
   {
     "id": "pal-glacier",
@@ -270,7 +279,8 @@
       "ink": "#15334b",
       "accent": "#28678b",
       "card": "#ffffff"
-    }
+    },
+    "mode": "light"
   },
   {
     "id": "pal-cafe",
@@ -287,7 +297,8 @@
       "ink": "#38291e",
       "accent": "#835532",
       "card": "#fffaf3"
-    }
+    },
+    "mode": "light"
   },
   {
     "id": "pal-nebuleuse",
@@ -304,7 +315,8 @@
       "ink": "#f4ecff",
       "accent": "#b49bf4",
       "card": "#241d38"
-    }
+    },
+    "mode": "dark"
   },
   {
     "id": "pal-aurore",
@@ -321,7 +333,8 @@
       "ink": "#e5fff5",
       "accent": "#78d4b1",
       "card": "#183334"
-    }
+    },
+    "mode": "dark"
   },
   {
     "id": "pal-obsidienne",
@@ -338,7 +351,8 @@
       "ink": "#f4eee6",
       "accent": "#e0be7b",
       "card": "#252528"
-    }
+    },
+    "mode": "dark"
   },
   {
     "id": "av-axolotl",

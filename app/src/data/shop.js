@@ -32,7 +32,7 @@ export function equipItem(state, id) {
   const item = shopById[id]
   if (!item || !(state.owned || []).includes(id)) return state
   const patch = item.type === 'palette' ? item.theme : item.type === 'avatar' ? { avatar: item.avatar } : item.type === 'banner' ? { banner: item.color } : item.type === 'title' ? { title: item.title } : null
-  return patch ? { ...state, customTheme: { ...state.customTheme, ...patch } } : state
+  return patch ? { ...state, ...(item.type === 'palette' ? { theme: item.mode || 'light' } : {}), customTheme: { ...state.customTheme, ...patch } } : state
 }
 export function collectReward(state, id, now = new Date().toISOString()) {
   const reward = SHOP_REWARDS.find((r) => r.id === id)

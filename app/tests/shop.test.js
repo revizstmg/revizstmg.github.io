@@ -31,6 +31,7 @@ test('les packs donnent la bonne quantité et les objets équipés ont un effet'
   expect(equipItem(initial, 'banner-atlantique').customTheme.banner).toBe('#28678b')
   expect(equipItem(initial, 'title-curieux').customTheme.title).toBe('Esprit curieux')
   expect(equipItem(initial, 'av-fox')).toBe(initial)
+  expect(equipItem(state({ owned: ['pal-nebuleuse'] }), 'pal-nebuleuse').theme).toBe('dark')
 })
 test('les niveaux historiques sont conservés, avec des caps à 20 et 30', () => {
   expect(SHOP_LEVELS.slice(0, 12)).toEqual([0, 100, 250, 450, 700, 1000, 1400, 1900, 2500, 3200, 4000, 5000])
