@@ -69,6 +69,7 @@ test('élève → déconnexion → professeur → déconnexion → élève sur l
       sessionStorage.setItem('__session', '1')
       localStorage.setItem('stmg_session', JSON.stringify(s))
     }
+    Object.defineProperty(navigator, 'standalone', { value: true, configurable: true })
     // Pas de service de notifications dans ce navigateur de test.
     delete window.Notification
   }, session(eleve, data))
