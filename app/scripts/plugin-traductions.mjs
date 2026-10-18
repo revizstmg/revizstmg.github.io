@@ -4,7 +4,7 @@ import { dirname, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 const publicModule = fileURLToPath(new URL('../src/localisation/PublicText.jsx', import.meta.url))
 const attrs = new Set(['title', 'label', 'placeholder', 'aria-label', 'aria-description', 'alt'])
-const componentAttrs = new Set([...attrs, 'titre', 'libelle', 'description', 'sub'])
+const componentAttrs = new Set([...attrs, 'titre', 'libelle', 'description', 'sub', 'sous'])
 const ignored = new Set(['code', 'pre', 'script', 'style', 'textarea', 'svg', 'math', 'TextePublic', 'ElementPublic'])
 export function cleanJsxText(value) {
   const lines = value.split(/\r\n|\n|\r/)
@@ -41,6 +41,10 @@ export default function publicTranslations({ types: t }) {
   const expression = (node, state) => {
     const m = model(node)
     if (m) return element(m, state)
+    if (t.isLogicalExpression(node)) {
+      const right = expression(node.right, state)
+      if (right !== node.right) return t.logicalExpression(node.operator, node.left, right)
+    }
     if (t.isConditionalExpression(node)) {
       const yes = expression(node.consequent, state), no = expression(node.alternate, state)
       if (yes !== node.consequent || no !== node.alternate) return t.conditionalExpression(node.test, yes, no)

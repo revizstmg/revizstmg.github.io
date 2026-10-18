@@ -259,5 +259,6 @@
   "même langue": "same language",
   "Le service de traduction est indisponible. Réessaie.": "The translation service is unavailable. Try again.",
   "Le glossaire fonctionne hors-ligne, mais la traduction des phrases nécessite une connexion.": "The glossary works offline, but sentence translation needs a connection.",
-  "Mots courants hors-ligne · phrases via un service en ligne gratuit (MyMemory).": "Common words offline · sentences via a free online service (MyMemory)."
+  "Mots courants hors-ligne · phrases via un service en ligne gratuit (MyMemory).": "Common words offline · sentences via a free online service (MyMemory).",
+  "Fil d'Ariane": "Breadcrumb"
 }

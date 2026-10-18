@@ -1,3 +1,4 @@
+import { TextePublic } from '../localisation/PublicText.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useStore, grandOralVide } from '../store.jsx'
@@ -81,14 +82,14 @@ function GrandOralPage() {
       <header className="text-center">
         <p className="kicker">🎓 {t('grandOral')}</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('grandOral')}</h1>
-        <p className="mx-auto mt-2 max-w-lg text-sm text-slate-500 dark:text-slate-400">{CONTENU.intro}</p>
+        <p className="mx-auto mt-2 max-w-lg text-sm text-slate-500 dark:text-slate-400"><TextePublic text={CONTENU.intro} /></p>
       </header>
 
       <div className="grid grid-cols-3 gap-2 text-center">
         {CONTENU.enBref.map((x) => (
           <div key={x.l} className="rounded-xl p-2.5" style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 10%, transparent)' }}>
-            <p className="font-display text-xl font-bold" style={LIEN}>{x.v}</p>
-            <p className="text-xs text-slate-600 dark:text-slate-300">{x.l}</p>
+            <p className="font-display text-xl font-bold" style={LIEN}><TextePublic text={x.v} /></p>
+            <p className="text-xs text-slate-600 dark:text-slate-300"><TextePublic text={x.l} /></p>
           </div>
         ))}
       </div>
@@ -105,7 +106,7 @@ function GrandOralPage() {
             <section className="card space-y-2 p-4" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 35%, transparent)' }}>
               <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Mes questions</p>
               {questions.map((q) => (
-                <p key={q.id} className="font-display text-lg leading-snug"><span className="text-sm font-semibold" style={LIEN}>{q.label} · </span>{q.texte || 'À écrire dans l’onglet « Consignes ».'}</p>
+                <p key={q.id} className="font-display text-lg leading-snug"><span className="text-sm font-semibold" style={LIEN}><TextePublic text={q.label} /> · </span>{q.texte || 'À écrire dans l’onglet « Consignes ».'}</p>
               ))}
             </section>
           )} />
@@ -140,7 +141,7 @@ function Consignes({ go, maj, track }) {
           </label>
           {QUESTIONS.map((q) => (
             <label key={q.id} className="block">
-              <span className={ETIQUETTE}>{q.label}</span>
+              <span className={ETIQUETTE}><TextePublic text={q.label} /></span>
               <textarea value={go[q.id] || ''} onChange={(e) => maj({ [q.id]: e.target.value })} rows={2} placeholder="Une question précise, qui appelle une réponse argumentée." className={CHAMP} maxLength={400} />
             </label>
           ))}
@@ -166,26 +167,26 @@ function Consignes({ go, maj, track }) {
 
       <Pli icon="📏" titre="L'épreuve" sous="Les règles de la session 2027">
         <div className="space-y-2">
-          {CONTENU.regles.map((r) => <Detail key={r.h} titre={r.h}><Rich text={r.c} /></Detail>)}
+          {CONTENU.regles.map((r) => <Detail key={r.h} titre={<TextePublic text={r.h} />}><Rich translate text={r.c} /></Detail>)}
         </div>
       </Pli>
 
       <Pli icon="⚖️" titre="Ce que le jury évalue" sous={`${CONTENU.jury.criteres.length} critères`}>
         <div className="space-y-2">
-          {CONTENU.jury.criteres.map((c) => <Detail key={c.h} titre={`${c.icon} ${c.h}`}>{c.c}</Detail>)}
+          {CONTENU.jury.criteres.map((c) => <Detail key={c.h} titre={<>{c.icon} <TextePublic text={c.h} /></>}><TextePublic text={c.c} /></Detail>)}
         </div>
-        <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">{CONTENU.jury.note}</p>
+        <p className="mt-3 text-xs text-slate-500 dark:text-slate-400"><TextePublic text={CONTENU.jury.note} /></p>
       </Pli>
 
       <Pli icon="🧭" titre="La démarche" sous={`${CONTENU.demarche.length} étapes`}>
         <div className="space-y-2">
-          {CONTENU.demarche.map((d, k) => <Detail key={d.h} repere={k + 1} titre={d.h}>{d.c}</Detail>)}
+          {CONTENU.demarche.map((d, k) => <Detail key={d.h} repere={k + 1} titre={<TextePublic text={d.h} />}><TextePublic text={d.c} /></Detail>)}
         </div>
       </Pli>
 
       <Pli icon="💡" titre="Les conseils" sous={`${CONTENU.conseils.length} conseils`}>
         <ul className="list-disc space-y-1.5 pl-5 text-sm">
-          {CONTENU.conseils.map((c) => <li key={c}>{c}</li>)}
+          {CONTENU.conseils.map((c) => <li key={c}><TextePublic text={c} /></li>)}
         </ul>
       </Pli>
 
@@ -198,7 +199,7 @@ function Consignes({ go, maj, track }) {
               <button key={k} onClick={() => setBanqueSpec(k)} aria-pressed={actif}
                 className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${actif ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`}
                 style={actif ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
-                {v.icon} {v.label}{k === maSpec ? ' ★' : ''}
+                {v.icon} <TextePublic text={v.label} />{k === maSpec ? ' ★' : ''}
               </button>
             )
           })}
@@ -207,10 +208,10 @@ function Consignes({ go, maj, track }) {
           {banque.items.map((it) => (
             <div key={it.q} className="rounded-xl bg-slate-50 p-3 dark:bg-slate-800/60">
               <div className="flex items-start justify-between gap-2">
-                <p className="text-sm font-semibold leading-snug">« {it.q} »</p>
+                <p className="text-sm font-semibold leading-snug">« <TextePublic text={it.q} /> »</p>
                 <button onClick={() => utiliser(it.q)} className="shrink-0 rounded-lg px-2 py-1 text-xs font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: 'var(--c-accent-fort)' }}>Utiliser</button>
               </div>
-              <p className="mt-1.5 text-sm text-slate-600 dark:text-slate-300"><span className="font-semibold" style={LIEN}>Angle :</span> {it.angle}</p>
+              <p className="mt-1.5 text-sm text-slate-600 dark:text-slate-300"><span className="font-semibold" style={LIEN}>Angle :</span> <TextePublic text={it.angle} /></p>
             </div>
           ))}
         </div>
@@ -229,7 +230,7 @@ function Consignes({ go, maj, track }) {
         <Pli icon="📖" titre="Revoir le cours" sous="Pour préparer l'échange avec le jury">
           <div className="grid gap-2">
             {cours.map((s) => (
-              <Link key={s.id} to={`/subject/${s.id}`} className="rounded-xl bg-slate-100 px-3 py-2.5 text-sm font-semibold transition hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700">{s.name} ›</Link>
+              <Link key={s.id} to={`/subject/${s.id}`} className="rounded-xl bg-slate-100 px-3 py-2.5 text-sm font-semibold transition hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700"><TextePublic text={s.name} /> ›</Link>
             ))}
           </div>
         </Pli>
@@ -238,7 +239,7 @@ function Consignes({ go, maj, track }) {
       <Pli icon="📜" titre="Textes officiels" sous={`${CONTENU.references.length} textes`}>
         <ul className="space-y-2 text-sm">
           {CONTENU.references.map((r) => (
-            <li key={r.lien}><a href={r.lien} target="_blank" rel="noopener noreferrer" className="underline" style={LIEN}>{r.titre}</a></li>
+            <li key={r.lien}><a href={r.lien} target="_blank" rel="noopener noreferrer" className="underline" style={LIEN}><TextePublic text={r.titre} /></a></li>
           ))}
         </ul>
       </Pli>
@@ -282,7 +283,7 @@ function Entrainement() {
             <button key={p.key} onClick={() => regler(p.min, p.key)} aria-pressed={actif}
               className={`rounded-xl px-2 py-2 text-center text-xs font-semibold transition ${actif ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`}
               style={actif ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
-              {p.label}<br /><span className="font-normal">{p.min} min</span>
+              <TextePublic text={p.label} /><br /><span className="font-normal">{p.min} min</span>
             </button>
           )
         })}
@@ -336,7 +337,7 @@ function AutoEval() {
       <div className="space-y-3">
         {CRITERES.map((c) => (
           <div key={c.key} className="flex flex-wrap items-center justify-between gap-2">
-            <span className="flex items-center gap-2 text-sm font-medium"><span aria-hidden>{c.icon}</span> {c.label}</span>
+            <span className="flex items-center gap-2 text-sm font-medium"><span aria-hidden>{c.icon}</span> <TextePublic text={c.label} /></span>
             <div className="flex gap-1.5">
               {[1, 2, 3, 4, 5].map((n) => (
                 <button key={n} onClick={() => setNotes((p) => ({ ...p, [c.key]: n }))} aria-label={`${c.label} : ${n} sur 5`} aria-pressed={notes[c.key] === n}

@@ -97,3 +97,22 @@ test('une panne de traduction est visible et peut être relancée', async ({ pag
   await page.getByRole('button', { name: 'Retry', exact: true }).click()
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('[English] Foire aux questions')
 })
+
+test('les consignes du Grand Oral se traduisent et les brouillons restent privés', async ({ page }) => {
+  const secret = 'Ma question strictement privée'
+  const erreurs = await preparer(page, etatEleve({ lang: 'en', grandOral: { q1: secret } }))
+  const demandes = []
+  await page.route('https://api.mymemory.translated.net/**', (route) => {
+    const text = new URL(route.request().url()).searchParams.get('q')
+    demandes.push(text)
+    return route.fulfill({ contentType: 'application/json', body: JSON.stringify({ responseStatus: 200, responseData: { translatedText: `[English] ${text}` } }) })
+  })
+  await page.goto('./#/grand-oral')
+  await attendreAccueil(page)
+  await expect(page.locator('textarea').first()).toHaveValue(secret)
+  await page.getByRole('button', { name: /\[English\] L'épreuve/ }).click()
+  await expect.poll(() => demandes.some((text) => text.includes('Grand Oral') || text.includes('grand oral'))).toBe(true)
+  expect(demandes.join(' ')).not.toContain(secret)
+  expect((await etat(page)).grandOral.q1).toBe(secret)
+  expect(erreurs).toEqual([])
+})

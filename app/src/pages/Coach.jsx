@@ -1,3 +1,4 @@
+import { TextePublic } from '../localisation/PublicText.jsx'
 import { useMemo, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
@@ -213,7 +214,7 @@ function CoachPage() {
           <div className="card card-lux space-y-4 p-5">
             {QUIZ.map((item, qi) => (
               <div key={qi}>
-                <p className="mb-2 font-semibold">{qi + 1}. {item.q}</p>
+                <p className="mb-2 font-semibold">{qi + 1}. <TextePublic text={item.q} /></p>
                 <div className="grid gap-2">
                   {item.a.map((opt, ai) => (
                     <button
@@ -222,7 +223,7 @@ function CoachPage() {
                       className={`rounded-xl border-2 px-3 py-2.5 text-left text-sm transition ${answers[qi] === ai ? 'font-semibold' : 'border-transparent bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700'}`}
                       style={answers[qi] === ai ? { borderColor: 'var(--c-accent)', backgroundColor: 'color-mix(in srgb, var(--c-accent) 12%, transparent)' } : undefined}
                     >
-                      {opt.label}
+                      <TextePublic text={opt.label} />
                     </button>
                   ))}
                 </div>
@@ -245,7 +246,7 @@ function CoachPage() {
                 {recommended.map((m) => (
                   <div key={m.id} className="flex gap-3 rounded-xl p-3" style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 9%, transparent)' }}>
                     <span className="text-2xl" aria-hidden>{m.icon}</span>
-                    <div><p className="font-semibold">{m.name}</p><p className="mt-0.5 text-sm text-slate-600 dark:text-slate-300">{m.desc}</p></div>
+                    <div><p className="font-semibold"><TextePublic text={m.name} /></p><p className="mt-0.5 text-sm text-slate-600 dark:text-slate-300"><TextePublic text={m.desc} /></p></div>
                   </div>
                 ))}
               </div>
@@ -261,8 +262,8 @@ function CoachPage() {
         <div className="grid gap-3 sm:grid-cols-2">
           {METHODS.map((m) => (
             <div key={m.id} className="card p-4">
-              <p className="flex items-center gap-2 font-display font-semibold"><span className="text-xl" aria-hidden>{m.icon}</span> {m.name}</p>
-              <p className="mt-1.5 text-sm text-slate-600 dark:text-slate-300">{m.desc}</p>
+              <p className="flex items-center gap-2 font-display font-semibold"><span className="text-xl" aria-hidden>{m.icon}</span> <TextePublic text={m.name} /></p>
+              <p className="mt-1.5 text-sm text-slate-600 dark:text-slate-300"><TextePublic text={m.desc} /></p>
             </div>
           ))}
         </div>

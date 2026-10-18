@@ -1,3 +1,4 @@
+import { TextePublic } from '../localisation/PublicText.jsx'
 import { useEffect, useState } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import Introuvable from './Introuvable.jsx'
@@ -174,7 +175,7 @@ export default function Theme() {
                       className="flex w-full items-center gap-2 rounded-2xl border border-slate-200 bg-white/60 px-4 py-3 text-left transition hover:bg-white dark:border-slate-800 dark:bg-slate-900/50 dark:hover:bg-slate-900"
                       aria-expanded={isOpen}
                     >
-                      <span className="min-w-0 flex-1 font-display font-semibold">{g.label}</span>
+                      <span className="min-w-0 flex-1 font-display font-semibold"><TextePublic text={g.label} /></span>
                       <span className="shrink-0 text-xs font-semibold text-slate-400">{doneCount}/{g.items.length}</span>
                       <span className="shrink-0 text-slate-400 transition" aria-hidden>{isOpen ? '▾' : '▸'}</span>
                     </button>

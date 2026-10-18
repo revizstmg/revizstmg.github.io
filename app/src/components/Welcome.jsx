@@ -1,3 +1,4 @@
+import { TextePublic } from '../localisation/PublicText.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useStore } from '../store.jsx'
@@ -372,7 +373,7 @@ export default function Welcome() {
               <div key={s.id} className="welcome-subject">
                 <p className="welcome-subject-h">
                   <span aria-hidden>{s.icon}</span>
-                  <span>{s.name}</span>
+                  <span><TextePublic text={s.name} /></span>
                   <span className="ws-where">{chosen[s.id] ? t('chapterChosen') : t('whereAreYou')}</span>
                 </p>
                 {s.chapters.map((c) => {
@@ -460,7 +461,7 @@ export default function Welcome() {
             <span className="welcome-label">{t('yourClass')}</span>
             <div className="flex flex-wrap gap-2">
               {LEVELS.map((l) => (
-                <button key={l.id} type="button" disabled={!l.available} onClick={() => pickLevel(l)} className={seg(level === l.id)}>{l.icon} {l.name}{!l.available && ` · ${t('soon')}`}</button>
+                <button key={l.id} type="button" disabled={!l.available} onClick={() => pickLevel(l)} className={seg(level === l.id)}>{l.icon} <TextePublic text={l.name} />{!l.available && ` · ${t('soon')}`}</button>
               ))}
             </div>
             {needsSpecialty && (
@@ -468,7 +469,7 @@ export default function Welcome() {
                 <span className="welcome-label">{t('yourSpecialty')}</span>
                 <div className="flex flex-wrap gap-2">
                   {chosenLevel.specialties.map((sp) => (
-                    <button key={sp.id} type="button" disabled={!sp.available} onClick={() => sp.available && setSpecialty(sp.id)} className={seg(specialty === sp.id)}>{sp.icon} {sp.name}{!sp.available && ` · ${t('toCome')}`}</button>
+                    <button key={sp.id} type="button" disabled={!sp.available} onClick={() => sp.available && setSpecialty(sp.id)} className={seg(specialty === sp.id)}>{sp.icon} <TextePublic text={sp.name} />{!sp.available && ` · ${t('toCome')}`}</button>
                   ))}
                 </div>
               </>
@@ -580,7 +581,7 @@ export default function Welcome() {
                 <span className="welcome-label">{isProf ? t('teacherLevel') : t('yourClass')}</span>
                 <div className="flex flex-wrap gap-2">
                   {LEVELS.map((l) => (
-                    <button key={l.id} type="button" disabled={!l.available} onClick={() => pickLevel(l)} className={seg(level === l.id)}>{l.icon} {l.name}{!l.available && ` · ${t('soon')}`}</button>
+                    <button key={l.id} type="button" disabled={!l.available} onClick={() => pickLevel(l)} className={seg(level === l.id)}>{l.icon} <TextePublic text={l.name} />{!l.available && ` · ${t('soon')}`}</button>
                   ))}
                 </div>
                 {!isProf && needsSpecialty && (
@@ -588,7 +589,7 @@ export default function Welcome() {
                     <span className="welcome-label">{t('yourSpecialty')}</span>
                     <div className="flex flex-wrap gap-2">
                       {chosenLevel.specialties.map((sp) => (
-                        <button key={sp.id} type="button" disabled={!sp.available} onClick={() => sp.available && setSpecialty(sp.id)} className={seg(specialty === sp.id)}>{sp.icon} {sp.name}{!sp.available && ` · ${t('toCome')}`}</button>
+                        <button key={sp.id} type="button" disabled={!sp.available} onClick={() => sp.available && setSpecialty(sp.id)} className={seg(specialty === sp.id)}>{sp.icon} <TextePublic text={sp.name} />{!sp.available && ` · ${t('toCome')}`}</button>
                       ))}
                     </div>
                   </>
@@ -597,7 +598,7 @@ export default function Welcome() {
                   <>
                     <span className="welcome-label">{t('whatDoYouTeach')}</span>
                     <div className="flex flex-wrap gap-2">
-                      {TAUGHT.map((s) => (<button key={s.id} type="button" onClick={() => toggleTaught(s.id)} className={seg(taught.includes(s.id))}>{s.icon} {s.label}</button>))}
+                      {TAUGHT.map((s) => (<button key={s.id} type="button" onClick={() => toggleTaught(s.id)} className={seg(taught.includes(s.id))}>{s.icon} <TextePublic text={s.label} /></button>))}
                     </div>
                     <span className="welcome-label">{t('howManyClasses')}</span>
                     <div className="flex flex-wrap gap-2">{[1, 2, 3, 4, 5, 6].map((n) => (<button key={n} type="button" onClick={() => setNClasses(n)} className={seg(nClasses === n)}>{n}</button>))}</div>

@@ -1,3 +1,4 @@
+import { TextePublic } from '../localisation/PublicText.jsx'
 import { useMemo, useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useStore, useStudyTimer } from '../store.jsx'
@@ -147,7 +148,7 @@ function CoachAIPage() {
                   <Link key={s.id} to={`/subject/${s.id}`} className="flex items-center gap-3 p-3.5 transition hover:bg-slate-50 dark:hover:bg-slate-800/50">
                     <span className="min-w-0 flex-1">
                       <span className="mb-1 flex items-center justify-between gap-2">
-                        <span className="truncate text-sm font-semibold">{s.name}</span>
+                        <span className="truncate text-sm font-semibold"><TextePublic text={s.name} /></span>
                         <span className="shrink-0 text-xs font-semibold tabular-nums" style={{ color: st.c }}>{s.done === 0 ? t('aiNotSeen') : s.avg + '%'}</span>
                       </span>
                       <ProgressBar value={s.done === 0 ? 0 : s.avg} color={st.c} height={7} />
@@ -270,7 +271,7 @@ function CoachAIPage() {
             <label className="mb-2 block text-xs font-medium text-slate-500 dark:text-slate-400">{t('aiTargetSubject')}</label>
             <select value={subjectFilter} onChange={(e) => setSubjectFilter(e.target.value)} className="mb-4 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800">
               <option value="">{t('aiAllSubjects')}</option>
-              {subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
+              {subjects.map((s) => <option key={s.id} value={s.id}><TextePublic text={s.name} /></option>)}
             </select>
             <label className="mb-2 block text-xs font-medium text-slate-500 dark:text-slate-400">Longueur de la séance</label>
             <div className="mb-4 grid grid-cols-3 gap-2">
