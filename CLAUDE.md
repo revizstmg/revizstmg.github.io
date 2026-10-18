@@ -1,5 +1,11 @@
 # CLAUDE.md
 
+## Coordination avec Codex et le propriétaire
+
+Avant de commencer une tâche, lire `docs/COORDINATION.md` et y annoncer son
+périmètre. Avant de passer la main, y noter les changements, les vérifications et
+les références Git. Ne jamais annoncer une action au nom d'un autre participant.
+
 RévizSTMG : application de révision du bac STMG, en ligne sur
 https://revizstmg.github.io. Documentation complète : `README.md`.
 
