@@ -17,6 +17,9 @@ et en classe. Installable sur téléphone et utilisable hors ligne.
 > Ce document décrit l'application après la refonte d'octobre 2026 : mettez-le à
 > jour à chaque changement visible par l'élève.
 
+Dans le lecteur de cours, la flèche après la dernière fiche revient à la
+première fiche du même chapitre, en lecture normale comme en plein écran.
+
 ## Ce que fait l'application
 
 | Domaine | Contenu |

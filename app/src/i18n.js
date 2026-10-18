@@ -299,7 +299,7 @@ const FR = {
   backToChapters: 'Revenir aux chapitres', savePdf: 'Enregistrer (PDF)', gamesOfChapter: 'Jeux de ce chapitre', keyDefs: 'Définitions clés',
   notionsDefs: 'Notions et définitions', notionCol: 'Notion', definitionCol: 'Définition',
   exoUnit: 'exercice', exoUnitP: 'exercices', notionUnit: 'notion', notionUnitP: 'notions',
-  previous: 'Précédent', nextChapter: 'Chapitre suivant', takeTest: 'Passer le test du thème', pageWord: 'Page', tapToOpen: 'Appuyer pour lire en plein écran',
+  previous: 'Précédent', nextChapter: 'Chapitre suivant', takeTest: 'Passer le test du thème', firstCoursePage: 'Revenir à la première fiche', pageWord: 'Page', tapToOpen: 'Appuyer pour lire en plein écran',
   new: 'Nouveau', tabChapters: 'Chapitres', tabTest: 'Test du thème', tabProgress: 'Progression', tabTools: 'Outils', tabLesson: 'Cours', tabDefs: 'Définitions', tabExercises: 'Exercices', noDefsHere: 'Les définitions clés de ce thème se trouvent dans les autres chapitres.', lessonLabel: 'Le cours', exercisesLabel: 'Exercices',
   chooseChapter: 'Choisis un chapitre pour lire le cours et t’entraîner.', course: 'Cours',
   courseInChapters: 'Le cours, chapitre par chapitre', chapterWord: 'chapitre', chaptersWord: 'chapitres', exerciseWord: 'exercice', exercisesWord: 'exercices', chooseChapterHint: 'Suis les chapitres dans l’ordre, ou choisis directement celui à réviser.',

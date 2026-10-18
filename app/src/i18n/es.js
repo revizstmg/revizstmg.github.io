@@ -266,7 +266,7 @@ export default {
   backToChapters: 'Volver a los capítulos', savePdf: 'Guardar (PDF)', gamesOfChapter: 'Juegos de este capítulo', keyDefs: 'Definiciones clave',
   notionsDefs: 'Nociones y definiciones', notionCol: 'Noción', definitionCol: 'Definición',
   exoUnit: 'ejercicio', exoUnitP: 'ejercicios', notionUnit: 'noción', notionUnitP: 'nociones',
-  previous: 'Anterior', nextChapter: 'Capítulo siguiente', takeTest: 'Hacer la prueba del tema', pageWord: 'Página', tapToOpen: 'Pulsa para leer a pantalla completa',
+  previous: 'Anterior', nextChapter: 'Capítulo siguiente', takeTest: 'Hacer la prueba del tema', firstCoursePage: 'Volver a la primera página', pageWord: 'Página', tapToOpen: 'Pulsa para leer a pantalla completa',
   new: 'Nuevo', tabChapters: 'Capítulos', tabTest: 'Prueba del tema', tabProgress: 'Progreso', tabTools: 'Herramientas', tabLesson: 'Curso', tabDefs: 'Definiciones', tabExercises: 'Ejercicios', noDefsHere: 'Las definiciones clave de este tema están en los otros capítulos.', lessonLabel: 'El curso', exercisesLabel: 'Ejercicios',
   chooseChapter: 'Elige un capítulo para leer la lección y practicar.', course: 'Lección',
   courseInChapters: 'El curso, capítulo por capítulo', chapterWord: 'capítulo', chaptersWord: 'capítulos', exerciseWord: 'ejercicio', exercisesWord: 'ejercicios', chooseChapterHint: 'Sigue los capítulos en orden, o ve directamente al que quieres repasar.',

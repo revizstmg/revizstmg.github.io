@@ -158,7 +158,7 @@ function avecTableauFinal(sec, themeId, subjectId, sectionIdx, t) {
   return [...blocks, { t: 'table', h: t('notionsDefs'), head: [t('notionCol'), t('definitionCol')], rows: defs.map((d) => [d.term, d.def]) }]
 }
 
-export function PaginatedCourse({ sec, color, prevLabel, nextLabel, onPrev, onNext, themeId, subjectId, sectionIdx = 0 }) {
+export function PaginatedCourse({ sec, color, prevLabel, onPrev, themeId, subjectId, sectionIdx = 0 }) {
   const t = useT()
   // Pages recalculées à chaque changement de section (nouveau chapitre).
   const feuilles = () => paginateBlocks(avecTableauFinal(sec, themeId, subjectId, sectionIdx, t))
@@ -172,9 +172,9 @@ export function PaginatedCourse({ sec, color, prevLabel, nextLabel, onPrev, onNe
   const last = list.length - 1
   const toTop = (ref) => { try { (ref?.current || window).scrollTo({ top: 0, behavior: 'smooth' }) } catch { (ref?.current || window).scrollTo(0, 0) } }
   const goPrev = () => { if (page > 0) { setPage(page - 1); toTop(full ? fullRef : null) } else { setFull(false); onPrev?.() } }
-  const goNext = () => { if (page < last) { setPage(page + 1); toTop(full ? fullRef : null) } else { setFull(false); onNext?.() } }
+  // La dernière fiche revient au début du même cours, y compris en plein écran.
+  const goNext = () => { setPage(page < last ? page + 1 : 0); toTop(full ? fullRef : null) }
   const atStart = page === 0 && !onPrev
-  const endCaption = page === last && onNext ? nextLabel : null
 
   // Verrou du défilement de l'app quand la feuille est en plein écran.
   useEffect(() => {
@@ -217,12 +217,12 @@ export function PaginatedCourse({ sec, color, prevLabel, nextLabel, onPrev, onNe
           ))}
         </div>
         <span className="text-[11px] font-medium text-slate-400">
-          {endCaption || `${t('pageWord')} ${page + 1} / ${list.length}`}
+          {`${t('pageWord')} ${page + 1} / ${list.length}`}
         </span>
       </div>
       <button
         onClick={goNext}
-        aria-label={page === last ? (nextLabel || t('nextChapter')) : t('next')}
+        aria-label={page === last ? t('firstCoursePage') : t('next')}
         className="grid h-12 w-12 shrink-0 place-items-center rounded-full text-xl text-white shadow-md transition hover:brightness-110"
         style={{ backgroundColor: color }}
       >
@@ -274,7 +274,7 @@ export function PaginatedCourse({ sec, color, prevLabel, nextLabel, onPrev, onNe
       {full && createPortal((
         <div className="reader-full no-print fixed inset-0 z-[80] flex flex-col bg-slate-200/95 backdrop-blur-sm dark:bg-slate-950/95" role="dialog" aria-modal="true">
           <div className="flex items-center justify-between px-4 py-3">
-            <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">{endCaption || `${t('pageWord')} ${page + 1} / ${list.length}`}</span>
+            <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">{`${t('pageWord')} ${page + 1} / ${list.length}`}</span>
             <button
               onClick={() => setFull(false)}
               aria-label={t('close')}

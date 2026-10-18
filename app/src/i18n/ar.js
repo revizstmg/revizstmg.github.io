@@ -265,7 +265,7 @@ export default {
   backToChapters: 'العودة إلى الفصول', savePdf: 'حفظ (PDF)', gamesOfChapter: 'ألعاب هذا الفصل', keyDefs: 'تعريفات أساسية',
   notionsDefs: 'المفاهيم والتعريفات', notionCol: 'المفهوم', definitionCol: 'التعريف',
   exoUnit: 'تمرين', exoUnitP: 'تمارين', notionUnit: 'مفهوم', notionUnitP: 'مفاهيم',
-  previous: 'السابق', nextChapter: 'الفصل التالي', takeTest: 'خوض اختبار المحور', pageWord: 'صفحة', tapToOpen: 'اضغط للقراءة بملء الشاشة',
+  previous: 'السابق', nextChapter: 'الفصل التالي', takeTest: 'خوض اختبار المحور', firstCoursePage: 'العودة إلى الصفحة الأولى', pageWord: 'صفحة', tapToOpen: 'اضغط للقراءة بملء الشاشة',
   new: 'جديد', tabChapters: 'الفصول', tabTest: 'اختبار المحور', tabProgress: 'التقدّم', tabTools: 'أدوات', tabLesson: 'الدرس', tabDefs: 'التعريفات', tabExercises: 'تمارين', noDefsHere: 'التعريفات الأساسية لهذا المحور موجودة في الفصول الأخرى.', lessonLabel: 'الدرس', exercisesLabel: 'تمارين',
   chooseChapter: 'اختر فصلًا لقراءة الدرس والتدرّب.', course: 'الدرس',
   courseInChapters: 'الدرس، فصلًا بفصل', chapterWord: 'فصل', chaptersWord: 'فصول', exerciseWord: 'تمرين', exercisesWord: 'تمارين', chooseChapterHint: 'اتبع الفصول بالترتيب، أو اذهب مباشرة إلى ما تريد مراجعته.',

@@ -37,6 +37,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | AUDIT-20261018-CODEX-01 | Codex | Audit global en lecture : code, contenu, parcours, Supabase réel, publication et publicité ; cartographie publique dans `docs/AUDIT-2026-10-18.md`, résultats de sécurité détaillés dans le chat | Terminé, à fusionner | [PR #5](https://github.com/revizstmg/revizstmg.github.io/pull/5) | Lire `docs/AUDIT-2026-10-18.md`, puis annoncer séparément chaque correction |
 
+| NAV-20261018-CODEX-01 | Codex | Boucler de la dernière fiche à la première du même chapitre : `Course.jsx`, `Chapter.jsx`, traductions, parcours et README | À relire | `fix/retour-premiere-fiche`, PR #7 | Validation CI puis fusion |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -105,6 +107,18 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   50 sections sans activité autonome : les réparer sans réintroduire de questions
   hors chapitre. Le rapport inclut la comparaison avant/après.
 - Portée de cette PR : documentation uniquement ; aucune correction fonctionnelle.
+
+### NAV-20261018-CODEX-01 — Codex — 18 octobre 2026
+
+- Demande : après la dernière fiche, revenir à la fiche 1 du même chapitre.
+- Réalisé : la flèche suivante boucle dans le cours courant au lieu d’ouvrir le
+  chapitre suivant ou le test du thème. Le mode plein écran reste ouvert ; le
+  clavier suit la même règle. Le compteur conserve le numéro de fiche.
+- Vérifications : 154 tests unitaires réussis, compilation réussie ; trois
+  parcours navigateur couvrent la lecture normale, le plein écran au clavier
+  et le dernier chapitre d’un thème. Aucune modification Supabase.
+- Branche : `fix/retour-premiere-fiche` ; PR #7. Le résultat de la validation
+  complète, la fusion et la publication sont consultables dans cette PR et ses Actions.
 
 ### Modèle à copier pour une nouvelle tâche
 

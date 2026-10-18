@@ -266,7 +266,7 @@ export default {
   backToChapters: 'Back to chapters', savePdf: 'Save (PDF)', gamesOfChapter: 'Games of this chapter', keyDefs: 'Key definitions',
   notionsDefs: 'Key terms and definitions', notionCol: 'Term', definitionCol: 'Definition',
   exoUnit: 'exercise', exoUnitP: 'exercises', notionUnit: 'key term', notionUnitP: 'key terms',
-  previous: 'Previous', nextChapter: 'Next chapter', takeTest: 'Take the theme test', pageWord: 'Page', tapToOpen: 'Tap to read full screen',
+  previous: 'Previous', nextChapter: 'Next chapter', takeTest: 'Take the theme test', firstCoursePage: 'Back to the first page', pageWord: 'Page', tapToOpen: 'Tap to read full screen',
   new: 'New', tabChapters: 'Chapters', tabTest: 'Theme test', tabProgress: 'Progress', tabTools: 'Tools', tabLesson: 'Lesson', tabDefs: 'Definitions', tabExercises: 'Exercises', noDefsHere: 'The key definitions for this topic are in the other chapters.', lessonLabel: 'The lesson', exercisesLabel: 'Exercises',
   chooseChapter: 'Choose a chapter to read the lesson and practise.', course: 'Lesson',
   courseInChapters: 'The course, chapter by chapter', chapterWord: 'chapter', chaptersWord: 'chapters', exerciseWord: 'exercise', exercisesWord: 'exercises', chooseChapterHint: 'Follow the chapters in order, or jump straight to the one to review.',
