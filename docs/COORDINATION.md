@@ -39,6 +39,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | NAV-20261018-CODEX-01 | Codex | Boucler de la dernière fiche à la première du même chapitre : `Course.jsx`, `Chapter.jsx`, traductions, parcours et README | À relire | `fix/retour-premiere-fiche`, PR #7 | Validation CI puis fusion |
 
+| CLASSE-20261018-CODEX-01 | Codex | Vérifier le code avant de rejoindre une classe : `classroom.js`, formulaires Classe et Classement, tests, traductions | En cours | `fix/code-classe-invalide` | Reproduire puis tester les codes inconnus et les erreurs réseau |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
