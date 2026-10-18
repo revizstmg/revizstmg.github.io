@@ -41,7 +41,7 @@ sur l’accueil.
 
 Premium et Ultimate restent des offres à définir. Le programme annonce un mois
 Premium offert au lancement avec 20 tests distincts à 90 % et 20 000 XP, un mois
-Ultimate avec 50 tests distincts à 95 % et 73 500 XP. La réservation locale ne
+Ultimate avec 30 tests distincts à 95 % et 73 500 XP. La réservation locale ne
 constitue pas une attribution vérifiée ni un abonnement actif : une demande par
 brouillon e-mail permet aux éditeurs de vérifier les résultats avant attribution.
 Aucun envoi automatique, carte bancaire ni renouvellement ; aucune fonctionnalité

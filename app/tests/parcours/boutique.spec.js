@@ -67,7 +67,7 @@ test('pièces insuffisantes, raretés verrouillées, packs et cadeaux uniques', 
 })
 
 test('les mois offerts exigent les résultats et restent des réservations futures', async ({ page }, testInfo) => {
-  const chapters = Object.fromEntries(Array.from({ length: 50 }, (_, i) => [`theme-${i}`, { quiz: 95, games: {} }]))
+  const chapters = Object.fromEntries(Array.from({ length: 30 }, (_, i) => [`theme-${i}`, { quiz: 95, games: {} }]))
   const erreurs = await ouvrir(page, { xp: 73500, coins: 4000, chapters })
   await page.screenshot({ path: testInfo.outputPath('shop-mobile.png'), fullPage: true })
   await page.getByRole('button', { name: 'Récompenses', exact: true }).click()

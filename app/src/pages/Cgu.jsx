@@ -51,7 +51,7 @@ export default function Cgu() {
         de série sont consommés lorsqu’ils protègent une journée manquée.</p>
         <p>Les paliers sont récupérables une seule fois. Un mois Premium offert est proposé à partir
         de 20 000 XP (niveau 20) et de 20 tests de thèmes différents réussis à au moins 90 %.
-        Un mois Ultimate offert est proposé à partir de 73 500 XP (niveau 30) et de 50 tests de thèmes
+        Un mois Ultimate offert est proposé à partir de 73 500 XP (niveau 30) et de 30 tests de thèmes
         différents réussis à au moins 95 %. Le meilleur résultat de chaque thème compte une seule fois.</p>
         <p>Premium et Ultimate sont des offres en préparation : leurs fonctionnalités et leur date de
         lancement ne sont pas encore définies. Réserver une récompense n’active pas un abonnement.

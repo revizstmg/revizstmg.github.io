@@ -52,11 +52,12 @@ test('un mois Premium demande des XP et vingt tests distincts à 90 %', () => {
   expect(collectReward(claimed, reward.id)).toBe(claimed)
   expect(collectReward({ ...good, account: null }, reward.id).shopRewards).toEqual({})
 })
-test('Ultimate exige cinquante tests à 95 % et le niveau 30', () => {
+test('Ultimate exige trente tests à 95 % et le niveau 30', () => {
   const reward = SHOP_REWARDS.find((r) => r.id === 'ultimate-month')
-  expect(rewardProgress(state({ xp: 73500, chapters: progress(50, 94) }), reward).eligible).toBe(false)
-  expect(rewardProgress(state({ xp: 73500, chapters: progress(50, 95) }), reward).eligible).toBe(true)
-  expect(rewardProgress(state({ xp: 73500, chapters: progress(50, Infinity) }), reward).eligible).toBe(false)
+  expect(rewardProgress(state({ xp: 73500, chapters: progress(30, 94) }), reward).eligible).toBe(false)
+  expect(rewardProgress(state({ xp: 73500, chapters: progress(29, 100) }), reward).eligible).toBe(false)
+  expect(rewardProgress(state({ xp: 73500, chapters: progress(30, 95) }), reward).eligible).toBe(true)
+  expect(rewardProgress(state({ xp: 73500, chapters: progress(30, Infinity) }), reward).eligible).toBe(false)
 })
 test('les cadeaux sont uniques, équipables ensuite et conservés lors de la fusion', () => {
   const once = collectReward(state({ xp: 700 }), 'regulier')

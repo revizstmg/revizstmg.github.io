@@ -176,7 +176,7 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   cadeaux uniques de niveau. Anciens identifiants, prix et achats conservés.
   Douze niveaux historiques conservés ; niveaux 20/30 à 20 000/73 500 XP.
 - Programme : Premium nécessite 20 thèmes à 90 % minimum et le niveau 20 ;
-  Ultimate, 50 thèmes à 95 % et le niveau 30. Chaque thème compte une fois.
+  Ultimate, 30 thèmes à 95 % et le niveau 30. Chaque thème compte une fois.
   Le propriétaire a précisé que le contenu des offres sera défini plus tard.
   Les mois sont donc réservés pour leur lancement, après vérification ; aucune
   activation d’abonnement ni débit. Brouillon e-mail facultatif, jamais d’envoi
