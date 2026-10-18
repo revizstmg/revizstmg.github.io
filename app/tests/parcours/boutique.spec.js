@@ -60,10 +60,10 @@ test('pièces insuffisantes, raretés verrouillées, packs et cadeaux uniques', 
   expect(erreurs).toEqual([])
 })
 
-test('les mois offerts exigent les résultats et restent des réservations futures', async ({ page }) => {
+test('les mois offerts exigent les résultats et restent des réservations futures', async ({ page }, testInfo) => {
   const chapters = Object.fromEntries(Array.from({ length: 50 }, (_, i) => [`theme-${i}`, { quiz: 95, games: {} }]))
   const erreurs = await ouvrir(page, { xp: 73500, coins: 4000, chapters })
-  await page.screenshot({ path: '/workspace/work/shop-mobile.png', fullPage: true })
+  await page.screenshot({ path: testInfo.outputPath('shop-mobile.png'), fullPage: true })
   await page.getByRole('button', { name: 'Récompenses', exact: true }).click()
   for (const name of ['Un mois Premium offert', 'Un mois Ultimate offert']) {
     const article = page.getByRole('article', { name, exact: true })
@@ -83,6 +83,6 @@ test('les mois offerts exigent les résultats et restent des réservations futur
   await expect(page.getByText('✓ Récompense réservée · à faire vérifier')).toHaveCount(2)
   await page.setViewportSize({ width: 1280, height: 900 })
   await page.getByRole('button', { name: 'À la une', exact: true }).click()
-  await page.screenshot({ path: '/workspace/work/shop-desktop.png', fullPage: true })
+  await page.screenshot({ path: testInfo.outputPath('shop-desktop.png'), fullPage: true })
   expect(erreurs).toEqual([])
 })
