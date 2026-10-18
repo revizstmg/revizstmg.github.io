@@ -41,7 +41,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | CLASSE-20261018-CODEX-01 | Codex | Vérifier le code avant de rejoindre une classe : `classroom.js`, formulaires Classe, Classement et inscription, tests, traductions | Terminé, fusionné | [PR #8](https://github.com/revizstmg/revizstmg.github.io/pull/8) | Suivre la publication automatique |
 
-| COMPTE-20261018-CODEX-01 | Codex | Isoler les sessions élève/professeur sur un PC : auth, store, connexion/déconnexion, tests | À relire | `fix/isolation-comptes`, PR #10 | Valider les parcours et la CI avant fusion |
+| COMPTE-20261018-CODEX-01 | Codex | Isoler les sessions élève/professeur sur un PC : auth, store, connexion/déconnexion, tests | Terminé | `fix/isolation-comptes`, PR #10 | Fusion et publication suivies dans la PR |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -156,9 +156,12 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   connexions et le démarrage. La progression ne fusionne qu’à identité égale.
   Les trois entrées de déconnexion passent par le même nettoyage local ; la
   sauvegarde finale précède la fermeture de session.
-- Vérifications : tests de régression auth et restauration de compte ajoutés ;
-  parcours navigateur pour rôle périmé, ancienne identité et aller-retour
-  élève/professeur/élève. Résultats finaux dans la PR #10 et ses Actions.
+- Vérifications : 164 tests unitaires réussis et compilation réussie ; onze
+  parcours de codes de classe réussis, puis trois parcours de comptes validés
+  (rôle périmé, ancienne identité et aller-retour élève/professeur/élève).
+  La première CI a validé 91 parcours ; deux scénarios ajoutés nécessitaient
+  des données de bonus quotidien et une simulation PC/app installée, corrigées
+  et validées localement. La CI complète finale figure dans les Actions de la PR #10.
 - Portée : application uniquement, aucune modification Supabase ni rôle modifié
   dans les comptes réels. Branche `fix/isolation-comptes`.
 
