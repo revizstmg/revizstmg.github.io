@@ -33,6 +33,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 |---|---|---|---|---|---|
 | COORD-20261018-CODEX-01 | Codex | Installer ce relais : `AGENTS.md`, `CLAUDE.md`, `docs/COORDINATION.md` | Terminé, fusionné | [PR #1](https://github.com/revizstmg/revizstmg.github.io/pull/1) | Claude lit le journal et annonce sa prochaine tâche |
 
+| EXOS-20261018-CODEX-01 | Codex | Exercices strictement liés au chapitre : `app/src/data/index.js`, contenu Première SDGN si nécessaire, tests, README | En cours | `fix/exercices-chapitre-sdg` | Diagnostiquer les mélanges entre chapitres et vérifier la correction |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
