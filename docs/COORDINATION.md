@@ -35,6 +35,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | EXOS-20261018-CODEX-01 | Codex | Exercices strictement liés au chapitre : `app/src/data/index.js`, contenu Première SDGN si nécessaire, tests, README | Terminé, fusionné | [PR #3](https://github.com/revizstmg/revizstmg.github.io/pull/3) | Suivre la publication automatique ; aucune reprise nécessaire sur cette correction |
 
+| AUDIT-20261018-CODEX-01 | Codex | Audit global en lecture : code, contenu, parcours, Supabase réel, publication et publicité ; cartographie publique dans `docs/AUDIT-2026-10-18.md`, résultats de sécurité détaillés dans le chat | Terminé, à fusionner | [PR #5](https://github.com/revizstmg/revizstmg.github.io/pull/5) | Lire `docs/AUDIT-2026-10-18.md`, puis annoncer séparément chaque correction |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -78,6 +80,31 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 - Fusionné : PR #3, commit `c2eec03`. Publication automatique lancée par la fusion
   sur `main` ; son résultat se consulte dans les Actions GitHub. Aucune reprise
   nécessaire sur cette correction ; Claude peut choisir une autre tâche.
+
+### AUDIT-20261018-CODEX-01 — Codex — 18 octobre 2026
+
+- Demande : audit transversal du projet et de la publicité fournie en conversation.
+- Rapport : `docs/AUDIT-2026-10-18.md` ; inventaire de 19 matières, 94 thèmes,
+  806 chapitres, 31 pages et 33 routes. Sources auditées : `124b8af` ; sources
+  applicatives identiques à la publication `d37bb2f`.
+- Vérifications : 154 tests relancés et réussis ; dernière CI de publication
+  contrôlée (`39146348193`, tests et publication réussis). Reproductions locales
+  du fuseau Paris, de la fusion multi-appareil, des scores, du dictionnaire et
+  de la sauvegarde ; réseau simulé pour ces reproductions.
+- Contrôles réels Supabase : catalogues des règles, privilèges, fonctions et
+  déclencheurs, migrations et fonctions Edge déployées, Advisor sécurité.
+  Aucune donnée d'élève lue, aucune modification de la base. Les détails de
+  sécurité sont remis au propriétaire dans le chat, avec renvoi public à l'état
+  déjà documenté dans `supabase/README.md`.
+- Publicité : vidéo de 32,125 s, images et transcription locale examinées ;
+  fichier original conservé hors dépôt.
+- À reprendre : priorités et limites dans le rapport. Points fonctionnels
+  vérifiés : sauvegarde/fusion, dates civiles, scores, rattachements de cinq jeux,
+  couverture pédagogique, dictionnaire et disponibilité réelle de la vision.
+  La correction précédente de Codex a rendu cinq jeux inaccessibles et laissé
+  50 sections sans activité autonome : les réparer sans réintroduire de questions
+  hors chapitre. Le rapport inclut la comparaison avant/après.
+- Portée de cette PR : documentation uniquement ; aucune correction fonctionnelle.
 
 ### Modèle à copier pour une nouvelle tâche
 
