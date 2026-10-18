@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test'
-import { preparer, attendreAccueil } from './eleve.js'
+import { preparer, attendreAccueil, etatEleve } from './eleve.js'
 
 // Un chapitre propose une dizaine d'exercices tirés de son cours ; les nouvelles
 // formes (memory, QCM du mot manquant, quiz du chapitre) s'ouvrent et se jouent.
@@ -24,17 +24,16 @@ test('chapitre : une dizaine d’exercices, dont memory, mot manquant et quiz m�
   expect(erreurs).toEqual([])
 })
 
-// Maths : même un « exemple traité » propose un calcul, et chaque partie tire
-// de nouveaux nombres.
+// Le calcul explicitement lié au chapitre tire de nouveaux nombres.
 test('maths : calculs du chapitre, de nouveaux nombres à chaque partie', async ({ page }) => {
   const erreurs = await preparer(page)
   await page.goto('./')
   await attendreAccueil(page)
-  await page.goto('./#/subject/maths/theme/math-c1/chapter/3')
+  await page.goto('./#/subject/maths/theme/math-c1/chapter/0')
   await page.getByRole('button', { name: /Exercices/ }).click()
   const enonces = []
   for (let partie = 0; partie < 2; partie++) {
-    await page.getByRole('button', { name: /Calculs du chapitre/ }).first().click()
+    await page.getByRole('button', { name: /Exercices — Taux d’évolution/ }).first().click()
     const entrainement = page.getByRole('button', { name: /Entraînement/ })
     await page.waitForTimeout(300)
     if (await entrainement.count()) await entrainement.click()
@@ -44,5 +43,22 @@ test('maths : calculs du chapitre, de nouveaux nombres à chaque partie', async 
     await page.getByRole('button', { name: /Quitter/ }).click()
   }
   expect(enonces[0]).not.toEqual(enonces[1])
+  expect(erreurs).toEqual([])
+})
+
+
+test('SDGN Première : les exercices de personnalité restent sur son cours', async ({ page }) => {
+  const erreurs = await preparer(page, etatEleve({ track: { level: 'premiere-stmg' } }))
+  await page.goto('./')
+  await attendreAccueil(page)
+  await page.goto('./#/subject/p1-sgn/theme/p1-sgn-t1/chapter/1')
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('La personnalité de l’individu')
+  await page.getByRole('button', { name: /Exercices/ }).click()
+  await page.getByRole('button', { name: /QCM — les notions du chapitre/ }).click()
+  const entrainement = page.getByRole('button', { name: /Entraînement/ })
+  await expect(entrainement).toBeVisible()
+  await entrainement.click()
+  await expect(page.locator('main')).toContainText(/Question 1 \//)
+  await expect(page.locator('main')).not.toContainText(/Maslow|Herzberg|qualification|cotisations|capital humain/i)
   expect(erreurs).toEqual([])
 })

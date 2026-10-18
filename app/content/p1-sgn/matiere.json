@@ -1561,48 +1561,6 @@
           ]
         },
         {
-          "id": "p1-sgn-t1-trou",
-          "type": "trou",
-          "title": "Texte à trous — Vocabulaire du thème",
-          "icon": "✏️",
-          "questions": [
-            {
-              "text": "La ____ est le processus subjectif par lequel on interprète l’information.",
-              "answer": "perception",
-              "explain": "La perception est sélective et propre à chacun."
-            },
-            {
-              "text": "Le ____ est la position occupée dans l’organisation ; le rôle en est le comportement attendu.",
-              "answer": "statut",
-              "explain": "Statut = position ; rôle = comportements attendus."
-            },
-            {
-              "text": "Dans la communication, la réponse du récepteur s’appelle le ____.",
-              "answer": "feedback",
-              "alt": [
-                "retour",
-                "rétroaction"
-              ],
-              "explain": "Le feedback (rétroaction) referme la boucle de communication."
-            },
-            {
-              "text": "La compétence combine savoirs, ____ et savoir-être.",
-              "answer": "savoir-faire",
-              "explain": "Savoirs (connaissances) + savoir-faire (pratique) + savoir-être (comportement)."
-            },
-            {
-              "text": "La ____ est la reconnaissance officielle des compétences (diplôme, classification).",
-              "answer": "qualification",
-              "explain": "À distinguer de la compétence, qui est le savoir-faire réel."
-            },
-            {
-              "text": "Pour Herzberg, le salaire est un facteur d’____ : il évite l’insatisfaction sans motiver durablement.",
-              "answer": "hygiène",
-              "explain": "Les facteurs de motivation sont l’intérêt du travail et la reconnaissance."
-            }
-          ]
-        },
-        {
           "id": "p1-sgn-t1-flash",
           "type": "flashcard",
           "title": "Flashcards — Toutes les notions",
@@ -1667,6 +1625,88 @@
             {
               "front": "Leadership (Lewin)",
               "back": "Autoritaire / démocratique / laisser-faire."
+            }
+          ]
+        },
+        {
+          "id": "p1-sgn-t1-trou-chapitre-2",
+          "type": "trou",
+          "title": "Texte à trous — La perception : un filtre subjectif",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "La ____ est le processus subjectif par lequel on interprète l’information.",
+              "answer": "perception",
+              "explain": "La perception est sélective et propre à chacun."
+            }
+          ]
+        },
+        {
+          "id": "p1-sgn-t1-trou-chapitre-6",
+          "type": "trou",
+          "title": "Texte à trous — De l’individu à l’acteur : statut et rôle",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "Le ____ est la position occupée dans l’organisation ; le rôle en est le comportement attendu.",
+              "answer": "statut",
+              "explain": "Statut = position ; rôle = comportements attendus."
+            }
+          ]
+        },
+        {
+          "id": "p1-sgn-t1-trou-chapitre-7",
+          "type": "trou",
+          "title": "Texte à trous — La communication interpersonnelle : le schéma",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "Dans la communication, la réponse du récepteur s’appelle le ____.",
+              "answer": "feedback",
+              "alt": [
+                "retour",
+                "rétroaction"
+              ],
+              "explain": "Le feedback (rétroaction) referme la boucle de communication."
+            }
+          ]
+        },
+        {
+          "id": "p1-sgn-t1-trou-chapitre-12",
+          "type": "trou",
+          "title": "Texte à trous — Les compétences : savoirs, savoir-faire, savoir-être",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "La compétence combine savoirs, ____ et savoir-être.",
+              "answer": "savoir-faire",
+              "explain": "Savoirs (connaissances) + savoir-faire (pratique) + savoir-être (comportement)."
+            }
+          ]
+        },
+        {
+          "id": "p1-sgn-t1-trou-chapitre-14",
+          "type": "trou",
+          "title": "Texte à trous — La qualification et sa reconnaissance",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "La ____ est la reconnaissance officielle des compétences (diplôme, classification).",
+              "answer": "qualification",
+              "explain": "À distinguer de la compétence, qui est le savoir-faire réel."
+            }
+          ]
+        },
+        {
+          "id": "p1-sgn-t1-trou-chapitre-17",
+          "type": "trou",
+          "title": "Texte à trous — La motivation et ses théories (Maslow, Herzberg)",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "Pour Herzberg, le salaire est un facteur d’____ : il évite l’insatisfaction sans motiver durablement.",
+              "answer": "hygiène",
+              "explain": "Les facteurs de motivation sont l’intérêt du travail et la reconnaissance."
             }
           ]
         }
@@ -2156,29 +2196,6 @@
           ]
         },
         {
-          "id": "p1-sgn-t2-trou",
-          "type": "trou",
-          "title": "Texte à trous — Sécurité & données",
-          "icon": "✏️",
-          "questions": [
-            {
-              "text": "La sécurité du SI protège la disponibilité, l’intégrité et la ____.",
-              "answer": "confidentialité",
-              "explain": "Le triptyque DIC : Disponibilité, Intégrité, Confidentialité."
-            },
-            {
-              "text": "Le ____ encadre l’usage des données personnelles depuis 2018.",
-              "answer": "RGPD",
-              "explain": "Règlement Général sur la Protection des Données ; la CNIL veille à son respect."
-            },
-            {
-              "text": "Le PGI repose sur une base de données ____.",
-              "answer": "unique",
-              "explain": "Une base unique évite les doubles saisies et fiabilise l’information."
-            }
-          ]
-        },
-        {
           "id": "p1-sgn-t2-flash",
           "type": "flashcard",
           "title": "Flashcards — Numérique",
@@ -2199,6 +2216,45 @@
             {
               "front": "RGPD",
               "back": "Cadre de protection des données personnelles."
+            }
+          ]
+        },
+        {
+          "id": "p1-sgn-t2-trou-chapitre-8",
+          "type": "trou",
+          "title": "Texte à trous — La sécurité du système d’information",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "La sécurité du SI protège la disponibilité, l’intégrité et la ____.",
+              "answer": "confidentialité",
+              "explain": "Le triptyque DIC : Disponibilité, Intégrité, Confidentialité."
+            }
+          ]
+        },
+        {
+          "id": "p1-sgn-t2-trou-chapitre-9",
+          "type": "trou",
+          "title": "Texte à trous — Données personnelles, RGPD et éthique",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "Le ____ encadre l’usage des données personnelles depuis 2018.",
+              "answer": "RGPD",
+              "explain": "Règlement Général sur la Protection des Données ; la CNIL veille à son respect."
+            }
+          ]
+        },
+        {
+          "id": "p1-sgn-t2-trou-chapitre-5",
+          "type": "trou",
+          "title": "Texte à trous — Le PGI (ERP) : un système intégré",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "Le PGI repose sur une base de données ____.",
+              "answer": "unique",
+              "explain": "Une base unique évite les doubles saisies et fiabilise l’information."
             }
           ]
         }

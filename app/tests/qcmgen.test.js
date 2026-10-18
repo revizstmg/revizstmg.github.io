@@ -1,5 +1,5 @@
 // Exercices de mathématiques à données aléatoires : QCM chiffrés refaits à
-// chaque partie, calculs mêlés, et au moins un calcul par chapitre de maths.
+// chaque partie ; les mélanges restent réservés au test du thème.
 import { describe, it, expect } from 'vitest'
 import { QCM_GEN, instancierQuestion } from '../src/qcmgen.js'
 import { CALC, makeCalcMix } from '../src/calc.js'
@@ -95,15 +95,17 @@ describe('calculs mêlés et chapitres de maths', () => {
     expect(makeCalcMix(['inconnu'], 3)).toEqual([])
   })
 
-  it('chaque chapitre de maths propose un calcul à nombres aléatoires', async () => {
+  it('les calculs de chapitre gardent leur rattachement explicite, sans mélange du thème', async () => {
     for (const sid of ['maths', 'p1-maths']) {
       await C.chargerMatiere(sid)
       for (const t of C.SUBJECTS.find((s) => s.id === sid).chapters) {
         const theme = C.ALL_CHAPTERS[t.id]
         for (const ch of C.themeChapters(theme)) {
-          const calculs = ch.games.filter((g) => g.type === 'calcul')
-          expect(calculs.length, `${t.id} · ${ch.title}`).toBeGreaterThan(0)
-          for (const g of calculs) for (const id of g.gens || [g.gen]) expect(CALC[id], id).toBeTruthy()
+          for (const g of ch.games.filter((g) => g.type === 'calcul')) {
+            expect(g.gens).toBeUndefined()
+            expect(theme.games).toContain(g)
+            expect(CALC[g.gen], g.id).toBeTruthy()
+          }
         }
       }
     }

@@ -33,6 +33,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 |---|---|---|---|---|---|
 | COORD-20261018-CODEX-01 | Codex | Installer ce relais : `AGENTS.md`, `CLAUDE.md`, `docs/COORDINATION.md` | Terminé, fusionné | [PR #1](https://github.com/revizstmg/revizstmg.github.io/pull/1) | Claude lit le journal et annonce sa prochaine tâche |
 
+| EXOS-20261018-CODEX-01 | Codex | Exercices strictement liés au chapitre : `app/src/data/index.js`, contenu Première SDGN si nécessaire, tests, README | À relire | [PR #3](https://github.com/revizstmg/revizstmg.github.io/pull/3) | Vérifier la CI puis fusionner et suivre la publication |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -48,6 +50,29 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 - À reprendre : le propriétaire transmet à Claude le lien de ce fichier après
   fusion et lui demande de le lire au début et de le mettre à jour en fin de session.
   Aucune tâche n'a encore été attribuée à Claude.
+
+### EXOS-20261018-CODEX-01 — Codex — 18 octobre 2026
+
+- Demande : chaque question doit porter uniquement sur le chapitre associé,
+  après constat de questions hors cours en sciences de gestion de Première.
+- Cause : le générateur ajoutait la banque du thème et les définitions des autres
+  sections ; les flashcards et les définitions avaient aussi des compléments hors
+  chapitre. Deux textes à trous SDGN regroupaient neuf questions de chapitres différents.
+- Réalisé : génération, distracteurs, flashcards et définitions limités à la
+  section ; suppression du placement arbitraire des jeux et des mélanges de
+  calculs du thème dans les chapitres ; cas pratiques uniquement sur rattachement
+  explicite. Les neuf questions SDGN sont conservées et réparties par chapitre.
+- Portée : moteur commun à toutes les matières ; aucun changement Supabase.
+  Les chapitres courts peuvent proposer moins d'exercices. Les tests du thème
+  restent transversaux. Les anciennes notes des deux jeux à trous remplacés ne
+  sont pas transférées aux nouveaux jeux (identifiants propres à chaque chapitre).
+- Vérifications : `npm test` : 154 tests réussis ; compilation réussie ; trois parcours navigateur ciblés réussis
+  (SDGN personnalité, formes d'exercices en droit, calcul lié au chapitre en maths).
+  Tests de régression ajoutés pour l'isolation et les neuf questions réaffectées.
+  Empreintes de contenu régénérées intentionnellement pour la suppression des
+  compléments hors chapitre dans toutes les matières.
+- Branche : `fix/exercices-chapitre-sdg` ; PR #3. Attendre les résultats CI avant
+  fusion ; lire le diff avant toute modification concurrente du moteur commun.
 
 ### Modèle à copier pour une nouvelle tâche
 

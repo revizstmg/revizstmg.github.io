@@ -23,7 +23,7 @@ et en classe. Installable sur téléphone et utilisable hors ligne.
 |---|---|
 | Matières | 11 matières de Terminale : tronc commun (management, droit, économie, maths, philosophie, histoire-géo, langues) et spécialités (gestion-finance, mercatique, RH & communication, SIG). Plus les matières de Première. |
 | Parcours | Matière → thème → chapitre, avec les onglets Cours, Définitions et Exercices. Chaque chapitre annonce son nombre d'exercices et de notions ; le cours se termine par un tableau « Notions et définitions ». |
-| Exercices | Une vingtaine de types : QCM, vrai/faux, texte à trous, saisie, tri, association, remise en ordre, calcul, memory, requêtes SQL, cas pratique, étude de documents, compréhension en langue… Chaque chapitre en propose une quinzaine en général (au moins 8), tirés de son cours et des notions du thème : notions et cas concrets en deux séries, vrai/faux, termes à écrire, association, memory, textes à trous, mot manquant, dates, quiz du chapitre mêlant toutes les formes (`sectionExercises`, `src/data/index.js`). |
+| Exercices | Une vingtaine de types : QCM, vrai/faux, texte à trous, saisie, tri, association, remise en ordre, calcul, memory, requêtes SQL, cas pratique, étude de documents, compréhension en langue… Le nombre d’exercices dépend des notions réellement présentes dans le chapitre. Ils sont tirés uniquement de son cours : notions et cas concrets en deux séries, vrai/faux, termes à écrire, association, memory, textes à trous, mot manquant, dates, quiz du chapitre mêlant toutes les formes (`sectionExercises`, `src/data/index.js`). |
 | Étude de gestion | Pour la Première : un espace qui accompagne le projet — consignes et règles officielles, démarche, liste du dossier ; les sources de l'élève avec leur fiabilité ; l'analyse de son organisation (tableau de caractérisation, diagnostic interne et externe, PESTEL) ; ses arguments construits avec la méthode A-E-I, reliés aux sources et notés avec une grille (note sur 20) ; blocs repliables pour alléger la lecture ; export du dossier en texte (`content/commun/etude-gestion.json`, `pages/EtudeGestion.jsx`). |
 | Grand Oral | Pour la Terminale, le même accompagnement adapté à l'épreuve : règles de la session 2027 (20 min de préparation, 10 min de présentation, 10 min d'échange, coefficient 12), ce que le jury évalue, démarche, conseils, banque de questions ; les deux questions et le plan ; sources ; analyse de l'organisation ; arguments A-E-I rattachés à chaque question, notés avec une grille qui ajoute un critère d'oral ; chronomètre aux durées de l'épreuve, enregistrement et auto-évaluation sur les critères du jury ; export de la préparation (`content/commun/grand-oral.json`, `pages/GrandOral.jsx`). Les outils communs aux deux espaces sont dans `components/DossierProjet.jsx` et `content/commun/outils-projet.json`. |
 | Révision | Flashcards et répétition espacée (planifiée d'après le résultat de chaque séance), carnet d'erreurs (les questions ratées, à refaire jusqu'à les réussir), révision express de 5 minutes, défi du jour, bac blanc chronométré et sujets au format des épreuves écrites de spécialité (4 h), programme avec les dates officielles des épreuves, formulaire de 225 formules, méthodologie par épreuve. |
@@ -251,14 +251,21 @@ que les couches qui la concernent.
 | `etudes-documents.json` | études de documents (droit, économie) |
 | `exercices-sections.json` | section du cours à laquelle chaque exercice est rattaché |
 
+Les exercices et flashcards d’un chapitre utilisent exclusivement sa section de
+cours, y compris pour les mauvaises réponses des QCM. Aucun complément depuis
+les autres chapitres, la banque du thème ou celle de la matière. Les jeux
+rédigés à la main doivent avoir un rattachement explicite valide dans
+`exercices-sections.json` ; les jeux couvrant plusieurs chapitres restent au
+niveau du thème. En sciences de gestion de Première, les anciens textes à trous
+transversaux ont aussi été découpés par chapitre.
+
 Les exercices de calcul désignent leur générateur par un nom (`"gen": "tva"`,
 voir `src/calc.js`), comme les exercices de langues générés (`"gen": "genVerbEN"`,
 voir `src/data/langgen.js`). Une question de QCM chiffrée peut aussi porter un
 `"gen"` (`"taux_evolution"`, `"raison_baisse"`…, voir `src/qcmgen.js`) : elle est
 refaite avec de nouveaux nombres à chaque partie, et le texte écrit sert de
-secours. En mathématiques, un chapitre sans calcul (exemple traité, exercice
-type) reçoit les calculs de son thème, et le test du thème remplace les exemples
-du cours par des calculs tirés au hasard.
+secours. Les calculs ne sont proposés dans un chapitre que si leur rattachement est
+explicite. Les calculs mêlés restent réservés au test du thème.
 
 ### Le code qui s'en sert
 

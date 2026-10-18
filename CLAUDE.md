@@ -45,6 +45,10 @@ npm run test:parcours   # parcours navigateur, après un build (~3 min)
   « Le contenu »). On le corrige là, jamais dans le code.
 - `src/data/index.js` assemble les matières, applique les couches et génère les
   exercices et les flashcards à partir du texte des cours.
+- Les exercices, leurs distracteurs et les flashcards d’un chapitre doivent
+  porter exclusivement sur sa section de cours. Aucun complément depuis les autres
+  chapitres ou les banques du thème/de la matière. Un jeu rédigé à la main nécessite
+  un rattachement explicite valide ; aucun placement arbitraire.
 - Le contenu d'une matière est chargé à la demande : au démarrage, `SUBJECTS` et
   `ALL_CHAPTERS` n'ont que l'index léger (pas de `cours`, exercices réduits à leur
   `id`). Toute page qui lit le contenu doit passer par `<ContenuMatiere>` ou
