@@ -31,7 +31,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | ID | Responsable | Objectif et fichiers | État | Branche / PR | Prochaine action |
 |---|---|---|---|---|---|
-| COORD-20261018-CODEX-01 | Codex | Installer ce relais : `AGENTS.md`, `CLAUDE.md`, `docs/COORDINATION.md` | Préparé, à relire | `coordination/claude-codex` | Fusionner la PR pour rendre les consignes disponibles sur `main` |
+| COORD-20261018-CODEX-01 | Codex | Installer ce relais : `AGENTS.md`, `CLAUDE.md`, `docs/COORDINATION.md` | Terminé, fusionné | [PR #1](https://github.com/revizstmg/revizstmg.github.io/pull/1) | Claude lit le journal et annonce sa prochaine tâche |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -42,6 +42,7 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 
 - Demande : disposer d'un espace commun pour annoncer les actions prévues et réalisées.
 - Réalisé : journal de coordination et points d'entrée pour Claude et Codex.
+  Fusionné sur `main` par la PR #1 (commit `aa71d55`).
 - Vérifications : relecture des consignes existantes et contrôle des différences Git.
 - Portée : documentation uniquement ; aucun changement du site ni de Supabase.
 - À reprendre : le propriétaire transmet à Claude le lien de ce fichier après
