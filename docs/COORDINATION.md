@@ -43,6 +43,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | COMPTE-20261018-CODEX-01 | Codex | Isoler les sessions élève/professeur sur un PC : auth, store, connexion/déconnexion, tests | Terminé | `fix/isolation-comptes`, PR #10 | Fusion et publication suivies dans la PR |
 
+| SHOP-20261018-CODEX-01 | Codex | Refonte boutique : catalogue, niveaux, paliers de mérite, store, profil, tests et README | En cours | `feat/refonte-boutique` | Collections, avantages et conditions des futures offres Premium/Ultimate |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
