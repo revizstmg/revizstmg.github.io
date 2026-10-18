@@ -244,5 +244,20 @@
   "Mercatique (Marketing)": "Marketing",
   "Français (EAF)": "French (EAF)",
   "Ressources humaines & Communication": "Human Resources & Communication",
-  "Systèmes d’information de gestion": "Management information systems"
+  "Systèmes d’information de gestion": "Management information systems",
+  "De": "From",
+  "Vers": "To",
+  "Inverser les langues": "Swap languages",
+  "Inverser": "Swap",
+  "Un mot ou une phrase à traduire…": "A word or sentence to translate…",
+  "Traduire": "Translate",
+  "Traduction…": "Translating…",
+  "glossaire": "glossary",
+  "en ligne": "online",
+  "en ligne (mémorisé)": "online (cached)",
+  "interface": "interface",
+  "même langue": "same language",
+  "Le service de traduction est indisponible. Réessaie.": "The translation service is unavailable. Try again.",
+  "Le glossaire fonctionne hors-ligne, mais la traduction des phrases nécessite une connexion.": "The glossary works offline, but sentence translation needs a connection.",
+  "Mots courants hors-ligne · phrases via un service en ligne gratuit (MyMemory).": "Common words offline · sentences via a free online service (MyMemory)."
 }

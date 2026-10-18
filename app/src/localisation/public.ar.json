@@ -244,5 +244,20 @@
   "Mercatique (Marketing)": "التسويق",
   "Français (EAF)": "اللغة الفرنسية (EAF)",
   "Ressources humaines & Communication": "الموارد البشرية والتواصل",
-  "Systèmes d’information de gestion": "نظم المعلومات الإدارية"
+  "Systèmes d’information de gestion": "نظم المعلومات الإدارية",
+  "De": "من",
+  "Vers": "إلى",
+  "Inverser les langues": "تبديل اللغتين",
+  "Inverser": "تبديل",
+  "Un mot ou une phrase à traduire…": "كلمة أو جملة لترجمتها…",
+  "Traduire": "ترجمة",
+  "Traduction…": "جارٍ الترجمة…",
+  "glossaire": "مسرد",
+  "en ligne": "عبر الإنترنت",
+  "en ligne (mémorisé)": "عبر الإنترنت (محفوظة)",
+  "interface": "الواجهة",
+  "même langue": "اللغة نفسها",
+  "Le service de traduction est indisponible. Réessaie.": "خدمة الترجمة غير متاحة. حاول مجددًا.",
+  "Le glossaire fonctionne hors-ligne, mais la traduction des phrases nécessite une connexion.": "يعمل المسرد دون اتصال، لكن ترجمة الجمل تتطلب اتصالًا.",
+  "Mots courants hors-ligne · phrases via un service en ligne gratuit (MyMemory).": "كلمات شائعة دون اتصال · جمل عبر خدمة مجانية على الإنترنت (MyMemory)."
 }

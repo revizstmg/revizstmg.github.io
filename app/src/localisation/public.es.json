@@ -244,5 +244,20 @@
   "Mercatique (Marketing)": "Mercadotecnia (Marketing)",
   "Français (EAF)": "Francés (EAF)",
   "Ressources humaines & Communication": "Recursos Humanos y Comunicación",
-  "Systèmes d’information de gestion": "Sistemas de información de gestión"
+  "Systèmes d’information de gestion": "Sistemas de información de gestión",
+  "De": "De",
+  "Vers": "A",
+  "Inverser les langues": "Intercambiar idiomas",
+  "Inverser": "Intercambiar",
+  "Un mot ou une phrase à traduire…": "Una palabra o frase para traducir…",
+  "Traduire": "Traducir",
+  "Traduction…": "Traduciendo…",
+  "glossaire": "glosario",
+  "en ligne": "en línea",
+  "en ligne (mémorisé)": "en línea (guardado)",
+  "interface": "interfaz",
+  "même langue": "mismo idioma",
+  "Le service de traduction est indisponible. Réessaie.": "El servicio de traducción no está disponible. Inténtalo de nuevo.",
+  "Le glossaire fonctionne hors-ligne, mais la traduction des phrases nécessite une connexion.": "El glosario funciona sin conexión, pero traducir frases requiere conexión.",
+  "Mots courants hors-ligne · phrases via un service en ligne gratuit (MyMemory).": "Palabras comunes sin conexión · frases mediante un servicio gratuito en línea (MyMemory)."
 }

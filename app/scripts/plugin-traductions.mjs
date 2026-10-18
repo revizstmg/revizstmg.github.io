@@ -3,7 +3,8 @@
 import { dirname, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 const publicModule = fileURLToPath(new URL('../src/localisation/PublicText.jsx', import.meta.url))
-const attrs = new Set(['title', 'placeholder', 'aria-label', 'aria-description', 'alt'])
+const attrs = new Set(['title', 'label', 'placeholder', 'aria-label', 'aria-description', 'alt'])
+const componentAttrs = new Set([...attrs, 'titre', 'libelle', 'description', 'sub'])
 const ignored = new Set(['code', 'pre', 'script', 'style', 'textarea', 'svg', 'math', 'TextePublic', 'ElementPublic'])
 export function cleanJsxText(value) {
   const lines = value.split(/\r\n|\n|\r/)
@@ -33,7 +34,7 @@ export default function publicTranslations({ types: t }) {
   const element = (m, state) => {
     state.usedI18n = true
     return t.jsxElement(t.jsxOpeningElement(t.jsxIdentifier(state.textId.name), [
-      t.jsxAttribute(t.jsxIdentifier('text'), t.stringLiteral(m.text)),
+      t.jsxAttribute(t.jsxIdentifier('text'), t.jsxExpressionContainer(t.stringLiteral(m.text))),
       ...(m.values.length ? [t.jsxAttribute(t.jsxIdentifier('values'), t.jsxExpressionContainer(t.arrayExpression(m.values)))] : []),
     ], true), null, [], true)
   }
@@ -77,10 +78,12 @@ export default function publicTranslations({ types: t }) {
       if (next !== path.node.expression) { path.node.expression = next }
     },
     JSXOpeningElement(path, state) {
-      if (!allowed(path, state) || !t.isJSXIdentifier(path.node.name) || !/^[a-z]/.test(path.node.name.name) || (ignored.has(path.node.name.name) && path.node.name.name !== 'textarea')) return
+      if (!allowed(path, state) || !t.isJSXIdentifier(path.node.name) || (ignored.has(path.node.name.name) && path.node.name.name !== 'textarea')) return
+      const intrinsic = /^[a-z]/.test(path.node.name.name)
+      const translatedProps = intrinsic ? attrs : componentAttrs
       const entries = []
       path.node.attributes.forEach((a) => {
-        if (!t.isJSXAttribute(a) || !attrs.has(a.name.name) || !a.value) return
+        if (!t.isJSXAttribute(a) || !translatedProps.has(a.name.name) || !a.value) return
         const m = model(t.isJSXExpressionContainer(a.value) ? a.value.expression : a.value)
         if (m) entries.push(t.objectProperty(t.stringLiteral(a.name.name), t.objectExpression([
           t.objectProperty(t.identifier('text'), t.stringLiteral(m.text)),
@@ -92,7 +95,7 @@ export default function publicTranslations({ types: t }) {
       const oldName = path.node.name.name
       path.node.name = t.jsxIdentifier(state.elementId.name)
       if (path.parentPath.node.closingElement) path.parentPath.node.closingElement.name = t.jsxIdentifier(state.elementId.name)
-      path.node.attributes.push(t.jsxAttribute(t.jsxIdentifier('as'), t.stringLiteral(oldName)), t.jsxAttribute(t.jsxIdentifier('__translations'), t.jsxExpressionContainer(t.objectExpression(entries))))
+      path.node.attributes.push(t.jsxAttribute(t.jsxIdentifier('as'), intrinsic ? t.stringLiteral(oldName) : t.jsxExpressionContainer(t.identifier(oldName))), t.jsxAttribute(t.jsxIdentifier('__translations'), t.jsxExpressionContainer(t.objectExpression(entries))))
     },
   } }
 }

@@ -11,7 +11,7 @@ const properties = (node) => new Map(node.properties.map((p) => [p.key.name || p
 const readAst = (path) => parse(readFileSync(new URL(path, root), 'utf8'), { sourceType: 'module' })
 
 test('toutes les clés d’interface existent dans chacune des quatre langues', () => {
-  const fr = readAst('i18n.js').program.body.find((n) => n.type === 'VariableDeclaration' && n.declarations[0].id.name === 'FR').declarations[0].init
+  const fr = readAst('i18n/fr.js').program.body.find((n) => n.type === 'ExportDefaultDeclaration').declaration
   for (const lang of Object.keys(books)) {
     const locale = readAst(`i18n/${lang}.js`).program.body.find((n) => n.type === 'ExportDefaultDeclaration').declaration
     const dict = properties(locale)
@@ -27,7 +27,7 @@ test('noms, descriptions, cadeaux et variables de la boutique sont traduits hors
   const texts = []
   const walk = (node) => {
     if (!node || typeof node !== 'object') return
-    if (node.type === 'JSXAttribute' && node.name.name === 'text' && node.value?.type === 'StringLiteral') texts.push(node.value.value.replace(/\s+/g, ' ').trim())
+    if (node.type === 'JSXAttribute' && node.name.name === 'text' && node.value?.type === 'JSXExpressionContainer' && node.value.expression.type === 'StringLiteral') texts.push(node.value.expression.value.replace(/\s+/g, ' ').trim())
     for (const value of Object.values(node)) if (Array.isArray(value)) value.forEach(walk); else if (value && typeof value === 'object') walk(value)
   }
   walk(output.ast)
@@ -43,10 +43,19 @@ test('noms, descriptions, cadeaux et variables de la boutique sont traduits hors
 })
 
 test('la compilation isole les variables privées et conserve champs, refs, code et exclusions', () => {
-  const source = 'const page = <div>Bonjour {profile.name}<input ref={ref} placeholder="Ton prénom" value={privateText} /><textarea placeholder="Écris ici" value={privateText}/><code>SELECT secret FROM table</code><span translate="no">Nom protégé</span><p>{`Bienvenue ${profile.name}`}</p></div>'
+  const source = 'const page = <div>Bonjour {profile.name}<strong>Équiper une récompense</strong><input ref={ref} placeholder="Ton prénom" value={privateText} /><textarea placeholder="Écris ici" value={privateText}/><code>SELECT secret FROM table</code><span translate="no">Nom protégé</span><p>{`Bienvenue ${profile.name}`}</p></div>'
   const { code } = transformSync(source, { filename: new URL('pages/Test.jsx', root).pathname, configFile: false, babelrc: false, parserOpts: { plugins: ['jsx'] }, plugins: [publicTranslations] })
-  expect(code).toContain('text="Bonjour "')
-  expect(code).toContain('text="Bienvenue {v0}"')
+  expect(code).toContain('text={"Bonjour "}')
+  expect(code).toContain('text={"Bienvenue {v0}"}')
+  const reparsed = parse(code, { sourceType: 'module', plugins: ['jsx'] })
+  const found = []
+  const visit = (n) => {
+    if (!n || typeof n !== 'object') return
+    if (n.type === 'JSXAttribute' && n.name.name === 'text') found.push(n.value.expression.value)
+    for (const v of Object.values(n)) if (Array.isArray(v)) v.forEach(visit); else if (v && typeof v === 'object') visit(v)
+  }
+  visit(reparsed)
+  expect(found).toContain('Équiper une récompense')
   expect(code).toContain('values={[profile.name]}')
   expect(code).toContain('value={privateText}')
   expect(code).toContain('ref={ref}')
@@ -74,6 +83,7 @@ test('la boutique ne dépend pas du réseau, les requêtes identiques sont regro
   const fetch = vi.fn().mockResolvedValue(response('Translated test'))
   vi.stubGlobal('fetch', fetch)
   expect((await api.translate('Tes efforts ont du style.', 'fr', 'en')).text).toBe('Your effort. Your style.')
+  expect((await api.translate('Dictionnaire', 'fr', 'en')).text).toBe('Dictionary')
   expect(fetch).not.toHaveBeenCalled()
   await Promise.all(Array.from({ length: 8 }, () => api.translate('Texte public de test sans équivalent', 'fr', 'en')))
   expect(fetch).toHaveBeenCalledTimes(1)
