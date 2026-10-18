@@ -51,6 +51,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | DOC-20261018-CLAUDE-01 | Claude | Répartition des tâches demandée par le propriétaire : `docs/TACHES.md` (nouveau) et lien depuis ce journal | Terminé, à fusionner par le propriétaire | `claude/repartition-taches`, [PR #13](https://github.com/revizstmg/revizstmg.github.io/pull/13) | Le propriétaire relit, ajuste et fusionne ; Claude attend sa décision sur C01 (comptes partagés avec NAH) |
 
+| PROG-20261019-CLAUDE-01 | Claude | Ne plus perdre la progression (tâches C03 à C06) : sauvegarde complète et versionnée, fusion entre appareils, déconnexion sans perte, dates en heure de Paris. Fichiers : `app/src/store.jsx` (persistance, fusion, synchronisation, déconnexion, dates ; pas les fonctions de score), `app/src/data/srs.js`, `app/src/auth.js`, `Layout.jsx` (fichier commun, entrée de déconnexion), bloc français en fin de `i18n.js`, tests unitaires et parcours, README | En cours | `claude/progression-fiable` (PR brouillon) | Claude code, teste, puis passe la PR en relecture |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -249,6 +251,24 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   `.claude/settings.json` et `CLAUDE.md` et entrerait en conflit avec `main`.
 - PR #13, non fusionnée : la fusion revient au propriétaire après relecture.
 - Prochaine action : C01 après la décision du propriétaire sur les comptes NAH.
+
+### PROG-20261019-CLAUDE-01 — Claude — 19 octobre 2026, 2 h (heure de Paris)
+
+- Demande du propriétaire : « Fait tout » sur le chantier proposé, ne plus
+  jamais perdre la progression d'un élève (C03 à C06 de `docs/TACHES.md`, constats
+  F01 à F04 de l'audit).
+- Prévu : C06 dates civiles (répétition espacée, série, « aujourd'hui ») ; C03
+  envoi de tous les champs de progression avec une version, état « non
+  sauvegardé » visible, reprise au retour du réseau ; C04 fusion par dates de
+  modification, suppressions conservées, portefeuille sans remboursement ; C05
+  sauvegarde avant déconnexion et fermeture de la page, session fermée sur Supabase.
+- Chevauchements : aucune PR ouverte ne touche ces fichiers (PR #6 : contenu,
+  `TypedGen.jsx`, tests d'exercices). Les fonctions de score de `store.jsx`
+  restent à Codex (X02, X03) : je n'y touche pas. `Layout.jsx` est un fichier
+  commun : seule l'entrée de déconnexion est concernée.
+- Supabase : aucune modification ; la progression reste dans `profiles`.
+- Branche partie de `claude/repartition-taches` (PR #13, non fusionnée) pour
+  garder `docs/TACHES.md` ; elle sera rebasée sur `main` après la fusion de #13.
 
 ### Modèle à copier pour une nouvelle tâche
 
