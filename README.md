@@ -28,6 +28,26 @@ Sur un PC partagé, le rôle est rechargé depuis le profil du compte connecté.
 La déconnexion efface l'identité, la classe et la progression locales après une
 sauvegarde ; une réponse tardive de l'ancien compte ne peut pas remplacer la session.
 
+La boutique propose 50 articles (ambiances, avatars, bannières, titres, gels),
+avec recherche, filtres, tri et inventaire. Les achats existants sont conservés.
+Les niveaux sont prolongés : niveau 20 à 20 000 XP, niveau 30 à 73 500 XP.
+Les cadeaux de progression se récupèrent une fois ; les objets exclusifs restent
+équipables depuis l’inventaire. Le portefeuille conserve la copie modifiée le plus récemment pour éviter de
+rembourser un achat lors d’une fusion avec une ancienne sauvegarde ; les écritures
+concurrentes ne constituent pas une comptabilité transactionnelle côté serveur.
+Les achats et réservations font partie de la
+progression synchronisée. Un titre équipé apparaît sur le profil, une bannière
+sur l’accueil.
+
+Premium et Ultimate restent des offres à définir. Le programme annonce un mois
+Premium offert au lancement avec 20 tests distincts à 90 % et 20 000 XP, un mois
+Ultimate avec 30 tests distincts à 95 % et 73 500 XP. La réservation locale ne
+constitue pas une attribution vérifiée ni un abonnement actif : une demande par
+brouillon e-mail permet aux éditeurs de vérifier les résultats avant attribution.
+Aucun envoi automatique, carte bancaire ni renouvellement ; aucune fonctionnalité
+payante ou date de lancement inventée. La validation et l’activation commerciales
+ne sont pas automatisées côté client. Conditions détaillées dans les CGU.
+
 ## Ce que fait l'application
 
 | Domaine | Contenu |

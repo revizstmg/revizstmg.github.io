@@ -45,6 +45,25 @@ export default function Cgu() {
         </ul>
       </Section>
 
+      <Section title="Boutique virtuelle et récompenses de progression">
+        <p>Les pièces de la boutique sont gagnées dans l’application et n’ont aucune valeur monétaire.
+        Elles ne s’achètent pas en euros. Les objets permanents restent dans la collection ; les gels
+        de série sont consommés lorsqu’ils protègent une journée manquée.</p>
+        <p>Les paliers sont récupérables une seule fois. Un mois Premium offert est proposé à partir
+        de 20 000 XP (niveau 20) et de 20 tests de thèmes différents réussis à au moins 90 %.
+        Un mois Ultimate offert est proposé à partir de 73 500 XP (niveau 30) et de 30 tests de thèmes
+        différents réussis à au moins 95 %. Le meilleur résultat de chaque thème compte une seule fois.</p>
+        <p>Premium et Ultimate sont des offres en préparation : leurs fonctionnalités et leur date de
+        lancement ne sont pas encore définies. Réserver une récompense n’active pas un abonnement.
+        Après vérification des résultats par les éditeurs, le mois offert pourra être activé au lancement
+        de l’offre concernée. Un compte est nécessaire ; l’attribution est limitée à un mois par compte et
+        par offre. Aucun paiement, aucune carte bancaire et aucun renouvellement automatique ne sont
+        prévus pour ces mois offerts. Les XP affichés localement ne constituent pas, seuls, une validation.</p>
+        <p>Le lien « Préparer ma demande par e-mail » ouvre un brouillon dans la messagerie de l’utilisateur ;
+        aucun message n’est envoyé automatiquement. Les demandes sont examinées à{' '}
+        <a href="mailto:revizstmg@gmail.com" className={lien}>revizstmg@gmail.com</a>.</p>
+      </Section>
+
       <Section title="3. Règles de bonne conduite">
         <p>Dans les espaces partagés (classe, mur, défis entre amis, classement, nom affiché) :</p>
         <ul className="list-disc space-y-1 pl-5">

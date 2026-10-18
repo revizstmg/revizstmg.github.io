@@ -95,6 +95,7 @@ export default function Profile() {
           <div className="min-w-0 flex-1">
             <p className="kicker" style={{ color: 'color-mix(in srgb, var(--c-accent) 62%, #fff)' }}>{role === 'prof' ? `🧑‍🏫 ${t('roleTeacher')}` : `🎓 ${t('roleStudent')}`}</p>
             <h1 className="truncate font-display text-[1.7rem] font-medium leading-[1.15] text-[#faf3e1] sm:text-[2.15rem]">{`${first} ${last}`.trim() || t('mySpace')}</h1>
+            {state.customTheme?.title && <p className="mt-2 text-sm font-semibold text-[#e8ce8d]">✦ {state.customTheme.title}</p>}
             {state.account?.email && <p className="mt-0.5 truncate text-xs text-[#b8a878]">{state.account.email}</p>}
             <p className="mt-1 text-xs capitalize tracking-wide text-[#d8cca8]">{trackIcon(state.track)} {trackLabel(state.track)}{state.classCode ? ` · 👥 ${state.classCode}` : ''}</p>
           </div>

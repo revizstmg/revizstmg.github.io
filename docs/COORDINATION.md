@@ -43,6 +43,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | COMPTE-20261018-CODEX-01 | Codex | Isoler les sessions élève/professeur sur un PC : auth, store, connexion/déconnexion, tests | Terminé | `fix/isolation-comptes`, PR #10 | Fusion et publication suivies dans la PR |
 
+| SHOP-20261018-CODEX-01 | Codex | Refonte boutique : catalogue, niveaux, paliers de mérite, store, profil, tests et README | Terminé | `feat/refonte-boutique`, PR #11 | Fusion et publication suivies dans la PR |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -164,6 +166,35 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   et validées localement. La CI complète finale figure dans les Actions de la PR #10.
 - Portée : application uniquement, aucune modification Supabase ni rôle modifié
   dans les comptes réels. Branche `fix/isolation-comptes`.
+
+### SHOP-20261018-CODEX-01 — Codex — 18 octobre 2026
+
+- Demande : refonte complète de la boutique, davantage d’objets et des mois
+  Premium/Ultimate offerts pour des niveaux et résultats élevés.
+- Réalisé : 50 articles dans cinq collections, recherche/tri/filtres, inventaire,
+  articles rares verrouillés, packs de gels, titres de profil, bannières d’accueil,
+  cadeaux uniques de niveau. Anciens identifiants, prix et achats conservés.
+  Douze niveaux historiques conservés ; niveaux 20/30 à 20 000/73 500 XP.
+- Programme : Premium nécessite 20 thèmes à 90 % minimum et le niveau 20 ;
+  Ultimate, 30 thèmes à 95 % et le niveau 30. Chaque thème compte une fois.
+  Le propriétaire a précisé que le contenu des offres sera défini plus tard.
+  Les mois sont donc réservés pour leur lancement, après vérification ; aucune
+  activation d’abonnement ni débit. Brouillon e-mail facultatif, jamais d’envoi
+  automatique. Conditions explicites dans la boutique et les CGU.
+- Persistance : le solde et les gels utilisent une version de portefeuille, mise à
+  jour aussi lors des gains, pour éviter qu’une ancienne copie rembourse les achats.
+  Cela reste une fusion par dernière modification, pas une comptabilité serveur
+  transactionnelle des achats simultanés sur plusieurs appareils. Achats, stock et réservations synchronisés dans la progression
+  existante ; paliers uniques conservés en fusion. Les objets de profil ne passent
+  pas au compte suivant. Les cadeaux cosmétiques restent rééquipables.
+- Vérifications : 174 tests unitaires réussis, compilation réussie, six parcours
+  boutique/exercices réussis ; contrôles supplémentaires réussis après les derniers
+  ajustements du mode sombre et du palier Ultimate. Aperçus PC et mobile examinés.
+  Seuils calibrés sur les 36 à 47 thèmes disponibles par filière. Les résultats
+  complets de CI et la publication sont consultables dans la PR #11 et ses Actions.
+- Limite : pièces et scores côté client ; l’activation commerciale devra être
+  vérifiée côté serveur ou par les éditeurs lors du lancement. Aucun changement
+  Supabase, aucun paiement mis en place, aucune fonction Premium inventée.
 
 ### Modèle à copier pour une nouvelle tâche
 

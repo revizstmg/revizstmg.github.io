@@ -20,7 +20,8 @@ describe('niveaux', () => {
     expect(levelFromXp(99).level).toBe(1)
     expect(levelFromXp(100).level).toBe(2)
     expect(levelFromXp(250)).toMatchObject({ level: 3, into: 0, span: 200 })
-    expect(levelFromXp(5000)).toMatchObject({ level: 12, span: 1200 })
+    // Le niveau 12 ouvre désormais sur un vrai niveau 13 à 6 500 XP.
+    expect(levelFromXp(5000)).toMatchObject({ level: 12, span: 1500 })
   })
   it('le pourcentage reste entre 0 et 100', () => {
     for (const xp of [0, 1, 99, 100, 777, 4999, 5000, 99999]) {
