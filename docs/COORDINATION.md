@@ -39,7 +39,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | NAV-20261018-CODEX-01 | Codex | Boucler de la dernière fiche à la première du même chapitre : `Course.jsx`, `Chapter.jsx`, traductions, parcours et README | À relire | `fix/retour-premiere-fiche`, PR #7 | Validation CI puis fusion |
 
-| CLASSE-20261018-CODEX-01 | Codex | Vérifier le code avant de rejoindre une classe : `classroom.js`, formulaires Classe, Classement et inscription, tests, traductions | En cours | `fix/code-classe-invalide` | Reproduire puis tester les codes inconnus et les erreurs réseau |
+| CLASSE-20261018-CODEX-01 | Codex | Vérifier le code avant de rejoindre une classe : `classroom.js`, formulaires Classe, Classement et inscription, tests, traductions | Terminé, fusionné | [PR #8](https://github.com/revizstmg/revizstmg.github.io/pull/8) | Suivre la publication automatique |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -132,13 +132,14 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   et de l’exclusion avant l’enregistrement du profil et du code local. Une erreur
   laisse le formulaire ouvert ; les doubles envois sont bloqués. Même contrôle
   pour le code facultatif à l’inscription, avec reprise sans recréer le compte.
-- Vérifications initiales : 154 tests unitaires et dix parcours navigateur réussis
-  (codes inconnus puis valides, exclusions, pannes de recherche, de vérification
-  d’exclusion et d’enregistrement du profil, sur les deux pages). Validation finale
-  et parcours d’inscription dans la PR #8 et ses Actions.
+- Vérifications finales : 154 tests unitaires, compilation et onze parcours
+  ciblés réussis ; validation complète GitHub : 90 parcours navigateur réussis
+  (exécution `39154662729`). Codes inconnus puis valides, exclusions, pannes
+  de recherche, d’exclusion et d’enregistrement, ainsi que reprise de l’inscription.
 - Supabase : lecture seule, code inexistant = zéro résultat ; la fonction de
   recherche est autorisée aux comptes connectés. Aucune migration ni donnée modifiée.
-- Branche : `fix/code-classe-invalide`, PR #8. Publication automatique après fusion.
+- Fusionné : PR #8, commit `c3e2bce`. Publication automatique lancée par la fusion ;
+  son résultat se consulte dans les Actions sur `main`.
 
 ### Modèle à copier pour une nouvelle tâche
 
