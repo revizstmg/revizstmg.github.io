@@ -24,6 +24,10 @@ Pour rejoindre une classe (depuis Classe, Classement ou l'inscription), le code
 est vérifié auprès du serveur avant d'être enregistré. Un code inconnu ou une
 vérification indisponible laisse l'élève hors de la classe et affiche une erreur.
 
+Sur un PC partagé, le rôle est rechargé depuis le profil du compte connecté.
+La déconnexion efface l'identité, la classe et la progression locales après une
+sauvegarde ; une réponse tardive de l'ancien compte ne peut pas remplacer la session.
+
 ## Ce que fait l'application
 
 | Domaine | Contenu |

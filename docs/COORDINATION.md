@@ -41,7 +41,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | CLASSE-20261018-CODEX-01 | Codex | Vérifier le code avant de rejoindre une classe : `classroom.js`, formulaires Classe, Classement et inscription, tests, traductions | Terminé, fusionné | [PR #8](https://github.com/revizstmg/revizstmg.github.io/pull/8) | Suivre la publication automatique |
 
-| COMPTE-20261018-CODEX-01 | Codex | Isoler les sessions élève/professeur sur un PC : auth, store, connexion/déconnexion, tests | En cours | `fix/isolation-comptes` | Reproduire les rôles persistants et les réponses tardives |
+| COMPTE-20261018-CODEX-01 | Codex | Isoler les sessions élève/professeur sur un PC : auth, store, connexion/déconnexion, tests | À relire | `fix/isolation-comptes`, PR #10 | Valider les parcours et la CI avant fusion |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -142,6 +142,25 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   recherche est autorisée aux comptes connectés. Aucune migration ni donnée modifiée.
 - Fusionné : PR #8, commit `c3e2bce`. Publication automatique lancée par la fusion ;
   son résultat se consulte dans les Actions sur `main`.
+
+### COMPTE-20261018-CODEX-01 — Codex — 18 octobre 2026
+
+- Demande : le rôle professeur reste associé au compte élève après alternance
+  des comptes sur un même PC.
+- Reproduit : quatre régressions de sessions tardives échouaient avant correction :
+  un renouvellement professeur pouvait remplacer la session élève, la déconnecter,
+  rouvrir une session fermée, ou faire repartir une requête avec un autre compte.
+  Au démarrage, le rôle local n’était pas remplacé si un compte était déjà mémorisé.
+- Réalisé : réponses de session vérifiées avant application, requêtes liées au
+  compte d’origine, restauration commune du profil et du rôle serveur pour les
+  connexions et le démarrage. La progression ne fusionne qu’à identité égale.
+  Les trois entrées de déconnexion passent par le même nettoyage local ; la
+  sauvegarde finale précède la fermeture de session.
+- Vérifications : tests de régression auth et restauration de compte ajoutés ;
+  parcours navigateur pour rôle périmé, ancienne identité et aller-retour
+  élève/professeur/élève. Résultats finaux dans la PR #10 et ses Actions.
+- Portée : application uniquement, aucune modification Supabase ni rôle modifié
+  dans les comptes réels. Branche `fix/isolation-comptes`.
 
 ### Modèle à copier pour une nouvelle tâche
 

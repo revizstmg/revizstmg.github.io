@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback } from 'react'
 import { SUBJECTS, ALL_CHAPTERS, chapterGameCount, jeuxJouablesDuTheme } from './data/index.js'
 import { BADGES } from './badges.js'
-import { saveProgress, isSignedIn, refreshSession, fetchProfile, getSession } from './auth.js'
+import { saveProgress, isSignedIn, refreshSession, fetchProfile, getSession, signOut } from './auth.js'
 import { srsUpdate, todayKey as srsToday } from './data/srs.js'
 import { dailyRewardFor } from './data/rewards.js'
 import { subjectsForTrack, trackLabel } from './data/tracks.js'
@@ -218,11 +218,37 @@ export function isoWeekKey(d = new Date()) {
   return `${date.getUTCFullYear()}-W${String(weekNo).padStart(2, '0')}`
 }
 
+// Seules les préférences d'affichage passent d'un compte à l'autre.
+function withoutAccount(s) {
+  const out = emptyState()
+  for (const key of ['lang', 'theme', 'customTheme', 'a11y', 'tabs']) out[key] = s[key]
+  return out
+}
+
+export function restoreAccountState(previous, profile, session) {
+  const id = session?.user?.id
+  if (!id || !profile || (profile.id && profile.id !== id)) throw new Error('Profil du compte indisponible. Réessaie de te connecter.')
+  const base = previous.account?.id === id ? previous : withoutAccount(previous)
+  const parts = String(profile.name || 'Élève').trim().split(/\s+/)
+  const role = profile.role === 'prof' ? 'prof' : 'eleve'
+  return {
+    ...mergeProgress(base, profile.progress),
+    account: { id, email: session.user.email, role },
+    profile: { firstName: parts[0], lastName: parts.slice(1).join(' '), photo: profile.photo || undefined },
+    track: profile.level ? { level: profile.level, specialty: profile.specialty || null } : base.track,
+    onboarded: true,
+    classCode: profile.class_code || '',
+    teacherClasses: role === 'prof' ? base.teacherClasses : [],
+  }
+}
+
 function load() {
   try {
     const raw = localStorage.getItem(KEY)
     if (!raw) return emptyState()
-    return { ...emptyState(), ...JSON.parse(raw) }
+    const saved = { ...emptyState(), ...JSON.parse(raw) }
+    const id = getSession()?.user?.id
+    return id && saved.account?.id && id !== saved.account.id ? withoutAccount(saved) : saved
   } catch {
     return emptyState()
   }
@@ -312,8 +338,10 @@ export function StoreProvider({ children }) {
 
   // Synchronisation de la progression sur le compte (anti-rebond ~2 s).
   useEffect(() => {
-    if (!state.account?.id) return
-    const id = setTimeout(() => { saveProgress(pickProgress(state)).catch(() => {}) }, 2000)
+    if (!state.account?.id || state.account.id !== getSession()?.user?.id) return
+    const id = setTimeout(() => {
+      if (state.account.id === getSession()?.user?.id) saveProgress(pickProgress(state)).catch(() => {})
+    }, 2000)
     return () => clearTimeout(id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.account?.id, state.xp, state.chapters, state.badges, state.favorites, state.streak, state.weekly, state.totalAnswers, state.correctAnswers, state.lastChapter])
@@ -466,10 +494,28 @@ export function StoreProvider({ children }) {
   // pousse une dernière fois, puis on efface l'identité ET la progression
   // locale (pour éviter tout mélange entre comptes sur un appareil partagé).
   // Les préférences d'affichage (langue, thème) restent locales.
-  const logout = useCallback(() => setState((p) => {
-    if (p.account?.id) { try { saveProgress(pickProgress(p)) } catch { /* best effort */ } }
-    return { ...emptyState(), lang: p.lang, theme: p.theme, customTheme: p.customTheme, a11y: p.a11y, reminder: p.reminder, examSeen: p.examSeen, tabs: p.tabs }
-  }), [])
+  const latestState = useRef(state)
+  latestState.current = state
+  const logout = useCallback(async () => {
+    const previous = latestState.current
+    const session = getSession()
+    if (previous.account?.id && previous.account.id === session?.user?.id) {
+      await saveProgress(pickProgress(previous)).catch(() => {})
+    }
+    // Une connexion plus récente ne doit pas être fermée par ce retour tardif.
+    if (getSession()?.user?.id !== session?.user?.id) return
+    signOut()
+    setState(withoutAccount(previous))
+    setNewBadges([])
+    setDailyReward(null)
+  }, [])
+
+  const restoreAccount = useCallback((profile, session) => {
+    if (!session?.user?.id || session.user.id !== getSession()?.user?.id) return
+    if (!profile || (profile.id && profile.id !== session.user.id)) throw new Error('Profil du compte indisponible. Réessaie de te connecter.')
+    setState((previous) => session.user.id === getSession()?.user?.id
+      ? evaluateBadges(restoreAccountState(previous, profile, session)) : previous)
+  }, [evaluateBadges])
 
   // Restaure la progression du compte (fusion avec l'éventuel local du même
   // utilisateur) après connexion / récupération.
@@ -486,18 +532,15 @@ export function StoreProvider({ children }) {
     if (booted.current) return
     booted.current = true
     if (!isSignedIn()) return
+    const owner = getSession()?.user?.id
     ;(async () => {
       await refreshSession().catch(() => {})
-      if (!isSignedIn()) return // refresh_token expiré : on retombera sur l'écran de connexion.
+      if (!isSignedIn() || getSession()?.user?.id !== owner) return
       try {
-        const prof = await fetchProfile()
-        if (!prof) return
-        if (prof.progress) hydrateProgress(prof.progress)
-        const sess = getSession()
-        if (sess?.user?.id) {
-          setState((p) => (p.account?.id ? p : { ...p, account: { id: sess.user.id, email: sess.user.email, role: prof.role || 'eleve' } }))
-        }
-      } catch { /* hors-ligne : on garde la progression locale */ }
+        const session = getSession()
+        const profile = await fetchProfile()
+        if (profile && getSession()?.user?.id === owner) restoreAccount(profile, session)
+      } catch { /* hors-ligne : on garde uniquement le local du même compte */ }
     })()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -707,6 +750,7 @@ export function StoreProvider({ children }) {
     addTeacherClass,
     logout,
     hydrateProgress,
+    restoreAccount,
     setCustomTheme,
     resetCustomTheme,
     setTabs,

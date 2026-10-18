@@ -65,11 +65,12 @@ async function gotrue(path, body) {
 // --- Rafraîchissement du jeton -------------------------------------------
 // Le jeton d'accès expire (~1 h). On l'échange contre un nouveau grâce au
 // refresh_token pour que l'utilisateur reste connecté sans se ré-identifier.
+const sameSession = (a, b) => a?.token === b?.token && a?.refresh === b?.refresh && a?.user?.id === b?.user?.id
 let _refreshing = null
 export async function refreshSession() {
   const s = getSession()
   if (!s?.refresh) return null
-  if (_refreshing) return _refreshing
+  if (_refreshing && sameSession(_refreshing.session, s)) return _refreshing.promise
   const p = (async () => {
     let res
     try {
@@ -81,8 +82,10 @@ export async function refreshSession() {
     } catch {
       return null // réseau indisponible : on garde la session, on réessaiera.
     }
+    if (!sameSession(s, getSession())) return null
     if (res.ok) {
       const data = await res.json().catch(() => null)
+      if (!sameSession(s, getSession())) return null
       if (data?.access_token) return saveSession(data)
       return null
     }
@@ -90,8 +93,9 @@ export async function refreshSession() {
     if (res.status === 400 || res.status === 401) clearSession()
     return null
   })()
-  _refreshing = p
-  try { return await p } finally { _refreshing = null }
+  const pending = { session: s, promise: p }
+  _refreshing = pending
+  try { return await p } finally { if (_refreshing === pending) _refreshing = null }
 }
 
 // Renvoie un jeton valide (rafraîchi si sur le point d'expirer), sinon null.
@@ -110,7 +114,12 @@ export async function getValidToken() {
 // rafraîchissement si le serveur répond 401 (jeton expiré entre-temps). Sans
 // session, la requête part avec la clé publique seule (rôle anon).
 export async function authFetch(url, opts = {}) {
+  const owner = getSession()?.user?.id
+  const assertOwner = () => {
+    if (getSession()?.user?.id !== owner) throw new Error('La session a changé. Reconnecte-toi.')
+  }
   const token = await getValidToken()
+  assertOwner()
   const build = (t) => ({
     ...opts,
     headers: {
@@ -121,9 +130,12 @@ export async function authFetch(url, opts = {}) {
     },
   })
   let res = await fetch(url, build(token))
+  assertOwner()
   if (res.status === 401) {
     const ns = await refreshSession()
+    assertOwner()
     if (ns?.token) res = await fetch(url, build(ns.token))
+    assertOwner()
   }
   return res
 }
@@ -275,5 +287,6 @@ export async function fetchProfile() {
   const res = await authFetch(`${SUPA_URL}/rest/v1/profiles?id=eq.${s.user.id}&select=*`)
   if (!res.ok) return null
   const rows = await res.json().catch(() => [])
+  if (getSession()?.user?.id !== s.user.id) throw new Error('La session a changé. Reconnecte-toi.')
   return rows[0] || null
 }

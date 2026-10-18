@@ -27,7 +27,7 @@ const TAUGHT = [
 // passe, code de classe optionnel), puis choix des matières, puis apparition
 // douce de « Bienvenue, Prénom ».
 export default function Welcome() {
-  const { state, applyOnboarding, setAccount, setClassCode, setPhoto, setTeacherClasses, hydrateProgress } = useStore()
+  const { state, applyOnboarding, setAccount, setClassCode, setPhoto, setTeacherClasses, restoreAccount } = useStore()
   const t = useT()
   const navigate = useNavigate()
   const location = useLocation()
@@ -44,6 +44,11 @@ export default function Welcome() {
   const initialPhase = !hasProfile ? 'form' : (!state.onboarded && state.track ? 'plan' : 'hello')
   const [phase, setPhase] = useState(initialPhase) // 'form' | 'plan' | 'hello' | 'done'
   const [leaving, setLeaving] = useState(false)
+  // Une session restaurée peut remplacer le profil local d'un autre compte.
+  useEffect(() => {
+    if (hasProfile && state.account?.id && state.onboarded && phase === 'form') setPhase('hello')
+  }, [hasProfile, state.account?.id, state.onboarded, phase])
+
 
   // Identité + filière
   const [firstName, setFirstName] = useState(state.profile?.firstName || '')
@@ -223,20 +228,15 @@ export default function Welcome() {
           if (problem) throw new Error(t(problem))
           await upsertProfile({ class_code: cc })
         }
-        const uid = getSession()?.user?.id
-        const nm = (prof?.name || '').trim()
-        const parts = nm.split(/\s+/)
-        const profile = { firstName: parts[0] || 'Élève', lastName: parts.slice(1).join(' ') }
-        const tk = prof?.level ? { level: prof.level, specialty: prof.specialty || null } : track
-        applyOnboarding({ profile, track: tk })
-        hydrateProgress(prof?.progress)
-        if (prof?.photo) setPhoto(prof.photo)
+        const session = getSession()
+        const uid = session?.user?.id
+        restoreAccount(prof, session)
         const rl = prof?.role || 'eleve'
-        setAccount({ id: uid, email: email.trim(), role: rl })
         if (rl === 'prof') {
           // On recharge les classes générées du prof.
           let classes = []
           try { classes = (await fetchTeacherClasses(uid)).map((c) => ({ code: c.code, label: c.label })) } catch { /* hors ligne */ }
+          if (getSession()?.user?.id !== uid) return
           setTeacherClasses(classes)
           setClassCode(classes[0]?.code || prof?.class_code || '')
         } else {
@@ -302,19 +302,14 @@ export default function Welcome() {
   // Connexion à partir d'une session déjà ouverte (login ou récupération).
   const loginFromSession = async () => {
     const prof = await fetchProfile()
-    const uid = getSession()?.user?.id
-    const nm = (prof?.name || '').trim()
-    const parts = nm.split(/\s+/)
-    const profile = { firstName: parts[0] || 'Élève', lastName: parts.slice(1).join(' ') }
-    const tk = prof?.level ? { level: prof.level, specialty: prof.specialty || null } : { level, specialty: needsSpecialty ? specialty : null }
-    applyOnboarding({ profile, track: tk })
-    hydrateProgress(prof?.progress)
-    if (prof?.photo) setPhoto(prof.photo)
-    const rl = prof?.role || role
-    setAccount({ id: uid, email: email.trim(), role: rl })
+    const session = getSession()
+    const uid = session?.user?.id
+    restoreAccount(prof, session)
+    const rl = prof?.role || 'eleve'
     if (rl === 'prof') {
       let classes = []
       try { classes = (await fetchTeacherClasses(uid)).map((c) => ({ code: c.code, label: c.label })) } catch { /* hors ligne */ }
+      if (getSession()?.user?.id !== uid) return
       setTeacherClasses(classes)
       setClassCode(classes[0]?.code || prof?.class_code || '')
     } else if (prof?.class_code) setClassCode(prof.class_code)
