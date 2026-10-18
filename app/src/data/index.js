@@ -9,7 +9,7 @@
 // (themeChapters, buildQuiz, decks…) supposent la matière chargée : les pages
 // qui s'en servent passent par <Contenu> (src/content/Contenu.jsx).
 import { ORDRE_MATIERES, MATIERES, COUCHES, commun, chargerFichiers, remplacerEnPlace } from '../content/contenu.js'
-import { THEME_TERMS, subjectFallbackFor } from './keyterms.js'
+import { THEME_TERMS } from './keyterms.js'
 import { PIEGES } from './pieges.js'
 import { instancierQuestion } from '../qcmgen.js'
 
@@ -321,8 +321,8 @@ export function chapterGameCount(chapterId) {
 // ---------------------------------------------------------------------------
 // Découpage Thème → Chapitres.
 // Chaque « thème » (ex. « Thème 5 — Le contrat ») est découpé en chapitres,
-// un par section du cours. Les mini-jeux du thème sont répartis sur ses
-// chapitres (round-robin). La progression reste indexée par id de thème.
+// un par section du cours. Seuls les jeux explicitement rattachés à une
+// section sont ajoutés à son chapitre. La progression reste indexée par thème.
 // ---------------------------------------------------------------------------
 // Types d'exercices qui ciblent UNE notion précise : on les garde au niveau
 // chapitre (rattachés à leur section). Les jeux de SYNTHÈSE (qcm, vrai/faux,
@@ -354,41 +354,25 @@ export function themeChapters(theme) {
   // Seuls les exercices « propres à une notion » restent sur le chapitre,
   // rattachés à leur section via GAME_SECTION (relue à la main).
   const kept = games.filter((g) => CHAPTER_GAME_TYPES.has(g.type))
-  kept.forEach((g, k) => {
-    let idx = GAME_SECTION[g.id]
-    if (idx == null || idx < 0 || idx >= chapters.length) idx = Math.floor((k * chapters.length) / Math.max(1, kept.length))
-    chapters[Math.min(idx, chapters.length - 1)].games.push(g)
-  })
-  // Chaque chapitre reçoit EN PLUS tout un ensemble d'exercices générés à partir
-  // de SA SEULE section (QCM notions/dates/tableau, textes à trous en plusieurs
-  // lots, « réponse à écrire »…) : on multiplie ainsi par ~5 le nombre
-  // d'exercices par chapitre, et le contenu est mélangé/retiré à chaque partie —
-  // jamais deux fois le même. Aucune flashcard ici (réservée à l'app installée).
-  // Notions et mots mis en valeur des AUTRES sections du thème : ils complètent
-  // un chapitre qui en a trop peu pour une deuxième série, ou pour proposer quatre
-  // mots dans un QCM « mot manquant ». Tout reste tiré du cours du thème.
-  const parSection = cours.map((sec) => ({ defs: sectionPairs(sec).defPairs, mots: trouFromBold(sec, theme.id).map((q) => q.answer) }))
+  for (const g of kept) {
+    const idx = GAME_SECTION[g.id]
+    // Aucun placement arbitraire pour un jeu sans rattachement valide.
+    if (!Number.isInteger(idx) || idx < 0 || idx >= chapters.length) continue
+    chapters[idx].games.push(g)
+  }
+  // Questions, réponses et distracteurs viennent uniquement de la section lue.
+  // Ne pas compléter un chapitre court avec les notions des autres chapitres.
   for (const ch of chapters) {
-    const autres = parSection.filter((_, j) => j !== ch.idx)
-    const gen = sectionExercises(ch.section, theme, ch.idx, { defsTheme: autres.flatMap((x) => x.defs), motsTheme: autres.flatMap((x) => x.mots) })
+    const gen = sectionExercises(ch.section, theme, ch.idx)
     for (const g of gen) if (!ch.games.some((x) => x.id === g.id)) ch.games.push(g)
   }
-  // Mathématiques : chaque chapitre a au moins un calcul à nombres tirés au
-  // hasard. Celui qui n'en a pas (exemple traité, exercice type…) reçoit les
-  // calculs du thème, mêlés : de nouvelles données à chaque partie.
-  const gensDuTheme = gensCalculDuTheme(theme)
-  if (gensDuTheme.length) {
-    for (const ch of chapters) {
-      if (ch.games.some((g) => g.type === 'calcul')) continue
-      ch.games.unshift({ id: `${theme.id}::${ch.idx}::calc`, type: 'calcul', title: 'Calculs du chapitre — nouveaux nombres à chaque partie', icon: '🔢', gens: gensDuTheme, count: 6 })
-    }
-  }
-  // Mini-cas d'entreprise chiffrés (rédigés à la main) : rattachés en tête du
-  // premier chapitre du thème quand ils existent.
+  // Un cas rédigé pour tout le thème ne peut pas être placé par défaut sur son
+  // premier chapitre. Il faut le même rattachement explicite qu'un autre jeu.
   const cas = CAS_PRATIQUES[theme.id]
-  if (cas && cas.length && chapters[0]) {
-    const g = { id: `${theme.id}::cas`, type: 'caspratique', title: 'Cas pratiques — scénarios chiffrés', icon: '🧮', cases: cas }
-    if (!chapters[0].games.some((x) => x.id === g.id)) chapters[0].games.unshift(g)
+  const casId = `${theme.id}::cas`
+  const casIdx = GAME_SECTION[casId]
+  if (cas?.length && Number.isInteger(casIdx) && chapters[casIdx]) {
+    chapters[casIdx].games.unshift({ id: casId, type: 'caspratique', title: 'Cas pratiques — scénarios chiffrés', icon: '🧮', cases: cas })
   }
   return chapters
 }
@@ -779,16 +763,10 @@ const QDEF_TEMPLATES = [
   (term) => `À quoi correspond « ${term} » ?`,
 ]
 
-// Élargit le pool de notions d'une section : ses définitions propres + la banque
-// du thème (décalée selon la section), dédoublonnées par terme. On ne recycle
-// plus les 5 mêmes définitions : le pool est bien plus large, et comme chaque
-// exercice mélange puis tronque ce pool à chaque visite, le contenu change.
-function enrichedDefPool(defPairs, themeId, idx, defsTheme = []) {
-  const bank = (THEME_TERMS[themeId] || []).map(([term, def]) => ({ term, def }))
-  const start = bank.length ? (idx * 3) % bank.length : 0
-  const rotated = [...bank.slice(start), ...bank.slice(0, start)]
+// Les notions viennent du cours de cette section, sans banque du thème.
+function sectionDefPool(defPairs) {
   const out = []
-  for (const p of [...defPairs, ...rotated, ...defsTheme]) {
+  for (const p of defPairs) {
     if (!p.term || !p.def || out.some((o) => memeNotion(o.term, p.term))) continue
     out.push({ term: p.term, def: p.def })
   }
@@ -824,17 +802,15 @@ function vraiFauxFromDates(datePairs, id, title) {
 }
 
 // QCM « le mot manquant » à partir des textes à trous de la section : le bon mot
-// et trois autres mots mis en valeur dans la section ou, s'il en manque, dans
-// les autres sections du thème. Une notion liée au bon mot n'est jamais proposée.
-function qcmMotManquant(trou, id, motsTheme = []) {
+// et trois autres mots de la même section. Sans assez de mots, on ne crée pas
+// ce QCM. Une notion liée au bon mot n'est jamais proposée.
+function qcmMotManquant(trou, id) {
   if (trou.length < 3) return null
   const pool = []
-  for (const m of [...trou.map((q) => q.answer), ...motsTheme]) if (!pool.some((x) => cleReponse(x) === cleReponse(m))) pool.push(m)
+  for (const m of trou.map((q) => q.answer)) if (!pool.some((x) => cleReponse(x) === cleReponse(m))) pool.push(m)
   const questions = shuffle(trou).slice(0, 8).map((q) => {
     const proches = shuffle(pool.filter((m) => cleReponse(m) !== cleReponse(q.answer) && !notionsLiees(m, q.answer)))
-    // D'abord les mots de la même section (plus proches), puis ceux du thème.
-    const memeSection = proches.filter((m) => trou.some((t) => t.answer === m))
-    const distracteurs = [...memeSection, ...proches.filter((m) => !memeSection.includes(m))].slice(0, 3)
+    const distracteurs = proches.slice(0, 3)
     if (distracteurs.length < 3) return null
     const choices = shuffle([q.answer, ...distracteurs])
     return { q: `Quel mot complète la phrase ?\n${q.text}`, choices, answer: choices.indexOf(q.answer), explain: q.explain }
@@ -852,14 +828,14 @@ function quizMele(jeux, id) {
 }
 
 // Génère un ENSEMBLE d'exercices propres au chapitre (jamais de flashcard),
-// tirés du contenu de SA section ET de la banque de notions du thème. Objectif :
+// tirés exclusivement du contenu de SA section. Objectif :
 // beaucoup d'exercices ET du contenu varié (plusieurs formes de questions, cas
 // concrets). Chaque exercice a un id stable et distinct (pour la progression) ;
 // le contenu, lui, est mélangé/tronqué à chaque partie — jamais deux fois le même.
-function sectionExercises(sec, theme, idx, { defsTheme = [], motsTheme = [] } = {}) {
+function sectionExercises(sec, theme, idx) {
   const base = `${theme.id}::${idx}`
   const { datePairs, defPairs, widePairs, compareTables } = sectionPairs(sec)
-  const richDefs = enrichedDefPool(defPairs, theme.id, idx, defsTheme)
+  const richDefs = sectionDefPool(defPairs)
   const out = []
   const uniqEvents = [...new Set(datePairs.map((p) => p.e))]
 
@@ -875,7 +851,7 @@ function sectionExercises(sec, theme, idx, { defsTheme = [], motsTheme = [] } = 
     if (vfDate) out.push(vfDate)
   }
 
-  // 2) Notions : pool élargi (section + banque du thème). Plusieurs formes de
+  // 2) Notions propres à la section. Plusieurs formes de
   //    questions, mélangées/tronquées à chaque visite → jamais le même contenu :
   //    QCM « notion → définition » (formulé de plusieurs façons), « cas concret »
   //    (situation → notion, sens inverse), vrai/faux, écris le terme, association.
@@ -961,7 +937,7 @@ function sectionExercises(sec, theme, idx, { defsTheme = [], motsTheme = [] } = 
     if (sTrou) out.push(sTrou)
     // Le même texte, mais on choisit le mot parmi quatre (les autres mots mis en
     // valeur dans la section). Une notion liée au bon mot n'est jamais proposée.
-    const qTrou = qcmMotManquant(trou, `${base}::qtrou`, motsTheme)
+    const qTrou = qcmMotManquant(trou, `${base}::qtrou`)
     if (qTrou) out.push(qTrou)
   }
 
@@ -1020,9 +996,8 @@ export function comptesDuChapitre(chapter, theme, subjectId) {
 export function flashcardsForSection(sec, theme, idx) {
   const { defPairs, datePairs } = sectionPairs(sec)
   const cards = []
-  // Pool élargi (section + banque du thème) pour des cartes variées d'une visite
-  // à l'autre, pas seulement les quelques définitions de la section.
-  for (const p of enrichedDefPool(defPairs, theme.id, idx)) cards.push({ front: p.term, back: p.def })
+  // Les flashcards suivent le même périmètre strict que les exercices.
+  for (const p of sectionDefPool(defPairs)) cards.push({ front: p.term, back: p.def })
   for (const p of datePairs) cards.push({ front: p.e, back: p.d })
   if (cards.length < 3) return null
   // Dédoublonnage recto.
@@ -1081,11 +1056,8 @@ function hasHandDefinitions(sec) {
   return false
 }
 
-// 5 « Définitions clés » pour UNE section de cours : d'abord les termes définis
-// dans la section elle-même, complétés (par rotation, pour varier d'une section
-// à l'autre) par la banque du thème puis, en dernier recours, la banque de la
-// matière. Renvoie { skip, defs }. skip = true si la section a déjà son propre
-// encadré de définitions écrit à la main.
+// Jusqu'à cinq définitions tirées uniquement de cette section de cours.
+// skip = true si la section possède déjà son tableau de définitions.
 // Tableau « Notions et définitions » écrit à la main à la fin d'un chapitre.
 export function tableauDefinitionsFinal(sec) {
   const blocks = sec?.blocks || []
@@ -1111,15 +1083,6 @@ export function sectionDefinitions(sec, themeId, subjectId, sectionIdx = 0, coun
   }
   // 1) Définitions propres à la section (les plus pertinentes).
   for (const p of sectionPairs(sec).defPairs) add(p.term, p.def)
-  // 2) Complément depuis la banque du thème, décalée selon la section.
-  const bank = THEME_TERMS[themeId] || []
-  if (bank.length && out.length < count) {
-    const start = (sectionIdx * 2) % bank.length
-    const rotated = [...bank.slice(start), ...bank.slice(0, start)]
-    for (const [term, def] of rotated) add(term, def)
-  }
-  // 3) Dernier filet : banque de la matière.
-  if (out.length < count) for (const [term, def] of subjectFallbackFor(subjectId)) add(term, def)
   return { skip: false, defs: out }
 }
 

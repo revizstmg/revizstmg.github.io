@@ -87,7 +87,7 @@ tableau « Notions et définitions » (en-tête `Notion | Définition`, ou
 `Notion ou repère | Définition ou événement` en histoire, `Mot | Sens` en langues)
 peut terminer un chapitre ; il reprend les notions à retenir. Si un chapitre n’en
 a pas, le lecteur de cours (`PaginatedCourse`) en fabrique un à partir des
-définitions du chapitre puis du thème (`sectionDefinitions`). Le test « aucun
+définitions présentes dans ce seul chapitre (`sectionDefinitions`). Le test « aucun
 tableau au milieu d’un chapitre » (`tests/contenu.test.js`) y veille. Ce tableau
 final alimente aussi les exercices (paires notion → définition, dates).
 
