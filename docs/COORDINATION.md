@@ -33,7 +33,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 |---|---|---|---|---|---|
 | COORD-20261018-CODEX-01 | Codex | Installer ce relais : `AGENTS.md`, `CLAUDE.md`, `docs/COORDINATION.md` | Terminé, fusionné | [PR #1](https://github.com/revizstmg/revizstmg.github.io/pull/1) | Claude lit le journal et annonce sa prochaine tâche |
 
-| EXOS-20261018-CODEX-01 | Codex | Exercices strictement liés au chapitre : `app/src/data/index.js`, contenu Première SDGN si nécessaire, tests, README | À relire | [PR #3](https://github.com/revizstmg/revizstmg.github.io/pull/3) | Vérifier la CI puis fusionner et suivre la publication |
+| EXOS-20261018-CODEX-01 | Codex | Exercices strictement liés au chapitre : `app/src/data/index.js`, contenu Première SDGN si nécessaire, tests, README | Terminé, fusionné | [PR #3](https://github.com/revizstmg/revizstmg.github.io/pull/3) | Suivre la publication automatique ; aucune reprise nécessaire sur cette correction |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -71,8 +71,13 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   Tests de régression ajoutés pour l'isolation et les neuf questions réaffectées.
   Empreintes de contenu régénérées intentionnellement pour la suppression des
   compléments hors chapitre dans toutes les matières.
-- Branche : `fix/exercices-chapitre-sdg` ; PR #3. Attendre les résultats CI avant
-  fusion ; lire le diff avant toute modification concurrente du moteur commun.
+- Validation complète : 154 tests et 76 parcours navigateur réussis sur GitHub
+  (exécution `39145878970`). Audit supplémentaire de 54 chapitres SDGN : aucun
+  choix de QCM ni flashcard générée absent du cours associé (424 jeux inspectés,
+  140 cartes). Les jeux rédigés à la main ont été relus pour les rattachements SDGN.
+- Fusionné : PR #3, commit `c2eec03`. Publication automatique lancée par la fusion
+  sur `main` ; son résultat se consulte dans les Actions GitHub. Aucune reprise
+  nécessaire sur cette correction ; Claude peut choisir une autre tâche.
 
 ### Modèle à copier pour une nouvelle tâche
 
