@@ -181,7 +181,10 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   Les mois sont donc réservés pour leur lancement, après vérification ; aucune
   activation d’abonnement ni débit. Brouillon e-mail facultatif, jamais d’envoi
   automatique. Conditions explicites dans la boutique et les CGU.
-- Persistance : achats, stock et réservations synchronisés dans la progression
+- Persistance : le solde et les gels utilisent une version de portefeuille, mise à
+  jour aussi lors des gains, pour éviter qu’une ancienne copie rembourse les achats.
+  Cela reste une fusion par dernière modification, pas une comptabilité serveur
+  transactionnelle des achats simultanés sur plusieurs appareils. Achats, stock et réservations synchronisés dans la progression
   existante ; paliers uniques conservés en fusion. Les objets de profil ne passent
   pas au compte suivant. Les cadeaux cosmétiques restent rééquipables.
 - Vérifications : tests de logique achat/équipement/paliers/fusion ajoutés, ainsi

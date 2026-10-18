@@ -74,3 +74,12 @@ test('les titres et bannières équipés ne passent pas au compte suivant', () =
   expect(next.customTheme.avatar).toBeUndefined()
   expect(next.customTheme.accent).toBe('#888888')
 })
+
+test('une ancienne copie ne rembourse pas les achats après synchronisation', () => {
+  const before = state({ xp: 4000, coins: 1000, shopWalletUpdatedAt: 100 })
+  const after = purchaseItem(before, 'av-fox')
+  expect(mergeProgress(after, before).coins).toBe(850)
+  expect(mergeProgress(before, after).coins).toBe(850)
+  const consumed = { ...after, freezes: 0, shopWalletUpdatedAt: after.shopWalletUpdatedAt + 1 }
+  expect(mergeProgress(consumed, { ...after, freezes: 5 }).freezes).toBe(0)
+})

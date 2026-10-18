@@ -18,11 +18,12 @@ export function rewardProgress(state, reward) {
   const pct = Math.round(Math.min(xpPct, reward.tests ? tests / reward.tests : 1) * 100)
   return { xp, tests, pct, eligible: xp >= reward.minXp && (!reward.tests || tests >= reward.tests), claimed: !!state.shopRewards?.[reward.id] }
 }
+export const walletRevision = (state) => Math.max(Date.now(), (state.shopWalletUpdatedAt || 0) + 1)
 export function purchaseItem(state, id) {
   const item = shopById[id]
   if (!item || item.rewardOnly || !Number.isFinite(state.coins) || state.coins < item.price || (state.xp || 0) < (item.minXp || 0)) return state
   if (item.type !== 'consumable' && (state.owned || []).includes(id)) return state
-  const next = { ...state, coins: state.coins - item.price }
+  const next = { ...state, coins: state.coins - item.price, shopWalletUpdatedAt: walletRevision(state) }
   if (item.type === 'consumable') next.freezes = (state.freezes || 0) + (item.quantity || 1)
   else next.owned = [...(state.owned || []), id]
   return next
@@ -40,7 +41,7 @@ export function collectReward(state, id, now = new Date().toISOString()) {
   if (!progress.eligible || progress.claimed || (reward.offer && !state.account?.id)) return state
   const next = { ...state, shopRewards: { ...state.shopRewards, [id]: { claimedAt: now, status: reward.offer ? 'reserved' : 'collected' } } }
   if (reward.itemId) next.owned = [...new Set([...(state.owned || []), reward.itemId])]
-  if (reward.freezes) next.freezes = (state.freezes || 0) + reward.freezes
+  if (reward.freezes) { next.freezes = (state.freezes || 0) + reward.freezes; next.shopWalletUpdatedAt = walletRevision(state) }
   if (reward.title) next.customTheme = { ...state.customTheme, title: reward.title }
   if (reward.banner) next.customTheme = { ...state.customTheme, banner: reward.banner }
   return next

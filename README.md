@@ -32,7 +32,10 @@ La boutique propose 50 articles (ambiances, avatars, bannières, titres, gels),
 avec recherche, filtres, tri et inventaire. Les achats existants sont conservés.
 Les niveaux sont prolongés : niveau 20 à 20 000 XP, niveau 30 à 73 500 XP.
 Les cadeaux de progression se récupèrent une fois ; les objets exclusifs restent
-équipables depuis l’inventaire. Les achats et réservations font partie de la
+équipables depuis l’inventaire. Le portefeuille conserve la copie modifiée le plus récemment pour éviter de
+rembourser un achat lors d’une fusion avec une ancienne sauvegarde ; les écritures
+concurrentes ne constituent pas une comptabilité transactionnelle côté serveur.
+Les achats et réservations font partie de la
 progression synchronisée. Un titre équipé apparaît sur le profil, une bannière
 sur l’accueil.
 

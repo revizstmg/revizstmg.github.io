@@ -1,4 +1,4 @@
-import { SHOP_LEVELS, purchaseItem, equipItem, collectReward } from './data/shop.js'
+import { SHOP_LEVELS, purchaseItem, equipItem, collectReward, walletRevision } from './data/shop.js'
 import { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback } from 'react'
 import { SUBJECTS, ALL_CHAPTERS, chapterGameCount, jeuxJouablesDuTheme } from './data/index.js'
 import { BADGES } from './badges.js'
@@ -14,7 +14,7 @@ import { publishChildStats, deleteMyChildStats, PARENT_READY } from './parent.js
 const CROSS_GAMES = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac'])
 
 // Champs de progression synchronisés sur le compte (multi-appareil).
-const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'shopRewards']
+const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'shopRewards', 'shopWalletUpdatedAt']
 // Carnet d'erreurs : au plus tant de questions ratées, les plus récentes d'abord.
 export const CARNET_MAX = 150
 function pickProgress(s) {
@@ -53,12 +53,16 @@ export function mergeProgress(a, b) {
   }
   out.srs = srs
   out.bacDate = a.bacDate || b.bacDate || null
-  // Boutique : on garde le meilleur solde, l'union des articles, le max de gels.
+  // Un solde dépensable se restaure depuis la copie la plus récente.
+  // Le maximum n’est conservé que pour les anciennes sauvegardes sans version.
   // Les paliers sont uniques, y compris après synchronisation sur un autre appareil.
   out.shopRewards = { ...(a.shopRewards || {}), ...(b.shopRewards || {}) }
-  out.coins = Math.max(a.coins || 0, b.coins || 0)
+  const versionA = Number(a.shopWalletUpdatedAt) || 0, versionB = Number(b.shopWalletUpdatedAt) || 0
+  const wallet = versionA >= versionB ? a : b
+  out.shopWalletUpdatedAt = Math.max(versionA, versionB)
+  out.coins = versionA || versionB ? (wallet.coins || 0) : Math.max(a.coins || 0, b.coins || 0)
   out.owned = Array.from(new Set([...(a.owned || []), ...(b.owned || [])]))
-  out.freezes = Math.max(a.freezes || 0, b.freezes || 0)
+  out.freezes = versionA || versionB ? (wallet.freezes || 0) : Math.max(a.freezes || 0, b.freezes || 0)
   // Courbe de progression : par jour, on garde le plus grand XP cumulé.
   const hist = { ...(a.history || {}) }
   for (const [d, xp] of Object.entries(b.history || {})) hist[d] = Math.max(hist[d] || 0, xp || 0)
@@ -194,6 +198,7 @@ const emptyState = () => ({
   erreurs: [], // carnet d'erreurs : questions ratées à refaire
   etudeGestion: etudeGestionVide(), // étude de gestion (Première) : projet, sources, arguments
   examSeen: {}, // bac blanc : { [sélection]: [clés d'énoncés déjà tombés] } (local)
+  shopWalletUpdatedAt: 0,
   shopRewards: {}, // récompenses uniques ; offres futures réservées, jamais activées ici
   coins: 0, // pièces 🪙 dépensables en boutique (gagnées avec l'XP)
   owned: [], // ids d'articles cosmétiques achetés (boutique)
@@ -352,7 +357,7 @@ export function StoreProvider({ children }) {
     }, 2000)
     return () => clearTimeout(id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.account?.id, state.xp, state.chapters, state.badges, state.favorites, state.streak, state.weekly, state.totalAnswers, state.correctAnswers, state.lastChapter, state.coins, state.owned, state.freezes, state.shopRewards])
+  }, [state.account?.id, state.xp, state.chapters, state.badges, state.favorites, state.streak, state.weekly, state.totalAnswers, state.correctAnswers, state.lastChapter, state.coins, state.owned, state.freezes, state.shopRewards, state.shopWalletUpdatedAt])
 
   // Espace parent : l'élève publie un instantané de ses stats (temps, série,
   // XP, matières, badges…) sous son « code parent ». Anti-rebond ~3 s, silencieux
@@ -419,6 +424,7 @@ export function StoreProvider({ children }) {
       const reward = dailyRewardFor(count)
       next.streak = { count, last: t }
       next.xp += reward.xp
+      next.shopWalletUpdatedAt = walletRevision(prev)
       next.coins = (next.coins || 0) + reward.xp // pièces gagnées à la connexion
       setDailyReward({ count, ...reward, usedFreeze })
       return evaluateBadges(next)
@@ -437,6 +443,7 @@ export function StoreProvider({ children }) {
         // hors modes transverses — c'est ce drapeau que « À réviser » consulte.
         if (chapterId && !CROSS_GAMES.has(gameId)) ch.worked = true
         next.xp += Math.round(xp)
+        next.shopWalletUpdatedAt = walletRevision(prev)
         next.coins = (next.coins || 0) + Math.round(xp) // pièces gagnées avec l'XP
         next.totalAnswers += total
         next.correctAnswers += correct
@@ -630,7 +637,7 @@ export function StoreProvider({ children }) {
     const streak = gap === 1 ? (dc.streak || 0) + 1 : 1
     const best = Math.max(dc.best || 0, streak)
     const bonus = 30 + Math.round((Math.max(0, Math.min(100, pct)) / 100) * 30) + Math.min(30, streak * 3)
-    return evaluateBadges({ ...p, xp: p.xp + bonus, coins: (p.coins || 0) + bonus, dailyChallenge: { last: day, streak, best, lastBonus: bonus } })
+    return evaluateBadges({ ...p, xp: p.xp + bonus, coins: (p.coins || 0) + bonus, shopWalletUpdatedAt: walletRevision(p), dailyChallenge: { last: day, streak, best, lastBonus: bonus } })
   }), [evaluateBadges])
 
   // Objectif de la semaine : réclamer la récompense quand l'objectif de chapitres
@@ -641,7 +648,7 @@ export function StoreProvider({ children }) {
     const count = w.done?.length || 0
     if (count < WEEKLY_GOAL || w.rewarded === wk) return p
     const bonus = WEEKLY_REWARD
-    return evaluateBadges({ ...p, xp: p.xp + bonus, coins: (p.coins || 0) + bonus, weekly: { ...w, rewarded: wk } })
+    return evaluateBadges({ ...p, xp: p.xp + bonus, coins: (p.coins || 0) + bonus, shopWalletUpdatedAt: walletRevision(p), weekly: { ...w, rewarded: wk } })
   }), [evaluateBadges])
 
   // Inscription : applique en une fois le profil, la filière, les chapitres
@@ -671,7 +678,7 @@ export function StoreProvider({ children }) {
   const setBacDate = useCallback((bacDate) => setState((p) => ({ ...p, bacDate: bacDate || null })), [])
   const addXp = useCallback((n) => setState((p) => {
     const g = Math.max(0, Math.round(n) || 0)
-    return evaluateBadges({ ...p, xp: p.xp + g, coins: (p.coins || 0) + g })
+    return evaluateBadges({ ...p, xp: p.xp + g, coins: (p.coins || 0) + g, shopWalletUpdatedAt: walletRevision(p) })
   }), [evaluateBadges])
 
   // Résolution depuis le catalogue : prix et conditions ne viennent pas du bouton.
