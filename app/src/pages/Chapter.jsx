@@ -133,9 +133,7 @@ export default function Chapter() {
           subjectId={sid}
           sectionIdx={chapter.idx}
           prevLabel={prev ? t('previous') : null}
-          nextLabel={next ? t('nextChapter') : t('takeTest')}
           onPrev={prev ? () => navigate(`/subject/${sid}/theme/${tid}/chapter/${prev.idx}`) : null}
-          onNext={() => navigate(next ? `/subject/${sid}/theme/${tid}/chapter/${next.idx}` : `/subject/${sid}/theme/${tid}?tab=test`)}
         />
         <div className="no-print mt-4 text-center">
           <SignalerErreur themeId={tid} exercice={`Cours : ${chapter.title || ''}`} defaut="cours" libelle="Une erreur dans ce cours ? Signale-la" />
