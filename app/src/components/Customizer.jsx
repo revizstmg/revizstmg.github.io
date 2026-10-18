@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
-import { signIn, signUp, signOut, fetchProfile, upsertProfile, getSession } from '../auth.js'
+import { signIn, signUp, fetchProfile, upsertProfile, getSession } from '../auth.js'
 import { desactiverRappelsPush } from '../push.js'
 import { ALL_TABS, TAB_ORDER, resolveTabs } from '../navTabs.js'
 import { normalizeCode } from '../leaderboard.js'
@@ -57,7 +57,7 @@ const AVATARS = ['🦉', '🎓', '⭐', '🚀', '🐱', '🦊', '🐧', '🌸', 
 const BANNER_PRESETS = ['#c8a24e', '#2b6cb0', '#0f766e', '#7c3aed', '#db2777', '#ea580c', '#dc2626', '#0891b2']
 
 export default function Customizer({ onClose }) {
-  const { state, setCustomTheme, resetCustomTheme, setTabs, setTheme, setPhoto, setAccount, setClassCode } = useStore()
+  const { state, setCustomTheme, resetCustomTheme, setTabs, setTheme, setPhoto, setAccount, restoreAccount, logout: logoutAccount } = useStore()
   const t = useT()
   const ct = state.customTheme || {}
   const photo = state.profile?.photo || ''
@@ -80,9 +80,7 @@ export default function Customizer({ onClose }) {
       if (aMode === 'login') {
         await signIn({ email: aEmail.trim(), password: aPass })
         const prof = await fetchProfile()
-        if (prof?.photo) setPhoto(prof.photo)
-        if (prof?.class_code) setClassCode(prof.class_code)
-        setAccount({ id: getSession()?.user?.id, email: aEmail.trim(), role: prof?.role || 'eleve' })
+        restoreAccount(prof, getSession())
       } else {
         const { needsConfirm } = await signUp({ email: aEmail.trim(), password: aPass })
         if (needsConfirm) { setAInfo(t('confirmEmailMsg')); setAMode('login'); setABusy(false); return }
@@ -93,7 +91,7 @@ export default function Customizer({ onClose }) {
       setAEmail(''); setAPass('')
     } catch (e) { setAErr(e?.message || 'Erreur') } finally { setABusy(false) }
   }
-  const logout = async () => { await desactiverRappelsPush(); signOut(); setAccount(null) }
+  const logout = async () => { await desactiverRappelsPush(); await logoutAccount(); onClose?.() }
 
   // Importe une photo → recadrée/réduite à 160px (JPEG) pour tenir en local.
   const onFile = (e) => {
