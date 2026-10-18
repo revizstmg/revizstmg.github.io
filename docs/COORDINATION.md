@@ -35,6 +35,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | EXOS-20261018-CODEX-01 | Codex | Exercices strictement liés au chapitre : `app/src/data/index.js`, contenu Première SDGN si nécessaire, tests, README | Terminé, fusionné | [PR #3](https://github.com/revizstmg/revizstmg.github.io/pull/3) | Suivre la publication automatique ; aucune reprise nécessaire sur cette correction |
 
+| AUDIT-20261018-CODEX-01 | Codex | Audit global en lecture : code, contenu, parcours, Supabase réel, publication et publicité ; rapport dans `docs/AUDIT-2026-10-18.md` | En cours | `audit/projet-complet` | Collecter les preuves et rédiger les priorités, sans correction fonctionnelle ni mutation Supabase |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
