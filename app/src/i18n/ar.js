@@ -1,6 +1,8 @@
 // Libellés d'interface en arabe, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  classCodeUnknown: "هذا الرمز لا يطابق أي صف. تحقق من الرمز الذي أعطاك إياه المعلم.",
+  classCodeCheckFailed: "تعذر التحقق من الصف أو الانضمام إليه. تحقق من اتصالك وحاول مرة أخرى.",
   search: 'ابحث عن فصل', dictionary: 'قاموس', language: 'اللغة',
   mySpace: 'مساحتي', light: 'التبديل إلى الوضع الفاتح', dark: 'التبديل إلى الوضع الداكن',
   home: 'الرئيسية', theme: 'محور', chapter: 'فصل', level: 'المستوى', levelShort: 'مست.',

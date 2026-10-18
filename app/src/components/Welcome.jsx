@@ -5,7 +5,7 @@ import { LEVELS, subjectsForTrack } from '../data/tracks.js'
 import { useT } from '../i18n.js'
 import { signUp, signIn, fetchProfile, upsertProfile, getSession, requestPasswordReset, verifyRecovery, updatePassword, signInWithOAuth, hasOAuthRedirect, consumeOAuthRedirect, fetchAuthProviders } from '../auth.js'
 import { normalizeCode } from '../leaderboard.js'
-import { createTeacherClass, fetchTeacherClasses } from '../classroom.js'
+import { createTeacherClass, fetchTeacherClasses, classCodeProblem } from '../classroom.js'
 import { emailValide, motDePasseValide, nomValide, inscriptionSuspecte, pauseConnexion } from '../formulaires.js'
 
 // Ce qu'un professeur peut enseigner (matières communes + spécialités STMG).
@@ -218,6 +218,11 @@ export default function Welcome() {
         }
         echecs.current = { n: 0, quand: 0 }
         const prof = await fetchProfile()
+        if (!prof?.class_code && cc) {
+          const problem = await classCodeProblem(cc)
+          if (problem) throw new Error(t(problem))
+          await upsertProfile({ class_code: cc })
+        }
         const uid = getSession()?.user?.id
         const nm = (prof?.name || '').trim()
         const parts = nm.split(/\s+/)
@@ -244,6 +249,13 @@ export default function Welcome() {
         if (!oauthNew) {
           const { needsConfirm } = await signUp({ email: email.trim(), password })
           if (needsConfirm) { setInfo(t('confirmEmailMsg')); setAuthMode('login'); setBusy(false); return }
+          // Le compte existe : une erreur de code doit permettre de corriger
+          // le formulaire sans tenter de recréer ce compte.
+          setOauthNew(true)
+        }
+        if (role !== 'prof' && cc) {
+          const problem = await classCodeProblem(cc)
+          if (problem) throw new Error(t(problem))
         }
         const fullName = `${firstName.trim()} ${lastName.trim()}`.trim()
         const uid = getSession()?.user?.id
