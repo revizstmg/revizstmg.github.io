@@ -2102,8 +2102,99 @@
           "type": "verbs",
           "title": "Verbes irréguliers — entraînement",
           "icon": "🔤",
-          "gen": "genVerbEN",
-          "count": 10
+          "count": 10,
+          "questions": [
+            {
+              "prompt": "Prétérit de to go (aller) ?",
+              "answer": "went",
+              "explain": "go – went – gone (aller)"
+            },
+            {
+              "prompt": "Participe passé de to go (aller) ?",
+              "answer": "gone",
+              "explain": "go – went – gone (aller)"
+            },
+            {
+              "prompt": "Quel est l’infinitif dont le prétérit est « went » ? (aller)",
+              "answer": "go",
+              "explain": "go – went – gone (aller)"
+            },
+            {
+              "prompt": "Prétérit de to see (voir) ?",
+              "answer": "saw",
+              "explain": "see – saw – seen (voir)"
+            },
+            {
+              "prompt": "Participe passé de to see (voir) ?",
+              "answer": "seen",
+              "explain": "see – saw – seen (voir)"
+            },
+            {
+              "prompt": "Quel est l’infinitif dont le prétérit est « saw » ? (voir)",
+              "answer": "see",
+              "explain": "see – saw – seen (voir)"
+            },
+            {
+              "prompt": "Prétérit de to take (prendre) ?",
+              "answer": "took",
+              "explain": "take – took – taken (prendre)"
+            },
+            {
+              "prompt": "Participe passé de to take (prendre) ?",
+              "answer": "taken",
+              "explain": "take – took – taken (prendre)"
+            },
+            {
+              "prompt": "Quel est l’infinitif dont le prétérit est « took » ? (prendre)",
+              "answer": "take",
+              "explain": "take – took – taken (prendre)"
+            },
+            {
+              "prompt": "Prétérit de to make (fabriquer) ?",
+              "answer": "made",
+              "explain": "make – made – made (fabriquer)"
+            },
+            {
+              "prompt": "Participe passé de to make (fabriquer) ?",
+              "answer": "made",
+              "explain": "make – made – made (fabriquer)"
+            },
+            {
+              "prompt": "Quel est l’infinitif dont le prétérit est « made » ? (fabriquer)",
+              "answer": "make",
+              "explain": "make – made – made (fabriquer)"
+            },
+            {
+              "prompt": "Prétérit de to come (venir) ?",
+              "answer": "came",
+              "explain": "come – came – come (venir)"
+            },
+            {
+              "prompt": "Participe passé de to come (venir) ?",
+              "answer": "come",
+              "explain": "come – came – come (venir)"
+            },
+            {
+              "prompt": "Quel est l’infinitif dont le prétérit est « came » ? (venir)",
+              "answer": "come",
+              "explain": "come – came – come (venir)"
+            },
+            {
+              "prompt": "Prétérit de to write (écrire) ?",
+              "answer": "wrote",
+              "explain": "write – wrote – written (écrire)"
+            },
+            {
+              "prompt": "Participe passé de to write (écrire) ?",
+              "answer": "written",
+              "explain": "write – wrote – written (écrire)"
+            },
+            {
+              "prompt": "Quel est l’infinitif dont le prétérit est « wrote » ? (écrire)",
+              "answer": "write",
+              "explain": "write – wrote – written (écrire)"
+            }
+          ]
         }
       ]
     },
@@ -2127,6 +2218,22 @@
               ]
             },
             {
+              "t": "p",
+              "c": "On emploie **a** devant un son consonne (**a car**) et **an** devant un son voyelle (**an apple**). Au présent simple, la troisième personne du singulier prend **-s** : **he works**, **she plays**."
+            },
+            {
+              "t": "p",
+              "c": "Au comparatif, un adjectif court prend **-er** : **fast → faster**. Pour un adjectif long, on utilise **more** : **interesting → more interesting**."
+            },
+            {
+              "t": "p",
+              "c": "On emploie généralement **some** dans une phrase affirmative (**I have some money**) et **any** dans une phrase négative (**I do not have any money**). **Much** accompagne un nom indénombrable (**much money**), **many** un nom dénombrable au pluriel (**many books**)."
+            },
+            {
+              "t": "p",
+              "c": "Pour désigner quelque chose de proche, **this** s’utilise au singulier (**this book here**) et **these** au pluriel (**these books here**)."
+            },
+            {
               "t": "tip",
               "c": "Chaque exercice tire de **nouvelles phrases** : refais-le autant de fois que tu veux."
             }
@@ -2139,8 +2246,69 @@
           "type": "grammar",
           "title": "Grammaire — exercices variés",
           "icon": "🧩",
-          "gen": "genGrammarEN",
-          "count": 10
+          "count": 10,
+          "questions": [
+            {
+              "prompt": "Article : ____ car.",
+              "answer": "a",
+              "explain": "a devant un son consonne."
+            },
+            {
+              "prompt": "Article : ____ apple.",
+              "answer": "an",
+              "explain": "an devant un son voyelle."
+            },
+            {
+              "prompt": "Présent simple : He ____ (work) every day.",
+              "answer": "works",
+              "explain": "Au présent simple, on ajoute -s à la troisième personne du singulier."
+            },
+            {
+              "prompt": "Présent simple : She ____ (play) every day.",
+              "answer": "plays",
+              "explain": "Au présent simple, on ajoute -s à la troisième personne du singulier."
+            },
+            {
+              "prompt": "Comparatif : This car is ____ (fast) than that one.",
+              "answer": "faster",
+              "explain": "Comparatif d’un adjectif court : +er."
+            },
+            {
+              "prompt": "Comparatif : This course is ____ (interesting) than that one.",
+              "answer": "more interesting",
+              "explain": "Comparatif d’un adjectif long : more + adjectif."
+            },
+            {
+              "prompt": "some / any : I have ____ money.",
+              "answer": "some",
+              "explain": "some dans une phrase affirmative."
+            },
+            {
+              "prompt": "some / any : I do not have ____ money.",
+              "answer": "any",
+              "explain": "any dans une phrase négative."
+            },
+            {
+              "prompt": "much / many : How ____ money do you have?",
+              "answer": "much",
+              "explain": "much avec un nom indénombrable."
+            },
+            {
+              "prompt": "much / many : How ____ books do you have?",
+              "answer": "many",
+              "explain": "many avec un nom dénombrable au pluriel."
+            },
+            {
+              "prompt": "this / these : ____ book here.",
+              "answer": "this",
+              "explain": "this devant un nom singulier."
+            },
+            {
+              "prompt": "this / these : ____ books here.",
+              "answer": "these",
+              "explain": "these devant un nom pluriel."
+            }
+          ]
         }
       ]
     },
@@ -4500,8 +4668,99 @@
           "type": "verbs",
           "title": "Verbes irréguliers — entraînement",
           "icon": "🔤",
-          "gen": "genVerbES",
-          "count": 10
+          "count": 10,
+          "questions": [
+            {
+              "prompt": "Présent (yo) de ser (être) ?",
+              "answer": "soy",
+              "explain": "ser (soy, fue) — être"
+            },
+            {
+              "prompt": "Passé simple (él/ella) de ser (être) ?",
+              "answer": "fue",
+              "explain": "ser (soy, fue) — être"
+            },
+            {
+              "prompt": "Quel est l’infinitif dont le présent « yo » est « soy » ? (être)",
+              "answer": "ser",
+              "explain": "ser (soy, fue) — être"
+            },
+            {
+              "prompt": "Présent (yo) de tener (avoir) ?",
+              "answer": "tengo",
+              "explain": "tener (tengo, tuvo) — avoir"
+            },
+            {
+              "prompt": "Passé simple (él/ella) de tener (avoir) ?",
+              "answer": "tuvo",
+              "explain": "tener (tengo, tuvo) — avoir"
+            },
+            {
+              "prompt": "Quel est l’infinitif dont le présent « yo » est « tengo » ? (avoir)",
+              "answer": "tener",
+              "explain": "tener (tengo, tuvo) — avoir"
+            },
+            {
+              "prompt": "Présent (yo) de hacer (faire) ?",
+              "answer": "hago",
+              "explain": "hacer (hago, hizo) — faire"
+            },
+            {
+              "prompt": "Passé simple (él/ella) de hacer (faire) ?",
+              "answer": "hizo",
+              "explain": "hacer (hago, hizo) — faire"
+            },
+            {
+              "prompt": "Quel est l’infinitif dont le présent « yo » est « hago » ? (faire)",
+              "answer": "hacer",
+              "explain": "hacer (hago, hizo) — faire"
+            },
+            {
+              "prompt": "Présent (yo) de ir (aller) ?",
+              "answer": "voy",
+              "explain": "ir (voy, fue) — aller"
+            },
+            {
+              "prompt": "Passé simple (él/ella) de ir (aller) ?",
+              "answer": "fue",
+              "explain": "ir (voy, fue) — aller"
+            },
+            {
+              "prompt": "Quel est l’infinitif dont le présent « yo » est « voy » ? (aller)",
+              "answer": "ir",
+              "explain": "ir (voy, fue) — aller"
+            },
+            {
+              "prompt": "Présent (yo) de poder (pouvoir) ?",
+              "answer": "puedo",
+              "explain": "poder (puedo, pudo) — pouvoir"
+            },
+            {
+              "prompt": "Passé simple (él/ella) de poder (pouvoir) ?",
+              "answer": "pudo",
+              "explain": "poder (puedo, pudo) — pouvoir"
+            },
+            {
+              "prompt": "Quel est l’infinitif dont le présent « yo » est « puedo » ? (pouvoir)",
+              "answer": "poder",
+              "explain": "poder (puedo, pudo) — pouvoir"
+            },
+            {
+              "prompt": "Présent (yo) de decir (dire) ?",
+              "answer": "digo",
+              "explain": "decir (digo, dijo) — dire"
+            },
+            {
+              "prompt": "Passé simple (él/ella) de decir (dire) ?",
+              "answer": "dijo",
+              "explain": "decir (digo, dijo) — dire"
+            },
+            {
+              "prompt": "Quel est l’infinitif dont le présent « yo » est « digo » ? (dire)",
+              "answer": "decir",
+              "explain": "decir (digo, dijo) — dire"
+            }
+          ]
         }
       ]
     },
@@ -4525,6 +4784,18 @@
               ]
             },
             {
+              "t": "p",
+              "c": "**Ser** exprime l’identité ou la profession : **yo soy profesor**. **Estar** exprime un état (**ella está cansada**) ou un lieu (**Madrid está en España**)."
+            },
+            {
+              "t": "p",
+              "c": "**Por** indique notamment la cause (**gracias por tu ayuda**). **Para** indique le destinataire (**este regalo es para ti**) ou le but (**estudio para aprobar**)."
+            },
+            {
+              "t": "p",
+              "c": "Les articles de certains noms doivent être mémorisés : **el problema**, **la mano**. Avec **gustar**, le pronom désigne la personne à qui quelque chose plaît : **a mí me gusta el fútbol**, **a ti te gustan los libros**."
+            },
+            {
               "t": "tip",
               "c": "Chaque exercice tire de **nouvelles phrases** : refais-le autant de fois que tu veux."
             }
@@ -4537,8 +4808,59 @@
           "type": "grammar",
           "title": "Grammaire — exercices variés",
           "icon": "🧩",
-          "gen": "genGrammarES",
-          "count": 10
+          "count": 10,
+          "questions": [
+            {
+              "prompt": "ser / estar : Yo ____ profesor.",
+              "answer": "soy",
+              "explain": "ser pour l’identité ou la profession."
+            },
+            {
+              "prompt": "ser / estar : Ella ____ cansada.",
+              "answer": "está",
+              "explain": "estar pour un état."
+            },
+            {
+              "prompt": "ser / estar : Madrid ____ en España.",
+              "answer": "está",
+              "explain": "estar pour un lieu."
+            },
+            {
+              "prompt": "por / para : Gracias ____ tu ayuda.",
+              "answer": "por",
+              "explain": "por pour la cause."
+            },
+            {
+              "prompt": "por / para : Este regalo es ____ ti.",
+              "answer": "para",
+              "explain": "para pour le destinataire."
+            },
+            {
+              "prompt": "por / para : Estudio ____ aprobar.",
+              "answer": "para",
+              "explain": "para pour le but."
+            },
+            {
+              "prompt": "Article : ____ problema.",
+              "answer": "el",
+              "explain": "Le cours donne l’exception el problema."
+            },
+            {
+              "prompt": "Article : ____ mano.",
+              "answer": "la",
+              "explain": "Le cours donne l’exception la mano."
+            },
+            {
+              "prompt": "Verbe gustar : A mí ____ gusta el fútbol.",
+              "answer": "me",
+              "explain": "me gusta : cela me plaît."
+            },
+            {
+              "prompt": "Verbe gustar : A ti ____ gustan los libros.",
+              "answer": "te",
+              "explain": "te gustan : ils te plaisent."
+            }
+          ]
         }
       ]
     },

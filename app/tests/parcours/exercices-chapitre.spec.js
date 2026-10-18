@@ -62,3 +62,18 @@ test('SDGN Première : les exercices de personnalité restent sur son cours', as
   await expect(page.locator('main')).not.toContainText(/Maslow|Herzberg|qualification|cotisations|capital humain/i)
   expect(erreurs).toEqual([])
 })
+
+test('langues : entraînement de verbes rétabli sur les verbes du cours', async ({ page }) => {
+  const erreurs = await preparer(page)
+  await page.goto('./')
+  await attendreAccueil(page)
+  await page.goto('./#/subject/langues/theme/lng-en-verbs/chapter/0')
+  await page.getByRole('button', { name: /Exercices/ }).click()
+  await page.getByRole('button', { name: /Verbes irréguliers — entraînement/ }).click()
+  await page.getByRole('button', { name: /Entraînement/ }).click()
+  await expect(page.locator('main')).toContainText(/Question 1 \/ 10/)
+  const question = page.locator('main p.whitespace-pre-line').first()
+  await expect(question).toContainText(/go|went|gone|see|saw|seen|take|took|taken|make|made|come|came|write|wrote|written/)
+  await expect(page.locator('main input')).toBeVisible()
+  expect(erreurs).toEqual([])
+})

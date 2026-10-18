@@ -37,7 +37,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | AUDIT-20261018-CODEX-01 | Codex | Audit global en lecture : code, contenu, parcours, Supabase réel, publication et publicité ; cartographie publique dans `docs/AUDIT-2026-10-18.md`, résultats de sécurité détaillés dans le chat | Terminé, à fusionner | [PR #5](https://github.com/revizstmg/revizstmg.github.io/pull/5) | Lire `docs/AUDIT-2026-10-18.md`, puis annoncer séparément chaque correction |
 
-| AUDIT-SUIVI-20261018-CODEX-01 | Codex | Réparer les cinq rattachements perdus lors de sa correction précédente ; borner les questions de langues au cours | En cours | `fix/rattachements-audit` | Corriger les données puis vérifier accessibilité, périmètre et scores |
+| AUDIT-SUIVI-20261018-CODEX-01 | Codex | Réparer les cinq rattachements perdus lors de sa correction précédente ; borner les questions de langues au cours | Terminé, validation CI | [PR #6](https://github.com/revizstmg/revizstmg.github.io/pull/6) | Suivre la fusion/publication dans la PR ; périmètre distinct de l’audit |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -107,6 +107,23 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   50 sections sans activité autonome : les réparer sans réintroduire de questions
   hors chapitre. Le rapport inclut la comparaison avant/après.
 - Portée de cette PR : documentation uniquement ; aucune correction fonctionnelle.
+
+### AUDIT-SUIVI-20261018-CODEX-01 — Codex — 18 octobre 2026
+
+- Correctif distinct de l'audit : les cinq jeux inaccessibles ont un rattachement
+  explicite à leur premier chapitre. Le jeu de dissertation correspond aux étapes
+  expliquées dans son cours.
+- Les anciennes banques de verbes et de grammaire EN/ES contenaient aussi des formes
+  ou règles absentes de ces sections. Elles sont remplacées dans ces quatre jeux
+  par des questions bornées au cours ; les verbes viennent des six lignes des
+  tableaux, les règles et exemples de grammaire sont explicités dans la section.
+  Dix questions sont mélangées et sélectionnées à chaque partie ; mêmes IDs et types.
+- Vérifications : 155 tests réussis, compilation réussie, nouveau parcours de
+  l'entraînement de verbes réussi ; régression sur les cinq jeux et sur le score
+  maximal à 100 %. Empreinte des cinq thèmes concernés mise à jour volontairement.
+- Branche : `fix/rattachements-audit`, PR #6. Les autres constats de l'audit restent
+  à traiter, notamment les 50 sections sans activité propre et les scores des jeux
+  générés. Aucune modification Supabase.
 
 ### Modèle à copier pour une nouvelle tâche
 
