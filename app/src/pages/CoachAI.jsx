@@ -1,3 +1,4 @@
+import { TextePublic } from '../localisation/PublicText.jsx'
 import { useMemo, useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useStore, useStudyTimer } from '../store.jsx'
@@ -19,9 +20,9 @@ const SUB_STATUS = {
   unseen: { c: '#94a3b8', label: '·' },
 }
 
-function fmtDay(dateStr) {
+function fmtDay(dateStr, lang = 'fr') {
   try {
-    return new Date(dateStr + 'T00:00:00').toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'short' })
+    return new Date(dateStr + 'T00:00:00').toLocaleDateString(lang, { weekday: 'short', day: 'numeric', month: 'short' })
   } catch { return dateStr }
 }
 
@@ -147,7 +148,7 @@ function CoachAIPage() {
                   <Link key={s.id} to={`/subject/${s.id}`} className="flex items-center gap-3 p-3.5 transition hover:bg-slate-50 dark:hover:bg-slate-800/50">
                     <span className="min-w-0 flex-1">
                       <span className="mb-1 flex items-center justify-between gap-2">
-                        <span className="truncate text-sm font-semibold">{s.name}</span>
+                        <span className="truncate text-sm font-semibold"><TextePublic text={s.name} /></span>
                         <span className="shrink-0 text-xs font-semibold tabular-nums" style={{ color: st.c }}>{s.done === 0 ? t('aiNotSeen') : s.avg + '%'}</span>
                       </span>
                       <ProgressBar value={s.done === 0 ? 0 : s.avg} color={st.c} height={7} />
@@ -187,7 +188,7 @@ function CoachAIPage() {
                   {visibleDays.map((d) => (
                     <div key={d.date} className={`card p-3.5 ${d.isToday ? 'ring-2 ring-offset-2 ring-offset-transparent' : ''}`} style={d.isToday ? { '--tw-ring-color': 'var(--c-accent)' } : undefined}>
                       <div className="mb-2 flex items-center gap-2">
-                        <span className="text-sm font-semibold">{d.isToday ? t('aiToday') : d.dayOffset === 1 ? t('aiTomorrow') : fmtDay(d.date)}</span>
+                        <span className="text-sm font-semibold">{d.isToday ? t('aiToday') : d.dayOffset === 1 ? t('aiTomorrow') : fmtDay(d.date, state.lang || 'fr')}</span>
                         {d.isToday && <span className="chip" style={{ backgroundColor: 'var(--c-accent)22', color: 'var(--c-accent-texte)' }}>{t('aiToday')}</span>}
                         <span className="ml-auto text-xs text-slate-400">{d.items.length} thème{d.items.length > 1 ? 's' : ''}</span>
                       </div>
@@ -270,7 +271,7 @@ function CoachAIPage() {
             <label className="mb-2 block text-xs font-medium text-slate-500 dark:text-slate-400">{t('aiTargetSubject')}</label>
             <select value={subjectFilter} onChange={(e) => setSubjectFilter(e.target.value)} className="mb-4 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm dark:border-slate-700 dark:bg-slate-800">
               <option value="">{t('aiAllSubjects')}</option>
-              {subjects.map((s) => <option key={s.id} value={s.id}>{s.name}</option>)}
+              {subjects.map((s) => <option key={s.id} value={s.id}><TextePublic text={s.name} /></option>)}
             </select>
             <label className="mb-2 block text-xs font-medium text-slate-500 dark:text-slate-400">Longueur de la séance</label>
             <div className="mb-4 grid grid-cols-3 gap-2">

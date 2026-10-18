@@ -27,7 +27,7 @@ export function ReadAloud({ getText, className = '' }) {
       const txt = (getText() || '').replace(/\s+/g, ' ').trim()
       if (!txt) return
       const u = new SpeechSynthesisUtterance(txt)
-      u.lang = lang === 'es' ? 'es-ES' : lang === 'en' ? 'en-US' : 'fr-FR'
+      u.lang = ({ fr: 'fr-FR', en: 'en-US', es: 'es-ES', it: 'it-IT', ar: 'ar-SA' })[lang] || 'fr-FR'
       u.rate = 0.98
       u.onend = () => setOn(false); u.onerror = () => setOn(false)
       synth.cancel(); synth.speak(u); setOn(true)
@@ -289,7 +289,7 @@ export function PaginatedCourse({ sec, color, prevLabel, onPrev, themeId, subjec
               <div className="animate-lux space-y-6 text-[1.06rem] leading-relaxed">
                 {(list[page] || []).map((b, j) => <Block key={j} b={b} color={color} />)}
               </div>
-              <div className="mt-8 border-t border-slate-200 pt-3 text-right text-[11px] font-medium text-slate-400 dark:border-slate-700">{t('pageWord')} {page + 1} / {list.length}</div>
+              <div className="mt-8 border-t border-slate-200 pt-3 text-end text-[11px] font-medium text-slate-400 dark:border-slate-700">{t('pageWord')} {page + 1} / {list.length}</div>
             </div>
           </div>
           <div className="border-t border-slate-300/60 px-4 py-3 dark:border-slate-800">{pager}</div>
@@ -361,8 +361,8 @@ export function Resources({ items, nu = false }) {
         >
           <span className="text-xl">{r.kind === 'video' ? '▶️' : r.kind === 'doc' ? '📄' : '🔗'}</span>
           <span className="min-w-0 flex-1">
-            <span className="block text-sm font-semibold leading-tight">{r.label}</span>
-            {r.note && <span className="block text-xs text-slate-400">{r.note}</span>}
+            <span className="block text-sm font-semibold leading-tight"><CourseText text={r.label} /></span>
+            {r.note && <span className="block text-xs text-slate-400"><CourseText text={r.note} /></span>}
           </span>
           <span className="text-slate-300" aria-hidden>↗</span>
         </a>
@@ -436,15 +436,15 @@ function Bullets({ items, color }) {
 function Frise({ title, events = [] }) {
   return (
     <div className="frise">
-      {title && <p className="frise-title">{title}</p>}
+      {title && <p className="frise-title"><CourseText text={title} /></p>}
       <ol className="frise-list">
         {events.map((e, i) => (
           <li key={i} className="frise-item">
             <span className="frise-date">{e.date}</span>
             <span className="frise-mid" aria-hidden />
             <span className="frise-label">
-              <Rich text={e.label} />
-              {e.note && <span className="frise-note"><Rich text={e.note} /></span>}
+              <CourseText text={e.label} />
+              {e.note && <span className="frise-note"><CourseText text={e.note} /></span>}
             </span>
           </li>
         ))}
@@ -482,7 +482,7 @@ export function Block({ b, color }) {
     case 'warning':
       return (
         <div className="rounded-xl border-l-4 border-amber-400 bg-amber-50 p-4 dark:border-amber-500 dark:bg-amber-950/30">
-          <p className="mb-1 text-xs font-bold uppercase tracking-wide text-amber-700 dark:text-amber-300">⚠️ {b.h || 'Piège à éviter'}</p>
+          <p className="mb-1 text-xs font-bold uppercase tracking-wide text-amber-700 dark:text-amber-300">⚠️ <CourseText text={b.h || 'Piège à éviter'} /></p>
           <p className="whitespace-pre-line text-sm leading-relaxed text-slate-700 dark:text-slate-200"><CourseText text={b.c} /></p>
         </div>
       )
@@ -494,7 +494,7 @@ export function Block({ b, color }) {
             <thead>
               <tr>
                 {b.head.map((h, i) => (
-                  <th key={i} className="border-b-2 px-3 py-2 text-left font-bold" style={{ borderColor: color }}>{h}</th>
+                  <th key={i} className="border-b-2 px-3 py-2 text-start font-bold" style={{ borderColor: color }}><CourseText text={h} /></th>
                 ))}
               </tr>
             </thead>

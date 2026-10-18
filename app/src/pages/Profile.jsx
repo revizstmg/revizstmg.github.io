@@ -4,7 +4,7 @@ import { useStore, subjectScore } from '../store.jsx'
 import { trackLabel, trackIcon, subjectsForTrack } from '../data/tracks.js'
 import { badgeById } from '../badges.js'
 import { Ring, ProgressBar, Icon } from '../components/ui.jsx'
-import { useT } from '../i18n.js'
+import { usePublicText, useT } from '../i18n.js'
 import { signOut, supprimerCompte, isSignedIn } from '../auth.js'
 import { pushPossible, activerRappelsPush, desactiverRappelsPush } from '../push.js'
 import { InstallCard, AppBadge } from '../components/InstallApp.jsx'
@@ -33,6 +33,7 @@ function telechargerMesDonnees(state) {
 export default function Profile() {
   const { state, derived, resetAll, setBacDate, setParentShare } = useStore()
   const t = useT()
+  const tr = usePublicText()
   const [busy, setBusy] = useState(false)
   const bacDays = state.bacDate ? Math.ceil((new Date(state.bacDate + 'T00:00:00') - Date.now()) / 86400000) : null
   const [codeCopied, setCodeCopied] = useState(false)
@@ -95,7 +96,7 @@ export default function Profile() {
           <div className="min-w-0 flex-1">
             <p className="kicker" style={{ color: 'color-mix(in srgb, var(--c-accent) 62%, #fff)' }}>{role === 'prof' ? `🧑‍🏫 ${t('roleTeacher')}` : `🎓 ${t('roleStudent')}`}</p>
             <h1 className="truncate font-display text-[1.7rem] font-medium leading-[1.15] text-[#faf3e1] sm:text-[2.15rem]">{`${first} ${last}`.trim() || t('mySpace')}</h1>
-            {state.customTheme?.title && <p className="mt-2 text-sm font-semibold text-[#e8ce8d]">✦ {state.customTheme.title}</p>}
+            {state.customTheme?.title && <p className="mt-2 text-sm font-semibold text-[#e8ce8d]">✦ {tr(state.customTheme.title)}</p>}
             {state.account?.email && <p className="mt-0.5 truncate text-xs text-[#b8a878]">{state.account.email}</p>}
             <p className="mt-1 text-xs capitalize tracking-wide text-[#d8cca8]">{trackIcon(state.track)} {trackLabel(state.track)}{state.classCode ? ` · 👥 ${state.classCode}` : ''}</p>
           </div>
@@ -226,7 +227,7 @@ export default function Profile() {
             <span><span className="block font-display font-semibold">{t('joinClass')}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{t('joinClassShort')}</span></span>
           </Link>
         )}
-        <button onClick={openCustomizer} className="card flex items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md">
+        <button onClick={openCustomizer} className="card flex items-center gap-3 p-4 text-start transition hover:-translate-y-0.5 hover:shadow-md">
           <span className="text-violet-500 dark:text-violet-400"><Icon.Palette size={22} /></span>
           <span><span className="flex items-center gap-2 font-display font-semibold">{t('customizeProfile')} {!isStandalone() && <AppBadge />}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{t('appearanceHint')}</span></span>
         </button>
@@ -236,12 +237,12 @@ export default function Profile() {
       <section>
         <h2 className="mb-3 px-1 font-display text-xl font-medium">⚙️ {t('preferences')}</h2>
         <div className="card divide-y divide-slate-100 p-0 dark:divide-slate-800">
-          <button onClick={() => window.dispatchEvent(new CustomEvent('stmg-open-a11y'))} className="flex w-full items-center gap-3 p-4 text-left transition hover:bg-slate-50 dark:hover:bg-slate-800/50">
+          <button onClick={() => window.dispatchEvent(new CustomEvent('stmg-open-a11y'))} className="flex w-full items-center gap-3 p-4 text-start transition hover:bg-slate-50 dark:hover:bg-slate-800/50">
             <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-slate-100 text-lg dark:bg-slate-800" aria-hidden>♿</span>
             <span className="min-w-0 flex-1"><span className="block font-display font-semibold">{t('accessibility')}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{t('prefA11yHint')}</span></span>
             <span className="text-slate-300" aria-hidden>›</span>
           </button>
-          <button onClick={() => window.dispatchEvent(new CustomEvent('stmg-open-customizer'))} className="flex w-full items-center gap-3 p-4 text-left transition hover:bg-slate-50 dark:hover:bg-slate-800/50">
+          <button onClick={() => window.dispatchEvent(new CustomEvent('stmg-open-customizer'))} className="flex w-full items-center gap-3 p-4 text-start transition hover:bg-slate-50 dark:hover:bg-slate-800/50">
             <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-slate-100 text-lg dark:bg-slate-800" aria-hidden>🧩</span>
             <span className="min-w-0 flex-1"><span className="block font-display font-semibold">{t('prefTabs')}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{t('prefTabsHint')}</span></span>
             <span className="text-slate-300" aria-hidden>›</span>

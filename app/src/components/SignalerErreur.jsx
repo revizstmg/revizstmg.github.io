@@ -1,3 +1,4 @@
+import { TextePublic } from '../localisation/PublicText.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { send } from '../reseau.js'
 import { SUPA_READY } from '../supabase.js'
@@ -73,7 +74,7 @@ export default function SignalerErreur({ themeId, exercice, defaut = 'reponse', 
               {CATEGORIES.map((c) => (
                 <label key={c.id} className={`cursor-pointer rounded-full border px-3 py-1.5 text-xs font-semibold ${categorie === c.id ? 'border-rose-500 bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300' : 'border-slate-300 text-slate-600 dark:border-slate-700 dark:text-slate-300'}`}>
                   <input type="radio" name="categorie-signalement" value={c.id} checked={categorie === c.id} onChange={() => setCategorie(c.id)} className="sr-only" />
-                  {c.label}
+                  <TextePublic text={c.label} />
                 </label>
               ))}
             </div>

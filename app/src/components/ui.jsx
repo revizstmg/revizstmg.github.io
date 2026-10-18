@@ -1,3 +1,4 @@
+import { useAutoTranslate } from '../i18n.js'
 // Petits composants d'interface réutilisables.
 import { useEffect, useState } from 'react'
 
@@ -32,8 +33,9 @@ export const Icon = {
 }
 
 // Rend le gras **ainsi** et l'italique *ainsi* présents dans les textes du cours.
-export function Rich({ text, className = '' }) {
-  const parts = String(text).split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g)
+export function Rich({ text, className = '', translate = false }) {
+  const translated = useAutoTranslate(translate ? text : '')
+  const parts = String(translate ? translated : text).split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g)
   return (
     <span className={className}>
       {parts.map((p, i) => {

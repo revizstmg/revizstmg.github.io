@@ -45,6 +45,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | SHOP-20261018-CODEX-01 | Codex | Refonte boutique : catalogue, niveaux, paliers de mérite, store, profil, tests et README | Terminé | `feat/refonte-boutique`, PR #11 | Fusion et publication suivies dans la PR |
 
+| I18N-20261019-CODEX-01 | Codex | Traductions sur toutes les pages, boutique/catalogue, moteur, accessibilité et tests | Terminé | `fix/traductions-partout`, PR #12 | Fusion et publication suivies dans la PR |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -195,6 +197,32 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 - Limite : pièces et scores côté client ; l’activation commerciale devra être
   vérifiée côté serveur ou par les éditeurs lors du lancement. Aucun changement
   Supabase, aucun paiement mis en place, aucune fonction Premium inventée.
+
+### I18N-20261019-CODEX-01 — Codex — 19 octobre 2026
+
+- Demande : les traductions doivent fonctionner partout, notamment dans la boutique.
+- Réalisé : couverture intégrale des clés existantes dans EN/ES/IT/AR (39 clés
+  manquantes dans trois langues, 41 en arabe), 262 textes publics intégrés par
+  langue, catalogue et états de boutique localisés sans changer les identifiants.
+  Dates/nombres et lecture vocale adaptés aux cinq langues ; alignements logiques.
+- Couverture des pages : compilation des littéraux publics du JSX et des libellés
+  accessibles via composants React, sans observation/mutation du DOM. Les noms,
+  saisies et messages variables restent exclus ; les modèles sont interpolés
+  localement. Le code, les formules et les exclusions explicites sont préservés.
+  Titres légaux, FAQ, matières et ressources publiques utilisent une annotation.
+- Moteur : sources IT/AR corrigées, fichiers par langue, cache/regroupement des
+  requêtes, deux requêtes simultanées, découpage UTF-8 sous la limite du service,
+  absence de réponse périmée après bascule de langue, panne/quota signalés avec relance.
+- Vérifications : 182 tests unitaires réussis, compilation réussie et 12 parcours
+  navigateur ciblés réussis : cinq langues, achats/équipement/réservations, bascule
+  sans rechargement, confidentialité du profil et des brouillons, panne et relance.
+  Régression sur les accents vérifiée à la compilation. Consignes et conseils
+  publics des projets/coach annotés ; brouillons conservés dans leur langue.
+  CI complète sur le code `39f2d06` : 182 tests unitaires et 105 parcours
+  navigateur réussis (Actions `39171897995`). Publication suivie dans la PR #12.
+- Portée : interface et textes publics ; les contenus publics hors catalogue
+  intégré dépendent toujours du service en ligne. Les messages privés et les
+  saisies ne sont pas traduits automatiquement. Aucun changement Supabase.
 
 ### Modèle à copier pour une nouvelle tâche
 

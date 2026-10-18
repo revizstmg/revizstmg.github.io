@@ -4,6 +4,7 @@
 //  2) sinon, service en ligne gratuit MyMemory → traduit aussi les phrases.
 // Les résultats en ligne sont mis en cache (localStorage) pour l'hors-ligne
 // ultérieur et pour ménager les quotas.
+import { loadPublicLocale, knownPublicText } from './localisation/catalogue.js'
 import { GLOSSARY } from './data/glossary.js'
 
 export const LANGS = { fr: 'Français', en: 'English', es: 'Español', it: 'Italiano', ar: 'العربية' }
@@ -19,38 +20,81 @@ for (const entry of GLOSSARY) {
 
 function glossaryLookup(text, source, target) {
   const key = text.toLowerCase().trim()
-  const entry = index[source].get(key)
+  const entry = index[source]?.get(key)
   if (entry && entry[target]) return entry[target]
   return null
 }
 
 const cacheKey = (t, s, tg) => `mt:${s}:${tg}:${t}`
 
-// Traduit `text` de `source` vers `target`. Renvoie { text, via }.
-export async function translate(text, source, target) {
-  const clean = (text || '').trim()
-  if (!clean) return { text: '', via: null }
-  if (source === target) return { text: clean, via: 'même langue' }
-
-  // 1) glossaire (mots/expressions exacts)
-  const g = glossaryLookup(clean, source, target)
-  if (g) return { text: g, via: 'glossaire' }
-
-  // 2) cache local d'une traduction en ligne déjà obtenue
-  try {
-    const c = localStorage.getItem(cacheKey(clean, source, target))
-    if (c) return { text: c, via: 'en ligne (mémorisé)' }
-  } catch { /* stockage indisponible */ }
-
-  // 3) service en ligne MyMemory (mots ET phrases)
-  const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(clean)}&langpair=${source}|${target}`
-  const res = await fetch(url)
+const inflight = new Map()
+let running = 0
+const queue = []
+function schedule(task) {
+  return new Promise((resolve, reject) => { queue.push({ task, resolve, reject }); drain() })
+}
+function drain() {
+  while (running < 2 && queue.length) {
+    const job = queue.shift()
+    running++
+    Promise.resolve().then(job.task).then(job.resolve, job.reject).finally(() => { running--; drain() })
+  }
+}
+// MyMemory limite une requête à 500 octets, y compris pour l'arabe/les accents.
+export function translationChunks(text, maxBytes = 450) {
+  const chunks = []
+  let rest = text
+  const bytes = new TextEncoder()
+  while (bytes.encode(rest).length > maxBytes) {
+    let end = 0, lastSpace = 0, size = 0
+    for (const char of rest) {
+      const n = bytes.encode(char).length
+      if (size + n > maxBytes) break
+      size += n; end += char.length
+      if (/\s/.test(char)) lastSpace = end
+    }
+    const cut = lastSpace || end
+    chunks.push(rest.slice(0, cut).trim())
+    rest = rest.slice(cut).trimStart()
+  }
+  if (rest) chunks.push(rest)
+  return chunks
+}
+async function online(text, source, target) {
+  const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${source}|${target}`
+  const res = await schedule(() => fetch(url))
   if (!res.ok) throw new Error('Service de traduction indisponible (' + res.status + ')')
   const data = await res.json()
   const out = data?.responseData?.translatedText
-  if (!out || /MYMEMORY WARNING|QUERY LENGTH LIMIT/i.test(out)) {
-    throw new Error(out && /LIMIT/i.test(out) ? 'Limite du service atteinte, réessaie plus tard.' : 'Traduction indisponible.')
+  if ((data.responseStatus && Number(data.responseStatus) !== 200) || !out || /MYMEMORY WARNING|QUERY LENGTH LIMIT|DAILY FREE TRANSLATIONS|QUOTA EXCEEDED|TOO MANY REQUESTS/i.test(out)) throw new Error('Traduction temporairement indisponible.')
+  return out.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+}
+// Les modèles publics sont traduits ; les données personnelles interpolées ne
+// sont jamais passées à cette fonction par les composants d'interface.
+export async function translate(text, source, target) {
+  const clean = String(text || '').trim()
+  if (!clean) return { text: '', via: null }
+  if (!LANGS[source] || !LANGS[target]) throw new Error('Langue non prise en charge.')
+  if (source === target || !/[\p{L}]/u.test(clean)) return { text: clean, via: 'même langue' }
+  if (source === 'fr') {
+    await loadPublicLocale(target)
+    const local = knownPublicText(clean, target)
+    if (local !== undefined) return { text: local, via: 'interface' }
   }
-  try { localStorage.setItem(cacheKey(clean, source, target), out) } catch { /* ignore */ }
-  return { text: out, via: 'en ligne' }
+  const g = glossaryLookup(clean, source, target)
+  if (g) return { text: g, via: 'glossaire' }
+  const key = cacheKey(clean, source, target)
+  try { const c = localStorage.getItem(key); if (c) return { text: c, via: 'en ligne (mémorisé)' } } catch { /* stockage indisponible */ }
+  if (inflight.has(key)) return inflight.get(key)
+  const request = (async () => {
+    const translated = []
+    for (const part of translationChunks(clean)) translated.push(await online(part, source, target))
+    const out = translated.join(' ')
+    const variables = clean.match(/\{v\d+\}/g) || []
+    if (variables.some((v) => !out.includes(v))) throw new Error('La traduction a modifié les variables du texte.')
+    try { localStorage.setItem(key, out) } catch { /* quota local */ }
+    return { text: out, via: 'en ligne' }
+  })()
+  inflight.set(key, request)
+  try { return await request } finally { inflight.delete(key) }
 }

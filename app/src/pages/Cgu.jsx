@@ -90,7 +90,7 @@ export default function Cgu() {
         <ul className="list-disc space-y-1 pl-5">
           <li><b>Fiche par photo</b> : la photo est envoyée à un service d’intelligence artificielle (Google Gemini
           ou Anthropic Claude) qui en tire une fiche. N’y mets pas d’informations personnelles.</li>
-          <li><b>Traduction</b> de l’interface dans une autre langue que le français : les textes à traduire sont
+          <li><b>Traduction</b> de l’interface dans une autre langue que le français : les textes publics non intégrés sont
           envoyés au service MyMemory.</li>
         </ul>
         <p>Le détail figure dans la <Link to="/confidentialite" className={lien}>politique de confidentialité</Link>.</p>

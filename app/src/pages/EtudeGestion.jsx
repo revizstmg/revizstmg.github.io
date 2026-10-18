@@ -1,3 +1,4 @@
+import { TextePublic } from '../localisation/PublicText.jsx'
 import { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
@@ -62,7 +63,7 @@ function EtudeGestionPage() {
       <header className="text-center">
         <p className="kicker">🔎 {t('egTitle')}</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('egTitle')}</h1>
-        <p className="mx-auto mt-2 max-w-lg text-sm text-slate-500 dark:text-slate-400">{CONTENU.intro}</p>
+        <p className="mx-auto mt-2 max-w-lg text-sm text-slate-500 dark:text-slate-400"><TextePublic text={CONTENU.intro} /></p>
       </header>
 
       <Onglets onglets={ONGLETS.map((o) => ({ ...o, label: t(o.labelKey) }))} actif={onglet} choisir={setOnglet} label={t('egTitle')} nb={nb} />
@@ -101,7 +102,7 @@ function Consignes({ eg, maj }) {
             <span className={ETIQUETTE}>Thème du programme</span>
             <select value={eg.theme || ''} onChange={(e) => maj({ theme: e.target.value })} className={CHAMP}>
               <option value="">Choisis un thème…</option>
-              {themes.map((th) => <option key={th.id} value={th.name}>{th.name}</option>)}
+              {themes.map((th) => <option key={th.id} value={th.name}><TextePublic text={th.name} /></option>)}
             </select>
           </label>
           <label className="block">
@@ -120,14 +121,14 @@ function Consignes({ eg, maj }) {
 
       <Pli icon="📏" titre="Les règles" sous={`${CONTENU.regles.length} règles officielles`}>
         <div className="space-y-2">
-          {CONTENU.regles.map((r) => <Detail key={r.h} titre={r.h}><Rich text={r.c} /></Detail>)}
+          {CONTENU.regles.map((r) => <Detail key={r.h} titre={<TextePublic text={r.h} />}><Rich translate text={r.c} /></Detail>)}
         </div>
         <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">Le calendrier et la forme exacte sont fixés par ton professeur.</p>
       </Pli>
 
       <Pli icon="🧭" titre="La démarche" sous={`${CONTENU.demarche.length} étapes`}>
         <div className="space-y-2">
-          {CONTENU.demarche.map((d, k) => <Detail key={d.h} repere={k + 1} titre={d.h}>{d.c}</Detail>)}
+          {CONTENU.demarche.map((d, k) => <Detail key={d.h} repere={k + 1} titre={<TextePublic text={d.h} />}><TextePublic text={d.c} /></Detail>)}
         </div>
       </Pli>
 
@@ -136,7 +137,7 @@ function Consignes({ eg, maj }) {
           {CONTENU.dossier.map((d) => (
             <label key={d.id} className="flex cursor-pointer items-center gap-3 rounded-xl p-2 hover:bg-slate-50 dark:hover:bg-slate-800/50">
               <input type="checkbox" checked={!!coches[d.id]} onChange={(e) => maj((x) => ({ ...x, coches: { ...(x.coches || {}), [d.id]: e.target.checked } }))} className="h-4 w-4" style={{ accentColor: 'var(--c-accent-fort)' }} />
-              <span className="text-sm">{d.label}</span>
+              <span className="text-sm"><TextePublic text={d.label} /></span>
             </label>
           ))}
         </div>
@@ -144,7 +145,7 @@ function Consignes({ eg, maj }) {
 
       <Pli icon="💡" titre="Les conseils" sous={`${CONTENU.conseils.length} conseils`}>
         <ul className="list-disc space-y-1.5 pl-5 text-sm">
-          {CONTENU.conseils.map((c) => <li key={c}>{c}</li>)}
+          {CONTENU.conseils.map((c) => <li key={c}><TextePublic text={c} /></li>)}
         </ul>
       </Pli>
 
@@ -152,7 +153,7 @@ function Consignes({ eg, maj }) {
         <Pli icon="📖" titre="Revoir le cours" sous={`${themes.length} thèmes`}>
           <div className="grid gap-2">
             {themes.map((th) => (
-              <Link key={th.id} to={`/subject/p1-sgn/theme/${th.id}`} className="rounded-xl bg-slate-100 px-3 py-2.5 text-sm font-semibold transition hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700">{th.name} ›</Link>
+              <Link key={th.id} to={`/subject/p1-sgn/theme/${th.id}`} className="rounded-xl bg-slate-100 px-3 py-2.5 text-sm font-semibold transition hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700"><TextePublic text={th.name} /> ›</Link>
             ))}
           </div>
         </Pli>
@@ -161,7 +162,7 @@ function Consignes({ eg, maj }) {
       <Pli icon="📜" titre="Textes officiels" sous={`${CONTENU.references.length} textes`}>
         <ul className="space-y-2 text-sm">
           {CONTENU.references.map((r) => (
-            <li key={r.lien}><a href={r.lien} target="_blank" rel="noopener noreferrer" className="underline" style={LIEN}>{r.titre}</a></li>
+            <li key={r.lien}><a href={r.lien} target="_blank" rel="noopener noreferrer" className="underline" style={LIEN}><TextePublic text={r.titre} /></a></li>
           ))}
         </ul>
       </Pli>

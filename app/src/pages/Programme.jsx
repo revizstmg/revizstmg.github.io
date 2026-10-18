@@ -6,7 +6,7 @@ import { daysUntil, defaultBacDate } from '../data/srs.js'
 import { CALENDRIER, epreuvesAVenir, premiereEpreuve } from '../data/epreuves.js'
 import { useT } from '../i18n.js'
 
-const dateCourte = (d) => new Date(d + 'T00:00:00').toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'long' })
+const dateCourte = (d, lang = 'fr') => new Date(d + 'T00:00:00').toLocaleDateString(lang, { weekday: 'short', day: 'numeric', month: 'long' })
 
 // Sans filière (élève déconnecté), retour à l'accueil. Le test se fait ici, avant
 // tout hook de la page : React exige les mêmes hooks à chaque affichage, sinon la
@@ -49,7 +49,7 @@ function ProgrammePage() {
           <>
             <p className="kicker" style={{ color: 'color-mix(in srgb, var(--c-accent) 62%, #fff)' }}>{t('examCountdown')}</p>
             <p className="my-1 font-display text-6xl font-extrabold" style={{ color: 'color-mix(in srgb, var(--c-accent) 55%, #fff)' }}>{dLeft > 0 ? `J-${dLeft}` : t('itsToday')}</p>
-            <p className="text-xs text-[#d8cca8]">{new Date(state.bacDate + 'T00:00:00').toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</p>
+            <p className="text-xs text-[#d8cca8]">{new Date(state.bacDate + 'T00:00:00').toLocaleDateString(state.lang || 'fr', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</p>
             <button onClick={() => { setDraft(state.bacDate); setEditing(true) }} className="mt-3 text-xs font-semibold underline" style={{ color: 'color-mix(in srgb, var(--c-accent) 60%, #fff)' }}>{t('editDate')}</button>
           </>
         ) : (
@@ -71,7 +71,7 @@ function ProgrammePage() {
                 <span className="min-w-0 flex-1">
                   <span className="block text-sm font-semibold">{e.nom}</span>
                   <span className="block text-xs text-slate-500 dark:text-slate-400">
-                    {e.debut ? dateCourte(e.debut) : ''}{e.fin ? ` → ${dateCourte(e.fin)}` : ''}{e.note ? `${e.debut ? ' · ' : ''}${e.note}` : ''}
+                    {e.debut ? dateCourte(e.debut, state.lang || 'fr') : ''}{e.fin ? ` → ${dateCourte(e.fin, state.lang || 'fr')}` : ''}{e.note ? `${e.debut ? ' · ' : ''}${e.note}` : ''}
                   </span>
                 </span>
                 {e.jours != null && <span className="chip shrink-0" style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 14%, transparent)', color: 'var(--c-accent-texte)' }}>{e.jours > 0 ? `J-${e.jours}` : t('itsToday')}</span>}

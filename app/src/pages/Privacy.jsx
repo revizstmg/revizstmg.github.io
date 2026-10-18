@@ -59,8 +59,8 @@ export default function Privacy() {
         garde sur ton appareil (stockage local) ce qui fait fonctionner l'application : ta progression, ta
         session de connexion, tes préférences (thème, langue, affichage), tes notes et tes paquets de flashcards.
         Ta progression est en plus sauvegardée dans ton compte, pour la retrouver sur un autre appareil. En
-        <b> essai sans compte</b>, rien n'est envoyé : tout reste sur ton appareil jusqu'à ce que tu crées un
-        compte. Ce
+        <b> essai sans compte</b>, ta progression reste sur ton appareil jusqu’à la création d’un compte.
+        Les appels techniques décrits ci-dessous (dont la traduction si tu l’utilises) restent possibles. Ce
         stockage est strictement nécessaire au service : il ne demande
         pas de consentement (article 82 de la loi « Informatique et Libertés »). Il disparaît si tu effaces les
         données du site.</p>
@@ -82,8 +82,12 @@ export default function Privacy() {
           <li><b>Google (Gemini)</b> ou <b>Anthropic (Claude)</b>, seulement si tu utilises la « fiche par photo » :
           la photo leur est envoyée pour analyse. Avec l'offre gratuite de Gemini, Google peut utiliser les contenus
           reçus pour améliorer ses services : n'envoie pas de photo qui contient des informations personnelles.</li>
-          <li><b>MyMemory</b> (Translated, Italie), seulement si l'interface est dans une autre langue que le
-          français : les textes de l'application lui sont envoyés pour être traduits, pas tes données.</li>
+          <li><b>MyMemory</b> (Translated, Italie) traduit les textes publics qui ne sont pas déjà disponibles
+          dans la langue choisie. Les modèles d’interface sont envoyés sans les noms, messages ni valeurs
+          des champs : les données variables sont ajoutées sur ton appareil. Si tu utilises le dictionnaire,
+          le texte que tu demandes volontairement de traduire est envoyé au service ; n’y saisis pas
+          d’informations personnelles. Comme pour toute requête réseau, le prestataire reçoit techniquement
+          l’adresse IP de la connexion. Les résultats sont mémorisés sur ton appareil.</li>
           <li><b>Le service de notification de ton navigateur</b> (Google pour Chrome et Android, Apple pour Safari
           et l'iPhone, Mozilla pour Firefox), seulement si tu actives le rappel téléphone fermé : il achemine le
           rappel, qui ne contient aucune donnée (le texte affiché est toujours le même).</li>

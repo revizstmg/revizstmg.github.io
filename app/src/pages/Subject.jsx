@@ -28,7 +28,7 @@ export default function Subject() {
     <div className="animate-lux space-y-4">
       <header className="flex items-center gap-3">
         <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-2xl" style={{ backgroundColor: color + '18' }} aria-hidden>{subject.icon}</span>
-        <h1 className="font-display text-2xl font-medium leading-tight">{subject.name}</h1>
+        <h1 className="font-display text-2xl font-medium leading-tight"><CourseText text={subject.name} /></h1>
       </header>
 
       <ol className="space-y-2.5">
@@ -40,7 +40,7 @@ export default function Subject() {
             <li key={c.id}>
               <Link
                 to={`/subject/${sid}/theme/${c.id}`}
-                className="card group flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md"
+                className="card group flex w-full items-center gap-3 p-4 text-start transition hover:-translate-y-0.5 hover:shadow-md"
               >
                 <span
                   className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-sm font-black text-white shadow-sm"

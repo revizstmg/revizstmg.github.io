@@ -1,14 +1,17 @@
+import { useLang, usePublicText } from '../i18n.js'
 import { useEffect, useMemo, useState } from 'react'
 import { translate, LANGS } from '../translate.js'
 import { GLOSSARY } from '../data/glossary.js'
 import { Icon } from './ui.jsx'
 
-// Dictionnaire / traducteur FR ⇄ EN ⇄ ES. Mots via le glossaire hors-ligne
+// Dictionnaire / traducteur FR, EN, ES, IT et AR. Mots via le glossaire hors-ligne
 // (instantané) + phrases via le service en ligne. Suggestions du glossaire
 // pendant la saisie.
 export default function Dictionary({ onClose }) {
+  const lang = useLang()
+  const tr = usePublicText()
   const [source, setSource] = useState('fr')
-  const [target, setTarget] = useState('en')
+  const [target, setTarget] = useState(lang === 'fr' ? 'en' : lang)
   const [text, setText] = useState('')
   const [result, setResult] = useState(null) // { text, via }
   const [status, setStatus] = useState('idle') // idle | loading | error
@@ -24,7 +27,7 @@ export default function Dictionary({ onClose }) {
   const suggestions = useMemo(() => {
     const q = text.toLowerCase().trim()
     if (q.length < 2 || /\s/.test(text.trim())) return []
-    return GLOSSARY.filter((e) => e[source]?.toLowerCase().startsWith(q))
+    return GLOSSARY.filter((e) => e[source] && e[target] && e[source].toLowerCase().startsWith(q))
       .slice(0, 6)
       .map((e) => ({ from: e[source], to: e[target] }))
   }, [text, source, target])
@@ -43,12 +46,12 @@ export default function Dictionary({ onClose }) {
       const r = await translate(text, source, target)
       setResult(r); setStatus('idle')
     } catch (e) {
-      setError(e.message || 'Traduction impossible.'); setStatus('error')
+      setError('Le service de traduction est indisponible. Réessaie.'); setStatus('error')
     }
   }
 
   const LangPicker = ({ value, onChange, label }) => (
-    <div className="flex-1">
+    <div className="flex-1" role="group" aria-label={label}>
       <span className="mb-1 block text-[0.65rem] font-semibold uppercase tracking-wide text-slate-400">{label}</span>
       <div className="flex gap-1">
         {Object.entries(LANGS).map(([code, name]) => (
@@ -112,12 +115,12 @@ export default function Dictionary({ onClose }) {
         {result && (
           <div className="mt-3 rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200 dark:bg-slate-800/60 dark:ring-slate-700">
             <p className="whitespace-pre-line text-lg font-medium">{result.text}</p>
-            {result.via && <p className="mt-1 text-[0.7rem] uppercase tracking-wide text-slate-400">{result.via}</p>}
+            {result.via && <p className="mt-1 text-[0.7rem] uppercase tracking-wide text-slate-400">{tr(result.via)}</p>}
           </div>
         )}
         {status === 'error' && (
           <p className="mt-3 rounded-xl bg-rose-50 p-3 text-sm text-rose-700 ring-1 ring-rose-200 dark:bg-rose-950/40 dark:text-rose-300 dark:ring-rose-900">
-            {error} {' '}Le glossaire fonctionne hors-ligne, mais la traduction des phrases nécessite une connexion.
+            {tr(error)} {' '}Le glossaire fonctionne hors-ligne, mais la traduction des phrases nécessite une connexion.
           </p>
         )}
 

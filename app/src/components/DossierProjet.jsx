@@ -1,3 +1,4 @@
+import { TextePublic } from '../localisation/PublicText.jsx'
 import { useId, useState } from 'react'
 import { commun } from '../content/contenu.js'
 import { Rich } from './ui.jsx'
@@ -220,7 +221,7 @@ export function OngletSources({ d, maj }) {
               {OUTILS.fiabilite.map((f) => (
                 <label key={f.id} className="flex items-center gap-2 text-sm">
                   <input type="checkbox" checked={!!brouillon.fiable?.[f.id]} onChange={(e) => setBrouillon((b) => ({ ...b, fiable: { ...(b.fiable || {}), [f.id]: e.target.checked } }))} className="h-4 w-4" style={{ accentColor: 'var(--c-accent-fort)' }} />
-                  {f.label}
+                  <TextePublic text={f.label} />
                 </label>
               ))}
             </div>
@@ -286,7 +287,7 @@ export function OngletAnalyse({ d, maj }) {
       </section>
 
       <Pli icon="🏢" titre="Tableau de caractérisation" sous={`${rempli(carac, CARAC.lignes)} / ${CARAC.lignes.length} lignes remplies`}>
-        <p className="mb-2 text-sm text-slate-600 dark:text-slate-300">{CARAC.intro}</p>
+        <p className="mb-2 text-sm text-slate-600 dark:text-slate-300"><TextePublic text={CARAC.intro} /></p>
         <table className="w-full border-collapse text-sm">
           <caption className="sr-only">Caractérisation de {d.organisation || 'l’organisation'}</caption>
           <tbody>
@@ -295,14 +296,14 @@ export function OngletAnalyse({ d, maj }) {
               return (
                 <tr key={l.id} className="border-t border-slate-100 align-top dark:border-slate-800">
                   <th scope="row" className="w-[32%] py-2.5 pr-3 text-left">
-                    <label htmlFor={id} className="text-sm font-semibold">{l.label}</label>
+                    <label htmlFor={id} className="text-sm font-semibold"><TextePublic text={l.label} /></label>
                   </th>
                   <td className="py-2.5">
                     {l.long
                       ? <textarea id={id} value={carac[l.id] || ''} onChange={ecrire('carac', l.id)} rows={3} placeholder={l.exemple} aria-describedby={`${id}-aide`} className={CHAMP} maxLength={600} />
                       : <input id={id} value={carac[l.id] || ''} onChange={ecrire('carac', l.id)} list={l.choix ? `${id}-choix` : undefined} placeholder={l.exemple || (l.choix ? 'Choisis ou écris…' : '')} aria-describedby={`${id}-aide`} className={CHAMP} maxLength={200} />}
                     {l.choix && <datalist id={`${id}-choix`}>{l.choix.map((c) => <option key={c} value={c} />)}</datalist>}
-                    <span id={`${id}-aide`} className="mt-1 block text-xs text-slate-500 dark:text-slate-400">{l.aide}</span>
+                    <span id={`${id}-aide`} className="mt-1 block text-xs text-slate-500 dark:text-slate-400"><TextePublic text={l.aide} /></span>
                   </td>
                 </tr>
               )
@@ -313,7 +314,7 @@ export function OngletAnalyse({ d, maj }) {
 
       <Pli icon="🔍" titre="Diagnostic interne et externe" sous={`${rempli(swot, DIAG.cases)} / ${DIAG.cases.length} cases remplies · forces, faiblesses, opportunités, menaces`}>
         <div className="space-y-2">
-          {DIAG.methode.map((m) => <Detail key={m.h} titre={m.h}><Rich text={m.c} /></Detail>)}
+          {DIAG.methode.map((m) => <Detail key={m.h} titre={<TextePublic text={m.h} />}><Rich translate text={m.c} /></Detail>)}
         </div>
         <div className="mt-4 grid gap-2 sm:grid-cols-2">
           {DIAG.cases.map((c) => {
@@ -322,10 +323,10 @@ export function OngletAnalyse({ d, maj }) {
             return (
               <div key={c.id} className="rounded-xl p-3" style={{ backgroundColor: `color-mix(in srgb, ${couleur} 9%, transparent)` }}>
                 <div className="flex items-baseline justify-between gap-2">
-                  <label htmlFor={id} className="font-semibold">{c.signe} {c.label}</label>
-                  <span className="text-xs text-slate-600 dark:text-slate-300">{c.cote}</span>
+                  <label htmlFor={id} className="font-semibold">{c.signe} <TextePublic text={c.label} /></label>
+                  <span className="text-xs text-slate-600 dark:text-slate-300"><TextePublic text={c.cote} /></span>
                 </div>
-                <p id={`${id}-aide`} className="mb-1.5 mt-0.5 text-xs text-slate-600 dark:text-slate-300">{c.aide} Une idée par ligne.</p>
+                <p id={`${id}-aide`} className="mb-1.5 mt-0.5 text-xs text-slate-600 dark:text-slate-300"><TextePublic text={c.aide} /> Une idée par ligne.</p>
                 <textarea id={id} value={swot[c.id] || ''} onChange={ecrire('swot', c.id)} rows={4} placeholder={c.exemple} aria-describedby={`${id}-aide`} className={`${CHAMP} bg-white/60 dark:bg-slate-900/40`} maxLength={1200} />
               </div>
             )
@@ -334,7 +335,7 @@ export function OngletAnalyse({ d, maj }) {
       </Pli>
 
       <Pli icon="🌍" titre="PESTEL" sous={`${rempli(pestel, PESTEL.facteurs)} / ${PESTEL.facteurs.length} facteurs analysés`}>
-        <p className="mb-3 text-sm text-slate-600 dark:text-slate-300">{PESTEL.intro}</p>
+        <p className="mb-3 text-sm text-slate-600 dark:text-slate-300"><TextePublic text={PESTEL.intro} /></p>
         <div className="space-y-3">
           {PESTEL.facteurs.map((f) => {
             const id = `${base}-p-${f.id}`
@@ -342,8 +343,8 @@ export function OngletAnalyse({ d, maj }) {
               <div key={f.id} className="flex gap-3">
                 <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full font-bold text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }} aria-hidden>{f.lettre}</span>
                 <div className="min-w-0 flex-1">
-                  <label htmlFor={id} className="block text-sm font-semibold">{f.label}</label>
-                  <p id={`${id}-aide`} className="mb-1.5 text-xs text-slate-500 dark:text-slate-400">{f.aide}</p>
+                  <label htmlFor={id} className="block text-sm font-semibold"><TextePublic text={f.label} /></label>
+                  <p id={`${id}-aide`} className="mb-1.5 text-xs text-slate-500 dark:text-slate-400"><TextePublic text={f.aide} /></p>
                   <textarea id={id} value={pestel[f.id] || ''} onChange={ecrire('pestel', f.id)} rows={2} placeholder="Une idée par ligne." aria-describedby={`${id}-aide`} className={CHAMP} maxLength={1200} />
                 </div>
               </div>
@@ -407,12 +408,12 @@ export function OngletArguments({ d, maj, grille, aei, entete, notion, questions
       {entete}
 
       <Pli icon="🧩" titre="La méthode A-E-I" sous="Affirmation · Explication · Illustration">
-        <p className="mb-2 text-sm text-slate-600 dark:text-slate-300">{aei.intro}</p>
+        <p className="mb-2 text-sm text-slate-600 dark:text-slate-300"><TextePublic text={aei.intro} /></p>
         <div className="space-y-2">
           {aei.etapes.map((et) => (
-            <Detail key={et.id} repere={et.lettre} titre={et.h}>
-              {et.c}
-              {exemple && <span className="mt-1 block italic text-slate-600 dark:text-slate-300">Exemple : {et.exemple}</span>}
+            <Detail key={et.id} repere={et.lettre} titre={<TextePublic text={et.h} />}>
+              <TextePublic text={et.c} />
+              {exemple && <span className="mt-1 block italic text-slate-600 dark:text-slate-300">Exemple : <TextePublic text={et.exemple} /></span>}
             </Detail>
           ))}
         </div>
@@ -513,7 +514,7 @@ function CarteArgument({ a, k, dernier, sources, grille, changer, deplacer, modi
                 <input type="checkbox" checked={coche} disabled={!!c.auto || !ecrit}
                   onChange={(e) => changer(a.id, { eval: { ...(a.eval || {}), [c.id]: e.target.checked } })}
                   className="mt-0.5 h-4 w-4 shrink-0" style={{ accentColor: 'var(--c-accent-fort)' }} />
-                <span><b>{c.etape}</b> · {c.label}{c.auto ? ' (vérifié automatiquement)' : ''}</span>
+                <span><b><TextePublic text={c.etape} /></b> · <TextePublic text={c.label} />{c.auto ? ' (vérifié automatiquement)' : ''}</span>
               </label>
             )
           })}
