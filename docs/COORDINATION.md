@@ -37,6 +37,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | AUDIT-20261018-CODEX-01 | Codex | Audit global en lecture : code, contenu, parcours, Supabase réel, publication et publicité ; cartographie publique dans `docs/AUDIT-2026-10-18.md`, résultats de sécurité détaillés dans le chat | Terminé, à fusionner | [PR #5](https://github.com/revizstmg/revizstmg.github.io/pull/5) | Lire `docs/AUDIT-2026-10-18.md`, puis annoncer séparément chaque correction |
 
+| AUDIT-SUIVI-20261018-CODEX-01 | Codex | Réparer les cinq rattachements perdus lors de sa correction précédente ; borner les questions de langues au cours | En cours | `fix/rattachements-audit` | Corriger les données puis vérifier accessibilité, périmètre et scores |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
