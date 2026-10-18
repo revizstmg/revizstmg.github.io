@@ -65,6 +65,8 @@ const FR = {
   leaderboard: 'Classement', reviseTab: 'Réviser', weeklyRanking: 'Classement de la semaine', coursesThisWeek: 'cours cette semaine', resumeTitle: 'Reprends ta révision', startTitle: 'Prêt à commencer ?', startSub: 'Tu n’as encore rien commencé. Choisis une matière et lance ta première leçon.', startCourseBtn: 'Commencer un cours', toReviseSection: 'À réviser', themesCount: 'thèmes', continueChip: 'Continuer', startChip: 'Commencer',
   weeklyRankHint: 'Le classement se remet à zéro chaque lundi.',
   joinClass: 'Rejoindre une classe', classCodeField: 'Code de classe', joinBtn: 'Rejoindre', leaveClass: 'Changer de classe',
+  classCodeUnknown: 'Ce code ne correspond à aucune classe. Vérifie le code donné par ton professeur.',
+  classCodeCheckFailed: 'Impossible de vérifier ou de rejoindre la classe. Vérifie ta connexion et réessaie.',
   classCodeHint: 'Entre le code partagé par ton prof / ton lycée (le même pour toute la classe).',
   rankOffline: 'Classement momentanément indisponible. Réessaie plus tard.', retry: 'Réessayer', youLabel: 'Toi',
   loadingContent: 'Chargement du cours…', loadingContentError: 'Impossible de charger le cours. Vérifie ta connexion.',

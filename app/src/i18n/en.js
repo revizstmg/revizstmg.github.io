@@ -1,6 +1,8 @@
 // Libellés d'interface en anglais, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  classCodeUnknown: "This code does not match any class. Check the code given by your teacher.",
+  classCodeCheckFailed: "Unable to verify or join the class. Check your connection and try again.",
   search: 'Search a chapter', dictionary: 'Dictionary', language: 'Language',
   mySpace: 'my space', light: 'Switch to light mode', dark: 'Switch to dark mode',
   home: 'Home', theme: 'Theme', chapter: 'Chapter', level: 'Level', levelShort: 'Lv.',

@@ -15,7 +15,7 @@ import {
   fetchDuels, createDuel, acceptDuel, deleteDuel, fetchLeague,
   createTeacherClass, fetchTeacherClasses, banStudent, isBanned,
 } from '../classroom.js'
-import { upsertProfile, isSignedIn } from '../auth.js'
+import ClassCodeForm from '../components/ClassCodeForm.jsx'
 import { problemeMessage, noterMessage } from '../formulaires.js'
 
 const initialsOf = (name) => {
@@ -182,17 +182,6 @@ export default function Classe() {
 
 // ----- Rejoindre une classe (onglet code) ----------------------------------
 function JoinForm({ onJoin, t }) {
-  const [code, setCode] = useState('')
-  const [err, setErr] = useState('')
-  const ok = normalizeCode(code).length >= 2
-  const join = async () => {
-    if (!ok) return
-    const cc = normalizeCode(code)
-    setErr('')
-    try { if (await isBanned(cc)) { setErr(t('bannedFromClass')); return } } catch { /* hors ligne : on laisse passer */ }
-    onJoin(cc)
-    if (isSignedIn()) { try { await upsertProfile({ class_code: cc }) } catch { /* hors ligne */ } }
-  }
   return (
     <div className="animate-lux space-y-4">
       <header>
@@ -203,12 +192,7 @@ function JoinForm({ onJoin, t }) {
       <div className="card card-lux p-5">
         <h2 className="font-display text-xl font-semibold">{t('enterClassCode')}</h2>
         <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t('classCodeHint')}</p>
-        <label htmlFor="classe-code" className="mt-4 block text-xs font-semibold uppercase tracking-wide text-slate-400">{t('classCodeField')}</label>
-        <input id="classe-code" value={code} onChange={(e) => setCode(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && join()}
-          placeholder="ex : marceau-tstmg2" maxLength={24} autoFocus
-          className="mt-1 w-full rounded-xl border border-[color-mix(in_srgb,var(--c-accent)_30%,transparent)] bg-transparent px-3 py-2.5 text-base outline-none focus:border-[var(--c-accent)]" />
-        <button onClick={join} disabled={!ok} className="btn-primary mt-4 w-full">{t('joinBtn')}</button>
-        {err && <p className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
+        <ClassCodeForm id="classe-code" onJoin={onJoin} t={t} />
         <p className="mt-3 text-xs text-slate-400">{t('classJoinPrivacy')}</p>
         {!CLASSROOM_READY && <p className="mt-2 text-xs text-rose-500">{t('rankOffline')}</p>}
       </div>

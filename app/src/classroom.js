@@ -246,6 +246,19 @@ export async function fetchClassByCode(code) {
   const rows = await rpc('revizstmg_classe', { p_code: normalizeCode(code) })
   return rows?.[0] || null
 }
+// Une adhésion exige une classe existante et une exclusion vérifiée.
+// En cas de panne, on ne considère jamais le code comme accepté.
+export async function classCodeProblem(code) {
+  const cc = normalizeCode(code)
+  if (cc.length < 2) return 'classCodeUnknown'
+  try {
+    const classe = await fetchClassByCode(cc)
+    if (!classe || classe.code !== cc) return 'classCodeUnknown'
+    return await isBanned(cc) ? 'bannedFromClass' : null
+  } catch {
+    return 'classCodeCheckFailed'
+  }
+}
 export async function deleteTeacherClass(id) { await send('DELETE', `teacher_class?id=eq.${enc(id)}`) }
 
 // --- Exclusion d'élèves ----------------------------------------------------

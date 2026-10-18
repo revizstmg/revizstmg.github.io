@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
+import ClassCodeForm from '../components/ClassCodeForm.jsx'
 import { Icon } from '../components/ui.jsx'
 import { submitScore, fetchRanking, fetchLeague, deviceId, normalizeCode, LEADERBOARD_READY } from '../leaderboard.js'
 
@@ -14,7 +15,6 @@ export default function Leaderboard() {
   const { state, derived, setClassCode } = useStore()
   const t = useT()
   const [view, setView] = useState('class') // 'class' | 'league'
-  const [code, setCode] = useState('')
   const [rows, setRows] = useState(null)
   const [status, setStatus] = useState('idle') // idle | loading | ok | error
   const [league, setLeague] = useState(null)
@@ -145,24 +145,7 @@ export default function Leaderboard() {
         <div className="card card-lux p-5">
           <h2 className="font-display text-xl font-semibold">{t('joinClass')}</h2>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t('classCodeHint')}</p>
-          <label htmlFor="lb-code" className="mt-4 block text-xs font-semibold uppercase tracking-wide text-slate-400">{t('classCodeField')}</label>
-          <input
-            id="lb-code"
-            value={code}
-            onChange={(e) => setCode(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && normalizeCode(code).length >= 2 && setClassCode(normalizeCode(code))}
-            placeholder="ex : marceau-tstmg2"
-            className="mt-1 w-full rounded-xl border border-[color-mix(in_srgb,var(--c-accent)_30%,transparent)] bg-transparent px-3 py-2.5 text-base outline-none focus:border-[var(--c-accent)]"
-            maxLength={24}
-            autoFocus
-          />
-          <button
-            onClick={() => normalizeCode(code).length >= 2 && setClassCode(normalizeCode(code))}
-            disabled={normalizeCode(code).length < 2}
-            className="btn-primary mt-4 w-full"
-          >
-            {t('joinBtn')}
-          </button>
+          <ClassCodeForm id="lb-code" onJoin={setClassCode} t={t} />
           <p className="mt-3 text-xs text-slate-400">{t('rankPrivacy')}</p>
           {!LEADERBOARD_READY && <p className="mt-2 text-xs text-rose-500">{t('rankOffline')}</p>}
         </div>

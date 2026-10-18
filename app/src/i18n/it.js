@@ -1,6 +1,8 @@
 // Libellés d'interface en italien, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  classCodeUnknown: "Questo codice non corrisponde a nessuna classe. Controlla il codice del tuo insegnante.",
+  classCodeCheckFailed: "Impossibile verificare o accedere alla classe. Controlla la connessione e riprova.",
   search: 'Cerca un capitolo', dictionary: 'Dizionario', language: 'Lingua',
   mySpace: 'il mio spazio', light: 'Passa alla modalità chiara', dark: 'Passa alla modalità scura',
   home: 'Home', theme: 'Tema', chapter: 'Capitolo', level: 'Livello', levelShort: 'Liv.',

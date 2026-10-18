@@ -20,6 +20,10 @@ et en classe. Installable sur téléphone et utilisable hors ligne.
 Dans le lecteur de cours, la flèche après la dernière fiche revient à la
 première fiche du même chapitre, en lecture normale comme en plein écran.
 
+Pour rejoindre une classe (depuis Classe, Classement ou l'inscription), le code
+est vérifié auprès du serveur avant d'être enregistré. Un code inconnu ou une
+vérification indisponible laisse l'élève hors de la classe et affiche une erreur.
+
 ## Ce que fait l'application
 
 | Domaine | Contenu |

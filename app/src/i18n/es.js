@@ -1,6 +1,8 @@
 // Libellés d'interface en espagnol, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  classCodeUnknown: "Este código no corresponde a ninguna clase. Comprueba el código de tu profesor.",
+  classCodeCheckFailed: "No se puede verificar ni acceder a la clase. Comprueba tu conexión e inténtalo de nuevo.",
   search: 'Buscar un capítulo', dictionary: 'Diccionario', language: 'Idioma',
   mySpace: 'mi espacio', light: 'Cambiar a modo claro', dark: 'Cambiar a modo oscuro',
   home: 'Inicio', theme: 'Tema', chapter: 'Capítulo', level: 'Nivel', levelShort: 'Nv.',

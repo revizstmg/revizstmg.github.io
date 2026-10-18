@@ -122,6 +122,24 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 - Branche : `fix/retour-premiere-fiche` ; PR #7. Le résultat de la validation
   complète, la fusion et la publication sont consultables dans cette PR et ses Actions.
 
+### CLASSE-20261018-CODEX-01 — Codex — 18 octobre 2026
+
+- Demande : refuser un code erroné au lieu de rejoindre une classe fictive.
+- Cause : les formulaires enregistraient toute chaîne d’au moins deux caractères,
+  sans consulter `revizstmg_classe`. Le contrôle d’exclusion laissait aussi passer
+  les pannes réseau.
+- Réalisé : formulaire commun pour Classe et Classement, validation de l’existence
+  et de l’exclusion avant l’enregistrement du profil et du code local. Une erreur
+  laisse le formulaire ouvert ; les doubles envois sont bloqués. Même contrôle
+  pour le code facultatif à l’inscription, avec reprise sans recréer le compte.
+- Vérifications initiales : 154 tests unitaires et dix parcours navigateur réussis
+  (codes inconnus puis valides, exclusions, pannes de recherche, de vérification
+  d’exclusion et d’enregistrement du profil, sur les deux pages). Validation finale
+  et parcours d’inscription dans la PR #8 et ses Actions.
+- Supabase : lecture seule, code inexistant = zéro résultat ; la fonction de
+  recherche est autorisée aux comptes connectés. Aucune migration ni donnée modifiée.
+- Branche : `fix/code-classe-invalide`, PR #8. Publication automatique après fusion.
+
 ### Modèle à copier pour une nouvelle tâche
 
 ```text
