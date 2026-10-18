@@ -1,3 +1,4 @@
+import { TextePublic } from '../localisation/PublicText.jsx'
 import { Link } from 'react-router-dom'
 
 const CONTACT = 'revizstmg@gmail.com'
@@ -24,7 +25,7 @@ export default function Faq() {
       <hr className="rule-gold" />
       {items.map(([q, a], i) => (
         <section key={i} className="card p-5">
-          <h2 className="mb-2 font-display text-lg font-semibold">{q}</h2>
+          <h2 className="mb-2 font-display text-lg font-semibold"><TextePublic text={q} /></h2>
           <p className="text-sm text-slate-600 dark:text-slate-300">{a}</p>
         </section>
       ))}

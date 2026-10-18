@@ -1,11 +1,12 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
+import publicTranslations from './scripts/plugin-traductions.mjs'
 import contenuIndex from './scripts/plugin-contenu.mjs'
 
 // Tests de la logique et du contenu (Node). Les parcours dans le navigateur
 // sont dans tests/parcours/ et passent par Playwright.
 export default defineConfig({
-  plugins: [react(), contenuIndex()],
+  plugins: [react({ babel: { plugins: [publicTranslations] } }), contenuIndex()],
   test: {
     include: ['tests/**/*.test.{js,jsx}'],
     environment: 'node',

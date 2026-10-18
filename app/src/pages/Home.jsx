@@ -1,3 +1,4 @@
+import { CourseText } from '../components/Course.jsx'
 import { Link, useNavigate, Navigate } from 'react-router-dom'
 import { getChapter } from '../data/index.js'
 import { subjectsForTrack, trackLabel, trackIcon } from '../data/tracks.js'
@@ -59,7 +60,7 @@ export default function Home() {
   const photo = state.profile?.photo || ''
   const hour = new Date().getHours()
   const greeting = t(hour < 6 ? 'greetingNight' : hour < 12 ? 'greetingMorning' : hour < 18 ? 'greetingAfternoon' : 'greetingEvening')
-  const locale = state.lang === 'en' ? 'en-GB' : state.lang === 'es' ? 'es-ES' : 'fr-FR'
+  const locale = ({ fr: 'fr-FR', en: 'en-GB', es: 'es-ES', it: 'it-IT', ar: 'ar-SA' })[state.lang] || 'fr-FR'
   let dateLabel = ''
   try { dateLabel = new Intl.DateTimeFormat(locale, { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date()) } catch { /* ignore */ }
 
@@ -112,7 +113,7 @@ export default function Home() {
         <div className="relative mt-5 flex flex-wrap gap-2.5">
           {last ? (
             <Link to={`/subject/${last.subjectId}/theme/${last.id}`} className="btn-gold gap-1.5 !py-2.5">
-              <Icon.Play size={16} /> {t('resume')} : {last.short || last.name}
+              <Icon.Play size={16} /> {t('resume')} : <CourseText text={last.short || last.name} />
             </Link>
           ) : realSubjects[0] ? (
             <Link to={`/subject/${realSubjects[0].id}`} className="btn-gold gap-1.5 !py-2.5"><Icon.Play size={16} /> {t('start')}</Link>
@@ -194,7 +195,7 @@ export default function Home() {
                   <span className="absolute inset-y-0 left-0 w-1" style={{ backgroundColor: s.color + '99' }} />
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: s.color + '12', boxShadow: `inset 0 0 0 1px ${s.color}33` }}>{s.icon}</span>
                   <div className="min-w-0 flex-1 pl-1">
-                    <h3 className="font-display text-[1.05rem] font-semibold leading-tight">{s.name}</h3>
+                    <h3 className="font-display text-[1.05rem] font-semibold leading-tight"><CourseText text={s.name} /></h3>
                     <span className="chip mt-1 bg-violet-100 text-violet-700 dark:bg-violet-950/50 dark:text-violet-300">{t('comingSoon')}</span>
                   </div>
                 </div>
@@ -207,10 +208,10 @@ export default function Home() {
                 <div className="flex items-start gap-3.5 pl-2">
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: s.color + '12', boxShadow: `inset 0 0 0 1px ${s.color}33` }}>{s.icon}</span>
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-display text-[1.05rem] font-semibold leading-tight">{s.name}</h3>
+                    <h3 className="font-display text-[1.05rem] font-semibold leading-tight"><CourseText text={s.name} /></h3>
                     <p className="mb-2.5 truncate text-xs text-slate-500 dark:text-slate-400">{s.chapters.length} {t('chapters')} · {s.tagline}</p>
                     <ProgressBar value={pct} color={s.color} />
-                    <p className="mt-1.5 text-right text-xs font-semibold texte-matiere" style={{ '--mc': s.color }}>{pct}%</p>
+                    <p className="mt-1.5 text-end text-xs font-semibold texte-matiere" style={{ '--mc': s.color }}>{pct}%</p>
                   </div>
                 </div>
               </Link>

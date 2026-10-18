@@ -48,6 +48,29 @@ Aucun envoi automatique, carte bancaire ni renouvellement ; aucune fonctionnalit
 payante ou date de lancement inventée. La validation et l’activation commerciales
 ne sont pas automatisées côté client. Conditions détaillées dans les CGU.
 
+La traduction couvre FR/EN/ES/IT/AR. Toutes les clés de l’interface sont présentes
+pour les quatre langues étrangères ; 246 textes publics supplémentaires et le
+catalogue complet de la boutique sont intégrés dans des fichiers chargés à la
+demande (`src/localisation/public.*.json`). La langue change les dates, nombres,
+libellés accessibles et le sens de lecture arabe sans modifier les identifiants,
+les achats ni les saisies.
+
+Le plugin Babel `scripts/plugin-traductions.mjs`, utilisé en développement,
+compilation et tests, prend en charge les littéraux publics du JSX oubliés par
+`useT`. Il conserve la propriété du DOM à React. Les variables interpolées sont
+remplacées par des marqueurs : les noms et saisies restent dans le navigateur.
+Les valeurs des champs, le code, les formules, les URL, les marques et les
+éléments `translate="no"` ne sont pas traduits. Les chaînes dynamiques publiques
+(catalogues, cours) sont explicitement annotées avec `usePublicText` ou
+`CourseText` ; ne jamais appliquer la traduction automatique à un message privé.
+
+Les textes publics non intégrés utilisent MyMemory avec cache, regroupement des
+demandes identiques, deux requêtes simultanées et découpage UTF-8. Une panne ou
+un quota affiche une information avec relance, au lieu de présenter une erreur
+comme une traduction. Ces compléments de contenu nécessitent une connexion et
+la disponibilité du service ; les traductions intégrées de la boutique n’en
+ont pas besoin. Le passage de langue ne réutilise pas un ancien résultat.
+
 ## Ce que fait l'application
 
 | Domaine | Contenu |

@@ -19,9 +19,9 @@ const SUB_STATUS = {
   unseen: { c: '#94a3b8', label: '·' },
 }
 
-function fmtDay(dateStr) {
+function fmtDay(dateStr, lang = 'fr') {
   try {
-    return new Date(dateStr + 'T00:00:00').toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'short' })
+    return new Date(dateStr + 'T00:00:00').toLocaleDateString(lang, { weekday: 'short', day: 'numeric', month: 'short' })
   } catch { return dateStr }
 }
 
@@ -187,7 +187,7 @@ function CoachAIPage() {
                   {visibleDays.map((d) => (
                     <div key={d.date} className={`card p-3.5 ${d.isToday ? 'ring-2 ring-offset-2 ring-offset-transparent' : ''}`} style={d.isToday ? { '--tw-ring-color': 'var(--c-accent)' } : undefined}>
                       <div className="mb-2 flex items-center gap-2">
-                        <span className="text-sm font-semibold">{d.isToday ? t('aiToday') : d.dayOffset === 1 ? t('aiTomorrow') : fmtDay(d.date)}</span>
+                        <span className="text-sm font-semibold">{d.isToday ? t('aiToday') : d.dayOffset === 1 ? t('aiTomorrow') : fmtDay(d.date, state.lang || 'fr')}</span>
                         {d.isToday && <span className="chip" style={{ backgroundColor: 'var(--c-accent)22', color: 'var(--c-accent-texte)' }}>{t('aiToday')}</span>}
                         <span className="ml-auto text-xs text-slate-400">{d.items.length} thème{d.items.length > 1 ? 's' : ''}</span>
                       </div>

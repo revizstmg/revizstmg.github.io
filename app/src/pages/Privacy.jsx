@@ -1,3 +1,4 @@
+import { TextePublic } from '../localisation/PublicText.jsx'
 import { Link } from 'react-router-dom'
 import { MESURE_ACTIVE } from '../mesure.js'
 
@@ -164,7 +165,7 @@ export default function Privacy() {
 function Section({ title, children }) {
   return (
     <section className="card p-5">
-      <h2 className="mb-2 font-display text-lg font-semibold">{title}</h2>
+      <h2 className="mb-2 font-display text-lg font-semibold"><TextePublic text={title} /></h2>
       <div className="space-y-2 text-sm text-slate-600 dark:text-slate-300">{children}</div>
     </section>
   )

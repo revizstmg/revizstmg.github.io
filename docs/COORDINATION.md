@@ -45,7 +45,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | SHOP-20261018-CODEX-01 | Codex | Refonte boutique : catalogue, niveaux, paliers de mérite, store, profil, tests et README | Terminé | `feat/refonte-boutique`, PR #11 | Fusion et publication suivies dans la PR |
 
-| I18N-20261019-CODEX-01 | Codex | Traductions sur toutes les pages, boutique/catalogue, moteur, accessibilité et tests | En cours | `fix/traductions-partout` | Couvrir les textes publics sans traduire les données privées |
+| I18N-20261019-CODEX-01 | Codex | Traductions sur toutes les pages, boutique/catalogue, moteur, accessibilité et tests | À relire | `fix/traductions-partout`, PR #12 | Valider les cinq langues et les régressions du site |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -197,6 +197,28 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 - Limite : pièces et scores côté client ; l’activation commerciale devra être
   vérifiée côté serveur ou par les éditeurs lors du lancement. Aucun changement
   Supabase, aucun paiement mis en place, aucune fonction Premium inventée.
+
+### I18N-20261019-CODEX-01 — Codex — 19 octobre 2026
+
+- Demande : les traductions doivent fonctionner partout, notamment dans la boutique.
+- Réalisé : couverture intégrale des clés existantes dans EN/ES/IT/AR (39 clés
+  manquantes dans trois langues, 41 en arabe), 246 textes publics intégrés par
+  langue, catalogue et états de boutique localisés sans changer les identifiants.
+  Dates/nombres et lecture vocale adaptés aux cinq langues ; alignements logiques.
+- Couverture des pages : compilation des littéraux publics du JSX et des libellés
+  accessibles via composants React, sans observation/mutation du DOM. Les noms,
+  saisies et messages variables restent exclus ; les modèles sont interpolés
+  localement. Le code, les formules et les exclusions explicites sont préservés.
+  Titres légaux, FAQ, matières et ressources publiques utilisent une annotation.
+- Moteur : sources IT/AR corrigées, fichiers par langue, cache/regroupement des
+  requêtes, deux requêtes simultanées, découpage UTF-8 sous la limite du service,
+  absence de réponse périmée après bascule de langue, panne/quota signalés avec relance.
+- Vérifications initiales : 182 tests unitaires réussis. Tests navigateur ajoutés
+  pour les cinq langues, achats, bascule sans rechargement, confidentialité et
+  panne du service. Résultats finaux dans la PR #12 et ses Actions.
+- Portée : interface et textes publics ; les contenus publics hors catalogue
+  intégré dépendent toujours du service en ligne. Les messages privés et les
+  saisies ne sont pas traduits automatiquement. Aucun changement Supabase.
 
 ### Modèle à copier pour une nouvelle tâche
 

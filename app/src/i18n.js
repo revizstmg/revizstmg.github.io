@@ -6,6 +6,7 @@
 import { useEffect, useState } from 'react'
 import { useStore } from './store.jsx'
 import { translate } from './translate.js'
+import { loadPublicLocale, knownPublicText, formatPublicText } from './localisation/catalogue.js'
 
 // --- Libellés d'interface -------------------------------------------------
 const FR = {
@@ -355,6 +356,7 @@ const FR = {
   addFavHint: 'Ajoute-en avec l’étoile ☆ sur une page de chapitre.',
   removeFav: 'Retirer des favoris', addFav: 'Ajouter aux favoris',
   autoTranslated: 'traduit automatiquement',
+  translationPartial: 'Certains textes n’ont pas pu être traduits. Tu peux réessayer.',
 }
 // Le français est inclus d'office. Les autres langues sont chargées à la demande
 // (un fichier par langue) : l'app démarre plus vite pour tous ceux qui révisent
@@ -372,7 +374,7 @@ function chargerLangue(lang) {
   if (DICT[lang] || !CHARGEURS[lang] || enCours[lang]) return
   enCours[lang] = CHARGEURS[lang]()
     .then((m) => { DICT[lang] = m.default; abonnes.forEach((maj) => maj()) })
-    .catch(() => { delete enCours[lang] }) // hors ligne : on réessaiera
+    .catch(() => { delete enCours[lang]; window.dispatchEvent(new Event('stmg-translation-error')) })
 }
 
 export function useLang() {
@@ -388,7 +390,9 @@ export function useT() {
     const maj = () => setVersion((v) => v + 1)
     abonnes.add(maj)
     chargerLangue(lang)
-    return () => { abonnes.delete(maj) }
+    const retry = () => chargerLangue(lang)
+    window.addEventListener('stmg-translation-retry', retry)
+    return () => { abonnes.delete(maj); window.removeEventListener('stmg-translation-retry', retry) }
   }, [lang])
   return (key) => (DICT[lang] && DICT[lang][key]) || FR[key] || key
 }
@@ -401,16 +405,46 @@ export function useGameLabel() {
 
 // Traduit un texte français vers la langue de l'interface (cache + service en
 // ligne). Affiche le français tant que la traduction n'est pas arrivée.
+export function usePublicText() {
+  const lang = useLang()
+  const [, update] = useState(0)
+  useEffect(() => {
+    if (lang === 'fr') return
+    let alive = true
+    const load = () => loadPublicLocale(lang).then(() => { if (alive) update((v) => v + 1) }).catch(() => {})
+    load()
+    window.addEventListener('stmg-translation-retry', load)
+    return () => { alive = false; window.removeEventListener('stmg-translation-retry', load) }
+  }, [lang])
+  return (text, values) => formatPublicText(knownPublicText(text, lang) ?? text ?? '', values)
+}
+
 export function useAutoTranslate(text) {
   const lang = useLang()
-  const [out, setOut] = useState(text)
+  const source = String(text || '')
+  const [out, setOut] = useState(null)
+  const [retry, setRetry] = useState(0)
   useEffect(() => {
-    if (lang === 'fr' || !text || !String(text).trim()) { setOut(text); return }
+    if (lang === 'fr') return
+    const again = () => setRetry((v) => v + 1)
+    window.addEventListener('stmg-translation-retry', again)
+    return () => window.removeEventListener('stmg-translation-retry', again)
+  }, [lang])
+  useEffect(() => {
+    if (lang === 'fr' || !/[\p{L}]/u.test(source)) return
     let alive = true
-    translate(String(text), 'fr', lang)
-      .then((r) => { if (alive && r.text) setOut(r.text) })
-      .catch(() => { if (alive) setOut(text) })
+    translate(source, 'fr', lang).then((r) => {
+      if (alive) setOut({ source, lang, text: r.text })
+    }).catch(() => {
+      if (alive) window.dispatchEvent(new Event('stmg-translation-error'))
+    })
     return () => { alive = false }
-  }, [text, lang])
-  return lang === 'fr' ? text : out
+  }, [source, lang, retry])
+  if (lang === 'fr') return source
+  const local = knownPublicText(source, lang)
+  if (local !== undefined) return local
+  if (out?.source === source && out.lang === lang) {
+    return (source.match(/^\s+/)?.[0] || '') + out.text + (source.match(/\s+$/)?.[0] || '')
+  }
+  return source
 }

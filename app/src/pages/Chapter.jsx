@@ -61,7 +61,7 @@ export default function Chapter() {
     )
   }
 
-  const printDate = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
+  const printDate = new Date().toLocaleDateString(state.lang || 'fr', { day: 'numeric', month: 'long', year: 'numeric' })
   const studentName = `${state.profile?.firstName || ''} ${state.profile?.lastName || ''}`.trim()
 
   return (
