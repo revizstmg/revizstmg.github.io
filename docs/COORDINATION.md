@@ -43,7 +43,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | COMPTE-20261018-CODEX-01 | Codex | Isoler les sessions élève/professeur sur un PC : auth, store, connexion/déconnexion, tests | Terminé | `fix/isolation-comptes`, PR #10 | Fusion et publication suivies dans la PR |
 
-| SHOP-20261018-CODEX-01 | Codex | Refonte boutique : catalogue, niveaux, paliers de mérite, store, profil, tests et README | À relire | `feat/refonte-boutique`, PR #11 | Valider achats, récompenses, affichages et CI |
+| SHOP-20261018-CODEX-01 | Codex | Refonte boutique : catalogue, niveaux, paliers de mérite, store, profil, tests et README | Terminé | `feat/refonte-boutique`, PR #11 | Fusion et publication suivies dans la PR |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -187,9 +187,11 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   transactionnelle des achats simultanés sur plusieurs appareils. Achats, stock et réservations synchronisés dans la progression
   existante ; paliers uniques conservés en fusion. Les objets de profil ne passent
   pas au compte suivant. Les cadeaux cosmétiques restent rééquipables.
-- Vérifications : tests de logique achat/équipement/paliers/fusion ajoutés, ainsi
-  que trois parcours navigateur (achats, cadeaux, mois réservés). Compilation
-  et résultats finaux consultables dans la PR #11 et ses Actions.
+- Vérifications : 174 tests unitaires réussis, compilation réussie, six parcours
+  boutique/exercices réussis ; contrôles supplémentaires réussis après les derniers
+  ajustements du mode sombre et du palier Ultimate. Aperçus PC et mobile examinés.
+  Seuils calibrés sur les 36 à 47 thèmes disponibles par filière. Les résultats
+  complets de CI et la publication sont consultables dans la PR #11 et ses Actions.
 - Limite : pièces et scores côté client ; l’activation commerciale devra être
   vérifiée côté serveur ou par les éditeurs lors du lancement. Aucun changement
   Supabase, aucun paiement mis en place, aucune fonction Premium inventée.
