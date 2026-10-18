@@ -51,6 +51,18 @@ export default function publicTranslations({ types: t }) {
     }
     return node
   }
+  const descriptor = (node) => {
+    const m = model(node)
+    if (m) return t.objectExpression([
+      t.objectProperty(t.identifier('text'), t.stringLiteral(m.text)),
+      t.objectProperty(t.identifier('values'), t.arrayExpression(m.values)),
+    ])
+    if (t.isConditionalExpression(node)) {
+      const yes = descriptor(node.consequent), no = descriptor(node.alternate)
+      if (yes && no) return t.conditionalExpression(node.test, yes, no)
+    }
+    return null
+  }
   return { name: 'revizstmg-public-translations', visitor: {
     Program: {
       enter(path, state) {
@@ -88,11 +100,8 @@ export default function publicTranslations({ types: t }) {
       const entries = []
       path.node.attributes.forEach((a) => {
         if (!t.isJSXAttribute(a) || !translatedProps.has(a.name.name) || !a.value) return
-        const m = model(t.isJSXExpressionContainer(a.value) ? a.value.expression : a.value)
-        if (m) entries.push(t.objectProperty(t.stringLiteral(a.name.name), t.objectExpression([
-          t.objectProperty(t.identifier('text'), t.stringLiteral(m.text)),
-          t.objectProperty(t.identifier('values'), t.arrayExpression(m.values)),
-        ])))
+        const translated = descriptor(t.isJSXExpressionContainer(a.value) ? a.value.expression : a.value)
+        if (translated) entries.push(t.objectProperty(t.stringLiteral(a.name.name), translated))
       })
       if (!entries.length) return
       state.usedI18n = true

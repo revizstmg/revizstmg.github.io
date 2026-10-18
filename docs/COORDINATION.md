@@ -202,7 +202,7 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 
 - Demande : les traductions doivent fonctionner partout, notamment dans la boutique.
 - Réalisé : couverture intégrale des clés existantes dans EN/ES/IT/AR (39 clés
-  manquantes dans trois langues, 41 en arabe), 261 textes publics intégrés par
+  manquantes dans trois langues, 41 en arabe), 262 textes publics intégrés par
   langue, catalogue et états de boutique localisés sans changer les identifiants.
   Dates/nombres et lecture vocale adaptés aux cinq langues ; alignements logiques.
 - Couverture des pages : compilation des littéraux publics du JSX et des libellés
