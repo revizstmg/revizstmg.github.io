@@ -1,13 +1,20 @@
 // Répétition espacée (SM-2 simplifié) + utilitaires de dates.
 // Aucune dépendance : importable partout sans risque d'import circulaire.
-export const dayKey = (d = new Date()) => d.toISOString().slice(0, 10)
+// Les dates sont des dates civiles « AAAA-MM-JJ » : le jour du calendrier de
+// l'appareil (heure de Paris pour la plupart des élèves), et non le jour UTC,
+// qui changeait à 1 h ou 2 h du matin. Les calculs portent sur la date seule :
+// ni le fuseau ni le passage à l'heure d'été ou d'hiver ne décalent un jour.
+const deux = (n) => String(n).padStart(2, '0')
+export const dayKey = (d = new Date()) => `${d.getFullYear()}-${deux(d.getMonth() + 1)}-${deux(d.getDate())}`
 export const todayKey = () => dayKey()
-export const addDays = (key, n) => { const d = new Date(key + 'T00:00:00'); d.setDate(d.getDate() + n); return dayKey(d) }
+const jourUTC = (key) => { const [a, m, j] = String(key).split('-').map(Number); return Date.UTC(a, m - 1, j) }
+export const addDays = (key, n) => new Date(jourUTC(key) + n * 86400000).toISOString().slice(0, 10)
+// Nombre de jours de `from` à `to` (négatif si `to` est passé).
+export const daysBetween = (from, to) => Math.round((jourUTC(to) - jourUTC(from)) / 86400000)
 
 export function daysUntil(dateStr, today = todayKey()) {
   if (!dateStr) return null
-  const d1 = new Date(today + 'T00:00:00'), d2 = new Date(dateStr + 'T00:00:00')
-  return Math.round((d2 - d1) / 86400000)
+  return daysBetween(today, dateStr)
 }
 
 // Prochaine échéance d'un thème selon le score obtenu (0-100).

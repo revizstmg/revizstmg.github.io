@@ -5,8 +5,7 @@ import { buildDailyChallenge } from '../data/dailyChallenge.js'
 import Qcm from '../games/Qcm.jsx'
 import { Confetti, Stars } from '../components/ui.jsx'
 import { useT } from '../i18n.js'
-
-const todayKey = () => new Date().toISOString().slice(0, 10)
+import { todayKey } from '../data/srs.js'
 
 export default function DailyChallenge() {
   const { state, completeDailyChallenge } = useStore()

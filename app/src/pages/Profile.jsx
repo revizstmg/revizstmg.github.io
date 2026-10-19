@@ -12,6 +12,7 @@ import { ProgressCurve, ThemeTimeBars } from '../components/StatsCharts.jsx'
 import { isStandalone } from '../pwa.js'
 import { ensurePermission, notify, notifSupported } from '../notify.js'
 import { parentCode, PARENT_READY } from '../parent.js'
+import { daysUntil, todayKey } from '../data/srs.js'
 import { estEnEssai, creerMonCompte } from '../components/CompteRequis.jsx'
 
 // Droit à la portabilité (RGPD) : tout ce que l'app garde sur cet appareil pour
@@ -21,7 +22,7 @@ function telechargerMesDonnees(state) {
   const url = URL.createObjectURL(new Blob([JSON.stringify(donnees, null, 2)], { type: 'application/json' }))
   const a = document.createElement('a')
   a.href = url
-  a.download = `revizstmg-mes-donnees-${new Date().toISOString().slice(0, 10)}.json`
+  a.download = `revizstmg-mes-donnees-${todayKey()}.json`
   document.body.appendChild(a)
   a.click()
   a.remove()
@@ -35,7 +36,7 @@ export default function Profile() {
   const t = useT()
   const tr = usePublicText()
   const [busy, setBusy] = useState(false)
-  const bacDays = state.bacDate ? Math.ceil((new Date(state.bacDate + 'T00:00:00') - Date.now()) / 86400000) : null
+  const bacDays = state.bacDate ? daysUntil(state.bacDate) : null
   const [codeCopied, setCodeCopied] = useState(false)
   if (!state.track) return <Navigate to="/" replace />
 

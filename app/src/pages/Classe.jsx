@@ -6,7 +6,7 @@ import { subjectsForTrack } from '../data/tracks.js'
 import Qcm from '../games/Qcm.jsx'
 import LiveSection from '../components/LiveMode.jsx'
 import {
-  CLASSROOM_READY, deviceId, normalizeCode, todayKey, fetchActiveLive,
+  CLASSROOM_READY, deviceId, normalizeCode, todayKey, daysBetween, fetchActiveLive,
   upsertMember, fetchMembers,
   fetchGroups, createGroup, deleteGroup, setMemberGroup,
   fetchMeta, upsertMeta,
@@ -1042,8 +1042,7 @@ function ProfTab({ classCode, name, track, meta, reloadMeta, t }) {
 const heatColor = (v) => v >= 70 ? '#16a085' : v >= 45 ? '#f1c40f' : v >= 20 ? '#e67e22' : '#c0392b'
 function daysSinceDay(day) {
   if (!day) return Infinity
-  const ms = new Date(todayKey() + 'T00:00:00') - new Date(day + 'T00:00:00')
-  return Math.max(0, Math.round(ms / 86400000))
+  return Math.max(0, daysBetween(day, todayKey()))
 }
 function lastActiveLabel(day, t) {
   const d = daysSinceDay(day)

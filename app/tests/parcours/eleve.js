@@ -1,6 +1,9 @@
+import { todayKey } from '../../src/data/srs.js'
+
 // Prépare un navigateur « élève déjà inscrit », sans aucun accès réseau
 // extérieur (Supabase, polices…) : les tests ne touchent jamais la vraie base.
-export const AUJOURDHUI = new Date().toISOString().slice(0, 10)
+// Jour du calendrier de l'appareil, comme l'application (src/data/srs.js).
+export const AUJOURDHUI = todayKey()
 
 export function etatEleve(extra = {}) {
   return {

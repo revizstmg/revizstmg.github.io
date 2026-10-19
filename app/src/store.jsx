@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useMemo, useRef, useState, useCal
 import { SUBJECTS, ALL_CHAPTERS, chapterGameCount, jeuxJouablesDuTheme } from './data/index.js'
 import { BADGES } from './badges.js'
 import { saveProgress, isSignedIn, refreshSession, fetchProfile, getSession, signOut } from './auth.js'
-import { srsUpdate, todayKey as srsToday } from './data/srs.js'
+import { srsUpdate, todayKey, daysBetween } from './data/srs.js'
 import { dailyRewardFor } from './data/rewards.js'
 import { subjectsForTrack, trackLabel } from './data/tracks.js'
 import { publishChildStats, deleteMyChildStats, PARENT_READY } from './parent.js'
@@ -267,15 +267,6 @@ function load() {
   }
 }
 
-function todayKey() {
-  return new Date().toISOString().slice(0, 10)
-}
-function daysBetween(a, b) {
-  const d1 = new Date(a + 'T00:00:00')
-  const d2 = new Date(b + 'T00:00:00')
-  return Math.round((d2 - d1) / 86400000)
-}
-
 // Niveaux : paliers d'XP cumulés.
 const LEVELS = SHOP_LEVELS
 export function levelFromXp(xp) {
@@ -456,7 +447,7 @@ export function StoreProvider({ children }) {
         // résultat de CETTE séance. Le score du thème garde le meilleur résultat et
         // ne baisse jamais : avec lui, une révision ratée ne rapprochait pas la
         // suivante, et l'oubli passait inaperçu.
-        if (chapterId) next.srs = { ...(next.srs || {}), [chapterId]: srsUpdate(next.srs?.[chapterId], pct, srsToday()) }
+        if (chapterId) next.srs = { ...(next.srs || {}), [chapterId]: srsUpdate(next.srs?.[chapterId], pct, todayKey()) }
         return evaluateBadges(next)
       })
     },
@@ -697,7 +688,7 @@ export function StoreProvider({ children }) {
     const apres = typeof maj === 'function' ? maj(avant) : { ...avant, ...maj }
     return { ...p, etudeGestion: { ...apres, maj: Date.now() } }
   }), [])
-  const noterReponses = useCallback((r) => setState((p) => ({ ...p, erreurs: majCarnet(p.erreurs, r, srsToday()) })), [])
+  const noterReponses = useCallback((r) => setState((p) => ({ ...p, erreurs: majCarnet(p.erreurs, r, todayKey()) })), [])
   const setParentShare = useCallback((on) => {
     try { if (on) localStorage.removeItem('stmg_parent_efface') } catch { /* stockage indisponible */ }
     setState((p) => ({ ...p, parentShare: !!on }))
