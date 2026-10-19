@@ -61,7 +61,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | TROUSSE-20261019-CLAUDE-01 | Claude | Demande du propriétaire : « Réviser & réussir » de l'accueil plus discret, sans afficher tous les outils d'un coup. Fichiers : nouveau `components/OutilsAccueil.jsx`, `Home.jsx` (fichier de Codex : la section remplacée par ce composant), tests, README | Terminé | `claude/accueil-outils`, PR #22 | Fusion demandée par le propriétaire ; publication suivie dans la PR |
 
-| AUDITSITE-20261019-CODEX-01 | Codex + trois agents lancés | Inspection UX, fiabilité, pédagogie/accessibilité ; PDF, version texte et actions partagés | En cours | `docs/audit-site-20261019` | Consolider les preuves et recommandations ; aucun code de production modifié |
+| AUDITSITE-20261019-CODEX-01 | Codex + trois agents lancés | Inspection UX, fiabilité, pédagogie/accessibilité ; PDF, version texte et actions partagés | Terminé | [PR #25](https://github.com/revizstmg/revizstmg.github.io/pull/25) | PDF et plan dans `docs/audits/2026-10-19/` ; affectations à confirmer |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -390,3 +390,31 @@ Vérifications et résultats :
 Blocages / décisions attendues :
 Prochaine action :
 ```
+
+### AUDITSITE-20261019-CODEX-01 — 19 octobre 2026 (Paris)
+
+- Demande : trois agents inspectent le site puis livrent un PDF d’améliorations ;
+  partager le résultat avec Claude sur GitHub. Les trois agents ont terminé.
+- Rapports : UX/UI (14 points), fiabilité (14), pédagogie/accessibilité (11).
+  Consolidation en 23 actions couvrant les 39 points, avec priorité, preuve,
+  impact, effort indicatif, critère de livraison et coordination.
+- Livraison : [rapport texte](audits/2026-10-19/README.md),
+  [PDF de 19 pages](audits/2026-10-19/RevizSTMG-audit-global-2026-10-19.pdf),
+  [plan partagé](audits/2026-10-19/PLAN-ACTIONS.md), rapports agents et preuves.
+- Source applicative auditée : `6a32b03`. Build frais séparé réussi ;
+  198 tests unitaires réussis. Inspection code des 34 routes, balayage UX
+  de 29 routes à deux largeurs (chargements distingués des pages rendues),
+  24 visites pédagogiques plus reprises des pages lourdes, contrôles ciblés
+  sur site publié et build frais. Aucun vrai compte ni donnée réelle modifiés.
+- Recette du livrable : PDF ouvert, 19 pages et liens contrôlés, extraction
+  de toutes les fiches, rendu visuel vérifié, correspondance 39 points/23 actions.
+  Générateur et données du rapport sont inclus pour une mise à jour cohérente.
+- Coordination : #14 couvre déjà sauvegarde/fusion/état/récompense/date ;
+  préconisation relecture/recette/intégration, pas une réimplémentation concurrente.
+  #18 suppression, #20 notes et #13 répartition restent à confronter avant
+  de démarrer un chantier. Les nouveaux responsables sont proposés, jamais
+  imposés à Claude. La PR #24 reste la référence des anomalies de cours.
+- Limites : aucune certification de droits serveur, RGPD ou WCAG ; aucune
+  relecture factuelle exhaustive des 806 sections. Les risques non vérifiés
+  sont distingués des bugs reproduits. Aucun correctif de production livré.
+- Branche `docs/audit-site-20261019`, PR #25 : livraison documentaire uniquement.
