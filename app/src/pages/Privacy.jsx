@@ -34,6 +34,8 @@ export default function Privacy() {
           <li><b>Photo de profil</b> : facultative, réduite localement avant envoi.</li>
           <li><b>Scolarité</b> : niveau, spécialité, éventuel code de classe.</li>
           <li><b>Progression pédagogique</b> : XP, scores, badges, favoris, séries, temps de révision, historique.</li>
+          <li><b>Notes de classe</b> que tu saisis dans « Mes notes de classe » (note, matière, chapitre, date) :
+          sauvegardées avec ta progression, visibles par toi seul (ni ta classe, ni ton professeur, ni l'espace parent).</li>
           <li><b>Contributions</b> : QCM créés, messages de classe, réponses partagées avec ta classe.</li>
           <li><b>Photos de cours</b> envoyées à la « fiche par photo » : analysées pour créer la fiche, elles ne sont
           <b> pas conservées</b> par RévizSTMG.</li>
@@ -114,8 +116,8 @@ export default function Privacy() {
         <p>Tes données sont conservées <b>tant que ton compte existe</b>. Un compte resté <b>inactif plus de
         24 mois</b> peut être supprimé après information.</p>
         <p>Quand tu supprimes ton compte (« Supprimer mon compte » dans <Link to="/moi" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">Mon espace</Link>),
-        tout est <b>effacé aussitôt</b> : ton compte de connexion et ton <b>adresse e-mail</b>, ta progression et tes
-        notes, ta classe et tes contributions, tes amis et tes duels, le suivi parent, tes signalements d'erreurs,
+        tout est <b>effacé aussitôt</b> : ton compte de connexion et ton <b>adresse e-mail</b>, ta progression, tes
+        notes et tes notes de classe, ta classe et tes contributions, tes amis et tes duels, le suivi parent, tes signalements d'erreurs,
         ton abonnement au rappel téléphone, et tout ce que l'application gardait sur l'appareil où tu fais la
         suppression. Le code du site, publié sur GitHub, ne contient aucune donnée d'élève.</p>
         <p>Il ne reste, pour une durée limitée, que ce qui échappe à l'application : les journaux techniques et

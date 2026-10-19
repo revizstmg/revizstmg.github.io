@@ -39,6 +39,7 @@ const Cgu = lazy(() => import('./pages/Cgu.jsx'))
 const Faq = lazy(() => import('./pages/Faq.jsx'))
 const Guide = lazy(() => import('./pages/Guide.jsx'))
 const Friends = lazy(() => import('./pages/Friends.jsx'))
+const MesNotes = lazy(() => import('./pages/MesNotes.jsx'))
 
 // Rétro-compatibilité : les anciens liens /subject/:sid/chapter/:cid
 // (où le chapitre était en fait un thème) redirigent vers la page Thème.
@@ -75,6 +76,7 @@ export default function App() {
         <Route path="/subject/:sid/theme/:tid/chapter/:cidx" element={<ContenuMatiere><Chapter /></ContenuMatiere>} />
         <Route path="/subject/:sid/chapter/:cid" element={<OldChapterRedirect />} />
         <Route path="/favoris" element={<Favoris />} />
+        <Route path="/mes-notes" element={<MesNotes />} />
         <Route path="/badges" element={<Badges />} />
         <Route path="/classe" element={<AvecCompte quoi="rejoindre ta classe"><Classe /></AvecCompte>} />
         <Route path="/moi" element={<Profile />} />

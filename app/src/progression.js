@@ -7,7 +7,7 @@
 //   une dépense faite sur le téléphone n'est pas remboursée par l'ordinateur, et
 //   deux gains faits en même temps sur deux appareils comptent tous les deux ;
 // - dates de modification des éléments (favoris, paquets, fiches, carnet
-//   d'erreurs, notes) et de quelques réglages : la modification la plus récente
+//   d'erreurs, notes du cours, notes de classe) et de quelques réglages : la modification la plus récente
 //   l'emporte, suppression comprise, au lieu de faire réapparaître l'élément ;
 // - version de la copie (`rev`) : la copie du compte n'est remplacée que si elle
 //   n'a pas changé depuis la dernière lecture, sinon on fusionne d'abord.
@@ -15,7 +15,7 @@
 // les règles d'avant : le plus grand, le plus récent ou l'union.
 
 // Champs de progression synchronisés sur le compte (multi-appareil).
-export const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'shopRewards', 'shopWalletUpdatedAt']
+export const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'shopRewards', 'shopWalletUpdatedAt', 'notesClasse']
 // Carnet d'erreurs : au plus tant de questions ratées, les plus récentes d'abord.
 export const CARNET_MAX = 150
 
@@ -27,6 +27,7 @@ const COLLECTIONS = {
   fiches: { cle: (f) => f?.id, ancienne: (x, y) => ((y.createdAt || 0) > (x.createdAt || 0) ? y : x) },
   erreurs: { cle: (e) => e?.id, ancienne: (x, y) => ((y.le || '') > (x.le || '') ? y : x) },
   notes: { carte: true, ancienne: (x, y) => (String(y).length > String(x).length ? y : x) },
+  notesClasse: { cle: (n) => n?.id, ancienne: (x, y) => ((y.ajouteLe || 0) > (x.ajouteLe || 0) ? y : x) },
 }
 const CHAMPS = ['lastChapter', 'bacDate']
 // La trace d'un élément supprimé est oubliée au bout de 120 jours.

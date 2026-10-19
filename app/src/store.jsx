@@ -8,6 +8,7 @@ import { dailyRewardFor } from './data/rewards.js'
 import { subjectsForTrack, trackLabel } from './data/tracks.js'
 import { publishChildStats, deleteMyChildStats, PARENT_READY } from './parent.js'
 import { desactiverRappelsPush } from './push.js'
+import { ajouterNote } from './notesClasse.js'
 import { CARNET_MAX, mergeProgress, grandOralVide, etudeGestionVide, noter, chargeUtile, empreinte, aSauvegarder, versionDe, avecVersionServeur, apresEnvoi } from './progression.js'
 
 export { CARNET_MAX, mergeProgress, grandOralVide, etudeGestionVide }
@@ -92,6 +93,7 @@ const emptyState = () => ({
   dailyChallenge: { last: null, streak: 0, best: 0, lastBonus: 0 }, // défi du jour (série + récompense)
   notes: {}, // { [themeId]: texte } — notes personnelles de l'élève par thème
   fiches: [], // fiches de révision créées depuis une photo : { id, title, createdAt, source, sections }
+  notesClasse: [], // notes reçues en classe (privées) : { id, note, matiere, chapitre, date, ajouteLe }
 })
 
 // Suppression du compte : tout ce que l'application garde dans ce navigateur
@@ -610,6 +612,10 @@ export function StoreProvider({ children }) {
   // Notes personnelles de l'élève sur un thème (remarques, astuces…).
   const setNote = useCallback((themeId, text) => setState((p) => ({ ...p, notes: { ...(p.notes || {}), [themeId]: text } })), [])
 
+  // Notes reçues en classe (page « Mes notes de classe ») : ajout et retrait.
+  const ajouterNoteClasse = useCallback((entree) => setState((p) => ({ ...p, notesClasse: ajouterNote(p.notesClasse, entree) })), [])
+  const retirerNoteClasse = useCallback((id) => setState((p) => ({ ...p, notesClasse: (p.notesClasse || []).filter((n) => n.id !== id) })), [])
+
   // Défi du jour : à la fin du défi, une seule récompense par jour. La série
   // augmente si le défi de la veille a été relevé, sinon elle repart à 1.
   const completeDailyChallenge = useCallback((pct = 0) => setState((p) => {
@@ -745,6 +751,8 @@ export function StoreProvider({ children }) {
     claimWeekly,
     completeDailyChallenge,
     setNote,
+    ajouterNoteClasse,
+    retirerNoteClasse,
     applyOnboarding,
     resetAll,
     dismissBadge,

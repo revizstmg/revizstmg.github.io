@@ -55,7 +55,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | SUPPR-20261019-CLAUDE-01 | Claude | Suppression complète du compte demandée par le propriétaire (C01, partie suppression) : fonction `revizstmg_supprimer_compte` complétée (signalements de l'élève, duels de classe reçus, exclusions, jetons) et appliquée sur Supabase ; effacement de tout ce qui reste sur l'appareil ; confidentialité et CGU. Fichiers : `supabase/**`, `auth.js`, `Profile.jsx`, `push.js`, `Privacy.jsx`, `Cgu.jsx`, tests | À relire | `claude/suppression-compte`, PR #18 (part de la PR #14) | Relecture et fusion par le propriétaire, après les PR #13 et #14 |
 
-| NOTES-20261019-CLAUDE-01 | Claude | « Mes notes de classe », partie gratuite (voir le document des offres) : saisie de la note, matière puis chapitre dans des menus déroulants, liste de ce qu'il faut améliorer. Fichiers : nouvelle page `pages/MesNotes.jsx`, `progression.js` et `store.jsx` (nouveau champ synchronisé), route dans `App.jsx` (fichier commun), lien depuis `Profile.jsx`, tests, README | Prévu, après SUPPR | `claude/mes-notes` (part de `claude/suppression-compte`) | Commencer une fois la suppression terminée |
+| NOTES-20261019-CLAUDE-01 | Claude | « Mes notes de classe », partie gratuite (voir le document des offres) : saisie de la note, matière puis chapitre dans des menus déroulants, liste de ce qu'il faut améliorer. Fichiers : nouvelle page `pages/MesNotes.jsx`, `progression.js` et `store.jsx` (nouveau champ synchronisé), route dans `App.jsx` (fichier commun), lien depuis `Profile.jsx`, tests, README | À relire | `claude/mes-notes` (part de `claude/suppression-compte`, PR #18) | Relecture et fusion par le propriétaire, après la PR #18 |
 
 | PEDAGO-20261019-CODEX-01 | Codex | X06 : deux corrections SDGN Première ; X01 : finaliser les cinq jeux de la PR #6 ; contenu, moteur et tests uniquement | Terminé | [PR #15](https://github.com/revizstmg/revizstmg.github.io/pull/15) | Valider les corrections et les parcours |
 
@@ -342,6 +342,28 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   duels et les exclusions de A effacés, ceux de B gardés).
 - Limite : la suppression n'a pas été essayée sur un vrai compte de la base.
 - Prochaine action : relecture de la PR #18 ; puis NOTES sur `claude/mes-notes`.
+- NOTES, résultat : page `#/mes-notes` (`pages/MesNotes.jsx`), lien dans Mon
+  espace. L'élève écrit sa note sur 20 (« 15,50 » ou « 15.5 ») ; la matière puis
+  le chapitre (thèmes des cours de sa filière, plus « Toute la matière ») se
+  choisissent dans des menus. « Ce qu'il faut améliorer » : tout chapitre sous
+  10/20 et, dans chaque matière où au moins deux chapitres sont notés, celui à la
+  moyenne la plus basse. Pas de conseils ni de liens vers les exercices : c'est
+  la partie Premium du document des offres. Calculs dans `src/notesClasse.js`.
+- Stockage : champ `notesClasse` de la progression, sauvegardé sur le compte et
+  fusionné entre appareils comme les autres éléments datés (suppression
+  comprise). `profiles` n'est lisible que par l'élève (règles vérifiées sur
+  Supabase, lecture seule) : ni la classe, ni le professeur, ni l'espace parent
+  ne voient les notes. Elles sont dans l'export et partent avec le compte.
+- Fichiers communs ou hors couloir, changés au minimum : `App.jsx` (route),
+  `pwa/404.html` (adresse connue), `mesure.js` (l'écran compte comme « moi » :
+  un nom d'écran à lui demanderait de modifier la fonction SQL de mesure).
+  Textes en français dans le JSX, traduits par le service en ligne ; aucune clé
+  ajoutée aux dictionnaires. Confidentialité et README complétés.
+- Vérifications : 251 tests unitaires (dont 16 pour les notes : saisie,
+  classement, fusion entre appareils), compilation, 121 parcours navigateur (dont
+  la saisie, les menus, le classement, le rechargement et la suppression d'une
+  note), page vérifiée sur téléphone en clair et en sombre.
+- Supabase : aucune modification.
 
 ### PEDAGO-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
 

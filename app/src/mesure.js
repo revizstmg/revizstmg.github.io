@@ -33,6 +33,9 @@ export function nomEcran(chemin) {
     return p[2] === 'chapter' && p.length === 4 ? null : 'introuvable' // ancienne adresse redirigée
   }
   if (p[0] === 'revision' && p[1] === 'deck' && p.length === 3) return 'paquet'
+  // « Mes notes de classe » compte pour « moi » tant que la base n'accepte pas
+  // un nom d'écran à elle (il faudrait une migration de la fonction SQL).
+  if (p[0] === 'mes-notes' && p.length === 1) return 'moi'
   return p.length === 1 && ECRANS.includes(p[0]) ? p[0] : 'introuvable'
 }
 
