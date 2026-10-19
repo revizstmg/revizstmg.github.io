@@ -18,7 +18,8 @@ et en classe. Installable sur téléphone et utilisable hors ligne.
 > jour à chaque changement visible par l'élève.
 
 L’accueil conserve son bandeau sombre et or, avec les matières de la filière
-juste en dessous, puis les outils. Les cartes « Chaque séance compte » et
+juste en dessous, en cases compactes : quatre colonnes sur ordinateur (deux
+lignes), deux colonnes sur téléphone, puis les outils. Les cartes « Chaque séance compte » et
 « Ton coin à toi » regroupent progression et communauté. Un compte déjà
 configuré entre sans écran d’attente.
 La dernière fiche consultée est conservée sur cet appareil, séparément pour

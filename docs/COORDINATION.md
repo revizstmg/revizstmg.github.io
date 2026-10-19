@@ -55,6 +55,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | HOME-RETOUR-20261019-CODEX-01 | Codex | Retour au visuel précédent, matières en haut, conservation des deux cartes progression/communauté ; Home/CSS/tests/README | Terminé | `fix/accueil-classique` | Publication et validation complète suivies dans la PR |
 
+| MATIERES-20261019-CODEX-01 | Codex | Cases matières compactes : quatre colonnes ordinateur, deux mobile ; Home/CSS/tests | Terminé | `fix/matieres-compactes` | Publication suivie dans la PR |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -309,6 +311,17 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   réussis (mobile/bureau, reprise, arabe/sombre). Matières avant 550 px en haut
   de page aux deux largeurs ; pas de débordement horizontal. Publication et
   validation complète suivies dans la PR.
+
+### MATIERES-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
+
+- Demande : retrouver les petites cases matières sur deux lignes.
+- Réalisé : quatre colonnes sur ordinateur et deux colonnes sur téléphone,
+  icône/titre/décompte/progression conservés ; le reste de l’accueil est inchangé.
+- Périmètre : Home.jsx, Home.css, test accueil et README. Le parcours vérifie
+  le nombre réel de lignes aux deux largeurs et l’absence de débordement.
+- Validation : 188 tests unitaires, compilation et quatre parcours accueil
+  réussis. Grille vérifiée visuellement sur ordinateur. Branche
+  `fix/matieres-compactes` ; publication suivie dans la PR.
 
 ### Modèle à copier pour une nouvelle tâche
 
