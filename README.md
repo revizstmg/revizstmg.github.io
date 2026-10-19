@@ -17,6 +17,11 @@ et en classe. Installable sur téléphone et utilisable hors ligne.
 > Ce document décrit l'application après la refonte d'octobre 2026 : mettez-le à
 > jour à chaque changement visible par l'élève.
 
+L’accueil met en avant un thème recommandé, les matières de la filière et les
+outils adaptés au niveau. Un compte déjà configuré entre sans écran d’attente.
+La dernière fiche consultée est conservée sur cet appareil, séparément pour
+chaque compte, et accessible depuis « On reprend ? ».
+
 Dans le lecteur de cours, la flèche après la dernière fiche revient à la
 première fiche du même chapitre, en lecture normale comme en plein écran.
 
