@@ -16,8 +16,8 @@ import ReminderScheduler from './ReminderScheduler.jsx'
 import { InstallBanner } from './InstallApp.jsx'
 import { BandeauCookies } from './BandeauCookies.jsx'
 import { BandeauEssai } from './CompteRequis.jsx'
+import EtatSauvegarde from './EtatSauvegarde.jsx'
 import { useT, useLang } from '../i18n.js'
-import { desactiverRappelsPush } from '../push.js'
 import { useFocus } from '../focus.jsx'
 import { useInstall } from '../pwa.js'
 import { compterEcran } from '../mesure.js'
@@ -217,7 +217,7 @@ export default function Layout({ children }) {
                     <button onClick={() => { setProfileOpen(false); setCustOpen(true) }} className="flex w-full items-center gap-2 px-3 py-2.5 text-start text-sm hover:bg-slate-100 dark:hover:bg-slate-800">
                       <span aria-hidden>🎨</span> {t('customizeProfile')}
                     </button>
-                    <button onClick={async () => { setProfileOpen(false); await desactiverRappelsPush(); await logout() }} className="flex w-full items-center gap-2 border-t border-slate-100 px-3 py-2.5 text-start text-sm font-semibold text-rose-600 hover:bg-rose-50 dark:border-slate-800 dark:hover:bg-rose-950/40">
+                    <button onClick={() => { setProfileOpen(false); logout() }} className="flex w-full items-center gap-2 border-t border-slate-100 px-3 py-2.5 text-start text-sm font-semibold text-rose-600 hover:bg-rose-50 dark:border-slate-800 dark:hover:bg-rose-950/40">
                       <span aria-hidden>🚪</span> {t('signOut')}
                     </button>
                   </div>
@@ -245,13 +245,14 @@ export default function Layout({ children }) {
             onA11y={() => setA11yOpen(true)}
             onToggleTheme={() => setTheme(isDark ? 'light' : 'dark')}
             onLang={setLang}
-            onSignOut={async () => { await desactiverRappelsPush(); await logout() }}
+            onSignOut={() => logout()}
           />
         </div>
         <Breadcrumb />
       </header>
 
       <BandeauEssai />
+      <EtatSauvegarde />
       <TranslationStatus />
       <main className="mx-auto max-w-4xl px-4 pb-16 pt-4">
         <div key={pathname} className="page-enter">{children}</div>

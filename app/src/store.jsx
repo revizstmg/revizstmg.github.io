@@ -2,138 +2,20 @@ import { SHOP_LEVELS, purchaseItem, equipItem, collectReward, walletRevision } f
 import { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback } from 'react'
 import { SUBJECTS, ALL_CHAPTERS, chapterGameCount, jeuxJouablesDuTheme } from './data/index.js'
 import { BADGES } from './badges.js'
-import { saveProgress, isSignedIn, refreshSession, fetchProfile, getSession, signOut } from './auth.js'
+import { envoyerProgression, isSignedIn, refreshSession, fetchProfile, getSession, signOut } from './auth.js'
 import { srsUpdate, todayKey, daysBetween } from './data/srs.js'
 import { dailyRewardFor } from './data/rewards.js'
 import { subjectsForTrack, trackLabel } from './data/tracks.js'
 import { publishChildStats, deleteMyChildStats, PARENT_READY } from './parent.js'
+import { desactiverRappelsPush } from './push.js'
+import { CARNET_MAX, mergeProgress, grandOralVide, etudeGestionVide, noter, chargeUtile, empreinte, aSauvegarder, versionDe, avecVersionServeur, apresEnvoi } from './progression.js'
+
+export { CARNET_MAX, mergeProgress, grandOralVide, etudeGestionVide }
 
 // Modes transverses qui touchent plein de thèmes d'un coup (bac blanc, coach IA,
 // défi, express) : ils enregistrent un score mais NE marquent PAS un thème comme
 // « travaillé », sinon « À réviser » se remplit de thèmes jamais étudiés.
 const CROSS_GAMES = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac'])
-
-// Champs de progression synchronisés sur le compte (multi-appareil).
-const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'shopRewards', 'shopWalletUpdatedAt']
-// Carnet d'erreurs : au plus tant de questions ratées, les plus récentes d'abord.
-export const CARNET_MAX = 150
-function pickProgress(s) {
-  const out = {}
-  for (const k of PROGRESS_KEYS) out[k] = s[k]
-  return out
-}
-// Fusion locale ↔ serveur (on garde le meilleur des deux — même utilisateur).
-export function mergeProgress(a, b) {
-  if (!b || typeof b !== 'object' || !Object.keys(b).length) return a
-  const out = { ...a }
-  out.xp = Math.max(a.xp || 0, b.xp || 0)
-  out.totalAnswers = Math.max(a.totalAnswers || 0, b.totalAnswers || 0)
-  out.correctAnswers = Math.max(a.correctAnswers || 0, b.correctAnswers || 0)
-  out.badges = Array.from(new Set([...(a.badges || []), ...(b.badges || [])]))
-  out.favorites = Array.from(new Set([...(a.favorites || []), ...(b.favorites || [])]))
-  const chapters = { ...(a.chapters || {}) }
-  for (const [cid, rec] of Object.entries(b.chapters || {})) {
-    const cur = chapters[cid] || { games: {}, quiz: 0 }
-    const games = { ...(cur.games || {}) }
-    for (const [gid, pct] of Object.entries(rec.games || {})) games[gid] = Math.max(games[gid] || 0, pct || 0)
-    chapters[cid] = { games, quiz: Math.max(cur.quiz || 0, rec.quiz || 0), worked: !!(cur.worked || rec.worked) }
-  }
-  out.chapters = chapters
-  const as = a.streak || { count: 0, last: null }, bs = b.streak || { count: 0, last: null }
-  out.streak = (bs.last || '') > (as.last || '') ? bs : as
-  const aw = a.weekly || { week: null, done: [] }, bw = b.weekly || { week: null, done: [] }
-  if (aw.week && aw.week === bw.week) out.weekly = { week: aw.week, done: Array.from(new Set([...(aw.done || []), ...(bw.done || [])])) }
-  else out.weekly = (bw.week || '') > (aw.week || '') ? bw : aw
-  out.lastChapter = a.lastChapter || b.lastChapter || null
-  // Répétition espacée : on garde, par thème, la fiche la plus récente.
-  const srs = { ...(a.srs || {}) }
-  for (const [tid, rec] of Object.entries(b.srs || {})) {
-    const cur = srs[tid]
-    if (!cur || (rec.last || '') > (cur.last || '')) srs[tid] = rec
-  }
-  out.srs = srs
-  out.bacDate = a.bacDate || b.bacDate || null
-  // Un solde dépensable se restaure depuis la copie la plus récente.
-  // Le maximum n’est conservé que pour les anciennes sauvegardes sans version.
-  // Les paliers sont uniques, y compris après synchronisation sur un autre appareil.
-  out.shopRewards = { ...(a.shopRewards || {}), ...(b.shopRewards || {}) }
-  const versionA = Number(a.shopWalletUpdatedAt) || 0, versionB = Number(b.shopWalletUpdatedAt) || 0
-  const wallet = versionA >= versionB ? a : b
-  out.shopWalletUpdatedAt = Math.max(versionA, versionB)
-  out.coins = versionA || versionB ? (wallet.coins || 0) : Math.max(a.coins || 0, b.coins || 0)
-  out.owned = Array.from(new Set([...(a.owned || []), ...(b.owned || [])]))
-  out.freezes = versionA || versionB ? (wallet.freezes || 0) : Math.max(a.freezes || 0, b.freezes || 0)
-  // Courbe de progression : par jour, on garde le plus grand XP cumulé.
-  const hist = { ...(a.history || {}) }
-  for (const [d, xp] of Object.entries(b.history || {})) hist[d] = Math.max(hist[d] || 0, xp || 0)
-  out.history = hist
-  // Temps de révision : par thème, on garde le plus grand. Les additionner
-  // comptait deux fois le même temps, puisque le compte et l'appareil en
-  // gardent chacun une copie : le temps doublait à chaque ouverture de l'app.
-  const tt = { ...(a.themeTime || {}) }
-  for (const [tid, s] of Object.entries(b.themeTime || {})) tt[tid] = Math.max(tt[tid] || 0, s || 0)
-  out.themeTime = tt
-  // Flashcards téléchargées : union par id (on garde la version la plus récente).
-  const decks = new Map()
-  for (const d of [...(a.savedDecks || []), ...(b.savedDecks || [])]) {
-    if (!d || !d.id) continue
-    const prev = decks.get(d.id)
-    if (!prev || (d.savedAt || 0) >= (prev.savedAt || 0)) decks.set(d.id, d)
-  }
-  out.savedDecks = [...decks.values()]
-  // Fiches de révision générées depuis une photo : union par id (version récente).
-  const fiches = new Map()
-  for (const f of [...(a.fiches || []), ...(b.fiches || [])]) {
-    if (!f || !f.id) continue
-    const prev = fiches.get(f.id)
-    if (!prev || (f.createdAt || 0) >= (prev.createdAt || 0)) fiches.set(f.id, f)
-  }
-  out.fiches = [...fiches.values()]
-  // Défi du jour : on garde la date la plus récente et la meilleure série.
-  const ad = a.dailyChallenge || {}, bd = b.dailyChallenge || {}
-  const recent = (bd.last || '') > (ad.last || '') ? bd : ad
-  out.dailyChallenge = { last: recent.last || null, streak: recent.streak || 0, best: Math.max(ad.best || 0, bd.best || 0), lastBonus: recent.lastBonus || 0 }
-  // Notes personnelles : par thème, on garde le texte le plus complet.
-  const notes = { ...(a.notes || {}) }
-  for (const [k, v] of Object.entries(b.notes || {})) if (!notes[k] || (v || '').length > (notes[k] || '').length) notes[k] = v
-  out.notes = notes
-  // Préparation du Grand Oral : depuis qu'elle contient sources, analyse et
-  // arguments, la version modifiée en dernier l'emporte (`maj`). Une ancienne
-  // préparation sans date se fusionne champ par champ (le texte le plus complet).
-  const ga = a.grandOral || {}, gb = b.grandOral || {}
-  if (ga.maj || gb.maj) out.grandOral = { ...grandOralVide(), ...((gb.maj || 0) > (ga.maj || 0) ? gb : ga) }
-  else {
-    const grandOral = {}
-    for (const k of new Set([...Object.keys(ga), ...Object.keys(gb)])) grandOral[k] = String(gb[k] || '').length > String(ga[k] || '').length ? gb[k] : ga[k]
-    out.grandOral = grandOral
-  }
-  // Carnet d'erreurs : union par question, la plus récente d'abord.
-  const erreurs = new Map()
-  for (const e of [...(a.erreurs || []), ...(b.erreurs || [])]) {
-    if (!e || !e.id) continue
-    const prev = erreurs.get(e.id)
-    if (!prev || (e.le || '') > (prev.le || '')) erreurs.set(e.id, e)
-  }
-  out.erreurs = [...erreurs.values()].sort((x, y) => (y.le || '').localeCompare(x.le || '')).slice(0, CARNET_MAX)
-  // Étude de gestion : un seul dossier, on garde la version modifiée en dernier.
-  const ea = a.etudeGestion, eb = b.etudeGestion
-  out.etudeGestion = (eb?.maj || 0) > (ea?.maj || 0) ? eb : (ea || eb || etudeGestionVide())
-  return out
-}
-
-// Étude de gestion (Première STMG) : le projet, les sources et les arguments A-E-I.
-// `maj` date la dernière modification, pour garder la version la plus récente
-// quand l'appareil et le compte diffèrent.
-export function etudeGestionVide() {
-  return { theme: '', organisation: '', problematique: '', coches: {}, sources: [], analyse: {}, arguments: [], maj: 0 }
-}
-
-// Grand Oral (Terminale) : les deux questions et le plan, puis, comme pour
-// l'étude de gestion, l'organisation qui les illustre, les sources, l'analyse
-// et les arguments A-E-I (chacun rattaché à la question 1 ou 2).
-export function grandOralVide() {
-  return { spec: '', q1: '', q2: '', notes: '', organisation: '', sources: [], analyse: {}, arguments: [], maj: 0 }
-}
 
 // Carnet d'erreurs : une question ratée y entre, une question réussie en sort.
 // La clé repose sur le type d'exercice et l'énoncé, pour retrouver la même
@@ -227,6 +109,9 @@ export function isoWeekKey(d = new Date()) {
   return `${date.getUTCFullYear()}-W${String(weekNo).padStart(2, '0')}`
 }
 
+// La progression de l'état appartient au compte ouvert sur cet appareil.
+const compteActif = (s) => !!s?.account?.id && s.account.id === getSession()?.user?.id
+
 // Seules les préférences d'affichage passent d'un compte à l'autre.
 function withoutAccount(s) {
   const out = emptyState()
@@ -245,7 +130,7 @@ export function restoreAccountState(previous, profile, session) {
   const parts = String(profile.name || 'Élève').trim().split(/\s+/)
   const role = profile.role === 'prof' ? 'prof' : 'eleve'
   return {
-    ...mergeProgress(base, profile.progress),
+    ...avecVersionServeur(mergeProgress(base, profile.progress), versionDe(profile.progress)),
     account: { id, email: session.user.email, role },
     profile: { firstName: parts[0], lastName: parts.slice(1).join(' '), photo: profile.photo || undefined },
     track: profile.level ? { level: profile.level, specialty: profile.specialty || null } : base.track,
@@ -286,7 +171,11 @@ export function levelFromXp(xp) {
 const StoreCtx = createContext(null)
 
 export function StoreProvider({ children }) {
-  const [state, setState] = useState(load)
+  const [state, setRaw] = useState(load)
+  // Toute modification faite par l'élève passe par setState : on y note ce qui
+  // change, pour la fusion entre appareils (progression.js). Les fusions avec le
+  // compte, la déconnexion et la remise à zéro passent par setRaw.
+  const setState = useCallback((maj) => setRaw((prev) => noter(prev, typeof maj === 'function' ? maj(prev) : maj)), [])
   const [newBadges, setNewBadges] = useState([]) // badges à célébrer
   const [dailyReward, setDailyReward] = useState(null) // récompense de connexion à célébrer
 
@@ -339,16 +228,6 @@ export function StoreProvider({ children }) {
     root.classList.toggle('a11y-contrast', !!a.contrast)
     root.classList.toggle('a11y-big', !!a.big)
   }, [state.a11y])
-
-  // Synchronisation de la progression sur le compte (anti-rebond ~2 s).
-  useEffect(() => {
-    if (!state.account?.id || state.account.id !== getSession()?.user?.id) return
-    const id = setTimeout(() => {
-      if (state.account.id === getSession()?.user?.id) saveProgress(pickProgress(state)).catch(() => {})
-    }, 2000)
-    return () => clearTimeout(id)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.account?.id, state.xp, state.chapters, state.badges, state.favorites, state.streak, state.weekly, state.totalAnswers, state.correctAnswers, state.lastChapter, state.coins, state.owned, state.freezes, state.shopRewards, state.shopWalletUpdatedAt])
 
   // Espace parent : l'élève publie un instantané de ses stats (temps, série,
   // XP, matières, badges…) sous son « code parent ». Anti-rebond ~3 s, silencieux
@@ -496,37 +375,141 @@ export function StoreProvider({ children }) {
     return { ...p, teacherClasses: list, classCode: cls.code }
   }), [])
 
-  // Déconnexion : la progression vit désormais sur le compte (serveur). On
-  // pousse une dernière fois, puis on efface l'identité ET la progression
-  // locale (pour éviter tout mélange entre comptes sur un appareil partagé).
-  // Les préférences d'affichage (langue, thème) restent locales.
   const latestState = useRef(state)
   latestState.current = state
-  const logout = useCallback(async () => {
-    const previous = latestState.current
-    const session = getSession()
-    if (previous.account?.id && previous.account.id === session?.user?.id) {
-      await saveProgress(pickProgress(previous)).catch(() => {})
+
+  // --- Sauvegarde sur le compte ---------------------------------------------
+  // Chaque changement de progression part sur le compte ~2 s plus tard. La copie
+  // du compte n'est remplacée que si elle n'a pas changé depuis notre dernière
+  // lecture ; sinon, on la fusionne d'abord avec celle de l'appareil. Hors ligne
+  // ou en cas d'échec, l'élève voit « Non sauvegardé » (EtatSauvegarde.jsx) et
+  // l'envoi reprend tout seul. La progression reste de toute façon sur l'appareil.
+  const [sauvegarde, setSauvegarde] = useState({ etat: 'ok' })
+  const envoi = useRef(null)
+  const relance = useRef({ minuteur: null, delai: 0 })
+
+  const envoyer = useCallback(async ({ keepalive = false } = {}) => {
+    for (let essai = 0; essai < 3; essai++) {
+      const s = latestState.current
+      if (!s.account?.id) return 'local'
+      const charge = chargeUtile(s)
+      const emp = empreinte(charge)
+      if (emp === s._sync?.empreinte) return 'ok'
+      // Session expirée : il faut se reconnecter (même compte) pour sauvegarder.
+      if (!compteActif(s)) return getSession()?.user?.id ? 'local' : 'session'
+      if (typeof navigator !== 'undefined' && navigator.onLine === false) return 'horsLigne'
+      const vu = s._sync?.vuServeur ?? null
+      const rev = Math.max(Date.now(), (s._sync?.rev || 0) + 1, (vu || 0) + 1)
+      charge._sync.rev = rev
+      const r = await envoyerProgression(charge, vu, { keepalive })
+      if (r.ok) {
+        const envoye = (p) => (p.account?.id === s.account.id ? apresEnvoi(p, rev, emp) : p)
+        latestState.current = envoye(latestState.current)
+        setRaw(envoye)
+        return 'ok'
+      }
+      if (!r.conflit) return r.raison === 'reseau' ? 'horsLigne' : 'erreur'
+      // Un autre appareil a écrit entre-temps : on fusionne, puis on renvoie.
+      const fusion = (p) => avecVersionServeur(mergeProgress(p, r.conflit), versionDe(r.conflit))
+      latestState.current = fusion(latestState.current)
+      setRaw((p) => (p.account?.id === s.account.id ? evaluateBadges(fusion(p)) : p))
     }
+    return 'erreur'
+  }, [evaluateBadges])
+
+  const sauvegarder = useCallback((options) => {
+    if (envoi.current) { envoi.current.encore = true; return envoi.current.promesse }
+    const tache = { encore: false }
+    tache.promesse = (async () => {
+      let etat
+      do {
+        tache.encore = false
+        setSauvegarde((x) => (x.etat === 'envoi' ? x : { ...x, etat: 'envoi' }))
+        try { etat = await envoyer(options) } catch { etat = 'erreur' }
+      } while (tache.encore && etat === 'ok')
+      envoi.current = null
+      setSauvegarde({ etat: etat === 'local' ? 'ok' : etat, le: Date.now() })
+      // Nouvel essai automatique, de plus en plus espacé (15 s à 5 min).
+      clearTimeout(relance.current.minuteur)
+      if (etat === 'horsLigne' || etat === 'erreur') {
+        relance.current.delai = Math.min(300000, (relance.current.delai || 7500) * 2)
+        relance.current.minuteur = setTimeout(() => sauvegarderRef.current(), relance.current.delai)
+      } else relance.current.delai = 0
+      return etat
+    })()
+    envoi.current = tache
+    return tache.promesse
+  }, [envoyer])
+  const sauvegarderRef = useRef(sauvegarder)
+  sauvegarderRef.current = sauvegarder
+
+  // Anti-rebond : on envoie 2 s après le dernier changement.
+  const aEnvoyer = useMemo(() => compteActif(state) && aSauvegarder(state), [state])
+  useEffect(() => {
+    if (!aEnvoyer) { setSauvegarde((x) => (x.etat === 'attente' ? { ...x, etat: 'ok' } : x)); return }
+    setSauvegarde((x) => (['horsLigne', 'erreur', 'envoi'].includes(x.etat) ? x : { ...x, etat: 'attente' }))
+    const id = setTimeout(() => sauvegarderRef.current(), 2000)
+    return () => clearTimeout(id)
+  }, [aEnvoyer, state])
+
+  // Retour du réseau ou de l'élève : on reprend. Départ (onglet caché, page
+  // fermée) : on envoie tout de suite ce qui reste, sans attendre.
+  const aEnvoyerRef = useRef(aEnvoyer)
+  aEnvoyerRef.current = aEnvoyer
+  useEffect(() => {
+    const reprendre = () => { if (aEnvoyerRef.current) sauvegarderRef.current() }
+    const partir = () => { if (aEnvoyerRef.current) sauvegarderRef.current({ keepalive: true }) }
+    const visibilite = () => (document.visibilityState === 'hidden' ? partir() : reprendre())
+    window.addEventListener('online', reprendre)
+    window.addEventListener('pagehide', partir)
+    document.addEventListener('visibilitychange', visibilite)
+    return () => {
+      window.removeEventListener('online', reprendre)
+      window.removeEventListener('pagehide', partir)
+      document.removeEventListener('visibilitychange', visibilite)
+      clearTimeout(relance.current.minuteur)
+    }
+  }, [])
+
+  // Déconnexion : la progression vit sur le compte. On l'envoie d'abord ; si
+  // c'est impossible (hors ligne…), on ne l'efface pas sans l'accord de l'élève
+  // (`deconnexion`, affiché par EtatSauvegarde.jsx) : logout({ force: true }).
+  // Ensuite : rappels push arrêtés, session fermée sur le serveur, identité et
+  // progression locale effacées (appareil partagé). Langue et thème restent.
+  const [deconnexion, setDeconnexion] = useState(null)
+  const logout = useCallback(async ({ force = false } = {}) => {
+    const session = getSession()
+    const avant = latestState.current
+    if (!force && avant.account?.id) {
+      // Session expirée : rien ne peut partir avant de se reconnecter.
+      const etat = compteActif(avant) ? await sauvegarder() : !session && aSauvegarder(avant) ? 'session' : 'ok'
+      if (etat !== 'ok' && etat !== 'local') { setDeconnexion({ etat }); return false }
+    }
+    setDeconnexion(null)
     // Une connexion plus récente ne doit pas être fermée par ce retour tardif.
-    if (getSession()?.user?.id !== session?.user?.id) return
+    if (getSession()?.user?.id !== session?.user?.id) return false
+    await desactiverRappelsPush()
+    if (getSession()?.user?.id !== session?.user?.id) return false
     signOut()
-    setState(withoutAccount(previous))
+    setRaw(withoutAccount(latestState.current))
     setNewBadges([])
     setDailyReward(null)
-  }, [])
+    setSauvegarde({ etat: 'ok' })
+    return true
+  }, [sauvegarder])
+  const annulerDeconnexion = useCallback(() => setDeconnexion(null), [])
 
   const restoreAccount = useCallback((profile, session) => {
     if (!session?.user?.id || session.user.id !== getSession()?.user?.id) return
     if (!profile || (profile.id && profile.id !== session.user.id)) throw new Error('Profil du compte indisponible. Réessaie de te connecter.')
-    setState((previous) => session.user.id === getSession()?.user?.id
+    setRaw((previous) => session.user.id === getSession()?.user?.id
       ? evaluateBadges(restoreAccountState(previous, profile, session)) : previous)
   }, [evaluateBadges])
 
   // Restaure la progression du compte (fusion avec l'éventuel local du même
   // utilisateur) après connexion / récupération.
   const hydrateProgress = useCallback((server) => {
-    setState((p) => evaluateBadges(mergeProgress(structuredCloneSafe(p), server)))
+    setRaw((p) => evaluateBadges(avecVersionServeur(mergeProgress(structuredCloneSafe(p), server), versionDe(server))))
   }, [evaluateBadges])
 
   // Rester connecté : au démarrage, si une session existe, on rafraîchit le
@@ -656,7 +639,7 @@ export function StoreProvider({ children }) {
     })
   }, [evaluateBadges])
 
-  const resetAll = useCallback(() => setState(emptyState()), [])
+  const resetAll = useCallback(() => setRaw(emptyState()), [])
 
   const dismissBadge = useCallback(
     (id) => setNewBadges((q) => q.filter((b) => b !== id)),
@@ -736,6 +719,10 @@ export function StoreProvider({ children }) {
     setTeacherClasses,
     addTeacherClass,
     logout,
+    deconnexion,
+    annulerDeconnexion,
+    sauvegarde,
+    sauvegarder,
     hydrateProgress,
     restoreAccount,
     setCustomTheme,

@@ -25,12 +25,32 @@ for (const status of [200, 401]) {
 }
 
 test('une réponse tardive ne rouvre pas la session après déconnexion', async () => {
-  let terminer
-  vi.stubGlobal('fetch', vi.fn(() => new Promise((resolve) => { terminer = resolve })))
+  const reponses = []
+  vi.stubGlobal('fetch', vi.fn(() => new Promise((resolve) => { reponses.push(resolve) })))
   const attente = api.refreshSession()
   api.signOut()
-  terminer(new Response(JSON.stringify({ access_token: 'prof-nouveau', user: prof.user })))
+  // La première requête est le renouvellement ; la seconde, la fermeture de session.
+  reponses[0](new Response(JSON.stringify({ access_token: 'prof-nouveau', user: prof.user })))
   expect(await attente).toBeNull()
+  expect(api.getSession()).toBeNull()
+})
+
+test('la déconnexion efface la session tout de suite et la ferme sur le serveur', async () => {
+  localStorage.setItem('stmg_session', JSON.stringify(eleve))
+  const fetch = vi.fn().mockResolvedValue(new Response(null, { status: 204 }))
+  vi.stubGlobal('fetch', fetch)
+  api.signOut()
+  expect(api.getSession()).toBeNull()
+  expect(fetch).toHaveBeenCalledTimes(1)
+  const [url, options] = fetch.mock.calls[0]
+  expect(url).toMatch(/\/auth\/v1\/logout/)
+  expect(options.method).toBe('POST')
+  expect(options.headers.Authorization).toBe('Bearer eleve-token')
+})
+
+test('hors ligne, la déconnexion efface quand même la session de l’appareil', () => {
+  vi.stubGlobal('fetch', vi.fn().mockRejectedValue(new TypeError('Failed to fetch')))
+  api.signOut()
   expect(api.getSession()).toBeNull()
 })
 
