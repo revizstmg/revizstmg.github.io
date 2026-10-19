@@ -311,7 +311,9 @@ les autres chapitres, la banque du thème ou celle de la matière. Les jeux
 rédigés à la main doivent avoir un rattachement explicite valide dans
 `exercices-sections.json` ; les jeux couvrant plusieurs chapitres restent au
 niveau du thème. En sciences de gestion de Première, les anciens textes à trous
-transversaux ont aussi été découpés par chapitre.
+transversaux ont aussi été découpés par chapitre. Les quatre entraînements de verbes et
+de grammaire EN/ES utilisent des banques limitées aux formes, règles et exemples
+explicités dans leur cours ; dix questions sont mélangées à chaque partie.
 
 Les exercices de calcul désignent leur générateur par un nom (`"gen": "tva"`,
 voir `src/calc.js`), comme les exercices de langues générés (`"gen": "genVerbEN"`,
