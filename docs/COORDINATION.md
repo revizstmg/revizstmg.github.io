@@ -59,6 +59,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | HOME-20261019-CODEX-01 | Codex | Refonte accueil : Home, CSS dédié, reprise de lecture Chapter/Course, présentation Welcome, traductions et tests | Terminé | [PR #17](https://github.com/revizstmg/revizstmg.github.io/pull/17) | Validation et publication suivies dans la PR ; aucun changement auth/store |
 
+| HOME-RETOUR-20261019-CODEX-01 | Codex | Retour au visuel précédent, matières en haut, conservation des deux cartes progression/communauté ; Home/CSS/tests/README | Terminé | `fix/accueil-classique` | Publication et validation complète suivies dans la PR |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -370,6 +372,23 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 - Branche `feat/nouvel-accueil`, PR #17. Version publiée avant cette refonte :
   `621551e`. En cas de retour arrière, révoquer la fusion de cette PR pour préserver
   les autres travaux ; ne pas réinitialiser main.
+
+### HOME-RETOUR-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
+
+- Retour demandé au bandeau sombre et or, aux cartes de matières et aux tuiles
+  d’outils de l’accueil précédent. Les matières passent juste après le bandeau,
+  avant les récompenses de série et les raccourcis.
+- Conservation des cartes « Chaque séance compte » et « Ton coin à toi » avec
+  leurs chiffres réels et liens Badges/Classe/Amis/Boutique. Le CSS du grand bloc
+  vert et de l’illustration est supprimé ; seuls les styles des deux cartes restent.
+- Conservation de la reprise à la dernière fiche par compte, des traductions et
+  de la distinction Étude de gestion en Première / Grand Oral en Terminale.
+- Périmètre : Home.jsx, Home.css, tests accueil et README ; aucun changement
+  d’authentification, de store, de contenu ou de base. Branche `fix/accueil-classique`.
+- Vérifications : 188 tests unitaires, compilation et quatre parcours navigateur
+  réussis (mobile/bureau, reprise, arabe/sombre). Matières avant 550 px en haut
+  de page aux deux largeurs ; pas de débordement horizontal. Publication et
+  validation complète suivies dans la PR.
 
 ### Modèle à copier pour une nouvelle tâche
 
