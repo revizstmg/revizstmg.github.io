@@ -8,27 +8,8 @@ import { ProgressBar, Ring, Icon } from '../components/ui.jsx'
 import { useT, usePublicText } from '../i18n.js'
 
 import { readPosition } from '../data/readingPosition.js'
+import OutilsAccueil from '../components/OutilsAccueil.jsx'
 import './Home.css'
-
-// Tuile compacte (icône + libellé + petit sous-titre facultatif) : sert à ranger
-// toutes les fonctionnalités dans des grilles ordonnées plutôt qu'en longs
-// bandeaux empilés.
-function Tile({ to, icon, label, sub, accent }) {
-  return (
-    <Link
-      to={to}
-      className="card flex flex-col items-center justify-start gap-1.5 p-3.5 text-center transition hover:-translate-y-0.5 hover:shadow-md"
-    >
-      <span className="grid h-11 w-11 place-items-center rounded-2xl text-xl" style={{ backgroundColor: (accent || '#8a6d1e') + '18' }} aria-hidden>{icon}</span>
-      <span className="text-[13px] font-semibold leading-tight">{label}</span>
-      {sub ? <span className="text-[11px] leading-tight text-slate-500 dark:text-slate-400">{sub}</span> : null}
-    </Link>
-  )
-}
-
-function SectionHead({ title }) {
-  return <h2 className="mb-3 px-1 font-display text-lg font-semibold text-slate-700 dark:text-slate-200">{title}</h2>
-}
 
 export default function Home() {
   const { state, derived } = useStore()
@@ -229,21 +210,8 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* Réviser & réussir — outils regroupés en tuiles compactes */}
-      <section>
-        <SectionHead title={t('secRevise')} />
-        <div className="grid grid-cols-3 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-          <Tile to="/coach-ia" icon="🤖" label={t('coachAI')} sub={t('aiTraining')} accent="#0ea5e9" />
-          <Tile to="/revision" icon="🧠" label={t('smartRevision')} sub={t('priorityList')} accent="#7c3aed" />
-          <Tile to="/bac-blanc" icon="📝" label={t('mockExam')} sub="/20 · ⏱" accent="#e11d48" />
-          <Tile to="/programme" icon="📅" label={t('studyPlan')} sub={t('todayGoals')} accent="#0284c7" />
-          <Tile to="/coach" icon="🎯" label={t('coach')} accent="#f59e0b" />
-          {level === 'terminale-stmg' && <Tile to="/grand-oral" icon="🎓" label={t('grandOral')} accent="#8a6d1e" />}
-          {state.track?.level === 'premiere-stmg' && <Tile to="/etude-de-gestion" icon="🔎" label={t('egTitle')} sub={t('egTileSub')} accent="#4f46e5" />}
-          <Tile to="/fiches-photo" icon="📸" label={t('photoFiche')} sub={t('photoFicheSub')} accent="#16a34a" />
-          <Tile to="/favoris" icon="⭐" label={t('favorites')} sub={`${state.favorites.length} ${t(state.favorites.length > 1 ? 'chapToReviewP' : 'chapToReviewM')}`} accent="#eab308" />
-        </div>
-      </section>
+      {/* Réviser & réussir : l'outil conseillé, les autres rangés dans la trousse */}
+      <OutilsAccueil />
 
     <section className="home-summary home-bottom-grid">
       <div className="home-progress-card"><span className="home-eyebrow">Tes efforts prennent forme</span><div className="home-progress-heading"><h2>Chaque séance compte.</h2><span aria-hidden>→</span></div><div className="home-stat-grid"><div><strong>{progress}<small>%</small></strong><span>Progression de ta filière</span></div><div><strong>{mastered}</strong><span>Thèmes maîtrisés</span></div><div><strong>{state.streak?.count || 0}</strong><span>{t('streakDays')}</span></div></div><p>Ta progression est calculée à partir de tes résultats aux exercices.</p><div className="home-progress-footer"><span>{t('level')} {derived.level} · {state.xp.toLocaleString(state.lang || 'fr')} XP</span><Link to="/badges">{t('badges')} →</Link></div></div>

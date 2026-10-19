@@ -55,6 +55,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | HOME-RETOUR-20261019-CODEX-01 | Codex | Retour au visuel précédent, matières en haut, conservation des deux cartes progression/communauté ; Home/CSS/tests/README | Terminé | `fix/accueil-classique` | Publication et validation complète suivies dans la PR |
 
+| TROUSSE-20261019-CLAUDE-01 | Claude | Demande du propriétaire : « Réviser & réussir » de l'accueil plus discret, sans afficher tous les outils d'un coup. Fichiers : nouveau `components/OutilsAccueil.jsx`, `Home.jsx` (fichier de Codex : la section remplacée par ce composant), tests, README | À relire | `claude/accueil-outils` | Relecture et fusion par le propriétaire |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -309,6 +311,27 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   réussis (mobile/bureau, reprise, arabe/sombre). Matières avant 550 px en haut
   de page aux deux largeurs ; pas de débordement horizontal. Publication et
   validation complète suivies dans la PR.
+
+### TROUSSE-20261019-CLAUDE-01 — Claude — 19 octobre 2026 (Paris)
+
+- Demande du propriétaire : sur l'accueil, « Réviser & réussir » ne doit plus
+  montrer toutes les options d'un coup ; quelque chose d'original et de discret.
+- Résultat : une seule carte. En haut, « Conseillé maintenant » : un outil choisi
+  d'après la situation de l'élève (bac dans moins de 30 jours → bac blanc ;
+  thèmes de la filière à réviser aujourd'hui → révision intelligente ; chapitres
+  à revoir → favoris ; sinon le programme jusqu'au bac). En dessous, « Ta
+  trousse · 7 outils » : les icônes empilées des autres outils, une ligne qui se
+  déplie en liste compacte. Fermée par défaut ; l'appareil se souvient du choix
+  (`stmg_trousse_ouverte`). Mêmes outils et mêmes libellés qu'avant (Grand Oral en
+  Terminale, étude de gestion en Première).
+- `Home.jsx` (couloir de Codex) : la section et les tuiles devenues inutiles sont
+  remplacées par `<OutilsAccueil />`. Le reste de l'accueil ne change pas. Le
+  parcours de l'étude de gestion ouvre la trousse avant de cliquer.
+- Vérifications : 194 tests unitaires (dont 6 pour l'outil conseillé),
+  compilation, 116 parcours navigateur (dont la trousse), captures sur téléphone
+  (clair, sombre) et ordinateur.
+- Branche partie de `main` : indépendante des PR #14, #18 et #20 (la PR #14
+  touche deux autres lignes de `Home.jsx`, sans conflit).
 
 ### Modèle à copier pour une nouvelle tâche
 

@@ -18,7 +18,10 @@ et en classe. Installable sur téléphone et utilisable hors ligne.
 > jour à chaque changement visible par l'élève.
 
 L’accueil conserve son bandeau sombre et or, avec les matières de la filière
-juste en dessous, puis les outils. Les cartes « Chaque séance compte » et
+juste en dessous, puis les outils : « Réviser & réussir » ne montre que l’outil
+conseillé à l’élève selon sa situation (bac proche, révisions du jour, chapitres à
+revoir, sinon le programme) ; les autres sont rangés dans « Ta trousse », qui se
+déplie à la demande (`components/OutilsAccueil.jsx`). Les cartes « Chaque séance compte » et
 « Ton coin à toi » regroupent progression et communauté. Un compte déjà
 configuré entre sans écran d’attente.
 La dernière fiche consultée est conservée sur cet appareil, séparément pour
