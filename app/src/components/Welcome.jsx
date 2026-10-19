@@ -39,10 +39,9 @@ export default function Welcome() {
 
   const hasProfile = !!state.profile?.firstName
   // Écran d'accueil : « form » si aucun compte, « plan » si le compte existe
-  // mais que l'onboarding n'est pas fini, sinon « hello » — le « Bienvenue »
-  // s'affiche donc AUSSI au lancement du site (réouverture) pour un élève déjà
-  // inscrit, avant de révéler l'application.
-  const initialPhase = !hasProfile ? 'form' : (!state.onboarded && state.track ? 'plan' : 'hello')
+  // mais que l’onboarding n’est pas fini. Un compte déjà configuré retrouve
+  // immédiatement l’application ; le « Bienvenue » reste disponible après inscription.
+  const initialPhase = !hasProfile ? 'form' : (!state.onboarded && state.track ? 'plan' : 'done')
   const [phase, setPhase] = useState(initialPhase) // 'form' | 'plan' | 'hello' | 'done'
   const [leaving, setLeaving] = useState(false)
   // Une session restaurée peut remplacer le profil local d'un autre compte.
@@ -449,6 +448,7 @@ export default function Welcome() {
     <div className="welcome-root no-print" role="dialog" aria-label={authMode === 'login' ? t('loginTab') : t('letsMeet')}>
       <div className="welcome-card">
         <p className="welcome-brand">RévizSTMG</p>
+        {authMode === 'login' && !essai && !recoverStep && <p className="mb-5 text-center text-sm leading-relaxed text-slate-600 dark:text-slate-300">Des cours clairs. Des exercices ciblés.<br />Un peu chaque jour, à ton rythme.</p>}
 
         {/* ---------- Essai sans compte ---------- */}
         {essai ? (
@@ -517,7 +517,7 @@ export default function Welcome() {
             {info && <p className="mt-3 text-sm font-semibold text-emerald-700">{info}</p>}
             <button type="button" className="welcome-cta" disabled={!step1Ok || busy} onClick={() => submitForm()}>{busy ? t('pleaseWait') : t('loginTab')}</button>
             <button type="button" className="welcome-skip" disabled={busy} onClick={goCreate}>{t('noAccountYet')}</button>
-            <button type="button" className="welcome-skip" disabled={busy} onClick={() => { setEssai(true); setErr(''); setInfo('') }}>Essayer sans compte</button>
+            <button type="button" className="welcome-skip !mt-5 !rounded-xl !border !border-slate-400 !px-4 !py-3 !font-semibold" disabled={busy} onClick={() => { setEssai(true); setErr(''); setInfo('') }}>Essayer sans compte</button>
           </>
         ) : (
           /* ---------- Inscription en étapes ---------- */
