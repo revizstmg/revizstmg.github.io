@@ -47,6 +47,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | I18N-20261019-CODEX-01 | Codex | Traductions sur toutes les pages, boutique/catalogue, moteur, accessibilité et tests | Terminé | `fix/traductions-partout`, PR #12 | Fusion et publication suivies dans la PR |
 
+| PEDAGO-20261019-CODEX-01 | Codex | X06 : deux corrections SDGN Première ; X01 : finaliser les cinq jeux de la PR #6 ; contenu, moteur et tests uniquement | Terminé | [PR #15](https://github.com/revizstmg/revizstmg.github.io/pull/15) | Valider les corrections et les parcours |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -223,6 +225,28 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 - Portée : interface et textes publics ; les contenus publics hors catalogue
   intégré dépendent toujours du service en ligne. Les messages privés et les
   saisies ne sont pas traduits automatiquement. Aucun changement Supabase.
+
+### PEDAGO-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
+
+- Demande : commencer les priorités annoncées, X06 puis X01.
+- SDGN Première : coût du travail = salaire brut + cotisations patronales ; les
+  cotisations salariales déjà incluses ne sont plus ajoutées une seconde fois.
+  Le corps du cours concorde avec son tableau final. Exemple de « savoir »
+  reformulé en « Connaître les règles comptables de débit et de crédit ».
+  Source de contrôle : simulateur Urssaf cité dans F11 de l’audit.
+- Reprise sélective du code `66a6b77` de la PR #6 sur la version actuelle : cinq
+  rattachements explicites, banques EN/ES bornées aux six verbes et aux règles de
+  leur chapitre, sélection mélangée de dix questions. Les introductions ne
+  promettent plus des questions toujours inédites. Identifiants conservés.
+- Vérifications : 183 tests unitaires, compilation et huit parcours navigateur
+  ciblés réussis, dont les cinq activités rétablies. Régression d’accès et de
+  maîtrise maximale à 100 % pour les cinq jeux. Empreintes mises à jour
+  volontairement pour les six thèmes concernés, aucune autre empreinte modifiée.
+  Validation complète et publication suivies dans les Actions de la PR #15.
+- Portée : contenu, TypedGen et tests uniquement ; aucun changement des fichiers
+  de sauvegarde/dates travaillés par Claude dans la PR #14. Le journal et le README
+  reçoivent uniquement les informations de cette tâche.
+- Branche `fix/sdgn-et-exercices`, PR #15 ; remplace la PR #6 à sa fusion.
 
 ### Modèle à copier pour une nouvelle tâche
 

@@ -1,16 +1,16 @@
 import { useMemo, useState } from 'react'
-import { Feedback, GameProgress, useStopwatch, answerMatches } from './common.jsx'
+import { Feedback, GameProgress, useStopwatch, answerMatches, shuffle } from './common.jsx'
 import { useT } from '../i18n.js'
 
-// Jeu à réponse saisie, GÉNÉRATIF : game.gen() renvoie une question différente
-// à chaque appel (verbes irréguliers, grammaire…). Chaque partie tire un
-// nouveau jeu de questions, donc elles ne se ressemblent jamais.
+// Jeu à réponse saisie : générateur lorsqu’il est fourni, ou sélection
+// mélangée dans les questions rédigées pour le cours associé. Les banques
+// bornées permettent de varier les parties sans ajouter de notions hors cours.
 export default function TypedGen({ game, mode, color, onDone }) {
   const t = useT()
   const set = useMemo(() => {
     const n = game.count || 8
     if (typeof game.gen === 'function') return Array.from({ length: n }, () => game.gen())
-    return game.questions || []
+    return shuffle(game.questions || []).slice(0, n)
   }, [game])
 
   const [i, setI] = useState(0)
