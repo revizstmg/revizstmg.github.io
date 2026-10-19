@@ -53,6 +53,10 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | PROG-20261019-CLAUDE-01 | Claude | Ne plus perdre la progression (tâches C03 à C06) : sauvegarde complète et versionnée, fusion entre appareils, déconnexion sans perte, dates du calendrier de l'élève. Fichiers : `app/src/progression.js` (nouveau), `store.jsx` (persistance, fusion, synchronisation, déconnexion, dates ; pas les fonctions de score), `data/srs.js`, `auth.js`, `push.js`, `EtatSauvegarde.jsx` (nouveau), `Layout.jsx` et `Customizer.jsx` (boutons de déconnexion), une ligne de date dans `Home.jsx` et `DailyChallenge.jsx`, tests, README, confidentialité | À relire | `claude/progression-fiable`, [PR #14](https://github.com/revizstmg/revizstmg.github.io/pull/14) | Le propriétaire relit et fusionne (après la PR #13) |
 
+| SUPPR-20261019-CLAUDE-01 | Claude | Suppression complète du compte demandée par le propriétaire (C01, partie suppression) : fonction `revizstmg_supprimer_compte` complétée (signalements de l'élève, duels de classe reçus, exclusions, jetons) et appliquée sur Supabase ; effacement de tout ce qui reste sur l'appareil ; confidentialité et CGU. Fichiers : `supabase/**`, `auth.js`, `Profile.jsx`, `push.js`, `Privacy.jsx`, `Cgu.jsx`, tests | En cours | `claude/suppression-compte` (part de la PR #14) | Claude code, teste en local, applique, puis passe la PR en relecture |
+
+| NOTES-20261019-CLAUDE-01 | Claude | « Mes notes de classe », partie gratuite (voir le document des offres) : saisie de la note, matière puis chapitre dans des menus déroulants, liste de ce qu'il faut améliorer. Fichiers : nouvelle page `pages/MesNotes.jsx`, `progression.js` et `store.jsx` (nouveau champ synchronisé), route dans `App.jsx` (fichier commun), lien depuis `Profile.jsx`, tests, README | Prévu, après SUPPR | `claude/mes-notes` (part de `claude/suppression-compte`) | Commencer une fois la suppression terminée |
+
 | PEDAGO-20261019-CODEX-01 | Codex | X06 : deux corrections SDGN Première ; X01 : finaliser les cinq jeux de la PR #6 ; contenu, moteur et tests uniquement | Terminé | [PR #15](https://github.com/revizstmg/revizstmg.github.io/pull/15) | Valider les corrections et les parcours |
 
 | PROGRAMME-20261019-CODEX-01 | Codex | Limiter le programme bac de Première au français et aux maths : study.js, Programme.jsx et tests | Terminé | [PR #16](https://github.com/revizstmg/revizstmg.github.io/pull/16) | Publication suivie dans les Actions |
@@ -307,6 +311,19 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 - Branche partie de `claude/repartition-taches` (PR #13) : à fusionner après elle.
 - Prochaine action : relecture et fusion par le propriétaire, puis contrôle d'une
   vraie sauvegarde après publication.
+
+### SUPPR-20261019-CLAUDE-01 et NOTES-20261019-CLAUDE-01 — Claude — 19 octobre 2026 (Paris)
+
+- Demande du propriétaire : « met en place le fait de supprimer son compte et que
+  toutes les données soient supprimées de partout (GitHub, Supabase…). Ensuite
+  construis les notes. » NAH devant être détruit, le compte de connexion partagé
+  peut être supprimé entièrement (décision attendue dans C01, désormais prise).
+- Supabase : accord explicite du propriétaire pour la fonction de suppression.
+  Le reste de `a-valider/` (règles d'accès, nettoyage) n'est pas concerné.
+- GitHub : vérifié, le dépôt ne contient aucune donnée d'élève (statistiques
+  agrégées seulement).
+- Chevauchements : aucune PR de Codex ouverte. `App.jsx` (route de la page des
+  notes) est un fichier commun : une ligne ajoutée.
 
 ### PEDAGO-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
 
