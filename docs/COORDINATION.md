@@ -55,7 +55,9 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | HOME-RETOUR-20261019-CODEX-01 | Codex | Retour au visuel précédent, matières en haut, conservation des deux cartes progression/communauté ; Home/CSS/tests/README | Terminé | `fix/accueil-classique` | Publication et validation complète suivies dans la PR |
 
-| TROUSSE-20261019-CLAUDE-01 | Claude | Demande du propriétaire : « Réviser & réussir » de l'accueil plus discret, sans afficher tous les outils d'un coup. Fichiers : nouveau `components/OutilsAccueil.jsx`, `Home.jsx` (fichier de Codex : la section remplacée par ce composant), tests, README | À relire | `claude/accueil-outils` | Relecture et fusion par le propriétaire |
+| MATIERES-20261019-CODEX-01 | Codex | Cases matières compactes : quatre colonnes ordinateur, deux mobile ; Home/CSS/tests | Terminé | `fix/matieres-compactes` | Publication suivie dans la PR |
+
+| TROUSSE-20261019-CLAUDE-01 | Claude | Demande du propriétaire : « Réviser & réussir » de l'accueil plus discret, sans afficher tous les outils d'un coup. Fichiers : nouveau `components/OutilsAccueil.jsx`, `Home.jsx` (fichier de Codex : la section remplacée par ce composant), tests, README | À relire | `claude/accueil-outils`, PR #22 | Relecture et fusion par le propriétaire |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -312,6 +314,17 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   de page aux deux largeurs ; pas de débordement horizontal. Publication et
   validation complète suivies dans la PR.
 
+### MATIERES-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
+
+- Demande : retrouver les petites cases matières sur deux lignes.
+- Réalisé : quatre colonnes sur ordinateur et deux colonnes sur téléphone,
+  icône/titre/décompte/progression conservés ; le reste de l’accueil est inchangé.
+- Périmètre : Home.jsx, Home.css, test accueil et README. Le parcours vérifie
+  le nombre réel de lignes aux deux largeurs et l’absence de débordement.
+- Validation : 188 tests unitaires, compilation et quatre parcours accueil
+  réussis. Grille vérifiée visuellement sur ordinateur. Branche
+  `fix/matieres-compactes` ; publication suivie dans la PR.
+
 ### TROUSSE-20261019-CLAUDE-01 — Claude — 19 octobre 2026 (Paris)
 
 - Demande du propriétaire : sur l'accueil, « Réviser & réussir » ne doit plus
@@ -331,7 +344,8 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   compilation, 116 parcours navigateur (dont la trousse), captures sur téléphone
   (clair, sombre) et ordinateur.
 - Branche partie de `main` : indépendante des PR #14, #18 et #20 (la PR #14
-  touche deux autres lignes de `Home.jsx`, sans conflit).
+  touche deux autres lignes de `Home.jsx`, sans conflit). À jour avec `main`,
+  cases matières compactes de la PR #21 comprises.
 
 ### Modèle à copier pour une nouvelle tâche
 

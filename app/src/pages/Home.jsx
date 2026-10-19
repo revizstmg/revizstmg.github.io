@@ -118,35 +118,18 @@ export default function Home() {
           <h2 className="font-display text-lg font-semibold text-slate-700 dark:text-slate-200">{t('mySubjects')}</h2>
           <Link to="/changer" className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('change')}</Link>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="home-subject-grid">
           {subjects.map((s) => {
-            if (s.comingSoon) {
-              return (
-                <div key={s.id} className="card relative flex items-center gap-3.5 overflow-hidden p-5 opacity-80">
-                  <span className="absolute inset-y-0 left-0 w-1" style={{ backgroundColor: s.color + '99' }} />
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: s.color + '12', boxShadow: `inset 0 0 0 1px ${s.color}33` }}>{s.icon}</span>
-                  <div className="min-w-0 flex-1 pl-1">
-                    <h3 className="font-display text-[1.05rem] font-semibold leading-tight"><CourseText text={s.name} /></h3>
-                    <span className="chip mt-1 bg-violet-100 text-violet-700 dark:bg-violet-950/50 dark:text-violet-300">{t('comingSoon')}</span>
-                  </div>
-                </div>
-              )
-            }
-            const pct = subjectScore(state, s.id)
-            return (
-              <Link key={s.id} to={`/subject/${s.id}`} className="card group relative overflow-hidden p-5 transition hover:-translate-y-0.5 hover:shadow-md">
-                <span className="absolute inset-y-0 left-0 w-1" style={{ backgroundColor: s.color + '99' }} />
-                <div className="flex items-start gap-3.5 pl-2">
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: s.color + '12', boxShadow: `inset 0 0 0 1px ${s.color}33` }}>{s.icon}</span>
-                  <div className="min-w-0 flex-1">
-                    <h3 className="font-display text-[1.05rem] font-semibold leading-tight"><CourseText text={s.name} /></h3>
-                    <p className="mb-2.5 truncate text-xs text-slate-500 dark:text-slate-400">{s.chapters.length} {t('themesCount')} · {tr(s.tagline)}</p>
-                    <ProgressBar value={pct} color={s.color} />
-                    <p className="mt-1.5 text-end text-xs font-semibold texte-matiere" style={{ '--mc': s.color }}>{pct}%</p>
-                  </div>
-                </div>
-              </Link>
-            )
+            const pct = s.comingSoon ? 0 : subjectScore(state, s.id)
+            const content = <>
+              <span className="home-subject-icon" style={{backgroundColor:s.color+'12'}} aria-hidden>{s.icon}</span>
+              <h3 className="font-display font-semibold"><CourseText text={s.name} /></h3>
+              <div className="home-subject-meta text-slate-500 dark:text-slate-400"><span>{s.chapters.length} {t('themesCount')}</span><span>{s.comingSoon ? t('comingSoon') : `${pct}%`}</span></div>
+              {!s.comingSoon && <ProgressBar value={pct} color={s.color} />}
+            </>
+            return s.comingSoon
+              ? <div key={s.id} className="card home-subject-card opacity-80">{content}</div>
+              : <Link key={s.id} to={`/subject/${s.id}`} className="card home-subject-card transition hover:-translate-y-0.5 hover:shadow-md">{content}</Link>
           })}
         </div>
       </section>
