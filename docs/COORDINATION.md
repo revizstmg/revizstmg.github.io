@@ -47,6 +47,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | I18N-20261019-CODEX-01 | Codex | Traductions sur toutes les pages, boutique/catalogue, moteur, accessibilité et tests | Terminé | `fix/traductions-partout`, PR #12 | Fusion et publication suivies dans la PR |
 
+| PEDAGO-20261019-CODEX-01 | Codex | X06 : deux corrections SDGN Première ; X01 : finaliser les cinq jeux de la PR #6 ; contenu, moteur et tests uniquement | En cours | `fix/sdgn-et-exercices` | Vérifier le contenu, reprendre la PR #6 et valider les parcours |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
