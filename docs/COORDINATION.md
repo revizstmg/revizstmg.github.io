@@ -51,6 +51,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | PROGRAMME-20261019-CODEX-01 | Codex | Limiter le programme bac de Première au français et aux maths : study.js, Programme.jsx et tests | Terminé | [PR #16](https://github.com/revizstmg/revizstmg.github.io/pull/16) | Publication suivie dans les Actions |
 
+| HOME-20261019-CODEX-01 | Codex | Refonte accueil : Home, CSS dédié, reprise de lecture Chapter/Course, présentation Welcome, traductions et tests | En cours | `feat/nouvel-accueil` | Nouvelle direction visuelle et parcours de révision prioritaires ; aucun changement auth/store |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
