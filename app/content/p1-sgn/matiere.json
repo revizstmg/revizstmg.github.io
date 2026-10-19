@@ -779,7 +779,7 @@
             },
             {
               "t": "p",
-              "c": "Le **coût du travail** ne se limite pas au salaire net : il comprend le salaire brut **plus** les **cotisations sociales** (part salariale et **part patronale**). C’est une **charge** importante et bien réelle pour l’organisation."
+              "c": "Le **coût du travail** ne se limite pas au salaire net : il comprend le **salaire brut plus les cotisations sociales patronales**. Les cotisations salariales sont déjà comprises dans le salaire brut : on ne les ajoute pas une deuxième fois. C’est une **charge** importante et bien réelle pour l’organisation."
             },
             {
               "t": "p",
@@ -1418,7 +1418,7 @@
               "cat": "se"
             },
             {
-              "text": "Maîtriser les tables de conjugaison comptable (débit/crédit)",
+              "text": "Connaître les règles comptables de débit et de crédit",
               "cat": "sav"
             },
             {

@@ -53,6 +53,10 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | PROG-20261019-CLAUDE-01 | Claude | Ne plus perdre la progression (tâches C03 à C06) : sauvegarde complète et versionnée, fusion entre appareils, déconnexion sans perte, dates du calendrier de l'élève. Fichiers : `app/src/progression.js` (nouveau), `store.jsx` (persistance, fusion, synchronisation, déconnexion, dates ; pas les fonctions de score), `data/srs.js`, `auth.js`, `push.js`, `EtatSauvegarde.jsx` (nouveau), `Layout.jsx` et `Customizer.jsx` (boutons de déconnexion), une ligne de date dans `Home.jsx` et `DailyChallenge.jsx`, tests, README, confidentialité | À relire | `claude/progression-fiable`, [PR #14](https://github.com/revizstmg/revizstmg.github.io/pull/14) | Le propriétaire relit et fusionne (après la PR #13) |
 
+| PEDAGO-20261019-CODEX-01 | Codex | X06 : deux corrections SDGN Première ; X01 : finaliser les cinq jeux de la PR #6 ; contenu, moteur et tests uniquement | Terminé | [PR #15](https://github.com/revizstmg/revizstmg.github.io/pull/15) | Valider les corrections et les parcours |
+
+| PROGRAMME-20261019-CODEX-01 | Codex | Limiter le programme bac de Première au français et aux maths : study.js, Programme.jsx et tests | Terminé | [PR #16](https://github.com/revizstmg/revizstmg.github.io/pull/16) | Publication suivie dans les Actions |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -303,6 +307,45 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 - Branche partie de `claude/repartition-taches` (PR #13) : à fusionner après elle.
 - Prochaine action : relecture et fusion par le propriétaire, puis contrôle d'une
   vraie sauvegarde après publication.
+
+### PEDAGO-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
+
+- Demande : commencer les priorités annoncées, X06 puis X01.
+- SDGN Première : coût du travail = salaire brut + cotisations patronales ; les
+  cotisations salariales déjà incluses ne sont plus ajoutées une seconde fois.
+  Le corps du cours concorde avec son tableau final. Exemple de « savoir »
+  reformulé en « Connaître les règles comptables de débit et de crédit ».
+  Source de contrôle : simulateur Urssaf cité dans F11 de l’audit.
+- Reprise sélective du code `66a6b77` de la PR #6 sur la version actuelle : cinq
+  rattachements explicites, banques EN/ES bornées aux six verbes et aux règles de
+  leur chapitre, sélection mélangée de dix questions. Les introductions ne
+  promettent plus des questions toujours inédites. Identifiants conservés.
+- Vérifications : 183 tests unitaires, compilation et huit parcours navigateur
+  ciblés réussis, dont les cinq activités rétablies. Régression d’accès et de
+  maîtrise maximale à 100 % pour les cinq jeux. Empreintes mises à jour
+  volontairement pour les six thèmes concernés, aucune autre empreinte modifiée.
+  Validation complète et publication suivies dans les Actions de la PR #15.
+- Portée : contenu, TypedGen et tests uniquement ; aucun changement des fichiers
+  de sauvegarde/dates travaillés par Claude dans la PR #14. Le journal et le README
+  reçoivent uniquement les informations de cette tâche.
+- Branche `fix/sdgn-et-exercices`, PR #15 ; remplace la PR #6 à sa fusion.
+
+### PROGRAMME-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
+
+- Demande : le programme bac de Première STMG doit faire réviser uniquement
+  le français et les mathématiques pour les épreuves anticipées.
+- Cause : le calendrier était déjà correct, mais les objectifs du jour utilisaient
+  la file de révision de toute la filière. Le filtrage est désormais appliqué
+  avant la sélection des quatre objectifs, même si une autre matière est urgente.
+- Avancement de cette page : thèmes maîtrisés et total calculés sur le même
+  périmètre (français/mathématiques en Première, filière complète en Terminale).
+  Les révisions générales disposent toujours de toutes les matières.
+- Vérifications : 186 tests unitaires et compilation réussis ; parcours navigateur
+  réussi avec SDGN maîtrisé/en retard, quatre objectifs français ou maths,
+  progression ciblée à zéro et lien vers une matière autorisée. Aucune empreinte
+  de contenu modifiée. Validation complète et publication dans les Actions.
+- Périmètre : study.js, Programme.jsx et leurs tests ; aucun fichier de sauvegarde
+  ou de dates modifié. Branche `fix/programme-premiere`, PR #16.
 
 ### Modèle à copier pour une nouvelle tâche
 
