@@ -7,9 +7,12 @@ import { preparer, attendreAccueil } from './eleve.js'
 // Les appels à Supabase sont interceptés : rien n'atteint la base.
 test('suivi parent volontaire, export et suppression complète', async ({ page }) => {
   await preparer(page)
-  // Une session (factice) : la suppression du compte passe par la base.
+  // Une session (factice) : la suppression du compte passe par la base. Posée
+  // une seule fois : window.name survit au rechargement qui suit la suppression,
+  // contrairement au stockage du navigateur, que l'application vide.
   await page.addInitScript(() => {
-    if (!localStorage.getItem('stmg_session')) {
+    if (!window.name.includes('session-posee')) {
+      window.name += 'session-posee'
       localStorage.setItem('stmg_session', JSON.stringify({ token: 'jeton-de-test', refresh: 'r', user: { id: '00000000-0000-4000-8000-000000000001', email: 'lea@test.fr' }, expires_at: Math.floor(Date.now() / 1000) + 3600 }))
     }
   })
@@ -40,6 +43,11 @@ test('suivi parent volontaire, export et suppression complète', async ({ page }
   page.on('dialog', (d) => d.accept())
   await page.getByRole('button', { name: /Supprimer mon compte/ }).click()
   await expect.poll(() => appels.includes('POST rpc/revizstmg_supprimer_compte'), { timeout: 8000 }).toBe(true)
-  // Puis la session et la progression locales sont effacées.
-  await expect.poll(() => page.evaluate(() => localStorage.getItem('stmg_session')), { timeout: 8000 }).toBeNull()
+  // Puis tout ce que garde le navigateur est effacé (session, code parent…) et
+  // l'application repart à neuf.
+  // (Pendant le rechargement, la page ne répond pas : on réessaie.)
+  await expect.poll(() => page.evaluate(() => localStorage.getItem('stmg_session')).catch(() => 'rechargement'), { timeout: 8000 }).toBeNull()
+  await page.waitForLoadState()
+  expect(await page.evaluate(() => localStorage.getItem('stmg_parent_code'))).toBeNull()
+  expect(await page.evaluate(() => location.hash)).not.toContain('/moi')
 })

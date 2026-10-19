@@ -104,7 +104,7 @@ ont pas besoin. Le passage de langue ne réutilise pas un ancien résultat.
 | Social | Comptes élève et prof, classes (mur, quiz, duels, groupes), amis et duels, classement hebdomadaire et ligues, espace parent (seulement si l'élève active le partage). Réservé aux comptes connectés : la base ne montre une classe qu'à ses membres et à son professeur (`supabase/README.md`). Essai sans compte possible (progression sur l'appareil, `components/CompteRequis.jsx`). |
 | Motivation | XP, niveaux, badges, série de jours, boutique de pièces, objectifs de la semaine. |
 | Confort | Application installable (PWA), hors ligne, rappels de révision (avec un compte, même téléphone fermé : `src/push.js`, fonction Edge `revizstmg-rappels`), bouton « Signaler une erreur » sous chaque exercice et chapitre, interface en français, anglais, espagnol, italien et arabe, réglages d'accessibilité (dys, contraste, lecture audio), écran de secours si une page plante. |
-| Données | « Télécharger mes données » (fichier JSON) et « Supprimer mon compte » dans Mon espace : la fonction `revizstmg_supprimer_compte` efface tout, adresse e-mail de connexion comprise (une fois `supabase/a-valider/` appliqué). |
+| Données | « Télécharger mes données » (fichier JSON) et « Supprimer mon compte » dans Mon espace : la fonction `revizstmg_supprimer_compte` (appliquée le 19 octobre 2026) efface tout ce que l'élève a publié ou envoyé, puis son compte, adresse e-mail comprise ; l'application vide ensuite le stockage du navigateur (`supabase/README.md`). |
 
 ## Démarrer
 

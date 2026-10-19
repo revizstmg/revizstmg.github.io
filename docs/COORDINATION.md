@@ -53,7 +53,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | PROG-20261019-CLAUDE-01 | Claude | Ne plus perdre la progression (tâches C03 à C06) : sauvegarde complète et versionnée, fusion entre appareils, déconnexion sans perte, dates du calendrier de l'élève. Fichiers : `app/src/progression.js` (nouveau), `store.jsx` (persistance, fusion, synchronisation, déconnexion, dates ; pas les fonctions de score), `data/srs.js`, `auth.js`, `push.js`, `EtatSauvegarde.jsx` (nouveau), `Layout.jsx` et `Customizer.jsx` (boutons de déconnexion), une ligne de date dans `Home.jsx` et `DailyChallenge.jsx`, tests, README, confidentialité | À relire | `claude/progression-fiable`, [PR #14](https://github.com/revizstmg/revizstmg.github.io/pull/14) | Le propriétaire relit et fusionne (après la PR #13) |
 
-| SUPPR-20261019-CLAUDE-01 | Claude | Suppression complète du compte demandée par le propriétaire (C01, partie suppression) : fonction `revizstmg_supprimer_compte` complétée (signalements de l'élève, duels de classe reçus, exclusions, jetons) et appliquée sur Supabase ; effacement de tout ce qui reste sur l'appareil ; confidentialité et CGU. Fichiers : `supabase/**`, `auth.js`, `Profile.jsx`, `push.js`, `Privacy.jsx`, `Cgu.jsx`, tests | En cours | `claude/suppression-compte` (part de la PR #14) | Claude code, teste en local, applique, puis passe la PR en relecture |
+| SUPPR-20261019-CLAUDE-01 | Claude | Suppression complète du compte demandée par le propriétaire (C01, partie suppression) : fonction `revizstmg_supprimer_compte` complétée (signalements de l'élève, duels de classe reçus, exclusions, jetons) et appliquée sur Supabase ; effacement de tout ce qui reste sur l'appareil ; confidentialité et CGU. Fichiers : `supabase/**`, `auth.js`, `Profile.jsx`, `push.js`, `Privacy.jsx`, `Cgu.jsx`, tests | À relire | `claude/suppression-compte`, PR #18 (part de la PR #14) | Relecture et fusion par le propriétaire, après les PR #13 et #14 |
 
 | NOTES-20261019-CLAUDE-01 | Claude | « Mes notes de classe », partie gratuite (voir le document des offres) : saisie de la note, matière puis chapitre dans des menus déroulants, liste de ce qu'il faut améliorer. Fichiers : nouvelle page `pages/MesNotes.jsx`, `progression.js` et `store.jsx` (nouveau champ synchronisé), route dans `App.jsx` (fichier commun), lien depuis `Profile.jsx`, tests, README | Prévu, après SUPPR | `claude/mes-notes` (part de `claude/suppression-compte`) | Commencer une fois la suppression terminée |
 
@@ -324,6 +324,22 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   agrégées seulement).
 - Chevauchements : aucune PR de Codex ouverte. `App.jsx` (route de la page des
   notes) est un fichier commun : une ligne ajoutée.
+- SUPPR, résultat : la fonction `revizstmg_supprimer_compte` efface aussi les
+  signalements de l'élève, les duels de classe où il est adversaire, ses
+  exclusions, ses rappels sur téléphone, ses jetons de connexion et son journal de
+  connexion, puis le compte lui-même. Migration
+  `20261019075848_revizstmg_suppression_compte.sql`, appliquée sur Supabase sous
+  ce nom ; retirée de `a-valider/` et de `A_COLLER_DANS_SUPABASE.sql`. Sur
+  l'appareil, « Supprimer mon compte » vide tout le stockage du navigateur et
+  recharge l'application. Confidentialité (section 7), README et
+  `supabase/README.md` décrivent ce qui est effacé et ce qui reste un temps
+  (journaux et sauvegardes de Supabase, e-mails reçus, autres appareils).
+- Vérifications : 233 tests unitaires, compilation, 116 parcours navigateur, base
+  locale jetable avec les règles de `a-valider/` : 30 vérifications réussies,
+  aucune ratée (dont le compte, le profil, les signalements, les rappels, les
+  duels et les exclusions de A effacés, ceux de B gardés).
+- Limite : la suppression n'a pas été essayée sur un vrai compte de la base.
+- Prochaine action : relecture de la PR #18 ; puis NOTES sur `claude/mes-notes`.
 
 ### PEDAGO-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
 

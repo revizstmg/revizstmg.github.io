@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
-import { useStore, subjectScore } from '../store.jsx'
+import { useStore, subjectScore, effacerDonneesAppareil } from '../store.jsx'
 import { trackLabel, trackIcon, subjectsForTrack } from '../data/tracks.js'
 import { badgeById } from '../badges.js'
 import { Ring, ProgressBar, Icon } from '../components/ui.jsx'
 import { usePublicText, useT } from '../i18n.js'
-import { signOut, supprimerCompte, isSignedIn } from '../auth.js'
+import { supprimerCompte, isSignedIn } from '../auth.js'
 import { pushPossible, activerRappelsPush, desactiverRappelsPush } from '../push.js'
 import { InstallCard, AppBadge } from '../components/InstallApp.jsx'
 import { ProgressCurve, ThemeTimeBars } from '../components/StatsCharts.jsx'
@@ -32,7 +32,7 @@ function telechargerMesDonnees(state) {
 // « Mon espace » : la page personnelle de l'élève — identité, statistiques,
 // badges, favoris et accès rapide. Distincte de la personnalisation (apparence).
 export default function Profile() {
-  const { state, derived, resetAll, setBacDate, setParentShare } = useStore()
+  const { state, derived, setBacDate, setParentShare } = useStore()
   const t = useT()
   const tr = usePublicText()
   const [busy, setBusy] = useState(false)
@@ -48,20 +48,25 @@ export default function Profile() {
     if (busy) return
     if (!confirm(t('deleteAccountConfirm'))) return
     setBusy(true)
-    // La base efface tout ce que l'app a publié pour cet élève (profil et
-    // progression, classe, amis et duels, suivi parent, classes d'un
-    // professeur), puis le compte de connexion lui-même.
-    // Sans session (essai sans compte), il n'y a rien en ligne : on efface
-    // seulement ce qui est sur l'appareil.
+    // La base efface tout ce que l'app a publié ou envoyé pour cet élève
+    // (profil et progression, classe, amis et duels, suivi parent, classes d'un
+    // professeur, signalements, rappels), puis le compte de connexion lui-même
+    // (revizstmg_supprimer_compte). Sans session (essai sans compte), il n'y a
+    // rien en ligne : on efface seulement ce qui est sur l'appareil.
     try {
-      if (isSignedIn()) await supprimerCompte()
+      if (isSignedIn()) {
+        await desactiverRappelsPush()
+        await supprimerCompte()
+      }
     } catch {
       setBusy(false)
       alert(t('deleteAccountFailed'))
       return
     }
-    signOut()
-    resetAll()
+    // Puis tout ce que garde ce navigateur, et l'application repart à neuf :
+    // rien de l'ancien compte ne reste en mémoire.
+    effacerDonneesAppareil()
+    window.location.replace(window.location.pathname)
   }
 
   const first = state.profile?.firstName?.trim() || ''

@@ -94,6 +94,15 @@ const emptyState = () => ({
   fiches: [], // fiches de révision créées depuis une photo : { id, title, createdAt, source, sections }
 })
 
+// Suppression du compte : tout ce que l'application garde dans ce navigateur
+// (progression, session, codes ami et parent, préférences, traductions…) est
+// effacé. Le site ne sert que RévizSTMG : on vide tout son stockage.
+export function effacerDonneesAppareil() {
+  for (const stockage of ['localStorage', 'sessionStorage']) {
+    try { globalThis[stockage]?.clear() } catch { /* stockage indisponible */ }
+  }
+}
+
 // Objectif hebdomadaire : nombre de chapitres distincts à travailler dans la
 // semaine, et récompense (XP + pièces) à réclamer une fois atteint.
 export const WEEKLY_GOAL = 5

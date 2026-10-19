@@ -118,13 +118,31 @@ select string_agg(label || '=' || total, ', ') as "ligue des classes du prof" fr
 reset role; set role authenticated; set request.jwt.claims to :B;
 select refus($$insert into class_member (class_code, device_id, name) values ('stmg-abcde', auth.uid()::text, 'B')$$, 'B exclu revient');
 
+-- Ce que A a envoyé ou reçu, à effacer avec son compte (insertion directe, sans
+-- les déclencheurs de contrôle : seul compte ici le résultat de la suppression).
+reset role;
+set session_replication_role = replica;
+insert into revizstmg_signalements (page, message, auteur) values ('/test', 'Signalement de A', 'aaaaaaaa-0000-4000-8000-000000000001');
+insert into revizstmg_prive.abonnements_push (endpoint, p256dh, auth, compte) values ('https://push.test/a', 'p', 'a', 'aaaaaaaa-0000-4000-8000-000000000001');
+insert into class_duel (class_code, challenger_device, challenger_name, opponent_device, opponent_name) values ('stmg-abcde', 'cccccccc-0000-4000-8000-000000000003', 'P', 'aaaaaaaa-0000-4000-8000-000000000001', 'A');
+insert into class_ban (class_code, device_id) values ('stmg-autre', 'aaaaaaaa-0000-4000-8000-000000000001');
+set session_replication_role = default;
+
 -- A supprime son compte
 reset role; set role authenticated; set request.jwt.claims to :A;
 select revizstmg_supprimer_compte();
 reset role;
-select (select count(*) from auth.users where email = 'a@t.fr') = 0 as "compte A supprimé",
-  (select count(*) from profiles where name = 'A') = 0 as "profil A supprimé",
-  (select count(*) from class_member where device_id like 'aaaaaaaa%') + (select count(*) from friend_user where device_id like 'aaaaaaaa%')
+-- Une ligne par vérification, pour que lancer.sh compte chaque « t » ou « f ».
+select ok from (values
+  (((select count(*) from auth.users where email = 'a@t.fr') = 0), 'compte A supprimé'),
+  (((select count(*) from profiles where name = 'A') = 0), 'profil A supprimé'),
+  (((select count(*) from class_member where device_id like 'aaaaaaaa%') + (select count(*) from friend_user where device_id like 'aaaaaaaa%')
   + (select count(*) from friend_request) + (select count(*) from friend_duel) + (select count(*) from child_stats)
-  + (select count(*) from leaderboard where device_id like 'aaaaaaaa%') + (select count(*) from class_wall where device_id like 'aaaaaaaa%') = 0 as "données de A effacées",
-  (select count(*) from revizstmg_signalements) = 1 as "signalement conservé";
+  + (select count(*) from leaderboard where device_id like 'aaaaaaaa%') + (select count(*) from class_wall where device_id like 'aaaaaaaa%') = 0), 'données de A effacées'),
+  (((select count(*) from revizstmg_signalements where message = 'Signalement de A') = 0), 'signalement de A effacé'),
+  (((select count(*) from revizstmg_signalements where auteur is null) = 1), 'signalement anonyme conservé'),
+  (((select count(*) from revizstmg_prive.abonnements_push) = 0), 'rappels de A effacés'),
+  (((select count(*) from class_duel where opponent_device like 'aaaaaaaa%' or challenger_device like 'aaaaaaaa%') = 0), 'duels de classe de A effacés'),
+  (((select count(*) from class_ban where device_id like 'aaaaaaaa%') = 0), 'exclusions de A effacées'),
+  (((select count(*) from class_ban where device_id like 'bbbbbbbb%') = 1), 'exclusion de B conservée')
+) as v(ok, verification);
