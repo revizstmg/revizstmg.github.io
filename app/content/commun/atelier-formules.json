@@ -1,0 +1,1348 @@
+[
+  {
+    "id": "f01",
+    "cat": "Mathématiques",
+    "name": "Proportion",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Effectif de la partie",
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "symbol": "b",
+        "label": "Effectif total",
+        "min": 25,
+        "max": 100,
+        "step": 1
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "/",
+        "a",
+        "b"
+      ],
+      100
+    ],
+    "unit": "%",
+    "terminale": false,
+    "formula": "Partie ÷ Tout × 100",
+    "note": ""
+  },
+  {
+    "id": "f02",
+    "cat": "Mathématiques",
+    "name": "x % d’une valeur V",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Pourcentage x",
+        "min": 5,
+        "max": 80,
+        "step": 5
+      },
+      {
+        "symbol": "b",
+        "label": "Valeur V",
+        "min": 100,
+        "max": 2000,
+        "step": 50
+      }
+    ],
+    "expression": [
+      "/",
+      [
+        "*",
+        "a",
+        "b"
+      ],
+      100
+    ],
+    "unit": "",
+    "terminale": false,
+    "formula": "V × x ÷ 100",
+    "note": ""
+  },
+  {
+    "id": "f03",
+    "cat": "Mathématiques",
+    "name": "Taux d’évolution",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Valeur initiale",
+        "min": 100,
+        "max": 1000,
+        "step": 20
+      },
+      {
+        "symbol": "b",
+        "label": "Valeur finale",
+        "min": 100,
+        "max": 1500,
+        "step": 20
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "/",
+        [
+          "-",
+          "b",
+          "a"
+        ],
+        "a"
+      ],
+      100
+    ],
+    "unit": "%",
+    "terminale": false,
+    "formula": "t = (V arrivée − V départ) ÷ V départ",
+    "note": "× 100 pour l’avoir en %"
+  },
+  {
+    "id": "f04",
+    "cat": "Mathématiques",
+    "name": "Coefficient multiplicateur",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Taux d’évolution en % (positif : hausse)",
+        "min": -40,
+        "max": 50,
+        "step": 5
+      }
+    ],
+    "expression": [
+      "+",
+      1,
+      [
+        "/",
+        "a",
+        100
+      ]
+    ],
+    "unit": "",
+    "terminale": false,
+    "formula": "CM = 1 + t",
+    "note": "+8 % → 1,08 ; −8 % → 0,92"
+  },
+  {
+    "id": "f05",
+    "cat": "Mathématiques",
+    "name": "Valeur d’arrivée",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Valeur initiale",
+        "min": 100,
+        "max": 2000,
+        "step": 50
+      },
+      {
+        "symbol": "b",
+        "label": "Taux d’évolution en %",
+        "min": -40,
+        "max": 50,
+        "step": 5
+      }
+    ],
+    "expression": [
+      "*",
+      "a",
+      [
+        "+",
+        1,
+        [
+          "/",
+          "b",
+          100
+        ]
+      ]
+    ],
+    "unit": "",
+    "terminale": false,
+    "formula": "V arrivée = V départ × CM",
+    "note": "donc CM = V arrivée ÷ V départ"
+  },
+  {
+    "id": "f06",
+    "cat": "Mathématiques",
+    "name": "Évolutions successives",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Premier taux en %",
+        "min": -30,
+        "max": 40,
+        "step": 5
+      },
+      {
+        "symbol": "b",
+        "label": "Deuxième taux en %",
+        "min": -30,
+        "max": 40,
+        "step": 5
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "-",
+        [
+          "*",
+          [
+            "+",
+            1,
+            [
+              "/",
+              "a",
+              100
+            ]
+          ],
+          [
+            "+",
+            1,
+            [
+              "/",
+              "b",
+              100
+            ]
+          ]
+        ],
+        1
+      ],
+      100
+    ],
+    "unit": "%",
+    "terminale": false,
+    "formula": "CM global = CM₁ × CM₂ × … × CMₙ",
+    "note": "on n’additionne jamais les taux",
+    "target": "Taux d’évolution global en %"
+  },
+  {
+    "id": "f07",
+    "cat": "Mathématiques",
+    "name": "Évolution réciproque",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Taux de l’évolution initiale en %",
+        "min": -40,
+        "max": 50,
+        "step": 5
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "-",
+        [
+          "/",
+          1,
+          [
+            "+",
+            1,
+            [
+              "/",
+              "a",
+              100
+            ]
+          ]
+        ],
+        1
+      ],
+      100
+    ],
+    "unit": "%",
+    "terminale": false,
+    "formula": "CM réciproque = 1 ÷ CM",
+    "note": "+25 % s’annule par −20 %",
+    "target": "Taux d’évolution réciproque en %"
+  },
+  {
+    "id": "f08",
+    "cat": "Mathématiques",
+    "name": "Indice base 100",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Valeur observée",
+        "min": 100,
+        "max": 1500,
+        "step": 20
+      },
+      {
+        "symbol": "b",
+        "label": "Valeur de référence",
+        "min": 100,
+        "max": 1000,
+        "step": 20
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "/",
+        "a",
+        "b"
+      ],
+      100
+    ],
+    "unit": "",
+    "terminale": false,
+    "formula": "Valeur ÷ Valeur de référence × 100",
+    "note": ""
+  },
+  {
+    "id": "f09",
+    "cat": "Mathématiques",
+    "name": "Suite arithmétique (terme général)",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Premier terme u₀",
+        "min": 10,
+        "max": 100,
+        "step": 1
+      },
+      {
+        "symbol": "b",
+        "label": "Raison r",
+        "min": -5,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "symbol": "c",
+        "label": "Rang n",
+        "min": 2,
+        "max": 20,
+        "step": 1
+      }
+    ],
+    "expression": [
+      "+",
+      "a",
+      [
+        "*",
+        "c",
+        "b"
+      ]
+    ],
+    "unit": "",
+    "terminale": false,
+    "formula": "uₙ = u₀ + n × r",
+    "note": "ou uₙ = u₁ + (n − 1) × r"
+  },
+  {
+    "id": "f10",
+    "cat": "Mathématiques",
+    "name": "Suite géométrique (terme général)",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Premier terme u₀",
+        "min": 10,
+        "max": 100,
+        "step": 10
+      },
+      {
+        "symbol": "b",
+        "label": "Raison q",
+        "min": 2,
+        "max": 4,
+        "step": 1
+      },
+      {
+        "symbol": "c",
+        "label": "Rang n",
+        "min": 2,
+        "max": 5,
+        "step": 1
+      }
+    ],
+    "expression": [
+      "*",
+      "a",
+      [
+        "pow",
+        "b",
+        "c"
+      ]
+    ],
+    "unit": "",
+    "terminale": false,
+    "formula": "uₙ = u₀ × qⁿ",
+    "note": "ou uₙ = u₁ × qⁿ⁻¹"
+  },
+  {
+    "id": "f11",
+    "cat": "Mathématiques",
+    "name": "Étendue",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Valeur minimale",
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "symbol": "b",
+        "label": "Valeur maximale",
+        "min": 25,
+        "max": 100,
+        "step": 1
+      }
+    ],
+    "expression": [
+      "-",
+      "b",
+      "a"
+    ],
+    "unit": "",
+    "terminale": false,
+    "formula": "Maximum − Minimum",
+    "note": ""
+  },
+  {
+    "id": "f12",
+    "cat": "Mathématiques",
+    "name": "Écart interquartile",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Premier quartile Q₁",
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "symbol": "b",
+        "label": "Troisième quartile Q₃",
+        "min": 25,
+        "max": 100,
+        "step": 1
+      }
+    ],
+    "expression": [
+      "-",
+      "b",
+      "a"
+    ],
+    "unit": "",
+    "terminale": false,
+    "formula": "Q3 − Q1",
+    "note": ""
+  },
+  {
+    "id": "f13",
+    "cat": "Mathématiques",
+    "name": "Probabilité conditionnelle",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "P(A ∩ B) en %",
+        "min": 1,
+        "max": 15,
+        "step": 1
+      },
+      {
+        "symbol": "b",
+        "label": "P(A) en %",
+        "min": 20,
+        "max": 90,
+        "step": 5
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "/",
+        "a",
+        "b"
+      ],
+      100
+    ],
+    "unit": "%",
+    "terminale": true,
+    "formula": "P_A(B) = P(A ∩ B) ÷ P(A)",
+    "note": ""
+  },
+  {
+    "id": "f14",
+    "cat": "Mathématiques",
+    "name": "Espérance (loi binomiale)",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Nombre d’essais n",
+        "min": 5,
+        "max": 50,
+        "step": 5
+      },
+      {
+        "symbol": "b",
+        "label": "Probabilité de succès p en %",
+        "min": 10,
+        "max": 90,
+        "step": 10
+      }
+    ],
+    "expression": [
+      "*",
+      "a",
+      [
+        "/",
+        "b",
+        100
+      ]
+    ],
+    "unit": "",
+    "terminale": true,
+    "formula": "E(X) = n × p",
+    "note": ""
+  },
+  {
+    "id": "f15",
+    "cat": "Gestion & Finance",
+    "name": "Montant de la TVA",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Prix HT",
+        "min": 100,
+        "max": 2000,
+        "step": 25
+      },
+      {
+        "symbol": "b",
+        "label": "Taux de TVA en %",
+        "min": 10,
+        "max": 20,
+        "step": 10
+      }
+    ],
+    "expression": [
+      "*",
+      "a",
+      [
+        "/",
+        "b",
+        100
+      ]
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "Prix HT × Taux de TVA",
+    "note": "taux en décimal : 20 % → 0,20"
+  },
+  {
+    "id": "f16",
+    "cat": "Gestion & Finance",
+    "name": "Prix TTC",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Prix HT",
+        "min": 100,
+        "max": 2000,
+        "step": 25
+      },
+      {
+        "symbol": "b",
+        "label": "Taux de TVA en %",
+        "min": 10,
+        "max": 20,
+        "step": 10
+      }
+    ],
+    "expression": [
+      "*",
+      "a",
+      [
+        "+",
+        1,
+        [
+          "/",
+          "b",
+          100
+        ]
+      ]
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "Prix HT × (1 + Taux de TVA)",
+    "note": "à 20 % : HT × 1,20"
+  },
+  {
+    "id": "f17",
+    "cat": "Gestion & Finance",
+    "name": "Prix HT",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Prix TTC",
+        "min": 120,
+        "max": 2400,
+        "step": 60
+      },
+      {
+        "symbol": "b",
+        "label": "Taux de TVA en %",
+        "min": 10,
+        "max": 20,
+        "step": 10
+      }
+    ],
+    "expression": [
+      "/",
+      "a",
+      [
+        "+",
+        1,
+        [
+          "/",
+          "b",
+          100
+        ]
+      ]
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "Prix TTC ÷ (1 + Taux de TVA)",
+    "note": "on divise par 1,20, on ne retire pas 20 %"
+  },
+  {
+    "id": "f18",
+    "cat": "Gestion & Finance",
+    "name": "TVA à décaisser",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "TVA collectée",
+        "min": 2000,
+        "max": 10000,
+        "step": 100
+      },
+      {
+        "symbol": "b",
+        "label": "TVA déductible",
+        "min": 100,
+        "max": 1500,
+        "step": 50
+      }
+    ],
+    "expression": [
+      "-",
+      "a",
+      "b"
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "TVA collectée − TVA déductible",
+    "note": "si la déductible dépasse la collectée : crédit de TVA"
+  },
+  {
+    "id": "f19",
+    "cat": "Gestion & Finance",
+    "name": "Annuité d’amortissement",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Valeur d’origine",
+        "min": 2000,
+        "max": 20000,
+        "step": 500
+      },
+      {
+        "symbol": "b",
+        "label": "Durée d’utilisation en années",
+        "min": 2,
+        "max": 10,
+        "step": 1
+      }
+    ],
+    "expression": [
+      "/",
+      "a",
+      "b"
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "Valeur d’origine × Taux linéaire",
+    "note": "soit Valeur d’origine ÷ Durée"
+  },
+  {
+    "id": "f20",
+    "cat": "Gestion & Finance",
+    "name": "Valeur nette comptable (VNC)",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Valeur d’origine",
+        "min": 10000,
+        "max": 20000,
+        "step": 500
+      },
+      {
+        "symbol": "b",
+        "label": "Cumul des amortissements",
+        "min": 1000,
+        "max": 9000,
+        "step": 500
+      }
+    ],
+    "expression": [
+      "-",
+      "a",
+      "b"
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "Valeur d’origine − Cumul des amortissements",
+    "note": "VNC = 0 en fin de plan"
+  },
+  {
+    "id": "f21",
+    "cat": "Gestion & Finance",
+    "name": "Fonds de roulement net global (FRNG)",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Ressources stables",
+        "min": 100000,
+        "max": 200000,
+        "step": 1000
+      },
+      {
+        "symbol": "b",
+        "label": "Emplois stables",
+        "min": 50000,
+        "max": 95000,
+        "step": 1000
+      }
+    ],
+    "expression": [
+      "-",
+      "a",
+      "b"
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "Ressources stables − Emplois stables",
+    "note": ""
+  },
+  {
+    "id": "f22",
+    "cat": "Gestion & Finance",
+    "name": "Besoin en fonds de roulement (BFR)",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Actif circulant d’exploitation",
+        "min": 20000,
+        "max": 90000,
+        "step": 1000
+      },
+      {
+        "symbol": "b",
+        "label": "Passif circulant d’exploitation",
+        "min": 10000,
+        "max": 70000,
+        "step": 1000
+      }
+    ],
+    "expression": [
+      "-",
+      "a",
+      "b"
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "Actif circulant d’exploitation − Passif circulant d’exploitation",
+    "note": "soit (Stocks + Créances clients) − Dettes fournisseurs"
+  },
+  {
+    "id": "f23",
+    "cat": "Gestion & Finance",
+    "name": "Trésorerie nette",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "FRNG",
+        "min": 10000,
+        "max": 50000,
+        "step": 1000
+      },
+      {
+        "symbol": "b",
+        "label": "BFR",
+        "min": 5000,
+        "max": 45000,
+        "step": 1000
+      }
+    ],
+    "expression": [
+      "-",
+      "a",
+      "b"
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "FRNG − BFR",
+    "note": "vérification : Trésorerie active − Trésorerie passive"
+  },
+  {
+    "id": "f24",
+    "cat": "Gestion & Finance",
+    "name": "Marge sur coût variable (MCV)",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Chiffre d’affaires",
+        "min": 20000,
+        "max": 100000,
+        "step": 1000
+      },
+      {
+        "symbol": "b",
+        "label": "Charges variables",
+        "min": 1000,
+        "max": 19000,
+        "step": 1000
+      }
+    ],
+    "expression": [
+      "-",
+      "a",
+      "b"
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "Chiffre d’affaires − Charges variables",
+    "note": ""
+  },
+  {
+    "id": "f25",
+    "cat": "Gestion & Finance",
+    "name": "Seuil de rentabilité (en €)",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Charges fixes",
+        "min": 1000,
+        "max": 20000,
+        "step": 500
+      },
+      {
+        "symbol": "b",
+        "label": "Taux de MCV en %",
+        "min": 20,
+        "max": 80,
+        "step": 5
+      }
+    ],
+    "expression": [
+      "/",
+      "a",
+      [
+        "/",
+        "b",
+        100
+      ]
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "Charges fixes ÷ Taux de MCV",
+    "note": "taux en décimal : 40 % → 0,40"
+  },
+  {
+    "id": "f26",
+    "cat": "Gestion & Finance",
+    "name": "Taux de marge",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Marge",
+        "min": 5,
+        "max": 100,
+        "step": 5
+      },
+      {
+        "symbol": "b",
+        "label": "Coût d’achat",
+        "min": 100,
+        "max": 500,
+        "step": 10
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "/",
+        "a",
+        "b"
+      ],
+      100
+    ],
+    "unit": "%",
+    "terminale": true,
+    "formula": "Marge ÷ Coût d’achat HT × 100",
+    "note": "par rapport au coût d’achat"
+  },
+  {
+    "id": "f27",
+    "cat": "Gestion & Finance",
+    "name": "Taux de marque",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Marge",
+        "min": 5,
+        "max": 100,
+        "step": 5
+      },
+      {
+        "symbol": "b",
+        "label": "Prix de vente HT",
+        "min": 120,
+        "max": 500,
+        "step": 10
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "/",
+        "a",
+        "b"
+      ],
+      100
+    ],
+    "unit": "%",
+    "terminale": true,
+    "formula": "Marge ÷ Prix de vente HT × 100",
+    "note": "par rapport au prix de vente"
+  },
+  {
+    "id": "f28",
+    "cat": "Management",
+    "name": "Valeur ajoutée",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Valeur de la production",
+        "min": 10000,
+        "max": 50000,
+        "step": 1000
+      },
+      {
+        "symbol": "b",
+        "label": "Consommations intermédiaires externes",
+        "min": 1000,
+        "max": 9000,
+        "step": 500
+      }
+    ],
+    "expression": [
+      "-",
+      "a",
+      "b"
+    ],
+    "unit": "€",
+    "terminale": false,
+    "formula": "Valeur de la production − Consommations intermédiaires externes",
+    "note": "la richesse créée par l’organisation"
+  },
+  {
+    "id": "f29",
+    "cat": "Management",
+    "name": "Productivité du travail",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Production en unités",
+        "min": 100,
+        "max": 2000,
+        "step": 20
+      },
+      {
+        "symbol": "b",
+        "label": "Nombre d’heures travaillées",
+        "min": 10,
+        "max": 100,
+        "step": 5
+      }
+    ],
+    "expression": [
+      "/",
+      "a",
+      "b"
+    ],
+    "unit": "",
+    "terminale": false,
+    "formula": "Production ÷ Nombre d’heures travaillées",
+    "note": ""
+  },
+  {
+    "id": "f30",
+    "cat": "Management",
+    "name": "Part de marché",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Ventes de l’entreprise",
+        "min": 1000,
+        "max": 9000,
+        "step": 100
+      },
+      {
+        "symbol": "b",
+        "label": "Ventes du marché",
+        "min": 10000,
+        "max": 50000,
+        "step": 1000
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "/",
+        "a",
+        "b"
+      ],
+      100
+    ],
+    "unit": "%",
+    "terminale": false,
+    "formula": "Ventes de l’entreprise ÷ Ventes totales du marché × 100",
+    "note": "performance commerciale"
+  },
+  {
+    "id": "f31",
+    "cat": "Économie",
+    "name": "Épargne",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Revenu disponible",
+        "min": 2000,
+        "max": 5000,
+        "step": 100
+      },
+      {
+        "symbol": "b",
+        "label": "Consommation",
+        "min": 500,
+        "max": 1900,
+        "step": 100
+      }
+    ],
+    "expression": [
+      "-",
+      "a",
+      "b"
+    ],
+    "unit": "€",
+    "terminale": false,
+    "formula": "Revenu disponible − Consommation",
+    "note": ""
+  },
+  {
+    "id": "f32",
+    "cat": "Économie",
+    "name": "Taux d’épargne",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Épargne",
+        "min": 100,
+        "max": 900,
+        "step": 50
+      },
+      {
+        "symbol": "b",
+        "label": "Revenu disponible",
+        "min": 1500,
+        "max": 5000,
+        "step": 100
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "/",
+        "a",
+        "b"
+      ],
+      100
+    ],
+    "unit": "%",
+    "terminale": false,
+    "formula": "Épargne ÷ Revenu disponible × 100",
+    "note": ""
+  },
+  {
+    "id": "f33",
+    "cat": "Économie",
+    "name": "Taux de chômage",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Nombre de chômeurs",
+        "min": 100,
+        "max": 900,
+        "step": 50
+      },
+      {
+        "symbol": "b",
+        "label": "Population active",
+        "min": 2000,
+        "max": 10000,
+        "step": 100
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "/",
+        "a",
+        "b"
+      ],
+      100
+    ],
+    "unit": "%",
+    "terminale": false,
+    "formula": "Chômeurs ÷ Population active × 100",
+    "note": "sur la population active, pas la population totale"
+  },
+  {
+    "id": "f34",
+    "cat": "Économie",
+    "name": "Solde commercial",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Exportations",
+        "min": 10000,
+        "max": 50000,
+        "step": 1000
+      },
+      {
+        "symbol": "b",
+        "label": "Importations",
+        "min": 10000,
+        "max": 50000,
+        "step": 1000
+      }
+    ],
+    "expression": [
+      "-",
+      "a",
+      "b"
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "Exportations − Importations",
+    "note": "positif : excédent ; négatif : déficit"
+  },
+  {
+    "id": "f35",
+    "cat": "Économie",
+    "name": "Taux de couverture",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Exportations",
+        "min": 10000,
+        "max": 50000,
+        "step": 1000
+      },
+      {
+        "symbol": "b",
+        "label": "Importations",
+        "min": 10000,
+        "max": 50000,
+        "step": 1000
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "/",
+        "a",
+        "b"
+      ],
+      100
+    ],
+    "unit": "%",
+    "terminale": true,
+    "formula": "Exportations ÷ Importations × 100",
+    "note": "moins de 100 % : déficit"
+  },
+  {
+    "id": "f36",
+    "cat": "Mercatique",
+    "name": "Panier moyen",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Chiffre d’affaires",
+        "min": 5000,
+        "max": 50000,
+        "step": 500
+      },
+      {
+        "symbol": "b",
+        "label": "Nombre de commandes",
+        "min": 100,
+        "max": 1000,
+        "step": 50
+      }
+    ],
+    "expression": [
+      "/",
+      "a",
+      "b"
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "Chiffre d’affaires ÷ Nombre de commandes",
+    "note": ""
+  },
+  {
+    "id": "f37",
+    "cat": "Mercatique",
+    "name": "Taux de conversion",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Nombre d’achats",
+        "min": 10,
+        "max": 100,
+        "step": 5
+      },
+      {
+        "symbol": "b",
+        "label": "Nombre de visites",
+        "min": 500,
+        "max": 5000,
+        "step": 100
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "/",
+        "a",
+        "b"
+      ],
+      100
+    ],
+    "unit": "%",
+    "terminale": true,
+    "formula": "Commandes ÷ Visiteurs × 100",
+    "note": ""
+  },
+  {
+    "id": "f38",
+    "cat": "Ressources humaines",
+    "name": "Salaire net",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Salaire brut",
+        "min": 2000,
+        "max": 4000,
+        "step": 100
+      },
+      {
+        "symbol": "b",
+        "label": "Cotisations salariales",
+        "min": 300,
+        "max": 800,
+        "step": 50
+      }
+    ],
+    "expression": [
+      "-",
+      "a",
+      "b"
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "Salaire brut − Cotisations salariales",
+    "note": ""
+  },
+  {
+    "id": "f39",
+    "cat": "Ressources humaines",
+    "name": "Coût total employeur",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Salaire brut",
+        "min": 2000,
+        "max": 4000,
+        "step": 100
+      },
+      {
+        "symbol": "b",
+        "label": "Cotisations patronales",
+        "min": 500,
+        "max": 1600,
+        "step": 50
+      }
+    ],
+    "expression": [
+      "+",
+      "a",
+      "b"
+    ],
+    "unit": "€",
+    "terminale": true,
+    "formula": "Salaire brut + Cotisations patronales",
+    "note": "ou Brut × (1 + Taux de cotisations patronales)"
+  },
+  {
+    "id": "f40",
+    "cat": "Ressources humaines",
+    "name": "Taux de rotation (turnover)",
+    "inputs": [
+      {
+        "symbol": "a",
+        "label": "Nombre de départs",
+        "min": 1,
+        "max": 20,
+        "step": 1
+      },
+      {
+        "symbol": "b",
+        "label": "Effectif moyen",
+        "min": 50,
+        "max": 500,
+        "step": 10
+      }
+    ],
+    "expression": [
+      "*",
+      [
+        "/",
+        "a",
+        "b"
+      ],
+      100
+    ],
+    "unit": "%",
+    "terminale": true,
+    "formula": "Départs ÷ Effectif moyen × 100",
+    "note": ""
+  }
+]

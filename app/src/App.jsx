@@ -30,8 +30,7 @@ const EtudeGestion = lazy(() => import('./pages/EtudeGestion.jsx'))
 const CoachAI = lazy(() => import('./pages/CoachAI.jsx'))
 const PhotoFiche = lazy(() => import('./pages/PhotoFiche.jsx'))
 const DailyChallenge = lazy(() => import('./pages/DailyChallenge.jsx'))
-const Express = lazy(() => import('./pages/Express.jsx'))
-const Formulas = lazy(() => import('./pages/Formulas.jsx'))
+const FormulaWorkshop = lazy(() => import('./pages/FormulaWorkshop.jsx'))
 const Methodo = lazy(() => import('./pages/Methodo.jsx'))
 const Shop = lazy(() => import('./pages/Shop.jsx'))
 const Privacy = lazy(() => import('./pages/Privacy.jsx'))
@@ -89,8 +88,9 @@ export default function App() {
         <Route path="/coach-ia" element={<ContenuFiliere><CoachAI /></ContenuFiliere>} />
         <Route path="/fiches-photo" element={<PhotoFiche />} />
         <Route path="/defi" element={<ContenuFiliere><DailyChallenge /></ContenuFiliere>} />
-        <Route path="/express" element={<ContenuFiliere><Express /></ContenuFiliere>} />
-        <Route path="/formules" element={<Formulas />} />
+        <Route path="/express" element={<Navigate to="/atelier-formules" replace />} />
+        <Route path="/formules" element={<Navigate to="/atelier-formules" replace />} />
+        <Route path="/atelier-formules" element={<FormulaWorkshop />} />
         <Route path="/methodo" element={<Methodo />} />
         <Route path="/boutique" element={<Shop />} />
         <Route path="/confidentialite" element={<Privacy />} />

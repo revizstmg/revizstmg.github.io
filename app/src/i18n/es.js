@@ -1,6 +1,7 @@
 // Libellés d'interface en espagnol, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  formulaWorkshop: 'Taller de fórmulas',
   aiDiagnostic: "Diagnóstico",
   aiCoverage: "Programa cubierto",
   aiThisWeek: "Esta semana",

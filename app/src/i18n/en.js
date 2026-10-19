@@ -1,6 +1,7 @@
 // Libellés d'interface en anglais, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  formulaWorkshop: 'Formula workshop',
   aiDiagnostic: "Diagnosis",
   aiCoverage: "Curriculum covered",
   aiThisWeek: "This week",

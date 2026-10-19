@@ -3,7 +3,7 @@ import { preparer, attendreAccueil } from './eleve.js'
 
 // Se déconnecter depuis une page réservée aux élèves inscrits doit ramener à
 // l'accueil, pas laisser un écran blanc (hooks React appelés après une redirection).
-const PAGES_ELEVE = ['/bac-blanc', '/programme', '/revision', '/coach', '/express', '/coach-ia', '/amis', '/grand-oral', '/etude-de-gestion']
+const PAGES_ELEVE = ['/bac-blanc', '/programme', '/revision', '/coach', '/atelier-formules', '/coach-ia', '/amis', '/grand-oral', '/etude-de-gestion']
 for (const route of PAGES_ELEVE) {
   test(`déconnexion depuis ${route}`, async ({ page }) => {
     const erreurs = await preparer(page)

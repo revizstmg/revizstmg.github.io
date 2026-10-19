@@ -200,18 +200,6 @@ export default function Home() {
         )
       })()}
 
-      {/* Accès rapides : révision express + formulaire */}
-      <div className="grid grid-cols-2 gap-3">
-        <Link to="/express" className="card flex items-center gap-2.5 p-3.5 transition hover:-translate-y-0.5 hover:shadow-md">
-          <span className="text-2xl" aria-hidden>⏱️</span>
-          <span className="min-w-0"><span className="block text-sm font-semibold leading-tight">{t('expressMode')}</span><span className="block text-xs text-slate-400">{t('expressCardHint')}</span></span>
-        </Link>
-        <Link to="/formules" className="card flex items-center gap-2.5 p-3.5 transition hover:-translate-y-0.5 hover:shadow-md">
-          <span className="text-2xl" aria-hidden>📐</span>
-          <span className="min-w-0"><span className="block text-sm font-semibold leading-tight">{t('formulasTitle')}</span><span className="block text-xs text-slate-400">{t('formulasCardHint')}</span></span>
-        </Link>
-      </div>
-
       {/* Réviser & réussir — outils regroupés en tuiles compactes */}
       <section>
         <SectionHead title={t('secRevise')} />
@@ -223,6 +211,7 @@ export default function Home() {
           <Tile to="/coach" icon="🎯" label={t('coach')} accent="#f59e0b" />
           {level === 'terminale-stmg' && <Tile to="/grand-oral" icon="🎓" label={t('grandOral')} accent="#8a6d1e" />}
           {state.track?.level === 'premiere-stmg' && <Tile to="/etude-de-gestion" icon="🔎" label={t('egTitle')} sub={t('egTileSub')} accent="#4f46e5" />}
+          <Tile to="/atelier-formules" icon="📐" label={tr('Atelier de formules')} sub={tr('Choisis tes formules et entraîne-toi')} accent="#047857" />
           <Tile to="/fiches-photo" icon="📸" label={t('photoFiche')} sub={t('photoFicheSub')} accent="#16a34a" />
           <Tile to="/favoris" icon="⭐" label={t('favorites')} sub={`${state.favorites.length} ${t(state.favorites.length > 1 ? 'chapToReviewP' : 'chapToReviewM')}`} accent="#eab308" />
         </div>

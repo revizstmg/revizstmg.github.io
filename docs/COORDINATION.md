@@ -57,7 +57,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | MATIERES-20261019-CODEX-01 | Codex | Cases matières compactes : quatre colonnes ordinateur, deux mobile ; Home/CSS/tests | Terminé | `fix/matieres-compactes` | Publication suivie dans la PR |
 
-| FORMULES-20261019-CODEX-01 | Codex | Retrait Express/Formulaire, atelier de calcul par formules ; routes, Home, moteur, traductions et tests | En cours | `feat/atelier-formules` | Génération numérique et corrections reliées aux formules du site ; aucun store/auth/Supabase |
+| FORMULES-20261019-CODEX-01 | Codex | Retrait Express/Formulaire, atelier de calcul par formules ; routes, Home, moteur, traductions et tests | Terminé | `feat/atelier-formules` | Publication suivie dans la PR |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -324,6 +324,29 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 - Validation : 188 tests unitaires, compilation et quatre parcours accueil
   réussis. Grille vérifiée visuellement sur ordinateur. Branche
   `fix/matieres-compactes` ; publication suivie dans la PR.
+
+### FORMULES-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
+
+- Demande : supprimer Révision express et Formulaire ; choisir des formules pour
+  générer automatiquement des exercices numériques.
+- Réalisé : atelier avec recherche, filtre matière, sélection multiple, un à cinq
+  exercices par formule, nouvelles valeurs, saisie numérique, correction avec
+  substitution des valeurs, bilan et nouvelle série. 40 formules du catalogue,
+  filtrées par niveau/spécialité. Aucun score de chapitre ni XP modifié.
+- Anciennes pages supprimées ; `/express` et `/formules` redirigent vers
+  `/atelier-formules`. Les préférences d’onglets Express/Formules migrent vers
+  le nouvel atelier. Routage 404 et fil d’Ariane mis à jour. La mesure conserve
+  la clé existante « formules » sans changement de serveur ni de base.
+- Contenu : nouveau JSON commun, expressions arithmétiques interprétées sans eval,
+  nombres et corrections calculés localement. Contrôle des saisies à virgule,
+  point, espaces et chiffres arabes ; aucun champ saisi transmis à la traduction.
+- Traductions : titre/navigation dans les cinq langues, nouveaux textes UI dans
+  les quatre dictionnaires publics ; noms/formules pédagogiques par le moteur
+  public existant. Aucun changement d’authentification/store/Supabase.
+- Vérifications : 192 tests unitaires, compilation et six parcours navigateur
+  (accueil, reprise, arabe/sombre, séance et redirections), calculs de référence,
+  4 000 tirages, filtrage et sélection. Empreintes des cours inchangées.
+- Branche `feat/atelier-formules` ; référence PR et publication suivies dans la PR.
 
 ### Modèle à copier pour une nouvelle tâche
 
