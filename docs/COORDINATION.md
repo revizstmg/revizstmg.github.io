@@ -59,6 +59,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | FORMULES-20261019-CODEX-01 | Codex | Retrait Express/Formulaire, atelier de calcul par formules ; routes, Home, moteur, traductions et tests | Terminé | `feat/atelier-formules` | Publication suivie dans la PR |
 
+| TROUSSE-20261019-CLAUDE-01 | Claude | Demande du propriétaire : « Réviser & réussir » de l'accueil plus discret, sans afficher tous les outils d'un coup. Fichiers : nouveau `components/OutilsAccueil.jsx`, `Home.jsx` (fichier de Codex : la section remplacée par ce composant), tests, README | Terminé | `claude/accueil-outils`, PR #22 | Fusion demandée par le propriétaire ; publication suivie dans la PR |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -347,6 +349,28 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   (accueil, reprise, arabe/sombre, séance et redirections), calculs de référence,
   4 000 tirages, filtrage et sélection. Empreintes des cours inchangées.
 - Branche `feat/atelier-formules` ; référence PR et publication suivies dans la PR.
+
+### TROUSSE-20261019-CLAUDE-01 — Claude — 19 octobre 2026 (Paris)
+
+- Demande du propriétaire : sur l'accueil, « Réviser & réussir » ne doit plus
+  montrer toutes les options d'un coup ; quelque chose d'original et de discret.
+- Résultat : une seule carte. En haut, « Conseillé maintenant » : un outil choisi
+  d'après la situation de l'élève (bac dans moins de 30 jours → bac blanc ;
+  thèmes de la filière à réviser aujourd'hui → révision intelligente ; chapitres
+  à revoir → favoris ; sinon le programme jusqu'au bac). En dessous, « Ta
+  trousse · 8 outils » : les icônes empilées des autres outils, une ligne qui se
+  déplie en liste compacte. Fermée par défaut ; l'appareil se souvient du choix
+  (`stmg_trousse_ouverte`). Mêmes outils et mêmes libellés qu'avant (Grand Oral en
+  Terminale, étude de gestion en Première), plus l'atelier de formules de la PR #23.
+- `Home.jsx` (couloir de Codex) : la section et les tuiles devenues inutiles sont
+  remplacées par `<OutilsAccueil />`. Le reste de l'accueil ne change pas. Le
+  parcours de l'étude de gestion ouvre la trousse avant de cliquer.
+- Vérifications : 194 tests unitaires (dont 6 pour l'outil conseillé),
+  compilation, 116 parcours navigateur (dont la trousse), captures sur téléphone
+  (clair, sombre) et ordinateur.
+- Branche partie de `main` : indépendante des PR #14, #18 et #20 (la PR #14
+  touche deux autres lignes de `Home.jsx`, sans conflit). À jour avec `main`,
+  cases matières compactes de la PR #21 comprises.
 
 ### Modèle à copier pour une nouvelle tâche
 
