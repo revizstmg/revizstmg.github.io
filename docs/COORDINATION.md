@@ -51,6 +51,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | PROGRAMME-20261019-CODEX-01 | Codex | Limiter le programme bac de Première au français et aux maths : study.js, Programme.jsx et tests | Terminé | [PR #16](https://github.com/revizstmg/revizstmg.github.io/pull/16) | Publication suivie dans les Actions |
 
+| HOME-20261019-CODEX-01 | Codex | Refonte accueil : Home, CSS dédié, reprise de lecture Chapter/Course, présentation Welcome, traductions et tests | Terminé | [PR #17](https://github.com/revizstmg/revizstmg.github.io/pull/17) | Validation et publication suivies dans la PR ; aucun changement auth/store |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -266,6 +268,28 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   de contenu modifiée. Validation complète et publication dans les Actions.
 - Périmètre : study.js, Programme.jsx et leurs tests ; aucun fichier de sauvegarde
   ou de dates modifié. Branche `fix/programme-premiere`, PR #16.
+
+### HOME-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
+
+- Demande : refonte libre de l’accueil, avec possibilité de revenir au rendu précédent.
+- Réalisé : fond papier et palette vert profond, thème conseillé selon les besoins,
+  matières en grille avec décompte de thèmes, outils regroupés, progression et
+  espaces partagés secondaires. Étude de gestion en Première, Grand Oral en Terminale.
+- Reprise : la dernière fiche et sa page sont conservées sur cet appareil,
+  séparément par identifiant de compte ; les comptes déjà configurés entrent
+  directement. Le formulaire d’entrée présente la valeur du site et met l’essai
+  sans compte en évidence. Aucun changement des règles d’authentification.
+- Traductions : nouveaux textes en français, anglais, espagnol, italien et arabe ;
+  titres des cours via le moteur public existant. Mode sombre conservé.
+- Vérifications : 188 tests unitaires et compilation ; 10 parcours navigateur réussis : mobile,
+  bureau, reprise de lecture, arabe/sombre, pagination et comptes.
+  Les résultats définitifs et la publication sont suivis dans la PR #17.
+- Périmètre : Home/CSS, présentation Welcome, Chapter/Course, repère local,
+  dictionnaires publics, tests, README. Aucun changement store/auth/SRS/Supabase,
+  réservés à Claude dans la PR #14. Un chevauchement Home est à rebaser si nécessaire.
+- Branche `feat/nouvel-accueil`, PR #17. Version publiée avant cette refonte :
+  `621551e`. En cas de retour arrière, révoquer la fusion de cette PR pour préserver
+  les autres travaux ; ne pas réinitialiser main.
 
 ### Modèle à copier pour une nouvelle tâche
 
