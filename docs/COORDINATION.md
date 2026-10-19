@@ -49,7 +49,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | PEDAGO-20261019-CODEX-01 | Codex | X06 : deux corrections SDGN Première ; X01 : finaliser les cinq jeux de la PR #6 ; contenu, moteur et tests uniquement | Terminé | [PR #15](https://github.com/revizstmg/revizstmg.github.io/pull/15) | Valider les corrections et les parcours |
 
-| PROGRAMME-20261019-CODEX-01 | Codex | Limiter le programme bac de Première au français et aux maths : study.js, Programme.jsx et tests | En cours | `fix/programme-premiere` | Filtrer les objectifs avant sélection et aligner la progression affichée |
+| PROGRAMME-20261019-CODEX-01 | Codex | Limiter le programme bac de Première au français et aux maths : study.js, Programme.jsx et tests | Terminé | [PR #16](https://github.com/revizstmg/revizstmg.github.io/pull/16) | Publication suivie dans les Actions |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -249,6 +249,23 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   de sauvegarde/dates travaillés par Claude dans la PR #14. Le journal et le README
   reçoivent uniquement les informations de cette tâche.
 - Branche `fix/sdgn-et-exercices`, PR #15 ; remplace la PR #6 à sa fusion.
+
+### PROGRAMME-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
+
+- Demande : le programme bac de Première STMG doit faire réviser uniquement
+  le français et les mathématiques pour les épreuves anticipées.
+- Cause : le calendrier était déjà correct, mais les objectifs du jour utilisaient
+  la file de révision de toute la filière. Le filtrage est désormais appliqué
+  avant la sélection des quatre objectifs, même si une autre matière est urgente.
+- Avancement de cette page : thèmes maîtrisés et total calculés sur le même
+  périmètre (français/mathématiques en Première, filière complète en Terminale).
+  Les révisions générales disposent toujours de toutes les matières.
+- Vérifications : 186 tests unitaires et compilation réussis ; parcours navigateur
+  réussi avec SDGN maîtrisé/en retard, quatre objectifs français ou maths,
+  progression ciblée à zéro et lien vers une matière autorisée. Aucune empreinte
+  de contenu modifiée. Validation complète et publication dans les Actions.
+- Périmètre : study.js, Programme.jsx et leurs tests ; aucun fichier de sauvegarde
+  ou de dates modifié. Branche `fix/programme-premiere`, PR #16.
 
 ### Modèle à copier pour une nouvelle tâche
 
