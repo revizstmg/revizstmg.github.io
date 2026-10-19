@@ -61,6 +61,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | TROUSSE-20261019-CLAUDE-01 | Claude | Demande du propriétaire : « Réviser & réussir » de l'accueil plus discret, sans afficher tous les outils d'un coup. Fichiers : nouveau `components/OutilsAccueil.jsx`, `Home.jsx` (fichier de Codex : la section remplacée par ce composant), tests, README | Terminé | `claude/accueil-outils`, PR #22 | Fusion demandée par le propriétaire ; publication suivie dans la PR |
 
+| AUDIT5-20261019-CODEX-01 | Codex et cinq agents lancés | Audit cours/exercices, lecture seule du code ; rapport et contrôles globaux | Terminé, couverture limitée explicitée | `docs/audit-cours-exercices` | Corriger séparément les anomalies confirmées après ce bilan |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -388,3 +390,22 @@ Vérifications et résultats :
 Blocages / décisions attendues :
 Prochaine action :
 ```
+
+### AUDIT5-20261019-CODEX-01 — 19 octobre 2026 (Paris)
+
+- Demande : lancer cinq agents pour vérifier cours et exercices, puis terminer.
+- Cinq agents lancés, répartis sur les 19 matières et les générateurs. Leur
+  exécution a été interrompue par une limite d’utilisation avant les rapports
+  finaux. Codex a repris et reproduit les constats disponibles.
+- Contrôle automatique sur l’assemblage réel : 19 matières, 94 thèmes,
+  806 sections, 5 558 instances de jeux, 23 787 questions et 2 291 cartes.
+  Aucun index de réponse invalide, choix dupliqué, ou choix/carte généré
+  absent textuellement de sa section selon le contrôle décrit dans le rapport.
+- 192 tests unitaires réussis. Ces résultats ne certifient pas l’exactitude
+  factuelle des cours ni la pertinence pédagogique des jeux manuels.
+- Anomalies confirmées : écriture comptable GF déséquilibrée de 19 € ;
+  études de documents multi-chapitres rattachées à un seul chapitre.
+  Autre point à corriger : responsabilité des associés présentée comme
+  limitée grâce à la seule personnalité morale, sans préciser la forme sociale.
+- Rapport : `docs/AUDIT-COURS-2026-10-19.md`. Aucun cours, exercice ou
+  réglage de production modifié dans cet audit.
