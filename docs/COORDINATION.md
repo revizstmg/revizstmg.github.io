@@ -57,6 +57,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | MATIERES-20261019-CODEX-01 | Codex | Cases matières compactes : quatre colonnes ordinateur, deux mobile ; Home/CSS/tests | Terminé | `fix/matieres-compactes` | Publication suivie dans la PR |
 
+| FORMULES-20261019-CODEX-01 | Codex | Retrait Express/Formulaire, atelier de calcul par formules ; routes, Home, moteur, traductions et tests | En cours | `feat/atelier-formules` | Génération numérique et corrections reliées aux formules du site ; aucun store/auth/Supabase |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
