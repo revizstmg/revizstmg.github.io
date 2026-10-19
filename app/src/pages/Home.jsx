@@ -5,10 +5,10 @@ import { subjectsForTrack, getLevel, getSpecialty } from '../data/tracks.js'
 import { useStore, subjectScore } from '../store.jsx'
 import { nextMilestone } from '../data/rewards.js'
 import { ProgressBar, Ring, Icon } from '../components/ui.jsx'
+import OutilsAccueil from '../components/OutilsAccueil.jsx'
 import { useT, usePublicText } from '../i18n.js'
 
 import { readPosition } from '../data/readingPosition.js'
-import OutilsAccueil from '../components/OutilsAccueil.jsx'
 import './Home.css'
 
 export default function Home() {
