@@ -1,5 +1,6 @@
 // Source française des libellés de l’interface.
 export default {
+  formulaWorkshop: 'Atelier de formules',
   // en-tête / navigation
   search: 'Rechercher un chapitre', dictionary: 'Dictionnaire', language: 'Langue',
   mySpace: 'mon espace', light: 'Passer en mode clair', dark: 'Passer en mode sombre',

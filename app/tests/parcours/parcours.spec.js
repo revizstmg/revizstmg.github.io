@@ -85,7 +85,7 @@ const PAGES = [
   ['/fiches-photo', /./],
   ['/defi', /./],
   ['/express', /./],
-  ['/formules', /Formulaire/],
+  ['/formules', /Atelier de formules/],
   ['/methodo', /./],
   ['/boutique', /./],
   ['/confidentialite', /confidentialité/i],
