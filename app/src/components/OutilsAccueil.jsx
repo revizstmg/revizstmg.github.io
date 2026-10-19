@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useStore } from '../store.jsx'
-import { useT } from '../i18n.js'
+import { useT, usePublicText } from '../i18n.js'
 import { subjectsForTrack } from '../data/tracks.js'
 import { todayKey, daysUntil, defaultBacDate } from '../data/srs.js'
 
@@ -36,6 +36,7 @@ function lireTrousse() {
 export default function OutilsAccueil() {
   const { state } = useStore()
   const t = useT()
+  const tr = usePublicText()
   const [ouverte, setOuverte] = useState(lireTrousse)
   const level = state.track?.level
   const nbFavoris = (state.favorites || []).length
@@ -47,6 +48,7 @@ export default function OutilsAccueil() {
     { id: 'coach-ia', to: '/coach-ia', icon: '🤖', label: t('coachAI'), sub: t('aiTraining') },
     level === 'terminale-stmg' && { id: 'grand-oral', to: '/grand-oral', icon: '🎓', label: t('grandOral') },
     level === 'premiere-stmg' && { id: 'etude-de-gestion', to: '/etude-de-gestion', icon: '🔎', label: t('egTitle'), sub: t('egTileSub') },
+    { id: 'atelier-formules', to: '/atelier-formules', icon: '📐', label: tr('Atelier de formules'), sub: tr('Choisis tes formules et entraîne-toi') },
     { id: 'fiches-photo', to: '/fiches-photo', icon: '📸', label: t('photoFiche'), sub: t('photoFicheSub') },
     { id: 'favoris', to: '/favoris', icon: '⭐', label: t('favorites'), sub: `${nbFavoris} ${t(nbFavoris > 1 ? 'chapToReviewP' : 'chapToReviewM')}` },
   ].filter(Boolean)

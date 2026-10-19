@@ -9,13 +9,13 @@ test('un outil conseillé, les autres dans la trousse', async ({ page }) => {
   await attendreAccueil(page)
   const section = page.locator('section', { has: page.getByRole('heading', { name: 'Réviser & réussir' }) })
   await expect(section.getByRole('link', { name: /Conseillé maintenant.*Favoris/ })).toHaveAttribute('href', '#/favoris')
-  const trousse = section.getByRole('button', { name: /Ta trousse · 7 outils/ })
+  const trousse = section.getByRole('button', { name: /Ta trousse · 8 outils/ })
   await expect(trousse).toHaveAttribute('aria-expanded', 'false')
   await expect(section.getByRole('link')).toHaveCount(1)
 
   await trousse.click()
   await expect(section.getByRole('button', { name: 'Refermer ta trousse' })).toHaveAttribute('aria-expanded', 'true')
-  await expect(section.getByRole('link')).toHaveCount(8)
+  await expect(section.getByRole('link')).toHaveCount(9)
   await expect(section.getByRole('link', { name: /Favoris/ })).toHaveCount(1)
 
   // L'appareil se souvient de la trousse ouverte.

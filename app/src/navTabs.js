@@ -6,8 +6,7 @@ export const ALL_TABS = {
   revision: { icon: '📚', labelKey: 'reviseTab', to: '/revision', match: ['/revision', '/subject'] },
   coachia: { icon: '🤖', labelKey: 'coachAI', to: '/coach-ia', match: ['/coach-ia'] },
   defi: { icon: '⚡', labelKey: 'dailyChallenge', to: '/defi', match: ['/defi'] },
-  express: { icon: '⏱️', labelKey: 'expressMode', to: '/express', match: ['/express'] },
-  formules: { icon: '📐', labelKey: 'formulasTitle', to: '/formules', match: ['/formules'] },
+  formules: { icon: '📐', labelKey: 'formulaWorkshop', to: '/atelier-formules', match: ['/atelier-formules', '/formules', '/express'] },
   methodo: { icon: '🧭', labelKey: 'methodoTitle', to: '/methodo', match: ['/methodo'] },
   boutique: { icon: '🛍️', labelKey: 'shop', to: '/boutique', match: ['/boutique'] },
   amis: { icon: '🤝', labelKey: 'friends', to: '/amis', match: ['/amis'] },
@@ -30,7 +29,7 @@ export const DEFAULT_TABS = ['accueil', 'revision', 'boutique', 'amis', 'classem
 
 // Nettoie la sélection de l'élève : ids connus, uniques, 2 à 5 onglets.
 export function resolveTabs(ids) {
-  const list = (Array.isArray(ids) && ids.length ? ids : DEFAULT_TABS).filter((id) => ALL_TABS[id])
+  const list = (Array.isArray(ids) && ids.length ? ids : DEFAULT_TABS).map(id => id === 'express' ? 'formules' : id).filter((id) => ALL_TABS[id])
   const uniq = [...new Set(list)].slice(0, 5)
   return uniq.length >= 2 ? uniq : DEFAULT_TABS
 }
