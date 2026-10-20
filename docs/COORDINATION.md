@@ -868,3 +868,10 @@ Prochaine action :
   /sitemap.xml. Le diagnostic documente cette divergence avec le rapport.
 - Le contournement n’est pas annoncé comme un succès Search Console avant que
   le propriétaire ait envoyé sitemap.txt et vérifié son état dans Google.
+
+- Retour après publication : le propriétaire confirme que **les deux** entrées,
+  sitemap.xml et sitemap.txt, restent en échec ; aucune action manuelle détectée.
+  Le contournement texte n’a pas résolu le statut Google. Contrôle HTTP répété :
+  les deux restent accessibles avec 200 et types MIME corrects. Rapport de
+  diagnostic actualisé ; état du rapport robots.txt de Google demandé au
+  propriétaire. Aucune nouvelle modification applicative justifiée à ce stade.
