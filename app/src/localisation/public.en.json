@@ -498,5 +498,6 @@
   "Ta progression est enregistrée sur ton compte.": "Your progress is saved to your account.",
   "Tes derniers changements partent sur ton compte dans un instant.": "Your latest changes will be sent to your account in a moment.",
   "Tes derniers changements ne sont pas encore sur ton compte.": "Your latest changes are not on your account yet.",
-  "Lancer les exercices": "Start the exercises"
+  "Lancer les exercices": "Start the exercises",
+  "Les espaces partagés sont protégés par les règles d’accès de la base. Selon l’espace, l’accès dépend de ton compte, de ton rôle, de ta classe ou du code que tu partages. Utilise un prénom ou un surnom ; la photo est facultative.": "Shared spaces are protected by database access rules. Depending on the space, access depends on your account, role, class or the code you share. Use a first name or nickname; adding a photo is optional."
 }

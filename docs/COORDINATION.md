@@ -753,3 +753,6 @@ Prochaine action :
 - Aucune action Supabase ; aucune modification des règles, des données ni des
   autres sections juridiques. Recette par la chaîne existante avant publication.
 - Branche : `fix/confidentialite-acces`. État : en cours.
+
+- #35 : paragraphe actualisé et traduit hors ligne dans les quatre langues ;
+  retrait de l’ancienne description d’espaces encore ouverts. Recette en cours.

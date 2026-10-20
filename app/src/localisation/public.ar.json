@@ -498,5 +498,6 @@
   "Ta progression est enregistrée sur ton compte.": "تقدّمك محفوظ في حسابك.",
   "Tes derniers changements partent sur ton compte dans un instant.": "ستُرسل آخر تغييراتك إلى حسابك بعد لحظة.",
   "Tes derniers changements ne sont pas encore sur ton compte.": "آخر تغييراتك ليست في حسابك بعد.",
-  "Lancer les exercices": "ابدأ التمارين"
+  "Lancer les exercices": "ابدأ التمارين",
+  "Les espaces partagés sont protégés par les règles d’accès de la base. Selon l’espace, l’accès dépend de ton compte, de ton rôle, de ta classe ou du code que tu partages. Utilise un prénom ou un surnom ; la photo est facultative.": "المساحات المشتركة محمية بقواعد الوصول في قاعدة البيانات. يعتمد الوصول، بحسب المساحة، على حسابك أو دورك أو صفك أو الرمز الذي تشاركه. استخدم اسمك الأول أو اسمًا مستعارًا؛ والصورة اختيارية."
 }
