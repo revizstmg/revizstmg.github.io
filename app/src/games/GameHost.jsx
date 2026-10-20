@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useStore, starsFromScore } from '../store.jsx'
 import { chapitreDuJeu } from '../data/index.js'
@@ -6,6 +6,7 @@ import { ContexteCorrection } from './common.jsx'
 import { Stars, Confetti, Icon } from '../components/ui.jsx'
 import { useT } from '../i18n.js'
 import SignalerErreur from '../components/SignalerErreur.jsx'
+import { useFenetreClavier } from '../components/clavier.js'
 import Qcm from './Qcm.jsx'
 import VraiFaux from './VraiFaux.jsx'
 import Flashcards from './Flashcards.jsx'
@@ -68,14 +69,18 @@ const REJOUABLES = new Set(['qcm', 'vraifaux', 'trou', 'saisie'])
 
 // L'exercice occupe tout l'écran (ni en-tête ni barre du bas) : moins de
 // distractions et de touchers perdus. La page en dessous ne défile plus.
+// Au clavier, Tab reste dans l'exercice et le focus revient ensuite sur la page ;
+// Échap ne quitte pas, pour ne pas perdre une série par mégarde (« Quitter » le fait).
 function PleinEcran({ titre, children }) {
+  const fenetre = useRef(null)
+  useFenetreClavier(fenetre, null, true, { focusSurRacine: true })
   useEffect(() => {
     const avant = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     return () => { document.body.style.overflow = avant }
   }, [])
   return createPortal(
-    <div data-exercice className="no-print fixed inset-0 z-[60] overflow-y-auto" style={{ background: 'var(--c-bg)' }} role="dialog" aria-modal="true" aria-label={titre}>
+    <div ref={fenetre} data-exercice className="no-print fixed inset-0 z-[60] overflow-y-auto focus:outline-none" style={{ background: 'var(--c-bg)' }} role="dialog" aria-modal="true" aria-label={titre}>
       <div className="mx-auto max-w-2xl px-4 pb-10" style={{ paddingTop: 'max(1rem, env(safe-area-inset-top))' }}>{children}</div>
     </div>,
     document.body,

@@ -1,5 +1,5 @@
 import { TranslationStatus } from '../localisation/PublicText.jsx'
-import { lazy, Suspense, useEffect, useMemo, useState } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useStore, levelFromXp } from '../store.jsx'
@@ -14,10 +14,11 @@ const Customizer = lazy(() => import('./Customizer.jsx'))
 import Accessibility from './Accessibility.jsx'
 import ReminderScheduler from './ReminderScheduler.jsx'
 import { useFenetreAutomatique } from '../fenetres.js'
+import { useFenetreClavier } from './clavier.js'
 import { InstallBanner } from './InstallApp.jsx'
 import { BandeauCookies } from './BandeauCookies.jsx'
 import { BandeauEssai } from './CompteRequis.jsx'
-import EtatSauvegarde from './EtatSauvegarde.jsx'
+import EtatSauvegarde, { IndicateurSauvegarde } from './EtatSauvegarde.jsx'
 import { useT, useLang } from '../i18n.js'
 import { useFocus } from '../focus.jsx'
 import { useInstall } from '../pwa.js'
@@ -126,6 +127,8 @@ export default function Layout({ children }) {
             </Link>
           )}
 
+          {!parentSeul && <IndicateurSauvegarde />}
+
           {!parentSeul && (
           <div className="flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400" title={t('streakTitle')}>
             <Icon.Flame size={15} />
@@ -181,7 +184,7 @@ export default function Layout({ children }) {
             {langOpen && (
               <>
                 <div className="fixed inset-0 z-40" onClick={() => setLangOpen(false)} />
-                <div className="absolute right-0 z-50 mt-1 w-36 overflow-hidden rounded-xl border border-slate-200 bg-white py-1 shadow-lg dark:border-slate-700 dark:bg-slate-900">
+                <Deroulant onClose={() => setLangOpen(false)} role="group" aria-label={t('language')} className="absolute right-0 z-50 mt-1 w-36 overflow-hidden rounded-xl border border-slate-200 bg-white py-1 shadow-lg dark:border-slate-700 dark:bg-slate-900">
                   {LANGS.map((l) => (
                     <button
                       key={l.code}
@@ -192,7 +195,7 @@ export default function Layout({ children }) {
                       {lang === l.code && <span aria-hidden>✓</span>}
                     </button>
                   ))}
-                </div>
+                </Deroulant>
               </>
             )}
           </div>
@@ -211,7 +214,7 @@ export default function Layout({ children }) {
               {profileOpen && (
                 <>
                   <div className="fixed inset-0 z-40" onClick={() => setProfileOpen(false)} />
-                  <div className="absolute right-0 z-50 mt-1.5 w-56 overflow-hidden rounded-xl border border-slate-200 bg-white py-1 shadow-lg dark:border-slate-700 dark:bg-slate-900">
+                  <Deroulant onClose={() => setProfileOpen(false)} role="group" aria-label={t('myMenu')} className="absolute right-0 z-50 mt-1.5 w-56 overflow-hidden rounded-xl border border-slate-200 bg-white py-1 shadow-lg dark:border-slate-700 dark:bg-slate-900">
                     {(first || last) && (
                       <div className="border-b border-slate-100 px-3 py-2 dark:border-slate-800">
                         <p className="truncate text-sm font-semibold">{`${first} ${last}`.trim()}</p>
@@ -230,7 +233,7 @@ export default function Layout({ children }) {
                     <button onClick={() => { setProfileOpen(false); logout() }} className="flex w-full items-center gap-2 border-t border-slate-100 px-3 py-2.5 text-start text-sm font-semibold text-rose-600 hover:bg-rose-50 dark:border-slate-800 dark:hover:bg-rose-950/40">
                       <span aria-hidden>🚪</span> {t('signOut')}
                     </button>
-                  </div>
+                  </Deroulant>
                 </>
               )}
             </div>
@@ -340,10 +343,13 @@ function MobileMenu({ className = '', parentSeul = false, state, isDark, standal
           {/* Fond plein écran (via portal pour échapper au backdrop-blur du header) :
               tout tap en dehors du menu le referme. */}
           <div className="no-print fixed inset-0 z-[90] bg-slate-900/25" onClick={close} aria-hidden />
-          <div
+          <Deroulant
+            onClose={close}
             className="no-print fixed right-3 z-[91] w-64 overflow-hidden rounded-2xl border border-slate-200 bg-white py-1 shadow-2xl dark:border-slate-700 dark:bg-slate-900"
             style={{ top: 'calc(env(safe-area-inset-top) + 3.25rem)' }}
-            role="menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label={t('menu')}
           >
             {/* En-tête du menu avec une croix bien visible pour refermer / revenir. */}
             <div className="flex items-center justify-between border-b border-slate-100 px-4 py-2.5 dark:border-slate-800">
@@ -418,7 +424,7 @@ function MobileMenu({ className = '', parentSeul = false, state, isDark, standal
                 <Item icon="🚪" label={t('signOut')} onClick={onSignOut} danger />
               </div>
             )}
-          </div>
+          </Deroulant>
         </>,
         document.body,
       )}
@@ -507,17 +513,22 @@ function Breadcrumb() {
   )
 }
 
+// Panneau déroulant (langue, menu du profil, menu du téléphone) : Échap le
+// ferme, Tab reste dedans, le focus revient sur le bouton qui l'a ouvert.
+function Deroulant({ onClose, children, ...props }) {
+  const panneau = useRef(null)
+  useFenetreClavier(panneau, onClose)
+  return <div ref={panneau} {...props}>{children}</div>
+}
+
 function SearchOverlay({ onClose }) {
   const [q, setQ] = useState('')
   const navigate = useNavigate()
   const t = useT()
   const results = useMemo(() => search(q), [q])
 
-  useEffect(() => {
-    const onKey = (e) => e.key === 'Escape' && onClose()
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
+  const fenetre = useRef(null)
+  useFenetreClavier(fenetre, onClose)
 
   const go = (r) => {
     onClose()
@@ -526,7 +537,7 @@ function SearchOverlay({ onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center bg-slate-900/50 p-4 pt-20 backdrop-blur-sm" onClick={onClose}>
-      <div className="card w-full max-w-lg animate-pop-in p-3" onClick={(e) => e.stopPropagation()}>
+      <div ref={fenetre} role="dialog" aria-modal="true" aria-label={t('search')} className="card w-full max-w-lg animate-pop-in p-3" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center gap-2 rounded-xl bg-slate-100 px-3 dark:bg-slate-800">
           <span aria-hidden>🔍</span>
           <input
@@ -650,13 +661,15 @@ function DailyRewardModal() {
   // La récompense est créditée dans tous les cas ; sa fenêtre ne s'ouvre que si
   // aucune autre ne s'est ouverte pendant la visite.
   const montree = useFenetreAutomatique('recompense', !!dailyReward)
+  const fenetre = useRef(null)
+  useFenetreClavier(fenetre, clearDailyReward, !!dailyReward && montree)
   if (!dailyReward || !montree) return null
   const { count, xp, milestone } = dailyReward
   return createPortal(
     <>
       <Confetti show />
       <div className="no-print fixed inset-0 z-[80] flex items-center justify-center bg-black/50 p-4" role="dialog" aria-modal="true" onClick={clearDailyReward}>
-        <div className="w-full max-w-xs animate-bounce-in rounded-3xl bg-white p-6 text-center shadow-2xl dark:bg-slate-900" onClick={(e) => e.stopPropagation()}>
+        <div ref={fenetre} className="w-full max-w-xs animate-bounce-in rounded-3xl bg-white p-6 text-center shadow-2xl dark:bg-slate-900" onClick={(e) => e.stopPropagation()}>
           <div className="text-5xl">{milestone ? milestone.icon : '🔥'}</div>
           <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-amber-500">{t('dailyRewardTitle')}</p>
           <h2 className="mt-1 font-display text-2xl font-bold">{count} {t(count > 1 ? 'daysStreakP' : 'daysStreakS')}</h2>

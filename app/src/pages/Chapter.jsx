@@ -57,7 +57,12 @@ export default function Chapter() {
   if (activeGame) {
     return (
       <div className="space-y-4">
-        <GameHost game={activeGame} chapterId={tid} color={color} onExit={() => setActiveGame(null)} />
+        <GameHost game={activeGame} chapterId={tid} color={color} onExit={() => {
+          // Au clavier, le focus revient sur l'exercice qu'on vient de quitter.
+          const id = activeGame.id
+          setActiveGame(null)
+          requestAnimationFrame(() => document.querySelector(`[data-jeu="${CSS.escape(id)}"]`)?.focus())
+        }} />
       </div>
     )
   }
@@ -196,6 +201,7 @@ export default function Chapter() {
           return (
             <button
               key={g.id}
+              data-jeu={g.id}
               onClick={() => setActiveGame(g)}
               className="card flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md"
             >

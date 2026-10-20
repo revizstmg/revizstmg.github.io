@@ -445,5 +445,12 @@
   "Bulletin officiel spécial n° 4 (PDF)": "Boletín oficial especial n.º 4 (PDF)",
   "Pour travailler les automatismes de calcul : choisis « Maths » ci-dessous et réponds sans calculatrice.": "Para trabajar los automatismos de cálculo: elige «Matemáticas» abajo y responde sin calculadora.",
   "⏱ QCM chronométré": "⏱ Test cronometrado",
-  "Pour vérifier tes connaissances, matière par matière. Ce n’est pas le format de l’épreuve écrite.": "Para comprobar tus conocimientos, asignatura por asignatura. No es el formato de la prueba escrita."
+  "Pour vérifier tes connaissances, matière par matière. Ce n’est pas le format de l’épreuve écrite.": "Para comprobar tus conocimientos, asignatura por asignatura. No es el formato de la prueba escrita.",
+  "Enregistré": "Guardado",
+  "En attente": "Pendiente",
+  "Non enregistré": "No guardado",
+  "Ta progression est enregistrée sur ton compte.": "Tu progreso está guardado en tu cuenta.",
+  "Tes derniers changements partent sur ton compte dans un instant.": "Tus últimos cambios se enviarán a tu cuenta en un momento.",
+  "Tes derniers changements ne sont pas encore sur ton compte.": "Tus últimos cambios todavía no están en tu cuenta.",
+  "Lancer les exercices": "Empezar los ejercicios"
 }
