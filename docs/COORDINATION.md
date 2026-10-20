@@ -754,10 +754,15 @@ Prochaine action :
   rapportée dans #32. Texte d’interface et quatre traductions hors ligne seulement.
 - Aucune action Supabase ; aucune modification des règles, des données ni des
   autres sections juridiques. Recette par la chaîne existante avant publication.
-- Branche : `fix/confidentialite-acces`. État : en cours.
+- Branche : `fix/confidentialite-acces`. État : livré (#35).
 
 - #35 : paragraphe actualisé et traduit hors ligne dans les quatre langues ;
-  retrait de l’ancienne description d’espaces encore ouverts. Recette en cours.
+  retrait de l’ancienne description d’espaces encore ouverts. Tests locaux :
+  286 réussis ; CI #39447931411 réussie. Fusion effectuée par Claude, voir son
+  journal ci-dessous. Publication ultérieure #39470972806 et Pages #39471834104
+  réussies. La tentative de contrôle public supplémentaire depuis cet environnement
+  a échoué sur une réponse 502 du proxy ; elle ne constitue pas une recette réussie.
+  Le contrôle public précédent du lot principal reste consigné plus haut.
 
 ### FINITIONS-20261020-CLAUDE-01 — Claude — 20 octobre 2026
 
