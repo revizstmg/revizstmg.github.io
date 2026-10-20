@@ -419,7 +419,7 @@ function MobileMenu({ className = '', state, isDark, standalone, lang, first, la
 const PAGES_SIMPLES = {
   confidentialite: 'privacyPolicy', cgu: 'termsOfUse', faq: 'faq', formules: 'formulasTitle',
   methodo: 'methodoTitle', express: 'expressMode', defi: 'dailyChallenge', boutique: 'shop',
-  'fiches-photo': 'photoFiche', 'coach-ia': 'coachAI',
+  'fiches-photo': 'photoFiche', 'coach-ia': 'coachAI', 'atelier-formules': 'formulaWorkshop',
 }
 
 function Breadcrumb() {

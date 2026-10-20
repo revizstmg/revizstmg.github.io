@@ -1,8 +1,61 @@
 {
- "date": "2026-10-18",
- "heure": "2026-10-18T08:43:04.349Z",
+ "date": "2026-10-20",
+ "heure": "2026-10-20T09:16:58.477Z",
  "utilisation": {
-  "erreur": "Supabase injoignable (fetch failed)"
+  "profs": 4,
+  "eleves": 7,
+  "classes": 2,
+  "comptes": 11,
+  "niveaux": {
+   "premiere-stmg": 1,
+   "terminale-stmg": 6
+  },
+  "vues_7j": 125,
+  "actifs_1j": 1,
+  "actifs_7j": 2,
+  "ecrans_7j": {
+   "faq": 1,
+   "moi": 1,
+   "guide": 2,
+   "theme": 12,
+   "classe": 6,
+   "entree": 3,
+   "paquet": 1,
+   "parent": 1,
+   "accueil": 51,
+   "express": 1,
+   "matiere": 11,
+   "boutique": 4,
+   "chapitre": 18,
+   "coach-ia": 1,
+   "formules": 1,
+   "revision": 5,
+   "bac-blanc": 1,
+   "programme": 3,
+   "classement": 1,
+   "confidentialite": 1
+  },
+  "vues_hier": 41,
+  "actifs_30j": 2,
+  "defis_amis": 3,
+  "visites_7j": 18,
+  "nouveaux_7j": 1,
+  "specialites": {
+   "gestion-finance": 5,
+   "rh-communication": 1
+  },
+  "joueurs_amis": 2,
+  "nouveaux_30j": 1,
+  "rappels_push": 1,
+  "visites_hier": 4,
+  "defis_amis_7j": 0,
+  "sessions_live": 0,
+  "quiz_de_classe": 0,
+  "suivis_parents": 1,
+  "signalements_7j": 0,
+  "eleves_en_classe": 3,
+  "signalements_a_traiter": 0,
+  "suivis_parents_actifs_7j": 0
  },
  "contenu": {
   "matieres": 19,
@@ -10,16 +63,20 @@
   "premiere": 8,
   "themes": 94,
   "chapitres": 806,
-  "series": 12188,
-  "questions": 83194,
-  "flashcards": 2617
+  "series": 5163,
+  "questions": 27332,
+  "flashcards": 2110
  },
  "publication": {
+  "ci": {
+   "etat": "success",
+   "date": "2026-10-19T10:43:46Z"
+  },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-10-17T08:23:20Z"
+   "date": "2026-10-20T07:34:01Z"
   },
-  "modifications7j": 14
+  "modifications7j": 79
  },
  "tests": "success"
 }

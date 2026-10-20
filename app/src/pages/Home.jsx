@@ -5,31 +5,12 @@ import { subjectsForTrack, getLevel, getSpecialty } from '../data/tracks.js'
 import { useStore, subjectScore } from '../store.jsx'
 import { nextMilestone } from '../data/rewards.js'
 import { ProgressBar, Ring, Icon } from '../components/ui.jsx'
+import OutilsAccueil from '../components/OutilsAccueil.jsx'
 import { useT, usePublicText } from '../i18n.js'
 
 import { readPosition } from '../data/readingPosition.js'
 import { todayKey } from '../data/srs.js'
 import './Home.css'
-
-// Tuile compacte (icône + libellé + petit sous-titre facultatif) : sert à ranger
-// toutes les fonctionnalités dans des grilles ordonnées plutôt qu'en longs
-// bandeaux empilés.
-function Tile({ to, icon, label, sub, accent }) {
-  return (
-    <Link
-      to={to}
-      className="card flex flex-col items-center justify-start gap-1.5 p-3.5 text-center transition hover:-translate-y-0.5 hover:shadow-md"
-    >
-      <span className="grid h-11 w-11 place-items-center rounded-2xl text-xl" style={{ backgroundColor: (accent || '#8a6d1e') + '18' }} aria-hidden>{icon}</span>
-      <span className="text-[13px] font-semibold leading-tight">{label}</span>
-      {sub ? <span className="text-[11px] leading-tight text-slate-500 dark:text-slate-400">{sub}</span> : null}
-    </Link>
-  )
-}
-
-function SectionHead({ title }) {
-  return <h2 className="mb-3 px-1 font-display text-lg font-semibold text-slate-700 dark:text-slate-200">{title}</h2>
-}
 
 export default function Home() {
   const { state, derived } = useStore()
@@ -138,35 +119,18 @@ export default function Home() {
           <h2 className="font-display text-lg font-semibold text-slate-700 dark:text-slate-200">{t('mySubjects')}</h2>
           <Link to="/changer" className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('change')}</Link>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="home-subject-grid">
           {subjects.map((s) => {
-            if (s.comingSoon) {
-              return (
-                <div key={s.id} className="card relative flex items-center gap-3.5 overflow-hidden p-5 opacity-80">
-                  <span className="absolute inset-y-0 left-0 w-1" style={{ backgroundColor: s.color + '99' }} />
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: s.color + '12', boxShadow: `inset 0 0 0 1px ${s.color}33` }}>{s.icon}</span>
-                  <div className="min-w-0 flex-1 pl-1">
-                    <h3 className="font-display text-[1.05rem] font-semibold leading-tight"><CourseText text={s.name} /></h3>
-                    <span className="chip mt-1 bg-violet-100 text-violet-700 dark:bg-violet-950/50 dark:text-violet-300">{t('comingSoon')}</span>
-                  </div>
-                </div>
-              )
-            }
-            const pct = subjectScore(state, s.id)
-            return (
-              <Link key={s.id} to={`/subject/${s.id}`} className="card group relative overflow-hidden p-5 transition hover:-translate-y-0.5 hover:shadow-md">
-                <span className="absolute inset-y-0 left-0 w-1" style={{ backgroundColor: s.color + '99' }} />
-                <div className="flex items-start gap-3.5 pl-2">
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: s.color + '12', boxShadow: `inset 0 0 0 1px ${s.color}33` }}>{s.icon}</span>
-                  <div className="min-w-0 flex-1">
-                    <h3 className="font-display text-[1.05rem] font-semibold leading-tight"><CourseText text={s.name} /></h3>
-                    <p className="mb-2.5 truncate text-xs text-slate-500 dark:text-slate-400">{s.chapters.length} {t('themesCount')} · {tr(s.tagline)}</p>
-                    <ProgressBar value={pct} color={s.color} />
-                    <p className="mt-1.5 text-end text-xs font-semibold texte-matiere" style={{ '--mc': s.color }}>{pct}%</p>
-                  </div>
-                </div>
-              </Link>
-            )
+            const pct = s.comingSoon ? 0 : subjectScore(state, s.id)
+            const content = <>
+              <span className="home-subject-icon" style={{backgroundColor:s.color+'12'}} aria-hidden>{s.icon}</span>
+              <h3 className="font-display font-semibold"><CourseText text={s.name} /></h3>
+              <div className="home-subject-meta text-slate-500 dark:text-slate-400"><span>{s.chapters.length} {t('themesCount')}</span><span>{s.comingSoon ? t('comingSoon') : `${pct}%`}</span></div>
+              {!s.comingSoon && <ProgressBar value={pct} color={s.color} />}
+            </>
+            return s.comingSoon
+              ? <div key={s.id} className="card home-subject-card opacity-80">{content}</div>
+              : <Link key={s.id} to={`/subject/${s.id}`} className="card home-subject-card transition hover:-translate-y-0.5 hover:shadow-md">{content}</Link>
           })}
         </div>
       </section>
@@ -218,33 +182,8 @@ export default function Home() {
         )
       })()}
 
-      {/* Accès rapides : révision express + formulaire */}
-      <div className="grid grid-cols-2 gap-3">
-        <Link to="/express" className="card flex items-center gap-2.5 p-3.5 transition hover:-translate-y-0.5 hover:shadow-md">
-          <span className="text-2xl" aria-hidden>⏱️</span>
-          <span className="min-w-0"><span className="block text-sm font-semibold leading-tight">{t('expressMode')}</span><span className="block text-xs text-slate-400">{t('expressCardHint')}</span></span>
-        </Link>
-        <Link to="/formules" className="card flex items-center gap-2.5 p-3.5 transition hover:-translate-y-0.5 hover:shadow-md">
-          <span className="text-2xl" aria-hidden>📐</span>
-          <span className="min-w-0"><span className="block text-sm font-semibold leading-tight">{t('formulasTitle')}</span><span className="block text-xs text-slate-400">{t('formulasCardHint')}</span></span>
-        </Link>
-      </div>
-
-      {/* Réviser & réussir — outils regroupés en tuiles compactes */}
-      <section>
-        <SectionHead title={t('secRevise')} />
-        <div className="grid grid-cols-3 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-          <Tile to="/coach-ia" icon="🤖" label={t('coachAI')} sub={t('aiTraining')} accent="#0ea5e9" />
-          <Tile to="/revision" icon="🧠" label={t('smartRevision')} sub={t('priorityList')} accent="#7c3aed" />
-          <Tile to="/bac-blanc" icon="📝" label={t('mockExam')} sub="/20 · ⏱" accent="#e11d48" />
-          <Tile to="/programme" icon="📅" label={t('studyPlan')} sub={t('todayGoals')} accent="#0284c7" />
-          <Tile to="/coach" icon="🎯" label={t('coach')} accent="#f59e0b" />
-          {level === 'terminale-stmg' && <Tile to="/grand-oral" icon="🎓" label={t('grandOral')} accent="#8a6d1e" />}
-          {state.track?.level === 'premiere-stmg' && <Tile to="/etude-de-gestion" icon="🔎" label={t('egTitle')} sub={t('egTileSub')} accent="#4f46e5" />}
-          <Tile to="/fiches-photo" icon="📸" label={t('photoFiche')} sub={t('photoFicheSub')} accent="#16a34a" />
-          <Tile to="/favoris" icon="⭐" label={t('favorites')} sub={`${state.favorites.length} ${t(state.favorites.length > 1 ? 'chapToReviewP' : 'chapToReviewM')}`} accent="#eab308" />
-        </div>
-      </section>
+      {/* Réviser & réussir : l'outil conseillé, les autres rangés dans la trousse */}
+      <OutilsAccueil />
 
     <section className="home-summary home-bottom-grid">
       <div className="home-progress-card"><span className="home-eyebrow">Tes efforts prennent forme</span><div className="home-progress-heading"><h2>Chaque séance compte.</h2><span aria-hidden>→</span></div><div className="home-stat-grid"><div><strong>{progress}<small>%</small></strong><span>Progression de ta filière</span></div><div><strong>{mastered}</strong><span>Thèmes maîtrisés</span></div><div><strong>{state.streak?.count || 0}</strong><span>{t('streakDays')}</span></div></div><p>Ta progression est calculée à partir de tes résultats aux exercices.</p><div className="home-progress-footer"><span>{t('level')} {derived.level} · {state.xp.toLocaleString(state.lang || 'fr')} XP</span><Link to="/badges">{t('badges')} →</Link></div></div>

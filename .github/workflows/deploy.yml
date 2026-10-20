@@ -40,6 +40,13 @@ jobs:
       - name: Tests de la logique et du contenu
         run: npm test
 
+      # Les élèves sont à l'heure de Paris : les mêmes tests y repassent, pour
+      # qu'une date calculée en heure universelle ne passe plus inaperçue.
+      - name: Tests de la logique à l'heure de Paris
+        run: npm test
+        env:
+          TZ: Europe/Paris
+
       - name: Compiler
         run: npm run build
 
