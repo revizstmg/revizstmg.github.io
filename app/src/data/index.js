@@ -978,6 +978,28 @@ function sectionExercises(sec, theme, idx) {
 // cartes sont mélangées à chaque partie par le composant.
 // Exercices de l'onglet « Exercices » d'un chapitre : ses jeux, plus un paquet
 // de flashcards tiré de ses notions quand il y en a assez.
+// Chapitre (section du cours) auquel appartient un exercice joué : exercices
+// fabriqués à partir du cours (« thème::section::… ») ou exercices rédigés
+// rattachés à leur section (exercices-sections.json). null pour les modes qui
+// couvrent tout le thème ou plusieurs thèmes (test du thème, bac blanc, défi…).
+export function chapitreDuJeu(themeId, gameId) {
+  const id = String(gameId || '')
+  const fabrique = id.startsWith(`${themeId}::`) ? Number(id.slice(themeId.length + 2).split('::')[0]) : NaN
+  const i = Number.isInteger(fabrique) ? fabrique : GAME_SECTION[id]
+  return Number.isInteger(i) && i >= 0 ? i : null
+}
+
+// Un chapitre est maîtrisé quand 3 de ses exercices sont réussis (tous s'il en
+// a moins). Nombre d'exercices de chaque chapitre d'un thème qui comptent,
+// calculé d'avance (content/commun/nombre-chapitres.json, « npm run
+// chapitres ») : la maîtrise s'affiche sur l'accueil sans charger la matière
+// ni refabriquer les exercices.
+export const EXERCICES_POUR_MAITRISER = 3
+const EXERCICES_PAR_CHAPITRE = commun('nombre-chapitres').themes
+export function exercicesParChapitre(themeId) {
+  return EXERCICES_PAR_CHAPITRE[themeId] || []
+}
+
 export function jeuxDuChapitre(chapter, theme) {
   if (!chapter) return []
   const base = chapter.games || []

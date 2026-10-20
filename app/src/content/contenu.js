@@ -34,6 +34,8 @@ export const NOMS_COUCHES = [
   'cas-pratiques', 'etudes-documents', 'exercices-sections',
 ]
 export const COUCHES = Object.fromEntries(NOMS_COUCHES.map((n) => [n, {}]))
+// Le rattachement des exercices à leur chapitre est déjà dans l'index léger.
+Object.assign(COUCHES['exercices-sections'], INDEX.sections)
 
 // Les exercices de langues générés à la volée (types « verbs » et « grammar »)
 // désignent leur générateur par son nom (« gen »: "genVerbEN") : on le remplace

@@ -158,8 +158,11 @@ function WrittenPart({ items, color, onExit, onDone }) {
         : `${t('defineExplain')} ${it.prompt}`
   const badge = isCas ? `⚖️ ${t('caseStudy')}` : style === 'tri' ? `🗂️ ${t('sortedClass')}` : style === 'section' ? `📝 ${t('development')}` : `✍️ ${t('writing')}`
 
+  // Une réponse vide ou de quelques lettres ne peut pas être comptée comme
+  // réussie : le test du thème pèse dans la maîtrise et les récompenses.
+  const aEcrit = answer.replace(/\s+/g, ' ').trim().length >= 10
   const rate = (good) => {
-    const nextOk = ok + (good ? 1 : 0)
+    const nextOk = ok + (good && aEcrit ? 1 : 0)
     if (i + 1 >= items.length) {
       onDone(nextOk)
     } else {
@@ -201,8 +204,9 @@ function WrittenPart({ items, color, onExit, onDone }) {
             <p className="mt-3 text-center text-sm font-semibold">{t('wasYourAnswerCorrect')}</p>
             <div className="mt-2 grid grid-cols-2 gap-2">
               <button onClick={() => rate(false)} className="rounded-xl border-2 border-rose-200 bg-rose-50 py-2.5 text-sm font-bold text-rose-700 hover:border-rose-400 dark:border-rose-900 dark:bg-rose-950/40 dark:text-rose-300">❌ {t('toReview')}</button>
-              <button onClick={() => rate(true)} className="rounded-xl border-2 border-emerald-200 bg-emerald-50 py-2.5 text-sm font-bold text-emerald-700 hover:border-emerald-400 dark:border-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-300">✅ {t('iMastered')}</button>
+              <button onClick={() => rate(true)} disabled={!aEcrit} className="rounded-xl border-2 border-emerald-200 bg-emerald-50 py-2.5 text-sm font-bold text-emerald-700 hover:border-emerald-400 disabled:cursor-not-allowed disabled:opacity-40 dark:border-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-300">✅ {t('iMastered')}</button>
             </div>
+            {!aEcrit && <p className="mt-2 text-center text-xs text-slate-500 dark:text-slate-400">Écris ta réponse avant de la corriger : une réponse vide compte « à revoir ».</p>}
           </>
         )}
       </div>

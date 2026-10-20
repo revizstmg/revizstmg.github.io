@@ -8,7 +8,7 @@ import { dailyBase, dailyRewardFor, nextMilestone, MILESTONES } from '../src/dat
 import { BADGES } from '../src/badges.js'
 import { CALC, makeCalcSet } from '../src/calc.js'
 import { LEVELS, subjectsForTrack, trackLabel } from '../src/data/tracks.js'
-import { ALL_CHAPTERS, SUBJECTS, jeuxJouablesDuTheme } from '../src/data/index.js'
+import { ALL_CHAPTERS, SUBJECTS, jeuxJouablesDuTheme, chapitreDuJeu, chargerPourTheme, exercicesParChapitre } from '../src/data/index.js'
 import { answerMatches, answerMatchesCours } from '../src/games/common.jsx'
 import { avecGraine, empreinte } from './outils.js'
 
@@ -39,27 +39,41 @@ describe('scores', () => {
     expect(chapterScore(vide(), themeId)).toBe(0)
     expect(chapterScore(vide(), 'theme-inexistant')).toBe(0)
   })
-  it('moyenne des exercices jouables et du quiz, exercices non faits comptés 0', () => {
-    const id = Object.keys(ALL_CHAPTERS).find((x) => jeuxJouablesDuTheme(x).length >= 2)
-    const jouables = jeuxJouablesDuTheme(id)
-    const n = jouables.length + 1
+  it('les exercices des chapitres comptent : 3 réussis par chapitre pour le maîtriser', () => {
+    // Compte calculé d'avance : le cours n'est pas chargé ici.
+    expect(theme.cours).toBeUndefined()
+    const nb = exercicesParChapitre(themeId)
+    const n = nb.filter(Boolean).length
+    expect(nb[0]).toBe(3)
     const s = vide()
-    s.chapters[id] = { games: { [jouables[0].id]: 100 }, quiz: 100 }
-    expect(chapterScore(s, id)).toBe(Math.round(200 / n))
-    s.chapters[id] = { games: Object.fromEntries(ALL_CHAPTERS[id].games.map((g) => [g.id, 100])), quiz: 100 }
-    expect(chapterScore(s, id)).toBe(100)
-    // Un thème sans exercice jouable seul : le test du thème fait tout le score.
-    s.chapters[themeId] = { games: {}, quiz: 80 }
-    expect(chapterScore(s, themeId)).toBe(jeuxJouablesDuTheme(themeId).length ? Math.round(80 / (jeuxJouablesDuTheme(themeId).length + 1)) : 80)
+    s.chapters[themeId] = { games: { [`${themeId}::0::qdef0`]: 100 }, quiz: 0 }
+    expect(chapterScore(s, themeId)).toBe(Math.round(100 / 3 / n))
+    s.chapters[themeId] = { games: { [`${themeId}::0::qdef0`]: 100, [`${themeId}::0::vf`]: 100, [`${themeId}::0::trou`]: 100, [`${themeId}::0::assoc`]: 40 }, quiz: 0 }
+    expect(chapterScore(s, themeId)).toBe(Math.round(100 / n))
   })
-  // Les QCM, vrai/faux et associations du thème ne se lancent pas seuls (ils
-  // nourrissent le test du thème) : un élève qui fait tout ce qu'il peut lancer
-  // doit pouvoir atteindre 100 %, dans chaque thème.
-  it('chaque thème peut atteindre 100 %', () => {
+  it('un chapitre de 1 ou 2 exercices est maîtrisé quand ils sont tous réussis', () => {
+    const [id, i] = Object.entries(ALL_CHAPTERS).flatMap(([tid]) => exercicesParChapitre(tid).map((nb, j) => [tid, j, nb])).find(([, , nb]) => nb === 2)
+    const n = exercicesParChapitre(id).filter(Boolean).length
+    const s = vide()
+    s.chapters[id] = { games: { [`${id}::${i}::a`]: 100, [`${id}::${i}::b`]: 100 }, quiz: 0 }
+    expect(chapterScore(s, id)).toBe(Math.round(100 / n))
+  })
+  it('le test du thème compte s’il est meilleur ; les modes transverses ne comptent pas', () => {
+    const s = vide()
+    s.chapters[themeId] = { games: { exam: 100, daily: 100, 'coach-ia': 100 }, quiz: 0 }
+    expect(chapterScore(s, themeId)).toBe(0)
+    s.chapters[themeId].quiz = 92
+    expect(chapterScore(s, themeId)).toBe(92)
+  })
+  it('chaque thème peut atteindre 100 %, par ses chapitres ou par son test', () => {
     const plafonnes = Object.keys(ALL_CHAPTERS).filter((id) => {
       const s = vide()
-      s.chapters[id] = { games: Object.fromEntries(jeuxJouablesDuTheme(id).map((g) => [g.id, 100])), quiz: 100 }
-      return chapterScore(s, id) !== 100
+      const games = {}
+      exercicesParChapitre(id).forEach((nb, i) => { for (let k = 0; k < nb; k++) games[`${id}::${i}::ex${k}`] = 100 })
+      s.chapters[id] = { games, quiz: 0 }
+      const parChapitres = chapterScore(s, id)
+      s.chapters[id] = { games: {}, quiz: 100 }
+      return parChapitres !== 100 || chapterScore(s, id) !== 100
     })
     expect(plafonnes).toEqual([])
   })
@@ -71,7 +85,7 @@ describe('scores', () => {
     expect(subjectScore(s, 'gestion-finance')).toBe(0)
     expect(globalScore(s)).toBe(0)
     const gf = SUBJECTS.find((x) => x.id === 'gestion-finance')
-    for (const c of gf.chapters) s.chapters[c.id] = { games: Object.fromEntries(c.games.map((g) => [g.id, 100])), quiz: 100 }
+    for (const c of gf.chapters) s.chapters[c.id] = { games: {}, quiz: 100 }
     expect(subjectScore(s, 'gestion-finance')).toBe(100)
   })
   it('semaine ISO', () => {
@@ -278,5 +292,19 @@ describe('correction des réponses écrites', () => {
   })
   it('langues : l’article reste exigé', () => {
     expect(answerMatches('casa', 'la casa')).toBe(false)
+  })
+})
+
+// En dernier : charge le cours d'un thème (les tests de score plus haut
+// travaillent sans lui).
+describe('score d’un thème, cours chargé', () => {
+  it('un exercice rédigé compte dans le chapitre où il est placé', async () => {
+    await chargerPourTheme('gf-t1')
+    const n = exercicesParChapitre('gf-t1').filter(Boolean).length
+    const jeu = jeuxJouablesDuTheme('gf-t1').find((g) => !g.id.includes('::') && chapitreDuJeu('gf-t1', g.id) != null)
+    expect(jeu).toBeTruthy()
+    const s = vide()
+    s.chapters['gf-t1'] = { games: { [jeu.id]: 90, 'gf-t1-inconnu': 100 }, quiz: 0 }
+    expect(chapterScore(s, 'gf-t1')).toBe(Math.round(90 / 3 / n))
   })
 })

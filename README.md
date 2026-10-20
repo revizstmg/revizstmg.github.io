@@ -155,8 +155,9 @@ npm run build && npm run test:parcours   # parcours dans un vrai navigateur (~3 
   n'avez touché qu'au code, c'est que l'élève verra autre chose : cherchez pourquoi.
   `EMPREINTE_DETAIL=1 npm test` (ou `npm run test:detail`, plus court) écrit le
   détail de chaque thème dans `tests/.detail/` pour comparer deux versions.
-- **Logique** (`tests/logique.test.js`) : niveaux, scores (chaque thème peut
-  atteindre 100 %), fusion de la progression de l'appareil et du compte,
+- **Logique** (`tests/logique.test.js`) : niveaux, scores (maîtrise d'un
+  thème : 3 exercices réussis par chapitre, ou le test du thème s'il est
+  meilleur ; chaque thème peut atteindre 100 %), fusion de la progression de l'appareil et du compte,
   répétition espacée, récompenses, badges, calculs chiffrés, filières.
 - **Sauvegarde** : `tests/fusion.test.js` (deux appareils : suppressions,
   notes, pièces, gels, XP, anciennes copies), `tests/sauvegarde.test.js` (envoi
@@ -249,7 +250,11 @@ fonctions : `supabase/migrations/20261012173929_revizstmg_statistiques.sql`).
   - un fichier de contenu par matière (`contenu-droit-….js`, de 11 à 156 Ko),
     chargé quand l'élève ouvre la matière.
 - **Qui charge quoi.** Le store, l'accueil, les menus, la recherche et les scores
-  n'ont besoin que de l'index léger. Les pages d'une matière (matière, thème,
+  n'ont besoin que de l'index léger (il porte aussi le chapitre de chaque
+  exercice rédigé) et de `content/commun/nombre-chapitres.json`, le nombre
+  d'exercices de chaque chapitre qui comptent pour la maîtrise. Ce fichier est
+  calculé : après avoir changé un cours ou des exercices, lancez
+  `npm run chapitres` (un test le signale sinon). Les pages d'une matière (matière, thème,
   chapitre) attendent sa matière ; le bac blanc, le coach IA,
   le défi du jour et les duels attendent les matières de la filière de l'élève. Ces
   attentes passent par `src/content/Contenu.jsx`, qui affiche « Chargement du

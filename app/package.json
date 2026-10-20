@@ -13,7 +13,8 @@
     "test:parcours": "playwright test",
     "test:detail": "EMPREINTE_DETAIL=1 vitest run tests/contenu.test.js",
     "rapport": "NODE_USE_ENV_PROXY=1 vite-node scripts/rapport-mail.mjs --",
-    "inventaire": "node scripts/inventaire.mjs"
+    "inventaire": "node scripts/inventaire.mjs",
+    "chapitres": "vite-node scripts/nombre-chapitres.mjs"
   },
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.3.0",
