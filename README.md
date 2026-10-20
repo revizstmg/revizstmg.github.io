@@ -434,6 +434,4 @@ de son dossier.
 
 ## Limites connues (ce que la refonte doit régler)
 
-- Les règles RLS des tables sociales (classe, amis, parent) laissent tout lire et
-  tout modifier avec la clé publique (voir `supabase/README.md`).
 - RévizSTMG partage encore sa base Supabase avec NAH.

@@ -2,7 +2,7 @@
 # Vérifie les règles d'accès de RévizSTMG sur une base PostgreSQL locale et
 # jetable (jamais sur Supabase) : imitation minimale de Supabase (rôles anon et
 # authenticated, auth.uid()), toutes les migrations du dossier, les fichiers
-# passés en argument (par exemple ceux de a-valider/), puis les scénarios de
+# passés en argument (une migration en préparation), puis les scénarios de
 # regles-acces.sql (élève, prof, intrus, parent sans compte, suppression).
 # Usage : supabase/tests/lancer.sh [fichier.sql…]   (PostgreSQL 16 installé)
 set -e
