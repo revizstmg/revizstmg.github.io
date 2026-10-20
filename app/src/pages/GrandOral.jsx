@@ -3,7 +3,7 @@ import { TextePublic } from '../localisation/PublicText.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useStore, grandOralVide } from '../store.jsx'
-import { commun } from '../content/contenu.js'
+import GRAND_ORAL from '../../content/commun/grand-oral.json'
 import { SUBJECTS } from '../data/index.js'
 import { trackLabel } from '../data/tracks.js'
 import { useT } from '../i18n.js'
@@ -22,7 +22,7 @@ import {
 // qui ajoute un critère d'oral. On s'y entraîne aussi : chronomètre aux durées
 // de l'épreuve, enregistrement et auto-évaluation sur les critères du jury.
 // Tout est sauvegardé avec la progression (state.grandOral).
-const CONTENU = commun('grand-oral')
+const CONTENU = GRAND_ORAL
 const GRILLE = CONTENU.aei.grille
 const ONGLETS = [
   { id: 'consignes', icon: '📋', labelKey: 'egTabRules' },

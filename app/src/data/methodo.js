@@ -1,4 +1,4 @@
 // Méthodologie par type d'épreuve du bac STMG. Contenu : content/commun/methodo.json.
-import { commun } from '../content/contenu.js'
+import METHODO_JSON from '../../content/commun/methodo.json'
 
-export const METHODO = commun('methodo')
+export const METHODO = METHODO_JSON

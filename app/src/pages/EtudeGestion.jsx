@@ -3,7 +3,7 @@ import { TextePublic } from '../localisation/PublicText.jsx'
 import { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
-import { commun } from '../content/contenu.js'
+import ETUDE_GESTION from '../../content/commun/etude-gestion.json'
 import { SUBJECTS } from '../data/index.js'
 import { Rich } from '../components/ui.jsx'
 import { useT } from '../i18n.js'
@@ -20,7 +20,7 @@ import {
 // l'élève sous le texte, chaque bloc est replié : on n'affiche que son titre, et
 // il se déploie quand on appuie dessus. Les briques sont partagées avec le Grand
 // Oral (components/DossierProjet.jsx).
-const CONTENU = commun('etude-gestion')
+const CONTENU = ETUDE_GESTION
 const GRILLE = CONTENU.aei.grille
 const ONGLETS = [
   { id: 'consignes', icon: '📋', labelKey: 'egTabRules' },

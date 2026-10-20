@@ -3,6 +3,7 @@
 //   content/<matière>/matiere.json  la matière et ses thèmes de base
 //   content/<matière>/<couche>.json une couche de contenu, indexée par thème
 //   content/commun/*.json           contenu qui ne dépend d'aucune matière
+//                                   (sauf PAR_PAGE : chaque page importe le sien)
 // Le contenu se corrige dans ces fichiers, sans toucher au code.
 //
 // Chargement à la demande : au démarrage, seul l'index léger (noms, couleurs,
@@ -12,7 +13,12 @@
 import INDEX from 'virtual:contenu-index'
 import { genVerbEN, genVerbES, genGrammarEN, genGrammarES } from '../data/langgen.js'
 
-const COMMUN = import.meta.glob(['../../content/commun/*.json', '!../../content/commun/formules.json'], { eager: true, import: 'default' })
+// Contenu commun propre à une page (Grand Oral, étude de gestion, méthodo,
+// atelier de formules) : la page l'importe elle-même et il arrive avec elle,
+// au lieu d'alourdir le démarrage.
+const COMMUN = import.meta.glob(['../../content/commun/*.json', '!../../content/commun/formules.json',
+  '!../../content/commun/grand-oral.json', '!../../content/commun/etude-gestion.json', '!../../content/commun/outils-projet.json',
+  '!../../content/commun/methodo.json', '!../../content/commun/atelier-formules.json'], { eager: true, import: 'default' })
 const FICHIERS = import.meta.glob(['../../content/*/*.json', '!../../content/commun/*.json'], { import: 'default' })
 
 export const ORDRE_MATIERES = INDEX.ordre

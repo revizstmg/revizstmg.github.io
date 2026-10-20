@@ -1,6 +1,6 @@
 import { TextePublic } from '../localisation/PublicText.jsx'
 import { useId, useState } from 'react'
-import { commun } from '../content/contenu.js'
+import OUTILS_PROJET from '../../content/commun/outils-projet.json'
 import { Rich } from './ui.jsx'
 
 // Briques communes aux projets accompagnés (étude de gestion en Première, Grand
@@ -8,7 +8,7 @@ import { Rich } from './ui.jsx'
 // caractérisation, diagnostic interne et externe, PESTEL) et Arguments A-E-I
 // évalués avec une grille. Chaque page fournit son dossier `d` et sa fonction
 // `maj`, qui accepte un objet partiel ou une fonction (dossier → dossier).
-const OUTILS = commun('outils-projet')
+const OUTILS = OUTILS_PROJET
 export const CHAMP = 'w-full rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm outline-none focus:border-[color:var(--c-accent)] dark:border-slate-700'
 export const ETIQUETTE = 'mb-1 block text-xs font-semibold text-slate-600 dark:text-slate-300'
 export const LIEN = { color: 'var(--c-accent-texte)' }

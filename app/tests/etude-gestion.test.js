@@ -1,12 +1,12 @@
 // Étude de gestion (Première STMG) : consignes complètes, citation des sources,
 // dossier exporté et fusion appareil ↔ compte.
 import { describe, it, expect } from 'vitest'
-import { commun } from '../src/content/contenu.js'
+import ETUDE_GESTION from '../content/commun/etude-gestion.json'
 import { dossierTexte } from '../src/pages/EtudeGestion.jsx'
 import { citation, noteArgument as noteArg, noteGlobale as noteGlob } from '../src/components/DossierProjet.jsx'
 import { mergeProgress, etudeGestionVide } from '../src/store.jsx'
 
-const C = commun('etude-gestion')
+const C = ETUDE_GESTION
 const noteArgument = (arg, sources) => noteArg(arg, sources, C.aei.grille)
 const noteGlobale = (args, sources) => noteGlob(args, sources, C.aei.grille)
 const source = { id: 's1', type: 'Entretien', titre: 'Entretien avec la gérante', auteur: 'Mme Martin', date: 'mars 2026', lien: '' }
