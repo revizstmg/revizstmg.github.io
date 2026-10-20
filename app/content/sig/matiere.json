@@ -1433,8 +1433,8 @@
                   "Numéro qui identifie une machine sur le réseau"
                 ],
                 [
-                  "CID",
-                  "Confidentialité, Intégrité, Disponibilité (sécurité du SI)"
+                  "DICP",
+                  "Disponibilité, Intégrité, Confidentialité, Preuve ou traçabilité (sécurité du SI)"
                 ],
                 [
                   "Chiffrement",
@@ -1455,7 +1455,7 @@
       ],
       "essentiel": [
         "Architecture client-serveur : le client envoie une requête, le serveur renvoie une réponse (via TCP/IP, HTTP/HTTPS).",
-        "Sécurité = CID : Confidentialité, Intégrité, Disponibilité.",
+        "Sécurité = DICP : Disponibilité, Intégrité, Confidentialité, Preuve (traçabilité : on sait qui a fait quoi).",
         "Parades : mots de passe forts, mises à jour, antivirus/pare-feu, sauvegardes, chiffrement.",
         "HTML = structure, CSS = mise en forme ; une appli responsive s’adapte à la taille de l’écran."
       ],
@@ -1497,7 +1497,7 @@
                 "la redondance"
               ],
               "answer": 0,
-              "explain": "C’est le principe de confidentialité (le C de CID)."
+              "explain": "C’est le principe de confidentialité (le C de DICP)."
             },
             {
               "q": "Le langage qui structure une page web est…",
@@ -1565,9 +1565,9 @@
         {
           "id": "sig-t4-tri",
           "type": "tri",
-          "title": "Tri — Confidentialité, intégrité ou disponibilité ?",
+          "title": "Tri — Confidentialité, intégrité, disponibilité ou preuve ?",
           "icon": "🗂️",
-          "instruction": "Classe chaque mesure selon le principe de sécurité (CID) qu’elle protège en priorité.",
+          "instruction": "Classe chaque mesure selon le principe de sécurité (DICP) qu’elle protège en priorité.",
           "categories": [
             {
               "id": "conf",
@@ -1580,6 +1580,10 @@
             {
               "id": "dispo",
               "label": "Disponibilité"
+            },
+            {
+              "id": "preuve",
+              "label": "Preuve (traçabilité)"
             }
           ],
           "items": [
@@ -1597,7 +1601,7 @@
             },
             {
               "text": "Tracer les modifications (qui a changé quoi)",
-              "cat": "integ"
+              "cat": "preuve"
             },
             {
               "text": "Faire des sauvegardes régulières",

@@ -465,7 +465,7 @@ function notionsLiees(a, b) {
 
 // Étapes d'un raisonnement (« Faits », « Application », « Conclusion »,
 // « Règle de droit (majeure) »…) : ce ne sont pas des notions à définir.
-const ETAPES_METHODE = new Set(['faits', 'enonce', 'application', 'conclusion', 'qualification', 'solution', 'probleme', 'probleme juridique', 'probleme de droit', 'question', 'question de droit', 'regle', 'reponse', 'analyse', 'situation', 'corrige', 'presenter', 'presenter le document', 'situer le document'])
+const ETAPES_METHODE = new Set(['faits', 'enonce', 'application', 'conclusion', 'qualification', 'solution', 'probleme', 'probleme juridique', 'probleme de droit', 'question', 'question de droit', 'regle', 'reponse', 'analyse', 'situation', 'corrige', 'presenter', 'presenter le document', 'situer le document', 'definir', 'identifier', 'signe', "expliquer l'effet"])
 // Étiquettes de plan ou d'encadré (« Thèse 1 », « Étape 2 », « III. Dépassement »,
 // « Piège », « La distinction clé », « Attention au… ») : elles annoncent un passage
 // du cours. Prises pour des notions, elles devenaient la « bonne réponse » d'un
@@ -687,6 +687,7 @@ function termVariants(term) {
     const v = String(s || '').replace(/\s+/g, ' ').replace(/[;,.]+$/, '').trim()
     if (v && v.toLowerCase() !== raw.toLowerCase()) out.add(v)
   }
+  push(raw.replace(/^[\u2460-\u2473]\s*/, '')) // sans numéro cerclé (« ① Dégager la thèse »)
   push(raw.replace(/\s*\([^)]*\)/g, ' ')) // le terme sans ses parenthèses
   for (const part of raw.split(/\s*(?:\/| ou )\s*/i)) {
     push(part.replace(/\s*\([^)]*\)/g, ' ')) // « PGI (ERP) » → « PGI »

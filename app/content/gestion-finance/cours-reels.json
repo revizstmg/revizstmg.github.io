@@ -6,11 +6,11 @@
         {
           "t": "example",
           "h": "Cas",
-          "c": "Tu paies ton café 2,40 € au comptoir. Sur ce montant, 0,40 € ne revient pas au commerçant : c’est de la TVA."
+          "c": "Tu paies ton café 2,20 € au comptoir. Sur ce montant, 0,20 € ne revient pas au commerçant : c’est de la TVA."
         },
         {
           "t": "p",
-          "c": "Décomposons ce prix. Le prix **hors taxes (HT)**, celui que garde vraiment le commerçant, est de **2,00 €**. On y ajoute la **TVA** (ici 0,40 €, soit 20 % de 2,00 €) pour obtenir le prix **toutes taxes comprises (TTC)** de **2,40 €** que tu paies. La TVA est donc un impôt sur la **consommation** : c’est **toi**, le client final, qui la supportes."
+          "c": "Décomposons ce prix. Le prix **hors taxes (HT)**, celui que garde vraiment le commerçant, est de **2,00 €**. On y ajoute la **TVA** (ici 0,20 €, soit 10 % de 2,00 € : une boisson sans alcool servie sur place relève du taux intermédiaire de 10 %) pour obtenir le prix **toutes taxes comprises (TTC)** de **2,20 €** que tu paies. La TVA est donc un impôt sur la **consommation** : c’est **toi**, le client final, qui la supportes."
         },
         {
           "t": "p",
@@ -37,7 +37,7 @@
         {
           "t": "warning",
           "h": "Le piège",
-          "c": "Pour retrouver le HT à partir du TTC, on **divise par 1,20** (à 20 %) — on ne « retire pas 20 % ». 2,40 ÷ 1,20 = 2,00 € (juste) ; 2,40 − 20 % = 1,92 € (faux)."
+          "c": "Pour retrouver le HT à partir du TTC, on **divise par (1 + taux)**, ici 1,10 (à 10 %) — on ne « retire pas 10 % ». 2,20 ÷ 1,10 = 2,00 € (juste) ; 2,20 − 10 % = 1,98 € (faux). Au taux normal de 20 %, on divise par 1,20."
         },
         {
           "t": "table",

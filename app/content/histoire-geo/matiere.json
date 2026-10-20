@@ -17,7 +17,7 @@
           "points": [
             "Idéologies totalitaires : nazisme, stalinisme.",
             "**Guerre d’anéantissement** : violence de masse visant aussi les civils (bombardements, famines).",
-            "**Génocide des Juifs et des Tsiganes (Shoah)** : extermination planifiée et industrialisée.",
+            "**Génocides des Juifs (Shoah) et des Tsiganes** : exterminations planifiées et industrialisées.",
             "La France dans la guerre : Vichy, Résistance, Libération.",
             "Bilan humain sans précédent (~50-60 millions de morts) ; usage de l’arme nucléaire (Hiroshima, Nagasaki)."
           ]
@@ -29,7 +29,7 @@
       "essentiel": [
         "Repère : **Seconde Guerre mondiale, 1939-1945** ; idéologies totalitaires (**nazisme, stalinisme**).",
         "**Guerre d’anéantissement** : violence de masse visant aussi les **civils**.",
-        "**Shoah** : génocide des Juifs et des Tsiganes, **planifié et industrialisé**.",
+        "**Shoah** : génocide des Juifs d’Europe, **planifié et industrialisé** ; les Tsiganes subissent aussi un génocide.",
         "La France : **Vichy collabore**, la **Résistance** combat ; bilan humain sans précédent + arme nucléaire (1945)."
       ],
       "games": [
@@ -53,13 +53,13 @@
             {
               "q": "La Shoah désigne…",
               "choices": [
-                "le génocide des Juifs (et des Tsiganes)",
+                "le génocide des Juifs d’Europe",
                 "une bataille navale",
                 "un traité de paix",
                 "une crise économique"
               ],
               "answer": 0,
-              "explain": "La Shoah est le génocide des Juifs et des Tsiganes, planifié et industrialisé."
+              "explain": "La Shoah est le génocide des Juifs d’Europe, planifié et industrialisé. Les Tsiganes subissent aussi un génocide."
             },
             {
               "q": "Une « guerre d’anéantissement » vise…",
@@ -101,7 +101,7 @@
             },
             {
               "front": "Shoah",
-              "back": "Génocide des Juifs (et des Tsiganes) planifié et industrialisé."
+              "back": "Génocide des Juifs d’Europe, planifié et industrialisé (les Tsiganes subissent aussi un génocide)."
             },
             {
               "front": "Vichy / Résistance",

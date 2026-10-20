@@ -105,3 +105,29 @@ test('élève → déconnexion → professeur → déconnexion → élève sur l
   expect((await etat(page)).account).toMatchObject({ id: eleve, role: 'eleve' })
   expect(erreurs).toEqual([])
 })
+
+// Inscription avec confirmation de l'e-mail : à la première connexion, le
+// compte n'a pas encore de fiche. L'élève termine son inscription au lieu de
+// rester bloqué (ancien message sur un code de classe invisible).
+test('première connexion après confirmation de l’e-mail : fin de l’inscription', async ({ page }) => {
+  const data = { ...profils() }
+  const nouveau = '00000000-0000-4000-8000-000000000003'
+  const erreurs = await preparer(page, null)
+  await page.route('https://*.supabase.co/**', (route) => {
+    const req = route.request(), url = new URL(req.url())
+    const json = (body) => route.fulfill({ contentType: 'application/json', body: JSON.stringify(body) })
+    if (url.pathname.endsWith('/token')) return json({ access_token: nouveau, refresh_token: nouveau, expires_in: 3600, user: { id: nouveau, email: 'nouveau@test.fr' } })
+    if (url.pathname.endsWith('/settings')) return json({ external: {} })
+    return json([])
+  })
+  await page.goto('./')
+  const dialog = page.getByRole('dialog')
+  await dialog.locator('#w-email').fill('nouveau@test.fr')
+  await dialog.locator('#w-pass').fill('Motdepasse123')
+  await dialog.getByRole('button', { name: 'Se connecter', exact: true }).click()
+  await expect(dialog.getByRole('heading', { name: 'Faisons connaissance' })).toBeVisible()
+  await expect(dialog.getByText('✓ nouveau@test.fr')).toBeVisible()
+  await expect(dialog.getByText(/aucune classe/)).toHaveCount(0)
+  expect(data[nouveau]).toBeUndefined()
+  expect(erreurs).toEqual([])
+})

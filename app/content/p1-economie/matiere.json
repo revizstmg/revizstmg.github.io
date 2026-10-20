@@ -101,7 +101,7 @@
             },
             {
               "t": "p",
-              "c": "L’utilité est **décroissante** : chaque unité supplémentaire d’un même bien procure **moins** de satisfaction que la précédente. Le premier verre d’eau dans le désert procure une énorme satisfaction, le dixième beaucoup moins."
+              "c": "L’**utilité marginale** est **décroissante** : chaque unité supplémentaire d’un même bien procure **moins** de satisfaction que la précédente (l’utilité totale augmente, mais de moins en moins vite). Le premier verre d’eau dans le désert procure une énorme satisfaction, le dixième beaucoup moins."
             },
             {
               "t": "warning",
@@ -203,7 +203,7 @@
         "Un **besoin** (primaire/secondaire) se satisfait par des **biens** (matériels) ou **services** (immatériels) ; un bien économique est **rare** (≠ bien libre).",
         "Le problème économique : besoins **illimités** / ressources **rares** → il faut **choisir**.",
         "**Coût d’opportunité** = valeur de ce à quoi on renonce en choisissant.",
-        "Le **consommateur** maximise son **utilité** (décroissante) sous contrainte de **budget** ; le **producteur** vise le **profit** (recettes − coûts) en combinant travail et capital.",
+        "Le **consommateur** maximise son **utilité** (dont l’utilité marginale est décroissante) sous contrainte de **budget** ; le **producteur** vise le **profit** (recettes − coûts) en combinant travail et capital.",
         "Agents : **ménages, entreprises, institutions financières, administrations, reste du monde**.",
         "Le **circuit économique** relie les agents par des **flux réels** et **monétaires** (de sens inverse)."
       ],
@@ -234,7 +234,7 @@
               "explain": "La rareté oblige à faire des choix."
             },
             {
-              "q": "L’utilité procurée par la consommation est…",
+              "q": "L’utilité apportée par chaque unité supplémentaire consommée (utilité marginale) est…",
               "choices": [
                 "décroissante",
                 "toujours croissante",
@@ -285,9 +285,9 @@
               "explain": "Vrai : ce sont les institutions financières."
             },
             {
-              "statement": "L’utilité d’un bien augmente à chaque unité consommée.",
+              "statement": "La satisfaction apportée par chaque unité supplémentaire augmente à mesure qu’on consomme.",
               "answer": false,
-              "explain": "Faux : l’utilité est décroissante."
+              "explain": "Faux : l’utilité marginale est décroissante (l’utilité totale, elle, augmente de moins en moins vite)."
             }
           ]
         },
@@ -306,8 +306,8 @@
               "back": "Ce à quoi on renonce en choisissant."
             },
             {
-              "front": "Utilité décroissante",
-              "back": "Chaque unité supplémentaire procure moins de satisfaction."
+              "front": "Utilité marginale décroissante",
+              "back": "Chaque unité supplémentaire procure moins de satisfaction que la précédente ; l’utilité totale augmente de moins en moins vite."
             },
             {
               "front": "Agents économiques",
