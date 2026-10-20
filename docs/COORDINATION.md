@@ -792,3 +792,13 @@ Prochaine action :
   et relecture d'un professeur nécessaires, non inventés ici.
 - Aucune action sur la base Supabase dans ce lot ; tests sans accès à la vraie base.
 
+
+### CLASSES-20261020-CODEX-03 — Codex
+
+- Demande directe du propriétaire : retirer « ✓ Enregistré » de l’en-tête,
+  permettre plusieurs classes aux professeurs et élèves.
+- Périmètre : EtatSauvegarde.jsx, Classe.jsx, classroom.js, store.jsx,
+  traductions et tests concernés. Intervention dans le couloir social signalée
+  au propriétaire ; aucune PR concurrente ouverte au démarrage.
+- Branche `fix/classes-multiples` ; aucune mutation de la base prévue.
+- État : diagnostic et correction en cours.
