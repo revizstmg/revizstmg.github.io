@@ -8,3 +8,4 @@ Disallow: /supabase/
 Disallow: /statistiques/
 
 Sitemap: https://revizstmg.github.io/sitemap.xml
+Sitemap: https://revizstmg.github.io/sitemap.txt

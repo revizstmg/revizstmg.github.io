@@ -843,3 +843,22 @@ Prochaine action :
   URL sans paramètre, balise présente à la racine et sitemap XML accessible.
 - Reste au propriétaire : cliquer Valider dans Search Console, envoyer
   sitemap.xml puis demander l’indexation de https://revizstmg.github.io/.
+
+### SITEMAP-20261020-CODEX-05 — Codex
+
+- Demande du propriétaire : trouver une solution au statut Search Console
+  « Impossible de récupérer », malgré un test Google d’URL active réussi.
+- Diagnostic existant : XML conforme au schéma officiel, réponses 200 identiques
+  navigateur/Googlebot/Inspection, aucune redirection HTTPS, DNS GitHub Pages,
+  robots.txt autorise la lecture. La cause interne de Google n’est pas établie.
+- Périmètre : sitemap texte alternatif app/pwa/sitemap.txt, déclaré aussi dans
+  robots.txt ; rapport de diagnostic. Format officiellement accepté par Google.
+  Nouvelle URL et format distinct pour tester le refus de l’entrée XML existante.
+- PR #41 de Claude conservée : aucun changement de ses générateurs ni des pages
+  de cours. Le sitemap XML reste déclaré ; le texte liste l’accueil existant.
+- Branche `fix/sitemap-texte`, PR #44. Ajout réalisé et documenté dans
+  audits/2026-10-20/DIAGNOSTIC-SITEMAP.md. Compilation et 293 tests locaux
+  réussis ; contenu texte exact, équivalence avec les URL XML et déclarations
+  robots contrôlés. Publication par la chaîne main avant contrôle HTTP public.
+- Le contournement n’est pas annoncé comme un succès Search Console avant que
+  le propriétaire ait envoyé sitemap.txt et vérifié son état dans Google.
