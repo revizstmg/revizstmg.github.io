@@ -860,5 +860,11 @@ Prochaine action :
   audits/2026-10-20/DIAGNOSTIC-SITEMAP.md. Compilation et 293 tests locaux
   réussis ; contenu texte exact, équivalence avec les URL XML et déclarations
   robots contrôlés. Publication par la chaîne main avant contrôle HTTP public.
+- PR #44 fusionnée (`54b90b1`), code `d0b6752`. Chaîne main #39497302917
+  réussie (293 tests, 152 parcours), compilation publiée dans `6cb76d8`,
+  Pages #39497916170 réussi. Contrôle public : texte exact, 200 text/plain,
+  référence robots présente, XML toujours valide.
+- Le propriétaire a confirmé que son test Google réussi concernait bien
+  /sitemap.xml. Le diagnostic documente cette divergence avec le rapport.
 - Le contournement n’est pas annoncé comme un succès Search Console avant que
   le propriétaire ait envoyé sitemap.txt et vérifié son état dans Google.
