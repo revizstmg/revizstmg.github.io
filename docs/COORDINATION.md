@@ -77,6 +77,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | CORRECTIONS-20261020-CLAUDE-01 | Claude | Demande du propriétaire : « fusionne les PR et règle les 10 gros problèmes » de l'inspection du 20 octobre. Lot 1 : hors ligne, progression sur l'appareil, inscription, 12 erreurs de contenu bloquantes, CI à l'heure de Paris. Lot 2 : maîtrise (`store.jsx`, `data/index.js`, `scripts/plugin-contenu.mjs`, `content/commun/nombre-chapitres.json`), séance du jour et barre du bas (`pages/Seance.jsx`, `pages/Cours.jsx`, `navTabs.js`, `Home.jsx`), exercice en plein écran, « Refaire mes erreurs » et « Pourquoi ? » (`games/GameHost.jsx`, `games/common.jsx`), carnet espacé (`store.jsx`, tous les modes), une fenêtre par visite (`fenetres.js`), accueil professeur et parent (`AccueilProf.jsx`, `Layout.jsx`), traductions (`localisation/public.*.json`). Contenu et générateur : couloir de Codex, à la demande du propriétaire | En cours | Lot 1 : [PR #27](https://github.com/revizstmg/revizstmg.github.io/pull/27), lot 2 : [PR #28](https://github.com/revizstmg/revizstmg.github.io/pull/28), fusionnées et publiées | Propriétaire : appliquer les règles d'accès (`supabase/a-valider/`) ; vrais sujets par épreuve après lecture du Bulletin du 17 septembre 2026 |
 
+| POINTS10-28-20261020-CODEX-01 | Codex | Points 10–28 : atelier (10/23), classe/réseau (11/18), calendrier (12/22), UI (14/16/20/21/24/25), PWA (17), dossiers préparatoires (13/15/19/26/27/28) | En cours | `feat/points-10-28` | Point 10 pris par Codex pour éviter le doublon ; Claude garde 1–9. Base de production non modifiée sans accord explicite. |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
