@@ -828,4 +828,18 @@ Prochaine action :
 - PR #41 de Claude repérée : elle modifie également l’en-tête HTML pour le SEO.
   Intervention limitée à la vérification, signalée au propriétaire ; aucun
   changement du sitemap, du générateur ni des pages publiques de cette PR.
-- Branche `fix/verification-google`. Validation et publication en cours.
+- PR #42 fusionnée (`319ad43`), code `ce7c09f`.
+- Balise installée dans le head source ; fichier fourni copié sans changement
+  sous son nom attendu `google8fdda423e86f83bd.html`. Le nom de téléversement
+  « google search.html » n’est pas le nom attendu par Google.
+- Compilation locale contrôlée : balise unique, contenu exact du fichier,
+  sitemap XML valide. 293 tests unitaires locaux réussis ; CI #39492799529
+  réussie, avec 152 parcours navigateur. Aucun compte Google manipulé.
+- L’échec signalé par le propriétaire correspond à un fichier encore absent
+  avant déploiement (404 vérifié). Explication donnée : attendre sa présence,
+  valider la propriété puis accéder aux menus Sitemaps et Inspection de l’URL.
+- Publication main #39493540102 réussie, version compilée `af2aef7`,
+  Pages #39494203369 construit. Contrôle public réussi : fichier exact à son
+  URL sans paramètre, balise présente à la racine et sitemap XML accessible.
+- Reste au propriétaire : cliquer Valider dans Search Console, envoyer
+  sitemap.xml puis demander l’indexation de https://revizstmg.github.io/.
