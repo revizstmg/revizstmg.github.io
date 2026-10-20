@@ -1,0 +1,61 @@
+{
+  "conditions": "Chromium Pixel7 emulation, CPU native,4Mbps,100ms latency,cold cache,service workers blocked,external requests blocked,2 runs; local HTTP uncompressed",
+  "results": [
+    {
+      "label": "published",
+      "run": 1,
+      "entry": "index-B_7Vg4gS.js",
+      "entryBytes": 595157,
+      "entryGzipBytes": 184728,
+      "lcpMs": 6028,
+      "domContentLoadedMs": 3685,
+      "resources": 13,
+      "downloadedBytes": 860786
+    },
+    {
+      "label": "published",
+      "run": 2,
+      "entry": "index-B_7Vg4gS.js",
+      "entryBytes": 595157,
+      "entryGzipBytes": 184728,
+      "lcpMs": 3572,
+      "domContentLoadedMs": 1838,
+      "resources": 13,
+      "downloadedBytes": 860786
+    },
+    {
+      "label": "candidate",
+      "run": 1,
+      "entry": "index-BBQMOcEu.js",
+      "entryBytes": 578453,
+      "entryGzipBytes": 179500,
+      "lcpMs": 3612,
+      "domContentLoadedMs": 1798,
+      "resources": 13,
+      "downloadedBytes": 845323
+    },
+    {
+      "label": "candidate",
+      "run": 2,
+      "entry": "index-BBQMOcEu.js",
+      "entryBytes": 578453,
+      "entryGzipBytes": 179500,
+      "lcpMs": 2884,
+      "domContentLoadedMs": 1811,
+      "resources": 13,
+      "downloadedBytes": 845323
+    }
+  ],
+  "beforeCommit": "175e4f2 (publication de 826e4bb)",
+  "afterCommit": "9dcf0c6 (inclut la PR #31 de Claude)",
+  "offlineInventory": {
+    "before": {
+      "assetFiles": 97,
+      "assetBytes": 3915964
+    },
+    "after": {
+      "assetFiles": 98,
+      "assetBytes": 3937749
+    }
+  }
+}
