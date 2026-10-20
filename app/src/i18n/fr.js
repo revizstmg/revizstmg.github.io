@@ -1,5 +1,8 @@
 // Source française des libellés de l’interface.
 export default {
+  leaveCurrentClass: "Quitter cette classe",
+  joinAnotherClass: "Rejoindre une autre classe",
+  classActionFailed: "Impossible de mettre à jour tes classes. Vérifie ta connexion et réessaie.",
   formulaWorkshop: 'Atelier de formules',
   // en-tête / navigation
   search: 'Rechercher un chapitre', dictionary: 'Dictionnaire', language: 'Langue',

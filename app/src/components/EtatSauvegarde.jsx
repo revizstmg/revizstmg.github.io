@@ -35,7 +35,7 @@ export function etatIndicateur(etat) {
 export function IndicateurSauvegarde() {
   const { state, sauvegarde } = useStore()
   const tr = usePublicText()
-  if (!state.account?.id) return null
+  if (!state.account?.id || etatIndicateur(sauvegarde.etat) === 'ok') return null
   const v = ETATS_INDICATEUR[etatIndicateur(sauvegarde.etat)]
   return (
     <span data-sauvegarde={etatIndicateur(sauvegarde.etat)} title={tr(v.titre)} className={`flex shrink-0 items-center gap-1 text-xs font-semibold ${v.cls}`}>

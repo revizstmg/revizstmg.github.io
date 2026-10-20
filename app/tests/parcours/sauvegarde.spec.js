@@ -66,7 +66,7 @@ test('une note écrite part sur le compte', async ({ page }) => {
   await expect.poll(() => noteEnvoyee(journal, NOTE)).toBe(true)
   await expect.poll(async () => (await etat(page))._sync?.vuServeur).toBe(profil.progress._sync.rev)
   await expect(bandeau(page)).toHaveCount(0)
-  await expect(indicateur(page)).toHaveText(/Enregistré/)
+  await expect(indicateur(page)).toHaveCount(0)
   expect(erreurs).toEqual([])
 })
 
@@ -81,7 +81,7 @@ test('hors ligne : « Non sauvegardé », puis envoi au retour du réseau', asyn
   await page.context().setOffline(false)
   await expect.poll(() => noteEnvoyee(journal, NOTE)).toBe(true)
   await expect(bandeau(page)).toHaveCount(0)
-  await expect(indicateur(page)).toHaveText(/Enregistré/)
+  await expect(indicateur(page)).toHaveCount(0)
   expect(erreurs).toEqual([])
 })
 
