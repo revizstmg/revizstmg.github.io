@@ -11,6 +11,8 @@ test('étude de gestion : catégories, source, analyse, argument A-E-I évalué,
   const erreurs = await preparer(page, etatEleve({ track: { level: 'premiere-stmg' } }))
   await page.goto('./')
   await attendreAccueil(page)
+  // L'étude de gestion est rangée dans la trousse de l'accueil.
+  await page.getByRole('button', { name: /Ta trousse/ }).click()
   await page.getByRole('link', { name: /Étude de gestion/ }).first().click()
   await expect(page.getByRole('heading', { level: 1, name: 'Étude de gestion' })).toBeVisible()
 

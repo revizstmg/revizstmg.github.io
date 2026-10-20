@@ -23,6 +23,12 @@ export function realThemes(track) {
   return out
 }
 
+// Le programme bac de Première prépare les deux épreuves anticipées.
+// Les autres espaces de révision gardent toutes les matières de la filière.
+export function programmeThemes(track) {
+  return realThemes(track).filter((t) => track?.level !== 'premiere-stmg' || ['p1-francais', 'p1-maths'].includes(t.subjectId))
+}
+
 // File de révision priorisée : à revoir aujourd'hui > points faibles >
 // jamais vus > le reste (score croissant).
 export function reviewQueue(state, track, today = todayKey()) {
@@ -144,7 +150,8 @@ export function examSubjects(track) {
 
 // Objectifs du jour : les thèmes prioritaires (stables dans la journée).
 export function dailyPlan(state, track, today = todayKey(), n = 4) {
-  const queue = reviewQueue(state, track, today)
+  const eligible = new Set(programmeThemes(track).map((t) => t.themeId))
+  const queue = reviewQueue(state, track, today).filter((t) => eligible.has(t.themeId))
   const srs = state.srs || {}
   const chosen = queue.slice(0, n)
   return chosen.map((t) => ({ ...t, done: srs[t.themeId]?.last === today }))

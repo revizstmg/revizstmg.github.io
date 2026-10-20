@@ -62,3 +62,30 @@ test('SDGN Première : les exercices de personnalité restent sur son cours', as
   await expect(page.locator('main')).not.toContainText(/Maslow|Herzberg|qualification|cotisations|capital humain/i)
   expect(erreurs).toEqual([])
 })
+
+for (const [subject, theme, title, expected] of [
+  ['langues', 'lng-en-verbs', 'Verbes irréguliers — entraînement', /go|went|gone|see|saw|seen|take|took|taken|make|made|come|came|write|wrote|written/],
+  ['langues', 'lng-es-verbs', 'Verbes irréguliers — entraînement', /ser|soy|fue|tener|tengo|tuvo|hacer|hago|hizo|ir|voy|poder|puedo|pudo|decir|digo|dijo/],
+  ['langues', 'lng-en-grammar-ex', 'Grammaire — exercices variés', /Article|Présent simple|Comparatif|some|much|this/],
+  ['langues', 'lng-es-grammar-ex', 'Grammaire — exercices variés', /ser|por|Article|gustar/],
+  ['philosophie', 'philo-methode', 'Remise en ordre — La dissertation', /Analyser le sujet/],
+]) {
+  test(`exercice rétabli dans son cours : ${theme}`, async ({ page }) => {
+    const erreurs = await preparer(page)
+    await page.goto('./')
+    await attendreAccueil(page)
+    await page.goto(`./#/subject/${subject}/theme/${theme}/chapter/0`)
+    await page.getByRole('button', { name: /Exercices/ }).click()
+    await page.getByRole('button', { name: title }).click()
+    await page.getByRole('button', { name: /Entraînement/ }).click()
+    await expect(page.locator('main')).toContainText(expected)
+    if (subject === 'langues') {
+      await expect(page.locator('main')).toContainText(/Question 1 \/ 10/)
+      await expect(page.locator('main input')).toBeVisible()
+    } else {
+      await page.getByRole('button', { name: 'Analyser le sujet', exact: true }).click()
+      await expect(page.locator('main')).toContainText(/Problématiser/)
+    }
+    expect(erreurs).toEqual([])
+  })
+}

@@ -1,5 +1,6 @@
 import { beforeAll, describe, expect, it } from 'vitest'
 import * as C from '../src/data/index.js'
+import { chapterScore } from '../src/store.jsx'
 import { avecGraine } from './outils.js'
 
 beforeAll(() => C.chargerMatiere('p1-sgn'))
@@ -57,6 +58,33 @@ describe('exercices limités au chapitre lu', () => {
       const chs = C.themeChapters(C.ALL_CHAPTERS[id])
       const trouves = chs.flatMap((ch) => ch.games.filter((g) => g.id.startsWith(`${id}-trou`)).flatMap((g) => g.questions.map((q) => ({ idx: ch.idx, answer: q.answer }))))
       for (const [answer, idx] of Object.entries(reponses)) expect(trouves.filter((q) => q.answer === answer)).toEqual([{ idx, answer }])
+    }
+  })
+})
+
+
+describe('rattachements vérifiés après l’audit', () => {
+  it('les cinq exercices sont accessibles dans leur cours et ne plafonnent plus la maîtrise', async () => {
+    await C.chargerMatieres(['langues', 'philosophie'])
+    for (const [themeId, gameId] of [
+      ['philo-methode', 'philo-methode-ordre'], ['lng-en-verbs', 'lng-en-verbs-gen'],
+      ['lng-es-verbs', 'lng-es-verbs-gen'], ['lng-en-grammar-ex', 'lng-en-grammar-gen'],
+      ['lng-es-grammar-ex', 'lng-es-grammar-gen'],
+    ]) {
+      const th = C.ALL_CHAPTERS[themeId]
+      const chs = C.themeChapters(th)
+      const ch = chs.find((c) => c.games.some((g) => g.id === gameId))
+      expect(ch, gameId).toBeTruthy()
+      const jeux = chs.flatMap((c) => c.games)
+      const etat = { chapters: { [themeId]: { games: Object.fromEntries(jeux.map((g) => [g.id, 100])), quiz: 100 } } }
+      expect(chapterScore(etat, themeId), themeId).toBe(100)
+      const jeu = ch.games.find((g) => g.id === gameId)
+      if (jeu.type === 'ordre') continue
+      // Le générateur général pouvait tirer des verbes ou des règles absents du cours.
+      expect(jeu.gen).toBeUndefined()
+      expect(jeu.questions.length).toBeGreaterThanOrEqual(jeu.count)
+      const cours = JSON.stringify(ch.section).toLowerCase().replaceAll('*', '')
+      for (const q of jeu.questions) expect(cours, `${gameId} : ${q.answer}`).toContain(q.answer.toLowerCase())
     }
   })
 })

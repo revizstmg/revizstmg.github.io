@@ -1,0 +1,2 @@
+# Les PDF générés doivent être traités comme des documents binaires.
+*.pdf binary

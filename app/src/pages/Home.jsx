@@ -1,36 +1,20 @@
 import { CourseText } from '../components/Course.jsx'
 import { Link, useNavigate, Navigate } from 'react-router-dom'
 import { getChapter } from '../data/index.js'
-import { subjectsForTrack, trackLabel, trackIcon } from '../data/tracks.js'
+import { subjectsForTrack, getLevel, getSpecialty } from '../data/tracks.js'
 import { useStore, subjectScore } from '../store.jsx'
 import { nextMilestone } from '../data/rewards.js'
 import { ProgressBar, Ring, Icon } from '../components/ui.jsx'
-import { useT } from '../i18n.js'
+import OutilsAccueil from '../components/OutilsAccueil.jsx'
+import { useT, usePublicText } from '../i18n.js'
 
-// Tuile compacte (icône + libellé + petit sous-titre facultatif) : sert à ranger
-// toutes les fonctionnalités dans des grilles ordonnées plutôt qu'en longs
-// bandeaux empilés.
-function Tile({ to, icon, label, sub, accent }) {
-  return (
-    <Link
-      to={to}
-      className="card flex flex-col items-center justify-start gap-1.5 p-3.5 text-center transition hover:-translate-y-0.5 hover:shadow-md"
-    >
-      <span className="grid h-11 w-11 place-items-center rounded-2xl text-xl" style={{ backgroundColor: (accent || '#8a6d1e') + '18' }} aria-hidden>{icon}</span>
-      <span className="text-[13px] font-semibold leading-tight">{label}</span>
-      {sub ? <span className="text-[11px] leading-tight text-slate-500 dark:text-slate-400">{sub}</span> : null}
-    </Link>
-  )
-}
-
-function SectionHead({ title }) {
-  return <h2 className="mb-3 px-1 font-display text-lg font-semibold text-slate-700 dark:text-slate-200">{title}</h2>
-}
+import { readPosition } from '../data/readingPosition.js'
+import './Home.css'
 
 export default function Home() {
   const { state, derived } = useStore()
   const navigate = useNavigate()
-  const t = useT()
+  const t = useT(), tr = usePublicText()
 
   // Pas encore de filière choisie → retour à l'écran d'entrée.
   if (!state.track) return <Navigate to="/" replace />
@@ -49,7 +33,13 @@ export default function Home() {
     navigate(`/subject/${pick.sid}/theme/${pick.cid}`)
   }
 
-  const last = state.lastChapter ? getChapter(state.lastChapter.chapterId) : null
+  const position = readPosition(state.account?.id)
+  const recent = position && realSubjects.some((s) => s.id === position.subjectId) ? getChapter(position.themeId) : null
+  const previous = state.lastChapter ? getChapter(state.lastChapter.chapterId) : null
+  const last = recent || (previous && realSubjects.some((s) => s.id === previous.subjectId) ? previous : null)
+  const resumeUrl = recent ? `/subject/${position.subjectId}/theme/${position.themeId}/chapter/${position.chapterIndex}` : last ? `/subject/${last.subjectId}/theme/${last.id}` : '/revision'
+  const progress = trackProgress
+  const mastered = realSubjects.flatMap((s) => s.chapters).filter((ch) => derived.byChapter[ch.id] >= 90).length
   const level = state.track.level
 
   // Salutation personnalisée selon l'heure et le prénom de l'élève.
@@ -90,7 +80,7 @@ export default function Home() {
             </span>
           )}
           <div className="min-w-0 flex-1">
-            <p className="kicker" style={{ color: `color-mix(in srgb, ${bannerTint} 62%, #fff)` }}>{trackLabel(state.track)}</p>
+            <p className="kicker" style={{ color: `color-mix(in srgb, ${bannerTint} 62%, #fff)` }}>{tr(getLevel(state.track.level)?.name || '')}{state.track.level === 'terminale-stmg' && <> · {tr(getSpecialty(state.track.level, state.track.specialty)?.name || '')}</>}</p>
             <h1 className="font-display text-[1.7rem] font-medium leading-[1.15] text-[#faf3e1] sm:text-[2.15rem]">
               {greeting}{firstName ? <>, <span style={{ color: `color-mix(in srgb, ${bannerTint} 55%, #fff)` }}>{firstName}</span></> : ''}
             </h1>
@@ -112,13 +102,35 @@ export default function Home() {
 
         <div className="relative mt-5 flex flex-wrap gap-2.5">
           {last ? (
-            <Link to={`/subject/${last.subjectId}/theme/${last.id}`} className="btn-gold gap-1.5 !py-2.5">
-              <Icon.Play size={16} /> {t('resume')} : <CourseText text={last.short || last.name} />
+            <Link to={resumeUrl} className="btn-gold gap-1.5 !py-2.5">
+              <Icon.Play size={16} /> {t('resume')} : <CourseText text={recent ? position.chapterTitle || last.short || last.name : last.short || last.name} />
             </Link>
           ) : realSubjects[0] ? (
             <Link to={`/subject/${realSubjects[0].id}`} className="btn-gold gap-1.5 !py-2.5"><Icon.Play size={16} /> {t('start')}</Link>
           ) : null}
           <button onClick={randomChapter} className="btn gap-1.5 !py-2.5 text-[#f4ecd8]" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 45%, transparent)' }}><Icon.Dice size={16} /> {t('randomChapter')}</button>
+        </div>
+      </section>
+
+      {/* Mes matières — le cœur des révisions, juste sous l'accueil */}
+      <section>
+        <div className="mb-3 flex items-center justify-between gap-3 px-1">
+          <h2 className="font-display text-lg font-semibold text-slate-700 dark:text-slate-200">{t('mySubjects')}</h2>
+          <Link to="/changer" className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('change')}</Link>
+        </div>
+        <div className="home-subject-grid">
+          {subjects.map((s) => {
+            const pct = s.comingSoon ? 0 : subjectScore(state, s.id)
+            const content = <>
+              <span className="home-subject-icon" style={{backgroundColor:s.color+'12'}} aria-hidden>{s.icon}</span>
+              <h3 className="font-display font-semibold"><CourseText text={s.name} /></h3>
+              <div className="home-subject-meta text-slate-500 dark:text-slate-400"><span>{s.chapters.length} {t('themesCount')}</span><span>{s.comingSoon ? t('comingSoon') : `${pct}%`}</span></div>
+              {!s.comingSoon && <ProgressBar value={pct} color={s.color} />}
+            </>
+            return s.comingSoon
+              ? <div key={s.id} className="card home-subject-card opacity-80">{content}</div>
+              : <Link key={s.id} to={`/subject/${s.id}`} className="card home-subject-card transition hover:-translate-y-0.5 hover:shadow-md">{content}</Link>
+          })}
         </div>
       </section>
 
@@ -169,83 +181,13 @@ export default function Home() {
         )
       })()}
 
-      {/* Accès rapides : révision express + formulaire */}
-      <div className="grid grid-cols-2 gap-3">
-        <Link to="/express" className="card flex items-center gap-2.5 p-3.5 transition hover:-translate-y-0.5 hover:shadow-md">
-          <span className="text-2xl" aria-hidden>⏱️</span>
-          <span className="min-w-0"><span className="block text-sm font-semibold leading-tight">{t('expressMode')}</span><span className="block text-xs text-slate-400">{t('expressCardHint')}</span></span>
-        </Link>
-        <Link to="/formules" className="card flex items-center gap-2.5 p-3.5 transition hover:-translate-y-0.5 hover:shadow-md">
-          <span className="text-2xl" aria-hidden>📐</span>
-          <span className="min-w-0"><span className="block text-sm font-semibold leading-tight">{t('formulasTitle')}</span><span className="block text-xs text-slate-400">{t('formulasCardHint')}</span></span>
-        </Link>
-      </div>
+      {/* Réviser & réussir : l'outil conseillé, les autres rangés dans la trousse */}
+      <OutilsAccueil />
 
-      {/* Mes matières — le cœur des révisions, juste sous l'accueil */}
-      <section>
-        <div className="mb-3 flex items-center justify-between gap-3 px-1">
-          <h2 className="font-display text-lg font-semibold text-slate-700 dark:text-slate-200">{t('mySubjects')}</h2>
-          <Link to="/changer" className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('change')}</Link>
-        </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {subjects.map((s) => {
-            if (s.comingSoon) {
-              return (
-                <div key={s.id} className="card relative flex items-center gap-3.5 overflow-hidden p-5 opacity-80">
-                  <span className="absolute inset-y-0 left-0 w-1" style={{ backgroundColor: s.color + '99' }} />
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: s.color + '12', boxShadow: `inset 0 0 0 1px ${s.color}33` }}>{s.icon}</span>
-                  <div className="min-w-0 flex-1 pl-1">
-                    <h3 className="font-display text-[1.05rem] font-semibold leading-tight"><CourseText text={s.name} /></h3>
-                    <span className="chip mt-1 bg-violet-100 text-violet-700 dark:bg-violet-950/50 dark:text-violet-300">{t('comingSoon')}</span>
-                  </div>
-                </div>
-              )
-            }
-            const pct = subjectScore(state, s.id)
-            return (
-              <Link key={s.id} to={`/subject/${s.id}`} className="card group relative overflow-hidden p-5 transition hover:-translate-y-0.5 hover:shadow-md">
-                <span className="absolute inset-y-0 left-0 w-1" style={{ backgroundColor: s.color + '99' }} />
-                <div className="flex items-start gap-3.5 pl-2">
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: s.color + '12', boxShadow: `inset 0 0 0 1px ${s.color}33` }}>{s.icon}</span>
-                  <div className="min-w-0 flex-1">
-                    <h3 className="font-display text-[1.05rem] font-semibold leading-tight"><CourseText text={s.name} /></h3>
-                    <p className="mb-2.5 truncate text-xs text-slate-500 dark:text-slate-400">{s.chapters.length} {t('chapters')} · {s.tagline}</p>
-                    <ProgressBar value={pct} color={s.color} />
-                    <p className="mt-1.5 text-end text-xs font-semibold texte-matiere" style={{ '--mc': s.color }}>{pct}%</p>
-                  </div>
-                </div>
-              </Link>
-            )
-          })}
-        </div>
-      </section>
-
-      {/* Réviser & réussir — outils regroupés en tuiles compactes */}
-      <section>
-        <SectionHead title={t('secRevise')} />
-        <div className="grid grid-cols-3 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-          <Tile to="/coach-ia" icon="🤖" label={t('coachAI')} sub={t('aiTraining')} accent="#0ea5e9" />
-          <Tile to="/revision" icon="🧠" label={t('smartRevision')} sub={t('priorityList')} accent="#7c3aed" />
-          <Tile to="/bac-blanc" icon="📝" label={t('mockExam')} sub="/20 · ⏱" accent="#e11d48" />
-          <Tile to="/programme" icon="📅" label={t('studyPlan')} sub={t('todayGoals')} accent="#0284c7" />
-          <Tile to="/coach" icon="🎯" label={t('coach')} accent="#f59e0b" />
-          <Tile to="/grand-oral" icon="🎓" label={t('grandOral')} accent="#8a6d1e" />
-          {state.track?.level === 'premiere-stmg' && <Tile to="/etude-de-gestion" icon="🔎" label={t('egTitle')} sub={t('egTileSub')} accent="#4f46e5" />}
-          <Tile to="/fiches-photo" icon="📸" label={t('photoFiche')} sub={t('photoFicheSub')} accent="#16a34a" />
-        </div>
-      </section>
-
-      {/* Communauté & progression — boutique, classe, amis, badges, favoris */}
-      <section>
-        <SectionHead title={t('secCommunity')} />
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-          <Tile to="/boutique" icon="🛍️" label={t('shop')} sub={`🪙 ${state.coins || 0}`} accent="#c8a24e" />
-          <Tile to="/classe" icon="👥" label={t('myClass')} sub={state.classCode || t('joinClassShort')} accent="#0d9488" />
-          <Tile to="/amis" icon="🤝" label={t('friends')} accent="#6366f1" />
-          <Tile to="/badges" icon="🏅" label={t('badges')} sub={`${state.badges.length} ${t(state.badges.length > 1 ? 'earnedP' : 'earnedM')}`} accent="#a855f7" />
-          <Tile to="/favoris" icon="⭐" label={t('favorites')} sub={`${state.favorites.length} ${t(state.favorites.length > 1 ? 'chapToReviewP' : 'chapToReviewM')}`} accent="#eab308" />
-        </div>
-      </section>
+    <section className="home-summary home-bottom-grid">
+      <div className="home-progress-card"><span className="home-eyebrow">Tes efforts prennent forme</span><div className="home-progress-heading"><h2>Chaque séance compte.</h2><span aria-hidden>→</span></div><div className="home-stat-grid"><div><strong>{progress}<small>%</small></strong><span>Progression de ta filière</span></div><div><strong>{mastered}</strong><span>Thèmes maîtrisés</span></div><div><strong>{state.streak?.count || 0}</strong><span>{t('streakDays')}</span></div></div><p>Ta progression est calculée à partir de tes résultats aux exercices.</p><div className="home-progress-footer"><span>{t('level')} {derived.level} · {state.xp.toLocaleString(state.lang || 'fr')} XP</span><Link to="/badges">{t('badges')} →</Link></div></div>
+      <div className="home-community-card"><span className="home-eyebrow">Mieux avancer, ensemble</span><h2>Ton coin à toi.</h2><div className="home-community-links"><Link to="/classe"><span aria-hidden>◉</span>{t('myClass')}<span aria-hidden>→</span></Link><Link to="/amis"><span aria-hidden>♧</span>{t('friends')}<span aria-hidden>→</span></Link><Link to="/boutique"><span aria-hidden>✦</span>{t('shop')}<span aria-hidden>→</span></Link></div></div>
+    </section>
 
       <p className="pt-1 text-center text-xs text-slate-400">
         {level === 'terminale-stmg' ? t('courseBasedNote') : t('savedOnDevice')}

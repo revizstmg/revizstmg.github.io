@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
-import { dailyPlan, realThemes } from '../data/study.js'
+import { dailyPlan, programmeThemes } from '../data/study.js'
 import { daysUntil, defaultBacDate } from '../data/srs.js'
 import { CALENDRIER, epreuvesAVenir, premiereEpreuve } from '../data/epreuves.js'
 import { useT } from '../i18n.js'
@@ -28,8 +28,10 @@ function ProgrammePage() {
   const dLeft = daysUntil(state.bacDate)
 
   const plan = useMemo(() => dailyPlan(state, state.track, undefined, 4), [state])
-  const themesTotal = useMemo(() => realThemes(state.track).length, [state.track])
-  const masteredPct = themesTotal ? Math.round((derived.chaptersMastered / themesTotal) * 100) : 0
+  const themes = useMemo(() => programmeThemes(state.track), [state.track])
+  const themesTotal = themes.length
+  const mastered = themes.filter((theme) => derived.byChapter[theme.themeId] >= 90).length
+  const masteredPct = themesTotal ? Math.round((mastered / themesTotal) * 100) : 0
   const doneToday = plan.filter((p) => p.done).length
 
   const save = () => { if (draft) { setBacDate(draft); setEditing(false) } }
@@ -109,7 +111,7 @@ function ProgrammePage() {
       <section className="card p-5">
         <div className="mb-1 flex items-center justify-between text-sm">
           <span className="font-semibold">{t('overallProgress')}</span>
-          <span style={{ color: 'var(--c-accent-texte)' }}>{derived.chaptersMastered} / {themesTotal} {t('themes')}</span>
+          <span style={{ color: 'var(--c-accent-texte)' }}>{mastered} / {themesTotal} {t('themes')}</span>
         </div>
         <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
           <div className="h-full rounded-full" style={{ width: `${masteredPct}%`, backgroundColor: 'var(--c-accent)' }} />

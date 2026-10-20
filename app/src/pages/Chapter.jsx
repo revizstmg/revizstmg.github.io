@@ -12,7 +12,7 @@ export default function Chapter() {
   const { sid, tid, cidx } = useParams()
   const subject = getSubject(sid)
   const theme = getChapter(tid)
-  const { state, saveDeck } = useStore()
+  const { state, saveDeck, setLastChapter } = useStore()
   const t = useT()
   const navigate = useNavigate()
   const gameLabel = useGameLabel()
@@ -33,6 +33,7 @@ export default function Chapter() {
   // Nouveau chapitre : on referme tout jeu ouvert, on revient à l'onglet Cours
   // et on remonte en haut.
   useEffect(() => {
+    if (subject && theme) setLastChapter(sid, tid)
     setActiveGame(null)
     setTab('cours')
     window.scrollTo(0, 0)
@@ -126,7 +127,7 @@ export default function Chapter() {
 
       {/* ONGLET COURS — lecteur paginé, épuré (imprimé dans la fiche PDF) */}
       <div className={`${tab === 'cours' ? '' : 'hidden'} print-show`}>
-        <PaginatedCourse
+        <PaginatedCourse key={`${state.account?.id || "trial"}:${tid}:${chapter.idx}`}
           sec={chapter.section}
           color={color}
           themeId={tid}

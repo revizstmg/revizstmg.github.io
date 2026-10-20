@@ -1,3 +1,5 @@
+import { readPosition, savePosition } from '../data/readingPosition.js'
+import { useStore } from '../store.jsx'
 // Affichage d'un cours « complet » : introduction, sections avec paragraphes,
 // exemples travaillés, encadrés méthode / piège, tableaux, formules et
 // ressources (vidéos, sites officiels). Rétro-compatible avec l'ancien format
@@ -161,14 +163,20 @@ function avecTableauFinal(sec, themeId, subjectId, sectionIdx, t) {
 export function PaginatedCourse({ sec, color, prevLabel, onPrev, themeId, subjectId, sectionIdx = 0 }) {
   const t = useT()
   // Pages recalculées à chaque changement de section (nouveau chapitre).
+  const { state } = useStore()
+  const saved = readPosition(state.account?.id)
+  const initialPage = saved?.themeId === themeId && saved.chapterIndex === sectionIdx ? saved.page : 0
   const feuilles = () => paginateBlocks(avecTableauFinal(sec, themeId, subjectId, sectionIdx, t))
   const [list, setList] = useState(feuilles)
-  const [page, setPage] = useState(0)
+  const [page, setPage] = useState(() => Math.min(initialPage, Math.max(0, feuilles().length - 1)))
   const [full, setFull] = useState(false) // lecture plein écran « feuille »
   const bodyRef = useRef(null)
   const fullRef = useRef(null)
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => { setList(feuilles()); setPage(0) }, [sec, themeId])
+  useEffect(() => { const next = feuilles(); setList(next); setPage(Math.min(initialPage, Math.max(0, next.length - 1))) }, [sec, themeId, sectionIdx, state.account?.id])
+  useEffect(() => {
+    savePosition(state.account?.id, { subjectId, themeId, chapterIndex: sectionIdx, chapterTitle: sec.h, page })
+  }, [state.account?.id, subjectId, themeId, sectionIdx, page])
   const last = list.length - 1
   const toTop = (ref) => { try { (ref?.current || window).scrollTo({ top: 0, behavior: 'smooth' }) } catch { (ref?.current || window).scrollTo(0, 0) } }
   const goPrev = () => { if (page > 0) { setPage(page - 1); toTop(full ? fullRef : null) } else { setFull(false); onPrev?.() } }
