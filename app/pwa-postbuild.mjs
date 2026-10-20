@@ -58,8 +58,11 @@ if (!html.includes(MARK)) {
     </script>
   `
   html = html.replace('</body>', `${reg}</body>`)
-  writeFileSync(indexPath, html)
 }
+// Le statut hors ligne doit correspondre à l’app affichée, pas à un ancien worker.
+html = html.replace(/<meta name="revizstmg-version"[^>]*>\s*/g, '')
+html = html.replace('</head>', `<meta name="revizstmg-version" content="${version}" />\n  </head>`)
+writeFileSync(indexPath, html)
 
 console.log('[pwa-postbuild] fichiers copiés :', copied.join(', '))
 console.log(`[pwa-postbuild] service worker : version ${version}, ${assets.length} fichiers à mettre en cache`)

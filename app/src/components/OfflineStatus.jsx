@@ -11,7 +11,11 @@ export default function OfflineStatus() {
         const registration=await navigator.serviceWorker.ready
         if(!alive || current!==generation)return
         const channel=new MessageChannel();port=channel.port1
-        port.onmessage=event=>{if(alive && current===generation){clearTimeout(timer);if(event.data?.ready)clearInterval(interval);setStatus(event.data?.ready?'ready':'waiting')}}
+        port.onmessage=event=>{if(alive && current===generation){
+          const version=document.querySelector('meta[name="revizstmg-version"]')?.content
+          const ready=!!version && event.data?.version===version && event.data?.ready
+          clearTimeout(timer);if(ready)clearInterval(interval);setStatus(ready?'ready':'waiting')
+        }}
         registration.active?.postMessage({type:'OFFLINE_STATUS'},[channel.port2])
       } catch {if(alive)setStatus('waiting')}
     }

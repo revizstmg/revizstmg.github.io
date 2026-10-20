@@ -52,3 +52,23 @@ test('hors ligne : après une première visite, une matière jamais ouverte s’
   await context.setOffline(false)
   expect(erreurs).toEqual([])
 })
+
+test('un ancien cache ne confirme pas la préparation de la version affichée',async({page})=>{
+ await preparer(page)
+ await page.addInitScript(()=>{
+  const original=ServiceWorker.prototype.postMessage
+  ServiceWorker.prototype.postMessage=function(data,ports){
+   if(data?.type==='OFFLINE_STATUS'){
+    window.__oldCacheReplies=(window.__oldCacheReplies||0)+1
+    ports[0].postMessage({type:'OFFLINE_STATUS',ready:true,version:'ancienne-version'})
+    return
+   }
+   return original.apply(this,arguments)
+  }
+ })
+ await page.goto('./#/moi?section=reglages')
+ await expect.poll(()=>page.evaluate(()=>window.__oldCacheReplies||0)).toBeGreaterThan(0)
+ const status=page.locator('main section[role="status"]')
+ await expect(status).toContainText('Le téléchargement complet des cours n’est pas encore confirmé.')
+ await expect(status).not.toContainText('✓ Les cours et exercices')
+})
