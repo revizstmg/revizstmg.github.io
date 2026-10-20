@@ -1,0 +1,52 @@
+[
+  {
+    "route": "/accueil",
+    "body": "LT\n\nTERMINALE STMG · GESTION ET FINANCE\n\nBonsoir, Léa\n\nLundi 19 Octobre\n\n0% de progression\nNiveau 1\n0 XP\n1 j de suite\nCommencer\nChapitre au hasard\nTes matières\nChanger\n💰\nGestion et Finance\n3 thèmes\n0%\n🏢\nManagement (MSGN)\n3 thèmes\n0%\n⚖️\nDroit\n4 thèmes\n0%\n📈\nÉconomie\n5 thèmes\n0%\n🧮\nMathématiques\n7 thèmes\n0%\n🦉\nPhilosophie\n8 thèmes\n0%\n🗺️\nHistoire-Géographie\n6 thèmes\n0%\n🗣️\nLangues (Anglais / Espagnol)\n10 thèmes\n0%\n🔥\n\nSérie de connexion · 1 jour d’affilée\n\n✓ Récompense du jour récupérée\n\n🔥 3 jours d’affilée · +30 XP\n2 jours restants\n⚡\n\nDéfi du jour\n\nRelève le défi et gagne un bonus\n\nCommencer\nRéviser & réussir\n📅\nCONSEILLÉ MAINTENANT\nProgramme jusqu’au bac\nTes objectifs du jour\n→\n🧠\n📝\n🎯\n🤖\n🎓\nTa trousse · 8 outils\n▾\nTES EFFORTS PRENNENT FORME\nChaque séance compte.\n→\n0%\nProgression de ta filière\n0\nThèmes maîtrisés\n1\nj de suite\n\nTa progression est calculée à partir de tes résultats aux exercices.\n\nNiveau 1 · 0 XP\nBadges →\nMIEUX AVANCER, ENSEMBLE\nTon coin à toi.\n◉\nMa classe\n→\n♧\nAmis\n→\n✦\nBoutique\n→\n\nContenu basé sur ton cours « Terminale STMG — Cours complet ». Progression sauvegardée sur cet appareil."
+  },
+  {
+    "route": "/atelier-formules",
+    "body": "CALCUL ET ENTRAÎNEMENT\n\nAtelier de formules\n\nChoisis tes formules, puis entraîne-toi avec de nouvelles valeurs à chaque séance.\n\nRechercher une formule\nMatière\nToutes les matières\nMathématiques\nGestion & Finance\nManagement\nÉconomie\n\n0 formule(s) sélectionnée(s)\n\nEffacer la sélection\nExercices par formule\n1\n2\n3\n5\n\n0 exercice(s) au total\n\nGénérer mes exercices\nLes formules à travailler\nProportion\nPartie ÷ Tout × 100\nMathématiques\nx % d’une valeur V\nV × x ÷ 100\nMathématiques\nTaux d’évolution\nt = (V arrivée − V départ) ÷ V départ\nMathématiques\nCoefficient multiplicateur\nCM = 1 + t\nMathématiques\nValeur d’arrivée\nV arrivée = V départ × CM\nMathématiques\nÉvolutions successives\nCM global = CM₁ × CM₂ × … × CMₙ\nMathématiques\nÉvolution réciproque\nCM réciproque = 1 ÷ CM\nMathématiques\nIndice base 100\nValeur ÷ Valeur de référence × 100\nMathématiques\nSuite arithmétique (terme général)\nuₙ = u₀ + n × r\nMathématiques\nSuite géométrique (terme général)\nuₙ = u₀ × qⁿ\nMathématiques\nÉtendue\nMaximum − Minimum\nMathématiques\nÉcart interquartile\nQ3 − Q1\nMathématiques\nProbabilité conditionnelle\nP_A(B) = P(A ∩ B) ÷ P(A)\nMathématiques\nEspérance (loi binomiale)\nE(X) = n × p\nMathématiques\nMontant de la TVA\nPrix HT × Taux de TVA\nGestion & Finance\nPrix TTC\nPrix HT × (1 + Taux de TVA)\nGestion & Finance\nPrix HT\nPrix TTC ÷ (1 + Taux de TVA)\nGestion & Finance\nTVA à décaisser\nTVA collectée − TVA déductible\nGestion & Finance\nAnnuité d’amortissement\nValeur d’origine × Taux linéaire\nGestion & Finance\nValeur nette comptable (VNC)\nValeur d’origine − Cumul des amortissements\nGestion & Finance\nFonds de roulement net global (FRNG)\nRessources stables − Emplois stables\nGestion & Finance\nBesoin en fonds de roulement (BFR)\nActif circulant d’exploitation − Passif circulant d’exploitation\nGestion & Finance\nTrésorerie nette\nFRNG − BFR\nGestion & Finance\nMarge sur coût variable (MCV)\nChiffre d’affaires − Charges variables\nGestion & Finance\nSeuil de rentabilité (en €)\nCharges fixes ÷ Taux de MCV\nGestion & Finance\nTaux de marge\nMarge ÷ Coût d’achat HT × 100\nGestion & Finance\nTaux de marque\nMarge ÷ Prix de vente HT × 100\nGestion & Finance\nValeur ajoutée\nValeur de la production − Consommations intermédiaires externes\nManag"
+  },
+  {
+    "afterSelection": {
+      "scrollY": 4241,
+      "button": {
+        "x": 37,
+        "y": -3599.203125,
+        "width": 214,
+        "height": 48,
+        "top": -3599.203125,
+        "right": 251,
+        "bottom": -3551.203125,
+        "left": 37
+      },
+      "checkbox": {
+        "x": 33,
+        "y": 451.171875,
+        "width": 16,
+        "height": 16,
+        "top": 451.171875,
+        "right": 49,
+        "bottom": 467.171875,
+        "left": 33
+      }
+    }
+  },
+  {
+    "route": "/boutique",
+    "body": "L’ATELIER RÉVIZSTMG\n\nTes efforts ont du style.\n\nRévise, collectionne, démarque-toi. Une boutique de récompenses gagnées à la force de tes révisions.\n\n🪙 0 pièces\n✦ Niveau 1 · 0 XP\n◈ 0 objets acquis\nÀ la une\nCollections\nRécompenses\nMes objets\n\nTON PROCHAIN CAP\n\n2 gels de série\n\n0 % des conditions remplies · les pièces dépensées ne réduisent pas tes XP.\n\nVoir les paliers →\n\nLA COLLECTION DU MOMENT\n\nUn nouvel univers de révision\nTout voir\n🔮\nNiv. 12\n\nÉPIQUE\n\nNébuleuse\n\nUne ambiance complète pour ton espace de révision.\n\n🪙 1 200\n5 000 XP requis\n🔥\nNiv. 16\n\nLÉGENDAIRE\n\nPhénix\n\nAffiché sur ton profil et dans ton menu.\n\n🪙 2 000\n12 200 XP requis\n⚜️\nNiv. 14\n\nÉPIQUE\n\nHéritage doré\n\nHabille le bandeau de ton accueil.\n\n🪙 1 600\n10 000 XP requis\n\nLES GRANDS OBJECTIFS\n\nDe grands résultats. De vrais avantages.\n✦\nNIVEAU 20\nUn mois Premium offert\n\n1 mois offert au lancement de Premium\n\n○ 20 000 XP cumulés\n○ 20 tests de thèmes différents à 90 % minimum (0/20)\n\n0 % des conditions remplies\n\nContinuer à progresser\n\nOffre en préparation. Mois offert au lancement, après vérification des résultats. Aucune activation ni facturation aujourd’hui. Une seule attribution par compte et par offre.\n\n♛\nNIVEAU 30\nUn mois Ultimate offert\n\n1 mois offert au lancement d’Ultimate\n\n○ 73 500 XP cumulés\n○ 30 tests de thèmes différents à 95 % minimum (0/30)\n\n0 % des conditions remplies\n\nContinuer à progresser\n\nOffre en préparation. Mois offert au lancement, après vérification des résultats. Aucune activation ni facturation aujourd’hui. Une seule attribution par compte et par offre.\n\nUne boutique qui suit tes progrès\n\n01 · Révise.\nLes exercices, défis et objectifs rapportent des XP et des pièces virtuelles.\n\n02 · Choisis.\nLes pièces servent aux achats. Les XP débloquent les niveaux et les collections rares.\n\n03 · Vise plus haut.\n20 tests à 90 % pour Premium, 30 tests à 95 % pour Ultimate, en plus du niveau requis.\n\nAchat en pièces virtuelles uniquement. Les offres Premium et Ultimate sont en préparation ; leur contenu n’est pas encore annoncé. Les réservations doivent être vérifiées avant attribution. Aucun renouvellement automatique. Conditions des récompenses"
+  },
+  {
+    "route": "/moi",
+    "body": "LT\n\n🎓 ÉLÈVE\n\nLéa Test\n\nlea@test.fr\n\n💰 Terminale STMG · Gestion Et Finance\n\nNiveau 1\n0 / 100 XP\nMes statistiques\n⭐\n0\nXP\n🔥\n1\nJ DE SUITE\n🏆\n0\nMAÎTRISÉS\n📚\n0\nCOURS CETTE SEMAINE\n🎯\n0%\nPRÉCISION\n🎖️\n0\nBADGES\n📈 Ma progression\nTa courbe apparaîtra dès demain, après quelques jours de révision.\n⏱️ Temps par thème\nRévise un peu pour voir ton temps par thème.\n📚 Niveau par matière\n💰 Gestion & Finance\n0%\n🏢 Management\n0%\n⚖️ Droit\n0%\n📈 Économie\n0%\n🧮 Maths\n0%\n🦉 Philo\n0%\n🗺️ Histoire-Géo\n0%\n🗣️ Langues\n0%\nMes badges\nTout voir\nAucun badge pour l’instant. Gagne-en en jouant !\n👨‍👩‍👧 Suivi parental\n\nDésactivé : rien n’est partagé. Active-le pour obtenir un code à donner à tes parents ; ils verront ta progression (temps, série, matières) en lecture seule.\n\nRéviser\nAller aux cours\nFavoris\n0 chapitre à revoir\n👥\nRejoindre une classe\nRejoindre avec un code\nPersonnaliser mon profil\n🔒 APPLI\nCouleurs, police, avatar, photo…\n⚙️ Préférences\n♿\nAccessibilité\nPolice adaptée (dys), fort contraste, lecture à voix haute\n›\n🧩\nPersonnaliser les onglets\nChoisis les raccourcis de la barre du bas\n›\n📅\nDate de mon bac\nSert au compte à rebours et au plan de révision\nInstaller l’application\nR\nInstaller l’application\n\nAjoute RévizSTMG à ton écran d’accueil : accès en un tap, en plein écran, et ça marche même hors connexion.\n\n📲 Installer\n🔔 Rappels de révision\n⏰\n\nRappel quotidien\n\nUne notification douce « c’est l’heure de réviser ».\n\n💡 Avec un compte, le rappel arrive même téléphone fermé, seulement si tu n’as pas encore révisé ce jour-là. Sur iPhone, installe d’abord l’app sur l’écran d’accueil (iOS 16.4 ou plus).\n\nPolitique de confidentialité\n⬇️ Télécharger mes données\nZone sensible\n\nEfface définitivement ta progression, ta classe et tes contributions, tes amis et tes duels, le suivi parent et ton compte de connexion (adresse e-mail comprise).\n\n🗑️ Supprimer mon compte"
+  },
+  {
+    "menuAfterEscape": 1
+  },
+  {
+    "tabFocus": {
+      "text": "Accueil",
+      "insideMenu": false
+    }
+  }
+]

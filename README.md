@@ -18,11 +18,20 @@ et en classe. Installable sur téléphone et utilisable hors ligne.
 > jour à chaque changement visible par l'élève.
 
 L’accueil conserve son bandeau sombre et or, avec les matières de la filière
-juste en dessous, puis les outils. Les cartes « Chaque séance compte » et
+juste en dessous, en cases compactes : quatre colonnes sur ordinateur (deux
+lignes), deux colonnes sur téléphone, puis les outils : « Réviser & réussir » ne
+montre que l’outil conseillé à l’élève selon sa situation (bac proche, révisions
+du jour, chapitres à revoir, sinon le programme) ; les autres sont rangés dans
+« Ta trousse », qui se déplie à la demande (`components/OutilsAccueil.jsx`). Les cartes « Chaque séance compte » et
 « Ton coin à toi » regroupent progression et communauté. Un compte déjà
 configuré entre sans écran d’attente.
 La dernière fiche consultée est conservée sur cet appareil, séparément pour
 chaque compte, et accessible depuis « Reprendre ».
+
+L’atelier de formules remplace les anciens espaces Révision express et Formulaire.
+Il propose un à cinq exercices par formule choisie, accepte les réponses avec
+virgule ou point et affiche un bilan local sans modifier la maîtrise des chapitres.
+Les anciennes adresses redirigent vers `/atelier-formules`.
 
 Dans le lecteur de cours, la flèche après la dernière fiche revient à la
 première fiche du même chapitre, en lecture normale comme en plein écran.
@@ -106,7 +115,7 @@ ont pas besoin. Le passage de langue ne réutilise pas un ancien résultat.
 | Exercices | Une vingtaine de types : QCM, vrai/faux, texte à trous, saisie, tri, association, remise en ordre, calcul, memory, requêtes SQL, cas pratique, étude de documents, compréhension en langue… Le nombre d’exercices dépend des notions réellement présentes dans le chapitre. Ils sont tirés uniquement de son cours : notions et cas concrets en deux séries, vrai/faux, termes à écrire, association, memory, textes à trous, mot manquant, dates, quiz du chapitre mêlant toutes les formes (`sectionExercises`, `src/data/index.js`). |
 | Étude de gestion | Pour la Première : un espace qui accompagne le projet — consignes et règles officielles, démarche, liste du dossier ; les sources de l'élève avec leur fiabilité ; l'analyse de son organisation (tableau de caractérisation, diagnostic interne et externe, PESTEL) ; ses arguments construits avec la méthode A-E-I, reliés aux sources et notés avec une grille (note sur 20) ; blocs repliables pour alléger la lecture ; export du dossier en texte (`content/commun/etude-gestion.json`, `pages/EtudeGestion.jsx`). |
 | Grand Oral | Pour la Terminale, le même accompagnement adapté à l'épreuve : règles de la session 2027 (20 min de préparation, 10 min de présentation, 10 min d'échange, coefficient 12), ce que le jury évalue, démarche, conseils, banque de questions ; les deux questions et le plan ; sources ; analyse de l'organisation ; arguments A-E-I rattachés à chaque question, notés avec une grille qui ajoute un critère d'oral ; chronomètre aux durées de l'épreuve, enregistrement et auto-évaluation sur les critères du jury ; export de la préparation (`content/commun/grand-oral.json`, `pages/GrandOral.jsx`). Les outils communs aux deux espaces sont dans `components/DossierProjet.jsx` et `content/commun/outils-projet.json`. |
-| Révision | Flashcards et répétition espacée (planifiée d'après le résultat de chaque séance), carnet d'erreurs (les questions ratées, à refaire jusqu'à les réussir), révision express de 5 minutes, défi du jour, bac blanc chronométré et sujets au format des épreuves écrites de spécialité (4 h), programme avec les dates officielles des épreuves, formulaire de 225 formules, méthodologie par épreuve. |
+| Révision | Flashcards et répétition espacée (planifiée d'après le résultat de chaque séance), carnet d'erreurs (les questions ratées, à refaire jusqu'à les réussir), défi du jour, bac blanc chronométré et sujets au format des épreuves écrites de spécialité (4 h), programme avec les dates officielles des épreuves, atelier de formules : sélection par matière, 40 formules de calcul adaptées à la filière, exercices numériques renouvelés et corrections détaillées, méthodologie par épreuve. |
 | IA | Coach IA qui analyse les résultats et propose un plan. Fiches créées à partir de photos de cours (fonction `fiche-vision`, pas encore déployée). |
 | Social | Comptes élève et prof, classes (mur, quiz, duels, groupes), amis et duels, classement hebdomadaire et ligues, espace parent (seulement si l'élève active le partage). Réservé aux comptes connectés : la base ne montre une classe qu'à ses membres et à son professeur (`supabase/README.md`). Essai sans compte possible (progression sur l'appareil, `components/CompteRequis.jsx`). |
 | Motivation | XP, niveaux, badges, série de jours, boutique de pièces, objectifs de la semaine. |
@@ -240,7 +249,7 @@ fonctions : `supabase/migrations/20261012173929_revizstmg_statistiques.sql`).
     chargé quand l'élève ouvre la matière.
 - **Qui charge quoi.** Le store, l'accueil, les menus, la recherche et les scores
   n'ont besoin que de l'index léger. Les pages d'une matière (matière, thème,
-  chapitre) attendent sa matière ; le bac blanc, la révision express, le coach IA,
+  chapitre) attendent sa matière ; le bac blanc, le coach IA,
   le défi du jour et les duels attendent les matières de la filière de l'élève. Ces
   attentes passent par `src/content/Contenu.jsx`, qui affiche « Chargement du
   cours… » le temps nécessaire.

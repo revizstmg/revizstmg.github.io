@@ -49,9 +49,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | I18N-20261019-CODEX-01 | Codex | Traductions sur toutes les pages, boutique/catalogue, moteur, accessibilité et tests | Terminé | `fix/traductions-partout`, PR #12 | Fusion et publication suivies dans la PR |
 
-| DOC-20261018-CLAUDE-01 | Claude | Répartition des tâches demandée par le propriétaire : `docs/TACHES.md` (nouveau) et lien depuis ce journal | Terminé, à fusionner par le propriétaire | `claude/repartition-taches`, [PR #13](https://github.com/revizstmg/revizstmg.github.io/pull/13) | Le propriétaire relit, ajuste et fusionne ; Claude attend sa décision sur C01 (comptes partagés avec NAH) |
-
-| PROG-20261019-CLAUDE-01 | Claude | Ne plus perdre la progression (tâches C03 à C06) : sauvegarde complète et versionnée, fusion entre appareils, déconnexion sans perte, dates du calendrier de l'élève. Fichiers : `app/src/progression.js` (nouveau), `store.jsx` (persistance, fusion, synchronisation, déconnexion, dates ; pas les fonctions de score), `data/srs.js`, `auth.js`, `push.js`, `EtatSauvegarde.jsx` (nouveau), `Layout.jsx` et `Customizer.jsx` (boutons de déconnexion), une ligne de date dans `Home.jsx` et `DailyChallenge.jsx`, tests, README, confidentialité | À relire | `claude/progression-fiable`, [PR #14](https://github.com/revizstmg/revizstmg.github.io/pull/14) | Le propriétaire relit et fusionne (après la PR #13) |
+| DOC-20261018-CLAUDE-01 | Claude | Répartition des tâches demandée par le propriétaire : `docs/TACHES.md` (nouveau) et lien depuis ce journal | Terminé, fusionné le 20 octobre (demande du propriétaire) | `claude/repartition-taches`, [PR #13](https://github.com/revizstmg/revizstmg.github.io/pull/13) | Le propriétaire relit, ajuste et fusionne ; Claude attend sa décision sur C01 (comptes partagés avec NAH) |
 
 | PEDAGO-20261019-CODEX-01 | Codex | X06 : deux corrections SDGN Première ; X01 : finaliser les cinq jeux de la PR #6 ; contenu, moteur et tests uniquement | Terminé | [PR #15](https://github.com/revizstmg/revizstmg.github.io/pull/15) | Valider les corrections et les parcours |
 
@@ -60,6 +58,18 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 | HOME-20261019-CODEX-01 | Codex | Refonte accueil : Home, CSS dédié, reprise de lecture Chapter/Course, présentation Welcome, traductions et tests | Terminé | [PR #17](https://github.com/revizstmg/revizstmg.github.io/pull/17) | Validation et publication suivies dans la PR ; aucun changement auth/store |
 
 | HOME-RETOUR-20261019-CODEX-01 | Codex | Retour au visuel précédent, matières en haut, conservation des deux cartes progression/communauté ; Home/CSS/tests/README | Terminé | `fix/accueil-classique` | Publication et validation complète suivies dans la PR |
+
+| MATIERES-20261019-CODEX-01 | Codex | Cases matières compactes : quatre colonnes ordinateur, deux mobile ; Home/CSS/tests | Terminé | `fix/matieres-compactes` | Publication suivie dans la PR |
+
+| FORMULES-20261019-CODEX-01 | Codex | Retrait Express/Formulaire, atelier de calcul par formules ; routes, Home, moteur, traductions et tests | Terminé | `feat/atelier-formules` | Publication suivie dans la PR |
+
+| TROUSSE-20261019-CLAUDE-01 | Claude | Demande du propriétaire : « Réviser & réussir » de l'accueil plus discret, sans afficher tous les outils d'un coup. Fichiers : nouveau `components/OutilsAccueil.jsx`, `Home.jsx` (fichier de Codex : la section remplacée par ce composant), tests, README | Terminé | `claude/accueil-outils`, PR #22 | Fusion demandée par le propriétaire ; publication suivie dans la PR |
+
+| AUDITSITE-20261019-CODEX-01 | Codex + trois agents lancés | Inspection UX, fiabilité, pédagogie/accessibilité ; PDF, version texte et actions partagés | Terminé | [PR #25](https://github.com/revizstmg/revizstmg.github.io/pull/25) | PDF et plan dans `docs/audits/2026-10-19/` ; affectations à confirmer |
+
+| INSPECTION-20261020-CLAUDE-01 | Claude | Demande du propriétaire : cinq agents inspectent tout le site (fonctionnalités, interface, parcours, technique, pédagogie) et livrent un PDF d'améliorations, mis en commun avec Codex ; plus la vérification des cours et exercices du 19 octobre. Fichiers : `docs/audits/2026-10-20/`, `docs/audits/README.md`, ce journal | Terminé | `claude/rapport-ameliorations` | Le propriétaire choisit les priorités ; chacun réserve ses chantiers ici |
+
+| PROG-20261019-CLAUDE-01 | Claude | Ne plus perdre la progression (tâches C03 à C06) : sauvegarde complète et versionnée, fusion entre appareils, déconnexion sans perte, dates du calendrier de l'élève. Fichiers : `app/src/progression.js` (nouveau), `store.jsx` (persistance, fusion, synchronisation, déconnexion, dates ; pas les fonctions de score), `data/srs.js`, `auth.js`, `push.js`, `EtatSauvegarde.jsx` (nouveau), `Layout.jsx` et `Customizer.jsx` (boutons de déconnexion), une ligne de date dans `Home.jsx` et `DailyChallenge.jsx`, tests, README, confidentialité | Terminé, fusionné le 20 octobre (demande du propriétaire) | `claude/progression-fiable`, [PR #14](https://github.com/revizstmg/revizstmg.github.io/pull/14) | Contrôler une vraie sauvegarde après publication |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -257,60 +267,8 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   le compte de connexion partagé avec NAH, à décider avant C01 ; la branche
   `claude/competences-demandes-60d791` (13/10, hors journal) modifie
   `.claude/settings.json` et `CLAUDE.md` et entrerait en conflit avec `main`.
-- PR #13, non fusionnée : la fusion revient au propriétaire après relecture.
+- PR #13 fusionnée le 20 octobre 2026, à la demande du propriétaire.
 - Prochaine action : C01 après la décision du propriétaire sur les comptes NAH.
-
-### PROG-20261019-CLAUDE-01 — Claude — 19 octobre 2026, nuit (heure de Paris)
-
-- Demande du propriétaire : « Fait tout » sur le chantier proposé, ne plus
-  jamais perdre la progression d'un élève (C03 à C06 de `docs/TACHES.md`, constats
-  F01 à F04 de l'audit).
-- C06, dates : « aujourd'hui », série, défi du jour, rappels et révision espacée
-  prennent le jour du calendrier de l'appareil, et non plus le jour UTC (veille
-  jusqu'à 1 h ou 2 h du matin à Paris). Calculs sur la date seule, sans effet des
-  changements d'heure. Tout passe par `data/srs.js`.
-- C03, sauvegarde : toute la progression part sur le compte deux secondes après
-  chaque changement, et tout de suite quand l'élève quitte l'application. Une
-  version (`_sync.rev`) protège la copie du compte : l'écriture n'aboutit que si
-  cette copie n'a pas changé depuis la dernière lecture ; sinon, on fusionne
-  d'abord, puis on renvoie. Hors ligne ou en cas d'échec, un bandeau « Non
-  sauvegardé » s'affiche (`EtatSauvegarde.jsx`), avec un nouvel essai automatique
-  (15 s à 5 min) et un envoi immédiat au retour du réseau.
-- C04, fusion (`progression.js`) : pièces, gels, XP et réponses comptés appareil
-  par appareil (un achat n'est plus remboursé, deux gains simultanés comptent
-  tous les deux). Favoris, paquets, fiches, carnet d'erreurs, notes, date du bac
-  et point de reprise sont datés élément par élément : la dernière modification
-  l'emporte, suppression comprise (trace oubliée après 120 jours). La récompense
-  de la semaine n'est plus perdue à la fusion. Une copie d'une ancienne version
-  de l'application suit les anciennes règles.
-- C05, déconnexion : la progression part d'abord. Si c'est impossible (hors
-  ligne, échec, session expirée), l'élève est prévenu et choisit : rester
-  connecté ou se déconnecter quand même. La session est ensuite fermée sur
-  Supabase (`/auth/v1/logout`), plus seulement sur l'appareil. Les rappels push
-  sont arrêtés dans la même étape (3 s au plus sans service worker).
-- Vérifications : `npm test` : 229 tests réussis (nouveaux : `dates.test.js`,
-  quatre fuseaux et changements d'heure ; `fusion.test.js`, scénarios à deux
-  appareils de l'audit ; `sauvegarde.test.js`, envoi conditionné à la version ;
-  `auth-session.test.js` complété). Compilation réussie. Parcours navigateur
-  complets sur la version compilée : 110 réussis, dont `sauvegarde.spec.js`
-  (note envoyée, hors ligne puis retour du réseau, autre appareil entre-temps,
-  déconnexion retenue puis forcée), répété trois fois sans échec. Aucune
-  requête vers la vraie base : réseau simulé dans tous les tests.
-- Limite : Supabase n'est pas joignable depuis la session de Claude. Le filtre
-  de version (`progress->_sync->>rev`) suit la syntaxe documentée de PostgREST
-  mais n'a pas été essayé contre la vraie base : à surveiller après publication
-  (bandeau « Non sauvegardé » chez un élève en ligne = filtre refusé).
-- Fichiers hors de mon couloir, changés au minimum : `Home.jsx` et
-  `DailyChallenge.jsx` (la date du jour vient de `srs.js`), phrase du portefeuille
-  dans la section boutique du README. Fichiers communs : `Layout.jsx` (bouton de
-  déconnexion, bandeau de sauvegarde), `tests/parcours/eleve.js` (date du jour).
-- Textes nouveaux, en français dans le JSX de `EtatSauvegarde.jsx` : traduits
-  par le service en ligne tant qu'ils ne figurent pas dans
-  `localisation/public.*.json`. Aucune clé ajoutée aux dictionnaires.
-- Supabase : aucune modification ; la progression reste dans `profiles`.
-- Branche partie de `claude/repartition-taches` (PR #13) : à fusionner après elle.
-- Prochaine action : relecture et fusion par le propriétaire, puis contrôle d'une
-  vraie sauvegarde après publication.
 
 ### PEDAGO-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
 
@@ -390,6 +348,142 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   de page aux deux largeurs ; pas de débordement horizontal. Publication et
   validation complète suivies dans la PR.
 
+### MATIERES-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
+
+- Demande : retrouver les petites cases matières sur deux lignes.
+- Réalisé : quatre colonnes sur ordinateur et deux colonnes sur téléphone,
+  icône/titre/décompte/progression conservés ; le reste de l’accueil est inchangé.
+- Périmètre : Home.jsx, Home.css, test accueil et README. Le parcours vérifie
+  le nombre réel de lignes aux deux largeurs et l’absence de débordement.
+- Validation : 188 tests unitaires, compilation et quatre parcours accueil
+  réussis. Grille vérifiée visuellement sur ordinateur. Branche
+  `fix/matieres-compactes` ; publication suivie dans la PR.
+
+### FORMULES-20261019-CODEX-01 — Codex — 19 octobre 2026 (Paris)
+
+- Demande : supprimer Révision express et Formulaire ; choisir des formules pour
+  générer automatiquement des exercices numériques.
+- Réalisé : atelier avec recherche, filtre matière, sélection multiple, un à cinq
+  exercices par formule, nouvelles valeurs, saisie numérique, correction avec
+  substitution des valeurs, bilan et nouvelle série. 40 formules du catalogue,
+  filtrées par niveau/spécialité. Aucun score de chapitre ni XP modifié.
+- Anciennes pages supprimées ; `/express` et `/formules` redirigent vers
+  `/atelier-formules`. Les préférences d’onglets Express/Formules migrent vers
+  le nouvel atelier. Routage 404 et fil d’Ariane mis à jour. La mesure conserve
+  la clé existante « formules » sans changement de serveur ni de base.
+- Contenu : nouveau JSON commun, expressions arithmétiques interprétées sans eval,
+  nombres et corrections calculés localement. Contrôle des saisies à virgule,
+  point, espaces et chiffres arabes ; aucun champ saisi transmis à la traduction.
+- Traductions : titre/navigation dans les cinq langues, nouveaux textes UI dans
+  les quatre dictionnaires publics ; noms/formules pédagogiques par le moteur
+  public existant. Aucun changement d’authentification/store/Supabase.
+- Vérifications : 192 tests unitaires, compilation et six parcours navigateur
+  (accueil, reprise, arabe/sombre, séance et redirections), calculs de référence,
+  4 000 tirages, filtrage et sélection. Empreintes des cours inchangées.
+- Branche `feat/atelier-formules` ; référence PR et publication suivies dans la PR.
+
+### TROUSSE-20261019-CLAUDE-01 — Claude — 19 octobre 2026 (Paris)
+
+- Demande du propriétaire : sur l'accueil, « Réviser & réussir » ne doit plus
+  montrer toutes les options d'un coup ; quelque chose d'original et de discret.
+- Résultat : une seule carte. En haut, « Conseillé maintenant » : un outil choisi
+  d'après la situation de l'élève (bac dans moins de 30 jours → bac blanc ;
+  thèmes de la filière à réviser aujourd'hui → révision intelligente ; chapitres
+  à revoir → favoris ; sinon le programme jusqu'au bac). En dessous, « Ta
+  trousse · 8 outils » : les icônes empilées des autres outils, une ligne qui se
+  déplie en liste compacte. Fermée par défaut ; l'appareil se souvient du choix
+  (`stmg_trousse_ouverte`). Mêmes outils et mêmes libellés qu'avant (Grand Oral en
+  Terminale, étude de gestion en Première), plus l'atelier de formules de la PR #23.
+- `Home.jsx` (couloir de Codex) : la section et les tuiles devenues inutiles sont
+  remplacées par `<OutilsAccueil />`. Le reste de l'accueil ne change pas. Le
+  parcours de l'étude de gestion ouvre la trousse avant de cliquer.
+- Vérifications : 194 tests unitaires (dont 6 pour l'outil conseillé),
+  compilation, 116 parcours navigateur (dont la trousse), captures sur téléphone
+  (clair, sombre) et ordinateur.
+- Branche partie de `main` : indépendante des PR #14, #18 et #20 (la PR #14
+  touche deux autres lignes de `Home.jsx`, sans conflit). À jour avec `main`,
+  cases matières compactes de la PR #21 comprises.
+
+### INSPECTION-20261020-CLAUDE-01 — Claude — 20 octobre 2026 (Paris)
+
+- Demandes du propriétaire : vérifier tous les cours et exercices (cinq agents) ;
+  analyser les fonctionnalités et l'interface (deux agents, tableaux) ; inspecter
+  chaque recoin du site (trois agents) et rédiger un PDF d'améliorations ; « met
+  en commun avec Codex sur GitHub ».
+- Livraison : [dossier](audits/2026-10-20/README.md), [PDF de 89 pages](audits/2026-10-20/RevizSTMG-ameliorations-du-site-2026-10-20.pdf).
+  480 propositions (fonctionnalités 118, interface 157, parcours 78 dont 43
+  défauts, technique 65, pédagogie 62) et 217 erreurs de contenu (12 bloquantes),
+  chacune avec effort, impact, priorité ou correction proposée.
+- Avec l'audit de Codex (AUDITSITE-20261019-CODEX-01) : la synthèse rattache les
+  dix constats partagés aux actions A01 à A23, et les erreurs de contenu
+  complètent la PR #24. Rien n'est attribué : responsables à choisir ici.
+- Points à signaler à tous :
+  - 60 règles d'accès sur 64 restent ouvertes dans les migrations appliquées ;
+    les règles prêtes dans `supabase/a-valider/` attendent l'accord du propriétaire ;
+  - le BO spécial n° 4 du 17 septembre 2026 (session 2027 : épreuves écrites,
+    épreuve anticipée de français, Grand Oral) n'a pu être lu qu'en extraits :
+    à relire avant d'écrire des sujets ;
+  - la PR #14 corrige déjà les dates (dont les intervalles de révision espacée)
+    et la synchronisation complète ; ne pas les réimplémenter.
+- Méthode : version `6a32b03` servie en local, Chromium (téléphone et
+  ordinateur, clair et sombre, arabe, accessibilité, hors ligne), faux serveur
+  Supabase pour les comptes. Aucune modification du site, du dépôt ni de la base
+  pendant l'analyse. Captures et scripts non versionnés.
+- Branche `claude/rapport-ameliorations` : livraison documentaire uniquement.
+
+### PROG-20261019-CLAUDE-01 — Claude — 19 octobre 2026, nuit (heure de Paris)
+
+- Demande du propriétaire : « Fait tout » sur le chantier proposé, ne plus
+  jamais perdre la progression d'un élève (C03 à C06 de `docs/TACHES.md`, constats
+  F01 à F04 de l'audit).
+- C06, dates : « aujourd'hui », série, défi du jour, rappels et révision espacée
+  prennent le jour du calendrier de l'appareil, et non plus le jour UTC (veille
+  jusqu'à 1 h ou 2 h du matin à Paris). Calculs sur la date seule, sans effet des
+  changements d'heure. Tout passe par `data/srs.js`.
+- C03, sauvegarde : toute la progression part sur le compte deux secondes après
+  chaque changement, et tout de suite quand l'élève quitte l'application. Une
+  version (`_sync.rev`) protège la copie du compte : l'écriture n'aboutit que si
+  cette copie n'a pas changé depuis la dernière lecture ; sinon, on fusionne
+  d'abord, puis on renvoie. Hors ligne ou en cas d'échec, un bandeau « Non
+  sauvegardé » s'affiche (`EtatSauvegarde.jsx`), avec un nouvel essai automatique
+  (15 s à 5 min) et un envoi immédiat au retour du réseau.
+- C04, fusion (`progression.js`) : pièces, gels, XP et réponses comptés appareil
+  par appareil (un achat n'est plus remboursé, deux gains simultanés comptent
+  tous les deux). Favoris, paquets, fiches, carnet d'erreurs, notes, date du bac
+  et point de reprise sont datés élément par élément : la dernière modification
+  l'emporte, suppression comprise (trace oubliée après 120 jours). La récompense
+  de la semaine n'est plus perdue à la fusion. Une copie d'une ancienne version
+  de l'application suit les anciennes règles.
+- C05, déconnexion : la progression part d'abord. Si c'est impossible (hors
+  ligne, échec, session expirée), l'élève est prévenu et choisit : rester
+  connecté ou se déconnecter quand même. La session est ensuite fermée sur
+  Supabase (`/auth/v1/logout`), plus seulement sur l'appareil. Les rappels push
+  sont arrêtés dans la même étape (3 s au plus sans service worker).
+- Vérifications : `npm test` : 229 tests réussis (nouveaux : `dates.test.js`,
+  quatre fuseaux et changements d'heure ; `fusion.test.js`, scénarios à deux
+  appareils de l'audit ; `sauvegarde.test.js`, envoi conditionné à la version ;
+  `auth-session.test.js` complété). Compilation réussie. Parcours navigateur
+  complets sur la version compilée : 110 réussis, dont `sauvegarde.spec.js`
+  (note envoyée, hors ligne puis retour du réseau, autre appareil entre-temps,
+  déconnexion retenue puis forcée), répété trois fois sans échec. Aucune
+  requête vers la vraie base : réseau simulé dans tous les tests.
+- Limite : Supabase n'est pas joignable depuis la session de Claude. Le filtre
+  de version (`progress->_sync->>rev`) suit la syntaxe documentée de PostgREST
+  mais n'a pas été essayé contre la vraie base : à surveiller après publication
+  (bandeau « Non sauvegardé » chez un élève en ligne = filtre refusé).
+- Fichiers hors de mon couloir, changés au minimum : `Home.jsx` et
+  `DailyChallenge.jsx` (la date du jour vient de `srs.js`), phrase du portefeuille
+  dans la section boutique du README. Fichiers communs : `Layout.jsx` (bouton de
+  déconnexion, bandeau de sauvegarde), `tests/parcours/eleve.js` (date du jour).
+- Textes nouveaux, en français dans le JSX de `EtatSauvegarde.jsx` : traduits
+  par le service en ligne tant qu'ils ne figurent pas dans
+  `localisation/public.*.json`. Aucune clé ajoutée aux dictionnaires.
+- Supabase : aucune modification ; la progression reste dans `profiles`.
+- Branche partie de `claude/repartition-taches` (PR #13) : à fusionner après elle.
+- Fusionnée le 20 octobre 2026 à la demande du propriétaire.
+- Prochaine action : contrôle d'une
+  vraie sauvegarde après publication.
+
 ### Modèle à copier pour une nouvelle tâche
 
 ```text
@@ -406,3 +500,31 @@ Vérifications et résultats :
 Blocages / décisions attendues :
 Prochaine action :
 ```
+
+### AUDITSITE-20261019-CODEX-01 — 19 octobre 2026 (Paris)
+
+- Demande : trois agents inspectent le site puis livrent un PDF d’améliorations ;
+  partager le résultat avec Claude sur GitHub. Les trois agents ont terminé.
+- Rapports : UX/UI (14 points), fiabilité (14), pédagogie/accessibilité (11).
+  Consolidation en 23 actions couvrant les 39 points, avec priorité, preuve,
+  impact, effort indicatif, critère de livraison et coordination.
+- Livraison : [rapport texte](audits/2026-10-19/README.md),
+  [PDF de 19 pages](audits/2026-10-19/RevizSTMG-audit-global-2026-10-19.pdf),
+  [plan partagé](audits/2026-10-19/PLAN-ACTIONS.md), rapports agents et preuves.
+- Source applicative auditée : `6a32b03`. Build frais séparé réussi ;
+  198 tests unitaires réussis. Inspection code des 34 routes, balayage UX
+  de 29 routes à deux largeurs (chargements distingués des pages rendues),
+  24 visites pédagogiques plus reprises des pages lourdes, contrôles ciblés
+  sur site publié et build frais. Aucun vrai compte ni donnée réelle modifiés.
+- Recette du livrable : PDF ouvert, 19 pages et liens contrôlés, extraction
+  de toutes les fiches, rendu visuel vérifié, correspondance 39 points/23 actions.
+  Générateur et données du rapport sont inclus pour une mise à jour cohérente.
+- Coordination : #14 couvre déjà sauvegarde/fusion/état/récompense/date ;
+  préconisation relecture/recette/intégration, pas une réimplémentation concurrente.
+  #18 suppression, #20 notes et #13 répartition restent à confronter avant
+  de démarrer un chantier. Les nouveaux responsables sont proposés, jamais
+  imposés à Claude. La PR #24 reste la référence des anomalies de cours.
+- Limites : aucune certification de droits serveur, RGPD ou WCAG ; aucune
+  relecture factuelle exhaustive des 806 sections. Les risques non vérifiés
+  sont distingués des bugs reproduits. Aucun correctif de production livré.
+- Branche `docs/audit-site-20261019`, PR #25 : livraison documentaire uniquement.
