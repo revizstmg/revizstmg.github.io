@@ -818,3 +818,14 @@ Prochaine action :
   compilation déposée par le bot dans `9db697d`, Pages #39488980292 réussi.
   Contrôle public : HTML et service worker servent la même version `96dfe3609b`.
   Correction fusionnée, publiée et suivi partagé.
+
+### GOOGLE-20261020-CODEX-04 — Codex
+
+- Demande directe du propriétaire : installer la balise et le fichier de
+  vérification Google Search Console fournis, puis expliquer l’envoi du sitemap.
+- Périmètre : une balise dans app/index.html ; fichier de vérification dans
+  app/pwa/ (nom exact indiqué dans son contenu). Aucun accès au compte Google.
+- PR #41 de Claude repérée : elle modifie également l’en-tête HTML pour le SEO.
+  Intervention limitée à la vérification, signalée au propriétaire ; aucun
+  changement du sitemap, du générateur ni des pages publiques de cette PR.
+- Branche `fix/verification-google`. Validation et publication en cours.
