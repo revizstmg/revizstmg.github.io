@@ -56,13 +56,17 @@ const ecrireNote = async (page, texte) => {
 }
 const noteEnvoyee = (journal, texte) => journal.some((e) => e.type === 'patch' && e.ok && e.progress?.notes?.['gf-t1'] === texte)
 const bandeau = (page) => page.getByRole('status').filter({ hasText: 'Non sauvegardé' })
+// Indicateur de l'en-tête : enregistré, en attente ou non enregistré.
+const indicateur = (page) => page.locator('[data-sauvegarde]')
 
 test('une note écrite part sur le compte', async ({ page }) => {
   const { erreurs, journal, profil } = await ouvrir(page)
   await ecrireNote(page, NOTE)
+  await expect(indicateur(page)).toHaveText(/En attente/)
   await expect.poll(() => noteEnvoyee(journal, NOTE)).toBe(true)
   await expect.poll(async () => (await etat(page))._sync?.vuServeur).toBe(profil.progress._sync.rev)
   await expect(bandeau(page)).toHaveCount(0)
+  await expect(indicateur(page)).toHaveText(/Enregistré/)
   expect(erreurs).toEqual([])
 })
 
@@ -71,11 +75,13 @@ test('hors ligne : « Non sauvegardé », puis envoi au retour du réseau', asyn
   await page.context().setOffline(true)
   await ecrireNote(page, NOTE)
   await expect(bandeau(page)).toBeVisible({ timeout: 15000 })
+  await expect(indicateur(page)).toHaveText(/Non enregistré/)
   expect(noteEnvoyee(journal, NOTE)).toBe(false)
   expect((await etat(page)).notes['gf-t1']).toBe(NOTE)
   await page.context().setOffline(false)
   await expect.poll(() => noteEnvoyee(journal, NOTE)).toBe(true)
   await expect(bandeau(page)).toHaveCount(0)
+  await expect(indicateur(page)).toHaveText(/Enregistré/)
   expect(erreurs).toEqual([])
 })
 

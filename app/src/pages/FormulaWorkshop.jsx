@@ -59,7 +59,7 @@ function Workshop({track, scope}) {
         </label>)}
       </div>{!visible.length && <p className="card p-4 text-sm">Aucune formule ne correspond à ta recherche.</p>}</fieldset>
 
-      <div className="fixed inset-x-3 z-30 mx-auto flex max-w-4xl items-center justify-between gap-3 rounded-2xl border border-amber-700/30 p-3 shadow-xl" style={{background:'var(--c-card)',bottom:`calc(env(safe-area-inset-bottom) + ${cookiesLues ? '5rem' : '9rem'})`}} aria-label="Lancer la sélection">
+      <div className="fixed inset-x-3 z-30 mx-auto flex max-w-4xl items-center justify-between gap-3 rounded-2xl border border-amber-700/30 p-3 shadow-xl" style={{background:'var(--c-card)',bottom:`calc(env(safe-area-inset-bottom) + ${cookiesLues ? '5rem' : '9rem'})`}} aria-label="Lancer les exercices">
         <p className="text-sm"><strong>{chosen.length}</strong> <span>formule(s)</span><span className="block text-xs text-slate-500 dark:text-slate-400">{chosen.length*repeat} <span>exercice(s)</span></span></p>
         <button className="btn-gold !min-h-11 disabled:opacity-50" disabled={!chosen.length} onClick={start}>Générer mes exercices</button>
       </div>

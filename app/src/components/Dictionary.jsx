@@ -1,8 +1,9 @@
 import { useLang, usePublicText } from '../i18n.js'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { translate, LANGS } from '../translate.js'
 import { GLOSSARY } from '../data/glossary.js'
 import { Icon } from './ui.jsx'
+import { useFenetreClavier } from './clavier.js'
 
 // Dictionnaire / traducteur FR, EN, ES, IT et AR. Mots via le glossaire hors-ligne
 // (instantané) + phrases via le service en ligne. Suggestions du glossaire
@@ -17,11 +18,9 @@ export default function Dictionary({ onClose }) {
   const [status, setStatus] = useState('idle') // idle | loading | error
   const [error, setError] = useState('')
 
-  useEffect(() => {
-    const onKey = (e) => e.key === 'Escape' && onClose()
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
+  // Clavier : Échap ferme, Tab reste dans la fenêtre, le focus revient ensuite.
+  const fenetre = useRef(null)
+  useFenetreClavier(fenetre, onClose)
 
   // Suggestions rapides depuis le glossaire (préfixe sur la langue source).
   const suggestions = useMemo(() => {
@@ -69,10 +68,10 @@ export default function Dictionary({ onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center bg-slate-900/50 p-4 pt-16 backdrop-blur-sm" onClick={onClose}>
-      <div className="card w-full max-w-lg animate-pop-in p-4" onClick={(e) => e.stopPropagation()}>
+      <div ref={fenetre} role="dialog" aria-modal="true" aria-labelledby="titre-dictionnaire" className="card w-full max-w-lg animate-pop-in p-4" onClick={(e) => e.stopPropagation()}>
         <div className="mb-3 flex items-center gap-2">
           <Icon.Book size={18} />
-          <h2 className="font-display text-lg font-semibold">Dictionnaire</h2>
+          <h2 id="titre-dictionnaire" className="font-display text-lg font-semibold">Dictionnaire</h2>
           <button onClick={onClose} className="ml-auto text-slate-400 hover:text-slate-600" aria-label="Fermer">✕</button>
         </div>
 

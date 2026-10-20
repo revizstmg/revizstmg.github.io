@@ -491,5 +491,12 @@
   "Chaque chapitre utilise jusqu’à trois de tes meilleurs exercices. La moyenne des chapitres donne la maîtrise du thème ; un meilleur résultat au test du thème peut la relever. Les XP et les séances de formules ne modifient pas cette maîtrise.": "Cada capítulo usa hasta tres de tus mejores ejercicios. La media de los capítulos determina el dominio del tema; un mejor resultado en el test puede aumentarlo. Los XP y la práctica de fórmulas no lo modifican.",
   "Code indisponible : vérifie le stockage de ton navigateur.": "Código no disponible: comprueba el almacenamiento del navegador.",
   "Ces dossiers guidés ne constituent pas encore un sujet complet avec rédaction et barème officiel. Pour la session 2027, l’écrit de management porte sur l’enseignement commun et réserve 2 points sur 20 à l’orthographe et à la syntaxe.": "Estos casos guiados aún no son una prueba escrita completa con baremo oficial. En 2027, el examen escrito de management cubre el currículo común y reserva 2 puntos de 20 para ortografía y sintaxis.",
-  "Bulletin officiel du 17 septembre 2026": "Boletín oficial del 17 de septiembre de 2026"
+  "Bulletin officiel du 17 septembre 2026": "Boletín oficial del 17 de septiembre de 2026",
+  "Enregistré": "Guardado",
+  "En attente": "Pendiente",
+  "Non enregistré": "No guardado",
+  "Ta progression est enregistrée sur ton compte.": "Tu progreso está guardado en tu cuenta.",
+  "Tes derniers changements partent sur ton compte dans un instant.": "Tus últimos cambios se enviarán a tu cuenta en un momento.",
+  "Tes derniers changements ne sont pas encore sur ton compte.": "Tus últimos cambios todavía no están en tu cuenta.",
+  "Lancer les exercices": "Empezar los ejercicios"
 }

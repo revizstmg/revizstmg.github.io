@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
 import { signIn, signUp, fetchProfile, upsertProfile, getSession } from '../auth.js'
@@ -6,6 +6,7 @@ import { ALL_TABS, TAB_ORDER, resolveTabs } from '../navTabs.js'
 import { normalizeCode } from '../leaderboard.js'
 import { isStandalone } from '../pwa.js'
 import { InstallLock } from './InstallApp.jsx'
+import { useFenetreClavier } from './clavier.js'
 
 // Panneau « Personnalisation » : ambiances + couleurs + typographie + avatar +
 // style (coins, taille). Tout est piloté par des variables CSS sur <html>.
@@ -115,11 +116,9 @@ export default function Customizer({ onClose }) {
     e.target.value = ''
   }
 
-  useEffect(() => {
-    const onKey = (e) => e.key === 'Escape' && onClose()
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
+  // Clavier : Échap ferme, Tab reste dans la fenêtre, le focus revient ensuite.
+  const fenetre = useRef(null)
+  useFenetreClavier(fenetre, onClose)
 
   const cur = (k) => {
     if (ct[k]) return ct[k]
@@ -177,7 +176,7 @@ export default function Customizer({ onClose }) {
   if (!isStandalone()) {
     return (
       <div className="fixed inset-0 z-50 flex items-start justify-center bg-slate-900/50 p-4 pt-16 backdrop-blur-sm no-print" onClick={onClose}>
-        <div className="w-full max-w-md animate-pop-in" onClick={(e) => e.stopPropagation()}>
+        <div ref={fenetre} role="dialog" aria-modal="true" aria-label={t('customize')} className="w-full max-w-md animate-pop-in" onClick={(e) => e.stopPropagation()}>
           <div className="mb-2 flex justify-end">
             <button onClick={onClose} className="grid h-9 w-9 place-items-center rounded-full bg-white/90 text-slate-500 shadow hover:text-slate-800 dark:bg-slate-800/90 dark:text-slate-300" aria-label={t('quit')}>✕</button>
           </div>
@@ -189,7 +188,7 @@ export default function Customizer({ onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center bg-slate-900/50 p-4 pt-12 backdrop-blur-sm no-print" onClick={onClose}>
-      <div className="card card-lux w-full max-w-md animate-pop-in overflow-hidden" onClick={(e) => e.stopPropagation()}>
+      <div ref={fenetre} role="dialog" aria-modal="true" aria-label={t('customize')} className="card card-lux w-full max-w-md animate-pop-in overflow-hidden" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between px-5 pt-5">
           <div>
             <p className="kicker">RévizSTMG</p>

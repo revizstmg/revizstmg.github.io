@@ -491,5 +491,12 @@
   "Chaque chapitre utilise jusqu’à trois de tes meilleurs exercices. La moyenne des chapitres donne la maîtrise du thème ; un meilleur résultat au test du thème peut la relever. Les XP et les séances de formules ne modifient pas cette maîtrise.": "Ogni capitolo usa fino a tre dei tuoi migliori esercizi. La media dei capitoli determina la padronanza del tema; un test migliore può aumentarla. XP ed esercizi sulle formule non la modificano.",
   "Code indisponible : vérifie le stockage de ton navigateur.": "Codice non disponibile: controlla lo spazio del browser.",
   "Ces dossiers guidés ne constituent pas encore un sujet complet avec rédaction et barème officiel. Pour la session 2027, l’écrit de management porte sur l’enseignement commun et réserve 2 points sur 20 à l’orthographe et à la syntaxe.": "Questi casi guidati non sono ancora una prova scritta completa con griglia ufficiale. Nel 2027 la prova di management riguarda il programma comune e assegna 2 punti su 20 a ortografia e sintassi.",
-  "Bulletin officiel du 17 septembre 2026": "Bollettino ufficiale del 17 settembre 2026"
+  "Bulletin officiel du 17 septembre 2026": "Bollettino ufficiale del 17 settembre 2026",
+  "Enregistré": "Salvato",
+  "En attente": "In attesa",
+  "Non enregistré": "Non salvato",
+  "Ta progression est enregistrée sur ton compte.": "I tuoi progressi sono salvati sul tuo account.",
+  "Tes derniers changements partent sur ton compte dans un instant.": "Le tue ultime modifiche saranno inviate al tuo account tra un istante.",
+  "Tes derniers changements ne sont pas encore sur ton compte.": "Le tue ultime modifiche non sono ancora sul tuo account.",
+  "Lancer les exercices": "Avvia gli esercizi"
 }

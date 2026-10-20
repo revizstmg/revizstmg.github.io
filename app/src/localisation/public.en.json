@@ -491,5 +491,12 @@
   "Chaque chapitre utilise jusqu’à trois de tes meilleurs exercices. La moyenne des chapitres donne la maîtrise du thème ; un meilleur résultat au test du thème peut la relever. Les XP et les séances de formules ne modifient pas cette maîtrise.": "Each chapter uses up to three of your best exercises. The chapter average gives topic mastery; a better topic test result can raise it. XP and formula practice do not change mastery.",
   "Code indisponible : vérifie le stockage de ton navigateur.": "Code unavailable: check your browser storage.",
   "Ces dossiers guidés ne constituent pas encore un sujet complet avec rédaction et barème officiel. Pour la session 2027, l’écrit de management porte sur l’enseignement commun et réserve 2 points sur 20 à l’orthographe et à la syntaxe.": "These guided cases are not yet a complete written paper with an official marking scheme. For 2027, the management written exam covers the common curriculum and awards 2 out of 20 points for spelling and syntax.",
-  "Bulletin officiel du 17 septembre 2026": "Official Bulletin, 17 September 2026"
+  "Bulletin officiel du 17 septembre 2026": "Official Bulletin, 17 September 2026",
+  "Enregistré": "Saved",
+  "En attente": "Pending",
+  "Non enregistré": "Not saved",
+  "Ta progression est enregistrée sur ton compte.": "Your progress is saved to your account.",
+  "Tes derniers changements partent sur ton compte dans un instant.": "Your latest changes will be sent to your account in a moment.",
+  "Tes derniers changements ne sont pas encore sur ton compte.": "Your latest changes are not on your account yet.",
+  "Lancer les exercices": "Start the exercises"
 }

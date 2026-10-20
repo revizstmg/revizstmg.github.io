@@ -1,5 +1,50 @@
+import { useRef } from 'react'
 import { useStore } from '../store.jsx'
+import { usePublicText } from '../i18n.js'
 import { creerMonCompte } from './CompteRequis.jsx'
+import { useFenetreClavier } from './clavier.js'
+
+// Fenêtre d'alerte : Échap revient en arrière (« Rester » / « Continuer »),
+// Tab reste dans la fenêtre, le focus revient ensuite où il était.
+function Alerte({ titreId, onClose, children }) {
+  const fenetre = useRef(null)
+  useFenetreClavier(fenetre, onClose)
+  return (
+    <div className="fixed inset-0 z-[80] flex items-center justify-center bg-slate-900/50 p-4 backdrop-blur-sm" onClick={onClose}>
+      <div ref={fenetre} role="alertdialog" aria-modal="true" aria-labelledby={titreId} className="card w-full max-w-md p-6" onClick={(e) => e.stopPropagation()}>
+        {children}
+      </div>
+    </div>
+  )
+}
+
+// Indicateur de l'en-tête (comptes connectés) : la progression est enregistrée
+// sur le compte, en attente d'envoi (modifications récentes, envoi en cours),
+// ou non enregistrée (hors ligne, échec : le bandeau en dessous explique).
+// Sur petit écran, seule l'icône reste visible ; le texte est lu à voix haute.
+const ETATS_INDICATEUR = {
+  ok: { icone: '✓', texte: 'Enregistré', titre: 'Ta progression est enregistrée sur ton compte.', cls: 'text-emerald-700 dark:text-emerald-400' },
+  attente: { icone: '⏳', texte: 'En attente', titre: 'Tes derniers changements partent sur ton compte dans un instant.', cls: 'text-slate-500 dark:text-slate-400' },
+  echec: { icone: '⚠', texte: 'Non enregistré', titre: 'Tes derniers changements ne sont pas encore sur ton compte.', cls: 'text-amber-700 dark:text-amber-300' },
+}
+export function etatIndicateur(etat) {
+  if (etat === 'horsLigne' || etat === 'erreur') return 'echec'
+  if (etat === 'attente' || etat === 'envoi') return 'attente'
+  return 'ok'
+}
+export function IndicateurSauvegarde() {
+  const { state, sauvegarde } = useStore()
+  const tr = usePublicText()
+  if (!state.account?.id) return null
+  const v = ETATS_INDICATEUR[etatIndicateur(sauvegarde.etat)]
+  return (
+    <span data-sauvegarde={etatIndicateur(sauvegarde.etat)} title={tr(v.titre)} className={`flex shrink-0 items-center gap-1 text-xs font-semibold ${v.cls}`}>
+      <span aria-hidden>{v.icone}</span>
+      <span className="hidden min-[420px]:inline">{tr(v.texte)}</span>
+      <span className="sr-only min-[420px]:hidden">{tr(v.texte)}</span>
+    </span>
+  )
+}
 
 // État de la sauvegarde sur le compte (store.jsx) : un bandeau quand la
 // progression n'est pas encore partie (hors ligne, échec), et l'avertissement
@@ -38,8 +83,7 @@ export default function EtatSauvegarde() {
         </div>
       )}
       {deconnexion?.etat === 'essai' && (
-        <div className="fixed inset-0 z-[80] flex items-center justify-center bg-slate-900/50 p-4 backdrop-blur-sm" onClick={annulerDeconnexion}>
-          <div role="alertdialog" aria-modal="true" aria-labelledby="essai-titre" className="card w-full max-w-md p-6" onClick={(e) => e.stopPropagation()}>
+        <Alerte titreId="essai-titre" onClose={annulerDeconnexion}>
             <h2 id="essai-titre" className="font-display text-xl font-medium">Ta progression d’essai va être effacée</h2>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Tu n’as pas de compte : ta progression n’existe que sur cet appareil. Crée un compte gratuit pour la garder et la retrouver partout.</p>
             <div className="mt-5 flex flex-col gap-2 sm:flex-row-reverse">
@@ -47,12 +91,10 @@ export default function EtatSauvegarde() {
               <button type="button" onClick={annulerDeconnexion} className="rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold dark:border-slate-700">Continuer l’essai</button>
               <button type="button" onClick={() => logout({ force: true })} className="rounded-xl px-4 py-2 text-sm font-semibold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40">Tout effacer</button>
             </div>
-          </div>
-        </div>
+        </Alerte>
       )}
       {deconnexion && deconnexion.etat !== 'essai' && (
-        <div className="fixed inset-0 z-[80] flex items-center justify-center bg-slate-900/50 p-4 backdrop-blur-sm" onClick={annulerDeconnexion}>
-          <div role="alertdialog" aria-modal="true" aria-labelledby="deconnexion-titre" className="card w-full max-w-md p-6" onClick={(e) => e.stopPropagation()}>
+        <Alerte titreId="deconnexion-titre" onClose={annulerDeconnexion}>
             <h2 id="deconnexion-titre" className="font-display text-xl font-medium">Ta progression n’est pas sauvegardée</h2>
             <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
               {deconnexion.etat === 'horsLigne' && 'Tu n’es pas connecté à Internet. Si tu te déconnectes maintenant, ce que tu as fait depuis la dernière sauvegarde sera perdu.'}
@@ -64,8 +106,7 @@ export default function EtatSauvegarde() {
               <button type="button" onClick={annulerDeconnexion} className="rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold dark:border-slate-700">Rester connecté</button>
               <button type="button" onClick={() => logout({ force: true })} className="rounded-xl px-4 py-2 text-sm font-semibold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40">Me déconnecter quand même</button>
             </div>
-          </div>
-        </div>
+        </Alerte>
       )}
     </>
   )

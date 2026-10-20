@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
+import { useFenetreClavier } from './clavier.js'
 import { useFocus } from '../focus.jsx'
 import { useT } from '../i18n.js'
 
@@ -16,11 +17,8 @@ export default function FocusFullscreen({ onClose }) {
   }, [])
 
   // Échap ferme le mode plein écran.
-  useEffect(() => {
-    const onKey = (e) => e.key === 'Escape' && onClose()
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
+  const fenetre = useRef(null)
+  useFenetreClavier(fenetre, onClose)
 
   const isBreak = phase === 'break'
   const pct = phaseTotal > 0 ? (1 - remaining / phaseTotal) * 100 : 0
@@ -29,7 +27,7 @@ export default function FocusFullscreen({ onClose }) {
   const phaseLabel = phase === 'idle' ? t('phaseReady') : isBreak ? t('phaseBreak') : t('phaseFocus')
 
   return (
-    <div className="fixed inset-0 z-[60] flex flex-col items-center justify-center px-6" style={{ background: 'linear-gradient(160deg, #14110c, #1c1811 60%, #14110c)', color: '#f4ecd8' }}>
+    <div ref={fenetre} role="dialog" aria-modal="true" aria-label={phaseLabel} className="fixed inset-0 z-[60] flex flex-col items-center justify-center px-6" style={{ background: 'linear-gradient(160deg, #14110c, #1c1811 60%, #14110c)', color: '#f4ecd8' }}>
       <button onClick={onClose} className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full text-lg" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, #d9bd77 40%, transparent)', color: '#e8d9a8' }} aria-label={t('quit')}>✕</button>
 
       <p className="mb-6 text-xs uppercase tracking-[0.3em]" style={{ color: isBreak ? '#7dd3fc' : '#d9bd77' }}>{phaseLabel}</p>
