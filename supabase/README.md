@@ -7,25 +7,25 @@ RévizSTMG uniquement.
 ```
 migrations/        l'historique des migrations des 18 tables de RévizSTMG
 functions/         la fonction « fiche-vision » (pas encore déployée)
-a-valider/         modifications prêtes mais pas encore appliquées (accord à donner)
 ```
 
-## En attente d'application (`a-valider/`)
+## Règles d'accès des tables sociales (appliquées le 20 octobre 2026)
 
-Ces fichiers ne sont **pas encore** appliqués sur Supabase. L'accord est donné
-(13 octobre 2026), mais ils retirent ou remplacent des éléments : l'outil de
-Claude exige alors une confirmation qu'il ne peut pas obtenir. Le propriétaire les
-applique en collant `a-valider/A_COLLER_DANS_SUPABASE.sql` (les deux fichiers
-numérotés, dans une transaction) dans Supabase → SQL Editor. Ensuite, chaque
-fichier passe dans `migrations/` avec l'horodatage de son application.
+Le propriétaire les a appliquées depuis Supabase → SQL Editor (l'outil de Claude
+attendait une confirmation qui ne s'affichait pas) ; elles ne figurent donc pas
+dans l'historique des migrations de Supabase, seulement ici :
 
-1. `1_revizstmg_securite_0_nettoyage.sql` : retire 9 lignes de test d'avant les
-   comptes (identifiants d'appareil qui ne correspondent à aucun compte).
-2. `2_revizstmg_securite_2_regles.sql` : remplace les règles « ouvertes à tous »
-   des 16 tables sociales (voir « Règles d'accès » plus bas).
+1. `migrations/20261020151400_revizstmg_securite_0_nettoyage.sql` : a retiré les
+   9 lignes de test d'avant les comptes (identifiants d'appareil qui ne
+   correspondaient à aucun compte).
+2. `migrations/20261020151401_revizstmg_securite_2_regles.sql` : remplace les
+   règles « ouvertes à tous » des 16 tables sociales (voir « Règles d'accès » plus
+   bas).
 
-Tant qu'ils ne sont pas appliqués, l'application fonctionne avec les anciennes
-règles.
+Vérifié sur la vraie base juste après : 64 règles, toutes réservées aux comptes
+connectés, aucune ouverte à tous ; la clé publique seule ne lit plus aucune de ces
+tables (réponse 401) ; le parent lit toujours son enfant par le code
+(`revizstmg_stats_enfant`).
 
 ## Suppression complète du compte (appliquée le 19 octobre 2026)
 
@@ -50,7 +50,7 @@ n'a pas encore révisé ce jour-là.
 
 ## Tester les règles d'accès
 
-`supabase/tests/lancer.sh [a-valider/A_COLLER_DANS_SUPABASE.sql]` monte une base
+`supabase/tests/lancer.sh [fichier.sql…]` monte une base
 PostgreSQL locale et jetable, imite Supabase (`imitation-supabase.sql`), applique
 toutes les migrations et joue `regles-acces.sql` : un élève, un autre élève hors de
 la classe, le professeur, un parent sans compte et la suppression du compte (une
@@ -135,7 +135,7 @@ d'ouvrir l'application à des classes** : il s'agit de données de mineurs.
 
 ### Règles d'accès (13 octobre 2026)
 
-Les corrections ci-dessous sont faites (fichiers `20261013*` et `a-valider/`) :
+Les corrections ci-dessous sont faites (fichiers `20261013*` et `20261020*`, appliqués) :
 
 - **Compte obligatoire** pour les tables sociales : la clé publique seule (anon)
   n'y a plus aucun droit. L'identifiant public d'un élève (`device_id`,
