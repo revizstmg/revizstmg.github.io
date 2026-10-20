@@ -63,6 +63,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | AUDITSITE-20261019-CODEX-01 | Codex + trois agents lancés | Inspection UX, fiabilité, pédagogie/accessibilité ; PDF, version texte et actions partagés | Terminé | [PR #25](https://github.com/revizstmg/revizstmg.github.io/pull/25) | PDF et plan dans `docs/audits/2026-10-19/` ; affectations à confirmer |
 
+| INSPECTION-20261020-CLAUDE-01 | Claude | Demande du propriétaire : cinq agents inspectent tout le site (fonctionnalités, interface, parcours, technique, pédagogie) et livrent un PDF d'améliorations, mis en commun avec Codex ; plus la vérification des cours et exercices du 19 octobre. Fichiers : `docs/audits/2026-10-20/`, `docs/audits/README.md`, ce journal | Terminé | `claude/rapport-ameliorations` | Le propriétaire choisit les priorités ; chacun réserve ses chantiers ici |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -373,6 +375,33 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
 - Branche partie de `main` : indépendante des PR #14, #18 et #20 (la PR #14
   touche deux autres lignes de `Home.jsx`, sans conflit). À jour avec `main`,
   cases matières compactes de la PR #21 comprises.
+
+### INSPECTION-20261020-CLAUDE-01 — Claude — 20 octobre 2026 (Paris)
+
+- Demandes du propriétaire : vérifier tous les cours et exercices (cinq agents) ;
+  analyser les fonctionnalités et l'interface (deux agents, tableaux) ; inspecter
+  chaque recoin du site (trois agents) et rédiger un PDF d'améliorations ; « met
+  en commun avec Codex sur GitHub ».
+- Livraison : [dossier](audits/2026-10-20/README.md), [PDF de 89 pages](audits/2026-10-20/RevizSTMG-ameliorations-du-site-2026-10-20.pdf).
+  480 propositions (fonctionnalités 118, interface 157, parcours 78 dont 43
+  défauts, technique 65, pédagogie 62) et 217 erreurs de contenu (12 bloquantes),
+  chacune avec effort, impact, priorité ou correction proposée.
+- Avec l'audit de Codex (AUDITSITE-20261019-CODEX-01) : la synthèse rattache les
+  dix constats partagés aux actions A01 à A23, et les erreurs de contenu
+  complètent la PR #24. Rien n'est attribué : responsables à choisir ici.
+- Points à signaler à tous :
+  - 60 règles d'accès sur 64 restent ouvertes dans les migrations appliquées ;
+    les règles prêtes dans `supabase/a-valider/` attendent l'accord du propriétaire ;
+  - le BO spécial n° 4 du 17 septembre 2026 (session 2027 : épreuves écrites,
+    épreuve anticipée de français, Grand Oral) n'a pu être lu qu'en extraits :
+    à relire avant d'écrire des sujets ;
+  - la PR #14 corrige déjà les dates (dont les intervalles de révision espacée)
+    et la synchronisation complète ; ne pas les réimplémenter.
+- Méthode : version `6a32b03` servie en local, Chromium (téléphone et
+  ordinateur, clair et sombre, arabe, accessibilité, hors ligne), faux serveur
+  Supabase pour les comptes. Aucune modification du site, du dépôt ni de la base
+  pendant l'analyse. Captures et scripts non versionnés.
+- Branche `claude/rapport-ameliorations` : livraison documentaire uniquement.
 
 ### Modèle à copier pour une nouvelle tâche
 
