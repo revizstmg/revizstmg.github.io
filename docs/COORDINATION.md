@@ -82,6 +82,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | FINITIONS-20261020-CLAUDE-01 | Claude | Demande du propriétaire (« termine alors tout ») : suites des points 10–28 restés partiels ou non faits après la limite de Codex — 6/7 (études de documents par thème), 13 (sujets de maths anticipée), 14 (axe), 18 (duel), 19 (code parent), 25 (retours), 27 (vitesse) ; #35 fusionnée, #24 fermée avec note | Terminé (15 et 26 : décision ou relecture du propriétaire) | [PR #36](https://github.com/revizstmg/revizstmg.github.io/pull/36), [PR #37](https://github.com/revizstmg/revizstmg.github.io/pull/37) | Voir l'entrée détaillée ci-dessous |
 
+| SEO-20261020-CLAUDE-01 | Claude | Demande du propriétaire : apparaître dans les recherches « révision STMG ». Pages de cours statiques sous /cours/ (scripts/pages-cours/), sitemap complet, titre et données structurées de l'accueil, liens depuis l'accueil, la bienvenue et le pied de page ; publier.mjs copie les dossiers ; service worker hors ligne | Terminé | `claude/referencement` | Search Console et liens entrants : actions du propriétaire |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -818,3 +820,23 @@ Prochaine action :
   compilation déposée par le bot dans `9db697d`, Pages #39488980292 réussi.
   Contrôle public : HTML et service worker servent la même version `96dfe3609b`.
   Correction fusionnée, publiée et suivi partagé.
+
+- État : diagnostic et correction en cours.
+
+### SEO-20261020-CLAUDE-01 — Claude — 20 octobre 2026
+
+- Constat : Google ne voyait qu'une page (l'app vit sur des adresses « #/… »),
+  et RévizSTMG n'apparaissait sur aucune recherche, pas même son nom.
+- Livré : 920 pages statiques générées à chaque compilation depuis content/
+  (index, 19 matières, 94 thèmes, 806 chapitres), sans JavaScript, chacune avec
+  titre, description, canonique, JSON-LD et lien vers le chapitre dans l'app ;
+  sitemap de 921 adresses ; titre de l'accueil « Révision du bac STMG… » et
+  données structurées ; `scripts/publier.mjs` remplace désormais les dossiers
+  publiés (cours/) en entier ; hors ligne, une page /cours/ ouvre l'app.
+- Fichiers communs touchés : `Layout.jsx` (titre par défaut, lien de pied de
+  page), `Welcome.jsx` et `Landing.jsx` (lien « Lire les cours sans
+  inscription »), `pwa/sw.js`, `index.html`, `tests/liens.test.js` (exception
+  /cours/), `package.json` (étape de build).
+- Reste au propriétaire : Google Search Console (vérification, envoi du
+  sitemap), Bing Webmaster Tools, liens entrants (site du lycée, professeurs).
+

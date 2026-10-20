@@ -170,6 +170,10 @@ self.addEventListener('fetch', (event) => {
           return fresh
         } catch {
           const cache = await caches.open(CACHE)
+          // Pages de cours statiques (/cours/…) hors ligne : on ouvre l'app, qui a
+          // les mêmes cours en cache (sa page d'accueil ne marche qu'à la racine).
+          const accueil = new URL('./', self.location.href).pathname
+          if (url.pathname.startsWith(accueil + 'cours/')) return Response.redirect(accueil + '#/cours', 302)
           return (
             (await cache.match('./index.html')) ||
             (await cache.match('./')) ||

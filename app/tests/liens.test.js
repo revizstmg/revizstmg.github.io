@@ -43,7 +43,9 @@ describe('liens internes', () => {
     expect(tous.length).toBeGreaterThan(50)
     // Le fil d'Ariane fabrique `/${parts[0]}` pour les pages de PAGES_SIMPLES :
     // ce sont ses clés qui sont vérifiées.
-    const aVerifier = tous.filter((c) => !(c.fichier.endsWith('Layout.jsx') && c.brut === '/${parts[0]}'))
+    // « /cours/ » n'est pas une route de l'app : ce sont les pages de cours
+    // statiques (scripts/pages-cours/, vérifiées par tests/pages-cours.test.js).
+    const aVerifier = tous.filter((c) => !(c.fichier.endsWith('Layout.jsx') && c.brut === '/${parts[0]}') && c.brut !== '/cours/')
     const casses = aVerifier.filter((c) => !MOTIFS.some((m) => m.test(c.chemin))).map((c) => `${c.fichier} : ${c.brut}`)
     expect(casses).toEqual([])
   })

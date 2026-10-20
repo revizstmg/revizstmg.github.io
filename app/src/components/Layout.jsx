@@ -285,6 +285,7 @@ export default function Layout({ children }) {
               <Link to="/confidentialite" className="hover:text-[color:var(--c-accent)] hover:underline">{t('privacyPolicy')}</Link>
               <Link to="/cgu" className="hover:text-[color:var(--c-accent)] hover:underline">{t('termsOfUse')}</Link>
               <Link to="/faq" className="hover:text-[color:var(--c-accent)] hover:underline">{t('faq')}</Link>
+              <a href="/cours/" className="hover:text-[color:var(--c-accent)] hover:underline">Tous les cours en accès libre</a>
               <button onClick={() => window.dispatchEvent(new CustomEvent('stmg-open-a11y'))} className="hover:text-[color:var(--c-accent)] hover:underline">♿ {t('accessibility')}</button>
               <a href="mailto:revizstmg@gmail.com" className="hover:text-[color:var(--c-accent)] hover:underline">{t('contactUs')} · revizstmg@gmail.com</a>
             </nav>
@@ -490,7 +491,7 @@ function Breadcrumb() {
   // Titre de l'onglet : la page en cours, puis le nom du site.
   const dernier = crumbs.length > 1 ? crumbs[crumbs.length - 1].label : ''
   useEffect(() => {
-    document.title = dernier ? `${dernier} — RévizSTMG` : 'RévizSTMG — réviser le bac STMG'
+    document.title = dernier ? `${dernier} — RévizSTMG` : 'Révision du bac STMG : cours et exercices gratuits — RévizSTMG'
   }, [dernier])
 
   if (crumbs.length <= 1) return null

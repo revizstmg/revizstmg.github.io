@@ -110,6 +110,10 @@ export default function Landing() {
         👨‍👩‍👧 {t('imParent')}
       </button>
 
+      <p className="text-center text-sm">
+        <a href="/cours/" className="font-semibold underline underline-offset-4" style={{ color: 'var(--c-accent-texte)' }}>Lire les cours du bac STMG sans inscription →</a>
+      </p>
+
       <p className="text-center text-xs text-slate-400">
         {t('landingNote')}
       </p>
