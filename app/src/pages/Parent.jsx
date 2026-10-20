@@ -111,7 +111,7 @@ export default function Parent() {
               aria-label={t('parentCodePlaceholder')}
               onKeyDown={(e) => e.key === 'Enter' && doLink()}
               placeholder={t('parentCodePlaceholder')}
-              maxLength={6}
+              maxLength={12}
               className="flex-1 rounded-xl border border-slate-200 bg-white px-4 py-3 text-center font-mono text-lg font-bold uppercase tracking-widest shadow-inner focus:border-cyan-500 focus:outline-none dark:border-slate-700 dark:bg-slate-800"
             />
             <button onClick={doLink} disabled={loading} className="btn-primary text-white disabled:opacity-50" style={{ backgroundColor: accent }}>

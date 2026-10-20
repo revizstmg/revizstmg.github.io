@@ -115,7 +115,7 @@ test('les quotas et variables modifiées ne sont pas mémorisés comme une tradu
 test('les écrans récents sont traduits hors ligne dans les quatre langues', () => {
   const ecrans = ['components/OutilsAccueil.jsx', 'components/EtatSauvegarde.jsx', 'components/AccueilProf.jsx', 'components/CompteRequis.jsx',
     'components/LegalContents.jsx', 'components/OfflineStatus.jsx', 'components/LevelToolNotice.jsx', 'components/QuizOutboxStatus.jsx',
-    'pages/Seance.jsx', 'pages/Cours.jsx', 'pages/BacBlanc.jsx', 'pages/FormulaWorkshop.jsx', 'pages/MesNotes.jsx', 'games/GameHost.jsx', 'games/common.jsx', 'games/ThemeTest.jsx']
+    'pages/Seance.jsx', 'pages/Cours.jsx', 'pages/BacBlanc.jsx', 'pages/FormulaWorkshop.jsx', 'pages/MesNotes.jsx', 'pages/Theme.jsx', 'pages/Profile.jsx', 'games/GameHost.jsx', 'games/common.jsx', 'games/ThemeTest.jsx']
   const textes = new Set()
   const walk = (node) => {
     if (!node || typeof node !== 'object') return

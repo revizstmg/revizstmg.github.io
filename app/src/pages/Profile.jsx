@@ -1,7 +1,7 @@
 import OfflineStatus from '../components/OfflineStatus.jsx'
 import { useState } from 'react'
 import { Link, Navigate, useSearchParams } from 'react-router-dom'
-import { useStore, subjectScore, effacerDonneesAppareil } from '../store.jsx'
+import { useStore, subjectScore, effacerDonneesAppareil, buildChildSnapshot } from '../store.jsx'
 import { trackLabel, trackIcon, subjectsForTrack } from '../data/tracks.js'
 import { badgeById } from '../badges.js'
 import { Ring, ProgressBar, Icon } from '../components/ui.jsx'
@@ -12,7 +12,7 @@ import { InstallCard, AppBadge } from '../components/InstallApp.jsx'
 import { ProgressCurve, ThemeTimeBars } from '../components/StatsCharts.jsx'
 import { isStandalone } from '../pwa.js'
 import { ensurePermission, notify, notifSupported } from '../notify.js'
-import { parentCode, PARENT_READY } from '../parent.js'
+import { parentCode, PARENT_READY, renouvelerCodeParent } from '../parent.js'
 import { daysUntil, todayKey } from '../data/srs.js'
 import { estEnEssai, creerMonCompte } from '../components/CompteRequis.jsx'
 
@@ -41,7 +41,22 @@ export default function Profile() {
   const [busy, setBusy] = useState(false)
   const bacDays = state.bacDate ? daysUntil(state.bacDate) : null
   const [codeCopied, setCodeCopied] = useState(false)
+  const [codeMsg, setCodeMsg] = useState('')
+  const [, setCodeVersion] = useState(0)
   if (!state.track) return <Navigate to="/" replace />
+
+  // Nouveau code parent : l'ancien ne donne plus rien (code partagé par erreur…).
+  const renouvelerCode = async () => {
+    if (busy || !confirm(tr('Renouveler le code ? L’ancien ne marchera plus : tes parents devront saisir le nouveau.'))) return
+    setBusy(true); setCodeMsg('')
+    try {
+      await renouvelerCodeParent(buildChildSnapshot(state, derived))
+      setCodeVersion((v) => v + 1)
+      setCodeMsg(tr('Nouveau code créé. Donne-le à tes parents.'))
+    } catch (e) {
+      setCodeMsg(tr(e?.message || 'Le code n’a pas pu être renouvelé : vérifie ta connexion et réessaie.'))
+    } finally { setBusy(false) }
+  }
 
   const copyParentCode = async () => {
     try { await navigator.clipboard.writeText(parentCode()); setCodeCopied(true); setTimeout(() => setCodeCopied(false), 1800) } catch { /* copie indisponible */ }
@@ -245,6 +260,13 @@ export default function Profile() {
             <div className="mt-3 flex items-center gap-3">
               <span className="rounded-xl bg-slate-100 px-4 py-2 font-mono text-xl font-bold tracking-widest dark:bg-slate-800">{parentCode() || tr('Code indisponible : vérifie le stockage de ton navigateur.')}</span>
               <button disabled={!parentCode()} onClick={copyParentCode} className="btn-ghost text-sm">{codeCopied ? `✓ ${t('copied')}` : t('copyCode')}</button>
+            </div>
+          )}
+          {state.parentShare && (
+            <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500 dark:text-slate-400">
+              <button type="button" onClick={renouvelerCode} disabled={busy} className="font-semibold underline disabled:opacity-50">Renouveler le code</button>
+              <span>Si le code a circulé : l’ancien ne marchera plus.</span>
+              {codeMsg && <span role="status" className="w-full font-semibold">{codeMsg}</span>}
             </div>
           )}
         </section>

@@ -135,7 +135,7 @@ export default {
   duelWinShort: 'ف', duelLossShort: 'خ', duelDrawShort: '=',
   duelInviteBtn: 'إرسال التحدي', play: 'العب', duelPlayNow: 'للعب الآن', duelReadyPlay: 'خصمك جاهز — دورك للعب!',
   duelWaitAccept: 'في انتظار القبول', duelWaitAcceptHint: 'ننتظر أن يقبل {opp} التحدي لبدء المبارزة معًا.',
-  duelWaitScore: 'في انتظار النتيجة', duelWaitScoreHint: 'لم يلعب خصمك بعد. سترى النتيجة فور انتهائه.',
+  duelWaitScore: 'في انتظار النتيجة', duelWaitScoreHint: 'لم يلعب خصمك بعد. سترى النتيجة فور انتهائه.', duelSendFailed: 'لم تُرسَل نتيجتك بعد', duelSendFailedHint: 'انقطع الاتصال. نتيجتك ({n} نقطة) محفوظة على هذا الجهاز: أعد محاولة الإرسال، ولو لاحقًا من مبارزاتك.', duelSendRetry: 'إعادة محاولة الإرسال',
   duelCancel: 'إلغاء', duelDeclinedByOther: 'تم إلغاء التحدي.',
   chaptersWord: 'فصول', duelPickTheme: 'اختر فصلًا واحدًا على الأقل.', duelPickThemes: 'فصول للمراجعة (واحد أو أكثر)',
   duelLaunch: 'إطلاق', duelKahootHint: 'اختبار مؤقّت · 10 أسئلة · نقاط حسب سرعتك.',

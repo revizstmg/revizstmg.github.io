@@ -13,21 +13,28 @@ import { enc, send, rpc } from './reseau.js'
 export const PARENT_READY = SUPA_READY
 const clampInt = (v, min, max) => Math.max(min, Math.min(max, Math.round(v || 0)))
 
-// Code à donner à ses parents (6 caractères lisibles, préfixe P pour le repérer).
+// Code à donner à ses parents : « P » suivi de 9 caractères lisibles tirés au
+// hasard (32 possibilités chacun, soit plus de 35 000 milliards de codes) :
+// impossible à deviner en essayant. Les anciens codes de 6 caractères restent
+// lisibles jusqu'à leur renouvellement.
+const ALPHABET_CODE = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+export const LONGUEUR_CODE_PARENT = 10
+function nouveauCodeParent() {
+  const octets = crypto.getRandomValues(new Uint8Array(LONGUEUR_CODE_PARENT - 1))
+  return 'P' + Array.from(octets, (o) => ALPHABET_CODE[o % ALPHABET_CODE.length]).join('')
+}
 export function parentCode() {
   try {
     let c = localStorage.getItem('stmg_parent_code')
     if (!c) {
-      const A = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
-      const bytes = crypto.getRandomValues(new Uint8Array(5))
-      c = 'P' + Array.from(bytes, byte => A[byte % A.length]).join('')
+      c = nouveauCodeParent()
       localStorage.setItem('stmg_parent_code', c)
     }
     return c
   } catch { return '' }
 }
 export function normParentCode(s) {
-  return String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6)
+  return String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12)
 }
 
 // ÉLÈVE — publie / met à jour l'instantané lu par le parent.
@@ -72,6 +79,19 @@ export async function publishChildStats(snap) {
 export async function deleteMyChildStats() {
   if (!PARENT_READY) return false
   try { await send('DELETE', `child_stats?device_id=eq.${enc(deviceId())}`); return true } catch { return false }
+}
+
+// ÉLÈVE — renouvelle son code : l'ancien ne donne plus rien, les parents devront
+// saisir le nouveau. La base interdit de changer le code d'une ligne (déclencheur
+// garde_code) : on efface la ligne, puis on la republie sous un code neuf. Si
+// l'effacement échoue, rien ne change (l'ancien code reste affiché).
+export async function renouvelerCodeParent(snap) {
+  if (!PARENT_READY) throw new Error('Suivi parent indisponible.')
+  if (!(await deleteMyChildStats())) throw new Error('Le code n’a pas pu être renouvelé : vérifie ta connexion et réessaie.')
+  const code = nouveauCodeParent()
+  localStorage.setItem('stmg_parent_code', code)
+  if (snap) await publishChildStats(snap)
+  return code
 }
 
 // PARENT — lit l'instantané d'un enfant par son code.

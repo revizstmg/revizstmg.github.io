@@ -499,5 +499,18 @@
   "Tes derniers changements partent sur ton compte dans un instant.": "Le tue ultime modifiche saranno inviate al tuo account tra un istante.",
   "Tes derniers changements ne sont pas encore sur ton compte.": "Le tue ultime modifiche non sono ancora sul tuo account.",
   "Lancer les exercices": "Avvia gli esercizi",
-  "Les espaces partagés sont protégés par les règles d’accès de la base. Selon l’espace, l’accès dépend de ton compte, de ton rôle, de ta classe ou du code que tu partages. Utilise un prénom ou un surnom ; la photo est facultative.": "Gli spazi condivisi sono protetti da regole di accesso nel database. A seconda dello spazio, l’accesso dipende dal tuo account, dal ruolo, dalla classe o dal codice che condividi. Usa un nome o un soprannome; la foto è facoltativa."
+  "Les espaces partagés sont protégés par les règles d’accès de la base. Selon l’espace, l’accès dépend de ton compte, de ton rôle, de ta classe ou du code que tu partages. Utilise un prénom ou un surnom ; la photo est facultative.": "Gli spazi condivisi sono protetti da regole di accesso nel database. A seconda dello spazio, l’accesso dipende dal tuo account, dal ruolo, dalla classe o dal codice che condividi. Usa un nome o un soprannome; la foto è facoltativa.",
+  "Étude de documents du thème": "Studio di documenti del tema",
+  "Un dossier de documents et ses questions, sur plusieurs chapitres du thème": "Un dossier di documenti con le sue domande, su più capitoli del tema",
+  "Mes notes de classe": "I miei voti di classe",
+  "{v0} {v1} · ce qu’il faut améliorer": "{v0} {v1} · cosa migliorare",
+  "Tes notes et ce qu’il faut améliorer": "I tuoi voti e cosa migliorare",
+  "Pour que tes parents suivent ta progression, crée d’abord ton compte : ta progression d’essai y sera gardée.": "Perché i tuoi genitori seguano i tuoi progressi, crea prima il tuo account: i progressi della prova saranno conservati.",
+  "Créer mon compte": "Crea il mio account",
+  "Renouveler le code": "Rinnova il codice",
+  "Si le code a circulé : l’ancien ne marchera plus.": "Se il codice è circolato: quello vecchio non funzionerà più.",
+  "Renouveler le code ? L’ancien ne marchera plus : tes parents devront saisir le nouveau.": "Rinnovare il codice? Quello vecchio non funzionerà più: i tuoi genitori dovranno inserire il nuovo.",
+  "Nouveau code créé. Donne-le à tes parents.": "Nuovo codice creato. Dallo ai tuoi genitori.",
+  "Le code n’a pas pu être renouvelé : vérifie ta connexion et réessaie.": "Non è stato possibile rinnovare il codice: controlla la connessione e riprova.",
+  "Mon espace": "Il mio spazio"
 }

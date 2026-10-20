@@ -20,6 +20,18 @@ const initialsOf = (name) => {
 const medal = (i) => (i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i + 1}`)
 const me = deviceId()
 
+// Score d'un duel joué dont l'envoi a échoué : gardé sur l'appareil pour le
+// renvoyer (l'envoi est idempotent : il réécrit le même score).
+const CLE_SCORES_EN_ATTENTE = 'stmg_duel_scores_attente'
+function scoresEnAttente() {
+  try { return JSON.parse(localStorage.getItem(CLE_SCORES_EN_ATTENTE) || '{}') || {} } catch { return {} }
+}
+function garderScore(id, score) {
+  const tous = scoresEnAttente()
+  if (score) tous[id] = score; else delete tous[id]
+  try { localStorage.setItem(CLE_SCORES_EN_ATTENTE, JSON.stringify(tous)) } catch { /* stockage indisponible : le score reste à l'écran */ }
+}
+
 function resultFromDuel(d) {
   const o = duelOutcome(d)
   const total = (d.questions || []).length
@@ -153,17 +165,27 @@ function FriendsPage() {
     setMsg({ kind: 'err', text: t('duelTooFew') })
   }
   const acceptInvite = async (d) => { setBusy(true); try { await acceptDuelInvite(d.id); setFlow({ step: 'play', duel: { ...d, status: 'live' }, side: 'b' }) } catch { setMsg({ kind: 'err', text: t('rankOffline') }) } setBusy(false) }
-  const playLive = (d) => setFlow({ step: 'play', duel: d, side: d.a_device === me ? 'a' : 'b' })
-  const onDuelDone = async ({ points, correct }) => {
-    const d = flow.duel; setBusy(true)
+  const envoyerScore = async (d, points, correct) => {
+    setBusy(true)
     try {
       const fresh = await submitDuel(d, points, correct)
+      garderScore(d.id, null)
       if (fresh && fresh.status === 'done') setFlow({ step: 'result', ...resultFromDuel(fresh) })
       else setFlow({ step: 'waitingResult', duelId: d.id })
       load()
-    } catch { setFlow(null); setMsg({ kind: 'err', text: t('rankOffline') }) }
+    } catch {
+      garderScore(d.id, { points, correct })
+      setFlow({ step: 'envoiEchoue', duel: d, points, correct })
+    }
     setBusy(false)
   }
+  // Un score déjà joué mais pas encore envoyé : on le renvoie au lieu de rejouer.
+  const playLive = (d) => {
+    const garde = scoresEnAttente()[d.id]
+    if (garde) setFlow({ step: 'envoiEchoue', duel: d, points: garde.points, correct: garde.correct })
+    else setFlow({ step: 'play', duel: d, side: d.a_device === me ? 'a' : 'b' })
+  }
+  const onDuelDone = ({ points, correct }) => envoyerScore(flow.duel, points, correct)
   const remove = async (id) => { setBusy(true); try { await cancelDuel(id); if (flow?.duelId === id) setFlow(null); await load() } catch { setMsg({kind:'err',text:t('rankOffline')}) } setBusy(false) }
 
   const liveToPlay = duelLive.filter((d) => myTurnToPlay(d))
@@ -179,6 +201,22 @@ function FriendsPage() {
         </header>
         <KahootQuiz questions={flow.duel.questions} onDone={onDuelDone} />
         <button onClick={() => setFlow(null)} className="btn-ghost !min-h-0 !py-2 text-sm">← {t('quit')}</button>
+      </div>
+    )
+  }
+  // ===== Envoi du score échoué : le score est gardé, on peut le renvoyer =====
+  if (flow?.step === 'envoiEchoue') {
+    return (
+      <div className="animate-lux">
+        <div className="card card-lux p-6 text-center">
+          <div className="text-5xl" aria-hidden>📡</div>
+          <h1 className="mt-2 font-display text-xl font-semibold">{t('duelSendFailed')}</h1>
+          <p role="alert" className="mt-2 text-sm text-slate-600 dark:text-slate-300">{t('duelSendFailedHint').replace('{n}', Math.round(flow.points || 0))}</p>
+          <div className="mt-5 flex justify-center gap-2">
+            <button onClick={() => envoyerScore(flow.duel, flow.points, flow.correct)} disabled={busy} className="btn-primary" style={{ backgroundColor: 'var(--c-accent-fort)' }}>{t('duelSendRetry')}</button>
+            <button onClick={() => { setFlow(null); load() }} className="btn-ghost">{t('later')}</button>
+          </div>
+        </div>
       </div>
     )
   }

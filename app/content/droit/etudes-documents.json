@@ -408,7 +408,7 @@
       },
       {
         "doc": 2,
-        "q": "Dans une société, la responsabilité des associés est en principe…",
+        "q": "Dans une SARL ou une SAS, la responsabilité des associés est…",
         "choices": [
           "limitée à leurs apports",
           "illimitée sur tout leur patrimoine",
@@ -416,7 +416,7 @@
           "reportée sur les clients"
         ],
         "answer": 0,
-        "explain": "La personnalité morale limite en principe la responsabilité aux apports."
+        "explain": "Dans une SARL ou une SAS, chaque associé ne répond des dettes de la société qu’à hauteur de ses apports. Ce n’est pas vrai de toutes les sociétés : dans une SNC, les associés sont responsables indéfiniment et solidairement."
       },
       {
         "doc": 3,
