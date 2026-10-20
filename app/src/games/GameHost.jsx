@@ -1,5 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { useStore, starsFromScore } from '../store.jsx'
+import { chapitreDuJeu } from '../data/index.js'
+import { ContexteCorrection } from './common.jsx'
 import { Stars, Confetti, Icon } from '../components/ui.jsx'
 import { useT } from '../i18n.js'
 import SignalerErreur from '../components/SignalerErreur.jsx'
@@ -60,30 +63,60 @@ export const GAME_LABELS = {
 // Types sans « mode » (Entraînement / Défi) : on entre directement dans le jeu.
 const NO_MODE = new Set(['doc', 'comprehension', 'sql', 'caspratique'])
 
-// Jeux « auto-corrigés en continu » où le mode Entraînement montre l'explication
-// après chaque réponse (les autres se corrigent surtout à la fin).
-const HAS_MODES = true
+// Types dont on peut refaire seulement les questions ratées, en fin de série.
+const REJOUABLES = new Set(['qcm', 'vraifaux', 'trou', 'saisie'])
 
-export default function GameHost({ game, chapterId, color, quiz = false, onExit }) {
+// L'exercice occupe tout l'écran (ni en-tête ni barre du bas) : moins de
+// distractions et de touchers perdus. La page en dessous ne défile plus.
+function PleinEcran({ titre, children }) {
+  useEffect(() => {
+    const avant = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = avant }
+  }, [])
+  return createPortal(
+    <div data-exercice className="no-print fixed inset-0 z-[60] overflow-y-auto" style={{ background: 'var(--c-bg)' }} role="dialog" aria-modal="true" aria-label={titre}>
+      <div className="mx-auto max-w-2xl px-4 pb-10" style={{ paddingTop: 'max(1rem, env(safe-area-inset-top))' }}>{children}</div>
+    </div>,
+    document.body,
+  )
+}
+
+// `modeInitial` lance l'exercice sans écran de choix (séance du jour) ;
+// `suite` ({ label, onClick }) remplace « Terminé » en fin de série.
+export default function GameHost({ game, chapterId, color, quiz = false, onExit, modeInitial = null, suite = null }) {
   const { recordResult, noterReponses } = useStore()
   const t = useT()
-  const [mode, setMode] = useState(NO_MODE.has(game.type) ? 'solo' : null)
+  const [mode, setMode] = useState(NO_MODE.has(game.type) ? 'solo' : modeInitial)
   const [result, setResult] = useState(null)
   const [runKey, setRunKey] = useState(0)
+  // « Refaire mes erreurs » : les questions ratées de la série, rejouées seules.
+  // Cette reprise ne compte ni dans la maîtrise ni en XP (elle n'entraîne que
+  // sur ce qu'on vient de rater).
+  const [reprise, setReprise] = useState(null)
 
   const Comp = COMPONENTS[game.type]
+  const jeu = reprise ? { ...game, questions: reprise, count: reprise.length } : game
+  const correction = { themeId: chapterId, idx: chapitreDuJeu(chapterId, game.id) }
 
   const handleDone = ({ correct, total, timeBonus = 0, ratees, reussies }) => {
     const pct = total ? Math.round((correct / total) * 100) : 0
     const base = mode === 'defi' ? 15 : 10
-    const xp = correct * base + (mode === 'defi' ? timeBonus : 0)
-    recordResult({ chapterId, gameId: game.id, quiz, pct, correct, total, xp })
-    // Carnet d'erreurs : les questions ratées y entrent, les réussies en sortent.
+    const xp = reprise ? 0 : correct * base + (mode === 'defi' ? timeBonus : 0)
+    if (!reprise) recordResult({ chapterId, gameId: game.id, quiz, pct, correct, total, xp })
+    // Carnet d'erreurs : les questions ratées y entrent ; réussies le jour où
+    // elles sont dues, elles avancent vers la sortie (voir majCarnet).
     if (chapterId && (ratees?.length || reussies?.length)) noterReponses({ themeId: chapterId, type: game.type, ratees, reussies })
-    setResult({ correct, total, pct, xp })
+    setResult({ correct, total, pct, xp, ratees: ratees || [] })
   }
 
   const replay = () => {
+    setReprise(null)
+    setResult(null)
+    setRunKey((k) => k + 1)
+  }
+  const refaireErreurs = () => {
+    setReprise(result.ratees)
     setResult(null)
     setRunKey((k) => k + 1)
   }
@@ -117,7 +150,9 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit 
   if (result) {
     const stars = starsFromScore(result.pct)
     const great = result.pct >= 80
+    const aRefaire = REJOUABLES.has(game.type) ? result.ratees.length : 0
     return (
+      <PleinEcran titre={game.title}>
       <div className="card animate-pop-in p-6 text-center">
         <Confetti show={great} />
         <div className="animate-bounce-in text-5xl">{great ? '🎉' : result.pct >= 50 ? '👍' : '💪'}</div>
@@ -125,30 +160,40 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit 
         <div className="score-pop my-3 text-4xl font-extrabold texte-matiere" style={{ '--mc': color }}>{result.pct}%</div>
         <div className="mb-1"><Stars count={stars} size="text-2xl" /></div>
         <p className="text-sm text-slate-500 dark:text-slate-400">
-          {result.correct} / {result.total} {t('goodAnswers')} · <span className="pop-badge font-semibold text-violet-600 dark:text-violet-400">+{result.xp} XP</span>
+          {result.correct} / {result.total} {t('goodAnswers')}{!reprise && <> · <span className="pop-badge font-semibold text-violet-600 dark:text-violet-400">+{result.xp} XP</span></>}
         </p>
+        {aRefaire > 0 && <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">{aRefaire > 1 ? `${aRefaire} questions ratées sont dans ton carnet d’erreurs : tu les reverras demain, puis dans 3 et 7 jours.` : 'La question ratée est dans ton carnet d’erreurs : tu la reverras demain, puis dans 3 et 7 jours.'}</p>}
         <div className="mt-5 flex flex-wrap justify-center gap-2">
-          <button onClick={replay} className="btn-primary" style={{ backgroundColor: color }}>{t('replay')}</button>
-          {!NO_MODE.has(game.type) && <button onClick={() => { setMode(null); setResult(null) }} className="btn-ghost">{t('changeMode')}</button>}
-          <button onClick={onExit} className="btn-ghost">{t('done')}</button>
+          {aRefaire > 0 && <button onClick={refaireErreurs} className="btn-primary" style={{ backgroundColor: color }}>{`↻ Refaire mes erreurs (${aRefaire})`}</button>}
+          <button onClick={replay} className={aRefaire > 0 ? 'btn-ghost' : 'btn-primary'} style={aRefaire > 0 ? undefined : { backgroundColor: color }}>{t('replay')}</button>
+          {!NO_MODE.has(game.type) && <button onClick={() => { setMode(null); setResult(null); setReprise(null) }} className="btn-ghost">{t('changeMode')}</button>}
+          {suite
+            ? <button onClick={suite.onClick} className="btn-ghost font-semibold">{suite.label}</button>
+            : <button onClick={onExit} className="btn-ghost">{t('done')}</button>}
         </div>
       </div>
+      </PleinEcran>
     )
   }
 
   return (
+    <PleinEcran titre={game.title}>
     <div className="animate-pop-in">
-      <div className="mb-3 flex items-center justify-between">
+      <div className="mb-3 flex items-center justify-between gap-3">
         <button onClick={onExit} className="text-sm text-slate-500 hover:text-violet-600">← {t('quit')}</button>
-        <span className="chip gap-1.5 text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-800">
+        <span className="min-w-0 truncate text-xs font-semibold text-slate-500 dark:text-slate-400">{reprise ? '↻ Mes erreurs' : game.title}</span>
+        <span className="chip shrink-0 gap-1.5 text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-800">
           {mode === 'defi' ? <Icon.Timer size={14} /> : <Icon.Brain size={14} />}
           {mode === 'defi' ? t('challenge') : t('training')}
         </span>
       </div>
-      <Comp key={runKey} game={game} mode={mode} color={color} onDone={handleDone} />
+      <ContexteCorrection.Provider value={correction}>
+        <Comp key={runKey} game={jeu} mode={mode} color={color} onDone={handleDone} />
+      </ContexteCorrection.Provider>
       <div className="mt-3 text-right">
         <SignalerErreur themeId={chapterId} exercice={`${game.title || ''} (${game.id || game.type})`} libelle="Signaler une erreur dans cet exercice" />
       </div>
     </div>
+    </PleinEcran>
   )
 }

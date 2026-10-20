@@ -1,11 +1,12 @@
 import { CourseText } from '../components/Course.jsx'
-import { Link, useNavigate, Navigate } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { getChapter } from '../data/index.js'
 import { subjectsForTrack, getLevel, getSpecialty } from '../data/tracks.js'
 import { useStore, subjectScore } from '../store.jsx'
 import { nextMilestone } from '../data/rewards.js'
 import { ProgressBar, Ring, Icon } from '../components/ui.jsx'
 import OutilsAccueil from '../components/OutilsAccueil.jsx'
+import AccueilProf from '../components/AccueilProf.jsx'
 import { useT, usePublicText } from '../i18n.js'
 
 import { readPosition } from '../data/readingPosition.js'
@@ -14,11 +15,12 @@ import './Home.css'
 
 export default function Home() {
   const { state, derived } = useStore()
-  const navigate = useNavigate()
   const t = useT(), tr = usePublicText()
 
   // Pas encore de filière choisie → retour à l'écran d'entrée.
   if (!state.track) return <Navigate to="/" replace />
+  // Le professeur a son propre accueil : ses classes, pas celui d'un élève.
+  if (state.account?.role === 'prof') return <AccueilProf />
 
   const subjects = subjectsForTrack(state.track)
   const realSubjects = subjects.filter((s) => !s.comingSoon)
@@ -26,13 +28,6 @@ export default function Home() {
     realSubjects.length > 0
       ? Math.round(realSubjects.reduce((a, s) => a + subjectScore(state, s.id), 0) / realSubjects.length)
       : 0
-
-  const randomChapter = () => {
-    const chapters = realSubjects.flatMap((s) => s.chapters.map((c) => ({ sid: s.id, cid: c.id })))
-    if (!chapters.length) return
-    const pick = chapters[Math.floor(Math.random() * chapters.length)]
-    navigate(`/subject/${pick.sid}/theme/${pick.cid}`)
-  }
 
   const position = readPosition(state.account?.id)
   const recent = position && realSubjects.some((s) => s.id === position.subjectId) ? getChapter(position.themeId) : null
@@ -101,15 +96,18 @@ export default function Home() {
           <span className="inline-flex items-center gap-1"><Icon.Flame size={14} /> {state.streak.count} {t('streakDays')}</span>
         </div>
 
+        {/* Un toucher : la séance du jour enchaîne erreurs, révision et cours. */}
         <div className="relative mt-5 flex flex-wrap gap-2.5">
+          {realSubjects.length > 0 && (
+            <Link to="/seance" className="btn-gold gap-1.5 !py-2.5"><Icon.Play size={16} /> Ma séance du jour</Link>
+          )}
           {last ? (
-            <Link to={resumeUrl} className="btn-gold gap-1.5 !py-2.5">
-              <Icon.Play size={16} /> {t('resume')} : <CourseText text={recent ? position.chapterTitle || last.short || last.name : last.short || last.name} />
+            <Link to={resumeUrl} className="btn gap-1.5 !py-2.5 text-[#f4ecd8]" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 45%, transparent)' }}>
+              {t('resume')} : <CourseText text={recent ? position.chapterTitle || last.short || last.name : last.short || last.name} />
             </Link>
           ) : realSubjects[0] ? (
-            <Link to={`/subject/${realSubjects[0].id}`} className="btn-gold gap-1.5 !py-2.5"><Icon.Play size={16} /> {t('start')}</Link>
+            <Link to={`/subject/${realSubjects[0].id}`} className="btn gap-1.5 !py-2.5 text-[#f4ecd8]" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 45%, transparent)' }}>{t('start')}</Link>
           ) : null}
-          <button onClick={randomChapter} className="btn gap-1.5 !py-2.5 text-[#f4ecd8]" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 45%, transparent)' }}><Icon.Dice size={16} /> {t('randomChapter')}</button>
         </div>
       </section>
 

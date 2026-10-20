@@ -1,6 +1,7 @@
 // Utilitaires partagés par les mini-jeux.
-import { useEffect, useRef, useState } from 'react'
+import { createContext, useContext, useEffect, useRef, useState } from 'react'
 import { useT } from '../i18n.js'
+import { ALL_CHAPTERS, notionDuChoix } from '../data/index.js'
 
 // Normalise une saisie : minuscules, sans accents, espaces réduits.
 export function normalize(s) {
@@ -70,8 +71,22 @@ export function fmtTime(s) {
 }
 
 // Bandeau de correction (bonne / mauvaise réponse + explication).
-export function Feedback({ ok, children }) {
+// Thème et chapitre de l'exercice en cours (fournis par GameHost) : la
+// correction peut dire où revoir la notion.
+export const ContexteCorrection = createContext(null)
+
+// Correction d'une réponse. « Pourquoi ? » se déplie dessous : à quelle notion
+// correspond la proposition choisie à tort (`choisi`), et un lien vers le
+// chapitre du cours (ouvert à côté, pour ne pas perdre la série). `themeId`
+// remplace le thème du contexte (modes qui mélangent les thèmes).
+export function Feedback({ ok, children, choisi, themeId }) {
   const t = useT()
+  const ctx = useContext(ContexteCorrection)
+  const tid = themeId || ctx?.themeId
+  const theme = tid ? ALL_CHAPTERS[tid] : null
+  const notion = !ok && choisi && theme ? notionDuChoix(tid, choisi) : null
+  const idx = notion?.idx ?? (themeId && themeId !== ctx?.themeId ? null : ctx?.idx)
+  const lien = theme?.subjectId ? `#/subject/${theme.subjectId}/theme/${tid}${idx != null ? `/chapter/${idx}` : ''}` : null
   return (
     <div
       className={`mt-3 animate-slide-up rounded-xl px-4 py-3 text-sm ${
@@ -83,6 +98,19 @@ export function Feedback({ ok, children }) {
     >
       <span className="mr-1 font-bold"><span className="pop-badge mr-1">{ok ? '✅' : '❌'}</span>{ok ? t('feedbackGood') : t('feedbackBad')}</span>
       {children}
+      {(notion || lien) && (
+        <details className="mt-2 border-t border-black/10 pt-2 dark:border-white/10">
+          <summary className="cursor-pointer select-none font-semibold">Pourquoi ?</summary>
+          {notion && (
+            <p className="mt-1">
+              {notion.est === 'definition'
+                ? `« ${choisi} » : c’est la définition de « ${notion.term} », une autre notion du cours.`
+                : `« ${notion.term} » est une autre notion du cours : ${notion.def}`}
+            </p>
+          )}
+          {lien && <a href={lien} target="_blank" rel="noopener" className="mt-1 inline-block font-semibold underline underline-offset-2">{idx != null ? 'Revoir ce chapitre du cours' : 'Revoir le cours du thème'} ↗</a>}
+        </details>
+      )}
     </div>
   )
 }

@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useMemo, useRef, useState, useCal
 import { SUBJECTS, ALL_CHAPTERS, chapitreDuJeu, exercicesParChapitre, EXERCICES_POUR_MAITRISER } from './data/index.js'
 import { BADGES } from './badges.js'
 import { envoyerProgression, isSignedIn, refreshSession, fetchProfile, getSession, signOut } from './auth.js'
-import { srsUpdate, todayKey, daysBetween } from './data/srs.js'
+import { srsUpdate, todayKey, daysBetween, addDays } from './data/srs.js'
 import { dailyRewardFor } from './data/rewards.js'
 import { subjectsForTrack, trackLabel } from './data/tracks.js'
 import { publishChildStats, deleteMyChildStats, PARENT_READY } from './parent.js'
@@ -17,20 +17,45 @@ export { CARNET_MAX, mergeProgress, grandOralVide, etudeGestionVide }
 // Modes transverses qui touchent plein de thèmes d'un coup (bac blanc, coach IA,
 // défi, express) : ils enregistrent un score mais NE marquent PAS un thème comme
 // « travaillé », sinon « À réviser » se remplit de thèmes jamais étudiés.
-const CROSS_GAMES = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac'])
+export const CROSS_GAMES = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac'])
 
-// Carnet d'erreurs : une question ratée y entre, une question réussie en sort.
-// La clé repose sur le type d'exercice et l'énoncé, pour retrouver la même
-// question d'un exercice à l'autre.
+// Carnet d'erreurs, révisé question par question (répétition espacée par notion) :
+// - une question ratée y entre (ou y revient) en boîte 0, à revoir le lendemain ;
+// - réussie le jour où elle est due (ou après), elle monte d'une boîte : revue
+//   3 jours plus tard, puis 7 ; à la troisième réussite espacée, elle sort ;
+// - réussie avant son jour, elle ne bouge pas : refaire ses erreurs juste
+//   après une série entraîne, mais ne vide pas le carnet.
+// Tous les modes l'alimentent (exercices, test du thème, bac blanc, défi,
+// coach, sujets) ; une question garde son thème (q.themeId) quand le mode en
+// mélange plusieurs. La clé repose sur le type d'exercice et l'énoncé, pour
+// retrouver la même question d'un exercice à l'autre.
+export const CARNET_INTERVALLES = [1, 3, 7]
 export function cleErreur(type, q) {
-  return `${type}|${String(q?.q || q?.text || q?.statement || '').slice(0, 200)}`
+  return `${type}|${String(q?.q || q?.text || q?.statement || q?.prompt || '').slice(0, 200)}`
 }
 export function majCarnet(erreurs, { themeId, type, ratees = [], reussies = [] }, jour) {
-  const sortent = new Set(reussies.map((q) => cleErreur(type, q)))
-  const nouvelles = ratees.map((q) => ({ id: cleErreur(type, q), themeId, type, q, le: jour }))
-  const entrent = new Set(nouvelles.map((e) => e.id))
-  const restent = (erreurs || []).filter((e) => !sortent.has(e.id) && !entrent.has(e.id))
-  return [...nouvelles, ...restent].slice(0, CARNET_MAX)
+  const parId = new Map((erreurs || []).map((e) => [e.id, e]))
+  for (const q of reussies) {
+    const id = cleErreur(type, q)
+    const e = parId.get(id)
+    if (!e || (e.due && e.due > jour)) continue
+    const boite = (e.boite || 0) + 1
+    if (boite >= CARNET_INTERVALLES.length) parId.delete(id)
+    else parId.set(id, { ...e, boite, le: jour, due: addDays(jour, CARNET_INTERVALLES[boite]) })
+  }
+  const nouvelles = []
+  for (const q of ratees) {
+    const tid = q?.themeId || themeId
+    if (!tid) continue
+    const id = cleErreur(type, q)
+    parId.delete(id)
+    nouvelles.push({ id, themeId: tid, type, q, le: jour, boite: 0, due: addDays(jour, CARNET_INTERVALLES[0]) })
+  }
+  return [...nouvelles, ...parId.values()].slice(0, CARNET_MAX)
+}
+// Erreurs à revoir ce jour-là (les plus anciennes d'abord).
+export function erreursDues(erreurs, jour) {
+  return (erreurs || []).filter((e) => !e.due || e.due <= jour).sort((a, b) => (a.due || '').localeCompare(b.due || ''))
 }
 
 // ---------------------------------------------------------------------------

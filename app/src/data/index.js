@@ -1000,6 +1000,34 @@ export function exercicesParChapitre(themeId) {
   return EXERCICES_PAR_CHAPITRE[themeId] || []
 }
 
+// « Pourquoi ? » sous une correction : à quelle notion du cours correspond une
+// proposition choisie à tort (une définition, ou le nom d'une notion), et dans
+// quel chapitre la revoir. Les distracteurs des exercices fabriqués viennent
+// des autres notions du thème : on les retrouve dans ses sections.
+const notionsParTheme = new Map()
+function notionsDuTheme(themeId) {
+  const theme = ALL_CHAPTERS[themeId]
+  if (!theme?.cours) return []
+  if (!notionsParTheme.has(themeId)) {
+    const liste = []
+    theme.cours.forEach((sec, idx) => {
+      for (const p of sectionDefPool(sectionPairs(sec).defPairs)) liste.push({ term: stripMd(p.term), def: stripMd(p.def), idx })
+    })
+    notionsParTheme.set(themeId, liste)
+  }
+  return notionsParTheme.get(themeId)
+}
+const normaliser = (x) => stripMd(x).toLowerCase().replace(/[«»"“”.,;:!?()]/g, ' ').replace(/\s+/g, ' ').trim()
+export function notionDuChoix(themeId, texte) {
+  const cle = normaliser(texte)
+  if (!cle) return null
+  for (const n of notionsDuTheme(themeId)) {
+    if (normaliser(n.def) === cle) return { ...n, est: 'definition' }
+    if (normaliser(n.term) === cle) return { ...n, est: 'terme' }
+  }
+  return null
+}
+
 export function jeuxDuChapitre(chapter, theme) {
   if (!chapter) return []
   const base = chapter.games || []

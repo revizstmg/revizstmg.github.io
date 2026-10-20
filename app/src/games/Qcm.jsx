@@ -101,7 +101,7 @@ export default function Qcm({ game, mode, color, onDone }) {
 
       {answered && (
         <>
-          <Feedback ok={q.choices[picked]?.correct}>
+          <Feedback ok={q.choices[picked]?.correct} choisi={q.choices[picked]?.text} themeId={q.themeId}>
             {picked === -1 && <span className="font-semibold">{t('timeUp')} </span>}
             {q.explain}
           </Feedback>

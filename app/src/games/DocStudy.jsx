@@ -91,7 +91,7 @@ export default function DocStudy({ game, color, onDone }) {
           </div>
           {answered && (
             <>
-              <Feedback ok={picked === q.answer}>{q.explain}</Feedback>
+              <Feedback ok={picked === q.answer} choisi={q.choices?.[picked]}>{q.explain}</Feedback>
               <button onClick={() => finishQ(picked === q.answer)} className="btn-primary mt-4 w-full" style={{ backgroundColor: color }}>
                 {i + 1 >= questions.length ? t('seeScore') : `${t('nextQuestion')} →`}
               </button>

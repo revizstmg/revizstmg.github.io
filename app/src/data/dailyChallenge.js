@@ -50,6 +50,6 @@ export function buildDailyChallenge(track, dateKey, n = 6) {
   return chosen.map((q0) => {
     const q = instancierQuestion(q0, rnd)
     const order = seededShuffle(q.choices.map((_, i) => i), rnd)
-    return { q: q.q, choices: order.map((i) => q.choices[i]), answer: order.indexOf(q.answer), explain: q.explain }
+    return { q: q.q, choices: order.map((i) => q.choices[i]), answer: order.indexOf(q.answer), explain: q.explain, themeId: q.themeId }
   })
 }

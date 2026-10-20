@@ -37,6 +37,10 @@ export function nomEcran(chemin) {
   // « Mes notes de classe » compte pour « moi » tant que la base n'accepte pas
   // un nom d'écran à elle (il faudrait une migration de la fonction SQL).
   if (p[0] === 'mes-notes' && p.length === 1) return 'moi'
+  // De même : la liste des matières (« Cours ») compte pour « matiere », et la
+  // séance du jour pour « revision ».
+  if (p[0] === 'cours' && p.length === 1) return 'matiere'
+  if (p[0] === 'seance' && p.length === 1) return 'revision'
   return p.length === 1 && ECRANS.includes(p[0]) ? p[0] : 'introuvable'
 }
 

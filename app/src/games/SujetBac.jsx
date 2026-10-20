@@ -12,7 +12,7 @@ const COMPOSANTS = { doc: DocStudy, caspratique: CasPratique }
 const hms = (s) => `${Math.floor(s / 3600)} h ${String(Math.floor((s % 3600) / 60)).padStart(2, '0')}`
 
 export default function SujetBac({ sujet, color = 'var(--c-accent)', onExit }) {
-  const { recordResult } = useStore()
+  const { recordResult, noterReponses } = useStore()
   const t = useT()
   const [partie, setPartie] = useState(0)
   const [resultats, setResultats] = useState([])
@@ -26,10 +26,11 @@ export default function SujetBac({ sujet, color = 'var(--c-accent)', onExit }) {
     return () => clearInterval(id)
   }, [debut, fini])
 
-  const terminerPartie = ({ correct, total }) => {
+  const terminerPartie = ({ correct, total, ratees, reussies }) => {
     const p = sujet.parties[partie]
     const pct = total ? Math.round((correct / total) * 100) : 0
     recordResult({ chapterId: p.themeId, gameId: 'sujet-bac', pct, correct, total, xp: correct * 12 })
+    if (ratees?.length || reussies?.length) noterReponses({ themeId: p.themeId, type: p.game.type, ratees, reussies })
     setResultats((r) => [...r, { titre: p.titre, correct, total }])
     setPartie((k) => k + 1)
   }

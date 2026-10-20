@@ -8,7 +8,7 @@ import { useT } from '../i18n.js'
 import { todayKey } from '../data/srs.js'
 
 export default function DailyChallenge() {
-  const { state, completeDailyChallenge } = useStore()
+  const { state, completeDailyChallenge, noterReponses } = useStore()
   useStudyTimer() // le temps du défi du jour compte pour les récompenses
   const t = useT()
   const navigate = useNavigate()
@@ -23,8 +23,9 @@ export default function DailyChallenge() {
 
   if (!state.track) return <Navigate to="/" replace />
 
-  const onDone = ({ correct, total }) => {
+  const onDone = ({ correct, total, ratees, reussies }) => {
     const pct = total ? Math.round((correct / total) * 100) : 0
+    noterReponses({ themeId: null, type: 'qcm', ratees, reussies })
     completeDailyChallenge(pct)
     setResult({ correct, total, pct })
     setPhase('result')

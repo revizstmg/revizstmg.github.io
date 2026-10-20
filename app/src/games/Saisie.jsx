@@ -16,6 +16,7 @@ export default function Saisie({ game, mode, color, onDone }) {
   const [checked, setChecked] = useState(false)
   const [revealed, setRevealed] = useState(false)
   const inputRef = useRef(null)
+  const bilan = useRef({ ratees: [], reussies: [] }) // pour le carnet d'erreurs
   const elapsed = useStopwatch(mode === 'defi')
   const q = set[i] || { prompt: '', answer: '', alt: [] }
   const ok = checked && answerMatches(val, q.answer, q.alt || [])
@@ -26,9 +27,10 @@ export default function Saisie({ game, mode, color, onDone }) {
     if (answerMatches(val, q.answer, q.alt || [])) setCorrect((c) => c + 1)
   }
   const next = () => {
+    bilan.current[ok ? 'reussies' : 'ratees'].push(q)
     if (i + 1 >= set.length) {
       const timeBonus = Math.max(0, set.length * 8 - elapsed)
-      onDone({ correct, total: set.length, timeBonus })
+      onDone({ correct, total: set.length, timeBonus, ...bilan.current })
     } else {
       setI((v) => v + 1); setVal(''); setChecked(false); setRevealed(false)
       setTimeout(() => inputRef.current?.focus(), 30)
@@ -80,7 +82,7 @@ export default function Saisie({ game, mode, color, onDone }) {
         </div>
       ) : (
         <>
-          <Feedback ok={ok}>
+          <Feedback ok={ok} choisi={val}>
             {!ok && <>{t('expectedAnswer')} <strong>{shownAnswer}</strong>.<br /></>}
             {q.explain && <span className="whitespace-pre-line">{q.explain}</span>}
           </Feedback>

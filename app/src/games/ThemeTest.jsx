@@ -13,7 +13,7 @@ import { useT } from '../i18n.js'
 import Qcm from './Qcm.jsx'
 
 export default function ThemeTest({ theme, color, onExit }) {
-  const { recordResult } = useStore()
+  const { recordResult, noterReponses } = useStore()
   const t = useT()
   const [tirage, setTirage] = useState(0) // « Refaire le test » : nouveau tirage
   const test = useMemo(() => {
@@ -96,7 +96,8 @@ export default function ThemeTest({ theme, color, onExit }) {
           game={qcmGame}
           mode="train"
           color={color}
-          onDone={({ correct, total }) => {
+          onDone={({ correct, total, ratees, reussies }) => {
+            noterReponses({ themeId: theme.id, type: 'qcm', ratees, reussies })
             setQcmScore({ correct, total })
             if (hasWritten) setStep('written')
             else finish({ correct, total }, 0)

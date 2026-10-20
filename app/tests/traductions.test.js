@@ -108,3 +108,30 @@ test('les quotas et variables modifiées ne sont pas mémorisés comme une tradu
   expect((await api.translate('Salut {v0}', 'fr', 'en')).text).toBe('Hello {v0}')
   expect(fetch).toHaveBeenCalledTimes(3)
 })
+
+// Écrans récents (séance du jour, accueil professeur, sauvegarde, carnet,
+// « Pourquoi ? », notes de classe…) : leurs textes sont traduits hors ligne
+// dans les quatre langues, sans passer par le service de traduction.
+test('les écrans récents sont traduits hors ligne dans les quatre langues', () => {
+  const ecrans = ['components/OutilsAccueil.jsx', 'components/EtatSauvegarde.jsx', 'components/AccueilProf.jsx', 'components/CompteRequis.jsx',
+    'pages/Seance.jsx', 'pages/Cours.jsx', 'pages/MesNotes.jsx', 'games/GameHost.jsx', 'games/common.jsx', 'games/ThemeTest.jsx']
+  const textes = new Set()
+  const walk = (node) => {
+    if (!node || typeof node !== 'object') return
+    if (node.type === 'JSXAttribute' && node.name.name === 'text' && node.value?.expression?.type === 'StringLiteral') textes.add(node.value.expression.value.replace(/\s+/g, ' ').trim())
+    if (node.type === 'ObjectProperty' && (node.key.name || node.key.value) === 'text' && node.value.type === 'StringLiteral') textes.add(node.value.value.replace(/\s+/g, ' ').trim())
+    for (const value of Object.values(node)) if (Array.isArray(value)) value.forEach(walk); else if (value && typeof value === 'object') walk(value)
+  }
+  for (const f of ecrans) walk(transformFileSync(new URL(f, root).pathname, { configFile: false, babelrc: false, plugins: [publicTranslations], parserOpts: { plugins: ['jsx'] }, ast: true }).ast)
+  // Titres des étapes de la séance, traduits par usePublicText.
+  for (const t of ['Étape {k}/{n} · {titre}', 'Tes erreurs à revoir', 'Révision du jour', 'Point faible à consolider', 'Avancer dans le cours', 'Étape suivante →', 'Terminer la séance']) textes.add(t)
+  expect(textes.size).toBeGreaterThan(80)
+  // Comme src/localisation/catalogue.js : les libellés d'interface (i18n/<langue>.js)
+  // traduisent aussi le même texte français.
+  const fr = properties(readAst('i18n/fr.js').program.body.find((n) => n.type === 'ExportDefaultDeclaration').declaration)
+  for (const [lang, book] of Object.entries(books)) {
+    const coeur = properties(readAst(`i18n/${lang}.js`).program.body.find((n) => n.type === 'ExportDefaultDeclaration').declaration)
+    const base = Object.fromEntries([...fr].filter(([k]) => coeur.get(k)).map(([k, v]) => [String(v).replace(/\s+/g, ' ').trim(), coeur.get(k)]))
+    for (const texte of textes) expect(book[texte] || base[texte], `${lang} : « ${texte} »`).toBeTruthy()
+  }
+})

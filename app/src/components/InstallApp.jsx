@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useInstall } from '../pwa.js'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
-import { useInfoCookiesLue } from './BandeauCookies.jsx'
+import { useFenetreAutomatique } from '../fenetres.js'
 
 // --- Petites illustrations (maquettes) minimalistes -------------------------
 function AppMark({ size = 52 }) {
@@ -207,8 +207,8 @@ export function InstallBanner() {
   const [guide, setGuide] = useState(false)
 
   const signedIn = !!state.profile?.firstName
-  const cookiesLu = useInfoCookiesLue() // un bandeau à la fois, celui des cookies d'abord
-  const show = signedIn && mobile && !standalone && !dismissed && cookiesLu
+  // Une fenêtre automatique par visite : l'information sur les cookies passe d'abord.
+  const show = useFenetreAutomatique('installer', signedIn && mobile && !standalone && !dismissed)
 
   const close = () => {
     try { localStorage.setItem(DISMISS_KEY, '1') } catch { /* */ }

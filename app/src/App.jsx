@@ -39,6 +39,8 @@ const Faq = lazy(() => import('./pages/Faq.jsx'))
 const Guide = lazy(() => import('./pages/Guide.jsx'))
 const Friends = lazy(() => import('./pages/Friends.jsx'))
 const MesNotes = lazy(() => import('./pages/MesNotes.jsx'))
+const Cours = lazy(() => import('./pages/Cours.jsx'))
+const Seance = lazy(() => import('./pages/Seance.jsx'))
 
 // Rétro-compatibilité : les anciens liens /subject/:sid/chapter/:cid
 // (où le chapitre était en fait un thème) redirigent vers la page Thème.
@@ -70,6 +72,8 @@ export default function App() {
         <Route path="/" element={<RootEntry />} />
         <Route path="/changer" element={<Landing />} />
         <Route path="/accueil" element={<Home />} />
+        <Route path="/cours" element={<Cours />} />
+        <Route path="/seance" element={<ContenuFiliere><Seance /></ContenuFiliere>} />
         <Route path="/subject/:sid" element={<ContenuMatiere><Subject /></ContenuMatiere>} />
         <Route path="/subject/:sid/theme/:tid" element={<ContenuMatiere><Theme /></ContenuMatiere>} />
         <Route path="/subject/:sid/theme/:tid/chapter/:cidx" element={<ContenuMatiere><Chapter /></ContenuMatiere>} />
