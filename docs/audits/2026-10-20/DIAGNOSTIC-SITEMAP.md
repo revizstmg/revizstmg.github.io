@@ -4,7 +4,10 @@
 
 Le propriétaire voit « Impossible de récupérer le sitemap » dans Search Console.
 Le test d’URL active de Google affiche pourtant « Google a accès à cette URL »
-(20 octobre 2026, 22:56, heure de Paris).
+(20 octobre 2026, 22:56, heure de Paris). Le propriétaire a ensuite confirmé
+que l’adresse affichée lors du test réussi était bien
+https://revizstmg.github.io/sitemap.xml, et non l’accueil. Le rapport Sitemaps
+et le test en direct donnent donc des résultats différents.
 
 Contrôles du site effectués :
 
@@ -16,6 +19,8 @@ Contrôles du site effectués :
 - robots.txt répond 200 et autorise Googlebot à lire le sitemap et l’accueil.
   Aucun en-tête X-Robots-Tag ne bloque le sitemap.
 - DNS public : les quatre A et quatre AAAA standard de GitHub Pages.
+  Requêtes HTTPS ciblant les quatre adresses IPv4 : 200 et même contenu,
+  en conservant le nom TLS/Host et le proxy de l’environnement.
 - HTTP redirige une fois vers HTTPS, puis 200 ; l’URL envoyée est déjà HTTPS.
 - Aucun incident GitHub non résolu signalé au moment du contrôle.
 
@@ -31,8 +36,10 @@ ligne, aussi déclaré dans robots.txt. Il reprend l’accueil et conserve le XM
 Ce format est officiellement pris en charge par Google. L’URL distincte permet
 une nouvelle soumission indépendamment de l’entrée XML en échec.
 
-Après publication : vérifier une réponse 200 text/plain et le contenu exact,
-puis envoyer sitemap.txt dans Search Console. Le succès du rapport Google reste
+Publication réalisée dans #44 : réponse publique 200 text/plain et contenu
+exact vérifiés, référence robots présente, ancien XML conservé. Recette main :
+293 tests unitaires et 152 parcours navigateur réussis (#39497302917).
+Prochaine étape : envoyer sitemap.txt dans Search Console. Le succès du rapport Google reste
 à constater par le propriétaire ; la présence du fichier seule ne le démontre pas.
 Si ce format est accepté, il peut rester comme entrée alternative. Si le refus
 persiste aussi, conserver le résultat de récupération détaillé de Search Console
