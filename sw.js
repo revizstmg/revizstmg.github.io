@@ -11,8 +11,8 @@
  *  - Requêtes cross-origin (Supabase, Google Fonts…) : jamais interceptées,
  *    elles passent directement au réseau.
  */
-const VERSION = 'edf4a987d6'
-const PRECACHE = ["./assets/BacBlanc-Bi7YZktp.js","./assets/Badges-Conzvkun.js","./assets/CasPratique-1d5xx_dI.js","./assets/Cgu-DLNLvRZz.js","./assets/Chapter-KQlnCbbo.js","./assets/ClassCodeForm-fDWzkCM8.js","./assets/Classe-Bin2ukE0.js","./assets/Coach-DsaUq25K.js","./assets/CoachAI-D0AfNpgm.js","./assets/Course-CB3Y13q1.js","./assets/Customizer-CNd7yB1z.js","./assets/DailyChallenge-B_sMM54T.js","./assets/DeckDownload-B3D1CiuY.js","./assets/DossierProjet-DfdXVsT0.js","./assets/EtudeGestion-D8o_AghT.js","./assets/Exam-1lUPy6bD.js","./assets/Faq-Cbi9X-dW.js","./assets/Favoris-DYS5ozw3.js","./assets/FlashcardsPage-CO_zryU0.js","./assets/FormulaWorkshop-DmLaF1ge.js","./assets/Friends-goEuTFtA.js","./assets/GameHost-DFeFo6S4.js","./assets/GrandOral-y8qulEUP.js","./assets/Guide-NIALtrCi.js","./assets/Home-Dtz2g7HY.css","./assets/Home-c1IBWGBt.js","./assets/Landing-DnFM9Tig.js","./assets/Leaderboard-TOVQw_NI.js","./assets/MesNotes-DSWzG35Y.js","./assets/Methodo-DjdM7Ms9.js","./assets/Parent-DddjfvB6.js","./assets/PhotoFiche-DdY_IbkM.js","./assets/PileCartes-CRcf2b4l.js","./assets/Privacy-Dgsf0sdw.js","./assets/Profile-BHgaJK8X.js","./assets/Programme-D8zBlsgK.js","./assets/Qcm-X9smCi9x.js","./assets/Revise-PLknLIWS.js","./assets/Shop-7dMdK4rv.js","./assets/StatsCharts-HRfoU5iC.js","./assets/Subject-D3-_tCTh.js","./assets/Theme-CZ2rpGr7.js","./assets/ar-CiO7fztq.js","./assets/calc-62orrPIx.js","./assets/common-OcW1bhKp.js","./assets/contenu-droit-DLNva_d6.js","./assets/contenu-economie-BuAcm9CL.js","./assets/contenu-gestion-finance-B0tG7jyh.js","./assets/contenu-histoire-geo-CgOSVx_S.js","./assets/contenu-langues-EY1ZfT7F.js","./assets/contenu-management-CcCdHt4n.js","./assets/contenu-maths-CvQqR-ds.js","./assets/contenu-mercatique-ewA3ljuD.js","./assets/contenu-p1-droit-BlHx7Eee.js","./assets/contenu-p1-economie-6m54mKPn.js","./assets/contenu-p1-francais-DWjirzfL.js","./assets/contenu-p1-histoire-geo-BD_eS3Rc.js","./assets/contenu-p1-langues-CHniLqxt.js","./assets/contenu-p1-management-B4Bp1qwy.js","./assets/contenu-p1-maths-Df4-fAiJ.js","./assets/contenu-p1-sgn-Dpw5IPfN.js","./assets/contenu-philosophie-uBhihm-s.js","./assets/contenu-rh-communication-DqHaeqKL.js","./assets/contenu-sig-BlZZlj-b.js","./assets/cormorant-garamond-latin-500-italic-Y14P-dkT.woff2","./assets/cormorant-garamond-latin-500-normal-BsRWmXhO.woff2","./assets/cormorant-garamond-latin-600-normal-Co1r35X9.woff2","./assets/cormorant-garamond-latin-700-normal-DajfzrDU.woff2","./assets/eb-garamond-latin-500-normal-DehAIUv0.woff2","./assets/eb-garamond-latin-600-normal-DHwxsLHv.woff2","./assets/en-Cd5cnDYJ.js","./assets/epreuves-TZuOSVvi.js","./assets/es-DrcH3Ngu.js","./assets/index-B7M84_Pu.css","./assets/index-Boy54S_A.js","./assets/inter-latin-400-normal-C38fXH4l.woff2","./assets/inter-latin-500-normal-Cerq10X2.woff2","./assets/inter-latin-600-normal-LgqL8muc.woff2","./assets/inter-latin-700-normal-Yt3aPRUw.woff2","./assets/it-CJOjQIvn.js","./assets/lato-latin-400-normal-BEhtfm5r.woff2","./assets/lato-latin-700-normal-BUGMgin4.woff2","./assets/marcellus-latin-400-normal-86dSXJnk.woff2","./assets/nunito-latin-400-normal-r8SDr6Up.woff2","./assets/nunito-latin-600-normal-Br8yIETf.woff2","./assets/nunito-latin-700-normal-Dort48En.woff2","./assets/playfair-display-latin-500-normal-DIxvyhka.woff2","./assets/playfair-display-latin-600-normal-CZLGqjJe.woff2","./assets/playfair-display-latin-700-normal-CuDiGg7c.woff2","./assets/public.ar-C3hrodzK.js","./assets/public.en-0HMra2V_.js","./assets/public.es-DFjoCn7P.js","./assets/public.it-ChgUR7Ch.js","./assets/study-D4UpvZvG.js"]
+const VERSION = 'cffd0b6996'
+const PRECACHE = ["./assets/BacBlanc-9PaeIjEB.js","./assets/Badges-BPn5YYuF.js","./assets/CasPratique-CgJy_xVp.js","./assets/Cgu-Bzr02WTz.js","./assets/Chapter-DOPsx2RH.js","./assets/ClassCodeForm-CMvVIZRF.js","./assets/Classe-DXypHEZU.js","./assets/Coach-CMbdf0jO.js","./assets/CoachAI-BSZ3y9tw.js","./assets/Course-CfIhFauQ.js","./assets/Customizer-CeAAZspq.js","./assets/DailyChallenge-B5tILZvY.js","./assets/DeckDownload-Bs59Mvm0.js","./assets/DossierProjet-CcKwKApl.js","./assets/EtudeGestion-D5OZRIqW.js","./assets/Exam-4jPsuUnN.js","./assets/Faq-BjQ1zapj.js","./assets/Favoris-BXJgGK5I.js","./assets/FlashcardsPage-Ci8NC4mX.js","./assets/FormulaWorkshop-C8Y2__yo.js","./assets/Friends-BS6Wat0Y.js","./assets/GameHost-CBWHtGgy.js","./assets/GrandOral-BQTkx5Bq.js","./assets/Guide-Cl9bbK34.js","./assets/Home-Dtz2g7HY.css","./assets/Home-soiJTRKx.js","./assets/Landing-yGpjQZMX.js","./assets/Leaderboard-BzuFv6ZD.js","./assets/MesNotes-C7Q30bcR.js","./assets/Methodo-CqZPOdrD.js","./assets/Parent-CU9XaCY0.js","./assets/PhotoFiche-D-Qt0j9w.js","./assets/PileCartes-BA5XM2-w.js","./assets/Privacy-CNsor5Cw.js","./assets/Profile-DterVoSc.js","./assets/Programme-C_YSq-I6.js","./assets/Qcm-DodkQ1q6.js","./assets/Revise-BpsKy-lG.js","./assets/Shop-DGZcUZpp.js","./assets/StatsCharts-Dd1NDg3a.js","./assets/Subject-B8Wymu8N.js","./assets/Theme-Bwf-j9cT.js","./assets/ar-CiO7fztq.js","./assets/calc-62orrPIx.js","./assets/common-Bmhsjywj.js","./assets/contenu-droit-DLNva_d6.js","./assets/contenu-economie-ByzwFWVf.js","./assets/contenu-gestion-finance-BFf2T9Y7.js","./assets/contenu-histoire-geo-F0ON0o2n.js","./assets/contenu-langues-Bndm6UbK.js","./assets/contenu-management-CcCdHt4n.js","./assets/contenu-maths-CvQqR-ds.js","./assets/contenu-mercatique-CZUmLJXn.js","./assets/contenu-p1-droit-BlHx7Eee.js","./assets/contenu-p1-economie-mQi8BtiL.js","./assets/contenu-p1-francais-DWjirzfL.js","./assets/contenu-p1-histoire-geo-BD_eS3Rc.js","./assets/contenu-p1-langues-CHniLqxt.js","./assets/contenu-p1-management-B4Bp1qwy.js","./assets/contenu-p1-maths-Df4-fAiJ.js","./assets/contenu-p1-sgn-BiBpJMLq.js","./assets/contenu-philosophie-9zzR2_mI.js","./assets/contenu-rh-communication-DqHaeqKL.js","./assets/contenu-sig-CP5eSvFd.js","./assets/cormorant-garamond-latin-500-italic-Y14P-dkT.woff2","./assets/cormorant-garamond-latin-500-normal-BsRWmXhO.woff2","./assets/cormorant-garamond-latin-600-normal-Co1r35X9.woff2","./assets/cormorant-garamond-latin-700-normal-DajfzrDU.woff2","./assets/eb-garamond-latin-500-normal-DehAIUv0.woff2","./assets/eb-garamond-latin-600-normal-DHwxsLHv.woff2","./assets/en-Cd5cnDYJ.js","./assets/epreuves-dqUL3wGh.js","./assets/es-DrcH3Ngu.js","./assets/index-BBAlnn-r.css","./assets/index-C0Y-5WcX.js","./assets/inter-latin-400-normal-C38fXH4l.woff2","./assets/inter-latin-500-normal-Cerq10X2.woff2","./assets/inter-latin-600-normal-LgqL8muc.woff2","./assets/inter-latin-700-normal-Yt3aPRUw.woff2","./assets/it-CJOjQIvn.js","./assets/lato-latin-400-normal-BEhtfm5r.woff2","./assets/lato-latin-700-normal-BUGMgin4.woff2","./assets/marcellus-latin-400-normal-86dSXJnk.woff2","./assets/nunito-latin-400-normal-r8SDr6Up.woff2","./assets/nunito-latin-600-normal-Br8yIETf.woff2","./assets/nunito-latin-700-normal-Dort48En.woff2","./assets/playfair-display-latin-500-normal-DIxvyhka.woff2","./assets/playfair-display-latin-600-normal-CZLGqjJe.woff2","./assets/playfair-display-latin-700-normal-CuDiGg7c.woff2","./assets/public.ar-C3hrodzK.js","./assets/public.en-0HMra2V_.js","./assets/public.es-DFjoCn7P.js","./assets/public.it-ChgUR7Ch.js","./assets/study-DEm840JC.js"]
 const CACHE = 'revizstmg-' + VERSION
 const FONT_CACHE = 'revizstmg-fonts-v1'
 const FONT_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com']
@@ -27,13 +27,32 @@ const CORE = [
   './favicon.png',
 ]
 
+// Mise en cache d'une nouvelle version. Chaque fichier est demandé au serveur
+// (cache: 'reload') et non au cache du navigateur, qui garde l'ancienne page
+// d'accueil une dizaine de minutes : sinon la nouvelle version pouvait garder
+// l'ancienne page, qui appelle des fichiers déjà effacés (page blanche hors
+// ligne). Si un fichier manque, l'installation échoue : l'ancienne version, dont
+// le cache est complet, reste en place et la mise à jour sera retentée.
+const charger = async (cache, url) => {
+  const res = await fetch(new Request(url, { cache: 'reload' }))
+  if (!res.ok) throw new Error(`${url} : ${res.status}`)
+  await cache.put(url, res)
+}
+
 self.addEventListener('install', (event) => {
-  self.skipWaiting()
   event.waitUntil(
-    caches.open(CACHE).then((cache) =>
-      // addAll échoue si UN fichier manque : on ajoute donc un par un, tolérant.
-      Promise.all([...CORE, ...PRECACHE].map((url) => cache.add(url).catch(() => null)))
-    )
+    (async () => {
+      const cache = await caches.open(CACHE)
+      try {
+        for (let i = 0; i < PRECACHE.length + CORE.length; i += 8) {
+          await Promise.all([...CORE, ...PRECACHE].slice(i, i + 8).map((url) => charger(cache, url)))
+        }
+      } catch (e) {
+        await caches.delete(CACHE)
+        throw e
+      }
+      await self.skipWaiting()
+    })()
   )
 })
 
@@ -131,8 +150,14 @@ self.addEventListener('fetch', (event) => {
       (async () => {
         try {
           const fresh = await fetch(req)
-          const cache = await caches.open(CACHE)
-          cache.put('./index.html', fresh.clone())
+          // Seule la vraie page d'accueil de l'app remplace la copie hors ligne :
+          // une page d'erreur (404 d'une adresse inconnue, panne du serveur) ne
+          // doit jamais prendre sa place.
+          const accueil = new URL('./', self.location.href).pathname
+          if (fresh.ok && fresh.status === 200 && (url.pathname === accueil || url.pathname === accueil + 'index.html')) {
+            const cache = await caches.open(CACHE)
+            cache.put('./index.html', fresh.clone())
+          }
           return fresh
         } catch {
           const cache = await caches.open(CACHE)
