@@ -157,7 +157,22 @@ export async function signIn({ email, password }) {
   return true
 }
 
-export function signOut() { clearSession() }
+// Déconnexion : la session est effacée de l'appareil tout de suite, puis
+// fermée sur le serveur (le jeton de renouvellement n'y vaut plus rien). Hors
+// ligne, la fermeture côté serveur échoue sans bruit : le jeton d'accès expire
+// alors de lui-même au bout d'une heure.
+export function signOut() {
+  const s = getSession()
+  clearSession()
+  if (!s?.token) return
+  try {
+    fetch(`${SUPA_URL}/auth/v1/logout?scope=local`, {
+      method: 'POST',
+      keepalive: true,
+      headers: { apikey: SUPA_ANON, Authorization: 'Bearer ' + s.token },
+    }).catch(() => {})
+  } catch { /* pas de réseau */ }
+}
 
 // --- Connexion via un fournisseur (Google, Apple…) -----------------------
 // Le site étant statique, on utilise le flux OAuth « implicite » de Supabase :
@@ -258,16 +273,40 @@ export async function upsertProfile(patch) {
   return rows[0] || row
 }
 
-// Sauvegarde la progression (jsonb) sur la ligne profil de l'utilisateur connecté.
-export async function saveProgress(progress) {
+// Sauvegarde la progression (jsonb) sur la ligne profil de l'utilisateur connecté,
+// seulement si la copie du compte est toujours la version `attendu` (null :
+// copie jamais écrite par cette version de l'application). Renvoie { ok },
+// { conflit: progression du compte } si un autre appareil l'a changée entre-
+// temps (à fusionner avant de renvoyer), ou { raison } en cas d'échec.
+export async function envoyerProgression(progress, attendu, { keepalive = false } = {}) {
   const s = getSession()
-  if (!s?.token || !s.user?.id) return false
-  const res = await authFetch(`${SUPA_URL}/rest/v1/profiles?id=eq.${s.user.id}`, {
-    method: 'PATCH',
-    headers: { Prefer: 'return=minimal' },
-    body: JSON.stringify({ progress: progress || {}, updated_at: new Date().toISOString() }),
-  })
-  return res.ok
+  if (!s?.token || !s.user?.id) return { ok: false, raison: 'session' }
+  const body = JSON.stringify({ progress: progress || {}, updated_at: new Date().toISOString() })
+  const version = attendu == null ? 'is.null' : `eq.${attendu}`
+  let res
+  try {
+    res = await authFetch(`${SUPA_URL}/rest/v1/profiles?id=eq.${s.user.id}&progress->_sync->>rev=${version}&select=id`, {
+      method: 'PATCH',
+      // Envoi qui survit à la fermeture de la page (limité à 64 Ko par le navigateur).
+      keepalive: keepalive && body.length < 60000,
+      headers: { Prefer: 'return=representation' },
+      body,
+    })
+  } catch (e) {
+    return { ok: false, raison: /session/i.test(e?.message || '') ? 'session' : 'reseau' }
+  }
+  if (!res.ok) return { ok: false, raison: 'serveur', status: res.status }
+  const rows = await res.json().catch(() => [])
+  if (Array.isArray(rows) && rows.length) return { ok: true }
+  // Aucune ligne modifiée : la copie du compte a changé, ou le profil manque.
+  let profil
+  try { profil = await fetchProfile() } catch (e) {
+    return { ok: false, raison: /session/i.test(e?.message || '') ? 'session' : 'reseau' }
+  }
+  if (!profil) return { ok: false, raison: 'profil' }
+  const rev = progress?._sync?.rev
+  if (rev != null && profil.progress?._sync?.rev === rev) return { ok: true }
+  return { ok: false, conflit: profil.progress || {} }
 }
 
 // RGPD : supprime le compte et tout ce que l'élève a publié (profil et

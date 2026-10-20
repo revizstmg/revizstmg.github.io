@@ -44,13 +44,32 @@ Sur un PC partagé, le rôle est rechargé depuis le profil du compte connecté.
 La déconnexion efface l'identité, la classe et la progression locales après une
 sauvegarde ; une réponse tardive de l'ancien compte ne peut pas remplacer la session.
 
+La progression part sur le compte deux secondes après chaque changement, et
+tout de suite quand l'élève quitte l'application. La copie du compte n'est
+remplacée que si elle n'a pas changé depuis la dernière lecture ; sinon,
+l'application fusionne d'abord les deux (`src/progression.js`). Hors ligne ou en
+cas d'échec, un bandeau « Non sauvegardé » s'affiche et l'envoi reprend tout
+seul au retour du réseau. Si la sauvegarde échoue au moment de se déconnecter,
+l'élève est prévenu et choisit ; la session est ensuite fermée sur le serveur.
+
+Fusion entre appareils : les pièces, les gels, l'XP et les réponses sont comptés
+appareil par appareil. Une dépense n'est jamais remboursée, et deux gains faits
+en même temps sur deux appareils comptent tous les deux. Les favoris, paquets,
+fiches, questions du carnet d'erreurs, notes, la date du bac et le point de
+reprise sont datés : la dernière modification l'emporte, suppression comprise.
+Le reste ne fait que progresser (meilleur score, union des badges). Une copie
+écrite par une ancienne version de l'application suit les anciennes règles.
+
+Les dates (« aujourd'hui », série, défi du jour, révision espacée, rappels) sont
+celles du calendrier de l'appareil, et non le jour UTC (`src/data/srs.js`).
+
 La boutique propose 50 articles (ambiances, avatars, bannières, titres, gels),
 avec recherche, filtres, tri et inventaire. Les achats existants sont conservés.
 Les niveaux sont prolongés : niveau 20 à 20 000 XP, niveau 30 à 73 500 XP.
 Les cadeaux de progression se récupèrent une fois ; les objets exclusifs restent
-équipables depuis l’inventaire. Le portefeuille conserve la copie modifiée le plus récemment pour éviter de
-rembourser un achat lors d’une fusion avec une ancienne sauvegarde ; les écritures
-concurrentes ne constituent pas une comptabilité transactionnelle côté serveur.
+équipables depuis l’inventaire. Le portefeuille se fusionne appareil par appareil (voir plus haut) : un achat
+n’est remboursé ni par une ancienne sauvegarde ni par un gain fait ailleurs au
+même moment. Le calcul reste fait sur l’appareil, pas par le serveur.
 Les achats et réservations font partie de la
 progression synchronisée. Un titre équipé apparaît sur le profil, une bannière
 sur l’accueil.
@@ -138,6 +157,11 @@ npm run build && npm run test:parcours   # parcours dans un vrai navigateur (~3 
 - **Logique** (`tests/logique.test.js`) : niveaux, scores (chaque thème peut
   atteindre 100 %), fusion de la progression de l'appareil et du compte,
   répétition espacée, récompenses, badges, calculs chiffrés, filières.
+- **Sauvegarde** : `tests/fusion.test.js` (deux appareils : suppressions,
+  notes, pièces, gels, XP, anciennes copies), `tests/sauvegarde.test.js` (envoi
+  conditionné à la version du compte), `tests/dates.test.js` (quatre fuseaux,
+  passages à l'heure d'été et d'hiver) et `tests/parcours/sauvegarde.spec.js`
+  (note envoyée, hors ligne, autre appareil, déconnexion).
 - **Règle des hooks** (`tests/hooks.test.js`) : aucun composant n'appelle un hook
   React après un `if (…) return`, ce qui laisse un écran blanc quand la condition
   change (par exemple à la déconnexion).

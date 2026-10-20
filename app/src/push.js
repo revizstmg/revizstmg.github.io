@@ -39,11 +39,12 @@ export async function activerRappelsPush(heure) {
   return true
 }
 
-// Arrête les rappels sur cet appareil.
+// Arrête les rappels sur cet appareil. Sans service worker actif (aperçu,
+// navigateur restreint), on n'attend pas plus de 3 s.
 export async function desactiverRappelsPush() {
   if (!pushPossible()) return
   try {
-    const reg = await navigator.serviceWorker.ready
+    const reg = await Promise.race([navigator.serviceWorker.ready, new Promise((_, non) => setTimeout(() => non(new Error('sans service worker')), 3000))])
     const abonnement = await reg.pushManager.getSubscription()
     if (!abonnement) return
     if (isSignedIn()) await rpc('revizstmg_push_desabonner', { p_endpoint: abonnement.endpoint }).catch(() => {})

@@ -13,6 +13,9 @@ for (const route of PAGES_ELEVE) {
     await page.waitForTimeout(800)
     await page.getByRole('button', { name: 'Menu' }).first().click()
     await page.getByRole('button', { name: /Se déconnecter/ }).first().click()
+    // L'élève fictif n'a pas de session : sa progression ne peut pas partir, on
+    // le prévient (EtatSauvegarde.jsx) et il choisit de se déconnecter quand même.
+    await page.getByRole('alertdialog').getByRole('button', { name: 'Me déconnecter quand même' }).click()
     await page.waitForTimeout(1000)
     const texte = await page.locator('#root').innerText()
     expect(texte.length, 'la page n’est pas blanche').toBeGreaterThan(40)

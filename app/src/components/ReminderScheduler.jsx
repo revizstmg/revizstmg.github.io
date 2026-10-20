@@ -3,8 +3,7 @@ import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
 import { notify, registerPeriodicReminder } from '../notify.js'
 import { activerRappelsPush } from '../push.js'
-
-const todayKey = () => new Date().toISOString().slice(0, 10)
+import { todayKey } from '../data/srs.js'
 
 // Planifie le rappel « il est temps de réviser » :
 //  - tant que l'app est ouverte, un rappel est programmé à l'heure choisie ;

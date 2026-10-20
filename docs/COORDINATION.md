@@ -69,6 +69,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | INSPECTION-20261020-CLAUDE-01 | Claude | Demande du propriétaire : cinq agents inspectent tout le site (fonctionnalités, interface, parcours, technique, pédagogie) et livrent un PDF d'améliorations, mis en commun avec Codex ; plus la vérification des cours et exercices du 19 octobre. Fichiers : `docs/audits/2026-10-20/`, `docs/audits/README.md`, ce journal | Terminé | `claude/rapport-ameliorations` | Le propriétaire choisit les priorités ; chacun réserve ses chantiers ici |
 
+| PROG-20261019-CLAUDE-01 | Claude | Ne plus perdre la progression (tâches C03 à C06) : sauvegarde complète et versionnée, fusion entre appareils, déconnexion sans perte, dates du calendrier de l'élève. Fichiers : `app/src/progression.js` (nouveau), `store.jsx` (persistance, fusion, synchronisation, déconnexion, dates ; pas les fonctions de score), `data/srs.js`, `auth.js`, `push.js`, `EtatSauvegarde.jsx` (nouveau), `Layout.jsx` et `Customizer.jsx` (boutons de déconnexion), une ligne de date dans `Home.jsx` et `DailyChallenge.jsx`, tests, README, confidentialité | Terminé, fusionné le 20 octobre (demande du propriétaire) | `claude/progression-fiable`, [PR #14](https://github.com/revizstmg/revizstmg.github.io/pull/14) | Contrôler une vraie sauvegarde après publication |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -428,6 +430,59 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   Supabase pour les comptes. Aucune modification du site, du dépôt ni de la base
   pendant l'analyse. Captures et scripts non versionnés.
 - Branche `claude/rapport-ameliorations` : livraison documentaire uniquement.
+
+### PROG-20261019-CLAUDE-01 — Claude — 19 octobre 2026, nuit (heure de Paris)
+
+- Demande du propriétaire : « Fait tout » sur le chantier proposé, ne plus
+  jamais perdre la progression d'un élève (C03 à C06 de `docs/TACHES.md`, constats
+  F01 à F04 de l'audit).
+- C06, dates : « aujourd'hui », série, défi du jour, rappels et révision espacée
+  prennent le jour du calendrier de l'appareil, et non plus le jour UTC (veille
+  jusqu'à 1 h ou 2 h du matin à Paris). Calculs sur la date seule, sans effet des
+  changements d'heure. Tout passe par `data/srs.js`.
+- C03, sauvegarde : toute la progression part sur le compte deux secondes après
+  chaque changement, et tout de suite quand l'élève quitte l'application. Une
+  version (`_sync.rev`) protège la copie du compte : l'écriture n'aboutit que si
+  cette copie n'a pas changé depuis la dernière lecture ; sinon, on fusionne
+  d'abord, puis on renvoie. Hors ligne ou en cas d'échec, un bandeau « Non
+  sauvegardé » s'affiche (`EtatSauvegarde.jsx`), avec un nouvel essai automatique
+  (15 s à 5 min) et un envoi immédiat au retour du réseau.
+- C04, fusion (`progression.js`) : pièces, gels, XP et réponses comptés appareil
+  par appareil (un achat n'est plus remboursé, deux gains simultanés comptent
+  tous les deux). Favoris, paquets, fiches, carnet d'erreurs, notes, date du bac
+  et point de reprise sont datés élément par élément : la dernière modification
+  l'emporte, suppression comprise (trace oubliée après 120 jours). La récompense
+  de la semaine n'est plus perdue à la fusion. Une copie d'une ancienne version
+  de l'application suit les anciennes règles.
+- C05, déconnexion : la progression part d'abord. Si c'est impossible (hors
+  ligne, échec, session expirée), l'élève est prévenu et choisit : rester
+  connecté ou se déconnecter quand même. La session est ensuite fermée sur
+  Supabase (`/auth/v1/logout`), plus seulement sur l'appareil. Les rappels push
+  sont arrêtés dans la même étape (3 s au plus sans service worker).
+- Vérifications : `npm test` : 229 tests réussis (nouveaux : `dates.test.js`,
+  quatre fuseaux et changements d'heure ; `fusion.test.js`, scénarios à deux
+  appareils de l'audit ; `sauvegarde.test.js`, envoi conditionné à la version ;
+  `auth-session.test.js` complété). Compilation réussie. Parcours navigateur
+  complets sur la version compilée : 110 réussis, dont `sauvegarde.spec.js`
+  (note envoyée, hors ligne puis retour du réseau, autre appareil entre-temps,
+  déconnexion retenue puis forcée), répété trois fois sans échec. Aucune
+  requête vers la vraie base : réseau simulé dans tous les tests.
+- Limite : Supabase n'est pas joignable depuis la session de Claude. Le filtre
+  de version (`progress->_sync->>rev`) suit la syntaxe documentée de PostgREST
+  mais n'a pas été essayé contre la vraie base : à surveiller après publication
+  (bandeau « Non sauvegardé » chez un élève en ligne = filtre refusé).
+- Fichiers hors de mon couloir, changés au minimum : `Home.jsx` et
+  `DailyChallenge.jsx` (la date du jour vient de `srs.js`), phrase du portefeuille
+  dans la section boutique du README. Fichiers communs : `Layout.jsx` (bouton de
+  déconnexion, bandeau de sauvegarde), `tests/parcours/eleve.js` (date du jour).
+- Textes nouveaux, en français dans le JSX de `EtatSauvegarde.jsx` : traduits
+  par le service en ligne tant qu'ils ne figurent pas dans
+  `localisation/public.*.json`. Aucune clé ajoutée aux dictionnaires.
+- Supabase : aucune modification ; la progression reste dans `profiles`.
+- Branche partie de `claude/repartition-taches` (PR #13) : à fusionner après elle.
+- Fusionnée le 20 octobre 2026 à la demande du propriétaire.
+- Prochaine action : contrôle d'une
+  vraie sauvegarde après publication.
 
 ### Modèle à copier pour une nouvelle tâche
 

@@ -2,6 +2,7 @@ import { useEffect, useState, useCallback } from 'react'
 import { ProgressBar } from '../components/ui.jsx'
 import { fmtDuration } from '../components/StatsCharts.jsx'
 import { useT, useLang } from '../i18n.js'
+import { daysUntil } from '../data/srs.js'
 import { PARENT_READY, fetchChildByCode, getLinkedChild, setLinkedChild, normParentCode } from '../parent.js'
 
 // Temps relatif localisé (« il y a 5 min ») sans clé i18n dédiée.
@@ -83,7 +84,7 @@ export default function Parent() {
   }
   const unlink = () => { setLinkedChild(''); setLinked(''); setChild(null) }
 
-  const bacDays = child?.bac_date ? Math.ceil((new Date(child.bac_date + 'T00:00:00') - Date.now()) / 86400000) : null
+  const bacDays = child?.bac_date ? daysUntil(child.bac_date) : null
 
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-6">

@@ -58,7 +58,9 @@ export default function Privacy() {
         <p>RévizSTMG ne dépose <b>aucun cookie publicitaire ni cookie de mesure d'audience</b>. Ton navigateur
         garde sur ton appareil (stockage local) ce qui fait fonctionner l'application : ta progression, ta
         session de connexion, tes préférences (thème, langue, affichage), tes notes et tes paquets de flashcards.
-        Ta progression est en plus sauvegardée dans ton compte, pour la retrouver sur un autre appareil. En
+        Ta progression est en plus sauvegardée dans ton compte, pour la retrouver sur un autre appareil. Pour
+        fusionner sans perte ce que tu fais sur plusieurs appareils, chacun reçoit un numéro tiré au hasard,
+        enregistré avec ta progression : il ne dit rien de ton appareil. En
         <b> essai sans compte</b>, ta progression reste sur ton appareil jusqu’à la création d’un compte.
         Les appels techniques décrits ci-dessous (dont la traduction si tu l’utilises) restent possibles. Ce
         stockage est strictement nécessaire au service : il ne demande

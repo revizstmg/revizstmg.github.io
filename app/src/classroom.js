@@ -7,11 +7,10 @@ import { SUPA_READY } from './supabase.js'
 import { authFetch } from './auth.js'
 import { deviceId, normalizeCode, isoWeekKey } from './leaderboard.js'
 import { rest, enc, getJSON, send, rpc } from './reseau.js'
+import { todayKey, daysBetween } from './data/srs.js'
 
 export const CLASSROOM_READY = SUPA_READY
-export { deviceId, normalizeCode, isoWeekKey }
-
-export function todayKey() { return new Date().toISOString().slice(0, 10) }
+export { deviceId, normalizeCode, isoWeekKey, todayKey, daysBetween }
 
 // --- Instantané du membre (classement, podium, heatmap, groupes) -----------
 export async function upsertMember({ classCode, name, photo, role, xp, streak, coursesWeek, subjects }) {

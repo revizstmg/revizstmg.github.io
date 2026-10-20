@@ -9,6 +9,7 @@ import OutilsAccueil from '../components/OutilsAccueil.jsx'
 import { useT, usePublicText } from '../i18n.js'
 
 import { readPosition } from '../data/readingPosition.js'
+import { todayKey } from '../data/srs.js'
 import './Home.css'
 
 export default function Home() {
@@ -137,7 +138,7 @@ export default function Home() {
       {/* Série de connexion : récompenses XP pour les jours d'affilée */}
       {(() => {
         const streak = state.streak?.count || 0
-        const claimedToday = state.streak?.last === new Date().toISOString().slice(0, 10)
+        const claimedToday = state.streak?.last === todayKey()
         const nm = nextMilestone(streak)
         return (
           <section className="card card-lux flex flex-col gap-3 p-4 sm:flex-row sm:items-center">
@@ -163,7 +164,7 @@ export default function Home() {
 
       {/* Défi du jour */}
       {(() => {
-        const done = state.dailyChallenge?.last === new Date().toISOString().slice(0, 10)
+        const done = state.dailyChallenge?.last === todayKey()
         const dstreak = state.dailyChallenge?.streak || 0
         return (
           <Link to="/defi" className="card card-lux flex items-center gap-3 p-4 transition hover:-translate-y-0.5 hover:shadow-md">
