@@ -19,7 +19,7 @@ export default function ClassCodeForm({ onJoin, t, id }) {
       const problem = await classCodeProblem(cc)
       if (problem) { setError(t(problem)); return }
       if (isSignedIn()) await upsertProfile({ class_code: cc })
-      onJoin(cc)
+      await onJoin(cc)
     } catch {
       setError(t('classCodeCheckFailed'))
     } finally {

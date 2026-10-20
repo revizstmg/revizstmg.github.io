@@ -1,6 +1,9 @@
 // Libellés d'interface en italien, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  leaveCurrentClass: "Lascia questa classe",
+  joinAnotherClass: "Unisciti a un’altra classe",
+  classActionFailed: "Impossibile aggiornare le tue classi. Controlla la connessione e riprova.",
   formulaWorkshop: 'Laboratorio di formule',
   aiDiagnostic: "Diagnosi",
   aiCoverage: "Programma coperto",

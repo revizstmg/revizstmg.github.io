@@ -38,6 +38,16 @@ export async function fetchMembers(classCode) {
   return getJSON(rest(`class_member?select=${cols}&class_code=eq.${enc(normalizeCode(classCode))}&order=courses_week.desc,xp.desc&limit=300`))
 }
 
+// Les adhésions sont distinctes de la classe active du profil.
+export async function fetchStudentClasses(accountId) {
+  if (!accountId) return []
+  const rows = await getJSON(rest(`class_member?select=class_code&device_id=eq.${enc(accountId)}&role=eq.eleve&order=class_code.asc`))
+  return rows.map((row) => ({ code: row.class_code, label: row.class_code }))
+}
+export async function leaveStudentClass(classCode, accountId) {
+  await send('DELETE', `class_member?class_code=eq.${enc(normalizeCode(classCode))}&device_id=eq.${enc(accountId)}`)
+}
+
 // --- Groupes ---------------------------------------------------------------
 export async function fetchGroups(classCode) {
   return getJSON(rest(`class_group?select=id,name,color,emoji,created_at&class_code=eq.${enc(normalizeCode(classCode))}&order=created_at.asc&limit=50`))

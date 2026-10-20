@@ -1,5 +1,5 @@
 import { queueQuizResult, flushQuizResults, pendingQuizResults } from '../quizOutbox.js'
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
@@ -8,7 +8,7 @@ import Qcm from '../games/Qcm.jsx'
 import LiveSection from '../components/LiveMode.jsx'
 import {
   CLASSROOM_READY, deviceId, normalizeCode, todayKey, daysBetween, fetchActiveLive,
-  upsertMember, fetchMembers,
+  upsertMember, fetchMembers, fetchStudentClasses, leaveStudentClass,
   fetchGroups, createGroup, deleteGroup, setMemberGroup,
   fetchMeta, upsertMeta,
   fetchWall, postWall, answerWall, resolveWall, deleteWall, reactWall,
@@ -16,6 +16,7 @@ import {
   fetchDuels, createDuel, acceptDuel, deleteDuel, fetchLeague,
   createTeacherClass, fetchTeacherClasses, banStudent, isBanned,
 } from '../classroom.js'
+import { getSession, upsertProfile } from '../auth.js'
 import ClassCodeForm from '../components/ClassCodeForm.jsx'
 import { problemeMessage, noterMessage } from '../formulaires.js'
 
@@ -53,51 +54,128 @@ export default function Classe() {
   const [live, setLive] = useState(null)
   const [jumpLive, setJumpLive] = useState(0)
   const [creating, setCreating] = useState(false)
-
-  // Professeur : on (re)charge ses classes générées (source de vérité serveur).
+  const [loadingClasses, setLoadingClasses] = useState(role === 'prof')
+  const [studentClasses, setStudentClasses] = useState([])
+  const [joining, setJoining] = useState(false)
+  const [classError, setClassError] = useState('')
+  const [leaving, setLeaving] = useState(false)
+  const memberWrite = useRef(Promise.resolve())
+  const activeAccount = useRef(accountId)
+  activeAccount.current = accountId
   useEffect(() => {
+    setStudentClasses([]); setJoining(false); setTab('rank')
+  }, [accountId])
+  const sameAccount = () => activeAccount.current === accountId && getSession()?.user?.id === accountId
+  const join = (code) => {
+    setStudentClasses((list) => list.some((c) => c.code === code) ? list : [...list, { code, label: code }])
+    setClassCode(code); setJoining(false); setTab('rank')
+  }
+  const switchClass = (code) => { setClassCode(code); setTab('rank'); setJoining(false) }
+  const leave = async () => {
+    if (leaving) return
+    setLeaving(true); setClassError('')
+    try {
+      // Attendre l'instantané en cours pour ne pas réinscrire l'élève après le DELETE.
+      await memberWrite.current.catch(() => {})
+      if (!sameAccount()) return
+      await leaveStudentClass(classCode, accountId)
+      if (!sameAccount()) return
+      const list = studentClasses.filter((c) => c.code !== classCode)
+      setStudentClasses(list)
+      const next = list[0]?.code || ''
+      setClassCode(next)
+      await upsertProfile({ class_code: next || null })
+    } catch { if (sameAccount()) setClassError(t('classActionFailed')) }
+    finally { if (sameAccount()) setLeaving(false) }
+  }
+
+  // Le serveur conserve toutes les classes, le profil seulement le code actif.
+  useEffect(() => {
+    let alive = true
+    setClassError('')
     if (role !== 'prof' || !accountId) return
+    setLoadingClasses(true)
     fetchTeacherClasses(accountId).then((rows) => {
+      if (!alive) return
       const list = rows.map((c) => ({ code: c.code, label: c.label }))
       setTeacherClasses(list)
-      if (list.length && !list.some((c) => c.code === state.classCode)) setClassCode(list[0].code)
-    }).catch(() => {})
+      if (list.length && !list.some((c) => c.code === classCode)) setClassCode(list[0].code)
+    }).catch(() => { if (alive) setClassError(t('classActionFailed')) })
+      .finally(() => { if (alive) setLoadingClasses(false) })
+    return () => { alive = false }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [role, accountId])
+
+  // La restauration du profil peut arriver après la liste serveur et remettre
+  // un ancien code actif (ou aucun). Elle ne doit pas masquer les autres classes.
+  useEffect(() => {
+    if (role === 'prof' && !loadingClasses && teacherClasses.length && !teacherClasses.some((c) => c.code === classCode)) {
+      setClassCode(teacherClasses[0].code)
+    }
+  }, [role, loadingClasses, teacherClasses, classCode, setClassCode])
 
   // Élève : si le prof l'a exclu, on le retire de la classe.
   useEffect(() => {
     if (role === 'prof' || !classCode) return
-    isBanned(classCode).then((banned) => { if (banned) { setClassCode(''); alert(t('removedFromClass')) } }).catch(() => {})
+    let alive = true
+    isBanned(classCode).then((banned) => { if (alive && banned) { setStudentClasses((list) => list.filter((c) => c.code !== classCode)); setClassCode(''); alert(t('removedFromClass')) } }).catch(() => {})
+    return () => { alive = false }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [role, classCode])
 
   const createClass = async () => {
-    if (!accountId) return
-    setCreating(true)
+    if (!accountId || creating || loadingClasses) return
+    setCreating(true); setClassError('')
     try {
       const n = teacherClasses.length + 1
       const c = await createTeacherClass({ ownerId: accountId, ownerName: myName, label: `${t('classWord')} ${n}`, subject: '' })
+      if (!sameAccount()) return
       if (c?.code) { addTeacherClass({ code: c.code, label: c.label || `${t('classWord')} ${n}` }); setTab('rank') }
-    } catch { /* hors ligne */ } finally { setCreating(false) }
+    } catch { if (sameAccount()) setClassError(t('classActionFailed')) } finally { if (sameAccount()) setCreating(false) }
   }
 
   // Instantané du membre (pour classements, podium, heatmap, groupes).
   const subjectsKey = JSON.stringify(derived.bySubject)
   useEffect(() => {
-    if (!classCode) return
-    upsertMember({
+    if (!classCode || leaving) return
+    let alive = true
+    memberWrite.current = upsertMember({
       classCode, name: myName, photo, role,
       xp: state.xp, streak: state.streak.count, coursesWeek: derived.weeklyCourses,
       subjects: derived.bySubject,
-    }).catch(() => {})
-  }, [classCode, myName, photo, role, state.xp, state.streak.count, derived.weeklyCourses, subjectsKey])
+    })
+    memberWrite.current.then(async () => {
+      if (role !== 'prof' && accountId) {
+        const list = await fetchStudentClasses(accountId)
+        if (alive && list.length) setStudentClasses(list)
+      }
+    }).catch(() => { if (alive) setClassError(t('classActionFailed')) })
+    return () => { alive = false }
+  }, [classCode, accountId, leaving, myName, photo, role, state.xp, state.streak.count, derived.weeklyCourses, subjectsKey])
+
+  useEffect(() => {
+    if (role === 'prof' || !accountId || classCode || joining) return
+    let alive = true
+    fetchStudentClasses(accountId).then((list) => {
+      if (!alive) return
+      setStudentClasses(list)
+      if (list.length) setClassCode(list[0].code)
+    }).catch(() => { if (alive) setClassError(t('classActionFailed')) })
+    return () => { alive = false }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [role, accountId, classCode, joining, setClassCode])
 
   const loadMeta = useCallback(() => {
     if (!classCode) return
-    fetchMeta(classCode).then(setMeta).catch(() => {})
+    return fetchMeta(classCode)
   }, [classCode])
-  useEffect(() => { loadMeta() }, [loadMeta])
+  useEffect(() => {
+    let alive = true
+    setMeta(null); setLive(null)
+    loadMeta()?.then((data) => { if (alive) setMeta(data) }).catch(() => {})
+    return () => { alive = false }
+  }, [loadMeta])
+  const reloadMeta = () => loadMeta()?.then(setMeta).catch(() => {})
 
   // Sonde d'une session « Direct » en cours pour afficher une bannière.
   useEffect(() => {
@@ -109,10 +187,11 @@ export default function Classe() {
     return () => { alive = false; clearInterval(iv) }
   }, [classCode])
 
+  if (loadingClasses && role === 'prof') return <Loading />
   if (!classCode) {
-    return role === 'prof'
+    return <>{classError && <p role="alert" className="text-sm text-rose-600 dark:text-rose-400">{classError}</p>}{role === 'prof'
       ? <TeacherStart creating={creating} onCreate={createClass} t={t} />
-      : <JoinForm onJoin={setClassCode} t={t} />
+      : <JoinForm onJoin={join} t={t} />}</>
   }
 
   const blason = meta?.blason_name
@@ -138,11 +217,19 @@ export default function Classe() {
             {blason ? `${classCode} · ` : ''}{role === 'prof' ? `🧑‍🏫 ${t('roleTeacher')} · ${t('shareCodeHint')}` : `🎓 ${t('roleStudent')}`}
           </p>
         </div>
-        {role !== 'prof' && <button onClick={() => setClassCode('')} className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('leaveClass')}</button>}
+        {role !== 'prof' && <button disabled={leaving} onClick={() => setJoining(true)} className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('leaveClass')}</button>}
       </header>
 
+      {classError && <p role="alert" className="text-sm text-rose-600 dark:text-rose-400">{classError}</p>}
+      {role !== 'prof' && <div className="card space-y-3 p-4">
+        <p className="font-semibold">{t('yourClasses')}</p>
+        <div className="flex flex-wrap gap-2">{studentClasses.map((c) => <button key={c.code} disabled={leaving} aria-pressed={c.code === classCode} onClick={() => switchClass(c.code)} className="btn-ghost text-sm">{c.label}</button>)}</div>
+        <button disabled={leaving} className="btn-ghost w-full text-sm" onClick={() => setJoining((v) => !v)}>{t(joining ? 'cancel' : 'joinAnotherClass')}</button>
+        <button disabled={leaving} onClick={leave} className="btn-ghost w-full text-sm">{t('leaveCurrentClass')}</button>
+        {joining && <ClassCodeForm id="classe-code-ajout" onJoin={join} t={t} />}
+      </div>}
       {role === 'prof' && (
-        <TeacherBar classes={teacherClasses} active={classCode} onSwitch={setClassCode} onCreate={createClass} creating={creating} t={t} />
+        <TeacherBar classes={teacherClasses} active={classCode} onSwitch={switchClass} onCreate={createClass} creating={creating} t={t} />
       )}
 
       {meta?.announcement && (
@@ -171,12 +258,14 @@ export default function Classe() {
         ))}
       </div>
 
+      <div key={classCode}>
       {tab === 'rank' && <RankTab classCode={classCode} track={state.track} t={t} />}
       {tab === 'goal' && <GoalTab classCode={classCode} meta={meta} state={state} derived={derived} setCustomTheme={setCustomTheme} t={t} />}
       {tab === 'quiz' && <QuizTab classCode={classCode} role={role} name={myName} photo={photo} accountId={state.account?.id} jumpLive={jumpLive} t={t} />}
       {tab === 'wall' && <WallTab classCode={classCode} role={role} name={myName} track={state.track} t={t} />}
       {tab === 'members' && <MembersTab classCode={classCode} track={state.track} t={t} />}
-      {tab === 'prof' && role === 'prof' && <ProfTab classCode={classCode} name={myName} track={state.track} meta={meta} reloadMeta={loadMeta} t={t} />}
+      {tab === 'prof' && role === 'prof' && <ProfTab classCode={classCode} name={myName} track={state.track} meta={meta} reloadMeta={reloadMeta} t={t} />}
+      </div>
     </div>
   )
 }
@@ -211,7 +300,7 @@ function TeacherBar({ classes, active, onSwitch, onCreate, creating, t }) {
       {classes.length > 1 && (
         <div className="flex flex-wrap gap-1.5">
           {classes.map((c) => (
-            <button key={c.code} onClick={() => onSwitch(c.code)} className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${c.code === active ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={c.code === active ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>{c.label || c.code}</button>
+            <button key={c.code} onClick={() => onSwitch(c.code)} aria-pressed={c.code === active} className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${c.code === active ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={c.code === active ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>{c.label || c.code}</button>
           ))}
         </div>
       )}

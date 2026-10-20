@@ -1,6 +1,9 @@
 // Libellés d'interface en anglais, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  leaveCurrentClass: "Leave this class",
+  joinAnotherClass: "Join another class",
+  classActionFailed: "Could not update your classes. Check your connection and try again.",
   formulaWorkshop: 'Formula workshop',
   aiDiagnostic: "Diagnosis",
   aiCoverage: "Curriculum covered",
