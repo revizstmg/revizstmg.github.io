@@ -1,0 +1,12 @@
+{
+  "version": "ccd9d4b219",
+  "worker": "ccd9d4b219",
+  "entry": "assets/index-BBQMOcEu.js",
+  "checkedAt": "2026-10-20T15:14:10.051Z",
+  "pages": [
+    "accueil",
+    "moi?section=reglages",
+    "atelier-formules"
+  ],
+  "errors": []
+}

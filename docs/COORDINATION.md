@@ -78,7 +78,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 | CORRECTIONS-20261020-CLAUDE-01 | Claude | Demande du propriétaire : « fusionne les PR et règle les 10 gros problèmes » de l'inspection du 20 octobre. Lot 1 : hors ligne, progression sur l'appareil, inscription, 12 erreurs de contenu bloquantes, CI à l'heure de Paris. Lot 2 : maîtrise (`store.jsx`, `data/index.js`, `scripts/plugin-contenu.mjs`, `content/commun/nombre-chapitres.json`), séance du jour et barre du bas (`pages/Seance.jsx`, `pages/Cours.jsx`, `navTabs.js`, `Home.jsx`), exercice en plein écran, « Refaire mes erreurs » et « Pourquoi ? » (`games/GameHost.jsx`, `games/common.jsx`), carnet espacé (`store.jsx`, tous les modes), une fenêtre par visite (`fenetres.js`), accueil professeur et parent (`AccueilProf.jsx`, `Layout.jsx`), traductions (`localisation/public.*.json`). Contenu et générateur : couloir de Codex, à la demande du propriétaire | En cours | Lot 1 : [PR #27](https://github.com/revizstmg/revizstmg.github.io/pull/27), lot 2 : [PR #28](https://github.com/revizstmg/revizstmg.github.io/pull/28), fusionnées et publiées | Propriétaire : appliquer les règles d'accès (`supabase/a-valider/`) ; vrais sujets par épreuve après lecture du Bulletin du 17 septembre 2026 |
 | LISTE-20261020-CLAUDE-01 | Claude | Demande du propriétaire : points 1 à 10 de la liste du 20 octobre (le propriétaire indique que Codex traite les points 11 à 28). Indicateur de sauvegarde (`components/EtatSauvegarde.jsx`, `Layout.jsx`), menus et fenêtres au clavier (`components/clavier.js`, `Layout.jsx`, `Customizer.jsx`, `Dictionary.jsx`, `Accessibility.jsx`, `FocusFullscreen.jsx`, `InstallApp.jsx`, `games/GameHost.jsx`, `pages/Chapter.jsx`), barre de l'atelier (`pages/FormulaWorkshop.jsx`), règles d'accès de la base | En cours | `claude/liste-1-10` | Règles d'accès : à appliquer avec le propriétaire (l'outil Supabase attend une confirmation à l'écran) |
 
-| POINTS10-28-20261020-CODEX-01 | Codex | Points 10–28 : atelier (10/23), classe/réseau (11/18), calendrier (12/22), UI (14/16/20/21/24/25), PWA (17), dossiers préparatoires (13/15/19/26/27/28) | En cours | `feat/points-10-28` / [PR #30](https://github.com/revizstmg/revizstmg.github.io/pull/30) | Point 10 pris par Codex pour éviter le doublon ; Claude garde 1–9. Base de production non modifiée sans accord explicite. |
+| POINTS10-28-20261020-CODEX-01 | Codex | Points 10–28 : atelier (10/23), classe/réseau (11/18), calendrier (12/22), UI (14/16/20/21/24/25), PWA (17), dossiers préparatoires (13/15/19/26/27/28) | Terminé (lot livré, suites ouvertes) | `feat/points-10-28` / [PR #30](https://github.com/revizstmg/revizstmg.github.io/pull/30) | Point 10 intégré avec #31 : une seule barre ; suites partielles tracées dans le bilan. Base de production non modifiée sans accord explicite. |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -708,3 +708,28 @@ Prochaine action :
   contrôles de traduction. Point 10 commun aux deux lots : une seule barre de
   lancement conservée avec la reprise et le bilan par formule du point 23.
   La recette finale porte sur l’ensemble des deux lots, pas sur #30 isolément.
+
+### POINTS10-28-20261020-CODEX-01 — livraison et recette intégrée
+
+- PR #30 fusionnée (`5f1e386`), code `9dcf0c6`, après intégration de #31.
+  Une seule barre d’atelier ; améliorations clavier et sauvegarde conservées.
+- Validation finale : 286 tests unitaires, construction, 143 parcours navigateur
+  ([CI](https://github.com/revizstmg/revizstmg.github.io/actions/runs/39444696450)).
+- PWA : contrôle de tous les fichiers, représentations `Vary: Origin` comprises,
+  et correspondance avec la version affichée. Un ancien cache complet n’est pas
+  présenté comme une confirmation du nouveau téléchargement.
+- [Bilan point par point](audits/2026-10-20/POINTS-10-28.md),
+  [mesures](audits/2026-10-20/PERFORMANCE.md), contrats serveur et grille éditoriale
+  disponibles dans le même dossier. Le poids initial baisse de 2,8 % après
+  intégration de #31 ; les deux mesures de temps ne valent pas garantie téléphone.
+- Ne pas déclarer tous les points 10–28 terminés : 13/14/15/18/19/25/26/27 gardent
+  les limites ou suites indiquées. Aucun gain commercial activé, aucune migration
+  appliquée, aucune relecture humaine des cours inventée.
+- Publication réussie : [workflow main](https://github.com/revizstmg/revizstmg.github.io/actions/runs/39445531708),
+  143 parcours réussis à nouveau ; fichiers compilés déposés par le bot dans
+  `38278fe`, GitHub Pages construit. Contrôle public du 20/10 à 15:14 UTC :
+  accueil, réglages, atelier (un seul bouton et indices), aucune exception JS ;
+  versions HTML/worker identiques `ccd9d4b219`. Les requêtes hors du domaine du
+  site ont été bloquées ; aucun compte réel utilisé.
+- Passation : lot livré, suites explicites dans le bilan. Aucune action annoncée
+  au nom de Claude ; son lot #31 est conservé et la recette a porté sur l’ensemble.
