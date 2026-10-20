@@ -1,5 +1,6 @@
+import OfflineStatus from '../components/OfflineStatus.jsx'
 import { useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link, Navigate, useSearchParams } from 'react-router-dom'
 import { useStore, subjectScore, effacerDonneesAppareil } from '../store.jsx'
 import { trackLabel, trackIcon, subjectsForTrack } from '../data/tracks.js'
 import { badgeById } from '../badges.js'
@@ -33,6 +34,8 @@ function telechargerMesDonnees(state) {
 // badges, favoris et accès rapide. Distincte de la personnalisation (apparence).
 export default function Profile() {
   const { state, derived, setBacDate, setParentShare } = useStore()
+  const [params, setParams] = useSearchParams()
+  const settings = params.get('section') === 'reglages'
   const t = useT()
   const tr = usePublicText()
   const [busy, setBusy] = useState(false)
@@ -121,6 +124,8 @@ export default function Profile() {
         </div>
       </section>
 
+      <nav aria-label="Mon espace" className="flex gap-2"><button aria-pressed={!settings} className={!settings ? "btn-primary" : "btn-ghost"} onClick={() => setParams({})}>Mes progrès</button><button aria-pressed={settings} className={settings ? "btn-primary" : "btn-ghost"} onClick={() => setParams({section:'reglages'})}>Réglages</button></nav>
+      <div hidden={settings} className="space-y-5">
       {/* Statistiques */}
       <section>
         <h2 className="mb-3 px-1 font-display text-xl font-medium">{t('myStats')}</h2>
@@ -183,35 +188,6 @@ export default function Profile() {
         )}
       </section>
 
-      {/* Suivi parental : partage volontaire, puis code à donner à ses parents
-          (avec un compte : la base n'accepte la publication que d'un compte connecté). */}
-      {PARENT_READY && estEnEssai(state) && (
-        <section className="card p-5">
-          <h2 className="font-display text-xl font-medium">👨‍👩‍👧 {t('studentParentCard')}</h2>
-          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Pour que tes parents suivent ta progression, crée d’abord ton compte : ta progression d’essai y sera gardée.</p>
-          <button type="button" onClick={creerMonCompte} className="btn-primary mt-3 text-sm">Créer mon compte</button>
-        </section>
-      )}
-      {PARENT_READY && !estEnEssai(state) && (
-        <section className="card p-5">
-          <div className="flex items-start gap-3">
-            <div className="min-w-0 flex-1">
-              <h2 className="font-display text-xl font-medium">👨‍👩‍👧 {t('studentParentCard')}</h2>
-              <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t(state.parentShare ? 'studentParentHelp' : 'parentShareOff')}</p>
-            </div>
-            <button onClick={() => setParentShare(!state.parentShare)} role="switch" aria-checked={!!state.parentShare} aria-label={t('parentShareLabel')} className="relative mt-1 h-6 w-11 shrink-0 rounded-full transition" style={{ backgroundColor: state.parentShare ? 'var(--c-accent)' : 'color-mix(in srgb, currentColor 20%, transparent)' }}>
-              <span className="absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-all" style={{ left: state.parentShare ? '1.4rem' : '0.125rem' }} />
-            </button>
-          </div>
-          {state.parentShare && (
-            <div className="mt-3 flex items-center gap-3">
-              <span className="rounded-xl bg-slate-100 px-4 py-2 font-mono text-xl font-bold tracking-widest dark:bg-slate-800">{parentCode()}</span>
-              <button onClick={copyParentCode} className="btn-ghost text-sm">{codeCopied ? `✓ ${t('copied')}` : t('copyCode')}</button>
-            </div>
-          )}
-        </section>
-      )}
-
       {/* Raccourcis */}
       <section className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         <Link to="/accueil" className="card card-lux flex items-center gap-3 p-4 transition hover:-translate-y-0.5 hover:shadow-md">
@@ -243,6 +219,37 @@ export default function Profile() {
         </button>
       </section>
 
+
+</div><div hidden={!settings} className="space-y-5">
+      {/* Suivi parental : partage volontaire, puis code à donner à ses parents
+          (avec un compte : la base n'accepte la publication que d'un compte connecté). */}
+      {PARENT_READY && estEnEssai(state) && (
+        <section className="card p-5">
+          <h2 className="font-display text-xl font-medium">👨‍👩‍👧 {t('studentParentCard')}</h2>
+          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Pour que tes parents suivent ta progression, crée d’abord ton compte : ta progression d’essai y sera gardée.</p>
+          <button type="button" onClick={creerMonCompte} className="btn-primary mt-3 text-sm">Créer mon compte</button>
+        </section>
+      )}
+      {PARENT_READY && !estEnEssai(state) && (
+        <section className="card p-5">
+          <div className="flex items-start gap-3">
+            <div className="min-w-0 flex-1">
+              <h2 className="font-display text-xl font-medium">👨‍👩‍👧 {t('studentParentCard')}</h2>
+              <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t(state.parentShare ? 'studentParentHelp' : 'parentShareOff')}</p>
+            </div>
+            <button onClick={() => setParentShare(!state.parentShare)} role="switch" aria-checked={!!state.parentShare} aria-label={t('parentShareLabel')} className="relative mt-1 h-6 w-11 shrink-0 rounded-full transition" style={{ backgroundColor: state.parentShare ? 'var(--c-accent)' : 'color-mix(in srgb, currentColor 20%, transparent)' }}>
+              <span className="absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-all" style={{ left: state.parentShare ? '1.4rem' : '0.125rem' }} />
+            </button>
+          </div>
+          {state.parentShare && (
+            <div className="mt-3 flex items-center gap-3">
+              <span className="rounded-xl bg-slate-100 px-4 py-2 font-mono text-xl font-bold tracking-widest dark:bg-slate-800">{parentCode() || tr('Code indisponible : vérifie le stockage de ton navigateur.')}</span>
+              <button disabled={!parentCode()} onClick={copyParentCode} className="btn-ghost text-sm">{codeCopied ? `✓ ${t('copied')}` : t('copyCode')}</button>
+            </div>
+          )}
+        </section>
+      )}
+
       {/* Préférences & accessibilité */}
       <section>
         <h2 className="mb-3 px-1 font-display text-xl font-medium">⚙️ {t('preferences')}</h2>
@@ -268,7 +275,7 @@ export default function Profile() {
       {/* Installer l'application (PWA) */}
       <section>
         <h2 className="mb-3 px-1 font-display text-xl font-medium">{t('installApp')}</h2>
-        <InstallCard />
+        <OfflineStatus /><InstallCard />
       </section>
 
       {/* Rappels de révision */}
@@ -291,6 +298,7 @@ export default function Profile() {
           </button>
         </div>
       </section>
+      </div>
     </div>
   )
 }

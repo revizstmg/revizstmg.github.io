@@ -40,6 +40,9 @@ test('hors ligne : après une première visite, une matière jamais ouverte s’
     return urls.some((u) => u.includes('/assets/contenu-philosophie-'))
   }, null, { timeout: 30000 })
 
+  await page.goto('./#/moi?section=reglages')
+  await expect(page.getByText('✓ Les cours et exercices de cette version sont téléchargés sur cet appareil.', {exact:false})).toBeVisible({timeout:30000})
+
   await context.setOffline(true)
   await page.reload()
   await attendreAccueil(page)
@@ -48,4 +51,24 @@ test('hors ligne : après une première visite, une matière jamais ouverte s’
   expect((await page.locator('main').innerText()).length).toBeGreaterThan(300)
   await context.setOffline(false)
   expect(erreurs).toEqual([])
+})
+
+test('un ancien cache ne confirme pas la préparation de la version affichée',async({page})=>{
+ await preparer(page)
+ await page.addInitScript(()=>{
+  const original=ServiceWorker.prototype.postMessage
+  ServiceWorker.prototype.postMessage=function(data,ports){
+   if(data?.type==='OFFLINE_STATUS'){
+    window.__oldCacheReplies=(window.__oldCacheReplies||0)+1
+    ports[0].postMessage({type:'OFFLINE_STATUS',ready:true,version:'ancienne-version'})
+    return
+   }
+   return original.apply(this,arguments)
+  }
+ })
+ await page.goto('./#/moi?section=reglages')
+ await expect.poll(()=>page.evaluate(()=>window.__oldCacheReplies||0)).toBeGreaterThan(0)
+ const status=page.locator('main section[role="status"]')
+ await expect(status).toContainText('Le téléchargement complet des cours n’est pas encore confirmé.')
+ await expect(status).not.toContainText('✓ Les cours et exercices')
 })

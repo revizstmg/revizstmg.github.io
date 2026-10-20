@@ -1,3 +1,4 @@
+import QuizOutboxStatus from './QuizOutboxStatus.jsx'
 import { TranslationStatus } from '../localisation/PublicText.jsx'
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
@@ -102,7 +103,7 @@ export default function Layout({ children }) {
               title={t('back')}
               className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-lg text-slate-500 transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800"
             >
-              ✕
+              <span aria-hidden className="rtl:rotate-180">←</span>
             </button>
           )}
           <Link to={parentSeul ? '/parent' : '/accueil'} className="mr-auto flex items-center gap-2 font-display text-2xl font-semibold tracking-tight">
@@ -266,7 +267,7 @@ export default function Layout({ children }) {
       </header>
 
       <BandeauEssai />
-      <EtatSauvegarde />
+      <EtatSauvegarde /><QuizOutboxStatus />
       <TranslationStatus />
       <main className="mx-auto max-w-4xl px-4 pb-16 pt-4">
         <div key={pathname} className="page-enter">{children}</div>
@@ -552,7 +553,7 @@ function SearchOverlay({ onClose }) {
         </div>
         <ul className="mt-2 max-h-72 overflow-y-auto">
           {q && results.length === 0 && (
-            <li className="px-3 py-6 text-center text-sm text-slate-400">— « {q} » —</li>
+            <li className="px-3 py-6 text-center text-sm text-slate-600 dark:text-slate-300"><p>Aucun résultat pour « {q} ».</p><p className="mt-2">Essaie un mot plus court ou parcours les matières.</p><Link to="/cours" onClick={onClose} className="mt-3 inline-block font-semibold underline">Voir les cours</Link></li>
           )}
           {results.map((r) => (
             <li key={r.type + r.id}>

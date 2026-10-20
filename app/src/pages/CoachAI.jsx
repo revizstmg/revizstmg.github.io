@@ -75,7 +75,7 @@ function CoachAIPage() {
         <p className="kicker">🤖 {t('coachAI')}</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('coachAI')}</h1>
         <span className="mx-auto mt-3 block h-px w-24 rounded-full" style={{ background: 'linear-gradient(90deg,transparent,#c8a24e,transparent)' }} />
-        <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">{t('coachAISub')}</p>
+        <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">{t('coachAISub')}</p><details className="mt-3 text-sm text-slate-600 dark:text-slate-300"><summary className="cursor-pointer font-semibold">Comment sont choisis mes exercices ?</summary><p className="mt-2">Cet outil utilise tes résultats enregistrés sur le site pour repérer les thèmes moins maîtrisés et ceux à revoir. Les recommandations sont calculées automatiquement ; elles ne remplacent pas les conseils de ton professeur.</p></details>
       </header>
 
       {!a.hasData ? (

@@ -24,7 +24,7 @@ test('suivi parent volontaire, export et suppression complète', async ({ page }
   })
   await page.goto('./')
   await attendreAccueil(page)
-  await page.goto('./#/moi')
+  await page.goto('./#/moi?section=reglages')
   await page.waitForTimeout(4000)
   expect(appels, 'rien n’est publié sans accord').not.toContain('POST child_stats')
   expect(appels, 'ce qui avait été publié est effacé').toContain('DELETE child_stats')

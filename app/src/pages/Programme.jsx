@@ -4,7 +4,7 @@ import { useStore } from '../store.jsx'
 import { dailyPlan, programmeThemes } from '../data/study.js'
 import { daysUntil, defaultBacDate } from '../data/srs.js'
 import { CALENDRIER, epreuvesAVenir, premiereEpreuve } from '../data/epreuves.js'
-import { useT } from '../i18n.js'
+import { useT, usePublicText } from '../i18n.js'
 
 const dateCourte = (d, lang = 'fr') => new Date(d + 'T00:00:00').toLocaleDateString(lang, { weekday: 'short', day: 'numeric', month: 'long' })
 
@@ -19,7 +19,7 @@ export default function Programme() {
 
 function ProgrammePage() {
   const { state, derived, setBacDate } = useStore()
-  const t = useT()
+  const t = useT(), tr = usePublicText()
   const navigate = useNavigate()
 
   const [editing, setEditing] = useState(!state.bacDate)
@@ -50,7 +50,7 @@ function ProgrammePage() {
         {state.bacDate && dLeft != null && !editing ? (
           <>
             <p className="kicker" style={{ color: 'color-mix(in srgb, var(--c-accent) 62%, #fff)' }}>{t('examCountdown')}</p>
-            <p className="my-1 font-display text-6xl font-extrabold" style={{ color: 'color-mix(in srgb, var(--c-accent) 55%, #fff)' }}>{dLeft > 0 ? `J-${dLeft}` : t('itsToday')}</p>
+            <p className="my-1 font-display text-6xl font-extrabold" style={{ color: 'color-mix(in srgb, var(--c-accent) 55%, #fff)' }}>{dLeft > 0 ? `J-${dLeft}` : dLeft === 0 ? t('itsToday') : tr('Épreuve passée')}</p>
             <p className="text-xs text-[#d8cca8]">{new Date(state.bacDate + 'T00:00:00').toLocaleDateString(state.lang || 'fr', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</p>
             <button onClick={() => { setDraft(state.bacDate); setEditing(true) }} className="mt-3 text-xs font-semibold underline" style={{ color: 'color-mix(in srgb, var(--c-accent) 60%, #fff)' }}>{t('editDate')}</button>
           </>

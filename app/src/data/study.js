@@ -153,6 +153,20 @@ export function dailyPlan(state, track, today = todayKey(), n = 4) {
   const eligible = new Set(programmeThemes(track).map((t) => t.themeId))
   const queue = reviewQueue(state, track, today).filter((t) => eligible.has(t.themeId))
   const srs = state.srs || {}
-  const chosen = queue.slice(0, n)
+  // À urgence et maîtrise égales, alterner les matières sans retarder une échéance.
+  const balanced = []
+  for (let start = 0; start < queue.length;) {
+    let end = start + 1
+    const a = queue[start]
+    while (end < queue.length && queue[end].prio === a.prio && queue[end].score === a.score && queue[end].due === a.due) end++
+    const groups = new Map()
+    for (const item of queue.slice(start, end)) {
+      if (!groups.has(item.subjectId)) groups.set(item.subjectId, [])
+      groups.get(item.subjectId).push(item)
+    }
+    while ([...groups.values()].some(items => items.length)) for (const items of groups.values()) if (items.length) balanced.push(items.shift())
+    start = end
+  }
+  const chosen = balanced.slice(0, n)
   return chosen.map((t) => ({ ...t, done: srs[t.themeId]?.last === today }))
 }

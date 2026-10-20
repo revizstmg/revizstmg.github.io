@@ -19,13 +19,13 @@ export default function Methodo() {
         const isOpen = open === m.id
         return (
           <section key={m.id} className="card overflow-hidden p-0">
-            <button onClick={() => setOpen(isOpen ? '' : m.id)} className="flex w-full items-center gap-3 p-4 text-left">
+            <button aria-expanded={isOpen} aria-controls={`methodo-${m.id}`} onClick={() => setOpen(isOpen ? '' : m.id)} className="flex w-full items-center gap-3 p-4 text-left">
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: m.color + '22' }}>{m.icon}</span>
               <span className="min-w-0 flex-1 font-display text-lg font-semibold">{m.title}</span>
               <span className="shrink-0 text-slate-400 transition" style={{ transform: isOpen ? 'rotate(90deg)' : 'none' }} aria-hidden>›</span>
             </button>
             {isOpen && (
-              <div className="space-y-3 px-4 pb-5">
+              <div id={`methodo-${m.id}`} className="space-y-3 px-4 pb-5">
                 <p className="text-sm text-slate-600 dark:text-slate-300">{m.intro}</p>
                 <ol className="space-y-2">
                   {m.steps.map((s, i) => (

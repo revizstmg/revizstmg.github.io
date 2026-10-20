@@ -3,6 +3,7 @@
 // les règles d'accès de la base (RLS) reposent sur l'identité du compte
 // (supabase/README.md). Sans session, seule la clé publique part, et la base
 // refuse l'accès aux tables sociales.
+import { withNetworkTimeout } from './networkTimeout.js'
 import { SUPA_URL } from './supabase.js'
 import { authFetch } from './auth.js'
 
@@ -19,24 +20,25 @@ async function erreur(res, quoi) {
 }
 
 export async function getJSON(url) {
-  const res = await authFetch(url)
+  const res = await withNetworkTimeout(signal => authFetch(url,{signal}))
   if (!res.ok) throw await erreur(res, 'GET')
   return res.json()
 }
 
 export async function send(method, path, body, prefer) {
-  const res = await authFetch(rest(path), {
+  const res = await withNetworkTimeout(signal => authFetch(rest(path), {
+    signal,
     method,
     headers: prefer ? { Prefer: prefer } : {},
     body: body ? JSON.stringify(body) : undefined,
-  })
+  }))
   if (!res.ok) throw await erreur(res, method)
   return res
 }
 
 // Fonction de la base (/rest/v1/rpc/<nom>).
 export async function rpc(nom, args = {}) {
-  const res = await authFetch(rest(`rpc/${nom}`), { method: 'POST', body: JSON.stringify(args) })
+  const res = await withNetworkTimeout(signal => authFetch(rest(`rpc/${nom}`), { signal, method: 'POST', body: JSON.stringify(args) }))
   if (!res.ok) throw await erreur(res, nom)
   const texte = await res.text()
   return texte ? JSON.parse(texte) : null

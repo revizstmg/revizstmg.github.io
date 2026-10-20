@@ -15,14 +15,14 @@ describe('sujet au format de l’épreuve', () => {
     for (const p of s.parties) expect(p.game.questions.length).toBeGreaterThan(0)
     expect(s.duree).toBe(4 * 3600)
   })
-  it('Management, sciences de gestion et numérique : un cas de management, puis un de la spécialité', () => {
+  it('Management, sciences de gestion et numérique : uniquement des dossiers de l’enseignement commun', () => {
     for (const spec of ['gestion-finance', 'mercatique', 'rh-communication']) {
       const s = sujetFixe('msgn', tle(spec))
-      expect(s.parties.map((p) => C.ALL_CHAPTERS[p.themeId].subjectId), spec).toEqual(['management', spec])
+      expect(s.parties.map((p) => C.ALL_CHAPTERS[p.themeId].subjectId), spec).toEqual(['management'])
       for (const p of s.parties) expect(p.game.cases.length, spec).toBeGreaterThan(0)
     }
   })
-  it('sans cas pratique dans la spécialité, le sujet garde la partie management', () => {
+  it('le même dossier commun est disponible quelle que soit la spécialité', () => {
     const s = sujetFixe('msgn', tle('sig'))
     expect(s.parties.map((p) => C.ALL_CHAPTERS[p.themeId].subjectId)).toEqual(['management'])
   })

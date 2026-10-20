@@ -25,5 +25,12 @@ test('une urgence en SDGN ne prend pas la place des objectifs bac de Première',
 
 test('le programme de Terminale conserve la priorité de toutes ses matières', () => {
   expect(programmeThemes(terminale)).toEqual(realThemes(terminale))
-  expect(dailyPlan({}, terminale, today).map((t) => t.themeId)).toEqual(reviewQueue({}, terminale, today).slice(0, 4).map((t) => t.themeId))
+  expect(new Set(dailyPlan({}, terminale, today).map((t) => t.subjectId)).size).toBe(4)
+})
+
+test('à priorité égale les objectifs de Première alternent les deux matières',()=>{
+ const plan=dailyPlan({},premiere,today)
+ expect(plan[0].subjectId).not.toBe(plan[1].subjectId)
+ expect(plan.filter(t=>t.subjectId==='p1-maths')).toHaveLength(2)
+ expect(plan.filter(t=>t.subjectId==='p1-francais')).toHaveLength(2)
 })

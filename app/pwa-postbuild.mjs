@@ -25,7 +25,7 @@ for (const f of readdirSync(SRC)) {
 // Les polices existent en woff2 et en woff : tous les navigateurs actuels lisent le
 // woff2, on ne met donc pas les woff en cache (ils restent servis si besoin).
 const assets = readdirSync(join(OUT, 'assets')).filter((f) => !f.endsWith('.woff')).sort().map((f) => `./assets/${f}`)
-const version = createHash('sha256').update(assets.join('\n')).update(readFileSync(join(OUT, 'index.html'))).digest('hex').slice(0, 10)
+const version = createHash('sha256').update(assets.join('\n')).update(readFileSync(join(OUT, 'index.html'))).update(readFileSync(join(OUT, 'sw.js'))).digest('hex').slice(0, 10)
 const swPath = join(OUT, 'sw.js')
 let sw = readFileSync(swPath, 'utf8')
 if (!sw.includes('__VERSION__') || !sw.includes('/* __PRECACHE__ */ []')) throw new Error('sw.js : repères __VERSION__ / __PRECACHE__ introuvables')
@@ -58,8 +58,11 @@ if (!html.includes(MARK)) {
     </script>
   `
   html = html.replace('</body>', `${reg}</body>`)
-  writeFileSync(indexPath, html)
 }
+// Le statut hors ligne doit correspondre à l’app affichée, pas à un ancien worker.
+html = html.replace(/<meta name="revizstmg-version"[^>]*>\s*/g, '')
+html = html.replace('</head>', `<meta name="revizstmg-version" content="${version}" />\n  </head>`)
+writeFileSync(indexPath, html)
 
 console.log('[pwa-postbuild] fichiers copiés :', copied.join(', '))
 console.log(`[pwa-postbuild] service worker : version ${version}, ${assets.length} fichiers à mettre en cache`)

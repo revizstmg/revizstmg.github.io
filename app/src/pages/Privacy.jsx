@@ -1,3 +1,4 @@
+import LegalContents from '../components/LegalContents.jsx'
 import { Link } from 'react-router-dom'
 import { MESURE_ACTIVE } from '../mesure.js'
 
@@ -12,7 +13,7 @@ export default function Privacy() {
         <h1 className="font-display text-3xl font-medium leading-tight">Confidentialité &amp; protection des données</h1>
         <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">Dernière mise à jour : octobre 2026 · Conforme au RGPD (règlement UE 2016/679) et à la loi « Informatique et Libertés »</p>
       </header>
-      <hr className="rule-gold" />
+      <hr className="rule-gold" /><LegalContents />
 
       <p className="text-sm text-slate-600 dark:text-slate-300">
         RévizSTMG est un outil de révision gamifié pour les élèves de STMG. Nous appliquons le principe de

@@ -1,3 +1,4 @@
+import LegalContents from '../components/LegalContents.jsx'
 import { Link } from 'react-router-dom'
 
 // Conditions générales d'utilisation et mentions légales. Rédigées en français,
@@ -13,7 +14,7 @@ export default function Cgu() {
         <h1 className="font-display text-3xl font-medium leading-tight">Conditions d’utilisation &amp; mentions légales</h1>
         <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">Dernière mise à jour : octobre 2026</p>
       </header>
-      <hr className="rule-gold" />
+      <hr className="rule-gold" /><LegalContents />
 
       <Section title="Mentions légales">
         <p><b>Éditeurs</b> : Matys DONAT et Gabriel MERLIN, élèves, à titre non professionnel et non commercial.

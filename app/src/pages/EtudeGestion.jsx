@@ -1,3 +1,4 @@
+import LevelToolNotice from '../components/LevelToolNotice.jsx'
 import { TextePublic } from '../localisation/PublicText.jsx'
 import { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
@@ -60,6 +61,7 @@ function EtudeGestionPage() {
 
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">
+      <LevelToolNotice level="premiere-stmg" />
       <header className="text-center">
         <p className="kicker">🔎 {t('egTitle')}</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('egTitle')}</h1>

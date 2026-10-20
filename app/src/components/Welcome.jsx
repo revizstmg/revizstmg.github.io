@@ -476,7 +476,7 @@ export default function Welcome() {
                 </div>
               </>
             )}
-            <button type="button" className="welcome-cta" disabled={!essaiOk} onClick={commencerEssai}>Commencer l’essai</button>
+            <button type="button" className="welcome-cta" disabled={!essaiOk} onClick={commencerEssai}>Commencer mes révisions sans compte</button>
             <button type="button" className="welcome-skip" onClick={() => setEssai(false)}>{t('backToLogin')}</button>
           </>
         ) : recoverStep ? (
