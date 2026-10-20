@@ -856,4 +856,9 @@ Prochaine action :
   Nouvelle URL et format distinct pour tester le refus de l’entrée XML existante.
 - PR #41 de Claude conservée : aucun changement de ses générateurs ni des pages
   de cours. Le sitemap XML reste déclaré ; le texte liste l’accueil existant.
-- Branche `fix/sitemap-texte`. Mise en place et vérification en cours.
+- Branche `fix/sitemap-texte`, PR #44. Ajout réalisé et documenté dans
+  audits/2026-10-20/DIAGNOSTIC-SITEMAP.md. Compilation et 293 tests locaux
+  réussis ; contenu texte exact, équivalence avec les URL XML et déclarations
+  robots contrôlés. Publication par la chaîne main avant contrôle HTTP public.
+- Le contournement n’est pas annoncé comme un succès Search Console avant que
+  le propriétaire ait envoyé sitemap.txt et vérifié son état dans Google.
