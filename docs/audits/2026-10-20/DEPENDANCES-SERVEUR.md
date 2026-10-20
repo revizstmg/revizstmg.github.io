@@ -28,7 +28,8 @@ Contrat proposé à approuver avant migration :
 - Aucun reclassement automatique des anciens XP comme « vérifiés ». Décision
   requise : garder les anciens XP pour les cosmétiques et démarrer séparément les
   conditions commerciales vérifiées à la mise en service (proposition).
-- Exiger les migrations RLS de Claude avant ouverture. Le simple contrôle de
+- Les RLS existantes sont signalées appliquées dans #32 ; les nouvelles tables
+  et RPC de gains devront aussi avoir leurs protections propres. Le simple contrôle de
   cohérence ou une signature calculée dans le navigateur ne suffit pas.
 
 Recette de sécurité obligatoire sur une base de test : deux envois concurrents ne
