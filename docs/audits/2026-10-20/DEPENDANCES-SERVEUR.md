@@ -1,8 +1,15 @@
 # Points 15 et 19 — décisions et contrats avant activation
 
-Proposition Codex, 20 octobre 2026. Aucun changement appliqué à Supabase.
-Le projet est partagé avec NAH : ne toucher à aucune table de NAH.
-Coordonner avec les migrations de droits d'accès de Claude (point 8).
+Proposition Codex, 20 octobre 2026. Aucun changement Supabase supplémentaire
+appliqué par ce lot. Le projet est partagé avec NAH : ne toucher à aucune table
+de NAH.
+
+Mise à jour : la [PR #32](https://github.com/revizstmg/revizstmg.github.io/pull/32)
+rapporte que le propriétaire a appliqué les règles d’accès du point 8, puis que
+Claude a vérifié la base en lecture seule (64 règles réservées aux comptes
+connectés, RLS active sur 16 tables sociales). Cette action n’est pas à redemander
+ni à rejouer. Les nouveaux gains vérifiés et la rotation décrits ci-dessous
+restent des fonctionnalités distinctes, non implémentées dans ce lot.
 
 ## 15. Récompenses commerciales
 
@@ -28,7 +35,8 @@ Contrat proposé à approuver avant migration :
 - Aucun reclassement automatique des anciens XP comme « vérifiés ». Décision
   requise : garder les anciens XP pour les cosmétiques et démarrer séparément les
   conditions commerciales vérifiées à la mise en service (proposition).
-- Exiger les migrations RLS de Claude avant ouverture. Le simple contrôle de
+- Les RLS existantes sont signalées appliquées dans #32 ; les nouvelles tables
+  et RPC de gains devront aussi avoir leurs protections propres. Le simple contrôle de
   cohérence ou une signature calculée dans le navigateur ne suffit pas.
 
 Recette de sécurité obligatoire sur une base de test : deux envois concurrents ne

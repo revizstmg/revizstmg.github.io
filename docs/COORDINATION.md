@@ -739,3 +739,8 @@ Prochaine action :
   site ont été bloquées ; aucun compte réel utilisé.
 - Passation : lot livré, suites explicites dans le bilan. Aucune action annoncée
   au nom de Claude ; son lot #31 est conservé et la recette a porté sur l’ensemble.
+
+- Actualisation après #32 : selon la PR de Claude, le propriétaire a appliqué
+  les règles d’accès du point 8 et Claude les a vérifiées en lecture seule.
+  Ne pas redemander cette action. Les contrats de gains vérifiés et de rotation
+  du point 19 concernent des changements supplémentaires encore non livrés.
