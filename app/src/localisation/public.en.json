@@ -445,5 +445,12 @@
   "Bulletin officiel spécial n° 4 (PDF)": "Special Official Bulletin no. 4 (PDF)",
   "Pour travailler les automatismes de calcul : choisis « Maths » ci-dessous et réponds sans calculatrice.": "To practise calculation basics: choose \"Maths\" below and answer without a calculator.",
   "⏱ QCM chronométré": "⏱ Timed multiple-choice quiz",
-  "Pour vérifier tes connaissances, matière par matière. Ce n’est pas le format de l’épreuve écrite.": "To check your knowledge, subject by subject. This is not the format of the written exam."
+  "Pour vérifier tes connaissances, matière par matière. Ce n’est pas le format de l’épreuve écrite.": "To check your knowledge, subject by subject. This is not the format of the written exam.",
+  "Enregistré": "Saved",
+  "En attente": "Pending",
+  "Non enregistré": "Not saved",
+  "Ta progression est enregistrée sur ton compte.": "Your progress is saved to your account.",
+  "Tes derniers changements partent sur ton compte dans un instant.": "Your latest changes will be sent to your account in a moment.",
+  "Tes derniers changements ne sont pas encore sur ton compte.": "Your latest changes are not on your account yet.",
+  "Lancer les exercices": "Start the exercises"
 }

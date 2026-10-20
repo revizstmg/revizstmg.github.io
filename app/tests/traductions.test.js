@@ -114,7 +114,7 @@ test('les quotas et variables modifiées ne sont pas mémorisés comme une tradu
 // dans les quatre langues, sans passer par le service de traduction.
 test('les écrans récents sont traduits hors ligne dans les quatre langues', () => {
   const ecrans = ['components/OutilsAccueil.jsx', 'components/EtatSauvegarde.jsx', 'components/AccueilProf.jsx', 'components/CompteRequis.jsx',
-    'pages/Seance.jsx', 'pages/Cours.jsx', 'pages/BacBlanc.jsx', 'pages/MesNotes.jsx', 'games/GameHost.jsx', 'games/common.jsx', 'games/ThemeTest.jsx']
+    'pages/Seance.jsx', 'pages/Cours.jsx', 'pages/BacBlanc.jsx', 'pages/FormulaWorkshop.jsx', 'pages/MesNotes.jsx', 'games/GameHost.jsx', 'games/common.jsx', 'games/ThemeTest.jsx']
   const textes = new Set()
   const walk = (node) => {
     if (!node || typeof node !== 'object') return
@@ -124,7 +124,7 @@ test('les écrans récents sont traduits hors ligne dans les quatre langues', ()
   }
   for (const f of ecrans) walk(transformFileSync(new URL(f, root).pathname, { configFile: false, babelrc: false, plugins: [publicTranslations], parserOpts: { plugins: ['jsx'] }, ast: true }).ast)
   // Titres des étapes de la séance, traduits par usePublicText.
-  for (const t of ['Étape {k}/{n} · {titre}', 'Tes erreurs à revoir', 'Révision du jour', 'Point faible à consolider', 'Avancer dans le cours', 'Étape suivante →', 'Terminer la séance']) textes.add(t)
+  for (const t of ['Enregistré', 'En attente', 'Non enregistré', 'Ta progression est enregistrée sur ton compte.', 'Tes derniers changements partent sur ton compte dans un instant.', 'Tes derniers changements ne sont pas encore sur ton compte.', 'Étape {k}/{n} · {titre}', 'Tes erreurs à revoir', 'Révision du jour', 'Point faible à consolider', 'Avancer dans le cours', 'Étape suivante →', 'Terminer la séance']) textes.add(t)
   expect(textes.size).toBeGreaterThan(80)
   // Comme src/localisation/catalogue.js : les libellés d'interface (i18n/<langue>.js)
   // traduisent aussi le même texte français.

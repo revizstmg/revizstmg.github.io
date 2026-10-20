@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import { useFenetreClavier } from './clavier.js'
 import { useInstall } from '../pwa.js'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
@@ -39,6 +40,8 @@ export function InstallGuide({ onClose }) {
   const { canPrompt, promptInstall } = useInstall()
   const [device, setDevice] = useState(null) // null (choix) | 'ios' | 'android'
   const [copied, setCopied] = useState(false)
+  const fenetre = useRef(null)
+  useFenetreClavier(fenetre, onClose)
 
   const siteUrl = (typeof window !== 'undefined' ? window.location.origin : 'https://revizstmg.github.io') + '/'
   const openSafari = () => { try { window.location.href = 'x-safari-' + siteUrl } catch { /* ignore */ } }
@@ -89,6 +92,7 @@ export function InstallGuide({ onClose }) {
   return (
     <div className="no-print fixed inset-0 z-[80] flex items-end justify-center bg-slate-900/60 backdrop-blur-sm sm:items-center sm:p-4" onClick={onClose} role="dialog" aria-modal="true" aria-label={t('installGuideTitle')}>
       <div
+        ref={fenetre}
         className="w-full max-w-sm animate-pop-in rounded-t-3xl bg-white p-6 shadow-2xl dark:bg-slate-900 sm:rounded-3xl"
         onClick={(e) => e.stopPropagation()}
         style={{ paddingBottom: 'calc(1.5rem + env(safe-area-inset-bottom))' }}

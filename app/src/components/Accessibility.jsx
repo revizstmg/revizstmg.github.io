@@ -1,4 +1,6 @@
+import { useRef } from 'react'
 import { useStore } from '../store.jsx'
+import { useFenetreClavier } from './clavier.js'
 import { useT } from '../i18n.js'
 
 function Switch({ on, onChange, label, desc, icon }) {
@@ -22,9 +24,11 @@ export default function Accessibility({ onClose }) {
   const { state, setA11y } = useStore()
   const t = useT()
   const a = state.a11y || {}
+  const fenetre = useRef(null)
+  useFenetreClavier(fenetre, onClose)
   return (
     <div className="no-print fixed inset-0 z-50 flex items-start justify-center bg-slate-900/50 p-4 pt-16 backdrop-blur-sm" onClick={onClose}>
-      <div className="card card-lux w-full max-w-md animate-pop-in p-5" onClick={(e) => e.stopPropagation()}>
+      <div ref={fenetre} role="dialog" aria-modal="true" aria-label={t('accessibility')} className="card card-lux w-full max-w-md animate-pop-in p-5" onClick={(e) => e.stopPropagation()}>
         <div className="mb-1 flex items-center justify-between">
           <h2 className="font-display text-2xl font-medium">♿ {t('accessibility')}</h2>
           <button onClick={onClose} className="grid h-8 w-8 place-items-center rounded-full text-slate-400 hover:text-slate-700 dark:hover:text-slate-200" aria-label={t('quit')}>✕</button>

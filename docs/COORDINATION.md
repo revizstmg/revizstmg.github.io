@@ -76,6 +76,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 | NOTES-20261019-CLAUDE-01 | Claude | « Mes notes de classe », partie gratuite (voir le document des offres) : saisie de la note, matière puis chapitre dans des menus déroulants, liste de ce qu'il faut améliorer. Fichiers : nouvelle page `pages/MesNotes.jsx`, `progression.js` et `store.jsx` (nouveau champ synchronisé), route dans `App.jsx` (fichier commun), lien depuis `Profile.jsx`, tests, README | Terminé, fusionné le 20 octobre (demande du propriétaire) | `claude/mes-notes`, PR #20 | Suivre l'usage ; « comment l'améliorer » attend l'offre Premium |
 
 | CORRECTIONS-20261020-CLAUDE-01 | Claude | Demande du propriétaire : « fusionne les PR et règle les 10 gros problèmes » de l'inspection du 20 octobre. Lot 1 : hors ligne, progression sur l'appareil, inscription, 12 erreurs de contenu bloquantes, CI à l'heure de Paris. Lot 2 : maîtrise (`store.jsx`, `data/index.js`, `scripts/plugin-contenu.mjs`, `content/commun/nombre-chapitres.json`), séance du jour et barre du bas (`pages/Seance.jsx`, `pages/Cours.jsx`, `navTabs.js`, `Home.jsx`), exercice en plein écran, « Refaire mes erreurs » et « Pourquoi ? » (`games/GameHost.jsx`, `games/common.jsx`), carnet espacé (`store.jsx`, tous les modes), une fenêtre par visite (`fenetres.js`), accueil professeur et parent (`AccueilProf.jsx`, `Layout.jsx`), traductions (`localisation/public.*.json`). Contenu et générateur : couloir de Codex, à la demande du propriétaire | En cours | Lot 1 : [PR #27](https://github.com/revizstmg/revizstmg.github.io/pull/27), lot 2 : [PR #28](https://github.com/revizstmg/revizstmg.github.io/pull/28), fusionnées et publiées | Propriétaire : appliquer les règles d'accès (`supabase/a-valider/`) ; vrais sujets par épreuve après lecture du Bulletin du 17 septembre 2026 |
+| LISTE-20261020-CLAUDE-01 | Claude | Demande du propriétaire : points 1 à 10 de la liste du 20 octobre (le propriétaire indique que Codex traite les points 11 à 28). Indicateur de sauvegarde (`components/EtatSauvegarde.jsx`, `Layout.jsx`), menus et fenêtres au clavier (`components/clavier.js`, `Layout.jsx`, `Customizer.jsx`, `Dictionary.jsx`, `Accessibility.jsx`, `FocusFullscreen.jsx`, `InstallApp.jsx`, `games/GameHost.jsx`, `pages/Chapter.jsx`), barre de l'atelier (`pages/FormulaWorkshop.jsx`), règles d'accès de la base | En cours | `claude/liste-1-10` | Règles d'accès : à appliquer avec le propriétaire (l'outil Supabase attend une confirmation à l'écran) |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -606,6 +607,32 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
     complet à l'épreuve anticipée de mathématiques.
 - Lot 2 et problème 9 fusionnés (PR #28), CI verte ; vérifié avant fusion :
   276 tests unitaires, construction, 134 parcours Playwright.
+
+### LISTE-20261020-CLAUDE-01 — Claude — 20 octobre 2026 (Paris)
+
+- Demande du propriétaire : « Fais de 1 à 10 » (liste en 28 points du 20 octobre ;
+  le propriétaire indique que Codex fait les points 11 à 28).
+- Déjà faits avant cette tâche, vérifiés par les tests existants : 1 (tout est
+  sauvegardé), 3 (anciennes sauvegardes), 4 (minuit et changements d'heure),
+  5 (récompense hebdomadaire après fusion), 6 (exercices liés à leur chapitre,
+  17 études de documents rattachées), 7 (écriture de 19 €, responsabilité des
+  associés).
+- Fait : 2, indicateur « Enregistré / En attente / Non enregistré » dans
+  l'en-tête ; 9, menus et fenêtres au clavier (Échap, Tab qui reste dans la
+  fenêtre, retour du focus ; l'exercice en plein écran garde le focus sans
+  quitter sur Échap) ; 10, barre « Générer mes exercices » collée en bas de
+  l'écran dans l'atelier.
+- Point 8 (règles d'accès) : état réel vérifié en lecture (59 règles dont 43
+  ouvertes, fonctions privées en place, 9 lignes de test orphelines). Deux essais
+  d'application : l'outil Supabase a expiré sans rien appliquer (il attend une
+  confirmation à l'écran). Rien n'a changé dans la base.
+- Vérifié : 276 tests unitaires, construction, 138 parcours Playwright (dont
+  `tests/parcours/clavier.spec.js` et l'indicateur dans `sauvegarde.spec.js`).
+- Bulletin officiel spécial n° 4 du 17 septembre 2026 lu (PDF) : l'écrit de
+  management, sciences de gestion et numérique 2027 ne porte que sur la partie
+  commune ; le sujet de l'app contient encore une partie « enseignement
+  spécifique ». Maths anticipées (session 2028, passée en juin 2027) : 2 h sans
+  calculatrice, automatismes (6 points) puis 2 ou 3 exercices (14 points).
 
 ### Modèle à copier pour une nouvelle tâche
 

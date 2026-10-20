@@ -445,5 +445,12 @@
   "Bulletin officiel spécial n° 4 (PDF)": "النشرة الرسمية الخاصة رقم 4 (PDF)",
   "Pour travailler les automatismes de calcul : choisis « Maths » ci-dessous et réponds sans calculatrice.": "لتمرين آليات الحساب: اختر «الرياضيات» أدناه وأجب دون آلة حاسبة.",
   "⏱ QCM chronométré": "⏱ اختبار متعدد الاختيارات مؤقّت",
-  "Pour vérifier tes connaissances, matière par matière. Ce n’est pas le format de l’épreuve écrite.": "للتحقق من معارفك، مادةً بمادة. هذه ليست صيغة الامتحان الكتابي."
+  "Pour vérifier tes connaissances, matière par matière. Ce n’est pas le format de l’épreuve écrite.": "للتحقق من معارفك، مادةً بمادة. هذه ليست صيغة الامتحان الكتابي.",
+  "Enregistré": "محفوظ",
+  "En attente": "قيد الانتظار",
+  "Non enregistré": "غير محفوظ",
+  "Ta progression est enregistrée sur ton compte.": "تقدّمك محفوظ في حسابك.",
+  "Tes derniers changements partent sur ton compte dans un instant.": "ستُرسل آخر تغييراتك إلى حسابك بعد لحظة.",
+  "Tes derniers changements ne sont pas encore sur ton compte.": "آخر تغييراتك ليست في حسابك بعد.",
+  "Lancer les exercices": "ابدأ التمارين"
 }
