@@ -75,7 +75,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | NOTES-20261019-CLAUDE-01 | Claude | « Mes notes de classe », partie gratuite (voir le document des offres) : saisie de la note, matière puis chapitre dans des menus déroulants, liste de ce qu'il faut améliorer. Fichiers : nouvelle page `pages/MesNotes.jsx`, `progression.js` et `store.jsx` (nouveau champ synchronisé), route dans `App.jsx` (fichier commun), lien depuis `Profile.jsx`, tests, README | Terminé, fusionné le 20 octobre (demande du propriétaire) | `claude/mes-notes`, PR #20 | Suivre l'usage ; « comment l'améliorer » attend l'offre Premium |
 
-| CORRECTIONS-20261020-CLAUDE-01 | Claude | Demande du propriétaire : « fusionne les PR et règle les 10 gros problèmes » de l'inspection du 20 octobre. Lot 1 : hors ligne, progression sur l'appareil, inscription, 12 erreurs de contenu bloquantes, CI à l'heure de Paris. Lot 2 : maîtrise (`store.jsx`, `data/index.js`, `scripts/plugin-contenu.mjs`, `content/commun/nombre-chapitres.json`), séance du jour et barre du bas (`pages/Seance.jsx`, `pages/Cours.jsx`, `navTabs.js`, `Home.jsx`), exercice en plein écran, « Refaire mes erreurs » et « Pourquoi ? » (`games/GameHost.jsx`, `games/common.jsx`), carnet espacé (`store.jsx`, tous les modes), une fenêtre par visite (`fenetres.js`), accueil professeur et parent (`AccueilProf.jsx`, `Layout.jsx`), traductions (`localisation/public.*.json`). Contenu et générateur : couloir de Codex, à la demande du propriétaire | En cours | Lot 1 : [PR #27](https://github.com/revizstmg/revizstmg.github.io/pull/27) (fusionnée) ; lot 2 : `claude/maitrise-parcours` | Fusionner le lot 2, puis épreuves (problème 9) ; règles d'accès : accord et application par le propriétaire |
+| CORRECTIONS-20261020-CLAUDE-01 | Claude | Demande du propriétaire : « fusionne les PR et règle les 10 gros problèmes » de l'inspection du 20 octobre. Lot 1 : hors ligne, progression sur l'appareil, inscription, 12 erreurs de contenu bloquantes, CI à l'heure de Paris. Lot 2 : maîtrise (`store.jsx`, `data/index.js`, `scripts/plugin-contenu.mjs`, `content/commun/nombre-chapitres.json`), séance du jour et barre du bas (`pages/Seance.jsx`, `pages/Cours.jsx`, `navTabs.js`, `Home.jsx`), exercice en plein écran, « Refaire mes erreurs » et « Pourquoi ? » (`games/GameHost.jsx`, `games/common.jsx`), carnet espacé (`store.jsx`, tous les modes), une fenêtre par visite (`fenetres.js`), accueil professeur et parent (`AccueilProf.jsx`, `Layout.jsx`), traductions (`localisation/public.*.json`). Contenu et générateur : couloir de Codex, à la demande du propriétaire | En cours | Lot 1 : [PR #27](https://github.com/revizstmg/revizstmg.github.io/pull/27), lot 2 : [PR #28](https://github.com/revizstmg/revizstmg.github.io/pull/28), fusionnées et publiées | Propriétaire : appliquer les règles d'accès (`supabase/a-valider/`) ; vrais sujets par épreuve après lecture du Bulletin du 17 septembre 2026 |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -604,6 +604,8 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   - reste : écrire de vrais sujets par épreuve (barème, corrigé) après lecture
     du Bulletin, enrichir les sujets maigres (SIG : 2 questions), entraînement
     complet à l'épreuve anticipée de mathématiques.
+- Lot 2 et problème 9 fusionnés (PR #28), CI verte ; vérifié avant fusion :
+  276 tests unitaires, construction, 134 parcours Playwright.
 
 ### Modèle à copier pour une nouvelle tâche
 
