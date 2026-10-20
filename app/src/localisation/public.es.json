@@ -498,5 +498,6 @@
   "Ta progression est enregistrée sur ton compte.": "Tu progreso está guardado en tu cuenta.",
   "Tes derniers changements partent sur ton compte dans un instant.": "Tus últimos cambios se enviarán a tu cuenta en un momento.",
   "Tes derniers changements ne sont pas encore sur ton compte.": "Tus últimos cambios todavía no están en tu cuenta.",
-  "Lancer les exercices": "Empezar los ejercicios"
+  "Lancer les exercices": "Empezar los ejercicios",
+  "Les espaces partagés sont protégés par les règles d’accès de la base. Selon l’espace, l’accès dépend de ton compte, de ton rôle, de ta classe ou du code que tu partages. Utilise un prénom ou un surnom ; la photo est facultative.": "Los espacios compartidos están protegidos por reglas de acceso en la base de datos. Según el espacio, el acceso depende de tu cuenta, tu función, tu clase o el código que compartes. Usa un nombre o un apodo; la foto es opcional."
 }

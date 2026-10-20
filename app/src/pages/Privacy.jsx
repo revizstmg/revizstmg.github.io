@@ -108,9 +108,7 @@ export default function Privacy() {
         photo et tes scores</b> sont partagés (classement, entraide, QCM). Ton <b>adresse e-mail n'est jamais
         montrée</b>. Tu peux quitter une classe à tout moment. Le suivi parent n'est actif que si tu
         l'actives dans « Mon espace » ; le désactiver efface ce qui avait été partagé.</p>
-        <p>Les règles qui protègent ces espaces partagés doivent encore être renforcées : aujourd'hui, ces
-        informations peuvent être lues par d'autres utilisateurs de l'application que ta classe. N'y mets rien de
-        sensible (utilise un prénom ou un surnom, la photo est facultative).</p>
+        <p>Les espaces partagés sont protégés par les règles d’accès de la base. Selon l’espace, l’accès dépend de ton compte, de ton rôle, de ta classe ou du code que tu partages. Utilise un prénom ou un surnom ; la photo est facultative.</p>
       </Section>
 
       <Section title="7. Durée de conservation">

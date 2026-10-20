@@ -744,3 +744,15 @@ Prochaine action :
   les règles d’accès du point 8 et Claude les a vérifiées en lecture seule.
   Ne pas redemander cette action. Les contrats de gains vérifiés et de rotation
   du point 19 concernent des changements supplémentaires encore non livrés.
+
+### CONFIDENTIALITE-20261020-CODEX-02 — Codex — 20 octobre 2026
+
+- Périmètre annoncé : actualiser le paragraphe de confidentialité qui présente
+  encore les espaces sociaux comme ouverts, après l’application des règles
+  rapportée dans #32. Texte d’interface et quatre traductions hors ligne seulement.
+- Aucune action Supabase ; aucune modification des règles, des données ni des
+  autres sections juridiques. Recette par la chaîne existante avant publication.
+- Branche : `fix/confidentialite-acces`. État : en cours.
+
+- #35 : paragraphe actualisé et traduit hors ligne dans les quatre langues ;
+  retrait de l’ancienne description d’espaces encore ouverts. Recette en cours.
