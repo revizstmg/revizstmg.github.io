@@ -30,7 +30,10 @@ function BacBlancPage() {
   useStudyTimer() // le temps du bac blanc compte pour les récompenses
 
   const subjects = examSubjects(state.track)
-  const [subjectId, setSubjectId] = useState('all') // 'all' | subjectId
+  // Une matière à la fois par défaut : un bac blanc mêlant toutes les matières
+  // ne ressemble à aucune épreuve. Première : les maths (épreuve anticipée).
+  const premiere = state.track?.level === 'premiere-stmg'
+  const [subjectId, setSubjectId] = useState(() => (premiere && subjects.some((s) => s.id === 'p1-maths') ? 'p1-maths' : subjects[0]?.id) || 'all') // 'all' | subjectId
   const [dur, setDur] = useState(DURATIONS[2])
   const [exam, setExam] = useState(null) // { questions, durationSec }
   const [sujet, setSujet] = useState(null) // sujet au format de l'épreuve en cours
@@ -66,32 +69,6 @@ function BacBlancPage() {
         <div className="card p-4 text-center text-sm text-rose-600 dark:text-rose-400">{t('notEnoughQuestions')}</div>
       )}
 
-      <section className="card card-lux p-5">
-        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">{t('chooseSubject')}</p>
-        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-          <button onClick={() => setSubjectId('all')} className={`rounded-xl px-3 py-3 text-center text-sm font-semibold transition ${subjectId === 'all' ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`} style={subjectId === 'all' ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
-            🎓 {t('wholeTrack')}
-          </button>
-          {subjects.map((s) => (
-            <button key={s.id} onClick={() => setSubjectId(s.id)} className={`flex items-center justify-center gap-1.5 rounded-xl px-3 py-3 text-center text-sm font-semibold transition ${subjectId === s.id ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`} style={subjectId === s.id ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
-              <span aria-hidden>{s.icon}</span> {s.short || s.name}
-            </button>
-          ))}
-        </div>
-
-        <p className="mb-2 mt-5 text-xs font-semibold uppercase tracking-wide text-slate-400">{t('duration')}</p>
-        <div className="grid grid-cols-3 gap-2 sm:grid-cols-5">
-          {DURATIONS.map((d) => (
-            <button key={d.min} onClick={() => setDur(d)} className={`rounded-xl px-3 py-2.5 text-center text-sm font-semibold transition ${dur.min === d.min ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`} style={dur.min === d.min ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
-              {d.min} {t('minShort')}<br /><span className="opacity-70">{d.q} {t('questionsShort')}</span>
-            </button>
-          ))}
-        </div>
-
-        <button onClick={start} className="btn-gold mt-6 w-full !py-3.5 text-base">⏱ {t('startExam')}</button>
-        <p className="mt-3 text-center text-xs text-slate-400">{t('examNote')}</p>
-      </section>
-
       {/* Sujets au format des épreuves écrites de spécialité (Terminale) */}
       {sujets.length > 0 && (
         <section className="card p-5">
@@ -109,6 +86,44 @@ function BacBlancPage() {
           {sansSujet && <p className="mt-3 text-sm text-rose-600 dark:text-rose-400">{t('sujetNoContent')}</p>}
         </section>
       )}
+      {/* Première : l'épreuve anticipée de mathématiques et ses automatismes */}
+      {premiere && (
+        <section className="card p-5">
+          <h2 className="font-display text-xl font-medium">➗ Épreuve anticipée de mathématiques</h2>
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">Le 21 juin 2027. Son format pour la session 2027 est fixé par le Bulletin officiel spécial n° 4 du 17 septembre 2026 : vérifie-le avec ton professeur.</p>
+          <p className="mt-1 text-xs text-slate-500 dark:text-slate-400"><a href="https://www.education.gouv.fr/sites/default/files/document/bulletin-officiel-special-ndeg-4-du-17-septembre-2026-521113.pdf" target="_blank" rel="noopener" className="underline">Bulletin officiel spécial n° 4 (PDF)</a></p>
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Pour travailler les automatismes de calcul : choisis « Maths » ci-dessous et réponds sans calculatrice.</p>
+        </section>
+      )}
+
+      <section className="card card-lux p-5">
+        <h2 className="font-display text-xl font-medium">⏱ QCM chronométré</h2>
+        <p className="mb-4 mt-1 text-sm text-slate-500 dark:text-slate-400">Pour vérifier tes connaissances, matière par matière. Ce n’est pas le format de l’épreuve écrite.</p>
+        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">{t('chooseSubject')}</p>
+        <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+          {subjects.map((s) => (
+            <button key={s.id} onClick={() => setSubjectId(s.id)} aria-pressed={subjectId === s.id} className={`flex items-center justify-center gap-1.5 rounded-xl px-3 py-3 text-center text-sm font-semibold transition ${subjectId === s.id ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`} style={subjectId === s.id ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
+              <span aria-hidden>{s.icon}</span> {s.short || s.name}
+            </button>
+          ))}
+          <button onClick={() => setSubjectId('all')} aria-pressed={subjectId === 'all'} className={`rounded-xl px-3 py-3 text-center text-sm font-semibold transition ${subjectId === 'all' ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`} style={subjectId === 'all' ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
+            🎓 {t('wholeTrack')}
+          </button>
+        </div>
+
+        <p className="mb-2 mt-5 text-xs font-semibold uppercase tracking-wide text-slate-400">{t('duration')}</p>
+        <div className="grid grid-cols-3 gap-2 sm:grid-cols-5">
+          {DURATIONS.map((d) => (
+            <button key={d.min} onClick={() => setDur(d)} className={`rounded-xl px-3 py-2.5 text-center text-sm font-semibold transition ${dur.min === d.min ? 'text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300'}`} style={dur.min === d.min ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>
+              {d.min} {t('minShort')}<br /><span className="opacity-70">{d.q} {t('questionsShort')}</span>
+            </button>
+          ))}
+        </div>
+
+        <button onClick={start} className="btn-gold mt-6 w-full !py-3.5 text-base">⏱ {t('startExam')}</button>
+        <p className="mt-3 text-center text-xs text-slate-400">{t('examNote')}</p>
+      </section>
+
     </div>
   )
 }

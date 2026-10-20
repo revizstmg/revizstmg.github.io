@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
-import { useStore, isoWeekKey, WEEKLY_GOAL } from '../store.jsx'
+import { useStore, isoWeekKey, WEEKLY_GOAL, erreursDues } from '../store.jsx'
+import { todayKey } from '../data/srs.js'
 import { reviewQueue } from '../data/study.js'
 import { subjectsForTrack } from '../data/tracks.js'
 import { ProgressBar } from '../components/ui.jsx'
@@ -61,14 +62,19 @@ function RevisePage() {
   const decks = state.savedDecks || []
   // Carnet d'erreurs : les questions ratées, regroupées par thème et par type
   // d'exercice (un exercice ne mélange pas les types).
+  // Les questions à revoir aujourd'hui passent en tête (répétition espacée).
   const groupesCarnet = useMemo(() => {
+    const jour = todayKey()
     const groupes = new Map()
-    for (const e of state.erreurs || []) {
+    const dues = new Set(erreursDues(state.erreurs, jour))
+    for (const e of [...dues, ...(state.erreurs || []).filter((x) => !dues.has(x))]) {
       const cle = `${e.themeId}|${e.type}`
-      if (!groupes.has(cle)) groupes.set(cle, { cle, themeId: e.themeId, type: e.type, questions: [] })
-      groupes.get(cle).questions.push(e.q)
+      if (!groupes.has(cle)) groupes.set(cle, { cle, themeId: e.themeId, type: e.type, questions: [], dues: 0 })
+      const g = groupes.get(cle)
+      g.questions.push(e.q)
+      if (dues.has(e)) g.dues++
     }
-    return [...groupes.values()]
+    return [...groupes.values()].sort((a, b) => b.dues - a.dues)
   }, [state.erreurs])
 
   const wk = isoWeekKey()
@@ -188,7 +194,7 @@ function RevisePage() {
               <div key={g.cle} className="card flex items-center gap-3 p-3.5">
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm font-semibold">{theme?.name || g.themeId}</span>
-                  <span className="block text-xs text-slate-500 dark:text-slate-400">{gameLabel(g.type)} · {t(g.questions.length > 1 ? 'notebookCountP' : 'notebookCountS').replace('{n}', g.questions.length)}</span>
+                  <span className="block text-xs text-slate-500 dark:text-slate-400">{gameLabel(g.type)} · {t(g.questions.length > 1 ? 'notebookCountP' : 'notebookCountS').replace('{n}', g.questions.length)}{g.dues > 0 && <span className="font-semibold text-amber-700 dark:text-amber-300"> · {`${g.dues} à revoir aujourd’hui`}</span>}</span>
                 </span>
                 <button
                   onClick={() => setCarnet({ id: `carnet-${g.type}`, type: g.type, title: `📒 ${t('notebookTitle')}`, questions: g.questions.slice(0, 10), themeId: g.themeId, color: couleur })}

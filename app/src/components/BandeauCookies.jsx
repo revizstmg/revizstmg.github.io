@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useT } from '../i18n.js'
+import { useFenetreAutomatique } from '../fenetres.js'
 
 // Bandeau d'information sur les cookies, montré une seule fois. RévizSTMG ne
 // dépose aucun cookie publicitaire ni de mesure d'audience : seul le stockage
@@ -26,7 +27,8 @@ export function useInfoCookiesLue() {
 export function BandeauCookies() {
   const t = useT()
   const lu = useInfoCookiesLue()
-  if (lu) return null
+  const montree = useFenetreAutomatique('cookies', !lu)
+  if (!montree) return null
   const fermer = () => {
     try { localStorage.setItem(CLE, '1') } catch { /* stockage indisponible */ }
     window.dispatchEvent(new Event('stmg-cookies-lu'))

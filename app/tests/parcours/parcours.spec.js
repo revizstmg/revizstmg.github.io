@@ -34,7 +34,9 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
   await page.getByRole('button', { name: /Exercices/ }).click()
   await page.getByRole('button', { name: /QCM — (les )?notions/ }).first().click()
   await page.getByRole('button', { name: /Entraînement/ }).click()
-  await expect(page.locator('main')).toContainText(/Question 1 \//)
+  // L'exercice s'ouvre en plein écran, par-dessus la page.
+  const exercice = page.locator('[data-exercice]')
+  await expect(exercice).toContainText(/Question 1 \//)
 
   const xpAvant = (await etat(page)).xp || 0
   // On répond toujours la première proposition : les choix étant mélangés, une
@@ -50,7 +52,7 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
       else break
     }
     // Fin de partie : score affiché.
-    await expect(page.locator('main')).toContainText(/%|score|bravo|résultat/i)
+    await expect(exercice).toContainText(/%|score|bravo|résultat/i)
     await page.waitForTimeout(300)
     if (((await etat(page)).xp || 0) > xpAvant) break
     await page.getByRole('button', { name: 'Rejouer' }).click()

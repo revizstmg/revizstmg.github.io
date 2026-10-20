@@ -138,7 +138,7 @@ export default function Customizer({ onClose }) {
   const avatar = ct.avatar || null
 
   // --- Onglets de la barre du bas (2 à 5, réordonnables) ---
-  const tabSel = resolveTabs(state.tabs)
+  const tabSel = resolveTabs(state.tabs, state.account?.role)
   const tabAvail = TAB_ORDER.filter((id) => !tabSel.includes(id))
   const moveTab = (i, dir) => {
     const j = i + dir

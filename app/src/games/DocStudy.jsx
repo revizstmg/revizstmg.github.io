@@ -3,7 +3,7 @@
 // sur ces documents. Format « analyse de dossier documentaire » du bac STMG.
 import { useMemo, useState } from 'react'
 import { Rich } from '../components/ui.jsx'
-import { Feedback, GameProgress } from './common.jsx'
+import { Feedback, GameProgress, melangerChoix } from './common.jsx'
 import { useT } from '../i18n.js'
 
 function DocCard({ doc, color }) {
@@ -21,7 +21,8 @@ function DocCard({ doc, color }) {
 export default function DocStudy({ game, color, onDone }) {
   const t = useT()
   const [phase, setPhase] = useState('read') // read | quiz
-  const questions = game.questions
+  // Propositions mélangées à chaque partie (la bonne réponse n'est pas toujours « A »).
+  const questions = useMemo(() => game.questions.map(melangerChoix), [game])
   const [i, setI] = useState(0)
   const [correct, setCorrect] = useState(0)
   const [picked, setPicked] = useState(null)
@@ -91,7 +92,7 @@ export default function DocStudy({ game, color, onDone }) {
           </div>
           {answered && (
             <>
-              <Feedback ok={picked === q.answer}>{q.explain}</Feedback>
+              <Feedback ok={picked === q.answer} choisi={q.choices?.[picked]}>{q.explain}</Feedback>
               <button onClick={() => finishQ(picked === q.answer)} className="btn-primary mt-4 w-full" style={{ backgroundColor: color }}>
                 {i + 1 >= questions.length ? t('seeScore') : `${t('nextQuestion')} →`}
               </button>

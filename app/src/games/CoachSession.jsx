@@ -9,7 +9,7 @@ import { Confetti } from '../components/ui.jsx'
 // fin : score, détail par thème, écriture dans la répétition espacée + XP.
 export default function CoachSession({ training, color = 'var(--c-accent)', onExit }) {
   const t = useT()
-  const { recordResult } = useStore()
+  const { recordResult, noterReponses } = useStore()
   const [queue, setQueue] = useState(() => [...(training.sequence || [])])
   const [i, setI] = useState(0)
   const [picked, setPicked] = useState(null)
@@ -21,6 +21,7 @@ export default function CoachSession({ training, color = 'var(--c-accent)', onEx
   const extras = useRef(0)
   const MAX_EXTRA = 4
   const savedRef = useRef(false)
+  const bilan = useRef({ ratees: [], reussies: [] }) // pour le carnet d'erreurs
 
   const q = queue[i] || null
   const answered = picked !== null
@@ -31,6 +32,7 @@ export default function CoachSession({ training, color = 'var(--c-accent)', onEx
     setPicked(k)
     const ok = k === q.answer
     if (ok) setCorrect((c) => c + 1)
+    bilan.current[ok ? 'reussies' : 'ratees'].push(q)
     const cur = tallyRef.current[q.themeId] || { c: 0, n: 0 }
     tallyRef.current = { ...tallyRef.current, [q.themeId]: { c: cur.c + (ok ? 1 : 0), n: cur.n + 1 } }
     setTally(tallyRef.current)
@@ -56,6 +58,7 @@ export default function CoachSession({ training, color = 'var(--c-accent)', onEx
       for (const [tid, v] of Object.entries(tallyRef.current)) {
         if (v.n > 0) recordResult({ chapterId: tid, gameId: 'coach-ia', quiz: false, pct: Math.round((v.c / v.n) * 100), correct: v.c, total: v.n, xp: v.c * 8 })
       }
+      noterReponses({ themeId: null, type: 'qcm', ...bilan.current })
     }
     setDone(true)
   }

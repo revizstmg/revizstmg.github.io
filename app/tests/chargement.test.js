@@ -65,6 +65,10 @@ describe('chargement à la demande', () => {
     await C.chargerTout()
     for (const [id, t] of Object.entries(C.ALL_CHAPTERS)) {
       expect(t.games.map((g) => g.id), id).toEqual(index[id])
+      // Le compte calculé d'avance (maîtrise) suit le cours et ses exercices :
+      // sinon, lancer « npm run chapitres ».
+      const nb = C.themeChapters(t).map((ch) => Math.min(C.EXERCICES_POUR_MAITRISER, C.jeuxDuChapitre(ch, t).length))
+      expect(C.exercicesParChapitre(id), `${id} : lancer « npm run chapitres »`).toEqual(nb)
     }
   })
 })

@@ -13,6 +13,7 @@ import Dictionary from './Dictionary.jsx'
 const Customizer = lazy(() => import('./Customizer.jsx'))
 import Accessibility from './Accessibility.jsx'
 import ReminderScheduler from './ReminderScheduler.jsx'
+import { useFenetreAutomatique } from '../fenetres.js'
 import { InstallBanner } from './InstallApp.jsx'
 import { BandeauCookies } from './BandeauCookies.jsx'
 import { BandeauEssai } from './CompteRequis.jsx'
@@ -40,7 +41,10 @@ export default function Layout({ children }) {
   }, [pathname])
   // Bouton « retour » (croix) universel : présent sur toute page où l'on a
   // cliqué pour entrer, jamais sur l'accueil / l'écran de choix de filière.
-  const isHomeLike = pathname === '/' || pathname === '/accueil' || pathname === '/changer'
+  // Parent sans profil d'élève sur cet appareil : son accueil est l'espace
+  // parent, sans les outils d'un élève (série, XP, coach, « mon espace »…).
+  const parentSeul = !state.track && !state.profile?.firstName && pathname.startsWith('/parent')
+  const isHomeLike = pathname === '/' || pathname === '/accueil' || pathname === '/changer' || parentSeul
   const goBack = () => {
     if (typeof window !== 'undefined' && window.history.state && window.history.state.idx > 0) navigate(-1)
     else navigate('/accueil')
@@ -100,7 +104,7 @@ export default function Layout({ children }) {
               ✕
             </button>
           )}
-          <Link to="/accueil" className="mr-auto flex items-center gap-2 font-display text-2xl font-semibold tracking-tight">
+          <Link to={parentSeul ? '/parent' : '/accueil'} className="mr-auto flex items-center gap-2 font-display text-2xl font-semibold tracking-tight">
             <span aria-hidden style={{ color: 'var(--c-accent)' }}><Icon.Diamond size={15} /></span>
             <span>
               Réviz<span style={{ color: 'color-mix(in srgb, var(--c-accent) 78%, var(--c-ink))' }}>STMG</span>
@@ -122,21 +126,27 @@ export default function Layout({ children }) {
             </Link>
           )}
 
+          {!parentSeul && (
           <div className="flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400" title={t('streakTitle')}>
             <Icon.Flame size={15} />
             <span aria-label={`${state.streak.count} ${t('streakDays')}`}>{state.streak.count}</span>
           </div>
+          )}
 
+          {!parentSeul && (
           <div className="hidden items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-800 sm:flex" title={t('xpTitle')}>
             {t('levelShort')}&nbsp;{derived.level} · {state.xp}&nbsp;XP
           </div>
+          )}
 
           {/* Contrôles complets : uniquement sur écran large. Sur mobile/app, tout
               est regroupé dans le menu burger (voir plus bas). */}
           <div className="hidden items-center gap-1 sm:flex">
+          {!parentSeul && (
           <Link to="/coach" className="grid h-9 w-9 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800" aria-label={t('coach')} title={t('coach')}>
             <Icon.Timer />
           </Link>
+          )}
           <button className="grid h-9 w-9 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800" onClick={() => setDictOpen(true)} aria-label={t('dictionary')} title={t('dictionary')}>
             <Icon.Book />
           </button>
@@ -231,6 +241,7 @@ export default function Layout({ children }) {
               les options habituellement en haut à droite. */}
           <MobileMenu
             className="sm:hidden"
+            parentSeul={parentSeul}
             state={state}
             isDark={isDark}
             standalone={standalone}
@@ -248,7 +259,7 @@ export default function Layout({ children }) {
             onSignOut={() => logout()}
           />
         </div>
-        <Breadcrumb />
+        {!parentSeul && <Breadcrumb />}
       </header>
 
       <BandeauEssai />
@@ -299,7 +310,7 @@ export default function Layout({ children }) {
 
 // Menu burger pour mobile / application : regroupe toutes les options du site
 // (recherche, dictionnaire, thème, personnalisation, langue, espace, déconnexion).
-function MobileMenu({ className = '', state, isDark, standalone, lang, first, last, mono, photo, onSearch, onDict, onCustomize, onA11y, onToggleTheme, onLang, onSignOut }) {
+function MobileMenu({ className = '', parentSeul = false, state, isDark, standalone, lang, first, last, mono, photo, onSearch, onDict, onCustomize, onA11y, onToggleTheme, onLang, onSignOut }) {
   const t = useT()
   const [open, setOpen] = useState(false)
   const signedIn = !!(first || last)
@@ -361,9 +372,9 @@ function MobileMenu({ className = '', state, isDark, standalone, lang, first, la
             {/* Navigation essentielle. Les autres outils (défi, express, coach IA,
                 boutique, amis, formules, bac blanc…) sont regroupés sur l'accueil
                 pour ne pas surcharger ce menu. */}
-            <Item icon="🏠" label={t('home')} to="/accueil" />
-            <Item icon="👤" label={t('mySpace')} to="/moi" />
-            <Item icon="🧭" label={t('methodoTitle')} to="/methodo" />
+            {!parentSeul && <Item icon="🏠" label={t('home')} to="/accueil" />}
+            {!parentSeul && <Item icon="👤" label={t('mySpace')} to="/moi" />}
+            {!parentSeul && <Item icon="🧭" label={t('methodoTitle')} to="/methodo" />}
             <Item icon="👨‍👩‍👧" label={t('parentSpace')} to="/parent" />
             {!standalone && <Item icon="🎓" label={t('startGuide')} to="/guide" />}
 
@@ -592,7 +603,7 @@ function BottomNav() {
   const { pathname } = useLocation()
   // Onglets choisis par l'élève (personnalisables), nettoyés puis résolus vers
   // leur définition (icône, libellé, destination, préfixes d'URL actifs).
-  const tabs = resolveTabs(state.tabs).map((id) => ({ id, ...ALL_TABS[id] }))
+  const tabs = resolveTabs(state.tabs, state.account?.role).map((id) => ({ id, ...ALL_TABS[id] }))
   const active = (m) => m.some((x) => pathname === x || pathname.startsWith(x + '/'))
   return (
     <nav
@@ -636,7 +647,10 @@ function DailyRewardModal() {
   const { state, dailyReward, checkIn, clearDailyReward } = useStore()
   const t = useT()
   useEffect(() => { if (state.track) checkIn() }, [state.track, checkIn])
-  if (!dailyReward) return null
+  // La récompense est créditée dans tous les cas ; sa fenêtre ne s'ouvre que si
+  // aucune autre ne s'est ouverte pendant la visite.
+  const montree = useFenetreAutomatique('recompense', !!dailyReward)
+  if (!dailyReward || !montree) return null
   const { count, xp, milestone } = dailyReward
   return createPortal(
     <>

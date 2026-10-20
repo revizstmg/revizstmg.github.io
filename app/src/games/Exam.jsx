@@ -22,7 +22,7 @@ function mentionFor(note) {
 // (chaque thème couvert) et attribue des XP.
 export default function Exam({ questions, durationSec = 1200, color = '#7c3aed', onExit }) {
   const t = useT()
-  const { recordResult, addXp } = useStore()
+  const { recordResult, addXp, noterReponses } = useStore()
   const [i, setI] = useState(0)
   const [answers, setAnswers] = useState({})
   const [submitted, setSubmitted] = useState(false)
@@ -63,6 +63,10 @@ export default function Exam({ questions, durationSec = 1200, color = '#7c3aed',
       // réviser » tant que la leçon elle-même n'a pas été travaillée.
       if (tid !== '__x') recordResult({ chapterId: tid, gameId: 'exam', quiz: false, pct: Math.round((v.c / v.n) * 100), correct: v.c, total: v.n, xp: 0 })
     }
+    // Carnet d'erreurs : chaque question ratée (ou laissée blanche) y entre,
+    // rangée dans son thème.
+    const avecTheme = questions.filter((q) => q.themeId)
+    noterReponses({ themeId: null, type: 'qcm', ratees: avecTheme.filter((q) => answers[questions.indexOf(q)] !== q.answer), reussies: avecTheme.filter((q) => answers[questions.indexOf(q)] === q.answer) })
     addXp(correct * 5)
   }, [submitted]) // eslint-disable-line react-hooks/exhaustive-deps
 

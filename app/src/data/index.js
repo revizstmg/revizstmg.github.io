@@ -978,6 +978,56 @@ function sectionExercises(sec, theme, idx) {
 // cartes sont mélangées à chaque partie par le composant.
 // Exercices de l'onglet « Exercices » d'un chapitre : ses jeux, plus un paquet
 // de flashcards tiré de ses notions quand il y en a assez.
+// Chapitre (section du cours) auquel appartient un exercice joué : exercices
+// fabriqués à partir du cours (« thème::section::… ») ou exercices rédigés
+// rattachés à leur section (exercices-sections.json). null pour les modes qui
+// couvrent tout le thème ou plusieurs thèmes (test du thème, bac blanc, défi…).
+export function chapitreDuJeu(themeId, gameId) {
+  const id = String(gameId || '')
+  const fabrique = id.startsWith(`${themeId}::`) ? Number(id.slice(themeId.length + 2).split('::')[0]) : NaN
+  const i = Number.isInteger(fabrique) ? fabrique : GAME_SECTION[id]
+  return Number.isInteger(i) && i >= 0 ? i : null
+}
+
+// Un chapitre est maîtrisé quand 3 de ses exercices sont réussis (tous s'il en
+// a moins). Nombre d'exercices de chaque chapitre d'un thème qui comptent,
+// calculé d'avance (content/commun/nombre-chapitres.json, « npm run
+// chapitres ») : la maîtrise s'affiche sur l'accueil sans charger la matière
+// ni refabriquer les exercices.
+export const EXERCICES_POUR_MAITRISER = 3
+const EXERCICES_PAR_CHAPITRE = commun('nombre-chapitres').themes
+export function exercicesParChapitre(themeId) {
+  return EXERCICES_PAR_CHAPITRE[themeId] || []
+}
+
+// « Pourquoi ? » sous une correction : à quelle notion du cours correspond une
+// proposition choisie à tort (une définition, ou le nom d'une notion), et dans
+// quel chapitre la revoir. Les distracteurs des exercices fabriqués viennent
+// des autres notions du thème : on les retrouve dans ses sections.
+const notionsParTheme = new Map()
+function notionsDuTheme(themeId) {
+  const theme = ALL_CHAPTERS[themeId]
+  if (!theme?.cours) return []
+  if (!notionsParTheme.has(themeId)) {
+    const liste = []
+    theme.cours.forEach((sec, idx) => {
+      for (const p of sectionDefPool(sectionPairs(sec).defPairs)) liste.push({ term: stripMd(p.term), def: stripMd(p.def), idx })
+    })
+    notionsParTheme.set(themeId, liste)
+  }
+  return notionsParTheme.get(themeId)
+}
+const normaliser = (x) => stripMd(x).toLowerCase().replace(/[«»"“”.,;:!?()]/g, ' ').replace(/\s+/g, ' ').trim()
+export function notionDuChoix(themeId, texte) {
+  const cle = normaliser(texte)
+  if (!cle) return null
+  for (const n of notionsDuTheme(themeId)) {
+    if (normaliser(n.def) === cle) return { ...n, est: 'definition' }
+    if (normaliser(n.term) === cle) return { ...n, est: 'terme' }
+  }
+  return null
+}
+
 export function jeuxDuChapitre(chapter, theme) {
   if (!chapter) return []
   const base = chapter.games || []

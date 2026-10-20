@@ -75,7 +75,7 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | NOTES-20261019-CLAUDE-01 | Claude | « Mes notes de classe », partie gratuite (voir le document des offres) : saisie de la note, matière puis chapitre dans des menus déroulants, liste de ce qu'il faut améliorer. Fichiers : nouvelle page `pages/MesNotes.jsx`, `progression.js` et `store.jsx` (nouveau champ synchronisé), route dans `App.jsx` (fichier commun), lien depuis `Profile.jsx`, tests, README | Terminé, fusionné le 20 octobre (demande du propriétaire) | `claude/mes-notes`, PR #20 | Suivre l'usage ; « comment l'améliorer » attend l'offre Premium |
 
-| CORRECTIONS-20261020-CLAUDE-01 | Claude | Demande du propriétaire : « fusionne les PR et règle les 10 gros problèmes » de l'inspection du 20 octobre. Lot 1 : hors ligne (`pwa/sw.js`), progression sur l'appareil (`store.jsx`, `progression.js`, `translate.js`, `EtatSauvegarde.jsx`), inscription avec confirmation de l'e-mail (`Welcome.jsx`), 12 erreurs de contenu bloquantes et notions liées (`content/**`, `src/data/index.js`, `src/games/common.jsx` : couloir de Codex, à la demande du propriétaire), CI à l'heure de Paris. Lots suivants : maîtrise, parcours, révisions, professeur et parent, épreuves | En cours | `claude/corrections-urgentes` | Lot 1 publié, puis lots 2 à 4 |
+| CORRECTIONS-20261020-CLAUDE-01 | Claude | Demande du propriétaire : « fusionne les PR et règle les 10 gros problèmes » de l'inspection du 20 octobre. Lot 1 : hors ligne, progression sur l'appareil, inscription, 12 erreurs de contenu bloquantes, CI à l'heure de Paris. Lot 2 : maîtrise (`store.jsx`, `data/index.js`, `scripts/plugin-contenu.mjs`, `content/commun/nombre-chapitres.json`), séance du jour et barre du bas (`pages/Seance.jsx`, `pages/Cours.jsx`, `navTabs.js`, `Home.jsx`), exercice en plein écran, « Refaire mes erreurs » et « Pourquoi ? » (`games/GameHost.jsx`, `games/common.jsx`), carnet espacé (`store.jsx`, tous les modes), une fenêtre par visite (`fenetres.js`), accueil professeur et parent (`AccueilProf.jsx`, `Layout.jsx`), traductions (`localisation/public.*.json`). Contenu et générateur : couloir de Codex, à la demande du propriétaire | En cours | Lot 1 : [PR #27](https://github.com/revizstmg/revizstmg.github.io/pull/27) (fusionnée) ; lot 2 : `claude/maitrise-parcours` | Fusionner le lot 2, puis épreuves (problème 9) ; règles d'accès : accord et application par le propriétaire |
 
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
@@ -566,6 +566,44 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   Aussi : café à 10 %, Shoah, RGPD et consentement, Sécurité sociale (1958),
   « grand remplacement ». Empreintes de contenu mises à jour volontairement.
   Vérifié par 772 040 questions générées : aucune erreur bloquante ne ressort.
+  Lot 1 fusionné (PR #27), CI verte.
+- Lot 2 (problèmes 6, 7, 8 et 10), branche `claude/maitrise-parcours` :
+  - maîtrise : chaque chapitre compte ses 3 meilleurs exercices (tous s'il en a
+    moins), le thème prend la moyenne de ses chapitres ou le test du thème s'il
+    est meilleur ; le chapitre de chaque exercice rédigé passe dans l'index léger
+    et le nombre d'exercices par chapitre est calculé d'avance
+    (`npm run chapitres`, vérifié par `tests/chargement.test.js`) ; réponse
+    rédigée vide refusée au test du thème ; bac blanc, défi et coach hors de
+    l'objectif de la semaine ;
+  - parcours : bouton « Ma séance du jour » (erreurs dues, révision, prochain
+    exercice du cours), barre du bas Accueil · Cours · Réviser · Bac blanc · Moi,
+    page « Cours », exercice en plein écran, une seule fenêtre automatique par
+    visite ;
+  - révisions : carnet d'erreurs à boîtes (1, 3 puis 7 jours, sortie après trois
+    réussites espacées), alimenté par tous les modes ; « Refaire mes erreurs » en
+    fin de série (sans compter dans la maîtrise) ; « Pourquoi ? » sous chaque
+    correction ;
+  - professeur et parent : accueil du professeur (classes, élèves à relancer),
+    onglets propres ; un parent sans profil d'élève n'a plus les menus d'élève ;
+    104 textes récents traduits hors ligne en anglais, espagnol, italien et arabe.
+  - Vérifié : 275 tests unitaires (UTC et heure de Paris pour la logique),
+    construction, 133 parcours Playwright.
+  - Mesure d'audience : `/cours` compte pour « matiere » et `/seance` pour
+    « revision », sans changer la fonction SQL (accord du propriétaire requis).
+- Problème 9 (épreuves), en partie, même branche :
+  - le Bulletin officiel spécial n° 4 du 17 septembre 2026 (NOR MENE2622652N
+    pour la STMG) n'a pas pu être lu : le site du ministère est bloqué par le
+    réseau de l'environnement ; seuls des extraits de moteur de recherche sont
+    lisibles (épreuves de 4 h, coefficient 16, dossiers documentaires). Aucun
+    nouveau sujet n'a donc été écrit : ce serait inventer ;
+  - fait : propositions des 85 QCM d'études de documents mélangées à chaque
+    partie (`games/common.jsx`, `melangerChoix`) ; bac blanc QCM matière par
+    matière par défaut, présenté comme un QCM et après les sujets au format de
+    l'épreuve ; carte de l'épreuve anticipée de mathématiques pour la Première
+    (date du calendrier officiel, renvoi au Bulletin, sans format inventé) ;
+  - reste : écrire de vrais sujets par épreuve (barème, corrigé) après lecture
+    du Bulletin, enrichir les sujets maigres (SIG : 2 questions), entraînement
+    complet à l'épreuve anticipée de mathématiques.
 
 ### Modèle à copier pour une nouvelle tâche
 

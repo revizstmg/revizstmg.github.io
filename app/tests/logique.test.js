@@ -1,15 +1,15 @@
 // Logique de l'app : niveaux, scores, répétition espacée, récompenses, badges,
 // calculs chiffrés, filières.
 import { describe, it, expect } from 'vitest'
-import { levelFromXp, chapterScore, starsFromScore, subjectScore, globalScore, isoWeekKey, mergeProgress, majCarnet, cleErreur, CARNET_MAX } from '../src/store.jsx'
+import { levelFromXp, chapterScore, starsFromScore, subjectScore, globalScore, isoWeekKey, mergeProgress, majCarnet, cleErreur, erreursDues, CARNET_MAX } from '../src/store.jsx'
 import { srsUpdate, addDays, daysUntil, defaultBacDate } from '../src/data/srs.js'
 import { CALENDRIER, epreuvesAVenir, premiereEpreuve } from '../src/data/epreuves.js'
 import { dailyBase, dailyRewardFor, nextMilestone, MILESTONES } from '../src/data/rewards.js'
 import { BADGES } from '../src/badges.js'
 import { CALC, makeCalcSet } from '../src/calc.js'
 import { LEVELS, subjectsForTrack, trackLabel } from '../src/data/tracks.js'
-import { ALL_CHAPTERS, SUBJECTS, jeuxJouablesDuTheme } from '../src/data/index.js'
-import { answerMatches, answerMatchesCours } from '../src/games/common.jsx'
+import { ALL_CHAPTERS, SUBJECTS, jeuxJouablesDuTheme, chapitreDuJeu, chargerPourTheme, exercicesParChapitre, notionDuChoix } from '../src/data/index.js'
+import { answerMatches, answerMatchesCours, melangerChoix } from '../src/games/common.jsx'
 import { avecGraine, empreinte } from './outils.js'
 
 const vide = () => ({ xp: 0, streak: { count: 0 }, badges: [], chapters: {}, favorites: [], themeTime: {}, totalAnswers: 0, correctAnswers: 0 })
@@ -39,27 +39,41 @@ describe('scores', () => {
     expect(chapterScore(vide(), themeId)).toBe(0)
     expect(chapterScore(vide(), 'theme-inexistant')).toBe(0)
   })
-  it('moyenne des exercices jouables et du quiz, exercices non faits comptés 0', () => {
-    const id = Object.keys(ALL_CHAPTERS).find((x) => jeuxJouablesDuTheme(x).length >= 2)
-    const jouables = jeuxJouablesDuTheme(id)
-    const n = jouables.length + 1
+  it('les exercices des chapitres comptent : 3 réussis par chapitre pour le maîtriser', () => {
+    // Compte calculé d'avance : le cours n'est pas chargé ici.
+    expect(theme.cours).toBeUndefined()
+    const nb = exercicesParChapitre(themeId)
+    const n = nb.filter(Boolean).length
+    expect(nb[0]).toBe(3)
     const s = vide()
-    s.chapters[id] = { games: { [jouables[0].id]: 100 }, quiz: 100 }
-    expect(chapterScore(s, id)).toBe(Math.round(200 / n))
-    s.chapters[id] = { games: Object.fromEntries(ALL_CHAPTERS[id].games.map((g) => [g.id, 100])), quiz: 100 }
-    expect(chapterScore(s, id)).toBe(100)
-    // Un thème sans exercice jouable seul : le test du thème fait tout le score.
-    s.chapters[themeId] = { games: {}, quiz: 80 }
-    expect(chapterScore(s, themeId)).toBe(jeuxJouablesDuTheme(themeId).length ? Math.round(80 / (jeuxJouablesDuTheme(themeId).length + 1)) : 80)
+    s.chapters[themeId] = { games: { [`${themeId}::0::qdef0`]: 100 }, quiz: 0 }
+    expect(chapterScore(s, themeId)).toBe(Math.round(100 / 3 / n))
+    s.chapters[themeId] = { games: { [`${themeId}::0::qdef0`]: 100, [`${themeId}::0::vf`]: 100, [`${themeId}::0::trou`]: 100, [`${themeId}::0::assoc`]: 40 }, quiz: 0 }
+    expect(chapterScore(s, themeId)).toBe(Math.round(100 / n))
   })
-  // Les QCM, vrai/faux et associations du thème ne se lancent pas seuls (ils
-  // nourrissent le test du thème) : un élève qui fait tout ce qu'il peut lancer
-  // doit pouvoir atteindre 100 %, dans chaque thème.
-  it('chaque thème peut atteindre 100 %', () => {
+  it('un chapitre de 1 ou 2 exercices est maîtrisé quand ils sont tous réussis', () => {
+    const [id, i] = Object.entries(ALL_CHAPTERS).flatMap(([tid]) => exercicesParChapitre(tid).map((nb, j) => [tid, j, nb])).find(([, , nb]) => nb === 2)
+    const n = exercicesParChapitre(id).filter(Boolean).length
+    const s = vide()
+    s.chapters[id] = { games: { [`${id}::${i}::a`]: 100, [`${id}::${i}::b`]: 100 }, quiz: 0 }
+    expect(chapterScore(s, id)).toBe(Math.round(100 / n))
+  })
+  it('le test du thème compte s’il est meilleur ; les modes transverses ne comptent pas', () => {
+    const s = vide()
+    s.chapters[themeId] = { games: { exam: 100, daily: 100, 'coach-ia': 100 }, quiz: 0 }
+    expect(chapterScore(s, themeId)).toBe(0)
+    s.chapters[themeId].quiz = 92
+    expect(chapterScore(s, themeId)).toBe(92)
+  })
+  it('chaque thème peut atteindre 100 %, par ses chapitres ou par son test', () => {
     const plafonnes = Object.keys(ALL_CHAPTERS).filter((id) => {
       const s = vide()
-      s.chapters[id] = { games: Object.fromEntries(jeuxJouablesDuTheme(id).map((g) => [g.id, 100])), quiz: 100 }
-      return chapterScore(s, id) !== 100
+      const games = {}
+      exercicesParChapitre(id).forEach((nb, i) => { for (let k = 0; k < nb; k++) games[`${id}::${i}::ex${k}`] = 100 })
+      s.chapters[id] = { games, quiz: 0 }
+      const parChapitres = chapterScore(s, id)
+      s.chapters[id] = { games: {}, quiz: 100 }
+      return parChapitres !== 100 || chapterScore(s, id) !== 100
     })
     expect(plafonnes).toEqual([])
   })
@@ -71,7 +85,7 @@ describe('scores', () => {
     expect(subjectScore(s, 'gestion-finance')).toBe(0)
     expect(globalScore(s)).toBe(0)
     const gf = SUBJECTS.find((x) => x.id === 'gestion-finance')
-    for (const c of gf.chapters) s.chapters[c.id] = { games: Object.fromEntries(c.games.map((g) => [g.id, 100])), quiz: 100 }
+    for (const c of gf.chapters) s.chapters[c.id] = { games: {}, quiz: 100 }
     expect(subjectScore(s, 'gestion-finance')).toBe(100)
   })
   it('semaine ISO', () => {
@@ -139,11 +153,40 @@ describe('dates des épreuves', () => {
 
 describe('carnet d’erreurs', () => {
   const q = (n) => ({ q: `Question ${n}`, choices: ['A', 'B'], answer: 0 })
-  it('une question ratée entre, une question réussie sort', () => {
-    let c = majCarnet([], { themeId: 'gf-t1', type: 'qcm', ratees: [q(1), q(2)] }, '2026-10-01')
-    expect(c.map((e) => e.q.q)).toEqual(['Question 1', 'Question 2'])
-    c = majCarnet(c, { themeId: 'gf-t1', type: 'qcm', reussies: [q(1)] }, '2026-10-02')
+  it('une question ratée entre ; elle sort après 3 réussites espacées (1, 3 puis 7 jours)', () => {
+    const noter = (c, quoi, jour) => majCarnet(c, { themeId: 'gf-t1', type: 'qcm', ...quoi }, jour)
+    let c = noter([], { ratees: [q(1), q(2)] }, '2026-10-01')
+    expect(c.map((e) => [e.q.q, e.boite, e.due])).toEqual([['Question 1', 0, '2026-10-02'], ['Question 2', 0, '2026-10-02']])
+    expect(erreursDues(c, '2026-10-01')).toEqual([])
+    // Refaite juste après la série : bien joué, mais elle reste.
+    c = noter(c, { reussies: [q(1)] }, '2026-10-01')
+    expect(c.find((e) => e.q.q === 'Question 1')).toMatchObject({ boite: 0, due: '2026-10-02' })
+    c = noter(c, { reussies: [q(1)] }, '2026-10-02')
+    expect(c.find((e) => e.q.q === 'Question 1')).toMatchObject({ boite: 1, due: '2026-10-05' })
+    c = noter(c, { reussies: [q(1)] }, '2026-10-03') // pas encore due : ne bouge pas
+    expect(c.find((e) => e.q.q === 'Question 1')).toMatchObject({ boite: 1, due: '2026-10-05' })
+    c = noter(c, { reussies: [q(1)] }, '2026-10-06')
+    expect(c.find((e) => e.q.q === 'Question 1')).toMatchObject({ boite: 2, due: '2026-10-13' })
+    expect(erreursDues(c, '2026-10-06').map((e) => e.q.q)).toEqual(['Question 2'])
+    c = noter(c, { reussies: [q(1)] }, '2026-10-13')
     expect(c.map((e) => e.q.q)).toEqual(['Question 2'])
+  })
+  it('ratée de nouveau, une question repart de la première boîte', () => {
+    let c = majCarnet([], { themeId: 'gf-t1', type: 'qcm', ratees: [q(1)] }, '2026-10-01')
+    c = majCarnet(c, { themeId: 'gf-t1', type: 'qcm', reussies: [q(1)] }, '2026-10-02')
+    c = majCarnet(c, { themeId: 'gf-t1', type: 'qcm', ratees: [q(1)] }, '2026-10-05')
+    expect(c).toHaveLength(1)
+    expect(c[0]).toMatchObject({ boite: 0, due: '2026-10-06', le: '2026-10-05' })
+  })
+  it('une ancienne entrée (sans date) est à revoir tout de suite', () => {
+    const ancienne = { id: cleErreur('qcm', q(1)), themeId: 'gf-t1', type: 'qcm', q: q(1), le: '2026-09-01' }
+    expect(erreursDues([ancienne], '2026-10-01')).toHaveLength(1)
+    const c = majCarnet([ancienne], { themeId: 'gf-t1', type: 'qcm', reussies: [q(1)] }, '2026-10-01')
+    expect(c[0]).toMatchObject({ boite: 1, due: '2026-10-04' })
+  })
+  it('un mode qui mélange les thèmes range chaque question dans le sien', () => {
+    const c = majCarnet([], { themeId: null, type: 'qcm', ratees: [{ ...q(1), themeId: 'droit-t5' }, { ...q(2), themeId: 'gf-t2' }, q(3)] }, '2026-10-01')
+    expect(c.map((e) => [e.q.q, e.themeId])).toEqual([['Question 1', 'droit-t5'], ['Question 2', 'gf-t2']])
   })
   it('ratée deux fois, une question n’apparaît qu’une fois, en tête', () => {
     let c = majCarnet([], { themeId: 'gf-t1', type: 'qcm', ratees: [q(1), q(2)] }, '2026-10-01')
@@ -278,5 +321,42 @@ describe('correction des réponses écrites', () => {
   })
   it('langues : l’article reste exigé', () => {
     expect(answerMatches('casa', 'la casa')).toBe(false)
+  })
+})
+
+// En dernier : charge le cours d'un thème (les tests de score plus haut
+// travaillent sans lui).
+describe('score d’un thème, cours chargé', () => {
+  it('un exercice rédigé compte dans le chapitre où il est placé', async () => {
+    await chargerPourTheme('gf-t1')
+    const n = exercicesParChapitre('gf-t1').filter(Boolean).length
+    const jeu = jeuxJouablesDuTheme('gf-t1').find((g) => !g.id.includes('::') && chapitreDuJeu('gf-t1', g.id) != null)
+    expect(jeu).toBeTruthy()
+    const s = vide()
+    s.chapters['gf-t1'] = { games: { [jeu.id]: 90, 'gf-t1-inconnu': 100 }, quiz: 0 }
+    expect(chapterScore(s, 'gf-t1')).toBe(Math.round(90 / 3 / n))
+  })
+  it('« Pourquoi ? » : une proposition choisie à tort est rattachée à sa notion', async () => {
+    await chargerPourTheme('gf-t1')
+    expect(notionDuChoix('gf-t1', 'Sur les achats → créance sur l’État')).toMatchObject({ term: 'TVA déductible', idx: 0, est: 'definition' })
+    expect(notionDuChoix('gf-t1', 'tva déductible')).toMatchObject({ def: 'Sur les achats → créance sur l’État', est: 'terme' })
+    expect(notionDuChoix('gf-t1', 'une réponse inventée')).toBeNull()
+    expect(notionDuChoix('theme-inexistant', 'TVA')).toBeNull()
+  })
+})
+
+describe('études de documents', () => {
+  it('les propositions sont mélangées et la bonne réponse suit', () => {
+    const q = { q: 'Question', choices: ['bonne', 'b', 'c', 'd'], answer: 0 }
+    const positions = new Set()
+    for (let k = 0; k < 60; k++) {
+      const m = melangerChoix(q)
+      expect(m.choices[m.answer]).toBe('bonne')
+      expect([...m.choices].sort()).toEqual([...q.choices].sort())
+      positions.add(m.answer)
+    }
+    expect(positions.size).toBeGreaterThan(1)
+    const redac = { q: 'À rédiger', type: 'redac', answer: 'texte' }
+    expect(melangerChoix(redac)).toBe(redac)
   })
 })

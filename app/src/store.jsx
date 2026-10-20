@@ -1,9 +1,9 @@
 import { SHOP_LEVELS, purchaseItem, equipItem, collectReward, walletRevision } from './data/shop.js'
 import { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback } from 'react'
-import { SUBJECTS, ALL_CHAPTERS, chapterGameCount, jeuxJouablesDuTheme } from './data/index.js'
+import { SUBJECTS, ALL_CHAPTERS, chapitreDuJeu, exercicesParChapitre, EXERCICES_POUR_MAITRISER } from './data/index.js'
 import { BADGES } from './badges.js'
 import { envoyerProgression, isSignedIn, refreshSession, fetchProfile, getSession, signOut } from './auth.js'
-import { srsUpdate, todayKey, daysBetween } from './data/srs.js'
+import { srsUpdate, todayKey, daysBetween, addDays } from './data/srs.js'
 import { dailyRewardFor } from './data/rewards.js'
 import { subjectsForTrack, trackLabel } from './data/tracks.js'
 import { publishChildStats, deleteMyChildStats, PARENT_READY } from './parent.js'
@@ -17,20 +17,45 @@ export { CARNET_MAX, mergeProgress, grandOralVide, etudeGestionVide }
 // Modes transverses qui touchent plein de thèmes d'un coup (bac blanc, coach IA,
 // défi, express) : ils enregistrent un score mais NE marquent PAS un thème comme
 // « travaillé », sinon « À réviser » se remplit de thèmes jamais étudiés.
-const CROSS_GAMES = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac'])
+export const CROSS_GAMES = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac'])
 
-// Carnet d'erreurs : une question ratée y entre, une question réussie en sort.
-// La clé repose sur le type d'exercice et l'énoncé, pour retrouver la même
-// question d'un exercice à l'autre.
+// Carnet d'erreurs, révisé question par question (répétition espacée par notion) :
+// - une question ratée y entre (ou y revient) en boîte 0, à revoir le lendemain ;
+// - réussie le jour où elle est due (ou après), elle monte d'une boîte : revue
+//   3 jours plus tard, puis 7 ; à la troisième réussite espacée, elle sort ;
+// - réussie avant son jour, elle ne bouge pas : refaire ses erreurs juste
+//   après une série entraîne, mais ne vide pas le carnet.
+// Tous les modes l'alimentent (exercices, test du thème, bac blanc, défi,
+// coach, sujets) ; une question garde son thème (q.themeId) quand le mode en
+// mélange plusieurs. La clé repose sur le type d'exercice et l'énoncé, pour
+// retrouver la même question d'un exercice à l'autre.
+export const CARNET_INTERVALLES = [1, 3, 7]
 export function cleErreur(type, q) {
-  return `${type}|${String(q?.q || q?.text || q?.statement || '').slice(0, 200)}`
+  return `${type}|${String(q?.q || q?.text || q?.statement || q?.prompt || '').slice(0, 200)}`
 }
 export function majCarnet(erreurs, { themeId, type, ratees = [], reussies = [] }, jour) {
-  const sortent = new Set(reussies.map((q) => cleErreur(type, q)))
-  const nouvelles = ratees.map((q) => ({ id: cleErreur(type, q), themeId, type, q, le: jour }))
-  const entrent = new Set(nouvelles.map((e) => e.id))
-  const restent = (erreurs || []).filter((e) => !sortent.has(e.id) && !entrent.has(e.id))
-  return [...nouvelles, ...restent].slice(0, CARNET_MAX)
+  const parId = new Map((erreurs || []).map((e) => [e.id, e]))
+  for (const q of reussies) {
+    const id = cleErreur(type, q)
+    const e = parId.get(id)
+    if (!e || (e.due && e.due > jour)) continue
+    const boite = (e.boite || 0) + 1
+    if (boite >= CARNET_INTERVALLES.length) parId.delete(id)
+    else parId.set(id, { ...e, boite, le: jour, due: addDays(jour, CARNET_INTERVALLES[boite]) })
+  }
+  const nouvelles = []
+  for (const q of ratees) {
+    const tid = q?.themeId || themeId
+    if (!tid) continue
+    const id = cleErreur(type, q)
+    parId.delete(id)
+    nouvelles.push({ id, themeId: tid, type, q, le: jour, boite: 0, due: addDays(jour, CARNET_INTERVALLES[0]) })
+  }
+  return [...nouvelles, ...parId.values()].slice(0, CARNET_MAX)
+}
+// Erreurs à revoir ce jour-là (les plus anciennes d'abord).
+export function erreursDues(erreurs, jour) {
+  return (erreurs || []).filter((e) => !e.due || e.due <= jour).sort((a, b) => (a.due || '').localeCompare(b.due || ''))
 }
 
 // ---------------------------------------------------------------------------
@@ -372,12 +397,16 @@ export function StoreProvider({ children }) {
         // Suivi hebdomadaire : chapitres distincts travaillés cette semaine ISO.
         const wk = isoWeekKey()
         if (!next.weekly || next.weekly.week !== wk) next.weekly = { week: wk, done: [] }
-        if (chapterId && !next.weekly.done.includes(chapterId)) next.weekly.done = [...next.weekly.done, chapterId]
+        // Un bac blanc, un défi ou le coach touchent beaucoup de thèmes d'un coup :
+        // ils ne remplissent pas l'objectif de la semaine.
+        if (chapterId && !CROSS_GAMES.has(gameId) && !next.weekly.done.includes(chapterId)) next.weekly.done = [...next.weekly.done, chapterId]
         // Répétition espacée : planifie la prochaine révision de ce thème selon le
         // résultat de CETTE séance. Le score du thème garde le meilleur résultat et
         // ne baisse jamais : avec lui, une révision ratée ne rapprochait pas la
         // suivante, et l'oubli passait inaperçu.
-        if (chapterId) next.srs = { ...(next.srs || {}), [chapterId]: srsUpdate(next.srs?.[chapterId], pct, todayKey()) }
+        // Dans un mode transverse, une ou deux questions d'un thème ne suffisent
+        // pas à repousser sa révision.
+        if (chapterId && (!CROSS_GAMES.has(gameId) || total >= 3)) next.srs = { ...(next.srs || {}), [chapterId]: srsUpdate(next.srs?.[chapterId], pct, todayKey()) }
         return evaluateBadges(next)
       })
     },
@@ -863,17 +892,31 @@ export function useThemeTimer(themeId) { useActivityTimer(themeId || null) }
 export function useStudyTimer(themeId = null) { useActivityTimer(themeId || STUDY_BUCKET) }
 
 // ---- Calculs de progression dérivés de l'état ----------------------------
-// Score d'un chapitre = moyenne des meilleurs scores de ses jeux jouables + quiz
-// (les jeux non joués comptent 0), pour une progression toujours visible.
+// Maîtrise d'un thème (« chapterId » : identifiant historique du thème) :
+// - chaque chapitre du cours compte ses 3 meilleurs exercices (un chapitre est
+//   maîtrisé quand 3 de ses exercices sont réussis à 100 %, ou tous s'il en a
+//   moins) ; un chapitre sans exercice ne compte pas ;
+// - la maîtrise du thème est la moyenne de ses chapitres, ou le résultat du
+//   test du thème s'il est meilleur (le test couvre tout le thème).
+// Les modes transverses (bac blanc, défi, coach) ne comptent pas ici.
 export function chapterScore(state, chapterId) {
   if (!ALL_CHAPTERS[chapterId]) return 0
-  const items = chapterGameCount(chapterId) + 1 // + le quiz
   const rec = state.chapters[chapterId]
   if (!rec) return 0
-  let sum = 0
-  for (const g of jeuxJouablesDuTheme(chapterId)) sum += rec.games?.[g.id] || 0
-  sum += rec.quiz || 0
-  return Math.round(sum / items)
+  const nb = exercicesParChapitre(chapterId)
+  const parChapitre = nb.map(() => [])
+  for (const [id, pct] of Object.entries(rec.games || {})) {
+    const i = chapitreDuJeu(chapterId, id)
+    if (i != null && i < nb.length) parChapitre[i].push(Number(pct) || 0)
+  }
+  let somme = 0, comptes = 0
+  nb.forEach((k, i) => {
+    if (!k) return
+    somme += parChapitre[i].sort((a, b) => b - a).slice(0, k).reduce((a, b) => a + b, 0) / k
+    comptes++
+  })
+  const moyenne = comptes ? somme / comptes : 0
+  return Math.min(100, Math.round(Math.max(moyenne, rec.quiz || 0)))
 }
 
 export function starsFromScore(score) {

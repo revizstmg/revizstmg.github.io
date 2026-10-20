@@ -21,9 +21,17 @@ const lire = (rel) => JSON.parse(readFileSync(join(CONTENT, rel), 'utf8'))
 export function construireIndex() {
   const ordre = lire('ordre.json')
   const fichiers = ['ordre.json']
+  // Chapitre de chaque exercice rédigé (exercices-sections.json) : la maîtrise
+  // d'un thème en a besoin dès l'accueil, avant le chargement de la matière.
+  const sections = {}
   const matieres = ordre.map((id) => {
     const m = lire(`${id}/matiere.json`)
     fichiers.push(`${id}/matiere.json`)
+    const sectionsPath = `${id}/exercices-sections.json`
+    if (existsSync(join(CONTENT, sectionsPath))) {
+      Object.assign(sections, lire(sectionsPath))
+      fichiers.push(sectionsPath)
+    }
     const etudesPath = `${id}/etudes-documents.json`
     const etudes = existsSync(join(CONTENT, etudesPath)) ? lire(etudesPath) : {}
     if (Object.keys(etudes).length) fichiers.push(etudesPath)
@@ -45,7 +53,7 @@ export function construireIndex() {
       }),
     }
   })
-  return { ordre, matieres, fichiers }
+  return { ordre, matieres, sections, fichiers }
 }
 
 export default function contenuIndex() {
@@ -56,9 +64,9 @@ export default function contenuIndex() {
     },
     load(id) {
       if (id !== RESOLU) return
-      const { ordre, matieres, fichiers } = construireIndex()
+      const { ordre, matieres, sections, fichiers } = construireIndex()
       for (const f of fichiers) this.addWatchFile(join(CONTENT, f))
-      return `export default ${JSON.stringify({ ordre, matieres })}`
+      return `export default ${JSON.stringify({ ordre, matieres, sections })}`
     },
   }
 }

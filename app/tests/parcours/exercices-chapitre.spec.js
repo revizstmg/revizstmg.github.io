@@ -17,8 +17,8 @@ test('chapitre : une dizaine d’exercices, dont memory, mot manquant et quiz m�
     const entrainement = page.getByRole('button', { name: /Entraînement/ })
     await page.waitForTimeout(300)
     if (await entrainement.count()) await entrainement.click()
-    // Le jeu s'affiche : les cartes du memory, ou la première question.
-    await expect(page.locator('main')).toContainText(attendu)
+    // Le jeu s'affiche en plein écran : les cartes du memory, ou la première question.
+    await expect(page.locator('[data-exercice]')).toContainText(attendu)
     await page.getByRole('button', { name: /Quitter/ }).click()
   }
   expect(erreurs).toEqual([])
@@ -37,7 +37,7 @@ test('maths : calculs du chapitre, de nouveaux nombres à chaque partie', async 
     const entrainement = page.getByRole('button', { name: /Entraînement/ })
     await page.waitForTimeout(300)
     if (await entrainement.count()) await entrainement.click()
-    const enonce = page.locator('main p.whitespace-pre-line').first()
+    const enonce = page.locator('[data-exercice] p.whitespace-pre-line').first()
     await expect(enonce).toBeVisible()
     enonces.push(await enonce.innerText())
     await page.getByRole('button', { name: /Quitter/ }).click()
@@ -58,8 +58,8 @@ test('SDGN Première : les exercices de personnalité restent sur son cours', as
   const entrainement = page.getByRole('button', { name: /Entraînement/ })
   await expect(entrainement).toBeVisible()
   await entrainement.click()
-  await expect(page.locator('main')).toContainText(/Question 1 \//)
-  await expect(page.locator('main')).not.toContainText(/Maslow|Herzberg|qualification|cotisations|capital humain/i)
+  await expect(page.locator('[data-exercice]')).toContainText(/Question 1 \//)
+  await expect(page.locator('[data-exercice]')).not.toContainText(/Maslow|Herzberg|qualification|cotisations|capital humain/i)
   expect(erreurs).toEqual([])
 })
 
@@ -78,13 +78,14 @@ for (const [subject, theme, title, expected] of [
     await page.getByRole('button', { name: /Exercices/ }).click()
     await page.getByRole('button', { name: title }).click()
     await page.getByRole('button', { name: /Entraînement/ }).click()
-    await expect(page.locator('main')).toContainText(expected)
+    const exercice = page.locator('[data-exercice]')
+    await expect(exercice).toContainText(expected)
     if (subject === 'langues') {
-      await expect(page.locator('main')).toContainText(/Question 1 \/ 10/)
-      await expect(page.locator('main input')).toBeVisible()
+      await expect(exercice).toContainText(/Question 1 \/ 10/)
+      await expect(exercice.locator('input')).toBeVisible()
     } else {
       await page.getByRole('button', { name: 'Analyser le sujet', exact: true }).click()
-      await expect(page.locator('main')).toContainText(/Problématiser/)
+      await expect(exercice).toContainText(/Problématiser/)
     }
     expect(erreurs).toEqual([])
   })
