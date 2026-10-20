@@ -112,13 +112,18 @@ export default function Privacy() {
 
       <Section title="7. Durée de conservation">
         <p>Tes données sont conservées <b>tant que ton compte existe</b>. Un compte resté <b>inactif plus de
-        24 mois</b> peut être supprimé après information. À la suppression du compte, tes données personnelles
-        sont <b>effacées</b> : progression, classe et contributions, amis et duels, suivi parent (des sauvegardes
-        techniques transitoires peuvent subsister quelques jours avant rotation). Ton <b>adresse e-mail de
-        connexion</b> est supprimée sur demande à <a href="mailto:revizstmg@gmail.com" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">revizstmg@gmail.com</a>.</p>
-        <p>L'abonnement au rappel téléphone est désactivé dès que tu arrêtes le rappel ou que tu te déconnectes, et
-        effacé avec ton compte. Les signalements d'erreurs sont gardés le temps de corriger le contenu ; à la
-        suppression du compte, ils n'y sont plus rattachés.</p>
+        24 mois</b> peut être supprimé après information.</p>
+        <p>Quand tu supprimes ton compte (« Supprimer mon compte » dans <Link to="/moi" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">Mon espace</Link>),
+        tout est <b>effacé aussitôt</b> : ton compte de connexion et ton <b>adresse e-mail</b>, ta progression et tes
+        notes, ta classe et tes contributions, tes amis et tes duels, le suivi parent, tes signalements d'erreurs,
+        ton abonnement au rappel téléphone, et tout ce que l'application gardait sur l'appareil où tu fais la
+        suppression. Le code du site, publié sur GitHub, ne contient aucune donnée d'élève.</p>
+        <p>Il ne reste, pour une durée limitée, que ce qui échappe à l'application : les journaux techniques et
+        sauvegardes de l'hébergeur (Supabase), effacés à leur rotation ; les e-mails que tu nous aurais écrits, que
+        nous supprimons sur demande ; et la copie locale gardée par un autre appareil où tu étais connecté, jusqu'à
+        ce que tu t'y déconnectes ou effaces les données du site.</p>
+        <p>L'abonnement au rappel téléphone est aussi désactivé dès que tu arrêtes le rappel ou que tu te
+        déconnectes. Les signalements d'erreurs sont gardés le temps de corriger le contenu.</p>
       </Section>
 
       <Section title="8. Sécurité">

@@ -15,7 +15,7 @@ a-valider/         modifications prêtes mais pas encore appliquées (accord à 
 Ces fichiers ne sont **pas encore** appliqués sur Supabase. L'accord est donné
 (13 octobre 2026), mais ils retirent ou remplacent des éléments : l'outil de
 Claude exige alors une confirmation qu'il ne peut pas obtenir. Le propriétaire les
-applique en collant `a-valider/A_COLLER_DANS_SUPABASE.sql` (les trois fichiers
+applique en collant `a-valider/A_COLLER_DANS_SUPABASE.sql` (les deux fichiers
 numérotés, dans une transaction) dans Supabase → SQL Editor. Ensuite, chaque
 fichier passe dans `migrations/` avec l'horodatage de son application.
 
@@ -23,12 +23,21 @@ fichier passe dans `migrations/` avec l'horodatage de son application.
    comptes (identifiants d'appareil qui ne correspondent à aucun compte).
 2. `2_revizstmg_securite_2_regles.sql` : remplace les règles « ouvertes à tous »
    des 16 tables sociales (voir « Règles d'accès » plus bas).
-3. `3_revizstmg_suppression_compte.sql` : `revizstmg_supprimer_compte()`, la
-   suppression complète du compte par l'élève (e-mail de connexion compris).
 
 Tant qu'ils ne sont pas appliqués, l'application fonctionne avec les anciennes
-règles, mais « Supprimer mon compte » échoue proprement (message d'erreur, compte
-intact).
+règles.
+
+## Suppression complète du compte (appliquée le 19 octobre 2026)
+
+`migrations/20261019075848_revizstmg_suppression_compte.sql` :
+`revizstmg_supprimer_compte()`, appelée par « Supprimer mon compte » (élève
+connecté, pour son seul compte). Elle efface tout ce que l'élève a publié ou
+envoyé : classe (membre, résultats, mur, duels lancés ou reçus, exclusions), direct,
+classement, amis et défis, suivi parent, signalements d'erreurs, abonnements aux
+rappels, jetons de connexion ; pour un professeur, ses QCM, sessions en direct et
+classes. Puis le profil (progression comprise) et le compte de connexion, e-mail
+compris. NAH étant supprimé, ce compte n'est plus partagé. L'application vide
+ensuite tout le stockage du navigateur et redémarre.
 
 ## Rappels sur le téléphone (appliqué le 13 octobre 2026)
 
@@ -44,8 +53,9 @@ n'a pas encore révisé ce jour-là.
 `supabase/tests/lancer.sh [a-valider/A_COLLER_DANS_SUPABASE.sql]` monte une base
 PostgreSQL locale et jetable, imite Supabase (`imitation-supabase.sql`), applique
 toutes les migrations et joue `regles-acces.sql` : un élève, un autre élève hors de
-la classe, le professeur, un parent sans compte et la suppression du compte. Rien
-ne touche la vraie base.
+la classe, le professeur, un parent sans compte et la suppression du compte (une
+ligne « t » par vérification réussie, « f » si elle échoue). Rien ne touche la
+vraie base.
 
 ## Comptage et mesure d'audience (appliqué le 12 octobre 2026)
 
