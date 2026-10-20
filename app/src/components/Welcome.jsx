@@ -520,6 +520,8 @@ export default function Welcome() {
             <button type="button" className="welcome-cta" disabled={!step1Ok || busy} onClick={() => submitForm()}>{busy ? t('pleaseWait') : t('loginTab')}</button>
             <button type="button" className="welcome-skip" disabled={busy} onClick={goCreate}>{t('noAccountYet')}</button>
             <button type="button" className="welcome-skip !mt-5 !rounded-xl !border !border-slate-400 !px-4 !py-3 !font-semibold" disabled={busy} onClick={() => { setEssai(true); setErr(''); setInfo('') }}>Essayer sans compte</button>
+            {/* Cours publics (/cours/) : lisibles sans compte, et indexés par les moteurs. */}
+            <a href="/cours/" className="welcome-skip !mt-3 block text-center underline underline-offset-4">Lire les cours sans inscription</a>
           </>
         ) : (
           /* ---------- Inscription en étapes ---------- */

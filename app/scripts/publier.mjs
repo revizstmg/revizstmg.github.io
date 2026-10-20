@@ -6,7 +6,7 @@
 // ceux de la version précédente en plus de la nouvelle : un élève qui a encore
 // l'ancienne version ouverte doit pouvoir charger les fichiers qu'elle demande.
 // Tout le reste (versions plus anciennes) est supprimé.
-import { readdirSync, readFileSync, copyFileSync, mkdirSync, rmSync, existsSync, statSync } from 'node:fs'
+import { readdirSync, readFileSync, copyFileSync, cpSync, mkdirSync, rmSync, existsSync, statSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 
 const DIST = resolve(process.argv[2] || 'dist')
@@ -33,6 +33,9 @@ for (const f of nouveaux) copyFileSync(join(DIST, 'assets', f), join(SITE, 'asse
 for (const f of readdirSync(DIST)) {
   if (f === 'assets') continue
   if (statSync(join(DIST, f)).isFile()) copyFileSync(join(DIST, f), join(SITE, f))
+  // Autres dossiers (pages de cours statiques, /cours/) : remplacés en entier,
+  // pour qu'un chapitre renommé ou retiré ne laisse pas d'ancienne page.
+  else { rmSync(join(SITE, f), { recursive: true, force: true }); cpSync(join(DIST, f), join(SITE, f), { recursive: true }) }
 }
 
 const garder = new Set([...nouveaux, ...precedents])
