@@ -285,7 +285,7 @@ export default function PhotoFiche() {
       )}
 
       <div className="text-center">
-        <Link to="/revision" className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">← Retour à la révision</Link>
+        <Link to="/revision" className="lien-retour">← Retour à la révision</Link>
       </div>
     </div>
   )

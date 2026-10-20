@@ -106,7 +106,7 @@ export default function Guide() {
       </div>
 
       <div className="flex flex-wrap gap-2 pt-1">
-        <Link to="/accueil" className="btn-ghost !min-h-0 !py-2 text-sm">← Retour</Link>
+        <Link to="/accueil" className="lien-retour">← Retour à l’accueil</Link>
         <Link to="/faq" className="btn-ghost !min-h-0 !py-2 text-sm">Foire aux questions →</Link>
       </div>
     </div>

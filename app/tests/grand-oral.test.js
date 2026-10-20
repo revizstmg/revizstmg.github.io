@@ -1,13 +1,14 @@
 // Grand Oral (Terminale STMG) : règles de la session 2027, grille des arguments
 // avec son critère d'oral, préparation exportée et fusion appareil ↔ compte.
 import { describe, it, expect } from 'vitest'
-import { commun } from '../src/content/contenu.js'
+import GRAND_ORAL from '../content/commun/grand-oral.json'
+import OUTILS_PROJET from '../content/commun/outils-projet.json'
 import { preparationTexte, noteAutoEval } from '../src/pages/GrandOral.jsx'
 import { noteArgument, critereRempli } from '../src/components/DossierProjet.jsx'
 import { mergeProgress, grandOralVide } from '../src/store.jsx'
 
-const C = commun('grand-oral')
-const O = commun('outils-projet')
+const C = GRAND_ORAL
+const O = OUTILS_PROJET
 const source = { id: 's1', type: 'Rapport ou étude', titre: 'Les délais de paiement', auteur: 'Banque de France', date: '2026', lien: '' }
 
 describe('Grand Oral', () => {

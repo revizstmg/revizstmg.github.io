@@ -67,7 +67,7 @@ export default function SujetBac({ sujet, color = 'var(--c-accent)', onExit }) {
         </span>
       </div>
       {Comp && <Comp key={partie} game={p.game} color={color} onDone={terminerPartie} />}
-      <button onClick={onExit} className="text-sm text-slate-500 hover:underline dark:text-slate-400">← {t('quit')}</button>
+      <button onClick={onExit} className="lien-retour">← {t('quit')}</button>
     </div>
   )
 }

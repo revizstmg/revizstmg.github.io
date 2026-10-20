@@ -607,7 +607,7 @@ function QuizTake({ quiz, name, t, onDone, onBack }) {
   }
   return (
     <div className="space-y-3">
-      <button onClick={onBack} className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">← {t('backToQuizzes')}</button>
+      <button onClick={onBack} className="lien-retour">← {t('backToQuizzes')}</button>
       <h2 className="font-display text-xl font-semibold">{quiz.title || t('quizUntitled')}</h2>
       {transmission ? <section className="card space-y-3 p-5" aria-live="polite"><h3 className="font-display text-xl">QCM terminé</h3><p>{transmission.result.score} / {transmission.result.total}</p><p>{transmission.status==='sent' ? 'Ton résultat a été transmis au professeur.' : transmission.status==='sending' ? 'Transmission en cours…' : transmission.status==='pending' ? 'Résultat conservé sur cet appareil. Il sera renvoyé au retour du réseau.' : 'Le stockage est indisponible. Garde cette page ouverte et réessaie pour ne pas perdre ton résultat.'}</p><button className="btn-gold" disabled={transmission.status==='sending'} onClick={transmission.status==='sent'?onDone:()=>handleDone({correct:transmission.result.score,total:transmission.result.total})}>{transmission.status==='sent'?'Voir les résultats':'Réessayer l’envoi'}</button></section> : <Qcm game={game} mode="training" color="var(--c-accent)" onDone={handleDone} />}
     </div>
@@ -625,7 +625,7 @@ function QuizResults({ quiz, role, accountId, t, onBack, onReplay }) {
   useEffect(() => { load() }, [load])
   return (
     <div className="space-y-3">
-      <button onClick={onBack} className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">← {t('backToQuizzes')}</button>
+      <button onClick={onBack} className="lien-retour">← {t('backToQuizzes')}</button>
       <div className="flex items-end justify-between gap-3">
         <h2 className="font-display text-xl font-semibold">{t('quizRanking')} · {quiz.title || t('quizUntitled')}</h2>
         <button onClick={onReplay} disabled={!quiz.questions?.length} className="btn-ghost shrink-0 !min-h-0 !py-2 text-sm">{t('playQuiz')}</button>
@@ -704,7 +704,7 @@ function QuizBuilder({ classCode, authorName, accountId, propose, t, onCancel, o
   }
   return (
     <div className="space-y-4">
-      <button onClick={onCancel} className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">← {t('backToQuizzes')}</button>
+      <button onClick={onCancel} className="lien-retour">← {t('backToQuizzes')}</button>
       <h2 className="font-display text-2xl font-medium">{propose ? t('proposeQuestion') : t('createQuiz')}</h2>
       {propose && <p className="-mt-2 text-sm text-slate-500 dark:text-slate-400">{t('proposeHint')}</p>}
       <div className="card p-4">
@@ -782,7 +782,7 @@ function DuelList({ classCode, name, t }) {
   if (view === 'pickQuiz') {
     return (
       <div className="space-y-3">
-        <button onClick={() => setView('list')} className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">← {t('back')}</button>
+        <button onClick={() => setView('list')} className="lien-retour">← {t('back')}</button>
         <h2 className="font-display text-xl font-semibold">{t('pickQuizForDuel')}</h2>
         {quizzes.length === 0 && <Empty>{t('noQuizForDuel')}</Empty>}
         {quizzes.map((qz) => (
@@ -806,7 +806,7 @@ function DuelList({ classCode, name, t }) {
     }
     return (
       <div className="space-y-3">
-        <button onClick={() => { setCtx(null); setView('list') }} className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">← {t('back')}</button>
+        <button onClick={() => { setCtx(null); setView('list') }} className="lien-retour">← {t('back')}</button>
         <h2 className="font-display text-xl font-semibold">⚔️ {ctx.quiz.title || t('quizUntitled')}</h2>
         <Qcm game={game} mode="training" color="var(--c-accent)" onDone={onDone} />
       </div>

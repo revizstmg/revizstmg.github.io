@@ -144,6 +144,12 @@
     background: transparent;
     box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 38%, transparent);
   }
+  /* Retour ou sortie (« ← … ») : même apparence sur toutes les pages, assez
+     grande pour le doigt. La croix ✕ reste réservée à la fermeture d'une fenêtre. */
+  .lien-retour {
+    @apply inline-flex min-h-[44px] items-center gap-1.5 text-sm font-semibold underline-offset-4 hover:underline;
+    color: var(--c-accent-texte);
+  }
   .btn-ghost:hover {
     background: color-mix(in srgb, var(--c-accent) 10%, transparent);
     box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 60%, transparent);

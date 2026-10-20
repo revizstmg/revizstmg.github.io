@@ -91,7 +91,7 @@ export default function Calcul({ game, mode, color, onDone }) {
           }`}
           aria-label={t('numericAnswer')}
         />
-        {q.unit && <span className="grid place-items-center rounded-xl bg-slate-100 px-4 text-lg font-bold text-slate-500 dark:bg-slate-800">{q.unit}</span>}
+        {q.unit && <span className="grid place-items-center rounded-xl bg-slate-100 px-4 text-lg font-bold text-slate-500 dark:text-slate-400 dark:bg-slate-800">{q.unit}</span>}
       </div>
 
       {!checked ? (

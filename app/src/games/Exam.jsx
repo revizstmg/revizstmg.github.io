@@ -160,7 +160,7 @@ export default function Exam({ questions, durationSec = 1200, color = '#7c3aed',
   return (
     <div className="animate-pop-in">
       <div className="mb-3 flex items-center justify-between">
-        <button onClick={onExit} className="text-sm text-slate-500 hover:text-violet-600">← {t('quit')}</button>
+        <button onClick={onExit} className="lien-retour">← {t('quit')}</button>
         <span className={`chip gap-1.5 font-bold ${low ? 'animate-pulse text-rose-600 ring-1 ring-rose-300' : 'text-slate-600 ring-1 ring-slate-200 dark:text-slate-300 dark:ring-slate-700'}`}>⏱ {fmt(left)}</span>
       </div>
 
@@ -190,7 +190,7 @@ export default function Exam({ questions, durationSec = 1200, color = '#7c3aed',
         </div>
 
         <div className="mt-4 flex items-center justify-between gap-2">
-          <button onClick={() => setI((v) => Math.max(0, v - 1))} disabled={i === 0} className="btn-ghost disabled:opacity-40">←</button>
+          <button onClick={() => setI((v) => Math.max(0, v - 1))} disabled={i === 0} aria-label={t('previous')} className="btn-ghost disabled:opacity-40">←</button>
           {i + 1 < total ? (
             <button onClick={() => setI((v) => Math.min(total - 1, v + 1))} className="btn-primary flex-1" style={{ backgroundColor: color }}>{t('next')} →</button>
           ) : (

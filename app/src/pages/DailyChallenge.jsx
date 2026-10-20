@@ -44,7 +44,7 @@ export default function DailyChallenge() {
             🔥 {t('challengeStreak')} : {dc.streak || 0} · 🏆 {t('best')} : {dc.best || 0}
           </div>
         </div>
-        <button onClick={() => navigate('/accueil')} className="btn-ghost !min-h-0 !py-2 text-sm">← {t('backHome')}</button>
+        <button onClick={() => navigate('/accueil')} className="lien-retour">← {t('backHome')}</button>
       </div>
     )
   }
@@ -54,7 +54,7 @@ export default function DailyChallenge() {
       <div className="animate-lux mx-auto max-w-md space-y-5 text-center">
         <Header t={t} />
         <div className="card p-6 text-sm text-slate-500 dark:text-slate-400">{t('challengeSoon')}</div>
-        <button onClick={() => navigate('/accueil')} className="btn-ghost !min-h-0 !py-2 text-sm">← {t('backHome')}</button>
+        <button onClick={() => navigate('/accueil')} className="lien-retour">← {t('backHome')}</button>
       </div>
     )
   }

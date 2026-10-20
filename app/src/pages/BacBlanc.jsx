@@ -4,6 +4,8 @@ import { useStore, useStudyTimer } from '../store.jsx'
 import { buildExam, examSubjects } from '../data/study.js'
 import Exam from '../games/Exam.jsx'
 import SujetBac from '../games/SujetBac.jsx'
+import SujetMaths from '../games/SujetMaths.jsx'
+import { BO_MATHS } from '../data/sujetMaths.js'
 import { composerSujet, sujetsDisponibles } from '../data/sujetBac.js'
 import { useT } from '../i18n.js'
 
@@ -38,6 +40,7 @@ function BacBlancPage() {
   const [exam, setExam] = useState(null) // { questions, durationSec }
   const [sujet, setSujet] = useState(null) // sujet au format de l'épreuve en cours
   const [sansSujet, setSansSujet] = useState(false)
+  const [sujetMaths, setSujetMaths] = useState(false)
   const sujets = sujetsDisponibles(state.track)
   const lancerSujet = (id) => { const s = composerSujet(id, state.track); setSansSujet(!s); setSujet(s) }
 
@@ -51,6 +54,7 @@ function BacBlancPage() {
   }
 
   if (sujet) return <SujetBac sujet={sujet} onExit={() => setSujet(null)} />
+  if (sujetMaths) return <SujetMaths onExit={() => setSujetMaths(false)} />
 
   if (exam && exam.questions.length >= 4) {
     return <Exam questions={exam.questions} durationSec={exam.durationSec} color="var(--c-accent)" onExit={() => setExam(null)} />
@@ -90,9 +94,10 @@ function BacBlancPage() {
       {premiere && (
         <section className="card p-5">
           <h2 className="font-display text-xl font-medium">➗ Épreuve anticipée de mathématiques</h2>
-          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">Le 21 juin 2027. Son format pour la session 2027 est fixé par le Bulletin officiel spécial n° 4 du 17 septembre 2026 : vérifie-le avec ton professeur.</p>
-          <p className="mt-1 text-xs text-slate-500 dark:text-slate-400"><a href="https://www.education.gouv.fr/sites/default/files/document/bulletin-officiel-special-ndeg-4-du-17-septembre-2026-521113.pdf" target="_blank" rel="noopener" className="underline">Bulletin officiel spécial n° 4 (PDF)</a></p>
-          <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Pour travailler les automatismes de calcul : choisis « Maths » ci-dessous et réponds sans calculatrice.</p>
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">Le 21 juin 2027, au titre de la session 2028 du bac. 2 heures, sans calculatrice : une partie d’automatismes à réponses courtes (6 points), puis deux ou trois exercices (14 points). 2 points sur 20 portent sur la maîtrise de la langue.</p>
+          <p className="mt-1 text-xs text-slate-500 dark:text-slate-400"><a href={BO_MATHS} target="_blank" rel="noopener" className="underline">Note de service du 11 septembre 2026, Bulletin officiel spécial n° 4 (PDF)</a></p>
+          <button onClick={() => setSujetMaths(true)} className="btn-gold mt-4 w-full !py-3">Faire un sujet d’entraînement (2 h)</button>
+          <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">Sujet composé par l’application au format de l’épreuve, avec une correction détaillée. Ce n’est pas un sujet officiel.</p>
         </section>
       )}
 

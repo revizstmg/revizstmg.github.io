@@ -95,7 +95,7 @@ export default function CoachSession({ training, color = 'var(--c-accent)', onEx
     return (
       <div className="card p-6 text-center">
         <p className="text-sm text-slate-500 dark:text-slate-400">{t('notEnoughQuestions')}</p>
-        <button onClick={onExit} className="btn-ghost mt-4">← {t('quit')}</button>
+        <button onClick={onExit} className="lien-retour mt-4">← {t('quit')}</button>
       </div>
     )
   }
@@ -103,7 +103,7 @@ export default function CoachSession({ training, color = 'var(--c-accent)', onEx
   return (
     <div className="animate-pop-in">
       <div className="mb-3 flex items-center justify-between">
-        <button onClick={onExit} className="text-sm text-slate-500 hover:text-violet-600">← {t('quit')}</button>
+        <button onClick={onExit} className="lien-retour">← {t('quit')}</button>
         <span className="chip gap-1.5 text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-800 tabular-nums">
           {Math.min(i + 1, queue.length)} / {queue.length}
         </span>

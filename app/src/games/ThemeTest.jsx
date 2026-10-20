@@ -89,7 +89,7 @@ export default function ThemeTest({ theme, color, onExit }) {
     return (
       <div className="animate-pop-in">
         <div className="mb-3 flex items-center justify-between">
-          <button onClick={onExit} className="text-sm text-slate-500 hover:text-violet-600">← {t('quit')}</button>
+          <button onClick={onExit} className="lien-retour">← {t('quit')}</button>
           <span className="chip bg-violet-100 text-violet-700 dark:bg-violet-950/50 dark:text-violet-300">{t('part1Qcm')}</span>
         </div>
         <Qcm
@@ -177,7 +177,7 @@ function WrittenPart({ items, color, onExit, onDone }) {
   return (
     <div className="animate-pop-in">
       <div className="mb-3 flex items-center justify-between">
-        <button onClick={onExit} className="text-sm text-slate-500 hover:text-violet-600">← {t('quit')}</button>
+        <button onClick={onExit} className="lien-retour">← {t('quit')}</button>
         <span className="chip bg-sky-100 text-sky-700 dark:bg-sky-950/50 dark:text-sky-300">{t('part2Written')}</span>
       </div>
       <div className="card p-5">

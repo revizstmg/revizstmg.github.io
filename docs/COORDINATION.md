@@ -80,6 +80,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | POINTS10-28-20261020-CODEX-01 | Codex | Points 10–28 : atelier (10/23), classe/réseau (11/18), calendrier (12/22), UI (14/16/20/21/24/25), PWA (17), dossiers préparatoires (13/15/19/26/27/28) | Terminé (lot livré, suites ouvertes) | `feat/points-10-28` / [PR #30](https://github.com/revizstmg/revizstmg.github.io/pull/30) | Point 10 intégré avec #31 : une seule barre ; suites partielles tracées dans le bilan. Base de production non modifiée sans accord explicite. |
 
+| FINITIONS-20261020-CLAUDE-01 | Claude | Demande du propriétaire (« termine alors tout ») : suites des points 10–28 restés partiels ou non faits après la limite de Codex — 6/7 (études de documents par thème), 13 (sujets de maths anticipée), 14 (axe), 18 (duel), 19 (code parent), 25 (retours), 27 (vitesse) ; #35 fusionnée, #24 fermée avec note | Terminé (15 et 26 : décision ou relecture du propriétaire) | [PR #36](https://github.com/revizstmg/revizstmg.github.io/pull/36), [PR #37](https://github.com/revizstmg/revizstmg.github.io/pull/37) | Voir l'entrée détaillée ci-dessous |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -756,3 +758,32 @@ Prochaine action :
 
 - #35 : paragraphe actualisé et traduit hors ligne dans les quatre langues ;
   retrait de l’ancienne description d’espaces encore ouverts. Recette en cours.
+
+### FINITIONS-20261020-CLAUDE-01 — Claude — 20 octobre 2026
+
+- Demande du propriétaire : terminer ce qui restait de la liste des 28 points
+  après la limite de Codex. Le statut de Codex et ses entrées ne sont pas modifiés.
+- #35 (confidentialité, Codex) passée en prête et fusionnée à la demande du
+  propriétaire, CI verte ; #24 (audit du 19 octobre) fermée avec une note : ses
+  trois anomalies sont corrigées (écriture GF dans #28, dossiers et responsabilité
+  des associés dans #36).
+- PR #36 (fusionnée) : 17 études de documents retirées des chapitres et ouvertes
+  depuis l'onglet « Outils » du thème ; droit-t8 précisé (SARL/SAS, cas de la
+  SNC) ; code parent de 10 caractères tiré par `crypto` et bouton « Renouveler
+  le code » (suppression puis republication, sans changement de base) ; score
+  de duel gardé et renvoyable si l'envoi échoue.
+- PR #37 : test axe permanent (21 pages, clair et sombre, fenêtre, exercice) et
+  corrections de contraste ; style commun `lien-retour` pour tous les retours,
+  avec un test ; démarrage plus léger (données propres à une page chargées
+  avec elle, polices variables : 336 → 288 ko sur l'accueil émulé, mesure dans
+  `audits/2026-10-20/PERFORMANCE-TELEPHONE.md`) ; sujets d'entraînement à
+  l'épreuve anticipée de mathématiques au format du BO (session 2028), avec
+  correction ; la page Bac blanc disait « session 2027 », corrigé en 2028.
+- Restent au propriétaire : point 15 (gains vérifiés par le serveur) seulement
+  utile avant d'activer des offres payantes, dont le contenu n'est pas décidé —
+  contrat dans `audits/2026-10-20/DEPENDANCES-SERVEUR.md` ; point 26 (relecture
+  humaine des traductions) — grille dans `audits/2026-10-20/RELECTURE-ET-SUJETS.md`.
+  Sujets complets de droit-économie et de management : documents réels sourcés
+  et relecture d'un professeur nécessaires, non inventés ici.
+- Aucune action sur la base Supabase dans ce lot ; tests sans accès à la vraie base.
+

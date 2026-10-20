@@ -1,5 +1,5 @@
-import { commun } from '../content/contenu.js'
-export const FORMULA_PRACTICE = commun('atelier-formules')
+import ATELIER from '../../content/commun/atelier-formules.json'
+export const FORMULA_PRACTICE = ATELIER
 const categories = ['Mathématiques', 'Management', 'Économie']
 const specialties = {'gestion-finance':'Gestion & Finance',mercatique:'Mercatique','rh-communication':'Ressources humaines'}
 export function formulasForTrack(track) {
