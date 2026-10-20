@@ -43,6 +43,15 @@ export function answerMatchesCours(input, answer, alt = []) {
   return [answer, ...alt].some((a) => sansHabillage(a) === n)
 }
 
+// Mélange les propositions d'une question et recale l'indice de la bonne
+// réponse. Les QCM des études de documents sont écrits avec la bonne réponse
+// en premier : sans ce mélange, la réponse serait toujours « A ».
+export function melangerChoix(q) {
+  if (!q || q.type === 'redac' || !Array.isArray(q.choices) || !Number.isInteger(q.answer)) return q
+  const ordre = shuffle(q.choices.map((_, k) => k))
+  return { ...q, choices: ordre.map((k) => q.choices[k]), answer: ordre.indexOf(q.answer) }
+}
+
 export function shuffle(arr) {
   const a = [...arr]
   for (let i = a.length - 1; i > 0; i--) {

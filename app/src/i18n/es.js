@@ -281,7 +281,7 @@ export default {
   smartRevision: 'Repaso inteligente', smartRevisionSub: 'Te proponemos primero lo que vas a olvidar y tus puntos débiles.',
   toReviewToday: 'Por repasar', weakPoints: 'Puntos débiles', neverSeen: 'Nunca vistos', reviseNow: 'Repasar ahora', priorityList: 'Repasar primero',
   reasonDue: 'Por repasar', reasonWeak: 'Punto débil', reasonNew: 'Nuevo', reasonReview: 'Consolidar', masteredThemes: 'Temas dominados',
-  mockExam: 'Examen de prueba', mockExamSub: 'Un examen cronometrado, corregido y sobre 20, como el día real.',
+  mockExam: 'Examen de prueba', mockExamSub: 'Exámenes con el formato de las pruebas escritas y un test cronometrado para comprobar tus conocimientos, asignatura por asignatura.',
   chooseSubject: 'Elige la asignatura', wholeTrack: 'Toda la rama', duration: 'Duración', questionsShort: 'preguntas',
   startExam: 'Empezar el examen', notEnoughQuestions: 'No hay suficientes preguntas para esta selección — elige otra asignatura.',
   examNote: 'Sin corrección durante el examen: todo se muestra al final.', examResult: 'Resultado del examen', submitExam: 'Entregar', answered: 'respondidas',

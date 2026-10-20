@@ -281,7 +281,7 @@ export default {
   smartRevision: 'Smart revision', smartRevisionSub: 'We surface first what you’re about to forget and your weak spots.',
   toReviewToday: 'To review', weakPoints: 'Weak spots', neverSeen: 'Never seen', reviseNow: 'Revise now', priorityList: 'Review first',
   reasonDue: 'Due', reasonWeak: 'Weak spot', reasonNew: 'New', reasonReview: 'To consolidate', masteredThemes: 'Mastered themes',
-  mockExam: 'Mock exam', mockExamSub: 'A timed exam, graded out of 20 with a full correction, like the real day.',
+  mockExam: 'Mock exam', mockExamSub: 'Papers in the format of the written exams, and a timed multiple-choice quiz to check your knowledge, subject by subject.',
   chooseSubject: 'Choose the subject', wholeTrack: 'Whole track', duration: 'Duration', questionsShort: 'questions',
   startExam: 'Start the exam', notEnoughQuestions: 'Not enough questions for this selection — pick another subject.',
   examNote: 'No correction during the exam: everything shows at the end.', examResult: 'Mock exam result', submitExam: 'Submit', answered: 'answered',

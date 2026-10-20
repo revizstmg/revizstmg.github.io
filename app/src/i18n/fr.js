@@ -264,7 +264,7 @@ export default {
   smartRevision: 'Révision intelligente', smartRevisionSub: 'On te propose en priorité ce que tu risques d’oublier et tes points faibles.',
   toReviewToday: 'À revoir', weakPoints: 'Points faibles', neverSeen: 'Jamais vus', reviseNow: 'Réviser maintenant', priorityList: 'À réviser en priorité',
   reasonDue: 'À revoir', reasonWeak: 'Point faible', reasonNew: 'Nouveau', reasonReview: 'À consolider', masteredThemes: 'Thèmes maîtrisés',
-  mockExam: 'Bac blanc', mockExamSub: 'Un examen chronométré, corrigé et noté sur 20, comme le jour J.',
+  mockExam: 'Bac blanc', mockExamSub: 'Des sujets au format des épreuves écrites, et un QCM chronométré pour vérifier tes connaissances, matière par matière.',
   chooseSubject: 'Choisis la matière', wholeTrack: 'Toute la filière', duration: 'Durée', questionsShort: 'questions',
   startExam: 'Commencer l’examen', notEnoughQuestions: 'Pas assez de questions pour cette sélection — choisis une autre matière.',
   examNote: 'Aucune correction pendant l’épreuve : tout s’affiche à la fin.', examResult: 'Résultat du bac blanc', submitExam: 'Rendre ma copie', answered: 'répondu(es)',

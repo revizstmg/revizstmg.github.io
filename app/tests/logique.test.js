@@ -9,7 +9,7 @@ import { BADGES } from '../src/badges.js'
 import { CALC, makeCalcSet } from '../src/calc.js'
 import { LEVELS, subjectsForTrack, trackLabel } from '../src/data/tracks.js'
 import { ALL_CHAPTERS, SUBJECTS, jeuxJouablesDuTheme, chapitreDuJeu, chargerPourTheme, exercicesParChapitre, notionDuChoix } from '../src/data/index.js'
-import { answerMatches, answerMatchesCours } from '../src/games/common.jsx'
+import { answerMatches, answerMatchesCours, melangerChoix } from '../src/games/common.jsx'
 import { avecGraine, empreinte } from './outils.js'
 
 const vide = () => ({ xp: 0, streak: { count: 0 }, badges: [], chapters: {}, favorites: [], themeTime: {}, totalAnswers: 0, correctAnswers: 0 })
@@ -342,5 +342,21 @@ describe('score d’un thème, cours chargé', () => {
     expect(notionDuChoix('gf-t1', 'tva déductible')).toMatchObject({ def: 'Sur les achats → créance sur l’État', est: 'terme' })
     expect(notionDuChoix('gf-t1', 'une réponse inventée')).toBeNull()
     expect(notionDuChoix('theme-inexistant', 'TVA')).toBeNull()
+  })
+})
+
+describe('études de documents', () => {
+  it('les propositions sont mélangées et la bonne réponse suit', () => {
+    const q = { q: 'Question', choices: ['bonne', 'b', 'c', 'd'], answer: 0 }
+    const positions = new Set()
+    for (let k = 0; k < 60; k++) {
+      const m = melangerChoix(q)
+      expect(m.choices[m.answer]).toBe('bonne')
+      expect([...m.choices].sort()).toEqual([...q.choices].sort())
+      positions.add(m.answer)
+    }
+    expect(positions.size).toBeGreaterThan(1)
+    const redac = { q: 'À rédiger', type: 'redac', answer: 'texte' }
+    expect(melangerChoix(redac)).toBe(redac)
   })
 })

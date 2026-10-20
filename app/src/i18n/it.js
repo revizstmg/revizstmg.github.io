@@ -281,7 +281,7 @@ export default {
   smartRevision: 'Ripasso intelligente', smartRevisionSub: 'Ti proponiamo in via prioritaria ciò che rischi di dimenticare e i tuoi punti deboli.',
   toReviewToday: 'Da rivedere', weakPoints: 'Punti deboli', neverSeen: 'Mai visti', reviseNow: 'Ripassa ora', priorityList: 'Da ripassare per primi',
   reasonDue: 'Da rivedere', reasonWeak: 'Punto debole', reasonNew: 'Nuovo', reasonReview: 'Da consolidare', masteredThemes: 'Temi padroneggiati',
-  mockExam: 'Simulazione d’esame', mockExamSub: 'Un esame a tempo, corretto e valutato su 20, come il giorno vero.',
+  mockExam: 'Simulazione d’esame', mockExamSub: 'Prove nel formato degli esami scritti e un quiz a tempo per verificare le tue conoscenze, materia per materia.',
   wholeTrack: 'Tutto l’indirizzo', duration: 'Durata', questionsShort: 'domande',
   startExam: 'Inizia l’esame', notEnoughQuestions: 'Non ci sono abbastanza domande per questa selezione — scegli un’altra materia.',
   examNote: 'Nessuna correzione durante la prova: tutto appare alla fine.', examResult: 'Risultato della simulazione', submitExam: 'Consegna il compito',

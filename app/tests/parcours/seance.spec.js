@@ -100,3 +100,13 @@ test('accueil du professeur : ses classes et les élèves à relancer', async ({
   await expect(page.getByRole('link', { name: /Ma séance du jour/ })).toHaveCount(0)
   expect(erreurs).toEqual([])
 })
+
+test('bac blanc : une matière à la fois, et l’épreuve anticipée de maths en Première', async ({ page }) => {
+  const erreurs = await preparer(page, etatEleve({ track: { level: 'premiere-stmg' } }))
+  await page.goto('./#/bac-blanc')
+  await attendreAccueil(page)
+  await expect(page.getByRole('heading', { name: /Épreuve anticipée de mathématiques/ })).toBeVisible()
+  await expect(page.getByRole('button', { pressed: true })).toHaveText(/Maths/)
+  await expect(page.getByText('Ce n’est pas le format de l’épreuve écrite.', { exact: false })).toBeVisible()
+  expect(erreurs).toEqual([])
+})

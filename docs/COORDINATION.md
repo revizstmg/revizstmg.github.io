@@ -590,6 +590,20 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
     construction, 133 parcours Playwright.
   - Mesure d'audience : `/cours` compte pour « matiere » et `/seance` pour
     « revision », sans changer la fonction SQL (accord du propriétaire requis).
+- Problème 9 (épreuves), en partie, même branche :
+  - le Bulletin officiel spécial n° 4 du 17 septembre 2026 (NOR MENE2622652N
+    pour la STMG) n'a pas pu être lu : le site du ministère est bloqué par le
+    réseau de l'environnement ; seuls des extraits de moteur de recherche sont
+    lisibles (épreuves de 4 h, coefficient 16, dossiers documentaires). Aucun
+    nouveau sujet n'a donc été écrit : ce serait inventer ;
+  - fait : propositions des 85 QCM d'études de documents mélangées à chaque
+    partie (`games/common.jsx`, `melangerChoix`) ; bac blanc QCM matière par
+    matière par défaut, présenté comme un QCM et après les sujets au format de
+    l'épreuve ; carte de l'épreuve anticipée de mathématiques pour la Première
+    (date du calendrier officiel, renvoi au Bulletin, sans format inventé) ;
+  - reste : écrire de vrais sujets par épreuve (barème, corrigé) après lecture
+    du Bulletin, enrichir les sujets maigres (SIG : 2 questions), entraînement
+    complet à l'épreuve anticipée de mathématiques.
 
 ### Modèle à copier pour une nouvelle tâche
 

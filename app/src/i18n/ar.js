@@ -282,7 +282,7 @@ export default {
   smartRevision: 'مراجعة ذكية', smartRevisionSub: 'نقترح عليك أولًا ما قد تنساه ونقاط ضعفك.',
   toReviewToday: 'للمراجعة', weakPoints: 'نقاط ضعف', neverSeen: 'لم تُشاهَد', reviseNow: 'راجع الآن', priorityList: 'للمراجعة بالأولوية',
   reasonDue: 'للمراجعة', reasonWeak: 'نقطة ضعف', reasonNew: 'جديد', reasonReview: 'للترسيخ', masteredThemes: 'محاور مُتقَنة',
-  mockExam: 'امتحان تجريبي', mockExamSub: 'امتحان مؤقّت، مُصحَّح ومقيَّم على 20، كيوم الامتحان.',
+  mockExam: 'امتحان تجريبي', mockExamSub: 'مواضيع بصيغة الامتحانات الكتابية، واختبار متعدد الاختيارات مؤقّت للتحقق من معارفك، مادةً بمادة.',
   chooseSubject: 'اختر المادة', wholeTrack: 'كل الشعبة', duration: 'المدة', questionsShort: 'أسئلة',
   startExam: 'بدء الامتحان', notEnoughQuestions: 'لا توجد أسئلة كافية لهذا الاختيار — اختر مادة أخرى.',
   examNote: 'لا تصحيح أثناء الامتحان: يظهر كل شيء في النهاية.', examResult: 'نتيجة الامتحان التجريبي', submitExam: 'تسليم ورقتي',
