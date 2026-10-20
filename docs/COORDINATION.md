@@ -801,4 +801,20 @@ Prochaine action :
   traductions et tests concernés. Intervention dans le couloir social signalée
   au propriétaire ; aucune PR concurrente ouverte au démarrage.
 - Branche `fix/classes-multiples` ; aucune mutation de la base prévue.
-- État : diagnostic et correction en cours.
+- Livré dans #39, commit `c9de5b8`, fusion `8b01a9e`.
+- Le statut positif « ✓ Enregistré » est masqué ; attente et échec conservés.
+- Élèves : liste des adhésions lue sur le serveur, ajout d’une autre classe,
+  sélection et sortie de la seule classe choisie. Les autres adhésions restent.
+- Professeurs : le chargement initial précède la création ; une restauration
+  tardive du profil ne masque plus les classes déjà chargées. Erreurs visibles.
+- Changement de classe : onglets et contenu précédent réinitialisés, réponses
+  tardives des métadonnées ignorées. Nouveaux libellés traduits en cinq langues.
+- Validation : 293 tests unitaires locaux ; compilation ; 18 parcours ciblés.
+  Recette GitHub #39487525128 : 293 tests, UTC et Paris, 152 parcours réussis.
+  Les parcours reproduisent le défaut au rechargement professeur et vérifient
+  deux classes élève, les échecs, la sortie et la persistance après rechargement.
+- Aucun changement de schéma ni aucune donnée réelle modifiée pour les tests.
+- Publication : workflow main #39488296011 réussi (293 tests et 152 parcours),
+  compilation déposée par le bot dans `9db697d`, Pages #39488980292 réussi.
+  Contrôle public : HTML et service worker servent la même version `96dfe3609b`.
+  Correction fusionnée, publiée et suivi partagé.
