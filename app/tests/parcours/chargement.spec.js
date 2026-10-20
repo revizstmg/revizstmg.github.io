@@ -40,6 +40,9 @@ test('hors ligne : après une première visite, une matière jamais ouverte s’
     return urls.some((u) => u.includes('/assets/contenu-philosophie-'))
   }, null, { timeout: 30000 })
 
+  await page.goto('./#/moi?section=reglages')
+  await expect(page.getByText('✓ Les cours et exercices de cette version sont téléchargés sur cet appareil.', {exact:false})).toBeVisible()
+
   await context.setOffline(true)
   await page.reload()
   await attendreAccueil(page)

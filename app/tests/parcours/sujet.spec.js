@@ -8,7 +8,7 @@ test('sujet Droit et économie au format de l’épreuve', async ({ page }) => {
   await page.goto('./')
   await attendreAccueil(page)
   await page.goto('./#/bac-blanc')
-  await expect(page.getByRole('heading', { name: /Sujet au format de l’épreuve/ })).toBeVisible()
+  await expect(page.getByRole('heading', { name: /Dossiers guidés de spécialité/ })).toBeVisible()
   await page.getByRole('button', { name: /Droit et économie/ }).click()
   await expect(page.locator('main')).toContainText('Partie 1 — Droit')
   await expect(page.locator('main')).toContainText(/partie 1 sur 2/)

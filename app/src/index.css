@@ -778,3 +778,9 @@ html.dark .texte-matiere { color: color-mix(in srgb, var(--mc) 55%, #fff); }
 .welcome-aide.erreur { color: #be123c; font-weight: 600; }
 .welcome-input[aria-invalid='true'] { border-color: #be123c; }
 .welcome-piege { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
+/* Les métadonnées restent lisibles, même dans les anciennes cartes à 9–11 px. */
+.text-\[9px\], .text-\[10px\], .text-\[11px\], .text-\[0\.65rem\] {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}

@@ -12,7 +12,7 @@
 import INDEX from 'virtual:contenu-index'
 import { genVerbEN, genVerbES, genGrammarEN, genGrammarES } from '../data/langgen.js'
 
-const COMMUN = import.meta.glob('../../content/commun/*.json', { eager: true, import: 'default' })
+const COMMUN = import.meta.glob(['../../content/commun/*.json', '!../../content/commun/formules.json'], { eager: true, import: 'default' })
 const FICHIERS = import.meta.glob(['../../content/*/*.json', '!../../content/commun/*.json'], { import: 'default' })
 
 export const ORDRE_MATIERES = INDEX.ordre

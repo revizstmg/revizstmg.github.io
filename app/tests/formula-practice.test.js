@@ -42,3 +42,17 @@ test('la séance ne mélange que les formules choisies et les fait toutes travai
  expect(checkFormulaAnswer('١٬٢٣٤٫٥٦',1234.56)).toBe(true)
  expect(checkFormulaAnswer('9'.repeat(400),0)).toBeNull()
 })
+
+// Un lien d’aide doit mener à une matière/thème existant, y compris en Première.
+test('les liens de cours de l’atelier existent pour chaque filière',async()=>{
+ const {formulaCourse}=await import('../src/data/workshopSession.js')
+ const {SUBJECTS}=await import('../src/data/index.js')
+ for(const track of [{level:'premiere-stmg'},...['gestion-finance','mercatique','rh-communication','sig'].map(specialty=>({level:'terminale-stmg',specialty}))]){
+  for(const formula of formulasForTrack(track)){
+   const [, ,sid,,tid]=formulaCourse(formula,track).split('/')
+   const subject=SUBJECTS.find(s=>s.id===sid)
+   expect(subject,formula.id).toBeTruthy()
+   if(tid)expect(subject.chapters.some(c=>c.id===tid),`${formula.id}:${tid}`).toBe(true)
+  }
+ }
+})

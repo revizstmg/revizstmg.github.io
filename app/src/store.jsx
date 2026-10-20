@@ -617,6 +617,31 @@ export function StoreProvider({ children }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  // Une connexion/déconnexion dans un autre onglet change aussi l'identité ici.
+  // Un renouvellement du jeton du même compte ne réinitialise pas la progression.
+  useEffect(() => {
+    const changed = async event => {
+      if (event.key !== 'stmg_session' && event.key !== null) return
+      const owner = getSession()?.user?.id
+      let previousOwner
+      try { previousOwner = JSON.parse(event.oldValue)?.user?.id } catch { /* stockage effacé */ }
+      if (event.key !== null && owner === previousOwner) return
+      setRaw(previous => {
+        if (!owner) return previous.account ? withoutAccount(previous) : previous
+        const latest = load()
+        return latest.account?.id === owner ? latest : withoutAccount(previous)
+      })
+      if (!owner) return
+      try {
+        const profile = await fetchProfile()
+        const session = getSession()
+        if (profile && session?.user?.id === owner) restoreAccount(profile, session)
+      } catch { /* hors ligne : aucune donnée de l'ancien compte n'est exposée */ }
+    }
+    window.addEventListener('storage', changed)
+    return () => window.removeEventListener('storage', changed)
+  }, [restoreAccount])
+
   // Récompense : XP gagnés à la fin d'une session de révision (minuteur focus).
   // 1 XP par minute de révision effectuée (plafonné), badges réévalués.
   useEffect(() => {

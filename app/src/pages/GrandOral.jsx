@@ -1,3 +1,4 @@
+import LevelToolNotice from '../components/LevelToolNotice.jsx'
 import { TextePublic } from '../localisation/PublicText.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
@@ -79,6 +80,7 @@ function GrandOralPage() {
 
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">
+      <LevelToolNotice level="terminale-stmg" />
       <header className="text-center">
         <p className="kicker">🎓 {t('grandOral')}</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('grandOral')}</h1>

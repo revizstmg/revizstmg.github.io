@@ -19,11 +19,12 @@ export function parentCode() {
     let c = localStorage.getItem('stmg_parent_code')
     if (!c) {
       const A = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
-      c = 'P' + Array.from({ length: 5 }, () => A[Math.floor(Math.random() * A.length)]).join('')
+      const bytes = crypto.getRandomValues(new Uint8Array(5))
+      c = 'P' + Array.from(bytes, byte => A[byte % A.length]).join('')
       localStorage.setItem('stmg_parent_code', c)
     }
     return c
-  } catch { return 'PSTMG1' }
+  } catch { return '' }
 }
 export function normParentCode(s) {
   return String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6)
@@ -32,9 +33,11 @@ export function normParentCode(s) {
 // ÉLÈVE — publie / met à jour l'instantané lu par le parent.
 export async function publishChildStats(snap) {
   if (!PARENT_READY || !snap) return
+  const code = parentCode()
+  if (!code) throw new Error('Code parent indisponible : partage non envoyé.')
   const row = {
     device_id: deviceId(),
-    code: parentCode(),
+    code,
     name: String(snap.name || '').slice(0, 60),
     xp: clampInt(snap.xp, 0, 1e9),
     level: clampInt(snap.level, 0, 1000),
@@ -60,8 +63,8 @@ export async function publishChildStats(snap) {
   // La base garde le premier code du compte : depuis un autre appareil, on
   // reprend ce code-là pour montrer à l'élève celui que ses parents connaissent.
   const rows = await res.json().catch(() => [])
-  const code = rows?.[0]?.code
-  if (code && code !== parentCode()) { try { localStorage.setItem('stmg_parent_code', code) } catch { /* stockage indisponible */ } }
+  const storedCode = rows?.[0]?.code
+  if (storedCode && storedCode !== parentCode()) { try { localStorage.setItem('stmg_parent_code', storedCode) } catch { /* stockage indisponible */ } }
 }
 
 // ÉLÈVE — supprime son instantané (rompre le suivi côté enfant). Renvoie vrai si

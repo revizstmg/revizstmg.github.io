@@ -73,7 +73,7 @@ function BacBlancPage() {
       {sujets.length > 0 && (
         <section className="card p-5">
           <h2 className="font-display text-xl font-medium">📜 {t('sujetTitle')}</h2>
-          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t('sujetSub')}</p>
+          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t('sujetSub')}</p><p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Ces dossiers guidés ne constituent pas encore un sujet complet avec rédaction et barème officiel. Pour la session 2027, l’écrit de management porte sur l’enseignement commun et réserve 2 points sur 20 à l’orthographe et à la syntaxe. <a className="underline" href="https://www.education.gouv.fr/bo/2026/Special4/MENE2622652N" target="_blank" rel="noreferrer">Bulletin officiel du 17 septembre 2026</a></p>
           <div className="mt-4 grid gap-2">
             {sujets.map((s) => (
               <button key={s.id} onClick={() => lancerSujet(s.id)} className="flex items-center gap-3 rounded-xl bg-slate-100 p-3.5 text-left transition hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700">

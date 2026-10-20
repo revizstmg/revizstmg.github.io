@@ -1,3 +1,4 @@
+import { queueQuizResult, flushQuizResults, pendingQuizResults } from '../quizOutbox.js'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useStore } from '../store.jsx'
@@ -538,8 +539,8 @@ function QuizList({ classCode, role, name, accountId, t }) {
               <h3 className="font-display font-semibold">{qz.title || t('quizUntitled')}</h3>
               <p className="text-xs text-slate-500 dark:text-slate-400">{qz.questions?.length || 0} {t('questionsWord')}{qz.proposed_by ? ` · ${qz.proposed_by}` : ''}</p>
               <div className="mt-2 flex gap-2">
-                <button onClick={async () => { try { await approveQuiz(qz.id) } catch { /* */ } load() }} className="btn-primary !min-h-0 flex-1 !py-2 text-sm">✓ {t('approve')}</button>
-                <button onClick={async () => { if (confirm(t('deleteQuizConfirm'))) { try { await deleteQuiz(qz.id) } catch { /* */ } load() } }} className="!min-h-0 rounded-xl px-3 py-2 text-sm font-semibold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40">{t('delete')}</button>
+                <button onClick={async () => { try { await approveQuiz(qz.id) } catch { alert(t('rankOffline')); return } load() }} className="btn-primary !min-h-0 flex-1 !py-2 text-sm">✓ {t('approve')}</button>
+                <button onClick={async () => { if (confirm(t('deleteQuizConfirm'))) { try { await deleteQuiz(qz.id) } catch { alert(t('rankOffline')); return } load() } }} className="!min-h-0 rounded-xl px-3 py-2 text-sm font-semibold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40">{t('delete')}</button>
               </div>
             </div>
           ))}
@@ -576,13 +577,13 @@ function QuizCard({ qz, role, accountId, t, onPlay, onResults, reload }) {
         <button onClick={onPlay} disabled={!qz.questions?.length} className="btn-primary !min-h-0 flex-1 !py-2 text-sm">{t('playQuiz')}</button>
         <button onClick={onResults} className="btn-ghost !min-h-0 !py-2 text-sm">{t('quizRanking')}</button>
         {role === 'prof' && <button onClick={() => setAssigning((v) => !v)} className="!min-h-0 rounded-xl px-3 py-2 text-sm font-semibold text-[var(--c-accent)] hover:bg-[color-mix(in_srgb,var(--c-accent)_12%,transparent)]">📌 {t('assign')}</button>}
-        {role === 'prof' && <button onClick={async () => { if (confirm(t('deleteQuizConfirm'))) { try { await deleteQuiz(qz.id) } catch { /* */ } reload() } }} className="!min-h-0 rounded-xl px-3 py-2 text-sm font-semibold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40">{t('delete')}</button>}
+        {role === 'prof' && <button onClick={async () => { if (confirm(t('deleteQuizConfirm'))) { try { await deleteQuiz(qz.id) } catch { alert(t('rankOffline')); return } reload() } }} className="!min-h-0 rounded-xl px-3 py-2 text-sm font-semibold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40">{t('delete')}</button>}
       </div>
       {assigning && role === 'prof' && (
         <div className="mt-2 flex items-center gap-2">
-          <input type="date" defaultValue={qz.due_at ? qz.due_at.slice(0, 10) : ''} onChange={async (e) => { try { await assignQuiz(qz.id, e.target.value ? new Date(e.target.value + 'T23:59:00').toISOString() : null) } catch { /* */ } reload() }}
+          <input type="date" defaultValue={qz.due_at ? qz.due_at.slice(0, 10) : ''} onChange={async (e) => { try { await assignQuiz(qz.id, e.target.value ? new Date(e.target.value + 'T23:59:00').toISOString() : null) } catch { alert(t('rankOffline')); return } reload() }}
             className="rounded-lg border border-slate-200 bg-transparent px-2 py-1.5 text-sm dark:border-slate-700" />
-          <button onClick={async () => { try { await assignQuiz(qz.id, null) } catch { /* */ } reload() }} className="text-xs font-semibold text-slate-400 hover:underline">{t('removeDeadline')}</button>
+          <button onClick={async () => { try { await assignQuiz(qz.id, null) } catch { alert(t('rankOffline')); return } reload() }} className="text-xs font-semibold text-slate-400 hover:underline">{t('removeDeadline')}</button>
         </div>
       )}
     </div>
@@ -591,15 +592,24 @@ function QuizCard({ qz, role, accountId, t, onPlay, onResults, reload }) {
 
 function QuizTake({ quiz, name, t, onDone, onBack }) {
   const game = useMemo(() => ({ questions: quiz.questions || [] }), [quiz])
+  const {state}=useStore()
+  const [transmission,setTransmission]=useState(null)
+  useEffect(()=>{
+    const update=()=>setTransmission(current=>current?.status==='pending' && !pendingQuizResults(state.account?.id).some(entry=>entry.quizId===quiz.id)?{...current,status:'sent'}:current)
+    window.addEventListener('stmg-quiz-outbox',update)
+    return()=>window.removeEventListener('stmg-quiz-outbox',update)
+  },[state.account?.id,quiz.id])
   const handleDone = async ({ correct, total }) => {
-    try { await submitQuizResult({ quizId: quiz.id, name, score: correct, total }) } catch { /* */ }
-    onDone()
+    const result={quizId:quiz.id,name,score:correct,total}
+    try {queueQuizResult(state.account?.id,result)} catch {setTransmission({result,status:'storage-error'});return}
+    setTransmission({result,status:'sending'})
+    try {await flushQuizResults(state.account?.id);setTransmission({result,status:'sent'})} catch {setTransmission({result,status:'pending'})}
   }
   return (
     <div className="space-y-3">
       <button onClick={onBack} className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">← {t('backToQuizzes')}</button>
       <h2 className="font-display text-xl font-semibold">{quiz.title || t('quizUntitled')}</h2>
-      <Qcm game={game} mode="training" color="var(--c-accent)" onDone={handleDone} />
+      {transmission ? <section className="card space-y-3 p-5" aria-live="polite"><h3 className="font-display text-xl">QCM terminé</h3><p>{transmission.result.score} / {transmission.result.total}</p><p>{transmission.status==='sent' ? 'Ton résultat a été transmis au professeur.' : transmission.status==='sending' ? 'Transmission en cours…' : transmission.status==='pending' ? 'Résultat conservé sur cet appareil. Il sera renvoyé au retour du réseau.' : 'Le stockage est indisponible. Garde cette page ouverte et réessaie pour ne pas perdre ton résultat.'}</p><button className="btn-gold" disabled={transmission.status==='sending'} onClick={transmission.status==='sent'?onDone:()=>handleDone({correct:transmission.result.score,total:transmission.result.total})}>{transmission.status==='sent'?'Voir les résultats':'Réessayer l’envoi'}</button></section> : <Qcm game={game} mode="training" color="var(--c-accent)" onDone={handleDone} />}
     </div>
   )
 }
@@ -791,7 +801,7 @@ function DuelList({ classCode, name, t }) {
       try {
         if (ctx.duelId) await acceptDuel({ id: ctx.duelId, name, score: correct, total })
         else await createDuel({ classCode, quizId: ctx.quiz.id, quizTitle: ctx.quiz.title, name, score: correct, total })
-      } catch { /* */ }
+      } catch { alert(t('rankOffline')); return }
       setCtx(null); setView('list')
     }
     return (
@@ -832,7 +842,7 @@ function DuelList({ classCode, name, t }) {
       {mine.map((d) => (
         <div key={d.id} className="card flex items-center justify-between gap-2 p-3.5">
           <span className="min-w-0"><span className="block truncate font-semibold">⏳ {d.quiz_title}</span><span className="block text-xs text-slate-400">{t('waitingOpponent')} · {d.challenger_score}/{d.challenger_total}</span></span>
-          <button onClick={async () => { try { await deleteDuel(d.id) } catch { /* */ } load() }} className="shrink-0 text-xs font-semibold text-rose-600 hover:underline">{t('cancel')}</button>
+          <button onClick={async () => { try { await deleteDuel(d.id) } catch { alert(t('rankOffline')); return } load() }} className="shrink-0 text-xs font-semibold text-rose-600 hover:underline">{t('cancel')}</button>
         </div>
       ))}
 
@@ -884,7 +894,7 @@ function WallTab({ classCode, role, name, track, t }) {
       setText(''); setChapter(''); await load()
     } catch { setAlerte(t('postFailed')) } finally { setBusy(false) }
   }
-  const react = async (id, e) => { try { const r = await reactWall(id, e); setItems((its) => its.map((it) => it.id === id ? { ...it, reactions: r } : it)) } catch { /* */ } }
+  const react = async (id, e) => { try { const r = await reactWall(id, e); setItems((its) => its.map((it) => it.id === id ? { ...it, reactions: r } : it)) } catch { setAlerte(t('postFailed')) } }
 
   const KINDS = role === 'prof'
     ? [{ id: 'announce', label: `📣 ${t('kindAnnounce')}` }, { id: 'question', label: `❓ ${t('kindQuestion')}` }, { id: 'sos', label: `🆘 ${t('kindSos')}` }]
@@ -926,7 +936,7 @@ function WallTab({ classCode, role, name, track, t }) {
           <div key={it.id} className={`card p-4 ${it.kind === 'announce' ? 'border-l-4' : ''}`} style={it.kind === 'announce' ? { borderColor: 'var(--c-accent)' } : undefined}>
             <div className="flex items-center justify-between gap-2">
               <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: 'var(--c-accent-texte)' }}>{badge}</p>
-              {canManage && <button onClick={async () => { try { await deleteWall(it.id) } catch { /* */ } load() }} className="text-xs text-slate-400 hover:text-rose-500">✕</button>}
+              {canManage && <button onClick={async () => { try { await deleteWall(it.id) } catch { alert(t('rankOffline')); return } load() }} className="text-xs text-slate-400 hover:text-rose-500">✕</button>}
             </div>
             {it.kind === 'sos' && it.chapter_label && <p className="mt-1 text-sm font-semibold">📚 {it.chapter_label}</p>}
             <p className="mt-1 whitespace-pre-wrap text-sm">{it.text}</p>
@@ -943,7 +953,7 @@ function WallTab({ classCode, role, name, track, t }) {
                 </button>
               ))}
               {role === 'prof' && <AnswerButton it={it} name={name} t={t} onDone={load} />}
-              {canManage && !it.resolved && it.kind !== 'announce' && <button onClick={async () => { try { await resolveWall(it.id, true) } catch { /* */ } load() }} className="ml-auto text-xs font-semibold text-emerald-600 hover:underline">✓ {t('markResolved')}</button>}
+              {canManage && !it.resolved && it.kind !== 'announce' && <button onClick={async () => { try { await resolveWall(it.id, true) } catch { alert(t('rankOffline')); return } load() }} className="ml-auto text-xs font-semibold text-emerald-600 hover:underline">✓ {t('markResolved')}</button>}
             </div>
           </div>
         )
@@ -1331,7 +1341,7 @@ function ProfGroups({ classCode, t }) {
         <div key={g.id} className="card p-3.5">
           <div className="flex items-center justify-between gap-2">
             <span className="inline-flex items-center gap-2 font-display font-semibold texte-matiere" style={{ '--mc': g.color || undefined }}><span className="text-lg">{g.emoji}</span>{g.name}</span>
-            <button onClick={async () => { if (confirm(t('deleteGroupConfirm'))) { try { await deleteGroup(g.id) } catch { /* */ } load() } }} className="text-xs font-semibold text-rose-600 hover:underline">{t('delete')}</button>
+            <button onClick={async () => { if (confirm(t('deleteGroupConfirm'))) { try { await deleteGroup(g.id) } catch { alert(t('rankOffline')); return } load() } }} className="text-xs font-semibold text-rose-600 hover:underline">{t('delete')}</button>
           </div>
           <p className="mt-1 text-xs text-slate-400">{students.filter((m) => m.group_id === g.id).length} {t('membersCount')}</p>
         </div>
@@ -1346,12 +1356,12 @@ function ProfGroups({ classCode, t }) {
               <div key={m.device_id} className="flex items-center gap-2">
                 <span className="monogram grid h-8 w-8 shrink-0 place-items-center overflow-hidden text-xs">{m.photo ? <img src={m.photo} alt="" className="h-full w-full rounded-full object-cover" /> : initialsOf(m.name)}</span>
                 <span className="min-w-0 flex-1 truncate text-sm font-semibold">{m.name || t('roleStudent')}</span>
-                <select value={m.group_id || ''} onChange={async (e) => { try { await setMemberGroup({ classCode, deviceId: m.device_id, groupId: e.target.value || null }) } catch { /* */ } load() }}
+                <select value={m.group_id || ''} onChange={async (e) => { try { await setMemberGroup({ classCode, deviceId: m.device_id, groupId: e.target.value || null }) } catch { alert(t('rankOffline')); return } load() }}
                   className="shrink-0 rounded-lg border border-slate-200 bg-transparent px-2 py-1.5 text-sm dark:border-slate-700">
                   <option value="">— {t('noGroup')} —</option>
                   {groups.map((g) => <option key={g.id} value={g.id}>{g.emoji} {g.name}</option>)}
                 </select>
-                <button onClick={async () => { if (confirm(`${t('excludeConfirm')} ${m.name || ''}`.trim() + ' ?')) { try { await banStudent({ classCode, deviceId: m.device_id }) } catch { /* */ } load() } }}
+                <button onClick={async () => { if (confirm(`${t('excludeConfirm')} ${m.name || ''}`.trim() + ' ?')) { try { await banStudent({ classCode, deviceId: m.device_id }) } catch { alert(t('rankOffline')); return } load() } }}
                   className="shrink-0 rounded-lg px-2 py-1.5 text-xs font-semibold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40" title={t('exclude')}>🚫</button>
               </div>
             ))}

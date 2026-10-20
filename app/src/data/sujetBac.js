@@ -1,8 +1,8 @@
 // Sujets au format des deux épreuves écrites de spécialité du bac STMG (4 h
 // chacune), composés avec le contenu existant, sans rien inventer :
 // - « Droit et économie » : une étude de documents de droit, puis une d'économie ;
-// - « Management, sciences de gestion et numérique » : un cas de management, puis
-//   un cas de l'enseignement spécifique de l'élève (gestion-finance, mercatique…).
+// - « Management, sciences de gestion et numérique » : les cas disponibles de
+//   l'enseignement commun (BO du 17 septembre 2026), sans compléter artificiellement.
 // Les études de documents et les cas pratiques sont des couches de contenu, qui
 // ne sont remplies qu'une fois la matière chargée (page enveloppée par
 // <ContenuFiliere>).
@@ -26,13 +26,6 @@ function partieEtude(subjectId, titre, aleatoire) {
   return { titre, themeId, game: { ...etude, id: `${etude.id}::sujet` } }
 }
 
-function partieCas(subjectId, titre, aleatoire) {
-  const choix = themesAvec('cas-pratiques', subjectId)
-  if (!choix.length) return null
-  const [themeId, cas] = auHasard(choix, aleatoire)
-  return { titre, themeId, game: { id: `${themeId}::sujet-cas`, type: 'caspratique', title: titre, cases: cas } }
-}
-
 // Les sujets proposés à un élève de Terminale STMG ; vide pour la Première (ses
 // épreuves anticipées n'ont pas ce format).
 export function sujetsDisponibles(track) {
@@ -49,7 +42,12 @@ export function composerSujet(id, track, aleatoire = Math.random) {
   if (id === 'droit-eco') {
     parties = [partieEtude('droit', 'Partie 1 — Droit', aleatoire), partieEtude('economie', 'Partie 2 — Économie', aleatoire)]
   } else if (id === 'msgn') {
-    parties = [partieCas('management', 'Partie 1 — Management', aleatoire), partieCas(track?.specialty, 'Partie 2 — Enseignement spécifique', aleatoire)]
+    // BO spécial n°4 du 17/09/2026 : l'écrit porte sur l'enseignement commun.
+    // Les cas d'enseignement spécifique restent dans leurs matières.
+    const choix = themesAvec('cas-pratiques', 'management')
+    const premier = choix.length ? Math.floor(aleatoire() * choix.length) : -1
+    const selection = premier < 0 ? [] : [choix[premier], ...choix.filter((_,i)=>i!==premier).slice(0,1)]
+    parties = selection.map(([themeId,cas],i)=>({titre:`Dossier ${i+1} — Management, sciences de gestion et numérique`,themeId,game:{id:`${themeId}::sujet-cas`,type:'caspratique',title:'Management, sciences de gestion et numérique',cases:cas}}))
   }
   parties = parties.filter(Boolean)
   const sujet = sujetsDisponibles(track).find((s) => s.id === id)

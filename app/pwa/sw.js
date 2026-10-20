@@ -68,6 +68,13 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('message', (event) => {
   if (event.data === 'skipWaiting') self.skipWaiting()
+  if (event.data?.type === 'OFFLINE_STATUS' && event.ports[0]) event.waitUntil((async()=>{
+    try {
+      const cache=await caches.open(CACHE)
+      const present=await Promise.all([...CORE,...PRECACHE].map(url=>cache.match(new URL(url,self.registration.scope).href)))
+      event.ports[0].postMessage({type:'OFFLINE_STATUS',version:VERSION,ready:present.every(Boolean)})
+    } catch {event.ports[0].postMessage({type:'OFFLINE_STATUS',ready:false})}
+  })())
 })
 
 // Rappel de révision (PWA installée) : synchro périodique -> notification.
