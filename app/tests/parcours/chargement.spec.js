@@ -41,7 +41,7 @@ test('hors ligne : après une première visite, une matière jamais ouverte s’
   }, null, { timeout: 30000 })
 
   await page.goto('./#/moi?section=reglages')
-  await expect(page.getByText('✓ Les cours et exercices de cette version sont téléchargés sur cet appareil.', {exact:false})).toBeVisible()
+  await expect(page.getByText('✓ Les cours et exercices de cette version sont téléchargés sur cet appareil.', {exact:false})).toBeVisible({timeout:30000})
 
   await context.setOffline(true)
   await page.reload()

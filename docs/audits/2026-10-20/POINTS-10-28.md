@@ -18,7 +18,7 @@ exécution. Aucun changement de production Supabase dans ce lot.
 | 16 | Corrigé | Sélection de trois premiers objets aux prix les plus bas accessibles au niveau courant, lien vers une séance pour gagner les pièces ; achats existants conservés. |
 | 17 | Corrigé | Statut hors connexion vérifie les entrées du cache de la version active ; pas de confirmation sur la seule présence de l’application installée. |
 | 18 | Amélioré | Requêtes sociales interrompues après 15 s ; erreurs d’acceptation/suppression d’ami et actions de classe signalées ; texte des messages préservé après échec ; résultats de QCM avec reprise durable (#11). Les autres types de jeux ne disposent pas tous d’une file durable. |
-| 19 | Partiel, serveur requis | Nouveaux codes aléatoires sécurisés, aucun code de secours commun. Renouvellement et limite d’essais nécessitent de remplacer le verrou serveur du code et protéger le point d’entrée : contrat détaillé, pas de faux bouton actif. |
+| 19 | Partiel, serveur requis | Nouveaux codes aléatoires sécurisés, aucun code de secours commun. Renouvellement et limite d’essais nécessitent de adapter le verrou du code prévu dans la migration de sécurité et protéger le point d’entrée : contrat détaillé, pas de faux bouton actif. |
 | 20 | Corrigé | Bouton de l’essai « Commencer mes révisions sans compte ». |
 | 21 | Corrigé | « Entraînement personnalisé » dans les cinq langues ; explication de l’algorithme fondé sur les résultats et des limites des conseils. |
 | 22 | Corrigé | Maîtrise expliquée sur l’accueil ; objectifs alternent les matières à urgence/score/échéance égaux, sans retarder une priorité supérieure. |

@@ -40,8 +40,10 @@ Tester aussi les retries après timeout (résultat initial confirmé, pas doubl�
 
 ## 19. Renouvellement des codes parents
 
-Le déclencheur `revizstmg_garde_code` de `child_stats` force `new.code := old.code`
-(migration `20261013171304`). Une rotation par simple upsert serait inefficace.
+La migration de sécurité `20261013171304` définit un déclencheur
+`revizstmg_garde_code` sur `child_stats` qui force `new.code := old.code`.
+Après application, une rotation par simple upsert serait inefficace. Ce lot n’a
+pas certifié son état d’application en production : coordonner avec le point 8.
 La génération côté navigateur utilise désormais `crypto.getRandomValues` pour les
 nouveaux codes, conserve les codes existants, et n'utilise plus de code de secours
 partagé quand le stockage échoue. Cela ne constitue pas une protection anti-bruteforce.

@@ -11,7 +11,7 @@ test('essai sans compte, puis invitation à créer son compte', async ({ page })
   await expect(page.getByRole('heading', { name: 'Essayer sans compte' })).toBeVisible()
 
   const accueil = page.getByRole('dialog')
-  const commencer = accueil.getByRole('button', { name: /Commencer l’essai/ })
+  const commencer = accueil.getByRole('button', { name: /Commencer mes révisions sans compte/ })
   await expect(commencer).toBeDisabled()
   await accueil.getByLabel(/Prénom/).fill('Inès')
   await accueil.getByRole('button', { name: /Terminale/ }).first().click()
