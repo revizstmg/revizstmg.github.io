@@ -15,6 +15,8 @@ for (const [name, width, level] of [['mobile',390,'premiere-stmg'],['desktop',12
   expect((await heading.boundingBox()).y).toBeLessThan(550)
   if(level==='premiere-stmg') await expect(page.locator('main').getByRole('link',{name:/Grand Oral/})).toHaveCount(0)
   await expect(page.locator('main')).not.toContainText(/\d+ chapitres/)
+  const rows = await page.locator('.home-subject-card').evaluateAll(cards => [...new Set(cards.map(card => Math.round(card.getBoundingClientRect().top)))].length)
+  expect(rows).toBe(name === 'desktop' ? 2 : 4)
   expect(await page.evaluate(()=>document.documentElement.scrollWidth > innerWidth)).toBe(false)
   await page.getByRole('button',{name:'OK',exact:true}).click()
   await page.screenshot({path:info.outputPath(`home-${name}.png`),fullPage:true})

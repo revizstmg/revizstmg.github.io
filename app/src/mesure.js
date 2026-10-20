@@ -26,6 +26,7 @@ export const ECRANS = [
 export function nomEcran(chemin) {
   const p = (chemin || '/').split('/').filter(Boolean)
   if (!p.length || p[0] === 'changer') return 'entree'
+  if (p[0] === 'atelier-formules' && p.length === 1) return 'formules'
   if (p[0] === 'subject') {
     if (p.length === 2) return 'matiere'
     if (p[2] === 'theme' && p.length === 4) return 'theme'

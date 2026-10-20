@@ -118,7 +118,7 @@ describe('fusion appareil ↔ compte', () => {
 describe('dates des épreuves', () => {
   it('chaque date du calendrier est une vraie date, la fin après le début', () => {
     for (const e of CALENDRIER.epreuves) {
-      for (const d of [e.debut, e.fin].filter(Boolean)) expect(new Date(d + 'T00:00:00').toISOString().slice(0, 10), e.id).toBe(d)
+      for (const d of [e.debut, e.fin].filter(Boolean)) expect(new Date(d + 'T00:00:00Z').toISOString().slice(0, 10), e.id).toBe(d)
       if (e.fin) expect(e.fin >= e.debut, e.id).toBe(true)
       expect(['terminale', 'premiere']).toContain(e.niveau)
       expect(e.debut || e.note, `${e.id} : une date ou une explication`).toBeTruthy()
