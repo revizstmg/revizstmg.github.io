@@ -131,7 +131,7 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit,
   if (!mode) {
     return (
       <div className="card animate-pop-in p-5">
-        <button onClick={onExit} className="mb-3 text-sm text-slate-500 hover:text-violet-600">← {t('backToGames')}</button>
+        <button onClick={onExit} className="lien-retour mb-3">← {t('backToGames')}</button>
         <h3 className="mb-1 font-display text-xl font-semibold">{game.title}</h3>
         <p className="mb-5 text-sm text-slate-500 dark:text-slate-400">{t('chooseMode')}</p>
         <div className="grid gap-3 sm:grid-cols-2">
@@ -185,7 +185,7 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit,
     <PleinEcran titre={game.title}>
     <div className="animate-pop-in">
       <div className="mb-3 flex items-center justify-between gap-3">
-        <button onClick={onExit} className="text-sm text-slate-500 hover:text-violet-600">← {t('quit')}</button>
+        <button onClick={onExit} className="lien-retour">← {t('quit')}</button>
         <span className="min-w-0 truncate text-xs font-semibold text-slate-500 dark:text-slate-400">{reprise ? '↻ Mes erreurs' : game.title}</span>
         <span className="chip shrink-0 gap-1.5 text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-800">
           {mode === 'defi' ? <Icon.Timer size={14} /> : <Icon.Brain size={14} />}

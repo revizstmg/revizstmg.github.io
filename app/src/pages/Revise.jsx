@@ -235,7 +235,7 @@ function RevisePage() {
       <section className="space-y-2.5">
         <div className="flex items-center justify-between px-1">
           <h2 className="font-display text-lg font-semibold">🃏 {t('myDecks')}</h2>
-          {decks.length > 0 && <span className="chip bg-slate-100 text-slate-500 dark:bg-slate-800">{decks.length}</span>}
+          {decks.length > 0 && <span className="chip bg-slate-100 text-slate-500 dark:text-slate-400 dark:bg-slate-800">{decks.length}</span>}
         </div>
         {decks.length === 0 ? (
           <p className="px-1 text-sm text-slate-400">{t('noDeckYet')}</p>

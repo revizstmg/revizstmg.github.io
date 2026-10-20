@@ -97,7 +97,7 @@ export default function SqlQuery({ game, color, onDone }) {
           <button onClick={check} disabled={val.trim() === ''} className="btn-primary flex-1" style={{ backgroundColor: color }}>{t('check')}</button>
           <button
             onClick={() => setRevealed((r) => !r)}
-            className="rounded-xl border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-500 transition hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800"
+            className="rounded-xl border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-500 dark:text-slate-400 transition hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800"
           >
             💡 {revealed ? 'Cacher' : 'Indice'}
           </button>

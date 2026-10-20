@@ -120,7 +120,7 @@ export default function Cgu() {
       </Section>
 
       <div className="pt-2">
-        <Link to="/accueil" className="btn-ghost !min-h-0 !py-2 text-sm">← Retour</Link>
+        <Link to="/accueil" className="lien-retour">← Retour à l’accueil</Link>
       </div>
     </div>
   )

@@ -512,5 +512,7 @@
   "Renouveler le code ? L’ancien ne marchera plus : tes parents devront saisir le nouveau.": "¿Renovar el código? El antiguo dejará de funcionar: tus padres tendrán que introducir el nuevo.",
   "Nouveau code créé. Donne-le à tes parents.": "Nuevo código creado. Dáselo a tus padres.",
   "Le code n’a pas pu être renouvelé : vérifie ta connexion et réessaie.": "No se pudo renovar el código: comprueba tu conexión y vuelve a intentarlo.",
-  "Mon espace": "Mi espacio"
+  "Mon espace": "Mi espacio",
+  "← Retour à l’accueil": "← Volver al inicio",
+  "← Retour à la révision": "← Volver al repaso"
 }

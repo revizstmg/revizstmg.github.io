@@ -512,5 +512,7 @@
   "Renouveler le code ? L’ancien ne marchera plus : tes parents devront saisir le nouveau.": "تجديد الرمز؟ لن يعمل الرمز القديم: سيتعين على والديك إدخال الرمز الجديد.",
   "Nouveau code créé. Donne-le à tes parents.": "تم إنشاء رمز جديد. أعطه لوالديك.",
   "Le code n’a pas pu être renouvelé : vérifie ta connexion et réessaie.": "تعذّر تجديد الرمز: تحقق من اتصالك وأعد المحاولة.",
-  "Mon espace": "مساحتي"
+  "Mon espace": "مساحتي",
+  "← Retour à l’accueil": "← العودة إلى الصفحة الرئيسية",
+  "← Retour à la révision": "← العودة إلى المراجعة"
 }

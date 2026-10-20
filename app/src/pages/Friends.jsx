@@ -200,7 +200,7 @@ function FriendsPage() {
           <p className="text-sm text-slate-500 dark:text-slate-400">{flow.duel.chapter_label}</p>
         </header>
         <KahootQuiz questions={flow.duel.questions} onDone={onDuelDone} />
-        <button onClick={() => setFlow(null)} className="btn-ghost !min-h-0 !py-2 text-sm">← {t('quit')}</button>
+        <button onClick={() => setFlow(null)} className="lien-retour">← {t('quit')}</button>
       </div>
     )
   }
@@ -328,7 +328,7 @@ function FriendsPage() {
                     <span className="monogram grid h-9 w-9 shrink-0 place-items-center text-sm" aria-hidden>{initialsOf(r.from_name)}</span>
                     <span className="min-w-0 flex-1 truncate font-semibold">{r.from_name || 'Élève'} <span className="text-xs font-normal text-slate-400">· {r.from_code}</span></span>
                     <button onClick={() => answer(r.id, true)} disabled={busy} className="shrink-0 rounded-lg px-3 py-1.5 text-sm font-semibold text-white" style={{ backgroundColor: '#3f9d6d' }}>✓ {t('accept')}</button>
-                    <button onClick={() => answer(r.id, false)} disabled={busy} className="shrink-0 rounded-lg px-3 py-1.5 text-sm font-semibold text-slate-500 ring-1 ring-slate-200 dark:ring-slate-700">✕</button>
+                    <button onClick={() => answer(r.id, false)} disabled={busy} className="shrink-0 rounded-lg px-3 py-1.5 text-sm font-semibold text-slate-500 dark:text-slate-400 ring-1 ring-slate-200 dark:ring-slate-700">✕</button>
                   </div>
                 ))}
               </div>

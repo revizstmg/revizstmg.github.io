@@ -512,5 +512,7 @@
   "Renouveler le code ? L’ancien ne marchera plus : tes parents devront saisir le nouveau.": "Renew the code? The old one will stop working: your parents will have to enter the new one.",
   "Nouveau code créé. Donne-le à tes parents.": "New code created. Give it to your parents.",
   "Le code n’a pas pu être renouvelé : vérifie ta connexion et réessaie.": "The code could not be renewed: check your connection and try again.",
-  "Mon espace": "My space"
+  "Mon espace": "My space",
+  "← Retour à l’accueil": "← Back to home",
+  "← Retour à la révision": "← Back to revision"
 }

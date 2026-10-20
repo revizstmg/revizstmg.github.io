@@ -35,7 +35,7 @@ export default function Faq() {
         <a href={`mailto:${CONTACT}`} className="mt-2 inline-block font-semibold text-[#84671b] underline dark:text-[#d9bd77]">{CONTACT}</a>
       </div>
       <div className="pt-1">
-        <Link to="/accueil" className="btn-ghost !min-h-0 !py-2 text-sm">← Retour</Link>
+        <Link to="/accueil" className="lien-retour">← Retour à l’accueil</Link>
       </div>
     </div>
   )

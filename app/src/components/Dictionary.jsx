@@ -77,7 +77,7 @@ export default function Dictionary({ onClose }) {
 
         <div className="flex items-end gap-2">
           <LangPicker value={source} onChange={setSource} label="De" />
-          <button onClick={swap} className="mb-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Inverser les langues" title="Inverser">
+          <button onClick={swap} className="mb-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Inverser les langues" title="Inverser">
             <Icon.Swap size={18} />
           </button>
           <LangPicker value={target} onChange={setTarget} label="Vers" />
