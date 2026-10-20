@@ -24,6 +24,7 @@ export function answerMatches(input, answer, alt = []) {
 export function sansHabillage(s) {
   return normalize(s)
     .replace(/^\d+\s*[.)]\s*/, '')
+    .replace(/^[\u2460-\u2473]\s*/, '')
     .replace(/^(l'|d'|le |la |les |un |une |des |du |de la |de l')/, '')
     .replace(/[-‐‑]/g, ' ')
     .replace(/[\s.;:!?…,]+$/, '')

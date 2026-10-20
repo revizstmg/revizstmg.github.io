@@ -163,6 +163,21 @@ function fusionCompteurs(x = {}, y = {}) {
   return out
 }
 
+// Essai sans compte rattaché à un compte existant : ses compteurs passent sous
+// un identifiant d'appareil à part. Sinon la fusion, qui garde le plus grand
+// apport de chaque appareil, ferait disparaître ce que l'essai a gagné quand
+// le même navigateur a déjà servi à ce compte.
+export function detacherEssai(s) {
+  const m = metaDe(s)
+  if (!m) return s
+  const suffixe = '~essai-' + nouvelId()
+  const compteurs = {}
+  for (const [f, par] of Object.entries(m.compteurs || {})) {
+    compteurs[f] = Object.fromEntries(Object.entries(par || {}).map(([id, v]) => [id + suffixe, v]))
+  }
+  return { ...s, _sync: { ...m, compteurs } }
+}
+
 // Fusion locale ↔ compte (même utilisateur) : `a` est la copie de l'appareil,
 // `b` celle du compte. Les champs hors progression viennent de `a`.
 export function mergeProgress(a, b, maintenant = Date.now()) {

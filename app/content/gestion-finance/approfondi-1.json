@@ -830,7 +830,7 @@
         {
           "t": "example",
           "h": "Étape 2 — À la réception de la facture",
-          "c": "• 607 Achats …… 1 881 (débit)\n• 44566 TVA déductible …… 376,20 (débit)\n• 765 Escompte obtenu …… 19 (crédit — produit financier)\n• 401 Fournisseurs …… 2 257,20 (crédit)"
+          "c": "• 607 Achats …… 1 900 (débit)\n• 44566 TVA déductible …… 376,20 (débit)\n• 765 Escomptes obtenus …… 19 (crédit — produit financier)\n• 401 Fournisseurs …… 2 257,20 (crédit)\nVérification : 1 900 + 376,20 = 2 276,20 au débit ; 19 + 2 257,20 = 2 276,20 au crédit."
         },
         {
           "t": "example",
@@ -839,7 +839,7 @@
         },
         {
           "t": "p",
-          "c": "**Commentaire.** L’achat (charge) est enregistré pour le **net financier** ; l’escompte obtenu est un **produit financier** ; la TVA déductible est une **créance** sur l’État ; le règlement solde simplement la dette fournisseur sans créer de charge."
+          "c": "**Commentaire.** L’achat (charge) est enregistré pour le **net commercial** (1 900 €) ; l’escompte obtenu (19 €) est un **produit financier** enregistré à part ; la TVA déductible est une **créance** sur l’État ; le règlement solde simplement la dette fournisseur sans créer de charge."
         },
         {
           "t": "tip",

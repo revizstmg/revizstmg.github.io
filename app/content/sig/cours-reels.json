@@ -315,7 +315,7 @@
         },
         {
           "t": "p",
-          "c": "La protection des **données personnelles** est aussi une obligation légale : le **RGPD** impose consentement, finalité, minimisation, sécurité et droits des personnes (accès, effacement). Son non-respect expose à de lourdes **sanctions** (CNIL)."
+          "c": "La protection des **données personnelles** est aussi une obligation légale : le **RGPD** exige que chaque traitement repose sur une **base légale** (le consentement de la personne, un contrat, une obligation légale, l’intérêt légitime…), une **finalité** précise, la **minimisation**, la **sécurité** et le respect des **droits** des personnes (accès, rectification, effacement). Son non-respect expose à de lourdes **sanctions** (CNIL)."
         },
         {
           "t": "warning",

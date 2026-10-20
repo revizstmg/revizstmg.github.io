@@ -395,7 +395,7 @@
         {
           "t": "example",
           "h": "Illustration simplifiée",
-          "c": "Si le Portugal est très bon pour le vin et l’Angleterre pour le drap, chacun a intérêt à se spécialiser et à échanger, plutôt que de produire les deux médiocrement. Chacun obtient au final **plus** des deux biens."
+          "c": "Dans l’exemple de Ricardo, l’Angleterre a besoin de 100 heures de travail pour produire une unité de drap et de 120 heures pour une unité de vin ; le Portugal, de 90 heures pour le drap et de 80 heures pour le vin. Le Portugal est meilleur dans les deux (avantage **absolu**), mais son avance est plus forte pour le vin (80/120 ≈ 0,67 contre 90/100 = 0,9) : il a un avantage **comparatif** dans le vin, et l’Angleterre dans le drap, où son désavantage est le plus faible. En se spécialisant ainsi puis en échangeant, chacun obtient au final **plus** des deux biens."
         },
         {
           "t": "p",

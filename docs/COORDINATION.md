@@ -75,6 +75,8 @@ Supabase reste soumise aux consignes d'autorisation de `CLAUDE.md`.
 
 | NOTES-20261019-CLAUDE-01 | Claude | « Mes notes de classe », partie gratuite (voir le document des offres) : saisie de la note, matière puis chapitre dans des menus déroulants, liste de ce qu'il faut améliorer. Fichiers : nouvelle page `pages/MesNotes.jsx`, `progression.js` et `store.jsx` (nouveau champ synchronisé), route dans `App.jsx` (fichier commun), lien depuis `Profile.jsx`, tests, README | Terminé, fusionné le 20 octobre (demande du propriétaire) | `claude/mes-notes`, PR #20 | Suivre l'usage ; « comment l'améliorer » attend l'offre Premium |
 
+| CORRECTIONS-20261020-CLAUDE-01 | Claude | Demande du propriétaire : « fusionne les PR et règle les 10 gros problèmes » de l'inspection du 20 octobre. Lot 1 : hors ligne (`pwa/sw.js`), progression sur l'appareil (`store.jsx`, `progression.js`, `translate.js`, `EtatSauvegarde.jsx`), inscription avec confirmation de l'e-mail (`Welcome.jsx`), 12 erreurs de contenu bloquantes et notions liées (`content/**`, `src/data/index.js`, `src/games/common.jsx` : couloir de Codex, à la demande du propriétaire), CI à l'heure de Paris. Lots suivants : maîtrise, parcours, révisions, professeur et parent, épreuves | En cours | `claude/corrections-urgentes` | Lot 1 publié, puis lots 2 à 4 |
+
 États possibles : prévu, en cours, bloqué, à relire, terminé, abandonné.
 Ajouter une ligne par tâche ; conserver l'historique utile.
 
@@ -538,6 +540,32 @@ Ajouter une ligne par tâche ; conserver l'historique utile.
   la saisie, les menus, le classement, le rechargement et la suppression d'une
   note), page vérifiée sur téléphone en clair et en sombre.
 - Supabase : aucune modification.
+
+### CORRECTIONS-20261020-CLAUDE-01 — Claude — 20 octobre 2026 (Paris)
+
+- Demande du propriétaire : « Fusionne les PR et règle les 10 gros problèmes »
+  (résumé de l'inspection, `docs/audits/2026-10-20/`). PR #13, #14, #18 et #20
+  fusionnées après mise à jour avec `main` et CI verte.
+- Problème 1 (règles d'accès) : vérifié en lecture seule sur Supabase (59 règles
+  ouvertes, 9 lignes de test orphelines), testé sur la base locale (21
+  vérifications réussies). L'application n'a pas abouti : l'outil Supabase a
+  expiré sans rien appliquer, et la suppression des 9 lignes a été bloquée par la
+  protection des actions. Rien n'a changé dans la base. À appliquer par le
+  propriétaire : `supabase/a-valider/A_COLLER_DANS_SUPABASE.sql` (parties 1 et 2).
+- Lot 1, fait : page blanche hors ligne après une mise à jour et page d'erreur en
+  cache (`pwa/sw.js`) ; copie de secours de la progression, stockage plein signalé,
+  traductions mémorisées limitées ; essai sans compte protégé (confirmation avant
+  effacement, progression reprise par un compte existant) ; inscription avec
+  confirmation de l'e-mail terminée à la première connexion ; tests à l'heure de
+  Paris dans la CI.
+- Contenu (couloir de Codex, à la demande du propriétaire) : les 12 erreurs
+  bloquantes du rapport (écriture d'achat avec escompte, critères DICP en SIG,
+  Ricardo, utilité marginale, performance, ser/estar, tableau d'histoire, notions
+  « Définir »…) ; 49 paires ajoutées à `notions-liees.json` ; moteur : étapes de
+  méthode (« Définir », « Identifier »…) et numéros cerclés exclus des notions.
+  Aussi : café à 10 %, Shoah, RGPD et consentement, Sécurité sociale (1958),
+  « grand remplacement ». Empreintes de contenu mises à jour volontairement.
+  Vérifié par 772 040 questions générées : aucune erreur bloquante ne ressort.
 
 ### Modèle à copier pour une nouvelle tâche
 

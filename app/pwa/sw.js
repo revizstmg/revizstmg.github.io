@@ -27,13 +27,32 @@ const CORE = [
   './favicon.png',
 ]
 
+// Mise en cache d'une nouvelle version. Chaque fichier est demandé au serveur
+// (cache: 'reload') et non au cache du navigateur, qui garde l'ancienne page
+// d'accueil une dizaine de minutes : sinon la nouvelle version pouvait garder
+// l'ancienne page, qui appelle des fichiers déjà effacés (page blanche hors
+// ligne). Si un fichier manque, l'installation échoue : l'ancienne version, dont
+// le cache est complet, reste en place et la mise à jour sera retentée.
+const charger = async (cache, url) => {
+  const res = await fetch(new Request(url, { cache: 'reload' }))
+  if (!res.ok) throw new Error(`${url} : ${res.status}`)
+  await cache.put(url, res)
+}
+
 self.addEventListener('install', (event) => {
-  self.skipWaiting()
   event.waitUntil(
-    caches.open(CACHE).then((cache) =>
-      // addAll échoue si UN fichier manque : on ajoute donc un par un, tolérant.
-      Promise.all([...CORE, ...PRECACHE].map((url) => cache.add(url).catch(() => null)))
-    )
+    (async () => {
+      const cache = await caches.open(CACHE)
+      try {
+        for (let i = 0; i < PRECACHE.length + CORE.length; i += 8) {
+          await Promise.all([...CORE, ...PRECACHE].slice(i, i + 8).map((url) => charger(cache, url)))
+        }
+      } catch (e) {
+        await caches.delete(CACHE)
+        throw e
+      }
+      await self.skipWaiting()
+    })()
   )
 })
 
@@ -131,8 +150,14 @@ self.addEventListener('fetch', (event) => {
       (async () => {
         try {
           const fresh = await fetch(req)
-          const cache = await caches.open(CACHE)
-          cache.put('./index.html', fresh.clone())
+          // Seule la vraie page d'accueil de l'app remplace la copie hors ligne :
+          // une page d'erreur (404 d'une adresse inconnue, panne du serveur) ne
+          // doit jamais prendre sa place.
+          const accueil = new URL('./', self.location.href).pathname
+          if (fresh.ok && fresh.status === 200 && (url.pathname === accueil || url.pathname === accueil + 'index.html')) {
+            const cache = await caches.open(CACHE)
+            cache.put('./index.html', fresh.clone())
+          }
           return fresh
         } catch {
           const cache = await caches.open(CACHE)

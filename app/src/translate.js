@@ -26,6 +26,26 @@ function glossaryLookup(text, source, target) {
 }
 
 const cacheKey = (t, s, tg) => `mt:${s}:${tg}:${t}`
+// Traductions en ligne mémorisées sur l'appareil : au plus 400. Au-delà (ou si
+// le stockage est plein), on les oublie toutes : elles se retrouvent en ligne,
+// alors que la progression de l'élève, elle, ne se retrouve pas.
+const MEMOIRE_MAX = 400
+export function oublierTraductions() {
+  try {
+    for (let i = localStorage.length - 1; i >= 0; i--) {
+      const k = localStorage.key(i)
+      if (k && k.startsWith('mt:')) localStorage.removeItem(k)
+    }
+  } catch { /* stockage indisponible */ }
+}
+function memoriser(key, texte) {
+  try {
+    let n = 0
+    for (let i = 0; i < localStorage.length; i++) if (localStorage.key(i)?.startsWith('mt:')) n++
+    if (n >= MEMOIRE_MAX) oublierTraductions()
+    localStorage.setItem(key, texte)
+  } catch { oublierTraductions() }
+}
 
 const inflight = new Map()
 let running = 0
@@ -92,7 +112,7 @@ export async function translate(text, source, target) {
     const out = translated.join(' ')
     const variables = clean.match(/\{v\d+\}/g) || []
     if (variables.some((v) => !out.includes(v))) throw new Error('La traduction a modifié les variables du texte.')
-    try { localStorage.setItem(key, out) } catch { /* quota local */ }
+    memoriser(key, out)
     return { text: out, via: 'en ligne' }
   })()
   inflight.set(key, request)

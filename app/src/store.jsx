@@ -9,7 +9,8 @@ import { subjectsForTrack, trackLabel } from './data/tracks.js'
 import { publishChildStats, deleteMyChildStats, PARENT_READY } from './parent.js'
 import { desactiverRappelsPush } from './push.js'
 import { ajouterNote } from './notesClasse.js'
-import { CARNET_MAX, mergeProgress, grandOralVide, etudeGestionVide, noter, chargeUtile, empreinte, aSauvegarder, versionDe, avecVersionServeur, apresEnvoi } from './progression.js'
+import { oublierTraductions } from './translate.js'
+import { CARNET_MAX, mergeProgress, grandOralVide, etudeGestionVide, noter, chargeUtile, empreinte, aSauvegarder, versionDe, avecVersionServeur, apresEnvoi, detacherEssai } from './progression.js'
 
 export { CARNET_MAX, mergeProgress, grandOralVide, etudeGestionVide }
 
@@ -38,6 +39,11 @@ export function majCarnet(erreurs, { themeId, type, ratees = [], reussies = [] }
 // pour accéder au site. Structure versionnée pour évoluer sans casser.
 // ---------------------------------------------------------------------------
 const KEY = 'stmg_progress_v2'
+// Copie de secours de la progression (au plus une par minute) : si la copie
+// principale est abîmée, on repart de celle-ci au lieu de tout remettre à zéro.
+// La copie abîmée est gardée à part, pour pouvoir la récupérer à la main.
+const KEY_SECOURS = 'stmg_progress_v2_secours'
+const KEY_ABIME = 'stmg_progress_v2_abime'
 
 // Remise à zéro (v2) : on efface l'ancienne progression locale et la session
 // pour forcer chaque utilisateur à (re)créer un compte. Effectué une seule fois
@@ -134,10 +140,19 @@ function withoutAccount(s) {
   return out
 }
 
+// L'élève a-t-il déjà fait quelque chose (essai sans compte) ?
+const aProgresse = (s) => (s?.xp || 0) > 0 || Object.keys(s?.chapters || {}).length > 0 || (s?.favorites || []).length > 0
+  || Object.keys(s?.notes || {}).length > 0 || (s?.notesClasse || []).length > 0 || (s?.fiches || []).length > 0
+
 export function restoreAccountState(previous, profile, session) {
   const id = session?.user?.id
   if (!id || !profile || (profile.id && profile.id !== id)) throw new Error('Profil du compte indisponible. Réessaie de te connecter.')
-  const base = previous.account?.id === id ? previous : withoutAccount(previous)
+  // Même compte : sa copie locale. Essai sans compte (aucun compte sur
+  // l'appareil) : sa progression rejoint le compte, comme promis à l'élève.
+  // Autre compte : rien n'est repris.
+  const base = previous.account?.id === id ? previous
+    : !previous.account?.id && aProgresse(previous) ? { ...detacherEssai(previous), classCode: '', teacherClasses: [] }
+    : withoutAccount(previous)
   const parts = String(profile.name || 'Élève').trim().split(/\s+/)
   const role = profile.role === 'prof' ? 'prof' : 'eleve'
   return {
@@ -151,16 +166,43 @@ export function restoreAccountState(previous, profile, session) {
   }
 }
 
+function lireCopie(cle) {
+  const raw = localStorage.getItem(cle)
+  if (!raw) return null
+  const valeur = JSON.parse(raw)
+  if (!valeur || typeof valeur !== 'object' || Array.isArray(valeur)) throw new Error('Progression illisible')
+  return valeur
+}
+
 function load() {
+  let copie = null
   try {
-    const raw = localStorage.getItem(KEY)
-    if (!raw) return emptyState()
-    const saved = { ...emptyState(), ...JSON.parse(raw) }
-    const id = getSession()?.user?.id
-    return id && saved.account?.id && id !== saved.account.id ? withoutAccount(saved) : saved
+    copie = lireCopie(KEY)
   } catch {
-    return emptyState()
+    try { localStorage.setItem(KEY_ABIME, localStorage.getItem(KEY) || '') } catch { /* stockage plein */ }
+    try { copie = lireCopie(KEY_SECOURS) } catch { copie = null }
   }
+  if (!copie) return emptyState()
+  const saved = { ...emptyState(), ...copie }
+  const id = getSession()?.user?.id
+  return id && saved.account?.id && id !== saved.account.id ? withoutAccount(saved) : saved
+}
+
+// Écrit la progression sur l'appareil. Si le stockage est plein, on libère
+// d'abord les traductions mémorisées, puis on réessaie. Renvoie false si la
+// progression n'a pas pu être écrite.
+let dernierSecours = 0
+function ecrireProgression(state) {
+  const texte = JSON.stringify(state)
+  const ecrire = () => {
+    localStorage.setItem(KEY, texte)
+    if (Date.now() - dernierSecours > 60000) {
+      try { localStorage.setItem(KEY_SECOURS, texte); dernierSecours = Date.now() } catch { /* secours facultatif */ }
+    }
+  }
+  try { ecrire(); return true } catch { /* stockage plein ou indisponible */ }
+  oublierTraductions()
+  try { localStorage.removeItem(KEY_SECOURS); ecrire(); return true } catch { return false }
 }
 
 // Niveaux : paliers d'XP cumulés.
@@ -190,13 +232,11 @@ export function StoreProvider({ children }) {
   const [newBadges, setNewBadges] = useState([]) // badges à célébrer
   const [dailyReward, setDailyReward] = useState(null) // récompense de connexion à célébrer
 
-  // Persistance à chaque changement.
+  // Persistance à chaque changement. Si l'appareil refuse (stockage plein), un
+  // bandeau prévient l'élève (EtatSauvegarde.jsx) au lieu de perdre en silence.
+  const [stockagePlein, setStockagePlein] = useState(false)
   useEffect(() => {
-    try {
-      localStorage.setItem(KEY, JSON.stringify(state))
-    } catch {
-      /* quota plein ou navigation privée : on ignore silencieusement */
-    }
+    setStockagePlein(!ecrireProgression(state))
   }, [state])
 
   // Application du thème sur <html>.
@@ -491,6 +531,9 @@ export function StoreProvider({ children }) {
   const logout = useCallback(async ({ force = false } = {}) => {
     const session = getSession()
     const avant = latestState.current
+    // Essai sans compte : la progression n'existe que sur cet appareil. On ne
+    // l'efface pas sans l'accord de l'élève, à qui l'on propose un compte.
+    if (!force && !avant.account?.id && aProgresse(avant)) { setDeconnexion({ etat: 'essai' }); return false }
     if (!force && avant.account?.id) {
       // Session expirée : rien ne peut partir avant de se reconnecter.
       const etat = compteActif(avant) ? await sauvegarder() : !session && aSauvegarder(avant) ? 'session' : 'ok'
@@ -738,6 +781,7 @@ export function StoreProvider({ children }) {
     annulerDeconnexion,
     sauvegarde,
     sauvegarder,
+    stockagePlein,
     hydrateProgress,
     restoreAccount,
     setCustomTheme,

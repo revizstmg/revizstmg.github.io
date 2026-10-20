@@ -223,10 +223,12 @@ export default function Welcome() {
         }
         echecs.current = { n: 0, quand: 0 }
         const prof = await fetchProfile()
-        if (!prof?.class_code && cc) {
-          const problem = await classCodeProblem(cc)
-          if (problem) throw new Error(t(problem))
-          await upsertProfile({ class_code: cc })
+        // Compte créé avec confirmation de l'e-mail : la fiche n'a jamais été
+        // remplie (pas de session au moment de l'inscription). On termine
+        // l'inscription comme pour un nouveau compte Google ou Apple.
+        if (!prof) {
+          setAuthMode('create'); setOauthNew(true); setSignupStep(2); setInfo(t('oauthFinish'))
+          return
         }
         const session = getSession()
         const uid = session?.user?.id

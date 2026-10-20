@@ -1957,20 +1957,34 @@
         },
         {
           "t": "table",
-          "h": "Notions et repères",
+          "h": "Repères",
           "head": [
-            "Notion ou repère",
-            "Définition ou événement"
+            "Date",
+            "Événement"
           ],
           "rows": [
             [
-              "Avant 1975",
-              "Forte croissance, plein emploi, industrie puissante, optimisme"
+              "1973 et 1979",
+              "Chocs pétroliers : fin des Trente Glorieuses"
             ],
             [
-              "Depuis 1974",
-              "Croissance faible, chômage de masse, désindustrialisation, incertitudes"
+              "Années 1970",
+              "Début du chômage de masse"
             ],
+            [
+              "Années 1980",
+              "Accélération de la désindustrialisation"
+            ]
+          ]
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
             [
               "Désindustrialisation",
               "Déclin des industries traditionnelles"
@@ -1978,18 +1992,6 @@
             [
               "Tertiarisation",
               "Essor du secteur des services"
-            ],
-            [
-              "1973 et 1979",
-              "Chocs pétroliers"
-            ],
-            [
-              "Depuis les années 1970",
-              "Chômage de masse"
-            ],
-            [
-              "Depuis les années 1980",
-              "Désindustrialisation"
             ],
             [
               "Reconversion",
