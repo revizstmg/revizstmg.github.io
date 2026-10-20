@@ -134,7 +134,7 @@ export default {
   duelWinShort: 'W', duelLossShort: 'L', duelDrawShort: '=',
   duelInviteBtn: 'Send challenge', play: 'Play', duelPlayNow: 'Play now', duelReadyPlay: 'Your opponent is ready — your turn!',
   duelWaitAccept: 'Waiting to be accepted', duelWaitAcceptHint: 'Waiting for {opp} to accept the challenge so the duel starts at the same time.',
-  duelWaitScore: 'Waiting for the score', duelWaitScoreHint: 'Your opponent hasn’t played yet. You’ll see the result as soon as they finish.',
+  duelWaitScore: 'Waiting for the score', duelWaitScoreHint: 'Your opponent hasn’t played yet. You’ll see the result as soon as they finish.', duelSendFailed: 'Your score hasn’t been sent yet', duelSendFailedHint: 'The connection dropped. Your score ({n} pts) is kept on this device: retry sending it, even later from your duels.', duelSendRetry: 'Retry sending',
   duelCancel: 'Cancel', duelDeclinedByOther: 'The challenge was cancelled.',
   chaptersWord: 'chapters', duelPickTheme: 'Pick at least one chapter.', duelPickThemes: 'Chapters to revise (one or more)',
   duelLaunch: 'Start', duelKahootHint: 'Timed quiz · 10 questions · points based on your speed.',

@@ -99,7 +99,7 @@ export default {
   duelWinShort: 'V', duelLossShort: 'D', duelDrawShort: '=',
   duelInviteBtn: 'Envoyer le défi', play: 'Jouer', duelPlayNow: 'À jouer maintenant', duelReadyPlay: 'Ton adversaire est prêt — à toi de jouer !',
   duelWaitAccept: 'En attente d’acceptation', duelWaitAcceptHint: 'On attend que {opp} accepte le défi pour lancer le duel en même temps.',
-  duelWaitScore: 'En attente du score', duelWaitScoreHint: 'Ton adversaire n’a pas encore joué. Tu verras le résultat dès qu’il aura terminé.',
+  duelWaitScore: 'En attente du score', duelWaitScoreHint: 'Ton adversaire n’a pas encore joué. Tu verras le résultat dès qu’il aura terminé.', duelSendFailed: 'Ton score n’est pas encore envoyé', duelSendFailedHint: 'La connexion a coupé. Ton score ({n} pts) est gardé sur cet appareil : réessaie l’envoi, même plus tard depuis tes duels.', duelSendRetry: 'Réessayer l’envoi',
   duelCancel: 'Annuler', duelDeclinedByOther: 'Le défi a été annulé.',
   chaptersWord: 'chapitres', duelPickTheme: 'Choisis au moins un chapitre.', duelPickThemes: 'Chapitres à réviser (un ou plusieurs)',
   duelLaunch: 'Lancer', duelKahootHint: 'QCM chronométré · 10 questions · des points selon ta rapidité.',

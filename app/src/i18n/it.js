@@ -134,7 +134,7 @@ export default {
   duelWinShort: 'V', duelLossShort: 'S', duelDrawShort: '=',
   duelInviteBtn: 'Invia la sfida', play: 'Gioca', duelPlayNow: 'Da giocare ora', duelReadyPlay: 'Il tuo avversario è pronto — tocca a te!',
   duelWaitAccept: 'In attesa di accettazione', duelWaitAcceptHint: 'Aspettiamo che {opp} accetti la sfida per avviare il duello insieme.',
-  duelWaitScore: 'In attesa del punteggio', duelWaitScoreHint: 'Il tuo avversario non ha ancora giocato. Vedrai il risultato appena avrà finito.',
+  duelWaitScore: 'In attesa del punteggio', duelWaitScoreHint: 'Il tuo avversario non ha ancora giocato. Vedrai il risultato appena avrà finito.', duelSendFailed: 'Il tuo punteggio non è ancora stato inviato', duelSendFailedHint: 'La connessione si è interrotta. Il tuo punteggio ({n} pti) è salvato su questo dispositivo: riprova l’invio, anche più tardi dai tuoi duelli.', duelSendRetry: 'Riprova l’invio',
   duelCancel: 'Annulla', duelDeclinedByOther: 'La sfida è stata annullata.',
   chaptersWord: 'capitoli', duelPickTheme: 'Scegli almeno un capitolo.', duelPickThemes: 'Capitoli da ripassare (uno o più)',
   duelLaunch: 'Avvia', duelKahootHint: 'Quiz a tempo · 10 domande · punti in base alla tua rapidità.',

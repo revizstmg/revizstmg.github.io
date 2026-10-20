@@ -499,5 +499,18 @@
   "Tes derniers changements partent sur ton compte dans un instant.": "ستُرسل آخر تغييراتك إلى حسابك بعد لحظة.",
   "Tes derniers changements ne sont pas encore sur ton compte.": "آخر تغييراتك ليست في حسابك بعد.",
   "Lancer les exercices": "ابدأ التمارين",
-  "Les espaces partagés sont protégés par les règles d’accès de la base. Selon l’espace, l’accès dépend de ton compte, de ton rôle, de ta classe ou du code que tu partages. Utilise un prénom ou un surnom ; la photo est facultative.": "المساحات المشتركة محمية بقواعد الوصول في قاعدة البيانات. يعتمد الوصول، بحسب المساحة، على حسابك أو دورك أو صفك أو الرمز الذي تشاركه. استخدم اسمك الأول أو اسمًا مستعارًا؛ والصورة اختيارية."
+  "Les espaces partagés sont protégés par les règles d’accès de la base. Selon l’espace, l’accès dépend de ton compte, de ton rôle, de ta classe ou du code que tu partages. Utilise un prénom ou un surnom ; la photo est facultative.": "المساحات المشتركة محمية بقواعد الوصول في قاعدة البيانات. يعتمد الوصول، بحسب المساحة، على حسابك أو دورك أو صفك أو الرمز الذي تشاركه. استخدم اسمك الأول أو اسمًا مستعارًا؛ والصورة اختيارية.",
+  "Étude de documents du thème": "دراسة وثائق المحور",
+  "Un dossier de documents et ses questions, sur plusieurs chapitres du thème": "ملف وثائق وأسئلته، يشمل عدة فصول من المحور",
+  "Mes notes de classe": "نقاطي في القسم",
+  "{v0} {v1} · ce qu’il faut améliorer": "{v0} {v1} · ما يجب تحسينه",
+  "Tes notes et ce qu’il faut améliorer": "نقاطك وما يجب تحسينه",
+  "Pour que tes parents suivent ta progression, crée d’abord ton compte : ta progression d’essai y sera gardée.": "لكي يتابع والداك تقدمك، أنشئ حسابك أولًا: سيُحفظ فيه تقدمك التجريبي.",
+  "Créer mon compte": "إنشاء حسابي",
+  "Renouveler le code": "تجديد الرمز",
+  "Si le code a circulé : l’ancien ne marchera plus.": "إذا انتشر الرمز: لن يعمل الرمز القديم بعد الآن.",
+  "Renouveler le code ? L’ancien ne marchera plus : tes parents devront saisir le nouveau.": "تجديد الرمز؟ لن يعمل الرمز القديم: سيتعين على والديك إدخال الرمز الجديد.",
+  "Nouveau code créé. Donne-le à tes parents.": "تم إنشاء رمز جديد. أعطه لوالديك.",
+  "Le code n’a pas pu être renouvelé : vérifie ta connexion et réessaie.": "تعذّر تجديد الرمز: تحقق من اتصالك وأعد المحاولة.",
+  "Mon espace": "مساحتي"
 }

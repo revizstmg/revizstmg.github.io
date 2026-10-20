@@ -12,6 +12,7 @@ import { Essentiel, Resources, CourseText } from '../components/Course.jsx'
 import { DeckDownload } from '../components/DeckDownload.jsx'
 import ThemeTest from '../games/ThemeTest.jsx'
 import Exam from '../games/Exam.jsx'
+import GameHost from '../games/GameHost.jsx'
 import { useT, useGameLabel } from '../i18n.js'
 
 // Catégorie d'affichage d'un chapitre : les chapitres « approfondis » sont
@@ -38,6 +39,7 @@ export default function Theme() {
   const [searchParams] = useSearchParams()
   const [tab, setTab] = useState(ongletDemande(searchParams.get('tab')))
   const [themeExam, setThemeExam] = useState(null) // questions du bac blanc de thème
+  const [etude, setEtude] = useState(null) // étude de documents du thème en cours
   const [openCats, setOpenCats] = useState({}) // catégories de chapitres dépliées
   useEffect(() => { setOpenCats({}) }, [tid]) // on repart d'un état neuf par thème
   useThemeTimer(tid) // mesure le temps de révision passé sur ce thème
@@ -62,6 +64,17 @@ export default function Theme() {
     if (!gs.length) return null
     const vals = gs.map((g) => rec?.games?.[g.id] || 0)
     return Math.round(vals.reduce((a, b) => a + b, 0) / gs.length)
+  }
+
+  // L'étude de documents porte sur plusieurs chapitres du thème : elle se fait
+  // depuis « Pour réviser tout le thème », pas depuis un chapitre.
+  const etudeDuTheme = (theme.games || []).find((g) => g.type === 'doc')
+  if (etude) {
+    return (
+      <div className="space-y-4">
+        <GameHost game={etude} chapterId={tid} color={color} onExit={() => setEtude(null)} />
+      </div>
+    )
   }
 
   if (themeExam) {
@@ -195,6 +208,17 @@ export default function Theme() {
       {/* Pour réviser tout le thème : une ligne par outil, dépliée à la demande */}
       {tab === 'outils' && (
         <section key={tid} className="space-y-2.5">
+          {etudeDuTheme && (
+            <button onClick={() => setEtude(etudeDuTheme)} className="card group flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md">
+              <span className="w-6 shrink-0 text-center text-lg" aria-hidden>📄</span>
+              <span className="min-w-0 flex-1">
+                <span className="block font-semibold leading-snug">Étude de documents du thème</span>
+                <span className="block text-xs text-slate-500 dark:text-slate-400">Un dossier de documents et ses questions, sur plusieurs chapitres du thème</span>
+              </span>
+              {rec?.games?.[etudeDuTheme.id] != null && <span className="chip bg-emerald-100 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">★ {rec.games[etudeDuTheme.id]}%</span>}
+              <span className="text-lg text-slate-300 transition group-hover:translate-x-0.5" aria-hidden>›</span>
+            </button>
+          )}
           {themeExamSize(tid) >= 4 && (
             <button onClick={() => setThemeExam(buildThemeExam(tid))} className="card group flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md">
               <span className="w-6 shrink-0 text-center text-lg" aria-hidden>📝</span>

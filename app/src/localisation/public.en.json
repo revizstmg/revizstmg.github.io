@@ -499,5 +499,18 @@
   "Tes derniers changements partent sur ton compte dans un instant.": "Your latest changes will be sent to your account in a moment.",
   "Tes derniers changements ne sont pas encore sur ton compte.": "Your latest changes are not on your account yet.",
   "Lancer les exercices": "Start the exercises",
-  "Les espaces partagés sont protégés par les règles d’accès de la base. Selon l’espace, l’accès dépend de ton compte, de ton rôle, de ta classe ou du code que tu partages. Utilise un prénom ou un surnom ; la photo est facultative.": "Shared spaces are protected by database access rules. Depending on the space, access depends on your account, role, class or the code you share. Use a first name or nickname; adding a photo is optional."
+  "Les espaces partagés sont protégés par les règles d’accès de la base. Selon l’espace, l’accès dépend de ton compte, de ton rôle, de ta classe ou du code que tu partages. Utilise un prénom ou un surnom ; la photo est facultative.": "Shared spaces are protected by database access rules. Depending on the space, access depends on your account, role, class or the code you share. Use a first name or nickname; adding a photo is optional.",
+  "Étude de documents du thème": "Theme document study",
+  "Un dossier de documents et ses questions, sur plusieurs chapitres du thème": "A set of documents and its questions, across several chapters of the theme",
+  "Mes notes de classe": "My class grades",
+  "{v0} {v1} · ce qu’il faut améliorer": "{v0} {v1} · what to improve",
+  "Tes notes et ce qu’il faut améliorer": "Your grades and what to improve",
+  "Pour que tes parents suivent ta progression, crée d’abord ton compte : ta progression d’essai y sera gardée.": "For your parents to follow your progress, first create your account: your trial progress will be kept there.",
+  "Créer mon compte": "Create my account",
+  "Renouveler le code": "Renew the code",
+  "Si le code a circulé : l’ancien ne marchera plus.": "If the code has been passed around: the old one will stop working.",
+  "Renouveler le code ? L’ancien ne marchera plus : tes parents devront saisir le nouveau.": "Renew the code? The old one will stop working: your parents will have to enter the new one.",
+  "Nouveau code créé. Donne-le à tes parents.": "New code created. Give it to your parents.",
+  "Le code n’a pas pu être renouvelé : vérifie ta connexion et réessaie.": "The code could not be renewed: check your connection and try again.",
+  "Mon espace": "My space"
 }
