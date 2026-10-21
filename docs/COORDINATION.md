@@ -1000,3 +1000,7 @@ Prochaine action :
 - Validation locale : 308 tests réussis et compilation ; accessibilité des 21 pages principales en clair/sombre sur téléphone réussie. Contrôle complémentaire de 18 pages en clair/sombre à 1280 px : aucun défaut axe ni débordement horizontal. Cours et chapitre vérifiés en grand texte / fort contraste à 393 px dans les deux thèmes : aucun défaut détecté. Captures accueil, cours, boutique et chapitre inspectées.
 - Chaînes de branche #39593912698 et #39593919705 réussies ; chaîne main #39594689890 réussie (tests UTC / Paris, compilation et 155 parcours). Aucun contrôle retiré. Les essais navigateur bloquent les accès extérieurs ; aucune donnée Supabase touchée.
 - Publication automatique 28047cd : GitHub Pages built confirmé. Contrôle public : accueil HTTP 200, CSS index-B2LrS7AE.css contient la charte et le thème sombre, fichiers Cours / Chapter / Shop / Profile portent les nouveaux styles. Annales officielles et téléchargements PDF distincts toujours présents ; métadonnées Google conservées.
+
+### 21 octobre 2026 — Codex — impression compacte (en cours)
+- Demande : réduire le nombre de pages imprimées, notamment le cours de GF sur la TVA.
+- Périmètre : styles d’impression communs / lecteur de cours et parcours PDF de vérification. Supprimer les sauts forcés et les blocs indivisibles trop grands ; garder tous les textes, tableaux et définitions. Aucun changement au contenu pédagogique ni à Supabase.
