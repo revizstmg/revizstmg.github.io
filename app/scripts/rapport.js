@@ -69,7 +69,14 @@ export const echapper = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&'
 export const nombre = (n) => (n == null || Number.isNaN(n) ? '—' : Number(n).toLocaleString('fr-FR').replace(/ /g, ' '))
 const dateCourte = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', timeZone: 'UTC' })
 const dateLongue = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
-const heureParis = (iso) => (iso ? new Date(iso).toLocaleString('fr-FR', { timeZone: 'Europe/Paris', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' }) : '—')
+const heureParis = (iso) => (iso && Number.isFinite(new Date(iso).getTime()) ? new Date(iso).toLocaleString('fr-FR', { timeZone: 'Europe/Paris', day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' }) : '—')
+// Une API inaccessible ou une exécution en attente n'est pas un échec du site.
+const etatPublication = (p) => p?.etat === 'success' ? true
+  : ['failure', 'error', 'timed_out', 'startup_failure', 'action_required'].includes(p?.etat) ? false : null
+const detailPublication = (p) => !p ? 'Non vérifié' : [
+  etatPublication(p) == null ? (p.detail || p.etat || 'Non vérifié') : p.detail,
+  heureParis(p.date) !== '—' ? heureParis(p.date) : null,
+].filter(Boolean).join(' · ') || 'Date indisponible'
 const decaler = (iso, jours) => {
   const d = new Date(`${iso}T12:00:00Z`)
   d.setUTCDate(d.getUTCDate() + jours)
@@ -184,15 +191,16 @@ export function construireRapport({ jour, verif = null, releve = null, contenu =
 
   // ---- Vérification ----
   const problemes = verif?.problemes || []
-  const ok = (x) => (x == null ? null : !!x.ok)
+  const ok = (x) => (typeof x?.ok === 'boolean' ? x.ok : null)
   const controles = [
     ['Construction du site', ok(verif?.construction), verif?.construction?.detail],
     ['Tests unitaires', ok(verif?.tests), verif?.tests?.detail],
     ['Parcours dans le navigateur', ok(verif?.parcours), verif?.parcours?.detail],
-    ['CI sur main', publication.ci ? publication.ci.etat === 'success' : null, publication.ci ? heureParis(publication.ci.date) : ''],
-    ['Mise en ligne (GitHub Pages)', publication.miseEnLigne ? publication.miseEnLigne.etat === 'success' : null, publication.miseEnLigne ? heureParis(publication.miseEnLigne.date) : ''],
+    ['CI sur main', etatPublication(publication.ci), detailPublication(publication.ci)],
+    ['Mise en ligne (GitHub Pages)', etatPublication(publication.miseEnLigne), detailPublication(publication.miseEnLigne)],
   ]
   const echecs = controles.filter((c) => c[1] === false).length
+  const inconnus = controles.filter((c) => c[1] == null).length
   const graves = problemes.filter((p) => p.gravite === 'grave').length
   const pluriel = (n, mot) => `${n} ${mot}${n > 1 ? 's' : ''}`
   const verdict = !verif
@@ -201,13 +209,15 @@ export function construireRapport({ jour, verif = null, releve = null, contenu =
       ? { icone: '❌', texte: [echecs && `${pluriel(echecs, 'contrôle')} en échec`, graves && `${pluriel(graves, 'problème')} grave${graves > 1 ? 's' : ''}`].filter(Boolean).join(', ') }
       : problemes.length
         ? { icone: '⚠️', texte: `${pluriel(problemes.length, 'problème')} à corriger` }
+        : inconnus
+          ? { icone: '⚠️', texte: `Vérification incomplète : ${pluriel(inconnus, 'contrôle')} non vérifié${inconnus > 1 ? 's' : ''}` }
         : { icone: '✅', texte: 'Rien à signaler' }
   const etat = (v) => (v == null ? '—' : v ? '✅' : '❌')
   const bord = { grave: '#b42318', moyen: SERIE2 }
 
   const blocVerif = `<table role="presentation" class="x ck">${controles.map(([nom, v, detail]) => `<tr><td class="i">${etat(v)}</td><td>${nom}</td><td class="dt">${echapper(detail || '')}</td></tr>`).join('')}</table>${problemes.length
     ? `<div style="margin-top:12px">${problemes.map((p, k) => `<div class="pb" style="border-left:4px solid ${bord[p.gravite] || '#d9d5cc'}"><b>${k + 1}. ${echapper(p.titre)}</b> <span class="z">· ${echapper(p.gravite || '')}</span>${p.ou ? `<br>Où : ${echapper(p.ou)}` : ''}${p.correction ? `<br>Correction proposée : ${echapper(p.correction)}` : ''}</div>`).join('')}</div>`
-    : verif ? '<p class="ok">Rien à signaler.</p>' : note('La routine n’a pas transmis le résultat de sa vérification.')}${verif?.themes?.length ? note(`Thèmes relus aujourd’hui : ${verif.themes.map(echapper).join(' · ')}.`) : ''}`
+    : verif ? (echecs || inconnus ? note('Aucun problème de contenu signalé ; certains contrôles sont en échec ou restent à vérifier.') : '<p class="ok">Rien à signaler.</p>') : note('La routine n’a pas transmis le résultat de sa vérification.')}${verif?.themes?.length ? note(`Thèmes relus aujourd’hui : ${verif.themes.map(echapper).join(' · ')}.`) : ''}`
 
   // ---- Chiffres clés et tableau analytique ----
   const e = (cle, valeur, date, jours) => ecart(histo, cle, valeur, date, jours)
@@ -294,7 +304,7 @@ export function construireRapport({ jour, verif = null, releve = null, contenu =
   const t = [`RévizSTMG — rapport du ${dateLongue(jour)}`, `${verdict.icone} ${verdict.texte}${inscrits}`, '', 'VÉRIFICATION DU SITE']
   for (const [nom, v, detail] of controles) t.push(`${etat(v)} ${nom}${detail ? ` (${detail})` : ''}`)
   problemes.forEach((p, k) => t.push(`${k + 1}. [${p.gravite || '?'}] ${p.titre}${p.ou ? ` — Où : ${p.ou}` : ''}${p.correction ? ` — Correction : ${p.correction}` : ''}`))
-  if (verif && !problemes.length) t.push('Rien à signaler.')
+  if (verif && !problemes.length) t.push(echecs || inconnus ? 'Aucun problème de contenu signalé ; certains contrôles sont en échec ou restent à vérifier.' : 'Rien à signaler.')
   if (verif?.themes?.length) t.push(`Thèmes relus : ${verif.themes.join(' · ')}`)
   t.push('', 'TABLEAU ANALYTIQUE (valeur · 7 jours · 30 jours)')
   const signe = (d) => (d == null ? '—' : d === 0 ? '= 0' : `${d > 0 ? '+' : '−'}${nombre(Math.abs(d))}`)
