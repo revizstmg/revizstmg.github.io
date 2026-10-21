@@ -893,3 +893,17 @@ Prochaine action :
   URL https://revizstmg.github.io/, canonique, og:site_name et jeton Google conservés.
   L’affichage dans les résultats Google n’est pas encore confirmé : Google choisit
   le nom et doit réexplorer l’accueil. Aucun achat de domaine nécessaire.
+
+### EXAMENS-20261021-CODEX-07 — Codex
+
+- Demande : créateur d’examen blanc par demande libre, 60/120/180/240 minutes.
+- Périmètre : nouveau créateur dans BacBlanc, chargement des matières demandées,
+  sujet structuré et barème, copie chronométrée persistée par compte sur cet
+  appareil, impression et corrigé après remise. Interface traduite.
+- Fonction Edge dédiée examen-blanc : IA côté serveur, accès authentifié,
+  validation entrée/sortie, cours fournis comme contexte, disponibilité explicite.
+  Aucun changement de table ni de réglage d’une fonction existante.
+- Hors couloir signalé au propriétaire : ajout autonome dans supabase/functions,
+  accès au client auth existant sans le modifier. PR #41 SEO conservée.
+- Branche feat/examens-personnalises ; tests logique, parcours simulés sans base
+  réelle et contrôle du déploiement prévus. Aucun faux résultat IA de secours.
