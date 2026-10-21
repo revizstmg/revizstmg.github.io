@@ -970,3 +970,8 @@ Prochaine action :
 - Audit dépendances production : aucune alerte jsPDF ; deux alertes modérées de
   react-router / react-router-dom déjà présents, hors périmètre de cette refonte.
   Les annales fonctionnent sans IA ; les créations attendent toujours une clé.
+- Chaîne main #39590257984 : 153 parcours réussis, deux contrôles globaux
+  d’accessibilité refusent le contraste des numéros décoratifs en vue mobile
+  (2:1 au lieu de 3:1). Le contrôle local précédent était en largeur bureau.
+  Correction ciblée annoncée : retirer la transparence de ces numéros, conserver
+  les tests et vérifier cette fois les deux largeurs, clair et sombre.
