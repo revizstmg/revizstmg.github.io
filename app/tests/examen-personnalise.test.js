@@ -131,3 +131,21 @@ test('diagnostic fournisseur : raisons contrôlées, aucun message brut journali
   expect(JSON.stringify(warn.mock.calls)).not.toContain('private-provider-detail')
  } finally { warn.mockRestore() }
 })
+
+test('Gemini : modèle actuel et repli borné si un ancien modèle renvoie 404', async () => {
+ const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : url.includes('ancien') ? new Response('', { status: 404 }) : Response.json({ candidates: [{ content: { parts: [{ text: JSON.stringify(exam()) }] } }] }))
+ const custom = k => k === 'EXAM_GEMINI_MODEL' ? ' models/ancien ' : env(k)
+ const r = await createHandler({ env: custom, fetcher })(request(input))
+ expect(r.status).toBe(200)
+ expect(fetcher.mock.calls[1][0]).toContain('/models/ancien:generateContent')
+ expect(fetcher.mock.calls[2][0]).toContain('/models/gemini-3.8-flash:generateContent')
+ expect(fetcher).toHaveBeenCalledTimes(3)
+})
+test('Gemini : aucun repli en cas de quota ou de permissions', async () => {
+ for (const status of [403, 429]) {
+  const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : new Response('', { status }))
+  const custom = k => k === 'EXAM_GEMINI_MODEL' ? 'ancien' : env(k)
+  await createHandler({ env: custom, fetcher })(request(input))
+  expect(fetcher).toHaveBeenCalledTimes(2)
+ }
+})
