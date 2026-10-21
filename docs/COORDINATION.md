@@ -975,3 +975,17 @@ Prochaine action :
   (2:1 au lieu de 3:1). Le contrôle local précédent était en largeur bureau.
   Correction ciblée annoncée : retirer la transparence de ces numéros, conserver
   les tests et vérifier cette fois les deux largeurs, clair et sombre.
+- PR #52 fusionnée dans e2be309 (code bc41c3c), PR #53 dans 1430ba3
+  (correctif f3d3dee). Après correction : 308 tests locaux réussis, compilation,
+  contrôles axe à 393 et 1280 pixels en clair et sombre sans défaut détecté.
+- Chaîne main #39591430830 réussie : 308 tests UTC, 308 Europe/Paris,
+  compilation et 155 parcours navigateur réussis. Version compilée 3f700d2,
+  GitHub Pages confirme built sur ce commit.
+- Contrôle public HTTP : accueil 200, fichier BacBlanc actif contient les
+  annales officielles et les téléchargements PDF séparés ; CSS public comprend
+  le correctif de contraste. Métadonnées Google préservées. Rendu bureau et
+  mobile inspecté ; PDFs générés rendus avec les polices système et relus.
+- Livré : accès immédiat aux six sujets officiels complets 2026 sans IA,
+  rédaction sur papier, présentation refondue. Aucun corrigé officiel d’annale
+  promis : seuls les sujets personnalisés exportent leur proposition de corrigé.
+  La génération de ces sujets attend toujours une clé IA, sans changement serveur.
