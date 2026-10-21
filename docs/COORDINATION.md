@@ -921,3 +921,8 @@ Prochaine action :
 - Pour Claude : fonction ajoutée hors couloir annoncée ; les paramètres de photo
   et rappels sont intacts. Prévoir l’ajout de ce flux IA dans la confidentialité
   lors de sa prochaine passe juridique ; information déjà explicite avant envoi.
+- Chaîne main #39586195505 interrompue avant publication : le parcours de création
+  écrivait deux captures temporaires sous /workspace/work, chemin absent du runner
+  GitHub. Correction de test annoncée : retirer ces captures de développement,
+  sans changer la fonctionnalité ni affaiblir les assertions. Branche
+  fix/examens-parcours-ci. Publication à revérifier après chaîne complète.
