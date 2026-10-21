@@ -49,11 +49,13 @@ test('création : deux PDF séparés et reprise sans questions à remplir', asyn
  expect(requests.map(r => r.action)).toEqual(['plan', 'generate'])
  expect(errors).toEqual([])
 })
-test('service désactivé : pas de faux bouton de génération, QCM conservés', async ({ page }) => {
+test('service désactivé : créateur en carte PDF, annales disponibles et aucun QCM', async ({ page }) => {
  const { errors, requests } = await setup(page, false)
  await expect(page.getByText(/La génération IA n’est pas encore activée/)).toBeVisible()
  await expect(page.getByRole('button', { name: 'Analyser ma demande' })).toHaveCount(0)
- await expect(page.getByRole('heading', { name: '⏱ QCM chronométré' })).toBeVisible()
+ await expect(page.getByRole('heading', { name: '⏱ QCM chronométré' })).toHaveCount(0)
+ await expect(page.locator('.bac-creator .bac-paper')).toBeVisible()
+ await expect(page.getByRole('link', { name: /Ouvrir le sujet PDF complet/ })).toHaveCount(2)
  expect(requests).toHaveLength(0); expect(errors).toEqual([])
 })
 test('quota IA : demande conservée et aucun sujet factice', async ({ page }) => {

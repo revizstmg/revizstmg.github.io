@@ -1004,3 +1004,4 @@ Prochaine action :
 ### 21 octobre 2026 — Codex — impression compacte (en cours)
 - Demande : réduire le nombre de pages imprimées, notamment le cours de GF sur la TVA.
 - Périmètre : styles d’impression communs / lecteur de cours et parcours PDF de vérification. Supprimer les sauts forcés et les blocs indivisibles trop grands ; garder tous les textes, tableaux et définitions. Aucun changement au contenu pédagogique ni à Supabase.
+- Demande ajoutée pendant le travail : retirer les QCM chronométrés de Bac blanc et présenter le créateur personnalisé comme les cartes de sujets PDF de la capture. Périmètre étendu à BacBlanc, CreateExam et leurs parcours ; conserver annales officielles, maths de Première et exports sujet / corrigé, sans modification serveur.

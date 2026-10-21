@@ -39,3 +39,23 @@ for (const [nom, chemin, pleinEcran] of [
     expect(erreurs).toEqual([])
   })
 }
+
+test('impression TVA : toutes les fiches sur au plus deux feuilles A4', async ({ page }) => {
+  await preparer(page)
+  await page.goto('./#/subject/gestion-finance/theme/gf-t1/chapter/0')
+  await attendreAccueil(page)
+  await expect(page.locator('.reader')).toBeVisible()
+  const fiches = page.locator('.reader-print-page')
+  expect(await fiches.count()).toBeGreaterThan(1)
+  const textes = await fiches.allTextContents()
+  await page.emulateMedia({ media: 'print' })
+  for (const fiche of await fiches.all()) await expect(fiche).toBeVisible()
+  await expect(page.locator('.chapter-page > .page-hero')).toBeHidden()
+  const imprime = (await page.locator('.reader').innerText()).replace(/\s/g, '').toLocaleLowerCase('fr')
+  for (const texte of textes) expect(imprime).toContain(texte.replace(/\s/g, '').toLocaleLowerCase('fr'))
+  await page.evaluate(() => document.fonts.ready)
+  const pdf = await page.pdf({ preferCSSPageSize: true })
+  const feuilles = pdf.toString('latin1').match(/\/Type\s*\/Page\b/g) || []
+  expect(feuilles.length).toBeGreaterThan(0)
+  expect(feuilles.length).toBeLessThanOrEqual(2)
+})

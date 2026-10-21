@@ -71,7 +71,7 @@ export default function Chapter() {
   const studentName = `${state.profile?.firstName || ''} ${state.profile?.lastName || ''}`.trim()
 
   return (
-    <div className="animate-lux space-y-4">
+    <div className="chapter-page animate-lux space-y-4">
       {/* En-tête visible uniquement à l'impression (fiche de révision PDF) */}
       <div className="print-only print-header">
         <div className="print-title">RévizSTMG — {t('revisionSheet')}</div>
@@ -146,8 +146,8 @@ export default function Chapter() {
         </div>
       </div>
 
-      {/* ONGLET DÉFINITIONS (imprimé dans la fiche PDF) */}
-      <div className={`${tab === 'defs' ? '' : 'hidden'} print-show`}>
+      {/* ONGLET DÉFINITIONS (imprimé sauf si le tableau du cours les contient déjà) */}
+      <div className={`${tab === 'defs' ? '' : 'hidden'} ${defBox.skip ? 'no-print' : 'print-show'}`}>
         {defBox.defs.length ? (
           <section className="card p-5">
             <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-bold">📚 {t('keyDefs')}</h2>

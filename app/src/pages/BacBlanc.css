@@ -56,3 +56,10 @@
 .dark .bac-centre { color:#eef4ef; }
 @media(max-width:640px) { .bac-hero { grid-template-columns:1fr; gap:24px; border-radius:22px; } .bac-hero-aside { border-left:0; border-top:1px solid #70847d; padding:22px 0 0; } .bac-hero-aside ol { gap:13px; } .bac-subjects { grid-template-columns:1fr; } .bac-preview { height:225px; } .bac-subject-body { padding:22px; } .bac-subject-desc { min-height:0; } }
 @media(prefers-reduced-motion:reduce) { .bac-subject { transition:none; } .bac-subject:hover { transform:none; } }
+
+/* Créateur personnalisé : carte de sujet avec sa couverture PDF. */
+.bac-creator { display:grid; grid-template-columns:minmax(220px,.8fr) minmax(0,1.4fr); }
+.bac-creator .bac-preview { height:100%; min-height:340px; align-items:center; padding:45px 20px; }
+.bac-creator .bac-paper { min-height:270px; }
+.bac-creator .bac-subject-body { min-width:0; }
+@media(max-width:640px) { .bac-creator { grid-template-columns:1fr; } .bac-creator .bac-preview { height:225px; min-height:0; align-items:flex-start; padding-top:28px; } }
