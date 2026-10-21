@@ -1054,3 +1054,11 @@ Prochaine action :
 - Parcours manuel : sélection Première + Terminale, aucun appel d’analyse, deux cours sélectionnés seulement envoyés ; recherche sans résultat, 24 maximum, effacement et retour automatique vérifiés. Contrôle axe du sélecteur sans violation, capture mobile inspectée. Chaînes de branche #39661715367 et #39661706252 réussies. Publication main #39674671350 en cours.
 - Chaîne main #39674671350 entièrement réussie : 328 tests UTC, 328 Europe/Paris, compilation et 161 parcours navigateur réussis. Publication compilée fbaa39d, construction Pages lancée. README mis à jour pour le choix manuel et le dépôt/correction de copie déjà livré. Aucun changement serveur ou de base pour ce choix manuel.
 - Publication publique confirmée : Pages built sur fbaa39d, chaîne Pages #39675453144 réussie ; fichier Bac blanc public contient les deux modes et la recherche des chapitres. Choix manuel terminé et en ligne ; aucune configuration Supabase à modifier.
+
+
+### RAPPORTS-20261021-CODEX-01 — Codex — corrections des rapports Gmail
+- Demande du propriétaire : analyser les rapports de Claude et corriger les problèmes signalés.
+- Périmètre : contenu philosophie (art/justice), économie (thèmes 6/7), générateur de questions et variantes, tests de non-régression et empreintes ; scripts de rapport et tests si un diagnostic inconnu est présenté comme une panne.
+- Branche : `fix/rapports-claude-pedagogie`. Lecture des PR ouvertes #41/#46 : référencement, sans chevauchement fonctionnel.
+- Extension annoncée au propriétaire : scripts `app/scripts/**` du couloir Claude pour les états de contrôle. Aucune modification Supabase ou NAH.
+- État : en cours ; comparer les alertes anciennes à main, sourcer les corrections pédagogiques, exécuter tests/compilation/parcours avant livraison. Les autorisations de la routine Claude ne peuvent être modifiées depuis ce dépôt.
