@@ -4,10 +4,10 @@ import { useStore, useStudyTimer } from '../store.jsx'
 import { buildExam, examSubjects } from '../data/study.js'
 import Exam from '../games/Exam.jsx'
 import CreateExam from '../components/CreateExam.jsx'
-import SujetBac from '../games/SujetBac.jsx'
+import AnnalesBac from '../components/AnnalesBac.jsx'
+import './BacBlanc.css'
 import SujetMaths from '../games/SujetMaths.jsx'
 import { BO_MATHS } from '../data/sujetMaths.js'
-import { composerSujet, sujetsDisponibles } from '../data/sujetBac.js'
 import { useT } from '../i18n.js'
 
 const DURATIONS = [
@@ -32,22 +32,18 @@ function BacBlancPage() {
   const t = useT()
   useStudyTimer() // le temps du bac blanc compte pour les récompenses
 
-  const subjects = examSubjects(state.track)
+  const subjects = examSubjects(state.track).filter(s => !['droit', 'economie', 'management', 'p1-droit', 'p1-economie', 'p1-management'].includes(s.id))
   // Une matière à la fois par défaut : un bac blanc mêlant toutes les matières
   // ne ressemble à aucune épreuve. Première : les maths (épreuve anticipée).
   const premiere = state.track?.level === 'premiere-stmg'
   const [subjectId, setSubjectId] = useState(() => (premiere && subjects.some((s) => s.id === 'p1-maths') ? 'p1-maths' : subjects[0]?.id) || 'all') // 'all' | subjectId
   const [dur, setDur] = useState(DURATIONS[2])
   const [exam, setExam] = useState(null) // { questions, durationSec }
-  const [sujet, setSujet] = useState(null) // sujet au format de l'épreuve en cours
-  const [customOpen, setCustomOpen] = useState(false)
-  const [sansSujet, setSansSujet] = useState(false)
   const [sujetMaths, setSujetMaths] = useState(false)
-  const sujets = sujetsDisponibles(state.track)
-  const lancerSujet = (id) => { const s = composerSujet(id, state.track); setSansSujet(!s); setSujet(s) }
+
 
   const start = () => {
-    const ids = subjectId === 'all' ? null : [subjectId]
+    const ids = subjectId === 'all' ? subjects.map(s => s.id) : [subjectId]
     const seen = state.examSeen?.[subjectId] || []
     const { questions, keys } = buildExam(state, state.track, ids, dur.q, seen)
     if (questions.length < 4) { setExam({ questions: [], durationSec: 0 }); return }
@@ -55,7 +51,6 @@ function BacBlancPage() {
     setExam({ questions, durationSec: dur.min * 60 })
   }
 
-  if (sujet) return <SujetBac sujet={sujet} onExit={() => setSujet(null)} />
   if (sujetMaths) return <SujetMaths onExit={() => setSujetMaths(false)} />
 
   if (exam && exam.questions.length >= 4) {
@@ -63,39 +58,23 @@ function BacBlancPage() {
   }
 
   return (
-    <div className="animate-lux space-y-6">
-      <header hidden={customOpen} className="text-center">
-        <p className="kicker">📝 {t('mockExam')}</p>
-        <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('mockExam')}</h1>
-        <span className="mx-auto mt-3 block h-px w-24 rounded-full" style={{ background: 'linear-gradient(90deg,transparent,#c8a24e,transparent)' }} />
-        <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">{t('mockExamSub')}</p>
+    <div className="bac-page animate-lux space-y-9">
+      <div className="space-y-9">
+      <header className="bac-hero">
+        <div><p className="bac-eyebrow">RÉVIZSTMG · LA SALLE D’EXAMEN</p><h1 className="font-display">Bac blanc</h1><p className="bac-hero-title font-display">Le jour J commence ici.</p><p className="bac-hero-desc">Un vrai sujet. Une copie. Du temps pour réfléchir. Prépare tes épreuves dans les conditions qui comptent.</p><div className="bac-hero-tags"><span>Sujets complets</span><span>Format PDF</span><span>À rédiger sur papier</span></div></div>
+        <aside className="bac-hero-aside" aria-label="Préparer sa séance"><ol><li>Choisis ton épreuve et ouvre le PDF.</li><li>Prépare une copie et ton matériel.</li><li>Installe-toi au calme, comme le jour du bac.</li></ol></aside>
       </header>
+      {!premiere && <AnnalesBac />}
+      </div>
 
-      <CreateExam onOpenChange={setCustomOpen} />
+      <CreateExam />
 
-      <div hidden={customOpen} className="space-y-6">
+      <div className="space-y-6">
 
       {exam && exam.questions.length < 4 && (
         <div className="card p-4 text-center text-sm text-rose-600 dark:text-rose-400">{t('notEnoughQuestions')}</div>
       )}
 
-      {/* Sujets au format des épreuves écrites de spécialité (Terminale) */}
-      {sujets.length > 0 && (
-        <section className="card p-5">
-          <h2 className="font-display text-xl font-medium">📜 {t('sujetTitle')}</h2>
-          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t('sujetSub')}</p><p className="mt-2 text-sm text-slate-600 dark:text-slate-300">Ces dossiers guidés ne constituent pas encore un sujet complet avec rédaction et barème officiel. Pour la session 2027, l’écrit de management porte sur l’enseignement commun et réserve 2 points sur 20 à l’orthographe et à la syntaxe. <a className="underline" href="https://www.education.gouv.fr/bo/2026/Special4/MENE2622652N" target="_blank" rel="noreferrer">Bulletin officiel du 17 septembre 2026</a></p>
-          <div className="mt-4 grid gap-2">
-            {sujets.map((s) => (
-              <button key={s.id} onClick={() => lancerSujet(s.id)} className="flex items-center gap-3 rounded-xl bg-slate-100 p-3.5 text-left transition hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700">
-                <span className="text-2xl" aria-hidden>{s.icon}</span>
-                <span className="min-w-0 flex-1"><span className="block font-semibold">{s.titre}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{t('sujetDuration')}</span></span>
-                <span className="text-slate-400" aria-hidden>›</span>
-              </button>
-            ))}
-          </div>
-          {sansSujet && <p className="mt-3 text-sm text-rose-600 dark:text-rose-400">{t('sujetNoContent')}</p>}
-        </section>
-      )}
       {/* Première : l'épreuve anticipée de mathématiques et ses automatismes */}
       {premiere && (
         <section className="card p-5">

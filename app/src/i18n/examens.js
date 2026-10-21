@@ -13,3 +13,12 @@ export const examMessages = { fr, ...Object.fromEntries(Object.entries({ en, es,
   if (values.length !== Object.keys(fr).length) throw new Error(`exam translation ${lang}`)
   return [lang, Object.fromEntries(Object.keys(fr).map((key, i) => [key, values[i]]))]
 })) }
+
+const pdfLabels = {
+ fr: ['Télécharger le sujet PDF', 'Télécharger le corrigé PDF', 'Préparation du PDF…', 'Télécharge le sujet complet et rédige tes réponses sur une copie séparée. Garde le corrigé pour la fin de ta séance.'],
+ en: ['Download exam PDF', 'Download answers PDF', 'Preparing PDF…', 'Download the complete exam and write on separate paper. Keep the answers for the end of your session.'],
+ es: ['Descargar examen PDF', 'Descargar soluciones PDF', 'Preparando PDF…', 'Descarga el examen completo y responde en una hoja aparte. Guarda las soluciones para el final.'],
+ it: ['Scarica la prova PDF', 'Scarica le soluzioni PDF', 'Preparazione del PDF…', 'Scarica la prova completa e rispondi su un foglio separato. Consulta le soluzioni alla fine.'],
+ ar: ['تنزيل الامتحان PDF', 'تنزيل التصحيح PDF', 'جارٍ إعداد PDF…', 'نزّل الامتحان الكامل واكتب الإجابات على ورقة منفصلة. احتفظ بالتصحيح لنهاية الجلسة.'],
+}
+for (const [lang, values] of Object.entries(pdfLabels)) Object.assign(examMessages[lang], Object.fromEntries(['downloadSubject', 'downloadCorrection', 'pdfCreating', 'pdfHelp'].map((key, i) => [key, values[i]])))

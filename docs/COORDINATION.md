@@ -953,3 +953,20 @@ Prochaine action :
   dans package.json/package-lock pour créer les PDF localement, chargé à la demande.
   Aucun changement Supabase. Règles 2027 et annales 2026 distinguées.
 - Branche feat/bac-blanc-pdf ; sources ministérielles et vérification PDF prévues.
+- PR #52 : annales originales ministérielles 2026 pour droit-économie et MSGN,
+  trois centres chacune (six PDF contrôlés : HTTP 200 et signature PDF).
+  Métropole relue : 8 pages en droit-économie, 15 en MSGN. Source : page des
+  examens 2026 du ministère ; BO MENE2622652N distingué pour la session 2027.
+- Refonte éditoriale vert profond/crème, couvertures, cartes, choix des centres.
+  Dossiers partiels retirés, QCM de droit/économie/management retirés de cette
+  page (y compris la sélection globale). Maths et autres QCM conservés.
+- Créateur personnalisé : deux vrais PDF A4 téléchargeables, sujet/corrigé séparés,
+  rédaction sur papier ; plus de champs de réponse dans l’app. jsPDF 4.2.1 épinglé,
+  importé à la demande. Aucun changement serveur ni de clé IA.
+- Validation locale : 308 tests, compilation et quatre parcours téléphone réussis.
+  PDF extraits avec pdftotext : accents/euro conservés, réponses absentes du sujet
+  et présentes dans le corrigé ; couverture rendue et inspectée. Nouvelle page
+  inspectée en capture mobile ; traductions hors ligne enrichies dans 4 langues.
+- Audit dépendances production : aucune alerte jsPDF ; deux alertes modérées de
+  react-router / react-router-dom déjà présents, hors périmètre de cette refonte.
+  Les annales fonctionnent sans IA ; les créations attendent toujours une clé.
