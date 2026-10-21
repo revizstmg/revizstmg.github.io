@@ -1,3 +1,4 @@
+import ExamCopy from './ExamCopy.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useStore } from '../store.jsx'
@@ -88,14 +89,15 @@ function Creator({ owner, lang, onOpenChange }) {
     finally { setBusy('') }
   }
   if (draft) return <ExamCard title={m.title} duration={draft.duration} min={m.min}>
-    <div className="flex items-start justify-between gap-4"><div><p className="kicker">PDF · RÉVIZSTMG</p><h2 className="mt-2 font-display text-3xl">{draft.exam.title}</h2><p className="mt-3 text-sm text-slate-600 dark:text-slate-300">{draft.duration} {m.min} · {draft.exam.questions.length} questions · 20 {m.points}</p></div><span aria-hidden className="text-3xl">↗</span></div>
+    <div className="flex items-start justify-between gap-4"><div><p className="kicker">PDF · RÉVIZSTMG</p><h2 className="mt-2 font-display text-3xl">{draft.exam.title}</h2><p className="mt-3 text-sm text-slate-600 dark:text-slate-300">{draft.duration} {m.min} · {draft.exam.questions.length} questions · {draft.exam.documents.length} documents · 20 {m.points}</p></div><span aria-hidden className="text-3xl">↗</span></div>
     <p className="text-sm leading-relaxed">{m.pdfHelp}</p>
     <div className="grid gap-3 sm:grid-cols-2"><button disabled={!!busy} className="btn-gold !py-4" onClick={() => download(false)}>{m.downloadSubject}</button><button disabled={!!busy} className="btn-ghost !py-4" onClick={() => download(true)}>{m.downloadCorrection}</button></div>
     {busy === 'pdf' && <p role="status" className="text-sm">{m.pdfCreating}</p>}
     {error && <p role="alert" className="text-sm text-rose-700 dark:text-rose-300">{error}</p>}
+    <ExamCopy draft={draft} owner={owner} lang={lang} onGrade={grade => setDraft(d => ({ ...d, grade }))} onBusy={value => setBusy(value ? 'grade' : '')} />
     <p className="text-xs text-slate-600 dark:text-slate-300">{m.notice}</p>
     <p role="status" className={`text-sm ${saveError ? 'text-rose-700 dark:text-rose-300' : 'text-slate-600 dark:text-slate-300'}`}>{saveError ? m.saveError : m.local}</p>
-    {replace ? <div className="space-y-3 border-t border-slate-300 pt-4" role="group" aria-label={m.discard}><p className="font-semibold">{m.discard}</p><p className="text-sm">{m.discardHelp}</p><button className="btn-gold" onClick={reset}>{m.yes}</button>{' '}<button className="btn-ghost" onClick={() => setReplace(false)}>{m.no}</button></div> : <button className="btn-ghost" onClick={() => setReplace(true)}>{m.restart}</button>}
+    {replace ? <div className="space-y-3 border-t border-slate-300 pt-4" role="group" aria-label={m.discard}><p className="font-semibold">{m.discard}</p><p className="text-sm">{m.discardHelp}</p><button disabled={!!busy} className="btn-gold" onClick={reset}>{m.yes}</button>{' '}<button className="btn-ghost" onClick={() => setReplace(false)}>{m.no}</button></div> : <button disabled={!!busy} className="btn-ghost" onClick={() => setReplace(true)}>{m.restart}</button>}
   </ExamCard>
   return <ExamCard title={m.title} duration={duration} min={m.min}>
     <div><p className="kicker">✦ RévizSTMG</p><h2 className="mt-2 font-display text-2xl font-semibold">{m.title}</h2><p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{m.sub}</p></div>

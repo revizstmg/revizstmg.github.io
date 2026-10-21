@@ -47,6 +47,7 @@ export function buildExamPdf(draft, correction = false) {
     for (const [i, q] of draft.exam.questions.entries()) {
       heading(`${i + 1}. ${q.enonce} (${q.points} points)`)
       if (q.documentIds.length) text('Documents : ' + q.documentIds.map(id => draft.exam.documents.find(d => d.id === id)?.title || id).join(' ; '), 10)
+      else text('Connaissances personnelles du cours - sans document.', 10)
     }
     if (draft.exam.documents.length) {
       page(); heading('Dossier documentaire')
