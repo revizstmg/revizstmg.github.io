@@ -172,7 +172,7 @@ test('Gemini indisponible partout : appels bornés, aucune réponse factice', as
 })
 
 describe('Groq', () => {
- const groqEnv = key => key === 'GROQ_API_KEY' ? ' groq-test-key ' : env(key)
+ const groqEnv = key => key === 'GROQ_API_KEY' ? ' groq-test-key ' : key === 'GEMINI_API_KEY' ? undefined : env(key)
  test('analyse et génère via Groq sans transmettre le jeton élève', async () => {
   const plan = { summary: 'Management', chapterIds: [course.id] }
   for (const body of [input, { action: 'plan', duration: 60, prompt: input.prompt, catalog: [course] }]) {
@@ -203,3 +203,8 @@ describe('Groq', () => {
   }
  })
 })
+
+ test('Gemini redevient prioritaire quand les deux clés sont présentes', async () => {
+  const handler = createHandler({ env: key => key === 'GROQ_API_KEY' ? 'groq-test' : env(key) })
+  expect(await (await handler(new Request('https://test?check=configuration'))).json()).toEqual({ provider: 'gemini' })
+ })

@@ -1031,3 +1031,7 @@ Prochaine action :
 ### 21 octobre 2026 — Codex — volume de génération Groq
 - Retour propriétaire : analyse réussie, création échouée. Journal serveur : HTTP 413 fournisseur. Documentation des limites gratuite : GPT OSS 120B 8K tokens/minute. Examiner une génération répartie plutôt que supprimer des cours ou livrer un sujet incomplet.
 - Conclusion : la connexion / l’analyse ne suffisent pas à valider une épreuve complète sur l’offre gratuite ; le fournisseur refuse la création (413). Ne pas annoncer la fonctionnalité opérationnelle. Pas de suppression de cours, de basculement payant ni de sujet artificiel pour contourner la limite. Génération par étapes nécessiterait une conception dédiée (reprise et quotas), non livrée dans cette intégration.
+
+### 21 octobre 2026 — Codex — retour Gemini
+- Demande explicite : remettre Gemini. Priorité à la clé Gemini si présente, Groq conservé uniquement en absence de clé Gemini ; aucun basculement automatique sur erreur. Périmètre : sélection du fournisseur et test, fonction examen-blanc uniquement. Clés, base et modèles inchangés.
+- Vérifications : 321 tests réussis (31 fichiers). Fonction v14 déployée avec JWT requis ; configuration réelle provider:gemini et métadonnées ready:true. Cette sonde ne prouve pas la disponibilité de generateContent ; création authentifiée à réessayer. PR #66, code ca8fbe8.
