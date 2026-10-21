@@ -1,19 +1,18 @@
 import { test, expect } from '@playwright/test'
 import { preparer, attendreAccueil } from './eleve.js'
-
-// Bac blanc : un sujet au format de l'épreuve s'ouvre, avec ses documents et son
-// chronomètre de 4 h.
-test('sujet Droit et économie au format de l’épreuve', async ({ page }) => {
-  const erreurs = await preparer(page)
-  await page.goto('./')
-  await attendreAccueil(page)
-  await page.goto('./#/bac-blanc')
-  await expect(page.getByRole('heading', { name: /Dossiers guidés de spécialité/ })).toBeVisible()
-  await page.getByRole('button', { name: /Droit et économie/ }).click()
-  await expect(page.locator('main')).toContainText('Partie 1 — Droit')
-  await expect(page.locator('main')).toContainText(/partie 1 sur 2/)
-  await expect(page.locator('main')).toContainText(/⏱ [34] h \d\d/)
-  await expect(page.locator('main')).toContainText(/Document 1/)
-  await page.screenshot({ path: '/tmp/claude-0/-home-user-NAH/b00c6cf6-33b6-5d76-a12d-45338d0a337c/scratchpad/sujet.png' })
-  expect(erreurs).toEqual([])
+import { annaleUrl } from '../../src/data/annalesBac.js'
+test('droit-économie et management : PDF officiels complets, sans dossiers à remplir', async ({ page }) => {
+ const errors = await preparer(page)
+ await page.goto('./#/bac-blanc'); await attendreAccueil(page)
+ await expect(page.getByRole('heading', { name: 'Choisis ton épreuve.' })).toBeVisible()
+ const law = page.getByRole('link', { name: 'Ouvrir le sujet PDF complet — Droit et économie' })
+ const management = page.getByRole('link', { name: /Ouvrir le sujet PDF complet — Management/ })
+ await expect(law).toHaveAttribute('href', annaleUrl('droit-eco'))
+ await expect(management).toHaveAttribute('href', annaleUrl('msgn'))
+ await page.getByLabel('Centre d’examen').first().selectOption('antilles')
+ await expect(law).toHaveAttribute('href', annaleUrl('droit-eco','antilles'))
+ await expect(page.getByRole('heading', { name: /Dossiers guidés/ })).toHaveCount(0)
+ await expect(page.getByRole('button', { name: /Droit et économie/ })).toHaveCount(0)
+ await page.screenshot({ path: test.info().outputPath('bac-blanc-mobile.png'), fullPage: true })
+ expect(errors).toEqual([])
 })

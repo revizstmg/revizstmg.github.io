@@ -24,7 +24,7 @@ async function setup(page, ready = true) {
  await page.goto('./#/bac-blanc'); await attendreAccueil(page)
  return { errors, requests }
 }
-test('demande, confirmation des niveaux, génération, copie reprise et corrigé après remise', async ({ page }) => {
+test('création : deux PDF séparés et reprise sans questions à remplir', async ({ page }) => {
  const { errors, requests } = await setup(page)
  const form = page.getByRole('region', { name: 'Crée ton examen blanc' })
  await form.getByLabel('Quel examen veux-tu passer ?').fill('Tester mes connaissances en management de première et terminale')
@@ -34,19 +34,18 @@ test('demande, confirmation des niveaux, génération, copie reprise et corrigé
  await expect(form.getByRole('list')).toContainText('Première'); await expect(form.getByRole('list')).toContainText('Terminale')
  await form.getByRole('button', { name: 'Créer mon examen', exact: true }).click()
  await expect(page.getByRole('heading', { name: 'Le management des organisations' })).toBeVisible()
- await expect(page.getByText('Réponse attendue avec justification.', { exact: true })).toHaveCount(0)
- await page.getByRole('button', { name: 'Commencer l’épreuve' }).click()
- await page.getByLabel('Ta réponse 1', { exact: true }).fill('Je justifie avec les informations du document.')
+ await expect(page.getByRole('textbox')).toHaveCount(0)
+ for (const name of ['Télécharger le sujet PDF', 'Télécharger le corrigé PDF']) {
+  const download = page.waitForEvent('download')
+  await page.getByRole('button', { name, exact: true }).click()
+  const file = await download
+  expect(file.suggestedFilename()).toMatch(/\.pdf$/)
+  const stream = await file.createReadStream(); const chunks = []
+  for await (const chunk of stream) chunks.push(chunk)
+  expect(Buffer.concat(chunks).subarray(0, 5).toString()).toBe('%PDF-')
+ }
  await page.reload(); await attendreAccueil(page)
- await expect(page.getByLabel('Ta réponse 1', { exact: true })).toHaveValue('Je justifie avec les informations du document.')
- await expect(page.getByText(/Temps restant/)).toBeVisible()
- await page.getByRole('button', { name: 'Rendre ma copie', exact: true }).click()
- await page.getByRole('button', { name: 'Confirmer la remise', exact: true }).click()
- await expect(page.getByText('Copie remise', { exact: true })).toBeVisible()
- await expect(page.getByText('Réponse attendue avec justification.', { exact: true })).toHaveCount(12)
- await page.emulateMedia({ media: 'print' })
- await expect(page.locator('.exam-sheet')).toBeVisible()
- await expect(page.getByRole('button', { name: 'Imprimer / PDF' })).toBeHidden()
+ await expect(page.getByRole('button', { name: 'Télécharger le sujet PDF' })).toBeVisible()
  expect(requests.map(r => r.action)).toEqual(['plan', 'generate'])
  expect(errors).toEqual([])
 })
@@ -56,20 +55,6 @@ test('service désactivé : pas de faux bouton de génération, QCM conservés',
  await expect(page.getByRole('button', { name: 'Analyser ma demande' })).toHaveCount(0)
  await expect(page.getByRole('heading', { name: '⏱ QCM chronométré' })).toBeVisible()
  expect(requests).toHaveLength(0); expect(errors).toEqual([])
-})
-test('une copie arrivée à échéance est remise au rechargement sans perdre la rédaction', async ({ page }) => {
- await setup(page)
- await page.getByLabel('Quel examen veux-tu passer ?').fill('Tester le management de première et terminale')
- await page.getByLabel('120 min', { exact: true }).check()
- await page.getByRole('button', { name: 'Analyser ma demande' }).click()
- await page.getByRole('button', { name: 'Créer mon examen', exact: true }).click({ timeout: 45000 })
- await page.getByRole('button', { name: 'Commencer l’épreuve' }).click()
- await page.getByLabel('Ta réponse 1', { exact: true }).fill('Ma réponse conservée')
- await page.evaluate(id => { const key = `revizstmg_exam_v1_${id}`; const d = JSON.parse(localStorage.getItem(key)); d.startedAt = Date.now() - 121 * 60000; localStorage.setItem(key, JSON.stringify(d)) }, ID)
- await page.reload(); await attendreAccueil(page)
- await expect(page.getByText('Le temps est écoulé. Ta copie est remise automatiquement.')).toBeVisible()
- await expect(page.getByText('Ma réponse conservée', { exact: true })).toBeVisible()
- await expect(page.getByRole('textbox', { name: 'Ta réponse 1', exact: true })).toHaveCount(0)
 })
 test('quota IA : demande conservée et aucun sujet factice', async ({ page }) => {
  await setup(page)

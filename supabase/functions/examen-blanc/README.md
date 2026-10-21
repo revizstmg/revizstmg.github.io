@@ -36,14 +36,19 @@ les messages sont contrôlés et aucun faux sujet n’est généré en remplacem
   distincte, pas incluse ici. Corps limité à 350 000 caractères, timeout IA 140 s.
 - L’IA reçoit la demande et les extraits de cours, pas la session, l’identité,
   les réponses ni la copie. Aucune journalisation des prompts/jetons ici.
-- Copie locale séparée par compte (`revizstmg_exam_v1_<id>`), pas synchronisée
-  entre appareils. Une seule copie courante par compte, remplacement confirmé.
-  Le corrigé reçu est caché dans l’interface avant remise ; ce n’est pas un
-  dispositif anti-triche et le chronomètre n’est pas certifié côté serveur.
-- Le chronomètre continue pendant une fermeture/veille. Remise à échéance,
-  corrigé et auto-évaluation, sans note automatique sur une rédaction.
+- Sujet personnalisé local séparé par compte (`revizstmg_exam_v1_<id>`), pas synchronisée
+  entre appareils. Un seul sujet courant par compte, remplacement confirmé.
+  Le sujet et le corrigé sont téléchargés dans deux PDF séparés.
+- Depuis la refonte PDF, les réponses se rédigent sur une copie papier ; le
+  formulaire de réponses et le chronomètre de la création personnalisée ont été
+  retirés. Les anciennes données locales ne sont pas effacées. Le corrigé guide
+  l’auto-évaluation, sans note automatique sur une rédaction.
 - Les sujets/corrigés sont en français ; contrôles traduits dans les cinq langues.
-- Impression via le navigateur (destination « Enregistrer au format PDF »).
+- Téléchargement de deux véritables PDF A4 via jsPDF, chargé à la demande :
+  sujet complet et corrigé séparé. Pagination, documents et barème inclus.
+- Les annales officielles 2026 proposées dans Bac blanc sont des liens directs
+  aux fichiers ministériels originaux et fonctionnent sans clé IA. Elles ne
+  prétendent pas être des sujets de la session 2027.
 
 Tests : `app/tests/examen-personnalise.test.js` (serveur avec fournisseur simulé,
 contrat, source, durée, isolation locale, langues) et
