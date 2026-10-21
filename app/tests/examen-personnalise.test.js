@@ -170,3 +170,36 @@ test('Gemini indisponible partout : appels bornés, aucune réponse factice', as
  expect(fetcher).toHaveBeenCalledTimes(4)
  expect(pause).toHaveBeenCalledTimes(1)
 })
+
+describe('Groq', () => {
+ const groqEnv = key => key === 'GROQ_API_KEY' ? ' groq-test-key ' : env(key)
+ test('analyse et génère via Groq sans transmettre le jeton élève', async () => {
+  const plan = { summary: 'Management', chapterIds: [course.id] }
+  for (const body of [input, { action: 'plan', duration: 60, prompt: input.prompt, catalog: [course] }]) {
+   const expected = body.action === 'plan' ? plan : exam()
+   const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : Response.json({ choices: [{ message: { content: JSON.stringify(expected) } }] }))
+   const response = await createHandler({ env: groqEnv, fetcher })(request(body))
+   expect(response.status).toBe(200)
+   expect((await response.json())[body.action === 'plan' ? 'plan' : 'exam']).toEqual(expected)
+   const [url, options] = fetcher.mock.calls[1]
+   expect(url).toBe('https://api.groq.com/openai/v1/chat/completions')
+   expect(options.headers.Authorization).toBe('Bearer groq-test-key')
+   expect(options.body).not.toContain('Bearer test')
+   expect(JSON.parse(options.body).response_format).toEqual({ type: 'json_object' })
+  }
+ })
+ test('sonde le modèle sans générer de texte', async () => {
+  const fetcher = vi.fn(async () => Response.json({ data: [{ id: 'openai/gpt-oss-120b' }] }))
+  const handler = createHandler({ env: groqEnv, fetcher })
+  expect(await (await handler(new Request('https://test?check=provider'))).json()).toEqual({ ready: true })
+  expect(fetcher.mock.calls[0][0]).toBe('https://api.groq.com/openai/v1/models')
+ })
+ test('ne contourne pas les quotas et rejette un sujet incomplet', async () => {
+  for (const [provider, code] of [[new Response('', { status: 429 }), 'rate_limit'], [Response.json({ choices: [{ message: { content: '{"title":"incomplet"}' } }] }), 'invalid_response']]) {
+   const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : provider)
+   const response = await createHandler({ env: groqEnv, fetcher })(request(input))
+   expect((await response.json()).error).toBe(code)
+   expect(fetcher).toHaveBeenCalledTimes(2)
+  }
+ })
+})

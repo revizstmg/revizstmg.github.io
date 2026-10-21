@@ -1020,3 +1020,9 @@ Prochaine action :
 - PR #60 fusionnée dans 40983be (diagnostic), PR #61 dans 1e1a15d (404), PR #62 dans 5193937 (503). Fonction examen-blanc v6 ACTIVE, JWT requis ; source 8f6ad41. Flash 3.6 par défaut, alternative Flash 3.8, une reprise différée sur 503, délai fournisseur global 120 s. Aucun repli sur quota / permissions et aucune réponse factice.
 - 22 tests serveur ciblés réussis : génération / contrat, accès authentifié, refus fournisseur, confidentialité des diagnostics, normalisation des clés / noms, modèle introuvable, indisponibilité et limite des reprises. Sonde réelle v6 : HTTP 200 ready:true sur les métadonnées. POST visiteur vérifié 401 sur v4, contrôle conservé. Aucun changement de base.
 - Génération authentifiée réelle encore à confirmer : le propriétaire a été invité à refaire analyse puis création après v6. La présence d’une clé ou l’accès au modèle ne constituent pas une preuve de génération complète. Chaîne complète main #39640231645 lancée, pas encore déclarée réussie à ce stade.
+
+### 21 octobre 2026 — Codex — intégration Groq
+- Autorisation propriétaire : clé GROQ_API_KEY enregistrée, brancher la génération sur Groq. Périmètre : fonction examen-blanc et tests ; aucun changement de base ni autre fonction du projet partagé.
+- Priorité Groq si clé présente, modèle Llama 3.3 70B, validation pédagogique et authentification conservées. Vérifier connexion, erreurs de quota et réponses structurées avant livraison.
+- Liste réelle des modèles Groq vérifiée avec la clé serveur : Llama 3.3 absent ; choix effectif openai/gpt-oss-120b (JSON et sorties longues supportées dans la documentation Groq). GROQ_API_KEY prioritaire, EXAM_GROQ_MODEL permet de fixer un autre modèle. Aucun basculement payant automatique en cas de quota.
+- Déploiement de la fonction seule, JWT conservé. Sonde lecture seule : ne prouve pas une génération authentifiée complète ; celle-ci reste à confirmer par le propriétaire.

@@ -1,4 +1,5 @@
 import { checkRequest, checkPlan, checkExam } from './contract.js'
+const groqModel = env => (env('EXAM_GROQ_MODEL') || 'openai/gpt-oss-120b').trim()
 const GEMINI_DEFAULT = 'gemini-3.6-flash'
 const GEMINI_ALTERNATIVE = 'gemini-3.8-flash'
 const geminiModel = env => (env('EXAM_GEMINI_MODEL') || GEMINI_DEFAULT).trim().replace(/^models\//, '')
@@ -31,17 +32,25 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
     if (req.method === 'OPTIONS') return new Response('ok', { headers: cors })
     if (!['GET', 'POST'].includes(req.method)) return json({ error: 'method_not_allowed' }, 405)
     const gemini = (env('GEMINI_API_KEY') || env('GOOGLE_API_KEY') || '').trim()
+    const groq = (env('GROQ_API_KEY') || '').trim()
     const anthropic = (env('ANTHROPIC_API_KEY') || '').trim()
     if (req.method === 'GET') {
-      if (new URL(req.url).searchParams.get('check') !== 'provider' || !gemini) return json({ ready: !!(gemini || anthropic) })
+      if (new URL(req.url).searchParams.get('check') === 'configuration') return json({ provider: groq ? 'groq' : gemini ? 'gemini' : anthropic ? 'anthropic' : null })
+      if (new URL(req.url).searchParams.get('check') !== 'provider' || (!groq && !gemini)) return json({ ready: !!(groq || gemini || anthropic) })
       // Lecture seule, mutualisée et mise en cache ; aucun contenu envoyé à l'IA.
       if (!probe || now() >= probeUntil) {
         probeUntil = now() + 60000
         probe = (async () => {
           try {
-            const model = geminiModel(env)
-            const r = await fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}`, { headers: { 'x-goog-api-key': gemini }, signal: AbortSignal.timeout(10000) })
-            return r.ok ? { ready: true } : { ready: false, error: await providerFailure(r) }
+            const url = groq ? 'https://api.groq.com/openai/v1/models' : `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(geminiModel(env))}`
+            const headers = groq ? { Authorization: `Bearer ${groq}` } : { 'x-goog-api-key': gemini }
+            const r = await fetcher(url, { headers, signal: AbortSignal.timeout(10000) })
+            if (!r.ok) return { ready: false, error: await providerFailure(r) }
+            if (groq) {
+              const data = await r.json()
+              return data.data?.some(model => model.id === groqModel(env)) ? { ready: true } : { ready: false, error: 'provider_model_unavailable' }
+            }
+            return { ready: true }
           } catch { return { ready: false, error: 'provider_unreachable' } }
         })()
       }
@@ -53,7 +62,7 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
       const auth = await fetcher(`${env('SUPABASE_URL')}/auth/v1/user`, { headers: { Authorization: token, apikey: env('SUPABASE_ANON_KEY') }, signal: AbortSignal.timeout(10000) })
       const user = auth.ok ? await auth.json() : null
       if (!user?.id || user.is_anonymous) return json({ error: 'login_required' }, 401)
-      if (!gemini && !anthropic) return json({ error: 'not_configured' }, 503)
+      if (!groq && !gemini && !anthropic) return json({ error: 'not_configured' }, 503)
       const raw = await req.text()
       if (raw.length > 350000) return json({ error: 'too_large' }, 413)
       let body
@@ -67,7 +76,11 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
         ? `Analyse la demande et choisis les chapitres pertinents du catalogue, en respectant la matière ET le niveau demandés (Première et Terminale si les deux sont demandés). Maximum 24 chapitres, selon la durée. Ne choisis pas les premiers par défaut. Réponds {"summary":"périmètre choisi et limites", "chapterIds":["identifiants exacts"]}. Demande et catalogue :\n${JSON.stringify(body)}`
         : `Compose une véritable épreuve rédigée de ${body.duration} minutes, environ ${body.duration / 10} questions, plusieurs exercices progressifs et si utile des documents d'application fictifs clairement étiquetés. Ajuste la longueur des documents et la complexité à la durée, pas seulement le nombre de questions. Aucun QCM. Chaque question porte UNIQUEMENT sur son chapitre source, dont tu donnes l'identifiant. N'invente pas de savoir hors des cours. Pour un cas fictif, fournis toutes les données nécessaires dans les documents, sans prétendre à une source réelle. Barème total EXACTEMENT 20 points. Tous les chapitres confirmés doivent être représentés si possible ; mentionne les limites dans les consignes. Corrigé détaillé, raisonnement, unités et critères d'auto-évaluation. Structure exacte : {"title":"titre", "instructions":"consignes", "documents":[{"id":"d1","title":"Document fictif…","text":"texte"}], "questions":[{"id":"q1","chapterId":"id exact", "documentIds":["d1"], "enonce":"Exercice 1 — …", "points":2,"correction":"réponse et démarche", "criteria":["critère"]}]}. Demande et cours :\n${JSON.stringify(body)}`
       let response, result
-      if (gemini) {
+      if (groq) {
+        response = await fetcher('https://api.groq.com/openai/v1/chat/completions', { method: 'POST', headers: { 'content-type': 'application/json', Authorization: `Bearer ${groq}` }, body: JSON.stringify({ model: groqModel(env), messages: [{ role: 'system', content: SYSTEM }, { role: 'user', content: instruction }], temperature: 0.3, response_format: { type: 'json_object' }, max_completion_tokens: body.action === 'plan' ? 3000 : 24000 }), signal: AbortSignal.timeout(120000) })
+        if (!response.ok) return json({ error: await providerFailure(response) }, response.status === 429 ? 429 : 502)
+        const data = await response.json(); result = data.choices?.[0]?.message?.content
+      } else if (gemini) {
         const models = [...new Set([geminiModel(env), GEMINI_DEFAULT, GEMINI_ALTERNATIVE])]
         const signal = AbortSignal.timeout(120000)
         let retried = false
