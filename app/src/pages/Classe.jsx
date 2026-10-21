@@ -206,7 +206,7 @@ export default function Classe() {
 
   return (
     <div className="animate-lux space-y-4">
-      <header className="flex items-start justify-between gap-3">
+      <header className="page-hero flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="kicker">{t('classSpace')}</p>
           <h1 className="flex items-center gap-2 truncate font-display text-3xl font-medium leading-tight">
@@ -274,7 +274,7 @@ export default function Classe() {
 function JoinForm({ onJoin, t }) {
   return (
     <div className="animate-lux space-y-4">
-      <header>
+      <header className="page-hero">
         <p className="kicker">{t('classSpace')}</p>
         <h1 className="font-display text-3xl font-medium leading-tight">👥 {t('joinClass')}</h1>
       </header>
@@ -321,7 +321,7 @@ function TeacherBar({ classes, active, onSwitch, onCreate, creating, t }) {
 function TeacherStart({ creating, onCreate, t }) {
   return (
     <div className="animate-lux space-y-4">
-      <header>
+      <header className="page-hero">
         <p className="kicker">{t('classSpace')}</p>
         <h1 className="font-display text-3xl font-medium leading-tight">🧑‍🏫 {t('yourClasses')}</h1>
       </header>

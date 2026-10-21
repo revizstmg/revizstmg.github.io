@@ -1,0 +1,75 @@
+/* Charte commune issue de Bac blanc. Les couleurs personnelles restent pilotées
+   par les variables du personnaliseur ; les états des exercices sont conservés. */
+:root { --editorial-green: #172d30; --editorial-gold: #e6cd91; }
+.page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 26px;
+  background: var(--editorial-green);
+  color: #fff;
+  padding: clamp(26px, 5vw, 46px);
+  text-align: start;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  width: 360px;
+  height: 360px;
+  right: -220px;
+  top: -210px;
+  border: 1px solid #45605c;
+  border-radius: 50%;
+  box-shadow: 0 0 0 55px #45605c22, 0 0 0 110px #45605c15;
+}
+.page-hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.6rem);
+  font-weight: 500;
+  line-height: 1.07;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.page-hero .kicker { color: var(--editorial-gold); font-family: var(--font-body, 'Inter'), sans-serif; font-size: .625rem; font-weight: 700; letter-spacing: .17em; }
+.page-hero p { max-width: 48rem; line-height: 1.8; }
+.page-hero p:not(.kicker), .page-hero span.text-slate-400 { color: #e0e8e4; }
+.site-shell .page-hero button:not([class*='bg-']):not(.btn-primary) { color: #e6cd91; }
+.site-shell .page-hero .btn-ghost { color: #fff; border-color: #80928d; }
+.page-hero h1, .page-hero h1 * { color: #fff; }
+.page-hero .btn-ghost { color: #fff; border: 1px solid #80928d; box-shadow: none; }
+.page-hero .btn-primary { background: #e9d7aa; color: #172d30; }
+.page-hero-compact { padding: clamp(22px, 4vw, 32px); border-radius: 22px; }
+.page-hero-compact h1 { font-size: clamp(1.8rem, 4vw, 2.7rem); }
+.page-hero > div { min-width: 0; }
+.site-shell .card {
+  border-color: color-mix(in srgb, var(--c-ink) 14%, var(--c-card));
+  box-shadow: 0 3px 14px #172d3006;
+}
+.site-shell .card-lux::before { opacity: .5; }
+.site-shell .btn-primary:not([style*='background']) { background: var(--editorial-green); color: #fff; box-shadow: none; }
+.site-shell .btn-primary:not([style*='background']):hover { background: #294b48; }
+.site-shell .page-hero .btn-primary { background: #e9d7aa; color: #172d30; }
+.site-shell .btn-ghost { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-ink) 20%, transparent); }
+.site-main { padding-top: 1.5rem; }
+.site-main > div > .rule-gold { opacity: .5; }
+.identity-hero, .shop-hero { border-radius: 26px; }
+.shop-hero { background: var(--editorial-green); }
+.site-shell .home-subject-card { border-color: color-mix(in srgb, var(--c-ink) 14%, var(--c-card)); box-shadow: 0 3px 14px #172d3006; }
+.site-shell .home-progress-panel, .site-shell .home-community-panel { border-color: color-mix(in srgb, var(--c-ink) 14%, var(--c-card)); }
+html.dark .site-shell .card { box-shadow: none; }
+html.dark .site-shell .btn-primary:not([style*='background']) { background: #e9d7aa; color: #172d30; }
+html.a11y-contrast .page-hero { background: #000; color: #fff; }
+html.a11y-contrast .page-hero p, html.a11y-contrast .page-hero [class*='text-slate-'] { color: #fff !important; opacity: 1; }
+html.a11y-contrast .site-shell .card { border-color: var(--c-ink); }
+@media (max-width: 639px) {
+  .site-main { padding-top: 1rem; }
+  .page-hero { border-radius: 22px; }
+  .page-hero.flex { flex-wrap: wrap; }
+  .page-hero-compact h1 { font-size: 1.8rem; }
+}
+@media print {
+  .page-hero { background: none; color: #000; padding: 0; overflow: visible; }
+  .page-hero::before { display: none; }
+  .page-hero h1, .page-hero h1 *, .page-hero p:not(.kicker), .page-hero .kicker { color: #000; }
+}

@@ -86,9 +86,9 @@ export default function Chapter() {
         <span className="font-semibold">{t('chapter')} {i + 1}</span>
       </nav>
 
-      <header className="flex items-start justify-between gap-3">
+      <header className="page-hero page-hero-compact flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em]" style={{ color }}><CourseText text={theme.name} /> · {t('chapter')} {i + 1}/{chapters.length}</p>
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em]" style={{ color: 'var(--editorial-gold)' }}><CourseText text={theme.name} /> · {t('chapter')} {i + 1}/{chapters.length}</p>
           <h1 className="font-display text-2xl font-medium leading-tight"><CourseText text={chapter.title} /></h1>
         </div>
         <div className="no-print flex shrink-0 items-center gap-1.5">

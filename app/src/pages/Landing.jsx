@@ -19,7 +19,7 @@ export default function Landing() {
 
   return (
     <div className="animate-lux space-y-6 py-2">
-      <header className="text-center">
+      <header className="page-hero text-center">
         <p className="kicker">RévizSTMG</p>
         <h1 className="mt-1 font-display text-[2rem] font-medium leading-tight">
           {state.profile?.firstName ? `${state.profile.firstName}, ` : ''}{t('whatRevise')}

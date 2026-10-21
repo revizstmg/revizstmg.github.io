@@ -81,7 +81,7 @@ function GrandOralPage() {
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">
       <LevelToolNotice level="terminale-stmg" />
-      <header className="text-center">
+      <header className="page-hero text-center">
         <p className="kicker">🎓 {t('grandOral')}</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('grandOral')}</h1>
         <p className="mx-auto mt-2 max-w-lg text-sm text-slate-500 dark:text-slate-400"><TextePublic text={CONTENU.intro} /></p>

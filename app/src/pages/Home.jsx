@@ -57,13 +57,13 @@ export default function Home() {
   const bannerTint = banner || 'var(--c-accent)'
   const bannerBg = banner
     ? `linear-gradient(140deg, color-mix(in srgb, ${banner} 46%, #14110c) 0%, color-mix(in srgb, ${banner} 22%, #1b1610) 55%, #14110c 100%)`
-    : 'linear-gradient(140deg, color-mix(in srgb, var(--c-accent) 14%, #17130d) 0%, #221d15 55%, #17130d 100%)'
+    : 'linear-gradient(135deg, #172d30 0%, #24423f 100%)'
 
   return (
     <div className="animate-lux space-y-7">
       {/* Écrin personnalisé — cover sombre & or, à l'effigie de l'accueil */}
       <section
-        className="card-lux relative overflow-hidden rounded-[1.6rem] p-6 text-[#f4ecd8] sm:p-8"
+        className="identity-hero card-lux relative overflow-hidden rounded-[1.6rem] p-6 text-[#f4ecd8] sm:p-8"
         style={{ background: bannerBg, border: `1px solid color-mix(in srgb, ${bannerTint} 30%, transparent)` }}
       >
         <span aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full" style={{ background: `radial-gradient(circle, color-mix(in srgb, ${bannerTint} 32%, transparent), transparent 70%)` }} />

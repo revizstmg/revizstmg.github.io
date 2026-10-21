@@ -49,7 +49,7 @@ function SeancePage() {
 
   return (
     <div className="animate-lux mx-auto max-w-md space-y-5 text-center">
-      <header>
+      <header className="page-hero page-hero-compact">
         <p className="kicker">☀️ Ma séance du jour</p>
         <h1 className="mt-1 font-display text-[1.7rem] font-medium leading-tight">{faites.length === etapes.length && etapes.length ? 'Séance terminée' : 'Séance du jour'}</h1>
       </header>

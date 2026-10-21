@@ -8,7 +8,7 @@ import { MESURE_ACTIVE } from '../mesure.js'
 export default function Privacy() {
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">
-      <header>
+      <header className="page-hero page-hero-compact">
         <p className="kicker">RévizSTMG</p>
         <h1 className="font-display text-3xl font-medium leading-tight">Confidentialité &amp; protection des données</h1>
         <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">Dernière mise à jour : octobre 2026 · Conforme au RGPD (règlement UE 2016/679) et à la loi « Informatique et Libertés »</p>

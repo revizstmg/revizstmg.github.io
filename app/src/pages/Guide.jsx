@@ -32,7 +32,7 @@ export default function Guide() {
   if (standalone) return <Navigate to="/accueil" replace />
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">
-      <header className="text-center">
+      <header className="page-hero page-hero-compact text-center">
         <p className="kicker">🎓 Guide de démarrage</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">Bien commencer en 5 minutes</h1>
         <span className="mx-auto mt-3 block h-px w-24 rounded-full" style={{ background: 'linear-gradient(90deg,transparent,#c8a24e,transparent)' }} />

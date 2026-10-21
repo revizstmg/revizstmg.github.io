@@ -88,7 +88,7 @@ export default function Parent() {
 
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-6">
-      <header className="text-center">
+      <header className="page-hero text-center">
         <p className="kicker">👨‍👩‍👧 {t('parentSpace')}</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('parentSpace')}</h1>
         <p className="mx-auto mt-2 max-w-md text-sm text-slate-500 dark:text-slate-400">{t('parentIntro')}</p>

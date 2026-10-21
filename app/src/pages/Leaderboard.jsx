@@ -80,7 +80,7 @@ export default function Leaderboard() {
     const myCode = normalizeCode(classCode)
     return (
       <div className="animate-lux space-y-4">
-        <header>
+        <header className="page-hero">
           <p className="kicker">{t('leaderboard')}</p>
           <h1 className="font-display text-3xl font-medium leading-tight">🏟️ {t('league')}</h1>
         </header>
@@ -136,7 +136,7 @@ export default function Leaderboard() {
   if (!classCode) {
     return (
       <div className="animate-lux space-y-4">
-        <header>
+        <header className="page-hero">
           <p className="kicker">{t('leaderboard')}</p>
           <h1 className="font-display text-3xl font-medium leading-tight">🏆 {t('weeklyRanking')}</h1>
         </header>
@@ -156,7 +156,7 @@ export default function Leaderboard() {
   // ===================================================== MA CLASSE (classement)
   return (
     <div className="animate-lux space-y-4">
-      <header className="flex items-start justify-between gap-3">
+      <header className="page-hero flex items-start justify-between gap-3">
         <div>
           <p className="kicker">{t('classLabel')} · {classCode}</p>
           <h1 className="font-display text-3xl font-medium leading-tight">🏆 {t('weeklyRanking')}</h1>

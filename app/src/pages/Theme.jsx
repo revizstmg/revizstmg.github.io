@@ -87,7 +87,7 @@ export default function Theme() {
 
   return (
     <div className="animate-lux space-y-4">
-      <header className="flex items-start justify-between gap-2">
+      <header className="page-hero page-hero-compact flex items-start justify-between gap-2">
         <div className="min-w-0">
           <h1 className="font-display text-2xl font-medium leading-tight"><CourseText text={theme.name} /></h1>
           {score > 0 && (

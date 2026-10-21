@@ -14,7 +14,7 @@ export default function Badges() {
 
   return (
     <div className="animate-lux space-y-5">
-      <header>
+      <header className="page-hero">
         <p className="kicker">{t('level')} {derived.level} · {state.xp} XP</p>
         <h1 className="font-display text-3xl font-medium leading-tight">🏅 {state.profile?.firstName ? `${t('badgesOf')} ${state.profile.firstName}` : t('myBadges')}</h1>
         <p className="mt-0.5 text-sm text-slate-500 dark:text-slate-400">

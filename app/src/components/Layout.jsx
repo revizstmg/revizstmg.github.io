@@ -82,7 +82,7 @@ export default function Layout({ children }) {
   const mono = avatar || initials
 
   return (
-    <div className="min-h-screen overflow-x-clip">
+    <div className="site-shell min-h-screen overflow-x-clip">
       <header
         className="no-print sticky top-0 z-40 border-b backdrop-blur"
         style={{
@@ -269,7 +269,7 @@ export default function Layout({ children }) {
       <BandeauEssai />
       <EtatSauvegarde /><QuizOutboxStatus />
       <TranslationStatus />
-      <main className="mx-auto max-w-4xl px-4 pb-16 pt-4">
+      <main className="site-main mx-auto max-w-4xl px-4 pb-16 pt-4">
         <div key={pathname} className="page-enter">{children}</div>
       </main>
 

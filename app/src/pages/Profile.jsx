@@ -110,8 +110,8 @@ export default function Profile() {
   return (
     <div className="animate-lux space-y-6">
       {/* En-tête identité */}
-      <section className="card-lux relative overflow-hidden rounded-[1.6rem] p-6 text-[#f4ecd8] sm:p-8"
-        style={{ background: 'linear-gradient(140deg, color-mix(in srgb, var(--c-accent) 14%, #17130d) 0%, #221d15 55%, #17130d 100%)', border: '1px solid color-mix(in srgb, var(--c-accent) 30%, transparent)' }}>
+      <section className="identity-hero card-lux relative overflow-hidden rounded-[1.6rem] p-6 text-[#f4ecd8] sm:p-8"
+        style={{ background: 'linear-gradient(135deg, #172d30 0%, #24423f 100%)', border: '1px solid color-mix(in srgb, var(--c-accent) 30%, transparent)' }}>
         <span aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full" style={{ background: 'radial-gradient(circle, color-mix(in srgb, var(--c-accent) 32%, transparent), transparent 70%)' }} />
         <div className="relative flex items-center gap-4 sm:gap-5">
           <span className="monogram h-20 w-20 shrink-0 overflow-hidden text-3xl" aria-hidden>
