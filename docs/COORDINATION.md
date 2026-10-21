@@ -893,3 +893,31 @@ Prochaine action :
   URL https://revizstmg.github.io/, canonique, og:site_name et jeton Google conservés.
   L’affichage dans les résultats Google n’est pas encore confirmé : Google choisit
   le nom et doit réexplorer l’accueil. Aucun achat de domaine nécessaire.
+
+### EXAMENS-20261021-CODEX-07 — Codex
+
+- Demande : créateur d’examen blanc par demande libre, 60/120/180/240 minutes.
+- Périmètre : nouveau créateur dans BacBlanc, chargement des matières demandées,
+  sujet structuré et barème, copie chronométrée persistée par compte sur cet
+  appareil, impression et corrigé après remise. Interface traduite.
+- Fonction Edge dédiée examen-blanc : IA côté serveur, accès authentifié,
+  validation entrée/sortie, cours fournis comme contexte, disponibilité explicite.
+  Aucun changement de table ni de réglage d’une fonction existante.
+- Hors couloir signalé au propriétaire : ajout autonome dans supabase/functions,
+  accès au client auth existant sans le modifier. PR #41 SEO conservée.
+- Branche feat/examens-personnalises ; tests logique, parcours simulés sans base
+  réelle et contrôle du déploiement prévus. Aucun faux résultat IA de secours.
+- PR #49 : implémentation terminée. Tests locaux finaux : 306 tests / 30 fichiers,
+  compilation réussie et quatre parcours téléphone simulés réussis (création
+  Première + Terminale, reprise, remise à échéance, quota et impression CSS).
+- Fonction examen-blanc v1 déployée seule sur wyydagcjkbivtbuhbzon avec JWT requis
+  et vérification utilisateur côté serveur. Contrôles réels non payants : GET 200
+  ready:false ; POST avec clé publique seule 401 login_required.
+  Aucune clé Gemini/Anthropic présente : génération réelle non activée et non
+  testée avec un fournisseur réel. Pas de faux sujet ni de bascule cachée.
+- Copie locale uniquement, pas de synchronisation entre appareils. Compteur de
+  requêtes en mémoire par instance, pas un quota global de facturation. Limites
+  documentées dans supabase/functions/examen-blanc/README.md. Aucune table modifiée.
+- Pour Claude : fonction ajoutée hors couloir annoncée ; les paramètres de photo
+  et rappels sont intacts. Prévoir l’ajout de ce flux IA dans la confidentialité
+  lors de sa prochaine passe juridique ; information déjà explicite avant envoi.
