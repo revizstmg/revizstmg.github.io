@@ -989,3 +989,9 @@ Prochaine action :
   rédaction sur papier, présentation refondue. Aucun corrigé officiel d’annale
   promis : seuls les sujets personnalisés exportent leur proposition de corrigé.
   La génération de ces sujets attend toujours une clé IA, sans changement serveur.
+
+### 21 octobre 2026 — Codex — charte éditoriale commune (en cours)
+- Demande propriétaire : étendre la présentation approuvée de Bac blanc aux autres pages.
+- Périmètre : styles communs, en-têtes des pages, accueil, boutique et espace personnel ; Layout et pages partagées / sociales limités à la présentation. Préserver les travaux SEO de Claude, les comportements, traductions, thèmes, cours et données. Aucun changement Supabase.
+- Accueil : matières hautes, petites cartes sur deux lignes et blocs progression / communauté conservés.
+- Validation prévue : tests unitaires, compilation, parcours et accessibilité clair/sombre mobile/bureau, puis publication et contrôle public.
