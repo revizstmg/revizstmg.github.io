@@ -1,3 +1,4 @@
+import ExamChapterPicker from './ExamChapterPicker.jsx'
 import ExamCopy from './ExamCopy.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -22,6 +23,8 @@ function ExamCard({ title, duration, min, children }) {
 }
 function Creator({ owner, lang, onOpenChange }) {
   const m = examMessages[lang] || examMessages.fr
+  const [mode, setMode] = useState('auto')
+  const [selected, setSelected] = useState([])
   const [prompt, setPrompt] = useState('')
   const [duration, setDuration] = useState(120)
   const [available, setAvailable] = useState(null)
@@ -55,6 +58,7 @@ function Creator({ owner, lang, onOpenChange }) {
   const run = async action => {
     if (locked.current) return
     if (prompt.trim().length < 15) { setError(m.empty); return }
+    if (action === 'plan' && mode === 'manual' && !selected.length) { setError(m.chooseChapter); return }
     locked.current = true; setError(''); setBusy(action)
     const ac = new AbortController(); abort.current = ac
     const timeout = setTimeout(() => ac.abort(), 180000)
@@ -66,7 +70,8 @@ function Creator({ owner, lang, onOpenChange }) {
         })
         if (!mounted.current || ac.signal.aborted) return
         const catalog = usable.map(({ id, title, subject, level }) => ({ id, title, subject, level }))
-        const result = await requestExam({ action, prompt, duration, catalog }, owner, ac.signal)
+        const result = mode === 'manual' ? { summary: m.manualScope, chapterIds: selected.filter(id => usable.some(c => c.id === id)) } : await requestExam({ action, prompt, duration, catalog }, owner, ac.signal)
+        if (!result.chapterIds.length) throw new Error('invalid_request')
         if (mounted.current) { setCatalog(usable); setPlan(result) }
       } else {
         const courses = toCourses(catalog, plan.chapterIds)
@@ -103,9 +108,11 @@ function Creator({ owner, lang, onOpenChange }) {
     <div><p className="kicker">✦ RévizSTMG</p><h2 className="mt-2 font-display text-2xl font-semibold">{m.title}</h2><p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{m.sub}</p></div>
     <form onSubmit={e => { e.preventDefault(); run('plan') }} className="space-y-4">
       <label className="block text-sm font-semibold">{m.prompt}<textarea value={prompt} onChange={e => { setPrompt(e.target.value); setPlan(null) }} placeholder={m.placeholder} maxLength={1500} minLength={15} required rows={4} disabled={!!busy} className="mt-2 w-full rounded-xl border border-slate-300 bg-white p-3 text-base font-normal text-slate-900 dark:border-slate-600 dark:bg-slate-900 dark:text-white" /></label>
+      <fieldset disabled={!!busy}><legend className="mb-2 text-sm font-semibold">{m.chapterChoice}</legend><div className="grid gap-2 sm:grid-cols-2">{[['auto', m.automatic], ['manual', m.manual]].map(([value, label]) => <label key={value} className="flex cursor-pointer items-center gap-3 rounded-xl border border-slate-300 p-3 text-sm dark:border-slate-600"><input type="radio" name="exam-chapters" value={value} checked={mode === value} onChange={() => { setMode(value); setPlan(null); setError('') }} />{label}</label>)}</div></fieldset>
+      {mode === 'manual' && <ExamChapterPicker m={m} selected={selected} onChange={ids => { setSelected(ids); setPlan(null); setError('') }} onCatalog={setCatalog} disabled={!!busy} />}
       <fieldset disabled={!!busy}><legend className="mb-2 text-sm font-semibold">{m.duration}</legend><div className="grid grid-cols-2 gap-2 sm:grid-cols-4">{DURATIONS.map(d => <label key={d} className={`flex cursor-pointer items-center justify-center gap-2 rounded-xl border px-3 py-3 text-sm font-semibold ${duration === d ? 'border-amber-600 bg-amber-100 text-amber-950 dark:border-amber-400 dark:bg-amber-950 dark:text-amber-100' : 'border-slate-300 dark:border-slate-600'}`}><input type="radio" name="exam-duration" value={d} checked={duration === d} onChange={() => { setDuration(d); setPlan(null) }} />{d} {m.min}</label>)}</div></fieldset>
       <p className="text-xs leading-relaxed text-slate-600 dark:text-slate-300">{m.consent} {m.french}</p>
-      {!owner ? <p className="text-sm"><Link to="/moi" className="underline">{m.login}</Link></p> : available === null ? <p className="text-sm" role="status">{m.checking}</p> : !available ? <div role="status" className="rounded-xl bg-slate-100 p-4 text-sm dark:bg-slate-800"><p>{m.unavailable}</p><button type="button" className="mt-2 underline" onClick={() => setCheck(x => x + 1)}>{m.retry}</button></div> : !plan && <button type="submit" disabled={!!busy} className="btn-gold w-full !py-3">{m.analyze}</button>}
+      {!owner ? <p className="text-sm"><Link to="/moi" className="underline">{m.login}</Link></p> : available === null ? <p className="text-sm" role="status">{m.checking}</p> : !available ? <div role="status" className="rounded-xl bg-slate-100 p-4 text-sm dark:bg-slate-800"><p>{m.unavailable}</p><button type="button" className="mt-2 underline" onClick={() => setCheck(x => x + 1)}>{m.retry}</button></div> : !plan && <button type="submit" disabled={!!busy || (mode === 'manual' && !selected.length)} className="btn-gold w-full !py-3">{mode === 'manual' ? m.reviewChapters : m.analyze}</button>}
     </form>
     {busy && <p role="status" aria-live="polite" className="text-sm">⏳ {busy === 'plan' ? m.analyzing : m.generating}</p>}
     {error && <p role="alert" className="rounded-xl bg-rose-50 p-3 text-sm text-rose-800 dark:bg-rose-950 dark:text-rose-200">{error}</p>}
