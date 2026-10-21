@@ -20,7 +20,7 @@
 .bac-subject:hover { box-shadow:0 16px 36px #1a302610; transform:translateY(-2px); }
 .bac-preview { height:245px; position:relative; overflow:hidden; display:flex; justify-content:center; align-items:flex-start; padding-top:28px; background:#e4e9e2; }
 .bac-subject-management .bac-preview { background:#e8e3d8; }
-.bac-preview-number { position:absolute; left:18px; top:14px; font:48px Georgia,serif; color:#53624f; opacity:.5; }
+.bac-preview-number { position:absolute; left:18px; top:14px; font:48px Georgia,serif; color:#53624f; opacity:1; }
 .bac-paper { position:relative; transform:rotate(-5deg); display:flex; flex-direction:column; align-items:center; text-align:center; width:174px; min-height:242px; padding:19px 17px; background:#fffefb; box-shadow:4px 7px 0 #ffffff77,0 10px 30px #23332b23; color:#202a2c; font-family:Arial,sans-serif; }
 .bac-subject-management .bac-paper { transform:rotate(5deg); }
 .bac-paper-small { font-size:5px; font-weight:700; letter-spacing:.2px; }
