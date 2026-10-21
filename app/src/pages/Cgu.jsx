@@ -9,7 +9,7 @@ const lien = 'font-semibold text-[#84671b] underline dark:text-[#d9bd77]'
 export default function Cgu() {
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">
-      <header>
+      <header className="page-hero page-hero-compact">
         <p className="kicker">RévizSTMG</p>
         <h1 className="font-display text-3xl font-medium leading-tight">Conditions d’utilisation &amp; mentions légales</h1>
         <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">Dernière mise à jour : octobre 2026</p>

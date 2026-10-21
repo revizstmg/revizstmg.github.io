@@ -12,7 +12,7 @@ export default function Favoris() {
 
   return (
     <div className="animate-lux space-y-4">
-      <h1 className="font-display text-3xl font-medium leading-tight">⭐ {state.profile?.firstName ? `${t('favoritesOf')} ${state.profile.firstName}` : t('myFavorites')}</h1>
+      <header className="page-hero page-hero-compact"><h1 className="font-display text-3xl font-medium leading-tight">⭐ {state.profile?.firstName ? `${t('favoritesOf')} ${state.profile.firstName}` : t('myFavorites')}</h1></header>
       <hr className="rule-gold" />
       {favs.length === 0 ? (
         <Empty icon="⭐">

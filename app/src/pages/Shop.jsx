@@ -83,7 +83,7 @@ export default function Shop() {
   const renderItem = (item) => <ItemCard key={item.id} item={item} state={state} buy={buy} equip={equip} notify={notify} />
   return (
     <div className="animate-lux space-y-6 pb-6">
-      <header className="relative overflow-hidden rounded-[1.7rem] border border-[#c7a864]/30 bg-[#191811] p-6 text-[#fff7e2] sm:p-8">
+      <header className="shop-hero relative overflow-hidden rounded-[1.7rem] border border-[#c7a864]/30 bg-[#172d30] p-6 text-[#fff7e2] sm:p-8">
         <span aria-hidden className="pointer-events-none absolute -right-12 -top-16 h-64 w-64 rounded-full border-[36px] border-[#c8a65e]/10" />
         <div className="relative"><p className="text-xs font-bold uppercase tracking-[0.25em] text-[#d9c18b]">L’atelier RévizSTMG</p><h1 className="mt-3 font-display text-4xl font-medium sm:text-5xl">Tes efforts ont du style.</h1><p className="mt-3 max-w-md text-sm leading-relaxed text-[#d7d0bb]">Révise, collectionne, démarque-toi. Une boutique de récompenses gagnées à la force de tes révisions.</p>
           <div className="mt-6 flex flex-wrap gap-2 text-xs font-semibold"><span className="rounded-full border border-white/15 bg-white/5 px-3 py-2">🪙 {number(state.coins || 0)} pièces</span><span className="rounded-full border border-white/15 bg-white/5 px-3 py-2">✦ Niveau {derived.level} · {number(state.xp)} XP</span><span className="rounded-full border border-white/15 bg-white/5 px-3 py-2">◈ {owned.length} objets acquis</span></div>

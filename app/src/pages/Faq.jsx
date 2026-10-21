@@ -18,7 +18,7 @@ export default function Faq() {
   ]
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">
-      <header>
+      <header className="page-hero page-hero-compact">
         <p className="kicker">RévizSTMG</p>
         <h1 className="font-display text-3xl font-medium leading-tight">Foire aux questions</h1>
       </header>

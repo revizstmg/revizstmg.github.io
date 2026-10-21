@@ -21,10 +21,10 @@
   }
   html.dark {
     color-scheme: dark;
-    --c-bg: #14110c;
+    --c-bg: #141f21;
     --c-ink: #f1e9dc;
     --c-accent: #c8a24e;
-    --c-card: #201c15;
+    --c-card: #1c292c;
     --c-accent-texte: color-mix(in srgb, var(--c-accent) 70%, #fff);
   }
   html {

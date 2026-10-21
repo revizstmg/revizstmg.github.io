@@ -39,7 +39,7 @@ function Workshop({track, scope}) {
   const next=()=>{if(index+1===session.length){setFinished(true);return}setIndex(n=>n+1);setAnswer('');setFeedback(null);setInvalid(false);setHint(false)}
   const errors=[...new Set(results.filter(r=>!r.correct).map(r=>r.formulaId))]
   return <div className={`space-y-6 ${!session ? 'pb-32' : ''}`}>
-    <header><p className="kicker">Calcul et entraînement</p><h1 className="mt-1 font-display text-3xl font-medium">Atelier de formules</h1><p className="mt-2 text-sm text-slate-500 dark:text-slate-400">Choisis tes formules, puis entraîne-toi avec de nouvelles valeurs à chaque séance.</p></header>
+    <header className="page-hero"><p className="kicker">Calcul et entraînement</p><h1 className="mt-1 font-display text-3xl font-medium">Atelier de formules</h1><p className="mt-2 text-sm text-slate-500 dark:text-slate-400">Choisis tes formules, puis entraîne-toi avec de nouvelles valeurs à chaque séance.</p></header>
     {storageError && <p role="alert" className="card p-3 text-sm">La séance ne peut pas être conservée sur cet appareil. Garde cette page ouverte pour continuer.</p>}
     {paused ? <section className="card space-y-4 p-5"><h2 className="font-display text-xl">Une séance t’attend</h2><p>Reprends avec les mêmes questions et tes réponses déjà enregistrées sur cet appareil.</p><div className="flex flex-wrap gap-3"><button className="btn-gold" onClick={()=>setPaused(false)}>Reprendre ma séance</button><button className="btn" onClick={()=>{setSession(null);setResults([]);setFeedback(null);setPaused(false)}}>Choisir une nouvelle séance</button></div></section> : !session ? <>
       <div className="card grid gap-3 p-4 sm:grid-cols-2">

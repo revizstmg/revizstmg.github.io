@@ -18,7 +18,7 @@ export default function Cours() {
   const fiche = position && subjects.some((s) => s.id === position.subjectId) ? getChapter(position.themeId) : null
   return (
     <div className="animate-lux space-y-6">
-      <header className="text-center">
+      <header className="page-hero page-hero-compact text-center">
         <p className="kicker">📖 {t('coursTab')}</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('mySubjects')}</h1>
         <span className="mx-auto mt-3 block h-px w-24 rounded-full" style={{ background: 'linear-gradient(90deg,transparent,#c8a24e,transparent)' }} />

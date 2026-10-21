@@ -61,7 +61,7 @@ export default function MesNotes() {
 
   return (
     <div className="animate-lux space-y-5">
-      <header>
+      <header className="page-hero page-hero-compact">
         <h1 className="font-display text-3xl font-medium leading-tight">📝 Mes notes de classe</h1>
         <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Entre les notes que tu reçois en classe : tu vois les chapitres à améliorer.</p>
       </header>

@@ -110,7 +110,7 @@ export default function DailyChallenge() {
 
 function Header({ t }) {
   return (
-    <header className="text-center">
+    <header className="page-hero text-center">
       <p className="kicker">⚡ {t('dailyChallenge')}</p>
       <h1 className="mt-1 font-display text-[1.8rem] font-medium leading-tight">{t('dailyChallenge')}</h1>
       <span className="mx-auto mt-3 block h-px w-24 rounded-full" style={{ background: 'linear-gradient(90deg,transparent,#c8a24e,transparent)' }} />

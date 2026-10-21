@@ -26,7 +26,7 @@ export default function Subject() {
 
   return (
     <div className="animate-lux space-y-4">
-      <header className="flex items-center gap-3">
+      <header className="page-hero page-hero-compact flex items-center gap-3">
         <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-2xl" style={{ backgroundColor: color + '18' }} aria-hidden>{subject.icon}</span>
         <h1 className="font-display text-2xl font-medium leading-tight"><CourseText text={subject.name} /></h1>
       </header>
