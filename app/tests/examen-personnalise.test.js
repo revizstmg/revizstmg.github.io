@@ -90,3 +90,32 @@ describe('fonction serveur sans appel réel', () => {
   expect((await handler(request(input))).status).toBe(429)
  })
 })
+
+test('diagnostic Gemini : lecture seule mutualisée, sans secret dans la réponse', async () => {
+ const fetcher = vi.fn(async () => Response.json({ name: 'models/test' }))
+ const handler = createHandler({ env, fetcher })
+ const probe = () => handler(new Request('https://test?check=provider'))
+ const responses = await Promise.all([probe(), probe()])
+ for (const r of responses) expect(await r.json()).toEqual({ ready: true })
+ expect(fetcher).toHaveBeenCalledTimes(1)
+ expect(fetcher.mock.calls[0][1].method).toBeUndefined()
+})
+test('diagnostic Gemini : refus fournisseur catégorisé sans recopier son message', async () => {
+ for (const [status, error] of [[403, 'provider_permission'], [404, 'provider_model_unavailable'], [429, 'rate_limit'], [400, 'provider_key_invalid']]) {
+  const fetcher = vi.fn(async () => Response.json({ error: { message: 'private-provider-detail', details: [{ reason: 'API_KEY_INVALID' }] } }, { status }))
+  const r = await createHandler({ env, fetcher })(new Request('https://test?check=provider'))
+  expect(await r.json()).toEqual({ ready: false, error })
+ }
+})
+test('diagnostic Gemini : erreur réseau contrôlée', async () => {
+ const fetcher = vi.fn(async () => { throw Error('private-network-detail') })
+ const r = await createHandler({ env, fetcher })(new Request('https://test?check=provider'))
+ expect(await r.json()).toEqual({ ready: false, error: 'provider_unreachable' })
+})
+test('clé copiée avec des espaces : normalisation uniquement côté serveur', async () => {
+ const fetcher = vi.fn(async () => Response.json({ name: 'models/test' }))
+ const spacedEnv = key => key === 'GEMINI_API_KEY' ? '  test-key\n' : env(key)
+ const r = await createHandler({ env: spacedEnv, fetcher })(new Request('https://test?check=provider'))
+ expect(await r.json()).toEqual({ ready: true })
+ expect(fetcher.mock.calls[0][1].headers['x-goog-api-key']).toBe('test-key')
+})
