@@ -1,27 +1,180 @@
 {
   "toutes": {
-    "délictuelle": ["extracontractuelle", "extra-contractuelle"],
-    "extracontractuelle": ["délictuelle"],
-    "dommages-intérêts": ["dommages et intérêts"],
-    "dommages et intérêts": ["dommages-intérêts"],
-    "conseil de prud’hommes": ["prud’hommes"],
-    "prud’hommes": ["conseil de prud’hommes"],
-    "capacité juridique": ["capacité"],
-    "contrat de sous-traitance": ["sous-traitance"]
+    "délictuelle": [
+      "extracontractuelle",
+      "extra-contractuelle"
+    ],
+    "extracontractuelle": [
+      "délictuelle"
+    ],
+    "dommages-intérêts": [
+      "dommages et intérêts"
+    ],
+    "dommages et intérêts": [
+      "dommages-intérêts"
+    ],
+    "conseil de prud’hommes": [
+      "prud’hommes"
+    ],
+    "prud’hommes": [
+      "conseil de prud’hommes"
+    ],
+    "capacité juridique": [
+      "capacité"
+    ],
+    "contrat de sous-traitance": [
+      "sous-traitance"
+    ]
   },
   "droit-t5": {
-    "d’adhésion": ["contrat d’adhésion"],
-    "volontairement induit en erreur": ["induit en erreur", "trompé"],
-    "volontairement dissimulé": ["dissimulé", "caché"]
+    "d’adhésion": [
+      "contrat d’adhésion"
+    ],
+    "volontairement induit en erreur": [
+      "induit en erreur",
+      "trompé"
+    ],
+    "volontairement dissimulé": [
+      "dissimulé",
+      "caché"
+    ]
   },
   "droit-t7": {
-    "principe": ["règle", "norme", "droit commun"],
-    "titre": ["nom"],
-    "heures supplémentaires majorées": ["heures supplémentaires"]
+    "principe": [
+      "règle",
+      "norme",
+      "droit commun"
+    ],
+    "titre": [
+      "nom"
+    ],
+    "heures supplémentaires majorées": [
+      "heures supplémentaires"
+    ]
   },
   "droit-t8": {
-    "cadre juridique": ["statut juridique", "forme juridique"],
-    "forme juridique": ["structure juridique", "statut juridique"],
-    "déposé sa marque": ["déposé", "enregistré sa marque", "fait enregistrer sa marque"]
+    "cadre juridique": [
+      "statut juridique",
+      "forme juridique"
+    ],
+    "forme juridique": [
+      "structure juridique",
+      "statut juridique"
+    ],
+    "déposé sa marque": [
+      "déposé",
+      "enregistré sa marque",
+      "fait enregistrer sa marque"
+    ]
+  },
+  "philo-art": {
+    "Hannah Arendt": [
+      "Arendt"
+    ],
+    "Arendt": [
+      "Hannah Arendt"
+    ],
+    "Victor Hugo": [
+      "Hugo"
+    ],
+    "Hugo": [
+      "Victor Hugo"
+    ],
+    "Oscar Wilde": [
+      "Wilde"
+    ],
+    "Wilde": [
+      "Oscar Wilde"
+    ],
+    "Camus": [
+      "Albert Camus"
+    ],
+    "Albert Camus": [
+      "Camus"
+    ]
+  },
+  "philo-justice": {
+    "Hannah Arendt": [
+      "Arendt"
+    ],
+    "Arendt": [
+      "Hannah Arendt"
+    ],
+    "Victor Hugo": [
+      "Hugo"
+    ],
+    "Hugo": [
+      "Victor Hugo"
+    ],
+    "Oscar Wilde": [
+      "Wilde"
+    ],
+    "Wilde": [
+      "Oscar Wilde"
+    ],
+    "Camus": [
+      "Albert Camus"
+    ],
+    "Albert Camus": [
+      "Camus"
+    ],
+    "justice commutative": [
+      "justice corrective"
+    ],
+    "justice corrective": [
+      "justice commutative"
+    ],
+    "légale": [
+      "légal"
+    ],
+    "légal": [
+      "légale"
+    ]
+  },
+  "eco-t6": {
+    "Répartition": [
+      "Fonction de répartition",
+      "Redistribution"
+    ],
+    "Fonction de répartition": [
+      "Répartition",
+      "Redistribution"
+    ],
+    "Redistribution": [
+      "Répartition",
+      "Fonction de répartition"
+    ],
+    "Stabiliser": [
+      "Stabilisation",
+      "Fonction de stabilisation"
+    ],
+    "Stabilisation": [
+      "Stabiliser",
+      "Fonction de stabilisation"
+    ],
+    "Fonction de stabilisation": [
+      "Stabilisation",
+      "Stabiliser"
+    ],
+    "Allocation": [
+      "Fonction d’allocation"
+    ],
+    "Fonction d’allocation": [
+      "Allocation"
+    ]
+  },
+  "eco-t7": {
+    "Chômeurs": [
+      "Chômeur"
+    ],
+    "Chômeur": [
+      "Chômeurs"
+    ],
+    "relance": [
+      "politique de relance"
+    ],
+    "politique de relance": [
+      "relance"
+    ]
   }
 }

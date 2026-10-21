@@ -10,7 +10,7 @@
           },
           {
             "t": "p",
-            "c": "Dès l’Antiquité, deux grandes conceptions s’affrontent. Pour **Platon**, l’art est **imitation** (*mimésis*) : le peintre copie un lit particulier, qui n’est lui-même que la copie de l’Idée de lit ; l’œuvre est donc une « copie de copie », deux fois éloignée de la vérité, et le poète, qui flatte les passions, est même banni de la cité idéale de *La République*. Pour **Aristote**, au contraire, l’imitation est naturelle et instructive : la tragédie, en représentant des actions terribles, produit une **catharsis**, une purgation des émotions qui élève l’âme. Ces deux positions — l’art qui trompe / l’art qui forme — traversent toute l’histoire de la pensée."
+            "c": "Dès l’Antiquité, deux grandes conceptions s’affrontent. Pour **Platon**, l’art est une imitation éloignée de la vérité (*mimésis*) : le peintre copie un lit particulier, qui n’est lui-même que la copie de l’Idée de lit ; l’œuvre est donc une « copie de copie », deux fois éloignée de la vérité, et le poète, qui flatte les passions, est même banni de la cité idéale de *La République*. Pour **Aristote**, au contraire, l’imitation est naturelle et instructive : la tragédie, en représentant des actions terribles, produit une **catharsis**, une purgation des émotions qui élève l’âme. Ces deux positions — l’art qui trompe / l’art qui forme — traversent toute l’histoire de la pensée."
           },
           {
             "t": "p",
@@ -74,7 +74,7 @@
           },
           {
             "t": "p",
-            "c": "Chez **Marcel Proust**, dans *À la recherche du temps perdu*, l’art n’est pas un ornement mais un **salut** : seule l’œuvre (la petite phrase de Vinteuil, les toiles d’Elstir) permet de retrouver le temps perdu et de donner un sens à l’existence. **Baudelaire**, dans *Les Fleurs du mal*, revendique de « faire de la boue et d’en tirer de l’or » : l’art transfigure le laid et arrache une beauté au réel le plus sordide. À l’inverse, **Platon** aurait vu là un danger — celui d’aimer les apparences plutôt que la vérité."
+            "c": "Chez **Marcel Proust**, dans *À la recherche du temps perdu*, l’art n’est pas un ornement mais un **salut** : seule l’œuvre (la petite phrase de Vinteuil, les toiles d’Elstir) permet de retrouver le temps perdu et de donner un sens à l’existence. **Baudelaire**, dans un projet d’épilogue pour l’édition de 1861 des *Fleurs du mal*, écrit : « Tu m’as donné ta boue et j’en ai fait de l’or » : l’art transfigure le laid et arrache une beauté au réel le plus sordide. À l’inverse, **Platon** aurait vu là un danger — celui d’aimer les apparences plutôt que la vérité."
           },
           {
             "t": "example",
@@ -132,7 +132,7 @@
           },
           {
             "t": "p",
-            "c": "**Aristote** distingue trois formes de justice. La **justice distributive** répartit les biens et les honneurs **selon le mérite** de chacun : c’est une **égalité proportionnelle**, comme lorsqu’on répartit des récompenses selon le travail fourni. La **justice corrective**, ou **commutative**, cherche à **rétablir l’égalité rompue** entre deux personnes : réparer un tort, punir un vol."
+            "c": "**Aristote** distingue ici deux formes de justice particulière : la distributive et la corrective. La **justice distributive** répartit les biens et les honneurs **selon le mérite** de chacun : c’est une **égalité proportionnelle**, comme lorsqu’on répartit des récompenses selon le travail fourni. La **justice corrective**, ou **commutative**, cherche à **rétablir l’égalité rompue** entre deux personnes : réparer un tort, punir un vol."
           },
           {
             "t": "p",
@@ -140,7 +140,7 @@
           },
           {
             "t": "p",
-            "c": "À l’époque moderne, la justice se pense à partir du **contrat**. **Hobbes** part d’un « état de nature » où règne la « guerre de tous contre tous » : les hommes, par peur de la mort, cèdent leur droit à un souverain qui garantit la paix. **Rousseau** refuse cette soumission : le pacte social légitime n’aliène pas la liberté, il la fonde, car obéir à la loi qu’on s’est prescrite, c’est être libre. Au XXᵉ siècle, **John Rawls** propose une expérience de pensée célèbre : sous un « **voile d’ignorance** » (ne sachant pas quelle place on occupera dans la société), quelles règles choisirait-on ? Celles qui protègent le plus **les plus défavorisés**."
+            "c": "À l’époque moderne, la justice se pense à partir du **contrat**. **Hobbes** part d’un « état de nature » où règne la « guerre de tous contre tous » : les hommes, par peur de la mort, cèdent leur droit à un souverain qui garantit la paix. **Rousseau** refuse cette soumission : le pacte social légitime n’aliène pas la liberté, il la fonde, car obéir à la loi qu’on s’est prescrite, c’est être libre. Au XXᵉ siècle, **John Rawls** propose une expérience de pensée célèbre : sous un « **voile d’ignorance** » (ne sachant pas quelle place on occupera dans la société), quelles règles choisirait-on ? Selon Rawls, des libertés fondamentales égales pour tous et des inégalités économiques et sociales admises seulement sous conditions, notamment si elles bénéficient aux **plus défavorisés**."
           },
           {
             "t": "tip",
@@ -209,7 +209,7 @@
             "t": "list",
             "c": [
               "**I. La loi est la condition de la justice.** Sans loi commune, c’est la loi du plus fort (Hobbes) ; la loi, égale pour tous, protège le faible et rend la vie sociale possible. Désobéir, ce serait ouvrir la porte à l’arbitraire de chacun.",
-              "**II. Mais une loi peut être injuste.** L’histoire le prouve (lois ségrégationnistes, lois d’exception) : le légal n’est pas toujours le légitime. Obéir aveuglément peut rendre complice (procès de Nuremberg, Arendt et la « banalité du mal »).",
+              "**II. Mais une loi peut être injuste.** L’histoire le prouve (lois ségrégationnistes, lois d’exception) : le légal n’est pas toujours le légitime. Obéir aveuglément peut rendre complice (procès d’Eichmann à Jérusalem en 1961, suivi par Arendt, et la « banalité du mal »).",
               "**III. Dépassement : la désobéissance civile.** Enfreindre **publiquement** une loi injuste, au nom d’une justice supérieure et en acceptant la sanction, n’est pas de l’anarchie : c’est encore respecter l’idée de loi, en appelant à une loi meilleure."
             ]
           },

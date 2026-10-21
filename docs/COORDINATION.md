@@ -1054,3 +1054,17 @@ Prochaine action :
 - Parcours manuel : sélection Première + Terminale, aucun appel d’analyse, deux cours sélectionnés seulement envoyés ; recherche sans résultat, 24 maximum, effacement et retour automatique vérifiés. Contrôle axe du sélecteur sans violation, capture mobile inspectée. Chaînes de branche #39661715367 et #39661706252 réussies. Publication main #39674671350 en cours.
 - Chaîne main #39674671350 entièrement réussie : 328 tests UTC, 328 Europe/Paris, compilation et 161 parcours navigateur réussis. Publication compilée fbaa39d, construction Pages lancée. README mis à jour pour le choix manuel et le dépôt/correction de copie déjà livré. Aucun changement serveur ou de base pour ce choix manuel.
 - Publication publique confirmée : Pages built sur fbaa39d, chaîne Pages #39675453144 réussie ; fichier Bac blanc public contient les deux modes et la recherche des chapitres. Choix manuel terminé et en ligne ; aucune configuration Supabase à modifier.
+
+
+### RAPPORTS-20261021-CODEX-01 — Codex — corrections des rapports Gmail
+- Demande du propriétaire : analyser les rapports de Claude et corriger les problèmes signalés.
+- Périmètre : contenu philosophie (art/justice), économie (thèmes 6/7), générateur de questions et variantes, tests de non-régression et empreintes ; scripts de rapport et tests si un diagnostic inconnu est présenté comme une panne.
+- Branche : `fix/rapports-claude-pedagogie`. Lecture des PR ouvertes #41/#46 : référencement, sans chevauchement fonctionnel.
+- Extension annoncée au propriétaire : scripts `app/scripts/**` du couloir Claude pour les états de contrôle. Aucune modification Supabase ou NAH.
+- État : en cours ; comparer les alertes anciennes à main, sourcer les corrections pédagogiques, exécuter tests/compilation/parcours avant livraison. Les autorisations de la routine Claude ne peuvent être modifiées depuis ce dépôt.
+
+- Bilan RAPPORTS-20261021-CODEX-01 : PR #71, corrections sourcées dans `docs/RELECTURE-RAPPORTS-CLAUDE.md`. Philosophie art/justice et économie 6/7 corrigées ; variantes, exclusion des synonymes dans les distracteurs/faux, contexte complet des trous et déduplication des variantes. Rapports : inconnu ≠ échec, dates valides, pas de verdict vert incomplet, diagnostic API et délai borné.
+- Vérifications finales : 335 tests UTC et 335 Paris, compilation réussie, 161 parcours navigateur réussis, aucun contrôle retiré. Premier passage invalide pendant installation du navigateur/recompilation ; reprise complète stable réussie. Branche distante comparée aux fichiers testés sans écart applicatif.
+- État : corrections terminées, validation GitHub puis fusion/publication suivies dans la PR. Aucune base ou fonction Supabase modifiée. Limite restante : rattachement/permissions de la routine claude.ai à vérifier dans Claude ; `.claude/settings.json` autorise déjà les commandes npm refusées dans l’ancien rapport.
+
+- Validation GitHub : chaîne de branche #39682493784 réussie (code c39a8dd ; les commits suivants ne modifient que les deux documents de bilan/coordination). PR #71 prête à relire. Fusion tentée mais refusée par le contrôle automatique d’autorisation : l’accord explicite de fusion/publication n’a pas été reconnu dans la demande de correction. Aucun contournement ; aucune mise en ligne effectuée. Prochaine action : accord explicite du propriétaire pour fusionner #71 et publier, puis suivi de main/Pages.

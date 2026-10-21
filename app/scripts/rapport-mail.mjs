@@ -42,7 +42,11 @@ const rapport = construireRapport({
   releve: lireJson(resolve(option('releve', resolve(RACINE, 'statistiques/dernier.json')))),
   contenu: c,
   // Si GitHub n'a pas répondu, l'état relevé par la routine elle-même.
-  publication: { ...p, ci: p.ci || verif?.ci, miseEnLigne: p.miseEnLigne || verif?.miseEnLigne },
+  publication: {
+    ...p,
+    ci: p.ci?.etat && p.ci.etat !== 'unknown' ? p.ci : verif?.ci || p.ci,
+    miseEnLigne: p.miseEnLigne?.etat && p.miseEnLigne.etat !== 'unknown' ? p.miseEnLigne : verif?.miseEnLigne || p.miseEnLigne,
+  },
   historique: lireJson(resolve(RACINE, 'statistiques/historique.json')) || [],
   nomMatiere: (id) => SUBJECTS.find((s) => s.id === id)?.name || id,
 })

@@ -16,6 +16,23 @@ const verif = { construction: { ok: true }, tests: { ok: true, detail: '121 test
 const base = { jour: '2026-10-12', verif, releve, contenu, publication, historique }
 
 describe('rapport par mail', () => {
+  it('une API inaccessible ou un contrôle sans résultat ne devient pas une panne', () => {
+    const r = construireRapport({ ...base, verif: { ...verif, tests: { detail: 'Non exécuté' } }, publication: {
+      ci: { etat: 'unknown', date: 'invalide', detail: 'API GitHub inaccessible' },
+      miseEnLigne: { etat: 'in_progress' },
+    } })
+    expect(r.sujet).toContain('Vérification incomplète : 3 contrôles non vérifiés')
+    expect(r.sujet).not.toContain('en échec')
+    expect(r.texte).toContain('— CI sur main (API GitHub inaccessible)')
+    expect(r.texte).not.toMatch(/Invalid Date|Rien à signaler/)
+    expect(r.html).not.toMatch(/Invalid Date|Rien à signaler/)
+  })
+  it('un échec de publication reste un échec même si sa date est absente', () => {
+    const r = construireRapport({ ...base, publication: { ...publication, ci: { etat: 'failure' } } })
+    expect(r.sujet).toContain('1 contrôle en échec')
+    expect(r.texte).toContain('❌ CI sur main (Date indisponible)')
+    expect(r.html).not.toContain('Rien à signaler.')
+  })
   it('écarts : la valeur d’il y a 7 ou 30 jours, sinon rien', () => {
     expect(valeurAu(historique, 'comptes', '2026-10-05')).toBe(9)
     expect(ecart(historique, 'comptes', 12, '2026-10-12', 7)).toBe(3)
