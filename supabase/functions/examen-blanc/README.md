@@ -48,3 +48,18 @@ les messages sont contrôlés et aucun faux sujet n’est généré en remplacem
 Tests : `app/tests/examen-personnalise.test.js` (serveur avec fournisseur simulé,
 contrat, source, durée, isolation locale, langues) et
 `app/tests/parcours/examen-personnalise.spec.js` (réseau simulé uniquement).
+
+## Activer depuis le tableau de bord
+
+1. Créer une clé chez le fournisseur choisi (par exemple Google AI Studio).
+2. Ouvrir le projet **Revizstmg**, puis **Edge Functions → Secrets** dans Supabase.
+3. Ajouter `GEMINI_API_KEY` (ou `ANTHROPIC_API_KEY`) avec sa valeur, uniquement
+   dans cet écran. Aucune clé à coller dans le dépôt ou dans un message.
+4. Dans **Bac blanc → Crée ton examen blanc**, cliquer **Réessayer** : le contrôle
+   de disponibilité relit les secrets côté serveur, sans appeler le fournisseur.
+5. Connecté à son compte, essayer une demande précise, vérifier le périmètre et
+   créer un sujet. Relire ce premier sujet avec les cours avant une large ouverture.
+
+Au contrôle du 21 octobre 2026 après déploiement v1 : fonction active, JWT requis,
+GET 200 `ready:false`, POST visiteur 401. La génération par un fournisseur réel
+attend une clé ; les tests automatisés utilisent exclusivement des réponses simulées.
