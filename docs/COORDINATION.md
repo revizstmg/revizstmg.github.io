@@ -926,3 +926,16 @@ Prochaine action :
   GitHub. Correction de test annoncée : retirer ces captures de développement,
   sans changer la fonctionnalité ni affaiblir les assertions. Branche
   fix/examens-parcours-ci. Publication à revérifier après chaîne complète.
+- PR #50 fusionnée dans 518dfa9 (correctif 63c1cdd). Vérifications locales après
+  correction : 306 tests et quatre parcours réussis. Chaîne main #39587091716
+  entièrement réussie : 306 tests en UTC, 306 à l’heure de Paris, compilation et
+  156 parcours navigateur réussis sans relance signalée. Version compilée 63eef3f,
+  GitHub Pages confirme built sur ce commit.
+- Contrôle public : accueil et fichier BacBlanc actif accessibles, nouveau
+  créateur et appels examen-blanc présents ; métadonnées Google conservées.
+  Fonction réelle : GET 200 ready:false, POST visiteur 401 ; OPTIONS CORS 200
+  autorise les appels depuis le site. Aucune génération fournisseur réelle faite.
+- Reste pour l’activation : ajouter une clé fournisseur dans les secrets Supabase
+  (procédure dans supabase/functions/examen-blanc/README.md), cliquer Réessayer
+  dans le créateur, puis vérifier un premier sujet réel. Fonctionnalité livrée
+  et publiée ; génération IA honnêtement désactivée tant que cette clé manque.
