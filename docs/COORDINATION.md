@@ -1062,3 +1062,7 @@ Prochaine action :
 - Branche : `fix/rapports-claude-pedagogie`. Lecture des PR ouvertes #41/#46 : référencement, sans chevauchement fonctionnel.
 - Extension annoncée au propriétaire : scripts `app/scripts/**` du couloir Claude pour les états de contrôle. Aucune modification Supabase ou NAH.
 - État : en cours ; comparer les alertes anciennes à main, sourcer les corrections pédagogiques, exécuter tests/compilation/parcours avant livraison. Les autorisations de la routine Claude ne peuvent être modifiées depuis ce dépôt.
+
+- Bilan RAPPORTS-20261021-CODEX-01 : PR #71, corrections sourcées dans `docs/RELECTURE-RAPPORTS-CLAUDE.md`. Philosophie art/justice et économie 6/7 corrigées ; variantes, exclusion des synonymes dans les distracteurs/faux, contexte complet des trous et déduplication des variantes. Rapports : inconnu ≠ échec, dates valides, pas de verdict vert incomplet, diagnostic API et délai borné.
+- Vérifications finales : 335 tests UTC et 335 Paris, compilation réussie, 161 parcours navigateur réussis, aucun contrôle retiré. Premier passage invalide pendant installation du navigateur/recompilation ; reprise complète stable réussie. Branche distante comparée aux fichiers testés sans écart applicatif.
+- État : corrections terminées, validation GitHub puis fusion/publication suivies dans la PR. Aucune base ou fonction Supabase modifiée. Limite restante : rattachement/permissions de la routine claude.ai à vérifier dans Claude ; `.claude/settings.json` autorise déjà les commandes npm refusées dans l’ancien rapport.
