@@ -41,7 +41,7 @@ test('fin de série : « Refaire mes erreurs » rejoue seulement les questions r
   const n = Number((await refaire.innerText()).match(/\((\d+)\)/)[1])
   const games = (await etat(page)).chapters['gf-t1'].games
   await refaire.click()
-  await expect(exercice).toContainText(new RegExp(`Question 1 / ${n}\\b`))
+  await expect(exercice.getByText(`Question 1 / ${n}`, { exact: true })).toBeVisible()
   await expect(exercice).toContainText('↻ Mes erreurs')
   // La reprise ne compte pas dans la maîtrise.
   expect((await etat(page)).chapters['gf-t1'].games).toEqual(games)
@@ -101,12 +101,14 @@ test('accueil du professeur : ses classes et les élèves à relancer', async ({
   expect(erreurs).toEqual([])
 })
 
-test('bac blanc : une matière à la fois, et l’épreuve anticipée de maths en Première', async ({ page }) => {
+test('bac blanc : sujet de maths en Première et aucun QCM chronométré', async ({ page }) => {
   const erreurs = await preparer(page, etatEleve({ track: { level: 'premiere-stmg' } }))
   await page.goto('./#/bac-blanc')
   await attendreAccueil(page)
   await expect(page.getByRole('heading', { name: /Épreuve anticipée de mathématiques/ })).toBeVisible()
-  await expect(page.getByRole('button', { pressed: true })).toHaveText(/Maths/)
-  await expect(page.getByText('Ce n’est pas le format de l’épreuve écrite.', { exact: false })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Faire un sujet d’entraînement (2 h)' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: '⏱ QCM chronométré' })).toHaveCount(0)
+  await expect(page.getByRole('button', { name: /Commencer l’examen/ })).toHaveCount(0)
+  await expect(page.locator('.bac-creator')).toBeVisible()
   expect(erreurs).toEqual([])
 })
