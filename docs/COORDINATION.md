@@ -1027,3 +1027,7 @@ Prochaine action :
 - Liste réelle des modèles Groq vérifiée avec la clé serveur : Llama 3.3 absent ; choix effectif openai/gpt-oss-120b (JSON et sorties longues supportées dans la documentation Groq). GROQ_API_KEY prioritaire, EXAM_GROQ_MODEL permet de fixer un autre modèle. Aucun basculement payant automatique en cas de quota.
 - Déploiement de la fonction seule, JWT conservé. Sonde lecture seule : ne prouve pas une génération authentifiée complète ; celle-ci reste à confirmer par le propriétaire.
 - Livraison serveur v13 : sonde Groq ready:true, modèle accessible. 320 tests unitaires réussis (31 fichiers), dont 25 sur les examens ; aucune génération réelle réalisée sans session de l’élève. PR #64, code 2d4e5ef. Essai complet demandé au propriétaire.
+
+### 21 octobre 2026 — Codex — volume de génération Groq
+- Retour propriétaire : analyse réussie, création échouée. Journal serveur : HTTP 413 fournisseur. Documentation des limites gratuite : GPT OSS 120B 8K tokens/minute. Examiner une génération répartie plutôt que supprimer des cours ou livrer un sujet incomplet.
+- Conclusion : la connexion / l’analyse ne suffisent pas à valider une épreuve complète sur l’offre gratuite ; le fournisseur refuse la création (413). Ne pas annoncer la fonctionnalité opérationnelle. Pas de suppression de cours, de basculement payant ni de sujet artificiel pour contourner la limite. Génération par étapes nécessiterait une conception dédiée (reprise et quotas), non livrée dans cette intégration.
