@@ -8,6 +8,17 @@ export default function CreateExam({ onOpenChange }) {
   const owner = state.account?.id
   return <Creator key={owner || 'guest'} owner={owner} lang={state.lang || 'fr'} onOpenChange={onOpenChange} />
 }
+// Même couverture papier et même carte que les sujets de la collection officielle.
+function ExamCard({ title, duration, min, children }) {
+  return <section className="bac-subject bac-creator" aria-label={title}>
+    <div className="bac-preview" aria-hidden="true">
+      <span className="bac-preview-number">03</span>
+      <div className="bac-paper"><span className="bac-paper-small">RÉVIZSTMG</span><span className="bac-paper-rule" /><strong>{title}</strong><span className="bac-paper-duration">{duration} {min}</span><span className="bac-paper-rule" /><span className="bac-paper-lines" /></div>
+      <span className="bac-pdf-stamp">PDF</span>
+    </div>
+    <div className="bac-subject-body space-y-5">{children}</div>
+  </section>
+}
 function Creator({ owner, lang, onOpenChange }) {
   const m = examMessages[lang] || examMessages.fr
   const [prompt, setPrompt] = useState('')
@@ -76,7 +87,7 @@ function Creator({ owner, lang, onOpenChange }) {
     catch { setError(m.error) }
     finally { setBusy('') }
   }
-  if (draft) return <section className="card space-y-5 p-6 sm:p-8" aria-label={m.title}>
+  if (draft) return <ExamCard title={m.title} duration={draft.duration} min={m.min}>
     <div className="flex items-start justify-between gap-4"><div><p className="kicker">PDF · RÉVIZSTMG</p><h2 className="mt-2 font-display text-3xl">{draft.exam.title}</h2><p className="mt-3 text-sm text-slate-600 dark:text-slate-300">{draft.duration} {m.min} · {draft.exam.questions.length} questions · 20 {m.points}</p></div><span aria-hidden className="text-3xl">↗</span></div>
     <p className="text-sm leading-relaxed">{m.pdfHelp}</p>
     <div className="grid gap-3 sm:grid-cols-2"><button disabled={!!busy} className="btn-gold !py-4" onClick={() => download(false)}>{m.downloadSubject}</button><button disabled={!!busy} className="btn-ghost !py-4" onClick={() => download(true)}>{m.downloadCorrection}</button></div>
@@ -85,8 +96,8 @@ function Creator({ owner, lang, onOpenChange }) {
     <p className="text-xs text-slate-600 dark:text-slate-300">{m.notice}</p>
     <p role="status" className={`text-sm ${saveError ? 'text-rose-700 dark:text-rose-300' : 'text-slate-600 dark:text-slate-300'}`}>{saveError ? m.saveError : m.local}</p>
     {replace ? <div className="space-y-3 border-t border-slate-300 pt-4" role="group" aria-label={m.discard}><p className="font-semibold">{m.discard}</p><p className="text-sm">{m.discardHelp}</p><button className="btn-gold" onClick={reset}>{m.yes}</button>{' '}<button className="btn-ghost" onClick={() => setReplace(false)}>{m.no}</button></div> : <button className="btn-ghost" onClick={() => setReplace(true)}>{m.restart}</button>}
-  </section>
-  return <section className="card card-lux space-y-5 p-5 sm:p-7" aria-label={m.title}>
+  </ExamCard>
+  return <ExamCard title={m.title} duration={duration} min={m.min}>
     <div><p className="kicker">✦ RévizSTMG</p><h2 className="mt-2 font-display text-2xl font-semibold">{m.title}</h2><p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">{m.sub}</p></div>
     <form onSubmit={e => { e.preventDefault(); run('plan') }} className="space-y-4">
       <label className="block text-sm font-semibold">{m.prompt}<textarea value={prompt} onChange={e => { setPrompt(e.target.value); setPlan(null) }} placeholder={m.placeholder} maxLength={1500} minLength={15} required rows={4} disabled={!!busy} className="mt-2 w-full rounded-xl border border-slate-300 bg-white p-3 text-base font-normal text-slate-900 dark:border-slate-600 dark:bg-slate-900 dark:text-white" /></label>
@@ -97,5 +108,5 @@ function Creator({ owner, lang, onOpenChange }) {
     {busy && <p role="status" aria-live="polite" className="text-sm">⏳ {busy === 'plan' ? m.analyzing : m.generating}</p>}
     {error && <p role="alert" className="rounded-xl bg-rose-50 p-3 text-sm text-rose-800 dark:bg-rose-950 dark:text-rose-200">{error}</p>}
     {plan && <div className="space-y-3 rounded-xl bg-slate-100 p-4 dark:bg-slate-800"><h3 className="font-semibold">{m.scope}</h3><p className="text-sm" lang="fr">{plan.summary}</p><ul className="max-h-64 space-y-2 overflow-y-auto text-sm" lang="fr">{plan.chapterIds.map(id => { const c = catalog.find(c => c.id === id); return <li key={id}>{c.subject} · {c.level === 'premiere' ? 'Première' : 'Terminale'} — {c.title}</li> })}</ul><button disabled={!!busy} className="btn-gold w-full" onClick={() => run('generate')}>{m.generate}</button><button disabled={!!busy} className="btn-ghost w-full" onClick={() => setPlan(null)}>{m.edit}</button></div>}
-  </section>
+  </ExamCard>
 }
