@@ -71,7 +71,7 @@
             {
               "t": "example",
               "h": "Sujet type",
-              "c": "« L’œuvre d’art n’a-t-elle pour but que d’être belle ? » → I. L’art vise le beau — II. Mais il dit aussi une vérité, il dérange — III. Sa valeur tient à ce qu’il **donne à penser**, pas seulement à plaire."
+              "c": "« L’œuvre d’art n’a-t-elle pour but que d’être belle ? » → I. L’art vise le beau — II. Mais il dit aussi une vérité, il dérange — III. La valeur de l’œuvre d’art tient à ce qu’elle **donne à penser**, pas seulement à plaire."
             },
             {
               "t": "tip",
@@ -249,7 +249,7 @@
               "t": "list",
               "c": [
                 "**La distinction décisive** : *légal / légitime*. Est **légal** ce qui est conforme à la loi ; est **légitime** ce qui est conforme à la **justice**. La ségrégation était **légale** mais **illégitime**.",
-                "**Justice = égalité ?** **Aristote** distingue l’égalité **arithmétique** (la même chose pour tous) et l’égalité **proportionnelle** (à chacun selon son mérite ou son besoin).",
+                "**Justice = égalité ?** **Aristote** distingue l’égalité **arithmétique** (la même chose pour tous) et l’égalité **proportionnelle** (à chacun selon son mérite).",
                 "**L’équité** corrige la loi générale quand elle devient injuste dans un cas particulier."
               ]
             },
@@ -268,7 +268,7 @@
               "c": [
                 "**Thèse 1 — obéir à la loi** : la loi garantit l’ordre ; si chacun juge « sa » loi injuste, c’est l’anarchie.",
                 "**Thèse 2 — désobéir à une loi injuste** : la **désobéissance civile** enfreint publiquement une loi au nom d’une justice supérieure (Rosa Parks, Gandhi, Thoreau).",
-                "**La force fait-elle le droit ?** Pour **Rousseau**, non : « le plus fort n’est jamais assez fort pour être toujours le maître, s’il ne transforme sa force en droit ». Le droit doit **limiter** la force."
+                "**La force fait-elle le droit ?** Pour **Rousseau**, non : « le plus fort n’est jamais assez fort pour être toujours le maître, s’il ne transforme sa force en droit ». La force, à elle seule, ne crée aucune obligation morale : elle ne fonde pas le droit."
               ]
             },
             {
@@ -421,7 +421,7 @@
                 "n’existe pas"
               ],
               "answer": 0,
-              "explain": "Le droit doit limiter la force, pas la servir."
+              "explain": "La force seule ne crée aucune obligation morale et ne suffit pas à fonder le droit."
             }
           ]
         },
