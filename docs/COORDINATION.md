@@ -884,3 +884,12 @@ Prochaine action :
   Validation locale : 293 tests (29 fichiers) réussis, compilation réussie,
   JSON-LD source et dist parsés et uniques ; canonique, og:site_name et jeton
   Search Console conservés. Publication automatique main à contrôler ensuite.
+- PR #47 fusionnée dans e313913 (code 6f3a00b). Chaîne main #39579591861
+  réussie : 293 tests en UTC puis à l’heure de Paris, compilation et parcours
+  navigateur : 151 réussis au premier essai, un réussi après relance automatique
+  (seance.spec.js, reprise des erreurs sur téléphone ; instabilité à surveiller).
+  Compilation publiée par 81aa1dd ; GitHub Pages confirme built pour ce commit.
+- Contrôle HTTP public après publication : 200, un seul WebSite RévizSTMG valide,
+  URL https://revizstmg.github.io/, canonique, og:site_name et jeton Google conservés.
+  L’affichage dans les résultats Google n’est pas encore confirmé : Google choisit
+  le nom et doit réexplorer l’accueil. Aucun achat de domaine nécessaire.
