@@ -457,7 +457,12 @@ function memeNotion(a, b) {
 let _LIEES = null
 function notionsLiees(a, b) {
   if (memeNotion(a, b)) return true
-  if (!_LIEES) _LIEES = (commun('notions-liees') || []).map(([x, y]) => [cleReponse(x), cleReponse(y)])
+  if (!_LIEES) {
+    const aliases = Object.values(commun('reponses-acceptees') || {}).flatMap((table) =>
+      Object.entries(table).flatMap(([terme, variantes]) => variantes.map((v) => [terme, v])))
+    // Une variante acceptée ne peut pas être proposée comme mauvaise réponse.
+    _LIEES = [...(commun('notions-liees') || []), ...aliases].map(([x, y]) => [cleReponse(x), cleReponse(y)])
+  }
   const ka = cleReponse(a)
   const kb = cleReponse(b)
   return _LIEES.some(([x, y]) => (x === ka && y === kb) || (x === kb && y === ka))
@@ -498,12 +503,14 @@ function qcmFromPairs(pairs, id, title, exclut = null) {
 
 // Génère des « textes à trous » à partir des termes en gras des paragraphes /
 // puces de la SECTION (on masque le terme mis en valeur dans sa phrase). Les
-// longues phrases sont réduites à une fenêtre de contexte autour du trou.
+// phrases restent entières : une fenêtre coupée peut retirer l'antécédent ou
+// l'exemple qui permet de trouver la réponse.
 function trouFromBold(sec, themeId) {
   const out = []
   const seen = new Set()
   const addFrom = (text) => {
-    for (const sRaw of phrases(text)) {
+    const sentences = phrases(text)
+    for (const [si, sRaw] of sentences.entries()) {
       const bm = sRaw.match(/\*\*(.+?)\*\*/)
       if (!bm) continue
       const term = bm[1].trim()
@@ -515,23 +522,22 @@ function trouFromBold(sec, themeId) {
       // fragments de phrase (plus de 4 mots) et les mnémotechniques « X = Y »
       // ou « X : Y », qui rendent la réponse impossible à deviner proprement.
       if (term.split(/\s+/).length > 4 || /[=:]/.test(term)) continue
+      if (/(?:['’]|\b(?:le|la|les|un|une|de|du|des|et|ou))$/i.test(term)) continue
       const key = term.toLowerCase()
-      if (seen.has(key)) continue
+      const variantes = [term, ...reponsesAcceptees(term, themeId)].map(cleReponse)
+      if ([...seen].some((deja) => variantes.includes(cleReponse(deja)))) continue
       const plain = stripMd(sRaw).replace(/\s+/g, ' ').trim()
       if (plain.length < 15) continue
       const at = plain.indexOf(term)
       if (at < 0) continue
-      let text2
-      if (plain.length <= 180) {
-        text2 = plain.slice(0, at) + '____' + plain.slice(at + term.length)
-      } else {
-        // Fenêtre de contexte : ~100 caractères avant / ~70 après le trou.
-        let start = Math.max(0, at - 100)
-        let end = Math.min(plain.length, at + term.length + 70)
-        if (start > 0) { const sp = plain.indexOf(' ', start); if (sp > -1 && sp < at) start = sp + 1 }
-        if (end < plain.length) { const sp = plain.lastIndexOf(' ', end); if (sp > at + term.length) end = sp }
-        text2 = (start > 0 ? '… ' : '') + plain.slice(start, at) + '____' + plain.slice(at + term.length, end) + (end < plain.length ? ' …' : '')
+      let text2 = plain.slice(0, at) + '____' + plain.slice(at + term.length)
+      // « Comme idéal, elle… », « Cela… », « Sa valeur… » ne sont pas des
+      // consignes autonomes. Garder le paragraphe jusqu'à la phrase interrogée.
+      if (/^(?:comme\b|cela\b|ceci\b|celle[s]?\b|celui\b|ceux\b|il\b|elle\b|ils\b|elles\b|sa\b|son\b|ses\b)/i.test(plain)) {
+        if (!si) continue
+        text2 = sentences.slice(0, si).map(stripMd).join(' ') + ' ' + text2
       }
+      if (text2.length > 600 || /^(?:…|\.\.\.)|(?:…|\.\.\.)$/.test(text2)) continue
       if (!text2.includes('____')) continue
       // Assez de contexte pour deviner le mot : au moins 5 mots autour du trou
       // (« Qualification : ____. » ou « Au-delà → ____. » ne se comprennent pas seuls).
