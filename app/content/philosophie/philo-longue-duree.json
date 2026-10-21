@@ -9,7 +9,7 @@
         },
         {
           "t": "p",
-          "c": "La deuxième distinction sépare l’**art** de la **technique** (et de l’artisanat). L’artisan produit un objet **utile** en suivant un modèle reproductible ; l’artiste crée une œuvre **unique** dont la fin est en elle-même. Une troisième distinction, plus subtile, oppose le **beau** au **sublime** : le beau apaise et plaît par sa forme harmonieuse ; le sublime (une tempête, la haute montagne, l’immensité du ciel) nous dépasse, mêle plaisir et effroi, et révèle en nous une grandeur morale — c’est la thèse de Kant dans la *Critique de la faculté de juger*."
+          "c": "La deuxième distinction sépare l’**art** de la **technique** (et de l’artisanat). L’artisan produit un objet **utile** en suivant un modèle reproductible ; l’artiste crée une œuvre **unique** dont la fin est en elle-même. Une troisième distinction, plus subtile, oppose le **beau** au **sublime** : le beau apaise et plaît par sa forme harmonieuse ; le sublime (une tempête, la haute montagne, l’immensité du ciel) dépasse notre imagination et suscite un plaisir négatif : le déplaisir devant nos limites sensibles se mêle au plaisir de découvrir la supériorité de notre raison — c’est la thèse de Kant dans la *Critique de la faculté de juger*."
         },
         {
           "t": "p",
@@ -17,7 +17,7 @@
         },
         {
           "t": "p",
-          "c": "Le **beau** se distingue du **sublime** : le beau plaît par son **harmonie** et procure un **plaisir paisible** ; le sublime naît de la **démesure**, comme une tempête ou la haute montagne, et procure un **plaisir mêlé d’effroi**. Enfin, **imiter**, c’est **reproduire le réel**, alors que **créer**, c’est le **révéler** ou le **transfigurer**."
+          "c": "Le **beau** se distingue du **sublime** : le beau plaît par son **harmonie** et procure un **plaisir paisible** ; le sublime naît de la **démesure**, comme une tempête ou la haute montagne, et procure, chez Kant, un **plaisir négatif**, où le déplaisir sensible se mêle au plaisir lié à la raison. Enfin, **imiter**, c’est **reproduire le réel**, alors que **créer**, c’est le **révéler** ou le **transfigurer**."
         },
         {
           "t": "tip",
@@ -42,7 +42,7 @@
             ],
             [
               "Beau / sublime",
-              "Harmonie, plaisir paisible / démesure, plaisir mêlé d’effroi"
+              "Harmonie, plaisir paisible / démesure, plaisir négatif chez Kant"
             ],
             [
               "Imiter / créer",
@@ -150,7 +150,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "La justice se dit en plusieurs sens qu’il faut soigneusement distinguer. Comme **vertu**, elle est la disposition à rendre à chacun son dû (Aristote). Comme **institution**, elle est l’appareil qui tranche les litiges (les tribunaux). Comme **idéal**, elle est ce vers quoi tend le droit : l’équité. Confondre ces sens conduit à des contresens (« la justice a condamné X » ne dit rien de la justice de la décision)."
+          "c": "La justice se dit en plusieurs sens qu’il faut soigneusement distinguer. Comme **vertu**, elle est la disposition à rendre à chacun son dû. Comme **institution**, elle est l’appareil qui tranche les litiges (les tribunaux). Comme **idéal**, la justice est ce vers quoi tend le droit ; l’équité permet de corriger l’application trop générale de la loi. Confondre ces sens conduit à des contresens (« la justice a condamné X » ne dit rien de la justice de la décision)."
         },
         {
           "t": "p",
@@ -251,7 +251,7 @@
         },
         {
           "t": "p",
-          "c": "La pensée d’**Hannah Arendt** est ici précieuse : jugeant Eichmann, elle forge l’idée de « **banalité du mal** » — le fonctionnaire qui obéit aux ordres sans penser. Obéir à la loi ne suffit donc pas : la justice exige de **penser** par soi-même ce que l’on fait."
+          "c": "La pensée d’**Hannah Arendt** est ici précieuse : suivant comme journaliste le procès d’Eichmann à Jérusalem en 1961, elle forge l’idée de « **banalité du mal** » — le fonctionnaire qui obéit aux ordres sans penser. Obéir à la loi ne suffit donc pas : la justice exige de **penser** par soi-même ce que l’on fait."
         },
         {
           "t": "tip",
