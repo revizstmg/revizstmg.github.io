@@ -9,7 +9,7 @@
         },
         {
           "t": "p",
-          "c": "La première fonction est l’**allocation** des ressources. Son objectif est de **produire ce que le marché ne fournit pas bien**, ou pas du tout : les **biens publics** comme les écoles, les routes, la défense ou la justice. Personne ne pourrait les financer en les vendant, car on ne peut empêcher personne d’en profiter."
+          "c": "La première fonction est l’**allocation** des ressources. Son objectif est de **produire ce que le marché ne fournit pas bien**, ou pas du tout : les **biens publics**, non rivaux et non excluables, comme la défense nationale ou l’éclairage public. Leur financement par la seule vente individuelle est difficile, car chacun peut en bénéficier sans payer."
         },
         {
           "t": "p",
@@ -34,7 +34,7 @@
           "rows": [
             [
               "Fonction d’allocation",
-              "Produire ce que le marché ne fournit pas bien (biens publics : écoles, routes, défense, justice)"
+              "Produire ce que le marché ne fournit pas bien (biens publics non rivaux et non excluables : défense nationale, éclairage public)"
             ],
             [
               "Fonction de répartition",
@@ -46,7 +46,7 @@
             ],
             [
               "Bien public",
-              "Bien dont personne ne peut être exclu, que le marché ne produit pas spontanément"
+              "Bien non rival (l’usage par une personne ne réduit pas celui des autres) et non excluable (on ne peut empêcher quelqu’un d’en bénéficier)"
             ],
             [
               "Redistribution",
@@ -237,7 +237,7 @@
         {
           "t": "tip",
           "h": "À distinguer",
-          "c": "Le **halo du chômage** regroupe des personnes sans emploi qui ne sont **pas comptées** comme chômeurs au sens strict (elles ne cherchent pas activement, ou ne sont pas disponibles immédiatement). Le chômage « officiel » sous-estime donc le sous-emploi réel."
+          "c": "Le **halo du chômage** regroupe des personnes sans emploi qui ne sont **pas comptées** comme chômeurs au sens strict (elles ne cherchent pas activement, ou ne sont pas disponibles immédiatement). Le chômage « officiel » ne recense donc pas toutes les personnes sans emploi qui souhaiteraient travailler."
         }
       ]
     },
@@ -314,7 +314,7 @@
         },
         {
           "t": "p",
-          "c": "D’autres leviers agissent sur le **coût du travail** : allègements de charges sociales pour inciter à embaucher, notamment sur les bas salaires. L’idée est de rendre l’embauche plus attractive pour l’employeur, surtout pour les emplois peu qualifiés les plus exposés."
+          "c": "Parmi les **politiques actives**, les allègements de cotisations sociales agissent sur le **coût du travail** pour inciter à embaucher, notamment sur les bas salaires. L’idée est de rendre l’embauche plus attractive pour l’employeur, surtout pour les emplois peu qualifiés les plus exposés."
         },
         {
           "t": "p",
@@ -370,7 +370,7 @@
         },
         {
           "t": "p",
-          "c": "**Étape 3 — Commentaire.** Un taux d’environ 9 % est **élevé** : près d’un actif sur onze cherche un emploi sans en trouver. Il faut ensuite s’interroger sur sa **nature** (conjoncturel ? structurel ?) pour proposer le bon remède, et sur le **halo** du chômage (le chiffre officiel sous-estime le sous-emploi réel). Les 15 millions d’inactifs **n’entrent pas** dans le calcul."
+          "c": "**Étape 3 — Commentaire.** Un taux d’environ 9 % est **élevé** : près d’un actif sur onze cherche un emploi sans en trouver. Il faut ensuite s’interroger sur sa **nature** (conjoncturel ? structurel ?) pour proposer le bon remède, et sur le **halo** du chômage (le chiffre officiel ne recense pas toutes les personnes sans emploi qui souhaiteraient travailler). Les 15 millions d’inactifs **n’entrent pas** dans le calcul."
         },
         {
           "t": "tip",
