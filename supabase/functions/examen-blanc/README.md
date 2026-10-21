@@ -68,3 +68,15 @@ contrat, source, durée, isolation locale, langues) et
 Au contrôle du 21 octobre 2026 après déploiement v1 : fonction active, JWT requis,
 GET 200 `ready:false`, POST visiteur 401. La génération par un fournisseur réel
 attend une clé ; les tests automatisés utilisent exclusivement des réponses simulées.
+
+## Diagnostic fournisseur
+
+Le GET habituel indique la présence d’une clé, pas la réussite d’une génération.
+`GET ?check=provider` vérifie les métadonnées du modèle Gemini avec la clé serveur,
+sans envoi de cours ou de demande et sans génération de texte. Le résultat contrôlé
+est mutualisé et mis en cache une minute par instance. Une réponse positive
+confirme uniquement cet accès aux métadonnées ; l’appel authentifié de génération
+peut encore être refusé (permissions, quotas ou paramètres).
+Les échecs sont journalisés sous `exam_provider_failure` (statut HTTP et catégorie)
+ou `exam_request_failure` (catégorie / type contrôlé), jamais avec la clé, le prompt,
+le jeton ou le message brut du fournisseur.
