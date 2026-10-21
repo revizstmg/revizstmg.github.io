@@ -52,4 +52,10 @@ Demande du propriétaire : analyser les rapports de vérification et corriger le
 
 ## Validation
 
-Résultats à compléter après exécution sur la version finale. Les empreintes et l’index léger doivent être régénérés puisque le contenu et la génération changent volontairement. Les parcours bloquent les accès extérieurs et ne touchent pas Supabase.
+- 335 tests unitaires réussis (32 fichiers), puis les mêmes 335 tests sous `TZ=Europe/Paris`.
+- Compilation Vite/PWA réussie ; index léger des exercices et deux empreintes de contenu régénérés pour les corrections voulues.
+- 161 parcours navigateur réussis sur la compilation finale, accès extérieurs bloqués, aucune donnée Supabase touchée.
+- Premier passage navigateur non valide : navigateur encore en installation (exécutable absent / ETXTBSY), puis recompilation pendant la série. Après installation terminée et compilation stable, reprise complète : 161/161 réussis sans modification des parcours ni de leurs assertions.
+- `git diff --check` réussi ; fichiers de la branche GitHub comparés à la version locale testée, sans différence.
+- Avant livraison, la dernière CI de main et la construction Pages précédentes ont été contrôlées réussies via GitHub (#39674671350 et #39675726782). Leurs anciens défauts d’accès dans la routine ne sont donc pas des preuves de panne actuelle.
+- Validation GitHub de la PR et publication après fusion : suivies dans la PR #71 et le journal de coordination.
