@@ -65,7 +65,7 @@ export async function utilisation() {
 async function github(chemin) {
   const headers = { Accept: 'application/vnd.github+json' }
   if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`
-  const r = await fetch(`https://api.github.com/repos/${DEPOT}${chemin}`, { headers })
+  const r = await fetch(`https://api.github.com/repos/${DEPOT}${chemin}`, { headers, signal: AbortSignal.timeout(15000) })
   if (!r.ok) throw new Error(`GitHub ${r.status}`)
   return r.json()
 }
@@ -77,7 +77,7 @@ export async function publication(maintenant = new Date()) {
     const runs = await github('/actions/workflows/deploy.yml/runs?branch=main&status=completed&per_page=1')
     const run = runs.workflow_runs?.[0]
     if (run) p.ci = { etat: run.conclusion, date: run.updated_at }
-  } catch { /* indisponible */ }
+  } catch { p.ci = { etat: 'unknown', detail: 'API GitHub inaccessible : CI non vérifiée' } }
   try {
     // Dernière mise en ligne réussie. Un déploiement remplacé par un plus récent
     // est annulé et GitHub le note « error » : ce n'est pas une panne (la
@@ -86,7 +86,7 @@ export async function publication(maintenant = new Date()) {
       const st = (await github(`/deployments/${dep.id}/statuses?per_page=1`))[0]
       if (st?.state === 'success') { p.miseEnLigne = { etat: 'success', date: st.created_at }; break }
     }
-  } catch { /* indisponible */ }
+  } catch { p.miseEnLigne = { etat: 'unknown', detail: 'API GitHub inaccessible : publication non vérifiée' } }
   try {
     const depuis = new Date(maintenant - 7 * 864e5).toISOString()
     const commits = await github(`/commits?sha=main&since=${depuis}&per_page=100`)
