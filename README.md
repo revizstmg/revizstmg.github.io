@@ -33,6 +33,24 @@ Il propose un à cinq exercices par formule choisie, accepte les réponses avec
 virgule ou point et affiche un bilan local sans modifier la maîtrise des chapitres.
 Les anciennes adresses redirigent vers `/atelier-formules`.
 
+Le créateur d’examen blanc accepte une demande et une durée de 60, 120, 180 ou
+240 minutes. L’élève peut laisser l’IA choisir le programme ou sélectionner de
+1 à 24 chapitres, avec filtres de niveau / matière et recherche. En mode manuel,
+la vérification du périmètre ne nécessite pas d’appel IA d’analyse. Après
+confirmation, seuls les cours choisis sont envoyés à la génération Gemini.
+Les nouveaux sujets contiennent au moins 4/6/8/10 documents selon la durée,
+avec questions documentaires et connaissances personnelles du cours, et deux
+PDF séparés (sujet / corrigé). Les anciens sujets restent accessibles.
+
+Après rédaction sur papier, « Déposer ma copie » accepte un PDF ou des photos
+JPEG/PNG/WebP (6 fichiers, 6 Mio au total). Après accord de l’élève, Gemini lit
+la copie et propose une correction détaillée et une note indicative sur 20.
+Les points sont validés et additionnés côté serveur ; une réponse illisible
+empêche une note globale inventée. Les fichiers ne sont pas sauvegardés par le
+site ; le bilan reste sur cet appareil pour ce compte, sans modifier notes de
+classe, XP ou récompenses. Une vraie lecture manuscrite reste à vérifier avec
+l’élève ; les tests automatisés ne font aucun appel réel au fournisseur.
+
 Dans le lecteur de cours, la flèche après la dernière fiche revient à la
 première fiche du même chapitre, en lecture normale comme en plein écran.
 
