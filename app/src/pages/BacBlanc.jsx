@@ -3,6 +3,7 @@ import { Navigate } from 'react-router-dom'
 import { useStore, useStudyTimer } from '../store.jsx'
 import { buildExam, examSubjects } from '../data/study.js'
 import Exam from '../games/Exam.jsx'
+import CreateExam from '../components/CreateExam.jsx'
 import SujetBac from '../games/SujetBac.jsx'
 import SujetMaths from '../games/SujetMaths.jsx'
 import { BO_MATHS } from '../data/sujetMaths.js'
@@ -39,6 +40,7 @@ function BacBlancPage() {
   const [dur, setDur] = useState(DURATIONS[2])
   const [exam, setExam] = useState(null) // { questions, durationSec }
   const [sujet, setSujet] = useState(null) // sujet au format de l'épreuve en cours
+  const [customOpen, setCustomOpen] = useState(false)
   const [sansSujet, setSansSujet] = useState(false)
   const [sujetMaths, setSujetMaths] = useState(false)
   const sujets = sujetsDisponibles(state.track)
@@ -62,12 +64,16 @@ function BacBlancPage() {
 
   return (
     <div className="animate-lux space-y-6">
-      <header className="text-center">
+      <header hidden={customOpen} className="text-center">
         <p className="kicker">📝 {t('mockExam')}</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('mockExam')}</h1>
         <span className="mx-auto mt-3 block h-px w-24 rounded-full" style={{ background: 'linear-gradient(90deg,transparent,#c8a24e,transparent)' }} />
         <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">{t('mockExamSub')}</p>
       </header>
+
+      <CreateExam onOpenChange={setCustomOpen} />
+
+      <div hidden={customOpen} className="space-y-6">
 
       {exam && exam.questions.length < 4 && (
         <div className="card p-4 text-center text-sm text-rose-600 dark:text-rose-400">{t('notEnoughQuestions')}</div>
@@ -128,6 +134,7 @@ function BacBlancPage() {
         <button onClick={start} className="btn-gold mt-6 w-full !py-3.5 text-base">⏱ {t('startExam')}</button>
         <p className="mt-3 text-center text-xs text-slate-400">{t('examNote')}</p>
       </section>
+      </div>
 
     </div>
   )

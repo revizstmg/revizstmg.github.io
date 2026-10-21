@@ -907,3 +907,17 @@ Prochaine action :
   accès au client auth existant sans le modifier. PR #41 SEO conservée.
 - Branche feat/examens-personnalises ; tests logique, parcours simulés sans base
   réelle et contrôle du déploiement prévus. Aucun faux résultat IA de secours.
+- PR #49 : implémentation terminée. Tests locaux finaux : 306 tests / 30 fichiers,
+  compilation réussie et quatre parcours téléphone simulés réussis (création
+  Première + Terminale, reprise, remise à échéance, quota et impression CSS).
+- Fonction examen-blanc v1 déployée seule sur wyydagcjkbivtbuhbzon avec JWT requis
+  et vérification utilisateur côté serveur. Contrôles réels non payants : GET 200
+  ready:false ; POST avec clé publique seule 401 login_required.
+  Aucune clé Gemini/Anthropic présente : génération réelle non activée et non
+  testée avec un fournisseur réel. Pas de faux sujet ni de bascule cachée.
+- Copie locale uniquement, pas de synchronisation entre appareils. Compteur de
+  requêtes en mémoire par instance, pas un quota global de facturation. Limites
+  documentées dans supabase/functions/examen-blanc/README.md. Aucune table modifiée.
+- Pour Claude : fonction ajoutée hors couloir annoncée ; les paramètres de photo
+  et rappels sont intacts. Prévoir l’ajout de ce flux IA dans la confidentialité
+  lors de sa prochaine passe juridique ; information déjà explicite avant envoi.
