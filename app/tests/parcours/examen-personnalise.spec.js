@@ -1,3 +1,4 @@
+import AxeBuilder from '@axe-core/playwright'
 import { test, expect } from '@playwright/test'
 import { preparer, attendreAccueil, etatEleve } from './eleve.js'
 const ID = '00000000-0000-4000-8000-000000000001'
@@ -67,4 +68,78 @@ test('quota IA : demande conservée et aucun sujet factice', async ({ page }) =>
  await expect(page.getByRole('alert')).toContainText('Le service a atteint sa limite temporaire.', { timeout: 45000 })
  await expect(page.getByLabel('Quel examen veux-tu passer ?')).toHaveValue(prompt)
  await expect(page.locator('.exam-sheet')).toHaveCount(0)
+})
+
+async function readyCopy(page) {
+ const data = await setup(page)
+ await page.evaluate(id => {
+  const course = { id: 'management::0', title: 'Stratégie', subject: 'Management', level: 'terminale' }
+  const exam = { title: 'Copie de management', instructions: 'Justifiez.', documents: Array.from({ length: 4 }, (_, i) => ({ id: `d${i}`, title: `Document fictif ${i}`, text: 'Une organisation.' })), questions: Array.from({ length: 6 }, (_, i) => ({ id: `q${i}`, chapterId: course.id, enonce: `Question ${i + 1}`, documentIds: i < 4 ? [`d${i}`] : [], correction: 'Réponse attendue.', criteria: ['Justifier'], points: i === 5 ? 5 : 3 })) }
+  localStorage.setItem(`revizstmg_exam_v1_${id}`, JSON.stringify({ owner: id, prompt: 'Tester le management de terminale.', duration: 60, courses: [course], exam, answers: {}, startedAt: null, submittedAt: null }))
+ }, ID)
+ await page.reload(); await attendreAccueil(page)
+ return data
+}
+const pdfCopy = { name: 'copie.pdf', mimeType: 'application/pdf', buffer: Buffer.from('%PDF-1.7\nCopie de test') }
+test('dépôt : consentement, correction détaillée, reprise et absence de stockage des fichiers', async ({ page }) => {
+ const { errors, requests } = await readyCopy(page)
+ let payload
+ await page.route('**/functions/v1/examen-blanc', async route => {
+  if (route.request().method() !== 'POST') return route.fulfill({ json: { ready: true } })
+  payload = route.request().postDataJSON()
+  return route.fulfill({ json: { grade: { status: 'graded', feedback: 'Bonne analyse ; approfondis les justifications.', advice: ['Réviser la stratégie.'], total: 20, questions: payload.exam.questions.map((q, i) => ({ id: q.id, status: 'readable', points: q.points - (i === 0 ? 0.5 : 0), transcription: 'Réponse de la copie.', feedback: 'Argumentation correcte.' })) } } })
+ })
+ const copy = page.getByRole('region', { name: 'Déposer ma copie' })
+ await copy.getByLabel('Choisir un PDF ou des photos').setInputFiles(pdfCopy)
+ await expect(copy.getByRole('button', { name: 'Faire corriger ma copie' })).toBeDisabled()
+ expect(requests).toHaveLength(0)
+ await copy.getByRole('checkbox').check()
+ await copy.getByRole('button', { name: 'Faire corriger ma copie' }).click()
+ await expect(copy.getByRole('heading', { name: 'Note indicative : 19,5 / 20' })).toBeVisible()
+ await copy.getByText('1. 2.5 / 3', { exact: true }).click()
+ await expect(copy.locator('details').first().getByText('Réponse de la copie.', { exact: true })).toBeVisible()
+ expect(payload.action).toBe('grade'); expect(payload.files[0].mimeType).toBe('application/pdf')
+ expect(JSON.stringify(payload)).not.toContain('copie.pdf')
+ const stored = await page.evaluate(id => localStorage.getItem(`revizstmg_exam_v1_${id}`), ID)
+ expect(stored).not.toContain(payload.files[0].data)
+ expect(stored).not.toContain('copie.pdf')
+ expect((await new AxeBuilder({ page }).include('.bac-creator').withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa']).analyze()).violations).toEqual([])
+ await copy.screenshot({ path: 'test-results/correction-copie-mobile.png' })
+ await page.reload(); await attendreAccueil(page)
+ await expect(page.getByRole('heading', { name: 'Note indicative : 19,5 / 20' })).toBeVisible()
+ expect(errors).toEqual([])
+})
+test('photos : ordre des pages, erreur conservant les fichiers et aucune note inventée', async ({ page }) => {
+ const { errors } = await readyCopy(page)
+ let payload
+ await page.route('**/functions/v1/examen-blanc', async route => {
+  if (route.request().method() !== 'POST') return route.fulfill({ json: { ready: true } })
+  payload = route.request().postDataJSON()
+  return route.fulfill({ status: 429, json: { error: 'rate_limit' } })
+ })
+ const copy = page.getByRole('region', { name: 'Déposer ma copie' })
+ const photo = { name: 'page-2.png', mimeType: 'image/png', buffer: Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jV3sAAAAASUVORK5CYII=', 'base64') }
+ await copy.getByLabel('Prendre une photo', { exact: true }).setInputFiles(photo)
+ await copy.getByLabel('Choisir un PDF ou des photos').setInputFiles(pdfCopy)
+ await copy.getByRole('button', { name: 'Monter copie.pdf', exact: true }).click()
+ await copy.getByRole('checkbox').check()
+ await copy.getByRole('button', { name: 'Faire corriger ma copie' }).click()
+ await expect(copy.getByRole('alert')).toContainText('limite temporaire')
+ expect(payload.files.map(f => f.mimeType)).toEqual(['application/pdf', 'image/png'])
+ await expect(copy.getByText(/1\. copie.pdf/)).toBeVisible()
+ await expect(copy.getByRole('heading', { name: /Note indicative/ })).toHaveCount(0)
+ expect(errors).toEqual([])
+})
+test('copie illisible : bilan sans note et format non autorisé bloqué avant envoi', async ({ page }) => {
+ const { requests } = await readyCopy(page)
+ const copy = page.getByRole('region', { name: 'Déposer ma copie' })
+ await copy.getByLabel('Choisir un PDF ou des photos').setInputFiles({ name: 'copie.html', mimeType: 'text/html', buffer: Buffer.from('<p>texte</p>') })
+ await expect(copy.getByRole('alert')).toContainText('fichier n’est pas accepté')
+ expect(requests).toHaveLength(0)
+ await page.route('**/functions/v1/examen-blanc', route => route.fulfill({ json: route.request().method() === 'POST' ? { grade: { status: 'unreadable', feedback: 'Les pages sont floues.', total: 20 } } : { ready: true } }))
+ await copy.getByLabel('Choisir un PDF ou des photos').setInputFiles(pdfCopy)
+ await copy.getByRole('checkbox').check()
+ await copy.getByRole('button', { name: 'Faire corriger ma copie' }).click()
+ await expect(copy.getByRole('heading', { name: /Copie illisible/ })).toBeVisible()
+ await expect(copy.getByText(/\/ 20/)).toHaveCount(0)
 })

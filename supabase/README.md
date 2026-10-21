@@ -176,3 +176,16 @@ Les corrections ci-dessous sont faites (fichiers `20261013*` et `20261020*`, app
 
 Ces corrections changent le fonctionnement de l'application (classe, amis, parent)
 et doivent être testées ensemble. Elles font l'objet d'une tâche à part.
+
+#### Correction des copies d’examen blanc
+
+L’action `grade` de `examen-blanc` utilise Gemini (clé serveur existante), le sujet et son
+barème, ainsi que des pièces `inlineData`. Formats : PDF, JPEG, PNG, WebP ; maximum
+6 pièces et 6 Mio au total, signatures contrôlées. Le lecteur IA doit refuser les
+PDF protégés, les documents sans réponse et les copies de plus de 30 pages.
+Les fichiers ne sont stockés ni dans Supabase Storage, ni en base, ni dans le
+brouillon local ; seul le bilan est conservé par compte sur l’appareil. L’envoi
+requiert l’accord de l’élève. Les journaux ne contiennent ni copie ni réponse brute.
+La note est indicative, sans effet sur les notes de classe, XP ou récompenses ;
+une réponse illisible n’est pas notée zéro et empêche une note globale.
+Déployer ensemble `index.ts`, `handler.js`, `contract.js` et `grading.js`, avec JWT activé.

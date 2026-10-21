@@ -1,7 +1,8 @@
+import { checkFiles } from './grading.js'
 export const DURATIONS = [60, 120, 180, 240]
 export function checkRequest(body) {
   if (!body || !DURATIONS.includes(body.duration) || typeof body.prompt !== 'string' || body.prompt.trim().length < 15 || body.prompt.length > 1500) throw new Error('invalid_request')
-  if (!['plan', 'generate'].includes(body.action)) throw new Error('invalid_request')
+  if (!['plan', 'generate', 'grade'].includes(body.action)) throw new Error('invalid_request')
   const entries = body.action === 'plan' ? body.catalog : body.courses
   const limit = body.action === 'plan' ? 1600 : 24
   if (!Array.isArray(entries) || !entries.length || entries.length > limit) throw new Error('invalid_request')
@@ -10,6 +11,11 @@ export function checkRequest(body) {
     if (!c || typeof c.id !== 'string' || c.id.length > 160 || ids.has(c.id) || typeof c.title !== 'string' || c.title.length > 400 || typeof c.subject !== 'string' || c.subject.length > 150 || !['premiere', 'terminale'].includes(c.level)) throw new Error('invalid_request')
     ids.add(c.id)
     if (body.action === 'generate' && (typeof c.text !== 'string' || !c.text.trim() || c.text.length > 30000)) throw new Error('invalid_request')
+  }
+  if (body.action === 'grade') {
+    const exam = checkExam(body.exam, body.courses, body.duration)
+    if (JSON.stringify(exam).length > 300000) throw new Error('too_large')
+    return { action: 'grade', prompt: body.prompt, duration: body.duration, courses: body.courses, exam, files: checkFiles(body.files) }
   }
   return body
 }
@@ -37,4 +43,13 @@ export function checkExam(exam, courses, duration) {
   if (Math.abs(total - 20) > 0.001) throw new Error('invalid_response')
   // Whitelist output: no HTML execution, URLs or model-controlled metadata.
   return { title: exam.title, instructions: exam.instructions, documents: exam.documents.map(({ id, title, text }) => ({ id, title, text })), questions: exam.questions.map(({ id, chapterId, enonce, points, documentIds, correction, criteria }) => ({ id, chapterId, enonce, points, documentIds, correction, criteria })) }
+}
+
+export const documentTarget = duration => ({ 60: 4, 120: 6, 180: 8, 240: 10 })[duration]
+export function checkGeneratedExam(exam, courses, duration) {
+  const checked = checkExam(exam, courses, duration)
+  const personal = checked.questions.filter(q => !q.documentIds.length).length
+  const used = new Set(checked.questions.flatMap(q => q.documentIds))
+  if (checked.documents.length < documentTarget(duration) || used.size !== checked.documents.length || personal < Math.max(1, Math.ceil(checked.questions.length * 0.2)) || checked.questions.length - personal < Math.ceil(checked.questions.length * 0.5)) throw new Error('invalid_response')
+  return checked
 }

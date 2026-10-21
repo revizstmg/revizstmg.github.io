@@ -1035,3 +1035,9 @@ Prochaine action :
 ### 21 octobre 2026 — Codex — retour Gemini
 - Demande explicite : remettre Gemini. Priorité à la clé Gemini si présente, Groq conservé uniquement en absence de clé Gemini ; aucun basculement automatique sur erreur. Périmètre : sélection du fournisseur et test, fonction examen-blanc uniquement. Clés, base et modèles inchangés.
 - Vérifications : 321 tests réussis (31 fichiers). Fonction v14 déployée avec JWT requis ; configuration réelle provider:gemini et métadonnées ready:true. Cette sonde ne prouve pas la disponibilité de generateContent ; création authentifiée à réessayer. PR #66, code ca8fbe8.
+
+### 21 octobre 2026 — Codex — dossier documentaire et correction de copie
+- Propriétaire confirme génération Gemini fonctionnelle. Demande : davantage de documents, questions sur documents et connaissances, dépôt fichier/photo avec note IA.
+- Périmètre : créateur, PDF, traductions, fonction examen-blanc et tests. Dossiers 4/6/8/10 documents selon durée ; équilibre documentaire/connaissances vérifié pour nouveaux sujets, compatibilité des anciens maintenue.
+- Correction Gemini multimodale PDF/JPEG/PNG/WebP, limites de volume/type des deux côtés, consentement avant envoi, aucune copie binaire en base ni localStorage. Note indicative calculée à partir des points validés par question ; copie illisible/inadéquate ne produit pas de note globale inventée. Authentification et quotas conservés ; aucune migration ni autre fonction partagée touchée. Skill Supabase appliqué.
+- Périmètre complété : page Confidentialité, afin de décrire la correction Gemini et le stockage local du seul bilan, sans fichier. Aucun consentement payant / abonnement ajouté à ce service demandé.

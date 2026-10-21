@@ -4,7 +4,7 @@ import { createHandler } from '../../supabase/functions/examen-blanc/handler.js'
 import { courseText, readDraft, secondsLeft, examCatalog } from '../src/data/examenPersonnalise.js'
 import { examMessages } from '../src/i18n/examens.js'
 const course = { id: 'management::0', title: 'Stratégie', subject: 'Management', level: 'terminale', text: 'Le cours de stratégie.' }
-const exam = () => ({ title: 'Management', instructions: 'Justifiez vos réponses.', documents: [{ id: 'd1', title: 'Cas fictif', text: 'Une organisation.' }], questions: Array.from({ length: 6 }, (_, i) => ({ id: `q${i}`, chapterId: course.id, documentIds: ['d1'], enonce: 'Analysez le cas.', correction: 'Démarche attendue.', criteria: ['Justifier'], points: i === 5 ? 5 : 3 })) })
+const exam = () => ({ title: 'Management', instructions: 'Justifiez vos réponses.', documents: Array.from({ length: 4 }, (_, i) => ({ id: `d${i + 1}`, title: `Cas fictif ${i + 1}`, text: 'Une organisation.' })), questions: Array.from({ length: 6 }, (_, i) => ({ id: `q${i}`, chapterId: course.id, documentIds: i < 4 ? [`d${i + 1}`] : [], enonce: 'Analysez le cas.', correction: 'Démarche attendue.', criteria: ['Justifier'], points: i === 5 ? 5 : 3 })) })
 const request = body => new Request('https://test/examen-blanc', { method: 'POST', headers: { Authorization: 'Bearer test' }, body: JSON.stringify(body) })
 const input = { action: 'generate', duration: 60, prompt: 'Tester le management de terminale.', courses: [course] }
 const env = key => ({ SUPABASE_URL: 'https://auth.test', SUPABASE_ANON_KEY: 'public-test', GEMINI_API_KEY: 'test-key' })[key]
@@ -208,3 +208,65 @@ describe('Groq', () => {
   const handler = createHandler({ env: key => key === 'GROQ_API_KEY' ? 'groq-test' : env(key) })
   expect(await (await handler(new Request('https://test?check=configuration'))).json()).toEqual({ provider: 'gemini' })
  })
+
+describe('dossier et correction multimodale', () => {
+ const file = { mimeType: 'application/pdf', data: btoa('%PDF-1.7\nCopie test') }
+ const body = () => ({ ...input, action: 'grade', exam: exam(), files: [file] })
+ const grade = () => ({ status: 'graded', feedback: 'Bon raisonnement.', advice: ['Réviser la stratégie.'], total: 20, questions: exam().questions.map(q => ({ id: q.id, status: 'readable', transcription: 'Réponse justifiée.', points: 1, feedback: 'Une justification manque.' })) })
+ test('envoie les pièces au modèle dans les parts, hors instructions, et recalcule la note', async () => {
+  const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : Response.json({ candidates: [{ content: { parts: [{ text: JSON.stringify(grade()) }] } }] }))
+  const r = await createHandler({ env, fetcher })(request(body()))
+  expect(r.status).toBe(200)
+  const result = (await r.json()).grade
+  expect(result.total).toBe(6)
+  const payload = JSON.parse(fetcher.mock.calls[1][1].body)
+  expect(payload.contents[0].parts[1]).toEqual({ inlineData: file })
+  expect(payload.contents[0].parts[0].text).not.toContain(file.data)
+  expect(payload.systemInstruction.parts[0].text).toContain('fichiers')
+  expect(fetcher.mock.calls[1][1].headers.Authorization).toBeUndefined()
+ })
+ test('refuse format déguisé, excès de fichiers et copie hors barème avant génération', async () => {
+  const fetcher = vi.fn(async () => Response.json({ id: 'user' }))
+  for (const change of [b => { b.files = [{ ...file, mimeType: 'image/png' }] }, b => { b.files = Array(7).fill(file) }, b => { b.exam.questions[0].points = 30 }]) {
+   const b = body(); change(b)
+   const r = await createHandler({ env, fetcher })(request(b))
+   expect(r.status).toBe(400)
+  }
+  expect(fetcher).toHaveBeenCalledTimes(3)
+ })
+ test('la correction nécessite Gemini et un compte authentifié', async () => {
+  const fetcher = vi.fn(async () => Response.json({ id: 'user' }))
+  const r = await createHandler({ env: key => key === 'GEMINI_API_KEY' ? undefined : key === 'GROQ_API_KEY' ? 'groq' : env(key), fetcher })(request(body()))
+  expect((await r.json()).error).toBe('grading_unavailable')
+  expect(fetcher).toHaveBeenCalledTimes(1)
+  const handler = createHandler({ env, fetcher })
+  expect((await handler(new Request('https://test', { method: 'POST', body: JSON.stringify(body()) }))).status).toBe(401)
+ })
+ test('aucune note globale si une réponse est illisible ; absence et illisibilité restent distinctes', async () => {
+  const g = grade(); g.questions[0] = { ...g.questions[0], status: 'unreadable', points: null, transcription: '' }; g.questions[1] = { ...g.questions[1], status: 'unanswered', points: 0, transcription: '' }
+  const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : Response.json({ candidates: [{ content: { parts: [{ text: JSON.stringify(g) }] } }] }))
+  const r = await createHandler({ env, fetcher })(request(body()))
+  expect((await r.json()).grade.total).toBeNull()
+ })
+ test('rejette un dépassement de points, une question répétée et une copie sans correspondance sans lui donner de note', async () => {
+  for (const change of [g => { g.questions[0].points = 10 }, g => { g.questions[1].id = g.questions[0].id }, g => { g.questions[0].transcription = '' }]) {
+   const g = grade(); change(g)
+   const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : Response.json({ candidates: [{ content: { parts: [{ text: JSON.stringify(g) }] } }] }))
+   expect((await (await createHandler({ env, fetcher })(request(body()))).json()).error).toBe('invalid_response')
+  }
+  const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : Response.json({ candidates: [{ content: { parts: [{ text: JSON.stringify({ status: 'mismatch', feedback: 'Autre sujet.', total: 20 }) }] } }] }))
+  expect((await (await createHandler({ env, fetcher })(request(body()))).json()).grade.total).toBeNull()
+ })
+ test('rejette les nouveaux sujets sans dossier ou sans questions de connaissances', async () => {
+  for (const change of [e => { e.documents = e.documents.slice(0, 1); e.questions.forEach(q => { q.documentIds = ['d1'] }) }, e => { e.questions.forEach((q, i) => { q.documentIds = [`d${i % 4 + 1}`] }) }]) {
+   const e = exam(); change(e)
+   const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : Response.json({ candidates: [{ content: { parts: [{ text: JSON.stringify(e) }] } }] }))
+   expect((await (await createHandler({ env, fetcher })(request(input))).json()).error).toBe('invalid_response')
+  }
+ })
+})
+
+test('les cinq langues couvrent les libellés du dépôt de copie', async () => {
+ const { copyMessages } = await import('../src/i18n/copies.js')
+ for (const dict of Object.values(copyMessages)) { expect(Object.keys(dict)).toEqual(Object.keys(copyMessages.fr)); expect(Object.values(dict).every(Boolean)).toBe(true) }
+})

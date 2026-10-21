@@ -40,6 +40,10 @@ export default function Privacy() {
           <li><b>Contributions</b> : QCM créés, messages de classe, réponses partagées avec ta classe.</li>
           <li><b>Photos de cours</b> envoyées à la « fiche par photo » : analysées pour créer la fiche, elles ne sont
           <b> pas conservées</b> par RévizSTMG.</li>
+          <li><b>Examens blancs personnalisés</b> : la demande et les extraits de cours sont envoyés au
+          fournisseur d’IA pour créer le sujet. Avec ton accord distinct, le PDF ou les photos de ta copie
+          sont transmis à Gemini pour une correction indicative. RévizSTMG ne conserve pas ces fichiers ;
+          le sujet et le bilan sont enregistrés uniquement sur ton appareil, pour ton compte.</li>
           <li><b>Signalements d'erreurs</b> (bouton « Signaler une erreur ») : ton message, la page concernée et,
           si tu es connecté, l'identifiant de ton compte (pour limiter les abus).</li>
           <li><b>Rappel de révision sur le téléphone</b>, seulement si tu l'actives avec un compte : l'adresse
@@ -84,9 +88,9 @@ export default function Privacy() {
           espaces partagés, et envoi des e-mails du service (confirmation d'inscription, nouveau mot de passe).</li>
           <li><b>GitHub</b> (États-Unis) héberge le site : comme tout hébergeur, il reçoit ton adresse IP et garde
           des journaux techniques.</li>
-          <li><b>Google (Gemini)</b> ou <b>Anthropic (Claude)</b>, seulement si tu utilises la « fiche par photo » :
-          la photo leur est envoyée pour analyse. Avec l'offre gratuite de Gemini, Google peut utiliser les contenus
-          reçus pour améliorer ses services : n'envoie pas de photo qui contient des informations personnelles.</li>
+          <li><b>Google (Gemini)</b> ou <b>Anthropic (Claude)</b>, pour la « fiche par photo » ou la création d’examens blancs :
+          la photo, la demande ou les extraits de cours sont transmis pour analyse. La correction de copie utilise Google (Gemini), après ton accord pour chaque envoi de PDF ou de photos. Avec l'offre gratuite de Gemini, Google peut utiliser les contenus
+          reçus pour améliorer ses services : masque ton nom et tes coordonnées avant tout envoi de photo ou de copie.</li>
           <li><b>MyMemory</b> (Translated, Italie) traduit les textes publics qui ne sont pas déjà disponibles
           dans la langue choisie. Les modèles d’interface sont envoyés sans les noms, messages ni valeurs
           des champs : les données variables sont ajoutées sur ton appareil. Si tu utilises le dictionnaire,

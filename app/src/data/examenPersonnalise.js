@@ -1,3 +1,4 @@
+import { checkGrade } from '../../../supabase/functions/examen-blanc/grading.js'
 import { SUBJECTS, chargerTout, themeChapters } from './index.js'
 import { SUPA_URL, SUPA_ANON } from '../supabase.js'
 import { getSession, getValidToken } from '../auth.js'
@@ -30,7 +31,7 @@ export async function requestExam(body, accountId, signal) {
   const data = await r.json().catch(() => ({}))
   if (!r.ok) throw new Error(data.error || (r.status === 401 ? 'login_required' : 'server_error'))
   if (getSession()?.user?.id !== accountId) throw new Error('login_required')
-  return body.action === 'plan' ? checkPlan(data.plan, body.catalog) : checkExam(data.exam, body.courses, body.duration)
+  return body.action === 'plan' ? checkPlan(data.plan, body.catalog) : body.action === 'grade' ? checkGrade(data.grade, body.exam) : checkExam(data.exam, body.courses, body.duration)
 }
 export const draftKey = id => `revizstmg_exam_v1_${id}`
 export function readDraft(id, storage = localStorage) {
@@ -42,6 +43,7 @@ export function readDraft(id, storage = localStorage) {
     if (!draft.answers || typeof draft.answers !== 'object' || Array.isArray(draft.answers) || Object.values(draft.answers).some(v => typeof v !== 'string' || v.length > 16000)) return null
     if (draft.submittedAt != null && (!Number.isFinite(draft.submittedAt) || draft.submittedAt <= 0)) return null
     if (draft.startedAt != null && (!Number.isFinite(draft.startedAt) || draft.startedAt <= 0)) return null
+    if (draft.grade) draft.grade = checkGrade(draft.grade, draft.exam)
     return draft
   } catch { return null }
 }
