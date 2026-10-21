@@ -1026,3 +1026,4 @@ Prochaine action :
 - Priorité Groq si clé présente, modèle Llama 3.3 70B, validation pédagogique et authentification conservées. Vérifier connexion, erreurs de quota et réponses structurées avant livraison.
 - Liste réelle des modèles Groq vérifiée avec la clé serveur : Llama 3.3 absent ; choix effectif openai/gpt-oss-120b (JSON et sorties longues supportées dans la documentation Groq). GROQ_API_KEY prioritaire, EXAM_GROQ_MODEL permet de fixer un autre modèle. Aucun basculement payant automatique en cas de quota.
 - Déploiement de la fonction seule, JWT conservé. Sonde lecture seule : ne prouve pas une génération authentifiée complète ; celle-ci reste à confirmer par le propriétaire.
+- Livraison serveur v13 : sonde Groq ready:true, modèle accessible. 320 tests unitaires réussis (31 fichiers), dont 25 sur les examens ; aucune génération réelle réalisée sans session de l’élève. PR #64, code 2d4e5ef. Essai complet demandé au propriétaire.
