@@ -96,7 +96,7 @@ test('dépôt : consentement, correction détaillée, reprise et absence de stoc
  await copy.getByRole('checkbox').check()
  await copy.getByRole('button', { name: 'Faire corriger ma copie' }).click()
  await expect(copy.getByRole('heading', { name: 'Note indicative : 19,5 / 20' })).toBeVisible()
- await copy.getByText('1. 2.5 / 3', { exact: true }).click()
+ await copy.getByText('1. 2,5 / 3', { exact: true }).click()
  await expect(copy.locator('details').first().getByText('Réponse de la copie.', { exact: true })).toBeVisible()
  expect(payload.action).toBe('grade'); expect(payload.files[0].mimeType).toBe('application/pdf')
  expect(JSON.stringify(payload)).not.toContain('copie.pdf')
