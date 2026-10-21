@@ -102,7 +102,7 @@ test('diagnostic Gemini : lecture seule mutualisée, sans secret dans la répons
 })
 test('diagnostic Gemini : refus fournisseur catégorisé sans recopier son message', async () => {
  for (const [status, error] of [[403, 'provider_permission'], [404, 'provider_model_unavailable'], [429, 'rate_limit'], [400, 'provider_key_invalid']]) {
-  const fetcher = vi.fn(async () => Response.json({ error: { message: 'private-provider-detail', details: [{ reason: 'API_KEY_INVALID' }] } }, { status }))
+  const fetcher = vi.fn(async () => Response.json({ error: { message: 'private-provider-detail', details: status === 400 ? [{ reason: 'API_KEY_INVALID' }] : [] } }, { status }))
   const r = await createHandler({ env, fetcher })(new Request('https://test?check=provider'))
   expect(await r.json()).toEqual({ ready: false, error })
  }
@@ -118,4 +118,16 @@ test('clé copiée avec des espaces : normalisation uniquement côté serveur', 
  const r = await createHandler({ env: spacedEnv, fetcher })(new Request('https://test?check=provider'))
  expect(await r.json()).toEqual({ ready: true })
  expect(fetcher.mock.calls[0][1].headers['x-goog-api-key']).toBe('test-key')
+})
+
+test('diagnostic fournisseur : raisons contrôlées, aucun message brut journalisé', async () => {
+ const warn = vi.spyOn(console, 'warn').mockImplementation(() => {})
+ try {
+  for (const [reason, error] of [['SERVICE_DISABLED','provider_service_disabled'], ['API_KEY_HTTP_REFERRER_BLOCKED','provider_key_restricted']]) {
+   const fetcher = async () => Response.json({ error: { message: 'private-provider-detail', details: [{ reason }] } }, { status: 403 })
+   const r = await createHandler({ env, fetcher })(new Request('https://test?check=provider'))
+   expect(await r.json()).toEqual({ ready: false, error })
+  }
+  expect(JSON.stringify(warn.mock.calls)).not.toContain('private-provider-detail')
+ } finally { warn.mockRestore() }
 })
