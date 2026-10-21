@@ -138,7 +138,7 @@ test('Gemini : modèle actuel et repli borné si un ancien modèle renvoie 404',
  const r = await createHandler({ env: custom, fetcher })(request(input))
  expect(r.status).toBe(200)
  expect(fetcher.mock.calls[1][0]).toContain('/models/ancien:generateContent')
- expect(fetcher.mock.calls[2][0]).toContain('/models/gemini-3.8-flash:generateContent')
+ expect(fetcher.mock.calls[2][0]).toContain('/models/gemini-3.6-flash:generateContent')
  expect(fetcher).toHaveBeenCalledTimes(3)
 })
 test('Gemini : aucun repli en cas de quota ou de permissions', async () => {
@@ -148,4 +148,25 @@ test('Gemini : aucun repli en cas de quota ou de permissions', async () => {
   await createHandler({ env: custom, fetcher })(request(input))
   expect(fetcher).toHaveBeenCalledTimes(2)
  }
+})
+
+test('Gemini indisponible : une reprise différée puis une alternative Flash, délai borné', async () => {
+ const pause = vi.fn(async () => {})
+ const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : url.includes('3.6') ? new Response('', { status: 503 }) : Response.json({ candidates: [{ content: { parts: [{ text: JSON.stringify(exam()) }] } }] }))
+ const r = await createHandler({ env, fetcher, pause })(request(input))
+ expect(r.status).toBe(200)
+ expect(fetcher).toHaveBeenCalledTimes(4)
+ expect(pause).toHaveBeenCalledTimes(1)
+ expect(pause).toHaveBeenCalledWith(1000)
+ expect(fetcher.mock.calls[3][0]).toContain('gemini-3.8-flash')
+ expect(fetcher.mock.calls[1][1].signal).toBe(fetcher.mock.calls[3][1].signal)
+})
+test('Gemini indisponible partout : appels bornés, aucune réponse factice', async () => {
+ const pause = vi.fn(async () => {})
+ const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : new Response('', { status: 503 }))
+ const r = await createHandler({ env, fetcher, pause })(request(input))
+ expect(r.status).toBe(502)
+ expect(await r.json()).toEqual({ error: 'provider_unavailable' })
+ expect(fetcher).toHaveBeenCalledTimes(4)
+ expect(pause).toHaveBeenCalledTimes(1)
 })
