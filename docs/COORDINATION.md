@@ -868,3 +868,15 @@ Prochaine action :
   /sitemap.xml. Le diagnostic documente cette divergence avec le rapport.
 - Le contournement n’est pas annoncé comme un succès Search Console avant que
   le propriétaire ait envoyé sitemap.txt et vérifié son état dans Google.
+
+### NOM-SITE-20261021-CODEX-06 — Codex
+
+- Demande du propriétaire : proposer RévizSTMG comme nom dans Google à la place
+  de GitHub, sur le sous-domaine actuel, sans acheter de nom de domaine.
+- Périmètre : données structurées WebSite dans app/index.html, cohérentes avec
+  og:site_name déjà présent, nom visible et canonique existante.
+- PR #41 de Claude identifiée : elle travaille aussi le head et prévoit WebSite.
+  Insertion limitée annoncée au propriétaire ; préserver une seule déclaration
+  WebSite lors de son intégration. Aucun changement de titre ni de contenu ici.
+- Branche `fix/nom-site-google` ; validation, publication et contrôle public prévus.
+  Le nom reste une préférence transmise à Google, pas un affichage garanti.
