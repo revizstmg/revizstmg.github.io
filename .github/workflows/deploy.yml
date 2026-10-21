@@ -21,7 +21,9 @@ concurrency:
 
 jobs:
   tests:
-    runs-on: ubuntu-latest
+    # Playwright 1.56.1 prend en charge Ubuntu 24.04 ; éviter les migrations
+    # automatiques de ubuntu-latest avant une mise à jour du navigateur.
+    runs-on: ubuntu-24.04
     defaults:
       run:
         working-directory: app
