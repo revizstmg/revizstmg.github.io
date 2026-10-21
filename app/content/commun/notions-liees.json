@@ -51,5 +51,12 @@
   ["Preuve parfaite", "Acte authentique"],
   ["Preuve parfaite", "Acte sous signature privée"],
   ["Droit d'auteur", "Droit moral"],
-  ["Droit d'auteur", "Droits patrimoniaux (d'auteur)"]
+  ["Droit d'auteur", "Droits patrimoniaux (d'auteur)"],
+  ["Chômage", "Chômage conjoncturel"],
+  ["Chômage", "Chômage structurel"],
+  ["Chômage", "Chômage frictionnel"],
+  ["Chômage", "Chômage technologique"],
+  ["Répartition", "Redistribution"],
+  ["Répartition", "Fonction de répartition"],
+  ["Monnaie", "Politique monétaire"]
 ]
