@@ -1,5 +1,6 @@
 import { checkRequest, checkPlan, checkExam } from './contract.js'
-const GEMINI_DEFAULT = 'gemini-3.8-flash'
+const GEMINI_DEFAULT = 'gemini-3.6-flash'
+const GEMINI_ALTERNATIVE = 'gemini-3.8-flash'
 const geminiModel = env => (env('EXAM_GEMINI_MODEL') || GEMINI_DEFAULT).trim().replace(/^models\//, '')
 const cors = { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'authorization, apikey, content-type', 'Access-Control-Allow-Methods': 'POST, GET, OPTIONS' }
 const json = (data, status = 200) => new Response(JSON.stringify(data), { status, headers: { ...cors, 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } })
@@ -10,7 +11,7 @@ async function providerFailure(response) {
   const details = Array.isArray(data.error?.details) ? data.error.details : []
   const reasons = details.map(d => d.reason)
   const message = String(data.error?.message || '')
-  let code = response.status === 429 ? 'rate_limit' : response.status === 404 ? 'provider_model_unavailable' : [401, 403].includes(response.status) ? 'provider_permission' : 'provider_error'
+  let code = response.status === 429 ? 'rate_limit' : response.status === 503 ? 'provider_unavailable' : response.status === 404 ? 'provider_model_unavailable' : [401, 403].includes(response.status) ? 'provider_permission' : 'provider_error'
   if (response.status === 429) { /* Le quota prime sur les conseils génériques de facturation. */ }
   else if (reasons.some(r => ['API_KEY_INVALID', 'API_KEY_EXPIRED'].includes(r)) || /api key.*(not valid|expired)/i.test(message)) code = 'provider_key_invalid'
   else if (reasons.includes('SERVICE_DISABLED')) code = 'provider_service_disabled'
@@ -22,7 +23,7 @@ async function providerFailure(response) {
   console.warn(JSON.stringify({ event: 'exam_provider_failure', status: response.status, code }))
   return code
 }
-export function createHandler({ env, fetcher = fetch, now = Date.now }) {
+export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms => new Promise(resolve => setTimeout(resolve, ms)) }) {
   // Best-effort per warm isolate, NOT a durable billing quota. No database writes.
   const calls = new Map()
   let probe = null, probeUntil = 0
@@ -67,10 +68,18 @@ export function createHandler({ env, fetcher = fetch, now = Date.now }) {
         : `Compose une véritable épreuve rédigée de ${body.duration} minutes, environ ${body.duration / 10} questions, plusieurs exercices progressifs et si utile des documents d'application fictifs clairement étiquetés. Ajuste la longueur des documents et la complexité à la durée, pas seulement le nombre de questions. Aucun QCM. Chaque question porte UNIQUEMENT sur son chapitre source, dont tu donnes l'identifiant. N'invente pas de savoir hors des cours. Pour un cas fictif, fournis toutes les données nécessaires dans les documents, sans prétendre à une source réelle. Barème total EXACTEMENT 20 points. Tous les chapitres confirmés doivent être représentés si possible ; mentionne les limites dans les consignes. Corrigé détaillé, raisonnement, unités et critères d'auto-évaluation. Structure exacte : {"title":"titre", "instructions":"consignes", "documents":[{"id":"d1","title":"Document fictif…","text":"texte"}], "questions":[{"id":"q1","chapterId":"id exact", "documentIds":["d1"], "enonce":"Exercice 1 — …", "points":2,"correction":"réponse et démarche", "criteria":["critère"]}]}. Demande et cours :\n${JSON.stringify(body)}`
       let response, result
       if (gemini) {
-        const models = [...new Set([geminiModel(env), GEMINI_DEFAULT])]
+        const models = [...new Set([geminiModel(env), GEMINI_DEFAULT, GEMINI_ALTERNATIVE])]
+        const signal = AbortSignal.timeout(120000)
+        let retried = false
         for (const model of models) {
-          response = await fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-goog-api-key': gemini }, body: JSON.stringify({ systemInstruction: { parts: [{ text: SYSTEM }] }, contents: [{ role: 'user', parts: [{ text: instruction }] }], generationConfig: { temperature: 0.3, responseMimeType: 'application/json', maxOutputTokens: body.action === 'plan' ? 3000 : 24000 } }), signal: AbortSignal.timeout(140000) })
-          if (response.status !== 404) break
+          const send = () => fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-goog-api-key': gemini }, body: JSON.stringify({ systemInstruction: { parts: [{ text: SYSTEM }] }, contents: [{ role: 'user', parts: [{ text: instruction }] }], generationConfig: { temperature: 0.3, responseMimeType: 'application/json', maxOutputTokens: body.action === 'plan' ? 3000 : 24000 } }), signal })
+          response = await send()
+          if (response.status === 503 && !retried) {
+            retried = true
+            await pause(1000)
+            response = await send()
+          }
+          if (![404, 503].includes(response.status)) break
         }
         if (!response.ok) return json({ error: await providerFailure(response) }, response.status === 429 ? 429 : 502)
         const data = await response.json(); result = data.candidates?.[0]?.content?.parts?.map(p => p.text || '').join('')

@@ -18,7 +18,7 @@ fait aucun appel payant et ne révèle aucun secret.
 
 Secrets serveur (jamais dans Vite ni le navigateur) :
 - `GEMINI_API_KEY` (ou `GOOGLE_API_KEY`), modèle `EXAM_GEMINI_MODEL`, valeur par
-  défaut `gemini-3.8-flash` ; sinon
+  défaut `gemini-3.6-flash` ; sinon
 - `ANTHROPIC_API_KEY`, modèle `EXAM_ANTHROPIC_MODEL`, défaut `claude-sonnet-4-6`.
 
 Sans clé, l’interface montre la disponibilité réelle et les sujets existants.
@@ -82,6 +82,9 @@ ou `exam_request_failure` (catégorie / type contrôlé), jamais avec la clé, l
 le jeton ou le message brut du fournisseur.
 
 Depuis le correctif de modèle : un identifiant préfixé par `models/` est normalisé.
-Si un modèle explicitement configuré répond 404 à la génération, une seule tentative
-sur `gemini-3.8-flash` est permise. Aucun repli sur une erreur de clé, de permissions,
-de quota ou une réponse invalide ; aucun modèle Pro n’est choisi automatiquement.
+Le modèle par défaut est `gemini-3.6-flash` ; une alternative `gemini-3.8-flash`
+est permise uniquement sur 404 (modèle indisponible) ou 503 (service indisponible).
+Sur 503, une seule reprise après une seconde est autorisée avant l’alternative.
+Le délai global des appels Gemini est borné à 120 secondes. Aucun repli sur une
+clé invalide, des permissions, un quota ou une réponse incohérente ; aucun modèle
+Pro n’est choisi automatiquement. Si tout échoue, aucun sujet factice n’est fourni.
