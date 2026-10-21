@@ -32,7 +32,7 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
     if (req.method === 'OPTIONS') return new Response('ok', { headers: cors })
     if (!['GET', 'POST'].includes(req.method)) return json({ error: 'method_not_allowed' }, 405)
     const gemini = (env('GEMINI_API_KEY') || env('GOOGLE_API_KEY') || '').trim()
-    const groq = (env('GROQ_API_KEY') || '').trim()
+    const groq = gemini ? '' : (env('GROQ_API_KEY') || '').trim()
     const anthropic = (env('ANTHROPIC_API_KEY') || '').trim()
     if (req.method === 'GET') {
       if (new URL(req.url).searchParams.get('check') === 'configuration') return json({ provider: groq ? 'groq' : gemini ? 'gemini' : anthropic ? 'anthropic' : null })
