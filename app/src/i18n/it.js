@@ -7,7 +7,6 @@ export default {
   studyEnglish: "Inglese",
   studyItalian: "Italiano",
   studySpanish: "Spagnolo",
-  studyLanguagesSoon: "I corsi di arabo e italiano arriveranno in seguito. La tua scelta sarà comunque salvata.",
   studyLanguageCourseSoon: "I corsi di questa lingua arriveranno in seguito.",
 
   timeRepaired: "I vecchi tempi incoerenti sono stati esclusi. Il conteggio riprende per gli argomenti interessati.",

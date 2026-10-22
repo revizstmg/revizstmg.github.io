@@ -23,9 +23,9 @@ export default function Subject() {
   const { state } = useStore()
   const t = useT()
   if (!subject) return <Introuvable />
-  const languageSubject = subject.id === 'langues'
+  const languageSubject = ['langues', 'p1-langues'].includes(subject.id)
   const chapters = languageSubject ? chaptersForLanguages(subject.chapters, state.studyLanguages) : subject.chapters
-  const pending = languageSubject ? STUDY_LANGUAGES.filter(l => normalizeStudyLanguages(state.studyLanguages).includes(l.id) && !subject.chapters.some(c => c.id.startsWith(`lng-${l.id}-`))) : []
+  const pending = languageSubject ? STUDY_LANGUAGES.filter(l => normalizeStudyLanguages(state.studyLanguages).includes(l.id) && !chaptersForLanguages(subject.chapters, [l.id]).some(c => c.id !== 'p1-lng-axes')) : []
   const color = subject.color
 
   return (

@@ -1,0 +1,84 @@
+{
+  "lng-it-p1-gram": {
+    "resources": [
+      {
+        "label": "Programme officiel de italien — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-14-programme-d-italien-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440388.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-ar-p1-gram": {
+    "resources": [
+      {
+        "label": "Programme officiel de arabe — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-6-programme-d-arabe-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440367.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-it-p1-voc": {
+    "resources": [
+      {
+        "label": "Programme officiel de italien — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-14-programme-d-italien-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440388.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-ar-p1-voc": {
+    "resources": [
+      {
+        "label": "Programme officiel de arabe — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-6-programme-d-arabe-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440367.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-it-p1-comp": {
+    "resources": [
+      {
+        "label": "Programme officiel de italien — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-14-programme-d-italien-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440388.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-ar-p1-comp": {
+    "resources": [
+      {
+        "label": "Programme officiel de arabe — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-6-programme-d-arabe-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440367.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-it-p1-culture-premiere": {
+    "resources": [
+      {
+        "label": "Programme officiel de italien — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-14-programme-d-italien-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440388.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-ar-p1-culture-premiere": {
+    "resources": [
+      {
+        "label": "Programme officiel de arabe — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-6-programme-d-arabe-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440367.pdf",
+        "kind": "link"
+      },
+      {
+        "kind": "link",
+        "label": "Dar El Bacha — Fondation nationale des musées",
+        "url": "https://www.fnm.ma/museums/"
+      },
+      {
+        "kind": "link",
+        "label": "Mechouar de Tlemcen — Musée sans frontières",
+        "url": "https://islamicart.museumwnf.org/database_item.php?id=monument%3BISL%3Bdz%3BMon01%3B22%3Bfr"
+      }
+    ]
+  }
+}

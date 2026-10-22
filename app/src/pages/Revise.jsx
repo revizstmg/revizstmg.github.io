@@ -1,3 +1,4 @@
+import { chaptersForLanguages } from '../data/studyLanguages.js'
 import RevisionPath from '../components/RevisionPath.jsx'
 import './Revise.css'
 import { revisionMessages } from '../i18n/revision.js'
@@ -63,7 +64,7 @@ function RevisePage() {
   const started = queue.filter((q) => hasRealLesson(q.themeId))
   const first = started[0] // le plus prioritaire à reprendre
   const hasStarted = started.length > 0
-  const subjects = useMemo(() => subjectsForTrack(state.track).filter((s) => s && !s.comingSoon && (s.chapters || []).length), [state.track])
+  const subjects = useMemo(() => subjectsForTrack(state.track).filter((s) => s && !s.comingSoon && (s.chapters || []).length).map(s => ['langues','p1-langues'].includes(s.id) ? { ...s, chapters: chaptersForLanguages(s.chapters, state.studyLanguages) } : s), [state.track, state.studyLanguages])
   const startedSubjects = useMemo(() => new Set(started.map((s) => s.subjectId)), [started])
   const decks = state.savedDecks || []
   // Carnet d'erreurs : les questions ratées, regroupées par thème et par type

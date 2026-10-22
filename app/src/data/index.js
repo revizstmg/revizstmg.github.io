@@ -312,7 +312,7 @@ export function getChapter(id) {
 // plus en philosophie, même tout réussi).
 export function jeuxJouablesDuTheme(themeId) {
   const c = ALL_CHAPTERS[themeId]
-  return c ? (c.games || []).filter((g) => CHAPTER_GAME_TYPES.has(g.type)) : []
+  return c ? (c.games || []).filter((g) => (CHAPTER_GAME_TYPES.has(g.type) || (g.type === 'qcm' && g.sectionOnly === true))) : []
 }
 export function chapterGameCount(chapterId) {
   return jeuxJouablesDuTheme(chapterId).length
@@ -353,7 +353,7 @@ export function themeChapters(theme) {
   if (!chapters.length) return chapters
   // Seuls les exercices « propres à une notion » restent sur le chapitre,
   // rattachés à leur section via GAME_SECTION (relue à la main).
-  const kept = games.filter((g) => CHAPTER_GAME_TYPES.has(g.type))
+  const kept = games.filter((g) => (CHAPTER_GAME_TYPES.has(g.type) || (g.type === 'qcm' && g.sectionOnly === true)))
   for (const g of kept) {
     const idx = GAME_SECTION[g.id]
     // Aucun placement arbitraire pour un jeu sans rattachement valide.

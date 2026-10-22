@@ -45,7 +45,7 @@ export function construireIndex() {
         // exercices de base, plus l'étude de documents (même règle que
         // data/index.js). Le type dit si l'exercice se lance seul, ce dont le
         // score a besoin avant le chargement de la matière.
-        const jeux = (c.games || []).map((g) => ({ id: g.id, type: g.type }))
+        const jeux = (c.games || []).map((g) => ({ id: g.id, type: g.type, ...(g.sectionOnly === true ? { sectionOnly: true } : {}) }))
         const etude = etudes[c.id]
         if (etude && !jeux.some((g) => g.id === etude.id)) jeux.push({ id: etude.id, type: etude.type })
         leger.games = jeux

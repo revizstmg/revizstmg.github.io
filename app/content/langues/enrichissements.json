@@ -136,5 +136,77 @@
         ]
       }
     ]
+  },
+  "lng-it-gram": {
+    "resources": [
+      {
+        "label": "Programme officiel de italien — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-14-programme-d-italien-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440388.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-ar-gram": {
+    "resources": [
+      {
+        "label": "Programme officiel de arabe — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-6-programme-d-arabe-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440367.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-it-voc": {
+    "resources": [
+      {
+        "label": "Programme officiel de italien — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-14-programme-d-italien-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440388.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-ar-voc": {
+    "resources": [
+      {
+        "label": "Programme officiel de arabe — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-6-programme-d-arabe-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440367.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-it-comp": {
+    "resources": [
+      {
+        "label": "Programme officiel de italien — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-14-programme-d-italien-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440388.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-ar-comp": {
+    "resources": [
+      {
+        "label": "Programme officiel de arabe — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-6-programme-d-arabe-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440367.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-it-culture-terminale": {
+    "resources": [
+      {
+        "label": "Programme officiel de italien — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-14-programme-d-italien-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440388.pdf",
+        "kind": "link"
+      }
+    ]
+  },
+  "lng-ar-culture-terminale": {
+    "resources": [
+      {
+        "label": "Programme officiel de arabe — lycée général et technologique",
+        "url": "https://www.education.gouv.fr/sites/default/files/annexe-6-programme-d-arabe-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440367.pdf",
+        "kind": "link"
+      }
+    ]
   }
 }

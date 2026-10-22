@@ -76,5 +76,309 @@
       "Art et pouvoir",
       "Manière dont l’art exprime, sert ou conteste le pouvoir."
     ]
+  ],
+  "lng-it-p1-gram": [
+    [
+      "il libro",
+      "Le livre ; pluriel i libri."
+    ],
+    [
+      "lo studente",
+      "L’élève ; pluriel gli studenti."
+    ],
+    [
+      "è",
+      "Est, forme de essere, avec accent."
+    ],
+    [
+      "e",
+      "Et, conjonction sans accent."
+    ],
+    [
+      "Essere",
+      "Être : sono, sei, è, siamo, siete, sono."
+    ],
+    [
+      "Avere",
+      "Avoir : ho, hai, ha, abbiamo, avete, hanno."
+    ],
+    [
+      "Non",
+      "Négation placée avant le verbe."
+    ],
+    [
+      "Capire",
+      "Comprendre : capisco, capiamo."
+    ],
+    [
+      "Passato prossimo",
+      "Auxiliaire au présent + participe passé pour présenter un événement accompli."
+    ],
+    [
+      "Imperfetto",
+      "Temps des habitudes, descriptions et arrière-plans du passé."
+    ]
+  ],
+  "lng-ar-p1-gram": [
+    [
+      "Fatḥa",
+      "Signe de la voyelle brève a : ـَ."
+    ],
+    [
+      "Shadda",
+      "Signe de redoublement de la consonne : ـّ."
+    ],
+    [
+      "مرحبا",
+      "Bonjour ; translittération indicative marḥaban."
+    ],
+    [
+      "اسمي",
+      "Mon nom est / je m’appelle : ismī."
+    ],
+    [
+      "ال",
+      "Article défini attaché au nom."
+    ],
+    [
+      "الكتاب الجديد",
+      "Le livre nouveau : adjectif épithète également défini."
+    ],
+    [
+      "الكتاب جديد",
+      "Le livre est nouveau : phrase nominale."
+    ],
+    [
+      "كتابي",
+      "Mon livre : suffixe possessif ـي."
+    ],
+    [
+      "Accompli",
+      "Forme présentant notamment un procès accompli : كَتَبَ, il a écrit."
+    ],
+    [
+      "Inaccompli",
+      "Forme servant notamment au présent : يَكْتُبُ, il écrit."
+    ]
+  ],
+  "lng-it-p1-voc": [
+    [
+      "Tirocinio",
+      "Stage en milieu professionnel."
+    ],
+    [
+      "Biglietto",
+      "Billet, notamment de transport."
+    ],
+    [
+      "Cordiali saluti",
+      "Formule de clôture d’un message professionnel."
+    ],
+    [
+      "Fatturato",
+      "Chiffre d’affaires, distinct du bénéfice."
+    ],
+    [
+      "Utile",
+      "Bénéfice."
+    ],
+    [
+      "Dipendente",
+      "Salarié."
+    ],
+    [
+      "Fattura",
+      "Facture."
+    ],
+    [
+      "Dati personali",
+      "Données personnelles."
+    ],
+    [
+      "Fonte",
+      "Source d’une information."
+    ],
+    [
+      "Rifiuti",
+      "Déchets."
+    ]
+  ],
+  "lng-ar-p1-voc": [
+    [
+      "الجامعة",
+      "L’université."
+    ],
+    [
+      "المحطة",
+      "La gare / la station."
+    ],
+    [
+      "التذكرة",
+      "Le billet."
+    ],
+    [
+      "من فضلك",
+      "S’il te plaît / s’il vous plaît, selon le destinataire."
+    ],
+    [
+      "الشركة",
+      "L’entreprise."
+    ],
+    [
+      "العميل",
+      "Le client."
+    ],
+    [
+      "التكلفة",
+      "Le coût."
+    ],
+    [
+      "الربح",
+      "Le bénéfice."
+    ],
+    [
+      "المصدر",
+      "La source."
+    ],
+    [
+      "البيانات الشخصية",
+      "Les données personnelles."
+    ]
+  ],
+  "lng-it-p1-comp": [
+    [
+      "Libreria",
+      "Librairie, et non bibliothèque."
+    ],
+    [
+      "Consenso",
+      "Consentement."
+    ],
+    [
+      "Vorrei",
+      "Je voudrais : projet souhaité."
+    ],
+    [
+      "Riparazione",
+      "Réparation."
+    ],
+    [
+      "Mentre",
+      "Tandis que ; met ici deux positions en contraste."
+    ],
+    [
+      "Non ancora",
+      "Pas encore."
+    ]
+  ],
+  "lng-ar-p1-comp": [
+    [
+      "الزبائن",
+      "Les clients."
+    ],
+    [
+      "موافقتهم",
+      "Leur accord / consentement."
+    ],
+    [
+      "في الصيف الماضي",
+      "L’été dernier."
+    ],
+    [
+      "ورشة",
+      "Atelier."
+    ],
+    [
+      "الضجيج",
+      "Bruit."
+    ],
+    [
+      "لم… بعد",
+      "Négation correspondant ici à pas encore."
+    ]
+  ],
+  "lng-it-p1-culture-premiere": [
+    [
+      "legami",
+      "Liens."
+    ],
+    [
+      "origine",
+      "Origine."
+    ],
+    [
+      "scambio",
+      "Échange."
+    ],
+    [
+      "accessibile",
+      "Accessible."
+    ],
+    [
+      "ostacolo",
+      "Obstacle."
+    ],
+    [
+      "partecipazione",
+      "Participation."
+    ],
+    [
+      "mettere in discussione",
+      "Remettre en question."
+    ],
+    [
+      "committente",
+      "Commanditaire d’une œuvre."
+    ],
+    [
+      "pubblico",
+      "Public destinataire d’une œuvre."
+    ],
+    [
+      "rischi",
+      "Risques."
+    ]
+  ],
+  "lng-ar-p1-culture-premiere": [
+    [
+      "الهوية",
+      "L’identité."
+    ],
+    [
+      "الأصل",
+      "L’origine."
+    ],
+    [
+      "التبادل",
+      "L’échange."
+    ],
+    [
+      "المشاركة",
+      "La participation."
+    ],
+    [
+      "التنوع",
+      "La diversité."
+    ],
+    [
+      "الإدماج",
+      "L’inclusion / l’intégration."
+    ],
+    [
+      "السلطة",
+      "Le pouvoir / l’autorité."
+    ],
+    [
+      "الفن",
+      "L’art."
+    ],
+    [
+      "الفنان",
+      "L’artiste."
+    ],
+    [
+      "البيانات",
+      "Les données."
+    ]
   ]
 }
