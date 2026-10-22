@@ -5,14 +5,18 @@ import { avecGraine } from './outils.js'
 
 beforeAll(() => C.chargerTout())
 const jeux = (id, blocks) => C.themeChapters({ id, subjectId: 'philosophie', cours: [{ h: 'Régression', blocks }], games: [] })[0].games
-const trous = (games) => games.filter(g => g.type === 'trou').flatMap(g => g.questions)
+// Les phrases sont réparties entre formats : contrôler toutes leurs variantes,
+// en gardant les mêmes exigences de contexte, réponse et alias.
+const trous = games => games.flatMap(g => g.type==='trou' ? g.questions :
+ g.type==='saisie' && g.id.endsWith('::strou') ? g.questions.map(q=>({...q,text:q.prompt.replace(/^Complète par le mot exact :\n/, '')})) :
+ g.type==='qcm' && g.id.endsWith('::qtrou') ? g.questions.map(q=>({...q,text:q.q.replace(/^Quel mot complète la phrase \?\n/, ''),answer:q.choices[q.answer]})) : [])
 
 describe('régressions des rapports pédagogiques de Claude', () => {
   it('interroge une propriété de Bernoulli plutôt que le libellé conditions', () => {
     const ch = C.themeChapters(C.ALL_CHAPTERS['math-c6'])[0]
     const qs = trous(ch.games)
     expect(qs.some(q => q.answer === 'conditions')).toBe(false)
-    const q = qs.find(q => q.text.startsWith('Les conditions à vérifier'))
+    const q = qs.find(q => q.text.startsWith('Les conditions à vérifier') && q.answer === 'deux issues')
     expect(q).toBeDefined()
     expect(q.answer).toBe('deux issues')
     expect(q.text).toContain('les épreuves sont indépendantes')

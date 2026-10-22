@@ -1,6 +1,6 @@
 import { makeCalcSet, makeCalcMix } from '../calc.js'
 // Les trois parcours utilisent uniquement la matière choisie et son contenu chargé.
-import { ALL_CHAPTERS, themeChapters, jeuxDuChapitre, shuffle } from './index.js'
+import { ALL_CHAPTERS, themeChapters, jeuxDuChapitre, shuffle, choicesForGap } from './index.js'
 const prompt = q => String(q?.q || q?.text || q?.statement || q?.prompt || '')
 export const successKey = (type, q) => q?.sourceKey || `${type}|${prompt(q)}`
 export function updateSuccesses(previous = [], {themeId, type, reussies = []}, now = Date.now()) {
@@ -67,8 +67,9 @@ function asQcm(entry, chapter) {
   // Aucun distracteur extérieur au chapitre : reprendre seulement les choix
   // déjà validés pour le même terme dans un QCM de cette section.
   const match=chapter.games.filter(g=>g.type==='qcm').flatMap(g=>g.questions || []).find(x=>String(x.choices?.[x.answer]).toLocaleLowerCase()===q.answer.toLocaleLowerCase())
-  if(!match) return null
-  return {q:type==='trou'?q.text:q.prompt,choices:match.choices,answer:match.answer,explain:q.explain,themeId,chapterIndex:q.chapterIndex ?? chapter?.idx,sourceKey:successKey(type,q)}
+  const choices=match?.choices || choicesForGap(chapter,q)
+  if(!choices)return null
+  return {q:type==='trou'?q.text:q.prompt,choices,answer:match?.answer ?? 0,explain:q.explain,themeId,chapterIndex:q.chapterIndex ?? chapter?.idx,sourceKey:successKey(type,q)}
 }
 export function acquiredQuestions(state,subject,themeId='',limit=12) {
   const themes=scopedThemes(subject,themeId), allowed=new Set(themes.map(t=>t.id))
@@ -83,7 +84,7 @@ export function acquiredQuestions(state,subject,themeId='',limit=12) {
       // Avant l’historique individuel, seul un score 100 % prouve que toutes
       // les questions de l’exercice ont été réussies. Un 80 % ne suffit pas.
       if(scopeParts(themeId).index!==null && chapter.idx!==scopeParts(themeId).index) continue
-      if(state.chapters?.[theme.id]?.games?.[g.id]!==100) continue
+      if(state.chapters?.[theme.id]?.games?.[g.id]!==100 || g.questionCount) continue
       const known=g.type==='calcul' ? (g.gens ? makeCalcMix(g.gens,2) : g.gen ? makeCalcSet(g.gen,2) : g.questions || []) : g.questions || []
       for(const q of known) entries.push({themeId:theme.id,type:g.type,q:{...q,chapterIndex:chapter.idx}})
     }
@@ -92,7 +93,8 @@ export function acquiredQuestions(state,subject,themeId='',limit=12) {
   for(const e of entries) {
     const key=`${e.themeId}|${successKey(e.type,e.q)}`
     if(failures.has(key) || seen.has(key)) continue
-    const q=asQcm(e,sections.get(key)); if(!q) continue
+    const knownChapter=sections.get(key) || (Number.isInteger(e.q?.chapterIndex) ? themeChapters(ALL_CHAPTERS[e.themeId])[e.q.chapterIndex] : null)
+    const q=asQcm(e,knownChapter); if(!q) continue
     seen.add(key)
     if(!pools.has(e.themeId)) pools.set(e.themeId,[])
     pools.get(e.themeId).push(q)
