@@ -1,3 +1,5 @@
+import './Revise.css'
+import { revisionMessages } from '../i18n/revision.js'
 import { useMemo, useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useStore, isoWeekKey, WEEKLY_GOAL, erreursDues } from '../store.jsx'
@@ -31,6 +33,7 @@ export default function Revise() {
 function RevisePage() {
   const { state, removeDeck, saveDeck, claimWeekly } = useStore()
   const t = useT()
+  const m = revisionMessages[state.lang] || revisionMessages.fr
   const navigate = useNavigate()
   const [audio, setAudio] = useState(null)
   const [shareCode, setShareCode] = useState('')
@@ -106,24 +109,32 @@ function RevisePage() {
   }
 
   return (
-    <div className="animate-lux space-y-6">
-      <header className="page-hero text-center">
-        <p className="kicker">🧠 {t('reviseTab')}</p>
-        <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('reviseTab')}</h1>
-        <span className="mx-auto mt-3 block h-px w-24 rounded-full" style={{ background: 'linear-gradient(90deg,transparent,#c8a24e,transparent)' }} />
+    <div className="revision-page animate-lux space-y-9">
+      <header className="revision-hero">
+        <div><p className="revision-eyebrow">{m.eyebrow}</p><h1 className="font-display">{t('reviseTab')}</h1><p className="revision-headline font-display">{m.headline}</p><p className="revision-intro">{m.intro}</p><dl className="revision-stats"><div><dt>{m.worked}</dt><dd>{started.length}</dd></div><div><dt>{m.errors}</dt><dd>{(state.erreurs || []).length}</dd></div><div><dt>{m.decks}</dt><dd>{decks.length}</dd></div></dl></div>
+        <aside className="revision-session"><p className="revision-eyebrow">{m.sessionLabel}</p><h2 className="font-display">{m.sessionTitle}</h2><p>{m.sessionHelp}</p><Link to="/seance" className="revision-session-action">{m.sessionAction}<span aria-hidden>↗</span></Link></aside>
       </header>
-
+      <section aria-labelledby="revision-methods" className="space-y-5">
+        <div className="revision-section-heading"><p className="kicker">{m.chooseLabel}</p><h2 id="revision-methods" className="font-display text-3xl">{m.chooseTitle}</h2></div>
+        <div className="revision-methods">
+          {[{ id: '01', title: m.guided, help: m.guidedHelp, action: m.guidedAction, to: '/seance', type: 'path' }, { id: '02', title: m.errorMode, help: m.errorHelp, action: m.errorAction, href: '#revision-carnet', type: 'notes' }, { id: '03', title: m.cardsMode, help: m.cardsHelp, action: m.cardsAction, href: '#revision-flashcards', type: 'cards' }].map(item => <article className={`revision-method revision-method-${item.type}`} key={item.id}>
+            <div className="revision-preview" aria-hidden="true"><span className="revision-preview-number">{item.id}</span><div className="revision-paper"><span>RÉVIZSTMG</span><div className="revision-paper-rule" /><strong>{item.title}</strong><div className="revision-paper-lines" />{item.type === 'notes' && <i>✓ &nbsp; ✓ &nbsp; ✓</i>}</div>{item.type === 'cards' && <div className="revision-paper-back" />}</div>
+            <div className="revision-method-body"><h3 className="font-display">{item.title}</h3><p>{item.help}</p>{item.to ? <Link to={item.to} className="revision-method-action">{item.action}<span aria-hidden>↗</span></Link> : <button type="button" onClick={() => document.getElementById(item.href.slice(1))?.scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })} className="revision-method-action">{item.action}<span aria-hidden>↓</span></button>}</div>
+          </article>)}
+        </div>
+      </section>
+      <div className="revision-workspace"><div className="revision-practice space-y-7">
       {/* 1) REPRENDRE ce qu'on a commencé — ou COMMENCER si rien n'est commencé */}
       {hasStarted ? (
         <button
           onClick={() => navigate(`/subject/${first.subjectId}/theme/${first.themeId}`)}
           className="card card-lux flex w-full items-center gap-4 p-5 text-left transition hover:-translate-y-0.5 hover:shadow-md"
         >
-          <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl text-2xl text-white" style={{ backgroundColor: first.color }}>▶</span>
+          <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl text-2xl text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }}>▶</span>
           <span className="min-w-0 flex-1">
-            <span className="block text-xs font-semibold uppercase tracking-wide text-slate-400">{t('resumeTitle')}</span>
+            <span className="block text-xs font-semibold uppercase tracking-wide text-slate-600">{t('resumeTitle')}</span>
             <span className="block truncate font-display text-lg font-semibold leading-tight">{first.themeName}</span>
-            <span className="block truncate text-xs text-slate-500 dark:text-slate-400">{first.subjectName}</span>
+            <span className="block truncate text-xs text-slate-500 dark:text-slate-300">{first.subjectName}</span>
           </span>
           <span className="text-slate-300" aria-hidden>›</span>
         </button>
@@ -131,7 +142,7 @@ function RevisePage() {
         <section className="card card-lux p-6 text-center">
           <div className="text-4xl" aria-hidden>🚀</div>
           <h2 className="mt-2 font-display text-xl font-semibold">{t('startTitle')}</h2>
-          <p className="mx-auto mt-1 max-w-xs text-sm text-slate-500 dark:text-slate-400">{t('startSub')}</p>
+          <p className="mx-auto mt-1 max-w-xs text-sm text-slate-500 dark:text-slate-300">{t('startSub')}</p>
           {subjects[0] && (
             <button onClick={() => navigate(`/subject/${subjects[0].id}`)} className="btn-gold mt-4 w-full !py-3 text-base">
               📚 {t('startCourseBtn')}
@@ -151,16 +162,16 @@ function RevisePage() {
             return (dueN + weakN) > 0 ? (
               <div className="grid grid-cols-3 gap-2">
                 <div className="rounded-xl bg-amber-50 p-2.5 text-center dark:bg-amber-950/40">
-                  <div className="text-lg font-bold text-amber-600 dark:text-amber-300">{dueN}</div>
-                  <div className="text-[11px] leading-tight text-amber-700/80 dark:text-amber-300/80">à revoir aujourd’hui</div>
+                  <div className="text-lg font-bold text-amber-800 dark:text-amber-300">{dueN}</div>
+                  <div className="text-[11px] leading-tight text-amber-800 dark:text-amber-300/80">{m.due}</div>
                 </div>
                 <div className="rounded-xl bg-rose-50 p-2.5 text-center dark:bg-rose-950/40">
-                  <div className="text-lg font-bold text-rose-600 dark:text-rose-300">{weakN}</div>
-                  <div className="text-[11px] leading-tight text-rose-700/80 dark:text-rose-300/80">à renforcer</div>
+                  <div className="text-lg font-bold text-rose-800 dark:text-rose-300">{weakN}</div>
+                  <div className="text-[11px] leading-tight text-rose-800 dark:text-rose-300/80">{m.weak}</div>
                 </div>
                 <div className="rounded-xl bg-emerald-50 p-2.5 text-center dark:bg-emerald-950/40">
-                  <div className="text-lg font-bold text-emerald-600 dark:text-emerald-300">{okN}</div>
-                  <div className="text-[11px] leading-tight text-emerald-700/80 dark:text-emerald-300/80">bien acquis</div>
+                  <div className="text-lg font-bold text-emerald-800 dark:text-emerald-300">{okN}</div>
+                  <div className="text-[11px] leading-tight text-emerald-800 dark:text-emerald-300/80">{m.strong}</div>
                 </div>
               </div>
             ) : null
@@ -172,7 +183,7 @@ function RevisePage() {
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl text-lg" style={{ backgroundColor: item.color + '22' }} aria-hidden>{r.icon}</span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm font-semibold">{item.themeName}</span>
-                  <span className="block text-xs text-slate-400">{item.subjectName}</span>
+                  <span className="block text-xs text-slate-600">{item.subjectName}</span>
                 </span>
                 <span className="hidden w-14 sm:block"><ProgressBar value={item.score} color={item.color} /></span>
                 <span className={`chip shrink-0 ${r.bg}`}>{item.reason === 'review' ? `${item.score}%` : t(r.key)}</span>
@@ -183,10 +194,10 @@ function RevisePage() {
       )}
 
       {/* CARNET D'ERREURS — les questions ratées, à refaire jusqu'à les réussir */}
-      {groupesCarnet.length > 0 && (
-        <section className="space-y-2.5">
+      <section id="revision-carnet" className="revision-notebook space-y-3">
           <h2 className="px-1 font-display text-lg font-semibold">📒 {t('notebookTitle')}</h2>
-          <p className="px-1 text-sm text-slate-500 dark:text-slate-400">{t('notebookSub')}</p>
+          <p className="px-1 text-sm text-slate-500 dark:text-slate-300">{t('notebookSub')}</p>
+          {!groupesCarnet.length && <div className="revision-empty"><span aria-hidden>✓</span><h3 className="font-display text-xl">{m.noErrors}</h3><p className="mt-2 text-sm">{m.noErrorsHelp}</p></div>}
           {groupesCarnet.slice(0, 12).map((g) => {
             const theme = ALL_CHAPTERS[g.themeId]
             const couleur = SUBJECTS.find((x) => x.id === theme?.subjectId)?.color || '#7c3aed'
@@ -194,7 +205,7 @@ function RevisePage() {
               <div key={g.cle} className="card flex items-center gap-3 p-3.5">
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-sm font-semibold">{theme?.name || g.themeId}</span>
-                  <span className="block text-xs text-slate-500 dark:text-slate-400">{gameLabel(g.type)} · {t(g.questions.length > 1 ? 'notebookCountP' : 'notebookCountS').replace('{n}', g.questions.length)}{g.dues > 0 && <span className="font-semibold text-amber-700 dark:text-amber-300"> · {`${g.dues} à revoir aujourd’hui`}</span>}</span>
+                  <span className="block text-xs text-slate-500 dark:text-slate-300">{gameLabel(g.type)} · {t(g.questions.length > 1 ? 'notebookCountP' : 'notebookCountS').replace('{n}', g.questions.length)}{g.dues > 0 && <span className="font-semibold text-amber-700 dark:text-amber-300"> · {`${g.dues} ${m.dueShort}`}</span>}</span>
                 </span>
                 <button
                   onClick={() => setCarnet({ id: `carnet-${g.type}`, type: g.type, title: `📒 ${t('notebookTitle')}`, questions: g.questions.slice(0, 10), themeId: g.themeId, color: couleur })}
@@ -207,8 +218,8 @@ function RevisePage() {
             )
           })}
         </section>
-      )}
 
+      </div><aside className="revision-library space-y-7"><div><p className="kicker">{m.library}</p><h2 className="mt-2 font-display text-2xl">{m.libraryTitle}</h2></div>
       {/* 3) TES MATIÈRES — grille compacte (pour commencer un nouveau cours) */}
       <section className="space-y-2.5">
         <h2 className="px-1 font-display text-lg font-semibold">📚 {t('mySubjects')}</h2>
@@ -231,14 +242,14 @@ function RevisePage() {
         </div>
       </section>
 
-      {/* 4) MES FLASHCARDS — compact (options secondaires masquées) */}
-      <section className="space-y-2.5">
+      {/* 4) MES FLASHCARDS */}
+      <section id="revision-flashcards" className="space-y-3">
         <div className="flex items-center justify-between px-1">
           <h2 className="font-display text-lg font-semibold">🃏 {t('myDecks')}</h2>
-          {decks.length > 0 && <span className="chip bg-slate-100 text-slate-500 dark:text-slate-400 dark:bg-slate-800">{decks.length}</span>}
+          {decks.length > 0 && <span className="chip bg-slate-100 text-slate-500 dark:text-slate-300 dark:bg-slate-800">{decks.length}</span>}
         </div>
         {decks.length === 0 ? (
-          <p className="px-1 text-sm text-slate-400">{t('noDeckYet')}</p>
+          <p className="px-1 text-sm text-slate-600">{t('noDeckYet')}</p>
         ) : (
           decks.map((d) => (
             <div key={d.id} className="card flex items-center gap-1 p-3">
@@ -246,11 +257,11 @@ function RevisePage() {
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl text-lg" style={{ backgroundColor: (d.color || '#7c3aed') + '22' }} aria-hidden>🃏</span>
                 <span className="min-w-0">
                   <span className="block truncate text-sm font-semibold">{d.title}</span>
-                  <span className="block text-xs text-slate-400">{d.cards.length} {t('cardsCount')}</span>
+                  <span className="block text-xs text-slate-600">{d.cards.length} {t('cardsCount')}</span>
                 </span>
               </button>
-              <button onClick={() => setAudio(d)} title={t('audioReview')} aria-label={t('audioReview')} className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-slate-400 transition hover:text-slate-700 dark:hover:text-slate-200">🔊</button>
-              <button onClick={() => share(d)} title={t('shareDeck')} aria-label={t('shareDeck')} className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-slate-400 transition hover:text-slate-700 dark:hover:text-slate-200">📤</button>
+              <button onClick={() => setAudio(d)} title={t('audioReview')} aria-label={t('audioReview')} className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-slate-600 transition hover:text-slate-700 dark:hover:text-slate-200">🔊</button>
+              <button onClick={() => share(d)} title={t('shareDeck')} aria-label={t('shareDeck')} className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-slate-600 transition hover:text-slate-700 dark:hover:text-slate-200">📤</button>
               <button onClick={() => removeDeck(d.id)} title={t('remove')} aria-label={t('remove')} className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-slate-300 transition hover:text-rose-500">🗑</button>
             </div>
           ))
@@ -259,16 +270,16 @@ function RevisePage() {
           <div className="card p-4">
             <div className="mb-2 flex items-center justify-between">
               <p className="text-sm font-semibold">📥 {t('importDeck')}</p>
-              <button onClick={() => setShowImport(false)} className="text-slate-400 transition hover:text-slate-600" aria-label={t('quit')}>✕</button>
+              <button onClick={() => setShowImport(false)} className="text-slate-600 transition hover:text-slate-600" aria-label={t('quit')}>✕</button>
             </div>
             <div className="flex gap-2">
-              <input value={importCode} onChange={(e) => { setImportCode(e.target.value); setImportMsg('') }} placeholder={t('importPlaceholder')} className="min-w-0 flex-1 rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm outline-none dark:border-slate-700" />
+              <input value={importCode} onChange={(e) => { setImportCode(e.target.value); setImportMsg('') }} aria-label={t('importDeck')} placeholder={t('importPlaceholder')} className="min-w-0 flex-1 rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm outline-none dark:border-slate-700" />
               <button onClick={doImport} disabled={!importCode.trim()} className="btn-primary shrink-0 !min-h-0 !py-2 text-sm disabled:opacity-40">{t('importBtn')}</button>
             </div>
-            {importMsg && <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">{importMsg}</p>}
+            {importMsg && <p className="mt-2 text-xs text-slate-500 dark:text-slate-300">{importMsg}</p>}
           </div>
         ) : (
-          <button onClick={() => setShowImport(true)} className="w-full py-1 text-center text-xs text-slate-400 transition hover:text-slate-600">＋ {t('importDeck')}</button>
+          <button onClick={() => setShowImport(true)} className="w-full py-1 text-center text-xs text-slate-600 transition hover:text-slate-600">＋ {t('importDeck')}</button>
         )}
       </section>
 
@@ -282,24 +293,26 @@ function RevisePage() {
           <div className="h-full rounded-full transition-all" style={{ width: `${weekPct}%`, backgroundColor: 'var(--c-accent)' }} />
         </div>
         {weekClaimed ? (
-          <p className="mt-3 text-sm font-semibold text-emerald-600 dark:text-emerald-400">✅ {t('weeklyClaimed')}</p>
+          <p className="mt-3 text-sm font-semibold text-emerald-700 dark:text-emerald-400">✅ {t('weeklyClaimed')}</p>
         ) : weekReached ? (
           <button onClick={claimWeekly} className="btn-gold mt-3 w-full !py-2.5 text-sm">🎁 {t('weeklyClaim')}</button>
         ) : (
-          <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">{t('weeklyGoalHint').replace('{n}', WEEKLY_GOAL)}</p>
+          <p className="mt-2 text-xs text-slate-500 dark:text-slate-300">{t('weeklyGoalHint').replace('{n}', WEEKLY_GOAL)}</p>
         )}
       </section>
 
+      </aside></div>
+      <section className="revision-bridge"><div><h2 className="font-display">{m.bridge}</h2><p>{m.bridgeHelp}</p></div><Link to="/bac-blanc" className="btn-gold">{m.bridgeAction} <span aria-hidden>↗</span></Link></section>
       {audio && <AudioReview items={audio.cards} color={audio.color || '#7c3aed'} title={audio.title} onClose={() => setAudio(null)} />}
 
       {shareCode && (
         <div className="fixed inset-0 z-50 flex items-start justify-center bg-slate-900/50 p-4 pt-16 backdrop-blur-sm" onClick={() => setShareCode('')}>
-          <div className="card w-full max-w-md p-5" onClick={(e) => e.stopPropagation()}>
+          <div role="dialog" aria-modal="true" aria-label={t('shareDeck')} className="card w-full max-w-md p-5" onClick={(e) => e.stopPropagation()}>
             <div className="mb-2 flex items-center justify-between">
               <span className="font-display text-lg font-semibold">📤 {t('shareDeck')}</span>
-              <button onClick={() => setShareCode('')} className="grid h-8 w-8 place-items-center rounded-full text-slate-400 hover:text-slate-700 dark:hover:text-slate-200" aria-label={t('quit')}>✕</button>
+              <button onClick={() => setShareCode('')} className="grid h-8 w-8 place-items-center rounded-full text-slate-600 hover:text-slate-700 dark:hover:text-slate-200" aria-label={t('quit')}>✕</button>
             </div>
-            <p className="mb-2 text-xs text-slate-500 dark:text-slate-400">{t('shareHint')}</p>
+            <p className="mb-2 text-xs text-slate-500 dark:text-slate-300">{t('shareHint')}</p>
             <textarea readOnly value={shareCode} onFocus={(e) => e.target.select()} rows={4} className="w-full resize-none rounded-xl border border-slate-200 bg-transparent p-3 font-mono text-xs outline-none dark:border-slate-700" />
             <button onClick={copyShare} className="btn-primary mt-3 w-full !min-h-0 !py-2 text-sm">📋 {t('copyCode')}</button>
           </div>
