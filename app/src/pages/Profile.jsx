@@ -140,7 +140,7 @@ export default function Profile() {
         </div>
       </section>
 
-      <nav aria-label="Mon espace" className="flex gap-2"><button aria-pressed={!settings} className={!settings ? "btn-primary" : "btn-ghost"} onClick={() => setParams({})}>Mes progrès</button><button aria-pressed={settings} className={settings ? "btn-primary" : "btn-ghost"} onClick={() => setParams({section:'reglages'})}>Réglages</button></nav>
+      <nav aria-label="Mon espace" className="flex gap-2"><button style={{ transitionProperty: 'transform' }} aria-pressed={!settings} className={!settings ? "btn-primary" : "btn-ghost"} onClick={() => setParams({})}>Mes progrès</button><button style={{ transitionProperty: 'transform' }} aria-pressed={settings} className={settings ? "btn-primary" : "btn-ghost"} onClick={() => setParams({section:'reglages'})}>Réglages</button></nav>
       <div hidden={settings} className="space-y-5">
       {/* Statistiques */}
       <section>
