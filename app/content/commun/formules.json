@@ -43,6 +43,16 @@
           {
             "name": "Partie double",
             "f": "Total des débits = Total des crédits"
+          },
+          {
+            "name": "Salaire net",
+            "f": "Salaire brut − Cotisations salariales",
+            "note": ""
+          },
+          {
+            "name": "Coût total employeur",
+            "f": "Salaire brut + Cotisations patronales",
+            "note": "ou Brut × (1 + Taux de cotisations patronales)"
           }
         ]
       },
@@ -286,6 +296,31 @@
             "name": "Écart",
             "f": "Réel − Prévu",
             "note": "favorable ou défavorable"
+          }
+        ]
+      },
+      {
+        "title": "Compléments comptables",
+        "items": [
+          {
+            "name": "Dépréciation d’une créance",
+            "f": "Dépréciation = Créance HT × Risque de non-paiement",
+            "note": ""
+          },
+          {
+            "name": "TVA à partir du TTC",
+            "f": "TVA = TTC × Taux ÷ (1 + Taux)",
+            "note": ""
+          },
+          {
+            "name": "Trésorerie active et passive",
+            "f": "Trésorerie nette = Trésorerie active − Trésorerie passive",
+            "note": ""
+          },
+          {
+            "name": "Stock moyen",
+            "f": "Stock moyen = (Stock initial + Stock final) ÷ 2",
+            "note": ""
           }
         ]
       }
@@ -1035,6 +1070,66 @@
           {
             "name": "Amplitude de l’intervalle",
             "f": "2 ÷ √n"
+          }
+        ]
+      },
+      {
+        "title": "Compléments des cours",
+        "items": [
+          {
+            "name": "Valeur de départ",
+            "f": "V départ = V arrivée ÷ CM",
+            "note": ""
+          },
+          {
+            "name": "Raison arithmétique",
+            "f": "r = uₙ₊₁ − uₙ",
+            "note": ""
+          },
+          {
+            "name": "Raison géométrique",
+            "f": "q = uₙ₊₁ ÷ uₙ",
+            "note": ""
+          },
+          {
+            "name": "Suite arithmétique à partir de u₁",
+            "f": "uₙ = u₁ + (n − 1) × r",
+            "note": ""
+          },
+          {
+            "name": "Suite géométrique à partir de u₁",
+            "f": "uₙ = u₁ × qⁿ⁻¹",
+            "note": ""
+          },
+          {
+            "name": "Moyenne pondérée",
+            "f": "x̄ = Σ(nᵢ × xᵢ) ÷ Σnᵢ",
+            "note": ""
+          },
+          {
+            "name": "Événement contraire",
+            "f": "P(Ā) = 1 − P(A)",
+            "note": ""
+          },
+          {
+            "name": "Équiprobabilité",
+            "f": "P(A) = Nombre d’issues favorables ÷ Nombre total d’issues",
+            "note": ""
+          },
+          {
+            "name": "Aucun succès (loi binomiale)",
+            "f": "P(X = 0) = (1 − p)ⁿ",
+            "note": ""
+          },
+          {
+            "name": "Au moins un succès",
+            "f": "P(X ≥ 1) = 1 − (1 − p)ⁿ",
+            "note": ""
+          },
+          {
+            "name": "Borne supérieure de confiance",
+            "f": "f + 1/√n",
+            "note": ""
           }
         ]
       }

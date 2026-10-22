@@ -1105,3 +1105,12 @@ Prochaine action :
 - État : annoncé avant modification ; suggestions d’enrichissement distinctes du défaut. Aucun courriel ni coordonnée personnelle publié dans le dépôt.
 - Réalisé : libellé générique retiré de la mise en gras ; le trou porte désormais sur deux issues. Contexte indépendant/identique et probabilité constante conservé. Empreinte relue : seul math-c6 change. Test protège le cas exact ; pas de tolérance générale ajoutée sans connaître la réponse saisie.
 - Validation locale : 346 tests unitaires réussis, compilation réussie, huit parcours exercices réussis. Code 4649f28, PR #78. Enrichissement des probabilités/automatismes : suggestions recensées, hors correction de ce défaut précis. CI complète et publication automatiques à suivre ; aucune modification Supabase.
+
+### FORMULES-20261022-CODEX-02 — Codex — catalogue complet de calcul
+- Demande : enrichir largement l’atelier avec les formules des cours de Première et Terminale, même peu utilisées. Branche feat/atelier-formules-complet.
+- Périmètre : catalogue JSON, générateur numérique, liens de cours explicites, présentation/filtrage du catalogue, tests et README. Inventaire du formulaire et des cours ; distinguer calculs et moyens mnémotechniques non numériques. Aucun changement Supabase ni cours pédagogique.
+- État : annoncé avant code.
+- Extension annoncée : traductions des nouveaux filtres dans app/src/localisation/public.*.json (clés ciblées uniquement). 169 entrées numériques et inventaire dans docs/ATELIER-FORMULES.md ; les références sans calcul (mnémotechniques/SQL) restent des références.
+- Réalisé : 40 → 169 formules, références de cours explicites sans heuristique sur le numéro, filtres programme/matière/domaine, recherche et sélection en lot. Génération sqrt/binomiale et queue de loi, précision de probabilités 4 décimales, reprise jusqu’à 5 exercices par formule. Les 40 identifiants existants sont conservés.
+- Vérifications : 348 tests unitaires réussis, compilation finale réussie, 13 tests ciblés de génération/reprise puis sept tests avec contrôle de couverture du formulaire réussis ; trois parcours navigateur réussis (ancienne séance, Première, filtres et reprise 845 exercices). Empreintes pédagogiques inchangées. Aucun contrôle retiré ; assertion Première actualisée car la probabilité conditionnelle est bien présente dans le cours de Première.
+- Code 00fccbd, PR #79 ; intégration et publication automatique suivies dans la PR. Aucun changement de base ou fonction Supabase.

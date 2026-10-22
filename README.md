@@ -470,3 +470,5 @@ de son dossier.
 - RévizSTMG partage encore sa base Supabase avec NAH.
 
 Relecture des exercices de probabilités : le texte à trous du schéma de Bernoulli interroge les deux issues plutôt que le libellé générique « conditions », en conservant les autres hypothèses dans son contexte.
+
+L’atelier propose 169 formules de calcul de Première et Terminale : mathématiques, gestion-finance, économie, management, mercatique et RH. Vue complète ou par filière, filtres par matière/domaine, sélection en lot, exercices à valeurs renouvelées, correction détaillée et lien de cours explicite. Voir [l’inventaire](docs/ATELIER-FORMULES.md). Les probabilités concernées sont arrondies à quatre décimales ; les séances longues restent reprenables sur l’appareil.
