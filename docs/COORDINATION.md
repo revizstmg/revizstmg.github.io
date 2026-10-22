@@ -1145,3 +1145,9 @@ Prochaine action :
 - Tests pédagogiques : contrôle des phrases à trous étendu à leurs trois formats, avec mêmes exigences de contexte/alias et propriété de Bernoulli. Test navigateur du quiz doublon remplacé par une vérification de son absence et de l’ouverture du QCM du chapitre ; contrôle des neuf cartes réelles au lieu du seuil artificiel de dix.
 - Validation finale locale : 374 tests unitaires réussis, compilation réussie et 17 parcours navigateur réussis, dont deux comparaisons des questions réellement affichées avant/après Rejouer (QCM et trous), révisions, anciens exercices de langues et accessibilité clair/sombre. Empreintes relues : seules celles des exercices assemblés changent ; aucun fichier de cours modifié. Le chargement de l’empreinte avait dépassé sa limite lors d’exécutions concurrentes : relancé seul, sans modifier de délai ni supprimer de contrôle, puis suite complète réussie.
 - Confirmation du propriétaire : le défaut concerne les deux cas (entre exercices et au lancement suivant). Les deux sont couverts par les tests. Source et publication suivies dans la PR #82.
+
+### NOTES-20261023-CODEX-06 — notes et révisions ciblées
+- Demande : questions manquées gratuites ; bilan et exercices Premium ; lecture sujet/copie Ultimate.
+- Branche feat/notes-revisions-personnalisees. Périmètre : MesNotes, notesClasse, composant dédié, contrats IA et fonction examen-blanc, tests et README. Extension du couloir Claude annoncée au propriétaire ; aucune migration ni donnée NAH.
+- Accès payants contrôlés côté serveur ; aucune offre active détectée à ce stade. Photos transmises uniquement sur action explicite, jamais stockées dans la progression.
+- État : en cours, annonce avant code.
