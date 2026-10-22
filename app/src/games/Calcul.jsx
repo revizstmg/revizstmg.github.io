@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { Feedback, GameProgress, useStopwatch } from './common.jsx'
 import { makeCalcSet, makeCalcMix } from '../calc.js'
 import { useT } from '../i18n.js'
@@ -13,7 +13,7 @@ function parseNum(s) {
 // Graphique (repère quadrillé) généré avec l'exercice : il change à chaque
 // nouveau tirage, donc la réponse à lire change aussi. Gère les droites
 // affines (type 'grid') et les nuages de points (type 'scatter').
-function Figure({ fig, color }) {
+export function Figure({ fig, color }) {
   if (!fig) return null
   const W = 320, H = 220, pad = 30
   const xmin = fig.xmin ?? 0, ymin = fig.ymin ?? 0
@@ -46,6 +46,7 @@ export default function Calcul({ game, mode, color, onDone }) {
     () => (game.gens ? makeCalcMix(game.gens, game.count || 6) : game.gen ? makeCalcSet(game.gen, game.count || 5) : game.questions || []),
     [game],
   )
+  const bilan=useRef({ratees:[],reussies:[]})
   const [i, setI] = useState(0)
   const [correct, setCorrect] = useState(0)
   const [val, setVal] = useState('')
@@ -62,9 +63,10 @@ export default function Calcul({ game, mode, color, onDone }) {
     if (num !== null && Math.abs(num - q.answer) <= (q.tolerance ?? 0.01)) setCorrect((c) => c + 1)
   }
   const next = () => {
+    bilan.current[ok ? 'reussies' : 'ratees'].push(q)
     if (i + 1 >= set.length) {
       const timeBonus = Math.max(0, set.length * 8 - elapsed)
-      onDone({ correct, total: set.length, timeBonus })
+      onDone({ correct, total: set.length, timeBonus, ...bilan.current })
     } else {
       setI((v) => v + 1)
       setVal('')

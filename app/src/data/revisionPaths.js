@@ -1,3 +1,4 @@
+import { makeCalcSet, makeCalcMix } from '../calc.js'
 // Les trois parcours utilisent uniquement la matière choisie et son contenu chargé.
 import { ALL_CHAPTERS, themeChapters, jeuxDuChapitre, shuffle } from './index.js'
 const prompt = q => String(q?.q || q?.text || q?.statement || q?.prompt || '')
@@ -6,7 +7,7 @@ export function updateSuccesses(previous = [], {themeId, type, reussies = []}, n
   const entries = new Map(previous.map(e=>[e.id,e]))
   for(const q of reussies) {
     const tid=q.themeId || themeId
-    if(!tid || !prompt(q) || !['qcm','vraifaux','trou','saisie'].includes(type)) continue
+    if(!tid || !prompt(q) || !['qcm','vraifaux','trou','saisie','calcul'].includes(type)) continue
     const id=`${tid}|${successKey(type,q)}`
     entries.set(id,{id,themeId:tid,type,q,at:now})
   }
@@ -57,6 +58,11 @@ function asQcm(entry, chapter) {
   const {type,q,themeId}=entry
   if(type==='qcm' && Array.isArray(q.choices) && Number.isInteger(q.answer)) return {...q,themeId,chapterIndex:q.chapterIndex ?? chapter?.idx,sourceKey:successKey(type,q)}
   if(type==='vraifaux') return {q:q.statement,choices:['Vrai','Faux'],answer:q.answer?0:1,explain:q.explain,themeId,chapterIndex:q.chapterIndex ?? chapter?.idx,sourceKey:successKey(type,q)}
+  if(type==='calcul' && Number.isFinite(q.answer)) {
+    const step=Math.max(1,Math.abs(q.answer)*0.1,(q.tolerance || 0.01)*4)
+    const choices=[q.answer,q.answer+step,q.answer-step,q.answer+2*step].map(v=>`${Number(v.toFixed(6)).toLocaleString('fr-FR',{maximumFractionDigits:6})}${q.unit?' '+q.unit:''}`)
+    return {q:q.prompt,choices,answer:0,explain:q.explain,fig:q.fig,themeId,chapterIndex:q.chapterIndex ?? chapter?.idx,sourceKey:successKey(type,q)}
+  }
   if(!['trou','saisie'].includes(type) || typeof q.answer!=='string' || !chapter) return null
   // Aucun distracteur extérieur au chapitre : reprendre seulement les choix
   // déjà validés pour le même terme dans un QCM de cette section.
@@ -69,7 +75,8 @@ export function acquiredQuestions(state,subject,themeId='',limit=12) {
   const failures=new Set((state.erreurs || []).map(e=>`${e.themeId}|${successKey(e.type,e.q)}`))
   const entries=[...(state.reussites || []).filter(e=>allowed.has(e.themeId) && inSection(e,themeId))]
   const sections=new Map()
-  for(const theme of themes) for(const chapter of themeChapters(theme)) {
+  const relevant=themes.filter(t=>entries.some(e=>e.themeId===t.id) || Object.values(state.chapters?.[t.id]?.games || {}).includes(100))
+  for(const theme of relevant) for(const chapter of themeChapters(theme)) {
     const games=jeuxDuChapitre(chapter,theme)
     for(const g of games) {
       for(const q of g.questions || []) sections.set(`${theme.id}|${successKey(g.type,q)}`,chapter)
@@ -77,7 +84,8 @@ export function acquiredQuestions(state,subject,themeId='',limit=12) {
       // les questions de l’exercice ont été réussies. Un 80 % ne suffit pas.
       if(scopeParts(themeId).index!==null && chapter.idx!==scopeParts(themeId).index) continue
       if(state.chapters?.[theme.id]?.games?.[g.id]!==100) continue
-      for(const q of g.questions || []) entries.push({themeId:theme.id,type:g.type,q:{...q,chapterIndex:chapter.idx}})
+      const known=g.type==='calcul' ? (g.gens ? makeCalcMix(g.gens,2) : g.gen ? makeCalcSet(g.gen,2) : g.questions || []) : g.questions || []
+      for(const q of known) entries.push({themeId:theme.id,type:g.type,q:{...q,chapterIndex:chapter.idx}})
     }
   }
   const seen=new Set(), pools=new Map()

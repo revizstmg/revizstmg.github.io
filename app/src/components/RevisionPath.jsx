@@ -6,7 +6,7 @@ import { readPosition, savePosition } from '../data/readingPosition.js'
 import { acquiredQuestions, errorSteps, resumeInSubject } from '../data/revisionPaths.js'
 import { usePublicText } from '../i18n.js'
 import GameHost from '../games/GameHost.jsx'
-import { ALL_CHAPTERS, themeChapters } from '../data/index.js'
+import { ALL_CHAPTERS } from '../data/index.js'
 
 const labels={follow:'Suivre le fil',errors:'Comprendre mes erreurs',acquired:'Ancrer mes connaissances'}
 const actions={follow:'Reprendre mes révisions',errors:'Retravailler mes erreurs',acquired:'Lancer mon QCM'}
@@ -57,5 +57,5 @@ function ReadyPath({mode,subject,themeId}) {
 
 function ChapterPicker({subject,tid,setTid,mode}) {
  const tr=usePublicText()
- return <label htmlFor="revision-chapter" className="text-sm font-semibold">{tr('Chapitre (facultatif)')}<select id="revision-chapter" aria-label={tr('Chapitre (facultatif)')} disabled={!subject} className="mt-2 min-h-11 w-full rounded-xl border border-slate-400 bg-transparent p-2 disabled:opacity-50" value={tid} onChange={e=>setTid(e.target.value)}><option value="">{tr(mode==='follow' ? 'Là où je me suis arrêté' : 'Tous les chapitres')}</option>{subject?.chapters.map(t=><optgroup key={t.id} label={tr(t.name)}><option value={t.id}>{tr(t.name)}</option>{themeChapters(ALL_CHAPTERS[t.id]).map(ch=><option key={ch.id} value={ch.id}>{tr(ch.title)}</option>)}</optgroup>)}</select></label>
+ return <label htmlFor="revision-chapter" className="text-sm font-semibold">{tr('Chapitre (facultatif)')}<select id="revision-chapter" aria-label={tr('Chapitre (facultatif)')} disabled={!subject} className="mt-2 min-h-11 w-full rounded-xl border border-slate-400 bg-transparent p-2 disabled:opacity-50" value={tid} onChange={e=>setTid(e.target.value)}><option value="">{tr(mode==='follow' ? 'Là où je me suis arrêté' : 'Tous les chapitres')}</option>{subject?.chapters.map(t=><optgroup key={t.id} label={tr(t.name)}><option value={t.id}>{tr(t.name)}</option>{(ALL_CHAPTERS[t.id]?.cours || []).map((section,idx)=><option key={idx} value={`${t.id}::${idx}`}>{tr(section.h || `Partie ${idx+1}`)}</option>)}</optgroup>)}</select></label>
 }

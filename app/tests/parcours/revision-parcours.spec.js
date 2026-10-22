@@ -5,7 +5,7 @@ const a={q:'Une première bonne réponse',choices:['Exact A','Non A'],answer:0,t
 const b={q:'Une autre bonne réponse',choices:['Exact B','Non B'],answer:0,themeId:'math-c2'}
 const c={q:'Une réponse de droit',choices:['Droit','Autre'],answer:0,themeId:'droit-t5'}
 const records=[a,b,c].map((q,i)=>({id:`${q.themeId}|qcm|${q.q}`,themeId:q.themeId,type:'qcm',q,at:i}))
-test('les acquis : matière et chapitre, QCM direct, bonnes réponses sauvegardées',async({page})=>{
+test('les acquis : matière et chapitre, QCM direct, bonnes réponses sauvegardées',async({page},info)=>{
  const errors=await preparer(page,etatEleve({reussites:records}))
  await page.goto('./#/revision')
  await page.getByRole('button',{name:'Réviser mes acquis',exact:true}).click()
@@ -16,6 +16,7 @@ test('les acquis : matière et chapitre, QCM direct, bonnes réponses sauvegard�
  await expect(page.getByText('Questions issues de tes acquis : 2')).toBeVisible()
  await expect(page.locator('main button')).toHaveCount(2)
  expect((await new AxeBuilder({page}).include('main').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([])
+ await page.screenshot({path:info.outputPath('choix-acquis.png'),fullPage:true})
  await page.getByLabel('Chapitre (facultatif)',{exact:true}).selectOption('math-c2')
  await expect(page.getByText('Questions issues de tes acquis : 1')).toBeVisible()
  await page.getByRole('button',{name:'Lancer mon QCM',exact:true}).click()
@@ -23,11 +24,13 @@ test('les acquis : matière et chapitre, QCM direct, bonnes réponses sauvegard�
  await expect(page.getByText(a.q,{exact:true})).toHaveCount(0)
  await expect(page.getByText(c.q,{exact:true})).toHaveCount(0)
  await expect(page.getByRole('button',{name:/Entraînement/})).toHaveCount(0)
- await page.getByRole('button',{name:'Exact B',exact:true}).click()
+ await page.getByRole('button',{name:/^[A-Z] Exact B$/}).click()
  await page.getByRole('button',{name:/Voir mon score/}).click()
  await page.getByRole('button',{name:'Terminer cette révision',exact:true}).click()
  await expect(page.getByRole('heading',{name:'Révision terminée',exact:true})).toBeVisible()
- expect((await etat(page)).reussites.some(r=>r.q.q===b.q)).toBe(true)
+ const saved=await etat(page)
+ expect(saved.reussites.find(r=>r.q.q===b.q).at).toBeGreaterThan(2)
+ expect(saved.chapters['math-c2'].games['revision-acquis']).toBe(100)
  expect(errors).toEqual([])
 })
 test('erreurs par matière : toutes les erreurs choisies, aucune question extérieure',async({page})=>{
@@ -50,5 +53,26 @@ test('suivre le fil reprend le repère propre à la matière malgré une visite 
  await expect(page.locator('[data-exercice]')).toBeVisible()
  const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('stmg_reading_v1:00000000-0000-4000-8000-000000000001')))
  expect(saved.themeId).toBe('math-c2');expect(saved.chapterIndex).toBe(1)
+ expect(errors).toEqual([])
+})
+test('un QCM de toutes les matières attribue chaque résultat au bon thème',async({page})=>{
+ const errors=await preparer(page,etatEleve({reussites:records}))
+ await page.goto('./#/revision')
+ await page.getByRole('button',{name:'Réviser mes acquis',exact:true}).click()
+ await page.getByLabel('Matière',{exact:true}).selectOption('all')
+ await page.getByRole('button',{name:'Lancer mon QCM',exact:true}).click()
+ for(let i=0;i<3;i++){
+  const heading=await page.locator('[data-exercice] h3').innerText()
+  const original=[a,b,c].find(q=>q.q===heading)
+  expect(original).toBeTruthy()
+  await page.getByRole('button',{name:new RegExp(`^[A-Z] ${original.choices[0]}$`)}).click()
+  await page.getByRole('button',{name:i===2?/Voir mon score/:/Question suivante/}).click()
+ }
+ const saved=await etat(page)
+ for(const tid of ['math-c1','math-c2','droit-t5']){
+  expect(saved.chapters[tid].games['revision-acquis']).toBe(100)
+  expect(saved.chapters[tid].worked).not.toBe(true)
+ }
+ expect(saved.totalAnswers).toBe(3)
  expect(errors).toEqual([])
 })

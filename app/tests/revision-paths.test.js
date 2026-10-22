@@ -60,3 +60,11 @@ test('un chapitre précis filtre aussi la section du cours, pas seulement le th�
  expect(errorSteps({erreurs:qs.map(q=>({themeId:q.themeId,type:'qcm',q}))},subject(),'math-c1::0')[0].game.questions).toEqual([qs[0]])
  expect(resumeInSubject({chapters:{}},subject(),'math-c1::1').chapterIndex).toBe(1)
 })
+
+test('les calculs réussis deviennent des QCM avec des choix numériques distincts et leur figure',()=>{
+ const q={prompt:'Calculer 25 % de 80',answer:20,unit:'€',fig:{type:'grid'}}
+ const reussites=updateSuccesses([],{type:'calcul',themeId:'math-c1',reussies:[q]})
+ const items=acquiredQuestions({reussites},subject(),'math-c1')
+ expect(items).toHaveLength(1);expect(items[0].choices[items[0].answer]).toBe('20 €')
+ expect(new Set(items[0].choices).size).toBe(4);expect(items[0].fig).toEqual(q.fig)
+})

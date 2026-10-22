@@ -103,7 +103,7 @@ function RevisePage() {
     setImportCode(''); setImportMsg(`✅ ${deck.title} (${deck.cards.length} ${t('cardsCount')})`)
   }
 
-  if (pathMode) return <RevisionPath mode={pathMode} subjects={subjects} onBack={()=>setPathMode(null)} />
+  if (pathMode) return <RevisionPath key={`${state.account?.id || 'trial'}:${state.track.level}:${state.track.specialty || ''}`} mode={pathMode} subjects={subjects} onBack={()=>setPathMode(null)} />
 
   if (carnet) {
     return (

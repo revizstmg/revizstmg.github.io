@@ -1,3 +1,4 @@
+import { Figure } from './Calcul.jsx'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { shuffle, Feedback, GameProgress, useStopwatch } from './common.jsx'
 import { useT } from '../i18n.js'
@@ -72,6 +73,7 @@ export default function Qcm({ game, mode, color, onDone }) {
       )}
       <h3 className="mb-4 text-lg font-semibold leading-snug">{q.q}</h3>
       <div className="grid gap-2.5">
+        {q.fig && <Figure fig={q.fig} color={color}/>}
         {q.choices.map((c, idx) => {
           let cls = 'border-slate-200 bg-white hover:border-violet-300 dark:border-slate-700 dark:bg-slate-800'
           let anim = ''
