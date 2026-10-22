@@ -1114,3 +1114,8 @@ Prochaine action :
 - Réalisé : 40 → 169 formules, références de cours explicites sans heuristique sur le numéro, filtres programme/matière/domaine, recherche et sélection en lot. Génération sqrt/binomiale et queue de loi, précision de probabilités 4 décimales, reprise jusqu’à 5 exercices par formule. Les 40 identifiants existants sont conservés.
 - Vérifications : 348 tests unitaires réussis, compilation finale réussie, 13 tests ciblés de génération/reprise puis sept tests avec contrôle de couverture du formulaire réussis ; trois parcours navigateur réussis (ancienne séance, Première, filtres et reprise 845 exercices). Empreintes pédagogiques inchangées. Aucun contrôle retiré ; assertion Première actualisée car la probabilité conditionnelle est bien présente dans le cours de Première.
 - Code 00fccbd, PR #79 ; intégration et publication automatique suivies dans la PR. Aucun changement de base ou fonction Supabase.
+
+### REVISION-20261022-CODEX-03 — Codex — trois parcours par matière
+- Demande : suivre le fil par matière/chapitre, erreurs filtrées, QCM des acquis mélangés ; deux sélecteurs et un lancement direct. Branche feat/revision-trois-parcours.
+- Périmètre : Revise et composant de parcours, moteur dédié, lecture par matière, GameHost et tests/traductions. Extension annoncée : store/progression (couloir Claude), collection datée reussites dans la progression JSON existante, sans migration ni changement Supabase.
+- État : annoncé avant code ; conserver présentation et bibliothèque de paquets.
