@@ -1,6 +1,6 @@
 {
- "date": "2026-10-21",
- "heure": "2026-10-21T09:13:07.079Z",
+ "date": "2026-10-22",
+ "heure": "2026-10-22T09:15:59.698Z",
  "utilisation": {
   "profs": 4,
   "eleves": 7,
@@ -10,32 +10,34 @@
    "premiere-stmg": 1,
    "terminale-stmg": 6
   },
-  "vues_7j": 131,
+  "vues_7j": 191,
   "actifs_1j": 2,
   "actifs_7j": 2,
   "ecrans_7j": {
+   "cgu": 2,
    "faq": 1,
-   "moi": 6,
+   "moi": 7,
+   "coach": 1,
    "guide": 2,
-   "theme": 8,
+   "theme": 10,
    "classe": 13,
-   "entree": 5,
-   "accueil": 56,
+   "entree": 8,
+   "accueil": 81,
    "express": 1,
-   "matiere": 8,
+   "matiere": 12,
    "boutique": 4,
-   "chapitre": 16,
+   "chapitre": 18,
    "coach-ia": 1,
    "formules": 1,
-   "revision": 4,
-   "bac-blanc": 1,
+   "revision": 6,
+   "bac-blanc": 19,
    "programme": 3,
    "classement": 1
   },
-  "vues_hier": 33,
+  "vues_hier": 65,
   "actifs_30j": 2,
   "defis_amis": 0,
-  "visites_7j": 18,
+  "visites_7j": 40,
   "nouveaux_7j": 1,
   "specialites": {
    "gestion-finance": 5,
@@ -44,7 +46,7 @@
   "joueurs_amis": 0,
   "nouveaux_30j": 1,
   "rappels_push": 0,
-  "visites_hier": 4,
+  "visites_hier": 24,
   "defis_amis_7j": 0,
   "sessions_live": 0,
   "quiz_de_classe": 0,
@@ -60,20 +62,20 @@
   "premiere": 8,
   "themes": 94,
   "chapitres": 806,
-  "series": 5100,
-  "questions": 26935,
+  "series": 5081,
+  "questions": 26755,
   "flashcards": 2098
  },
  "publication": {
   "ci": {
    "etat": "success",
-   "date": "2026-10-20T21:08:29Z"
+   "date": "2026-10-21T22:09:32Z"
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-10-20T21:10:08Z"
+   "date": "2026-10-21T22:09:55Z"
   },
-  "modifications7j": 81
+  "modifications7j": 85
  },
  "tests": "success"
 }

@@ -1,6 +1,6 @@
 # 📊 Statistiques de RévizSTMG
 
-Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **21 octobre 2026 à 11:13**.
+Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **22 octobre 2026 à 11:15**.
 
 ## 👥 Utilisation
 
@@ -16,8 +16,8 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 | Amis | 0 joueurs · 0 défis (0 cette semaine) |
 | Suivi des parents | 0 élèves suivis (0 actifs cette semaine) |
 | Erreurs signalées | 0 à traiter · 0 reçues cette semaine |
-| Visites | 4 hier (33 pages vues) · 18 en 7 jours (131 pages vues) |
-| Écrans les plus vus (7 jours) | accueil 56 · chapitre 16 · classe 13 · theme 8 · matiere 8 · moi 6 · entree 5 · boutique 4 · revision 4 · programme 3 · guide 2 · faq 1 · express 1 · coach-ia 1 · formules 1 · bac-blanc 1 · classement 1 |
+| Visites | 24 hier (65 pages vues) · 40 en 7 jours (191 pages vues) |
+| Écrans les plus vus (7 jours) | accueil 81 · bac-blanc 19 · chapitre 18 · classe 13 · matiere 12 · theme 10 · entree 8 · moi 7 · revision 6 · boutique 4 · programme 3 · cgu 2 · guide 2 · faq 1 · coach 1 · express 1 · coach-ia 1 · formules 1 · classement 1 |
 
 > Un compte est « actif » quand sa progression a été synchronisée. Les visites sont comptées sans cookie ni identifiant (une visite = un onglet ouvert sur le site).
 
@@ -28,20 +28,21 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 | Matières | 19 (11 en Terminale, 8 en Première) |
 | Thèmes | 94 |
 | Chapitres de cours | 806 |
-| Séries d'exercices | 5 100 (26 935 questions) |
+| Séries d'exercices | 5 081 (26 755 questions) |
 | Flashcards | 2 098 |
 
 ## ✅ Qualité et mise en ligne
 
 - Tests du contenu et de la logique : ✅ réussis
-- Dernière CI sur main : ✅ 20 octobre 2026 à 23:08
-- Dernière mise en ligne réussie : ✅ 20 octobre 2026 à 23:10
-- Modifications de l'app ces 7 derniers jours : 81
+- Dernière CI sur main : ✅ 22 octobre 2026 à 00:09
+- Dernière mise en ligne réussie : ✅ 22 octobre 2026 à 00:09
+- Modifications de l'app ces 7 derniers jours : 85
 
 ## 📈 Évolution (14 derniers jours)
 
 | Date | Comptes | Actifs 7 j | Nouveaux 7 j | Visites la veille | Chapitres | Questions |
 |---|---|---|---|---|---|---|
+| 22 oct. | 11 | 2 | 1 | 24 | 806 | 26 755 |
 | 21 oct. | 11 | 2 | 1 | 4 | 806 | 26 935 |
 | 20 oct. | 11 | 2 | 1 | 4 | 806 | 27 332 |
 | 19 oct. | 11 | 2 | 1 | 3 | 806 | 27 332 |
@@ -55,5 +56,4 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 | 11 oct. | 10 | — | 0 | — | 807 | 39 263 |
 | 10 oct. | 10 | — | 0 | — | 807 | 39 263 |
 | 9 oct. | 10 | — | 0 | — | 807 | 39 263 |
-| 8 oct. | 10 | — | 0 | — | 807 | 39 263 |
 
