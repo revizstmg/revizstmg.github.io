@@ -8,6 +8,17 @@ const jeux = (id, blocks) => C.themeChapters({ id, subjectId: 'philosophie', cou
 const trous = (games) => games.filter(g => g.type === 'trou').flatMap(g => g.questions)
 
 describe('régressions des rapports pédagogiques de Claude', () => {
+  it('interroge une propriété de Bernoulli plutôt que le libellé conditions', () => {
+    const ch = C.themeChapters(C.ALL_CHAPTERS['math-c6'])[0]
+    const qs = trous(ch.games)
+    expect(qs.some(q => q.answer === 'conditions')).toBe(false)
+    const q = qs.find(q => q.text.startsWith('Les conditions à vérifier'))
+    expect(q).toBeDefined()
+    expect(q.answer).toBe('deux issues')
+    expect(q.text).toContain('les épreuves sont indépendantes')
+    expect(q.text).toContain('p reste constante')
+  })
+
   it('garde les phrases entières et rattache les pronoms au contexte', () => {
     const games = jeux('philo-justice', [
       { t: 'p', c: 'La justice est un idéal moral et politique qui permet de juger les lois et les institutions. Comme **idéal**, elle guide les citoyens dans leur réflexion sur la manière de répartir les droits, de réparer les torts et de corriger les décisions injustes.' },

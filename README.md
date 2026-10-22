@@ -468,3 +468,5 @@ de son dossier.
 ## Limites connues (ce que la refonte doit régler)
 
 - RévizSTMG partage encore sa base Supabase avec NAH.
+
+Relecture des exercices de probabilités : le texte à trous du schéma de Bernoulli interroge les deux issues plutôt que le libellé générique « conditions », en conservant les autres hypothèses dans son contexte.
