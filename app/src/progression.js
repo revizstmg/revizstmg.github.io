@@ -16,7 +16,7 @@ import { repairStudyTime } from './data/studyTime.js'
 // les règles d'avant : le plus grand, le plus récent ou l'union.
 
 // Champs de progression synchronisés sur le compte (multi-appareil).
-export const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'themeTimeInvalid', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'shopRewards', 'shopWalletUpdatedAt', 'notesClasse']
+export const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'themeTimeInvalid', 'studyLanguages', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'shopRewards', 'shopWalletUpdatedAt', 'notesClasse']
 // Carnet d'erreurs : au plus tant de questions ratées, les plus récentes d'abord.
 export const CARNET_MAX = 150
 
@@ -30,7 +30,7 @@ const COLLECTIONS = {
   notes: { carte: true, ancienne: (x, y) => (String(y).length > String(x).length ? y : x) },
   notesClasse: { cle: (n) => n?.id, ancienne: (x, y) => ((y.ajouteLe || 0) > (x.ajouteLe || 0) ? y : x) },
 }
-const CHAMPS = ['lastChapter', 'bacDate']
+const CHAMPS = ['lastChapter', 'bacDate', 'studyLanguages']
 // La trace d'un élément supprimé est oubliée au bout de 120 jours.
 const OUBLI = 120 * 86400000
 

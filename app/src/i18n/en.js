@@ -1,6 +1,15 @@
 // Libellés d'interface en anglais, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  studyLanguagesTitle: "Your study languages",
+  studyLanguagesHelp: "Choose one or more languages. You can change your choice in settings. Without a selection, all available courses remain visible.",
+  studyArabic: "Arabic",
+  studyEnglish: "English",
+  studyItalian: "Italian",
+  studySpanish: "Spanish",
+  studyLanguagesSoon: "Arabic and Italian courses are coming later. Your choice will still be saved.",
+  studyLanguageCourseSoon: "Courses in this language are coming later.",
+
   timeRepaired: "Invalid old study times were set aside. Time tracking restarts for the affected topics.",
   leaveCurrentClass: "Leave this class",
   joinAnotherClass: "Join another class",

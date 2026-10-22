@@ -1,6 +1,15 @@
 // Libellés d'interface en arabe, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  studyLanguagesTitle: "اللغات التي تدرسها",
+  studyLanguagesHelp: "اختر لغة واحدة أو أكثر. يمكنك تعديل اختيارك في الإعدادات. بدون اختيار، تظهر جميع الدروس المتاحة.",
+  studyArabic: "العربية",
+  studyEnglish: "الإنجليزية",
+  studyItalian: "الإيطالية",
+  studySpanish: "الإسبانية",
+  studyLanguagesSoon: "دروس العربية والإيطالية قادمة لاحقًا. سيتم حفظ اختيارك.",
+  studyLanguageCourseSoon: "دروس هذه اللغة قادمة لاحقًا.",
+
   timeRepaired: "تم استبعاد أوقات دراسة قديمة غير صحيحة. يبدأ احتساب الوقت من جديد للموضوعات المعنية.",
   leaveCurrentClass: "مغادرة هذا الفصل",
   joinAnotherClass: "الانضمام إلى فصل آخر",

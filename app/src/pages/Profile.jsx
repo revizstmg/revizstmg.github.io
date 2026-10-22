@@ -1,3 +1,4 @@
+import StudyLanguages from '../components/StudyLanguages.jsx'
 import OfflineStatus from '../components/OfflineStatus.jsx'
 import { useState } from 'react'
 import { Link, Navigate, useSearchParams } from 'react-router-dom'
@@ -33,7 +34,7 @@ function telechargerMesDonnees(state) {
 // « Mon espace » : la page personnelle de l'élève — identité, statistiques,
 // badges, favoris et accès rapide. Distincte de la personnalisation (apparence).
 export default function Profile() {
-  const { state, derived, setBacDate, setParentShare } = useStore()
+  const { state, derived, setBacDate, setParentShare, setStudyLanguages } = useStore()
   const [params, setParams] = useSearchParams()
   const settings = params.get('section') === 'reglages'
   const t = useT()
@@ -236,6 +237,7 @@ export default function Profile() {
 
 
 </div><div hidden={!settings} className="space-y-5">
+      <section className="card p-5"><StudyLanguages value={state.studyLanguages} onChange={setStudyLanguages} /></section>
       {/* Suivi parental : partage volontaire, puis code à donner à ses parents
           (avec un compte : la base n'accepte la publication que d'un compte connecté). */}
       {PARENT_READY && estEnEssai(state) && (

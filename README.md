@@ -32,6 +32,8 @@ L’espace Réviser reprend la présentation éditoriale de Bac blanc : séance 
 
 Le temps par thème conserve aussi les courtes visites, les séances guidées et le carnet d’erreurs. Les anciennes valeurs dépassant toute la durée d’existence du site sont archivées dans `themeTimeInvalid`, exclues des compteurs et des barres, et ne reviennent pas lors d’une fusion. Leur durée réelle n’est pas estimée ; seuls ces compteurs repartent de zéro. Les durées inférieures à une minute sont indiquées « < 1 min » ; l’arrière-plan et les longues suspensions ne gonflent pas le compteur.
 
+À l’inscription (et dans les réglages), l’élève peut sélectionner les langues étudiées : arabe, anglais, italien et espagnol. Ce choix multiple est distinct de la langue d’interface et synchronisé avec la progression. La bibliothèque Langues affiche les cours des langues sélectionnées ; sans choix, les cours existants restent visibles. Les cours d’arabe et d’italien sont annoncés à venir, sans substitution par une autre langue.
+
 L’atelier de formules remplace les anciens espaces Révision express et Formulaire.
 Il propose un à cinq exercices par formule choisie, accepte les réponses avec
 virgule ou point et affiche un bilan local sans modifier la maîtrise des chapitres.
