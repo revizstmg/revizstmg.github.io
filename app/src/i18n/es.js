@@ -7,7 +7,6 @@ export default {
   studyEnglish: "Inglés",
   studyItalian: "Italiano",
   studySpanish: "Español",
-  studyLanguagesSoon: "Los cursos de árabe e italiano estarán disponibles más adelante. Tu elección se guardará.",
   studyLanguageCourseSoon: "Los cursos de este idioma estarán disponibles más adelante.",
 
   timeRepaired: "Se han apartado tiempos antiguos incoherentes. El contador se reinicia para los temas afectados.",

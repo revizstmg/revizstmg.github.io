@@ -1,10 +1,10 @@
 {
   "id": "langues",
-  "name": "Langues (Anglais / Espagnol)",
+  "name": "Langues (Anglais / Espagnol / Italien / Arabe)",
   "short": "Langues",
   "icon": "🗣️",
   "color": "#db2777",
-  "tagline": "Toutes les conjugaisons + une panoplie de vocabulaire. Dictionnaire intégré.",
+  "tagline": "Grammaire, vocabulaire, compréhension et cultures en quatre langues. Des applications STMG et ETLV.",
   "chapters": [
     {
       "id": "lng-en-gram",
@@ -5217,6 +5217,2670 @@
               "explain": "“soy demasiado perfeccionista”."
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "lng-it-gram",
+      "name": "Italien — Grammaire et conjugaison",
+      "short": "Grammaire et conjugaison",
+      "keywords": [
+        "Grammaire et conjugaison",
+        "italien"
+      ],
+      "intro": "Des bases à l’argumentation : rappels guidés, formes utiles et exemples corrigés. Les axes culturels de Première et de Terminale sont dans des thèmes distincts ; cette grammaire sert de référence aux deux niveaux.",
+      "cours": [
+        {
+          "h": "Prononciation, articles et accords",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "L’italien distingue les consonnes simples et doubles : pala (pelle) et palla (ballon) ne se prononcent pas de la même façon. Devant e ou i, c se prononce comme « tch » et g comme « dj » ; ch et gh maintiennent les sons durs : chi, spaghetti. L’accent écrit distingue notamment e (et) de è (est)."
+            },
+            {
+              "t": "p",
+              "c": "L’article défini dépend du genre, du nombre et du début du mot : il libro → i libri ; lo studente → gli studenti ; l’amico → gli amici ; la casa → le case. Lo s’emploie notamment devant s + consonne et z. L’article indéfini donne un libro, uno studente, una casa, un’amica. Un amico n’a pas d’apostrophe, car un est masculin."
+            },
+            {
+              "t": "p",
+              "c": "Les noms en -o ont souvent un pluriel en -i, ceux en -a un pluriel en -e ; un nom en -e passe généralement à -i : studente → studenti. L’adjectif s’accorde : una casa nuova, due case nuove. Ces régularités ont des exceptions : apprends le genre avec le nom."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "il libro",
+                  "Le livre ; pluriel i libri."
+                ],
+                [
+                  "lo studente",
+                  "L’élève ; pluriel gli studenti."
+                ],
+                [
+                  "è",
+                  "Est, forme de essere, avec accent."
+                ],
+                [
+                  "e",
+                  "Et, conjonction sans accent."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Le présent : être, avoir et verbes fréquents",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Essere : sono, sei, è, siamo, siete, sono. Avere : ho, hai, ha, abbiamo, avete, hanno. Le sujet peut rester implicite grâce à la terminaison : sono italiana signifie « je suis italienne » selon le contexte ; ho diciassette anni signifie « j’ai dix-sept ans ». On garde le pronom pour lever une ambiguïté ou insister."
+            },
+            {
+              "t": "p",
+              "c": "Au présent, parlare donne parlo, parli, parla, parliamo, parlate, parlano ; prendere : prendo, prendi, prende, prendiamo, prendete, prendono ; dormire : dormo, dormi, dorme, dormiamo, dormite, dormono. Certains verbes en -ire prennent -isc- : capisco, capisci, capisce, capiamo, capite, capiscono."
+            },
+            {
+              "t": "p",
+              "c": "Andare donne vado, vai, va, andiamo, andate, vanno ; fare : faccio, fai, fa, facciamo, fate, fanno. Pour nier, place non devant le verbe : non capisco. Une question peut garder le même ordre : studi italiano? Avec un mot interrogatif : dove studi? (où étudies-tu ?) et perché studi? (pourquoi étudies-tu ?)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Essere",
+                  "Être : sono, sei, è, siamo, siete, sono."
+                ],
+                [
+                  "Avere",
+                  "Avoir : ho, hai, ha, abbiamo, avete, hanno."
+                ],
+                [
+                  "Non",
+                  "Négation placée avant le verbe."
+                ],
+                [
+                  "Capire",
+                  "Comprendre : capisco, capiamo."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Raconter : passato prossimo et imperfetto",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Le passato prossimo se forme avec avere ou essere au présent et un participe passé : ho parlato, ho ricevuto, ho dormito. Avec essere, le participe s’accorde avec le sujet : Maria è arrivata ; Marco e Luca sono partiti. Tous les verbes de mouvement ne prennent pas automatiquement essere : apprends l’auxiliaire de chaque verbe, par exemple ho viaggiato."
+            },
+            {
+              "t": "p",
+              "c": "Les participes fréquents comprennent fatto (fare), detto (dire), visto (vedere), scritto (scrivere), letto (leggere) et preso (prendere). Dans une phrase simple avec avere sans pronom objet antéposé, le participe reste inchangé : Maria ha scritto una lettera."
+            },
+            {
+              "t": "p",
+              "c": "L’imperfetto décrit un état, une habitude ou l’arrière-plan : parlavo, parlavi, parlava, parlavamo, parlavate, parlavano ; essere donne ero, eri, era, eravamo, eravate, erano. Da piccola leggevo molto : enfant, je lisais beaucoup. Mentre studiavo, è arrivato Luca oppose une action en cours à l’événement qui survient. La distance chronologique seule ne décide pas du choix du temps."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Passato prossimo",
+                  "Auxiliaire au présent + participe passé pour présenter un événement accompli."
+                ],
+                [
+                  "Imperfetto",
+                  "Temps des habitudes, descriptions et arrière-plans du passé."
+                ],
+                [
+                  "È arrivata",
+                  "Est arrivée : accord féminin avec essere."
+                ],
+                [
+                  "Ho viaggiato",
+                  "J’ai voyagé : auxiliaire avere."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Futur, conditionnel et projets",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Le futur de parlare donne parlerò, parlerai, parlerà, parleremo, parlerete, parleranno. Pour un verbe régulier en -are, le a devient e dans le radical ; prendere donne prenderò et dormire dormirò. Quelques radicaux sont irréguliers : essere → sarò, avere → avrò, andare → andrò, fare → farò, venire → verrò."
+            },
+            {
+              "t": "p",
+              "c": "Le conditionnel utilise les terminaisons -ei, -esti, -ebbe, -emmo, -este, -ebbero : parlerei, parleresti, parlerebbe, parleremmo, parlereste, parlerebbero. Les radicaux irréguliers du futur servent aussi au conditionnel : sarei, avrei, andrei. Vorrei signifie « je voudrais » ; potrei signifie « je pourrais »."
+            },
+            {
+              "t": "p",
+              "c": "L’anno prossimo farò uno stage annonce un stage l’an prochain. Vorrei lavorare in Italia exprime un souhait sans présenter sa réalisation comme certaine. Pour une hypothèse réalisable, on peut employer se + présent, puis futur : se ho tempo, verrò. Ne calque pas le français « si j’aurais » : l’hypothèse irréelle demande une autre construction."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Futuro",
+                  "Temps pour annoncer notamment un événement à venir : parlerò."
+                ],
+                [
+                  "Condizionale",
+                  "Mode du souhait, de la politesse ou d’une éventualité : parlerei."
+                ],
+                [
+                  "Vorrei",
+                  "Je voudrais, forme polie de volere."
+                ],
+                [
+                  "Se ho tempo, verrò",
+                  "Si j’ai le temps, je viendrai : hypothèse réalisable."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Pronoms, prépositions et comparaison",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Les pronoms compléments directs lo, la, li, le remplacent une personne ou une chose sans préposition : compro il libro → lo compro ; vedo Maria → la vedo. Les pronoms indirects gli (à lui) et le (à elle) correspondent à un complément introduit par a : telefono a Marco → gli telefono. Devant l’infinitif, un pronom peut être attaché : voglio comprarlo."
+            },
+            {
+              "t": "p",
+              "c": "Les prépositions se choisissent avec leur construction : a Roma, in Italia, da un amico, di Roma. Avec un article, certaines fusionnent : a + il → al ; di + il → del ; in + il → nel. Sono di Roma indique l’origine ; vado a Roma la destination."
+            },
+            {
+              "t": "p",
+              "c": "La comparaison entre deux personnes ou objets peut employer più… di ou meno… di : questo prodotto è più caro di quello. L’égalité se dit aussi… come : è interessante come l’altro. Le superlatif relatif inclut l’article : il più caro. Avec piacere, la chose aimée est sujet : mi piace il libro, mi piacciono i libri."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Lo compro",
+                  "Je l’achète : lo remplace un objet masculin singulier."
+                ],
+                [
+                  "Gli telefono",
+                  "Je lui téléphone : gli renvoie ici à Marco."
+                ],
+                [
+                  "A Roma / in Italia",
+                  "Prépositions usuelles pour la ville et le pays."
+                ],
+                [
+                  "Mi piacciono i libri",
+                  "J’aime les livres : sujet pluriel, verbe pluriel."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Argumenter : subjonctif, hypothèse et discours rapporté",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Pour structurer un avis, utilise secondo me (à mon avis), perché (parce que), tuttavia (cependant) et quindi (donc). Après penso che exprimant une opinion, l’italien soigné emploie normalement le congiuntivo : penso che sia utile. Essere au congiuntivo présent donne sia, sia, sia, siamo, siate, siano ; avere : abbia, abbia, abbia, abbiamo, abbiate, abbiano."
+            },
+            {
+              "t": "p",
+              "c": "Une hypothèse peu probable ou irréelle au présent peut se construire avec se + congiuntivo imperfetto, puis conditionnel présent : se avessi tempo, studierei di più (si j’avais le temps, j’étudierais davantage). Se fossi il direttore, cambierei il progetto : si j’étais le directeur, je changerais le projet. Ne transforme pas cette règle en interdiction générale de tout futur après se : se ho tempo, verrò reste correct."
+            },
+            {
+              "t": "p",
+              "c": "Pour rapporter une information, distingue ce qui est certain de ce qui est affirmé par une source : il giornale afferma che… signifie « le journal affirme que… ». Reformule sans attribuer l’opinion à tout un pays. Une argumentation solide cite un exemple précis, explique sa portée et reconnaît une limite : tuttavia, il costo rimane elevato (cependant, le coût reste élevé)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Congiuntivo",
+                  "Mode notamment employé après une opinion : penso che sia utile."
+                ],
+                [
+                  "Se avessi tempo, studierei",
+                  "Hypothèse : subjonctif imparfait puis conditionnel présent."
+                ],
+                [
+                  "Tuttavia",
+                  "Cependant : introduit une réserve ou une opposition."
+                ],
+                [
+                  "Quindi",
+                  "Donc : introduit une conséquence."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "games": [
+        {
+          "id": "lng-it-gram-s1-qcm",
+          "type": "qcm",
+          "title": "Prononciation, articles et accords",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Quel groupe signifie « les élèves » ?",
+              "choices": [
+                "gli studenti",
+                "lo studenti",
+                "i studente"
+              ],
+              "answer": 0,
+              "explain": "Lo studente devient gli studenti."
+            },
+            {
+              "q": "Complète : due case…",
+              "choices": [
+                "nuove",
+                "nuovo",
+                "nuova"
+              ],
+              "answer": 0,
+              "explain": "Case est féminin pluriel : nuove."
+            },
+            {
+              "q": "Quelle forme signifie « est » ?",
+              "choices": [
+                "è",
+                "e",
+                "il"
+              ],
+              "answer": 0,
+              "explain": "È porte un accent ; e signifie et."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-gram-s2-qcm",
+          "type": "qcm",
+          "title": "Le présent : être, avoir et verbes fréquents",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Complète : noi… italiano.",
+              "choices": [
+                "parliamo",
+                "parlate",
+                "parlano"
+              ],
+              "answer": 0,
+              "explain": "Noi correspond à parliamo."
+            },
+            {
+              "q": "Comment dire « je ne comprends pas » ?",
+              "choices": [
+                "Non capisco.",
+                "Capisco non.",
+                "Non capiamo."
+              ],
+              "answer": 0,
+              "explain": "Non se place avant capisco."
+            },
+            {
+              "q": "Complète : io… diciassette anni.",
+              "choices": [
+                "ho",
+                "sono",
+                "ha"
+              ],
+              "answer": 0,
+              "explain": "L’âge s’exprime avec avere : ho."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-gram-s3-qcm",
+          "type": "qcm",
+          "title": "Raconter : passato prossimo et imperfetto",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Maria… ieri. Choisis la forme correcte.",
+              "choices": [
+                "è arrivata",
+                "ha arrivato",
+                "è arrivato"
+              ],
+              "answer": 0,
+              "explain": "Arrivare se conjugue ici avec essere et le participe s’accorde avec Maria."
+            },
+            {
+              "q": "Pour une habitude : Da piccola… molto.",
+              "choices": [
+                "leggevo",
+                "letto",
+                "leggere"
+              ],
+              "answer": 0,
+              "explain": "Leggevo est l’imperfetto utilisé pour l’habitude."
+            },
+            {
+              "q": "Quel participe appartient à scrivere ?",
+              "choices": [
+                "scritto",
+                "detto",
+                "preso"
+              ],
+              "answer": 0,
+              "explain": "Scrivere → scritto ; dire → detto ; prendere → preso."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-gram-s4-qcm",
+          "type": "qcm",
+          "title": "Futur, conditionnel et projets",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Quel énoncé formule un souhait poli ?",
+              "choices": [
+                "Vorrei lavorare in Italia.",
+                "Lavorerò in Italia.",
+                "Lavoro in Italia."
+              ],
+              "answer": 0,
+              "explain": "Vorrei exprime ici le souhait."
+            },
+            {
+              "q": "Quel est le futur de fare à la première personne ?",
+              "choices": [
+                "farò",
+                "farei",
+                "faccio"
+              ],
+              "answer": 0,
+              "explain": "Farò est le futur ; farei le conditionnel ; faccio le présent."
+            },
+            {
+              "q": "Complète : se ho tempo,…",
+              "choices": [
+                "verrò",
+                "venuto",
+                "venire"
+              ],
+              "answer": 0,
+              "explain": "Le futur verrò convient à cette hypothèse réalisable."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-gram-s5-qcm",
+          "type": "qcm",
+          "title": "Pronoms, prépositions et comparaison",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Remplace il libro : compro il libro →…",
+              "choices": [
+                "lo compro",
+                "gli compro",
+                "le compro"
+              ],
+              "answer": 0,
+              "explain": "Il libro est complément direct masculin singulier : lo."
+            },
+            {
+              "q": "Quelle construction est correcte ?",
+              "choices": [
+                "vado a Roma",
+                "vado in Roma",
+                "vado di Roma"
+              ],
+              "answer": 0,
+              "explain": "La destination avec Roma s’exprime par a Roma."
+            },
+            {
+              "q": "Complète : mi… i libri.",
+              "choices": [
+                "piacciono",
+                "piace",
+                "piaci"
+              ],
+              "answer": 0,
+              "explain": "I libri est le sujet pluriel : piacciono."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-gram-s6-qcm",
+          "type": "qcm",
+          "title": "Argumenter : subjonctif, hypothèse et discours rapporté",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Complète : penso che… utile.",
+              "choices": [
+                "sia",
+                "è",
+                "sarò"
+              ],
+              "answer": 0,
+              "explain": "Dans ce registre soigné, penso che appelle ici le congiuntivo sia."
+            },
+            {
+              "q": "Complète : se avessi tempo,… di più.",
+              "choices": [
+                "studierei",
+                "studierò",
+                "studio"
+              ],
+              "answer": 0,
+              "explain": "La proposition principale prend le conditionnel studierei."
+            },
+            {
+              "q": "Quel connecteur introduit une réserve ?",
+              "choices": [
+                "tuttavia",
+                "quindi",
+                "perché"
+              ],
+              "answer": 0,
+              "explain": "Tuttavia signifie cependant."
+            }
+          ],
+          "sectionOnly": true
+        }
+      ]
+    },
+    {
+      "id": "lng-ar-gram",
+      "name": "Arabe — Écriture et grammaire de l’arabe standard",
+      "short": "Écriture et grammaire de l’arabe standard",
+      "keywords": [
+        "Écriture et grammaire de l’arabe standard",
+        "arabe"
+      ],
+      "intro": "Référence progressive pour lire et construire des phrases en arabe standard moderne. Les dialectes ont des usages et des formes qui peuvent différer ; ces cours ne les présentent pas comme des erreurs. Les explications restent en français, les exemples en écriture arabe.",
+      "cours": [
+        {
+          "h": "Lire l’écriture et se présenter",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "L’arabe s’écrit de droite à gauche. Ses lettres changent de forme selon leur position ; ا د ذ ر ز و ne se lient pas à la lettre suivante à gauche. Les voyelles brèves peuvent être notées par des signes : fatḥa ـَ (a), kasra ـِ (i), ḍamma ـُ (u). Les lettres ا و ي servent notamment à noter des voyelles longues. Le sukūn ـْ marque l’absence de voyelle et la shadda ـّ une consonne redoublée."
+            },
+            {
+              "t": "p",
+              "c": "Repère les 28 lettres dans l’ordre : ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي. Plusieurs lettres partagent une forme et se distinguent par leurs points : ب، ت، ث ; ج، ح، خ. Recopie-les en observant le nombre et la position des points, puis compare leur forme dans un mot. Ne confonds pas ة, souvent finale féminine, avec ه. Les chiffres et les segments latins gardent leur propre sens de lecture dans une phrase arabe."
+            },
+            {
+              "t": "p",
+              "c": "Les textes ordinaires omettent souvent les voyelles brèves : le contexte aide à lire. La translittération est une aide provisoire : marḥaban (مرحبا) signifie bonjour ; shukran (شكرا), merci. ʿ représente ع et ḥ représente ح, distinct de ه. Il faut écouter un locuteur ou un enregistrement pour travailler ces sons ; un exemple écrit ne constitue pas un exercice d’écoute."
+            },
+            {
+              "t": "p",
+              "c": "Pour se présenter : اسمي ليلى (ismī Laylā), « je m’appelle Layla » ; أنا طالب (anā ṭālib), « je suis étudiant » ; أنا طالبة (anā ṭāliba), « je suis étudiante ». Au présent, une phrase de ce type n’emploie pas de verbe être exprimé. من أين أنت؟ demande « d’où viens-tu ? ». La forme vocalisée de أنت varie selon le destinataire : anta au masculin, anti au féminin."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Fatḥa",
+                  "Signe de la voyelle brève a : ـَ."
+                ],
+                [
+                  "Shadda",
+                  "Signe de redoublement de la consonne : ـّ."
+                ],
+                [
+                  "مرحبا",
+                  "Bonjour ; translittération indicative marḥaban."
+                ],
+                [
+                  "اسمي",
+                  "Mon nom est / je m’appelle : ismī."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Article, genre, adjectif et possession",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "L’article défini ال s’attache au nom : كتاب (un livre) → الكتاب (le livre). Devant une lettre solaire, le l de l’article s’assimile à la consonne suivante dans la prononciation : الشمس (ash-shams, le soleil). Devant une lettre lunaire, il se prononce : القمر (al-qamar, la lune). L’écriture de l’article reste ال dans les deux cas."
+            },
+            {
+              "t": "p",
+              "c": "L’adjectif épithète suit le nom et s’accorde notamment en genre et en détermination : كتاب جديد (un livre nouveau), الكتاب الجديد (le livre nouveau), مدرسة جديدة (une école nouvelle). En revanche, الكتاب جديد signifie « le livre est nouveau » : le nom est défini et l’attribut est ici indéfini. La tāʾ marbūṭa ة marque souvent un féminin mais n’en constitue pas une règle sans exception."
+            },
+            {
+              "t": "p",
+              "c": "L’annexion relie deux noms : كتاب الطالب signifie « le livre de l’élève ». Dans cette construction, le premier nom ne prend pas ال ; la détermination vient du second. Un suffixe peut marquer le possesseur : كتابي (mon livre), كتابه (son livre à lui), كتابها (son livre à elle). Ces exemples doivent être appris avec le sens du suffixe, sans ajouter un article devant كتابي."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "ال",
+                  "Article défini attaché au nom."
+                ],
+                [
+                  "الكتاب الجديد",
+                  "Le livre nouveau : adjectif épithète également défini."
+                ],
+                [
+                  "الكتاب جديد",
+                  "Le livre est nouveau : phrase nominale."
+                ],
+                [
+                  "كتابي",
+                  "Mon livre : suffixe possessif ـي."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Pronoms et conjugaison : accompli et inaccompli",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Les pronoms personnels utiles sont أنا (je), نحن (nous), أنت (tu), هو (il), هي (elle), أنتم (vous masculin pluriel ou groupe mixte), هم (ils). L’arabe distingue aussi le duel et des formes féminines ; le contexte et la vocalisation permettent notamment de distinguer anta (tu masculin) et anti (tu féminin)."
+            },
+            {
+              "t": "p",
+              "c": "L’accompli présente généralement un procès accompli, souvent au passé. Avec كتب, « écrire » : كَتَبْتُ (katabtu, j’ai écrit), كَتَبْتَ (katabta, tu masculin as écrit), كَتَبْتِ (katabti, tu féminin as écrit), كَتَبَ (kataba, il a écrit), كَتَبَتْ (katabat, elle a écrit), كَتَبْنَا (katabnā, nous avons écrit). Sans voyelles, plusieurs formes s’écrivent كتبت : ne devine pas le sujet sans contexte."
+            },
+            {
+              "t": "p",
+              "c": "L’inaccompli sert notamment au présent : أَكْتُبُ (aktubu, j’écris), يَكْتُبُ (yaktubu, il écrit), تَكْتُبُ (taktubu, elle écrit ou tu masculin écris selon le contexte), نَكْتُبُ (naktubu, nous écrivons). Pour annoncer l’avenir, on peut utiliser سـ ou سوف devant l’inaccompli : سأكتب / سوف أكتب (j’écrirai). Les catégories accompli/inaccompli ne se superposent pas mécaniquement aux temps français."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Accompli",
+                  "Forme présentant notamment un procès accompli : كَتَبَ, il a écrit."
+                ],
+                [
+                  "Inaccompli",
+                  "Forme servant notamment au présent : يَكْتُبُ, il écrit."
+                ],
+                [
+                  "نحن",
+                  "Nous."
+                ],
+                [
+                  "سأكتب",
+                  "J’écrirai : سـ + inaccompli."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Nier, interroger et situer",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "La négation لا devant l’inaccompli peut nier une action présente ou habituelle : لا أعمل اليوم signifie « je ne travaille pas aujourd’hui ». Pour le passé, لم est suivi d’un inaccompli apocopé : لم أكتبْ (je n’ai pas écrit). Pour le futur, لن est suivi d’un inaccompli au subjonctif : لن أكتبَ (je n’écrirai pas). Ce sont des constructions de l’arabe standard, à ne pas confondre avec les négations dialectales."
+            },
+            {
+              "t": "p",
+              "c": "Une question fermée peut commencer par هل : هل تعمل اليوم؟ (travailles-tu aujourd’hui ?). Les mots interrogatifs comprennent من (qui ?), ماذا (quoi ?), أين (où ?), متى (quand ?), لماذا (pourquoi ?) et كيف (comment ?). هل n’est pas nécessaire devant أين : أين المدرسة؟ signifie « où est l’école ? »."
+            },
+            {
+              "t": "p",
+              "c": "Les prépositions في (dans/à), من (de/depuis), إلى (vers/à), مع (avec) précisent les rapports : أنا في المدرسة (je suis à l’école), أذهب إلى المدرسة (je vais à l’école). عندي كتاب signifie « j’ai un livre », littéralement un livre est auprès de moi. Pour une négation nominale : لست طالبا (je ne suis pas étudiant) emploie une forme de ليس."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "لا أعمل",
+                  "Je ne travaille pas : négation au présent."
+                ],
+                [
+                  "لم أكتبْ",
+                  "Je n’ai pas écrit : لم + inaccompli apocopé."
+                ],
+                [
+                  "لن أكتبَ",
+                  "Je n’écrirai pas : لن + inaccompli au subjonctif."
+                ],
+                [
+                  "أين",
+                  "Où ?"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Pluriels, accord et phrases complexes",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "L’arabe possède des pluriels réguliers et des pluriels internes, dits brisés : كتاب → كتب (livre → livres), طالب → طلاب (étudiant → étudiants). Un pluriel féminin régulier se forme souvent en ـات : شركة → شركات (entreprise → entreprises). Apprends le pluriel avec chaque nom plutôt que d’appliquer une terminaison unique à tous les mots."
+            },
+            {
+              "t": "p",
+              "c": "Un pluriel non humain prend généralement un accord au féminin singulier : الكتب جديدة signifie « les livres sont nouveaux ». Pour un groupe humain masculin pluriel : الطلاب الجدد (les nouveaux étudiants). Ne généralise donc pas l’accord féminin singulier aux personnes."
+            },
+            {
+              "t": "p",
+              "c": "Pour relier des propositions, utilise و (et), لكن (mais), لأن (parce que), لذلك (c’est pourquoi) et الذي / التي (qui/que au masculin/féminin singulier). الشركة التي تنتج الكتب كبيرة signifie « l’entreprise qui produit les livres est grande ». La relative suit un antécédent défini et son relatif s’accorde avec lui. Une phrase organisée indique la cause puis la conséquence sans les confondre."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "جمع",
+                  "Pluriel ; il peut être régulier ou interne."
+                ],
+                [
+                  "الكتب جديدة",
+                  "Les livres sont nouveaux : accord féminin singulier avec un pluriel non humain."
+                ],
+                [
+                  "لأن",
+                  "Parce que : introduit une cause."
+                ],
+                [
+                  "لذلك",
+                  "C’est pourquoi : introduit une conséquence."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Décrire le passé et défendre un point de vue",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "كان permet de situer une phrase nominale au passé : كان الجو جميلا (il faisait beau). Avec un inaccompli, il peut présenter une activité habituelle ou en cours dans le passé : كنت أعمل في مكتبة (je travaillais dans une bibliothèque). Le contexte permet de préciser s’il s’agit d’une habitude ou d’une action en cours."
+            },
+            {
+              "t": "p",
+              "c": "Pour comparer : هذا المنتج أفضل من ذلك المنتج signifie « ce produit est meilleur que cet autre produit ». أفضل من exprime ici « meilleur que ». Pour argumenter : في رأيي (à mon avis), أعتقد أن (je pense que), من جهة (d’un côté), من جهة أخرى (d’un autre côté), مثلا (par exemple), في الختام (en conclusion)."
+            },
+            {
+              "t": "p",
+              "c": "Exemple : في رأيي، هذا المشروع مفيد لأنه يحمي البيئة، لكن تكلفته مرتفعة. Le projet est jugé utile parce qu’il protège l’environnement, mais son coût est élevé. Identifie l’avis, sa justification et sa limite. Pour citer une source, selon le texte se dit حسب النص ; une interprétation personnelle ne doit pas être présentée comme une citation."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "كان + inaccompli",
+                  "Construction pour une activité habituelle ou en cours dans le passé."
+                ],
+                [
+                  "في رأيي",
+                  "À mon avis."
+                ],
+                [
+                  "أفضل من",
+                  "Meilleur que, dans la comparaison proposée."
+                ],
+                [
+                  "حسب النص",
+                  "Selon le texte : attribue une information à sa source."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "games": [
+        {
+          "id": "lng-ar-gram-s1-qcm",
+          "type": "qcm",
+          "title": "Lire l’écriture et se présenter",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Quel signe marque le redoublement d’une consonne ?",
+              "choices": [
+                "Shadda",
+                "Fatḥa",
+                "Sukūn"
+              ],
+              "answer": 0,
+              "explain": "La shadda marque une consonne redoublée."
+            },
+            {
+              "q": "Que signifie اسمي ليلى ?",
+              "choices": [
+                "Je m’appelle Layla.",
+                "Merci, Layla.",
+                "D’où viens-tu, Layla ?"
+              ],
+              "answer": 0,
+              "explain": "Ismī signifie mon nom est."
+            },
+            {
+              "q": "Dans أنا طالبة au présent, le verbe être est…",
+              "choices": [
+                "non exprimé",
+                "obligatoirement écrit",
+                "au passé"
+              ],
+              "answer": 0,
+              "explain": "La phrase nominale ne comporte pas de verbe être exprimé au présent."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-ar-gram-s2-qcm",
+          "type": "qcm",
+          "title": "Article, genre, adjectif et possession",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Quelle expression signifie « le livre est nouveau » ?",
+              "choices": [
+                "الكتاب جديد",
+                "الكتاب الجديد",
+                "كتاب الطالب"
+              ],
+              "answer": 0,
+              "explain": "L’adjectif indéfini جديد est ici attribut du nom défini."
+            },
+            {
+              "q": "Comment dire « mon livre » ?",
+              "choices": [
+                "كتابي",
+                "كتابه",
+                "كتابها"
+              ],
+              "answer": 0,
+              "explain": "Le suffixe ـي correspond à mon."
+            },
+            {
+              "q": "Dans كتاب الطالب, le premier nom porte-t-il ال ?",
+              "choices": [
+                "Non.",
+                "Oui, toujours.",
+                "Seulement devant une lettre solaire."
+              ],
+              "answer": 0,
+              "explain": "Le premier terme de cette annexion ne prend pas l’article."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-ar-gram-s3-qcm",
+          "type": "qcm",
+          "title": "Pronoms et conjugaison : accompli et inaccompli",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Quelle forme vocalisée signifie « j’ai écrit » ?",
+              "choices": [
+                "كَتَبْتُ",
+                "كَتَبَ",
+                "كَتَبَتْ"
+              ],
+              "answer": 0,
+              "explain": "La terminaison ـتُ indique ici la première personne."
+            },
+            {
+              "q": "Que signifie نَكْتُبُ ?",
+              "choices": [
+                "Nous écrivons.",
+                "Il écrit.",
+                "Elle a écrit."
+              ],
+              "answer": 0,
+              "explain": "Le préfixe نـ indique ici nous."
+            },
+            {
+              "q": "Quelle forme annonce l’avenir ?",
+              "choices": [
+                "سأكتب",
+                "كَتَبَ",
+                "كَتَبْنَا"
+              ],
+              "answer": 0,
+              "explain": "سـ devant l’inaccompli annonce ici le futur."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-ar-gram-s4-qcm",
+          "type": "qcm",
+          "title": "Nier, interroger et situer",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Quelle phrase nie une action future ?",
+              "choices": [
+                "لن أكتبَ",
+                "لم أكتبْ",
+                "أين المدرسة؟"
+              ],
+              "answer": 0,
+              "explain": "لن porte ici sur l’avenir."
+            },
+            {
+              "q": "Quel mot demande un lieu ?",
+              "choices": [
+                "أين",
+                "متى",
+                "لماذا"
+              ],
+              "answer": 0,
+              "explain": "أين signifie où ; متى quand ; لماذا pourquoi."
+            },
+            {
+              "q": "Quelle préposition introduit la destination dans أذهب… المدرسة ?",
+              "choices": [
+                "إلى",
+                "مع",
+                "من"
+              ],
+              "answer": 0,
+              "explain": "إلى marque la destination."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-ar-gram-s5-qcm",
+          "type": "qcm",
+          "title": "Pluriels, accord et phrases complexes",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Complète : الكتب…",
+              "choices": [
+                "جديدة",
+                "جديدون",
+                "جديدات"
+              ],
+              "answer": 0,
+              "explain": "Le pluriel non humain الكتب prend ici un attribut au féminin singulier."
+            },
+            {
+              "q": "Quel connecteur introduit une cause ?",
+              "choices": [
+                "لأن",
+                "لذلك",
+                "لكن"
+              ],
+              "answer": 0,
+              "explain": "لأن signifie parce que."
+            },
+            {
+              "q": "Quel est le pluriel de شركة donné dans le cours ?",
+              "choices": [
+                "شركات",
+                "كتب",
+                "طلاب"
+              ],
+              "answer": 0,
+              "explain": "شركة devient شركات ; les autres pluriels concernent livre et étudiant."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-ar-gram-s6-qcm",
+          "type": "qcm",
+          "title": "Décrire le passé et défendre un point de vue",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Que signifie في رأيي ?",
+              "choices": [
+                "À mon avis.",
+                "Selon le texte.",
+                "En conclusion."
+              ],
+              "answer": 0,
+              "explain": "في رأيي introduit un point de vue personnel."
+            },
+            {
+              "q": "Dans l’exemple, quelle réserve est exprimée sur le projet ?",
+              "choices": [
+                "Son coût est élevé.",
+                "Il ne protège pas l’environnement.",
+                "Il n’a aucune utilité."
+              ],
+              "answer": 0,
+              "explain": "لكن تكلفته مرتفعة signifie mais son coût est élevé."
+            },
+            {
+              "q": "Quelle expression attribue une information au texte ?",
+              "choices": [
+                "حسب النص",
+                "في رأيي",
+                "مثلا"
+              ],
+              "answer": 0,
+              "explain": "حسب النص signifie selon le texte."
+            }
+          ],
+          "sectionOnly": true
+        }
+      ]
+    },
+    {
+      "id": "lng-it-voc",
+      "name": "Italien — Vocabulaire en contexte et ETLV",
+      "short": "Vocabulaire en contexte et ETLV",
+      "keywords": [
+        "Vocabulaire en contexte et ETLV",
+        "italien"
+      ],
+      "intro": "Mots utiles pour la vie quotidienne, les études et les organisations. Les cas sont des supports pédagogiques fictifs, pas des statistiques sur un pays.",
+      "cours": [
+        {
+          "h": "Vie quotidienne, études et mobilité",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "La famiglia est la famille, la scuola l’école, lo studente l’élève, l’insegnante l’enseignant. Gli studi désigne les études, tandis que lo stage ou il tirocinio désignent un stage. Pour se déplacer : il treno (train), la stazione (gare), il viaggio (voyage). Un biglietto est un billet, pas une facture."
+            },
+            {
+              "t": "p",
+              "c": "Mi chiamo Sara, studio economia e cerco un tirocinio a Torino : je m’appelle Sara, j’étudie l’économie et je cherche un stage à Turin. Pour écrire une demande polie : Buongiorno, vorrei ricevere informazioni sul tirocinio. Termine par Cordiali saluti. Adapte tu ou Lei au destinataire, sans mélanger les registres."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Tirocinio",
+                  "Stage en milieu professionnel."
+                ],
+                [
+                  "Biglietto",
+                  "Billet, notamment de transport."
+                ],
+                [
+                  "Cordiali saluti",
+                  "Formule de clôture d’un message professionnel."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Entreprise, économie et ETLV",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "L’azienda ou l’impresa est l’entreprise ; un dipendente est un salarié, il cliente un client, il fornitore un fournisseur. Il fatturato est le chiffre d’affaires, il costo un coût et l’utile un bénéfice. Ne confonds pas chiffre d’affaires et bénéfice : le bénéfice tient compte des charges. Una fattura signifie une facture ; una fabbrica, une usine."
+            },
+            {
+              "t": "p",
+              "c": "Cas fictif : L’impresa produce biciclette e vende i suoi prodotti ai negozi. Il fatturato cresce, ma aumentano anche i costi. L’entreprise fabrique des vélos et les vend aux magasins. Son chiffre d’affaires augmente, mais ses coûts aussi : la hausse de son bénéfice n’est donc pas démontrée. À l’oral ETLV, présente l’activité, les parties prenantes et un indicateur, puis explique une limite."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Fatturato",
+                  "Chiffre d’affaires, distinct du bénéfice."
+                ],
+                [
+                  "Utile",
+                  "Bénéfice."
+                ],
+                [
+                  "Dipendente",
+                  "Salarié."
+                ],
+                [
+                  "Fattura",
+                  "Facture."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Numérique, environnement et opinion",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "La rete est le réseau ou Internet selon le contexte ; i dati personali sont les données personnelles, una fonte une source, una notizia une nouvelle. Una notizia falsa est une fausse information : un grand nombre de partages n’en prouve pas la fiabilité. Vérifie l’auteur, la date et les preuves avant de relayer."
+            },
+            {
+              "t": "p",
+              "c": "L’ambiente est l’environnement, i rifiuti les déchets, il riciclo le recyclage et l’energia rinnovabile l’énergie renouvelable. Ridurre i rifiuti signifie réduire les déchets. Possiamo ridurre i rifiuti, tuttavia dobbiamo cambiare le nostre abitudini : nous pouvons réduire les déchets, cependant nous devons changer nos habitudes. Une proposition devient convaincante quand on en précise l’action, l’effet attendu et la limite."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Dati personali",
+                  "Données personnelles."
+                ],
+                [
+                  "Fonte",
+                  "Source d’une information."
+                ],
+                [
+                  "Rifiuti",
+                  "Déchets."
+                ],
+                [
+                  "Riciclo",
+                  "Recyclage."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "games": [
+        {
+          "id": "lng-it-voc-s1-qcm",
+          "type": "qcm",
+          "title": "Vie quotidienne, études et mobilité",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Quel mot désigne un stage ?",
+              "choices": [
+                "tirocinio",
+                "biglietto",
+                "stazione"
+              ],
+              "answer": 0,
+              "explain": "La réponse est explicitée dans le vocabulaire ou le cas de cette section."
+            },
+            {
+              "q": "Quelle formule termine un courriel professionnel ?",
+              "choices": [
+                "Cordiali saluti",
+                "Mi chiamo",
+                "Il treno"
+              ],
+              "answer": 0,
+              "explain": "La réponse est explicitée dans le vocabulaire ou le cas de cette section."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-voc-s2-qcm",
+          "type": "qcm",
+          "title": "Entreprise, économie et ETLV",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Quel mot correspond au chiffre d’affaires ?",
+              "choices": [
+                "fatturato",
+                "utile",
+                "costo"
+              ],
+              "answer": 0,
+              "explain": "La réponse est explicitée dans le vocabulaire ou le cas de cette section."
+            },
+            {
+              "q": "Que peut-on conclure de ce cas ?",
+              "choices": [
+                "Le chiffre d’affaires et les coûts augmentent.",
+                "Le bénéfice augmente nécessairement.",
+                "L’entreprise ne vend rien."
+              ],
+              "answer": 0,
+              "explain": "La réponse est explicitée dans le vocabulaire ou le cas de cette section."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-voc-s3-qcm",
+          "type": "qcm",
+          "title": "Numérique, environnement et opinion",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Que signifie i dati personali ?",
+              "choices": [
+                "Les données personnelles.",
+                "Les déchets.",
+                "Les sources."
+              ],
+              "answer": 0,
+              "explain": "La réponse est explicitée dans le vocabulaire ou le cas de cette section."
+            },
+            {
+              "q": "Quelle expression signifie réduire les déchets ?",
+              "choices": [
+                "ridurre i rifiuti",
+                "verificare una fonte",
+                "condividere una notizia"
+              ],
+              "answer": 0,
+              "explain": "La réponse est explicitée dans le vocabulaire ou le cas de cette section."
+            }
+          ],
+          "sectionOnly": true
+        }
+      ]
+    },
+    {
+      "id": "lng-ar-voc",
+      "name": "Arabe — Vocabulaire en contexte et ETLV",
+      "short": "Vocabulaire en contexte et ETLV",
+      "keywords": [
+        "Vocabulaire en contexte et ETLV",
+        "arabe"
+      ],
+      "intro": "Mots utiles pour la vie quotidienne, les études et les organisations. Les cas sont des supports pédagogiques fictifs, pas des statistiques sur un pays.",
+      "cours": [
+        {
+          "h": "Vie quotidienne, études et mobilité",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "La famille se dit الأسرة, l’école المدرسة, l’université الجامعة et l’étudiant الطالب (الطالبة au féminin). Le travail est العمل et le voyage السفر. Le train se dit القطار, la gare المحطة et le billet التذكرة. Les noms appris avec leur article peuvent le perdre selon la construction."
+            },
+            {
+              "t": "p",
+              "c": "Texte d’application : اسمي سلمى. أدرس في الجامعة وأذهب إلى المحطة بالحافلة. Salma se présente, dit qu’elle étudie à l’université et qu’elle va à la gare en bus. بالحافلة signifie en bus. Pour demander poliment : من فضلك، أين المحطة؟ (s’il vous plaît, où est la gare ?). Pour remercier : شكرا. Ces formulations sont en arabe standard."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "الجامعة",
+                  "L’université."
+                ],
+                [
+                  "المحطة",
+                  "La gare / la station."
+                ],
+                [
+                  "التذكرة",
+                  "Le billet."
+                ],
+                [
+                  "من فضلك",
+                  "S’il te plaît / s’il vous plaît, selon le destinataire."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Entreprise, économie et ETLV",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "L’entreprise se dit الشركة, le salarié الموظف, le client العميل et le fournisseur المورد. Le produit est المنتج, le prix السعر, le coût التكلفة et le bénéfice الربح. Une facture est فاتورة et une usine مصنع. Un chiffre de ventes élevé ne permet pas, à lui seul, de conclure à un bénéfice élevé : il faut prendre les charges en compte."
+            },
+            {
+              "t": "p",
+              "c": "Cas fictif : تنتج الشركة ملابس وتبيعها في متاجر محلية. ارتفعت المبيعات، لكن التكاليف ارتفعت أيضا. L’entreprise produit des vêtements et les vend dans des magasins locaux. Les ventes ont augmenté, mais les coûts aussi. Pour présenter une organisation en ETLV, précise son activité, ses clients et un enjeu, puis distingue les résultats observés de ton avis."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "الشركة",
+                  "L’entreprise."
+                ],
+                [
+                  "العميل",
+                  "Le client."
+                ],
+                [
+                  "التكلفة",
+                  "Le coût."
+                ],
+                [
+                  "الربح",
+                  "Le bénéfice."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Information, environnement et argumentation",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Les médias se disent وسائل الإعلام, la source المصدر et les données personnelles البيانات الشخصية. Vérifier une information se dit التحقق من المعلومات. Une publication partagée n’est pas forcément vraie : distingue l’auteur du message, l’auteur de la photographie et le site qui la relaie."
+            },
+            {
+              "t": "p",
+              "c": "L’environnement se dit البيئة, l’eau الماء, les déchets النفايات et l’énergie renouvelable الطاقة المتجددة. Réduire la consommation d’eau : تقليل استهلاك الماء. Exemple : يجب حماية البيئة وتقليل النفايات (il faut protéger l’environnement et réduire les déchets). Pour nuancer : هذا الحل مفيد، لكنه مكلف (cette solution est utile, mais elle est coûteuse). Le mot لكن introduit la réserve."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "المصدر",
+                  "La source."
+                ],
+                [
+                  "البيانات الشخصية",
+                  "Les données personnelles."
+                ],
+                [
+                  "البيئة",
+                  "L’environnement."
+                ],
+                [
+                  "الطاقة المتجددة",
+                  "L’énergie renouvelable."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "games": [
+        {
+          "id": "lng-ar-voc-s1-qcm",
+          "type": "qcm",
+          "title": "Vie quotidienne, études et mobilité",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Où Salma étudie-t-elle dans le texte ?",
+              "choices": [
+                "À l’université.",
+                "À la gare.",
+                "Dans le train."
+              ],
+              "answer": 0,
+              "explain": "La réponse est explicitée dans le vocabulaire ou le cas de cette section."
+            },
+            {
+              "q": "Que signifie التذكرة ?",
+              "choices": [
+                "Le billet.",
+                "La famille.",
+                "Le travail."
+              ],
+              "answer": 0,
+              "explain": "La réponse est explicitée dans le vocabulaire ou le cas de cette section."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-ar-voc-s2-qcm",
+          "type": "qcm",
+          "title": "Entreprise, économie et ETLV",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Quel mot signifie le bénéfice ?",
+              "choices": [
+                "الربح",
+                "التكلفة",
+                "السعر"
+              ],
+              "answer": 0,
+              "explain": "La réponse est explicitée dans le vocabulaire ou le cas de cette section."
+            },
+            {
+              "q": "Que dit le cas sur les coûts ?",
+              "choices": [
+                "Ils ont augmenté aussi.",
+                "Ils ont disparu.",
+                "Ils sont toujours inconnus dans le texte."
+              ],
+              "answer": 0,
+              "explain": "La réponse est explicitée dans le vocabulaire ou le cas de cette section."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-ar-voc-s3-qcm",
+          "type": "qcm",
+          "title": "Information, environnement et argumentation",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Que signifie البيانات الشخصية ?",
+              "choices": [
+                "Les données personnelles.",
+                "Les déchets.",
+                "L’eau."
+              ],
+              "answer": 0,
+              "explain": "La réponse est explicitée dans le vocabulaire ou le cas de cette section."
+            },
+            {
+              "q": "Quel objectif exprime تقليل استهلاك الماء ?",
+              "choices": [
+                "Réduire la consommation d’eau.",
+                "Augmenter le nombre de publications.",
+                "Vendre des déchets."
+              ],
+              "answer": 0,
+              "explain": "La réponse est explicitée dans le vocabulaire ou le cas de cette section."
+            }
+          ],
+          "sectionOnly": true
+        }
+      ]
+    },
+    {
+      "id": "lng-it-comp",
+      "name": "Italien — Compréhension, expression et médiation",
+      "short": "Compréhension, expression et médiation",
+      "keywords": [
+        "Compréhension, expression et médiation",
+        "italien"
+      ],
+      "intro": "Deux textes originaux d’entraînement accompagnés d’une méthode, de questions corrigées et de pistes d’oral. Ils ne sont pas des documents authentiques ni des épreuves officielles. Lis d’abord le texte puis justifie tes réponses.",
+      "cours": [
+        {
+          "h": "Comprendre un récit : un stage à Bologne",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Texte original d’entraînement : Mi chiamo Giulia e studio economia a Bologna. L’estate scorsa ho fatto un tirocinio in una piccola libreria. La mattina aiutavo i clienti e preparavo gli ordini. Un giorno la responsabile mi ha chiesto di creare una pagina per il negozio. Ho proposto di pubblicare consigli di lettura, ma non fotografie dei clienti senza il loro consenso. Vorrei continuare a lavorare nel settore culturale."
+            },
+            {
+              "t": "p",
+              "c": "Commence par identifier qui parle, où et à quelle période. Ho fatto situe un événement accompli ; aiutavo et preparavo décrivent les tâches habituelles. Mais introduit une limite au projet numérique. Pour justifier une réponse, relève quelques mots pertinents puis reformule : Giulia desidera lavorare nella cultura. Ne traduis pas mot à mot tout le document."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Libreria",
+                  "Librairie, et non bibliothèque."
+                ],
+                [
+                  "Consenso",
+                  "Consentement."
+                ],
+                [
+                  "Vorrei",
+                  "Je voudrais : projet souhaité."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Analyser un débat et préparer un oral",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Texte original d’entraînement : Un’associazione di quartiere vuole aprire un laboratorio di riparazione. Secondo i volontari, riparare gli oggetti permette di ridurre i rifiuti e di trasmettere competenze. Alcuni abitanti sostengono il progetto, mentre altri temono il rumore. L’associazione propone quindi un’apertura limitata al pomeriggio e una riunione mensile con i residenti. Il progetto non è ancora stato approvato."
+            },
+            {
+              "t": "p",
+              "c": "Sépare le projet de son adoption effective. Repère les acteurs, leurs arguments et le compromis. Pour l’oral : présente le document comme un texte pédagogique, formule la question « Come conciliare ambiente e vita di quartiere? », expose deux positions, puis justifie ton avis. Pour une médiation en français, résume fidèlement le compromis sans ajouter de chiffres. En interaction, demande un éclaircissement : Può spiegare questo punto?"
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Riparazione",
+                  "Réparation."
+                ],
+                [
+                  "Mentre",
+                  "Tandis que ; met ici deux positions en contraste."
+                ],
+                [
+                  "Non ancora",
+                  "Pas encore."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "games": [
+        {
+          "id": "lng-it-comp-s1-qcm",
+          "type": "qcm",
+          "title": "Comprendre un récit : un stage à Bologne",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Où Giulia a-t-elle effectué son stage ?",
+              "choices": [
+                "Dans une librairie.",
+                "Dans une banque.",
+                "Dans une gare."
+              ],
+              "answer": 0,
+              "explain": "Cette information se trouve dans le texte et son commentaire méthodologique."
+            },
+            {
+              "q": "Quelle limite pose-t-elle à la publication des photos ?",
+              "choices": [
+                "Obtenir le consentement des clients.",
+                "Publier toutes les photos.",
+                "Abandonner toute présence numérique."
+              ],
+              "answer": 0,
+              "explain": "Cette information se trouve dans le texte et son commentaire méthodologique."
+            },
+            {
+              "q": "Que décrivent aiutavo et preparavo ?",
+              "choices": [
+                "Des tâches habituelles pendant le stage.",
+                "Un projet futur.",
+                "Une interdiction."
+              ],
+              "answer": 0,
+              "explain": "Cette information se trouve dans le texte et son commentaire méthodologique."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-comp-s2-qcm",
+          "type": "qcm",
+          "title": "Analyser un débat et préparer un oral",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Quel est l’objectif annoncé du laboratoire ?",
+              "choices": [
+                "Réparer pour réduire les déchets et transmettre des compétences.",
+                "Vendre seulement des objets neufs.",
+                "Supprimer les réunions."
+              ],
+              "answer": 0,
+              "explain": "Cette information se trouve dans le texte et son commentaire méthodologique."
+            },
+            {
+              "q": "Quelle inquiétude certains habitants expriment-ils ?",
+              "choices": [
+                "Le bruit.",
+                "Le prix du train.",
+                "Le manque de livres."
+              ],
+              "answer": 0,
+              "explain": "Cette information se trouve dans le texte et son commentaire méthodologique."
+            },
+            {
+              "q": "Le projet est-il déjà approuvé ?",
+              "choices": [
+                "Non, pas encore.",
+                "Oui, définitivement.",
+                "Le texte ne mentionne aucun projet."
+              ],
+              "answer": 0,
+              "explain": "Cette information se trouve dans le texte et son commentaire méthodologique."
+            }
+          ],
+          "sectionOnly": true
+        }
+      ]
+    },
+    {
+      "id": "lng-ar-comp",
+      "name": "Arabe — Compréhension, expression et médiation",
+      "short": "Compréhension, expression et médiation",
+      "keywords": [
+        "Compréhension, expression et médiation",
+        "arabe"
+      ],
+      "intro": "Deux textes originaux d’entraînement accompagnés d’une méthode, de questions corrigées et de pistes d’oral. Ils ne sont pas des documents authentiques ni des épreuves officielles. Lis d’abord le texte puis justifie tes réponses.",
+      "cours": [
+        {
+          "h": "Comprendre un récit : un stage dans une librairie",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Texte original d’entraînement en arabe standard : اسمي مريم وأدرس الاقتصاد. في الصيف الماضي، عملت في مكتبة تبيع الكتب في تونس. كنت أساعد الزبائن وأرتب الكتب. طلبت مني المديرة إعداد صفحة للمكتبة على الإنترنت. اقترحت نشر معلومات عن الكتب، لكنني رفضت نشر صور الزبائن دون موافقتهم. أريد العمل في المجال الثقافي."
+            },
+            {
+              "t": "p",
+              "c": "Maryam raconte une expérience passée dans une librairie à Tunis. Le mot مكتبة peut désigner une bibliothèque ou une librairie : تبيع الكتب (qui vend des livres) lève ici l’ambiguïté. Repère كنت أساعد : activité habituelle dans le passé. Pour comprendre le projet numérique, distingue l’action proposée et celle refusée. Cite le texte pour justifier, puis reformule sans inventer la durée exacte du stage."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "الزبائن",
+                  "Les clients."
+                ],
+                [
+                  "موافقتهم",
+                  "Leur accord / consentement."
+                ],
+                [
+                  "في الصيف الماضي",
+                  "L’été dernier."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Analyser un projet et préparer un oral",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Texte original d’entraînement en arabe standard : تريد جمعية محلية إنشاء ورشة لإصلاح الأجهزة. يقول المتطوعون إن الإصلاح يقلل النفايات ويساعد السكان على تعلم مهارات جديدة. يدعم بعض السكان المشروع، لكن آخرين يخافون من الضجيج. لذلك تقترح الجمعية فتح الورشة بعد الظهر فقط وتنظيم لقاء شهري مع السكان. لم توافق البلدية على المشروع بعد."
+            },
+            {
+              "t": "p",
+              "c": "Le document présente un projet d’atelier de réparation, ses avantages et une objection. الجمعية est l’association ; البلدية, la municipalité. لذلك relie l’inquiétude au compromis proposé. La dernière phrase indique une décision qui n’a pas encore été obtenue. Pour un oral, présente le support comme un texte pédagogique, expose les deux positions, puis formule ton avis avec في رأيي. Pour demander une clarification : هل يمكنك توضيح هذه الفكرة؟ (peux-tu expliquer cette idée ?)."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "ورشة",
+                  "Atelier."
+                ],
+                [
+                  "الضجيج",
+                  "Bruit."
+                ],
+                [
+                  "لم… بعد",
+                  "Négation correspondant ici à pas encore."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "games": [
+        {
+          "id": "lng-ar-comp-s1-qcm",
+          "type": "qcm",
+          "title": "Comprendre un récit : un stage dans une librairie",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Pourquoi مكتبة désigne-t-il ici une librairie ?",
+              "choices": [
+                "Le texte précise qu’elle vend des livres.",
+                "Le mot signifie toujours université.",
+                "La ville impose ce sens."
+              ],
+              "answer": 0,
+              "explain": "Cette information se trouve dans le texte et son commentaire méthodologique."
+            },
+            {
+              "q": "Que refuse Maryam ?",
+              "choices": [
+                "Publier des photos sans l’accord des clients.",
+                "Donner des informations sur les livres.",
+                "Travailler dans la culture."
+              ],
+              "answer": 0,
+              "explain": "Cette information se trouve dans le texte et son commentaire méthodologique."
+            },
+            {
+              "q": "À quelle période se déroule l’expérience racontée ?",
+              "choices": [
+                "L’été dernier.",
+                "L’année prochaine.",
+                "Le texte parle uniquement du présent."
+              ],
+              "answer": 0,
+              "explain": "Cette information se trouve dans le texte et son commentaire méthodologique."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-ar-comp-s2-qcm",
+          "type": "qcm",
+          "title": "Analyser un projet et préparer un oral",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Quel est le projet de l’association ?",
+              "choices": [
+                "Un atelier de réparation des appareils.",
+                "Une nouvelle gare.",
+                "Une librairie en ligne."
+              ],
+              "answer": 0,
+              "explain": "Cette information se trouve dans le texte et son commentaire méthodologique."
+            },
+            {
+              "q": "Quelle inquiétude est mentionnée ?",
+              "choices": [
+                "Le bruit.",
+                "La fermeture de l’école.",
+                "Le prix du train."
+              ],
+              "answer": 0,
+              "explain": "Cette information se trouve dans le texte et son commentaire méthodologique."
+            },
+            {
+              "q": "La municipalité a-t-elle déjà donné son accord ?",
+              "choices": [
+                "Non, pas encore.",
+                "Oui, le texte le dit.",
+                "Aucune municipalité n’est mentionnée."
+              ],
+              "answer": 0,
+              "explain": "Cette information se trouve dans le texte et son commentaire méthodologique."
+            }
+          ],
+          "sectionOnly": true
+        }
+      ]
+    },
+    {
+      "id": "lng-it-culture-terminale",
+      "name": "Italien — Terminale · axes culturels",
+      "short": "Terminale · axes culturels",
+      "keywords": [
+        "Terminale · axes culturels",
+        "italien"
+      ],
+      "intro": "Repères du programme de Terminale, applicable depuis la rentrée 2026. Ces fiches proposent des points de départ et des phrases d’analyse, à compléter avec les documents authentiques étudiés en classe. En voie technologique, au moins trois axes sont étudiés dans l’année ; le sixième est recommandé. Ce ne sont pas des fiches de spécialité LLCER.",
+      "cours": [
+        {
+          "h": "Axe 1 — Espace privé et espace public",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "La place, la piazza, est un espace public majeur dans de nombreuses villes italiennes, mais son usage dépend des habitants, des commerces, des touristes et des règles municipales. Un espace ouvert peut aussi exclure certains usages. La frontière entre privé et public se déplace également quand une expérience intime est publiée en ligne."
+            },
+            {
+              "t": "p",
+              "c": "Una piazza è uno spazio condiviso, ma gli usi possono entrare in conflitto. Une place est un espace partagé, mais ses usages peuvent entrer en conflit. Analyse qui peut entrer, qui décide et qui tire un avantage de la transformation d’un lieu."
+            },
+            {
+              "t": "p",
+              "c": "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM."
+            },
+            {
+              "t": "p",
+              "c": "Repères lexicaux de cet axe : spazio condiviso : Espace partagé.; commercio : Commerce."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "piazza",
+                  "Place publique."
+                ],
+                [
+                  "spazio condiviso",
+                  "Espace partagé."
+                ],
+                [
+                  "commercio",
+                  "Commerce."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Axe 2 — Territoire et mémoire",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Un monument ou un lieu de mémoire sélectionne des événements et propose une façon de les raconter. Dans un document italien consacré à la Résistance, distingue l’événement historique, sa commémoration ultérieure et les usages actuels du souvenir. Une mémoire n’est pas une photographie neutre et exhaustive du passé."
+            },
+            {
+              "t": "p",
+              "c": "Un luogo della memoria invita a ricordare e a interrogare il passato. Un lieu de mémoire invite à se souvenir et à interroger le passé. Pour commenter une plaque, repère la date commémorée, la date de pose et le groupe qui prend la parole."
+            },
+            {
+              "t": "p",
+              "c": "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM."
+            },
+            {
+              "t": "p",
+              "c": "Repères lexicaux de cet axe : targa : Plaque, notamment commémorative.; commemorazione : Commémoration."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "memoria",
+                  "Mémoire."
+                ],
+                [
+                  "targa",
+                  "Plaque, notamment commémorative."
+                ],
+                [
+                  "commemorazione",
+                  "Commémoration."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Axe 3 — Fictions et réalités",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Le cinéma et le roman peuvent s’inspirer de faits sociaux sans constituer un reportage. Le néoréalisme italien de l’après-guerre met notamment en scène des difficultés de la vie quotidienne. Même quand une œuvre semble proche du réel, cadrage, montage, personnages et narration construisent un point de vue."
+            },
+            {
+              "t": "p",
+              "c": "Un film può mostrare una realtà sociale senza essere un documentario. Un film peut montrer une réalité sociale sans être un documentaire. Sépare le personnage de l’acteur et le narrateur de l’auteur ; justifie une interprétation par une scène précise."
+            },
+            {
+              "t": "p",
+              "c": "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM."
+            },
+            {
+              "t": "p",
+              "c": "Repères lexicaux de cet axe : personaggio : Personnage.; montaggio : Montage cinématographique."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "punto di vista",
+                  "Point de vue."
+                ],
+                [
+                  "personaggio",
+                  "Personnage."
+                ],
+                [
+                  "montaggio",
+                  "Montage cinématographique."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Axe 4 — Enjeux et formes de la communication",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Un message n’a pas le même effet selon qu’il paraît dans un journal, une publicité ou un réseau social. Pour un document italien, repère l’émetteur, le destinataire, le support et la visée : informer, convaincre, vendre ou divertir. Un slogan cherche souvent la mémorisation plutôt que la démonstration."
+            },
+            {
+              "t": "p",
+              "c": "Prima di condividere una notizia, bisogna verificarne la fonte. Avant de partager une information, il faut en vérifier la source. Compare un titre au contenu de l’article et demande-toi quelles informations ont été omises ; la popularité n’est pas une preuve."
+            },
+            {
+              "t": "p",
+              "c": "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM."
+            },
+            {
+              "t": "p",
+              "c": "Repères lexicaux de cet axe : destinatario : Destinataire.; notizia : Nouvelle / information."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "fonte",
+                  "Source."
+                ],
+                [
+                  "destinatario",
+                  "Destinataire."
+                ],
+                [
+                  "notizia",
+                  "Nouvelle / information."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Axe 5 — Citoyenneté et mondes virtuels",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Participer à un débat numérique peut faciliter l’expression citoyenne, mais impose de protéger les personnes et de distinguer critique et harcèlement. Un cas italien de mobilisation en ligne doit être étudié à partir d’acteurs et d’actions identifiables, sans supposer que chaque partage conduit à une action sur le terrain."
+            },
+            {
+              "t": "p",
+              "c": "Essere cittadini online significa avere diritti e responsabilità. Être citoyen en ligne signifie avoir des droits et des responsabilités. Avant de publier une photo ou un témoignage, réfléchis à la vie privée, au consentement et aux conséquences d’une diffusion durable."
+            },
+            {
+              "t": "p",
+              "c": "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM."
+            },
+            {
+              "t": "p",
+              "c": "Repères lexicaux de cet axe : consenso : Consentement.; molestie : Harcèlement / comportements importuns, selon le contexte."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "responsabilità",
+                  "Responsabilité."
+                ],
+                [
+                  "consenso",
+                  "Consentement."
+                ],
+                [
+                  "molestie",
+                  "Harcèlement / comportements importuns, selon le contexte."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Axe 6 — De la République à l’Europe",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Le référendum de 1946 conduit l’Italie à devenir une république ; la Constitution entre en vigueur en 1948. L’Italie figure parmi les six États signataires des traités de Rome de 1957, une étape de la construction européenne. Ne confonds pas ces communautés initiales avec l’Union européenne sous sa forme actuelle."
+            },
+            {
+              "t": "p",
+              "c": "La cittadinanza si esercita a livello nazionale ed europeo. La citoyenneté s’exerce à l’échelle nationale et européenne. Compare les niveaux de décision dans un exemple précis : une institution nationale et une institution européenne ne disposent pas automatiquement des mêmes compétences."
+            },
+            {
+              "t": "p",
+              "c": "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM."
+            },
+            {
+              "t": "p",
+              "c": "Repères lexicaux de cet axe : Costituzione : Constitution.; trattato : Traité."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Repubblica",
+                  "République."
+                ],
+                [
+                  "Costituzione",
+                  "Constitution."
+                ],
+                [
+                  "trattato",
+                  "Traité."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "games": [
+        {
+          "id": "lng-it-culture-terminale-s1-qcm",
+          "type": "qcm",
+          "title": "Axe 1 — Espace privé et espace public",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Dans cette fiche, que signifie « piazza » ?",
+              "choices": [
+                "Place publique.",
+                "Espace partagé.",
+                "Commerce."
+              ],
+              "answer": 0,
+              "explain": "Le vocabulaire de cette fiche définit piazza : Place publique."
+            },
+            {
+              "q": "Pourquoi une place publique peut-elle faire débat ?",
+              "choices": [
+                "Ses usages peuvent opposer différents acteurs.",
+                "Tous ses usagers ont nécessairement le même intérêt.",
+                "Un espace ouvert n’a aucune règle."
+              ],
+              "answer": 0,
+              "explain": "La place, la piazza, est un espace public majeur dans de nombreuses villes italiennes, mais son usage dépend des habitants, des commerces, des touristes et des règles municipales. Un espace ouvert peut aussi exclure certains usages. La frontière entre privé et public se déplace également quand une expérience intime est publiée en ligne."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-culture-terminale-s2-qcm",
+          "type": "qcm",
+          "title": "Axe 2 — Territoire et mémoire",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Dans cette fiche, que signifie « memoria » ?",
+              "choices": [
+                "Mémoire.",
+                "Plaque, notamment commémorative.",
+                "Commémoration."
+              ],
+              "answer": 0,
+              "explain": "Le vocabulaire de cette fiche définit memoria : Mémoire."
+            },
+            {
+              "q": "Quelles dates distinguer sur une plaque commémorative ?",
+              "choices": [
+                "L’événement et la pose de la plaque.",
+                "Une seule date sans contexte.",
+                "Seulement l’année de lecture de la plaque."
+              ],
+              "answer": 0,
+              "explain": "Un monument ou un lieu de mémoire sélectionne des événements et propose une façon de les raconter. Dans un document italien consacré à la Résistance, distingue l’événement historique, sa commémoration ultérieure et les usages actuels du souvenir. Une mémoire n’est pas une photographie neutre et exhaustive du passé."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-culture-terminale-s3-qcm",
+          "type": "qcm",
+          "title": "Axe 3 — Fictions et réalités",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Dans cette fiche, que signifie « punto di vista » ?",
+              "choices": [
+                "Point de vue.",
+                "Personnage.",
+                "Montage cinématographique."
+              ],
+              "answer": 0,
+              "explain": "Le vocabulaire de cette fiche définit punto di vista : Point de vue."
+            },
+            {
+              "q": "Un film néoréaliste est-il automatiquement un documentaire ?",
+              "choices": [
+                "Non, sa narration construit un point de vue.",
+                "Oui, s’il montre une rue.",
+                "Oui, si ses personnages ont des problèmes quotidiens."
+              ],
+              "answer": 0,
+              "explain": "Le cinéma et le roman peuvent s’inspirer de faits sociaux sans constituer un reportage. Le néoréalisme italien de l’après-guerre met notamment en scène des difficultés de la vie quotidienne. Même quand une œuvre semble proche du réel, cadrage, montage, personnages et narration construisent un point de vue."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-culture-terminale-s4-qcm",
+          "type": "qcm",
+          "title": "Axe 4 — Enjeux et formes de la communication",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Dans cette fiche, que signifie « fonte » ?",
+              "choices": [
+                "Source.",
+                "Destinataire.",
+                "Nouvelle / information."
+              ],
+              "answer": 0,
+              "explain": "Le vocabulaire de cette fiche définit fonte : Source."
+            },
+            {
+              "q": "Comment évaluer un titre de presse ?",
+              "choices": [
+                "Le confronter au contenu et aux sources de l’article.",
+                "Le croire dès qu’il est partagé.",
+                "Le traiter toujours comme une démonstration complète."
+              ],
+              "answer": 0,
+              "explain": "Un message n’a pas le même effet selon qu’il paraît dans un journal, une publicité ou un réseau social. Pour un document italien, repère l’émetteur, le destinataire, le support et la visée : informer, convaincre, vendre ou divertir. Un slogan cherche souvent la mémorisation plutôt que la démonstration."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-culture-terminale-s5-qcm",
+          "type": "qcm",
+          "title": "Axe 5 — Citoyenneté et mondes virtuels",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Dans cette fiche, que signifie « responsabilità » ?",
+              "choices": [
+                "Responsabilité.",
+                "Consentement.",
+                "Harcèlement / comportements importuns, selon le contexte."
+              ],
+              "answer": 0,
+              "explain": "Le vocabulaire de cette fiche définit responsabilità : Responsabilité."
+            },
+            {
+              "q": "Que faut-il examiner avant de publier un témoignage ?",
+              "choices": [
+                "La vie privée, le consentement et la diffusion durable.",
+                "Seulement le nombre de partages attendu.",
+                "Le principe que tout partage garantit une action réelle."
+              ],
+              "answer": 0,
+              "explain": "Participer à un débat numérique peut faciliter l’expression citoyenne, mais impose de protéger les personnes et de distinguer critique et harcèlement. Un cas italien de mobilisation en ligne doit être étudié à partir d’acteurs et d’actions identifiables, sans supposer que chaque partage conduit à une action sur le terrain."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-culture-terminale-s6-qcm",
+          "type": "qcm",
+          "title": "Axe 6 — De la République à l’Europe",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Dans cette fiche, que signifie « Repubblica » ?",
+              "choices": [
+                "République.",
+                "Constitution.",
+                "Traité."
+              ],
+              "answer": 0,
+              "explain": "Le vocabulaire de cette fiche définit Repubblica : République."
+            },
+            {
+              "q": "Quelle chronologie correspond à la fiche ?",
+              "choices": [
+                "République en 1946, Constitution en 1948, traités de Rome en 1957.",
+                "Constitution en 1946, République en 1957, traités en 1948.",
+                "Union européenne actuelle créée telle quelle en 1946."
+              ],
+              "answer": 0,
+              "explain": "Le référendum de 1946 conduit l’Italie à devenir une république ; la Constitution entre en vigueur en 1948. L’Italie figure parmi les six États signataires des traités de Rome de 1957, une étape de la construction européenne. Ne confonds pas ces communautés initiales avec l’Union européenne sous sa forme actuelle."
+            }
+          ],
+          "sectionOnly": true
+        }
+      ]
+    },
+    {
+      "id": "lng-ar-culture-terminale",
+      "name": "Arabe — Terminale · axes culturels",
+      "short": "Terminale · axes culturels",
+      "keywords": [
+        "Terminale · axes culturels",
+        "arabe"
+      ],
+      "intro": "Repères du programme de Terminale, applicable depuis la rentrée 2026. Ces fiches proposent des points de départ et des phrases d’analyse, à compléter avec les documents authentiques étudiés en classe. En voie technologique, au moins trois axes sont étudiés dans l’année ; le sixième est recommandé. Ce ne sont pas des fiches de spécialité LLCER.",
+      "cours": [
+        {
+          "h": "Axe 1 — Espace privé et espace public",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Un logement, une rue ou un café ne donne pas les mêmes possibilités de parole et de rencontre. Dans une ville du monde arabe, l’étude d’un lieu public doit tenir compte du quartier, des usages et des personnes présentes. La diffusion d’images d’un espace privé peut aussi changer la frontière entre intime et public."
+            },
+            {
+              "t": "p",
+              "c": "ليس كل ما يمكن نشره مناسبا للنشر. Tout ce qui peut être publié n’est pas nécessairement approprié à la publication. Pour analyser un document, identifie le lieu, les règles d’accès et les effets de l’exposition publique sur les personnes."
+            },
+            {
+              "t": "p",
+              "c": "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM."
+            },
+            {
+              "t": "p",
+              "c": "Repères lexicaux de cet axe : الحياة الخاصة : La vie privée.; النشر : La publication / la diffusion."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "الفضاء العام",
+                  "L’espace public."
+                ],
+                [
+                  "الحياة الخاصة",
+                  "La vie privée."
+                ],
+                [
+                  "النشر",
+                  "La publication / la diffusion."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Axe 2 — Territoire et mémoire",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Un territoire peut porter plusieurs mémoires, transmises par les familles, les noms de rues, les bâtiments ou les archives. Dans un document du monde arabe, distingue la période évoquée du moment où le récit est produit. Des souvenirs différents ne se départagent pas par le seul nombre de personnes qui les répètent."
+            },
+            {
+              "t": "p",
+              "c": "تساعدنا الذاكرة على فهم علاقتنا بالمكان. La mémoire nous aide à comprendre notre relation au lieu. Compare deux récits en repérant leur auteur, leur date et leurs silences ; un témoignage est une source située, qu’il faut croiser avec d’autres documents."
+            },
+            {
+              "t": "p",
+              "c": "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM."
+            },
+            {
+              "t": "p",
+              "c": "Repères lexicaux de cet axe : الشهادة : Le témoignage, dans le contexte de cette fiche.; الأرشيف : Les archives."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "الذاكرة",
+                  "La mémoire."
+                ],
+                [
+                  "الشهادة",
+                  "Le témoignage, dans le contexte de cette fiche."
+                ],
+                [
+                  "الأرشيف",
+                  "Les archives."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Axe 3 — Fictions et réalités",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Un roman, un conte ou un film peut rendre visible une réalité sociale tout en inventant ses personnages et son intrigue. La fiction n’est pas une fausse information : elle se présente dans un cadre artistique. À l’inverse, une fabrication diffusée comme un fait réel trompe sur son statut."
+            },
+            {
+              "t": "p",
+              "c": "قد تكشف الرواية حقيقة اجتماعية بشخصيات خيالية. Le roman peut révéler une réalité sociale à travers des personnages fictifs. Distingue l’auteur, le narrateur et le personnage ; interprète une scène à partir d’indices précis sans prendre tous ses détails pour des archives."
+            },
+            {
+              "t": "p",
+              "c": "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM."
+            },
+            {
+              "t": "p",
+              "c": "Repères lexicaux de cet axe : الشخصية : Le personnage, dans un récit.; الخيال : L’imagination / la fiction."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "الرواية",
+                  "Le roman."
+                ],
+                [
+                  "الشخصية",
+                  "Le personnage, dans un récit."
+                ],
+                [
+                  "الخيال",
+                  "L’imagination / la fiction."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Axe 4 — Enjeux et formes de la communication",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "L’arabe standard est fréquent dans l’information écrite et dans de nombreuses situations formelles ; les usages dialectaux varient selon les lieux, les supports et les destinataires. Un choix de langue peut produire proximité ou distance, mais ne permet pas à lui seul de juger la fiabilité d’un message."
+            },
+            {
+              "t": "p",
+              "c": "تختلف طريقة التعبير بحسب الجمهور ووسيلة التواصل. La manière de s’exprimer varie selon le public et le moyen de communication. Pour analyser un message, identifie émetteur, public, support et objectif. Sépare information, opinion et publicité ; cite un indice pour justifier chaque distinction."
+            },
+            {
+              "t": "p",
+              "c": "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM."
+            },
+            {
+              "t": "p",
+              "c": "Repères lexicaux de cet axe : وسيلة التواصل : Le moyen de communication.; الإعلان : La publicité / l’annonce."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "الجمهور",
+                  "Le public."
+                ],
+                [
+                  "وسيلة التواصل",
+                  "Le moyen de communication."
+                ],
+                [
+                  "الإعلان",
+                  "La publicité / l’annonce."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Axe 5 — Citoyenneté et mondes virtuels",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Les espaces numériques peuvent donner de la visibilité à une initiative citoyenne tout en exposant les personnes à la surveillance, au harcèlement ou à la désinformation. Étudie un cas situé plutôt que de parler de pratiques identiques dans tous les pays arabes. La liberté d’expression ne dispense pas de vérifier les faits et de respecter les personnes."
+            },
+            {
+              "t": "p",
+              "c": "قبل مشاركة خبر، تحقق من مصدره وتاريخه. Avant de partager une information, vérifie sa source et sa date. Pour une image, recherche aussi son contexte : une photographie authentique peut être trompeuse si elle est attribuée au mauvais événement."
+            },
+            {
+              "t": "p",
+              "c": "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM."
+            },
+            {
+              "t": "p",
+              "c": "Repères lexicaux de cet axe : المصدر : La source.; التحقق : La vérification."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "المواطنة",
+                  "La citoyenneté."
+                ],
+                [
+                  "المصدر",
+                  "La source."
+                ],
+                [
+                  "التحقق",
+                  "La vérification."
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Axe 6 — Focale Égypte et Liban : arts et histoire",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "La focale de Terminale concerne l’Égypte et le Liban, en reliant création artistique et histoire. Naguib Mahfouz, écrivain égyptien, situe une partie de son œuvre au Caire ; la chanteuse libanaise Fairouz permet d’aborder les liens entre chanson, attachement à un lieu et mémoire collective. Ces deux trajectoires ne résument pas les scènes artistiques de leurs pays."
+            },
+            {
+              "t": "p",
+              "c": "يرتبط الأدب والفن بالتاريخ دون أن يكونا نسخة منه. La littérature et l’art sont liés à l’histoire sans en être une copie. Pour étudier un extrait, précise œuvre, auteur, date et contexte. Une chanson ou un roman se commente comme une création, pas comme un relevé exhaustif des événements."
+            },
+            {
+              "t": "p",
+              "c": "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM."
+            },
+            {
+              "t": "p",
+              "c": "Repères lexicaux de cet axe : التاريخ : L’histoire.; الأغنية : La chanson."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "الأدب",
+                  "La littérature."
+                ],
+                [
+                  "التاريخ",
+                  "L’histoire."
+                ],
+                [
+                  "الأغنية",
+                  "La chanson."
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "games": [
+        {
+          "id": "lng-ar-culture-terminale-s1-qcm",
+          "type": "qcm",
+          "title": "Axe 1 — Espace privé et espace public",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Dans cette fiche, que signifie « الفضاء العام » ?",
+              "choices": [
+                "L’espace public.",
+                "La vie privée.",
+                "La publication / la diffusion."
+              ],
+              "answer": 0,
+              "explain": "Le vocabulaire de cette fiche définit الفضاء العام : L’espace public."
+            },
+            {
+              "q": "Que peut changer la publication d’une image privée ?",
+              "choices": [
+                "La frontière entre intimité et exposition publique.",
+                "Elle garantit le consentement de tous.",
+                "Elle supprime tous les effets sur les personnes."
+              ],
+              "answer": 0,
+              "explain": "Un logement, une rue ou un café ne donne pas les mêmes possibilités de parole et de rencontre. Dans une ville du monde arabe, l’étude d’un lieu public doit tenir compte du quartier, des usages et des personnes présentes. La diffusion d’images d’un espace privé peut aussi changer la frontière entre intime et public."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-ar-culture-terminale-s2-qcm",
+          "type": "qcm",
+          "title": "Axe 2 — Territoire et mémoire",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Dans cette fiche, que signifie « الذاكرة » ?",
+              "choices": [
+                "La mémoire.",
+                "Le témoignage, dans le contexte de cette fiche.",
+                "Les archives."
+              ],
+              "answer": 0,
+              "explain": "Le vocabulaire de cette fiche définit الذاكرة : La mémoire."
+            },
+            {
+              "q": "Comment utiliser un témoignage de mémoire ?",
+              "choices": [
+                "Le situer et le croiser avec d’autres sources.",
+                "Le déclarer exhaustif.",
+                "Le croire uniquement parce qu’il est souvent répété."
+              ],
+              "answer": 0,
+              "explain": "Un territoire peut porter plusieurs mémoires, transmises par les familles, les noms de rues, les bâtiments ou les archives. Dans un document du monde arabe, distingue la période évoquée du moment où le récit est produit. Des souvenirs différents ne se départagent pas par le seul nombre de personnes qui les répètent."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-ar-culture-terminale-s3-qcm",
+          "type": "qcm",
+          "title": "Axe 3 — Fictions et réalités",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Dans cette fiche, que signifie « الرواية » ?",
+              "choices": [
+                "Le roman.",
+                "Le personnage, dans un récit.",
+                "L’imagination / la fiction."
+              ],
+              "answer": 0,
+              "explain": "Le vocabulaire de cette fiche définit الرواية : Le roman."
+            },
+            {
+              "q": "Pourquoi une fiction n’est-elle pas une fausse information ?",
+              "choices": [
+                "Elle se présente dans un cadre artistique.",
+                "Tous ses détails sont des archives.",
+                "Le narrateur est toujours son auteur réel."
+              ],
+              "answer": 0,
+              "explain": "Un roman, un conte ou un film peut rendre visible une réalité sociale tout en inventant ses personnages et son intrigue. La fiction n’est pas une fausse information : elle se présente dans un cadre artistique. À l’inverse, une fabrication diffusée comme un fait réel trompe sur son statut."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-ar-culture-terminale-s4-qcm",
+          "type": "qcm",
+          "title": "Axe 4 — Enjeux et formes de la communication",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Dans cette fiche, que signifie « الجمهور » ?",
+              "choices": [
+                "Le public.",
+                "Le moyen de communication.",
+                "La publicité / l’annonce."
+              ],
+              "answer": 0,
+              "explain": "Le vocabulaire de cette fiche définit الجمهور : Le public."
+            },
+            {
+              "q": "Le choix de l’arabe standard suffit-il à prouver la fiabilité ?",
+              "choices": [
+                "Non, il faut aussi examiner les sources et les preuves.",
+                "Oui, quel que soit le message.",
+                "Oui, s’il s’agit d’une publicité."
+              ],
+              "answer": 0,
+              "explain": "L’arabe standard est fréquent dans l’information écrite et dans de nombreuses situations formelles ; les usages dialectaux varient selon les lieux, les supports et les destinataires. Un choix de langue peut produire proximité ou distance, mais ne permet pas à lui seul de juger la fiabilité d’un message."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-ar-culture-terminale-s5-qcm",
+          "type": "qcm",
+          "title": "Axe 5 — Citoyenneté et mondes virtuels",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Dans cette fiche, que signifie « المواطنة » ?",
+              "choices": [
+                "La citoyenneté.",
+                "La source.",
+                "La vérification."
+              ],
+              "answer": 0,
+              "explain": "Le vocabulaire de cette fiche définit المواطنة : La citoyenneté."
+            },
+            {
+              "q": "Comment une photographie authentique peut-elle tromper ?",
+              "choices": [
+                "Si elle est attribuée au mauvais événement.",
+                "Elle ne peut jamais tromper.",
+                "Sa date ne compte jamais."
+              ],
+              "answer": 0,
+              "explain": "Les espaces numériques peuvent donner de la visibilité à une initiative citoyenne tout en exposant les personnes à la surveillance, au harcèlement ou à la désinformation. Étudie un cas situé plutôt que de parler de pratiques identiques dans tous les pays arabes. La liberté d’expression ne dispense pas de vérifier les faits et de respecter les personnes."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-ar-culture-terminale-s6-qcm",
+          "type": "qcm",
+          "title": "Axe 6 — Focale Égypte et Liban : arts et histoire",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Dans cette fiche, que signifie « الأدب » ?",
+              "choices": [
+                "La littérature.",
+                "L’histoire.",
+                "La chanson."
+              ],
+              "answer": 0,
+              "explain": "Le vocabulaire de cette fiche définit الأدب : La littérature."
+            },
+            {
+              "q": "Quel rapprochement correspond à la fiche ?",
+              "choices": [
+                "Mahfouz et le Caire ; Fairouz et la chanson libanaise.",
+                "Mahfouz et la chanson libanaise ; Fairouz et le roman cairote.",
+                "Deux trajectoires résumant intégralement tous les arts des deux pays."
+              ],
+              "answer": 0,
+              "explain": "La focale de Terminale concerne l’Égypte et le Liban, en reliant création artistique et histoire. Naguib Mahfouz, écrivain égyptien, situe une partie de son œuvre au Caire ; la chanteuse libanaise Fairouz permet d’aborder les liens entre chanson, attachement à un lieu et mémoire collective. Ces deux trajectoires ne résument pas les scènes artistiques de leurs pays."
+            }
+          ],
+          "sectionOnly": true
         }
       ]
     }

@@ -7,7 +7,6 @@ export default {
   studyEnglish: "الإنجليزية",
   studyItalian: "الإيطالية",
   studySpanish: "الإسبانية",
-  studyLanguagesSoon: "دروس العربية والإيطالية قادمة لاحقًا. سيتم حفظ اختيارك.",
   studyLanguageCourseSoon: "دروس هذه اللغة قادمة لاحقًا.",
 
   timeRepaired: "تم استبعاد أوقات دراسة قديمة غير صحيحة. يبدأ احتساب الوقت من جديد للموضوعات المعنية.",

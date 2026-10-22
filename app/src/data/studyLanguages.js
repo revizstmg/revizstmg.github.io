@@ -12,5 +12,5 @@ export function normalizeStudyLanguages(values) {
 export function chaptersForLanguages(chapters, values) {
   const languages = normalizeStudyLanguages(values)
   if (!languages.length) return chapters
-  return chapters.filter(chapter => languages.some(id => chapter.id.startsWith(`lng-${id}-`)))
+  return chapters.filter(chapter => chapter.id === 'p1-lng-axes' || languages.some(id => chapter.id.startsWith(`lng-${id}-`) || chapter.id === `p1-lng-${id}`))
 }
