@@ -1,3 +1,4 @@
+import { studySeconds, activeSeconds } from './data/studyTime.js'
 import { SHOP_LEVELS, purchaseItem, equipItem, collectReward, walletRevision } from './data/shop.js'
 import { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback } from 'react'
 import { SUBJECTS, ALL_CHAPTERS, chapitreDuJeu, exercicesParChapitre, EXERCICES_POUR_MAITRISER } from './data/index.js'
@@ -668,9 +669,9 @@ export function StoreProvider({ children }) {
 
   // Temps de révision par thème : accumule des secondes actives sur un thème.
   const addThemeTime = useCallback((themeId, secs) => {
-    const s = Math.round(secs || 0)
+    const s = studySeconds(secs)
     if (!themeId || s <= 0) return
-    setState((p) => ({ ...p, themeTime: { ...(p.themeTime || {}), [themeId]: (p.themeTime?.[themeId] || 0) + s } }))
+    setState((p) => ({ ...p, themeTime: { ...(p.themeTime || {}), [themeId]: studySeconds(p.themeTime?.[themeId]) + s } }))
   }, [])
 
   // Flashcards téléchargées (app) : espace « Révision ». On ajoute/actualise un
@@ -881,20 +882,20 @@ function useActivityTimer(bucket) {
   useEffect(() => {
     if (!bucket) return
     let acc = 0
-    let last = Date.now()
+    let last = performance.now()
     let visible = typeof document === 'undefined' ? true : !document.hidden
     const tick = () => {
-      const now = Date.now()
-      if (visible) acc += (now - last) / 1000
+      const now = performance.now()
+      acc += activeSeconds(last, now, visible)
       last = now
     }
-    const flush = () => { tick(); if (acc >= 5) { addThemeTime(bucket, acc); acc = 0 } }
+    const flush = () => { tick(); if (acc > 0) { addThemeTime(bucket, acc); acc = 0 } }
     const onVis = () => {
       tick()
       const nowHidden = document.hidden
       if (nowHidden) flush() // en quittant l'onglet : on enregistre
       visible = !nowHidden
-      last = Date.now()
+      last = performance.now()
     }
     const id = setInterval(() => { tick(); if (acc >= 30) flush() }, 5000)
     document.addEventListener('visibilitychange', onVis)

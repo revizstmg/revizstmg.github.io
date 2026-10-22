@@ -1,3 +1,4 @@
+import { studySeconds } from '../data/studyTime.js'
 // Graphiques de statistiques élève, en SVG pur (aucune dépendance) :
 //  - ProgressCurve : courbe d'XP cumulé au fil des jours.
 //  - ThemeTimeBars : temps de révision par thème (barres horizontales).
@@ -7,7 +8,9 @@ import { useT } from '../i18n.js'
 
 // Formate une durée en secondes → « 12 min » ou « 1 h 05 ».
 export function fmtDuration(sec, t) {
-  const m = Math.round((sec || 0) / 60)
+  const seconds = studySeconds(sec)
+  if (seconds > 0 && seconds < 60) return `< 1 ${t('minShort')}`
+  const m = Math.floor(seconds / 60)
   if (m < 60) return `${m} ${t('minShort')}`
   const h = Math.floor(m / 60)
   const r = m % 60
@@ -72,8 +75,8 @@ export function ProgressCurve({ history }) {
 export function ThemeTimeBars({ themeTime }) {
   const t = useT()
   const rows = Object.entries(themeTime || {})
-    .map(([id, sec]) => ({ id, sec: sec || 0, meta: ALL_CHAPTERS[id] }))
-    .filter((r) => r.meta && r.sec >= 30) // au moins 30 s pour apparaître
+    .map(([id, sec]) => ({ id, sec: studySeconds(sec), meta: ALL_CHAPTERS[id] }))
+    .filter((r) => r.meta && r.sec > 0) // afficher aussi les courtes visites
     .sort((a, b) => b.sec - a.sec)
     .slice(0, 6)
   if (!rows.length) {
@@ -87,11 +90,11 @@ export function ThemeTimeBars({ themeTime }) {
         return (
           <div key={r.id}>
             <div className="mb-1 flex items-baseline justify-between gap-2">
-              <span className="min-w-0 flex-1 truncate text-sm font-medium">{r.meta.short || r.meta.name}</span>
+              <span className="min-w-0 flex-1 text-sm font-medium" title={r.meta.name}>{r.meta.name || r.meta.short}</span>
               <span className="shrink-0 text-xs font-semibold text-slate-500 dark:text-slate-400">{fmtDuration(r.sec, t)}</span>
             </div>
             <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
-              <div className="h-full rounded-full transition-all" style={{ width: `${Math.max(6, (r.sec / max) * 100)}%`, backgroundColor: color }} />
+              <div className="h-full rounded-full transition-all" style={{ width: `${Math.max(1, (r.sec / max) * 100)}%`, backgroundColor: color }} />
             </div>
           </div>
         )

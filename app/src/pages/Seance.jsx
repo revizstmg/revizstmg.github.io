@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
-import { useStore, useStudyTimer } from '../store.jsx'
+import { useStore, useThemeTimer } from '../store.jsx'
 import { composerSeance } from '../data/seance.js'
 import { todayKey } from '../data/srs.js'
 import { readPosition } from '../data/readingPosition.js'
@@ -20,13 +20,13 @@ export default function Seance() {
 function SeancePage() {
   const { state } = useStore()
   const tr = usePublicText()
-  useStudyTimer()
   const [etapes] = useState(() => composerSeance(state, state.track, todayKey(), readPosition(state.account?.id)?.themeId))
   const [k, setK] = useState(0)
   const [faites, setFaites] = useState([])
   const [fin, setFin] = useState(etapes.length === 0)
 
   const etape = etapes[k]
+  useThemeTimer(!fin ? etape?.themeId : null)
   if (!fin && etape) {
     const derniere = k + 1 >= etapes.length
     const suivante = () => {

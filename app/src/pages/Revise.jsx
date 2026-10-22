@@ -2,7 +2,7 @@ import './Revise.css'
 import { revisionMessages } from '../i18n/revision.js'
 import { useMemo, useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
-import { useStore, isoWeekKey, WEEKLY_GOAL, erreursDues } from '../store.jsx'
+import { useStore, useThemeTimer, isoWeekKey, WEEKLY_GOAL, erreursDues } from '../store.jsx'
 import { todayKey } from '../data/srs.js'
 import { reviewQueue } from '../data/study.js'
 import { subjectsForTrack } from '../data/tracks.js'
@@ -41,6 +41,7 @@ function RevisePage() {
   const [importMsg, setImportMsg] = useState('')
   const [showImport, setShowImport] = useState(false)
   const [carnet, setCarnet] = useState(null) // exercice du carnet d'erreurs en cours
+  useThemeTimer(carnet?.themeId)
   const gameLabel = useGameLabel()
 
   const queue = useMemo(() => reviewQueue(state, state.track), [state])

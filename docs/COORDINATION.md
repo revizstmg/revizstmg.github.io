@@ -1081,3 +1081,5 @@ Prochaine action :
 ### TEMPS-20261022-CODEX-01 — Codex — compteur et barres par thème
 - Demande : corriger les durées et leur affichage. Branche fix/temps-par-theme. Périmètre : compteur ciblé dans store.jsx (couloir Claude, extension signalée au propriétaire), StatsCharts, séance guidée, carnet, tests. Aucun changement de synchronisation/base.
 - Constat : visites de moins de 5 s abandonnées ; séance/carnet sans attribution au thème ; durées non validées dans les barres.
+- Correctif : conservation des fractions de seconde, horloge monotone et intervalle borné après suspension ; attribution séance/carnet au thème ; barres avec durées valides, titres complets et temps < 1 min. Historique conservé, sans inventer un recalcul du passé.
+- Validation locale : 335 tests existants réussis et trois nouveaux tests ciblés réussis ; compilation réussie ; parcours court passage/séance réussit. Première tentative navigateur invalidée par installation de l’horloge simulée après démarrage du compteur : installation avancée avant navigation, assertions conservées. Publication automatique soumise à la CI complète. PR #74.
