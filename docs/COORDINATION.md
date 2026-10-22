@@ -1135,3 +1135,8 @@ Prochaine action :
 - Validation après intégration : 363 tests unitaires et huit parcours navigateur réussis ; compilation réussie, captures mobiles arabe/italien clair/sombre inspectées. Le premier parcours a été interrompu car le test cherchait « Suivant » au lieu du libellé réel « Question suivante » ; sélecteur corrigé, assertions de sauvegarde à 100 % et de réussites conservées, huit parcours ensuite réussis.
 - Finition : vocabulaire propre à chacun des 24 axes culturels ; les tableaux ne répètent plus les deux mêmes notions de méthode. Nouvelle vérification finale de cette finition en cours, sans changement des parcours ou des langues déjà livrées. PR #81.
 - Finition relue : 363 tests unitaires réussis à nouveau ; empreintes actualisées uniquement pour le lexique des nouveaux axes et les paquets Langues. Aucun autre contenu pédagogique modifié. Publication et suite complète suivies dans la PR #81.
+
+### EXERCICES-20261022-CODEX-05 — Codex — répétitions QCM et trous
+- Retour propriétaire : exercices de chapitre identiques. Branche fix/variete-questions-chapitre.
+- Périmètre annoncé : génération strictement par section, sélection des questions à chaque partie/rejouer, QCM/Trou/GameHost, tests et empreintes relues, compte des chapitres et README. Pas de modification des cours ni de Supabase.
+- Diagnostic initial : le même lot de trous est réutilisé dans trois formats ; seul le premier terme en gras de chaque phrase est considéré ; Rejouer mélange le même lot sans nouveau tirage.
