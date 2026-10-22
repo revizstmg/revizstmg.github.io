@@ -18,10 +18,11 @@ test('les acquis mélangent uniquement les bonnes réponses de la matière et du
  expect(acquiredQuestions(state,subject(),'droit-t5')).toEqual([])
 })
 test('aucune réussite inventée à partir d’un ancien score partiel',()=>{
- const theme=ALL_CHAPTERS['math-c1'], game=themeChapters(theme).flatMap(ch=>ch.games).find(g=>g.type==='qcm')
+ const theme=ALL_CHAPTERS['lng-it-gram'], game=themeChapters(theme).flatMap(ch=>ch.games).find(g=>g.type==='qcm' && !g.questionCount)
+ const selected={id:'langues',chapters:[theme]}
  expect(game).toBeTruthy()
- expect(acquiredQuestions({chapters:{'math-c1':{games:{[game.id]:80}}}},subject())).toEqual([])
- expect(acquiredQuestions({chapters:{'math-c1':{games:{[game.id]:100}}}},subject()).length).toBeGreaterThan(0)
+ expect(acquiredQuestions({chapters:{[theme.id]:{games:{[game.id]:80}}}},selected)).toEqual([])
+ expect(acquiredQuestions({chapters:{[theme.id]:{games:{[game.id]:100}}}},selected).length).toBeGreaterThan(0)
 })
 test('les erreurs gardent leur type et leur thème, sans exclure les erreurs non encore dues',()=>{
  const errors=[{themeId:'math-c1',type:'trou',q:{text:'Un ____',answer:'mot'},due:'2099-01-01'},{themeId:'math-c2',type:'qcm',q:q('B')},{themeId:'droit-t5',type:'qcm',q:q('Hors matière')}]
@@ -67,4 +68,25 @@ test('les calculs réussis deviennent des QCM avec des choix numériques distinc
  const items=acquiredQuestions({reussites},subject(),'math-c1')
  expect(items).toHaveLength(1);expect(items[0].choices[items[0].answer]).toBe('20 €')
  expect(new Set(items[0].choices).size).toBe(4);expect(items[0].fig).toEqual(q.fig)
+})
+
+test('un score parfait sur un tirage ne transforme pas toute sa banque en acquis',()=>{
+ const theme=ALL_CHAPTERS['math-c1'],game=themeChapters(theme).flatMap(ch=>ch.games).find(g=>g.type==='qcm' && g.questionCount)
+ expect(game).toBeTruthy()
+ expect(acquiredQuestions({chapters:{[theme.id]:{games:{[game.id]:100}}}},subject())).toEqual([])
+ const played={...game.questions[0],themeId:theme.id}
+ const successes=updateSuccesses([],{themeId:theme.id,type:'qcm',reussies:[played]},1)
+ expect(acquiredQuestions({chapters:{[theme.id]:{games:{[game.id]:100}}},reussites:successes},subject())).toHaveLength(1)
+})
+test('les réussites à trous restent révisables après la répartition entre formats',()=>{
+ const theme=ALL_CHAPTERS['p1-sgn-t1'],chapter=themeChapters(theme)[0]
+ const game=chapter.games.find(g=>g.type==='trou')
+ expect(game).toBeTruthy()
+ const q={...game.questions[0],chapterIndex:0}
+ const reussites=updateSuccesses([],{themeId:theme.id,type:'trou',reussies:[q]},1)
+ const result=acquiredQuestions({chapters:{},reussites},{id:theme.subjectId,chapters:[theme]})
+ expect(result).toHaveLength(1)
+ expect(result[0].choices[result[0].answer]).toBe(q.answer)
+ const terms=chapter.games.flatMap(g=>g.id.endsWith('::qtrou') ? g.questions.flatMap(q=>q.choices) : ['trou','saisie'].includes(g.type) ? (g.questions || []).map(q=>q.answer) : [])
+ for(const choice of result[0].choices)expect(terms).toContain(choice)
 })

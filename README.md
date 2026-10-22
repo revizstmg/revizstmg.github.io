@@ -474,3 +474,13 @@ Relecture des exercices de probabilités : le texte à trous du schéma de Berno
 L’atelier propose 169 formules de calcul de Première et Terminale : mathématiques, gestion-finance, économie, management, mercatique et RH. Vue complète ou par filière, filtres par matière/domaine, sélection en lot, exercices à valeurs renouvelées, correction détaillée et lien de cours explicite. Voir [l’inventaire](docs/ATELIER-FORMULES.md). Les probabilités concernées sont arrondies à quatre décimales ; les séances longues restent reprenables sur l’appareil.
 
 Réviser propose trois parcours avec un choix de matière et un chapitre facultatif : reprise au prochain exercice, erreurs filtrées (toutes, pas seulement celles dues) et QCM des acquis réparti entre les chapitres, dans une matière ou toutes les matières. Les bonnes réponses QCM/vrai-faux/textes à trous/saisie/calculs sont conservées dans la progression (2 000 dernières) ; les anciens exercices à 100 % complètent cet historique sans inventer les bonnes réponses des scores partiels. Les textes à trous/saisies sont convertis en QCM seulement si des choix relus du même chapitre existent. Les repères de lecture restent locaux et séparés par compte et matière.
+
+Les QCM et textes à trous des chapitres conservent désormais une banque de
+questions, avec des tirages courts renouvelés à chaque partie. Un historique
+local à l’onglet et au compte privilégie les questions non encore proposées.
+Les phrases sont réparties entre trous, saisie et QCM du mot manquant : une même
+phrase ne remplit plus trois exercices. Les autres mots en gras peuvent fournir
+des variantes, en conservant leur phrase entière. Pour un cours court, des
+répétitions restent possibles ; aucun contenu d’un autre chapitre n’est ajouté.
+Les acquis reposent sur les réponses réellement jouées, jamais sur toute une
+banque déduite d’un score de partie parfait.

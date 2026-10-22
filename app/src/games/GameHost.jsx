@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
+import { drawQuestionSession, rememberQuestionSession } from '../data/questionSessions.js'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useStore, starsFromScore } from '../store.jsx'
 import { chapitreDuJeu } from '../data/index.js'
@@ -90,7 +91,7 @@ function PleinEcran({ titre, children }) {
 // `modeInitial` lance l'exercice sans écran de choix (séance du jour) ;
 // `suite` ({ label, onClick }) remplace « Terminé » en fin de série.
 export default function GameHost({ game, chapterId, color, quiz = false, onExit, modeInitial = null, suite = null }) {
-  const { recordResult, noterReponses } = useStore()
+  const { state, recordResult, noterReponses } = useStore()
   const t = useT()
   const [mode, setMode] = useState(NO_MODE.has(game.type) ? 'solo' : modeInitial)
   const [result, setResult] = useState(null)
@@ -101,7 +102,9 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit,
   const [reprise, setReprise] = useState(null)
 
   const Comp = COMPONENTS[game.type]
-  const jeu = reprise ? { ...game, questions: reprise, count: reprise.length } : game
+  const tirage = useMemo(() => drawQuestionSession(game,state.account?.id), [game,runKey,state.account?.id])
+  useEffect(() => rememberQuestionSession(tirage), [tirage])
+  const jeu = reprise ? { ...game, questions: reprise, count: reprise.length } : tirage
   const correction = { themeId: chapterId, idx: chapitreDuJeu(chapterId, game.id) }
 
   const handleDone = ({ correct, total, timeBonus = 0, ratees, reussies }) => {

@@ -491,11 +491,10 @@ function qcmFromPairs(pairs, id, title, exclut = null) {
   const answers = [...new Set(pairs.map((p) => p.a).filter((a) => a && a.length))]
   if (answers.length < 2) return null
   const questions = shuffle(pairs)
-    .slice(0, 8)
     .map((p) => {
       const distractors = shuffle(answers.filter((a) => a !== p.a && !(exclut && exclut(p, a)))).slice(0, 3)
       const choices = shuffle([p.a, ...distractors])
-      return { q: p.q, choices, answer: choices.indexOf(p.a), explain: p.e || `${p.q} → ${p.a}` }
+      return { q: p.q, choices, answer: choices.indexOf(p.a), explain: p.e || `${p.q} → ${p.a}`, drawSource: p.drawSource || p.q }
     })
     .filter((q) => q.choices.length >= 2 && q.answer >= 0)
   return questions.length ? { id, type: 'qcm', title, icon: '❓', questions } : null
@@ -508,11 +507,22 @@ function qcmFromPairs(pairs, id, title, exclut = null) {
 function trouFromBold(sec, themeId) {
   const out = []
   const seen = new Set()
+  const texts=[]
+  for(const b of sec.blocks || []) {
+    if(['p','tip','warning','example'].includes(b.t) && b.c)texts.push(b.c)
+    if(b.t==='list' && Array.isArray(b.c))texts.push(...b.c)
+  }
+  if(Array.isArray(sec.points))texts.push(...sec.points)
+  // Préserver les phrases de référence des anciennes questions avant de
+  // proposer d'autres mots masqués dans les mêmes paragraphes.
+  const primary=new Set(texts.flatMap(text=>phrases(text).flatMap(sentence=>{
+    const term=sentence.match(/\*\*(.+?)\*\*/)?.[1]?.trim()
+    return term?[term,...reponsesAcceptees(term,themeId)].map(cleReponse):[]
+  })))
   const addFrom = (text) => {
     const sentences = phrases(text)
     for (const [si, sRaw] of sentences.entries()) {
-      const bm = sRaw.match(/\*\*(.+?)\*\*/)
-      if (!bm) continue
+      for (const bm of sRaw.matchAll(/\*\*(.+?)\*\*/g)) {
       const term = bm[1].trim()
       if (term.length < 3 || term.length > 45 || /^\d+$/.test(term)) continue
       // Une étiquette (« Énoncé. », « Qualification : », « **Conclusion** : »)
@@ -525,6 +535,7 @@ function trouFromBold(sec, themeId) {
       if (/(?:['’]|\b(?:le|la|les|un|une|de|du|des|et|ou))$/i.test(term)) continue
       const key = term.toLowerCase()
       const variantes = [term, ...reponsesAcceptees(term, themeId)].map(cleReponse)
+      if(bm.index !== sRaw.indexOf('**') && variantes.some(v=>primary.has(v)))continue
       if ([...seen].some((deja) => variantes.includes(cleReponse(deja)))) continue
       const plain = stripMd(sRaw).replace(/\s+/g, ' ').trim()
       if (plain.length < 15) continue
@@ -544,14 +555,11 @@ function trouFromBold(sec, themeId) {
       const contexte = text2.replace('____', ' ').split(/\s+/).filter((w) => /[\p{L}\d]/u.test(w))
       if (contexte.length < 5) continue
       seen.add(key)
-      out.push({ text: text2, answer: term, alt: reponsesAcceptees(term, themeId), explain: `Le mot manquant : « ${term} ».` })
+      out.push({ text: text2, answer: term, alt: reponsesAcceptees(term, themeId), drawSource: plain, explain: `Le mot manquant : « ${term} ».` })
+      }
     }
   }
-  for (const b of sec.blocks || []) {
-    if (['p', 'tip', 'warning', 'example'].includes(b.t) && b.c) addFrom(b.c)
-    if (b.t === 'list' && Array.isArray(b.c)) for (const it of b.c) addFrom(it)
-  }
-  if (Array.isArray(sec.points)) for (const it of sec.points) addFrom(it)
+  for(const text of texts)addFrom(text)
   return out
 }
 
@@ -727,7 +735,6 @@ function shortenDef(def, max = 90) {
 function saisieFromItems(items, id, title, icon = '⌨️') {
   const qs = shuffle(items)
     .filter((x) => x.answer && String(x.answer).trim().length > 0 && String(x.answer).length <= 40)
-    .slice(0, 10)
   return qs.length >= 2 ? { id, type: 'saisie', title, icon, questions: qs } : null
 }
 
@@ -811,34 +818,41 @@ function vraiFauxFromDates(datePairs, id, title) {
 // QCM « le mot manquant » à partir des textes à trous de la section : le bon mot
 // et trois autres mots de la même section. Sans assez de mots, on ne crée pas
 // ce QCM. Une notion liée au bon mot n'est jamais proposée.
-function qcmMotManquant(trou, id) {
+function qcmMotManquant(trou, id, distractorPool = trou) {
   if (trou.length < 3) return null
   const pool = []
-  for (const m of trou.map((q) => q.answer)) if (!pool.some((x) => cleReponse(x) === cleReponse(m))) pool.push(m)
-  const questions = shuffle(trou).slice(0, 8).map((q) => {
+  for (const m of distractorPool.map((q) => q.answer)) if (!pool.some((x) => cleReponse(x) === cleReponse(m))) pool.push(m)
+  const questions = shuffle(trou).map((q) => {
     const proches = shuffle(pool.filter((m) => cleReponse(m) !== cleReponse(q.answer) && !notionsLiees(m, q.answer)))
     const distracteurs = proches.slice(0, 3)
     if (distracteurs.length < 3) return null
     const choices = shuffle([q.answer, ...distracteurs])
-    return { q: `Quel mot complète la phrase ?\n${q.text}`, choices, answer: choices.indexOf(q.answer), explain: q.explain }
+    return { q: `Quel mot complète la phrase ?\n${q.text}`, choices, answer: choices.indexOf(q.answer), explain: q.explain, drawSource: q.drawSource, alt: q.alt }
   }).filter(Boolean)
-  return questions.length >= 3 ? { id, type: 'qcm', title: 'QCM — le mot manquant', icon: '🧠', questions } : null
+  return new Set(questions.map(q => q.drawSource || q.q)).size >= 3 ? { id, type: 'qcm', title: 'QCM — le mot manquant', icon: '🧠', questions } : null
 }
 
-// Quiz du chapitre : deux ou trois questions de chaque QCM déjà généré (notions,
-// cas concrets, mot manquant, dates, tableau), mêlées en une seule série.
-function quizMele(jeux, id) {
-  const qcms = jeux.filter((g) => g.type === 'qcm' && g.questions?.length)
-  if (qcms.length < 2) return null
-  const questions = shuffle(qcms.flatMap((g) => shuffle(g.questions).slice(0, 3))).slice(0, 10)
-  return questions.length >= 6 ? { id, type: 'qcm', title: 'Quiz du chapitre — questions mêlées', icon: '🎯', questions } : null
+// Conversion d'une bonne réponse écrite en QCM de révision : uniquement
+// les mots effectivement proposés dans les exercices à trous de ce chapitre.
+export function choicesForGap(chapter, question) {
+  if(typeof question?.answer!=='string')return null
+  const corrects=new Set([question.answer,...(question.alt || [])].map(cleReponse))
+  const pool=(chapter?.games || []).flatMap(game=>
+    ['trou','saisie'].includes(game.type) ? (game.questions || []).filter(q=>q.drawSource).map(q=>q.answer) :
+    game.id.endsWith('::qtrou') ? (game.questions || []).flatMap(q=>q.choices) : [])
+  const seen=new Set(),other=shuffle(pool).filter(word=>{
+    const key=cleReponse(word)
+    if(!word || corrects.has(key) || seen.has(key) || notionsLiees(word,question.answer))return false
+    seen.add(key);return true
+  }).slice(0,3)
+  return other.length ? [question.answer,...other] : null
 }
 
 // Génère un ENSEMBLE d'exercices propres au chapitre (jamais de flashcard),
 // tirés exclusivement du contenu de SA section. Objectif :
 // beaucoup d'exercices ET du contenu varié (plusieurs formes de questions, cas
 // concrets). Chaque exercice a un id stable et distinct (pour la progression) ;
-// le contenu, lui, est mélangé/tronqué à chaque partie — jamais deux fois le même.
+// la banque complète permet un nouveau tirage à chaque partie, dans les limites du cours.
 function sectionExercises(sec, theme, idx) {
   const base = `${theme.id}::${idx}`
   const { datePairs, defPairs, widePairs, compareTables } = sectionPairs(sec)
@@ -859,12 +873,14 @@ function sectionExercises(sec, theme, idx) {
   }
 
   // 2) Notions propres à la section. Plusieurs formes de
-  //    questions, mélangées/tronquées à chaque visite → jamais le même contenu :
+  //    questions ; la banque complète permet de renouveler le tirage :
   //    QCM « notion → définition » (formulé de plusieurs façons), « cas concret »
   //    (situation → notion, sens inverse), vrai/faux, écris le terme, association.
   if (richDefs.length >= 2) {
     // QCM notion → définition, avec une formulation qui tourne d'un item à l'autre.
-    const defItems = shuffle(richDefs).map((p, i) => ({ q: QDEF_TEMPLATES[i % QDEF_TEMPLATES.length](p.term), a: p.def, e: `${p.term} → ${p.def}`, term: p.term }))
+    const forwardDefs = richDefs.length >= 6 ? moitie(richDefs, 0) : richDefs
+    const reverseDefs = richDefs.length >= 6 ? moitie(richDefs, 1) : []
+    const defItems = forwardDefs.map((p, i) => ({ q: QDEF_TEMPLATES[i % QDEF_TEMPLATES.length](p.term), a: p.def, e: `${p.term} → ${p.def}`, term: p.term, drawSource: `notion:${cleReponse(p.term)}` }))
     // Une définition ne sert pas de distracteur à une notion liée (elle serait juste aussi).
     const termeDeDef = new Map(richDefs.map((p) => [p.def, p.term]))
     const exclutDef = (p, a) => notionsLiees(p.term, termeDeDef.get(a) || '')
@@ -889,10 +905,10 @@ function sectionExercises(sec, theme, idx) {
     const serie = (titre, k, n) => (n > 1 ? `${titre} (série ${k + 1})` : titre)
     const idSerie = (nom, k) => `${base}::${nom}${k ? k : ''}`
 
-    const casSeries = deuxSeries(8)
+    const casSeries = reverseDefs.length >= 8 ? [moitie(reverseDefs,0),moitie(reverseDefs,1)] : [reverseDefs]
     casSeries.forEach((liste, k) => {
-      const casItems = liste.map((p) => ({ q: `Cas concret — on observe : « ${p.def} ». De quelle notion s'agit-il ?`, a: p.term, e: `${p.term} : ${p.def}` }))
-      const qCas = qcmFromPairs(casItems, idSerie('qcas', k), serie('Cas concrets — trouve la notion', k, casSeries.length), (p, a) => notionsLiees(p.a, a))
+      const casItems = liste.map((p) => ({ q: `Quelle notion correspond à cette définition ?\n« ${p.def} »`, a: p.term, e: `${p.term} : ${p.def}` }))
+      const qCas = qcmFromPairs(casItems, idSerie('qcas', k), serie('Retrouve la notion', k, casSeries.length), (p, a) => notionsLiees(p.a, a))
       if (qCas && qCas.questions.length >= 3) { qCas.icon = '🧩'; out.push(qCas) }
     })
 
@@ -932,25 +948,49 @@ function sectionExercises(sec, theme, idx) {
   const qWide = qcmFromPairs(widePairs, `${base}::qwide`, 'QCM — tableau du chapitre')
   if (qWide && qWide.questions.length >= 3) out.push(qWide)
 
-  // 4) Textes à trous : découpés en plusieurs lots + une version « à écrire ».
+  // Une phrase source appartient à un seul exercice. Les variantes de mot masqué
+  // restent ensemble ; le tirage d'une partie n'en retient qu'une par phrase.
   const trou = trouFromBold(sec, theme.id)
-  if (trou.length >= 2) {
-    const batches = []
-    for (let k = 0; k < trou.length; k += 6) batches.push(trou.slice(k, k + 6))
-    batches.slice(0, 3).forEach((b, bi) => {
-      if (b.length >= 2) out.push({ id: `${base}::trou${bi}`, type: 'trou', title: batches.length > 1 ? `Texte à trous — série ${bi + 1}` : 'Texte à trous — ce chapitre', icon: '✏️', questions: b })
-    })
-    const sTrou = saisieFromItems(trou.map((q) => ({ prompt: `Complète par le mot exact :\n${q.text}`, answer: q.answer, alt: q.alt, explain: q.explain })), `${base}::strou`, 'Complète — à écrire', '✍️')
-    if (sTrou) out.push(sTrou)
-    // Le même texte, mais on choisit le mot parmi quatre (les autres mots mis en
-    // valeur dans la section). Une notion liée au bon mot n'est jamais proposée.
-    const qTrou = qcmMotManquant(trou, `${base}::qtrou`)
-    if (qTrou) out.push(qTrou)
+  const grouped = new Map()
+  for (const q of trou) {
+    const key = q.drawSource || q.text
+    if (!grouped.has(key)) grouped.set(key, [])
+    grouped.get(key).push(q)
   }
+  const groups = [...grouped.values()]
+  let written = [], multiple = [], blanks = groups
+  if (groups.length >= 7) {
+    const cut = Math.max(2, Math.floor(groups.length / 3))
+    blanks = groups.slice(0,cut)
+    written = groups.slice(cut,2*cut)
+    multiple = groups.slice(2*cut)
+  } else if (groups.length >= 5) {
+    blanks = groups.slice(0,2)
+    multiple = groups.slice(2)
+  } else if (groups.length === 4) {
+    blanks = groups.slice(0,2)
+    written = groups.slice(2)
+  }
+  if (blanks.length >= 2) {
+    const n = Math.min(3,Math.ceil(blanks.length / 6))
+    for (let bi=0;bi<n;bi++) {
+      const questions=blanks.filter((_,i)=>i%n===bi).flat()
+      out.push({id:`${base}::trou${bi}`,type:'trou',title:n>1?`Texte à trous — série ${bi+1}`:'Texte à trous — ce chapitre',icon:'✏️',questions})
+    }
+  }
+  const sTrou = saisieFromItems(written.flat().map(q=>({prompt:`Complète par le mot exact :\n${q.text}`,answer:q.answer,alt:q.alt,explain:q.explain,drawSource:q.drawSource})),`${base}::strou`,'Complète — à écrire','✍️')
+  if (sTrou) out.push(sTrou)
+  const qTrou = qcmMotManquant(multiple.flat(),`${base}::qtrou`,trou)
+  if (qTrou) out.push(qTrou)
+  // Si un format manque de réponses distinctes, conserver ses phrases dans
+  // le lot à trous, au lieu de les supprimer ou de chercher hors du chapitre.
+  const covered = new Set([...(sTrou?.questions || []),...(qTrou?.questions || [])].map(q=>q.drawSource))
+  const missing=[...written,...multiple].filter(group=>!covered.has(group[0].drawSource)).flat()
+  const primary=out.find(g=>g.id===`${base}::trou0`)
+  if(primary)primary.questions.push(...missing)
 
-  // 5 bis) Quiz du chapitre : des questions de chaque forme, mêlées.
-  const mix = quizMele(out, `${base}::mix`)
-  if (mix) out.push(mix)
+  // Le test de synthèse reste accessible au niveau du thème. Ne pas ajouter
+  // ici un autre exercice qui recopie les QCM déjà proposés dans ce chapitre.
 
   // 5) Tri (classification) à partir des tableaux de COMPARAISON du cours (deux
   //    colonnes parallèles : atouts / risques, interne / externe, actif / passif,
@@ -976,7 +1016,7 @@ function sectionExercises(sec, theme, idx) {
     })
   })
 
-  return out
+  return out.map(game => ['qcm','trou','saisie'].includes(game.type) ? {...game, questionCount:Math.min(game.type === 'trou' ? 6 : game.type === 'qcm' ? 8 : 10, Math.max(2,Math.ceil(new Set(game.questions.map(q=>q.drawSource || q.q || q.text || q.prompt)).size/2)))} : game)
 }
 
 // Flashcards d'une section (recto = terme, verso = définition). RÉSERVÉ à
