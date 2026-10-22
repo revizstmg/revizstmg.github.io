@@ -91,6 +91,7 @@ test('bilan personnalisé : exercices nouveaux, correction et sauvegarde avec la
  await page.getByLabel('Matière',{exact:true}).selectOption('maths')
  await page.getByLabel('Chapitre',{exact:true}).selectOption('math-c3')
  await page.getByLabel('Question(s) manquée(s) · facultatif').fill('Question 3 : dériver une somme')
+ await expect(page.locator('input[capture=environment]')).toHaveCount(2)
  await page.getByRole('button',{name:'Préparer mon bilan et mes exercices'}).click()
  await expect(page.getByText('Bilan fondé sur tes difficultés déclarées.')).toBeVisible({timeout:45000})
  await expect(page.getByText('f’(x) = 2x + 0.')).toBeHidden()
