@@ -1083,3 +1083,7 @@ Prochaine action :
 - Constat : visites de moins de 5 s abandonnées ; séance/carnet sans attribution au thème ; durées non validées dans les barres.
 - Correctif : conservation des fractions de seconde, horloge monotone et intervalle borné après suspension ; attribution séance/carnet au thème ; barres avec durées valides, titres complets et temps < 1 min. Historique conservé, sans inventer un recalcul du passé.
 - Validation locale : 335 tests existants réussis et trois nouveaux tests ciblés réussis ; compilation réussie ; parcours court passage/séance réussit. Première tentative navigateur invalidée par installation de l’horloge simulée après démarrage du compteur : installation avancée avant navigation, assertions conservées. Publication automatique soumise à la CI complète. PR #74.
+
+### TEMPS-HISTORIQUE-20261022-CODEX-01 — Codex — anciennes durées corrompues
+- Retour propriétaire et capture : anciennes valeurs de plusieurs milliards d’heures ; #74 ne réparait pas l’historique. Branche fix/anciens-compteurs-temps.
+- Périmètre : validation/migration des compteurs, fusion de progression (extension du couloir Claude signalée), affichage, tests. Les valeurs impossibles sont archivées séparément, sans inventer leur durée réelle. Borne physique : temps écoulé depuis la création du site, premier commit cb91b38 du 6 juillet 2026. Empêcher leur retour depuis une ancienne sauvegarde. Aucun changement Supabase/NAH.
