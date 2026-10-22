@@ -1105,3 +1105,8 @@ Prochaine action :
 - État : annoncé avant modification ; suggestions d’enrichissement distinctes du défaut. Aucun courriel ni coordonnée personnelle publié dans le dépôt.
 - Réalisé : libellé générique retiré de la mise en gras ; le trou porte désormais sur deux issues. Contexte indépendant/identique et probabilité constante conservé. Empreinte relue : seul math-c6 change. Test protège le cas exact ; pas de tolérance générale ajoutée sans connaître la réponse saisie.
 - Validation locale : 346 tests unitaires réussis, compilation réussie, huit parcours exercices réussis. Code 4649f28, PR #78. Enrichissement des probabilités/automatismes : suggestions recensées, hors correction de ce défaut précis. CI complète et publication automatiques à suivre ; aucune modification Supabase.
+
+### FORMULES-20261022-CODEX-02 — Codex — catalogue complet de calcul
+- Demande : enrichir largement l’atelier avec les formules des cours de Première et Terminale, même peu utilisées. Branche feat/atelier-formules-complet.
+- Périmètre : catalogue JSON, générateur numérique, liens de cours explicites, présentation/filtrage du catalogue, tests et README. Inventaire du formulaire et des cours ; distinguer calculs et moyens mnémotechniques non numériques. Aucun changement Supabase ni cours pédagogique.
+- État : annoncé avant code.
