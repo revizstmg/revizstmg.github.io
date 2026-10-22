@@ -642,7 +642,7 @@
         {
           "t": "list",
           "c": [
-            "Les **conditions** à vérifier : (1) chaque épreuve n’a que **deux issues** ; (2) les épreuves sont **indépendantes** ; (3) la probabilité de succès **p reste constante** ; (4) on répète **n fois**.",
+            "Les conditions à vérifier : (1) chaque épreuve n’a que **deux issues** ; (2) les épreuves sont **indépendantes** ; (3) la probabilité de succès **p reste constante** ; (4) on répète **n fois**.",
             "La variable aléatoire **X** compte alors le **nombre de succès** parmi les n épreuves."
           ]
         },
