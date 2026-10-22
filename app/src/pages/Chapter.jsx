@@ -1,3 +1,5 @@
+import CourseTutor from '../components/CourseTutor.jsx'
+import { courseText } from '../data/examenPersonnalise.js'
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import Introuvable from './Introuvable.jsx'
@@ -141,6 +143,7 @@ export default function Chapter() {
           prevLabel={prev ? t('previous') : null}
           onPrev={prev ? () => navigate(`/subject/${sid}/theme/${tid}/chapter/${prev.idx}`) : null}
         />
+        <CourseTutor key={`${state.account?.id || 'trial'}:${chapter.id}`} course={{id:chapter.id,title:chapter.title,subject:subject.name,level:subject.niveau==='premiere'?'premiere':'terminale',text:courseText(chapter.section)}} />
         <div className="no-print mt-4 text-center">
           <SignalerErreur themeId={tid} exercice={`Cours : ${chapter.title || ''}`} defaut="cours" libelle="Une erreur dans ce cours ? Signale-la" />
         </div>

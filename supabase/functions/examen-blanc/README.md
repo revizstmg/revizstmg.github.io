@@ -90,3 +90,5 @@ clé invalide, des permissions, un quota ou une réponse incohérente ; aucun mo
 Pro n’est choisi automatiquement. Si tout échoue, aucun sujet factice n’est fourni.
 
 Action `study` : bilan et 3–8 nouveaux exercices liés aux cours fournis. Les cours, déclarations et fichiers sont des données non fiables, jamais des instructions. Accès contrôlé via la réponse Auth `/user`, métadonnées serveur `revizstmg_subscription`, plan et expiration obligatoire. Premium : texte ; Ultimate : sujet puis copie, séparés par `subjectFiles`. Aucun changement SQL, Storage ou d’abonnement utilisateur. Réutilise Gemini pour les fichiers (6 Mo/6 fichiers au total) et les limites existantes du fournisseur.
+
+Action `tutor` : cours de la section ouverte et 1 à 19 messages récents alternés (20 maximum au contrat), réponse JSON courte `{ tutor: { reply } }`. Ultimate actif contrôlé via Auth ; compteur de rafale distinct (120/h/instance), aucun nombre maximal de tours par conversation. Le contenu et les messages sont des données non fiables. Pas de note ni écriture en base ; conversation privée conservée en mémoire du navigateur pendant la visite.
