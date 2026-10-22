@@ -1103,3 +1103,5 @@ Prochaine action :
 - Demande : lire les réponses de prospection et corriger les erreurs signalées. Branche fix/retour-prof-maths.
 - Périmètre : cours probabilités math-c6, test de non-régression et empreinte ciblée, README. Retirer la mise en gras du libellé générique conditions pour interroger la propriété mathématique plutôt que le mot de liaison. Aucun changement Supabase.
 - État : annoncé avant modification ; suggestions d’enrichissement distinctes du défaut. Aucun courriel ni coordonnée personnelle publié dans le dépôt.
+- Réalisé : libellé générique retiré de la mise en gras ; le trou porte désormais sur deux issues. Contexte indépendant/identique et probabilité constante conservé. Empreinte relue : seul math-c6 change. Test protège le cas exact ; pas de tolérance générale ajoutée sans connaître la réponse saisie.
+- Validation locale : 346 tests unitaires réussis, compilation réussie, huit parcours exercices réussis. Code 4649f28, PR #78. Enrichissement des probabilités/automatismes : suggestions recensées, hors correction de ce défaut précis. CI complète et publication automatiques à suivre ; aucune modification Supabase.
