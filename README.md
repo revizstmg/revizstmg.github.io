@@ -484,3 +484,8 @@ des variantes, en conservant leur phrase entière. Pour un cours court, des
 répétitions restent possibles ; aucun contenu d’un autre chapitre n’est ajouté.
 Les acquis reposent sur les réponses réellement jouées, jamais sur toute une
 banque déduite d’un score de partie parfait.
+
+### Questions manquées et entraînement après un devoir
+Dans Mes notes, la saisie gratuite conserve les questions manquées avec la note. Le bilan IA et les nouveaux exercices sont réservés à Premium/Ultimate ; la lecture du sujet et de la copie (PDF/photos) à Ultimate. L’IA utilise uniquement les cours du chapitre choisi et signale une lecture impossible ou une compétence hors périmètre. Les fichiers ne sont pas sauvegardés dans la progression. Le bilan et les exercices sont conservés lors de l’ajout de la note, exportés et supprimés avec elle. Les réponses d’entraînement sont temporaires ; correction par comparaison, sans note automatique ni promesse de résultat.
+
+Les offres commerciales restent à ouvrir : aucun paiement ni activation automatique n’est ajouté. Le serveur vérifie `app_metadata.revizstmg_subscription = { plan: "premium" | "ultimate", expires_at: "date ISO" }` via Auth, jamais les métadonnées éditables par l’élève. Ce droit doit être attribué par un système de facturation de confiance lors du lancement ; aucun compte réel n’a été modifié pour cet ajout.

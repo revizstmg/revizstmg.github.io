@@ -34,13 +34,13 @@ const arrondi = (n) => Math.round(n * 100) / 100
 const moyenne = (liste) => arrondi(liste.reduce((t, x) => t + x.note, 0) / liste.length)
 const nouvelId = () => Math.random().toString(36).slice(2, 10) + Date.now().toString(36)
 
-export function nouvelleNote({ note, matiere, chapitre, date }, maintenant = Date.now()) {
-  return { id: nouvelId(), note, matiere, chapitre, date, ajouteLe: maintenant }
+export function nouvelleNote({ note, matiere, chapitre, date, questionsManquees = '', revision = null }, maintenant = Date.now()) {
+  return { id: nouvelId(), note, matiere, chapitre, date, questionsManquees: String(questionsManquees).trim().slice(0, 6000), ...(revision ? { revision } : {}), ajouteLe: maintenant }
 }
 
 // La plus récente en tête ; au-delà de NOTES_MAX, les plus anciennes partent.
 export function ajouterNote(liste, entree) {
-  return [entree, ...(Array.isArray(liste) ? liste : [])].slice(0, NOTES_MAX)
+  return [entree, ...(Array.isArray(liste) ? liste.filter(n => n.id !== entree.id) : [])].slice(0, NOTES_MAX)
 }
 
 const parDate = (x, y) => (y.date || '').localeCompare(x.date || '') || (y.ajouteLe || 0) - (x.ajouteLe || 0)

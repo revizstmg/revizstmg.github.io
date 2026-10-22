@@ -1,3 +1,4 @@
+import NoteRevision from '../components/NoteRevision.jsx'
 import { useMemo, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
@@ -24,6 +25,9 @@ export default function MesNotes() {
   const [chapitre, setChapitre] = useState('')
   const [date, setDate] = useState(todayKey)
   const [erreur, setErreur] = useState('')
+  const [questionsManquees, setQuestionsManquees] = useState('')
+  const [revision, setRevision] = useState(null)
+  const [analysisBusy, setAnalysisBusy] = useState(false)
   const [ajoutee, setAjoutee] = useState(false)
   if (!state.track) return <Navigate to="/" replace />
 
@@ -45,9 +49,11 @@ export default function MesNotes() {
     if (!choisie) return setErreur('matiere')
     if (!chapitre) return setErreur('chapitre')
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || date > aujourdhui) return setErreur('date')
-    ajouterNoteClasse(nouvelleNote({ note: valeur, matiere, chapitre, date }))
+    ajouterNoteClasse(nouvelleNote({ note: valeur, matiere, chapitre, date, questionsManquees, revision }))
     setErreur('')
     setSaisie('')
+    setQuestionsManquees('')
+    setRevision(null)
     setChapitre('')
     setAjoutee(true)
   }
@@ -68,7 +74,7 @@ export default function MesNotes() {
       <hr className="rule-gold" />
 
       <form onSubmit={ajouter} noValidate className="card space-y-3 p-4" aria-labelledby="titre-ajout">
-        <h2 id="titre-ajout" className="font-display text-lg font-semibold">Ajouter une note</h2>
+        <fieldset disabled={analysisBusy} className="space-y-3"><h2 id="titre-ajout" className="font-display text-lg font-semibold">Ajouter une note</h2>
         <div className="grid gap-3 sm:grid-cols-2">
           <div>
             <label htmlFor="note-valeur" className="block text-sm font-medium">Note sur 20</label>
@@ -80,27 +86,31 @@ export default function MesNotes() {
           </div>
           <div>
             <label htmlFor="note-matiere" className="block text-sm font-medium">Matière</label>
-            <select id="note-matiere" value={matiere} onChange={(e) => { setMatiere(e.target.value); setChapitre('') }} className={`${champ} mt-1`}>
+            <select id="note-matiere" value={matiere} onChange={(e) => { setMatiere(e.target.value); setChapitre(''); setRevision(null) }} className={`${champ} mt-1`}>
               <option value="">— {t('chooseSubject')} —</option>
               {matieres.map((s) => <option key={s.id} value={s.id}>{s.icon} {s.name}</option>)}
             </select>
           </div>
           <div>
             <label htmlFor="note-chapitre" className="block text-sm font-medium">Chapitre</label>
-            <select id="note-chapitre" value={chapitre} onChange={(e) => setChapitre(e.target.value)} disabled={!choisie} className={`${champ} mt-1`}>
+            <select id="note-chapitre" value={chapitre} onChange={(e) => { setChapitre(e.target.value); setRevision(null) }} disabled={!choisie} className={`${champ} mt-1`}>
               <option value="">— {t('chooseChapterShort')} —</option>
               {(choisie?.chapters || []).map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
               {choisie && <option value={TOUTE_LA_MATIERE}>Toute la matière (bac blanc, devoir commun)</option>}
             </select>
           </div>
         </div>
+        <label className="block text-sm font-medium" htmlFor="questions-manquees">Question(s) manquée(s) · facultatif
+          <textarea id="questions-manquees" rows={4} maxLength={6000} value={questionsManquees} onChange={e => { setQuestionsManquees(e.target.value); setRevision(null) }} className={`${champ} mt-1`} placeholder="Ex. Question 3 : je n’ai pas su calculer la TVA déductible…" />
+        </label>
+        <NoteRevision key={`${matiere}:${chapitre}:${state.account?.id}`} subject={matiere} chapter={chapitre} missed={questionsManquees} owner={state.account?.id} result={revision} onResult={setRevision} onBusy={setAnalysisBusy} />
         {erreur && (
           <p role="alert" className="text-sm font-medium text-rose-600 dark:text-rose-400">
             {erreur === 'note' ? 'Écris une note sur 20, par exemple 15,50.' : erreur === 'matiere' ? 'Choisis la matière.' : erreur === 'chapitre' ? 'Choisis le chapitre.' : 'Choisis le jour du devoir, au plus tard aujourd’hui.'}
           </p>
         )}
         {ajoutee && !erreur && <p role="status" className="text-sm font-medium text-emerald-600 dark:text-emerald-400">✓ Note ajoutée</p>}
-        <button type="submit" className="btn-primary w-full sm:w-auto">Ajouter</button>
+        <button type="submit" disabled={analysisBusy} className="btn-primary w-full sm:w-auto">Ajouter</button></fieldset>
       </form>
 
       <section aria-labelledby="titre-ameliorer" className="space-y-3">
@@ -151,10 +161,12 @@ export default function MesNotes() {
                 <ul className="divide-y divide-slate-100 dark:divide-slate-800">
                   {g.notes.map((n) => (
                     <li key={n.id} className="flex items-center gap-3 px-4 py-3">
-                      <span className="min-w-0 flex-1">
+                      <div className="min-w-0 flex-1">
                         <span className="block text-sm font-medium leading-snug">{n.chapitre === TOUTE_LA_MATIERE ? 'Toute la matière' : nomChapitre(n.matiere, n.chapitre)}</span>
                         <span className="block text-xs text-slate-500 dark:text-slate-400">{jour(n.date)}</span>
-                      </span>
+                        {n.questionsManquees && <span className="mt-2 block whitespace-pre-wrap text-sm">Questions manquées : {n.questionsManquees}</span>}
+                        <details className="mt-3 text-sm"><summary className="cursor-pointer">Mon bilan et mes exercices</summary><NoteRevision subject={n.matiere} chapter={n.chapitre} missed={n.questionsManquees || ''} owner={state.account?.id} result={n.revision} onResult={value => { if (value) ajouterNoteClasse({ ...n, revision: value, ajouteLe: Date.now() }) }} onBusy={() => {}} /></details>
+                      </div>
                       <span className={`shrink-0 font-semibold tabular-nums ${n.note < SOUS_LA_MOYENNE ? 'text-rose-600 dark:text-rose-400' : ''}`}>{note(n.note)}</span>
                       <button type="button" onClick={() => retirer(n)} className="grid h-8 w-8 shrink-0 place-items-center rounded-full text-slate-400 transition hover:bg-slate-100 hover:text-rose-600 dark:hover:bg-slate-800" aria-label="Supprimer la note">✕</button>
                     </li>

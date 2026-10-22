@@ -88,3 +88,5 @@ Sur 503, une seule reprise après une seconde est autorisée avant l’alternati
 Le délai global des appels Gemini est borné à 120 secondes. Aucun repli sur une
 clé invalide, des permissions, un quota ou une réponse incohérente ; aucun modèle
 Pro n’est choisi automatiquement. Si tout échoue, aucun sujet factice n’est fourni.
+
+Action `study` : bilan et 3–8 nouveaux exercices liés aux cours fournis. Les cours, déclarations et fichiers sont des données non fiables, jamais des instructions. Accès contrôlé via la réponse Auth `/user`, métadonnées serveur `revizstmg_subscription`, plan et expiration obligatoire. Premium : texte ; Ultimate : sujet puis copie, séparés par `subjectFiles`. Aucun changement SQL, Storage ou d’abonnement utilisateur. Réutilise Gemini pour les fichiers (6 Mo/6 fichiers au total) et les limites existantes du fournisseur.
