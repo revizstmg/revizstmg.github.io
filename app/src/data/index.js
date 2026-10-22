@@ -1085,12 +1085,13 @@ export function deckForTheme(themeId) {
 }
 
 // Paquet agrégé pour TOUTE une matière (tous ses thèmes).
-export function deckForSubject(subjectId) {
+export function deckForSubject(subjectId, chapterIds = null) {
   const subj = getSubject(subjectId)
   if (!subj) return null
   const seen = new Set()
   const cards = []
   for (const th of subj.chapters || []) {
+    if (chapterIds && !chapterIds.includes(th.id)) continue
     const d = deckForTheme(th.id)
     if (!d) continue
     for (const c of d.cards) {
@@ -1100,7 +1101,7 @@ export function deckForSubject(subjectId) {
     }
   }
   if (cards.length < 3) return null
-  return { id: `${subjectId}::deck`, title: subj.name, subjectId, themeId: null, color: subj.color, cards: cards.slice(0, 400) }
+  return { id: `${subjectId}::deck${chapterIds ? `::${[...chapterIds].sort().join('-')}` : ''}`, title: subj.name, subjectId, themeId: null, color: subj.color, cards: cards.slice(0, 400) }
 }
 
 // Une section a-t-elle déjà un encadré « Définitions clés » écrit à la main ?

@@ -1,5 +1,14 @@
 // Source française des libellés de l’interface.
 export default {
+  studyLanguagesTitle: "Tes langues étudiées",
+  studyLanguagesHelp: "Choisis une ou plusieurs langues. Tu pourras modifier ce choix dans les réglages. Sans sélection, tous les cours disponibles restent affichés.",
+  studyArabic: "Arabe",
+  studyEnglish: "Anglais",
+  studyItalian: "Italien",
+  studySpanish: "Espagnol",
+  studyLanguagesSoon: "Les cours d’arabe et d’italien sont à venir. Ton choix est tout de même conservé.",
+  studyLanguageCourseSoon: "Les cours de cette langue sont à venir.",
+
   timeRepaired: "D’anciens temps incohérents ont été écartés. Le comptage reprend pour les thèmes concernés.",
   leaveCurrentClass: "Quitter cette classe",
   joinAnotherClass: "Rejoindre une autre classe",

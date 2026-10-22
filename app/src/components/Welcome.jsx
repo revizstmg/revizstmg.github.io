@@ -1,3 +1,5 @@
+import StudyLanguages from './StudyLanguages.jsx'
+import { normalizeStudyLanguages } from '../data/studyLanguages.js'
 import { TextePublic } from '../localisation/PublicText.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
@@ -55,6 +57,7 @@ export default function Welcome() {
   const [lastName, setLastName] = useState(state.profile?.lastName || '')
   const [level, setLevel] = useState(state.track?.level || null)
   const [specialty, setSpecialty] = useState(state.track?.specialty || null)
+  const [studyLanguages, setStudyLanguages] = useState(() => normalizeStudyLanguages(state.studyLanguages))
 
   // Compte — on affiche « Se connecter » par défaut (comme Google) ; l'inscription
   // se fait via un bouton clair « Inscrivez-vous ».
@@ -119,6 +122,7 @@ export default function Welcome() {
   useEffect(() => {
     const ouvrir = () => {
       setEssai(false); setRecoverStep(null); setOauthNew(false); setRole('eleve')
+      setStudyLanguages(normalizeStudyLanguages(state.studyLanguages))
       setFirstName(state.profile?.firstName || ''); setLastName(state.profile?.lastName || '')
       if (state.track?.level) { setLevel(state.track.level); setSpecialty(state.track.specialty || null) }
       setAuthMode('create'); setSignupStep(1); setErr(''); setInfo(''); debutInscription.current = Date.now()
@@ -126,7 +130,7 @@ export default function Welcome() {
     }
     window.addEventListener('stmg-creer-compte', ouvrir)
     return () => window.removeEventListener('stmg-creer-compte', ouvrir)
-  }, [state.profile?.firstName, state.profile?.lastName, state.track?.level, state.track?.specialty])
+  }, [state.profile?.firstName, state.profile?.lastName, state.track?.level, state.track?.specialty, state.studyLanguages])
 
   // Quels fournisseurs OAuth sont réellement activés : on n'affiche que
   // ces boutons-là (sinon un clic renverrait « provider is not enabled »).
@@ -195,7 +199,7 @@ export default function Welcome() {
     const track = { level, specialty: needsSpecialty ? specialty : null }
     const favorites = withPlan ? Object.values(chosen) : []
     const lastChapter = withPlan && lastPick ? { subjectId: lastPick.sid, chapterId: lastPick.cid } : null
-    applyOnboarding({ profile, track, favorites, lastChapter })
+    applyOnboarding({ profile, track, favorites, lastChapter, studyLanguages })
     setPhase('hello')
   }
 
@@ -296,7 +300,7 @@ export default function Welcome() {
   const commencerEssai = () => {
     if (!essaiOk) return
     setAccount(null)
-    applyOnboarding({ profile: { firstName: firstName.trim(), lastName: '', photo: state.profile?.photo }, track: { level, specialty: needsSpecialty ? specialty : null } })
+    applyOnboarding({ profile: { firstName: firstName.trim(), lastName: '', photo: state.profile?.photo }, track: { level, specialty: needsSpecialty ? specialty : null }, studyLanguages })
     setEssai(false)
     setPhase('plan')
   }
@@ -476,6 +480,7 @@ export default function Welcome() {
                 </div>
               </>
             )}
+            <StudyLanguages value={studyLanguages} onChange={setStudyLanguages} />
             <button type="button" className="welcome-cta" disabled={!essaiOk} onClick={commencerEssai}>Commencer mes révisions sans compte</button>
             <button type="button" className="welcome-skip" onClick={() => setEssai(false)}>{t('backToLogin')}</button>
           </>
@@ -596,6 +601,7 @@ export default function Welcome() {
                     </div>
                   </>
                 )}
+                {!isProf && <StudyLanguages value={studyLanguages} onChange={setStudyLanguages} />}
                 {isProf ? (
                   <>
                     <span className="welcome-label">{t('whatDoYouTeach')}</span>

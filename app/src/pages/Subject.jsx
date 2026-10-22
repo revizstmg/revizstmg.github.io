@@ -1,3 +1,4 @@
+import { chaptersForLanguages, STUDY_LANGUAGES, normalizeStudyLanguages } from '../data/studyLanguages.js'
 import { Link, useParams } from 'react-router-dom'
 import Introuvable from './Introuvable.jsx'
 import { getSubject, deckForSubject } from '../data/index.js'
@@ -22,6 +23,9 @@ export default function Subject() {
   const { state } = useStore()
   const t = useT()
   if (!subject) return <Introuvable />
+  const languageSubject = subject.id === 'langues'
+  const chapters = languageSubject ? chaptersForLanguages(subject.chapters, state.studyLanguages) : subject.chapters
+  const pending = languageSubject ? STUDY_LANGUAGES.filter(l => normalizeStudyLanguages(state.studyLanguages).includes(l.id) && !subject.chapters.some(c => c.id.startsWith(`lng-${l.id}-`))) : []
   const color = subject.color
 
   return (
@@ -31,8 +35,9 @@ export default function Subject() {
         <h1 className="font-display text-2xl font-medium leading-tight"><CourseText text={subject.name} /></h1>
       </header>
 
+      {pending.map(language => <div className="card p-4" key={language.id}><h2 className="font-display text-lg">{t(language.key)}</h2><p className="mt-2 text-sm">{t('studyLanguageCourseSoon')}</p></div>)}
       <ol className="space-y-2.5">
-        {subject.chapters.map((c, i) => {
+        {chapters.map((c, i) => {
           const score = chapterScore(state, c.id)
           const done = score >= 90
           const [numero, titre] = numeroEtTitre(c.name, i)
@@ -65,7 +70,7 @@ export default function Subject() {
         })}
       </ol>
 
-      <DeckDownload deck={deckForSubject(sid)} color={color} label={t('downloadSubjectDeck')} />
+      <DeckDownload deck={deckForSubject(sid, languageSubject && normalizeStudyLanguages(state.studyLanguages).length ? chapters.map(c => c.id) : null)} color={color} label={t('downloadSubjectDeck')} />
     </div>
   )
 }

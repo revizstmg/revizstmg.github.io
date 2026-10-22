@@ -1,3 +1,4 @@
+import { normalizeStudyLanguages } from './data/studyLanguages.js'
 import { studySeconds, activeSeconds, repairStudyTime } from './data/studyTime.js'
 import { SHOP_LEVELS, purchaseItem, equipItem, collectReward, walletRevision } from './data/shop.js'
 import { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback } from 'react'
@@ -92,6 +93,7 @@ const emptyState = () => ({
   chapters: {}, // { [chapterId]: { games: { [gameId]: pct }, quiz: pct } }
   favorites: [], // ids de chapitres marqués « à revoir »
   lastChapter: null, // { subjectId, chapterId }
+  studyLanguages: null, // langues étudiées (pas la langue de l’interface)
   track: null, // { level, specialty } — filière choisie à l'entrée
   profile: null, // { firstName, lastName } — fiche d'information (accueil personnalisé)
   onboarded: false, // a vu l'étape « Que veux-tu travailler ? » (choix des chapitres)
@@ -436,6 +438,7 @@ export function StoreProvider({ children }) {
 
   const setTheme = useCallback((theme) => setState((p) => ({ ...p, theme })), [])
 
+  const setStudyLanguages = useCallback((languages) => setState(p => ({ ...p, studyLanguages: normalizeStudyLanguages(languages) })), [])
   const setTrack = useCallback((track) => setState((p) => ({ ...p, track })), [])
 
   const setProfile = useCallback((profile) => setState((p) => evaluateBadges({ ...p, profile })), [evaluateBadges])
@@ -741,11 +744,12 @@ export function StoreProvider({ children }) {
   // Inscription : applique en une fois le profil, la filière, les chapitres
   // choisis (favoris « à revoir ») et le point de reprise, puis évalue les
   // badges (Bienvenue, Feuille de route…).
-  const applyOnboarding = useCallback(({ profile, track, favorites, lastChapter }) => {
+  const applyOnboarding = useCallback(({ profile, track, favorites, lastChapter, studyLanguages }) => {
     setState((p) => {
       const next = { ...p, onboarded: true }
       if (profile) next.profile = profile
       if (track) next.track = track
+      if (studyLanguages !== undefined) next.studyLanguages = normalizeStudyLanguages(studyLanguages)
       if (favorites?.length) next.favorites = Array.from(new Set([...(p.favorites || []), ...favorites]))
       if (lastChapter) next.lastChapter = lastChapter
       return evaluateBadges(next)
@@ -824,6 +828,7 @@ export function StoreProvider({ children }) {
     setLastChapter,
     setTheme,
     setTrack,
+    setStudyLanguages,
     setProfile,
     setPhoto,
     setLang,
