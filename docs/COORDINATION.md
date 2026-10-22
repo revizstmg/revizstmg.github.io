@@ -1158,3 +1158,8 @@ Prochaine action :
 - La dernière compilation (service worker 4e34a44318) et les deux parcours notes ont réussi après la finition des champs de réponse. Référence de réalisation : PR #83 ; droits payants à connecter au futur lancement des offres, sans activation d’abonnement ni facturation dans ce chantier.
 - Prise de photo directe ajoutée pour le sujet et la copie (caméra arrière sur mobile), avec ajout de plusieurs photos dans la limite du dépôt. Nouvelle suite complète : 381 tests réussis ; compilation 4cfe851207 réussie. Derniers parcours notes en cours, puis fusion/publication automatique de #83.
 - Dernière reprise caméra : deux parcours réussis (17,3 s), y compris les champs caméra et le rechargement du bilan. Réalisation terminée et vérifiée localement, publication automatique à suivre sur main. Fonction serveur v16 active ; aucune activation d’abonnement utilisateur. Commits applicatifs 3d88f93, 814ee41 et 1eb8778 ; PR #83.
+
+### TUTEUR-20261023-CODEX-07 — compréhension des cours
+- Demande : chatbot qui reformule jusqu’à compréhension, même après 50 échanges ; Ultimate selon le choix antérieur du propriétaire.
+- Branche feat/tuteur-comprehension-cours. Périmètre : Chapter, composant tuteur, contrat et action tutor dans examen-blanc (extension du couloir Claude annoncée), traductions, tests et README. Aucun changement SQL/NAH/abonnement réel.
+- Pas de plafond total de reformulations ; historique visible conservé pendant la visite, contexte réseau borné pour les coûts et protection horaire distincte de la génération d’examens. Cours du chapitre uniquement. État : réservé avant code.
