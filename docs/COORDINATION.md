@@ -1070,3 +1070,10 @@ Prochaine action :
 - Validation GitHub : chaîne de branche #39682493784 réussie (code c39a8dd ; les commits suivants ne modifient que les deux documents de bilan/coordination). PR #71 prête à relire. Fusion tentée mais refusée par le contrôle automatique d’autorisation : l’accord explicite de fusion/publication n’a pas été reconnu dans la demande de correction. Aucun contournement ; aucune mise en ligne effectuée. Prochaine action : accord explicite du propriétaire pour fusionner #71 et publier, puis suivi de main/Pages.
 
 - 22 octobre 2026 : le propriétaire autorise explicitement la fusion et la publication. PR #71 fusionnée par squash dans `2814dd48250f9a1f19bfe9ef03e91a2ae6ad2357`. Le blocage d’autorisation ci-dessus est levé. Les tests locaux (335 UTC/Paris et 161 parcours) et la CI de branche #39682493784 sont réussis ; les seuls changements après ce code validé concernent la documentation. Publication automatique sur main en cours ; état final et références de publication suivis dans la PR #71. Aucun changement Supabase/NAH.
+
+### REVISION-20261022-CODEX-01 — Codex — refonte Réviser
+- Demande : harmoniser Révision avec Cours et Bac blanc. Branche `feat/revision-et-variete`.
+- Périmètre : Revise.jsx, CSS dédié, traductions du studio, parcours navigateur et README. Séance, carnet, flashcards, paquets et objectif hebdomadaire conservés.
+- Base synchronisée sur origin/main 778b7dd ; corrections #71/#72 conservées. Le moteur et le contenu ne sont pas modifiés dans cette livraison. Ancien travail de variété des exercices conservé séparément dans le stash revision-travail-preserve.
+- État : vérification de la nouvelle présentation, puis publication. Aucune modification Supabase/NAH.
+- Validation locale sur la version 7f803c3 : 335 tests unitaires réussis, compilation réussie, cinq parcours ciblés réussis (studio, carnet, flashcards), contrôle axe sans violation aux largeurs 393/1280 en clair et sombre. Captures inspectées ; aucun débordement horizontal. PR #73 ; validation GitHub et publication suivies dans la PR.
