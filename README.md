@@ -30,6 +30,8 @@ chaque compte, et accessible depuis « Reprendre ».
 
 L’espace Réviser reprend la présentation éditoriale de Bac blanc : séance guidée, carnet d’erreurs et flashcards, puis bibliothèque de matières / paquets et objectif hebdomadaire. Les compteurs viennent de la progression réelle ; le carnet reste accessible même vide. Les raccourcis internes font défiler la page sans changer la route.
 
+Le temps par thème conserve aussi les courtes visites, les séances guidées et le carnet d’erreurs. Les durées inférieures à une minute sont indiquées « < 1 min » ; l’arrière-plan et les longues suspensions ne gonflent pas le compteur.
+
 L’atelier de formules remplace les anciens espaces Révision express et Formulaire.
 Il propose un à cinq exercices par formule choisie, accepte les réponses avec
 virgule ou point et affiche un bilan local sans modifier la maîtrise des chapitres.
