@@ -1110,3 +1110,4 @@ Prochaine action :
 - Demande : enrichir largement l’atelier avec les formules des cours de Première et Terminale, même peu utilisées. Branche feat/atelier-formules-complet.
 - Périmètre : catalogue JSON, générateur numérique, liens de cours explicites, présentation/filtrage du catalogue, tests et README. Inventaire du formulaire et des cours ; distinguer calculs et moyens mnémotechniques non numériques. Aucun changement Supabase ni cours pédagogique.
 - État : annoncé avant code.
+- Extension annoncée : traductions des nouveaux filtres dans app/src/localisation/public.*.json (clés ciblées uniquement). 169 entrées numériques et inventaire dans docs/ATELIER-FORMULES.md ; les références sans calcul (mnémotechniques/SQL) restent des références.

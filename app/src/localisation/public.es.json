@@ -573,5 +573,14 @@
   "Analyser. Argumenter. Défendre.": "Analizar. Argumentar. Defender.",
   "Observer. Décider. Justifier.": "Observar. Decidir. Justificar.",
   "Deux parties indépendantes. Une situation juridique, une analyse économique et tous les documents pour construire ta réponse.": "Dos partes independientes: una situación jurídica, un análisis económico y todos los documentos para responder.",
-  "Une organisation réelle, plusieurs dossiers et leurs annexes. Le sujet complet pour mobiliser tes connaissances en situation.": "Una organización real, varios casos y sus anexos. Un examen completo para aplicar tus conocimientos."
+  "Une organisation réelle, plusieurs dossiers et leurs annexes. Le sujet complet pour mobiliser tes connaissances en situation.": "Una organización real, varios casos y sus anexos. Un examen completo para aplicar tus conocimientos.",
+  "Programme affiché": "Programa mostrado",
+  "Toute la Première et Terminale STMG": "Todos los cursos de Première y Terminale STMG",
+  "Ma classe et ma spécialité": "Mi curso y especialidad",
+  "Domaine de calcul": "Tema de cálculo",
+  "Tous les domaines": "Todos los temas",
+  "Sélectionner les formules affichées": "Seleccionar las fórmulas mostradas",
+  "Première et Terminale": "Première y Terminale",
+  "{visible} / {total} formules disponibles dans ce programme.": "{visible} / {total} fórmulas disponibles en este programa.",
+  "Arrondis à quatre décimales si nécessaire. La virgule et le point sont acceptés.": "Redondea a cuatro decimales si es necesario. Se aceptan la coma y el punto."
 }
