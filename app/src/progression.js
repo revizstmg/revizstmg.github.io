@@ -16,13 +16,14 @@ import { repairStudyTime } from './data/studyTime.js'
 // les règles d'avant : le plus grand, le plus récent ou l'union.
 
 // Champs de progression synchronisés sur le compte (multi-appareil).
-export const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'themeTimeInvalid', 'studyLanguages', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'shopRewards', 'shopWalletUpdatedAt', 'notesClasse']
+export const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'themeTimeInvalid', 'studyLanguages', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'reussites', 'shopRewards', 'shopWalletUpdatedAt', 'notesClasse']
 // Carnet d'erreurs : au plus tant de questions ratées, les plus récentes d'abord.
 export const CARNET_MAX = 150
 
 const COMPTEURS = ['xp', 'coins', 'freezes', 'totalAnswers', 'correctAnswers']
 // Collections datées élément par élément, et règle d'avant (copies sans dates).
 const COLLECTIONS = {
+  reussites: { cle: (e) => e?.id, ancienne: (x,y) => (y.at || 0) > (x.at || 0) ? y : x },
   favorites: { cle: (x) => x, ancienne: (x) => x },
   savedDecks: { cle: (d) => d?.id, ancienne: (x, y) => ((y.savedAt || 0) > (x.savedAt || 0) ? y : x) },
   fiches: { cle: (f) => f?.id, ancienne: (x, y) => ((y.createdAt || 0) > (x.createdAt || 0) ? y : x) },
@@ -230,6 +231,7 @@ export function mergeProgress(a, b, maintenant = Date.now()) {
     if (Object.keys(dates).length) meta.items[k] = dates
     out[k] = def.carte ? Object.fromEntries(garde) : [...garde.values()]
   }
+  out.reussites = out.reussites.sort((a,b)=>(b.at || 0)-(a.at || 0)).slice(0,2000)
   out.erreurs = out.erreurs.sort((x, y) => (y.le || '').localeCompare(x.le || '')).slice(0, CARNET_MAX)
 
   // Réglages datés (dernier point de reprise, date du bac).

@@ -1,3 +1,4 @@
+import RevisionPath from '../components/RevisionPath.jsx'
 import './Revise.css'
 import { revisionMessages } from '../i18n/revision.js'
 import { useMemo, useState } from 'react'
@@ -35,6 +36,7 @@ function RevisePage() {
   const t = useT()
   const m = revisionMessages[state.lang] || revisionMessages.fr
   const navigate = useNavigate()
+  const [pathMode,setPathMode] = useState(null)
   const [audio, setAudio] = useState(null)
   const [shareCode, setShareCode] = useState('')
   const [importCode, setImportCode] = useState('')
@@ -48,7 +50,7 @@ function RevisePage() {
   // Un thème n'est « commencé » que si sa LEÇON a été travaillée directement :
   // un exercice du thème, ou le test du thème. Les activités transversales (bac
   // blanc, coach IA, défi, express) ne suffisent PAS à le faire apparaître ici.
-  const CROSS = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac'])
+  const CROSS = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac', 'revision-acquis'])
   const hasRealLesson = (themeId) => {
     const rec = state.chapters[themeId]
     if (!rec) return false
@@ -101,6 +103,8 @@ function RevisePage() {
     setImportCode(''); setImportMsg(`✅ ${deck.title} (${deck.cards.length} ${t('cardsCount')})`)
   }
 
+  if (pathMode) return <RevisionPath key={`${state.account?.id || 'trial'}:${state.track.level}:${state.track.specialty || ''}`} mode={pathMode} subjects={subjects} onBack={()=>setPathMode(null)} />
+
   if (carnet) {
     return (
       <div className="animate-lux mx-auto max-w-2xl">
@@ -118,9 +122,9 @@ function RevisePage() {
       <section aria-labelledby="revision-methods" className="space-y-5">
         <div className="revision-section-heading"><p className="kicker">{m.chooseLabel}</p><h2 id="revision-methods" className="font-display text-3xl">{m.chooseTitle}</h2></div>
         <div className="revision-methods">
-          {[{ id: '01', title: m.guided, help: m.guidedHelp, action: m.guidedAction, to: '/seance', type: 'path' }, { id: '02', title: m.errorMode, help: m.errorHelp, action: m.errorAction, href: '#revision-carnet', type: 'notes' }, { id: '03', title: m.cardsMode, help: m.cardsHelp, action: m.cardsAction, href: '#revision-flashcards', type: 'cards' }].map(item => <article className={`revision-method revision-method-${item.type}`} key={item.id}>
+          {[{ id: '01', title: m.guided, help: m.guidedHelp, action: m.guidedAction, mode: 'follow', type: 'path' }, { id: '02', title: m.errorMode, help: m.errorHelp, action: m.errorAction, mode: 'errors', type: 'notes' }, { id: '03', title: m.cardsMode, help: m.cardsHelp, action: m.cardsAction, mode: 'acquired', type: 'cards' }].map(item => <article className={`revision-method revision-method-${item.type}`} key={item.id}>
             <div className="revision-preview" aria-hidden="true"><span className="revision-preview-number">{item.id}</span><div className="revision-paper"><span>RÉVIZSTMG</span><div className="revision-paper-rule" /><strong>{item.title}</strong><div className="revision-paper-lines" />{item.type === 'notes' && <i>✓ &nbsp; ✓ &nbsp; ✓</i>}</div>{item.type === 'cards' && <div className="revision-paper-back" />}</div>
-            <div className="revision-method-body"><h3 className="font-display">{item.title}</h3><p>{item.help}</p>{item.to ? <Link to={item.to} className="revision-method-action">{item.action}<span aria-hidden>↗</span></Link> : <button type="button" onClick={() => document.getElementById(item.href.slice(1))?.scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })} className="revision-method-action">{item.action}<span aria-hidden>↓</span></button>}</div>
+            <div className="revision-method-body"><h3 className="font-display">{item.title}</h3><p>{item.help}</p><button type="button" onClick={()=>setPathMode(item.mode)} className="revision-method-action">{item.action}<span aria-hidden>↗</span></button></div>
           </article>)}
         </div>
       </section>
@@ -177,7 +181,7 @@ function RevisePage() {
               </div>
             ) : null
           })()}
-          {started.slice(0, 20).map((item) => {
+          {started.slice(0, 3).map((item) => {
             const r = REASON[item.reason] || REASON.review
             return (
               <Link key={item.themeId} to={`/subject/${item.subjectId}/theme/${item.themeId}`} className="card flex items-center gap-3 p-3.5 transition hover:-translate-y-0.5 hover:shadow-md">
@@ -199,7 +203,7 @@ function RevisePage() {
           <h2 className="px-1 font-display text-lg font-semibold">📒 {t('notebookTitle')}</h2>
           <p className="px-1 text-sm text-slate-500 dark:text-slate-300">{t('notebookSub')}</p>
           {!groupesCarnet.length && <div className="revision-empty"><span aria-hidden>✓</span><h3 className="font-display text-xl">{m.noErrors}</h3><p className="mt-2 text-sm">{m.noErrorsHelp}</p></div>}
-          {groupesCarnet.slice(0, 12).map((g) => {
+          {groupesCarnet.slice(0, 3).map((g) => {
             const theme = ALL_CHAPTERS[g.themeId]
             const couleur = SUBJECTS.find((x) => x.id === theme?.subjectId)?.color || '#7c3aed'
             return (

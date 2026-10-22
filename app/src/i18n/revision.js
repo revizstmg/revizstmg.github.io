@@ -10,3 +10,10 @@ export const revisionMessages = Object.fromEntries(Object.entries(lists).map(([l
  if (values.length !== keys.length) throw new Error(`revision translation ${lang}`)
  return [lang, Object.fromEntries(keys.map((key, i) => [key, values[i]]))]
 }))
+
+// Les trois méthodes ont un périmètre choisi par l’élève.
+Object.assign(revisionMessages.fr, {guidedHelp:'Choisis une matière et reprends au prochain exercice à travailler. Tu peux aussi choisir un chapitre.', errorHelp:'Choisis une matière ou un chapitre pour retravailler les questions que tu as ratées.', cardsHelp:'Mélange tes bonnes réponses et les exercices réussis dans un QCM de la matière ou du chapitre choisi.', cardsAction:'Réviser mes acquis'})
+Object.assign(revisionMessages.en, {guidedHelp:'Choose a subject and resume with the next exercise to practise. You can also select a chapter.', errorHelp:'Choose a subject or chapter to practise questions you got wrong.', cardsHelp:'Mix your correct answers and successful exercises in a quiz for the subject or chapter you choose.', cardsAction:'Review what I know'})
+Object.assign(revisionMessages.es, {guidedHelp:'Elige una asignatura y continúa con el siguiente ejercicio. También puedes elegir un capítulo.', errorHelp:'Elige una asignatura o capítulo para trabajar tus errores.', cardsHelp:'Mezcla tus respuestas correctas y ejercicios superados en un cuestionario de la asignatura o capítulo elegido.', cardsAction:'Repasar mis conocimientos'})
+Object.assign(revisionMessages.it, {guidedHelp:'Scegli una materia e riprendi dal prossimo esercizio. Puoi anche scegliere un capitolo.', errorHelp:'Scegli una materia o un capitolo per esercitarti sui tuoi errori.', cardsHelp:'Mescola le risposte corrette e gli esercizi riusciti in un quiz della materia o del capitolo scelto.', cardsAction:'Ripassare le conoscenze'})
+Object.assign(revisionMessages.ar, {guidedHelp:'اختر مادة وتابع من التمرين التالي. يمكنك أيضًا اختيار فصل.', errorHelp:'اختر مادة أو فصلاً للتدرب على الأسئلة التي أخطأت فيها.', cardsHelp:'امزج إجاباتك الصحيحة وتمارينك الناجحة في اختبار للمادة أو الفصل المختار.', cardsAction:'مراجعة مكتسباتي'})
