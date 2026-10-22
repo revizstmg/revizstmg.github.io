@@ -1,3 +1,4 @@
+import { studySeconds } from './data/studyTime.js'
 // Badges de gamification. Chaque badge a un test `check(state, derived)`
 // évalué après chaque partie (et après l'inscription / la mise en favori) ;
 // l'obtention déclenche une petite célébration.
@@ -8,7 +9,7 @@
 //  derived : global, bySubject[id], byChapter[id], chaptersMastered,
 //            subjectsPlayed, level
 const perfectQuizzes = (s) => Object.values(s.chapters).filter((c) => (c.quiz || 0) >= 100).length
-const totalTime = (s) => Object.values(s.themeTime || {}).reduce((a, b) => a + (b || 0), 0)
+const totalTime = (s) => Object.values(s.themeTime || {}).reduce((a, b) => a + studySeconds(b), 0)
 
 export const BADGES = [
   // ----- Démarrage -----

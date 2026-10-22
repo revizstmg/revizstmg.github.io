@@ -1,6 +1,7 @@
 // Libellés d'interface en espagnol, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  timeRepaired: "Se han apartado tiempos antiguos incoherentes. El contador se reinicia para los temas afectados.",
   leaveCurrentClass: "Salir de esta clase",
   joinAnotherClass: "Unirse a otra clase",
   classActionFailed: "No se pudieron actualizar tus clases. Revisa la conexión e inténtalo de nuevo.",

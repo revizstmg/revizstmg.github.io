@@ -1,3 +1,4 @@
+import { repairStudyTime } from './data/studyTime.js'
 // Progression de l'élève : ce qui part sur son compte, et la fusion entre la
 // copie de l'appareil et celle du compte quand il révise sur plusieurs appareils.
 //
@@ -15,7 +16,7 @@
 // les règles d'avant : le plus grand, le plus récent ou l'union.
 
 // Champs de progression synchronisés sur le compte (multi-appareil).
-export const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'shopRewards', 'shopWalletUpdatedAt', 'notesClasse']
+export const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'themeTimeInvalid', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'shopRewards', 'shopWalletUpdatedAt', 'notesClasse']
 // Carnet d'erreurs : au plus tant de questions ratées, les plus récentes d'abord.
 export const CARNET_MAX = 150
 
@@ -181,6 +182,8 @@ export function detacherEssai(s) {
 // Fusion locale ↔ compte (même utilisateur) : `a` est la copie de l'appareil,
 // `b` celle du compte. Les champs hors progression viennent de `a`.
 export function mergeProgress(a, b, maintenant = Date.now()) {
+  a = repairStudyTime(a)
+  b = repairStudyTime(b)
   if (!b || typeof b !== 'object' || !Object.keys(b).length) return a
   const ma = metaDe(a), mb = metaDe(b)
   const ea = avecMeta(a), eb = avecMeta(b)
@@ -276,6 +279,7 @@ export function mergeProgress(a, b, maintenant = Date.now()) {
   const tt = { ...(a.themeTime || {}) }
   for (const [tid, s] of Object.entries(b.themeTime || {})) tt[tid] = Math.max(tt[tid] || 0, s || 0)
   out.themeTime = tt
+  out.themeTimeInvalid = { ...b.themeTimeInvalid, ...a.themeTimeInvalid }
   // Défi du jour : on garde la date la plus récente et la meilleure série.
   const ad = a.dailyChallenge || {}, bd = b.dailyChallenge || {}
   const recent = (bd.last || '') > (ad.last || '') ? bd : ad
