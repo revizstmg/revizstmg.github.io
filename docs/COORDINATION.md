@@ -1076,3 +1076,4 @@ Prochaine action :
 - Périmètre : Revise.jsx, CSS dédié, traductions du studio, parcours navigateur et README. Séance, carnet, flashcards, paquets et objectif hebdomadaire conservés.
 - Base synchronisée sur origin/main 778b7dd ; corrections #71/#72 conservées. Le moteur et le contenu ne sont pas modifiés dans cette livraison. Ancien travail de variété des exercices conservé séparément dans le stash revision-travail-preserve.
 - État : vérification de la nouvelle présentation, puis publication. Aucune modification Supabase/NAH.
+- Validation locale sur la version 7f803c3 : 335 tests unitaires réussis, compilation réussie, cinq parcours ciblés réussis (studio, carnet, flashcards), contrôle axe sans violation aux largeurs 393/1280 en clair et sombre. Captures inspectées ; aucun débordement horizontal. PR #73 ; validation GitHub et publication suivies dans la PR.
