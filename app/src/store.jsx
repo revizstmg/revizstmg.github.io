@@ -1,3 +1,4 @@
+import { updateSuccesses } from './data/revisionPaths.js'
 import { normalizeStudyLanguages } from './data/studyLanguages.js'
 import { studySeconds, activeSeconds, repairStudyTime } from './data/studyTime.js'
 import { SHOP_LEVELS, purchaseItem, equipItem, collectReward, walletRevision } from './data/shop.js'
@@ -19,7 +20,7 @@ export { CARNET_MAX, mergeProgress, grandOralVide, etudeGestionVide }
 // Modes transverses qui touchent plein de thèmes d'un coup (bac blanc, coach IA,
 // défi, express) : ils enregistrent un score mais NE marquent PAS un thème comme
 // « travaillé », sinon « À réviser » se remplit de thèmes jamais étudiés.
-export const CROSS_GAMES = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac'])
+export const CROSS_GAMES = new Set(['exam', 'coach-ia', 'daily', 'express', 'sujet-bac', 'revision-acquis'])
 
 // Carnet d'erreurs, révisé question par question (répétition espacée par notion) :
 // - une question ratée y entre (ou y revient) en boîte 0, à revoir le lendemain ;
@@ -112,6 +113,7 @@ const emptyState = () => ({
   reminder: { on: false, time: '18:00' }, // rappel de révision (local)
   parentShare: false, // partage volontaire de la progression avec les parents (local)
   grandOral: grandOralVide(), // Grand Oral : questions, sources, analyse, arguments (sauvegardé sur le compte)
+  reussites: [],
   erreurs: [], // carnet d'erreurs : questions ratées à refaire
   etudeGestion: etudeGestionVide(), // étude de gestion (Première) : projet, sources, arguments
   examSeen: {}, // bac blanc : { [sélection]: [clés d'énoncés déjà tombés] } (local)
@@ -788,7 +790,7 @@ export function StoreProvider({ children }) {
     const apres = typeof maj === 'function' ? maj(avant) : { ...avant, ...maj }
     return { ...p, etudeGestion: { ...apres, maj: Date.now() } }
   }), [])
-  const noterReponses = useCallback((r) => setState((p) => ({ ...p, erreurs: majCarnet(p.erreurs, r, todayKey()) })), [])
+  const noterReponses = useCallback((r) => setState((p) => ({ ...p, erreurs: majCarnet(p.erreurs, r, todayKey()), reussites: updateSuccesses(p.reussites, r) })), [])
   const setParentShare = useCallback((on) => {
     try { if (on) localStorage.removeItem('stmg_parent_efface') } catch { /* stockage indisponible */ }
     setState((p) => ({ ...p, parentShare: !!on }))

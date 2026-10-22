@@ -1119,3 +1119,4 @@ Prochaine action :
 - Demande : suivre le fil par matière/chapitre, erreurs filtrées, QCM des acquis mélangés ; deux sélecteurs et un lancement direct. Branche feat/revision-trois-parcours.
 - Périmètre : Revise et composant de parcours, moteur dédié, lecture par matière, GameHost et tests/traductions. Extension annoncée : store/progression (couloir Claude), collection datée reussites dans la progression JSON existante, sans migration ni changement Supabase.
 - État : annoncé avant code ; conserver présentation et bibliothèque de paquets.
+- Réalisé en cours : sélecteur de chapitre avec sections réelles groupées par thème ; chemins directs sans choix de mode supplémentaire ; collection datée reussites (2 000 dernières), reprise locale distincte par matière ; résultats du QCM mélangé attribués à chaque thème. Extension traductions public.*.json annoncée par la mise à jour utilisateur.

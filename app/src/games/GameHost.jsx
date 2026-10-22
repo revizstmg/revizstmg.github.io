@@ -108,10 +108,25 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit,
     const pct = total ? Math.round((correct / total) * 100) : 0
     const base = mode === 'defi' ? 15 : 10
     const xp = reprise ? 0 : correct * base + (mode === 'defi' ? timeBonus : 0)
-    if (!reprise) recordResult({ chapterId, gameId: game.id, quiz, pct, correct, total, xp })
+    if (!reprise && game.id === 'revision-acquis') {
+      const groups = new Map()
+      for (const [ok, questions] of [[true, reussies || []], [false, ratees || []]]) for (const q of questions) {
+        const tid = q.themeId || chapterId
+        if (!groups.has(tid)) groups.set(tid, { correct:0, total:0 })
+        const group = groups.get(tid); group.total++; if (ok) group.correct++
+      }
+      let first = true
+      for (const [tid, group] of groups) {
+        recordResult({ chapterId:tid, gameId:game.id, pct:100*group.correct/group.total, correct:group.correct, total:group.total, xp:group.correct*base + (first && mode==='defi' ? timeBonus : 0) })
+        first = false
+      }
+    } else if (!reprise) recordResult({ chapterId, gameId: game.id, quiz, pct, correct, total, xp })
     // Carnet d'erreurs : les questions ratées y entrent ; réussies le jour où
     // elles sont dues, elles avancent vers la sortie (voir majCarnet).
-    if (chapterId && (ratees?.length || reussies?.length)) noterReponses({ themeId: chapterId, type: game.type, ratees, reussies })
+    if (chapterId && (ratees?.length || reussies?.length)) {
+      const situer = q => Number.isInteger(correction.idx) && (!q.themeId || q.themeId===chapterId) ? {...q,chapterIndex:q.chapterIndex ?? correction.idx} : q
+      noterReponses({ themeId:chapterId, type:game.type, ratees:ratees?.map(situer), reussies:reussies?.map(situer) })
+    }
     setResult({ correct, total, pct, xp, ratees: ratees || [] })
   }
 
