@@ -1167,3 +1167,9 @@ Prochaine action :
 - Réalisation terminée : bouton « Je n’ai pas compris » sous le lecteur de chaque chapitre ; cinq suggestions et saisie libre, historique visible sans plafond de tours, contexte limité aux 19 derniers messages, clé compte/chapitre et annulation des demandes à la sortie. Réponses privées non enregistrées dans la progression, ni utilisées pour attribuer des XP/notes.
 - Dernière validation : 383 tests unitaires réussis, compilation 0b7128ed08 réussie, quatre parcours navigateur réussis (chat, contexte tronqué, changement de chapitre, contrôle axe, refus Ultimate et conservation des notes). Les règles axe sont inchangées.
 - Fonction examen-blanc v17 déployée, accès Ultimate vérifié côté serveur, protection horaire distincte ; GET réel 200 ready et POST anonyme 401. Aucun abonnement activé, aucune migration, donnée NAH ou fichier personnel utilisé en test. PR #84 ; publication automatique à suivre après fusion. #83 : chaîne complète main réussie, compilation 30d975b, Pages en cours au dernier contrôle.
+
+### MOBILE-20261023-CODEX-08 — ergonomie téléphone
+- Demande : croix trop haute dans le lecteur agrandi et refonte de l’espace mobile.
+- Périmètre : Course, Layout (fichier commun annoncé), MobileMenu si nécessaire, CSS mobile dédié/import, styles des pages principales, tests mobiles et README. Branche feat/mobile-confort-navigation. Aucun cours, compte ou Supabase modifié.
+- Objectifs : fermeture du lecteur accessible en bas avec zones sûres, hauteur dynamique, navigation stable, cibles tactiles, formulaires sans zoom forcé, grilles et espacements adaptés aux petits écrans et au paysage. Design vert/crème/doré conservé.
+- État : réservé avant code ; PR #41/#46 ouvertes sur le référencement uniquement, pas de conflit de périmètre identifié.
