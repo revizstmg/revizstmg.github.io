@@ -1,3 +1,4 @@
+import { useStore } from '../store.jsx'
 import { studySeconds } from '../data/studyTime.js'
 // Graphiques de statistiques élève, en SVG pur (aucune dépendance) :
 //  - ProgressCurve : courbe d'XP cumulé au fil des jours.
@@ -74,17 +75,20 @@ export function ProgressCurve({ history }) {
 // Barres horizontales : temps de révision par thème (top 6).
 export function ThemeTimeBars({ themeTime }) {
   const t = useT()
+  const { state } = useStore()
+  const repaired = Object.keys(state.themeTimeInvalid || {}).length > 0
   const rows = Object.entries(themeTime || {})
     .map(([id, sec]) => ({ id, sec: studySeconds(sec), meta: ALL_CHAPTERS[id] }))
     .filter((r) => r.meta && r.sec > 0) // afficher aussi les courtes visites
     .sort((a, b) => b.sec - a.sec)
     .slice(0, 6)
   if (!rows.length) {
-    return <div className="card p-5 text-center text-sm text-slate-500 dark:text-slate-400">{t('timeSoon')}</div>
+    return <div className="card p-5 text-center text-sm text-slate-500 dark:text-slate-400">{t(repaired ? 'timeRepaired' : 'timeSoon')}</div>
   }
   const max = Math.max(...rows.map((r) => r.sec))
   return (
     <div className="card space-y-2.5 p-4">
+      {repaired && <p role="status" className="text-sm">{t('timeRepaired')}</p>}
       {rows.map((r) => {
         const color = r.meta.color || 'var(--c-accent)'
         return (

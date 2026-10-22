@@ -1,4 +1,4 @@
-import { studySeconds, activeSeconds } from './data/studyTime.js'
+import { studySeconds, activeSeconds, repairStudyTime } from './data/studyTime.js'
 import { SHOP_LEVELS, purchaseItem, equipItem, collectReward, walletRevision } from './data/shop.js'
 import { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback } from 'react'
 import { SUBJECTS, ALL_CHAPTERS, chapitreDuJeu, exercicesParChapitre, EXERCICES_POUR_MAITRISER } from './data/index.js'
@@ -209,7 +209,7 @@ function load() {
     try { copie = lireCopie(KEY_SECOURS) } catch { copie = null }
   }
   if (!copie) return emptyState()
-  const saved = { ...emptyState(), ...copie }
+  const saved = repairStudyTime({ ...emptyState(), ...copie })
   const id = getSession()?.user?.id
   return id && saved.account?.id && id !== saved.account.id ? withoutAccount(saved) : saved
 }
@@ -972,9 +972,9 @@ export function buildChildSnapshot(state, derived) {
     short: s.short || s.name,
     color: s.color,
     score: derived?.bySubject?.[s.id] || 0,
-    time: (s.chapters || []).reduce((a, c) => a + (state.themeTime?.[c.id] || 0), 0),
+    time: (s.chapters || []).reduce((a, c) => a + studySeconds(state.themeTime?.[c.id]), 0),
   }))
-  const totalTime = Object.values(state.themeTime || {}).reduce((a, b) => a + (b || 0), 0)
+  const totalTime = Object.values(state.themeTime || {}).reduce((a, b) => a + studySeconds(b), 0)
   const name = [state.profile?.firstName, state.profile?.lastName].filter(Boolean).join(' ').trim() || 'Élève'
   return {
     name,

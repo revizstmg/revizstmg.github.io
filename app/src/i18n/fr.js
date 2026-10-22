@@ -1,5 +1,6 @@
 // Source française des libellés de l’interface.
 export default {
+  timeRepaired: "D’anciens temps incohérents ont été écartés. Le comptage reprend pour les thèmes concernés.",
   leaveCurrentClass: "Quitter cette classe",
   joinAnotherClass: "Rejoindre une autre classe",
   classActionFailed: "Impossible de mettre à jour tes classes. Vérifie ta connexion et réessaie.",

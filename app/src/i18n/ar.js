@@ -1,6 +1,7 @@
 // Libellés d'interface en arabe, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  timeRepaired: "تم استبعاد أوقات دراسة قديمة غير صحيحة. يبدأ احتساب الوقت من جديد للموضوعات المعنية.",
   leaveCurrentClass: "مغادرة هذا الفصل",
   joinAnotherClass: "الانضمام إلى فصل آخر",
   classActionFailed: "تعذّر تحديث فصولك. تحقّق من الاتصال وحاول مجددًا.",

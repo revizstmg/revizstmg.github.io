@@ -1,6 +1,7 @@
 // Libellés d'interface en italien, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  timeRepaired: "I vecchi tempi incoerenti sono stati esclusi. Il conteggio riprende per gli argomenti interessati.",
   leaveCurrentClass: "Lascia questa classe",
   joinAnotherClass: "Unisciti a un’altra classe",
   classActionFailed: "Impossibile aggiornare le tue classi. Controlla la connessione e riprova.",
