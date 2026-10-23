@@ -20,6 +20,7 @@ for(const [sid,track] of [['langues',{level:'terminale-stmg',specialty:'gestion-
   for(const dark of [false,true]) {
    await page.evaluate(d=>document.documentElement.classList.toggle('dark',d),dark)
    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true)
+   await page.evaluate(() => Promise.all(document.getAnimations().map(a => a.finished.catch(() => {}))))
    expect((await new AxeBuilder({page}).include('main').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([])
    await page.screenshot({path:info.outputPath(`langues-${dark?'sombre':'clair'}.png`),fullPage:true})
   }

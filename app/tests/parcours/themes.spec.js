@@ -20,6 +20,19 @@ for (const matiere of SUBJECTS) {
     await page.goto('./')
     await attendreAccueil(page)
     await page.goto(`./#/subject/${matiere.id}`)
+    if (['langues','p1-langues'].includes(matiere.id)) {
+      await expect(page.getByRole('heading', { name: 'Ose prendre la parole.' })).toBeVisible()
+      for (const theme of themes) {
+        for (const path of [`/theme/${theme.id}`, `/theme/${theme.id}/chapter/0`]) {
+          await page.goto(`./#/subject/${matiere.id}${path}`)
+          await expect(page.getByRole('heading', { name: 'Ose prendre la parole.' })).toBeVisible()
+          await expect(page.getByRole('link', { name: /Ouvrir le guide PDF/ })).toHaveAttribute('href', /guide-.*pdf/)
+          await expect(page.locator('.reader')).toHaveCount(0)
+        }
+      }
+      expect(erreurs).toEqual([])
+      return
+    }
     await expect(page.locator('main')).toContainText(titreSansNumero(themes[0].name))
     for (const t of themes) {
       await page.goto(`./#/subject/${matiere.id}/theme/${t.id}`)
