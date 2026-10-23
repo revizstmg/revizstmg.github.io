@@ -1248,3 +1248,8 @@ Prochaine action :
 - Journaux de la tentative 1 du run 39943852884 récupérés par l’archive API : APT utilise file:/etc/apt/apt-mirrors.txt, qui contient encore Azure. La correction #93 ne couvrait que sources.list et *.sources/*.list ; elle était donc insuffisante sur cette image.
 - Périmètre annoncé : inclure uniquement /etc/apt/apt-mirrors.txt dans le remplacement déjà prévu ; tests, paquets et versions identiques, security.ubuntu.com préservé. Branche fix/liste-miroirs-apt, workflow et journal uniquement.
 - Vérifié sur une arborescence APT temporaire reproduisant mirror+file et apt-mirrors.txt : script réel exécuté, miroir standard substitué, source sécurité conservée. YAML et shell valides ; comparaison structurée confirme que seule cette étape change. Validation GitHub complète à suivre.
+
+### LANGUES-20261023-CODEX-18 — vrais manuels PDF, exercices corrigés et vidéos
+- Retour : guides trop peu remplis. Demande de vrais cours détaillés, nombreux mini-exercices avec correction et beaucoup de vidéos.
+- Périmètre : sources des quatre guides dans app/resources/langues, générateur PDF, présentation Languages et tests associés. Exploiter les cours existants vérifiés en les organisant en leçons, enrichir les explications et les activités ; corrigés séparés avec justification, liens vidéo réels ou recherches explicitement nommées, jamais de faux identifiant vidéo. Pages plus denses et navigation cliquable.
+- Branche feat/manuels-langues-complets, réservation avant code. Aucune modification de base, compte ou ancien historique. Publication #91–94 confirmée : 56c1615, Pages 39987074093, quatre PDF publics vérifiés, 193 parcours réussis.
