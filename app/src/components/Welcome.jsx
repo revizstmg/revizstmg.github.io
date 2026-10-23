@@ -146,6 +146,9 @@ export default function Welcome() {
     ;(async () => {
       setBusy(true); setErr(''); setInfo('')
       const res = await consumeOAuthRedirect()
+      // replaceState nettoie les jetons, mais ne met pas à jour HashRouter.
+      // Remplacer aussi sa route évite la 404 après connexion/inscription.
+      navigate('/accueil', { replace: true })
       if (!res || res.error) { setBusy(false); if (res?.error) setErr(res.error); return }
       const prof = await fetchProfile().catch(() => null)
       if (prof && prof.level) { await loginFromSessionRef.current(); setBusy(false); return }

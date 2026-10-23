@@ -509,3 +509,5 @@ La correction des questions rédigées utilise un raisonnement Gemini limité (n
 
 ### Un accueil pour reprendre ses révisions
 L’accueil élève met en avant une séance et la reprise du dernier cours (chapitre et fiche enregistrés), avec un point de départ vers Cours pour les débutants. Le catalogue des matières reste sur la page Cours ; l’accueil propose Voir tous les cours. Présentation éditoriale vert profond/crème/doré, illustration légère en CSS, puis habitudes, objectifs, progression et communauté. Les petits écrans courts reçoivent une version compacte pour garder l’action principale immédiatement visible. L’accueil professeur conserve ses classes. Les textes sont disponibles hors ligne en FR/EN/ES/IT/AR.
+
+Le retour de connexion Google ouvre explicitement l’accueil après consommation du fragment OAuth. Les jetons sont nettoyés de l’adresse, la session reste disponible et un nouveau compte complète toujours son profil. Les vrais liens inexistants conservent leur page 404.
