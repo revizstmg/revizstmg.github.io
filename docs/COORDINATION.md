@@ -1207,3 +1207,8 @@ Prochaine action :
 - Réalisé : suppression du trio d’indicateurs, du carnet autonome, de la grille de matières et de l’objectif hebdomadaire de la bibliothèque ; seuls les flashcards et leurs actions restent dans les outils. Les trois méthodes sont conservées ; l’action du parcours erreurs est renommée Retravailler mes erreurs dans les cinq langues, sans carnet ni perte de données.
 - Tests adaptés aux nouveaux chemins (pas supprimés) : anciennes questions toujours retravaillables par matière, lien Pourquoi vers le cours et espacement effectif à trois jours vérifiés ; flashcards/import, filtres matière/chapitre, acquis et reprise conservés. Assertions sur l’absence du carnet et des indicateurs, bibliothèque limitée aux flashcards.
 - Validation : 390 tests unitaires réussis (42 fichiers), compilation f050aed006 réussie et huit parcours navigateur réussis, dont accessibilité et affichage 393/1280 px clair/sombre. Capture mobile inspectée, git diff --check propre. Aucun cours, empreinte, stockage ou Supabase modifié. PR #88 ; publication automatique à suivre.
+
+### ACCUEIL-20261023-CODEX-12 — donner envie de réviser
+- Demande : accueil sans doublon des matières de Cours ; reprise du dernier cours, séance, progrès/objectifs, accès Voir tous les cours et présentation très soignée.
+- Branche feat/accueil-envie-reviser. Périmètre : Home et CSS dédié, traductions, parcours existants et README. Style vert/crème/doré et cartes de progression/communauté conservés. Accueil professeur et données inchangés ; aucune modification Supabase.
+- Réservation avant code. Priorité mobile, actions immédiatement identifiables, reprise au repère réellement enregistré, accueil débutant explicite.
