@@ -1247,3 +1247,4 @@ Prochaine action :
 ### CI-20261023-CODEX-17 — liste réelle des miroirs APT
 - Journaux de la tentative 1 du run 39943852884 récupérés par l’archive API : APT utilise file:/etc/apt/apt-mirrors.txt, qui contient encore Azure. La correction #93 ne couvrait que sources.list et *.sources/*.list ; elle était donc insuffisante sur cette image.
 - Périmètre annoncé : inclure uniquement /etc/apt/apt-mirrors.txt dans le remplacement déjà prévu ; tests, paquets et versions identiques, security.ubuntu.com préservé. Branche fix/liste-miroirs-apt, workflow et journal uniquement.
+- Vérifié sur une arborescence APT temporaire reproduisant mirror+file et apt-mirrors.txt : script réel exécuté, miroir standard substitué, source sécurité conservée. YAML et shell valides ; comparaison structurée confirme que seule cette étape change. Validation GitHub complète à suivre.
