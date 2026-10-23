@@ -4,16 +4,13 @@ import './Revise.css'
 import { revisionMessages } from '../i18n/revision.js'
 import { useMemo, useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
-import { useStore, useThemeTimer, isoWeekKey, WEEKLY_GOAL, erreursDues } from '../store.jsx'
-import { todayKey } from '../data/srs.js'
+import { useStore } from '../store.jsx'
 import { reviewQueue } from '../data/study.js'
 import { subjectsForTrack } from '../data/tracks.js'
 import { ProgressBar } from '../components/ui.jsx'
 import AudioReview from '../components/AudioReview.jsx'
 import { encodeDeck, decodeDeck } from '../deckShare.js'
-import { useT, useGameLabel } from '../i18n.js'
-import { ALL_CHAPTERS, SUBJECTS } from '../data/index.js'
-import GameHost from '../games/GameHost.jsx'
+import { useT } from '../i18n.js'
 
 // Étiquette d'état d'un thème commencé (jamais « nouveau » ici : on ne liste que
 // ce que l'élève a déjà travaillé).
@@ -33,7 +30,7 @@ export default function Revise() {
 }
 
 function RevisePage() {
-  const { state, removeDeck, saveDeck, claimWeekly } = useStore()
+  const { state, removeDeck, saveDeck } = useStore()
   const t = useT()
   const m = revisionMessages[state.lang] || revisionMessages.fr
   const navigate = useNavigate()
@@ -43,10 +40,6 @@ function RevisePage() {
   const [importCode, setImportCode] = useState('')
   const [importMsg, setImportMsg] = useState('')
   const [showImport, setShowImport] = useState(false)
-  const [carnet, setCarnet] = useState(null) // exercice du carnet d'erreurs en cours
-  useThemeTimer(carnet?.themeId)
-  const gameLabel = useGameLabel()
-
   const queue = useMemo(() => reviewQueue(state, state.track), [state])
   // Un thème n'est « commencé » que si sa LEÇON a été travaillée directement :
   // un exercice du thème, ou le test du thème. Les activités transversales (bac
@@ -65,31 +58,7 @@ function RevisePage() {
   const first = started[0] // le plus prioritaire à reprendre
   const hasStarted = started.length > 0
   const subjects = useMemo(() => subjectsForTrack(state.track).filter((s) => s && !s.comingSoon && (s.chapters || []).length).map(s => ['langues','p1-langues'].includes(s.id) ? { ...s, chapters: chaptersForLanguages(s.chapters, state.studyLanguages) } : s), [state.track, state.studyLanguages])
-  const startedSubjects = useMemo(() => new Set(started.map((s) => s.subjectId)), [started])
   const decks = state.savedDecks || []
-  // Carnet d'erreurs : les questions ratées, regroupées par thème et par type
-  // d'exercice (un exercice ne mélange pas les types).
-  // Les questions à revoir aujourd'hui passent en tête (répétition espacée).
-  const groupesCarnet = useMemo(() => {
-    const jour = todayKey()
-    const groupes = new Map()
-    const dues = new Set(erreursDues(state.erreurs, jour))
-    for (const e of [...dues, ...(state.erreurs || []).filter((x) => !dues.has(x))]) {
-      const cle = `${e.themeId}|${e.type}`
-      if (!groupes.has(cle)) groupes.set(cle, { cle, themeId: e.themeId, type: e.type, questions: [], dues: 0 })
-      const g = groupes.get(cle)
-      g.questions.push(e.q)
-      if (dues.has(e)) g.dues++
-    }
-    return [...groupes.values()].sort((a, b) => b.dues - a.dues)
-  }, [state.erreurs])
-
-  const wk = isoWeekKey()
-  const weekDone = state.weekly?.week === wk ? (state.weekly.done?.length || 0) : 0
-  const weekPct = Math.min(100, Math.round((weekDone / WEEKLY_GOAL) * 100))
-  const weekReached = weekDone >= WEEKLY_GOAL
-  const weekClaimed = state.weekly?.rewarded === wk
-
   const share = async (deck) => {
     const code = encodeDeck(deck)
     if (!code) return
@@ -105,14 +74,6 @@ function RevisePage() {
   }
 
   if (pathMode) return <RevisionPath key={`${state.account?.id || 'trial'}:${state.track.level}:${state.track.specialty || ''}`} mode={pathMode} subjects={subjects} onBack={()=>setPathMode(null)} />
-
-  if (carnet) {
-    return (
-      <div className="animate-lux mx-auto max-w-2xl">
-        <GameHost game={carnet} chapterId={carnet.themeId} color={carnet.color} onExit={() => setCarnet(null)} />
-      </div>
-    )
-  }
 
   return (
     <div className="revision-page animate-lux space-y-9">
@@ -161,27 +122,6 @@ function RevisePage() {
       {hasStarted && (
         <section className="space-y-2.5">
           <h2 className="px-1 font-display text-lg font-semibold">🔁 {t('toReviseSection')}</h2>
-          {(() => {
-            const dueN = started.filter((s) => s.reason === 'due').length
-            const weakN = started.filter((s) => s.reason === 'weak').length
-            const okN = started.filter((s) => s.reason === 'review').length
-            return (dueN + weakN) > 0 ? (
-              <div className="grid grid-cols-3 gap-2">
-                <div className="rounded-xl bg-amber-50 p-2.5 text-center dark:bg-amber-950/40">
-                  <div className="text-lg font-bold text-amber-800 dark:text-amber-300">{dueN}</div>
-                  <div className="text-[11px] leading-tight text-amber-800 dark:text-amber-300/80">{m.due}</div>
-                </div>
-                <div className="rounded-xl bg-rose-50 p-2.5 text-center dark:bg-rose-950/40">
-                  <div className="text-lg font-bold text-rose-800 dark:text-rose-300">{weakN}</div>
-                  <div className="text-[11px] leading-tight text-rose-800 dark:text-rose-300/80">{m.weak}</div>
-                </div>
-                <div className="rounded-xl bg-emerald-50 p-2.5 text-center dark:bg-emerald-950/40">
-                  <div className="text-lg font-bold text-emerald-800 dark:text-emerald-300">{okN}</div>
-                  <div className="text-[11px] leading-tight text-emerald-800 dark:text-emerald-300/80">{m.strong}</div>
-                </div>
-              </div>
-            ) : null
-          })()}
           {started.slice(0, 3).map((item) => {
             const r = REASON[item.reason] || REASON.review
             return (
@@ -199,55 +139,7 @@ function RevisePage() {
         </section>
       )}
 
-      {/* CARNET D'ERREURS — les questions ratées, à refaire jusqu'à les réussir */}
-      <section id="revision-carnet" className="revision-notebook space-y-3">
-          <h2 className="px-1 font-display text-lg font-semibold">📒 {t('notebookTitle')}</h2>
-          <p className="px-1 text-sm text-slate-500 dark:text-slate-300">{t('notebookSub')}</p>
-          {!groupesCarnet.length && <div className="revision-empty"><span aria-hidden>✓</span><h3 className="font-display text-xl">{m.noErrors}</h3><p className="mt-2 text-sm">{m.noErrorsHelp}</p></div>}
-          {groupesCarnet.slice(0, 3).map((g) => {
-            const theme = ALL_CHAPTERS[g.themeId]
-            const couleur = SUBJECTS.find((x) => x.id === theme?.subjectId)?.color || '#7c3aed'
-            return (
-              <div key={g.cle} className="card flex items-center gap-3 p-3.5">
-                <span className="min-w-0 flex-1">
-                  <span className="block truncate text-sm font-semibold">{theme?.name || g.themeId}</span>
-                  <span className="block text-xs text-slate-500 dark:text-slate-300">{gameLabel(g.type)} · {t(g.questions.length > 1 ? 'notebookCountP' : 'notebookCountS').replace('{n}', g.questions.length)}{g.dues > 0 && <span className="font-semibold text-amber-700 dark:text-amber-300"> · {`${g.dues} ${m.dueShort}`}</span>}</span>
-                </span>
-                <button
-                  onClick={() => setCarnet({ id: `carnet-${g.type}`, type: g.type, title: `📒 ${t('notebookTitle')}`, questions: g.questions.slice(0, 10), themeId: g.themeId, color: couleur })}
-                  className="btn-primary shrink-0 !px-3 !py-1.5 text-sm"
-                  style={{ backgroundColor: 'var(--c-accent-fort)' }}
-                >
-                  {t('notebookRedo')}
-                </button>
-              </div>
-            )
-          })}
-        </section>
-
       </div><aside className="revision-library space-y-7"><div><p className="kicker">{m.library}</p><h2 className="mt-2 font-display text-2xl">{m.libraryTitle}</h2></div>
-      {/* 3) TES MATIÈRES — grille compacte (pour commencer un nouveau cours) */}
-      <section className="space-y-2.5">
-        <h2 className="px-1 font-display text-lg font-semibold">📚 {t('mySubjects')}</h2>
-        <div className="grid grid-cols-2 gap-3">
-          {subjects.map((s) => {
-            const inProgress = startedSubjects.has(s.id)
-            return (
-              <Link key={s.id} to={`/subject/${s.id}`} className="card flex flex-col gap-2 p-4 transition hover:-translate-y-0.5 hover:shadow-md">
-                <div className="flex items-center justify-between">
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: s.color + '22' }} aria-hidden>{s.icon || '📘'}</span>
-                  {inProgress && <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: s.color }} title={t('continueChip')} />}
-                </div>
-                <div className="min-w-0">
-                  <span className="block truncate font-display text-sm font-semibold leading-tight">{s.short || s.name}</span>
-                  <span className="block text-xs texte-matiere" style={{ '--mc': s.color }}>{inProgress ? t('continueChip') : t('startChip')}</span>
-                </div>
-              </Link>
-            )
-          })}
-        </div>
-      </section>
-
       {/* 4) MES FLASHCARDS */}
       <section id="revision-flashcards" className="space-y-3">
         <div className="flex items-center justify-between px-1">
@@ -286,24 +178,6 @@ function RevisePage() {
           </div>
         ) : (
           <button onClick={() => setShowImport(true)} className="w-full py-1 text-center text-xs text-slate-600 transition hover:text-slate-600">＋ {t('importDeck')}</button>
-        )}
-      </section>
-
-      {/* 5) OBJECTIF DE LA SEMAINE (compact, en bas) */}
-      <section className="card p-4">
-        <div className="mb-2 flex items-center justify-between">
-          <span className="font-display font-semibold">🎯 {t('weeklyGoal')}</span>
-          <span className="text-sm font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{Math.min(weekDone, WEEKLY_GOAL)} / {WEEKLY_GOAL}</span>
-        </div>
-        <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
-          <div className="h-full rounded-full transition-all" style={{ width: `${weekPct}%`, backgroundColor: 'var(--c-accent)' }} />
-        </div>
-        {weekClaimed ? (
-          <p className="mt-3 text-sm font-semibold text-emerald-700 dark:text-emerald-400">✅ {t('weeklyClaimed')}</p>
-        ) : weekReached ? (
-          <button onClick={claimWeekly} className="btn-gold mt-3 w-full !py-2.5 text-sm">🎁 {t('weeklyClaim')}</button>
-        ) : (
-          <p className="mt-2 text-xs text-slate-500 dark:text-slate-300">{t('weeklyGoalHint').replace('{n}', WEEKLY_GOAL)}</p>
         )}
       </section>
 
