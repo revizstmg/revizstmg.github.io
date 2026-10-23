@@ -1,26 +1,32 @@
+import AxeBuilder from '@axe-core/playwright'
 import { test, expect } from '@playwright/test'
 import { preparer, etatEleve, attendreAccueil } from './eleve.js'
-for (const [name, width, level] of [['mobile',390,'premiere-stmg'],['desktop',1280,'terminale-stmg']]) {
+for (const [name, width, level] of [['mobile',390,'premiere-stmg'],['desktop',1280,'terminale-stmg'],['petit-mobile',320,'terminale-stmg']]) {
  test(`accueil lisible et ciblé : ${name}`, async ({page}, info) => {
   const errors = await preparer(page, etatEleve({track:{level,specialty:'gestion-finance'}}))
-  await page.setViewportSize({width,height:900})
+  await page.setViewportSize({width,height:name==='petit-mobile'?568:900})
   await page.goto('./#/accueil')
   await expect(page.getByRole('heading',{level:1})).toContainText('Léa')
   await expect(page.getByRole('dialog',{name:'Bienvenue',exact:true})).toHaveCount(0)
   await expect(page.getByRole('link',{name:'Commencer',exact:true})).toBeVisible()
   await expect(page.getByRole('heading',{name:'Chaque séance compte.',exact:true})).toBeVisible()
   await expect(page.getByRole('heading',{name:'Ton coin à toi.',exact:true})).toBeVisible()
-  const heading=page.getByRole('heading',{name:'Tes matières',exact:true})
-  await expect(heading).toBeVisible()
-  expect((await heading.boundingBox()).y).toBeLessThan(550)
+  await expect(page.getByRole('heading',{name:'Tes matières',exact:true})).toHaveCount(0)
+  await expect(page.locator('.home-subject-card')).toHaveCount(0)
+  const courses=page.getByRole('link',{name:'Voir tous les cours',exact:false})
+  await expect(courses).toBeVisible()
+  await expect(courses).toHaveAttribute('href','#/cours')
+  await expect(page.getByRole('link',{name:/Ma séance du jour/})).toBeVisible()
+  await expect(page.getByRole('link',{name:/Mes objectifs/})).toHaveAttribute('href','#/programme')
   if(level==='premiere-stmg') await expect(page.locator('main').getByRole('link',{name:/Grand Oral/})).toHaveCount(0)
   await expect(page.locator('main')).not.toContainText(/\d+ chapitres/)
-  const rows = await page.locator('.home-subject-card').evaluateAll(cards => [...new Set(cards.map(card => Math.round(card.getBoundingClientRect().top)))].length)
-  expect(rows).toBe(name === 'desktop' ? 2 : 4)
   expect(await page.evaluate(()=>document.documentElement.scrollWidth > innerWidth)).toBe(false)
+  const primary=await page.getByRole('link',{name:/Ma séance du jour/}).boundingBox()
+  expect(primary.y+primary.height).toBeLessThan(page.viewportSize().height-64)
   await page.getByRole('button',{name:'OK',exact:true}).click()
+  expect((await new AxeBuilder({page}).include('main').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([])
   await page.screenshot({path:info.outputPath(`home-${name}.png`),fullPage:true})
-  await expect(page.locator('main a[href="#/programme"]')).toBeVisible()
+  await expect(page.locator('section[aria-labelledby="titre-outils"] a[href="#/programme"]')).toBeVisible()
   expect(errors).toEqual([])
  })
 }
@@ -39,14 +45,15 @@ test('reprise à la dernière fiche', async ({page})=>{
 })
 
 test('accueil traduit en arabe et utilisable en mode sombre', async ({page}, info) => {
- const errors = await preparer(page, etatEleve({lang:'ar',theme:'dark'}))
+ const errors = await preparer(page, etatEleve({lang:'ar',theme:'dark',customTheme:{banner:'#ffffff'}}))
  await page.setViewportSize({width:390,height:900})
  await page.goto('./#/accueil')
  await expect(page.locator('html')).toHaveClass(/dark/)
  await expect(page.locator('.home-progress-card')).not.toContainText('Chaque séance compte.')
- await expect(page.locator('main .kicker')).not.toContainText('Terminale STMG')
+ await expect(page.locator('main .home-track')).not.toContainText('Terminale STMG')
  expect(await page.evaluate(()=>document.documentElement.scrollWidth > innerWidth)).toBe(false)
  await page.locator('[role="region"] button').click()
+ expect((await new AxeBuilder({page}).include('main').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([])
  await page.screenshot({path:info.outputPath('home-ar-dark.png'),fullPage:true})
  expect(errors).toEqual([])
 })

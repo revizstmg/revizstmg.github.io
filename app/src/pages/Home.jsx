@@ -4,7 +4,7 @@ import { getChapter } from '../data/index.js'
 import { subjectsForTrack, getLevel, getSpecialty } from '../data/tracks.js'
 import { useStore, subjectScore } from '../store.jsx'
 import { nextMilestone } from '../data/rewards.js'
-import { ProgressBar, Ring, Icon } from '../components/ui.jsx'
+import { ProgressBar, Icon } from '../components/ui.jsx'
 import OutilsAccueil from '../components/OutilsAccueil.jsx'
 import AccueilProf from '../components/AccueilProf.jsx'
 import { useT, usePublicText } from '../i18n.js'
@@ -54,85 +54,47 @@ export default function Home() {
   // fond dans une base sombre pour garder le texte clair toujours lisible, quelle
   // que soit la teinte choisie. Sans choix, on garde l'écrin « sombre & or ».
   const banner = state.customTheme?.banner || null
-  const bannerTint = banner || 'var(--c-accent)'
   const bannerBg = banner
-    ? `linear-gradient(140deg, color-mix(in srgb, ${banner} 46%, #14110c) 0%, color-mix(in srgb, ${banner} 22%, #1b1610) 55%, #14110c 100%)`
+    ? `linear-gradient(140deg, color-mix(in srgb, ${banner} 30%, #14110c) 0%, color-mix(in srgb, ${banner} 14%, #1b1610) 55%, #14110c 100%)`
     : 'linear-gradient(135deg, #172d30 0%, #24423f 100%)'
 
   return (
-    <div className="animate-lux space-y-7">
-      {/* Écrin personnalisé — cover sombre & or, à l'effigie de l'accueil */}
-      <section
-        className="identity-hero card-lux relative overflow-hidden rounded-[1.6rem] p-6 text-[#f4ecd8] sm:p-8"
-        style={{ background: bannerBg, border: `1px solid color-mix(in srgb, ${bannerTint} 30%, transparent)` }}
-      >
-        <span aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full" style={{ background: `radial-gradient(circle, color-mix(in srgb, ${bannerTint} 32%, transparent), transparent 70%)` }} />
-        <span aria-hidden className="pointer-events-none absolute -bottom-20 -left-10 h-48 w-48 rounded-full" style={{ background: `radial-gradient(circle, color-mix(in srgb, ${bannerTint} 18%, transparent), transparent 70%)` }} />
-
-        <div className="relative flex items-center gap-4 sm:gap-5">
-          {(photo || mono) && (
-            <span className="monogram h-16 w-16 shrink-0 overflow-hidden text-2xl sm:h-20 sm:w-20 sm:text-3xl" aria-hidden>
-              {photo ? <img src={photo} alt="" className="h-full w-full rounded-full object-cover" /> : mono}
-            </span>
-          )}
+    <div className="home-page animate-lux space-y-7">
+      <section className="home-hero" style={{ background: bannerBg }}>
+        <div className="home-hello">
+          {(photo || mono) && <span className="monogram home-avatar" aria-hidden>{photo ? <img src={photo} alt="" /> : mono}</span>}
           <div className="min-w-0 flex-1">
-            <p className="kicker" style={{ color: `color-mix(in srgb, ${bannerTint} 62%, #fff)` }}>{tr(getLevel(state.track.level)?.name || '')}{state.track.level === 'terminale-stmg' && <> · {tr(getSpecialty(state.track.level, state.track.specialty)?.name || '')}</>}</p>
-            <h1 className="font-display text-[1.7rem] font-medium leading-[1.15] text-[#faf3e1] sm:text-[2.15rem]">
-              {greeting}{firstName ? <>, <span style={{ color: `color-mix(in srgb, ${bannerTint} 55%, #fff)` }}>{firstName}</span></> : ''}
-            </h1>
-            {dateLabel && <p className="mt-1 text-xs capitalize tracking-wide" style={{ color: `color-mix(in srgb, ${bannerTint} 42%, #cfc3a0)` }}>{dateLabel}</p>}
+            <p className="kicker home-track">{tr(getLevel(state.track.level)?.name || '')}{state.track.level === 'terminale-stmg' && <> · {tr(getSpecialty(state.track.level, state.track.specialty)?.name || '')}</>}</p>
+            <h1 className="font-display">{greeting}{firstName ? <>, <span>{firstName}</span></> : ''}</h1>
+            {dateLabel && <p className="home-date">{dateLabel}</p>}
           </div>
-          <div className="hidden shrink-0 sm:block">
-            <Ring value={trackProgress} color={bannerTint} size={84} label={`${trackProgress}%`} />
+          <span className="home-level-tag">{t('level')} {derived.level}<span>{state.xp.toLocaleString(state.lang || 'fr')} XP</span></span>
+        </div>
+        <div className="home-stage">
+          <div className="home-invitation">
+            <p className="home-overline">Ton rendez-vous avec le progrès</p>
+            <h2 className="font-display">Un petit pas aujourd’hui.<em>Un peu plus loin demain.</em></h2>
+            <p className="home-intro">Une notion comprise, une question réussie : chaque petit pas prépare la suite.</p>
+            <div className="home-hero-actions">
+              {realSubjects.length > 0 && <Link to="/seance" className="home-main-action"><Icon.Play size={17} /> Ma séance du jour <span aria-hidden>↗</span></Link>}
+              <Link to="/cours" className="home-courses-action">Voir tous les cours <span aria-hidden>→</span></Link>
+            </div>
           </div>
+          <article className="home-resume-card">
+            <div className="home-resume-art" aria-hidden><i /><i /><span>✦</span></div>
+            <p className="home-resume-label">{tr(last ? 'Là où tu en étais' : 'Pour bien démarrer')}</p>
+            <h2 className="font-display home-resume-title">{tr(last ? 'Reprendre là où tu t’es arrêté.' : 'Ton premier pas commence ici.')}</h2>
+            {last && <p className="home-last-course"><CourseText text={recent ? position.chapterTitle || last.short || last.name : last.short || last.name} /></p>}
+            <p className="home-resume-help">Une notion à la fois, à ton rythme.</p>
+            <Link to={last ? resumeUrl : '/cours'} className="home-resume-action"><span>{last ? t('resume') : t('start')}</span><span aria-hidden>→</span></Link>
+          </article>
         </div>
-
-        <hr className="rule-gold relative my-5" />
-
-        <div className="relative flex flex-wrap items-center gap-x-5 gap-y-1 text-sm text-[#d8cca8]">
-          <span className="sm:hidden"><span className="font-semibold text-[#f0e2b8]">{trackProgress}%</span> {t('progression')}</span>
-          <span><span className="font-display text-lg text-[#f0e2b8]">{t('level')} {derived.level}</span></span>
-          <span>{state.xp} XP</span>
-          <span className="inline-flex items-center gap-1"><Icon.Flame size={14} /> {state.streak.count} {t('streakDays')}</span>
-        </div>
-
-        {/* Un toucher : la séance du jour enchaîne erreurs, révision et cours. */}
-        <div className="relative mt-5 flex flex-wrap gap-2.5">
-          {realSubjects.length > 0 && (
-            <Link to="/seance" className="btn-gold gap-1.5 !py-2.5"><Icon.Play size={16} /> Ma séance du jour</Link>
-          )}
-          {last ? (
-            <Link to={resumeUrl} className="btn gap-1.5 !py-2.5 text-[#f4ecd8]" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 45%, transparent)' }}>
-              {t('resume')} : <CourseText text={recent ? position.chapterTitle || last.short || last.name : last.short || last.name} />
-            </Link>
-          ) : realSubjects[0] ? (
-            <Link to={`/subject/${realSubjects[0].id}`} className="btn gap-1.5 !py-2.5 text-[#f4ecd8]" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 45%, transparent)' }}>{t('start')}</Link>
-          ) : null}
-        </div>
+        <p className="home-hero-note"><span aria-hidden>✦</span> Aujourd’hui, avance à ton rythme.</p>
       </section>
 
-      {/* Mes matières — le cœur des révisions, juste sous l'accueil */}
-      <section>
-        <div className="mb-3 flex items-center justify-between gap-3 px-1">
-          <h2 className="font-display text-lg font-semibold text-slate-700 dark:text-slate-200">{t('mySubjects')}</h2>
-          <Link to="/changer" className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('change')}</Link>
-        </div>
-        <div className="home-subject-grid">
-          {subjects.map((s) => {
-            const pct = s.comingSoon ? 0 : subjectScore(state, s.id)
-            const content = <>
-              <span className="home-subject-icon" style={{backgroundColor:s.color+'12'}} aria-hidden>{s.icon}</span>
-              <h3 className="font-display font-semibold"><CourseText text={s.name} /></h3>
-              <div className="home-subject-meta text-slate-500 dark:text-slate-400"><span>{s.chapters.length} {t('themesCount')}</span><span>{s.comingSoon ? t('comingSoon') : `${pct}%`}</span></div>
-              {!s.comingSoon && <ProgressBar value={pct} color={s.color} />}
-            </>
-            return s.comingSoon
-              ? <div key={s.id} className="card home-subject-card opacity-80">{content}</div>
-              : <Link key={s.id} to={`/subject/${s.id}`} className="card home-subject-card transition hover:-translate-y-0.5 hover:shadow-md">{content}</Link>
-          })}
-        </div>
-      </section>
-
+      <section className="home-ritual" aria-labelledby="home-ritual-title">
+        <div className="home-section-heading"><div><p className="kicker">Les petites habitudes font les grands progrès</p><h2 id="home-ritual-title" className="font-display">Trouve ton rythme.</h2></div><Link to="/programme">Mes objectifs <span aria-hidden>↗</span></Link></div>
+        <div className="home-ritual-grid">
       {/* Série de connexion : récompenses XP pour les jours d'affilée */}
       {(() => {
         const streak = state.streak?.count || 0
@@ -148,7 +110,7 @@ export default function Home() {
               </div>
             </div>
             {nm && (
-              <div className="sm:w-56">
+              <div className="home-streak-goal">
                 <div className="mb-1 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
                   <span className="truncate">{nm.icon} {nm.day} {t(nm.day > 1 ? 'daysStreakP' : 'daysStreakS')} · <span className="font-semibold" style={{ color: 'var(--c-accent-texte)' }}>+{nm.xp} XP</span></span>
                   <span className="shrink-0 pl-2">{nm.daysLeft} {t(nm.daysLeft > 1 ? 'daysLeftP' : 'daysLeftS')}</span>
@@ -180,13 +142,15 @@ export default function Home() {
         )
       })()}
 
-      {/* Réviser & réussir : l'outil conseillé, les autres rangés dans la trousse */}
-      <OutilsAccueil />
+        </div>
+      </section>
 
     <section className="home-summary home-bottom-grid">
       <div className="home-progress-card"><span className="home-eyebrow">Tes efforts prennent forme</span><div className="home-progress-heading"><h2>Chaque séance compte.</h2><span aria-hidden>→</span></div><div className="home-stat-grid"><div><strong>{progress}<small>%</small></strong><span>Progression de ta filière</span></div><div><strong>{mastered}</strong><span>Thèmes maîtrisés</span></div><div><strong>{state.streak?.count || 0}</strong><span>{t('streakDays')}</span></div></div><p>Chaque chapitre utilise jusqu’à trois de tes meilleurs exercices. La moyenne des chapitres donne la maîtrise du thème ; un meilleur résultat au test du thème peut la relever. Les XP et les séances de formules ne modifient pas cette maîtrise.</p><div className="home-progress-footer"><span>{t('level')} {derived.level} · {state.xp.toLocaleString(state.lang || 'fr')} XP</span><Link to="/badges">{t('badges')} →</Link></div></div>
       <div className="home-community-card"><span className="home-eyebrow">Mieux avancer, ensemble</span><h2>Ton coin à toi.</h2><div className="home-community-links"><Link to="/classe"><span aria-hidden>◉</span>{t('myClass')}<span aria-hidden>→</span></Link><Link to="/amis"><span aria-hidden>♧</span>{t('friends')}<span aria-hidden>→</span></Link><Link to="/boutique"><span aria-hidden>✦</span>{t('shop')}<span aria-hidden>→</span></Link></div></div>
     </section>
+
+      <OutilsAccueil />
 
       <p className="pt-1 text-center text-xs text-slate-400">
         {level === 'terminale-stmg' ? t('courseBasedNote') : t('savedOnDevice')}
