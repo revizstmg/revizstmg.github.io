@@ -195,7 +195,7 @@
       "title": "4 · Présent : sein, haben et verbes réguliers",
       "part": "Bases et communication",
       "paragraphs": [
-        "Au présent, on retire -en à l’infinitif puis ajoute généralement -e, -st, -t, -en, -t, -en : ich lerne, du lernst, er lernt, wir lernen, ihr lernt, sie lernen. Sie peut désigner elle ou ils/elles : la conjugaison et le contexte guident la compréhension. Sie avec majuscule est le vouvoiement. Pour arbeiten, le radical finit en t : du arbeitest, er arbeitet, ihr arbeitet, avec un e facilitant la prononciation.",
+        "Au présent, on retire -en à l’infinitif puis ajoute généralement -e, -st, -t, -en, -t, -en : ich lerne, du lernst, er lernt, wir lernen, ihr lernt, sie lernen. Le pronom sie peut désigner elle ou ils/elles : la conjugaison et le contexte guident la compréhension. En milieu de phrase, Sie avec une majuscule marque le vouvoiement. En début de phrase, la majuscule seule ne permet pas de trancher : regarde le verbe et le contexte. Pour arbeiten, le radical finit en t : du arbeitest, er arbeitet, ihr arbeitet, avec un e facilitant la prononciation.",
         "Sein et haben sont irréguliers. Sein : ich bin, du bist, er/sie/es ist, wir sind, ihr seid, sie/Sie sind. Haben : ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben. On dit Ich bin müde (je suis fatigué) mais Ich habe Zeit (j’ai du temps). Apprends les formes dans des phrases puis varie le sujet. Ne confonds pas seid, forme verbale, et seit, préposition signifiant depuis."
       ],
       "lexicon": [
@@ -664,7 +664,7 @@
       "part": "Vers l’autonomie et la STMG",
       "paragraphs": [
         "Décrire une offre nécessite un produit, un public et une proposition de valeur : Unsere Zielgruppe sind junge Erwachsene. Das Produkt ist langlebig und reparierbar. Die Werbung richtet sich an Studierende. Un argument doit relier une caractéristique à un besoin concret ; meilleur pour tout le monde est rarement démontré. Le prix se dit der Preis, les coûts die Kosten. Une marge n’est ni un prix ni un chiffre d’affaires.",
-        "Pour donner son avis : Meiner Meinung nach ist der Preis zu hoch. Ich finde das Angebot interessant, weil es eine Reparatur einschließt. Présente aussi une limite : Einerseits ist das Produkt günstig, andererseits ist die Lieferung langsam. Avec einerseits/andererseits en tête, le verbe conjugué garde sa deuxième position. Appuie ton jugement sur le document et distingue information publicitaire et preuve indépendante. Les formes eventuell et aktuell sont des faux amis : éventuellement/peut-être et actuel, pas éventuellement et réellement."
+        "Pour donner son avis : Meiner Meinung nach ist der Preis zu hoch. Ich finde das Angebot interessant, weil es eine Reparatur einschließt. Présente aussi une limite : Einerseits ist das Produkt günstig, andererseits ist die Lieferung langsam. Avec einerseits/andererseits en tête, le verbe conjugué garde sa deuxième position. Appuie ton jugement sur le document et distingue information publicitaire et preuve indépendante. Attention au passage par l’anglais : eventuell signifie peut-être / éventuellement et aktuell actuel ; ces mots ne correspondent pas à eventually (finalement) ni à actually (en fait)."
       ],
       "lexicon": [
         {
@@ -719,7 +719,7 @@
       "title": "25 · Lire un document et préparer un oral",
       "part": "Vers l’autonomie et la STMG",
       "paragraphs": [
-        "Avant de lire en détail, identifie type, auteur, date et objectif. Une annonce vend, un témoignage raconte, un graphique présente des données. Survole titre et structure, puis relève trois informations vérifiables. Attention aux faux amis : bekommen signifie recevoir, pas devenir ; werden signifie devenir ou sert d’auxiliaire ; eventuell signifie peut-être ; aktuell signifie actuel. Ne traduis pas mot à mot un terme dont la phrase donne un autre sens.",
+        "Avant de lire en détail, identifie type, auteur, date et objectif. Une annonce vend, un témoignage raconte, un graphique présente des données. Survole titre et structure, puis relève trois informations vérifiables. Attention aux faux amis : bekommen signifie recevoir, pas devenir ; werden signifie devenir ou sert d’auxiliaire ; eventuell signifie peut-être ; aktuell signifie actuel. Ne traduis pas mot à mot un terme dont la phrase donne un autre sens. Dans un document économique, wachsen signifie croître : die Firma wächst, l’entreprise croît. Au présent, le a devient ä avec er/sie/es : wächst.",
         "Pour un oral de deux minutes, prépare quatre blocs : présenter le document, expliquer l’idée principale, citer un exemple précis, donner un avis motivé. Formules : Das Dokument handelt von … ; Im Text steht, dass … ; Ein Beispiel dafür ist … ; Ich bin der Meinung, dass … . Écris des mots-clés, pas un texte à réciter. À la fin, vérifie la fidélité au document, l’ordre des verbes et une difficulté de prononciation. Les erreurs servent à choisir la prochaine séance ; vise d’abord une communication compréhensible."
       ],
       "lexicon": [
@@ -738,6 +738,10 @@
         {
           "term": "zum Schluss",
           "meaning": "pour finir"
+        },
+        {
+          "term": "wachsen → die Firma wächst",
+          "meaning": "croître → l’entreprise croît (présent, troisième personne du singulier)"
         }
       ],
       "origin": "Création pédagogique RévizSTMG · allemand"
@@ -1010,7 +1014,7 @@
       "unit": "Le verbe en deuxième position",
       "origin": "revizstmg/allemand",
       "type": "court",
-      "prompt": "Réordonne : morgen / wir / arbeiten.",
+      "prompt": "Réordonne : morgen / wir / arbeiten. Commence par Morgen.",
       "choices": [],
       "answer": "Morgen arbeiten wir.",
       "explanation": "Morgen ouvre la phrase, puis viennent arbeiten et le sujet wir.",
@@ -1134,7 +1138,7 @@
       "unit": "Nominatif et accusatif",
       "origin": "revizstmg/allemand",
       "type": "court",
-      "prompt": "Complète : Er ist … Lehrer.",
+      "prompt": "Complète avec l’article indéfini au nominatif : Er ist … Lehrer.",
       "choices": [],
       "answer": "ein",
       "explanation": "L’attribut après sein reste au nominatif ; on emploie ein.",
