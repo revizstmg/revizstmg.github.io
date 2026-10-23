@@ -1189,3 +1189,8 @@ Prochaine action :
 - Compilation 77f9aa6b16 réussie ; six parcours navigateur réussis (rédaction/correction/reprise, erreur sans perte de réponse, isolation du chapitre, tuteur et notes). Contrôle axe du nouveau bloc réussi. Fonction examen-blanc v18 active avec JWT ; GET public 200 ready et POST anonyme 401. Aucune copie personnelle ni abonnement réel utilisé en test. Suite unitaire finale en cours après ajout de la traduction de boutique.
 - Confirmation séparée de #85 : chaîne main 39877456292 et Pages 39878124974 réussies, compilation adbedb2 ; entrée JavaScript publique identique à Git et styles de fermeture lecteur/menu présents.
 - Validation finale : 385 tests unitaires réussis (41 fichiers), compilation 77f9aa6b16 réussie, six parcours navigateur réussis et git diff --check propre. Les tests des anciennes restrictions payantes ont été adaptés à l’ouverture expressément demandée ; les contrôles d’authentification, formats, contexte et erreurs restent présents. Aucun contenu de cours ni empreinte modifié. Réalisation da45dc3, intégration de la compilation précédente par merge 22e9574 ; publication automatique de #86 à suivre.
+
+### CONTROLE-20261023-CODEX-10 — correction qui reste en attente
+- Retour : création des questions correcte, correction sans réponse visible.
+- Branche fix/correction-controle-attente. Périmètre : ChapterControl, attente réseau bornée incluant Auth et lecture de réponse, tests et handler examen-blanc si diagnostic nécessaire (couloir Claude annoncé). Pas de migration ni donnée personnelle.
+- Réservation avant code ; journaux consultés uniquement pour catégories techniques.
