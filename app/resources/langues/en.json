@@ -112,5 +112,3651 @@
       "kind": "audio"
     }
   ],
-  "id": "en"
+  "id": "en",
+  "lessons": [
+    {
+      "id": "en-pratique-6",
+      "title": "Les sons et le rythme anglais",
+      "part": "Premiers échanges",
+      "paragraphs": [
+        "L’accent tonique est essentiel : les syllabes n’ont pas toutes la même force. Le h de hello est généralement audible. Le th de think /θ/ et celui de this /ð/ sont deux sons différents : la langue s’approche des dents, sans remplacer systématiquement par s ou z. La distinction ship /ɪ/ et sheep /iː/ change le sens. Les terminaisons -ed ont trois réalisations principales : /t/ (worked), /d/ (played), /ɪd/ (wanted). Écoute les mots dans un dictionnaire sonore ; les accents britanniques et américains présentent des variations."
+      ],
+      "lexicon": [],
+      "oral": "Compare think / sink et ship / sheep avec un modèle audio. Enregistre ensuite : I worked yesterday. She wanted to help.",
+      "origin": "RévizSTMG · guide pratique"
+    },
+    {
+      "id": "en-pratique-7",
+      "title": "Se présenter et présenter ses études",
+      "part": "Premiers échanges",
+      "paragraphs": [
+        "My name is Lina. — Je m’appelle Lina. I’m a STMG student. — Je suis élève en STMG. I’m interested in business and marketing. — Je m’intéresse au commerce et au marketing. I would like to work in finance. — J’aimerais travailler dans la finance. Pour dire ton âge : I’m seventeen, sans have. Pour ton niveau d’études, précise le contexte français plutôt que de supposer qu’un interlocuteur connaît STMG."
+      ],
+      "lexicon": [],
+      "oral": "Présente ton prénom, tes études, un intérêt et un projet. Termine par : What about you?",
+      "origin": "RévizSTMG · guide pratique"
+    },
+    {
+      "id": "en-pratique-10",
+      "title": "Donner un avis et le justifier",
+      "part": "Premiers échanges",
+      "paragraphs": [
+        "In my opinion… / I think… introduisent un avis. First… then… finally… organisent. For example… illustre ; however… nuance ; because… justifie ; therefore… exprime une conséquence. I agree with you, but… permet un désaccord poli. Évite d’empiler les connecteurs : un avis, une raison, un exemple et une limite suffisent pour une réponse claire."
+      ],
+      "lexicon": [],
+      "oral": "Réponds : Should a small business use social media? Donne une raison, un exemple et une limite, sans inventer de statistiques.",
+      "origin": "RévizSTMG · guide pratique"
+    },
+    {
+      "id": "p1-langues-p1-lng-en-0",
+      "title": "Les temps : prétérit ou present perfect",
+      "part": "Grammaire essentielle",
+      "paragraphs": [
+        "Le **present simple** exprime une **habitude** ou une **vérité générale**, avec un **-s à la troisième personne** : *She works in Paris.* Le **present continuous**, formé avec **be + -ing**, exprime une **action en cours** : *They are working now.*",
+        "Le **prétérit** exprime une **action passée, datée et terminée** : *We went to London in 2019.* Le **present perfect**, formé avec **have / has + participe passé**, exprime un **lien entre le passé et le présent**, souvent avec *for*, *since* ou *ever* : *I have visited London.*",
+        "Une **date précise** (in 2019, yesterday) impose le **preterit** ; *for/since/ever/already/yet* appellent le **present perfect**."
+      ],
+      "lexicon": [
+        {
+          "term": "Present simple",
+          "meaning": "Habitude, vérité générale (+ -s à la 3ᵉ personne)"
+        },
+        {
+          "term": "Present continuous",
+          "meaning": "be + -ing : action en cours"
+        },
+        {
+          "term": "Preterit",
+          "meaning": "Action passée datée et terminée"
+        },
+        {
+          "term": "Present perfect",
+          "meaning": "have / has + participe passé : lien passé-présent (for, since, ever)"
+        }
+      ],
+      "origin": "p1-langues/p1-lng-en/0"
+    },
+    {
+      "id": "p1-langues-p1-lng-en-1",
+      "title": "Modaux, conditionnels, comparatifs et connecteurs",
+      "part": "Grammaire essentielle",
+      "paragraphs": [
+        "**Modaux** (+ base verbale) : can/could, may/might, must, have to, should.",
+        "**Conditionnels** : Type 1 *If + present, will + BV* ; Type 2 *If + preterit, would + BV*.",
+        "**Comparatifs** : cheaper / more expensive ; irréguliers good→better→best.",
+        "**Connecteurs** : however, therefore, because, although, moreover, for instance."
+      ],
+      "lexicon": [],
+      "origin": "p1-langues/p1-lng-en/1"
+    },
+    {
+      "id": "langues-lng-en-gram-0",
+      "title": "Le présent simple et le présent continu (be + V-ing)",
+      "part": "Toutes les conjugaisons",
+      "paragraphs": [
+        "Le **present simple** se forme avec la **base verbale**, à laquelle on ajoute un **-s à la troisième personne du singulier** : *She work**s** every day.* À la forme **négative**, on utilise l’auxiliaire **don’t**, ou **doesn’t** à la troisième personne, suivi de la base : *He does**n’t** work on Sundays.* Le -s passe alors sur l’auxiliaire, et le verbe reste à la base.",
+        "À la forme **interrogative**, on place **Do** ou **Does** devant le sujet, puis la base verbale : *Do you work here?* On emploie le present simple pour parler des **habitudes** et des **vérités générales**, comme *Water boils at 100 °C.*",
+        "Le **present continuous** se forme avec l’auxiliaire **be** conjugué au présent (**am, is, are**) suivi du verbe en **-ing** : *They are work**ing** now.* À la forme **négative**, on ajoute **not** après l’auxiliaire : *I’m not working today.* À la forme **interrogative**, on place l’auxiliaire devant le sujet : *Are you listening?*",
+        "On l’emploie pour une **action en cours** au moment où l’on parle, ou pour une situation **temporaire** : *She is studying for her exam.*"
+      ],
+      "lexicon": [
+        {
+          "term": "Present simple (affirmative)",
+          "meaning": "Sujet + base, avec -s à la 3ᵉ personne du singulier (She works)"
+        },
+        {
+          "term": "Present simple (négative)",
+          "meaning": "don’t / doesn’t + base (He doesn’t work)"
+        },
+        {
+          "term": "Present simple (interrogative)",
+          "meaning": "Do / Does + sujet + base ? (Do you work here?)"
+        },
+        {
+          "term": "Emploi du present simple",
+          "meaning": "Habitudes, vérités générales"
+        },
+        {
+          "term": "Present continuous (affirmative)",
+          "meaning": "am / is / are + V-ing (They are working)"
+        },
+        {
+          "term": "Present continuous (négative)",
+          "meaning": "am / is / are + not + V-ing"
+        },
+        {
+          "term": "Present continuous (interrogative)",
+          "meaning": "Am / Is / Are + sujet + V-ing ?"
+        },
+        {
+          "term": "Emploi du present continuous",
+          "meaning": "Action en cours, situation temporaire"
+        }
+      ],
+      "origin": "langues/lng-en-gram/0"
+    },
+    {
+      "id": "langues-lng-en-gram-1",
+      "title": "Le passé : prétérit ou present perfect",
+      "part": "Toutes les conjugaisons",
+      "paragraphs": [
+        "Le **prétérit** se forme en ajoutant **-ed** à la base des verbes réguliers, *We visit**ed** Rome*, ou en utilisant la forme propre des **verbes irréguliers**, *I **went** home.* À la forme **négative**, on emploie **didn’t** suivi de la **base** : *They did**n’t** come* — l’auxiliaire porte déjà la marque du passé. À la forme **interrogative**, on place **Did** devant le sujet : *Did you see it?*",
+        "On emploie le prétérit pour une **action passée, datée et terminée**, sans lien avec le présent : *She was born in 2007.*",
+        "Le **present perfect** se forme avec **have** ou **has** suivi du **participe passé** : *I have finish**ed**.* À la forme **négative**, on emploie **haven’t** ou **hasn’t** : *He has**n’t** arrived.* À la forme **interrogative**, on place **Have** ou **Has** devant le sujet : *Have you eaten?*",
+        "On l’emploie pour marquer un **lien entre le passé et le présent** : une action passée dont le résultat compte maintenant, ou une situation qui dure encore. Il s’accompagne souvent de **for**, **since**, **already**, **yet** ou **ever** : *I’ve known her **for** years.*"
+      ],
+      "lexicon": [
+        {
+          "term": "Prétérit (affirmative)",
+          "meaning": "Base + -ed, ou forme irrégulière (We visited / I went)"
+        },
+        {
+          "term": "Prétérit (négative)",
+          "meaning": "didn’t + base"
+        },
+        {
+          "term": "Prétérit (interrogative)",
+          "meaning": "Did + sujet + base ?"
+        },
+        {
+          "term": "Emploi du prétérit",
+          "meaning": "Action passée, datée et terminée"
+        },
+        {
+          "term": "Present perfect (affirmative)",
+          "meaning": "have / has + participe passé"
+        },
+        {
+          "term": "Present perfect (négative)",
+          "meaning": "haven’t / hasn’t + participe passé"
+        },
+        {
+          "term": "Present perfect (interrogative)",
+          "meaning": "Have / Has + sujet + participe passé ?"
+        },
+        {
+          "term": "Emploi du present perfect",
+          "meaning": "Lien passé-présent (for, since, already, yet, ever)"
+        }
+      ],
+      "origin": "langues/lng-en-gram/1"
+    },
+    {
+      "id": "langues-lng-en-gram-2",
+      "title": "Le past perfect et le futur : will, be going to, be + V-ing",
+      "part": "Toutes les conjugaisons",
+      "paragraphs": [
+        "Le **past perfect** se forme avec **had** suivi du **participe passé** ; il sert à exprimer une action antérieure à une autre action passée : *She **had left** before I arrived.* Pour le futur, l’anglais dispose de plusieurs formes. **Will + base** exprime une prédiction ou une décision prise sur le moment : *I **will** call you*, *I’ll help.* **Be going to + base** exprime une intention ou une prévision fondée sur des indices : *It’s **going to** rain.*",
+        "**Be + V-ing**, le present continuous, exprime un **projet** déjà organisé : *I’m meeting him tomorrow.* Le **future perfect**, enfin, se forme avec **will have + participe passé** et décrit une action qui sera accomplie avant un moment futur : *By 2030, he **will have** graduated.*"
+      ],
+      "lexicon": [
+        {
+          "term": "Past perfect",
+          "meaning": "had + participe passé (action antérieure à une autre action passée)"
+        },
+        {
+          "term": "Futur avec will",
+          "meaning": "will + base (prédiction, décision immédiate)"
+        },
+        {
+          "term": "Futur avec be going to",
+          "meaning": "am / is / are going to + base (intention, prévision)"
+        },
+        {
+          "term": "Futur de projet",
+          "meaning": "be + V-ing (I’m meeting him tomorrow)"
+        },
+        {
+          "term": "Future perfect",
+          "meaning": "will have + participe passé"
+        }
+      ],
+      "origin": "langues/lng-en-gram/2"
+    },
+    {
+      "id": "langues-lng-en-gram-3",
+      "title": "Les modaux : can, may, must, should, would + base verbale",
+      "part": "Toutes les conjugaisons",
+      "paragraphs": [
+        "Chaque modal a son sens. **Can** et **could** expriment la **capacité** ou la **possibilité** : *I **can** swim*, et *could* sert aussi à demander poliment, *Could you help?* **May** et **might** expriment la **probabilité**, *It **may** rain*, ou la **permission**, *You **may** go.* **Must** exprime une **obligation forte**, *You **must** stop*, ou une **quasi-certitude**, *He **must** be tired.*",
+        "**Have to** exprime une obligation qui vient de l’**extérieur** : *I **have to** work tomorrow.* **Should** et **ought to** expriment le **conseil** : *You **should** rest.* **Would**, enfin, exprime l’**hypothèse** ou la **politesse** : *I **would** like a coffee.*",
+        "**Règle** : un modal est toujours suivi de la **base verbale** (pas de « to », pas de « -s », pas de « -ed »)."
+      ],
+      "lexicon": [
+        {
+          "term": "can / could",
+          "meaning": "Capacité, possibilité (demande polie avec could)"
+        },
+        {
+          "term": "may / might",
+          "meaning": "Probabilité, permission"
+        },
+        {
+          "term": "must",
+          "meaning": "Obligation forte, quasi-certitude"
+        },
+        {
+          "term": "have to",
+          "meaning": "Obligation extérieure"
+        },
+        {
+          "term": "should / ought to",
+          "meaning": "Conseil"
+        },
+        {
+          "term": "would",
+          "meaning": "Hypothèse, politesse"
+        },
+        {
+          "term": "Modal + base verbale",
+          "meaning": "Jamais de to, de -s ni de -ed après un modal"
+        }
+      ],
+      "origin": "langues/lng-en-gram/3"
+    },
+    {
+      "id": "langues-lng-en-gram-4",
+      "title": "Les conditionnels (if) et la voix passive (be + participe passé)",
+      "part": "Toutes les conjugaisons",
+      "paragraphs": [
+        "On distingue quatre types de phrases conditionnelles. Le **type 0** exprime une **vérité générale** : *if* + présent, puis présent — *If you heat ice, it melts.* Le **type 1** exprime une condition **réelle**, qui peut se réaliser : *if* + présent, puis **will** + base — *If it rains, we **will** stay.*",
+        "Le **type 2** exprime une condition **irréelle dans le présent** : *if* + prétérit, puis **would** + base — *If I **were** rich, I **would** travel.* Le **type 3** exprime une condition **irréelle dans le passé**, un regret : *if* + past perfect, puis **would have** + participe passé — *If I had known, I **would have** come.*",
+        "La voix passive se forme toujours avec **be** conjugué au temps voulu, suivi du **participe passé**. Au **présent** : *am, is, are* + participe passé — *The office **is cleaned** every day.* Au **prétérit** : *was, were* + participe passé — *The report **was written** yesterday.* Au **present perfect** : *has* ou *have been* + participe passé — *It **has been** done.*",
+        "Au **futur** : *will be* + participe passé — *It **will be** finished soon.* Avec un **modal** : modal + *be* + participe passé — *It **must be** checked.* On met en avant ce qui subit l’action ; l’auteur, s’il est précisé, est introduit par *by*."
+      ],
+      "lexicon": [
+        {
+          "term": "Conditionnel type 0",
+          "meaning": "If + présent, présent (vérité générale)"
+        },
+        {
+          "term": "Conditionnel type 1",
+          "meaning": "If + présent, will + base (réel)"
+        },
+        {
+          "term": "Conditionnel type 2",
+          "meaning": "If + prétérit, would + base (irréel présent)"
+        },
+        {
+          "term": "Conditionnel type 3",
+          "meaning": "If + past perfect, would have + participe passé (irréel passé)"
+        },
+        {
+          "term": "Voix passive",
+          "meaning": "be (au temps voulu) + participe passé"
+        },
+        {
+          "term": "Passif au présent",
+          "meaning": "am / is / are + participe passé"
+        },
+        {
+          "term": "Passif au prétérit",
+          "meaning": "was / were + participe passé"
+        },
+        {
+          "term": "Passif au present perfect",
+          "meaning": "has / have been + participe passé"
+        },
+        {
+          "term": "Passif au futur",
+          "meaning": "will be + participe passé"
+        },
+        {
+          "term": "Passif avec un modal",
+          "meaning": "modal + be + participe passé"
+        }
+      ],
+      "origin": "langues/lng-en-gram/4"
+    },
+    {
+      "id": "langues-lng-en-gram-5",
+      "title": "Les verbes irréguliers (liste)",
+      "part": "Toutes les conjugaisons",
+      "paragraphs": [
+        "Les verbes irréguliers se retiennent mieux par familles. Certains **ne changent pas du tout** : *cost – cost – cost*, *cut – cut – cut*, *put – put – put*, *read – read – read* (seule la prononciation change pour *read*). D’autres ont **le même prétérit et le même participe passé**, souvent en -ght ou en -t : *bring – brought*, *buy – bought*, *catch – caught*, *teach – taught*, *think – thought*, ou encore *keep – kept*, *sleep – slept*, *feel – felt*, *leave – left*, *meet – met*, *spend – spent*, *send – sent*, *build – built*.",
+        "Une autre famille alterne les voyelles i – a – u : *begin – began – begun*, *drink – drank – drunk*, *sing – sang – sung*, *run – ran – run*. Beaucoup de verbes très courants ont un participe en -en ou -n : *break – broke – broken*, *choose – chose – chosen*, *drive – drove – driven*, *eat – ate – eaten*, *fall – fell – fallen*, *forget – forgot – forgotten*, *give – gave – given*, *speak – spoke – spoken*, *take – took – taken*, *write – wrote – written*, *know – knew – known*, *grow – grew – grown*, *fly – flew – flown*, *see – saw – seen*, *show – showed – shown*.",
+        "Quelques verbes sont à connaître à part, car ils sont partout : *be – was / were – been*, *have – had – had*, *do – did – done*, *go – went – gone*, *come – came – come*, *become – became – become*, *get – got – got* (ou *gotten* en anglais américain), *make – made – made*, *say – said – said*, *tell – told – told*. La liste complète, avec le sens de chaque verbe, se trouve dans le tableau final."
+      ],
+      "lexicon": [
+        {
+          "term": "be – was / were – been",
+          "meaning": "être"
+        },
+        {
+          "term": "become – became – become",
+          "meaning": "devenir"
+        },
+        {
+          "term": "begin – began – begun",
+          "meaning": "commencer"
+        },
+        {
+          "term": "break – broke – broken",
+          "meaning": "casser"
+        },
+        {
+          "term": "bring – brought – brought",
+          "meaning": "apporter"
+        },
+        {
+          "term": "build – built – built",
+          "meaning": "construire"
+        },
+        {
+          "term": "buy – bought – bought",
+          "meaning": "acheter"
+        },
+        {
+          "term": "catch – caught – caught",
+          "meaning": "attraper"
+        },
+        {
+          "term": "choose – chose – chosen",
+          "meaning": "choisir"
+        },
+        {
+          "term": "come – came – come",
+          "meaning": "venir"
+        },
+        {
+          "term": "cost – cost – cost",
+          "meaning": "coûter"
+        },
+        {
+          "term": "cut – cut – cut",
+          "meaning": "couper"
+        },
+        {
+          "term": "do – did – done",
+          "meaning": "faire"
+        },
+        {
+          "term": "drink – drank – drunk",
+          "meaning": "boire"
+        },
+        {
+          "term": "drive – drove – driven",
+          "meaning": "conduire"
+        },
+        {
+          "term": "eat – ate – eaten",
+          "meaning": "manger"
+        },
+        {
+          "term": "fall – fell – fallen",
+          "meaning": "tomber"
+        },
+        {
+          "term": "feel – felt – felt",
+          "meaning": "ressentir"
+        },
+        {
+          "term": "find – found – found",
+          "meaning": "trouver"
+        },
+        {
+          "term": "fly – flew – flown",
+          "meaning": "voler"
+        },
+        {
+          "term": "forget – forgot – forgotten",
+          "meaning": "oublier"
+        },
+        {
+          "term": "get – got – got / gotten",
+          "meaning": "obtenir"
+        },
+        {
+          "term": "give – gave – given",
+          "meaning": "donner"
+        },
+        {
+          "term": "go – went – gone",
+          "meaning": "aller"
+        },
+        {
+          "term": "grow – grew – grown",
+          "meaning": "grandir"
+        },
+        {
+          "term": "have – had – had",
+          "meaning": "avoir"
+        },
+        {
+          "term": "hear – heard – heard",
+          "meaning": "entendre"
+        },
+        {
+          "term": "keep – kept – kept",
+          "meaning": "garder"
+        },
+        {
+          "term": "know – knew – known",
+          "meaning": "savoir"
+        },
+        {
+          "term": "leave – left – left",
+          "meaning": "partir"
+        },
+        {
+          "term": "lose – lost – lost",
+          "meaning": "perdre"
+        },
+        {
+          "term": "make – made – made",
+          "meaning": "fabriquer"
+        },
+        {
+          "term": "meet – met – met",
+          "meaning": "rencontrer"
+        },
+        {
+          "term": "pay – paid – paid",
+          "meaning": "payer"
+        },
+        {
+          "term": "put – put – put",
+          "meaning": "mettre"
+        },
+        {
+          "term": "read – read – read",
+          "meaning": "lire"
+        },
+        {
+          "term": "run – ran – run",
+          "meaning": "courir"
+        },
+        {
+          "term": "say – said – said",
+          "meaning": "dire"
+        },
+        {
+          "term": "see – saw – seen",
+          "meaning": "voir"
+        },
+        {
+          "term": "sell – sold – sold",
+          "meaning": "vendre"
+        },
+        {
+          "term": "send – sent – sent",
+          "meaning": "envoyer"
+        },
+        {
+          "term": "show – showed – shown",
+          "meaning": "montrer"
+        },
+        {
+          "term": "sing – sang – sung",
+          "meaning": "chanter"
+        },
+        {
+          "term": "sit – sat – sat",
+          "meaning": "s'asseoir"
+        },
+        {
+          "term": "sleep – slept – slept",
+          "meaning": "dormir"
+        },
+        {
+          "term": "speak – spoke – spoken",
+          "meaning": "parler"
+        },
+        {
+          "term": "spend – spent – spent",
+          "meaning": "dépenser"
+        },
+        {
+          "term": "take – took – taken",
+          "meaning": "prendre"
+        },
+        {
+          "term": "teach – taught – taught",
+          "meaning": "enseigner"
+        },
+        {
+          "term": "tell – told – told",
+          "meaning": "raconter"
+        },
+        {
+          "term": "think – thought – thought",
+          "meaning": "penser"
+        },
+        {
+          "term": "understand – understood – understood",
+          "meaning": "comprendre"
+        },
+        {
+          "term": "wear – wore – worn",
+          "meaning": "porter (un vêtement)"
+        },
+        {
+          "term": "win – won – won",
+          "meaning": "gagner"
+        },
+        {
+          "term": "write – wrote – written",
+          "meaning": "écrire"
+        }
+      ],
+      "origin": "langues/lng-en-gram/5"
+    },
+    {
+      "id": "langues-lng-en-voc-0",
+      "title": "Vie quotidienne & famille",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "Pour parler de ta **family** (la famille), tu peux évoquer tes **parents**, tes **siblings** (tes frères et sœurs), c’est-à-dire ton **brother** et ta **sister**, ou encore un **child** (un enfant). Autour de la famille gravitent ton **friend** (ton ami) et ton **neighbour** (ton voisin).",
+        "Ton **home** (ton foyer) peut être une **house** (une maison) ou un **flat** (un appartement), avec plusieurs **rooms** (pièces) : la **kitchen** (la cuisine), la **bedroom** (la chambre). Une journée type commence quand tu **wake up** (te réveilles) et **get dressed** (t’habilles), puis vient le **breakfast** (le petit-déjeuner), premier **meal** (repas) de la journée. Il y a aussi les **chores** (les corvées) à la maison.",
+        "Le **weekend** et les **holidays** (les vacances) laissent du temps pour un **hobby** (un loisir) : on aime **spend time** (passer du temps) **together** (ensemble), ce qui entretient une bonne **relationship** (relation)."
+      ],
+      "lexicon": [
+        {
+          "term": "family",
+          "meaning": "la famille"
+        },
+        {
+          "term": "parents",
+          "meaning": "les parents"
+        },
+        {
+          "term": "siblings",
+          "meaning": "les frères et sœurs"
+        },
+        {
+          "term": "brother",
+          "meaning": "le frère"
+        },
+        {
+          "term": "sister",
+          "meaning": "la sœur"
+        },
+        {
+          "term": "child",
+          "meaning": "l'enfant"
+        },
+        {
+          "term": "friend",
+          "meaning": "l'ami(e)"
+        },
+        {
+          "term": "neighbour",
+          "meaning": "le voisin"
+        },
+        {
+          "term": "home",
+          "meaning": "le foyer"
+        },
+        {
+          "term": "house",
+          "meaning": "la maison"
+        },
+        {
+          "term": "flat",
+          "meaning": "l'appartement"
+        },
+        {
+          "term": "room",
+          "meaning": "la pièce"
+        },
+        {
+          "term": "kitchen",
+          "meaning": "la cuisine"
+        },
+        {
+          "term": "bedroom",
+          "meaning": "la chambre"
+        },
+        {
+          "term": "meal",
+          "meaning": "le repas"
+        },
+        {
+          "term": "breakfast",
+          "meaning": "le petit-déjeuner"
+        },
+        {
+          "term": "to wake up",
+          "meaning": "se réveiller"
+        },
+        {
+          "term": "to get dressed",
+          "meaning": "s'habiller"
+        },
+        {
+          "term": "chore",
+          "meaning": "la corvée"
+        },
+        {
+          "term": "weekend",
+          "meaning": "le week-end"
+        },
+        {
+          "term": "holidays",
+          "meaning": "les vacances"
+        },
+        {
+          "term": "hobby",
+          "meaning": "le loisir"
+        },
+        {
+          "term": "to spend time",
+          "meaning": "passer du temps"
+        },
+        {
+          "term": "relationship",
+          "meaning": "la relation"
+        },
+        {
+          "term": "together",
+          "meaning": "ensemble"
+        }
+      ],
+      "origin": "langues/lng-en-voc/0"
+    },
+    {
+      "id": "langues-lng-en-voc-1",
+      "title": "École, études & travail",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "À l’**school** (l’école) puis à la **high school** (le lycée), le **student** (l’élève) suit les cours d’un **teacher** (professeur) dans chaque **subject** (matière). Il fait ses **homework** (devoirs), passe des **exams** (examens) et reçoit des **grades** (notes). Pour obtenir un **degree** (un diplôme), éventuellement à l’**university** (l’université), il faut **learn** (apprendre) et **study** (étudier) ; on peut **pass an exam** (réussir un examen) ou **fail** (échouer).",
+        "Les études apportent des **skills** (compétences) et des **knowledge** (connaissances), complétées par la **training** (la formation). Pour trouver un **job** (un emploi) et construire sa **career** (carrière), on fait souvent un **internship** (un stage), puis on **applies** (postule) et on passe un **interview** (entretien). L’employeur peut alors **hire** (embaucher) le candidat, qui rejoint ses **colleagues** (collègues) sur son **workplace** (lieu de travail) et touche un **salary** (salaire)."
+      ],
+      "lexicon": [
+        {
+          "term": "school",
+          "meaning": "l'école"
+        },
+        {
+          "term": "high school",
+          "meaning": "le lycée"
+        },
+        {
+          "term": "student",
+          "meaning": "l'élève"
+        },
+        {
+          "term": "teacher",
+          "meaning": "le professeur"
+        },
+        {
+          "term": "subject",
+          "meaning": "la matière"
+        },
+        {
+          "term": "homework",
+          "meaning": "les devoirs"
+        },
+        {
+          "term": "exam",
+          "meaning": "l'examen"
+        },
+        {
+          "term": "grade",
+          "meaning": "la note"
+        },
+        {
+          "term": "degree",
+          "meaning": "le diplôme"
+        },
+        {
+          "term": "university",
+          "meaning": "l'université"
+        },
+        {
+          "term": "to learn",
+          "meaning": "apprendre"
+        },
+        {
+          "term": "to study",
+          "meaning": "étudier"
+        },
+        {
+          "term": "to pass an exam",
+          "meaning": "réussir un examen"
+        },
+        {
+          "term": "to fail",
+          "meaning": "échouer"
+        },
+        {
+          "term": "skill",
+          "meaning": "la compétence"
+        },
+        {
+          "term": "knowledge",
+          "meaning": "les connaissances"
+        },
+        {
+          "term": "training",
+          "meaning": "la formation"
+        },
+        {
+          "term": "job",
+          "meaning": "l'emploi"
+        },
+        {
+          "term": "career",
+          "meaning": "la carrière"
+        },
+        {
+          "term": "internship",
+          "meaning": "le stage"
+        },
+        {
+          "term": "to apply",
+          "meaning": "postuler"
+        },
+        {
+          "term": "interview",
+          "meaning": "l'entretien"
+        },
+        {
+          "term": "colleague",
+          "meaning": "le collègue"
+        },
+        {
+          "term": "workplace",
+          "meaning": "le lieu de travail"
+        },
+        {
+          "term": "salary",
+          "meaning": "le salaire"
+        },
+        {
+          "term": "to hire",
+          "meaning": "embaucher"
+        }
+      ],
+      "origin": "langues/lng-en-voc/1"
+    },
+    {
+      "id": "langues-lng-en-voc-2",
+      "title": "Entreprise, gestion & finance (STMG / ETLV)",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "Une **company** (entreprise) fait du **business** (des affaires) sur un **market** (marché) où elle cherche à gagner des **market shares** (parts de marché) face à ses **competitors** (concurrents). Elle vend à des **customers** (clients) et achète à des **suppliers** (fournisseurs) au sein de sa **supply chain** (chaîne d’approvisionnement). Sa **brand** (marque) et sa **strategy** (stratégie) soutiennent sa **growth** (croissance), dans le respect de sa **CSR** (RSE).",
+        "Côté finances, le **turnover** (chiffre d’affaires) et le **revenue** (revenu) doivent couvrir chaque **cost** (coût) pour dégager un **profit** (bénéfice) plutôt qu’une **loss** (perte) ; le **break-even point** (seuil de rentabilité) marque ce point d’équilibre. Le **balance sheet** (bilan) et le **cash flow** (la trésorerie) renseignent sur sa santé. Pour financer un **investment** (investissement) prévu au **budget**, elle peut contracter un **loan** (emprunt) ou faire appel à ses **shareholders** (actionnaires), qui sont l’une de ses **stakeholders** (parties prenantes)."
+      ],
+      "lexicon": [
+        {
+          "term": "company",
+          "meaning": "l'entreprise"
+        },
+        {
+          "term": "business",
+          "meaning": "les affaires"
+        },
+        {
+          "term": "turnover",
+          "meaning": "le chiffre d'affaires"
+        },
+        {
+          "term": "profit",
+          "meaning": "le bénéfice"
+        },
+        {
+          "term": "loss",
+          "meaning": "la perte"
+        },
+        {
+          "term": "balance sheet",
+          "meaning": "le bilan"
+        },
+        {
+          "term": "cash flow",
+          "meaning": "les flux de trésorerie ; à distinguer du solde de trésorerie disponible"
+        },
+        {
+          "term": "break-even point",
+          "meaning": "le seuil de rentabilité"
+        },
+        {
+          "term": "cost",
+          "meaning": "le coût"
+        },
+        {
+          "term": "revenue",
+          "meaning": "le revenu"
+        },
+        {
+          "term": "budget",
+          "meaning": "le budget"
+        },
+        {
+          "term": "investment",
+          "meaning": "l'investissement"
+        },
+        {
+          "term": "loan",
+          "meaning": "l'emprunt"
+        },
+        {
+          "term": "shareholder",
+          "meaning": "l'actionnaire"
+        },
+        {
+          "term": "stakeholder",
+          "meaning": "la partie prenante"
+        },
+        {
+          "term": "market",
+          "meaning": "le marché"
+        },
+        {
+          "term": "market share",
+          "meaning": "la part de marché"
+        },
+        {
+          "term": "customer",
+          "meaning": "le client"
+        },
+        {
+          "term": "supplier",
+          "meaning": "le fournisseur"
+        },
+        {
+          "term": "brand",
+          "meaning": "la marque"
+        },
+        {
+          "term": "growth",
+          "meaning": "la croissance"
+        },
+        {
+          "term": "strategy",
+          "meaning": "la stratégie"
+        },
+        {
+          "term": "competitor",
+          "meaning": "le concurrent"
+        },
+        {
+          "term": "CSR",
+          "meaning": "la RSE"
+        },
+        {
+          "term": "supply chain",
+          "meaning": "la chaîne d'approvisionnement"
+        }
+      ],
+      "origin": "langues/lng-en-voc/2"
+    },
+    {
+      "id": "langues-lng-en-voc-3",
+      "title": "Société, politique & médias",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "Dans une **society** (société) démocratique, chaque **citizen** (citoyen) a le **right** (droit) de **vote** (voter) lors d’une **election** (élection) pour désigner le **government** (gouvernement). La **law** (loi) garantit l’**equality** (égalité) et la **freedom** (liberté), et combat la **discrimination**. Les grands enjeux, ou **issues**, sont la **poverty** (pauvreté) face à la **wealth** (richesse), le **gap** (l’écart) entre les deux, le **welfare** (la protection sociale), l’**immigration** et le contrôle de la **border** (frontière). Quand ils sont mécontents, les citoyens organisent une **protest** (manifestation).",
+        "Les **media** (médias), comme le **newspaper** (journal), **broadcast** (diffusent) les **news** (informations) et influencent la **public opinion** (l’opinion publique), aux côtés de l’**advertising** (la publicité). Il faut se méfier des **fake news** (fausses informations)."
+      ],
+      "lexicon": [
+        {
+          "term": "society",
+          "meaning": "la société"
+        },
+        {
+          "term": "government",
+          "meaning": "le gouvernement"
+        },
+        {
+          "term": "election",
+          "meaning": "l'élection"
+        },
+        {
+          "term": "to vote",
+          "meaning": "voter"
+        },
+        {
+          "term": "citizen",
+          "meaning": "le citoyen"
+        },
+        {
+          "term": "right",
+          "meaning": "le droit"
+        },
+        {
+          "term": "law",
+          "meaning": "la loi"
+        },
+        {
+          "term": "equality",
+          "meaning": "l'égalité"
+        },
+        {
+          "term": "freedom",
+          "meaning": "la liberté"
+        },
+        {
+          "term": "discrimination",
+          "meaning": "la discrimination"
+        },
+        {
+          "term": "poverty",
+          "meaning": "la pauvreté"
+        },
+        {
+          "term": "wealth",
+          "meaning": "la richesse"
+        },
+        {
+          "term": "immigration",
+          "meaning": "l'immigration"
+        },
+        {
+          "term": "border",
+          "meaning": "la frontière"
+        },
+        {
+          "term": "protest",
+          "meaning": "la manifestation"
+        },
+        {
+          "term": "news",
+          "meaning": "les informations"
+        },
+        {
+          "term": "media",
+          "meaning": "les médias"
+        },
+        {
+          "term": "newspaper",
+          "meaning": "le journal"
+        },
+        {
+          "term": "fake news",
+          "meaning": "les fausses informations"
+        },
+        {
+          "term": "to broadcast",
+          "meaning": "diffuser"
+        },
+        {
+          "term": "advertising",
+          "meaning": "la publicité"
+        },
+        {
+          "term": "public opinion",
+          "meaning": "l'opinion publique"
+        },
+        {
+          "term": "issue",
+          "meaning": "l'enjeu, le problème"
+        },
+        {
+          "term": "welfare",
+          "meaning": "la protection sociale"
+        },
+        {
+          "term": "gap",
+          "meaning": "l'écart"
+        }
+      ],
+      "origin": "langues/lng-en-voc/3"
+    },
+    {
+      "id": "langues-lng-en-voc-4",
+      "title": "Environnement & sciences",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "Protéger l’**environment** (l’environnement) est devenu urgent face au **climate change** (changement climatique) et au **global warming** (réchauffement climatique), causés par les **greenhouse gases** (gaz à effet de serre). La **pollution** et les **waste** (déchets) menacent la **wildlife** (la faune), la **forest** (forêt) et la **biodiversity** (biodiversité) : de nombreuses **species** (espèces) sont **endangered** (en voie de disparition). Les catastrophes se multiplient, comme la **drought** (sécheresse) ou la **flood** (inondation).",
+        "Pour **protect** (protéger) la planète, il faut **reduce** (réduire) son **carbon footprint** (empreinte carbone), **recycle** (recycler), éviter de **pollute** (polluer), économiser chaque **resource** (ressource) et développer les **renewable energies** (énergies renouvelables) pour une **energy** plus **sustainable** (durable). La **research** (recherche) et chaque **discovery** (découverte) scientifique y contribuent."
+      ],
+      "lexicon": [
+        {
+          "term": "environment",
+          "meaning": "l'environnement"
+        },
+        {
+          "term": "climate change",
+          "meaning": "le changement climatique"
+        },
+        {
+          "term": "global warming",
+          "meaning": "le réchauffement climatique"
+        },
+        {
+          "term": "pollution",
+          "meaning": "la pollution"
+        },
+        {
+          "term": "waste",
+          "meaning": "les déchets"
+        },
+        {
+          "term": "to recycle",
+          "meaning": "recycler"
+        },
+        {
+          "term": "renewable energy",
+          "meaning": "les énergies renouvelables"
+        },
+        {
+          "term": "greenhouse gas",
+          "meaning": "le gaz à effet de serre"
+        },
+        {
+          "term": "carbon footprint",
+          "meaning": "l'empreinte carbone"
+        },
+        {
+          "term": "sustainable",
+          "meaning": "durable"
+        },
+        {
+          "term": "to pollute",
+          "meaning": "polluer"
+        },
+        {
+          "term": "endangered",
+          "meaning": "en voie de disparition"
+        },
+        {
+          "term": "wildlife",
+          "meaning": "la faune"
+        },
+        {
+          "term": "forest",
+          "meaning": "la forêt"
+        },
+        {
+          "term": "drought",
+          "meaning": "la sécheresse"
+        },
+        {
+          "term": "flood",
+          "meaning": "l'inondation"
+        },
+        {
+          "term": "research",
+          "meaning": "la recherche"
+        },
+        {
+          "term": "discovery",
+          "meaning": "la découverte"
+        },
+        {
+          "term": "to reduce",
+          "meaning": "réduire"
+        },
+        {
+          "term": "resource",
+          "meaning": "la ressource"
+        },
+        {
+          "term": "biodiversity",
+          "meaning": "la biodiversité"
+        },
+        {
+          "term": "to protect",
+          "meaning": "protéger"
+        },
+        {
+          "term": "energy",
+          "meaning": "l'énergie"
+        },
+        {
+          "term": "species",
+          "meaning": "l'espèce"
+        }
+      ],
+      "origin": "langues/lng-en-voc/4"
+    },
+    {
+      "id": "langues-lng-en-voc-5",
+      "title": "Numérique & technologies",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "La **technology** (technologie) est partout : sur le **computer** (ordinateur), le **smartphone** ou tout autre **device** (appareil), on passe des heures devant un **screen** (écran). On est **online** (en ligne), connecté à un **network** (réseau), sur les **social media** (réseaux sociaux), un **website** (site web) ou une **app** (application). On **browse** (navigue), on **download** (télécharge) et on **upload** (téléverse) des fichiers, et il faut régulièrement **update** (mettre à jour) ses **software** (logiciels).",
+        "Chaque **user** (utilisateur) laisse des **data** (données) : la protection de sa **privacy** (vie privée) passe par un bon **password** (mot de passe) et par la **cybersecurity** (cybersécurité). Les **algorithms** (algorithmes) et l’**artificial intelligence** (intelligence artificielle) transforment le monde **digital** (numérique), qui peut aussi créer une **addiction** (dépendance)."
+      ],
+      "lexicon": [
+        {
+          "term": "technology",
+          "meaning": "la technologie"
+        },
+        {
+          "term": "computer",
+          "meaning": "l'ordinateur"
+        },
+        {
+          "term": "smartphone",
+          "meaning": "le smartphone"
+        },
+        {
+          "term": "screen",
+          "meaning": "l'écran"
+        },
+        {
+          "term": "network",
+          "meaning": "le réseau"
+        },
+        {
+          "term": "social media",
+          "meaning": "les réseaux sociaux"
+        },
+        {
+          "term": "website",
+          "meaning": "le site web"
+        },
+        {
+          "term": "app",
+          "meaning": "l'application"
+        },
+        {
+          "term": "data",
+          "meaning": "les données"
+        },
+        {
+          "term": "privacy",
+          "meaning": "la vie privée"
+        },
+        {
+          "term": "password",
+          "meaning": "le mot de passe"
+        },
+        {
+          "term": "to download",
+          "meaning": "télécharger"
+        },
+        {
+          "term": "to upload",
+          "meaning": "téléverser"
+        },
+        {
+          "term": "online",
+          "meaning": "en ligne"
+        },
+        {
+          "term": "user",
+          "meaning": "l'utilisateur"
+        },
+        {
+          "term": "artificial intelligence",
+          "meaning": "l'intelligence artificielle"
+        },
+        {
+          "term": "software",
+          "meaning": "le logiciel"
+        },
+        {
+          "term": "device",
+          "meaning": "l'appareil"
+        },
+        {
+          "term": "to browse",
+          "meaning": "naviguer"
+        },
+        {
+          "term": "cybersecurity",
+          "meaning": "la cybersécurité"
+        },
+        {
+          "term": "algorithm",
+          "meaning": "l'algorithme"
+        },
+        {
+          "term": "to update",
+          "meaning": "mettre à jour"
+        },
+        {
+          "term": "digital",
+          "meaning": "numérique"
+        },
+        {
+          "term": "addiction",
+          "meaning": "la dépendance"
+        }
+      ],
+      "origin": "langues/lng-en-voc/5"
+    },
+    {
+      "id": "langues-lng-en-voc-6",
+      "title": "Verbes courants & phrasal verbs",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "Les verbes de base, **to be** (être), **to have** (avoir), **to do** (faire), **to make** (fabriquer), **to go** (aller) et **to get** (obtenir), servent dans presque toutes les phrases. Les **phrasal verbs** associent un verbe et une particule qui en change le sens : **to give up** (abandonner), **to give back** (rendre), **to look for** (chercher), **to look after** (s’occuper de), **to find out** (découvrir), **to figure out** (comprendre).",
+        "D’autres sont très utiles à l’écrit : **to point out** (souligner), **to carry out** (réaliser), **to deal with** (traiter, gérer), **to come up with** (proposer), **to take part in** (participer à), **to bring up** (évoquer), **to rely on** (compter sur). Dans la vie courante, on **grows up** (grandit), on **turns down** (refuse) une offre, on **sets up** (crée) une entreprise, on **puts off** (reporte) un rendez-vous, on **runs out of** (manque de) temps, et une machine peut **break down** (tomber en panne)."
+      ],
+      "lexicon": [
+        {
+          "term": "to be",
+          "meaning": "être"
+        },
+        {
+          "term": "to have",
+          "meaning": "avoir"
+        },
+        {
+          "term": "to do",
+          "meaning": "faire"
+        },
+        {
+          "term": "to make",
+          "meaning": "fabriquer"
+        },
+        {
+          "term": "to go",
+          "meaning": "aller"
+        },
+        {
+          "term": "to get",
+          "meaning": "obtenir"
+        },
+        {
+          "term": "to give up",
+          "meaning": "abandonner"
+        },
+        {
+          "term": "to look for",
+          "meaning": "chercher"
+        },
+        {
+          "term": "to look after",
+          "meaning": "s'occuper de"
+        },
+        {
+          "term": "to find out",
+          "meaning": "découvrir"
+        },
+        {
+          "term": "to give back",
+          "meaning": "rendre"
+        },
+        {
+          "term": "to point out",
+          "meaning": "souligner"
+        },
+        {
+          "term": "to carry out",
+          "meaning": "réaliser"
+        },
+        {
+          "term": "to deal with",
+          "meaning": "traiter, gérer"
+        },
+        {
+          "term": "to come up with",
+          "meaning": "proposer"
+        },
+        {
+          "term": "to take part in",
+          "meaning": "participer à"
+        },
+        {
+          "term": "to grow up",
+          "meaning": "grandir"
+        },
+        {
+          "term": "to turn down",
+          "meaning": "refuser"
+        },
+        {
+          "term": "to set up",
+          "meaning": "créer, monter"
+        },
+        {
+          "term": "to put off",
+          "meaning": "reporter"
+        },
+        {
+          "term": "to run out of",
+          "meaning": "manquer de"
+        },
+        {
+          "term": "to bring up",
+          "meaning": "évoquer"
+        },
+        {
+          "term": "to break down",
+          "meaning": "tomber en panne"
+        },
+        {
+          "term": "to figure out",
+          "meaning": "comprendre"
+        },
+        {
+          "term": "to rely on",
+          "meaning": "compter sur"
+        }
+      ],
+      "origin": "langues/lng-en-voc/6"
+    },
+    {
+      "id": "langues-lng-en-voc-7",
+      "title": "Mots de liaison & exprimer son opinion",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "Pour organiser un texte, on annonce les étapes avec **first** (d’abord), **then** (ensuite) et **finally** (enfin). On ajoute un argument avec **moreover** (de plus) ou **in addition** (en outre), on s’oppose avec **however** (cependant), **nevertheless** (néanmoins) ou **whereas** (tandis que), et on concède avec **although** (bien que). On explique avec **because** (parce que) et **indeed** (en effet), on tire une conséquence avec **therefore** (donc) ou **as a result** (par conséquent), et on illustre avec **for instance** (par exemple). Pour comparer deux idées : **on the one hand** (d’une part)… **on the other hand** (d’autre part).",
+        "Pour donner son avis, on écrit **in my opinion** (à mon avis) ou **I think that** (je pense que), on dit **I agree** (je suis d’accord) ou **I disagree** (je ne suis pas d’accord), et l’on cite une source avec **according to** (selon). Pour conclure, on utilise **to sum up** (pour résumer), **in conclusion** (en conclusion), **on the whole** (dans l’ensemble) ou **in fact** (en fait)."
+      ],
+      "lexicon": [
+        {
+          "term": "first",
+          "meaning": "d'abord"
+        },
+        {
+          "term": "then",
+          "meaning": "ensuite"
+        },
+        {
+          "term": "finally",
+          "meaning": "enfin"
+        },
+        {
+          "term": "moreover",
+          "meaning": "de plus"
+        },
+        {
+          "term": "however",
+          "meaning": "cependant"
+        },
+        {
+          "term": "therefore",
+          "meaning": "donc"
+        },
+        {
+          "term": "because",
+          "meaning": "parce que"
+        },
+        {
+          "term": "although",
+          "meaning": "bien que"
+        },
+        {
+          "term": "in addition",
+          "meaning": "en outre"
+        },
+        {
+          "term": "on the one hand",
+          "meaning": "d'une part"
+        },
+        {
+          "term": "on the other hand",
+          "meaning": "d'autre part"
+        },
+        {
+          "term": "for instance",
+          "meaning": "par exemple"
+        },
+        {
+          "term": "in my opinion",
+          "meaning": "à mon avis"
+        },
+        {
+          "term": "I think that",
+          "meaning": "je pense que"
+        },
+        {
+          "term": "I agree",
+          "meaning": "je suis d'accord"
+        },
+        {
+          "term": "I disagree",
+          "meaning": "je ne suis pas d'accord"
+        },
+        {
+          "term": "to sum up",
+          "meaning": "pour résumer"
+        },
+        {
+          "term": "in conclusion",
+          "meaning": "en conclusion"
+        },
+        {
+          "term": "indeed",
+          "meaning": "en effet"
+        },
+        {
+          "term": "nevertheless",
+          "meaning": "néanmoins"
+        },
+        {
+          "term": "according to",
+          "meaning": "selon"
+        },
+        {
+          "term": "whereas",
+          "meaning": "tandis que"
+        },
+        {
+          "term": "as a result",
+          "meaning": "par conséquent"
+        },
+        {
+          "term": "in fact",
+          "meaning": "en fait"
+        },
+        {
+          "term": "on the whole",
+          "meaning": "dans l'ensemble"
+        }
+      ],
+      "origin": "langues/lng-en-voc/7"
+    },
+    {
+      "id": "langues-lng-en-verbs-0",
+      "title": "Verbes irréguliers : base, prétérit, participe passé",
+      "part": "Verbes irréguliers",
+      "paragraphs": [
+        "Chaque verbe irrégulier s’apprend avec ses trois formes : base, prétérit, participe passé. **Go** donne *went* puis *gone* (aller) ; **see** donne *saw* puis *seen* (voir) ; **take** donne *took* puis *taken* (prendre). **Make** donne *made* puis *made* (fabriquer) ; **come** donne *came* puis *come* (venir) ; **write** donne *wrote* puis *written* (écrire).",
+        "Structure : **base – prétérit – participe passé**. Le mieux : les réviser par familles de sons."
+      ],
+      "lexicon": [
+        {
+          "term": "go – went – gone",
+          "meaning": "aller"
+        },
+        {
+          "term": "see – saw – seen",
+          "meaning": "voir"
+        },
+        {
+          "term": "take – took – taken",
+          "meaning": "prendre"
+        },
+        {
+          "term": "make – made – made",
+          "meaning": "fabriquer"
+        },
+        {
+          "term": "come – came – come",
+          "meaning": "venir"
+        },
+        {
+          "term": "write – wrote – written",
+          "meaning": "écrire"
+        }
+      ],
+      "origin": "langues/lng-en-verbs/0"
+    },
+    {
+      "id": "langues-lng-en-grammar-ex-0",
+      "title": "Règles clés : a / an, 3ᵉ personne en -s, comparatif, some / any, much / many",
+      "part": "Grammaire (exercices)",
+      "paragraphs": [
+        "**a / an** selon le son (a car, an apple).",
+        "Présent simple : **+s** à la 3ᵉ personne (he work**s**).",
+        "Comparatif : court **+er**, long **more** + adj.",
+        "**some / any**, **much / many**, **this / these**.",
+        "On emploie **a** devant un son consonne (**a car**) et **an** devant un son voyelle (**an apple**). Au présent simple, la troisième personne du singulier prend **-s** : **he works**, **she plays**.",
+        "Au comparatif, un adjectif court prend **-er** : **fast → faster**. Pour un adjectif long, on utilise **more** : **interesting → more interesting**.",
+        "On emploie généralement **some** dans une phrase affirmative (**I have some money**) et **any** dans une phrase négative (**I do not have any money**). **Much** accompagne un nom indénombrable (**much money**), **many** un nom dénombrable au pluriel (**many books**).",
+        "Pour désigner quelque chose de proche, **this** s’utilise au singulier (**this book here**) et **these** au pluriel (**these books here**).",
+        "Chaque partie mélange **dix questions sur les règles et exemples de ce cours**. Certaines questions peuvent revenir pour consolider tes acquis."
+      ],
+      "lexicon": [],
+      "origin": "langues/lng-en-grammar-ex/0"
+    },
+    {
+      "id": "langues-lng-en-comp-0",
+      "title": "Niveau A2 — Débutant",
+      "part": "Compréhension",
+      "paragraphs": [
+        "Textes et dialogues **simples** (vie quotidienne). Idéal pour se lancer."
+      ],
+      "lexicon": [],
+      "origin": "langues/lng-en-comp/0"
+    },
+    {
+      "id": "langues-lng-en-comp-1",
+      "title": "Niveau B1 — Intermédiaire",
+      "part": "Compréhension",
+      "paragraphs": [
+        "Récits et situations **plus longs** (travail, voyages, école)."
+      ],
+      "lexicon": [],
+      "origin": "langues/lng-en-comp/1"
+    },
+    {
+      "id": "langues-lng-en-comp-2",
+      "title": "Niveau B2 — Intermédiaire avancé",
+      "part": "Compréhension",
+      "paragraphs": [
+        "Sujets **d’actualité et professionnels** (entreprise, société)."
+      ],
+      "lexicon": [],
+      "origin": "langues/lng-en-comp/2"
+    }
+  ],
+  "exercises": [
+    {
+      "lessonId": "p1-langues-p1-lng-en-0",
+      "unit": "Anglais — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-en-trou",
+      "type": "court",
+      "prompt": "She ____ (work) here since 2020.",
+      "choices": [],
+      "answer": "has worked",
+      "explanation": "Present perfect + since : « has worked ».",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "en-ex-001"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-en-0",
+      "unit": "Anglais — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-en-trou",
+      "type": "court",
+      "prompt": "They ____ (watch) TV when I arrived.",
+      "choices": [],
+      "answer": "were watching",
+      "explanation": "Past continuous : action en cours interrompue.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "en-ex-002"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-en-0",
+      "unit": "Anglais — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-en-trou",
+      "type": "court",
+      "prompt": "If it ____ (rain), we will cancel.",
+      "choices": [],
+      "answer": "rains",
+      "explanation": "Conditionnel type 1 : If + present.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "en-ex-003"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-en-1",
+      "unit": "Anglais — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-en-qcm",
+      "type": "qcm",
+      "prompt": "« We ___ to London in 2019 » (date précise) :",
+      "choices": [
+        "go",
+        "have gone",
+        "went",
+        "are going"
+      ],
+      "answer": "went",
+      "explanation": "Date précise → preterit.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "en-ex-004"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-en-1",
+      "unit": "Anglais — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-en-qcm",
+      "type": "qcm",
+      "prompt": "Conditionnel type 2 : « If I ___ rich, I would travel » :",
+      "choices": [
+        "were",
+        "have been",
+        "will be",
+        "am"
+      ],
+      "answer": "were",
+      "explanation": "If + preterit → would + BV.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "en-ex-005"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-en-1",
+      "unit": "Anglais — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-en-qcm",
+      "type": "qcm",
+      "prompt": "Comparatif irrégulier de « good » :",
+      "choices": [
+        "better",
+        "more good",
+        "best",
+        "gooder"
+      ],
+      "answer": "better",
+      "explanation": "good → better → the best.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "en-ex-006"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-0",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-present-trou",
+      "type": "court",
+      "prompt": "She usually ____ (go) to school by bus.",
+      "choices": [],
+      "answer": "goes",
+      "explanation": "Present simple, 3ᵉ personne : go → goes.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "en-ex-007"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-0",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-present-trou",
+      "type": "court",
+      "prompt": "Look! They ____ (play) football right now.",
+      "choices": [],
+      "answer": "are playing",
+      "explanation": "Action en cours → present continuous : be + V-ing.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "en-ex-008"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-0",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-present-trou",
+      "type": "court",
+      "prompt": "I ____ (not like) coffee.",
+      "choices": [],
+      "answer": "don't like",
+      "explanation": "Négation au présent simple : don’t + base.",
+      "alternatives": [
+        "do not like"
+      ],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "en-ex-009"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-0",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-present-trou",
+      "type": "court",
+      "prompt": "He ____ (watch) TV every evening.",
+      "choices": [],
+      "answer": "watches",
+      "explanation": "3ᵉ pers. d’un verbe en -ch : watch → watches.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "en-ex-010"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-0",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-present-trou",
+      "type": "court",
+      "prompt": "Water ____ (boil) at 100 degrees.",
+      "choices": [],
+      "answer": "boils",
+      "explanation": "Vérité générale → present simple : boils.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 4,
+      "id": "en-ex-011"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-1",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-past-qcm",
+      "type": "qcm",
+      "prompt": "« I ___ my keys yesterday. »",
+      "choices": [
+        "was losing",
+        "have lost",
+        "lose",
+        "lost"
+      ],
+      "answer": "lost",
+      "explanation": "Date précise (yesterday) → preterit : lost.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "en-ex-012"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-1",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-past-qcm",
+      "type": "qcm",
+      "prompt": "« She ___ here since 2020. »",
+      "choices": [
+        "lives",
+        "has lived",
+        "is living",
+        "lived"
+      ],
+      "answer": "has lived",
+      "explanation": "« since » → present perfect : has lived.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "en-ex-013"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-1",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-past-qcm",
+      "type": "qcm",
+      "prompt": "Preterit de « to go » :",
+      "choices": [
+        "going",
+        "gone",
+        "goed",
+        "went"
+      ],
+      "answer": "went",
+      "explanation": "go / went / gone.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "en-ex-014"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-1",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-past-qcm",
+      "type": "qcm",
+      "prompt": "« Have you ever ___ sushi? »",
+      "choices": [
+        "eat",
+        "eating",
+        "ate",
+        "eaten"
+      ],
+      "answer": "eaten",
+      "explanation": "Present perfect + ever → participe passé : eaten.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "en-ex-015"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-1",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-past-qcm",
+      "type": "qcm",
+      "prompt": "« When I was young, I ___ in Spain. »",
+      "choices": [
+        "live",
+        "lived",
+        "am living",
+        "have lived"
+      ],
+      "answer": "lived",
+      "explanation": "Contexte passé daté → preterit : lived.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 4,
+      "id": "en-ex-016"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-2",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-future-trou",
+      "type": "court",
+      "prompt": "I think it ____ (rain) tomorrow.",
+      "choices": [],
+      "answer": "will rain",
+      "explanation": "Prévision → will + base.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "en-ex-017"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-2",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-future-trou",
+      "type": "court",
+      "prompt": "Look at those clouds, it ____ (rain).",
+      "choices": [],
+      "answer": "is going to rain",
+      "explanation": "Indice présent → be going to.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "en-ex-018"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-2",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-future-trou",
+      "type": "court",
+      "prompt": "By 2030, she ____ (finish) her studies.",
+      "choices": [],
+      "answer": "will have finished",
+      "explanation": "Future perfect : will have + PP.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "en-ex-019"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-2",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-future-trou",
+      "type": "court",
+      "prompt": "Before he arrived, they ____ (already / leave).",
+      "choices": [],
+      "answer": "had already left",
+      "explanation": "Plus-que-parfait : had + PP.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "en-ex-020"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-3",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-modal-qcm",
+      "type": "qcm",
+      "prompt": "Obligation forte : « You ___ wear a seatbelt. »",
+      "choices": [
+        "can",
+        "might",
+        "must",
+        "would"
+      ],
+      "answer": "must",
+      "explanation": "Obligation forte → must.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "en-ex-021"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-3",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-modal-qcm",
+      "type": "qcm",
+      "prompt": "Conseil : « You ___ see a doctor. »",
+      "choices": [
+        "can",
+        "must",
+        "will",
+        "should"
+      ],
+      "answer": "should",
+      "explanation": "Conseil → should.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "en-ex-022"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-3",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-modal-qcm",
+      "type": "qcm",
+      "prompt": "Capacité : « She ___ speak three languages. »",
+      "choices": [
+        "may",
+        "must",
+        "can",
+        "should"
+      ],
+      "answer": "can",
+      "explanation": "Capacité → can.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "en-ex-023"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-3",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-modal-qcm",
+      "type": "qcm",
+      "prompt": "Après un modal, le verbe est :",
+      "choices": [
+        "au participe passé",
+        "en -ing",
+        "à la base verbale (sans to, sans -s)",
+        "à l'infinitif avec to"
+      ],
+      "answer": "à la base verbale (sans to, sans -s)",
+      "explanation": "Modal + base verbale.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "en-ex-024"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-3",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-modal-qcm",
+      "type": "qcm",
+      "prompt": "Permission polie : « ___ I open the window? »",
+      "choices": [
+        "May",
+        "Should",
+        "Would",
+        "Must"
+      ],
+      "answer": "May",
+      "explanation": "Permission polie → May I…?",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 4,
+      "id": "en-ex-025"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-4",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-cond-trou",
+      "type": "court",
+      "prompt": "If it rains, we ____ (stay) home.",
+      "choices": [],
+      "answer": "will stay",
+      "explanation": "Type 1 : if + present, will + base.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "en-ex-026"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-4",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-cond-trou",
+      "type": "court",
+      "prompt": "If I ____ (be) you, I would apologize.",
+      "choices": [],
+      "answer": "were",
+      "explanation": "Type 2 : if + preterit (were).",
+      "alternatives": [
+        "was"
+      ],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "en-ex-027"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-4",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-cond-trou",
+      "type": "court",
+      "prompt": "If I had studied, I ____ (pass) the exam.",
+      "choices": [],
+      "answer": "would have passed",
+      "explanation": "Type 3 : would have + PP.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "en-ex-028"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-4",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-cond-trou",
+      "type": "court",
+      "prompt": "The letter ____ (write) yesterday. [passif]",
+      "choices": [],
+      "answer": "was written",
+      "explanation": "Passif au preterit : was + PP.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "en-ex-029"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-4",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-cond-trou",
+      "type": "court",
+      "prompt": "English ____ (speak) all over the world. [passif]",
+      "choices": [],
+      "answer": "is spoken",
+      "explanation": "Passif présent : is + PP.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 4,
+      "id": "en-ex-030"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-5",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-irr-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : go",
+      "choices": [],
+      "answer": "gone",
+      "explanation": "Dans ce contexte, « go » correspond à « gone ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-031"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-5",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-irr-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : see",
+      "choices": [],
+      "answer": "seen",
+      "explanation": "Dans ce contexte, « see » correspond à « seen ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-032"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-5",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-irr-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : take",
+      "choices": [],
+      "answer": "taken",
+      "explanation": "Dans ce contexte, « take » correspond à « taken ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-033"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-5",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-irr-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : write",
+      "choices": [],
+      "answer": "written",
+      "explanation": "Dans ce contexte, « write » correspond à « written ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-034"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-5",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-irr-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : speak",
+      "choices": [],
+      "answer": "spoken",
+      "explanation": "Dans ce contexte, « speak » correspond à « spoken ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-035"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-5",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-irr-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : break",
+      "choices": [],
+      "answer": "broken",
+      "explanation": "Dans ce contexte, « break » correspond à « broken ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-036"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-5",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-irr-trou",
+      "type": "court",
+      "prompt": "eat → preterit = ____",
+      "choices": [],
+      "answer": "ate",
+      "explanation": "eat / ate / eaten.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "en-ex-037"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-5",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-irr-trou",
+      "type": "court",
+      "prompt": "buy → preterit = ____",
+      "choices": [],
+      "answer": "bought",
+      "explanation": "buy / bought / bought.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "en-ex-038"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-5",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-irr-trou",
+      "type": "court",
+      "prompt": "think → participe passé = ____",
+      "choices": [],
+      "answer": "thought",
+      "explanation": "think / thought / thought.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "en-ex-039"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-5",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-irr-trou",
+      "type": "court",
+      "prompt": "give → participe passé = ____",
+      "choices": [],
+      "answer": "given",
+      "explanation": "give / gave / given.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "en-ex-040"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-5",
+      "unit": "Anglais — Toutes les conjugaisons",
+      "origin": "langues/lng-en-irr-trou",
+      "type": "court",
+      "prompt": "come → preterit = ____",
+      "choices": [],
+      "answer": "came",
+      "explanation": "come / came / come.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 4,
+      "id": "en-ex-041"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-0",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-daily-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : family",
+      "choices": [],
+      "answer": "la famille",
+      "explanation": "Dans ce contexte, « family » correspond à « la famille ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-042"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-0",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-daily-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : neighbour",
+      "choices": [],
+      "answer": "le voisin",
+      "explanation": "Dans ce contexte, « neighbour » correspond à « le voisin ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-043"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-0",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-daily-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : meal",
+      "choices": [],
+      "answer": "le repas",
+      "explanation": "Dans ce contexte, « meal » correspond à « le repas ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-044"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-0",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-daily-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : bedroom",
+      "choices": [],
+      "answer": "la chambre",
+      "explanation": "Dans ce contexte, « bedroom » correspond à « la chambre ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-045"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-0",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-daily-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : weekend",
+      "choices": [],
+      "answer": "le week-end",
+      "explanation": "Dans ce contexte, « weekend » correspond à « le week-end ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-046"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-0",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-daily-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : friend",
+      "choices": [],
+      "answer": "l'ami",
+      "explanation": "Dans ce contexte, « friend » correspond à « l'ami ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-047"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-2",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-biz-qcm",
+      "type": "qcm",
+      "prompt": "« turnover » =",
+      "choices": [
+        "l'emprunt",
+        "la marque",
+        "le chiffre d'affaires",
+        "le bénéfice"
+      ],
+      "answer": "le chiffre d'affaires",
+      "explanation": "turnover = chiffre d’affaires.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "en-ex-048"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-2",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-biz-qcm",
+      "type": "qcm",
+      "prompt": "« shareholder » =",
+      "choices": [
+        "le concurrent",
+        "l'actionnaire",
+        "le fournisseur",
+        "le client"
+      ],
+      "answer": "l'actionnaire",
+      "explanation": "shareholder = actionnaire.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "en-ex-049"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-2",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-biz-qcm",
+      "type": "qcm",
+      "prompt": "« break-even point » =",
+      "choices": [
+        "la trésorerie",
+        "la croissance",
+        "le bilan",
+        "le seuil de rentabilité"
+      ],
+      "answer": "le seuil de rentabilité",
+      "explanation": "break-even point = seuil de rentabilité.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "en-ex-050"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-2",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-biz-qcm",
+      "type": "qcm",
+      "prompt": "« supplier » =",
+      "choices": [
+        "le fournisseur",
+        "le client",
+        "le coût",
+        "le marché"
+      ],
+      "answer": "le fournisseur",
+      "explanation": "supplier = fournisseur.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "en-ex-051"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-2",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-biz-qcm",
+      "type": "qcm",
+      "prompt": "« cash flow » =",
+      "choices": [
+        "les flux de trésorerie",
+        "le budget",
+        "le bénéfice",
+        "la perte"
+      ],
+      "answer": "les flux de trésorerie",
+      "explanation": "cash flow = flux de trésorerie.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 4,
+      "id": "en-ex-052"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-4",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-env-assoc",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : climate change",
+      "choices": [],
+      "answer": "le changement climatique",
+      "explanation": "Dans ce contexte, « climate change » correspond à « le changement climatique ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-053"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-4",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-env-assoc",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : waste",
+      "choices": [],
+      "answer": "les déchets",
+      "explanation": "Dans ce contexte, « waste » correspond à « les déchets ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-054"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-4",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-env-assoc",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : renewable energy",
+      "choices": [],
+      "answer": "les énergies renouvelables",
+      "explanation": "Dans ce contexte, « renewable energy » correspond à « les énergies renouvelables ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-055"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-4",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-env-assoc",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : drought",
+      "choices": [],
+      "answer": "la sécheresse",
+      "explanation": "Dans ce contexte, « drought » correspond à « la sécheresse ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-056"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-4",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-env-assoc",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : carbon footprint",
+      "choices": [],
+      "answer": "l'empreinte carbone",
+      "explanation": "Dans ce contexte, « carbon footprint » correspond à « l'empreinte carbone ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "en-ex-057"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-6",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-phrasal-qcm",
+      "type": "qcm",
+      "prompt": "« to give up » =",
+      "choices": [
+        "abandonner",
+        "donner",
+        "rendre",
+        "offrir"
+      ],
+      "answer": "abandonner",
+      "explanation": "to give up = abandonner.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "en-ex-058"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-6",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-phrasal-qcm",
+      "type": "qcm",
+      "prompt": "« to look after » =",
+      "choices": [
+        "s'occuper de",
+        "ressembler à",
+        "regarder",
+        "chercher"
+      ],
+      "answer": "s'occuper de",
+      "explanation": "to look after = s’occuper de.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "en-ex-059"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-6",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-phrasal-qcm",
+      "type": "qcm",
+      "prompt": "« to carry out » =",
+      "choices": [
+        "emporter",
+        "porter",
+        "réaliser",
+        "continuer"
+      ],
+      "answer": "réaliser",
+      "explanation": "to carry out = réaliser, mener à bien.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "en-ex-060"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-6",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-phrasal-qcm",
+      "type": "qcm",
+      "prompt": "« to run out of » =",
+      "choices": [
+        "courir",
+        "sortir",
+        "manquer de",
+        "s’enfuir"
+      ],
+      "answer": "manquer de",
+      "explanation": "to run out of = être à court de.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "en-ex-061"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-6",
+      "unit": "Anglais — Vocabulaire",
+      "origin": "langues/lng-en-voc-phrasal-qcm",
+      "type": "qcm",
+      "prompt": "« to deal with » =",
+      "choices": [
+        "négocier",
+        "distribuer",
+        "traiter, gérer",
+        "vendre"
+      ],
+      "answer": "traiter, gérer",
+      "explanation": "to deal with = traiter, gérer.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 4,
+      "id": "en-ex-062"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-0",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-a2-read",
+      "type": "qcm",
+      "prompt": "What time does the writer get up on Saturday?",
+      "choices": [
+        "At 9",
+        "At 11",
+        "At 7"
+      ],
+      "answer": "At 9",
+      "explanation": "“I get up at nine o’clock.”",
+      "alternatives": [],
+      "context": "On Saturday morning, I get up at nine o'clock. I have breakfast with my family and then I do my homework. In the afternoon, I play football with my friends in the park. On Sunday, we visit my grandparents. My grandmother cooks a big lunch and we eat together. I love the weekend because I can relax and see the people I love.",
+      "sourceQuestion": 0,
+      "id": "en-ex-063"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-0",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-a2-read",
+      "type": "qcm",
+      "prompt": "What does the writer do on Saturday afternoon?",
+      "choices": [
+        "Play football",
+        "Visit grandparents",
+        "Homework"
+      ],
+      "answer": "Play football",
+      "explanation": "Football in the park in the afternoon.",
+      "alternatives": [],
+      "context": "On Saturday morning, I get up at nine o'clock. I have breakfast with my family and then I do my homework. In the afternoon, I play football with my friends in the park. On Sunday, we visit my grandparents. My grandmother cooks a big lunch and we eat together. I love the weekend because I can relax and see the people I love.",
+      "sourceQuestion": 1,
+      "id": "en-ex-064"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-0",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-a2-read",
+      "type": "qcm",
+      "prompt": "Who cooks lunch on Sunday?",
+      "choices": [
+        "The mother",
+        "The writer",
+        "The grandmother"
+      ],
+      "answer": "The grandmother",
+      "explanation": "“My grandmother cooks a big lunch.”",
+      "alternatives": [],
+      "context": "On Saturday morning, I get up at nine o'clock. I have breakfast with my family and then I do my homework. In the afternoon, I play football with my friends in the park. On Sunday, we visit my grandparents. My grandmother cooks a big lunch and we eat together. I love the weekend because I can relax and see the people I love.",
+      "sourceQuestion": 2,
+      "id": "en-ex-065"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-0",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-a2-read",
+      "type": "qcm",
+      "prompt": "Why does the writer love the weekend?",
+      "choices": [
+        "To work",
+        "To relax and see loved ones",
+        "To travel"
+      ],
+      "answer": "To relax and see loved ones",
+      "explanation": "“I can relax and see the people I love.”",
+      "alternatives": [],
+      "context": "On Saturday morning, I get up at nine o'clock. I have breakfast with my family and then I do my homework. In the afternoon, I play football with my friends in the park. On Sunday, we visit my grandparents. My grandmother cooks a big lunch and we eat together. I love the weekend because I can relax and see the people I love.",
+      "sourceQuestion": 3,
+      "id": "en-ex-066"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-0",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-a2-listen",
+      "type": "qcm",
+      "prompt": "What is the customer looking for?",
+      "choices": [
+        "A red jacket",
+        "Blue jeans",
+        "A blue T-shirt"
+      ],
+      "answer": "A blue T-shirt",
+      "explanation": "“a blue T-shirt”.",
+      "alternatives": [],
+      "context": "Hello! Can I help you? Yes, please. I am looking for a blue T-shirt. What size do you need? Medium, please. Here you are. It costs fifteen pounds. Can I pay by card? Of course. Thank you very much. Have a nice day!",
+      "sourceQuestion": 0,
+      "id": "en-ex-067"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-0",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-a2-listen",
+      "type": "qcm",
+      "prompt": "What size does the customer want?",
+      "choices": [
+        "Small",
+        "Large",
+        "Medium"
+      ],
+      "answer": "Medium",
+      "explanation": "“Medium, please.”",
+      "alternatives": [],
+      "context": "Hello! Can I help you? Yes, please. I am looking for a blue T-shirt. What size do you need? Medium, please. Here you are. It costs fifteen pounds. Can I pay by card? Of course. Thank you very much. Have a nice day!",
+      "sourceQuestion": 1,
+      "id": "en-ex-068"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-0",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-a2-listen",
+      "type": "qcm",
+      "prompt": "How much does it cost?",
+      "choices": [
+        "£13",
+        "£15",
+        "£50"
+      ],
+      "answer": "£15",
+      "explanation": "“It costs fifteen pounds.”",
+      "alternatives": [],
+      "context": "Hello! Can I help you? Yes, please. I am looking for a blue T-shirt. What size do you need? Medium, please. Here you are. It costs fifteen pounds. Can I pay by card? Of course. Thank you very much. Have a nice day!",
+      "sourceQuestion": 2,
+      "id": "en-ex-069"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-0",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-a2-listen",
+      "type": "qcm",
+      "prompt": "How does the customer pay?",
+      "choices": [
+        "By cheque",
+        "Cash",
+        "By card"
+      ],
+      "answer": "By card",
+      "explanation": "“Can I pay by card?”",
+      "alternatives": [],
+      "context": "Hello! Can I help you? Yes, please. I am looking for a blue T-shirt. What size do you need? Medium, please. Here you are. It costs fifteen pounds. Can I pay by card? Of course. Thank you very much. Have a nice day!",
+      "sourceQuestion": 3,
+      "id": "en-ex-070"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-1",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b1-read",
+      "type": "qcm",
+      "prompt": "Where did Emma work?",
+      "choices": [
+        "In a shop",
+        "In an office",
+        "In a café by the sea"
+      ],
+      "answer": "In a café by the sea",
+      "explanation": "“a small café by the sea”.",
+      "alternatives": [],
+      "context": "Last summer, Emma worked in a small café by the sea. She started early, at seven in the morning, and served coffee to tourists. The job was tiring but she earned enough money to buy a new laptop. She also improved her English because many customers came from abroad. At the end of August, the owner offered her a job for the next summer. Emma was proud: it was her first real work experience.",
+      "sourceQuestion": 0,
+      "id": "en-ex-071"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-1",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b1-read",
+      "type": "qcm",
+      "prompt": "What did she buy with her money?",
+      "choices": [
+        "A laptop",
+        "A bike",
+        "A phone"
+      ],
+      "answer": "A laptop",
+      "explanation": "“to buy a new laptop”.",
+      "alternatives": [],
+      "context": "Last summer, Emma worked in a small café by the sea. She started early, at seven in the morning, and served coffee to tourists. The job was tiring but she earned enough money to buy a new laptop. She also improved her English because many customers came from abroad. At the end of August, the owner offered her a job for the next summer. Emma was proud: it was her first real work experience.",
+      "sourceQuestion": 1,
+      "id": "en-ex-072"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-1",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b1-read",
+      "type": "qcm",
+      "prompt": "Why did her English improve?",
+      "choices": [
+        "Customers came from abroad",
+        "She took a class",
+        "She read books"
+      ],
+      "answer": "Customers came from abroad",
+      "explanation": "“many customers came from abroad”.",
+      "alternatives": [],
+      "context": "Last summer, Emma worked in a small café by the sea. She started early, at seven in the morning, and served coffee to tourists. The job was tiring but she earned enough money to buy a new laptop. She also improved her English because many customers came from abroad. At the end of August, the owner offered her a job for the next summer. Emma was proud: it was her first real work experience.",
+      "sourceQuestion": 2,
+      "id": "en-ex-073"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-1",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b1-read",
+      "type": "qcm",
+      "prompt": "What did the owner offer at the end?",
+      "choices": [
+        "A job next summer",
+        "A holiday",
+        "More money"
+      ],
+      "answer": "A job next summer",
+      "explanation": "“offered her a job for the next summer”.",
+      "alternatives": [],
+      "context": "Last summer, Emma worked in a small café by the sea. She started early, at seven in the morning, and served coffee to tourists. The job was tiring but she earned enough money to buy a new laptop. She also improved her English because many customers came from abroad. At the end of August, the owner offered her a job for the next summer. Emma was proud: it was her first real work experience.",
+      "sourceQuestion": 3,
+      "id": "en-ex-074"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-1",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b1-listen",
+      "type": "qcm",
+      "prompt": "What type of room does the man want?",
+      "choices": [
+        "A double room",
+        "A single room",
+        "A family room"
+      ],
+      "answer": "A double room",
+      "explanation": "“a double room”.",
+      "alternatives": [],
+      "context": "Good evening, Sea View Hotel, how can I help you? Hello, I'd like to book a double room for two nights, please. Certainly. When would you like to arrive? On Friday the tenth. And how many people? Two adults. The room is ninety euros per night, breakfast included. That's fine. Could I have your name, please? Yes, it's David Miller. Perfect, your room is booked. See you on Friday!",
+      "sourceQuestion": 0,
+      "id": "en-ex-075"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-1",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b1-listen",
+      "type": "qcm",
+      "prompt": "How many nights?",
+      "choices": [
+        "Three",
+        "Two",
+        "One"
+      ],
+      "answer": "Two",
+      "explanation": "“for two nights”.",
+      "alternatives": [],
+      "context": "Good evening, Sea View Hotel, how can I help you? Hello, I'd like to book a double room for two nights, please. Certainly. When would you like to arrive? On Friday the tenth. And how many people? Two adults. The room is ninety euros per night, breakfast included. That's fine. Could I have your name, please? Yes, it's David Miller. Perfect, your room is booked. See you on Friday!",
+      "sourceQuestion": 1,
+      "id": "en-ex-076"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-1",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b1-listen",
+      "type": "qcm",
+      "prompt": "What is included in the price?",
+      "choices": [
+        "Dinner",
+        "Parking",
+        "Breakfast"
+      ],
+      "answer": "Breakfast",
+      "explanation": "“breakfast included”.",
+      "alternatives": [],
+      "context": "Good evening, Sea View Hotel, how can I help you? Hello, I'd like to book a double room for two nights, please. Certainly. When would you like to arrive? On Friday the tenth. And how many people? Two adults. The room is ninety euros per night, breakfast included. That's fine. Could I have your name, please? Yes, it's David Miller. Perfect, your room is booked. See you on Friday!",
+      "sourceQuestion": 2,
+      "id": "en-ex-077"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-1",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b1-listen",
+      "type": "qcm",
+      "prompt": "When will the man arrive?",
+      "choices": [
+        "Friday the 10th",
+        "Sunday",
+        "Saturday"
+      ],
+      "answer": "Friday the 10th",
+      "explanation": "“On Friday the tenth.”",
+      "alternatives": [],
+      "context": "Good evening, Sea View Hotel, how can I help you? Hello, I'd like to book a double room for two nights, please. Certainly. When would you like to arrive? On Friday the tenth. And how many people? Two adults. The room is ninety euros per night, breakfast included. That's fine. Could I have your name, please? Yes, it's David Miller. Perfect, your room is booked. See you on Friday!",
+      "sourceQuestion": 3,
+      "id": "en-ex-078"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-2",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b2-read",
+      "type": "qcm",
+      "prompt": "What is one advantage of remote work mentioned?",
+      "choices": [
+        "More holidays",
+        "No commuting",
+        "Higher salary"
+      ],
+      "answer": "No commuting",
+      "explanation": "“they no longer commute”.",
+      "alternatives": [],
+      "context": "Since the pandemic, remote work has become common in many companies. Employees who work from home often say they are more productive and save time because they no longer commute. However, remote work also has drawbacks. Some workers feel isolated and find it harder to separate their professional and personal lives. To address these issues, many firms now offer a hybrid model: staff spend a few days in the office and the rest at home. Managers must learn to trust their teams and to measure results rather than hours.",
+      "sourceQuestion": 0,
+      "id": "en-ex-079"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-2",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b2-read",
+      "type": "qcm",
+      "prompt": "What is a drawback?",
+      "choices": [
+        "Feeling isolated",
+        "Lower wages",
+        "Too many meetings"
+      ],
+      "answer": "Feeling isolated",
+      "explanation": "“Some workers feel isolated”.",
+      "alternatives": [],
+      "context": "Since the pandemic, remote work has become common in many companies. Employees who work from home often say they are more productive and save time because they no longer commute. However, remote work also has drawbacks. Some workers feel isolated and find it harder to separate their professional and personal lives. To address these issues, many firms now offer a hybrid model: staff spend a few days in the office and the rest at home. Managers must learn to trust their teams and to measure results rather than hours.",
+      "sourceQuestion": 1,
+      "id": "en-ex-080"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-2",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b2-read",
+      "type": "qcm",
+      "prompt": "What is the “hybrid model”?",
+      "choices": [
+        "A mix of office and home",
+        "Only working at home",
+        "Working at night"
+      ],
+      "answer": "A mix of office and home",
+      "explanation": "“a few days in the office and the rest at home”.",
+      "alternatives": [],
+      "context": "Since the pandemic, remote work has become common in many companies. Employees who work from home often say they are more productive and save time because they no longer commute. However, remote work also has drawbacks. Some workers feel isolated and find it harder to separate their professional and personal lives. To address these issues, many firms now offer a hybrid model: staff spend a few days in the office and the rest at home. Managers must learn to trust their teams and to measure results rather than hours.",
+      "sourceQuestion": 2,
+      "id": "en-ex-081"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-2",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b2-read",
+      "type": "qcm",
+      "prompt": "What should managers focus on?",
+      "choices": [
+        "Hours worked",
+        "Attendance",
+        "Results"
+      ],
+      "answer": "Results",
+      "explanation": "“measure results rather than hours”.",
+      "alternatives": [],
+      "context": "Since the pandemic, remote work has become common in many companies. Employees who work from home often say they are more productive and save time because they no longer commute. However, remote work also has drawbacks. Some workers feel isolated and find it harder to separate their professional and personal lives. To address these issues, many firms now offer a hybrid model: staff spend a few days in the office and the rest at home. Managers must learn to trust their teams and to measure results rather than hours.",
+      "sourceQuestion": 3,
+      "id": "en-ex-082"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-2",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b2-listen",
+      "type": "qcm",
+      "prompt": "What did the candidate study?",
+      "choices": [
+        "Law",
+        "Business management",
+        "Engineering"
+      ],
+      "answer": "Business management",
+      "explanation": "“I recently graduated in business management”.",
+      "alternatives": [],
+      "context": "Thank you for coming today. Could you tell me about yourself? Of course. I recently graduated in business management and I did a six-month internship in marketing. Why do you want to work for our company? I admire your brand and I believe my digital skills could help you reach younger customers. What is your greatest weakness? Sometimes I focus too much on details, but I am learning to manage my time better. Great. We will contact you next week.",
+      "sourceQuestion": 0,
+      "id": "en-ex-083"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-2",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b2-listen",
+      "type": "qcm",
+      "prompt": "How long was the internship?",
+      "choices": [
+        "Six months",
+        "One year",
+        "Three months"
+      ],
+      "answer": "Six months",
+      "explanation": "“a six-month internship”.",
+      "alternatives": [],
+      "context": "Thank you for coming today. Could you tell me about yourself? Of course. I recently graduated in business management and I did a six-month internship in marketing. Why do you want to work for our company? I admire your brand and I believe my digital skills could help you reach younger customers. What is your greatest weakness? Sometimes I focus too much on details, but I am learning to manage my time better. Great. We will contact you next week.",
+      "sourceQuestion": 1,
+      "id": "en-ex-084"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-2",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b2-listen",
+      "type": "qcm",
+      "prompt": "Why does the candidate want the job?",
+      "choices": [
+        "Short hours",
+        "High salary",
+        "To reach younger customers with digital skills"
+      ],
+      "answer": "To reach younger customers with digital skills",
+      "explanation": "“my digital skills could help you reach younger customers”.",
+      "alternatives": [],
+      "context": "Thank you for coming today. Could you tell me about yourself? Of course. I recently graduated in business management and I did a six-month internship in marketing. Why do you want to work for our company? I admire your brand and I believe my digital skills could help you reach younger customers. What is your greatest weakness? Sometimes I focus too much on details, but I am learning to manage my time better. Great. We will contact you next week.",
+      "sourceQuestion": 2,
+      "id": "en-ex-085"
+    },
+    {
+      "lessonId": "langues-lng-en-comp-2",
+      "unit": "Anglais — Compréhension",
+      "origin": "langues/cmp-en-b2-listen",
+      "type": "qcm",
+      "prompt": "What weakness does the candidate mention?",
+      "choices": [
+        "Being late",
+        "Focusing too much on details",
+        "Poor English"
+      ],
+      "answer": "Focusing too much on details",
+      "explanation": "“I focus too much on details”.",
+      "alternatives": [],
+      "context": "Thank you for coming today. Could you tell me about yourself? Of course. I recently graduated in business management and I did a six-month internship in marketing. Why do you want to work for our company? I admire your brand and I believe my digital skills could help you reach younger customers. What is your greatest weakness? Sometimes I focus too much on details, but I am learning to manage my time better. Great. We will contact you next week.",
+      "sourceQuestion": 3,
+      "id": "en-ex-086"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-en-0",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : She ____ (study) business every day.",
+      "answer": "studies",
+      "explanation": "Au présent simple, study devient studies à la troisième personne : consonne + y → -ies.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-087"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-en-0",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Transforme à la forme négative : He works on Sundays.",
+      "answer": "He doesn't work on Sundays.",
+      "explanation": "Does porte la marque de troisième personne ; le verbe principal revient à la base work.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-088"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-en-0",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Pose une question sur l’action en cours : You are preparing a presentation.",
+      "answer": "Are you preparing a presentation?",
+      "explanation": "Avec be, on inverse l’auxiliaire et le sujet. On ne rajoute pas do.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-089"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-1",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Yesterday, we ____ (meet) a customer.",
+      "answer": "met",
+      "explanation": "Yesterday situe l’action dans un passé achevé ; le prétérit irrégulier de meet est met.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-090"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-1",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète avec for ou since : I have worked here ____ September.",
+      "answer": "since",
+      "explanation": "Since introduit le point de départ ; for introduirait une durée, par exemple for two months.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-091"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-2",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Exprime un projet déjà décidé avec going to : We / visit / the company tomorrow.",
+      "answer": "We are going to visit the company tomorrow.",
+      "explanation": "Be going to + base verbale présente ici une intention déjà formée ; we commande are.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-092"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-en-1",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : Tu devrais vérifier les informations.",
+      "answer": "You should check the information.",
+      "explanation": "Should donne un conseil, suivi de la base check sans to. Information est indénombrable.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-093"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-4",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Mets au passif : The company sells these products.",
+      "answer": "These products are sold by the company.",
+      "explanation": "L’objet pluriel devient sujet : are + participe passé sold. Le complément by peut être omis si l’agent n’est pas utile.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-094"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-en-1",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : If I had more time, I ____ (learn) Italian.",
+      "answer": "would learn",
+      "explanation": "Hypothèse irréelle au présent : if + prétérit, puis would + base verbale.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-095"
+    },
+    {
+      "lessonId": "langues-lng-en-grammar-ex-0",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : It is ____ interesting project.",
+      "answer": "an",
+      "explanation": "Interesting commence par un son vocalique : an, et non a.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-096"
+    },
+    {
+      "lessonId": "langues-lng-en-grammar-ex-0",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Choisis much ou many : How ____ customers came today?",
+      "answer": "many",
+      "explanation": "Customers est un nom dénombrable pluriel ; many porte sur leur nombre.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-097"
+    },
+    {
+      "lessonId": "langues-lng-en-grammar-ex-0",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Compare : This solution is ____ (cheap) than the other one.",
+      "answer": "cheaper",
+      "explanation": "Pour cet adjectif court, on forme le comparatif avec -er ; than introduit le second terme.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-098"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-1",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : J’ai fait un stage dans une petite entreprise.",
+      "answer": "I did a work placement in a small company.",
+      "explanation": "Did situe le stage terminé au passé. I completed an internship in a small company est également possible.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-099"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-2",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : Notre fournisseur livre les produits le lundi.",
+      "answer": "Our supplier delivers the products on Mondays.",
+      "explanation": "Supplier = fournisseur ; delivers prend -s car le sujet est singulier. On Mondays marque l’habitude.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-100"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-4",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : Nous voulons réduire les déchets.",
+      "answer": "We want to reduce waste.",
+      "explanation": "Want se construit avec to + base verbale. Waste désigne ici les déchets en général.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-101"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-5",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : Ne partage pas ton mot de passe.",
+      "answer": "Don't share your password.",
+      "explanation": "L’impératif négatif se construit avec don't + base verbale.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-102"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-en-0",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige : She don't like working alone.",
+      "answer": "She doesn't like working alone.",
+      "explanation": "À la troisième personne du singulier, l’auxiliaire négatif est doesn't ; like reste à la base.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-103"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-1",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige : I am agree with you.",
+      "answer": "I agree with you.",
+      "explanation": "Agree est déjà un verbe ; on n’ajoute pas be devant lui.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-104"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-2",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige : Can you give me two informations?",
+      "answer": "Can you give me two pieces of information?",
+      "explanation": "Information est indénombrable ; on compte des éléments avec pieces of information.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-105"
+    },
+    {
+      "lessonId": "langues-lng-en-gram-1",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige : Did you went to the meeting?",
+      "answer": "Did you go to the meeting?",
+      "explanation": "Did marque déjà le passé ; après did, le verbe est go et non went.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-106"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-7",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Rédige trois phrases : donne ton avis sur le télétravail, un avantage et une limite.",
+      "answer": "I think remote work can be useful. It saves commuting time. However, some employees may feel isolated.",
+      "explanation": "Exemple possible : avis clairement formulé, avantage expliqué et limite reliée par however. D’autres avis argumentés sont recevables.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-107"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-2",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Présente en trois phrases une organisation fictive, son activité et ses clients.",
+      "answer": "Our company repairs bicycles. It offers affordable services. Its customers are mainly local residents.",
+      "explanation": "Exemple possible : une activité explicite, une caractéristique de l’offre et un public identifié. La cohérence compte davantage que la reprise mot à mot.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-108"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-1",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "En deux phrases, explique une difficulté rencontrée en stage et la manière de la résoudre.",
+      "answer": "I found telephone calls difficult. I practised useful phrases with a colleague.",
+      "explanation": "Exemple possible : difficulté située au passé et action concrète pour progresser. Vérifie le prétérit et le vocabulaire de la situation.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-109"
+    },
+    {
+      "lessonId": "langues-lng-en-voc-7",
+      "unit": "Atelier de transfert · Anglais",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Pose deux questions polies pour connaître le prix et les conditions d’un service.",
+      "answer": "Could you tell me the price, please? Is there a cancellation fee?",
+      "explanation": "Exemple possible : une demande polie de prix et une question distincte sur les conditions. Une autre condition pertinente peut remplacer les frais d’annulation.",
+      "choices": [],
+      "context": "",
+      "id": "en-ex-110"
+    }
+  ],
+  "edition": "Manuel approfondi · octobre 2026",
+  "methodSections": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    14,
+    15,
+    16,
+    17
+  ],
+  "videos": [
+    {
+      "title": "Animals Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/animals/animals-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Animals Scene 1 Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/animals/animals-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Art Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/art/art-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Art Scene 1 Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/art/art-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Bestival Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/bestival/bestival-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Bestival Scene 1 Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/bestival/bestival-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Big Meal Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/big-meal/big-meal-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Big Meal Scene 1 Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/big-meal/big-meal-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Blackpool Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/blackpool/blackpool-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Blackpool Scene 1 - Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/blackpool/blackpool-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Camden Fashion",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/camden/camden-fashion",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Camden Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/camden/camden-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Christmas Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/christmas/christmas-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Christmas Scene 1 Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/christmas/christmas-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Dating Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/dating/dating-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Dating Scene 1 - Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/dating/dating-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Education Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/education/education-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Education Scene 1 - Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/education/education-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Farming Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/farming/farming-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Farming Scene 1 - Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/farming/farming-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Flathunting Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/flathunting/flathunting-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Flathunting Scene 1 Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/flathunting/flathunting-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Bonfire Night",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/halloween/bonfire-night",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Hallowe'en Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/halloween/halloween-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "English History",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/history/english-history",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "History Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/history/history-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Hospital Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/hospital/hospital-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Hospital Scene 1 - Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/hospital/hospital-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "British Weather",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/indoor-sports/british-weather",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Indoor Sports Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/indoor-sports/indoor-sports-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Jobs Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/jobs/jobs-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Jobs Scene 1 - Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/jobs/jobs-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Four Nations",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/loch-ness/four-nations",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Loch Ness Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/loch-ness/loch-ness-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Murder Mystery Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/murder-mystery/murder-mystery-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Murder Mystery Scene 1 - Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/murder-mystery/murder-mystery-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Live Music",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/music/live-music",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Music Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/music/music-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Night Out Scene 1",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/night-out/night-out-scene-1",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Night Out Scene 1 - Language Focus",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/general/video-series/wots/night-out/night-out-scene-1-language-focus",
+      "level": "B1–B2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Checking understanding",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/speaking/a1/checking-understanding",
+      "level": "A1",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Making suggestions",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/speaking/a1/making-suggestions",
+      "level": "A1",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Meeting new people",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/speaking/a1/meeting-new-people",
+      "level": "A1",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Talking about other people",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-other-people",
+      "level": "A1",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Talking about where you're from",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/speaking/a1/talking-about-where-youre",
+      "level": "A1",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Apologising",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/speaking/a2/apologising",
+      "level": "A2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Giving instructions",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/speaking/a2/giving-instructions",
+      "level": "A2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Showing interest",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/speaking/a2/showing-interest",
+      "level": "A2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Talking about personal interests",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-personal-interests",
+      "level": "A2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Talking about your job",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/speaking/a2/talking-about-your-job",
+      "level": "A2",
+      "provider": "British Council",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    }
+  ]
 }

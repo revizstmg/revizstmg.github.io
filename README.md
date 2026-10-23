@@ -512,7 +512,16 @@ L’accueil élève met en avant une séance et la reprise du dernier cours (cha
 
 Le retour de connexion Google ouvre explicitement l’accueil après consommation du fragment OAuth. Les jetons sont nettoyés de l’adresse, la session reste disponible et un nouveau compte complète toujours son profil. Les vrais liens inexistants conservent leur page 404.
 
-### Langues : guides et pratique orale
-Les matières Langues de Première et Terminale ouvrent désormais un atelier : anglais, espagnol, italien et arabe, quatre guides PDF originaux de 18 fiches (11–12 pages A4), liens vers vidéos et ressources, routine orale et conseils. Le premier choix reprend les langues étudiées, les quatre restent accessibles en un clic. Les PDF sont lisibles et téléchargeables sans compte externe, avec exemples, activités, programme de quatre semaines et distinction arabe standard/dialectes. Les ressources externes ont leurs propres conditions.
+### Langues : manuels complets et vidéos
+Les matières Langues de Première et Terminale ouvrent un atelier avec quatre manuels PDF. Ils réunissent cours détaillés, règles et exemples, vocabulaire, compréhension de textes, mini-exercices et corrigés expliqués séparés. Les énoncés sont numérotés dans l’ordre de lecture ; sommaire, signets, liens vers les corrections et retours aux énoncés facilitent la navigation. Le contenu reste disponible hors connexion dans les PDF ; les vidéos demandent Internet.
 
-Les anciennes routes de thèmes/fiches ouvrent cet atelier. Les chapitres de langues ne sont plus proposés dans les parcours de révision, les suggestions de cours ou la recherche ; leurs sources restent archivées pour préserver les historiques existants. Aucun résultat ancien n’est supprimé. Les guides sont dans `app/resources/langues/` ; les régénérer depuis leurs JSON avec `cd app && node scripts/guides-langues.mjs`. Les PDF sont intégrés comme assets Vite, publiés et mis en cache avec l’application.
+| Manuel | Pages A4 | Leçons | Exercices corrigés | Pages vidéo |
+|---|---:|---:|---:|---:|
+| Anglais | 50 | 24 | 110 | 50 |
+| Espagnol | 52 | 25 | 122 | 32 |
+| Italien | 46 | 26 | 86 | 48 |
+| Arabe standard | 46 | 26 | 86 | 46 |
+
+Les 176 pages vidéo ont été sélectionnées depuis les catalogues British Council, VideoEle, RAI Scuola et Al Jazeera Learning Arabic, puis contrôlées pour leur accessibilité et la présence d’un lecteur. Elles restent hébergées par leurs éditeurs et soumises à leurs conditions. La bibliothèque du site est repliée par défaut et filtrable par niveau, pour éviter une longue grille de boutons. Les niveaux affichés sont ceux des catalogues, sans promesse de certification.
+
+Les sources des manuels sont dans `app/resources/langues/{en,es,it,ar}.json`. Le générateur `cd app && node scripts/guides-langues.mjs` produit les quatre PDF avec signets et liens internes, ainsi qu’un catalogue léger pour l’interface : le texte complet des manuels n’est pas chargé par la page. Les anciens cours restent archivés pour conserver l’intégrité des résultats, mais ne sont plus proposés dans les parcours, la recherche ou les anciennes routes de cours. Aucun résultat utilisateur n’est supprimé.
