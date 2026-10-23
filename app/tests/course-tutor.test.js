@@ -14,15 +14,14 @@ test('50 reformulations conservent un contexte borné valide, sans limiter la co
  expect(()=>checkTutorReply({reply:''})).toThrow()
  expect(tutorInstruction({course,messages:[]})).toContain('change réellement d’approche'.replace('’',"'"))
 })
-test('Ultimate est obligatoire et 55 réponses sont autorisées dans une conversation',async()=>{
+test('55 réponses accessibles sans abonnement',async()=>{
  let plan='premium',count=0
  const handler=createHandler({now:()=>1,env:k=>({SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake',GEMINI_API_KEY:'fake'})[k],fetcher:async url=>{
   if(url.includes('/auth/'))return new Response(JSON.stringify({id:'u',app_metadata:{revizstmg_subscription:{plan,expires_at:'2030-01-01'}}}))
   count++;return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify({reply:'Prenons un autre exemple. Quelle est la première étape ?'})}]}}]}))
  }})
  const request=()=>new Request('https://fake',{method:'POST',headers:{Authorization:'Bearer fake'},body:JSON.stringify({action:'tutor',course,messages:[{role:'user',text:'Explique-moi'}]})})
- expect((await handler(request())).status).toBe(403);expect(count).toBe(0)
- plan='ultimate'
+ plan=undefined
  for(let i=0;i<55;i++)expect((await handler(request())).status).toBe(200)
  expect(count).toBe(55)
 })
