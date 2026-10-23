@@ -1,3 +1,4 @@
+import ChapterControl from '../components/ChapterControl.jsx'
 import CourseTutor from '../components/CourseTutor.jsx'
 import { courseText } from '../data/examenPersonnalise.js'
 import { useEffect, useMemo, useState } from 'react'
@@ -144,6 +145,7 @@ export default function Chapter() {
           onPrev={prev ? () => navigate(`/subject/${sid}/theme/${tid}/chapter/${prev.idx}`) : null}
         />
         <CourseTutor key={`${state.account?.id || 'trial'}:${chapter.id}`} course={{id:chapter.id,title:chapter.title,subject:subject.name,level:subject.niveau==='premiere'?'premiere':'terminale',text:courseText(chapter.section)}} />
+        <div className="no-print mt-4"><button type="button" className="btn-primary w-full" onClick={()=>{setTab('exos');requestAnimationFrame(()=>document.querySelector('[data-chapter-control]')?.scrollIntoView({block:'start'}))}}>Questions type de contrôle →</button></div>
         <div className="no-print mt-4 text-center">
           <SignalerErreur themeId={tid} exercice={`Cours : ${chapter.title || ''}`} defaut="cours" libelle="Une erreur dans ce cours ? Signale-la" />
         </div>
@@ -170,6 +172,7 @@ export default function Chapter() {
 
       {/* ONGLET EXERCICES (jamais imprimé) */}
       <div className={`${tab === 'exos' ? 'space-y-2.5' : 'hidden'} no-print`}>
+        <ChapterControl key={`${state.account?.id || 'trial'}:${chapter.id}`} course={{id:chapter.id,title:chapter.title,subject:subject.name,level:subject.niveau==='premiere'?'premiere':'terminale',text:courseText(chapter.section)}} />
         {(() => {
           const deck = games.find((g) => g.type === 'flashcard')
           if (!deck) return null

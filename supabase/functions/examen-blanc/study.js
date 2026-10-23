@@ -1,10 +1,5 @@
 import { checkFiles } from './grading.js'
 const text = (s, max) => typeof s === 'string' && !!s.trim() && s.length <= max
-export function studyAccess(user, files = false, now = Date.now()) {
-  const entitlement = user?.app_metadata?.revizstmg_subscription
-  if (!entitlement || !['premium', 'ultimate'].includes(entitlement.plan) || !Number.isFinite(Date.parse(entitlement.expires_at)) || Date.parse(entitlement.expires_at) <= now) return false
-  return !files || entitlement.plan === 'ultimate'
-}
 export function checkStudyRequest(b) {
   if (!text(b.missed, 6000) || !Array.isArray(b.courses) || !b.courses.length || b.courses.length > 24) throw new Error('invalid_request')
   const ids = new Set()
