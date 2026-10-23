@@ -1,50 +1,53 @@
 {
- "date": "2026-10-22",
- "heure": "2026-10-22T09:15:59.698Z",
+ "date": "2026-10-23",
+ "heure": "2026-10-23T09:12:23.689Z",
  "utilisation": {
   "profs": 4,
-  "eleves": 7,
+  "eleves": 9,
   "classes": 3,
-  "comptes": 11,
+  "comptes": 13,
   "niveaux": {
    "premiere-stmg": 1,
-   "terminale-stmg": 6
+   "terminale-stmg": 8
   },
-  "vues_7j": 191,
-  "actifs_1j": 2,
-  "actifs_7j": 2,
+  "vues_7j": 277,
+  "actifs_1j": 3,
+  "actifs_7j": 4,
   "ecrans_7j": {
    "cgu": 2,
    "faq": 1,
-   "moi": 7,
+   "moi": 12,
+   "amis": 1,
    "coach": 1,
    "guide": 2,
-   "theme": 10,
+   "theme": 18,
    "classe": 13,
-   "entree": 8,
-   "accueil": 81,
+   "entree": 20,
+   "accueil": 104,
    "express": 1,
-   "matiere": 12,
+   "matiere": 21,
    "boutique": 4,
-   "chapitre": 18,
+   "chapitre": 29,
    "coach-ia": 1,
-   "formules": 1,
-   "revision": 6,
-   "bac-blanc": 19,
+   "formules": 3,
+   "revision": 17,
+   "bac-blanc": 22,
    "programme": 3,
-   "classement": 1
+   "classement": 1,
+   "grand-oral": 1
   },
-  "vues_hier": 65,
-  "actifs_30j": 2,
+  "vues_hier": 86,
+  "actifs_30j": 4,
   "defis_amis": 0,
-  "visites_7j": 40,
-  "nouveaux_7j": 1,
+  "visites_7j": 64,
+  "nouveaux_7j": 3,
   "specialites": {
-   "gestion-finance": 5,
+   "sig": 1,
+   "gestion-finance": 6,
    "rh-communication": 1
   },
-  "joueurs_amis": 0,
-  "nouveaux_30j": 1,
+  "joueurs_amis": 1,
+  "nouveaux_30j": 3,
   "rappels_push": 0,
   "visites_hier": 24,
   "defis_amis_7j": 0,
@@ -60,22 +63,22 @@
   "matieres": 19,
   "terminale": 11,
   "premiere": 8,
-  "themes": 94,
-  "chapitres": 806,
-  "series": 5081,
-  "questions": 26755,
-  "flashcards": 2098
+  "themes": 110,
+  "chapitres": 870,
+  "series": 4150,
+  "questions": 20449,
+  "flashcards": 2321
  },
  "publication": {
   "ci": {
    "etat": "success",
-   "date": "2026-10-21T22:09:32Z"
+   "date": "2026-10-23T00:40:43Z"
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-10-21T22:09:55Z"
+   "date": "2026-10-23T00:41:06Z"
   },
-  "modifications7j": 85
+  "modifications7j": 77
  },
  "tests": "success"
 }
