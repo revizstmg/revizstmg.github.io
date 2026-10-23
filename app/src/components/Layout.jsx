@@ -27,7 +27,35 @@ import { compterEcran } from '../mesure.js'
 
 const LANGS = [{ code: 'fr', label: 'Français' }, { code: 'en', label: 'English' }, { code: 'es', label: 'Español' }, { code: 'it', label: 'Italiano' }, { code: 'ar', label: 'العربية' }]
 
+// The virtual keyboard shrinks the visual viewport on iOS and sometimes the
+// layout viewport on Android. Focus alone must not hide navigation (autofocus).
+function useMobileKeyboard() {
+  useEffect(() => {
+    const viewport = window.visualViewport
+    let width = window.innerWidth, baseline = window.innerHeight
+    const update = () => {
+      if (Math.abs(window.innerWidth - width) > 100) { width = window.innerWidth; baseline = window.innerHeight }
+      const active = document.activeElement
+      const editable = active?.matches('textarea, input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=file]):not([type=color]):not([type=button]):not([type=submit])') || active?.isContentEditable
+      if (!editable) baseline = Math.max(baseline, window.innerHeight)
+      const reduced = Math.max(baseline - (viewport?.height || window.innerHeight), window.innerHeight - (viewport?.height || window.innerHeight)) > 150
+      document.documentElement.classList.toggle('mobile-keyboard-open', !!editable && reduced && window.innerWidth < 1024)
+    }
+    for (const name of ['resize', 'orientationchange']) window.addEventListener(name, update)
+    for (const name of ['focusin', 'focusout']) document.addEventListener(name, update)
+    viewport?.addEventListener('resize', update)
+    update()
+    return () => {
+      for (const name of ['resize', 'orientationchange']) window.removeEventListener(name, update)
+      for (const name of ['focusin', 'focusout']) document.removeEventListener(name, update)
+      viewport?.removeEventListener('resize', update)
+      document.documentElement.classList.remove('mobile-keyboard-open')
+    }
+  }, [])
+}
+
 export default function Layout({ children }) {
+  useMobileKeyboard()
   const { state, derived, setTheme, setLang, logout } = useStore()
   const t = useT()
   const lang = useLang()
@@ -84,7 +112,7 @@ export default function Layout({ children }) {
   return (
     <div className="site-shell min-h-screen overflow-x-clip">
       <header
-        className="no-print sticky top-0 z-40 border-b backdrop-blur"
+        className="mobile-site-header no-print sticky top-0 z-40 border-b backdrop-blur"
         style={{
           backgroundColor: 'color-mix(in srgb, var(--c-bg) 82%, transparent)',
           borderColor: 'color-mix(in srgb, var(--c-accent) 24%, transparent)',
@@ -95,7 +123,7 @@ export default function Layout({ children }) {
           paddingRight: 'env(safe-area-inset-right)',
         }}
       >
-        <div className="mx-auto flex max-w-4xl items-center gap-2 px-4 py-2.5">
+        <div className="mobile-header-row mx-auto flex max-w-4xl items-center gap-2 px-4 py-2.5">
           {!isHomeLike && (
             <button
               onClick={goBack}
@@ -145,7 +173,7 @@ export default function Layout({ children }) {
 
           {/* Contrôles complets : uniquement sur écran large. Sur mobile/app, tout
               est regroupé dans le menu burger (voir plus bas). */}
-          <div className="hidden items-center gap-1 sm:flex">
+          <div className="desktop-header-tools hidden items-center gap-1 sm:flex">
           {!parentSeul && (
           <Link to="/coach" className="grid h-9 w-9 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800" aria-label={t('coach')} title={t('coach')}>
             <Icon.Timer />
@@ -244,7 +272,7 @@ export default function Layout({ children }) {
           {/* Menu burger : uniquement sur mobile / application. Regroupe toutes
               les options habituellement en haut à droite. */}
           <MobileMenu
-            className="sm:hidden"
+            className="mobile-menu-trigger sm:hidden"
             parentSeul={parentSeul}
             state={state}
             isDark={isDark}
@@ -346,7 +374,7 @@ function MobileMenu({ className = '', parentSeul = false, state, isDark, standal
           <div className="no-print fixed inset-0 z-[90] bg-slate-900/25" onClick={close} aria-hidden />
           <Deroulant
             onClose={close}
-            className="no-print fixed right-3 z-[91] w-64 overflow-hidden rounded-2xl border border-slate-200 bg-white py-1 shadow-2xl dark:border-slate-700 dark:bg-slate-900"
+            className="mobile-menu-panel no-print fixed right-3 z-[91] w-64 overflow-hidden rounded-2xl border border-slate-200 bg-white py-1 shadow-2xl dark:border-slate-700 dark:bg-slate-900"
             style={{ top: 'calc(env(safe-area-inset-top) + 3.25rem)' }}
             role="dialog"
             aria-modal="true"
@@ -358,7 +386,7 @@ function MobileMenu({ className = '', parentSeul = false, state, isDark, standal
               <button
                 onClick={close}
                 aria-label={t('close')}
-                className="grid h-8 w-8 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
+                className="mobile-menu-close-top grid h-8 w-8 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
               >
                 ✕
               </button>
@@ -425,6 +453,7 @@ function MobileMenu({ className = '', parentSeul = false, state, isDark, standal
                 <Item icon="🚪" label={t('signOut')} onClick={onSignOut} danger />
               </div>
             )}
+            <button type="button" onClick={close} className="mobile-menu-close-bottom mx-3 mt-2 rounded-xl border border-slate-300 px-4 py-3 text-sm font-semibold dark:border-slate-700"><span aria-hidden>✕</span> {t('close')}</button>
           </Deroulant>
         </>,
         document.body,
@@ -495,7 +524,7 @@ function Breadcrumb() {
 
   if (crumbs.length <= 1) return null
   return (
-    <nav aria-label="Fil d'Ariane" className="no-print border-t border-slate-100 bg-slate-50/70 dark:border-slate-800/60 dark:bg-slate-900/40">
+    <nav aria-label="Fil d'Ariane" className="mobile-breadcrumb no-print border-t border-slate-100 bg-slate-50/70 dark:border-slate-800/60 dark:bg-slate-900/40">
       <ol className="mx-auto flex max-w-4xl flex-wrap items-center gap-1 px-4 py-1.5 text-xs text-slate-500 dark:text-slate-400">
         {crumbs.map((c, i) => (
           <li key={c.to} className="flex items-center gap-1">
@@ -619,7 +648,7 @@ function BottomNav() {
   const active = (m) => m.some((x) => pathname === x || pathname.startsWith(x + '/'))
   return (
     <nav
-      className="no-print fixed inset-x-0 bottom-0 z-40 border-t backdrop-blur"
+      className="mobile-bottom-nav no-print fixed inset-x-0 bottom-0 z-40 border-t backdrop-blur"
       style={{
         backgroundColor: 'color-mix(in srgb, var(--c-bg) 90%, transparent)',
         borderColor: 'color-mix(in srgb, var(--c-accent) 24%, transparent)',

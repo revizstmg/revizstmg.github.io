@@ -1,3 +1,4 @@
+import { useFenetreClavier } from './clavier.js'
 import { readPosition, savePosition } from '../data/readingPosition.js'
 import { useStore } from '../store.jsx'
 // Affichage d'un cours « complet » : introduction, sections avec paragraphes,
@@ -172,6 +173,8 @@ export function PaginatedCourse({ sec, color, prevLabel, onPrev, themeId, subjec
   const [full, setFull] = useState(false) // lecture plein écran « feuille »
   const bodyRef = useRef(null)
   const fullRef = useRef(null)
+  const dialogRef = useRef(null)
+  useFenetreClavier(dialogRef, () => setFull(false), full, { focusSurRacine: true })
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => { const next = feuilles(); setList(next); setPage(Math.min(initialPage, Math.max(0, next.length - 1))) }, [sec, themeId, sectionIdx, state.account?.id])
   useEffect(() => {
@@ -280,18 +283,18 @@ export function PaginatedCourse({ sec, color, prevLabel, onPrev, themeId, subjec
           portail pour rester au-dessus de tout (aucun ancêtre transformé ne peut
           décaler le « fixed » : corrige le haut de la feuille coupé). */}
       {full && createPortal((
-        <div className="reader-full no-print fixed inset-0 z-[80] flex flex-col bg-slate-200/95 backdrop-blur-sm dark:bg-slate-950/95" role="dialog" aria-modal="true">
-          <div className="flex items-center justify-between px-4 py-3">
+        <div ref={dialogRef} tabIndex={-1} aria-label={t('tabLesson')} className="reader-full no-print fixed inset-0 z-[80] flex flex-col bg-slate-200/95 backdrop-blur-sm dark:bg-slate-950/95" role="dialog" aria-modal="true">
+          <div className="reader-full-heading flex items-center justify-between px-4 py-3">
             <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">{`${t('pageWord')} ${page + 1} / ${list.length}`}</span>
             <button
               onClick={() => setFull(false)}
               aria-label={t('close')}
-              className="grid h-10 w-10 place-items-center rounded-full border border-slate-300 bg-white text-lg text-slate-600 shadow-sm transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200"
+              className="reader-close-top grid h-10 w-10 place-items-center rounded-full border border-slate-300 bg-white text-lg text-slate-600 shadow-sm transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200"
             >
               ✕
             </button>
           </div>
-          <div ref={fullRef} className="flex-1 overflow-y-auto px-3 pb-6 pt-1 sm:px-6">
+          <div ref={fullRef} tabIndex={0} role="region" aria-label={t('lessonLabel')} className="reader-full-scroll min-h-0 flex-1 overflow-y-auto px-3 pb-6 pt-1 sm:px-6">
             <div className="reader-a4-full mx-auto my-2 w-full max-w-[720px] rounded-xl bg-white p-6 shadow-2xl dark:bg-slate-900 sm:p-12">
               <span className="pointer-events-none mb-6 block h-1 w-16 rounded-full" style={{ background: color }} aria-hidden />
               <div className="animate-lux space-y-6 text-[1.06rem] leading-relaxed">
@@ -300,7 +303,10 @@ export function PaginatedCourse({ sec, color, prevLabel, onPrev, themeId, subjec
               <div className="mt-8 border-t border-slate-200 pt-3 text-end text-[11px] font-medium text-slate-400 dark:border-slate-700">{t('pageWord')} {page + 1} / {list.length}</div>
             </div>
           </div>
-          <div className="border-t border-slate-300/60 px-4 py-3 dark:border-slate-800">{pager}</div>
+          <div className="reader-actions shrink-0 border-t border-slate-300/60 px-4 py-3 dark:border-slate-800">
+            {pager}
+            <button type="button" className="reader-close-mobile btn-primary" onClick={() => setFull(false)}><span aria-hidden>✕</span> {t('close')}</button>
+          </div>
         </div>
       ), document.body)}
     </section>

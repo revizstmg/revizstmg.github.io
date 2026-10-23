@@ -8,6 +8,7 @@ import { initPwa } from './pwa.js'
 import './polices.css'
 import './index.css'
 import './editorial.css'
+import './mobile.css'
 
 // Capture l'invite d'installation « Ajouter à l'écran d'accueil » dès le départ.
 initPwa()
