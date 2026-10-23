@@ -1330,6 +1330,7 @@ export function search(query) {
   for (const s of SUBJECTS) {
     if (s.name.toLowerCase().includes(q))
       res.push({ type: 'subject', id: s.id, label: s.name, sub: 'Matière', color: s.color })
+    if (['langues','p1-langues'].includes(s.id)) continue
     for (const c of s.chapters) {
       const hay = (c.name + ' ' + (c.short || '') + ' ' + (c.keywords || '')).toLowerCase()
       if (hay.includes(q))

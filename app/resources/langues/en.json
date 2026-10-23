@@ -1,0 +1,116 @@
+{
+  "name": "Anglais",
+  "label": "English",
+  "hello": "Hello! Tell me about yourself.",
+  "intro": "Travailler l’anglais de communication : prononciation, phrases utiles et prises de parole en STMG.",
+  "sections": [
+    {
+      "title": "Commencer par une vraie situation",
+      "text": "Choisis une situation concrète : te présenter, demander un renseignement ou décrire ton stage. Prépare cinq phrases utiles, écoute un modèle puis essaie sans lire. Une langue se construit par des retours fréquents sur les mêmes situations, avec une difficulté qui augmente progressivement. Le guide accompagne un apprentissage : il ne remplace ni un professeur ni des échanges réels.",
+      "task": "Enregistre une présentation de 30 secondes. Écoute-la et choisis un seul point à améliorer. Garde cette première version pour comparer dans deux semaines."
+    },
+    {
+      "title": "Écouter pour comprendre, pas pour tout traduire",
+      "text": "Prends un extrait de 30 à 90 secondes adapté à ton niveau. Première écoute : qui parle, où et pourquoi ? Deuxième écoute : repère trois mots ou informations. Troisième écoute avec sous-titres dans la langue : vérifie ton hypothèse. Reprends ensuite sans sous-titres. Une vidéo trop difficile peut servir à découvrir une culture, mais un support plus simple est préférable pour travailler la compréhension.",
+      "task": "Note le thème et trois informations, puis résume en une phrase. Vérifie avec la transcription ; distingue ce que tu avais compris et ce que tu avais deviné."
+    },
+    {
+      "title": "Parler par petits blocs",
+      "text": "Apprends des groupes de mots réutilisables plutôt que des listes isolées : demander de répéter, donner son avis, expliquer une difficulté. Fais varier un élément de chaque phrase. Pour gagner en fluidité, prépare des mots-clés et non un texte entier. Les hésitations sont normales : une reformulation simple est souvent plus efficace qu’une traduction mot à mot.",
+      "task": "Construis trois réponses différentes à la même question. Fais d’abord 20 secondes, puis 40 secondes, puis une minute sans lire de texte."
+    },
+    {
+      "title": "Prononciation : écouter, imiter, comparer",
+      "text": "Écoute une phrase courte, mets en pause, répète, puis compare ton enregistrement au modèle. Observe le rythme, l’accent des mots et l’intonation avant de chercher une imitation parfaite. Le shadowing consiste à parler juste après le modèle : ralentis si nécessaire. Une transcription en français ne reproduit jamais exactement les sons d’une autre langue.",
+      "task": "Répète cinq fois une phrase de huit à douze mots. Compare les versions 1 et 5 sur un critère : rythme, consonne ou voyelle. Demande un retour à un enseignant ou à un interlocuteur compétent."
+    },
+    {
+      "title": "Vocabulaire qui reste disponible",
+      "text": "Crée des cartes avec une expression, une phrase personnelle et, si possible, un extrait audio fiable. Cache la réponse et retrouve-la à voix haute. Revois après un jour, trois jours, une semaine puis deux semaines ; rapproche les révisions si tu oublies. Relie chaque mot à une situation vécue. Dix expressions utilisées valent mieux qu’une longue liste seulement relue.",
+      "task": "Sélectionne cinq expressions de la semaine. Utilise-les dans une conversation de deux minutes puis modifie la situation pour vérifier que tu sais les réemployer."
+    },
+    {
+      "title": "Comprendre, lire et écrire pour mieux parler",
+      "text": "Lis un texte court à ton niveau, repère son objectif et ses connecteurs. Prépare un résumé avec des mots-clés. Écris ensuite cinq phrases, vérifie le sujet, le verbe et les accords, puis reformule-les oralement sans feuille. Un correcteur peut aider à repérer une erreur ; demande toujours pourquoi et vérifie la règle avec une ressource fiable.",
+      "task": "Lis une annonce ou une courte actualité. Résume l’idée principale, donne un exemple et explique ton avis. Compare le résumé au document : n’ajoute pas de faits absents."
+    },
+    {
+      "title": "Les sons et le rythme anglais",
+      "text": "L’accent tonique est essentiel : les syllabes n’ont pas toutes la même force. Le h de hello est généralement audible. Le th de think /θ/ et celui de this /ð/ sont deux sons différents : la langue s’approche des dents, sans remplacer systématiquement par s ou z. La distinction ship /ɪ/ et sheep /iː/ change le sens. Les terminaisons -ed ont trois réalisations principales : /t/ (worked), /d/ (played), /ɪd/ (wanted). Écoute les mots dans un dictionnaire sonore ; les accents britanniques et américains présentent des variations.",
+      "task": "Compare think / sink et ship / sheep avec un modèle audio. Enregistre ensuite : I worked yesterday. She wanted to help."
+    },
+    {
+      "title": "Se présenter et présenter ses études",
+      "text": "My name is Lina. — Je m’appelle Lina. I’m a STMG student. — Je suis élève en STMG. I’m interested in business and marketing. — Je m’intéresse au commerce et au marketing. I would like to work in finance. — J’aimerais travailler dans la finance. Pour dire ton âge : I’m seventeen, sans have. Pour ton niveau d’études, précise le contexte français plutôt que de supposer qu’un interlocuteur connaît STMG.",
+      "task": "Présente ton prénom, tes études, un intérêt et un projet. Termine par : What about you?"
+    },
+    {
+      "title": "Les structures qui débloquent une conversation",
+      "text": "I work / She works : habitude. I’m working : action en cours. I worked yesterday : passé situé. I’ve worked here for two weeks : situation liée au présent. I’m going to apply : projet. I can help : possibilité ; I should practise : conseil ; I would like : souhait poli. À la question, utilise souvent do/does/did : Do you work here? Did you enjoy it? Après did, le verbe reste à la base.",
+      "task": "Décris une tâche habituelle, une tâche en cours, une expérience passée et ton prochain projet. Vérifie les marqueurs temporels."
+    },
+    {
+      "title": "Demander de l’aide et reformuler",
+      "text": "Could you repeat that, please? — Pouvez-vous répéter ? Could you speak more slowly? — Pouvez-vous parler plus lentement ? What does this word mean? — Que signifie ce mot ? Do you mean…? — Voulez-vous dire… ? Let me rephrase that. — Je vais reformuler. I don’t know the exact word, but it’s something you use to… — Je ne connais pas le mot exact, mais cela sert à…",
+      "task": "Fais expliquer un objet sans donner son nom. Ton partenaire doit demander une précision avant de proposer une réponse."
+    },
+    {
+      "title": "Donner un avis et le justifier",
+      "text": "In my opinion… / I think… introduisent un avis. First… then… finally… organisent. For example… illustre ; however… nuance ; because… justifie ; therefore… exprime une conséquence. I agree with you, but… permet un désaccord poli. Évite d’empiler les connecteurs : un avis, une raison, un exemple et une limite suffisent pour une réponse claire.",
+      "task": "Réponds : Should a small business use social media? Donne une raison, un exemple et une limite, sans inventer de statistiques."
+    },
+    {
+      "title": "Mini-dialogue : un stage",
+      "text": "A: Where did you do your work placement? B: I worked in a small shop. A: What were your main tasks? B: I welcomed customers and helped with stock management. A: What did you learn? B: I learned to communicate clearly and work with a team. A: What would you like to improve? B: I’d like to feel more confident on the phone.",
+      "task": "Remplace le magasin par une association ou un service administratif. Change les missions ; garde les questions et réponds sans lire."
+    },
+    {
+      "title": "ETLV : expliquer une organisation",
+      "text": "Our organisation provides… présente l’activité. Its customers are… identifie les clients. The main challenge is… pose un problème. The chart shows… décrit un graphique ; vérifie toujours la légende et l’unité. We suggest… propose une action. One advantage is… / One drawback is… compare. Sépare les faits du document et tes propositions.",
+      "task": "En 90 secondes : présente une organisation connue, une difficulté et une proposition argumentée. Note les faits à vérifier avant de parler."
+    },
+    {
+      "title": "Pièges fréquents et correction",
+      "text": "Actually signifie en fait ; currently signifie actuellement. Library = bibliothèque ; bookshop/bookstore = librairie. Attend a meeting = assister à une réunion ; assist someone = aider quelqu’un. Information est généralement indénombrable : some information. Ne traduis pas mot à mot « je suis d’accord » par I am agree : dis I agree.",
+      "task": "Corrige : I have seventeen. I am agree. Two informations. Puis crée une phrase personnelle correcte pour chaque cas."
+    },
+    {
+      "title": "Interagir sans rester bloqué",
+      "text": "Écoute la question jusqu’au bout. Si tu ne comprends pas, demande de répéter ou de reformuler. Réponds brièvement puis ajoute un exemple et une question de relance. Pour un échange à distance, ne partage pas d’informations personnelles avec des inconnus ; privilégie les cadres scolaires et les services adaptés à ton âge.",
+      "task": "Avec un partenaire, alternez client et conseiller pendant deux minutes. Interdiction de lire un dialogue ; chacun doit poser au moins deux questions et demander une précision."
+    },
+    {
+      "title": "Routine de 20 minutes",
+      "text": "5 minutes : revoir cinq expressions sans regarder. 5 minutes : écouter un extrait court avec un objectif précis. 5 minutes : répéter puis enregistrer une réponse. 5 minutes : noter un progrès et une difficulté, et préparer la prochaine séance. Les jours chargés, garde une version de cinq minutes : trois expressions et une réponse enregistrée.",
+      "task": "Planifie quatre rendez-vous réalistes par semaine. Coche les séances réellement faites. Si tu rates un jour, reprends simplement au rendez-vous suivant, sans doubler artificiellement la charge."
+    },
+    {
+      "title": "Plan progressif sur quatre semaines",
+      "text": "Semaine 1 : présentation et demandes simples ; deux enregistrements de 30 secondes. Semaine 2 : raconter une journée ou une expérience ; trois réponses de 45 secondes. Semaine 3 : donner un avis et comparer deux possibilités ; un échange de deux minutes. Semaine 4 : présenter un projet et répondre à des questions ; bilan avec la première version. Adapte les durées : ce programme ne garantit pas un niveau CECRL en quatre semaines.",
+      "task": "Choisis un objectif observable par semaine : par exemple expliquer trois tâches de stage sans lire. Garde une trace datée et une difficulté à retravailler."
+    },
+    {
+      "title": "S’autoévaluer avec précision",
+      "text": "Sur une échelle de 1 à 4, observe : message compréhensible, organisation, vocabulaire utile, correction et interaction. 1 : besoin d’un modèle ; 2 : message possible avec aide ; 3 : autonomie sur une situation familière ; 4 : autonomie avec reformulations et réponses aux questions. Ce bilan personnel n’est ni une certification CECRL ni une note officielle.",
+      "task": "Enregistre le même sujet une semaine plus tard. Cite un exemple concret de progrès et une priorité. Vérifie les attentes exactes de ton devoir avec ton professeur."
+    }
+  ],
+  "resources": [
+    {
+      "title": "BBC Learning English — vidéos et séries",
+      "url": "https://www.bbc.co.uk/learningenglish",
+      "kind": "video"
+    },
+    {
+      "title": "British Council — speaking",
+      "url": "https://learnenglish.britishcouncil.org/skills/speaking",
+      "kind": "practice"
+    },
+    {
+      "title": "Cambridge Dictionary — audio",
+      "url": "https://dictionary.cambridge.org/",
+      "kind": "audio"
+    }
+  ],
+  "id": "en"
+}

@@ -40,8 +40,8 @@ export default function Cours() {
             <>
               <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: s.color + '22' }} aria-hidden>{s.icon || '📘'}</span>
               <span className="block font-display text-sm font-semibold leading-tight"><CourseText text={s.short || s.name} /></span>
-              <span className="flex justify-between text-xs text-slate-500 dark:text-slate-400"><span>{s.chapters.length} {t('themesCount')}</span><span>{s.comingSoon ? t('comingSoon') : `${pct}%`}</span></span>
-              {!s.comingSoon && <ProgressBar value={pct} color={s.color} />}
+              <span className="flex justify-between text-xs text-slate-500 dark:text-slate-400"><span>{s.resourceOnly ? 'Guides PDF · vidéos · conseils' : <>{s.chapters.length} {t('themesCount')}</>}</span><span>{s.resourceOnly ? '' : s.comingSoon ? t('comingSoon') : `${pct}%`}</span></span>
+              {!s.comingSoon && !s.resourceOnly && <ProgressBar value={pct} color={s.color} />}
             </>
           )
           return s.comingSoon

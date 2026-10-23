@@ -75,6 +75,13 @@ for (const [subject, theme, title, expected] of [
     await page.goto('./')
     await attendreAccueil(page)
     await page.goto(`./#/subject/${subject}/theme/${theme}/chapter/0`)
+    if (subject === 'langues') {
+      await expect(page.getByRole('heading', { name: 'Ose prendre la parole.' })).toBeVisible()
+      await expect(page.getByRole('link', { name: /Ouvrir le guide PDF/ })).toBeVisible()
+      await expect(page.locator('[data-exercice]')).toHaveCount(0)
+      expect(erreurs).toEqual([])
+      return
+    }
     await page.getByRole('button', { name: /Exercices/ }).click()
     await page.getByRole('button', { name: title }).click()
     await page.getByRole('button', { name: /Entraînement/ }).click()
