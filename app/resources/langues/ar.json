@@ -148,163 +148,6 @@
       "origin": "RévizSTMG · guide pratique"
     },
     {
-      "id": "p1-langues-lng-ar-p1-culture-premiere-0",
-      "title": "Axe 1 — Identités et échanges",
-      "part": "Cultures · Première",
-      "paragraphs": [
-        "Les mobilités relient les pays du monde arabe entre eux et à d’autres espaces. Un récit peut articuler attachement à une ville, expérience d’un départ et pratique de plusieurs langues. L’arabe standard et les dialectes n’ont pas les mêmes situations d’usage ; leur coexistence ne justifie pas de réduire une personne à une identité unique.",
-        "اللغة تربط الناس، لكن الهوية لا تقتصر على أصل واحد. La langue relie les personnes, mais l’identité ne se limite pas à une seule origine. Dans un témoignage, repère qui parle, d’où et à qui ; sépare son expérience de tes propres représentations.",
-        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
-        "Repères lexicaux de cet axe : الأصل : L’origine.; التبادل : L’échange."
-      ],
-      "lexicon": [
-        {
-          "term": "الهوية",
-          "meaning": "L’identité."
-        },
-        {
-          "term": "الأصل",
-          "meaning": "L’origine."
-        },
-        {
-          "term": "التبادل",
-          "meaning": "L’échange."
-        }
-      ],
-      "origin": "p1-langues/lng-ar-p1-culture-premiere/0"
-    },
-    {
-      "id": "p1-langues-lng-ar-p1-culture-premiere-1",
-      "title": "Axe 2 — Diversité et inclusion",
-      "part": "Cultures · Première",
-      "paragraphs": [
-        "La diversité concerne les parcours, les langues, les situations sociales et les conditions d’accès à la vie collective. Étudier une initiative culturelle dans une ville arabe consiste à identifier ses bénéficiaires, les obstacles rencontrés et les moyens concrets de participation. Un exemple local ne décrit pas tout le monde arabe.",
-        "المشاركة في الحياة الثقافية حق للجميع. La participation à la vie culturelle est un droit pour tous. Pour expliquer une mesure d’inclusion, nomme l’obstacle et l’aménagement proposé ; ne confonds pas l’objectif annoncé avec un résultat démontré.",
-        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
-        "Repères lexicaux de cet axe : التنوع : La diversité.; الإدماج : L’inclusion / l’intégration."
-      ],
-      "lexicon": [
-        {
-          "term": "المشاركة",
-          "meaning": "La participation."
-        },
-        {
-          "term": "التنوع",
-          "meaning": "La diversité."
-        },
-        {
-          "term": "الإدماج",
-          "meaning": "L’inclusion / l’intégration."
-        }
-      ],
-      "origin": "p1-langues/lng-ar-p1-culture-premiere/1"
-    },
-    {
-      "id": "p1-langues-lng-ar-p1-culture-premiere-2",
-      "title": "Axe 3 — Art et pouvoir",
-      "part": "Cultures · Première",
-      "paragraphs": [
-        "La calligraphie, l’architecture, le cinéma ou la chanson peuvent entretenir des rapports variés avec le pouvoir. Dans l’analyse d’une œuvre du monde arabe, il faut considérer la commande, le destinataire et les conditions de diffusion. Une œuvre peut célébrer, contourner une contrainte ou critiquer ; l’interprétation doit être justifiée.",
-        "قد يدعم الفن السلطة أو ينتقدها. L’art peut soutenir le pouvoir ou le critiquer. Décris des éléments observables avant d’interpréter un symbole. Distingue la voix d’un personnage de l’avis de l’artiste, et l’œuvre de l’usage politique qui en est fait.",
-        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
-        "Repères lexicaux de cet axe : الفن : L’art.; الفنان : L’artiste."
-      ],
-      "lexicon": [
-        {
-          "term": "السلطة",
-          "meaning": "Le pouvoir / l’autorité."
-        },
-        {
-          "term": "الفن",
-          "meaning": "L’art."
-        },
-        {
-          "term": "الفنان",
-          "meaning": "L’artiste."
-        }
-      ],
-      "origin": "p1-langues/lng-ar-p1-culture-premiere/2"
-    },
-    {
-      "id": "p1-langues-lng-ar-p1-culture-premiere-3",
-      "title": "Axe 4 — Innovations scientifiques et responsabilité",
-      "part": "Cultures · Première",
-      "paragraphs": [
-        "Les innovations dans l’eau, l’énergie ou le numérique peuvent répondre à des besoins dans les pays arabes, tout en soulevant des questions de coût et d’accès. Une présentation technologique doit distinguer l’invention, ses usages et ses conséquences. La seule nouveauté d’un produit ne prouve pas sa responsabilité sociale.",
-        "يجب أن تراعي التكنولوجيا حاجات الناس وتحمي بياناتهم. La technologie doit prendre en compte les besoins des personnes et protéger leurs données. Analyse un service à travers ses bénéficiaires, ses ressources et un risque ; vérifie les affirmations commerciales.",
-        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
-        "Repères lexicaux de cet axe : الابتكار : L’innovation.; المسؤولية : La responsabilité."
-      ],
-      "lexicon": [
-        {
-          "term": "البيانات",
-          "meaning": "Les données."
-        },
-        {
-          "term": "الابتكار",
-          "meaning": "L’innovation."
-        },
-        {
-          "term": "المسؤولية",
-          "meaning": "La responsabilité."
-        }
-      ],
-      "origin": "p1-langues/lng-ar-p1-culture-premiere/3"
-    },
-    {
-      "id": "p1-langues-lng-ar-p1-culture-premiere-4",
-      "title": "Axe 5 — L’être humain et la nature",
-      "part": "Cultures · Première",
-      "paragraphs": [
-        "L’eau, les milieux côtiers, les oasis et les espaces urbains offrent des situations diverses dans le monde arabe. Il faut situer le document dans un territoire précis plutôt que d’assimiler tous les pays à un désert. Agriculture, tourisme et besoins des habitants peuvent exercer des pressions différentes sur une même ressource.",
-        "حماية الماء مسؤولية مشتركة بين الأفراد والمؤسسات. La protection de l’eau est une responsabilité partagée entre les individus et les institutions. Explique un conflit d’usage et propose une action en précisant ses acteurs ; distingue une mesure individuelle d’un équipement collectif.",
-        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
-        "Repères lexicaux de cet axe : الموارد : Les ressources.; الواحة : L’oasis."
-      ],
-      "lexicon": [
-        {
-          "term": "الماء",
-          "meaning": "L’eau."
-        },
-        {
-          "term": "الموارد",
-          "meaning": "Les ressources."
-        },
-        {
-          "term": "الواحة",
-          "meaning": "L’oasis."
-        }
-      ],
-      "origin": "p1-langues/lng-ar-p1-culture-premiere/4"
-    },
-    {
-      "id": "p1-langues-lng-ar-p1-culture-premiere-5",
-      "title": "Axe 6 — Focale Maghreb : lieux et personnages",
-      "part": "Cultures · Première",
-      "paragraphs": [
-        "La focale de Première relie des lieux et des figures au Maroc, en Algérie et en Tunisie. Ibn Khaldoun, né à Tunis en 1332, permet d’aborder l’écriture de l’histoire ; le palais du Bardo à Tunis, devenu musée, permet d’interroger la conservation et la présentation du patrimoine. Ces repères ne doivent pas être artificiellement présentés comme une rencontre entre l’homme et le musée actuel.",
-        "Au Maroc, Dar El Bacha à Marrakech, ancienne résidence de Thami El Glaoui, est devenu un musée : le changement d’usage invite à discuter du pouvoir et de la transmission du patrimoine. En Algérie, le Mechouar de Tlemcen est lié au souverain Yaghmoracen et à la dynastie zianide. Compare ces lieux au Bardo en distinguant construction, usage historique, restauration et présentation au public.",
-        "المتحف يحفظ آثار الماضي ويقدمها للجمهور. Le musée conserve les traces du passé et les présente au public. Pour relier un lieu à une figure, cite un document et une date pertinente ; ne suppose pas qu’un musée actuel existait sous la même forme à l’époque du personnage.",
-        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
-        "Repères lexicaux de cet axe : القصر : Le palais.; التراث : Le patrimoine."
-      ],
-      "lexicon": [
-        {
-          "term": "المتحف",
-          "meaning": "Le musée."
-        },
-        {
-          "term": "القصر",
-          "meaning": "Le palais."
-        },
-        {
-          "term": "التراث",
-          "meaning": "Le patrimoine."
-        }
-      ],
-      "origin": "p1-langues/lng-ar-p1-culture-premiere/5"
-    },
-    {
       "id": "langues-lng-ar-gram-0",
       "title": "Lire l’écriture et se présenter",
       "part": "Écriture et grammaire de l’arabe standard",
@@ -341,7 +184,8 @@
       "paragraphs": [
         "L’article défini ال s’attache au nom : كتاب (un livre) → الكتاب (le livre). Devant une lettre solaire, le l de l’article s’assimile à la consonne suivante dans la prononciation : الشمس (ash-shams, le soleil). Devant une lettre lunaire, il se prononce : القمر (al-qamar, la lune). L’écriture de l’article reste ال dans les deux cas.",
         "L’adjectif épithète suit le nom et s’accorde notamment en genre et en détermination : كتاب جديد (un livre nouveau), الكتاب الجديد (le livre nouveau), مدرسة جديدة (une école nouvelle). En revanche, الكتاب جديد signifie « le livre est nouveau » : le nom est défini et l’attribut est ici indéfini. La tāʾ marbūṭa ة marque souvent un féminin mais n’en constitue pas une règle sans exception.",
-        "L’annexion relie deux noms : كتاب الطالب signifie « le livre de l’élève ». Dans cette construction, le premier nom ne prend pas ال ; la détermination vient du second. Un suffixe peut marquer le possesseur : كتابي (mon livre), كتابه (son livre à lui), كتابها (son livre à elle). Ces exemples doivent être appris avec le sens du suffixe, sans ajouter un article devant كتابي."
+        "L’annexion relie deux noms : كتاب الطالب signifie « le livre de l’élève ». Dans cette construction, le premier nom ne prend pas ال ; la détermination vient du second. Un suffixe peut marquer le possesseur : كتابي (mon livre), كتابه (son livre à lui), كتابها (son livre à elle). Ces exemples doivent être appris avec le sens du suffixe, sans ajouter un article devant كتابي.",
+        "Le duel désigne deux personnes ou deux choses. Au nominatif, notamment pour le sujet et son attribut dans ces exemples, on trouve هذان pour le démonstratif masculin et طالبان pour deux étudiants : هذان طالبان signifie « ces deux-ci sont des étudiants ». Au féminin : هاتان طالبتان, « ces deux-ci sont des étudiantes ». Ces formes changent dans d’autres fonctions grammaticales ; les exemples ci-dessus portent seulement sur le nominatif."
       ],
       "lexicon": [
         {
@@ -359,6 +203,10 @@
         {
           "term": "كتابي",
           "meaning": "Mon livre : suffixe possessif ـي."
+        },
+        {
+          "term": "هذان طالبان",
+          "meaning": "Ces deux-ci sont des étudiants : démonstratif et nom au duel masculin nominatif."
         }
       ],
       "origin": "langues/lng-ar-gram/1"
@@ -370,7 +218,8 @@
       "paragraphs": [
         "Les pronoms personnels utiles sont أنا (je), نحن (nous), أنت (tu), هو (il), هي (elle), أنتم (vous masculin pluriel ou groupe mixte), هم (ils). L’arabe distingue aussi le duel et des formes féminines ; le contexte et la vocalisation permettent notamment de distinguer anta (tu masculin) et anti (tu féminin).",
         "L’accompli présente généralement un procès accompli, souvent au passé. Avec كتب, « écrire » : كَتَبْتُ (katabtu, j’ai écrit), كَتَبْتَ (katabta, tu masculin as écrit), كَتَبْتِ (katabti, tu féminin as écrit), كَتَبَ (kataba, il a écrit), كَتَبَتْ (katabat, elle a écrit), كَتَبْنَا (katabnā, nous avons écrit). Sans voyelles, plusieurs formes s’écrivent كتبت : ne devine pas le sujet sans contexte.",
-        "L’inaccompli sert notamment au présent : أَكْتُبُ (aktubu, j’écris), يَكْتُبُ (yaktubu, il écrit), تَكْتُبُ (taktubu, elle écrit ou tu masculin écris selon le contexte), نَكْتُبُ (naktubu, nous écrivons). Pour annoncer l’avenir, on peut utiliser سـ ou سوف devant l’inaccompli : سأكتب / سوف أكتب (j’écrirai). Les catégories accompli/inaccompli ne se superposent pas mécaniquement aux temps français."
+        "L’inaccompli sert notamment au présent : أَكْتُبُ (aktubu, j’écris), يَكْتُبُ (yaktubu, il écrit), تَكْتُبُ (taktubu, elle écrit ou tu masculin écris selon le contexte), نَكْتُبُ (naktubu, nous écrivons). Pour annoncer l’avenir, on peut utiliser سـ ou سوف devant l’inaccompli : سأكتب / سوف أكتب (j’écrirai). Les catégories accompli/inaccompli ne se superposent pas mécaniquement aux temps français.",
+        "Autres modèles utiles : أَدْرُسُ العَرَبِيَّةَ signifie « j’étudie l’arabe » et نَعْمَلُ « nous travaillons ». Demain se dit غَدًا ; سَأَدْرُسُ غَدًا signifie « j’étudierai demain ». Le préfixe سَـ s’attache au verbe à l’inaccompli pour annoncer le futur."
       ],
       "lexicon": [
         {
@@ -399,7 +248,8 @@
       "paragraphs": [
         "La négation لا devant l’inaccompli peut nier une action présente ou habituelle : لا أعمل اليوم signifie « je ne travaille pas aujourd’hui ». Pour le passé, لم est suivi d’un inaccompli apocopé : لم أكتبْ (je n’ai pas écrit). Pour le futur, لن est suivi d’un inaccompli au subjonctif : لن أكتبَ (je n’écrirai pas). Ce sont des constructions de l’arabe standard, à ne pas confondre avec les négations dialectales.",
         "Une question fermée peut commencer par هل : هل تعمل اليوم؟ (travailles-tu aujourd’hui ?). Les mots interrogatifs comprennent من (qui ?), ماذا (quoi ?), أين (où ?), متى (quand ?), لماذا (pourquoi ?) et كيف (comment ?). هل n’est pas nécessaire devant أين : أين المدرسة؟ signifie « où est l’école ? ».",
-        "Les prépositions في (dans/à), من (de/depuis), إلى (vers/à), مع (avec) précisent les rapports : أنا في المدرسة (je suis à l’école), أذهب إلى المدرسة (je vais à l’école). عندي كتاب signifie « j’ai un livre », littéralement un livre est auprès de moi. Pour une négation nominale : لست طالبا (je ne suis pas étudiant) emploie une forme de ليس."
+        "Les prépositions في (dans/à), من (de/depuis), إلى (vers/à), مع (avec) précisent les rapports : أنا في المدرسة (je suis à l’école), أذهب إلى المدرسة (je vais à l’école). عندي كتاب signifie « j’ai un livre », littéralement un livre est auprès de moi. Pour une négation nominale : لست طالبا (je ne suis pas étudiant) emploie une forme de ليس.",
+        "Pour décrire un emplacement, على signifie « sur » et الطاولة « la table ». الكتاب على الطاولة signifie « le livre est sur la table ». Le groupe prépositionnel joue ici le rôle d’attribut ; aucun verbe être au présent n’est nécessaire."
       ],
       "lexicon": [
         {
@@ -610,6 +460,163 @@
         }
       ],
       "origin": "langues/lng-ar-comp/1"
+    },
+    {
+      "id": "p1-langues-lng-ar-p1-culture-premiere-0",
+      "title": "Axe 1 — Identités et échanges",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "Les mobilités relient les pays du monde arabe entre eux et à d’autres espaces. Un récit peut articuler attachement à une ville, expérience d’un départ et pratique de plusieurs langues. L’arabe standard et les dialectes n’ont pas les mêmes situations d’usage ; leur coexistence ne justifie pas de réduire une personne à une identité unique.",
+        "اللغة تربط الناس، لكن الهوية لا تقتصر على أصل واحد. La langue relie les personnes, mais l’identité ne se limite pas à une seule origine. Dans un témoignage, repère qui parle, d’où et à qui ; sépare son expérience de tes propres représentations.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : الأصل : L’origine.; التبادل : L’échange."
+      ],
+      "lexicon": [
+        {
+          "term": "الهوية",
+          "meaning": "L’identité."
+        },
+        {
+          "term": "الأصل",
+          "meaning": "L’origine."
+        },
+        {
+          "term": "التبادل",
+          "meaning": "L’échange."
+        }
+      ],
+      "origin": "p1-langues/lng-ar-p1-culture-premiere/0"
+    },
+    {
+      "id": "p1-langues-lng-ar-p1-culture-premiere-1",
+      "title": "Axe 2 — Diversité et inclusion",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "La diversité concerne les parcours, les langues, les situations sociales et les conditions d’accès à la vie collective. Étudier une initiative culturelle dans une ville arabe consiste à identifier ses bénéficiaires, les obstacles rencontrés et les moyens concrets de participation. Un exemple local ne décrit pas tout le monde arabe.",
+        "المشاركة في الحياة الثقافية حق للجميع. La participation à la vie culturelle est un droit pour tous. Pour expliquer une mesure d’inclusion, nomme l’obstacle et l’aménagement proposé ; ne confonds pas l’objectif annoncé avec un résultat démontré.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : التنوع : La diversité.; الإدماج : L’inclusion / l’intégration."
+      ],
+      "lexicon": [
+        {
+          "term": "المشاركة",
+          "meaning": "La participation."
+        },
+        {
+          "term": "التنوع",
+          "meaning": "La diversité."
+        },
+        {
+          "term": "الإدماج",
+          "meaning": "L’inclusion / l’intégration."
+        }
+      ],
+      "origin": "p1-langues/lng-ar-p1-culture-premiere/1"
+    },
+    {
+      "id": "p1-langues-lng-ar-p1-culture-premiere-2",
+      "title": "Axe 3 — Art et pouvoir",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "La calligraphie, l’architecture, le cinéma ou la chanson peuvent entretenir des rapports variés avec le pouvoir. Dans l’analyse d’une œuvre du monde arabe, il faut considérer la commande, le destinataire et les conditions de diffusion. Une œuvre peut célébrer, contourner une contrainte ou critiquer ; l’interprétation doit être justifiée.",
+        "قد يدعم الفن السلطة أو ينتقدها. L’art peut soutenir le pouvoir ou le critiquer. Décris des éléments observables avant d’interpréter un symbole. Distingue la voix d’un personnage de l’avis de l’artiste, et l’œuvre de l’usage politique qui en est fait.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : الفن : L’art.; الفنان : L’artiste."
+      ],
+      "lexicon": [
+        {
+          "term": "السلطة",
+          "meaning": "Le pouvoir / l’autorité."
+        },
+        {
+          "term": "الفن",
+          "meaning": "L’art."
+        },
+        {
+          "term": "الفنان",
+          "meaning": "L’artiste."
+        }
+      ],
+      "origin": "p1-langues/lng-ar-p1-culture-premiere/2"
+    },
+    {
+      "id": "p1-langues-lng-ar-p1-culture-premiere-3",
+      "title": "Axe 4 — Innovations scientifiques et responsabilité",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "Les innovations dans l’eau, l’énergie ou le numérique peuvent répondre à des besoins dans les pays arabes, tout en soulevant des questions de coût et d’accès. Une présentation technologique doit distinguer l’invention, ses usages et ses conséquences. La seule nouveauté d’un produit ne prouve pas sa responsabilité sociale.",
+        "يجب أن تراعي التكنولوجيا حاجات الناس وتحمي بياناتهم. La technologie doit prendre en compte les besoins des personnes et protéger leurs données. Analyse un service à travers ses bénéficiaires, ses ressources et un risque ; vérifie les affirmations commerciales.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : الابتكار : L’innovation.; المسؤولية : La responsabilité."
+      ],
+      "lexicon": [
+        {
+          "term": "البيانات",
+          "meaning": "Les données."
+        },
+        {
+          "term": "الابتكار",
+          "meaning": "L’innovation."
+        },
+        {
+          "term": "المسؤولية",
+          "meaning": "La responsabilité."
+        }
+      ],
+      "origin": "p1-langues/lng-ar-p1-culture-premiere/3"
+    },
+    {
+      "id": "p1-langues-lng-ar-p1-culture-premiere-4",
+      "title": "Axe 5 — L’être humain et la nature",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "L’eau, les milieux côtiers, les oasis et les espaces urbains offrent des situations diverses dans le monde arabe. Il faut situer le document dans un territoire précis plutôt que d’assimiler tous les pays à un désert. Agriculture, tourisme et besoins des habitants peuvent exercer des pressions différentes sur une même ressource.",
+        "حماية الماء مسؤولية مشتركة بين الأفراد والمؤسسات. La protection de l’eau est une responsabilité partagée entre les individus et les institutions. Explique un conflit d’usage et propose une action en précisant ses acteurs ; distingue une mesure individuelle d’un équipement collectif.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : الموارد : Les ressources.; الواحة : L’oasis."
+      ],
+      "lexicon": [
+        {
+          "term": "الماء",
+          "meaning": "L’eau."
+        },
+        {
+          "term": "الموارد",
+          "meaning": "Les ressources."
+        },
+        {
+          "term": "الواحة",
+          "meaning": "L’oasis."
+        }
+      ],
+      "origin": "p1-langues/lng-ar-p1-culture-premiere/4"
+    },
+    {
+      "id": "p1-langues-lng-ar-p1-culture-premiere-5",
+      "title": "Axe 6 — Focale Maghreb : lieux et personnages",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "La focale de Première relie des lieux et des figures au Maroc, en Algérie et en Tunisie. Ibn Khaldoun, né à Tunis en 1332, permet d’aborder l’écriture de l’histoire ; le palais du Bardo à Tunis, devenu musée, permet d’interroger la conservation et la présentation du patrimoine. Ces repères ne doivent pas être artificiellement présentés comme une rencontre entre l’homme et le musée actuel.",
+        "Au Maroc, Dar El Bacha à Marrakech, ancienne résidence de Thami El Glaoui, est devenu un musée : le changement d’usage invite à discuter du pouvoir et de la transmission du patrimoine. En Algérie, le Mechouar de Tlemcen est lié au souverain Yaghmoracen et à la dynastie zianide. Compare ces lieux au Bardo en distinguant construction, usage historique, restauration et présentation au public.",
+        "المتحف يحفظ آثار الماضي ويقدمها للجمهور. Le musée conserve les traces du passé et les présente au public. Pour relier un lieu à une figure, cite un document et une date pertinente ; ne suppose pas qu’un musée actuel existait sous la même forme à l’époque du personnage.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : القصر : Le palais.; التراث : Le patrimoine."
+      ],
+      "lexicon": [
+        {
+          "term": "المتحف",
+          "meaning": "Le musée."
+        },
+        {
+          "term": "القصر",
+          "meaning": "Le palais."
+        },
+        {
+          "term": "التراث",
+          "meaning": "Le patrimoine."
+        }
+      ],
+      "origin": "p1-langues/lng-ar-p1-culture-premiere/5"
     },
     {
       "id": "langues-lng-ar-culture-terminale-0",
@@ -2094,9 +2101,9 @@
       "unit": "Atelier de transfert · Arabe",
       "origin": "RévizSTMG · exercices complémentaires",
       "type": "court",
-      "prompt": "Traduis : ces deux élèves sont des garçons. Utilise une phrase simple avec « ces deux-ci » et « élèves ».",
+      "prompt": "Traduis : ces deux-ci sont des étudiants. Utilise le démonstratif et le nom au duel masculin.",
       "answer": "هذان طالبان",
-      "explanation": "هذان et طالبان sont des formes masculines du duel au nominatif ; la phrase signifie ces deux-ci sont des élèves masculins.",
+      "explanation": "هذان est le démonstratif masculin duel au nominatif ; طالبان est le nom étudiant au duel nominatif. La phrase signifie « ces deux-ci sont des étudiants », sans ajouter une information indépendante sur des garçons.",
       "choices": [],
       "context": "",
       "id": "ar-ex-084"

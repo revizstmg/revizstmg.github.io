@@ -152,17 +152,17 @@
       "title": "Ser / Estar et les passés",
       "part": "Grammaire essentielle",
       "paragraphs": [
-        "**Ser** exprime une **caractéristique permanente**, l’**identité**, la **profession** ou l’**heure** : *Soy estudiante*, *Es alto*. **Estar** exprime un **état passager**, un **lieu** ou une **situation** : *Estoy cansado*, *Madrid está en España*.",
+        "**Ser** sert notamment à exprimer l’**identité**, l’**origine**, la **profession**, l’**heure** ou une caractéristique présentée comme définitoire : *Soy estudiante*, *Es alto*. **Estar** sert notamment à exprimer un **état** ou à **situer une personne ou une chose** : *Estoy cansado*, *Madrid está en España*. La durée ne suffit pas à choisir : Madrid reste en Espagne, mais on emploie estar. Un événement se situe avec ser : *La reunión es en Madrid*.",
         "**Indefinido** = action passée **datée** (« Ayer comí ») ; **imperfecto** = **description/habitude** (« Cuando era niño, jugaba ») ; **pretérito perfecto** (he/has/ha + participe) = passé récent lié au présent (« Hoy he comido »)."
       ],
       "lexicon": [
         {
           "term": "Ser",
-          "meaning": "Caractéristique permanente, identité, profession, heure (Soy estudiante)"
+          "meaning": "Identité, origine, profession, heure ; caractéristique présentée comme définitoire."
         },
         {
           "term": "Estar",
-          "meaning": "État passager, lieu, situation (Estoy cansado)"
+          "meaning": "État ; localisation d’une personne ou d’une chose, sans critère obligatoire de durée."
         },
         {
           "term": "Indefinido",
@@ -198,7 +198,7 @@
       "part": "Toutes les conjugaisons",
       "paragraphs": [
         "Au présent, **ser** se conjugue *soy, eres, es, somos, sois, son*, et **estar** se conjugue *estoy, estás, está, estamos, estáis, están*. Les deux verbes se traduisent par « être », mais ils ne s’emploient pas de la même façon.",
-        "**Ser** exprime ce qui est **permanent** ou définit la personne : l’**identité**, l’**origine**, la **profession**, l’**heure** — *Soy español*, *Son las tres*. **Estar** exprime un **état passager** ou une **situation dans l’espace** — *Estoy cansado* (je suis fatigué), *Está en Madrid* (il est à Madrid).",
+        "**Ser** exprime notamment l’**identité**, l’**origine**, la **profession**, l’**heure** ou une caractéristique présentée comme définitoire — *Soy español*, *Son las tres*. **Estar** exprime notamment un **état** ou la **localisation d’une personne ou d’une chose** — *Estoy cansado*, *Está en Madrid*. Un état peut être durable et une profession changer : on choisit la construction et le sens, pas seulement la durée.",
         "Au présent, les verbes réguliers en **-ar**, comme *hablar*, se conjuguent *hablo, hablas, habla, hablamos, habláis, hablan*. Les verbes en **-er**, comme *comer*, donnent *como, comes, come, comemos, coméis, comen*.",
         "Les verbes en **-ir**, comme *vivir*, ont les mêmes terminaisons que les verbes en -er, sauf à *nosotros* et *vosotros* : *vivo, vives, vive, vivimos, vivís, viven*.",
         "**Irréguliers fréquents au présent** : tener → *tengo, tienes, tiene…* · ir → *voy, vas, va, vamos, vais, van* · hacer → *hago* · poder → *puedo, puedes…* · querer → *quiero…*",
@@ -215,11 +215,11 @@
         },
         {
           "term": "Emploi de ser",
-          "meaning": "Permanent : identité, origine, profession, heure (Soy español, Son las tres)"
+          "meaning": "Identité, origine, profession, heure ; localisation d’un événement avec ser."
         },
         {
           "term": "Emploi de estar",
-          "meaning": "État passager, lieu (Estoy cansado, Está en Madrid)"
+          "meaning": "État ; localisation des personnes et des choses."
         },
         {
           "term": "Présent en -ar (hablar)",
@@ -248,7 +248,7 @@
         "Au passé simple, l’***indefinido***, les verbes en **-ar** comme *hablar* se conjuguent *hablé, hablaste, habló, hablamos, hablasteis, hablaron* ; attention aux accents de *hablé* et *habló*, qui distinguent ces formes du présent.",
         "Les verbes en **-er** et en **-ir** partagent les mêmes terminaisons : *comí, comiste, comió, comimos, comisteis, comieron*.",
         "À l’imparfait, l’***imperfecto***, les verbes en **-ar** prennent des terminaisons en **-aba** : *hablaba, hablabas, hablaba, hablábamos, hablabais, hablaban*. Les verbes en **-er** et en **-ir** prennent des terminaisons en **-ía** : *comía, comías, comía, comíamos, comíais, comían*. Seuls trois verbes sont irréguliers à l’imparfait : *ser* (era), *ir* (iba) et *ver* (veía).",
-        "**Emploi** : *indefinido* = action **datée et ponctuelle** ; *imperfecto* = **décor, description, habitude**. Indefinidos irréguliers : ser/ir → *fui*, tener → *tuve*, hacer → *hice*, estar → *estuve*, poder → *pude*, decir → *dije*."
+        "**Emploi** : l’*indefinido* présente un événement ou une période **comme achevés** ; la durée peut être longue : *Viví allí durante veinte años*. L’*imperfecto* décrit un **décor**, une **habitude** ou une action **en cours dans le passé**. Une date seule ne décide pas du temps : *Ayer comía cuando llamaste*. Indefinidos irréguliers : ser/ir → *fui*, tener → *tuve*, hacer → *hice*, estar → *estuve*, poder → *pude*, decir → *dije*."
       ],
       "lexicon": [
         {
@@ -269,7 +269,7 @@
         },
         {
           "term": "Emploi de l’indefinido",
-          "meaning": "Action datée et ponctuelle"
+          "meaning": "Événement ou période envisagés comme achevés ; durée courte ou longue."
         },
         {
           "term": "Emploi de l’imperfecto",
@@ -350,8 +350,8 @@
       "part": "Toutes les conjugaisons",
       "paragraphs": [
         "Au **subjonctif présent**, les verbes en **-ar** prennent des terminaisons en **-e** : *hable, hables, hable, hablemos, habléis, hablen*. Les verbes en **-er** et en **-ir** prennent des terminaisons en **-a** : *coma, comas, coma, comamos, comáis, coman*. C’est l’« échange » des voyelles qui permet de le reconnaître.",
-        "**Emploi du subjonctif** : souhait, doute, nécessité, ordre négatif — après *que*, *ojalá*, *es necesario que*, *quiero que*… (les terminaisons « s’échangent » : -ar prend des -e, -er/-ir des -a).",
-        "À l’**impératif affirmatif**, la forme de **tú** est identique à la troisième personne du présent : *habla, come, vive*. La forme de **usted** emprunte le subjonctif : *hable, coma, viva*. La forme de **vosotros** se construit en remplaçant le -r de l’infinitif par un **-d** : *hablad, comed, vivid*.",
+        "**Emploi du subjonctif** : on le trouve notamment pour un souhait, un doute, une nécessité et dans l’impératif négatif. Exemples : *quiero que vengas*, *es necesario que estudies*, *ojalá haga sol*. **Que seul ne suffit pas** à l’imposer : *Creo que viene* utilise l’indicatif, tandis que *No creo que venga* utilise ici le subjonctif.",
+        "À l’**impératif affirmatif**, la forme régulière de **tú** est identique à la troisième personne du présent : *habla, come, vive*. Certains verbes fréquents sont irréguliers : *di* (decir), *haz* (hacer), *ve* (ir), *pon* (poner), *sal* (salir), *sé* (ser), *ten* (tener), *ven* (venir). **Usted** emprunte le subjonctif : *hable, coma, viva*. La forme régulière de **vosotros** remplace le -r de l’infinitif par -d : *hablad, comed, vivid*.",
         "À l’**impératif négatif**, on utilise toujours le **subjonctif** précédé de *no* : *no hables, no comas, no vivas* pour tú ; *no hable, no coma, no viva* pour usted ; *no habléis, no comáis, no viváis* pour vosotros."
       ],
       "lexicon": [
@@ -365,7 +365,7 @@
         },
         {
           "term": "Emploi du subjonctif",
-          "meaning": "Souhait, doute, nécessité, ordre négatif (que, ojalá, es necesario que, quiero que)"
+          "meaning": "Souhait, doute, nécessité : quiero que, es necesario que, ojalá ; que seul ne détermine pas le mode."
         },
         {
           "term": "Impératif affirmatif (tú)",
@@ -393,7 +393,7 @@
       "paragraphs": [
         "Le **gérondif** se forme en remplaçant la terminaison de l’infinitif : **-ar** devient **-ando** (*hablar → hablando*) et **-er** ou **-ir** deviennent **-iendo** (*comer → comiendo*, *vivir → viviendo*). Avec **estar**, il exprime une action **en train de se dérouler** : *Estoy comiendo*, je suis en train de manger.",
         "L’espagnol exprime l’obligation de trois façons. **Tener que** + infinitif exprime une obligation **personnelle** : *Tengo que estudiar*, je dois étudier. **Hay que** + infinitif exprime une obligation **impersonnelle**, valable pour tous : *Hay que trabajar*, il faut travailler. **Deber** + infinitif signifie « **devoir** », souvent avec une nuance de conseil : *Debes descansar*, tu dois te reposer.",
-        "**Verbes type *gustar*** : le sujet est la chose aimée → *Me **gusta** el cine* (sing.) / *Me **gustan** los libros* (plur.). Même construction : *encantar, interesar, doler, faltar*."
+        "**Verbes de type gustar** : le sujet est la chose aimée → *Me **gusta** el cine* (sing.) / *Me **gustan** los libros* (plur.). Même construction : *encantar, interesar, doler, faltar*."
       ],
       "lexicon": [
         {
@@ -438,7 +438,7 @@
       "lexicon": [
         {
           "term": "ser (soy, fui, sido)",
-          "meaning": "être (permanent)"
+          "meaning": "être : notamment identité, origine, profession, heure."
         },
         {
           "term": "estar (estoy, estuve, estado)",
@@ -1194,7 +1194,7 @@
       "lexicon": [
         {
           "term": "ser",
-          "meaning": "être (identité, caractère durable)"
+          "meaning": "être : notamment identité, origine, profession."
         },
         {
           "term": "estar",
@@ -1455,7 +1455,7 @@
         "**Ser** exprime l’identité ou la profession : **yo soy profesor**. **Estar** exprime un état (**ella está cansada**) ou un lieu (**Madrid está en España**).",
         "**Por** indique notamment la cause (**gracias por tu ayuda**). **Para** indique le destinataire (**este regalo es para ti**) ou le but (**estudio para aprobar**).",
         "Les articles de certains noms doivent être mémorisés : **el problema**, **la mano**. Avec **gustar**, le pronom désigne la personne à qui quelque chose plaît : **a mí me gusta el fútbol**, **a ti te gustan los libros**.",
-        "Chaque partie mélange **dix questions sur les règles et exemples de ce cours**. Certaines questions peuvent revenir pour consolider tes acquis."
+        "Les exercices de ce manuel permettent de réutiliser ces règles en contexte. Réponds sans regarder les solutions, puis compare ta réponse au corrigé expliqué. Reprends les points encore fragiles lors d’une prochaine séance."
       ],
       "lexicon": [],
       "origin": "langues/lng-es-grammar-ex/0"
@@ -1639,7 +1639,7 @@
       "unit": "Espagnol — Grammaire essentielle",
       "origin": "p1-langues/p1-lng-es-qcm",
       "type": "qcm",
-      "prompt": "« Ayer ___ (comer) » se met à l’…",
+      "prompt": "Pour présenter le repas d’hier comme un événement achevé : « Ayer ___ (comer) ». Quel temps convient ?",
       "choices": [
         "imperfecto (comía)",
         "futuro",
@@ -1647,7 +1647,7 @@
         "indefinido (comí)"
       ],
       "answer": "indefinido (comí)",
-      "explanation": "Action datée « ayer » → indefinido.",
+      "explanation": "Le repas est présenté dans sa totalité comme un événement achevé : indefinido, comí. Ayer peut aussi accompagner un imparfait dans un autre contexte.",
       "alternatives": [],
       "context": "",
       "sourceQuestion": 2,
@@ -2170,11 +2170,11 @@
       "lessonId": "langues-lng-es-gram-6",
       "unit": "Espagnol — Toutes les conjugaisons",
       "origin": "langues/lng-es-irr-memory",
-      "type": "lexique",
-      "prompt": "Donne le sens en français de : ser / ir",
+      "type": "court",
+      "prompt": "Conjugue « ser / ir » à la première personne du singulier (yo) du prétérit, ou pretérito indefinido.",
       "choices": [],
       "answer": "fui",
-      "explanation": "Dans ce contexte, « ser / ir » correspond à « fui ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "explanation": "Ser et ir ont la même forme fui à la première personne du singulier du prétérit. Le contexte distingue « je fus / j’ai été » et « j’allai / je suis allé ».",
       "context": "",
       "id": "es-ex-047"
     },
@@ -2182,11 +2182,11 @@
       "lessonId": "langues-lng-es-gram-6",
       "unit": "Espagnol — Toutes les conjugaisons",
       "origin": "langues/lng-es-irr-memory",
-      "type": "lexique",
-      "prompt": "Donne le sens en français de : tener",
+      "type": "court",
+      "prompt": "Conjugue « tener » à la première personne du singulier (yo) du prétérit, ou pretérito indefinido.",
       "choices": [],
       "answer": "tuve",
-      "explanation": "Dans ce contexte, « tener » correspond à « tuve ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "explanation": "Au prétérit, tener utilise ici le radical irrégulier tuv-. À la première personne du singulier, on ajoute -e sans accent écrit : tuve.",
       "context": "",
       "id": "es-ex-048"
     },
@@ -2194,11 +2194,11 @@
       "lessonId": "langues-lng-es-gram-6",
       "unit": "Espagnol — Toutes les conjugaisons",
       "origin": "langues/lng-es-irr-memory",
-      "type": "lexique",
-      "prompt": "Donne le sens en français de : hacer",
+      "type": "court",
+      "prompt": "Conjugue « hacer » à la première personne du singulier (yo) du prétérit, ou pretérito indefinido.",
       "choices": [],
       "answer": "hice",
-      "explanation": "Dans ce contexte, « hacer » correspond à « hice ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "explanation": "Au prétérit, hacer utilise ici le radical irrégulier hic-. À la première personne du singulier, on ajoute -e sans accent écrit : hice.",
       "context": "",
       "id": "es-ex-049"
     },
@@ -2206,11 +2206,11 @@
       "lessonId": "langues-lng-es-gram-6",
       "unit": "Espagnol — Toutes les conjugaisons",
       "origin": "langues/lng-es-irr-memory",
-      "type": "lexique",
-      "prompt": "Donne le sens en français de : estar",
+      "type": "court",
+      "prompt": "Conjugue « estar » à la première personne du singulier (yo) du prétérit, ou pretérito indefinido.",
       "choices": [],
       "answer": "estuve",
-      "explanation": "Dans ce contexte, « estar » correspond à « estuve ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "explanation": "Au prétérit, estar utilise ici le radical irrégulier estuv-. À la première personne du singulier, on ajoute -e sans accent écrit : estuve.",
       "context": "",
       "id": "es-ex-050"
     },
@@ -2218,11 +2218,11 @@
       "lessonId": "langues-lng-es-gram-6",
       "unit": "Espagnol — Toutes les conjugaisons",
       "origin": "langues/lng-es-irr-memory",
-      "type": "lexique",
-      "prompt": "Donne le sens en français de : poder",
+      "type": "court",
+      "prompt": "Conjugue « poder » à la première personne du singulier (yo) du prétérit, ou pretérito indefinido.",
       "choices": [],
       "answer": "pude",
-      "explanation": "Dans ce contexte, « poder » correspond à « pude ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "explanation": "Au prétérit, poder utilise ici le radical irrégulier pud-. À la première personne du singulier, on ajoute -e sans accent écrit : pude.",
       "context": "",
       "id": "es-ex-051"
     },
@@ -2230,11 +2230,11 @@
       "lessonId": "langues-lng-es-gram-6",
       "unit": "Espagnol — Toutes les conjugaisons",
       "origin": "langues/lng-es-irr-memory",
-      "type": "lexique",
-      "prompt": "Donne le sens en français de : decir",
+      "type": "court",
+      "prompt": "Conjugue « decir » à la première personne du singulier (yo) du prétérit, ou pretérito indefinido.",
       "choices": [],
       "answer": "dije",
-      "explanation": "Dans ce contexte, « decir » correspond à « dije ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "explanation": "Au prétérit, decir utilise ici le radical irrégulier dij-. À la première personne du singulier, on ajoute -e sans accent écrit : dije.",
       "context": "",
       "id": "es-ex-052"
     },

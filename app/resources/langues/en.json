@@ -41,7 +41,7 @@
     },
     {
       "title": "Se présenter et présenter ses études",
-      "text": "My name is Lina. — Je m’appelle Lina. I’m a STMG student. — Je suis élève en STMG. I’m interested in business and marketing. — Je m’intéresse au commerce et au marketing. I would like to work in finance. — J’aimerais travailler dans la finance. Pour dire ton âge : I’m seventeen, sans have. Pour ton niveau d’études, précise le contexte français plutôt que de supposer qu’un interlocuteur connaît STMG.",
+      "text": "My name is Lina. — Je m’appelle Lina. I’m an STMG student. — Je suis élève en STMG. I’m interested in business and marketing. — Je m’intéresse au commerce et au marketing. I would like to work in finance. — J’aimerais travailler dans la finance. Pour dire ton âge : I’m seventeen, sans have. Pour ton niveau d’études, précise le contexte français plutôt que de supposer qu’un interlocuteur connaît STMG.",
       "task": "Présente ton prénom, tes études, un intérêt et un projet. Termine par : What about you?"
     },
     {
@@ -130,7 +130,7 @@
       "title": "Se présenter et présenter ses études",
       "part": "Premiers échanges",
       "paragraphs": [
-        "My name is Lina. — Je m’appelle Lina. I’m a STMG student. — Je suis élève en STMG. I’m interested in business and marketing. — Je m’intéresse au commerce et au marketing. I would like to work in finance. — J’aimerais travailler dans la finance. Pour dire ton âge : I’m seventeen, sans have. Pour ton niveau d’études, précise le contexte français plutôt que de supposer qu’un interlocuteur connaît STMG."
+        "My name is Lina. — Je m’appelle Lina. I’m an STMG student. — Je suis élève en STMG. I’m interested in business and marketing. — Je m’intéresse au commerce et au marketing. I would like to work in finance. — J’aimerais travailler dans la finance. Pour dire ton âge : I’m seventeen, sans have. Pour ton niveau d’études, précise le contexte français plutôt que de supposer qu’un interlocuteur connaît STMG."
       ],
       "lexicon": [],
       "oral": "Présente ton prénom, tes études, un intérêt et un projet. Termine par : What about you?",
@@ -154,7 +154,8 @@
       "paragraphs": [
         "Le **present simple** exprime une **habitude** ou une **vérité générale**, avec un **-s à la troisième personne** : *She works in Paris.* Le **present continuous**, formé avec **be + -ing**, exprime une **action en cours** : *They are working now.*",
         "Le **prétérit** exprime une **action passée, datée et terminée** : *We went to London in 2019.* Le **present perfect**, formé avec **have / has + participe passé**, exprime un **lien entre le passé et le présent**, souvent avec *for*, *since* ou *ever* : *I have visited London.*",
-        "Une **date précise** (in 2019, yesterday) impose le **preterit** ; *for/since/ever/already/yet* appellent le **present perfect**."
+        "Un repère comme *yesterday* ou *in 2019* situe l’action dans une période passée achevée : le prétérit convient pour un événement envisagé dans sa totalité. *For*, *since*, *ever*, *already* et *yet* peuvent accompagner le present perfect, mais ne choisissent pas le temps à eux seuls. Compare *I worked there for two years, then I left* (période terminée) et *I have worked here for two years* (situation qui continue).",
+        "Le **past continuous** se forme avec **was / were + V-ing**. Il décrit une action en cours à un moment du passé : *They were watching TV when I arrived.* L’arrivée est présentée au prétérit et survient pendant l’action décrite avec *were watching*."
       ],
       "lexicon": [
         {
@@ -181,7 +182,7 @@
       "title": "Modaux, conditionnels, comparatifs et connecteurs",
       "part": "Grammaire essentielle",
       "paragraphs": [
-        "**Modaux** (+ base verbale) : can/could, may/might, must, have to, should.",
+        "**Modaux centraux** (+ base verbale sans *to*) : can/could, may/might, must, should. **Have to** + base exprime également l’obligation, mais se conjugue : *she has to work*, *we had to leave*.",
         "**Conditionnels** : Type 1 *If + present, will + BV* ; Type 2 *If + preterit, would + BV*.",
         "**Comparatifs** : cheaper / more expensive ; irréguliers good→better→best.",
         "**Connecteurs** : however, therefore, because, although, moreover, for instance."
@@ -241,7 +242,7 @@
       "part": "Toutes les conjugaisons",
       "paragraphs": [
         "Le **prétérit** se forme en ajoutant **-ed** à la base des verbes réguliers, *We visit**ed** Rome*, ou en utilisant la forme propre des **verbes irréguliers**, *I **went** home.* À la forme **négative**, on emploie **didn’t** suivi de la **base** : *They did**n’t** come* — l’auxiliaire porte déjà la marque du passé. À la forme **interrogative**, on place **Did** devant le sujet : *Did you see it?*",
-        "On emploie le prétérit pour une **action passée, datée et terminée**, sans lien avec le présent : *She was born in 2007.*",
+        "On emploie le prétérit pour situer une action dans une période passée achevée : *She was born in 2007.* La date n’a pas besoin d’être exprimée si le contexte la rend claire. Une action au prétérit peut encore avoir des conséquences aujourd’hui : le choix du temps dépend de la façon dont on situe l’événement.",
         "Le **present perfect** se forme avec **have** ou **has** suivi du **participe passé** : *I have finish**ed**.* À la forme **négative**, on emploie **haven’t** ou **hasn’t** : *He has**n’t** arrived.* À la forme **interrogative**, on place **Have** ou **Has** devant le sujet : *Have you eaten?*",
         "On l’emploie pour marquer un **lien entre le passé et le présent** : une action passée dont le résultat compte maintenant, ou une situation qui dure encore. Il s’accompagne souvent de **for**, **since**, **already**, **yet** ou **ever** : *I’ve known her **for** years.*"
       ],
@@ -320,7 +321,7 @@
       "paragraphs": [
         "Chaque modal a son sens. **Can** et **could** expriment la **capacité** ou la **possibilité** : *I **can** swim*, et *could* sert aussi à demander poliment, *Could you help?* **May** et **might** expriment la **probabilité**, *It **may** rain*, ou la **permission**, *You **may** go.* **Must** exprime une **obligation forte**, *You **must** stop*, ou une **quasi-certitude**, *He **must** be tired.*",
         "**Have to** exprime une obligation qui vient de l’**extérieur** : *I **have to** work tomorrow.* **Should** et **ought to** expriment le **conseil** : *You **should** rest.* **Would**, enfin, exprime l’**hypothèse** ou la **politesse** : *I **would** like a coffee.*",
-        "**Règle** : un modal est toujours suivi de la **base verbale** (pas de « to », pas de « -s », pas de « -ed »)."
+        "**Règle** : les modaux centraux (*can, could, may, might, must, shall, should, will, would*) sont suivis de la **base verbale sans to** : *She can work.* Ils ne prennent pas de -s à la troisième personne. **Ought to** conserve *to* : *You ought to rest.* **Have to** se conjugue normalement : *she has to work*, *we had to leave*."
       ],
       "lexicon": [
         {
@@ -349,7 +350,7 @@
         },
         {
           "term": "Modal + base verbale",
-          "meaning": "Jamais de to, de -s ni de -ed après un modal"
+          "meaning": "Modaux centraux : base sans to. Exceptions de construction à distinguer : ought to + base ; have/has/had to + base."
         }
       ],
       "origin": "langues/lng-en-gram/3"
@@ -414,8 +415,8 @@
       "part": "Toutes les conjugaisons",
       "paragraphs": [
         "Les verbes irréguliers se retiennent mieux par familles. Certains **ne changent pas du tout** : *cost – cost – cost*, *cut – cut – cut*, *put – put – put*, *read – read – read* (seule la prononciation change pour *read*). D’autres ont **le même prétérit et le même participe passé**, souvent en -ght ou en -t : *bring – brought*, *buy – bought*, *catch – caught*, *teach – taught*, *think – thought*, ou encore *keep – kept*, *sleep – slept*, *feel – felt*, *leave – left*, *meet – met*, *spend – spent*, *send – sent*, *build – built*.",
-        "Une autre famille alterne les voyelles i – a – u : *begin – began – begun*, *drink – drank – drunk*, *sing – sang – sung*, *run – ran – run*. Beaucoup de verbes très courants ont un participe en -en ou -n : *break – broke – broken*, *choose – chose – chosen*, *drive – drove – driven*, *eat – ate – eaten*, *fall – fell – fallen*, *forget – forgot – forgotten*, *give – gave – given*, *speak – spoke – spoken*, *take – took – taken*, *write – wrote – written*, *know – knew – known*, *grow – grew – grown*, *fly – flew – flown*, *see – saw – seen*, *show – showed – shown*.",
-        "Quelques verbes sont à connaître à part, car ils sont partout : *be – was / were – been*, *have – had – had*, *do – did – done*, *go – went – gone*, *come – came – come*, *become – became – become*, *get – got – got* (ou *gotten* en anglais américain), *make – made – made*, *say – said – said*, *tell – told – told*. La liste complète, avec le sens de chaque verbe, se trouve dans le tableau final."
+        "Une autre famille alterne les voyelles i – a – u : *begin – began – begun*, *drink – drank – drunk*, *sing – sang – sung*. *Run – ran – run* suit une autre alternance : sa base et son participe sont identiques. Beaucoup de verbes très courants ont un participe en -en ou -n : *break – broke – broken*, *choose – chose – chosen*, *drive – drove – driven*, *eat – ate – eaten*, *fall – fell – fallen*, *forget – forgot – forgotten*, *give – gave – given*, *speak – spoke – spoken*, *take – took – taken*, *write – wrote – written*, *know – knew – known*, *grow – grew – grown*, *fly – flew – flown*, *see – saw – seen*, *show – showed – shown*.",
+        "Quelques verbes sont à connaître à part, car ils sont partout : *be – was / were – been*, *have – had – had*, *do – did – done*, *go – went – gone*, *come – came – come*, *become – became – become*, *get – got – got* (ou *gotten* en anglais américain), *make – made – made*, *say – said – said*, *tell – told – told*. Le lexique qui suit réunit les trois formes et le sens de chaque verbe."
       ],
       "lexicon": [
         {
@@ -876,7 +877,7 @@
       "part": "Vocabulaire",
       "paragraphs": [
         "Une **company** (entreprise) fait du **business** (des affaires) sur un **market** (marché) où elle cherche à gagner des **market shares** (parts de marché) face à ses **competitors** (concurrents). Elle vend à des **customers** (clients) et achète à des **suppliers** (fournisseurs) au sein de sa **supply chain** (chaîne d’approvisionnement). Sa **brand** (marque) et sa **strategy** (stratégie) soutiennent sa **growth** (croissance), dans le respect de sa **CSR** (RSE).",
-        "Côté finances, le **turnover** (chiffre d’affaires) et le **revenue** (revenu) doivent couvrir chaque **cost** (coût) pour dégager un **profit** (bénéfice) plutôt qu’une **loss** (perte) ; le **break-even point** (seuil de rentabilité) marque ce point d’équilibre. Le **balance sheet** (bilan) et le **cash flow** (la trésorerie) renseignent sur sa santé. Pour financer un **investment** (investissement) prévu au **budget**, elle peut contracter un **loan** (emprunt) ou faire appel à ses **shareholders** (actionnaires), qui sont l’une de ses **stakeholders** (parties prenantes)."
+        "Côté finances, le **turnover** (chiffre d’affaires) et le **revenue** (revenu) doivent couvrir chaque **cost** (coût) pour dégager un **profit** (bénéfice) plutôt qu’une **loss** (perte) ; le **break-even point** (seuil de rentabilité) marque ce point d’équilibre. Le **balance sheet** (bilan) et le **cash flow** (les flux de trésorerie, à distinguer du solde disponible) renseignent sur sa santé. Pour financer un **investment** (investissement) prévu au **budget**, elle peut contracter un **loan** (emprunt) ou faire appel à ses **shareholders** (actionnaires), qui constituent une catégorie de ses **stakeholders** (parties prenantes)."
       ],
       "lexicon": [
         {
@@ -1583,7 +1584,7 @@
         "Au comparatif, un adjectif court prend **-er** : **fast → faster**. Pour un adjectif long, on utilise **more** : **interesting → more interesting**.",
         "On emploie généralement **some** dans une phrase affirmative (**I have some money**) et **any** dans une phrase négative (**I do not have any money**). **Much** accompagne un nom indénombrable (**much money**), **many** un nom dénombrable au pluriel (**many books**).",
         "Pour désigner quelque chose de proche, **this** s’utilise au singulier (**this book here**) et **these** au pluriel (**these books here**).",
-        "Chaque partie mélange **dix questions sur les règles et exemples de ce cours**. Certaines questions peuvent revenir pour consolider tes acquis."
+        "Les exercices de ce manuel permettent de réutiliser ces règles en contexte. Réponds sans regarder les solutions, puis compare ta réponse au corrigé expliqué. Reprends les points encore fragiles lors d’une prochaine séance."
       ],
       "lexicon": [],
       "origin": "langues/lng-en-grammar-ex/0"
@@ -2113,11 +2114,11 @@
       "lessonId": "langues-lng-en-gram-5",
       "unit": "Anglais — Toutes les conjugaisons",
       "origin": "langues/lng-en-irr-memory",
-      "type": "lexique",
-      "prompt": "Donne le sens en français de : go",
+      "type": "court",
+      "prompt": "Donne le participe passé du verbe anglais « go ».",
       "choices": [],
       "answer": "gone",
-      "explanation": "Dans ce contexte, « go » correspond à « gone ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "explanation": "Les trois formes sont go / went / gone. Le participe passé est gone ; après have ou has au present perfect, on emploie cette forme et non le prétérit went.",
       "context": "",
       "id": "en-ex-031"
     },
@@ -2125,11 +2126,11 @@
       "lessonId": "langues-lng-en-gram-5",
       "unit": "Anglais — Toutes les conjugaisons",
       "origin": "langues/lng-en-irr-memory",
-      "type": "lexique",
-      "prompt": "Donne le sens en français de : see",
+      "type": "court",
+      "prompt": "Donne le participe passé du verbe anglais « see ».",
       "choices": [],
       "answer": "seen",
-      "explanation": "Dans ce contexte, « see » correspond à « seen ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "explanation": "Les trois formes sont see / saw / seen. Le participe passé est seen ; après have ou has au present perfect, on emploie cette forme et non le prétérit saw.",
       "context": "",
       "id": "en-ex-032"
     },
@@ -2137,11 +2138,11 @@
       "lessonId": "langues-lng-en-gram-5",
       "unit": "Anglais — Toutes les conjugaisons",
       "origin": "langues/lng-en-irr-memory",
-      "type": "lexique",
-      "prompt": "Donne le sens en français de : take",
+      "type": "court",
+      "prompt": "Donne le participe passé du verbe anglais « take ».",
       "choices": [],
       "answer": "taken",
-      "explanation": "Dans ce contexte, « take » correspond à « taken ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "explanation": "Les trois formes sont take / took / taken. Le participe passé est taken ; après have ou has au present perfect, on emploie cette forme et non le prétérit took.",
       "context": "",
       "id": "en-ex-033"
     },
@@ -2149,11 +2150,11 @@
       "lessonId": "langues-lng-en-gram-5",
       "unit": "Anglais — Toutes les conjugaisons",
       "origin": "langues/lng-en-irr-memory",
-      "type": "lexique",
-      "prompt": "Donne le sens en français de : write",
+      "type": "court",
+      "prompt": "Donne le participe passé du verbe anglais « write ».",
       "choices": [],
       "answer": "written",
-      "explanation": "Dans ce contexte, « write » correspond à « written ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "explanation": "Les trois formes sont write / wrote / written. Le participe passé est written ; après have ou has au present perfect, on emploie cette forme et non le prétérit wrote.",
       "context": "",
       "id": "en-ex-034"
     },
@@ -2161,11 +2162,11 @@
       "lessonId": "langues-lng-en-gram-5",
       "unit": "Anglais — Toutes les conjugaisons",
       "origin": "langues/lng-en-irr-memory",
-      "type": "lexique",
-      "prompt": "Donne le sens en français de : speak",
+      "type": "court",
+      "prompt": "Donne le participe passé du verbe anglais « speak ».",
       "choices": [],
       "answer": "spoken",
-      "explanation": "Dans ce contexte, « speak » correspond à « spoken ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "explanation": "Les trois formes sont speak / spoke / spoken. Le participe passé est spoken ; après have ou has au present perfect, on emploie cette forme et non le prétérit spoke.",
       "context": "",
       "id": "en-ex-035"
     },
@@ -2173,11 +2174,11 @@
       "lessonId": "langues-lng-en-gram-5",
       "unit": "Anglais — Toutes les conjugaisons",
       "origin": "langues/lng-en-irr-memory",
-      "type": "lexique",
-      "prompt": "Donne le sens en français de : break",
+      "type": "court",
+      "prompt": "Donne le participe passé du verbe anglais « break ».",
       "choices": [],
       "answer": "broken",
-      "explanation": "Dans ce contexte, « break » correspond à « broken ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "explanation": "Les trois formes sont break / broke / broken. Le participe passé est broken ; après have ou has au present perfect, on emploie cette forme et non le prétérit broke.",
       "context": "",
       "id": "en-ex-036"
     },
@@ -2704,14 +2705,14 @@
       "unit": "Anglais — Compréhension",
       "origin": "langues/cmp-en-a2-listen",
       "type": "qcm",
-      "prompt": "How does the customer pay?",
+      "prompt": "What payment method does the customer ask to use?",
       "choices": [
         "By cheque",
         "Cash",
         "By card"
       ],
       "answer": "By card",
-      "explanation": "“Can I pay by card?”",
+      "explanation": "The customer asks “Can I pay by card?” and the assistant agrees.",
       "alternatives": [],
       "context": "Hello! Can I help you? Yes, please. I am looking for a blue T-shirt. What size do you need? Medium, please. Here you are. It costs fifteen pounds. Can I pay by card? Of course. Thank you very much. Have a nice day!",
       "sourceQuestion": 3,
@@ -2740,14 +2741,14 @@
       "unit": "Anglais — Compréhension",
       "origin": "langues/cmp-en-b1-read",
       "type": "qcm",
-      "prompt": "What did she buy with her money?",
+      "prompt": "What did Emma earn enough money to buy?",
       "choices": [
         "A laptop",
         "A bike",
         "A phone"
       ],
       "answer": "A laptop",
-      "explanation": "“to buy a new laptop”.",
+      "explanation": "The text says she earned enough money “to buy a new laptop”; it does not state whether she bought it.",
       "alternatives": [],
       "context": "Last summer, Emma worked in a small café by the sea. She started early, at seven in the morning, and served coffee to tourists. The job was tiring but she earned enough money to buy a new laptop. She also improved her English because many customers came from abroad. At the end of August, the owner offered her a job for the next summer. Emma was proud: it was her first real work experience.",
       "sourceQuestion": 1,
