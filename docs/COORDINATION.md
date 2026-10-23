@@ -1243,3 +1243,7 @@ Prochaine action :
 - Publication des guides : le miroir azure.archive.ubuntu.com télécharge très lentement les dépendances Playwright (confirmé dans les journaux du run 39940928830). Une nouvelle machine permettait l’installation, mais le run 39943002603 rencontre de nouveau la même lenteur.
 - Périmètre annoncé : .github/workflows/deploy.yml, remplacement du seul miroir Azure Ubuntu par archive.ubuntu.com avant l’installation existante. Même version Ubuntu/Playwright, mêmes tests, compilation et publication ; aucun contrôle retiré ni donnée/secret modifié. Branche fix/miroir-ubuntu-publication.
 - Vérification : YAML analysé, shell bash -n valide, remplacement testé sur une source fictive ; dépôt security.ubuntu.com préservé. Comparaison structurée avec HEAD : seule la commande d’installation du navigateur change, toutes les autres étapes sont identiques. Validation réelle par la chaîne GitHub complète à suivre, sans tests locaux répétés pour ce seul changement de workflow.
+
+### CI-20261023-CODEX-17 — liste réelle des miroirs APT
+- Journaux de la tentative 1 du run 39943852884 récupérés par l’archive API : APT utilise file:/etc/apt/apt-mirrors.txt, qui contient encore Azure. La correction #93 ne couvrait que sources.list et *.sources/*.list ; elle était donc insuffisante sur cette image.
+- Périmètre annoncé : inclure uniquement /etc/apt/apt-mirrors.txt dans le remplacement déjà prévu ; tests, paquets et versions identiques, security.ubuntu.com préservé. Branche fix/liste-miroirs-apt, workflow et journal uniquement.
