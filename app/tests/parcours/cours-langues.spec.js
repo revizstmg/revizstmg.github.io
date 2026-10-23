@@ -1,6 +1,8 @@
+import {readFileSync} from 'node:fs'
 import {test,expect} from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 import {preparer,etatEleve,attendreAccueil,etat} from './eleve.js'
+const catalogue=JSON.parse(readFileSync(new URL('../../resources/langues/catalogue.json',import.meta.url)))
 for(const [sid,track] of [['langues',{level:'terminale-stmg',specialty:'gestion-finance'}],['p1-langues',{level:'premiere-stmg'}]]) {
  test(`${sid} : guides PDF, quatre langues, anciennes routes et mobile accessibles`,async({page},info)=>{
   const errors=await preparer(page,etatEleve({track,studyLanguages:['ar','it']}))
@@ -27,6 +29,16 @@ for(const [sid,track] of [['langues',{level:'terminale-stmg',specialty:'gestion-
   await page.setViewportSize({width:1280,height:900})
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true)
   await page.screenshot({path:info.outputPath('langues-ordinateur.png'),fullPage:true})
+  const arabic=catalogue.find(g=>g.id==='ar')
+  await page.locator('.language-video-library summary').click()
+  await expect(page.locator('.language-video-list a')).toHaveCount(arabic.videos.length)
+  const level=[...new Set(arabic.videos.map(v=>v.level))][1]
+  await page.getByLabel('Niveau des vidéos',{exact:true}).selectOption(level)
+  await expect(page.locator('.language-video-list a')).toHaveCount(arabic.videos.filter(v=>v.level===level).length)
+  expect((await new AxeBuilder({page}).include('.language-video-library').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([])
+  await page.getByRole('button',{name:/Anglais/}).click()
+  await expect(page.getByLabel('Niveau des vidéos',{exact:true})).toHaveValue('all')
+  await expect(page.locator('.language-video-list a')).toHaveCount(catalogue.find(g=>g.id==='en').videos.length)
   await page.goto(`./#/subject/${sid}/theme/lng-ar-gram/chapter/0`)
   await expect(page.getByRole('heading',{name:'Ose prendre la parole.'})).toBeVisible()
   await expect(page.locator('.reader')).toHaveCount(0)

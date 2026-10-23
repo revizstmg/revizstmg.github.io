@@ -4,3 +4,4 @@
 /* Priorité stable sur les styles éditoriaux communs, y compris au survol. */
 .site-shell .language-feature .language-pdf-actions .btn-primary,
 .site-shell .language-feature .language-pdf-actions .btn-primary:hover{background:#e2c67f;color:#20352f;transition:none}
+.language-video-library summary{min-height:44px;align-content:center}.language-video-list{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;padding-top:1rem}.language-video-list a{display:block;padding:1rem;border:1px solid var(--c-bord,#9caa9d);border-radius:12px;overflow-wrap:anywhere;min-height:48px}.language-video-library select:focus-visible{outline:3px solid var(--c-accent-texte);outline-offset:3px}@media(max-width:639px){.language-video-list{grid-template-columns:1fr}}
