@@ -62,3 +62,32 @@ test('échec de correction : réponse conservée, aucune fausse note',async({pag
  await expect(panel.getByLabel('Ta réponse rédigée')).toHaveValue('Voici ma réponse à conserver.')
  await expect(panel.getByRole('heading',{name:/Note indicative/})).toHaveCount(0)
 })
+test('correction bloquée : annulation, délai maximal, réponse conservée et nouvelle tentative',async({page})=>{
+ await setup(page)
+ let corrections=0
+ await page.route('**/functions/v1/examen-blanc',route=>{
+  const b=route.request().postDataJSON()
+  if(b.step==='prepare')return route.fulfill({contentType:'application/json',body:JSON.stringify({control:{question:'Explique la dérivation.',correction:'Correction.',criteria:Array.from({length:5},(_,i)=>({notion:`Notion ${i}`,expected:`Attendu ${i}`,source:b.course.text.slice(0,100)}))}})})
+  corrections++
+  if(corrections<3)return
+  return route.fulfill({contentType:'application/json',body:JSON.stringify({control:{feedback:'Correction reçue après reprise.',criteria:Array.from({length:5},(_,index)=>({index,points:index===4?0:1,feedback:'Critère vérifié.'}))}})})
+ })
+ await page.goto('./#/subject/maths/theme/math-c3/chapter/0');await attendreAccueil(page)
+ await page.getByRole('button',{name:'Questions type de contrôle →',exact:true}).click()
+ const panel=page.locator('[data-chapter-control]'),button=panel.getByRole('button',{name:'Corriger ma réponse',exact:true})
+ await panel.getByRole('button',{name:'Créer une question',exact:true}).click()
+ await panel.getByLabel('Ta réponse rédigée').fill('Ma réponse reste disponible.')
+ await page.clock.install()
+ await button.click();await expect.poll(()=>corrections).toBe(1)
+ await panel.getByRole('button',{name:'Annuler l’attente',exact:true}).click()
+ await expect(panel.getByRole('alert')).toContainText('Attente annulée')
+ await expect(button).toBeEnabled()
+ await button.click();await expect.poll(()=>corrections).toBe(2)
+ await page.clock.runFor(75001)
+ await expect(panel.getByRole('alert')).toContainText('trop de temps')
+ await expect(panel.getByLabel('Ta réponse rédigée')).toHaveValue('Ma réponse reste disponible.')
+ await expect(button).toBeEnabled()
+ await expect(panel.getByRole('status')).toHaveCount(0)
+ await button.click()
+ await expect(panel.getByRole('heading',{name:'Note indicative · 4/5'})).toBeVisible()
+})

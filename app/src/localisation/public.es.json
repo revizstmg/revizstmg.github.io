@@ -690,5 +690,8 @@
   "Ce cours ne permet pas de préparer cette question. Reviens au cours ou essaie une autre question.": "Este curso no permite preparar esta pregunta. Vuelve al curso o prueba otra pregunta.",
   "La préparation ou la correction a échoué. Ta réponse est conservée ; réessaie.": "La preparación o corrección ha fallado. Tu respuesta se conserva; inténtalo otra vez.",
   "Remplacer cette question et effacer ta réponse ?": "¿Sustituir la pregunta y borrar tu respuesta?",
-  "Achat en pièces virtuelles uniquement. Les offres Premium et Ultimate sont en préparation ; toutes les options IA sont prévues dans Ultimate. Elles sont accessibles aux comptes connectés pendant le développement. Les réservations doivent être vérifiées avant attribution. Aucun renouvellement automatique.": "Compras solo con monedas virtuales. Premium y Ultimate están en preparación; todas las opciones de IA se prevén en Ultimate. Están disponibles con una cuenta durante el desarrollo. Las reservas se verificarán antes de concederlas. Sin renovación automática."
+  "Achat en pièces virtuelles uniquement. Les offres Premium et Ultimate sont en préparation ; toutes les options IA sont prévues dans Ultimate. Elles sont accessibles aux comptes connectés pendant le développement. Les réservations doivent être vérifiées avant attribution. Aucun renouvellement automatique.": "Compras solo con monedas virtuales. Premium y Ultimate están en preparación; todas las opciones de IA se prevén en Ultimate. Están disponibles con una cuenta durante el desarrollo. Las reservas se verificarán antes de concederlas. Sin renovación automática.",
+  "L’IA met trop de temps à répondre. Ta réponse est conservée ; tu peux réessayer.": "La IA tarda demasiado. Tu respuesta se conserva; puedes volver a intentarlo.",
+  "Attente annulée. Ta réponse est conservée.": "Espera cancelada. Tu respuesta se conserva.",
+  "Annuler l’attente": "Cancelar la espera"
 }
