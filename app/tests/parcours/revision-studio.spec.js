@@ -2,12 +2,14 @@ import { test, expect } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 import { preparer, attendreAccueil, etatEleve } from './eleve.js'
 
-test('studio : parcours guidé, carnet vide et raccourcis sans casser la navigation', async ({ page }) => {
+test('studio : parcours guidé, erreurs par matière et raccourcis sans casser la navigation', async ({ page }) => {
  const errors = await preparer(page)
  await page.goto('./#/revision'); await attendreAccueil(page)
  await expect(page.getByRole('heading', { level: 1, name: 'Réviser' })).toBeVisible()
+ await expect(page.locator('#revision-carnet')).toHaveCount(0)
+ for(const label of ['à revoir aujourd’hui','à renforcer','bien acquis'])await expect(page.getByText(label,{exact:true})).toHaveCount(0)
  await expect(page.getByRole('link', { name: /Lancer ma séance/ })).toHaveAttribute('href', '#/seance')
- await page.getByRole('button', { name: /Ouvrir le carnet/ }).click()
+ await page.getByRole('button', { name: /Retravailler mes erreurs/ }).click()
  await expect(page.getByRole('heading',{level:1,name:'Comprendre mes erreurs'})).toBeVisible()
  await page.getByLabel('Matière',{exact:true}).selectOption('gestion-finance')
  await expect(page.getByRole('heading',{name:'Aucune erreur dans cette sélection'})).toBeVisible()
@@ -35,11 +37,12 @@ test('studio : clair, sombre et grandes largeurs restent lisibles et accessibles
  }
  expect(errors).toEqual([])
 })
-test('studio : paquet sauvegardé, import et objectif hebdomadaire conservés', async ({ page }) => {
+test('studio : paquet sauvegardé et import dans une bibliothèque limitée aux flashcards', async ({ page }) => {
  const errors = await preparer(page, etatEleve({ savedDecks: [{ id: 'studio', title: 'Mes repères', color: '#41624f', cards: [{ front: 'Un', back: 'Une réponse.' }, { front: 'Deux', back: 'Une seconde réponse.' }, { front: 'Trois', back: 'Une troisième réponse.' }] }] }))
  await page.goto('./#/revision'); await attendreAccueil(page)
  await expect(page.getByRole('button', { name: /Mes repères/ })).toBeVisible()
- await expect(page.getByText('Objectif de la semaine', { exact: false })).toBeVisible()
+ await expect(page.locator('.revision-library').getByRole('heading',{name:/Tes matières|Objectif de la semaine/})).toHaveCount(0)
+ await expect(page.locator('.revision-library').getByRole('heading')).toHaveCount(2)
  await page.getByRole('button', { name: /Importer un paquet/ }).click()
  await page.getByRole('textbox', { name: 'Importer un paquet' }).fill('code-invalide')
  await page.getByRole('button', { name: 'Importer', exact: true }).click()

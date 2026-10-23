@@ -28,7 +28,7 @@ configuré entre sans écran d’attente.
 La dernière fiche consultée est conservée sur cet appareil, séparément pour
 chaque compte, et accessible depuis « Reprendre ».
 
-L’espace Réviser reprend la présentation éditoriale de Bac blanc : séance guidée, carnet d’erreurs et flashcards, puis bibliothèque de matières / paquets et objectif hebdomadaire. Les compteurs viennent de la progression réelle ; le carnet reste accessible même vide. Les raccourcis internes font défiler la page sans changer la route.
+L’espace Réviser reprend la présentation éditoriale de Bac blanc : séance guidée et trois parcours par matière (suivre le fil, comprendre ses erreurs, ancrer ses connaissances). Les indicateurs À revoir aujourd’hui / À renforcer / Bien acquis et le carnet autonome sont retirés. La bibliothèque Les bons outils à portée de main garde uniquement les flashcards, avec lecture, écoute, partage et import. Les données de progression et les erreurs restent disponibles aux parcours adaptés.
 
 Le temps par thème conserve aussi les courtes visites, les séances guidées et le carnet d’erreurs. Les anciennes valeurs dépassant toute la durée d’existence du site sont archivées dans `themeTimeInvalid`, exclues des compteurs et des barres, et ne reviennent pas lors d’une fusion. Leur durée réelle n’est pas estimée ; seuls ces compteurs repartent de zéro. Les durées inférieures à une minute sont indiquées « < 1 min » ; l’arrière-plan et les longues suspensions ne gonflent pas le compteur.
 

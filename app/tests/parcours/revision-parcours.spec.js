@@ -36,7 +36,7 @@ test('les acquis : matière et chapitre, QCM direct, bonnes réponses sauvegard�
 test('erreurs par matière : toutes les erreurs choisies, aucune question extérieure',async({page})=>{
  const errors=await preparer(page,etatEleve({erreurs:[{id:'qcm|'+a.q,themeId:'math-c1',type:'qcm',q:a},{id:'qcm|'+c.q,themeId:'droit-t5',type:'qcm',q:c}]}))
  await page.goto('./#/revision')
- await page.getByRole('button',{name:'Ouvrir le carnet',exact:true}).click()
+ await page.getByRole('button',{name:'Retravailler mes erreurs',exact:true}).click()
  await page.getByLabel('Matière',{exact:true}).selectOption('maths')
  await page.getByRole('button',{name:'Retravailler mes erreurs',exact:true}).click()
  await expect(page.getByText(a.q,{exact:true})).toBeVisible()
