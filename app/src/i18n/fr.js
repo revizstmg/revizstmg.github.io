@@ -1,5 +1,6 @@
 // Source française des libellés de l’interface.
 export default {
+  studyGerman: "Allemand",
   studyLanguagesTitle: "Tes langues étudiées",
   studyLanguagesHelp: "Choisis une ou plusieurs langues. Tu pourras modifier ce choix dans les réglages. Sans sélection, tous les cours disponibles restent affichés.",
   studyArabic: "Arabe",

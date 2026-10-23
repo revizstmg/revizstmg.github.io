@@ -30,7 +30,7 @@ export function ReadAloud({ getText, className = '' }) {
       const txt = (getText() || '').replace(/\s+/g, ' ').trim()
       if (!txt) return
       const u = new SpeechSynthesisUtterance(txt)
-      u.lang = ({ fr: 'fr-FR', en: 'en-US', es: 'es-ES', it: 'it-IT', ar: 'ar-SA' })[lang] || 'fr-FR'
+      u.lang = ({ fr: 'fr-FR', en: 'en-US', es: 'es-ES', it: 'it-IT', ar: 'ar-SA', de: 'de-DE' })[lang] || 'fr-FR'
       u.rate = 0.98
       u.onend = () => setOn(false); u.onerror = () => setOn(false)
       synth.cancel(); synth.speak(u); setOn(true)

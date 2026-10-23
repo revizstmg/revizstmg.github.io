@@ -1,3 +1,4 @@
+import german from './examens.de.json'
 const fr = {
  title: 'Crée ton examen blanc', sub: 'Décris ce que tu veux travailler. L’IA choisit les chapitres, puis compose une épreuve rédigée avec documents et barème sur 20.',
  prompt: 'Quel examen veux-tu passer ?', placeholder: 'Exemple : tester mes connaissances en management de Première et Terminale, avec une étude de cas et des questions de stratégie.', duration: 'Temps accordé', analyze: 'Analyser ma demande', analyzing: 'Recherche des chapitres dans les cours…', generating: 'Création du sujet et de son corrigé… Cela peut prendre deux minutes.',
@@ -35,3 +36,5 @@ for (const [lang, values] of Object.entries(chapterLabels)) {
  if (values.length !== chapterKeys.length) throw new Error(`chapter translation ${lang}`)
  Object.assign(examMessages[lang], Object.fromEntries(chapterKeys.map((key, i) => [key, values[i]])))
 }
+
+examMessages.de = german

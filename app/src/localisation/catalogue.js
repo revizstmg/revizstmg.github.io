@@ -2,6 +2,7 @@ import FR from '../i18n/fr.js'
 const books = { fr: {} }
 const loading = {}
 const loaders = {
+  de: () => Promise.all([import('./public.de.json'), import('../i18n/de.js')]),
   en: () => Promise.all([import('./public.en.json'), import('../i18n/en.js')]), es: () => Promise.all([import('./public.es.json'), import('../i18n/es.js')]),
   it: () => Promise.all([import('./public.it.json'), import('../i18n/it.js')]), ar: () => Promise.all([import('./public.ar.json'), import('../i18n/ar.js')]),
 }

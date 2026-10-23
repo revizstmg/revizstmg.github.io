@@ -4,12 +4,12 @@ import AxeBuilder from '@axe-core/playwright'
 import {preparer,etatEleve,attendreAccueil,etat} from './eleve.js'
 const catalogue=JSON.parse(readFileSync(new URL('../../resources/langues/catalogue.json',import.meta.url)))
 for(const [sid,track] of [['langues',{level:'terminale-stmg',specialty:'gestion-finance'}],['p1-langues',{level:'premiere-stmg'}]]) {
- test(`${sid} : guides PDF, quatre langues, anciennes routes et mobile accessibles`,async({page},info)=>{
+ test(`${sid} : guides PDF, cinq langues, anciennes routes et mobile accessibles`,async({page},info)=>{
   const errors=await preparer(page,etatEleve({track,studyLanguages:['ar','it']}))
   await page.goto(`./#/subject/${sid}`);await attendreAccueil(page)
   await expect(page.getByRole('heading',{name:'Ose prendre la parole.'})).toBeVisible()
   await expect(page.getByRole('button',{name:/Arabe/})).toHaveAttribute('aria-pressed','true')
-  for(const [lang,name] of [['en','Anglais'],['es','Espagnol'],['it','Italien'],['ar','Arabe']]) {
+  for(const [lang,name] of [['en','Anglais'],['es','Espagnol'],['it','Italien'],['de','Allemand'],['ar','Arabe']]) {
    await page.getByRole('button',{name:new RegExp(name)}).click()
    const open=page.getByRole('link',{name:/Ouvrir le guide PDF/})
    await expect(open).toHaveAttribute('href',new RegExp(`guide-${lang}.*pdf`))

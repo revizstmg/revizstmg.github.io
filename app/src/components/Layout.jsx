@@ -20,12 +20,12 @@ import { InstallBanner } from './InstallApp.jsx'
 import { BandeauCookies } from './BandeauCookies.jsx'
 import { BandeauEssai } from './CompteRequis.jsx'
 import EtatSauvegarde, { IndicateurSauvegarde } from './EtatSauvegarde.jsx'
-import { useT, useLang } from '../i18n.js'
+import { usePublicText, useT, useLang } from '../i18n.js'
 import { useFocus } from '../focus.jsx'
 import { useInstall } from '../pwa.js'
 import { compterEcran } from '../mesure.js'
 
-const LANGS = [{ code: 'fr', label: 'Français' }, { code: 'en', label: 'English' }, { code: 'es', label: 'Español' }, { code: 'it', label: 'Italiano' }, { code: 'ar', label: 'العربية' }]
+const LANGS = [{ code: 'de', label: 'Deutsch' }, { code: 'fr', label: 'Français' }, { code: 'en', label: 'English' }, { code: 'es', label: 'Español' }, { code: 'it', label: 'Italiano' }, { code: 'ar', label: 'العربية' }]
 
 // The virtual keyboard shrinks the visual viewport on iOS and sometimes the
 // layout viewport on Android. Focus alone must not hide navigation (autofocus).
@@ -435,7 +435,7 @@ function MobileMenu({ className = '', parentSeul = false, state, isDark, standal
             </div>
             <div className="border-t border-slate-100 px-4 py-2.5 dark:border-slate-800">
               <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-slate-400">{t('language')}</p>
-              <div className="flex gap-1.5">
+              <div className="flex flex-wrap gap-1.5">
                 {LANGS.map((l) => (
                   <button
                     key={l.code}
@@ -470,6 +470,7 @@ const PAGES_SIMPLES = {
 }
 
 function Breadcrumb() {
+  const publicText = usePublicText()
   const { pathname } = useLocation()
   const t = useT()
   const crumbs = useMemo(() => {
@@ -531,10 +532,10 @@ function Breadcrumb() {
             {i > 0 && <span aria-hidden>›</span>}
             {i < crumbs.length - 1 ? (
               <Link to={c.to} className="hover:text-violet-600 hover:underline dark:hover:text-violet-400">
-                {c.label}
+                {publicText(c.label)}
               </Link>
             ) : (
-              <span className="font-semibold text-slate-700 dark:text-slate-200">{c.label}</span>
+              <span className="font-semibold text-slate-700 dark:text-slate-200">{publicText(c.label)}</span>
             )}
           </li>
         ))}

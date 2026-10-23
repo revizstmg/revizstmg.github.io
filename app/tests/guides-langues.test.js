@@ -2,7 +2,7 @@ import {test,expect} from 'vitest'
 import {readFileSync} from 'node:fs'
 import {search} from '../src/data/index.js'
 import {subjectsForTrack} from '../src/data/tracks.js'
-for(const id of ['en','es','it','ar']) test(`guide ${id} : PDF original et parcours complet`,()=>{
+for(const id of ['en','es','it','ar','de']) test(`guide ${id} : PDF original et parcours complet`,()=>{
  const guide=JSON.parse(readFileSync(new URL(`../resources/langues/${id}.json`,import.meta.url),'utf8'))
  expect(guide.sections).toHaveLength(18)
  expect(guide.sections.every(s=>s.title && s.text.length>200 && s.task.length>70)).toBe(true)

@@ -7,7 +7,7 @@
 import { loadPublicLocale, knownPublicText } from './localisation/catalogue.js'
 import { GLOSSARY } from './data/glossary.js'
 
-export const LANGS = { fr: 'Français', en: 'English', es: 'Español', it: 'Italiano', ar: 'العربية' }
+export const LANGS = { fr: 'Français', de: 'Deutsch', en: 'English', es: 'Español', it: 'Italiano', ar: 'العربية' }
 
 // Index du glossaire : pour chaque langue, map mot(minuscule) → entrée.
 const index = { fr: new Map(), en: new Map(), es: new Map() }

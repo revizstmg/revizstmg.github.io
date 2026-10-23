@@ -3,8 +3,8 @@ import { normalizeStudyLanguages, chaptersForLanguages } from '../src/data/study
 import { noter, mergeProgress, chargeUtile } from '../src/progression.js'
 import { restoreAccountState } from '../src/store.jsx'
 
-test('les quatre langues sont distinctes de la langue d’interface et les doublons sont écartés', () => {
- expect(normalizeStudyLanguages(['ar', 'en', 'it', 'es', 'de', 'ar'])).toEqual(['ar', 'en', 'it', 'es'])
+test('les cinq langues sont distinctes de la langue d’interface et les doublons sont écartés', () => {
+ expect(normalizeStudyLanguages(['ar', 'en', 'it', 'es', 'de', 'ar'])).toEqual(['ar', 'en', 'it', 'es', 'de'])
  expect(normalizeStudyLanguages(null)).toEqual([])
 })
 test('la bibliothèque conserve les anciens comptes et ne substitue pas une autre langue', () => {

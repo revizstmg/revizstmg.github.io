@@ -7,7 +7,7 @@ import { useT, useLang } from '../i18n.js'
 export default function AudioReview({ items = [], color = '#7c3aed', title = '', onClose }) {
   const t = useT()
   const lang = useLang()
-  const voiceLang = lang === 'es' ? 'es-ES' : lang === 'en' ? 'en-US' : lang === 'it' ? 'it-IT' : lang === 'ar' ? 'ar-SA' : 'fr-FR'
+  const voiceLang = lang === 'de' ? 'de-DE' : lang === 'es' ? 'es-ES' : lang === 'en' ? 'en-US' : lang === 'it' ? 'it-IT' : lang === 'ar' ? 'ar-SA' : 'fr-FR'
   const synth = typeof window !== 'undefined' ? window.speechSynthesis : null
 
   const [idx, setIdx] = useState(0)
