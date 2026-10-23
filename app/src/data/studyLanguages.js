@@ -1,5 +1,6 @@
 // Langues étudiées, distinctes de la langue d’affichage de l’interface.
 export const STUDY_LANGUAGES = [
+ { id: 'de', key: 'studyGerman' },
   { id: 'ar', key: 'studyArabic' },
   { id: 'en', key: 'studyEnglish' },
   { id: 'it', key: 'studyItalian' },

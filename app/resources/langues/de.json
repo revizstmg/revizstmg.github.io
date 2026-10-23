@@ -1,0 +1,2419 @@
+{
+  "name": "Allemand",
+  "label": "Deutsch",
+  "hello": "Hallo! Ich lerne Deutsch.",
+  "intro": "Communiquer en allemand : bases solides, situations du quotidien et prises de parole en STMG.",
+  "sections": [
+    {
+      "title": "Commencer par une vraie situation",
+      "text": "Choisis une situation concrète : te présenter, demander un renseignement ou décrire ton stage. Prépare cinq phrases utiles, écoute un modèle puis essaie sans lire. Une langue se construit par des retours fréquents sur les mêmes situations, avec une difficulté qui augmente progressivement. Le guide accompagne un apprentissage : il ne remplace ni un professeur ni des échanges réels.",
+      "task": "Enregistre une présentation de 30 secondes. Écoute-la et choisis un seul point à améliorer. Garde cette première version pour comparer dans deux semaines."
+    },
+    {
+      "title": "Écouter pour comprendre, pas pour tout traduire",
+      "text": "Prends un extrait de 30 à 90 secondes adapté à ton niveau. Première écoute : qui parle, où et pourquoi ? Deuxième écoute : repère trois mots ou informations. Troisième écoute avec sous-titres dans la langue : vérifie ton hypothèse. Reprends ensuite sans sous-titres. Une vidéo trop difficile peut servir à découvrir une culture, mais un support plus simple est préférable pour travailler la compréhension.",
+      "task": "Note le thème et trois informations, puis résume en une phrase. Vérifie avec la transcription ; distingue ce que tu avais compris et ce que tu avais deviné."
+    },
+    {
+      "title": "Parler par petits blocs",
+      "text": "Apprends des groupes de mots réutilisables plutôt que des listes isolées : demander de répéter, donner son avis, expliquer une difficulté. Fais varier un élément de chaque phrase. Pour gagner en fluidité, prépare des mots-clés et non un texte entier. Les hésitations sont normales : une reformulation simple est souvent plus efficace qu’une traduction mot à mot.",
+      "task": "Construis trois réponses différentes à la même question. Fais d’abord 20 secondes, puis 40 secondes, puis une minute sans lire de texte."
+    },
+    {
+      "title": "Prononciation : écouter, imiter, comparer",
+      "text": "Écoute une phrase courte, mets en pause, répète, puis compare ton enregistrement au modèle. Observe le rythme, l’accent des mots et l’intonation avant de chercher une imitation parfaite. Le shadowing consiste à parler juste après le modèle : ralentis si nécessaire. Une transcription en français ne reproduit jamais exactement les sons d’une autre langue.",
+      "task": "Répète cinq fois une phrase de huit à douze mots. Compare les versions 1 et 5 sur un critère : rythme, consonne ou voyelle. Demande un retour à un enseignant ou à un interlocuteur compétent."
+    },
+    {
+      "title": "Vocabulaire qui reste disponible",
+      "text": "Crée des cartes avec une expression, une phrase personnelle et, si possible, un extrait audio fiable. Cache la réponse et retrouve-la à voix haute. Revois après un jour, trois jours, une semaine puis deux semaines ; rapproche les révisions si tu oublies. Relie chaque mot à une situation vécue. Dix expressions utilisées valent mieux qu’une longue liste seulement relue.",
+      "task": "Sélectionne cinq expressions de la semaine. Utilise-les dans une conversation de deux minutes puis modifie la situation pour vérifier que tu sais les réemployer."
+    },
+    {
+      "title": "Comprendre, lire et écrire pour mieux parler",
+      "text": "Lis un texte court à ton niveau, repère son objectif et ses connecteurs. Prépare un résumé avec des mots-clés. Écris ensuite cinq phrases, vérifie le sujet, le verbe et les accords, puis reformule-les oralement sans feuille. Un correcteur peut aider à repérer une erreur ; demande toujours pourquoi et vérifie la règle avec une ressource fiable.",
+      "task": "Lis une annonce ou une courte actualité. Résume l’idée principale, donne un exemple et explique ton avis. Compare le résumé au document : n’ajoute pas de faits absents."
+    },
+    {
+      "title": "7 · Nominatif et accusatif",
+      "text": "Le nominatif marque notamment le sujet : Der Schüler liest. L’accusatif marque notamment l’objet direct : Der Schüler liest einen Text. Cherche qui fait l’action puis ce que l’action concerne. Au masculin, der devient den, ein devient einen. Au féminin, au neutre et au pluriel, l’article défini reste ici die, das, die. L’accusatif ne signifie ni personne ni chose : il dépend du rôle grammatical ou de la préposition. Compare Der Lehrer sieht den Schüler et Den Lehrer sieht der Schüler. Les cas permettent de reconnaître qui voit qui, même si l’objet ouvre la phrase : dans la seconde, der Schüler est le sujet. Avec sein, l’attribut reste au nominatif : Er ist ein Lehrer. Certains verbes suivent une autre construction : helfen demande le datif, bien que le français dise aider quelqu’un. Apprends la construction entière plutôt que de traduire chaque mot séparément.",
+      "task": "Travaille cette leçon sans regarder le corrigé. Réponds aux quatre activités, explique à voix haute la règle utilisée puis compare avec les réponses commentées. Refais seulement les points encore fragiles le lendemain."
+    },
+    {
+      "title": "8 · Datif et destinataire",
+      "text": "Le datif apparaît notamment avec le destinataire et après certains verbes ou prépositions. Les articles définis sont dem (masculin/neutre), der (féminin), den (pluriel). Les indéfinis deviennent einem, einer, einem. Ich gebe der Lehrerin ein Buch : der Lehrerin est destinataire au datif ; ein Buch est l’objet donné à l’accusatif. Der n’est donc pas toujours un masculin : il est ici féminin. Helfen, danken et gefallen se construisent avec le datif : Ich helfe dem Schüler. Au datif pluriel, le nom prend souvent n : mit den Kindern. Pas de n supplémentaire si le pluriel finit déjà en n ou s : mit den Frauen, mit den Autos. Mit exige le datif, même sans idée de destinataire. Associe article, nom et construction : mit einem Freund sprechen. Ne choisis pas un cas seulement d’après la traduction française.",
+      "task": "Travaille cette leçon sans regarder le corrigé. Réponds aux quatre activités, explique à voix haute la règle utilisée puis compare avec les réponses commentées. Refais seulement les points encore fragiles le lendemain."
+    },
+    {
+      "title": "9 · Pronoms et possessifs",
+      "text": "Les pronoms changent de cas : ich/mich/mir, du/dich/dir, er/ihn/ihm, sie/sie/ihr, es/es/ihm, wir/uns/uns, ihr/euch/euch, sie/sie/ihnen. L’ordre donné est nominatif, accusatif, datif. La politesse donne Sie/Sie/Ihnen. Ich sehe ihn remplace un objet masculin à l’accusatif ; Ich helfe ihr emploie le datif féminin. Le contexte aide à distinguer les formes identiques. Les possessifs dépendent du possesseur : mein, dein, sein, ihr, unser, euer, ihr, Ihr. Leur terminaison dépend ensuite du nom possédé et du cas : meine Schule, mein Buch, meinen Bruder, mit meiner Schwester. Le français son livre ne suffit pas : sein Buch signifie à lui, ihr Buch à elle, si les possesseurs sont des personnes au singulier. Pour euer, le e intérieur tombe souvent avec une terminaison : eure Schule.",
+      "task": "Travaille cette leçon sans regarder le corrigé. Réponds aux quatre activités, explique à voix haute la règle utilisée puis compare avec les réponses commentées. Refais seulement les points encore fragiles le lendemain."
+    },
+    {
+      "title": "10 · Nier avec nicht et kein",
+      "text": "Kein nie en particulier un groupe nominal qui aurait ein ou aucun article : Das ist ein Auto → Das ist kein Auto ; Ich habe Zeit → Ich habe keine Zeit. Il se décline : keinen Kaffee à l’accusatif masculin, mit keinem Auto au datif neutre. Pour nier un adjectif, un verbe ou un groupe déjà déterminé autrement, on utilise généralement nicht : Das ist nicht teuer. Ich kenne den Mann nicht. La place de nicht dépend de la portée de la négation. Ich fahre nicht heute, sondern morgen oppose les jours ; Ich fahre heute nicht nie le déplacement prévu. Avec plusieurs verbes, nicht précède souvent l’élément verbal final : Ich kann heute nicht kommen. Évite la règle trop simple toujours à la fin. Noch nicht signifie pas encore, nicht mehr ne… plus, nie jamais, niemand personne. Lis une négation en contexte pour comprendre ce qui est réellement nié.",
+      "task": "Travaille cette leçon sans regarder le corrigé. Réponds aux quatre activités, explique à voix haute la règle utilisée puis compare avec les réponses commentées. Refais seulement les points encore fragiles le lendemain."
+    },
+    {
+      "title": "11 · Particules séparables et verbes irréguliers",
+      "text": "Aufstehen, einkaufen et anrufen sont séparables. En principale au présent, la particule rejoint la fin : Ich stehe um sieben Uhr auf. Wir kaufen heute ein. Les autres éléments s’intercalent entre verbe et particule. Avec un modal, l’infinitif reste entier : Ich muss früh aufstehen. Be-, emp-, ent-, er-, ge-, miss-, ver- et zer- sont normalement inséparables : Ich besuche meine Tante ne coupe pas besuchen. Des verbes fréquents changent de voyelle avec du et er/sie/es : fahren → du fährst, er fährt ; lesen → du liest, sie liest ; sprechen → du sprichst. Ich et wir gardent généralement le radical de l’infinitif : ich fahre, wir lesen. Mémorise plusieurs formes ensemble : fahren, fährt, ist gefahren. Vérifie le dictionnaire en cas de doute : la présence d’une syllabe initiale ne prouve pas qu’elle soit une particule séparable.",
+      "task": "Travaille cette leçon sans regarder le corrigé. Réponds aux quatre activités, explique à voix haute la règle utilisée puis compare avec les réponses commentées. Refais seulement les points encore fragiles le lendemain."
+    },
+    {
+      "title": "12 · Pouvoir, devoir et vouloir",
+      "text": "Les principaux modaux sont können (savoir/pouvoir), müssen (devoir, nécessité), dürfen (avoir la permission), sollen (consigne/conseil), wollen (vouloir) et mögen (aimer). Möchten exprime un souhait poli. Plusieurs formes singulières n’ont pas de terminaison à ich et er : ich kann, er kann, ich muss, sie muss. Avec du : kannst, musst, darfst, sollst, willst. Les pluriels retrouvent souvent le radical de l’infinitif : wir können. Le modal conjugué est en deuxième position ; l’autre verbe est à l’infinitif final : Wir können morgen kommen. Du musst nicht kommen signifie tu n’es pas obligé de venir, tandis que Du darfst nicht kommen signifie tu n’as pas le droit de venir. La différence est essentielle. Pour proposer : Wir könnten online arbeiten. Pour demander poliment : Ich möchte einen Termin vereinbaren. Choisis le modal d’après la situation, pas seulement le mot français devoir.",
+      "task": "Travaille cette leçon sans regarder le corrigé. Réponds aux quatre activités, explique à voix haute la règle utilisée puis compare avec les réponses commentées. Refais seulement les points encore fragiles le lendemain."
+    },
+    {
+      "title": "13 · Situer et se déplacer",
+      "text": "Durch, für, gegen, ohne et um demandent l’accusatif ; aus, bei, mit, nach, seit, von et zu demandent le datif. Pour aller vers une ville sans article : nach Berlin ; chez une personne : zu meiner Freundin ; venir d’un lieu : aus der Schule. Les contractions sont courantes : zu dem → zum, zu der → zur, in dem → im, an dem → am. Mémorise ces constructions dans des phrases complètes. An, auf, hinter, in, neben, über, unter, vor et zwischen prennent datif pour situer l’événement, accusatif pour une destination ou un changement de localisation. Ich gehe im Park spazieren situe la promenade ; Ich gehe in den Park indique où l’on entre. Le seul fait de bouger ne suffit pas à choisir l’accusatif. Das Buch liegt auf dem Tisch décrit une position ; Ich lege das Buch auf den Tisch décrit un placement vers une destination.",
+      "task": "Travaille cette leçon sans regarder le corrigé. Réponds aux quatre activités, explique à voix haute la règle utilisée puis compare avec les réponses commentées. Refais seulement les points encore fragiles le lendemain."
+    },
+    {
+      "title": "14 · Adjectifs et comparaisons",
+      "text": "Après sein, l’adjectif attribut n’a pas de terminaison : Das Auto ist neu. Devant un nom, il se décline selon le déterminant, le genre, le nombre et le cas. Au nominatif : der neue Computer, ein neuer Computer, die neue Schule, das neue Buch. À l’accusatif masculin : den neuen Computer, einen neuen Computer. L’information grammaticale est portée par l’article et/ou l’adjectif ; on ne met donc pas toujours e. Le comparatif prend souvent -er : klein → kleiner, schnell → schneller. Certains mots changent de voyelle : groß → größer. Gut devient besser, viel devient mehr. On compare avec als : Dieser Computer ist schneller als der alte. L’égalité emploie so … wie : so teuer wie. Le superlatif attribut : am schnellsten, am besten. Pour une entreprise, sépare fait mesurable et jugement : günstiger, moins cher, n’implique pas automatiquement besser.",
+      "task": "Travaille cette leçon sans regarder le corrigé. Réponds aux quatre activités, explique à voix haute la règle utilisée puis compare avec les réponses commentées. Refais seulement les points encore fragiles le lendemain."
+    },
+    {
+      "title": "Interagir sans rester bloqué",
+      "text": "Écoute la question jusqu’au bout. Si tu ne comprends pas, demande de répéter ou de reformuler. Réponds brièvement puis ajoute un exemple et une question de relance. Pour un échange à distance, ne partage pas d’informations personnelles avec des inconnus ; privilégie les cadres scolaires et les services adaptés à ton âge.",
+      "task": "Avec un partenaire, alternez client et conseiller pendant deux minutes. Interdiction de lire un dialogue ; chacun doit poser au moins deux questions et demander une précision."
+    },
+    {
+      "title": "Routine de 20 minutes",
+      "text": "5 minutes : revoir cinq expressions sans regarder. 5 minutes : écouter un extrait court avec un objectif précis. 5 minutes : répéter puis enregistrer une réponse. 5 minutes : noter un progrès et une difficulté, et préparer la prochaine séance. Les jours chargés, garde une version de cinq minutes : trois expressions et une réponse enregistrée.",
+      "task": "Planifie quatre rendez-vous réalistes par semaine. Coche les séances réellement faites. Si tu rates un jour, reprends simplement au rendez-vous suivant, sans doubler artificiellement la charge."
+    },
+    {
+      "title": "Plan progressif sur quatre semaines",
+      "text": "Semaine 1 : présentation et demandes simples ; deux enregistrements de 30 secondes. Semaine 2 : raconter une journée ou une expérience ; trois réponses de 45 secondes. Semaine 3 : donner un avis et comparer deux possibilités ; un échange de deux minutes. Semaine 4 : présenter un projet et répondre à des questions ; bilan avec la première version. Adapte les durées : ce programme ne garantit pas un niveau CECRL en quatre semaines.",
+      "task": "Choisis un objectif observable par semaine : par exemple expliquer trois tâches de stage sans lire. Garde une trace datée et une difficulté à retravailler."
+    },
+    {
+      "title": "S’autoévaluer avec précision",
+      "text": "Sur une échelle de 1 à 4, observe : message compréhensible, organisation, vocabulaire utile, correction et interaction. 1 : besoin d’un modèle ; 2 : message possible avec aide ; 3 : autonomie sur une situation familière ; 4 : autonomie avec reformulations et réponses aux questions. Ce bilan personnel n’est ni une certification CECRL ni une note officielle.",
+      "task": "Enregistre le même sujet une semaine plus tard. Cite un exemple concret de progrès et une priorité. Vérifie les attentes exactes de ton devoir avec ton professeur."
+    }
+  ],
+  "resources": [
+    {
+      "title": "Deutsche Welle · Nicos Weg",
+      "url": "https://learngerman.dw.com/en/nicos-weg/c-36519789",
+      "kind": "video"
+    },
+    {
+      "title": "Deutsche Welle · Apprendre l’allemand",
+      "url": "https://www.dw.com/en/learn-german/s-2469",
+      "kind": "cours"
+    },
+    {
+      "title": "Duden · Dictionnaire allemand",
+      "url": "https://www.duden.de/",
+      "kind": "dictionnaire"
+    }
+  ],
+  "id": "de",
+  "lessons": [
+    {
+      "id": "de-lecon-01",
+      "title": "1 · Lire et prononcer",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "L’allemand utilise ä, ö, ü et ß. Les trémas changent la voyelle : schon et schön ne sont pas le même mot. ß note un son proche de ss ; il ne se remplace pas par B. Dans Straße, la voyelle avant ß est longue ; dans Klasse, elle est courte. Ces repères ne remplacent pas l’écoute. Au clavier, ae, oe, ue et ss peuvent dépanner, mais apprends aussi les caractères allemands.",
+        "Ei se lit comme dans mein, ie comme dans vier ; eu et äu ont le son de heute et Häuser. Le w de Wasser ressemble au v français ; le v de Vater se prononce f, mais les emprunts peuvent différer. Ch varie : ich et Buch n’ont pas le même son final. Les noms prennent une majuscule : das Haus, die Schule. L’accent porte souvent sur la première syllabe du radical, pas toujours du mot : besuchen accentue su. Écoute une phrase, répète-la puis compare ton enregistrement au modèle."
+      ],
+      "lexicon": [
+        {
+          "term": "schön",
+          "meaning": "beau / agréable"
+        },
+        {
+          "term": "die Straße",
+          "meaning": "la rue"
+        },
+        {
+          "term": "vier",
+          "meaning": "quatre"
+        },
+        {
+          "term": "heute",
+          "meaning": "aujourd’hui"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-02",
+      "title": "2 · Saluer et se présenter",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "Hallo convient aux échanges courants. Guten Morgen, Guten Tag et Guten Abend sont des salutations situées dans la journée. Pour prendre congé : Tschüss ou Auf Wiedersehen. Ich heiße Lina signifie je m’appelle Lina ; Ich bin Lina est aussi possible. Pour demander le prénom : Wie heißt du? Avec une personne que l’on vouvoie : Wie heißen Sie? Sie de politesse prend une majuscule et commande la forme verbale du pluriel.",
+        "Une présentation assemble des informations : Ich heiße Lina. Ich bin siebzehn Jahre alt. Ich komme aus Frankreich. Ich wohne in Lyon. Pour l’âge, emploie sein, pas haben. Aus exprime ici l’origine ; in le lieu d’habitation. Pour maintenir l’échange : Wie bitte? (Pardon ?), Können Sie das bitte wiederholen? (Pouvez-vous répéter ?). Réponds à la question posée puis pose une question simple, plutôt que de réciter une présentation entière."
+      ],
+      "lexicon": [
+        {
+          "term": "Guten Tag!",
+          "meaning": "Bonjour !"
+        },
+        {
+          "term": "Wie heißt du?",
+          "meaning": "Comment t’appelles-tu ?"
+        },
+        {
+          "term": "aus Frankreich",
+          "meaning": "de France"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-03",
+      "title": "3 · Articles, genre et pluriel",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "Chaque nom s’apprend avec son article et son pluriel : der Tisch, die Tische ; die Schule, die Schulen ; das Buch, die Bücher. Le genre ne se déduit pas du français. Der, die et das sont les articles définis du nominatif singulier. Au pluriel nominatif, die est commun aux trois genres. Certaines terminaisons aident : les noms en -ung sont féminins, comme die Ausbildung. Ces indices ne dispensent pas de mémoriser le nom entier.",
+        "Pour introduire un élément non identifié : ein Tisch, eine Schule, ein Buch. Il n’y a pas d’article indéfini pluriel : Bücher signifie des livres. Le pluriel peut changer la terminaison et la voyelle ; ne rajoute pas systématiquement s. Dans Das ist ein Buch, le groupe après ist reste au nominatif : sein relie deux désignations, il n’introduit pas un objet direct. Les articles changent ensuite selon la fonction du groupe : c’est le système des cas."
+      ],
+      "lexicon": [
+        {
+          "term": "der Tisch, die Tische",
+          "meaning": "la table, les tables"
+        },
+        {
+          "term": "das Buch, die Bücher",
+          "meaning": "le livre, les livres"
+        },
+        {
+          "term": "die Ausbildung",
+          "meaning": "la formation"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-04",
+      "title": "4 · Présent : sein, haben et verbes réguliers",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "Au présent, on retire -en à l’infinitif puis ajoute généralement -e, -st, -t, -en, -t, -en : ich lerne, du lernst, er lernt, wir lernen, ihr lernt, sie lernen. Sie peut désigner elle ou ils/elles : la conjugaison et le contexte guident la compréhension. Sie avec majuscule est le vouvoiement. Pour arbeiten, le radical finit en t : du arbeitest, er arbeitet, ihr arbeitet, avec un e facilitant la prononciation.",
+        "Sein et haben sont irréguliers. Sein : ich bin, du bist, er/sie/es ist, wir sind, ihr seid, sie/Sie sind. Haben : ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben. On dit Ich bin müde (je suis fatigué) mais Ich habe Zeit (j’ai du temps). Apprends les formes dans des phrases puis varie le sujet. Ne confonds pas seid, forme verbale, et seit, préposition signifiant depuis."
+      ],
+      "lexicon": [
+        {
+          "term": "lernen",
+          "meaning": "apprendre"
+        },
+        {
+          "term": "arbeiten",
+          "meaning": "travailler"
+        },
+        {
+          "term": "müde",
+          "meaning": "fatigué"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-05",
+      "title": "5 · Le verbe en deuxième position",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "Dans une déclarative simple, le verbe conjugué occupe la deuxième position : Ich lerne heute Deutsch. On compte des groupes, pas des mots : Heute Abend lerne ich Deutsch. Si l’on commence par le temps ou le lieu, le sujet vient généralement juste après le verbe. Cette inversion met une information en avant sans changer qui fait l’action. Deuxième position ne signifie donc pas forcément deuxième mot.",
+        "Une question oui/non commence par le verbe : Lernst du Deutsch? Avec un mot interrogatif : Wo wohnst du? Was lernst du? Warum lernst du Deutsch? Le mot interrogatif occupe la première position, le verbe la deuxième. Souligne le verbe conjugué et entoure le premier groupe pour t’autocorriger. Ne transpose pas l’ordre français Aujourd’hui je travaille : l’allemand demande Heute arbeite ich."
+      ],
+      "lexicon": [
+        {
+          "term": "heute",
+          "meaning": "aujourd’hui"
+        },
+        {
+          "term": "wo?",
+          "meaning": "où ?"
+        },
+        {
+          "term": "warum?",
+          "meaning": "pourquoi ?"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-06",
+      "title": "6 · Nombres, heure et rendez-vous",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "De 21 à 99, l’unité précède la dizaine : einundzwanzig, zweiunddreißig. Attention à sechzehn, siebzehn, dreißig et sechzig. Un numéro de téléphone peut être énoncé chiffre par chiffre. L’heure officielle utilise vierzehn Uhr dreißig pour 14 h 30. À l’oral, halb drei signifie 2 h 30, une demi-heure avant trois heures. Les usages des quarts varient régionalement : la forme officielle évite l’ambiguïté.",
+        "Pour une heure précise : um neun Uhr. Pour un jour : am Montag ; pour un mois : im Mai. Une durée utilise une autre construction : zwei Stunden, ou seit zwei Stunden pour une action commencée il y a deux heures et toujours en cours. Une date peut se dire der dritte Mai ou am dritten Mai selon sa fonction. Vérifie heure, jour et lieu : Der Termin ist am Montag um neun Uhr. Les jours et mois sont des noms et prennent la majuscule."
+      ],
+      "lexicon": [
+        {
+          "term": "einundzwanzig",
+          "meaning": "vingt et un"
+        },
+        {
+          "term": "halb drei",
+          "meaning": "deux heures et demie"
+        },
+        {
+          "term": "der Termin",
+          "meaning": "le rendez-vous"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-07",
+      "title": "7 · Nominatif et accusatif",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "Le nominatif marque notamment le sujet : Der Schüler liest. L’accusatif marque notamment l’objet direct : Der Schüler liest einen Text. Cherche qui fait l’action puis ce que l’action concerne. Au masculin, der devient den, ein devient einen. Au féminin, au neutre et au pluriel, l’article défini reste ici die, das, die. L’accusatif ne signifie ni personne ni chose : il dépend du rôle grammatical ou de la préposition.",
+        "Compare Der Lehrer sieht den Schüler et Den Lehrer sieht der Schüler. Les cas permettent de reconnaître qui voit qui, même si l’objet ouvre la phrase : dans la seconde, der Schüler est le sujet. Avec sein, l’attribut reste au nominatif : Er ist ein Lehrer. Certains verbes suivent une autre construction : helfen demande le datif, bien que le français dise aider quelqu’un. Apprends la construction entière plutôt que de traduire chaque mot séparément."
+      ],
+      "lexicon": [
+        {
+          "term": "der Schüler",
+          "meaning": "l’élève"
+        },
+        {
+          "term": "einen Text lesen",
+          "meaning": "lire un texte"
+        },
+        {
+          "term": "jemanden sehen",
+          "meaning": "voir quelqu’un"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-08",
+      "title": "8 · Datif et destinataire",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "Le datif apparaît notamment avec le destinataire et après certains verbes ou prépositions. Les articles définis sont dem (masculin/neutre), der (féminin), den (pluriel). Les indéfinis deviennent einem, einer, einem. Ich gebe der Lehrerin ein Buch : der Lehrerin est destinataire au datif ; ein Buch est l’objet donné à l’accusatif. Der n’est donc pas toujours un masculin : il est ici féminin.",
+        "Helfen, danken et gefallen se construisent avec le datif : Ich helfe dem Schüler. Au datif pluriel, le nom prend souvent n : mit den Kindern. Pas de n supplémentaire si le pluriel finit déjà en n ou s : mit den Frauen, mit den Autos. Mit exige le datif, même sans idée de destinataire. Associe article, nom et construction : mit einem Freund sprechen. Ne choisis pas un cas seulement d’après la traduction française."
+      ],
+      "lexicon": [
+        {
+          "term": "jemandem helfen",
+          "meaning": "aider quelqu’un"
+        },
+        {
+          "term": "geben",
+          "meaning": "donner"
+        },
+        {
+          "term": "mit einem Freund",
+          "meaning": "avec un ami"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-09",
+      "title": "9 · Pronoms et possessifs",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "Les pronoms changent de cas : ich/mich/mir, du/dich/dir, er/ihn/ihm, sie/sie/ihr, es/es/ihm, wir/uns/uns, ihr/euch/euch, sie/sie/ihnen. L’ordre donné est nominatif, accusatif, datif. La politesse donne Sie/Sie/Ihnen. Ich sehe ihn remplace un objet masculin à l’accusatif ; Ich helfe ihr emploie le datif féminin. Le contexte aide à distinguer les formes identiques.",
+        "Les possessifs dépendent du possesseur : mein, dein, sein, ihr, unser, euer, ihr, Ihr. Leur terminaison dépend ensuite du nom possédé et du cas : meine Schule, mein Buch, meinen Bruder, mit meiner Schwester. Le français son livre ne suffit pas : sein Buch signifie à lui, ihr Buch à elle, si les possesseurs sont des personnes au singulier. Pour euer, le e intérieur tombe souvent avec une terminaison : eure Schule."
+      ],
+      "lexicon": [
+        {
+          "term": "mich / mir",
+          "meaning": "me à l’accusatif / au datif"
+        },
+        {
+          "term": "mein Buch",
+          "meaning": "mon livre"
+        },
+        {
+          "term": "Ihre Frage",
+          "meaning": "votre question, politesse"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-10",
+      "title": "10 · Nier avec nicht et kein",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "Kein nie en particulier un groupe nominal qui aurait ein ou aucun article : Das ist ein Auto → Das ist kein Auto ; Ich habe Zeit → Ich habe keine Zeit. Il se décline : keinen Kaffee à l’accusatif masculin, mit keinem Auto au datif neutre. Pour nier un adjectif, un verbe ou un groupe déjà déterminé autrement, on utilise généralement nicht : Das ist nicht teuer. Ich kenne den Mann nicht.",
+        "La place de nicht dépend de la portée de la négation. Ich fahre nicht heute, sondern morgen oppose les jours ; Ich fahre heute nicht nie le déplacement prévu. Avec plusieurs verbes, nicht précède souvent l’élément verbal final : Ich kann heute nicht kommen. Évite la règle trop simple toujours à la fin. Noch nicht signifie pas encore, nicht mehr ne… plus, nie jamais, niemand personne. Lis une négation en contexte pour comprendre ce qui est réellement nié."
+      ],
+      "lexicon": [
+        {
+          "term": "kein Auto",
+          "meaning": "pas de voiture"
+        },
+        {
+          "term": "noch nicht",
+          "meaning": "pas encore"
+        },
+        {
+          "term": "nicht mehr",
+          "meaning": "ne… plus"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-11",
+      "title": "11 · Particules séparables et verbes irréguliers",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "Aufstehen, einkaufen et anrufen sont séparables. En principale au présent, la particule rejoint la fin : Ich stehe um sieben Uhr auf. Wir kaufen heute ein. Les autres éléments s’intercalent entre verbe et particule. Avec un modal, l’infinitif reste entier : Ich muss früh aufstehen. Be-, emp-, ent-, er-, ge-, miss-, ver- et zer- sont normalement inséparables : Ich besuche meine Tante ne coupe pas besuchen.",
+        "Des verbes fréquents changent de voyelle avec du et er/sie/es : fahren → du fährst, er fährt ; lesen → du liest, sie liest ; sprechen → du sprichst. Ich et wir gardent généralement le radical de l’infinitif : ich fahre, wir lesen. Mémorise plusieurs formes ensemble : fahren, fährt, ist gefahren. Vérifie le dictionnaire en cas de doute : la présence d’une syllabe initiale ne prouve pas qu’elle soit une particule séparable."
+      ],
+      "lexicon": [
+        {
+          "term": "aufstehen",
+          "meaning": "se lever"
+        },
+        {
+          "term": "anrufen",
+          "meaning": "appeler par téléphone"
+        },
+        {
+          "term": "sprechen",
+          "meaning": "parler"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-12",
+      "title": "12 · Pouvoir, devoir et vouloir",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "Les principaux modaux sont können (savoir/pouvoir), müssen (devoir, nécessité), dürfen (avoir la permission), sollen (consigne/conseil), wollen (vouloir) et mögen (aimer). Möchten exprime un souhait poli. Plusieurs formes singulières n’ont pas de terminaison à ich et er : ich kann, er kann, ich muss, sie muss. Avec du : kannst, musst, darfst, sollst, willst. Les pluriels retrouvent souvent le radical de l’infinitif : wir können.",
+        "Le modal conjugué est en deuxième position ; l’autre verbe est à l’infinitif final : Wir können morgen kommen. Du musst nicht kommen signifie tu n’es pas obligé de venir, tandis que Du darfst nicht kommen signifie tu n’as pas le droit de venir. La différence est essentielle. Pour proposer : Wir könnten online arbeiten. Pour demander poliment : Ich möchte einen Termin vereinbaren. Choisis le modal d’après la situation, pas seulement le mot français devoir."
+      ],
+      "lexicon": [
+        {
+          "term": "können",
+          "meaning": "pouvoir / savoir faire"
+        },
+        {
+          "term": "dürfen",
+          "meaning": "avoir le droit"
+        },
+        {
+          "term": "müssen",
+          "meaning": "devoir par nécessité"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-13",
+      "title": "13 · Situer et se déplacer",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "Durch, für, gegen, ohne et um demandent l’accusatif ; aus, bei, mit, nach, seit, von et zu demandent le datif. Pour aller vers une ville sans article : nach Berlin ; chez une personne : zu meiner Freundin ; venir d’un lieu : aus der Schule. Les contractions sont courantes : zu dem → zum, zu der → zur, in dem → im, an dem → am. Mémorise ces constructions dans des phrases complètes.",
+        "An, auf, hinter, in, neben, über, unter, vor et zwischen prennent datif pour situer l’événement, accusatif pour une destination ou un changement de localisation. Ich gehe im Park spazieren situe la promenade ; Ich gehe in den Park indique où l’on entre. Le seul fait de bouger ne suffit pas à choisir l’accusatif. Das Buch liegt auf dem Tisch décrit une position ; Ich lege das Buch auf den Tisch décrit un placement vers une destination."
+      ],
+      "lexicon": [
+        {
+          "term": "im Park",
+          "meaning": "dans le parc, localisation"
+        },
+        {
+          "term": "in den Park",
+          "meaning": "dans le parc, destination"
+        },
+        {
+          "term": "zum Bahnhof",
+          "meaning": "à la gare, destination"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-14",
+      "title": "14 · Adjectifs et comparaisons",
+      "part": "Bases et communication",
+      "paragraphs": [
+        "Après sein, l’adjectif attribut n’a pas de terminaison : Das Auto ist neu. Devant un nom, il se décline selon le déterminant, le genre, le nombre et le cas. Au nominatif : der neue Computer, ein neuer Computer, die neue Schule, das neue Buch. À l’accusatif masculin : den neuen Computer, einen neuen Computer. L’information grammaticale est portée par l’article et/ou l’adjectif ; on ne met donc pas toujours e.",
+        "Le comparatif prend souvent -er : klein → kleiner, schnell → schneller. Certains mots changent de voyelle : groß → größer. Gut devient besser, viel devient mehr. On compare avec als : Dieser Computer ist schneller als der alte. L’égalité emploie so … wie : so teuer wie. Le superlatif attribut : am schnellsten, am besten. Pour une entreprise, sépare fait mesurable et jugement : günstiger, moins cher, n’implique pas automatiquement besser."
+      ],
+      "lexicon": [
+        {
+          "term": "schneller als",
+          "meaning": "plus rapide que"
+        },
+        {
+          "term": "so teuer wie",
+          "meaning": "aussi cher que"
+        },
+        {
+          "term": "am besten",
+          "meaning": "le mieux"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-15",
+      "title": "15 · Raconter au Perfekt",
+      "part": "Vers l’autonomie et la STMG",
+      "paragraphs": [
+        "Le Perfekt est très utilisé pour raconter un événement passé à l’oral. Il associe haben ou sein au présent et un participe passé final : Ich habe Deutsch gelernt. Pour un verbe régulier, le participe se forme souvent avec ge- et -t : machen → gemacht, lernen → gelernt. Les radicaux en d/t ajoutent e : arbeiten → gearbeitet. Les verbes en -ieren n’ajoutent pas ge- : telefonieren → telefoniert.",
+        "Les participes irréguliers s’apprennent : sehen → gesehen, schreiben → geschrieben. Les verbes séparables insèrent souvent ge : einkaufen → eingekauft ; les inséparables n’en prennent pas : besuchen → besucht. Sein accompagne notamment des changements de lieu ou d’état sans objet direct : Ich bin nach Berlin gefahren. Mais fahren avec un objet peut employer haben : Ich habe das Auto gefahren. Apprends l’auxiliaire avec le sens et la construction. Sein lui-même donne Ich bin gewesen."
+      ],
+      "lexicon": [
+        {
+          "term": "hat gelernt",
+          "meaning": "a appris"
+        },
+        {
+          "term": "ist gefahren",
+          "meaning": "est allé en véhicule"
+        },
+        {
+          "term": "hat gearbeitet",
+          "meaning": "a travaillé"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-16",
+      "title": "16 · Präteritum, passé et projets",
+      "part": "Vers l’autonomie et la STMG",
+      "paragraphs": [
+        "Le Präteritum est fréquent dans les récits écrits. Sein et haben s’utilisent aussi très souvent ainsi à l’oral : ich war, du warst, er war, wir waren ; ich hatte, du hattest, sie hatte, wir hatten. Les modaux courants donnent konnte, musste, durfte, wollte. Pour un verbe régulier : ich lernte, du lerntest, wir lernten. Les irréguliers changent de radical : gehen → ging, kommen → kam. Ne fabrique pas ces formes en ajoutant toujours -te.",
+        "Pour parler d’un projet futur, le présent avec un repère temporel suffit souvent : Morgen besuche ich meine Freundin. Le Futur I ajoute werden et l’infinitif final : Ich werde morgen lernen. Werden se conjugue ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden. Cette construction peut aussi exprimer une prévision ou une supposition. Pour raconter clairement, choisis d’abord les repères gestern, letzte Woche, morgen, nächstes Jahr, puis garde des temps cohérents."
+      ],
+      "lexicon": [
+        {
+          "term": "gestern",
+          "meaning": "hier"
+        },
+        {
+          "term": "ich war",
+          "meaning": "j’étais / j’ai été"
+        },
+        {
+          "term": "morgen",
+          "meaning": "demain"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-17",
+      "title": "17 · Relier avec weil, dass, wenn et obwohl",
+      "part": "Vers l’autonomie et la STMG",
+      "paragraphs": [
+        "Und, aber et oder coordonnent des groupes ou propositions sans imposer le verbe final : Ich lerne Deutsch und meine Schwester lernt Italienisch. Weil, dass, wenn et obwohl introduisent au contraire des subordonnées dont le verbe conjugué va à la fin : Ich lerne Deutsch, weil ich in Berlin arbeiten möchte. L’infinitif arbeiten précède ici le modal conjugué möchte. Une virgule sépare la subordonnée de la principale.",
+        "Weil donne une cause ; dass rapporte une idée ; wenn introduit une condition ou une situation répétée ; obwohl exprime la concession. Si la subordonnée ouvre la phrase, elle occupe la première position de la principale : Wenn ich Zeit habe, lerne ich Deutsch. Le verbe lerne vient donc juste après la virgule. Pour un événement unique passé, als est souvent nécessaire : Als ich in Berlin war, … ; ne traduis pas tous les quand par wenn."
+      ],
+      "lexicon": [
+        {
+          "term": "weil",
+          "meaning": "parce que"
+        },
+        {
+          "term": "dass",
+          "meaning": "que"
+        },
+        {
+          "term": "obwohl",
+          "meaning": "bien que / même si"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-18",
+      "title": "18 · Conseiller et demander poliment",
+      "part": "Vers l’autonomie et la STMG",
+      "paragraphs": [
+        "Le Konjunktiv II sert notamment à la politesse, aux conseils et aux hypothèses. Formes fréquentes : ich hätte (j’aurais), ich wäre (je serais), ich könnte (je pourrais), ich müsste (je devrais par nécessité). Würde avec un infinitif permet de construire beaucoup d’autres formes : Ich würde gern in Berlin arbeiten. Möchte est courant pour un souhait poli. Ces formulations n’annoncent pas nécessairement un fait certain.",
+        "Pour conseiller : Du solltest regelmäßig üben. Pour demander : Könnten Sie mir bitte helfen? Pour une hypothèse : Wenn ich mehr Zeit hätte, würde ich jeden Tag Deutsch sprechen. Hätte termine la subordonnée ; würde occupe la deuxième position de la principale, sprechen sa fin. Distingue conseil et obligation : solltest est souvent moins impératif que musst. Dans un message professionnel, ajoute une formule de salutation et indique précisément ce que tu demandes."
+      ],
+      "lexicon": [
+        {
+          "term": "Könnten Sie…?",
+          "meaning": "Pourriez-vous… ?"
+        },
+        {
+          "term": "ich hätte gern",
+          "meaning": "je souhaiterais / je voudrais"
+        },
+        {
+          "term": "Du solltest…",
+          "meaning": "Tu devrais…, conseil"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-19",
+      "title": "19 · Génitif et relatives : premiers repères",
+      "part": "Vers l’autonomie et la STMG",
+      "paragraphs": [
+        "Le génitif peut exprimer une relation : die Strategie des Unternehmens, la stratégie de l’entreprise. Les articles sont des au masculin/neutre, der au féminin/pluriel. Les noms masculins/neutres prennent souvent -(e)s : des Unternehmens, des Lehrers. Certains masculins suivent une déclinaison particulière en -(e)n, comme des Studenten. À l’oral, von avec datif est fréquent : die Strategie von diesem Unternehmen ; dans un écrit formel, le génitif reste utile.",
+        "Une relative précise un nom : Das ist die Firma, die Fahrräder verkauft. Le relatif dépend en genre et nombre du nom repris, mais son cas dépend de sa fonction dans la relative. Dans der Mann, den ich sehe, den est objet de sehe ; dans der Mann, der hier arbeitet, der est sujet. Le verbe conjugué est final et les virgules encadrent la relative. Au datif : die Frau, der ich helfe. Ne choisis donc pas le cas en recopiant l’article de la principale."
+      ],
+      "lexicon": [
+        {
+          "term": "des Unternehmens",
+          "meaning": "de l’entreprise, génitif"
+        },
+        {
+          "term": "die Firma",
+          "meaning": "l’entreprise"
+        },
+        {
+          "term": "der Mann, den ich sehe",
+          "meaning": "l’homme que je vois"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-20",
+      "title": "20 · Acheter, commander et demander son chemin",
+      "part": "Vers l’autonomie et la STMG",
+      "paragraphs": [
+        "Pour commander : Ich hätte gern ein Wasser und einen Kaffee. Wasser est neutre ; Kaffee masculin prend einen à l’accusatif. Pour un prix : Wie viel kostet das? Pour payer : Kann ich mit Karte bezahlen? Les prix écrits utilisent habituellement la virgule décimale : 3,50 Euro. Lis attentivement les unités et la quantité ; un prix au kilogramme n’est pas le prix total. Une formule polie et précise vaut mieux qu’une phrase complexe mal maîtrisée.",
+        "Pour se repérer : Entschuldigung, wo ist der Bahnhof? Gehen Sie geradeaus, dann links. Die Apotheke ist neben der Bank. Demande confirmation : Ist das weit? Wie lange dauert es zu Fuß? Dans un échange, vérifie ce qui est compris : Also, zuerst geradeaus und dann rechts? En restaurant, une allergie exige une question explicite, par exemple Enthält das Gericht Nüsse? Ne déduis pas la composition d’un plat de son seul nom."
+      ],
+      "lexicon": [
+        {
+          "term": "mit Karte bezahlen",
+          "meaning": "payer par carte"
+        },
+        {
+          "term": "geradeaus",
+          "meaning": "tout droit"
+        },
+        {
+          "term": "links / rechts",
+          "meaning": "à gauche / à droite"
+        },
+        {
+          "term": "die Nüsse",
+          "meaning": "les fruits à coque"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-21",
+      "title": "21 · Études, stage et candidature",
+      "part": "Vers l’autonomie et la STMG",
+      "paragraphs": [
+        "Présente ta formation sans prétendre qu’elle équivaut exactement à un diplôme allemand : Ich besuche eine französische Schule und bereite mich auf das technologische Abitur STMG vor. Puis explique la spécialité avec des mots accessibles : Wirtschaft, Management und Recht. Pour un stage : Ich suche ein Praktikum im Bereich Marketing. Donne dates, durée et compétences utiles ; évite une liste d’adjectifs sans preuve.",
+        "Un courriel formel peut commencer par Sehr geehrte Frau Müller ou Sehr geehrter Herr Müller, puis la phrase suivante commence normalement par une minuscule après la virgule. Exemple : ich interessiere mich für ein Praktikum in Ihrem Unternehmen. Termine par Mit freundlichen Grüßen, sans virgule finale. Ajoute un objet clair et vérifie les pièces jointes : Im Anhang finden Sie meinen Lebenslauf. N’invente ni expérience ni certification ; donne un exemple réel de travail en équipe ou d’outil maîtrisé."
+      ],
+      "lexicon": [
+        {
+          "term": "das Praktikum",
+          "meaning": "le stage"
+        },
+        {
+          "term": "der Lebenslauf",
+          "meaning": "le CV"
+        },
+        {
+          "term": "im Anhang",
+          "meaning": "en pièce jointe"
+        },
+        {
+          "term": "sich interessieren für",
+          "meaning": "s’intéresser à"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-22",
+      "title": "22 · Présenter une entreprise en ETLV",
+      "part": "Vers l’autonomie et la STMG",
+      "paragraphs": [
+        "Une présentation commence par les faits du document : nom, siège, secteur, activité, clients et taille. Das Unternehmen hat seinen Sitz in Hamburg. Es stellt Fahrräder her. Es beschäftigt fünfzig Personen. Herstellen est séparable : stellt … her. Une entreprise fabrique, produit ou vend selon le cas ; ne confonds pas produit et client. Distingue chiffre d’affaires, der Umsatz, et bénéfice, der Gewinn. Un chiffre d’affaires élevé ne garantit pas un bénéfice élevé.",
+        "Document d’entraînement fictif : Die Firma NordRad hat ihren Sitz in Hamburg. Sie stellt Fahrräder her und verkauft sie online. Sie beschäftigt 50 Personen. 2025 beträgt ihr Umsatz vier Millionen Euro. Der Gewinn beträgt zweihunderttausend Euro. Analyse seulement ces informations : il n’y a pas de données sur les années précédentes ni de preuve de croissance. Pour l’oral, organise : Zuerst stelle ich die Firma vor. Dann beschreibe ich ihre Tätigkeit. Zum Schluss erkläre ich eine Herausforderung."
+      ],
+      "lexicon": [
+        {
+          "term": "der Umsatz",
+          "meaning": "le chiffre d’affaires"
+        },
+        {
+          "term": "der Gewinn",
+          "meaning": "le bénéfice"
+        },
+        {
+          "term": "herstellen",
+          "meaning": "fabriquer"
+        },
+        {
+          "term": "beschäftigen",
+          "meaning": "employer"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-23",
+      "title": "23 · Marketing, prix et argumentation",
+      "part": "Vers l’autonomie et la STMG",
+      "paragraphs": [
+        "Décrire une offre nécessite un produit, un public et une proposition de valeur : Unsere Zielgruppe sind junge Erwachsene. Das Produkt ist langlebig und reparierbar. Die Werbung richtet sich an Studierende. Un argument doit relier une caractéristique à un besoin concret ; meilleur pour tout le monde est rarement démontré. Le prix se dit der Preis, les coûts die Kosten. Une marge n’est ni un prix ni un chiffre d’affaires.",
+        "Pour donner son avis : Meiner Meinung nach ist der Preis zu hoch. Ich finde das Angebot interessant, weil es eine Reparatur einschließt. Présente aussi une limite : Einerseits ist das Produkt günstig, andererseits ist die Lieferung langsam. Avec einerseits/andererseits en tête, le verbe conjugué garde sa deuxième position. Appuie ton jugement sur le document et distingue information publicitaire et preuve indépendante. Les formes eventuell et aktuell sont des faux amis : éventuellement/peut-être et actuel, pas éventuellement et réellement."
+      ],
+      "lexicon": [
+        {
+          "term": "die Zielgruppe",
+          "meaning": "le public cible"
+        },
+        {
+          "term": "die Werbung",
+          "meaning": "la publicité"
+        },
+        {
+          "term": "langlebig",
+          "meaning": "durable, de longue durée"
+        },
+        {
+          "term": "die Kosten",
+          "meaning": "les coûts"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-24",
+      "title": "24 · Numérique, environnement et esprit critique",
+      "part": "Vers l’autonomie et la STMG",
+      "paragraphs": [
+        "Pour traiter le numérique : die Daten, der Datenschutz, das Passwort, die künstliche Intelligenz. Die Firma schützt die Daten ihrer Kunden signifie que l’entreprise protège les données de ses clients. Une affirmation sur la sécurité demande une source et un contexte ; aucun outil n’est automatiquement sans risque. Pour comparer des usages, décris les bénéfices et les limites : KI kann Zeit sparen, aber ihre Antworten können Fehler enthalten.",
+        "Pour l’environnement : Energie sparen, Abfall vermeiden, Produkte reparieren, öffentliche Verkehrsmittel nutzen. Nachhaltig peut décrire une démarche durable, mais il faut préciser les critères : matières, énergie, transport, durée de vie. Document fictif : Unsere Schule repariert alte Computer. Dadurch kauft sie weniger neue Geräte. Die Stromkosten sind aber noch nicht gemessen worden. On peut conclure qu’elle réemploie des appareils, pas qu’une baisse de consommation électrique est déjà prouvée. Sépare action, objectif et résultat mesuré."
+      ],
+      "lexicon": [
+        {
+          "term": "der Datenschutz",
+          "meaning": "la protection des données"
+        },
+        {
+          "term": "Energie sparen",
+          "meaning": "économiser l’énergie"
+        },
+        {
+          "term": "reparieren",
+          "meaning": "réparer"
+        },
+        {
+          "term": "die Quelle",
+          "meaning": "la source"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    },
+    {
+      "id": "de-lecon-25",
+      "title": "25 · Lire un document et préparer un oral",
+      "part": "Vers l’autonomie et la STMG",
+      "paragraphs": [
+        "Avant de lire en détail, identifie type, auteur, date et objectif. Une annonce vend, un témoignage raconte, un graphique présente des données. Survole titre et structure, puis relève trois informations vérifiables. Attention aux faux amis : bekommen signifie recevoir, pas devenir ; werden signifie devenir ou sert d’auxiliaire ; eventuell signifie peut-être ; aktuell signifie actuel. Ne traduis pas mot à mot un terme dont la phrase donne un autre sens.",
+        "Pour un oral de deux minutes, prépare quatre blocs : présenter le document, expliquer l’idée principale, citer un exemple précis, donner un avis motivé. Formules : Das Dokument handelt von … ; Im Text steht, dass … ; Ein Beispiel dafür ist … ; Ich bin der Meinung, dass … . Écris des mots-clés, pas un texte à réciter. À la fin, vérifie la fidélité au document, l’ordre des verbes et une difficulté de prononciation. Les erreurs servent à choisir la prochaine séance ; vise d’abord une communication compréhensible."
+      ],
+      "lexicon": [
+        {
+          "term": "Das Dokument handelt von…",
+          "meaning": "Le document traite de…"
+        },
+        {
+          "term": "bekommen",
+          "meaning": "recevoir"
+        },
+        {
+          "term": "aktuell",
+          "meaning": "actuel"
+        },
+        {
+          "term": "zum Schluss",
+          "meaning": "pour finir"
+        }
+      ],
+      "origin": "Création pédagogique RévizSTMG · allemand"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "de-ex-001",
+      "lessonId": "de-lecon-01",
+      "unit": "Lire et prononcer",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Quelle paire distingue deux voyelles différentes ?",
+      "choices": [
+        "Haus / Haus",
+        "vier / vier",
+        "schon / schön"
+      ],
+      "answer": "schon / schön",
+      "explanation": "Le tréma de ö modifie la voyelle : schon signifie déjà, schön beau.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-002",
+      "lessonId": "de-lecon-01",
+      "unit": "Lire et prononcer",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Quelle graphie respecte la majuscule du nom ?",
+      "choices": [
+        "Die schule",
+        "die Schule",
+        "die schule"
+      ],
+      "answer": "die Schule",
+      "explanation": "Schule est un nom allemand ; sa première lettre est une majuscule.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-003",
+      "lessonId": "de-lecon-01",
+      "unit": "Lire et prononcer",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Quel groupe vocalique trouve-t-on dans mein ?",
+      "choices": [
+        "ei",
+        "ie",
+        "eu"
+      ],
+      "answer": "ei",
+      "explanation": "Ei forme une diphtongue, différente du ie de vier.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-004",
+      "lessonId": "de-lecon-01",
+      "unit": "Lire et prononcer",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Écris « la rue » avec les caractères allemands.",
+      "choices": [],
+      "answer": "die Straße",
+      "explanation": "Straße garde sa majuscule et utilise ß ; mémorise le nom avec son article.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-005",
+      "lessonId": "de-lecon-02",
+      "unit": "Saluer et se présenter",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Complète : Ich … siebzehn Jahre alt.",
+      "choices": [
+        "ist",
+        "bin",
+        "habe"
+      ],
+      "answer": "bin",
+      "explanation": "L’âge se construit avec sein : ich bin … Jahre alt.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-006",
+      "lessonId": "de-lecon-02",
+      "unit": "Saluer et se présenter",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Choisis le vouvoiement correct.",
+      "choices": [
+        "Wie heißen Sie?",
+        "Wie heißt Sie?",
+        "Wie heißen du?"
+      ],
+      "answer": "Wie heißen Sie?",
+      "explanation": "Sie prend une majuscule et heißen, comme la troisième personne du pluriel.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-007",
+      "lessonId": "de-lecon-02",
+      "unit": "Saluer et se présenter",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Je m’appelle Lina.",
+      "choices": [],
+      "answer": "Ich heiße Lina.",
+      "explanation": "Heißen donne le nom ; avec ich, la forme est heiße. Ich bin Lina est également naturel.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-008",
+      "lessonId": "de-lecon-02",
+      "unit": "Saluer et se présenter",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Demande poliment de répéter en vouvoyant.",
+      "choices": [],
+      "answer": "Können Sie das bitte wiederholen?",
+      "explanation": "Können Sie introduit la demande ; wiederholen reste à l’infinitif final.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-009",
+      "lessonId": "de-lecon-03",
+      "unit": "Articles, genre et pluriel",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Quel est l’article défini du nominatif pluriel ?",
+      "choices": [
+        "die",
+        "das",
+        "ein"
+      ],
+      "answer": "die",
+      "explanation": "Die est commun aux trois genres au nominatif pluriel.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-010",
+      "lessonId": "de-lecon-03",
+      "unit": "Articles, genre et pluriel",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Complète : Das ist … Schule.",
+      "choices": [
+        "ein",
+        "einen",
+        "eine"
+      ],
+      "answer": "eine",
+      "explanation": "Schule est féminin ; l’indéfini nominatif est eine.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-011",
+      "lessonId": "de-lecon-03",
+      "unit": "Articles, genre et pluriel",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Mets das Buch au pluriel avec l’article défini.",
+      "choices": [],
+      "answer": "die Bücher",
+      "explanation": "Buch devient Bücher, avec un tréma et -er ; l’article pluriel est die.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-012",
+      "lessonId": "de-lecon-03",
+      "unit": "Articles, genre et pluriel",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Ce sont des livres.",
+      "choices": [],
+      "answer": "Das sind Bücher.",
+      "explanation": "L’indéfini pluriel n’a pas d’article ; le verbe est sind.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-013",
+      "lessonId": "de-lecon-04",
+      "unit": "Présent : sein, haben et verbes réguliers",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Complète : Wir … Deutsch.",
+      "choices": [
+        "lernt",
+        "lernst",
+        "lernen"
+      ],
+      "answer": "lernen",
+      "explanation": "Avec wir, le présent prend -en.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-014",
+      "lessonId": "de-lecon-04",
+      "unit": "Présent : sein, haben et verbes réguliers",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Complète : Du … heute.",
+      "choices": [
+        "arbeiten",
+        "arbeitest",
+        "arbeitet"
+      ],
+      "answer": "arbeitest",
+      "explanation": "Le radical arbeit- ajoute e avant -st.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-015",
+      "lessonId": "de-lecon-04",
+      "unit": "Présent : sein, haben et verbes réguliers",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Nous avons du temps.",
+      "choices": [],
+      "answer": "Wir haben Zeit.",
+      "explanation": "Haben s’accorde avec wir ; Zeit s’emploie ici sans article.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-016",
+      "lessonId": "de-lecon-04",
+      "unit": "Présent : sein, haben et verbes réguliers",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Conjugue sein avec ihr.",
+      "choices": [],
+      "answer": "ihr seid",
+      "explanation": "Seid est la deuxième personne du pluriel ; sind correspond à wir/sie/Sie.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-017",
+      "lessonId": "de-lecon-05",
+      "unit": "Le verbe en deuxième position",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Choisis la phrase correcte.",
+      "choices": [
+        "Heute Deutsch ich lerne.",
+        "Heute lerne ich Deutsch.",
+        "Heute ich lerne Deutsch."
+      ],
+      "answer": "Heute lerne ich Deutsch.",
+      "explanation": "Heute est le premier groupe ; lerne vient en deuxième position.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-018",
+      "lessonId": "de-lecon-05",
+      "unit": "Le verbe en deuxième position",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Choisis la question oui/non correctement construite.",
+      "choices": [
+        "Hast du Zeit?",
+        "Was du hast Zeit?",
+        "Hast Zeit du?"
+      ],
+      "answer": "Hast du Zeit?",
+      "explanation": "Une question totale place le verbe conjugué en première position.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-019",
+      "lessonId": "de-lecon-05",
+      "unit": "Le verbe en deuxième position",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Réordonne : morgen / wir / arbeiten.",
+      "choices": [],
+      "answer": "Morgen arbeiten wir.",
+      "explanation": "Morgen ouvre la phrase, puis viennent arbeiten et le sujet wir.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-020",
+      "lessonId": "de-lecon-05",
+      "unit": "Le verbe en deuxième position",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Demande où une personne habite en la tutoyant.",
+      "choices": [],
+      "answer": "Wo wohnst du?",
+      "explanation": "Wo interroge sur le lieu ; wohnst est la forme avec du.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-021",
+      "lessonId": "de-lecon-06",
+      "unit": "Nombres, heure et rendez-vous",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Que signifie halb drei ?",
+      "choices": [
+        "2 h 30",
+        "3 h 30",
+        "3 h 15"
+      ],
+      "answer": "2 h 30",
+      "explanation": "Halb annonce l’heure qui suit : une demi-heure avant trois heures.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-022",
+      "lessonId": "de-lecon-06",
+      "unit": "Nombres, heure et rendez-vous",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Complète : … Montag um neun Uhr.",
+      "choices": [
+        "im",
+        "um",
+        "am"
+      ],
+      "answer": "am",
+      "explanation": "Am situe un événement un jour donné.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-023",
+      "lessonId": "de-lecon-06",
+      "unit": "Nombres, heure et rendez-vous",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Écris 24 en toutes lettres.",
+      "choices": [],
+      "answer": "vierundzwanzig",
+      "explanation": "L’unité vier précède und et la dizaine zwanzig.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-024",
+      "lessonId": "de-lecon-06",
+      "unit": "Nombres, heure et rendez-vous",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Le rendez-vous est à 14 h 30.",
+      "choices": [],
+      "answer": "Der Termin ist um vierzehn Uhr dreißig.",
+      "explanation": "Um indique une heure précise ; la forme officielle évite l’ambiguïté.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-025",
+      "lessonId": "de-lecon-07",
+      "unit": "Nominatif et accusatif",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Complète : Ich lese … Text. (der Text)",
+      "choices": [
+        "ein",
+        "einem",
+        "einen"
+      ],
+      "answer": "einen",
+      "explanation": "Text est masculin et objet de lese ; ein devient einen.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-026",
+      "lessonId": "de-lecon-07",
+      "unit": "Nominatif et accusatif",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Dans Den Lehrer sieht der Schüler, qui voit ?",
+      "choices": [
+        "les deux ensemble",
+        "der Schüler",
+        "den Lehrer"
+      ],
+      "answer": "der Schüler",
+      "explanation": "Le sujet est der Schüler au nominatif ; den Lehrer est l’objet.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-027",
+      "lessonId": "de-lecon-07",
+      "unit": "Nominatif et accusatif",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Je vois le professeur. (der Lehrer)",
+      "choices": [],
+      "answer": "Ich sehe den Lehrer.",
+      "explanation": "Der Lehrer devient den Lehrer à l’accusatif.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-028",
+      "lessonId": "de-lecon-07",
+      "unit": "Nominatif et accusatif",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Complète : Er ist … Lehrer.",
+      "choices": [],
+      "answer": "ein",
+      "explanation": "L’attribut après sein reste au nominatif ; on emploie ein.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-029",
+      "lessonId": "de-lecon-08",
+      "unit": "Datif et destinataire",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Complète : Ich helfe … Schüler.",
+      "choices": [
+        "der",
+        "dem",
+        "den"
+      ],
+      "answer": "dem",
+      "explanation": "Helfen régit le datif ; l’article masculin est dem.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-030",
+      "lessonId": "de-lecon-08",
+      "unit": "Datif et destinataire",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Complète : mit den … (die Kinder)",
+      "choices": [
+        "Kindern",
+        "Kinder",
+        "Kind"
+      ],
+      "answer": "Kindern",
+      "explanation": "Kinder ajoute n au datif pluriel.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-031",
+      "lessonId": "de-lecon-08",
+      "unit": "Datif et destinataire",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Je donne un livre à la professeure.",
+      "choices": [],
+      "answer": "Ich gebe der Lehrerin ein Buch.",
+      "explanation": "La destinataire est au datif der Lehrerin ; Buch reste à l’accusatif neutre.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-032",
+      "lessonId": "de-lecon-08",
+      "unit": "Datif et destinataire",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Explique la forme der dans mit der Lehrerin.",
+      "choices": [],
+      "answer": "Der est l’article féminin au datif.",
+      "explanation": "Mit impose le datif ; Lehrerin est féminin. Le cas explique la forme der.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-033",
+      "lessonId": "de-lecon-09",
+      "unit": "Pronoms et possessifs",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Ich sehe Paul. Ich sehe …",
+      "choices": [
+        "ihn",
+        "ihm",
+        "er"
+      ],
+      "answer": "ihn",
+      "explanation": "Sehen prend ici l’accusatif ; Paul est remplacé par ihn.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-034",
+      "lessonId": "de-lecon-09",
+      "unit": "Pronoms et possessifs",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Ich helfe … (du)",
+      "choices": [
+        "dich",
+        "du",
+        "dir"
+      ],
+      "answer": "dir",
+      "explanation": "Helfen demande le datif, donc dir.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-035",
+      "lessonId": "de-lecon-09",
+      "unit": "Pronoms et possessifs",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : C’est son livre, à elle.",
+      "choices": [],
+      "answer": "Das ist ihr Buch.",
+      "explanation": "Le possesseur féminin demande ihr ; Buch neutre au nominatif ne donne pas de terminaison.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-036",
+      "lessonId": "de-lecon-09",
+      "unit": "Pronoms et possessifs",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Complète : mit … Schwester (ma sœur).",
+      "choices": [],
+      "answer": "meiner",
+      "explanation": "Mit impose le datif féminin : meiner Schwester.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-037",
+      "lessonId": "de-lecon-10",
+      "unit": "Nier avec nicht et kein",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Ich habe … Zeit.",
+      "choices": [
+        "nicht",
+        "keinen",
+        "keine"
+      ],
+      "answer": "keine",
+      "explanation": "Zeit est féminin, sans article à l’affirmatif ; la négation nominale est keine.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-038",
+      "lessonId": "de-lecon-10",
+      "unit": "Nier avec nicht et kein",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Das ist … teuer.",
+      "choices": [
+        "keine",
+        "nicht",
+        "kein"
+      ],
+      "answer": "nicht",
+      "explanation": "On nie un adjectif avec nicht.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-039",
+      "lessonId": "de-lecon-10",
+      "unit": "Nier avec nicht et kein",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Je ne peux pas venir aujourd’hui.",
+      "choices": [],
+      "answer": "Ich kann heute nicht kommen.",
+      "explanation": "Nicht précède l’infinitif final ; kann occupe la deuxième position.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-040",
+      "lessonId": "de-lecon-10",
+      "unit": "Nier avec nicht et kein",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Je ne bois pas de café.",
+      "choices": [],
+      "answer": "Ich trinke keinen Kaffee.",
+      "explanation": "Kaffee est masculin à l’accusatif ; kein devient keinen.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-041",
+      "lessonId": "de-lecon-11",
+      "unit": "Particules séparables et verbes irréguliers",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Ich stehe um sieben Uhr …",
+      "choices": [
+        "be",
+        "auf",
+        "ge"
+      ],
+      "answer": "auf",
+      "explanation": "La particule de aufstehen rejoint la fin de la principale.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-042",
+      "lessonId": "de-lecon-11",
+      "unit": "Particules séparables et verbes irréguliers",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Du … nach Berlin.",
+      "choices": [
+        "fährst",
+        "fahrt",
+        "fahre"
+      ],
+      "answer": "fährst",
+      "explanation": "Fahren change a en ä avec du au présent.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-043",
+      "lessonId": "de-lecon-11",
+      "unit": "Particules séparables et verbes irréguliers",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Elle lit un livre.",
+      "choices": [],
+      "answer": "Sie liest ein Buch.",
+      "explanation": "Lesen donne liest au singulier ; Buch est neutre à l’accusatif.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-044",
+      "lessonId": "de-lecon-11",
+      "unit": "Particules séparables et verbes irréguliers",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Je dois me lever tôt.",
+      "choices": [],
+      "answer": "Ich muss früh aufstehen.",
+      "explanation": "Avec muss, l’infinitif aufstehen reste entier en fin de phrase.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-045",
+      "lessonId": "de-lecon-12",
+      "unit": "Pouvoir, devoir et vouloir",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Du musst nicht kommen signifie…",
+      "choices": [
+        "Tu n’es pas obligé de venir.",
+        "Tu ne dois absolument pas venir.",
+        "Tu ne sais pas venir."
+      ],
+      "answer": "Tu n’es pas obligé de venir.",
+      "explanation": "La négation de müssen supprime l’obligation ; elle n’exprime pas une interdiction.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-046",
+      "lessonId": "de-lecon-12",
+      "unit": "Pouvoir, devoir et vouloir",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Wir … morgen kommen. (pouvoir)",
+      "choices": [
+        "kann",
+        "könnt",
+        "können"
+      ],
+      "answer": "können",
+      "explanation": "Avec wir, on emploie können ; kommen reste à l’infinitif.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-047",
+      "lessonId": "de-lecon-12",
+      "unit": "Pouvoir, devoir et vouloir",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Tu n’as pas le droit de fumer ici.",
+      "choices": [],
+      "answer": "Du darfst hier nicht rauchen.",
+      "explanation": "Dürfen avec nicht exprime l’interdiction ; rauchen reste final.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-048",
+      "lessonId": "de-lecon-12",
+      "unit": "Pouvoir, devoir et vouloir",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Demande poliment un rendez-vous avec möchten.",
+      "choices": [],
+      "answer": "Ich möchte einen Termin vereinbaren.",
+      "explanation": "Möchte exprime le souhait ; Termin est masculin à l’accusatif.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-049",
+      "lessonId": "de-lecon-13",
+      "unit": "Situer et se déplacer",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Ich fahre … Berlin.",
+      "choices": [
+        "zu dem",
+        "bei",
+        "nach"
+      ],
+      "answer": "nach",
+      "explanation": "Une ville sans article prend nach pour la destination.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-050",
+      "lessonId": "de-lecon-13",
+      "unit": "Situer et se déplacer",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Das Buch liegt auf … Tisch.",
+      "choices": [
+        "der",
+        "dem",
+        "den"
+      ],
+      "answer": "dem",
+      "explanation": "Liegen décrit la position ; auf demande ici le datif masculin.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-051",
+      "lessonId": "de-lecon-13",
+      "unit": "Situer et se déplacer",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Je vais dans le parc, j’y entre.",
+      "choices": [],
+      "answer": "Ich gehe in den Park.",
+      "explanation": "La destination demande in suivi de l’accusatif den Park.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-052",
+      "lessonId": "de-lecon-13",
+      "unit": "Situer et se déplacer",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Pourquoi le datif dans Ich laufe im Park ?",
+      "choices": [],
+      "answer": "Le parc est le lieu où la course se déroule.",
+      "explanation": "Le mouvement a lieu dans le parc ; il ne suffit pas à imposer l’accusatif.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-053",
+      "lessonId": "de-lecon-14",
+      "unit": "Adjectifs et comparaisons",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Das Auto ist …",
+      "choices": [
+        "neuer",
+        "neu",
+        "neue"
+      ],
+      "answer": "neu",
+      "explanation": "Un attribut après sein reste sans terminaison.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-054",
+      "lessonId": "de-lecon-14",
+      "unit": "Adjectifs et comparaisons",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "ein … Computer (neu, nominatif)",
+      "choices": [
+        "neuer",
+        "neuen",
+        "neue"
+      ],
+      "answer": "neuer",
+      "explanation": "Ein n’indique pas le genre par une terminaison ; l’adjectif prend -er au masculin nominatif.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-055",
+      "lessonId": "de-lecon-14",
+      "unit": "Adjectifs et comparaisons",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Ce livre est meilleur que l’ancien.",
+      "choices": [],
+      "answer": "Dieses Buch ist besser als das alte.",
+      "explanation": "Besser est le comparatif de gut ; als introduit le second terme.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-056",
+      "lessonId": "de-lecon-14",
+      "unit": "Adjectifs et comparaisons",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : aussi cher que.",
+      "choices": [],
+      "answer": "so teuer wie",
+      "explanation": "L’égalité utilise so … wie ; le comparatif utilise als.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-057",
+      "lessonId": "de-lecon-15",
+      "unit": "Raconter au Perfekt",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Ich … gestern Deutsch gelernt.",
+      "choices": [
+        "habe",
+        "bin",
+        "werde"
+      ],
+      "answer": "habe",
+      "explanation": "Lernen se construit avec haben au Perfekt.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-058",
+      "lessonId": "de-lecon-15",
+      "unit": "Raconter au Perfekt",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Quel est le participe de telefonieren ?",
+      "choices": [
+        "getelefoniert",
+        "telefonieren",
+        "telefoniert"
+      ],
+      "answer": "telefoniert",
+      "explanation": "Les verbes en -ieren ne prennent pas ge-.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-059",
+      "lessonId": "de-lecon-15",
+      "unit": "Raconter au Perfekt",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Nous sommes allés à Berlin en véhicule.",
+      "choices": [],
+      "answer": "Wir sind nach Berlin gefahren.",
+      "explanation": "Le déplacement vers Berlin utilise sein ; le participe de fahren est gefahren.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-060",
+      "lessonId": "de-lecon-15",
+      "unit": "Raconter au Perfekt",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Mets au Perfekt : Ich kaufe ein.",
+      "choices": [],
+      "answer": "Ich habe eingekauft.",
+      "explanation": "La particule ein reste attachée au participe, avec ge intercalé : eingekauft.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-061",
+      "lessonId": "de-lecon-16",
+      "unit": "Präteritum, passé et projets",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Ich … gestern krank. (sein au Präteritum)",
+      "choices": [
+        "hatte",
+        "werde",
+        "war"
+      ],
+      "answer": "war",
+      "explanation": "War est la forme de sein avec ich au Präteritum.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-062",
+      "lessonId": "de-lecon-16",
+      "unit": "Präteritum, passé et projets",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Er … morgen lernen. (Futur I)",
+      "choices": [
+        "wirst",
+        "wird",
+        "werdet"
+      ],
+      "answer": "wird",
+      "explanation": "Avec er, werden donne wird ; lernen reste à l’infinitif.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-063",
+      "lessonId": "de-lecon-16",
+      "unit": "Präteritum, passé et projets",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Nous avions du temps.",
+      "choices": [],
+      "answer": "Wir hatten Zeit.",
+      "explanation": "Haben au Präteritum devient hatten avec wir.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-064",
+      "lessonId": "de-lecon-16",
+      "unit": "Präteritum, passé et projets",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Donne une phrase correcte au présent exprimant le futur.",
+      "choices": [],
+      "answer": "Morgen lerne ich Deutsch.",
+      "explanation": "Morgen situe l’action dans le futur ; le présent suffit. D’autres phrases correctement situées sont possibles.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-065",
+      "lessonId": "de-lecon-17",
+      "unit": "Relier avec weil, dass, wenn et obwohl",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Choisis la proposition correcte.",
+      "choices": [
+        "weil lerne ich Deutsch",
+        "weil ich Deutsch lerne",
+        "weil ich lerne Deutsch"
+      ],
+      "answer": "weil ich Deutsch lerne",
+      "explanation": "Weil demande le verbe conjugué final.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-066",
+      "lessonId": "de-lecon-17",
+      "unit": "Relier avec weil, dass, wenn et obwohl",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Wenn ich Zeit habe, … ich Deutsch.",
+      "choices": [
+        "lerne",
+        "ich lerne",
+        "lernen"
+      ],
+      "answer": "lerne",
+      "explanation": "La subordonnée compte comme première position ; lerne ouvre la principale qui suit.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-067",
+      "lessonId": "de-lecon-17",
+      "unit": "Relier avec weil, dass, wenn et obwohl",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Je pense qu’il vient.",
+      "choices": [],
+      "answer": "Ich denke, dass er kommt.",
+      "explanation": "Dass introduit une subordonnée ; kommt va à la fin.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-068",
+      "lessonId": "de-lecon-17",
+      "unit": "Relier avec weil, dass, wenn et obwohl",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Relie : Ich lerne. Ich bin müde. avec obwohl.",
+      "choices": [],
+      "answer": "Ich lerne, obwohl ich müde bin.",
+      "explanation": "Obwohl exprime la concession ; bin termine la subordonnée. Une inversion des propositions correctement construite est aussi possible.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-069",
+      "lessonId": "de-lecon-18",
+      "unit": "Conseiller et demander poliment",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Choisis une demande polie.",
+      "choices": [
+        "Könnten Sie mir bitte helfen?",
+        "Du musst mir helfen!",
+        "Ich helfe."
+      ],
+      "answer": "Könnten Sie mir bitte helfen?",
+      "explanation": "Könnten atténue la demande ; helfen impose mir au datif.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-070",
+      "lessonId": "de-lecon-18",
+      "unit": "Conseiller et demander poliment",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Wenn ich Zeit …, würde ich lesen.",
+      "choices": [
+        "habe gehabt",
+        "hast",
+        "hätte"
+      ],
+      "answer": "hätte",
+      "explanation": "L’hypothèse utilise hätte et non le présent habe.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-071",
+      "lessonId": "de-lecon-18",
+      "unit": "Conseiller et demander poliment",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : J’aimerais travailler à Berlin, avec würde.",
+      "choices": [],
+      "answer": "Ich würde gern in Berlin arbeiten.",
+      "explanation": "Würde est conjugué en deuxième position ; arbeiten est à l’infinitif final.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-072",
+      "lessonId": "de-lecon-18",
+      "unit": "Conseiller et demander poliment",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Conseille de pratiquer régulièrement.",
+      "choices": [],
+      "answer": "Du solltest regelmäßig üben.",
+      "explanation": "Solltest exprime le conseil. D’autres conseils grammaticalement corrects conviennent s’ils gardent le sens.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-073",
+      "lessonId": "de-lecon-19",
+      "unit": "Génitif et relatives : premiers repères",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "die Strategie … Unternehmens",
+      "choices": [
+        "dem",
+        "den",
+        "des"
+      ],
+      "answer": "des",
+      "explanation": "Unternehmen est neutre ; au génitif défini : des Unternehmens.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-074",
+      "lessonId": "de-lecon-19",
+      "unit": "Génitif et relatives : premiers repères",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "der Mann, … ich sehe",
+      "choices": [
+        "dem",
+        "den",
+        "der"
+      ],
+      "answer": "den",
+      "explanation": "Le relatif est objet de sehe : accusatif masculin den.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-075",
+      "lessonId": "de-lecon-19",
+      "unit": "Génitif et relatives : premiers repères",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : C’est l’entreprise qui vend des vélos.",
+      "choices": [],
+      "answer": "Das ist die Firma, die Fahrräder verkauft.",
+      "explanation": "Firma est féminin ; die est sujet de verkauft, placé à la fin.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-076",
+      "lessonId": "de-lecon-19",
+      "unit": "Génitif et relatives : premiers repères",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Explique der dans die Frau, der ich helfe.",
+      "choices": [],
+      "answer": "Le relatif est au datif féminin car helfen demande le datif.",
+      "explanation": "Son genre vient de Frau et son cas de sa fonction après helfen.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-077",
+      "lessonId": "de-lecon-20",
+      "unit": "Acheter, commander et demander son chemin",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Ich hätte gern … Kaffee.",
+      "choices": [
+        "einem",
+        "einen",
+        "ein"
+      ],
+      "answer": "einen",
+      "explanation": "Kaffee est masculin, objet à l’accusatif de la demande.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-078",
+      "lessonId": "de-lecon-20",
+      "unit": "Acheter, commander et demander son chemin",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Que signifie Gehen Sie geradeaus ?",
+      "choices": [
+        "Allez tout droit.",
+        "Tournez à gauche.",
+        "Traversez la frontière."
+      ],
+      "answer": "Allez tout droit.",
+      "explanation": "Geradeaus indique de continuer droit ; Sie marque la politesse.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-079",
+      "lessonId": "de-lecon-20",
+      "unit": "Acheter, commander et demander son chemin",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Demande si tu peux payer par carte.",
+      "choices": [],
+      "answer": "Kann ich mit Karte bezahlen?",
+      "explanation": "Kann ouvre la question oui/non ; bezahlen reste final.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-080",
+      "lessonId": "de-lecon-20",
+      "unit": "Acheter, commander et demander son chemin",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Demande où se trouve la gare en commençant poliment.",
+      "choices": [],
+      "answer": "Entschuldigung, wo ist der Bahnhof?",
+      "explanation": "Entschuldigung introduit la demande ; Bahnhof est le sujet de ist. Une autre formule polie correcte convient.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-081",
+      "lessonId": "de-lecon-21",
+      "unit": "Études, stage et candidature",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Quelle formule termine habituellement un courriel formel ?",
+      "choices": [
+        "Mit freundlichen Grüßen",
+        "Tschüss, Alter!",
+        "Guten Morgen?"
+      ],
+      "answer": "Mit freundlichen Grüßen",
+      "explanation": "Cette formule est une clôture professionnelle courante, généralement sans virgule finale.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-082",
+      "lessonId": "de-lecon-21",
+      "unit": "Études, stage et candidature",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Ich suche ein Praktikum … Bereich Marketing.",
+      "choices": [
+        "ins",
+        "am den",
+        "im"
+      ],
+      "answer": "im",
+      "explanation": "Im Bereich signifie dans le domaine ; im est la contraction de in dem.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-083",
+      "lessonId": "de-lecon-21",
+      "unit": "Études, stage et candidature",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Vous trouverez mon CV en pièce jointe.",
+      "choices": [],
+      "answer": "Im Anhang finden Sie meinen Lebenslauf.",
+      "explanation": "Im Anhang ouvre la phrase ; finden est deuxième ; Lebenslauf est masculin à l’accusatif.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-084",
+      "lessonId": "de-lecon-21",
+      "unit": "Études, stage et candidature",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Rédige une demande de stage en une phrase avec un domaine.",
+      "choices": [],
+      "answer": "Ich suche ein Praktikum im Bereich Marketing.",
+      "explanation": "Modèle possible : précise le domaine qui t’intéresse et garde l’ordre sujet-verbe. D’autres domaines réels sont acceptables.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-085",
+      "lessonId": "de-lecon-22",
+      "unit": "Présenter une entreprise en ETLV",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "D’après le document NordRad, que fabrique l’entreprise ?",
+      "choices": [
+        "Computer",
+        "Autos",
+        "Fahrräder"
+      ],
+      "answer": "Fahrräder",
+      "explanation": "Le texte dit stellt Fahrräder her : elle fabrique des vélos.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-086",
+      "lessonId": "de-lecon-22",
+      "unit": "Présenter une entreprise en ETLV",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Quel terme désigne le bénéfice ?",
+      "choices": [
+        "der Sitz",
+        "der Gewinn",
+        "der Umsatz"
+      ],
+      "answer": "der Gewinn",
+      "explanation": "Gewinn est le bénéfice ; Umsatz est le chiffre d’affaires.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-087",
+      "lessonId": "de-lecon-22",
+      "unit": "Présenter une entreprise en ETLV",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "D’après le document, combien de personnes NordRad emploie-t-elle ?",
+      "choices": [],
+      "answer": "50 Personen.",
+      "explanation": "Le document donne beschäftigt 50 Personen ; ce n’est pas un montant financier.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-088",
+      "lessonId": "de-lecon-22",
+      "unit": "Présenter une entreprise en ETLV",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Peut-on affirmer que le chiffre d’affaires de NordRad a augmenté ?",
+      "choices": [],
+      "answer": "Non, une seule année est donnée.",
+      "explanation": "Sans valeur antérieure comparable, on ne peut pas conclure à une hausse. Le chiffre 2025 seul ne décrit pas une évolution.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-089",
+      "lessonId": "de-lecon-23",
+      "unit": "Marketing, prix et argumentation",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Die Zielgruppe signifie…",
+      "choices": [
+        "les stocks",
+        "le public cible",
+        "le chiffre d’affaires"
+      ],
+      "answer": "le public cible",
+      "explanation": "Zielgruppe désigne les personnes auxquelles l’offre s’adresse.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-090",
+      "lessonId": "de-lecon-23",
+      "unit": "Marketing, prix et argumentation",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Choisis la phrase correcte.",
+      "choices": [
+        "Meiner Meinung nach ist der Preis zu hoch.",
+        "Meiner Meinung nach der Preis ist zu hoch.",
+        "Meiner Meinung ist nach zu der Preis."
+      ],
+      "answer": "Meiner Meinung nach ist der Preis zu hoch.",
+      "explanation": "Le groupe introducteur occupe la première position ; ist vient ensuite.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-091",
+      "lessonId": "de-lecon-23",
+      "unit": "Marketing, prix et argumentation",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : Le produit est réparable.",
+      "choices": [],
+      "answer": "Das Produkt ist reparierbar.",
+      "explanation": "L’adjectif après ist ne prend pas de terminaison.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-092",
+      "lessonId": "de-lecon-23",
+      "unit": "Marketing, prix et argumentation",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Formule un avis favorable avec une raison, sans inventer de statistique.",
+      "choices": [],
+      "answer": "Ich finde das Angebot interessant, weil es eine Reparatur einschließt.",
+      "explanation": "Modèle possible : l’avis est justifié par un service précis ; dans la subordonnée, einschließt est final. Un autre argument cohérent convient.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-093",
+      "lessonId": "de-lecon-24",
+      "unit": "Numérique, environnement et esprit critique",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Que signifie Datenschutz ?",
+      "choices": [
+        "la protection des données",
+        "le stockage de meubles",
+        "le bénéfice"
+      ],
+      "answer": "la protection des données",
+      "explanation": "Daten signifie données ; Schutz signifie protection.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-094",
+      "lessonId": "de-lecon-24",
+      "unit": "Numérique, environnement et esprit critique",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Selon le document, quelle action l’école réalise-t-elle ?",
+      "choices": [
+        "Elle a prouvé une baisse d’électricité de 50 %.",
+        "Elle jette tous les appareils.",
+        "Elle répare d’anciens ordinateurs."
+      ],
+      "answer": "Elle répare d’anciens ordinateurs.",
+      "explanation": "Repariert alte Computer décrit l’action réelle ; la consommation n’est pas encore mesurée.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-095",
+      "lessonId": "de-lecon-24",
+      "unit": "Numérique, environnement et esprit critique",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Traduis : L’IA peut faire gagner du temps.",
+      "choices": [],
+      "answer": "KI kann Zeit sparen.",
+      "explanation": "Kann est en deuxième position et sparen à l’infinitif final.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-096",
+      "lessonId": "de-lecon-24",
+      "unit": "Numérique, environnement et esprit critique",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Peut-on conclure que les coûts d’électricité de l’école ont baissé ?",
+      "choices": [],
+      "answer": "Non, ils n’ont pas encore été mesurés.",
+      "explanation": "Le texte distingue le réemploi constaté et un résultat énergétique qui n’a pas été mesuré.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-097",
+      "lessonId": "de-lecon-25",
+      "unit": "Lire un document et préparer un oral",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Que signifie bekommen ?",
+      "choices": [
+        "devenir",
+        "acheter systématiquement",
+        "recevoir"
+      ],
+      "answer": "recevoir",
+      "explanation": "Bekommen est un faux ami : devenir se traduit souvent par werden.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-098",
+      "lessonId": "de-lecon-25",
+      "unit": "Lire un document et préparer un oral",
+      "origin": "revizstmg/allemand",
+      "type": "qcm",
+      "prompt": "Im Text steht, dass die Firma … (wachsen)",
+      "choices": [
+        "wachst",
+        "wächst",
+        "wachsen"
+      ],
+      "answer": "wächst",
+      "explanation": "Dass impose le verbe final ; wachsen donne wächst à la troisième personne.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-099",
+      "lessonId": "de-lecon-25",
+      "unit": "Lire un document et préparer un oral",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Écris une phrase annonçant que le document traite du marketing.",
+      "choices": [],
+      "answer": "Das Dokument handelt von Marketing.",
+      "explanation": "Handeln von sert à annoncer le thème ; ici Marketing est un nom de domaine sans article.",
+      "context": ""
+    },
+    {
+      "id": "de-ex-100",
+      "lessonId": "de-lecon-25",
+      "unit": "Lire un document et préparer un oral",
+      "origin": "revizstmg/allemand",
+      "type": "court",
+      "prompt": "Propose un plan oral en quatre étapes.",
+      "choices": [],
+      "answer": "Présenter le document, expliquer son idée, citer un exemple, donner un avis justifié.",
+      "explanation": "Ce plan sépare contenu du document et opinion personnelle. D’autres plans structurés respectant ces éléments sont possibles.",
+      "context": ""
+    }
+  ],
+  "edition": "Manuel approfondi · octobre 2026",
+  "methodSections": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    14,
+    15,
+    16,
+    17
+  ],
+  "videos": [
+    {
+      "title": "Adressen",
+      "url": "https://learngerman.dw.com/en/adressen/l-37269671",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Am Sonntag koche ich",
+      "url": "https://learngerman.dw.com/en/am-sonntag-koche-ich/l-37452061",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "An der Ampel links",
+      "url": "https://learngerman.dw.com/en/an-der-ampel-links/l-37595076",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Anders als zu Hause",
+      "url": "https://learngerman.dw.com/en/anders-als-zu-hause/l-37779968",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Auf dem Amt",
+      "url": "https://learngerman.dw.com/en/auf-dem-amt/l-37269629",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Beim Arzt",
+      "url": "https://learngerman.dw.com/en/beim-arzt/l-37778169",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Bist du fit?",
+      "url": "https://learngerman.dw.com/en/bist-du-fit/l-37668333",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Das Auto ist rot",
+      "url": "https://learngerman.dw.com/en/das-auto-ist-rot/l-37401537",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Das ist jetzt modern",
+      "url": "https://learngerman.dw.com/en/das-ist-jetzt-modern/l-37655848",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Das ist Nico",
+      "url": "https://learngerman.dw.com/en/das-ist-nico/l-37262923",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Das passt gut!",
+      "url": "https://learngerman.dw.com/en/das-passt-gut/l-37661740",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Der Ausflug",
+      "url": "https://learngerman.dw.com/en/der-ausflug/l-37651657",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Eine Pizza bitte!",
+      "url": "https://learngerman.dw.com/en/eine-pizza-bitte/l-37279261",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Emmas Tag",
+      "url": "https://learngerman.dw.com/en/emmas-tag/l-37442425",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Emmas Wochenende",
+      "url": "https://learngerman.dw.com/en/emmas-wochenende/l-37452629",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Fitness",
+      "url": "https://learngerman.dw.com/en/fitness/l-37668815",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Geht es dir gut?",
+      "url": "https://learngerman.dw.com/en/geht-es-dir-gut/l-37778457",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Gute Besserung!",
+      "url": "https://learngerman.dw.com/en/gute-besserung/l-37780308",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Hallo!",
+      "url": "https://learngerman.dw.com/en/hallo/l-37250531",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Hast du morgen Zeit?",
+      "url": "https://learngerman.dw.com/en/hast-du-morgen-zeit/l-37461035",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Haushaltsarbeit",
+      "url": "https://learngerman.dw.com/en/haushaltsarbeit/l-37631238",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Ich bin Lehrerin",
+      "url": "https://learngerman.dw.com/en/ich-bin-lehrerin/l-37469204",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Ich habe kein …",
+      "url": "https://learngerman.dw.com/en/ich-habe-kein/l-37382992",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Ich mag (nicht)!",
+      "url": "https://learngerman.dw.com/en/ich-mag-nicht/l-37599970",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Ich war schon in Berlin",
+      "url": "https://learngerman.dw.com/en/ich-war-schon-in-berlin/l-37325550",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "In Europa",
+      "url": "https://learngerman.dw.com/en/in-europa/l-37328492",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Ist das gesund?",
+      "url": "https://learngerman.dw.com/en/ist-das-gesund/l-37670365",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Jahreszeiten",
+      "url": "https://learngerman.dw.com/en/jahreszeiten/l-37651758",
+      "level": "A1",
+      "provider": "Deutsche Welle · Nicos Weg",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    }
+  ]
+}

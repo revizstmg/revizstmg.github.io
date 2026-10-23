@@ -5,12 +5,12 @@ import { parse } from '@babel/parser'
 import publicTranslations from '../scripts/plugin-traductions.mjs'
 import { SHOP_ITEMS, SHOP_REWARDS } from '../src/data/shop.js'
 const root = new URL('../src/', import.meta.url)
-const books = Object.fromEntries(['en', 'es', 'it', 'ar'].map((l) => [l, JSON.parse(readFileSync(new URL(`localisation/public.${l}.json`, root), 'utf8'))]))
+const books = Object.fromEntries(['en', 'es', 'it', 'ar', 'de'].map((l) => [l, JSON.parse(readFileSync(new URL(`localisation/public.${l}.json`, root), 'utf8'))]))
 const variables = (s) => (s.match(/\{\w+\}/g) || []).sort()
 const properties = (node) => new Map(node.properties.map((p) => [p.key.name || p.key.value, p.value.value]))
 const readAst = (path) => parse(readFileSync(new URL(path, root), 'utf8'), { sourceType: 'module' })
 
-test('toutes les clés d’interface existent dans chacune des quatre langues', () => {
+test('toutes les clés d’interface existent dans chacune des cinq langues', () => {
   const fr = readAst('i18n/fr.js').program.body.find((n) => n.type === 'ExportDefaultDeclaration').declaration
   for (const lang of Object.keys(books)) {
     const locale = readAst(`i18n/${lang}.js`).program.body.find((n) => n.type === 'ExportDefaultDeclaration').declaration
@@ -75,7 +75,7 @@ beforeEach(async () => {
 afterEach(() => vi.unstubAllGlobals())
 const response = (text, status = 200) => new Response(JSON.stringify({ responseStatus: status, responseData: { translatedText: text } }))
 
-for (const lang of ['it', 'ar']) test(`le dictionnaire accepte ${lang} comme langue source`, async () => {
+for (const lang of ['it', 'ar', 'de']) test(`le dictionnaire accepte ${lang} comme langue source`, async () => {
   vi.stubGlobal('fetch', vi.fn().mockResolvedValue(response('test traduit')))
   expect((await api.translate('una frase' + lang, lang, 'fr')).text).toBe('test traduit')
 })
@@ -111,8 +111,8 @@ test('les quotas et variables modifiées ne sont pas mémorisés comme une tradu
 
 // Écrans récents (séance du jour, accueil professeur, sauvegarde, carnet,
 // « Pourquoi ? », notes de classe…) : leurs textes sont traduits hors ligne
-// dans les quatre langues, sans passer par le service de traduction.
-test('les écrans récents sont traduits hors ligne dans les quatre langues', () => {
+// dans les cinq langues, sans passer par le service de traduction.
+test('les écrans récents sont traduits hors ligne dans les cinq langues', () => {
   const ecrans = ['pages/Home.jsx', 'pages/Languages.jsx', 'components/ChapterControl.jsx', 'components/CourseTutor.jsx', 'components/NoteRevision.jsx', 'components/OutilsAccueil.jsx', 'components/EtatSauvegarde.jsx', 'components/AccueilProf.jsx', 'components/CompteRequis.jsx',
     'components/LegalContents.jsx', 'components/OfflineStatus.jsx', 'components/LevelToolNotice.jsx', 'components/QuizOutboxStatus.jsx',
     'pages/Seance.jsx', 'pages/Cours.jsx', 'pages/BacBlanc.jsx', 'pages/FormulaWorkshop.jsx', 'pages/MesNotes.jsx', 'pages/Theme.jsx', 'pages/Profile.jsx', 'games/SujetMaths.jsx', 'games/GameHost.jsx', 'games/common.jsx', 'games/ThemeTest.jsx']
@@ -135,4 +135,22 @@ test('les écrans récents sont traduits hors ligne dans les quatre langues', ()
     const base = Object.fromEntries([...fr].filter(([k]) => coeur.get(k)).map(([k, v]) => [String(v).replace(/\s+/g, ' ').trim(), coeur.get(k)]))
     for (const texte of textes) expect(book[texte] || base[texte], `${lang} : « ${texte} »`).toBeTruthy()
   }
+})
+
+test('allemand : révision, examen et correction disposent de toutes leurs traductions', async () => {
+ const {copyMessages} = await import('../src/i18n/copies.js')
+ const {examMessages} = await import('../src/i18n/examens.js')
+ const {revisionMessages} = await import('../src/i18n/revision.js')
+ for(const messages of [copyMessages,examMessages,revisionMessages]) {
+  expect(Object.keys(messages.de).sort()).toEqual(Object.keys(messages.fr).sort())
+  for(const [key,value] of Object.entries(messages.fr)) {
+   expect(messages.de[key],key).toBeTruthy()
+   expect(variables(messages.de[key]),key).toEqual(variables(value))
+  }
+ }
+ const fetch=vi.fn()
+ vi.stubGlobal('fetch',fetch)
+ expect((await api.translate('Tes efforts ont du style.','fr','de')).text).toBe('Dein Einsatz. Dein Stil.')
+ expect((await api.translate('Ose prendre la parole.','fr','de')).text).toBe('Trau dich zu sprechen.')
+ expect(fetch).not.toHaveBeenCalled()
 })

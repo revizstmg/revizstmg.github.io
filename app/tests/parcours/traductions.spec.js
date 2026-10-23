@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { preparer, attendreAccueil, etat, etatEleve } from './eleve.js'
 const LOCALES = [
+  ['de', 'Dein Einsatz. Dein Stil.', 'Sammlungen', 'Meine Gegenstände', 'Artikel suchen', 'Fuchs', 'Erhalten', 'Ausrüsten', 'Belohnungen', 'Ein Monat Premium gratis'],
   ['fr', 'Tes efforts ont du style.', 'Collections', 'Mes objets', 'Rechercher un article', 'Renard', 'Obtenir', 'Équiper', 'Récompenses', 'Un mois Premium offert'],
   ['en', 'Your effort. Your style.', 'Collections', 'My items', 'Search for an item', 'Fox', 'Get item', 'Equip', 'Rewards', 'One free month of Premium'],
   ['es', 'Tu esfuerzo tiene estilo.', 'Colecciones', 'Mis objetos', 'Buscar un artículo', 'Zorro', 'Obtener', 'Aplicar', 'Recompensas', 'Un mes de Premium gratis'],

@@ -1770,5 +1770,304 @@
         "task": "Choisis un objectif observable par semaine : par exemple expliquer trois tâches de stage sans lire. Garde une trace datée et une difficulté à retravailler."
       }
     ]
+  },
+  {
+    "id": "de",
+    "name": "Allemand",
+    "label": "Deutsch",
+    "intro": "Communiquer en allemand : bases solides, situations du quotidien et prises de parole en STMG.",
+    "resources": [
+      {
+        "title": "Deutsche Welle · Nicos Weg",
+        "url": "https://learngerman.dw.com/en/nicos-weg/c-36519789",
+        "kind": "video"
+      },
+      {
+        "title": "Deutsche Welle · Apprendre l’allemand",
+        "url": "https://www.dw.com/en/learn-german/s-2469",
+        "kind": "cours"
+      },
+      {
+        "title": "Duden · Dictionnaire allemand",
+        "url": "https://www.duden.de/",
+        "kind": "dictionnaire"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Adressen",
+        "url": "https://learngerman.dw.com/en/adressen/l-37269671",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Am Sonntag koche ich",
+        "url": "https://learngerman.dw.com/en/am-sonntag-koche-ich/l-37452061",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "An der Ampel links",
+        "url": "https://learngerman.dw.com/en/an-der-ampel-links/l-37595076",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Anders als zu Hause",
+        "url": "https://learngerman.dw.com/en/anders-als-zu-hause/l-37779968",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Auf dem Amt",
+        "url": "https://learngerman.dw.com/en/auf-dem-amt/l-37269629",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Beim Arzt",
+        "url": "https://learngerman.dw.com/en/beim-arzt/l-37778169",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Bist du fit?",
+        "url": "https://learngerman.dw.com/en/bist-du-fit/l-37668333",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Das Auto ist rot",
+        "url": "https://learngerman.dw.com/en/das-auto-ist-rot/l-37401537",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Das ist jetzt modern",
+        "url": "https://learngerman.dw.com/en/das-ist-jetzt-modern/l-37655848",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Das ist Nico",
+        "url": "https://learngerman.dw.com/en/das-ist-nico/l-37262923",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Das passt gut!",
+        "url": "https://learngerman.dw.com/en/das-passt-gut/l-37661740",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Der Ausflug",
+        "url": "https://learngerman.dw.com/en/der-ausflug/l-37651657",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Eine Pizza bitte!",
+        "url": "https://learngerman.dw.com/en/eine-pizza-bitte/l-37279261",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Emmas Tag",
+        "url": "https://learngerman.dw.com/en/emmas-tag/l-37442425",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Emmas Wochenende",
+        "url": "https://learngerman.dw.com/en/emmas-wochenende/l-37452629",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Fitness",
+        "url": "https://learngerman.dw.com/en/fitness/l-37668815",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Geht es dir gut?",
+        "url": "https://learngerman.dw.com/en/geht-es-dir-gut/l-37778457",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Gute Besserung!",
+        "url": "https://learngerman.dw.com/en/gute-besserung/l-37780308",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Hallo!",
+        "url": "https://learngerman.dw.com/en/hallo/l-37250531",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Hast du morgen Zeit?",
+        "url": "https://learngerman.dw.com/en/hast-du-morgen-zeit/l-37461035",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Haushaltsarbeit",
+        "url": "https://learngerman.dw.com/en/haushaltsarbeit/l-37631238",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Ich bin Lehrerin",
+        "url": "https://learngerman.dw.com/en/ich-bin-lehrerin/l-37469204",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Ich habe kein …",
+        "url": "https://learngerman.dw.com/en/ich-habe-kein/l-37382992",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Ich mag (nicht)!",
+        "url": "https://learngerman.dw.com/en/ich-mag-nicht/l-37599970",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Ich war schon in Berlin",
+        "url": "https://learngerman.dw.com/en/ich-war-schon-in-berlin/l-37325550",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "In Europa",
+        "url": "https://learngerman.dw.com/en/in-europa/l-37328492",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Ist das gesund?",
+        "url": "https://learngerman.dw.com/en/ist-das-gesund/l-37670365",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      },
+      {
+        "title": "Jahreszeiten",
+        "url": "https://learngerman.dw.com/en/jahreszeiten/l-37651758",
+        "level": "A1",
+        "provider": "Deutsche Welle · Nicos Weg",
+        "kind": "video",
+        "verified": "2026-10-23",
+        "videoEvidence": true
+      }
+    ],
+    "stats": {
+      "lessons": 25,
+      "exercises": 100,
+      "videos": 28
+    },
+    "advice": [
+      {
+        "title": "Parler par petits blocs",
+        "text": "Apprends des groupes de mots réutilisables plutôt que des listes isolées : demander de répéter, donner son avis, expliquer une difficulté. Fais varier un élément de chaque phrase. Pour gagner en fluidité, prépare des mots-clés et non un texte entier. Les hésitations sont normales : une reformulation simple est souvent plus efficace qu’une traduction mot à mot.",
+        "task": "Construis trois réponses différentes à la même question. Fais d’abord 20 secondes, puis 40 secondes, puis une minute sans lire de texte."
+      },
+      {
+        "title": "Prononciation : écouter, imiter, comparer",
+        "text": "Écoute une phrase courte, mets en pause, répète, puis compare ton enregistrement au modèle. Observe le rythme, l’accent des mots et l’intonation avant de chercher une imitation parfaite. Le shadowing consiste à parler juste après le modèle : ralentis si nécessaire. Une transcription en français ne reproduit jamais exactement les sons d’une autre langue.",
+        "task": "Répète cinq fois une phrase de huit à douze mots. Compare les versions 1 et 5 sur un critère : rythme, consonne ou voyelle. Demande un retour à un enseignant ou à un interlocuteur compétent."
+      },
+      {
+        "title": "Plan progressif sur quatre semaines",
+        "text": "Semaine 1 : présentation et demandes simples ; deux enregistrements de 30 secondes. Semaine 2 : raconter une journée ou une expérience ; trois réponses de 45 secondes. Semaine 3 : donner un avis et comparer deux possibilités ; un échange de deux minutes. Semaine 4 : présenter un projet et répondre à des questions ; bilan avec la première version. Adapte les durées : ce programme ne garantit pas un niveau CECRL en quatre semaines.",
+        "task": "Choisis un objectif observable par semaine : par exemple expliquer trois tâches de stage sans lire. Garde une trace datée et une difficulté à retravailler."
+      }
+    ]
   }
 ]

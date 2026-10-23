@@ -15,6 +15,7 @@ import { loadPublicLocale, knownPublicText, formatPublicText } from './localisat
 // en français. Le temps du chargement, les libellés s'affichent en français.
 const DICT = { fr: FR }
 const CHARGEURS = {
+  de: () => import('./i18n/de.js'),
   en: () => import('./i18n/en.js'),
   es: () => import('./i18n/es.js'),
   it: () => import('./i18n/it.js'),
