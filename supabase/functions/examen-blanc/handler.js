@@ -3,6 +3,9 @@ import { checkTutorRequest, checkTutorReply, tutorInstruction } from './tutor.js
 import { checkStudyRequest, checkStudyResult, studyInstruction } from './study.js'
 import { checkGrade } from './grading.js'
 import { checkRequest, checkPlan, checkGeneratedExam, documentTarget } from './contract.js'
+const controlCorrection = body => body.action === 'control' && body.step === 'correct'
+const controlResponseSchema = { type:'OBJECT', properties:{feedback:{type:'STRING'},criteria:{type:'ARRAY',minItems:5,maxItems:5,items:{type:'OBJECT',properties:{index:{type:'INTEGER',minimum:0,maximum:4},points:{type:'NUMBER',minimum:0,maximum:1},feedback:{type:'STRING'}},required:['index','points','feedback']}}},required:['feedback','criteria'] }
+const controlThinking = (body,model) => controlCorrection(body) && /^gemini-[3-9]/.test(model) ? { thinkingConfig: { thinkingLevel: 'LOW' } } : {}
 const groqModel = env => (env('EXAM_GROQ_MODEL') || 'openai/gpt-oss-120b').trim()
 const GEMINI_DEFAULT = 'gemini-3.6-flash'
 const GEMINI_ALTERNATIVE = 'gemini-3.8-flash'
@@ -60,6 +63,7 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
       }
       return json(await probe)
     }
+    let requestAction=null, requestStep=null
     try {
       const token = req.headers.get('authorization') || ''
       if (!token.startsWith('Bearer ')) return json({ error: 'login_required' }, 401)
@@ -70,7 +74,8 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
       const raw = await req.text()
       if (raw.length > 9000000) return json({ error: 'too_large' }, 413)
       let body
-      try { const input = JSON.parse(raw); body = input?.action === 'control' ? checkControlRequest(input) : input?.action === 'tutor' ? checkTutorRequest(input) : input?.action === 'study' ? checkStudyRequest(input) : checkRequest(input) } catch (e) { return json({ error: ['invalid_files', 'too_large'].includes(e?.message) ? e.message : 'invalid_request' }, 400) }
+      try { const input = JSON.parse(raw); body = input?.action === 'control' ? checkControlRequest(input) : input?.action === 'tutor' ? checkTutorRequest(input) : input?.action === 'study' ? checkStudyRequest(input) : checkRequest(input) } catch (e) { const code=['invalid_files','too_large'].includes(e?.message)?e.message:'invalid_request'; console.warn(JSON.stringify({event:'exam_invalid_request',code})); return json({error:code},400) }
+      requestAction=body.action; requestStep=body.action==='control'?body.step:null
       if (!['grade', 'study'].includes(body.action) && raw.length > 350000) return json({ error: 'too_large' }, 413)
       if ((body.action === 'grade' || (body.action === 'study' && body.files.length)) && !gemini) return json({ error: 'grading_unavailable' }, 503)
       const counterKey = ['tutor','control'].includes(body.action) ? `${user.id}:${body.action}` : user.id
@@ -85,17 +90,18 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
         : body.action === 'plan'
         ? `Analyse la demande et choisis les chapitres pertinents du catalogue, en respectant la matière ET le niveau demandés (Première et Terminale si les deux sont demandés). Maximum 24 chapitres, selon la durée. Ne choisis pas les premiers par défaut. Réponds {"summary":"périmètre choisi et limites", "chapterIds":["identifiants exacts"]}. Demande et catalogue :\n${JSON.stringify(body)}`
         : `Compose une véritable épreuve rédigée de ${body.duration} minutes, environ ${body.duration / 10} questions, plusieurs exercices progressifs et un dossier d'au moins ${documentTarget(body.duration)} documents d'application fictifs clairement étiquetés, jusqu'à 12. Varie les supports pertinents : contexte d'organisation, entretien, données chiffrées en texte structuré, extrait de contrat fictif, situation juridique ou note interne selon la matière. Chaque document doit apporter des informations distinctes, exploitables et suffisamment développées, pas une phrase de remplissage. Tous les documents doivent être exploités par les questions. Ajuste la longueur des documents et la complexité à la durée, pas seulement le nombre de questions. Aucun QCM. Au moins 20 % des questions (arrondi supérieur) portent sur les connaissances personnelles du cours, sans document : documentIds:[]. Au moins 50 % s'appuient sur les documents ; parmi elles, demande aussi de croiser analyse du document et connaissances du cours. Précise le travail attendu dans chaque énoncé. Chaque question porte UNIQUEMENT sur son chapitre source, dont tu donnes l'identifiant. N'invente pas de savoir hors des cours. Pour un cas fictif, fournis toutes les données nécessaires dans les documents, sans prétendre à une source réelle. Barème total EXACTEMENT 20 points. Tous les chapitres confirmés doivent être représentés si possible ; mentionne les limites dans les consignes. Corrigé détaillé, raisonnement, unités et critères d'auto-évaluation. Structure exacte : {"title":"titre", "instructions":"consignes", "documents":[{"id":"d1","title":"Document fictif…","text":"texte"}], "questions":[{"id":"q1","chapterId":"id exact", "documentIds":["d1"], "enonce":"Exercice 1 — …", "points":2,"correction":"réponse et démarche", "criteria":["critère"]}]}. Demande et cours :\n${JSON.stringify(body)}`
+      const providerWait = controlCorrection(body) ? 60000 : 120000
       let response, result
       if (groq) {
-        response = await fetcher('https://api.groq.com/openai/v1/chat/completions', { method: 'POST', headers: { 'content-type': 'application/json', Authorization: `Bearer ${groq}` }, body: JSON.stringify({ model: groqModel(env), messages: [{ role: 'system', content: system }, { role: 'user', content: instruction }], temperature: 0.3, response_format: { type: 'json_object' }, max_completion_tokens: body.action === 'control' ? 6000 : body.action === 'tutor' ? 2500 : body.action === 'plan' ? 3000 : 24000 }), signal: AbortSignal.timeout(120000) })
+        response = await fetcher('https://api.groq.com/openai/v1/chat/completions', { method: 'POST', headers: { 'content-type': 'application/json', Authorization: `Bearer ${groq}` }, body: JSON.stringify({ model: groqModel(env), messages: [{ role: 'system', content: system }, { role: 'user', content: instruction }], temperature: 0.3, response_format: { type: 'json_object' }, max_completion_tokens: body.action === 'control' ? (controlCorrection(body) ? 3500 : 6000) : body.action === 'tutor' ? 2500 : body.action === 'plan' ? 3000 : 24000 }), signal: AbortSignal.timeout(providerWait) })
         if (!response.ok) return json({ error: await providerFailure(response) }, response.status === 429 ? 429 : 502)
         const data = await response.json(); result = data.choices?.[0]?.message?.content
       } else if (gemini) {
         const models = [...new Set([geminiModel(env), GEMINI_DEFAULT, GEMINI_ALTERNATIVE])]
-        const signal = AbortSignal.timeout(120000)
+        const signal = AbortSignal.timeout(providerWait)
         let retried = false
         for (const model of models) {
-          const send = () => fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-goog-api-key': gemini }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: [{ role: 'user', parts: [{ text: instruction }, ...(['grade','study'].includes(body.action) ? body.files.map(file => ({ inlineData: file })) : [])] }], generationConfig: { temperature: 0.3, responseMimeType: 'application/json', maxOutputTokens: body.action === 'control' ? 6000 : body.action === 'tutor' ? 3000 : body.action === 'study' ? 7000 : body.action === 'plan' ? 3000 : body.action === 'grade' ? 18000 : 24000 } }), signal })
+          const send = () => fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-goog-api-key': gemini }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: [{ role: 'user', parts: [{ text: instruction }, ...(['grade','study'].includes(body.action) ? body.files.map(file => ({ inlineData: file })) : [])] }], generationConfig: { ...(controlCorrection(body) ? {responseSchema:controlResponseSchema} : {}), ...controlThinking(body,model), temperature: 0.3, responseMimeType: 'application/json', maxOutputTokens: body.action === 'control' ? (controlCorrection(body) ? 3500 : 6000) : body.action === 'tutor' ? 3000 : body.action === 'study' ? 7000 : body.action === 'plan' ? 3000 : body.action === 'grade' ? 18000 : 24000 } }), signal })
           response = await send()
           if (response.status === 503 && !retried) {
             retried = true
@@ -107,20 +113,21 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
         if (!response.ok) return json({ error: await providerFailure(response) }, response.status === 429 ? 429 : 502)
         const data = await response.json(); result = data.candidates?.[0]?.content?.parts?.map(p => p.text || '').join('')
       } else {
-        response = await fetcher('https://api.anthropic.com/v1/messages', { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': anthropic, 'anthropic-version': '2023-06-01' }, body: JSON.stringify({ model: env('EXAM_ANTHROPIC_MODEL') || 'claude-sonnet-4-6', max_tokens: body.action === 'control' ? 6000 : body.action === 'tutor' ? 2500 : body.action === 'plan' ? 3000 : 24000, system, messages: [{ role: 'user', content: instruction }] }), signal: AbortSignal.timeout(140000) })
+        response = await fetcher('https://api.anthropic.com/v1/messages', { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': anthropic, 'anthropic-version': '2023-06-01' }, body: JSON.stringify({ model: env('EXAM_ANTHROPIC_MODEL') || 'claude-sonnet-4-6', max_tokens: body.action === 'control' ? (controlCorrection(body) ? 3500 : 6000) : body.action === 'tutor' ? 2500 : body.action === 'plan' ? 3000 : 24000, system, messages: [{ role: 'user', content: instruction }] }), signal: AbortSignal.timeout(controlCorrection(body) ? 60000 : 140000) })
         if (!response.ok) return json({ error: await providerFailure(response) }, response.status === 429 ? 429 : 502)
         const data = await response.json(); result = data.content?.filter(p => p.type === 'text').map(p => p.text).join('')
       }
-      let data
+      let data, validationPhase='json'
       try {
         data = JSON.parse((result || '').trim().replace(/^```json\s*/i, '').replace(/```$/, ''))
         if (data.error === 'out_of_scope') return json({ error: 'out_of_scope' }, 422)
+        validationPhase='contract'
         data = body.action === 'control' ? checkControlResult(data, body) : body.action === 'tutor' ? checkTutorReply(data) : body.action === 'study' ? checkStudyResult(data, body.courses) : body.action === 'plan' ? checkPlan(data, body.catalog) : body.action === 'grade' ? checkGrade(data, body.exam) : checkGeneratedExam(data, body.courses, body.duration)
-      } catch { return json({ error: 'invalid_response' }, 502) }
+      } catch { console.warn(JSON.stringify({event:'exam_invalid_response',action:body.action,step:body.action==='control'?body.step:null,phase:validationPhase,hasFeedback:typeof data?.feedback==='string',criteriaCount:Array.isArray(data?.criteria)?data.criteria.length:null})); return json({ error: 'invalid_response' }, 502) }
       return json(body.action === 'control' ? { control:data } : body.action === 'tutor' ? { tutor:data } : body.action === 'study' ? { study: data } : body.action === 'plan' ? { plan: data } : body.action === 'grade' ? { grade: data } : { exam: data })
     } catch (e) {
       const error = e?.name === 'TimeoutError' ? 'timeout' : 'server_error'
-      console.warn(JSON.stringify({ event: 'exam_request_failure', code: error, kind: ['TypeError', 'SyntaxError', 'AbortError', 'TimeoutError'].includes(e?.name) ? e.name : 'Error' }))
+      console.warn(JSON.stringify({ event: 'exam_request_failure', code: error, action: requestAction, step: requestStep, kind: ['TypeError', 'SyntaxError', 'AbortError', 'TimeoutError'].includes(e?.name) ? e.name : 'Error' }))
       return json({ error }, 502)
     }
   }

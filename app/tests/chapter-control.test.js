@@ -36,3 +36,24 @@ test('sans abonnement : préparation et correction ; authentification et plafond
  for(let i=2;i<30;i++)expect((await handler(request(prepare))).status).toBe(200)
  expect((await handler(request(correct))).status).toBe(429);expect(count).toBe(30)
 })
+test('la correction Gemini utilise un raisonnement limité et un délai court sans changer la création',async()=>{
+ const sent=[]
+ const handler=createHandler({env:k=>({GEMINI_API_KEY:'fake',SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake'})[k],fetcher:async(url,o)=>{
+  if(url.includes('/auth/'))return new Response(JSON.stringify({id:'u'}))
+  sent.push(JSON.parse(o.body).generationConfig)
+  return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(sent.length===1?result:exercise)}]}}]}))
+ }})
+ const req=b=>new Request('https://fake',{method:'POST',headers:{Authorization:'Bearer fake'},body:JSON.stringify(b)})
+ expect((await handler(req(correct))).status).toBe(200)
+ expect(sent[0].responseSchema.properties.criteria.minItems).toBe(5);expect(sent[0].responseSchema.properties.criteria.items.properties.index.maximum).toBe(4);expect(sent[0].thinkingConfig).toEqual({thinkingLevel:'LOW'});expect(sent[0].maxOutputTokens).toBe(3500)
+ expect((await handler(req(prepare))).status).toBe(200)
+ expect(sent[1].thinkingConfig).toBeUndefined();expect(sent[1].maxOutputTokens).toBe(6000)
+})
+test('un dépassement fournisseur rend une erreur explicite sans fabriquer de note',async()=>{
+ const handler=createHandler({env:k=>({GEMINI_API_KEY:'fake',SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake'})[k],fetcher:async url=>{
+  if(url.includes('/auth/'))return new Response(JSON.stringify({id:'u'}))
+  throw new DOMException('Provider timeout','TimeoutError')
+ }})
+ const response=await handler(new Request('https://fake',{method:'POST',headers:{Authorization:'Bearer fake'},body:JSON.stringify(correct)}))
+ expect(response.status).toBe(502);expect(await response.json()).toEqual({error:'timeout'})
+})
