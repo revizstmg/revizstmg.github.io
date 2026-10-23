@@ -1,0 +1,116 @@
+{
+  "name": "Italien",
+  "label": "Italiano",
+  "hello": "Ciao! Puoi presentarti?",
+  "intro": "Apprendre à interagir en italien : prononciation, phrases essentielles et situations de STMG.",
+  "sections": [
+    {
+      "title": "Commencer par une vraie situation",
+      "text": "Choisis une situation concrète : te présenter, demander un renseignement ou décrire ton stage. Prépare cinq phrases utiles, écoute un modèle puis essaie sans lire. Une langue se construit par des retours fréquents sur les mêmes situations, avec une difficulté qui augmente progressivement. Le guide accompagne un apprentissage : il ne remplace ni un professeur ni des échanges réels.",
+      "task": "Enregistre une présentation de 30 secondes. Écoute-la et choisis un seul point à améliorer. Garde cette première version pour comparer dans deux semaines."
+    },
+    {
+      "title": "Écouter pour comprendre, pas pour tout traduire",
+      "text": "Prends un extrait de 30 à 90 secondes adapté à ton niveau. Première écoute : qui parle, où et pourquoi ? Deuxième écoute : repère trois mots ou informations. Troisième écoute avec sous-titres dans la langue : vérifie ton hypothèse. Reprends ensuite sans sous-titres. Une vidéo trop difficile peut servir à découvrir une culture, mais un support plus simple est préférable pour travailler la compréhension.",
+      "task": "Note le thème et trois informations, puis résume en une phrase. Vérifie avec la transcription ; distingue ce que tu avais compris et ce que tu avais deviné."
+    },
+    {
+      "title": "Parler par petits blocs",
+      "text": "Apprends des groupes de mots réutilisables plutôt que des listes isolées : demander de répéter, donner son avis, expliquer une difficulté. Fais varier un élément de chaque phrase. Pour gagner en fluidité, prépare des mots-clés et non un texte entier. Les hésitations sont normales : une reformulation simple est souvent plus efficace qu’une traduction mot à mot.",
+      "task": "Construis trois réponses différentes à la même question. Fais d’abord 20 secondes, puis 40 secondes, puis une minute sans lire de texte."
+    },
+    {
+      "title": "Prononciation : écouter, imiter, comparer",
+      "text": "Écoute une phrase courte, mets en pause, répète, puis compare ton enregistrement au modèle. Observe le rythme, l’accent des mots et l’intonation avant de chercher une imitation parfaite. Le shadowing consiste à parler juste après le modèle : ralentis si nécessaire. Une transcription en français ne reproduit jamais exactement les sons d’une autre langue.",
+      "task": "Répète cinq fois une phrase de huit à douze mots. Compare les versions 1 et 5 sur un critère : rythme, consonne ou voyelle. Demande un retour à un enseignant ou à un interlocuteur compétent."
+    },
+    {
+      "title": "Vocabulaire qui reste disponible",
+      "text": "Crée des cartes avec une expression, une phrase personnelle et, si possible, un extrait audio fiable. Cache la réponse et retrouve-la à voix haute. Revois après un jour, trois jours, une semaine puis deux semaines ; rapproche les révisions si tu oublies. Relie chaque mot à une situation vécue. Dix expressions utilisées valent mieux qu’une longue liste seulement relue.",
+      "task": "Sélectionne cinq expressions de la semaine. Utilise-les dans une conversation de deux minutes puis modifie la situation pour vérifier que tu sais les réemployer."
+    },
+    {
+      "title": "Comprendre, lire et écrire pour mieux parler",
+      "text": "Lis un texte court à ton niveau, repère son objectif et ses connecteurs. Prépare un résumé avec des mots-clés. Écris ensuite cinq phrases, vérifie le sujet, le verbe et les accords, puis reformule-les oralement sans feuille. Un correcteur peut aider à repérer une erreur ; demande toujours pourquoi et vérifie la règle avec une ressource fiable.",
+      "task": "Lis une annonce ou une courte actualité. Résume l’idée principale, donne un exemple et explique ton avis. Compare le résumé au document : n’ajoute pas de faits absents."
+    },
+    {
+      "title": "Sons, doubles consonnes et accent",
+      "text": "C devant e/i donne généralement /tʃ/ comme dans cena ; ch devant e/i garde /k/ comme dans chi. G devant e/i donne généralement /dʒ/ comme dans giorno ; gh garde /g/. Gn se rapproche du gn français ; gli demande un modèle audio. Les doubles consonnes comptent : pala et palla ne sont pas le même mot. L’accent tonique n’est pas toujours écrit ; vérifie dans un dictionnaire sonore.",
+      "task": "Écoute puis répète cena, chi, giorno, spaghetti, famiglia et palla. Reprends ensuite une phrase contenant deux de ces mots."
+    },
+    {
+      "title": "Se présenter et poser une question",
+      "text": "Mi chiamo Lina. — Je m’appelle Lina. Ho diciassette anni. — J’ai dix-sept ans. Sono una studentessa / uno studente di STMG in Francia. Mi interessa il commercio. — Le commerce m’intéresse. Vorrei lavorare in un’azienda. — Je voudrais travailler dans une entreprise. E tu? — Et toi ?",
+      "task": "Prépare une présentation de 40 secondes. Explique tes études en termes simples et pose deux questions à ton interlocuteur."
+    },
+    {
+      "title": "Les structures essentielles",
+      "text": "Sono… identifie ou décrit ; ho… indique notamment la possession et l’âge. C’è un cliente / Ci sono due clienti expriment une présence. Studio / Lavoro : présent ; sto studiando : action en cours. Posso…? demande une possibilité ; devo… indique une obligation ; vorrei… formule un souhait poli. Les pronoms sujets peuvent être omis quand le contexte est clair.",
+      "task": "Décris où tu es, ce qu’il y a autour de toi, ce que tu fais habituellement et ce que tu es en train de faire."
+    },
+    {
+      "title": "Raconter une expérience et un projet",
+      "text": "Ho lavorato in un negozio : passé composé avec avere. Sono andata/andato a Roma : certains verbes se construisent avec essere et le participe s’accorde avec le sujet. Prima lavoravo… évoque une habitude passée. Domani studio / Studierò… annonce un projet ; vorrei imparare… exprime un souhait. Vérifie l’auxiliaire d’un verbe au dictionnaire plutôt que de transposer automatiquement le français.",
+      "task": "Raconte trois tâches de stage puis un déplacement. Termine par ce que tu voudrais apprendre à faire."
+    },
+    {
+      "title": "Faire répéter et gagner du temps",
+      "text": "Può ripetere, per favore? — Pouvez-vous répéter ? Puoi parlare più lentamente? — Peux-tu parler plus lentement ? Che cosa significa…? — Que signifie… ? Non ho capito. — Je n’ai pas compris. Voglio dire che… — Je veux dire que… Un momento, per favore. — Un instant, s’il vous plaît. Lei marque une politesse ; tu convient dans les situations familières.",
+      "task": "Organise une conversation où chacun doit demander une précision, reformuler un point et confirmer sa compréhension."
+    },
+    {
+      "title": "Construire un avis clair",
+      "text": "Secondo me… / Penso che… introduisent un avis ; attention, penso che peut demander le subjonctif : pour débuter, secondo me permet une phrase simple. Prima… poi… infine… organisent ; perché explique ; però nuance ; per esempio illustre. Sono d’accordo / Non sono d’accordo expriment un accord ou désaccord.",
+      "task": "Réponds : È utile fare uno stage? Utilise secondo me, une raison, un exemple et une limite."
+    },
+    {
+      "title": "Mini-dialogue : demander un renseignement",
+      "text": "A: Buongiorno, posso aiutarla? B: Sì, vorrei informazioni su questo servizio. A: Che cosa desidera sapere? B: Quanto costa? A: Costa trenta euro al mese. B: È possibile provarlo? A: Sì, le spiego come funziona. B: Grazie, è molto gentile.",
+      "task": "Remplace le service par une activité associative. Modifie le tarif et les conditions ; indique clairement ce qui est inclus."
+    },
+    {
+      "title": "ETLV et pièges utiles",
+      "text": "L’azienda produce… présente une production ; i dipendenti sont les salariés ; il fatturato est le chiffre d’affaires ; un cliente satisfait est soddisfatto. En italien, camera signifie chambre, et libreria signifie librairie ou bibliothèque-meuble selon le contexte ; biblioteca désigne une bibliothèque de consultation. I genitori sont les parents.",
+      "task": "En 90 secondes, présente une organisation et un problème : Il problema principale è… Propose une solution : Propongo di… Vérifie le vocabulaire avant la prise de parole."
+    },
+    {
+      "title": "Interagir sans rester bloqué",
+      "text": "Écoute la question jusqu’au bout. Si tu ne comprends pas, demande de répéter ou de reformuler. Réponds brièvement puis ajoute un exemple et une question de relance. Pour un échange à distance, ne partage pas d’informations personnelles avec des inconnus ; privilégie les cadres scolaires et les services adaptés à ton âge.",
+      "task": "Avec un partenaire, alternez client et conseiller pendant deux minutes. Interdiction de lire un dialogue ; chacun doit poser au moins deux questions et demander une précision."
+    },
+    {
+      "title": "Routine de 20 minutes",
+      "text": "5 minutes : revoir cinq expressions sans regarder. 5 minutes : écouter un extrait court avec un objectif précis. 5 minutes : répéter puis enregistrer une réponse. 5 minutes : noter un progrès et une difficulté, et préparer la prochaine séance. Les jours chargés, garde une version de cinq minutes : trois expressions et une réponse enregistrée.",
+      "task": "Planifie quatre rendez-vous réalistes par semaine. Coche les séances réellement faites. Si tu rates un jour, reprends simplement au rendez-vous suivant, sans doubler artificiellement la charge."
+    },
+    {
+      "title": "Plan progressif sur quatre semaines",
+      "text": "Semaine 1 : présentation et demandes simples ; deux enregistrements de 30 secondes. Semaine 2 : raconter une journée ou une expérience ; trois réponses de 45 secondes. Semaine 3 : donner un avis et comparer deux possibilités ; un échange de deux minutes. Semaine 4 : présenter un projet et répondre à des questions ; bilan avec la première version. Adapte les durées : ce programme ne garantit pas un niveau CECRL en quatre semaines.",
+      "task": "Choisis un objectif observable par semaine : par exemple expliquer trois tâches de stage sans lire. Garde une trace datée et une difficulté à retravailler."
+    },
+    {
+      "title": "S’autoévaluer avec précision",
+      "text": "Sur une échelle de 1 à 4, observe : message compréhensible, organisation, vocabulaire utile, correction et interaction. 1 : besoin d’un modèle ; 2 : message possible avec aide ; 3 : autonomie sur une situation familière ; 4 : autonomie avec reformulations et réponses aux questions. Ce bilan personnel n’est ni une certification CECRL ni une note officielle.",
+      "task": "Enregistre le même sujet une semaine plus tard. Cite un exemple concret de progrès et une priorité. Vérifie les attentes exactes de ton devoir avec ton professeur."
+    }
+  ],
+  "resources": [
+    {
+      "title": "RAI Scuola — Italiano per stranieri, vidéos",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri",
+      "kind": "video"
+    },
+    {
+      "title": "Loescher — italien pour étrangers",
+      "url": "https://italianoperstranieri.loescher.it/",
+      "kind": "practice"
+    },
+    {
+      "title": "Treccani — dictionnaire",
+      "url": "https://www.treccani.it/vocabolario/",
+      "kind": "reading"
+    }
+  ],
+  "id": "it"
+}

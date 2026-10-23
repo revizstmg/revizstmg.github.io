@@ -1,0 +1,116 @@
+{
+  "name": "Espagnol",
+  "label": "Español",
+  "hello": "¡Hola! ¿Puedes presentarte?",
+  "intro": "Construire un espagnol oral clair : sons, situations quotidiennes, opinions et communication professionnelle.",
+  "sections": [
+    {
+      "title": "Commencer par une vraie situation",
+      "text": "Choisis une situation concrète : te présenter, demander un renseignement ou décrire ton stage. Prépare cinq phrases utiles, écoute un modèle puis essaie sans lire. Une langue se construit par des retours fréquents sur les mêmes situations, avec une difficulté qui augmente progressivement. Le guide accompagne un apprentissage : il ne remplace ni un professeur ni des échanges réels.",
+      "task": "Enregistre une présentation de 30 secondes. Écoute-la et choisis un seul point à améliorer. Garde cette première version pour comparer dans deux semaines."
+    },
+    {
+      "title": "Écouter pour comprendre, pas pour tout traduire",
+      "text": "Prends un extrait de 30 à 90 secondes adapté à ton niveau. Première écoute : qui parle, où et pourquoi ? Deuxième écoute : repère trois mots ou informations. Troisième écoute avec sous-titres dans la langue : vérifie ton hypothèse. Reprends ensuite sans sous-titres. Une vidéo trop difficile peut servir à découvrir une culture, mais un support plus simple est préférable pour travailler la compréhension.",
+      "task": "Note le thème et trois informations, puis résume en une phrase. Vérifie avec la transcription ; distingue ce que tu avais compris et ce que tu avais deviné."
+    },
+    {
+      "title": "Parler par petits blocs",
+      "text": "Apprends des groupes de mots réutilisables plutôt que des listes isolées : demander de répéter, donner son avis, expliquer une difficulté. Fais varier un élément de chaque phrase. Pour gagner en fluidité, prépare des mots-clés et non un texte entier. Les hésitations sont normales : une reformulation simple est souvent plus efficace qu’une traduction mot à mot.",
+      "task": "Construis trois réponses différentes à la même question. Fais d’abord 20 secondes, puis 40 secondes, puis une minute sans lire de texte."
+    },
+    {
+      "title": "Prononciation : écouter, imiter, comparer",
+      "text": "Écoute une phrase courte, mets en pause, répète, puis compare ton enregistrement au modèle. Observe le rythme, l’accent des mots et l’intonation avant de chercher une imitation parfaite. Le shadowing consiste à parler juste après le modèle : ralentis si nécessaire. Une transcription en français ne reproduit jamais exactement les sons d’une autre langue.",
+      "task": "Répète cinq fois une phrase de huit à douze mots. Compare les versions 1 et 5 sur un critère : rythme, consonne ou voyelle. Demande un retour à un enseignant ou à un interlocuteur compétent."
+    },
+    {
+      "title": "Vocabulaire qui reste disponible",
+      "text": "Crée des cartes avec une expression, une phrase personnelle et, si possible, un extrait audio fiable. Cache la réponse et retrouve-la à voix haute. Revois après un jour, trois jours, une semaine puis deux semaines ; rapproche les révisions si tu oublies. Relie chaque mot à une situation vécue. Dix expressions utilisées valent mieux qu’une longue liste seulement relue.",
+      "task": "Sélectionne cinq expressions de la semaine. Utilise-les dans une conversation de deux minutes puis modifie la situation pour vérifier que tu sais les réemployer."
+    },
+    {
+      "title": "Comprendre, lire et écrire pour mieux parler",
+      "text": "Lis un texte court à ton niveau, repère son objectif et ses connecteurs. Prépare un résumé avec des mots-clés. Écris ensuite cinq phrases, vérifie le sujet, le verbe et les accords, puis reformule-les oralement sans feuille. Un correcteur peut aider à repérer une erreur ; demande toujours pourquoi et vérifie la règle avec une ressource fiable.",
+      "task": "Lis une annonce ou une courte actualité. Résume l’idée principale, donne un exemple et explique ton avis. Compare le résumé au document : n’ajoute pas de faits absents."
+    },
+    {
+      "title": "Prononcer de façon régulière",
+      "text": "Les cinq voyelles a, e, i, o, u gardent des sons relativement stables ; u ne se prononce pas comme le u français. Le h est muet. Le j de trabajo est une consonne de friction ; écoute un modèle. Le r simple et le rr peuvent distinguer pero et perro. En l’absence d’accent écrit, les mots finissant par voyelle, n ou s sont généralement accentués sur l’avant-dernière syllabe ; les autres sur la dernière. Les accents régionaux, notamment pour c/z, sont légitimes.",
+      "task": "Repère la syllabe forte de trabajo, español, teléfono et organización. Écoute puis répète les mots dans une phrase."
+    },
+    {
+      "title": "Se présenter simplement",
+      "text": "Me llamo Lina. — Je m’appelle Lina. Tengo diecisiete años. — J’ai dix-sept ans. Soy estudiante de STMG en Francia. — Je suis élève en STMG en France. Me interesa el comercio. — Le commerce m’intéresse. Me gustaría trabajar en una empresa. — J’aimerais travailler dans une entreprise. ¿Y tú? — Et toi ?",
+      "task": "Présente ton identité, tes études, un centre d’intérêt et un projet en cinq phrases. Explique STMG à un interlocuteur qui ne connaît pas cette filière."
+    },
+    {
+      "title": "Ser, estar et hay",
+      "text": "Ser sert notamment à identifier : Soy estudiante. Estar sert notamment à situer ou à décrire un état : Estoy en clase. Estoy cansada. Hay indique une existence : Hay tres personas. Ce ne sont pas simplement des catégories permanent/temporaire : un événement se situe avec ser, par exemple La reunión es en Madrid. Apprends les emplois en contexte.",
+      "task": "Décris une entreprise : ce qu’elle est, où elle se trouve et ce qu’il y a dans ses locaux. Utilise ser, estar et hay."
+    },
+    {
+      "title": "Parler du présent, du passé et d’un projet",
+      "text": "Trabajo en una tienda : présent. Ayer trabajé : passé achevé et situé. He trabajado esta semana : bilan lié au présent dans de nombreux usages d’Espagne ; les usages varient en Amérique latine. Antes trabajaba : habitude passée. Voy a estudiar : projet proche. Me gustaría aprender : souhait. Les terminaisons indiquent souvent le sujet ; yo n’est pas obligatoire dans chaque phrase.",
+      "task": "Raconte une journée de stage passée, une ancienne habitude et ton prochain objectif. Choisis des repères temporels explicites."
+    },
+    {
+      "title": "Demander une précision",
+      "text": "¿Puede repetir, por favor? — Pouvez-vous répéter ? ¿Puedes hablar más despacio? — Peux-tu parler moins vite ? ¿Qué significa esta palabra? — Que signifie ce mot ? No estoy seguro/segura. — Je ne suis pas sûr/sûre. Quiero decir que… — Je veux dire que… ¿Podría darme un ejemplo? — Pourriez-vous me donner un exemple ? Tú et usted correspondent à des usages de familiarité/politesse qui varient selon les pays.",
+      "task": "Joue une demande de renseignement. Utilise une demande de répétition puis vérifie : ¿Quiere decir que…?"
+    },
+    {
+      "title": "Avis, comparaison et argument",
+      "text": "Creo que… / En mi opinión… donnent un avis. Porque explique une cause ; por eso une conséquence ; sin embargo une nuance. Por ejemplo illustre. Estoy de acuerdo / No estoy de acuerdo expriment un accord ou désaccord. Más… que / menos… que comparent ; tan… como exprime l’égalité.",
+      "task": "Compare deux manières de faire connaître une association. Donne un avantage, une limite et une recommandation."
+    },
+    {
+      "title": "Mini-dialogue : accueillir un client",
+      "text": "A: Buenos días, ¿en qué puedo ayudarle? B: Busco información sobre este producto. A: ¿Qué le gustaría saber? B: ¿Cuánto cuesta y cómo se utiliza? A: Cuesta veinte euros. Le explico cómo funciona. B: Gracias. ¿Puedo pagar con tarjeta? A: Sí, por supuesto.",
+      "task": "Change le produit, le prix et le besoin du client. Fais ensuite reformuler au client les informations reçues."
+    },
+    {
+      "title": "ETLV et faux amis",
+      "text": "La empresa ofrece… présente l’offre ; los clientes sont les clients ; los empleados les salariés ; el volumen de ventas les ventes, à préciser avec l’unité du document. Actuellement = actualmente ; actualmente n’est pas éventuellement. Embarazada signifie enceinte ; avergonzado signifie gêné. Asistir a una reunión signifie assister à une réunion.",
+      "task": "Présente une entreprise en une minute puis propose une amélioration : Propongo… porque… Ne crée pas de chiffres non présents dans les documents."
+    },
+    {
+      "title": "Interagir sans rester bloqué",
+      "text": "Écoute la question jusqu’au bout. Si tu ne comprends pas, demande de répéter ou de reformuler. Réponds brièvement puis ajoute un exemple et une question de relance. Pour un échange à distance, ne partage pas d’informations personnelles avec des inconnus ; privilégie les cadres scolaires et les services adaptés à ton âge.",
+      "task": "Avec un partenaire, alternez client et conseiller pendant deux minutes. Interdiction de lire un dialogue ; chacun doit poser au moins deux questions et demander une précision."
+    },
+    {
+      "title": "Routine de 20 minutes",
+      "text": "5 minutes : revoir cinq expressions sans regarder. 5 minutes : écouter un extrait court avec un objectif précis. 5 minutes : répéter puis enregistrer une réponse. 5 minutes : noter un progrès et une difficulté, et préparer la prochaine séance. Les jours chargés, garde une version de cinq minutes : trois expressions et une réponse enregistrée.",
+      "task": "Planifie quatre rendez-vous réalistes par semaine. Coche les séances réellement faites. Si tu rates un jour, reprends simplement au rendez-vous suivant, sans doubler artificiellement la charge."
+    },
+    {
+      "title": "Plan progressif sur quatre semaines",
+      "text": "Semaine 1 : présentation et demandes simples ; deux enregistrements de 30 secondes. Semaine 2 : raconter une journée ou une expérience ; trois réponses de 45 secondes. Semaine 3 : donner un avis et comparer deux possibilités ; un échange de deux minutes. Semaine 4 : présenter un projet et répondre à des questions ; bilan avec la première version. Adapte les durées : ce programme ne garantit pas un niveau CECRL en quatre semaines.",
+      "task": "Choisis un objectif observable par semaine : par exemple expliquer trois tâches de stage sans lire. Garde une trace datée et une difficulté à retravailler."
+    },
+    {
+      "title": "S’autoévaluer avec précision",
+      "text": "Sur une échelle de 1 à 4, observe : message compréhensible, organisation, vocabulaire utile, correction et interaction. 1 : besoin d’un modèle ; 2 : message possible avec aide ; 3 : autonomie sur une situation familière ; 4 : autonomie avec reformulations et réponses aux questions. Ce bilan personnel n’est ni une certification CECRL ni une note officielle.",
+      "task": "Enregistre le même sujet une semaine plus tard. Cite un exemple concret de progrès et une priorité. Vérifie les attentes exactes de ton devoir avec ton professeur."
+    }
+  ],
+  "resources": [
+    {
+      "title": "VideoEle — vidéos graduées et activités",
+      "url": "https://videoele.com/",
+      "kind": "video"
+    },
+    {
+      "title": "Instituto Cervantes — langue et culture",
+      "url": "https://cervantes.org/es",
+      "kind": "practice"
+    },
+    {
+      "title": "RAE — dictionnaire de référence",
+      "url": "https://dle.rae.es/",
+      "kind": "reading"
+    }
+  ],
+  "id": "es"
+}

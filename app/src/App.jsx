@@ -44,6 +44,12 @@ const Seance = lazy(() => import('./pages/Seance.jsx'))
 
 // Rétro-compatibilité : les anciens liens /subject/:sid/chapter/:cid
 // (où le chapitre était en fait un thème) redirigent vers la page Thème.
+const Languages = lazy(() => import('./pages/Languages.jsx'))
+function LanguageResources({ children }) {
+  const { sid } = useParams()
+  return ['langues', 'p1-langues'].includes(sid) ? <Languages /> : children
+}
+
 function OldChapterRedirect() {
   const { sid, cid } = useParams()
   return <Navigate to={`/subject/${sid}/theme/${cid}`} replace />
@@ -74,10 +80,10 @@ export default function App() {
         <Route path="/accueil" element={<Home />} />
         <Route path="/cours" element={<Cours />} />
         <Route path="/seance" element={<ContenuFiliere><Seance /></ContenuFiliere>} />
-        <Route path="/subject/:sid" element={<ContenuMatiere><Subject /></ContenuMatiere>} />
-        <Route path="/subject/:sid/theme/:tid" element={<ContenuMatiere><Theme /></ContenuMatiere>} />
-        <Route path="/subject/:sid/theme/:tid/chapter/:cidx" element={<ContenuMatiere><Chapter /></ContenuMatiere>} />
-        <Route path="/subject/:sid/chapter/:cid" element={<OldChapterRedirect />} />
+        <Route path="/subject/:sid" element={<LanguageResources><ContenuMatiere><Subject /></ContenuMatiere></LanguageResources>} />
+        <Route path="/subject/:sid/theme/:tid" element={<LanguageResources><ContenuMatiere><Theme /></ContenuMatiere></LanguageResources>} />
+        <Route path="/subject/:sid/theme/:tid/chapter/:cidx" element={<LanguageResources><ContenuMatiere><Chapter /></ContenuMatiere></LanguageResources>} />
+        <Route path="/subject/:sid/chapter/:cid" element={<LanguageResources><OldChapterRedirect /></LanguageResources>} />
         <Route path="/favoris" element={<Favoris />} />
         <Route path="/mes-notes" element={<MesNotes />} />
         <Route path="/badges" element={<Badges />} />

@@ -1,0 +1,116 @@
+{
+  "name": "Arabe",
+  "label": "العربية",
+  "hello": "مرحبًا! هل يمكنك أن تقدّم نفسك؟",
+  "intro": "Des bases d’arabe standard pour comprendre et parler, avec des repères clairs sur les variétés dialectales.",
+  "sections": [
+    {
+      "title": "Commencer par une vraie situation",
+      "text": "Choisis une situation concrète : te présenter, demander un renseignement ou décrire ton stage. Prépare cinq phrases utiles, écoute un modèle puis essaie sans lire. Une langue se construit par des retours fréquents sur les mêmes situations, avec une difficulté qui augmente progressivement. Le guide accompagne un apprentissage : il ne remplace ni un professeur ni des échanges réels.",
+      "task": "Enregistre une présentation de 30 secondes. Écoute-la et choisis un seul point à améliorer. Garde cette première version pour comparer dans deux semaines."
+    },
+    {
+      "title": "Écouter pour comprendre, pas pour tout traduire",
+      "text": "Prends un extrait de 30 à 90 secondes adapté à ton niveau. Première écoute : qui parle, où et pourquoi ? Deuxième écoute : repère trois mots ou informations. Troisième écoute avec sous-titres dans la langue : vérifie ton hypothèse. Reprends ensuite sans sous-titres. Une vidéo trop difficile peut servir à découvrir une culture, mais un support plus simple est préférable pour travailler la compréhension.",
+      "task": "Note le thème et trois informations, puis résume en une phrase. Vérifie avec la transcription ; distingue ce que tu avais compris et ce que tu avais deviné."
+    },
+    {
+      "title": "Parler par petits blocs",
+      "text": "Apprends des groupes de mots réutilisables plutôt que des listes isolées : demander de répéter, donner son avis, expliquer une difficulté. Fais varier un élément de chaque phrase. Pour gagner en fluidité, prépare des mots-clés et non un texte entier. Les hésitations sont normales : une reformulation simple est souvent plus efficace qu’une traduction mot à mot.",
+      "task": "Construis trois réponses différentes à la même question. Fais d’abord 20 secondes, puis 40 secondes, puis une minute sans lire de texte."
+    },
+    {
+      "title": "Prononciation : écouter, imiter, comparer",
+      "text": "Écoute une phrase courte, mets en pause, répète, puis compare ton enregistrement au modèle. Observe le rythme, l’accent des mots et l’intonation avant de chercher une imitation parfaite. Le shadowing consiste à parler juste après le modèle : ralentis si nécessaire. Une transcription en français ne reproduit jamais exactement les sons d’une autre langue.",
+      "task": "Répète cinq fois une phrase de huit à douze mots. Compare les versions 1 et 5 sur un critère : rythme, consonne ou voyelle. Demande un retour à un enseignant ou à un interlocuteur compétent."
+    },
+    {
+      "title": "Vocabulaire qui reste disponible",
+      "text": "Crée des cartes avec une expression, une phrase personnelle et, si possible, un extrait audio fiable. Cache la réponse et retrouve-la à voix haute. Revois après un jour, trois jours, une semaine puis deux semaines ; rapproche les révisions si tu oublies. Relie chaque mot à une situation vécue. Dix expressions utilisées valent mieux qu’une longue liste seulement relue.",
+      "task": "Sélectionne cinq expressions de la semaine. Utilise-les dans une conversation de deux minutes puis modifie la situation pour vérifier que tu sais les réemployer."
+    },
+    {
+      "title": "Comprendre, lire et écrire pour mieux parler",
+      "text": "Lis un texte court à ton niveau, repère son objectif et ses connecteurs. Prépare un résumé avec des mots-clés. Écris ensuite cinq phrases, vérifie le sujet, le verbe et les accords, puis reformule-les oralement sans feuille. Un correcteur peut aider à repérer une erreur ; demande toujours pourquoi et vérifie la règle avec une ressource fiable.",
+      "task": "Lis une annonce ou une courte actualité. Résume l’idée principale, donne un exemple et explique ton avis. Compare le résumé au document : n’ajoute pas de faits absents."
+    },
+    {
+      "title": "Arabe standard et dialectes : choisir son objectif",
+      "text": "Ce guide utilise l’arabe standard moderne, utile dans les médias, l’écrit et de nombreux contextes scolaires. Les conversations quotidiennes emploient souvent des variétés dialectales : marocain, algérien, égyptien, levantin, etc. Il n’existe pas un dialecte oral unique pour tous les pays. Une formule standard peut être comprise sans être la plus spontanée localement. Pour converser dans un pays précis, choisis ensuite un modèle régional avec ton professeur.",
+      "task": "Écris ton objectif : lire les médias, préparer un oral scolaire ou parler avec une famille dans une région. Choisis une ressource adaptée et identifie sa variété."
+    },
+    {
+      "title": "Écriture et lecture de droite à gauche",
+      "text": "L’arabe se lit de droite à gauche ; les lettres changent de forme selon leur position et certaines ne se lient pas à la lettre suivante. Les voyelles brèves peuvent être indiquées par des signes ; elles sont souvent absentes des textes courants. Les voyelles longues se notent notamment avec ا، و، ي selon le contexte. Apprends d’abord à reconnaître, entendre et tracer les lettres, puis à lire des mots courts vocalisés. Une translittération ne remplace pas l’alphabet.",
+      "task": "Repère les lettres de باب (porte), بيت (maison) et كتاب (livre) avec un modèle sonore. Relie écriture et son avant d’accélérer la lecture."
+    },
+    {
+      "title": "Écouter les sons avant de les transcrire",
+      "text": "ح et ه, ع et ء, ق et ك ne se confondent pas. Les consonnes emphatiques comme ص، ض، ط، ظ demandent un modèle sonore et un retour guidé. Le symbole ʿ dans certaines transcriptions savantes représente ع ; les systèmes de translittération varient. Ne cherche pas à tout déduire d’une orthographe française approximative. La durée des voyelles peut distinguer les mots.",
+      "task": "Choisis deux sons difficiles, écoute cinq mots de référence puis enregistre-les. Travaille un seul contraste à la fois avec une personne compétente."
+    },
+    {
+      "title": "Se présenter en arabe standard",
+      "text": "مرحبًا — Bonjour. اسمي لينا — Je m’appelle Lina. أنا طالب / أنا طالبة — Je suis étudiant / étudiante. أدرس في فرنسا — J’étudie en France. أحبّ اللغات — J’aime les langues. أتعلّم العربية — J’apprends l’arabe. ما اسمك؟ — Comment t’appelles-tu ? Ces formes écrites sans voyelles demandent un modèle audio pour fixer la prononciation et les marques de genre à l’oral.",
+      "task": "Compose une présentation de quatre phrases et écoute un modèle standard. Change le prénom et ajoute une question simple."
+    },
+    {
+      "title": "Construire une phrase simple",
+      "text": "Au présent, une phrase nominale peut se construire sans équivalent exprimé de être : أنا طالب — Je suis étudiant. L’adjectif suit généralement le nom : شركة صغيرة — une petite entreprise. L’article الـ marque la définition ; nom et adjectif s’accordent selon la construction. عندي سؤال signifie j’ai une question. هذا كتاب — Ceci est un livre. هذه شركة — Ceci est une entreprise. Les règles d’accord se travaillent progressivement en contexte.",
+      "task": "Décris trois objets ou lieux avec هذا ou هذه et un nom vérifié. Demande à un professeur de contrôler l’accord avant de mémoriser."
+    },
+    {
+      "title": "Demander de répéter et comprendre une question",
+      "text": "لا أفهم — Je ne comprends pas. هل يمكنك أن تعيد، من فضلك؟ — Peux-tu répéter, s’il te plaît ? تكلّم ببطء، من فضلك — Parle lentement, s’il te plaît (adressé à un homme). ما معنى هذه الكلمة؟ — Que signifie ce mot ? أين؟ — Où ? متى؟ — Quand ? لماذا؟ — Pourquoi ? كيف؟ — Comment ? La personne et le genre de l’interlocuteur peuvent modifier les formes.",
+      "task": "Simule une demande d’information : utilise أين puis une demande de répétition. Vérifie la prononciation et l’adaptation au destinataire avec un modèle audio."
+    },
+    {
+      "title": "Donner un avis et présenter une organisation",
+      "text": "في رأيي — À mon avis. لأنّ — Parce que. مثلًا — Par exemple. لكن — Mais. شركة — Entreprise. زبون — Client. عمل — Travail. تعمل هذه الشركة في مجال… — Cette entreprise travaille dans le domaine de… Réutilise des phrases courtes dont tu comprends la structure ; les accords et les formes verbales demandent un apprentissage guidé. Pour l’ETLV, suis les consignes de ton établissement et la langue retenue.",
+      "task": "Présente une organisation en trois phrases simples : activité, public et idée d’amélioration. Vérifie chaque mot nouveau et distingue les faits de tes propositions."
+    },
+    {
+      "title": "Mini-échange et progression réaliste",
+      "text": "A: مرحبًا، ما اسمك؟ B: اسمي لينا. A: ماذا تدرسين؟ B: أدرس في فرنسا وأتعلّم العربية. A: لماذا تتعلّمين العربية؟ B: أحبّ اللغات. Les questions ici s’adressent à une femme ; les formes varient pour un homme. Commence avec un modèle vocalisé ou audio : le guide non vocalisé ne suffit pas pour déduire toutes les voyelles.",
+      "task": "Joue les deux rôles, puis change la motivation. Passe progressivement d’un texte vocalisé à des mots-clés. Si ton objectif est dialectal, fais adapter l’échange par un locuteur compétent."
+    },
+    {
+      "title": "Interagir sans rester bloqué",
+      "text": "Écoute la question jusqu’au bout. Si tu ne comprends pas, demande de répéter ou de reformuler. Réponds brièvement puis ajoute un exemple et une question de relance. Pour un échange à distance, ne partage pas d’informations personnelles avec des inconnus ; privilégie les cadres scolaires et les services adaptés à ton âge.",
+      "task": "Avec un partenaire, alternez client et conseiller pendant deux minutes. Interdiction de lire un dialogue ; chacun doit poser au moins deux questions et demander une précision."
+    },
+    {
+      "title": "Routine de 20 minutes",
+      "text": "5 minutes : revoir cinq expressions sans regarder. 5 minutes : écouter un extrait court avec un objectif précis. 5 minutes : répéter puis enregistrer une réponse. 5 minutes : noter un progrès et une difficulté, et préparer la prochaine séance. Les jours chargés, garde une version de cinq minutes : trois expressions et une réponse enregistrée.",
+      "task": "Planifie quatre rendez-vous réalistes par semaine. Coche les séances réellement faites. Si tu rates un jour, reprends simplement au rendez-vous suivant, sans doubler artificiellement la charge."
+    },
+    {
+      "title": "Plan progressif sur quatre semaines",
+      "text": "Semaine 1 : présentation et demandes simples ; deux enregistrements de 30 secondes. Semaine 2 : raconter une journée ou une expérience ; trois réponses de 45 secondes. Semaine 3 : donner un avis et comparer deux possibilités ; un échange de deux minutes. Semaine 4 : présenter un projet et répondre à des questions ; bilan avec la première version. Adapte les durées : ce programme ne garantit pas un niveau CECRL en quatre semaines.",
+      "task": "Choisis un objectif observable par semaine : par exemple expliquer trois tâches de stage sans lire. Garde une trace datée et une difficulté à retravailler."
+    },
+    {
+      "title": "S’autoévaluer avec précision",
+      "text": "Sur une échelle de 1 à 4, observe : message compréhensible, organisation, vocabulaire utile, correction et interaction. 1 : besoin d’un modèle ; 2 : message possible avec aide ; 3 : autonomie sur une situation familière ; 4 : autonomie avec reformulations et réponses aux questions. Ce bilan personnel n’est ni une certification CECRL ni une note officielle.",
+      "task": "Enregistre le même sujet une semaine plus tard. Cite un exemple concret de progrès et une priorité. Vérifie les attentes exactes de ton devoir avec ton professeur."
+    }
+  ],
+  "resources": [
+    {
+      "title": "Al Jazeera Learning Arabic — vidéos et parcours",
+      "url": "https://learning.aljazeera.net/",
+      "kind": "video"
+    },
+    {
+      "title": "Institut du monde arabe — centre de langue",
+      "url": "https://www.imarabe.org/fr/centre-langue-et-civilisation-arabes-clca",
+      "kind": "practice"
+    },
+    {
+      "title": "Institut du monde arabe — culture et expositions",
+      "url": "https://www.imarabe.org/",
+      "kind": "reading"
+    }
+  ],
+  "id": "ar"
+}

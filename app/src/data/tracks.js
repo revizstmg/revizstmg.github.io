@@ -83,7 +83,7 @@ function placeholderSubject(spec) {
 }
 
 // Renvoie la liste des matières (objets) à afficher pour la filière choisie.
-export function subjectsForTrack(track) {
+function trackSubjects(track) {
   if (!track) return []
   if (track.level === 'premiere-stmg') return SUBJECTS.filter((s) => s.niveau === 'premiere')
   if (track.level !== 'terminale-stmg') return []
@@ -112,4 +112,11 @@ export function trackIcon(track) {
     return s?.icon || '📕'
   }
   return getLevel(track.level)?.icon || '🎓'
+}
+
+// Les anciens chapitres de langues restent archivés pour les historiques.
+// L’offre actuelle est un espace de ressources sans exercices de cours.
+export function subjectsForTrack(track) {
+  return trackSubjects(track).map(s => ['langues','p1-langues'].includes(s.id)
+    ? { ...s, chapters: [], resourceOnly: true } : s)
 }
