@@ -34,7 +34,7 @@ export function BandeauCookies() {
     window.dispatchEvent(new Event('stmg-cookies-lu'))
   }
   return (
-    <div className="no-print fixed inset-x-0 bottom-0 z-[60] px-3 pt-2" role="region" aria-label={t('cookiesTitle')} style={{ paddingBottom: 'calc(0.5rem + env(safe-area-inset-bottom))' }}>
+    <div className="mobile-cookie-notice no-print fixed inset-x-0 bottom-0 z-[60] px-3 pt-2" role="region" aria-label={t('cookiesTitle')} style={{ paddingBottom: 'calc(0.5rem + env(safe-area-inset-bottom))' }}>
       <div
         className="mx-auto flex max-w-md items-center gap-2.5 rounded-2xl border px-3 py-2 shadow-xl"
         style={{ backgroundColor: 'color-mix(in srgb, var(--c-bg) 94%, var(--c-accent) 6%)', borderColor: 'color-mix(in srgb, var(--c-accent) 30%, transparent)' }}
