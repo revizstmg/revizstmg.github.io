@@ -60,7 +60,7 @@ test('Grand Oral : règles 2027, questions, entraînement, sources, analyse, arg
   await page.getByRole('tab', { name: /Arguments/ }).click()
   await expect(page.getByText(/^Question 2 · Fidéliser coûte-t-il moins cher que conquérir \?/)).toBeVisible()
   await page.getByRole('combobox', { name: 'Pour quelle question ?' }).selectOption('q2')
-  await page.getByLabel('A — Affirmation *').fill('Un client fidèle achète plus souvent.')
+  await page.getByLabel('A - Affirmation *').fill('Un client fidèle achète plus souvent.')
   await page.getByLabel('Notion de ta spécialité utilisée').fill('fidélisation')
   await page.getByRole('button', { name: 'Ajouter l’argument' }).click()
   await expect(page.getByRole('heading', { name: /Question 2 : Fidéliser/ })).toContainText('1 argument')

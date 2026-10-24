@@ -30,7 +30,7 @@ export default function CourseTutor({course}) {
   finally{clearTimeout(timer);lock.current=false;if(mounted.current){setBusy(false);setPending('')}}
  }
  return <details className="no-print card mt-4 p-4" data-course-tutor>
-  <summary className="cursor-pointer font-display text-lg font-semibold">Je n’ai pas compris · Tuteur IA</summary>
+  <summary className="cursor-pointer font-display text-lg font-semibold">Comprendre le cours</summary>
   <div className="mt-4 space-y-4">
    <p className="text-sm">On reprend ensemble, autant de fois que nécessaire. Je peux changer d’exemple, simplifier ou expliquer une étape à la fois. La discussion reste centrée sur ce chapitre.</p>
    <p className="text-xs text-slate-500 dark:text-slate-400">Tes messages et le cours sont transmis au service d’IA. La discussion reste disponible pendant cette visite et n’est pas enregistrée dans ton compte. L’IA peut se tromper : vérifie les points importants dans le cours.</p>

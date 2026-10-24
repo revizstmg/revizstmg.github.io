@@ -19,7 +19,7 @@ test('démarrage léger : le contenu d’une matière n’arrive qu’à son ouv
   expect(fichiers.filter((f) => f.startsWith('contenu-')), 'aucune matière chargée à l’accueil').toEqual([])
 
   await page.goto('./#/subject/droit')
-  await expect(page.locator('main')).toContainText(DROIT.name.replace(/^Thème \d+ — /, ''))
+  await expect(page.locator('main')).toContainText(DROIT.name.replace(/^Thème \d+ [\u2014\u2013-] /, ''))
   const matieres = fichiers.filter((f) => f.startsWith('contenu-'))
   expect(matieres.some((f) => f.startsWith('contenu-droit-'))).toBe(true)
   expect(matieres.filter((f) => !f.startsWith('contenu-droit-')), 'seulement le droit').toEqual([])

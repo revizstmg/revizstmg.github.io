@@ -1,3 +1,4 @@
+import {plainCopy} from '../presentation/style.js'
 import { createElement, Fragment, forwardRef, useEffect, useState } from 'react'
 import { useAutoTranslate, useLang, useT } from '../i18n.js'
 
@@ -8,13 +9,14 @@ export function interpolate(text, values = []) {
     return index ? values[Number(index[1])] ?? '' : part
   })
 }
-export function TextePublic({ text, values }) {
+export function TextePublic({ text, values, plain=false }) {
   const translated = useAutoTranslate(text)
+  if(plain)return plainCopy(interpolate(translated,values).join(''))
   return interpolate(translated, values).map((value, i) => <Fragment key={i}>{value}</Fragment>)
 }
 function Attribute({ model, children }) {
   const translated = useAutoTranslate(model.text)
-  return children(interpolate(translated, model.values).join(''))
+  return children(plainCopy(interpolate(translated, model.values).join('')))
 }
 export const ElementPublic = forwardRef(function ElementPublic({ as, __translations, ...props }, ref) {
   const entries = Object.entries(__translations)

@@ -62,6 +62,14 @@ npm run test:parcours   # parcours navigateur, après un build (~3 min)
 
 ## Interface
 
+Consignes du propriétaire (24 octobre 2026) :
+- Aucun avis ni chiffre inventé. Les statistiques affichées doivent venir des données réelles ou être clairement présentées comme des exemples.
+- Aplats de couleur, sans dégradé ; boutons rectangulaires à coins discrets, sans forme de pilule ; icônes SVG à la place des émojis d’interface.
+- Titres courts et aucun tiret long dans le texte affiché. Ne pas altérer les données pédagogiques pour un changement de présentation.
+- Au maximum une animation décorative par session ; respecter le mouvement réduit. Les minuteries fonctionnelles restent opérationnelles.
+- Aucun badge IA promotionnel. Conserver une information honnête sur les contenus automatiques, leurs limites et l’envoi de données.
+
+
 - Contraste AA : texte en couleur d'accent → `var(--c-accent-texte)`, fond sous du
   texte blanc → `var(--c-accent-fort)`, texte dans la couleur d'une matière →
   classe `texte-matiere` + `style={{ '--mc': couleur }}` (README, « Règles de

@@ -32,7 +32,7 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
 
   // Onglet Exercices, puis un QCM en mode entraînement.
   await page.getByRole('button', { name: /Exercices/ }).click()
-  await page.getByRole('button', { name: /QCM — (les )?notions/ }).first().click()
+  await page.getByRole('button', { name: /QCM - (les )?notions/ }).first().click()
   await page.getByRole('button', { name: /Entraînement/ }).click()
   // L'exercice s'ouvre en plein écran, par-dessus la page.
   const exercice = page.locator('[data-exercice]')
@@ -44,7 +44,7 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
   for (let partie = 0; partie < 5; partie++) {
     for (let i = 0; i < 40; i++) {
       const choix = page.getByRole('button', { name: /^[A-D] /, disabled: false })
-      // Bouton pour avancer — jamais une proposition (« A … », « B … ») dont le
+      // Bouton pour avancer - jamais une proposition (« A … », « B … ») dont le
       // texte contiendrait par hasard « résultat » ou « score ».
       const suite = page.getByRole('button', { name: /^(?![A-D] ).*(suivant|suivante|résultat|score|terminer|continuer)/i, disabled: false })
       if (await suite.count()) await suite.first().click()

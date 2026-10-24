@@ -25,7 +25,7 @@ test('fin de série : « Refaire mes erreurs » rejoue seulement les questions r
   await attendreAccueil(page)
   await page.goto('./#/subject/gestion-finance/theme/gf-t1/chapter/0')
   await page.getByRole('button', { name: /Exercices/ }).click()
-  await page.getByRole('button', { name: /QCM — (les )?notions/ }).first().click()
+  await page.getByRole('button', { name: /QCM - (les )?notions/ }).first().click()
   await page.getByRole('button', { name: /Entraînement/ }).click()
   const exercice = page.locator('[data-exercice]')
   // Toujours la dernière proposition : au moins une erreur, presque à coup sûr.

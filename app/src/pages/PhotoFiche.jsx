@@ -194,7 +194,7 @@ export default function PhotoFiche() {
               ))}
             </div>
             <button onClick={runVision} disabled={ai.status === 'running'} className="btn-gold mt-4 w-full !py-3.5 text-base disabled:opacity-60">
-              {ai.status === 'running' ? '✨ Analyse par l’IA en cours…' : '✨ Analyser avec l’IA (recommandé)'}
+              {ai.status === 'running' ? 'Analyse en cours…' : 'Analyser la photo'}
             </button>
             <p className="mt-1.5 text-center text-[11px] text-slate-400">Lit même les tableaux, le petit texte et l’écriture manuscrite.</p>
             {ai.msg && <p className="mt-2 text-xs text-amber-600 dark:text-amber-400">{ai.msg}</p>}
@@ -238,7 +238,7 @@ export default function PhotoFiche() {
             <>
               <div className="mb-1 flex items-start justify-between gap-2">
                 <h2 className="font-display text-2xl font-semibold leading-tight">{fiche.title}</h2>
-                <span className="chip shrink-0" style={{ backgroundColor: 'var(--c-accent)22', color: 'var(--c-accent-texte)' }}>{ficheSource === 'ia' ? '✨ IA' : ficheSource === 'ocr' ? '🔎 OCR' : '✍️ Fiche'}</span>
+                <small className="text-xs">{ficheSource === 'ia' ? 'Création automatique' : ficheSource === 'ocr' ? 'Texte extrait' : 'Fiche personnelle'}</small>
               </div>
               <span className="mb-4 block h-0.5 w-16 rounded-full" style={{ backgroundColor: 'var(--c-accent)' }} />
               {fiche.lowQuality && (

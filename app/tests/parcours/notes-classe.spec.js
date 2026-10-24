@@ -28,7 +28,7 @@ test('saisir ses notes et voir ce qu’il faut améliorer', async ({ page }) => 
   await matiere.selectOption('maths')
   await expect(chapitre).toBeEnabled()
   const chapitres = await chapitre.locator('option').allTextContents()
-  expect(chapitres).toContain('Chapitre 3 — Fonctions et dérivation')
+  expect(chapitres).toContain('Chapitre 3 - Fonctions et dérivation')
   expect(chapitres.some((c) => c.includes('règles comptables'))).toBe(false)
   await ajouter.click()
   await expect(page.getByRole('alert')).toContainText('Choisis le chapitre')
@@ -46,7 +46,7 @@ test('saisir ses notes et voir ce qu’il faut améliorer', async ({ page }) => 
 
   const ameliorer = page.locator('section', { has: page.getByRole('heading', { name: /Ce qu’il faut améliorer/ }) })
   await expect(ameliorer.getByRole('listitem')).toHaveCount(1)
-  await expect(ameliorer).toContainText('Chapitre 2 — Suites numériques')
+  await expect(ameliorer).toContainText('Chapitre 2 - Suites numériques')
   await expect(ameliorer).toContainText('Sous la moyenne')
   await expect(ameliorer).toContainText('8,50/20')
   await expect(page.getByText('Moyenne 12/20')).toBeVisible()

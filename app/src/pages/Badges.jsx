@@ -29,7 +29,7 @@ export default function Badges() {
           return (
             <div
               key={b.id}
-              className={`card flex flex-col items-center p-4 text-center transition ${got ? '' : 'opacity-70'}`}
+              className={`card flex flex-col items-center p-4 text-center transition ${got ? '' : 'border-dashed'}`}
             >
               <span className={`text-4xl ${got ? 'animate-float' : 'grayscale'}`} aria-hidden>{got ? b.icon : '🔒'}</span>
               <span className="mt-2 text-sm font-bold leading-tight"><CourseText text={b.name} /></span>

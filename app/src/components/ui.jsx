@@ -1,6 +1,6 @@
 import { useAutoTranslate } from '../i18n.js'
 // Petits composants d'interface réutilisables.
-import { useEffect, useState } from 'react'
+
 
 // --- Icônes trait fin (monochrome, currentColor) : aspect minimaliste luxe.
 // On remplace les emojis « UI » par des pictos discrets et cohérents.
@@ -116,49 +116,8 @@ export function Ring({ value = 0, color = '#7c3aed', size = 64, label }) {
 }
 
 // Petite pluie de confettis en pur CSS (célébration de réussite).
-export function Confetti({ show }) {
-  const [pieces, setPieces] = useState([])
-  useEffect(() => {
-    if (!show) return
-    const colors = ['#f43f5e', '#f59e0b', '#10b981', '#3b82f6', '#a855f7', '#ec4899']
-    setPieces(
-      Array.from({ length: 34 }, (_, i) => ({
-        id: i + Math.random(),
-        left: Math.random() * 100,
-        delay: Math.random() * 0.3,
-        dur: 1 + Math.random() * 0.8,
-        color: colors[i % colors.length],
-        rot: Math.random() * 360,
-      })),
-    )
-    const t = setTimeout(() => setPieces([]), 2200)
-    return () => clearTimeout(t)
-  }, [show])
-  if (!pieces.length) return null
-  return (
-    <div className="pointer-events-none fixed inset-0 z-[60] overflow-hidden" aria-hidden>
-      {pieces.map((p) => (
-        <span
-          key={p.id}
-          style={{
-            position: 'absolute',
-            top: '-12px',
-            left: `${p.left}%`,
-            width: 9,
-            height: 9,
-            background: p.color,
-            transform: `rotate(${p.rot}deg)`,
-            borderRadius: 2,
-            animation: `confetti-fall ${p.dur}s ${p.delay}s ease-in forwards`,
-          }}
-        />
-      ))}
-      <style>{`@keyframes confetti-fall{to{transform:translateY(105vh) rotate(540deg);opacity:0}}`}</style>
-    </div>
-  )
-}
+export function Confetti() { return null }
 
-// Bandeau discret « aucune donnée » / info.
 export function Empty({ icon = '🗒️', children }) {
   return (
     <div className="card p-8 text-center text-slate-500 dark:text-slate-400">
