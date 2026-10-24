@@ -457,6 +457,7 @@ export default function Welcome() {
     <div className="welcome-root no-print" role="dialog" aria-label={authMode === 'login' ? t('loginTab') : t('letsMeet')}>
       <div className="welcome-card">
         <p className="welcome-brand">RévizSTMG</p>
+        <p className="mb-4 text-center text-sm"><a href="/cours/" className="underline">Lire les cours sans inscription</a></p>
         {authMode === 'login' && !essai && !recoverStep && <p className="mb-5 text-center text-sm leading-relaxed text-slate-600 dark:text-slate-300">Des cours clairs. Des exercices ciblés.<br />Un peu chaque jour, à ton rythme.</p>}
 
         {/* ---------- Essai sans compte ---------- */}

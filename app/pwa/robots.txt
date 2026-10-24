@@ -1,4 +1,4 @@
-# RévizSTMG — https://revizstmg.github.io
+# RévizSTMG - https://revizstmg.github.io
 User-agent: *
 Allow: /
 # Dossiers de travail du dépôt, servis aussi par GitHub Pages : rien à indexer.

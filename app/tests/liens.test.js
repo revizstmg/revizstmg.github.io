@@ -7,6 +7,7 @@ import { readFileSync, readdirSync, statSync } from 'node:fs'
 import { join, resolve, dirname, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { SUBJECTS, ALL_CHAPTERS } from '../src/data/index.js'
+import {PUBLIC_ROOTS} from '../scripts/pages-cours/sources.mjs'
 import { ECRANS, nomEcran } from '../src/mesure.js'
 
 const APP = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -44,7 +45,7 @@ describe('liens internes', () => {
     // Le fil d'Ariane fabrique `/${parts[0]}` pour les pages de PAGES_SIMPLES :
     // ce sont ses clés qui sont vérifiées.
     const aVerifier = tous.filter((c) => !(c.fichier.endsWith('Layout.jsx') && c.brut === '/${parts[0]}'))
-    const casses = aVerifier.filter((c) => !MOTIFS.some((m) => m.test(c.chemin))).map((c) => `${c.fichier} : ${c.brut}`)
+    const casses = aVerifier.filter((c) => !MOTIFS.some((m) => m.test(c.chemin)) && !PUBLIC_ROOTS.includes(c.chemin)).map((c) => `${c.fichier} : ${c.brut}`)
     expect(casses).toEqual([])
   })
 

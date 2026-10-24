@@ -316,6 +316,7 @@ export default function Layout({ children }) {
               <span>Réviz<span style={{ color: 'var(--c-accent-texte)' }}>STMG</span></span>
             </Link>
             <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
+              <a href="/cours/" className="hover:underline">Cours sans inscription</a><a href="/a-propos/" className="hover:underline">À propos</a>
               {!standalone && <Link to="/guide" className="hover:text-[color:var(--c-accent)] hover:underline">{t('startGuide')}</Link>}
               <Link to="/confidentialite" className="hover:text-[color:var(--c-accent)] hover:underline">{t('privacyPolicy')}</Link>
               <Link to="/cgu" className="hover:text-[color:var(--c-accent)] hover:underline">{t('termsOfUse')}</Link>
@@ -411,7 +412,7 @@ function Breadcrumb() {
   // Titre de l'onglet : la page en cours, puis le nom du site.
   const dernier = crumbs.length > 1 ? crumbs[crumbs.length - 1].label : ''
   useEffect(() => {
-    document.title = cleanCopy(dernier ? `${dernier} - RévizSTMG` : 'RévizSTMG - Bac STMG')
+    document.title = cleanCopy(dernier ? `${dernier} - RévizSTMG` : 'Révision bac STMG | RévizSTMG')
   }, [dernier])
 
   if (crumbs.length <= 1) return null

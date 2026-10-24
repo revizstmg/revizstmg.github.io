@@ -525,3 +525,7 @@ Les matières Langues de Première et Terminale ouvrent un atelier avec quatre m
 Les 176 pages vidéo ont été sélectionnées depuis les catalogues British Council, VideoEle, RAI Scuola et Al Jazeera Learning Arabic, puis contrôlées pour leur accessibilité et la présence d’un lecteur. Elles restent hébergées par leurs éditeurs et soumises à leurs conditions. La bibliothèque du site est repliée par défaut et filtrable par niveau, pour éviter une longue grille de boutons. Les niveaux affichés sont ceux des catalogues, sans promesse de certification.
 
 Les sources des manuels sont dans `app/resources/langues/{en,es,it,ar}.json`. Le générateur `cd app && node scripts/guides-langues.mjs` produit les quatre PDF avec signets et liens internes, ainsi qu’un catalogue léger pour l’interface : le texte complet des manuels n’est pas chargé par la page. Les anciens cours restent archivés pour conserver l’intégrité des résultats, mais ne sont plus proposés dans les parcours, la recherche ou les anciennes routes de cours. Aucun résultat utilisateur n’est supprimé.
+
+## Cours publics
+
+Les cours peuvent aussi être lus sans compte et sans JavaScript dans le [catalogue public](https://revizstmg.github.io/cours/). Voir la [méthode et les sources](https://revizstmg.github.io/a-propos/) et le [guide de partage](docs/DIFFUSION-RESSOURCES.md). Les pages HTML, les deux sitemaps et llms.txt sont générés à la compilation ; détails dans [REFERENCEMENT-COURS-PUBLICS.md](docs/REFERENCEMENT-COURS-PUBLICS.md).
