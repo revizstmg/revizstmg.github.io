@@ -34,7 +34,8 @@ export async function preparer(page, etat = etatEleve()) {
     return route.abort('blockedbyclient')
   })
   await page.addInitScript((e) => {
-    if (sessionStorage.getItem('__seeded')) return
+    if (sessionStorage.getItem('__seeded') || window.name.includes('__revizstmg_parcours_seeded__')) return
+    window.name += '__revizstmg_parcours_seeded__'
     sessionStorage.setItem('__seeded', '1')
     localStorage.setItem('stmg_reset_v2', '1')
     if (e) localStorage.setItem('stmg_progress_v2', JSON.stringify(e))
