@@ -3,7 +3,7 @@
 // 2) écrit dans le service worker la liste de tous les fichiers compilés à
 //    mettre en cache, et une version qui change avec eux ;
 // 3) injecte les balises <head> et l'enregistrement du service worker.
-import { readdirSync, copyFileSync, readFileSync, writeFileSync } from 'node:fs'
+import { readdirSync, copyFileSync, readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { createHash } from 'node:crypto'
@@ -25,7 +25,7 @@ for (const f of readdirSync(SRC)) {
 // Les polices existent en woff2 et en woff : tous les navigateurs actuels lisent le
 // woff2, on ne met donc pas les woff en cache (ils restent servis si besoin).
 const assets = readdirSync(join(OUT, 'assets')).filter((f) => !f.endsWith('.woff')).sort().map((f) => `./assets/${f}`)
-const version = createHash('sha256').update(assets.join('\n')).update(readFileSync(join(OUT, 'index.html'))).update(readFileSync(join(OUT, 'sw.js'))).digest('hex').slice(0, 10)
+const version = createHash('sha256').update(assets.join('\n')).update(readFileSync(join(OUT, 'index.html'))).update(readFileSync(join(OUT, 'sw.js'))).update(existsSync(join(OUT,'cours','cours.css'))?readFileSync(join(OUT,'cours','cours.css')):'').digest('hex').slice(0, 10)
 const swPath = join(OUT, 'sw.js')
 let sw = readFileSync(swPath, 'utf8')
 if (!sw.includes('__VERSION__') || !sw.includes('/* __PRECACHE__ */ []')) throw new Error('sw.js : repères __VERSION__ / __PRECACHE__ introuvables')

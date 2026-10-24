@@ -6,7 +6,7 @@
 // ceux de la version précédente en plus de la nouvelle : un élève qui a encore
 // l'ancienne version ouverte doit pouvoir charger les fichiers qu'elle demande.
 // Tout le reste (versions plus anciennes) est supprimé.
-import { readdirSync, readFileSync, copyFileSync, mkdirSync, rmSync, existsSync, statSync } from 'node:fs'
+import { readdirSync, readFileSync, copyFileSync, mkdirSync, rmSync, existsSync, statSync, cpSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 
 const DIST = resolve(process.argv[2] || 'dist')
@@ -32,6 +32,7 @@ mkdirSync(join(SITE, 'assets'), { recursive: true })
 for (const f of nouveaux) copyFileSync(join(DIST, 'assets', f), join(SITE, 'assets', f))
 for (const f of readdirSync(DIST)) {
   if (f === 'assets') continue
+  if(['cours','a-propos','partager'].includes(f)&&statSync(join(DIST,f)).isDirectory()){rmSync(join(SITE,f),{recursive:true,force:true});cpSync(join(DIST,f),join(SITE,f),{recursive:true});continue}
   if (statSync(join(DIST, f)).isFile()) copyFileSync(join(DIST, f), join(SITE, f))
 }
 
