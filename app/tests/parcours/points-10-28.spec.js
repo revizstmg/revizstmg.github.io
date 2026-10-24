@@ -62,7 +62,7 @@ test('QCM de classe : un envoi échoué survit au rechargement puis est renvoyé
   return route.fulfill({contentType:'application/json',body:'[]'})
  })
  await page.goto('./#/classe');await attendreAccueil(page)
- await page.getByRole('button',{name:/QCM/}).click()
+ await page.getByRole('button',{name:'Quiz et travail',exact:false}).click()
  await page.getByRole('button',{name:'Jouer',exact:true}).click()
  await page.getByRole('button',{name:/^[AB] 4$/}).click()
  await page.getByRole('button',{name:/Voir mon score/}).click()

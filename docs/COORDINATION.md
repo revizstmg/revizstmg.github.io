@@ -1311,3 +1311,4 @@ Prochaine action :
 
 ### CLASSE-20261024-CODEX-06 — actualiser le parcours de renvoi des résultats
 - Le contrôle complet #102 a réussi 213 parcours sur 214 ; seul le test historique points-10-28 cherche encore le bouton QCM renommé Quiz et travail. Périmètre : uniquement le sélecteur de navigation de ce test et ce journal. Aucune assertion de sauvegarde/renvoi ni règle retirée. Publication de la refonte bloquée tant que la suite n’est pas verte. Branche fix/parcours-quiz-classe, réservation avant code.
+- Correction : bouton recherché par son nom actuel Quiz et travail. Quatre parcours points-10-28 réussis localement, dont résultat conservé après HTTP503/rechargement puis renvoyé une seule fois avec score et identité vérifiés. Aucun changement applicatif ni assertion retirée. PR #103 ; relance complète et publication de #102 après fusion.
