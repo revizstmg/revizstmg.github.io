@@ -3,6 +3,12 @@ import { test, expect } from '@playwright/test'
 import { preparer, attendreAccueil, etat, etatEleve, AUJOURDHUI } from './eleve.js'
 
 const ID = '00000000-0000-4000-8000-000000000001'
+async function rubrique(page,name){
+ await page.locator('.class-menu-trigger').click()
+ await page.getByRole('dialog').getByRole('button',{name,exact:true}).click()
+ await expect(page.getByRole('dialog')).not.toBeVisible()
+}
+
 async function ouvrir(page, role,extra={}) {
   const errors = await preparer(page, etatEleve({ account: { id: ID, role }, classCode: role === 'prof' ? '' : 'stmg-abc23',...extra }))
   await page.addInitScript((id) => localStorage.setItem('stmg_session', JSON.stringify({ token: 'test', refresh: 'r', expires_at: Math.floor(Date.now() / 1000) + 3600, user: { id, email: 'test@test.fr' } })), ID)
@@ -159,7 +165,8 @@ for(const [role,theme] of [['prof','light'],['eleve','dark']])test('espace class
  await page.reload();await attendreAccueil(page)
  const cookie=page.getByRole('button',{name:'OK',exact:true});if(await cookie.isVisible())await cookie.click()
  await expect(page.locator('.class-stat-grid')).toBeVisible()
- await expect(page.locator('.class-navigation>div>button')).toHaveCount(4)
+ await expect(page.locator('.class-menu-trigger')).toBeVisible()
+ await expect(page.locator('.class-desktop-navigation')).not.toBeVisible()
  expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false)
  await page.waitForFunction(()=>document.getAnimations().every(a=>a.playState!=='running'||a.effect?.getComputedTiming().iterations===Infinity))
  expect((await new AxeBuilder({page}).include('main').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([])
@@ -188,10 +195,10 @@ for(const theme of ['light','dark'])test('professeur : suivi, groupes et réglag
  const subjects=Object.fromEntries(['gestion-finance','management','droit','economie','maths','philosophie','histoire-geo','langues'].map(key=>[key,100]))
  server.memberRows=[{device_id:'student-a',name:'Inès Test',role:'eleve',xp:10,streak:1,courses_week:0,active_day:AUJOURDHUI,subjects:{}},{device_id:'student-b',name:'Tom Test',role:'eleve',xp:200,streak:5,courses_week:3,active_day:AUJOURDHUI,subjects}]
  const cookie=page.getByRole('button',{name:'OK',exact:true});if(await cookie.isVisible())await cookie.click()
- await page.locator('.class-navigation').getByRole('button',{name:/Suivi et gestion/}).click()
+ await rubrique(page,'Suivi et gestion')
  for(const name of ['Tableau','Groupes','Réglages']){
-  await page.locator('.class-prof-navigation').getByRole('button',{name,exact:true}).click()
-  await expect(page.locator('.class-prof-navigation')).toBeVisible()
+  await rubrique(page,name==='Tableau'?'Suivi et gestion':name==='Réglages'?'Réglages de la classe':name)
+  await expect(page.locator('.class-prof-navigation')).not.toBeVisible()
   await page.waitForTimeout(300)
   await page.waitForFunction(()=>document.getAnimations().every(a=>a.playState!=='running'||a.effect?.getComputedTiming().iterations===Infinity))
   expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false)
@@ -206,7 +213,10 @@ for(const [role,lang,label] of [['prof','de','Übersicht'],['eleve','ar','نظر
   await page.locator('#class-new-name').fill('Droit Mme Martin · 1STMG04')
   await page.locator('.class-name-form button[type=submit]').click()
  }
- await expect(page.locator('.class-navigation>div>button').first()).toContainText(label)
+ await expect(page.locator('.class-menu-trigger')).toContainText(label)
+ await page.locator('.class-menu-trigger').click()
+ await expect(page.getByRole('dialog').getByRole('button',{name:label,exact:true})).toHaveAttribute('aria-current','page')
+ await page.keyboard.press('Escape')
  await expect(page.locator('.class-hero h1')).toContainText('Droit Mme Martin · 1STMG04')
  if(lang==='ar')await expect(page.locator('html')).toHaveAttribute('dir','rtl')
  expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false)
@@ -216,8 +226,8 @@ for(const [role,lang,label] of [['prof','de','Übersicht'],['eleve','ar','نظر
 test('professeur : groupe et annonce conservent la saisie après erreur, puis sont publiés',async({page})=>{
  const {errors,server}=await ouvrir(page,'prof')
  await page.getByRole('button',{name:/Générer.*code/}).click()
- await page.locator('.class-navigation').getByRole('button',{name:/Suivi et gestion/}).click()
- await page.locator('.class-prof-navigation').getByRole('button',{name:'Groupes',exact:true}).click()
+ await rubrique(page,'Suivi et gestion')
+ await rubrique(page,'Groupes')
  await page.getByLabel(/^Nom du groupe/).fill('Équipe contrat')
  server.failGroup=true
  await page.getByRole('button',{name:/Créer un groupe/}).click()
@@ -227,7 +237,7 @@ test('professeur : groupe et annonce conservent la saisie après erreur, puis so
  server.failGroup=false
  await page.getByRole('button',{name:/Créer un groupe/}).click()
  await expect(page.locator('.class-group-title')).toContainText('Équipe contrat')
- await page.locator('.class-prof-navigation').getByRole('button',{name:'Réglages',exact:true}).click()
+ await rubrique(page,'Réglages de la classe')
  await page.getByLabel('Annonce à la classe',{exact:true}).fill('Contrôle de droit vendredi : revoir le chapitre sur le contrat.')
  server.failMeta=true
  await page.getByRole('button',{name:'Publier l’annonce',exact:true}).click()
@@ -260,5 +270,46 @@ test('professeur : créer un quiz depuis la vue d’ensemble et conserver le bro
  await expect.poll(()=>server.quizzes.length).toBe(1)
  await expect(page.locator('main')).toContainText('Droit — le contrat')
  expect(server.quizzes[0].questions).toHaveLength(1)
+ expect(errors).toEqual([])
+})
+
+for(const [role,theme] of [['prof','light'],['eleve','dark']])test('menu de classe mobile complet, clavier et changement de taille : '+role,async({page},info)=>{
+ const {errors}=await ouvrir(page,role,{theme})
+ await page.setViewportSize({width:320,height:640})
+ if(role==='prof')await page.getByRole('button',{name:/Générer.*code/}).click()
+ const cookie=page.getByRole('button',{name:'OK',exact:true});if(await cookie.isVisible())await cookie.click()
+ const trigger=page.locator('.class-menu-trigger')
+ await expect(trigger).toBeVisible();await trigger.click()
+ const menu=page.getByRole('dialog',{name:'Menu de la classe',exact:true})
+ await expect(menu).toBeVisible()
+ await expect(menu.getByRole('navigation').getByRole('button')).toHaveCount(role==='prof'?9:6)
+ await expect(menu.locator('[aria-current=page]')).toContainText('Vue d’ensemble')
+ expect(await page.evaluate(()=>document.body.style.overflow)).toBe('hidden')
+ const close=menu.getByRole('button',{name:'Fermer',exact:true})
+ await expect(close).toBeFocused()
+ await page.keyboard.press('Shift+Tab');await expect(menu.getByRole('button').last()).toBeFocused()
+ await page.keyboard.press('Tab');await expect(close).toBeFocused()
+ await page.waitForFunction(()=>document.getAnimations().every(a=>a.playState!=='running'||a.effect?.getComputedTiming().iterations===Infinity))
+ expect((await new AxeBuilder({page}).include('.class-mobile-dialog').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze()).violations).toEqual([])
+ expect(await menu.evaluate(el=>el.scrollWidth<=el.clientWidth)).toBe(true)
+ await menu.getByRole('button').last().scrollIntoViewIfNeeded()
+ await expect(menu.getByRole('button').last()).toBeInViewport()
+ await expect(close).toBeInViewport()
+ await page.screenshot({path:info.outputPath('menu-'+role+'.png')})
+ await page.keyboard.press('Escape');await expect(menu).not.toBeVisible();await expect(trigger).toBeFocused()
+ await trigger.click();await close.click();await expect(menu).not.toBeVisible();await expect(trigger).toBeFocused()
+ expect(await page.evaluate(()=>document.body.style.overflow)).not.toBe('hidden')
+ if(role==='prof'){
+  await rubrique(page,'Groupes');await expect(page.getByLabel(/^Nom du groupe/)).toBeVisible()
+  await expect(trigger).toContainText('Groupes')
+  await rubrique(page,'Réglages de la classe');await expect(page.getByLabel('Annonce à la classe',{exact:true})).toBeVisible()
+ }else{
+  await trigger.click();await expect(menu.getByRole('button',{name:'Groupes',exact:true})).toHaveCount(0)
+  await menu.getByRole('button',{name:'Objectif',exact:false}).click();await expect(menu).not.toBeVisible()
+ }
+ await trigger.click();await expect(menu).toBeVisible()
+ await page.setViewportSize({width:1280,height:900})
+ await expect(menu).not.toBeVisible();await expect(trigger).not.toBeVisible();await expect(page.locator('.class-desktop-navigation')).toBeVisible()
+ expect(await page.evaluate(()=>document.body.style.overflow)).not.toBe('hidden')
  expect(errors).toEqual([])
 })

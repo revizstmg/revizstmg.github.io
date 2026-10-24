@@ -1,4 +1,5 @@
 import './Classe.css'
+import ClassNavigation from '../components/ClassNavigation.jsx'
 import ClassOverview from '../components/ClassOverview.jsx'
 import {classMessages} from '../i18n/classes.js'
 import {cleanClassName} from '../data/classIdentity.js'
@@ -55,6 +56,7 @@ export default function Classe() {
   const photo = state.profile?.photo || ''
   const teacherClasses = state.teacherClasses || []
   const [tab, setTab] = useState('overview')
+  const [profSection,setProfSection]=useState('board')
   const [identity,setIdentity]=useState(null)
   const [quizCreate,setQuizCreate]=useState(false)
   const [overviewVersion,setOverviewVersion]=useState(0)
@@ -159,7 +161,7 @@ export default function Classe() {
     if(classCode)fetchClassByCode(classCode).then(row=>{if(alive)setIdentity(row)}).catch(()=>{})
     return()=>{alive=false}
   },[classCode,accountId])
-  const selectTab=(id,action)=>{if(id===tab&&!action)return;setQuizCreate(action==='create'&&role==='prof');setTab(id);requestAnimationFrame(()=>sectionHeading.current?.focus())}
+  const selectTab=(id,action)=>{if(id===tab&&!action)return;if(id==='prof')setProfSection(['groups','settings'].includes(action)?action:'board');setQuizCreate(action==='create'&&role==='prof');setTab(id);requestAnimationFrame(()=>sectionHeading.current?.focus())}
 
   // Instantané du membre (pour classements, podium, heatmap, groupes).
   const subjectsKey = JSON.stringify(derived.bySubject)
@@ -284,10 +286,7 @@ export default function Classe() {
 
       <hr className="rule-gold" />
 
-      <nav className="class-navigation" aria-label={m.overview}>
-        <div>{TABS.filter(tb=>['overview','quiz','wall',role==='prof'?'prof':'members'].includes(tb.id)).map(tb=><button type="button" key={tb.id} aria-current={tab===tb.id?'page':undefined} onClick={()=>selectTab(tb.id)}><span aria-hidden>{tb.icon}</span>{tb.label}</button>)}</div>
-        <details><summary>{m.more}</summary><div>{TABS.filter(tb=>!['overview','quiz','wall',role==='prof'?'prof':'members'].includes(tb.id)).map(tb=><button type="button" key={tb.id} onClick={e=>{e.currentTarget.closest('details').open=false;selectTab(tb.id)}}>{tb.label} →</button>)}</div></details>
-      </nav>
+      <ClassNavigation key={'class-nav:'+accountId+':'+classCode} tabs={TABS} tab={tab} profSection={profSection} role={role} className={blason || classCode} m={m} t={t} onSelect={selectTab}/>
       <div className="class-section-heading"><h2 ref={sectionHeading} tabIndex={-1} className="class-section-title font-display">{TABS.find(tb=>tb.id===tab)?.label}</h2>{tab==='overview'&&<button type="button" className="btn-ghost" onClick={refreshClass}>{m.refresh}</button>}</div>
       <div key={'class-content:'+accountId+':'+classCode}>
       {tab==='overview'&&<ClassOverview refreshKey={overviewVersion} lang={state.lang} classCode={classCode} accountId={accountId} role={role} m={m} t={t} onSelect={selectTab}/>}
@@ -296,7 +295,7 @@ export default function Classe() {
       {tab === 'quiz' && <QuizTab key={classCode+':'+quizCreate} createInitially={quizCreate} classCode={classCode} role={role} name={myName} photo={photo} accountId={state.account?.id} jumpLive={jumpLive} t={t} />}
       {tab === 'wall' && <WallTab classCode={classCode} role={role} name={myName} track={state.track} t={t} />}
       {tab === 'members' && <MembersTab classCode={classCode} track={state.track} t={t} />}
-      {tab === 'prof' && role === 'prof' && <ProfTab classCode={classCode} name={myName} track={state.track} meta={meta} reloadMeta={reloadMeta} t={t} />}
+      {tab === 'prof' && role === 'prof' && <ProfTab sub={profSection} setSub={setProfSection} classCode={classCode} name={myName} track={state.track} meta={meta} reloadMeta={reloadMeta} t={t} />}
       </div>
     </div>
   )
@@ -1147,8 +1146,7 @@ function MemberRow({ m, group, t }) {
 }
 
 // ----- Onglet Professeur ----------------------------------------------------
-function ProfTab({ classCode, name, track, meta, reloadMeta, t }) {
-  const [sub, setSub] = useState('board') // board | groups | settings
+function ProfTab({ sub, setSub, classCode, name, track, meta, reloadMeta, t }) {
   const SUBS = [{ id: 'board', label: t('profBoard') }, { id: 'groups', label: t('profGroups') }, { id: 'settings', label: t('profSettings') }]
   return (
     <div className="space-y-3">

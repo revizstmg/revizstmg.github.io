@@ -1,3 +1,4 @@
+import DesktopQuickLinks from './DesktopQuickLinks.jsx'
 import QuizOutboxStatus from './QuizOutboxStatus.jsx'
 import { TranslationStatus } from '../localisation/PublicText.jsx'
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react'
@@ -291,6 +292,7 @@ export default function Layout({ children }) {
             onSignOut={() => logout()}
           />
         </div>
+        {state.track && !parentSeul && <DesktopQuickLinks />}
         {!parentSeul && <Breadcrumb />}
       </header>
 
