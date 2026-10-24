@@ -1,3 +1,4 @@
+import '../pages/CourseStudio.css'
 import { useFenetreClavier } from './clavier.js'
 import { readPosition, savePosition } from '../data/readingPosition.js'
 import { useStore } from '../store.jsx'
@@ -206,7 +207,7 @@ export function PaginatedCourse({ sec, color, prevLabel, onPrev, themeId, subjec
 
   // Barre de pagination (réutilisée en vue normale et en plein écran).
   const pager = (
-    <div className="no-print flex items-center justify-between gap-3">
+    <div className="reader-pagination no-print flex items-center justify-between gap-3">
       <button
         onClick={goPrev}
         disabled={atStart}
@@ -481,21 +482,21 @@ export function Block({ b, color }) {
       return <Frise title={b.title} events={b.events} />
     case 'example':
       return (
-        <div className="rounded-xl border-l-4 border-sky-400 bg-sky-50 p-4 dark:border-sky-500 dark:bg-sky-950/30">
+        <div className="course-callout course-example rounded-xl border-l-4 border-sky-400 bg-sky-50 p-4 dark:border-sky-500 dark:bg-sky-950/30">
           <p className="mb-1 text-xs font-bold uppercase tracking-wide text-sky-700 dark:text-sky-300">💡 {b.h || 'Exemple'}</p>
           <p className="whitespace-pre-line text-sm leading-relaxed text-slate-700 dark:text-slate-200"><CourseText text={b.c} /></p>
         </div>
       )
     case 'tip':
       return (
-        <div className="rounded-xl border-l-4 border-emerald-400 bg-emerald-50 p-4 dark:border-emerald-500 dark:bg-emerald-950/30">
+        <div className="course-callout course-tip rounded-xl border-l-4 border-emerald-400 bg-emerald-50 p-4 dark:border-emerald-500 dark:bg-emerald-950/30">
           <p className="mb-1 text-xs font-bold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">✅ {b.h || 'Méthode / Astuce'}</p>
           <p className="whitespace-pre-line text-sm leading-relaxed text-slate-700 dark:text-slate-200"><CourseText text={b.c} /></p>
         </div>
       )
     case 'warning':
       return (
-        <div className="rounded-xl border-l-4 border-amber-400 bg-amber-50 p-4 dark:border-amber-500 dark:bg-amber-950/30">
+        <div className="course-callout course-warning rounded-xl border-l-4 border-amber-400 bg-amber-50 p-4 dark:border-amber-500 dark:bg-amber-950/30">
           <p className="mb-1 text-xs font-bold uppercase tracking-wide text-amber-700 dark:text-amber-300">⚠️ <CourseText text={b.h || 'Piège à éviter'} /></p>
           <p className="whitespace-pre-line text-sm leading-relaxed text-slate-700 dark:text-slate-200"><CourseText text={b.c} /></p>
         </div>

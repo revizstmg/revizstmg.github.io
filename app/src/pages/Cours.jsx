@@ -1,3 +1,4 @@
+import './CourseStudio.css'
 import { Link, Navigate } from 'react-router-dom'
 import { useStore, subjectScore } from '../store.jsx'
 import { subjectsForTrack } from '../data/tracks.js'
@@ -17,7 +18,7 @@ export default function Cours() {
   const position = readPosition(state.account?.id)
   const fiche = position && subjects.some((s) => s.id === position.subjectId) ? getChapter(position.themeId) : null
   return (
-    <div className="animate-lux space-y-6">
+    <div className="study-library course-library animate-lux space-y-6">
       <header className="page-hero page-hero-compact text-center">
         <p className="kicker">📖 {t('coursTab')}</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('mySubjects')}</h1>
@@ -33,7 +34,7 @@ export default function Cours() {
           </span>
         </Link>
       )}
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+      <div className="subject-shelves grid grid-cols-2 gap-3 sm:grid-cols-3">
         {subjects.map((s) => {
           const pct = s.comingSoon ? 0 : subjectScore(state, s.id)
           const contenu = (

@@ -1,3 +1,4 @@
+import './CourseStudio.css'
 import { missionMessages } from '../i18n/missions.js'
 import ChapterControl from '../components/ChapterControl.jsx'
 import CourseTutor from '../components/CourseTutor.jsx'
@@ -75,14 +76,14 @@ export default function Chapter() {
   const studentName = `${state.profile?.firstName || ''} ${state.profile?.lastName || ''}`.trim()
 
   return (
-    <div className="chapter-page animate-lux space-y-4">
+    <div className="chapter-page course-studio animate-lux space-y-4">
       {/* En-tête visible uniquement à l'impression (fiche de révision PDF) */}
       <div className="print-only print-header">
         <div className="print-title">RévizSTMG — {t('revisionSheet')}</div>
         <div>{theme.name} — {chapter.title}{studentName ? ` · ${studentName}` : ''} · {printDate}</div>
       </div>
 
-      <nav className="no-print text-xs text-slate-500 dark:text-slate-400">
+      <nav className="chapter-trail no-print text-xs text-slate-500 dark:text-slate-400">
         <Link to={`/subject/${sid}`} className="hover:underline" style={{ color }}>{subject.name}</Link>
         <span className="mx-1">›</span>
         <Link to={`/subject/${sid}/theme/${tid}`} className="hover:underline" style={{ color }}>{theme.short || t('theme')}</Link>
@@ -95,7 +96,7 @@ export default function Chapter() {
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em]" style={{ color: 'var(--editorial-gold)' }}><CourseText text={theme.name} /> · {t('chapter')} {i + 1}/{chapters.length}</p>
           <h1 className="font-display text-2xl font-medium leading-tight"><CourseText text={chapter.title} /></h1>
         </div>
-        <div className="no-print flex shrink-0 items-center gap-1.5">
+        <div className="chapter-hero-actions no-print flex shrink-0 items-center gap-1.5">
           <button
             onClick={saveFiche}
             aria-label={t('savePdf')}
@@ -116,7 +117,7 @@ export default function Chapter() {
       </header>
 
       {/* Onglets : Cours · Définitions · Exercices — pour ne rien empiler */}
-      <div className="no-print sticky top-[52px] z-30 -mx-4 border-b border-slate-200 bg-slate-50/90 px-4 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
+      <div className="study-tabs no-print sticky top-[52px] z-30 -mx-4 border-b border-slate-200 bg-slate-50/90 px-4 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
         <div className="flex gap-1">
           {TABS.map((tb) => (
             <button
@@ -155,12 +156,12 @@ export default function Chapter() {
       {/* ONGLET DÉFINITIONS (imprimé sauf si le tableau du cours les contient déjà) */}
       <div className={`${tab === 'defs' ? '' : 'hidden'} ${defBox.skip ? 'no-print' : 'print-show'}`}>
         {defBox.defs.length ? (
-          <section className="card p-5">
+          <section className="definition-studio card p-5">
             <h2 className="mb-4 flex items-center gap-2 font-display text-lg font-bold">📚 {t('keyDefs')}</h2>
-            <dl className="space-y-3.5">
+            <dl className="definition-grid">
               {defBox.defs.map((d, k) => (
-                <div key={k} className="border-l-[3px] pl-3" style={{ borderColor: color }}>
-                  <dt className="font-display font-semibold" style={{ color }}><CourseText text={d.term} /></dt>
+                <div key={k} className="definition-entry">
+                  <dt className="definition-term font-display font-semibold"><span className="definition-number no-print" aria-hidden>{String(k+1).padStart(2,'0')}</span><CourseText text={d.term} /></dt>
                   <dd className="text-[15px] leading-relaxed text-slate-600 dark:text-slate-300"><CourseText text={d.def} /></dd>
                 </div>
               ))}
@@ -173,16 +174,15 @@ export default function Chapter() {
 
       {/* ONGLET EXERCICES (jamais imprimé) */}
       <div className={`${tab === 'exos' ? 'space-y-2.5' : 'hidden'} no-print`}>
-        <Link to={`/missions/${sid}/${tid}/${chapter.idx}`} className="card flex items-center justify-between gap-3 p-5 font-semibold">
+        <Link to={`/missions/${sid}/${tid}/${chapter.idx}`} className="chapter-challenge card flex items-center justify-between gap-3 p-5 font-semibold">
           <span>✦ {(missionMessages[state.lang] || missionMessages.fr).boss}</span><span aria-hidden>→</span>
         </Link>
-        <ChapterControl key={`${state.account?.id || 'trial'}:${chapter.id}`} course={{id:chapter.id,title:chapter.title,subject:subject.name,level:subject.niveau==='premiere'?'premiere':'terminale',text:courseText(chapter.section)}} />
         {(() => {
           const deck = games.find((g) => g.type === 'flashcard')
           if (!deck) return null
           const saved = (state.savedDecks || []).some((d) => d.id === deck.id)
           return (
-            <section className="card card-lux p-4">
+            <section className="chapter-deck card card-lux p-4">
               <div className="flex items-center gap-3">
                 <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: color + '22' }}>🃏</span>
                 <div className="min-w-0 flex-1">
@@ -206,16 +206,17 @@ export default function Chapter() {
             </section>
           )
         })()}
-        {games.length > 0 ? games.map((g) => {
+        <h2 className="exercise-shelf-title font-display">{t('gamesOfChapter')}</h2>
+        <div className="chapter-exercise-grid">{games.length > 0 ? games.map((g, gameIndex) => {
           const best = rec?.games?.[g.id]
           return (
             <button
               key={g.id}
               data-jeu={g.id}
               onClick={() => setActiveGame(g)}
-              className="card flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md"
+              className="chapter-exercise-card card flex w-full items-center gap-3 p-4 text-start transition hover:-translate-y-0.5 hover:shadow-md"
             >
-              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: color + '22' }}>{g.icon || '🎲'}</span>
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: color + '22' }}>{g.icon || '🎲'}<small aria-hidden>{String(gameIndex+1).padStart(2,'0')}</small></span>
               <span className="min-w-0 flex-1">
                 <span className="block font-semibold leading-tight"><CourseText text={g.title} /></span>
                 <span className="block text-xs text-slate-400">{gameLabel(g.type)}</span>
@@ -228,7 +229,8 @@ export default function Chapter() {
               <span className="text-slate-300" aria-hidden>›</span>
             </button>
           )
-        }) : <p className="card p-5 text-center text-sm text-slate-500 dark:text-slate-400">{t('gamesOfChapter')} —</p>}
+        }) : <p className="card p-5 text-center text-sm text-slate-500 dark:text-slate-400">{t('gamesOfChapter')} —</p>}</div>
+        <ChapterControl key={`${state.account?.id || 'trial'}:${chapter.id}`} course={{id:chapter.id,title:chapter.title,subject:subject.name,level:subject.niveau==='premiere'?'premiere':'terminale',text:courseText(chapter.section)}} />
       </div>
 
       {/* Navigation entre chapitres — le lecteur Cours a sa propre pagination,
