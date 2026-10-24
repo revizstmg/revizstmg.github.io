@@ -13,9 +13,11 @@ test('chaque cours courant a une page complète et les anciens cours de langues 
  for(const path of PUBLIC_ROOTS)expect(paths.has(path)).toBe(true)
 })
 test('métadonnées, provenance et données structurées valides sur toutes les pages',()=>{
- for(const p of pages){const html=p.html;expect(html.match(/<h1[ >]/g),p.chemin).toHaveLength(1);expect(html).not.toMatch(/(?:src|href)="(?:undefined|null)/);expect(html).toContain('href="'+SITE+p.chemin+'"');expect(html).not.toContain('noindex');expect(html.match(/<meta name="description" content="([^"]+)"/)[1].length).toBeGreaterThan(40);expect(html).not.toMatch(/<(?:script)[^>]*src=/)
+ const titres=[]
+ for(const p of pages){const html=p.html;const title=html.match(/<title>(.*?)<\/title>/)[1];titres.push(title);expect(title.replace(/&(amp|quot|lt|gt);/g,(_,entity)=>({amp:'&',quot:'\"',lt:'<',gt:'>'}[entity])).length).toBeLessThanOrEqual(100);expect(html.match(/<h1[ >]/g),p.chemin).toHaveLength(1);expect(html).not.toMatch(/(?:src|href)="(?:undefined|null)/);expect(html).toContain('href="'+SITE+p.chemin+'"');expect(html).not.toContain('noindex');expect(html.match(/<meta name="description" content="([^"]+)"/)[1].length).toBeGreaterThan(40);expect(html).not.toMatch(/<(?:script)[^>]*src=/)
   const schema=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));expect(schema[0]['@type']).toBe('BreadcrumbList');if(html.includes('<article class="cours">')){const resource=schema.find(s=>s['@type']==='LearningResource');expect(resource.url).toBe(SITE+p.chemin);expect(resource.citation).toContain('https://eduscol.education.gouv.fr/5862/programmes-et-ressources-en-serie-stmg');expect(html).toContain('Matys DONAT');expect(html).toContain('Gabriel MERLIN')}
  }
+ expect(new Set(titres).size).toBe(titres.length)
  const about=pages.find(p=>p.chemin==='/a-propos/').html;expect(about).toContain('Ils sont élèves');expect(about).toContain('ne signifie pas que chaque fiche a été validée par un professeur')
 })
 test('tous les liens internes des pages HTML mènent à une page, un asset prévu ou une vraie route de l’app',()=>{

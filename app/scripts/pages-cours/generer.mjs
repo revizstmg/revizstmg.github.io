@@ -85,6 +85,8 @@ const filAriane = (etapes) => ({
 
 function page({ chemin, titre, description, h1, sousTitre, ariane, contenu, donnees = [] }) {
   const url = SITE + chemin
+  const baseTitre=sansEmoji(texteBrut(titre)).replace(/[—–]/g,'-').replace(/\s*\|\s*RévizSTMG$/,'')
+  titre=resume(baseTitre,86)+' | RévizSTMG'
   return `<!doctype html>
 <html lang="fr">
 <head>
