@@ -1,10 +1,10 @@
+import { cleanClassName } from './data/classIdentity.js'
 // Espace « Classe » partagé (par code de classe) via Supabase.
 // Le site reste statique : on parle directement à l'API REST (PostgREST), avec
 // le jeton du compte connecté (reseau.js). La base ne montre une classe qu'à ses
 // membres et à son professeur, et réserve à celui-ci les actions de gestion
 // (supabase/README.md) : connaître le code suffit pour rejoindre la classe.
 import { SUPA_READY } from './supabase.js'
-import { authFetch } from './auth.js'
 import { deviceId, normalizeCode, isoWeekKey } from './leaderboard.js'
 import { rest, enc, getJSON, send, rpc } from './reseau.js'
 import { todayKey, daysBetween } from './data/srs.js'
@@ -42,7 +42,8 @@ export async function fetchMembers(classCode) {
 export async function fetchStudentClasses(accountId) {
   if (!accountId) return []
   const rows = await getJSON(rest(`class_member?select=class_code&device_id=eq.${enc(accountId)}&role=eq.eleve&order=class_code.asc`))
-  return rows.map((row) => ({ code: row.class_code, label: row.class_code }))
+  const labels=await Promise.allSettled(rows.map(row=>fetchClassByCode(row.class_code)))
+  return rows.map((row,i)=>({code:row.class_code,label:labels[i].status==='fulfilled' && labels[i].value?.label || row.class_code}))
 }
 export async function leaveStudentClass(classCode, accountId) {
   await send('DELETE', `class_member?class_code=eq.${enc(normalizeCode(classCode))}&device_id=eq.${enc(accountId)}`)
@@ -58,6 +59,7 @@ export async function createGroup({ classCode, name, color, emoji }) {
     color: color || '', emoji: emoji || '',
   }], 'return=representation')
   const rows = await res.json().catch(() => [])
+  if(!rows[0]?.id)throw new Error('CLASS_GROUP_CREATE_FAILED')
   return rows[0]
 }
 export async function deleteGroup(id) {
@@ -133,6 +135,10 @@ export async function createQuiz({ classCode, authorId, authorName, title, quest
   const res = await send('POST', 'class_quiz', [row], 'return=representation')
   const rows = await res.json().catch(() => [])
   return rows[0] || row
+}
+// La vue d’ensemble charge les intitulés, sans les banques de questions.
+export async function fetchClassOverviewQuizzes(classCode){
+ return getJSON(rest('class_quiz?select=id,title,status,due_at,created_at&class_code=eq.'+enc(normalizeCode(classCode))+'&order=created_at.desc&limit=100'))
 }
 export async function fetchQuizzes(classCode) {
   const cols = 'id,title,author_id,author_name,questions,status,proposed_by,due_at,created_at'
@@ -230,24 +236,30 @@ export function genClassCode() {
   for (let i = 0; i < 5; i++) s += A[Math.floor(Math.random() * A.length)]
   return 'stmg-' + s
 }
-export async function createTeacherClass({ ownerId, ownerName, label, subject }) {
-  for (let attempt = 0; attempt < 8; attempt++) {
-    const code = genClassCode()
-    const res = await authFetch(rest('teacher_class'), {
-      method: 'POST',
-      headers: { Prefer: 'return=representation' },
-      body: JSON.stringify([{ code, owner_id: ownerId || null, owner_name: String(ownerName || '').slice(0, 60), label: String(label || '').slice(0, 60), subject: String(subject || '').slice(0, 200) }]),
-    })
-    if (res.status === 409) continue // code déjà pris : on réessaie
-    if (!res.ok) throw new Error('createClass ' + res.status)
-    const rows = await res.json().catch(() => [])
-    return rows[0] || { code, label }
+export async function createTeacherClass({ownerId,ownerName,label,subject}) {
+  const name=cleanClassName(label)
+  for(let attempt=0;attempt<8;attempt++) {
+    const code=genClassCode()
+    let response
+    try {response=await send('POST','teacher_class',[{code,owner_id:ownerId || null,owner_name:String(ownerName || '').slice(0,60),label:name,subject:String(subject || '').slice(0,200)}],'return=representation')}
+    catch(error){if(error.status===409)continue;throw error}
+    const rows=await response.json().catch(()=>[])
+    if(!rows[0]?.code)throw new Error('CLASS_CREATE_FAILED')
+    return rows[0]
   }
   throw new Error('createClass: aucun code libre')
 }
 export async function fetchTeacherClasses(ownerId) {
   if (!ownerId) return []
   return getJSON(rest(`teacher_class?select=id,code,label,subject,created_at&owner_id=eq.${enc(ownerId)}&order=created_at.asc&limit=50`))
+}
+export async function renameTeacherClass({classCode,ownerId,label}) {
+  const name=cleanClassName(label)
+  if(!ownerId)throw new Error('CLASS_OWNER_REQUIRED')
+  const response=await send('PATCH', 'teacher_class?code=eq.'+enc(normalizeCode(classCode))+'&owner_id=eq.'+enc(ownerId)+'&select=code,label', {label:name}, 'return=representation')
+  const rows=await response.json()
+  if(!rows?.[0] || rows[0].code!==normalizeCode(classCode) || rows[0].label!==name)throw new Error('CLASS_UPDATE_DENIED')
+  return rows[0]
 }
 // Classe d'un professeur à partir de son code (fonction de la base : on ne
 // peut pas lister les classes des autres).
