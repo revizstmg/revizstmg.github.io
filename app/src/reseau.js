@@ -5,7 +5,7 @@
 // refuse l'accès aux tables sociales.
 import { withNetworkTimeout } from './networkTimeout.js'
 import { SUPA_URL } from './supabase.js'
-import { authFetch } from './auth.js'
+import { authFetch, isSignedIn } from './auth.js'
 
 export const rest = (path) => `${SUPA_URL}/rest/v1/${path}`
 export const enc = encodeURIComponent
@@ -19,13 +19,17 @@ async function erreur(res, quoi) {
   return e
 }
 
+async function requireSession(){if(!isSignedIn()){const e=new Error('Ta session a expiré. Reconnecte-toi pour accéder à cet espace.');e.status=401;throw e}}
+
 export async function getJSON(url) {
+  await requireSession()
   const res = await withNetworkTimeout(signal => authFetch(url,{signal}))
   if (!res.ok) throw await erreur(res, 'GET')
   return res.json()
 }
 
 export async function send(method, path, body, prefer) {
+  await requireSession()
   const res = await withNetworkTimeout(signal => authFetch(rest(path), {
     signal,
     method,
@@ -38,6 +42,7 @@ export async function send(method, path, body, prefer) {
 
 // Fonction de la base (/rest/v1/rpc/<nom>).
 export async function rpc(nom, args = {}) {
+  if(nom!=='revizstmg_stats_enfant')await requireSession()
   const res = await withNetworkTimeout(signal => authFetch(rest(`rpc/${nom}`), { signal, method: 'POST', body: JSON.stringify(args) }))
   if (!res.ok) throw await erreur(res, nom)
   const texte = await res.text()

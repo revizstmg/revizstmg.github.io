@@ -33,10 +33,10 @@ function telechargerMesDonnees(state) {
 
 // « Mon espace » : la page personnelle de l'élève — identité, statistiques,
 // badges, favoris et accès rapide. Distincte de la personnalisation (apparence).
-export default function Profile() {
+export default function Profile({settingsOnly=false}) {
   const { state, derived, setBacDate, setParentShare, setStudyLanguages } = useStore()
   const [params, setParams] = useSearchParams()
-  const settings = params.get('section') === 'reglages'
+  const settings = settingsOnly || params.get('section') === 'reglages'
   const t = useT()
   const tr = usePublicText()
   const [busy, setBusy] = useState(false)
@@ -110,6 +110,7 @@ export default function Profile() {
 
   return (
     <div className="animate-lux space-y-6">
+      <div hidden={settingsOnly}>
       {/* En-tête identité */}
       <section className="identity-hero card-lux relative overflow-hidden rounded-[1.6rem] p-6 text-[#f4ecd8] sm:p-8"
         style={{ background: 'linear-gradient(135deg, #172d30 0%, #24423f 100%)', border: '1px solid color-mix(in srgb, var(--c-accent) 30%, transparent)' }}>
@@ -141,7 +142,7 @@ export default function Profile() {
       </section>
 
       <nav aria-label="Mon espace" className="flex gap-2"><button style={{ transitionProperty: 'transform' }} aria-pressed={!settings} className={!settings ? "btn-primary" : "btn-ghost"} onClick={() => setParams({})}>Mes progrès</button><button style={{ transitionProperty: 'transform' }} aria-pressed={settings} className={settings ? "btn-primary" : "btn-ghost"} onClick={() => setParams({section:'reglages'})}>Réglages</button></nav>
-      <div hidden={settings} className="space-y-5">
+      </div><div hidden={settings} className="space-y-5">
       {/* Statistiques */}
       <section>
         <h2 className="mb-3 px-1 font-display text-xl font-medium">{t('myStats')}</h2>

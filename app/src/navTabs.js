@@ -20,7 +20,7 @@ export const ALL_TABS = {
   favoris: { icon: '⭐', labelKey: 'favorites', to: '/favoris', match: ['/favoris'] },
   grandoral: { icon: '🎓', labelKey: 'grandOral', to: '/grand-oral', match: ['/grand-oral'] },
   etudegestion: { icon: '🔎', labelKey: 'egTitle', to: '/etude-de-gestion', match: ['/etude-de-gestion'] },
-  profil: { icon: '👤', labelKey: 'meTab', to: '/moi', match: ['/moi', '/mes-notes'] },
+  profil: { icon: '⚙️', labelKey: 'meTab', to: '/parametres', match: ['/parametres', '/moi', '/mes-notes'] },
 }
 
 // Ordre proposé dans l'éditeur.

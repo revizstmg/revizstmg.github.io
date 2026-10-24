@@ -18,6 +18,7 @@ const Favoris = lazy(() => import('./pages/Favoris.jsx'))
 const Badges = lazy(() => import('./pages/Badges.jsx'))
 const Leaderboard = lazy(() => import('./pages/Leaderboard.jsx'))
 const Classe = lazy(() => import('./pages/Classe.jsx'))
+const Settings = lazy(() => import('./pages/Settings.jsx'))
 const Profile = lazy(() => import('./pages/Profile.jsx'))
 const Coach = lazy(() => import('./pages/Coach.jsx'))
 const Revise = lazy(() => import('./pages/Revise.jsx'))
@@ -91,6 +92,7 @@ export default function App() {
         <Route path="/badges" element={<Badges />} />
         <Route path="/classe" element={<AvecCompte quoi="rejoindre ta classe"><Classe /></AvecCompte>} />
         <Route path="/moi" element={<Profile />} />
+        <Route path="/parametres" element={<Settings />} />
         <Route path="/coach" element={<Coach />} />
         <Route path="/revision" element={<Revise />} />
         <Route path="/revision/deck/:deckId" element={<FlashcardsPage />} />

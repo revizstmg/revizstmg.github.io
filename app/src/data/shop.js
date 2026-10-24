@@ -5,6 +5,10 @@ export const shopById = Object.fromEntries(SHOP_ITEMS.map((i) => [i.id, i]))
 // Les douze seuils historiques restent identiques ; niveau 20 à 20 000 XP.
 export const SHOP_LEVELS = [0, 100, 250, 450, 700, 1000, 1400, 1900, 2500, 3200, 4000, 5000, 6500, 8200, 10100, 12200, 14500, 17000, 18500, 20000, 23500, 27000, 31000, 35500, 40500, 46000, 52000, 58500, 65500, 73500, 82000]
 export const SHOP_REWARDS = [
+  { id: 'kit-semaine', name: 'Une semaine organisée', icon: '📒', minXp: 250, score: 70, tests: 2, kit: 'semaine', gift: 'Ton planning PDF personnalisé sur 7 jours' },
+  { id: 'kit-maitrise', name: 'Ton dossier de progrès', icon: '🎒', minXp: 1900, score: 80, tests: 5, kit: 'maitrise', freezes: 3, gift: 'Ton bilan, ton carnet de révision PDF et 3 gels de série' },
+  { id: 'kit-bac', name: 'Ton pack objectif bac', icon: '🏅', minXp: 6500, score: 85, tests: 10, kit: 'bac', freezes: 5, gift: 'Un programme de 14 jours, tes questions à retravailler, tes cartes de rappel et 5 gels' },
+  { id: 'collection-complete', name: 'Toute la collection', icon: '🎁', minXp: 12200, score: 90, tests: 15, collection: true, gift: 'Toutes les personnalisations actuelles de la boutique, offertes' },
   { id: 'regulier', name: 'Le rythme est pris', icon: '🧊', minXp: 700, gift: '2 gels de série', freezes: 2 },
   { id: 'confirme', name: 'Un style bien à toi', icon: '🎓', minXp: 3200, gift: 'Titre « Réviseur confirmé »', title: 'Réviseur confirmé', itemId: 'title-confirme' },
   { id: 'ambassadeur', name: 'Dans la cour des grands', icon: '🌅', minXp: 8200, gift: 'Bannière Ambre exclusive', banner: '#a26827', itemId: 'banner-ambre' },
@@ -40,6 +44,7 @@ export function collectReward(state, id, now = new Date().toISOString()) {
   const progress = rewardProgress(state, reward)
   if (!progress.eligible || progress.claimed || (reward.offer && !state.account?.id)) return state
   const next = { ...state, shopRewards: { ...state.shopRewards, [id]: { claimedAt: now, status: reward.offer ? 'reserved' : 'collected' } } }
+  if(reward.collection)next.owned=[...new Set([...(state.owned||[]),...SHOP_ITEMS.filter(item=>item.type!=='consumable').map(item=>item.id)])]
   if (reward.itemId) next.owned = [...new Set([...(state.owned || []), reward.itemId])]
   if (reward.freezes) { next.freezes = (state.freezes || 0) + reward.freezes; next.shopWalletUpdatedAt = walletRevision(state) }
   if (reward.title) next.customTheme = { ...state.customTheme, title: reward.title }

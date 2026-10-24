@@ -216,7 +216,7 @@ export default {
   "leaderboard": "Rang",
   "reviseTab": "Lernen",
   "coursTab": "Kurse",
-  "meTab": "Ich",
+  "meTab": "Einstellungen",
   "weeklyRanking": "Rangliste der Woche",
   "coursesThisWeek": "Kurse diese Woche",
   "resumeTitle": "Setze dein Lernen fort",

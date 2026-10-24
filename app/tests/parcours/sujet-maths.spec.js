@@ -16,7 +16,7 @@ test('Première : sujet de maths au format de l’épreuve, rendu et corrigé', 
   await expect(page.locator('main h3')).toHaveCount(3)
   const champs = page.getByRole('textbox')
   expect(await champs.count()).toBeGreaterThanOrEqual(25)
-  await expect(page.locator('main')).toContainText('1 h 59')
+  await expect(page.locator('main')).toContainText('⏱ 1 h 59')
 
   // Question 1 : la proportion se lit dans l'énoncé.
   const enonce = await page.locator('#enonce-a1').innerText()

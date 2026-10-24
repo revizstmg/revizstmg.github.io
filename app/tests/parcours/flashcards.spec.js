@@ -24,7 +24,7 @@ test('paquet enregistré : glisser, boutons et clavier', async ({ page }) => {
   await expect(page.getByText('2/4')).toBeVisible()
   // Bouton « À revoir », puis flèches du clavier.
   await page.getByRole('button', { name: /À revoir/ }).click()
-  await expect(page.locator('.bg-rose-100 .pop-badge')).toHaveText('1')
+  await expect(page.getByText('↩ 1')).toBeVisible()
   await page.keyboard.press('ArrowRight')
   await expect(page.getByText('✓ 2')).toBeVisible()
   await page.keyboard.press('ArrowLeft')

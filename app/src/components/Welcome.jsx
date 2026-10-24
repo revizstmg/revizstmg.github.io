@@ -48,7 +48,7 @@ export default function Welcome() {
   const [leaving, setLeaving] = useState(false)
   // Une session restaurée peut remplacer le profil local d'un autre compte.
   useEffect(() => {
-    if (hasProfile && state.account?.id && state.onboarded && phase === 'form') setPhase('hello')
+    if (hasProfile && state.account?.id === getSession()?.user?.id && getSession()?.token && state.onboarded && phase === 'form') setPhase('hello')
   }, [hasProfile, state.account?.id, state.onboarded, phase])
 
 
@@ -120,12 +120,12 @@ export default function Welcome() {
   // rouvre l'inscription ; prénom, nom et filière sont déjà remplis, et la
   // progression de l'essai passe sur le compte dès sa création.
   useEffect(() => {
-    const ouvrir = () => {
+    const ouvrir = (event) => {
       setEssai(false); setRecoverStep(null); setOauthNew(false); setRole('eleve')
       setStudyLanguages(normalizeStudyLanguages(state.studyLanguages))
       setFirstName(state.profile?.firstName || ''); setLastName(state.profile?.lastName || '')
       if (state.track?.level) { setLevel(state.track.level); setSpecialty(state.track.specialty || null) }
-      setAuthMode('create'); setSignupStep(1); setErr(''); setInfo(''); debutInscription.current = Date.now()
+      setAuthMode(event?.detail?.login ? 'login' : 'create'); setSignupStep(1); setErr(''); setInfo(''); debutInscription.current = Date.now()
       setLeaving(false); setPhase('form')
     }
     window.addEventListener('stmg-creer-compte', ouvrir)
