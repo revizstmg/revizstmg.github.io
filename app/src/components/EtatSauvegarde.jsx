@@ -25,7 +25,7 @@ function Alerte({ titreId, onClose, children }) {
 const ETATS_INDICATEUR = {
   ok: { icone: '✓', texte: 'Enregistré', titre: 'Ta progression est enregistrée sur ton compte.', cls: 'text-emerald-700 dark:text-emerald-400' },
   attente: { icone: '⏳', texte: 'En attente', titre: 'Tes derniers changements partent sur ton compte dans un instant.', cls: 'text-slate-500 dark:text-slate-400' },
-  echec: { icone: '⚠', texte: 'Non enregistré', titre: 'Tes derniers changements ne sont pas encore sur ton compte.', cls: 'text-amber-700 dark:text-amber-300' },
+  echec: { icone: '⚠', texte: 'Non enregistré', titre: 'Tes derniers changements ne sont pas encore sur ton compte.', cls: 'text-amber-800 dark:text-amber-300' },
 }
 export function etatIndicateur(etat) {
   if (etat === 'horsLigne' || etat === 'erreur') return 'echec'
