@@ -9,12 +9,8 @@ import { useFenetreAutomatique } from '../fenetres.js'
 function AppMark({ size = 52 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 56 56" aria-hidden style={{ display: 'block' }}>
-      <defs>
-        <linearGradient id="am-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#2c251b" /><stop offset="1" stopColor="#12100b" /></linearGradient>
-        <linearGradient id="am-g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#f6dc9c" /><stop offset="0.5" stopColor="#e3bd6a" /><stop offset="1" stopColor="#bb8c36" /></linearGradient>
-      </defs>
-      <rect width="56" height="56" rx="14" fill="url(#am-bg)" />
-      <text x="28" y="29" fill="url(#am-g)" fontFamily="Georgia,'Times New Roman',serif" fontWeight="700" fontSize="34" textAnchor="middle" dominantBaseline="central">R</text>
+      <rect width="56" height="56" rx="14" fill="#203e36" />
+      <text x="28" y="29" fill="#e7cc8c" fontFamily="Georgia,'Times New Roman',serif" fontWeight="700" fontSize="34" textAnchor="middle" dominantBaseline="central">R</text>
     </svg>
   )
 }

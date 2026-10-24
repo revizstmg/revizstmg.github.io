@@ -11,7 +11,7 @@ export default function Introuvable({ retour }) {
   const titre = t('notFoundTitle')
   useEffect(() => {
     const avant = document.title
-    document.title = `${titre} — RévizSTMG`
+    document.title = `${titre} - RévizSTMG`
     return () => { document.title = avant }
   }, [titre])
 

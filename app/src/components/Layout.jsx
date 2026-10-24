@@ -1,3 +1,6 @@
+import {cleanCopy} from '../presentation/style.js'
+import {claimSessionMotion} from '../presentation/session.js'
+import '../presentation/charte.css'
 import MobileMenu from './SiteMobileMenu.jsx'
 import DesktopQuickLinks from './DesktopQuickLinks.jsx'
 import QuizOutboxStatus from './QuizOutboxStatus.jsx'
@@ -58,6 +61,7 @@ function useMobileKeyboard() {
 
 export default function Layout({ children }) {
   useMobileKeyboard()
+  const [sessionMotion]=useState(claimSessionMotion)
   const { state, derived, setTheme, setLang, logout } = useStore()
   const t = useT()
   const lang = useLang()
@@ -136,10 +140,10 @@ export default function Layout({ children }) {
               <span aria-hidden className="rtl:rotate-180">←</span>
             </button>
           )}
-          <Link to={parentSeul ? '/parent' : '/accueil'} className="mr-auto flex items-center gap-2 font-display text-2xl font-semibold tracking-tight">
+          <Link to={parentSeul ? '/parent' : '/accueil'} className={'mr-auto flex items-center gap-2 font-display text-2xl font-semibold tracking-tight'+(sessionMotion?' session-intro':'')}>
             <span aria-hidden style={{ color: 'var(--c-accent)' }}><Icon.Diamond size={15} /></span>
             <span>
-              Réviz<span style={{ color: 'color-mix(in srgb, var(--c-accent) 78%, var(--c-ink))' }}>STMG</span>
+              Réviz<span style={{ color: 'var(--c-accent-texte)' }}>STMG</span>
             </span>
           </Link>
 
@@ -309,7 +313,7 @@ export default function Layout({ children }) {
           <div className="flex flex-col items-center gap-3 text-center">
             <Link to="/accueil" className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight">
               <span aria-hidden style={{ color: 'var(--c-accent)' }}><Icon.Diamond size={13} /></span>
-              <span>Réviz<span style={{ color: 'color-mix(in srgb, var(--c-accent) 78%, var(--c-ink))' }}>STMG</span></span>
+              <span>Réviz<span style={{ color: 'var(--c-accent-texte)' }}>STMG</span></span>
             </Link>
             <nav className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
               {!standalone && <Link to="/guide" className="hover:text-[color:var(--c-accent)] hover:underline">{t('startGuide')}</Link>}
@@ -405,7 +409,7 @@ function Breadcrumb() {
   // Titre de l'onglet : la page en cours, puis le nom du site.
   const dernier = crumbs.length > 1 ? crumbs[crumbs.length - 1].label : ''
   useEffect(() => {
-    document.title = dernier ? `${dernier} — RévizSTMG` : 'RévizSTMG — réviser le bac STMG'
+    document.title = cleanCopy(dernier ? `${dernier} - RévizSTMG` : 'RévizSTMG - Bac STMG')
   }, [dernier])
 
   if (crumbs.length <= 1) return null

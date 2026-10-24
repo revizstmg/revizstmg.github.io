@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import presentation from './scripts/plugin-presentation.mjs'
 import publicTranslations from './scripts/plugin-traductions.mjs'
 import contenuIndex from './scripts/plugin-contenu.mjs'
 
@@ -11,7 +12,7 @@ import contenuIndex from './scripts/plugin-contenu.mjs'
 // (GitHub Pages, sous-dossier) sans configuration de serveur.
 export default defineConfig({
   base: './',
-  plugins: [react({ babel: { plugins: [publicTranslations] } }), contenuIndex()],
+  plugins: [react({ babel: { plugins: [publicTranslations,presentation] } }), contenuIndex()],
   build: {
     outDir: 'dist',
     emptyOutDir: true,

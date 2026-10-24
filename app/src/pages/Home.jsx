@@ -74,7 +74,7 @@ export default function Home() {
         <div className="home-stage">
           <div className="home-invitation">
             <p className="home-overline">Ton rendez-vous avec le progrès</p>
-            <h2 className="font-display">Un petit pas aujourd’hui.<em>Un peu plus loin demain.</em></h2>
+            <h2 className="font-display">Révise à ton rythme.</h2>
             <p className="home-intro">Une notion comprise, une question réussie : chaque petit pas prépare la suite.</p>
             <div className="home-hero-actions">
               {realSubjects.length > 0 && <Link to="/seance" className="home-main-action"><Icon.Play size={17} /> Ma séance du jour <span aria-hidden>↗</span></Link>}
@@ -87,7 +87,7 @@ export default function Home() {
       </section>
 
       <section className="home-ritual" aria-labelledby="home-ritual-title">
-        <div className="home-section-heading"><div><p className="kicker">Les petites habitudes font les grands progrès</p><h2 id="home-ritual-title" className="font-display">Trouve ton rythme.</h2></div><Link to="/programme">Mes objectifs <span aria-hidden>↗</span></Link></div>
+        <div className="home-section-heading"><div><p className="kicker">Tes habitudes</p><h2 id="home-ritual-title" className="font-display">Trouve ton rythme.</h2></div><Link to="/programme">Mes objectifs <span aria-hidden>↗</span></Link></div>
         <div className="home-ritual-grid">
       {/* Série de connexion : récompenses XP pour les jours d'affilée */}
       {(() => {

@@ -51,7 +51,7 @@ test('exercice en plein écran : le focus y entre, Tab y reste, Échap ne fait p
   await page.goto('./#/subject/gestion-finance/theme/gf-t1/chapter/0')
   await attendreAccueil(page)
   await page.getByRole('button', { name: /Exercices/ }).click()
-  await page.getByRole('button', { name: /QCM — (les )?notions/ }).first().click()
+  await page.getByRole('button', { name: /QCM - (les )?notions/ }).first().click()
   await page.getByRole('button', { name: /Entraînement/ }).click()
   const exercice = page.locator('[data-exercice]')
   await expect(exercice).toContainText(/Question 1 \//)
@@ -62,7 +62,7 @@ test('exercice en plein écran : le focus y entre, Tab y reste, Échap ne fait p
   await expect(exercice).toBeVisible()
   await page.getByRole('button', { name: /Quitter/ }).click()
   await expect(exercice).toHaveCount(0)
-  await expect(page.getByRole('button', { name: /QCM — (les )?notions/ }).first()).toBeFocused()
+  await expect(page.getByRole('button', { name: /QCM - (les )?notions/ }).first()).toBeFocused()
   expect(erreurs).toEqual([])
 })
 

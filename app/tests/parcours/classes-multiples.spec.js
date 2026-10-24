@@ -254,7 +254,7 @@ test('professeur : créer un quiz depuis la vue d’ensemble et conserver le bro
  const {errors,server}=await ouvrir(page,'prof')
  await page.getByRole('button',{name:/Générer.*code/}).click()
  await page.getByRole('button',{name:'Créer un quiz',exact:true}).click()
- await page.getByLabel('Titre du QCM',{exact:true}).fill('Droit — le contrat')
+ await page.getByLabel('Titre du QCM',{exact:true}).fill('Droit - le contrat')
  await page.getByLabel('Question 1',{exact:true}).fill('À quoi sert un contrat ?')
  for(const [i,value] of ['Créer des obligations','Supprimer les lois','Interdire le travail','Remplacer la justice'].entries()){
   if(i>=2)await page.getByRole('button',{name:/Ajouter une réponse/}).click()
@@ -263,12 +263,12 @@ test('professeur : créer un quiz depuis la vue d’ensemble et conserver le bro
  server.failQuiz=true
  await page.getByRole('button',{name:'Publier le QCM',exact:true}).click()
  await expect(page.getByRole('alert')).toBeVisible()
- await expect(page.getByLabel('Titre du QCM',{exact:true})).toHaveValue('Droit — le contrat')
+ await expect(page.getByLabel('Titre du QCM',{exact:true})).toHaveValue('Droit - le contrat')
  expect(server.quizzes).toHaveLength(0)
  server.failQuiz=false
  await page.getByRole('button',{name:'Publier le QCM',exact:true}).click()
  await expect.poll(()=>server.quizzes.length).toBe(1)
- await expect(page.locator('main')).toContainText('Droit — le contrat')
+ await expect(page.locator('main')).toContainText('Droit - le contrat')
  expect(server.quizzes[0].questions).toHaveLength(1)
  expect(errors).toEqual([])
 })

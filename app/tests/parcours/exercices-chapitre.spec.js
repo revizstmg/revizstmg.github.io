@@ -10,9 +10,9 @@ test('chapitre : formats distincts, memory et QCM, sans quiz doublon', async ({ 
   await page.getByRole('button', { name: /Exercices/ }).click()
   const liste = page.locator('main button', { hasText: /QCM|Vrai ou faux|Association|Memory|Écris|Texte à trous|Complète|Cas concrets|Quiz du chapitre|Flashcards/ })
   await expect(liste).toHaveCount(9)
-  await expect(page.getByRole('button',{name:/Quiz du chapitre — questions mêlées/})).toHaveCount(0)
+  await expect(page.getByRole('button',{name:/Quiz du chapitre - questions mêlées/})).toHaveCount(0)
 
-  for (const [nom, attendu] of [[/Memory — notions du chapitre/, /paires/i], [/QCM — le mot manquant/, /Question 1 \//], [/QCM — les notions du chapitre/, /Question 1 \//]]) {
+  for (const [nom, attendu] of [[/Memory - notions du chapitre/, /paires/i], [/QCM - le mot manquant/, /Question 1 \//], [/QCM - les notions du chapitre/, /Question 1 \//]]) {
     await page.getByRole('button', { name: nom }).first().click()
     const entrainement = page.getByRole('button', { name: /Entraînement/ })
     await page.waitForTimeout(300)
@@ -33,7 +33,7 @@ test('maths : calculs du chapitre, de nouveaux nombres à chaque partie', async 
   await page.getByRole('button', { name: /Exercices/ }).click()
   const enonces = []
   for (let partie = 0; partie < 2; partie++) {
-    await page.getByRole('button', { name: /Exercices — Taux d’évolution/ }).first().click()
+    await page.getByRole('button', { name: /Exercices - Taux d’évolution/ }).first().click()
     const entrainement = page.getByRole('button', { name: /Entraînement/ })
     await page.waitForTimeout(300)
     if (await entrainement.count()) await entrainement.click()
@@ -54,7 +54,7 @@ test('SDGN Première : les exercices de personnalité restent sur son cours', as
   await page.goto('./#/subject/p1-sgn/theme/p1-sgn-t1/chapter/1')
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('La personnalité de l’individu')
   await page.getByRole('button', { name: /Exercices/ }).click()
-  await page.getByRole('button', { name: /QCM — les notions du chapitre/ }).click()
+  await page.getByRole('button', { name: /QCM - les notions du chapitre/ }).click()
   const entrainement = page.getByRole('button', { name: /Entraînement/ })
   await expect(entrainement).toBeVisible()
   await entrainement.click()
@@ -64,11 +64,11 @@ test('SDGN Première : les exercices de personnalité restent sur son cours', as
 })
 
 for (const [subject, theme, title, expected] of [
-  ['langues', 'lng-en-verbs', 'Verbes irréguliers — entraînement', /go|went|gone|see|saw|seen|take|took|taken|make|made|come|came|write|wrote|written/],
-  ['langues', 'lng-es-verbs', 'Verbes irréguliers — entraînement', /ser|soy|fue|tener|tengo|tuvo|hacer|hago|hizo|ir|voy|poder|puedo|pudo|decir|digo|dijo/],
-  ['langues', 'lng-en-grammar-ex', 'Grammaire — exercices variés', /Article|Présent simple|Comparatif|some|much|this/],
-  ['langues', 'lng-es-grammar-ex', 'Grammaire — exercices variés', /ser|por|Article|gustar/],
-  ['philosophie', 'philo-methode', 'Remise en ordre — La dissertation', /Analyser le sujet/],
+  ['langues', 'lng-en-verbs', 'Verbes irréguliers - entraînement', /go|went|gone|see|saw|seen|take|took|taken|make|made|come|came|write|wrote|written/],
+  ['langues', 'lng-es-verbs', 'Verbes irréguliers - entraînement', /ser|soy|fue|tener|tengo|tuvo|hacer|hago|hizo|ir|voy|poder|puedo|pudo|decir|digo|dijo/],
+  ['langues', 'lng-en-grammar-ex', 'Grammaire - exercices variés', /Article|Présent simple|Comparatif|some|much|this/],
+  ['langues', 'lng-es-grammar-ex', 'Grammaire - exercices variés', /ser|por|Article|gustar/],
+  ['philosophie', 'philo-methode', 'Remise en ordre - La dissertation', /Analyser le sujet/],
 ]) {
   test(`exercice rétabli dans son cours : ${theme}`, async ({ page }) => {
     const erreurs = await preparer(page)

@@ -63,10 +63,10 @@ test('étude de gestion : catégories, source, analyse, argument A-E-I évalué,
   // Un argument A-E-I relié à la source.
   await page.getByRole('tab', { name: /Arguments/ }).click()
   await expect(page.getByText('Comment la boulangerie mesure-t-elle sa performance ?')).toBeVisible()
-  await page.getByLabel('A — Affirmation *').fill('La boulangerie suit sa marge chaque mois.')
-  await page.getByLabel('E — Explication').fill('La marge mesure la valeur créée par chaque vente.')
+  await page.getByLabel('A - Affirmation *').fill('La boulangerie suit sa marge chaque mois.')
+  await page.getByLabel('E - Explication').fill('La marge mesure la valeur créée par chaque vente.')
   await page.getByLabel('Notion du cours utilisée').fill('marge')
-  await page.getByLabel('I — Illustration').fill('Marge de 40 % sur le pain en mars.')
+  await page.getByLabel('I - Illustration').fill('Marge de 40 % sur le pain en mars.')
   await page.getByRole('combobox', { name: "Source de l'illustration" }).selectOption({ label: '[1] Entretien avec la gérante' })
   await page.getByRole('button', { name: 'Ajouter l’argument' }).click()
 
@@ -74,7 +74,7 @@ test('étude de gestion : catégories, source, analyse, argument A-E-I évalué,
   const argument = page.getByRole('button', { name: /1\. La boulangerie suit sa marge chaque mois\./ })
   await expect(argument).toContainText('Note : 2/5')
   await argument.click()
-  await expect(page.getByText('📎 Mme Martin, « Entretien avec la gérante », mars 2026')).toBeVisible()
+  await expect(page.getByText('Mme Martin, « Entretien avec la gérante », mars 2026')).toBeVisible()
   for (const critere of [/L'affirmation répond/, /L'explication déroule/, /L'illustration est concrète/]) await page.getByLabel(critere).check()
   await expect(argument).toContainText('Note : 5/5')
   await expect(page.getByText('20/20')).toBeVisible()

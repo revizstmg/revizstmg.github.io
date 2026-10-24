@@ -41,7 +41,9 @@ test('suivi parent volontaire, export et suppression complète', async ({ page }
 
   appels.length = 0
   page.on('dialog', (d) => d.accept())
+  const redemarrage = page.waitForEvent('domcontentloaded')
   await page.getByRole('button', { name: /Supprimer mon compte/ }).click()
+  await redemarrage
   await expect.poll(() => appels.includes('POST rpc/revizstmg_supprimer_compte'), { timeout: 8000 }).toBe(true)
   // Puis tout ce que garde le navigateur est effacé (session, code parent…) et
   // l'application repart à neuf.

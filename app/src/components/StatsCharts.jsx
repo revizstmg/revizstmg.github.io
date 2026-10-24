@@ -54,13 +54,7 @@ export function ProgressCurve({ history }) {
         <span className="text-xs font-semibold" style={{ color: 'var(--c-accent-texte)' }}>+{gained} XP</span>
       </div>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" preserveAspectRatio="none" role="img" aria-label={t('progressCurve')} style={{ display: 'block' }}>
-        <defs>
-          <linearGradient id="xpArea" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="var(--c-accent)" stopOpacity="0.32" />
-            <stop offset="100%" stopColor="var(--c-accent)" stopOpacity="0.02" />
-          </linearGradient>
-        </defs>
-        <path d={area} fill="url(#xpArea)" />
+        <path d={area} fill="var(--c-accent)" fillOpacity="0.16" />
         <path d={line} fill="none" stroke="var(--c-accent)" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" />
         <circle cx={x(n - 1)} cy={y(xps[n - 1])} r="3.5" fill="var(--c-accent)" />
       </svg>

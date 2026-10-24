@@ -1,0 +1,12 @@
+/* Règles communes aussi pour les pages et fenêtres chargées à la demande. */
+*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+button,[role=button],a.rounded-full,.btn-primary,.btn-gold,.btn-ghost,.chip,.tab-pill{border-radius:8px!important}
+.ui-symbol{display:inline-block;width:1.15em;height:1.15em;vertical-align:-.17em;flex-shrink:0}
+button>.ui-symbol:only-child,a>.ui-symbol:only-child{width:1.25em;height:1.25em}
+@keyframes session-arrival{from{opacity:.8;transform:translateY(2px)}to{opacity:1;transform:none}}
+.session-intro{animation:session-arrival .25s ease-out 1!important}
+@media(prefers-reduced-motion:reduce){.session-intro{animation:none!important}}
+.welcome-kicker,.welcome-title,.welcome-name,.welcome-hint{opacity:1!important;transform:none!important;filter:none!important}
+.welcome-rule{width:96px!important}
+.welcome-name,[class*=bg-clip-text]{background:none!important;color:var(--c-accent-texte)!important;-webkit-text-fill-color:currentColor!important}
+button:active,[role=button]:active,a.card:active{transform:none!important}

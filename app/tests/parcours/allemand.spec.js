@@ -16,7 +16,7 @@ test('allemand : langue étudiée indépendante, guide, affichage et préférenc
  await expect(page.locator('html')).toHaveAttribute('lang','de')
  await expect(page.getByRole('heading',{name:'Trau dich zu sprechen.'})).toBeVisible()
  await expect(page.getByRole('button',{name:/Deutsch/}).last()).toHaveAttribute('aria-pressed','true')
- await expect(page.getByRole('link',{name:'PDF-Handbuch öffnen ↗'})).toHaveAttribute('href',/guide-de.*pdf/)
+ await expect(page.getByRole('link',{name:'PDF-Handbuch öffnen',exact:true})).toHaveAttribute('href',/guide-de.*pdf/)
  for(const dark of [false,true]){
   await page.evaluate(d=>document.documentElement.classList.toggle('dark',d),dark)
   await page.evaluate(()=>Promise.all(document.getAnimations().map(a=>a.finished.catch(()=>{}))))
