@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
 import { signIn, signUp, fetchProfile, upsertProfile, getSession } from '../auth.js'
-import { ALL_TABS, TAB_ORDER, resolveTabs } from '../navTabs.js'
+import NavigationTabs from './NavigationTabs.jsx'
 import { normalizeCode } from '../leaderboard.js'
 import { isStandalone } from '../pwa.js'
 import { InstallLock } from './InstallApp.jsx'
@@ -57,7 +57,7 @@ const AVATARS = ['🦉', '🎓', '⭐', '🚀', '🐱', '🦊', '🐧', '🌸', 
 const BANNER_PRESETS = ['#c8a24e', '#2b6cb0', '#0f766e', '#7c3aed', '#db2777', '#ea580c', '#dc2626', '#0891b2']
 
 export default function Customizer({ onClose }) {
-  const { state, setCustomTheme, resetCustomTheme, setTabs, setTheme, setPhoto, setAccount, restoreAccount, logout: logoutAccount } = useStore()
+  const { state, setCustomTheme, resetCustomTheme, setTheme, setPhoto, setAccount, restoreAccount, logout: logoutAccount } = useStore()
   const t = useT()
   const ct = state.customTheme || {}
   const photo = state.profile?.photo || ''
@@ -135,19 +135,6 @@ export default function Customizer({ onClose }) {
   const radius = ct.radius || '1.15rem'
   const scale = ct.scale || '16px'
   const avatar = ct.avatar || null
-
-  // --- Onglets de la barre du bas (2 à 5, réordonnables) ---
-  const tabSel = resolveTabs(state.tabs, state.account?.role)
-  const tabAvail = TAB_ORDER.filter((id) => !tabSel.includes(id))
-  const moveTab = (i, dir) => {
-    const j = i + dir
-    if (j < 0 || j >= tabSel.length) return
-    const next = [...tabSel]
-    ;[next[i], next[j]] = [next[j], next[i]]
-    setTabs(next)
-  }
-  const removeTab = (id) => { if (tabSel.length > 2) setTabs(tabSel.filter((x) => x !== id)) }
-  const addTab = (id) => { if (tabSel.length < 5 && !tabSel.includes(id)) setTabs([...tabSel, id]) }
 
   const Chip = ({ active, onClick, children, style }) => (
     <button
@@ -371,37 +358,7 @@ export default function Customizer({ onClose }) {
             </div>
           </div>
 
-          {/* Onglets de la barre du bas (personnalisables) */}
-          <div>
-            <p className="kicker mb-2">{t('secTabs')}</p>
-            <p className="mb-2 text-xs text-slate-500 dark:text-slate-400">{t('tabsHint')}</p>
-            <div className="space-y-2">
-              {tabSel.map((id, i) => (
-                <div key={id} className="flex items-center gap-2 rounded-xl px-3 py-2" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 22%, transparent)' }}>
-                  <span className="text-lg leading-none" aria-hidden>{ALL_TABS[id].icon}</span>
-                  <span className="flex-1 truncate text-sm font-semibold">{t(ALL_TABS[id].labelKey)}</span>
-                  <button type="button" onClick={() => moveTab(i, -1)} disabled={i === 0} className="grid h-7 w-7 place-items-center rounded-lg text-sm disabled:opacity-30" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 28%, transparent)' }} aria-label="↑">↑</button>
-                  <button type="button" onClick={() => moveTab(i, 1)} disabled={i === tabSel.length - 1} className="grid h-7 w-7 place-items-center rounded-lg text-sm disabled:opacity-30" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 28%, transparent)' }} aria-label="↓">↓</button>
-                  <button type="button" onClick={() => removeTab(id)} disabled={tabSel.length <= 2} className="grid h-7 w-7 place-items-center rounded-lg text-sm text-rose-500 disabled:opacity-30" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 28%, transparent)' }} aria-label="✕">✕</button>
-                </div>
-              ))}
-            </div>
-            {tabAvail.length > 0 && tabSel.length < 5 && (
-              <>
-                <p className="mb-1 mt-3 text-xs text-slate-500 dark:text-slate-400">{t('tabsAdd')}</p>
-                <div className="flex flex-wrap gap-2">
-                  {tabAvail.map((id) => (
-                    <button key={id} type="button" onClick={() => addTab(id)} className="flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-semibold transition hover:-translate-y-0.5" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 28%, transparent)' }}>
-                      <span aria-hidden>{ALL_TABS[id].icon}</span> {t(ALL_TABS[id].labelKey)}
-                    </button>
-                  ))}
-                </div>
-              </>
-            )}
-            <button type="button" onClick={() => setTabs(null)} className="mt-3 text-xs font-semibold text-slate-400 underline hover:text-[#84671b] dark:hover:text-[#d9bd77]">
-              {t('tabsReset')}
-            </button>
-          </div>
+          <NavigationTabs />
 
           <button onClick={resetCustomTheme} className="w-full text-center text-xs font-semibold text-slate-400 underline hover:text-[#84671b] dark:hover:text-[#d9bd77]">
             {t('resetAllAppearance')}
