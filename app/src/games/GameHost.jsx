@@ -1,3 +1,4 @@
+import '../pages/CourseStudio.css'
 import { drawQuestionSession, rememberQuestionSession } from '../data/questionSessions.js'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
@@ -81,7 +82,7 @@ function PleinEcran({ titre, children }) {
     return () => { document.body.style.overflow = avant }
   }, [])
   return createPortal(
-    <div ref={fenetre} data-exercice className="no-print fixed inset-0 z-[60] overflow-y-auto focus:outline-none" style={{ background: 'var(--c-bg)' }} role="dialog" aria-modal="true" aria-label={titre}>
+    <div ref={fenetre} data-exercice className="exercise-studio no-print fixed inset-0 z-[60] overflow-y-auto focus:outline-none" style={{ background: 'var(--c-bg)' }} role="dialog" aria-modal="true" aria-label={titre}>
       <div className="mx-auto max-w-2xl px-4 pb-10" style={{ paddingTop: 'max(1rem, env(safe-area-inset-top))' }}>{children}</div>
     </div>,
     document.body,

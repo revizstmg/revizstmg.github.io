@@ -1,3 +1,4 @@
+import './CourseStudio.css'
 import { TextePublic } from '../localisation/PublicText.jsx'
 import { useEffect, useState } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
@@ -86,7 +87,7 @@ export default function Theme() {
   }
 
   return (
-    <div className="animate-lux space-y-4">
+    <div className="study-library theme-library animate-lux space-y-4">
       <header className="page-hero page-hero-compact flex items-start justify-between gap-2">
         <div className="min-w-0">
           <h1 className="font-display text-2xl font-medium leading-tight"><CourseText text={theme.name} /></h1>
@@ -107,7 +108,7 @@ export default function Theme() {
         </button>
       </header>
 
-      <div className="no-print sticky top-[52px] z-30 -mx-4 border-b border-slate-200 bg-slate-50/90 px-4 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
+      <div className="study-tabs no-print sticky top-[52px] z-30 -mx-4 border-b border-slate-200 bg-slate-50/90 px-4 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
         <div className="flex gap-1">
           {TABS.map((tb) => (
             <button
