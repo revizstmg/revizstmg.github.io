@@ -46,3 +46,4 @@
  .chapter-exercise-card>.min-w-0{min-width:0}.chapter-exercise-card>.chip{grid-column:2;justify-self:start;margin-inline-start:0}
  @media(max-width:639px){.course-studio>.page-hero{grid-template-columns:minmax(0,1fr)}.chapter-hero-actions{flex-direction:row;justify-content:flex-end}}
 }
+@media screen { .course-studio .reader>p { color:var(--c-ink); } }

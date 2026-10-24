@@ -1292,3 +1292,6 @@ Prochaine action :
 ### COURS-20261024-CODEX-03 — contraste du retour au chapitre précédent
 - Le contrôle complet de la PR #99 relève un contraste de 4,45:1 sur le petit texte « Précédent » du lecteur droit-t5/1, face au nouveau fond papier. Publication bloquée ; version précédente conservée.
 - Périmètre : CourseStudio.css, couleur explicite var(--c-ink) du paragraphe secondaire du lecteur. Aucun contrôle retiré. Branche fix/contraste-pagination-cours ; reprise du contrôle axe complet et de la publication.
+
+- Second constat du même run : le nouveau parcours bibliothèque mesurait le bouton Enregistrer pendant le fondu d’arrivée (couleurs intermédiaires). Le test attend désormais la fin des animations finies, comme le contrôle accessibilite.spec.js existant, puis exécute toutes les mêmes règles axe. Aucun contrôle désactivé ni seuil abaissé.
+- Validation de la correction : 407 tests unitaires réussis, compilation et trois parcours d’accessibilité complets réussis (21 pages en clair/sombre, fenêtre et exercice), puis les quatre parcours de la refonte réussis. PR #100 ; aucune assertion ni règle d’accessibilité retirée. Relance de la publication automatique de #99 après fusion.
