@@ -1295,3 +1295,6 @@ Prochaine action :
 
 - Second constat du même run : le nouveau parcours bibliothèque mesurait le bouton Enregistrer pendant le fondu d’arrivée (couleurs intermédiaires). Le test attend désormais la fin des animations finies, comme le contrôle accessibilite.spec.js existant, puis exécute toutes les mêmes règles axe. Aucun contrôle désactivé ni seuil abaissé.
 - Validation de la correction : 407 tests unitaires réussis, compilation et trois parcours d’accessibilité complets réussis (21 pages en clair/sombre, fenêtre et exercice), puis les quatre parcours de la refonte réussis. PR #100 ; aucune assertion ni règle d’accessibilité retirée. Relance de la publication automatique de #99 après fusion.
+
+### ACCUEIL-20261024-CODEX-04 — flèche sans action dans la progression
+- Retour : la flèche de « Chaque séance compte. » semble utilisable mais n’a aucune action. Périmètre : suppression du seul span décoratif dans Home.jsx ; lien Badges conservé. Branche fix/fleche-decoration-accueil. Aucun changement de donnée ou de contenu pédagogique.
