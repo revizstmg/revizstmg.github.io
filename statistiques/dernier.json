@@ -1,55 +1,56 @@
 {
- "date": "2026-10-23",
- "heure": "2026-10-23T09:12:23.689Z",
+ "date": "2026-10-24",
+ "heure": "2026-10-24T08:45:19.502Z",
  "utilisation": {
   "profs": 4,
-  "eleves": 9,
+  "eleves": 10,
   "classes": 3,
-  "comptes": 13,
+  "comptes": 14,
   "niveaux": {
    "premiere-stmg": 1,
-   "terminale-stmg": 8
+   "terminale-stmg": 9
   },
-  "vues_7j": 277,
-  "actifs_1j": 3,
-  "actifs_7j": 4,
+  "vues_7j": 323,
+  "actifs_1j": 2,
+  "actifs_7j": 5,
   "ecrans_7j": {
    "cgu": 2,
-   "faq": 1,
    "moi": 12,
-   "amis": 1,
+   "amis": 2,
    "coach": 1,
-   "guide": 2,
-   "theme": 18,
-   "classe": 13,
-   "entree": 20,
-   "accueil": 104,
+   "guide": 1,
+   "theme": 20,
+   "badges": 1,
+   "classe": 7,
+   "entree": 30,
+   "accueil": 119,
    "express": 1,
-   "matiere": 21,
-   "boutique": 4,
-   "chapitre": 29,
+   "matiere": 30,
+   "boutique": 5,
+   "chapitre": 34,
    "coach-ia": 1,
-   "formules": 3,
-   "revision": 17,
+   "formules": 2,
+   "revision": 23,
    "bac-blanc": 22,
-   "programme": 3,
-   "classement": 1,
-   "grand-oral": 1
+   "programme": 5,
+   "classement": 2,
+   "grand-oral": 1,
+   "introuvable": 2
   },
-  "vues_hier": 86,
-  "actifs_30j": 4,
+  "vues_hier": 85,
+  "actifs_30j": 5,
   "defis_amis": 0,
-  "visites_7j": 64,
+  "visites_7j": 82,
   "nouveaux_7j": 3,
   "specialites": {
    "sig": 1,
-   "gestion-finance": 6,
+   "gestion-finance": 7,
    "rh-communication": 1
   },
   "joueurs_amis": 1,
-  "nouveaux_30j": 3,
+  "nouveaux_30j": 4,
   "rappels_push": 0,
-  "visites_hier": 24,
+  "visites_hier": 23,
   "defis_amis_7j": 0,
   "sessions_live": 0,
   "quiz_de_classe": 0,
@@ -72,13 +73,13 @@
  "publication": {
   "ci": {
    "etat": "success",
-   "date": "2026-10-23T00:40:43Z"
+   "date": "2026-10-23T22:33:42Z"
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-10-23T00:41:06Z"
+   "date": "2026-10-23T22:34:07Z"
   },
-  "modifications7j": 77
+  "modifications7j": 71
  },
  "tests": "success"
 }
