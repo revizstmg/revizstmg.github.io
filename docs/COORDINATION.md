@@ -1298,3 +1298,8 @@ Prochaine action :
 
 ### ACCUEIL-20261024-CODEX-04 — flèche sans action dans la progression
 - Retour : la flèche de « Chaque séance compte. » semble utilisable mais n’a aucune action. Périmètre : suppression du seul span décoratif dans Home.jsx ; lien Badges conservé. Branche fix/fleche-decoration-accueil. Aucun changement de donnée ou de contenu pédagogique.
+
+### CLASSE-20261024-CODEX-05 — refonte complète de l’espace classe et nom libre
+- Demande explicite : permettre au professeur de nommer sa classe (ex. Droit Mme… 1STMG04), moderniser et simplifier l’ensemble de l’espace classe.
+- Périmètre indispensable annoncé au propriétaire : Classe.jsx, classroom.js (couloir Claude), composants dédiés, CSS, traductions et tests. Réservation exclusive de ces fichiers ; aucune tâche active concurrente ne les recouvre. Branche feat/espace-classe-complet. Lecture préalable du schéma et des droits existants ; privilégier les champs label et métadonnées déjà prévus, sans toucher aux tables NAH.
+- Parcours visé : création avec nom, renommage et intitulé partagé avec les élèves ; vue d’ensemble lisible, travail/quiz, échanges, membres et suivi, réglages professeur séparés. Conserver et rendre accessibles les fonctions de groupe, objectif, direct et résultats existantes ; erreurs visibles, mobile et six langues. La publication de la flèche de l’accueil (#101) se poursuit indépendamment ; ses 407 tests unitaires et cinq parcours accueil locaux sont déjà réussis.
