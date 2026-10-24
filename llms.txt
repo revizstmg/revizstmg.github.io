@@ -1,0 +1,27 @@
+# RévizSTMG
+
+> Cours publics de Première et Terminale STMG. Projet indépendant de deux élèves, sans certification professorale revendiquée.
+
+Les pages HTML de cours sont lisibles sans JavaScript et reprennent le contenu courant de l’application. Les exercices interactifs nécessitent JavaScript. Les sources et limites sont précisées dans chaque fiche et la page À propos.
+
+- [Tous les cours](https://revizstmg.github.io/cours/)
+- [Auteurs, méthode et sources](https://revizstmg.github.io/a-propos/)
+- [Sitemap](https://revizstmg.github.io/sitemap.xml)
+- [Gestion et Finance terminale](https://revizstmg.github.io/cours/terminale/gestion-et-finance/)
+- [Management (MSGN) terminale](https://revizstmg.github.io/cours/terminale/management-msgn/)
+- [Droit terminale](https://revizstmg.github.io/cours/terminale/droit/)
+- [Économie terminale](https://revizstmg.github.io/cours/terminale/economie/)
+- [Mathématiques terminale](https://revizstmg.github.io/cours/terminale/mathematiques/)
+- [Philosophie terminale](https://revizstmg.github.io/cours/terminale/philosophie/)
+- [Histoire-Géographie terminale](https://revizstmg.github.io/cours/terminale/histoire-geographie/)
+- [Mercatique (Marketing) terminale](https://revizstmg.github.io/cours/terminale/mercatique-marketing/)
+- [Ressources humaines & Communication terminale](https://revizstmg.github.io/cours/terminale/ressources-humaines-communication/)
+- [Systèmes d’information de gestion terminale](https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/)
+- [Sciences de gestion et numérique premiere](https://revizstmg.github.io/cours/premiere/sciences-de-gestion-et-numerique/)
+- [Management premiere](https://revizstmg.github.io/cours/premiere/management/)
+- [Droit premiere](https://revizstmg.github.io/cours/premiere/droit/)
+- [Économie premiere](https://revizstmg.github.io/cours/premiere/economie/)
+- [Mathématiques premiere](https://revizstmg.github.io/cours/premiere/mathematiques/)
+- [Français (EAF) premiere](https://revizstmg.github.io/cours/premiere/francais-eaf/)
+- [Histoire-Géographie premiere](https://revizstmg.github.io/cours/premiere/histoire-geographie/)
+- [Guides de langues](https://revizstmg.github.io/cours/langues/)

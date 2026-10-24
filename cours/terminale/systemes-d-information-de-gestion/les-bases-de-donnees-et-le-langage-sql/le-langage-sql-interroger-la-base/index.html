@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le langage SQL : interroger la base - Cours Systèmes d’information de gestion… | RévizSTMG</title>
+<meta name="description" content="Le langage SQL : interroger la base : cours de Systèmes d’information de gestion Terminale STMG. Le SQL (Structured Query Language) est le langage qui…">
+<link rel="canonical" href="https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/le-langage-sql-interroger-la-base/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="RévizSTMG">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/le-langage-sql-interroger-la-base/">
+<meta property="og:title" content="Le langage SQL : interroger la base - Cours Systèmes d’information de gestion… | RévizSTMG">
+<meta property="og:description" content="Le langage SQL : interroger la base : cours de Systèmes d’information de gestion Terminale STMG. Le SQL (Structured Query Language) est le langage qui…">
+<meta property="og:image" content="https://revizstmg.github.io/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1b1813">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="stylesheet" href="/cours/cours.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cours du bac STMG","item":"https://revizstmg.github.io/cours/"},{"@type":"ListItem","position":2,"name":"Systèmes d’information de gestion - Terminale STMG","item":"https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/"},{"@type":"ListItem","position":3,"name":"Thème 2 — Les bases de données et le langage SQL","item":"https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/"},{"@type":"ListItem","position":4,"name":"Le langage SQL : interroger la base","item":"https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/le-langage-sql-interroger-la-base/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Le langage SQL : interroger la base","description":"Le langage SQL : interroger la base : cours de Systèmes d’information de gestion Terminale STMG. Le SQL (Structured Query Language) est le langage qui…","url":"https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/le-langage-sql-interroger-la-base/","inLanguage":"fr","learningResourceType":"Cours","educationalLevel":"Terminale STMG","isAccessibleForFree":true,"about":"Systèmes d’information de gestion","isPartOf":{"@type":"CreativeWork","name":"Thème 2 — Les bases de données et le langage SQL","url":"https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/"},"publisher":{"@type":"Organization","name":"RévizSTMG","url":"https://revizstmg.github.io/"},"author":{"@type":"Organization","name":"RévizSTMG","url":"https://revizstmg.github.io/a-propos/"},"citation":["https://eduscol.education.gouv.fr/5862/programmes-et-ressources-en-serie-stmg"]}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="entete"><a class="marque" href="/"><span aria-hidden="true">◇</span> RévizSTMG</a><nav aria-label="Navigation"><a href="/cours/">Cours</a><a href="/a-propos/">À propos</a><a class="ouvrir" href="/#/accueil">Ouvrir l’application</a></nav></header>
+<nav class="ariane" aria-label="Fil d’Ariane"><ol><li><a href="/cours/">Cours du bac STMG</a></li><li><a href="/cours/terminale/systemes-d-information-de-gestion/">Systèmes d’information de gestion - Terminale STMG</a></li><li><a href="/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/">Thème 2 - Les bases de données et le langage SQL</a></li><li aria-current="page">Le langage SQL : interroger la base</li></ol></nav>
+<main id="contenu">
+<h1>Le langage SQL : interroger la base</h1>
+<p class="sous-titre">Systèmes d’information de gestion · Terminale STMG · <a href="/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/">Thème 2 - Les bases de données et le langage SQL</a></p>
+<section class="reperes"><h2>Les notions clés</h2><dl><dt>SELECT</dt><dd>les colonnes à afficher (SELECT  = toutes)</dd><dt>FROM</dt><dd>la table concernée</dd><dt>WHERE</dt><dd>la condition de filtrage (=, &lt;, &gt;, AND, OR, LIKE)</dd></dl></section><article class="cours"><p>Le <strong>SQL (Structured Query Language)</strong> est le langage qui permet de <strong>poser des questions</strong> à une base de données (« requêtes »). La requête de base sélectionne des colonnes, dans une table, selon une condition.</p>
+<p class="formule">SELECT colonnes<br>FROM table<br>WHERE condition<br>ORDER BY colonne ;</p>
+<ul><li><strong>SELECT</strong> : les colonnes à afficher (SELECT * = toutes).</li><li><strong>FROM</strong> : la table concernée.</li><li><strong>WHERE</strong> : la condition de filtrage (=, &lt;, &gt;, AND, OR, LIKE).</li><li><strong>ORDER BY</strong> : le tri (ASC croissant, DESC décroissant).</li></ul>
+<aside class="bloc exemple"><p class="bloc-titre">Requête simple</p><p>Afficher le nom et la ville des clients de Paris, triés par nom :<br>SELECT nom, ville<br>FROM CLIENTS<br>WHERE ville = 'Paris'<br>ORDER BY nom ;</p></aside>
+<aside class="bloc astuce"><p class="bloc-titre">À retenir</p><p>Structure de base : <strong>SELECT</strong> (quoi) <strong>FROM</strong> (où) <strong>WHERE</strong> (quelle condition) <strong>ORDER BY</strong> (quel tri). Ne pas oublier le <strong>point-virgule</strong> final et les <strong>guillemets</strong> autour du texte.</p></aside></article><section class="questions"><h2>Exercices corrigés</h2><h3>1. Que signifie : « SELECT » ?</h3><ol><li>la table concernée</li><li>la condition de filtrage (=, &lt;, &gt;, AND, OR, LIKE)</li><li>les colonnes à afficher (SELECT  = toutes)</li><li>le tri (ASC croissant, DESC décroissant)</li></ol><details><summary>Voir la correction</summary><p>les colonnes à afficher (SELECT  = toutes)</p><p>SELECT → les colonnes à afficher (SELECT  = toutes)</p></details><h3>2. « WHERE » : quelle proposition est correcte ?</h3><ol><li>les colonnes à afficher (SELECT  = toutes)</li><li>la condition de filtrage (=, &lt;, &gt;, AND, OR, LIKE)</li><li>le tri (ASC croissant, DESC décroissant)</li><li>la table concernée</li></ol><details><summary>Voir la correction</summary><p>la condition de filtrage (=, &lt;, &gt;, AND, OR, LIKE)</p><p>WHERE → la condition de filtrage (=, &lt;, &gt;, AND, OR, LIKE)</p></details></section><section class="sources"><h2>Sources et vérification</h2><p>Fiche de RévizSTMG, projet de Matys DONAT et Gabriel MERLIN, élèves. Ce support indépendant peut comporter des erreurs ; les références ci-dessous permettent de vérifier le cadre du programme et les notions. <a href="/a-propos/">Notre méthode</a>.</p><ul><li><a href="https://eduscol.education.gouv.fr/5862/programmes-et-ressources-en-serie-stmg" rel="noopener noreferrer">Éduscol : programmes et ressources en série STMG</a></li></ul></section>
+<aside class="entrainement">
+<p class="bloc-titre">Entraîne-toi sur ce chapitre</p>
+<p>8 exercices corrigés, tirés uniquement de ce cours. Retrouve aussi les flashcards et les parcours de révision. Gratuit.</p>
+<p><a class="bouton" href="/#/subject/sig/theme/sig-t2/chapter/4">Faire les exercices</a></p>
+</aside>
+<nav class="voisins" aria-label="Chapitres voisins"><a href="/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/le-modele-relationnel-cle-primaire-cle-etrangere-relations/">← Le modèle relationnel : clé primaire, clé étrangère, relations</a><a href="/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/fonctions-d-agregation-et-jointures/">Fonctions d’agrégation et jointures →</a></nav>
+</main>
+<footer class="pied">
+<p><strong>RévizSTMG</strong> : révision gratuite du bac STMG, en Première et en Terminale. Cours, exercices corrigés, flashcards et sujets au format des épreuves.</p>
+<p><a href="/a-propos/">À propos et sources</a> · <a href="/partager/">Partager une ressource</a> · <a href="/cours/">Tous les cours</a> · <a href="/">Ouvrir l’application</a> · <a href="/#/confidentialite">Confidentialité</a> · <a href="/#/cgu">CGU et mentions légales</a></p>
+</footer>
+</body>
+</html>

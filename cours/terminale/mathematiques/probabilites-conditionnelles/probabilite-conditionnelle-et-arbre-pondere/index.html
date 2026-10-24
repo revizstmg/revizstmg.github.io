@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Probabilité conditionnelle et arbre pondéré - Cours Mathématiques Terminale STMG | RévizSTMG</title>
+<meta name="description" content="Probabilité conditionnelle et arbre pondéré : cours de Mathématiques Terminale STMG. Une probabilité conditionnelle est la probabilité d’un événement B…">
+<link rel="canonical" href="https://revizstmg.github.io/cours/terminale/mathematiques/probabilites-conditionnelles/probabilite-conditionnelle-et-arbre-pondere/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="RévizSTMG">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://revizstmg.github.io/cours/terminale/mathematiques/probabilites-conditionnelles/probabilite-conditionnelle-et-arbre-pondere/">
+<meta property="og:title" content="Probabilité conditionnelle et arbre pondéré - Cours Mathématiques Terminale STMG | RévizSTMG">
+<meta property="og:description" content="Probabilité conditionnelle et arbre pondéré : cours de Mathématiques Terminale STMG. Une probabilité conditionnelle est la probabilité d’un événement B…">
+<meta property="og:image" content="https://revizstmg.github.io/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1b1813">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="stylesheet" href="/cours/cours.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cours du bac STMG","item":"https://revizstmg.github.io/cours/"},{"@type":"ListItem","position":2,"name":"Mathématiques - Terminale STMG","item":"https://revizstmg.github.io/cours/terminale/mathematiques/"},{"@type":"ListItem","position":3,"name":"Chapitre 5 — Probabilités conditionnelles","item":"https://revizstmg.github.io/cours/terminale/mathematiques/probabilites-conditionnelles/"},{"@type":"ListItem","position":4,"name":"Probabilité conditionnelle et arbre pondéré","item":"https://revizstmg.github.io/cours/terminale/mathematiques/probabilites-conditionnelles/probabilite-conditionnelle-et-arbre-pondere/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Probabilité conditionnelle et arbre pondéré","description":"Probabilité conditionnelle et arbre pondéré : cours de Mathématiques Terminale STMG. Une probabilité conditionnelle est la probabilité d’un événement B…","url":"https://revizstmg.github.io/cours/terminale/mathematiques/probabilites-conditionnelles/probabilite-conditionnelle-et-arbre-pondere/","inLanguage":"fr","learningResourceType":"Cours","educationalLevel":"Terminale STMG","isAccessibleForFree":true,"about":"Mathématiques","isPartOf":{"@type":"CreativeWork","name":"Chapitre 5 — Probabilités conditionnelles","url":"https://revizstmg.github.io/cours/terminale/mathematiques/probabilites-conditionnelles/"},"publisher":{"@type":"Organization","name":"RévizSTMG","url":"https://revizstmg.github.io/"},"author":{"@type":"Organization","name":"RévizSTMG","url":"https://revizstmg.github.io/a-propos/"},"citation":["https://eduscol.education.gouv.fr/5862/programmes-et-ressources-en-serie-stmg"]}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="entete"><a class="marque" href="/"><span aria-hidden="true">◇</span> RévizSTMG</a><nav aria-label="Navigation"><a href="/cours/">Cours</a><a href="/a-propos/">À propos</a><a class="ouvrir" href="/#/accueil">Ouvrir l’application</a></nav></header>
+<nav class="ariane" aria-label="Fil d’Ariane"><ol><li><a href="/cours/">Cours du bac STMG</a></li><li><a href="/cours/terminale/mathematiques/">Mathématiques - Terminale STMG</a></li><li><a href="/cours/terminale/mathematiques/probabilites-conditionnelles/">Chapitre 5 - Probabilités conditionnelles</a></li><li aria-current="page">Probabilité conditionnelle et arbre pondéré</li></ol></nav>
+<main id="contenu">
+<h1>Probabilité conditionnelle et arbre pondéré</h1>
+<p class="sous-titre">Mathématiques · Terminale STMG · <a href="/cours/terminale/mathematiques/probabilites-conditionnelles/">Chapitre 5 - Probabilités conditionnelles</a></p>
+<section class="reperes"><h2>Les notions clés</h2><dl><dt>Règle du produit</dt><dd>la probabilité d’un chemin (une suite de branches) est le produit des probabilités rencontrées le long du chemin</dd><dt>Règle de la somme</dt><dd>la somme des probabilités des branches partant d’un même nœud vaut 1</dd></dl></section><article class="cours"><p>Une <strong>probabilité conditionnelle</strong> est la probabilité d’un événement B <strong>sachant que</strong> l’événement A est déjà réalisé. On la note <strong>P_A(B)</strong> (« probabilité de B sachant A »). Elle traduit l’idée qu’une information (A) modifie la probabilité de B.</p>
+<p class="formule">P_A(B) = P(A ∩ B) ÷ P(A)   (avec P(A) ≠ 0)</p>
+<p>L’<strong>arbre pondéré</strong> est l’outil visuel central. Chaque <strong>branche</strong> porte une probabilité. Deux <strong>règles d’or</strong> permettent de tout calculer.</p>
+<ul><li><strong>Règle du produit</strong> : la probabilité d’un <strong>chemin</strong> (une suite de branches) est le <strong>produit</strong> des probabilités rencontrées le long du chemin.</li><li><strong>Règle de la somme</strong> : la somme des probabilités des branches <strong>partant d’un même nœud</strong> vaut <strong>1</strong>.</li></ul>
+<aside class="bloc exemple"><p class="bloc-titre">Lecture d’un chemin</p><p>Si P(A) = 0,6 et P_A(B) = 0,3, alors P(A ∩ B) = P(A) × P_A(B) = 0,6 × 0,3 = <strong>0,18</strong> (produit le long du chemin A puis B).</p></aside>
+<aside class="bloc astuce"><p class="bloc-titre">À retenir</p><p>Sur un arbre : on <strong>multiplie</strong> le long d’un chemin, on <strong>additionne</strong> les chemins qui mènent au même résultat. Les branches issues d’un nœud somment à 1.</p></aside></article><section class="questions"><h2>Exercices corrigés</h2><h3>1. Quel mot complète la phrase ?<br>Règle du produit : la probabilité d’un ____ (une suite de branches) est le produit des probabilités rencontrées le long du chemin.</h3><ol><li>chemin</li><li>partant d’un même nœud</li><li>sachant que</li><li>additionne</li></ol><details><summary>Voir la correction</summary><p>chemin</p><p>Le mot manquant : « chemin ».</p></details><h3>2. Quel mot complète la phrase ?<br>____ : la probabilité d’un chemin (une suite de branches) est le produit des probabilités rencontrées le long du chemin.</h3><ol><li>P_A(B)</li><li>produit</li><li>partant d’un même nœud</li><li>Règle du produit</li></ol><details><summary>Voir la correction</summary><p>Règle du produit</p><p>Le mot manquant : « Règle du produit ».</p></details></section><section class="sources"><h2>Sources et vérification</h2><p>Fiche de RévizSTMG, projet de Matys DONAT et Gabriel MERLIN, élèves. Ce support indépendant peut comporter des erreurs ; les références ci-dessous permettent de vérifier le cadre du programme et les notions. <a href="/a-propos/">Notre méthode</a>.</p><ul><li><a href="https://eduscol.education.gouv.fr/5862/programmes-et-ressources-en-serie-stmg" rel="noopener noreferrer">Éduscol : programmes et ressources en série STMG</a></li></ul></section>
+<aside class="entrainement">
+<p class="bloc-titre">Entraîne-toi sur ce chapitre</p>
+<p>6 exercices corrigés, tirés uniquement de ce cours. Retrouve aussi les flashcards et les parcours de révision. Gratuit.</p>
+<p><a class="bouton" href="/#/subject/maths/theme/math-c5/chapter/0">Faire les exercices</a></p>
+</aside>
+<nav class="voisins" aria-label="Chapitres voisins"><span></span><a href="/cours/terminale/mathematiques/probabilites-conditionnelles/independance-p-a-b-p-a-p-b/">Indépendance : P(A ∩ B) = P(A) × P(B) →</a></nav>
+</main>
+<footer class="pied">
+<p><strong>RévizSTMG</strong> : révision gratuite du bac STMG, en Première et en Terminale. Cours, exercices corrigés, flashcards et sujets au format des épreuves.</p>
+<p><a href="/a-propos/">À propos et sources</a> · <a href="/partager/">Partager une ressource</a> · <a href="/cours/">Tous les cours</a> · <a href="/">Ouvrir l’application</a> · <a href="/#/confidentialite">Confidentialité</a> · <a href="/#/cgu">CGU et mentions légales</a></p>
+</footer>
+</body>
+</html>

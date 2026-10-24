@@ -1,0 +1,64 @@
+@font-face{font-family:PublicDisplay;src:url('/assets/cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2') format('woff2');font-weight:300 700;font-display:swap}@font-face{font-family:PublicBody;src:url('/assets/inter-latin-wght-normal-Dx4kXJAl.woff2') format('woff2');font-weight:100 900;font-display:swap}
+/* Pages de cours statiques (/cours/) : mêmes couleurs que l'app, polices locales de l’application, lisibles sans JavaScript. */
+:root {
+  color-scheme: light dark;
+  --fond: #f5f1e8; --carte: #fffdf8; --encre: #1c1813; --doux: #5f594f;
+  --or: #84671b; --filet: #e4dccb; --exemple: #eef4ff; --astuce: #f3f7ef; --piege: #fdf1ee;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #14110c; --carte: #201c15; --encre: #f1e9dc; --doux: #c9bfae;
+    --or: #d9bd77; --filet: #3a3326; --exemple: #1d2433; --astuce: #1d261b; --piege: #2e1e1a;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--fond); color: var(--encre);
+  font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--or); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+h1, h2, .marque { font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif; font-weight: 600; line-height: 1.2; }
+h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); margin: .4em 0 .2em; }
+h2 { font-size: 1.6rem; margin: 1.6em 0 .5em; }
+.entete, .ariane, main, .pied { max-width: 46rem; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+.entete { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 18px; padding-bottom: 6px; }
+.marque { font-size: 1.5rem; color: var(--encre); text-decoration: none; }
+.marque span { color: var(--or); }
+.ouvrir { font-size: .9rem; font-weight: 600; }
+.ariane ol { list-style: none; display: flex; flex-wrap: wrap; gap: .25rem .5rem; margin: .5rem 0 0; padding: 0; font-size: .85rem; color: var(--doux); }
+.ariane li + li::before { content: "›"; margin-right: .5rem; color: var(--doux); }
+.sous-titre { color: var(--doux); margin-top: 0; }
+.intro { font-size: 1.08rem; }
+.cours > *:first-child { margin-top: 1.2em; }
+.bloc { background: var(--carte); border: 1px solid var(--filet); border-radius: 14px; padding: .9rem 1.1rem; margin: 1.1rem 0; }
+.bloc p { margin: .3rem 0; }
+.bloc-titre { font-weight: 700; margin: 0 0 .3rem; }
+.exemple { background: var(--exemple); }
+.astuce { background: var(--astuce); }
+.piege { background: var(--piege); }
+.formule { background: var(--carte); border: 1px dashed var(--or); border-radius: 12px; padding: .7rem 1rem; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: .95rem; }
+.tableau { overflow-x: auto; margin: 1.1rem 0; }
+table { border-collapse: collapse; width: 100%; background: var(--carte); font-size: .95rem; }
+caption { text-align: left; font-weight: 700; padding: .3rem 0 .5rem; }
+th, td { border: 1px solid var(--filet); padding: .5rem .65rem; text-align: left; vertical-align: top; }
+th { font-weight: 700; }
+.frise ol { padding-left: 1.2rem; }
+.chapitres { padding-left: 1.3rem; }
+.chapitres li { margin: .45rem 0; }
+.extrait { display: block; color: var(--doux); font-size: .92rem; }
+.matieres { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: .75rem; }
+.matieres a { display: block; background: var(--carte); border: 1px solid var(--filet); border-radius: 14px; padding: .9rem 1rem; text-decoration: none; color: var(--encre); }
+.matieres a:hover { border-color: var(--or); }
+.matieres span { display: block; color: var(--doux); font-size: .88rem; }
+.entrainement { background: var(--carte); border: 1px solid var(--or); border-radius: 16px; padding: 1.1rem 1.2rem; margin: 2rem 0 1rem; }
+.action { margin: 2rem 0; }
+.bouton { display: inline-block; background: var(--encre); color: var(--fond); text-decoration: none; font-weight: 700; padding: .75rem 1.2rem; border-radius: 999px; min-height: 44px; }
+.bouton:hover { opacity: .9; }
+.voisins { display: flex; justify-content: space-between; gap: 1rem; margin: 1.5rem 0 2.5rem; font-size: .95rem; }
+.voisins a { max-width: 48%; }
+.pied { border-top: 1px solid var(--filet); margin-top: 2rem; padding-top: 1rem; padding-bottom: 2.5rem; font-size: .9rem; color: var(--doux); }
+@media print { .entete .ouvrir, .entrainement, .voisins, .pied, .action { display: none; } body { background: #fff; color: #000; } }
+/* Charte actuelle : aplats, angles discrets, aucune animation décorative. */
+body{font-family:PublicBody,system-ui,sans-serif}h1,h2,.marque{font-family:PublicDisplay,Georgia,serif}h1{font-size:clamp(1.8rem,5vw,2.7rem);overflow-wrap:anywhere}h2{font-size:1.75rem}.bouton{border-radius:8px;background:#203e36;color:#f7f2e5}.entete{background:#203e36;color:#f7f2e5;padding:16px 22px;border-radius:0 0 18px 18px}.entete a{color:#f7f2e5}.entete nav{display:flex;flex-wrap:wrap;align-items:center;gap:16px}.entete .marque{font-size:1.65rem}.ouvrir{border:1px solid #e7cc8c;border-radius:8px;padding:9px 12px}.evitement{position:absolute;top:-100px;left:12px;z-index:10;background:var(--carte);padding:10px}.evitement:focus{top:10px}.reperes,.sources,.questions{background:var(--carte);border:1px solid var(--filet);border-radius:14px;padding:20px;margin-block:22px}.reperes dt{font-weight:700;margin-top:12px}.reperes dd{margin:4px 0 10px}.sources{font-size:.9rem}.cours figure{padding:10px;border:1px solid var(--filet);border-radius:12px;margin:20px 0;background:var(--carte)}.cours figure svg{display:block;width:100%;height:100%;max-height:500px}.cours figcaption{font-size:.85rem;color:var(--doux);text-align:center}.fill-white{fill:#fff}.fill-slate-800{fill:var(--encre)}.fill-slate-500{fill:var(--doux)}.questions h3{font-size:1rem}.questions summary{cursor:pointer;min-height:44px;padding:8px 0;font-weight:650}a:focus-visible,summary:focus-visible{outline:3px solid var(--or);outline-offset:3px}blockquote{border-left:3px solid var(--or);margin:20px 0;padding:8px 20px}body{overflow-wrap:anywhere}@media(max-width:540px){.entete{align-items:start;gap:12px;flex-direction:column;padding:18px}.entete nav{gap:12px;font-size:.85rem}.entete .ouvrir{display:inline-block}.voisins{flex-direction:column}.voisins a{max-width:100%}.reperes,.sources,.questions{padding:16px}}@media print{.reperes,.sources,.questions{break-inside:auto}h1,h2,h3{break-after:avoid}.cours figure{break-inside:avoid}.reperes dt{break-after:avoid}.bouton{display:none}main{max-width:none}}

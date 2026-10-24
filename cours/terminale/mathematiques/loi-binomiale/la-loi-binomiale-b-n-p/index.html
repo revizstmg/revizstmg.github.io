@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La loi binomiale B(n ; p) - Cours Mathématiques Terminale STMG | RévizSTMG</title>
+<meta name="description" content="La loi binomiale B(n ; p) : cours de Mathématiques Terminale STMG. Si X compte le nombre de succès dans un schéma de Bernoulli à n épreuves de probabilité…">
+<link rel="canonical" href="https://revizstmg.github.io/cours/terminale/mathematiques/loi-binomiale/la-loi-binomiale-b-n-p/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="RévizSTMG">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://revizstmg.github.io/cours/terminale/mathematiques/loi-binomiale/la-loi-binomiale-b-n-p/">
+<meta property="og:title" content="La loi binomiale B(n ; p) - Cours Mathématiques Terminale STMG | RévizSTMG">
+<meta property="og:description" content="La loi binomiale B(n ; p) : cours de Mathématiques Terminale STMG. Si X compte le nombre de succès dans un schéma de Bernoulli à n épreuves de probabilité…">
+<meta property="og:image" content="https://revizstmg.github.io/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1b1813">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="stylesheet" href="/cours/cours.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Cours du bac STMG","item":"https://revizstmg.github.io/cours/"},{"@type":"ListItem","position":2,"name":"Mathématiques - Terminale STMG","item":"https://revizstmg.github.io/cours/terminale/mathematiques/"},{"@type":"ListItem","position":3,"name":"Chapitre 6 — Loi binomiale","item":"https://revizstmg.github.io/cours/terminale/mathematiques/loi-binomiale/"},{"@type":"ListItem","position":4,"name":"La loi binomiale B(n ; p)","item":"https://revizstmg.github.io/cours/terminale/mathematiques/loi-binomiale/la-loi-binomiale-b-n-p/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"La loi binomiale B(n ; p)","description":"La loi binomiale B(n ; p) : cours de Mathématiques Terminale STMG. Si X compte le nombre de succès dans un schéma de Bernoulli à n épreuves de probabilité…","url":"https://revizstmg.github.io/cours/terminale/mathematiques/loi-binomiale/la-loi-binomiale-b-n-p/","inLanguage":"fr","learningResourceType":"Cours","educationalLevel":"Terminale STMG","isAccessibleForFree":true,"about":"Mathématiques","isPartOf":{"@type":"CreativeWork","name":"Chapitre 6 — Loi binomiale","url":"https://revizstmg.github.io/cours/terminale/mathematiques/loi-binomiale/"},"publisher":{"@type":"Organization","name":"RévizSTMG","url":"https://revizstmg.github.io/"},"author":{"@type":"Organization","name":"RévizSTMG","url":"https://revizstmg.github.io/a-propos/"},"citation":["https://eduscol.education.gouv.fr/5862/programmes-et-ressources-en-serie-stmg"]}</script>
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="entete"><a class="marque" href="/"><span aria-hidden="true">◇</span> RévizSTMG</a><nav aria-label="Navigation"><a href="/cours/">Cours</a><a href="/a-propos/">À propos</a><a class="ouvrir" href="/#/accueil">Ouvrir l’application</a></nav></header>
+<nav class="ariane" aria-label="Fil d’Ariane"><ol><li><a href="/cours/">Cours du bac STMG</a></li><li><a href="/cours/terminale/mathematiques/">Mathématiques - Terminale STMG</a></li><li><a href="/cours/terminale/mathematiques/loi-binomiale/">Chapitre 6 - Loi binomiale</a></li><li aria-current="page">La loi binomiale B(n ; p)</li></ol></nav>
+<main id="contenu">
+<h1>La loi binomiale B(n ; p)</h1>
+<p class="sous-titre">Mathématiques · Terminale STMG · <a href="/cours/terminale/mathematiques/loi-binomiale/">Chapitre 6 - Loi binomiale</a></p>
+<article class="cours"><p>Si X compte le nombre de succès dans un schéma de Bernoulli à <strong>n</strong> épreuves de probabilité de succès <strong>p</strong>, alors X suit la <strong>loi binomiale de paramètres n et p</strong>, notée <strong>X ~ B(n ; p)</strong>.</p>
+<p class="formule">P(X = k) = C(n, k) × pᵏ × (1 − p)ⁿ⁻ᵏ   pour k = 0, 1, …, n</p>
+<p>Le coefficient <strong>C(n, k)</strong> (« combinaison de k parmi n ») compte le nombre de façons d’obtenir k succès parmi n épreuves. En STMG, on calcule <strong>P(X = k)</strong>, <strong>P(X ≤ k)</strong> et <strong>P(X ≥ k)</strong> à la <strong>calculatrice</strong> (fonctions binomFdp / binomFRép).</p>
+<p>L’<strong>espérance</strong> E(X) donne le nombre <strong>moyen</strong> de succès attendu sur un grand nombre de répétitions : c’est un résultat très intuitif et souvent demandé.</p>
+<p class="formule">Espérance : E(X) = n × p     Écart-type : σ(X) = √( n × p × (1 − p) )</p>
+<aside class="bloc exemple"><p class="bloc-titre">Espérance</p><p>On lance 50 fois une pièce (p = 0,5). Nombre moyen de « face » : E(X) = 50 × 0,5 = <strong>25</strong>.</p></aside>
+<aside class="bloc piege"><p class="bloc-titre">Traduire les énoncés</p><p>« au moins k succès » → P(X ≥ k) = 1 − P(X ≤ k − 1). « au plus k » → P(X ≤ k). « exactement k » → P(X = k). Bien traduire est la clé.</p></aside></article><section class="sources"><h2>Sources et vérification</h2><p>Fiche de RévizSTMG, projet de Matys DONAT et Gabriel MERLIN, élèves. Ce support indépendant peut comporter des erreurs ; les références ci-dessous permettent de vérifier le cadre du programme et les notions. <a href="/a-propos/">Notre méthode</a>.</p><ul><li><a href="https://eduscol.education.gouv.fr/5862/programmes-et-ressources-en-serie-stmg" rel="noopener noreferrer">Éduscol : programmes et ressources en série STMG</a></li></ul></section>
+<aside class="entrainement">
+<p class="bloc-titre">Entraîne-toi sur ce chapitre</p>
+<p>3 exercices corrigés, tirés uniquement de ce cours. Retrouve aussi les flashcards et les parcours de révision. Gratuit.</p>
+<p><a class="bouton" href="/#/subject/maths/theme/math-c6/chapter/1">Faire les exercices</a></p>
+</aside>
+<nav class="voisins" aria-label="Chapitres voisins"><a href="/cours/terminale/mathematiques/loi-binomiale/l-epreuve-et-le-schema-de-bernoulli/">← L’épreuve et le schéma de Bernoulli</a><a href="/cours/terminale/mathematiques/loi-binomiale/exercice-type-guide-loi-binomiale-p-x-0-p-x-1-et-esperance/">Exercice type guidé - loi binomiale : P(X = 0), P(X ≥ 1) et espérance →</a></nav>
+</main>
+<footer class="pied">
+<p><strong>RévizSTMG</strong> : révision gratuite du bac STMG, en Première et en Terminale. Cours, exercices corrigés, flashcards et sujets au format des épreuves.</p>
+<p><a href="/a-propos/">À propos et sources</a> · <a href="/partager/">Partager une ressource</a> · <a href="/cours/">Tous les cours</a> · <a href="/">Ouvrir l’application</a> · <a href="/#/confidentialite">Confidentialité</a> · <a href="/#/cgu">CGU et mentions légales</a></p>
+</footer>
+</body>
+</html>
