@@ -41,7 +41,7 @@ test('étude de gestion : catégories, source, analyse, argument A-E-I évalué,
   await page.getByRole('button', { name: 'Ajouter la source' }).click()
   await expect(page.getByRole('button', { name: /\[1\] Entretien avec la gérante/ })).toContainText('Fiabilité 1/3')
   await page.getByRole('button', { name: /\[1\] Entretien avec la gérante/ }).click()
-  await expect(page.getByText('📎 Mme Martin, « Entretien avec la gérante », mars 2026')).toBeVisible()
+  await expect(page.getByText('Mme Martin, « Entretien avec la gérante », mars 2026')).toBeVisible()
 
   // L'analyse : tableau de caractérisation, diagnostic interne et externe, PESTEL.
   await page.getByRole('tab', { name: /Analyse/ }).click()
