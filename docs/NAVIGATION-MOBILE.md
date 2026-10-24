@@ -1,0 +1,7 @@
+# Menu principal sur téléphone
+
+Le bouton vert se trouve en haut à gauche de l’en-tête, y compris sur une page avec bouton Retour. Il ouvre un panneau à gauche, avec un en-tête et une croix de fermeture fixes. Les rubriques sont regroupées en apprentissage, communauté, puis outils complémentaires repliables. Les réglages rapides et le choix de langue restent accessibles plus bas. Le menu principal est distinct du menu propre à l’espace classe.
+
+« Choisir mes onglets » ouvre directement l’éditeur de la barre du bas : retirer, ajouter par un menu déroulant, monter ou descendre, revenir aux valeurs par défaut. Les limites existantes de 2 à 5 raccourcis sont maintenues. L’éditeur est partagé avec la personnalisation et utilise le champ `tabs` et `setTabs` existants ; aucun nouveau stockage ou schéma n’est ajouté.
+
+Le menu conserve le focus au clavier, se ferme par Échap, la croix, le fond extérieur ou un lien, et rend le focus au déclencheur. Le fond ne défile pas pendant son ouverture. Le passage à la disposition ordinateur le ferme. Les contrôles couvrent portrait, paysage, clair/sombre, allemand/arabe, sauvegarde/rechargement des onglets et limites de sélection. Aucun appel des tests n’atteint la vraie base.
