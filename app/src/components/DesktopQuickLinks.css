@@ -1,0 +1,11 @@
+.desktop-quick-links{display:none}
+@media screen and (min-width:1024px){
+ .desktop-quick-links{display:block;border-top:1px solid color-mix(in srgb,var(--c-ink) 12%,transparent)}
+ .desktop-quick-links>div{max-width:56rem;margin-inline:auto;padding:.45rem 1rem;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
+ .desktop-quick-links a{display:flex;align-items:center;justify-content:center;gap:.65rem;padding:.55rem .75rem;min-height:44px;border:1px solid transparent;border-radius:11px;color:var(--c-ink);font-size:.85rem;font-weight:600;line-height:1.5;text-decoration:none}
+ .desktop-quick-links a:hover{background:var(--c-card);border-color:color-mix(in srgb,var(--c-ink) 24%,transparent)}
+ .desktop-quick-links a[aria-current=page]{background:#203e36;color:#f7f2e5;border-color:#607869}
+ .desktop-link-dot{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:0}
+ .desktop-quick-links [aria-current=page] .desktop-link-dot{opacity:1;color:#e7cc8c}
+ .desktop-quick-links a:focus-visible{outline:3px solid var(--c-accent-texte);outline-offset:2px}
+}

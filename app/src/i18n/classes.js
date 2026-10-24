@@ -1,4 +1,8 @@
 const rows=[
+ ['menu','Menu de la classe','Class menu','Menú de la clase','Menu della classe','قائمة الصف','Klassenmenü'],
+ ['menuHelp','Tout ton espace, en un geste.','Your class, one tap away.','Tu clase, a un toque.','La tua classe, a portata di mano.','كل ما تحتاجه لصفك بلمسة واحدة.','Deine Klasse, nur einen Klick entfernt.'],
+ ['learning','Travail et échanges','Work and discussions','Tareas y conversaciones','Attività e discussioni','الأنشطة والنقاشات','Aufgaben und Austausch'],
+ ['community','Vie de classe et communauté','Class life and community','Vida de clase y comunidad','Vita di classe e comunità','حياة الصف والمجتمع','Klassenleben und Gemeinschaft'],
  ['refresh','Actualiser','Refresh','Actualizar','Aggiorna','تحديث','Aktualisieren'],
  ['overview','Vue d’ensemble','Overview','Vista general','Panoramica','نظرة عامة','Übersicht'],
  ['name','Nom de la classe','Class name','Nombre de la clase','Nome della classe','اسم الصف','Klassenname'],
