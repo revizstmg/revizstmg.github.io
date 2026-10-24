@@ -38,6 +38,8 @@ export async function preparer(page, etat = etatEleve()) {
     sessionStorage.setItem('__seeded', '1')
     localStorage.setItem('stmg_reset_v2', '1')
     if (e) localStorage.setItem('stmg_progress_v2', JSON.stringify(e))
+    // Un profil local ne suffit pas à authentifier les espaces sociaux.
+    if(e?.account?.id && !localStorage.getItem('stmg_session'))localStorage.setItem('stmg_session',JSON.stringify({token:'jeton-fictif-parcours',refresh:'renouvellement-fictif',user:{id:e.account.id,email:e.account.email},expires_at:9999999999}))
   }, etat)
   return erreurs
 }

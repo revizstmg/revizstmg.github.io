@@ -88,6 +88,7 @@ test('professeur : créer deux classes, basculer et retrouver les deux après re
   await expect.poll(() => classes.length).toBe(1)
   await page.getByRole('button', { name: /Créer une nouvelle classe/ }).click()
   await page.getByRole('button',{name:/Générer.*code/}).click()
+  await expect.poll(() => classes.length).toBe(2)
   await expect(page.getByLabel('Classe active',{exact:true})).toHaveValue(classes[1].code)
   await page.getByLabel('Classe active',{exact:true}).selectOption(classes[0].code)
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Classe 1')

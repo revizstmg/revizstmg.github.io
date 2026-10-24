@@ -1,5 +1,6 @@
+import {useEffect,useState} from 'react'
 import { useStore } from '../store.jsx'
-import { isSignedIn } from '../auth.js'
+import { isSignedIn, getSession } from '../auth.js'
 
 // Essai sans compte : l'élève révise avec une progression gardée sur
 // l'appareil. Les espaces partagés (classe, amis, classement, suivi parent)
@@ -30,7 +31,11 @@ export function InvitationCompte({ quoi }) {
 // Enveloppe d'une page réservée aux comptes.
 export default function AvecCompte({ quoi, children }) {
   const { state } = useStore()
-  return estEnEssai(state) ? <InvitationCompte quoi={quoi} /> : children
+  const [,changed]=useState(0)
+  useEffect(()=>{const sync=()=>changed(n=>n+1);window.addEventListener('stmg-session-change',sync);window.addEventListener('storage',sync);return()=>{window.removeEventListener('stmg-session-change',sync);window.removeEventListener('storage',sync)}},[])
+  if(estEnEssai(state))return <InvitationCompte quoi={quoi} />
+  if(!isSignedIn()||getSession()?.user?.id!==state.account?.id)return <section className="card mx-auto max-w-lg p-6 text-center"><h1 className="font-display text-2xl">Reconnecte-toi</h1><p className="mt-3 text-sm">Ta session a expiré. Tes révisions sont conservées sur cet appareil. Reconnecte-toi pour accéder aux classes, aux amis et aux classements.</p><button type="button" onClick={()=>window.dispatchEvent(new CustomEvent('stmg-creer-compte',{detail:{login:true}}))} className="btn-primary mt-4">Me reconnecter</button></section>
+  return children
 }
 
 // Bandeau discret en haut de l'application pendant l'essai.

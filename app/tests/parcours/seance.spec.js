@@ -55,7 +55,7 @@ test('barre du bas : Accueil, Cours, Réviser, Bac blanc, Moi', async ({ page })
   await attendreAccueil(page)
   await page.getByRole('button', { name: 'OK', exact: true }).click() // information cookies
   const barre = page.locator('nav.fixed.bottom-0')
-  await expect(barre.getByRole('link')).toHaveText([/Accueil/, /Cours/, /Réviser/, /Bac blanc/, /Moi/])
+  await expect(barre.getByRole('link')).toHaveText([/Accueil/, /Cours/, /Réviser/, /Bac blanc/, /Paramètres/])
   await barre.getByRole('link', { name: /Cours/ }).click()
   await expect(page).toHaveURL(/#\/cours$/)
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Tes matières')

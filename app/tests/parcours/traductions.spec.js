@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test'
 import { preparer, attendreAccueil, etat, etatEleve } from './eleve.js'
 const LOCALES = [
-  ['de', 'Dein Einsatz. Dein Stil.', 'Sammlungen', 'Meine Gegenstände', 'Artikel suchen', 'Fuchs', 'Erhalten', 'Ausrüsten', 'Belohnungen', 'Ein Monat Premium gratis'],
-  ['fr', 'Tes efforts ont du style.', 'Collections', 'Mes objets', 'Rechercher un article', 'Renard', 'Obtenir', 'Équiper', 'Récompenses', 'Un mois Premium offert'],
-  ['en', 'Your effort. Your style.', 'Collections', 'My items', 'Search for an item', 'Fox', 'Get item', 'Equip', 'Rewards', 'One free month of Premium'],
-  ['es', 'Tu esfuerzo tiene estilo.', 'Colecciones', 'Mis objetos', 'Buscar un artículo', 'Zorro', 'Obtener', 'Aplicar', 'Recompensas', 'Un mes de Premium gratis'],
-  ['it', 'Il tuo impegno ha stile.', 'Collezioni', 'I miei oggetti', 'Cerca un articolo', 'Volpe', 'Ottieni', 'Applica', 'Premi', 'Un mese di Premium gratuito'],
-  ['ar', 'لجهودك أسلوب مميز.', 'المجموعات', 'عناصري', 'البحث عن عنصر', 'الثعلب', 'اقتناء', 'تفعيل', 'المكافآت', 'شهر Premium مجاني'],
+  ['de', 'Lerne. Schalte frei. Profitiere.', 'Sammlungen', 'Meine Gegenstände', 'Artikel suchen', 'Fuchs', 'Erhalten', 'Ausrüsten', 'Belohnungen', 'Ein Monat Premium gratis'],
+  ['fr', 'Révise. Débloque. Profite.', 'Collections', 'Mes objets', 'Rechercher un article', 'Renard', 'Obtenir', 'Équiper', 'Récompenses', 'Un mois Premium offert'],
+  ['en', 'Study. Unlock. Enjoy.', 'Collections', 'My items', 'Search for an item', 'Fox', 'Get item', 'Equip', 'Rewards', 'One free month of Premium'],
+  ['es', 'Repasa. Desbloquea. Disfruta.', 'Colecciones', 'Mis objetos', 'Buscar un artículo', 'Zorro', 'Obtener', 'Aplicar', 'Recompensas', 'Un mes de Premium gratis'],
+  ['it', 'Ripassa. Sblocca. Divertiti.', 'Collezioni', 'I miei oggetti', 'Cerca un articolo', 'Volpe', 'Ottieni', 'Applica', 'Premi', 'Un mese di Premium gratuito'],
+  ['ar', 'راجع وافتح المكافآت واستمتع.', 'المجموعات', 'عناصري', 'البحث عن عنصر', 'الثعلب', 'اقتناء', 'تفعيل', 'المكافآت', 'شهر Premium مجاني'],
 ]
 for (const [lang, hero, collections, owned, search, fox, buy, equip, rewards, premium] of LOCALES) {
   test(`boutique complète et achats sans traduction externe : ${lang}`, async ({ page }) => {
@@ -48,15 +48,15 @@ test('changer de langue sans recharger conserve la saisie et les achats', async 
   await page.getByRole('textbox', { name: 'Rechercher un article', exact: true }).fill('texte privé à conserver')
   await page.getByRole('button', { name: 'Langue', exact: true }).click()
   await page.getByRole('button', { name: 'English', exact: true }).click()
-  await expect(page.getByRole('heading', { name: 'Your effort. Your style.', exact: true })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Study. Unlock. Enjoy.', exact: true })).toBeVisible()
   await expect(page.getByRole('textbox', { name: 'Search for an item', exact: true })).toHaveValue('texte privé à conserver')
   await page.getByRole('button', { name: 'Language', exact: true }).click()
   await page.getByRole('button', { name: 'العربية', exact: true }).click()
-  await expect(page.getByRole('heading', { name: 'لجهودك أسلوب مميز.', exact: true })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'راجع وافتح المكافآت واستمتع.', exact: true })).toBeVisible()
   await expect(page.locator('html')).toHaveAttribute('dir', 'rtl')
   await page.getByRole('button', { name: 'اللغة', exact: true }).click()
   await page.getByRole('button', { name: 'Français', exact: true }).click()
-  await expect(page.getByRole('heading', { name: 'Tes efforts ont du style.', exact: true })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Révise. Débloque. Profite.', exact: true })).toBeVisible()
   await expect(page.getByRole('textbox', { name: 'Rechercher un article', exact: true })).toHaveValue('texte privé à conserver')
   expect(erreurs).toEqual([])
 })

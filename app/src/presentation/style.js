@@ -17,4 +17,4 @@ export function flatBackground(value){
 export function flatStyle(style){if(!style||typeof style!=='object')return style;let next=style;for(const key of ['background','backgroundImage'])if(typeof style[key]==='string'&&style[key].includes('gradient(')){if(next===style)next={...style};const color=flatBackground(style[key]);if(key==='backgroundImage'){next.backgroundImage='none';next.backgroundColor=style.backgroundColor||color}else next[key]=color}return next}
 export const emojiPattern=()=>/(?:[♧◈◉✦☷★☆]|[0-9#*]\uFE0F?\u20E3|\p{Regional_Indicator}{2}|(?![©®™])\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier})?(?:\u200D(?![©®™])\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier})?)*)/gu
 export function cleanCopy(value){return typeof value==='string'?value.replace(/[—–]/g,'-').replace(/([©®™])\uFE0F/g,'$1'):value}
-export function plainCopy(value){return typeof value==='string'?cleanCopy(value).replace(emojiPattern(),'').trim():value}
+export function plainCopy(value){return typeof value==='string'?cleanCopy(value).trim():value}

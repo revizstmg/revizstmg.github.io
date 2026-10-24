@@ -9,18 +9,9 @@ import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { reviewQueue } from '../data/study.js'
 import { subjectsForTrack } from '../data/tracks.js'
-import { ProgressBar } from '../components/ui.jsx'
 import AudioReview from '../components/AudioReview.jsx'
 import { encodeDeck, decodeDeck } from '../deckShare.js'
 import { useT } from '../i18n.js'
-
-// Étiquette d'état d'un thème commencé (jamais « nouveau » ici : on ne liste que
-// ce que l'élève a déjà travaillé).
-const REASON = {
-  due: { key: 'reasonDue', bg: 'bg-amber-100 text-amber-700 dark:bg-amber-950/50 dark:text-amber-300', icon: '⏰' },
-  weak: { key: 'reasonWeak', bg: 'bg-rose-100 text-rose-700 dark:bg-rose-950/50 dark:text-rose-300', icon: '⚠️' },
-  review: { key: 'reasonReview', bg: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300', icon: '✅' },
-}
 
 // Sans filière (élève déconnecté), retour à l'accueil. Le test se fait ici, avant
 // tout hook de la page : React exige les mêmes hooks à chaque affichage, sinon la
@@ -121,26 +112,7 @@ function RevisePage() {
         </section>
       )}
 
-      {/* 2) À RÉVISER — la liste des thèmes commencés (aucun « nouveau » ici) */}
-      {hasStarted && (
-        <section className="space-y-2.5">
-          <h2 className="px-1 font-display text-lg font-semibold">🔁 {t('toReviseSection')}</h2>
-          {started.slice(0, 3).map((item) => {
-            const r = REASON[item.reason] || REASON.review
-            return (
-              <Link key={item.themeId} to={`/subject/${item.subjectId}/theme/${item.themeId}`} className="card flex items-center gap-3 p-3.5 transition hover:-translate-y-0.5 hover:shadow-md">
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl text-lg" style={{ backgroundColor: item.color + '22' }} aria-hidden>{r.icon}</span>
-                <span className="min-w-0 flex-1">
-                  <span className="block truncate text-sm font-semibold">{item.themeName}</span>
-                  <span className="block text-xs text-slate-600">{item.subjectName}</span>
-                </span>
-                <span className="hidden w-14 sm:block"><ProgressBar value={item.score} color={item.color} /></span>
-                <span className={`chip shrink-0 ${r.bg}`}>{item.reason === 'review' ? `${item.score}%` : t(r.key)}</span>
-              </Link>
-            )
-          })}
-        </section>
-      )}
+      <section className="card p-5" aria-labelledby="revision-subjects"><p className="kicker">À toi de choisir</p><h2 id="revision-subjects" className="mt-1 font-display text-2xl">Toutes les matières</h2><p className="mt-2 text-sm">Choisis une matière, puis le chapitre que tu veux travailler.</p><Link to="/cours" className="btn-primary mt-4 inline-flex items-center gap-3">Choisir ma matière <span aria-hidden>→</span></Link></section>
 
       </div><aside className="revision-library space-y-7"><div><p className="kicker">{m.library}</p><h2 className="mt-2 font-display text-2xl">{m.libraryTitle}</h2></div>
       {/* 4) MES FLASHCARDS */}

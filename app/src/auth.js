@@ -2,6 +2,7 @@
 // Le site reste statique : on parle directement à l'API Auth et REST de Supabase
 // avec la clé publique. La session (jeton) est conservée en local ET rafraîchie
 // automatiquement grâce au refresh_token, pour rester connecté durablement.
+import {withNetworkTimeout} from './networkTimeout.js'
 import { SUPA_URL, SUPA_ANON } from './supabase.js'
 
 const SESSION_KEY = 'stmg_session'
@@ -21,10 +22,12 @@ function saveSession(data) {
     expires_at,
   }
   try { localStorage.setItem(SESSION_KEY, JSON.stringify(s)) } catch { /* ignore */ }
+  if(typeof window!=='undefined')window.dispatchEvent(new Event('stmg-session-change'))
   return s
 }
 export function clearSession() {
   try { localStorage.removeItem(SESSION_KEY) } catch { /* ignore */ }
+  if(typeof window!=='undefined')window.dispatchEvent(new Event('stmg-session-change'))
 }
 export function isSignedIn() { return !!getSession()?.token }
 
@@ -136,6 +139,7 @@ export async function authFetch(url, opts = {}) {
     assertOwner()
     if (ns?.token) res = await fetch(url, build(ns.token))
     assertOwner()
+    if(res.status===401 && getSession()?.user?.id===owner) clearSession()
   }
   return res
 }
@@ -250,10 +254,10 @@ export async function verifyRecovery({ email, token }) {
 export async function updatePassword(password) {
   const s = getSession()
   if (!s?.token) throw new Error('no session')
-  const res = await authFetch(`${SUPA_URL}/auth/v1/user`, {
-    method: 'PUT',
+  const res = await withNetworkTimeout(signal=>authFetch(`${SUPA_URL}/auth/v1/user`, {
+    signal,method: 'PUT',
     body: JSON.stringify({ password }),
-  })
+  }))
   if (!res.ok) { const d = await res.json().catch(() => ({})); throw new Error(d.error_description || d.msg || d.message || `Erreur ${res.status}`) }
   return true
 }

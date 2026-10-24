@@ -24,10 +24,10 @@ test('les déclarations CSS de toutes les pages deviennent des aplats',async()=>
  const result=await postcss([surfaces()]).process('.hero{background:linear-gradient(90deg,#123456,#456789)}',{from:undefined})
  expect(result.css).not.toContain('gradient(');expect(result.css).toContain('#123456')
 })
-test('le texte rendu utilise des icônes SVG et garde le texte, les nombres et les nœuds',()=>{
+test('le texte rendu conserve les émojis d’origine et garde le texte, les nombres et les nœuds',()=>{
  const html=renderToStaticMarkup(createElement('div',null,visualCopy('📖 Cours — 12 / 20')))
- expect(html).toContain('<svg');expect(html).toContain('Cours - 12 / 20');expect(html).not.toContain('📖')
- expect(plainCopy('📖 Cours — titre')).toBe('Cours - titre')
+ expect(html).not.toContain('<svg');expect(html).toContain('📖 Cours - 12 / 20')
+ expect(plainCopy('📖 Cours — titre')).toBe('📖 Cours - titre')
  const node=createElement('b',null,'Nom personnel');expect(visualCopy(node)).toBe(node)
  expect(visualCopy(0)).toBe(0);expect(visualCopy(null)).toBeNull()
  expect(cleanCopy('1–5')).toBe('1-5');expect(visualCopy('© 2026 RévizSTMG')).toBe('© 2026 RévizSTMG');expect(visualCopy('Marque ® ™')).toBe('Marque ® ™')

@@ -64,7 +64,7 @@ npm run test:parcours   # parcours navigateur, après un build (~3 min)
 
 Consignes du propriétaire (24 octobre 2026) :
 - Aucun avis ni chiffre inventé. Les statistiques affichées doivent venir des données réelles ou être clairement présentées comme des exemples.
-- Aplats de couleur, sans dégradé ; boutons rectangulaires à coins discrets, sans forme de pilule ; icônes SVG à la place des émojis d’interface.
+- Aplats de couleur, sans dégradé ; boutons rectangulaires à coins discrets, sans forme de pilule ; émojis d’origine conservés (nouvelle instruction du 25 octobre).
 - Titres courts et aucun tiret long dans le texte affiché. Ne pas altérer les données pédagogiques pour un changement de présentation.
 - Au maximum une animation décorative par session ; respecter le mouvement réduit. Les minuteries fonctionnelles restent opérationnelles.
 - Aucun badge IA promotionnel. Conserver une information honnête sur les contenus automatiques, leurs limites et l’envoi de données.

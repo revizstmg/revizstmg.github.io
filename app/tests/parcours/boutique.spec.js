@@ -6,7 +6,7 @@ async function ouvrir(page, extra) {
   await page.goto('./')
   await attendreAccueil(page)
   await page.goto('./#/boutique')
-  await expect(page.getByRole('heading', { name: 'Tes efforts ont du style.' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Révise. Débloque. Profite.' })).toBeVisible()
   return erreurs
 }
 
@@ -37,7 +37,7 @@ test('collections : achats, équipement, filtres et persistance', async ({ page 
   await page.reload()
   await attendreAccueil(page)
   await page.goto('./#/moi')
-  await expect(page.getByText('Esprit curieux', { exact: true })).toBeVisible()
+  await expect(page.getByText('✦ Esprit curieux', { exact: true })).toBeVisible()
   expect((await etat(page)).owned).toEqual(expect.arrayContaining(['title-curieux', 'banner-atlantique']))
   expect(erreurs).toEqual([])
 })

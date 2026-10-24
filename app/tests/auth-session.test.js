@@ -86,3 +86,20 @@ test('le nouveau compte renouvelle sa propre session sans attendre celle de l’
   expect(await ancien).toBeNull()
   expect(api.getSession().token).toBe('eleve-nouveau')
 })
+
+test('une session rejetée et non renouvelable est signalée sans conserver un faux état connecté',async()=>{
+ localStorage.setItem('stmg_session',JSON.stringify(eleve))
+ const dispatchEvent=vi.fn();vi.stubGlobal('window',{dispatchEvent})
+ const request=vi.fn().mockResolvedValueOnce(new Response('{}',{status:401})).mockResolvedValueOnce(new Response('{}',{status:400}));vi.stubGlobal('fetch',request)
+ await expect(api.authFetch('https://example.test/rest/v1/leaderboard')).rejects.toThrow(/session a changé/)
+ expect(api.getSession()).toBeNull();expect(dispatchEvent).toHaveBeenCalled();expect(request).toHaveBeenCalledTimes(2)
+ expect(request.mock.calls[0][1].headers.Authorization).toBe('Bearer eleve-token')
+})
+
+test('les espaces sociaux refusent un appel anonyme ; le suivi parent par code reste public',async()=>{
+ api.clearSession();const fetch=vi.fn().mockResolvedValue(new Response('[]'));vi.stubGlobal('fetch',fetch)
+ const network=await import('../src/reseau.js')
+ await expect(network.getJSON('https://example.test/rest/v1/leaderboard')).rejects.toMatchObject({status:401})
+ await expect(network.rpc('revizstmg_ligue')).rejects.toMatchObject({status:401});expect(fetch).not.toHaveBeenCalled()
+ expect(await network.rpc('revizstmg_stats_enfant',{p_code:'CODE-TEST'})).toEqual([]);expect(fetch).toHaveBeenCalledTimes(1)
+})

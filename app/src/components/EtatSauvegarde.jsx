@@ -60,7 +60,7 @@ export default function EtatSauvegarde() {
           <div className="mx-auto flex max-w-4xl flex-wrap items-center gap-x-3 gap-y-1">
             <span aria-hidden>☁️</span>
             <strong>Non sauvegardé</strong>
-            <span className="min-w-0 flex-1">
+            <span className="min-w-0 flex-1" style={{flexBasis:'15rem'}}>
               {etat === 'horsLigne'
                 ? 'Pas de connexion : ta progression reste sur cet appareil et partira sur ton compte au retour du réseau.'
                 : 'La sauvegarde sur ton compte a échoué. Ta progression reste sur cet appareil ; on réessaie tout seul.'}
@@ -74,7 +74,7 @@ export default function EtatSauvegarde() {
           <div className="mx-auto flex max-w-4xl flex-wrap items-center gap-x-3 gap-y-1">
             <span aria-hidden>⚠️</span>
             <strong>Progression non enregistrée sur cet appareil</strong>
-            <span className="min-w-0 flex-1">
+            <span className="min-w-0 flex-1" style={{flexBasis:'15rem'}}>
               {state.account?.id
                 ? 'Le stockage du navigateur est plein ou bloqué. Ta progression part quand même sur ton compte ; libère de la place pour la garder aussi ici.'
                 : 'Le stockage du navigateur est plein ou bloqué. Libère de la place, ou crée un compte pour ne pas perdre ta progression.'}
@@ -102,6 +102,7 @@ export default function EtatSauvegarde() {
               {deconnexion.etat === 'session' && 'Ta session a expiré. Si tu te déconnectes maintenant, ce que tu as fait depuis la dernière sauvegarde sera perdu ; reconnecte-toi plutôt avec le même compte.'}
             </p>
             <div className="mt-5 flex flex-col gap-2 sm:flex-row-reverse">
+              {deconnexion.etat === 'session' && <button type="button" onClick={()=>{annulerDeconnexion();window.dispatchEvent(new CustomEvent('stmg-creer-compte',{detail:{login:true}}))}} className="btn-primary">Me reconnecter</button>}
               {deconnexion.etat !== 'session' && <button type="button" onClick={() => logout()} className="btn-primary">Réessayer la sauvegarde</button>}
               <button type="button" onClick={annulerDeconnexion} className="rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold dark:border-slate-700">Rester connecté</button>
               <button type="button" onClick={() => logout({ force: true })} className="rounded-xl px-4 py-2 text-sm font-semibold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40">Me déconnecter quand même</button>

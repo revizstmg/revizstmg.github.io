@@ -41,7 +41,7 @@ test('étude de gestion : catégories, source, analyse, argument A-E-I évalué,
   await page.getByRole('button', { name: 'Ajouter la source' }).click()
   await expect(page.getByRole('button', { name: /\[1\] Entretien avec la gérante/ })).toContainText('Fiabilité 1/3')
   await page.getByRole('button', { name: /\[1\] Entretien avec la gérante/ }).click()
-  await expect(page.getByText('Mme Martin, « Entretien avec la gérante », mars 2026')).toBeVisible()
+  await expect(page.getByText('📎 Mme Martin, « Entretien avec la gérante », mars 2026')).toBeVisible()
 
   // L'analyse : tableau de caractérisation, diagnostic interne et externe, PESTEL.
   await page.getByRole('tab', { name: /Analyse/ }).click()
@@ -74,7 +74,7 @@ test('étude de gestion : catégories, source, analyse, argument A-E-I évalué,
   const argument = page.getByRole('button', { name: /1\. La boulangerie suit sa marge chaque mois\./ })
   await expect(argument).toContainText('Note : 2/5')
   await argument.click()
-  await expect(page.getByText('Mme Martin, « Entretien avec la gérante », mars 2026')).toBeVisible()
+  await expect(page.getByText('📎 Mme Martin, « Entretien avec la gérante », mars 2026')).toBeVisible()
   for (const critere of [/L'affirmation répond/, /L'explication déroule/, /L'illustration est concrète/]) await page.getByLabel(critere).check()
   await expect(argument).toContainText('Note : 5/5')
   await expect(page.getByText('20/20')).toBeVisible()

@@ -259,8 +259,8 @@ export default function Layout({ children }) {
                         </p>
                       </div>
                     )}
-                    <Link to="/moi" onClick={() => setProfileOpen(false)} className="flex w-full items-center gap-2 px-3 py-2.5 text-start text-sm hover:bg-slate-100 dark:hover:bg-slate-800">
-                      <span aria-hidden>🏠</span> {t('mySpace')}
+                    <Link to="/parametres" onClick={() => setProfileOpen(false)} className="flex w-full items-center gap-2 px-3 py-2.5 text-start text-sm hover:bg-slate-100 dark:hover:bg-slate-800">
+                      <span aria-hidden>⚙️</span> {t('meTab')}
                     </Link>
                     <button onClick={() => { setProfileOpen(false); setCustOpen(true) }} className="flex w-full items-center gap-2 px-3 py-2.5 text-start text-sm hover:bg-slate-100 dark:hover:bg-slate-800">
                       <span aria-hidden>🎨</span> {t('customizeProfile')}
@@ -376,6 +376,8 @@ function Breadcrumb() {
       items.push({ label: t('leaderboard'), to: '/classement' })
     } else if (parts[0] === 'classe') {
       items.push({ label: t('classSpace'), to: '/classe' })
+    } else if (parts[0] === 'parametres') {
+      items.push({ label: t('meTab'), to: '/parametres' })
     } else if (parts[0] === 'moi') {
       items.push({ label: t('mySpace'), to: '/moi' })
     } else if (parts[0] === 'coach') {
