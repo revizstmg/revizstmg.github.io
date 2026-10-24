@@ -1369,3 +1369,9 @@ Prochaine action :
 - Réalisé : marqueur d’initialisation ajouté à window.name (conservé après effacement de localStorage/sessionStorage) ; citation de la fiche source attendue sans trombone, citation d’argument conservée avec trombone. Compilation réussie et trois parcours concernés réussis, dont effacement du compte/session et absence de retour des données. Aucun contrôle retiré. Prêt pour revalidation complète de #107.
 
 - #107/#109 : revalidation GitHub 40142028521 réussie (426 unitaires UTC/Paris et 233 parcours), publication compilée 8d52f4d intégrée dans la branche SEO avec les deux ajustements de tests. Résolution du seul conflit de journal en conservant les deux tâches. Les interfaces de #107 restent conservées.
+
+### CONTRASTE-20261025-CODEX-01 - contrôle final SEO
+- CI #108 : tests unitaires UTC/Paris réussis, 237 parcours sur 238 réussis ; seul écart sur le texte ambre de l’indicateur de sauvegarde dans la fenêtre d’exercice (4,45 au lieu de 4,5 sur fond crème).
+- Branche fix/contraste-indicateur-sauvegarde ; réservation de components/EtatSauvegarde.jsx (fichier partagé déjà ajusté dans #107) pour renforcer uniquement la teinte du texte. Conserver les contrôles axe et tous les parcours. Aucun changement de disposition, données, moteur ni base. Validation ciblée puis revalidation complète et publication du SEO #108.
+
+- Réalisé : texte d’échec de l’indicateur passé d’ambre 700 à ambre 800 en clair, variante sombre conservée. Dix-huit tests ciblés réussis, compilation des 866 pages réussie et parcours exact fenêtre/exercice axe réussi (1/1). Aucune règle d’accessibilité ni assertion supprimée. Prêt pour la revalidation finale de publication.
