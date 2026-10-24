@@ -495,6 +495,10 @@ function Breadcrumb() {
       items.push({ label: t('mySpace'), to: '/moi' })
     } else if (parts[0] === 'coach') {
       items.push({ label: t('coach'), to: '/coach' })
+    } else if (parts[0] === 'missions') {
+      items.push({ label: t('reviseTab'), to: '/revision' })
+      const c = getChapter(parts[2])
+      if (c) items.push({ label: c.short || c.name, to: pathname })
     } else if (parts[0] === 'revision') {
       items.push({ label: t('reviseTab'), to: '/revision' })
     } else if (parts[0] === 'bac-blanc') {

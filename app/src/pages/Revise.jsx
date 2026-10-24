@@ -1,3 +1,5 @@
+import { nextMissionTarget, missionUrl } from '../data/missions.js'
+import { missionMessages } from '../i18n/missions.js'
 import { chaptersForLanguages } from '../data/studyLanguages.js'
 import RevisionPath from '../components/RevisionPath.jsx'
 import './Revise.css'
@@ -81,6 +83,7 @@ function RevisePage() {
         <div><p className="revision-eyebrow">{m.eyebrow}</p><h1 className="font-display">{t('reviseTab')}</h1><p className="revision-headline font-display">{m.headline}</p><p className="revision-intro">{m.intro}</p><dl className="revision-stats"><div><dt>{m.worked}</dt><dd>{started.length}</dd></div><div><dt>{m.errors}</dt><dd>{(state.erreurs || []).length}</dd></div><div><dt>{m.decks}</dt><dd>{decks.length}</dd></div></dl></div>
         <aside className="revision-session"><p className="revision-eyebrow">{m.sessionLabel}</p><h2 className="font-display">{m.sessionTitle}</h2><p>{m.sessionHelp}</p><Link to="/seance" className="revision-session-action">{m.sessionAction}<span aria-hidden>↗</span></Link></aside>
       </header>
+      {(() => {const target=nextMissionTarget(state);const mm=missionMessages[state.lang] || missionMessages.fr;return target&&<Link to={missionUrl(target)} className="card flex items-center justify-between gap-4 p-5"><span><strong className="block font-display text-xl">{mm.title}</strong><span className="mt-1 block text-sm">{mm.time}</span></span><span aria-hidden>→</span></Link>})()}
       <section aria-labelledby="revision-methods" className="space-y-5">
         <div className="revision-section-heading"><p className="kicker">{m.chooseLabel}</p><h2 id="revision-methods" className="font-display text-3xl">{m.chooseTitle}</h2></div>
         <div className="revision-methods">

@@ -1,3 +1,4 @@
+import { updateMission, missionStatus, MISSION_STAGES, MISSION_PASS } from './data/missionProgress.js'
 import { updateSuccesses } from './data/revisionPaths.js'
 import { normalizeStudyLanguages } from './data/studyLanguages.js'
 import { studySeconds, activeSeconds, repairStudyTime } from './data/studyTime.js'
@@ -88,6 +89,7 @@ const KEY_ABIME = 'stmg_progress_v2_abime'
 })()
 
 const emptyState = () => ({
+  missions: {}, // étapes de chapitre validées, réussites autonomes et espacées
   xp: 0,
   streak: { count: 0, last: null },
   badges: [], // ids de badges obtenus
@@ -417,6 +419,16 @@ export function StoreProvider({ children }) {
     },
     [evaluateBadges],
   )
+
+  const recordMission = useCallback(({themeId, index, stage, pct, assisted = false}) => {
+    if (!ALL_CHAPTERS[themeId] || !Number.isInteger(index) || index < 0 || index >= exercicesParChapitre(themeId).length || !Number.isFinite(pct)) return
+    setState(prev => {
+      const rank = MISSION_STAGES.indexOf(stage)
+      const status = missionStatus(prev.missions, themeId, index)
+      if (rank < 0 || status.stages.slice(0,rank).some(s=>s.best<MISSION_PASS)) return prev
+      return {...prev, missions:updateMission(prev.missions,{themeId,index,stage,pct,assisted,day:todayKey()})}
+    })
+  }, [])
 
   const toggleFavorite = useCallback((chapterId) => {
     setState((prev) => {
@@ -817,6 +829,7 @@ export function StoreProvider({ children }) {
     equip,
     claimShopReward,
     recordResult,
+    recordMission,
     setBacDate,
     addXp,
     setA11y,

@@ -1,3 +1,4 @@
+import { mergeMissions } from './data/missionProgress.js'
 import { repairStudyTime } from './data/studyTime.js'
 // Progression de l'élève : ce qui part sur son compte, et la fusion entre la
 // copie de l'appareil et celle du compte quand il révise sur plusieurs appareils.
@@ -16,7 +17,7 @@ import { repairStudyTime } from './data/studyTime.js'
 // les règles d'avant : le plus grand, le plus récent ou l'union.
 
 // Champs de progression synchronisés sur le compte (multi-appareil).
-export const PROGRESS_KEYS = ['xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'themeTimeInvalid', 'studyLanguages', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'reussites', 'shopRewards', 'shopWalletUpdatedAt', 'notesClasse']
+export const PROGRESS_KEYS = ['missions', 'xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'themeTimeInvalid', 'studyLanguages', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'reussites', 'shopRewards', 'shopWalletUpdatedAt', 'notesClasse']
 // Carnet d'erreurs : au plus tant de questions ratées, les plus récentes d'abord.
 export const CARNET_MAX = 150
 
@@ -253,6 +254,7 @@ export function mergeProgress(a, b, maintenant = Date.now()) {
     chapters[cid] = { games, quiz: Math.max(cur.quiz || 0, rec.quiz || 0), worked: !!(cur.worked || rec.worked) }
   }
   out.chapters = chapters
+  out.missions = mergeMissions(a.missions, b.missions)
   const as = a.streak || { count: 0, last: null }, bs = b.streak || { count: 0, last: null }
   out.streak = (bs.last || '') > (as.last || '') || ((bs.last || '') === (as.last || '') && (bs.count || 0) > (as.count || 0)) ? bs : as
   // Objectif de la semaine : chapitres des deux copies, récompense réclamée une seule fois.

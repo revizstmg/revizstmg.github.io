@@ -1,0 +1,88 @@
+import {test,expect} from '@playwright/test'
+import AxeBuilder from '@axe-core/playwright'
+import {preparer,etatEleve,etat,attendreAccueil} from './eleve.js'
+const route='./#/missions/gestion-finance/gf-t1/0'
+const stage=()=>({best:100,autonomousBest:100,updatedAt:Date.now(),lastPct:100,successDays:[]})
+for(const theme of ['light','dark'])test('mission lisible sur petit écran : '+theme,async({page},info)=>{
+ const errors=await preparer(page,etatEleve({theme}))
+ await page.setViewportSize({width:320,height:740})
+ await page.goto(route);await attendreAccueil(page)
+ await page.getByRole('button',{name:'OK',exact:true}).click()
+ await expect(page.locator('.mission-path>li')).toHaveCount(3)
+ await expect(page.locator('.mission-path [data-state=locked]')).toHaveCount(2)
+ await expect(page.locator('.mission-launch button')).toHaveCount(1)
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false)
+ expect((await new AxeBuilder({page}).include('main').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([])
+ await page.screenshot({path:info.outputPath('mission-'+theme+'.png'),fullPage:true})
+ await page.locator('.mission-picker summary').click()
+ await expect(page.locator('.mission-picker select')).toHaveCount(2)
+ await page.locator('.mission-picker select').first().selectOption('management')
+ await expect(page).toHaveURL(/missions\/management\//)
+ expect(errors).toEqual([])
+})
+test('une série conserve son résultat, sans bonus de mission ni déblocage arbitraire',async({page})=>{
+ const errors=await preparer(page)
+ await page.goto(route);await attendreAccueil(page)
+ await page.locator('.mission-launch button').click()
+ const exercice=page.locator('[data-exercice]')
+ await expect(exercice.getByText(/Question 1 \/ [1-5]/)).toBeVisible()
+ const total=Number((await exercice.getByText(/Question 1 \/ [1-5]/).innerText()).split('/')[1])
+ const notions=[['TVA à décaisser','Collectée − déductible = ce qu’on reverse'],['TVA déductible','Sur les achats → créance sur l’État'],['TVA collectée','Sur les ventes → dette envers l’État'],['HT / TTC','Hors taxes / toutes taxes comprises (HT + TVA)']]
+ for(let i=0;i<total;i++){
+  const question=await exercice.getByRole('heading',{level:3}).innerText()
+  const notion=notions.find(([term,definition])=>question.includes(term)||question.includes(definition))
+  expect(notion,question).toBeTruthy()
+  const choices=page.getByRole('button',{name:/^[A-D] /,disabled:false})
+  const answer=(await choices.allTextContents()).findIndex(text=>text.includes(notion[1])||text.includes(notion[0]))
+  expect(answer).toBeGreaterThanOrEqual(0)
+  await choices.nth(answer).click()
+  await page.getByRole('button',{name:/(suivante|score)/i,disabled:false}).last().click()
+ }
+ await page.getByRole('button',{name:'Voir mon bilan',exact:true}).click()
+ const saved=(await etat(page)).missions['gf-t1::0::understand']
+ expect(saved).toBeTruthy()
+ expect(saved.best).toBe(100)
+ expect((await etat(page)).xp).toBe(total*10)
+ expect((await etat(page)).missions['gf-t1::0::apply']).toBeUndefined()
+ await page.reload();await attendreAccueil(page)
+ await expect(page.locator('.mission-path li').first()).toContainText(saved.best+' %')
+ expect((await etat(page)).missions['gf-t1::0::understand']).toEqual(saved)
+ expect(errors).toEqual([])
+})
+test('le défi reprend les étapes validées et propose un indice sans perdre le chapitre',async({page})=>{
+ const errors=await preparer(page,etatEleve({missions:{'gf-t1::0::understand':stage(),'gf-t1::0::apply':stage()}}))
+ await page.goto(route);await attendreAccueil(page)
+ await expect(page.locator('.mission-path>li[data-state=done]')).toHaveCount(2)
+ await page.locator('.mission-launch button').click()
+ await expect(page.locator('[data-exercice]')).toContainText('Manche 1')
+ await page.locator('[data-exercice] details summary').click()
+ await expect(page.locator('[data-exercice] details[open]')).toContainText(/indice/i)
+ for(let i=0;i<3;i++){
+  await page.getByRole('button',{name:/^[A-D] /,disabled:false}).first().click()
+  await page.getByRole('button',{name:/(suivante|score)/i,disabled:false}).last().click()
+ }
+ await page.getByRole('button',{name:'Manche suivante',exact:true}).click()
+ await expect(page.locator('[data-exercice]')).toContainText('Manche 2')
+ for(let i=0;i<3;i++){
+  await page.locator('[data-exercice] input:enabled').fill('999999999')
+  await page.getByRole('button',{name:'Vérifier',exact:true}).click()
+  await page.getByRole('button',{name:/(suivant|score)/i,disabled:false}).last().click()
+ }
+ await page.getByRole('button',{name:'Voir mon bilan',exact:true}).click()
+ await expect(page.locator('.mission-result')).toContainText('Manche 2 : 0 %')
+ expect((await etat(page)).missions['gf-t1::0::boss']).toMatchObject({lastAssisted:true,best:expect.any(Number)})
+ expect((await etat(page)).missions['gf-t1::0::boss'].best).toBeLessThan(80)
+ await page.reload();await attendreAccueil(page)
+ await expect(page.locator('.mission-path>li[data-state=done]')).toHaveCount(2)
+ expect((await etat(page)).missions['gf-t1::0::boss'].lastAssisted).toBe(true)
+ expect(errors).toEqual([])
+})
+for(const [lang,label] of [['de','Verstehen'],['ar','الفهم']])test('mission traduite et utilisable : '+lang,async({page})=>{
+ const errors=await preparer(page,etatEleve({lang}))
+ await page.goto(route);await attendreAccueil(page)
+ await expect(page.locator('.mission-path>li').first()).toContainText(label)
+ await expect(page.locator('main')).not.toContainText('Ta prochaine mission')
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false)
+ if(lang==='ar')await expect(page.locator('html')).toHaveAttribute('dir','rtl')
+ expect(errors).toEqual([])
+})

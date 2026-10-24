@@ -1,3 +1,4 @@
+import MissionCard from '../components/MissionCard.jsx'
 import { CourseText } from '../components/Course.jsx'
 import { Link, Navigate } from 'react-router-dom'
 import { getChapter } from '../data/index.js'
@@ -46,7 +47,7 @@ export default function Home() {
   const photo = state.profile?.photo || ''
   const hour = new Date().getHours()
   const greeting = t(hour < 6 ? 'greetingNight' : hour < 12 ? 'greetingMorning' : hour < 18 ? 'greetingAfternoon' : 'greetingEvening')
-  const locale = ({ fr: 'fr-FR', en: 'en-GB', es: 'es-ES', it: 'it-IT', ar: 'ar-SA' })[state.lang] || 'fr-FR'
+  const locale = ({ fr: 'fr-FR', en: 'en-GB', es: 'es-ES', it: 'it-IT', ar: 'ar-SA', de: 'de-DE' })[state.lang] || 'fr-FR'
   let dateLabel = ''
   try { dateLabel = new Intl.DateTimeFormat(locale, { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date()) } catch { /* ignore */ }
 
@@ -80,14 +81,7 @@ export default function Home() {
               <Link to="/cours" className="home-courses-action">Voir tous les cours <span aria-hidden>→</span></Link>
             </div>
           </div>
-          <article className="home-resume-card">
-            <div className="home-resume-art" aria-hidden><i /><i /><span>✦</span></div>
-            <p className="home-resume-label">{tr(last ? 'Là où tu en étais' : 'Pour bien démarrer')}</p>
-            <h2 className="font-display home-resume-title">{tr(last ? 'Reprendre là où tu t’es arrêté.' : 'Ton premier pas commence ici.')}</h2>
-            {last && <p className="home-last-course"><CourseText text={recent ? position.chapterTitle || last.short || last.name : last.short || last.name} /></p>}
-            <p className="home-resume-help">Une notion à la fois, à ton rythme.</p>
-            <Link to={last ? resumeUrl : '/cours'} className="home-resume-action"><span>{last ? t('resume') : t('start')}</span><span aria-hidden>→</span></Link>
-          </article>
+          <MissionCard resumeUrl={last?resumeUrl:null} resumeTitle={recent?position.chapterTitle || last?.short || last?.name:last?.short || last?.name}/>
         </div>
         <p className="home-hero-note"><span aria-hidden>✦</span> Aujourd’hui, avance à ton rythme.</p>
       </section>

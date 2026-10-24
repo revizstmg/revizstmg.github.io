@@ -4,7 +4,7 @@ import { createPortal } from 'react-dom'
 import { useStore, starsFromScore } from '../store.jsx'
 import { chapitreDuJeu } from '../data/index.js'
 import { ContexteCorrection } from './common.jsx'
-import { Stars, Confetti, Icon } from '../components/ui.jsx'
+import { Stars, Confetti, Icon, Rich } from '../components/ui.jsx'
 import { useT } from '../i18n.js'
 import SignalerErreur from '../components/SignalerErreur.jsx'
 import { useFenetreClavier } from '../components/clavier.js'
@@ -90,11 +90,13 @@ function PleinEcran({ titre, children }) {
 
 // `modeInitial` lance l'exercice sans écran de choix (séance du jour) ;
 // `suite` ({ label, onClick }) remplace « Terminé » en fin de série.
-export default function GameHost({ game, chapterId, color, quiz = false, onExit, modeInitial = null, suite = null }) {
+export default function GameHost({ game, chapterId, color, quiz = false, onExit, modeInitial = null, suite = null, onResult = null, guided = false, hint = null, chapterIndex = null }) {
   const { state, recordResult, noterReponses } = useStore()
   const t = useT()
   const [mode, setMode] = useState(NO_MODE.has(game.type) ? 'solo' : modeInitial)
   const [result, setResult] = useState(null)
+  const [assisted, setAssisted] = useState(false)
+  const missionDone = useRef(false)
   const [runKey, setRunKey] = useState(0)
   // « Refaire mes erreurs » : les questions ratées de la série, rejouées seules.
   // Cette reprise ne compte ni dans la maîtrise ni en XP (elle n'entraîne que
@@ -105,9 +107,11 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit,
   const tirage = useMemo(() => drawQuestionSession(game,state.account?.id), [game,runKey,state.account?.id])
   useEffect(() => rememberQuestionSession(tirage), [tirage])
   const jeu = reprise ? { ...game, questions: reprise, count: reprise.length } : tirage
-  const correction = { themeId: chapterId, idx: chapitreDuJeu(chapterId, game.id) }
+  const correction = { themeId: chapterId, idx: chapterIndex ?? chapitreDuJeu(chapterId, game.id) }
 
   const handleDone = ({ correct, total, timeBonus = 0, ratees, reussies }) => {
+    if (guided && missionDone.current) return
+    if (guided) missionDone.current = true
     const pct = total ? Math.round((correct / total) * 100) : 0
     const base = mode === 'defi' ? 15 : 10
     const xp = reprise ? 0 : correct * base + (mode === 'defi' ? timeBonus : 0)
@@ -131,11 +135,14 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit,
       noterReponses({ themeId:chapterId, type:game.type, ratees:ratees?.map(situer), reussies:reussies?.map(situer) })
     }
     setResult({ correct, total, pct, xp, ratees: ratees || [] })
+    if (!reprise) onResult?.({ correct, total, pct, assisted })
   }
 
   const replay = () => {
     setReprise(null)
     setResult(null)
+    missionDone.current = false
+    setAssisted(false)
     setRunKey((k) => k + 1)
   }
   const refaireErreurs = () => {
@@ -187,9 +194,9 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit,
         </p>
         {aRefaire > 0 && <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">{aRefaire > 1 ? `${aRefaire} questions ratées sont dans ton carnet d’erreurs : tu les reverras demain, puis dans 3 et 7 jours.` : 'La question ratée est dans ton carnet d’erreurs : tu la reverras demain, puis dans 3 et 7 jours.'}</p>}
         <div className="mt-5 flex flex-wrap justify-center gap-2">
-          {aRefaire > 0 && <button onClick={refaireErreurs} className="btn-primary" style={{ backgroundColor: color }}>{`↻ Refaire mes erreurs (${aRefaire})`}</button>}
-          <button onClick={replay} className={aRefaire > 0 ? 'btn-ghost' : 'btn-primary'} style={aRefaire > 0 ? undefined : { backgroundColor: color }}>{t('replay')}</button>
-          {!NO_MODE.has(game.type) && <button onClick={() => { setMode(null); setResult(null); setReprise(null) }} className="btn-ghost">{t('changeMode')}</button>}
+          {!guided && aRefaire > 0 && <button onClick={refaireErreurs} className="btn-primary" style={{ backgroundColor: color }}>{`↻ Refaire mes erreurs (${aRefaire})`}</button>}
+          {!guided && <button onClick={replay} className={aRefaire > 0 ? 'btn-ghost' : 'btn-primary'} style={aRefaire > 0 ? undefined : { backgroundColor: color }}>{t('replay')}</button>}
+          {!guided && !NO_MODE.has(game.type) && <button onClick={() => { setMode(null); setResult(null); setReprise(null) }} className="btn-ghost">{t('changeMode')}</button>}
           {suite
             ? <button onClick={suite.onClick} className="btn-ghost font-semibold">{suite.label}</button>
             : <button onClick={onExit} className="btn-ghost">{t('done')}</button>}
@@ -210,6 +217,11 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit,
           {mode === 'defi' ? t('challenge') : t('training')}
         </span>
       </div>
+      {hint && <details className="card mb-3 p-4 text-sm" onToggle={e=>{if(e.currentTarget.open)setAssisted(true)}}>
+        <summary className="cursor-pointer font-semibold">{hint.label}</summary>
+        <p className="mt-2">{hint.help}</p>
+        {hint.text && <div className="mt-3 border-s-2 border-slate-400 ps-3"><Rich text={hint.text} translate /></div>}
+      </details>}
       <ContexteCorrection.Provider value={correction}>
         <Comp key={runKey} game={jeu} mode={mode} color={color} onDone={handleDone} />
       </ContexteCorrection.Provider>
