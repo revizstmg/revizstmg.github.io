@@ -4,7 +4,7 @@
 export const ALL_TABS = {
   accueil: { icon: '🏠', labelKey: 'home', to: '/accueil', match: ['/accueil'] },
   cours: { icon: '📖', labelKey: 'coursTab', to: '/cours', match: ['/cours', '/subject'] },
-  revision: { icon: '🧠', labelKey: 'reviseTab', to: '/revision', match: ['/revision', '/seance'] },
+  revision: { icon: '🧠', labelKey: 'reviseTab', to: '/revision', match: ['/revision', '/seance', '/missions'] },
   coachia: { icon: '🤖', labelKey: 'coachAI', to: '/coach-ia', match: ['/coach-ia'] },
   defi: { icon: '⚡', labelKey: 'dailyChallenge', to: '/defi', match: ['/defi'] },
   formules: { icon: '📐', labelKey: 'formulaWorkshop', to: '/atelier-formules', match: ['/atelier-formules', '/formules', '/express'] },

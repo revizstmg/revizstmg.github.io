@@ -1,3 +1,4 @@
+import { missionMessages } from '../i18n/missions.js'
 import ChapterControl from '../components/ChapterControl.jsx'
 import CourseTutor from '../components/CourseTutor.jsx'
 import { courseText } from '../data/examenPersonnalise.js'
@@ -172,6 +173,9 @@ export default function Chapter() {
 
       {/* ONGLET EXERCICES (jamais imprimé) */}
       <div className={`${tab === 'exos' ? 'space-y-2.5' : 'hidden'} no-print`}>
+        <Link to={`/missions/${sid}/${tid}/${chapter.idx}`} className="card flex items-center justify-between gap-3 p-5 font-semibold">
+          <span>✦ {(missionMessages[state.lang] || missionMessages.fr).boss}</span><span aria-hidden>→</span>
+        </Link>
         <ChapterControl key={`${state.account?.id || 'trial'}:${chapter.id}`} course={{id:chapter.id,title:chapter.title,subject:subject.name,level:subject.niveau==='premiere'?'premiere':'terminale',text:courseText(chapter.section)}} />
         {(() => {
           const deck = games.find((g) => g.type === 'flashcard')

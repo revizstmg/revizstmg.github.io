@@ -40,6 +40,7 @@ export function nomEcran(chemin) {
   // De même : la liste des matières (« Cours ») compte pour « matiere », et la
   // séance du jour pour « revision ».
   if (p[0] === 'cours' && p.length === 1) return 'matiere'
+  if (p[0] === 'missions' && p.length === 4) return 'revision'
   if (p[0] === 'seance' && p.length === 1) return 'revision'
   return p.length === 1 && ECRANS.includes(p[0]) ? p[0] : 'introuvable'
 }
