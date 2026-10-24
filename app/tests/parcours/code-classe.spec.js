@@ -56,7 +56,8 @@ for (const chemin of ['classe', 'classement']) {
         await attendreAccueil(page)
         await expect(page.getByRole('button', { name: 'Changer de classe', exact: true })).toBeVisible()
       }
-      expect(recherches).toBe(cas === 'inconnu puis valide' ? 2 : 1)
+      // Le nom est aussi relu à l’entrée et après rechargement de l’espace classe.
+      expect(recherches).toBe(cas === 'inconnu puis valide' ? (chemin === 'classe' ? 4 : 2) : 1)
       expect(erreurs).toEqual([])
     })
   }

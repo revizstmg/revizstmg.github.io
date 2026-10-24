@@ -1,3 +1,7 @@
+import './Classe.css'
+import ClassOverview from '../components/ClassOverview.jsx'
+import {classMessages} from '../i18n/classes.js'
+import {cleanClassName} from '../data/classIdentity.js'
 import { queueQuizResult, flushQuizResults, pendingQuizResults } from '../quizOutbox.js'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -14,7 +18,7 @@ import {
   fetchWall, postWall, answerWall, resolveWall, deleteWall, reactWall,
   createQuiz, fetchQuizzes, approveQuiz, assignQuiz, deleteQuiz, submitQuizResult, fetchQuizResults, validQuestion,
   fetchDuels, createDuel, acceptDuel, deleteDuel, fetchLeague,
-  createTeacherClass, fetchTeacherClasses, banStudent, isBanned,
+  createTeacherClass, fetchTeacherClasses, renameTeacherClass, fetchClassByCode, banStudent, isBanned,
 } from '../classroom.js'
 import { getSession, upsertProfile } from '../auth.js'
 import ClassCodeForm from '../components/ClassCodeForm.jsx'
@@ -43,14 +47,22 @@ const Empty = ({ children }) => <div className="card p-6 text-center text-sm tex
 export default function Classe() {
   const { state, derived, setClassCode, setCustomTheme, setTeacherClasses, addTeacherClass } = useStore()
   const t = useT()
+  const m = classMessages[state.lang] || classMessages.fr
   const classCode = state.classCode
   const role = state.account?.role || 'eleve'
   const accountId = state.account?.id
   const myName = `${state.profile?.firstName || ''} ${state.profile?.lastName || ''}`.trim() || t('roleStudent')
   const photo = state.profile?.photo || ''
   const teacherClasses = state.teacherClasses || []
-  const [tab, setTab] = useState('rank')
+  const [tab, setTab] = useState('overview')
+  const [identity,setIdentity]=useState(null)
+  const [quizCreate,setQuizCreate]=useState(false)
+  const [overviewVersion,setOverviewVersion]=useState(0)
+  const sectionHeading=useRef(null)
+  const activeClass=useRef(classCode)
+  activeClass.current=classCode
   const [meta, setMeta] = useState(null)
+  const [metaError,setMetaError]=useState(false)
   const [live, setLive] = useState(null)
   const [jumpLive, setJumpLive] = useState(0)
   const [creating, setCreating] = useState(false)
@@ -63,14 +75,14 @@ export default function Classe() {
   const activeAccount = useRef(accountId)
   activeAccount.current = accountId
   useEffect(() => {
-    setStudentClasses([]); setJoining(false); setTab('rank')
+    setStudentClasses([]);setJoining(false);setTab('overview');setCreating(false);setLeaving(false);setClassError('');setMetaError(false)
   }, [accountId])
   const sameAccount = () => activeAccount.current === accountId && getSession()?.user?.id === accountId
   const join = (code) => {
     setStudentClasses((list) => list.some((c) => c.code === code) ? list : [...list, { code, label: code }])
-    setClassCode(code); setJoining(false); setTab('rank')
+    setClassCode(code); setJoining(false); setTab('overview')
   }
-  const switchClass = (code) => { setClassCode(code); setTab('rank'); setJoining(false) }
+  const switchClass = (code) => { setClassCode(code); setTab('overview'); setJoining(false) }
   const leave = async () => {
     if (leaving) return
     setLeaving(true); setClassError('')
@@ -123,16 +135,31 @@ export default function Classe() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [role, classCode])
 
-  const createClass = async () => {
+  const createClass = async (chosenName = '') => {
     if (!accountId || creating || loadingClasses) return
     setCreating(true); setClassError('')
     try {
       const n = teacherClasses.length + 1
-      const c = await createTeacherClass({ ownerId: accountId, ownerName: myName, label: `${t('classWord')} ${n}`, subject: '' })
+      const c = await createTeacherClass({ ownerId: accountId, ownerName: myName, label: chosenName.trim() ? cleanClassName(chosenName) : `${t('classWord')} ${n}`, subject: '' })
       if (!sameAccount()) return
-      if (c?.code) { addTeacherClass({ code: c.code, label: c.label || `${t('classWord')} ${n}` }); setTab('rank') }
-    } catch { if (sameAccount()) setClassError(t('classActionFailed')) } finally { if (sameAccount()) setCreating(false) }
+      if (c?.code) { addTeacherClass({ code: c.code, label: c.label || `${t('classWord')} ${n}` }); setTab('overview') }
+    } catch(error) { if (sameAccount()) setClassError(error.message==='CLASS_NAME_INVALID'?m.invalidName:t('classActionFailed')) } finally { if (sameAccount()) setCreating(false) }
   }
+
+  const renameClass=async label=>{
+    const code=classCode
+    const row=await renameTeacherClass({classCode:code,ownerId:accountId,label})
+    if(!sameAccount() || activeClass.current!==code)return false
+    setTeacherClasses(teacherClasses.map(c=>c.code===code?{...c,label:row.label}:c))
+    setIdentity(current=>({...current,...row}))
+    return true
+  }
+  useEffect(()=>{
+    let alive=true;setIdentity(null)
+    if(classCode)fetchClassByCode(classCode).then(row=>{if(alive)setIdentity(row)}).catch(()=>{})
+    return()=>{alive=false}
+  },[classCode,accountId])
+  const selectTab=(id,action)=>{if(id===tab&&!action)return;setQuizCreate(action==='create'&&role==='prof');setTab(id);requestAnimationFrame(()=>sectionHeading.current?.focus())}
 
   // Instantané du membre (pour classements, podium, heatmap, groupes).
   const subjectsKey = JSON.stringify(derived.bySubject)
@@ -171,11 +198,16 @@ export default function Classe() {
   }, [classCode])
   useEffect(() => {
     let alive = true
-    setMeta(null); setLive(null)
-    loadMeta()?.then((data) => { if (alive) setMeta(data) }).catch(() => {})
+    setMeta(null); setLive(null);setMetaError(false)
+    loadMeta()?.then((data) => { if (alive) setMeta(data) }).catch(() => {if(alive)setMetaError(true)})
     return () => { alive = false }
   }, [loadMeta])
-  const reloadMeta = () => loadMeta()?.then(setMeta).catch(() => {})
+  const reloadMeta = () => {const code=classCode;setMetaError(false);return loadMeta()?.then(data=>{if(activeClass.current===code&&activeAccount.current===accountId)setMeta(data)}).catch(()=>{if(activeClass.current===code&&activeAccount.current===accountId)setMetaError(true)})}
+
+  const refreshClass=()=>{
+    const code=classCode;reloadMeta();setOverviewVersion(n=>n+1)
+    fetchClassByCode(code).then(row=>{if(activeClass.current===code&&activeAccount.current===accountId){setIdentity(row);if(row?.label){setStudentClasses(list=>list.map(c=>c.code===code?{...c,label:row.label}:c));if(role==='prof')setTeacherClasses(teacherClasses.map(c=>c.code===code?{...c,label:row.label}:c))}}}).catch(()=>{if(activeClass.current===code&&activeAccount.current===accountId)setClassError(m.partial)})
+  }
 
   // Sonde d'une session « Direct » en cours pour afficher une bannière.
   useEffect(() => {
@@ -190,29 +222,32 @@ export default function Classe() {
   if (loadingClasses && role === 'prof') return <Loading />
   if (!classCode) {
     return <>{classError && <p role="alert" className="text-sm text-rose-600 dark:text-rose-400">{classError}</p>}{role === 'prof'
-      ? <TeacherStart creating={creating} onCreate={createClass} t={t} />
-      : <JoinForm onJoin={join} t={t} />}</>
+      ? <TeacherStart key={accountId || 'trial'} creating={creating} onCreate={createClass} t={t} m={m} />
+      : <JoinForm key={accountId || 'trial'} onJoin={join} t={t} />}</>
   }
 
-  const blason = meta?.blason_name
+  const blason = identity?.label || teacherClasses.find(c=>c.code===classCode)?.label || meta?.blason_name
+  const intro=role==='prof'?m.teacherIntro:m.studentIntro
   const TABS = [
+    {id:'overview',label:m.overview,icon:'◈'},
     { id: 'rank', label: t('tabRanking'), icon: '🏆' },
     { id: 'goal', label: t('tabGoal'), icon: '🎯' },
-    { id: 'quiz', label: t('tabQuizzes'), icon: '📝' },
-    { id: 'wall', label: t('tabWall'), icon: '💬' },
+    { id: 'quiz', label: m.work, icon: '📝' },
+    { id: 'wall', label: m.discussions, icon: '💬' },
     { id: 'members', label: t('tabMembers'), icon: '👥' },
-    ...(role === 'prof' ? [{ id: 'prof', label: t('tabTeacher'), icon: '🧑‍🏫' }] : []),
+    ...(role === 'prof' ? [{ id: 'prof', label: m.follow, icon: '🧑‍🏫' }] : []),
   ]
 
   return (
-    <div className="animate-lux space-y-4">
-      <header className="page-hero flex items-start justify-between gap-3">
+    <div className="class-studio animate-lux space-y-4">
+      <header className="class-hero page-hero flex items-start justify-between gap-3">
         <div className="min-w-0">
           <p className="kicker">{t('classSpace')}</p>
-          <h1 className="flex items-center gap-2 truncate font-display text-3xl font-medium leading-tight">
+          <h1 className="flex items-center gap-2 font-display text-3xl font-medium leading-tight">
             <span aria-hidden>{meta?.blason_emoji || '👥'}</span>
-            <span className="truncate" style={blason && meta?.blason_color ? { color: meta.blason_color } : undefined}>{blason || classCode}</span>
+            <span className="class-title" translate="no">{blason || classCode}</span>
           </h1>
+          <p className="class-hero-intro">{intro}</p>
           <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
             {blason ? `${classCode} · ` : ''}{role === 'prof' ? `🧑‍🏫 ${t('roleTeacher')} · ${t('shareCodeHint')}` : `🎓 ${t('roleStudent')}`}
           </p>
@@ -221,17 +256,17 @@ export default function Classe() {
       </header>
 
       {classError && <p role="alert" className="text-sm text-rose-600 dark:text-rose-400">{classError}</p>}
-      {role !== 'prof' && <div className="card space-y-3 p-4">
-        <p className="font-semibold">{t('yourClasses')}</p>
-        <div className="flex flex-wrap gap-2">{studentClasses.map((c) => <button key={c.code} disabled={leaving} aria-pressed={c.code === classCode} onClick={() => switchClass(c.code)} className="btn-ghost text-sm">{c.label}</button>)}</div>
+      {role !== 'prof' && <details className="class-membership card space-y-3 p-4" open={joining||undefined}><summary className="font-semibold">{m.classes}</summary>
+        <div className="flex flex-wrap gap-2"><label className="class-select-label">{m.activeClass}<select aria-label={m.activeClass} value={classCode} disabled={leaving} onChange={e=>switchClass(e.target.value)}>{studentClasses.map(c=><option key={c.code} value={c.code}>{c.label}</option>)}</select></label></div>
         <button disabled={leaving} className="btn-ghost w-full text-sm" onClick={() => setJoining((v) => !v)}>{t(joining ? 'cancel' : 'joinAnotherClass')}</button>
         <button disabled={leaving} onClick={leave} className="btn-ghost w-full text-sm">{t('leaveCurrentClass')}</button>
         {joining && <ClassCodeForm id="classe-code-ajout" onJoin={join} t={t} />}
-      </div>}
+      </details>}
       {role === 'prof' && (
-        <TeacherBar classes={teacherClasses} active={classCode} onSwitch={switchClass} onCreate={createClass} creating={creating} t={t} />
+        <TeacherBar key={'teacher-bar:'+accountId+':'+classCode} m={m} onRename={renameClass} classes={teacherClasses} active={classCode} onSwitch={switchClass} onCreate={createClass} creating={creating} t={t} />
       )}
 
+      {metaError&&<div className="class-alert" role="alert"><p>{m.partial}</p><button type="button" className="btn-ghost" onClick={reloadMeta}>{t('retry')}</button></div>}
       {meta?.announcement && (
         <div className="card border-l-4 p-3.5" style={{ borderColor: 'var(--c-accent)', background: 'color-mix(in srgb, var(--c-accent) 8%, transparent)' }}>
           <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: 'var(--c-accent-texte)' }}>📣 {t('announcement')}{meta.announcement_by ? ` · ${meta.announcement_by}` : ''}</p>
@@ -249,19 +284,16 @@ export default function Classe() {
 
       <hr className="rule-gold" />
 
-      <div className="flex gap-1.5 overflow-x-auto rounded-2xl bg-[color-mix(in_srgb,var(--c-accent)_8%,transparent)] p-1.5">
-        {TABS.map((tb) => (
-          <button key={tb.id} onClick={() => setTab(tb.id)}
-            className={`flex-1 whitespace-nowrap rounded-xl px-3 py-2 text-sm font-semibold transition ${tab === tb.id ? 'bg-white text-slate-900 shadow-sm dark:bg-slate-800 dark:text-white' : 'text-slate-500 dark:text-slate-400'}`}>
-            <span aria-hidden className="mr-1">{tb.icon}</span>{tb.label}
-          </button>
-        ))}
-      </div>
-
-      <div key={classCode}>
+      <nav className="class-navigation" aria-label={m.overview}>
+        <div>{TABS.filter(tb=>['overview','quiz','wall',role==='prof'?'prof':'members'].includes(tb.id)).map(tb=><button type="button" key={tb.id} aria-current={tab===tb.id?'page':undefined} onClick={()=>selectTab(tb.id)}><span aria-hidden>{tb.icon}</span>{tb.label}</button>)}</div>
+        <details><summary>{m.more}</summary><div>{TABS.filter(tb=>!['overview','quiz','wall',role==='prof'?'prof':'members'].includes(tb.id)).map(tb=><button type="button" key={tb.id} onClick={e=>{e.currentTarget.closest('details').open=false;selectTab(tb.id)}}>{tb.label} →</button>)}</div></details>
+      </nav>
+      <div className="class-section-heading"><h2 ref={sectionHeading} tabIndex={-1} className="class-section-title font-display">{TABS.find(tb=>tb.id===tab)?.label}</h2>{tab==='overview'&&<button type="button" className="btn-ghost" onClick={refreshClass}>{m.refresh}</button>}</div>
+      <div key={'class-content:'+accountId+':'+classCode}>
+      {tab==='overview'&&<ClassOverview refreshKey={overviewVersion} lang={state.lang} classCode={classCode} accountId={accountId} role={role} m={m} t={t} onSelect={selectTab}/>}
       {tab === 'rank' && <RankTab classCode={classCode} track={state.track} t={t} />}
       {tab === 'goal' && <GoalTab classCode={classCode} meta={meta} state={state} derived={derived} setCustomTheme={setCustomTheme} t={t} />}
-      {tab === 'quiz' && <QuizTab classCode={classCode} role={role} name={myName} photo={photo} accountId={state.account?.id} jumpLive={jumpLive} t={t} />}
+      {tab === 'quiz' && <QuizTab key={classCode+':'+quizCreate} createInitially={quizCreate} classCode={classCode} role={role} name={myName} photo={photo} accountId={state.account?.id} jumpLive={jumpLive} t={t} />}
       {tab === 'wall' && <WallTab classCode={classCode} role={role} name={myName} track={state.track} t={t} />}
       {tab === 'members' && <MembersTab classCode={classCode} track={state.track} t={t} />}
       {tab === 'prof' && role === 'prof' && <ProfTab classCode={classCode} name={myName} track={state.track} meta={meta} reloadMeta={reloadMeta} t={t} />}
@@ -273,8 +305,8 @@ export default function Classe() {
 // ----- Rejoindre une classe (onglet code) ----------------------------------
 function JoinForm({ onJoin, t }) {
   return (
-    <div className="animate-lux space-y-4">
-      <header className="page-hero">
+    <div className="class-studio animate-lux space-y-4">
+      <header className="class-hero page-hero">
         <p className="kicker">{t('classSpace')}</p>
         <h1 className="font-display text-3xl font-medium leading-tight">👥 {t('joinClass')}</h1>
       </header>
@@ -291,49 +323,43 @@ function JoinForm({ onJoin, t }) {
 }
 
 // ----- Barre professeur : classes, code (visible, non modifiable), création -
-function TeacherBar({ classes, active, onSwitch, onCreate, creating, t }) {
-  const [copied, setCopied] = useState(false)
-  const cur = classes.find((c) => c.code === active)
-  const copy = () => { try { navigator.clipboard?.writeText(active); setCopied(true); setTimeout(() => setCopied(false), 1500) } catch { /* */ } }
-  return (
-    <div className="card card-lux space-y-3 p-4">
-      {classes.length > 1 && (
-        <div className="flex flex-wrap gap-1.5">
-          {classes.map((c) => (
-            <button key={c.code} onClick={() => onSwitch(c.code)} aria-pressed={c.code === active} className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${c.code === active ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={c.code === active ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>{c.label || c.code}</button>
-          ))}
-        </div>
-      )}
-      <div className="flex items-center justify-between gap-3">
-        <div className="min-w-0">
-          <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">🔑 {t('classCodeField')}{cur?.label ? ` · ${cur.label}` : ''}</p>
-          <p className="font-display text-2xl font-bold tracking-wide" style={{ color: 'var(--c-accent-texte)' }}>{active}</p>
-          <p className="text-[0.7rem] text-slate-400">{t('codeNotEditable')}</p>
-        </div>
-        <button onClick={copy} className="btn-ghost shrink-0 !min-h-0 !py-2 text-sm">{copied ? `✓ ${t('copied')}` : `📋 ${t('copy')}`}</button>
-      </div>
-      <button onClick={onCreate} disabled={creating} className="btn-ghost w-full !min-h-0 !py-2 text-sm">{creating ? t('pleaseWait') : `＋ ${t('createNewClass')}`}</button>
-    </div>
-  )
+function TeacherBar({classes,active,onSwitch,onCreate,onRename,creating,t,m}) {
+ const [copied,setCopied]=useState(false),[copyError,setCopyError]=useState(false)
+ const [showCreate,setShowCreate]=useState(false),[editing,setEditing]=useState(false)
+ const [draft,setDraft]=useState(''),[busy,setBusy]=useState(false),[message,setMessage]=useState(''),[error,setError]=useState('')
+ const alive=useRef(true)
+ useEffect(()=>{alive.current=true;return()=>{alive.current=false}},[])
+ const cur=classes.find(c=>c.code===active)
+ const copy=async()=>{
+  try {if(!navigator.clipboard?.writeText)throw new Error('clipboard');await navigator.clipboard.writeText(active);if(alive.current){setCopied(true);setCopyError(false)}}
+  catch {if(alive.current){setCopied(false);setCopyError(true)}}
+ }
+ const rename=async e=>{
+  e.preventDefault();if(busy)return
+  setError('');setMessage('');setBusy(true)
+  try {const label=cleanClassName(draft);const saved=await onRename(label);if(alive.current&&saved){setEditing(false);setMessage(m.nameSaved)}}
+  catch(err){if(alive.current)setError(err.message==='CLASS_NAME_INVALID'?m.invalidName:m.saveFailed)}
+  finally {if(alive.current)setBusy(false)}
+ }
+ return <section className="class-access-card card">
+  <div className="class-access-top">
+   <label className="class-select-label">{m.activeClass}<select aria-label={m.activeClass} value={active} disabled={busy||creating} onChange={e=>onSwitch(e.target.value)}>{classes.map(c=><option key={c.code} value={c.code}>{c.label || c.code}</option>)}</select></label>
+   <div className="class-access-actions"><button type="button" className="btn-ghost" disabled={busy||creating} onClick={()=>{setDraft(cur?.label || '');setEditing(v=>!v);setError('');setMessage('')}}>{m.rename}</button><button type="button" className="btn-ghost" disabled={busy||creating} onClick={()=>setShowCreate(v=>!v)}>{t('createNewClass')}</button></div>
+  </div>
+  {message&&<p role="status" className="class-notice">{message}</p>}
+  {editing&&<form className="class-name-form" onSubmit={rename}><label htmlFor="class-rename">{m.name}</label><input id="class-rename" value={draft} maxLength={60} disabled={busy} onChange={e=>setDraft(e.target.value)} aria-describedby="class-name-hint"/><p id="class-name-hint">{m.nameHint}</p>{error&&<p className="class-alert" role="alert">{error}</p>}<div><button type="submit" className="class-primary" disabled={busy}>{busy?t('pleaseWait'):t('save')}</button><button type="button" className="btn-ghost" disabled={busy} onClick={()=>setEditing(false)}>{t('cancel')}</button></div></form>}
+  {showCreate&&<ClassCreateForm creating={creating} onCreate={onCreate} t={t} m={m}/>}
+  <div className="class-invite"><div><p className="class-kicker">{t('classCodeField')}</p><strong translate="no">{active}</strong><p>{m.shareHelp}</p></div><button type="button" className="btn-ghost" onClick={copy}>{copied?'✓ '+t('copied'):t('copy')}</button></div>
+  {copyError&&<p role="alert" className="class-alert">{m.copyFailed}</p>}
+ </section>
 }
-
-// ----- Écran prof sans classe : générer le premier code --------------------
-function TeacherStart({ creating, onCreate, t }) {
-  return (
-    <div className="animate-lux space-y-4">
-      <header className="page-hero">
-        <p className="kicker">{t('classSpace')}</p>
-        <h1 className="font-display text-3xl font-medium leading-tight">🧑‍🏫 {t('yourClasses')}</h1>
-      </header>
-      <hr className="rule-gold" />
-      <div className="card card-lux p-6 text-center">
-        <div className="mb-1 text-3xl">🔑</div>
-        <h2 className="font-display text-xl font-semibold">{t('createFirstClass')}</h2>
-        <p className="mx-auto mt-1 max-w-sm text-sm text-slate-500 dark:text-slate-400">{t('createFirstClassHint')}</p>
-        <button onClick={onCreate} disabled={creating} className="btn-primary mt-4 w-full">{creating ? t('pleaseWait') : `＋ ${t('generateClassCode')}`}</button>
-      </div>
-    </div>
-  )
+function ClassCreateForm({creating,onCreate,t,m}) {
+ const [name,setName]=useState(''),[error,setError]=useState('')
+ const submit=e=>{e.preventDefault();if(creating)return;try{if(name.trim())cleanClassName(name);setError('');onCreate(name)}catch{setError(m.invalidName)}}
+ return <form className="class-name-form" onSubmit={submit}><label htmlFor="class-new-name">{m.name}</label><input id="class-new-name" value={name} onChange={e=>setName(e.target.value)} maxLength={60} placeholder={m.example} disabled={creating} aria-describedby="class-new-help"/><p id="class-new-help">{m.nameHint}</p>{error&&<p className="class-alert" role="alert">{error}</p>}<button type="submit" className="class-primary" disabled={creating}>{creating?t('pleaseWait'):t('generateClassCode')}</button></form>
+}
+function TeacherStart({creating,onCreate,t,m}) {
+ return <div className="class-studio animate-lux space-y-4"><header className="class-hero page-hero"><p className="kicker">{t('classSpace')}</p><h1 className="font-display">{m.createTitle}</h1><p>{m.teacherIntro}</p></header><section className="class-start card"><p className="class-kicker">01 · {t('createFirstClass')}</p><h2 className="font-display">{m.create}</h2><ClassCreateForm creating={creating} onCreate={onCreate} t={t} m={m}/></section></div>
 }
 
 // ----- Onglet Classement ----------------------------------------------------
@@ -569,7 +595,7 @@ function GoalTab({ classCode, meta, state, derived, setCustomTheme, t }) {
 }
 
 // ----- Onglet QCM (+ devoirs, propositions, duels, direct) ------------------
-function QuizTab({ classCode, role, name, photo, accountId, jumpLive, t }) {
+function QuizTab({ classCode, role, name, photo, accountId, jumpLive, t, createInitially=false }) {
   const [seg, setSeg] = useState('quiz') // quiz | duel | direct
   useEffect(() => { if (jumpLive) setSeg('direct') }, [jumpLive])
   return (
@@ -581,15 +607,15 @@ function QuizTab({ classCode, role, name, photo, accountId, jumpLive, t }) {
             style={seg === s.id ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>{s.label}</button>
         ))}
       </div>
-      {seg === 'quiz' && <QuizList classCode={classCode} role={role} name={name} accountId={accountId} t={t} />}
+      {seg === 'quiz' && <QuizList createInitially={createInitially} classCode={classCode} role={role} name={name} accountId={accountId} t={t} />}
       {seg === 'duel' && <DuelList classCode={classCode} name={name} t={t} />}
       {seg === 'direct' && <LiveSection classCode={classCode} role={role} name={name} photo={photo} t={t} />}
     </div>
   )
 }
 
-function QuizList({ classCode, role, name, accountId, t }) {
-  const [view, setView] = useState('list') // list | build | propose | take | results
+function QuizList({ classCode, role, name, accountId, t, createInitially=false }) {
+  const [view, setView] = useState(createInitially&&role==='prof'?'build':'list') // list | build | propose | take | results
   const [quizzes, setQuizzes] = useState(null)
   const [status, setStatus] = useState('loading')
   const [active, setActive] = useState(null)
@@ -665,12 +691,12 @@ function QuizCard({ qz, role, accountId, t, onPlay, onResults, reload }) {
       <div className="mt-3 flex flex-wrap gap-2">
         <button onClick={onPlay} disabled={!qz.questions?.length} className="btn-primary !min-h-0 flex-1 !py-2 text-sm">{t('playQuiz')}</button>
         <button onClick={onResults} className="btn-ghost !min-h-0 !py-2 text-sm">{t('quizRanking')}</button>
-        {role === 'prof' && <button onClick={() => setAssigning((v) => !v)} className="!min-h-0 rounded-xl px-3 py-2 text-sm font-semibold text-[var(--c-accent)] hover:bg-[color-mix(in_srgb,var(--c-accent)_12%,transparent)]">📌 {t('assign')}</button>}
+        {role === 'prof' && <button onClick={() => setAssigning((v) => !v)} className="!min-h-0 rounded-xl px-3 py-2 text-sm font-semibold text-[var(--c-accent-texte)] hover:bg-[color-mix(in_srgb,var(--c-accent)_12%,transparent)]">📌 {t('assign')}</button>}
         {role === 'prof' && <button onClick={async () => { if (confirm(t('deleteQuizConfirm'))) { try { await deleteQuiz(qz.id) } catch { alert(t('rankOffline')); return } reload() } }} className="!min-h-0 rounded-xl px-3 py-2 text-sm font-semibold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40">{t('delete')}</button>}
       </div>
       {assigning && role === 'prof' && (
         <div className="mt-2 flex items-center gap-2">
-          <input type="date" defaultValue={qz.due_at ? qz.due_at.slice(0, 10) : ''} onChange={async (e) => { try { await assignQuiz(qz.id, e.target.value ? new Date(e.target.value + 'T23:59:00').toISOString() : null) } catch { alert(t('rankOffline')); return } reload() }}
+          <input aria-label={t('dueBy')} type="date" defaultValue={qz.due_at ? qz.due_at.slice(0, 10) : ''} onChange={async (e) => { try { await assignQuiz(qz.id, e.target.value ? new Date(e.target.value + 'T23:59:00').toISOString() : null) } catch { alert(t('rankOffline')); return } reload() }}
             className="rounded-lg border border-slate-200 bg-transparent px-2 py-1.5 text-sm dark:border-slate-700" />
           <button onClick={async () => { try { await assignQuiz(qz.id, null) } catch { alert(t('rankOffline')); return } reload() }} className="text-xs font-semibold text-slate-400 hover:underline">{t('removeDeadline')}</button>
         </div>
@@ -792,21 +818,21 @@ function QuizBuilder({ classCode, authorName, accountId, propose, t, onCancel, o
     } catch { setErr(t('rankOffline')); setBusy(false) }
   }
   return (
-    <div className="space-y-4">
+    <div className="class-quiz-builder space-y-4">
       <button onClick={onCancel} className="lien-retour">← {t('backToQuizzes')}</button>
       <h2 className="font-display text-2xl font-medium">{propose ? t('proposeQuestion') : t('createQuiz')}</h2>
       {propose && <p className="-mt-2 text-sm text-slate-500 dark:text-slate-400">{t('proposeHint')}</p>}
       <div className="card p-4">
         <label className="block text-xs font-semibold uppercase tracking-wide text-slate-400">{t('quizTitle')}</label>
-        <input value={title} onChange={(e) => setTitle(e.target.value)} maxLength={120} placeholder={t('quizTitlePlaceholder')}
+        <input aria-label={t('quizTitle')} value={title} onChange={(e) => setTitle(e.target.value)} maxLength={120} placeholder={t('quizTitlePlaceholder')}
           className="mt-1 w-full rounded-xl border border-[color-mix(in_srgb,var(--c-accent)_30%,transparent)] bg-transparent px-3 py-2.5 text-base outline-none focus:border-[var(--c-accent)]" />
         {!propose && (
-          <button type="button" onClick={() => setShowBulk((v) => !v)} className="mt-3 text-xs font-semibold text-[var(--c-accent)] hover:underline">⚡ {t('bulkImport')}</button>
+          <button type="button" onClick={() => setShowBulk((v) => !v)} className="mt-3 text-xs font-semibold text-[var(--c-accent-texte)] hover:underline">⚡ {t('bulkImport')}</button>
         )}
         {showBulk && !propose && (
           <div className="mt-2 rounded-xl bg-slate-50 p-3 dark:bg-slate-800/60">
             <p className="mb-1.5 whitespace-pre-line text-xs text-slate-500 dark:text-slate-400">{t('bulkHelp')}</p>
-            <textarea value={bulk} onChange={(e) => setBulk(e.target.value)} rows={8} placeholder={t('bulkPlaceholder')} className="w-full rounded-lg border border-slate-200 bg-transparent px-3 py-2 font-mono text-xs outline-none focus:border-[var(--c-accent)] dark:border-slate-700" />
+            <textarea aria-label={t('bulkImport')} value={bulk} onChange={(e) => setBulk(e.target.value)} rows={8} placeholder={t('bulkPlaceholder')} className="w-full rounded-lg border border-slate-200 bg-transparent px-3 py-2 font-mono text-xs outline-none focus:border-[var(--c-accent)] dark:border-slate-700" />
             {bulkMsg && <p className="mt-1 text-xs font-semibold text-rose-600">{bulkMsg}</p>}
             <button type="button" onClick={parseBulk} disabled={!bulk.trim()} className="btn-primary mt-2 w-full !py-2 text-sm disabled:opacity-50">＋ {t('bulkAdd')}</button>
           </div>
@@ -818,29 +844,29 @@ function QuizBuilder({ classCode, authorName, accountId, propose, t, onCancel, o
             <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">{t('question')} {i + 1}</span>
             {questions.length > 1 && <button onClick={() => rmQ(i)} className="text-xs font-semibold text-rose-600 hover:underline">{t('remove')}</button>}
           </div>
-          <input value={q.q} onChange={(e) => setQ(i, { q: e.target.value })} maxLength={300} placeholder={t('questionPlaceholder')}
+          <input aria-label={t('question')+' '+(i+1)} value={q.q} onChange={(e) => setQ(i, { q: e.target.value })} maxLength={300} placeholder={t('questionPlaceholder')}
             className="w-full rounded-xl border border-slate-200 bg-transparent px-3 py-2.5 text-base outline-none focus:border-[var(--c-accent)] dark:border-slate-700" />
           <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-400">{t('choicesLabel')}</p>
           <div className="mt-1.5 space-y-2">
             {q.choices.map((c, k) => (
               <div key={k} className="flex items-center gap-2">
-                <button type="button" onClick={() => setQ(i, { answer: k })} aria-label={t('markCorrect')}
+                <button type="button" onClick={() => setQ(i, { answer: k })} aria-label={t('markCorrect')+' '+String.fromCharCode(65+k)} aria-pressed={q.answer===k}
                   className={`grid h-7 w-7 shrink-0 place-items-center rounded-full border-2 text-xs font-bold transition ${q.answer === k ? 'border-emerald-500 bg-emerald-500 text-white' : 'border-slate-300 text-slate-400 dark:border-slate-600'}`}>{q.answer === k ? '✓' : String.fromCharCode(65 + k)}</button>
-                <input value={c} onChange={(e) => setChoice(i, k, e.target.value)} maxLength={160} placeholder={`${t('choice')} ${String.fromCharCode(65 + k)}`}
+                <input aria-label={t('choice')+' '+String.fromCharCode(65+k)+' · '+t('question')+' '+(i+1)} value={c} onChange={(e) => setChoice(i, k, e.target.value)} maxLength={160} placeholder={`${t('choice')} ${String.fromCharCode(65 + k)}`}
                   className="w-full rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm outline-none focus:border-[var(--c-accent)] dark:border-slate-700" />
                 {q.choices.length > 2 && <button type="button" onClick={() => rmChoice(i, k)} className="shrink-0 text-slate-400 hover:text-rose-500" aria-label={t('remove')}>✕</button>}
               </div>
             ))}
           </div>
-          {q.choices.length < 6 && <button type="button" onClick={() => addChoice(i)} className="mt-2 text-xs font-semibold text-[var(--c-accent)] hover:underline">＋ {t('addChoice')}</button>}
+          {q.choices.length < 6 && <button type="button" onClick={() => addChoice(i)} className="mt-2 text-xs font-semibold text-[var(--c-accent-texte)] hover:underline">＋ {t('addChoice')}</button>}
           <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-400">{t('explainOptional')}</p>
-          <input value={q.explain} onChange={(e) => setQ(i, { explain: e.target.value })} maxLength={300} placeholder={t('explainPlaceholder')}
+          <input aria-label={t('explainOptional')+' · '+t('question')+' '+(i+1)} value={q.explain} onChange={(e) => setQ(i, { explain: e.target.value })} maxLength={300} placeholder={t('explainPlaceholder')}
             className="mt-1 w-full rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm outline-none focus:border-[var(--c-accent)] dark:border-slate-700" />
           <p className="mt-2 text-xs text-slate-400">✓ {t('correctChoiceHint')}</p>
         </div>
       ))}
       <button onClick={addQ} disabled={questions.length >= 30} className="btn-ghost w-full !py-2.5 text-sm">＋ {t('addQuestion')}</button>
-      {err && <p className="text-sm font-semibold text-rose-600">{err}</p>}
+      {err && <p role="alert" className="text-sm font-semibold text-rose-600">{err}</p>}
       <div className="flex gap-2">
         <button onClick={onCancel} className="btn-ghost flex-1">{t('cancel')}</button>
         <button onClick={save} disabled={!canSave || busy} className="btn-primary flex-[2]">{busy ? t('pleaseWait') : propose ? t('sendProposal') : t('publishQuiz')}</button>
@@ -1062,7 +1088,7 @@ function AnswerButton({ it, name, t, onDone }) {
     try { await answerWall(it.id, val, name); noterMessage(espace, val) } catch { setAlerte(t('postFailed')); return }
     setOpen(false); onDone()
   }
-  if (!open) return <button onClick={() => setOpen(true)} className="text-xs font-semibold text-[var(--c-accent)] hover:underline">💬 {t('reply')}</button>
+  if (!open) return <button onClick={() => setOpen(true)} className="text-xs font-semibold text-[var(--c-accent-texte)] hover:underline">💬 {t('reply')}</button>
   return (
     <div className="mt-1 w-full">
       <textarea value={val} onChange={(e) => { setVal(e.target.value); setAlerte('') }} rows={2} maxLength={1000} placeholder={t('replyPlaceholder')} aria-label={t('replyPlaceholder')}
@@ -1113,7 +1139,7 @@ function MemberRow({ m, group, t }) {
         {group && <span className="mt-0.5 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[0.65rem] font-semibold" style={{ backgroundColor: (group.color || '#999') + '22', color: group.color || undefined }}>{group.emoji} {group.name}</span>}
       </span>
       <span className="shrink-0 text-right text-xs text-slate-400">
-        <span className="block font-display text-base font-semibold text-[color:var(--c-accent)]">{m.xp} XP</span>
+        <span className="block font-display text-base font-semibold text-[color:var(--c-accent-texte)]">{m.xp} XP</span>
         <span>🔥 {m.streak} · {m.courses_week} {t('thisWeekShort')}</span>
       </span>
     </div>
@@ -1126,7 +1152,7 @@ function ProfTab({ classCode, name, track, meta, reloadMeta, t }) {
   const SUBS = [{ id: 'board', label: t('profBoard') }, { id: 'groups', label: t('profGroups') }, { id: 'settings', label: t('profSettings') }]
   return (
     <div className="space-y-3">
-      <div className="flex gap-1.5 text-xs">
+      <div className="class-prof-navigation flex gap-1.5 text-xs">
         {SUBS.map((s) => (
           <button key={s.id} onClick={() => setSub(s.id)} className={`whitespace-nowrap rounded-full px-3 py-1.5 font-semibold transition ${sub === s.id ? 'text-white' : 'text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-700'}`} style={sub === s.id ? { backgroundColor: 'var(--c-accent-fort)' } : undefined}>{s.label}</button>
         ))}
@@ -1138,7 +1164,7 @@ function ProfTab({ classCode, name, track, meta, reloadMeta, t }) {
   )
 }
 
-const heatColor = (v) => v >= 70 ? '#16a085' : v >= 45 ? '#f1c40f' : v >= 20 ? '#e67e22' : '#c0392b'
+const heatColor = (v) => v >= 70 ? '#197456' : v >= 45 ? '#86631a' : v >= 20 ? '#994b1d' : '#a02c2c'
 function daysSinceDay(day) {
   if (!day) return Infinity
   return Math.max(0, daysBetween(day, todayKey()))
@@ -1169,7 +1195,7 @@ function ProfDashboard({ classCode, track, t }) {
   const subjAvg = (sid) => students.length ? Math.round(students.reduce((a, m) => a + Number(m.subjects?.[sid] || 0), 0) / students.length) : 0
   const memberAvg = (m) => trackSubjects.length ? Math.round(trackSubjects.reduce((a, s) => a + Number(m.subjects?.[s.id] || 0), 0) / trackSubjects.length) : 0
   const isAtRisk = (m) => daysSinceDay(m.active_day) > 7 || m.courses_week === 0 || memberAvg(m) < 25
-  const statusTag = (m) => daysSinceDay(m.active_day) > 7 ? { label: t('inactiveTag'), color: '#c0392b' } : (memberAvg(m) < 30 ? { label: t('strugglingTag'), color: '#e67e22' } : { label: t('okTag'), color: '#16a085' })
+  const statusTag = (m) => daysSinceDay(m.active_day) > 7 ? { label: t('inactiveTag'), color: '#9f362e' } : (memberAvg(m) < 30 ? { label: t('strugglingTag'), color: '#8f501b' } : { label: t('okTag'), color: '#217451' })
 
   const lacunes = students.length ? trackSubjects.map((s) => ({ s, v: subjAvg(s.id) })).sort((a, b) => a.v - b.v) : []
   const classAvg = students.length ? Math.round(students.reduce((a, m) => a + memberAvg(m), 0) / students.length) : 0
@@ -1236,9 +1262,9 @@ function ProfDashboard({ classCode, track, t }) {
         </div>
         <div className="mt-3 grid grid-cols-2 gap-2 text-center sm:grid-cols-4">
           <div><div className="font-display text-2xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{students.length}</div><div className="text-[0.62rem] uppercase tracking-wide text-slate-400">{t('membersCount')}</div></div>
-          <div><div className="font-display text-2xl font-semibold" style={{ color: heatColor(classAvg) }}>{classAvg}%</div><div className="text-[0.62rem] uppercase tracking-wide text-slate-400">{t('classAvg')}</div></div>
-          <div><div className="font-display text-2xl font-semibold" style={{ color: heatColor(median) }}>{median}%</div><div className="text-[0.62rem] uppercase tracking-wide text-slate-400">{t('medianLabel')}</div></div>
-          <div><div className="font-display text-2xl font-semibold" style={{ color: atRiskCount ? '#c0392b' : '#16a085' }}>{atRiskCount}</div><div className="text-[0.62rem] uppercase tracking-wide text-slate-400">{t('atRisk')}</div></div>
+          <div><div className="texte-matiere font-display text-2xl font-semibold" style={{'--mc':heatColor(classAvg)}}>{classAvg}%</div><div className="text-[0.62rem] uppercase tracking-wide text-slate-400">{t('classAvg')}</div></div>
+          <div><div className="texte-matiere font-display text-2xl font-semibold" style={{'--mc':heatColor(median)}}>{median}%</div><div className="text-[0.62rem] uppercase tracking-wide text-slate-400">{t('medianLabel')}</div></div>
+          <div><div className="texte-matiere font-display text-2xl font-semibold" style={{'--mc':atRiskCount?'#a02c2c':'#197456'}}>{atRiskCount}</div><div className="text-[0.62rem] uppercase tracking-wide text-slate-400">{t('atRisk')}</div></div>
         </div>
         <div className="mt-3">
           <div className="mb-1 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
@@ -1308,7 +1334,7 @@ function ProfDashboard({ classCode, track, t }) {
                   <span className="w-5 shrink-0 text-center text-base">{['🥇', '🥈', '🥉'][k]}</span>
                   <span className="monogram grid h-7 w-7 shrink-0 place-items-center overflow-hidden text-[0.7rem]">{m.photo ? <img src={m.photo} alt="" className="h-full w-full rounded-full object-cover" /> : initialsOf(m.name)}</span>
                   <span className="min-w-0 flex-1 truncate font-semibold">{m.name || t('roleStudent')}</span>
-                  <span className="shrink-0 font-semibold" style={{ color: heatColor(memberAvg(m)) }}>{memberAvg(m)}%</span>
+                  <span className="texte-matiere shrink-0 font-semibold" style={{'--mc':heatColor(memberAvg(m))}}>{memberAvg(m)}%</span>
                 </div>
               ))}
             </div>
@@ -1327,7 +1353,7 @@ function ProfDashboard({ classCode, track, t }) {
               <span className="min-w-0 flex-1"><span className="block truncate text-xs font-semibold">{s.name}</span>
                 <span className="mt-0.5 block h-1.5 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"><span className="block h-full rounded-full" style={{ width: `${Math.max(3, v)}%`, backgroundColor: heatColor(v) }} /></span>
               </span>
-              <span className="shrink-0 text-sm font-semibold" style={{ color: heatColor(v) }}>{v}%</span>
+              <span className="texte-matiere shrink-0 text-sm font-semibold" style={{'--mc':heatColor(v)}}>{v}%</span>
             </div>
           ))}
           {lacunes[0] && <p className="pt-1 text-xs text-slate-400">🔴 {t('weakest')} : {lacunes[0].s.name} ({lacunes[0].v}%)</p>}
@@ -1361,7 +1387,7 @@ function ProfDashboard({ classCode, track, t }) {
                     <span className="block text-[0.7rem] text-slate-400">🔥 {m.streak} · {m.courses_week} {t('thisWeekShort')} · {t('lastActiveShort')} {lastActiveLabel(m.active_day, t)}</span>
                   </span>
                   <span className="shrink-0 text-right">
-                    <span className="font-display text-lg font-semibold" style={{ color: heatColor(av) }}>{av}%</span>
+                    <span className="texte-matiere font-display text-lg font-semibold" style={{'--mc':heatColor(av)}}>{av}%</span>
                     <span className="mt-0.5 block rounded-full px-1.5 py-0.5 text-[0.6rem] font-bold text-white" style={{ backgroundColor: tag.color }}>{tag.label}</span>
                   </span>
                   <span className="shrink-0 text-slate-300" aria-hidden>{isOpen ? '▾' : '›'}</span>
@@ -1375,7 +1401,7 @@ function ProfDashboard({ classCode, track, t }) {
                         <div key={s.id} className="flex items-center gap-2">
                           <span className="w-24 shrink-0 truncate text-[0.7rem]">{s.icon} {s.short || s.name}</span>
                           <span className="block h-1.5 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"><span className="block h-full rounded-full" style={{ width: `${Math.max(2, v)}%`, backgroundColor: heatColor(v) }} /></span>
-                          <span className="w-8 shrink-0 text-right text-[0.7rem] font-semibold" style={{ color: heatColor(v) }}>{v}%</span>
+                          <span className="texte-matiere w-8 shrink-0 text-right text-[0.7rem] font-semibold" style={{'--mc':heatColor(v)}}>{v}%</span>
                         </div>
                       )
                     })}
@@ -1397,6 +1423,7 @@ function ProfGroups({ classCode, t }) {
   const [gname, setGname] = useState('')
   const [gemoji, setGemoji] = useState(GROUP_EMOJIS[0])
   const [gcolor, setGcolor] = useState(GROUP_COLORS[0])
+  const [posting,setPosting]=useState(false),[actionError,setActionError]=useState('')
   const load = useCallback(async () => {
     setStatus('loading')
     try { const [m, g] = await Promise.all([fetchMembers(classCode), fetchGroups(classCode)]); setMembers(m); setGroups(g); setStatus('ok') } catch { setStatus('error') }
@@ -1404,32 +1431,34 @@ function ProfGroups({ classCode, t }) {
   useEffect(() => { load() }, [load])
   const students = (members || []).filter((m) => m.role !== 'prof')
   const create = async () => {
-    if (!gname.trim()) return
-    try { await createGroup({ classCode, name: gname.trim(), color: gcolor, emoji: gemoji }) } catch { /* */ }
-    setGname(''); load()
+    if (!gname.trim()||posting) return
+    setPosting(true);setActionError('')
+    try { await createGroup({ classCode, name: gname.trim(), color: gcolor, emoji: gemoji });setGname('');load() } catch { setActionError(t('classActionFailed')) }finally{setPosting(false)}
   }
   return (
     <div className="space-y-3">
       <div className="card p-4">
         <h2 className="font-display text-lg font-semibold">🏳️ {t('createGroup')}</h2>
         <p className="mt-1 text-xs text-slate-400">{t('createGroupHint')}</p>
-        <input value={gname} onChange={(e) => setGname(e.target.value)} maxLength={40} placeholder={t('groupNamePlaceholder')}
+        <label htmlFor="class-group-name" className="mt-3 block text-sm font-semibold">{t('groupNamePlaceholder')}</label>
+        <input id="class-group-name" value={gname} onChange={(e) => setGname(e.target.value)} maxLength={40} placeholder={t('groupNamePlaceholder')}
           className="mt-2 w-full rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm outline-none focus:border-[var(--c-accent)] dark:border-slate-700" />
         <div className="mt-2 flex flex-wrap gap-1.5">
-          {GROUP_EMOJIS.map((e) => <button key={e} onClick={() => setGemoji(e)} className={`grid h-8 w-8 place-items-center rounded-lg text-base ${gemoji === e ? 'ring-2' : 'ring-1 ring-slate-200 dark:ring-slate-700'}`} style={gemoji === e ? { boxShadow: 'inset 0 0 0 2px var(--c-accent)' } : undefined}>{e}</button>)}
+          {GROUP_EMOJIS.map((e) => <button key={e} onClick={() => setGemoji(e)} aria-pressed={gemoji===e} className={`grid h-8 w-8 place-items-center rounded-lg text-base ${gemoji === e ? 'ring-2' : 'ring-1 ring-slate-200 dark:ring-slate-700'}`} style={gemoji === e ? { boxShadow: 'inset 0 0 0 2px var(--c-accent)' } : undefined}>{e}</button>)}
         </div>
         <div className="mt-2 flex flex-wrap gap-1.5">
-          {GROUP_COLORS.map((c) => <button key={c} onClick={() => setGcolor(c)} aria-label={c} className={`h-8 w-8 rounded-lg ${gcolor === c ? 'ring-2 ring-offset-2 ring-slate-400 dark:ring-offset-slate-900' : ''}`} style={{ backgroundColor: c }} />)}
+          {GROUP_COLORS.map((c) => <button key={c} onClick={() => setGcolor(c)} aria-pressed={gcolor===c} aria-label={c} className={`h-8 w-8 rounded-lg ${gcolor === c ? 'ring-2 ring-offset-2 ring-slate-400 dark:ring-offset-slate-900' : ''}`} style={{ backgroundColor: c }} />)}
         </div>
-        <button onClick={create} disabled={!gname.trim()} className="btn-primary mt-3 w-full !min-h-0 !py-2 text-sm">＋ {t('createGroup')}</button>
+        <button onClick={create} disabled={posting||!gname.trim()} className="btn-primary mt-3 w-full !min-h-0 !py-2 text-sm">＋ {t('createGroup')}</button>
       </div>
 
+      {actionError&&<p role="alert" className="class-alert">{actionError}</p>}
       {status === 'loading' && <Loading />}
       {status === 'error' && <ErrorBox t={t} onRetry={load} />}
       {groups.map((g) => (
         <div key={g.id} className="card p-3.5">
           <div className="flex items-center justify-between gap-2">
-            <span className="inline-flex items-center gap-2 font-display font-semibold texte-matiere" style={{ '--mc': g.color || undefined }}><span className="text-lg">{g.emoji}</span>{g.name}</span>
+            <span className="class-group-title inline-flex items-center gap-2 font-display font-semibold texte-matiere" style={{ '--mc': g.color || undefined }}><span className="text-lg">{g.emoji}</span>{g.name}</span>
             <button onClick={async () => { if (confirm(t('deleteGroupConfirm'))) { try { await deleteGroup(g.id) } catch { alert(t('rankOffline')); return } load() } }} className="text-xs font-semibold text-rose-600 hover:underline">{t('delete')}</button>
           </div>
           <p className="mt-1 text-xs text-slate-400">{students.filter((m) => m.group_id === g.id).length} {t('membersCount')}</p>
@@ -1445,13 +1474,13 @@ function ProfGroups({ classCode, t }) {
               <div key={m.device_id} className="flex items-center gap-2">
                 <span className="monogram grid h-8 w-8 shrink-0 place-items-center overflow-hidden text-xs">{m.photo ? <img src={m.photo} alt="" className="h-full w-full rounded-full object-cover" /> : initialsOf(m.name)}</span>
                 <span className="min-w-0 flex-1 truncate text-sm font-semibold">{m.name || t('roleStudent')}</span>
-                <select value={m.group_id || ''} onChange={async (e) => { try { await setMemberGroup({ classCode, deviceId: m.device_id, groupId: e.target.value || null }) } catch { alert(t('rankOffline')); return } load() }}
+                <select aria-label={t('profGroups')+' · '+(m.name || t('roleStudent'))} value={m.group_id || ''} onChange={async (e) => { try { await setMemberGroup({ classCode, deviceId: m.device_id, groupId: e.target.value || null }) } catch { alert(t('rankOffline')); return } load() }}
                   className="shrink-0 rounded-lg border border-slate-200 bg-transparent px-2 py-1.5 text-sm dark:border-slate-700">
                   <option value="">— {t('noGroup')} —</option>
                   {groups.map((g) => <option key={g.id} value={g.id}>{g.emoji} {g.name}</option>)}
                 </select>
                 <button onClick={async () => { if (confirm(`${t('excludeConfirm')} ${m.name || ''}`.trim() + ' ?')) { try { await banStudent({ classCode, deviceId: m.device_id }) } catch { alert(t('rankOffline')); return } load() } }}
-                  className="shrink-0 rounded-lg px-2 py-1.5 text-xs font-semibold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40" title={t('exclude')}>🚫</button>
+                  className="shrink-0 rounded-lg px-2 py-1.5 text-xs font-semibold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40" aria-label={t('exclude')+' '+(m.name || t('roleStudent'))} title={t('exclude')}>🚫</button>
               </div>
             ))}
           </div>
@@ -1470,48 +1499,49 @@ function ProfSettings({ classCode, name, track, meta, reloadMeta, t }) {
   const [csid, setCsid] = useState((meta?.challenge_chapter || '').split('|')[0] || '')
   const [ctid, setCtid] = useState((meta?.challenge_chapter || '').split('|')[1] || '')
   const [saved, setSaved] = useState('')
+  const [saveError,setSaveError]=useState(false)
   const trackSubjects = (track ? subjectsForTrack(track) : []).filter((s) => s && !s.comingSoon && s.chapters?.length)
   const chosenSubj = trackSubjects.find((s) => s.id === csid)
 
-  const flash = (msg) => { setSaved(msg); setTimeout(() => setSaved(''), 2500) }
-  const saveBlason = async () => { try { await upsertMeta(classCode, { blason_name: bname.trim(), blason_emoji: bemoji, blason_color: bcolor }) ; flash(t('saved')); reloadMeta() } catch { /* */ } }
-  const saveGoal = async () => { try { await upsertMeta(classCode, { goal_target: Math.max(0, Math.min(100000, Math.round(Number(goal) || 0))) }); flash(t('saved')); reloadMeta() } catch { /* */ } }
+  const flash = (msg,error=false) => { setSaveError(error);setSaved(msg); setTimeout(() => setSaved(''), 2500) }
+  const saveBlason = async () => { try { await upsertMeta(classCode, { blason_name: bname.trim(), blason_emoji: bemoji, blason_color: bcolor }) ; flash(t('saved')); reloadMeta() } catch { flash(t('postFailed'),true) } }
+  const saveGoal = async () => { try { await upsertMeta(classCode, { goal_target: Math.max(0, Math.min(100000, Math.round(Number(goal) || 0))) }); flash(t('saved')); reloadMeta() } catch { flash(t('postFailed'),true) } }
   const saveAnnounce = async () => {
     const espace = `annonce:${classCode}`
     const probleme = announce.trim() ? problemeMessage(espace, announce, { max: 500 }) : null
-    if (probleme) { flash(t(probleme)); return }
+    if (probleme) { flash(t(probleme),true); return }
     try {
       await upsertMeta(classCode, { announcement: announce.trim(), announcement_by: name, announcement_at: new Date().toISOString() })
       if (announce.trim()) noterMessage(espace, announce)
       flash(t('saved')); reloadMeta()
-    } catch { flash(t('postFailed')) }
+    } catch { flash(t('postFailed'),true) }
   }
   const saveChallenge = async () => {
     const ch = trackSubjects.find((s) => s.id === csid)?.chapters?.find((c) => c.id === ctid)
     const label = ch ? `${chosenSubj?.name} — ${ch.short || ch.name}` : ''
-    try { await upsertMeta(classCode, { challenge_chapter: csid && ctid ? `${csid}|${ctid}` : '', challenge_label: label }); flash(t('saved')); reloadMeta() } catch { /* */ }
+    try { await upsertMeta(classCode, { challenge_chapter: csid && ctid ? `${csid}|${ctid}` : '', challenge_label: label }); flash(t('saved')); reloadMeta() } catch { flash(t('postFailed'),true) }
   }
 
   return (
     <div className="space-y-3">
-      {saved && <p className="rounded-xl bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-200">✓ {saved}</p>}
+      {saved && <p role={saveError?'alert':'status'} className={saveError?'class-alert':'class-notice'}>{saveError?'':'✓ '}{saved}</p>}
 
       {/* Blason */}
-      <div className="card p-4">
-        <h3 className="font-display font-semibold">🛡️ {t('classCrest')}</h3>
-        <input value={bname} onChange={(e) => setBname(e.target.value)} maxLength={40} placeholder={t('crestNamePlaceholder')}
+      <details className="card p-4">
+        <summary className="font-display font-semibold">🛡️ {t('classCrest')}</summary>
+        <input aria-label={t('crestNamePlaceholder')} value={bname} onChange={(e) => setBname(e.target.value)} maxLength={40} placeholder={t('crestNamePlaceholder')}
           className="mt-2 w-full rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm outline-none focus:border-[var(--c-accent)] dark:border-slate-700" />
-        <div className="mt-2 flex flex-wrap gap-1.5">{GROUP_EMOJIS.concat(['🏫', '🎓', '📚']).map((e) => <button key={e} onClick={() => setBemoji(e)} className={`grid h-8 w-8 place-items-center rounded-lg text-base ${bemoji === e ? 'ring-2' : 'ring-1 ring-slate-200 dark:ring-slate-700'}`} style={bemoji === e ? { boxShadow: 'inset 0 0 0 2px var(--c-accent)' } : undefined}>{e}</button>)}</div>
-        <div className="mt-2 flex flex-wrap gap-1.5">{GROUP_COLORS.map((c) => <button key={c} onClick={() => setBcolor(c)} aria-label={c} className={`h-8 w-8 rounded-lg ${bcolor === c ? 'ring-2 ring-offset-2 ring-slate-400 dark:ring-offset-slate-900' : ''}`} style={{ backgroundColor: c }} />)}</div>
+        <div className="mt-2 flex flex-wrap gap-1.5">{GROUP_EMOJIS.concat(['🏫', '🎓', '📚']).map((e) => <button key={e} onClick={() => setBemoji(e)} aria-pressed={bemoji===e} className={`grid h-8 w-8 place-items-center rounded-lg text-base ${bemoji === e ? 'ring-2' : 'ring-1 ring-slate-200 dark:ring-slate-700'}`} style={bemoji === e ? { boxShadow: 'inset 0 0 0 2px var(--c-accent)' } : undefined}>{e}</button>)}</div>
+        <div className="mt-2 flex flex-wrap gap-1.5">{GROUP_COLORS.map((c) => <button key={c} onClick={() => setBcolor(c)} aria-pressed={bcolor===c} aria-label={c} className={`h-8 w-8 rounded-lg ${bcolor === c ? 'ring-2 ring-offset-2 ring-slate-400 dark:ring-offset-slate-900' : ''}`} style={{ backgroundColor: c }} />)}</div>
         <button onClick={saveBlason} className="btn-primary mt-3 w-full !min-h-0 !py-2 text-sm">{t('save')}</button>
-      </div>
+      </details>
 
       {/* Objectif collectif */}
       <div className="card p-4">
         <h3 className="font-display font-semibold">🎯 {t('weeklyGoalTarget')}</h3>
         <p className="mt-1 text-xs text-slate-400">{t('goalTargetHint')}</p>
         <div className="mt-2 flex items-center gap-2">
-          <input type="number" min={0} max={100000} value={goal} onChange={(e) => setGoal(e.target.value)} className="w-28 rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm dark:border-slate-700" />
+          <input aria-label={t('weeklyGoalTarget')} type="number" min={0} max={100000} value={goal} onChange={(e) => setGoal(e.target.value)} className="w-28 rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm dark:border-slate-700" />
           <span className="text-sm text-slate-500 dark:text-slate-400">{t('coursesThisWeek')}</span>
           <button onClick={saveGoal} className="btn-primary ml-auto !min-h-0 !py-2 text-sm">{t('save')}</button>
         </div>
@@ -1520,7 +1550,7 @@ function ProfSettings({ classCode, name, track, meta, reloadMeta, t }) {
       {/* Annonce */}
       <div className="card p-4">
         <h3 className="font-display font-semibold">📣 {t('classAnnouncement')}</h3>
-        <textarea value={announce} onChange={(e) => setAnnounce(e.target.value)} rows={2} maxLength={500} placeholder={t('announcePlaceholder')}
+        <textarea aria-label={t('classAnnouncement')} value={announce} onChange={(e) => setAnnounce(e.target.value)} rows={2} maxLength={500} placeholder={t('announcePlaceholder')}
           className="mt-2 w-full resize-none rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm outline-none focus:border-[var(--c-accent)] dark:border-slate-700" />
         <button onClick={saveAnnounce} className="btn-primary mt-2 w-full !min-h-0 !py-2 text-sm">{t('publishAnnouncement')}</button>
       </div>
@@ -1528,12 +1558,12 @@ function ProfSettings({ classCode, name, track, meta, reloadMeta, t }) {
       {/* Défi de la semaine */}
       <div className="card p-4">
         <h3 className="font-display font-semibold">⚡ {t('setChallenge')}</h3>
-        <select value={csid} onChange={(e) => { setCsid(e.target.value); setCtid('') }} className="mt-2 w-full rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm dark:border-slate-700">
+        <select aria-label={t('chooseSubject')} value={csid} onChange={(e) => { setCsid(e.target.value); setCtid('') }} className="mt-2 w-full rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm dark:border-slate-700">
           <option value="">— {t('chooseSubject')} —</option>
           {trackSubjects.map((s) => <option key={s.id} value={s.id}>{s.icon} {s.name}</option>)}
         </select>
         {chosenSubj && (
-          <select value={ctid} onChange={(e) => setCtid(e.target.value)} className="mt-2 w-full rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm dark:border-slate-700">
+          <select aria-label={t('chooseChapterShort')} value={ctid} onChange={(e) => setCtid(e.target.value)} className="mt-2 w-full rounded-xl border border-slate-200 bg-transparent px-3 py-2 text-sm dark:border-slate-700">
             <option value="">— {t('chooseChapterShort')} —</option>
             {chosenSubj.chapters.map((c) => <option key={c.id} value={c.id}>{c.short || c.name}</option>)}
           </select>
