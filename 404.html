@@ -16,7 +16,7 @@
     (function () {
       var ROUTES = ['accueil', 'changer', 'subject', 'favoris', 'badges', 'classe', 'moi', 'coach', 'revision', 'parent',
         'bac-blanc', 'programme', 'grand-oral', 'etude-de-gestion', 'coach-ia', 'fiches-photo', 'defi', 'express', 'formules', 'atelier-formules', 'methodo',
-        'boutique', 'confidentialite', 'cgu', 'faq', 'guide', 'classement', 'amis', 'mes-notes', 'cours', 'seance']
+        'boutique', 'confidentialite', 'cgu', 'faq', 'guide', 'classement', 'amis', 'mes-notes', 'cours', 'missions', 'seance']
       var chemin = location.pathname.replace(/\/+$/, '').replace(/\.html$/, '')
       if (ROUTES.indexOf(chemin.split('/')[1]) !== -1) location.replace('/#' + chemin + location.search)
     })()
