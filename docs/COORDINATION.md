@@ -1409,3 +1409,4 @@ Prochaine action :
 ### NAV-20261025-CODEX-06 - attente historique du menu desktop
 - CI #114 : 438 tests unitaires UTC/Paris réussis et 255 parcours sur 256 réussis. Le seul échec est mobile-confort.spec.js, qui exige encore de cacher le menu principal sur ordinateur. C’est précisément l’ancien comportement remplacé par la demande du propriétaire.
 - Branche test/menu-ordinateur-visible ; réservation du seul parcours mobile-confort.spec.js et journal. Remplacer l’attente cachée par visible ; conserver les contrôles des outils desktop et de fermeture du lecteur. Aucune modification produit ou contrôle retiré. Publication de #114 bloquée en attendant la revalidation complète.
+- Attente corrigée : menu principal visible sur ordinateur. Parcours exact réussi (1/1), outils du haut et lecteur toujours vérifiés. Aucun changement applicatif. Suite unitaire relancée en parallèle ; #115 prête pour la revalidation complète et la publication de #114.
