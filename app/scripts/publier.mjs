@@ -32,7 +32,7 @@ mkdirSync(join(SITE, 'assets'), { recursive: true })
 for (const f of nouveaux) copyFileSync(join(DIST, 'assets', f), join(SITE, 'assets', f))
 for (const f of readdirSync(DIST)) {
   if (f === 'assets') continue
-  if(['cours','a-propos','partager'].includes(f)&&statSync(join(DIST,f)).isDirectory()){rmSync(join(SITE,f),{recursive:true,force:true});cpSync(join(DIST,f),join(SITE,f),{recursive:true});continue}
+  if(['cours','a-propos','partager','excellence'].includes(f)&&statSync(join(DIST,f)).isDirectory()){rmSync(join(SITE,f),{recursive:true,force:true});cpSync(join(DIST,f),join(SITE,f),{recursive:true});continue}
   if (statSync(join(DIST, f)).isFile()) copyFileSync(join(DIST, f), join(SITE, f))
 }
 

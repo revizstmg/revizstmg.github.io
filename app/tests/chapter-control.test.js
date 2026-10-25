@@ -57,3 +57,17 @@ test('un dépassement fournisseur rend une erreur explicite sans fabriquer de no
  const response=await handler(new Request('https://fake',{method:'POST',headers:{Authorization:'Bearer fake'},body:JSON.stringify(correct)}))
  expect(response.status).toBe(502);expect(await response.json()).toEqual({error:'timeout'})
 })
+
+test('indisponibilité 503 : vraie question de synthèse ancrée dans le seul cours, explicitement sans génération',async()=>{
+ const full={...course,text:'La TVA collectée est la taxe facturée au client lors des ventes.\nLa TVA déductible est la taxe récupérable sur les achats professionnels.\nLa TVA à décaisser correspond à la différence entre ces deux montants.'}
+ const calls=[]
+ const handler=createHandler({env:k=>({GEMINI_API_KEY:'fake',SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake'})[k],pause:async ms=>calls.push(ms),fetcher:async url=>url.includes('/auth/')?Response.json({id:'u'}):Response.json({error:{message:'Unavailable'}},{status:503})})
+ const r=await handler(new Request('https://fake',{method:'POST',headers:{Authorization:'Bearer fake'},body:JSON.stringify({...prepare,course:full})}))
+ expect(r.status).toBe(200);const data=await r.json();expect(data.preparation).toBe('course');expect(data.control.criteria).toHaveLength(5)
+ expect(data.control.criteria.every(c=>full.text.includes(c.source))).toBe(true);expect(calls).toEqual([2500])
+ expect(checkControlResult(data.control,{...prepare,course:full})).toEqual(data.control)
+})
+test('un quota ne déclenche aucun repli de synthèse ni nouvelle requête',async()=>{
+ let count=0;const handler=createHandler({env:k=>({GEMINI_API_KEY:'fake',SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake'})[k],fetcher:async url=>{if(url.includes('/auth/'))return Response.json({id:'u'});count++;return Response.json({error:{}},{status:429})}})
+ const r=await handler(new Request('https://fake',{method:'POST',headers:{Authorization:'Bearer fake'},body:JSON.stringify(prepare)}));expect(r.status).toBe(429);expect(count).toBe(1);expect(await r.json()).toEqual({error:'rate_limit'})
+})

@@ -157,7 +157,7 @@ test('Gemini indisponible : une reprise différée puis une alternative Flash, d
  expect(r.status).toBe(200)
  expect(fetcher).toHaveBeenCalledTimes(4)
  expect(pause).toHaveBeenCalledTimes(1)
- expect(pause).toHaveBeenCalledWith(1000)
+ expect(pause).toHaveBeenCalledWith(2500)
  expect(fetcher.mock.calls[3][0]).toContain('gemini-3.8-flash')
  expect(fetcher.mock.calls[1][1].signal).toBe(fetcher.mock.calls[3][1].signal)
 })

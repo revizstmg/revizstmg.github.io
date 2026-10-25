@@ -26,6 +26,7 @@ const Coach = lazy(() => import('./pages/Coach.jsx'))
 const Revise = lazy(() => import('./pages/Revise.jsx'))
 const Parent = lazy(() => import('./pages/Parent.jsx'))
 const FlashcardsPage = lazy(() => import('./pages/FlashcardsPage.jsx'))
+const Excellence = lazy(() => import('./pages/Excellence.jsx'))
 const BacBlanc = lazy(() => import('./pages/BacBlanc.jsx'))
 const Programme = lazy(() => import('./pages/Programme.jsx'))
 const GrandOral = lazy(() => import('./pages/GrandOral.jsx'))
@@ -101,6 +102,7 @@ export default function App() {
         <Route path="/revision" element={<Revise />} />
         <Route path="/revision/deck/:deckId" element={<FlashcardsPage />} />
         <Route path="/parent" element={<Parent />} />
+        <Route path="/excellence-economique" element={<Excellence />} />
         <Route path="/bac-blanc" element={<ContenuFiliere><BacBlanc /></ContenuFiliere>} />
         <Route path="/programme" element={<Programme />} />
         <Route path="/grand-oral" element={<GrandOral />} />

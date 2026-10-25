@@ -91,3 +91,18 @@ test('correction bloquée : annulation, délai maximal, réponse conservée et n
  await button.click()
  await expect(panel.getByRole('heading',{name:'Note indicative · 4/5'})).toBeVisible()
 })
+
+test('création en repli cours signalée et indisponibilité de correction expliquée',async({page})=>{
+ await setup(page)
+ await page.route('**/functions/v1/examen-blanc',route=>{
+ const b=route.request().postDataJSON()
+ if(b.step==='prepare')return route.fulfill({contentType:'application/json',body:JSON.stringify({preparation:'course',control:{question:'Explique les idées du cours.',correction:'Synthèse fidèle au cours.',criteria:Array.from({length:5},(_,i)=>({notion:`Notion ${i}`,expected:`Attendu ${i}`,source:b.course.text.slice(0,100)}))}})})
+ return route.fulfill({status:502,contentType:'application/json',body:JSON.stringify({error:'provider_unavailable'})})
+ })
+ await page.goto('./#/subject/maths/theme/math-c3/chapter/0');await attendreAccueil(page);await page.getByRole('button',{name:'Questions type de contrôle →',exact:true}).click()
+ const panel=page.locator('[data-chapter-control]');await panel.getByRole('button',{name:'Créer une question',exact:true}).click()
+ await expect(panel.getByRole('status')).toContainText('sans génération')
+ await panel.getByLabel('Ta réponse rédigée').fill('Ma synthèse est conservée.')
+ await panel.getByRole('button',{name:'Corriger ma réponse',exact:true}).click();await expect(panel.getByRole('alert')).toContainText('temporairement indisponible')
+ await expect(panel.getByLabel('Ta réponse rédigée')).toHaveValue('Ma synthèse est conservée.')
+})
