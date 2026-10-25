@@ -18,7 +18,9 @@ export function etatEleve(extra = {}) {
   }
 }
 
-export async function preparer(page, etat = etatEleve()) {
+export async function preparer(page, etat = etatEleve(), { bienvenue = false } = {}) {
+  // Les tests de Bienvenue optent explicitement pour une session neuve.
+  if (!bienvenue && etat?.onboarded) await page.addInitScript(id => sessionStorage.setItem(`revizstmg-welcome:${id}`, "1"), etat.account?.id || "trial")
   const erreurs = []
   page.on('pageerror', (e) => erreurs.push(`exception : ${e.message}`))
   page.on('console', (m) => {

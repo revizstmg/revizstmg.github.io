@@ -32,28 +32,17 @@ function BacBlancPage() {
         <div><p className="bac-eyebrow">RÉVIZSTMG · LA SALLE D’EXAMEN</p><h1 className="font-display">Bac blanc</h1><p className="bac-hero-title font-display">Le jour J commence ici.</p><p className="bac-hero-desc">Un vrai sujet. Une copie. Du temps pour réfléchir. Prépare tes épreuves dans les conditions qui comptent.</p><div className="bac-hero-tags"><span>Sujets complets</span><span>Format PDF</span><span>À rédiger sur papier</span></div></div>
         <aside className="bac-hero-aside" aria-label="Préparer sa séance"><ol><li>Choisis ton épreuve et ouvre le PDF.</li><li>Prépare une copie et ton matériel.</li><li>Installe-toi au calme, comme le jour du bac.</li></ol></aside>
       </header>
-      {!premiere && <AnnalesBac />}
+      {premiere&&<p className="text-sm">Les annales de droit et de management portent sur le programme de Terminale. Tu peux les découvrir dès la Première.</p>}
+      <AnnalesBac>
+        <article className="bac-subject bac-subject-extra">
+          <div className="bac-preview" aria-hidden="true"><span className="bac-preview-number">03</span><div className="bac-paper"><span className="bac-paper-small">RÉVIZSTMG</span><span className="bac-paper-rule"/><strong>{premiere?'Mathématiques':'Prix de l’excellence économique'}</strong><span className="bac-paper-duration">{premiere?'2 heures':'4 heures'}</span><span className="bac-paper-rule"/><span className="bac-paper-lines"/></div><span className="bac-pdf-stamp">{premiere?'ENTRAÎNEMENT':'DOSSIER COMPLET'}</span></div>
+          <div className="bac-subject-body"><p className="bac-eyebrow">{premiere?'➗ Épreuve anticipée':'🏛️ Économie'}</p><h3 className="font-display text-3xl">{premiere?'Mathématiques':'Prix de l’excellence économique'}</h3>
+          {premiere?<><p className="bac-subject-desc">2 heures, sans calculatrice : des automatismes sur 6 points, puis des exercices sur 14 points. Un sujet d’entraînement avec une correction détaillée.</p><div className="bac-facts"><span>2 heures</span><span>20 points</span><span>Première</span></div><button onClick={()=>setSujetMaths(true)} className="bac-pdf-link">Faire un sujet d’entraînement (2 h) <span aria-hidden>→</span></button><p className="bac-source">Sujet composé par l’application. Ce n’est pas un sujet officiel.</p><a href={BO_MATHS} target="_blank" rel="noopener noreferrer" className="block mt-4 text-xs underline">Lire le Bulletin officiel</a></>:<><p className="bac-subject-desc">Les anciens sujets officiels, un dossier à analyser et une copie à rédiger. Retrouve une correction détaillée après ton entraînement.</p><div className="bac-facts"><span>4 heures</span><span>Terminale</span><span>Dossier complet</span></div><Link to="/excellence-economique" className="bac-pdf-link">Choisir un sujet <span aria-hidden>→</span></Link></>}
+          </div>
+        </article>
+        <CreateExam />
+      </AnnalesBac>
       </div>
-
-      <section className="card p-6 sm:p-8"><p className="kicker">🏛️ Économie</p><h2 className="mt-2 font-display text-3xl">Prix de l’excellence économique</h2><p className="mt-3 leading-relaxed">Les anciens sujets officiels, les documents à côté de ta copie et une correction détaillée après ta rédaction.</p><Link to="/excellence-economique" className="btn-primary mt-5 inline-flex">Choisir un sujet →</Link></section>
-      <CreateExam />
-
-      <div className="space-y-6">
-
-      {/* Première : l'épreuve anticipée de mathématiques et ses automatismes */}
-      {premiere && (
-        <section className="card p-5">
-          <h2 className="font-display text-xl font-medium">➗ Épreuve anticipée de mathématiques</h2>
-          <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">Le 21 juin 2027, au titre de la session 2028 du bac. 2 heures, sans calculatrice : une partie d’automatismes à réponses courtes (6 points), puis deux ou trois exercices (14 points). 2 points sur 20 portent sur la maîtrise de la langue.</p>
-          <p className="mt-1 text-xs text-slate-500 dark:text-slate-400"><a href={BO_MATHS} target="_blank" rel="noopener" className="underline">Note de service du 11 septembre 2026, Bulletin officiel spécial n° 4 (PDF)</a></p>
-          <button onClick={() => setSujetMaths(true)} className="btn-gold mt-4 w-full !py-3">Faire un sujet d’entraînement (2 h)</button>
-          <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">Sujet composé par l’application au format de l’épreuve, avec une correction détaillée. Ce n’est pas un sujet officiel.</p>
-        </section>
-      )}
-
-
-      </div>
-
     </div>
   )
 }
