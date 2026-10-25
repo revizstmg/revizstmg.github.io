@@ -1,3 +1,4 @@
+import {useFenetreClavier} from './clavier.js'
 import StudyLanguages from './StudyLanguages.jsx'
 import { normalizeStudyLanguages } from '../data/studyLanguages.js'
 import { TextePublic } from '../localisation/PublicText.jsx'
@@ -29,6 +30,9 @@ const TAUGHT = [
 // Accueil personnalisé : inscription (compte prof/élève avec e-mail + mot de
 // passe, code de classe optionnel), puis choix des matières, puis apparition
 // douce de « Bienvenue, Prénom ».
+function shouldWelcome(state){
+ try{const key='revizstmg-welcome:'+ (state.account?.id||'trial');return !sessionStorage.getItem(key)}catch{return true}
+}
 export default function Welcome() {
   const { state, applyOnboarding, setAccount, setClassCode, setPhoto, setTeacherClasses, restoreAccount } = useStore()
   const t = useT()
@@ -41,11 +45,12 @@ export default function Welcome() {
 
   const hasProfile = !!state.profile?.firstName
   // Écran d'accueil : « form » si aucun compte, « plan » si le compte existe
-  // mais que l’onboarding n’est pas fini. Un compte déjà configuré retrouve
-  // immédiatement l’application ; le « Bienvenue » reste disponible après inscription.
-  const initialPhase = !hasProfile ? 'form' : (!state.onboarded && state.track ? 'plan' : 'done')
+  // mais que l’onboarding n’est pas fini. Un compte configuré retrouve
+  // l’animation Bienvenue une fois par ouverture de l’onglet.
+  const initialPhase = !hasProfile ? 'form' : (!state.onboarded && state.track ? 'plan' : shouldWelcome(state) ? 'hello' : 'done')
   const [phase, setPhase] = useState(initialPhase) // 'form' | 'plan' | 'hello' | 'done'
   const [leaving, setLeaving] = useState(false)
+  useEffect(()=>{if(phase==='hello'&&!parentMode)try{sessionStorage.setItem('revizstmg-welcome:'+(state.account?.id||'trial'),'1')}catch{}},[phase,parentMode,state.account?.id])
   // Une session restaurée peut remplacer le profil local d'un autre compte.
   useEffect(() => {
     if (hasProfile && state.account?.id === getSession()?.user?.id && getSession()?.token && state.onboarded && phase === 'form') setPhase('hello')
@@ -109,7 +114,8 @@ export default function Welcome() {
     return () => { document.body.style.overflow = prev }
   }, [phase, parentMode])
 
-  const finishRef = useRef(() => {})
+  const finishRef = useRef(() => {}),helloPanel=useRef(null)
+  useFenetreClavier(helloPanel,()=>finishRef.current(),phase==='hello'&&!parentMode)
   useEffect(() => {
     if (phase !== 'hello') return
     const id = setTimeout(() => finishRef.current(), 4600)
@@ -356,14 +362,14 @@ export default function Welcome() {
   // ----- Écran « Bienvenue » -----
   if (phase === 'hello') {
     return (
-      <div className={`welcome-root no-print ${leaving ? 'is-leaving' : ''}`} role="dialog" aria-label={t('welcome')}>
-        <div className="welcome-hello" onClick={finish}>
+      <div ref={helloPanel} className={`welcome-root no-print ${leaving ? 'is-leaving' : ''}`} role="dialog" aria-modal="true" aria-label={t('welcome')}>
+        <button type="button" className="welcome-hello" onClick={finish} aria-label={t('enterHint')}>
           <p className="welcome-kicker">RévizSTMG</p>
           <h1 className="welcome-title">{t('welcome')}</h1>
           {helloName && <p className="welcome-name">{helloName}</p>}
           <span className="welcome-rule" aria-hidden />
           <p className="welcome-hint">{t('enterHint')}</p>
-        </div>
+        </button>
       </div>
     )
   }

@@ -4,6 +4,7 @@ for(const type of ['qcm','trou'])test(`${type} : Rejouer change les questions vi
  const errors=await preparer(page,etatEleve({track:{level:'premiere-stmg'}}))
  await page.goto('./#/subject/p1-sgn/theme/p1-sgn-t1/chapter/1');await attendreAccueil(page)
  await page.getByRole('button',{name:/Exercices/}).click()
+ if(await page.locator('.chapter-memorisation').count())await page.locator('.chapter-memorisation').evaluate(el=>el.open=true)
  await page.locator(`[data-jeu="p1-sgn-t1::1::${type==='qcm'?'qdef':'trou0'}"]`).click()
  await page.getByRole('button',{name:/Entraînement/}).click()
  const sets=[]

@@ -46,6 +46,7 @@ test('fenêtre ouverte et exercice en cours sans défaut détecté', async ({ pa
   await page.keyboard.press('Escape')
   await page.goto('./#/subject/droit/theme/droit-t5/chapter/1')
   await page.getByRole('button', { name: /Exercices/ }).click()
+  if(await page.locator('.chapter-memorisation').count())await page.locator('.chapter-memorisation').evaluate(el=>el.open=true)
   await page.getByRole('button', { name: /QCM - le mot manquant/ }).first().click()
   const entrainement = page.getByRole('button', { name: /Entraînement/ })
   await page.waitForTimeout(300)

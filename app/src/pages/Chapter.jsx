@@ -1,5 +1,6 @@
 import './CourseStudio.css'
 import { missionMessages } from '../i18n/missions.js'
+import PracticeStudio from '../components/PracticeStudio.jsx'
 import ChapterControl from '../components/ChapterControl.jsx'
 import CourseTutor from '../components/CourseTutor.jsx'
 import { courseText } from '../data/examenPersonnalise.js'
@@ -22,6 +23,7 @@ export default function Chapter() {
   const navigate = useNavigate()
   const gameLabel = useGameLabel()
   const [activeGame, setActiveGame] = useState(null)
+  const [memoryOpen,setMemoryOpen]=useState(false)
   const [tab, setTab] = useState('cours') // Cours / Définitions / Exercices
   useThemeTimer(tid) // mesure le temps de révision passé sur ce thème
 
@@ -41,6 +43,7 @@ export default function Chapter() {
     if (subject && theme) setLastChapter(sid, tid)
     setActiveGame(null)
     setTab('cours')
+    setMemoryOpen(false)
     window.scrollTo(0, 0)
   }, [tid, cidx])
 
@@ -177,6 +180,7 @@ export default function Chapter() {
         <Link to={`/missions/${sid}/${tid}/${chapter.idx}`} className="chapter-challenge card flex items-center justify-between gap-3 p-5 font-semibold">
           <span>✦ {(missionMessages[state.lang] || missionMessages.fr).boss}</span><span aria-hidden>→</span>
         </Link>
+        <PracticeStudio course={{id:chapter.id,title:chapter.title,subject:subject.name,level:subject.niveau==='premiere'?'premiere':'terminale',text:courseText(chapter.section)}} themeId={tid} index={chapter.idx} color={color}/>
         {(() => {
           const deck = games.find((g) => g.type === 'flashcard')
           if (!deck) return null
@@ -206,6 +210,7 @@ export default function Chapter() {
             </section>
           )
         })()}
+        <details className="chapter-memorisation" open={memoryOpen} onToggle={e=>setMemoryOpen(e.currentTarget.open)}><summary>📖 Mémoriser les repères</summary><p className="mt-2 text-sm">Les jeux courts pour retenir les termes et les phrases du cours. Choisis un format plutôt que de tous les enchaîner.</p>
         <h2 className="exercise-shelf-title font-display">{t('gamesOfChapter')}</h2>
         <div className="chapter-exercise-grid">{games.length > 0 ? games.map((g, gameIndex) => {
           const best = rec?.games?.[g.id]
@@ -230,6 +235,7 @@ export default function Chapter() {
             </button>
           )
         }) : <p className="card p-5 text-center text-sm text-slate-500 dark:text-slate-400">{t('gamesOfChapter')} —</p>}</div>
+        </details>
         <ChapterControl key={`${state.account?.id || 'trial'}:${chapter.id}`} course={{id:chapter.id,title:chapter.title,subject:subject.name,level:subject.niveau==='premiere'?'premiere':'terminale',text:courseText(chapter.section)}} />
       </div>
 

@@ -1,13 +1,14 @@
+import {Rich} from '../components/ui.jsx'
 import { Figure } from './Calcul.jsx'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { shuffle, Feedback, GameProgress, useStopwatch } from './common.jsx'
-import { useT } from '../i18n.js'
+import { useT, usePublicText } from '../i18n.js'
 import { instancierQuestion } from '../qcmgen.js'
 
 const PER_Q = 20 // secondes par question en mode Défi
 
 export default function Qcm({ game, mode, color, onDone }) {
-  const t = useT()
+  const t = useT(), tr=usePublicText()
   const questions = useMemo(
     () =>
       // Une question chiffrée (« gen ») est refaite avec de nouveaux nombres.
@@ -65,6 +66,7 @@ export default function Qcm({ game, mode, color, onDone }) {
 
   return (
     <div className="card p-5">
+      {q.skill&&<p className="kicker mb-3">{tr(({situation:'Mise en situation',reasoning:'Raisonnement',error:'Trouver l’erreur',calculation:'Calcul appliqué',document:'Analyser un document'})[q.skill])}</p>}
       <GameProgress index={i} total={questions.length} color={color} />
       {mode === 'defi' && !answered && (
         <div className="mb-3 h-1.5 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
@@ -101,6 +103,7 @@ export default function Qcm({ game, mode, color, onDone }) {
         })}
       </div>
 
+      {answered && q.source&&<details className="mt-4 text-sm"><summary className="cursor-pointer font-semibold">{tr('Retrouver cette notion dans le cours')}</summary><blockquote className="mt-2 border-l-2 border-slate-400 pl-3"><Rich text={q.source}/></blockquote></details>}
       {answered && (
         <>
           <Feedback ok={q.choices[picked]?.correct} choisi={q.choices[picked]?.text} themeId={q.themeId}>

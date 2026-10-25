@@ -25,6 +25,7 @@ test('fin de série : « Refaire mes erreurs » rejoue seulement les questions r
   await attendreAccueil(page)
   await page.goto('./#/subject/gestion-finance/theme/gf-t1/chapter/0')
   await page.getByRole('button', { name: /Exercices/ }).click()
+  if(await page.locator('.chapter-memorisation').count())await page.locator('.chapter-memorisation').evaluate(el=>el.open=true)
   await page.getByRole('button', { name: /QCM - (les )?notions/ }).first().click()
   await page.getByRole('button', { name: /Entraînement/ }).click()
   const exercice = page.locator('[data-exercice]')

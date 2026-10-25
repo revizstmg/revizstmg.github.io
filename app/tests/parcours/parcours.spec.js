@@ -32,6 +32,7 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
 
   // Onglet Exercices, puis un QCM en mode entraînement.
   await page.getByRole('button', { name: /Exercices/ }).click()
+  if(await page.locator('.chapter-memorisation').count())await page.locator('.chapter-memorisation').evaluate(el=>el.open=true)
   await page.getByRole('button', { name: /QCM - (les )?notions/ }).first().click()
   await page.getByRole('button', { name: /Entraînement/ }).click()
   // L'exercice s'ouvre en plein écran, par-dessus la page.
