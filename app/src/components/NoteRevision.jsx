@@ -9,7 +9,7 @@ export function StudyResult({result}){
  if(!result)return null
  const ready=result.status==='ready'
  return <div className="space-y-4" lang="fr" data-no-translate aria-label={tr('Mon bilan')}>
-  <p className="text-xs">{result.origin==='files'?'Bilan fondé sur le sujet et la copie transmis.':'Bilan fondé sur les difficultés déclarées : aucune copie n’a été vérifiée.'}</p>
+  <p className="text-xs">{result.origin==='files'?'Bilan fondé sur le sujet et la copie transmis.':result.origin==='declared'?'Bilan fondé sur les difficultés déclarées : aucune copie n’a été vérifiée.':'Ancien bilan : sa provenance n’a pas été enregistrée. Vérifie ses conclusions avec le cours.'}</p>
   <p role={ready?'status':'alert'} className="whitespace-pre-wrap text-sm">{result.summary}</p>
   {!ready&&<p className="text-sm">{result.status==='unreadable'?'Reprends les photos, bien cadrées et nettes, ou saisis les questions manquées. Aucun résultat n’a été inventé.':'Choisis un autre chapitre ou précise les notions du devoir. Aucun exercice hors programme n’a été ajouté.'}</p>}
   {ready&&<><h4 className="font-display text-xl">Ce que tu vas retravailler</h4>{result.weaknesses.map((w,i)=>{

@@ -126,3 +126,12 @@ test('commencer sans filière : le bouton mène au choix de niveau',async({page}
  await expect(page).toHaveURL(/#\/accueil/)
  await expect(page.locator('main h1')).toContainText('Léa')
 })
+test('ancien bilan : origine inconnue signalée sans modifier les données',async({page})=>{
+ const revision={status:'ready',summary:'Ancien bilan de dérivation.',weaknesses:[{chapterId:'math-c3::0',skill:'Dérivation',evidence:'Q3',advice:'Revoir le cours.'}],exercises:Array.from({length:3},(_,i)=>({chapterId:'math-c3::0',skill:'Dérivation',question:`Dérive x² + ${i}x.`,correction:`2x + ${i}.`}))}
+ await preparer(page,etatEleve({notesClasse:[{id:'ancienne-note',note:12,matiere:'maths',chapitre:'math-c3',date:'2026-10-24',ajouteLe:1,revision}]}))
+ await page.goto('./#/mes-notes');await attendreAccueil(page)
+ await page.getByText('Mon bilan et mes exercices',{exact:true}).click()
+ await expect(page.getByText(/Ancien bilan : sa provenance n’a pas été enregistrée/)).toBeVisible()
+ await expect(page.getByText('Ancien bilan de dérivation.',{exact:true})).toBeVisible()
+ expect((await etat(page)).notesClasse[0].revision).toEqual(revision)
+})
