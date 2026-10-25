@@ -10,7 +10,7 @@ test('paquet enregistré : glisser, boutons et clavier', async ({ page }) => {
   await page.goto('./')
   await attendreAccueil(page)
   await page.goto('./#/revision/deck/essai')
-  const carte = page.getByRole('button', { name: /Retourner la carte/ }).last()
+  const carte = page.locator('[data-flashcard]')
   await expect(carte).toBeVisible()
   const b = await carte.boundingBox()
   const cx = b.x + b.width / 2, cy = b.y + b.height / 2

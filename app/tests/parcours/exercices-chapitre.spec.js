@@ -54,6 +54,7 @@ test('SDGN Première : les exercices de personnalité restent sur son cours', as
   await page.goto('./#/subject/p1-sgn/theme/p1-sgn-t1/chapter/1')
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('La personnalité de l’individu')
   await page.getByRole('button', { name: /Exercices/ }).click()
+  if(await page.locator('.chapter-memorisation').count())await page.locator('.chapter-memorisation').evaluate(el=>el.open=true)
   await page.getByRole('button', { name: /QCM - les notions du chapitre/ }).click()
   const entrainement = page.getByRole('button', { name: /Entraînement/ })
   await expect(entrainement).toBeVisible()

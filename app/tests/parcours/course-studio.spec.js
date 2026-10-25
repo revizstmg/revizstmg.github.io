@@ -12,11 +12,13 @@ for(const [theme,width] of [['light',320],['dark',390],['light',1280]])test('cou
  await page.getByRole('button',{name:'OK',exact:true}).click()
  for(const [name,selector] of [['Cours','.reader'],['Définitions','.definition-studio'],['Exercices','.chapter-exercise-grid']]){
   await page.getByRole('button',{name:new RegExp(name)}).first().click()
+  if(name==='Exercices')await page.locator('.chapter-memorisation summary').click()
   await expect(page.locator(selector)).toBeVisible()
   expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false)
   expect((await audit(page)).violations).toEqual([])
   await page.screenshot({path:info.outputPath(name+'.png'),fullPage:true})
  }
+ if(await page.locator('.chapter-memorisation').count())await page.locator('.chapter-memorisation').evaluate(el=>el.open=true)
  await page.locator('[data-jeu]').filter({hasText:/QCM/}).first().click()
  await page.getByRole('button',{name:/Entraînement/}).click()
  await expect(page.locator('[data-exercice]')).toBeVisible()

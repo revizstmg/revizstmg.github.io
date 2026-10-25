@@ -1,4 +1,5 @@
-import { useEffect } from 'react'
+import { useRef } from 'react'
+import {useFenetreClavier} from '../components/clavier.js'
 import { createPortal } from 'react-dom'
 import { useParams, useNavigate, Navigate } from 'react-router-dom'
 import { useStore, useStudyTimer } from '../store.jsx'
@@ -28,12 +29,8 @@ function Paquet({ deck }) {
   const total = deck.cards.length
   const color = deck.color || '#7c3aed'
 
-  // Échap = quitter
-  useEffect(() => {
-    const touche = (e) => { if (e.key === 'Escape') navigate('/revision') }
-    window.addEventListener('keydown', touche)
-    return () => window.removeEventListener('keydown', touche)
-  }, [navigate])
+  const panel=useRef(null)
+  useFenetreClavier(panel,()=>navigate('/revision'))
 
   const finish = () => { try { addXp(Math.min(15, sues.size)) } catch { /* */ } navigate('/revision') }
   const fini = phase === 'fini'
@@ -41,8 +38,8 @@ function Paquet({ deck }) {
   // Rendu via un portal sur <body> pour couvrir vraiment tout l'écran (au-dessus
   // de l'en-tête), sans être piégé par la transformation de la zone de contenu.
   return createPortal(
-    <div className="fixed inset-0 z-[70] flex flex-col overflow-hidden bg-slate-50 dark:bg-slate-950">
-      <div className="flex items-center gap-3 px-4 pb-2" style={{ paddingTop: 'calc(env(safe-area-inset-top, 0px) + 1.5rem)' }}>
+    <div ref={panel} role="dialog" aria-modal="true" aria-label={deck.title} className="flashcard-studio fixed inset-0 z-[70] flex flex-col overflow-hidden">
+      <div className="flashcard-study-header flex items-center gap-3 px-4 pb-4" style={{ paddingTop: 'calc(env(safe-area-inset-top, 0px) + 1.5rem)' }}>
         <button onClick={() => navigate('/revision')} aria-label={t('quit')} className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-white text-slate-500 shadow dark:bg-slate-800 dark:text-slate-300">✕</button>
         <div className="min-w-0 flex-1">
           <p className="truncate text-sm font-semibold">{deck.title}</p>
@@ -54,8 +51,8 @@ function Paquet({ deck }) {
       </div>
 
       {phase === 'etude' ? (
-        <div className="flex flex-1 flex-col justify-center px-5 pb-7 pt-2">
-          <div className="mx-auto w-full max-w-md">
+        <div className="flashcard-study-body flex flex-1 flex-col justify-center px-5 pb-7 pt-5">
+          <div className="mx-auto w-full max-w-xl">
             <PileCartes serie={serie} color={color} hauteur="h-[52vh] max-h-[500px]" grand />
           </div>
         </div>

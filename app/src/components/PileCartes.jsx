@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import { shuffle } from '../games/common.jsx'
+import './PileCartes.css'
 import { useT } from '../i18n.js'
 
 // Pile de flashcards, commune aux exercices d'un chapitre et aux paquets
@@ -50,7 +51,7 @@ export function useSerieCartes(cartes) {
 
 // `grand` : version plein écran (textes plus grands).
 export function PileCartes({ serie, color = '#7c3aed', hauteur = 'h-[18rem]', grand = false }) {
-  const t = useT()
+  const t = useT(), faceId=useId()
   const { carte, suivante, apres, cle, noter } = serie
   const [retournee, setRetournee] = useState(false)
   const [glisse, setGlisse] = useState({ x: 0, y: 0, actif: false })
@@ -77,7 +78,8 @@ export function PileCartes({ serie, color = '#7c3aed', hauteur = 'h-[18rem]', gr
   useEffect(() => {
     const touche = (e) => {
       if (e.target.closest?.('input, textarea, select, [contenteditable]')) return
-      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); if (!sortie) setRetournee((r) => !r) }
+      if((e.key===' '||e.key==='Enter')&&e.target.closest?.('[data-flash-scroll]'))return
+      if ((e.key === ' ' || e.key === 'Enter') && !e.target.closest?.('button,a')) { e.preventDefault(); if (!sortie) setRetournee((r) => !r) }
       else if (e.key === 'ArrowLeft') { e.preventDefault(); sortir('gauche', true) }
       else if (e.key === 'ArrowRight') { e.preventDefault(); sortir('droite', true) }
     }
@@ -86,7 +88,7 @@ export function PileCartes({ serie, color = '#7c3aed', hauteur = 'h-[18rem]', gr
   })
 
   const appui = (e) => {
-    if (sortie) return
+    if (sortie || e.target.closest?.('button')) return
     const g = geste.current
     Object.assign(g, { x0: e.clientX, y0: e.clientY, dx: 0, dy: 0, px: e.clientX, pt: e.timeStamp, vx: 0, bouge: false })
     setGlisse({ x: 0, y: 0, actif: true })
@@ -138,18 +140,19 @@ export function PileCartes({ serie, color = '#7c3aed', hauteur = 'h-[18rem]', gr
   const suiviDirect = glisse.actif && !sortie
 
   const recto = (c) => (
-    <div className="absolute inset-0 flex flex-col items-center justify-center overflow-y-auto rounded-[1.75rem] border border-slate-200 bg-white p-6 text-center shadow-xl [backface-visibility:hidden] dark:border-slate-700 dark:bg-slate-800">
-      <span className="mb-3 text-[0.65rem] font-bold uppercase tracking-[0.22em] text-slate-400">{t('question')}</span>
-      <span className={`font-display font-semibold leading-snug ${grand ? 'text-[1.75rem]' : 'text-2xl'}`}>{c.front}</span>
-      <span className="mt-5 text-xs text-slate-400">{t('tapToFlip')}</span>
+    <div className="flash-face flash-front" aria-hidden={retournee} inert={retournee?'':undefined}>
+      <span className="flash-face-label">{t('question')}</span>
+      <div id={faceId+'-front'} tabIndex={retournee?-1:0} data-flash-scroll role="region" aria-label={t('question')} className="flash-face-content"><span className={`font-display font-semibold leading-snug ${grand ? 'text-[1.75rem]' : 'text-2xl'}`}>{c.front}</span></div>
+      <span className="flash-face-hint">{t('tapToFlip')}</span>
     </div>
   )
 
   return (
-    <div className="select-none">
+    <div className="flash-stack select-none" style={{'--flash-accent':color}} data-flipped={retournee}>
       {/* Compteurs, du côté de leur geste : à revoir à gauche, sues à droite */}
       <div className="mb-3 flex items-center justify-between text-sm font-bold tabular-nums">
-        <span className="chip bg-rose-100 text-rose-600 dark:bg-rose-950/50 dark:text-rose-300"><span key={serie.aRevoir.length} className="pop-badge">↩ {serie.aRevoir.length}</span></span>
+        <span className="chip bg-rose-100 text-rose-700 dark:bg-rose-950/50 dark:text-rose-300"><span key={serie.aRevoir.length} className="pop-badge">↩ {serie.aRevoir.length}</span></span>
+        <button type="button" className="flash-flip-button" aria-label={t('flipCard')} aria-pressed={retournee} aria-describedby={faceId+(retournee?'-back':'-front')} disabled={!!sortie} onClick={()=>setRetournee(r=>!r)}>↻</button>
         <span className="chip bg-emerald-100 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300"><span key={serie.sues.size} className="pop-badge">✓ {serie.sues.size}</span></span>
       </div>
 
@@ -168,7 +171,7 @@ export function PileCartes({ serie, color = '#7c3aed', hauteur = 'h-[18rem]', gr
               transition: suiviDirect ? 'none' : `transform ${SORTIE}ms cubic-bezier(.2, .8, .2, 1)`,
             }}
           >
-            {recto(suivante)}
+            <div className="flash-stack-blank" />
           </div>
         )}
 
@@ -177,23 +180,21 @@ export function PileCartes({ serie, color = '#7c3aed', hauteur = 'h-[18rem]', gr
           key={`c-${cle}`}
           onPointerDown={appui} onPointerMove={deplacement} onPointerUp={relache} onPointerCancel={annule}
           className="absolute inset-0 cursor-grab touch-pan-y active:cursor-grabbing"
-          style={{ transform, transition, opacity: sortie ? 0.35 : 1, willChange: 'transform' }}
-          role="button"
-          tabIndex={0}
-          aria-label={t('flipCard')}
+          style={{ transform, transition, opacity: sortie ? 0.35 : 1, willChange: 'transform', '--flash-drag':transform }}
+          role="group"
+          data-flashcard
+          aria-label={t('flashcards')}
         >
-          <div className="h-full [perspective:1400px]">
+          <div className="flash-perspective">
             <div
-              className="relative h-full [transform-style:preserve-3d]"
+              className="flash-rotation"
               style={{ transform: retournee ? 'rotateY(180deg)' : 'none', transition: moinsDeMouvement() ? 'none' : 'transform 480ms cubic-bezier(.2, .8, .2, 1)' }}
             >
               {recto(carte)}
-              <div
-                className="absolute inset-0 flex flex-col items-center justify-center overflow-y-auto rounded-[1.75rem] border-2 bg-white p-6 text-center shadow-xl [backface-visibility:hidden] dark:bg-slate-800"
-                style={{ transform: 'rotateY(180deg)', borderColor: color, backgroundImage: `linear-gradient(${color}14, ${color}14)` }}
-              >
-                <span className="mb-3 text-[0.65rem] font-bold uppercase tracking-[0.22em]" style={{ color }}>{t('answer')}</span>
-                <span className={`font-medium leading-relaxed ${carte.back && carte.back.length > 90 ? 'text-base' : grand ? 'text-2xl' : 'text-lg'}`}>{carte.back}</span>
+              <div className="flash-face flash-back" aria-hidden={!retournee} inert={!retournee?'':undefined}>
+                <span className="flash-face-label">{t('answer')}</span>
+                <div id={faceId+'-back'} tabIndex={retournee?0:-1} data-flash-scroll role="region" aria-label={t('answer')} className="flash-face-content"><span className={`font-medium leading-relaxed ${carte.back && carte.back.length > 90 ? 'text-base' : grand ? 'text-2xl' : 'text-lg'}`}>{carte.back}</span></div>
+                <span className="flash-face-hint">{t('tapToFlip')}</span>
               </div>
             </div>
           </div>

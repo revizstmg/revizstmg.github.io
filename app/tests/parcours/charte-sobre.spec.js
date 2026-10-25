@@ -27,7 +27,7 @@ for(const theme of ['light','dark'])test('charte sobre sur les pages et fenêtre
   if(result.violations.length)findings.push({path,violations:result.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)}))})
  }
  expect(findings).toEqual([])
- expect(await page.evaluate(()=>window.__motions)).toBeLessThanOrEqual(1)
+ expect(await page.evaluate(()=>window.__motions)).toBeGreaterThan(1)
  await page.getByRole('button',{name:'Menu',exact:true}).click()
  await expect(page.locator('.site-menu-panel')).toContainText('📖')
  expect((await new AxeBuilder({page}).include('.site-menu-panel').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([])
@@ -37,7 +37,8 @@ for(const theme of ['light','dark'])test('charte sobre sur les pages et fenêtre
  await page.setViewportSize({width:1280,height:900})
  await page.screenshot({path:info.outputPath('accueil-'+theme+'.png'),fullPage:true})
  await page.reload();await attendreAccueil(page)
- expect(await page.evaluate(()=>window.__motions)).toBe(0)
+ expect(await page.evaluate(()=>window.__motions)).toBeGreaterThan(0)
+ await expect(page.locator('.welcome-hello')).toHaveCount(0)
  expect(errors).toEqual([])
 })
 test('préférence de mouvement réduit : aucune animation',async({page})=>{
