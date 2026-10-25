@@ -17,6 +17,8 @@ test('concours sur ordinateur : dossier intégral, défilement séparé, copie r
  await expect(page.getByRole('button',{name:'Ouvrir le sujet',exact:true})).toHaveCount(4)
  await page.getByRole('button',{name:'Ouvrir le sujet',exact:true}).nth(2).click()
  await expect(page.locator('#ex-documents img')).toHaveCount(13)
+ await page.locator('.excellence-rubric summary').click()
+ await expect(page.locator('.excellence-rubric li')).toHaveText(['Notions économiques : 5 points','Analyse des documents : 5 points','Argumentation : 5 points','Structure : 3 points','Expression : 2 points'])
  await page.getByRole('button',{name:'Commencer ma copie',exact:true}).click();await page.getByLabel('Ta composition',{exact:true}).fill(copy)
  const left=await page.locator('#ex-copy').boundingBox(),right=await page.locator('#ex-documents').boundingBox();expect(right.x).toBeGreaterThan(left.x+left.width)
  await page.locator('.excellence-document-scroll').evaluate(el=>el.scrollTop=1000)
