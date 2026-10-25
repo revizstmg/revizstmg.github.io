@@ -1396,3 +1396,4 @@ Prochaine action :
 
 ### BILAN-20261025-CODEX-04 - provenance des bilans historiques
 - Relecture de #112 : les anciens bilans ne stockent pas origin. Ne pas les présenter à tort comme des difficultés déclarées (ils peuvent provenir d’une copie). Réservation NoteRevision.jsx et parcours bilan-parcours : message neutre pour ces seuls résultats historiques, indicateurs explicites conservés pour les nouveaux. Branche fix/provenance-anciens-bilans, aucune donnée réécrite.
+- Réalisé : provenance inconnue explicitement signalée pour les seuls anciens bilans sans origin. Aucun résultat, point, note ou donnée sauvegardée réécrit. Validation : 438 tests unitaires, compilation et 11 parcours bilan/notes réussis, dont comparaison exacte des données historiques avant/après affichage. PR #113 prête ; #112 reste en validation GitHub.
