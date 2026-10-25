@@ -296,7 +296,7 @@ export default function Layout({ children }) {
             onSignOut={() => logout()}
           />
         </div>
-        {state.track && !parentSeul && <DesktopQuickLinks />}
+        {state.track && !parentSeul && !['/','/accueil'].includes(pathname) && <DesktopQuickLinks />}
         {!parentSeul && <Breadcrumb />}
       </header>
 

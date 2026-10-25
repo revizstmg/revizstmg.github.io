@@ -36,7 +36,7 @@ async function providerFailure(response) {
 export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms => new Promise(resolve => setTimeout(resolve, ms)) }) {
   // Best-effort per warm isolate, NOT a durable billing quota. No database writes.
   const calls = new Map()
-  let probe = null, probeUntil = 0
+  let probe = null, probeUntil = 0, catalogProbe = null, catalogUntil = 0
   return async req => {
     if (req.method === 'OPTIONS') return new Response('ok', { headers: cors })
     if (!['GET', 'POST'].includes(req.method)) return json({ error: 'method_not_allowed' }, 405)
@@ -44,6 +44,20 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
     const groq = gemini ? '' : (env('GROQ_API_KEY') || '').trim()
     const anthropic = (env('ANTHROPIC_API_KEY') || '').trim()
     if (req.method === 'GET') {
+      if(new URL(req.url).searchParams.get('check')==='models'){
+        if(!gemini)return json({ready:false,models:[]})
+        if(!catalogProbe||now()>=catalogUntil){
+          catalogUntil=now()+60000
+          catalogProbe=(async()=>{try{
+            const r=await fetcher('https://generativelanguage.googleapis.com/v1beta/models?pageSize=1000',{headers:{'x-goog-api-key':gemini},signal:AbortSignal.timeout(10000)})
+            if(!r.ok)return {ready:false,error:await providerFailure(r),models:[]}
+            const data=await r.json(),models=(data.models||[]).filter(m=>/^models\/gemini-[0-9]+(?:\.[0-9]+)?-flash(?:-lite)?$/.test(m.name)&&m.supportedGenerationMethods?.includes('generateContent')).map(m=>m.name.replace('models/','')).slice(0,20)
+            return {ready:models.length>0,models}
+          }catch{return {ready:false,error:'provider_unreachable',models:[]}}})()
+        }
+        return json(await catalogProbe)
+      }
+
       if (new URL(req.url).searchParams.get('check') === 'configuration') return json({ provider: groq ? 'groq' : gemini ? 'gemini' : anthropic ? 'anthropic' : null })
       if (new URL(req.url).searchParams.get('check') !== 'provider' || (!groq && !gemini)) return json({ ready: !!(groq || gemini || anthropic) })
       // Lecture seule, mutualisée et mise en cache ; aucun contenu envoyé à l'IA.
@@ -107,12 +121,13 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
         }
         const data = await response.json(); result = data.choices?.[0]?.message?.content
       } else if (gemini) {
-        const models = [...new Set([geminiModel(env), GEMINI_DEFAULT, GEMINI_ALTERNATIVE])]
+        const models = [...new Set([...(body.action==='excellence'?['gemini-2.5-flash']:[]),geminiModel(env), GEMINI_DEFAULT, GEMINI_ALTERNATIVE])]
         const signal = AbortSignal.timeout(providerWait)
         let retried = false
         for (const model of models) {
-          const send = () => fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-goog-api-key': gemini }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: [{ role: 'user', parts: [{ text: instruction }, ...(officialPdf?[{inlineData:officialPdf}]:['grade','study'].includes(body.action) ? body.files.map(file => ({ inlineData: file })) : [])] }], generationConfig: { ...(body.action==='practice'?{responseSchema:practiceSchema}:body.action==='excellence'?{responseSchema:excellenceSchema}:controlCorrection(body) ? {responseSchema:controlResponseSchema} : {}), ...(['excellence','practice'].includes(body.action)&&/^gemini-[3-9]/.test(model)?{thinkingConfig:{thinkingLevel:'LOW'}}:controlThinking(body,model)), temperature: 0.3, responseMimeType: 'application/json', maxOutputTokens: body.action === 'control' ? (controlCorrection(body) ? 3500 : 6000) : body.action === 'tutor' ? 3000 : body.action === 'study' ? 7000 : body.action === 'plan' ? 3000 : ['excellence','practice'].includes(body.action) ? 9000 : body.action === 'grade' ? 18000 : 24000 } }), signal })
+          const send = () => fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-goog-api-key': gemini }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: [{ role: 'user', parts: [{ text: instruction }, ...(officialPdf?[{inlineData:officialPdf}]:['grade','study'].includes(body.action) ? body.files.map(file => ({ inlineData: file })) : [])] }], generationConfig: { ...(body.action==='practice'?{responseSchema:practiceSchema}:body.action==='excellence'?{responseSchema:excellenceSchema}:controlCorrection(body) ? {responseSchema:controlResponseSchema} : {}), ...(body.action==='excellence'&&/^gemini-2\.5-flash$/.test(model)?{thinkingConfig:{thinkingBudget:1024}}:['excellence','practice'].includes(body.action)&&/^gemini-[3-9]/.test(model)?{thinkingConfig:{thinkingLevel:'LOW'}}:controlThinking(body,model)), temperature: 0.3, responseMimeType: 'application/json', maxOutputTokens: body.action === 'control' ? (controlCorrection(body) ? 3500 : 6000) : body.action === 'tutor' ? 3000 : body.action === 'study' ? 7000 : body.action === 'plan' ? 3000 : ['excellence','practice'].includes(body.action) ? 9000 : body.action === 'grade' ? 18000 : 24000 } }), signal })
           response = await send()
+          if(!response.ok)console.warn(JSON.stringify({event:'exam_provider_attempt',action:body.action,model,status:response.status}))
           if (response.status === 503 && !retried) {
             retried = true
             await pause(2500)
