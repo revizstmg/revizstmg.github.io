@@ -22,6 +22,7 @@ test('accueil d’un élève inscrit', async ({ page }) => {
 
 test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
   const erreurs = await preparer(page)
+  await page.addInitScript(()=>{let seed=123456789;Math.random=()=>{seed=(Math.imul(1664525,seed)+1013904223)>>>0;return seed/4294967296}})
   await page.goto('./')
   await attendreAccueil(page)
   await page.goto('./#/subject/gestion-finance/theme/gf-t1/chapter/0')
@@ -55,7 +56,8 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
     // Fin de partie : score affiché.
     await expect(exercice).toContainText(/%|score|bravo|résultat/i)
     await page.waitForTimeout(300)
-    if (((await etat(page)).xp || 0) > xpAvant) break
+    const progress=await etat(page)
+    if ((progress.xp || 0) > xpAvant && (progress.erreurs || []).length > 0) break
     await page.getByRole('button', { name: 'Rejouer' }).click()
     const entrainement = page.getByRole('button', { name: /Entraînement/ })
     if (await entrainement.count()) await entrainement.click()
