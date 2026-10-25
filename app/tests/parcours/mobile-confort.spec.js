@@ -84,7 +84,7 @@ test('ordinateur : outils du haut et fermeture du lecteur conservés',async({pag
  const errors=await preparer(page,etatEleve({track:{level:'premiere-stmg'}}))
  await page.goto(chapter);await attendreAccueil(page)
  await expect(page.locator('.desktop-header-tools')).toBeVisible()
- await expect(page.locator('.mobile-menu-trigger')).toBeHidden()
+ await expect(page.locator('.mobile-menu-trigger')).toBeVisible()
  await page.getByRole('button',{name:/Appuyer pour lire en plein écran/}).click()
  const dialog=page.getByRole('dialog',{name:'Cours',exact:true})
  await expect(dialog.locator('.reader-close-top')).toBeVisible()
