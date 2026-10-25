@@ -2,10 +2,12 @@ import {test,expect} from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 import {preparer,etatEleve,attendreAccueil} from './eleve.js'
 
-for(const [theme,width] of [['light',1024],['dark',1440]])test('accès communauté toujours visibles sur ordinateur : '+theme,async({page},info)=>{
+for(const [theme,width] of [['light',1024],['dark',1440]])test('raccourcis hors accueil sur ordinateur : '+theme,async({page},info)=>{
  const errors=await preparer(page,etatEleve({theme}))
  await page.setViewportSize({width,height:900})
  await page.goto('./#/accueil');await attendreAccueil(page)
+ await expect(page.locator('header .desktop-quick-links')).toHaveCount(0)
+ await page.goto('./#/cours');await attendreAccueil(page)
  const cookie=page.getByRole('button',{name:'OK',exact:true});if(await cookie.isVisible())await cookie.click()
  const nav=page.locator('header .desktop-quick-links')
  await expect(nav).toBeVisible();await expect(nav.getByRole('link')).toHaveCount(4)

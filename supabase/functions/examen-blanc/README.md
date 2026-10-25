@@ -11,10 +11,11 @@ relecture avec le cours est explicitement demandée.
 
 ## Configuration
 
-Déployer `index.ts`, `handler.js`, `contract.js` sous `examen-blanc`, avec
+Déployer tous les modules `.ts` et `.js` de ce dossier sous `examen-blanc`, avec
 `verify_jwt: true`. Le POST vérifie aussi le jeton via `/auth/v1/user` et refuse
-les comptes anonymes. Le GET retourne uniquement `{ready: boolean}` : il ne
-fait aucun appel payant et ne révèle aucun secret.
+les comptes anonymes. Le GET normal retourne `{ready: boolean}`. Les diagnostics `check=provider` et
+`check=models` lisent seulement les métadonnées Google (cache 60 s), sans
+génération payante, copie ni secret exposé.
 
 Secrets serveur (jamais dans Vite ni le navigateur) :
 - `GEMINI_API_KEY` (ou `GOOGLE_API_KEY`), modèle `EXAM_GEMINI_MODEL`, valeur par
@@ -102,3 +103,23 @@ Action control, step prepare/correct : un cours de section, une question rédig�
 Action `excellence` : copie texte d’un sujet archivé connu, PDF téléchargé à une URL fixe et empreinte vérifiée, correction Gemini sur cinq critères annoncés à l’avance. Aucun schéma/Storage ni URL cliente. Détails, sources, limites et validations : `docs/PRIX-EXCELLENCE-ECONOMIQUE.md`.
 
 Sur 503 persistant pour `control/prepare` uniquement, synthèse directement extraite du chapitre si trois extraits exploitables existent, étiquetée `preparation:course`. Ce repli est sans génération et annoncé comme tel. La correction reste dépendante du fournisseur et ne reçoit aucune note factice. Reprise Gemini après 2,5 secondes, délai global inchangé ; quotas et permissions ne sont pas contournés.
+
+## Correction du Prix
+
+Depuis le correctif du 25 octobre 2026 (#121), l’action `excellence` utilise
+`gemini-3.5-flash-lite`, puis `gemini-3.1-flash-lite`. Les deux ont réellement
+corrigé une rédaction synthétique avec le dossier officiel et passé la validation
+des cinq critères ; leur seule présence dans models.list ne suffisait pas
+(2.5 Flash était encore listé mais répondait 404 en génération).
+
+Les autres actions gardent leur modèle configuré. Pour le Prix, sortie bornée
+à 4500 tokens, réflexion par défaut compatible Lite, reprise différée unique
+sur 503 puis alternative ; délai global partagé de 120 s. Pas de repli pour
+contourner une erreur de quota ou de permissions. Si tout échoue, aucune note
+n’est inventée. Le diagnostic interne temporaire protégé est retiré du déploiement.
+
+Après accord dans l’interface, le fournisseur reçoit la rédaction et le PDF
+officiel vérifié par empreinte. Les cinq critères, citations et maxima sont
+validés côté serveur ; aucune note locale ne remplace une correction en échec.
+La copie reste sur l’appareil. Les journaux d’échec contiennent uniquement
+action, modèle et statut, jamais la rédaction, la clé ou une réponse brute.

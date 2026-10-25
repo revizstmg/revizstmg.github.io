@@ -42,7 +42,7 @@ test('correction authentifiée : PDF intact au modèle, copie traitée comme don
  sent.push(JSON.parse(o.body));return Response.json({candidates:[{content:{parts:[{text:JSON.stringify(response())}]}}]})
  })
  const r=await createHandler({env,fetcher})(request());expect(r.status).toBe(200);expect((await r.json()).excellence.total).toBe(5)
- expect(sent[0].generationConfig.responseSchema.properties.criteria.minItems).toBe(5);expect(sent[0].generationConfig.thinkingConfig).toEqual({thinkingLevel:'LOW'});expect(sent[0].contents[0].parts[1].inlineData.mimeType).toBe('application/pdf');expect(sent[0].contents[0].parts[0].text).toContain('INDICATIVE')
+ expect(sent[0].generationConfig.responseSchema.properties.criteria.minItems).toBe(5);expect(sent[0].generationConfig.thinkingConfig).toBeUndefined();expect(sent[0].generationConfig.maxOutputTokens).toBe(4500);expect(fetcher.mock.calls[2][0]).toContain('/gemini-3.5-flash-lite:generateContent');expect(sent[0].contents[0].parts[1].inlineData.mimeType).toBe('application/pdf');expect(sent[0].contents[0].parts[0].text).toContain('INDICATIVE')
  expect(sent[0].contents[0].parts[0].text).toContain(answer);expect(sent[0].systemInstruction.parts[0].text).toContain('dossier officiel')
 })
 test('sans compte, sans Gemini ou sans dossier vérifiable : aucun appel de correction',async()=>{
@@ -58,4 +58,33 @@ test('sans compte, sans Gemini ou sans dossier vérifiable : aucun appel de corr
 test('libellés, consentement et erreurs du concours disponibles dans les cinq traductions hors ligne',()=>{
  const phrases=['Prix de l’excellence économique','Commencer ma copie','La correction reçue est incomplète. Aucune note n’a été attribuée. Ta copie est conservée.','J’accepte l’envoi de ma copie et du dossier à Gemini pour la correction. Je n’ai inclus ni nom ni donnée personnelle.']
  for(const lang of ['en','es','it','ar','de']){const dictionary=JSON.parse(readFileSync(new URL(`../src/localisation/public.${lang}.json`,import.meta.url),'utf8'));for(const phrase of phrases){expect(dictionary[phrase]).toBeTruthy();expect(dictionary[phrase]).not.toBe(phrase)}}
+})
+
+test('diagnostic modèles : lecture seule, noms Flash filtrés et cache sans clé exposée',async()=>{
+ const fetcher=vi.fn(async()=>Response.json({models:[{name:'models/gemini-2.5-flash',supportedGenerationMethods:['generateContent']},{name:'models/gemini-3.6-flash',supportedGenerationMethods:['generateContent']},{name:'models/gemini-3.8-pro',supportedGenerationMethods:['generateContent']},{name:'models/gemini-2.5-flash-preview',supportedGenerationMethods:['generateContent']}]}))
+ const h=createHandler({env,fetcher});for(let i=0;i<2;i++){const r=await h(new Request('https://test?check=models'));expect(await r.json()).toEqual({ready:true,models:['gemini-2.5-flash','gemini-3.6-flash']})}
+ expect(fetcher).toHaveBeenCalledTimes(1);expect(fetcher.mock.calls[0][1].method).toBeUndefined()
+})
+
+test('Prix : panne transitoire puis repli Gemini, PDF et grille conservés, aucun résultat inventé',async()=>{
+ for(const status of [503,429,403]){
+ const urls=[],pause=vi.fn(async()=>{}),fetcher=vi.fn(async(url,o)=>{
+  if(url.includes('/auth/'))return Response.json({id:'a'})
+  if(url.endsWith('sujet.pdf'))return new Response(readFileSync(new URL('../public/excellence/2022/sujet.pdf',import.meta.url)))
+  urls.push(url);const body=JSON.parse(o.body);expect(body.contents[0].parts[1].inlineData.mimeType).toBe('application/pdf');expect(body.generationConfig.responseSchema.properties.criteria.minItems).toBe(5)
+  if(url.includes('3.5-flash-lite'))return Response.json({error:{message:'private-provider-detail'}},{status})
+  return Response.json({candidates:[{content:{parts:[{text:JSON.stringify(response())}]}}]})
+ })
+ const r=await createHandler({env,fetcher,pause})(request())
+ if(status===503){expect(r.status).toBe(200);expect((await r.json()).excellence.total).toBe(5);expect(urls).toHaveLength(3);expect(urls[2]).toContain('gemini-3.1-flash-lite');expect(pause).toHaveBeenCalledTimes(1)}else{expect(urls).toHaveLength(1);expect(r.status).toBe(status===429?429:502)}
+ }
+})
+
+test('Prix : panne sur les deux modèles, attente bornée et aucune note de remplacement',async()=>{
+ const signals=[],pause=vi.fn(async()=>{}),fetcher=vi.fn(async(url,o)=>{
+ if(url.includes('/auth/'))return Response.json({id:'a'})
+ if(url.endsWith('sujet.pdf'))return new Response(readFileSync(new URL('../public/excellence/2022/sujet.pdf',import.meta.url)))
+ signals.push(o.signal);return new Response('',{status:503})
+ })
+ const r=await createHandler({env,fetcher,pause})(request());expect(r.status).toBe(502);expect(await r.json()).toEqual({error:'provider_unavailable'});expect(signals).toHaveLength(3);expect(signals.every(s=>s===signals[0])).toBe(true);expect(pause).toHaveBeenCalledTimes(1)
 })
