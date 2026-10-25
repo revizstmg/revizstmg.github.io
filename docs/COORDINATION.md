@@ -1375,3 +1375,7 @@ Prochaine action :
 - Branche fix/contraste-indicateur-sauvegarde ; réservation de components/EtatSauvegarde.jsx (fichier partagé déjà ajusté dans #107) pour renforcer uniquement la teinte du texte. Conserver les contrôles axe et tous les parcours. Aucun changement de disposition, données, moteur ni base. Validation ciblée puis revalidation complète et publication du SEO #108.
 
 - Réalisé : texte d’échec de l’indicateur passé d’ambre 700 à ambre 800 en clair, variante sombre conservée. Dix-huit tests ciblés réussis, compilation des 866 pages réussie et parcours exact fenêtre/exercice axe réussi (1/1). Aucune règle d’accessibilité ni assertion supprimée. Prêt pour la revalidation finale de publication.
+
+### PERF-20261025-CODEX-02 - chargement initial sans changement visuel
+- Demande : réduire les temps de chargement au maximum. Branche perf/chargement-polices-panneaux ; réservation Layout.jsx (partagé), scripts/pages-cours.mjs, tests de chargement et documentation de mesure. Différer dictionnaire/accessibilité fermés et découvrir les deux polices locales dès le HTML, pour l’application et les pages publiques. Aucun contenu, fonctionnement de compte, Supabase ou apparence modifié.
+- Mesures avant/après dans les mêmes conditions navigateur mobile à cache froid ; distinguer temps de réponse réseau GitHub Pages et rendu du navigateur. Pas de promesse de délai fixe ni de classement Google. Réservation avant code, contrôles existants conservés.
