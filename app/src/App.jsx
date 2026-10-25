@@ -9,6 +9,8 @@ import AvecCompte from './components/CompteRequis.jsx'
 import { Chargement, ContenuMatiere, ContenuFiliere } from './content/Contenu.jsx'
 
 // Chaque page est un fichier compilé à part, chargé quand on l'ouvre.
+const ExampleStudy = lazy(() => import('./pages/ExampleStudy.jsx'))
+const Offers = lazy(() => import('./pages/Offers.jsx'))
 const Landing = lazy(() => import('./pages/Landing.jsx'))
 const Home = lazy(() => import('./pages/Home.jsx'))
 const Subject = lazy(() => import('./pages/Subject.jsx'))
@@ -78,6 +80,8 @@ export default function App() {
       <Suspense fallback={<Chargement />}>
       <Routes>
         <Route path="/" element={<RootEntry />} />
+        <Route path="/exemple-bilan" element={<ExampleStudy />} />
+        <Route path="/offres" element={<Offers />} />
         <Route path="/changer" element={<Landing />} />
         <Route path="/accueil" element={<Home />} />
         <Route path="/cours" element={<Cours />} />

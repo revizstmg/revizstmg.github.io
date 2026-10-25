@@ -1,5 +1,7 @@
+import {Link} from 'react-router-dom'
+import {readNoteDraft,writeNoteDraft,clearNoteDraft} from '../data/noteDraft.js'
 import NoteRevision from '../components/NoteRevision.jsx'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { getSubject } from '../data/index.js'
@@ -14,21 +16,31 @@ const champ = 'w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text
 // « Mes notes de classe » : l'élève saisit la note reçue en classe ; la matière,
 // puis le chapitre, se choisissent dans des menus tirés des cours de sa filière.
 // L'offre gratuite dit ce qu'il faut améliorer (notesClasse.js), sans plus.
-export default function MesNotes() {
+export default function MesNotes(){
+  const {state}=useStore()
+  return <MesNotesForm key={state.account?.id||'guest'}/>
+}
+function MesNotesForm() {
   const { state, ajouterNoteClasse, retirerNoteClasse } = useStore()
   const t = useT()
   const tr = usePublicText()
   const lang = useLang()
   const matieres = useMemo(() => subjectsForTrack(state.track).filter(Boolean), [state.track])
-  const [saisie, setSaisie] = useState('')
-  const [matiere, setMatiere] = useState('')
-  const [chapitre, setChapitre] = useState('')
-  const [date, setDate] = useState(todayKey)
+  const [draft] = useState(()=>readNoteDraft(state.account?.id))
+  const [draftSaved,setDraftSaved]=useState(true)
+  const [saisie, setSaisie] = useState(draft?.saisie||'')
+  const [matiere, setMatiere] = useState(draft?.matiere||'')
+  const [chapitre, setChapitre] = useState(draft?.chapitre||'')
+  const [date, setDate] = useState(draft?.date||todayKey())
   const [erreur, setErreur] = useState('')
-  const [questionsManquees, setQuestionsManquees] = useState('')
-  const [revision, setRevision] = useState(null)
+  const [questionsManquees, setQuestionsManquees] = useState(draft?.questionsManquees||'')
+  const [revision, setRevision] = useState(draft?.revision||null)
   const [analysisBusy, setAnalysisBusy] = useState(false)
   const [ajoutee, setAjoutee] = useState(false)
+  useEffect(()=>{
+    if(!saisie&&!questionsManquees&&!revision&&!matiere&&!chapitre){clearNoteDraft(state.account?.id);return}
+    setDraftSaved(writeNoteDraft(state.account?.id,{saisie,matiere,chapitre,date,questionsManquees,revision}))
+  },[saisie,matiere,chapitre,date,questionsManquees,revision,state.account?.id])
   if (!state.track) return <Navigate to="/" replace />
 
   const aujourdhui = todayKey()
@@ -69,8 +81,9 @@ export default function MesNotes() {
     <div className="animate-lux space-y-5">
       <header className="page-hero page-hero-compact">
         <h1 className="font-display text-3xl font-medium leading-tight">📝 Mes notes de classe</h1>
-        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Entre les notes que tu reçois en classe : tu vois les chapitres à améliorer.</p>
+        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Ajoute ta note et tes questions manquées, ou dépose ton sujet et ta copie. Tu obtiens un bilan relié au cours et un entraînement ciblé.</p>
       </header>
+      <p className="text-sm"><Link to="/exemple-bilan" className="underline">Voir un exemple de bilan</Link> · <Link to="/offres" className="underline">Comparer les offres</Link></p>
       <hr className="rule-gold" />
 
       <form onSubmit={ajouter} noValidate className="card space-y-3 p-4" aria-labelledby="titre-ajout">
@@ -103,6 +116,7 @@ export default function MesNotes() {
         <label className="block text-sm font-medium" htmlFor="questions-manquees">Question(s) manquée(s) · facultatif
           <textarea id="questions-manquees" rows={4} maxLength={6000} value={questionsManquees} onChange={e => { setQuestionsManquees(e.target.value); setRevision(null) }} className={`${champ} mt-1`} placeholder="Ex. Question 3 : je n’ai pas su calculer la TVA déductible…" />
         </label>
+        </fieldset>
         <NoteRevision key={`${matiere}:${chapitre}:${state.account?.id}`} subject={matiere} chapter={chapitre} missed={questionsManquees} owner={state.account?.id} result={revision} onResult={setRevision} onBusy={setAnalysisBusy} />
         {erreur && (
           <p role="alert" className="text-sm font-medium text-rose-600 dark:text-rose-400">
@@ -110,7 +124,8 @@ export default function MesNotes() {
           </p>
         )}
         {ajoutee && !erreur && <p role="status" className="text-sm font-medium text-emerald-600 dark:text-emerald-400">✓ Note ajoutée</p>}
-        <button type="submit" disabled={analysisBusy} className="btn-primary w-full sm:w-auto">Ajouter</button></fieldset>
+        <button type="submit" disabled={analysisBusy} className="btn-primary w-full sm:w-auto">Ajouter</button>
+        <p role="status" className="text-xs text-slate-600 dark:text-slate-300">{draftSaved?'Ton brouillon et ton bilan restent dans cet onglet après rechargement. Ajoute la note pour les sauvegarder avec ta progression. Les fichiers doivent être sélectionnés à nouveau après rechargement.':'Le brouillon ne peut pas être conservé sur cet appareil. Copie tes questions avant de quitter cette page.'}</p>
       </form>
 
       <section aria-labelledby="titre-ameliorer" className="space-y-3">

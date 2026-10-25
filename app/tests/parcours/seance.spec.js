@@ -9,7 +9,7 @@ test('« Ma séance du jour » : un toucher, et la première question est à l�
   const erreurs = await preparer(page)
   await page.goto('./#/accueil')
   await attendreAccueil(page)
-  await page.getByRole('link', { name: /Ma séance du jour/ }).click()
+  await page.getByRole('link', { name: /Commencer à réviser/ }).click()
   const exercice = page.locator('[data-exercice]')
   await expect(exercice).toContainText(/Étape 1\/1 · Avancer dans le cours/)
   // Plein écran : la barre du bas est recouverte.
@@ -97,7 +97,7 @@ test('accueil du professeur : ses classes et les élèves à relancer', async ({
   await expect(page.getByRole('heading', { name: 'Mes classes' })).toBeVisible()
   await expect(page.getByText(/2 élèves · 1 actif cette semaine/)).toBeVisible()
   await expect(page.getByText('Un élève à relancer')).toBeVisible()
-  await expect(page.getByRole('link', { name: /Ma séance du jour/ })).toHaveCount(0)
+  await expect(page.getByRole('link', { name: /Commencer à réviser/ })).toHaveCount(0)
   expect(erreurs).toEqual([])
 })
 

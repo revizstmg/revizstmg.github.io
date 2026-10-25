@@ -1,3 +1,4 @@
+import {JourneySteps} from '../components/StudyJourney.jsx'
 import MissionCard from '../components/MissionCard.jsx'
 import { CourseText } from '../components/Course.jsx'
 import { Link, Navigate } from 'react-router-dom'
@@ -73,18 +74,20 @@ export default function Home() {
         </div>
         <div className="home-stage">
           <div className="home-invitation">
-            <p className="home-overline">Ton rendez-vous avec le progrès</p>
-            <h2 className="font-display">Révise à ton rythme.</h2>
-            <p className="home-intro">Une notion comprise, une question réussie : chaque petit pas prépare la suite.</p>
+            <p className="home-overline">Ton prochain contrôle</p>
+            <h2 className="font-display">Comprends tes erreurs. Prépare ton prochain contrôle.</h2>
+            <p className="home-intro">Pars de ton dernier devoir pour savoir quoi revoir et comment t’entraîner.</p>
             <div className="home-hero-actions">
-              {realSubjects.length > 0 && <Link to="/seance" className="home-main-action"><Icon.Play size={17} /> Ma séance du jour <span aria-hidden>↗</span></Link>}
-              <Link to="/cours" className="home-courses-action">Voir tous les cours <span aria-hidden>→</span></Link>
+              {realSubjects.length > 0 && <Link to="/seance" className="home-main-action"><Icon.Play size={17} /> Commencer à réviser <span aria-hidden>↗</span></Link>}
+              <Link to="/exemple-bilan" className="home-courses-action">Voir un exemple de bilan <span aria-hidden>→</span></Link>
             </div>
           </div>
           <MissionCard resumeUrl={last?resumeUrl:null} resumeTitle={recent?position.chapterTitle || last?.short || last?.name:last?.short || last?.name}/>
         </div>
         <p className="home-hero-note"><span aria-hidden>✦</span> Aujourd’hui, avance à ton rythme.</p>
       </section>
+
+      <section className="card p-5" aria-label="Du devoir à la révision"><JourneySteps/><div className="mt-5 flex flex-wrap gap-4 text-sm"><Link to="/mes-notes" className="underline">Préparer mon bilan</Link><Link to="/offres" className="underline">Comparer les offres</Link><Link to="/cours" className="underline">Voir tous les cours</Link></div></section>
 
       <section className="home-ritual" aria-labelledby="home-ritual-title">
         <div className="home-section-heading"><div><p className="kicker">Tes habitudes</p><h2 id="home-ritual-title" className="font-display">Trouve ton rythme.</h2></div><Link to="/programme">Mes objectifs <span aria-hidden>↗</span></Link></div>

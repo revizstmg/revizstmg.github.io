@@ -39,6 +39,8 @@ export function nomEcran(chemin) {
   if (['mes-notes','parametres'].includes(p[0]) && p.length === 1) return 'moi'
   // De même : la liste des matières (« Cours ») compte pour « matiere », et la
   // séance du jour pour « revision ».
+  // Les pages explicatives rejoignent le compteur guide existant, sans donnée nouvelle.
+  if (['offres','exemple-bilan'].includes(p[0]) && p.length === 1) return 'guide'
   if (p[0] === 'cours' && p.length === 1) return 'matiere'
   if (p[0] === 'missions' && p.length === 4) return 'revision'
   if (p[0] === 'seance' && p.length === 1) return 'revision'

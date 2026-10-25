@@ -2,7 +2,7 @@ import StudyLanguages from './StudyLanguages.jsx'
 import { normalizeStudyLanguages } from '../data/studyLanguages.js'
 import { TextePublic } from '../localisation/PublicText.jsx'
 import { useEffect, useRef, useState } from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { LEVELS, subjectsForTrack } from '../data/tracks.js'
 import { useT } from '../i18n.js'
@@ -37,7 +37,7 @@ export default function Welcome() {
 
   // Mode parent : sur l'espace parent (ou parent déjà relié), on ne montre jamais
   // l'accueil d'inscription élève — le parent n'a pas de compte élève à créer.
-  const parentMode = location.pathname.startsWith('/parent') || (!state.track && !state.profile?.firstName && (() => { try { return !!localStorage.getItem('stmg_parent_link') } catch { return false } })())
+  const parentMode = ['/exemple-bilan', '/offres'].includes(location.pathname) || location.pathname.startsWith('/parent') || (!state.track && !state.profile?.firstName && (() => { try { return !!localStorage.getItem('stmg_parent_link') } catch { return false } })())
 
   const hasProfile = !!state.profile?.firstName
   // Écran d'accueil : « form » si aucun compte, « plan » si le compte existe
@@ -458,7 +458,7 @@ export default function Welcome() {
       <div className="welcome-card">
         <p className="welcome-brand">RévizSTMG</p>
         <p className="mb-4 text-center text-sm"><a href="/cours/" className="underline">Lire les cours sans inscription</a></p>
-        {authMode === 'login' && !essai && !recoverStep && <p className="mb-5 text-center text-sm leading-relaxed text-slate-600 dark:text-slate-300">Des cours clairs. Des exercices ciblés.<br />Un peu chaque jour, à ton rythme.</p>}
+        {authMode === 'login' && !essai && !recoverStep && <div className="mb-5 space-y-3 text-center"><h2 className="font-display text-2xl">Comprends tes erreurs.<br />Prépare ton prochain contrôle.</h2><p className="text-sm">Pars de ton dernier devoir pour savoir quoi revoir et comment t’entraîner.</p><button type="button" className="welcome-cta" onClick={()=>setEssai(true)}>Commencer à réviser</button><p className="text-sm"><Link to="/exemple-bilan" className="underline">Voir un exemple de bilan</Link> · <Link to="/offres" className="underline">Comparer les offres</Link></p></div>}
 
         {/* ---------- Essai sans compte ---------- */}
         {essai ? (
