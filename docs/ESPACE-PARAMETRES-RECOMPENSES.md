@@ -30,3 +30,7 @@ Maintenir la poignée pendant 350 ms puis glisser. Capture du pointeur sur la li
 Une collecte unique utilise shopRewards et la fusion existante ; les documents peuvent être retéléchargés avec les données actualisées. Un QCM reprend le texte de la réponse correcte, pas son numéro de choix. Si des questions ou cartes manquent, le PDF le dit ; aucune erreur ni réussite n’est inventée. Le document est un support d’entraînement, pas une certification. Pas d’appel IA ni de dépense externe.
 
 Les récompenses cosmétiques et anciens achats restent valides. Les mois Premium/Ultimate restent des réservations futures à vérifier, sans activation commerciale côté client. Aucun lot payant, stock ou partenaire fictif annoncé. L’accessibilité et les cours restent accessibles sans déblocage.
+
+## Organisation des réglages (PR #114)
+
+L’index Paramètres présente désormais des grandes rubriques, puis leurs sous-réglages, avec les formulaires affichés uniquement dans le panneau choisi. Profil, mot de passe, export et suppression sont conservés. Structure et adresses dans [PARAMETRES-RUBRIQUES.md](PARAMETRES-RUBRIQUES.md). Le menu principal est également accessible sur ordinateur.

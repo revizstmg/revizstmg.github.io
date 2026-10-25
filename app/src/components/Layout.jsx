@@ -275,10 +275,9 @@ export default function Layout({ children }) {
           )}
           </div>
 
-          {/* Menu burger : uniquement sur mobile / application. Regroupe toutes
-              les options habituellement en haut à droite. */}
+          {/* Menu principal commun au téléphone et à l’ordinateur. */}
           <MobileMenu
-            className="mobile-menu-trigger sm:hidden"
+            className="mobile-menu-trigger"
             parentSeul={parentSeul}
             state={state}
             isDark={isDark}
