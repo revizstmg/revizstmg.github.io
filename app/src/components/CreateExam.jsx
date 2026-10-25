@@ -14,7 +14,7 @@ export default function CreateExam({ onOpenChange }) {
 function ExamCard({ title, duration, min, children }) {
   return <section className="bac-subject bac-creator" aria-label={title}>
     <div className="bac-preview" aria-hidden="true">
-      <span className="bac-preview-number">03</span>
+      <span className="bac-preview-number">04</span>
       <div className="bac-paper"><span className="bac-paper-small">RÉVIZSTMG</span><span className="bac-paper-rule" /><strong>{title}</strong><span className="bac-paper-duration">{duration} {min}</span><span className="bac-paper-rule" /><span className="bac-paper-lines" /></div>
       <span className="bac-pdf-stamp">PDF</span>
     </div>

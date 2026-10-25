@@ -63,3 +63,5 @@
 .bac-creator .bac-paper { min-height:270px; }
 .bac-creator .bac-subject-body { min-width:0; }
 @media(max-width:640px) { .bac-creator { grid-template-columns:1fr; } .bac-creator .bac-preview { height:225px; min-height:0; align-items:flex-start; padding-top:28px; } }
+
+.bac-subjects{align-items:start}.bac-subjects .bac-creator{display:block}.bac-subjects .bac-creator .bac-preview{height:245px;min-height:0;align-items:flex-start;padding-top:28px}.bac-subject-extra .bac-preview{background:#e7e4d9}

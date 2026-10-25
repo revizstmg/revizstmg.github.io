@@ -106,7 +106,7 @@ test('bac blanc : sujet de maths en Première et aucun QCM chronométré', async
   const erreurs = await preparer(page, etatEleve({ track: { level: 'premiere-stmg' } }))
   await page.goto('./#/bac-blanc')
   await attendreAccueil(page)
-  await expect(page.getByRole('heading', { name: /Épreuve anticipée de mathématiques/ })).toBeVisible()
+  await expect(page.getByRole('heading', { name: /^Mathématiques$/ })).toBeVisible()
   await expect(page.getByRole('button', { name: 'Faire un sujet d’entraînement (2 h)' })).toBeVisible()
   await expect(page.getByRole('heading', { name: '⏱ QCM chronométré' })).toHaveCount(0)
   await expect(page.getByRole('button', { name: /Commencer l’examen/ })).toHaveCount(0)

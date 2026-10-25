@@ -21,9 +21,15 @@ for(const [theme,width,reduced] of [['light',390,false],['dark',1280,false],['li
  await flip.focus();await page.keyboard.press('Space');await expect(flip).toHaveAttribute('aria-pressed','false')
 })
 test('Bienvenue animé une fois par onglet et entrée immédiate au clic',async({page})=>{
- await preparer(page);await page.goto('./#/accueil')
+ await preparer(page,undefined,{bienvenue:true});await page.goto('./#/accueil')
  const hello=page.locator('.welcome-hello');await expect(hello).toBeVisible()
  expect(await page.locator('.welcome-title').evaluate(el=>getComputedStyle(el).animationName)).not.toBe('none')
  await hello.click();await expect(hello).toHaveCount(0)
  await page.reload();await attendreAccueil(page);await expect(page.locator('.welcome-hello')).toHaveCount(0)
+})
+
+test('Bienvenue reste lisible avec mouvement réduit',async({page})=>{
+ await page.emulateMedia({reducedMotion:'reduce'});await preparer(page,undefined,{bienvenue:true});await page.goto('./#/accueil')
+ await expect(page.locator('.welcome-title')).toBeVisible();expect(await page.locator('.welcome-title').evaluate(el=>getComputedStyle(el).opacity)).toBe('1')
+ expect(await page.locator('.welcome-title').evaluate(el=>getComputedStyle(el).animationName)).toBe('none');await page.locator('.welcome-hello').click();await expect(page.locator('.welcome-hello')).toHaveCount(0)
 })

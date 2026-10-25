@@ -12,7 +12,7 @@ async function open(page){await page.goto('./#/excellence-economique');await att
 test('concours sur ordinateur : dossier intégral, défilement séparé, copie remise et correction contrôlée',async({page})=>{
  await page.setViewportSize({width:1280,height:900});const errors=await setup(page);let body
  await page.route('**/functions/v1/examen-blanc',route=>{body=route.request().postDataJSON();return route.fulfill({contentType:'application/json',body:JSON.stringify({excellence:result})})})
- await page.goto('./#/bac-blanc');await attendreAccueil(page);await page.getByRole('link',{name:'Choisir un sujet →',exact:true}).click()
+ await page.goto('./#/bac-blanc');await attendreAccueil(page);await page.getByRole('link',{name:'Choisir un sujet',exact:true}).click()
  await expect(page.getByRole('heading',{name:'Prix de l’excellence économique',exact:true})).toBeVisible()
  await expect(page.getByRole('button',{name:'Ouvrir le sujet',exact:true})).toHaveCount(4)
  await page.getByRole('button',{name:'Ouvrir le sujet',exact:true}).nth(2).click()
