@@ -1,3 +1,4 @@
+import {StudyPromise} from '../components/StudyJourney.jsx'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
@@ -19,6 +20,7 @@ export default function Landing() {
 
   return (
     <div className="animate-lux space-y-6 py-2">
+      <StudyPromise compact onStart={()=>{const area=document.getElementById('choisir-niveau');area?.scrollIntoView({block:'start'});area?.querySelector('button')?.focus({preventScroll:true})}}/>
       <header className="page-hero text-center">
         <p className="kicker">RévizSTMG</p>
         <h1 className="mt-1 font-display text-[2rem] font-medium leading-tight">
@@ -42,7 +44,7 @@ export default function Landing() {
         </button>
       )}
 
-      <div className="space-y-3">
+      <div id="choisir-niveau" className="space-y-3">
         {LEVELS.map((lvl) => {
           const isOpen = openLevel === lvl.id
           const hasSpec = !!lvl.specialties

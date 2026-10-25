@@ -54,8 +54,10 @@ export default function Cgu() {
         de 20 000 XP (niveau 20) et de 20 tests de thèmes différents réussis à au moins 90 %.
         Un mois Ultimate offert est proposé à partir de 73 500 XP (niveau 30) et de 30 tests de thèmes
         différents réussis à au moins 95 %. Le meilleur résultat de chaque thème compte une seule fois.</p>
-        <p>Premium et Ultimate sont des offres en préparation : leurs fonctionnalités et leur date de
-        lancement ne sont pas encore définies. Réserver une récompense n’active pas un abonnement.
+        <p>Premium et Ultimate sont des offres en préparation, sans date de lancement ni tarif annoncé.
+        Premium prévoit l’analyse de copie, un bilan expliqué et un parcours vers les cours. Ultimate ajoute
+        les exercices personnalisés générés, les corrections rédigées et le chatbot de cours. Pendant le
+        développement, les outils restent accessibles aux comptes connectés. Le détail figure dans les <Link to="/offres" className={lien}>offres prévues</Link>. Réserver une récompense n’active pas un abonnement.
         Après vérification des résultats par les éditeurs, le mois offert pourra être activé au lancement
         de l’offre concernée. Un compte est nécessaire ; l’attribution est limitée à un mois par compte et
         par offre. Aucun paiement, aucune carte bancaire et aucun renouvellement automatique ne sont

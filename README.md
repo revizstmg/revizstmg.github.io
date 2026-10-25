@@ -529,3 +529,7 @@ Les sources des manuels sont dans `app/resources/langues/{en,es,it,ar}.json`. Le
 ## Cours publics
 
 Les cours peuvent aussi être lus sans compte et sans JavaScript dans le [catalogue public](https://revizstmg.github.io/cours/). Voir la [méthode et les sources](https://revizstmg.github.io/a-propos/) et le [guide de partage](docs/DIFFUSION-RESSOURCES.md). Les pages HTML, les deux sitemaps et llms.txt sont générés à la compilation ; détails dans [REFERENCEMENT-COURS-PUBLICS.md](docs/REFERENCEMENT-COURS-PUBLICS.md).
+
+### Comprendre ses erreurs
+
+L’accueil propose un [exemple fictif de bilan](https://revizstmg.github.io/#/exemple-bilan) sans compte et le [comparatif des offres prévues](https://revizstmg.github.io/#/offres). Les outils restent accessibles pendant le développement, sans paiement ouvert. Le parcours réel passe par Mes notes de classe : questions manquées ou sujet/copie, bilan relié aux cours et entraînement. Limites, confidentialité du brouillon et vérifications dans [PARCOURS-BILAN.md](docs/PARCOURS-BILAN.md).

@@ -320,6 +320,8 @@ export default function Layout({ children }) {
               {!standalone && <Link to="/guide" className="hover:text-[color:var(--c-accent)] hover:underline">{t('startGuide')}</Link>}
               <Link to="/confidentialite" className="hover:text-[color:var(--c-accent)] hover:underline">{t('privacyPolicy')}</Link>
               <Link to="/cgu" className="hover:text-[color:var(--c-accent)] hover:underline">{t('termsOfUse')}</Link>
+              <Link to="/offres" className="hover:underline">Les offres</Link>
+              <Link to="/exemple-bilan" className="hover:underline">Exemple de bilan</Link>
               <Link to="/faq" className="hover:text-[color:var(--c-accent)] hover:underline">{t('faq')}</Link>
               <button onClick={() => window.dispatchEvent(new CustomEvent('stmg-open-a11y'))} className="hover:text-[color:var(--c-accent)] hover:underline">♿ {t('accessibility')}</button>
               <a href="mailto:revizstmg@gmail.com" className="hover:text-[color:var(--c-accent)] hover:underline">{t('contactUs')} · revizstmg@gmail.com</a>
@@ -403,11 +405,13 @@ function Breadcrumb() {
       items.push({ label: t('friends'), to: '/amis' })
     } else if (parts[0] === 'parent') {
       items.push({ label: t('parentSpace'), to: '/parent' })
+    } else if (['offres','exemple-bilan'].includes(parts[0])) {
+      items.push({label:publicText(parts[0]==='offres'?'Les offres':'Exemple de bilan'),to:`/${parts[0]}`})
     } else if (PAGES_SIMPLES[parts[0]]) {
       items.push({ label: t(PAGES_SIMPLES[parts[0]]), to: `/${parts[0]}` })
     }
     return items
-  }, [pathname, t])
+  }, [pathname, t, publicText])
 
   // Titre de l'onglet : la page en cours, puis le nom du site.
   const dernier = crumbs.length > 1 ? crumbs[crumbs.length - 1].label : ''
