@@ -1,0 +1,230 @@
+[
+  {
+    "version": "avant",
+    "path": "/cours/terminale/droit/",
+    "run": 0,
+    "lcp": 416,
+    "fonts": [
+      {
+        "name": "inter-latin-wght-normal-Dx4kXJAl.woff2",
+        "start": 283,
+        "end": 653
+      },
+      {
+        "name": "cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2",
+        "start": 284,
+        "end": 633
+      }
+    ],
+    "jsBytes": 0
+  },
+  {
+    "version": "avant",
+    "path": "/#/accueil",
+    "run": 0,
+    "lcp": 984,
+    "fonts": [
+      {
+        "name": "cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2",
+        "start": 2303,
+        "end": 2873
+      },
+      {
+        "name": "inter-latin-wght-normal-Dx4kXJAl.woff2",
+        "start": 2312,
+        "end": 2896
+      }
+    ],
+    "jsBytes": 671357
+  },
+  {
+    "version": "apres",
+    "path": "/cours/terminale/droit/",
+    "run": 0,
+    "lcp": 572,
+    "fonts": [
+      {
+        "name": "cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2",
+        "start": 162,
+        "end": 455
+      },
+      {
+        "name": "inter-latin-wght-normal-Dx4kXJAl.woff2",
+        "start": 165,
+        "end": 478
+      }
+    ],
+    "jsBytes": 0
+  },
+  {
+    "version": "apres",
+    "path": "/#/accueil",
+    "run": 0,
+    "lcp": 1004,
+    "fonts": [
+      {
+        "name": "cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2",
+        "start": 159,
+        "end": 599
+      },
+      {
+        "name": "inter-latin-wght-normal-Dx4kXJAl.woff2",
+        "start": 161,
+        "end": 663
+      }
+    ],
+    "jsBytes": 669145
+  },
+  {
+    "version": "avant",
+    "path": "/cours/terminale/droit/",
+    "run": 1,
+    "lcp": 536,
+    "fonts": [
+      {
+        "name": "inter-latin-wght-normal-Dx4kXJAl.woff2",
+        "start": 380,
+        "end": 818
+      },
+      {
+        "name": "cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2",
+        "start": 383,
+        "end": 797
+      }
+    ],
+    "jsBytes": 0
+  },
+  {
+    "version": "avant",
+    "path": "/#/accueil",
+    "run": 1,
+    "lcp": 800,
+    "fonts": [
+      {
+        "name": "cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2",
+        "start": 2273,
+        "end": 2794
+      },
+      {
+        "name": "inter-latin-wght-normal-Dx4kXJAl.woff2",
+        "start": 2277,
+        "end": 2823
+      }
+    ],
+    "jsBytes": 671357
+  },
+  {
+    "version": "apres",
+    "path": "/cours/terminale/droit/",
+    "run": 1,
+    "lcp": 648,
+    "fonts": [
+      {
+        "name": "cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2",
+        "start": 294,
+        "end": 588
+      },
+      {
+        "name": "inter-latin-wght-normal-Dx4kXJAl.woff2",
+        "start": 295,
+        "end": 619
+      }
+    ],
+    "jsBytes": 0
+  },
+  {
+    "version": "apres",
+    "path": "/#/accueil",
+    "run": 1,
+    "lcp": 1060,
+    "fonts": [
+      {
+        "name": "cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2",
+        "start": 169,
+        "end": 632
+      },
+      {
+        "name": "inter-latin-wght-normal-Dx4kXJAl.woff2",
+        "start": 170,
+        "end": 696
+      }
+    ],
+    "jsBytes": 669145
+  },
+  {
+    "version": "avant",
+    "path": "/cours/terminale/droit/",
+    "run": 2,
+    "lcp": 592,
+    "fonts": [
+      {
+        "name": "inter-latin-wght-normal-Dx4kXJAl.woff2",
+        "start": 346,
+        "end": 858
+      },
+      {
+        "name": "cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2",
+        "start": 349,
+        "end": 837
+      }
+    ],
+    "jsBytes": 0
+  },
+  {
+    "version": "avant",
+    "path": "/#/accueil",
+    "run": 2,
+    "lcp": 940,
+    "fonts": [
+      {
+        "name": "cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2",
+        "start": 2293,
+        "end": 2717
+      },
+      {
+        "name": "inter-latin-wght-normal-Dx4kXJAl.woff2",
+        "start": 2294,
+        "end": 2794
+      }
+    ],
+    "jsBytes": 671357
+  },
+  {
+    "version": "apres",
+    "path": "/cours/terminale/droit/",
+    "run": 2,
+    "lcp": 508,
+    "fonts": [
+      {
+        "name": "cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2",
+        "start": 164,
+        "end": 444
+      },
+      {
+        "name": "inter-latin-wght-normal-Dx4kXJAl.woff2",
+        "start": 164,
+        "end": 471
+      }
+    ],
+    "jsBytes": 0
+  },
+  {
+    "version": "apres",
+    "path": "/#/accueil",
+    "run": 2,
+    "lcp": 1100,
+    "fonts": [
+      {
+        "name": "cormorant-garamond-latin-wght-normal-CUoBjw-S.woff2",
+        "start": 260,
+        "end": 717
+      },
+      {
+        "name": "inter-latin-wght-normal-Dx4kXJAl.woff2",
+        "start": 260,
+        "end": 787
+      }
+    ],
+    "jsBytes": 669145
+  }
+]

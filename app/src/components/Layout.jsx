@@ -17,7 +17,7 @@ import Welcome from './Welcome.jsx'
 import Dictionary from './Dictionary.jsx'
 // Le personnaliseur ne s'ouvre qu'à la demande : chargé à ce moment-là.
 const Customizer = lazy(() => import('./Customizer.jsx'))
-import Accessibility from './Accessibility.jsx'
+const Accessibility = lazy(() => import('./Accessibility.jsx'))
 import ReminderScheduler from './ReminderScheduler.jsx'
 import { useFenetreAutomatique } from '../fenetres.js'
 import { useFenetreClavier } from './clavier.js'
@@ -337,7 +337,7 @@ export default function Layout({ children }) {
       {searchOpen && <SearchOverlay onClose={() => setSearchOpen(false)} />}
       {dictOpen && <Dictionary onClose={() => setDictOpen(false)} />}
       {custOpen && <Suspense fallback={null}><Customizer onClose={() => setCustOpen(false)} /></Suspense>}
-      {a11yOpen && <Accessibility onClose={() => setA11yOpen(false)} />}
+      {a11yOpen && <Suspense fallback={null}><Accessibility onClose={() => setA11yOpen(false)} /></Suspense>}
       <BadgeToast />
       <DailyRewardModal />
       <BandeauCookies />
