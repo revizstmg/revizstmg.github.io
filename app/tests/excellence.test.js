@@ -42,7 +42,7 @@ test('correction authentifiée : PDF intact au modèle, copie traitée comme don
  sent.push(JSON.parse(o.body));return Response.json({candidates:[{content:{parts:[{text:JSON.stringify(response())}]}}]})
  })
  const r=await createHandler({env,fetcher})(request());expect(r.status).toBe(200);expect((await r.json()).excellence.total).toBe(5)
- expect(sent[0].generationConfig.responseSchema.properties.criteria.minItems).toBe(5);expect(sent[0].generationConfig.thinkingConfig).toEqual({thinkingBudget:1024});expect(fetcher.mock.calls[2][0]).toContain('/gemini-2.5-flash:generateContent');expect(sent[0].contents[0].parts[1].inlineData.mimeType).toBe('application/pdf');expect(sent[0].contents[0].parts[0].text).toContain('INDICATIVE')
+ expect(sent[0].generationConfig.responseSchema.properties.criteria.minItems).toBe(5);expect(sent[0].generationConfig.thinkingConfig).toBeUndefined();expect(sent[0].generationConfig.maxOutputTokens).toBe(4500);expect(fetcher.mock.calls[2][0]).toContain('/gemini-3.5-flash-lite:generateContent');expect(sent[0].contents[0].parts[1].inlineData.mimeType).toBe('application/pdf');expect(sent[0].contents[0].parts[0].text).toContain('INDICATIVE')
  expect(sent[0].contents[0].parts[0].text).toContain(answer);expect(sent[0].systemInstruction.parts[0].text).toContain('dossier officiel')
 })
 test('sans compte, sans Gemini ou sans dossier vérifiable : aucun appel de correction',async()=>{
@@ -72,10 +72,19 @@ test('Prix : panne transitoire puis repli Gemini, PDF et grille conservés, aucu
   if(url.includes('/auth/'))return Response.json({id:'a'})
   if(url.endsWith('sujet.pdf'))return new Response(readFileSync(new URL('../public/excellence/2022/sujet.pdf',import.meta.url)))
   urls.push(url);const body=JSON.parse(o.body);expect(body.contents[0].parts[1].inlineData.mimeType).toBe('application/pdf');expect(body.generationConfig.responseSchema.properties.criteria.minItems).toBe(5)
-  if(url.includes('2.5'))return Response.json({error:{message:'private-provider-detail'}},{status})
+  if(url.includes('3.5-flash-lite'))return Response.json({error:{message:'private-provider-detail'}},{status})
   return Response.json({candidates:[{content:{parts:[{text:JSON.stringify(response())}]}}]})
  })
  const r=await createHandler({env,fetcher,pause})(request())
- if(status===503){expect(r.status).toBe(200);expect((await r.json()).excellence.total).toBe(5);expect(urls).toHaveLength(3);expect(urls[2]).toContain('gemini-3.6-flash');expect(pause).toHaveBeenCalledTimes(1)}else{expect(urls).toHaveLength(1);expect(r.status).toBe(status===429?429:502)}
+ if(status===503){expect(r.status).toBe(200);expect((await r.json()).excellence.total).toBe(5);expect(urls).toHaveLength(3);expect(urls[2]).toContain('gemini-3.1-flash-lite');expect(pause).toHaveBeenCalledTimes(1)}else{expect(urls).toHaveLength(1);expect(r.status).toBe(status===429?429:502)}
  }
+})
+
+test('Prix : panne sur les deux modèles, attente bornée et aucune note de remplacement',async()=>{
+ const signals=[],pause=vi.fn(async()=>{}),fetcher=vi.fn(async(url,o)=>{
+ if(url.includes('/auth/'))return Response.json({id:'a'})
+ if(url.endsWith('sujet.pdf'))return new Response(readFileSync(new URL('../public/excellence/2022/sujet.pdf',import.meta.url)))
+ signals.push(o.signal);return new Response('',{status:503})
+ })
+ const r=await createHandler({env,fetcher,pause})(request());expect(r.status).toBe(502);expect(await r.json()).toEqual({error:'provider_unavailable'});expect(signals).toHaveLength(3);expect(signals.every(s=>s===signals[0])).toBe(true);expect(pause).toHaveBeenCalledTimes(1)
 })
