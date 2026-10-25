@@ -97,3 +97,8 @@ Action `tutor` : cours de la section ouverte et 1 à 19 messages récents altern
 À la demande du propriétaire (PR #86), study et tutor sont accessibles aux comptes connectés non anonymes sans abonnement. Le contrôle Auth `/user`, les tailles de fichiers et les protections horaires restent actifs. Toutes les options IA sont prévues dans la future offre Ultimate, sans activation ni facturation dans ce chantier. Les anciennes règles d’abonnement décrites plus haut sont remplacées par cette ouverture.
 
 Action control, step prepare/correct : un cours de section, une question rédigée, cinq critères ancrés dans des citations exactes du cours. La correction rend chaque index 0–4 exactement une fois, avec 0/0.5/1 point ; le serveur additionne les points sans accepter de total fourni par le modèle. 30 demandes/heure/utilisateur/instance chaude, clé distincte. Notes indicatives sans XP ni sauvegarde. Aucun accès SQL ou Storage.
+
+## Concours économique et disponibilité des contrôles (25 octobre 2026)
+Action `excellence` : copie texte d’un sujet archivé connu, PDF téléchargé à une URL fixe et empreinte vérifiée, correction Gemini sur cinq critères annoncés à l’avance. Aucun schéma/Storage ni URL cliente. Détails, sources, limites et validations : `docs/PRIX-EXCELLENCE-ECONOMIQUE.md`.
+
+Sur 503 persistant pour `control/prepare` uniquement, synthèse directement extraite du chapitre si trois extraits exploitables existent, étiquetée `preparation:course`. Ce repli est sans génération et annoncé comme tel. La correction reste dépendante du fournisseur et ne reçoit aucune note factice. Reprise Gemini après 2,5 secondes, délai global inchangé ; quotas et permissions ne sont pas contournés.

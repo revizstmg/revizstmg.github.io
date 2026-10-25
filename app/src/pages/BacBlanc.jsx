@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Navigate } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { useStore, useStudyTimer } from '../store.jsx'
 import CreateExam from '../components/CreateExam.jsx'
 import AnnalesBac from '../components/AnnalesBac.jsx'
@@ -35,6 +35,7 @@ function BacBlancPage() {
       {!premiere && <AnnalesBac />}
       </div>
 
+      <section className="card p-6 sm:p-8"><p className="kicker">🏛️ Économie</p><h2 className="mt-2 font-display text-3xl">Prix de l’excellence économique</h2><p className="mt-3 leading-relaxed">Les anciens sujets officiels, les documents à côté de ta copie et une correction détaillée après ta rédaction.</p><Link to="/excellence-economique" className="btn-primary mt-5 inline-flex">Choisir un sujet →</Link></section>
       <CreateExam />
 
       <div className="space-y-6">

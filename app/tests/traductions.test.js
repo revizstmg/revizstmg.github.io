@@ -113,7 +113,7 @@ test('les quotas et variables modifiées ne sont pas mémorisés comme une tradu
 // « Pourquoi ? », notes de classe…) : leurs textes sont traduits hors ligne
 // dans les cinq langues, sans passer par le service de traduction.
 test('les écrans récents sont traduits hors ligne dans les cinq langues', () => {
-  const ecrans = ['pages/Home.jsx', 'pages/Languages.jsx', 'components/ChapterControl.jsx', 'components/CourseTutor.jsx', 'components/NoteRevision.jsx', 'components/OutilsAccueil.jsx', 'components/EtatSauvegarde.jsx', 'components/AccueilProf.jsx', 'components/CompteRequis.jsx',
+  const ecrans = ['pages/Excellence.jsx', 'pages/Home.jsx', 'pages/Languages.jsx', 'components/ChapterControl.jsx', 'components/CourseTutor.jsx', 'components/NoteRevision.jsx', 'components/OutilsAccueil.jsx', 'components/EtatSauvegarde.jsx', 'components/AccueilProf.jsx', 'components/CompteRequis.jsx',
     'components/LegalContents.jsx', 'components/OfflineStatus.jsx', 'components/LevelToolNotice.jsx', 'components/QuizOutboxStatus.jsx',
     'pages/Seance.jsx', 'pages/Cours.jsx', 'pages/BacBlanc.jsx', 'pages/FormulaWorkshop.jsx', 'pages/MesNotes.jsx', 'pages/Theme.jsx', 'pages/Profile.jsx', 'games/SujetMaths.jsx', 'games/GameHost.jsx', 'games/common.jsx', 'games/ThemeTest.jsx']
   const textes = new Set()

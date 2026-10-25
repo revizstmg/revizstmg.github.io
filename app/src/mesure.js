@@ -36,6 +36,7 @@ export function nomEcran(chemin) {
   if (p[0] === 'revision' && p[1] === 'deck' && p.length === 3) return 'paquet'
   // « Mes notes de classe » compte pour « moi » tant que la base n'accepte pas
   // un nom d'écran à elle (il faudrait une migration de la fonction SQL).
+  if(p[0]==='excellence-economique') return 'bac-blanc'
   if (['mes-notes','parametres'].includes(p[0]) && p.length === 1) return 'moi'
   // De même : la liste des matières (« Cours ») compte pour « matiere », et la
   // séance du jour pour « revision ».

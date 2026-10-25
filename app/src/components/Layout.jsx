@@ -390,6 +390,8 @@ function Breadcrumb() {
       if (c) items.push({ label: c.short || c.name, to: pathname })
     } else if (parts[0] === 'revision') {
       items.push({ label: t('reviseTab'), to: '/revision' })
+    } else if (parts[0] === 'excellence-economique') {
+      items.push({ label: t('mockExam'), to: '/bac-blanc' }, {label:'Prix de l’excellence économique',to:'/excellence-economique'})
     } else if (parts[0] === 'bac-blanc') {
       items.push({ label: t('mockExam'), to: '/bac-blanc' })
     } else if (parts[0] === 'programme') {
