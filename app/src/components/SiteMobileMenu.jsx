@@ -18,7 +18,7 @@ export default function SiteMobileMenu(props){
 function Drawer({parentSeul,state,isDark,standalone,lang,first,last,mono,photo,onSearch,onDict,onCustomize,onA11y,onToggleTheme,onLang,onSignOut,onClose}){
  const t=useT(),m=navigationMessages[lang]||navigationMessages.fr,{pathname}=useLocation()
  const [editing,setEditing]=useState(false),panel=useRef(null),heading=useRef(null)
- useEffect(()=>{const previous=document.body.style.overflow;document.body.style.overflow='hidden';const desktop=matchMedia('(max-width:767px), (max-width:1023px) and (max-height:500px)');const resize=()=>{if(!desktop.matches)onClose()};desktop.addEventListener('change',resize);return()=>{document.body.style.overflow=previous;desktop.removeEventListener('change',resize)}},[])
+ useEffect(()=>{const previous=document.body.style.overflow;document.body.style.overflow='hidden';return()=>{document.body.style.overflow=previous}},[])
  useFenetreClavier(panel,onClose)
  const run=fn=>()=>{onClose();fn?.()}
  const item=key=>{const entry=ALL_TABS[key];return <Link key={key} to={entry.to} onClick={onClose} aria-current={entry.match.some(prefix=>pathname===prefix||pathname.startsWith(prefix+'/'))?'page':undefined}><span aria-hidden>{entry.icon}</span><span>{t(entry.labelKey)}</span><span aria-hidden>›</span></Link>}

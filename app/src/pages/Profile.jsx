@@ -33,10 +33,11 @@ function telechargerMesDonnees(state) {
 
 // « Mon espace » : la page personnelle de l'élève — identité, statistiques,
 // badges, favoris et accès rapide. Distincte de la personnalisation (apparence).
-export default function Profile({settingsOnly=false}) {
+export default function Profile({settingsOnly=false,settingsSection=null}) {
   const { state, derived, setBacDate, setParentShare, setStudyLanguages } = useStore()
   const [params, setParams] = useSearchParams()
   const settings = settingsOnly || params.get('section') === 'reglages'
+  const showSetting=key=>!settingsSection||settingsSection===key
   const t = useT()
   const tr = usePublicText()
   const [busy, setBusy] = useState(false)
@@ -141,7 +142,7 @@ export default function Profile({settingsOnly=false}) {
         </div>
       </section>
 
-      <nav aria-label="Mon espace" className="flex gap-2"><button style={{ transitionProperty: 'transform' }} aria-pressed={!settings} className={!settings ? "btn-primary" : "btn-ghost"} onClick={() => setParams({})}>Mes progrès</button><button style={{ transitionProperty: 'transform' }} aria-pressed={settings} className={settings ? "btn-primary" : "btn-ghost"} onClick={() => setParams({section:'reglages'})}>Réglages</button></nav>
+      <nav aria-label="Mon espace" className="flex gap-2"><button style={{ transitionProperty: 'transform' }} aria-pressed={!settings} className={!settings ? "btn-primary" : "btn-ghost"} onClick={() => setParams({})}>Mes progrès</button><Link className="btn-ghost" to="/parametres">Réglages</Link></nav>
       </div><div hidden={settings} className="space-y-5">
       {/* Statistiques */}
       <section>
@@ -238,17 +239,17 @@ export default function Profile({settingsOnly=false}) {
 
 
 </div><div hidden={!settings} className="space-y-5">
-      <section className="card p-5"><StudyLanguages value={state.studyLanguages} onChange={setStudyLanguages} /></section>
+      {showSetting('langues')&&<section className="card p-5"><StudyLanguages value={state.studyLanguages} onChange={setStudyLanguages} /></section>}
       {/* Suivi parental : partage volontaire, puis code à donner à ses parents
           (avec un compte : la base n'accepte la publication que d'un compte connecté). */}
-      {PARENT_READY && estEnEssai(state) && (
+      {showSetting('parents') && PARENT_READY && estEnEssai(state) && (
         <section className="card p-5">
           <h2 className="font-display text-xl font-medium">👨‍👩‍👧 {t('studentParentCard')}</h2>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Pour que tes parents suivent ta progression, crée d’abord ton compte : ta progression d’essai y sera gardée.</p>
           <button type="button" onClick={creerMonCompte} className="btn-primary mt-3 text-sm">Créer mon compte</button>
         </section>
       )}
-      {PARENT_READY && !estEnEssai(state) && (
+      {showSetting('parents') && PARENT_READY && !estEnEssai(state) && (
         <section className="card p-5">
           <div className="flex items-start gap-3">
             <div className="min-w-0 flex-1">
@@ -276,10 +277,10 @@ export default function Profile({settingsOnly=false}) {
       )}
 
       {/* Préférences & accessibilité */}
-      <section>
-        <h2 className="mb-3 px-1 font-display text-xl font-medium">⚙️ {t('preferences')}</h2>
+      {(showSetting('preferences')||showSetting('examen'))&&<section>
+        {!settingsOnly&&<h2 className="mb-3 px-1 font-display text-xl font-medium">⚙️ {t('preferences')}</h2>}
         <div className="card divide-y divide-slate-100 p-0 dark:divide-slate-800">
-          <button onClick={() => window.dispatchEvent(new CustomEvent('stmg-open-a11y'))} className="flex w-full items-center gap-3 p-4 text-start transition hover:bg-slate-50 dark:hover:bg-slate-800/50">
+          {showSetting('preferences')&&<>          <button onClick={() => window.dispatchEvent(new CustomEvent('stmg-open-a11y'))} className="flex w-full items-center gap-3 p-4 text-start transition hover:bg-slate-50 dark:hover:bg-slate-800/50">
             <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-slate-100 text-lg dark:bg-slate-800" aria-hidden>♿</span>
             <span className="min-w-0 flex-1"><span className="block font-display font-semibold">{t('accessibility')}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{t('prefA11yHint')}</span></span>
             <span className="text-slate-300" aria-hidden>›</span>
@@ -289,40 +290,41 @@ export default function Profile({settingsOnly=false}) {
             <span className="min-w-0 flex-1"><span className="block font-display font-semibold">{t('prefTabs')}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{t('prefTabsHint')}</span></span>
             <span className="text-slate-300" aria-hidden>›</span>
           </button>
+</>}
           <div className="flex items-center gap-3 p-4">
             <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-slate-100 text-lg dark:bg-slate-800" aria-hidden>📅</span>
             <span className="min-w-0 flex-1"><span className="block font-display font-semibold">{t('prefBac')}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{bacDays != null && bacDays >= 0 ? `J-${bacDays} · ${t('prefBacHint')}` : t('prefBacHint')}</span></span>
             <input type="date" aria-label={t('prefBac')} value={state.bacDate || ''} onChange={(e) => setBacDate(e.target.value)} className="shrink-0 rounded-lg border border-slate-200 bg-white px-2 py-1.5 text-xs dark:border-slate-700 dark:bg-slate-800" />
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* Installer l'application (PWA) */}
-      <section>
+      {showSetting('application')&&<section>
         <h2 className="mb-3 px-1 font-display text-xl font-medium">{t('installApp')}</h2>
         <OfflineStatus /><InstallCard />
-      </section>
+      </section>}
 
       {/* Rappels de révision */}
-      <section>
+      {showSetting('notifications')&&<section>
         <h2 className="mb-3 px-1 font-display text-xl font-medium">🔔 {t('reminders')}</h2>
         <ReminderCard t={t} />
-      </section>
+      </section>}
 
       {/* Confidentialité & suppression du compte (RGPD) */}
-      <section className="space-y-2 pt-2">
-        <div className="flex flex-wrap items-center justify-between gap-2">
+      {(showSetting('donnees')||showSetting('suppression'))&&<section className="space-y-2 pt-2">
+        {showSetting('donnees')&&<div className="flex flex-wrap items-center justify-between gap-2">
           <Link to="/confidentialite" className="text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('privacyPolicy')}</Link>
           <button onClick={() => telechargerMesDonnees(state)} className="btn-ghost text-sm">⬇️ {t('downloadMyData')}</button>
-        </div>
-        <div className="card p-4" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, #e11d48 40%, transparent)' }}>
+        </div>}
+        {showSetting('suppression')&&        <div className="card p-4" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, #e11d48 40%, transparent)' }}>
           <h3 className="font-display font-semibold text-rose-600 dark:text-rose-400">{t('dangerZone')}</h3>
           <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{t('deleteAccountHint')}</p>
           <button onClick={deleteAccount} disabled={busy} className="mt-3 w-full rounded-xl border-2 border-rose-500 px-4 py-2.5 text-sm font-semibold text-rose-600 transition hover:bg-rose-50 disabled:opacity-60 dark:text-rose-400 dark:hover:bg-rose-950/40">
             {busy ? t('pleaseWait') : `🗑️ ${t('deleteAccount')}`}
           </button>
-        </div>
-      </section>
+        </div>}
+      </section>}
       </div>
     </div>
   )

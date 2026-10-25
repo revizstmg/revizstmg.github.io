@@ -55,7 +55,9 @@ test('choisir et ordonner ses onglets dans le menu, sauvegarde et limites',async
  expect((await etat(page)).tabs).toBeNull()
  await expect(editor.locator('li')).toHaveCount(5)
  await menu.getByRole('button',{name:'Retour',exact:false}).click();await expect(menu.getByRole('link',{name:'Cours',exact:true})).toBeVisible()
- await page.setViewportSize({width:1280,height:900});await expect(menu).toHaveCount(0)
+ await page.setViewportSize({width:1280,height:900});await expect(menu).toBeVisible()
+ await page.keyboard.press('Escape');await expect(menu).toHaveCount(0)
+ await expect(page.getByRole('button',{name:'Menu',exact:true})).toBeFocused()
  expect(errors).toEqual([])
 })
 for(const [lang,menuName,label] of [['de','Menü','Meine Tabs auswählen'],['ar','القائمة','اختيار علامات التبويب']])test('menu principal traduit '+lang,async({page})=>{
