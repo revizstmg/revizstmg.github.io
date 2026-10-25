@@ -1,4 +1,6 @@
-import {practiceUnits} from '../../../supabase/functions/examen-blanc/practice.js'
+import {readFileSync} from 'node:fs'
+// Charger ce module Deno en ESM explicite, y compris sous Node 22 en CI.
+const {practiceUnits}=await import('data:text/javascript;base64,'+Buffer.from(readFileSync(new URL('../../../supabase/functions/examen-blanc/practice.js',import.meta.url),'utf8')).toString('base64'))
 import {test,expect} from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 import {preparer,attendreAccueil} from './eleve.js'
