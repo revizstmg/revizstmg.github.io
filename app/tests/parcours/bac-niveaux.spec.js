@@ -13,12 +13,13 @@ for(const [level,width,title] of [['premiere-stmg',390,'Mathématiques'],['termi
  await page.getByRole('link',{name:/Choisir un sujet/}).click();await page.getByRole('button',{name:'Ouvrir le sujet',exact:true}).first().click()
  if(width<768)await page.getByRole('button',{name:'Documents',exact:true}).click()
  const open=page.getByRole('button',{name:'Agrandir le PDF',exact:true});await open.click();const dialog=page.getByRole('dialog',{name:'Le dossier',exact:true});await expect(dialog).toBeVisible()
- await expect(dialog.locator('iframe')).toHaveAttribute('title','PDF complet')
- await expect(dialog.locator('iframe')).toHaveAttribute('src',/\/sujet\.pdf#view=FitH$/)
- const box=await dialog.locator('iframe').boundingBox();expect(box.width).toBeGreaterThan(width-90);expect(box.height).toBeGreaterThan(600)
+ await expect(dialog.locator('img')).toHaveCount(10)
+ await expect(dialog.getByRole('link',{name:/Ouvrir le PDF dans un nouvel onglet/})).toHaveAttribute('href',/\/sujet\.pdf$/)
+ await page.waitForFunction(()=>document.querySelector('.excellence-reader-pages img')?.naturalWidth>0)
+ const before=await dialog.locator('img').first().boundingBox();await dialog.getByRole('button',{name:'Augmenter le zoom',exact:true}).click();expect((await dialog.locator('img').first().boundingBox()).width).toBeGreaterThan(before.width)
+ const box=await dialog.locator('.excellence-reader-pages').boundingBox();expect(box.width).toBeGreaterThan(width-90);expect(box.height).toBeGreaterThan(500)
  await expect(dialog.getByRole('link',{name:/Ouvrir le PDF dans un nouvel onglet/})).toHaveAttribute('target','_blank')
- // Auditer le HTML hôte et le titre du cadre ; le lecteur PDF natif n’est pas un document HTML.
- expect((await new AxeBuilder({page}).include('.excellence-pdf-reader').exclude('.excellence-pdf-reader iframe').analyze()).violations).toEqual([])
+ expect((await new AxeBuilder({page}).include('.excellence-pdf-reader').analyze()).violations).toEqual([])
  await dialog.getByRole('button',{name:'Fermer',exact:true}).click();await expect(dialog).toHaveCount(0);await expect(open).toBeFocused()
  }
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true)
