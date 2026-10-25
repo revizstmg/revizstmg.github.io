@@ -51,7 +51,15 @@ test('réglages : modifier les langues, conserver le choix au rechargement et fi
  await group.getByRole('button', { name: 'Allemand', exact: true }).click()
  await expect.poll(async () => (await etat(page)).studyLanguages).toEqual(['de'])
  for (const dark of [false, true]) {
-  await page.evaluate(value => document.documentElement.classList.toggle('dark', value), dark)
+  const current=await page.locator('html').evaluate(el=>el.classList.contains('dark'))
+  if(current!==dark){
+   await page.getByRole('button',{name:'Menu',exact:true}).click()
+   const menu=page.getByRole('dialog',{name:'Menu',exact:true})
+   await menu.getByRole('button',{name:dark?'Passer en mode sombre':'Passer en mode clair',exact:true}).click()
+   await menu.getByRole('button',{name:'Fermer',exact:true}).click()
+  }
+  await expect.poll(()=>page.locator('html').evaluate(el=>el.classList.contains('dark'))).toBe(dark)
+  await page.waitForFunction(()=>document.getAnimations().every(a=>a.playState!=='running'||a.effect?.getComputedTiming().iterations===Infinity))
   expect((await new AxeBuilder({ page }).include('main').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([])
   await group.screenshot({ path: `test-results/study-languages-${dark ? 'dark' : 'light'}.png` })
  }
