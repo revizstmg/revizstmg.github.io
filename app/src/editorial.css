@@ -52,6 +52,8 @@
 .site-shell .page-hero .btn-primary { background: #e9d7aa; color: #172d30; }
 .site-shell .btn-ghost { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-ink) 20%, transparent); }
 .site-main { padding-top: 1.5rem; }
+/* Le pied de page reste sous la première fenêtre : quand le contenu d'une page arrive après son chargement, il ne remonte ni ne descend dans la zone visible (décalage de mise en page). */
+.site-main { min-height: 100vh; min-height: 100svh; }
 .site-main > div > .rule-gold { opacity: .5; }
 .identity-hero, .shop-hero { border-radius: 26px; }
 .shop-hero { background: var(--editorial-green); }

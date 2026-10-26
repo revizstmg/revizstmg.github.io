@@ -1472,3 +1472,8 @@ Prochaine action :
 ### SEO-20261026-CLAUDE-03 - titres et descriptions des pages de cours publiques
 - Demande : corriger les titres trop longs (836 pages à plus de 65 caractères) et les descriptions coupées au milieu d'une phrase (806 pages) relevés par l'audit local.
 - Réalisé dans app/scripts/pages-cours/generer.mjs : titre limité à 60 caractères environ (suffixe matière/niveau conservé, titre du chapitre raccourci, collisions rallongées pour rester uniques) ; description faite de phrases entières du cours puis d'un rappel de la matière. Après correction : 2 titres au-dessus de 65 caractères, 198 descriptions finissant par « … » (phrase unique trop longue). Tests de pages-cours resserrés.
+
+### PERF-20261026-CLAUDE-04 - décalage de mise en page de l'accueil
+- Constat (audit local, mobile émulé en 4G lente) : décalage cumulé de 0,42 sur l'accueil, seuil « bon » à 0,1. Cause : pendant le chargement de la page, le pied de page s'affichait sous un indicateur court puis était repoussé hors de la zone visible à l'arrivée du contenu.
+- Réalisé : app/src/editorial.css réserve au contenu principal au moins la hauteur d'un écran, le pied de page reste sous la première fenêtre. Mesure après correction : 0,033 sur l'accueil et sur /#/accueil. Une première piste (indicateur de chargement plein écran) a été abandonnée : elle aggravait /#/accueil (1,10). Test stabilite-accueil.spec.js, vérifié rouge sans la règle et vert avec.
+- Reste un décalage de 0,03 au remplacement de l'accueil statique par l'application, sous le seuil, non traité.
