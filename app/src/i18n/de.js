@@ -1029,5 +1029,6 @@ export default {
   "addFav": "Zu Favoriten hinzufügen",
   "autoTranslated": "automatisch übersetzt",
   "translationPartial": "Einige Texte konnten nicht übersetzt werden. Sie können es noch einmal versuchen.",
-  "studyGerman": "Deutsch"
+  "studyGerman": "Deutsch",
+  "myPath": "Mein Lernweg",
 }

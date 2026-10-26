@@ -372,4 +372,5 @@ export default {
   addFavHint: 'أضفها بالنجمة ☆ في صفحة فصل.',
   removeFav: 'إزالة من المفضّلة', addFav: 'إضافة إلى المفضّلة',
   autoTranslated: 'مُترجَم تلقائيًا',
+  myPath: 'مساري',
 }

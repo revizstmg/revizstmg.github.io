@@ -39,12 +39,12 @@ export function nomEcran(chemin) {
   if(p[0]==='excellence-economique') return 'bac-blanc'
   if (['mes-notes','parametres'].includes(p[0]) && p.length === 1) return 'moi'
   // De même : la liste des matières (« Cours ») compte pour « matiere », et la
-  // séance du jour pour « revision ».
+  // séance du jour et le parcours personnalisé pour « revision ».
   // Les pages explicatives rejoignent le compteur guide existant, sans donnée nouvelle.
   if (['offres','exemple-bilan'].includes(p[0]) && p.length === 1) return 'guide'
   if (p[0] === 'cours' && p.length === 1) return 'matiere'
   if (p[0] === 'missions' && p.length === 4) return 'revision'
-  if (p[0] === 'seance' && p.length === 1) return 'revision'
+  if (['seance', 'parcours'].includes(p[0]) && p.length === 1) return 'revision'
   return p.length === 1 && ECRANS.includes(p[0]) ? p[0] : 'introuvable'
 }
 

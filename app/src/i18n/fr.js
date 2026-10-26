@@ -361,4 +361,5 @@ export default {
   removeFav: 'Retirer des favoris', addFav: 'Ajouter aux favoris',
   autoTranslated: 'traduit automatiquement',
   translationPartial: 'Certains textes n’ont pas pu être traduits. Tu peux réessayer.',
+  myPath: 'Mon parcours',
 }
