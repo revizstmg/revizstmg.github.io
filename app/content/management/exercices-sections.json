@@ -11,6 +11,6 @@
   "mgmt-t2-vf": 1,
   "mgmt-t3-flash": 1,
   "mgmt-t3-qcm": 0,
-  "mgmt-t3-tri": 0,
+  "mgmt-t3-tri": 2,
   "mgmt-t3-vf": 1
 }

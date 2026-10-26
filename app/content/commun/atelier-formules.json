@@ -2585,22 +2585,22 @@
       {
         "symbol": "n",
         "label": "Nombre d’épreuves indépendantes n",
-        "min": 10,
-        "max": 20,
+        "min": 5,
+        "max": 10,
         "step": 1
       },
       {
         "symbol": "p",
         "label": "Probabilité de succès p",
-        "min": 0.1,
-        "max": 0.8,
+        "min": 0.2,
+        "max": 0.6,
         "step": 0.1
       },
       {
         "symbol": "k",
         "label": "Nombre exact de succès k",
         "min": 1,
-        "max": 8,
+        "max": 5,
         "step": 1
       }
     ],
@@ -2628,22 +2628,22 @@
       {
         "symbol": "n",
         "label": "Nombre d’épreuves indépendantes n",
-        "min": 10,
-        "max": 20,
+        "min": 5,
+        "max": 10,
         "step": 1
       },
       {
         "symbol": "p",
         "label": "Probabilité de succès p",
-        "min": 0.1,
-        "max": 0.8,
+        "min": 0.2,
+        "max": 0.6,
         "step": 0.1
       },
       {
         "symbol": "k",
         "label": "Seuil k",
         "min": 1,
-        "max": 8,
+        "max": 5,
         "step": 1
       }
     ],
@@ -3400,13 +3400,13 @@
         "symbol": "a",
         "label": "Marge commerciale",
         "min": 100,
-        "max": 1000,
+        "max": 600,
         "step": 20
       },
       {
         "symbol": "b",
         "label": "Production",
-        "min": 100,
+        "min": 400,
         "max": 1000,
         "step": 20
       },
@@ -3414,7 +3414,7 @@
         "symbol": "c",
         "label": "Consommations en provenance des tiers",
         "min": 100,
-        "max": 1000,
+        "max": 480,
         "step": 20
       }
     ],
@@ -3965,16 +3965,16 @@
       {
         "symbol": "a",
         "label": "Dettes financières",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 1200,
+        "max": 5000,
+        "step": 100
       },
       {
         "symbol": "b",
         "label": "CAF positive",
-        "min": 1200,
-        "max": 5000,
-        "step": 100
+        "min": 500,
+        "max": 1000,
+        "step": 50
       }
     ],
     "expression": [
@@ -3998,16 +3998,16 @@
       {
         "symbol": "a",
         "label": "Actif circulant",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 1200,
+        "max": 5000,
+        "step": 100
       },
       {
         "symbol": "b",
         "label": "Dettes à court terme",
-        "min": 1200,
-        "max": 5000,
-        "step": 100
+        "min": 100,
+        "max": 1000,
+        "step": 20
       }
     ],
     "expression": [
@@ -4031,16 +4031,16 @@
       {
         "symbol": "a",
         "label": "Total actif",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 1200,
+        "max": 5000,
+        "step": 100
       },
       {
         "symbol": "b",
         "label": "Total des dettes",
-        "min": 1200,
-        "max": 5000,
-        "step": 100
+        "min": 100,
+        "max": 1000,
+        "step": 20
       }
     ],
     "expression": [
@@ -4175,16 +4175,16 @@
       {
         "symbol": "a",
         "label": "Montant investi",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 1000,
+        "max": 5000,
+        "step": 100
       },
       {
         "symbol": "b",
         "label": "Gain annuel constant",
-        "min": 1200,
-        "max": 5000,
-        "step": 100
+        "min": 400,
+        "max": 1000,
+        "step": 20
       }
     ],
     "expression": [
@@ -4242,15 +4242,15 @@
         "symbol": "a",
         "label": "Coût variable unitaire",
         "min": 100,
-        "max": 1000,
+        "max": 600,
         "step": 20
       },
       {
         "symbol": "b",
         "label": "Prix de vente unitaire",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 700,
+        "max": 1500,
+        "step": 50
       }
     ],
     "expression": [
@@ -4307,16 +4307,16 @@
       {
         "symbol": "a",
         "label": "Charges fixes",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 1200,
+        "max": 5000,
+        "step": 100
       },
       {
         "symbol": "b",
         "label": "MCV unitaire positive",
-        "min": 1200,
-        "max": 5000,
-        "step": 100
+        "min": 20,
+        "max": 100,
+        "step": 5
       }
     ],
     "expression": [
@@ -4444,16 +4444,16 @@
       {
         "symbol": "a",
         "label": "Total des charges du centre",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 1200,
+        "max": 5000,
+        "step": 100
       },
       {
         "symbol": "b",
         "label": "Nombre d’unités d’œuvre",
-        "min": 1200,
-        "max": 5000,
-        "step": 100
+        "min": 100,
+        "max": 1000,
+        "step": 20
       }
     ],
     "expression": [
@@ -4478,15 +4478,15 @@
         "symbol": "a",
         "label": "Coût d’achat HT unitaire",
         "min": 100,
-        "max": 1000,
+        "max": 600,
         "step": 20
       },
       {
         "symbol": "b",
         "label": "Prix de vente HT unitaire",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 700,
+        "max": 1500,
+        "step": 50
       }
     ],
     "expression": [
@@ -4617,16 +4617,16 @@
       {
         "symbol": "a",
         "label": "CA N−1",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 1000,
+        "max": 2000,
+        "step": 50
       },
       {
         "symbol": "b",
         "label": "CA N",
-        "min": 1200,
-        "max": 5000,
-        "step": 100
+        "min": 900,
+        "max": 2200,
+        "step": 50
       }
     ],
     "expression": [
@@ -4658,16 +4658,16 @@
       {
         "symbol": "a",
         "label": "Marché N−1",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 1000,
+        "max": 2000,
+        "step": 50
       },
       {
         "symbol": "b",
         "label": "Marché N",
-        "min": 1200,
-        "max": 5000,
-        "step": 100
+        "min": 900,
+        "max": 2200,
+        "step": 50
       }
     ],
     "expression": [
@@ -4769,14 +4769,14 @@
       {
         "symbol": "a",
         "label": "Heures d’absence",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 40,
+        "max": 200,
+        "step": 5
       },
       {
         "symbol": "b",
         "label": "Heures théoriques",
-        "min": 1200,
+        "min": 1600,
         "max": 5000,
         "step": 100
       }
@@ -4844,15 +4844,15 @@
         "symbol": "a",
         "label": "Coût",
         "min": 100,
-        "max": 1000,
+        "max": 600,
         "step": 20
       },
       {
         "symbol": "b",
         "label": "Prix de vente",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 700,
+        "max": 1500,
+        "step": 50
       }
     ],
     "expression": [
@@ -4877,15 +4877,15 @@
         "symbol": "a",
         "label": "Consommations intermédiaires",
         "min": 100,
-        "max": 1000,
+        "max": 600,
         "step": 20
       },
       {
         "symbol": "b",
         "label": "Production",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 800,
+        "max": 1500,
+        "step": 50
       }
     ],
     "expression": [
@@ -4953,16 +4953,16 @@
       {
         "symbol": "a",
         "label": "PIB N−1",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 1000,
+        "max": 2000,
+        "step": 50
       },
       {
         "symbol": "b",
         "label": "PIB N",
-        "min": 1200,
-        "max": 5000,
-        "step": 100
+        "min": 900,
+        "max": 2200,
+        "step": 50
       }
     ],
     "expression": [
@@ -4994,16 +4994,16 @@
       {
         "symbol": "a",
         "label": "PIB",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 1200,
+        "max": 5000,
+        "step": 100
       },
       {
         "symbol": "b",
         "label": "Population",
-        "min": 1200,
-        "max": 5000,
-        "step": 100
+        "min": 20,
+        "max": 100,
+        "step": 5
       }
     ],
     "expression": [
@@ -5027,16 +5027,16 @@
       {
         "symbol": "a",
         "label": "Production",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 1200,
+        "max": 5000,
+        "step": 100
       },
       {
         "symbol": "b",
         "label": "Nombre d’heures travaillées",
-        "min": 1200,
-        "max": 5000,
-        "step": 100
+        "min": 100,
+        "max": 1000,
+        "step": 20
       }
     ],
     "expression": [
@@ -5624,15 +5624,15 @@
       {
         "symbol": "a",
         "label": "Gain",
-        "min": 100,
-        "max": 1000,
-        "step": 20
+        "min": 1200,
+        "max": 3000,
+        "step": 100
       },
       {
         "symbol": "b",
         "label": "Coût de l’investissement",
-        "min": 1200,
-        "max": 5000,
+        "min": 1000,
+        "max": 2000,
         "step": 100
       }
     ],
@@ -6173,15 +6173,15 @@
       {
         "symbol": "n",
         "label": "Nombre d’épreuves indépendantes n",
-        "min": 10,
-        "max": 20,
+        "min": 3,
+        "max": 8,
         "step": 1
       },
       {
         "symbol": "p",
         "label": "Probabilité de succès p",
         "min": 0.1,
-        "max": 0.8,
+        "max": 0.5,
         "step": 0.1
       }
     ],
