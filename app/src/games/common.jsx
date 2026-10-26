@@ -7,6 +7,8 @@ import { ALL_CHAPTERS, notionDuChoix } from '../data/index.js'
 export function normalize(s) {
   return String(s)
     .toLowerCase()
+    .replace(/œ/g, 'oe')
+    .replace(/æ/g, 'ae')
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
     .replace(/[’']/g, "'")
@@ -24,7 +26,7 @@ export function answerMatches(input, answer, alt = []) {
 // numéro de liste, trait d'union, ponctuation finale.
 export function sansHabillage(s) {
   return normalize(s)
-    .replace(/^\d+\s*[.)]\s*/, '')
+    .replace(/^\d+\s*[.)]\s+/, '') // « 5. La mineure » ; pas « 5.5 »
     .replace(/^[\u2460-\u2473]\s*/, '')
     .replace(/^(l'|d'|le |la |les |un |une |des |du |de la |de l')/, '')
     .replace(/[-‐‑]/g, ' ')
@@ -33,14 +35,39 @@ export function sansHabillage(s) {
     .trim()
 }
 
+// Écritures équivalentes d'une même réponse chiffrée ou datée : « 2000 € » et
+// « 2 000 € », « 10% » et « 10 % », « 5.5 » et « 5,5 », « 2 septembre 1945 » et
+// « 2 sept. 1945 ». Appliqué aux réponses de cours, jamais aux langues.
+const MOIS = { janv: 'janvier', fevr: 'fevrier', avr: 'avril', juil: 'juillet', sept: 'septembre', oct: 'octobre', nov: 'novembre', dec: 'decembre' }
+export function formeCanonique(s) {
+  return sansHabillage(s)
+    .replace(/(\d)\s+(?=\d{3}(?!\d))/g, '$1')
+    .replace(/(\d)\.(?=\d)/g, '$1,')
+    .replace(/\s*([€%])/g, ' $1')
+    .replace(/\b(janv|fevr|avr|juil|sept|oct|nov|dec)\.?(?=\s|$)/g, (_, m) => MOIS[m])
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+// Formes acceptées pour une réponse attendue : avec ou sans sigle entre
+// parenthèses (« hors taxes (HT) »), le sigle seul, sans « TTC » / « HT » final.
+function formesAcceptees(a) {
+  const brut = String(a)
+  const formes = [brut]
+  const paren = brut.match(/^(.*?)\s*\(([^()]{1,12})\)\s*\.?$/)
+  if (paren) formes.push(paren[1], paren[2])
+  for (const f of [...formes]) { const sans = f.replace(/\s+(ttc|ht)\s*$/i, ''); if (sans !== f) formes.push(sans) }
+  return formes.filter((f) => f.trim())
+}
+
 // Exercices de cours (saisie, texte à trous, cas) : « convention collective »
 // vaut « La convention collective », « mineure » vaut « 5. La mineure ».
 // Pas pour les langues, où l'article fait partie de la réponse.
 export function answerMatchesCours(input, answer, alt = []) {
   if (answerMatches(input, answer, alt)) return true
-  const n = sansHabillage(input)
+  const n = formeCanonique(input)
   if (!n) return false
-  return [answer, ...alt].some((a) => sansHabillage(a) === n)
+  return [answer, ...alt].some((a) => formesAcceptees(a).some((f) => formeCanonique(f) === n))
 }
 
 // Mélange les propositions d'une question et recale l'indice de la bonne

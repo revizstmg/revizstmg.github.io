@@ -482,6 +482,19 @@ export function estEtapeMethode(terme) {
   return ETAPES_METHODE.has(cleReponse(String(terme).replace(/\([^)]*\)/g, ' ')))
 }
 
+// Années d'une date de cours : « 5 mars 1953 » → [1953, 1953], « 1950-1953 » →
+// [1950, 1953]. Deux dates dont les plages se recouvrent peuvent désigner le
+// même moment : jamais l'une en bonne réponse et l'autre en mauvaise.
+export function plageAnnees(d) {
+  const ans = [...String(d ?? '').matchAll(/(?<!\d)\d{3,4}(?!\d)/g)].map((m) => Number(m[0]))
+  return ans.length ? [Math.min(...ans), Math.max(...ans)] : null
+}
+export function datesCompatibles(d1, d2) {
+  const a = plageAnnees(d1), b = plageAnnees(d2)
+  if (!a || !b) return String(d1).trim() === String(d2).trim()
+  return a[0] <= b[1] && b[0] <= a[1]
+}
+
 // Construit un QCM à partir de paires { q (énoncé), a (bonne réponse), e }.
 // Les mauvaises réponses (distracteurs) sont tirées des AUTRES réponses de la
 // même section → l'exercice reste propre au chapitre.
@@ -504,6 +517,28 @@ function qcmFromPairs(pairs, id, title, exclut = null) {
 // puces de la SECTION (on masque le terme mis en valeur dans sa phrase). Les
 // phrases restent entières : une fenêtre coupée peut retirer l'antécédent ou
 // l'exemple qui permet de trouver la réponse.
+// Masquage d'un mot dans une phrase : jamais au milieu d'un autre mot ou d'un
+// nombre (« 22 000 » ne contient pas « 0 € »), et toutes ses occurrences, pour
+// que la phrase ne redonne pas la réponse. Renvoie null si le trou serait
+// douteux (plus de deux occurrences, réponse chiffrée visible ailleurs, mot de
+// même radical dans la phrase).
+const echapperRegExp = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+const sansAccent = (t) => String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+export function masquerMot(texte, terme) {
+  const re = new RegExp(`(?<![\\p{L}\\d])${echapperRegExp(terme)}(?![\\p{L}\\d])`, 'gu')
+  const n = (texte.match(re) || []).length
+  if (!n || n > 2) return null
+  const reste = texte.replace(re, ' ')
+  // Réponse chiffrée : le même nombre ne doit pas figurer ailleurs (étape suivante d'un calcul).
+  const nombres = (t) => (String(t).match(/\d[\d  ]*(?:[.,]\d+)?/g) || []).map((x) => x.replace(/[\s ]/g, '').replace('.', ',')).filter((x) => x.length)
+  const aMasquer = nombres(terme)
+  if (aMasquer.length) { const visibles = new Set(nombres(reste)); if (aMasquer.some((x) => visibles.has(x))) return null }
+  // Même radical (au moins 6 lettres) dans la phrase : « convention » / « conventionnelle ».
+  const radicaux = sansAccent(terme).split(/[^a-z0-9]+/).filter((w) => w.length >= 6).map((w) => w.slice(0, 6))
+  if (radicaux.length) { const mots = sansAccent(reste).split(/[^a-z0-9]+/); if (radicaux.some((r) => mots.some((m) => m.length >= 6 && m.startsWith(r)))) return null }
+  return texte.replace(re, '____')
+}
+
 function trouFromBold(sec, themeId) {
   const out = []
   const seen = new Set()
@@ -539,14 +574,14 @@ function trouFromBold(sec, themeId) {
       if ([...seen].some((deja) => variantes.includes(cleReponse(deja)))) continue
       const plain = stripMd(sRaw).replace(/\s+/g, ' ').trim()
       if (plain.length < 15) continue
-      const at = plain.indexOf(term)
-      if (at < 0) continue
-      let text2 = plain.slice(0, at) + '____' + plain.slice(at + term.length)
+      let text2 = masquerMot(plain, term)
+      if (!text2) continue
       // « Comme idéal, elle… », « Cela… », « Sa valeur… » ne sont pas des
       // consignes autonomes. Garder le paragraphe jusqu'à la phrase interrogée.
       if (/^(?:comme\b|cela\b|ceci\b|celle[s]?\b|celui\b|ceux\b|il\b|elle\b|ils\b|elles\b|sa\b|son\b|ses\b)/i.test(plain)) {
         if (!si) continue
-        text2 = sentences.slice(0, si).map(stripMd).join(' ') + ' ' + text2
+        text2 = masquerMot(sentences.slice(0, si).map(stripMd).join(' ') + ' ' + plain, term)
+        if (!text2) continue
       }
       if (text2.length > 600 || /^(?:…|\.\.\.)|(?:…|\.\.\.)$/.test(text2)) continue
       if (!text2.includes('____')) continue
@@ -761,8 +796,9 @@ function ordreFromDates(datePairs, id, title) {
   const parsed = datePairs
     .map((p) => ({ y: parseInt(String(p.d).match(/-?\d{3,4}/)?.[0] ?? 'NaN', 10), d: p.d, e: p.e }))
     .filter((x) => !Number.isNaN(x.y) && x.e)
-  const seen = new Set()
-  const uniq = parsed.filter((x) => { if (seen.has(x.y)) return false; seen.add(x.y); return true })
+  // Deux repères aux plages qui se recouvrent n'ont pas d'ordre certain : un seul est gardé.
+  const uniq = []
+  for (const x of [...parsed].sort((a, b) => a.y - b.y)) if (!uniq.some((u) => datesCompatibles(u.d, x.d))) uniq.push(x)
   if (uniq.length < 4) return null
   const sorted = [...uniq].sort((a, b) => a.y - b.y).slice(0, 6)
   return { id, type: 'ordre', title, icon: '📶', steps: sorted.map((x) => `${x.d} — ${x.e}`) }
@@ -802,14 +838,13 @@ function sansNotionsLiees(liste) {
 // Vrai / Faux sur les dates : une affirmation sur deux associe l'événement à
 // une AUTRE date de la section (jamais une date qui tomberait la même année).
 function vraiFauxFromDates(datePairs, id, title) {
-  const annee = (d) => String(d).match(/-?\d{3,4}/)?.[0] || String(d)
   const uniq = []
-  for (const p of datePairs) if (p.d && p.e && !uniq.some((u) => u.e === p.e || annee(u.d) === annee(p.d))) uniq.push(p)
+  for (const p of datePairs) if (p.d && p.e && !uniq.some((u) => u.e === p.e || datesCompatibles(u.d, p.d))) uniq.push(p)
   if (uniq.length < 4) return null
   const pool = shuffle(uniq).slice(0, 8)
   const qs = pool.map((p, k) => {
     if (k % 2 === 0) return { statement: `${p.d} : ${p.e}.`, answer: true, explain: `Exact. ${p.d} : ${p.e}.` }
-    const autre = pool.find((o) => annee(o.d) !== annee(p.d))
+    const autre = pool.find((o) => !datesCompatibles(o.d, p.d))
     return autre ? { statement: `${autre.d} : ${p.e}.`, answer: false, explain: `Faux. ${p.e} : ${p.d}.` } : null
   }).filter(Boolean)
   return qs.length >= 4 ? { id, type: 'vraifaux', title, icon: '📅', questions: shuffle(qs) } : null
@@ -823,7 +858,8 @@ function qcmMotManquant(trou, id, distractorPool = trou) {
   const pool = []
   for (const m of distractorPool.map((q) => q.answer)) if (!pool.some((x) => cleReponse(x) === cleReponse(m))) pool.push(m)
   const questions = shuffle(trou).map((q) => {
-    const proches = shuffle(pool.filter((m) => cleReponse(m) !== cleReponse(q.answer) && !notionsLiees(m, q.answer)))
+    const dansLaPhrase = (m) => new RegExp(`(?<![\\p{L}\\d])${echapperRegExp(String(m))}(?![\\p{L}\\d])`, 'iu').test(q.text)
+    const proches = shuffle(pool.filter((m) => cleReponse(m) !== cleReponse(q.answer) && !notionsLiees(m, q.answer) && !dansLaPhrase(m)))
     const distracteurs = proches.slice(0, 3)
     if (distracteurs.length < 3) return null
     const choices = shuffle([q.answer, ...distracteurs])
@@ -862,7 +898,8 @@ function sectionExercises(sec, theme, idx) {
 
   // 1) QCM des dates + « écris la date » + remise en ordre chronologique.
   if (datePairs.length >= 3 && uniqEvents.length >= 3) {
-    const qDate = qcmFromPairs(datePairs.map((p) => ({ q: `Que se passe-t-il en ${p.d} ?`, a: p.e, e: `${p.d} : ${p.e}` })), `${base}::qdate`, 'QCM — les dates du chapitre')
+    const dateDe = new Map(datePairs.map((p) => [p.e, p.d]))
+    const qDate = qcmFromPairs(datePairs.map((p) => ({ q: `Que se passe-t-il en ${p.d} ?`, a: p.e, e: `${p.d} : ${p.e}`, d: p.d })), `${base}::qdate`, 'QCM — les dates du chapitre', (p, a) => datesCompatibles(p.d, dateDe.get(a)))
     if (qDate && qDate.questions.length >= 3) out.push(qDate)
     const sDate = saisieFromItems(datePairs.filter((p) => String(p.d).length <= 24).map((p) => ({ prompt: `À quelle date : ${p.e} ?`, answer: p.d, explain: `${p.e} → ${p.d}` })), `${base}::sdate`, 'Écris la date — ce chapitre', '📅')
     if (sDate) out.push(sDate)
@@ -1202,7 +1239,7 @@ export function buildThemeTest(themeId) {
   const redac = [] // questions à rédiger : { prompt, answer, style }
   for (const g of theme.games || []) {
     if (g.type === 'qcm') {
-      for (const q of g.questions) qcm.push({ ...q })
+      for (const q of g.questions) qcm.push(melangerPropositions({ ...q }))
     } else if (g.type === 'vraifaux') {
       for (const q of g.questions)
         qcm.push({ q: q.statement, choices: ['Vrai', 'Faux'], answer: q.answer ? 0 : 1, explain: q.explain })
@@ -1290,6 +1327,18 @@ function sectionPlainText(sec) {
   return parts.join('\n')
 }
 
+// Mélange les propositions d'un QCM en recalant la bonne réponse. Les questions
+// écrites à la main rangent la bonne réponse en premier : sans mélange, un duel
+// se gagne en touchant toujours la première tuile. Une proposition qui renvoie
+// aux autres (« toutes les réponses ci-dessus ») garde son rang.
+const RENVOI_PROPOSITION = /ci-dessus|ci-dessous|toutes les (r[ée]ponses|propositions)|aucune des|les deux (premi|derni)/i
+export function melangerPropositions(q) {
+  if (!q || !Array.isArray(q.choices) || q.choices.length < 3 || !Number.isInteger(q.answer)) return q
+  if (q.choices.some((c) => RENVOI_PROPOSITION.test(String(c)))) return q
+  const ordre = shuffle(q.choices.map((_, k) => k))
+  return { ...q, choices: ordre.map((k) => q.choices[k]), answer: ordre.indexOf(q.answer) }
+}
+
 // Construit le jeu de questions du Quiz noté d'un chapitre à partir de tous
 // les items « qcm » et « vraifaux » présents dans ses mini-jeux.
 export function buildQuiz(chapterId) {
@@ -1299,7 +1348,7 @@ export function buildQuiz(chapterId) {
   for (const g of c.games || []) {
     if (g.type === 'qcm') {
       // Les deux joueurs d'un duel reçoivent les mêmes nombres.
-      for (const q of g.questions) out.push(instancierQuestion({ ...q }))
+      for (const q of g.questions) out.push(melangerPropositions(instancierQuestion({ ...q })))
     } else if (g.type === 'vraifaux') {
       for (const q of g.questions)
         out.push({
