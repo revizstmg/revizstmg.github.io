@@ -497,7 +497,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "Plus le SI est connecté, plus il est **vulnérable**. La sécurité vise trois objectifs, souvent résumés par le triangle **DIC** (ou CIA)."
+          "c": "Plus le SI est connecté, plus il est **vulnérable**. La sécurité vise trois objectifs fondamentaux, résumés par le triangle **DIC** (ou CIA). On y ajoute souvent la **preuve** (traçabilité : savoir qui a fait quoi), d’où le sigle **DICP** à quatre lettres."
         },
         {
           "t": "p",

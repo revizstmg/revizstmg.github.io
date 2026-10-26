@@ -1320,7 +1320,7 @@
           "blocks": [
             {
               "t": "p",
-              "c": "Protéger le SI, c’est garantir trois principes, souvent résumés par **CID** (ou DIC)."
+              "c": "Protéger le SI, c’est garantir trois principes fondamentaux, résumés par **CID** (ou DIC) ; on y ajoute souvent la **preuve** (traçabilité), d’où **DICP**."
             },
             {
               "t": "table",

@@ -61,7 +61,7 @@
         },
         {
           "t": "p",
-          "c": "Enfin, l’information comptable doit être **protégée**. La **sécurité du SIC** repose sur quatre exigences, faciles à retenir par leurs initiales **D.I.C.T.**"
+          "c": "Enfin, l’information comptable doit être **protégée**. La **sécurité du SIC** repose sur quatre exigences, faciles à retenir par leurs initiales **DICP**"
         },
         {
           "t": "p",
@@ -74,7 +74,7 @@
         {
           "t": "tip",
           "h": "À retenir",
-          "c": "Le **SIC** collecte → saisit → classe → traite → restitue les opérations pour donner une **image fidèle** (art. 121-1 PCG). Usage **interne** (décider) et **externe** (prouver, imposer). Il s’appuie sur le **PCG/ANC**, se **dématérialise**, et doit être **sécurisé** (D.I.C.T.)."
+          "c": "Le **SIC** collecte → saisit → classe → traite → restitue les opérations pour donner une **image fidèle** (art. 121-1 PCG). Usage **interne** (décider) et **externe** (prouver, imposer). Il s’appuie sur le **PCG/ANC**, se **dématérialise**, et doit être **sécurisé** (DICP)."
         },
         {
           "t": "table",
@@ -117,8 +117,8 @@
               "Contrôle et certifie les comptes"
             ],
             [
-              "D.I.C.T.",
-              "Disponibilité, intégrité, confidentialité, traçabilité : la sécurité du SIC"
+              "DICP",
+              "Disponibilité, intégrité, confidentialité, preuve (traçabilité) : la sécurité du SIC"
             ],
             [
               "Disponibilité",
