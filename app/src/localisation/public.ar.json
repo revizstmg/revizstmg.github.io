@@ -1063,5 +1063,6 @@
   "Chapitre {v0} sur {v1}": "الفصل {v0} من {v1}",
   "Chapitres {v0} à {v1} sur {v2}": "الفصول من {v0} إلى {v1} من {v2}",
   "Niveau pas encore mesuré, objectif {v0} %": "المستوى لم يُقَس بعد، الهدف {v0} ٪",
-  "Rappel avant l’épreuve · niveau pas encore mesuré": "مراجعة قبل الامتحان · المستوى لم يُقَس بعد"
+  "Rappel avant l’épreuve · niveau pas encore mesuré": "مراجعة قبل الامتحان · المستوى لم يُقَس بعد",
+  "Même en révisant 20 h par semaine, ce plan ne tient pas avant les épreuves. Vise une note un peu plus basse ou retire une matière difficile.": "حتى مع 20 ساعة في الأسبوع لا تتسع هذه الخطة قبل الامتحانات. اطمح إلى علامة أدنى قليلًا أو أزل مادة صعبة."
 }

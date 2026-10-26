@@ -12,6 +12,7 @@ export const NOTE_MAX = 18
 export const HEURES = [1, 2, 3, 4, 5, 6, 8, 10]
 export const OBJECTIFS_DEFAUT = { noteVisee: 12, heuresSemaine: 4, difficiles: [] }
 export const QUESTIONS_POSITIONNEMENT = 6
+export const HEURES_MAX = 20 // volume maximum que le plan propose
 
 const MIN_DECOUVERTE = 18 // minutes par chapitre jamais abordé (cours + premiers exercices)
 const MIN_CONSOLIDER = 10 // minutes par chapitre pour combler un écart de 20 points
@@ -167,64 +168,78 @@ export function construirePlan({ state, track, today, themes }) {
   const cible = cibleMaitrise(o.noteVisee)
   const echeance = echeances(track?.level, state, today)
   const ctx = { state, today, cible, difficiles: new Set(o.difficiles || []), echeance }
-  const parMatiere = new Map()
-  for (const t of themes) {
-    const { principal, rappel, prio } = seancesDuTheme(t, ctx)
-    if (!parMatiere.has(t.subjectId)) parMatiere.set(t.subjectId, { id: t.subjectId, echeance: echeance(t.subjectId), themes: [], rappels: [] })
-    const m = parMatiere.get(t.subjectId)
-    m.themes.push({ prio, principal })
-    m.rappels.push(rappel)
-  }
-  for (const m of parMatiere.values()) {
-    m.file = m.themes.sort((a, b) => b.prio - a.prio).flatMap((x) => x.principal.sort((a, b) => ORDRE[a.kind] - ORDRE[b.kind]))
-    m.rappels.sort((a, b) => b.prio - a.prio)
-  }
-  const matieres = [...parMatiere.values()]
-  const lundis = semainesDuPlan(today, matieres.map((m) => m.echeance))
-  // Capacité : la semaine en cours n'a plus que ses jours restants.
+  const calculs = themes.map((t) => ({ t, ...seancesDuTheme(t, ctx) }))
+  const lundis = semainesDuPlan(today, [...new Set(themes.map((t) => echeance(t.subjectId)))])
   const joursRestants = 7 - daysBetween(lundis[0], today)
-  const capaciteSemaine = o.heuresSemaine * 60
-  const semaines = lundis.map((debut, i) => ({
-    index: i, debut, fin: addDays(debut, 6),
-    capacite: i === 0 ? Math.max(15, Math.round((capaciteSemaine * joursRestants) / 7)) : capaciteSemaine,
-    minutes: 0, taches: [],
-  }))
   const indexEcheance = (date) => Math.max(0, Math.floor(daysBetween(lundis[0], date) / 7))
-  for (const m of matieres) m.dernier = Math.min(semaines.length - 1, Math.max(0, indexEcheance(m.echeance) - 1))
-  const restant = (m) => m.file.reduce((n, t) => n + t.minutes, 0) + m.rappels.reduce((n, t) => n + t.minutes, 0)
-  const minutesTotal = matieres.reduce((n, m) => n + restant(m), 0)
 
-  semaines.forEach((s, i) => {
-    const places = []
-    for (;;) {
-      // Matières encore à servir cette semaine, la plus pressée d'abord.
-      const candidates = matieres
-        .filter((m) => i <= m.dernier && (m.file.length || (m.rappels.length && i >= m.dernier - (SEMAINES_RAPPEL - 1))))
-        .map((m) => ({ m, urgence: restant(m) / (m.dernier - i + 1) }))
-        .sort((a, b) => b.urgence - a.urgence)
-      let place = false
-      for (const { m } of candidates) {
-        // Le rappel ne passe qu'une fois le travail de fond fait, ou dans la toute dernière semaine.
-        const rappelPossible = m.rappels.length && i >= m.dernier - (SEMAINES_RAPPEL - 1) && (!m.file.length || i === m.dernier)
-        const seance = rappelPossible ? m.rappels[0] : m.file[0]
-        if (!seance || s.capacite - s.minutes < seance.minutes) continue
-        s.minutes += seance.minutes
-        places.push(seance)
-        if (rappelPossible) m.rappels.shift(); else m.file.shift()
-        place = true
-      }
-      if (!place) break
+  // Répartit tout le travail sur les semaines pour un volume d'heures donné.
+  const repartir = (heuresSemaine) => {
+    const parMatiere = new Map()
+    for (const { t, principal, rappel, prio } of calculs) {
+      if (!parMatiere.has(t.subjectId)) parMatiere.set(t.subjectId, { id: t.subjectId, echeance: echeance(t.subjectId), themes: [], rappels: [] })
+      const m = parMatiere.get(t.subjectId)
+      m.themes.push({ prio, principal: [...principal] })
+      m.rappels.push(rappel)
     }
-    s.taches = regrouper(places, i)
-  })
+    const matieres = [...parMatiere.values()]
+    for (const m of matieres) {
+      m.file = m.themes.sort((a, b) => b.prio - a.prio).flatMap((x) => [...x.principal].sort((a, b) => ORDRE[a.kind] - ORDRE[b.kind]))
+      m.rappels.sort((a, b) => b.prio - a.prio)
+    }
+    // Capacité : la semaine en cours n'a plus que ses jours restants.
+    const capaciteSemaine = heuresSemaine * 60
+    const semaines = lundis.map((debut, i) => ({
+      index: i, debut, fin: addDays(debut, 6),
+      capacite: i === 0 ? Math.max(15, Math.round((capaciteSemaine * joursRestants) / 7)) : capaciteSemaine,
+      minutes: 0, taches: [],
+    }))
+    for (const m of matieres) m.dernier = Math.min(semaines.length - 1, Math.max(0, indexEcheance(m.echeance) - 1))
+    const restant = (m) => m.file.reduce((n, t) => n + t.minutes, 0) + m.rappels.reduce((n, t) => n + t.minutes, 0)
+    const minutesTotal = matieres.reduce((n, m) => n + restant(m), 0)
 
-  const manque = matieres.reduce((n, m) => n + restant(m), 0)
-  const semainesUtiles = Math.max(1, semaines.length - 1)
-  const heuresConseillees = manque > 0 ? Math.min(20, Math.ceil(((minutesTotal / semainesUtiles) / 60) * 2) / 2) : o.heuresSemaine
+    semaines.forEach((s, i) => {
+      const places = []
+      for (;;) {
+        // Matières encore à servir cette semaine, la plus pressée d'abord.
+        const candidates = matieres
+          .filter((m) => i <= m.dernier && (m.file.length || (m.rappels.length && i >= m.dernier - (SEMAINES_RAPPEL - 1))))
+          .map((m) => ({ m, urgence: restant(m) / (m.dernier - i + 1) }))
+          .sort((a, b) => b.urgence - a.urgence)
+        let place = false
+        for (const { m } of candidates) {
+          // Le rappel ne passe qu'une fois le travail de fond fait, ou dans la toute dernière semaine.
+          const rappelPossible = m.rappels.length && i >= m.dernier - (SEMAINES_RAPPEL - 1) && (!m.file.length || i === m.dernier)
+          const seance = rappelPossible ? m.rappels[0] : m.file[0]
+          if (!seance || s.capacite - s.minutes < seance.minutes) continue
+          s.minutes += seance.minutes
+          places.push(seance)
+          if (rappelPossible) m.rappels.shift(); else m.file.shift()
+          place = true
+        }
+        if (!place) break
+      }
+      s.taches = regrouper(places, i)
+    })
+    return { semaines, minutesTotal, manque: matieres.reduce((n, m) => n + restant(m), 0) }
+  }
+
+  const plan = repartir(o.heuresSemaine)
+  // Si le temps manque : le plus petit volume d'heures (par demi-heure) qui rend le plan réalisable,
+  // trouvé en simulant la répartition, donc toujours accepté par le plan. Null si même 20 h ne suffisent pas.
+  let heuresConseillees = o.heuresSemaine
+  if (plan.manque > 0) {
+    let bas = Math.floor(o.heuresSemaine * 2), haut = HEURES_MAX * 2
+    if (repartir(HEURES_MAX).manque > 0) heuresConseillees = null
+    else {
+      while (bas + 1 < haut) { const milieu = Math.floor((bas + haut) / 2); if (repartir(milieu / 2).manque > 0) bas = milieu; else haut = milieu }
+      heuresConseillees = haut / 2
+    }
+  }
   return {
-    semaines, cible, minutesTotal, minutesPlacees: minutesTotal - manque, manque,
-    faisable: manque === 0, heuresConseillees,
-    jours: Math.max(0, daysBetween(today, matieres.map((m) => m.echeance).sort()[0] || today)),
+    semaines: plan.semaines, cible, minutesTotal: plan.minutesTotal, minutesPlacees: plan.minutesTotal - plan.manque, manque: plan.manque,
+    faisable: plan.manque === 0, heuresConseillees,
+    jours: Math.max(0, daysBetween(today, themes.map((t) => echeance(t.subjectId)).sort()[0] || today)),
   }
 }
 

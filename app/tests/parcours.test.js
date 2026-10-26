@@ -108,8 +108,19 @@ describe('plan semaine par semaine', () => {
     const p = plan({ heuresSemaine: 1, noteVisee: 18 })
     expect(p.faisable).toBe(false); expect(p.manque).toBeGreaterThan(0)
     expect(p.heuresConseillees).toBeGreaterThan(1)
+    // La suggestion est garantie : avec ce volume, le plan tient.
     const ok = plan({ heuresSemaine: p.heuresConseillees, noteVisee: 18 })
-    expect(ok.manque).toBeLessThan(p.manque)
+    expect(ok.faisable).toBe(true)
+    // Et c'est le plus petit volume (par demi-heure) qui convienne.
+    if (p.heuresConseillees > 1.5) expect(plan({ heuresSemaine: p.heuresConseillees - 0.5, noteVisee: 18 }).faisable).toBe(false)
+  })
+  it('quels que soient les objectifs, la suggestion d’heures rend le plan réalisable', () => {
+    for (const noteVisee of [10, 14, 18]) for (const heuresSemaine of [1, 2, 4]) for (const difficiles of [[], [themes[0].subjectId, themes.at(-1).subjectId]]) {
+      const p = plan({ noteVisee, heuresSemaine, difficiles })
+      if (p.faisable) continue
+      if (p.heuresConseillees === null) continue
+      expect(plan({ noteVisee, heuresSemaine: p.heuresConseillees, difficiles }).faisable, `${noteVisee}/${heuresSemaine}`).toBe(true)
+    }
   })
   it('le plan s’adapte : un thème maîtrisé demande moins de travail, un thème en retard plus', () => {
     const t = themes[0]

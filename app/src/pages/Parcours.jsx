@@ -81,7 +81,7 @@ function Questionnaire({ matieres, initial, modification, onValider, onAnnuler }
         <div>
           <label htmlFor="parcours-heures" className="block font-semibold">Combien d’heures peux-tu réviser chaque semaine ?</label>
           <select id="parcours-heures" value={h} onChange={(e) => setH(e.target.value)} className="mt-2 w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 dark:border-slate-600 dark:bg-slate-900">
-            {HEURES.map((x) => <option key={x} value={x}>{`${x} h par semaine`}</option>)}
+            {[...new Set([...HEURES, Number(initial.heuresSemaine)])].sort((x, y) => x - y).map((x) => <option key={x} value={x}>{`${x} h par semaine`}</option>)}
           </select>
         </div>
         <fieldset>
@@ -157,8 +157,14 @@ function Plan({ matieres, onTest, onModifier }) {
       {!plan.faisable && (
         <section className="card border-amber-400 p-5" role="status" aria-labelledby="parcours-alerte">
           <h2 id="parcours-alerte" className="font-display text-lg font-semibold">Ton plan est trop chargé</h2>
-          <p className="mt-1 text-sm">{`Il manque environ ${heures(plan.manque)} pour atteindre ton objectif avant les épreuves. Il faudrait réviser environ ${plan.heuresConseillees} h par semaine, ou viser une note un peu plus basse.`}</p>
-          <button type="button" className="btn-primary mt-3" onClick={() => setParcours((avant) => ({ ...avant, objectifs: { ...avant.objectifs, heuresSemaine: plan.heuresConseillees } }))}>{`Passer à ${plan.heuresConseillees} h par semaine`}</button>
+          {plan.heuresConseillees
+            ? (
+              <>
+                <p className="mt-1 text-sm">{`Il manque environ ${heures(plan.manque)} pour atteindre ton objectif avant les épreuves. Il faudrait réviser environ ${plan.heuresConseillees} h par semaine, ou viser une note un peu plus basse.`}</p>
+                <button type="button" className="btn-primary mt-3" onClick={() => setParcours((avant) => ({ ...avant, objectifs: { ...avant.objectifs, heuresSemaine: plan.heuresConseillees } }))}>{`Passer à ${plan.heuresConseillees} h par semaine`}</button>
+              </>
+            )
+            : <p className="mt-1 text-sm">Même en révisant 20 h par semaine, ce plan ne tient pas avant les épreuves. Vise une note un peu plus basse ou retire une matière difficile.</p>}
         </section>
       )}
 

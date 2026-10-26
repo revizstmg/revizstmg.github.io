@@ -1077,5 +1077,6 @@
   "Chapitre {v0} sur {v1}": "Kapitel {v0} von {v1}",
   "Chapitres {v0} à {v1} sur {v2}": "Kapitel {v0} bis {v1} von {v2}",
   "Niveau pas encore mesuré, objectif {v0} %": "Niveau noch nicht gemessen, Ziel {v0} %",
-  "Rappel avant l’épreuve · niveau pas encore mesuré": "Wiederholung vor der Prüfung · Niveau noch nicht gemessen"
+  "Rappel avant l’épreuve · niveau pas encore mesuré": "Wiederholung vor der Prüfung · Niveau noch nicht gemessen",
+  "Même en révisant 20 h par semaine, ce plan ne tient pas avant les épreuves. Vise une note un peu plus basse ou retire une matière difficile.": "Selbst mit 20 Std. pro Woche passt dieser Plan nicht vor die Prüfungen. Ziele etwas niedriger oder nimm ein schwieriges Fach heraus."
 }
