@@ -132,6 +132,7 @@ const emptyState = () => ({
   notes: {}, // { [themeId]: texte } — notes personnelles de l'élève par thème
   fiches: [], // fiches de révision créées depuis une photo : { id, title, createdAt, source, sections }
   notesClasse: [], // notes reçues en classe (privées) : { id, note, matiere, chapitre, date, ajouteLe }
+  parcours: null, // parcours personnalisé : { objectifs, positionnement, semaine, maj }
 })
 
 // Suppression du compte : tout ce que l'application garde dans ce navigateur
@@ -174,7 +175,7 @@ function withoutAccount(s) {
 
 // L'élève a-t-il déjà fait quelque chose (essai sans compte) ?
 const aProgresse = (s) => (s?.xp || 0) > 0 || Object.keys(s?.chapters || {}).length > 0 || (s?.favorites || []).length > 0
-  || Object.keys(s?.notes || {}).length > 0 || (s?.notesClasse || []).length > 0 || (s?.fiches || []).length > 0
+  || Object.keys(s?.notes || {}).length > 0 || (s?.notesClasse || []).length > 0 || (s?.fiches || []).length > 0 || !!s?.parcours?.maj
 
 export function restoreAccountState(previous, profile, session) {
   const id = session?.user?.id
@@ -797,6 +798,12 @@ export function StoreProvider({ children }) {
     const apres = typeof maj === 'function' ? maj(avant) : { ...avant, ...maj }
     return { ...p, grandOral: { ...apres, maj: Date.now() } }
   }), [])
+  // Parcours personnalisé : `maj` peut être un objet (fusionné) ou une fonction de l'ancien parcours.
+  const setParcours = useCallback((maj) => setState((p) => {
+    const avant = p.parcours || {}
+    const apres = typeof maj === 'function' ? maj(avant) : { ...avant, ...maj }
+    return { ...p, parcours: { ...apres, maj: Date.now() } }
+  }), [])
   const setEtudeGestion = useCallback((maj) => setState((p) => {
     const avant = { ...etudeGestionVide(), ...(p.etudeGestion || {}) }
     const apres = typeof maj === 'function' ? maj(avant) : { ...avant, ...maj }
@@ -838,6 +845,7 @@ export function StoreProvider({ children }) {
     setParentShare,
     noterReponses,
     setEtudeGestion,
+    setParcours,
     recordExamSeen,
     toggleFavorite,
     setLastChapter,

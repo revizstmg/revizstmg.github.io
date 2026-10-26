@@ -17,7 +17,7 @@ import { repairStudyTime } from './data/studyTime.js'
 // les règles d'avant : le plus grand, le plus récent ou l'union.
 
 // Champs de progression synchronisés sur le compte (multi-appareil).
-export const PROGRESS_KEYS = ['missions', 'xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'themeTimeInvalid', 'studyLanguages', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'reussites', 'shopRewards', 'shopWalletUpdatedAt', 'notesClasse']
+export const PROGRESS_KEYS = ['missions', 'xp', 'streak', 'badges', 'chapters', 'favorites', 'lastChapter', 'totalAnswers', 'correctAnswers', 'weekly', 'srs', 'bacDate', 'coins', 'owned', 'freezes', 'history', 'themeTime', 'themeTimeInvalid', 'studyLanguages', 'savedDecks', 'dailyChallenge', 'notes', 'fiches', 'grandOral', 'erreurs', 'etudeGestion', 'reussites', 'shopRewards', 'shopWalletUpdatedAt', 'notesClasse', 'parcours']
 // Carnet d'erreurs : au plus tant de questions ratées, les plus récentes d'abord.
 export const CARNET_MAX = 150
 
@@ -301,6 +301,17 @@ export function mergeProgress(a, b, maintenant = Date.now()) {
   // Étude de gestion : un seul dossier, on garde la version modifiée en dernier.
   const ega = a.etudeGestion, egb = b.etudeGestion
   out.etudeGestion = (egb?.maj || 0) > (ega?.maj || 0) ? egb : (ega || egb || etudeGestionVide())
+
+  // Parcours personnalisé : un seul dossier (objectifs, test de positionnement, base de la semaine).
+  // La version modifiée en dernier l'emporte, mais un test de positionnement n'est jamais perdu :
+  // pour chaque matière on garde le plus récent des deux appareils.
+  const pa = a.parcours, pb = b.parcours
+  if (pa || pb) {
+    const [vieux, recent] = (pb?.maj || 0) > (pa?.maj || 0) ? [pa, pb] : [pb, pa]
+    const positionnement = { ...(vieux?.positionnement || {}) }
+    for (const [id, r] of Object.entries(recent?.positionnement || {})) positionnement[id] = (positionnement[id]?.date || '') > (r?.date || '') ? positionnement[id] : r
+    out.parcours = { ...(vieux || {}), ...(recent || {}), positionnement }
+  }
 
   out._sync = meta
   return out

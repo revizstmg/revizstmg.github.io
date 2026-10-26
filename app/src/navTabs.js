@@ -14,6 +14,7 @@ export const ALL_TABS = {
   classement: { icon: '🏆', labelKey: 'leaderboard', to: '/classement', match: ['/classement'] },
   classe: { icon: '🧑‍🏫', labelKey: 'myClass', to: '/classe', match: ['/classe'] },
   bacblanc: { icon: '📝', labelKey: 'mockExam', to: '/bac-blanc', match: ['/bac-blanc', '/excellence-economique'] },
+  parcours: { icon: '🗺️', labelKey: 'myPath', to: '/parcours', match: ['/parcours'] },
   programme: { icon: '📅', labelKey: 'studyPlan', to: '/programme', match: ['/programme'] },
   coach: { icon: '🎯', labelKey: 'coach', to: '/coach', match: ['/coach'] },
   badges: { icon: '🏅', labelKey: 'badges', to: '/badges', match: ['/badges'] },

@@ -1481,3 +1481,8 @@ Prochaine action :
 ### SEO-20261026-CLAUDE-05 - titres complets des pages d'ensemble
 - Constat sur le site en ligne : l'index /cours/ et les pages de matière avaient un titre coupé par « … » en milieu de phrase (« …toutes les… », « …cours et… »).
 - Réalisé dans app/scripts/pages-cours/generer.mjs : titreChoisi() prend le premier titre candidat qui tient en 62 caractères sans coupure. Index : « Cours du bac STMG, Première et Terminale | RévizSTMG ». Pages de matière et de thème : variantes de plus en plus courtes. Deux titres de thème restent coupés (noms de thème de plus de 60 caractères). Test ajouté.
+
+### PARCOURS-20261026-CLAUDE-06 - parcours pédagogique personnalisé
+- Demande : un parcours vraiment personnalisé (objectifs + test de positionnement, plan semaine par semaine, calcul le plus performant). Choix du propriétaire : questionnaire d'objectifs et test, plan hebdomadaire, calcul local.
+- Réalisé : app/src/data/parcours.js (moteur : maîtrise estimée, échéances par épreuve, séances courtes alternant les matières, faisabilité), app/src/pages/Parcours.jsx (/#/parcours), état `parcours` synchronisé (progression.js, store.jsx), carte sur l'accueil, onglet « Mon parcours », traductions hors ligne en cinq langues. Documentation : docs/PARCOURS-PERSONNALISE.md.
+- Non fait : conseil rédigé par IA (coût et données à valider), mesure réelle des durées de travail par chapitre.

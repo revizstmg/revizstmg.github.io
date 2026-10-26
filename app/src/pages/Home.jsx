@@ -89,6 +89,15 @@ export default function Home() {
 
       <section className="card p-5" aria-label="Du devoir à la révision"><JourneySteps/><div className="mt-5 flex flex-wrap gap-4 text-sm"><Link to="/mes-notes" className="underline">Préparer mon bilan</Link><Link to="/offres" className="underline">Comparer les offres</Link><Link to="/cours" className="underline">Voir tous les cours</Link></div></section>
 
+      <section className="card flex flex-wrap items-center justify-between gap-4 p-5" aria-labelledby="home-parcours-title">
+        <div className="min-w-0 flex-1">
+          <p className="kicker">Mon parcours</p>
+          <h2 id="home-parcours-title" className="font-display text-xl font-semibold">Un plan fait pour toi, semaine par semaine.</h2>
+          <p className="mt-1 text-sm">Dis-nous ta note visée et ton temps disponible : le plan s’adapte à tes résultats.</p>
+        </div>
+        <Link to="/parcours" className="btn-primary">Voir mon parcours</Link>
+      </section>
+
       <section className="home-ritual" aria-labelledby="home-ritual-title">
         <div className="home-section-heading"><div><p className="kicker">Tes habitudes</p><h2 id="home-ritual-title" className="font-display">Trouve ton rythme.</h2></div><Link to="/programme">Mes objectifs <span aria-hidden>↗</span></Link></div>
         <div className="home-ritual-grid">

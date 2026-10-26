@@ -371,4 +371,5 @@ export default {
   addFavHint: 'Add some with the star ☆ on a chapter page.',
   removeFav: 'Remove from favorites', addFav: 'Add to favorites',
   autoTranslated: 'automatically translated',
+  myPath: 'My path',
 }

@@ -371,4 +371,5 @@ export default {
   addFavHint: 'Aggiungine con la stella ☆ su una pagina di capitolo.',
   removeFav: 'Rimuovi dai preferiti', addFav: 'Aggiungi ai preferiti',
   autoTranslated: 'tradotto automaticamente',
+  myPath: 'Il mio percorso',
 }
