@@ -21,6 +21,8 @@ test('métadonnées, provenance et données structurées valides sur toutes les 
  const decode=t=>t.replace(/&(amp|quot|lt|gt);/g,(_,e)=>({amp:'&',quot:'"',lt:'<',gt:'>'}[e]))
  // Titres affichables en entier par Google (60 caractères environ) : seules de rares collisions sont rallongées pour rester uniques.
  expect(titres.filter(t=>decode(t).length>62).length).toBeLessThanOrEqual(10)
+ // L'index des cours et les pages de matière ont un titre complet, jamais un mot coupé par « … ».
+ for(const p of pages.filter(p=>p.chemin==='/cours/'||/^\/cours\/(premiere|terminale)\/[^/]+\/$/.test(p.chemin)))expect(p.html.match(/<title>(.*?)<\/title>/)[1],p.chemin).not.toContain('…')
  const about=pages.find(p=>p.chemin==='/a-propos/').html;expect(about).toContain('Ils sont élèves');expect(about).toContain('ne signifie pas que chaque fiche a été validée par un professeur')
 })
 test('tous les liens internes des pages HTML mènent à une page, un asset prévu ou une vraie route de l’app',()=>{
