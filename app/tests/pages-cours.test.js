@@ -14,10 +14,13 @@ test('chaque cours courant a une page complète et les anciens cours de langues 
 })
 test('métadonnées, provenance et données structurées valides sur toutes les pages',()=>{
  const titres=[]
- for(const p of pages){const html=p.html;const title=html.match(/<title>(.*?)<\/title>/)[1];titres.push(title);expect(title.replace(/&(amp|quot|lt|gt);/g,(_,entity)=>({amp:'&',quot:'\"',lt:'<',gt:'>'}[entity])).length).toBeLessThanOrEqual(100);expect(html.match(/<h1[ >]/g),p.chemin).toHaveLength(1);expect(html).not.toMatch(/(?:src|href)="(?:undefined|null)/);expect(html).toContain('href="'+SITE+p.chemin+'"');expect(html).not.toContain('noindex');expect(html.match(/<meta name="description" content="([^"]+)"/)[1].length).toBeGreaterThan(40);expect(html).not.toMatch(/<(?:script)[^>]*src=/)
+ for(const p of pages){const html=p.html;const title=html.match(/<title>(.*?)<\/title>/)[1];titres.push(title);expect(title.replace(/&(amp|quot|lt|gt);/g,(_,entity)=>({amp:'&',quot:'\"',lt:'<',gt:'>'}[entity])).length).toBeLessThanOrEqual(80);expect(html.match(/<h1[ >]/g),p.chemin).toHaveLength(1);expect(html).not.toMatch(/(?:src|href)="(?:undefined|null)/);expect(html).toContain('href="'+SITE+p.chemin+'"');expect(html).not.toContain('noindex');{const desc=html.match(/<meta name="description" content="([^"]+)"/)[1].replace(/&(amp|quot|lt|gt);/g,(_,e)=>({amp:'&',quot:'"',lt:'<',gt:'>'}[e]));expect(desc.length,p.chemin).toBeGreaterThanOrEqual(60);expect(desc.length,p.chemin).toBeLessThanOrEqual(160);expect(desc,p.chemin).not.toMatch(/[:;,]$/)};expect(html).not.toMatch(/<(?:script)[^>]*src=/)
   const schema=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));expect(schema[0]['@type']).toBe('BreadcrumbList');if(html.includes('<article class="cours">')){const resource=schema.find(s=>s['@type']==='LearningResource');expect(resource.url).toBe(SITE+p.chemin);expect(resource.citation).toContain('https://eduscol.education.gouv.fr/5862/programmes-et-ressources-en-serie-stmg');expect(html).toContain('Matys DONAT');expect(html).toContain('Gabriel MERLIN')}
  }
  expect(new Set(titres).size).toBe(titres.length)
+ const decode=t=>t.replace(/&(amp|quot|lt|gt);/g,(_,e)=>({amp:'&',quot:'"',lt:'<',gt:'>'}[e]))
+ // Titres affichables en entier par Google (60 caractères environ) : seules de rares collisions sont rallongées pour rester uniques.
+ expect(titres.filter(t=>decode(t).length>62).length).toBeLessThanOrEqual(10)
  const about=pages.find(p=>p.chemin==='/a-propos/').html;expect(about).toContain('Ils sont élèves');expect(about).toContain('ne signifie pas que chaque fiche a été validée par un professeur')
 })
 test('tous les liens internes des pages HTML mènent à une page, un asset prévu ou une vraie route de l’app',()=>{

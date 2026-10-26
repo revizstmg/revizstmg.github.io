@@ -47,11 +47,54 @@ export function riche(t) {
 export const texteBrut = (t) => String(t ?? '').replace(/\*/g, '').replace(/\s+/g, ' ').trim()
 // Titres sans emoji (« ⚖️ Cas pratique… ») : plus nets dans un résultat de recherche.
 export const sansEmoji = (t) => String(t ?? '').replace(/[\p{Extended_Pictographic}\u{FE0F}\u{200D}]/gu, '').replace(/\s+/g, ' ').trim()
+// Coupe à une phrase entière quand c'est possible (jamais au milieu d'une phrase tant qu'on
+// garde au moins 60 caractères), sinon au dernier mot avec « … » compté dans la limite.
 function resume(t, max = 155) {
   const s = texteBrut(t)
   if (s.length <= max) return s
-  const coupe = s.slice(0, max)
+  const phrase = s.slice(0, max).match(/^(.*[.!?])(?=\s)/s)
+  if (phrase && phrase[1].length >= 60) return phrase[1]
+  const coupe = s.slice(0, max - 1)
   return `${coupe.slice(0, coupe.lastIndexOf(' '))}…`
+}
+// Titre de page : 60 caractères au plus (au-delà, Google le coupe). La marque suit quand elle tient.
+const MAX_TITRE = 60
+const MARQUE = ' | RévizSTMG'
+export function titreSeo(base) {
+  const b = sansEmoji(texteBrut(base)).replace(/[—–]/g, '-').replace(/\s*\|\s*RévizSTMG$/, '')
+  if (b.includes(' | ')) return b // titre de chapitre déjà composé (matière, niveau)
+  return b.length + MARQUE.length <= MAX_TITRE + 2 ? b + MARQUE : resume(b, MAX_TITRE)
+}
+// Titre d'un chapitre : le suffixe reste entier, c'est le titre du chapitre qui se raccourcit. Plusieurs
+// suffixes possibles, du plus complet au plus court : on prend le premier qui laisse 38 caractères au chapitre.
+export function titreChapitre(chapitre, suffixes, max = MAX_TITRE) {
+  const c = sansEmoji(texteBrut(chapitre)).replace(/[—–]/g, '-')
+  const liste = [].concat(suffixes)
+  const suffixe = liste.find((x) => max - x.length >= Math.min(c.length, 38)) || liste[liste.length - 1]
+  return c.length + suffixe.length <= max ? c + suffixe : resume(c, max - suffixe.length) + suffixe
+}
+// Deux chapitres ne partagent jamais le même titre : en cas de collision après raccourcissement, on rallonge le second.
+const titresVus = new Set()
+function titreUnique(chapitre, suffixes) {
+  let t = titreChapitre(chapitre, suffixes)
+  for (let max = MAX_TITRE + 10; titresVus.has(t) && max <= 200; max += 10) t = titreChapitre(chapitre, suffixes, max)
+  titresVus.add(t)
+  return t
+}
+// Description d'un chapitre : d'abord le contenu (phrases entières, environ 110 caractères), puis un rappel de la matière si la place le permet.
+export function descriptionChapitre(contenus, rappel) {
+  const phrases = [].concat(contenus).flatMap((c) => texteBrut(c).split(/(?<=[.!?])\s+/)).filter((p) => p.length > 1)
+  let d = ''
+  for (const p of phrases) {
+    const suite = d ? `${d} ${p}` : p
+    if (d && suite.length > 150) { if (d.length < 70) d = resume(suite, 155); break }
+    d = suite
+    if (d.length >= 110) break
+  }
+  if (!d) return rappel
+  if (d.length > 155) d = resume(d, 155)
+  d = d.replace(/\s*:$/, '.')
+  return !/[;,…]$/.test(d) && d.length + rappel.length + 1 <= 160 ? `${d} ${rappel}` : d
 }
 
 const TITRES_BLOCS = { example: 'Exemple', tip: 'À retenir', warning: 'Attention' }
@@ -85,8 +128,7 @@ const filAriane = (etapes) => ({
 
 function page({ chemin, titre, description, h1, sousTitre, ariane, contenu, donnees = [] }) {
   const url = SITE + chemin
-  const baseTitre=sansEmoji(texteBrut(titre)).replace(/[—–]/g,'-').replace(/\s*\|\s*RévizSTMG$/,'')
-  titre=resume(baseTitre,86)+' | RévizSTMG'
+  titre=titreSeo(titre)
   return `<!doctype html>
 <html lang="fr">
 <head>
@@ -153,6 +195,7 @@ export function arborescence() {
 }
 
 export function construirePages() {
+  titresVus.clear()
   const matieres = arborescence()
   const pages = []
   const flat=matieres.flatMap(m=>m.themes.flatMap(t=>t.chapitres.map(ch=>({...ch,subject:m.s,niveau:m.niveau}))))
@@ -216,12 +259,12 @@ ${essentiel}
         const related=relatedLessons({ch,subject:s,niveau},flat).map(r=>`<li><a href="${r.chemin}">${echapper(r.ch.title)} (${echapper(r.subject.short||r.subject.name)})</a></li>`).join('')
         const precedent = chapitres[i - 1], suivant = chapitres[i + 1]
         const premier = (ch.section.blocks || []).find((b) => (b.t === 'p' || b.t === 'example' || b.t === 'tip') && typeof b.c === 'string')
-        const description = resume(`${sansEmoji(ch.title)} : cours de ${s.name} ${N} STMG. ${premier ? premier.c : ''}`)
+        const description = descriptionChapitre((ch.section.blocks || []).filter((b) => (b.t === 'p' || b.t === 'example' || b.t === 'tip') && typeof b.c === 'string').slice(0, 4).map((b) => b.c).concat(sansEmoji(ch.title)), `Cours ${s.name} ${N} STMG.`)
         pages.push({
           chemin: cc,
           html: page({
             chemin: cc,
-            titre: `${sansEmoji(texteBrut(ch.title))} — Cours ${s.name} ${N} STMG | RévizSTMG`,
+            titre: titreUnique(ch.title, [` | ${s.short || s.name} ${N} STMG`, ` | ${N} STMG`]),
             description,
             h1: sansEmoji(ch.title),
             sousTitre: `${echapper(s.name)} · ${N} STMG · <a href="${ct}">${echapper(t.name)}</a>`,
