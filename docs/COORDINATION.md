@@ -1477,3 +1477,7 @@ Prochaine action :
 - Constat (audit local, mobile émulé en 4G lente) : décalage cumulé de 0,42 sur l'accueil, seuil « bon » à 0,1. Cause : pendant le chargement de la page, le pied de page s'affichait sous un indicateur court puis était repoussé hors de la zone visible à l'arrivée du contenu.
 - Réalisé : app/src/editorial.css réserve au contenu principal au moins la hauteur d'un écran, le pied de page reste sous la première fenêtre. Mesure après correction : 0,033 sur l'accueil et sur /#/accueil. Une première piste (indicateur de chargement plein écran) a été abandonnée : elle aggravait /#/accueil (1,10). Test stabilite-accueil.spec.js, vérifié rouge sans la règle et vert avec.
 - Reste un décalage de 0,03 au remplacement de l'accueil statique par l'application, sous le seuil, non traité.
+
+### SEO-20261026-CLAUDE-05 - titres complets des pages d'ensemble
+- Constat sur le site en ligne : l'index /cours/ et les pages de matière avaient un titre coupé par « … » en milieu de phrase (« …toutes les… », « …cours et… »).
+- Réalisé dans app/scripts/pages-cours/generer.mjs : titreChoisi() prend le premier titre candidat qui tient en 62 caractères sans coupure. Index : « Cours du bac STMG, Première et Terminale | RévizSTMG ». Pages de matière et de thème : variantes de plus en plus courtes. Deux titres de thème restent coupés (noms de thème de plus de 60 caractères). Test ajouté.

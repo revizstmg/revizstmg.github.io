@@ -65,6 +65,11 @@ export function titreSeo(base) {
   if (b.includes(' | ')) return b // titre de chapitre déjà composé (matière, niveau)
   return b.length + MARQUE.length <= MAX_TITRE + 2 ? b + MARQUE : resume(b, MAX_TITRE)
 }
+// Premier candidat qui tient en entier (jamais de mot coupé par « … ») ; le dernier sert de repli.
+export function titreChoisi(candidats) {
+  for (const c of candidats) { const t = titreSeo(c); if (!t.endsWith('…') && t.length <= MAX_TITRE + 2) return t }
+  return titreSeo(candidats[candidats.length - 1])
+}
 // Titre d'un chapitre : le suffixe reste entier, c'est le titre du chapitre qui se raccourcit. Plusieurs
 // suffixes possibles, du plus complet au plus court : on prend le premier qui laisse 38 caractères au chapitre.
 export function titreChapitre(chapitre, suffixes, max = MAX_TITRE) {
@@ -213,7 +218,7 @@ export function construirePages() {
       chemin,
       html: page({
         chemin,
-        titre: `Révision ${s.name} ${N} STMG : cours et exercices gratuits | RévizSTMG`,
+        titre: titreChoisi([`Révision ${s.name} ${N} STMG : cours et exercices`, `Cours ${s.name} ${N} STMG : exercices gratuits`, `Cours ${s.name} ${N} STMG`, `Cours ${s.short || s.name} ${N} STMG`]),
         description: resume(`${s.name} en ${N} STMG : ${pluriel(themes.length, 'thème', 'thèmes')} et ${pluriel(nbChapitres, 'chapitre', 'chapitres')} de cours clairs, avec exercices corrigés et flashcards. ${s.tagline || ''}`),
         h1: `Révision ${s.name} — ${N} STMG`,
         sousTitre: `${pluriel(themes.length, 'thème', 'thèmes')} · ${pluriel(nbChapitres, 'chapitre', 'chapitres')} de cours · exercices corrigés dans l’application`,
@@ -234,7 +239,7 @@ ${t.intro ? `<p>${riche(t.intro)}</p>` : ''}
         chemin: ct,
         html: page({
           chemin: ct,
-          titre: `${sansEmoji(texteBrut(t.name))} — ${s.name} ${N} STMG | RévizSTMG`,
+          titre: titreChoisi([`${sansEmoji(texteBrut(t.name))} - ${s.name} ${N} STMG`, `${sansEmoji(texteBrut(t.name))} - ${s.short || s.name} ${N} STMG`, `${sansEmoji(texteBrut(t.name))} | ${N} STMG`, sansEmoji(texteBrut(t.name))]),
           description: resume(t.intro || `${t.name} : le cours de ${s.name} en ${N} STMG, chapitre par chapitre, avec exercices corrigés.`),
           h1: t.name,
           sousTitre: `${echapper(s.name)} · ${N} STMG · ${pluriel(chapitres.length, 'chapitre', 'chapitres')}`,
@@ -299,7 +304,7 @@ ${essentiel}
     chemin: '/cours/',
     html: page({
       chemin: '/cours/',
-      titre: 'Cours du bac STMG, Première et Terminale : toutes les matières | RévizSTMG',
+      titre: 'Cours du bac STMG, Première et Terminale',
       description: resume(`Tous les cours du bac STMG en accès libre : ${matieres.length} matières de Première et de Terminale, ${total} chapitres, avec exercices corrigés, flashcards et sujets au format des épreuves. Gratuit.`),
       h1: 'Cours du bac STMG',
       sousTitre: `${matieres.length} matières · ${total} chapitres · Première et Terminale`,
