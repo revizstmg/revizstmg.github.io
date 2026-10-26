@@ -37,7 +37,9 @@ export function chapterMission(themeId, index) {
   if (!chapter) return null
   const games = jeuxDuChapitre(chapter, theme).filter(playable)
   if (!games.length) return {chapter, games, rounds: []}
-  const understand = games.find(g=>RECOGNISE.includes(g.type)) || games[0]
+  // « Comprendre » : le premier format de reconnaissance dans l'ordre de RECOGNISE (le QCM d'abord),
+  // quel que soit l'ordre des jeux du chapitre.
+  const understand = RECOGNISE.map(type => games.find(g=>g.type===type)).find(Boolean) || games[0]
   const apply = games.find(g=>g.id!==understand.id && APPLY.includes(g.type)) || games.find(g=>g.id!==understand.id) || understand
   return { chapter, games,
     practice: {understand:shortGame(understand,5), apply:shortGame(apply,5)},

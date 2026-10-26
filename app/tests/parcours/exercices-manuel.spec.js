@@ -20,7 +20,7 @@ test('langues : les exercices du manuel se font sur le site, corrigés comme le 
  await expect(un.getByText('✓ Juste')).toBeVisible()
  // QCM (exercice 8 du PDF).
  const qcm=page.locator('#manuel-en-ex-004')
- await qcm.getByRole('button',{name:/went/}).click()
+ await qcm.getByRole('radio',{name:/went/}).click()
  await expect(qcm.getByText('✓ Juste')).toBeVisible()
  // Filtre par leçon.
  await page.getByLabel('Leçon').selectOption({index:2})

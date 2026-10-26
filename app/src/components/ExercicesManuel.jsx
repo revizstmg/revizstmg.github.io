@@ -1,6 +1,6 @@
 // Les exercices du manuel PDF d'une langue, à faire directement sur le site.
 import { useEffect, useMemo, useState } from 'react'
-import { ordonnerExercices, estLibre, libelleType, verifier } from '../data/exercicesManuel.js'
+import { ordonnerExercices, estLibre, sorteExercice, verifier } from '../data/exercicesManuel.js'
 
 const charger = {
   de: () => import('../../resources/langues/de.json'),
@@ -8,6 +8,14 @@ const charger = {
   es: () => import('../../resources/langues/es.json'),
   it: () => import('../../resources/langues/it.json'),
   ar: () => import('../../resources/langues/ar.json'),
+}
+
+function Sorte({ e }) {
+  const s = sorteExercice(e)
+  if (s === 'production') return <>Expression guidée</>
+  if (s === 'qcm') return <>Choisir et justifier</>
+  if (s === 'traduction') return <>Traduction</>
+  return <>Mini-exercice</>
 }
 
 function Exercice({ e, numero }) {
@@ -21,16 +29,16 @@ function Exercice({ e, numero }) {
   const corrige = etat !== null
   return (
     <li className="card p-4 space-y-3" id={idChamp}>
-      <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">Exercice {numero} · {libelleType(e)}</p>
-      {e.context && <blockquote className="whitespace-pre-line rounded-lg bg-slate-100 p-3 text-sm dark:bg-slate-800" dir="auto">{e.context}</blockquote>}
-      <p className="font-medium leading-relaxed" dir="auto">{e.prompt}</p>
+      <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">{`Exercice ${numero}`} · <Sorte e={e} /></p>
+      {e.context && <blockquote className="whitespace-pre-line rounded-lg bg-slate-100 p-3 text-sm dark:bg-slate-800" dir="auto" translate="no">{e.context}</blockquote>}
+      <p className="font-medium leading-relaxed" dir="auto" translate="no">{e.prompt}</p>
       {e.type === 'qcm' ? (
-        <div role="group" aria-label={`Choix de l’exercice ${numero}`} className="grid gap-2 sm:grid-cols-2">
+        <div role="radiogroup" aria-label={`Choix de l’exercice ${numero}`} className="grid gap-2 sm:grid-cols-2">
           {e.choices.map((c, i) => {
             const bonne = corrige && c === e.answer
             const choisie = corrige && c === saisie
             return (
-              <button key={c} type="button" disabled={corrige} dir="auto"
+              <button key={c} type="button" role="radio" aria-checked={choisie} disabled={corrige} dir="auto"
                 onClick={() => { setSaisie(c); setEtat(c === e.answer ? 'juste' : 'faux') }}
                 className={`rounded-xl border px-3 py-2.5 text-left ${bonne ? 'border-emerald-600 bg-emerald-50 dark:bg-emerald-900/30' : choisie ? 'border-rose-600 bg-rose-50 dark:bg-rose-900/30' : 'border-slate-300 dark:border-slate-600'}`}>
                 <b>{String.fromCharCode(65 + i)}.</b> {c}{bonne ? ' ✓' : choisie ? ' ✗' : ''}
@@ -53,9 +61,9 @@ function Exercice({ e, numero }) {
         <div className="space-y-2 rounded-lg bg-slate-100 p-3 text-sm dark:bg-slate-800" aria-live="polite">
           {etat === 'juste' && <p className="font-semibold text-emerald-700 dark:text-emerald-400">✓ Juste</p>}
           {etat === 'faux' && <p className="font-semibold text-rose-700 dark:text-rose-400">✗ Pas tout à fait</p>}
-          <p><span className="font-semibold">{e.type === 'production' ? 'Exemple de réponse' : 'Réponse attendue'} :</span> <span dir="auto">{e.answer}</span></p>
-          {e.alternatives?.length > 0 && <p>Autres formes acceptées : <span dir="auto">{e.alternatives.join(' ; ')}</span>.</p>}
-          <p>{e.explanation}</p>
+          <p><span className="font-semibold">{e.type === 'production' ? <>Exemple de réponse</> : <>Réponse attendue</>} :</span> <span dir="auto" translate="no">{e.answer}</span></p>
+          {e.alternatives?.length > 0 && <p>Autres formes acceptées : <span dir="auto" translate="no">{e.alternatives.join(' ; ')}</span>.</p>}
+          <p translate="no">{e.explanation}</p>
           {libre && <p className="text-slate-600 dark:text-slate-300">D’autres formulations peuvent être justes : compare avec ta réponse.</p>}
           {etat === 'montre' && !bilan && (
             <div className="flex flex-wrap gap-2">
@@ -87,17 +95,17 @@ export default function ExercicesManuel({ langue, nomLangue }) {
     <section aria-labelledby="manuel-exercices" className="space-y-4">
       <div>
         <p className="kicker">Les exercices du manuel, sur le site</p>
-        <h2 id="manuel-exercices" className="font-display text-2xl">{ordre.total} exercices à faire en ligne.</h2>
-        <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">Ce sont les mêmes exercices, dans le même ordre et avec les mêmes corrigés que le guide PDF {nomLangue}. Pour les traductions et les productions libres, compare ta réponse au corrigé : d’autres formulations peuvent être justes.</p>
+        <h2 id="manuel-exercices" className="font-display text-2xl">{`${ordre.total} exercices à faire en ligne.`}</h2>
+        <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{`Ce sont les mêmes exercices, dans le même ordre et avec les mêmes corrigés que le guide PDF ${nomLangue}. Pour les traductions et les productions libres, compare ta réponse au corrigé : d’autres formulations peuvent être justes.`}</p>
       </div>
       <label className="block text-sm font-semibold" htmlFor="manuel-lecon">Leçon</label>
       <select id="manuel-lecon" value={groupe} onChange={(ev) => setGroupe(ev.target.value)} className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 dark:border-slate-600 dark:bg-slate-900">
         <option value="">Toutes les leçons</option>
-        {ordre.groupes.map((g) => <option key={g.id} value={g.id}>{g.titre}</option>)}
+        {ordre.groupes.map((g) => <option key={g.id} value={g.id}>{g.lecon ? `Leçon ${g.lecon}` : 'Bilan'} · {g.titre}</option>)}
       </select>
       {visibles.map((g) => (
         <div key={g.id} className="space-y-3">
-          <h3 className="font-display text-lg font-semibold" dir="auto">{g.titre}</h3>
+          <h3 className="font-display text-lg font-semibold" dir="auto">{g.lecon ? `Leçon ${g.lecon}` : <>Bilan</>} · <span translate="no">{g.titre}</span></h3>
           <ol className="space-y-3">{g.exercices.map((e) => <Exercice key={e.id} e={e} numero={ordre.numeros.get(e.id)} />)}</ol>
         </div>
       ))}
