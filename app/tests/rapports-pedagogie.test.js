@@ -29,7 +29,8 @@ describe('régressions des rapports pédagogiques de Claude', () => {
       { t: 'p', c: 'Dans la théorie d’Aristote, l’**équité** corrige la loi trop générale pour tenir compte du cas particulier.' },
     ])
     const q = trous(games).find(q => q.answer === 'idéal')
-    expect(q.text).toContain('La justice est un idéal moral et politique')
+    // Le contexte reste entier, mais il ne redonne pas la réponse : le mot y est masqué aussi.
+    expect(q.text).toContain('La justice est un ____ moral et politique')
     expect(q.text).toContain('Comme ____, elle guide')
     expect(q.text).toContain('décisions injustes.')
     expect(q.text).not.toMatch(/^…|…$/)

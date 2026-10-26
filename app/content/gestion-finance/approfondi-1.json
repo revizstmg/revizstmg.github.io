@@ -1914,7 +1914,7 @@
         {
           "t": "example",
           "h": "Étape 2 — Seuil de rentabilité (en quantité)",
-          "c": "Q seuil = Charges fixes ÷ MCV unitaire = 4 000 ÷ 5 = **800 burgers/mois**.\nSoit environ 27 burgers par jour ouvré."
+          "c": "Q seuil = Charges fixes ÷ MCV unitaire = 4 000 ÷ 5 = **800 burgers/mois**.\nSoit environ 36 burgers par jour ouvré (800 ÷ 22 jours ouvrés)."
         },
         {
           "t": "example",
