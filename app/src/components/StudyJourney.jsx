@@ -14,7 +14,7 @@ export function StudyPromise({start='/cours',compact=false,onStart}){
   <p className="study-kicker">{tr('Ton prochain contrôle')}</p>
   <h2>{tr('Comprends tes erreurs.')}<br/>{tr('Prépare ton prochain contrôle.')}</h2>
   <p>{tr('Pars de ton dernier devoir pour savoir quoi revoir et comment t’entraîner.')}</p>
-  <div className="study-actions">{onStart?<button type="button" onClick={onStart} className="study-primary">{tr('Commencer à réviser')}</button>:<Link to={start} className="study-primary">{tr('Commencer à réviser')}</Link>}<Link to="/exemple-bilan" className="study-secondary">{tr('Voir un exemple de bilan')}</Link></div>
+  <div className="study-actions">{onStart?<button type="button" onClick={onStart} className="study-primary">{tr('Lancer ma séance du jour')}</button>:<Link to={start} className="study-primary">{tr('Lancer ma séance du jour')}</Link>}<Link to="/exemple-bilan" className="study-secondary">{tr('Voir un exemple de bilan')}</Link></div>
   {!compact&&<JourneySteps/>}
  </section>
 }

@@ -167,7 +167,7 @@ export default function Customizer({ onClose }) {
           <div className="mb-2 flex justify-end">
             <button onClick={onClose} className="grid h-9 w-9 place-items-center rounded-full bg-white/90 text-slate-500 shadow hover:text-slate-800 dark:bg-slate-800/90 dark:text-slate-300" aria-label={t('quit')}>✕</button>
           </div>
-          <InstallLock title={t('customize')} />
+          <InstallLock title={t('customize')} description={t('customizeHint')} />
         </div>
       </div>
     )

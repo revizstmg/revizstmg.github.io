@@ -83,7 +83,7 @@ function CoachPage() {
           <p className="kicker">🎯 {t('coach')}</p>
           <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('coach')}</h1>
         </header>
-        <InstallLock title={t('coach')} />
+        <InstallLock title={t('coach')} description={t('coachSub')} />
       </div>
     )
   }

@@ -1064,5 +1064,17 @@
   "Chapitres {v0} à {v1} sur {v2}": "Capítulos {v0} a {v1} de {v2}",
   "Niveau pas encore mesuré, objectif {v0} %": "Nivel aún sin medir, objetivo {v0} %",
   "Rappel avant l’épreuve · niveau pas encore mesuré": "Repaso antes del examen · nivel aún sin medir",
-  "Même en révisant 20 h par semaine, ce plan ne tient pas avant les épreuves. Vise une note un peu plus basse ou retire une matière difficile.": "Incluso repasando 20 h por semana, este plan no cabe antes de los exámenes. Apunta un poco más bajo o quita una asignatura difícil."
+  "Même en révisant 20 h par semaine, ce plan ne tient pas avant les épreuves. Vise une note un peu plus basse ou retire une matière difficile.": "Incluso repasando 20 h por semana, este plan no cabe antes de los exámenes. Apunta un poco más bajo o quita una asignatura difícil.",
+  "Les choix déjà cochés sont des valeurs courantes : ajuste-les.": "Las opciones ya marcadas son valores habituales: ajústalas.",
+  "Ton temps de révision ne suffit pas": "Tu tiempo de repaso no es suficiente",
+  "Semaine entamée : {v0} prévues au lieu de {v1} h.": "Semana ya empezada: {v0} previstas en lugar de {v1} h.",
+  "Lancer ma séance du jour": "Empezar mi sesión del día",
+  "Trois étapes courtes : tes erreurs, une révision, puis la suite du cours.": "Tres pasos cortos: tus errores, un repaso y la continuación del curso.",
+  "Ajoute ta note et tes questions manquées, ou dépose ton sujet et ta copie. Le bilan expliqué et l’analyse de copie sont prévus dans Premium ; ils restent accessibles aux comptes connectés pendant le développement.": "Añade tu nota y las preguntas falladas, o sube tu examen y tu copia. El informe explicado y el análisis de la copia están previstos en Premium; siguen disponibles para las cuentas conectadas durante el desarrollo.",
+  "Cet espace est réservé aux comptes. Crée ton compte gratuit pour retrouver ta progression sur tous tes appareils et accéder aux classes, aux amis et aux classements.": "Este espacio es solo para cuentas. Crea tu cuenta gratuita para conservar tu progreso en todos tus dispositivos y acceder a clases, amigos y clasificaciones.",
+  "Tes épreuves anticipées : juin {v0} (bac session {v1})": "Tus exámenes anticipados: junio de {v0} (bachillerato, sesión {v1})",
+  "Le service qui crée les questions est indisponible pour le moment. Cette question de synthèse est construite directement à partir de ton cours. Tu pourras demander la correction après ta rédaction.": "El servicio que crea las preguntas no está disponible por ahora. Esta pregunta de síntesis se construye directamente a partir de tu curso. Podrás pedir la corrección después de redactar tu respuesta.",
+  "Attente annulée. Rien n’a été ajouté.": "Espera cancelada. No se añadió nada.",
+  "Le service qui crée les questions est indisponible pour le moment. Les exercices du chapitre restent disponibles ; réessaie plus tard.": "El servicio que crea las preguntas no está disponible por ahora. Los ejercicios del capítulo siguen disponibles; inténtalo más tarde.",
+  "Le cours est envoyé à un service d’intelligence artificielle externe (Gemini, de Google), uniquement quand tu le demandes, avec les questions déjà posées dans ce chapitre. Tes réponses et ton identité ne sont pas envoyées. Les questions créées par l’IA peuvent comporter des erreurs ; chaque correction indique le passage du cours dont elle vient.": "El curso se envía a un servicio externo de inteligencia artificial (Gemini, de Google), solo cuando tú lo pides, con las preguntas ya planteadas en este capítulo. Tus respuestas y tu identidad no se envían. Las preguntas creadas por la IA pueden contener errores; cada corrección indica el pasaje del curso del que procede."
 }
