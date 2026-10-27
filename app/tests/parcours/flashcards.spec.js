@@ -28,7 +28,7 @@ test('paquet enregistré : glisser, boutons et clavier', async ({ page }) => {
   await page.keyboard.press('ArrowRight')
   await expect(page.getByText('✓ 2')).toBeVisible()
   await page.keyboard.press('ArrowLeft')
-  await expect(page.getByText(/2 acquise\(s\) sur 4/)).toBeVisible()
+  await expect(page.getByText(/Cartes acquises : 2 sur 4/)).toBeVisible()
   await expect(page.getByText(/2 à revoir/)).toBeVisible()
   expect(erreurs).toEqual([])
 })
