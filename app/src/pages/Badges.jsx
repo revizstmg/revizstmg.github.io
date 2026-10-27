@@ -1,4 +1,5 @@
 import { BADGES } from '../badges.js'
+import { nombre } from '../format.js'
 import { useStore } from '../store.jsx'
 import { CourseText } from '../components/Course.jsx'
 import { useT } from '../i18n.js'
@@ -15,7 +16,7 @@ export default function Badges() {
   return (
     <div className="animate-lux space-y-5">
       <header className="page-hero">
-        <p className="kicker">{t('level')} {derived.level} · {state.xp} XP</p>
+        <p className="kicker">{t('level')} {derived.level} · {nombre(state.xp, state.lang || 'fr')} XP</p>
         <h1 className="font-display text-3xl font-medium leading-tight">🏅 {state.profile?.firstName ? `${t('badgesOf')} ${state.profile.firstName}` : t('myBadges')}</h1>
         <p className="mt-0.5 text-sm text-slate-500 dark:text-slate-400">
           {earned.size} / {BADGES.length} {t('unlocked')}

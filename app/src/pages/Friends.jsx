@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { nombre } from '../format.js'
 import { Navigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
@@ -353,7 +354,7 @@ function FriendsPage() {
                     </span>
                     <span className="min-w-0 flex-1">
                       <span className="block truncate font-semibold">{f.name || 'Élève'}</span>
-                      <span className="block text-xs text-slate-400">🔥 {f.streak || 0} · {f.xp || 0} XP{rec ? ` · ⚔️ ${rec.w}${t('duelWinShort')}-${rec.l}${t('duelLossShort')}` : ''}</span>
+                      <span className="block text-xs text-slate-400">🔥 {f.streak || 0} · {nombre(f.xp || 0, state.lang || 'fr')} XP{rec ? ` · ⚔️ ${rec.w}${t('duelWinShort')}-${rec.l}${t('duelLossShort')}` : ''}</span>
                     </span>
                     <button onClick={() => openSetup(f)} disabled={busy} className="shrink-0 rounded-lg px-3 py-1.5 text-sm font-semibold text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }}>⚔️ {t('challenge')}</button>
                     <button onClick={() => drop(f.device_id)} disabled={busy} className="shrink-0 text-slate-300 hover:text-rose-500" title={t('friendRemove')} aria-label={t('friendRemove')}>✕</button>

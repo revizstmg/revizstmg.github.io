@@ -14,7 +14,7 @@ import { emailValide, motDePasseValide, nomValide, inscriptionSuspecte, pauseCon
 
 // Ce qu'un professeur peut enseigner (matières communes + spécialités STMG).
 const TAUGHT = [
-  { id: 'management', label: 'Management (SGN)', icon: '🏢' },
+  { id: 'management', label: 'Management (MSGN)', icon: '🏢' },
   { id: 'droit', label: 'Droit', icon: '⚖️' },
   { id: 'economie', label: 'Économie', icon: '📈' },
   { id: 'maths', label: 'Maths', icon: '➗' },
@@ -647,6 +647,7 @@ export default function Welcome() {
                 </div>
                 {err && <p className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
                 {info && <p className="mt-3 text-sm font-semibold text-emerald-700">{info}</p>}
+                {!step3Ok && !busy && <p className="welcome-aide mt-3" role="status">Choisis ton niveau et accepte les conditions pour créer ton compte.</p>}
                 <div className="mt-3 flex gap-2">
                   <button type="button" className={backBtn} disabled={busy} onClick={() => setSignupStep(2)}>{t('back')}</button>
                   <button type="button" className="welcome-cta !mt-0 flex-1" disabled={!step3Ok || busy} onClick={() => submitForm()}>{busy ? t('pleaseWait') : oauthNew ? t('finishSignup') : t('createMyAccount')}</button>

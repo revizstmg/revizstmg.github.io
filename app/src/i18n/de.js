@@ -2,6 +2,7 @@
 export default {
   "studyLanguagesTitle": "Deine Lernsprachen",
   "studyLanguagesHelp": "Wähle eine oder mehrere Sprachen. Du kannst die Auswahl in den Einstellungen ändern. Ohne Auswahl bleiben alle verfügbaren Materialien sichtbar.",
+  "studyLanguagesHelpSettings": "Wähle eine oder mehrere Sprachen. Ohne Auswahl bleiben alle verfügbaren Materialien sichtbar.",
   "studyArabic": "Arabisch",
   "studyEnglish": "Englisch",
   "studyItalian": "Italienisch",
@@ -957,7 +958,7 @@ export default {
   "toReviewLabel": "wiederholen",
   "swipeHint": "Wischen Sie über die Karte: ←, um noch einmal zu sehen · Ich wusste →",
   "feedbackGood": "Bravo!",
-  "feedbackBad": "Fast…",
+  "feedbackBad": "Nicht ganz.",
   "nextQuestion": "Nächste Frage",
   "trueLabel": "Richtig",
   "falseLabel": "Falsch",

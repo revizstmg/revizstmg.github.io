@@ -7,11 +7,11 @@ const CONTACT = 'revizstmg@gmail.com'
 // Foire aux questions. Rédigée en français (public : lycées français).
 export default function Faq() {
   const items = [
-    ['Comment créer un compte ?', "Sur l'écran d'accueil, choisis **« Créer un compte »**, puis **Élève** ou **Professeur**, et remplis tes informations. Le compte est nécessaire pour sauvegarder ta progression."],
+    ['Comment créer un compte ?', "Sur l'écran d'accueil, choisis **« Créer un compte »**, puis **Élève**, **Professeur** ou **Parent**, et remplis tes informations. Tu peux aussi **« Essayer sans compte »** : ta progression reste alors sur cet appareil. Le compte permet de la sauvegarder et de la retrouver partout."],
     ["J'ai oublié mon mot de passe.", "Sur l'écran **« Se connecter »**, clique sur **« Mot de passe oublié ? »**, entre ton adresse e‑mail : tu reçois un **code par mail**, puis tu choisis un nouveau mot de passe."],
     ['Comment rejoindre la classe de mon professeur ?', "Va dans [[Mon espace|/moi]], touche **« Rejoindre une classe »** et saisis le **code de classe** que ton professeur t'a communiqué."],
     ['Je suis professeur : comment créer une classe ?', "Crée un compte **Professeur** : un **code de classe unique** est généré automatiquement. Tu le retrouves à tout moment dans la page « Classe » de ton menu (bouton copier) et tu le partages à tes élèves. Tu peux en créer d'autres, et exclure un élève si besoin."],
-    ['Ma progression est‑elle sauvegardée ?', "Oui. Elle est enregistrée sur **ton compte** : connecte‑toi et tu la retrouves sur **tous tes appareils** (téléphone, ordinateur…)."],
+    ['Ma progression est‑elle sauvegardée ?', "Oui. Elle est enregistrée sur **ton compte** : connecte‑toi et tu la retrouves sur **tous tes appareils** (téléphone, ordinateur…). Si tu essaies le site sans compte, elle reste uniquement sur cet appareil."],
     ["Comment changer ma photo ou l'apparence du site ?", "Ouvre **ton menu** (ton prénom ou ton initiale) → **« Personnaliser mon profil »** (couleurs, police, avatar, photo…). Cette fonction est réservée à l’application installée : installe RévizSTMG sur ton écran d’accueil pour l’utiliser."],
     ['Qui voit mes informations ?', "Dans ta classe, ton **prénom, ta photo et tes scores** sont visibles par tes camarades et ton professeur. Ton **e‑mail** sert uniquement à la connexion. Détails dans la [[Politique de confidentialité|/confidentialite]]."],
     ['Comment supprimer mon compte ?', "Va dans [[« Mon espace »|/moi]] → tout en bas → **« Supprimer mon compte »**. Ta progression, ta classe, tes amis, tes duels et le suivi parent sont effacés. Ton adresse e-mail de connexion est supprimée en même temps."],

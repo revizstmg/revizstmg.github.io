@@ -54,7 +54,7 @@ export default function Trou({ game, color, onDone }) {
         <button onClick={check} disabled={!val.trim()} className="btn-primary w-full" style={{ backgroundColor: color }}>{t('check')}</button>
       ) : (
         <>
-          <Feedback ok={ok} choisi={val}>{ok ? t('exact') : <>{t('rightAnswerIs')} <strong>{q.answer}</strong>. </>}{' '}{q.explain}</Feedback>
+          <Feedback ok={ok} choisi={val}>{ok ? t('exact') : <>{t('rightAnswerIs')} <strong>{q.answer}</strong>. </>}{' '}{String(q.explain || '').replace(/\s*Le mot manquant\s*:\s*[«"][^»"]*[»"]\.?/i, '')}</Feedback>
           <button onClick={next} className="btn-primary mt-4 w-full" style={{ backgroundColor: color }}>
             {i + 1 >= items.length ? t('seeScore') : `${t('next')} →`}
           </button>

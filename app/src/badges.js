@@ -260,7 +260,7 @@ export const BADGES = [
   },
   {
     id: 'collector',
-    name: 'Collectionneur',
+    name: 'Collectionneur de favoris',
     icon: '📌',
     desc: 'Mettre 5 chapitres en favoris.',
     check: (s) => (s.favorites?.length || 0) >= 5,
@@ -269,7 +269,7 @@ export const BADGES = [
   // ----- Maîtrise par matière -----
   {
     id: 'gestion_pro',
-    name: 'Expert Gestion-Finance',
+    name: 'Expert Gestion & Finance',
     icon: '💼',
     desc: 'Atteindre 80 % de progression en Gestion et Finance.',
     check: (s, d) => (d.bySubject['gestion-finance'] || 0) >= 80,
@@ -419,7 +419,7 @@ export const BADGES = [
   },
   {
     id: 'marathoner',
-    name: 'Marathonien',
+    name: 'Endurant',
     icon: '🏃',
     desc: 'Cumuler 5 heures de révision.',
     check: (s) => totalTime(s) >= 5 * 3600,
