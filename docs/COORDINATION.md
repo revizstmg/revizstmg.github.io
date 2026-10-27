@@ -1543,3 +1543,6 @@ Prochaine action :
 - B2-12 : FAQ et guide traduits d'un bloc (composant TexteRiche) dans les cinq langues, hors ligne. Les tests de panne de traduction utilisent maintenant les CGU.
 - Tests : tests/audit-b2.test.js, tests/parcours/audit-b2.spec.js. Aucune table ni migration.
 - Non traités : B2-13 à B2-15 et les constats mineurs B2-16 et suivants.
+
+- Vérification navigateur terminée : les six scénarios ciblés passent, y compris Direct (panne, révélation, reprise, rechargement et vue hôte) et changement réel de compte dans l’interface sans rechargement (adversaire du duel correct). Tests réseau synthétiques seulement. Les premiers essais ont corrigé les sélecteurs des scénarios et leurs réponses de serveur simulé ; aucune assertion de résultat retirée.
+- Intégration de main e9948496 (#135 de Claude) sans chevauchement de code ; les deux sections du journal ont été conservées. Suite locale de596 tests et compilation de notre correctif réussies avant cette intégration ; la CI de livraison validera aussi les nouveaux contrôles de Claude en UTC/Paris et tous les parcours avant publication.

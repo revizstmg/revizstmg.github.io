@@ -152,7 +152,11 @@ test('amis : changer de compte sans recharger actualise le côté et le nom du d
       current = body.email === profiles[B].email ? B : current
       return json({ access_token: current, refresh_token: current, expires_in: 3600, user: { id: current, email: profiles[current].email } })
     }
-    if (path.endsWith('/profiles') && req.method() === 'GET') return json([profiles[url.searchParams.get('id')?.replace('eq.', '') || current]])
+    if (path.endsWith('/profiles')) {
+      const id = url.searchParams.get('id')?.replace('eq.', '') || current
+      if (req.method() === 'PATCH') profiles[id] = { ...profiles[id], ...req.postDataJSON() }
+      return json([profiles[id]])
+    }
     if (path.endsWith('/friend_duel') && url.searchParams.get('status') === 'eq.live') return json(current === B ? [duel] : [])
     return json([])
   })
