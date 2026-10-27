@@ -125,7 +125,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
             <h1 className="truncate font-display text-[1.7rem] font-medium leading-[1.15] text-[#faf3e1] sm:text-[2.15rem]">{`${first} ${last}`.trim() || t('mySpace')}</h1>
             {state.customTheme?.title && <p className="mt-2 text-sm font-semibold text-[#e8ce8d]">✦ {tr(state.customTheme.title)}</p>}
             {state.account?.email && <p className="mt-0.5 truncate text-xs text-[#b8a878]">{state.account.email}</p>}
-            <p className="mt-1 text-xs capitalize tracking-wide text-[#d8cca8]">{trackIcon(state.track)} {trackLabel(state.track)}{state.classCode ? ` · 👥 ${state.classCode}` : ''}</p>
+            <p className="mt-1 text-xs tracking-wide text-[#d8cca8]">{trackIcon(state.track)} {trackLabel(state.track)}{state.classCode ? ` · 👥 ${state.classCode}` : ''}</p>
           </div>
           <div className="hidden shrink-0 sm:block">
             <Ring value={derived.pct} color="var(--c-accent)" size={84} label={`${t('levelShort')} ${derived.level}`} />

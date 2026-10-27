@@ -61,7 +61,7 @@ function EtudeGestionPage() {
 
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">
-      <LevelToolNotice level="premiere-stmg" />
+      <LevelToolNotice level="premiere-stmg">
       <header className="page-hero text-center">
         <p className="kicker">🔎 {t('egTitle')}</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('egTitle')}</h1>
@@ -87,6 +87,7 @@ function EtudeGestionPage() {
       {aDuContenu(eg) && (
         <button onClick={() => telecharger('etude-de-gestion.txt', dossierTexte(eg))} className="btn-gold w-full !py-3">⬇️ {t('egDownload')}</button>
       )}
+      </LevelToolNotice>
     </div>
   )
 }

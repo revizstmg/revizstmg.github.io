@@ -1520,3 +1520,9 @@ Prochaine action :
 - A-05 / A-09 : une horloge qui recule ne casse plus la série ; chaque gel couvre un jour manqué, tout ou rien (choix à valider par le propriétaire).
 - A-07 / A-08 / A-10 : étoiles lisibles par un lecteur d'écran, message pour un paquet inconnu, minuterie du jeu Association nettoyée et état exposé.
 - Tests : tests/audit-agent-a.test.js, tests/parcours/audit-agent-a.spec.js, tests/parcours/serie-et-gels.spec.js, test de solde dans tests/fusion.test.js.
+
+### AUDIT-20261027-CLAUDE-09 - constats moyens et mineurs restants de l'audit (agent B)
+- Corrigé : B-11 (casse de Mon espace), B-12 (carte parcours à 320 px), B-14 (consigne du texte à trous), B-15/B-16 (FAQ : gratuité « aujourd'hui », e-mail supprimé avec le compte, menu du profil), B-19 (phrase de la médaille), B-21/B-22 (libellés de la révision, « Minuteur de révision », phrase du coach à la 2e personne), B-23 (« 1 flashcard »), B-25 (« Ton niveau », langues alphabétiques, message sous le bouton grisé), B-26 (Allemand dans Mes notes), B-28 (date du bac proposée), B-29 (dates en minuscules), B-30 (progression : titre sans doublon, « Pas encore fait »), B-32 (pluriels de l'atelier), B-33 (outil d'un autre niveau masqué derrière un message), B-09 (prochain palier de série en une phrase), B-24 (introduction de la page Classe au vouvoiement).
+- Non reproduit : B-13 (le tri affiche déjà un compteur et un retour juste/faux), B-27 (le format des milliers suit la langue de l'interface), A-11 à A-13 (à confirmer par l'agent A, sans défaut constaté).
+- Reste à décider ou à faire : B-08 (glossaire séance/mission/défi/parcours), B-10 (allemand : « du » partout), B-17/B-18 (numérotation et chapitres qui se recoupent en Droit), B-20 (filtre de l'atelier par niveau), B-24 (masquer XP et badges côté professeur), B-31 (infobulles de l'en-tête).
+- Tests : tests/audit-b-restant.test.js. Traductions hors ligne en cinq langues. Aucune table ni migration.

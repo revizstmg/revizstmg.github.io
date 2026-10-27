@@ -10,7 +10,7 @@ test('studio : parcours guidé, erreurs par matière et raccourcis sans casser l
  for(const label of ['à revoir aujourd’hui','à renforcer','bien acquis'])await expect(page.getByText(label,{exact:true})).toHaveCount(0)
  await expect(page.getByRole('link', { name: /Lancer ma séance/ })).toHaveAttribute('href', '#/seance')
  await page.getByRole('button', { name: /Retravailler mes erreurs/ }).click()
- await expect(page.getByRole('heading',{level:1,name:'Comprendre mes erreurs'})).toBeVisible()
+ await expect(page.getByRole('heading',{level:1,name:'Revoir mes erreurs'})).toBeVisible()
  await page.getByLabel('Matière',{exact:true}).selectOption('gestion-finance')
  await expect(page.getByRole('heading',{name:'Aucune erreur dans cette sélection'})).toBeVisible()
  await expect(page).toHaveURL(/#\/revision$/)

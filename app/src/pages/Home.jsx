@@ -92,7 +92,7 @@ export default function Home() {
       <section className="card p-5" aria-label="Du devoir à la révision"><JourneySteps/><div className="mt-5 flex flex-wrap gap-4 text-sm"><Link to="/mes-notes" className="underline">Préparer mon bilan</Link><Link to="/offres" className="underline">Comparer les offres</Link><Link to="/cours" className="underline">Voir tous les cours</Link></div></section>
 
       <section className="card flex flex-wrap items-center justify-between gap-4 p-5" aria-labelledby="home-parcours-title">
-        <div className="min-w-0 flex-1">
+        <div className="min-w-[14rem] flex-1">
           <p className="kicker">Mon parcours</p>
           <h2 id="home-parcours-title" className="font-display text-xl font-semibold">Un plan fait pour toi, semaine par semaine.</h2>
           <p className="mt-1 text-sm">Dis-nous ta note visée et ton temps disponible : le plan s’adapte à tes résultats.</p>
@@ -121,8 +121,8 @@ export default function Home() {
             {nm && (
               <div className="home-streak-goal">
                 <div className="mb-1 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-                  <span className="truncate">{nm.icon} {nm.day} {t(nm.day > 1 ? 'daysStreakP' : 'daysStreakS')} · <span className="font-semibold" style={{ color: 'var(--c-accent-texte)' }}>+{nm.xp} XP</span></span>
-                  <span className="shrink-0 pl-2">{nm.daysLeft} {t(nm.daysLeft > 1 ? 'daysLeftP' : 'daysLeftS')}</span>
+                  <span className="truncate">{nm.icon} {tr('Prochain palier : {day} jours (+{xp} XP)', { day: nm.day, xp: nm.xp })}</span>
+                  <span className="shrink-0 pl-2">{tr(nm.daysLeft > 1 ? 'Plus que {n} jours' : 'Plus que {n} jour', { n: nm.daysLeft })}</span>
                 </div>
                 <ProgressBar value={nm.pct} color="var(--c-accent)" />
               </div>

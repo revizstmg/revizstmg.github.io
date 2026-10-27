@@ -11,10 +11,10 @@ export default function Faq() {
     ['Comment rejoindre la classe de mon professeur ?', <>Va dans l'onglet <b>« Classe »</b> et saisis le <b>code de classe</b> que ton professeur t'a communiqué.</>],
     ['Je suis professeur : comment créer une classe ?', <>Crée un compte <b>Professeur</b> : un <b>code de classe unique</b> est généré automatiquement. Tu le retrouves à tout moment dans l'onglet « Classe » (bouton copier) et tu le partages à tes élèves. Tu peux en créer d'autres, et exclure un élève si besoin.</>],
     ['Ma progression est‑elle sauvegardée ?', <>Oui. Elle est enregistrée sur <b>ton compte</b> : connecte‑toi et tu la retrouves sur <b>tous tes appareils</b> (téléphone, ordinateur…).</>],
-    ['Comment changer ma photo ou l\'apparence du site ?', <>Clique sur <b>ton initiale en haut à droite</b> → <b>« Personnaliser mon profil »</b> (couleurs, police, avatar, photo…).</>],
+    ['Comment changer ma photo ou l\'apparence du site ?', <>Ouvre <b>ton menu</b> (ton prénom ou ton initiale) → <b>« Personnaliser mon profil »</b> (couleurs, police, avatar, photo…).</>],
     ['Qui voit mes informations ?', <>Dans ta classe, ton <b>prénom, ta photo et tes scores</b> sont visibles par tes camarades et ton professeur. Ton <b>e‑mail</b> sert uniquement à la connexion. Détails dans la <Link to="/confidentialite" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">Politique de confidentialité</Link>.</>],
-    ['Comment supprimer mon compte ?', <>Va dans <Link to="/moi" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">« Mon espace »</Link> → tout en bas → <b>« Supprimer mon compte »</b>. Ta progression, ta classe, tes amis, tes duels et le suivi parent sont effacés. Pour supprimer aussi ton adresse e-mail de connexion, écris à <a href="mailto:revizstmg@gmail.com" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">revizstmg@gmail.com</a>.</>],
-    ['Le site est‑il gratuit ?', <>Oui, RévizSTMG est entièrement gratuit.</>],
+    ['Comment supprimer mon compte ?', <>Va dans <Link to="/moi" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">« Mon espace »</Link> → tout en bas → <b>« Supprimer mon compte »</b>. Ta progression, ta classe, tes amis, tes duels et le suivi parent sont effacés. Ton adresse e-mail de connexion est supprimée en même temps.</>],
+    ['Le site est‑il gratuit ?', <>Oui, RévizSTMG est gratuit aujourd’hui. Si des offres payantes (Premium, Ultimate) arrivent un jour, elles seront annoncées clairement avant tout paiement.</>],
   ]
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">

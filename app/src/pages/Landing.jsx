@@ -24,7 +24,7 @@ export default function Landing() {
       <header className="page-hero text-center">
         <p className="kicker">RévizSTMG</p>
         <h1 className="mt-1 font-display text-[2rem] font-medium leading-tight">
-          {state.profile?.firstName ? `${state.profile.firstName}, ` : ''}{t('whatRevise')}
+          {state.profile?.firstName ? `${state.profile.firstName}, ${t('whatRevise').charAt(0).toLowerCase()}${t('whatRevise').slice(1)}` : t('whatRevise')}
         </h1>
         <span className="mx-auto mt-3 block h-px w-24 rounded-full" style={{ background: 'linear-gradient(90deg,transparent,#c8a24e,transparent)' }} />
         <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">{t('chooseLevel')}</p>

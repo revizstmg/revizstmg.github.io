@@ -80,7 +80,7 @@ function GrandOralPage() {
 
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">
-      <LevelToolNotice level="terminale-stmg" />
+      <LevelToolNotice level="terminale-stmg">
       <header className="page-hero text-center">
         <p className="kicker">🎓 {t('grandOral')}</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('grandOral')}</h1>
@@ -117,6 +117,7 @@ function GrandOralPage() {
       {aDuContenu(go) && (
         <button onClick={() => telecharger('grand-oral.txt', preparationTexte(go))} className="btn-gold w-full !py-3">⬇️ {t('goDownload')}</button>
       )}
+      </LevelToolNotice>
     </div>
   )
 }

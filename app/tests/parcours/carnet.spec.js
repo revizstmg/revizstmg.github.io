@@ -2,7 +2,7 @@ import { addDays } from '../../src/data/srs.js'
 import { test, expect } from '@playwright/test'
 import { preparer, attendreAccueil, etatEleve, etat } from './eleve.js'
 
-// Comprendre mes erreurs : une question ratée reste retravaillable par matière. Réussie le
+// Revoir mes erreurs : une question ratée reste retravaillable par matière. Réussie le
 // jour où elle est due, elle passe dans la boîte suivante (revue 3 jours plus
 // tard) ; elle ne sort qu'après trois réussites espacées.
 const QUESTION = {

@@ -8,7 +8,7 @@ import { usePublicText } from '../i18n.js'
 import GameHost from '../games/GameHost.jsx'
 import { ALL_CHAPTERS } from '../data/index.js'
 
-const labels={follow:'Suivre le fil',errors:'Comprendre mes erreurs',acquired:'Ancrer mes connaissances'}
+const labels={follow:'Continuer mes révisions',errors:'Revoir mes erreurs',acquired:'Ancrer mes connaissances'}
 const actions={follow:'Reprendre mes révisions',errors:'Retravailler mes erreurs',acquired:'Lancer mon QCM'}
 const help={follow:'Choisis une matière : reprends au prochain exercice à travailler, ou sélectionne un chapitre précis.',errors:'Retrouve les questions que tu as ratées dans cette matière, avec leur correction. Tu peux cibler un chapitre.',acquired:'Un QCM mélange tes bonnes réponses de cette matière et des exercices réussis à 100 %, en répartissant les questions entre les chapitres.'}
 export default function RevisionPath({mode,subjects,onBack}) {

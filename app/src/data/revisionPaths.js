@@ -49,7 +49,7 @@ export function errorSteps(state,subject,themeId='') {
   const errors=[...(state.erreurs || [])].filter(e=>allowed.has(e.themeId) && inSection(e,themeId)).sort((a,b)=>String(a.due || '').localeCompare(String(b.due || '')))
   for(const e of errors.slice(0,12)) {
     const key=`${e.themeId}|${e.type}`
-    if(!groups.has(key)) groups.set(key,{themeId:e.themeId,game:{id:`carnet-${e.type}`,type:e.type,title:'Comprendre mes erreurs',questions:[]}})
+    if(!groups.has(key)) groups.set(key,{themeId:e.themeId,game:{id:`carnet-${e.type}`,type:e.type,title:'Revoir mes erreurs',questions:[]}})
     groups.get(key).game.questions.push(e.q)
   }
   return [...groups.values()]

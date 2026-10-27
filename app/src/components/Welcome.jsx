@@ -492,6 +492,7 @@ export default function Welcome() {
             )}
             <StudyLanguages value={studyLanguages} onChange={setStudyLanguages} />
             <button type="button" className="welcome-cta" disabled={!essaiOk} onClick={commencerEssai}>Commencer mes révisions sans compte</button>
+            {!essaiOk && <p className="welcome-aide" role="status">Indique ton prénom et choisis ton niveau pour commencer.</p>}
             <button type="button" className="welcome-skip" onClick={() => setEssai(false)}>{t('backToLogin')}</button>
           </>
         ) : recoverStep ? (
