@@ -5,7 +5,7 @@ import { Rich } from '../components/ui.jsx'
 import { Figure } from '../games/Calcul.jsx'
 import Contenu from '../content/Contenu.jsx'
 import { todayKey } from '../data/srs.js'
-import { ALL_CHAPTERS, themeChapters } from '../data/index.js'
+import { ALL_CHAPTERS } from '../data/index.js'
 import { courseText } from '../data/examenPersonnalise.js'
 import { vacancesSubjects, vacancesChapters, createVacances, prepareVacancesSession, answerVacances, vacancesScore, vacancesSessionDone, vacancesTrackKey } from '../data/vacances.js'
 import { vacancesText } from '../i18n/vacances.js'
@@ -89,7 +89,7 @@ function Activity({program:p,phase,m,onAnswer,onBack}) {
  const title=initial?m('initial'):final?m('final'):m('session',{n:phase+1})
  if (!questions.length) return <button className="btn-ghost" onClick={onBack}>{m('back')}</button>
  return <section className="space-y-4"><button className="lien-retour" onClick={onBack}>← {m('back')}</button><h2 ref={heading} tabIndex={-1} className="font-display text-3xl">{title}</h2>
- {reading ? <div className="card p-5 space-y-4"><h3 className="font-display text-2xl">{m('read')}</h3><p>{m('readingHelp')}</p>{[...new Set(questions.map(q=>q.chapterId))].map(id=>{const ch=p.chapters.find(ch=>ch.id===id),current=themeChapters(ALL_CHAPTERS[ch.themeId]).find(c=>c.idx===ch.idx);return <details key={id} open={id===session.focus}><summary lang="fr" translate="no">{ch.title}</summary><div lang="fr" translate="no" tabIndex={0} className="vacances-reading"><Rich text={courseText(current?.section || {})}/></div><Link className="underline" to={chapterUrl(p,ch)}>{m('returnCourse')}</Link></details>})}<button className="btn-primary" onClick={()=>setReading(false)}>{m('practice')}</button></div> : q ? <div className="card p-5 space-y-4" data-vacances-question={q.id}>
+ {reading ? <div className="card p-5 space-y-4"><h3 className="font-display text-2xl">{m('read')}</h3><p>{m('readingHelp')}</p>{[...new Set(questions.map(q=>q.chapterId))].map(id=>{const ch=p.chapters.find(ch=>ch.id===id),current=ALL_CHAPTERS[ch.themeId]?.cours?.[ch.idx];return <details key={id} open={id===session.focus}><summary lang="fr" translate="no">{ch.title}</summary><div lang="fr" translate="no" tabIndex={0} className="vacances-reading"><Rich text={courseText(current || {})}/></div><Link className="underline" to={chapterUrl(p,ch)}>{m('returnCourse')}</Link></details>})}<button className="btn-primary" onClick={()=>setReading(false)}>{m('practice')}</button></div> : q ? <div className="card p-5 space-y-4" data-vacances-question={q.id}>
   <p>{m('question',{n:index+1,total:questions.length})}</p><p className="text-sm" lang="fr" translate="no">{p.chapters.find(ch=>ch.id===q.chapterId)?.title}</p><h3 className="text-lg font-semibold" lang="fr" translate="no">{q.q}</h3>{q.fig&&<Figure fig={q.fig}/>}
   <div className="vacances-choices">{q.choices.map((text,i)=><button type="button" disabled={!!answers[q.id]} className="vacances-choice" key={i} lang="fr" translate="no" onClick={()=>onAnswer(q.id,i)}>{String.fromCharCode(65+i)}. {text}</button>)}</div>
   {answers[q.id] && <><div className="vacances-note" role="status"><p className="font-semibold">{m(answers[q.id].correct?'correct':'incorrect')}</p><div lang="fr" translate="no" className="mt-2 space-y-2"><p>{m('correction')} {q.choices[q.answer]}</p><Rich text={q.explain}/></div></div><button className="btn-primary" onClick={()=>index+1<questions.length?setIndex(i=>i+1):onBack()}>{m(index+1<questions.length?'next':'finish')}</button></>}
