@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useT } from '../i18n.js'
+import { readSessionDraft, writeSessionDraft } from '../data/sessionDraft.js'
 import {
   deviceId, fetchActiveLive, fetchLive, createLive, updateLive, endLive,
   joinLive, fetchPlayers, submitLiveAnswer, fetchQuizzes,
@@ -33,7 +34,7 @@ export default function LiveSection({ classCode, role, name, photo, t }) {
   if (session && session.phase !== 'ended') {
     return session.host_device === myId
       ? <HostView session={session} t={t} onExit={() => { setSession(null); setStatus('none') }} />
-      : <PlayerView session={session} name={name} photo={photo} t={t} onExit={() => { setSession(null); setStatus('none') }} />
+      : <PlayerView key={`${myId}:${session.id}`} session={session} name={name} photo={photo} t={t} onExit={() => { setSession(null); setStatus('none') }} />
   }
 
   // Aucune session en cours.
@@ -226,16 +227,26 @@ function HostView({ session: initial, t, onExit }) {
 // ----- Vue Élève (smartphone) ----------------------------------------------
 function PlayerView({ session: initial, name, photo, t, onExit }) {
   const [session, setSession] = useState(initial)
-  const [answered, setAnswered] = useState(null) // { index, choice, correct, points }
+  const player = deviceId()
+  const draftKey = `stmg_live_answers:${player}:${initial.id}`
+  const [answers, setAnswers] = useState(() => readSessionDraft(draftKey) || {})
+  const answersRef = useRef(answers)
+  const sendingRef = useRef(false)
+  const [sending, setSending] = useState(false)
+  const [storageError, setStorageError] = useState(false)
+  const commit = useCallback((next) => {
+    answersRef.current = next
+    setAnswers(next)
+    setStorageError(!writeSessionDraft(draftKey, next))
+  }, [draftKey])
   const [myScore, setMyScore] = useState(0)
   const [rank, setRank] = useState(null)
   const id = initial.id
-  const joinedRef = useRef(false)
+  const joinedRef = useRef(null)
 
   useEffect(() => {
-    if (joinedRef.current) return
-    joinedRef.current = true
-    joinLive({ sessionId: id, name, photo }).catch(() => {})
+    joinedRef.current = joinLive({ sessionId: id, name, photo })
+    joinedRef.current.catch(() => { joinedRef.current = null })
   }, [id, name, photo])
 
   const refresh = useCallback(async () => {
@@ -243,31 +254,72 @@ function PlayerView({ session: initial, name, photo, t, onExit }) {
       const [s, players] = await Promise.all([fetchLive(id), fetchPlayers(id)])
       if (s) setSession(s)
       const me = players.find((p) => p.device_id === deviceId())
-      if (me) setMyScore(me.score || 0)
+      if (me) {
+        setMyScore(me.score || 0)
+        const next = { ...answersRef.current }
+        let changed = false
+        for (const [index, answer] of Object.entries(me.answers || {})) {
+          if (next[index]?.saved) continue
+          next[index] = { ...next[index], ...answer, index: Number(index), saved: true }
+          changed = true
+        }
+        if (changed) commit(next)
+      }
       setRank(players.findIndex((p) => p.device_id === deviceId()) + 1)
     } catch { /* */ }
-  }, [id])
+  }, [id, commit])
   useEffect(() => { refresh(); const iv = setInterval(refresh, 1800); return () => clearInterval(iv) }, [refresh])
 
   const idx = session.current_index || 0
   const q = (session.questions || [])[idx]
-  useEffect(() => { setAnswered(null) }, [idx, session.phase])
+  const answered = answers[idx] || null
+  // Une file par session/compte, pas par question : les réponses non envoyées
+  // restent récupérables même quand le professeur a avancé.
+  const flush = useCallback(async () => {
+    if (sendingRef.current || deviceId() !== player) return
+    sendingRef.current = true; setSending(true)
+    try {
+      if (!joinedRef.current) joinedRef.current = joinLive({ sessionId: id, name, photo })
+      try { await joinedRef.current } catch (error) { joinedRef.current = null; throw error }
+      for (const answer of Object.values(answersRef.current)) {
+        if (answer.saved) continue
+        const r = await submitLiveAnswer({ sessionId: id, index: answer.index, choice: answer.choice, correct: answer.correct, addScore: answer.points })
+        if (deviceId() !== player) return
+        commit({ ...answersRef.current, [answer.index]: { ...answer, ...r.answers[answer.index], saved: true } })
+        setMyScore(r.score)
+      }
+    } catch { /* Le brouillon reste dans la file, avec une action de reprise. */ }
+    finally { sendingRef.current = false; setSending(false) }
+  }, [id, player, name, photo, commit])
+  useEffect(() => {
+    flush()
+    window.addEventListener('online', flush)
+    return () => window.removeEventListener('online', flush)
+  }, [flush])
 
   const pick = async (i) => {
-    if (answered || !q) return
+    if (answersRef.current[idx] || !q) return
     const correct = i === q.answer
     let frac = 1
     if (session.q_started_at) { const el = (Date.now() - new Date(session.q_started_at).getTime()) / 1000; frac = Math.max(0, Math.min(1, (QT - el) / QT)) }
     const points = correct ? 100 + Math.round(400 * frac) : 0
-    setAnswered({ index: idx, choice: i, correct, points })
-    try { const r = await submitLiveAnswer({ sessionId: id, index: idx, choice: i, correct, addScore: points }); if (r?.score != null) setMyScore(r.score) } catch { /* */ }
+    commit({ ...answersRef.current, [idx]: { index: idx, choice: i, correct, points, saved: false } })
+    flush()
   }
 
+  const pending = Object.values(answers).some(a => !a.saved)
   const Header = (
+    <>
     <div className="flex items-center justify-between gap-2">
       <span className="rounded-full px-3 py-1 text-xs font-bold text-white" style={{ backgroundColor: '#e21b3c' }}>🔴 {t('liveMode')}</span>
       <span className="text-sm font-semibold">{myScore} <span className="text-xs font-normal text-slate-400">pts{rank ? ` · #${rank}` : ''}</span></span>
     </div>
+    {pending && <div className="card space-y-2 p-3" role="status">
+      <p>{t(sending ? 'liveSending' : 'livePending')}</p>
+      {!sending && <button type="button" className="btn-primary" onClick={flush}>{t('retry')}</button>}
+    </div>}
+    {storageError && <p role="alert">{t('draftStorageFailed')}</p>}
+    </>
   )
 
   if (session.phase === 'lobby') {
@@ -295,7 +347,7 @@ function PlayerView({ session: initial, name, photo, t, onExit }) {
         {answered ? (
           <div className="card p-6 text-center">
             <div className="text-3xl">{answered.correct ? '✅' : '⌛'}</div>
-            <p className="mt-2 font-semibold">{t('answerRecorded')}</p>
+            <p className="mt-2 font-semibold">{t(answered.saved ? 'answerRecorded' : sending ? 'liveSending' : 'livePending')}</p>
             <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t('waitOthers')}</p>
           </div>
         ) : (
@@ -319,7 +371,7 @@ function PlayerView({ session: initial, name, photo, t, onExit }) {
         <div className={`card p-6 text-center ${myAns ? '' : 'opacity-90'}`}>
           <div className="text-4xl">{myAns ? (good ? '🎉' : '❌') : '⌛'}</div>
           <h2 className="mt-2 font-display text-xl font-semibold">{myAns ? (good ? t('correctAnswer') : t('wrongAnswer')) : t('noAnswerGiven')}</h2>
-          {myAns && good && <p className="mt-1 text-sm text-emerald-600 dark:text-emerald-400">+{myAns.points} pts</p>}
+          {myAns?.saved && good && Number.isFinite(myAns.points) && <p className="mt-1 text-sm text-emerald-600 dark:text-emerald-400">+{myAns.points} pts</p>}
           <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">✅ {q.choices[q.answer]}</p>
           {q.explain && <p className="mt-2 rounded-xl bg-slate-100 p-2.5 text-sm dark:bg-slate-800">💡 {q.explain}</p>}
           <p className="mt-3 font-display text-lg font-semibold">{myScore} pts{rank ? ` · #${rank}` : ''}</p>

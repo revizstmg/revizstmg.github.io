@@ -362,4 +362,12 @@ export default {
   autoTranslated: 'traduit automatiquement',
   translationPartial: 'Certains textes n’ont pas pu être traduits. Tu peux réessayer.',
   myPath: 'Mon parcours',
+
+  // Reprise des réponses et brouillons
+  liveSending: "Envoi de ta réponse…",
+  livePending: "Ta réponse n’est pas encore envoyée. Réessaie ; tes réponses restent conservées dans cet onglet.",
+  draftStorageFailed: "Le brouillon ne peut pas être conservé dans cet onglet. Ne ferme pas cette page.",
+  manualLoadFailed: "Impossible de charger les exercices. Vérifie ta connexion et réessaie.",
+  mathDraftSaved: "Ta copie est conservée dans cet onglet. Tu peux quitter et reprendre ici, même après une actualisation.",
+  mathDraftLost: "Le brouillon ne peut pas être conservé. Quitter effacera tes réponses. Continuer ?",
 }

@@ -1,13 +1,16 @@
 // Les exercices du manuel PDF d'une langue, à faire directement sur le site.
 import { useEffect, useMemo, useState } from 'react'
+import { useT } from '../i18n.js'
 import { ordonnerExercices, estLibre, sorteExercice, verifier } from '../data/exercicesManuel.js'
 
-const charger = {
-  de: () => import('../../resources/langues/de.json'),
-  en: () => import('../../resources/langues/en.json'),
-  es: () => import('../../resources/langues/es.json'),
-  it: () => import('../../resources/langues/it.json'),
-  ar: () => import('../../resources/langues/ar.json'),
+// URL de données, pas import JS : fetch peut réellement être réessayé après
+// un échec réseau (les imports JS rejetés peuvent rester en cache navigateur).
+const urls = {
+  de: new URL('../../resources/langues/de.json', import.meta.url).href,
+  en: new URL('../../resources/langues/en.json', import.meta.url).href,
+  es: new URL('../../resources/langues/es.json', import.meta.url).href,
+  it: new URL('../../resources/langues/it.json', import.meta.url).href,
+  ar: new URL('../../resources/langues/ar.json', import.meta.url).href,
 }
 
 function Sorte({ e }) {
@@ -18,10 +21,11 @@ function Sorte({ e }) {
   return <>Mini-exercice</>
 }
 
-function Exercice({ e, numero }) {
-  const [saisie, setSaisie] = useState('')
-  const [etat, setEtat] = useState(null) // null | 'juste' | 'faux' | 'montre'
-  const [bilan, setBilan] = useState(null) // auto-évaluation des exercices libres
+function Exercice({ e, numero, valeur, modifier }) {
+  const { saisie = '', etat = null, bilan = null } = valeur || {}
+  const setSaisie = saisie => modifier({ saisie })
+  const setEtat = etat => modifier({ etat })
+  const setBilan = bilan => modifier({ bilan })
   const libre = estLibre(e)
   const idChamp = `manuel-${e.id}`
   const valider = (valeur = saisie) => { if (valeur.trim()) setEtat(verifier(e, valeur) ? 'juste' : 'faux') }
@@ -80,15 +84,29 @@ function Exercice({ e, numero }) {
 }
 
 export default function ExercicesManuel({ langue, nomLangue }) {
-  const [manuel, setManuel] = useState(null)
+  const t = useT()
+  const [charge, setCharge] = useState(null)
+  const manuel = charge?.langue === langue ? charge.manuel : null
+  const [erreur, setErreur] = useState(false)
+  const [essai, setEssai] = useState(0)
+  // Les réponses appartiennent au manuel, pas aux composants filtrés.
+  const [brouillons, setBrouillons] = useState({})
+  const modifier = (id, patch) => setBrouillons(p => ({ ...p, [id]: { ...p[id], ...patch } }))
   const [groupe, setGroupe] = useState('')
   useEffect(() => {
     let actif = true
-    setManuel(null); setGroupe('')
-    charger[langue]().then((m) => { if (actif) setManuel(m.default) })
-    return () => { actif = false }
-  }, [langue])
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 15000)
+    setCharge(null); setErreur(false); setGroupe('')
+    fetch(urls[langue], { signal: controller.signal })
+      .then(res => { if (!res.ok) throw new Error('manual_unavailable'); return res.json() })
+      .then(manuel => { ordonnerExercices(manuel); if (actif) setCharge({ langue, manuel }) })
+      .catch(() => { if (actif) setErreur(true) })
+      .finally(() => clearTimeout(timeout))
+    return () => { actif = false; clearTimeout(timeout); controller.abort() }
+  }, [langue, essai])
   const ordre = useMemo(() => (manuel ? ordonnerExercices(manuel) : null), [manuel])
+  if (erreur) return <section className="card space-y-3 p-5" role="alert"><p>{t('manualLoadFailed')}</p><button type="button" className="btn-primary" onClick={() => setEssai(n => n + 1)}>{t('retry')}</button></section>
   if (!ordre) return <section className="card p-5" aria-busy="true"><p>Chargement des exercices…</p></section>
   const visibles = ordre.groupes.filter((g) => !groupe || g.id === groupe)
   return (
@@ -106,7 +124,7 @@ export default function ExercicesManuel({ langue, nomLangue }) {
       {visibles.map((g) => (
         <div key={g.id} className="space-y-3">
           <h3 className="font-display text-lg font-semibold" dir="auto">{g.lecon ? `Leçon ${g.lecon}` : <>Bilan</>} · <span translate="no">{g.titre}</span></h3>
-          <ol className="space-y-3">{g.exercices.map((e) => <Exercice key={e.id} e={e} numero={ordre.numeros.get(e.id)} />)}</ol>
+          <ol className="space-y-3">{g.exercices.map((e) => <Exercice key={e.id} e={e} numero={ordre.numeros.get(e.id)} valeur={brouillons[`${langue}:${e.id}`]} modifier={patch => modifier(`${langue}:${e.id}`, patch)} />)}</ol>
         </div>
       ))}
     </section>

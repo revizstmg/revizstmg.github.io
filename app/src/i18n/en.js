@@ -372,4 +372,12 @@ export default {
   removeFav: 'Remove from favorites', addFav: 'Add to favorites',
   autoTranslated: 'automatically translated',
   myPath: 'My path',
+
+  // Reprise des réponses et brouillons
+  liveSending: "Sending your answer…",
+  livePending: "Your answer has not been sent yet. Retry; your answers remain in this tab.",
+  draftStorageFailed: "This tab cannot save your draft. Keep this page open.",
+  manualLoadFailed: "Could not load the exercises. Check your connection and retry.",
+  mathDraftSaved: "Your paper is kept in this tab. You can leave and resume here, even after refreshing.",
+  mathDraftLost: "Your draft cannot be saved. Leaving will erase your answers. Continue?",
 }

@@ -32,7 +32,7 @@ function VacancesPage() {
   {!state.account?.id && <p className="vacances-note">{m('local')}</p>}
   {(!program || editing) ? <>
    <label className="vacances-subject">{m('subject')}<select aria-label={m('subject')} value={sid} onChange={e=>setSid(e.target.value)}><option value="">{m('chooseSubject')}</option>{subjects.map(s=><option value={s.id} key={s.id}>{s.name}</option>)}</select></label>
-   <Contenu matieres={sid?[sid]:[]}><Setup key={sid} subject={subjects.find(s=>s.id===sid)} m={m} track={state.track} onCreate={p=>{update(()=>p);setEditing(false);setPhase('initial')}} /></Contenu>
+   <Contenu matieres={sid?[sid]:[]}><Setup key={sid} subject={subjects.find(s=>s.id===sid)} m={m} track={state.track} onCreate={p=>{if (!program && state.parcours?.vacances && !window.confirm(m('replace'))) return;update(()=>p);setEditing(false);setPhase('initial')}} /></Contenu>
    {program && <button type="button" className="btn-ghost" onClick={()=>setEditing(false)}>{m('back')}</button>}
   </> : <Contenu matieres={[program.subjectId]}>
    {phase !== null ? <Activity program={program} phase={phase} m={m} onAnswer={(id,picked)=>update(p=>p?.id===program.id?answerVacances(p,phase,id,picked):p)} onBack={()=>setPhase(null)}/> : <Overview program={program} m={m} lang={state.lang} onPhase={setPhase} onStart={index=>{update(p=>p?.id===program.id?prepareVacancesSession(p,index):p);setPhase(index)}} onReplace={replace}/>} 

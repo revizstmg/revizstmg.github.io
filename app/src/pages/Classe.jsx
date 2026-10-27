@@ -1477,7 +1477,7 @@ function ProfGroups({ classCode, t }) {
                   <option value="">— {t('noGroup')} —</option>
                   {groups.map((g) => <option key={g.id} value={g.id}>{g.emoji} {g.name}</option>)}
                 </select>
-                <button onClick={async () => { if (confirm(`${t('excludeConfirm')} ${m.name || ''}`.trim() + ' ?')) { try { await banStudent({ classCode, deviceId: m.device_id }) } catch { alert(t('rankOffline')); return } load() } }}
+                <button onClick={async () => { if (confirm(`${t('excludeConfirm')} ${m.name || ''}`.trim() + ' ?')) { try { await banStudent({ classCode, deviceId: m.device_id }) } catch { alert(t('classActionFailed')); return } load() } }}
                   className="shrink-0 rounded-lg px-2 py-1.5 text-xs font-semibold text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/40" aria-label={t('exclude')+' '+(m.name || t('roleStudent'))} title={t('exclude')}>🚫</button>
               </div>
             ))}

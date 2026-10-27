@@ -1527,6 +1527,13 @@ Prochaine action :
 - Reste à décider ou à faire : B-08 (glossaire séance/mission/défi/parcours), B-10 (allemand : « du » partout), B-17/B-18 (numérotation et chapitres qui se recoupent en Droit), B-20 (filtre de l'atelier par niveau), B-24 (masquer XP et badges côté professeur), B-31 (infobulles de l'en-tête).
 - Tests : tests/audit-b-restant.test.js. Traductions hors ligne en cinq langues. Aucune table ni migration.
 
+### AUDIT-20261027-CODEX-02 - neuf défauts fonctionnels et reprise maths
+- Demande : « corrige tout » après audit de trois agents. Branche fix/audit-fonctionnel-20261027, base4786b1e1. Réservation : LiveMode.jsx, classroom.js, friends.js, Friends.jsx (périmètre Claude indispensable signalé au propriétaire), Vacances.jsx, PileCartes.jsx/FlashcardsPage.jsx, ExercicesManuel.jsx, SujetMaths.jsx et tests/traductions nécessaires.
+- Objectif : résultat conservé à la révélation, envoi vérifié/reprise sans double score, exclusion vérifiée avec erreur, invitation refusée renouvelable, identité courante des duels, confirmation du remplacement Vacances entre filières, cartes identifiées séparément, brouillons de langues indépendants du filtre, erreur de chargement récupérable et reprise du sujet math. Aucun schéma/réglage Supabase, donnée réelle ou fichier compilé racine modifié à la main. Validation et publication à suivre.
+
+- Réalisé : neuf défauts corrigés côté application, brouillon maths par compte dans l’onglet, messages traduits en six langues et détails dans docs/AUDIT-FONCTIONNEL-20261027.md. Les erreurs réseau ne sont plus assimilées à un succès ; réponses du Direct indexées par question et reprise idempotente, exclusion confirmée avant retrait, refus d’amitié renouvelable sans modifier le statut du destinataire.
+- Validation locale : 596 tests unitaires sur66 fichiers réussis, compilation réussie (866 pages). Quatre parcours navigateur déjà réussis (cartes au même recto/XP, panne et filtres des langues, reprise maths sans nouveaux XP, remplacement Vacances entre filières annulé/confirmé) ; dernières vérifications Direct et changement de compte en cours. Aucun compte réel ni appel Gemini, aucune table/règle/secret Supabase ou donnée NAH modifié. PR #136 ; publication automatique après validation complète.
+
 ### AUDIT-20261027-CLAUDE-10 - constats de la deuxième vérification (agent B)
 - B2-01 : « Fiche par photo » dit désormais que « Lecture classique (hors ligne) » reste sur l'appareil et que « Analyser la photo » envoie la photo à un service d'IA externe.
 - B2-02 : confidentialité et CGU citent les aides générées par IA des chapitres (« Créer ma série », « Questions type de contrôle », tuteur de cours) et ce qui est envoyé.
@@ -1536,3 +1543,6 @@ Prochaine action :
 - B2-12 : FAQ et guide traduits d'un bloc (composant TexteRiche) dans les cinq langues, hors ligne. Les tests de panne de traduction utilisent maintenant les CGU.
 - Tests : tests/audit-b2.test.js, tests/parcours/audit-b2.spec.js. Aucune table ni migration.
 - Non traités : B2-13 à B2-15 et les constats mineurs B2-16 et suivants.
+
+- Vérification navigateur terminée : les six scénarios ciblés passent, y compris Direct (panne, révélation, reprise, rechargement et vue hôte) et changement réel de compte dans l’interface sans rechargement (adversaire du duel correct). Tests réseau synthétiques seulement. Les premiers essais ont corrigé les sélecteurs des scénarios et leurs réponses de serveur simulé ; aucune assertion de résultat retirée.
+- Intégration de main e9948496 (#135 de Claude) sans chevauchement de code ; les deux sections du journal ont été conservées. Suite locale de596 tests et compilation de notre correctif réussies avant cette intégration ; la CI de livraison validera aussi les nouveaux contrôles de Claude en UTC/Paris et tous les parcours avant publication.

@@ -18,7 +18,6 @@ const initialsOf = (name) => {
   return ((p[0]?.[0] || '') + (p[1]?.[0] || '')).toUpperCase() || '·'
 }
 const medal = (i) => (i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i + 1}`)
-const me = deviceId()
 
 // Score d'un duel joué dont l'envoi a échoué : gardé sur l'appareil pour le
 // renvoyer (l'envoi est idempotent : il réécrit le même score).
@@ -44,10 +43,11 @@ function resultFromDuel(d) {
 export default function Friends() {
   const { state } = useStore()
   if (!state.track) return <Navigate to="/" replace />
-  return <FriendsPage />
+  return <FriendsPage key={state.account?.id || 'trial'} />
 }
 
 function FriendsPage() {
+  const me = deviceId()
   const { state, derived } = useStore()
   const t = useT()
 
