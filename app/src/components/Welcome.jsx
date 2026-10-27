@@ -41,7 +41,7 @@ export default function Welcome() {
 
   // Mode parent : sur l'espace parent (ou parent déjà relié), on ne montre jamais
   // l'accueil d'inscription élève — le parent n'a pas de compte élève à créer.
-  const parentMode = ['/exemple-bilan', '/offres'].includes(location.pathname) || location.pathname.startsWith('/parent') || (!state.track && !state.profile?.firstName && (() => { try { return !!localStorage.getItem('stmg_parent_link') } catch { return false } })())
+  const parentMode = ['/exemple-bilan', '/offres', '/vacances'].includes(location.pathname) || location.pathname.startsWith('/parent') || (!state.track && !state.profile?.firstName && (() => { try { return !!localStorage.getItem('stmg_parent_link') } catch { return false } })())
 
   const hasProfile = !!state.profile?.firstName
   // Écran d'accueil : « form » si aucun compte, « plan » si le compte existe
