@@ -1,0 +1,1 @@
+function e(t){try{return JSON.parse(sessionStorage.getItem(t)||"null")}catch{return null}}function s(t,r){try{return sessionStorage.setItem(t,JSON.stringify(r)),!0}catch{return!1}}export{e as r,s as w};

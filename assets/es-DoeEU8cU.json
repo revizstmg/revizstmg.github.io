@@ -1,0 +1,3564 @@
+{
+  "name": "Espagnol",
+  "label": "Español",
+  "hello": "¡Hola! ¿Puedes presentarte?",
+  "intro": "Construire un espagnol oral clair : sons, situations quotidiennes, opinions et communication professionnelle.",
+  "sections": [
+    {
+      "title": "Commencer par une vraie situation",
+      "text": "Choisis une situation concrète : te présenter, demander un renseignement ou décrire ton stage. Prépare cinq phrases utiles, écoute un modèle puis essaie sans lire. Une langue se construit par des retours fréquents sur les mêmes situations, avec une difficulté qui augmente progressivement. Le guide accompagne un apprentissage : il ne remplace ni un professeur ni des échanges réels.",
+      "task": "Enregistre une présentation de 30 secondes. Écoute-la et choisis un seul point à améliorer. Garde cette première version pour comparer dans deux semaines."
+    },
+    {
+      "title": "Écouter pour comprendre, pas pour tout traduire",
+      "text": "Prends un extrait de 30 à 90 secondes adapté à ton niveau. Première écoute : qui parle, où et pourquoi ? Deuxième écoute : repère trois mots ou informations. Troisième écoute avec sous-titres dans la langue : vérifie ton hypothèse. Reprends ensuite sans sous-titres. Une vidéo trop difficile peut servir à découvrir une culture, mais un support plus simple est préférable pour travailler la compréhension.",
+      "task": "Note le thème et trois informations, puis résume en une phrase. Vérifie avec la transcription ; distingue ce que tu avais compris et ce que tu avais deviné."
+    },
+    {
+      "title": "Parler par petits blocs",
+      "text": "Apprends des groupes de mots réutilisables plutôt que des listes isolées : demander de répéter, donner son avis, expliquer une difficulté. Fais varier un élément de chaque phrase. Pour gagner en fluidité, prépare des mots-clés et non un texte entier. Les hésitations sont normales : une reformulation simple est souvent plus efficace qu’une traduction mot à mot.",
+      "task": "Construis trois réponses différentes à la même question. Fais d’abord 20 secondes, puis 40 secondes, puis une minute sans lire de texte."
+    },
+    {
+      "title": "Prononciation : écouter, imiter, comparer",
+      "text": "Écoute une phrase courte, mets en pause, répète, puis compare ton enregistrement au modèle. Observe le rythme, l’accent des mots et l’intonation avant de chercher une imitation parfaite. Le shadowing consiste à parler juste après le modèle : ralentis si nécessaire. Une transcription en français ne reproduit jamais exactement les sons d’une autre langue.",
+      "task": "Répète cinq fois une phrase de huit à douze mots. Compare les versions 1 et 5 sur un critère : rythme, consonne ou voyelle. Demande un retour à un enseignant ou à un interlocuteur compétent."
+    },
+    {
+      "title": "Vocabulaire qui reste disponible",
+      "text": "Crée des cartes avec une expression, une phrase personnelle et, si possible, un extrait audio fiable. Cache la réponse et retrouve-la à voix haute. Revois après un jour, trois jours, une semaine puis deux semaines ; rapproche les révisions si tu oublies. Relie chaque mot à une situation vécue. Dix expressions utilisées valent mieux qu’une longue liste seulement relue.",
+      "task": "Sélectionne cinq expressions de la semaine. Utilise-les dans une conversation de deux minutes puis modifie la situation pour vérifier que tu sais les réemployer."
+    },
+    {
+      "title": "Comprendre, lire et écrire pour mieux parler",
+      "text": "Lis un texte court à ton niveau, repère son objectif et ses connecteurs. Prépare un résumé avec des mots-clés. Écris ensuite cinq phrases, vérifie le sujet, le verbe et les accords, puis reformule-les oralement sans feuille. Un correcteur peut aider à repérer une erreur ; demande toujours pourquoi et vérifie la règle avec une ressource fiable.",
+      "task": "Lis une annonce ou une courte actualité. Résume l’idée principale, donne un exemple et explique ton avis. Compare le résumé au document : n’ajoute pas de faits absents."
+    },
+    {
+      "title": "Prononcer de façon régulière",
+      "text": "Les cinq voyelles a, e, i, o, u gardent des sons relativement stables ; u ne se prononce pas comme le u français. Le h est muet. Le j de trabajo est une consonne de friction ; écoute un modèle. Le r simple et le rr peuvent distinguer pero et perro. En l’absence d’accent écrit, les mots finissant par voyelle, n ou s sont généralement accentués sur l’avant-dernière syllabe ; les autres sur la dernière. Les accents régionaux, notamment pour c/z, sont légitimes.",
+      "task": "Repère la syllabe forte de trabajo, español, teléfono et organización. Écoute puis répète les mots dans une phrase."
+    },
+    {
+      "title": "Se présenter simplement",
+      "text": "Me llamo Lina. — Je m’appelle Lina. Tengo diecisiete años. — J’ai dix-sept ans. Soy estudiante de STMG en Francia. — Je suis élève en STMG en France. Me interesa el comercio. — Le commerce m’intéresse. Me gustaría trabajar en una empresa. — J’aimerais travailler dans une entreprise. ¿Y tú? — Et toi ?",
+      "task": "Présente ton identité, tes études, un centre d’intérêt et un projet en cinq phrases. Explique STMG à un interlocuteur qui ne connaît pas cette filière."
+    },
+    {
+      "title": "Ser, estar et hay",
+      "text": "Ser sert notamment à identifier : Soy estudiante. Estar sert notamment à situer ou à décrire un état : Estoy en clase. Estoy cansada. Hay indique une existence : Hay tres personas. Ce ne sont pas simplement des catégories permanent/temporaire : un événement se situe avec ser, par exemple La reunión es en Madrid. Apprends les emplois en contexte.",
+      "task": "Décris une entreprise : ce qu’elle est, où elle se trouve et ce qu’il y a dans ses locaux. Utilise ser, estar et hay."
+    },
+    {
+      "title": "Parler du présent, du passé et d’un projet",
+      "text": "Trabajo en una tienda : présent. Ayer trabajé : passé achevé et situé. He trabajado esta semana : bilan lié au présent dans de nombreux usages d’Espagne ; les usages varient en Amérique latine. Antes trabajaba : habitude passée. Voy a estudiar : projet proche. Me gustaría aprender : souhait. Les terminaisons indiquent souvent le sujet ; yo n’est pas obligatoire dans chaque phrase.",
+      "task": "Raconte une journée de stage passée, une ancienne habitude et ton prochain objectif. Choisis des repères temporels explicites."
+    },
+    {
+      "title": "Demander une précision",
+      "text": "¿Puede repetir, por favor? — Pouvez-vous répéter ? ¿Puedes hablar más despacio? — Peux-tu parler moins vite ? ¿Qué significa esta palabra? — Que signifie ce mot ? No estoy seguro/segura. — Je ne suis pas sûr/sûre. Quiero decir que… — Je veux dire que… ¿Podría darme un ejemplo? — Pourriez-vous me donner un exemple ? Tú et usted correspondent à des usages de familiarité/politesse qui varient selon les pays.",
+      "task": "Joue une demande de renseignement. Utilise une demande de répétition puis vérifie : ¿Quiere decir que…?"
+    },
+    {
+      "title": "Avis, comparaison et argument",
+      "text": "Creo que… / En mi opinión… donnent un avis. Porque explique une cause ; por eso une conséquence ; sin embargo une nuance. Por ejemplo illustre. Estoy de acuerdo / No estoy de acuerdo expriment un accord ou désaccord. Más… que / menos… que comparent ; tan… como exprime l’égalité.",
+      "task": "Compare deux manières de faire connaître une association. Donne un avantage, une limite et une recommandation."
+    },
+    {
+      "title": "Mini-dialogue : accueillir un client",
+      "text": "A: Buenos días, ¿en qué puedo ayudarle? B: Busco información sobre este producto. A: ¿Qué le gustaría saber? B: ¿Cuánto cuesta y cómo se utiliza? A: Cuesta veinte euros. Le explico cómo funciona. B: Gracias. ¿Puedo pagar con tarjeta? A: Sí, por supuesto.",
+      "task": "Change le produit, le prix et le besoin du client. Fais ensuite reformuler au client les informations reçues."
+    },
+    {
+      "title": "ETLV et faux amis",
+      "text": "La empresa ofrece… présente l’offre ; los clientes sont les clients ; los empleados les salariés ; el volumen de ventas les ventes, à préciser avec l’unité du document. Actuellement = actualmente ; actualmente n’est pas éventuellement. Embarazada signifie enceinte ; avergonzado signifie gêné. Asistir a una reunión signifie assister à une réunion.",
+      "task": "Présente une entreprise en une minute puis propose une amélioration : Propongo… porque… Ne crée pas de chiffres non présents dans les documents."
+    },
+    {
+      "title": "Interagir sans rester bloqué",
+      "text": "Écoute la question jusqu’au bout. Si tu ne comprends pas, demande de répéter ou de reformuler. Réponds brièvement puis ajoute un exemple et une question de relance. Pour un échange à distance, ne partage pas d’informations personnelles avec des inconnus ; privilégie les cadres scolaires et les services adaptés à ton âge.",
+      "task": "Avec un partenaire, alternez client et conseiller pendant deux minutes. Interdiction de lire un dialogue ; chacun doit poser au moins deux questions et demander une précision."
+    },
+    {
+      "title": "Routine de 20 minutes",
+      "text": "5 minutes : revoir cinq expressions sans regarder. 5 minutes : écouter un extrait court avec un objectif précis. 5 minutes : répéter puis enregistrer une réponse. 5 minutes : noter un progrès et une difficulté, et préparer la prochaine séance. Les jours chargés, garde une version de cinq minutes : trois expressions et une réponse enregistrée.",
+      "task": "Planifie quatre rendez-vous réalistes par semaine. Coche les séances réellement faites. Si tu rates un jour, reprends simplement au rendez-vous suivant, sans doubler artificiellement la charge."
+    },
+    {
+      "title": "Plan progressif sur quatre semaines",
+      "text": "Semaine 1 : présentation et demandes simples ; deux enregistrements de 30 secondes. Semaine 2 : raconter une journée ou une expérience ; trois réponses de 45 secondes. Semaine 3 : donner un avis et comparer deux possibilités ; un échange de deux minutes. Semaine 4 : présenter un projet et répondre à des questions ; bilan avec la première version. Adapte les durées : ce programme ne garantit pas un niveau CECRL en quatre semaines.",
+      "task": "Choisis un objectif observable par semaine : par exemple expliquer trois tâches de stage sans lire. Garde une trace datée et une difficulté à retravailler."
+    },
+    {
+      "title": "S’autoévaluer avec précision",
+      "text": "Sur une échelle de 1 à 4, observe : message compréhensible, organisation, vocabulaire utile, correction et interaction. 1 : besoin d’un modèle ; 2 : message possible avec aide ; 3 : autonomie sur une situation familière ; 4 : autonomie avec reformulations et réponses aux questions. Ce bilan personnel n’est ni une certification CECRL ni une note officielle.",
+      "task": "Enregistre le même sujet une semaine plus tard. Cite un exemple concret de progrès et une priorité. Vérifie les attentes exactes de ton devoir avec ton professeur."
+    }
+  ],
+  "resources": [
+    {
+      "title": "VideoEle — vidéos graduées et activités",
+      "url": "https://videoele.com/",
+      "kind": "video"
+    },
+    {
+      "title": "Instituto Cervantes — langue et culture",
+      "url": "https://cervantes.org/es",
+      "kind": "practice"
+    },
+    {
+      "title": "RAE — dictionnaire de référence",
+      "url": "https://dle.rae.es/",
+      "kind": "reading"
+    }
+  ],
+  "id": "es",
+  "lessons": [
+    {
+      "id": "es-pratique-6",
+      "title": "Prononcer de façon régulière",
+      "part": "Premiers échanges",
+      "paragraphs": [
+        "Les cinq voyelles a, e, i, o, u gardent des sons relativement stables ; u ne se prononce pas comme le u français. Le h est muet. Le j de trabajo est une consonne de friction ; écoute un modèle. Le r simple et le rr peuvent distinguer pero et perro. En l’absence d’accent écrit, les mots finissant par voyelle, n ou s sont généralement accentués sur l’avant-dernière syllabe ; les autres sur la dernière. Les accents régionaux, notamment pour c/z, sont légitimes."
+      ],
+      "lexicon": [],
+      "oral": "Repère la syllabe forte de trabajo, español, teléfono et organización. Écoute puis répète les mots dans une phrase.",
+      "origin": "RévizSTMG · guide pratique"
+    },
+    {
+      "id": "es-pratique-7",
+      "title": "Se présenter simplement",
+      "part": "Premiers échanges",
+      "paragraphs": [
+        "Me llamo Lina. — Je m’appelle Lina. Tengo diecisiete años. — J’ai dix-sept ans. Soy estudiante de STMG en Francia. — Je suis élève en STMG en France. Me interesa el comercio. — Le commerce m’intéresse. Me gustaría trabajar en una empresa. — J’aimerais travailler dans une entreprise. ¿Y tú? — Et toi ?"
+      ],
+      "lexicon": [],
+      "oral": "Présente ton identité, tes études, un centre d’intérêt et un projet en cinq phrases. Explique STMG à un interlocuteur qui ne connaît pas cette filière.",
+      "origin": "RévizSTMG · guide pratique"
+    },
+    {
+      "id": "es-pratique-10",
+      "title": "Demander une précision",
+      "part": "Premiers échanges",
+      "paragraphs": [
+        "¿Puede repetir, por favor? — Pouvez-vous répéter ? ¿Puedes hablar más despacio? — Peux-tu parler moins vite ? ¿Qué significa esta palabra? — Que signifie ce mot ? No estoy seguro/segura. — Je ne suis pas sûr/sûre. Quiero decir que… — Je veux dire que… ¿Podría darme un ejemplo? — Pourriez-vous me donner un exemple ? Tú et usted correspondent à des usages de familiarité/politesse qui varient selon les pays."
+      ],
+      "lexicon": [],
+      "oral": "Joue une demande de renseignement. Utilise une demande de répétition puis vérifie : ¿Quiere decir que…?",
+      "origin": "RévizSTMG · guide pratique"
+    },
+    {
+      "id": "p1-langues-p1-lng-es-0",
+      "title": "Ser / Estar et les passés",
+      "part": "Grammaire essentielle",
+      "paragraphs": [
+        "**Ser** sert notamment à exprimer l’**identité**, l’**origine**, la **profession**, l’**heure** ou une caractéristique présentée comme définitoire : *Soy estudiante*, *Es alto*. **Estar** sert notamment à exprimer un **état** ou à **situer une personne ou une chose** : *Estoy cansado*, *Madrid está en España*. La durée ne suffit pas à choisir : Madrid reste en Espagne, mais on emploie estar. Un événement se situe avec ser : *La reunión es en Madrid*.",
+        "**Indefinido** = action passée **datée** (« Ayer comí ») ; **imperfecto** = **description/habitude** (« Cuando era niño, jugaba ») ; **pretérito perfecto** (he/has/ha + participe) = passé récent lié au présent (« Hoy he comido »)."
+      ],
+      "lexicon": [
+        {
+          "term": "Ser",
+          "meaning": "Identité, origine, profession, heure ; caractéristique présentée comme définitoire."
+        },
+        {
+          "term": "Estar",
+          "meaning": "État ; localisation d’une personne ou d’une chose, sans critère obligatoire de durée."
+        },
+        {
+          "term": "Indefinido",
+          "meaning": "Action passée datée (Ayer comí)"
+        },
+        {
+          "term": "Imperfecto",
+          "meaning": "Description, habitude (Cuando era niño, jugaba)"
+        },
+        {
+          "term": "Pretérito perfecto",
+          "meaning": "Passé récent lié au présent (Hoy he comido)"
+        }
+      ],
+      "origin": "p1-langues/p1-lng-es/0"
+    },
+    {
+      "id": "p1-langues-p1-lng-es-1",
+      "title": "Futur, gustar, obligation et « a » personnel",
+      "part": "Grammaire essentielle",
+      "paragraphs": [
+        "**Futur** : infinitif + -é, -ás, -á, -emos, -éis, -án (hablaré). Irréguliers : tener→tendré.",
+        "**Gustar** : « Me gusta el cine » / « Me gustan los libros » (accord avec la chose aimée).",
+        "**Obligation** : *tener que* + inf. (personnelle) ; *hay que* + inf. (impersonnelle).",
+        "Le **« a » personnel** devant un COD de personne (« Veo a María »)."
+      ],
+      "lexicon": [],
+      "origin": "p1-langues/p1-lng-es/1"
+    },
+    {
+      "id": "langues-lng-es-gram-0",
+      "title": "Ser et estar, le présent et ses irréguliers",
+      "part": "Toutes les conjugaisons",
+      "paragraphs": [
+        "Au présent, **ser** se conjugue *soy, eres, es, somos, sois, son*, et **estar** se conjugue *estoy, estás, está, estamos, estáis, están*. Les deux verbes se traduisent par « être », mais ils ne s’emploient pas de la même façon.",
+        "**Ser** exprime notamment l’**identité**, l’**origine**, la **profession**, l’**heure** ou une caractéristique présentée comme définitoire — *Soy español*, *Son las tres*. **Estar** exprime notamment un **état** ou la **localisation d’une personne ou d’une chose** — *Estoy cansado*, *Está en Madrid*. Un état peut être durable et une profession changer : on choisit la construction et le sens, pas seulement la durée.",
+        "Au présent, les verbes réguliers en **-ar**, comme *hablar*, se conjuguent *hablo, hablas, habla, hablamos, habláis, hablan*. Les verbes en **-er**, comme *comer*, donnent *como, comes, come, comemos, coméis, comen*.",
+        "Les verbes en **-ir**, comme *vivir*, ont les mêmes terminaisons que les verbes en -er, sauf à *nosotros* et *vosotros* : *vivo, vives, vive, vivimos, vivís, viven*.",
+        "**Irréguliers fréquents au présent** : tener → *tengo, tienes, tiene…* · ir → *voy, vas, va, vamos, vais, van* · hacer → *hago* · poder → *puedo, puedes…* · querer → *quiero…*",
+        "Attention : ser et estar ne se choisissent pas simplement selon une opposition permanent/temporaire. La fonction de la phrase compte : La reunión es en Madrid situe un événement avec ser, tandis que Estoy en Madrid situe une personne avec estar. Apprends les constructions et le sens en contexte."
+      ],
+      "lexicon": [
+        {
+          "term": "Ser (présent)",
+          "meaning": "soy, eres, es, somos, sois, son"
+        },
+        {
+          "term": "Estar (présent)",
+          "meaning": "estoy, estás, está, estamos, estáis, están"
+        },
+        {
+          "term": "Emploi de ser",
+          "meaning": "Identité, origine, profession, heure ; localisation d’un événement avec ser."
+        },
+        {
+          "term": "Emploi de estar",
+          "meaning": "État ; localisation des personnes et des choses."
+        },
+        {
+          "term": "Présent en -ar (hablar)",
+          "meaning": "hablo, hablas, habla, hablamos, habláis, hablan"
+        },
+        {
+          "term": "Présent en -er (comer)",
+          "meaning": "como, comes, come, comemos, coméis, comen"
+        },
+        {
+          "term": "Présent en -ir (vivir)",
+          "meaning": "vivo, vives, vive, vivimos, vivís, viven"
+        },
+        {
+          "term": "Irréguliers fréquents au présent",
+          "meaning": "tener → tengo ; ir → voy ; hacer → hago ; poder → puedo ; querer → quiero"
+        }
+      ],
+      "origin": "langues/lng-es-gram/0"
+    },
+    {
+      "id": "langues-lng-es-gram-1",
+      "title": "Le passé simple (indefinido) et l’imparfait (imperfecto)",
+      "part": "Toutes les conjugaisons",
+      "paragraphs": [
+        "Au passé simple, l’***indefinido***, les verbes en **-ar** comme *hablar* se conjuguent *hablé, hablaste, habló, hablamos, hablasteis, hablaron* ; attention aux accents de *hablé* et *habló*, qui distinguent ces formes du présent.",
+        "Les verbes en **-er** et en **-ir** partagent les mêmes terminaisons : *comí, comiste, comió, comimos, comisteis, comieron*.",
+        "À l’imparfait, l’***imperfecto***, les verbes en **-ar** prennent des terminaisons en **-aba** : *hablaba, hablabas, hablaba, hablábamos, hablabais, hablaban*. Les verbes en **-er** et en **-ir** prennent des terminaisons en **-ía** : *comía, comías, comía, comíamos, comíais, comían*. Seuls trois verbes sont irréguliers à l’imparfait : *ser* (era), *ir* (iba) et *ver* (veía).",
+        "**Emploi** : l’*indefinido* présente un événement ou une période **comme achevés** ; la durée peut être longue : *Viví allí durante veinte años*. L’*imperfecto* décrit un **décor**, une **habitude** ou une action **en cours dans le passé**. Une date seule ne décide pas du temps : *Ayer comía cuando llamaste*. Indefinidos irréguliers : ser/ir → *fui*, tener → *tuve*, hacer → *hice*, estar → *estuve*, poder → *pude*, decir → *dije*."
+      ],
+      "lexicon": [
+        {
+          "term": "Indefinido en -ar (hablar)",
+          "meaning": "hablé, hablaste, habló, hablamos, hablasteis, hablaron"
+        },
+        {
+          "term": "Indefinido en -er/-ir (comer)",
+          "meaning": "comí, comiste, comió, comimos, comisteis, comieron"
+        },
+        {
+          "term": "Imperfecto en -ar (hablar)",
+          "meaning": "hablaba, hablabas, hablaba, hablábamos, hablabais, hablaban"
+        },
+        {
+          "term": "Imperfecto en -er/-ir (comer)",
+          "meaning": "comía, comías, comía, comíamos, comíais, comían"
+        },
+        {
+          "term": "Emploi de l’indefinido",
+          "meaning": "Événement ou période envisagés comme achevés ; durée courte ou longue."
+        },
+        {
+          "term": "Emploi de l’imperfecto",
+          "meaning": "Décor, description, habitude"
+        },
+        {
+          "term": "Indefinidos irréguliers",
+          "meaning": "ser/ir → fui ; tener → tuve ; hacer → hice ; estar → estuve ; poder → pude ; decir → dije"
+        }
+      ],
+      "origin": "langues/lng-es-gram/1"
+    },
+    {
+      "id": "langues-lng-es-gram-2",
+      "title": "Le passé composé et le plus-que-parfait (haber + participe)",
+      "part": "Toutes les conjugaisons",
+      "paragraphs": [
+        "Le **passé composé** (*pretérito perfecto*) se forme avec l’auxiliaire **haber** au présent suivi du **participe passé** : *he hablado, has hablado, ha hablado, hemos hablado, habéis hablado, han hablado*.",
+        "Le **plus-que-parfait** (*pluscuamperfecto*) se forme avec **haber à l’imparfait** suivi du participe : *había hablado, habías hablado, había hablado, habíamos hablado, habíais hablado, habían hablado*. Le participe passé régulier se termine en **-ado** pour les verbes en -ar et en **-ido** pour les verbes en -er et -ir, et il reste invariable.",
+        "Plusieurs participes passés sont irréguliers et doivent être appris par cœur : **hacer** donne *hecho*, **decir** donne *dicho*, **ver** donne *visto*, **escribir** donne *escrito*, **poner** donne *puesto*, **volver** donne *vuelto*, **abrir** donne *abierto*, **romper** donne *roto* et **morir** donne *muerto*."
+      ],
+      "lexicon": [
+        {
+          "term": "Pretérito perfecto",
+          "meaning": "haber au présent + participe (he, has, ha, hemos, habéis, han hablado)"
+        },
+        {
+          "term": "Pluscuamperfecto",
+          "meaning": "haber à l’imparfait + participe (había, habías, había, habíamos, habíais, habían hablado)"
+        },
+        {
+          "term": "Participe passé régulier",
+          "meaning": "-ado (hablar → hablado) ; -ido (comer → comido)"
+        },
+        {
+          "term": "Participes irréguliers",
+          "meaning": "hacer → hecho ; decir → dicho ; ver → visto"
+        },
+        {
+          "term": "Participes irréguliers (suite)",
+          "meaning": "escribir → escrito ; poner → puesto ; volver → vuelto"
+        },
+        {
+          "term": "Participes irréguliers (fin)",
+          "meaning": "abrir → abierto ; romper → roto ; morir → muerto"
+        }
+      ],
+      "origin": "langues/lng-es-gram/2"
+    },
+    {
+      "id": "langues-lng-es-gram-3",
+      "title": "Le futur et le conditionnel : terminaisons et radicaux irréguliers",
+      "part": "Toutes les conjugaisons",
+      "paragraphs": [
+        "Le **futur** se forme en ajoutant à l’infinitif les terminaisons *-é, -ás, -á, -emos, -éis, -án* : *hablaré, hablarás, hablará, hablaremos, hablaréis, hablarán*.",
+        "Le **conditionnel** se forme de la même façon, avec les terminaisons *-ía, -ías, -ía, -íamos, -íais, -ían* : *hablaría, hablarías, hablaría, hablaríamos, hablaríais, hablarían*. Les deux temps partagent les mêmes terminaisons pour les trois groupes de verbes.",
+        "On ajoute les terminaisons à **l’infinitif**. **Radicaux irréguliers** (communs au futur et au conditionnel) : tener → *tendr-*, poder → *podr-*, hacer → *har-*, decir → *dir-*, poner → *pondr-*, salir → *saldr-*, venir → *vendr-*, querer → *querr-*, saber → *sabr-*, haber → *habr-*."
+      ],
+      "lexicon": [
+        {
+          "term": "Futuro (hablar)",
+          "meaning": "hablaré, hablarás, hablará, hablaremos, hablaréis, hablarán"
+        },
+        {
+          "term": "Condicional (hablar)",
+          "meaning": "hablaría, hablarías, hablaría, hablaríamos, hablaríais, hablarían"
+        },
+        {
+          "term": "Radicaux irréguliers du futur et du conditionnel",
+          "meaning": "tendr-, podr-, har-, dir-, pondr-, saldr-, vendr-, querr-, sabr-, habr-"
+        }
+      ],
+      "origin": "langues/lng-es-gram/3"
+    },
+    {
+      "id": "langues-lng-es-gram-4",
+      "title": "Le subjonctif présent et l’impératif",
+      "part": "Toutes les conjugaisons",
+      "paragraphs": [
+        "Au **subjonctif présent**, les verbes en **-ar** prennent des terminaisons en **-e** : *hable, hables, hable, hablemos, habléis, hablen*. Les verbes en **-er** et en **-ir** prennent des terminaisons en **-a** : *coma, comas, coma, comamos, comáis, coman*. C’est l’« échange » des voyelles qui permet de le reconnaître.",
+        "**Emploi du subjonctif** : on le trouve notamment pour un souhait, un doute, une nécessité et dans l’impératif négatif. Exemples : *quiero que vengas*, *es necesario que estudies*, *ojalá haga sol*. **Que seul ne suffit pas** à l’imposer : *Creo que viene* utilise l’indicatif, tandis que *No creo que venga* utilise ici le subjonctif.",
+        "À l’**impératif affirmatif**, la forme régulière de **tú** est identique à la troisième personne du présent : *habla, come, vive*. Certains verbes fréquents sont irréguliers : *di* (decir), *haz* (hacer), *ve* (ir), *pon* (poner), *sal* (salir), *sé* (ser), *ten* (tener), *ven* (venir). **Usted** emprunte le subjonctif : *hable, coma, viva*. La forme régulière de **vosotros** remplace le -r de l’infinitif par -d : *hablad, comed, vivid*.",
+        "À l’**impératif négatif**, on utilise toujours le **subjonctif** précédé de *no* : *no hables, no comas, no vivas* pour tú ; *no hable, no coma, no viva* pour usted ; *no habléis, no comáis, no viváis* pour vosotros."
+      ],
+      "lexicon": [
+        {
+          "term": "Subjuntivo presente en -ar (hablar)",
+          "meaning": "hable, hables, hable, hablemos, habléis, hablen"
+        },
+        {
+          "term": "Subjuntivo presente en -er/-ir (comer)",
+          "meaning": "coma, comas, coma, comamos, comáis, coman"
+        },
+        {
+          "term": "Emploi du subjonctif",
+          "meaning": "Souhait, doute, nécessité : quiero que, es necesario que, ojalá ; que seul ne détermine pas le mode."
+        },
+        {
+          "term": "Impératif affirmatif (tú)",
+          "meaning": "habla / come / vive"
+        },
+        {
+          "term": "Impératif affirmatif (usted)",
+          "meaning": "hable / coma / viva"
+        },
+        {
+          "term": "Impératif affirmatif (vosotros)",
+          "meaning": "hablad / comed / vivid"
+        },
+        {
+          "term": "Impératif négatif",
+          "meaning": "no + subjonctif (no hables, no hable, no habléis)"
+        }
+      ],
+      "origin": "langues/lng-es-gram/4"
+    },
+    {
+      "id": "langues-lng-es-gram-5",
+      "title": "Le gérondif, l’obligation (tener que, hay que) et gustar",
+      "part": "Toutes les conjugaisons",
+      "paragraphs": [
+        "Le **gérondif** se forme en remplaçant la terminaison de l’infinitif : **-ar** devient **-ando** (*hablar → hablando*) et **-er** ou **-ir** deviennent **-iendo** (*comer → comiendo*, *vivir → viviendo*). Avec **estar**, il exprime une action **en train de se dérouler** : *Estoy comiendo*, je suis en train de manger.",
+        "L’espagnol exprime l’obligation de trois façons. **Tener que** + infinitif exprime une obligation **personnelle** : *Tengo que estudiar*, je dois étudier. **Hay que** + infinitif exprime une obligation **impersonnelle**, valable pour tous : *Hay que trabajar*, il faut travailler. **Deber** + infinitif signifie « **devoir** », souvent avec une nuance de conseil : *Debes descansar*, tu dois te reposer.",
+        "**Verbes de type gustar** : le sujet est la chose aimée → *Me **gusta** el cine* (sing.) / *Me **gustan** los libros* (plur.). Même construction : *encantar, interesar, doler, faltar*."
+      ],
+      "lexicon": [
+        {
+          "term": "Gérondif en -ar",
+          "meaning": "-ando (hablar → hablando)"
+        },
+        {
+          "term": "Gérondif en -er/-ir",
+          "meaning": "-iendo (comer → comiendo, vivir → viviendo)"
+        },
+        {
+          "term": "Estar + gérondif",
+          "meaning": "Être en train de (Estoy comiendo)"
+        },
+        {
+          "term": "Tener que + infinitif",
+          "meaning": "Obligation personnelle (Tengo que estudiar)"
+        },
+        {
+          "term": "Hay que + infinitif",
+          "meaning": "Obligation impersonnelle (Hay que trabajar)"
+        },
+        {
+          "term": "Deber + infinitif",
+          "meaning": "Devoir (Debes descansar)"
+        },
+        {
+          "term": "Verbes type gustar",
+          "meaning": "Le sujet est la chose aimée : me gusta el cine / me gustan los libros"
+        }
+      ],
+      "origin": "langues/lng-es-gram/5"
+    },
+    {
+      "id": "langues-lng-es-gram-6",
+      "title": "Verbes irréguliers clés (liste)",
+      "part": "Toutes les conjugaisons",
+      "paragraphs": [
+        "Les verbes irréguliers les plus fréquents changent souvent à la première personne du présent : *tengo* (tener), *hago* (hacer), *digo* (decir), *pongo* (poner), *vengo* (venir), *salgo* (salir), *traigo* (traer), *oigo* (oír), *conduzco* (conducir), *doy* (dar), *veo* (ver), *sé* (saber). D’autres changent leur radical : *puedo* (poder), *quiero* (querer), *vuelvo* (volver). *Ser* donne *soy*, *estar* donne *estoy*, *ir* donne *voy* et *haber* donne *he*.",
+        "Au passé simple, beaucoup ont un radical irrégulier : *estuve* (estar), *tuve* (tener), *hube* (haber), *hice* (hacer), *dije* (decir), *pude* (poder), *puse* (poner), *quise* (querer), *supe* (saber), *vine* (venir), *traje* (traer), *conduje* (conducir). *Ser* et *ir* ont la même forme, *fui* ; *ver* donne *vi* et *dar* donne *di*, tandis que *salí*, *leí*, *oí* et *volví* restent réguliers. Côté participes, retiens *hecho*, *visto*, *dicho*, *puesto* et *vuelto* ; les autres sont réguliers, comme *sido*, *estado*, *tenido* ou *ido*."
+      ],
+      "lexicon": [
+        {
+          "term": "ser (soy, fui, sido)",
+          "meaning": "être : notamment identité, origine, profession, heure."
+        },
+        {
+          "term": "estar (estoy, estuve, estado)",
+          "meaning": "être (état, lieu)"
+        },
+        {
+          "term": "tener (tengo, tuve, tenido)",
+          "meaning": "avoir"
+        },
+        {
+          "term": "haber (he, hube, habido)",
+          "meaning": "avoir (auxiliaire)"
+        },
+        {
+          "term": "hacer (hago, hice, hecho)",
+          "meaning": "faire"
+        },
+        {
+          "term": "ir (voy, fui, ido)",
+          "meaning": "aller"
+        },
+        {
+          "term": "ver (veo, vi, visto)",
+          "meaning": "voir"
+        },
+        {
+          "term": "dar (doy, di, dado)",
+          "meaning": "donner"
+        },
+        {
+          "term": "decir (digo, dije, dicho)",
+          "meaning": "dire"
+        },
+        {
+          "term": "poder (puedo, pude, podido)",
+          "meaning": "pouvoir"
+        },
+        {
+          "term": "poner (pongo, puse, puesto)",
+          "meaning": "mettre"
+        },
+        {
+          "term": "querer (quiero, quise, querido)",
+          "meaning": "vouloir, aimer"
+        },
+        {
+          "term": "saber (sé, supe, sabido)",
+          "meaning": "savoir"
+        },
+        {
+          "term": "venir (vengo, vine, venido)",
+          "meaning": "venir"
+        },
+        {
+          "term": "salir (salgo, salí, salido)",
+          "meaning": "sortir"
+        },
+        {
+          "term": "traer (traigo, traje, traído)",
+          "meaning": "apporter"
+        },
+        {
+          "term": "leer (leo, leí, leído)",
+          "meaning": "lire"
+        },
+        {
+          "term": "oír (oigo, oí, oído)",
+          "meaning": "entendre"
+        },
+        {
+          "term": "volver (vuelvo, volví, vuelto)",
+          "meaning": "revenir"
+        },
+        {
+          "term": "conducir (conduzco, conduje, conducido)",
+          "meaning": "conduire"
+        }
+      ],
+      "origin": "langues/lng-es-gram/6"
+    },
+    {
+      "id": "langues-lng-es-voc-0",
+      "title": "La vida cotidiana y la familia",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "Pour parler de **la familia** (la famille), on présente **los padres** (les parents), **el hermano** (le frère) et **la hermana** (la sœur), **el hijo** (le fils) et **la hija** (la fille). Autour d’elle, il y a **el amigo** (l’ami) et **el vecino** (le voisin).",
+        "On vit dans **la casa** (la maison) ou dans **el piso** (l’appartement), avec **la habitación** (la chambre) et **la cocina** (la cuisine). **La vida cotidiana** (la vie quotidienne) commence quand on va **despertarse** (se réveiller) et **vestirse** (s’habiller), puis vient **el desayuno** (le petit-déjeuner), premier repas, **la comida**. Il y a aussi **la tarea** (la tâche) à accomplir. **El fin de semana** (le week-end) et **las vacaciones** (les vacances) sont consacrés à **el ocio** (les loisirs) : on aime **pasar tiempo** (passer du temps) **juntos** (ensemble), ce qui renforce **la relación** (la relation)."
+      ],
+      "lexicon": [
+        {
+          "term": "la familia",
+          "meaning": "la famille"
+        },
+        {
+          "term": "los padres",
+          "meaning": "les parents"
+        },
+        {
+          "term": "el hermano",
+          "meaning": "le frère"
+        },
+        {
+          "term": "la hermana",
+          "meaning": "la sœur"
+        },
+        {
+          "term": "el hijo",
+          "meaning": "le fils"
+        },
+        {
+          "term": "la hija",
+          "meaning": "la fille"
+        },
+        {
+          "term": "el amigo",
+          "meaning": "l'ami"
+        },
+        {
+          "term": "el vecino",
+          "meaning": "le voisin"
+        },
+        {
+          "term": "la casa",
+          "meaning": "la maison"
+        },
+        {
+          "term": "el piso",
+          "meaning": "l'appartement"
+        },
+        {
+          "term": "la habitación",
+          "meaning": "la chambre"
+        },
+        {
+          "term": "la cocina",
+          "meaning": "la cuisine"
+        },
+        {
+          "term": "la comida",
+          "meaning": "le repas"
+        },
+        {
+          "term": "el desayuno",
+          "meaning": "le petit-déjeuner"
+        },
+        {
+          "term": "despertarse",
+          "meaning": "se réveiller"
+        },
+        {
+          "term": "vestirse",
+          "meaning": "s'habiller"
+        },
+        {
+          "term": "la tarea",
+          "meaning": "la tâche"
+        },
+        {
+          "term": "el fin de semana",
+          "meaning": "le week-end"
+        },
+        {
+          "term": "las vacaciones",
+          "meaning": "les vacances"
+        },
+        {
+          "term": "el ocio",
+          "meaning": "les loisirs"
+        },
+        {
+          "term": "pasar tiempo",
+          "meaning": "passer du temps"
+        },
+        {
+          "term": "la vida cotidiana",
+          "meaning": "la vie quotidienne"
+        },
+        {
+          "term": "juntos",
+          "meaning": "ensemble"
+        },
+        {
+          "term": "la relación",
+          "meaning": "la relation"
+        }
+      ],
+      "origin": "langues/lng-es-voc/0"
+    },
+    {
+      "id": "langues-lng-es-voc-1",
+      "title": "Estudios y trabajo",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "Au **colegio** (l’école) puis à l’**instituto** (le lycée), **el alumno** (l’élève) suit les cours de **el profesor** (le professeur) dans chaque **asignatura** (matière). Il fait **los deberes** (les devoirs), passe **el examen** (l’examen) et reçoit **la nota** (la note). Pour obtenir **el título** (le diplôme), parfois à **la universidad** (l’université), il faut **aprender** (apprendre) et **estudiar** (étudier) ; on peut **aprobar** (réussir) ou **suspender** (échouer).",
+        "Les études donnent **la competencia** (la compétence) et **los conocimientos** (les connaissances), complétées par **la formación** (la formation). Pour trouver **el empleo** (l’emploi) ou **el trabajo** (le travail) et construire **la carrera** (la carrière), on fait **las prácticas** (le stage), puis on passe **la entrevista** (l’entretien). L’employeur peut **contratar** (embaucher) le candidat, qui rejoint **el compañero** (le collègue) et touche **el sueldo** (le salaire). Le contraire, c’est **el paro** (le chômage)."
+      ],
+      "lexicon": [
+        {
+          "term": "el colegio",
+          "meaning": "l'école"
+        },
+        {
+          "term": "el instituto",
+          "meaning": "le lycée"
+        },
+        {
+          "term": "el alumno",
+          "meaning": "l'élève"
+        },
+        {
+          "term": "el profesor",
+          "meaning": "le professeur"
+        },
+        {
+          "term": "la asignatura",
+          "meaning": "la matière"
+        },
+        {
+          "term": "los deberes",
+          "meaning": "les devoirs"
+        },
+        {
+          "term": "el examen",
+          "meaning": "l'examen"
+        },
+        {
+          "term": "la nota",
+          "meaning": "la note"
+        },
+        {
+          "term": "el título",
+          "meaning": "le diplôme"
+        },
+        {
+          "term": "la universidad",
+          "meaning": "l'université"
+        },
+        {
+          "term": "aprender",
+          "meaning": "apprendre"
+        },
+        {
+          "term": "estudiar",
+          "meaning": "étudier"
+        },
+        {
+          "term": "aprobar",
+          "meaning": "réussir (un examen)"
+        },
+        {
+          "term": "suspender",
+          "meaning": "échouer"
+        },
+        {
+          "term": "la competencia",
+          "meaning": "la compétence"
+        },
+        {
+          "term": "los conocimientos",
+          "meaning": "les connaissances"
+        },
+        {
+          "term": "la formación",
+          "meaning": "la formation"
+        },
+        {
+          "term": "el empleo",
+          "meaning": "l'emploi"
+        },
+        {
+          "term": "el trabajo",
+          "meaning": "le travail"
+        },
+        {
+          "term": "la carrera",
+          "meaning": "la carrière"
+        },
+        {
+          "term": "las prácticas",
+          "meaning": "le stage"
+        },
+        {
+          "term": "la entrevista",
+          "meaning": "l'entretien"
+        },
+        {
+          "term": "el compañero",
+          "meaning": "le collègue"
+        },
+        {
+          "term": "el sueldo",
+          "meaning": "le salaire"
+        },
+        {
+          "term": "contratar",
+          "meaning": "embaucher"
+        },
+        {
+          "term": "el paro",
+          "meaning": "le chômage"
+        }
+      ],
+      "origin": "langues/lng-es-voc/1"
+    },
+    {
+      "id": "langues-lng-es-voc-2",
+      "title": "La empresa y la economía (STMG)",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "**La empresa** (l’entreprise) fait **los negocios** (les affaires) sur **el mercado** (le marché), où elle vise **la cuota de mercado** (la part de marché) face à **la competencia** (la concurrence). Elle vend **el producto** (le produit) à **el cliente** (le client) et au **consumidor** (consommateur), et achète à **el proveedor** (le fournisseur). **La venta** (la vente) dépend de **la oferta** (l’offre) et de **la demanda** (la demande) ; **la marca** (la marque) et **la estrategia** (la stratégie) soutiennent **el crecimiento** (la croissance).",
+        "Côté finances, **el volumen de negocio** (le chiffre d’affaires) et **los ingresos** (les revenus) doivent couvrir **el coste** (le coût) pour dégager **el beneficio** (le bénéfice) et non **la pérdida** (la perte). **El balance** (le bilan) et **la tesorería** (la trésorerie) renseignent sur sa santé. Pour financer **la inversión** (l’investissement) prévue dans **el presupuesto** (le budget), elle peut recourir à **el préstamo** (l’emprunt) ou à **el accionista** (l’actionnaire)."
+      ],
+      "lexicon": [
+        {
+          "term": "la empresa",
+          "meaning": "l'entreprise"
+        },
+        {
+          "term": "los negocios",
+          "meaning": "les affaires"
+        },
+        {
+          "term": "el volumen de negocio",
+          "meaning": "le chiffre d'affaires"
+        },
+        {
+          "term": "el beneficio",
+          "meaning": "le bénéfice"
+        },
+        {
+          "term": "la pérdida",
+          "meaning": "la perte"
+        },
+        {
+          "term": "el balance",
+          "meaning": "le bilan"
+        },
+        {
+          "term": "la tesorería",
+          "meaning": "la trésorerie"
+        },
+        {
+          "term": "el coste",
+          "meaning": "le coût"
+        },
+        {
+          "term": "los ingresos",
+          "meaning": "les revenus"
+        },
+        {
+          "term": "el presupuesto",
+          "meaning": "le budget"
+        },
+        {
+          "term": "la inversión",
+          "meaning": "l'investissement"
+        },
+        {
+          "term": "el préstamo",
+          "meaning": "l'emprunt"
+        },
+        {
+          "term": "el accionista",
+          "meaning": "l'actionnaire"
+        },
+        {
+          "term": "el mercado",
+          "meaning": "le marché"
+        },
+        {
+          "term": "la cuota de mercado",
+          "meaning": "la part de marché"
+        },
+        {
+          "term": "el cliente",
+          "meaning": "le client"
+        },
+        {
+          "term": "el proveedor",
+          "meaning": "le fournisseur"
+        },
+        {
+          "term": "la marca",
+          "meaning": "la marque"
+        },
+        {
+          "term": "el crecimiento",
+          "meaning": "la croissance"
+        },
+        {
+          "term": "la estrategia",
+          "meaning": "la stratégie"
+        },
+        {
+          "term": "la competencia",
+          "meaning": "la concurrence"
+        },
+        {
+          "term": "el producto",
+          "meaning": "le produit"
+        },
+        {
+          "term": "la venta",
+          "meaning": "la vente"
+        },
+        {
+          "term": "la oferta",
+          "meaning": "l'offre"
+        },
+        {
+          "term": "la demanda",
+          "meaning": "la demande"
+        },
+        {
+          "term": "el consumidor",
+          "meaning": "le consommateur"
+        }
+      ],
+      "origin": "langues/lng-es-voc/2"
+    },
+    {
+      "id": "langues-lng-es-voc-3",
+      "title": "Sociedad, memoria y política",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "Dans **la sociedad** (la société) démocratique, **el ciudadano** (le citoyen) a **el derecho** (le droit) de **votar** (voter) lors de **las elecciones** (les élections) qui désignent **el gobierno** (le gouvernement). **La ley** (la loi) défend **la igualdad** (l’égalité) et **la libertad** (la liberté), et combat **la desigualdad** (l’inégalité) et **la pobreza** (la pauvreté). **La inmigración** (l’immigration) et le contrôle de **la frontera** (la frontière) font débat ; les mécontentements s’expriment par **la manifestación** (la manifestation) ou **la huelga** (la grève), relayées par **los medios** (les médias) et **las noticias** (les informations).",
+        "En Espagne et en Amérique latine, **la memoria** (la mémoire) est un thème central : le passage de **la dictadura** (la dictature) à **la democracia** (la démocratie), le souvenir de **la guerra** (la guerre) et de **el exilio** (l’exil), la recherche de **la paz** (la paix) et la protection de **el patrimonio** (le patrimoine)."
+      ],
+      "lexicon": [
+        {
+          "term": "la sociedad",
+          "meaning": "la société"
+        },
+        {
+          "term": "el gobierno",
+          "meaning": "le gouvernement"
+        },
+        {
+          "term": "las elecciones",
+          "meaning": "les élections"
+        },
+        {
+          "term": "votar",
+          "meaning": "voter"
+        },
+        {
+          "term": "el ciudadano",
+          "meaning": "le citoyen"
+        },
+        {
+          "term": "el derecho",
+          "meaning": "le droit"
+        },
+        {
+          "term": "la ley",
+          "meaning": "la loi"
+        },
+        {
+          "term": "la igualdad",
+          "meaning": "l'égalité"
+        },
+        {
+          "term": "la libertad",
+          "meaning": "la liberté"
+        },
+        {
+          "term": "la desigualdad",
+          "meaning": "l'inégalité"
+        },
+        {
+          "term": "la pobreza",
+          "meaning": "la pauvreté"
+        },
+        {
+          "term": "la inmigración",
+          "meaning": "l'immigration"
+        },
+        {
+          "term": "la frontera",
+          "meaning": "la frontière"
+        },
+        {
+          "term": "la manifestación",
+          "meaning": "la manifestation"
+        },
+        {
+          "term": "la dictadura",
+          "meaning": "la dictature"
+        },
+        {
+          "term": "la democracia",
+          "meaning": "la démocratie"
+        },
+        {
+          "term": "la memoria",
+          "meaning": "la mémoire"
+        },
+        {
+          "term": "el exilio",
+          "meaning": "l'exil"
+        },
+        {
+          "term": "el patrimonio",
+          "meaning": "le patrimoine"
+        },
+        {
+          "term": "la guerra",
+          "meaning": "la guerre"
+        },
+        {
+          "term": "la paz",
+          "meaning": "la paix"
+        },
+        {
+          "term": "los medios",
+          "meaning": "les médias"
+        },
+        {
+          "term": "las noticias",
+          "meaning": "les informations"
+        },
+        {
+          "term": "la huelga",
+          "meaning": "la grève"
+        }
+      ],
+      "origin": "langues/lng-es-voc/3"
+    },
+    {
+      "id": "langues-lng-es-voc-4",
+      "title": "Medio ambiente y ciencia",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "Protéger **el medio ambiente** (l’environnement) est urgent face à **el cambio climático** (le changement climatique) et à **el calentamiento global** (le réchauffement climatique). **La contaminación** (la pollution) et **los residuos** (les déchets) menacent **la naturaleza** (la nature), **el bosque** (la forêt), **la biodiversidad** (la biodiversité) et chaque **especie** (espèce) de **el planeta** (la planète). Les catastrophes se multiplient : **la sequía** (la sécheresse), **la inundación** (l’inondation).",
+        "Pour **proteger** (protéger) la planète, il faut **reducir** (réduire) **la huella de carbono** (l’empreinte carbone), **reciclar** (recycler), cesser de **contaminar** (polluer), économiser chaque **recurso** (ressource) et développer **las energías renovables** (les énergies renouvelables) pour une **energía** plus **sostenible** (durable). **La ciencia** (la science), **la investigación** (la recherche) et chaque **descubrimiento** (découverte) y contribuent."
+      ],
+      "lexicon": [
+        {
+          "term": "el medio ambiente",
+          "meaning": "l'environnement"
+        },
+        {
+          "term": "el cambio climático",
+          "meaning": "le changement climatique"
+        },
+        {
+          "term": "el calentamiento global",
+          "meaning": "le réchauffement climatique"
+        },
+        {
+          "term": "la contaminación",
+          "meaning": "la pollution"
+        },
+        {
+          "term": "los residuos",
+          "meaning": "les déchets"
+        },
+        {
+          "term": "reciclar",
+          "meaning": "recycler"
+        },
+        {
+          "term": "las energías renovables",
+          "meaning": "les énergies renouvelables"
+        },
+        {
+          "term": "la huella de carbono",
+          "meaning": "l'empreinte carbone"
+        },
+        {
+          "term": "sostenible",
+          "meaning": "durable"
+        },
+        {
+          "term": "contaminar",
+          "meaning": "polluer"
+        },
+        {
+          "term": "la sequía",
+          "meaning": "la sécheresse"
+        },
+        {
+          "term": "la inundación",
+          "meaning": "l'inondation"
+        },
+        {
+          "term": "el bosque",
+          "meaning": "la forêt"
+        },
+        {
+          "term": "la naturaleza",
+          "meaning": "la nature"
+        },
+        {
+          "term": "proteger",
+          "meaning": "protéger"
+        },
+        {
+          "term": "reducir",
+          "meaning": "réduire"
+        },
+        {
+          "term": "la energía",
+          "meaning": "l'énergie"
+        },
+        {
+          "term": "el recurso",
+          "meaning": "la ressource"
+        },
+        {
+          "term": "la biodiversidad",
+          "meaning": "la biodiversité"
+        },
+        {
+          "term": "la investigación",
+          "meaning": "la recherche"
+        },
+        {
+          "term": "el descubrimiento",
+          "meaning": "la découverte"
+        },
+        {
+          "term": "la ciencia",
+          "meaning": "la science"
+        },
+        {
+          "term": "la especie",
+          "meaning": "l'espèce"
+        },
+        {
+          "term": "el planeta",
+          "meaning": "la planète"
+        }
+      ],
+      "origin": "langues/lng-es-voc/4"
+    },
+    {
+      "id": "langues-lng-es-voc-5",
+      "title": "Tecnología e internet",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "**La tecnología** (la technologie) est partout : sur **el ordenador** (l’ordinateur), **el móvil** (le portable) ou tout autre **aparato** (appareil), on passe des heures devant **la pantalla** (l’écran). On est **en línea** (en ligne), sur **la red** (le réseau), **las redes sociales** (les réseaux sociaux), **la página web** (le site web) ou **la aplicación** (l’application). On aime **navegar** (naviguer), **descargar** (télécharger), **compartir** (partager) et **conectarse** (se connecter), et il faut **actualizar** (mettre à jour) **el programa** (le logiciel).",
+        "Chaque **usuario** (utilisateur) laisse **los datos** (les données) : protéger **la privacidad** (la vie privée) passe par **la contraseña** (le mot de passe) et **la ciberseguridad** (la cybersécurité). **La inteligencia artificial** (l’intelligence artificielle) transforme le monde **digital** (numérique), qui peut créer **la adicción** (la dépendance)."
+      ],
+      "lexicon": [
+        {
+          "term": "la tecnología",
+          "meaning": "la technologie"
+        },
+        {
+          "term": "el ordenador",
+          "meaning": "l'ordinateur"
+        },
+        {
+          "term": "el móvil",
+          "meaning": "le portable"
+        },
+        {
+          "term": "la pantalla",
+          "meaning": "l'écran"
+        },
+        {
+          "term": "la red",
+          "meaning": "le réseau"
+        },
+        {
+          "term": "las redes sociales",
+          "meaning": "les réseaux sociaux"
+        },
+        {
+          "term": "la página web",
+          "meaning": "le site web"
+        },
+        {
+          "term": "la aplicación",
+          "meaning": "l'application"
+        },
+        {
+          "term": "los datos",
+          "meaning": "les données"
+        },
+        {
+          "term": "la privacidad",
+          "meaning": "la vie privée"
+        },
+        {
+          "term": "la contraseña",
+          "meaning": "le mot de passe"
+        },
+        {
+          "term": "descargar",
+          "meaning": "télécharger"
+        },
+        {
+          "term": "en línea",
+          "meaning": "en ligne"
+        },
+        {
+          "term": "el usuario",
+          "meaning": "l'utilisateur"
+        },
+        {
+          "term": "la inteligencia artificial",
+          "meaning": "l'intelligence artificielle"
+        },
+        {
+          "term": "el programa",
+          "meaning": "le logiciel"
+        },
+        {
+          "term": "el aparato",
+          "meaning": "l'appareil"
+        },
+        {
+          "term": "navegar",
+          "meaning": "naviguer"
+        },
+        {
+          "term": "la ciberseguridad",
+          "meaning": "la cybersécurité"
+        },
+        {
+          "term": "actualizar",
+          "meaning": "mettre à jour"
+        },
+        {
+          "term": "digital",
+          "meaning": "numérique"
+        },
+        {
+          "term": "la adicción",
+          "meaning": "la dépendance"
+        },
+        {
+          "term": "conectarse",
+          "meaning": "se connecter"
+        },
+        {
+          "term": "compartir",
+          "meaning": "partager"
+        }
+      ],
+      "origin": "langues/lng-es-voc/5"
+    },
+    {
+      "id": "langues-lng-es-voc-6",
+      "title": "Verbos frecuentes",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "Deux verbes traduisent « être » : **ser** et **estar** ; deux traduisent « avoir » : **tener**, qui exprime la possession, et **haber**, qui sert d’auxiliaire. Les verbes les plus courants sont ensuite **hacer** (faire), **ir** (aller), **poder** (pouvoir), **querer** (vouloir, aimer), **saber** (savoir), **decir** (dire), **ver** (voir), **dar** (donner), **poner** (mettre), **salir** (sortir), **venir** (venir) et **llegar** (arriver).",
+        "Parmi les verbes réguliers, retiens les modèles **hablar** (parler), **comer** (manger) et **vivir** (vivre), ainsi que **trabajar** (travailler), **comprar** (acheter), **vender** (vendre), **terminar** (finir). Attention à **empezar** (commencer), **pensar** (penser) et **entender** (comprendre), dont le radical change au présent : *empiezo*, *pienso*, *entiendo*."
+      ],
+      "lexicon": [
+        {
+          "term": "ser",
+          "meaning": "être : notamment identité, origine, profession."
+        },
+        {
+          "term": "estar",
+          "meaning": "être (état, lieu)"
+        },
+        {
+          "term": "tener",
+          "meaning": "avoir (possession)"
+        },
+        {
+          "term": "haber",
+          "meaning": "avoir (auxiliaire)"
+        },
+        {
+          "term": "hacer",
+          "meaning": "faire"
+        },
+        {
+          "term": "ir",
+          "meaning": "aller"
+        },
+        {
+          "term": "poder",
+          "meaning": "pouvoir"
+        },
+        {
+          "term": "querer",
+          "meaning": "vouloir, aimer"
+        },
+        {
+          "term": "saber",
+          "meaning": "savoir"
+        },
+        {
+          "term": "decir",
+          "meaning": "dire"
+        },
+        {
+          "term": "ver",
+          "meaning": "voir"
+        },
+        {
+          "term": "dar",
+          "meaning": "donner"
+        },
+        {
+          "term": "poner",
+          "meaning": "mettre"
+        },
+        {
+          "term": "salir",
+          "meaning": "sortir"
+        },
+        {
+          "term": "venir",
+          "meaning": "venir"
+        },
+        {
+          "term": "llegar",
+          "meaning": "arriver"
+        },
+        {
+          "term": "hablar",
+          "meaning": "parler"
+        },
+        {
+          "term": "comer",
+          "meaning": "manger"
+        },
+        {
+          "term": "vivir",
+          "meaning": "vivre"
+        },
+        {
+          "term": "trabajar",
+          "meaning": "travailler"
+        },
+        {
+          "term": "comprar",
+          "meaning": "acheter"
+        },
+        {
+          "term": "vender",
+          "meaning": "vendre"
+        },
+        {
+          "term": "empezar",
+          "meaning": "commencer"
+        },
+        {
+          "term": "terminar",
+          "meaning": "finir"
+        },
+        {
+          "term": "pensar",
+          "meaning": "penser"
+        },
+        {
+          "term": "entender",
+          "meaning": "comprendre"
+        }
+      ],
+      "origin": "langues/lng-es-voc/6"
+    },
+    {
+      "id": "langues-lng-es-voc-7",
+      "title": "Conectores y expresar la opinión",
+      "part": "Vocabulaire",
+      "paragraphs": [
+        "Pour organiser un texte, on enchaîne **primero** (d’abord), **luego** (ensuite), **después** (après) et **por fin** (enfin). On ajoute avec **además** (de plus), on s’oppose avec **sin embargo** (cependant), **en cambio** (en revanche) ou **mientras que** (tandis que), et on concède avec **aunque** (bien que). On explique avec **porque** (parce que), **es decir** (c’est-à-dire) et **de hecho** (en fait), on conclut une étape avec **por lo tanto** (donc), et on illustre avec **por ejemplo** (par exemple). Pour comparer : **por un lado** (d’une part)… **por otro lado** (d’autre part).",
+        "Pour donner son avis : **en mi opinión** (à mon avis), **creo que** (je pense que), **estoy de acuerdo** (je suis d’accord) ou **no estoy de acuerdo** (je ne suis pas d’accord), **es verdad que** (il est vrai que), et **según** (selon) pour citer une source. Pour finir : **en resumen** (en résumé) et **en conclusión** (en conclusion)."
+      ],
+      "lexicon": [
+        {
+          "term": "primero",
+          "meaning": "d'abord"
+        },
+        {
+          "term": "luego",
+          "meaning": "ensuite"
+        },
+        {
+          "term": "después",
+          "meaning": "après"
+        },
+        {
+          "term": "por fin",
+          "meaning": "enfin"
+        },
+        {
+          "term": "además",
+          "meaning": "de plus"
+        },
+        {
+          "term": "sin embargo",
+          "meaning": "cependant"
+        },
+        {
+          "term": "por lo tanto",
+          "meaning": "donc"
+        },
+        {
+          "term": "porque",
+          "meaning": "parce que"
+        },
+        {
+          "term": "aunque",
+          "meaning": "bien que"
+        },
+        {
+          "term": "por un lado",
+          "meaning": "d'une part"
+        },
+        {
+          "term": "por otro lado",
+          "meaning": "d'autre part"
+        },
+        {
+          "term": "por ejemplo",
+          "meaning": "par exemple"
+        },
+        {
+          "term": "en mi opinión",
+          "meaning": "à mon avis"
+        },
+        {
+          "term": "creo que",
+          "meaning": "je pense que"
+        },
+        {
+          "term": "estoy de acuerdo",
+          "meaning": "je suis d'accord"
+        },
+        {
+          "term": "no estoy de acuerdo",
+          "meaning": "je ne suis pas d'accord"
+        },
+        {
+          "term": "en resumen",
+          "meaning": "en résumé"
+        },
+        {
+          "term": "en conclusión",
+          "meaning": "en conclusion"
+        },
+        {
+          "term": "es decir",
+          "meaning": "c'est-à-dire"
+        },
+        {
+          "term": "mientras que",
+          "meaning": "tandis que"
+        },
+        {
+          "term": "según",
+          "meaning": "selon"
+        },
+        {
+          "term": "de hecho",
+          "meaning": "en fait"
+        },
+        {
+          "term": "en cambio",
+          "meaning": "en revanche"
+        },
+        {
+          "term": "es verdad que",
+          "meaning": "il est vrai que"
+        }
+      ],
+      "origin": "langues/lng-es-voc/7"
+    },
+    {
+      "id": "langues-lng-es-verbs-0",
+      "title": "Verbes irréguliers : racines e → ie, o → ue et passés irréguliers",
+      "part": "Verbes irréguliers",
+      "paragraphs": [
+        "Les verbes les plus irréguliers changent à la fois au présent et au passé simple. **Ser** donne *soy* au présent et *fue* au passé simple à la troisième personne ; **ir** donne *voy* et la même forme *fue*. **Tener** donne *tengo* et *tuvo* ; **hacer** donne *hago* et *hizo* ; **poder** donne *puedo* et *pudo* ; **decir** donne *digo* et *dijo*.",
+        "Beaucoup changent la **racine** (e→ie, o→ue) ou sont totalement irréguliers au passé simple."
+      ],
+      "lexicon": [
+        {
+          "term": "ser (soy, fue)",
+          "meaning": "être"
+        },
+        {
+          "term": "tener (tengo, tuvo)",
+          "meaning": "avoir"
+        },
+        {
+          "term": "hacer (hago, hizo)",
+          "meaning": "faire"
+        },
+        {
+          "term": "ir (voy, fue)",
+          "meaning": "aller"
+        },
+        {
+          "term": "poder (puedo, pudo)",
+          "meaning": "pouvoir"
+        },
+        {
+          "term": "decir (digo, dijo)",
+          "meaning": "dire"
+        }
+      ],
+      "origin": "langues/lng-es-verbs/0"
+    },
+    {
+      "id": "langues-lng-es-grammar-ex-0",
+      "title": "Règles clés : ser / estar, por / para, articles el / la, gustar",
+      "part": "Grammaire (exercices)",
+      "paragraphs": [
+        "**ser** (identité) vs **estar** (état, lieu).",
+        "**por** (cause) vs **para** (but, destinataire).",
+        "Articles : **el / la** (attention : el problema, la mano).",
+        "Verbe **gustar** : me / te / le… + gusta(n).",
+        "**Ser** exprime l’identité ou la profession : **yo soy profesor**. **Estar** exprime un état (**ella está cansada**) ou un lieu (**Madrid está en España**).",
+        "**Por** indique notamment la cause (**gracias por tu ayuda**). **Para** indique le destinataire (**este regalo es para ti**) ou le but (**estudio para aprobar**).",
+        "Les articles de certains noms doivent être mémorisés : **el problema**, **la mano**. Avec **gustar**, le pronom désigne la personne à qui quelque chose plaît : **a mí me gusta el fútbol**, **a ti te gustan los libros**.",
+        "Les exercices de ce manuel permettent de réutiliser ces règles en contexte. Réponds sans regarder les solutions, puis compare ta réponse au corrigé expliqué. Reprends les points encore fragiles lors d’une prochaine séance."
+      ],
+      "lexicon": [],
+      "origin": "langues/lng-es-grammar-ex/0"
+    },
+    {
+      "id": "langues-lng-es-comp-0",
+      "title": "Niveau A2 — Débutant",
+      "part": "Compréhension",
+      "paragraphs": [
+        "Textes et dialogues **simples** (vie quotidienne). Idéal pour se lancer."
+      ],
+      "lexicon": [],
+      "origin": "langues/lng-es-comp/0"
+    },
+    {
+      "id": "langues-lng-es-comp-1",
+      "title": "Niveau B1 — Intermédiaire",
+      "part": "Compréhension",
+      "paragraphs": [
+        "Récits et situations **plus longs** (travail, voyages, école)."
+      ],
+      "lexicon": [],
+      "origin": "langues/lng-es-comp/1"
+    },
+    {
+      "id": "langues-lng-es-comp-2",
+      "title": "Niveau B2 — Intermédiaire avancé",
+      "part": "Compréhension",
+      "paragraphs": [
+        "Sujets **d’actualité et professionnels** (entreprise, société)."
+      ],
+      "lexicon": [],
+      "origin": "langues/lng-es-comp/2"
+    }
+  ],
+  "exercises": [
+    {
+      "lessonId": "p1-langues-p1-lng-es-0",
+      "unit": "Espagnol — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-es-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (SER / ESTAR) : ___ estudiante (profession)",
+      "choices": [],
+      "answer": "SER",
+      "explanation": "La catégorie attendue est SER. L’indice donné est « profession ».",
+      "context": "",
+      "id": "es-ex-001"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-0",
+      "unit": "Espagnol — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-es-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (SER / ESTAR) : ___ cansado (état)",
+      "choices": [],
+      "answer": "ESTAR",
+      "explanation": "La catégorie attendue est ESTAR. L’indice donné est « état ».",
+      "context": "",
+      "id": "es-ex-002"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-0",
+      "unit": "Espagnol — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-es-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (SER / ESTAR) : Madrid ___ en España (lieu)",
+      "choices": [],
+      "answer": "ESTAR",
+      "explanation": "La catégorie attendue est ESTAR. L’indice donné est « lieu ».",
+      "context": "",
+      "id": "es-ex-003"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-0",
+      "unit": "Espagnol — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-es-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (SER / ESTAR) : ___ alto (caractéristique)",
+      "choices": [],
+      "answer": "SER",
+      "explanation": "La catégorie attendue est SER. L’indice donné est « caractéristique ».",
+      "context": "",
+      "id": "es-ex-004"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-0",
+      "unit": "Espagnol — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-es-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (SER / ESTAR) : ___ las tres (heure)",
+      "choices": [],
+      "answer": "SER",
+      "explanation": "La catégorie attendue est SER. L’indice donné est « heure ».",
+      "context": "",
+      "id": "es-ex-005"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-0",
+      "unit": "Espagnol — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-es-trou",
+      "type": "court",
+      "prompt": "Ayer nosotros ____ (ir) al cine.",
+      "choices": [],
+      "answer": "fuimos",
+      "explanation": "Indefinido (action datée) : « fuimos ».",
+      "alternatives": [
+        "fuímos"
+      ],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "es-ex-006"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-0",
+      "unit": "Espagnol — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-es-trou",
+      "type": "court",
+      "prompt": "Cuando era niño, ____ (jugar) mucho.",
+      "choices": [],
+      "answer": "jugaba",
+      "explanation": "Imperfecto (habitude passée) : « jugaba ».",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "es-ex-007"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-0",
+      "unit": "Espagnol — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-es-trou",
+      "type": "court",
+      "prompt": "Me ____ (gustar) las películas de acción.",
+      "choices": [],
+      "answer": "gustan",
+      "explanation": "Accord avec le pluriel : « gustan ».",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "es-ex-008"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-1",
+      "unit": "Espagnol — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-es-qcm",
+      "type": "qcm",
+      "prompt": "« Madrid ___ en España » :",
+      "choices": [
+        "está",
+        "estar",
+        "son",
+        "es"
+      ],
+      "answer": "está",
+      "explanation": "Lieu → estar.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "es-ex-009"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-1",
+      "unit": "Espagnol — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-es-qcm",
+      "type": "qcm",
+      "prompt": "« Il faut étudier » se dit…",
+      "choices": [
+        "Estar estudiar",
+        "Tengo estudiar",
+        "Hay que estudiar",
+        "Es estudiar"
+      ],
+      "answer": "Hay que estudiar",
+      "explanation": "Obligation impersonnelle : hay que + infinitif.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "es-ex-010"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-1",
+      "unit": "Espagnol — Grammaire essentielle",
+      "origin": "p1-langues/p1-lng-es-qcm",
+      "type": "qcm",
+      "prompt": "Pour présenter le repas d’hier comme un événement achevé : « Ayer ___ (comer) ». Quel temps convient ?",
+      "choices": [
+        "imperfecto (comía)",
+        "futuro",
+        "présent",
+        "indefinido (comí)"
+      ],
+      "answer": "indefinido (comí)",
+      "explanation": "Le repas est présenté dans sa totalité comme un événement achevé : indefinido, comí. Ayer peut aussi accompagner un imparfait dans un autre contexte.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "es-ex-011"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-serestar-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (SER / ESTAR) : María ___ profesora (profession)",
+      "choices": [],
+      "answer": "SER",
+      "explanation": "La catégorie attendue est SER. L’indice donné est « profession ».",
+      "context": "",
+      "id": "es-ex-012"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-serestar-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (SER / ESTAR) : Nosotros ___ en Madrid (lieu)",
+      "choices": [],
+      "answer": "ESTAR",
+      "explanation": "La catégorie attendue est ESTAR. L’indice donné est « lieu ».",
+      "context": "",
+      "id": "es-ex-013"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-serestar-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (SER / ESTAR) : La sopa ___ muy caliente (état)",
+      "choices": [],
+      "answer": "ESTAR",
+      "explanation": "La catégorie attendue est ESTAR. L’indice donné est « état ».",
+      "context": "",
+      "id": "es-ex-014"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-serestar-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (SER / ESTAR) : Yo ___ cansado (état passager)",
+      "choices": [],
+      "answer": "ESTAR",
+      "explanation": "La catégorie attendue est ESTAR. L’indice donné est « état passager ».",
+      "context": "",
+      "id": "es-ex-015"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-serestar-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (SER / ESTAR) : Ella ___ de España (origine)",
+      "choices": [],
+      "answer": "SER",
+      "explanation": "La catégorie attendue est SER. L’indice donné est « origine ».",
+      "context": "",
+      "id": "es-ex-016"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-presente-trou",
+      "type": "court",
+      "prompt": "Yo ____ (hablar) español.",
+      "choices": [],
+      "answer": "hablo",
+      "explanation": "-ar : yo hablo.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "es-ex-017"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-presente-trou",
+      "type": "court",
+      "prompt": "Nosotros ____ (comer) a las dos.",
+      "choices": [],
+      "answer": "comemos",
+      "explanation": "-er : nosotros comemos.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "es-ex-018"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-presente-trou",
+      "type": "court",
+      "prompt": "Ellos ____ (vivir) en Sevilla.",
+      "choices": [],
+      "answer": "viven",
+      "explanation": "-ir : ellos viven.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "es-ex-019"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-presente-trou",
+      "type": "court",
+      "prompt": "Yo ____ (tener) dos hermanos.",
+      "choices": [],
+      "answer": "tengo",
+      "explanation": "tener irrégulier : tengo.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "es-ex-020"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-presente-trou",
+      "type": "court",
+      "prompt": "¿Tú ____ (ir) al cine?",
+      "choices": [],
+      "answer": "vas",
+      "explanation": "ir : voy, vas, va…",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 4,
+      "id": "es-ex-021"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-1",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-pasado-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (Indefinido (daté) / Imperfecto (décor/habitude)) : Ayer comí en un restaurante",
+      "choices": [],
+      "answer": "Indefinido (daté)",
+      "explanation": "Ayer situe une action achevée dans le passé ; comí présente cet événement au passé simple.",
+      "context": "",
+      "id": "es-ex-022"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-1",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-pasado-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (Indefinido (daté) / Imperfecto (décor/habitude)) : Cuando era niño, jugaba al fútbol",
+      "choices": [],
+      "answer": "Imperfecto (décor/habitude)",
+      "explanation": "Cuando era niño introduit la période de l’enfance ; jugaba décrit une habitude de cette période, donc l’imparfait.",
+      "context": "",
+      "id": "es-ex-023"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-1",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-pasado-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (Indefinido (daté) / Imperfecto (décor/habitude)) : Ella habló por teléfono a las 8",
+      "choices": [],
+      "answer": "Indefinido (daté)",
+      "explanation": "Habló présente l’appel comme un événement situé à une heure donnée, ici a las 8 : passé simple.",
+      "context": "",
+      "id": "es-ex-024"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-1",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-pasado-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (Indefinido (daté) / Imperfecto (décor/habitude)) : Todos los días iba a la escuela",
+      "choices": [],
+      "answer": "Imperfecto (décor/habitude)",
+      "explanation": "Todos los días signale une répétition habituelle ; iba décrit cette habitude à l’imparfait.",
+      "context": "",
+      "id": "es-ex-025"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-1",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-pasado-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (Indefinido (daté) / Imperfecto (décor/habitude)) : Llegó y saludó a todos",
+      "choices": [],
+      "answer": "Indefinido (daté)",
+      "explanation": "Llegó puis saludó présentent deux événements successifs et achevés : on emploie le passé simple.",
+      "context": "",
+      "id": "es-ex-026"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-1",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-pasado-tri",
+      "type": "classement",
+      "prompt": "Classe dans la bonne catégorie (Indefinido (daté) / Imperfecto (décor/habitude)) : Hacía sol y los pájaros cantaban",
+      "choices": [],
+      "answer": "Imperfecto (décor/habitude)",
+      "explanation": "Hacía et cantaban installent le décor d’un récit, sans présenter ici des actions achevées : imparfait.",
+      "context": "",
+      "id": "es-ex-027"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-2",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-perfecto-trou",
+      "type": "court",
+      "prompt": "Hoy yo ____ (comer) paella. [perfecto]",
+      "choices": [],
+      "answer": "he comido",
+      "explanation": "Perfecto : he + participio (comido).",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "es-ex-028"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-2",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-perfecto-trou",
+      "type": "court",
+      "prompt": "Participio de « hacer » = ____",
+      "choices": [],
+      "answer": "hecho",
+      "explanation": "hacer → hecho.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "es-ex-029"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-2",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-perfecto-trou",
+      "type": "court",
+      "prompt": "Participio de « escribir » = ____",
+      "choices": [],
+      "answer": "escrito",
+      "explanation": "escribir → escrito.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "es-ex-030"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-2",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-perfecto-trou",
+      "type": "court",
+      "prompt": "Nosotros ____ (ver) esa película. [perfecto]",
+      "choices": [],
+      "answer": "hemos visto",
+      "explanation": "ver → visto : hemos visto.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "es-ex-031"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-2",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-perfecto-trou",
+      "type": "court",
+      "prompt": "Cuando llegué, ellos ya ____ (salir). [pluscuamperfecto]",
+      "choices": [],
+      "answer": "habían salido",
+      "explanation": "Pluscuamperfecto : habían + participio.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 4,
+      "id": "es-ex-032"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-3",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-futuro-trou",
+      "type": "court",
+      "prompt": "Mañana yo ____ (hablar) con el jefe. [futuro]",
+      "choices": [],
+      "answer": "hablaré",
+      "explanation": "Futuro : hablaré.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "es-ex-033"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-3",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-futuro-trou",
+      "type": "court",
+      "prompt": "Ellos ____ (tener) que estudiar. [futuro]",
+      "choices": [],
+      "answer": "tendrán",
+      "explanation": "Radical irrégulier tendr- : tendrán.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "es-ex-034"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-3",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-futuro-trou",
+      "type": "court",
+      "prompt": "Yo ____ (hacer) los deberes esta noche. [futuro]",
+      "choices": [],
+      "answer": "haré",
+      "explanation": "Radical har- : haré.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "es-ex-035"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-3",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-futuro-trou",
+      "type": "court",
+      "prompt": "Si tuviera dinero, ____ (viajar, yo). [condicional]",
+      "choices": [],
+      "answer": "viajaría",
+      "explanation": "Condicional : viajaría.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "es-ex-036"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-3",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-futuro-trou",
+      "type": "court",
+      "prompt": "¿____ (poder, tú) ayudarme? [condicional]",
+      "choices": [],
+      "answer": "podrías",
+      "explanation": "Radical podr- : podrías.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 4,
+      "id": "es-ex-037"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-4",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-subj-qcm",
+      "type": "qcm",
+      "prompt": "« Quiero que tú ___ aquí. »",
+      "choices": [
+        "estarás",
+        "estar",
+        "estés",
+        "estás"
+      ],
+      "answer": "estés",
+      "explanation": "Après « quiero que » → subjonctif : estés.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "es-ex-038"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-4",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-subj-qcm",
+      "type": "qcm",
+      "prompt": "« Ojalá ___ sol mañana. »",
+      "choices": [
+        "hará",
+        "hacer",
+        "haga",
+        "hace"
+      ],
+      "answer": "haga",
+      "explanation": "ojalá + subjonctif : haga.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "es-ex-039"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-4",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-subj-qcm",
+      "type": "qcm",
+      "prompt": "Impératif négatif (tú) : « No ___ eso. »",
+      "choices": [
+        "haces",
+        "hagas",
+        "hagáis",
+        "haz"
+      ],
+      "answer": "hagas",
+      "explanation": "Impératif négatif = subjonctif : no hagas.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "es-ex-040"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-4",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-subj-qcm",
+      "type": "qcm",
+      "prompt": "On utilise le subjonctif après :",
+      "choices": [
+        "es necesario que",
+        "siempre",
+        "es verdad que",
+        "porque"
+      ],
+      "answer": "es necesario que",
+      "explanation": "es necesario que + subjonctif.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "es-ex-041"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-4",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-subj-qcm",
+      "type": "qcm",
+      "prompt": "Impératif affirmatif (tú) de « comer » :",
+      "choices": [
+        "come",
+        "comes",
+        "coma",
+        "comed"
+      ],
+      "answer": "come",
+      "explanation": "Impératif tú : come.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 4,
+      "id": "es-ex-042"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-5",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-gustar-qcm",
+      "type": "qcm",
+      "prompt": "« Me ___ los libros. »",
+      "choices": [
+        "gusta",
+        "gusto",
+        "gustar",
+        "gustan"
+      ],
+      "answer": "gustan",
+      "explanation": "Accord avec la chose aimée (pluriel) : gustan.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "es-ex-043"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-5",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-gustar-qcm",
+      "type": "qcm",
+      "prompt": "« A ella le ___ el chocolate. »",
+      "choices": [
+        "gustan",
+        "gustas",
+        "gusto",
+        "gusta"
+      ],
+      "answer": "gusta",
+      "explanation": "Singulier (el chocolate) : gusta.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "es-ex-044"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-5",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-gustar-qcm",
+      "type": "qcm",
+      "prompt": "Gérondif de « hablar » :",
+      "choices": [
+        "hablo",
+        "hablar",
+        "hablando",
+        "hablado"
+      ],
+      "answer": "hablando",
+      "explanation": "-ar → -ando : hablando.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "es-ex-045"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-5",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-gustar-qcm",
+      "type": "qcm",
+      "prompt": "« Estoy ___ (comer) ahora. »",
+      "choices": [
+        "como",
+        "comido",
+        "comiendo",
+        "comer"
+      ],
+      "answer": "comiendo",
+      "explanation": "estar + gérondif : comiendo.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 4,
+      "id": "es-ex-046"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-6",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-irr-memory",
+      "type": "court",
+      "prompt": "Conjugue « ser / ir » à la première personne du singulier (yo) du prétérit, ou pretérito indefinido.",
+      "choices": [],
+      "answer": "fui",
+      "explanation": "Ser et ir ont la même forme fui à la première personne du singulier du prétérit. Le contexte distingue « je fus / j’ai été » et « j’allai / je suis allé ».",
+      "context": "",
+      "id": "es-ex-047"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-6",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-irr-memory",
+      "type": "court",
+      "prompt": "Conjugue « tener » à la première personne du singulier (yo) du prétérit, ou pretérito indefinido.",
+      "choices": [],
+      "answer": "tuve",
+      "explanation": "Au prétérit, tener utilise ici le radical irrégulier tuv-. À la première personne du singulier, on ajoute -e sans accent écrit : tuve.",
+      "context": "",
+      "id": "es-ex-048"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-6",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-irr-memory",
+      "type": "court",
+      "prompt": "Conjugue « hacer » à la première personne du singulier (yo) du prétérit, ou pretérito indefinido.",
+      "choices": [],
+      "answer": "hice",
+      "explanation": "Au prétérit, hacer utilise ici le radical irrégulier hic-. À la première personne du singulier, on ajoute -e sans accent écrit : hice.",
+      "context": "",
+      "id": "es-ex-049"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-6",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-irr-memory",
+      "type": "court",
+      "prompt": "Conjugue « estar » à la première personne du singulier (yo) du prétérit, ou pretérito indefinido.",
+      "choices": [],
+      "answer": "estuve",
+      "explanation": "Au prétérit, estar utilise ici le radical irrégulier estuv-. À la première personne du singulier, on ajoute -e sans accent écrit : estuve.",
+      "context": "",
+      "id": "es-ex-050"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-6",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-irr-memory",
+      "type": "court",
+      "prompt": "Conjugue « poder » à la première personne du singulier (yo) du prétérit, ou pretérito indefinido.",
+      "choices": [],
+      "answer": "pude",
+      "explanation": "Au prétérit, poder utilise ici le radical irrégulier pud-. À la première personne du singulier, on ajoute -e sans accent écrit : pude.",
+      "context": "",
+      "id": "es-ex-051"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-6",
+      "unit": "Espagnol — Toutes les conjugaisons",
+      "origin": "langues/lng-es-irr-memory",
+      "type": "court",
+      "prompt": "Conjugue « decir » à la première personne du singulier (yo) du prétérit, ou pretérito indefinido.",
+      "choices": [],
+      "answer": "dije",
+      "explanation": "Au prétérit, decir utilise ici le radical irrégulier dij-. À la première personne du singulier, on ajoute -e sans accent écrit : dije.",
+      "context": "",
+      "id": "es-ex-052"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-0",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-daily-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : la familia",
+      "choices": [],
+      "answer": "la famille",
+      "explanation": "Dans ce contexte, « la familia » correspond à « la famille ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-053"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-0",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-daily-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : el vecino",
+      "choices": [],
+      "answer": "le voisin",
+      "explanation": "Dans ce contexte, « el vecino » correspond à « le voisin ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-054"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-0",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-daily-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : la comida",
+      "choices": [],
+      "answer": "le repas",
+      "explanation": "Dans ce contexte, « la comida » correspond à « le repas ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-055"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-0",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-daily-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : la habitación",
+      "choices": [],
+      "answer": "la chambre",
+      "explanation": "Dans ce contexte, « la habitación » correspond à « la chambre ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-056"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-0",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-daily-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : el fin de semana",
+      "choices": [],
+      "answer": "le week-end",
+      "explanation": "Dans ce contexte, « el fin de semana » correspond à « le week-end ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-057"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-0",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-daily-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : el amigo",
+      "choices": [],
+      "answer": "l'ami",
+      "explanation": "Dans ce contexte, « el amigo » correspond à « l'ami ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-058"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-2",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-empresa-qcm",
+      "type": "qcm",
+      "prompt": "« el paro » =",
+      "choices": [
+        "le chômage",
+        "le marché",
+        "le client",
+        "le salaire"
+      ],
+      "answer": "le chômage",
+      "explanation": "el paro = le chômage.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "es-ex-059"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-2",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-empresa-qcm",
+      "type": "qcm",
+      "prompt": "« la empresa » =",
+      "choices": [
+        "la vente",
+        "le patron",
+        "le produit",
+        "l'entreprise"
+      ],
+      "answer": "l'entreprise",
+      "explanation": "la empresa = l’entreprise.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "es-ex-060"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-2",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-empresa-qcm",
+      "type": "qcm",
+      "prompt": "« el préstamo » =",
+      "choices": [
+        "le bénéfice",
+        "l'emprunt",
+        "le budget",
+        "le prêt-à-porter"
+      ],
+      "answer": "l'emprunt",
+      "explanation": "el préstamo = l’emprunt, le prêt.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "es-ex-061"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-2",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-empresa-qcm",
+      "type": "qcm",
+      "prompt": "« la cuota de mercado » =",
+      "choices": [
+        "la demande",
+        "le marché",
+        "la marque",
+        "la part de marché"
+      ],
+      "answer": "la part de marché",
+      "explanation": "la cuota de mercado = la part de marché.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 3,
+      "id": "es-ex-062"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-2",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-empresa-qcm",
+      "type": "qcm",
+      "prompt": "« el proveedor » =",
+      "choices": [
+        "le concurrent",
+        "le fournisseur",
+        "le client",
+        "le vendeur"
+      ],
+      "answer": "le fournisseur",
+      "explanation": "el proveedor = le fournisseur.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 4,
+      "id": "es-ex-063"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-4",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-medio-assoc",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : el cambio climático",
+      "choices": [],
+      "answer": "le changement climatique",
+      "explanation": "Dans ce contexte, « el cambio climático » correspond à « le changement climatique ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-064"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-4",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-medio-assoc",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : los residuos",
+      "choices": [],
+      "answer": "les déchets",
+      "explanation": "Dans ce contexte, « los residuos » correspond à « les déchets ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-065"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-4",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-medio-assoc",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : la sequía",
+      "choices": [],
+      "answer": "la sécheresse",
+      "explanation": "Dans ce contexte, « la sequía » correspond à « la sécheresse ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-066"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-4",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-medio-assoc",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : las energías renovables",
+      "choices": [],
+      "answer": "les énergies renouvelables",
+      "explanation": "Dans ce contexte, « las energías renovables » correspond à « les énergies renouvelables ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-067"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-4",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-medio-assoc",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : el medio ambiente",
+      "choices": [],
+      "answer": "l'environnement",
+      "explanation": "Dans ce contexte, « el medio ambiente » correspond à « l'environnement ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-068"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-6",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-verbos-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : tener",
+      "choices": [],
+      "answer": "avoir",
+      "explanation": "Dans ce contexte, « tener » correspond à « avoir ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-069"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-6",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-verbos-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : hacer",
+      "choices": [],
+      "answer": "faire",
+      "explanation": "Dans ce contexte, « hacer » correspond à « faire ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-070"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-6",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-verbos-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : poder",
+      "choices": [],
+      "answer": "pouvoir",
+      "explanation": "Dans ce contexte, « poder » correspond à « pouvoir ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-071"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-6",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-verbos-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : querer",
+      "choices": [],
+      "answer": "vouloir",
+      "explanation": "Dans ce contexte, « querer » correspond à « vouloir ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-072"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-6",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-verbos-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : saber",
+      "choices": [],
+      "answer": "savoir",
+      "explanation": "Dans ce contexte, « saber » correspond à « savoir ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-073"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-6",
+      "unit": "Espagnol — Vocabulaire",
+      "origin": "langues/lng-es-voc-verbos-memory",
+      "type": "lexique",
+      "prompt": "Donne le sens en français de : decir",
+      "choices": [],
+      "answer": "dire",
+      "explanation": "Dans ce contexte, « decir » correspond à « dire ». Réutilise le mot dans une phrase pour vérifier son emploi.",
+      "context": "",
+      "id": "es-ex-074"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-0",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-a2-read",
+      "type": "qcm",
+      "prompt": "¿Cuántos años tiene Lucía?",
+      "choices": [
+        "18",
+        "14",
+        "16"
+      ],
+      "answer": "16",
+      "explanation": "“tengo dieciséis años”.",
+      "alternatives": [],
+      "context": "Me llamo Lucía y tengo dieciséis años. Vivo en Sevilla con mis padres y mi hermano pequeño. Mi padre es médico y mi madre trabaja en un banco. Los fines de semana comemos todos juntos y por la tarde paseamos por el parque. Me gusta mucho mi familia porque siempre me ayuda.",
+      "sourceQuestion": 0,
+      "id": "es-ex-075"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-0",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-a2-read",
+      "type": "qcm",
+      "prompt": "¿Dónde vive?",
+      "choices": [
+        "En Madrid",
+        "En Sevilla",
+        "En Valencia"
+      ],
+      "answer": "En Sevilla",
+      "explanation": "“Vivo en Sevilla”.",
+      "alternatives": [],
+      "context": "Me llamo Lucía y tengo dieciséis años. Vivo en Sevilla con mis padres y mi hermano pequeño. Mi padre es médico y mi madre trabaja en un banco. Los fines de semana comemos todos juntos y por la tarde paseamos por el parque. Me gusta mucho mi familia porque siempre me ayuda.",
+      "sourceQuestion": 1,
+      "id": "es-ex-076"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-0",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-a2-read",
+      "type": "qcm",
+      "prompt": "¿Qué hace su madre?",
+      "choices": [
+        "Es profesora",
+        "Es médica",
+        "Trabaja en un banco"
+      ],
+      "answer": "Trabaja en un banco",
+      "explanation": "“mi madre trabaja en un banco”.",
+      "alternatives": [],
+      "context": "Me llamo Lucía y tengo dieciséis años. Vivo en Sevilla con mis padres y mi hermano pequeño. Mi padre es médico y mi madre trabaja en un banco. Los fines de semana comemos todos juntos y por la tarde paseamos por el parque. Me gusta mucho mi familia porque siempre me ayuda.",
+      "sourceQuestion": 2,
+      "id": "es-ex-077"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-0",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-a2-read",
+      "type": "qcm",
+      "prompt": "¿Qué hacen los fines de semana?",
+      "choices": [
+        "Comen juntos",
+        "Trabajan",
+        "Van al cine"
+      ],
+      "answer": "Comen juntos",
+      "explanation": "“comemos todos juntos”.",
+      "alternatives": [],
+      "context": "Me llamo Lucía y tengo dieciséis años. Vivo en Sevilla con mis padres y mi hermano pequeño. Mi padre es médico y mi madre trabaja en un banco. Los fines de semana comemos todos juntos y por la tarde paseamos por el parque. Me gusta mucho mi familia porque siempre me ayuda.",
+      "sourceQuestion": 3,
+      "id": "es-ex-078"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-0",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-a2-listen",
+      "type": "qcm",
+      "prompt": "¿Qué pide de primero el cliente?",
+      "choices": [
+        "Una ensalada",
+        "Una sopa",
+        "Pasta"
+      ],
+      "answer": "Una ensalada",
+      "explanation": "“una ensalada”.",
+      "alternatives": [],
+      "context": "Buenas tardes. ¿Qué desea comer? De primero, una ensalada, por favor. Muy bien. ¿Y de segundo? Pollo con patatas. ¿Para beber? Agua, por favor. ¿Quiere postre? Sí, un helado de chocolate. Enseguida se lo traigo. Muchas gracias.",
+      "sourceQuestion": 0,
+      "id": "es-ex-079"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-0",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-a2-listen",
+      "type": "qcm",
+      "prompt": "¿Qué pide de segundo?",
+      "choices": [
+        "Carne",
+        "Pescado",
+        "Pollo con patatas"
+      ],
+      "answer": "Pollo con patatas",
+      "explanation": "“Pollo con patatas”.",
+      "alternatives": [],
+      "context": "Buenas tardes. ¿Qué desea comer? De primero, una ensalada, por favor. Muy bien. ¿Y de segundo? Pollo con patatas. ¿Para beber? Agua, por favor. ¿Quiere postre? Sí, un helado de chocolate. Enseguida se lo traigo. Muchas gracias.",
+      "sourceQuestion": 1,
+      "id": "es-ex-080"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-0",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-a2-listen",
+      "type": "qcm",
+      "prompt": "¿Qué quiere beber?",
+      "choices": [
+        "Agua",
+        "Vino",
+        "Zumo"
+      ],
+      "answer": "Agua",
+      "explanation": "“Agua, por favor”.",
+      "alternatives": [],
+      "context": "Buenas tardes. ¿Qué desea comer? De primero, una ensalada, por favor. Muy bien. ¿Y de segundo? Pollo con patatas. ¿Para beber? Agua, por favor. ¿Quiere postre? Sí, un helado de chocolate. Enseguida se lo traigo. Muchas gracias.",
+      "sourceQuestion": 2,
+      "id": "es-ex-081"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-0",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-a2-listen",
+      "type": "qcm",
+      "prompt": "¿Qué postre pide?",
+      "choices": [
+        "Helado de chocolate",
+        "Fruta",
+        "Tarta"
+      ],
+      "answer": "Helado de chocolate",
+      "explanation": "“un helado de chocolate”.",
+      "alternatives": [],
+      "context": "Buenas tardes. ¿Qué desea comer? De primero, una ensalada, por favor. Muy bien. ¿Y de segundo? Pollo con patatas. ¿Para beber? Agua, por favor. ¿Quiere postre? Sí, un helado de chocolate. Enseguida se lo traigo. Muchas gracias.",
+      "sourceQuestion": 3,
+      "id": "es-ex-082"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-1",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b1-read",
+      "type": "qcm",
+      "prompt": "¿Dónde fue Marco de intercambio?",
+      "choices": [
+        "A México",
+        "A Barcelona",
+        "A Madrid"
+      ],
+      "answer": "A Barcelona",
+      "explanation": "“un instituto de Barcelona”.",
+      "alternatives": [],
+      "context": "El año pasado, Marco participó en un intercambio con un instituto de Barcelona. Vivió dos semanas en casa de una familia española y asistió a clases en catalán y en castellano. Al principio le costó entender, pero poco a poco mejoró su nivel. Además, hizo nuevos amigos y descubrió la comida mediterránea. Cuando volvió a Francia, decidió seguir estudiando español para poder viajar por Latinoamérica algún día.",
+      "sourceQuestion": 0,
+      "id": "es-ex-083"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-1",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b1-read",
+      "type": "qcm",
+      "prompt": "¿Cuánto tiempo se quedó?",
+      "choices": [
+        "Una semana",
+        "Dos semanas",
+        "Un mes"
+      ],
+      "answer": "Dos semanas",
+      "explanation": "“Vivió dos semanas”.",
+      "alternatives": [],
+      "context": "El año pasado, Marco participó en un intercambio con un instituto de Barcelona. Vivió dos semanas en casa de una familia española y asistió a clases en catalán y en castellano. Al principio le costó entender, pero poco a poco mejoró su nivel. Además, hizo nuevos amigos y descubrió la comida mediterránea. Cuando volvió a Francia, decidió seguir estudiando español para poder viajar por Latinoamérica algún día.",
+      "sourceQuestion": 1,
+      "id": "es-ex-084"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-1",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b1-read",
+      "type": "qcm",
+      "prompt": "¿Qué le costó al principio?",
+      "choices": [
+        "Comer",
+        "Hacer amigos",
+        "Entender"
+      ],
+      "answer": "Entender",
+      "explanation": "“le costó entender”.",
+      "alternatives": [],
+      "context": "El año pasado, Marco participó en un intercambio con un instituto de Barcelona. Vivió dos semanas en casa de una familia española y asistió a clases en catalán y en castellano. Al principio le costó entender, pero poco a poco mejoró su nivel. Además, hizo nuevos amigos y descubrió la comida mediterránea. Cuando volvió a Francia, decidió seguir estudiando español para poder viajar por Latinoamérica algún día.",
+      "sourceQuestion": 2,
+      "id": "es-ex-085"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-1",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b1-read",
+      "type": "qcm",
+      "prompt": "¿Qué decidió al volver?",
+      "choices": [
+        "Vivir en España",
+        "Seguir estudiando español",
+        "Dejar el español"
+      ],
+      "answer": "Seguir estudiando español",
+      "explanation": "“decidió seguir estudiando español”.",
+      "alternatives": [],
+      "context": "El año pasado, Marco participó en un intercambio con un instituto de Barcelona. Vivió dos semanas en casa de una familia española y asistió a clases en catalán y en castellano. Al principio le costó entender, pero poco a poco mejoró su nivel. Además, hizo nuevos amigos y descubrió la comida mediterránea. Cuando volvió a Francia, decidió seguir estudiando español para poder viajar por Latinoamérica algún día.",
+      "sourceQuestion": 3,
+      "id": "es-ex-086"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-1",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b1-listen",
+      "type": "qcm",
+      "prompt": "¿Qué busca el cliente?",
+      "choices": [
+        "Una camisa",
+        "Zapatos negros",
+        "Un bolso"
+      ],
+      "answer": "Zapatos negros",
+      "explanation": "“unos zapatos negros para el trabajo”.",
+      "alternatives": [],
+      "context": "Hola, ¿en qué puedo ayudarle? Busco unos zapatos negros para el trabajo. ¿Qué número calza? El cuarenta y dos. Estos son muy cómodos y cuestan sesenta euros. ¿Puedo probármelos? Claro, aquí tiene. Me quedan bien, me los llevo. ¿Paga en efectivo o con tarjeta? Con tarjeta, gracias.",
+      "sourceQuestion": 0,
+      "id": "es-ex-087"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-1",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b1-listen",
+      "type": "qcm",
+      "prompt": "¿Qué número calza?",
+      "choices": [
+        "42",
+        "40",
+        "44"
+      ],
+      "answer": "42",
+      "explanation": "“El cuarenta y dos”.",
+      "alternatives": [],
+      "context": "Hola, ¿en qué puedo ayudarle? Busco unos zapatos negros para el trabajo. ¿Qué número calza? El cuarenta y dos. Estos son muy cómodos y cuestan sesenta euros. ¿Puedo probármelos? Claro, aquí tiene. Me quedan bien, me los llevo. ¿Paga en efectivo o con tarjeta? Con tarjeta, gracias.",
+      "sourceQuestion": 1,
+      "id": "es-ex-088"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-1",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b1-listen",
+      "type": "qcm",
+      "prompt": "¿Cuánto cuestan?",
+      "choices": [
+        "16 €",
+        "60 €",
+        "66 €"
+      ],
+      "answer": "60 €",
+      "explanation": "“cuestan sesenta euros”.",
+      "alternatives": [],
+      "context": "Hola, ¿en qué puedo ayudarle? Busco unos zapatos negros para el trabajo. ¿Qué número calza? El cuarenta y dos. Estos son muy cómodos y cuestan sesenta euros. ¿Puedo probármelos? Claro, aquí tiene. Me quedan bien, me los llevo. ¿Paga en efectivo o con tarjeta? Con tarjeta, gracias.",
+      "sourceQuestion": 2,
+      "id": "es-ex-089"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-1",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b1-listen",
+      "type": "qcm",
+      "prompt": "¿Cómo paga?",
+      "choices": [
+        "Con tarjeta",
+        "En efectivo",
+        "Con cheque"
+      ],
+      "answer": "Con tarjeta",
+      "explanation": "“Con tarjeta, gracias”.",
+      "alternatives": [],
+      "context": "Hola, ¿en qué puedo ayudarle? Busco unos zapatos negros para el trabajo. ¿Qué número calza? El cuarenta y dos. Estos son muy cómodos y cuestan sesenta euros. ¿Puedo probármelos? Claro, aquí tiene. Me quedan bien, me los llevo. ¿Paga en efectivo o con tarjeta? Con tarjeta, gracias.",
+      "sourceQuestion": 3,
+      "id": "es-ex-090"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-2",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b2-read",
+      "type": "qcm",
+      "prompt": "¿Por qué prefieren comprar por internet muchos clientes?",
+      "choices": [
+        "Es más caro",
+        "Pueden comparar precios y recibir en casa",
+        "Es más lento"
+      ],
+      "answer": "Pueden comparar precios y recibir en casa",
+      "explanation": "“pueden comparar precios y recibir los productos en casa”.",
+      "alternatives": [],
+      "context": "El comercio electrónico ha transformado la manera de consumir. Hoy en día, muchos clientes prefieren comprar por internet porque pueden comparar precios y recibir los productos en casa. Sin embargo, este crecimiento plantea retos: la protección de los datos personales, el impacto medioambiental de las entregas y la competencia para las pequeñas tiendas del centro. Para sobrevivir, muchos comercios locales han creado su propia página web y ofrecen la recogida en tienda.",
+      "sourceQuestion": 0,
+      "id": "es-ex-091"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-2",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b2-read",
+      "type": "qcm",
+      "prompt": "¿Cuál es uno de los retos citados?",
+      "choices": [
+        "El exceso de tiendas",
+        "La falta de productos",
+        "La protección de los datos"
+      ],
+      "answer": "La protección de los datos",
+      "explanation": "“la protección de los datos personales”.",
+      "alternatives": [],
+      "context": "El comercio electrónico ha transformado la manera de consumir. Hoy en día, muchos clientes prefieren comprar por internet porque pueden comparar precios y recibir los productos en casa. Sin embargo, este crecimiento plantea retos: la protección de los datos personales, el impacto medioambiental de las entregas y la competencia para las pequeñas tiendas del centro. Para sobrevivir, muchos comercios locales han creado su propia página web y ofrecen la recogida en tienda.",
+      "sourceQuestion": 1,
+      "id": "es-ex-092"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-2",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b2-read",
+      "type": "qcm",
+      "prompt": "¿A quién hace competencia el comercio electrónico?",
+      "choices": [
+        "A las pequeñas tiendas del centro",
+        "A los transportes",
+        "A los bancos"
+      ],
+      "answer": "A las pequeñas tiendas del centro",
+      "explanation": "“la competencia para las pequeñas tiendas”.",
+      "alternatives": [],
+      "context": "El comercio electrónico ha transformado la manera de consumir. Hoy en día, muchos clientes prefieren comprar por internet porque pueden comparar precios y recibir los productos en casa. Sin embargo, este crecimiento plantea retos: la protección de los datos personales, el impacto medioambiental de las entregas y la competencia para las pequeñas tiendas del centro. Para sobrevivir, muchos comercios locales han creado su propia página web y ofrecen la recogida en tienda.",
+      "sourceQuestion": 2,
+      "id": "es-ex-093"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-2",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b2-read",
+      "type": "qcm",
+      "prompt": "¿Qué hacen los comercios locales para sobrevivir?",
+      "choices": [
+        "Bajar los sueldos",
+        "Crear su web y ofrecer recogida en tienda",
+        "Cerrar"
+      ],
+      "answer": "Crear su web y ofrecer recogida en tienda",
+      "explanation": "“han creado su propia página web y ofrecen la recogida en tienda”.",
+      "alternatives": [],
+      "context": "El comercio electrónico ha transformado la manera de consumir. Hoy en día, muchos clientes prefieren comprar por internet porque pueden comparar precios y recibir los productos en casa. Sin embargo, este crecimiento plantea retos: la protección de los datos personales, el impacto medioambiental de las entregas y la competencia para las pequeñas tiendas del centro. Para sobrevivir, muchos comercios locales han creado su propia página web y ofrecen la recogida en tienda.",
+      "sourceQuestion": 3,
+      "id": "es-ex-094"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-2",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b2-listen",
+      "type": "qcm",
+      "prompt": "¿Qué estudió el candidato?",
+      "choices": [
+        "Medicina",
+        "Gestión",
+        "Derecho"
+      ],
+      "answer": "Gestión",
+      "explanation": "“mis estudios de gestión”.",
+      "alternatives": [],
+      "context": "Gracias por venir. ¿Puede hablarme de su experiencia? Claro. Terminé mis estudios de gestión y realicé unas prácticas en una empresa de marketing durante seis meses. ¿Por qué quiere trabajar aquí? Admiro su empresa y creo que mis conocimientos digitales pueden ayudar a atraer a clientes jóvenes. ¿Cuál es su mayor defecto? A veces soy demasiado perfeccionista, pero estoy aprendiendo a organizar mejor mi tiempo. Muy bien, le llamaremos la semana que viene.",
+      "sourceQuestion": 0,
+      "id": "es-ex-095"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-2",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b2-listen",
+      "type": "qcm",
+      "prompt": "¿Cuánto duraron las prácticas?",
+      "choices": [
+        "Tres meses",
+        "Seis meses",
+        "Un año"
+      ],
+      "answer": "Seis meses",
+      "explanation": "“durante seis meses”.",
+      "alternatives": [],
+      "context": "Gracias por venir. ¿Puede hablarme de su experiencia? Claro. Terminé mis estudios de gestión y realicé unas prácticas en una empresa de marketing durante seis meses. ¿Por qué quiere trabajar aquí? Admiro su empresa y creo que mis conocimientos digitales pueden ayudar a atraer a clientes jóvenes. ¿Cuál es su mayor defecto? A veces soy demasiado perfeccionista, pero estoy aprendiendo a organizar mejor mi tiempo. Muy bien, le llamaremos la semana que viene.",
+      "sourceQuestion": 1,
+      "id": "es-ex-096"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-2",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b2-listen",
+      "type": "qcm",
+      "prompt": "¿Cómo puede ayudar a la empresa?",
+      "choices": [
+        "Con más horas",
+        "Con un salario bajo",
+        "Con conocimientos digitales"
+      ],
+      "answer": "Con conocimientos digitales",
+      "explanation": "“mis conocimientos digitales pueden ayudar a atraer a clientes jóvenes”.",
+      "alternatives": [],
+      "context": "Gracias por venir. ¿Puede hablarme de su experiencia? Claro. Terminé mis estudios de gestión y realicé unas prácticas en una empresa de marketing durante seis meses. ¿Por qué quiere trabajar aquí? Admiro su empresa y creo que mis conocimientos digitales pueden ayudar a atraer a clientes jóvenes. ¿Cuál es su mayor defecto? A veces soy demasiado perfeccionista, pero estoy aprendiendo a organizar mejor mi tiempo. Muy bien, le llamaremos la semana que viene.",
+      "sourceQuestion": 2,
+      "id": "es-ex-097"
+    },
+    {
+      "lessonId": "langues-lng-es-comp-2",
+      "unit": "Espagnol — Compréhension",
+      "origin": "langues/cmp-es-b2-listen",
+      "type": "qcm",
+      "prompt": "¿Cuál es su defecto?",
+      "choices": [
+        "Es demasiado perfeccionista",
+        "Habla poco",
+        "Llega tarde"
+      ],
+      "answer": "Es demasiado perfeccionista",
+      "explanation": "“soy demasiado perfeccionista”.",
+      "alternatives": [],
+      "context": "Gracias por venir. ¿Puede hablarme de su experiencia? Claro. Terminé mis estudios de gestión y realicé unas prácticas en una empresa de marketing durante seis meses. ¿Por qué quiere trabajar aquí? Admiro su empresa y creo que mis conocimientos digitales pueden ayudar a atraer a clientes jóvenes. ¿Cuál es su mayor defecto? A veces soy demasiado perfeccionista, pero estoy aprendiendo a organizar mejor mi tiempo. Muy bien, le llamaremos la semana que viene.",
+      "sourceQuestion": 3,
+      "id": "es-ex-098"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Yo ____ (tener) diecisiete años.",
+      "answer": "tengo",
+      "explanation": "L’âge s’exprime avec tener. Au présent, la première personne est irrégulière : tengo.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-099"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-0",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Choisis ser ou estar et conjugue : Nosotros ____ en la oficina.",
+      "answer": "estamos",
+      "explanation": "On situe ici des personnes avec estar ; nosotros commande estamos.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-100"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-0",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Choisis ser ou estar et conjugue : Ana ____ médica.",
+      "answer": "es",
+      "explanation": "Ser identifie ici la profession ; à la troisième personne du singulier : es.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-101"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Mi hermana ____ (estudiar) economía.",
+      "answer": "estudia",
+      "explanation": "Au présent régulier en -ar : troisième personne du singulier en -a.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-102"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-1",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Ayer yo ____ (ir) a Madrid.",
+      "answer": "fui",
+      "explanation": "Ayer situe l’action dans un passé achevé. Le passé simple de ir à la première personne est fui.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-103"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-1",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Cuando era pequeño, ____ (jugar, yo) en el parque.",
+      "answer": "jugaba",
+      "explanation": "L’imparfait décrit ici une habitude passée ; jugar est régulier à ce temps : jugaba.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-104"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-2",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète avec haber : Esta semana ____ trabajado mucho. (yo)",
+      "answer": "he",
+      "explanation": "Le passé composé se construit avec haber au présent + participe passé. Cet emploi avec esta semana est fréquent en Espagne ; les usages régionaux varient.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-105"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-1",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Mañana nosotros ____ (visitar) la empresa. Utilise le futur simple.",
+      "answer": "visitaremos",
+      "explanation": "Le futur régulier garde l’infinitif visitar et ajoute -emos pour nosotros.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-106"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-3",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : J’aimerais apprendre l’italien.",
+      "answer": "Me gustaría aprender italiano.",
+      "explanation": "Me gustaría exprime un souhait ; aprender reste à l’infinitif. Quisiera aprender italiano est aussi possible.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-107"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-4",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Quiero que tú ____ (venir) a la reunión.",
+      "answer": "vengas",
+      "explanation": "Le souhait quiero que appelle ici le subjonctif ; venir donne venga, vengas…",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-108"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-1",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Me ____ los idiomas.",
+      "answer": "gustan",
+      "explanation": "Le sujet grammatical est los idiomas, pluriel : gustan. Me désigne la personne qui apprécie.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-109"
+    },
+    {
+      "lessonId": "langues-lng-es-grammar-ex-0",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Choisis por ou para : Este informe es ____ el director.",
+      "answer": "para",
+      "explanation": "Para indique ici le destinataire du rapport.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-110"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-1",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : Je suis élève en France et j’étudie le commerce.",
+      "answer": "Soy estudiante en Francia y estudio comercio.",
+      "explanation": "Ser indique l’identité d’élève ; estudio est le présent à la première personne. Estudio empresariales peut convenir selon la formation précise.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-111"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-2",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : L’entreprise vend ses produits sur Internet.",
+      "answer": "La empresa vende sus productos por Internet.",
+      "explanation": "Vende est le présent de vender ; sus s’accorde avec productos. En Internet est également courant.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-112"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-4",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : Nous devons réduire la consommation d’énergie.",
+      "answer": "Tenemos que reducir el consumo de energía.",
+      "explanation": "Tener que + infinitif exprime l’obligation personnelle ; debemos reducir est aussi possible.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-113"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-7",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Relie avec une cause : Recomiendo esta solución. Es más barata.",
+      "answer": "Recomiendo esta solución porque es más barata.",
+      "explanation": "Porque introduit une explication ; por qué sert à poser une question.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-114"
+    },
+    {
+      "lessonId": "p1-langues-p1-lng-es-1",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige : Me gusta las lenguas.",
+      "answer": "Me gustan las lenguas.",
+      "explanation": "Las lenguas est un sujet pluriel ; gustar s’accorde avec ce sujet.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-115"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige : Soy diecisiete años.",
+      "answer": "Tengo diecisiete años.",
+      "explanation": "L’âge se construit avec tener et non ser.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-116"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-0",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige : Mi padre es en casa.",
+      "answer": "Mi padre está en casa.",
+      "explanation": "La localisation d’une personne se construit ici avec estar ; está porte un accent.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-117"
+    },
+    {
+      "lessonId": "langues-lng-es-gram-2",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige : He trabajé ayer. Emploie le passé simple.",
+      "answer": "Trabajé ayer.",
+      "explanation": "On ne mélange pas haber et une forme conjuguée au passé simple. La consigne demande un passé simple situé par ayer.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-118"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-7",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Rédige trois phrases : un avis sur les réseaux sociaux, un avantage et une limite.",
+      "answer": "Creo que las redes sociales pueden ser útiles. Permiten compartir información. Sin embargo, es necesario comprobar las fuentes.",
+      "explanation": "Exemple possible : avis, avantage concret et limite. D’autres opinions cohérentes et justifiées sont recevables.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-119"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-2",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Présente une organisation fictive, son activité et son public en trois phrases.",
+      "answer": "Nuestra asociación organiza actividades deportivas. Ofrece clases de baloncesto. Se dirige a los jóvenes del barrio.",
+      "explanation": "Exemple possible : nature de l’organisation, activité précise et public identifié ; le présent doit rester cohérent.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-120"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-1",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Raconte une mission de stage et ce que tu as appris, en deux phrases.",
+      "answer": "Durante mis prácticas, ayudé a los clientes. Aprendí a escuchar sus necesidades.",
+      "explanation": "Exemple possible : deux actions au passé et un apprentissage explicite ; adapte le vocabulaire à une situation réelle ou fictive annoncée.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-121"
+    },
+    {
+      "lessonId": "langues-lng-es-voc-7",
+      "unit": "Atelier de transfert · Espagnol",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Demande poliment le prix d’un service puis une précision sur son fonctionnement.",
+      "answer": "¿Podría decirme cuánto cuesta este servicio? ¿Podría explicarme cómo funciona?",
+      "explanation": "Exemple possible : deux interrogations polies, chacune avec un objectif distinct. Vérifie les accents de cuánto et cómo.",
+      "choices": [],
+      "context": "",
+      "id": "es-ex-122"
+    }
+  ],
+  "edition": "Manuel approfondi · octobre 2026",
+  "methodSections": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    14,
+    15,
+    16,
+    17
+  ],
+  "videos": [
+    {
+      "title": "Primera clase de español",
+      "url": "https://videoele.com/A1-Primera-clase-de-espanol.html",
+      "level": "A1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Pronunciación (personajes)",
+      "url": "https://videoele.com/A1-Pronunciacion-personajes.html",
+      "level": "A1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Pronunciación (marcas)",
+      "url": "https://videoele.com/A1-Pronunciacion-marcas.html",
+      "level": "A1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Números de 1 a 20",
+      "url": "https://videoele.com/A1-numeros-20.html",
+      "level": "A1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "¿Cómo se llama?",
+      "url": "https://videoele.com/A1-Como-se-llama.html",
+      "level": "A1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Números de 20 a 100",
+      "url": "https://videoele.com/A1-numeros-100.html",
+      "level": "A1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Números y letras",
+      "url": "https://videoele.com/A1-Numeros-y-letras.html",
+      "level": "A1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Los artículos indefinidos y definidos",
+      "url": "https://videoele.com/A1-los-articulos.html",
+      "level": "A1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "En el mercado",
+      "url": "https://videoele.com/A2-En-el-mercado.html",
+      "level": "A2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "El presente irregular",
+      "url": "https://videoele.com/A2-Presente-irregular.html",
+      "level": "A2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "IR a + infinitivo",
+      "url": "https://videoele.com/A2-Ir-a-infinitivo.html",
+      "level": "A2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "ESTAR + gerundio (regulares)",
+      "url": "https://videoele.com/A2-Estar-gerundio-regular.html",
+      "level": "A2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "¿Qué tiempo hace?",
+      "url": "https://videoele.com/A2-Que-tiempo-hace.html",
+      "level": "A2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "La ropa",
+      "url": "https://videoele.com/A2-La-ropa.html",
+      "level": "A2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Diptongos",
+      "url": "https://videoele.com/A2-diptongos.html",
+      "level": "A2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Posesivos tónicos",
+      "url": "https://videoele.com/A2-Posesivos-tonicos.html",
+      "level": "A2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Algo inesperado",
+      "url": "https://videoele.com/B1-Algo-inesperado.html",
+      "level": "B1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Sin palabras",
+      "url": "https://videoele.com/B1-Sin-palabras.html",
+      "level": "B1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "¿Qué pasará?",
+      "url": "https://videoele.com/B1-que-pasara.html",
+      "level": "B1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Cosas de casa",
+      "url": "https://videoele.com/B1-Cosas-de-casa.html",
+      "level": "B1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "¿Qué harías en Bilbao?",
+      "url": "https://videoele.com/B1-Que-harias-bilbao.html",
+      "level": "B1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Consejos para ser feliz",
+      "url": "https://videoele.com/B1-Consejos-ser-feliz.html",
+      "level": "B1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Me trajo este recuerdo",
+      "url": "https://videoele.com/B1-Me-trajo-este-recuerdo.html",
+      "level": "B1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Un día en la playa",
+      "url": "https://videoele.com/B1-un-dia-playa.html",
+      "level": "B1",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Un hotel que sea céntrico",
+      "url": "https://videoele.com/B2-Un-hotel-que-sea-centrico.html",
+      "level": "B2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "La feria de atracciones",
+      "url": "https://videoele.com/B2-Feria-de-atracciones.html",
+      "level": "B2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Obligaciones y prohibiciones",
+      "url": "https://videoele.com/B2-Obligaciones-y-prohibiciones.html",
+      "level": "B2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Espero que les haya gustado",
+      "url": "https://videoele.com/B2-Espero-que-les-haya-gustado.html",
+      "level": "B2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Habilidosos",
+      "url": "https://videoele.com/B2-Habilidosos.html",
+      "level": "B2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "¿Qué habrá pasado?",
+      "url": "https://videoele.com/B2-Que-habra-pasado.html",
+      "level": "B2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Vacaciones en Hawaii",
+      "url": "https://videoele.com/B2-Vacaciones-en-Hawaii.html",
+      "level": "B2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Ya es Navidad",
+      "url": "https://videoele.com/B2-Ya-es-navidad.html",
+      "level": "B2",
+      "provider": "VideoEle",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    }
+  ]
+}

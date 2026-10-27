@@ -1,0 +1,2565 @@
+{
+  "name": "Arabe",
+  "label": "العربية",
+  "hello": "مرحبًا! هل يمكنك أن تقدّم نفسك؟",
+  "intro": "Des bases d’arabe standard pour comprendre et parler, avec des repères clairs sur les variétés dialectales.",
+  "sections": [
+    {
+      "title": "Commencer par une vraie situation",
+      "text": "Choisis une situation concrète : te présenter, demander un renseignement ou décrire ton stage. Prépare cinq phrases utiles, écoute un modèle puis essaie sans lire. Une langue se construit par des retours fréquents sur les mêmes situations, avec une difficulté qui augmente progressivement. Le guide accompagne un apprentissage : il ne remplace ni un professeur ni des échanges réels.",
+      "task": "Enregistre une présentation de 30 secondes. Écoute-la et choisis un seul point à améliorer. Garde cette première version pour comparer dans deux semaines."
+    },
+    {
+      "title": "Écouter pour comprendre, pas pour tout traduire",
+      "text": "Prends un extrait de 30 à 90 secondes adapté à ton niveau. Première écoute : qui parle, où et pourquoi ? Deuxième écoute : repère trois mots ou informations. Troisième écoute avec sous-titres dans la langue : vérifie ton hypothèse. Reprends ensuite sans sous-titres. Une vidéo trop difficile peut servir à découvrir une culture, mais un support plus simple est préférable pour travailler la compréhension.",
+      "task": "Note le thème et trois informations, puis résume en une phrase. Vérifie avec la transcription ; distingue ce que tu avais compris et ce que tu avais deviné."
+    },
+    {
+      "title": "Parler par petits blocs",
+      "text": "Apprends des groupes de mots réutilisables plutôt que des listes isolées : demander de répéter, donner son avis, expliquer une difficulté. Fais varier un élément de chaque phrase. Pour gagner en fluidité, prépare des mots-clés et non un texte entier. Les hésitations sont normales : une reformulation simple est souvent plus efficace qu’une traduction mot à mot.",
+      "task": "Construis trois réponses différentes à la même question. Fais d’abord 20 secondes, puis 40 secondes, puis une minute sans lire de texte."
+    },
+    {
+      "title": "Prononciation : écouter, imiter, comparer",
+      "text": "Écoute une phrase courte, mets en pause, répète, puis compare ton enregistrement au modèle. Observe le rythme, l’accent des mots et l’intonation avant de chercher une imitation parfaite. Le shadowing consiste à parler juste après le modèle : ralentis si nécessaire. Une transcription en français ne reproduit jamais exactement les sons d’une autre langue.",
+      "task": "Répète cinq fois une phrase de huit à douze mots. Compare les versions 1 et 5 sur un critère : rythme, consonne ou voyelle. Demande un retour à un enseignant ou à un interlocuteur compétent."
+    },
+    {
+      "title": "Vocabulaire qui reste disponible",
+      "text": "Crée des cartes avec une expression, une phrase personnelle et, si possible, un extrait audio fiable. Cache la réponse et retrouve-la à voix haute. Revois après un jour, trois jours, une semaine puis deux semaines ; rapproche les révisions si tu oublies. Relie chaque mot à une situation vécue. Dix expressions utilisées valent mieux qu’une longue liste seulement relue.",
+      "task": "Sélectionne cinq expressions de la semaine. Utilise-les dans une conversation de deux minutes puis modifie la situation pour vérifier que tu sais les réemployer."
+    },
+    {
+      "title": "Comprendre, lire et écrire pour mieux parler",
+      "text": "Lis un texte court à ton niveau, repère son objectif et ses connecteurs. Prépare un résumé avec des mots-clés. Écris ensuite cinq phrases, vérifie le sujet, le verbe et les accords, puis reformule-les oralement sans feuille. Un correcteur peut aider à repérer une erreur ; demande toujours pourquoi et vérifie la règle avec une ressource fiable.",
+      "task": "Lis une annonce ou une courte actualité. Résume l’idée principale, donne un exemple et explique ton avis. Compare le résumé au document : n’ajoute pas de faits absents."
+    },
+    {
+      "title": "Arabe standard et dialectes : choisir son objectif",
+      "text": "Ce guide utilise l’arabe standard moderne, utile dans les médias, l’écrit et de nombreux contextes scolaires. Les conversations quotidiennes emploient souvent des variétés dialectales : marocain, algérien, égyptien, levantin, etc. Il n’existe pas un dialecte oral unique pour tous les pays. Une formule standard peut être comprise sans être la plus spontanée localement. Pour converser dans un pays précis, choisis ensuite un modèle régional avec ton professeur.",
+      "task": "Écris ton objectif : lire les médias, préparer un oral scolaire ou parler avec une famille dans une région. Choisis une ressource adaptée et identifie sa variété."
+    },
+    {
+      "title": "Écriture et lecture de droite à gauche",
+      "text": "L’arabe se lit de droite à gauche ; les lettres changent de forme selon leur position et certaines ne se lient pas à la lettre suivante. Les voyelles brèves peuvent être indiquées par des signes ; elles sont souvent absentes des textes courants. Les voyelles longues se notent notamment avec ا، و، ي selon le contexte. Apprends d’abord à reconnaître, entendre et tracer les lettres, puis à lire des mots courts vocalisés. Une translittération ne remplace pas l’alphabet.",
+      "task": "Repère les lettres de باب (porte), بيت (maison) et كتاب (livre) avec un modèle sonore. Relie écriture et son avant d’accélérer la lecture."
+    },
+    {
+      "title": "Écouter les sons avant de les transcrire",
+      "text": "ح et ه, ع et ء, ق et ك ne se confondent pas. Les consonnes emphatiques comme ص، ض، ط، ظ demandent un modèle sonore et un retour guidé. Le symbole ʿ dans certaines transcriptions savantes représente ع ; les systèmes de translittération varient. Ne cherche pas à tout déduire d’une orthographe française approximative. La durée des voyelles peut distinguer les mots.",
+      "task": "Choisis deux sons difficiles, écoute cinq mots de référence puis enregistre-les. Travaille un seul contraste à la fois avec une personne compétente."
+    },
+    {
+      "title": "Se présenter en arabe standard",
+      "text": "مرحبًا — Bonjour. اسمي لينا — Je m’appelle Lina. أنا طالب / أنا طالبة — Je suis étudiant / étudiante. أدرس في فرنسا — J’étudie en France. أحبّ اللغات — J’aime les langues. أتعلّم العربية — J’apprends l’arabe. ما اسمك؟ — Comment t’appelles-tu ? Ces formes écrites sans voyelles demandent un modèle audio pour fixer la prononciation et les marques de genre à l’oral.",
+      "task": "Compose une présentation de quatre phrases et écoute un modèle standard. Change le prénom et ajoute une question simple."
+    },
+    {
+      "title": "Construire une phrase simple",
+      "text": "Au présent, une phrase nominale peut se construire sans équivalent exprimé de être : أنا طالب — Je suis étudiant. L’adjectif suit généralement le nom : شركة صغيرة — une petite entreprise. L’article الـ marque la définition ; nom et adjectif s’accordent selon la construction. عندي سؤال signifie j’ai une question. هذا كتاب — Ceci est un livre. هذه شركة — Ceci est une entreprise. Les règles d’accord se travaillent progressivement en contexte.",
+      "task": "Décris trois objets ou lieux avec هذا ou هذه et un nom vérifié. Demande à un professeur de contrôler l’accord avant de mémoriser."
+    },
+    {
+      "title": "Demander de répéter et comprendre une question",
+      "text": "لا أفهم — Je ne comprends pas. هل يمكنك أن تعيد، من فضلك؟ — Peux-tu répéter, s’il te plaît ? تكلّم ببطء، من فضلك — Parle lentement, s’il te plaît (adressé à un homme). ما معنى هذه الكلمة؟ — Que signifie ce mot ? أين؟ — Où ? متى؟ — Quand ? لماذا؟ — Pourquoi ? كيف؟ — Comment ? La personne et le genre de l’interlocuteur peuvent modifier les formes.",
+      "task": "Simule une demande d’information : utilise أين puis une demande de répétition. Vérifie la prononciation et l’adaptation au destinataire avec un modèle audio."
+    },
+    {
+      "title": "Donner un avis et présenter une organisation",
+      "text": "في رأيي — À mon avis. لأنّ — Parce que. مثلًا — Par exemple. لكن — Mais. شركة — Entreprise. زبون — Client. عمل — Travail. تعمل هذه الشركة في مجال… — Cette entreprise travaille dans le domaine de… Réutilise des phrases courtes dont tu comprends la structure ; les accords et les formes verbales demandent un apprentissage guidé. Pour l’ETLV, suis les consignes de ton établissement et la langue retenue.",
+      "task": "Présente une organisation en trois phrases simples : activité, public et idée d’amélioration. Vérifie chaque mot nouveau et distingue les faits de tes propositions."
+    },
+    {
+      "title": "Mini-échange et progression réaliste",
+      "text": "A: مرحبًا، ما اسمك؟ B: اسمي لينا. A: ماذا تدرسين؟ B: أدرس في فرنسا وأتعلّم العربية. A: لماذا تتعلّمين العربية؟ B: أحبّ اللغات. Les questions ici s’adressent à une femme ; les formes varient pour un homme. Commence avec un modèle vocalisé ou audio : le guide non vocalisé ne suffit pas pour déduire toutes les voyelles.",
+      "task": "Joue les deux rôles, puis change la motivation. Passe progressivement d’un texte vocalisé à des mots-clés. Si ton objectif est dialectal, fais adapter l’échange par un locuteur compétent."
+    },
+    {
+      "title": "Interagir sans rester bloqué",
+      "text": "Écoute la question jusqu’au bout. Si tu ne comprends pas, demande de répéter ou de reformuler. Réponds brièvement puis ajoute un exemple et une question de relance. Pour un échange à distance, ne partage pas d’informations personnelles avec des inconnus ; privilégie les cadres scolaires et les services adaptés à ton âge.",
+      "task": "Avec un partenaire, alternez client et conseiller pendant deux minutes. Interdiction de lire un dialogue ; chacun doit poser au moins deux questions et demander une précision."
+    },
+    {
+      "title": "Routine de 20 minutes",
+      "text": "5 minutes : revoir cinq expressions sans regarder. 5 minutes : écouter un extrait court avec un objectif précis. 5 minutes : répéter puis enregistrer une réponse. 5 minutes : noter un progrès et une difficulté, et préparer la prochaine séance. Les jours chargés, garde une version de cinq minutes : trois expressions et une réponse enregistrée.",
+      "task": "Planifie quatre rendez-vous réalistes par semaine. Coche les séances réellement faites. Si tu rates un jour, reprends simplement au rendez-vous suivant, sans doubler artificiellement la charge."
+    },
+    {
+      "title": "Plan progressif sur quatre semaines",
+      "text": "Semaine 1 : présentation et demandes simples ; deux enregistrements de 30 secondes. Semaine 2 : raconter une journée ou une expérience ; trois réponses de 45 secondes. Semaine 3 : donner un avis et comparer deux possibilités ; un échange de deux minutes. Semaine 4 : présenter un projet et répondre à des questions ; bilan avec la première version. Adapte les durées : ce programme ne garantit pas un niveau CECRL en quatre semaines.",
+      "task": "Choisis un objectif observable par semaine : par exemple expliquer trois tâches de stage sans lire. Garde une trace datée et une difficulté à retravailler."
+    },
+    {
+      "title": "S’autoévaluer avec précision",
+      "text": "Sur une échelle de 1 à 4, observe : message compréhensible, organisation, vocabulaire utile, correction et interaction. 1 : besoin d’un modèle ; 2 : message possible avec aide ; 3 : autonomie sur une situation familière ; 4 : autonomie avec reformulations et réponses aux questions. Ce bilan personnel n’est ni une certification CECRL ni une note officielle.",
+      "task": "Enregistre le même sujet une semaine plus tard. Cite un exemple concret de progrès et une priorité. Vérifie les attentes exactes de ton devoir avec ton professeur."
+    }
+  ],
+  "resources": [
+    {
+      "title": "Al Jazeera Learning Arabic — vidéos et parcours",
+      "url": "https://learning.aljazeera.net/",
+      "kind": "video"
+    },
+    {
+      "title": "Institut du monde arabe — centre de langue",
+      "url": "https://www.imarabe.org/fr/centre-langue-et-civilisation-arabes-clca",
+      "kind": "practice"
+    },
+    {
+      "title": "Institut du monde arabe — culture et expositions",
+      "url": "https://www.imarabe.org/",
+      "kind": "reading"
+    }
+  ],
+  "id": "ar",
+  "lessons": [
+    {
+      "id": "ar-pratique-6",
+      "title": "Arabe standard et dialectes : choisir son objectif",
+      "part": "Premiers échanges",
+      "paragraphs": [
+        "Ce guide utilise l’arabe standard moderne, utile dans les médias, l’écrit et de nombreux contextes scolaires. Les conversations quotidiennes emploient souvent des variétés dialectales : marocain, algérien, égyptien, levantin, etc. Il n’existe pas un dialecte oral unique pour tous les pays. Une formule standard peut être comprise sans être la plus spontanée localement. Pour converser dans un pays précis, choisis ensuite un modèle régional avec ton professeur."
+      ],
+      "lexicon": [],
+      "oral": "Écris ton objectif : lire les médias, préparer un oral scolaire ou parler avec une famille dans une région. Choisis une ressource adaptée et identifie sa variété.",
+      "origin": "RévizSTMG · guide pratique"
+    },
+    {
+      "id": "ar-pratique-7",
+      "title": "Écriture et lecture de droite à gauche",
+      "part": "Premiers échanges",
+      "paragraphs": [
+        "L’arabe se lit de droite à gauche ; les lettres changent de forme selon leur position et certaines ne se lient pas à la lettre suivante. Les voyelles brèves peuvent être indiquées par des signes ; elles sont souvent absentes des textes courants. Les voyelles longues se notent notamment avec ا، و، ي selon le contexte. Apprends d’abord à reconnaître, entendre et tracer les lettres, puis à lire des mots courts vocalisés. Une translittération ne remplace pas l’alphabet."
+      ],
+      "lexicon": [],
+      "oral": "Repère les lettres de باب (porte), بيت (maison) et كتاب (livre) avec un modèle sonore. Relie écriture et son avant d’accélérer la lecture.",
+      "origin": "RévizSTMG · guide pratique"
+    },
+    {
+      "id": "ar-pratique-10",
+      "title": "Construire une phrase simple",
+      "part": "Premiers échanges",
+      "paragraphs": [
+        "Au présent, une phrase nominale peut se construire sans équivalent exprimé de être : أنا طالب — Je suis étudiant. L’adjectif suit généralement le nom : شركة صغيرة — une petite entreprise. L’article الـ marque la définition ; nom et adjectif s’accordent selon la construction. عندي سؤال signifie j’ai une question. هذا كتاب — Ceci est un livre. هذه شركة — Ceci est une entreprise. Les règles d’accord se travaillent progressivement en contexte."
+      ],
+      "lexicon": [],
+      "oral": "Décris trois objets ou lieux avec هذا ou هذه et un nom vérifié. Demande à un professeur de contrôler l’accord avant de mémoriser.",
+      "origin": "RévizSTMG · guide pratique"
+    },
+    {
+      "id": "langues-lng-ar-gram-0",
+      "title": "Lire l’écriture et se présenter",
+      "part": "Écriture et grammaire de l’arabe standard",
+      "paragraphs": [
+        "L’arabe s’écrit de droite à gauche. Ses lettres changent de forme selon leur position ; ا د ذ ر ز و ne se lient pas à la lettre suivante à gauche. Les voyelles brèves peuvent être notées par des signes : fatḥa ـَ (a), kasra ـِ (i), ḍamma ـُ (u). Les lettres ا و ي servent notamment à noter des voyelles longues. Le sukūn ـْ marque l’absence de voyelle et la shadda ـّ une consonne redoublée.",
+        "Repère les 28 lettres dans l’ordre : ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي. Plusieurs lettres partagent une forme et se distinguent par leurs points : ب، ت، ث ; ج، ح، خ. Recopie-les en observant le nombre et la position des points, puis compare leur forme dans un mot. Ne confonds pas ة, souvent finale féminine, avec ه. Les chiffres et les segments latins gardent leur propre sens de lecture dans une phrase arabe.",
+        "Les textes ordinaires omettent souvent les voyelles brèves : le contexte aide à lire. La translittération est une aide provisoire : marḥaban (مرحبا) signifie bonjour ; shukran (شكرا), merci. ʿ représente ع et ḥ représente ح, distinct de ه. Il faut écouter un locuteur ou un enregistrement pour travailler ces sons ; un exemple écrit ne constitue pas un exercice d’écoute.",
+        "Pour se présenter : اسمي ليلى (ismī Laylā), « je m’appelle Layla » ; أنا طالب (anā ṭālib), « je suis étudiant » ; أنا طالبة (anā ṭāliba), « je suis étudiante ». Au présent, une phrase de ce type n’emploie pas de verbe être exprimé. من أين أنت؟ demande « d’où viens-tu ? ». La forme vocalisée de أنت varie selon le destinataire : anta au masculin, anti au féminin."
+      ],
+      "lexicon": [
+        {
+          "term": "Fatḥa",
+          "meaning": "Signe de la voyelle brève a : ـَ."
+        },
+        {
+          "term": "Shadda",
+          "meaning": "Signe de redoublement de la consonne : ـّ."
+        },
+        {
+          "term": "مرحبا",
+          "meaning": "Bonjour ; translittération indicative marḥaban."
+        },
+        {
+          "term": "اسمي",
+          "meaning": "Mon nom est / je m’appelle : ismī."
+        }
+      ],
+      "origin": "langues/lng-ar-gram/0"
+    },
+    {
+      "id": "langues-lng-ar-gram-1",
+      "title": "Article, genre, adjectif et possession",
+      "part": "Écriture et grammaire de l’arabe standard",
+      "paragraphs": [
+        "L’article défini ال s’attache au nom : كتاب (un livre) → الكتاب (le livre). Devant une lettre solaire, le l de l’article s’assimile à la consonne suivante dans la prononciation : الشمس (ash-shams, le soleil). Devant une lettre lunaire, il se prononce : القمر (al-qamar, la lune). L’écriture de l’article reste ال dans les deux cas.",
+        "L’adjectif épithète suit le nom et s’accorde notamment en genre et en détermination : كتاب جديد (un livre nouveau), الكتاب الجديد (le livre nouveau), مدرسة جديدة (une école nouvelle). En revanche, الكتاب جديد signifie « le livre est nouveau » : le nom est défini et l’attribut est ici indéfini. La tāʾ marbūṭa ة marque souvent un féminin mais n’en constitue pas une règle sans exception.",
+        "L’annexion relie deux noms : كتاب الطالب signifie « le livre de l’élève ». Dans cette construction, le premier nom ne prend pas ال ; la détermination vient du second. Un suffixe peut marquer le possesseur : كتابي (mon livre), كتابه (son livre à lui), كتابها (son livre à elle). Ces exemples doivent être appris avec le sens du suffixe, sans ajouter un article devant كتابي.",
+        "Le duel désigne deux personnes ou deux choses. Au nominatif, notamment pour le sujet et son attribut dans ces exemples, on trouve هذان pour le démonstratif masculin et طالبان pour deux étudiants : هذان طالبان signifie « ces deux-ci sont des étudiants ». Au féminin : هاتان طالبتان, « ces deux-ci sont des étudiantes ». Ces formes changent dans d’autres fonctions grammaticales ; les exemples ci-dessus portent seulement sur le nominatif."
+      ],
+      "lexicon": [
+        {
+          "term": "ال",
+          "meaning": "Article défini attaché au nom."
+        },
+        {
+          "term": "الكتاب الجديد",
+          "meaning": "Le livre nouveau : adjectif épithète également défini."
+        },
+        {
+          "term": "الكتاب جديد",
+          "meaning": "Le livre est nouveau : phrase nominale."
+        },
+        {
+          "term": "كتابي",
+          "meaning": "Mon livre : suffixe possessif ـي."
+        },
+        {
+          "term": "هذان طالبان",
+          "meaning": "Ces deux-ci sont des étudiants : démonstratif et nom au duel masculin nominatif."
+        }
+      ],
+      "origin": "langues/lng-ar-gram/1"
+    },
+    {
+      "id": "langues-lng-ar-gram-2",
+      "title": "Pronoms et conjugaison : accompli et inaccompli",
+      "part": "Écriture et grammaire de l’arabe standard",
+      "paragraphs": [
+        "Les pronoms personnels utiles sont أنا (je), نحن (nous), أنت (tu), هو (il), هي (elle), أنتم (vous masculin pluriel ou groupe mixte), هم (ils). L’arabe distingue aussi le duel et des formes féminines ; le contexte et la vocalisation permettent notamment de distinguer anta (tu masculin) et anti (tu féminin).",
+        "L’accompli présente généralement un procès accompli, souvent au passé. Avec كتب, « écrire » : كَتَبْتُ (katabtu, j’ai écrit), كَتَبْتَ (katabta, tu masculin as écrit), كَتَبْتِ (katabti, tu féminin as écrit), كَتَبَ (kataba, il a écrit), كَتَبَتْ (katabat, elle a écrit), كَتَبْنَا (katabnā, nous avons écrit). Sans voyelles, plusieurs formes s’écrivent كتبت : ne devine pas le sujet sans contexte.",
+        "L’inaccompli sert notamment au présent : أَكْتُبُ (aktubu, j’écris), يَكْتُبُ (yaktubu, il écrit), تَكْتُبُ (taktubu, elle écrit ou tu masculin écris selon le contexte), نَكْتُبُ (naktubu, nous écrivons). Pour annoncer l’avenir, on peut utiliser سـ ou سوف devant l’inaccompli : سأكتب / سوف أكتب (j’écrirai). Les catégories accompli/inaccompli ne se superposent pas mécaniquement aux temps français.",
+        "Autres modèles utiles : أَدْرُسُ العَرَبِيَّةَ signifie « j’étudie l’arabe » et نَعْمَلُ « nous travaillons ». Demain se dit غَدًا ; سَأَدْرُسُ غَدًا signifie « j’étudierai demain ». Le préfixe سَـ s’attache au verbe à l’inaccompli pour annoncer le futur."
+      ],
+      "lexicon": [
+        {
+          "term": "Accompli",
+          "meaning": "Forme présentant notamment un procès accompli : كَتَبَ, il a écrit."
+        },
+        {
+          "term": "Inaccompli",
+          "meaning": "Forme servant notamment au présent : يَكْتُبُ, il écrit."
+        },
+        {
+          "term": "نحن",
+          "meaning": "Nous."
+        },
+        {
+          "term": "سأكتب",
+          "meaning": "J’écrirai : سـ + inaccompli."
+        }
+      ],
+      "origin": "langues/lng-ar-gram/2"
+    },
+    {
+      "id": "langues-lng-ar-gram-3",
+      "title": "Nier, interroger et situer",
+      "part": "Écriture et grammaire de l’arabe standard",
+      "paragraphs": [
+        "La négation لا devant l’inaccompli peut nier une action présente ou habituelle : لا أعمل اليوم signifie « je ne travaille pas aujourd’hui ». Pour le passé, لم est suivi d’un inaccompli apocopé : لم أكتبْ (je n’ai pas écrit). Pour le futur, لن est suivi d’un inaccompli au subjonctif : لن أكتبَ (je n’écrirai pas). Ce sont des constructions de l’arabe standard, à ne pas confondre avec les négations dialectales.",
+        "Une question fermée peut commencer par هل : هل تعمل اليوم؟ (travailles-tu aujourd’hui ?). Les mots interrogatifs comprennent من (qui ?), ماذا (quoi ?), أين (où ?), متى (quand ?), لماذا (pourquoi ?) et كيف (comment ?). هل n’est pas nécessaire devant أين : أين المدرسة؟ signifie « où est l’école ? ».",
+        "Les prépositions في (dans/à), من (de/depuis), إلى (vers/à), مع (avec) précisent les rapports : أنا في المدرسة (je suis à l’école), أذهب إلى المدرسة (je vais à l’école). عندي كتاب signifie « j’ai un livre », littéralement un livre est auprès de moi. Pour une négation nominale : لست طالبا (je ne suis pas étudiant) emploie une forme de ليس.",
+        "Pour décrire un emplacement, على signifie « sur » et الطاولة « la table ». الكتاب على الطاولة signifie « le livre est sur la table ». Le groupe prépositionnel joue ici le rôle d’attribut ; aucun verbe être au présent n’est nécessaire."
+      ],
+      "lexicon": [
+        {
+          "term": "لا أعمل",
+          "meaning": "Je ne travaille pas : négation au présent."
+        },
+        {
+          "term": "لم أكتبْ",
+          "meaning": "Je n’ai pas écrit : لم + inaccompli apocopé."
+        },
+        {
+          "term": "لن أكتبَ",
+          "meaning": "Je n’écrirai pas : لن + inaccompli au subjonctif."
+        },
+        {
+          "term": "أين",
+          "meaning": "Où ?"
+        }
+      ],
+      "origin": "langues/lng-ar-gram/3"
+    },
+    {
+      "id": "langues-lng-ar-gram-4",
+      "title": "Pluriels, accord et phrases complexes",
+      "part": "Écriture et grammaire de l’arabe standard",
+      "paragraphs": [
+        "L’arabe possède des pluriels réguliers et des pluriels internes, dits brisés : كتاب → كتب (livre → livres), طالب → طلاب (étudiant → étudiants). Un pluriel féminin régulier se forme souvent en ـات : شركة → شركات (entreprise → entreprises). Apprends le pluriel avec chaque nom plutôt que d’appliquer une terminaison unique à tous les mots.",
+        "Un pluriel non humain prend généralement un accord au féminin singulier : الكتب جديدة signifie « les livres sont nouveaux ». Pour un groupe humain masculin pluriel : الطلاب الجدد (les nouveaux étudiants). Ne généralise donc pas l’accord féminin singulier aux personnes.",
+        "Pour relier des propositions, utilise و (et), لكن (mais), لأن (parce que), لذلك (c’est pourquoi) et الذي / التي (qui/que au masculin/féminin singulier). الشركة التي تنتج الكتب كبيرة signifie « l’entreprise qui produit les livres est grande ». La relative suit un antécédent défini et son relatif s’accorde avec lui. Une phrase organisée indique la cause puis la conséquence sans les confondre."
+      ],
+      "lexicon": [
+        {
+          "term": "جمع",
+          "meaning": "Pluriel ; il peut être régulier ou interne."
+        },
+        {
+          "term": "الكتب جديدة",
+          "meaning": "Les livres sont nouveaux : accord féminin singulier avec un pluriel non humain."
+        },
+        {
+          "term": "لأن",
+          "meaning": "Parce que : introduit une cause."
+        },
+        {
+          "term": "لذلك",
+          "meaning": "C’est pourquoi : introduit une conséquence."
+        }
+      ],
+      "origin": "langues/lng-ar-gram/4"
+    },
+    {
+      "id": "langues-lng-ar-gram-5",
+      "title": "Décrire le passé et défendre un point de vue",
+      "part": "Écriture et grammaire de l’arabe standard",
+      "paragraphs": [
+        "كان permet de situer une phrase nominale au passé : كان الجو جميلا (il faisait beau). Avec un inaccompli, il peut présenter une activité habituelle ou en cours dans le passé : كنت أعمل في مكتبة (je travaillais dans une bibliothèque). Le contexte permet de préciser s’il s’agit d’une habitude ou d’une action en cours.",
+        "Pour comparer : هذا المنتج أفضل من ذلك المنتج signifie « ce produit est meilleur que cet autre produit ». أفضل من exprime ici « meilleur que ». Pour argumenter : في رأيي (à mon avis), أعتقد أن (je pense que), من جهة (d’un côté), من جهة أخرى (d’un autre côté), مثلا (par exemple), في الختام (en conclusion).",
+        "Exemple : في رأيي، هذا المشروع مفيد لأنه يحمي البيئة، لكن تكلفته مرتفعة. Le projet est jugé utile parce qu’il protège l’environnement, mais son coût est élevé. Identifie l’avis, sa justification et sa limite. Pour citer une source, selon le texte se dit حسب النص ; une interprétation personnelle ne doit pas être présentée comme une citation."
+      ],
+      "lexicon": [
+        {
+          "term": "كان + inaccompli",
+          "meaning": "Construction pour une activité habituelle ou en cours dans le passé."
+        },
+        {
+          "term": "في رأيي",
+          "meaning": "À mon avis."
+        },
+        {
+          "term": "أفضل من",
+          "meaning": "Meilleur que, dans la comparaison proposée."
+        },
+        {
+          "term": "حسب النص",
+          "meaning": "Selon le texte : attribue une information à sa source."
+        }
+      ],
+      "origin": "langues/lng-ar-gram/5"
+    },
+    {
+      "id": "langues-lng-ar-voc-0",
+      "title": "Vie quotidienne, études et mobilité",
+      "part": "Vocabulaire en contexte et ETLV",
+      "paragraphs": [
+        "La famille se dit الأسرة, l’école المدرسة, l’université الجامعة et l’étudiant الطالب (الطالبة au féminin). Le travail est العمل et le voyage السفر. Le train se dit القطار, la gare المحطة et le billet التذكرة. Les noms appris avec leur article peuvent le perdre selon la construction.",
+        "Texte d’application : اسمي سلمى. أدرس في الجامعة وأذهب إلى المحطة بالحافلة. Salma se présente, dit qu’elle étudie à l’université et qu’elle va à la gare en bus. بالحافلة signifie en bus. Pour demander poliment : من فضلك، أين المحطة؟ (s’il vous plaît, où est la gare ?). Pour remercier : شكرا. Ces formulations sont en arabe standard."
+      ],
+      "lexicon": [
+        {
+          "term": "الجامعة",
+          "meaning": "L’université."
+        },
+        {
+          "term": "المحطة",
+          "meaning": "La gare / la station."
+        },
+        {
+          "term": "التذكرة",
+          "meaning": "Le billet."
+        },
+        {
+          "term": "من فضلك",
+          "meaning": "S’il te plaît / s’il vous plaît, selon le destinataire."
+        }
+      ],
+      "origin": "langues/lng-ar-voc/0"
+    },
+    {
+      "id": "langues-lng-ar-voc-1",
+      "title": "Entreprise, économie et ETLV",
+      "part": "Vocabulaire en contexte et ETLV",
+      "paragraphs": [
+        "L’entreprise se dit الشركة, le salarié الموظف, le client العميل et le fournisseur المورد. Le produit est المنتج, le prix السعر, le coût التكلفة et le bénéfice الربح. Une facture est فاتورة et une usine مصنع. Un chiffre de ventes élevé ne permet pas, à lui seul, de conclure à un bénéfice élevé : il faut prendre les charges en compte.",
+        "Cas fictif : تنتج الشركة ملابس وتبيعها في متاجر محلية. ارتفعت المبيعات، لكن التكاليف ارتفعت أيضا. L’entreprise produit des vêtements et les vend dans des magasins locaux. Les ventes ont augmenté, mais les coûts aussi. Pour présenter une organisation en ETLV, précise son activité, ses clients et un enjeu, puis distingue les résultats observés de ton avis."
+      ],
+      "lexicon": [
+        {
+          "term": "الشركة",
+          "meaning": "L’entreprise."
+        },
+        {
+          "term": "العميل",
+          "meaning": "Le client."
+        },
+        {
+          "term": "التكلفة",
+          "meaning": "Le coût."
+        },
+        {
+          "term": "الربح",
+          "meaning": "Le bénéfice."
+        }
+      ],
+      "origin": "langues/lng-ar-voc/1"
+    },
+    {
+      "id": "langues-lng-ar-voc-2",
+      "title": "Information, environnement et argumentation",
+      "part": "Vocabulaire en contexte et ETLV",
+      "paragraphs": [
+        "Les médias se disent وسائل الإعلام, la source المصدر et les données personnelles البيانات الشخصية. Vérifier une information se dit التحقق من المعلومات. Une publication partagée n’est pas forcément vraie : distingue l’auteur du message, l’auteur de la photographie et le site qui la relaie.",
+        "L’environnement se dit البيئة, l’eau الماء, les déchets النفايات et l’énergie renouvelable الطاقة المتجددة. Réduire la consommation d’eau : تقليل استهلاك الماء. Exemple : يجب حماية البيئة وتقليل النفايات (il faut protéger l’environnement et réduire les déchets). Pour nuancer : هذا الحل مفيد، لكنه مكلف (cette solution est utile, mais elle est coûteuse). Le mot لكن introduit la réserve."
+      ],
+      "lexicon": [
+        {
+          "term": "المصدر",
+          "meaning": "La source."
+        },
+        {
+          "term": "البيانات الشخصية",
+          "meaning": "Les données personnelles."
+        },
+        {
+          "term": "البيئة",
+          "meaning": "L’environnement."
+        },
+        {
+          "term": "الطاقة المتجددة",
+          "meaning": "L’énergie renouvelable."
+        }
+      ],
+      "origin": "langues/lng-ar-voc/2"
+    },
+    {
+      "id": "langues-lng-ar-comp-0",
+      "title": "Comprendre un récit : un stage dans une librairie",
+      "part": "Compréhension, expression et médiation",
+      "paragraphs": [
+        "Texte original d’entraînement en arabe standard : اسمي مريم وأدرس الاقتصاد. في الصيف الماضي، عملت في مكتبة تبيع الكتب في تونس. كنت أساعد الزبائن وأرتب الكتب. طلبت مني المديرة إعداد صفحة للمكتبة على الإنترنت. اقترحت نشر معلومات عن الكتب، لكنني رفضت نشر صور الزبائن دون موافقتهم. أريد العمل في المجال الثقافي.",
+        "Maryam raconte une expérience passée dans une librairie à Tunis. Le mot مكتبة peut désigner une bibliothèque ou une librairie : تبيع الكتب (qui vend des livres) lève ici l’ambiguïté. Repère كنت أساعد : activité habituelle dans le passé. Pour comprendre le projet numérique, distingue l’action proposée et celle refusée. Cite le texte pour justifier, puis reformule sans inventer la durée exacte du stage."
+      ],
+      "lexicon": [
+        {
+          "term": "الزبائن",
+          "meaning": "Les clients."
+        },
+        {
+          "term": "موافقتهم",
+          "meaning": "Leur accord / consentement."
+        },
+        {
+          "term": "في الصيف الماضي",
+          "meaning": "L’été dernier."
+        }
+      ],
+      "origin": "langues/lng-ar-comp/0"
+    },
+    {
+      "id": "langues-lng-ar-comp-1",
+      "title": "Analyser un projet et préparer un oral",
+      "part": "Compréhension, expression et médiation",
+      "paragraphs": [
+        "Texte original d’entraînement en arabe standard : تريد جمعية محلية إنشاء ورشة لإصلاح الأجهزة. يقول المتطوعون إن الإصلاح يقلل النفايات ويساعد السكان على تعلم مهارات جديدة. يدعم بعض السكان المشروع، لكن آخرين يخافون من الضجيج. لذلك تقترح الجمعية فتح الورشة بعد الظهر فقط وتنظيم لقاء شهري مع السكان. لم توافق البلدية على المشروع بعد.",
+        "Le document présente un projet d’atelier de réparation, ses avantages et une objection. الجمعية est l’association ; البلدية, la municipalité. لذلك relie l’inquiétude au compromis proposé. La dernière phrase indique une décision qui n’a pas encore été obtenue. Pour un oral, présente le support comme un texte pédagogique, expose les deux positions, puis formule ton avis avec في رأيي. Pour demander une clarification : هل يمكنك توضيح هذه الفكرة؟ (peux-tu expliquer cette idée ?)."
+      ],
+      "lexicon": [
+        {
+          "term": "ورشة",
+          "meaning": "Atelier."
+        },
+        {
+          "term": "الضجيج",
+          "meaning": "Bruit."
+        },
+        {
+          "term": "لم… بعد",
+          "meaning": "Négation correspondant ici à pas encore."
+        }
+      ],
+      "origin": "langues/lng-ar-comp/1"
+    },
+    {
+      "id": "p1-langues-lng-ar-p1-culture-premiere-0",
+      "title": "Axe 1 — Identités et échanges",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "Les mobilités relient les pays du monde arabe entre eux et à d’autres espaces. Un récit peut articuler attachement à une ville, expérience d’un départ et pratique de plusieurs langues. L’arabe standard et les dialectes n’ont pas les mêmes situations d’usage ; leur coexistence ne justifie pas de réduire une personne à une identité unique.",
+        "اللغة تربط الناس، لكن الهوية لا تقتصر على أصل واحد. La langue relie les personnes, mais l’identité ne se limite pas à une seule origine. Dans un témoignage, repère qui parle, d’où et à qui ; sépare son expérience de tes propres représentations.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : الأصل : L’origine.; التبادل : L’échange."
+      ],
+      "lexicon": [
+        {
+          "term": "الهوية",
+          "meaning": "L’identité."
+        },
+        {
+          "term": "الأصل",
+          "meaning": "L’origine."
+        },
+        {
+          "term": "التبادل",
+          "meaning": "L’échange."
+        }
+      ],
+      "origin": "p1-langues/lng-ar-p1-culture-premiere/0"
+    },
+    {
+      "id": "p1-langues-lng-ar-p1-culture-premiere-1",
+      "title": "Axe 2 — Diversité et inclusion",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "La diversité concerne les parcours, les langues, les situations sociales et les conditions d’accès à la vie collective. Étudier une initiative culturelle dans une ville arabe consiste à identifier ses bénéficiaires, les obstacles rencontrés et les moyens concrets de participation. Un exemple local ne décrit pas tout le monde arabe.",
+        "المشاركة في الحياة الثقافية حق للجميع. La participation à la vie culturelle est un droit pour tous. Pour expliquer une mesure d’inclusion, nomme l’obstacle et l’aménagement proposé ; ne confonds pas l’objectif annoncé avec un résultat démontré.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : التنوع : La diversité.; الإدماج : L’inclusion / l’intégration."
+      ],
+      "lexicon": [
+        {
+          "term": "المشاركة",
+          "meaning": "La participation."
+        },
+        {
+          "term": "التنوع",
+          "meaning": "La diversité."
+        },
+        {
+          "term": "الإدماج",
+          "meaning": "L’inclusion / l’intégration."
+        }
+      ],
+      "origin": "p1-langues/lng-ar-p1-culture-premiere/1"
+    },
+    {
+      "id": "p1-langues-lng-ar-p1-culture-premiere-2",
+      "title": "Axe 3 — Art et pouvoir",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "La calligraphie, l’architecture, le cinéma ou la chanson peuvent entretenir des rapports variés avec le pouvoir. Dans l’analyse d’une œuvre du monde arabe, il faut considérer la commande, le destinataire et les conditions de diffusion. Une œuvre peut célébrer, contourner une contrainte ou critiquer ; l’interprétation doit être justifiée.",
+        "قد يدعم الفن السلطة أو ينتقدها. L’art peut soutenir le pouvoir ou le critiquer. Décris des éléments observables avant d’interpréter un symbole. Distingue la voix d’un personnage de l’avis de l’artiste, et l’œuvre de l’usage politique qui en est fait.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : الفن : L’art.; الفنان : L’artiste."
+      ],
+      "lexicon": [
+        {
+          "term": "السلطة",
+          "meaning": "Le pouvoir / l’autorité."
+        },
+        {
+          "term": "الفن",
+          "meaning": "L’art."
+        },
+        {
+          "term": "الفنان",
+          "meaning": "L’artiste."
+        }
+      ],
+      "origin": "p1-langues/lng-ar-p1-culture-premiere/2"
+    },
+    {
+      "id": "p1-langues-lng-ar-p1-culture-premiere-3",
+      "title": "Axe 4 — Innovations scientifiques et responsabilité",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "Les innovations dans l’eau, l’énergie ou le numérique peuvent répondre à des besoins dans les pays arabes, tout en soulevant des questions de coût et d’accès. Une présentation technologique doit distinguer l’invention, ses usages et ses conséquences. La seule nouveauté d’un produit ne prouve pas sa responsabilité sociale.",
+        "يجب أن تراعي التكنولوجيا حاجات الناس وتحمي بياناتهم. La technologie doit prendre en compte les besoins des personnes et protéger leurs données. Analyse un service à travers ses bénéficiaires, ses ressources et un risque ; vérifie les affirmations commerciales.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : الابتكار : L’innovation.; المسؤولية : La responsabilité."
+      ],
+      "lexicon": [
+        {
+          "term": "البيانات",
+          "meaning": "Les données."
+        },
+        {
+          "term": "الابتكار",
+          "meaning": "L’innovation."
+        },
+        {
+          "term": "المسؤولية",
+          "meaning": "La responsabilité."
+        }
+      ],
+      "origin": "p1-langues/lng-ar-p1-culture-premiere/3"
+    },
+    {
+      "id": "p1-langues-lng-ar-p1-culture-premiere-4",
+      "title": "Axe 5 — L’être humain et la nature",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "L’eau, les milieux côtiers, les oasis et les espaces urbains offrent des situations diverses dans le monde arabe. Il faut situer le document dans un territoire précis plutôt que d’assimiler tous les pays à un désert. Agriculture, tourisme et besoins des habitants peuvent exercer des pressions différentes sur une même ressource.",
+        "حماية الماء مسؤولية مشتركة بين الأفراد والمؤسسات. La protection de l’eau est une responsabilité partagée entre les individus et les institutions. Explique un conflit d’usage et propose une action en précisant ses acteurs ; distingue une mesure individuelle d’un équipement collectif.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : الموارد : Les ressources.; الواحة : L’oasis."
+      ],
+      "lexicon": [
+        {
+          "term": "الماء",
+          "meaning": "L’eau."
+        },
+        {
+          "term": "الموارد",
+          "meaning": "Les ressources."
+        },
+        {
+          "term": "الواحة",
+          "meaning": "L’oasis."
+        }
+      ],
+      "origin": "p1-langues/lng-ar-p1-culture-premiere/4"
+    },
+    {
+      "id": "p1-langues-lng-ar-p1-culture-premiere-5",
+      "title": "Axe 6 — Focale Maghreb : lieux et personnages",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "La focale de Première relie des lieux et des figures au Maroc, en Algérie et en Tunisie. Ibn Khaldoun, né à Tunis en 1332, permet d’aborder l’écriture de l’histoire ; le palais du Bardo à Tunis, devenu musée, permet d’interroger la conservation et la présentation du patrimoine. Ces repères ne doivent pas être artificiellement présentés comme une rencontre entre l’homme et le musée actuel.",
+        "Au Maroc, Dar El Bacha à Marrakech, ancienne résidence de Thami El Glaoui, est devenu un musée : le changement d’usage invite à discuter du pouvoir et de la transmission du patrimoine. En Algérie, le Mechouar de Tlemcen est lié au souverain Yaghmoracen et à la dynastie zianide. Compare ces lieux au Bardo en distinguant construction, usage historique, restauration et présentation au public.",
+        "المتحف يحفظ آثار الماضي ويقدمها للجمهور. Le musée conserve les traces du passé et les présente au public. Pour relier un lieu à une figure, cite un document et une date pertinente ; ne suppose pas qu’un musée actuel existait sous la même forme à l’époque du personnage.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : القصر : Le palais.; التراث : Le patrimoine."
+      ],
+      "lexicon": [
+        {
+          "term": "المتحف",
+          "meaning": "Le musée."
+        },
+        {
+          "term": "القصر",
+          "meaning": "Le palais."
+        },
+        {
+          "term": "التراث",
+          "meaning": "Le patrimoine."
+        }
+      ],
+      "origin": "p1-langues/lng-ar-p1-culture-premiere/5"
+    },
+    {
+      "id": "langues-lng-ar-culture-terminale-0",
+      "title": "Axe 1 — Espace privé et espace public",
+      "part": "Cultures · Terminale",
+      "paragraphs": [
+        "Un logement, une rue ou un café ne donne pas les mêmes possibilités de parole et de rencontre. Dans une ville du monde arabe, l’étude d’un lieu public doit tenir compte du quartier, des usages et des personnes présentes. La diffusion d’images d’un espace privé peut aussi changer la frontière entre intime et public.",
+        "ليس كل ما يمكن نشره مناسبا للنشر. Tout ce qui peut être publié n’est pas nécessairement approprié à la publication. Pour analyser un document, identifie le lieu, les règles d’accès et les effets de l’exposition publique sur les personnes.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : الحياة الخاصة : La vie privée.; النشر : La publication / la diffusion."
+      ],
+      "lexicon": [
+        {
+          "term": "الفضاء العام",
+          "meaning": "L’espace public."
+        },
+        {
+          "term": "الحياة الخاصة",
+          "meaning": "La vie privée."
+        },
+        {
+          "term": "النشر",
+          "meaning": "La publication / la diffusion."
+        }
+      ],
+      "origin": "langues/lng-ar-culture-terminale/0"
+    },
+    {
+      "id": "langues-lng-ar-culture-terminale-1",
+      "title": "Axe 2 — Territoire et mémoire",
+      "part": "Cultures · Terminale",
+      "paragraphs": [
+        "Un territoire peut porter plusieurs mémoires, transmises par les familles, les noms de rues, les bâtiments ou les archives. Dans un document du monde arabe, distingue la période évoquée du moment où le récit est produit. Des souvenirs différents ne se départagent pas par le seul nombre de personnes qui les répètent.",
+        "تساعدنا الذاكرة على فهم علاقتنا بالمكان. La mémoire nous aide à comprendre notre relation au lieu. Compare deux récits en repérant leur auteur, leur date et leurs silences ; un témoignage est une source située, qu’il faut croiser avec d’autres documents.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : الشهادة : Le témoignage, dans le contexte de cette fiche.; الأرشيف : Les archives."
+      ],
+      "lexicon": [
+        {
+          "term": "الذاكرة",
+          "meaning": "La mémoire."
+        },
+        {
+          "term": "الشهادة",
+          "meaning": "Le témoignage, dans le contexte de cette fiche."
+        },
+        {
+          "term": "الأرشيف",
+          "meaning": "Les archives."
+        }
+      ],
+      "origin": "langues/lng-ar-culture-terminale/1"
+    },
+    {
+      "id": "langues-lng-ar-culture-terminale-2",
+      "title": "Axe 3 — Fictions et réalités",
+      "part": "Cultures · Terminale",
+      "paragraphs": [
+        "Un roman, un conte ou un film peut rendre visible une réalité sociale tout en inventant ses personnages et son intrigue. La fiction n’est pas une fausse information : elle se présente dans un cadre artistique. À l’inverse, une fabrication diffusée comme un fait réel trompe sur son statut.",
+        "قد تكشف الرواية حقيقة اجتماعية بشخصيات خيالية. Le roman peut révéler une réalité sociale à travers des personnages fictifs. Distingue l’auteur, le narrateur et le personnage ; interprète une scène à partir d’indices précis sans prendre tous ses détails pour des archives.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : الشخصية : Le personnage, dans un récit.; الخيال : L’imagination / la fiction."
+      ],
+      "lexicon": [
+        {
+          "term": "الرواية",
+          "meaning": "Le roman."
+        },
+        {
+          "term": "الشخصية",
+          "meaning": "Le personnage, dans un récit."
+        },
+        {
+          "term": "الخيال",
+          "meaning": "L’imagination / la fiction."
+        }
+      ],
+      "origin": "langues/lng-ar-culture-terminale/2"
+    },
+    {
+      "id": "langues-lng-ar-culture-terminale-3",
+      "title": "Axe 4 — Enjeux et formes de la communication",
+      "part": "Cultures · Terminale",
+      "paragraphs": [
+        "L’arabe standard est fréquent dans l’information écrite et dans de nombreuses situations formelles ; les usages dialectaux varient selon les lieux, les supports et les destinataires. Un choix de langue peut produire proximité ou distance, mais ne permet pas à lui seul de juger la fiabilité d’un message.",
+        "تختلف طريقة التعبير بحسب الجمهور ووسيلة التواصل. La manière de s’exprimer varie selon le public et le moyen de communication. Pour analyser un message, identifie émetteur, public, support et objectif. Sépare information, opinion et publicité ; cite un indice pour justifier chaque distinction.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : وسيلة التواصل : Le moyen de communication.; الإعلان : La publicité / l’annonce."
+      ],
+      "lexicon": [
+        {
+          "term": "الجمهور",
+          "meaning": "Le public."
+        },
+        {
+          "term": "وسيلة التواصل",
+          "meaning": "Le moyen de communication."
+        },
+        {
+          "term": "الإعلان",
+          "meaning": "La publicité / l’annonce."
+        }
+      ],
+      "origin": "langues/lng-ar-culture-terminale/3"
+    },
+    {
+      "id": "langues-lng-ar-culture-terminale-4",
+      "title": "Axe 5 — Citoyenneté et mondes virtuels",
+      "part": "Cultures · Terminale",
+      "paragraphs": [
+        "Les espaces numériques peuvent donner de la visibilité à une initiative citoyenne tout en exposant les personnes à la surveillance, au harcèlement ou à la désinformation. Étudie un cas situé plutôt que de parler de pratiques identiques dans tous les pays arabes. La liberté d’expression ne dispense pas de vérifier les faits et de respecter les personnes.",
+        "قبل مشاركة خبر، تحقق من مصدره وتاريخه. Avant de partager une information, vérifie sa source et sa date. Pour une image, recherche aussi son contexte : une photographie authentique peut être trompeuse si elle est attribuée au mauvais événement.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : المصدر : La source.; التحقق : La vérification."
+      ],
+      "lexicon": [
+        {
+          "term": "المواطنة",
+          "meaning": "La citoyenneté."
+        },
+        {
+          "term": "المصدر",
+          "meaning": "La source."
+        },
+        {
+          "term": "التحقق",
+          "meaning": "La vérification."
+        }
+      ],
+      "origin": "langues/lng-ar-culture-terminale/4"
+    },
+    {
+      "id": "langues-lng-ar-culture-terminale-5",
+      "title": "Axe 6 — Focale Égypte et Liban : arts et histoire",
+      "part": "Cultures · Terminale",
+      "paragraphs": [
+        "La focale de Terminale concerne l’Égypte et le Liban, en reliant création artistique et histoire. Naguib Mahfouz, écrivain égyptien, situe une partie de son œuvre au Caire ; la chanteuse libanaise Fairouz permet d’aborder les liens entre chanson, attachement à un lieu et mémoire collective. Ces deux trajectoires ne résument pas les scènes artistiques de leurs pays.",
+        "يرتبط الأدب والفن بالتاريخ دون أن يكونا نسخة منه. La littérature et l’art sont liés à l’histoire sans en être une copie. Pour étudier un extrait, précise œuvre, auteur, date et contexte. Une chanson ou un roman se commente comme une création, pas comme un relevé exhaustif des événements.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : التاريخ : L’histoire.; الأغنية : La chanson."
+      ],
+      "lexicon": [
+        {
+          "term": "الأدب",
+          "meaning": "La littérature."
+        },
+        {
+          "term": "التاريخ",
+          "meaning": "L’histoire."
+        },
+        {
+          "term": "الأغنية",
+          "meaning": "La chanson."
+        }
+      ],
+      "origin": "langues/lng-ar-culture-terminale/5"
+    }
+  ],
+  "exercises": [
+    {
+      "lessonId": null,
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "p1-langues/lng-ar-p1-gram-s1-qcm",
+      "type": "qcm",
+      "prompt": "Quel signe marque le redoublement d’une consonne ?",
+      "choices": [
+        "Fatḥa",
+        "Sukūn",
+        "Shadda"
+      ],
+      "answer": "Shadda",
+      "explanation": "La shadda marque une consonne redoublée.",
+      "alternatives": [],
+      "context": "L’arabe s’écrit de droite à gauche. Ses lettres changent de forme selon leur position ; ا د ذ ر ز و ne se lient pas à la lettre suivante à gauche. Les voyelles brèves peuvent être notées par des signes : fatḥa ـَ (a), kasra ـِ (i), ḍamma ـُ (u). Les lettres ا و ي servent notamment à noter des voyelles longues. Le sukūn ـْ marque l’absence de voyelle et la shadda ـّ une consonne redoublée.\n\nRepère les 28 lettres dans l’ordre : ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي. Plusieurs lettres partagent une forme et se distinguent par leurs points : ب، ت، ث ; ج، ح، خ. Recopie-les en observant le nombre et la position des points, puis compare leur forme dans un mot. Ne confonds pas ة, souvent finale féminine, avec ه. Les chiffres et les segments latins gardent leur propre sens de lecture dans une phrase arabe.\n\nLes textes ordinaires omettent souvent les voyelles brèves : le contexte aide à lire. La translittération est une aide provisoire : marḥaban (مرحبا) signifie bonjour ; shukran (شكرا), merci. ʿ représente ع et ḥ représente ح, distinct de ه. Il faut écouter un locuteur ou un enregistrement pour travailler ces sons ; un exemple écrit ne constitue pas un exercice d’écoute.\n\nPour se présenter : اسمي ليلى (ismī Laylā), « je m’appelle Layla » ; أنا طالب (anā ṭālib), « je suis étudiant » ; أنا طالبة (anā ṭāliba), « je suis étudiante ». Au présent, une phrase de ce type n’emploie pas de verbe être exprimé. من أين أنت؟ demande « d’où viens-tu ? ». La forme vocalisée de أنت varie selon le destinataire : anta au masculin, anti au féminin.",
+      "sourceQuestion": 0,
+      "id": "ar-ex-001"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "p1-langues/lng-ar-p1-gram-s1-qcm",
+      "type": "qcm",
+      "prompt": "Que signifie اسمي ليلى ?",
+      "choices": [
+        "D’où viens-tu, Layla ?",
+        "Merci, Layla.",
+        "Je m’appelle Layla."
+      ],
+      "answer": "Je m’appelle Layla.",
+      "explanation": "Ismī signifie mon nom est.",
+      "alternatives": [],
+      "context": "L’arabe s’écrit de droite à gauche. Ses lettres changent de forme selon leur position ; ا د ذ ر ز و ne se lient pas à la lettre suivante à gauche. Les voyelles brèves peuvent être notées par des signes : fatḥa ـَ (a), kasra ـِ (i), ḍamma ـُ (u). Les lettres ا و ي servent notamment à noter des voyelles longues. Le sukūn ـْ marque l’absence de voyelle et la shadda ـّ une consonne redoublée.\n\nRepère les 28 lettres dans l’ordre : ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي. Plusieurs lettres partagent une forme et se distinguent par leurs points : ب، ت، ث ; ج، ح، خ. Recopie-les en observant le nombre et la position des points, puis compare leur forme dans un mot. Ne confonds pas ة, souvent finale féminine, avec ه. Les chiffres et les segments latins gardent leur propre sens de lecture dans une phrase arabe.\n\nLes textes ordinaires omettent souvent les voyelles brèves : le contexte aide à lire. La translittération est une aide provisoire : marḥaban (مرحبا) signifie bonjour ; shukran (شكرا), merci. ʿ représente ع et ḥ représente ح, distinct de ه. Il faut écouter un locuteur ou un enregistrement pour travailler ces sons ; un exemple écrit ne constitue pas un exercice d’écoute.\n\nPour se présenter : اسمي ليلى (ismī Laylā), « je m’appelle Layla » ; أنا طالب (anā ṭālib), « je suis étudiant » ; أنا طالبة (anā ṭāliba), « je suis étudiante ». Au présent, une phrase de ce type n’emploie pas de verbe être exprimé. من أين أنت؟ demande « d’où viens-tu ? ». La forme vocalisée de أنت varie selon le destinataire : anta au masculin, anti au féminin.",
+      "sourceQuestion": 1,
+      "id": "ar-ex-002"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "p1-langues/lng-ar-p1-gram-s1-qcm",
+      "type": "qcm",
+      "prompt": "Dans أنا طالبة au présent, le verbe être est…",
+      "choices": [
+        "au passé",
+        "non exprimé",
+        "obligatoirement écrit"
+      ],
+      "answer": "non exprimé",
+      "explanation": "La phrase nominale ne comporte pas de verbe être exprimé au présent.",
+      "alternatives": [],
+      "context": "L’arabe s’écrit de droite à gauche. Ses lettres changent de forme selon leur position ; ا د ذ ر ز و ne se lient pas à la lettre suivante à gauche. Les voyelles brèves peuvent être notées par des signes : fatḥa ـَ (a), kasra ـِ (i), ḍamma ـُ (u). Les lettres ا و ي servent notamment à noter des voyelles longues. Le sukūn ـْ marque l’absence de voyelle et la shadda ـّ une consonne redoublée.\n\nRepère les 28 lettres dans l’ordre : ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي. Plusieurs lettres partagent une forme et se distinguent par leurs points : ب، ت، ث ; ج، ح، خ. Recopie-les en observant le nombre et la position des points, puis compare leur forme dans un mot. Ne confonds pas ة, souvent finale féminine, avec ه. Les chiffres et les segments latins gardent leur propre sens de lecture dans une phrase arabe.\n\nLes textes ordinaires omettent souvent les voyelles brèves : le contexte aide à lire. La translittération est une aide provisoire : marḥaban (مرحبا) signifie bonjour ; shukran (شكرا), merci. ʿ représente ع et ḥ représente ح, distinct de ه. Il faut écouter un locuteur ou un enregistrement pour travailler ces sons ; un exemple écrit ne constitue pas un exercice d’écoute.\n\nPour se présenter : اسمي ليلى (ismī Laylā), « je m’appelle Layla » ; أنا طالب (anā ṭālib), « je suis étudiant » ; أنا طالبة (anā ṭāliba), « je suis étudiante ». Au présent, une phrase de ce type n’emploie pas de verbe être exprimé. من أين أنت؟ demande « d’où viens-tu ? ». La forme vocalisée de أنت varie selon le destinataire : anta au masculin, anti au féminin.",
+      "sourceQuestion": 2,
+      "id": "ar-ex-003"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "p1-langues/lng-ar-p1-gram-s2-qcm",
+      "type": "qcm",
+      "prompt": "Quelle expression signifie « le livre est nouveau » ?",
+      "choices": [
+        "الكتاب جديد",
+        "الكتاب الجديد",
+        "كتاب الطالب"
+      ],
+      "answer": "الكتاب جديد",
+      "explanation": "L’adjectif indéfini جديد est ici attribut du nom défini.",
+      "alternatives": [],
+      "context": "L’article défini ال s’attache au nom : كتاب (un livre) → الكتاب (le livre). Devant une lettre solaire, le l de l’article s’assimile à la consonne suivante dans la prononciation : الشمس (ash-shams, le soleil). Devant une lettre lunaire, il se prononce : القمر (al-qamar, la lune). L’écriture de l’article reste ال dans les deux cas.\n\nL’adjectif épithète suit le nom et s’accorde notamment en genre et en détermination : كتاب جديد (un livre nouveau), الكتاب الجديد (le livre nouveau), مدرسة جديدة (une école nouvelle). En revanche, الكتاب جديد signifie « le livre est nouveau » : le nom est défini et l’attribut est ici indéfini. La tāʾ marbūṭa ة marque souvent un féminin mais n’en constitue pas une règle sans exception.\n\nL’annexion relie deux noms : كتاب الطالب signifie « le livre de l’élève ». Dans cette construction, le premier nom ne prend pas ال ; la détermination vient du second. Un suffixe peut marquer le possesseur : كتابي (mon livre), كتابه (son livre à lui), كتابها (son livre à elle). Ces exemples doivent être appris avec le sens du suffixe, sans ajouter un article devant كتابي.",
+      "sourceQuestion": 0,
+      "id": "ar-ex-004"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "p1-langues/lng-ar-p1-gram-s2-qcm",
+      "type": "qcm",
+      "prompt": "Comment dire « mon livre » ?",
+      "choices": [
+        "كتابي",
+        "كتابه",
+        "كتابها"
+      ],
+      "answer": "كتابي",
+      "explanation": "Le suffixe ـي correspond à mon.",
+      "alternatives": [],
+      "context": "L’article défini ال s’attache au nom : كتاب (un livre) → الكتاب (le livre). Devant une lettre solaire, le l de l’article s’assimile à la consonne suivante dans la prononciation : الشمس (ash-shams, le soleil). Devant une lettre lunaire, il se prononce : القمر (al-qamar, la lune). L’écriture de l’article reste ال dans les deux cas.\n\nL’adjectif épithète suit le nom et s’accorde notamment en genre et en détermination : كتاب جديد (un livre nouveau), الكتاب الجديد (le livre nouveau), مدرسة جديدة (une école nouvelle). En revanche, الكتاب جديد signifie « le livre est nouveau » : le nom est défini et l’attribut est ici indéfini. La tāʾ marbūṭa ة marque souvent un féminin mais n’en constitue pas une règle sans exception.\n\nL’annexion relie deux noms : كتاب الطالب signifie « le livre de l’élève ». Dans cette construction, le premier nom ne prend pas ال ; la détermination vient du second. Un suffixe peut marquer le possesseur : كتابي (mon livre), كتابه (son livre à lui), كتابها (son livre à elle). Ces exemples doivent être appris avec le sens du suffixe, sans ajouter un article devant كتابي.",
+      "sourceQuestion": 1,
+      "id": "ar-ex-005"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "p1-langues/lng-ar-p1-gram-s2-qcm",
+      "type": "qcm",
+      "prompt": "Dans كتاب الطالب, le premier nom porte-t-il ال ?",
+      "choices": [
+        "Oui, toujours.",
+        "Seulement devant une lettre solaire.",
+        "Non."
+      ],
+      "answer": "Non.",
+      "explanation": "Le premier terme de cette annexion ne prend pas l’article.",
+      "alternatives": [],
+      "context": "L’article défini ال s’attache au nom : كتاب (un livre) → الكتاب (le livre). Devant une lettre solaire, le l de l’article s’assimile à la consonne suivante dans la prononciation : الشمس (ash-shams, le soleil). Devant une lettre lunaire, il se prononce : القمر (al-qamar, la lune). L’écriture de l’article reste ال dans les deux cas.\n\nL’adjectif épithète suit le nom et s’accorde notamment en genre et en détermination : كتاب جديد (un livre nouveau), الكتاب الجديد (le livre nouveau), مدرسة جديدة (une école nouvelle). En revanche, الكتاب جديد signifie « le livre est nouveau » : le nom est défini et l’attribut est ici indéfini. La tāʾ marbūṭa ة marque souvent un féminin mais n’en constitue pas une règle sans exception.\n\nL’annexion relie deux noms : كتاب الطالب signifie « le livre de l’élève ». Dans cette construction, le premier nom ne prend pas ال ; la détermination vient du second. Un suffixe peut marquer le possesseur : كتابي (mon livre), كتابه (son livre à lui), كتابها (son livre à elle). Ces exemples doivent être appris avec le sens du suffixe, sans ajouter un article devant كتابي.",
+      "sourceQuestion": 2,
+      "id": "ar-ex-006"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "p1-langues/lng-ar-p1-gram-s3-qcm",
+      "type": "qcm",
+      "prompt": "Quelle forme vocalisée signifie « j’ai écrit » ?",
+      "choices": [
+        "كَتَبْتُ",
+        "كَتَبَتْ",
+        "كَتَبَ"
+      ],
+      "answer": "كَتَبْتُ",
+      "explanation": "La terminaison ـتُ indique ici la première personne.",
+      "alternatives": [],
+      "context": "Les pronoms personnels utiles sont أنا (je), نحن (nous), أنت (tu), هو (il), هي (elle), أنتم (vous masculin pluriel ou groupe mixte), هم (ils). L’arabe distingue aussi le duel et des formes féminines ; le contexte et la vocalisation permettent notamment de distinguer anta (tu masculin) et anti (tu féminin).\n\nL’accompli présente généralement un procès accompli, souvent au passé. Avec كتب, « écrire » : كَتَبْتُ (katabtu, j’ai écrit), كَتَبْتَ (katabta, tu masculin as écrit), كَتَبْتِ (katabti, tu féminin as écrit), كَتَبَ (kataba, il a écrit), كَتَبَتْ (katabat, elle a écrit), كَتَبْنَا (katabnā, nous avons écrit). Sans voyelles, plusieurs formes s’écrivent كتبت : ne devine pas le sujet sans contexte.\n\nL’inaccompli sert notamment au présent : أَكْتُبُ (aktubu, j’écris), يَكْتُبُ (yaktubu, il écrit), تَكْتُبُ (taktubu, elle écrit ou tu masculin écris selon le contexte), نَكْتُبُ (naktubu, nous écrivons). Pour annoncer l’avenir, on peut utiliser سـ ou سوف devant l’inaccompli : سأكتب / سوف أكتب (j’écrirai). Les catégories accompli/inaccompli ne se superposent pas mécaniquement aux temps français.",
+      "sourceQuestion": 0,
+      "id": "ar-ex-007"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "p1-langues/lng-ar-p1-gram-s3-qcm",
+      "type": "qcm",
+      "prompt": "Que signifie نَكْتُبُ ?",
+      "choices": [
+        "Il écrit.",
+        "Elle a écrit.",
+        "Nous écrivons."
+      ],
+      "answer": "Nous écrivons.",
+      "explanation": "Le préfixe نـ indique ici nous.",
+      "alternatives": [],
+      "context": "Les pronoms personnels utiles sont أنا (je), نحن (nous), أنت (tu), هو (il), هي (elle), أنتم (vous masculin pluriel ou groupe mixte), هم (ils). L’arabe distingue aussi le duel et des formes féminines ; le contexte et la vocalisation permettent notamment de distinguer anta (tu masculin) et anti (tu féminin).\n\nL’accompli présente généralement un procès accompli, souvent au passé. Avec كتب, « écrire » : كَتَبْتُ (katabtu, j’ai écrit), كَتَبْتَ (katabta, tu masculin as écrit), كَتَبْتِ (katabti, tu féminin as écrit), كَتَبَ (kataba, il a écrit), كَتَبَتْ (katabat, elle a écrit), كَتَبْنَا (katabnā, nous avons écrit). Sans voyelles, plusieurs formes s’écrivent كتبت : ne devine pas le sujet sans contexte.\n\nL’inaccompli sert notamment au présent : أَكْتُبُ (aktubu, j’écris), يَكْتُبُ (yaktubu, il écrit), تَكْتُبُ (taktubu, elle écrit ou tu masculin écris selon le contexte), نَكْتُبُ (naktubu, nous écrivons). Pour annoncer l’avenir, on peut utiliser سـ ou سوف devant l’inaccompli : سأكتب / سوف أكتب (j’écrirai). Les catégories accompli/inaccompli ne se superposent pas mécaniquement aux temps français.",
+      "sourceQuestion": 1,
+      "id": "ar-ex-008"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "p1-langues/lng-ar-p1-gram-s3-qcm",
+      "type": "qcm",
+      "prompt": "Quelle forme annonce l’avenir ?",
+      "choices": [
+        "كَتَبْنَا",
+        "كَتَبَ",
+        "سأكتب"
+      ],
+      "answer": "سأكتب",
+      "explanation": "سـ devant l’inaccompli annonce ici le futur.",
+      "alternatives": [],
+      "context": "Les pronoms personnels utiles sont أنا (je), نحن (nous), أنت (tu), هو (il), هي (elle), أنتم (vous masculin pluriel ou groupe mixte), هم (ils). L’arabe distingue aussi le duel et des formes féminines ; le contexte et la vocalisation permettent notamment de distinguer anta (tu masculin) et anti (tu féminin).\n\nL’accompli présente généralement un procès accompli, souvent au passé. Avec كتب, « écrire » : كَتَبْتُ (katabtu, j’ai écrit), كَتَبْتَ (katabta, tu masculin as écrit), كَتَبْتِ (katabti, tu féminin as écrit), كَتَبَ (kataba, il a écrit), كَتَبَتْ (katabat, elle a écrit), كَتَبْنَا (katabnā, nous avons écrit). Sans voyelles, plusieurs formes s’écrivent كتبت : ne devine pas le sujet sans contexte.\n\nL’inaccompli sert notamment au présent : أَكْتُبُ (aktubu, j’écris), يَكْتُبُ (yaktubu, il écrit), تَكْتُبُ (taktubu, elle écrit ou tu masculin écris selon le contexte), نَكْتُبُ (naktubu, nous écrivons). Pour annoncer l’avenir, on peut utiliser سـ ou سوف devant l’inaccompli : سأكتب / سوف أكتب (j’écrirai). Les catégories accompli/inaccompli ne se superposent pas mécaniquement aux temps français.",
+      "sourceQuestion": 2,
+      "id": "ar-ex-009"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "p1-langues/lng-ar-p1-gram-s4-qcm",
+      "type": "qcm",
+      "prompt": "Quelle phrase nie une action future ?",
+      "choices": [
+        "لم أكتبْ",
+        "لن أكتبَ",
+        "أين المدرسة؟"
+      ],
+      "answer": "لن أكتبَ",
+      "explanation": "لن porte ici sur l’avenir.",
+      "alternatives": [],
+      "context": "La négation لا devant l’inaccompli peut nier une action présente ou habituelle : لا أعمل اليوم signifie « je ne travaille pas aujourd’hui ». Pour le passé, لم est suivi d’un inaccompli apocopé : لم أكتبْ (je n’ai pas écrit). Pour le futur, لن est suivi d’un inaccompli au subjonctif : لن أكتبَ (je n’écrirai pas). Ce sont des constructions de l’arabe standard, à ne pas confondre avec les négations dialectales.\n\nUne question fermée peut commencer par هل : هل تعمل اليوم؟ (travailles-tu aujourd’hui ?). Les mots interrogatifs comprennent من (qui ?), ماذا (quoi ?), أين (où ?), متى (quand ?), لماذا (pourquoi ?) et كيف (comment ?). هل n’est pas nécessaire devant أين : أين المدرسة؟ signifie « où est l’école ? ».\n\nLes prépositions في (dans/à), من (de/depuis), إلى (vers/à), مع (avec) précisent les rapports : أنا في المدرسة (je suis à l’école), أذهب إلى المدرسة (je vais à l’école). عندي كتاب signifie « j’ai un livre », littéralement un livre est auprès de moi. Pour une négation nominale : لست طالبا (je ne suis pas étudiant) emploie une forme de ليس.",
+      "sourceQuestion": 0,
+      "id": "ar-ex-010"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "p1-langues/lng-ar-p1-gram-s4-qcm",
+      "type": "qcm",
+      "prompt": "Quel mot demande un lieu ?",
+      "choices": [
+        "لماذا",
+        "متى",
+        "أين"
+      ],
+      "answer": "أين",
+      "explanation": "أين signifie où ; متى quand ; لماذا pourquoi.",
+      "alternatives": [],
+      "context": "La négation لا devant l’inaccompli peut nier une action présente ou habituelle : لا أعمل اليوم signifie « je ne travaille pas aujourd’hui ». Pour le passé, لم est suivi d’un inaccompli apocopé : لم أكتبْ (je n’ai pas écrit). Pour le futur, لن est suivi d’un inaccompli au subjonctif : لن أكتبَ (je n’écrirai pas). Ce sont des constructions de l’arabe standard, à ne pas confondre avec les négations dialectales.\n\nUne question fermée peut commencer par هل : هل تعمل اليوم؟ (travailles-tu aujourd’hui ?). Les mots interrogatifs comprennent من (qui ?), ماذا (quoi ?), أين (où ?), متى (quand ?), لماذا (pourquoi ?) et كيف (comment ?). هل n’est pas nécessaire devant أين : أين المدرسة؟ signifie « où est l’école ? ».\n\nLes prépositions في (dans/à), من (de/depuis), إلى (vers/à), مع (avec) précisent les rapports : أنا في المدرسة (je suis à l’école), أذهب إلى المدرسة (je vais à l’école). عندي كتاب signifie « j’ai un livre », littéralement un livre est auprès de moi. Pour une négation nominale : لست طالبا (je ne suis pas étudiant) emploie une forme de ليس.",
+      "sourceQuestion": 1,
+      "id": "ar-ex-011"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "p1-langues/lng-ar-p1-gram-s4-qcm",
+      "type": "qcm",
+      "prompt": "Quelle préposition introduit la destination dans أذهب… المدرسة ?",
+      "choices": [
+        "إلى",
+        "مع",
+        "من"
+      ],
+      "answer": "إلى",
+      "explanation": "إلى marque la destination.",
+      "alternatives": [],
+      "context": "La négation لا devant l’inaccompli peut nier une action présente ou habituelle : لا أعمل اليوم signifie « je ne travaille pas aujourd’hui ». Pour le passé, لم est suivi d’un inaccompli apocopé : لم أكتبْ (je n’ai pas écrit). Pour le futur, لن est suivi d’un inaccompli au subjonctif : لن أكتبَ (je n’écrirai pas). Ce sont des constructions de l’arabe standard, à ne pas confondre avec les négations dialectales.\n\nUne question fermée peut commencer par هل : هل تعمل اليوم؟ (travailles-tu aujourd’hui ?). Les mots interrogatifs comprennent من (qui ?), ماذا (quoi ?), أين (où ?), متى (quand ?), لماذا (pourquoi ?) et كيف (comment ?). هل n’est pas nécessaire devant أين : أين المدرسة؟ signifie « où est l’école ? ».\n\nLes prépositions في (dans/à), من (de/depuis), إلى (vers/à), مع (avec) précisent les rapports : أنا في المدرسة (je suis à l’école), أذهب إلى المدرسة (je vais à l’école). عندي كتاب signifie « j’ai un livre », littéralement un livre est auprès de moi. Pour une négation nominale : لست طالبا (je ne suis pas étudiant) emploie une forme de ليس.",
+      "sourceQuestion": 2,
+      "id": "ar-ex-012"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Vocabulaire en contexte et ETLV",
+      "origin": "p1-langues/lng-ar-p1-voc-s1-qcm",
+      "type": "qcm",
+      "prompt": "Où Salma étudie-t-elle dans le texte ?",
+      "choices": [
+        "À la gare.",
+        "Dans le train.",
+        "À l’université."
+      ],
+      "answer": "À l’université.",
+      "explanation": "Le passage situe les études de Salma à l’université. Il faut retrouver le lieu d’études, et non un lieu simplement mentionné dans une autre phrase.",
+      "alternatives": [],
+      "context": "La famille se dit الأسرة, l’école المدرسة, l’université الجامعة et l’étudiant الطالب (الطالبة au féminin). Le travail est العمل et le voyage السفر. Le train se dit القطار, la gare المحطة et le billet التذكرة. Les noms appris avec leur article peuvent le perdre selon la construction.\n\nTexte d’application : اسمي سلمى. أدرس في الجامعة وأذهب إلى المحطة بالحافلة. Salma se présente, dit qu’elle étudie à l’université et qu’elle va à la gare en bus. بالحافلة signifie en bus. Pour demander poliment : من فضلك، أين المحطة؟ (s’il vous plaît, où est la gare ?). Pour remercier : شكرا. Ces formulations sont en arabe standard.",
+      "sourceQuestion": 0,
+      "id": "ar-ex-013"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Vocabulaire en contexte et ETLV",
+      "origin": "p1-langues/lng-ar-p1-voc-s1-qcm",
+      "type": "qcm",
+      "prompt": "Que signifie التذكرة ?",
+      "choices": [
+        "Le travail.",
+        "La famille.",
+        "Le billet."
+      ],
+      "answer": "Le billet.",
+      "explanation": "التذكرة signifie le billet, notamment dans une situation de transport ou d’entrée à une activité ; le contexte précise de quel billet il s’agit.",
+      "alternatives": [],
+      "context": "La famille se dit الأسرة, l’école المدرسة, l’université الجامعة et l’étudiant الطالب (الطالبة au féminin). Le travail est العمل et le voyage السفر. Le train se dit القطار, la gare المحطة et le billet التذكرة. Les noms appris avec leur article peuvent le perdre selon la construction.\n\nTexte d’application : اسمي سلمى. أدرس في الجامعة وأذهب إلى المحطة بالحافلة. Salma se présente, dit qu’elle étudie à l’université et qu’elle va à la gare en bus. بالحافلة signifie en bus. Pour demander poliment : من فضلك، أين المحطة؟ (s’il vous plaît, où est la gare ?). Pour remercier : شكرا. Ces formulations sont en arabe standard.",
+      "sourceQuestion": 1,
+      "id": "ar-ex-014"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Vocabulaire en contexte et ETLV",
+      "origin": "p1-langues/lng-ar-p1-voc-s2-qcm",
+      "type": "qcm",
+      "prompt": "Quel mot signifie le bénéfice ?",
+      "choices": [
+        "الربح",
+        "السعر",
+        "التكلفة"
+      ],
+      "answer": "الربح",
+      "explanation": "الربح désigne le bénéfice. Il faut le distinguer des ventes et des coûts : une hausse du chiffre d’affaires n’entraîne pas automatiquement une hausse du bénéfice.",
+      "alternatives": [],
+      "context": "L’entreprise se dit الشركة, le salarié الموظف, le client العميل et le fournisseur المورد. Le produit est المنتج, le prix السعر, le coût التكلفة et le bénéfice الربح. Une facture est فاتورة et une usine مصنع. Un chiffre de ventes élevé ne permet pas, à lui seul, de conclure à un bénéfice élevé : il faut prendre les charges en compte.\n\nCas fictif : تنتج الشركة ملابس وتبيعها في متاجر محلية. ارتفعت المبيعات، لكن التكاليف ارتفعت أيضا. L’entreprise produit des vêtements et les vend dans des magasins locaux. Les ventes ont augmenté, mais les coûts aussi. Pour présenter une organisation en ETLV, précise son activité, ses clients et un enjeu, puis distingue les résultats observés de ton avis.",
+      "sourceQuestion": 0,
+      "id": "ar-ex-015"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Vocabulaire en contexte et ETLV",
+      "origin": "p1-langues/lng-ar-p1-voc-s2-qcm",
+      "type": "qcm",
+      "prompt": "Que dit le cas sur les coûts ?",
+      "choices": [
+        "Ils sont toujours inconnus dans le texte.",
+        "Ils ont augmenté aussi.",
+        "Ils ont disparu."
+      ],
+      "answer": "Ils ont augmenté aussi.",
+      "explanation": "Le cas précise que les coûts augmentent eux aussi. Il ne suffit pas de relever uniquement la hausse des ventes pour analyser la situation.",
+      "alternatives": [],
+      "context": "L’entreprise se dit الشركة, le salarié الموظف, le client العميل et le fournisseur المورد. Le produit est المنتج, le prix السعر, le coût التكلفة et le bénéfice الربح. Une facture est فاتورة et une usine مصنع. Un chiffre de ventes élevé ne permet pas, à lui seul, de conclure à un bénéfice élevé : il faut prendre les charges en compte.\n\nCas fictif : تنتج الشركة ملابس وتبيعها في متاجر محلية. ارتفعت المبيعات، لكن التكاليف ارتفعت أيضا. L’entreprise produit des vêtements et les vend dans des magasins locaux. Les ventes ont augmenté, mais les coûts aussi. Pour présenter une organisation en ETLV, précise son activité, ses clients et un enjeu, puis distingue les résultats observés de ton avis.",
+      "sourceQuestion": 1,
+      "id": "ar-ex-016"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Vocabulaire en contexte et ETLV",
+      "origin": "p1-langues/lng-ar-p1-voc-s3-qcm",
+      "type": "qcm",
+      "prompt": "Que signifie البيانات الشخصية ?",
+      "choices": [
+        "Les déchets.",
+        "Les données personnelles.",
+        "L’eau."
+      ],
+      "answer": "Les données personnelles.",
+      "explanation": "البيانات signifie les données et الشخصية signifie personnelles : l’expression désigne des informations relatives aux personnes.",
+      "alternatives": [],
+      "context": "Les médias se disent وسائل الإعلام, la source المصدر et les données personnelles البيانات الشخصية. Vérifier une information se dit التحقق من المعلومات. Une publication partagée n’est pas forcément vraie : distingue l’auteur du message, l’auteur de la photographie et le site qui la relaie.\n\nL’environnement se dit البيئة, l’eau الماء, les déchets النفايات et l’énergie renouvelable الطاقة المتجددة. Réduire la consommation d’eau : تقليل استهلاك الماء. Exemple : يجب حماية البيئة وتقليل النفايات (il faut protéger l’environnement et réduire les déchets). Pour nuancer : هذا الحل مفيد، لكنه مكلف (cette solution est utile, mais elle est coûteuse). Le mot لكن introduit la réserve.",
+      "sourceQuestion": 0,
+      "id": "ar-ex-017"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Vocabulaire en contexte et ETLV",
+      "origin": "p1-langues/lng-ar-p1-voc-s3-qcm",
+      "type": "qcm",
+      "prompt": "Quel objectif exprime تقليل استهلاك الماء ?",
+      "choices": [
+        "Vendre des déchets.",
+        "Réduire la consommation d’eau.",
+        "Augmenter le nombre de publications."
+      ],
+      "answer": "Réduire la consommation d’eau.",
+      "explanation": "تقليل signifie réduction, استهلاك consommation et الماء eau : l’expression vise à diminuer la quantité d’eau consommée.",
+      "alternatives": [],
+      "context": "Les médias se disent وسائل الإعلام, la source المصدر et les données personnelles البيانات الشخصية. Vérifier une information se dit التحقق من المعلومات. Une publication partagée n’est pas forcément vraie : distingue l’auteur du message, l’auteur de la photographie et le site qui la relaie.\n\nL’environnement se dit البيئة, l’eau الماء, les déchets النفايات et l’énergie renouvelable الطاقة المتجددة. Réduire la consommation d’eau : تقليل استهلاك الماء. Exemple : يجب حماية البيئة وتقليل النفايات (il faut protéger l’environnement et réduire les déchets). Pour nuancer : هذا الحل مفيد، لكنه مكلف (cette solution est utile, mais elle est coûteuse). Le mot لكن introduit la réserve.",
+      "sourceQuestion": 1,
+      "id": "ar-ex-018"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Compréhension, expression et médiation",
+      "origin": "p1-langues/lng-ar-p1-comp-s1-qcm",
+      "type": "qcm",
+      "prompt": "Pourquoi مكتبة désigne-t-il ici une librairie ?",
+      "choices": [
+        "La ville impose ce sens.",
+        "Le texte précise qu’elle vend des livres.",
+        "Le mot signifie toujours université."
+      ],
+      "answer": "Le texte précise qu’elle vend des livres.",
+      "explanation": "مكتبة peut désigner une bibliothèque ou une librairie selon le contexte. Ici, l’activité de vente de livres permet de retenir librairie.",
+      "alternatives": [],
+      "context": "Texte original d’entraînement en arabe standard : اسمي مريم وأدرس الاقتصاد. في الصيف الماضي، عملت في مكتبة تبيع الكتب في تونس. كنت أساعد الزبائن وأرتب الكتب. طلبت مني المديرة إعداد صفحة للمكتبة على الإنترنت. اقترحت نشر معلومات عن الكتب، لكنني رفضت نشر صور الزبائن دون موافقتهم. أريد العمل في المجال الثقافي.\n\nMaryam raconte une expérience passée dans une librairie à Tunis. Le mot مكتبة peut désigner une bibliothèque ou une librairie : تبيع الكتب (qui vend des livres) lève ici l’ambiguïté. Repère كنت أساعد : activité habituelle dans le passé. Pour comprendre le projet numérique, distingue l’action proposée et celle refusée. Cite le texte pour justifier, puis reformule sans inventer la durée exacte du stage.",
+      "sourceQuestion": 0,
+      "id": "ar-ex-019"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Compréhension, expression et médiation",
+      "origin": "p1-langues/lng-ar-p1-comp-s1-qcm",
+      "type": "qcm",
+      "prompt": "Que refuse Maryam ?",
+      "choices": [
+        "Travailler dans la culture.",
+        "Donner des informations sur les livres.",
+        "Publier des photos sans l’accord des clients."
+      ],
+      "answer": "Publier des photos sans l’accord des clients.",
+      "explanation": "Maryam refuse la diffusion de photos sans l’accord des clients. La réponse doit conserver la condition de consentement, et non dire qu’elle refuse toute photo.",
+      "alternatives": [],
+      "context": "Texte original d’entraînement en arabe standard : اسمي مريم وأدرس الاقتصاد. في الصيف الماضي، عملت في مكتبة تبيع الكتب في تونس. كنت أساعد الزبائن وأرتب الكتب. طلبت مني المديرة إعداد صفحة للمكتبة على الإنترنت. اقترحت نشر معلومات عن الكتب، لكنني رفضت نشر صور الزبائن دون موافقتهم. أريد العمل في المجال الثقافي.\n\nMaryam raconte une expérience passée dans une librairie à Tunis. Le mot مكتبة peut désigner une bibliothèque ou une librairie : تبيع الكتب (qui vend des livres) lève ici l’ambiguïté. Repère كنت أساعد : activité habituelle dans le passé. Pour comprendre le projet numérique, distingue l’action proposée et celle refusée. Cite le texte pour justifier, puis reformule sans inventer la durée exacte du stage.",
+      "sourceQuestion": 1,
+      "id": "ar-ex-020"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Compréhension, expression et médiation",
+      "origin": "p1-langues/lng-ar-p1-comp-s1-qcm",
+      "type": "qcm",
+      "prompt": "À quelle période se déroule l’expérience racontée ?",
+      "choices": [
+        "L’été dernier.",
+        "L’année prochaine.",
+        "Le texte parle uniquement du présent."
+      ],
+      "answer": "L’été dernier.",
+      "explanation": "L’expérience est située l’été précédent dans le récit. Il faut relever ce repère temporel plutôt que confondre la période du récit et le moment où l’on lit le texte.",
+      "alternatives": [],
+      "context": "Texte original d’entraînement en arabe standard : اسمي مريم وأدرس الاقتصاد. في الصيف الماضي، عملت في مكتبة تبيع الكتب في تونس. كنت أساعد الزبائن وأرتب الكتب. طلبت مني المديرة إعداد صفحة للمكتبة على الإنترنت. اقترحت نشر معلومات عن الكتب، لكنني رفضت نشر صور الزبائن دون موافقتهم. أريد العمل في المجال الثقافي.\n\nMaryam raconte une expérience passée dans une librairie à Tunis. Le mot مكتبة peut désigner une bibliothèque ou une librairie : تبيع الكتب (qui vend des livres) lève ici l’ambiguïté. Repère كنت أساعد : activité habituelle dans le passé. Pour comprendre le projet numérique, distingue l’action proposée et celle refusée. Cite le texte pour justifier, puis reformule sans inventer la durée exacte du stage.",
+      "sourceQuestion": 2,
+      "id": "ar-ex-021"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Compréhension, expression et médiation",
+      "origin": "p1-langues/lng-ar-p1-comp-s2-qcm",
+      "type": "qcm",
+      "prompt": "Quel est le projet de l’association ?",
+      "choices": [
+        "Une librairie en ligne.",
+        "Une nouvelle gare.",
+        "Un atelier de réparation des appareils."
+      ],
+      "answer": "Un atelier de réparation des appareils.",
+      "explanation": "L’association propose un atelier consacré à la réparation des appareils. La réponse doit préciser l’activité concrète du projet.",
+      "alternatives": [],
+      "context": "Texte original d’entraînement en arabe standard : تريد جمعية محلية إنشاء ورشة لإصلاح الأجهزة. يقول المتطوعون إن الإصلاح يقلل النفايات ويساعد السكان على تعلم مهارات جديدة. يدعم بعض السكان المشروع، لكن آخرين يخافون من الضجيج. لذلك تقترح الجمعية فتح الورشة بعد الظهر فقط وتنظيم لقاء شهري مع السكان. لم توافق البلدية على المشروع بعد.\n\nLe document présente un projet d’atelier de réparation, ses avantages et une objection. الجمعية est l’association ; البلدية, la municipalité. لذلك relie l’inquiétude au compromis proposé. La dernière phrase indique une décision qui n’a pas encore été obtenue. Pour un oral, présente le support comme un texte pédagogique, expose les deux positions, puis formule ton avis avec في رأيي. Pour demander une clarification : هل يمكنك توضيح هذه الفكرة؟ (peux-tu expliquer cette idée ?).",
+      "sourceQuestion": 0,
+      "id": "ar-ex-022"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Compréhension, expression et médiation",
+      "origin": "p1-langues/lng-ar-p1-comp-s2-qcm",
+      "type": "qcm",
+      "prompt": "Quelle inquiétude est mentionnée ?",
+      "choices": [
+        "Le bruit.",
+        "Le prix du train.",
+        "La fermeture de l’école."
+      ],
+      "answer": "Le bruit.",
+      "explanation": "Le risque de bruit est une inquiétude mentionnée dans le document ; il ne faut pas inventer un autre motif absent du texte.",
+      "alternatives": [],
+      "context": "Texte original d’entraînement en arabe standard : تريد جمعية محلية إنشاء ورشة لإصلاح الأجهزة. يقول المتطوعون إن الإصلاح يقلل النفايات ويساعد السكان على تعلم مهارات جديدة. يدعم بعض السكان المشروع، لكن آخرين يخافون من الضجيج. لذلك تقترح الجمعية فتح الورشة بعد الظهر فقط وتنظيم لقاء شهري مع السكان. لم توافق البلدية على المشروع بعد.\n\nLe document présente un projet d’atelier de réparation, ses avantages et une objection. الجمعية est l’association ; البلدية, la municipalité. لذلك relie l’inquiétude au compromis proposé. La dernière phrase indique une décision qui n’a pas encore été obtenue. Pour un oral, présente le support comme un texte pédagogique, expose les deux positions, puis formule ton avis avec في رأيي. Pour demander une clarification : هل يمكنك توضيح هذه الفكرة؟ (peux-tu expliquer cette idée ?).",
+      "sourceQuestion": 1,
+      "id": "ar-ex-023"
+    },
+    {
+      "lessonId": null,
+      "unit": "Arabe — Compréhension, expression et médiation",
+      "origin": "p1-langues/lng-ar-p1-comp-s2-qcm",
+      "type": "qcm",
+      "prompt": "La municipalité a-t-elle déjà donné son accord ?",
+      "choices": [
+        "Non, pas encore.",
+        "Oui, le texte le dit.",
+        "Aucune municipalité n’est mentionnée."
+      ],
+      "answer": "Non, pas encore.",
+      "explanation": "L’accord de la municipalité n’est pas encore obtenu au moment décrit. Une demande ou une discussion ne constitue pas déjà une autorisation.",
+      "alternatives": [],
+      "context": "Texte original d’entraînement en arabe standard : تريد جمعية محلية إنشاء ورشة لإصلاح الأجهزة. يقول المتطوعون إن الإصلاح يقلل النفايات ويساعد السكان على تعلم مهارات جديدة. يدعم بعض السكان المشروع، لكن آخرين يخافون من الضجيج. لذلك تقترح الجمعية فتح الورشة بعد الظهر فقط وتنظيم لقاء شهري مع السكان. لم توافق البلدية على المشروع بعد.\n\nLe document présente un projet d’atelier de réparation, ses avantages et une objection. الجمعية est l’association ; البلدية, la municipalité. لذلك relie l’inquiétude au compromis proposé. La dernière phrase indique une décision qui n’a pas encore été obtenue. Pour un oral, présente le support comme un texte pédagogique, expose les deux positions, puis formule ton avis avec في رأيي. Pour demander une clarification : هل يمكنك توضيح هذه الفكرة؟ (peux-tu expliquer cette idée ?).",
+      "sourceQuestion": 2,
+      "id": "ar-ex-024"
+    },
+    {
+      "lessonId": "p1-langues-lng-ar-p1-culture-premiere-0",
+      "unit": "Arabe — Première · axes culturels",
+      "origin": "p1-langues/lng-ar-p1-culture-premiere-s1-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « الهوية » ?",
+      "choices": [
+        "L’identité.",
+        "L’échange.",
+        "L’origine."
+      ],
+      "answer": "L’identité.",
+      "explanation": "Le vocabulaire de cette fiche définit الهوية : L’identité.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-025"
+    },
+    {
+      "lessonId": "p1-langues-lng-ar-p1-culture-premiere-0",
+      "unit": "Arabe — Première · axes culturels",
+      "origin": "p1-langues/lng-ar-p1-culture-premiere-s1-qcm",
+      "type": "qcm",
+      "prompt": "Comment aborder le récit d’une personne plurilingue ?",
+      "choices": [
+        "Distinguer ses usages des langues et son expérience située.",
+        "Lui attribuer une seule identité obligatoire.",
+        "Assimiler standard et dialectes dans tous les contextes."
+      ],
+      "answer": "Distinguer ses usages des langues et son expérience située.",
+      "explanation": "Les mobilités relient les pays du monde arabe entre eux et à d’autres espaces. Un récit peut articuler attachement à une ville, expérience d’un départ et pratique de plusieurs langues. L’arabe standard et les dialectes n’ont pas les mêmes situations d’usage ; leur coexistence ne justifie pas de réduire une personne à une identité unique.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-026"
+    },
+    {
+      "lessonId": "p1-langues-lng-ar-p1-culture-premiere-1",
+      "unit": "Arabe — Première · axes culturels",
+      "origin": "p1-langues/lng-ar-p1-culture-premiere-s2-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « المشاركة » ?",
+      "choices": [
+        "L’inclusion / l’intégration.",
+        "La participation.",
+        "La diversité."
+      ],
+      "answer": "La participation.",
+      "explanation": "Le vocabulaire de cette fiche définit المشاركة : La participation.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-027"
+    },
+    {
+      "lessonId": "p1-langues-lng-ar-p1-culture-premiere-1",
+      "unit": "Arabe — Première · axes culturels",
+      "origin": "p1-langues/lng-ar-p1-culture-premiere-s2-qcm",
+      "type": "qcm",
+      "prompt": "Qu’est-ce qui permet d’évaluer une initiative d’inclusion ?",
+      "choices": [
+        "Les obstacles et les moyens effectifs de participation.",
+        "Sa seule annonce.",
+        "Une généralisation à tous les pays à partir d’un cas."
+      ],
+      "answer": "Les obstacles et les moyens effectifs de participation.",
+      "explanation": "La diversité concerne les parcours, les langues, les situations sociales et les conditions d’accès à la vie collective. Étudier une initiative culturelle dans une ville arabe consiste à identifier ses bénéficiaires, les obstacles rencontrés et les moyens concrets de participation. Un exemple local ne décrit pas tout le monde arabe.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-028"
+    },
+    {
+      "lessonId": "p1-langues-lng-ar-p1-culture-premiere-2",
+      "unit": "Arabe — Première · axes culturels",
+      "origin": "p1-langues/lng-ar-p1-culture-premiere-s3-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « السلطة » ?",
+      "choices": [
+        "L’art.",
+        "L’artiste.",
+        "Le pouvoir / l’autorité."
+      ],
+      "answer": "Le pouvoir / l’autorité.",
+      "explanation": "Le vocabulaire de cette fiche définit السلطة : Le pouvoir / l’autorité.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-029"
+    },
+    {
+      "lessonId": "p1-langues-lng-ar-p1-culture-premiere-2",
+      "unit": "Arabe — Première · axes culturels",
+      "origin": "p1-langues/lng-ar-p1-culture-premiere-s3-qcm",
+      "type": "qcm",
+      "prompt": "Comment étayer la lecture politique d’une œuvre ?",
+      "choices": [
+        "Déduire toute intention de la seule présence d’un symbole.",
+        "Confondre systématiquement personnage et artiste.",
+        "Examiner sa commande, son public et des indices précis."
+      ],
+      "answer": "Examiner sa commande, son public et des indices précis.",
+      "explanation": "La calligraphie, l’architecture, le cinéma ou la chanson peuvent entretenir des rapports variés avec le pouvoir. Dans l’analyse d’une œuvre du monde arabe, il faut considérer la commande, le destinataire et les conditions de diffusion. Une œuvre peut célébrer, contourner une contrainte ou critiquer ; l’interprétation doit être justifiée.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-030"
+    },
+    {
+      "lessonId": "p1-langues-lng-ar-p1-culture-premiere-3",
+      "unit": "Arabe — Première · axes culturels",
+      "origin": "p1-langues/lng-ar-p1-culture-premiere-s4-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « البيانات » ?",
+      "choices": [
+        "La responsabilité.",
+        "L’innovation.",
+        "Les données."
+      ],
+      "answer": "Les données.",
+      "explanation": "Le vocabulaire de cette fiche définit البيانات : Les données.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-031"
+    },
+    {
+      "lessonId": "p1-langues-lng-ar-p1-culture-premiere-3",
+      "unit": "Arabe — Première · axes culturels",
+      "origin": "p1-langues/lng-ar-p1-culture-premiere-s4-qcm",
+      "type": "qcm",
+      "prompt": "Que faut-il analyser dans un service innovant ?",
+      "choices": [
+        "Les bénéficiaires, les ressources et les risques.",
+        "Sa seule nouveauté.",
+        "Uniquement son slogan."
+      ],
+      "answer": "Les bénéficiaires, les ressources et les risques.",
+      "explanation": "Les innovations dans l’eau, l’énergie ou le numérique peuvent répondre à des besoins dans les pays arabes, tout en soulevant des questions de coût et d’accès. Une présentation technologique doit distinguer l’invention, ses usages et ses conséquences. La seule nouveauté d’un produit ne prouve pas sa responsabilité sociale.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-032"
+    },
+    {
+      "lessonId": "p1-langues-lng-ar-p1-culture-premiere-4",
+      "unit": "Arabe — Première · axes culturels",
+      "origin": "p1-langues/lng-ar-p1-culture-premiere-s5-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « الماء » ?",
+      "choices": [
+        "Les ressources.",
+        "L’oasis.",
+        "L’eau."
+      ],
+      "answer": "L’eau.",
+      "explanation": "Le vocabulaire de cette fiche définit الماء : L’eau.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-033"
+    },
+    {
+      "lessonId": "p1-langues-lng-ar-p1-culture-premiere-4",
+      "unit": "Arabe — Première · axes culturels",
+      "origin": "p1-langues/lng-ar-p1-culture-premiere-s5-qcm",
+      "type": "qcm",
+      "prompt": "Comment aborder une question d’eau dans le monde arabe ?",
+      "choices": [
+        "Écarter les institutions de toute responsabilité.",
+        "Situer le territoire et les usages de la ressource.",
+        "Assimiler tous les pays à un désert."
+      ],
+      "answer": "Situer le territoire et les usages de la ressource.",
+      "explanation": "L’eau, les milieux côtiers, les oasis et les espaces urbains offrent des situations diverses dans le monde arabe. Il faut situer le document dans un territoire précis plutôt que d’assimiler tous les pays à un désert. Agriculture, tourisme et besoins des habitants peuvent exercer des pressions différentes sur une même ressource.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-034"
+    },
+    {
+      "lessonId": "p1-langues-lng-ar-p1-culture-premiere-5",
+      "unit": "Arabe — Première · axes culturels",
+      "origin": "p1-langues/lng-ar-p1-culture-premiere-s6-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « المتحف » ?",
+      "choices": [
+        "Le palais.",
+        "Le musée.",
+        "Le patrimoine."
+      ],
+      "answer": "Le musée.",
+      "explanation": "Le vocabulaire de cette fiche définit المتحف : Le musée.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-035"
+    },
+    {
+      "lessonId": "p1-langues-lng-ar-p1-culture-premiere-5",
+      "unit": "Arabe — Première · axes culturels",
+      "origin": "p1-langues/lng-ar-p1-culture-premiere-s6-qcm",
+      "type": "qcm",
+      "prompt": "Quel lien historique la fiche invite-t-elle à éviter ?",
+      "choices": [
+        "Distinguer le lieu historique de sa mise en musée.",
+        "Situer Ibn Khaldoun à Tunis au XIVe siècle.",
+        "Faire rencontrer Ibn Khaldoun et le musée actuel du Bardo."
+      ],
+      "answer": "Faire rencontrer Ibn Khaldoun et le musée actuel du Bardo.",
+      "explanation": "La focale de Première relie des lieux et des figures au Maroc, en Algérie et en Tunisie. Ibn Khaldoun, né à Tunis en 1332, permet d’aborder l’écriture de l’histoire ; le palais du Bardo à Tunis, devenu musée, permet d’interroger la conservation et la présentation du patrimoine. Ces repères ne doivent pas être artificiellement présentés comme une rencontre entre l’homme et le musée actuel.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-036"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-4",
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "langues/lng-ar-gram-s5-qcm",
+      "type": "qcm",
+      "prompt": "Complète : الكتب…",
+      "choices": [
+        "جديدة",
+        "جديدون",
+        "جديدات"
+      ],
+      "answer": "جديدة",
+      "explanation": "Le pluriel non humain الكتب prend ici un attribut au féminin singulier.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-037"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-4",
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "langues/lng-ar-gram-s5-qcm",
+      "type": "qcm",
+      "prompt": "Quel connecteur introduit une cause ?",
+      "choices": [
+        "لذلك",
+        "لأن",
+        "لكن"
+      ],
+      "answer": "لأن",
+      "explanation": "لأن signifie parce que.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-038"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-4",
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "langues/lng-ar-gram-s5-qcm",
+      "type": "qcm",
+      "prompt": "Quel est le pluriel de شركة donné dans le cours ?",
+      "choices": [
+        "طلاب",
+        "شركات",
+        "كتب"
+      ],
+      "answer": "شركات",
+      "explanation": "شركة devient شركات ; les autres pluriels concernent livre et étudiant.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "ar-ex-039"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-5",
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "langues/lng-ar-gram-s6-qcm",
+      "type": "qcm",
+      "prompt": "Que signifie في رأيي ?",
+      "choices": [
+        "À mon avis.",
+        "En conclusion.",
+        "Selon le texte."
+      ],
+      "answer": "À mon avis.",
+      "explanation": "في رأيي introduit un point de vue personnel.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-040"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-5",
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "langues/lng-ar-gram-s6-qcm",
+      "type": "qcm",
+      "prompt": "Dans l’exemple, quelle réserve est exprimée sur le projet ?",
+      "choices": [
+        "Il ne protège pas l’environnement.",
+        "Il n’a aucune utilité.",
+        "Son coût est élevé."
+      ],
+      "answer": "Son coût est élevé.",
+      "explanation": "لكن تكلفته مرتفعة signifie mais son coût est élevé.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-041"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-5",
+      "unit": "Arabe — Écriture et grammaire de l’arabe standard",
+      "origin": "langues/lng-ar-gram-s6-qcm",
+      "type": "qcm",
+      "prompt": "Quelle expression attribue une information au texte ?",
+      "choices": [
+        "مثلا",
+        "في رأيي",
+        "حسب النص"
+      ],
+      "answer": "حسب النص",
+      "explanation": "حسب النص signifie selon le texte.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "ar-ex-042"
+    },
+    {
+      "lessonId": "langues-lng-ar-culture-terminale-0",
+      "unit": "Arabe — Terminale · axes culturels",
+      "origin": "langues/lng-ar-culture-terminale-s1-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « الفضاء العام » ?",
+      "choices": [
+        "La vie privée.",
+        "L’espace public.",
+        "La publication / la diffusion."
+      ],
+      "answer": "L’espace public.",
+      "explanation": "Le vocabulaire de cette fiche définit الفضاء العام : L’espace public.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-043"
+    },
+    {
+      "lessonId": "langues-lng-ar-culture-terminale-0",
+      "unit": "Arabe — Terminale · axes culturels",
+      "origin": "langues/lng-ar-culture-terminale-s1-qcm",
+      "type": "qcm",
+      "prompt": "Que peut changer la publication d’une image privée ?",
+      "choices": [
+        "La frontière entre intimité et exposition publique.",
+        "Elle supprime tous les effets sur les personnes.",
+        "Elle garantit le consentement de tous."
+      ],
+      "answer": "La frontière entre intimité et exposition publique.",
+      "explanation": "Un logement, une rue ou un café ne donne pas les mêmes possibilités de parole et de rencontre. Dans une ville du monde arabe, l’étude d’un lieu public doit tenir compte du quartier, des usages et des personnes présentes. La diffusion d’images d’un espace privé peut aussi changer la frontière entre intime et public.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-044"
+    },
+    {
+      "lessonId": "langues-lng-ar-culture-terminale-1",
+      "unit": "Arabe — Terminale · axes culturels",
+      "origin": "langues/lng-ar-culture-terminale-s2-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « الذاكرة » ?",
+      "choices": [
+        "Les archives.",
+        "La mémoire.",
+        "Le témoignage, dans le contexte de cette fiche."
+      ],
+      "answer": "La mémoire.",
+      "explanation": "Le vocabulaire de cette fiche définit الذاكرة : La mémoire.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-045"
+    },
+    {
+      "lessonId": "langues-lng-ar-culture-terminale-1",
+      "unit": "Arabe — Terminale · axes culturels",
+      "origin": "langues/lng-ar-culture-terminale-s2-qcm",
+      "type": "qcm",
+      "prompt": "Comment utiliser un témoignage de mémoire ?",
+      "choices": [
+        "Le déclarer exhaustif.",
+        "Le situer et le croiser avec d’autres sources.",
+        "Le croire uniquement parce qu’il est souvent répété."
+      ],
+      "answer": "Le situer et le croiser avec d’autres sources.",
+      "explanation": "Un territoire peut porter plusieurs mémoires, transmises par les familles, les noms de rues, les bâtiments ou les archives. Dans un document du monde arabe, distingue la période évoquée du moment où le récit est produit. Des souvenirs différents ne se départagent pas par le seul nombre de personnes qui les répètent.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-046"
+    },
+    {
+      "lessonId": "langues-lng-ar-culture-terminale-2",
+      "unit": "Arabe — Terminale · axes culturels",
+      "origin": "langues/lng-ar-culture-terminale-s3-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « الرواية » ?",
+      "choices": [
+        "L’imagination / la fiction.",
+        "Le roman.",
+        "Le personnage, dans un récit."
+      ],
+      "answer": "Le roman.",
+      "explanation": "Le vocabulaire de cette fiche définit الرواية : Le roman.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-047"
+    },
+    {
+      "lessonId": "langues-lng-ar-culture-terminale-2",
+      "unit": "Arabe — Terminale · axes culturels",
+      "origin": "langues/lng-ar-culture-terminale-s3-qcm",
+      "type": "qcm",
+      "prompt": "Pourquoi une fiction n’est-elle pas une fausse information ?",
+      "choices": [
+        "Elle se présente dans un cadre artistique.",
+        "Tous ses détails sont des archives.",
+        "Le narrateur est toujours son auteur réel."
+      ],
+      "answer": "Elle se présente dans un cadre artistique.",
+      "explanation": "Un roman, un conte ou un film peut rendre visible une réalité sociale tout en inventant ses personnages et son intrigue. La fiction n’est pas une fausse information : elle se présente dans un cadre artistique. À l’inverse, une fabrication diffusée comme un fait réel trompe sur son statut.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-048"
+    },
+    {
+      "lessonId": "langues-lng-ar-culture-terminale-3",
+      "unit": "Arabe — Terminale · axes culturels",
+      "origin": "langues/lng-ar-culture-terminale-s4-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « الجمهور » ?",
+      "choices": [
+        "Le public.",
+        "La publicité / l’annonce.",
+        "Le moyen de communication."
+      ],
+      "answer": "Le public.",
+      "explanation": "Le vocabulaire de cette fiche définit الجمهور : Le public.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-049"
+    },
+    {
+      "lessonId": "langues-lng-ar-culture-terminale-3",
+      "unit": "Arabe — Terminale · axes culturels",
+      "origin": "langues/lng-ar-culture-terminale-s4-qcm",
+      "type": "qcm",
+      "prompt": "Le choix de l’arabe standard suffit-il à prouver la fiabilité ?",
+      "choices": [
+        "Oui, s’il s’agit d’une publicité.",
+        "Oui, quel que soit le message.",
+        "Non, il faut aussi examiner les sources et les preuves."
+      ],
+      "answer": "Non, il faut aussi examiner les sources et les preuves.",
+      "explanation": "L’arabe standard est fréquent dans l’information écrite et dans de nombreuses situations formelles ; les usages dialectaux varient selon les lieux, les supports et les destinataires. Un choix de langue peut produire proximité ou distance, mais ne permet pas à lui seul de juger la fiabilité d’un message.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-050"
+    },
+    {
+      "lessonId": "langues-lng-ar-culture-terminale-4",
+      "unit": "Arabe — Terminale · axes culturels",
+      "origin": "langues/lng-ar-culture-terminale-s5-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « المواطنة » ?",
+      "choices": [
+        "La citoyenneté.",
+        "La source.",
+        "La vérification."
+      ],
+      "answer": "La citoyenneté.",
+      "explanation": "Le vocabulaire de cette fiche définit المواطنة : La citoyenneté.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-051"
+    },
+    {
+      "lessonId": "langues-lng-ar-culture-terminale-4",
+      "unit": "Arabe — Terminale · axes culturels",
+      "origin": "langues/lng-ar-culture-terminale-s5-qcm",
+      "type": "qcm",
+      "prompt": "Comment une photographie authentique peut-elle tromper ?",
+      "choices": [
+        "Si elle est attribuée au mauvais événement.",
+        "Elle ne peut jamais tromper.",
+        "Sa date ne compte jamais."
+      ],
+      "answer": "Si elle est attribuée au mauvais événement.",
+      "explanation": "Les espaces numériques peuvent donner de la visibilité à une initiative citoyenne tout en exposant les personnes à la surveillance, au harcèlement ou à la désinformation. Étudie un cas situé plutôt que de parler de pratiques identiques dans tous les pays arabes. La liberté d’expression ne dispense pas de vérifier les faits et de respecter les personnes.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-052"
+    },
+    {
+      "lessonId": "langues-lng-ar-culture-terminale-5",
+      "unit": "Arabe — Terminale · axes culturels",
+      "origin": "langues/lng-ar-culture-terminale-s6-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « الأدب » ?",
+      "choices": [
+        "L’histoire.",
+        "La chanson.",
+        "La littérature."
+      ],
+      "answer": "La littérature.",
+      "explanation": "Le vocabulaire de cette fiche définit الأدب : La littérature.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "ar-ex-053"
+    },
+    {
+      "lessonId": "langues-lng-ar-culture-terminale-5",
+      "unit": "Arabe — Terminale · axes culturels",
+      "origin": "langues/lng-ar-culture-terminale-s6-qcm",
+      "type": "qcm",
+      "prompt": "Quel rapprochement correspond à la fiche ?",
+      "choices": [
+        "Mahfouz et la chanson libanaise ; Fairouz et le roman cairote.",
+        "Deux trajectoires résumant intégralement tous les arts des deux pays.",
+        "Mahfouz et le Caire ; Fairouz et la chanson libanaise."
+      ],
+      "answer": "Mahfouz et le Caire ; Fairouz et la chanson libanaise.",
+      "explanation": "La focale de Terminale concerne l’Égypte et le Liban, en reliant création artistique et histoire. Naguib Mahfouz, écrivain égyptien, situe une partie de son œuvre au Caire ; la chanteuse libanaise Fairouz permet d’aborder les liens entre chanson, attachement à un lieu et mémoire collective. Ces deux trajectoires ne résument pas les scènes artistiques de leurs pays.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "ar-ex-054"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-1",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis en arabe standard : le livre.",
+      "answer": "الكتاب",
+      "explanation": "L’article défini الـ s’attache au nom كتاب. Les voyelles brèves peuvent être ajoutées, sans changer le sens attendu.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-055"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-1",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : une petite entreprise.",
+      "answer": "شركة صغيرة",
+      "explanation": "L’adjectif suit le nom ; شركة et صغيرة sont ici féminins et indéfinis.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-056"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-1",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : la petite entreprise.",
+      "answer": "الشركة الصغيرة",
+      "explanation": "Le nom et l’adjectif sont tous deux définis par الـ dans ce groupe nominal.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-057"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-0",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Une fille se présente : traduis « Je suis étudiante ».",
+      "answer": "أنا طالبة",
+      "explanation": "La phrase nominale au présent ne nécessite pas de verbe être exprimé ; طالبة est féminin.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-058"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-0",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Un garçon se présente : traduis « Je suis étudiant ».",
+      "answer": "أنا طالب",
+      "explanation": "La forme masculine est طالب ; on n’ajoute pas automatiquement un équivalent de suis au présent.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-059"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-1",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : mon livre.",
+      "answer": "كتابي",
+      "explanation": "Le suffixe ـي exprime ici la possession à la première personne du singulier, attachée au nom كتاب.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-060"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-2",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Donne le pronom sujet qui signifie « nous ».",
+      "answer": "نحن",
+      "explanation": "نحن est le pronom personnel de première personne du pluriel en arabe standard.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-061"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-2",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Donne le pronom sujet qui signifie « elle ».",
+      "answer": "هي",
+      "explanation": "هي renvoie à la troisième personne du féminin singulier ; هو signifie il.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-062"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-2",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : j’étudie l’arabe.",
+      "answer": "أدرس العربية",
+      "explanation": "أدرس est ici l’inaccompli à la première personne du singulier ; le contexte indique le présent.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-063"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-2",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : nous travaillons.",
+      "answer": "نعمل",
+      "explanation": "Le préfixe نـ indique ici la première personne du pluriel à l’inaccompli.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-064"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-3",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : je ne comprends pas.",
+      "answer": "لا أفهم",
+      "explanation": "لا peut nier un verbe à l’inaccompli pour exprimer ici une négation au présent.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-065"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-3",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Quel mot interrogatif signifie « où » ?",
+      "answer": "أين",
+      "explanation": "أين interroge sur le lieu ; متى interroge sur le moment.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-066"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-3",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Quel mot interrogatif signifie « pourquoi » ?",
+      "answer": "لماذا",
+      "explanation": "لماذا demande une raison ; une réponse peut être introduite par لأنّ.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-067"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-3",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : le livre est sur la table.",
+      "answer": "الكتاب على الطاولة",
+      "explanation": "على indique ici la position sur quelque chose ; aucun verbe être exprimé n’est nécessaire au présent.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-068"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-0",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : je m’appelle Lina.",
+      "answer": "اسمي لينا",
+      "explanation": "اسمي signifie littéralement mon nom ; le suffixe ـي marque la première personne.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-069"
+    },
+    {
+      "lessonId": null,
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : j’ai une question.",
+      "answer": "عندي سؤال",
+      "explanation": "عندي سؤال est une formulation courante en arabe standard. لديّ سؤال est également possible.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-070"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-1",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige l’accord : شركة صغير.",
+      "answer": "شركة صغيرة",
+      "explanation": "Le nom شركة est féminin ; l’adjectif doit être féminin : صغيرة.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-071"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-1",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige la définition : الشركة صغيرة, si l’on veut dire « la petite entreprise » comme groupe nominal et non « l’entreprise est petite ».",
+      "answer": "الشركة الصغيرة",
+      "explanation": "Pour le groupe nominal défini, l’adjectif porte aussi الـ. الشركة صغيرة est une phrase complète de sens différent, non une phrase incorrecte en elle-même.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-072"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-2",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Choisis le pronom pour une femme : هو / هي.",
+      "answer": "هي",
+      "explanation": "هي signifie elle ; هو signifie il. Le genre grammatical du référent détermine ici le choix.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-073"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-3",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Associe : أين / متى avec « où / quand ».",
+      "answer": "أين = où ; متى = quand",
+      "explanation": "Les deux mots interrogatifs portent sur des informations différentes : lieu et temps.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-074"
+    },
+    {
+      "lessonId": null,
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Présente-toi en deux phrases en tant que fille : prénom Lina, élève.",
+      "answer": "اسمي لينا. أنا طالبة.",
+      "explanation": "Exemple de réponse : le prénom est donné et le statut d’élève utilise une forme féminine. La vocalisation peut varier selon le niveau de détail.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-075"
+    },
+    {
+      "lessonId": "langues-lng-ar-voc-1",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Présente une entreprise fictive en deux phrases simples : elle vend des livres ; elle est petite.",
+      "answer": "هذه الشركة تبيع الكتب. هي شركة صغيرة.",
+      "explanation": "Exemple possible : une activité et une caractéristique cohérentes. L’accord du verbe et de l’adjectif avec شركة est féminin singulier.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-076"
+    },
+    {
+      "lessonId": "langues-lng-ar-voc-2",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Exprime un avis bref : l’apprentissage des langues est important, car il aide la communication.",
+      "answer": "في رأيي، تعلّم اللغات مهمّ لأنّه يساعد على التواصل.",
+      "explanation": "Exemple possible : avis introduit par في رأيي, idée principale et justification introduite par لأنّ. D’autres formulations grammaticales et cohérentes conviennent.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-077"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-3",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Pose deux questions : demande le prénom d’une personne puis d’où elle vient.",
+      "answer": "ما اسمك؟ من أين أنت؟",
+      "explanation": "Exemple possible en arabe standard. La prononciation des formes non vocalisées varie selon le genre du destinataire ; fais vérifier le modèle audio correspondant.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-078"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-1",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Choisis هذا ou هذه : ____ كتاب.",
+      "answer": "هذا",
+      "explanation": "كتاب est masculin ; هذا convient pour ceci est un livre.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-079"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-1",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Choisis هذا ou هذه : ____ شركة.",
+      "answer": "هذه",
+      "explanation": "شركة est féminin ; هذه convient pour ceci est une entreprise.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-080"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-3",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Quel mot interrogatif signifie « qui » ?",
+      "answer": "مَن",
+      "explanation": "مَن interroge sur une personne. Le signe de voyelle aide à le distinguer de مِن qui signifie de/depuis.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-081"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-2",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : nous avons écrit.",
+      "answer": "كتبنا",
+      "explanation": "Le suffixe ـنا marque ici la première personne du pluriel à l’accompli du verbe كتب.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-082"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-4",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Accorde pour un pluriel non humain : الكتب ____ (nouveau).",
+      "answer": "جديدة",
+      "explanation": "Le pluriel non humain الكتب appelle ici un adjectif au féminin singulier : جديدة.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-083"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-1",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : ces deux-ci sont des étudiants. Utilise le démonstratif et le nom au duel masculin.",
+      "answer": "هذان طالبان",
+      "explanation": "هذان est le démonstratif masculin duel au nominatif ; طالبان est le nom étudiant au duel nominatif. La phrase signifie « ces deux-ci sont des étudiants », sans ajouter une information indépendante sur des garçons.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-084"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-3",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Mets à la forme négative avec لم : كتب الرسالة.",
+      "answer": "لم يكتب الرسالة",
+      "explanation": "لم est suivi de l’inaccompli au jussif, avec un sens passé : il n’a pas écrit la lettre. Les marques de voyelles ne sont pas toutes visibles dans cette écriture.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-085"
+    },
+    {
+      "lessonId": "langues-lng-ar-gram-2",
+      "unit": "Atelier de transfert · Arabe",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : j’étudierai demain.",
+      "answer": "سأدرس غدًا",
+      "explanation": "Le préfixe سـ devant l’inaccompli indique ici le futur ; غدًا signifie demain. سوف أدرس غدًا est également possible.",
+      "choices": [],
+      "context": "",
+      "id": "ar-ex-086"
+    }
+  ],
+  "edition": "Manuel approfondi · octobre 2026",
+  "methodSections": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    14,
+    15,
+    16,
+    17
+  ],
+  "videos": [
+    {
+      "title": "قائِمَةُ الحُروفِ والأصْواتِ العَرَبِيَّة",
+      "url": "https://learning.aljazeera.net/ar/node/19390",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُروفُ والأصْوات العَرَبِيّة (1) الأَلِف والهَمْزَة",
+      "url": "https://learning.aljazeera.net/ar/node/19415",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْوات العَرَبِيّة (2) حَرْفُ البَاء",
+      "url": "https://learning.aljazeera.net/ar/node/19367",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (3) حَرْفُ التَّاء",
+      "url": "https://learning.aljazeera.net/ar/node/19406",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (4) حَرْفُ الثَّاءِ",
+      "url": "https://learning.aljazeera.net/ar/node/19389",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (5) حَرْفُ الجِيم",
+      "url": "https://learning.aljazeera.net/ar/node/19320",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (6) حَرْفُ الحاءِ",
+      "url": "https://learning.aljazeera.net/ar/node/19332",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (7) حَرْفُ الخاءِ",
+      "url": "https://learning.aljazeera.net/ar/node/19299",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (8) حَرْفُ الدَّالِ",
+      "url": "https://learning.aljazeera.net/ar/node/19371",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (9) حَرْفُ الذَّال",
+      "url": "https://learning.aljazeera.net/ar/node/19314",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (10) حَرْفُ الرّاءِ",
+      "url": "https://learning.aljazeera.net/ar/node/19397",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (11) حَرْفُ الزَّايِ",
+      "url": "https://learning.aljazeera.net/ar/node/19345",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (12) حَرْفُ السِّينِ",
+      "url": "https://learning.aljazeera.net/ar/node/19360",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (13) حَرْفُ الشِّين",
+      "url": "https://learning.aljazeera.net/ar/node/19363",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (14) حَرْفُ الصَّادِ",
+      "url": "https://learning.aljazeera.net/ar/node/19356",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (15) حَرْفُ الضَّادِ",
+      "url": "https://learning.aljazeera.net/ar/node/19326",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (16) حَرْفُ الطَّاءِ",
+      "url": "https://learning.aljazeera.net/ar/node/19329",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (17) حَرْفُ الظَّاءِ",
+      "url": "https://learning.aljazeera.net/ar/node/19347",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (18) حَرْفُ الْعَيْن",
+      "url": "https://learning.aljazeera.net/ar/node/19333",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (19) حَرْفُ الغَيْن",
+      "url": "https://learning.aljazeera.net/ar/node/19323",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (20) حَرْفُ الْفَاءِ",
+      "url": "https://learning.aljazeera.net/ar/node/19342",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (21) حَرْفُ الْقَاف",
+      "url": "https://learning.aljazeera.net/ar/node/19311",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (22) حَرْفُ الْكَاف",
+      "url": "https://learning.aljazeera.net/ar/node/19308",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (23) حَرْفُ اللَّام",
+      "url": "https://learning.aljazeera.net/ar/node/19351",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (24) حَرْفُ الْمِيم",
+      "url": "https://learning.aljazeera.net/ar/node/19340",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (25) حَرْفُ النُّون",
+      "url": "https://learning.aljazeera.net/ar/node/19354",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "الْحُرُوفُ والأصْواتُ العَرَبِيّة (26): حَرْفُ الهَاء",
+      "url": "https://learning.aljazeera.net/ar/node/19336",
+      "level": "Initiation",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "في مَرْكَزِ تَعْلِيمِ اللُّغَةِ العَرَبِيَّةِ",
+      "url": "https://learning.aljazeera.net/ar/node/19417",
+      "level": "Débutant",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "لِـمَاذَا يَتَعَلَّمُونَ الْعَرَبِيَّةَ؟",
+      "url": "https://learning.aljazeera.net/ar/node/19379",
+      "level": "Débutant",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "أُسْرَتِي",
+      "url": "https://learning.aljazeera.net/ar/node/19294",
+      "level": "Débutant",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "مَنْ أنتَ؟",
+      "url": "https://learning.aljazeera.net/ar/node/19393",
+      "level": "Débutant",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "تَشَرَّفْنَا",
+      "url": "https://learning.aljazeera.net/ar/node/19398",
+      "level": "Débutant",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "سُوقُ النِّساءِ في مَدِينَةِ بارتن التُّرْكيَّة",
+      "url": "https://learning.aljazeera.net/ar/articles/pages/21968",
+      "level": "Élémentaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "عُطْلَةُ الْـمَدْرَسَةِ",
+      "url": "https://learning.aljazeera.net/ar/node/19480",
+      "level": "Élémentaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "شَقَّةٌ لِلْإِيجارِ",
+      "url": "https://learning.aljazeera.net/ar/node/19571",
+      "level": "Élémentaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "قِصَصٌ تَعْلِيمِيَّةٌ لِلأَطْفالِ",
+      "url": "https://learning.aljazeera.net/ar/node/20103",
+      "level": "Élémentaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "فِي مَكْتَبِ الجَوازَات",
+      "url": "https://learning.aljazeera.net/ar/node/19531",
+      "level": "Élémentaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "حَجْزُ مَوْعِدٍ طِبِّيٍّ",
+      "url": "https://learning.aljazeera.net/ar/node/19472",
+      "level": "Élémentaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "فِي الْفُنْدُق",
+      "url": "https://learning.aljazeera.net/ar/node/19551",
+      "level": "Élémentaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "جَوْلَةٌ في مَلاعِبِ كَأْسِ العالَمِ بِدَوْلَةِ قَطَر",
+      "url": "https://learning.aljazeera.net/ar/articles/pages/21995",
+      "level": "Intermédiaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "المَدْرَسَةُ العائِمَةُ في بَنْغلادِش",
+      "url": "https://learning.aljazeera.net/ar/articles/pages/21919",
+      "level": "Intermédiaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "أزهار على أبواب القدس",
+      "url": "https://learning.aljazeera.net/ar/articles/pages/21786",
+      "level": "Intermédiaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "قِطَّةُ آيا صُوفيا.. ما قِصَّتُها؟",
+      "url": "https://learning.aljazeera.net/ar/node/20688",
+      "level": "Intermédiaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "السِّياحَةُ بِالْـمَنازِلِ المُتَحَرِّكَةِ",
+      "url": "https://learning.aljazeera.net/ar/node/20758",
+      "level": "Intermédiaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "رافِيا أَرْشَد.. أَوَّلُ قاضِيَةٍ مُحَجَّبَةٍ في بريطانيا",
+      "url": "https://learning.aljazeera.net/ar/node/20782",
+      "level": "Intermédiaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "المَسْجِدُ البِلَّوْرِيُّ في ماليزيا",
+      "url": "https://learning.aljazeera.net/ar/node/20706",
+      "level": "Intermédiaire",
+      "provider": "Al Jazeera Learning Arabic",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    }
+  ]
+}

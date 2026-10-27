@@ -1,0 +1,2571 @@
+{
+  "name": "Italien",
+  "label": "Italiano",
+  "hello": "Ciao! Puoi presentarti?",
+  "intro": "Apprendre à interagir en italien : prononciation, phrases essentielles et situations de STMG.",
+  "sections": [
+    {
+      "title": "Commencer par une vraie situation",
+      "text": "Choisis une situation concrète : te présenter, demander un renseignement ou décrire ton stage. Prépare cinq phrases utiles, écoute un modèle puis essaie sans lire. Une langue se construit par des retours fréquents sur les mêmes situations, avec une difficulté qui augmente progressivement. Le guide accompagne un apprentissage : il ne remplace ni un professeur ni des échanges réels.",
+      "task": "Enregistre une présentation de 30 secondes. Écoute-la et choisis un seul point à améliorer. Garde cette première version pour comparer dans deux semaines."
+    },
+    {
+      "title": "Écouter pour comprendre, pas pour tout traduire",
+      "text": "Prends un extrait de 30 à 90 secondes adapté à ton niveau. Première écoute : qui parle, où et pourquoi ? Deuxième écoute : repère trois mots ou informations. Troisième écoute avec sous-titres dans la langue : vérifie ton hypothèse. Reprends ensuite sans sous-titres. Une vidéo trop difficile peut servir à découvrir une culture, mais un support plus simple est préférable pour travailler la compréhension.",
+      "task": "Note le thème et trois informations, puis résume en une phrase. Vérifie avec la transcription ; distingue ce que tu avais compris et ce que tu avais deviné."
+    },
+    {
+      "title": "Parler par petits blocs",
+      "text": "Apprends des groupes de mots réutilisables plutôt que des listes isolées : demander de répéter, donner son avis, expliquer une difficulté. Fais varier un élément de chaque phrase. Pour gagner en fluidité, prépare des mots-clés et non un texte entier. Les hésitations sont normales : une reformulation simple est souvent plus efficace qu’une traduction mot à mot.",
+      "task": "Construis trois réponses différentes à la même question. Fais d’abord 20 secondes, puis 40 secondes, puis une minute sans lire de texte."
+    },
+    {
+      "title": "Prononciation : écouter, imiter, comparer",
+      "text": "Écoute une phrase courte, mets en pause, répète, puis compare ton enregistrement au modèle. Observe le rythme, l’accent des mots et l’intonation avant de chercher une imitation parfaite. Le shadowing consiste à parler juste après le modèle : ralentis si nécessaire. Une transcription en français ne reproduit jamais exactement les sons d’une autre langue.",
+      "task": "Répète cinq fois une phrase de huit à douze mots. Compare les versions 1 et 5 sur un critère : rythme, consonne ou voyelle. Demande un retour à un enseignant ou à un interlocuteur compétent."
+    },
+    {
+      "title": "Vocabulaire qui reste disponible",
+      "text": "Crée des cartes avec une expression, une phrase personnelle et, si possible, un extrait audio fiable. Cache la réponse et retrouve-la à voix haute. Revois après un jour, trois jours, une semaine puis deux semaines ; rapproche les révisions si tu oublies. Relie chaque mot à une situation vécue. Dix expressions utilisées valent mieux qu’une longue liste seulement relue.",
+      "task": "Sélectionne cinq expressions de la semaine. Utilise-les dans une conversation de deux minutes puis modifie la situation pour vérifier que tu sais les réemployer."
+    },
+    {
+      "title": "Comprendre, lire et écrire pour mieux parler",
+      "text": "Lis un texte court à ton niveau, repère son objectif et ses connecteurs. Prépare un résumé avec des mots-clés. Écris ensuite cinq phrases, vérifie le sujet, le verbe et les accords, puis reformule-les oralement sans feuille. Un correcteur peut aider à repérer une erreur ; demande toujours pourquoi et vérifie la règle avec une ressource fiable.",
+      "task": "Lis une annonce ou une courte actualité. Résume l’idée principale, donne un exemple et explique ton avis. Compare le résumé au document : n’ajoute pas de faits absents."
+    },
+    {
+      "title": "Sons, doubles consonnes et accent",
+      "text": "C devant e/i donne généralement /tʃ/ comme dans cena ; ch devant e/i garde /k/ comme dans chi. G devant e/i donne généralement /dʒ/ comme dans giorno ; gh garde /g/. Gn se rapproche du gn français ; gli demande un modèle audio. Les doubles consonnes comptent : pala et palla ne sont pas le même mot. L’accent tonique n’est pas toujours écrit ; vérifie dans un dictionnaire sonore.",
+      "task": "Écoute puis répète cena, chi, giorno, spaghetti, famiglia et palla. Reprends ensuite une phrase contenant deux de ces mots."
+    },
+    {
+      "title": "Se présenter et poser une question",
+      "text": "Mi chiamo Lina. — Je m’appelle Lina. Ho diciassette anni. — J’ai dix-sept ans. Sono una studentessa / uno studente di STMG in Francia. Mi interessa il commercio. — Le commerce m’intéresse. Vorrei lavorare in un’azienda. — Je voudrais travailler dans une entreprise. E tu? — Et toi ?",
+      "task": "Prépare une présentation de 40 secondes. Explique tes études en termes simples et pose deux questions à ton interlocuteur."
+    },
+    {
+      "title": "Les structures essentielles",
+      "text": "Sono… identifie ou décrit ; ho… indique notamment la possession et l’âge. C’è un cliente / Ci sono due clienti expriment une présence. Studio / Lavoro : présent ; sto studiando : action en cours. Posso…? demande une possibilité ; devo… indique une obligation ; vorrei… formule un souhait poli. Les pronoms sujets peuvent être omis quand le contexte est clair.",
+      "task": "Décris où tu es, ce qu’il y a autour de toi, ce que tu fais habituellement et ce que tu es en train de faire."
+    },
+    {
+      "title": "Raconter une expérience et un projet",
+      "text": "Ho lavorato in un negozio : passé composé avec avere. Sono andata/andato a Roma : certains verbes se construisent avec essere et le participe s’accorde avec le sujet. Prima lavoravo… évoque une habitude passée. Domani studio / Studierò… annonce un projet ; vorrei imparare… exprime un souhait. Vérifie l’auxiliaire d’un verbe au dictionnaire plutôt que de transposer automatiquement le français.",
+      "task": "Raconte trois tâches de stage puis un déplacement. Termine par ce que tu voudrais apprendre à faire."
+    },
+    {
+      "title": "Faire répéter et gagner du temps",
+      "text": "Può ripetere, per favore? — Pouvez-vous répéter ? Puoi parlare più lentamente? — Peux-tu parler plus lentement ? Che cosa significa…? — Que signifie… ? Non ho capito. — Je n’ai pas compris. Voglio dire che… — Je veux dire que… Un momento, per favore. — Un instant, s’il vous plaît. Lei marque une politesse ; tu convient dans les situations familières.",
+      "task": "Organise une conversation où chacun doit demander une précision, reformuler un point et confirmer sa compréhension."
+    },
+    {
+      "title": "Construire un avis clair",
+      "text": "Secondo me… / Penso che… introduisent un avis ; attention, penso che peut demander le subjonctif : pour débuter, secondo me permet une phrase simple. Prima… poi… infine… organisent ; perché explique ; però nuance ; per esempio illustre. Sono d’accordo / Non sono d’accordo expriment un accord ou désaccord.",
+      "task": "Réponds : È utile fare uno stage? Utilise secondo me, une raison, un exemple et une limite."
+    },
+    {
+      "title": "Mini-dialogue : demander un renseignement",
+      "text": "A: Buongiorno, posso aiutarla? B: Sì, vorrei informazioni su questo servizio. A: Che cosa desidera sapere? B: Quanto costa? A: Costa trenta euro al mese. B: È possibile provarlo? A: Sì, le spiego come funziona. B: Grazie, è molto gentile.",
+      "task": "Remplace le service par une activité associative. Modifie le tarif et les conditions ; indique clairement ce qui est inclus."
+    },
+    {
+      "title": "ETLV et pièges utiles",
+      "text": "L’azienda produce… présente une production ; i dipendenti sont les salariés ; il fatturato est le chiffre d’affaires ; un cliente satisfait est soddisfatto. En italien, camera signifie chambre, et libreria signifie librairie ou bibliothèque-meuble selon le contexte ; biblioteca désigne une bibliothèque de consultation. I genitori sont les parents.",
+      "task": "En 90 secondes, présente une organisation et un problème : Il problema principale è… Propose une solution : Propongo di… Vérifie le vocabulaire avant la prise de parole."
+    },
+    {
+      "title": "Interagir sans rester bloqué",
+      "text": "Écoute la question jusqu’au bout. Si tu ne comprends pas, demande de répéter ou de reformuler. Réponds brièvement puis ajoute un exemple et une question de relance. Pour un échange à distance, ne partage pas d’informations personnelles avec des inconnus ; privilégie les cadres scolaires et les services adaptés à ton âge.",
+      "task": "Avec un partenaire, alternez client et conseiller pendant deux minutes. Interdiction de lire un dialogue ; chacun doit poser au moins deux questions et demander une précision."
+    },
+    {
+      "title": "Routine de 20 minutes",
+      "text": "5 minutes : revoir cinq expressions sans regarder. 5 minutes : écouter un extrait court avec un objectif précis. 5 minutes : répéter puis enregistrer une réponse. 5 minutes : noter un progrès et une difficulté, et préparer la prochaine séance. Les jours chargés, garde une version de cinq minutes : trois expressions et une réponse enregistrée.",
+      "task": "Planifie quatre rendez-vous réalistes par semaine. Coche les séances réellement faites. Si tu rates un jour, reprends simplement au rendez-vous suivant, sans doubler artificiellement la charge."
+    },
+    {
+      "title": "Plan progressif sur quatre semaines",
+      "text": "Semaine 1 : présentation et demandes simples ; deux enregistrements de 30 secondes. Semaine 2 : raconter une journée ou une expérience ; trois réponses de 45 secondes. Semaine 3 : donner un avis et comparer deux possibilités ; un échange de deux minutes. Semaine 4 : présenter un projet et répondre à des questions ; bilan avec la première version. Adapte les durées : ce programme ne garantit pas un niveau CECRL en quatre semaines.",
+      "task": "Choisis un objectif observable par semaine : par exemple expliquer trois tâches de stage sans lire. Garde une trace datée et une difficulté à retravailler."
+    },
+    {
+      "title": "S’autoévaluer avec précision",
+      "text": "Sur une échelle de 1 à 4, observe : message compréhensible, organisation, vocabulaire utile, correction et interaction. 1 : besoin d’un modèle ; 2 : message possible avec aide ; 3 : autonomie sur une situation familière ; 4 : autonomie avec reformulations et réponses aux questions. Ce bilan personnel n’est ni une certification CECRL ni une note officielle.",
+      "task": "Enregistre le même sujet une semaine plus tard. Cite un exemple concret de progrès et une priorité. Vérifie les attentes exactes de ton devoir avec ton professeur."
+    }
+  ],
+  "resources": [
+    {
+      "title": "RAI Scuola — Italiano per stranieri, vidéos",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri",
+      "kind": "video"
+    },
+    {
+      "title": "Loescher — italien pour étrangers",
+      "url": "https://italianoperstranieri.loescher.it/",
+      "kind": "practice"
+    },
+    {
+      "title": "Treccani — dictionnaire",
+      "url": "https://www.treccani.it/vocabolario/",
+      "kind": "reading"
+    }
+  ],
+  "id": "it",
+  "lessons": [
+    {
+      "id": "it-pratique-6",
+      "title": "Sons, doubles consonnes et accent",
+      "part": "Premiers échanges",
+      "paragraphs": [
+        "C devant e/i donne généralement /tʃ/ comme dans cena ; ch devant e/i garde /k/ comme dans chi. G devant e/i donne généralement /dʒ/ comme dans giorno ; gh garde /g/. Gn se rapproche du gn français ; gli demande un modèle audio. Les doubles consonnes comptent : pala et palla ne sont pas le même mot. L’accent tonique n’est pas toujours écrit ; vérifie dans un dictionnaire sonore."
+      ],
+      "lexicon": [],
+      "oral": "Écoute puis répète cena, chi, giorno, spaghetti, famiglia et palla. Reprends ensuite une phrase contenant deux de ces mots.",
+      "origin": "RévizSTMG · guide pratique"
+    },
+    {
+      "id": "it-pratique-7",
+      "title": "Se présenter et poser une question",
+      "part": "Premiers échanges",
+      "paragraphs": [
+        "Mi chiamo Lina. — Je m’appelle Lina. Ho diciassette anni. — J’ai dix-sept ans. Sono una studentessa / uno studente di STMG in Francia. Mi interessa il commercio. — Le commerce m’intéresse. Vorrei lavorare in un’azienda. — Je voudrais travailler dans une entreprise. E tu? — Et toi ?"
+      ],
+      "lexicon": [],
+      "oral": "Prépare une présentation de 40 secondes. Explique tes études en termes simples et pose deux questions à ton interlocuteur.",
+      "origin": "RévizSTMG · guide pratique"
+    },
+    {
+      "id": "it-pratique-10",
+      "title": "Faire répéter et gagner du temps",
+      "part": "Premiers échanges",
+      "paragraphs": [
+        "Può ripetere, per favore? — Pouvez-vous répéter ? Puoi parlare più lentamente? — Peux-tu parler plus lentement ? Che cosa significa…? — Que signifie… ? Non ho capito. — Je n’ai pas compris. Voglio dire che… — Je veux dire que… Un momento, per favore. — Un instant, s’il vous plaît. Lei marque une politesse ; tu convient dans les situations familières."
+      ],
+      "lexicon": [],
+      "oral": "Organise une conversation où chacun doit demander une précision, reformuler un point et confirmer sa compréhension.",
+      "origin": "RévizSTMG · guide pratique"
+    },
+    {
+      "id": "langues-lng-it-gram-0",
+      "title": "Prononciation, articles et accords",
+      "part": "Grammaire et conjugaison",
+      "paragraphs": [
+        "L’italien distingue les consonnes simples et doubles : pala (pelle) et palla (ballon) ne se prononcent pas de la même façon. Devant e ou i, c se prononce comme « tch » et g comme « dj » ; ch et gh maintiennent les sons durs : chi, spaghetti. L’accent écrit distingue notamment e (et) de è (est).",
+        "L’article défini dépend du genre, du nombre et du début du mot : il libro → i libri ; lo studente → gli studenti ; l’amico → gli amici ; la casa → le case. Lo s’emploie notamment devant s + consonne et z. L’article indéfini donne un libro, uno studente, una casa, un’amica. Un amico n’a pas d’apostrophe, car un est masculin.",
+        "Les noms en -o ont souvent un pluriel en -i, ceux en -a un pluriel en -e ; un nom en -e passe généralement à -i : studente → studenti. L’adjectif s’accorde : una casa nuova, due case nuove. Ces régularités ont des exceptions : apprends le genre avec le nom."
+      ],
+      "lexicon": [
+        {
+          "term": "il libro",
+          "meaning": "Le livre ; pluriel i libri."
+        },
+        {
+          "term": "lo studente",
+          "meaning": "L’élève ; pluriel gli studenti."
+        },
+        {
+          "term": "è",
+          "meaning": "Est, forme de essere, avec accent."
+        },
+        {
+          "term": "e",
+          "meaning": "Et, conjonction sans accent."
+        }
+      ],
+      "origin": "langues/lng-it-gram/0"
+    },
+    {
+      "id": "langues-lng-it-gram-1",
+      "title": "Le présent : être, avoir et verbes fréquents",
+      "part": "Grammaire et conjugaison",
+      "paragraphs": [
+        "Essere : sono, sei, è, siamo, siete, sono. Avere : ho, hai, ha, abbiamo, avete, hanno. Le sujet peut rester implicite grâce à la terminaison : sono italiana signifie « je suis italienne » selon le contexte ; ho diciassette anni signifie « j’ai dix-sept ans ». On garde le pronom pour lever une ambiguïté ou insister.",
+        "Au présent, parlare donne parlo, parli, parla, parliamo, parlate, parlano ; prendere : prendo, prendi, prende, prendiamo, prendete, prendono ; dormire : dormo, dormi, dorme, dormiamo, dormite, dormono. Certains verbes en -ire prennent -isc- : capisco, capisci, capisce, capiamo, capite, capiscono.",
+        "Andare donne vado, vai, va, andiamo, andate, vanno ; fare : faccio, fai, fa, facciamo, fate, fanno. Pour nier, place non devant le verbe : non capisco. Une question peut garder le même ordre : studi italiano? Avec un mot interrogatif : dove studi? (où étudies-tu ?) et perché studi? (pourquoi étudies-tu ?).",
+        "Pour dire **il y a**, utilise **c’è** devant un nom singulier et **ci sono** devant un nom pluriel : *In ufficio c’è una persona* ; *In ufficio ci sono tre persone*. L’accord se fait avec ce qui est présent."
+      ],
+      "lexicon": [
+        {
+          "term": "Essere",
+          "meaning": "Être : sono, sei, è, siamo, siete, sono."
+        },
+        {
+          "term": "Avere",
+          "meaning": "Avoir : ho, hai, ha, abbiamo, avete, hanno."
+        },
+        {
+          "term": "Non",
+          "meaning": "Négation placée avant le verbe."
+        },
+        {
+          "term": "Capire",
+          "meaning": "Comprendre : capisco, capiamo."
+        }
+      ],
+      "origin": "langues/lng-it-gram/1"
+    },
+    {
+      "id": "langues-lng-it-gram-2",
+      "title": "Raconter : passato prossimo et imperfetto",
+      "part": "Grammaire et conjugaison",
+      "paragraphs": [
+        "Le passato prossimo se forme avec avere ou essere au présent et un participe passé : ho parlato, ho ricevuto, ho dormito. Avec essere, le participe s’accorde avec le sujet : Maria è arrivata ; Marco e Luca sono partiti. Tous les verbes de mouvement ne prennent pas automatiquement essere : apprends l’auxiliaire de chaque verbe, par exemple ho viaggiato.",
+        "Les participes fréquents comprennent fatto (fare), detto (dire), visto (vedere), scritto (scrivere), letto (leggere) et preso (prendere). Dans une phrase simple avec avere sans pronom objet antéposé, le participe reste inchangé : Maria ha scritto una lettera.",
+        "L’imperfetto décrit un état, une habitude ou l’arrière-plan : parlavo, parlavi, parlava, parlavamo, parlavate, parlavano ; essere donne ero, eri, era, eravamo, eravate, erano. Da piccola leggevo molto : enfant, je lisais beaucoup. Mentre studiavo, è arrivato Luca oppose une action en cours à l’événement qui survient. La distance chronologique seule ne décide pas du choix du temps."
+      ],
+      "lexicon": [
+        {
+          "term": "Passato prossimo",
+          "meaning": "Auxiliaire au présent + participe passé pour présenter un événement accompli."
+        },
+        {
+          "term": "Imperfetto",
+          "meaning": "Temps des habitudes, descriptions et arrière-plans du passé."
+        },
+        {
+          "term": "È arrivata",
+          "meaning": "Est arrivée : accord féminin avec essere."
+        },
+        {
+          "term": "Ho viaggiato",
+          "meaning": "J’ai voyagé : auxiliaire avere."
+        }
+      ],
+      "origin": "langues/lng-it-gram/2"
+    },
+    {
+      "id": "langues-lng-it-gram-3",
+      "title": "Futur, conditionnel et projets",
+      "part": "Grammaire et conjugaison",
+      "paragraphs": [
+        "Le futur de parlare donne parlerò, parlerai, parlerà, parleremo, parlerete, parleranno. Pour un verbe régulier en -are, le a devient e dans le radical ; prendere donne prenderò et dormire dormirò. Quelques radicaux sont irréguliers : essere → sarò, avere → avrò, andare → andrò, fare → farò, venire → verrò.",
+        "Le conditionnel utilise les terminaisons -ei, -esti, -ebbe, -emmo, -este, -ebbero : parlerei, parleresti, parlerebbe, parleremmo, parlereste, parlerebbero. Les radicaux irréguliers du futur servent aussi au conditionnel : sarei, avrei, andrei. Vorrei signifie « je voudrais » ; potrei signifie « je pourrais ».",
+        "L’anno prossimo farò uno stage annonce un stage l’an prochain. Vorrei lavorare in Italia exprime un souhait sans présenter sa réalisation comme certaine. Pour une hypothèse réalisable, on peut employer se + présent, puis futur : se ho tempo, verrò. Ne calque pas le français « si j’aurais » : l’hypothèse irréelle demande une autre construction."
+      ],
+      "lexicon": [
+        {
+          "term": "Futuro",
+          "meaning": "Temps pour annoncer notamment un événement à venir : parlerò."
+        },
+        {
+          "term": "Condizionale",
+          "meaning": "Mode du souhait, de la politesse ou d’une éventualité : parlerei."
+        },
+        {
+          "term": "Vorrei",
+          "meaning": "Je voudrais, forme polie de volere."
+        },
+        {
+          "term": "Se ho tempo, verrò",
+          "meaning": "Si j’ai le temps, je viendrai : hypothèse réalisable."
+        }
+      ],
+      "origin": "langues/lng-it-gram/3"
+    },
+    {
+      "id": "langues-lng-it-gram-4",
+      "title": "Pronoms, prépositions et comparaison",
+      "part": "Grammaire et conjugaison",
+      "paragraphs": [
+        "Les pronoms compléments directs lo, la, li, le remplacent une personne ou une chose sans préposition : compro il libro → lo compro ; vedo Maria → la vedo. Les pronoms indirects gli (à lui) et le (à elle) correspondent à un complément introduit par a : telefono a Marco → gli telefono. Devant l’infinitif, un pronom peut être attaché : voglio comprarlo.",
+        "Les prépositions se choisissent avec leur construction : a Roma, in Italia, da un amico, di Roma. Avec un article, certaines fusionnent : a + il → al ; di + il → del ; in + il → nel. Sono di Roma indique l’origine ; vado a Roma la destination.",
+        "La comparaison entre deux personnes ou objets peut employer **più… di** ou **meno… di** : *questo prodotto è più caro di quello*. L’égalité se construit notamment avec **così… come** ou **tanto… quanto** : *è così interessante come l’altro*, *è tanto interessante quanto l’altro*. Le premier élément peut être omis : *è interessante come l’altro*. Le superlatif relatif inclut l’article : *il più caro*. Avec *piacere*, la chose aimée est sujet : *mi piace il libro*, *mi piacciono i libri*."
+      ],
+      "lexicon": [
+        {
+          "term": "Lo compro",
+          "meaning": "Je l’achète : lo remplace un objet masculin singulier."
+        },
+        {
+          "term": "Gli telefono",
+          "meaning": "Je lui téléphone : gli renvoie ici à Marco."
+        },
+        {
+          "term": "A Roma / in Italia",
+          "meaning": "Prépositions usuelles pour la ville et le pays."
+        },
+        {
+          "term": "Mi piacciono i libri",
+          "meaning": "J’aime les livres : sujet pluriel, verbe pluriel."
+        }
+      ],
+      "origin": "langues/lng-it-gram/4"
+    },
+    {
+      "id": "langues-lng-it-gram-5",
+      "title": "Argumenter : subjonctif, hypothèse et discours rapporté",
+      "part": "Grammaire et conjugaison",
+      "paragraphs": [
+        "Pour structurer un avis, utilise secondo me (à mon avis), perché (parce que), tuttavia (cependant) et quindi (donc). Après penso che exprimant une opinion, l’italien soigné emploie normalement le congiuntivo : penso che sia utile. Essere au congiuntivo présent donne sia, sia, sia, siamo, siate, siano ; avere : abbia, abbia, abbia, abbiamo, abbiate, abbiano.",
+        "Une hypothèse peu probable ou irréelle au présent peut se construire avec se + congiuntivo imperfetto, puis conditionnel présent : se avessi tempo, studierei di più (si j’avais le temps, j’étudierais davantage). Se fossi il direttore, cambierei il progetto : si j’étais le directeur, je changerais le projet. Ne transforme pas cette règle en interdiction générale de tout futur après se : se ho tempo, verrò reste correct.",
+        "Pour rapporter une information, distingue ce qui est certain de ce qui est affirmé par une source : il giornale afferma che… signifie « le journal affirme que… ». Reformule sans attribuer l’opinion à tout un pays. Une argumentation solide cite un exemple précis, explique sa portée et reconnaît une limite : tuttavia, il costo rimane elevato (cependant, le coût reste élevé)."
+      ],
+      "lexicon": [
+        {
+          "term": "Congiuntivo",
+          "meaning": "Mode notamment employé après une opinion : penso che sia utile."
+        },
+        {
+          "term": "Se avessi tempo, studierei",
+          "meaning": "Hypothèse : subjonctif imparfait puis conditionnel présent."
+        },
+        {
+          "term": "Tuttavia",
+          "meaning": "Cependant : introduit une réserve ou une opposition."
+        },
+        {
+          "term": "Quindi",
+          "meaning": "Donc : introduit une conséquence."
+        }
+      ],
+      "origin": "langues/lng-it-gram/5"
+    },
+    {
+      "id": "langues-lng-it-voc-0",
+      "title": "Vie quotidienne, études et mobilité",
+      "part": "Vocabulaire en contexte et ETLV",
+      "paragraphs": [
+        "La famiglia est la famille, la scuola l’école, lo studente l’élève, l’insegnante l’enseignant. Gli studi désigne les études, tandis que lo stage ou il tirocinio désignent un stage. Pour se déplacer : il treno (train), la stazione (gare), il viaggio (voyage). Un biglietto est un billet, pas une facture.",
+        "Mi chiamo Sara, studio economia e cerco un tirocinio a Torino : je m’appelle Sara, j’étudie l’économie et je cherche un stage à Turin. Pour écrire une demande polie : Buongiorno, vorrei ricevere informazioni sul tirocinio. Termine par Cordiali saluti. Adapte tu ou Lei au destinataire, sans mélanger les registres."
+      ],
+      "lexicon": [
+        {
+          "term": "Tirocinio",
+          "meaning": "Stage en milieu professionnel."
+        },
+        {
+          "term": "Biglietto",
+          "meaning": "Billet, notamment de transport."
+        },
+        {
+          "term": "Cordiali saluti",
+          "meaning": "Formule de clôture d’un message professionnel."
+        }
+      ],
+      "origin": "langues/lng-it-voc/0"
+    },
+    {
+      "id": "langues-lng-it-voc-1",
+      "title": "Entreprise, économie et ETLV",
+      "part": "Vocabulaire en contexte et ETLV",
+      "paragraphs": [
+        "L’azienda ou l’impresa est l’entreprise ; un dipendente est un salarié, il cliente un client, il fornitore un fournisseur. Il fatturato est le chiffre d’affaires, il costo un coût et l’utile un bénéfice. Ne confonds pas chiffre d’affaires et bénéfice : le bénéfice tient compte des charges. Una fattura signifie une facture ; una fabbrica, une usine.",
+        "Cas fictif : L’impresa produce biciclette e vende i suoi prodotti ai negozi. Il fatturato cresce, ma aumentano anche i costi. L’entreprise fabrique des vélos et les vend aux magasins. Son chiffre d’affaires augmente, mais ses coûts aussi : la hausse de son bénéfice n’est donc pas démontrée. À l’oral ETLV, présente l’activité, les parties prenantes et un indicateur, puis explique une limite."
+      ],
+      "lexicon": [
+        {
+          "term": "Fatturato",
+          "meaning": "Chiffre d’affaires, distinct du bénéfice."
+        },
+        {
+          "term": "Utile",
+          "meaning": "Bénéfice."
+        },
+        {
+          "term": "Dipendente",
+          "meaning": "Salarié."
+        },
+        {
+          "term": "Fattura",
+          "meaning": "Facture."
+        }
+      ],
+      "origin": "langues/lng-it-voc/1"
+    },
+    {
+      "id": "langues-lng-it-voc-2",
+      "title": "Numérique, environnement et opinion",
+      "part": "Vocabulaire en contexte et ETLV",
+      "paragraphs": [
+        "La rete est le réseau ou Internet selon le contexte ; i dati personali sont les données personnelles, una fonte une source, una notizia une nouvelle. Una notizia falsa est une fausse information : un grand nombre de partages n’en prouve pas la fiabilité. Vérifie l’auteur, la date et les preuves avant de relayer.",
+        "L’ambiente est l’environnement, i rifiuti les déchets, il riciclo le recyclage et l’energia rinnovabile l’énergie renouvelable. Ridurre i rifiuti signifie réduire les déchets. Possiamo ridurre i rifiuti, tuttavia dobbiamo cambiare le nostre abitudini : nous pouvons réduire les déchets, cependant nous devons changer nos habitudes. Une proposition devient convaincante quand on en précise l’action, l’effet attendu et la limite."
+      ],
+      "lexicon": [
+        {
+          "term": "Dati personali",
+          "meaning": "Données personnelles."
+        },
+        {
+          "term": "Fonte",
+          "meaning": "Source d’une information."
+        },
+        {
+          "term": "Rifiuti",
+          "meaning": "Déchets."
+        },
+        {
+          "term": "Riciclo",
+          "meaning": "Recyclage."
+        }
+      ],
+      "origin": "langues/lng-it-voc/2"
+    },
+    {
+      "id": "langues-lng-it-comp-0",
+      "title": "Comprendre un récit : un stage à Bologne",
+      "part": "Compréhension, expression et médiation",
+      "paragraphs": [
+        "Texte original d’entraînement : Mi chiamo Giulia e studio economia a Bologna. L’estate scorsa ho fatto un tirocinio in una piccola libreria. La mattina aiutavo i clienti e preparavo gli ordini. Un giorno la responsabile mi ha chiesto di creare una pagina per il negozio. Ho proposto di pubblicare consigli di lettura, ma non fotografie dei clienti senza il loro consenso. Vorrei continuare a lavorare nel settore culturale.",
+        "Commence par identifier qui parle, où et à quelle période. Ho fatto situe un événement accompli ; aiutavo et preparavo décrivent les tâches habituelles. Mais introduit une limite au projet numérique. Pour justifier une réponse, relève quelques mots pertinents puis reformule : Giulia desidera lavorare nella cultura. Ne traduis pas mot à mot tout le document."
+      ],
+      "lexicon": [
+        {
+          "term": "Libreria",
+          "meaning": "Librairie, et non bibliothèque."
+        },
+        {
+          "term": "Consenso",
+          "meaning": "Consentement."
+        },
+        {
+          "term": "Vorrei",
+          "meaning": "Je voudrais : projet souhaité."
+        }
+      ],
+      "origin": "langues/lng-it-comp/0"
+    },
+    {
+      "id": "langues-lng-it-comp-1",
+      "title": "Analyser un débat et préparer un oral",
+      "part": "Compréhension, expression et médiation",
+      "paragraphs": [
+        "Texte original d’entraînement : Un’associazione di quartiere vuole aprire un laboratorio di riparazione. Secondo i volontari, riparare gli oggetti permette di ridurre i rifiuti e di trasmettere competenze. Alcuni abitanti sostengono il progetto, mentre altri temono il rumore. L’associazione propone quindi un’apertura limitata al pomeriggio e una riunione mensile con i residenti. Il progetto non è ancora stato approvato.",
+        "Sépare le projet de son adoption effective. Repère les acteurs, leurs arguments et le compromis. Pour l’oral : présente le document comme un texte pédagogique, formule la question « Come conciliare ambiente e vita di quartiere? », expose deux positions, puis justifie ton avis. Pour une médiation en français, résume fidèlement le compromis sans ajouter de chiffres. En interaction, demande un éclaircissement : Può spiegare questo punto?"
+      ],
+      "lexicon": [
+        {
+          "term": "Riparazione",
+          "meaning": "Réparation."
+        },
+        {
+          "term": "Mentre",
+          "meaning": "Tandis que ; met ici deux positions en contraste."
+        },
+        {
+          "term": "Non ancora",
+          "meaning": "Pas encore."
+        }
+      ],
+      "origin": "langues/lng-it-comp/1"
+    },
+    {
+      "id": "p1-langues-lng-it-p1-culture-premiere-0",
+      "title": "Axe 1 — Identités et échanges",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "L’Italie est à la fois une terre de départ et d’arrivée des migrations. Une même personne peut entretenir des liens linguistiques et familiaux avec plusieurs pays. Pour commenter un récit de mobilité, distingue le motif du départ, l’expérience vécue et le regard du narrateur ; n’attribue pas une seule identité à tous les Italiens.",
+        "La lingua crea legami, ma l’identità non si riduce a una sola origine. La langue crée des liens, mais l’identité ne se réduit pas à une seule origine. À discuter : comment un échange scolaire transforme-t-il le regard porté sur un pays ?",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : origine : Origine.; scambio : Échange."
+      ],
+      "lexicon": [
+        {
+          "term": "legami",
+          "meaning": "Liens."
+        },
+        {
+          "term": "origine",
+          "meaning": "Origine."
+        },
+        {
+          "term": "scambio",
+          "meaning": "Échange."
+        }
+      ],
+      "origin": "p1-langues/lng-it-p1-culture-premiere/0"
+    },
+    {
+      "id": "p1-langues-lng-it-p1-culture-premiere-1",
+      "title": "Axe 2 — Diversité et inclusion",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "L’inclusion suppose une participation effective, au-delà d’un simple accueil affiché. Dans le contexte italien, un document sur l’accessibilité d’un musée ou sur l’intégration scolaire peut montrer des obstacles matériels et sociaux. Il faut distinguer un témoignage individuel d’une règle générale.",
+        "Un museo accessibile permette a più persone di partecipare alla vita culturale. Un musée accessible permet à davantage de personnes de participer à la vie culturelle. Présente une adaptation concrète et explique quel obstacle elle réduit, sans supposer qu’un seul aménagement résout toutes les exclusions.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : ostacolo : Obstacle.; partecipazione : Participation."
+      ],
+      "lexicon": [
+        {
+          "term": "accessibile",
+          "meaning": "Accessible."
+        },
+        {
+          "term": "ostacolo",
+          "meaning": "Obstacle."
+        },
+        {
+          "term": "partecipazione",
+          "meaning": "Participation."
+        }
+      ],
+      "origin": "p1-langues/lng-it-p1-culture-premiere/1"
+    },
+    {
+      "id": "p1-langues-lng-it-p1-culture-premiere-2",
+      "title": "Axe 3 — Art et pouvoir",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "Une œuvre peut soutenir un pouvoir, en critiquer les décisions ou préserver une mémoire. En Italie, l’étude d’un bâtiment public, d’une affiche ou d’un film permet de questionner la commande, le public visé et les conditions de diffusion. La présence d’un symbole ne suffit pas à prouver l’intention de l’artiste : il faut l’appuyer sur le document.",
+        "L’arte può celebrare il potere oppure metterlo in discussione. L’art peut célébrer le pouvoir ou le remettre en question. Pour analyser une image : décris d’abord les éléments visibles, puis distingue ton interprétation des faits observés.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : committente : Commanditaire d’une œuvre.; pubblico : Public destinataire d’une œuvre."
+      ],
+      "lexicon": [
+        {
+          "term": "mettere in discussione",
+          "meaning": "Remettre en question."
+        },
+        {
+          "term": "committente",
+          "meaning": "Commanditaire d’une œuvre."
+        },
+        {
+          "term": "pubblico",
+          "meaning": "Public destinataire d’une œuvre."
+        }
+      ],
+      "origin": "p1-langues/lng-it-p1-culture-premiere/2"
+    },
+    {
+      "id": "p1-langues-lng-it-p1-culture-premiere-3",
+      "title": "Axe 4 — Innovations scientifiques et responsabilité",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "Un objet innovant n’est pas nécessairement bénéfique dans tous ses usages. Un cas d’entreprise italienne peut être analysé à travers le besoin satisfait, les ressources utilisées et les risques. La responsabilité consiste aussi à informer les usagers et à anticiper les effets sur les travailleurs ou les données.",
+        "L’innovazione deve rispondere a un bisogno senza ignorare i rischi. L’innovation doit répondre à un besoin sans ignorer les risques. Dans un exemple de service numérique, oppose une promesse commerciale à un critère vérifiable ; ne transforme pas une publicité en preuve.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : bisogno : Besoin.; lavoratore : Travailleur."
+      ],
+      "lexicon": [
+        {
+          "term": "rischi",
+          "meaning": "Risques."
+        },
+        {
+          "term": "bisogno",
+          "meaning": "Besoin."
+        },
+        {
+          "term": "lavoratore",
+          "meaning": "Travailleur."
+        }
+      ],
+      "origin": "p1-langues/lng-it-p1-culture-premiere/3"
+    },
+    {
+      "id": "p1-langues-lng-it-p1-culture-premiere-4",
+      "title": "Axe 5 — L’être humain et la nature",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "Les paysages italiens sont des espaces habités et transformés : tourisme, agriculture, industrie et protection des milieux peuvent entrer en tension. Un texte sur Venise permet par exemple de distinguer l’intérêt économique de la fréquentation touristique et les contraintes de la vie des habitants, sans réduire la ville à une carte postale.",
+        "Proteggere un paesaggio significa anche pensare a chi ci vive. Protéger un paysage signifie aussi penser à ceux qui y vivent. Pour argumenter, relie une activité à un effet et à une mesure de protection ; vérifie l’échelle locale avant de généraliser.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : abitante : Habitant.; tutela : Protection, notamment d’un milieu ou d’un patrimoine."
+      ],
+      "lexicon": [
+        {
+          "term": "paesaggio",
+          "meaning": "Paysage."
+        },
+        {
+          "term": "abitante",
+          "meaning": "Habitant."
+        },
+        {
+          "term": "tutela",
+          "meaning": "Protection, notamment d’un milieu ou d’un patrimoine."
+        }
+      ],
+      "origin": "p1-langues/lng-it-p1-culture-premiere/4"
+    },
+    {
+      "id": "p1-langues-lng-it-p1-culture-premiere-5",
+      "title": "Axe 6 — Construction de l’Italie et avènement des Italiens",
+      "part": "Cultures · Première",
+      "paragraphs": [
+        "Le Risorgimento désigne le processus d’unification italienne. Le royaume d’Italie est proclamé en 1861 ; Rome devient capitale en 1871. La construction politique ne supprime pas immédiatement les différences régionales ou linguistiques. Distingue l’unité d’un État de l’uniformité supposée de ses habitants.",
+        "L’unità politica non cancella la diversità delle regioni. L’unité politique n’efface pas la diversité des régions. À partir d’une carte ou d’un texte historique, identifie la date, le territoire concerné et le point de vue de l’auteur avant de décrire la construction d’une identité collective.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : unità : Unité.; regione : Région."
+      ],
+      "lexicon": [
+        {
+          "term": "Risorgimento",
+          "meaning": "Processus d’unification italienne."
+        },
+        {
+          "term": "unità",
+          "meaning": "Unité."
+        },
+        {
+          "term": "regione",
+          "meaning": "Région."
+        }
+      ],
+      "origin": "p1-langues/lng-it-p1-culture-premiere/5"
+    },
+    {
+      "id": "langues-lng-it-culture-terminale-0",
+      "title": "Axe 1 — Espace privé et espace public",
+      "part": "Cultures · Terminale",
+      "paragraphs": [
+        "La place, la piazza, est un espace public majeur dans de nombreuses villes italiennes, mais son usage dépend des habitants, des commerces, des touristes et des règles municipales. Un espace ouvert peut aussi exclure certains usages. La frontière entre privé et public se déplace également quand une expérience intime est publiée en ligne.",
+        "Una piazza è uno spazio condiviso, ma gli usi possono entrare in conflitto. Une place est un espace partagé, mais ses usages peuvent entrer en conflit. Analyse qui peut entrer, qui décide et qui tire un avantage de la transformation d’un lieu.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : spazio condiviso : Espace partagé.; commercio : Commerce."
+      ],
+      "lexicon": [
+        {
+          "term": "piazza",
+          "meaning": "Place publique."
+        },
+        {
+          "term": "spazio condiviso",
+          "meaning": "Espace partagé."
+        },
+        {
+          "term": "commercio",
+          "meaning": "Commerce."
+        }
+      ],
+      "origin": "langues/lng-it-culture-terminale/0"
+    },
+    {
+      "id": "langues-lng-it-culture-terminale-1",
+      "title": "Axe 2 — Territoire et mémoire",
+      "part": "Cultures · Terminale",
+      "paragraphs": [
+        "Un monument ou un lieu de mémoire sélectionne des événements et propose une façon de les raconter. Dans un document italien consacré à la Résistance, distingue l’événement historique, sa commémoration ultérieure et les usages actuels du souvenir. Une mémoire n’est pas une photographie neutre et exhaustive du passé.",
+        "Un luogo della memoria invita a ricordare e a interrogare il passato. Un lieu de mémoire invite à se souvenir et à interroger le passé. Pour commenter une plaque, repère la date commémorée, la date de pose et le groupe qui prend la parole.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : targa : Plaque, notamment commémorative.; commemorazione : Commémoration."
+      ],
+      "lexicon": [
+        {
+          "term": "memoria",
+          "meaning": "Mémoire."
+        },
+        {
+          "term": "targa",
+          "meaning": "Plaque, notamment commémorative."
+        },
+        {
+          "term": "commemorazione",
+          "meaning": "Commémoration."
+        }
+      ],
+      "origin": "langues/lng-it-culture-terminale/1"
+    },
+    {
+      "id": "langues-lng-it-culture-terminale-2",
+      "title": "Axe 3 — Fictions et réalités",
+      "part": "Cultures · Terminale",
+      "paragraphs": [
+        "Le cinéma et le roman peuvent s’inspirer de faits sociaux sans constituer un reportage. Le néoréalisme italien de l’après-guerre met notamment en scène des difficultés de la vie quotidienne. Même quand une œuvre semble proche du réel, cadrage, montage, personnages et narration construisent un point de vue.",
+        "Un film può mostrare una realtà sociale senza essere un documentario. Un film peut montrer une réalité sociale sans être un documentaire. Sépare le personnage de l’acteur et le narrateur de l’auteur ; justifie une interprétation par une scène précise.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : personaggio : Personnage.; montaggio : Montage cinématographique."
+      ],
+      "lexicon": [
+        {
+          "term": "punto di vista",
+          "meaning": "Point de vue."
+        },
+        {
+          "term": "personaggio",
+          "meaning": "Personnage."
+        },
+        {
+          "term": "montaggio",
+          "meaning": "Montage cinématographique."
+        }
+      ],
+      "origin": "langues/lng-it-culture-terminale/2"
+    },
+    {
+      "id": "langues-lng-it-culture-terminale-3",
+      "title": "Axe 4 — Enjeux et formes de la communication",
+      "part": "Cultures · Terminale",
+      "paragraphs": [
+        "Un message n’a pas le même effet selon qu’il paraît dans un journal, une publicité ou un réseau social. Pour un document italien, repère l’émetteur, le destinataire, le support et la visée : informer, convaincre, vendre ou divertir. Un slogan cherche souvent la mémorisation plutôt que la démonstration.",
+        "Prima di condividere una notizia, bisogna verificarne la fonte. Avant de partager une information, il faut en vérifier la source. Compare un titre au contenu de l’article et demande-toi quelles informations ont été omises ; la popularité n’est pas une preuve.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : destinatario : Destinataire.; notizia : Nouvelle / information."
+      ],
+      "lexicon": [
+        {
+          "term": "fonte",
+          "meaning": "Source."
+        },
+        {
+          "term": "destinatario",
+          "meaning": "Destinataire."
+        },
+        {
+          "term": "notizia",
+          "meaning": "Nouvelle / information."
+        }
+      ],
+      "origin": "langues/lng-it-culture-terminale/3"
+    },
+    {
+      "id": "langues-lng-it-culture-terminale-4",
+      "title": "Axe 5 — Citoyenneté et mondes virtuels",
+      "part": "Cultures · Terminale",
+      "paragraphs": [
+        "Participer à un débat numérique peut faciliter l’expression citoyenne, mais impose de protéger les personnes et de distinguer critique et harcèlement. Un cas italien de mobilisation en ligne doit être étudié à partir d’acteurs et d’actions identifiables, sans supposer que chaque partage conduit à une action sur le terrain.",
+        "Essere cittadini online significa avere diritti e responsabilità. Être citoyen en ligne signifie avoir des droits et des responsabilités. Avant de publier une photo ou un témoignage, réfléchis à la vie privée, au consentement et aux conséquences d’une diffusion durable.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : consenso : Consentement.; molestie : Harcèlement / comportements importuns, selon le contexte."
+      ],
+      "lexicon": [
+        {
+          "term": "responsabilità",
+          "meaning": "Responsabilité."
+        },
+        {
+          "term": "consenso",
+          "meaning": "Consentement."
+        },
+        {
+          "term": "molestie",
+          "meaning": "Harcèlement / comportements importuns, selon le contexte."
+        }
+      ],
+      "origin": "langues/lng-it-culture-terminale/4"
+    },
+    {
+      "id": "langues-lng-it-culture-terminale-5",
+      "title": "Axe 6 — De la République à l’Europe",
+      "part": "Cultures · Terminale",
+      "paragraphs": [
+        "Le référendum de 1946 conduit l’Italie à devenir une république ; la Constitution entre en vigueur en 1948. L’Italie figure parmi les six États signataires des traités de Rome de 1957, une étape de la construction européenne. Ne confonds pas ces communautés initiales avec l’Union européenne sous sa forme actuelle.",
+        "La cittadinanza si esercita a livello nazionale ed europeo. La citoyenneté s’exerce à l’échelle nationale et européenne. Compare les niveaux de décision dans un exemple précis : une institution nationale et une institution européenne ne disposent pas automatiquement des mêmes compétences.",
+        "Pour t’entraîner, résume le problème en deux phrases dans la langue étudiée, donne un exemple précis tiré d’un document et formule une limite. Relis les accords et les connecteurs. Cette production ouverte est un entraînement personnel : elle n’est pas notée automatiquement par le QCM.",
+        "Repères lexicaux de cet axe : Costituzione : Constitution.; trattato : Traité."
+      ],
+      "lexicon": [
+        {
+          "term": "Repubblica",
+          "meaning": "République."
+        },
+        {
+          "term": "Costituzione",
+          "meaning": "Constitution."
+        },
+        {
+          "term": "trattato",
+          "meaning": "Traité."
+        }
+      ],
+      "origin": "langues/lng-it-culture-terminale/5"
+    }
+  ],
+  "exercises": [
+    {
+      "lessonId": null,
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "p1-langues/lng-it-p1-gram-s1-qcm",
+      "type": "qcm",
+      "prompt": "Quel groupe signifie « les élèves » ?",
+      "choices": [
+        "lo studenti",
+        "i studente",
+        "gli studenti"
+      ],
+      "answer": "gli studenti",
+      "explanation": "Lo studente devient gli studenti.",
+      "alternatives": [],
+      "context": "L’italien distingue les consonnes simples et doubles : pala (pelle) et palla (ballon) ne se prononcent pas de la même façon. Devant e ou i, c se prononce comme « tch » et g comme « dj » ; ch et gh maintiennent les sons durs : chi, spaghetti. L’accent écrit distingue notamment e (et) de è (est).\n\nL’article défini dépend du genre, du nombre et du début du mot : il libro → i libri ; lo studente → gli studenti ; l’amico → gli amici ; la casa → le case. Lo s’emploie notamment devant s + consonne et z. L’article indéfini donne un libro, uno studente, una casa, un’amica. Un amico n’a pas d’apostrophe, car un est masculin.\n\nLes noms en -o ont souvent un pluriel en -i, ceux en -a un pluriel en -e ; un nom en -e passe généralement à -i : studente → studenti. L’adjectif s’accorde : una casa nuova, due case nuove. Ces régularités ont des exceptions : apprends le genre avec le nom.",
+      "sourceQuestion": 0,
+      "id": "it-ex-001"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "p1-langues/lng-it-p1-gram-s1-qcm",
+      "type": "qcm",
+      "prompt": "Complète : due case…",
+      "choices": [
+        "nuova",
+        "nuove",
+        "nuovo"
+      ],
+      "answer": "nuove",
+      "explanation": "Case est féminin pluriel : nuove.",
+      "alternatives": [],
+      "context": "L’italien distingue les consonnes simples et doubles : pala (pelle) et palla (ballon) ne se prononcent pas de la même façon. Devant e ou i, c se prononce comme « tch » et g comme « dj » ; ch et gh maintiennent les sons durs : chi, spaghetti. L’accent écrit distingue notamment e (et) de è (est).\n\nL’article défini dépend du genre, du nombre et du début du mot : il libro → i libri ; lo studente → gli studenti ; l’amico → gli amici ; la casa → le case. Lo s’emploie notamment devant s + consonne et z. L’article indéfini donne un libro, uno studente, una casa, un’amica. Un amico n’a pas d’apostrophe, car un est masculin.\n\nLes noms en -o ont souvent un pluriel en -i, ceux en -a un pluriel en -e ; un nom en -e passe généralement à -i : studente → studenti. L’adjectif s’accorde : una casa nuova, due case nuove. Ces régularités ont des exceptions : apprends le genre avec le nom.",
+      "sourceQuestion": 1,
+      "id": "it-ex-002"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "p1-langues/lng-it-p1-gram-s1-qcm",
+      "type": "qcm",
+      "prompt": "Quelle forme signifie « est » ?",
+      "choices": [
+        "il",
+        "è",
+        "e"
+      ],
+      "answer": "è",
+      "explanation": "È porte un accent ; e signifie et.",
+      "alternatives": [],
+      "context": "L’italien distingue les consonnes simples et doubles : pala (pelle) et palla (ballon) ne se prononcent pas de la même façon. Devant e ou i, c se prononce comme « tch » et g comme « dj » ; ch et gh maintiennent les sons durs : chi, spaghetti. L’accent écrit distingue notamment e (et) de è (est).\n\nL’article défini dépend du genre, du nombre et du début du mot : il libro → i libri ; lo studente → gli studenti ; l’amico → gli amici ; la casa → le case. Lo s’emploie notamment devant s + consonne et z. L’article indéfini donne un libro, uno studente, una casa, un’amica. Un amico n’a pas d’apostrophe, car un est masculin.\n\nLes noms en -o ont souvent un pluriel en -i, ceux en -a un pluriel en -e ; un nom en -e passe généralement à -i : studente → studenti. L’adjectif s’accorde : una casa nuova, due case nuove. Ces régularités ont des exceptions : apprends le genre avec le nom.",
+      "sourceQuestion": 2,
+      "id": "it-ex-003"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "p1-langues/lng-it-p1-gram-s2-qcm",
+      "type": "qcm",
+      "prompt": "Complète : noi… italiano.",
+      "choices": [
+        "parlate",
+        "parliamo",
+        "parlano"
+      ],
+      "answer": "parliamo",
+      "explanation": "Noi correspond à parliamo.",
+      "alternatives": [],
+      "context": "Essere : sono, sei, è, siamo, siete, sono. Avere : ho, hai, ha, abbiamo, avete, hanno. Le sujet peut rester implicite grâce à la terminaison : sono italiana signifie « je suis italienne » selon le contexte ; ho diciassette anni signifie « j’ai dix-sept ans ». On garde le pronom pour lever une ambiguïté ou insister.\n\nAu présent, parlare donne parlo, parli, parla, parliamo, parlate, parlano ; prendere : prendo, prendi, prende, prendiamo, prendete, prendono ; dormire : dormo, dormi, dorme, dormiamo, dormite, dormono. Certains verbes en -ire prennent -isc- : capisco, capisci, capisce, capiamo, capite, capiscono.\n\nAndare donne vado, vai, va, andiamo, andate, vanno ; fare : faccio, fai, fa, facciamo, fate, fanno. Pour nier, place non devant le verbe : non capisco. Une question peut garder le même ordre : studi italiano? Avec un mot interrogatif : dove studi? (où étudies-tu ?) et perché studi? (pourquoi étudies-tu ?).",
+      "sourceQuestion": 0,
+      "id": "it-ex-004"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "p1-langues/lng-it-p1-gram-s2-qcm",
+      "type": "qcm",
+      "prompt": "Comment dire « je ne comprends pas » ?",
+      "choices": [
+        "Non capisco.",
+        "Non capiamo.",
+        "Capisco non."
+      ],
+      "answer": "Non capisco.",
+      "explanation": "Non se place avant capisco.",
+      "alternatives": [],
+      "context": "Essere : sono, sei, è, siamo, siete, sono. Avere : ho, hai, ha, abbiamo, avete, hanno. Le sujet peut rester implicite grâce à la terminaison : sono italiana signifie « je suis italienne » selon le contexte ; ho diciassette anni signifie « j’ai dix-sept ans ». On garde le pronom pour lever une ambiguïté ou insister.\n\nAu présent, parlare donne parlo, parli, parla, parliamo, parlate, parlano ; prendere : prendo, prendi, prende, prendiamo, prendete, prendono ; dormire : dormo, dormi, dorme, dormiamo, dormite, dormono. Certains verbes en -ire prennent -isc- : capisco, capisci, capisce, capiamo, capite, capiscono.\n\nAndare donne vado, vai, va, andiamo, andate, vanno ; fare : faccio, fai, fa, facciamo, fate, fanno. Pour nier, place non devant le verbe : non capisco. Une question peut garder le même ordre : studi italiano? Avec un mot interrogatif : dove studi? (où étudies-tu ?) et perché studi? (pourquoi étudies-tu ?).",
+      "sourceQuestion": 1,
+      "id": "it-ex-005"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "p1-langues/lng-it-p1-gram-s2-qcm",
+      "type": "qcm",
+      "prompt": "Complète : io… diciassette anni.",
+      "choices": [
+        "sono",
+        "ho",
+        "ha"
+      ],
+      "answer": "ho",
+      "explanation": "L’âge s’exprime avec avere : ho.",
+      "alternatives": [],
+      "context": "Essere : sono, sei, è, siamo, siete, sono. Avere : ho, hai, ha, abbiamo, avete, hanno. Le sujet peut rester implicite grâce à la terminaison : sono italiana signifie « je suis italienne » selon le contexte ; ho diciassette anni signifie « j’ai dix-sept ans ». On garde le pronom pour lever une ambiguïté ou insister.\n\nAu présent, parlare donne parlo, parli, parla, parliamo, parlate, parlano ; prendere : prendo, prendi, prende, prendiamo, prendete, prendono ; dormire : dormo, dormi, dorme, dormiamo, dormite, dormono. Certains verbes en -ire prennent -isc- : capisco, capisci, capisce, capiamo, capite, capiscono.\n\nAndare donne vado, vai, va, andiamo, andate, vanno ; fare : faccio, fai, fa, facciamo, fate, fanno. Pour nier, place non devant le verbe : non capisco. Une question peut garder le même ordre : studi italiano? Avec un mot interrogatif : dove studi? (où étudies-tu ?) et perché studi? (pourquoi étudies-tu ?).",
+      "sourceQuestion": 2,
+      "id": "it-ex-006"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "p1-langues/lng-it-p1-gram-s3-qcm",
+      "type": "qcm",
+      "prompt": "Maria… ieri. Choisis la forme correcte.",
+      "choices": [
+        "è arrivato",
+        "è arrivata",
+        "ha arrivato"
+      ],
+      "answer": "è arrivata",
+      "explanation": "Arrivare se conjugue ici avec essere et le participe s’accorde avec Maria.",
+      "alternatives": [],
+      "context": "Le passato prossimo se forme avec avere ou essere au présent et un participe passé : ho parlato, ho ricevuto, ho dormito. Avec essere, le participe s’accorde avec le sujet : Maria è arrivata ; Marco e Luca sono partiti. Tous les verbes de mouvement ne prennent pas automatiquement essere : apprends l’auxiliaire de chaque verbe, par exemple ho viaggiato.\n\nLes participes fréquents comprennent fatto (fare), detto (dire), visto (vedere), scritto (scrivere), letto (leggere) et preso (prendere). Dans une phrase simple avec avere sans pronom objet antéposé, le participe reste inchangé : Maria ha scritto una lettera.\n\nL’imperfetto décrit un état, une habitude ou l’arrière-plan : parlavo, parlavi, parlava, parlavamo, parlavate, parlavano ; essere donne ero, eri, era, eravamo, eravate, erano. Da piccola leggevo molto : enfant, je lisais beaucoup. Mentre studiavo, è arrivato Luca oppose une action en cours à l’événement qui survient. La distance chronologique seule ne décide pas du choix du temps.",
+      "sourceQuestion": 0,
+      "id": "it-ex-007"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "p1-langues/lng-it-p1-gram-s3-qcm",
+      "type": "qcm",
+      "prompt": "Pour une habitude : Da piccola… molto.",
+      "choices": [
+        "letto",
+        "leggevo",
+        "leggere"
+      ],
+      "answer": "leggevo",
+      "explanation": "Leggevo est l’imperfetto utilisé pour l’habitude.",
+      "alternatives": [],
+      "context": "Le passato prossimo se forme avec avere ou essere au présent et un participe passé : ho parlato, ho ricevuto, ho dormito. Avec essere, le participe s’accorde avec le sujet : Maria è arrivata ; Marco e Luca sono partiti. Tous les verbes de mouvement ne prennent pas automatiquement essere : apprends l’auxiliaire de chaque verbe, par exemple ho viaggiato.\n\nLes participes fréquents comprennent fatto (fare), detto (dire), visto (vedere), scritto (scrivere), letto (leggere) et preso (prendere). Dans une phrase simple avec avere sans pronom objet antéposé, le participe reste inchangé : Maria ha scritto una lettera.\n\nL’imperfetto décrit un état, une habitude ou l’arrière-plan : parlavo, parlavi, parlava, parlavamo, parlavate, parlavano ; essere donne ero, eri, era, eravamo, eravate, erano. Da piccola leggevo molto : enfant, je lisais beaucoup. Mentre studiavo, è arrivato Luca oppose une action en cours à l’événement qui survient. La distance chronologique seule ne décide pas du choix du temps.",
+      "sourceQuestion": 1,
+      "id": "it-ex-008"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "p1-langues/lng-it-p1-gram-s3-qcm",
+      "type": "qcm",
+      "prompt": "Quel participe appartient à scrivere ?",
+      "choices": [
+        "preso",
+        "scritto",
+        "detto"
+      ],
+      "answer": "scritto",
+      "explanation": "Scrivere → scritto ; dire → detto ; prendere → preso.",
+      "alternatives": [],
+      "context": "Le passato prossimo se forme avec avere ou essere au présent et un participe passé : ho parlato, ho ricevuto, ho dormito. Avec essere, le participe s’accorde avec le sujet : Maria è arrivata ; Marco e Luca sono partiti. Tous les verbes de mouvement ne prennent pas automatiquement essere : apprends l’auxiliaire de chaque verbe, par exemple ho viaggiato.\n\nLes participes fréquents comprennent fatto (fare), detto (dire), visto (vedere), scritto (scrivere), letto (leggere) et preso (prendere). Dans une phrase simple avec avere sans pronom objet antéposé, le participe reste inchangé : Maria ha scritto una lettera.\n\nL’imperfetto décrit un état, une habitude ou l’arrière-plan : parlavo, parlavi, parlava, parlavamo, parlavate, parlavano ; essere donne ero, eri, era, eravamo, eravate, erano. Da piccola leggevo molto : enfant, je lisais beaucoup. Mentre studiavo, è arrivato Luca oppose une action en cours à l’événement qui survient. La distance chronologique seule ne décide pas du choix du temps.",
+      "sourceQuestion": 2,
+      "id": "it-ex-009"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "p1-langues/lng-it-p1-gram-s4-qcm",
+      "type": "qcm",
+      "prompt": "Quel énoncé formule un souhait poli ?",
+      "choices": [
+        "Vorrei lavorare in Italia.",
+        "Lavorerò in Italia.",
+        "Lavoro in Italia."
+      ],
+      "answer": "Vorrei lavorare in Italia.",
+      "explanation": "Vorrei exprime ici le souhait.",
+      "alternatives": [],
+      "context": "Le futur de parlare donne parlerò, parlerai, parlerà, parleremo, parlerete, parleranno. Pour un verbe régulier en -are, le a devient e dans le radical ; prendere donne prenderò et dormire dormirò. Quelques radicaux sont irréguliers : essere → sarò, avere → avrò, andare → andrò, fare → farò, venire → verrò.\n\nLe conditionnel utilise les terminaisons -ei, -esti, -ebbe, -emmo, -este, -ebbero : parlerei, parleresti, parlerebbe, parleremmo, parlereste, parlerebbero. Les radicaux irréguliers du futur servent aussi au conditionnel : sarei, avrei, andrei. Vorrei signifie « je voudrais » ; potrei signifie « je pourrais ».\n\nL’anno prossimo farò uno stage annonce un stage l’an prochain. Vorrei lavorare in Italia exprime un souhait sans présenter sa réalisation comme certaine. Pour une hypothèse réalisable, on peut employer se + présent, puis futur : se ho tempo, verrò. Ne calque pas le français « si j’aurais » : l’hypothèse irréelle demande une autre construction.",
+      "sourceQuestion": 0,
+      "id": "it-ex-010"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "p1-langues/lng-it-p1-gram-s4-qcm",
+      "type": "qcm",
+      "prompt": "Quel est le futur de fare à la première personne ?",
+      "choices": [
+        "farei",
+        "faccio",
+        "farò"
+      ],
+      "answer": "farò",
+      "explanation": "Farò est le futur ; farei le conditionnel ; faccio le présent.",
+      "alternatives": [],
+      "context": "Le futur de parlare donne parlerò, parlerai, parlerà, parleremo, parlerete, parleranno. Pour un verbe régulier en -are, le a devient e dans le radical ; prendere donne prenderò et dormire dormirò. Quelques radicaux sont irréguliers : essere → sarò, avere → avrò, andare → andrò, fare → farò, venire → verrò.\n\nLe conditionnel utilise les terminaisons -ei, -esti, -ebbe, -emmo, -este, -ebbero : parlerei, parleresti, parlerebbe, parleremmo, parlereste, parlerebbero. Les radicaux irréguliers du futur servent aussi au conditionnel : sarei, avrei, andrei. Vorrei signifie « je voudrais » ; potrei signifie « je pourrais ».\n\nL’anno prossimo farò uno stage annonce un stage l’an prochain. Vorrei lavorare in Italia exprime un souhait sans présenter sa réalisation comme certaine. Pour une hypothèse réalisable, on peut employer se + présent, puis futur : se ho tempo, verrò. Ne calque pas le français « si j’aurais » : l’hypothèse irréelle demande une autre construction.",
+      "sourceQuestion": 1,
+      "id": "it-ex-011"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "p1-langues/lng-it-p1-gram-s4-qcm",
+      "type": "qcm",
+      "prompt": "Complète : se ho tempo,…",
+      "choices": [
+        "verrò",
+        "venire",
+        "venuto"
+      ],
+      "answer": "verrò",
+      "explanation": "Le futur verrò convient à cette hypothèse réalisable.",
+      "alternatives": [],
+      "context": "Le futur de parlare donne parlerò, parlerai, parlerà, parleremo, parlerete, parleranno. Pour un verbe régulier en -are, le a devient e dans le radical ; prendere donne prenderò et dormire dormirò. Quelques radicaux sont irréguliers : essere → sarò, avere → avrò, andare → andrò, fare → farò, venire → verrò.\n\nLe conditionnel utilise les terminaisons -ei, -esti, -ebbe, -emmo, -este, -ebbero : parlerei, parleresti, parlerebbe, parleremmo, parlereste, parlerebbero. Les radicaux irréguliers du futur servent aussi au conditionnel : sarei, avrei, andrei. Vorrei signifie « je voudrais » ; potrei signifie « je pourrais ».\n\nL’anno prossimo farò uno stage annonce un stage l’an prochain. Vorrei lavorare in Italia exprime un souhait sans présenter sa réalisation comme certaine. Pour une hypothèse réalisable, on peut employer se + présent, puis futur : se ho tempo, verrò. Ne calque pas le français « si j’aurais » : l’hypothèse irréelle demande une autre construction.",
+      "sourceQuestion": 2,
+      "id": "it-ex-012"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Vocabulaire en contexte et ETLV",
+      "origin": "p1-langues/lng-it-p1-voc-s1-qcm",
+      "type": "qcm",
+      "prompt": "Quel mot désigne un stage ?",
+      "choices": [
+        "stazione",
+        "biglietto",
+        "tirocinio"
+      ],
+      "answer": "tirocinio",
+      "explanation": "Tirocinio désigne une période de formation pratique, notamment un stage. Le mot stage est aussi employé en italien.",
+      "alternatives": [],
+      "context": "La famiglia est la famille, la scuola l’école, lo studente l’élève, l’insegnante l’enseignant. Gli studi désigne les études, tandis que lo stage ou il tirocinio désignent un stage. Pour se déplacer : il treno (train), la stazione (gare), il viaggio (voyage). Un biglietto est un billet, pas une facture.\n\nMi chiamo Sara, studio economia e cerco un tirocinio a Torino : je m’appelle Sara, j’étudie l’économie et je cherche un stage à Turin. Pour écrire une demande polie : Buongiorno, vorrei ricevere informazioni sul tirocinio. Termine par Cordiali saluti. Adapte tu ou Lei au destinataire, sans mélanger les registres.",
+      "sourceQuestion": 0,
+      "id": "it-ex-013"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Vocabulaire en contexte et ETLV",
+      "origin": "p1-langues/lng-it-p1-voc-s1-qcm",
+      "type": "qcm",
+      "prompt": "Quelle formule termine un courriel professionnel ?",
+      "choices": [
+        "Mi chiamo",
+        "Cordiali saluti",
+        "Il treno"
+      ],
+      "answer": "Cordiali saluti",
+      "explanation": "Cordiali saluti est une formule de clôture polie adaptée à un courriel professionnel ; ciao est plus familier.",
+      "alternatives": [],
+      "context": "La famiglia est la famille, la scuola l’école, lo studente l’élève, l’insegnante l’enseignant. Gli studi désigne les études, tandis que lo stage ou il tirocinio désignent un stage. Pour se déplacer : il treno (train), la stazione (gare), il viaggio (voyage). Un biglietto est un billet, pas une facture.\n\nMi chiamo Sara, studio economia e cerco un tirocinio a Torino : je m’appelle Sara, j’étudie l’économie et je cherche un stage à Turin. Pour écrire une demande polie : Buongiorno, vorrei ricevere informazioni sul tirocinio. Termine par Cordiali saluti. Adapte tu ou Lei au destinataire, sans mélanger les registres.",
+      "sourceQuestion": 1,
+      "id": "it-ex-014"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Vocabulaire en contexte et ETLV",
+      "origin": "p1-langues/lng-it-p1-voc-s2-qcm",
+      "type": "qcm",
+      "prompt": "Quel mot correspond au chiffre d’affaires ?",
+      "choices": [
+        "fatturato",
+        "utile",
+        "costo"
+      ],
+      "answer": "fatturato",
+      "explanation": "Fatturato désigne le chiffre d’affaires, c’est-à-dire les ventes réalisées ; il ne désigne pas le bénéfice après déduction des charges.",
+      "alternatives": [],
+      "context": "L’azienda ou l’impresa est l’entreprise ; un dipendente est un salarié, il cliente un client, il fornitore un fournisseur. Il fatturato est le chiffre d’affaires, il costo un coût et l’utile un bénéfice. Ne confonds pas chiffre d’affaires et bénéfice : le bénéfice tient compte des charges. Una fattura signifie une facture ; una fabbrica, une usine.\n\nCas fictif : L’impresa produce biciclette e vende i suoi prodotti ai negozi. Il fatturato cresce, ma aumentano anche i costi. L’entreprise fabrique des vélos et les vend aux magasins. Son chiffre d’affaires augmente, mais ses coûts aussi : la hausse de son bénéfice n’est donc pas démontrée. À l’oral ETLV, présente l’activité, les parties prenantes et un indicateur, puis explique une limite.",
+      "sourceQuestion": 0,
+      "id": "it-ex-015"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Vocabulaire en contexte et ETLV",
+      "origin": "p1-langues/lng-it-p1-voc-s2-qcm",
+      "type": "qcm",
+      "prompt": "Que peut-on conclure de ce cas ?",
+      "choices": [
+        "Le bénéfice augmente nécessairement.",
+        "Le chiffre d’affaires et les coûts augmentent.",
+        "L’entreprise ne vend rien."
+      ],
+      "answer": "Le chiffre d’affaires et les coûts augmentent.",
+      "explanation": "Le cas mentionne une hausse des ventes et une hausse des coûts. La hausse des ventes seule ne permet donc pas d’affirmer que le bénéfice augmente.",
+      "alternatives": [],
+      "context": "L’azienda ou l’impresa est l’entreprise ; un dipendente est un salarié, il cliente un client, il fornitore un fournisseur. Il fatturato est le chiffre d’affaires, il costo un coût et l’utile un bénéfice. Ne confonds pas chiffre d’affaires et bénéfice : le bénéfice tient compte des charges. Una fattura signifie une facture ; una fabbrica, une usine.\n\nCas fictif : L’impresa produce biciclette e vende i suoi prodotti ai negozi. Il fatturato cresce, ma aumentano anche i costi. L’entreprise fabrique des vélos et les vend aux magasins. Son chiffre d’affaires augmente, mais ses coûts aussi : la hausse de son bénéfice n’est donc pas démontrée. À l’oral ETLV, présente l’activité, les parties prenantes et un indicateur, puis explique une limite.",
+      "sourceQuestion": 1,
+      "id": "it-ex-016"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Vocabulaire en contexte et ETLV",
+      "origin": "p1-langues/lng-it-p1-voc-s3-qcm",
+      "type": "qcm",
+      "prompt": "Que signifie i dati personali ?",
+      "choices": [
+        "Les déchets.",
+        "Les sources.",
+        "Les données personnelles."
+      ],
+      "answer": "Les données personnelles.",
+      "explanation": "Dati signifie données et personali signifie personnelles : ces informations se rapportent à des personnes identifiables.",
+      "alternatives": [],
+      "context": "La rete est le réseau ou Internet selon le contexte ; i dati personali sont les données personnelles, una fonte une source, una notizia une nouvelle. Una notizia falsa est une fausse information : un grand nombre de partages n’en prouve pas la fiabilité. Vérifie l’auteur, la date et les preuves avant de relayer.\n\nL’ambiente est l’environnement, i rifiuti les déchets, il riciclo le recyclage et l’energia rinnovabile l’énergie renouvelable. Ridurre i rifiuti signifie réduire les déchets. Possiamo ridurre i rifiuti, tuttavia dobbiamo cambiare le nostre abitudini : nous pouvons réduire les déchets, cependant nous devons changer nos habitudes. Une proposition devient convaincante quand on en précise l’action, l’effet attendu et la limite.",
+      "sourceQuestion": 0,
+      "id": "it-ex-017"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Vocabulaire en contexte et ETLV",
+      "origin": "p1-langues/lng-it-p1-voc-s3-qcm",
+      "type": "qcm",
+      "prompt": "Quelle expression signifie réduire les déchets ?",
+      "choices": [
+        "verificare una fonte",
+        "ridurre i rifiuti",
+        "condividere una notizia"
+      ],
+      "answer": "ridurre i rifiuti",
+      "explanation": "Ridurre signifie réduire ; rifiuti signifie déchets. L’expression porte sur une diminution des déchets, pas seulement leur collecte.",
+      "alternatives": [],
+      "context": "La rete est le réseau ou Internet selon le contexte ; i dati personali sont les données personnelles, una fonte une source, una notizia une nouvelle. Una notizia falsa est une fausse information : un grand nombre de partages n’en prouve pas la fiabilité. Vérifie l’auteur, la date et les preuves avant de relayer.\n\nL’ambiente est l’environnement, i rifiuti les déchets, il riciclo le recyclage et l’energia rinnovabile l’énergie renouvelable. Ridurre i rifiuti signifie réduire les déchets. Possiamo ridurre i rifiuti, tuttavia dobbiamo cambiare le nostre abitudini : nous pouvons réduire les déchets, cependant nous devons changer nos habitudes. Une proposition devient convaincante quand on en précise l’action, l’effet attendu et la limite.",
+      "sourceQuestion": 1,
+      "id": "it-ex-018"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Compréhension, expression et médiation",
+      "origin": "p1-langues/lng-it-p1-comp-s1-qcm",
+      "type": "qcm",
+      "prompt": "Où Giulia a-t-elle effectué son stage ?",
+      "choices": [
+        "Dans une librairie.",
+        "Dans une banque.",
+        "Dans une gare."
+      ],
+      "answer": "Dans une librairie.",
+      "explanation": "Le récit emploie libreria : il s’agit d’une librairie. Une bibliothèque de consultation se dit biblioteca.",
+      "alternatives": [],
+      "context": "Texte original d’entraînement : Mi chiamo Giulia e studio economia a Bologna. L’estate scorsa ho fatto un tirocinio in una piccola libreria. La mattina aiutavo i clienti e preparavo gli ordini. Un giorno la responsabile mi ha chiesto di creare una pagina per il negozio. Ho proposto di pubblicare consigli di lettura, ma non fotografie dei clienti senza il loro consenso. Vorrei continuare a lavorare nel settore culturale.\n\nCommence par identifier qui parle, où et à quelle période. Ho fatto situe un événement accompli ; aiutavo et preparavo décrivent les tâches habituelles. Mais introduit une limite au projet numérique. Pour justifier une réponse, relève quelques mots pertinents puis reformule : Giulia desidera lavorare nella cultura. Ne traduis pas mot à mot tout le document.",
+      "sourceQuestion": 0,
+      "id": "it-ex-019"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Compréhension, expression et médiation",
+      "origin": "p1-langues/lng-it-p1-comp-s1-qcm",
+      "type": "qcm",
+      "prompt": "Quelle limite pose-t-elle à la publication des photos ?",
+      "choices": [
+        "Publier toutes les photos.",
+        "Abandonner toute présence numérique.",
+        "Obtenir le consentement des clients."
+      ],
+      "answer": "Obtenir le consentement des clients.",
+      "explanation": "Le passage sur les photos demande l’accord des clients : une possibilité technique de publier ne remplace pas leur consentement.",
+      "alternatives": [],
+      "context": "Texte original d’entraînement : Mi chiamo Giulia e studio economia a Bologna. L’estate scorsa ho fatto un tirocinio in una piccola libreria. La mattina aiutavo i clienti e preparavo gli ordini. Un giorno la responsabile mi ha chiesto di creare una pagina per il negozio. Ho proposto di pubblicare consigli di lettura, ma non fotografie dei clienti senza il loro consenso. Vorrei continuare a lavorare nel settore culturale.\n\nCommence par identifier qui parle, où et à quelle période. Ho fatto situe un événement accompli ; aiutavo et preparavo décrivent les tâches habituelles. Mais introduit une limite au projet numérique. Pour justifier une réponse, relève quelques mots pertinents puis reformule : Giulia desidera lavorare nella cultura. Ne traduis pas mot à mot tout le document.",
+      "sourceQuestion": 1,
+      "id": "it-ex-020"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Compréhension, expression et médiation",
+      "origin": "p1-langues/lng-it-p1-comp-s1-qcm",
+      "type": "qcm",
+      "prompt": "Que décrivent aiutavo et preparavo ?",
+      "choices": [
+        "Une interdiction.",
+        "Un projet futur.",
+        "Des tâches habituelles pendant le stage."
+      ],
+      "answer": "Des tâches habituelles pendant le stage.",
+      "explanation": "Aiutavo et preparavo sont à l’imperfetto ; dans ce récit, ils décrivent des tâches répétées pendant le stage.",
+      "alternatives": [],
+      "context": "Texte original d’entraînement : Mi chiamo Giulia e studio economia a Bologna. L’estate scorsa ho fatto un tirocinio in una piccola libreria. La mattina aiutavo i clienti e preparavo gli ordini. Un giorno la responsabile mi ha chiesto di creare una pagina per il negozio. Ho proposto di pubblicare consigli di lettura, ma non fotografie dei clienti senza il loro consenso. Vorrei continuare a lavorare nel settore culturale.\n\nCommence par identifier qui parle, où et à quelle période. Ho fatto situe un événement accompli ; aiutavo et preparavo décrivent les tâches habituelles. Mais introduit une limite au projet numérique. Pour justifier une réponse, relève quelques mots pertinents puis reformule : Giulia desidera lavorare nella cultura. Ne traduis pas mot à mot tout le document.",
+      "sourceQuestion": 2,
+      "id": "it-ex-021"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Compréhension, expression et médiation",
+      "origin": "p1-langues/lng-it-p1-comp-s2-qcm",
+      "type": "qcm",
+      "prompt": "Quel est l’objectif annoncé du laboratoire ?",
+      "choices": [
+        "Vendre seulement des objets neufs.",
+        "Réparer pour réduire les déchets et transmettre des compétences.",
+        "Supprimer les réunions."
+      ],
+      "answer": "Réparer pour réduire les déchets et transmettre des compétences.",
+      "explanation": "Le projet associe la réparation d’objets à deux finalités : éviter des déchets et partager des savoir-faire. Il faut conserver ces deux idées.",
+      "alternatives": [],
+      "context": "Texte original d’entraînement : Un’associazione di quartiere vuole aprire un laboratorio di riparazione. Secondo i volontari, riparare gli oggetti permette di ridurre i rifiuti e di trasmettere competenze. Alcuni abitanti sostengono il progetto, mentre altri temono il rumore. L’associazione propone quindi un’apertura limitata al pomeriggio e una riunione mensile con i residenti. Il progetto non è ancora stato approvato.\n\nSépare le projet de son adoption effective. Repère les acteurs, leurs arguments et le compromis. Pour l’oral : présente le document comme un texte pédagogique, formule la question « Come conciliare ambiente e vita di quartiere? », expose deux positions, puis justifie ton avis. Pour une médiation en français, résume fidèlement le compromis sans ajouter de chiffres. En interaction, demande un éclaircissement : Può spiegare questo punto?",
+      "sourceQuestion": 0,
+      "id": "it-ex-022"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Compréhension, expression et médiation",
+      "origin": "p1-langues/lng-it-p1-comp-s2-qcm",
+      "type": "qcm",
+      "prompt": "Quelle inquiétude certains habitants expriment-ils ?",
+      "choices": [
+        "Le manque de livres.",
+        "Le prix du train.",
+        "Le bruit."
+      ],
+      "answer": "Le bruit.",
+      "explanation": "L’inquiétude mentionnée concerne le bruit. Une inquiétude exprimée ne signifie pas à elle seule que le projet est interdit.",
+      "alternatives": [],
+      "context": "Texte original d’entraînement : Un’associazione di quartiere vuole aprire un laboratorio di riparazione. Secondo i volontari, riparare gli oggetti permette di ridurre i rifiuti e di trasmettere competenze. Alcuni abitanti sostengono il progetto, mentre altri temono il rumore. L’associazione propone quindi un’apertura limitata al pomeriggio e una riunione mensile con i residenti. Il progetto non è ancora stato approvato.\n\nSépare le projet de son adoption effective. Repère les acteurs, leurs arguments et le compromis. Pour l’oral : présente le document comme un texte pédagogique, formule la question « Come conciliare ambiente e vita di quartiere? », expose deux positions, puis justifie ton avis. Pour une médiation en français, résume fidèlement le compromis sans ajouter de chiffres. En interaction, demande un éclaircissement : Può spiegare questo punto?",
+      "sourceQuestion": 1,
+      "id": "it-ex-023"
+    },
+    {
+      "lessonId": null,
+      "unit": "Italien — Compréhension, expression et médiation",
+      "origin": "p1-langues/lng-it-p1-comp-s2-qcm",
+      "type": "qcm",
+      "prompt": "Le projet est-il déjà approuvé ?",
+      "choices": [
+        "Non, pas encore.",
+        "Le texte ne mentionne aucun projet.",
+        "Oui, définitivement."
+      ],
+      "answer": "Non, pas encore.",
+      "explanation": "Le texte présente un projet encore soumis à une décision : il ne faut pas transformer une proposition en autorisation déjà obtenue.",
+      "alternatives": [],
+      "context": "Texte original d’entraînement : Un’associazione di quartiere vuole aprire un laboratorio di riparazione. Secondo i volontari, riparare gli oggetti permette di ridurre i rifiuti e di trasmettere competenze. Alcuni abitanti sostengono il progetto, mentre altri temono il rumore. L’associazione propone quindi un’apertura limitata al pomeriggio e una riunione mensile con i residenti. Il progetto non è ancora stato approvato.\n\nSépare le projet de son adoption effective. Repère les acteurs, leurs arguments et le compromis. Pour l’oral : présente le document comme un texte pédagogique, formule la question « Come conciliare ambiente e vita di quartiere? », expose deux positions, puis justifie ton avis. Pour une médiation en français, résume fidèlement le compromis sans ajouter de chiffres. En interaction, demande un éclaircissement : Può spiegare questo punto?",
+      "sourceQuestion": 2,
+      "id": "it-ex-024"
+    },
+    {
+      "lessonId": "p1-langues-lng-it-p1-culture-premiere-0",
+      "unit": "Italien — Première · axes culturels",
+      "origin": "p1-langues/lng-it-p1-culture-premiere-s1-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « legami » ?",
+      "choices": [
+        "Échange.",
+        "Liens.",
+        "Origine."
+      ],
+      "answer": "Liens.",
+      "explanation": "Le vocabulaire de cette fiche définit legami : Liens.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-025"
+    },
+    {
+      "lessonId": "p1-langues-lng-it-p1-culture-premiere-0",
+      "unit": "Italien — Première · axes culturels",
+      "origin": "p1-langues/lng-it-p1-culture-premiere-s1-qcm",
+      "type": "qcm",
+      "prompt": "Quel point faut-il distinguer dans un récit de mobilité ?",
+      "choices": [
+        "Une identité unique imposée au narrateur.",
+        "La nationalité de tous les lecteurs.",
+        "Le motif du départ et l’expérience vécue."
+      ],
+      "answer": "Le motif du départ et l’expérience vécue.",
+      "explanation": "L’Italie est à la fois une terre de départ et d’arrivée des migrations. Une même personne peut entretenir des liens linguistiques et familiaux avec plusieurs pays. Pour commenter un récit de mobilité, distingue le motif du départ, l’expérience vécue et le regard du narrateur ; n’attribue pas une seule identité à tous les Italiens.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-026"
+    },
+    {
+      "lessonId": "p1-langues-lng-it-p1-culture-premiere-1",
+      "unit": "Italien — Première · axes culturels",
+      "origin": "p1-langues/lng-it-p1-culture-premiere-s2-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « accessibile » ?",
+      "choices": [
+        "Accessible.",
+        "Participation.",
+        "Obstacle."
+      ],
+      "answer": "Accessible.",
+      "explanation": "Le vocabulaire de cette fiche définit accessibile : Accessible.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-027"
+    },
+    {
+      "lessonId": "p1-langues-lng-it-p1-culture-premiere-1",
+      "unit": "Italien — Première · axes culturels",
+      "origin": "p1-langues/lng-it-p1-culture-premiere-s2-qcm",
+      "type": "qcm",
+      "prompt": "Que faut-il préciser pour évaluer une mesure d’inclusion ?",
+      "choices": [
+        "L’obstacle qu’elle réduit concrètement.",
+        "Seulement son intitulé publicitaire.",
+        "Une règle valable pour tous à partir d’un seul témoignage."
+      ],
+      "answer": "L’obstacle qu’elle réduit concrètement.",
+      "explanation": "L’inclusion suppose une participation effective, au-delà d’un simple accueil affiché. Dans le contexte italien, un document sur l’accessibilité d’un musée ou sur l’intégration scolaire peut montrer des obstacles matériels et sociaux. Il faut distinguer un témoignage individuel d’une règle générale.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-028"
+    },
+    {
+      "lessonId": "p1-langues-lng-it-p1-culture-premiere-2",
+      "unit": "Italien — Première · axes culturels",
+      "origin": "p1-langues/lng-it-p1-culture-premiere-s3-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « mettere in discussione » ?",
+      "choices": [
+        "Commanditaire d’une œuvre.",
+        "Remettre en question.",
+        "Public destinataire d’une œuvre."
+      ],
+      "answer": "Remettre en question.",
+      "explanation": "Le vocabulaire de cette fiche définit mettere in discussione : Remettre en question.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-029"
+    },
+    {
+      "lessonId": "p1-langues-lng-it-p1-culture-premiere-2",
+      "unit": "Italien — Première · axes culturels",
+      "origin": "p1-langues/lng-it-p1-culture-premiere-s3-qcm",
+      "type": "qcm",
+      "prompt": "Que faut-il observer avant d’interpréter une œuvre ?",
+      "choices": [
+        "La commande, les éléments visibles et le public visé.",
+        "L’opinion supposée de tous les Italiens.",
+        "Seulement le nombre de couleurs."
+      ],
+      "answer": "La commande, les éléments visibles et le public visé.",
+      "explanation": "Une œuvre peut soutenir un pouvoir, en critiquer les décisions ou préserver une mémoire. En Italie, l’étude d’un bâtiment public, d’une affiche ou d’un film permet de questionner la commande, le public visé et les conditions de diffusion. La présence d’un symbole ne suffit pas à prouver l’intention de l’artiste : il faut l’appuyer sur le document.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-030"
+    },
+    {
+      "lessonId": "p1-langues-lng-it-p1-culture-premiere-3",
+      "unit": "Italien — Première · axes culturels",
+      "origin": "p1-langues/lng-it-p1-culture-premiere-s4-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « rischi » ?",
+      "choices": [
+        "Travailleur.",
+        "Besoin.",
+        "Risques."
+      ],
+      "answer": "Risques.",
+      "explanation": "Le vocabulaire de cette fiche définit rischi : Risques.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-031"
+    },
+    {
+      "lessonId": "p1-langues-lng-it-p1-culture-premiere-3",
+      "unit": "Italien — Première · axes culturels",
+      "origin": "p1-langues/lng-it-p1-culture-premiere-s4-qcm",
+      "type": "qcm",
+      "prompt": "Que faut-il comparer à une promesse commerciale ?",
+      "choices": [
+        "La seule nouveauté du produit.",
+        "Le prestige de son nom.",
+        "Un critère vérifiable et les risques associés."
+      ],
+      "answer": "Un critère vérifiable et les risques associés.",
+      "explanation": "Un objet innovant n’est pas nécessairement bénéfique dans tous ses usages. Un cas d’entreprise italienne peut être analysé à travers le besoin satisfait, les ressources utilisées et les risques. La responsabilité consiste aussi à informer les usagers et à anticiper les effets sur les travailleurs ou les données.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-032"
+    },
+    {
+      "lessonId": "p1-langues-lng-it-p1-culture-premiere-4",
+      "unit": "Italien — Première · axes culturels",
+      "origin": "p1-langues/lng-it-p1-culture-premiere-s5-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « paesaggio » ?",
+      "choices": [
+        "Habitant.",
+        "Protection, notamment d’un milieu ou d’un patrimoine.",
+        "Paysage."
+      ],
+      "answer": "Paysage.",
+      "explanation": "Le vocabulaire de cette fiche définit paesaggio : Paysage.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-033"
+    },
+    {
+      "lessonId": "p1-langues-lng-it-p1-culture-premiere-4",
+      "unit": "Italien — Première · axes culturels",
+      "origin": "p1-langues/lng-it-p1-culture-premiere-s5-qcm",
+      "type": "qcm",
+      "prompt": "Quelle tension la fiche propose-t-elle pour Venise ?",
+      "choices": [
+        "Absence de tout habitant et de toute activité.",
+        "Tourisme sans aucun effet sur un lieu.",
+        "Fréquentation touristique et vie des habitants."
+      ],
+      "answer": "Fréquentation touristique et vie des habitants.",
+      "explanation": "Les paysages italiens sont des espaces habités et transformés : tourisme, agriculture, industrie et protection des milieux peuvent entrer en tension. Un texte sur Venise permet par exemple de distinguer l’intérêt économique de la fréquentation touristique et les contraintes de la vie des habitants, sans réduire la ville à une carte postale.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-034"
+    },
+    {
+      "lessonId": "p1-langues-lng-it-p1-culture-premiere-5",
+      "unit": "Italien — Première · axes culturels",
+      "origin": "p1-langues/lng-it-p1-culture-premiere-s6-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « Risorgimento » ?",
+      "choices": [
+        "Région.",
+        "Unité.",
+        "Processus d’unification italienne."
+      ],
+      "answer": "Processus d’unification italienne.",
+      "explanation": "Le vocabulaire de cette fiche définit Risorgimento : Processus d’unification italienne.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-035"
+    },
+    {
+      "lessonId": "p1-langues-lng-it-p1-culture-premiere-5",
+      "unit": "Italien — Première · axes culturels",
+      "origin": "p1-langues/lng-it-p1-culture-premiere-s6-qcm",
+      "type": "qcm",
+      "prompt": "Quel repère chronologique est exact ?",
+      "choices": [
+        "La diversité régionale disparaît en 1861.",
+        "Royaume d’Italie en 1861, Rome capitale en 1871.",
+        "Rome capitale en 1861, royaume en 1871."
+      ],
+      "answer": "Royaume d’Italie en 1861, Rome capitale en 1871.",
+      "explanation": "Le Risorgimento désigne le processus d’unification italienne. Le royaume d’Italie est proclamé en 1861 ; Rome devient capitale en 1871. La construction politique ne supprime pas immédiatement les différences régionales ou linguistiques. Distingue l’unité d’un État de l’uniformité supposée de ses habitants.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-036"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-4",
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "langues/lng-it-gram-s5-qcm",
+      "type": "qcm",
+      "prompt": "Remplace il libro : compro il libro →…",
+      "choices": [
+        "lo compro",
+        "le compro",
+        "gli compro"
+      ],
+      "answer": "lo compro",
+      "explanation": "Il libro est complément direct masculin singulier : lo.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-037"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-4",
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "langues/lng-it-gram-s5-qcm",
+      "type": "qcm",
+      "prompt": "Quelle construction est correcte ?",
+      "choices": [
+        "vado in Roma",
+        "vado a Roma",
+        "vado di Roma"
+      ],
+      "answer": "vado a Roma",
+      "explanation": "La destination avec Roma s’exprime par a Roma.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-038"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-4",
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "langues/lng-it-gram-s5-qcm",
+      "type": "qcm",
+      "prompt": "Complète : mi… i libri.",
+      "choices": [
+        "piace",
+        "piaci",
+        "piacciono"
+      ],
+      "answer": "piacciono",
+      "explanation": "I libri est le sujet pluriel : piacciono.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "it-ex-039"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-5",
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "langues/lng-it-gram-s6-qcm",
+      "type": "qcm",
+      "prompt": "Complète : penso che… utile.",
+      "choices": [
+        "sarò",
+        "sia",
+        "è"
+      ],
+      "answer": "sia",
+      "explanation": "Dans ce registre soigné, penso che appelle ici le congiuntivo sia.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-040"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-5",
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "langues/lng-it-gram-s6-qcm",
+      "type": "qcm",
+      "prompt": "Complète : se avessi tempo,… di più.",
+      "choices": [
+        "studierei",
+        "studierò",
+        "studio"
+      ],
+      "answer": "studierei",
+      "explanation": "La proposition principale prend le conditionnel studierei.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-041"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-5",
+      "unit": "Italien — Grammaire et conjugaison",
+      "origin": "langues/lng-it-gram-s6-qcm",
+      "type": "qcm",
+      "prompt": "Quel connecteur introduit une réserve ?",
+      "choices": [
+        "tuttavia",
+        "quindi",
+        "perché"
+      ],
+      "answer": "tuttavia",
+      "explanation": "Tuttavia signifie cependant.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 2,
+      "id": "it-ex-042"
+    },
+    {
+      "lessonId": "langues-lng-it-culture-terminale-0",
+      "unit": "Italien — Terminale · axes culturels",
+      "origin": "langues/lng-it-culture-terminale-s1-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « piazza » ?",
+      "choices": [
+        "Commerce.",
+        "Place publique.",
+        "Espace partagé."
+      ],
+      "answer": "Place publique.",
+      "explanation": "Le vocabulaire de cette fiche définit piazza : Place publique.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-043"
+    },
+    {
+      "lessonId": "langues-lng-it-culture-terminale-0",
+      "unit": "Italien — Terminale · axes culturels",
+      "origin": "langues/lng-it-culture-terminale-s1-qcm",
+      "type": "qcm",
+      "prompt": "Pourquoi une place publique peut-elle faire débat ?",
+      "choices": [
+        "Ses usages peuvent opposer différents acteurs.",
+        "Un espace ouvert n’a aucune règle.",
+        "Tous ses usagers ont nécessairement le même intérêt."
+      ],
+      "answer": "Ses usages peuvent opposer différents acteurs.",
+      "explanation": "La place, la piazza, est un espace public majeur dans de nombreuses villes italiennes, mais son usage dépend des habitants, des commerces, des touristes et des règles municipales. Un espace ouvert peut aussi exclure certains usages. La frontière entre privé et public se déplace également quand une expérience intime est publiée en ligne.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-044"
+    },
+    {
+      "lessonId": "langues-lng-it-culture-terminale-1",
+      "unit": "Italien — Terminale · axes culturels",
+      "origin": "langues/lng-it-culture-terminale-s2-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « memoria » ?",
+      "choices": [
+        "Mémoire.",
+        "Plaque, notamment commémorative.",
+        "Commémoration."
+      ],
+      "answer": "Mémoire.",
+      "explanation": "Le vocabulaire de cette fiche définit memoria : Mémoire.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-045"
+    },
+    {
+      "lessonId": "langues-lng-it-culture-terminale-1",
+      "unit": "Italien — Terminale · axes culturels",
+      "origin": "langues/lng-it-culture-terminale-s2-qcm",
+      "type": "qcm",
+      "prompt": "Quelles dates distinguer sur une plaque commémorative ?",
+      "choices": [
+        "Seulement l’année de lecture de la plaque.",
+        "L’événement et la pose de la plaque.",
+        "Une seule date sans contexte."
+      ],
+      "answer": "L’événement et la pose de la plaque.",
+      "explanation": "Un monument ou un lieu de mémoire sélectionne des événements et propose une façon de les raconter. Dans un document italien consacré à la Résistance, distingue l’événement historique, sa commémoration ultérieure et les usages actuels du souvenir. Une mémoire n’est pas une photographie neutre et exhaustive du passé.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-046"
+    },
+    {
+      "lessonId": "langues-lng-it-culture-terminale-2",
+      "unit": "Italien — Terminale · axes culturels",
+      "origin": "langues/lng-it-culture-terminale-s3-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « punto di vista » ?",
+      "choices": [
+        "Point de vue.",
+        "Personnage.",
+        "Montage cinématographique."
+      ],
+      "answer": "Point de vue.",
+      "explanation": "Le vocabulaire de cette fiche définit punto di vista : Point de vue.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-047"
+    },
+    {
+      "lessonId": "langues-lng-it-culture-terminale-2",
+      "unit": "Italien — Terminale · axes culturels",
+      "origin": "langues/lng-it-culture-terminale-s3-qcm",
+      "type": "qcm",
+      "prompt": "Un film néoréaliste est-il automatiquement un documentaire ?",
+      "choices": [
+        "Oui, s’il montre une rue.",
+        "Oui, si ses personnages ont des problèmes quotidiens.",
+        "Non, sa narration construit un point de vue."
+      ],
+      "answer": "Non, sa narration construit un point de vue.",
+      "explanation": "Le cinéma et le roman peuvent s’inspirer de faits sociaux sans constituer un reportage. Le néoréalisme italien de l’après-guerre met notamment en scène des difficultés de la vie quotidienne. Même quand une œuvre semble proche du réel, cadrage, montage, personnages et narration construisent un point de vue.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-048"
+    },
+    {
+      "lessonId": "langues-lng-it-culture-terminale-3",
+      "unit": "Italien — Terminale · axes culturels",
+      "origin": "langues/lng-it-culture-terminale-s4-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « fonte » ?",
+      "choices": [
+        "Nouvelle / information.",
+        "Destinataire.",
+        "Source."
+      ],
+      "answer": "Source.",
+      "explanation": "Le vocabulaire de cette fiche définit fonte : Source.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-049"
+    },
+    {
+      "lessonId": "langues-lng-it-culture-terminale-3",
+      "unit": "Italien — Terminale · axes culturels",
+      "origin": "langues/lng-it-culture-terminale-s4-qcm",
+      "type": "qcm",
+      "prompt": "Comment évaluer un titre de presse ?",
+      "choices": [
+        "Le croire dès qu’il est partagé.",
+        "Le traiter toujours comme une démonstration complète.",
+        "Le confronter au contenu et aux sources de l’article."
+      ],
+      "answer": "Le confronter au contenu et aux sources de l’article.",
+      "explanation": "Un message n’a pas le même effet selon qu’il paraît dans un journal, une publicité ou un réseau social. Pour un document italien, repère l’émetteur, le destinataire, le support et la visée : informer, convaincre, vendre ou divertir. Un slogan cherche souvent la mémorisation plutôt que la démonstration.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-050"
+    },
+    {
+      "lessonId": "langues-lng-it-culture-terminale-4",
+      "unit": "Italien — Terminale · axes culturels",
+      "origin": "langues/lng-it-culture-terminale-s5-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « responsabilità » ?",
+      "choices": [
+        "Consentement.",
+        "Responsabilité.",
+        "Harcèlement / comportements importuns, selon le contexte."
+      ],
+      "answer": "Responsabilité.",
+      "explanation": "Le vocabulaire de cette fiche définit responsabilità : Responsabilité.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-051"
+    },
+    {
+      "lessonId": "langues-lng-it-culture-terminale-4",
+      "unit": "Italien — Terminale · axes culturels",
+      "origin": "langues/lng-it-culture-terminale-s5-qcm",
+      "type": "qcm",
+      "prompt": "Que faut-il examiner avant de publier un témoignage ?",
+      "choices": [
+        "La vie privée, le consentement et la diffusion durable.",
+        "Seulement le nombre de partages attendu.",
+        "Le principe que tout partage garantit une action réelle."
+      ],
+      "answer": "La vie privée, le consentement et la diffusion durable.",
+      "explanation": "Participer à un débat numérique peut faciliter l’expression citoyenne, mais impose de protéger les personnes et de distinguer critique et harcèlement. Un cas italien de mobilisation en ligne doit être étudié à partir d’acteurs et d’actions identifiables, sans supposer que chaque partage conduit à une action sur le terrain.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-052"
+    },
+    {
+      "lessonId": "langues-lng-it-culture-terminale-5",
+      "unit": "Italien — Terminale · axes culturels",
+      "origin": "langues/lng-it-culture-terminale-s6-qcm",
+      "type": "qcm",
+      "prompt": "Dans cette fiche, que signifie « Repubblica » ?",
+      "choices": [
+        "Traité.",
+        "Constitution.",
+        "République."
+      ],
+      "answer": "République.",
+      "explanation": "Le vocabulaire de cette fiche définit Repubblica : République.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 0,
+      "id": "it-ex-053"
+    },
+    {
+      "lessonId": "langues-lng-it-culture-terminale-5",
+      "unit": "Italien — Terminale · axes culturels",
+      "origin": "langues/lng-it-culture-terminale-s6-qcm",
+      "type": "qcm",
+      "prompt": "Quelle chronologie correspond à la fiche ?",
+      "choices": [
+        "République en 1946, Constitution en 1948, traités de Rome en 1957.",
+        "Constitution en 1946, République en 1957, traités en 1948.",
+        "Union européenne actuelle créée telle quelle en 1946."
+      ],
+      "answer": "République en 1946, Constitution en 1948, traités de Rome en 1957.",
+      "explanation": "Le référendum de 1946 conduit l’Italie à devenir une république ; la Constitution entre en vigueur en 1948. L’Italie figure parmi les six États signataires des traités de Rome de 1957, une étape de la construction européenne. Ne confonds pas ces communautés initiales avec l’Union européenne sous sa forme actuelle.",
+      "alternatives": [],
+      "context": "",
+      "sourceQuestion": 1,
+      "id": "it-ex-054"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-1",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Io ____ (essere) studente.",
+      "answer": "sono",
+      "explanation": "Essere est irrégulier : io sono, tu sei, lui/lei è. Le nom studente convient ici à un élève masculin.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-055"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-1",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Noi ____ (avere) una domanda.",
+      "answer": "abbiamo",
+      "explanation": "La première personne du pluriel de avere au présent est abbiamo.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-056"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-0",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Mets au pluriel : lo studente.",
+      "answer": "gli studenti",
+      "explanation": "Devant s + consonne, lo devient gli au pluriel ; studente devient studenti.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-057"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-0",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Accorde l’adjectif : due case ____ (nuovo).",
+      "answer": "nuove",
+      "explanation": "Case est féminin pluriel ; l’adjectif nuovo s’accorde en nuove.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-058"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-1",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Lei ____ (lavorare) in un negozio.",
+      "answer": "lavora",
+      "explanation": "Le présent régulier de lavorare à la troisième personne se termine en -a.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-059"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-2",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète avec l’auxiliaire : Ieri ____ lavorato molto. (io)",
+      "answer": "ho",
+      "explanation": "Lavorare se construit ici avec avere au passato prossimo : ho lavorato.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-060"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-2",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète pour une femme : Sono ____ (andare) a Roma.",
+      "answer": "andata",
+      "explanation": "Avec essere, le participe passé s’accorde avec le sujet ; pour une femme : andata.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-061"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-2",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Da piccolo, ____ (giocare, io) in giardino.",
+      "answer": "giocavo",
+      "explanation": "L’imperfetto exprime ici une habitude de l’enfance ; giocare → giocavo.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-062"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-3",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Domani noi ____ (visitare) l’azienda. Emploie le futur simple.",
+      "answer": "visiteremo",
+      "explanation": "Au futur de visitare, le -a- de l’infinitif devient -e- ; pour noi : visiteremo.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-063"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-3",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : Je voudrais un renseignement.",
+      "answer": "Vorrei un’informazione.",
+      "explanation": "Vorrei est le conditionnel de volere à la première personne ; un’informazione prend une apostrophe car le nom est féminin.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-064"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-4",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète avec a ou in : Vivo ____ Italia.",
+      "answer": "in",
+      "explanation": "On utilise généralement in avec un pays, et a avec une ville : vivo a Roma.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-065"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-4",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Questo prodotto è più economico ____ quello.",
+      "answer": "di",
+      "explanation": "Di introduit ici le second terme d’une comparaison entre deux produits.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-066"
+    },
+    {
+      "lessonId": "langues-lng-it-voc-0",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : J’ai dix-sept ans et j’étudie en France.",
+      "answer": "Ho diciassette anni e studio in Francia.",
+      "explanation": "L’âge se construit avec avere ; studio est le présent de studiare à la première personne.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-067"
+    },
+    {
+      "lessonId": "langues-lng-it-voc-1",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : Notre entreprise propose un nouveau service.",
+      "answer": "La nostra azienda offre un nuovo servizio.",
+      "explanation": "Azienda signifie entreprise ; offre est la troisième personne de offrire ; nuovo s’accorde avec servizio.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-068"
+    },
+    {
+      "lessonId": "langues-lng-it-voc-2",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : Nous devons réduire les déchets.",
+      "answer": "Dobbiamo ridurre i rifiuti.",
+      "explanation": "Dovere se conjugue dobbiamo avec noi et est suivi de l’infinitif ridurre.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-069"
+    },
+    {
+      "lessonId": "langues-lng-it-voc-2",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Relie par une cause : Scelgo questa soluzione. È più semplice.",
+      "answer": "Scelgo questa soluzione perché è più semplice.",
+      "explanation": "Perché introduit la cause et porte un accent aigu sur la dernière voyelle.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-070"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-1",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige : Io è studente.",
+      "answer": "Io sono studente.",
+      "explanation": "Le verbe s’accorde avec io : sono. On peut aussi omettre io lorsque le contexte est clair.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-071"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-2",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige pour un homme : Sono andata al lavoro.",
+      "answer": "Sono andato al lavoro.",
+      "explanation": "Avec essere, le participe s’accorde avec le sujet ; un homme emploie ici andato.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-072"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-0",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige : i studenti.",
+      "answer": "gli studenti",
+      "explanation": "Devant s + consonne, l’article masculin pluriel est gli.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-073"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-1",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Corrige : Ho d’accordo.",
+      "answer": "Sono d’accordo.",
+      "explanation": "Être d’accord se dit essere d’accordo, et non avere d’accordo.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-074"
+    },
+    {
+      "lessonId": "langues-lng-it-voc-2",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Rédige trois phrases : un avis sur le stage, un avantage et une limite.",
+      "answer": "Secondo me, fare uno stage è utile. Permette di conoscere il mondo del lavoro. Però è importante avere un buon accompagnamento.",
+      "explanation": "Exemple possible : avis introduit clairement, avantage concret et limite ; d’autres avis argumentés sont recevables.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-075"
+    },
+    {
+      "lessonId": "langues-lng-it-voc-1",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Présente une organisation fictive, ses services et ses clients en trois phrases.",
+      "answer": "La nostra cooperativa ripara biciclette. Offre servizi a prezzi accessibili. I clienti sono soprattutto gli abitanti del quartiere.",
+      "explanation": "Exemple possible : nature de l’organisation, offre et public cohérents ; vérifie le pluriel et le présent.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-076"
+    },
+    {
+      "lessonId": "langues-lng-it-voc-0",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Raconte une tâche de stage et un apprentissage en deux phrases.",
+      "answer": "Durante lo stage, ho aiutato i clienti. Ho imparato a spiegare i servizi in modo chiaro.",
+      "explanation": "Exemple possible : passé composé cohérent et apprentissage expliqué ; les deux verbes prennent ici avere.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-077"
+    },
+    {
+      "lessonId": "langues-lng-it-voc-0",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "production",
+      "prompt": "Demande poliment le prix et les horaires d’un service.",
+      "answer": "Potrebbe dirmi quanto costa questo servizio? Quali sono gli orari di apertura?",
+      "explanation": "Exemple possible : demande de prix et demande d’horaires distinctes, avec une formule polie. D’autres formulations équivalentes conviennent.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-078"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-1",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : In ufficio ____ tre persone. (il y a)",
+      "answer": "ci sono",
+      "explanation": "Avec un élément pluriel, on emploie ci sono ; au singulier, c’è.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-079"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-0",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Mets au pluriel : un nuovo cliente.",
+      "answer": "nuovi clienti",
+      "explanation": "Cliente est ici masculin : nuovi clienti. L’article indéfini singulier disparaît dans cette réponse au pluriel.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-080"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-4",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : le bureau du directeur.",
+      "answer": "l’ufficio del direttore",
+      "explanation": "La préposition di et l’article il se contractent en del.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-081"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-4",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Remplace il rapporto par un pronom : Leggo il rapporto.",
+      "answer": "Lo leggo.",
+      "explanation": "Le pronom direct masculin singulier lo se place devant le verbe conjugué dans cette phrase déclarative.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-082"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-5",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Penso che lui ____ (essere) pronto.",
+      "answer": "sia",
+      "explanation": "Après penso che exprimant ici une opinion, on utilise le congiuntivo : lui sia.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-083"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-5",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Complète : Se avessi più tempo, ____ (potere, io) studiare di più.",
+      "answer": "potrei",
+      "explanation": "Hypothèse irréelle au présent : se + congiuntivo imperfetto, puis conditionnel présent. Potere devient potrei.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-084"
+    },
+    {
+      "lessonId": "langues-lng-it-gram-1",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Mets à la forme négative : Capisco la domanda.",
+      "answer": "Non capisco la domanda.",
+      "explanation": "Non se place avant le verbe conjugué pour nier cette phrase.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-085"
+    },
+    {
+      "lessonId": "langues-lng-it-voc-0",
+      "unit": "Atelier de transfert · Italien",
+      "origin": "RévizSTMG · exercices complémentaires",
+      "type": "court",
+      "prompt": "Traduis : À quelle heure ouvre le magasin ?",
+      "answer": "A che ora apre il negozio?",
+      "explanation": "A che ora demande une heure précise ; apre est le présent de aprire à la troisième personne.",
+      "choices": [],
+      "context": "",
+      "id": "it-ex-086"
+    }
+  ],
+  "edition": "Manuel approfondi · octobre 2026",
+  "methodSections": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    14,
+    15,
+    16,
+    17
+  ],
+  "videos": [
+    {
+      "title": "Benvenuti in casa Ba - Una nuova famiglia Unità 1 - Livello A1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Una-nuova-famiglia-b63ad6a1-86ea-4bf7-9b9c-e718820b6735.html",
+      "level": "A1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in Italia! Unità 1 - Livello A1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-Italia-0e0ed5c5-60d7-442c-9155-b6ab164a5b50.html",
+      "level": "A1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano: i saluti e il verbo essere Unità 1 - Livello A1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-i-saluti-e-il-verbo-essere-be0d9ec7-9e27-4684-89e0-48d42888ba29.html",
+      "level": "A1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Per usare l'italiano: io sono cinese. Tu parli italiano? Unità 1 - Livello A1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Per-usare-litaliano-io-sono-cinese-Tu-parli-italiano-dc5e582f-ae14-4bd7-8ad9-92f56263f38c.html",
+      "level": "A1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - festa di compleanno Unita 2 - Livello A1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---festa-di-compleanno-e415930b-f291-468d-8560-4ecb2175030f.html",
+      "level": "A1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in Italia! Unità 2- Livello A1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-Italia-a1ef563b-ebc4-4157-88eb-206136ebb9e6.html",
+      "level": "A1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano: rivolgersi agli altri, lavorare, contare Unità 2 - Livello A1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-rivolgersi-agli-altri-lavorare-contare-356b0b03-fc1c-4b82-b942-1a0a4e3a8d19.html",
+      "level": "A1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Per usare l'italiano: grazie, signore. Prego, signorina! Unità 2 - Livello A1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Per-usare-litaliano-04dc289b-2b18-44da-9a69-4c2616567cc4.html",
+      "level": "A1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Quattro passi tra le stelle Unità 3 - Livello A1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Quattro-passi-tra-le-stelle-c20fe08e-a10a-469a-b815-a23d544a987a.html",
+      "level": "A1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Fela giornalista Unità 3 - Livello A1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Fela-giornalista-f7f2a5c0-ed99-4ce0-8d25-eef1d35604a9.html",
+      "level": "A1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in Italia! - 4 Unità 3 - Livello A1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-Italia---4-9a792786-7c93-43b3-9f6b-b879807fa3e5.html",
+      "level": "A1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano: accordare aggettivi e nomi, contare Unità 3 - Livello A1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-accordare-aggettivi-e-nomi-contare-9a891e21-4651-4f68-b78f-46edf5669942.html",
+      "level": "A1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Rai Scuola articolo Benvenuti in casa Ba - Campioni per un giorno - Cittadinanza e sport Unità 1 - Livello A2",
+      "url": "https://www.raiscuola.rai.it/raiscuola/articoli/2021/06/Benvenuti-in-casa-Ba---Campioni-per-un-giorno---Cittadinanza-e-sport-8f8e84d7-dbbb-47fd-9e97-2fbb4e6d4053.html",
+      "level": "A2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - La ricerca del lavoro Unità 1 - Livello A2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---La-ricerca-del-lavoro-1c554af6-8169-45a3-a0c7-d909ef6ec111.html",
+      "level": "A2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in Italia - 16 Unità 1 - Livello A2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-Italia---16-b76332f5-2d62-4e0e-b3d0-ce1cc4ed4535.html",
+      "level": "A2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano: prenotare l'albergo, da oggi a mercoledì Unità 1 - Livello A2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-cb6a6a21-4cc6-4e49-b3b5-52fb7d387671.html",
+      "level": "A2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Un santo per la pace - Lavoratori stranieri formati in patria Unità 2 - Livello A2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Un-santo-per-la-pace---Lavoratori-stranieri-formati-in-patria-4510fc86-7997-4d55-a1cc-c5153e90d3b2.html",
+      "level": "A2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Un giardino per Olga - I mediatori culturali Unità 2 - Livello A2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Un-giardino-per-Olga---I-mediatori-culturali-1d0010f1-cdf7-4ef4-9c0b-52ad58f26588.html",
+      "level": "A2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in Italia - 17 Unità 2 - Livello A2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-Italia---17-e75c5f4b-9ca8-4cf3-8246-852200b15fc7.html",
+      "level": "A2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano: fare gli auguri a qualcuno Unità 2 - Livello A2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-66990741-13d8-4c70-8adb-0d1efc9da2eb.html",
+      "level": "A2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Una radio per amico Unità 3 - Livello A2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Una-radio-per-amico-7881df13-ede7-4050-a4de-583222af4f29.html",
+      "level": "A2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in Italia - 18 Unità 3 - Livello A2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-Italia---18-881e29b3-f9ce-4e14-a633-ae3fdf281a8e.html",
+      "level": "A2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in Italia - 19 Unità 3 - Livello A2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-Italia---19-de67c4c9-f609-42c0-8052-562e2db230b6.html",
+      "level": "A2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano: sì, no e non; piacere e non piacere; andare e venire Unità 3 - Livello A2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-3688059f-e300-4508-a0bb-6641b2687505.html",
+      "level": "A2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Il gioco della creatività. Donne straniere in Italia Unità 1 - Livello B1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba-Il-gioco-della-creativita-Donne-straniere-in-Italia-30a33349-0e2a-4f5c-9dba-ef7bd7fd1e40.html",
+      "level": "B1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - L'ambiente Unità 1 - Livello B1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Lambiente-c20e9e13-3da1-47e3-b6a9-873ff37b0969.html",
+      "level": "B1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano. I mille lavori che possiamo fare Livello B1 - Unità 1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-I-mille-lavori-che-possiamo-fare-39acc9d0-024d-4b1b-927c-04cfd9b7554c.html",
+      "level": "B1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano: elettrodomestici, istruzioni per l'uso Unità 1 - Livello B1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-elettrodomestici-istruzioni-per-luso-0aeb2061-7870-46cc-a0cc-85a319692c14.html",
+      "level": "B1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Arrivederci Fela! Unità 2 - Livello B1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Arrivederci-Fela-7344f77f-c9e3-4ff2-9fdb-9a535e21ea09.html",
+      "level": "B1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Tutti a scuola! Unità 2 - Livello B1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Tutti-a-scuola-b4f4120c-91be-47af-a0ad-7670d4beed57.html",
+      "level": "B1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'Italiano: formare aggettivi di senso contrario Unità 2 - Livello B1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellItaliano-formare-aggettivi-di-senso-contrario-a50cf4a8-2edc-4951-8435-e6168e93712c.html",
+      "level": "B1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'Italiano: descrivere un bel carattere Unità 2 - Livello B1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellItaliano-descrivere-un-bel-carattere-56062e3f-41f1-4c98-afd3-c7f802d4333a.html",
+      "level": "B1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Un'ospite gradita Unità 3 - Livello B1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Unospite-gradita-5a6e1998-d5fd-44f1-83c8-d4fd813f1b57.html",
+      "level": "B1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - L'uguaglianza Unità 3 - Livello B1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Luguaglianza-e0331ebf-6e4e-48fc-9d01-ec9677630145.html",
+      "level": "B1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'Italiano. Approvare e disapprovare - il superlativo relativo Unità 3 - Livello B1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellItaliano-Approvare-e-disapprovare---il-superlativo-relativo-4c4cbc1f-16b2-4ca9-a477-dceefc886735.html",
+      "level": "B1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'Italiano: un colloquio di lavoro ( fra amici...) Unità 3 - Livello B1",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellItaliano-un-colloquio-di-lavoro--fra-amici-643233ca-2aa2-456c-8f87-5a9884fb0c06.html",
+      "level": "B1",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Esperienze di volontariato Unità 1 - Livello B2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Esperienze-di-volontariato-e87e935f-11d9-4e23-8732-686b120b5702.html",
+      "level": "B2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Il sogno di Salif Unità 1 - Livello B2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Il-sogno-di-Salif-407513c9-bdf6-42c1-84f9-a12a943711a8.html",
+      "level": "B2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano: aggettivi - di tutti i paesi Unità 1 - Livello B2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-aggettivi---di-tutti-i-paesi-576b8a68-bc14-441a-96b0-ad6feb6313a4.html",
+      "level": "B2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano: posso parlare? Devo dirti una cosa... Unità 1 - Livello B2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-posso-parlare-Devo-dirti-una-cosa-acf958c9-a02e-4a3f-8174-d4b54bcd6741.html",
+      "level": "B2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Percorsi d'istruzione Unità 2 - Livello B2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Percorsi-distruzione-94572b4f-9fc8-4135-bc12-77208da9dbe8.html",
+      "level": "B2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - La salute Unità 2 - Livello B2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---La-salute-86055032-d805-4cdc-99b2-07086adc56ff.html",
+      "level": "B2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano: professioni al femminile, al telefono Unità 2 - Livello B2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-professioni-al-femminile-al-telefono-f16d0001-2719-48b7-ad73-4f95be14f338.html",
+      "level": "B2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano: punto e virgola Unità 2 - Livello B2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-punto-e-virgola-9aef1468-9941-4cf1-8831-662da5040946.html",
+      "level": "B2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Stranieri in Italia Unità 3 - Livello B2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Stranieri-in-Italia-08e29920-030b-4b1b-ac22-4f6d0c142620.html",
+      "level": "B2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Benvenuti in casa Ba - Il permesso di soggiorno e l'accordo di integrazione Unità 3 - Livello B2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Benvenuti-in-casa-Ba---Il-permesso-di-soggiorno-e-laccordo-di-integrazione-2c9cb117-938c-4dd7-add4-f5757edbfb8a.html",
+      "level": "B2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano: egregio signore, distinti saluti, come scrivere una lettera formale Unità 3 - Livello B2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-egregio-signore-distinti-saluti-come-scrivere-una-lettera-formale-0f8768bf-0b25-49fb-ae80-c6117ae7a32c.html",
+      "level": "B2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    },
+    {
+      "title": "Le parole dell'italiano: davvero gentile, cioè gentilissimo Unità 2 - Livello B2",
+      "url": "https://www.raiscuola.rai.it/italianoperstranieri/articoli/2021/06/Le-parole-dellitaliano-davvero-gentile-cioe-gentilissimo-6d13aef2-fbdb-4a90-99e4-1adcaec0022a.html",
+      "level": "B2",
+      "provider": "RAI Scuola",
+      "kind": "video",
+      "verified": "2026-10-23",
+      "videoEvidence": true
+    }
+  ]
+}
