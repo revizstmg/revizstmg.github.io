@@ -43,7 +43,7 @@ export default function ChapterControl({course}) {
   <p className="mt-3 text-sm">Entraîne-toi à expliquer et à argumenter avec les notions de ce chapitre. Une question à la fois, cinq critères d’un point et une correction détaillée.</p>
   <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">Le cours et ta réponse sont transmis à l’IA. La note sur 5 est indicative et peut comporter des erreurs. Cette séance n’est pas sauvegardée ; copie ta réponse avant de quitter la page.</p>
   {!exercise&&<button type="button" className="btn-primary mt-4" disabled={busy} onClick={()=>send('prepare')}>Créer une question</button>}
-  {preparation==='course'&&<p role="status" className="mt-3 text-sm">Le service qui crée les questions est indisponible pour le moment. Cette question de synthèse est construite directement à partir de ton cours. Tu pourras demander la correction après ta rédaction.</p>}
+  {preparation==='course'&&<p role="status" className="mt-3 text-sm">Le service qui crée les questions est indisponible pour le moment. Cette question de synthèse est construite directement à partir de ton cours, sans génération par l’IA. Tu pourras demander la correction après ta rédaction.</p>}
   {exercise&&<div className="mt-5 space-y-4">
    <div lang="fr" translate="no"><h3 className="font-semibold">{exercise.question}</h3><p className="mt-2 text-sm">5 points</p></div>
    <label className="block text-sm font-semibold">Ta réponse rédigée<textarea ref={answerField} rows={7} maxLength={8000} disabled={busy} value={answer} onChange={e=>{setAnswer(e.target.value);setResult(null)}} className="mt-2 w-full rounded-xl border border-slate-400 bg-transparent p-3 font-normal" /></label>
