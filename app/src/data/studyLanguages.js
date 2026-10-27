@@ -1,10 +1,10 @@
 // Langues étudiées, distinctes de la langue d’affichage de l’interface.
 export const STUDY_LANGUAGES = [
- { id: 'de', key: 'studyGerman' },
-  { id: 'ar', key: 'studyArabic' },
+  { id: 'de', key: 'studyGerman' },
   { id: 'en', key: 'studyEnglish' },
-  { id: 'it', key: 'studyItalian' },
+  { id: 'ar', key: 'studyArabic' },
   { id: 'es', key: 'studySpanish' },
+  { id: 'it', key: 'studyItalian' },
 ]
 export function normalizeStudyLanguages(values) {
   const allowed = new Set(STUDY_LANGUAGES.map(l => l.id))

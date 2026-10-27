@@ -123,7 +123,7 @@
 .home-track { color:#d6e2d7; font-size:10px; letter-spacing:.12em; line-height:1.6; }
 .home-hello h1 { font-size:27px; font-weight:500; line-height:1.2; margin-top:4px; }
 .home-hello h1 span { color:var(--home-gold); }
-.home-date { font-size:11px; color:#d6e2d7; margin-top:5px; text-transform:capitalize; }
+.home-date { font-size:11px; color:#d6e2d7; margin-top:5px; }
 .home-level-tag { display:grid; gap:4px; text-align:end; font-size:12px; color:var(--home-gold); flex-shrink:0; }
 .home-level-tag > span { color:#d6e2d7; font-size:11px; }
 .home-stage { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:36px; align-items:center; padding-top:32px; }

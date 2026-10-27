@@ -32,6 +32,7 @@ export default function Trou({ game, color, onDone }) {
   return (
     <div className="card p-5">
       <GameProgress index={i} total={items.length} color={color} />
+      <p className="mb-2 text-sm text-slate-500 dark:text-slate-400">Complète la phrase avec le mot ou le groupe de mots qui manque.</p>
       <p className="mb-4 text-lg leading-relaxed">
         {before}
         <input

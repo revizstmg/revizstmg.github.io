@@ -58,6 +58,7 @@ function ProgrammePage() {
           <>
             <p className="mb-2 text-sm">{t('setBacDate')}</p>
             <input type="date" aria-label={t('setBacDate')} value={draft} onChange={(e) => setDraft(e.target.value)} className="rounded-xl border-0 bg-white px-3 py-2 text-slate-800 [color-scheme:light]" />
+            <p className="mt-2 text-xs text-[#d8cca8]">Date proposée : {draft ? new Date(draft + 'T00:00:00').toLocaleDateString(state.lang || 'fr', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}. Modifie-la si ta date est différente.</p>
             <button onClick={save} className="btn-gold mt-3 block w-full !py-2.5">{t('save')}</button>
           </>
         )}

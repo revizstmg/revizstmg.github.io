@@ -299,9 +299,9 @@ function ProgressionTab({ theme, rec, color, score }) {
             return (
               <li key={g.id} className="flex items-center gap-3">
                 <span className="w-6 text-center">{g.icon || '🎲'}</span>
-                <span className="flex-1 text-sm"><CourseText text={g.title} /><span className="ml-1 text-xs text-slate-400">· {gameLabel(g.type)}</span></span>
+                <span className="flex-1 text-sm"><CourseText text={g.title} />{String(g.title || '').toLowerCase().startsWith(gameLabel(g.type).toLowerCase()) ? null : <span className="ml-1 text-xs text-slate-400"> · {gameLabel(g.type)}</span>}</span>
                 <div className="w-24"><ProgressBar value={best || 0} color={color} /></div>
-                <span className="w-10 text-right text-xs font-semibold">{best != null ? best + '%' : '—'}</span>
+                <span className="w-10 text-right text-xs font-semibold">{best != null ? best + '%' : <><span aria-hidden>—</span><span className="sr-only">Pas encore fait</span></>}</span>
               </li>
             )
           })}

@@ -4,7 +4,7 @@ import { useStore, useStudyTimer } from '../store.jsx'
 import { buildFiche } from '../data/ficheAI.js'
 import { ocrImages, cleanOcrText } from '../ocr.js'
 import { analyzeWithVision } from '../ficheVision.js'
-import { useT } from '../i18n.js'
+import { useT, usePublicText } from '../i18n.js'
 
 // Petit titre de section de fiche.
 function SecHead({ icon, children }) {
@@ -69,7 +69,7 @@ function FicheView({ fiche }) {
 
 export default function PhotoFiche() {
   const { state, saveFiche, removeFiche, saveDeck } = useStore()
-  const t = useT()
+  const t = useT(), tr = usePublicText()
   useStudyTimer()
   const [photos, setPhotos] = useState([]) // { file, url }
   const [rawText, setRawText] = useState('')
@@ -249,7 +249,7 @@ export default function PhotoFiche() {
               <FicheView fiche={fiche} />
               <div className="mt-5 flex flex-col gap-2 sm:flex-row">
                 <button onClick={doSave} className="btn-primary flex-1 text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }}>💾 Enregistrer la fiche</button>
-                {fiche.flashcards?.length > 0 && <button onClick={() => makeDeck(fiche)} className="flex-1 rounded-xl border-2 px-4 py-2.5 text-sm font-semibold transition hover:bg-slate-50 dark:hover:bg-slate-800" style={{ borderColor: 'var(--c-accent)', color: 'var(--c-accent-texte)' }}>🃏 Créer {fiche.flashcards.length} flashcards</button>}
+                {fiche.flashcards?.length > 0 && <button onClick={() => makeDeck(fiche)} className="flex-1 rounded-xl border-2 px-4 py-2.5 text-sm font-semibold transition hover:bg-slate-50 dark:hover:bg-slate-800" style={{ borderColor: 'var(--c-accent)', color: 'var(--c-accent-texte)' }}>{fiche.flashcards.length === 1 ? tr('🃏 Créer 1 flashcard') : <>🃏 Créer {fiche.flashcards.length} flashcards</>}</button>}
               </div>
               {msg && <p className="mt-3 text-center text-sm font-semibold text-emerald-600 dark:text-emerald-400">{msg}</p>}
             </>
