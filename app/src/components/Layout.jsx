@@ -563,7 +563,7 @@ function BottomNav() {
               to={tab.to}
               aria-current={on ? 'page' : undefined}
               className="flex flex-1 flex-col items-center gap-1 py-1.5 text-[10px] font-semibold"
-              style={{ color: on ? 'var(--c-accent-texte)' : undefined }}
+              style={{ color: on ? 'color-mix(in srgb, var(--c-accent-texte) 72%, #000)' : undefined }}
             >
               <span
                 className="tab-pill grid place-items-center rounded-full leading-none"

@@ -318,7 +318,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
           <button onClick={() => telechargerMesDonnees(state)} className="btn-ghost text-sm">⬇️ {t('downloadMyData')}</button>
         </div>}
         {showSetting('suppression')&&        <div className="card p-4" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, #e11d48 40%, transparent)' }}>
-          <h3 className="font-display font-semibold text-rose-600 dark:text-rose-400">{t('dangerZone')}</h3>
+          <h3 className="font-display font-semibold text-rose-700 dark:text-rose-400">{t('dangerZone')}</h3>
           <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{t('deleteAccountHint')}</p>
           <button onClick={deleteAccount} disabled={busy} className="mt-3 w-full rounded-xl border-2 border-rose-500 px-4 py-2.5 text-sm font-semibold text-rose-600 transition hover:bg-rose-50 disabled:opacity-60 dark:text-rose-400 dark:hover:bg-rose-950/40">
             {busy ? t('pleaseWait') : `🗑️ ${t('deleteAccount')}`}

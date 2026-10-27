@@ -206,9 +206,13 @@ export function mergeProgress(a, b, maintenant = Date.now()) {
       base = f === 'coins' || f === 'freezes' ? nombre(baseRecente.base[f]) : Math.max(nombre(ea.base[f]), nombre(eb.base[f]))
     } else if (ma || mb) { par = (ma ? ea : eb).compteurs[f] || {}; base = ancienneRegle(f, a, b) - somme(par) }
     else { par = {}; base = ancienneRegle(f, a, b) }
-    meta.base[f] = base
+    // Deux achats faits hors ligne sur deux appareils peuvent dépasser le solde : jamais de solde négatif.
+    // La base est recalée pour que base + apports reste égal au solde affiché aux fusions suivantes.
+    const brut = base + somme(par)
+    const plancher = f === 'coins' || f === 'freezes' ? Math.max(0, brut) : brut
+    meta.base[f] = base + (plancher - brut)
     if (Object.keys(par).length) meta.compteurs[f] = par
-    out[f] = base + somme(par)
+    out[f] = plancher
   }
 
   // Éléments datés : le plus récemment modifié l'emporte, suppression comprise.

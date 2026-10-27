@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import {useFenetreClavier} from '../components/clavier.js'
 import { createPortal } from 'react-dom'
-import { useParams, useNavigate, Navigate } from 'react-router-dom'
+import { useParams, useNavigate, Navigate, Link } from 'react-router-dom'
 import { useStore, useStudyTimer } from '../store.jsx'
 import { Confetti } from '../components/ui.jsx'
 import { PileCartes, useSerieCartes } from '../components/PileCartes.jsx'
@@ -13,7 +13,12 @@ export default function FlashcardsPage() {
   const { deckId } = useParams()
   const { state } = useStore()
   const deck = (state.savedDecks || []).find((d) => d.id === deckId)
-  if (!deck) return <Navigate to="/revision" replace />
+  if (!deck) return (
+    <section className="card mx-auto max-w-lg space-y-3 p-6 text-center" role="status">
+      <p className="text-sm">Ce paquet n’existe plus, ou il n’est pas encore arrivé sur cet appareil.</p>
+      <Link to="/revision" className="btn-primary inline-block">Retour à la révision</Link>
+    </section>
+  )
   return <Paquet deck={deck} />
 }
 

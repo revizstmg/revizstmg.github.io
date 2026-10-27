@@ -193,3 +193,18 @@ describe('détection de ce qui reste à envoyer', () => {
     expect(noter(s, { ...s, theme: 'dark' })._sync).toBe(s._sync)
   })
 })
+describe('solde de pièces', () => {
+  it('deux achats hors ligne sur deux appareils ne rendent jamais le solde négatif', () => {
+    let { tel, pc } = deuxAppareils(vide({ xp: 4000, coins: 50, shopWalletUpdatedAt: 100 }))
+    tel = sur('tel', 10, tel, (s) => ({ ...s, coins: s.coins - 50, shopWalletUpdatedAt: 200 }))
+    pc = sur('pc', 11, pc, (s) => ({ ...s, coins: s.coins - 50, shopWalletUpdatedAt: 201 }))
+    const une = recuperer(tel, compteDe(pc))
+    const inverse = recuperer(pc, compteDe(tel))
+    expect(une.coins).toBeGreaterThanOrEqual(0)
+    expect(inverse.coins).toBeGreaterThanOrEqual(0)
+    // Refusionner ne fait pas redescendre sous zéro ni remonter le solde.
+    expect(recuperer(une, compteDe(pc)).coins).toBe(une.coins)
+    expect(recuperer(une, compteDe(tel)).coins).toBe(une.coins)
+  })
+})
+

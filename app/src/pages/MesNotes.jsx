@@ -119,7 +119,7 @@ function MesNotesForm() {
         </fieldset>
         <NoteRevision key={`${matiere}:${chapitre}:${state.account?.id}`} subject={matiere} chapter={chapitre} missed={questionsManquees} owner={state.account?.id} result={revision} onResult={setRevision} onBusy={setAnalysisBusy} />
         {erreur && (
-          <p role="alert" className="text-sm font-medium text-rose-600 dark:text-rose-400">
+          <p role="alert" className="text-sm font-medium text-rose-700 dark:text-rose-400">
             {erreur === 'note' ? 'Écris une note sur 20, par exemple 15,50.' : erreur === 'matiere' ? 'Choisis la matière.' : erreur === 'chapitre' ? 'Choisis le chapitre.' : 'Choisis le jour du devoir, au plus tard aujourd’hui.'}
           </p>
         )}
@@ -182,7 +182,7 @@ function MesNotesForm() {
                         {n.questionsManquees && <span className="mt-2 block whitespace-pre-wrap text-sm">Questions manquées : {n.questionsManquees}</span>}
                         <details className="mt-3 text-sm"><summary className="cursor-pointer">Mon bilan et mes exercices</summary><NoteRevision subject={n.matiere} chapter={n.chapitre} missed={n.questionsManquees || ''} owner={state.account?.id} result={n.revision} onResult={value => { if (value) ajouterNoteClasse({ ...n, revision: value, ajouteLe: Date.now() }) }} onBusy={() => {}} /></details>
                       </div>
-                      <span className={`shrink-0 font-semibold tabular-nums ${n.note < SOUS_LA_MOYENNE ? 'text-rose-600 dark:text-rose-400' : ''}`}>{note(n.note)}</span>
+                      <span className={`shrink-0 font-semibold tabular-nums ${n.note < SOUS_LA_MOYENNE ? 'text-rose-700 dark:text-rose-400' : ''}`}>{note(n.note)}</span>
                       <button type="button" onClick={() => retirer(n)} className="grid h-8 w-8 shrink-0 place-items-center rounded-full text-slate-400 transition hover:bg-slate-100 hover:text-rose-600 dark:hover:bg-slate-800" aria-label="Supprimer la note">✕</button>
                     </li>
                   ))}

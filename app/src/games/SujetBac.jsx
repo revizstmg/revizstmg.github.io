@@ -62,7 +62,7 @@ export default function SujetBac({ sujet, color = 'var(--c-accent)', onExit }) {
           <span className="block text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">{sujet.icon} {sujet.titre}</span>
           <span className="block font-display font-semibold">{p.titre} · {t('sujetPart').replace('{k}', partie + 1).replace('{n}', sujet.parties.length)}</span>
         </span>
-        <span className={`font-mono text-sm font-semibold ${reste < 0 ? 'text-rose-600 dark:text-rose-400' : ''}`} aria-label={t('sujetTimeLeft')}>
+        <span className={`font-mono text-sm font-semibold ${reste < 0 ? 'text-rose-700 dark:text-rose-400' : ''}`} aria-label={t('sujetTimeLeft')}>
           ⏱ {reste >= 0 ? hms(reste) : `+${hms(-reste)}`}
         </span>
       </div>

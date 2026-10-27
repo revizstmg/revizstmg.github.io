@@ -77,9 +77,9 @@ export function ProgressBar({ value = 0, color = '#7c3aed', className = '', heig
 
 export function Stars({ count = 0, size = 'text-base' }) {
   return (
-    <span className={`inline-flex ${size}`} aria-label={`${count} sur 3 étoiles`}>
+    <span className={`inline-flex ${size}`} role="img" aria-label={`${count} sur 3 étoiles`}>
       {[0, 1, 2].map((i) => (
-        <span key={i} className={i < count ? 'text-amber-400' : 'text-slate-300 dark:text-slate-700'}>
+        <span key={i} aria-hidden="true" className={i < count ? 'text-amber-400' : 'text-slate-300 dark:text-slate-700'}>
           ★
         </span>
       ))}
