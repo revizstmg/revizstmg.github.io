@@ -6,7 +6,7 @@ Entrée `/#/vacances`, depuis Accueil, Réviser et Mon parcours. Complète le pl
 - Choisir une matière, un à trois chapitres admissibles, l’objectif (bases ou contrôle), la date de départ, trois ou quatre séances par semaine et une durée indicative de 15/20/30 minutes.
 - Six ou huit séances sur quatorze jours. Les dates sont indicatives, sans verrou calendaire ; aucun temps prévu n’est présenté comme du temps mesuré.
 - Bilan initial de deux questions par chapitre. Chaque réponse et correction est sauvegardée immédiatement ; reprendre après rechargement.
-- Séance : lire les passages utiles et les expliquer avec ses mots, puis trois questions. Les chapitres fragiles sont prioritaires, avec une compensation par nombre d’expositions pour conserver la couverture. Les questions nouvelles passent avant les rappels. Une question est présentée au maximum deux fois ; la création refuse une sélection trop courte pour tenir ce contrat.
+- Séance : lire les passages utiles et les expliquer avec ses mots, puis jusqu’à trois questions. Les chapitres fragiles sont prioritaires, avec une compensation par nombre d’expositions pour conserver la couverture. Les questions nouvelles passent avant les rappels. Une question est présentée au maximum deux fois ; la création refuse une sélection trop courte pour tenir ce contrat.
 - Objectif contrôle : accès mis en avant aux questions rédigées existantes du chapitre ; elles ne sont pas intégrées au calcul des deux bilans et conservent leurs conditions et limites propres.
 - Bilan final après les séances : deux autres questions par chapitre. Les questions de bilan, de séance et de démonstration sont disjointes. Il s’agit d’un repère local QCM : ni épreuve étalonnée, ni mesure exhaustive des compétences, ni note scolaire.
 
