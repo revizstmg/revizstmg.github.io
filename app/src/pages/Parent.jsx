@@ -1,3 +1,5 @@
+import { cleanVacancesSummary } from '../data/vacancesState.js'
+import { vacancesText } from '../i18n/vacances.js'
 import { useEffect, useState, useCallback } from 'react'
 import { ProgressBar } from '../components/ui.jsx'
 import { fmtDuration } from '../components/StatsCharts.jsx'
@@ -195,6 +197,7 @@ export default function Parent() {
                         <span className="shrink-0 text-xs font-semibold tabular-nums texte-matiere" style={{ '--mc': s.color || accent }}>{s.score || 0}%</span>
                       </div>
                       <ProgressBar value={s.score || 0} color={s.color || accent} />
+                      <HolidaySummary value={s.vacances} lang={lang} />
                     </div>
                   ))}
                 </section>
@@ -209,4 +212,10 @@ export default function Parent() {
       )}
     </div>
   )
+}
+
+function HolidaySummary({value,lang}) {
+ const summary=cleanVacancesSummary(value),m=(key,values)=>vacancesText(lang,key,values)
+ if(!summary)return null
+ return <section className="mt-3 space-y-2 border border-slate-400 p-3"><h3 className="font-semibold">{m('title')}</h3><p className="text-sm">{m('progress',summary)}</p><p className="text-sm">{m('initial')} : {summary.initial===null?m('pending'):`${summary.initial} %`} · {m('final')} : {summary.final===null?m('pending'):`${summary.final} %`}</p><p className="text-xs">{m('resultHelp')}</p></section>
 }

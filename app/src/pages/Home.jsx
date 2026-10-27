@@ -1,3 +1,4 @@
+import VacancesEntry from '../components/VacancesEntry.jsx'
 import {JourneySteps} from '../components/StudyJourney.jsx'
 import MissionCard from '../components/MissionCard.jsx'
 import { CourseText } from '../components/Course.jsx'
@@ -98,6 +99,7 @@ export default function Home() {
         <Link to="/parcours" className="btn-primary">Voir mon parcours</Link>
       </section>
 
+      <VacancesEntry />
       <section className="home-ritual" aria-labelledby="home-ritual-title">
         <div className="home-section-heading"><div><p className="kicker">Tes habitudes</p><h2 id="home-ritual-title" className="font-display">Trouve ton rythme.</h2></div><Link to="/programme">Mes objectifs <span aria-hidden>↗</span></Link></div>
         <div className="home-ritual-grid">

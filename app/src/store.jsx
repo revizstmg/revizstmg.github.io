@@ -1,3 +1,4 @@
+import { vacancesSummary } from './data/vacancesState.js'
 import { updateMission, missionStatus, MISSION_STAGES, MISSION_PASS } from './data/missionProgress.js'
 import { updateSuccesses } from './data/revisionPaths.js'
 import { normalizeStudyLanguages } from './data/studyLanguages.js'
@@ -322,7 +323,7 @@ export function StoreProvider({ children }) {
     const id = setTimeout(() => { publishChildStats(buildChildSnapshot(state, deriveAll(state))).catch(() => {}) }, 3000)
     return () => clearTimeout(id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.track, state.parentShare, state.xp, state.streak, state.chapters, state.themeTime, state.weekly, state.badges, state.bacDate, state.profile])
+  }, [state.track, state.parentShare, state.xp, state.streak, state.chapters, state.themeTime, state.weekly, state.badges, state.bacDate, state.profile, state.parcours])
 
   // Partage désactivé : on efface l'instantané déjà publié par cet appareil (une
   // fois ; le marqueur évite de le redemander à chaque ouverture).
@@ -998,6 +999,7 @@ export function buildChildSnapshot(state, derived) {
   const subs = subjectsForTrack(state.track).filter((s) => s && !s.comingSoon && (s.chapters || []).length)
   const subjects = subs.map((s) => ({
     short: s.short || s.name,
+    ...(state.parentShare && state.parcours?.vacances?.subjectId === s.id && vacancesSummary(state.parcours.vacances, state.track) ? { vacances: vacancesSummary(state.parcours.vacances, state.track) } : {}),
     color: s.color,
     score: derived?.bySubject?.[s.id] || 0,
     time: (s.chapters || []).reduce((a, c) => a + studySeconds(state.themeTime?.[c.id]), 0),

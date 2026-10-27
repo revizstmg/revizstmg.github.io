@@ -1,3 +1,4 @@
+import VacancesEntry from '../components/VacancesEntry.jsx'
 // « Mon parcours » : des objectifs, un test de positionnement, puis un plan semaine par semaine
 // qui se recalcule à chaque résultat (voir data/parcours.js). Calcul local : ni IA, ni coût.
 import { useEffect, useMemo, useState } from 'react'
@@ -17,7 +18,7 @@ const heures = (min) => (min >= 60 ? `${Math.floor(min / 60)} h${min % 60 ? Stri
 export default function Parcours() {
   const { state } = useStore()
   if (!state.track) return <Navigate to="/" replace />
-  return <ParcoursPage />
+  return <div className="space-y-5"><VacancesEntry /><ParcoursPage /></div>
 }
 
 function ParcoursPage() {
