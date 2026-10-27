@@ -19,7 +19,7 @@ export default function FlashcardsPage() {
       <Link to="/revision" className="btn-primary inline-block">Retour à la révision</Link>
     </section>
   )
-  return <Paquet deck={deck} />
+  return <Paquet key={deck.id} deck={deck} />
 }
 
 function Paquet({ deck }) {

@@ -218,14 +218,18 @@ export async function fetchPlayers(sessionId) {
 }
 // Enregistre la réponse de l'élève à la question courante (+ points) — idempotent.
 export async function submitLiveAnswer({ sessionId, index, choice, correct, addScore }) {
-  const rows = await getJSON(rest(`live_player?select=score,answers&session_id=eq.${enc(sessionId)}&device_id=eq.${enc(deviceId())}&limit=1`))
-  const cur = rows[0] || { score: 0, answers: {} }
+  const player = deviceId()
+  const rows = await getJSON(rest(`live_player?select=score,answers&session_id=eq.${enc(sessionId)}&device_id=eq.${enc(player)}&limit=1`))
+  if (deviceId() !== player || !rows[0]) throw new Error('live_player_missing')
+  const cur = rows[0]
   const answers = { ...(cur.answers || {}) }
   if (answers[index] !== undefined) return cur // déjà répondu
-  answers[index] = { choice, correct: !!correct }
+  answers[index] = { choice, correct: !!correct, points: Math.max(0, Math.round(addScore || 0)) }
   const score = Math.max(0, Math.min(1000000, (cur.score || 0) + Math.round(addScore || 0)))
-  await send('PATCH', `live_player?session_id=eq.${enc(sessionId)}&device_id=eq.${enc(deviceId())}`, { answers, score, updated_at: new Date().toISOString() }, 'return=minimal')
-  return { score, answers }
+  const res = await send('PATCH', `live_player?session_id=eq.${enc(sessionId)}&device_id=eq.${enc(player)}`, { answers, score, updated_at: new Date().toISOString() }, 'return=representation')
+  const saved = await res.json()
+  if (!saved?.[0]?.answers?.[index]) throw new Error('live_answer_not_saved')
+  return saved[0]
 }
 
 // --- Classes du professeur (codes uniques générés, non modifiables) --------
@@ -285,8 +289,10 @@ export async function deleteTeacherClass(id) { await send('DELETE', `teacher_cla
 // --- Exclusion d'élèves ----------------------------------------------------
 export async function banStudent({ classCode, deviceId: dev }) {
   const cc = normalizeCode(classCode)
-  await send('POST', 'class_ban?on_conflict=class_code,device_id', [{ class_code: cc, device_id: dev }], 'resolution=merge-duplicates,return=minimal').catch(() => {})
-  await send('DELETE', `class_member?class_code=eq.${enc(cc)}&device_id=eq.${enc(dev)}`).catch(() => {})
+  const res = await send('POST', 'class_ban?on_conflict=class_code,device_id', [{ class_code: cc, device_id: dev }], 'resolution=merge-duplicates,return=representation')
+  const rows = await res.json()
+  if (!rows?.some(r => r.class_code === cc && r.device_id === dev)) throw new Error('class_ban_not_saved')
+  await send('DELETE', `class_member?class_code=eq.${enc(cc)}&device_id=eq.${enc(dev)}`)
 }
 export async function unbanStudent({ classCode, deviceId: dev }) {
   await send('DELETE', `class_ban?class_code=eq.${enc(normalizeCode(classCode))}&device_id=eq.${enc(dev)}`)

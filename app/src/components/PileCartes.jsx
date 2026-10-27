@@ -23,7 +23,9 @@ const vibrer = (motif) => {
 // Déroulé d'une série : file des cartes, cartes ratées à revoir, cartes sues.
 // phase : 'etude' → 'finSerie' (il reste des cartes à revoir) ou 'fini'.
 export function useSerieCartes(cartes) {
-  const [file, setFile] = useState(() => shuffle(cartes))
+  // Une identité par occurrence, même avec deux rectos (ou objets) identiques.
+  const [originales] = useState(() => cartes.map((carte, index) => ({ ...carte, serieId: index })))
+  const [file, setFile] = useState(() => shuffle(originales))
   const [i, setI] = useState(0)
   const [tour, setTour] = useState(0) // change à chaque nouvelle série
   const [aRevoir, setARevoir] = useState([])
@@ -33,14 +35,14 @@ export function useSerieCartes(cartes) {
 
   const noter = (ok) => {
     const reste = ok ? aRevoir : [...aRevoir, carte]
-    if (ok) setSues((s) => new Set(s).add(carte.front))
+    if (ok) setSues((s) => new Set(s).add(carte.serieId))
     setARevoir(reste)
     if (i + 1 < file.length) setI(i + 1)
     else setPhase(reste.length ? 'finSerie' : 'fini')
   }
   const nouvelleSerie = (liste) => { setFile(shuffle(liste)); setI(0); setARevoir([]); setTour((n) => n + 1); setPhase('etude') }
   const revoirRatees = () => nouvelleSerie(aRevoir)
-  const recommencer = () => { setSues(new Set()); nouvelleSerie(cartes) }
+  const recommencer = () => { setSues(new Set()); nouvelleSerie(originales) }
 
   return {
     carte, suivante: file[i + 1], apres: file[i + 2], i, longueur: file.length,

@@ -372,4 +372,12 @@ export default {
   removeFav: 'Quitar de favoritos', addFav: 'Añadir a favoritos',
   autoTranslated: 'traducido automáticamente',
   myPath: 'Mi recorrido',
+
+  // Reprise des réponses et brouillons
+  liveSending: "Enviando tu respuesta…",
+  livePending: "Tu respuesta aún no se ha enviado. Reinténtalo; tus respuestas se conservan en esta pestaña.",
+  draftStorageFailed: "No se puede guardar el borrador en esta pestaña. No cierres esta página.",
+  manualLoadFailed: "No se han podido cargar los ejercicios. Comprueba tu conexión y reinténtalo.",
+  mathDraftSaved: "Tu examen se conserva en esta pestaña. Puedes salir y retomarlo aquí, incluso después de actualizar.",
+  mathDraftLost: "No se puede guardar el borrador. Si sales perderás tus respuestas. ¿Continuar?",
 }

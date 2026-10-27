@@ -372,4 +372,12 @@ export default {
   removeFav: 'Rimuovi dai preferiti', addFav: 'Aggiungi ai preferiti',
   autoTranslated: 'tradotto automaticamente',
   myPath: 'Il mio percorso',
+
+  // Reprise des réponses et brouillons
+  liveSending: "Invio della risposta…",
+  livePending: "La tua risposta non è ancora stata inviata. Riprova; le risposte restano in questa scheda.",
+  draftStorageFailed: "Non è possibile salvare la bozza in questa scheda. Non chiudere questa pagina.",
+  manualLoadFailed: "Impossibile caricare gli esercizi. Controlla la connessione e riprova.",
+  mathDraftSaved: "Il compito è conservato in questa scheda. Puoi uscire e riprenderlo qui, anche dopo un aggiornamento.",
+  mathDraftLost: "Impossibile salvare la bozza. Uscendo perderai le risposte. Continuare?",
 }

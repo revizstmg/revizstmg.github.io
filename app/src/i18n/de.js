@@ -1031,4 +1031,12 @@ export default {
   "translationPartial": "Einige Texte konnten nicht übersetzt werden. Sie können es noch einmal versuchen.",
   "studyGerman": "Deutsch",
   "myPath": "Mein Lernweg",
+
+  // Reprise des réponses et brouillons
+  liveSending: "Deine Antwort wird gesendet…",
+  livePending: "Deine Antwort wurde noch nicht gesendet. Versuche es erneut; deine Antworten bleiben in diesem Tab erhalten.",
+  draftStorageFailed: "Dein Entwurf kann in diesem Tab nicht gespeichert werden. Lass diese Seite geöffnet.",
+  manualLoadFailed: "Die Übungen konnten nicht geladen werden. Prüfe deine Verbindung und versuche es erneut.",
+  mathDraftSaved: "Deine Arbeit bleibt in diesem Tab gespeichert. Du kannst sie hier fortsetzen, auch nach dem Neuladen.",
+  mathDraftLost: "Dein Entwurf kann nicht gespeichert werden. Beim Verlassen gehen deine Antworten verloren. Fortfahren?",
 }

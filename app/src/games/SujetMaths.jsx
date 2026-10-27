@@ -3,8 +3,10 @@
 // de 2 h indicatif (on peut rendre avant ou après). Après « Rendre ma copie »,
 // chaque réponse est corrigée avec sa démarche. Le total ne compte que les
 // résultats : la rédaction et la langue (2 points sur 20) ne s'évaluent pas ici.
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useStore } from '../store.jsx'
+import { useT } from '../i18n.js'
+import { readSessionDraft, writeSessionDraft } from '../data/sessionDraft.js'
 import { composerSujetMaths, corriger, reponseJuste, texteReponse, nombre, BO_MATHS } from '../data/sujetMaths.js'
 
 const hms = (s) => `${Math.floor(s / 3600)} h ${String(Math.floor((s % 3600) / 60)).padStart(2, '0')}`
@@ -46,12 +48,35 @@ function Question({ q, numero, valeur, onChange, corrige }) {
 }
 
 export default function SujetMaths({ onExit }) {
+  const { state } = useStore()
+  return <CopieMaths key={state.account?.id || 'trial'} onExit={onExit} accountId={state.account?.id || 'trial'} />
+}
+function CopieMaths({ onExit, accountId }) {
   const { addXp } = useStore()
-  const [sujet, setSujet] = useState(() => composerSujetMaths())
-  const [reponses, setReponses] = useState({})
-  const [resultat, setResultat] = useState(null)
-  const [debut, setDebut] = useState(() => Date.now())
-  const [ecoule, setEcoule] = useState(0)
+  const t = useT()
+  const key = `stmg_maths_draft:${accountId}:v1`
+  const [copie, setCopie] = useState(() => {
+    const saved = readSessionDraft(key)
+    return saved?.sujet?.parties?.length && Number.isFinite(saved.debut)
+      ? saved : { sujet: composerSujetMaths(), reponses: {}, resultat: null, debut: Date.now(), ecoule: 0 }
+  })
+  const copieRef = useRef(copie)
+  const [storageError, setStorageError] = useState(false)
+  const { sujet, reponses, resultat, debut } = copie
+  const [ecoule, setEcoule] = useState(() => copie.resultat ? copie.ecoule : Math.max(0, Math.floor((Date.now() - copie.debut) / 1000)))
+  const save = next => {
+    copieRef.current = next
+    setCopie(next)
+    setStorageError(!writeSessionDraft(key, next))
+  }
+  useEffect(() => { setStorageError(!writeSessionDraft(key, copieRef.current)) }, [key])
+  // Le temps reprend depuis la date de départ, sans être remis à zéro.
+  useEffect(() => {
+    const protect = e => { if (storageError && !copieRef.current.resultat) { e.preventDefault(); e.returnValue = '' } }
+    window.addEventListener('beforeunload', protect)
+    return () => window.removeEventListener('beforeunload', protect)
+  }, [storageError])
+  const exit = () => { if (!storageError || resultat || window.confirm(t('mathDraftLost'))) onExit() }
 
   useEffect(() => {
     if (resultat) return
@@ -61,15 +86,16 @@ export default function SujetMaths({ onExit }) {
 
   const toutes = sujet.parties.flatMap((p) => p.exercices.flatMap((e) => e.questions))
   const vides = toutes.filter((q) => !String(reponses[q.id] || '').trim()).length
-  const changer = (id, v) => setReponses((r) => ({ ...r, [id]: v }))
+  const changer = (id, v) => save({ ...copieRef.current, reponses: { ...copieRef.current.reponses, [id]: v } })
   const rendre = () => {
+    if (copieRef.current.resultat) return
     const r = corriger(sujet, reponses)
-    setResultat(r)
+    save({ ...copieRef.current, resultat: r, ecoule: Math.max(0, Math.floor((Date.now() - debut) / 1000)) })
     addXp(Math.round(r.total * 6))
     window.scrollTo({ top: 0 })
   }
   const nouveau = () => {
-    setSujet(composerSujetMaths()); setReponses({}); setResultat(null); setDebut(Date.now()); setEcoule(0)
+    save({ sujet: composerSujetMaths(), reponses: {}, resultat: null, debut: Date.now(), ecoule: 0 }); setEcoule(0)
     window.scrollTo({ top: 0 })
   }
   const reste = sujet.duree - ecoule
@@ -77,6 +103,7 @@ export default function SujetMaths({ onExit }) {
 
   return (
     <div className="space-y-4">
+      <p className="text-sm" role="status">{t(storageError ? 'draftStorageFailed' : 'mathDraftSaved')}</p>
       <div className="card flex flex-wrap items-center justify-between gap-2 p-3.5">
         <span className="min-w-0">
           <span className="block text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">➗ Sujet d’entraînement · non officiel</span>
@@ -100,7 +127,7 @@ export default function SujetMaths({ onExit }) {
           <p className="text-xs text-slate-500 dark:text-slate-400">{`Temps passé : ${hms(ecoule)} sur 2 h.`}</p>
           <div className="flex flex-wrap justify-center gap-2">
             <button onClick={nouveau} className="btn-primary" style={{ backgroundColor: 'var(--c-accent-fort)' }}>Nouveau sujet</button>
-            <button onClick={onExit} className="btn-ghost">Terminer</button>
+            <button onClick={exit} className="btn-ghost">Terminer</button>
           </div>
         </section>
       )}
@@ -142,7 +169,7 @@ export default function SujetMaths({ onExit }) {
       )}
       <p className="text-xs text-slate-500 dark:text-slate-400"><a className="underline" href={BO_MATHS} target="_blank" rel="noreferrer">Format de l’épreuve : note de service du 11 septembre 2026 (BO spécial n° 4)</a></p>
       <p className="text-xs text-slate-500 dark:text-slate-400">Sujet composé par l’application avec les notions des chapitres de Première ; il ne remplace pas les sujets de ton professeur.</p>
-      <button onClick={onExit} className="lien-retour">← Quitter</button>
+      <button onClick={exit} className="lien-retour">← Quitter</button>
     </div>
   )
 }
