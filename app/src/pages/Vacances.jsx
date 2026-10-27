@@ -28,7 +28,7 @@ function VacancesPage() {
  const update = fn => setParcours(previous => ({...previous,vacances:fn(previous.vacances)}))
  const replace = () => { if (window.confirm(m('replace'))) {setEditing(true);setPhase(null)} }
  return <div className="vacances-page space-y-6">
-  <header className="vacances-hero"><p className="kicker">☀️ {m('title')}</p><h1 className="font-display">{m('intro')}</h1><p>{m('scope')}</p></header>
+  <header className="vacances-hero"><p className="kicker">☀️ RévizSTMG</p><h1 className="font-display">{m('title')}</h1><p>{m('intro')}</p><p>{m('scope')}</p></header>
   {!state.account?.id && <p className="vacances-note">{m('local')}</p>}
   {(!program || editing) ? <>
    <label className="vacances-subject">{m('subject')}<select aria-label={m('subject')} value={sid} onChange={e=>setSid(e.target.value)}><option value="">{m('chooseSubject')}</option>{subjects.map(s=><option value={s.id} key={s.id}>{s.name}</option>)}</select></label>

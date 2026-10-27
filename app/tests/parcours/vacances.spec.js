@@ -8,7 +8,7 @@ const axe=async page=>{
 }
 async function setup(page){
  await page.goto('./#/vacances');await attendreAccueil(page)
- await expect(page.getByRole('heading',{name:'Deux semaines pour retravailler tes difficultés, à ton rythme.'})).toBeVisible()
+ await expect(page.getByRole('heading',{name:'Vacances STMG',exact:true})).toBeVisible()
  await page.getByRole('combobox',{name:'Matière',exact:true}).selectOption('droit')
  for(let i=0;i<3;i++){
   if(i)await page.getByRole('button',{name:'Ajouter un chapitre'}).click()
@@ -58,7 +58,7 @@ test('vacances : parcours entier, reprise, bilans distincts et séances adaptati
 test('vacances : petit écran, sombre, allemand et liens vers les réglages parents',async({page})=>{
  const errors=await preparer(page,etatEleve({lang:'de'}))
  await page.setViewportSize({width:320,height:740});await page.goto('./#/vacances');await attendreAccueil(page)
- await expect(page.getByRole('heading',{name:'Zwei Wochen, um in deinem Tempo an Schwierigkeiten zu arbeiten.'})).toBeVisible()
+ await expect(page.getByRole('heading',{name:'STMG-Ferienlernen',exact:true})).toBeVisible()
  for(const dark of [false,true]){await page.evaluate(d=>document.documentElement.classList.toggle('dark',d),dark);await axe(page)}
  await page.getByRole('link',{name:'Elternfreigabe verwalten'}).click()
  await expect(page).toHaveURL(/reglage=parents/)
@@ -106,4 +106,16 @@ test('vacances : présentation accessible aux parents sans compte ni filière',a
  await expect(page.getByRole('link',{name:'Essayer sans compte'})).toBeVisible()
  await expect(page.getByText('Ce parcours et son bilan sont accessibles pendant la phase de développement. Aucun paiement ni abonnement n’est ouvert ici.')).toBeVisible()
  await axe(page);expect(errors).toEqual([])
+})
+
+test('parent : affiche les résultats agrégés du parcours sans réponses privées',async({page})=>{
+ const errors=await preparer(page,null)
+ await page.addInitScript(()=>localStorage.setItem('stmg_parent_link','PABC234XYZ'))
+ await page.route('**/rest/v1/rpc/revizstmg_stats_enfant',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify([{name:'Élève de test',subjects:[{short:'Droit',score:0,time:0,vacances:{done:4,total:8,initial:0,final:50,date:'2026-12-20'}}]}])}))
+ await page.goto('./#/parent');await attendreAccueil(page)
+ const summary=page.locator('section').filter({has:page.getByRole('heading',{name:'Vacances STMG',exact:true})}).last()
+ await expect(summary).toContainText('4 séances terminées sur 8')
+ await expect(summary).toContainText('Bilan de départ : 0 %')
+ await expect(summary).toContainText('Bilan final : 50 %')
+ expect(errors).toEqual([])
 })
