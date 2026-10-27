@@ -119,7 +119,7 @@ test('commencer sans filière : le bouton mène au choix de niveau',async({page}
  await preparer(page,etatEleve({track:null}))
  await page.goto('./')
  await expect(page.getByRole('dialog')).toHaveCount(0)
- await page.getByRole('button',{name:'Commencer à réviser',exact:true}).click()
+ await page.getByRole('button',{name:'Lancer ma séance du jour',exact:true}).click()
  const first=page.locator('#choisir-niveau button').first()
  await expect(first).toBeFocused()
  await page.keyboard.press('Enter')

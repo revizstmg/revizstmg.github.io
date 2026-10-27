@@ -1064,5 +1064,17 @@
   "Chapitres {v0} à {v1} sur {v2}": "الفصول من {v0} إلى {v1} من {v2}",
   "Niveau pas encore mesuré, objectif {v0} %": "المستوى لم يُقَس بعد، الهدف {v0} ٪",
   "Rappel avant l’épreuve · niveau pas encore mesuré": "مراجعة قبل الامتحان · المستوى لم يُقَس بعد",
-  "Même en révisant 20 h par semaine, ce plan ne tient pas avant les épreuves. Vise une note un peu plus basse ou retire une matière difficile.": "حتى مع 20 ساعة في الأسبوع لا تتسع هذه الخطة قبل الامتحانات. اطمح إلى علامة أدنى قليلًا أو أزل مادة صعبة."
+  "Même en révisant 20 h par semaine, ce plan ne tient pas avant les épreuves. Vise une note un peu plus basse ou retire une matière difficile.": "حتى مع 20 ساعة في الأسبوع لا تتسع هذه الخطة قبل الامتحانات. اطمح إلى علامة أدنى قليلًا أو أزل مادة صعبة.",
+  "Les choix déjà cochés sont des valeurs courantes : ajuste-les.": "الخيارات المحددة مسبقًا قيم شائعة: عدّلها حسب حالتك.",
+  "Ton temps de révision ne suffit pas": "وقت مراجعتك غير كافٍ",
+  "Semaine entamée : {v0} prévues au lieu de {v1} h.": "الأسبوع بدأ بالفعل: المقرَّر {v0} بدل {v1} ساعة.",
+  "Lancer ma séance du jour": "ابدأ جلسة اليوم",
+  "Trois étapes courtes : tes erreurs, une révision, puis la suite du cours.": "ثلاث خطوات قصيرة: أخطاؤك، ثم مراجعة، ثم متابعة الدرس.",
+  "Ajoute ta note et tes questions manquées, ou dépose ton sujet et ta copie. Le bilan expliqué et l’analyse de copie sont prévus dans Premium ; ils restent accessibles aux comptes connectés pendant le développement.": "أضف علامتك والأسئلة التي أخطأت فيها، أو ارفع الموضوع وإجابتك. التقرير المشروح وتحليل الإجابة مخصصان لعرض Premium؛ ويبقيان متاحين للحسابات المتصلة أثناء التطوير.",
+  "Cet espace est réservé aux comptes. Crée ton compte gratuit pour retrouver ta progression sur tous tes appareils et accéder aux classes, aux amis et aux classements.": "هذا القسم مخصص للحسابات فقط. أنشئ حسابك المجاني لتحتفظ بتقدمك على كل أجهزتك وتصل إلى الأقسام والأصدقاء والترتيب.",
+  "Tes épreuves anticipées : juin {v0} (bac session {v1})": "امتحاناتك المبكرة: يونيو {v0} (دورة البكالوريا {v1})",
+  "Attente annulée. Rien n’a été ajouté.": "أُلغي الانتظار. لم تُضَف أي شيء.",
+  "Le service qui crée les questions est indisponible pour le moment. Les exercices du chapitre restent disponibles ; réessaie plus tard.": "الخدمة التي تنشئ الأسئلة غير متاحة حاليًا. تبقى تمارين الفصل متاحة؛ حاول لاحقًا.",
+  "Le cours est envoyé à un service d’intelligence artificielle externe (Gemini, de Google), uniquement quand tu le demandes, avec les questions déjà posées dans ce chapitre. Tes réponses et ton identité ne sont pas envoyées. Les questions créées par l’IA peuvent comporter des erreurs ; chaque correction indique le passage du cours dont elle vient.": "يُرسل الدرس إلى خدمة ذكاء اصطناعي خارجية (Gemini من Google) عند طلبك فقط، مع الأسئلة المطروحة سابقًا في هذا الفصل. لا تُرسل إجاباتك ولا هويتك. قد تحتوي الأسئلة التي ينشئها الذكاء الاصطناعي على أخطاء؛ ويبيّن كل تصحيح المقطع الذي أُخذ منه من الدرس.",
+  "Le service qui crée les questions est indisponible pour le moment. Cette question de synthèse est construite directement à partir de ton cours, sans génération par l’IA. Tu pourras demander la correction après ta rédaction.": "الخدمة التي تنشئ الأسئلة غير متاحة حاليًا. يُبنى سؤال التلخيص هذا مباشرة من درسك، دون توليد بالذكاء الاصطناعي. يمكنك طلب التصحيح بعد كتابة إجابتك."
 }

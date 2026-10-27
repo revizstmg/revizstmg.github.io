@@ -66,7 +66,7 @@ function ProgrammePage() {
       {/* Les épreuves de la session, avec leur propre compte à rebours */}
       {epreuves.length > 0 && (
         <section>
-          <h2 className="mb-2 px-1 font-display text-lg font-medium">🗓️ {t('examsTitle').replace('{n}', CALENDRIER.session)}</h2>
+          <h2 className="mb-2 px-1 font-display text-lg font-medium">🗓️ {state.track?.level === 'premiere-stmg' ? `Tes épreuves anticipées : juin ${CALENDRIER.session} (bac session ${CALENDRIER.session + 1})` : t('examsTitle').replace('{n}', CALENDRIER.session)}</h2>
           <div className="card divide-y divide-slate-100 p-0 dark:divide-slate-800">
             {epreuves.map((e) => (
               <div key={e.id} className="flex items-center gap-3 p-3.5">

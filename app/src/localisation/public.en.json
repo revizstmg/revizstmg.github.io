@@ -1064,5 +1064,17 @@
   "Chapitres {v0} à {v1} sur {v2}": "Chapters {v0} to {v1} of {v2}",
   "Niveau pas encore mesuré, objectif {v0} %": "Level not measured yet, goal {v0} %",
   "Rappel avant l’épreuve · niveau pas encore mesuré": "Recap before the exam · level not measured yet",
-  "Même en révisant 20 h par semaine, ce plan ne tient pas avant les épreuves. Vise une note un peu plus basse ou retire une matière difficile.": "Even at 20 h a week, this plan does not fit before the exams. Aim a little lower or remove a hard subject."
+  "Même en révisant 20 h par semaine, ce plan ne tient pas avant les épreuves. Vise une note un peu plus basse ou retire une matière difficile.": "Even at 20 h a week, this plan does not fit before the exams. Aim a little lower or remove a hard subject.",
+  "Les choix déjà cochés sont des valeurs courantes : ajuste-les.": "The options already ticked are common values: adjust them.",
+  "Ton temps de révision ne suffit pas": "Your revision time is not enough",
+  "Semaine entamée : {v0} prévues au lieu de {v1} h.": "Week already under way: {v0} planned instead of {v1} h.",
+  "Lancer ma séance du jour": "Start my daily session",
+  "Trois étapes courtes : tes erreurs, une révision, puis la suite du cours.": "Three short steps: your mistakes, a revision, then the next part of the course.",
+  "Ajoute ta note et tes questions manquées, ou dépose ton sujet et ta copie. Le bilan expliqué et l’analyse de copie sont prévus dans Premium ; ils restent accessibles aux comptes connectés pendant le développement.": "Add your mark and the questions you missed, or upload your paper and your answers. The explained report and the paper analysis are planned for Premium; they stay available to signed-in accounts during development.",
+  "Cet espace est réservé aux comptes. Crée ton compte gratuit pour retrouver ta progression sur tous tes appareils et accéder aux classes, aux amis et aux classements.": "This area is for accounts only. Create your free account to keep your progress on all your devices and to access classes, friends and rankings.",
+  "Tes épreuves anticipées : juin {v0} (bac session {v1})": "Your early exams: June {v0} (exam session {v1})",
+  "Attente annulée. Rien n’a été ajouté.": "Waiting cancelled. Nothing was added.",
+  "Le service qui crée les questions est indisponible pour le moment. Les exercices du chapitre restent disponibles ; réessaie plus tard.": "The service that creates the questions is unavailable for now. The chapter’s exercises remain available; try again later.",
+  "Le cours est envoyé à un service d’intelligence artificielle externe (Gemini, de Google), uniquement quand tu le demandes, avec les questions déjà posées dans ce chapitre. Tes réponses et ton identité ne sont pas envoyées. Les questions créées par l’IA peuvent comporter des erreurs ; chaque correction indique le passage du cours dont elle vient.": "The course is sent to an external artificial intelligence service (Gemini, by Google), only when you ask for it, with the questions already asked in this chapter. Your answers and your identity are not sent. Questions created by the AI may contain mistakes; each correction shows the part of the course it comes from.",
+  "Le service qui crée les questions est indisponible pour le moment. Cette question de synthèse est construite directement à partir de ton cours, sans génération par l’IA. Tu pourras demander la correction après ta rédaction.": "The service that creates the questions is unavailable for now. This summary question is built directly from your course, without AI generation. You will be able to ask for the correction after writing your answer."
 }

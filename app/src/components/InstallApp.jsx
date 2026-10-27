@@ -141,7 +141,7 @@ export function AppBadge() {
 }
 
 // Écran de verrouillage : fonctionnalité réservée à l'app installée.
-export function InstallLock({ title }) {
+export function InstallLock({ title, description }) {
   const t = useT()
   const [guide, setGuide] = useState(false)
   return (
@@ -152,6 +152,7 @@ export function InstallLock({ title }) {
           <span className="absolute -bottom-2 -right-2 grid h-8 w-8 place-items-center rounded-full bg-white text-lg shadow dark:bg-slate-800" aria-hidden>🔒</span>
         </span>
         <h2 className="mt-4 font-display text-xl font-semibold">{title || t('appOnlyTitle')}</h2>
+        {description && <p className="mx-auto mt-2 max-w-sm text-sm font-medium">{description}</p>}
         <p className="mx-auto mt-2 max-w-sm text-sm text-slate-500 dark:text-slate-400">{t('appOnlyBody')}</p>
         <button onClick={() => setGuide(true)} className="mt-5 w-full max-w-xs rounded-2xl px-4 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90" style={{ backgroundColor: 'var(--c-accent-fort)' }}>
           {t('installBtn')}

@@ -79,9 +79,10 @@ export default function Home() {
             <h2 className="font-display">Comprends tes erreurs. Prépare ton prochain contrôle.</h2>
             <p className="home-intro">Pars de ton dernier devoir pour savoir quoi revoir et comment t’entraîner.</p>
             <div className="home-hero-actions">
-              {realSubjects.length > 0 && <Link to="/seance" className="home-main-action"><Icon.Play size={17} /> Commencer à réviser <span aria-hidden>↗</span></Link>}
+              {realSubjects.length > 0 && <Link to="/seance" className="home-main-action"><Icon.Play size={17} /> Lancer ma séance du jour <span aria-hidden>↗</span></Link>}
               <Link to="/exemple-bilan" className="home-courses-action">Voir un exemple de bilan <span aria-hidden>→</span></Link>
             </div>
+            {realSubjects.length > 0 && <p className="home-intro">Trois étapes courtes : tes erreurs, une révision, puis la suite du cours.</p>}
           </div>
           <MissionCard resumeUrl={last?resumeUrl:null} resumeTitle={recent?position.chapterTitle || last?.short || last?.name:last?.short || last?.name}/>
         </div>

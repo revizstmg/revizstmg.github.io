@@ -13,7 +13,7 @@ import {
 } from '../data/parcours.js'
 
 const dateCourte = (jour, lang) => new Date(`${jour}T12:00:00`).toLocaleDateString(lang, { day: 'numeric', month: 'short' })
-const heures = (min) => (min >= 60 ? `${Math.floor(min / 60)} h${min % 60 ? String(min % 60).padStart(2, '0') : ''}` : `${min} min`)
+const heures = (min) => (min >= 60 ? `${Math.floor(min / 60)} h${min % 60 ? ` ${String(min % 60).padStart(2, '0')}` : ''}` : `${min} min`)
 
 export default function Parcours() {
   const { state } = useStore()
@@ -70,6 +70,7 @@ function Questionnaire({ matieres, initial, modification, onValider, onAnnuler }
         <p className="kicker">🗺️ Mon parcours</p>
         <h1 className="mt-1 font-display text-[1.7rem] font-medium leading-tight">{modification ? 'Modifier mes objectifs' : 'Construisons ton parcours'}</h1>
         <p className="mt-2 text-sm">Trois questions pour un plan à ta mesure. Tu pourras tout changer plus tard.</p>
+        {!modification && <p className="mt-1 text-sm">Les choix déjà cochés sont des valeurs courantes : ajuste-les.</p>}
       </header>
       <form className="card space-y-5 p-5" onSubmit={(e) => { e.preventDefault(); onValider({ noteVisee: Number(note), heuresSemaine: Number(h), difficiles }) }}>
         <div>
@@ -157,7 +158,7 @@ function Plan({ matieres, onTest, onModifier }) {
 
       {!plan.faisable && (
         <section className="card border-amber-400 p-5" role="status" aria-labelledby="parcours-alerte">
-          <h2 id="parcours-alerte" className="font-display text-lg font-semibold">Ton plan est trop chargé</h2>
+          <h2 id="parcours-alerte" className="font-display text-lg font-semibold">Ton temps de révision ne suffit pas</h2>
           {plan.heuresConseillees
             ? (
               <>
@@ -188,6 +189,7 @@ function Plan({ matieres, onTest, onModifier }) {
           <div className="h-full rounded-full" style={{ width: `${av.pct}%`, backgroundColor: 'var(--c-accent-fort)' }} />
         </div>
         <p className="text-sm">{`${heures(av.fait)} faites sur ${heures(av.prevu)} prévues`}</p>
+        {courante.capacite < o.heuresSemaine * 60 && <p className="text-xs text-slate-500 dark:text-slate-400">{`Semaine entamée : ${heures(courante.capacite)} prévues au lieu de ${o.heuresSemaine} h.`}</p>}
         {courante.taches.length === 0
           ? <p className="text-sm">Rien de prévu cette semaine : profites-en pour souffler ou avancer sur ce que tu veux.</p>
           : <ul className="divide-y divide-slate-100 dark:divide-slate-800">{courante.taches.map((t) => <Tache key={t.id} t={t} />)}</ul>}

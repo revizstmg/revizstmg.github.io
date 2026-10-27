@@ -14,14 +14,16 @@ export function creerMonCompte() {
   window.dispatchEvent(new CustomEvent('stmg-creer-compte'))
 }
 
-export function InvitationCompte({ quoi }) {
+export function InvitationCompte({ quoi, essai = true }) {
   return (
     <section className="card mx-auto max-w-lg p-6 text-center">
       <p className="text-4xl" aria-hidden>🔐</p>
       <h1 className="mt-2 font-display text-2xl font-medium">Crée ton compte pour {quoi}</h1>
       <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
-        Tu es en mode essai : tu révises librement, et ta progression reste sur cet appareil. Avec un compte (gratuit),
-        tu la retrouves sur tous tes appareils et tu accèdes aux espaces partagés. Rien de ce que tu as fait ne sera perdu.
+        {essai
+          ? <>Tu es en mode essai : tu révises librement, et ta progression reste sur cet appareil. Avec un compte (gratuit),
+        tu la retrouves sur tous tes appareils et tu accèdes aux espaces partagés. Rien de ce que tu as fait ne sera perdu.</>
+          : <>Cet espace est réservé aux comptes. Crée ton compte gratuit pour retrouver ta progression sur tous tes appareils et accéder aux classes, aux amis et aux classements.</>}
       </p>
       <button type="button" onClick={creerMonCompte} className="btn-primary mt-4">Créer mon compte</button>
     </section>
@@ -34,6 +36,7 @@ export default function AvecCompte({ quoi, children }) {
   const [,changed]=useState(0)
   useEffect(()=>{const sync=()=>changed(n=>n+1);window.addEventListener('stmg-session-change',sync);window.addEventListener('storage',sync);return()=>{window.removeEventListener('stmg-session-change',sync);window.removeEventListener('storage',sync)}},[])
   if(estEnEssai(state))return <InvitationCompte quoi={quoi} />
+  if(!state.account?.id&&!isSignedIn())return <InvitationCompte quoi={quoi} essai={false} />
   if(!isSignedIn()||getSession()?.user?.id!==state.account?.id)return <section className="card mx-auto max-w-lg p-6 text-center"><h1 className="font-display text-2xl">Reconnecte-toi</h1><p className="mt-3 text-sm">Ta session a expiré. Tes révisions sont conservées sur cet appareil. Reconnecte-toi pour accéder aux classes, aux amis et aux classements.</p><button type="button" onClick={()=>window.dispatchEvent(new CustomEvent('stmg-creer-compte',{detail:{login:true}}))} className="btn-primary mt-4">Me reconnecter</button></section>
   return children
 }
