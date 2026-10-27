@@ -1,3 +1,4 @@
+import { mergeVacances } from './data/vacancesState.js'
 import { mergeMissions } from './data/missionProgress.js'
 import { repairStudyTime } from './data/studyTime.js'
 // Progression de l'élève : ce qui part sur son compte, et la fusion entre la
@@ -310,7 +311,7 @@ export function mergeProgress(a, b, maintenant = Date.now()) {
     const [vieux, recent] = (pb?.maj || 0) > (pa?.maj || 0) ? [pa, pb] : [pb, pa]
     const positionnement = { ...(vieux?.positionnement || {}) }
     for (const [id, r] of Object.entries(recent?.positionnement || {})) positionnement[id] = (positionnement[id]?.date || '') > (r?.date || '') ? positionnement[id] : r
-    out.parcours = { ...(vieux || {}), ...(recent || {}), positionnement }
+    out.parcours = { ...(vieux || {}), ...(recent || {}), positionnement, vacances: mergeVacances(pa?.vacances, pb?.vacances) }
   }
 
   out._sync = meta

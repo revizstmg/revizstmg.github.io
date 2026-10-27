@@ -1,3 +1,4 @@
+import { cleanVacancesSummary } from './data/vacancesState.js'
 // Espace parent (suivi parental) via Supabase, sur le même modèle « appareil +
 // code » que les amis : l'élève publie un instantané de ses stats sous un code
 // court qu'il partage à ses parents ; le parent saisit ce code une fois et
@@ -57,6 +58,7 @@ export async function publishChildStats(snap) {
     track: String(snap.track || '').slice(0, 80),
     subjects: Array.isArray(snap.subjects)
       ? snap.subjects.slice(0, 20).map((s) => ({
+          ...(cleanVacancesSummary(s.vacances) ? { vacances: cleanVacancesSummary(s.vacances) } : {}),
           short: String(s.short || '').slice(0, 40),
           color: String(s.color || '').slice(0, 20),
           score: clampInt(s.score, 0, 100),
