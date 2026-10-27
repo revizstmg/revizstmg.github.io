@@ -1526,3 +1526,7 @@ Prochaine action :
 - Non reproduit : B-13 (le tri affiche déjà un compteur et un retour juste/faux), B-27 (le format des milliers suit la langue de l'interface), A-11 à A-13 (à confirmer par l'agent A, sans défaut constaté).
 - Reste à décider ou à faire : B-08 (glossaire séance/mission/défi/parcours), B-10 (allemand : « du » partout), B-17/B-18 (numérotation et chapitres qui se recoupent en Droit), B-20 (filtre de l'atelier par niveau), B-24 (masquer XP et badges côté professeur), B-31 (infobulles de l'en-tête).
 - Tests : tests/audit-b-restant.test.js. Traductions hors ligne en cinq langues. Aucune table ni migration.
+
+### AUDIT-20261027-CODEX-02 - neuf défauts fonctionnels et reprise maths
+- Demande : « corrige tout » après audit de trois agents. Branche fix/audit-fonctionnel-20261027, base4786b1e1. Réservation : LiveMode.jsx, classroom.js, friends.js, Friends.jsx (périmètre Claude indispensable signalé au propriétaire), Vacances.jsx, PileCartes.jsx/FlashcardsPage.jsx, ExercicesManuel.jsx, SujetMaths.jsx et tests/traductions nécessaires.
+- Objectif : résultat conservé à la révélation, envoi vérifié/reprise sans double score, exclusion vérifiée avec erreur, invitation refusée renouvelable, identité courante des duels, confirmation du remplacement Vacances entre filières, cartes identifiées séparément, brouillons de langues indépendants du filtre, erreur de chargement récupérable et reprise du sujet math. Aucun schéma/réglage Supabase, donnée réelle ou fichier compilé racine modifié à la main. Validation et publication à suivre.
