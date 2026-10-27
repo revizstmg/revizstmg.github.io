@@ -120,7 +120,7 @@ export default function Parent() {
               {loading ? '…' : t('parentLinkBtn')}
             </button>
           </div>
-          {error && <p className="mt-2 text-sm text-rose-600 dark:text-rose-400">{error}</p>}
+          {error && <p className="mt-2 text-sm text-rose-700 dark:text-rose-400">{error}</p>}
           <p className="mt-4 rounded-xl bg-slate-50 p-3 text-xs text-slate-500 dark:bg-slate-800/60 dark:text-slate-400">{t('parentForStudents')}</p>
         </section>
       )}
@@ -138,7 +138,7 @@ export default function Parent() {
             <button onClick={() => load(linked)} disabled={loading} aria-label={t('parentRefresh')} className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 disabled:opacity-40 dark:text-slate-400 dark:hover:bg-slate-800">↻</button>
           </section>
 
-          {error && <p className="text-center text-sm text-rose-600 dark:text-rose-400">{error}</p>}
+          {error && <p className="text-center text-sm text-rose-700 dark:text-rose-400">{error}</p>}
 
           {!child && !error && (
             <div className="card p-5 text-center text-sm text-slate-500 dark:text-slate-400">{loading ? '…' : t('parentNoData')}</div>
@@ -174,7 +174,7 @@ export default function Parent() {
                         )}
                         {syn.toWork.length > 0 && (
                           <div>
-                            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-rose-600 dark:text-rose-400">🎯 À renforcer</p>
+                            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-rose-700 dark:text-rose-400">🎯 À renforcer</p>
                             <div className="flex flex-wrap gap-1.5">
                               {syn.toWork.map((s, i) => <span key={i} className="chip bg-rose-100 text-rose-700 dark:bg-rose-950/50 dark:text-rose-300">{s.short} · {s.score || 0}%</span>)}
                             </div>

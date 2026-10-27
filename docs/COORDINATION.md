@@ -1511,3 +1511,12 @@ Prochaine action :
 - B-06 : en Première, le titre dit « Tes épreuves anticipées : juin 2027 (bac session 2028) », cohérent avec le bac blanc.
 - B-07 : parcours : « Ton temps de révision ne suffit pas », heures écrites « 130 h 42 », valeurs courantes signalées, semaine entamée expliquée.
 - Tests : tests/parcours/corrections-graves.spec.js, tests/textes-trompeurs.test.js. Traductions hors ligne en cinq langues.
+
+### AUDIT-20261027-CLAUDE-08 - constats moyens et mineurs de l'audit technique (agent A)
+- A-01 : les 56 badges (111 textes) et quelques textes isolés (matières, fiches photo, exemple de code de classe, sujet PDF) sont traduits hors ligne en cinq langues ; la page des badges n'appelle plus aucun service externe. Les pages longues (FAQ, guide, CGU, confidentialité, catalogue de formules) restent traduites automatiquement en ligne : non traitées.
+- A-02 : la page de confidentialité dit, hors français, que seule la version française fait foi.
+- A-03 / A-06 : lien d'aide du Coach IA, rose des erreurs et libellé actif de la barre du bas plus contrastés (le test de la barre du bas ne distingue pas l'ancienne version : garde-fou seulement).
+- A-04 : le solde de pièces ne devient jamais négatif après la fusion de deux appareils.
+- A-05 / A-09 : une horloge qui recule ne casse plus la série ; chaque gel couvre un jour manqué, tout ou rien (choix à valider par le propriétaire).
+- A-07 / A-08 / A-10 : étoiles lisibles par un lecteur d'écran, message pour un paquet inconnu, minuterie du jeu Association nettoyée et état exposé.
+- Tests : tests/audit-agent-a.test.js, tests/parcours/audit-agent-a.spec.js, tests/parcours/serie-et-gels.spec.js, test de solde dans tests/fusion.test.js.

@@ -35,7 +35,7 @@ export default function ClassCodeForm({ onJoin, t, id }) {
         placeholder="ex : stmg-abc23" maxLength={24} autoFocus
         className="mt-1 w-full rounded-xl border border-[color-mix(in_srgb,var(--c-accent)_30%,transparent)] bg-transparent px-3 py-2.5 text-base outline-none focus:border-[var(--c-accent)]" />
       <button type="submit" disabled={busy || normalizeCode(code).length < 2} className="btn-primary mt-4 w-full">{busy ? t('pleaseWait') : t('joinBtn')}</button>
-      {error && <p id={`${id}-error`} role="alert" className="mt-3 text-sm font-semibold text-rose-600 dark:text-rose-400">{error}</p>}
+      {error && <p id={`${id}-error`} role="alert" className="mt-3 text-sm font-semibold text-rose-700 dark:text-rose-400">{error}</p>}
     </form>
   )
 }

@@ -348,6 +348,8 @@ export function StoreProvider({ children }) {
   const bumpStreak = (s) => {
     const t = todayKey()
     if (s.streak.last === t) return s.streak
+    // Date de l'appareil reculée (fuseau, horloge) : la série et son jour restent intacts.
+    if (s.streak.last && daysBetween(s.streak.last, t) < 0) return s.streak
     if (s.streak.last && daysBetween(s.streak.last, t) === 1)
       return { count: s.streak.count + 1, last: t }
     return { count: 1, last: t }
@@ -362,16 +364,17 @@ export function StoreProvider({ children }) {
       const t = todayKey()
       if (prev.streak?.last === t) return prev // déjà validé aujourd'hui
       const gap = prev.streak?.last ? daysBetween(prev.streak.last, t) : null
+      if (gap !== null && gap < 0) return prev // date de l'appareil reculée : ni série perdue ni récompense redonnée
       const next = structuredCloneSafe(prev)
       let count
       let usedFreeze = false
       if (gap === 1) {
         count = (prev.streak.count || 0) + 1
-      } else if (gap === 2 && (prev.freezes || 0) > 0) {
-        // Un seul jour manqué mais l'élève possède un gel de série : on préserve
-        // la série (on consomme un gel).
+      } else if (gap >= 2 && (prev.freezes || 0) >= gap - 1) {
+        // Chaque jour manqué est couvert par un gel de série : on préserve la série
+        // et on consomme autant de gels que de jours manqués (tout ou rien).
         count = (prev.streak.count || 0) + 1
-        next.freezes = (prev.freezes || 0) - 1
+        next.freezes = (prev.freezes || 0) - (gap - 1)
         usedFreeze = true
       } else {
         count = 1

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { shuffle } from './common.jsx'
 import { useT } from '../i18n.js'
 
@@ -13,6 +13,9 @@ export default function Association({ game, color, onDone }) {
   const [matched, setMatched] = useState(() => new Set())
   const [wrong, setWrong] = useState(null) // id de droite qui clignote
   const [mistakes, setMistakes] = useState(0)
+  const fin = useRef(null)
+  // Quitter le jeu pendant le court délai de fin n'enregistre aucun score après la sortie.
+  useEffect(() => () => clearTimeout(fin.current), [])
 
   const pickRight = (rid) => {
     if (sel === null || matched.has(rid)) return
@@ -22,7 +25,7 @@ export default function Association({ game, color, onDone }) {
       setMatched(nm)
       setSel(null)
       if (nm.size === pairs.length) {
-        setTimeout(() => onDone({ correct: pairs.length, total: pairs.length + mistakes }), 400)
+        fin.current = setTimeout(() => onDone({ correct: pairs.length, total: pairs.length + mistakes }), 400)
       }
     } else {
       setMistakes((m) => m + 1)
@@ -47,6 +50,7 @@ export default function Association({ game, color, onDone }) {
                 key={l.id}
                 onClick={() => !done && setSel(active ? null : l.id)}
                 disabled={done}
+                aria-pressed={active}
                 className={`rounded-xl border-2 px-3 py-3 text-left text-sm font-medium transition ${
                   done
                     ? 'border-emerald-300 bg-emerald-50 text-emerald-700 opacity-70 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300'

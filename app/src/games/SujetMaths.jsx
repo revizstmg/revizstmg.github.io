@@ -83,7 +83,7 @@ export default function SujetMaths({ onExit }) {
           <span className="block font-display font-semibold">Épreuve anticipée de mathématiques · 2 h · sans calculatrice</span>
         </span>
         {!resultat && (
-          <span className={`font-mono text-sm font-semibold ${reste < 0 ? 'text-rose-600 dark:text-rose-400' : ''}`} aria-label="Temps restant">
+          <span className={`font-mono text-sm font-semibold ${reste < 0 ? 'text-rose-700 dark:text-rose-400' : ''}`} aria-label="Temps restant">
             ⏱ {reste >= 0 ? hms(reste) : `+${hms(-reste)}`}
           </span>
         )}

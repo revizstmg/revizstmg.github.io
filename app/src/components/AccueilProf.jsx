@@ -37,7 +37,7 @@ function CarteClasse({ classe, active, ouvrir }) {
           {resume && <> · {resume.eleves > 1 ? `${resume.eleves} élèves` : `${resume.eleves} élève`} · {resume.actifs > 1 ? `${resume.actifs} actifs cette semaine` : `${resume.actifs} actif cette semaine`}</>}
           {erreur && ' · élèves indisponibles hors connexion'}
         </span>
-        {resume?.aRelancer > 0 && <span className="mt-1 block text-xs font-semibold text-rose-600 dark:text-rose-400">{resume.aRelancer > 1 ? `${resume.aRelancer} élèves à relancer` : 'Un élève à relancer'}</span>}
+        {resume?.aRelancer > 0 && <span className="mt-1 block text-xs font-semibold text-rose-700 dark:text-rose-400">{resume.aRelancer > 1 ? `${resume.aRelancer} élèves à relancer` : 'Un élève à relancer'}</span>}
       </span>
       <button onClick={ouvrir} className="btn-primary shrink-0 !py-2 text-sm" style={{ backgroundColor: 'var(--c-accent-fort)' }}>Ouvrir la classe</button>
     </li>

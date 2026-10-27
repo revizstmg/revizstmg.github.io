@@ -226,7 +226,7 @@ export function OngletSources({ d, maj }) {
               ))}
             </div>
           </fieldset>
-          {erreur && <p role="alert" className="text-sm text-rose-600 dark:text-rose-400">{erreur}</p>}
+          {erreur && <p role="alert" className="text-sm text-rose-700 dark:text-rose-400">{erreur}</p>}
           <div className="flex flex-wrap gap-2">
             <button onClick={enregistrer} className="btn-primary" style={{ backgroundColor: 'var(--c-accent-fort)' }}>{edition ? 'Enregistrer' : 'Ajouter la source'}</button>
             {edition && <button onClick={fermer} className="btn-ghost">Annuler</button>}
@@ -456,7 +456,7 @@ export function OngletArguments({ d, maj, grille, aei, entete, notion, questions
           {sources.length === 0 && (
             <p className="text-xs text-slate-500 dark:text-slate-400">Pas encore de source : <button onClick={versSources} className="font-semibold underline" style={LIEN}>ajoute-la dans l'onglet Sources</button>.</p>
           )}
-          {erreur && <p role="alert" className="text-sm text-rose-600 dark:text-rose-400">{erreur}</p>}
+          {erreur && <p role="alert" className="text-sm text-rose-700 dark:text-rose-400">{erreur}</p>}
           <div className="flex flex-wrap gap-2">
             <button onClick={enregistrer} className="btn-primary" style={{ backgroundColor: 'var(--c-accent-fort)' }}>{edition ? 'Enregistrer' : 'Ajouter l’argument'}</button>
             {edition && <button onClick={fermer} className="btn-ghost">Annuler</button>}

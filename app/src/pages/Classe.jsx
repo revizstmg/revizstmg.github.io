@@ -223,7 +223,7 @@ export default function Classe() {
 
   if (loadingClasses && role === 'prof') return <Loading />
   if (!classCode) {
-    return <>{classError && <p role="alert" className="text-sm text-rose-600 dark:text-rose-400">{classError}</p>}{role === 'prof'
+    return <>{classError && <p role="alert" className="text-sm text-rose-700 dark:text-rose-400">{classError}</p>}{role === 'prof'
       ? <TeacherStart key={accountId || 'trial'} creating={creating} onCreate={createClass} t={t} m={m} />
       : <JoinForm key={accountId || 'trial'} onJoin={join} t={t} />}</>
   }
@@ -257,7 +257,7 @@ export default function Classe() {
         {role !== 'prof' && <button disabled={leaving} onClick={() => setJoining(true)} className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('leaveClass')}</button>}
       </header>
 
-      {classError && <p role="alert" className="text-sm text-rose-600 dark:text-rose-400">{classError}</p>}
+      {classError && <p role="alert" className="text-sm text-rose-700 dark:text-rose-400">{classError}</p>}
       {role !== 'prof' && <details className="class-membership card space-y-3 p-4" open={joining||undefined}><summary className="font-semibold">{m.classes}</summary>
         <div className="flex flex-wrap gap-2"><label className="class-select-label">{m.activeClass}<select aria-label={m.activeClass} value={classCode} disabled={leaving} onChange={e=>switchClass(e.target.value)}>{studentClasses.map(c=><option key={c.code} value={c.code}>{c.label}</option>)}</select></label></div>
         <button disabled={leaving} className="btn-ghost w-full text-sm" onClick={() => setJoining((v) => !v)}>{t(joining ? 'cancel' : 'joinAnotherClass')}</button>
@@ -1287,7 +1287,7 @@ function ProfDashboard({ classCode, track, t }) {
       {/* Alerte décrochage : élèves à relancer, nommés, avec la raison. */}
       {atRiskCount > 0 && (
         <div className="card p-4" style={{ boxShadow: 'inset 0 0 0 1.5px color-mix(in srgb, #c0392b 45%, transparent)' }}>
-          <h3 className="mb-1 flex items-center gap-2 font-display font-semibold text-rose-600 dark:text-rose-400">⚠️ {t('dropoutAlert')} ({atRiskCount})</h3>
+          <h3 className="mb-1 flex items-center gap-2 font-display font-semibold text-rose-700 dark:text-rose-400">⚠️ {t('dropoutAlert')} ({atRiskCount})</h3>
           <p className="mb-2 text-xs text-slate-400">{t('dropoutHint')}</p>
           <div className="space-y-1.5">
             {students.filter(isAtRisk).slice(0, 8).map((m) => {
@@ -1296,7 +1296,7 @@ function ProfDashboard({ classCode, track, t }) {
                 <div key={m.device_id} className="flex items-center gap-2 text-sm">
                   <span className="monogram grid h-7 w-7 shrink-0 place-items-center overflow-hidden text-[0.7rem]">{m.photo ? <img src={m.photo} alt="" className="h-full w-full rounded-full object-cover" /> : initialsOf(m.name)}</span>
                   <span className="min-w-0 flex-1 truncate font-semibold">{m.name || t('roleStudent')}</span>
-                  <span className="shrink-0 text-right text-xs text-rose-600 dark:text-rose-400">{reason}<br /><span className="text-slate-400">{lastActiveLabel(m.active_day, t)}</span></span>
+                  <span className="shrink-0 text-right text-xs text-rose-700 dark:text-rose-400">{reason}<br /><span className="text-slate-400">{lastActiveLabel(m.active_day, t)}</span></span>
                 </div>
               )
             })}
