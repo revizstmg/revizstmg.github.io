@@ -8,7 +8,7 @@ import { trackLabel, trackIcon, subjectsForTrack } from '../data/tracks.js'
 import { badgeById } from '../badges.js'
 import { Ring, ProgressBar, Icon } from '../components/ui.jsx'
 import { usePublicText, useT } from '../i18n.js'
-import { supprimerCompte, isSignedIn } from '../auth.js'
+import { supprimerCompte, isSignedIn, getSession } from '../auth.js'
 import { pushPossible, activerRappelsPush, desactiverRappelsPush } from '../push.js'
 import { InstallCard, AppBadge } from '../components/InstallApp.jsx'
 import { ProgressCurve, ThemeTimeBars } from '../components/StatsCharts.jsx'
@@ -75,8 +75,10 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
     // (revizstmg_supprimer_compte). Sans session (essai sans compte), il n'y a
     // rien en ligne : on efface seulement ce qui est sur l'appareil.
     try {
-      if (isSignedIn()) {
+      if (state.account?.id) {
+        if (!isSignedIn() || getSession()?.user?.id !== state.account.id) throw new Error('session_changed')
         await desactiverRappelsPush()
+        if (getSession()?.user?.id !== state.account.id) throw new Error('session_changed')
         await supprimerCompte()
       }
     } catch {

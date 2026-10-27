@@ -82,3 +82,16 @@ test('professeur : aucun niveau élève ou badge dans Mon espace',async({page})=
  await expect(page.getByText('Mes classes',{exact:true})).toBeVisible()
  expect(errors).toEqual([])
 })
+
+test('un essai efface seulement ses données locales même avec une ancienne session',async({page})=>{
+ const errors=await preparer(page,etatEleve({account:null}))
+ await page.addInitScript(()=>{if(!window.name.includes('__b3_old_session__')){window.name+='__b3_old_session__';localStorage.setItem('stmg_session',JSON.stringify({token:'ancien-jeton-fictif',user:{id:'ancien-compte'},expires_at:9999999999}))}})
+ const deletions=[];page.on('request',r=>{if(r.url().includes('revizstmg_supprimer_compte'))deletions.push(r.url())})
+ await page.goto('./#/parametres?rubrique=donnees&reglage=suppression');await attendreAccueil(page)
+ page.on('dialog',d=>d.accept())
+ await page.getByRole('button',{name:'Effacer mes données locales',exact:true}).click()
+ await expect.poll(()=>page.evaluate(()=>localStorage.getItem('stmg_session'))).toBeNull()
+ await expect(page).not.toHaveURL(/suppression/)
+ expect(deletions).toEqual([])
+ expect(errors).toEqual([])
+})

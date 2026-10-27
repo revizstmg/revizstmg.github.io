@@ -1,3 +1,5 @@
+import { canonicalPublicText } from '../presentation/style.js'
+export { canonicalPublicText } from '../presentation/style.js'
 import FR from '../i18n/fr.js'
 const books = { fr: {} }
 const loading = {}
@@ -6,7 +8,6 @@ const loaders = {
   en: () => Promise.all([import('./public.en.json'), import('../i18n/en.js')]), es: () => Promise.all([import('./public.es.json'), import('../i18n/es.js')]),
   it: () => Promise.all([import('./public.it.json'), import('../i18n/it.js')]), ar: () => Promise.all([import('./public.ar.json'), import('../i18n/ar.js')]),
 }
-export const canonicalPublicText = text => String(text || '').replace(/Gestion (?:&|et) [Ff]inance/g, 'Gestion et finance')
 export const publicKey = (text) => String(text || '').replace(/\s+/g, ' ').trim()
 export function loadPublicLocale(lang) {
   if (books[lang]) return Promise.resolve(books[lang])
