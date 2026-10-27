@@ -216,11 +216,18 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
           <span className="text-violet-500 dark:text-violet-400"><Icon.Star size={22} /></span>
           <span><span className="block font-display font-semibold">{t('favorites')}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{(state.favorites || []).length} {t(state.favorites?.length > 1 ? 'chapToReviewP' : 'chapToReviewM')}</span></span>
         </Link>
+        {role !== 'prof' && (
         <Link to="/mes-notes" className="card flex items-center gap-3 p-4 transition hover:-translate-y-0.5 hover:shadow-md">
           <span className="text-2xl" aria-hidden>📝</span>
           <span><span className="block font-display font-semibold">Mes notes de classe</span><span className="block text-xs text-slate-500 dark:text-slate-400">{(state.notesClasse || []).length ? `${state.notesClasse.length} ${state.notesClasse.length > 1 ? 'notes' : 'note'} · ce qu’il faut améliorer` : 'Tes notes et ce qu’il faut améliorer'}</span></span>
         </Link>
-        {state.classCode ? (
+        )}
+        {role === 'prof' ? (
+          <Link to="/classe" className="card flex items-center gap-3 p-4 transition hover:-translate-y-0.5 hover:shadow-md">
+            <span className="text-2xl" aria-hidden>👥</span>
+            <span><span className="block font-display font-semibold">Mes classes</span><span className="block text-xs text-slate-500 dark:text-slate-400">Créez vos classes et suivez vos élèves.</span></span>
+          </Link>
+        ) : state.classCode ? (
           <Link to="/classe" className="card flex items-center gap-3 p-4 transition hover:-translate-y-0.5 hover:shadow-md">
             <span className="text-2xl" aria-hidden>👥</span>
             <span><span className="block font-display font-semibold">{t('myClass')}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{state.classCode}</span></span>

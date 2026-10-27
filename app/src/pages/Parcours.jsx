@@ -12,7 +12,7 @@ import {
   objectifsValides, lundiDe, avancementSemaine,
 } from '../data/parcours.js'
 
-const dateCourte = (jour, lang) => new Date(`${jour}T12:00:00`).toLocaleDateString(lang, { day: 'numeric', month: 'short' })
+const dateCourte = (jour, lang) => new Date(`${jour}T12:00:00`).toLocaleDateString(lang, { calendar: 'gregory', numberingSystem: 'latn', day: 'numeric', month: 'short' })
 const heures = (min) => (min >= 60 ? `${Math.floor(min / 60)} h${min % 60 ? ` ${String(min % 60).padStart(2, '0')}` : ''}` : `${min} min`)
 
 export default function Parcours() {

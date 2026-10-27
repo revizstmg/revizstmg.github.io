@@ -1533,3 +1533,13 @@ Prochaine action :
 
 - Réalisé : neuf défauts corrigés côté application, brouillon maths par compte dans l’onglet, messages traduits en six langues et détails dans docs/AUDIT-FONCTIONNEL-20261027.md. Les erreurs réseau ne sont plus assimilées à un succès ; réponses du Direct indexées par question et reprise idempotente, exclusion confirmée avant retrait, refus d’amitié renouvelable sans modifier le statut du destinataire.
 - Validation locale : 596 tests unitaires sur66 fichiers réussis, compilation réussie (866 pages). Quatre parcours navigateur déjà réussis (cartes au même recto/XP, panne et filtres des langues, reprise maths sans nouveaux XP, remplacement Vacances entre filières annulé/confirmé) ; dernières vérifications Direct et changement de compte en cours. Aucun compte réel ni appel Gemini, aucune table/règle/secret Supabase ou donnée NAH modifié. PR #136 ; publication automatique après validation complète.
+
+### AUDIT-20261027-CLAUDE-10 - constats de la deuxième vérification (agent B)
+- B2-01 : « Fiche par photo » dit désormais que « Lecture classique (hors ligne) » reste sur l'appareil et que « Analyser la photo » envoie la photo à un service d'IA externe.
+- B2-02 : confidentialité et CGU citent les aides générées par IA des chapitres (« Créer ma série », « Questions type de contrôle », tuteur de cours) et ce qui est envoyé.
+- B2-03 : badge « Sommet » au niveau 31 (le vrai maximum). B2-04 : le bloc de jeux dit « Les N jeux du chapitre ». B2-05 : un jeu ouvert remonte la page. B2-06 : la notification de badge passe en haut de l'écran et ne bloque plus les clics.
+- B2-07/B2-08 : FAQ et guide indiquent que le Coach et la personnalisation demandent l'appli installée, et un seul chemin pour rejoindre une classe (Mon espace).
+- B2-09 : Mon espace d'un professeur remplace « Mes notes de classe » et « Rejoindre une classe » par « Mes classes ». B2-10 : l'en-tête du chapitre compte comme la liste du thème (cours, méthodes, études de cas). B2-11 : dates en calendrier grégorien et chiffres latins en arabe.
+- B2-12 : FAQ et guide traduits d'un bloc (composant TexteRiche) dans les cinq langues, hors ligne. Les tests de panne de traduction utilisent maintenant les CGU.
+- Tests : tests/audit-b2.test.js, tests/parcours/audit-b2.spec.js. Aucune table ni migration.
+- Non traités : B2-13 à B2-15 et les constats mineurs B2-16 et suivants.

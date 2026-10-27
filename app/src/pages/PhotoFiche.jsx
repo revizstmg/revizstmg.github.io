@@ -257,7 +257,7 @@ export default function PhotoFiche() {
         </section>
       )}
 
-      <p className="text-center text-xs text-slate-400">🔒 Tout est traité sur ton appareil : tes photos ne sont envoyées nulle part.</p>
+      <p className="text-center text-xs text-slate-400">🔒 « Lecture classique (hors ligne) » reste sur ton appareil. « Analyser la photo » envoie la photo à un service d’IA externe : masque ton nom et tes coordonnées.</p>
 
       {/* Fiches enregistrées */}
       {fiches.length > 0 && (

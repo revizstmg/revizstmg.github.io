@@ -50,7 +50,7 @@ function MesNotesForm() {
   const nomChapitre = (sid, cid) => sujet(sid)?.chapters?.find((c) => c.id === cid)?.name || cid
   const note = (n) => `${formaterNote(n, lang)}/20`
   const jour = (d) => {
-    try { return new Intl.DateTimeFormat(lang, { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date(`${d}T12:00:00`)) } catch { return d }
+    try { return new Intl.DateTimeFormat(lang, { calendar: 'gregory', numberingSystem: 'latn', day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date(`${d}T12:00:00`)) } catch { return d }
   }
 
   const ajouter = (e) => {

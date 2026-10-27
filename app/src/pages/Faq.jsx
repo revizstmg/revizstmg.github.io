@@ -1,20 +1,21 @@
 import { TextePublic } from '../localisation/PublicText.jsx'
 import { Link } from 'react-router-dom'
+import TexteRiche from '../components/TexteRiche.jsx'
 
 const CONTACT = 'revizstmg@gmail.com'
 
 // Foire aux questions. Rédigée en français (public : lycées français).
 export default function Faq() {
   const items = [
-    ['Comment créer un compte ?', <>Sur l'écran d'accueil, choisis <b>« Créer un compte »</b>, puis <b>Élève</b> ou <b>Professeur</b>, et remplis tes informations. Le compte est nécessaire pour sauvegarder ta progression.</>],
-    ['J\'ai oublié mon mot de passe.', <>Sur l'écran <b>« Se connecter »</b>, clique <b>« Mot de passe oublié ? »</b>, entre ton adresse e‑mail : tu reçois un <b>code par mail</b>, puis tu choisis un nouveau mot de passe.</>],
-    ['Comment rejoindre la classe de mon professeur ?', <>Va dans l'onglet <b>« Classe »</b> et saisis le <b>code de classe</b> que ton professeur t'a communiqué.</>],
-    ['Je suis professeur : comment créer une classe ?', <>Crée un compte <b>Professeur</b> : un <b>code de classe unique</b> est généré automatiquement. Tu le retrouves à tout moment dans l'onglet « Classe » (bouton copier) et tu le partages à tes élèves. Tu peux en créer d'autres, et exclure un élève si besoin.</>],
-    ['Ma progression est‑elle sauvegardée ?', <>Oui. Elle est enregistrée sur <b>ton compte</b> : connecte‑toi et tu la retrouves sur <b>tous tes appareils</b> (téléphone, ordinateur…).</>],
-    ['Comment changer ma photo ou l\'apparence du site ?', <>Ouvre <b>ton menu</b> (ton prénom ou ton initiale) → <b>« Personnaliser mon profil »</b> (couleurs, police, avatar, photo…).</>],
-    ['Qui voit mes informations ?', <>Dans ta classe, ton <b>prénom, ta photo et tes scores</b> sont visibles par tes camarades et ton professeur. Ton <b>e‑mail</b> sert uniquement à la connexion. Détails dans la <Link to="/confidentialite" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">Politique de confidentialité</Link>.</>],
-    ['Comment supprimer mon compte ?', <>Va dans <Link to="/moi" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">« Mon espace »</Link> → tout en bas → <b>« Supprimer mon compte »</b>. Ta progression, ta classe, tes amis, tes duels et le suivi parent sont effacés. Ton adresse e-mail de connexion est supprimée en même temps.</>],
-    ['Le site est‑il gratuit ?', <>Oui, RévizSTMG est gratuit aujourd’hui. Si des offres payantes (Premium, Ultimate) arrivent un jour, elles seront annoncées clairement avant tout paiement.</>],
+    ['Comment créer un compte ?', "Sur l'écran d'accueil, choisis **« Créer un compte »**, puis **Élève** ou **Professeur**, et remplis tes informations. Le compte est nécessaire pour sauvegarder ta progression."],
+    ["J'ai oublié mon mot de passe.", "Sur l'écran **« Se connecter »**, clique sur **« Mot de passe oublié ? »**, entre ton adresse e‑mail : tu reçois un **code par mail**, puis tu choisis un nouveau mot de passe."],
+    ['Comment rejoindre la classe de mon professeur ?', "Va dans [[Mon espace|/moi]], touche **« Rejoindre une classe »** et saisis le **code de classe** que ton professeur t'a communiqué."],
+    ['Je suis professeur : comment créer une classe ?', "Crée un compte **Professeur** : un **code de classe unique** est généré automatiquement. Tu le retrouves à tout moment dans la page « Classe » de ton menu (bouton copier) et tu le partages à tes élèves. Tu peux en créer d'autres, et exclure un élève si besoin."],
+    ['Ma progression est‑elle sauvegardée ?', "Oui. Elle est enregistrée sur **ton compte** : connecte‑toi et tu la retrouves sur **tous tes appareils** (téléphone, ordinateur…)."],
+    ["Comment changer ma photo ou l'apparence du site ?", "Ouvre **ton menu** (ton prénom ou ton initiale) → **« Personnaliser mon profil »** (couleurs, police, avatar, photo…). Cette fonction est réservée à l’application installée : installe RévizSTMG sur ton écran d’accueil pour l’utiliser."],
+    ['Qui voit mes informations ?', "Dans ta classe, ton **prénom, ta photo et tes scores** sont visibles par tes camarades et ton professeur. Ton **e‑mail** sert uniquement à la connexion. Détails dans la [[Politique de confidentialité|/confidentialite]]."],
+    ['Comment supprimer mon compte ?', "Va dans [[« Mon espace »|/moi]] → tout en bas → **« Supprimer mon compte »**. Ta progression, ta classe, tes amis, tes duels et le suivi parent sont effacés. Ton adresse e-mail de connexion est supprimée en même temps."],
+    ['Le site est‑il gratuit ?', "Oui, RévizSTMG est gratuit aujourd’hui. Si des offres payantes (Premium, Ultimate) arrivent un jour, elles seront annoncées clairement avant tout paiement."],
   ]
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">
@@ -26,7 +27,7 @@ export default function Faq() {
       {items.map(([q, a], i) => (
         <section key={i} className="card p-5">
           <h2 className="mb-2 font-display text-lg font-semibold"><TextePublic text={q} /></h2>
-          <p className="text-sm text-slate-600 dark:text-slate-300">{a}</p>
+          <p className="text-sm text-slate-600 dark:text-slate-300"><TexteRiche texte={a} /></p>
         </section>
       ))}
       <div className="card card-lux p-5 text-center">

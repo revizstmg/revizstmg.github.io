@@ -517,10 +517,10 @@ function BadgeToast() {
   return (
     <>
       <Confetti show={!!current} />
-      <div className="no-print fixed inset-x-0 bottom-24 z-[70] flex justify-center px-4" role="status">
+      <div className="no-print pointer-events-none fixed inset-x-0 top-14 z-[70] flex justify-center px-4" role="status">
         <button
           onClick={() => dismissBadge(current)}
-          className="flex animate-bounce-in items-center gap-3 rounded-2xl bg-slate-900 px-5 py-3 text-start text-white shadow-2xl ring-1 ring-white/10 dark:bg-white dark:text-slate-900"
+          className="pointer-events-auto flex animate-bounce-in items-center gap-3 rounded-2xl bg-slate-900 px-5 py-3 text-start text-white shadow-2xl ring-1 ring-white/10 dark:bg-white dark:text-slate-900"
         >
           <span className="text-3xl" aria-hidden>{b.icon}</span>
           <span>

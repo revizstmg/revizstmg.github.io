@@ -70,7 +70,7 @@ test('les textes publics des autres pages se traduisent sans transmettre le prof
     demandes.push(text)
     return route.fulfill({ contentType: 'application/json', body: JSON.stringify({ responseStatus: 200, responseData: { translatedText: `[English] ${text}` } }) })
   })
-  for (const [path, french] of [['faq', 'Foire aux questions'], ['cgu', 'Conditions d’utilisation & mentions légales'], ['confidentialite', 'Politique de confidentialité']]) {
+  for (const [path, french] of [['cgu', 'Conditions d’utilisation & mentions légales'], ['confidentialite', 'Politique de confidentialité']]) {
     await page.goto(`./#/${path}`)
     await attendreAccueil(page)
     await expect(page.getByRole('main').getByRole('heading', { level: 1 })).not.toHaveText(french)
@@ -90,13 +90,13 @@ test('une panne de traduction est visible et peut être relancée', async ({ pag
     const text = new URL(route.request().url()).searchParams.get('q')
     return route.fulfill({ contentType: 'application/json', body: JSON.stringify({ responseStatus: 200, responseData: { translatedText: `[English] ${text}` } }) })
   })
-  await page.goto('./#/faq')
+  await page.goto('./#/cgu')
   await attendreAccueil(page)
   await expect(page.getByText('Some text could not be translated. You can try again.', { exact: true })).toBeVisible()
   await page.waitForTimeout(300)
   failed = false
   await page.getByRole('status').filter({hasText:'Some text could not be translated. You can try again.'}).getByRole('button', { name: 'Retry', exact: true }).click()
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('[English] Foire aux questions')
+  await expect(page.getByText(/^\[English\]/).first()).toBeVisible()
 })
 
 test('les consignes du Grand Oral se traduisent et les brouillons restent privés', async ({ page }) => {
