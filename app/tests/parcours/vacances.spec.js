@@ -9,7 +9,7 @@ const axe=async page=>{
 async function setup(page){
  await page.goto('./#/vacances');await attendreAccueil(page)
  await expect(page.getByRole('heading',{name:'Deux semaines pour retravailler tes difficultés, à ton rythme.'})).toBeVisible()
- await page.getByLabel('Matière',{exact:true}).selectOption('droit')
+ await page.getByRole('combobox',{name:'Matière',exact:true}).selectOption('droit')
  for(let i=0;i<3;i++){
   if(i)await page.getByRole('button',{name:'Ajouter un chapitre'}).click()
   const select=page.locator('.vacances-chapter-select').nth(i)

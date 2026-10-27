@@ -50,6 +50,8 @@ it('adapte la séance aux difficultés, évite les doublons et utilise les quest
 it('termine le parcours et partage seulement des bilans agrégés avec consentement',()=>{
  let p=answerAll(make(),'initial',false)
  for(let i=0;i<p.sessions.length;i++){p=prepareVacancesSession(p,i,500+i);p=answerAll(p,i);expect(vacancesSessionDone(p.sessions[i])).toBe(true)}
+ const seen=new Map();for(const s of p.sessions)for(const q of s.questions)seen.set(q.id,(seen.get(q.id)||0)+1)
+ expect(Math.max(...seen.values())).toBeLessThanOrEqual(2)
  p=answerAll(p,'final');expect(vacancesSummary(p,track)).toMatchObject({done:8,total:8,initial:0,final:100})
  expect(vacancesSummary(p,{level:'premiere-stmg'})).toBeNull()
  const state={track,parentShare:false,parcours:{vacances:p},chapters:{},themeTime:{}}
