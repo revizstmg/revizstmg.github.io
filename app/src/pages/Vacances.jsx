@@ -24,14 +24,14 @@ function VacancesPage() {
  const subjects = vacancesSubjects(state.track)
  const program = state.parcours?.vacances?.trackKey === vacancesTrackKey(state.track) ? state.parcours.vacances : null
  const [editing,setEditing] = useState(false), [phase,setPhase] = useState(null)
- const [sid,setSid] = useState(program?.subjectId || subjects[0]?.id || '')
+ const [sid,setSid] = useState(program?.subjectId || '')
  const update = fn => setParcours(previous => ({...previous,vacances:fn(previous.vacances)}))
  const replace = () => { if (window.confirm(m('replace'))) {setEditing(true);setPhase(null)} }
  return <div className="vacances-page space-y-6">
   <header className="vacances-hero"><p className="kicker">☀️ {m('title')}</p><h1 className="font-display">{m('intro')}</h1><p>{m('scope')}</p></header>
   {!state.account?.id && <p className="vacances-note">{m('local')}</p>}
   {(!program || editing) ? <>
-   <label className="vacances-subject">{m('subject')}<select aria-label={m('subject')} value={sid} onChange={e=>setSid(e.target.value)}>{subjects.map(s=><option value={s.id} key={s.id}>{s.name}</option>)}</select></label>
+   <label className="vacances-subject">{m('subject')}<select aria-label={m('subject')} value={sid} onChange={e=>setSid(e.target.value)}><option value="">{m('chooseSubject')}</option>{subjects.map(s=><option value={s.id} key={s.id}>{s.name}</option>)}</select></label>
    <Contenu matieres={sid?[sid]:[]}><Setup key={sid} subject={subjects.find(s=>s.id===sid)} m={m} track={state.track} onCreate={p=>{update(()=>p);setEditing(false);setPhase('initial')}} /></Contenu>
    {program && <button type="button" className="btn-ghost" onClick={()=>setEditing(false)}>{m('back')}</button>}
   </> : <Contenu matieres={[program.subjectId]}>
@@ -48,6 +48,7 @@ function Setup({subject,m,track,onCreate}) {
   e.preventDefault()
   try {onCreate(createVacances({subject,selection:selection.filter(Boolean),track,startDate:date,goal,minutes,rhythm,id:crypto.randomUUID()}))} catch (error) {setError(m(error.message==='insufficient_questions'?'capacity':'error'))}
  }
+ if (!subject) return <p className="card p-5">{m('chooseSubject')}</p>
  if (!chapters.length) return <p className="card p-5">{m('empty')}</p>
  return <form className="card vacances-setup" onSubmit={submit}>
   <h2 className="font-display text-2xl">{m('start')}</h2>

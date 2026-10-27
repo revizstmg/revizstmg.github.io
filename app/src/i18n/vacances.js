@@ -1,5 +1,6 @@
 // Interface du parcours courte durée, disponible hors ligne dans les six langues.
 const rows = {
+ chooseSubject: ['Choisis une matière','Choose a subject','Wähle ein Fach','Elige una asignatura','Scegli una materia','اختر مادة'],
  sessions: ['Les séances','Sessions','Die Einheiten','Las sesiones','Le sessioni','الجلسات'],
  capacity: ['Ajoute des chapitres ou choisis trois séances par semaine : il faut assez de questions pour éviter de les répéter plus de deux fois.','Add chapters or choose three sessions a week: enough questions are needed to avoid more than two repetitions.','Füge Kapitel hinzu oder wähle drei Einheiten pro Woche, damit keine Frage öfter als zweimal vorkommt.','Añade capítulos o elige tres sesiones semanales para no repetir una pregunta más de dos veces.','Aggiungi capitoli o scegli tre sessioni settimanali per non ripetere una domanda più di due volte.','أضف فصولًا أو اختر ثلاث جلسات أسبوعيًا لتجنب تكرار السؤال أكثر من مرتين.'],
  chapter: ['Chapitre {n}','Chapter {n}','Kapitel {n}','Capítulo {n}','Capitolo {n}','الفصل {n}'],

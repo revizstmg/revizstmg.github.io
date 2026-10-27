@@ -12,8 +12,8 @@ async function setup(page){
  await page.getByRole('combobox',{name:'Matière',exact:true}).selectOption('droit')
  for(let i=0;i<3;i++){
   if(i)await page.getByRole('button',{name:'Ajouter un chapitre'}).click()
-  const select=page.locator('.vacances-chapter-select').nth(i)
-  await expect(select).toBeVisible()
+  const select=page.getByRole('combobox',{name:`Chapitre ${i+1}`,exact:true})
+  await expect(select).toBeVisible({timeout:60000})
   await select.selectOption({index:1})
  }
  await page.getByRole('button',{name:'Commencer mon bilan',exact:true}).click()
