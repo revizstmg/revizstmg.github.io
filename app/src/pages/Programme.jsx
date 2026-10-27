@@ -114,6 +114,7 @@ function ProgrammePage() {
           <span className="font-semibold">{t('overallProgress')}</span>
           <span style={{ color: 'var(--c-accent-texte)' }}>{mastered} / {themesTotal} {t('themes')}</span>
         </div>
+        {state.track?.level === 'premiere-stmg' && <p className="mb-2 text-xs text-slate-500 dark:text-slate-400">Seuls les thèmes des épreuves anticipées sont comptés ici.</p>}
         <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
           <div className="h-full rounded-full" style={{ width: `${masteredPct}%`, backgroundColor: 'var(--c-accent)' }} />
         </div>

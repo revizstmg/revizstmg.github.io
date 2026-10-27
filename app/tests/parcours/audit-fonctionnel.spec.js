@@ -9,10 +9,10 @@ test('flashcards : rectos identiques, reprises et XP distincts', async ({ page }
   await page.getByRole('button', { name: '↩ À revoir', exact: true }).click()
   await expect(page.locator('.flashcard-study-header')).toContainText('2/2')
   await page.getByRole('button', { name: '✓ Je savais', exact: true }).click()
-  await expect(page.getByRole('dialog')).toContainText('1 acquise(s) sur 2')
+  await expect(page.getByRole('dialog')).toContainText('Cartes acquises : 1 sur 2')
   await page.getByRole('button', { name: /Revoir les cartes à revoir/ }).click()
   await page.getByRole('button', { name: '✓ Je savais', exact: true }).click()
-  await expect(page.getByRole('dialog')).toContainText('2 acquise(s) sur 2')
+  await expect(page.getByRole('dialog')).toContainText('Cartes acquises : 2 sur 2')
   const xp = (await etat(page)).xp || 0
   await page.getByRole('button', { name: /Terminer/ }).click()
   await expect.poll(async () => (await etat(page)).xp).toBe(xp + 2)

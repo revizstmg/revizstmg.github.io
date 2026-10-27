@@ -46,3 +46,30 @@ describe('FAQ et guide : traduits d’un bloc, hors ligne, dans les cinq langues
     expect(lire('src/pages/Cgu.jsx')).toContain('Aides générées par IA dans les chapitres')
   })
 })
+
+describe('mineurs restants des deux vérifications', () => {
+  it('l’XP s’écrit avec le même format partout', async () => {
+    const { nombre } = await import('../src/format.js')
+    expect(nombre(12345, 'fr').replace(/\s/g, ' ')).toBe('12 345')
+    for (const f of ['pages/Profile.jsx', 'pages/Badges.jsx', 'components/Layout.jsx', 'pages/Friends.jsx', 'pages/Parent.jsx', 'components/RewardVault.jsx']) {
+      expect(lire(`src/${f}`), f).toContain('nombre(')
+    }
+    expect(lire('src/components/RewardVault.jsx')).not.toContain('toLocaleString()')
+  })
+  it('les pluriels de l’espace parent sont réels et les heures du parcours sont lisibles', () => {
+    const parent = lire('src/pages/Parent.jsx')
+    expect(parent).not.toMatch(/jour\(s\)|thème\(s\)/)
+    const parcours = lire('src/pages/Parcours.jsx')
+    expect(parcours).not.toMatch(/\$\{plan\.heuresConseillees\} h/)
+    expect(parcours).toContain('heuresRondes(plan.heuresConseillees)')
+  })
+  it('le libellé actif de la barre du bas a sa propre couleur en thème sombre', () => {
+    expect(lire('src/components/Layout.jsx')).toContain("'var(--nav-actif)'")
+    expect(lire('src/editorial.css')).toMatch(/\.dark\s*\{\s*--nav-actif:\s*var\(--c-accent-texte\)/)
+  })
+  it('les mauvaises réponses ne disent plus « Presque… » et les badges ont des noms distincts', () => {
+    expect(lire('src/i18n/fr.js')).not.toContain("feedbackBad: 'Presque…'")
+    const noms = [...lire('src/badges.js').matchAll(/^\s+name: '([^']+)'/gm)].map((m) => m[1])
+    expect(new Set(noms).size).toBe(noms.length)
+  })
+})

@@ -35,10 +35,10 @@ export default function Cgu() {
       <Section title="2. Accès au service">
         <ul className="list-disc space-y-1 pl-5">
           <li>L’application est <b>gratuite</b>, sans publicité.</li>
-          <li>Elle s’essaie <b>sans compte</b> : la progression reste alors sur l’appareil. Un <b>compte</b>
+          <li>Elle s’essaie <b>sans compte</b> : la progression reste alors sur l’appareil. Un <b>compte</b>{' '}
           (adresse e-mail et mot de passe, ou Google) sauvegarde ta progression, te permet de la retrouver sur
           plusieurs appareils et donne accès aux espaces partagés (classe, amis, classement, suivi parent) et au
-          rappel téléphone fermé. Les informations données doivent être exactes ; le mot de passe est personnel et
+          rappel envoyé même quand l’application est fermée. Les informations données doivent être exactes ; le mot de passe est personnel et
           ne doit pas être partagé.</li>
           <li>Pour un élève mineur, l’utilisation suppose l’accord de l’établissement ou du représentant légal.</li>
           <li>Le service est fourni « en l’état ». Les éditeurs font de leur mieux pour qu’il reste disponible, sans
@@ -68,7 +68,7 @@ export default function Cgu() {
       </Section>
 
       <Section title="3. Règles de bonne conduite">
-        <p>Dans les espaces partagés (classe, mur, défis entre amis, classement, nom affiché) :</p>
+        <p>Dans les espaces partagés (classe, messages de classe, défis entre amis, classement, nom affiché) :</p>
         <ul className="list-disc space-y-1 pl-5">
           <li>respecter les autres : aucun propos insultant, harcelant, discriminatoire ou illégal ;</li>
           <li>ne pas publier d’informations personnelles sur quelqu’un d’autre, ni de photo sans son accord ;</li>

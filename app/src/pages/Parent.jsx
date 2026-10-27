@@ -1,4 +1,5 @@
 import { cleanVacancesSummary } from '../data/vacancesState.js'
+import { nombre } from '../format.js'
 import { vacancesText } from '../i18n/vacances.js'
 import { useEffect, useState, useCallback } from 'react'
 import { ProgressBar } from '../components/ui.jsx'
@@ -14,11 +15,14 @@ function relativeTime(iso, lang) {
   if (isNaN(diff)) return ''
   const rtf = new Intl.RelativeTimeFormat(lang || 'fr', { numeric: 'auto' })
   const min = Math.round(diff / 60000)
+  if (Math.abs(min) < 1) return ({ fr: 'à l’instant', en: 'just now', es: 'ahora mismo', it: 'adesso', de: 'gerade eben', ar: 'الآن' })[lang || 'fr'] || 'à l’instant'
   if (Math.abs(min) < 60) return rtf.format(-min, 'minute')
   const h = Math.round(min / 60)
   if (Math.abs(h) < 24) return rtf.format(-h, 'hour')
   return rtf.format(-Math.round(h / 24), 'day')
 }
+
+const pluriel = (n, un, plusieurs) => `${n} ${n > 1 ? plusieurs : un}`
 
 // Synthèse automatique pour le parent : lecture de l'engagement + points forts
 // et points à renforcer, dérivés des données de l'enfant.
@@ -32,8 +36,8 @@ function parentSynthesis(child) {
   const week = child.courses_week || 0
   let tone, message
   if (days != null && days >= 5) { tone = 'warn'; message = `${name} ne s’est pas connecté·e depuis ${days} jours. Un petit encouragement peut relancer la dynamique 💛.` }
-  else if (streak >= 5 || week >= 5) { tone = 'good'; message = `${name} révise avec régularité — ${streak} jour(s) de suite et ${week} thème(s) cette semaine. Beau travail 👏.` }
-  else if (week >= 2) { tone = 'ok'; message = `${name} a travaillé ${week} thème(s) cette semaine. Encouragez la régularité : 15 min par jour suffisent.` }
+  else if (streak >= 5 || week >= 5) { tone = 'good'; message = `${name} révise avec régularité — ${pluriel(streak, 'jour', 'jours')} de suite et ${pluriel(week, 'thème', 'thèmes')} cette semaine. Beau travail 👏.` }
+  else if (week >= 2) { tone = 'ok'; message = `${name} a travaillé ${pluriel(week, 'thème', 'thèmes')} cette semaine. Encouragez la régularité : 15 min par jour suffisent.` }
   else { tone = 'warn'; message = `Peu d’activité cette semaine. Fixez ensemble un petit objectif quotidien pour garder le rythme.` }
   return { tone, message, strengths, toWork }
 }
@@ -148,7 +152,7 @@ export default function Parent() {
             <>
               <section className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 <StatTile icon="🔥" label={t('parentStreak')} value={child.streak || 0} sub={t('parentDays')} color="#e8590c" />
-                <StatTile icon="⭐" label={t('parentLevel')} value={child.level || 0} sub={`${child.xp || 0} XP`} color="#c8a24e" />
+                <StatTile icon="⭐" label={t('parentLevel')} value={child.level || 0} sub={`${nombre(child.xp || 0, lang)} XP`} color="#c8a24e" />
                 <StatTile icon="⏱️" label={t('parentTotalTime')} value={fmtDuration(child.total_time || 0, t)} color={accent} />
                 <StatTile icon="🎯" label={t('parentWeeklyGoal')} value={`${child.courses_week || 0}/${child.weekly_goal || 5}`} sub={t('themesCount')} color="#2f9e44" />
                 <StatTile icon="🏅" label={t('parentBadges')} value={child.badges || 0} color="#7c3aed" />

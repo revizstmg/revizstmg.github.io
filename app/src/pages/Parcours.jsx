@@ -13,6 +13,8 @@ import {
 } from '../data/parcours.js'
 
 const dateCourte = (jour, lang) => new Date(`${jour}T12:00:00`).toLocaleDateString(lang, { calendar: 'gregory', numberingSystem: 'latn', day: 'numeric', month: 'short' })
+// 9.5 → « 9,5 » : virgule française, comme le reste du site.
+const heuresRondes = (h) => String(Number(h)).replace('.', ',')
 const heures = (min) => (min >= 60 ? `${Math.floor(min / 60)} h${min % 60 ? ` ${String(min % 60).padStart(2, '0')}` : ''}` : `${min} min`)
 
 export default function Parcours() {
@@ -83,7 +85,7 @@ function Questionnaire({ matieres, initial, modification, onValider, onAnnuler }
         <div>
           <label htmlFor="parcours-heures" className="block font-semibold">Combien d’heures peux-tu réviser chaque semaine ?</label>
           <select id="parcours-heures" value={h} onChange={(e) => setH(e.target.value)} className="mt-2 w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 dark:border-slate-600 dark:bg-slate-900">
-            {[...new Set([...HEURES, Number(initial.heuresSemaine)])].sort((x, y) => x - y).map((x) => <option key={x} value={x}>{`${x} h par semaine`}</option>)}
+            {[...new Set([...HEURES, Number(initial.heuresSemaine)])].sort((x, y) => x - y).map((x) => <option key={x} value={x}>{`${heuresRondes(x)} h par semaine`}</option>)}
           </select>
         </div>
         <fieldset>
@@ -162,8 +164,8 @@ function Plan({ matieres, onTest, onModifier }) {
           {plan.heuresConseillees
             ? (
               <>
-                <p className="mt-1 text-sm">{`Il manque environ ${heures(plan.manque)} pour atteindre ton objectif avant les épreuves. Il faudrait réviser environ ${plan.heuresConseillees} h par semaine, ou viser une note un peu plus basse.`}</p>
-                <button type="button" className="btn-primary mt-3" onClick={() => setParcours((avant) => ({ ...avant, objectifs: { ...avant.objectifs, heuresSemaine: plan.heuresConseillees } }))}>{`Passer à ${plan.heuresConseillees} h par semaine`}</button>
+                <p className="mt-1 text-sm">{`Il manque environ ${heures(plan.manque)} pour atteindre ton objectif avant les épreuves. Il faudrait réviser environ ${heuresRondes(plan.heuresConseillees)} h par semaine, ou viser une note un peu plus basse.`}</p>
+                <button type="button" className="btn-primary mt-3" onClick={() => setParcours((avant) => ({ ...avant, objectifs: { ...avant.objectifs, heuresSemaine: plan.heuresConseillees } }))}>{`Passer à ${heuresRondes(plan.heuresConseillees)} h par semaine`}</button>
               </>
             )
             : <p className="mt-1 text-sm">Même en révisant 20 h par semaine, ce plan ne tient pas avant les épreuves. Vise une note un peu plus basse ou retire une matière difficile.</p>}
@@ -189,7 +191,7 @@ function Plan({ matieres, onTest, onModifier }) {
           <div className="h-full rounded-full" style={{ width: `${av.pct}%`, backgroundColor: 'var(--c-accent-fort)' }} />
         </div>
         <p className="text-sm">{`${heures(av.fait)} faites sur ${heures(av.prevu)} prévues`}</p>
-        {courante.capacite < o.heuresSemaine * 60 && <p className="text-xs text-slate-500 dark:text-slate-400">{`Semaine entamée : ${heures(courante.capacite)} prévues au lieu de ${o.heuresSemaine} h.`}</p>}
+        {courante.capacite < o.heuresSemaine * 60 && <p className="text-xs text-slate-500 dark:text-slate-400">{`Semaine entamée : ${heures(av.prevu)} prévues au lieu de ${heuresRondes(o.heuresSemaine)} h.`}</p>}
         {courante.taches.length === 0
           ? <p className="text-sm">Rien de prévu cette semaine : profites-en pour souffler ou avancer sur ce que tu veux.</p>
           : <ul className="divide-y divide-slate-100 dark:divide-slate-800">{courante.taches.map((t) => <Tache key={t.id} t={t} />)}</ul>}

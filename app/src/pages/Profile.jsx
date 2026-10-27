@@ -1,4 +1,5 @@
 import StudyLanguages from '../components/StudyLanguages.jsx'
+import { nombre } from '../format.js'
 import OfflineStatus from '../components/OfflineStatus.jsx'
 import { useState } from 'react'
 import { Link, Navigate, useSearchParams } from 'react-router-dom'
@@ -101,7 +102,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
   const openCustomizer = () => window.dispatchEvent(new CustomEvent('stmg-open-customizer'))
 
   const stats = [
-    { icon: '⭐', label: 'XP', value: state.xp },
+    { icon: '⭐', label: 'XP', value: nombre(state.xp, state.lang || 'fr') },
     { icon: '🔥', label: t('streakDays'), value: state.streak.count },
     { icon: '🏆', label: t('mastered'), value: derived.chaptersMastered },
     { icon: '📚', label: t('coursesThisWeek'), value: derived.weeklyCourses },
@@ -134,7 +135,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
         <hr className="rule-gold relative my-5" />
         <div className="relative">
           <div className="mb-1 flex items-center justify-between text-sm text-[#d8cca8]">
-            <span>{t('level')} {derived.level}</span><span>{state.xp} / {derived.next} XP</span>
+            <span>{t('level')} {derived.level}</span><span>{nombre(state.xp, state.lang || 'fr')} / {nombre(derived.next, state.lang || 'fr')} XP</span>
           </div>
           <div className="h-2 w-full overflow-hidden rounded-full" style={{ backgroundColor: 'rgba(255,255,255,0.12)' }}>
             <div className="h-full rounded-full" style={{ width: `${derived.pct}%`, backgroundColor: 'var(--c-accent)' }} />
@@ -246,7 +247,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
 
 
 </div><div hidden={!settings} className="space-y-5">
-      {showSetting('langues')&&<section className="card p-5"><StudyLanguages value={state.studyLanguages} onChange={setStudyLanguages} /></section>}
+      {showSetting('langues')&&<section className="card p-5"><StudyLanguages value={state.studyLanguages} onChange={setStudyLanguages} parametres /></section>}
       {/* Suivi parental : partage volontaire, puis code à donner à ses parents
           (avec un compte : la base n'accepte la publication que d'un compte connecté). */}
       {showSetting('parents') && PARENT_READY && estEnEssai(state) && (

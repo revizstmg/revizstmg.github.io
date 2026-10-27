@@ -106,7 +106,7 @@ export default function Privacy() {
           d’informations personnelles. Comme pour toute requête réseau, le prestataire reçoit techniquement
           l’adresse IP de la connexion. Les résultats sont mémorisés sur ton appareil.</li>
           <li><b>Le service de notification de ton navigateur</b> (Google pour Chrome et Android, Apple pour Safari
-          et l'iPhone, Mozilla pour Firefox), seulement si tu actives le rappel téléphone fermé : il achemine le
+          et l'iPhone, Mozilla pour Firefox), seulement si tu actives le rappel envoyé même quand l’application est fermée : il achemine le
           rappel, qui ne contient aucune donnée (le texte affiché est toujours le même).</li>
           <li><b>Cloudflare</b> (cdnjs), seulement si tu lis le texte d'une photo sur ton appareil : le module de
           lecture est téléchargé depuis ce service.</li>

@@ -1,4 +1,5 @@
 import {cleanCopy} from '../presentation/style.js'
+import { nombre } from '../format.js'
 import {claimSessionMotion} from '../presentation/session.js'
 import '../presentation/charte.css'
 import MobileMenu from './SiteMobileMenu.jsx'
@@ -173,7 +174,7 @@ export default function Layout({ children }) {
 
           {!parentSeul && (
           <div className="hidden items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-800 sm:flex" title={t('xpTitle')}>
-            {t('levelShort')}&nbsp;{derived.level} · {state.xp}&nbsp;XP
+            {t('levelShort')}&nbsp;{derived.level} · {nombre(state.xp, state.lang || 'fr')}&nbsp;XP
           </div>
           )}
 
@@ -563,7 +564,7 @@ function BottomNav() {
               to={tab.to}
               aria-current={on ? 'page' : undefined}
               className="flex flex-1 flex-col items-center gap-1 py-1.5 text-[10px] font-semibold"
-              style={{ color: on ? 'color-mix(in srgb, var(--c-accent-texte) 72%, #000)' : undefined }}
+              style={{ color: on ? 'var(--nav-actif)' : undefined }}
             >
               <span
                 className="tab-pill grid place-items-center rounded-full leading-none"

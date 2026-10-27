@@ -1551,3 +1551,11 @@ Prochaine action :
 - Livraison : PR #136 fusionnée, source 34c5ce26056de703742d9289f270ad4edfc51d3e, compilation automatique f2ee5d65d0bdd8d78530998a29e8d20d6485b999. Reconstruction Pages 40561444060 réussie (build, report-build-status et deploy). Aucun fichier compilé modifié à la main, aucune écriture dans les comptes réels.
 
 - Contrôle public final : index HTTP identique à la compilation publiée (SHA-256 bd076ebd96f5648f80745eb4c9bfaf23dc2ee58026c496fdc65f79e9281b647a). Navigateur Chromium à 390 px : deux cartes au même recto donnent bien 2/2, le brouillon du manuel est retrouvé après changement de filtre, aucune exception JavaScript. Captures inspectées. Requêtes Supabase et services externes bloqués pendant ce contrôle public ; aucune écriture réelle. Livraison terminée, détails et références dans la PR #136.
+
+### AUDIT-20261027-CLAUDE-11 - mineurs restants des deux vérifications
+- A2-03 / B2-17 : un seul format de nombre pour l'XP (« 12 345 »), helper `src/format.js`. A2-10 / B2-22 : pluriels réels dans la synthèse parent, « à l'instant », « Retirer ce compte », « Cartes acquises : 3 sur 4 ».
+- A2-02 / A2-07 / B2-24 : heures du parcours avec virgule (« 9,5 h »), « Semaine entamée » cohérent avec le chiffre prévu. A2-01 : libellé actif de la barre du bas lisible en thème sombre (`--nav-actif`).
+- B2-16 : « Pas tout à fait. » à la place de « Presque… » (six langues) et plus de doublon « Le mot manquant ». B2-18/B2-19 : badges « Endurant », « Collectionneur de favoris », « Expert Gestion & Finance ». B2-20/A2-09 : registre unique (vouvoiement côté professeur). B2-21 : « Mon espace », aide des langues sans « dans les réglages » dans les réglages.
+- B2-23 : CGU (espace manquant, « mur », « rappel téléphone fermé »). B2-26 : message sous « Créer mon compte ». B2-27 : note sur les thèmes des épreuves anticipées. B2-30 : FAQ (Parent, essai sans compte, sauvegarde). B2-32 : phrase de la médaille.
+- A2-08 : titres des domaines de l'atelier de formules traduits hors ligne.
+- Non traités : noms et notes des 242 formules (traduction en ligne), B2-25, B2-28 (leçons de langues), B2-29 (débords à 320 px et en arabe), B2-31 (tirets des titres générés), A2-06 (cas pratiques : décision produit), A2-11 (minuteur au rechargement).

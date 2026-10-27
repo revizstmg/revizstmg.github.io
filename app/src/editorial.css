@@ -78,3 +78,7 @@ html.a11y-contrast .site-shell .card { border-color: var(--c-ink); }
   .page-hero h1 { font-size: 18pt; line-height: 1.15; }
   .page-hero h1, .page-hero h1 *, .page-hero p:not(.kicker), .page-hero .kicker { color: #000; }
 }
+
+/* Libellé actif de la barre du bas : plus sombre en clair, la couleur d'accent telle quelle en sombre (contraste AA). */
+:root { --nav-actif: color-mix(in srgb, var(--c-accent-texte) 72%, #000); }
+:root.dark, .dark { --nav-actif: var(--c-accent-texte); }
