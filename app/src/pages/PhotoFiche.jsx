@@ -134,7 +134,9 @@ export default function PhotoFiche() {
       setAi({
         status: 'error',
         msg: code === 'not_configured'
-          ? 'L’analyse IA n’est pas encore activée sur le serveur. Utilise la lecture classique ci-dessous (ou active-la, voir la doc).'
+          ? 'L’analyse par IA n’est pas disponible pour le moment. Utilise la lecture classique ci-dessous.'
+          : code === 'rate_limit'
+            ? 'Tu as atteint la limite d’analyses pour aujourd’hui. Utilise la lecture classique ci-dessous ou réessaie demain.'
           : code === 'network'
             ? 'Connexion impossible. Vérifie ta connexion, ou utilise la lecture classique ci-dessous.'
             : 'L’analyse IA a échoué cette fois. Utilise la lecture classique ci-dessous.',
@@ -197,14 +199,14 @@ export default function PhotoFiche() {
               {ai.status === 'running' ? 'Analyse en cours…' : 'Analyser la photo'}
             </button>
             <p className="mt-1.5 text-center text-[11px] text-slate-400">Lit même les tableaux, le petit texte et l’écriture manuscrite.</p>
-            {ai.msg && <p className="mt-2 text-xs text-amber-600 dark:text-amber-400">{ai.msg}</p>}
+            {ai.msg && <p className="mt-2 text-xs text-amber-600 dark:text-amber-400">{tr(ai.msg)}</p>}
 
             <div className="my-3 flex items-center gap-3 text-[11px] uppercase tracking-wider text-slate-400">
               <span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" />ou<span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" />
             </div>
 
             <button onClick={runOcr} disabled={ocr.status === 'running'} className="w-full rounded-xl border-2 px-4 py-2.5 text-sm font-semibold transition hover:bg-slate-50 disabled:opacity-60 dark:hover:bg-slate-800" style={{ borderColor: 'color-mix(in srgb, var(--c-accent) 40%, var(--c-line, #ddd))', color: 'var(--c-accent-texte)' }}>
-              {ocr.status === 'running' ? `Lecture classique… ${ocr.progress}%` : '🔎 Lecture classique (hors ligne)'}
+              {ocr.status === 'running' ? `Lecture classique… ${ocr.progress}%` : '🔎 Lecture classique (sur ton appareil)'}
             </button>
             {ocr.status === 'running' && (
               <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
@@ -257,7 +259,7 @@ export default function PhotoFiche() {
         </section>
       )}
 
-      <p className="text-center text-xs text-slate-400">🔒 « Lecture classique (hors ligne) » reste sur ton appareil. « Analyser la photo » envoie la photo à un service d’IA externe : masque ton nom et tes coordonnées.</p>
+      <p className="text-center text-xs text-slate-400">🔒 La « Lecture classique » se fait sur ton appareil. « Analyser la photo » envoie la photo à un service d’IA externe : masque ton nom et tes coordonnées.</p>
 
       {/* Fiches enregistrées */}
       {fiches.length > 0 && (

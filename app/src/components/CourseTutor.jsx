@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import {reserverIA} from '../data/ia.js'
 import { useStore } from '../store.jsx'
 import { usePublicText } from '../i18n.js'
 import { getSession, getValidToken } from '../auth.js'
@@ -20,7 +21,7 @@ export default function CourseTutor({course}) {
    const token=await getValidToken()
    if(!owner||!token||getSession()?.user?.id!==owner)throw Error('login_required')
    const next=[...messages,{role:'user',text:question}]
-   const response=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify({action:'tutor',course,messages:next.slice(-19)}),signal:ac.signal})
+   reserverIA();const response=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify({action:'tutor',course,messages:next.slice(-19)}),signal:ac.signal})
    const data=await response.json().catch(()=>({}))
    if(!response.ok)throw Error(data.error||'server_error')
    const reply=checkTutorReply(data.tutor)
