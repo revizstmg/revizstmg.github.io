@@ -44,6 +44,10 @@ export default function Privacy() {
           <li><b>Contributions</b> : QCM créés, messages de classe, réponses partagées avec ta classe.</li>
           <li><b>Photos de cours</b> envoyées à la « fiche par photo » : analysées pour créer la fiche, elles ne sont
           <b> pas conservées</b> par RévizSTMG.</li>
+          <li><b>Aides et exercices générés par IA dans les chapitres</b> (« Créer ma série », « Créer une question »,
+          « Questions type de contrôle », tuteur de cours « Envoyer au tuteur ») : uniquement quand tu les demandes, le
+          cours du chapitre, tes questions ou ta réponse rédigée sont envoyés à un fournisseur d’IA. Ton identité n’est
+          pas envoyée et RévizSTMG ne conserve pas ces échanges.</li>
           <li><b>Examens blancs personnalisés</b> : la demande et les extraits de cours sont envoyés au
           fournisseur d’IA pour créer le sujet. Avec ton accord distinct, le PDF ou les photos de ta copie
           sont transmis à Gemini pour une correction indicative. RévizSTMG ne conserve pas ces fichiers ;
@@ -92,7 +96,7 @@ export default function Privacy() {
           espaces partagés, et envoi des e-mails du service (confirmation d'inscription, nouveau mot de passe).</li>
           <li><b>GitHub</b> (États-Unis) héberge le site : comme tout hébergeur, il reçoit ton adresse IP et garde
           des journaux techniques.</li>
-          <li><b>Google (Gemini)</b> ou <b>Anthropic (Claude)</b>, pour la « fiche par photo » ou la création d’examens blancs :
+          <li><b>Google (Gemini)</b> ou <b>Anthropic (Claude)</b>, pour la « fiche par photo », la création d’examens blancs et les aides générées par IA dans les chapitres (séries d’exercices, questions de contrôle, tuteur de cours) :
           la photo, la demande ou les extraits de cours sont transmis pour analyse. La correction de copie utilise Google (Gemini), après ton accord pour chaque envoi de PDF ou de photos. Avec l'offre gratuite de Gemini, Google peut utiliser les contenus
           reçus pour améliorer ses services : masque ton nom et tes coordonnées avant tout envoi de photo ou de copie.</li>
           <li><b>MyMemory</b> (Translated, Italie) traduit les textes publics qui ne sont pas déjà disponibles
@@ -146,7 +150,7 @@ export default function Privacy() {
         de <b>limitation</b>, de <b>portabilité</b> et d'<b>opposition</b>, ainsi que du droit de <b>retirer ton
         consentement</b> à tout moment. En pratique :</p>
         <ul className="list-disc space-y-1 pl-5">
-          <li><b>Accéder / rectifier</b> tes informations depuis « Personnaliser mon profil ».</li>
+          <li><b>Accéder / rectifier</b> tes informations depuis « Mon espace » (profil et paramètres).</li>
           <li><b>Supprimer ton compte et tes données</b> depuis <Link to="/moi" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">Mon espace</Link> (bouton « Supprimer mon compte »).</li>
           <li><b>Télécharger tes données</b> depuis <Link to="/moi" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">Mon espace</Link> (bouton « Télécharger mes données »).</li>
           <li><b>Exercer un autre droit</b> : écris à <a href="mailto:revizstmg@gmail.com" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">revizstmg@gmail.com</a>.</li>

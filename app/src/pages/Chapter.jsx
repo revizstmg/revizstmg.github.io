@@ -26,12 +26,19 @@ export default function Chapter() {
   const [memoryOpen,setMemoryOpen]=useState(false)
   const [tab, setTab] = useState('cours') // Cours / Définitions / Exercices
   useThemeTimer(tid) // mesure le temps de révision passé sur ce thème
+  // Un jeu ouvert doit s'afficher depuis son début, pas depuis la position de la liste.
+  useEffect(() => { if (activeGame) window.scrollTo(0, 0) }, [activeGame])
 
   // Génération stable par visite : on ne régénère (et re-mélange) les exercices
   // qu'au changement de thème/chapitre, pas à chaque rendu. Une nouvelle visite
   // = un nouveau tirage → jamais exactement les mêmes exercices.
   const chapters = useMemo(() => (theme ? themeChapters(theme) : []), [theme, cidx]) // eslint-disable-line react-hooks/exhaustive-deps
   const chapter = chapters[Number(cidx)] || null
+  // Même numérotation que la liste du thème : par catégorie (cours, méthodes, études de cas).
+  const catDe = (c) => (!c?.section?.group || c.section.group === 'approf' ? 'cours' : c.section.group)
+  const memeCategorie = chapters.filter((c) => catDe(c) === catDe(chapter))
+  const rangDansCategorie = Math.max(1, memeCategorie.indexOf(chapter) + 1)
+  const catKey = { cours: 'catCourse', methode: 'catMethod', cas: 'catCases' }[catDe(chapter)] || 'chapter'
 
   // Jeux affichés : ceux du chapitre + des flashcards générées à partir des
   // notions de la section (disponibles partout, pas seulement dans l'app).
@@ -96,7 +103,7 @@ export default function Chapter() {
 
       <header className="page-hero page-hero-compact flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em]" style={{ color: 'var(--editorial-gold)' }}><CourseText text={theme.name} /> · {t('chapter')} {i + 1}/{chapters.length}</p>
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em]" style={{ color: 'var(--editorial-gold)' }}><CourseText text={theme.name} /> · {t(catKey)} {rangDansCategorie}/{memeCategorie.length}</p>
           <h1 className="font-display text-2xl font-medium leading-tight"><CourseText text={chapter.title} /></h1>
         </div>
         <div className="chapter-hero-actions no-print flex shrink-0 items-center gap-1.5">
@@ -210,7 +217,7 @@ export default function Chapter() {
             </section>
           )
         })()}
-        <details className="chapter-memorisation" open={memoryOpen} onToggle={e=>setMemoryOpen(e.currentTarget.open)}><summary>📖 Mémoriser les repères</summary><p className="mt-2 text-sm">Les jeux courts pour retenir les termes et les phrases du cours. Choisis un format plutôt que de tous les enchaîner.</p>
+        <details className="chapter-memorisation" open={memoryOpen} onToggle={e=>setMemoryOpen(e.currentTarget.open)}><summary>📖 Les {games.length} jeux du chapitre : mémoriser les repères</summary><p className="mt-2 text-sm">Les jeux courts pour retenir les termes et les phrases du cours. Choisis un format plutôt que de tous les enchaîner.</p>
         <h2 className="exercise-shelf-title font-display">{t('gamesOfChapter')}</h2>
         <div className="chapter-exercise-grid">{games.length > 0 ? games.map((g, gameIndex) => {
           const best = rec?.games?.[g.id]
