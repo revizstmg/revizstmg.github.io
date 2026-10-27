@@ -93,6 +93,9 @@ export default function Cgu() {
         <ul className="list-disc space-y-1 pl-5">
           <li><b>Fiche par photo</b> : la photo est envoyée à un service d’intelligence artificielle (Google Gemini
           ou Anthropic Claude) qui en tire une fiche. N’y mets pas d’informations personnelles.</li>
+          <li><b>Aides générées par IA dans les chapitres</b> (« Créer ma série », « Questions type de contrôle »,
+          tuteur de cours) : à ta demande, le cours, tes questions ou ta réponse sont envoyés à un service d’intelligence
+          artificielle (Google Gemini ou Anthropic Claude). Les réponses de l’IA peuvent comporter des erreurs.</li>
           <li><b>Traduction</b> de l’interface dans une autre langue que le français : les textes publics non intégrés sont
           envoyés au service MyMemory.</li>
         </ul>

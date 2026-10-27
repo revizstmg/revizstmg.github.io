@@ -22,7 +22,7 @@ const SUB_STATUS = {
 
 function fmtDay(dateStr, lang = 'fr') {
   try {
-    return new Date(dateStr + 'T00:00:00').toLocaleDateString(lang, { weekday: 'short', day: 'numeric', month: 'short' })
+    return new Date(dateStr + 'T00:00:00').toLocaleDateString(lang, { calendar: 'gregory', numberingSystem: 'latn', weekday: 'short', day: 'numeric', month: 'short' })
   } catch { return dateStr }
 }
 

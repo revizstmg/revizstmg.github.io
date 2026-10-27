@@ -51,7 +51,7 @@ export default function Home() {
   const greeting = t(hour < 6 ? 'greetingNight' : hour < 12 ? 'greetingMorning' : hour < 18 ? 'greetingAfternoon' : 'greetingEvening')
   const locale = ({ fr: 'fr-FR', en: 'en-GB', es: 'es-ES', it: 'it-IT', ar: 'ar-SA', de: 'de-DE' })[state.lang] || 'fr-FR'
   let dateLabel = ''
-  try { dateLabel = new Intl.DateTimeFormat(locale, { weekday: 'long', day: 'numeric', month: 'long' }).format(new Date()) } catch { /* ignore */ }
+  try { dateLabel = new Intl.DateTimeFormat(locale, { calendar: 'gregory', numberingSystem: 'latn', weekday: 'long', day: 'numeric', month: 'long' }).format(new Date()) } catch { /* ignore */ }
 
   // Couleur du bandeau d'accueil : personnalisable (customTheme.banner). On la
   // fond dans une base sombre pour garder le texte clair toujours lisible, quelle

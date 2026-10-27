@@ -165,8 +165,8 @@ export const BADGES = [
     id: 'level_max',
     name: 'Sommet',
     icon: '🏔️',
-    desc: 'Atteindre le niveau maximum (12).',
-    check: (s, d) => d.level >= 12,
+    desc: 'Atteindre le niveau maximum (31).',
+    check: (s, d) => d.level >= 31,
   },
 
   // ----- Progression globale -----

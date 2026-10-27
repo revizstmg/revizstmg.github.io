@@ -1,6 +1,7 @@
 import { Link, Navigate } from 'react-router-dom'
 import { InstallCard } from '../components/InstallApp.jsx'
 import { useInstall } from '../pwa.js'
+import TexteRiche from '../components/TexteRiche.jsx'
 
 // Guide de démarrage (élèves) — accessible depuis le pied de page et le menu.
 // Rédigé en français (public : lycées français).
@@ -49,16 +50,16 @@ export default function Guide() {
       </div>
 
       <Step n={1} title="Va sur le site">
-        Ouvre <b>{SITE}</b> dans ton navigateur. <span className="text-slate-400">Rien à télécharger pour l’instant.</span>
+        <TexteRiche texte={`Ouvre **${SITE}** dans ton navigateur. Rien à télécharger pour l’instant.`} />
       </Step>
 
       <Step n={2} title="Crée ton compte">
-        <p>Choisis <b>« Créer un compte »</b>, saisis ton <b>e-mail</b> et un <b>mot de passe</b>.</p>
-        <p className="mt-1">Un e-mail de confirmation t’est envoyé : <b>ouvre-le et clique sur le lien</b> <span className="text-slate-400">(pense à regarder dans les spams)</span>, puis reviens te connecter. Ensuite, tu restes connecté.</p>
+        <p><TexteRiche texte="Choisis **« Créer un compte »**, saisis ton **e-mail** et un **mot de passe**." /></p>
+        <p className="mt-1"><TexteRiche texte="Un e-mail de confirmation t’est envoyé : **ouvre-le et clique sur le lien** (pense à regarder dans les spams), puis reviens te connecter. Ensuite, tu restes connecté." /></p>
       </Step>
 
       <Step n={3} title="Choisis ta filière">
-        <b>Première STMG</b>, ou <b>Terminale STMG</b> avec ta spécialité : Gestion &amp; Finance, RH &amp; Communication, Mercatique ou Systèmes d’information de gestion.
+        <TexteRiche texte="**Première STMG**, ou **Terminale STMG** avec ta spécialité : Gestion & Finance, RH & Communication, Mercatique ou Systèmes d’information de gestion." />
       </Step>
 
       <Step n={4} title="Installe l’appli sur ton téléphone">
@@ -67,19 +68,19 @@ export default function Guide() {
           <div className="rounded-xl border border-slate-200 p-3 dark:border-slate-700">
             <p className="mb-1.5 flex items-center gap-2 font-semibold"><span aria-hidden>📱</span> iPhone</p>
             <ol className="list-decimal space-y-1 pl-4">
-              <li>Ouvre le site dans <b>Safari</b></li>
-              <li>Touche <b>Partager</b> <span className="text-slate-400">(le carré avec la flèche ↑)</span></li>
-              <li>Choisis <b>« Sur l’écran d’accueil »</b></li>
-              <li>Touche <b>Ajouter</b></li>
+              <li><TexteRiche texte="Ouvre le site dans **Safari**" /></li>
+              <li><TexteRiche texte="Touche **Partager** (le carré avec la flèche ↑)" /></li>
+              <li><TexteRiche texte="Choisis **« Sur l’écran d’accueil »**" /></li>
+              <li><TexteRiche texte="Touche **Ajouter**" /></li>
             </ol>
-            <p className="mt-2 rounded-lg px-2 py-1.5 text-xs" style={{ backgroundColor: 'color-mix(in srgb, #c8a24e 16%, transparent)', color: 'var(--c-accent-texte)' }}>⚠️ Sur iPhone, ça marche <b>uniquement dans Safari</b> — pas dans Chrome.</p>
+            <p className="mt-2 rounded-lg px-2 py-1.5 text-xs" style={{ backgroundColor: 'color-mix(in srgb, #c8a24e 16%, transparent)', color: 'var(--c-accent-texte)' }}><TexteRiche texte="⚠️ Sur iPhone, ça marche **uniquement dans Safari** — pas dans Chrome." /></p>
           </div>
           <div className="rounded-xl border border-slate-200 p-3 dark:border-slate-700">
             <p className="mb-1.5 flex items-center gap-2 font-semibold"><span aria-hidden>🤖</span> Android</p>
             <ol className="list-decimal space-y-1 pl-4">
-              <li>Ouvre le site dans <b>Chrome</b></li>
-              <li>Touche le menu <b>⋮</b> <span className="text-slate-400">(en haut à droite)</span></li>
-              <li>Choisis <b>« Installer l’application »</b></li>
+              <li><TexteRiche texte="Ouvre le site dans **Chrome**" /></li>
+              <li><TexteRiche texte="Touche le menu **⋮** (en haut à droite)" /></li>
+              <li><TexteRiche texte="Choisis **« Installer l’application »**" /></li>
               <li>Confirme l’installation</li>
             </ol>
             <p className="mt-2 rounded-lg px-2 py-1.5 text-xs" style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 12%, transparent)' }}>💡 L’icône RévizSTMG s’ajoute à ton écran d’accueil.</p>
@@ -88,14 +89,14 @@ export default function Guide() {
       </Step>
 
       <Step n={5} title="Révise partout">
-        Une fois connecté, ta <b>progression se synchronise</b> automatiquement entre tous tes appareils. Le Coach, la révision intelligente, le bac blanc et le Grand Oral t’attendent.
+        <TexteRiche texte="Une fois connecté, ta **progression se synchronise** automatiquement entre tous tes appareils. La révision intelligente, le bac blanc et le Grand Oral t’attendent ; le Coach et la personnalisation du profil demandent l’application installée." />
       </Step>
 
       {/* Code de classe */}
       <div className="card flex items-center gap-4 p-5" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 30%, transparent)' }}>
         <span className="text-3xl" aria-hidden>🔑</span>
         <p className="text-sm text-slate-600 dark:text-slate-300">
-          <b>Un code de classe ?</b> Si ton prof t’en donne un, saisis-le dans <Link to="/classement" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">Classement</Link> pour rejoindre ta classe et suivre le classement de la semaine.
+          <TexteRiche texte="**Un code de classe ?** Si ton prof t’en donne un, saisis-le dans [[Mon espace|/moi]] (« Rejoindre une classe ») pour rejoindre ta classe et suivre le classement de la semaine." />
         </p>
       </div>
 

@@ -6,7 +6,7 @@ import { daysUntil, defaultBacDate } from '../data/srs.js'
 import { CALENDRIER, epreuvesAVenir, premiereEpreuve } from '../data/epreuves.js'
 import { useT, usePublicText } from '../i18n.js'
 
-const dateCourte = (d, lang = 'fr') => new Date(d + 'T00:00:00').toLocaleDateString(lang, { weekday: 'short', day: 'numeric', month: 'long' })
+const dateCourte = (d, lang = 'fr') => new Date(d + 'T00:00:00').toLocaleDateString(lang, { calendar: 'gregory', numberingSystem: 'latn', weekday: 'short', day: 'numeric', month: 'long' })
 
 // Sans filière (élève déconnecté), retour à l'accueil. Le test se fait ici, avant
 // tout hook de la page : React exige les mêmes hooks à chaque affichage, sinon la
@@ -51,14 +51,14 @@ function ProgrammePage() {
           <>
             <p className="kicker" style={{ color: 'color-mix(in srgb, var(--c-accent) 62%, #fff)' }}>{t('examCountdown')}</p>
             <p className="my-1 font-display text-6xl font-extrabold" style={{ color: 'color-mix(in srgb, var(--c-accent) 55%, #fff)' }}>{dLeft > 0 ? `J-${dLeft}` : dLeft === 0 ? t('itsToday') : tr('Épreuve passée')}</p>
-            <p className="text-xs text-[#d8cca8]">{new Date(state.bacDate + 'T00:00:00').toLocaleDateString(state.lang || 'fr', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</p>
+            <p className="text-xs text-[#d8cca8]">{new Date(state.bacDate + 'T00:00:00').toLocaleDateString(state.lang || 'fr', { calendar: 'gregory', numberingSystem: 'latn', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</p>
             <button onClick={() => { setDraft(state.bacDate); setEditing(true) }} className="mt-3 text-xs font-semibold underline" style={{ color: 'color-mix(in srgb, var(--c-accent) 60%, #fff)' }}>{t('editDate')}</button>
           </>
         ) : (
           <>
             <p className="mb-2 text-sm">{t('setBacDate')}</p>
             <input type="date" aria-label={t('setBacDate')} value={draft} onChange={(e) => setDraft(e.target.value)} className="rounded-xl border-0 bg-white px-3 py-2 text-slate-800 [color-scheme:light]" />
-            <p className="mt-2 text-xs text-[#d8cca8]">Date proposée : {draft ? new Date(draft + 'T00:00:00').toLocaleDateString(state.lang || 'fr', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}. Modifie-la si ta date est différente.</p>
+            <p className="mt-2 text-xs text-[#d8cca8]">Date proposée : {draft ? new Date(draft + 'T00:00:00').toLocaleDateString(state.lang || 'fr', { calendar: 'gregory', numberingSystem: 'latn', day: 'numeric', month: 'long', year: 'numeric' }) : ''}. Modifie-la si ta date est différente.</p>
             <button onClick={save} className="btn-gold mt-3 block w-full !py-2.5">{t('save')}</button>
           </>
         )}
