@@ -6,7 +6,7 @@ import { studySeconds, activeSeconds, repairStudyTime } from './data/studyTime.j
 import { SHOP_LEVELS, purchaseItem, equipItem, collectReward, walletRevision } from './data/shop.js'
 import { createContext, useContext, useEffect, useMemo, useRef, useState, useCallback } from 'react'
 import { SUBJECTS, ALL_CHAPTERS, chapitreDuJeu, exercicesParChapitre, EXERCICES_POUR_MAITRISER } from './data/index.js'
-import { BADGES } from './badges.js'
+import { BADGES, badgesForTrack } from './badges.js'
 import { envoyerProgression, isSignedIn, refreshSession, fetchProfile, getSession, signOut } from './auth.js'
 import { srsUpdate, todayKey, daysBetween, addDays } from './data/srs.js'
 import { dailyRewardFor } from './data/rewards.js'
@@ -335,7 +335,7 @@ export function StoreProvider({ children }) {
 
   const evaluateBadges = useCallback((next) => {
     const derived = deriveAll(next)
-    const earned = BADGES.filter((b) => b.check(next, derived)).map((b) => b.id)
+    const earned = badgesForTrack(next.track).filter((b) => b.check(next, derived)).map((b) => b.id)
     const fresh = earned.filter((id) => !next.badges.includes(id))
     if (fresh.length) {
       next.badges = [...next.badges, ...fresh]

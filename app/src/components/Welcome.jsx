@@ -534,6 +534,7 @@ export default function Welcome() {
             {err && <p className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
             {info && <p className="mt-3 text-sm font-semibold text-emerald-700">{info}</p>}
             <button type="button" className="welcome-cta" disabled={!step1Ok || busy} onClick={() => submitForm()}>{busy ? t('pleaseWait') : t('loginTab')}</button>
+            {!step1Ok && <p className="welcome-aide">Renseigne une adresse e-mail valide et ton mot de passe pour continuer.</p>}
             <button type="button" className="welcome-skip" disabled={busy} onClick={goCreate}>{t('noAccountYet')}</button>
             <button type="button" className="welcome-skip !mt-5 !rounded-xl !border !border-slate-400 !px-4 !py-3 !font-semibold" disabled={busy} onClick={() => { setEssai(true); setErr(''); setInfo('') }}>Essayer sans compte</button>
           </>

@@ -38,7 +38,7 @@ export function Rich({ text, className = '', translate = false }) {
   const translated = useAutoTranslate(translate ? text : '')
   const parts = String(translate ? translated : text).split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g)
   return (
-    <span className={className}>
+    <span className={className} dir={translate ? "auto" : "ltr"} lang={translate ? undefined : "fr"} style={{ unicodeBidi: "isolate" }}>
       {parts.map((p, i) => {
         if (p.startsWith('**') && p.endsWith('**')) {
           return (

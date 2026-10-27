@@ -162,7 +162,7 @@ export default function Home() {
       <OutilsAccueil />
 
       <p className="pt-1 text-center text-xs text-slate-400">
-        {level === 'terminale-stmg' ? t('courseBasedNote') : t('savedOnDevice')}
+        {state.account?.id ? 'Ta progression est synchronisée avec ton compte quand la connexion le permet.' : t('savedOnDevice')}
       </p>
     </div>
   )

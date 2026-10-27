@@ -3,6 +3,7 @@
 // - Le minuteur continue même en changeant de page (contexte global).
 // - Fin de phase : petit son + vibration ; fin d'une session de révision =>
 //   événement « stmg-focus-done » (le store attribue des XP).
+import { useStore } from './store.jsx'
 import { createContext, useContext, useEffect, useRef, useState, useCallback } from 'react'
 
 const KEY = 'stmg_focus_v1'
@@ -20,14 +21,30 @@ const Ctx = createContext(null)
 export const useFocus = () => useContext(Ctx)
 
 export function FocusProvider({ children }) {
-  const init = loadSettings()
+  const { state } = useStore()
+  const owner = state.account?.id || 'local'
+  return <FocusSession key={owner} owner={owner}>{children}</FocusSession>
+}
+
+function FocusSession({ owner, children }) {
+  const snapshotKey = `stmg_focus_session_v1:${owner}`
+  const [init] = useState(loadSettings)
+  const [saved] = useState(() => {
+    try {
+      const value = JSON.parse(sessionStorage.getItem(snapshotKey) || 'null')
+      return value && ['focus', 'break'].includes(value.phase) && Number.isFinite(value.remaining) ? value : null
+    } catch { return null }
+  })
   const [studyMin, setStudyMinState] = useState(init.studyMin)
   const [breakMin, setBreakMinState] = useState(init.breakMin)
-  const [phase, setPhase] = useState('idle') // 'idle' | 'focus' | 'break'
+  const [phase, setPhase] = useState(saved?.phase || 'idle')
   const [running, setRunning] = useState(false)
-  const [endsAt, setEndsAt] = useState(null) // ms
-  const [remaining, setRemaining] = useState(init.studyMin * 60) // secondes
-  const [cycles, setCycles] = useState(0)
+  const [endsAt, setEndsAt] = useState(null)
+  const [remaining, setRemaining] = useState(() => saved ? Math.max(1, Math.min(10800, Math.round(saved.remaining))) : init.studyMin * 60)
+  const [cycles, setCycles] = useState(saved ? Math.max(0, Math.min(1000, saved.cycles || 0)) : 0)
+  useEffect(() => {
+    try { sessionStorage.setItem(snapshotKey, JSON.stringify({ phase, remaining, endsAt, cycles })) } catch {}
+  }, [snapshotKey, phase, remaining, endsAt, cycles])
 
   // Persistance des réglages.
   useEffect(() => {

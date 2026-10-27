@@ -5,7 +5,7 @@ import { studySeconds } from '../data/studyTime.js'
 //  - ThemeTimeBars : temps de révision par thème (barres horizontales).
 // Lisibles en clair comme en sombre (couleurs via variables de thème).
 import { ALL_CHAPTERS } from '../data/index.js'
-import { useT } from '../i18n.js'
+import { useT, usePublicText } from '../i18n.js'
 
 // Formate une durée en secondes → « 12 min » ou « 1 h 05 ».
 export function fmtDuration(sec, t) {
@@ -68,6 +68,7 @@ export function ProgressCurve({ history }) {
 
 // Barres horizontales : temps de révision par thème (top 6).
 export function ThemeTimeBars({ themeTime }) {
+  const tr = usePublicText()
   const t = useT()
   const { state } = useStore()
   const repaired = Object.keys(state.themeTimeInvalid || {}).length > 0
@@ -88,7 +89,7 @@ export function ThemeTimeBars({ themeTime }) {
         return (
           <div key={r.id}>
             <div className="mb-1 flex items-baseline justify-between gap-2">
-              <span className="min-w-0 flex-1 text-sm font-medium" title={r.meta.name}>{r.meta.name || r.meta.short}</span>
+              <span className="min-w-0 flex-1 text-sm font-medium" title={tr(r.meta.name)}>{tr(r.meta.name || r.meta.short)}</span>
               <span className="shrink-0 text-xs font-semibold text-slate-500 dark:text-slate-400">{fmtDuration(r.sec, t)}</span>
             </div>
             <div className="h-2.5 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">

@@ -14,8 +14,9 @@ export default function FormulaWorkshop() {
 }
 function Workshop({track, scope}) {
   const tr=usePublicText()
-  const [programme,setProgramme]=useState('all')
-  const formulas=formulasForTrack(track, programme==='all')
+  const [programme,setProgramme]=useState('track')
+  const [level,setLevel]=useState('all')
+  const formulas=formulasForTrack(track, programme==='all').filter(f=>level==='all'||(level==='premiere'?!f.terminale:!!f.terminale))
   const [initial] = useState(() => readWorkshop(scope))
   const cookiesLues = useInfoCookiesLue()
   const [selected,setSelected]=useState(initial?.selected || []),[category,setCategory]=useState(''),[group,setGroup]=useState(''),[search,setSearch]=useState(''),[repeat,setRepeat]=useState(initial?.repeat || 2)
@@ -46,6 +47,7 @@ function Workshop({track, scope}) {
       <div className="card grid gap-3 p-4 sm:grid-cols-2">
         <label className="text-sm"><span className="mb-1 block font-semibold">{tr('Programme affiché')}</span><select className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm dark:border-slate-600 dark:bg-slate-800" value={programme} onChange={e=>{setProgramme(e.target.value);setCategory('');setGroup('')}}><option value="all">{tr('Toute la Première et Terminale STMG')}</option><option value="track">{tr('Ma classe et ma spécialité')}</option></select></label>
         <label className="text-sm"><span className="mb-1 block font-semibold">{tr('Domaine de calcul')}</span><select className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm dark:border-slate-600 dark:bg-slate-800" value={group} onChange={e=>setGroup(e.target.value)}><option value="">{tr('Tous les domaines')}</option>{[...new Set(formulas.filter(f=>!category || f.cat===category).map(f=>f.group))].map(g=><option key={g} value={g}>{tr(g)}</option>)}</select></label>
+        <label className="text-sm"><span className="mb-1 block font-semibold">Niveau</span><select aria-label={tr('Niveau')} className="w-full rounded-lg border p-3" value={level} onChange={e=>{setLevel(e.target.value);setGroup('');setCategory('')}}><option value="all">Tous les niveaux</option><option value="premiere">Première et bases communes</option><option value="terminale">Notions de Terminale</option></select></label>
         <label className="text-sm"><span className="mb-1 block font-semibold">Rechercher une formule</span><input className="rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-amber-700 dark:border-slate-600 dark:bg-slate-800 w-full" type="search" value={search} onChange={e=>setSearch(e.target.value)} /></label>
         <label className="text-sm"><span className="mb-1 block font-semibold">Matière</span><select className="rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-amber-700 dark:border-slate-600 dark:bg-slate-800 w-full" value={category} onChange={e=>{setCategory(e.target.value);setGroup('')}}><option value="">{tr('Toutes les matières')}</option>{[...new Set(formulas.map(f=>f.cat))].map(cat=><option key={cat} value={cat}>{tr(cat)}</option>)}</select></label>
       </div>

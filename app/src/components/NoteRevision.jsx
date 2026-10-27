@@ -61,7 +61,7 @@ export default function NoteRevision({subject,chapter,missed,owner,result,onResu
    <label className="block text-sm">Photographier ma copie<input type="file" accept="image/jpeg,image/png,image/webp" capture="environment" disabled={busy} onChange={e=>choose(e,'copy',true)} className="block w-full text-xs"/></label>
    {[...subjectFiles,...copyFiles].map((f,i)=><p key={i} className="break-all text-xs">{i+1}. {f.name}</p>)}
    {allFilesPresent(subjectFiles,copyFiles)&&<button type="button" className="text-sm underline" disabled={busy} onClick={()=>{setSubjectFiles([]);setCopyFiles([]);setConsent(false);onResult(null);setError('')}}>Retirer les fichiers</button>}
-   <label className="flex gap-2 text-sm"><input type="checkbox" disabled={busy} checked={consent} onChange={e=>setConsent(e.target.checked)}/>J’autorise leur envoi à l’IA pour cette analyse. Les fichiers ne sont pas conservés dans ma progression. Je masque les données personnelles inutiles.</label>
+   <label className="flex items-start gap-3 text-sm"><input type="checkbox" className="mt-1 h-5 w-5 shrink-0" disabled={busy} checked={consent} onChange={e=>setConsent(e.target.checked)}/>J’autorise leur envoi à l’IA pour cette analyse. Les fichiers ne sont pas conservés dans ma progression. Je masque les données personnelles inutiles.</label>
   </div></details>
   <div className="flex flex-wrap gap-3"><button type="button" disabled={busy} className="btn-primary" onClick={send}>{tr(busy?'Préparation en cours…':'Préparer mon bilan et mes exercices')}</button>{busy&&<button type="button" onClick={cancel} className="btn-ghost">Annuler l’analyse</button>}</div>
   {busy&&<p role="status" className="text-sm">Lecture et préparation en cours. Tu peux annuler ; le délai est limité à deux minutes.</p>}

@@ -134,7 +134,7 @@ export default function PhotoFiche() {
       setAi({
         status: 'error',
         msg: code === 'not_configured'
-          ? 'L’analyse IA n’est pas encore activée sur le serveur. Utilise la lecture classique ci-dessous (ou active-la, voir la doc).'
+          ? 'L’analyse automatique n’est pas disponible actuellement. Utilise la lecture sur cet appareil ou saisis le texte.'
           : code === 'network'
             ? 'Connexion impossible. Vérifie ta connexion, ou utilise la lecture classique ci-dessous.'
             : 'L’analyse IA a échoué cette fois. Utilise la lecture classique ci-dessous.',
@@ -204,7 +204,7 @@ export default function PhotoFiche() {
             </div>
 
             <button onClick={runOcr} disabled={ocr.status === 'running'} className="w-full rounded-xl border-2 px-4 py-2.5 text-sm font-semibold transition hover:bg-slate-50 disabled:opacity-60 dark:hover:bg-slate-800" style={{ borderColor: 'color-mix(in srgb, var(--c-accent) 40%, var(--c-line, #ddd))', color: 'var(--c-accent-texte)' }}>
-              {ocr.status === 'running' ? `Lecture classique… ${ocr.progress}%` : '🔎 Lecture classique (hors ligne)'}
+              {ocr.status === 'running' ? `Lecture classique… ${ocr.progress}%` : '🔎 Lecture sur cet appareil'}
             </button>
             {ocr.status === 'running' && (
               <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
@@ -257,7 +257,7 @@ export default function PhotoFiche() {
         </section>
       )}
 
-      <p className="text-center text-xs text-slate-400">🔒 « Lecture classique (hors ligne) » reste sur ton appareil. « Analyser la photo » envoie la photo à un service d’IA externe : masque ton nom et tes coordonnées.</p>
+      <p className="text-center text-sm text-slate-600 dark:text-slate-300">🔒 « Lecture sur cet appareil » reste sur ton appareil. Le moteur de lecture nécessite Internet à son premier chargement. « Analyser la photo » envoie la photo à un service d’IA externe : masque ton nom et tes coordonnées.</p>
 
       {/* Fiches enregistrées */}
       {fiches.length > 0 && (

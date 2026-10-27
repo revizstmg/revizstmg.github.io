@@ -43,10 +43,12 @@ function VacancesPage() {
 function Setup({subject,m,track,onCreate}) {
  const chapters = useMemo(()=>vacancesChapters(subject),[subject])
  const [selection,setSelection]=useState(['']),[goal,setGoal]=useState('bases'),[date,setDate]=useState(todayKey()),[rhythm,setRhythm]=useState(4),[minutes,setMinutes]=useState(20),[error,setError]=useState('')
+ const [programId]=useState(()=>crypto.randomUUID())
+ const preview=useMemo(()=>{if(!subject||!selection.some(Boolean))return null;try{return {program:createVacances({subject,selection:selection.filter(Boolean),track,startDate:date,goal,minutes,rhythm,id:programId})}}catch(e){return {error:e.message}}},[subject,selection,track,date,goal,minutes,rhythm,programId])
  const sample = chapters.find(ch=>selection.includes(ch.id))?.questions[0]
  function submit(e) {
   e.preventDefault()
-  try {onCreate(createVacances({subject,selection:selection.filter(Boolean),track,startDate:date,goal,minutes,rhythm,id:crypto.randomUUID()}))} catch (error) {setError(m(error.message==='insufficient_questions'?'capacity':'error'))}
+  try {onCreate(createVacances({subject,selection:selection.filter(Boolean),track,startDate:date,goal,minutes,rhythm,id:programId}))} catch (error) {setError(m(error.message==='insufficient_questions'?'capacity':'error'))}
  }
  if (!subject) return <p className="card p-5">{m('chooseSubject')}</p>
  if (!chapters.length) return <p className="card p-5">{m('empty')}</p>
@@ -56,8 +58,9 @@ function Setup({subject,m,track,onCreate}) {
   <fieldset><legend className="font-semibold">{m('chapters')}</legend><p className="mt-2 text-sm">{m('selection')}</p><div className="mt-3 space-y-3">{selection.map((id,i)=><label className="block text-sm font-semibold" key={i}>{m('chapter',{n:i+1})}<select aria-label={m('chapter',{n:i+1})} className="vacances-chapter-select mt-2" value={id} onChange={e=>setSelection(ids=>ids.map((v,j)=>i===j?e.target.value:v))}><option value="">{m('chooseChapter')}</option>{chapters.filter(ch=>ch.id===id||!selection.includes(ch.id)).map(ch=><option key={ch.id} value={ch.id}>{ch.title}</option>)}</select></label>)}{selection.length<3 && <button type="button" className="btn-ghost" onClick={()=>setSelection(ids=>[...ids,''])}>{m('addChapter')}</button>}</div></fieldset>
   {sample && <details className="vacances-note"><summary>{m('preview')}</summary><p className="mt-3 text-sm">{m('previewHelp')}</p><div lang="fr" translate="no" className="mt-3 space-y-2"><p>{sample.q}</p><p><strong>{m('correction')}</strong> {sample.choices[sample.answer]}</p><Rich text={sample.explain}/></div></details>}
   <p className="text-sm">{m('initialHelp')}</p><p className="text-sm">{m('estimate')}</p>
+  {preview?.error && <p className="text-sm" role="status">{m('capacity')}</p>}
   {error && <p role="alert">{error}</p>}
-  <button className="btn-primary" disabled={!selection.some(Boolean)} type="submit">{m('begin')}</button>
+  <button className="btn-primary" disabled={!selection.some(Boolean)||!!preview?.error} type="submit">{m('begin')}</button>
  </form>
 }
 function Overview({program:p,m,lang,onPhase,onStart,onReplace}) {

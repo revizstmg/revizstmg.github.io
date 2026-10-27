@@ -8,6 +8,7 @@ import { studySeconds } from './data/studyTime.js'
 //            totalAnswers, correctAnswers
 //  derived : global, bySubject[id], byChapter[id], chaptersMastered,
 //            subjectsPlayed, level
+const subjectBadgeScore = (state, derived, id) => derived.bySubject?.[state.track?.level === 'premiere-stmg' ? 'p1-' + id : id] || 0
 const perfectQuizzes = (s) => Object.values(s.chapters).filter((c) => (c.quiz || 0) >= 100).length
 const totalTime = (s) => Object.values(s.themeTime || {}).reduce((a, b) => a + studySeconds(b), 0)
 
@@ -272,7 +273,7 @@ export const BADGES = [
     name: 'Expert Gestion & Finance',
     icon: '💼',
     desc: 'Atteindre 80 % de progression en Gestion et Finance.',
-    check: (s, d) => (d.bySubject['gestion-finance'] || 0) >= 80,
+    check: (s, d) => subjectBadgeScore(s, d, 'gestion-finance') >= 80,
   },
   {
     id: 'tva_master',
@@ -283,7 +284,7 @@ export const BADGES = [
   },
   {
     id: 'sig_pro',
-    name: 'As des SIG',
+    name: 'Analyse financière',
     icon: '📊',
     desc: 'Maîtriser le Thème 2 de Gestion et Finance (analyse financière).',
     check: (s, d) => (d.byChapter['gf-t2'] || 0) >= 85,
@@ -293,7 +294,7 @@ export const BADGES = [
     name: 'Manager',
     icon: '🧑‍💼',
     desc: 'Atteindre 80 % de progression en Management.',
-    check: (s, d) => (d.bySubject['management'] || 0) >= 80,
+    check: (s, d) => subjectBadgeScore(s, d, 'management') >= 80,
   },
   {
     id: 'swot_ace',
@@ -307,56 +308,56 @@ export const BADGES = [
     name: 'Petit juriste',
     icon: '⚖️',
     desc: 'Atteindre 70 % de progression en Droit.',
-    check: (s, d) => (d.bySubject['droit'] || 0) >= 70,
+    check: (s, d) => subjectBadgeScore(s, d, 'droit') >= 70,
   },
   {
     id: 'jurist_pro',
     name: 'Grand juriste',
     icon: '👨‍⚖️',
     desc: 'Atteindre 90 % de progression en Droit.',
-    check: (s, d) => (d.bySubject['droit'] || 0) >= 90,
+    check: (s, d) => subjectBadgeScore(s, d, 'droit') >= 90,
   },
   {
     id: 'economist',
     name: 'Économiste',
     icon: '📈',
     desc: 'Atteindre 80 % de progression en Économie.',
-    check: (s, d) => (d.bySubject['economie'] || 0) >= 80,
+    check: (s, d) => subjectBadgeScore(s, d, 'economie') >= 80,
   },
   {
     id: 'mathlete',
     name: 'Tête de maths',
     icon: '🧮',
     desc: 'Atteindre 70 % de progression en Mathématiques.',
-    check: (s, d) => (d.bySubject['maths'] || 0) >= 70,
+    check: (s, d) => subjectBadgeScore(s, d, 'maths') >= 70,
   },
   {
     id: 'math_pro',
     name: 'Génie des maths',
     icon: '➗',
     desc: 'Atteindre 90 % de progression en Mathématiques.',
-    check: (s, d) => (d.bySubject['maths'] || 0) >= 90,
+    check: (s, d) => subjectBadgeScore(s, d, 'maths') >= 90,
   },
   {
     id: 'historian',
     name: 'Historien',
     icon: '🏛️',
     desc: 'Atteindre 80 % de progression en Histoire-Géo.',
-    check: (s, d) => (d.bySubject['histoire-geo'] || 0) >= 80,
+    check: (s, d) => subjectBadgeScore(s, d, 'histoire-geo') >= 80,
   },
   {
     id: 'philosophe',
     name: 'Apprenti philosophe',
     icon: '🦉',
     desc: 'Jouer sur au moins une notion de philosophie.',
-    check: (s, d) => (d.bySubject['philosophie'] || 0) >= 30,
+    check: (s, d) => subjectBadgeScore(s, d, 'philosophie') >= 30,
   },
   {
     id: 'philo_pro',
     name: 'Philosophe accompli',
     icon: '📜',
     desc: 'Atteindre 85 % de progression en Philosophie.',
-    check: (s, d) => (d.bySubject['philosophie'] || 0) >= 85,
+    check: (s, d) => subjectBadgeScore(s, d, 'philosophie') >= 85,
   },
   {
     id: 'polyglotte',
@@ -378,7 +379,7 @@ export const BADGES = [
     name: 'Cosmopolite',
     icon: '🌐',
     desc: 'Atteindre 80 % de progression en Langues.',
-    check: (s, d) => (d.bySubject['langues'] || 0) >= 80,
+    check: (s, d) => subjectBadgeScore(s, d, 'langues') >= 80,
   },
 
   // ----- Défis, régularité & objectifs -----
@@ -434,3 +435,11 @@ export const BADGES = [
 ]
 
 export const badgeById = Object.fromEntries(BADGES.map((b) => [b.id, b]))
+
+// Les badges d’une autre filière et des anciens jeux de langues ne bloquent
+// pas la collection actuelle. Les badges déjà obtenus restent dans l’historique.
+const SUBJECT_BADGES = {gestion_pro:'gestion-finance',tva_master:'gestion-finance',sig_pro:'gestion-finance',manager:'management',swot_ace:'management',juriste:'droit',jurist_pro:'droit',economist:'economie',mathlete:'maths',math_pro:'maths',historian:'histoire-geo',philosophe:'philosophie',philo_pro:'philosophie'}
+export function badgesForTrack(track) {
+ const available=new Set(track?.level==='premiere-stmg'?['management','droit','economie','maths','histoire-geo']:['management','droit','economie','maths','histoire-geo','philosophie',track?.specialty])
+ return BADGES.filter(b=>!['polyglotte','cosmopolite'].includes(b.id)&&(!SUBJECT_BADGES[b.id]||available.has(SUBJECT_BADGES[b.id]))&&!(track?.level==='premiere-stmg'&&b.id==='swot_ace'))
+}

@@ -173,7 +173,7 @@ export default function Layout({ children }) {
           )}
 
           {!parentSeul && (
-          <div className="hidden items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-800 sm:flex" title={t('xpTitle')}>
+          <div hidden={state.account?.role==='prof'} className="hidden items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-800 sm:flex" title={t('xpTitle')}>
             {t('levelShort')}&nbsp;{derived.level} · {nombre(state.xp, state.lang || 'fr')}&nbsp;XP
           </div>
           )}
@@ -189,13 +189,13 @@ export default function Layout({ children }) {
           <button className="grid h-9 w-9 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800" onClick={() => setDictOpen(true)} aria-label={t('dictionary')} title={t('dictionary')}>
             <Icon.Book />
           </button>
-          <button className="grid h-9 w-9 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800" onClick={() => setSearchOpen(true)} aria-label={t('search')}>
+          <button className="grid h-9 w-9 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800" onClick={() => setSearchOpen(true)} aria-label={t('search')} title={t('search')}>
             <Icon.Search />
           </button>
           <button
             className="grid h-9 w-9 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800"
             onClick={() => setTheme(isDark ? 'light' : 'dark')}
-            aria-label={isDark ? t('light') : t('dark')}
+            aria-label={isDark ? t('light') : t('dark')} title={isDark ? t('light') : t('dark')}
           >
             {isDark ? <Icon.Sun /> : <Icon.Moon />}
           </button>
@@ -211,7 +211,7 @@ export default function Layout({ children }) {
             <button
               className="flex h-9 items-center gap-1 rounded-full px-2 text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800"
               onClick={() => setLangOpen((v) => !v)}
-              aria-label={t('language')}
+              aria-label={t('language')} title={t('language')}
               aria-expanded={langOpen}
             >
               <Icon.Globe size={18} />
@@ -466,7 +466,7 @@ function SearchOverlay({ onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center bg-slate-900/50 p-4 pt-20 backdrop-blur-sm" onClick={onClose}>
-      <div ref={fenetre} role="dialog" aria-modal="true" aria-label={t('search')} className="card w-full max-w-lg animate-pop-in p-3" onClick={(e) => e.stopPropagation()}>
+      <div ref={fenetre} role="dialog" aria-modal="true" aria-label={t('search')} title={t('search')} className="card w-full max-w-lg animate-pop-in p-3" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center gap-2 rounded-xl bg-slate-100 px-3 dark:bg-slate-800">
           <span aria-hidden>🔍</span>
           <input
@@ -475,7 +475,7 @@ function SearchOverlay({ onClose }) {
             onChange={(e) => setQ(e.target.value)}
             placeholder={t('search') + '…'}
             className="w-full bg-transparent py-3 text-base outline-none placeholder:text-slate-400"
-            aria-label={t('search')}
+            aria-label={t('search')} title={t('search')}
           />
           <button onClick={onClose} className="text-slate-400 hover:text-slate-600" aria-label={t('quit')}>✕</button>
         </div>
@@ -505,20 +505,20 @@ function SearchOverlay({ onClose }) {
 }
 
 function BadgeToast() {
-  const { newBadges, dismissBadge } = useStore()
+  const { state, newBadges, dismissBadge } = useStore()
   const current = newBadges[0]
   useEffect(() => {
     if (!current) return
-    const t = setTimeout(() => dismissBadge(current), 4200)
+    const t = setTimeout(() => dismissBadge(current), 3000)
     return () => clearTimeout(t)
   }, [current, dismissBadge])
-  if (!current) return null
+  if (!current || state.account?.role === 'prof') return null
   const b = badgeById[current]
   if (!b) return null
   return (
     <>
       <Confetti show={!!current} />
-      <div className="no-print pointer-events-none fixed inset-x-0 top-14 z-[70] flex justify-center px-4" role="status">
+      <div className="no-print pointer-events-none fixed inset-x-0 bottom-24 z-[70] flex justify-center px-4" role="status">
         <button
           onClick={() => dismissBadge(current)}
           className="pointer-events-auto flex animate-bounce-in items-center gap-3 rounded-2xl bg-slate-900 px-5 py-3 text-start text-white shadow-2xl ring-1 ring-white/10 dark:bg-white dark:text-slate-900"
@@ -528,6 +528,7 @@ function BadgeToast() {
             <span className="block text-xs uppercase tracking-wide text-amber-400 dark:text-amber-500">Badge débloqué !</span>
             <span className="block font-bold">{b.name}</span>
             <span className="block text-xs opacity-70">{b.desc}</span>
+            <span className="mt-1 block text-xs underline">Fermer ✕</span>
           </span>
         </button>
       </div>
@@ -563,7 +564,7 @@ function BottomNav() {
               key={tab.id}
               to={tab.to}
               aria-current={on ? 'page' : undefined}
-              className="flex flex-1 flex-col items-center gap-1 py-1.5 text-[10px] font-semibold"
+              className="flex min-w-0 flex-1 flex-col items-center gap-1 py-1.5 text-[10px] font-semibold"
               style={{ color: on ? 'var(--nav-actif)' : undefined }}
             >
               <span
@@ -572,7 +573,7 @@ function BottomNav() {
               >
                 <span className="tab-icon text-[1.3rem] leading-none" style={{ transform: on ? 'translateY(-1px) scale(1.08)' : 'none' }} aria-hidden>{tab.icon}</span>
               </span>
-              <span className={on ? '' : 'text-slate-500 dark:text-slate-400'}>{t(tab.labelKey)}</span>
+              <span className={'max-w-full break-words text-center leading-tight '+(on ? '' : 'text-slate-500 dark:text-slate-400')} lang={state.lang}>{state.lang === 'de' ? ({reviseTab:'Üben',settings:'Optionen',mockExam:'Prüfungen'}[tab.labelKey] || t(tab.labelKey)) : t(tab.labelKey)}</span>
             </Link>
           )
         })}

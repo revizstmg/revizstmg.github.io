@@ -11,8 +11,11 @@ export function interpolate(text, values = []) {
 }
 export function TextePublic({ text, values, plain=false }) {
   const translated = useAutoTranslate(text)
+  const lang = useLang()
   if(plain)return plainCopy(interpolate(translated,values).join(''))
-  return interpolate(translated, values).map((value, i) => <Fragment key={i}>{value}</Fragment>)
+  const directional = lang === 'ar' ? translated.replace(/[←→↗↖‹›]/g, arrow => ({'←':'→','→':'←','↗':'↖','↖':'↗','‹':'›','›':'‹'}[arrow])) : translated
+  const content = interpolate(directional, values).map((value, i) => lang === 'ar' ? <bdi key={i} dir="auto">{value}</bdi> : <Fragment key={i}>{value}</Fragment>)
+  return lang === 'ar' ? <bdi dir="auto">{content}</bdi> : content
 }
 function Attribute({ model, children }) {
   const translated = useAutoTranslate(model.text)

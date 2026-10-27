@@ -559,7 +559,7 @@ function trouFromBold(sec, themeId) {
     for (const [si, sRaw] of sentences.entries()) {
       for (const bm of sRaw.matchAll(/\*\*(.+?)\*\*/g)) {
       const term = bm[1].trim()
-      if (term.length < 3 || term.length > 45 || /^\d+$/.test(term)) continue
+      if (term.length < 3 || term.length > 45 || /^\d+$/.test(term) || /^(?:ainsi|alors|aussi|autrement|cependant|donc|enfin|ensuite|exemple|jamais|mais|notamment|parfois|plutôt|souvent|toujours|également)$/i.test(term)) continue
       // Une étiquette (« Énoncé. », « Qualification : », « **Conclusion** : »)
       // n'est pas un mot à trouver.
       if (/[.:;!?]$/.test(term) || estEtapeMethode(term)) continue
@@ -1395,3 +1395,6 @@ export function search(query) {
   }
   return res.slice(0, 12)
 }
+
+// Activité transversale proposée au niveau du thème, jamais affectée arbitrairement à un chapitre.
+export const casPratiquesDuTheme = themeId => CAS_PRATIQUES[themeId] || []

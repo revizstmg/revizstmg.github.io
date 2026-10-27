@@ -54,7 +54,7 @@ export default function SignalerErreur({ themeId, exercice, defaut = 'reponse', 
     return (
       <button type="button" onClick={() => { setOuvert(true); setEtat('') }}
         className="text-xs font-semibold text-slate-500 underline-offset-2 hover:text-rose-600 hover:underline dark:text-slate-400">
-        ⚑ {libelle}
+        ⚑ <TextePublic text={libelle} />
       </button>
     )
   }

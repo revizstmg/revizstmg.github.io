@@ -1,4 +1,4 @@
-import { BADGES } from '../badges.js'
+import { BADGES, badgesForTrack } from '../badges.js'
 import { nombre } from '../format.js'
 import { useStore } from '../store.jsx'
 import { CourseText } from '../components/Course.jsx'
@@ -7,7 +7,9 @@ import { useT } from '../i18n.js'
 export default function Badges() {
   const { state, derived, resetAll } = useStore()
   const t = useT()
-  const earned = new Set(state.badges)
+  const badges = badgesForTrack(state.track)
+  const earned = new Set((state.badges || []).filter(id=>badges.some(b=>b.id===id)))
+  const past = BADGES.filter(b=>(state.badges||[]).includes(b.id)&&!badges.some(x=>x.id===b.id))
 
   const confirmReset = () => {
     if (window.confirm(t('resetConfirm'))) resetAll()
@@ -17,15 +19,15 @@ export default function Badges() {
     <div className="animate-lux space-y-5">
       <header className="page-hero">
         <p className="kicker">{t('level')} {derived.level} · {nombre(state.xp, state.lang || 'fr')} XP</p>
-        <h1 className="font-display text-3xl font-medium leading-tight">🏅 {state.profile?.firstName ? `${t('badgesOf')} ${state.profile.firstName}` : t('myBadges')}</h1>
+        <h1 className="font-display text-3xl font-medium leading-tight">🏅 {state.profile?.firstName ? `${(state.lang === 'fr' && /^[aeiouyhàâéèêëîïôöùûü]/i.test(state.profile.firstName) ? 'Badges d' : t('badgesOf'))}${state.lang === 'fr' && /^[aeiouyhàâéèêëîïôöùûü]/i.test(state.profile.firstName) ? '’' : ' '}${state.profile.firstName}` : t('myBadges')}</h1>
         <p className="mt-0.5 text-sm text-slate-500 dark:text-slate-400">
-          {earned.size} / {BADGES.length} {t('unlocked')}
+          {earned.size} / {badges.length} {t('unlocked')}
         </p>
       </header>
       <hr className="rule-gold" />
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-        {BADGES.map((b) => {
+        {badges.map((b) => {
           const got = earned.has(b.id)
           return (
             <div
@@ -41,6 +43,7 @@ export default function Badges() {
         })}
       </div>
 
+      {past.length>0&&<section className="card p-4"><h2>Badges de tes anciens parcours</h2>{past.map(b=><p key={b.id}><CourseText text={b.name}/></p>)}</section>}
       <div className="pt-4 text-center">
         <button onClick={confirmReset} className="text-xs text-slate-400 underline hover:text-rose-500">{t('resetProgress')}</button>
       </div>

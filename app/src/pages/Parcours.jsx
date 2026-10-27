@@ -15,7 +15,7 @@ import {
 const dateCourte = (jour, lang) => new Date(`${jour}T12:00:00`).toLocaleDateString(lang, { calendar: 'gregory', numberingSystem: 'latn', day: 'numeric', month: 'short' })
 // 9.5 → « 9,5 » : virgule française, comme le reste du site.
 const heuresRondes = (h) => String(Number(h)).replace('.', ',')
-const heures = (min) => (min >= 60 ? `${Math.floor(min / 60)} h${min % 60 ? ` ${String(min % 60).padStart(2, '0')}` : ''}` : `${min} min`)
+const heures = (min) => (min >= 60 ? `${Math.floor(min / 60)} h${min % 60 ? ` ${String(min % 60).padStart(2, '0')} min` : ''}` : `${min} min`)
 
 export default function Parcours() {
   const { state } = useStore()
@@ -164,7 +164,7 @@ function Plan({ matieres, onTest, onModifier }) {
           {plan.heuresConseillees
             ? (
               <>
-                <p className="mt-1 text-sm">{`Il manque environ ${heures(plan.manque)} pour atteindre ton objectif avant les épreuves. Il faudrait réviser environ ${heuresRondes(plan.heuresConseillees)} h par semaine, ou viser une note un peu plus basse.`}</p>
+                <p className="mt-1 text-sm">{`Il manque environ ${Math.ceil(plan.manque / 60)} h pour atteindre ton objectif avant les épreuves. Il faudrait réviser environ ${heuresRondes(plan.heuresConseillees)} h par semaine, ou viser une note un peu plus basse.`}</p>
                 <button type="button" className="btn-primary mt-3" onClick={() => setParcours((avant) => ({ ...avant, objectifs: { ...avant.objectifs, heuresSemaine: plan.heuresConseillees } }))}>{`Passer à ${heuresRondes(plan.heuresConseillees)} h par semaine`}</button>
               </>
             )

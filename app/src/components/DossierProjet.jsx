@@ -108,8 +108,8 @@ export function Pli({ icon, titre, sous, initial = false, ouvert, basculer, chil
         className="flex w-full items-center gap-3 p-4 text-left transition hover:bg-slate-50 dark:hover:bg-slate-800/40">
         {icon && <span className="text-xl" aria-hidden>{icon}</span>}
         <span className="min-w-0 flex-1">
-          <span className="block font-display text-lg font-medium leading-snug">{titre}</span>
-          {sous && <span className="block text-xs text-slate-500 dark:text-slate-400">{sous}</span>}
+          <span className="block font-display text-lg font-medium leading-snug">{typeof titre === "string" ? <TextePublic text={titre}/> : titre}</span>
+          {sous && <span className="block text-xs text-slate-500 dark:text-slate-400">{typeof sous === "string" ? <TextePublic text={sous}/> : sous}</span>}
         </span>
         <span className={`text-xl text-slate-400 transition-transform ${estOuvert ? 'rotate-90' : ''}`} aria-hidden>›</span>
       </button>
@@ -126,7 +126,7 @@ export function Detail({ repere, titre, children }) {
     <div className="rounded-xl bg-slate-50 dark:bg-slate-800/50">
       <button type="button" onClick={() => setOuvert((v) => !v)} aria-expanded={ouvert} aria-controls={id} className="flex w-full items-center gap-3 px-3 py-2.5 text-left">
         {repere && <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full text-xs font-bold text-white" style={{ backgroundColor: 'var(--c-accent-fort)' }} aria-hidden>{repere}</span>}
-        <span className="min-w-0 flex-1 text-sm font-semibold">{titre}</span>
+        <span className="min-w-0 flex-1 text-sm font-semibold">{typeof titre === "string" ? <TextePublic text={titre}/> : titre}</span>
         <span className={`text-slate-400 transition-transform ${ouvert ? 'rotate-90' : ''}`} aria-hidden>›</span>
       </button>
       {ouvert && <div id={id} className="px-3 pb-3 text-sm leading-relaxed text-slate-700 dark:text-slate-200">{children}</div>}

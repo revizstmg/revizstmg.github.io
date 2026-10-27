@@ -16,11 +16,11 @@ export default function RevisionPath({mode,subjects,onBack}) {
  const [sid,setSid]=useState(''),[tid,setTid]=useState('')
  useEffect(()=>title.current?.focus(),[mode])
  const subject=sid==='all' && mode==='acquired' ? {id:'all',name:'Toutes mes matières',color:'var(--c-accent-fort)',chapters:subjects.flatMap(s=>s.chapters)} : subjects.find(s=>s.id===sid)
- return <section className="mx-auto max-w-3xl space-y-5">
+ return <section className="mx-auto min-w-0 max-w-3xl space-y-5">
   <button className="lien-retour" onClick={onBack}>← {tr('Choisir une autre méthode')}</button>
   <header className="page-hero"><p className="kicker">{tr('Ton parcours de révision')}</p><h1 tabIndex={-1} ref={title} className="font-display text-3xl">{tr(labels[mode])}</h1><p className="mt-3 text-sm">{tr(help[mode])}</p></header>
-  <div className="card grid gap-4 p-5 sm:grid-cols-2">
-   <label htmlFor="revision-subject" className="text-sm font-semibold">{tr('Matière')}<select id="revision-subject" aria-label={tr('Matière')} className="mt-2 min-h-11 w-full rounded-xl border border-slate-400 bg-transparent p-2" value={sid} onChange={e=>{setSid(e.target.value);setTid('')}}><option value="">{tr('Choisis une matière')}</option>{mode==='acquired' && <option value="all">{tr('Toutes mes matières')}</option>}{subjects.map(s=><option value={s.id} key={s.id}>{tr(s.name)}</option>)}</select></label>
+  <div className="card grid min-w-0 gap-4 p-5 sm:grid-cols-2">
+   <label htmlFor="revision-subject" className="min-w-0 text-sm font-semibold">{tr('Matière')}<select id="revision-subject" aria-label={tr('Matière')} className="mt-2 min-h-11 w-full rounded-xl border border-slate-400 bg-transparent p-2" value={sid} onChange={e=>{setSid(e.target.value);setTid('')}}><option value="">{tr('Choisis une matière')}</option>{mode==='acquired' && <option value="all">{tr('Toutes mes matières')}</option>}{subjects.map(s=><option value={s.id} key={s.id}>{tr(s.name)}</option>)}</select></label>
    <Contenu matieres={sid==='all'?subjects.map(s=>s.id):sid?[sid]:[]}><ChapterPicker subject={subject} tid={tid} setTid={setTid} mode={mode}/></Contenu>
   </div>
   {subject ? <Contenu matieres={sid==='all'?subjects.map(s=>s.id):[sid]}><ReadyPath key={`${mode}:${sid}:${tid}`} mode={mode} subject={subject} themeId={tid}/></Contenu> : <p className="text-sm text-slate-500 dark:text-slate-300">{tr('Choisis une matière pour commencer.')}</p>}
@@ -51,11 +51,11 @@ function ReadyPath({mode,subject,themeId}) {
    {mode==='errors' && <p className="text-sm">{tr('Questions à retravailler : {count}',{count:errors.reduce((n,s)=>n+s.game.questions.length,0)})}</p>}
    {mode==='acquired' && <p className="text-sm">{tr('Questions issues de tes acquis : {count}',{count:acquired.length})}</p>}
   </> : <><h2 className="font-display text-xl">{tr(mode==='errors'?'Aucune erreur dans cette sélection':mode==='acquired'?'Pas encore de bonnes réponses à réviser ici':'Tu as terminé les exercices de cette sélection')}</h2><p className="text-sm">{tr(mode==='acquired'?'Réussis des exercices de cours : tes bonnes réponses alimenteront ce parcours.':mode==='errors'?'Choisis un autre chapitre ou continue tes cours.':'Choisis un autre chapitre pour poursuivre.')}</p><Link to={subject.id==='all'?'/cours':`/subject/${subject.id}`}  className="btn">{tr('Ouvrir les cours de cette matière')}</Link></>}
-  {canStart && <button className="btn-gold min-h-11" onClick={start}>{tr(finished?'Continuer dans cette matière':actions[mode])}</button>}
+  {canStart && <button className="btn-gold min-h-11 max-w-full whitespace-normal break-words" onClick={start}>{tr(finished?'Continuer dans cette matière':actions[mode])}</button>}
  </section>
 }
 
 function ChapterPicker({subject,tid,setTid,mode}) {
  const tr=usePublicText()
- return <label htmlFor="revision-chapter" className="text-sm font-semibold">{tr('Chapitre (facultatif)')}<select id="revision-chapter" aria-label={tr('Chapitre (facultatif)')} disabled={!subject} className="mt-2 min-h-11 w-full rounded-xl border border-slate-400 bg-transparent p-2 disabled:opacity-50" value={tid} onChange={e=>setTid(e.target.value)}><option value="">{tr(mode==='follow' ? 'Là où je me suis arrêté' : 'Tous les chapitres')}</option>{subject?.chapters.map(t=><optgroup key={t.id} label={tr(t.name)}><option value={t.id}>{tr(t.name)}</option>{(ALL_CHAPTERS[t.id]?.cours || []).map((section,idx)=><option key={idx} value={`${t.id}::${idx}`}>{tr(section.h || `Partie ${idx+1}`)}</option>)}</optgroup>)}</select></label>
+ return <label htmlFor="revision-chapter" className="min-w-0 text-sm font-semibold">{tr('Chapitre (facultatif)')}<select id="revision-chapter" aria-label={tr('Chapitre (facultatif)')} disabled={!subject} className="mt-2 min-h-11 w-full rounded-xl border border-slate-400 bg-transparent p-2 disabled:opacity-50" value={tid} onChange={e=>setTid(e.target.value)}><option value="">{tr(mode==='follow' ? 'Là où je me suis arrêté' : 'Tous les chapitres')}</option>{subject?.chapters.map(t=><optgroup key={t.id} label={tr(t.name)}><option value={t.id}>{tr(t.name)}</option>{(ALL_CHAPTERS[t.id]?.cours || []).map((section,idx)=><option key={idx} value={`${t.id}::${idx}`}>{tr(section.h || `Partie ${idx+1}`)}</option>)}</optgroup>)}</select></label>
 }

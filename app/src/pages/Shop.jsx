@@ -25,7 +25,7 @@ function ItemCard({ item, state, buy, equip, notify }) {
         <span aria-hidden className="absolute -right-5 -top-8 h-32 w-32 rounded-full border-[18px]" style={{ borderColor: `${color}18` }} />
         {item.type === 'title' ? <span className="mx-3 rounded-full border border-white/70 bg-white/90 px-3 py-2 text-center text-xs font-bold text-slate-800">{item.icon} {tr(item.title)}</span> : <span aria-hidden className="relative text-5xl transition-transform group-hover:scale-110">{item.icon}</span>}
         {owned && <span className="absolute left-2 top-2 rounded-full bg-white px-2 py-1 text-xs font-bold text-emerald-800">✓ Acquis</span>}
-        {locked && !owned && <span className="absolute left-2 top-2 rounded-full bg-white px-2 py-1 text-xs font-bold text-slate-700">Niv. {levelFromXp(item.minXp).level}</span>}
+        {locked && !owned && <span className="absolute left-2 top-2 rounded-full bg-white px-2 py-1 text-xs font-bold text-slate-700">{number(item.minXp)} XP</span>}
       </div>
       <div className="flex flex-1 flex-col p-3.5">
         <p className="text-xs font-bold uppercase tracking-widest" style={accent}>{tr(item.rarity || 'commun')}</p>

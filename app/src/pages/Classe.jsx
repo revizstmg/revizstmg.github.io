@@ -1,3 +1,4 @@
+import { nombre } from '../format.js'
 import './Classe.css'
 import ClassNavigation from '../components/ClassNavigation.jsx'
 import ClassOverview from '../components/ClassOverview.jsx'
@@ -452,6 +453,7 @@ function RankTab({ classCode, track, t }) {
 }
 
 function RankList({ rows, myId, value, unit, empty, t }) {
+  const { state } = useStore()
   if (!rows.length) return <Empty>{empty}</Empty>
   return rows.map((r, i) => {
     const me = r.device_id === myId
@@ -462,7 +464,7 @@ function RankList({ rows, myId, value, unit, empty, t }) {
           {r.photo ? <img src={r.photo} alt="" className="h-full w-full rounded-full object-cover" /> : initialsOf(r.name)}
         </span>
         <span className="min-w-0 flex-1 truncate font-semibold">{r.name || t('roleStudent')}{me && <span className="ml-1 text-xs font-normal text-slate-400">· {t('youLabel')}</span>}</span>
-        <span className="shrink-0 text-right"><span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{value(r)}</span><span className="block text-[0.65rem] uppercase tracking-wide text-slate-400">{unit}</span></span>
+        <span className="shrink-0 text-right"><span className="font-display text-xl font-semibold" style={{ color: 'var(--c-accent-texte)' }}>{typeof value(r) === 'number' ? nombre(value(r), state.lang) : value(r)}</span><span className="block text-[0.65rem] uppercase tracking-wide text-slate-400">{unit}</span></span>
       </div>
     )
   })
