@@ -1600,3 +1600,7 @@ Prochaine action :
 - Rien n'est appliqué ni déployé sur Supabase : migration, déploiement de la fonction et secrets Stripe attendent l'accord explicite du propriétaire (règle du projet). Sans cela le site affiche « Les paiements ne sont pas encore ouverts ».
 - Tests : `tests/paiement.test.js` (prix, clés, session Checkout, signature du webhook, absence de clé dans le dépôt) et `tests/parcours/paiement.spec.js` (fonction absente, case obligatoire, paiement, abonnement actif, accessibilité à 320 px).
 
+
+### BIENVENUE-20261028-CODEX-05
+- Demande : retirer le carré autour du message de bienvenue. Périmètre : style welcome-hello dans index.css. Retrait du cadre de focus sur le grand bouton ; indication clavier reportée sur « Touchez pour entrer », sans changer la fermeture ni les textes.
+- Vérification Chromium à 1280 et 390 px : aucune bordure/ombre/outline sur le message ; indication de focus soulignée sur le texte d’entrée ; touche Entrée ferme correctement l’accueil, aucune exception. Capture inspectée. Suite npm test lancée ; validation complète et compilation automatiques suivies dans la PR de livraison. Aucun contenu pédagogique ni Supabase modifié.
