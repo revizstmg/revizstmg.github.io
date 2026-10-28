@@ -1,4 +1,5 @@
 import {EXCELLENCE_SUBJECTS,checkExcellenceResult} from '../../../supabase/functions/examen-blanc/excellence.js'
+import {reserverIA} from './ia.js'
 import {getValidToken,getSession} from '../auth.js'
 import {SUPA_URL,SUPA_ANON} from '../supabase.js'
 export {EXCELLENCE_SUBJECTS,EXCELLENCE_RUBRIC} from '../../../supabase/functions/examen-blanc/excellence.js'
@@ -17,7 +18,7 @@ export function readExcellence(owner,storage=localStorage){
 export async function correctExcellence(subjectId,answer,owner,signal){
  const token=await getValidToken();signal.throwIfAborted()
  if(!token||getSession()?.user?.id!==owner)throw Error('login_required')
- const r=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify({action:'excellence',subjectId,answer}),signal})
+ reserverIA();const r=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify({action:'excellence',subjectId,answer}),signal})
  const data=await r.json().catch(()=>({}));signal.throwIfAborted()
  if(!r.ok)throw Error(data.error||(r.status===401?'login_required':'server_error'))
  if(getSession()?.user?.id!==owner)throw Error('login_required')

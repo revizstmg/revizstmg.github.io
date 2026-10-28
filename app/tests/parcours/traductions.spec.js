@@ -61,6 +61,15 @@ test('changer de langue sans recharger conserve la saisie et les achats', async 
   expect(erreurs).toEqual([])
 })
 
+// Retire une phrase du livre anglais pour simuler un texte non catalogué : seul ce cas passe par le service.
+async function retirerDuLivre(page, phrase) {
+  await page.route(/public\.en-[^/]*\.js/, async (route) => {
+    const r = await route.fetch()
+    const corps = (await r.text()).replace(new RegExp(`"${phrase}":"[^"]*",?`), '')
+    await route.fulfill({ response: r, body: corps })
+  })
+}
+
 test('les textes publics des autres pages se traduisent sans transmettre le profil', async ({ page }) => {
   const erreurs = await preparer(page, etatEleve({ lang: 'en', profile: { firstName: 'NomStrictementPrivé', lastName: 'NePasTransmettre' } }))
   const demandes = []
@@ -70,12 +79,10 @@ test('les textes publics des autres pages se traduisent sans transmettre le prof
     demandes.push(text)
     return route.fulfill({ contentType: 'application/json', body: JSON.stringify({ responseStatus: 200, responseData: { translatedText: `[English] ${text}` } }) })
   })
-  for (const [path, french] of [['cgu', 'Conditions d’utilisation & mentions légales'], ['confidentialite', 'Politique de confidentialité']]) {
-    await page.goto(`./#/${path}`)
-    await attendreAccueil(page)
-    await expect(page.getByRole('main').getByRole('heading', { level: 1 })).not.toHaveText(french)
-    await expect(page.getByRole('main').getByRole('heading', { level: 1 })).toContainText(/English|Terms|Privacy/)
-  }
+  await retirerDuLivre(page, 'Foire aux questions')
+  await page.goto('./#/faq')
+  await attendreAccueil(page)
+  await expect(page.getByRole('main').getByRole('heading', { level: 1 })).toHaveText('[English] Foire aux questions')
   expect(demandes.length).toBeGreaterThan(0)
   expect(demandes.join(' ')).not.toMatch(/NomStrictementPrivé|NePasTransmettre|lea@test.fr/)
   expect((await etat(page)).profile.firstName).toBe('NomStrictementPrivé')
@@ -90,16 +97,17 @@ test('une panne de traduction est visible et peut être relancée', async ({ pag
     const text = new URL(route.request().url()).searchParams.get('q')
     return route.fulfill({ contentType: 'application/json', body: JSON.stringify({ responseStatus: 200, responseData: { translatedText: `[English] ${text}` } }) })
   })
-  await page.goto('./#/cgu')
+  await retirerDuLivre(page, 'Foire aux questions')
+  await page.goto('./#/faq')
   await attendreAccueil(page)
   await expect(page.getByText('Some text could not be translated. You can try again.', { exact: true })).toBeVisible()
   await page.waitForTimeout(300)
   failed = false
   await page.getByRole('status').filter({hasText:'Some text could not be translated. You can try again.'}).getByRole('button', { name: 'Retry', exact: true }).click()
-  await expect(page.getByText(/^\[English\]/).first()).toBeVisible()
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('[English] Foire aux questions')
 })
 
-test('les consignes du Grand Oral se traduisent et les brouillons restent privés', async ({ page }) => {
+test('les consignes du Grand Oral se traduisent hors ligne et les brouillons restent privés', async ({ page }) => {
   const secret = 'Ma question strictement privée'
   const erreurs = await preparer(page, etatEleve({ lang: 'en', grandOral: { q1: secret } }))
   const demandes = []
@@ -111,9 +119,9 @@ test('les consignes du Grand Oral se traduisent et les brouillons restent privé
   await page.goto('./#/grand-oral')
   await attendreAccueil(page)
   await expect(page.locator('textarea').first()).toHaveValue(secret)
-  await page.getByRole('button', { name: /\[English\] L'épreuve/ }).click()
-  await expect.poll(() => demandes.some((text) => text.includes('Grand Oral') || text.includes('grand oral'))).toBe(true)
-  expect(demandes.join(' ')).not.toContain(secret)
+  // Les consignes sont traduites hors ligne : rien ne part vers le service et le brouillon reste privé.
+  await page.waitForTimeout(800)
+  expect(demandes).toEqual([])
   expect((await etat(page)).grandOral.q1).toBe(secret)
   expect(erreurs).toEqual([])
 })

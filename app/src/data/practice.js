@@ -1,4 +1,5 @@
 import {practiceUnits,checkPracticeResult} from '../../../supabase/functions/examen-blanc/practice.js'
+import {reserverIA} from './ia.js'
 import {SUPA_URL,SUPA_ANON} from '../supabase.js'
 import {getValidToken,getSession} from '../auth.js'
 export {practiceUnits}
@@ -14,7 +15,7 @@ export async function requestPractice(course,history,owner,signal){
  const token=await getValidToken();signal.throwIfAborted()
  if(!owner||!token||getSession()?.user?.id!==owner)throw Error('login_required')
  const body={action:'practice',course,targets:practiceTargets(course,history),previous:(history.previous||[]).slice(-60)}
- const r=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(body),signal})
+ reserverIA();const r=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(body),signal})
  const data=await r.json().catch(()=>({}));signal.throwIfAborted()
  if(!r.ok)throw Error(data.error||(r.status===401?'login_required':'server_error'))
  if(getSession()?.user?.id!==owner)throw Error('login_required')

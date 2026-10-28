@@ -1,4 +1,5 @@
 import {chargerMatiere,themeChapters,getChapter} from './index.js'
+import {reserverIA} from './ia.js'
 import {courseText} from './examenPersonnalise.js'
 import {getSession,getValidToken} from '../auth.js'
 import {SUPA_URL,SUPA_ANON} from '../supabase.js'
@@ -43,7 +44,7 @@ export async function requestStudy({subject,chapter,missed,owner,subjectFiles,co
  const courses=await interrupted(signal,studyCourses(subject,chapter))
  const files=all.length?checkFiles(await interrupted(signal,Promise.all(all.map(read)))):[]
  if(getSession()?.user?.id!==owner)throw Error('login_required')
- const r=await interrupted(signal,fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},signal,body:JSON.stringify({action:'study',missed:missed.trim()||'Comparer les erreurs de la copie au sujet fourni.',courses,files,subjectFiles:subjectFiles.length})}))
+ reserverIA();const r=await interrupted(signal,fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},signal,body:JSON.stringify({action:'study',missed:missed.trim()||'Comparer les erreurs de la copie au sujet fourni.',courses,files,subjectFiles:subjectFiles.length})}))
  const data=await interrupted(signal,r.json().catch(()=>({})))
  if(!r.ok)throw Error(r.status===401?'login_required':r.status===429?'rate_limit':data.error||'server_error')
  if(signal.aborted)throw new DOMException('Aborted','AbortError')

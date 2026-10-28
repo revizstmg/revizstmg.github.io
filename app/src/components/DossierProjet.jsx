@@ -478,7 +478,7 @@ export function OngletArguments({ d, maj, grille, aei, entete, notion, questions
           <div key={g.id} className="space-y-3">
             {questions && (
               <h3 className="px-1 pt-1 text-sm font-semibold text-slate-600 dark:text-slate-300">
-                {g.label}{g.texte ? ` : ${g.texte}` : ''} <span className="font-normal text-slate-500 dark:text-slate-400">· {g.liste.length ? `${g.liste.length} argument${g.liste.length > 1 ? 's' : ''}, ${virgule(note)}/20` : 'aucun argument'}</span>
+                {g.label}{g.texte ? ` : ${g.texte}` : ''} <span className="font-normal text-slate-500 dark:text-slate-400">· {g.liste.length ? (g.liste.length > 1 ? `${g.liste.length} arguments, ${virgule(note)}/20` : `${g.liste.length} argument, ${virgule(note)}/20`) : 'aucun argument'}</span>
               </h3>
             )}
             {g.liste.map((a, k) => (

@@ -45,9 +45,10 @@ export default function Privacy() {
           <li><b>Photos de cours</b> envoyées à la « fiche par photo » : analysées pour créer la fiche, elles ne sont
           <b> pas conservées</b> par RévizSTMG.</li>
           <li><b>Aides et exercices générés par IA dans les chapitres</b> (« Créer ma série », « Créer une question »,
-          « Questions type de contrôle », tuteur de cours « Envoyer au tuteur ») : uniquement quand tu les demandes, le
-          cours du chapitre, tes questions ou ta réponse rédigée sont envoyés à un fournisseur d’IA. Ton identité n’est
-          pas envoyée et RévizSTMG ne conserve pas ces échanges.</li>
+          « Questions type de contrôle », tuteur de cours « Envoyer au tuteur », « Excellence économique », « Demande de révision ») :
+          uniquement quand tu les demandes, le cours du chapitre, tes questions, ton texte ou ta réponse rédigée (et, pour une
+          demande de révision, les fichiers ou photos que tu choisis) sont envoyés à un fournisseur d’IA. Ton identité n’est
+          pas envoyée et RévizSTMG ne conserve pas ces échanges. Un plafond quotidien limite le nombre de demandes.</li>
           <li><b>Examens blancs personnalisés</b> : la demande et les extraits de cours sont envoyés au
           fournisseur d’IA pour créer le sujet. Avec ton accord distinct, le PDF ou les photos de ta copie
           sont transmis à Gemini pour une correction indicative. RévizSTMG ne conserve pas ces fichiers ;
