@@ -43,6 +43,14 @@ export default function Cgu() {
         <p><TexteRiche texte={"Le lien « Préparer ma demande par e-mail » ouvre un brouillon dans la messagerie de l’utilisateur ; aucun message n’est envoyé automatiquement. Les demandes sont examinées à  [[revizstmg@gmail.com|mailto:revizstmg@gmail.com]]."} /></p>
       </Section>
 
+      <Section title="Abonnements payants (version de test)">
+        <p><TexteRiche texte={"**Offres.** Deux abonnements existent : **Premium** (9,99 € TTC par mois ou 90 € TTC par an) et **Ultimate** (14,99 € TTC par mois ou 130 € TTC par an). Les prix sont affichés toutes taxes comprises."} /></p>
+        <p><TexteRiche texte={"**Mode test.** Tant que la page des offres affiche « Mode test », aucune vraie carte n’est débitée : seules les cartes de test de Stripe fonctionnent."} /></p>
+        <p><TexteRiche texte={"**Paiement.** Le paiement est traité par Stripe, qui reçoit les informations de carte ; RévizSTMG ne les voit ni ne les conserve. L’abonnement est renouvelé automatiquement à chaque échéance et peut être résilié à tout moment depuis « Gérer mon abonnement » ; il reste actif jusqu’à la fin de la période payée."} /></p>
+        <p><TexteRiche texte={"**Qui peut s’abonner.** Il faut avoir 18 ans ou l’accord de son représentant légal, ce que la case à cocher avant le paiement confirme."} /></p>
+        <p><TexteRiche texte={"**Droit de rétractation.** Tu disposes de 14 jours à compter de la souscription pour te rétracter en écrivant à revizstmg@gmail.com. Ces conditions de vente sont provisoires et seront complétées avant l’ouverture des paiements réels."} /></p>
+      </Section>
+
       <Section title="3. Règles de bonne conduite">
         <p><TexteRiche texte={"Dans les espaces partagés (classe, messages de classe, défis entre amis, classement, nom affiché) :"} /></p>
         <ul className="list-disc space-y-1 pl-5">

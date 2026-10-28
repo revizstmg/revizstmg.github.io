@@ -1593,3 +1593,10 @@ Prochaine action :
 ### BAC-20261028-CODEX-04
 - Demande : combler l’espace sous la carte 03 dans Bac blanc. Périmètre : BacBlanc.jsx/CSS, traductions du bloc de conseils, contrôles visuels. Ajout d’un bloc utile de méthode avant/pendant/après l’épreuve, sans modifier les sujets ni les services externes.
 - Réalisé : bloc « Une copie solide » sous la carte 03, conseils avant/pendant/après, lien vers Réviser ; colonne conservée sur ordinateur et empilement mobile. Textes ajoutés aux cinq catalogues. Compilation réussie (866 pages). Contrôle Chromium à 1280 px/français, 390 px/sombre et 320 px/arabe : aucun débordement ni exception, lien fonctionnel ; captures inspectées. Suite unitaire et validation GitHub à suivre dans la PR de livraison. Aucune modification des sujets ou de Supabase.
+
+### PAIEMENTS-20261028-CLAUDE-13 - abonnements Stripe en mode test
+- Décisions du propriétaire : mode test d'abord, offres Premium et Ultimate, prix TTC 9,99 €/mois et 90 €/an (Premium), 14,99 €/mois et 130 €/an (Ultimate), paiement par le compte avec case « 18 ans ou accord du représentant légal ».
+- Stripe (compte de test) : produits, quatre prix par `lookup_key`, portail client, point d'entrée webhook. Dépôt : fonction `revizstmg-paiement`, migration `revizstmg_abonnements`, page Offres, section « Abonnements payants (version de test) » des CGU, traductions des cinq langues, `docs/PAIEMENTS.md`.
+- Rien n'est appliqué ni déployé sur Supabase : migration, déploiement de la fonction et secrets Stripe attendent l'accord explicite du propriétaire (règle du projet). Sans cela le site affiche « Les paiements ne sont pas encore ouverts ».
+- Tests : `tests/paiement.test.js` (prix, clés, session Checkout, signature du webhook, absence de clé dans le dépôt) et `tests/parcours/paiement.spec.js` (fonction absente, case obligatoire, paiement, abonnement actif, accessibilité à 320 px).
+
