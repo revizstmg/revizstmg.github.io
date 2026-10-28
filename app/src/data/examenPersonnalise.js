@@ -1,4 +1,5 @@
 import { checkGrade } from '../../../supabase/functions/examen-blanc/grading.js'
+import { reserverIA } from './ia.js'
 import { SUBJECTS, chargerTout, themeChapters } from './index.js'
 import { SUPA_URL, SUPA_ANON } from '../supabase.js'
 import { getSession, getValidToken } from '../auth.js'
@@ -27,6 +28,7 @@ export async function examReady(signal) {
 export async function requestExam(body, accountId, signal) {
   const token = await getValidToken()
   if (!token || getSession()?.user?.id !== accountId) throw new Error('login_required')
+  reserverIA()
   const r = await fetch(`${SUPA_URL}/functions/v1/examen-blanc`, { method: 'POST', headers: { apikey: SUPA_ANON, Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal })
   const data = await r.json().catch(() => ({}))
   if (!r.ok) throw new Error(data.error || (r.status === 401 ? 'login_required' : 'server_error'))

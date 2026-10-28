@@ -52,7 +52,7 @@ test('création : deux PDF séparés et reprise sans questions à remplir', asyn
 })
 test('service désactivé : créateur en carte PDF, annales disponibles et aucun QCM', async ({ page }) => {
  const { errors, requests } = await setup(page, false)
- await expect(page.getByText(/La génération IA n’est pas encore activée/)).toBeVisible()
+ await expect(page.getByText(/Cette aide par intelligence artificielle n’est pas disponible/)).toBeVisible()
  await expect(page.getByRole('button', { name: 'Analyser ma demande' })).toBeDisabled()
  await expect(page.getByRole('heading', { name: '⏱ QCM chronométré' })).toHaveCount(0)
  await expect(page.locator('.bac-creator .bac-paper')).toBeVisible()

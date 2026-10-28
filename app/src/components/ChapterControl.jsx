@@ -1,4 +1,5 @@
 import { withControlDeadline, CONTROL_WAIT_MS } from '../controlRequest.js'
+import {reserverIA} from '../data/ia.js'
 import { useEffect, useRef, useState } from 'react'
 import { useStore } from '../store.jsx'
 import { usePublicText } from '../i18n.js'
@@ -23,7 +24,7 @@ export default function ChapterControl({course}) {
    signal.throwIfAborted()
    if(!owner||!token||getSession()?.user?.id!==owner)throw Error('login_required')
    const body={action:'control',step,course,...(step==='prepare'?{previous:previous.current}:{exercise,answer:answer.trim()})}
-   const response=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(body),signal:ac.signal})
+   reserverIA();const response=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(body),signal:ac.signal})
    const data=await response.json().catch(()=>({}))
    if(!response.ok)throw Error(data.error||(response.status===401?'login_required':'server_error'))
    signal.throwIfAborted()

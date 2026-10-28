@@ -1,3 +1,4 @@
+import { MESSAGE_IA_INDISPONIBLE } from '../data/ia.js'
 import { useRef, useState } from 'react'
 import { Navigate, Link } from 'react-router-dom'
 import { useStore, useStudyTimer } from '../store.jsx'
@@ -134,7 +135,9 @@ export default function PhotoFiche() {
       setAi({
         status: 'error',
         msg: code === 'not_configured'
-          ? 'L’analyse automatique n’est pas disponible actuellement. Utilise la lecture sur cet appareil ou saisis le texte.'
+          ? MESSAGE_IA_INDISPONIBLE
+          : code === 'rate_limit'
+            ? 'La limite temporaire d’analyses est atteinte. Utilise la lecture sur cet appareil ou réessaie plus tard.'
           : code === 'network'
             ? 'Connexion impossible. Vérifie ta connexion, ou utilise la lecture classique ci-dessous.'
             : 'L’analyse IA a échoué cette fois. Utilise la lecture classique ci-dessous.',
@@ -197,7 +200,7 @@ export default function PhotoFiche() {
               {ai.status === 'running' ? 'Analyse en cours…' : 'Analyser la photo'}
             </button>
             <p className="mt-1.5 text-center text-[11px] text-slate-400">Lit même les tableaux, le petit texte et l’écriture manuscrite.</p>
-            {ai.msg && <p className="mt-2 text-xs text-amber-600 dark:text-amber-400">{ai.msg}</p>}
+            {ai.msg && <p className="mt-2 text-xs text-amber-600 dark:text-amber-400">{tr(ai.msg)}</p>}
 
             <div className="my-3 flex items-center gap-3 text-[11px] uppercase tracking-wider text-slate-400">
               <span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" />ou<span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" />

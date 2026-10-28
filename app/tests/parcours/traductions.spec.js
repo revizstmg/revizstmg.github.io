@@ -61,6 +61,15 @@ test('changer de langue sans recharger conserve la saisie et les achats', async 
   expect(erreurs).toEqual([])
 })
 
+// Retire une phrase du livre anglais pour simuler un texte non catalogué : seul ce cas passe par le service.
+async function retirerDuLivre(page, phrase) {
+  await page.route(/public\.en-[^/]*\.js/, async (route) => {
+    const r = await route.fetch()
+    const corps = (await r.text()).replace(new RegExp(`"${phrase}":"[^"]*",?`), '')
+    await route.fulfill({ response: r, body: corps })
+  })
+}
+
 test('les textes publics des autres pages se traduisent sans transmettre le profil', async ({ page }) => {
   const erreurs = await preparer(page, etatEleve({ lang: 'en', profile: { firstName: 'NomStrictementPrivé', lastName: 'NePasTransmettre' } }))
   const demandes = []
@@ -90,13 +99,14 @@ test('une panne de traduction est visible et peut être relancée', async ({ pag
     const text = new URL(route.request().url()).searchParams.get('q')
     return route.fulfill({ contentType: 'application/json', body: JSON.stringify({ responseStatus: 200, responseData: { translatedText: `[English] ${text}` } }) })
   })
-  await page.goto('./#/subject/droit/theme/droit-t5/chapter/1')
+  await retirerDuLivre(page, 'Foire aux questions')
+  await page.goto('./#/faq')
   await attendreAccueil(page)
   await expect(page.getByText('Some text could not be translated. You can try again.', { exact: true })).toBeVisible()
   await page.waitForTimeout(300)
   failed = false
   await page.getByRole('status').filter({hasText:'Some text could not be translated. You can try again.'}).getByRole('button', { name: 'Retry', exact: true }).click()
-  await expect(page.getByText(/^\[English\]/).first()).toBeVisible()
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('[English] Foire aux questions')
 })
 
 test('les consignes du Grand Oral se traduisent et les brouillons restent privés', async ({ page }) => {
@@ -116,5 +126,24 @@ test('les consignes du Grand Oral se traduisent et les brouillons restent privé
   expect(demandes).toEqual([])
   expect(demandes.join(' ')).not.toContain(secret)
   expect((await etat(page)).grandOral.q1).toBe(secret)
+  expect(erreurs).toEqual([])
+})
+
+test('un texte public non catalogué se traduit sans transmettre le profil', async ({ page }) => {
+  const erreurs = await preparer(page, etatEleve({ lang: 'en', profile: { firstName: 'NomStrictementPrivé', lastName: 'NePasTransmettre' } }))
+  const demandes = []
+  await page.route('https://api.mymemory.translated.net/**', (route) => {
+    const url = new URL(route.request().url())
+    const text = url.searchParams.get('q')
+    demandes.push(text)
+    return route.fulfill({ contentType: 'application/json', body: JSON.stringify({ responseStatus: 200, responseData: { translatedText: `[English] ${text}` } }) })
+  })
+  await retirerDuLivre(page, 'Foire aux questions')
+  await page.goto('./#/faq')
+  await attendreAccueil(page)
+  await expect(page.getByRole('main').getByRole('heading', { level: 1 })).toHaveText('[English] Foire aux questions')
+  expect(demandes.length).toBeGreaterThan(0)
+  expect(demandes.join(' ')).not.toMatch(/NomStrictementPrivé|NePasTransmettre|lea@test.fr/)
+  expect((await etat(page)).profile.firstName).toBe('NomStrictementPrivé')
   expect(erreurs).toEqual([])
 })

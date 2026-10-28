@@ -2,6 +2,7 @@
 // l'Edge Function Supabase « fiche-vision » qui appelle Claude côté serveur.
 // La clé d'API n'est jamais dans l'appli. Si la fonction n'est pas configurée,
 // l'appel échoue proprement et l'appli retombe sur l'OCR embarqué.
+import { reserverIA } from './data/ia.js'
 import { SUPA_URL, SUPA_ANON, SUPA_READY } from './supabase.js'
 
 export const VISION_READY = SUPA_READY
@@ -37,6 +38,7 @@ export async function analyzeWithVision(files) {
   }
   if (!images.length) { const e = new Error('no_images'); e.code = 'no_images'; throw e }
 
+  try { reserverIA() } catch { const e = new Error('rate_limit'); e.code = 'rate_limit'; throw e }
   let res
   try {
     res = await fetch(`${SUPA_URL}/functions/v1/fiche-vision`, {

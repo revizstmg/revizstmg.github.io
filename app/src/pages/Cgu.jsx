@@ -61,7 +61,7 @@ export default function Cgu() {
       <Section title="5. Fonctions qui s’appuient sur d’autres services">
         <ul className="list-disc space-y-1 pl-5">
           <li><TexteRiche texte={"**Fiche par photo** : la photo est envoyée à un service d’intelligence artificielle (Google Gemini ou Anthropic Claude) qui en tire une fiche. N’y mets pas d’informations personnelles."} /></li>
-          <li><TexteRiche texte={"**Aides générées par IA dans les chapitres** (« Créer ma série », « Questions type de contrôle », tuteur de cours) : à ta demande, le cours, tes questions ou ta réponse sont envoyés à un service d’intelligence artificielle (Google Gemini ou Anthropic Claude). Les réponses de l’IA peuvent comporter des erreurs."} /></li>
+          <li><TexteRiche texte={"**Aides générées par IA dans les chapitres** (« Créer ma série », « Questions type de contrôle », tuteur de cours), « Excellence économique » et « Demande de révision » : à ta demande, le cours, tes questions, ton texte ou ta réponse sont envoyés à un service d’intelligence artificielle (Google Gemini ou Anthropic Claude). Une demande de révision peut inclure les fichiers que tu choisis. Un plafond quotidien local limite les clics répétés ; le serveur applique aussi ses limites. Les réponses de l’IA peuvent comporter des erreurs."} /></li>
           <li><TexteRiche texte={"**Traduction** de l’interface dans une autre langue que le français : les textes publics non intégrés sont envoyés au service MyMemory."} /></li>
         </ul>
         <p><TexteRiche texte={"Le détail figure dans la [[politique de confidentialité|/confidentialite]]."} /></p>
