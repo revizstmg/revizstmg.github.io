@@ -1,7 +1,7 @@
 {
   "name": "RévizSTMG",
   "short_name": "RévizSTMG",
-  "description": "Révision interactive et ludique pour la Terminale STMG : fiches, jeux et quiz par matière et par chapitre.",
+  "description": "Révision interactive et ludique pour la Première et la Terminale STMG : fiches, jeux et quiz par matière et par chapitre.",
   "lang": "fr",
   "dir": "ltr",
   "start_url": "./",
