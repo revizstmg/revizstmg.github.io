@@ -197,3 +197,99 @@ html.a11y-contrast .home-hero { background:#000 !important; }
  .home-invitation h2 { font-size:30px; margin-top:0; }
  .home-hero-actions { margin-top:16px; }
 }
+
+/* Accueil éditorial : un départ clair, puis des rythmes visuels distincts. */
+.home-page { --home-rule:color-mix(in srgb,var(--c-ink) 18%,transparent); }
+.home-page > * { min-width:0; }
+.home-hero { padding:clamp(22px,3.5vw,38px); border-radius:20px; }
+.home-hero::before { width:430px; height:430px; top:-290px; inset-inline-end:-80px; box-shadow:0 0 0 42px #c5d6c209; }
+.home-hello { padding-bottom:20px; }
+.home-stage { gap:28px; align-items:stretch; padding-top:26px; }
+.home-invitation { align-self:center; padding-block:8px; }
+.home-invitation h2 { font-size:clamp(34px,4.2vw,52px); max-width:12ch; line-height:1.08; text-wrap:balance; }
+.home-intro { line-height:1.7; margin-top:16px; }
+.home-hero-actions { gap:10px; margin-top:23px; }
+.home-courses-action { box-shadow:none; padding-inline:0; min-height:36px; text-decoration:underline; text-underline-offset:5px; }
+.home-page .home-resume-card { border-radius:12px; box-shadow:7px 7px 0 #0b2023; padding:24px; }
+.home-hero-note { margin-top:22px; }
+.home-method { padding:clamp(22px,3vw,30px); border:1px solid #ddd3bc; border-radius:16px; background:#f3eddf; color:#263c35; }
+.home-method-heading { display:flex; align-items:center; gap:16px; }
+.home-method-heading > span { display:grid; place-items:center; width:48px; height:52px; font-size:28px; background:#e4dcc7; border-radius:6px; transform:rotate(-5deg); flex-shrink:0; }
+.home-method .kicker { color:#69562e; font-size:10px; letter-spacing:.14em; }
+.home-method h2 { font-size:clamp(27px,3vw,34px); margin-top:4px; line-height:1.2; }
+.home-method .study-steps { margin-top:26px; gap:22px; }
+.home-method .study-steps li { display:block; border-top:1px solid #c9bfa7; padding-top:14px; }
+.home-method .study-steps li > span { display:block; color:#756039; font-size:32px; margin-bottom:10px; }
+.home-method .study-steps p { font-size:13px; opacity:1; color:#46574b; }
+.home-method-links { display:flex; flex-wrap:wrap; gap:12px 22px; border-top:1px solid #c9bfa7; padding-top:18px; margin-top:24px; font-size:13px; font-weight:600; }
+.home-method-links a { display:inline-flex; align-items:center; min-height:32px; text-underline-offset:4px; }
+.home-method-links a:first-child { margin-inline-end:auto; }
+.home-pathways { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.home-plan,.home-pathways > aside { position:relative; display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; gap:14px; padding:25px; border:1px solid var(--home-rule); border-radius:16px; background:var(--c-card); overflow:hidden; }
+.home-plan-art { font-size:34px; line-height:1; margin-bottom:4px; }
+.home-plan .kicker { font-size:10px; }
+.home-plan h2 { font-size:26px; font-weight:500; line-height:1.2; margin-top:7px; }
+.home-plan p:not(.kicker),.home-pathways > aside p:last-child { font-size:13px; line-height:1.75; color:var(--c-muted); }
+.home-plan > div { min-width:0; }
+.home-pathways > aside { border-top:3px solid #b9954f; }
+.home-pathways > aside > div { flex:initial; }
+.home-pathways > aside p:first-child { font-size:26px; line-height:1.3; font-weight:500; margin-top:39px; }
+.home-pathways .btn-primary { margin-top:auto; min-height:44px; width:100%; justify-content:space-between; font-size:13px; }
+.home-pathways .btn-primary::after { content:'↗'; margin-inline-start:12px; }
+.home-section-heading { margin-bottom:16px; }
+.home-ritual { padding-top:7px; }
+.home-ritual-grid > .card { box-shadow:none; border-radius:14px; }
+.home-bottom-grid { gap:18px; margin-top:0; }
+.home-progress-card { background:#e6ece2; border-color:#bfccbb; padding:28px; }
+.home-summary { --home-ink:#203d34; --home-muted:#4c6256; }
+.home-progress-card .home-progress-heading { margin-bottom:20px; }
+.home-progress-heading h2,.home-community-card h2 { font-size:30px; }
+.home-stat-grid { margin-block:24px; gap:15px; }
+.home-stat-grid strong { font-size:40px; }
+.home-stat-grid > div + div { border-inline-start:1px solid var(--home-line); padding-inline-start:15px; }
+.home-progress-explanation { color:var(--home-muted); font-size:12px; line-height:1.75; }
+.home-progress-explanation summary { cursor:pointer; min-height:34px; align-content:center; text-decoration:underline; text-underline-offset:4px; }
+.home-progress-explanation p { margin-top:8px; }
+.home-progress-footer { margin-top:18px; padding-top:16px; }
+.home-progress-footer a { min-height:28px; align-content:center; }
+.home-community-card { background:#203e36; border-color:#4f685c; color:#fff8e8; padding:28px; }
+.home-community-card .home-eyebrow { color:#d6c28f; }
+.home-community-links { margin-top:24px; gap:8px; }
+.home-community-links a { font-size:14px; padding:14px 0; border-color:#5d7466; min-height:50px; }
+.home-community-links a > span:first-child { width:32px; font-size:23px; }
+.home-community-links a > span:last-child { color:#e6d1a1; }
+.dark .home-progress-card { background:#263e35; border-color:#536b5c; }
+.dark .home-summary { --home-ink:#f1f0e4; --home-muted:#c2cec1; --home-line:#536b5c; }
+.home-page a { overflow-wrap:anywhere; }
+@media(max-width:639px) {
+ .home-hero { padding:23px 20px; }
+ .home-invitation { padding:0; }
+ .home-invitation h2 { font-size:38px; max-width:15ch; }
+ .home-stage { grid-template-columns:1fr; padding-top:22px; }
+ .home-main-action { flex:1 1 100%; }
+ .home-courses-action { flex:initial; justify-content:flex-start; }
+ .home-hero .home-resume-card { margin-inline-end:5px; }
+ .home-method { padding:22px; }
+ .home-method .study-steps { grid-template-columns:1fr; gap:18px; }
+ .home-method .study-steps li { display:flex; gap:16px; }
+ .home-method .study-steps li > span { min-width:32px; margin:0; }
+ .home-method-links { gap:6px 18px; }
+ .home-pathways { grid-template-columns:1fr; gap:14px; }
+ .home-plan,.home-pathways > aside { padding:22px; }
+ .home-pathways > aside p:first-child { margin-top:0; }
+ .home-plan-art { position:absolute; inset-inline-end:22px; top:22px; font-size:28px; }
+ .home-plan .kicker { padding-inline-end:45px; }
+ .home-progress-card,.home-community-card { padding:24px; }
+ .home-stat-grid { gap:9px; }
+ .home-stat-grid > div + div { padding-inline-start:9px; }
+ .home-stat-grid strong { font-size:34px; }
+ .home-stat-grid div > span { font-size:11px; }
+ .home-section-heading { flex-wrap:wrap; gap:5px 14px; }
+}
+@media(max-width:639px) and (max-height:650px) {
+ .home-invitation h2 { font-size:29px; }
+ .home-stage { padding-top:16px; }
+ .home-main-action { min-height:44px; }
+ .home-hero-actions { margin-top:15px; gap:4px; }
+ .home-courses-action { min-height:30px; }
+}
