@@ -417,6 +417,18 @@ button, a { transition: transform 0.15s cubic-bezier(0.22, 0.68, 0.24, 1); }
   text-align: center;
   padding: 2rem 1.5rem;
   cursor: pointer;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+}
+.welcome-hello:focus-visible {
+  outline: none;
+}
+.welcome-hello:focus-visible .welcome-hint {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 .welcome-kicker {
   font-family: Georgia, 'Times New Roman', serif;
