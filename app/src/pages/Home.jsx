@@ -1,7 +1,6 @@
 import VacancesEntry from '../components/VacancesEntry.jsx'
 import {JourneySteps} from '../components/StudyJourney.jsx'
 import MissionCard from '../components/MissionCard.jsx'
-import { CourseText } from '../components/Course.jsx'
 import { Link, Navigate } from 'react-router-dom'
 import { getChapter } from '../data/index.js'
 import { subjectsForTrack, getLevel, getSpecialty } from '../data/tracks.js'
@@ -58,8 +57,8 @@ export default function Home() {
   // que soit la teinte choisie. Sans choix, on garde l'écrin « sombre & or ».
   const banner = state.customTheme?.banner || null
   const bannerBg = banner
-    ? `linear-gradient(140deg, color-mix(in srgb, ${banner} 30%, #14110c) 0%, color-mix(in srgb, ${banner} 14%, #1b1610) 55%, #14110c 100%)`
-    : 'linear-gradient(135deg, #172d30 0%, #24423f 100%)'
+    ? `color-mix(in srgb, ${banner} 22%, #172d30)`
+    : '#172d30'
 
   return (
     <div className="home-page animate-lux space-y-7">
@@ -76,7 +75,7 @@ export default function Home() {
         <div className="home-stage">
           <div className="home-invitation">
             <p className="home-overline">Ton prochain contrôle</p>
-            <h2 className="font-display">Comprends tes erreurs. Prépare ton prochain contrôle.</h2>
+            <h2 className="font-display">Ta prochaine réussite commence ici.</h2>
             <p className="home-intro">Pars de ton dernier devoir pour savoir quoi revoir et comment t’entraîner.</p>
             <div className="home-hero-actions">
               {realSubjects.length > 0 && <Link to="/seance" className="home-main-action"><Icon.Play size={17} /> Lancer ma séance du jour <span aria-hidden>↗</span></Link>}
@@ -89,9 +88,11 @@ export default function Home() {
         <p className="home-hero-note"><span aria-hidden>✦</span> Aujourd’hui, avance à ton rythme.</p>
       </section>
 
-      <section className="card p-5" aria-label="Du devoir à la révision"><JourneySteps/><div className="mt-5 flex flex-wrap gap-4 text-sm"><Link to="/mes-notes" className="underline">Préparer mon bilan</Link><Link to="/offres" className="underline">Comparer les offres</Link><Link to="/cours" className="underline">Voir tous les cours</Link></div></section>
+      <section className="home-method" aria-labelledby="home-method-title"><div className="home-method-heading"><span aria-hidden="true">📝</span><div><p className="kicker">Du devoir à la révision</p><h2 id="home-method-title" className="font-display">Une erreur, un déclic.</h2></div></div><JourneySteps/><div className="home-method-links"><Link to="/mes-notes" className="underline">Préparer mon bilan</Link><Link to="/offres" className="underline">Comparer les offres</Link><Link to="/cours" className="underline">Voir tous les cours</Link></div></section>
 
-      <section className="card flex flex-wrap items-center justify-between gap-4 p-5" aria-labelledby="home-parcours-title">
+      <div className="home-pathways">
+      <section className="home-plan" aria-labelledby="home-parcours-title">
+        <span className="home-plan-art" aria-hidden="true">📅</span>
         <div className="min-w-[14rem] flex-1">
           <p className="kicker">Mon parcours</p>
           <h2 id="home-parcours-title" className="font-display text-xl font-semibold">Un plan fait pour toi, semaine par semaine.</h2>
@@ -101,6 +102,7 @@ export default function Home() {
       </section>
 
       <VacancesEntry />
+      </div>
       <section className="home-ritual" aria-labelledby="home-ritual-title">
         <div className="home-section-heading"><div><p className="kicker">Tes habitudes</p><h2 id="home-ritual-title" className="font-display">Trouve ton rythme.</h2></div><Link to="/programme">Mes objectifs <span aria-hidden>↗</span></Link></div>
         <div className="home-ritual-grid">
@@ -155,8 +157,8 @@ export default function Home() {
       </section>
 
     <section className="home-summary home-bottom-grid">
-      <div className="home-progress-card"><span className="home-eyebrow">Tes efforts prennent forme</span><div className="home-progress-heading"><h2>Chaque séance compte.</h2></div><div className="home-stat-grid"><div><strong>{progress}<small>%</small></strong><span>Progression de ta filière</span></div><div><strong>{mastered}</strong><span>Thèmes maîtrisés</span></div><div><strong>{state.streak?.count || 0}</strong><span>{t('streakDays')}</span></div></div><p>Chaque chapitre utilise jusqu’à trois de tes meilleurs exercices. La moyenne des chapitres donne la maîtrise du thème ; un meilleur résultat au test du thème peut la relever. Les XP et les séances de formules ne modifient pas cette maîtrise.</p><div className="home-progress-footer"><span>{t('level')} {derived.level} · {state.xp.toLocaleString(state.lang || 'fr')} XP</span><Link to="/badges">{t('badges')} →</Link></div></div>
-      <div className="home-community-card"><span className="home-eyebrow">Mieux avancer, ensemble</span><h2>Ton coin à toi.</h2><div className="home-community-links"><Link to="/classe"><span aria-hidden>◉</span>{t('myClass')}<span aria-hidden>→</span></Link><Link to="/amis"><span aria-hidden>♧</span>{t('friends')}<span aria-hidden>→</span></Link><Link to="/boutique"><span aria-hidden>✦</span>{t('shop')}<span aria-hidden>→</span></Link></div></div>
+      <div className="home-progress-card"><span className="home-eyebrow">Tes efforts prennent forme</span><div className="home-progress-heading"><h2>Chaque séance compte.</h2></div><ProgressBar value={progress} color="var(--c-accent-texte)" /><div className="home-stat-grid"><div><strong>{progress}<small>%</small></strong><span>Progression de ta filière</span></div><div><strong>{mastered}</strong><span>Thèmes maîtrisés</span></div><div><strong>{state.streak?.count || 0}</strong><span>{t('streakDays')}</span></div></div><details className="home-progress-explanation"><summary>Comprendre ma progression</summary><p>Chaque chapitre utilise jusqu’à trois de tes meilleurs exercices. La moyenne des chapitres donne la maîtrise du thème ; un meilleur résultat au test du thème peut la relever. Les XP et les séances de formules ne modifient pas cette maîtrise.</p></details><div className="home-progress-footer"><span>{t('level')} {derived.level} · {state.xp.toLocaleString(state.lang || 'fr')} XP</span><Link to="/badges">{t('badges')} →</Link></div></div>
+      <div className="home-community-card"><span className="home-eyebrow">Mieux avancer, ensemble</span><h2>Ton coin à toi.</h2><div className="home-community-links"><Link to="/classe"><span aria-hidden>🏫</span>{t('myClass')}<span aria-hidden>→</span></Link><Link to="/amis"><span aria-hidden>🤝</span>{t('friends')}<span aria-hidden>→</span></Link><Link to="/boutique"><span aria-hidden>🎁</span>{t('shop')}<span aria-hidden>→</span></Link></div></div>
     </section>
 
       <OutilsAccueil />
