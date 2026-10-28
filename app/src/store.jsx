@@ -992,9 +992,12 @@ export function subjectScore(state, subjectId) {
 }
 
 export function globalScore(state) {
-  if (!SUBJECTS.length) return 0
-  const sum = SUBJECTS.reduce((a, s) => a + subjectScore(state, s.id), 0)
-  return Math.round(sum / SUBJECTS.length)
+  // Une progression de filière ne dépend pas des autres spécialités ni des
+  // guides de langues, qui ne délivrent pas de score de maîtrise de chapitre.
+  const programme = state.track?.level ? subjectsForTrack(state.track) : SUBJECTS
+  const subjects = programme.filter(s => !s.comingSoon && !['langues', 'p1-langues'].includes(s.id) && s.chapters?.length)
+  if (!subjects.length) return 0
+  return Math.round(subjects.reduce((sum, s) => sum + subjectScore(state, s.id), 0) / subjects.length)
 }
 
 // Instantané des stats de l'élève pour l'espace parent (lecture seule).

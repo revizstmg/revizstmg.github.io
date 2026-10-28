@@ -1,3 +1,5 @@
+import { globalScore } from '../src/store.jsx'
+import { subjectsForTrack } from '../src/data/tracks.js'
 import { it, expect } from 'vitest'
 import { readFileSync } from 'node:fs'
 import { BADGES, badgesForTrack } from '../src/badges.js'
@@ -46,5 +48,15 @@ it('les textes légaux sont traduits comme phrases entières sans perdre les lie
  for(const lang of ['en','es','it','de','ar']){
   const d=JSON.parse(readFileSync(new URL(`../src/localisation/public.${lang}.json`,import.meta.url),'utf8'))
   for(const [key,value] of Object.entries(d))if(key.includes('[[revizstmg@gmail.com|'))expect(value).toContain('|mailto:revizstmg@gmail.com]]')
+ }
+})
+
+it('100 % et les badges de progression restent atteignables dans chaque filière',()=>{
+ for(const track of [{level:'premiere-stmg'},{level:'terminale-stmg',specialty:'gestion-finance'},{level:'terminale-stmg',specialty:'mercatique'},{level:'terminale-stmg',specialty:'rh-communication'},{level:'terminale-stmg',specialty:'sig'}]){
+  const subjects=subjectsForTrack(track).filter(s=>!s.comingSoon&&!['langues','p1-langues'].includes(s.id))
+  const chapters=Object.fromEntries(subjects.flatMap(s=>s.chapters.map(c=>[c.id,{quiz:100,games:{}}])))
+  const state={track,chapters}
+  expect(globalScore(state),JSON.stringify(track)).toBe(100)
+  expect(BADGES.find(b=>b.id==='global_100').check(state,{global:globalScore(state)})).toBe(true)
  }
 })
