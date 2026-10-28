@@ -50,7 +50,9 @@ export function parametresCheckout({ prixId, userId, email, clientId, siteUrl })
   p.set('cancel_url', `${siteUrl}/#/offres?paiement=annule`)
   p.set('locale', 'fr')
   p.set('billing_address_collection', 'auto')
-  p.set('custom_text[submit][message]', 'Abonnement renouvelé automatiquement. Résiliable à tout moment depuis « Gérer mon abonnement ». Droit de rétractation de 14 jours : voir les conditions d’utilisation.')
+  // Managed Payments (actif par défaut sur le compte) exige un code fiscal par produit et refuse custom_text :
+  // on le désactive, le propriétaire reste le vendeur et les prix sont TTC.
+  p.set('managed_payments[enabled]', 'false')
   return p
 }
 
