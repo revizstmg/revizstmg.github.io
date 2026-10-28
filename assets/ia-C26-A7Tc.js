@@ -1,0 +1,1 @@
+const n="stmg_ia_usage",t=()=>new Date().toISOString().slice(0,10);function o(){try{const r=JSON.parse(localStorage.getItem(n)||"null");return r&&r.jour===t()?r:{jour:t(),n:0}}catch{return{jour:t(),n:0}}}function e(){const r=o();if(r.n>=60)throw new Error("rate_limit");try{localStorage.setItem(n,JSON.stringify({jour:r.jour,n:r.n+1}))}catch{}}export{e as r};
