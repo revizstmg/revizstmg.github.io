@@ -29,6 +29,7 @@ describe('offres et prix', () => {
 describe('session de paiement', () => {
   it('abonnement, client et retours vers la page des offres', () => {
     const p = parametresCheckout({ prixId: 'price_1', userId: 'u-1', clientId: 'cus_1', siteUrl: 'https://exemple.test' })
+    expect([...p.keys()].some((k) => k.startsWith('custom_text'))).toBe(false)
     expect(p.get('mode')).toBe('subscription')
     expect(p.get('line_items[0][price]')).toBe('price_1')
     expect(p.get('client_reference_id')).toBe('u-1')

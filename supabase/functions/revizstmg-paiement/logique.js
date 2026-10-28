@@ -50,7 +50,7 @@ export function parametresCheckout({ prixId, userId, email, clientId, siteUrl })
   p.set('cancel_url', `${siteUrl}/#/offres?paiement=annule`)
   p.set('locale', 'fr')
   p.set('billing_address_collection', 'auto')
-  p.set('custom_text[submit][message]', 'Abonnement renouvelé automatiquement. Résiliable à tout moment depuis « Gérer mon abonnement ». Droit de rétractation de 14 jours : voir les conditions d’utilisation.')
+  // Pas de custom_text : refusé par Stripe quand les « Managed Payments » sont actifs (défaut du compte).
   return p
 }
 
