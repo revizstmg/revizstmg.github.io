@@ -1,4 +1,5 @@
 const rows=[
+ ['clearLocal','Effacer mes données locales','Clear my local data','Borrar mis datos locales','Elimina i miei dati locali','مسح بياناتي المحلية','Meine lokalen Daten löschen'],
  ['lightMode','Clair','Light','Claro','Chiaro','فاتح','Hell'],
  ['darkMode','Sombre','Dark','Oscuro','Scuro','داكن','Dunkel'],
  ['systemMode','Selon l’appareil','Use device setting','Según el dispositivo','Segui il dispositivo','حسب الجهاز','Geräteeinstellung'],

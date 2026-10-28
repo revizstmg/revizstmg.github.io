@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { METHODO } from '../data/methodo.js'
-import { useT } from '../i18n.js'
+import { useT, usePublicText } from '../i18n.js'
 
 export default function Methodo() {
-  const t = useT()
+  const t = useT(), tr = usePublicText()
   const [open, setOpen] = useState(METHODO[0].id)
 
   return (
@@ -21,23 +21,23 @@ export default function Methodo() {
           <section key={m.id} className="card overflow-hidden p-0">
             <button aria-expanded={isOpen} aria-controls={`methodo-${m.id}`} onClick={() => setOpen(isOpen ? '' : m.id)} className="flex w-full items-center gap-3 p-4 text-left">
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: m.color + '22' }}>{m.icon}</span>
-              <span className="min-w-0 flex-1 font-display text-lg font-semibold">{m.title}</span>
+              <span className="min-w-0 flex-1 font-display text-lg font-semibold">{tr(m.title)}</span>
               <span className="shrink-0 text-slate-400 transition" style={{ transform: isOpen ? 'rotate(90deg)' : 'none' }} aria-hidden>›</span>
             </button>
             {isOpen && (
               <div id={`methodo-${m.id}`} className="space-y-3 px-4 pb-5">
-                <p className="text-sm text-slate-600 dark:text-slate-300">{m.intro}</p>
+                <p className="text-sm text-slate-600 dark:text-slate-300">{tr(m.intro)}</p>
                 <ol className="space-y-2">
                   {m.steps.map((s, i) => (
                     <li key={i} className="flex gap-3">
                       <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full text-xs font-black text-white" style={{ backgroundColor: m.color }}>{i + 1}</span>
-                      <span className="text-sm"><b>{s.h}</b> — <span className="text-slate-600 dark:text-slate-300">{s.c}</span></span>
+                      <span className="text-sm"><b>{tr(s.h)}</b> — <span className="text-slate-600 dark:text-slate-300">{tr(s.c)}</span></span>
                     </li>
                   ))}
                 </ol>
                 <div className="rounded-xl border-l-4 p-3" style={{ borderColor: m.color, background: m.color + '10' }}>
-                  <p className="mb-1 text-xs font-bold uppercase tracking-wide texte-matiere" style={{ '--mc': m.color }}>💡 {m.example.h}</p>
-                  <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-200">{m.example.c}</p>
+                  <p className="mb-1 text-xs font-bold uppercase tracking-wide texte-matiere" style={{ '--mc': m.color }}>💡 {tr(m.example.h)}</p>
+                  <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-200">{tr(m.example.c)}</p>
                 </div>
               </div>
             )}

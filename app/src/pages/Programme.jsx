@@ -44,6 +44,7 @@ function ProgrammePage() {
         <span className="mx-auto mt-3 block h-px w-24 rounded-full" style={{ background: 'linear-gradient(90deg,transparent,#c8a24e,transparent)' }} />
       </header>
 
+      {state.track?.level==='premiere-stmg'&&<p className="card p-3 text-sm">Tu prépares les épreuves anticipées de 2027, pour le bac de la session 2028. La date ci-dessous concerne tes épreuves anticipées, pas la fin de Terminale.</p>}
       {/* Compte à rebours */}
       <section className="card-lux relative overflow-hidden rounded-[1.6rem] p-6 text-center text-[#f4ecd8]"
         style={{ background: 'linear-gradient(140deg, color-mix(in srgb, var(--c-accent) 16%, #17130d) 0%, #221d15 55%, #17130d 100%)', border: '1px solid color-mix(in srgb, var(--c-accent) 30%, transparent)' }}>
@@ -72,9 +73,9 @@ function ProgrammePage() {
             {epreuves.map((e) => (
               <div key={e.id} className="flex items-center gap-3 p-3.5">
                 <span className="min-w-0 flex-1">
-                  <span className="block text-sm font-semibold">{e.nom}</span>
+                  <span className="block text-sm font-semibold">{tr(e.nom)}</span>
                   <span className="block text-xs text-slate-500 dark:text-slate-400">
-                    {e.debut ? dateCourte(e.debut, state.lang || 'fr') : ''}{e.fin ? ` → ${dateCourte(e.fin, state.lang || 'fr')}` : ''}{e.note ? `${e.debut ? ' · ' : ''}${e.note}` : ''}
+                    {e.debut ? dateCourte(e.debut, state.lang || 'fr') : ''}{e.fin ? ` → ${dateCourte(e.fin, state.lang || 'fr')}` : ''}{e.note ? `${e.debut ? ' · ' : ''}${tr(e.note)}` : ''}
                   </span>
                 </span>
                 {e.jours != null && <span className="chip shrink-0" style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 14%, transparent)', color: 'var(--c-accent-texte)' }}>{e.jours > 0 ? `J-${e.jours}` : t('itsToday')}</span>}

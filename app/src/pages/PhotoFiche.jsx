@@ -1,3 +1,4 @@
+import { MESSAGE_IA_INDISPONIBLE } from '../data/ia.js'
 import { useRef, useState } from 'react'
 import { Navigate, Link } from 'react-router-dom'
 import { useStore, useStudyTimer } from '../store.jsx'
@@ -134,9 +135,9 @@ export default function PhotoFiche() {
       setAi({
         status: 'error',
         msg: code === 'not_configured'
-          ? 'L’analyse par IA n’est pas disponible pour le moment. Utilise la lecture classique ci-dessous.'
+          ? MESSAGE_IA_INDISPONIBLE
           : code === 'rate_limit'
-            ? 'Tu as atteint la limite d’analyses pour aujourd’hui. Utilise la lecture classique ci-dessous ou réessaie demain.'
+            ? 'La limite temporaire d’analyses est atteinte. Utilise la lecture sur cet appareil ou réessaie plus tard.'
           : code === 'network'
             ? 'Connexion impossible. Vérifie ta connexion, ou utilise la lecture classique ci-dessous.'
             : 'L’analyse IA a échoué cette fois. Utilise la lecture classique ci-dessous.',
@@ -206,7 +207,7 @@ export default function PhotoFiche() {
             </div>
 
             <button onClick={runOcr} disabled={ocr.status === 'running'} className="w-full rounded-xl border-2 px-4 py-2.5 text-sm font-semibold transition hover:bg-slate-50 disabled:opacity-60 dark:hover:bg-slate-800" style={{ borderColor: 'color-mix(in srgb, var(--c-accent) 40%, var(--c-line, #ddd))', color: 'var(--c-accent-texte)' }}>
-              {ocr.status === 'running' ? `Lecture classique… ${ocr.progress}%` : '🔎 Lecture classique (sur ton appareil)'}
+              {ocr.status === 'running' ? `Lecture classique… ${ocr.progress}%` : '🔎 Lecture sur cet appareil'}
             </button>
             {ocr.status === 'running' && (
               <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
@@ -259,7 +260,7 @@ export default function PhotoFiche() {
         </section>
       )}
 
-      <p className="text-center text-xs text-slate-400">🔒 La « Lecture classique » se fait sur ton appareil. « Analyser la photo » envoie la photo à un service d’IA externe : masque ton nom et tes coordonnées.</p>
+      <p className="text-center text-sm text-slate-600 dark:text-slate-300">🔒 « Lecture sur cet appareil » reste sur ton appareil. Le moteur de lecture nécessite Internet à son premier chargement. « Analyser la photo » envoie la photo à un service d’IA externe : masque ton nom et tes coordonnées.</p>
 
       {/* Fiches enregistrées */}
       {fiches.length > 0 && (

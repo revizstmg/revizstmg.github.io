@@ -11,11 +11,12 @@ test('accueil : le bouton principal dit ce qu’il lance (B-03)',async({page})=>
  expect(errors).toEqual([])
 })
 
-test('le Coach verrouillé dit d’abord ce qu’il apporte (B-02)',async({page})=>{
+test('le minuteur est utilisable sans installation (B3-27)',async({page})=>{
  const errors=await preparer(page,etatEleve())
  await page.goto('./#/coach');await attendreAccueil(page)
  await expect(page.getByText('Un minuteur pour rythmer tes révisions, et des méthodes qui te correspondent.')).toBeVisible()
- await expect(page.getByText(/réservée à l’application installée/)).toBeVisible()
+ await expect(page.getByText(/réservée à l’application installée/)).toHaveCount(0)
+ await expect(page.getByRole('button',{name:/Démarrer|Commencer|Lancer/}).first()).toBeVisible()
  expect(errors).toEqual([])
 })
 
@@ -51,7 +52,7 @@ test('parcours : valeurs courantes signalées, heures lisibles, manque expliqué
  await page.getByRole('button',{name:'Voir mon parcours'}).click()
  await expect(page.getByRole('heading',{name:'Ton temps de révision ne suffit pas'})).toBeVisible()
  // « 130 h 42 », pas « 130 h42 » ; jamais « trop chargé » quand c'est le temps qui manque.
- await expect(page.getByText(/Il manque environ \d+ h \d{2}/)).toBeVisible()
+ await expect(page.getByText(/Il manque environ \d+ h pour atteindre/)).toBeVisible()
  expect(await page.getByText('Ton plan est trop chargé').count()).toBe(0)
  expect(errors).toEqual([])
 })

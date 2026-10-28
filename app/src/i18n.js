@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import { useStore } from './store.jsx'
 import { translate } from './translate.js'
 import FR from './i18n/fr.js'
-import { loadPublicLocale, knownPublicText, formatPublicText } from './localisation/catalogue.js'
+import { loadPublicLocale, knownPublicText, formatPublicText, canonicalPublicText } from './localisation/catalogue.js'
 
 // --- Libellés d'interface -------------------------------------------------
 // Le français est inclus d'office. Les autres langues sont chargées à la demande
@@ -74,7 +74,7 @@ export function usePublicText() {
 
 export function useAutoTranslate(text) {
   const lang = useLang()
-  const source = String(text || '')
+  const source = canonicalPublicText(text)
   const [out, setOut] = useState(null)
   const [retry, setRetry] = useState(0)
   useEffect(() => {

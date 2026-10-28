@@ -31,6 +31,7 @@ export default function Subject() {
 
   return (
     <div className="study-library subject-library animate-lux space-y-4">
+      {sid === 'droit' && <p className="card p-3 text-sm">En Terminale, les thèmes 5 à 8 poursuivent le programme de Première. Les compléments approfondissent les cours de base ; les méthodes et les cas pratiques sont présentés séparément.</p>}
       <header className="page-hero page-hero-compact flex items-center gap-3">
         <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-2xl" style={{ backgroundColor: color + '18' }} aria-hidden>{subject.icon}</span>
         <h1 className="font-display text-2xl font-medium leading-tight"><CourseText text={subject.name} /></h1>

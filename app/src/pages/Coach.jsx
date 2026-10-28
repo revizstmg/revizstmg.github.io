@@ -3,10 +3,8 @@ import { useMemo, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { useFocus } from '../focus.jsx'
-import { useInstall } from '../pwa.js'
 import { useT } from '../i18n.js'
 import { Ring, Icon } from '../components/ui.jsx'
-import { InstallLock } from '../components/InstallApp.jsx'
 import FocusFullscreen from '../components/FocusFullscreen.jsx'
 
 // --- Bibliothèque de méthodes de révision (contenu en français) -------------
@@ -69,24 +67,10 @@ function CoachPage() {
   const { state } = useStore()
   const f = useFocus()
   const t = useT()
-  const { standalone } = useInstall()
   const [answers, setAnswers] = useState({}) // { [qIndex]: aIndex }
   const [showResults, setShowResults] = useState(false)
   const [fullscreen, setFullscreen] = useState(false)
 
-
-  // Exclusivité de l'app installée : hors installation, on invite à installer.
-  if (!standalone) {
-    return (
-      <div className="animate-lux space-y-6 py-4">
-        <header className="page-hero text-center">
-          <p className="kicker">🎯 {t('coach')}</p>
-          <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('coach')}</h1>
-        </header>
-        <InstallLock title={t('coach')} description={t('coachSub')} />
-      </div>
-    )
-  }
 
   const { phase, running, remaining, phaseTotal, studyMin, breakMin, cycles } = f
   const canEdit = phase === 'idle'
@@ -94,7 +78,7 @@ function CoachPage() {
   const mm = Math.floor(remaining / 60)
   const ss = remaining % 60
   const isBreak = phase === 'break'
-  const ringColor = isBreak ? '#3f9d6d' : 'var(--c-accent)'
+  const ringColor = isBreak ? '#17623f' : 'var(--c-accent-fort)'
   const phaseLabel = phase === 'idle' ? t('phaseReady') : isBreak ? t('phaseBreak') : t('phaseFocus')
   const tip = phase === 'idle' ? t('idleTip') : isBreak ? t('breakTip') : t('focusTip')
   const activePreset = PRESETS.find((p) => p.s === studyMin && p.b === breakMin)?.key || 'custom'
@@ -157,7 +141,7 @@ function CoachPage() {
             <button
               onClick={() => (running ? f.pause() : f.start())}
               className="w-full rounded-2xl px-4 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90"
-              style={{ backgroundColor: isBreak ? '#3f9d6d' : 'var(--c-accent)' }}
+              style={{ backgroundColor: isBreak ? '#17623f' : 'var(--c-accent-fort)' }}
             >
               {running ? `⏸ ${t('pauseTimer')}` : phase === 'idle' ? `▶ ${t('startTimer')}` : `▶ ${t('resume')}`}
             </button>

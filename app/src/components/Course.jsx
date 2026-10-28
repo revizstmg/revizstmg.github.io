@@ -1,4 +1,5 @@
 import '../pages/CourseStudio.css'
+import { canonicalPublicText } from '../localisation/catalogue.js'
 import { useFenetreClavier } from './clavier.js'
 import { readPosition, savePosition } from '../data/readingPosition.js'
 import { useStore } from '../store.jsx'
@@ -54,8 +55,8 @@ const strip = (s) => String(s || '').replace(/\*\*/g, '').replace(/\*/g, '')
 export function CourseText({ text, className = '' }) {
   const lang = useLang()
   const shown = useAutoTranslate(lang === 'fr' ? text : strip(text))
-  if (lang === 'fr') return <Rich text={text} className={className} />
-  return <span className={className}>{shown}</span>
+  if (lang === 'fr') return <Rich text={canonicalPublicText(text)} className={className} />
+  return <span className={className} dir="auto" style={{unicodeBidi:"isolate"}}>{shown}</span>
 }
 
 // Enregistrer la fiche : on force le thème clair le temps de l'impression

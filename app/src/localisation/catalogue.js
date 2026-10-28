@@ -1,3 +1,5 @@
+import { canonicalPublicText } from '../presentation/style.js'
+export { canonicalPublicText } from '../presentation/style.js'
 import FR from '../i18n/fr.js'
 const books = { fr: {} }
 const loading = {}
@@ -12,12 +14,12 @@ export function loadPublicLocale(lang) {
   if (!loaders[lang]) return Promise.resolve({})
   return loading[lang] ||= loaders[lang]().then(([extra, core]) => {
     const base = Object.fromEntries(Object.entries(FR).filter(([key]) => core.default[key]).map(([key, value]) => [publicKey(value), core.default[key]]))
-    return books[lang] = { ...base, ...extra.default }
+    return books[lang] = Object.fromEntries(Object.entries({ ...base, ...extra.default }).map(([key, value]) => [publicKey(canonicalPublicText(key)), value]))
   }).catch((e) => { delete loading[lang]; throw e })
 }
 export function knownPublicText(text, lang) {
-  if (lang === 'fr') return String(text || '')
-  const translated = books[lang]?.[publicKey(text)]
+  if (lang === 'fr') return canonicalPublicText(text)
+  const translated = books[lang]?.[publicKey(canonicalPublicText(text))] ?? books[lang]?.[publicKey(text)]
   if (translated === undefined) return undefined
   const s = String(text || '')
   return (s.match(/^\s+/)?.[0] || '') + translated + (s.match(/\s+$/)?.[0] || '')

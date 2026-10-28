@@ -82,3 +82,14 @@ html.a11y-contrast .site-shell .card { border-color: var(--c-ink); }
 /* Libellé actif de la barre du bas : plus sombre en clair, la couleur d'accent telle quelle en sombre (contraste AA). */
 :root { --nav-actif: color-mix(in srgb, var(--c-accent-texte) 72%, #000); }
 :root.dark, .dark { --nav-actif: var(--c-accent-texte); }
+
+/* Respecter hidden même face aux utilitaires responsive ; isoler les données LTR. */
+[hidden] { display: none !important; }
+[dir="rtl"] .lien-retour { direction: rtl; }
+[dir="rtl"] .lien-retour::first-letter { unicode-bidi: isolate; }
+.revision-path-choice, .revision-path-choice > *, .revision-path-actions, .game-title { min-width: 0; overflow-wrap: anywhere; }
+
+.revision-method,.revision-method-body,.revision-method-action{min-width:0;max-width:100%}
+.revision-method-action{white-space:normal;overflow-wrap:anywhere}
+.revision-method-action>span{flex-shrink:0}
+[dir="rtl"] .revision-method-action{direction:rtl;text-align:start}

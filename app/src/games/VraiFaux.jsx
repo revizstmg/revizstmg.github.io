@@ -90,7 +90,7 @@ export default function VraiFaux({ game, mode, color, onDone }) {
         <>
           <Feedback ok={isCorrect}>
             {picked === -1 && <span className="font-semibold">{t('timeUp')} </span>}
-            {q.explain}
+            {String(q.explain || '').replace(/^Exact[.!]\s*/i, '')}
           </Feedback>
           <button onClick={next} className="btn-primary mt-4 w-full" style={{ backgroundColor: color }}>
             {i + 1 >= items.length ? t('seeScore') : `${t('next')} →`}

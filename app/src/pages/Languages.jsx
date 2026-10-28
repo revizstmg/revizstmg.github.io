@@ -25,7 +25,7 @@ export default function Languages() {
  const levels = [...new Set(guide.videos.map(v=>v.level))]
  const videos = guide.videos.filter(v=>videoLevel==='all'||v.level===videoLevel)
  return <div className="language-hub animate-lux space-y-6">
-  <header className="page-hero"><p className="kicker">L’atelier des langues</p><h1 className="font-display text-4xl">Ose prendre la parole.</h1><p className="mt-3 max-w-xl">Des guides à garder, des voix à écouter et de petites habitudes pour te sentir plus à l’aise à l’oral.</p></header>
+  <header className="page-hero"><p className="kicker">L’atelier des langues</p><h1 className="font-display text-4xl">Ose prendre la parole.</h1><p className="mt-3 max-w-xl">Des guides à garder, des voix à écouter et de petites habitudes pour te sentir plus à l’aise à l’oral.</p><p className="mt-3 text-sm">ETLV signifie enseignement technologique en langue vivante. Les premières leçons du guide posent les bases ; les exercices suivent les numéros des leçons du PDF.</p></header>
   <nav aria-label="Choisir une langue" className="language-choices">{guides.map(g=><button key={g.id} type="button" aria-pressed={language===g.id} onClick={()=>{setLanguage(g.id);setVideoLevel('all')}}>{names[g.id]}<span dir="auto">{g.label}</span></button>)}</nav>
   <section className="language-feature" aria-labelledby="language-guide-title">
    <div className="language-cover" aria-hidden="true"><span>RÉVIZSTMG · LES GUIDES</span><strong>{names[guide.id]}</strong><span dir="auto">{guide.label}</span><i>Écouter.<br/>Parler.<br/>Recommencer.</i><span>Cours · exercices · corrigés</span></div>

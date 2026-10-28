@@ -136,7 +136,7 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit,
       noterReponses({ themeId:chapterId, type:game.type, ratees:ratees?.map(situer), reussies:reussies?.map(situer) })
     }
     setResult({ correct, total, pct, xp, ratees: ratees || [] })
-    if (!reprise) onResult?.({ correct, total, pct, assisted })
+    if (!reprise) onResult?.({ correct, total, pct, assisted, xp })
   }
 
   const replay = () => {
@@ -212,7 +212,7 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit,
     <div className="animate-pop-in">
       <div className="mb-3 flex items-center justify-between gap-3">
         <button onClick={onExit} className="lien-retour">← {t('quit')}</button>
-        <span className="min-w-0 truncate text-xs font-semibold text-slate-500 dark:text-slate-400">{reprise ? '↻ Mes erreurs' : game.title}</span>
+        <span className="min-w-0 break-words text-xs font-semibold text-slate-500 dark:text-slate-400">{reprise ? '↻ Mes erreurs' : game.title}</span>
         <span className="chip shrink-0 gap-1.5 text-slate-500 ring-1 ring-slate-200 dark:text-slate-400 dark:ring-slate-800">
           {mode === 'defi' ? <Icon.Timer size={14} /> : <Icon.Brain size={14} />}
           {mode === 'defi' ? t('challenge') : t('training')}

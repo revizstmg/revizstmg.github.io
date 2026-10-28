@@ -1,3 +1,4 @@
+import { usePublicText } from '../i18n.js'
 import { TextePublic } from '../localisation/PublicText.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { send } from '../reseau.js'
@@ -25,7 +26,8 @@ export async function envoyerSignalement({ page, themeId, exercice, categorie, m
   }], 'return=minimal')
 }
 
-export default function SignalerErreur({ themeId, exercice, defaut = 'reponse', libelle = 'Signaler une erreur' }) {
+export default function SignalerErreur({ themeId, exercice, defaut = 'reponse', libelle }) {
+  const tr = usePublicText()
   const [ouvert, setOuvert] = useState(false)
   const [categorie, setCategorie] = useState(defaut)
   const [message, setMessage] = useState('')
@@ -54,7 +56,7 @@ export default function SignalerErreur({ themeId, exercice, defaut = 'reponse', 
     return (
       <button type="button" onClick={() => { setOuvert(true); setEtat('') }}
         className="text-xs font-semibold text-slate-500 underline-offset-2 hover:text-rose-600 hover:underline dark:text-slate-400">
-        ⚑ {libelle}
+        ⚑ {libelle || tr('Signaler une erreur')}
       </button>
     )
   }

@@ -41,8 +41,8 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
   await expect(exercice).toContainText(/Question 1 \//)
 
   const xpAvant = (await etat(page)).xp || 0
-  // On répond toujours la première proposition : les choix étant mélangés, une
-  // partie peut finir sans bonne réponse, donc sans XP. On rejoue alors.
+  // Les positions varient entre les parties : choisir toujours A peut donner
+  // zéro réussite même après plusieurs tirages. Les XP restent liés aux bonnes réponses.
   for (let partie = 0; partie < 5; partie++) {
     for (let i = 0; i < 40; i++) {
       const choix = page.getByRole('button', { name: /^[A-D] /, disabled: false })
@@ -50,7 +50,7 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
       // texte contiendrait par hasard « résultat » ou « score ».
       const suite = page.getByRole('button', { name: /^(?![A-D] ).*(suivant|suivante|résultat|score|terminer|continuer)/i, disabled: false })
       if (await suite.count()) await suite.first().click()
-      else if (await choix.count()) await choix.first().click()
+      else if (await choix.count()) await choix.nth(partie % await choix.count()).click()
       else break
     }
     // Fin de partie : score affiché.
@@ -66,7 +66,7 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
   await expect.poll(async () => (await etat(page)).xp || 0).toBeGreaterThan(xpAvant)
   const ch = (await etat(page)).chapters?.['gf-t1']
   expect(ch?.games && Object.keys(ch.games).length).toBeGreaterThan(0)
-  // Toujours la première proposition : des questions sont ratées, elles entrent
+  // Les réponses variées comprennent aussi des erreurs, qui entrent
   // dans le carnet d'erreurs.
   await expect.poll(async () => ((await etat(page)).erreurs || []).length).toBeGreaterThan(0)
   expect(erreurs).toEqual([])

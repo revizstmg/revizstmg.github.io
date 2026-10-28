@@ -23,6 +23,7 @@ function SeancePage() {
   const [etapes] = useState(() => composerSeance(state, state.track, todayKey(), readPosition(state.account?.id)?.themeId))
   const [k, setK] = useState(0)
   const [faites, setFaites] = useState([])
+  const [resultats,setResultats]=useState({})
   const [fin, setFin] = useState(etapes.length === 0)
 
   const etape = etapes[k]
@@ -42,6 +43,7 @@ function SeancePage() {
         color={etape.color || 'var(--c-accent-fort)'}
         modeInitial="train"
         onExit={() => setFin(true)}
+        onResult={r=>setResultats(p=>({...p,[etape.id]:r}))}
         suite={{ label: tr(derniere ? 'Terminer la séance' : 'Étape suivante →'), onClick: suivante }}
       />
     )
@@ -53,6 +55,7 @@ function SeancePage() {
         <p className="kicker">☀️ Ma séance du jour</p>
         <h1 className="mt-1 font-display text-[1.7rem] font-medium leading-tight">{faites.length === etapes.length && etapes.length ? 'Séance terminée' : 'Séance du jour'}</h1>
       </header>
+      {faites.length > 0 && <p role="status">{tr('{c} réponses justes sur {n} · {xp} XP gagnés', {c:faites.reduce((n,id)=>n+(resultats[id]?.correct||0),0),n:faites.reduce((n,id)=>n+(resultats[id]?.total||0),0),xp:faites.reduce((n,id)=>n+(resultats[id]?.xp||0),0)})}</p>}
       {etapes.length === 0 ? (
         <p className="card p-5 text-sm text-slate-500 dark:text-slate-400">Rien à proposer pour l’instant : ouvre un cours pour commencer.</p>
       ) : (
@@ -61,10 +64,10 @@ function SeancePage() {
             <li key={e.id} className="flex items-center gap-3 px-4 py-3">
               <span className="text-xl" aria-hidden>{ICONES[e.id]}</span>
               <span className="min-w-0 flex-1">
-                <span className="block font-semibold leading-tight">{tr(e.titre)}</span>
+                <span className="block font-semibold leading-tight">{tr(faites.includes(e.id) && !resultats[e.id]?.correct ? 'Entraînement effectué, à reprendre' : e.titre)}</span>
                 {e.detail && <span className="block truncate text-xs text-slate-500 dark:text-slate-400">{e.detail}</span>}
               </span>
-              <span className={faites.includes(e.id) ? 'text-emerald-600' : 'text-slate-300'} aria-label={faites.includes(e.id) ? 'faite' : 'à faire'}>{faites.includes(e.id) ? '✓' : '○'}</span>
+              <span className={faites.includes(e.id) ? 'text-emerald-600' : 'text-slate-300'} aria-label={faites.includes(e.id) ? (resultats[e.id]?.correct ? 'effectuée' : 'à retravailler') : 'à faire'}>{faites.includes(e.id) ? (resultats[e.id]?.correct ? '✓' : '↻') : '○'}</span>
             </li>
           ))}
         </ul>

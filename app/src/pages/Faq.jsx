@@ -7,6 +7,8 @@ const CONTACT = 'revizstmg@gmail.com'
 // Foire aux questions. Rédigée en français (public : lycées français).
 export default function Faq() {
   const items = [
+    ['Séance, mission, défi ou parcours ?', 'Une **séance** est un temps de révision. Une **mission** regroupe les étapes d’un chapitre. Un **défi** est un exercice avec une contrainte de temps. Un **parcours** organise les révisions sur plusieurs semaines. Le **programme** présente le calendrier. Une **série de jours** mesure la régularité ; une **série de questions** est un ensemble d’exercices.'],
+    ['Le minuteur reste-t-il après un rechargement ?', 'Oui, dans le même onglet : la durée restante est conservée et le minuteur reprend en pause. Le temps passé avec le site fermé ne rapporte pas de points.'],
     ['Comment créer un compte ?', "Sur l'écran d'accueil, choisis **« Créer un compte »**, puis **Élève**, **Professeur** ou **Parent**, et remplis tes informations. Tu peux aussi **« Essayer sans compte »** : ta progression reste alors sur cet appareil. Le compte permet de la sauvegarder et de la retrouver partout."],
     ["J'ai oublié mon mot de passe.", "Sur l'écran **« Se connecter »**, clique sur **« Mot de passe oublié ? »**, entre ton adresse e‑mail : tu reçois un **code par mail**, puis tu choisis un nouveau mot de passe."],
     ['Comment rejoindre la classe de mon professeur ?', "Va dans [[Mon espace|/moi]], touche **« Rejoindre une classe »** et saisis le **code de classe** que ton professeur t'a communiqué."],

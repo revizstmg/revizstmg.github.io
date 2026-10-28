@@ -3,7 +3,7 @@ import { TextePublic } from '../localisation/PublicText.jsx'
 import { useEffect, useState } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import Introuvable from './Introuvable.jsx'
-import { getChapter, getSubject, themeChapters, deckForTheme, comptesDuChapitre } from '../data/index.js'
+import { getChapter, getSubject, themeChapters, casPratiquesDuTheme, deckForTheme, comptesDuChapitre } from '../data/index.js'
 import { buildThemeExam, themeExamSize } from '../data/study.js'
 import { PIEGES } from '../data/pieges.js'
 import { useStore, useThemeTimer, chapterScore, starsFromScore } from '../store.jsx'
@@ -18,7 +18,7 @@ import { useT, useGameLabel } from '../i18n.js'
 
 // Catégorie d'affichage d'un chapitre : les chapitres « approfondis » sont
 // des chapitres du cours comme les autres.
-const categorie = (c) => (!c.section?.group || c.section.group === 'approf' ? 'cours' : c.section.group)
+const categorie = (c) => (c.section?.group || 'cours')
 
 // Dans la liste, le numéro suffit : on retire l'émoji placé en tête de certains titres.
 const sansEmoji = (titre) => String(titre || '').replace(/^(?:(?:\p{Extended_Pictographic}|\p{Regional_Indicator}{2})[\u200d\ufe0f\p{Extended_Pictographic}\u{1F3FB}-\u{1F3FF}]*\s*)+/u, '')
@@ -133,6 +133,7 @@ export default function Theme() {
           {(() => {
             const CATS = [
               { id: 'cours', label: `📘 ${t('catCourse')}` },
+              { id: 'approf', label: `📚 ${t('catDeep')}` },
               { id: 'methode', label: `🧮 ${t('catMethod')}` },
               { id: 'cas', label: `📝 ${t('catCases')}` },
             ]
@@ -209,6 +210,7 @@ export default function Theme() {
       {/* Pour réviser tout le thème : une ligne par outil, dépliée à la demande */}
       {tab === 'outils' && (
         <section key={tid} className="space-y-2.5">
+          {casPratiquesDuTheme(tid).length>0&&<button className="card w-full p-4 text-start" onClick={()=>setEtude({id:tid+'::cas-transversal',type:'caspratique',title:'Cas transversaux du thème',cases:casPratiquesDuTheme(tid)})}><strong>Cas pratiques du thème</strong><p className="mt-2 text-sm">Des situations qui mobilisent plusieurs chapitres de ce thème. Cet entraînement ne remplace pas les exercices propres à chaque chapitre.</p></button>}
           {etudeDuTheme && (
             <button onClick={() => setEtude(etudeDuTheme)} className="card group flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md">
               <span className="w-6 shrink-0 text-center text-lg" aria-hidden>📄</span>

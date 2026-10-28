@@ -1,3 +1,4 @@
+import { TextePublic } from '../localisation/PublicText.jsx'
 import './CourseStudio.css'
 import { missionMessages } from '../i18n/missions.js'
 import PracticeStudio from '../components/PracticeStudio.jsx'
@@ -35,10 +36,10 @@ export default function Chapter() {
   const chapters = useMemo(() => (theme ? themeChapters(theme) : []), [theme, cidx]) // eslint-disable-line react-hooks/exhaustive-deps
   const chapter = chapters[Number(cidx)] || null
   // Même numérotation que la liste du thème : par catégorie (cours, méthodes, études de cas).
-  const catDe = (c) => (!c?.section?.group || c.section.group === 'approf' ? 'cours' : c.section.group)
+  const catDe = (c) => (c?.section?.group || 'cours')
   const memeCategorie = chapters.filter((c) => catDe(c) === catDe(chapter))
   const rangDansCategorie = Math.max(1, memeCategorie.indexOf(chapter) + 1)
-  const catKey = { cours: 'catCourse', methode: 'catMethod', cas: 'catCases' }[catDe(chapter)] || 'chapter'
+  const catKey = { cours: 'catCourse', approf: 'catDeep', methode: 'catMethod', cas: 'catCases' }[catDe(chapter)] || 'chapter'
 
   // Jeux affichés : ceux du chapitre + des flashcards générées à partir des
   // notions de la section (disponibles partout, pas seulement dans l'app).
@@ -217,7 +218,7 @@ export default function Chapter() {
             </section>
           )
         })()}
-        <details className="chapter-memorisation" open={memoryOpen} onToggle={e=>setMemoryOpen(e.currentTarget.open)}><summary>📖 Les {games.length} jeux du chapitre : mémoriser les repères</summary><p className="mt-2 text-sm">Les jeux courts pour retenir les termes et les phrases du cours. Choisis un format plutôt que de tous les enchaîner.</p>
+        <details className="chapter-memorisation" open={memoryOpen} onToggle={e=>setMemoryOpen(e.currentTarget.open)}><summary><TextePublic text="📖 Les {v0} jeux du chapitre : mémoriser les repères" values={[games.length]} /></summary><p className="mt-2 text-sm">Les jeux courts pour retenir les termes et les phrases du cours. Choisis un format plutôt que de tous les enchaîner.</p>
         <h2 className="exercise-shelf-title font-display">{t('gamesOfChapter')}</h2>
         <div className="chapter-exercise-grid">{games.length > 0 ? games.map((g, gameIndex) => {
           const best = rec?.games?.[g.id]

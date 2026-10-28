@@ -78,7 +78,7 @@ export default function Calcul({ game, mode, color, onDone }) {
     <div className="card p-5">
       <GameProgress index={i} total={set.length} color={color} />
       {q.figure && <Figure fig={q.figure} color={color} />}
-      <p className="mb-4 whitespace-pre-line text-[15px] font-medium leading-relaxed">{q.prompt}</p>
+      <p className="mb-4 whitespace-pre-line text-[15px] font-medium leading-relaxed">{String(q.prompt).replace(/(\d)\.(\d)/g, '$1,$2')}</p>
       <div className="flex items-stretch gap-2">
         <input
           value={val}

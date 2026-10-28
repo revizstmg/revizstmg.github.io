@@ -23,7 +23,7 @@ test('inscription : cinq langues, choix multiple et sauvegarde sur le compte', a
  await form.locator('#w-first').fill('Léa')
  await form.getByRole('button', { name: 'Suivant', exact: true }).click()
  await form.getByRole('button', { name: /Terminale STMG/ }).click()
- await form.getByRole('button', { name: /Gestion et Finance/ }).click()
+ await form.getByRole('button', { name: /Gestion et finance/ }).click()
  const group = form.getByRole('group', { name: 'Tes langues étudiées' })
  for (const name of ['Arabe', 'Anglais', 'Italien', 'Espagnol', 'Allemand']) await expect(group.getByRole('button', { name, exact: true })).toBeVisible()
  await group.getByRole('button', { name: 'Allemand', exact: true }).click()

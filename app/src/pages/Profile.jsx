@@ -8,7 +8,7 @@ import { trackLabel, trackIcon, subjectsForTrack } from '../data/tracks.js'
 import { badgeById } from '../badges.js'
 import { Ring, ProgressBar, Icon } from '../components/ui.jsx'
 import { usePublicText, useT } from '../i18n.js'
-import { supprimerCompte, isSignedIn } from '../auth.js'
+import { supprimerCompte, isSignedIn, getSession } from '../auth.js'
 import { pushPossible, activerRappelsPush, desactiverRappelsPush } from '../push.js'
 import { InstallCard, AppBadge } from '../components/InstallApp.jsx'
 import { ProgressCurve, ThemeTimeBars } from '../components/StatsCharts.jsx'
@@ -67,7 +67,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
 
   const deleteAccount = async () => {
     if (busy) return
-    if (!confirm(t('deleteAccountConfirm'))) return
+    if (!confirm(state.account?.id ? t('deleteAccountConfirm') : tr('Effacer toutes les données de cet appareil ?'))) return
     setBusy(true)
     // La base efface tout ce que l'app a publié ou envoyé pour cet élève
     // (profil et progression, classe, amis et duels, suivi parent, classes d'un
@@ -75,8 +75,10 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
     // (revizstmg_supprimer_compte). Sans session (essai sans compte), il n'y a
     // rien en ligne : on efface seulement ce qui est sur l'appareil.
     try {
-      if (isSignedIn()) {
+      if (state.account?.id) {
+        if (!isSignedIn() || getSession()?.user?.id !== state.account.id) throw new Error('session_changed')
         await desactiverRappelsPush()
+        if (getSession()?.user?.id !== state.account.id) throw new Error('session_changed')
         await supprimerCompte()
       }
     } catch {
@@ -128,12 +130,12 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
             {state.account?.email && <p className="mt-0.5 truncate text-xs text-[#b8a878]">{state.account.email}</p>}
             <p className="mt-1 text-xs tracking-wide text-[#d8cca8]">{trackIcon(state.track)} {trackLabel(state.track)}{state.classCode ? ` · 👥 ${state.classCode}` : ''}</p>
           </div>
-          <div className="hidden shrink-0 sm:block">
+          <div hidden={role==='prof'} className="hidden shrink-0 sm:block">
             <Ring value={derived.pct} color="var(--c-accent)" size={84} label={`${t('levelShort')} ${derived.level}`} />
           </div>
         </div>
         <hr className="rule-gold relative my-5" />
-        <div className="relative">
+        <div className="relative" hidden={role==='prof'}>
           <div className="mb-1 flex items-center justify-between text-sm text-[#d8cca8]">
             <span>{t('level')} {derived.level}</span><span>{nombre(state.xp, state.lang || 'fr')} / {nombre(derived.next, state.lang || 'fr')} XP</span>
           </div>
@@ -146,7 +148,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
       <nav aria-label="Mon espace" className="flex gap-2"><button style={{ transitionProperty: 'transform' }} aria-pressed={!settings} className={!settings ? "btn-primary" : "btn-ghost"} onClick={() => setParams({})}>Mes progrès</button><Link className="btn-ghost" to="/parametres">Réglages</Link></nav>
       </div><div hidden={settings} className="space-y-5">
       {/* Statistiques */}
-      <section>
+      <section hidden={role==='prof'}>
         <h2 className="mb-3 px-1 font-display text-xl font-medium">{t('myStats')}</h2>
         <div className="grid grid-cols-3 gap-3">
           {stats.map((s) => (
@@ -160,7 +162,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
       </section>
 
       {/* Progression visuelle : courbe d'XP + temps par thème */}
-      <section className="space-y-4">
+      <section className="space-y-4" hidden={role==='prof'}>
         <div>
           <h2 className="mb-3 px-1 font-display text-xl font-medium">📈 {t('progressCurve')}</h2>
           <ProgressCurve history={state.history} />
@@ -177,7 +179,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
               return (
                 <div key={s.id}>
                   <div className="mb-1 flex items-baseline justify-between gap-2">
-                    <span className="min-w-0 flex-1 truncate text-sm font-medium">{s.icon || '📘'} {s.short || s.name}</span>
+                    <span className="min-w-0 flex-1 truncate text-sm font-medium">{s.icon || '📘'} {tr(s.short || s.name)}</span>
                     <span className="shrink-0 text-xs font-semibold tabular-nums texte-matiere" style={{ '--mc': s.color }}>{sc}%</span>
                   </div>
                   <ProgressBar value={sc} color={s.color} height={7} />
@@ -189,7 +191,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
       </section>
 
       {/* Badges */}
-      <section>
+      <section hidden={role==='prof'}>
         <div className="mb-3 flex items-end justify-between px-1">
           <h2 className="font-display text-xl font-medium">{t('myBadges')}</h2>
           <Link to="/badges" className="text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('seeAll')}</Link>
@@ -301,8 +303,8 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
 </>}
           <div className="flex items-center gap-3 p-4">
             <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-slate-100 text-lg dark:bg-slate-800" aria-hidden>📅</span>
-            <span className="min-w-0 flex-1"><span className="block font-display font-semibold">{t('prefBac')}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{bacDays != null && bacDays >= 0 ? `J-${bacDays} · ${t('prefBacHint')}` : t('prefBacHint')}</span></span>
-            <input type="date" aria-label={t('prefBac')} value={state.bacDate || ''} onChange={(e) => setBacDate(e.target.value)} className="shrink-0 rounded-lg border border-slate-200 bg-white px-2 py-1.5 text-xs dark:border-slate-700 dark:bg-slate-800" />
+            <span className="min-w-0 flex-1"><span className="block font-display font-semibold">{state.track?.level === 'premiere-stmg' ? tr('Date des épreuves anticipées') : t('prefBac')}</span><span className="block text-xs text-slate-500 dark:text-slate-400">{bacDays != null && bacDays >= 0 ? `J-${bacDays} · ${t('prefBacHint')}` : t('prefBacHint')}</span></span>
+            <input type="date" aria-label={state.track?.level === 'premiere-stmg' ? tr('Date des épreuves anticipées') : t('prefBac')} value={state.bacDate || ''} onChange={(e) => setBacDate(e.target.value)} className="shrink-0 rounded-lg border border-slate-200 bg-white px-2 py-1.5 text-xs dark:border-slate-700 dark:bg-slate-800" />
           </div>
         </div>
       </section>}
@@ -329,7 +331,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
           <h3 className="font-display font-semibold text-rose-700 dark:text-rose-400">{t('dangerZone')}</h3>
           <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{t('deleteAccountHint')}</p>
           <button onClick={deleteAccount} disabled={busy} className="mt-3 w-full rounded-xl border-2 border-rose-500 px-4 py-2.5 text-sm font-semibold text-rose-600 transition hover:bg-rose-50 disabled:opacity-60 dark:text-rose-400 dark:hover:bg-rose-950/40">
-            {busy ? t('pleaseWait') : `🗑️ ${t('deleteAccount')}`}
+            {busy ? t('pleaseWait') : state.account?.id ? `🗑️ ${t('deleteAccount')}` : tr('Effacer mes données locales')}
           </button>
         </div>}
       </section>}

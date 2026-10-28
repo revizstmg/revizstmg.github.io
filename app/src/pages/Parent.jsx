@@ -4,7 +4,7 @@ import { vacancesText } from '../i18n/vacances.js'
 import { useEffect, useState, useCallback } from 'react'
 import { ProgressBar } from '../components/ui.jsx'
 import { fmtDuration } from '../components/StatsCharts.jsx'
-import { useT, useLang } from '../i18n.js'
+import { useT, useLang, usePublicText } from '../i18n.js'
 import { daysUntil } from '../data/srs.js'
 import { PARENT_READY, fetchChildByCode, getLinkedChild, setLinkedChild, normParentCode } from '../parent.js'
 
@@ -26,19 +26,19 @@ const pluriel = (n, un, plusieurs) => `${n} ${n > 1 ? plusieurs : un}`
 
 // Synthèse automatique pour le parent : lecture de l'engagement + points forts
 // et points à renforcer, dérivés des données de l'enfant.
-function parentSynthesis(child) {
+function parentSynthesis(child, tr) {
   const subs = Array.isArray(child.subjects) ? child.subjects : []
   const strengths = subs.filter((s) => (s.score || 0) >= 75).sort((a, b) => (b.score || 0) - (a.score || 0)).slice(0, 3)
   const toWork = subs.filter((s) => (s.score || 0) < 55).sort((a, b) => (a.score || 0) - (b.score || 0)).slice(0, 3)
-  const name = child.name || 'Votre enfant'
+  const name = child.name || tr('Votre enfant')
   const days = child.last_active ? Math.floor((Date.now() - new Date(child.last_active).getTime()) / 86400000) : null
   const streak = child.streak || 0
   const week = child.courses_week || 0
   let tone, message
-  if (days != null && days >= 5) { tone = 'warn'; message = `${name} ne s’est pas connecté·e depuis ${days} jours. Un petit encouragement peut relancer la dynamique 💛.` }
-  else if (streak >= 5 || week >= 5) { tone = 'good'; message = `${name} révise avec régularité — ${pluriel(streak, 'jour', 'jours')} de suite et ${pluriel(week, 'thème', 'thèmes')} cette semaine. Beau travail 👏.` }
-  else if (week >= 2) { tone = 'ok'; message = `${name} a travaillé ${pluriel(week, 'thème', 'thèmes')} cette semaine. Encouragez la régularité : 15 min par jour suffisent.` }
-  else { tone = 'warn'; message = `Peu d’activité cette semaine. Fixez ensemble un petit objectif quotidien pour garder le rythme.` }
+  if (days != null && days >= 5) { tone = 'warn'; message = tr('{v0} ne s’est pas connecté·e depuis {v1} jours. Un petit encouragement peut aider 💛.').replace('{v0}', name).replace('{v1}', String(days)) }
+  else if (streak >= 5 || week >= 5) { tone = 'good'; message = tr('{v0} révise avec régularité. Jours de suite : {v1}. Thèmes cette semaine : {v2}. Bravo 👏.').replace('{v0}', name).replace('{v1}', String(streak)).replace('{v2}', String(week)) }
+  else if (week >= 2) { tone = 'ok'; message = tr('{v0} a travaillé plusieurs thèmes cette semaine. Encouragez une courte séance régulière.').replace('{v0}', name) }
+  else { tone = 'warn'; message = tr('Peu d’activité cette semaine. Fixez ensemble un petit objectif quotidien pour garder le rythme.') }
   return { tone, message, strengths, toWork }
 }
 
@@ -54,7 +54,7 @@ function StatTile({ icon, label, value, sub, color }) {
 }
 
 export default function Parent() {
-  const t = useT()
+  const t = useT(), tr = usePublicText()
   const lang = useLang()
   const accent = '#0e7490'
   const [linked, setLinked] = useState(() => getLinkedChild())
@@ -137,7 +137,7 @@ export default function Parent() {
             <div className="min-w-0 flex-1">
               <p className="truncate font-display text-lg font-semibold leading-tight">{child?.name || '—'}</p>
               {child?.track && <p className="truncate text-xs text-slate-500 dark:text-slate-400">{child.track}</p>}
-              {child?.last_active && <p className="mt-0.5 text-[11px] text-slate-400">{t('parentLastActive')} : {relativeTime(child.last_active, lang)}</p>}
+              {child?.last_active && <p className="mt-0.5 text-[11px] text-slate-400">{t('parentLastActive')}{lang === 'fr' ? ' :' : ':'} {relativeTime(child.last_active, lang)}</p>}
             </div>
             <button onClick={() => load(linked)} disabled={loading} aria-label={t('parentRefresh')} className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 disabled:opacity-40 dark:text-slate-400 dark:hover:bg-slate-800">↻</button>
           </section>
@@ -151,26 +151,26 @@ export default function Parent() {
           {child && (
             <>
               <section className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                <StatTile icon="🔥" label={t('parentStreak')} value={child.streak || 0} sub={t('parentDays')} color="#e8590c" />
+                <StatTile icon="🔥" label={t('parentStreak')} value={child.streak || 0} sub={child.streak === 1 ? tr('jour de suite') : t('parentDays')} color="#e8590c" />
                 <StatTile icon="⭐" label={t('parentLevel')} value={child.level || 0} sub={`${nombre(child.xp || 0, lang)} XP`} color="#c8a24e" />
                 <StatTile icon="⏱️" label={t('parentTotalTime')} value={fmtDuration(child.total_time || 0, t)} color={accent} />
                 <StatTile icon="🎯" label={t('parentWeeklyGoal')} value={`${child.courses_week || 0}/${child.weekly_goal || 5}`} sub={t('themesCount')} color="#2f9e44" />
                 <StatTile icon="🏅" label={t('parentBadges')} value={child.badges || 0} color="#7c3aed" />
-                {bacDays != null && bacDays >= 0 && <StatTile icon="📅" label={t('parentBacIn')} value={bacDays} sub={t('parentDaysShort')} color="#e11d48" />}
+                {bacDays != null && bacDays >= 0 && <StatTile icon="📅" label={t('parentBacIn')} value={bacDays} sub={bacDays === 1 ? tr('jour') : t('parentDaysShort')} color="#e11d48" />}
               </section>
 
               {(() => {
-                const syn = parentSynthesis(child)
+                const syn = parentSynthesis(child, tr)
                 const tc = syn.tone === 'good' ? '#059669' : syn.tone === 'warn' ? '#e11d48' : '#0891b2'
                 return (
                   <section className="card p-5" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, ' + tc + ' 35%, transparent)' }}>
-                    <h2 className="mb-2 flex items-center gap-2 font-display text-lg font-semibold">🧭 Synthèse de la semaine</h2>
+                    <h2 className="mb-2 flex items-center gap-2 font-display text-lg font-semibold">🧭 {tr('Synthèse de la semaine')}</h2>
                     <p className="text-sm text-slate-700 dark:text-slate-200">{syn.message}</p>
                     {(syn.strengths.length > 0 || syn.toWork.length > 0) && (
                       <div className="mt-3 grid gap-3 sm:grid-cols-2">
                         {syn.strengths.length > 0 && (
                           <div>
-                            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">💪 Points forts</p>
+                            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-emerald-600 dark:text-emerald-400">💪 {tr('Points forts')}</p>
                             <div className="flex flex-wrap gap-1.5">
                               {syn.strengths.map((s, i) => <span key={i} className="chip bg-emerald-100 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">{s.short} · {s.score || 0}%</span>)}
                             </div>
@@ -178,7 +178,7 @@ export default function Parent() {
                         )}
                         {syn.toWork.length > 0 && (
                           <div>
-                            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-rose-700 dark:text-rose-400">🎯 À renforcer</p>
+                            <p className="mb-1 text-xs font-semibold uppercase tracking-wide text-rose-700 dark:text-rose-400">🎯 {tr('À renforcer')}</p>
                             <div className="flex flex-wrap gap-1.5">
                               {syn.toWork.map((s, i) => <span key={i} className="chip bg-rose-100 text-rose-700 dark:bg-rose-950/50 dark:text-rose-300">{s.short} · {s.score || 0}%</span>)}
                             </div>

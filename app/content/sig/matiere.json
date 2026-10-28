@@ -333,7 +333,7 @@
           "type": "ordre",
           "title": "Remise en ordre — De la donnée à la décision",
           "icon": "🔢",
-          "instruction": "Remets dans l’ordre la transformation de l’information.",
+          "instruction": "Classe les quatre fonctions du système d’information, puis la décision humaine qui les utilise.",
           "steps": [
             "Collecter les données",
             "Mémoriser dans la base",
@@ -341,7 +341,7 @@
             "Diffuser l’information",
             "Décider"
           ],
-          "explain": "Le SI transforme des données brutes en information utile à la décision."
+          "explain": "Collecter, mémoriser, traiter et diffuser sont les quatre fonctions du SI. Décider est ensuite une action humaine rendue possible par ces informations : ce n’est pas une cinquième fonction du SI."
         },
         {
           "id": "sig-t1-trou",

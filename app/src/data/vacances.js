@@ -24,7 +24,7 @@ export function vacancesChapters(subject) {
       }
     }
     return { id: ch.id, themeId: ch.themeId, idx: ch.idx, title: ch.title, section: ch.section, questions }
-  }).filter(ch => ch.questions.length >= 7)
+  }).filter(ch => ch.questions.length >= 9)
   chapterCache.set(subject, result)
   return result
 }
@@ -55,9 +55,10 @@ export function createVacances({ subject, selection, track, startDate, goal = 'b
   const seenPractice = new Set()
   const practice = practiceCandidates.filter(q => { const key = normalized(q.q); if (reserved.has(key) || seenPractice.has(key)) return false; seenPractice.add(key); return true })
   // Au maximum deux passages d’une même question pendant les vacances.
-  if (practice.length < rhythm * 3) throw Error('insufficient_questions')
+  const questionsPerSession = Math.min(3, Math.floor(practice.length / rhythm))
+  if (questionsPerSession < 1) throw Error('insufficient_questions')
   const days = rhythm === 4 ? [0, 2, 4, 6, 7, 9, 11, 13] : [0, 3, 6, 7, 10, 13]
-  return { id, maj: now, trackKey: vacancesTrackKey(track), subjectId: subject.id, subjectName: subject.name, goal, minutes, startDate,
+  return { id, questionsPerSession, maj: now, trackKey: vacancesTrackKey(track), subjectId: subject.id, subjectName: subject.name, goal, minutes, startDate,
     chapters: chapters.map(({ id, title, themeId, idx }) => ({ id, title, themeId, idx })), initialQuestions, finalQuestions, practice,
     initialAnswers: {}, finalAnswers: {}, sessions: days.map((day, i) => ({ index: i, date: addDays(startDate, day), questions: [], answers: {} })) }
 }
@@ -83,10 +84,10 @@ export function prepareVacancesSession(program, index, now = Date.now()) {
   for (const ch of priorities) {
     const candidates = program.practice.filter(q => q.chapterId === ch.id && (counts.get(q.id) || 0) < 2).sort((a, b) => (counts.get(a.id) || 0) - (counts.get(b.id) || 0) || (lastSeen.get(a.id) ?? -1) - (lastSeen.get(b.id) ?? -1))
     const q = candidates.find(q => !questions.some(x => x.id === q.id)); if (q) questions.push(q)
-    if (questions.length >= 3) break
+    if (questions.length >= (program.questionsPerSession || 3)) break
   }
   const extras = program.practice.filter(q => (counts.get(q.id) || 0) < 2 && !questions.some(x => x.id === q.id)).sort((a, b) => (counts.get(a.id) || 0) - (counts.get(b.id) || 0) || (lastSeen.get(a.id) ?? -1) - (lastSeen.get(b.id) ?? -1))
-  questions.push(...extras.slice(0, 3 - questions.length))
+  questions.push(...extras.slice(0, (program.questionsPerSession || 3) - questions.length))
   const sessions = [...program.sessions]
   sessions[index] = { ...sessions[index], id: `${program.id}:${index}:${now}`, maj: now, questions, focus: questions[0]?.chapterId, answers: {} }
   return { ...program, sessions, maj: now }

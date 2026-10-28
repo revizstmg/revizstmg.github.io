@@ -53,6 +53,7 @@ function Creator({ owner, lang, onOpenChange }) {
   useEffect(() => { onOpenChange?.(!!draft) }, [!!draft, onOpenChange])
   const failure = e => {
     const key = e.message
+    if (key === 'not_configured') { setAvailable(false); setError(''); return }
     setError(key === 'out_of_scope' ? m.out : key === 'rate_limit' ? m.limit : key === 'login_required' ? m.session : key === 'not_configured' ? m.unavailable : key === 'invalid_response' ? m.invalid : ['too_large', 'invalid_request'].includes(key) ? m.tooLarge : m.error)
   }
   const run = async action => {
@@ -112,7 +113,12 @@ function Creator({ owner, lang, onOpenChange }) {
       {mode === 'manual' && <ExamChapterPicker m={m} selected={selected} onChange={ids => { setSelected(ids); setPlan(null); setError('') }} onCatalog={setCatalog} disabled={!!busy} />}
       <fieldset disabled={!!busy}><legend className="mb-2 text-sm font-semibold">{m.duration}</legend><div className="grid grid-cols-2 gap-2 sm:grid-cols-4">{DURATIONS.map(d => <label key={d} className={`flex cursor-pointer items-center justify-center gap-2 rounded-xl border px-3 py-3 text-sm font-semibold ${duration === d ? 'border-amber-600 bg-amber-100 text-amber-950 dark:border-amber-400 dark:bg-amber-950 dark:text-amber-100' : 'border-slate-300 dark:border-slate-600'}`}><input type="radio" name="exam-duration" value={d} checked={duration === d} onChange={() => { setDuration(d); setPlan(null) }} />{d} {m.min}</label>)}</div></fieldset>
       <p className="text-xs leading-relaxed text-slate-600 dark:text-slate-300">{m.consent} {m.french}</p>
-      {!owner ? <p className="text-sm"><Link to="/moi" className="underline">{m.login}</Link></p> : available === null ? <p className="text-sm" role="status">{m.checking}</p> : !available ? <div className="text-sm"><button type="button" className="underline" onClick={() => setCheck(x => x + 1)}>{m.retry}</button></div> : !plan && <button type="submit" disabled={!!busy || (mode === 'manual' && !selected.length)} className="btn-gold w-full !py-3">{mode === 'manual' ? m.reviewChapters : m.analyze}</button>}
+      {!owner && <p className="text-sm"><Link to="/moi" className="underline">{m.login}</Link></p>}
+      {owner && available === null && <p className="text-sm" role="status">{m.checking}</p>}
+      {owner && available === false && <button type="button" className="text-sm underline" onClick={() => setCheck(x => x + 1)}>{m.retry}</button>}
+      {!plan && available === true && prompt.trim().length < 15 && <p className="text-sm">{m.empty}</p>}
+      {!plan && mode === 'manual' && !selected.length && <p className="text-sm">{m.chooseChapter}</p>}
+      {!plan && <button type="submit" disabled={!owner || !!busy || available !== true || prompt.trim().length < 15 || (mode === 'manual' && !selected.length)} className="btn-gold w-full !py-3">{mode === 'manual' ? m.reviewChapters : m.analyze}</button>}
     </form>
     {busy && <p role="status" aria-live="polite" className="text-sm">⏳ {busy === 'plan' ? m.analyzing : m.generating}</p>}
     {error && <p role="alert" className="rounded-xl bg-rose-50 p-3 text-sm text-rose-800 dark:bg-rose-950 dark:text-rose-200">{error}</p>}
