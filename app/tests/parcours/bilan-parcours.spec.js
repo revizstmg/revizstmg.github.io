@@ -22,7 +22,7 @@ for(const theme of ['light','dark'])test(`exemple gratuit et offres sans compte 
  await expect(page.getByRole('dialog')).toHaveCount(0)
  await expect(page.locator('.study-offer-grid article')).toHaveCount(3)
  await expect(page.locator('.study-offer-grid article').nth(1)).toContainText('Analyse du sujet et de la copie')
- await expect(page.getByText(/Aucun abonnement ni paiement n’est ouvert/)).toBeVisible()
+ await expect(page.getByText(/Premium et Ultimate sont en cours de lancement/)).toBeVisible()
  expect((await new AxeBuilder({page}).include('main').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([])
  expect(calls).toEqual([]);expect((await etat(page)).xp).toBe(0);expect(errors).toEqual([])
 })
