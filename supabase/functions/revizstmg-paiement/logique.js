@@ -50,7 +50,9 @@ export function parametresCheckout({ prixId, userId, email, clientId, siteUrl })
   p.set('cancel_url', `${siteUrl}/#/offres?paiement=annule`)
   p.set('locale', 'fr')
   p.set('billing_address_collection', 'auto')
-  // Pas de custom_text : refusé par Stripe quand les « Managed Payments » sont actifs (défaut du compte).
+  // Managed Payments (actif par défaut sur le compte) exige un code fiscal par produit et refuse custom_text :
+  // on le désactive, le propriétaire reste le vendeur et les prix sont TTC.
+  p.set('managed_payments[enabled]', 'false')
   return p
 }
 
