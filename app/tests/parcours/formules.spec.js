@@ -52,6 +52,8 @@ test('Première : uniquement les formules accessibles et anciens liens redirigé
 test('catalogue étendu : filtrer, sélectionner et reprendre une séance longue',async({page})=>{
  const errors=await preparer(page,etatEleve({track:{level:'premiere-stmg'}}))
  await page.goto('./#/atelier-formules')
+ await expect(page.getByLabel('Programme affiché')).toHaveValue('track')
+ await page.getByLabel('Programme affiché').selectOption('all')
  await expect(page.getByRole('checkbox')).toHaveCount(169)
  await page.getByRole('combobox',{name:/^Matière/}).selectOption('Gestion & Finance')
  await page.getByLabel('Domaine de calcul').selectOption('Rentabilité et ratios')

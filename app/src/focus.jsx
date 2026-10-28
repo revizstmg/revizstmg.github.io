@@ -4,7 +4,7 @@
 // - Fin de phase : petit son + vibration ; fin d'une session de révision =>
 //   événement « stmg-focus-done » (le store attribue des XP).
 import { useStore } from './store.jsx'
-import { createContext, useContext, useEffect, useRef, useState, useCallback } from 'react'
+import { createContext, useContext, useEffect, useLayoutEffect, useRef, useState, useCallback } from 'react'
 
 const KEY = 'stmg_focus_v1'
 const DEFAULTS = { studyMin: 25, breakMin: 5 }
@@ -23,18 +23,22 @@ export const useFocus = () => useContext(Ctx)
 export function FocusProvider({ children }) {
   const { state } = useStore()
   const owner = state.account?.id || 'local'
-  return <FocusSession key={owner} owner={owner}>{children}</FocusSession>
+  return <FocusSession owner={owner}>{children}</FocusSession>
 }
 
 function FocusSession({ owner, children }) {
   const snapshotKey = `stmg_focus_session_v1:${owner}`
   const [init] = useState(loadSettings)
-  const [saved] = useState(() => {
+  const readSaved = () => {
     try {
       const value = JSON.parse(sessionStorage.getItem(snapshotKey) || 'null')
       return value && ['focus', 'break'].includes(value.phase) && Number.isFinite(value.remaining) ? value : null
     } catch { return null }
-  })
+  }
+  const [saved] = useState(readSaved)
+  const [scope, setScope] = useState(owner)
+  const liveOwner = useRef(owner)
+  liveOwner.current = owner
   const [studyMin, setStudyMinState] = useState(init.studyMin)
   const [breakMin, setBreakMinState] = useState(init.breakMin)
   const [phase, setPhase] = useState(saved?.phase || 'idle')
@@ -42,9 +46,19 @@ function FocusSession({ owner, children }) {
   const [endsAt, setEndsAt] = useState(null)
   const [remaining, setRemaining] = useState(() => saved ? Math.max(1, Math.min(10800, Math.round(saved.remaining))) : init.studyMin * 60)
   const [cycles, setCycles] = useState(saved ? Math.max(0, Math.min(1000, saved.cycles || 0)) : 0)
+  useLayoutEffect(() => {
+    if (scope === owner) return
+    const next = readSaved()
+    setRunning(false); setEndsAt(null)
+    setPhase(next?.phase || 'idle')
+    setRemaining(next ? Math.max(1, Math.min(10800, Math.round(next.remaining))) : studyMin * 60)
+    setCycles(next ? Math.max(0, Math.min(1000, next.cycles || 0)) : 0)
+    setScope(owner)
+  }, [owner, scope])
   useEffect(() => {
+    if (scope !== owner) return
     try { sessionStorage.setItem(snapshotKey, JSON.stringify({ phase, remaining, endsAt, cycles })) } catch {}
-  }, [snapshotKey, phase, remaining, endsAt, cycles])
+  }, [snapshotKey, scope, owner, phase, remaining, endsAt, cycles])
 
   // Persistance des réglages.
   useEffect(() => {
@@ -88,6 +102,7 @@ function FocusSession({ owner, children }) {
   // Passe à la phase suivante. `auto` = fin naturelle (récompense XP) ;
   // sinon c'est un saut manuel (pas d'XP).
   const advance = useCallback((auto) => {
+    if (scope !== owner || liveOwner.current !== owner) return
     if (phase === 'focus') {
       if (auto) {
         setCycles((c) => c + 1)
@@ -99,13 +114,14 @@ function FocusSession({ owner, children }) {
       chime('focus')
       startPhase('focus', studyMin)
     }
-  }, [phase, studyMin, breakMin, chime, startPhase])
+  }, [phase, studyMin, breakMin, chime, startPhase, scope, owner])
 
   // Décompte : on calcule le restant à partir de l'horodatage de fin
   // (robuste si l'onglet est ralenti en arrière-plan).
   useEffect(() => {
-    if (!running || !endsAt) return
+    if (scope !== owner || !running || !endsAt) return
     const step = () => {
+      if (liveOwner.current !== owner) return
       const rem = Math.round((endsAt - Date.now()) / 1000)
       if (rem <= 0) advance(true)
       else setRemaining(rem)
@@ -113,12 +129,13 @@ function FocusSession({ owner, children }) {
     step()
     const id = setInterval(step, 250)
     return () => clearInterval(id)
-  }, [running, endsAt, advance])
+  }, [running, endsAt, advance, scope, owner])
 
   const start = useCallback(() => {
+    if (scope !== owner) return
     if (phase === 'idle') startPhase('focus', studyMin)
     else { setEndsAt(Date.now() + remaining * 1000); setRunning(true) }
-  }, [phase, studyMin, remaining, startPhase])
+  }, [phase, studyMin, remaining, startPhase, scope, owner])
 
   const pause = useCallback(() => { setRunning(false); setEndsAt(null) }, [])
   const reset = useCallback(() => { setRunning(false); setEndsAt(null); setPhase('idle'); setRemaining(studyMin * 60); setCycles(0) }, [studyMin])

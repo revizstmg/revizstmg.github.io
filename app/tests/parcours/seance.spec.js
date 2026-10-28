@@ -21,6 +21,7 @@ test('« Ma séance du jour » : un toucher, et la première question est à l�
 
 test('fin de série : « Refaire mes erreurs » rejoue seulement les questions ratées', async ({ page }) => {
   const erreurs = await preparer(page)
+  await page.addInitScript(()=>{let seed=123456789;Math.random=()=>{seed=(Math.imul(1664525,seed)+1013904223)>>>0;return seed/4294967296}})
   await page.goto('./')
   await attendreAccueil(page)
   await page.goto('./#/subject/gestion-finance/theme/gf-t1/chapter/0')
@@ -29,16 +30,18 @@ test('fin de série : « Refaire mes erreurs » rejoue seulement les questions r
   await page.getByRole('button', { name: /QCM - (les )?notions/ }).first().click()
   await page.getByRole('button', { name: /Entraînement/ }).click()
   const exercice = page.locator('[data-exercice]')
-  // Toujours la dernière proposition : au moins une erreur, presque à coup sûr.
+  const xpAvant = (await etat(page)).xp || 0
+  // Ce tirage fixé et les réponses A produisent des erreurs, sans gain d’XP.
   for (let i = 0; i < 40; i++) {
-    const suite = page.getByRole('button', { name: /^(?![A-D] ).*(suivante|score)/i, disabled: false })
+    const suite = page.getByRole('button', { name: /^(?![A-D] ).*(suivante|score|résultat)/i, disabled: false })
     const choix = page.getByRole('button', { name: /^[A-D] /, disabled: false })
     if (await suite.count()) await suite.first().click()
-    else if (await choix.count()) await choix.last().click()
+    else if (await choix.count()) await choix.first().click()
     else break
   }
   const refaire = page.getByRole('button', { name: /Refaire mes erreurs \((\d+)\)/ })
-  if (!(await refaire.count())) test.skip(true, 'série sans erreur (tirage)')
+  await expect(refaire).toBeVisible()
+  expect((await etat(page)).xp || 0).toBe(xpAvant)
   const n = Number((await refaire.innerText()).match(/\((\d+)\)/)[1])
   const games = (await etat(page)).chapters['gf-t1'].games
   await refaire.click()
@@ -60,7 +63,7 @@ test('barre du bas : Accueil, Cours, Réviser, Bac blanc, Moi', async ({ page })
   await barre.getByRole('link', { name: /Cours/ }).click()
   await expect(page).toHaveURL(/#\/cours$/)
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Tes matières')
-  await page.getByRole('link', { name: /Gestion & Finance/ }).first().click()
+  await page.getByRole('link', { name: /Gestion et finance/ }).first().click()
   await expect(barre.getByRole('link', { name: /Cours/ })).toHaveAttribute('aria-current', 'page')
   expect(erreurs).toEqual([])
 })

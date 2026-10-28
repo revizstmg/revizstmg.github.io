@@ -15,7 +15,7 @@ test('essai sans compte, puis invitation à créer son compte', async ({ page })
   await expect(commencer).toBeDisabled()
   await accueil.getByLabel(/Prénom/).fill('Inès')
   await accueil.getByRole('button', { name: /Terminale/ }).first().click()
-  await accueil.getByRole('button', { name: /Gestion et Finance/ }).first().click()
+  await accueil.getByRole('button', { name: /Gestion et finance/ }).first().click()
   await commencer.click()
 
   // Choix des chapitres (facultatif), puis « Bienvenue ».

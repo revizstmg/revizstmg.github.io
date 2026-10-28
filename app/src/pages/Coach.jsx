@@ -78,7 +78,7 @@ function CoachPage() {
   const mm = Math.floor(remaining / 60)
   const ss = remaining % 60
   const isBreak = phase === 'break'
-  const ringColor = isBreak ? '#3f9d6d' : 'var(--c-accent)'
+  const ringColor = isBreak ? '#17623f' : 'var(--c-accent-fort)'
   const phaseLabel = phase === 'idle' ? t('phaseReady') : isBreak ? t('phaseBreak') : t('phaseFocus')
   const tip = phase === 'idle' ? t('idleTip') : isBreak ? t('breakTip') : t('focusTip')
   const activePreset = PRESETS.find((p) => p.s === studyMin && p.b === breakMin)?.key || 'custom'
@@ -141,7 +141,7 @@ function CoachPage() {
             <button
               onClick={() => (running ? f.pause() : f.start())}
               className="w-full rounded-2xl px-4 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90"
-              style={{ backgroundColor: isBreak ? '#3f9d6d' : 'var(--c-accent)' }}
+              style={{ backgroundColor: isBreak ? '#17623f' : 'var(--c-accent-fort)' }}
             >
               {running ? `⏸ ${t('pauseTimer')}` : phase === 'idle' ? `▶ ${t('startTimer')}` : `▶ ${t('resume')}`}
             </button>
