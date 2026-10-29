@@ -1,0 +1,16 @@
+import {chromium} from '/workspace/revizstmg.github.io/app/node_modules/playwright/index.mjs'
+import {preparer,etatEleve,attendreAccueil} from '/workspace/work/audit-apprentissage/app/tests/parcours/eleve.js'
+const browser=await chromium.launch();const page=await browser.newPage({viewport:{width:390,height:844}})
+const errors=await preparer(page,etatEleve({savedDecks:[{id:'audit',title:'Paquet audit',cards:[{front:'QUESTION1',back:'REPONSE1'},{front:'QUESTION2',back:'REPONSE2'}]}]}))
+await page.addInitScript(()=>{window.__said=[];let count=0;Object.defineProperty(window,'speechSynthesis',{value:{cancel(){},speak(u){window.__said.push(u.text);count++;if(count<=2)queueMicrotask(()=>u.onend?.())}},configurable:true})})
+await page.goto('http://127.0.0.1:4175/#/revision');await attendreAccueil(page)
+await page.getByRole('button',{name:'Révision audio',exact:true}).click()
+await page.getByRole('button',{name:'Jouer',exact:true}).waitFor()
+await page.keyboard.press('Escape')
+console.log('ESC',await page.getByRole('button',{name:'Jouer',exact:true}).count())
+console.log('INITIAL_FOCUS',await page.evaluate(()=>document.activeElement.getAttribute('aria-label')))
+await page.keyboard.press('Tab')
+console.log('AFTER_TAB',await page.evaluate(()=>document.activeElement.getAttribute('aria-label')))
+console.log('DIALOGS',await page.getByRole('dialog').count())
+console.log('ERRORS',errors)
+await browser.close()

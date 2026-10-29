@@ -1,0 +1,4 @@
+PENDING 2
+ROUTE http://127.0.0.1:4175/#/grand-oral
+MIC [ 'rec-start-1', 'rec-start-2', 'rec-stop-2', 'track-stop-2' ]
+ERRORS []

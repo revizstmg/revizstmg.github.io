@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "droit-eco",
+    "centre": "metropole",
+    "url": "https://www.education.gouv.fr/sites/default/files/document/baccalaureat-technologique-2026-sciences-et-technologies-du-management-et-de-la-gestion-droit-et_1.pdf",
+    "status": 206,
+    "type": "application/pdf",
+    "pdf": true
+  },
+  {
+    "subject": "droit-eco",
+    "centre": "antilles",
+    "url": "https://www.education.gouv.fr/sites/default/files/document/baccalaureat-technologique-2026-sciences-et-technologies-du-management-et-de-la-gestion-droit-et_2.pdf",
+    "status": 206,
+    "type": "application/pdf",
+    "pdf": true
+  },
+  {
+    "subject": "droit-eco",
+    "centre": "etranger",
+    "url": "https://www.education.gouv.fr/sites/default/files/document/baccalaureat-technologique-2026-sciences-et-technologies-du-management-et-de-la-gestion-droit-et.pdf",
+    "status": 206,
+    "type": "application/pdf",
+    "pdf": true
+  },
+  {
+    "subject": "msgn",
+    "centre": "metropole",
+    "url": "https://www.education.gouv.fr/sites/default/files/document/baccalaureat-technologique-2026-sciences-et-technologies-du-management-et-de-la-gestion-management_1.pdf",
+    "status": 206,
+    "type": "application/pdf",
+    "pdf": true
+  },
+  {
+    "subject": "msgn",
+    "centre": "antilles",
+    "url": "https://www.education.gouv.fr/sites/default/files/document/baccalaureat-technologique-2026-sciences-et-technologies-du-management-et-de-la-gestion-management_2.pdf",
+    "status": 206,
+    "type": "application/pdf",
+    "pdf": true
+  },
+  {
+    "subject": "msgn",
+    "centre": "etranger",
+    "url": "https://www.education.gouv.fr/sites/default/files/document/baccalaureat-technologique-2026-sciences-et-technologies-du-management-et-de-la-gestion-management.pdf",
+    "status": 206,
+    "type": "application/pdf",
+    "pdf": true
+  }
+]

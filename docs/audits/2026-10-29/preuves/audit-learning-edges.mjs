@@ -1,0 +1,16 @@
+import {chromium} from '/workspace/revizstmg.github.io/app/node_modules/playwright/index.mjs'
+import {preparer,etatEleve,attendreAccueil} from '/workspace/work/audit-apprentissage/app/tests/parcours/eleve.js'
+const browser=await chromium.launch();const page=await browser.newPage({viewport:{width:390,height:844}})
+const errors=await preparer(page,etatEleve({savedDecks:[{id:'audit',title:'Paquet audit',cards:[{front:'QUESTION1',back:'REPONSE1'},{front:'QUESTION2',back:'REPONSE2'}]}]}))
+await page.addInitScript(()=>{window.__said=[];let count=0;Object.defineProperty(window,'speechSynthesis',{value:{cancel(){},speak(u){window.__said.push(u.text);count++;if(count<=2)queueMicrotask(()=>u.onend?.())}},configurable:true})})
+await page.goto('http://127.0.0.1:4175/#/revision');await attendreAccueil(page)
+await page.getByRole('button',{name:'Révision audio',exact:true}).click()
+await page.getByRole('button',{name:'Jouer',exact:true}).waitFor()
+await page.keyboard.press('Escape')
+console.log('ESC',await page.getByRole('button',{name:'Jouer',exact:true}).count())
+await page.getByRole('button',{name:'Jouer',exact:true}).click();await page.waitForTimeout(40)
+await page.getByRole('button',{name:'Pause',exact:true}).click();await page.getByRole('button',{name:'Question suivante',exact:true}).click();await page.getByRole('button',{name:'Jouer',exact:true}).click();await page.waitForTimeout(600)
+console.log('VOICE',await page.evaluate(()=>window.__said))
+console.log('ERRORS',errors)
+await page.screenshot({path:'/workspace/work/audit-audio.png'})
+await browser.close()

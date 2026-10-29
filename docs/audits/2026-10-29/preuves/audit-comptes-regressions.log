@@ -1,0 +1,113 @@
+
+Running 50 tests using 1 worker
+
+(node:31570) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:31570) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/parcours/classes-multiples.spec.js:175:1 › professeur : créer deux classes, basculer et retrouver les deux après rechargement (14.1s)
+  ✓   2 tests/parcours/classes-multiples.spec.js:219:1 › élève : rejoindre deux classes, changer, retrouver et quitter seulement la classe choisie (7.0s)
+  ✓   3 tests/parcours/classes-multiples.spec.js:276:1 › professeur : nom libre, erreur de renommage conservée, sauvegarde et rechargement (5.8s)
+  ✓   4 tests/parcours/classes-multiples.spec.js:337:69 › espace classe lisible : prof light (9.8s)
+  ✓   5 tests/parcours/classes-multiples.spec.js:337:69 › espace classe lisible : eleve dark (5.5s)
+  ✓   6 tests/parcours/classes-multiples.spec.js:415:40 › professeur : suivi, groupes et réglages accessibles light (6.9s)
+  ✓   7 tests/parcours/classes-multiples.spec.js:415:40 › professeur : suivi, groupes et réglages accessibles dark (7.2s)
+  ✓   8 tests/parcours/classes-multiples.spec.js:479:96 › classe traduite hors ligne : de (3.3s)
+  ✓   9 tests/parcours/classes-multiples.spec.js:479:96 › classe traduite hors ligne : ar (2.2s)
+  ✓  10 tests/parcours/classes-multiples.spec.js:503:1 › professeur : groupe et annonce conservent la saisie après erreur, puis sont publiés (3.8s)
+  ✓  11 tests/parcours/classes-multiples.spec.js:551:1 › professeur : créer un quiz depuis la vue d’ensemble et conserver le brouillon après erreur (2.8s)
+  ✓  12 tests/parcours/classes-multiples.spec.js:599:69 › menu de classe mobile complet, clavier et changement de taille : prof (5.3s)
+  ✓  13 tests/parcours/classes-multiples.spec.js:599:69 › menu de classe mobile complet, clavier et changement de taille : eleve (6.7s)
+  ✘  14 tests/parcours/code-classe.spec.js:5:5 › classe : code de classe inconnu puis valide (4.0s)
+(node:32578) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32578) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  15 tests/parcours/code-classe.spec.js:5:5 › classe : code de classe recherche indisponible (2.1s)
+  ✓  16 tests/parcours/code-classe.spec.js:5:5 › classe : code de classe exclu (2.0s)
+  ✓  17 tests/parcours/code-classe.spec.js:5:5 › classe : code de classe exclusion indisponible (1.8s)
+  ✓  18 tests/parcours/code-classe.spec.js:5:5 › classe : code de classe profil indisponible (1.6s)
+  ✓  19 tests/parcours/code-classe.spec.js:5:5 › classement : code de classe inconnu puis valide (3.8s)
+  ✓  20 tests/parcours/code-classe.spec.js:5:5 › classement : code de classe recherche indisponible (1.7s)
+  ✓  21 tests/parcours/code-classe.spec.js:5:5 › classement : code de classe exclu (1.7s)
+  ✓  22 tests/parcours/code-classe.spec.js:5:5 › classement : code de classe exclusion indisponible (1.6s)
+  ✓  23 tests/parcours/code-classe.spec.js:5:5 › classement : code de classe profil indisponible (1.7s)
+  ✓  24 tests/parcours/code-classe.spec.js:101:1 › inscription : corriger un code inconnu sans recréer le compte (6.0s)
+  ✓  25 tests/parcours/code-parent.spec.js:16:1 › renouveler le code parent : nouveau code de 10 caractères, ancien effacé (4.0s)
+  ✓  26 tests/parcours/comptes.spec.js:86:3 › restaurer le compte élève avec un ancien état professeur (rôle périmé) (3.0s)
+  ✓  27 tests/parcours/comptes.spec.js:86:3 › restaurer le compte élève avec un ancien état professeur (autre identité) (20.0s)
+  ✓  28 tests/parcours/comptes.spec.js:124:1 › élève → déconnexion → professeur → déconnexion → élève sur le même PC (26.4s)
+  ✓  29 tests/parcours/comptes.spec.js:221:1 › première connexion après confirmation de l’e-mail : fin de l’inscription (2.2s)
+  ✓  30 tests/parcours/navigation-mobile.spec.js:4:102 › menu principal à gauche, organisé et accessible light 320 (3.7s)
+  ✓  31 tests/parcours/navigation-mobile.spec.js:4:102 › menu principal à gauche, organisé et accessible dark 390 (4.1s)
+  ✓  32 tests/parcours/navigation-mobile.spec.js:4:102 › menu principal à gauche, organisé et accessible light 844 (4.5s)
+  ✓  33 tests/parcours/navigation-mobile.spec.js:80:1 › choisir et ordonner ses onglets dans le menu, sauvegarde et limites (4.7s)
+  ✓  34 tests/parcours/navigation-mobile.spec.js:178:125 › menu principal traduit de (1.6s)
+  ✓  35 tests/parcours/navigation-mobile.spec.js:178:125 › menu principal traduit ar (2.4s)
+  ✓  36 tests/parcours/oauth.spec.js:4:3 › retour Google : accueil et session conservée (compte existant) (4.2s)
+  ✓  37 tests/parcours/oauth.spec.js:4:3 › retour Google : accueil et session conservée (nouveau compte) (2.2s)
+  ✓  38 tests/parcours/oauth.spec.js:61:1 › un vrai lien inexistant garde sa page 404 (1.0s)
+  ✓  39 tests/parcours/paiement.spec.js:39:1 › paiements pas encore ouverts : aucune offre à choisir (1.2s)
+  ✓  40 tests/parcours/paiement.spec.js:53:1 › mode test : case obligatoire, puis paiement Premium mensuel envoyé à Stripe (1.5s)
+  ✘  41 tests/parcours/paiement.spec.js:86:1 › abonnement actif : offre, date et portail de gestion (1.6s)
+(node:33890) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:33890) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  42 tests/parcours/paiement.spec.js:120:1 › retour de Stripe : message de remerciement quand l’abonnement est confirmé (1.6s)
+  ✓  43 tests/parcours/paiement.spec.js:141:3 › page des offres accessible et sans débord à 320 px : light (5.5s)
+  ✓  44 tests/parcours/paiement.spec.js:141:3 › page des offres accessible et sans débord à 320 px : dark (5.7s)
+  ✓  45 tests/parcours/parametres-rubriques.spec.js:4:64 › paramètres par rubriques : light (11.7s)
+  ✓  46 tests/parcours/parametres-rubriques.spec.js:4:64 › paramètres par rubriques : dark (9.9s)
+  ✓  47 tests/parcours/parametres-rubriques.spec.js:87:1 › réglages de révision et de données séparés, ancien accès conservé (2.7s)
+  ✓  48 tests/parcours/parametres-rubriques.spec.js:130:106 › paramètres structurés traduits de (1.6s)
+  ✓  49 tests/parcours/parametres-rubriques.spec.js:130:106 › paramètres structurés traduits ar (1.8s)
+  ✓  50 tests/parcours/parametres-rubriques.spec.js:153:1 › apparence : modes explicites et réglage du système sans changer les autres préférences (1.6s)
+
+
+  1) tests/parcours/code-classe.spec.js:5:5 › classe : code de classe inconnu puis valide ──────────
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+    Expected: [32m4[39m
+    Received: [31m5[39m
+
+      58 |       }
+      59 |       // Le nom est aussi relu à l’entrée et après rechargement de l’espace classe.
+    > 60 |       expect(recherches).toBe(cas === 'inconnu puis valide' ? (chemin === 'classe' ? 4 : 2) : 1)
+         |                          ^
+      61 |       expect(erreurs).toEqual([])
+      62 |     })
+      63 |   }
+        at /workspace/work/audit-comptes-main/app/tests/parcours/code-classe.spec.js:60:26
+
+    Error Context: test-results/code-classe-classe-code-de-classe-inconnu-puis-valide/error-context.md
+
+  2) tests/parcours/paiement.spec.js:86:1 › abonnement actif : offre, date et portail de gestion ───
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoEqual[2m([22m[32mexpected[39m[2m) // deep equality[22m
+
+    [32m- Expected  - 0[39m
+    [31m+ Received  + 1[39m
+
+    [2m  Array [[22m
+    [2m    "etat",[22m
+    [31m+   "etat",[39m
+    [2m    "portail",[22m
+    [2m  ][22m
+
+      55 |   await page.getByRole('button', { name: 'Gérer mon abonnement' }).click()
+      56 |   await expect(page).toHaveURL(/portail/)
+    > 57 |   expect(appels.map((a) => a.action)).toEqual(['etat', 'portail'])
+         |                                       ^
+      58 |   expect(erreurs).toEqual([])
+      59 | })
+      60 |
+        at /workspace/work/audit-comptes-main/app/tests/parcours/paiement.spec.js:57:39
+
+    Error Context: test-results/paiement-abonnement-actif-offre-date-et-portail-de-gestion/error-context.md
+
+  2 failed
+    tests/parcours/code-classe.spec.js:5:5 › classe : code de classe inconnu puis valide ───────────
+    tests/parcours/paiement.spec.js:86:1 › abonnement actif : offre, date et portail de gestion ────
+  48 passed (4.1m)
