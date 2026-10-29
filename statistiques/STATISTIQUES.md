@@ -1,6 +1,6 @@
 # 📊 Statistiques de RévizSTMG
 
-Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **28 octobre 2026 à 11:57**.
+Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **29 octobre 2026 à 12:16**.
 
 ## 👥 Utilisation
 
@@ -16,8 +16,8 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 | Amis | 1 joueurs · 0 défis (0 cette semaine) |
 | Suivi des parents | 0 élèves suivis (0 actifs cette semaine) |
 | Erreurs signalées | 0 à traiter · 0 reçues cette semaine |
-| Visites | 2 hier (12 pages vues) · 110 en 7 jours (455 pages vues) |
-| Écrans les plus vus (7 jours) | accueil 158 · matiere 47 · revision 43 · bac-blanc 41 · chapitre 38 · entree 37 · theme 29 · moi 17 · amis 8 · boutique 7 · classement 6 · guide 4 · classe 4 · cgu 3 · defi 2 · formules 2 · programme 2 · introuvable 2 · coach 1 · badges 1 · paquet 1 · methodo 1 · grand-oral 1 |
+| Visites | 6 hier (23 pages vues) · 92 en 7 jours (413 pages vues) |
+| Écrans les plus vus (7 jours) | accueil 143 · revision 44 · matiere 42 · chapitre 35 · entree 33 · theme 26 · bac-blanc 25 · moi 17 · guide 9 · amis 8 · boutique 7 · classement 6 · classe 4 · defi 2 · badges 2 · formules 2 · programme 2 · introuvable 2 · cgu 1 · paquet 1 · methodo 1 · grand-oral 1 |
 
 > Un compte est « actif » quand sa progression a été synchronisée. Les visites sont comptées sans cookie ni identifiant (une visite = un onglet ouvert sur le site).
 
@@ -35,13 +35,14 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 
 - Tests du contenu et de la logique : ✅ réussis
 - Dernière CI sur main : ❌ —
-- Dernière mise en ligne réussie : ✅ 28 octobre 2026 à 01:41
-- Modifications de l'app ces 7 derniers jours : 55
+- Dernière mise en ligne réussie : ✅ 29 octobre 2026 à 11:55
+- Modifications de l'app ces 7 derniers jours : 56
 
 ## 📈 Évolution (14 derniers jours)
 
 | Date | Comptes | Actifs 7 j | Nouveaux 7 j | Visites la veille | Chapitres | Questions |
 |---|---|---|---|---|---|---|
+| 29 oct. | 15 | 6 | 4 | 6 | 870 | 19 687 |
 | 28 oct. | 15 | 6 | 4 | 2 | 870 | 19 687 |
 | 27 oct. | 15 | 7 | 4 | 0 | 870 | 19 698 |
 | 26 oct. | 15 | 7 | 4 | 16 | 870 | 20 449 |
@@ -55,5 +56,4 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 | 18 oct. | — | — | — | — | 806 | 83 194 |
 | 17 oct. | — | — | — | — | 806 | 83 194 |
 | 16 oct. | — | — | — | — | 806 | 83 194 |
-| 15 oct. | — | — | — | — | 806 | 83 194 |
 

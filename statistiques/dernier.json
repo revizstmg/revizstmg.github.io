@@ -1,6 +1,6 @@
 {
- "date": "2026-10-28",
- "heure": "2026-10-28T10:57:39.932Z",
+ "date": "2026-10-29",
+ "heure": "2026-10-29T11:16:02.292Z",
  "utilisation": {
   "profs": 4,
   "eleves": 11,
@@ -10,38 +10,37 @@
    "premiere-stmg": 2,
    "terminale-stmg": 9
   },
-  "vues_7j": 455,
+  "vues_7j": 413,
   "actifs_1j": 1,
   "actifs_7j": 6,
   "ecrans_7j": {
-   "cgu": 3,
+   "cgu": 1,
    "moi": 17,
    "amis": 8,
    "defi": 2,
-   "coach": 1,
-   "guide": 4,
-   "theme": 29,
-   "badges": 1,
+   "guide": 9,
+   "theme": 26,
+   "badges": 2,
    "classe": 4,
-   "entree": 37,
+   "entree": 33,
    "paquet": 1,
-   "accueil": 158,
-   "matiere": 47,
+   "accueil": 143,
+   "matiere": 42,
    "methodo": 1,
    "boutique": 7,
-   "chapitre": 38,
+   "chapitre": 35,
    "formules": 2,
-   "revision": 43,
-   "bac-blanc": 41,
+   "revision": 44,
+   "bac-blanc": 25,
    "programme": 2,
    "classement": 6,
    "grand-oral": 1,
    "introuvable": 2
   },
-  "vues_hier": 12,
+  "vues_hier": 23,
   "actifs_30j": 7,
   "defis_amis": 0,
-  "visites_7j": 110,
+  "visites_7j": 92,
   "nouveaux_7j": 4,
   "specialites": {
    "sig": 1,
@@ -51,7 +50,7 @@
   "joueurs_amis": 1,
   "nouveaux_30j": 5,
   "rappels_push": 0,
-  "visites_hier": 2,
+  "visites_hier": 6,
   "defis_amis_7j": 0,
   "sessions_live": 0,
   "quiz_de_classe": 0,
@@ -78,9 +77,9 @@
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-10-28T00:41:54Z"
+   "date": "2026-10-29T10:55:50Z"
   },
-  "modifications7j": 55
+  "modifications7j": 56
  },
  "tests": "success"
 }
