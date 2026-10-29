@@ -2,6 +2,7 @@ import {useEffect,useRef,useState} from 'react'
 import {createPortal} from 'react-dom'
 import {Link,useLocation} from 'react-router-dom'
 import {useT} from '../i18n.js'
+import {vacancesText} from '../i18n/vacances.js'
 import {ALL_TABS} from '../navTabs.js'
 import {navigationMessages} from '../i18n/navigation.js'
 import {useFenetreClavier} from './clavier.js'
@@ -29,7 +30,7 @@ function Drawer({parentSeul,state,isDark,standalone,lang,first,last,mono,photo,o
    <div className="site-menu-scroll">
     {editing?<><button type="button" className="site-menu-back" onClick={()=>edit(false)}>← {t('back')}</button><NavigationTabs/></>:<>
      {(first||last)&&<div className="site-menu-profile"><span className="monogram" aria-hidden>{photo?<img src={photo} alt=""/>:mono}</span><div><strong>{`${first} ${last}`.trim()}</strong><small>{state.account?.role==='prof'?t('roleTeacher'):t('roleStudent')}</small></div></div>}
-     {!parentSeul&&<nav aria-label={m.main}><section><h3>{m.learn}</h3>{['accueil','cours','revision','bacblanc'].map(item)}</section><section><h3>{m.community}</h3>{['classe','amis','boutique','classement'].map(item)}</section><details><summary>{m.tools}</summary>{['formules','methodo','programme','defi','coach','coachia','grandoral','etudegestion','badges','favoris'].map(item)}</details></nav>}
+     {!parentSeul&&<nav aria-label={m.main}><section><h3>{m.learn}</h3>{['accueil','cours','revision','bacblanc'].map(item)}</section><section><h3>{m.community}</h3>{['classe','amis','boutique','classement'].map(item)}</section><details><summary>{m.tools}</summary>{['formules','methodo','parcours','programme','defi','coach','coachia','grandoral','etudegestion','badges','favoris'].map(item)}<Link to="/vacances" onClick={onClose}><span aria-hidden>☀️</span><span>{vacancesText(lang,'title')}</span><span aria-hidden>›</span></Link></details></nav>}
      {!parentSeul&&<button type="button" className="site-menu-tabs" onClick={()=>edit(true)}><span aria-hidden>☷</span><span>{m.choose}</span><span aria-hidden>›</span></button>}
      <section className="site-menu-account">{!parentSeul&&item('profil')}<Link to="/parent" onClick={onClose}><span aria-hidden>👨‍👩‍👧</span><span>{t('parentSpace')}</span><span aria-hidden>›</span></Link>{!standalone&&<Link to="/guide" onClick={onClose}><span aria-hidden>🎓</span><span>{t('startGuide')}</span><span aria-hidden>›</span></Link>}{!parentSeul&&<button type="button" onClick={run(onCustomize)}><span aria-hidden>🎨</span><span>{t('customize')}</span><span aria-hidden>›</span></button>}</section>
      <section className="site-menu-settings"><h3>{m.quick}</h3><div>{[{key:'search',icon:'🔍',fn:onSearch},{key:'dictionary',icon:'📖',fn:onDict},{key:'accessibility',icon:'♿',fn:onA11y},{key:isDark?'light':'dark',icon:isDark?'☀️':'🌙',fn:onToggleTheme,keep:true}].filter(entry=>!parentSeul||!['search','dictionary'].includes(entry.key)).map(entry=><button type="button" key={entry.key} onClick={entry.keep?entry.fn:run(entry.fn)}><span aria-hidden>{entry.icon}</span><span>{t(entry.key)}</span></button>)}</div></section>

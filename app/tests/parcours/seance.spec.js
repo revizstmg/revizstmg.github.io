@@ -5,11 +5,12 @@ import { preparer, attendreAccueil, etatEleve, etat, AUJOURDHUI } from './eleve.
 // écran, « Refaire mes erreurs », une seule fenêtre à l'arrivée, et l'accueil
 // du professeur.
 
-test('« Ma séance du jour » : un toucher, et la première question est à l’écran', async ({ page }) => {
+test('« Ma séance du jour » : la première question est à l’écran', async ({ page }) => {
   const erreurs = await preparer(page)
   await page.goto('./#/accueil')
   await attendreAccueil(page)
-  await page.getByRole('link', { name: /Lancer ma séance du jour/ }).click()
+  await page.locator('.home-destinations a[href="#/revision"]').click()
+  await page.locator('a[href="#/seance"]').click()
   const exercice = page.locator('[data-exercice]')
   await expect(exercice).toContainText(/Étape 1\/1 · Avancer dans le cours/)
   // Plein écran : la barre du bas est recouverte.

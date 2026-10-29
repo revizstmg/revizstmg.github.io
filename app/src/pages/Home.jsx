@@ -1,18 +1,13 @@
-import VacancesEntry from '../components/VacancesEntry.jsx'
-import {JourneySteps} from '../components/StudyJourney.jsx'
-import MissionCard from '../components/MissionCard.jsx'
 import { Link, Navigate } from 'react-router-dom'
 import { getChapter } from '../data/index.js'
 import { subjectsForTrack, getLevel, getSpecialty } from '../data/tracks.js'
 import { useStore, subjectScore } from '../store.jsx'
-import { nextMilestone } from '../data/rewards.js'
-import { ProgressBar, Icon } from '../components/ui.jsx'
-import OutilsAccueil from '../components/OutilsAccueil.jsx'
+import { ProgressBar } from '../components/ui.jsx'
+import { CourseText } from '../components/Course.jsx'
 import AccueilProf from '../components/AccueilProf.jsx'
 import { useT, usePublicText } from '../i18n.js'
 
 import { readPosition } from '../data/readingPosition.js'
-import { todayKey } from '../data/srs.js'
 import './Home.css'
 
 export default function Home() {
@@ -38,7 +33,6 @@ export default function Home() {
   const resumeUrl = recent ? `/subject/${position.subjectId}/theme/${position.themeId}/chapter/${position.chapterIndex}` : last ? `/subject/${last.subjectId}/theme/${last.id}` : '/revision'
   const progress = trackProgress
   const mastered = realSubjects.flatMap((s) => s.chapters).filter((ch) => derived.byChapter[ch.id] >= 90).length
-  const level = state.track.level
 
   // Salutation personnalisée selon l'heure et le prénom de l'élève.
   const firstName = state.profile?.firstName?.trim() || ''
@@ -61,111 +55,54 @@ export default function Home() {
     : '#172d30'
 
   return (
-    <div className="home-page animate-lux space-y-7">
+    <div className="home-page home-simple space-y-6">
       <section className="home-hero" style={{ background: bannerBg }}>
         <div className="home-hello">
           {(photo || mono) && <span className="monogram home-avatar" aria-hidden>{photo ? <img src={photo} alt="" /> : mono}</span>}
           <div className="min-w-0 flex-1">
-            <p className="kicker home-track">{tr(getLevel(state.track.level)?.name || '')}{state.track.level === 'terminale-stmg' && <> · {tr(getSpecialty(state.track.level, state.track.specialty)?.name || '')}</>}</p>
+            <p className="home-track">{tr(getLevel(state.track.level)?.name || '')}{state.track.level === 'terminale-stmg' && <> · {tr(getSpecialty(state.track.level, state.track.specialty)?.name || '')}</>}</p>
             <h1 className="font-display">{greeting}{firstName ? <>, <span>{firstName}</span></> : ''}</h1>
             {dateLabel && <p className="home-date">{dateLabel}</p>}
           </div>
-          <span className="home-level-tag">{t('level')} {derived.level}<span>{state.xp.toLocaleString(state.lang || 'fr')} XP</span></span>
         </div>
-        <div className="home-stage">
-          <div className="home-invitation">
-            <p className="home-overline">Ton prochain contrôle</p>
-            <h2 className="font-display">Ta prochaine réussite commence ici.</h2>
-            <p className="home-intro">Pars de ton dernier devoir pour savoir quoi revoir et comment t’entraîner.</p>
-            <div className="home-hero-actions">
-              {realSubjects.length > 0 && <Link to="/seance" className="home-main-action"><Icon.Play size={17} /> Lancer ma séance du jour <span aria-hidden>↗</span></Link>}
-              <Link to="/exemple-bilan" className="home-courses-action">Voir un exemple de bilan <span aria-hidden>→</span></Link>
-            </div>
-            {realSubjects.length > 0 && <p className="home-intro">Trois étapes courtes : tes erreurs, une révision, puis la suite du cours.</p>}
+        <div className="home-start">
+          <div>
+            <h2 className="font-display">{last ? t('resumeTitle') : t('startTitle')}</h2>
+            <p>{last ? <CourseText text={recent ? position.chapterTitle || last.short || last.name : last.short || last.name} /> : t('startSub')}</p>
           </div>
-          <MissionCard resumeUrl={last?resumeUrl:null} resumeTitle={recent?position.chapterTitle || last?.short || last?.name:last?.short || last?.name}/>
-        </div>
-        <p className="home-hero-note"><span aria-hidden>✦</span> Aujourd’hui, avance à ton rythme.</p>
-      </section>
-
-      <section className="home-method" aria-labelledby="home-method-title"><div className="home-method-heading"><span aria-hidden="true">📝</span><div><p className="kicker">Du devoir à la révision</p><h2 id="home-method-title" className="font-display">Une erreur, un déclic.</h2></div></div><JourneySteps/><div className="home-method-links"><Link to="/mes-notes" className="underline">Préparer mon bilan</Link><Link to="/offres" className="underline">Comparer les offres</Link><Link to="/cours" className="underline">Voir tous les cours</Link></div></section>
-
-      <div className="home-pathways">
-      <section className="home-plan" aria-labelledby="home-parcours-title">
-        <span className="home-plan-art" aria-hidden="true">📅</span>
-        <div className="min-w-[14rem] flex-1">
-          <p className="kicker">Mon parcours</p>
-          <h2 id="home-parcours-title" className="font-display text-xl font-semibold">Un plan fait pour toi, semaine par semaine.</h2>
-          <p className="mt-1 text-sm">Dis-nous ta note visée et ton temps disponible : le plan s’adapte à tes résultats.</p>
-        </div>
-        <Link to="/parcours" className="btn-primary">Voir mon parcours</Link>
-      </section>
-
-      <VacancesEntry />
-      </div>
-      <section className="home-ritual" aria-labelledby="home-ritual-title">
-        <div className="home-section-heading"><div><p className="kicker">Tes habitudes</p><h2 id="home-ritual-title" className="font-display">Trouve ton rythme.</h2></div><Link to="/programme">Mes objectifs <span aria-hidden>↗</span></Link></div>
-        <div className="home-ritual-grid">
-      {/* Série de connexion : récompenses XP pour les jours d'affilée */}
-      {(() => {
-        const streak = state.streak?.count || 0
-        const claimedToday = state.streak?.last === todayKey()
-        const nm = nextMilestone(streak)
-        return (
-          <section className="card card-lux flex flex-col gap-3 p-4 sm:flex-row sm:items-center">
-            <div className="flex min-w-0 flex-1 items-center gap-3">
-              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-2xl" style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 16%, transparent)' }} aria-hidden>🔥</span>
-              <div className="min-w-0">
-                <p className="font-display font-semibold leading-tight">{t('loginStreak')} · {streak} {t(streak > 1 ? 'daysStreakP' : 'daysStreakS')}</p>
-                <p className="text-xs text-slate-500 dark:text-slate-400">{claimedToday ? `✓ ${t('rewardClaimedToday')}` : t('rewardComeToday')}</p>
-              </div>
-            </div>
-            {nm && (
-              <div className="home-streak-goal">
-                <div className="mb-1 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-                  <span className="truncate">{nm.icon} {tr('Prochain palier : {day} jours (+{xp} XP)', { day: nm.day, xp: nm.xp })}</span>
-                  <span className="shrink-0 pl-2">{tr(nm.daysLeft > 1 ? 'Plus que {n} jours' : 'Plus que {n} jour', { n: nm.daysLeft })}</span>
-                </div>
-                <ProgressBar value={nm.pct} color="var(--c-accent)" />
-              </div>
-            )}
-          </section>
-        )
-      })()}
-
-      {/* Défi du jour */}
-      {(() => {
-        const done = state.dailyChallenge?.last === todayKey()
-        const dstreak = state.dailyChallenge?.streak || 0
-        return (
-          <Link to="/defi" className="card card-lux flex items-center gap-3 p-4 transition hover:-translate-y-0.5 hover:shadow-md">
-            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-2xl" style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 16%, transparent)' }} aria-hidden>⚡</span>
-            <div className="min-w-0 flex-1">
-              <p className="font-display font-semibold leading-tight">{t('dailyChallenge')}{dstreak > 0 ? ` · 🔥 ${dstreak}` : ''}</p>
-              <p className="text-xs text-slate-500 dark:text-slate-400">{done ? `✅ ${t('challengeDoneToday')}` : t('challengeCardCta')}</p>
-            </div>
-            {done ? (
-              <span className="chip shrink-0 bg-emerald-100 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-300">✓</span>
-            ) : (
-              <span className="chip shrink-0 text-white" style={{ background: 'var(--c-accent-fort)' }}>{t('challengeStart')}</span>
-            )}
-          </Link>
-        )
-      })()}
-
+          <Link to={last ? resumeUrl : '/cours'} className="home-main-action">{last ? t('resume') : t('startCourseBtn')} <span aria-hidden>→</span></Link>
         </div>
       </section>
 
-    <section className="home-summary home-bottom-grid">
-      <div className="home-progress-card"><span className="home-eyebrow">Tes efforts prennent forme</span><div className="home-progress-heading"><h2>Chaque séance compte.</h2></div><ProgressBar value={progress} color="var(--c-accent-texte)" /><div className="home-stat-grid"><div><strong>{progress}<small>%</small></strong><span>Progression de ta filière</span></div><div><strong>{mastered}</strong><span>Thèmes maîtrisés</span></div><div><strong>{state.streak?.count || 0}</strong><span>{t('streakDays')}</span></div></div><details className="home-progress-explanation"><summary>Comprendre ma progression</summary><p>Chaque chapitre utilise jusqu’à trois de tes meilleurs exercices. La moyenne des chapitres donne la maîtrise du thème ; un meilleur résultat au test du thème peut la relever. Les XP et les séances de formules ne modifient pas cette maîtrise.</p></details><div className="home-progress-footer"><span>{t('level')} {derived.level} · {state.xp.toLocaleString(state.lang || 'fr')} XP</span><Link to="/badges">{t('badges')} →</Link></div></div>
-      <div className="home-community-card"><span className="home-eyebrow">Mieux avancer, ensemble</span><h2>Ton coin à toi.</h2><div className="home-community-links"><Link to="/classe"><span aria-hidden>🏫</span>{t('myClass')}<span aria-hidden>→</span></Link><Link to="/amis"><span aria-hidden>🤝</span>{t('friends')}<span aria-hidden>→</span></Link><Link to="/boutique"><span aria-hidden>🎁</span>{t('shop')}<span aria-hidden>→</span></Link></div></div>
-    </section>
+      <section className="home-destinations" aria-label={t('planTitle')}>
+        <Link to="/cours" className="home-destination">
+          <span className="home-destination-icon" aria-hidden>📚</span>
+          <div><h2>{t('coursTab')}</h2><p>Voir tous les cours</p></div>
+          <span className="home-destination-arrow" aria-hidden>→</span>
+        </Link>
+        <Link to="/revision" className="home-destination">
+          <span className="home-destination-icon" aria-hidden>🧠</span>
+          <div><h2>{t('training')}</h2><p>{t('trainingDesc')}</p></div>
+          <span className="home-destination-arrow" aria-hidden>→</span>
+        </Link>
+        <Link to="/classe" className="home-destination">
+          <span className="home-destination-icon" aria-hidden>🏫</span>
+          <div><h2>{t('myClass')}</h2><p>Retrouve ta classe et ses activités.</p></div>
+          <span className="home-destination-arrow" aria-hidden>→</span>
+        </Link>
+      </section>
 
-      <OutilsAccueil />
-
-      <p className="pt-1 text-center text-xs text-slate-400">
-        {state.account?.id ? 'Ta progression est synchronisée avec ton compte quand la connexion le permet.' : t('savedOnDevice')}
-      </p>
+      <section className="home-progress-card" aria-labelledby="home-progress-title">
+        <div className="home-progress-heading"><div><p className="home-eyebrow">Tes efforts prennent forme</p><h2 id="home-progress-title">Chaque séance compte.</h2></div><Link to="/moi">Mes progrès <span aria-hidden>→</span></Link></div>
+        <div className="home-stat-grid">
+          <div><strong>{progress}<small>%</small></strong><span>Progression de ta filière</span></div>
+          <div><strong>{mastered}</strong><span>Thèmes maîtrisés</span></div>
+          <div><strong>{state.streak?.count || 0}</strong><span>{t('streakDays')}</span></div>
+        </div>
+        <ProgressBar value={progress} color="var(--c-accent-texte)" />
+        <div className="home-progress-footer"><span>{t('level')} {derived.level} · {state.xp.toLocaleString(state.lang || 'fr')} XP</span><Link to="/badges">{t('badges')} →</Link></div>
+        <details className="home-progress-explanation"><summary>Comprendre ma progression</summary><p>Chaque chapitre utilise jusqu’à trois de tes meilleurs exercices. La moyenne des chapitres donne la maîtrise du thème ; un meilleur résultat au test du thème peut la relever. Les XP et les séances de formules ne modifient pas cette maîtrise.</p></details>
+      </section>
     </div>
   )
 }

@@ -1,27 +1,19 @@
 import { test, expect } from '@playwright/test'
 import { preparer, attendreAccueil, etatEleve } from './eleve.js'
 
-// Accueil, « Réviser & réussir » : un seul outil conseillé, les autres rangés
-// dans la trousse, fermée tant que l'élève ne l'ouvre pas.
-test('un outil conseillé, les autres dans la trousse', async ({ page }) => {
+// L’accueil garde trois destinations ; les autres outils restent dans le menu.
+test('accueil allégé, outils accessibles dans le menu', async ({ page }) => {
   const erreurs = await preparer(page, etatEleve({ favorites: ['gf-t1'] }))
   await page.goto('./#/accueil')
   await attendreAccueil(page)
-  const section = page.locator('section', { has: page.getByRole('heading', { name: 'Réviser & réussir' }) })
-  await expect(section.getByRole('link', { name: /Conseillé maintenant.*Favoris/ })).toHaveAttribute('href', '#/favoris')
-  const trousse = section.getByRole('button', { name: /Ta trousse · 8 outils/ })
-  await expect(trousse).toHaveAttribute('aria-expanded', 'false')
-  await expect(section.getByRole('link')).toHaveCount(1)
-
-  await trousse.click()
-  await expect(section.getByRole('button', { name: 'Refermer ta trousse' })).toHaveAttribute('aria-expanded', 'true')
-  await expect(section.getByRole('link')).toHaveCount(9)
-  await expect(section.getByRole('link', { name: /Favoris/ })).toHaveCount(1)
-
-  // L'appareil se souvient de la trousse ouverte.
-  await page.reload()
-  await attendreAccueil(page)
-  await section.getByRole('link', { name: /Bac blanc/ }).click()
+  await expect(page.locator('.home-destinations > a')).toHaveCount(3)
+  await expect(page.getByRole('heading', { name: 'Réviser & réussir' })).toHaveCount(0)
+  await page.getByRole('button', { name: 'Menu', exact: true }).click()
+  const menu = page.getByRole('dialog', { name: 'Menu', exact: true })
+  await menu.getByText('Plus d’outils', { exact: true }).click()
+  await expect(menu.getByRole('link', { name: /Favoris/ })).toHaveAttribute('href', '#/favoris')
+  await expect(menu.getByRole('link', { name: /Atelier de formules/ })).toHaveAttribute('href', '#/atelier-formules')
+  await menu.getByRole('link', { name: 'Bac blanc', exact: true }).click()
   await expect(page).toHaveURL(/#\/bac-blanc/)
   expect(erreurs).toEqual([])
 })

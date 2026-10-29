@@ -68,10 +68,12 @@ test('parcours personnalisé : lisible sur petit écran, en sombre, et traduit h
  expect(errors).toEqual([])
 })
 
-test('accueil : la carte « Mon parcours » mène au parcours',async({page})=>{
+test('accueil : le menu garde l’accès au parcours',async({page})=>{
  const errors=await preparer(page,etatEleve())
  await page.goto('./#/accueil');await attendreAccueil(page)
- await page.getByRole('link',{name:'Voir mon parcours'}).click()
+ await page.getByRole('button',{name:'Menu',exact:true}).click()
+ await page.getByRole('dialog',{name:'Menu',exact:true}).getByText('Plus d’outils',{exact:true}).click()
+ await page.getByRole('dialog',{name:'Menu',exact:true}).getByRole('link',{name:'Mon parcours',exact:true}).click()
  await expect(page).toHaveURL(/#\/parcours/)
  await expect(page.getByRole('heading',{name:'Construisons ton parcours'})).toBeVisible()
  expect(errors).toEqual([])
