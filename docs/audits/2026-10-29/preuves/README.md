@@ -1,0 +1,38 @@
+# Pièces de reproduction
+
+Comptes, jetons, flux audio et réponses serveur sont synthétiques. Aucun paiement, microphone ou compte réel utilisé. Les journaux décrivent des essais locaux, pas des incidents observés dans les données de production.
+
+Les scripts sont conservés tels qu’exécutés : adapter leurs chemins absolus et leurs ports aux serveurs locaux avant de les rejouer ; utiliser les profils et interceptions réseau indiqués. Les scripts ne font pas partie de la suite de tests automatique.
+
+- [audit-abonnement-compte-prod.json](audit-abonnement-compte-prod.json)
+- [audit-abonnement-compte-prod.mjs](audit-abonnement-compte-prod.mjs)
+- [audit-abonnement-compte.png](audit-abonnement-compte.png)
+- [audit-abonnement-prod.log](audit-abonnement-prod.log)
+- [audit-annales-http.json](audit-annales-http.json)
+- [audit-audio-close.log](audit-audio-close.log)
+- [audit-audio-close.mjs](audit-audio-close.mjs)
+- [audit-audio-focus.log](audit-audio-focus.log)
+- [audit-audio-focus.mjs](audit-audio-focus.mjs)
+- [audit-audio.png](audit-audio.png)
+- [audit-code-classe-prod.log](audit-code-classe-prod.log)
+- [audit-comptes-collisions.json](audit-comptes-collisions.json)
+- [audit-comptes-harness.mjs](audit-comptes-harness.mjs)
+- [audit-comptes-regressions.log](audit-comptes-regressions.log)
+- [audit-formula-crash.png](audit-formula-crash.png)
+- [audit-formula-resume.log](audit-formula-resume.log)
+- [audit-formula-resume.mjs](audit-formula-resume.mjs)
+- [audit-langues-pdf-structure.json](audit-langues-pdf-structure.json)
+- [audit-learning-edges.log](audit-learning-edges.log)
+- [audit-learning-edges.mjs](audit-learning-edges.mjs)
+- [audit-paiement-attente-final.json](audit-paiement-attente-final.json)
+- [audit-paiement-attente.json](audit-paiement-attente.json)
+- [audit-paiement-attente.mjs](audit-paiement-attente.mjs)
+- [audit-paiement-retard-prod.json](audit-paiement-retard-prod.json)
+- [audit-paiement-retard-prod.mjs](audit-paiement-retard-prod.mjs)
+- [audit-recorder-double.log](audit-recorder-double.log)
+- [audit-recorder-double.mjs](audit-recorder-double.mjs)
+- [audit-recorder-pending.log](audit-recorder-pending.log)
+- [audit-recorder-pending.mjs](audit-recorder-pending.mjs)
+- [audit-seance-hors-filiere.png](audit-seance-hors-filiere.png)
+- [audit-seance-track.log](audit-seance-track.log)
+- [audit-seance-track.mjs](audit-seance-track.mjs)

@@ -1,0 +1,50 @@
+PAUSED CALCUL ET ENTRAÎNEMENT
+
+Atelier de formules
+
+Choisis tes formules, puis entraîne-toi avec de nouvelles valeurs à chaque séance.
+
+Une séance t’attend
+
+Reprends avec les mêmes questions et tes réponses déjà enregistrées sur cet appareil.
+
+Reprendre ma séance
+Choisir une nouvelle séance
+BILAN CALCUL ET ENTRAÎNEMENT
+
+Atelier de formules
+
+Choisis tes formules, puis entraîne-toi avec de nouvelles valeurs à chaque séance.
+
+Séance terminée
+
+0 / 1
+
+réponse(s) correcte(s) au premier essai
+
+Ces exercices servent à t’entraîner et ne modifient pas la maîtrise de tes chapitres.
+
+Refaire mes erreurs
+Recommencer avec de nouvelles valeurs
+Changer de formules
+AFTER_RESTART 🛠️
+
+Cette page a rencontré un problème
+
+Le reste du site fonctionne. Recharge la page ou reviens à l’accueil.
+
+Recharger la page
+Retour à l’accueil
+ERRORS [
+  "console : TypeError: Cannot read properties of undefined (reading 'formula')\n" +
+    '    at Ae (http://127.0.0.1:4175/assets/FormulaWorkshop-BC0jULoa.js:1:79123)\n' +
+    '    at zu (http://127.0.0.1:4175/assets/index-CA4FTXAL.js:39:16998)\n' +
+    '    at yc (http://127.0.0.1:4175/assets/index-CA4FTXAL.js:41:3139)\n' +
+    '    at Lg (http://127.0.0.1:4175/assets/index-CA4FTXAL.js:41:44737)\n' +
+    '    at Ng (http://127.0.0.1:4175/assets/index-CA4FTXAL.js:41:39727)\n' +
+    '    at R1 (http://127.0.0.1:4175/assets/index-CA4FTXAL.js:41:39655)\n' +
+    '    at ao (http://127.0.0.1:4175/assets/index-CA4FTXAL.js:41:39508)\n' +
+    '    at Pc (http://127.0.0.1:4175/assets/index-CA4FTXAL.js:41:35875)\n' +
+    '    at cp (http://127.0.0.1:4175/assets/index-CA4FTXAL.js:41:36678)\n' +
+    '    at ar (http://127.0.0.1:4175/assets/index-CA4FTXAL.js:39:3274)'
+]

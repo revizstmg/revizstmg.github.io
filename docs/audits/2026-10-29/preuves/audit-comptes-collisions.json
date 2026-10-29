@@ -1,0 +1,32 @@
+{
+  "parentCodesEqual": true,
+  "friendCodesEqual": true,
+  "childFromCodeA": "Enfant audit B",
+  "friendFromCodeB": "Élève audit A",
+  "writes": [
+    {
+      "kind": "parent",
+      "device_id": "audit-account-A",
+      "name": "Enfant audit A",
+      "code": "P3SU6BU2YF"
+    },
+    {
+      "kind": "friend",
+      "device_id": "audit-account-A",
+      "name": "Élève audit A",
+      "code": "HQ52T6"
+    },
+    {
+      "kind": "parent",
+      "device_id": "audit-account-B",
+      "name": "Enfant audit B",
+      "code": "P3SU6BU2YF"
+    },
+    {
+      "kind": "friend",
+      "device_id": "audit-account-B",
+      "name": "Élève audit B",
+      "code": "HQ52T6"
+    }
+  ]
+}

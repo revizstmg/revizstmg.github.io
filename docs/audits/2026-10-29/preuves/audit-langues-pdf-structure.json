@@ -1,0 +1,37 @@
+[
+  {
+    "file": "app/resources/langues/guide-ar.pdf",
+    "status": 0,
+    "pages": "47",
+    "page_size": "594.96 x 841.92 pts (A4)",
+    "bytes": 1125645
+  },
+  {
+    "file": "app/resources/langues/guide-de.pdf",
+    "status": 0,
+    "pages": "44",
+    "page_size": "594.96 x 841.92 pts (A4)",
+    "bytes": 842081
+  },
+  {
+    "file": "app/resources/langues/guide-en.pdf",
+    "status": 0,
+    "pages": "51",
+    "page_size": "594.96 x 841.92 pts (A4)",
+    "bytes": 1222950
+  },
+  {
+    "file": "app/resources/langues/guide-es.pdf",
+    "status": 0,
+    "pages": "52",
+    "page_size": "594.96 x 841.92 pts (A4)",
+    "bytes": 1228760
+  },
+  {
+    "file": "app/resources/langues/guide-it.pdf",
+    "status": 0,
+    "pages": "47",
+    "page_size": "594.96 x 841.92 pts (A4)",
+    "bytes": 864301
+  }
+]

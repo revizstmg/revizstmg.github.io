@@ -1,0 +1,9 @@
+{
+  "activeAccount": "00000000-0000-4000-8000-000000000002",
+  "before": "S’abonner\n\nMode test. Aucune vraie carte n’est débitée. Utilise la carte de test 4242 4242 4242 4242, une date future et un code à trois chiffres.\n\nOffre active : Premium (mensuel)\n\nProchain renouvellement le 18 novembre 2026.\n\nGérer mon abonnement",
+  "after": "S’abonner\n\nMode test. Aucune vraie carte n’est débitée. Utilise la carte de test 4242 4242 4242 4242, une date future et un code à trois chiffres.\n\nOffre active : Premium (mensuel)\n\nProchain renouvellement le 18 novembre 2026.\n\nGérer mon abonnement",
+  "calls": [
+    "Bearer jeton-fictif-parcours"
+  ],
+  "errors": []
+}
