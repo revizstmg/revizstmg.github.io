@@ -6,8 +6,11 @@ import {preparer,etatEleve,attendreAccueil} from './eleve.js'
 test('accueil : le bouton principal dit ce qu’il lance (B-03)',async({page})=>{
  const errors=await preparer(page,etatEleve())
  await page.goto('./#/accueil');await attendreAccueil(page)
- await expect(page.getByRole('link',{name:/Lancer ma séance du jour/}).first()).toBeVisible()
- await expect(page.getByText('Trois étapes courtes : tes erreurs, une révision, puis la suite du cours.')).toBeVisible()
+ const action=page.getByRole('link',{name:/Commencer un cours/})
+ await expect(action).toBeVisible()
+ await expect(action).toHaveAttribute('href','#/cours')
+ await action.click()
+ await expect(page).toHaveURL(/#\/cours$/)
  expect(errors).toEqual([])
 })
 
