@@ -5,8 +5,9 @@ test('choisir des formules, répondre et obtenir un bilan sans modifier la maît
  await page.goto('./#/accueil')
  await expect(page.locator('main a[href="#/express"]')).toHaveCount(0)
  await expect(page.locator('main a[href="#/formules"]')).toHaveCount(0)
- // L'atelier est rangé dans la trousse de l'accueil.
- await page.getByRole('button',{name:/Ta trousse/}).click()
+ // L’atelier reste accessible depuis le menu, sans charger l’accueil.
+ await page.getByRole('button',{name:'Menu',exact:true}).click()
+ await page.getByRole('dialog',{name:'Menu',exact:true}).getByText('Plus d’outils',{exact:true}).click()
  await page.getByRole('link',{name:/Atelier de formules/}).click()
  const generate=page.getByRole('button',{name:'Générer mes exercices',exact:true})
  await expect(generate).toBeDisabled()
