@@ -45,6 +45,13 @@ export function reserverIA(id, options) {
   return valider
 }
 
+// Vérifie l'accès à une fonction d'IA sans rien compter (avant une étape préparatoire qui ne doit pas
+// être gaspillée si l'étape suivante serait refusée).
+export function verifierIA(id) {
+  if (lire().n >= LIMITE_IA_PAR_JOUR) throw new Error('rate_limit')
+  reserverAccesIA(id)
+}
+
 // Message d'erreur commun aux écrans d'IA, ou null si le code n'est pas un refus d'accès.
 export function messageAccesIA(code) {
   if (code === 'abonnement_requis') return 'Cette aide par intelligence artificielle est réservée aux abonnés Premium et Ultimate. Les offres sont sur la page « Offres ».'

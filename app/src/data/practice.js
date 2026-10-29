@@ -16,9 +16,10 @@ export async function requestPractice(course,history,owner,signal){
  if(!owner||!token||getSession()?.user?.id!==owner)throw Error('login_required')
  const body={action:'practice',course,targets:practiceTargets(course,history),previous:(history.previous||[]).slice(-60)}
  const valider=reserverIA('serie');const r=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(body),signal})
- const data=await r.json().catch(()=>({}));signal.throwIfAborted()
+ const data=await r.json().catch(()=>({}))
  if(!r.ok)throw Error(data.error||(r.status===401?'login_required':'server_error'))
  valider()
+ signal.throwIfAborted()
  if(getSession()?.user?.id!==owner)throw Error('login_required')
  const bank=checkPracticeResult(data.practice,body),counts={...history.counts}
  for(const id of body.targets)counts[id]=(Number(counts[id])||0)+1

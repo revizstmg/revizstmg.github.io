@@ -1,7 +1,8 @@
+import PastillePremium from './PastillePremium.jsx'
 import {useEffect,useRef,useState} from 'react'
 import {createPortal} from 'react-dom'
 import {Link,useLocation} from 'react-router-dom'
-import {useT} from '../i18n.js'
+import {useT,usePublicText} from '../i18n.js'
 import {vacancesText} from '../i18n/vacances.js'
 import {ALL_TABS} from '../navTabs.js'
 import {navigationMessages} from '../i18n/navigation.js'
@@ -17,12 +18,12 @@ export default function SiteMobileMenu(props){
  </div>
 }
 function Drawer({parentSeul,state,isDark,standalone,lang,first,last,mono,photo,onSearch,onDict,onCustomize,onA11y,onToggleTheme,onLang,onSignOut,onClose}){
- const t=useT(),m=navigationMessages[lang]||navigationMessages.fr,{pathname}=useLocation()
+ const t=useT(),tr=usePublicText(),m=navigationMessages[lang]||navigationMessages.fr,{pathname}=useLocation()
  const [editing,setEditing]=useState(false),panel=useRef(null),heading=useRef(null)
  useEffect(()=>{const previous=document.body.style.overflow;document.body.style.overflow='hidden';return()=>{document.body.style.overflow=previous}},[])
  useFenetreClavier(panel,onClose)
  const run=fn=>()=>{onClose();fn?.()}
- const item=key=>{const entry=ALL_TABS[key];return <Link key={key} to={entry.to} onClick={onClose} aria-current={entry.match.some(prefix=>pathname===prefix||pathname.startsWith(prefix+'/'))?'page':undefined}><span aria-hidden>{entry.icon}</span><span>{t(entry.labelKey)}</span><span aria-hidden>›</span></Link>}
+ const item=key=>{const entry=ALL_TABS[key];return <Link key={key} to={entry.to} onClick={onClose} aria-current={entry.match.some(prefix=>pathname===prefix||pathname.startsWith(prefix+'/'))?'page':undefined}><span aria-hidden>{entry.icon}</span><span>{t(entry.labelKey)}<PastillePremium to={entry.to}/></span><span aria-hidden>›</span></Link>}
  const edit=value=>{setEditing(value);requestAnimationFrame(()=>{heading.current?.focus();panel.current?.querySelector('.site-menu-scroll')?.scrollTo(0,0)})}
  return <div className="site-menu-overlay no-print" onClick={event=>{if(event.target===event.currentTarget)onClose()}}>
   <div ref={panel} role="dialog" aria-modal="true" aria-label={t('menu')} className="site-menu-panel">
@@ -32,7 +33,7 @@ function Drawer({parentSeul,state,isDark,standalone,lang,first,last,mono,photo,o
      {(first||last)&&<div className="site-menu-profile"><span className="monogram" aria-hidden>{photo?<img src={photo} alt=""/>:mono}</span><div><strong>{`${first} ${last}`.trim()}</strong><small>{state.account?.role==='prof'?t('roleTeacher'):t('roleStudent')}</small></div></div>}
      {!parentSeul&&<nav aria-label={m.main}><section><h3>{m.learn}</h3>{['accueil','cours','revision','bacblanc'].map(item)}</section><section><h3>{m.community}</h3>{['classe','amis','boutique','classement'].map(item)}</section><details><summary>{m.tools}</summary>{['formules','methodo','parcours','programme','defi','coach','coachia','grandoral','etudegestion','badges','favoris'].map(item)}<Link to="/vacances" onClick={onClose}><span aria-hidden>☀️</span><span>{vacancesText(lang,'title')}</span><span aria-hidden>›</span></Link></details></nav>}
      {!parentSeul&&<button type="button" className="site-menu-tabs" onClick={()=>edit(true)}><span aria-hidden>☷</span><span>{m.choose}</span><span aria-hidden>›</span></button>}
-     <section className="site-menu-account">{!parentSeul&&item('profil')}<Link to="/parent" onClick={onClose}><span aria-hidden>👨‍👩‍👧</span><span>{t('parentSpace')}</span><span aria-hidden>›</span></Link>{!standalone&&<Link to="/guide" onClick={onClose}><span aria-hidden>🎓</span><span>{t('startGuide')}</span><span aria-hidden>›</span></Link>}{!parentSeul&&<button type="button" onClick={run(onCustomize)}><span aria-hidden>🎨</span><span>{t('customize')}</span><span aria-hidden>›</span></button>}</section>
+     <section className="site-menu-account">{!parentSeul&&item('profil')}{!parentSeul&&<Link to="/offres" onClick={onClose} aria-current={pathname==='/offres'?'page':undefined}><span aria-hidden>💳</span><span>{tr('Mon abonnement')}</span><span aria-hidden>›</span></Link>}<Link to="/parent" onClick={onClose}><span aria-hidden>👨‍👩‍👧</span><span>{t('parentSpace')}</span><span aria-hidden>›</span></Link>{!standalone&&<Link to="/guide" onClick={onClose}><span aria-hidden>🎓</span><span>{t('startGuide')}</span><span aria-hidden>›</span></Link>}{!parentSeul&&<button type="button" onClick={run(onCustomize)}><span aria-hidden>🎨</span><span>{t('customize')}</span><span aria-hidden>›</span></button>}</section>
      <section className="site-menu-settings"><h3>{m.quick}</h3><div>{[{key:'search',icon:'🔍',fn:onSearch},{key:'dictionary',icon:'📖',fn:onDict},{key:'accessibility',icon:'♿',fn:onA11y},{key:isDark?'light':'dark',icon:isDark?'☀️':'🌙',fn:onToggleTheme,keep:true}].filter(entry=>!parentSeul||!['search','dictionary'].includes(entry.key)).map(entry=><button type="button" key={entry.key} onClick={entry.keep?entry.fn:run(entry.fn)}><span aria-hidden>{entry.icon}</span><span>{t(entry.key)}</span></button>)}</div></section>
      <details className="site-menu-languages"><summary>{t('language')} · {lang.toUpperCase()}</summary><div>{[{code:'fr',label:'Français'},{code:'en',label:'English'},{code:'es',label:'Español'},{code:'it',label:'Italiano'},{code:'ar',label:'العربية'},{code:'de',label:'Deutsch'}].map(entry=><button type="button" key={entry.code} aria-pressed={lang===entry.code} onClick={()=>onLang(entry.code)}>{entry.label}</button>)}</div></details>
      {(first||last)&&<button type="button" className="site-menu-signout" onClick={run(onSignOut)}>🚪 {t('signOut')}</button>}

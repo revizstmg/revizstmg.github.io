@@ -89,7 +89,7 @@ export default function Guide() {
       </Step>
 
       <Step n={5} title="Révise partout">
-        <TexteRiche texte="Une fois connecté, ta **progression se synchronise** automatiquement entre tous tes appareils. La révision intelligente, le bac blanc et le Grand Oral t’attendent ; le minuteur fonctionne aussi dans le navigateur. La personnalisation du profil demande l’application installée." />
+        <TexteRiche texte="Une fois connecté, ta **progression se synchronise** automatiquement entre tous tes appareils. Les cours et exercices de base sont gratuits ; la révision intelligente, le bac blanc et le Grand Oral sont inclus dans Premium et Ultimate (voir les [[offres|/offres]]). Le minuteur fonctionne aussi dans le navigateur. La personnalisation du profil demande l’application installée." />
       </Step>
 
       {/* Code de classe */}

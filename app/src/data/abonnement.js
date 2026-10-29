@@ -15,6 +15,7 @@ async function appeler(corps) {
       method: 'POST',
       headers: { apikey: SUPA_ANON, Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
       body: JSON.stringify(corps),
+      signal: AbortSignal.timeout(8000),
     })
   } catch { throw new Error('network') }
   const data = await r.json().catch(() => ({}))
@@ -26,5 +27,12 @@ export const lireEtatPaiement = () => appeler({ action: 'etat' })
 export const demarrerPaiement = (offre, periode, majeur) => appeler({ action: 'checkout', offre, periode, majeur })
 export const ouvrirPortail = () => appeler({ action: 'portail' })
 
+// À appeler avant de supprimer un compte : résilie tout de suite l'abonnement (sinon le prélèvement
+// continuerait). Sans paiements ouverts il n'y a rien à résilier ; toute autre erreur doit arrêter la suppression.
+export async function resilierAvantSuppression() {
+  try { await appeler({ action: 'resilier' }) } catch (e) { if (e.message !== 'not_configured') throw e }
+}
+
+// « 9,99 € », « 90 € » : sans décimales quand le montant est rond, chiffres latins dans toutes les langues.
 export const prixAffiche = (centimes, lang = 'fr') =>
-  new Intl.NumberFormat(lang, { style: 'currency', currency: 'EUR' }).format(centimes / 100)
+  new Intl.NumberFormat(lang, { style: 'currency', currency: 'EUR', numberingSystem: 'latn', minimumFractionDigits: centimes % 100 === 0 ? 0 : 2 }).format(centimes / 100)

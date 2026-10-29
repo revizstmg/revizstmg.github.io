@@ -12,8 +12,8 @@ export const SHOP_REWARDS = [
   { id: 'regulier', name: 'Le rythme est pris', icon: '🧊', minXp: 700, gift: '2 gels de série', freezes: 2 },
   { id: 'confirme', name: 'Un style bien à toi', icon: '🎓', minXp: 3200, gift: 'Titre « Réviseur confirmé »', title: 'Réviseur confirmé', itemId: 'title-confirme' },
   { id: 'ambassadeur', name: 'Dans la cour des grands', icon: '🌅', minXp: 8200, gift: 'Bannière Ambre exclusive', banner: '#a26827', itemId: 'banner-ambre' },
-  { id: 'premium-month', name: 'Un mois Premium offert', icon: '✦', minXp: 20000, score: 90, tests: 20, offer: 'Premium', gift: '1 mois offert au lancement de Premium' },
-  { id: 'ultimate-month', name: 'Un mois Ultimate offert', icon: '♛', minXp: 73500, score: 95, tests: 30, offer: 'Ultimate', gift: '1 mois offert au lancement d’Ultimate' },
+  { id: 'premium-month', name: 'Un mois Premium offert', icon: '✦', minXp: 20000, score: 90, tests: 20, offer: 'Premium', gift: '1 mois Premium offert, après vérification' },
+  { id: 'ultimate-month', name: 'Un mois Ultimate offert', icon: '♛', minXp: 73500, score: 95, tests: 30, offer: 'Ultimate', gift: '1 mois Ultimate offert, après vérification' },
 ]
 export function rewardProgress(state, reward) {
   const xp = Math.max(0, Number(state.xp) || 0)

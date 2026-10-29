@@ -21,6 +21,6 @@ export const DEMO = {
 
 export const PLANS = [
   {id:'free',name:'Gratuit',intro:'Apprendre les bases',features:['Cours et exercices de base','Favoris et suivi de progression']},
-  {id:'premium',name:'Premium',intro:'Tout le site pour réviser',features:['Tout le contenu gratuit','Bac blanc, sujets, révision, flashcards et outils de méthode','Chaque aide par IA : 1 utilisation par mois']},
-  {id:'ultimate',name:'Ultimate',intro:'L’IA sans compter',features:['Tout Premium','Aide par IA presque illimitée : tuteur, séries personnalisées, corrections']},
+  {id:'premium',name:'Premium',intro:'Tout le site pour réviser',features:['Tout le contenu gratuit','Bac blanc, sujets, révision et flashcards','Grand Oral, étude de gestion, atelier de formules, notes, défis, boutique, amis et classement','Chaque aide par IA : 1 utilisation par mois']},
+  {id:'ultimate',name:'Ultimate',intro:'L’IA presque sans limite',features:['Tout Premium','Aide par IA presque illimitée (60 demandes par jour au plus) : tuteur, séries personnalisées, corrections']},
 ]

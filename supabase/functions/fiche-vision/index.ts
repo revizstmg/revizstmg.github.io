@@ -59,12 +59,16 @@ Deno.serve(async (req: Request) => {
     const user = auth.ok ? await auth.json().catch(() => null) : null
     if (!user?.id || user.is_anonymous) return json({ error: 'login_required' }, 401)
 
-    const body = await req.json().catch(() => ({}))
+    // Taille maximale avant lecture : quatre photos réduites, pas un envoi quelconque.
+    const brut = await req.text()
+    if (brut.length > 12_000_000) return json({ error: 'too_large' }, 413)
+    let body: unknown = {}
+    try { body = JSON.parse(brut) } catch { /* corps invalide : aucune image */ }
     const rawImages: unknown = (body as any)?.images
     const imgs: { mime: string; data: string }[] = []
     if (Array.isArray(rawImages)) {
       for (const img of rawImages.slice(0, 4)) {
-        const m = /^data:(image\/[a-z0-9.+-]+);base64,(.+)$/i.exec(typeof img === 'string' ? img : '')
+        const m = /^data:(image\/(?:jpeg|png|webp));base64,(.+)$/i.exec(typeof img === 'string' ? img : '')
         if (m) imgs.push({ mime: m[1], data: m[2] })
       }
     }
@@ -74,13 +78,15 @@ Deno.serve(async (req: Request) => {
     if (!acces.ok) return json({ error: acces.error }, acces.status)
     reservation = acces
     const r = geminiKey ? await callGemini(geminiKey, imgs) : await callAnthropic(anthropicKey as string, imgs)
-    if (!r.ok) return json({ error: r.error || 'api_error', detail: r.detail }, 502)
+    if (!r.ok) return json({ error: r.error || 'api_error' }, 502)
     const fiche = parseFiche(r.text || '')
     if (!fiche) return json({ error: 'parse_error' }, 502)
     reussi = true
     return json({ fiche, provider: geminiKey ? 'gemini' : 'anthropic' }, 200)
   } catch (e) {
-    return json({ error: 'server_error', detail: String(e).slice(0, 300) }, 500)
+    // Jamais le détail d'une erreur : sous Deno, un échec réseau cite l'URL appelée.
+    console.warn('fiche-vision', (e as Error)?.name)
+    return json({ error: 'server_error' }, 500)
   } finally {
     // L'utilisation réservée n'est pas perdue si l'analyse a échoué.
     if (reservation && !reussi) await reservation.rendre()
@@ -92,17 +98,19 @@ async function callGemini(key: string, imgs: { mime: string; data: string }[]) {
   const model = Deno.env.get('GEMINI_MODEL') || 'gemini-2.0-flash'
   const parts: any[] = imgs.map((i) => ({ inlineData: { mimeType: i.mime, data: i.data } }))
   parts.push({ text: ASK })
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(key)}`
+  // Clé dans l'en-tête, jamais dans l'URL (une erreur réseau pourrait la citer).
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`
   const resp = await fetch(url, {
     method: 'POST',
-    headers: { 'content-type': 'application/json' },
+    headers: { 'content-type': 'application/json', 'x-goog-api-key': key },
+    signal: AbortSignal.timeout(60000),
     body: JSON.stringify({
       systemInstruction: { parts: [{ text: SYSTEM }] },
       contents: [{ role: 'user', parts }],
       generationConfig: { temperature: 0.2, responseMimeType: 'application/json', maxOutputTokens: 2048 },
     }),
   })
-  if (!resp.ok) return { ok: false, error: 'api_error', detail: (await resp.text()).slice(0, 500) }
+  if (!resp.ok) return { ok: false, error: 'api_error' }
   const data = await resp.json()
   const text = (data?.candidates?.[0]?.content?.parts || []).map((p: any) => p?.text).filter(Boolean).join('')
   if (!text) return { ok: false, error: data?.promptFeedback ? 'blocked' : 'empty' }
@@ -117,9 +125,10 @@ async function callAnthropic(key: string, imgs: { mime: string; data: string }[]
   const resp = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: { 'x-api-key': key, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
+    signal: AbortSignal.timeout(90000),
     body: JSON.stringify({ model, max_tokens: 4096, system: SYSTEM, output_config: { effort: 'low' }, messages: [{ role: 'user', content }] }),
   })
-  if (!resp.ok) return { ok: false, error: 'api_error', detail: (await resp.text()).slice(0, 500) }
+  if (!resp.ok) return { ok: false, error: 'api_error' }
   const data = await resp.json()
   const tb = (data?.content || []).find((b: any) => b?.type === 'text')
   return { ok: true, text: tb?.text || '' }
