@@ -14,6 +14,7 @@ async function reseau(page, data) {
   await page.route('https://*.supabase.co/**', (route) => {
     const req = route.request(), url = new URL(req.url())
     const json = (body) => route.fulfill({ contentType: 'application/json', body: JSON.stringify(body) })
+    if (url.pathname.endsWith('/revizstmg-paiement')) return json({ mode: 'test', abonnement: { statut: 'active', offre: 'premium', periode_fin: '2999-01-01T00:00:00Z' } })
     if (url.pathname.endsWith('/token')) {
       const body = req.postDataJSON()
       const id = body.refresh_token || Object.keys(data).find((k) => data[k].email === body.email)

@@ -45,6 +45,7 @@ export default function Cgu() {
 
       <Section title="Abonnements payants (version de test)">
         <p><TexteRiche texte={"**Offres.** Deux abonnements existent : **Premium** (9,99 € TTC par mois ou 90 € TTC par an) et **Ultimate** (14,99 € TTC par mois ou 130 € TTC par an). Les prix sont affichés toutes taxes comprises."} /></p>
+        <p><TexteRiche texte={"**Contenu des offres.** Les cours et les exercices de base sont gratuits. Premium donne accès au reste du site (bac blanc, sujets, outils de révision) et à chaque fonction d’intelligence artificielle une fois par mois ; Ultimate y ajoute une utilisation de l’intelligence artificielle presque illimitée, dans la limite d’un usage raisonnable."} /></p>
         <p><TexteRiche texte={"**Mode test.** Tant que la page des offres affiche « Mode test », aucune vraie carte n’est débitée : seules les cartes de test de Stripe fonctionnent."} /></p>
         <p><TexteRiche texte={"**Paiement.** Le paiement est traité par Stripe, qui reçoit les informations de carte ; RévizSTMG ne les voit ni ne les conserve. L’abonnement est renouvelé automatiquement à chaque échéance et peut être résilié à tout moment depuis « Gérer mon abonnement » ; il reste actif jusqu’à la fin de la période payée."} /></p>
         <p><TexteRiche texte={"**Qui peut s’abonner.** Il faut avoir 18 ans ou l’accord de son représentant légal, ce que la case à cocher avant le paiement confirme."} /></p>

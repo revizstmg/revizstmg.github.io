@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { useLang, usePublicText } from '../i18n.js'
+import { memoriserAbonnement } from '../data/acces.js'
 import { OFFRES, PERIODES, estActif, lireEtatPaiement, demarrerPaiement, ouvrirPortail, prixAffiche } from '../data/abonnement.js'
 
 // Abonnements payants. Tant que la fonction serveur n'est pas en place, rien
@@ -27,6 +28,7 @@ export default function Abonnement() {
         const e = await lireEtatPaiement()
         if (!vivant) return
         setEtat(e)
+        memoriserAbonnement(e.abonnement)
         // Au retour de Stripe, l'abonnement arrive par le webhook : on patiente un peu.
         if (retour === 'ok' && !estActif(e.abonnement) && essais++ < 6) setTimeout(charger, 2500)
       } catch (e) {

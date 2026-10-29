@@ -61,9 +61,9 @@ for(const [width,theme] of [[320,'light'],[1280,'dark']])test(`concours accessib
  expect((await new AxeBuilder({page}).include('main').analyze()).violations).toEqual([])
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true)
 })
-test('sans compte : dossiers lisibles mais pas de copie ni appel de correction',async({page})=>{
- await setup(page,etatEleve({account:null}));await open(page)
- await expect(page.getByText('Les documents sont accessibles sans compte.',{exact:false})).toBeVisible();await expect(page.getByRole('button',{name:'Commencer ma copie',exact:true})).toBeDisabled()
+test('sans compte : le concours est réservé aux abonnés, sans appel de correction',async({page})=>{
+ await setup(page,etatEleve({account:null}));await page.goto('./#/excellence-economique');await attendreAccueil(page)
+ await expect(page.getByRole('heading',{name:'Réservé aux abonnés'})).toBeVisible();await expect(page.getByRole('button',{name:'Commencer ma copie',exact:true})).toHaveCount(0)
 })
 
 test('allemand hors ligne : navigation du concours traduite et documents conservés en français',async({page})=>{

@@ -147,6 +147,7 @@ test('amis : changer de compte sans recharger actualise le côté et le nom du d
   await page.route('https://*.supabase.co/**', route => {
     const req = route.request(), url = new URL(req.url()), path = url.pathname
     const json = body => route.fulfill({ contentType: 'application/json', body: JSON.stringify(body) })
+    if (path.endsWith('/revizstmg-paiement')) return json({ mode: 'test', abonnement: { statut: 'active', offre: 'premium', periode_fin: '2999-01-01T00:00:00Z' } })
     if (path.endsWith('/token')) {
       const body = req.postDataJSON()
       current = body.email === profiles[B].email ? B : current

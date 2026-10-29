@@ -1,3 +1,4 @@
+import {messageAccesIA} from '../data/ia.js'
 import {useEffect,useRef,useState} from 'react'
 import {Link,Navigate} from 'react-router-dom'
 import {createPortal} from 'react-dom'
@@ -34,7 +35,7 @@ function ExcellenceSpace({owner}){
   if(lock.current||!consent||!draft.answer.trim()||!owner)return
   lock.current=true;setBusy(true);setError('');const ac=new AbortController();abort.current=ac
   try{const result=await withControlDeadline(signal=>correctExcellence(selected,draft.answer,owner,signal),ac,150000);if(mounted.current&&!ac.signal.aborted){update({result});setConsent(false);requestAnimationFrame(()=>document.getElementById('excellence-result')?.focus())}}
-  catch(e){if(mounted.current)setError(tr(e.message==='login_required'?'Reconnecte-toi pour faire corriger ta copie.':e.message==='cancelled'?'Attente annulée. Ta copie est conservée.':e.message==='timeout'?'La correction prend trop de temps. Ta copie est conservée ; réessaie.':e.message==='rate_limit'?'Trop de demandes. Patiente avant de réessayer.':e.message==='documents_unavailable'?'Le dossier officiel ne peut pas être chargé pour la correction. Ta copie est conservée ; réessaie plus tard.':['provider_unavailable','provider_unreachable'].includes(e.message)?'Le service de correction est temporairement indisponible. Ta copie est conservée ; réessaie plus tard.':e.message==='invalid_response'?'La correction reçue est incomplète. Aucune note n’a été attribuée. Ta copie est conservée.':'La correction a échoué. Ta copie est conservée ; réessaie.'))}
+  catch(e){if(mounted.current)setError(tr(messageAccesIA(e.message)?messageAccesIA(e.message):e.message==='login_required'?'Reconnecte-toi pour faire corriger ta copie.':e.message==='cancelled'?'Attente annulée. Ta copie est conservée.':e.message==='timeout'?'La correction prend trop de temps. Ta copie est conservée ; réessaie.':e.message==='rate_limit'?'Trop de demandes. Patiente avant de réessayer.':e.message==='documents_unavailable'?'Le dossier officiel ne peut pas être chargé pour la correction. Ta copie est conservée ; réessaie plus tard.':['provider_unavailable','provider_unreachable'].includes(e.message)?'Le service de correction est temporairement indisponible. Ta copie est conservée ; réessaie plus tard.':e.message==='invalid_response'?'La correction reçue est incomplète. Aucune note n’a été attribuée. Ta copie est conservée.':'La correction a échoué. Ta copie est conservée ; réessaie.'))}
   finally{lock.current=false;if(mounted.current)setBusy(false)}
  }
  const elapsed=draft.startedAt?Math.max(0,Math.floor(((draft.submittedAt||now)-draft.startedAt)/1000)):0,left=Math.max(0,14400-elapsed)

@@ -1,3 +1,4 @@
+import {messageAccesIA} from '../data/ia.js'
 import {useEffect,useMemo,useRef,useState} from 'react'
 import {useStore} from '../store.jsx'
 import {usePublicText} from '../i18n.js'
@@ -22,7 +23,7 @@ function Studio({course,themeId,index,color,owner}){
   try{const next=await withControlDeadline(signal=>requestPractice(course,history,owner,signal),ac,150000);if(!mounted.current)return
    setHistory(next);try{localStorage.setItem(practiceKey(course,owner),JSON.stringify(next));setSaveError(false)}catch{setSaveError(true)}
    finished.current=false;setResult(null);setRun(n=>n+1);setPlaying(true);requestAnimationFrame(()=>heading.current?.focus())
-  }catch(e){if(mounted.current)setError(tr(e.message==='login_required'?'Connecte-toi pour créer une série originale.':e.message==='cancelled'?'Attente annulée. Rien n’a été ajouté.':e.message==='timeout'?'La préparation prend trop de temps. Réessaie ou utilise les exercices disponibles ci-dessous.':e.message==='rate_limit'?'Trop de demandes. Patiente avant de réessayer.':e.message==='invalid_response'?'La série reçue ne respecte pas le chapitre ou manque de variété. Elle n’a pas été ajoutée.':e.message==='out_of_scope'?'Ce passage du cours ne permet pas de préparer une série fiable. Les autres exercices restent disponibles.':'Le service qui crée les questions est indisponible pour le moment. Les exercices du chapitre restent disponibles ; réessaie plus tard.'))}
+  }catch(e){if(mounted.current)setError(tr(messageAccesIA(e.message)?messageAccesIA(e.message):e.message==='login_required'?'Connecte-toi pour créer une série originale.':e.message==='cancelled'?'Attente annulée. Rien n’a été ajouté.':e.message==='timeout'?'La préparation prend trop de temps. Réessaie ou utilise les exercices disponibles ci-dessous.':e.message==='rate_limit'?'Trop de demandes. Patiente avant de réessayer.':e.message==='invalid_response'?'La série reçue ne respecte pas le chapitre ou manque de variété. Elle n’a pas été ajoutée.':e.message==='out_of_scope'?'Ce passage du cours ne permet pas de préparer une série fiable. Les autres exercices restent disponibles.':'Le service qui crée les questions est indisponible pour le moment. Les exercices du chapitre restent disponibles ; réessaie plus tard.'))}
   finally{locked.current=false;if(mounted.current)setBusy(false)}
  }
  const done=({correct,total,ratees=[],reussies=[]})=>{
