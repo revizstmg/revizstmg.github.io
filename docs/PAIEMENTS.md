@@ -36,7 +36,7 @@ Décision du propriétaire : **gratuit** = les cours et les exercices de base ; 
 - Les parcours de test simulent un élève Premium (`preparer(page, etat, { abonnement })` dans `tests/parcours/eleve.js` ; `abonnement: null` = compte gratuit).
 
 ### Période de grâce des comptes existants (décision du 29/10/2026)
-Les comptes créés avant le 1er novembre 2026 (00:00 UTC) gardent, sans abonnement, l'accès qu'ils ont aujourd'hui (niveau Ultimate : tous les outils, IA comme avant, 60 demandes par jour au plus) jusqu'au 30 novembre 2026. Un bandeau l'annonce sur les pages réservées. Constantes `COMPTES_ANTERIEURS_A` et `GRACE_JUSQUA` dans `supabase/functions/examen-blanc/acces.js` (copie dans `fiche-vision`), lues aussi par le site ; la date de création vient du compte (`created_at`), vérifiée par le serveur. Pour prolonger ou raccourcir la grâce : changer `GRACE_JUSQUA` et redéployer.
+Les comptes créés avant le 30 octobre 2026 (00:00 UTC) gardent, sans abonnement, l'accès qu'ils ont aujourd'hui (niveau Ultimate : tous les outils, IA comme avant, 60 demandes par jour au plus) jusqu'au 30 novembre 2026. Un bandeau l'annonce sur les pages réservées. Constantes `COMPTES_ANTERIEURS_A` et `GRACE_JUSQUA` dans `supabase/functions/examen-blanc/acces.js` (copie dans `fiche-vision`), lues aussi par le site ; la date de création vient du compte (`created_at`), vérifiée par le serveur. Pour prolonger ou raccourcir la grâce : changer `GRACE_JUSQUA` et redéployer.
 
 ### Ce qu'un navigateur peut et ne peut pas contourner
 
@@ -48,7 +48,7 @@ Les comptes créés avant le 1er novembre 2026 (00:00 UTC) gardent, sans abonnem
 - Migration `revizstmg_ia_usage` appliquée sur le projet `wyydagcjkbivtbuhbzon` (permissions vérifiées : seuls les rôles de service réservent ou rendent une utilisation, un élève ne lit que ses compteurs, un visiteur n'a aucun accès ; aucune alerte du conseiller de sécurité Supabase).
 - `examen-blanc` redéployée (version 30, `verify_jwt: true`), contrôlée fichier par fichier identique au dépôt ; l'ancienne version en ligne l'était aussi avant le changement.
 - `fiche-vision` n'est toujours pas déployée : ne la déployer qu'avec `acces.js` (copie identique, vérifiée par test).
-- Premier essai réel à faire par le propriétaire avec un compte non abonné créé après le 01/11/2026 (refus 402) puis avec un abonné de test (réponse normale).
+- Premier essai réel à faire par le propriétaire avec un compte non abonné créé après le 30/10/2026 (refus 402) puis avec un abonné de test (réponse normale).
 ### Après la relecture par trois agents (29/10/2026) : ce qui a été ajouté
 - **Abonnement de test ≠ abonnement réel.** Le serveur de paiement ignore une ligne dont `mode_test` ne correspond pas au mode de la clé Stripe (test ou réel) et n'applique pas les événements du mode opposé ; `examen-blanc` et `fiche-vision` refusent les lignes de test quand le secret **`ACCES_REFUSE_TEST=1`** est réglé. **À régler au passage en réel**, en même temps que la clé `sk_live_…`, puis remettre à zéro les lignes de test : `update revizstmg_abonnements set statut='aucun', offre=null, periode=null, periode_fin=null, stripe_subscription_id=null, stripe_customer_id=null where mode_test;`
 - **Suppression de compte** : le site appelle d'abord l'action `resilier` de `revizstmg-paiement` (abonnement résilié tout de suite chez Stripe) et arrête la suppression si cela échoue ; un webhook qui arrive pour un compte supprimé résilie l'abonnement et répond 200.

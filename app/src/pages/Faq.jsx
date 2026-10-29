@@ -17,7 +17,7 @@ export default function Faq() {
     ["Comment changer ma photo ou l'apparence du site ?", "Ouvre **ton menu** (ton prénom ou ton initiale) → **« Personnaliser mon profil »** (couleurs, police, avatar, photo…). Cette fonction est réservée à l’application installée : installe RévizSTMG sur ton écran d’accueil pour l’utiliser."],
     ['Qui voit mes informations ?', "Dans ta classe, ton **prénom, ta photo et tes scores** sont visibles par tes camarades et ton professeur. Ton **e‑mail** sert uniquement à la connexion. Détails dans la [[Politique de confidentialité|/confidentialite]]."],
     ['Comment supprimer mon compte ?', "Va dans [[« Mon espace »|/moi]] → tout en bas → **« Supprimer mon compte »**. Ta progression, ta classe, tes amis, tes duels et le suivi parent sont effacés. Ton adresse e-mail de connexion est supprimée en même temps."],
-    ['Le site est‑il gratuit ?', "Les cours et les exercices de base sont gratuits, sans publicité. Le reste (bac blanc, sujets, révision, Grand Oral, boutique, classement…) demande Premium (9,99 € TTC par mois ou 90 € TTC par an) ou Ultimate (14,99 € TTC par mois ou 130 € TTC par an). Si ton compte a été créé avant le 1er novembre 2026, tout reste ouvert jusqu’au 30 novembre 2026. Voir les [[offres|/offres]]."],
+    ['Le site est‑il gratuit ?', "Les cours et les exercices de base sont gratuits, sans publicité. Le reste (bac blanc, sujets, révision, Grand Oral, boutique, classement…) demande Premium (9,99 € TTC par mois ou 90 € TTC par an) ou Ultimate (14,99 € TTC par mois ou 130 € TTC par an). Si ton compte a été créé avant le 30 octobre 2026, tout reste ouvert jusqu’au 30 novembre 2026. Voir les [[offres|/offres]]."],
   ]
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">

@@ -1635,7 +1635,7 @@ Prochaine action :
 - Limite : contrôle côté navigateur ; le quota d'IA doit être appliqué côté serveur avant d'activer l'IA payante. Aucune modification de Supabase dans ce changement.
 - Tests : `tests/acces.test.js`, `tests/parcours/acces.spec.js` ; l'élève de test des parcours est Premium par défaut.
 - Suite (29/10/2026) : blocage de l'IA côté serveur. Migration `20261029100000_revizstmg_ia_usage.sql` (table `revizstmg_ia_usage`, fonctions `revizstmg_ia_reserver` et `revizstmg_ia_rendre` réservées à la clé de service), `supabase/functions/examen-blanc/acces.js` branché dans `handler.js` (copie dans `fiche-vision`, qui exige désormais un compte). Migration appliquée et `examen-blanc` redéployée (version 30) le 29/10/2026 avec l'accord explicite du propriétaire, après vérification de l'état réel de la base et comparaison de la version en ligne avec le dépôt. Tests : `tests/acces-serveur.test.js` (base simulée) et scénarios SQL ajoutés à `supabase/tests/regles-acces.sql`.
-- Période de grâce : comptes créés avant le 01/11/2026 = niveau Ultimate sans abonnement jusqu'au 30/11/2026 (site et serveur), bandeau d'information, tests `acces.test.js`, `acces-serveur.test.js`, `acces.spec.js`.
+- Période de grâce : comptes créés avant le 30/10/2026 = niveau Ultimate sans abonnement jusqu'au 30/11/2026 (site et serveur), bandeau d'information, tests `acces.test.js`, `acces-serveur.test.js`, `acces.spec.js`.
 
 ### ACCES-20261029-CLAUDE-15 - relecture par trois agents et finitions
 - Trois relecteurs indépendants (sécurité, produit et textes, régressions) ont audité l'accès par abonnement ; chaque constat a été vérifié dans le code avant correction. Détail des corrections et des décisions restantes dans `docs/PAIEMENTS.md` (section « Après la relecture »).
