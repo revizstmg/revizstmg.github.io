@@ -13,7 +13,10 @@
 //   supabase secrets set GEMINI_API_KEY=...           # clé gratuite : https://aistudio.google.com/apikey
 //   (facultatif) supabase secrets set GEMINI_MODEL=gemini-2.0-flash
 //
+// Accès : compte connecté (jeton vérifié auprès de Supabase Auth), abonnement Premium ou Ultimate et
+// quota lus côté serveur (acces.js, copie de examen-blanc/acces.js ; voir docs/PAIEMENTS.md).
 // deno-lint-ignore-file no-explicit-any
+import { reserverAccesIA } from './acces.js'
 const CORS: Record<string, string> = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
@@ -42,10 +45,19 @@ const ASK = 'Analyse ce document et renvoie la fiche JSON demandée.'
 Deno.serve(async (req: Request) => {
   if (req.method === 'OPTIONS') return new Response('ok', { headers: CORS })
   if (req.method !== 'POST') return json({ error: 'method_not_allowed' }, 405)
+  let reservation: { rendre: () => Promise<void> } | null = null
+  let reussi = false
   try {
     const geminiKey = Deno.env.get('GEMINI_API_KEY') || Deno.env.get('GOOGLE_API_KEY')
     const anthropicKey = Deno.env.get('ANTHROPIC_API_KEY')
     if (!geminiKey && !anthropicKey) return json({ error: 'not_configured' }, 503)
+
+    const jeton = req.headers.get('authorization') || ''
+    if (!/^Bearer .{20,}/.test(jeton)) return json({ error: 'login_required' }, 401)
+    const auth = await fetch(`${Deno.env.get('SUPABASE_URL')}/auth/v1/user`, {
+      headers: { Authorization: jeton, apikey: Deno.env.get('SUPABASE_ANON_KEY') || '' }, signal: AbortSignal.timeout(10000) })
+    const user = auth.ok ? await auth.json().catch(() => null) : null
+    if (!user?.id || user.is_anonymous) return json({ error: 'login_required' }, 401)
 
     const body = await req.json().catch(() => ({}))
     const rawImages: unknown = (body as any)?.images
@@ -58,13 +70,20 @@ Deno.serve(async (req: Request) => {
     }
     if (!imgs.length) return json({ error: 'no_images' }, 400)
 
+    const acces = await reserverAccesIA({ env: (k: string) => Deno.env.get(k), userId: user.id, creeLe: user.created_at, id: 'photo', suite: false })
+    if (!acces.ok) return json({ error: acces.error }, acces.status)
+    reservation = acces
     const r = geminiKey ? await callGemini(geminiKey, imgs) : await callAnthropic(anthropicKey as string, imgs)
     if (!r.ok) return json({ error: r.error || 'api_error', detail: r.detail }, 502)
     const fiche = parseFiche(r.text || '')
     if (!fiche) return json({ error: 'parse_error' }, 502)
+    reussi = true
     return json({ fiche, provider: geminiKey ? 'gemini' : 'anthropic' }, 200)
   } catch (e) {
     return json({ error: 'server_error', detail: String(e).slice(0, 300) }, 500)
+  } finally {
+    // L'utilisation réservée n'est pas perdue si l'analyse a échoué.
+    if (reservation && !reussi) await reservation.rendre()
   }
 })
 

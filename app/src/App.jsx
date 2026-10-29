@@ -6,6 +6,7 @@ import EcranSecours from './components/EcranSecours.jsx'
 import Introuvable from './pages/Introuvable.jsx'
 import { getLinkedChild } from './parent.js'
 import AvecCompte from './components/CompteRequis.jsx'
+import GardeAcces from './components/Reserve.jsx'
 import { Chargement, ContenuMatiere, ContenuFiliere } from './content/Contenu.jsx'
 
 // Chaque page est un fichier compilé à part, chargé quand on l'ouvre.
@@ -81,6 +82,7 @@ export default function App() {
     <Layout>
       <EcranSecours cle={pathname}>
       <Suspense fallback={<Chargement />}>
+      <GardeAcces>
       <Routes>
         <Route path="/" element={<RootEntry />} />
         <Route path="/exemple-bilan" element={<ExampleStudy />} />
@@ -127,6 +129,7 @@ export default function App() {
         <Route path="/amis" element={<AvecCompte quoi="ajouter des amis et les défier"><ContenuFiliere><Friends /></ContenuFiliere></AvecCompte>} />
         <Route path="*" element={<Introuvable />} />
       </Routes>
+      </GardeAcces>
       </Suspense>
       </EcranSecours>
     </Layout>

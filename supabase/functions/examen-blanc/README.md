@@ -1,6 +1,6 @@
 # Examens blancs personnalisés
 
-Fonction indépendante, aucune table ni migration. `plan` sélectionne dans le
+Fonction indépendante. Seule dépendance de base : le contrôle d'accès (`acces.js`, abonnement et quota d'IA, migration `20261029100000_revizstmg_ia_usage.sql`). `plan` sélectionne dans le
 catalogue des chapitres ; `generate` reçoit uniquement le texte des sections
 confirmées. Le sujet JSON comprend documents fictifs, questions rédigées,
 barème sur 20, corrigé et critères. Les données utilisateur sont séparées des

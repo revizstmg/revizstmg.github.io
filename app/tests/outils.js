@@ -40,3 +40,7 @@ export function serialiser(valeur) {
 export function empreinte(valeur) {
   return createHash('sha256').update(serialiser(valeur)).digest('hex').slice(0, 16)
 }
+
+// Remplace le contrôle d'abonnement de la fonction examen-blanc (acces.js) : ces tests
+// vérifient le contenu des réponses, pas l'accès (voir tests/acces-serveur.test.js).
+export const accesLibre = async () => ({ ok: true, rendre: async () => {} })

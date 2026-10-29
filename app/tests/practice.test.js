@@ -1,3 +1,4 @@
+import { accesLibre } from './outils.js'
 import {test,expect} from 'vitest'
 import {practiceUnits,checkPracticeRequest,checkPracticeResult} from '../../supabase/functions/examen-blanc/practice.js'
 import {practiceTargets,practiceKey} from '../src/data/practice.js'
@@ -23,7 +24,7 @@ test('changer seulement le numéro ou le prénom ne crée pas une nouvelle quest
 
 test('la fonction authentifie avant génération et valide la série produite sans écriture de données',async()=>{
  const {createHandler}=await import('../../supabase/functions/examen-blanc/handler.js');const sent=[]
- const handler=createHandler({env:k=>({GEMINI_API_KEY:'fake',SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake'})[k],fetcher:async(url,o)=>{if(url.includes('/auth/'))return Response.json({id:'u'});sent.push(JSON.parse(o.body));return Response.json({candidates:[{content:{parts:[{text:JSON.stringify(bank())}]}}]})}})
+ const handler=createHandler({acces:accesLibre,env:k=>({GEMINI_API_KEY:'fake',SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake'})[k],fetcher:async(url,o)=>{if(url.includes('/auth/'))return Response.json({id:'u'});sent.push(JSON.parse(o.body));return Response.json({candidates:[{content:{parts:[{text:JSON.stringify(bank())}]}}]})}})
  const request=authorization=>new Request('https://test',{method:'POST',headers:authorization?{Authorization:'Bearer fake'}:{},body:JSON.stringify(body)})
  expect((await handler(request(false))).status).toBe(401);expect(sent).toHaveLength(0)
  const r=await handler(request(true));expect(r.status).toBe(200);expect((await r.json()).practice.questions).toHaveLength(4)

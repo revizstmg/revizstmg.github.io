@@ -1,3 +1,4 @@
+import { accesLibre } from './outils.js'
 import { test,expect } from 'vitest'
 import { checkTutorRequest, checkTutorReply, tutorInstruction } from '../../supabase/functions/examen-blanc/tutor.js'
 import { createHandler } from '../../supabase/functions/examen-blanc/handler.js'
@@ -16,7 +17,7 @@ test('50 reformulations conservent un contexte borné valide, sans limiter la co
 })
 test('55 réponses accessibles sans abonnement',async()=>{
  let plan='premium',count=0
- const handler=createHandler({now:()=>1,env:k=>({SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake',GEMINI_API_KEY:'fake'})[k],fetcher:async url=>{
+ const handler=createHandler({acces:accesLibre,now:()=>1,env:k=>({SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake',GEMINI_API_KEY:'fake'})[k],fetcher:async url=>{
   if(url.includes('/auth/'))return new Response(JSON.stringify({id:'u',app_metadata:{revizstmg_subscription:{plan,expires_at:'2030-01-01'}}}))
   count++;return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify({reply:'Prenons un autre exemple. Quelle est la première étape ?'})}]}}]}))
  }})

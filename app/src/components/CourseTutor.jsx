@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import {reserverIA} from '../data/ia.js'
+import {reserverIA,messageAccesIA} from '../data/ia.js'
 import { useStore } from '../store.jsx'
 import { usePublicText } from '../i18n.js'
 import { getSession, getValidToken } from '../auth.js'
@@ -21,13 +21,14 @@ export default function CourseTutor({course}) {
    const token=await getValidToken()
    if(!owner||!token||getSession()?.user?.id!==owner)throw Error('login_required')
    const next=[...messages,{role:'user',text:question}]
-   reserverIA();const response=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify({action:'tutor',course,messages:next.slice(-19)}),signal:ac.signal})
+   const valider=reserverIA('tuteur',{suite:messages.length>0});const response=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify({action:'tutor',course,messages:next.slice(-19)}),signal:ac.signal})
    const data=await response.json().catch(()=>({}))
    if(!response.ok)throw Error(data.error||'server_error')
+   valider()
    const reply=checkTutorReply(data.tutor)
    if(!mounted.current||ac.signal.aborted||getSession()?.user?.id!==owner)return
    setMessages([...next,{role:'assistant',text:reply.reply}]);setInput('')
-  }catch(e){if(mounted.current)setError(e.message==='login_required'?'Connecte-toi pour discuter avec le tuteur.':e.message==='rate_limit'?'Beaucoup de messages ont été envoyés récemment. Fais une pause puis reprends cette discussion.':e.message==='out_of_scope'?'Revenons au chapitre ouvert : quelle notion veux-tu comprendre ?':'Le tuteur est momentanément indisponible. Ton message est conservé ; réessaie.')}
+  }catch(e){if(mounted.current)setError(messageAccesIA(e.message)?messageAccesIA(e.message):e.message==='login_required'?'Connecte-toi pour discuter avec le tuteur.':e.message==='rate_limit'?'Beaucoup de messages ont été envoyés récemment. Fais une pause puis reprends cette discussion.':e.message==='out_of_scope'?'Revenons au chapitre ouvert : quelle notion veux-tu comprendre ?':'Le tuteur est momentanément indisponible. Ton message est conservé ; réessaie.')}
   finally{clearTimeout(timer);lock.current=false;if(mounted.current){setBusy(false);setPending('')}}
  }
  return <details className="no-print card mt-4 p-4" data-course-tutor>

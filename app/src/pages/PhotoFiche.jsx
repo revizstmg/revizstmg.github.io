@@ -1,4 +1,4 @@
-import { MESSAGE_IA_INDISPONIBLE } from '../data/ia.js'
+import { MESSAGE_IA_INDISPONIBLE, messageAccesIA } from '../data/ia.js'
 import { useRef, useState } from 'react'
 import { Navigate, Link } from 'react-router-dom'
 import { useStore, useStudyTimer } from '../store.jsx'
@@ -136,6 +136,10 @@ export default function PhotoFiche() {
         status: 'error',
         msg: code === 'not_configured'
           ? MESSAGE_IA_INDISPONIBLE
+          : messageAccesIA(code)
+            ? messageAccesIA(code)
+          : code === 'login_required'
+            ? 'Connecte-toi avec ton compte pour analyser une photo.'
           : code === 'rate_limit'
             ? 'La limite temporaire d’analyses est atteinte. Utilise la lecture sur cet appareil ou réessaie plus tard.'
           : code === 'network'
