@@ -81,7 +81,7 @@ test('le mur donne le prix, un retour vers les cours et un moyen de relire son a
   await preparer(page, etatEleve(), { abonnement: null })
   await page.route('**/functions/v1/revizstmg-paiement', (route) => { appels.push(1); return route.fulfill({ contentType: 'application/json', body: JSON.stringify({ mode: 'test', abonnement: null }) }) })
   await page.goto('./#/bac-blanc')
-  await expect(page.getByText(/à partir de 9,99 € TTC par mois/)).toBeVisible()
+  await expect(page.getByText(/à partir de 9,99\s*€\s*TTC par mois/)).toBeVisible()
   await expect(page.getByRole('link', { name: 'Retour aux cours' })).toBeVisible()
   const avant = appels.length
   await page.getByRole('button', { name: 'Vérifier à nouveau mon abonnement' }).click()

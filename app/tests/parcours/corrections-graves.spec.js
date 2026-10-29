@@ -40,10 +40,10 @@ test('Première : le millésime des épreuves est expliqué (B-06)',async({page}
  expect(errors).toEqual([])
 })
 
-test('bilan : l’aveu « prévu dans Premium » est annoncé avant les champs (B-01)',async({page})=>{
+test('bilan : la page annonce qu’elle est réservée à Premium et Ultimate, sans promesse trompeuse (B-01)',async({page})=>{
  const errors=await preparer(page,etatEleve())
  await page.goto('./#/mes-notes');await attendreAccueil(page)
- await expect(page.getByText(/Le bilan expliqué et l’analyse de copie sont prévus dans Premium/).first()).toBeVisible()
+ await expect(page.getByText(/Cette page est réservée à Premium et Ultimate/).first()).toBeVisible()
  expect(await page.getByText(/Tu obtiens un bilan relié au cours/).count()).toBe(0)
  expect(errors).toEqual([])
 })

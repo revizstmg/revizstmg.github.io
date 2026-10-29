@@ -76,7 +76,7 @@ test('les mois offerts exigent les résultats et restent des réservations futur
     await article.getByRole('button', { name: 'Réserver mon mois offert', exact: true }).click()
     await expect(article.getByText('✓ Récompense réservée · à faire vérifier')).toBeVisible()
     await expect(article.getByRole('link', { name: 'Préparer ma demande par e-mail' })).toHaveAttribute('href', /^mailto:revizstmg@gmail.com\?subject=/)
-    await expect(article).toContainText('Aucune activation ni facturation aujourd’hui')
+    await expect(article).toContainText('sans paiement ni renouvellement automatique')
   }
   const state = await etat(page)
   expect(state.shopRewards['premium-month'].status).toBe('reserved')
