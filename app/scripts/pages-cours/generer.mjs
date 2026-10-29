@@ -165,7 +165,7 @@ ${sousTitre ? `<p class="sous-titre">${sousTitre}</p>` : ''}
 ${contenu}
 </main>
 <footer class="pied">
-<p><strong>RévizSTMG</strong> : révision gratuite du bac STMG, en Première et en Terminale. Cours, exercices corrigés, flashcards et sujets au format des épreuves.</p>
+<p><strong>RévizSTMG</strong> : révision du bac STMG, en Première et en Terminale. Cours et exercices corrigés gratuits ; flashcards, sujets au format des épreuves et bacs blancs avec Premium.</p>
 <p><a href="/a-propos/">À propos et sources</a> · <a href="/partager/">Partager une ressource</a> · <a href="/cours/">Tous les cours</a> · <a href="/">Ouvrir l’application</a> · <a href="/#/confidentialite">Confidentialité</a> · <a href="/#/cgu">CGU et mentions légales</a></p>
 </footer>
 </body>
@@ -286,7 +286,7 @@ ${essentiel}
             contenu: `${recap}<article class="cours">${(ch.section.blocks || []).map(bloc).join('\n')}</article>${exemples}${related?`<section><h2>Pour relier les notions</h2><ul>${related}</ul></section>`:''}${provenance(s)}
 <aside class="entrainement">
 <p class="bloc-titre">Entraîne-toi sur ce chapitre</p>
-<p>${nbExos ? `${pluriel(nbExos, 'exercice corrigé', 'exercices corrigés')}, tirés uniquement de ce cours. Retrouve aussi les flashcards et les parcours de révision.` : 'Lis et révise les notions de ce chapitre dans l’application.'} Gratuit.</p>
+<p>${nbExos ? `${pluriel(nbExos, 'exercice corrigé', 'exercices corrigés')}, tirés uniquement de ce cours. Retrouve aussi les flashcards et les parcours de révision avec Premium.` : 'Lis et révise les notions de ce chapitre dans l’application.'} Gratuit.</p>
 <p><a class="bouton" href="${lienApp(s, t, ch.idx)}">${nbExos?'Faire les exercices':'Ouvrir ce chapitre'}</a></p>
 </aside>
 <nav class="voisins" aria-label="Chapitres voisins">${precedent ? `<a href="${precedent.chemin}">← ${echapper(sansEmoji(precedent.ch.title))}</a>` : '<span></span>'}${suivant ? `<a href="${suivant.chemin}">${echapper(sansEmoji(suivant.ch.title))} →</a>` : ''}</nav>`,
@@ -305,7 +305,7 @@ ${essentiel}
     html: page({
       chemin: '/cours/',
       titre: 'Cours du bac STMG, Première et Terminale',
-      description: resume(`Tous les cours du bac STMG en accès libre : ${matieres.length} matières de Première et de Terminale, ${total} chapitres, avec exercices corrigés, flashcards et sujets au format des épreuves. Gratuit.`),
+      description: resume(`Tous les cours du bac STMG en accès libre : ${matieres.length} matières de Première et de Terminale, ${total} chapitres, avec exercices corrigés. Cours et exercices gratuits ; flashcards et sujets au format des épreuves avec Premium.`),
       h1: 'Cours du bac STMG',
       sousTitre: `${matieres.length} matières · ${total} chapitres · Première et Terminale`,
       ariane: [accueilCours],
