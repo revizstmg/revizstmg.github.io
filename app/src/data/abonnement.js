@@ -2,25 +2,37 @@
 // (Stripe Checkout). Les prix viennent du même fichier que le serveur.
 import { OFFRES, PERIODES, estActif } from '../../../supabase/functions/revizstmg-paiement/logique.js'
 import { SUPA_URL, SUPA_ANON } from '../supabase.js'
-import { getValidToken } from '../auth.js'
+import { withNetworkTimeout } from '../networkTimeout.js'
+import { getSession, getValidToken } from '../auth.js'
 
 export { OFFRES, PERIODES, estActif }
 
 async function appeler(corps) {
+  const owner = getSession()?.user?.id
   const token = await getValidToken()
-  if (!token) throw new Error('login_required')
-  let r
+  const current = () => owner && getSession()?.user?.id === owner
+  if (!token || !current()) throw new Error('login_required')
   try {
-    r = await fetch(`${SUPA_URL}/functions/v1/revizstmg-paiement`, {
-      method: 'POST',
-      headers: { apikey: SUPA_ANON, Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify(corps),
-      signal: AbortSignal.timeout(8000),
-    })
-  } catch { throw new Error('network') }
-  const data = await r.json().catch(() => ({}))
-  if (!r.ok) throw new Error(data.error || (r.status === 404 ? 'not_configured' : 'server_error'))
-  return data
+    return await withNetworkTimeout(async signal => {
+      const r = await fetch(`${SUPA_URL}/functions/v1/revizstmg-paiement`, {
+        signal, method: 'POST',
+        headers: { apikey: SUPA_ANON, Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify(corps),
+      })
+      const data = await r.json().catch(() => ({}))
+      if (!current()) throw new Error('login_required')
+      if (!r.ok) {
+        const error = new Error(data.error || (r.status === 404 ? 'not_configured' : 'server_error'))
+        error.status = r.status
+        throw error
+      }
+      return data
+    }, 8000)
+  } catch (error) {
+    if (!current()) throw new Error('login_required')
+    if (error.status || error.message === 'login_required') throw error
+    throw new Error('network')
+  }
 }
 
 export const lireEtatPaiement = () => appeler({ action: 'etat' })

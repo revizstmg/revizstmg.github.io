@@ -1,3 +1,4 @@
+import { accountCode, saveAccountCode } from './accountCode.js'
 // Amis (demandes mutuelles) via Supabase. Modèle « code ami » : chaque élève
 // a un code court à partager ; on envoie une demande à un code, l'ami
 // l'accepte, puis chacun voit la progression de l'autre. Il faut un compte : la
@@ -11,15 +12,10 @@ export const FRIENDS_READY = SUPA_READY
 
 // Code ami stable, stocké localement (6 caractères sans risque de confusion).
 export function friendCode() {
-  try {
-    let c = localStorage.getItem('stmg_friend_code')
-    if (!c) {
-      const A = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
-      c = Array.from({ length: 6 }, () => A[Math.floor(Math.random() * A.length)]).join('')
-      localStorage.setItem('stmg_friend_code', c)
-    }
-    return c
-  } catch { return 'STMGAM' }
+  return accountCode('friend', () => {
+    const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+    return Array.from(crypto.getRandomValues(new Uint8Array(6)), n => alphabet[n % alphabet.length]).join('')
+  })
 }
 export function normFriendCode(s) {
   return String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6)
@@ -27,8 +23,9 @@ export function normFriendCode(s) {
 
 // Publie / met à jour ma fiche pour que mes amis voient mes stats à jour.
 export async function upsertMe({ name, photo, xp, streak, coursesWeek }) {
+  const owner = deviceId()
   const row = {
-    device_id: deviceId(), code: friendCode(),
+    device_id: owner, code: friendCode(),
     name: String(name || '').slice(0, 40),
     photo: photo ? String(photo).slice(0, 40000) : null,
     xp: Math.max(0, Math.min(100000000, Math.round(xp || 0))),
@@ -41,7 +38,7 @@ export async function upsertMe({ name, photo, xp, streak, coursesWeek }) {
   // reprend ce code-là pour afficher le bon.
   const rows = await res.json().catch(() => [])
   const code = rows?.[0]?.code
-  if (code && code !== friendCode()) { try { localStorage.setItem('stmg_friend_code', code) } catch { /* stockage indisponible */ } }
+  if (code && deviceId() === owner) saveAccountCode('friend', owner, code)
 }
 
 export async function findByCode(code) {

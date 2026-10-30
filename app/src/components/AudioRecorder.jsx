@@ -7,40 +7,48 @@ const fmt = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`
 
 export default function AudioRecorder() {
   const supported = typeof navigator !== 'undefined' && navigator.mediaDevices?.getUserMedia && typeof window !== 'undefined' && window.MediaRecorder
+  const [pending, setPending] = useState(false)
+  const active = useRef(false), generation = useRef(0), waiting = useRef(false)
   const [recording, setRecording] = useState(false)
   const [url, setUrl] = useState('')
   const [elapsed, setElapsed] = useState(0)
   const [error, setError] = useState('')
   const recRef = useRef(null)
   const streamRef = useRef(null)
-  const chunksRef = useRef([])
   const tickRef = useRef(null)
   const urlRef = useRef('')
 
-  useEffect(() => () => {
+  useEffect(() => { active.current = true; return () => {
+    active.current = false; generation.current++; waiting.current = false
     try { recRef.current?.state === 'recording' && recRef.current.stop() } catch { /* */ }
     try { streamRef.current?.getTracks().forEach((t) => t.stop()) } catch { /* */ }
     if (urlRef.current) URL.revokeObjectURL(urlRef.current)
     clearInterval(tickRef.current)
-  }, [])
+  } }, [])
 
   const start = async () => {
+    if (waiting.current || recRef.current?.state === 'recording') return
+    waiting.current = true; setPending(true)
+    const request = ++generation.current
+    let ownStream
     setError('')
     if (urlRef.current) { URL.revokeObjectURL(urlRef.current); urlRef.current = ''; setUrl('') }
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
+      ownStream = stream
+      if (!active.current || request !== generation.current) { stream.getTracks().forEach(t => t.stop()); return }
       streamRef.current = stream
       const rec = new MediaRecorder(stream)
-      chunksRef.current = []
-      rec.ondataavailable = (e) => { if (e.data.size) chunksRef.current.push(e.data) }
+      const chunks = []
+      rec.ondataavailable = (e) => { if (e.data.size) chunks.push(e.data) }
       rec.onstop = () => {
         try {
-          const blob = new Blob(chunksRef.current, { type: rec.mimeType || 'audio/webm' })
+          if (!active.current || request !== generation.current) return
+          const blob = new Blob(chunks, { type: rec.mimeType || 'audio/webm' })
           const u = URL.createObjectURL(blob)
           urlRef.current = u
           setUrl(u)
-        } catch { /* */ }
-        streamRef.current?.getTracks().forEach((t) => t.stop())
+        } catch { /* */ } finally { stream.getTracks().forEach(t => t.stop()) }
       }
       rec.start()
       recRef.current = rec
@@ -48,7 +56,10 @@ export default function AudioRecorder() {
       setElapsed(0)
       tickRef.current = setInterval(() => setElapsed((e) => e + 1), 1000)
     } catch {
-      setError('micDenied')
+      ownStream?.getTracks().forEach(t => t.stop())
+      if (active.current && request === generation.current) setError('micDenied')
+    } finally {
+      if (active.current && request === generation.current) { waiting.current = false; setPending(false) }
     }
   }
 
@@ -69,7 +80,7 @@ export default function AudioRecorder() {
 
       <div className="flex items-center gap-3">
         {!recording ? (
-          <button onClick={start} className="flex items-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-semibold text-white shadow-md transition hover:opacity-90" style={{ backgroundColor: '#e11d48' }}>
+          <button disabled={pending} aria-busy={pending} onClick={start} className="flex items-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-semibold text-white shadow-md transition hover:opacity-90" style={{ backgroundColor: '#e11d48' }}>
             ⏺ {url ? 'Réenregistrer' : 'Enregistrer'}
           </button>
         ) : (

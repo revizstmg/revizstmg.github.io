@@ -7,6 +7,7 @@ import { cleanVacancesSummary } from './data/vacancesState.js'
 // l'appareil du parent → une fois relié, l'espace s'ouvre automatiquement.
 // L'élève publie avec son compte ; le parent, sans compte, lit l'instantané par
 // la fonction revizstmg_stats_enfant, qui ne renvoie que la ligne du code donné.
+import { accountCode, saveAccountCode } from './accountCode.js'
 import { SUPA_READY } from './supabase.js'
 import { deviceId } from './leaderboard.js'
 import { enc, send, rpc } from './reseau.js'
@@ -25,14 +26,7 @@ function nouveauCodeParent() {
   return 'P' + Array.from(octets, (o) => ALPHABET_CODE[o % ALPHABET_CODE.length]).join('')
 }
 export function parentCode() {
-  try {
-    let c = localStorage.getItem('stmg_parent_code')
-    if (!c) {
-      c = nouveauCodeParent()
-      localStorage.setItem('stmg_parent_code', c)
-    }
-    return c
-  } catch { return '' }
+  return accountCode('parent', nouveauCodeParent)
 }
 export function normParentCode(s) {
   return String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12)
@@ -41,10 +35,11 @@ export function normParentCode(s) {
 // ÉLÈVE — publie / met à jour l'instantané lu par le parent.
 export async function publishChildStats(snap) {
   if (!PARENT_READY || !snap) return
+  const owner = deviceId()
   const code = parentCode()
   if (!code) throw new Error('Code parent indisponible : partage non envoyé.')
   const row = {
-    device_id: deviceId(),
+    device_id: owner,
     code,
     name: String(snap.name || '').slice(0, 60),
     xp: clampInt(snap.xp, 0, 1e9),
@@ -73,7 +68,7 @@ export async function publishChildStats(snap) {
   // reprend ce code-là pour montrer à l'élève celui que ses parents connaissent.
   const rows = await res.json().catch(() => [])
   const storedCode = rows?.[0]?.code
-  if (storedCode && storedCode !== parentCode()) { try { localStorage.setItem('stmg_parent_code', storedCode) } catch { /* stockage indisponible */ } }
+  if (storedCode && deviceId() === owner) saveAccountCode('parent', owner, storedCode)
 }
 
 // ÉLÈVE — supprime son instantané (rompre le suivi côté enfant). Renvoie vrai si
@@ -88,10 +83,12 @@ export async function deleteMyChildStats() {
 // garde_code) : on efface la ligne, puis on la republie sous un code neuf. Si
 // l'effacement échoue, rien ne change (l'ancien code reste affiché).
 export async function renouvelerCodeParent(snap) {
+  const owner = deviceId()
   if (!PARENT_READY) throw new Error('Suivi parent indisponible.')
   if (!(await deleteMyChildStats())) throw new Error('Le code n’a pas pu être renouvelé : vérifie ta connexion et réessaie.')
+  if (deviceId() !== owner) throw new Error('Session modifiée.')
   const code = nouveauCodeParent()
-  localStorage.setItem('stmg_parent_code', code)
+  saveAccountCode('parent', owner, code)
   if (snap) await publishChildStats(snap)
   return code
 }
