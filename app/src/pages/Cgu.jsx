@@ -24,13 +24,14 @@ export default function Cgu() {
       </Section>
 
       <Section title="1. Objet">
-        <p><TexteRiche texte={"Ces conditions encadrent l’utilisation de RévizSTMG, application gratuite de révision du bac STMG (cours, exercices, flashcards, bacs blancs, espace classe). Utiliser l’application vaut acceptation de ces conditions."} /></p>
+        <p><TexteRiche texte={"Ces conditions encadrent l’utilisation de RévizSTMG, application de révision du bac STMG : cours et exercices de base gratuits, reste du site (flashcards, bacs blancs…) sur abonnement. Utiliser l’application vaut acceptation de ces conditions."} /></p>
       </Section>
 
       <Section title="2. Accès au service">
         <ul className="list-disc space-y-1 pl-5">
-          <li><TexteRiche texte={"L’application est **gratuite**, sans publicité."} /></li>
+          <li><TexteRiche texte={"Les cours et les exercices de base sont **gratuits**, sans publicité. Le reste du site est réservé aux abonnés (voir « Abonnements payants »)."} /></li>
           <li><TexteRiche texte={"Elle s’essaie **sans compte** : la progression reste alors sur l’appareil. Un **compte**  (adresse e-mail et mot de passe, ou Google) sauvegarde ta progression, te permet de la retrouver sur plusieurs appareils et donne accès aux espaces partagés (classe, amis, classement, suivi parent) et au rappel envoyé même quand l’application est fermée. Les informations données doivent être exactes ; le mot de passe est personnel et ne doit pas être partagé."} /></li>
+          <li><TexteRiche texte={"Un abonnement payant demande un compte."} /></li>
           <li><TexteRiche texte={"Pour un élève mineur, l’utilisation suppose l’accord de l’établissement ou du représentant légal."} /></li>
           <li><TexteRiche texte={"Le service est fourni « en l’état ». Les éditeurs font de leur mieux pour qu’il reste disponible, sans pouvoir le garantir (maintenance, panne d’un hébergeur)."} /></li>
         </ul>
@@ -39,13 +40,15 @@ export default function Cgu() {
       <Section title="Boutique virtuelle et récompenses de progression">
         <p><TexteRiche texte={"Les pièces de la boutique sont gagnées dans l’application et n’ont aucune valeur monétaire. Elles ne s’achètent pas en euros. Les objets permanents restent dans la collection ; les gels de série sont consommés lorsqu’ils protègent une journée manquée."} /></p>
         <p><TexteRiche texte={"Les paliers sont récupérables une seule fois. Un mois Premium offert est proposé à partir de 20 000 XP (niveau 20) et de 20 tests de thèmes différents réussis à au moins 90 %. Un mois Ultimate offert est proposé à partir de 73 500 XP (niveau 30) et de 30 tests de thèmes différents réussis à au moins 95 %. Le meilleur résultat de chaque thème compte une seule fois."} /></p>
-        <p><TexteRiche texte={"Premium et Ultimate sont des offres en préparation, sans date de lancement ni tarif annoncé. Premium prévoit l’analyse de copie, un bilan expliqué et un parcours vers les cours. Ultimate ajoute les exercices personnalisés générés, les corrections rédigées et le chatbot de cours. Pendant le développement, les outils restent accessibles aux comptes connectés. Le détail figure dans les [[offres prévues|/offres]]. Réserver une récompense n’active pas un abonnement. Après vérification des résultats par les éditeurs, le mois offert pourra être activé au lancement de l’offre concernée. Un compte est nécessaire ; l’attribution est limitée à un mois par compte et par offre. Aucun paiement, aucune carte bancaire et aucun renouvellement automatique ne sont prévus pour ces mois offerts. Les XP affichés localement ne constituent pas, seuls, une validation."} /></p>
+        <p><TexteRiche texte={"Les offres Premium et Ultimate sont décrites dans la partie « Abonnements payants » et sur la page des [[offres|/offres]]. Réserver une récompense n’active pas un abonnement. Après vérification des résultats par les éditeurs, un mois offert peut être activé sur l’offre concernée. Un compte est nécessaire ; l’attribution est limitée à un mois par compte et par offre. Aucun paiement, aucune carte bancaire et aucun renouvellement automatique ne sont prévus pour ces mois offerts. Les XP affichés localement ne constituent pas, seuls, une validation."} /></p>
         <p><TexteRiche texte={"Le lien « Préparer ma demande par e-mail » ouvre un brouillon dans la messagerie de l’utilisateur ; aucun message n’est envoyé automatiquement. Les demandes sont examinées à  [[revizstmg@gmail.com|mailto:revizstmg@gmail.com]]."} /></p>
       </Section>
 
       <Section title="Abonnements payants (version de test)">
         <p><TexteRiche texte={"**Offres.** Deux abonnements existent : **Premium** (9,99 € TTC par mois ou 90 € TTC par an) et **Ultimate** (14,99 € TTC par mois ou 130 € TTC par an). Les prix sont affichés toutes taxes comprises."} /></p>
         <p><TexteRiche texte={"**Contenu des offres.** Les cours et les exercices de base sont gratuits. Premium donne accès au reste du site (bac blanc, sujets, outils de révision) et à chaque fonction d’intelligence artificielle une fois par mois ; Ultimate y ajoute une utilisation de l’intelligence artificielle presque illimitée, dans la limite d’un usage raisonnable."} /></p>
+        <p><TexteRiche texte={"**Comptes créés avant le 30 octobre 2026.** Ces comptes gardent l’accès complet, aide par IA comprise, jusqu’au 30 novembre 2026 inclus, sans abonnement. Ensuite, ils reviennent à l’offre gratuite, sauf abonnement."} /></p>
+        <p><TexteRiche texte={"**Aide par intelligence artificielle.** Avec Premium, chaque aide par IA s’utilise une fois par mois civil, et ses étapes de suite (messages suivants du tuteur, corrections) sont limitées. Avec Ultimate, il n’y a pas de quota mensuel, mais au plus 60 demandes par jour pour tous les comptes. Une utilisation n’est comptée que si l’aide a répondu."} /></p>
         <p><TexteRiche texte={"**Mode test.** Tant que la page des offres affiche « Mode test », aucune vraie carte n’est débitée : seules les cartes de test de Stripe fonctionnent."} /></p>
         <p><TexteRiche texte={"**Paiement.** Le paiement est traité par Stripe, qui reçoit les informations de carte ; RévizSTMG ne les voit ni ne les conserve. L’abonnement est renouvelé automatiquement à chaque échéance et peut être résilié à tout moment depuis « Gérer mon abonnement » ; il reste actif jusqu’à la fin de la période payée."} /></p>
         <p><TexteRiche texte={"**Qui peut s’abonner.** Il faut avoir 18 ans ou l’accord de son représentant légal, ce que la case à cocher avant le paiement confirme."} /></p>

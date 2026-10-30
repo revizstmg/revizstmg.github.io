@@ -19,9 +19,10 @@ export async function correctExcellence(subjectId,answer,owner,signal){
  const token=await getValidToken();signal.throwIfAborted()
  if(!token||getSession()?.user?.id!==owner)throw Error('login_required')
  const valider=reserverIA('excellence');const r=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify({action:'excellence',subjectId,answer}),signal})
- const data=await r.json().catch(()=>({}));signal.throwIfAborted()
+ const data=await r.json().catch(()=>({}))
  if(!r.ok)throw Error(data.error||(r.status===401?'login_required':'server_error'))
  valider()
+ signal.throwIfAborted()
  if(getSession()?.user?.id!==owner)throw Error('login_required')
  return checkExcellenceResult(data.excellence,answer)
 }

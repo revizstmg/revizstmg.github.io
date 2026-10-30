@@ -36,7 +36,7 @@ test('mode test : case obligatoire, puis paiement Premium mensuel envoyé à Str
   await expect(page.getByText('Mode test.')).toBeVisible()
   const premium = page.getByRole('button', { name: /Mensuel : 9,99/ })
   await expect(premium).toBeDisabled()
-  await expect(page.getByRole('button', { name: /Annuel : 130,00/ })).toBeVisible()
+  await expect(page.getByRole('button', { name: /Annuel : 130 €/ })).toBeVisible()
   await page.getByRole('checkbox', { name: /18 ans/ }).check()
   await expect(premium).toBeEnabled()
   await premium.click()

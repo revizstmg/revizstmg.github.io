@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { readFileSync } from 'node:fs'
 import { createHandler } from '../../supabase/functions/examen-blanc/handler.js'
-import { fonctionIA, niveauDe, niveauCompte, enGrace, QUOTA_IA_MENSUEL, SUITES_PREMIUM, LIMITE_IA_PAR_JOUR } from '../../supabase/functions/examen-blanc/acces.js'
+import { fonctionIA, niveauDe, niveauCompte, enGrace, reserverAccesIA, QUOTA_IA_MENSUEL, SUITES_PREMIUM, LIMITE_IA_PAR_JOUR, JOUR_PAR_FONCTION } from '../../supabase/functions/examen-blanc/acces.js'
 import { estActif } from '../../supabase/functions/revizstmg-paiement/logique.js'
 
 const lire = (p) => readFileSync(new URL(p, import.meta.url), 'utf8')
@@ -11,7 +11,7 @@ const PREMIUM = { statut: 'active', offre: 'premium', periode_fin: '2999-01-01T0
 const ULTIMATE = { ...PREMIUM, offre: 'ultimate' }
 
 // Base et fournisseur d'IA simulés : mêmes appels que la vraie fonction (REST, rpc, Gemini).
-function monde({ abonnement = null, creeLe = '2026-11-02T10:00:00Z', maintenant = MAINTENANT, fournisseur = 'ok', service = 'cle-service', base = 'ok' } = {}) {
+function monde({ abonnement = null, refuserTest = false, creeLe = '2026-11-02T10:00:00Z', maintenant = MAINTENANT, fournisseur = 'ok', service = 'cle-service', base = 'ok' } = {}) {
   const usage = new Map(), appels = { fournisseur: 0 }
   const compteur = (f, p) => usage.get(`${f}|${p}`) || 0
   const fetcher = async (url, init = {}) => {
@@ -35,7 +35,7 @@ function monde({ abonnement = null, creeLe = '2026-11-02T10:00:00Z', maintenant 
     }
     throw new Error(`appel inattendu : ${u}`)
   }
-  const env = (k) => ({ GEMINI_API_KEY: 'fake', SUPABASE_URL: 'https://fake', SUPABASE_ANON_KEY: 'fake', SUPABASE_SERVICE_ROLE_KEY: service })[k]
+  const env = (k) => ({ GEMINI_API_KEY: 'fake', SUPABASE_URL: 'https://fake', SUPABASE_ANON_KEY: 'fake', SUPABASE_SERVICE_ROLE_KEY: service, ACCES_REFUSE_TEST: refuserTest ? '1' : '' })[k]
   const handler = createHandler({ env, fetcher, now: () => maintenant, pause: async () => {} })
   const cours = { id: 'c1', title: 'Cours', subject: 'Gestion', level: 'terminale', text: 'Le cours.' }
   const tuteur = async (messages = [{ role: 'user', text: 'Explique-moi.' }]) => {
@@ -91,7 +91,8 @@ describe('contrôle d’accès de la fonction examen-blanc (IA)', () => {
       const m = monde({ abonnement: PREMIUM, fournisseur })
       expect((await m.nouvelleDiscussion()).status, fournisseur).toBe(502)
       expect(m.compteur('tuteur', '2026-10'), fournisseur).toBe(0)
-      expect(m.compteur('_jour', '2026-10-29'), fournisseur).toBe(0)
+      // Le compteur journalier compte chaque tentative (un échec provoqué en boucle ne le contourne pas).
+      expect(m.compteur('_jour', '2026-10-29'), fournisseur).toBe(1)
     }
   })
   it('Ultimate : pas de quota mensuel, seulement le garde-fou journalier', async () => {
@@ -111,6 +112,32 @@ describe('contrôle d’accès de la fonction examen-blanc (IA)', () => {
   })
 })
 
+describe('abonnement de test et plafonds par fonction', () => {
+  it('au passage en réel (ACCES_REFUSE_TEST), un abonnement issu d’un paiement de test n’ouvre plus rien', async () => {
+    const test = { ...ULTIMATE, mode_test: true }
+    expect((await monde({ abonnement: test }).nouvelleDiscussion()).status).toBe(200) // mode test : accepté
+    expect((await monde({ abonnement: test, refuserTest: true }).nouvelleDiscussion()).status).toBe(402)
+    expect((await monde({ abonnement: { ...ULTIMATE, mode_test: false }, refuserTest: true }).nouvelleDiscussion()).status).toBe(200)
+    expect((await monde({ abonnement: ULTIMATE, refuserTest: true }).nouvelleDiscussion()).status).toBe(402) // mode_test absent : par prudence refusé
+  })
+  it('les fonctions coûteuses ont un plafond journalier, même en Ultimate', async () => {
+    const usage = new Map()
+    const fetcher = async (url, init = {}) => {
+      const u = String(url)
+      if (u.includes('revizstmg_abonnements')) return Response.json([{ ...ULTIMATE, mode_test: false }])
+      const { p_fonction: f, p_periode: p, p_max: max } = JSON.parse(init.body)
+      const k = `${f}|${p}`, n = usage.get(k) || 0
+      if (u.includes('ia_rendre')) { usage.set(k, Math.max(0, n - 1)); return new Response('') }
+      if (n >= max) return Response.json(false)
+      usage.set(k, n + 1); return Response.json(true)
+    }
+    const env = (k) => ({ SUPABASE_URL: 'https://fake', SUPABASE_SERVICE_ROLE_KEY: 'cle' })[k]
+    const essai = () => reserverAccesIA({ env, fetcher, userId: ID, creeLe: null, id: 'photo', suite: false, maintenant: MAINTENANT })
+    for (let i = 0; i < JOUR_PAR_FONCTION.photo; i++) expect((await essai()).ok, `appel ${i + 1}`).toBe(true)
+    expect(await essai()).toEqual({ ok: false, status: 429, error: 'rate_limit' })
+  })
+})
+
 describe('période de grâce des comptes existants', () => {
   const AVANT = '2026-10-01T10:00:00Z', APRES = '2026-11-02T08:00:00Z'
   it('un compte créé avant l’ouverture garde l’accès qu’il a aujourd’hui (niveau Ultimate) pendant la grâce', async () => {
@@ -123,8 +150,8 @@ describe('période de grâce des comptes existants', () => {
     expect((await monde({ creeLe: null }).nouvelleDiscussion()).status).toBe(402)
   })
   it('la grâce se termine à la date prévue', async () => {
-    expect((await monde({ creeLe: AVANT, maintenant: Date.UTC(2026, 10, 29, 23) }).nouvelleDiscussion()).status).toBe(200)
-    expect((await monde({ creeLe: AVANT, maintenant: Date.UTC(2026, 10, 30, 1) }).nouvelleDiscussion()).status).toBe(402)
+    expect((await monde({ creeLe: AVANT, maintenant: Date.UTC(2026, 10, 30, 22) }).nouvelleDiscussion()).status).toBe(200)
+    expect((await monde({ creeLe: AVANT, maintenant: Date.UTC(2026, 11, 1, 1) }).nouvelleDiscussion()).status).toBe(402)
   })
   it('un abonnement Ultimate l’emporte sur la grâce', () => {
     expect(niveauCompte(ULTIMATE, AVANT, MAINTENANT)).toBe('ultimate')

@@ -12,7 +12,7 @@
 //   STRIPE_SECRET_KEY (sk_test_… puis sk_live_…), STRIPE_WEBHOOK_SECRET (whsec_…),
 //   SITE_URL (facultatif, défaut https://revizstmg.github.io).
 // Sans STRIPE_SECRET_KEY, la fonction répond « not_configured » et le site cache les boutons.
-import { cleDePrix, ligneDepuisAbonnement, parametresCheckout, verifierSignature } from './logique.js'
+import { STATUTS_ACTIFS, cleDePrix, ligneDepuisAbonnement, parametresCheckout, verifierSignature } from './logique.js'
 
 const env = (k: string) => Deno.env.get(k) || ''
 const URL_BASE = env('SUPABASE_URL')
@@ -31,10 +31,10 @@ const CORS = {
 const json = (corps: unknown, status = 200) =>
   new Response(JSON.stringify(corps), { status, headers: { ...CORS, 'Content-Type': 'application/json' } })
 
-async function stripe(chemin: string, methode = 'GET', corps?: URLSearchParams) {
+async function stripe(chemin: string, methode = 'GET', corps?: URLSearchParams, entetes: Record<string, string> = {}) {
   const r = await fetch(`https://api.stripe.com${chemin}`, {
     method: methode,
-    headers: { Authorization: `Bearer ${STRIPE}`, ...(corps ? { 'Content-Type': 'application/x-www-form-urlencoded' } : {}) },
+    headers: { Authorization: `Bearer ${STRIPE}`, ...(corps ? { 'Content-Type': 'application/x-www-form-urlencoded' } : {}), ...entetes },
     body: corps,
   })
   const data = await r.json().catch(() => ({}))
@@ -63,7 +63,7 @@ async function utilisateur(req: Request) {
 }
 
 const ligneDuCompte = async (id: string) =>
-  ((await base(`revizstmg_abonnements?user_id=eq.${id}&select=*`)) || [])[0] || null
+  ((await base(`revizstmg_abonnements?user_id=eq.${encodeURIComponent(id)}&select=*`)) || [])[0] || null
 
 async function enregistrer(ligne: Record<string, unknown>) {
   await base('revizstmg_abonnements?on_conflict=user_id', {
@@ -80,6 +80,8 @@ async function webhook(req: Request) {
     return json({ error: 'signature_invalide' }, 400)
   }
   const evenement = JSON.parse(corps)
+  // Un événement du mode opposé (test ou réel) n'est jamais appliqué : aucun abonnement de test en réel.
+  if (evenement.livemode === MODE_TEST) return json({ recu: true, ignore: 'mode' })
   const type: string = evenement.type
   const obj = evenement.data?.object
   let sub: any = null
@@ -88,16 +90,29 @@ async function webhook(req: Request) {
     sub = await stripe(`/v1/subscriptions/${obj.subscription}?expand[]=items.data.price`)
     userId = obj.client_reference_id || sub.metadata?.user_id || null
   } else if (type.startsWith('customer.subscription.')) {
-    sub = obj
     userId = obj.metadata?.user_id || null
     if (!userId && typeof obj.customer === 'string') {
-      const l = ((await base(`revizstmg_abonnements?stripe_customer_id=eq.${obj.customer}&select=user_id`)) || [])[0]
+      const l = ((await base(`revizstmg_abonnements?stripe_customer_id=eq.${encodeURIComponent(obj.customer)}&select=user_id`)) || [])[0]
       userId = l?.user_id || null
     }
+    // État actuel chez Stripe : les événements peuvent arriver dans le désordre.
+    try { sub = await stripe(`/v1/subscriptions/${encodeURIComponent(obj.id)}?expand[]=items.data.price`) } catch { sub = obj }
   }
   if (sub && userId) {
     const ligne = ligneDepuisAbonnement(sub, userId, !evenement.livemode)
-    if (ligne) await enregistrer(ligne)
+    if (ligne) {
+      // Un autre abonnement encore actif est déjà enregistré : l'état d'un ancien ne l'écrase pas.
+      const existante = STATUTS_ACTIFS.includes(sub.status) ? null : await ligneDuCompte(userId)
+      if (existante?.stripe_subscription_id && existante.stripe_subscription_id !== sub.id && STATUTS_ACTIFS.includes(existante.statut)) return json({ recu: true, ignore: 'ancien_abonnement' })
+      try { await enregistrer(ligne) } catch (e) {
+        // Compte supprimé entre-temps : on n'encaisse pas pour un compte qui n'existe plus.
+        if ((e as Error).message === 'base_409') {
+          try { await stripe(`/v1/subscriptions/${encodeURIComponent(sub.id)}`, 'DELETE') } catch { /* déjà résilié */ }
+          return json({ recu: true, ignore: 'compte_supprime' })
+        }
+        throw e
+      }
+    }
   }
   return json({ recu: true })
 }
@@ -108,9 +123,18 @@ async function action(req: Request) {
   const u = await utilisateur(req)
   if (!u) return json({ error: 'login_required' }, 401)
   const corps = await req.json().catch(() => ({}))
-  const ligne = await ligneDuCompte(u.id)
+  const brute = await ligneDuCompte(u.id)
+  // Une ligne issue de l'autre mode (test ou réel) est ignorée : jamais d'abonnement de test en réel.
+  const ligne = brute && brute.mode_test === MODE_TEST ? brute : null
+  const remise = brute && !ligne
+    ? { statut: 'aucun', offre: null, periode: null, periode_fin: null, annulation_prevue: false, stripe_subscription_id: null }
+    : {}
 
-  if (corps.action === 'etat') return json({ mode: MODE_TEST ? 'test' : 'reel', abonnement: ligne })
+  if (corps.action === 'etat') {
+    // Seulement ce que le site affiche : pas les identifiants Stripe.
+    const { offre, periode, statut, periode_fin, annulation_prevue, mode_test } = ligne || {} as Record<string, unknown>
+    return json({ mode: MODE_TEST ? 'test' : 'reel', abonnement: ligne ? { offre, periode, statut, periode_fin, annulation_prevue, mode_test } : null })
+  }
 
   // Client Stripe : créé une fois par compte, retenu en base.
   const clientStripe = async () => {
@@ -118,16 +142,31 @@ async function action(req: Request) {
     const p = new URLSearchParams()
     if (u.email) p.set('email', u.email)
     p.set('metadata[user_id]', u.id)
-    const c = await stripe('/v1/customers', 'POST', p)
-    await enregistrer({ user_id: u.id, stripe_customer_id: c.id, mode_test: MODE_TEST, updated_at: new Date().toISOString() })
+    // Clé d'idempotence : deux demandes simultanées ne créent pas deux clients.
+    const c = await stripe('/v1/customers', 'POST', p, { 'Idempotency-Key': `cus-${u.id}-${MODE_TEST ? 'test' : 'reel'}` })
+    await enregistrer({ user_id: u.id, stripe_customer_id: c.id, mode_test: MODE_TEST, ...remise, updated_at: new Date().toISOString() })
     return c.id as string
+  }
+
+  // Avant la suppression d'un compte : résilie tout de suite l'abonnement (sinon le prélèvement continuerait).
+  if (corps.action === 'resilier') {
+    if (!ligne?.stripe_subscription_id || !STATUTS_ACTIFS.includes(ligne.statut)) return json({ ok: true, aucun: true })
+    try { await stripe(`/v1/subscriptions/${encodeURIComponent(ligne.stripe_subscription_id)}`, 'DELETE') } catch (e) {
+      if (!String((e as Error).message).includes('resource_missing')) throw e
+    }
+    return json({ ok: true })
   }
 
   if (corps.action === 'checkout') {
     if (corps.majeur !== true) return json({ error: 'majeur_requis' }, 400)
     const cle = cleDePrix(corps.offre, corps.periode)
     if (!cle) return json({ error: 'offre_inconnue' }, 400)
-    if (ligne && ['active', 'trialing', 'past_due'].includes(ligne.statut)) return json({ error: 'deja_abonne' }, 409)
+    if (ligne && STATUTS_ACTIFS.includes(ligne.statut)) return json({ error: 'deja_abonne' }, 409)
+    // Contrôle chez Stripe aussi : deux onglets ou un webhook en retard ne doivent pas doubler l'abonnement.
+    if (ligne?.stripe_customer_id) {
+      const existants = await stripe(`/v1/subscriptions?customer=${encodeURIComponent(ligne.stripe_customer_id)}&status=all&limit=10`)
+      if ((existants.data || []).some((a: any) => STATUTS_ACTIFS.includes(a.status))) return json({ error: 'deja_abonne' }, 409)
+    }
     const prix = await stripe(`/v1/prices?lookup_keys[]=${encodeURIComponent(cle)}&active=true&limit=1`)
     const prixId = prix.data?.[0]?.id
     if (!prixId) return json({ error: 'prix_introuvable' }, 503)
