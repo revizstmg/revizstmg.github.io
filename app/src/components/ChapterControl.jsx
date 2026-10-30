@@ -1,5 +1,5 @@
 import { withControlDeadline, CONTROL_WAIT_MS } from '../controlRequest.js'
-import {reserverIA} from '../data/ia.js'
+import {reserverIA,messageAccesIA} from '../data/ia.js'
 import { useEffect, useRef, useState } from 'react'
 import { useStore } from '../store.jsx'
 import { usePublicText } from '../i18n.js'
@@ -24,9 +24,10 @@ export default function ChapterControl({course}) {
    signal.throwIfAborted()
    if(!owner||!token||getSession()?.user?.id!==owner)throw Error('login_required')
    const body={action:'control',step,course,...(step==='prepare'?{previous:previous.current}:{exercise,answer:answer.trim()})}
-   reserverIA();const response=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(body),signal:ac.signal})
+   const valider=reserverIA('controle',{suite:step!=='prepare'});const response=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(body),signal:ac.signal})
    const data=await response.json().catch(()=>({}))
    if(!response.ok)throw Error(data.error||(response.status===401?'login_required':'server_error'))
+   valider()
    signal.throwIfAborted()
    return {control:checkControlResult(data.control,body),preparation:data.preparation==='course'?'course':''}
    },ac,step==='correct'?CONTROL_WAIT_MS:150000)
@@ -35,7 +36,7 @@ export default function ChapterControl({course}) {
     setExercise(checked.control);setPreparation(checked.preparation);setAnswer('');setResult(null);previous.current=[...previous.current,checked.control.question].slice(-5)
     requestAnimationFrame(()=>answerField.current?.focus())
    }else setResult(checked.control)
-  }catch(e){if(mounted.current)setError(e.message==='timeout'?'L’IA met trop de temps à répondre. Ta réponse est conservée ; tu peux réessayer.':e.message==='cancelled'?'Attente annulée. Ta réponse est conservée.':e.message==='login_required'?'Connecte-toi pour créer une question et faire corriger ta réponse.':e.message==='rate_limit'?'Beaucoup de demandes ont été envoyées. Patiente puis réessaie.':['provider_unavailable','provider_unreachable'].includes(e.message)?'Le service de correction est temporairement indisponible. Ta réponse est conservée ; réessaie dans quelques instants.':e.message==='invalid_response'?'La réponse du service est incomplète. Ta réponse est conservée ; réessaie.':['provider_permission','provider_key_invalid','provider_key_restricted','provider_billing_required','not_configured','provider_model_unavailable','provider_configuration','provider_service_disabled'].includes(e.message)?'Le service de correction doit être rétabli par l’équipe du site. Ta réponse est conservée.':e.message==='out_of_scope'?'Ce cours ne permet pas de préparer cette question. Reviens au cours ou essaie une autre question.':'La préparation ou la correction a échoué. Ta réponse est conservée ; réessaie.')}
+  }catch(e){if(mounted.current)setError(messageAccesIA(e.message)?messageAccesIA(e.message):e.message==='timeout'?'L’IA met trop de temps à répondre. Ta réponse est conservée ; tu peux réessayer.':e.message==='cancelled'?'Attente annulée. Ta réponse est conservée.':e.message==='login_required'?'Connecte-toi pour créer une question et faire corriger ta réponse.':e.message==='rate_limit'?'Beaucoup de demandes ont été envoyées. Patiente puis réessaie.':['provider_unavailable','provider_unreachable'].includes(e.message)?'Le service de correction est temporairement indisponible. Ta réponse est conservée ; réessaie dans quelques instants.':e.message==='invalid_response'?'La réponse du service est incomplète. Ta réponse est conservée ; réessaie.':['provider_permission','provider_key_invalid','provider_key_restricted','provider_billing_required','not_configured','provider_model_unavailable','provider_configuration','provider_service_disabled'].includes(e.message)?'Le service de correction doit être rétabli par l’équipe du site. Ta réponse est conservée.':e.message==='out_of_scope'?'Ce cours ne permet pas de préparer cette question. Reviens au cours ou essaie une autre question.':'La préparation ou la correction a échoué. Ta réponse est conservée ; réessaie.')}
   finally{lock.current=false;if(mounted.current)setBusy(false)}
  }
  return <section className="card no-print p-4 sm:p-6" data-chapter-control>

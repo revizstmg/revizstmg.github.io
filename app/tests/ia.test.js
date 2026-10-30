@@ -30,11 +30,14 @@ describe('cadre commun des fonctions d’IA', () => {
   it('la limite journalière s’applique et repart le lendemain', () => {
     const mem = {}
     globalThis.localStorage = { getItem: (k) => mem[k] ?? null, setItem: (k, v) => { mem[k] = String(v) }, removeItem: (k) => { delete mem[k] } }
-    for (let i = 0; i < LIMITE_IA_PAR_JOUR; i++) reserverIA()
+    // Compte Ultimate : pas de quota mensuel, seulement le garde-fou journalier.
+    mem.stmg_session = JSON.stringify({ token: 'jeton-fictif-long-pour-le-test', user: { id: 'u1' }, expires_at: 9999999999 })
+    mem.stmg_acces = JSON.stringify({ uid: 'u1', ligne: { statut: 'active', offre: 'ultimate', periode_fin: '2999-01-01T00:00:00Z' }, verifieLe: Date.now() })
+    for (let i = 0; i < LIMITE_IA_PAR_JOUR; i++) reserverIA('serie')
     expect(utilisationsIA()).toBe(LIMITE_IA_PAR_JOUR)
-    expect(() => reserverIA()).toThrow('rate_limit')
+    expect(() => reserverIA('serie')).toThrow('rate_limit')
     mem.stmg_ia_usage = JSON.stringify({ jour: '2000-01-01', n: 999 })
-    expect(() => reserverIA()).not.toThrow()
+    expect(() => reserverIA('serie')).not.toThrow()
     expect(utilisationsIA()).toBe(1)
     delete globalThis.localStorage
   })

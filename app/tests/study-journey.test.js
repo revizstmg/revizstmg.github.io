@@ -12,7 +12,7 @@ test('exemple : barème cohérent, calculs exacts, contenu séparé des scores r
  expect(DEMO.exercises).toHaveLength(3);expect(new Set(DEMO.exercises.map(e=>e.question)).size).toBe(3)
  expect(DEMO.courseUrl).toContain('/cours/terminale/gestion-et-finance/')
  expect(PLANS.map(p=>p.id)).toEqual(['free','premium','ultimate'])
- expect(PLANS[1].features).toContain('Analyse du sujet et de la copie')
+ expect(PLANS[1].features).toContain('Chaque aide par IA : 1 utilisation par mois')
 })
 test('brouillon par compte : relecture, séparation, effacement et stockage indisponible',()=>{
  const s=storage();expect(writeNoteDraft('a',draft,s)).toBe(true)

@@ -25,15 +25,28 @@ Prix décidés par le propriétaire (TTC) : Premium 9,99 €/mois ou 90 €/an ;
    d'entrée webhook, visible dans le tableau de bord Stripe → Développeurs → Webhooks).
 4. Essayer avec la carte de test `4242 4242 4242 4242`, puis résilier depuis « Gérer mon abonnement ».
 
-## Passage en réel (à ne faire qu'après les points légaux)
-- Entreprise, mentions légales et conditions de vente validées par un juriste (droit de rétractation de 14 jours, contenu numérique
-  fourni immédiatement, TVA, remboursements, abonnement des mineurs). Les textes ajoutés aux CGU sont **provisoires**.
-- Recréer produits, prix (mêmes `lookup_key`), portail et webhook en mode réel ; remplacer les secrets par `sk_live_…` et le
-  `whsec_…` du mode réel. Le site détecte le mode via la clé et retire le bandeau « Mode test ».
-- Décider du contenu de chaque offre avant de verrouiller quoi que ce soit.
+## Ce que donne chaque offre (28/10/2026)
 
-## Limites connues
-- Supprimer son compte supprime la ligne d'abonnement (cascade) mais **n'annule pas l'abonnement chez Stripe** : à brancher avant
-  le passage en réel (annulation dans `revizstmg_supprimer_compte` ou avertissement bloquant).
-- Pas de facture ni de reçu personnalisés (ceux de Stripe sont envoyés selon les réglages du compte).
-- Plafond des demandes : un seul appel de paiement par clic, sans limite serveur supplémentaire.
+Décision du propriétaire : **gratuit** = les cours et les exercices de base ; **Premium** = tout le reste du site (bac blanc, sujets, révision, flashcards, outils de méthode, Grand Oral, étude de gestion, notes, classe, amis…) et **chaque fonction d'IA une fois par mois** ; **Ultimate** = Premium avec l'IA presque illimitée.
+
+- Code : `app/src/data/acces.js` (niveau du compte, liste `PAGES_PAYANTES`, quota `QUOTA_IA_MENSUEL`), `app/src/components/Reserve.jsx` (écran « Réservé aux abonnés » enveloppant toutes les routes), `reserverIA(id)` dans `app/src/data/ia.js`.
+- Modifier ce qui est gratuit : ajouter ou retirer un préfixe dans `PAGES_PAYANTES` (une seule liste, testée par `tests/acces.test.js`).
+- Une « utilisation » d'IA : un contrôle compte à la question (la correction est la suite), un examen personnalisé à la génération (la correction est la suite), le tuteur au début d'une discussion. Ultimate n'a pas de quota mensuel, seulement le garde-fou de 60 demandes par jour.
+- L'abonnement est lu par la fonction `revizstmg-paiement` (action `etat`) et gardé sur l'appareil : sans réseau, un abonné ne perd pas son accès ; une résiliation est vue dès que le serveur répond.
+- Les parcours de test simulent un élève Premium (`preparer(page, etat, { abonnement })` dans `tests/parcours/eleve.js` ; `abonnement: null` = compte gratuit).
+
+### Période de grâce des comptes existants (décision du 29/10/2026)
+Les comptes créés avant le 1er novembre 2026 gardent, sans abonnement, l'accès qu'ils ont aujourd'hui (niveau Ultimate : tous les outils, IA comme avant, 60 demandes par jour au plus) jusqu'au 30 novembre 2026. Un bandeau l'annonce sur les pages réservées. Constantes `COMPTES_ANTERIEURS_A` et `GRACE_JUSQUA` dans `supabase/functions/examen-blanc/acces.js` (copie dans `fiche-vision`), lues aussi par le site ; la date de création vient du compte (`created_at`), vérifiée par le serveur. Pour prolonger ou raccourcir la grâce : changer `GRACE_JUSQUA` et redéployer.
+
+### Ce qu'un navigateur peut et ne peut pas contourner
+
+- **L'IA (ce qui coûte de l'argent) : non contournable.** Le serveur (`examen-blanc` et `fiche-vision`, fichier `acces.js`) lit lui-même l'abonnement (`revizstmg_abonnements`) et compte les utilisations (`revizstmg_ia_usage`, fonctions `revizstmg_ia_reserver` / `revizstmg_ia_rendre`, réservées à la clé de service) **avant** tout appel au fournisseur. Réponses : 402 `abonnement_requis` (gratuit), 403 `quota_mensuel` (Premium : une utilisation par fonction et par mois), 429 `rate_limit` (60 par jour). La réservation est atomique (deux requêtes simultanées ne dépassent pas le quota) et rendue si le fournisseur échoue. Les étapes de suite (message suivant du tuteur, correction d'un contrôle, plan et correction d'un examen) ont un petit plafond mensuel à part (`SUITES_PREMIUM`), pour qu'on ne puisse pas les appeler sans l'étape initiale. Sans clé de service ou si la base ne répond pas, l'accès est refusé. `fiche-vision` exige désormais un compte connecté.
+- **Les pages du site : on ne peut pas les cacher.** Le site est hébergé en statique (GitHub Pages) : son code et ses données sont publics, l'écran « Réservé aux abonnés » (`Reserve.jsx`) guide l'élève mais un utilisateur averti peut l'ignorer. Ce qui est réservé repose surtout sur du code et des cours déjà publics, et l'IA (la seule partie coûteuse) est verrouillée côté serveur. Verrouiller aussi les données sociales (amis, classement) demanderait de modifier les règles RLS de tables RévizSTMG existantes : non fait.
+- Le compteur affiché sur l'appareil (`stmg_ia_mois`) n'est qu'un confort : le serveur a le dernier mot.
+
+### Blocage serveur : appliqué le 29/10/2026 (avec l'accord explicite du propriétaire)
+- Migration `revizstmg_ia_usage` appliquée sur le projet `wyydagcjkbivtbuhbzon` (permissions vérifiées : seuls les rôles de service réservent ou rendent une utilisation, un élève ne lit que ses compteurs, un visiteur n'a aucun accès ; aucune alerte du conseiller de sécurité Supabase).
+- `examen-blanc` redéployée (version 30, `verify_jwt: true`), contrôlée fichier par fichier identique au dépôt ; l'ancienne version en ligne l'était aussi avant le changement.
+- `fiche-vision` n'est toujours pas déployée : ne la déployer qu'avec `acces.js` (copie identique, vérifiée par test).
+- Premier essai réel à faire par le propriétaire avec un compte non abonné créé après le 01/11/2026 (refus 402) puis avec un abonné de test (réponse normale).
+

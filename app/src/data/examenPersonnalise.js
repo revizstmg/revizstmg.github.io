@@ -28,10 +28,12 @@ export async function examReady(signal) {
 export async function requestExam(body, accountId, signal) {
   const token = await getValidToken()
   if (!token || getSession()?.user?.id !== accountId) throw new Error('login_required')
-  reserverIA()
+  // Seule la génération compte : le plan et la correction prolongent la même utilisation.
+  const valider = reserverIA('examen', { suite: body.action === 'plan' || body.action === 'grade' })
   const r = await fetch(`${SUPA_URL}/functions/v1/examen-blanc`, { method: 'POST', headers: { apikey: SUPA_ANON, Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal })
   const data = await r.json().catch(() => ({}))
   if (!r.ok) throw new Error(data.error || (r.status === 401 ? 'login_required' : 'server_error'))
+  valider()
   if (getSession()?.user?.id !== accountId) throw new Error('login_required')
   return body.action === 'plan' ? checkPlan(data.plan, body.catalog) : body.action === 'grade' ? checkGrade(data.grade, body.exam) : checkExam(data.exam, body.courses, body.duration)
 }

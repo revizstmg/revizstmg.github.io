@@ -146,3 +146,28 @@ select ok from (values
   (((select count(*) from class_ban where device_id like 'aaaaaaaa%') = 0), 'exclusions de A effacées'),
   (((select count(*) from class_ban where device_id like 'bbbbbbbb%') = 1), 'exclusion de B conservée')
 ) as v(ok, verification);
+
+-- Compteurs d'IA (revizstmg_ia_usage) : réservation atomique, remboursement, aucun accès direct
+reset role; set role service_role;
+select public.revizstmg_ia_reserver('bbbbbbbb-0000-4000-8000-000000000002', 'tuteur', '2026-10', 1) as ia_premiere_utilisation_acceptee;
+select not public.revizstmg_ia_reserver('bbbbbbbb-0000-4000-8000-000000000002', 'tuteur', '2026-10', 1) as ia_seconde_refusee_au_plafond;
+select public.revizstmg_ia_reserver('bbbbbbbb-0000-4000-8000-000000000002', 'tuteur', '2026-11', 1) as ia_nouveau_mois_accepte;
+select not public.revizstmg_ia_reserver('bbbbbbbb-0000-4000-8000-000000000002', 'serie', '2026-10', 0) as ia_plafond_zero_refuse;
+select public.revizstmg_ia_rendre('bbbbbbbb-0000-4000-8000-000000000002', 'tuteur', '2026-10');
+select public.revizstmg_ia_reserver('bbbbbbbb-0000-4000-8000-000000000002', 'tuteur', '2026-10', 1) as ia_utilisation_rendue_reutilisable;
+select public.revizstmg_ia_rendre('bbbbbbbb-0000-4000-8000-000000000002', 'tuteur', '2026-10');
+select public.revizstmg_ia_rendre('bbbbbbbb-0000-4000-8000-000000000002', 'tuteur', '2026-10');
+select ((select n from public.revizstmg_ia_usage where user_id = 'bbbbbbbb-0000-4000-8000-000000000002' and fonction = 'tuteur' and periode = '2026-10') = 0) as ia_compteur_jamais_negatif;
+select public.revizstmg_ia_reserver('cccccccc-0000-4000-8000-000000000003', 'tuteur', '2026-10', 1) as ia_compteur_propre_a_chaque_compte;
+reset role;
+-- Un élève ne lit que son compteur, ne peut ni l'écrire ni appeler les fonctions de réservation
+set role authenticated; set request.jwt.claims to :B;
+select (public.compte('select 1 from public.revizstmg_ia_usage') = 2) as ia_eleve_ne_lit_que_ses_compteurs;
+select public.refus('update public.revizstmg_ia_usage set n = 0', 'élève : remise à zéro de son compteur');
+select public.refus('insert into public.revizstmg_ia_usage (user_id, fonction, periode, n) values (auth.uid(), ''serie'', ''2026-10'', 0)', 'élève : création d''un compteur');
+select public.refus('delete from public.revizstmg_ia_usage', 'élève : suppression de son compteur');
+select public.refus('select public.revizstmg_ia_reserver(auth.uid(), ''serie'', ''2026-12'', 5)', 'élève : appel direct de la réservation');
+select public.refus('select public.revizstmg_ia_rendre(auth.uid(), ''tuteur'', ''2026-10'')', 'élève : appel direct du remboursement');
+reset role; set role anon;
+select public.refus('select count(*) from public.revizstmg_ia_usage', 'visiteur : lecture des compteurs');
+reset role;

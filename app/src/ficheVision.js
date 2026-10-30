@@ -4,6 +4,7 @@
 // l'appel échoue proprement et l'appli retombe sur l'OCR embarqué.
 import { reserverIA } from './data/ia.js'
 import { SUPA_URL, SUPA_ANON, SUPA_READY } from './supabase.js'
+import { getValidToken } from './auth.js'
 
 export const VISION_READY = SUPA_READY
 
@@ -38,12 +39,16 @@ export async function analyzeWithVision(files) {
   }
   if (!images.length) { const e = new Error('no_images'); e.code = 'no_images'; throw e }
 
-  try { reserverIA() } catch { const e = new Error('rate_limit'); e.code = 'rate_limit'; throw e }
+  // Le serveur exige un compte abonné : il lit lui-même l'abonnement et le quota.
+  const token = await getValidToken()
+  if (!token) { const e = new Error('login_required'); e.code = 'login_required'; throw e }
+  let valider
+  try { valider = reserverIA('photo') } catch (err) { const e = new Error(err.message); e.code = err.message; throw e }
   let res
   try {
     res = await fetch(`${SUPA_URL}/functions/v1/fiche-vision`, {
       method: 'POST',
-      headers: { apikey: SUPA_ANON, Authorization: `Bearer ${SUPA_ANON}`, 'Content-Type': 'application/json' },
+      headers: { apikey: SUPA_ANON, Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({ images }),
     })
   } catch { const e = new Error('network'); e.code = 'network'; throw e }
@@ -54,5 +59,6 @@ export async function analyzeWithVision(files) {
     e.code = data?.error || (res.status === 404 ? 'not_configured' : `http_${res.status}`)
     throw e
   }
+  valider()
   return { fiche: data.fiche, provider: data.provider || 'ia' }
 }

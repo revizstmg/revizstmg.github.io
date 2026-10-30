@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright'
 import { preparer,attendreAccueil } from './eleve.js'
 const ID='00000000-0000-4000-8000-000000000001'
 async function setup(page){
- const errors=await preparer(page)
+ const errors=await preparer(page,undefined,{abonnement:'ultimate'})
  await page.addInitScript(id=>localStorage.setItem('stmg_session',JSON.stringify({token:'test',refresh:'r',expires_at:9999999999,user:{id}})),ID)
  return errors
 }

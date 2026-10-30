@@ -1,3 +1,4 @@
+import { accesLibre } from './outils.js'
 import { describe,it,expect } from 'vitest'
 import { checkStudyRequest, checkStudyResult } from '../../supabase/functions/examen-blanc/study.js'
 import { nouvelleNote } from '../src/notesClasse.js'
@@ -27,13 +28,13 @@ describe('révisions des notes de classe',()=>{
 import { createHandler } from '../../supabase/functions/examen-blanc/handler.js'
 it('refuse un compte anonyme avant tout appel au fournisseur',async()=>{
  let count=0
- const handler=createHandler({env:k=>({GEMINI_API_KEY:'fake',SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake'})[k],fetcher:async url=>{if(!url.includes('/auth/'))count++;return new Response(JSON.stringify({id:'u',is_anonymous:true}))}})
+ const handler=createHandler({acces:accesLibre,env:k=>({GEMINI_API_KEY:'fake',SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake'})[k],fetcher:async url=>{if(!url.includes('/auth/'))count++;return new Response(JSON.stringify({id:'u',is_anonymous:true}))}})
  const response=await handler(new Request('https://fake',{method:'POST',headers:{Authorization:'Bearer fake'},body:JSON.stringify({action:'study',missed:'TVA',courses:[course]})}))
  expect(response.status).toBe(401);expect(count).toBe(0)
 })
 it('produit un bilan validé sans abonnement',async()=>{
  let count=0
- const handler=createHandler({now:()=>1,env:k=>({GEMINI_API_KEY:'fake',SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake'})[k],fetcher:async(url,options)=>{
+ const handler=createHandler({acces:accesLibre,now:()=>1,env:k=>({GEMINI_API_KEY:'fake',SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake'})[k],fetcher:async(url,options)=>{
   if(url.includes('/auth/'))return new Response(JSON.stringify({id:'u',app_metadata:{}}))
   count++;const sent=JSON.parse(options.body);expect(sent.contents[0].parts[0].text).toContain('difficultés déclarées')
   return new Response(JSON.stringify({candidates:[{content:{parts:[{text:JSON.stringify(result)}]}}]}))
