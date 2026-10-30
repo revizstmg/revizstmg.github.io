@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
+import { useFenetreClavier } from './clavier.js'
 import { useT, useLang } from '../i18n.js'
 
 // Révision audio mains-libres : lit à voix haute « terme … définition » pour
@@ -13,14 +15,17 @@ export default function AudioReview({ items = [], color = '#7c3aed', title = '',
   const [idx, setIdx] = useState(0)
   const [playing, setPlaying] = useState(false)
   const [side, setSide] = useState('front')
+  const panel = useRef(null), timer = useRef(null)
   const idxRef = useRef(0)
   const playingRef = useRef(false)
   const genRef = useRef(0) // invalide les callbacks des énoncés annulés
   idxRef.current = idx
   playingRef.current = playing
 
-  const cancel = () => { genRef.current++; try { synth?.cancel() } catch { /* */ } }
-  useEffect(() => () => cancel(), []) // arrêt à la fermeture
+  const cancel = () => { genRef.current++; clearTimeout(timer.current); try { synth?.cancel() } catch { /* */ } }
+  const close = () => { playingRef.current = false; cancel(); onClose?.() }
+  useFenetreClavier(panel, close)
+  useEffect(() => () => { playingRef.current = false; cancel() }, []) // arrêt à la fermeture
 
   const speak = (text, onEnd) => {
     if (!synth) { onEnd?.(); return }
@@ -42,7 +47,8 @@ export default function AudioReview({ items = [], color = '#7c3aed', title = '',
       setSide('back')
       speak(items[i].back, () => {
         if (!playingRef.current) return
-        setTimeout(() => { if (playingRef.current) playFrom(i + 1) }, 450)
+        const generation = genRef.current
+        timer.current = setTimeout(() => { if (playingRef.current && generation === genRef.current) playFrom(i + 1) }, 450)
       })
     })
   }
@@ -58,12 +64,12 @@ export default function AudioReview({ items = [], color = '#7c3aed', title = '',
 
   const card = items[idx] || { front: '', back: '' }
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center bg-slate-900/50 p-4 pt-12 backdrop-blur-sm" onClick={() => { cancel(); onClose?.() }}>
-      <div className="card w-full max-w-md p-5" onClick={(e) => e.stopPropagation()}>
+  return createPortal(
+    <div className="fixed inset-0 z-50 flex items-start justify-center bg-slate-900/50 p-4 pt-12 backdrop-blur-sm" onClick={close}>
+      <div ref={panel} role="dialog" aria-modal="true" aria-label={title || t('audioReview')} className="card w-full max-w-md p-5" onClick={(e) => e.stopPropagation()}>
         <div className="mb-3 flex items-center justify-between">
           <span className="truncate font-display text-lg font-semibold">🔊 {title || t('audioReview')}</span>
-          <button onClick={() => { cancel(); onClose?.() }} className="grid h-8 w-8 place-items-center rounded-full text-slate-400 hover:text-slate-700 dark:hover:text-slate-200" aria-label={t('quit')}>✕</button>
+          <button onClick={close} className="grid h-8 w-8 place-items-center rounded-full text-slate-400 hover:text-slate-700 dark:hover:text-slate-200" aria-label={t('quit')}>✕</button>
         </div>
 
         {!synth ? (
@@ -87,6 +93,6 @@ export default function AudioReview({ items = [], color = '#7c3aed', title = '',
           </>
         )}
       </div>
-    </div>
+    </div>, document.body
   )
 }

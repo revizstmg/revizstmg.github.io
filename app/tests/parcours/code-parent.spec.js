@@ -10,7 +10,7 @@ test('renouveler le code parent : nouveau code de 10 caractères, ancien effacé
   const erreurs = await preparer(page, etatEleve({ parentShare: true }))
   await page.addInitScript((s) => {
     localStorage.setItem('stmg_session', JSON.stringify(s))
-    localStorage.setItem('stmg_parent_code', 'PABC23')
+    localStorage.setItem(`stmg_parent_code:${s.user.id}`, 'PABC23')
     delete window.Notification
   }, SESSION)
   const journal = []
@@ -31,7 +31,7 @@ test('renouveler le code parent : nouveau code de 10 caractères, ancien effacé
   page.once('dialog', (d) => d.accept())
   await page.getByRole('button', { name: 'Renouveler le code' }).click()
   await expect(page.getByText('Nouveau code créé. Donne-le à tes parents.')).toBeVisible()
-  const code = await page.evaluate(() => localStorage.getItem('stmg_parent_code'))
+  const code = await page.evaluate(id => localStorage.getItem(`stmg_parent_code:${id}`), ELEVE)
   expect(code).toMatch(/^P[A-Z2-9]{9}$/)
   await expect(page.getByText(code, { exact: true })).toBeVisible()
   expect(journal.indexOf('delete')).toBeGreaterThanOrEqual(0)

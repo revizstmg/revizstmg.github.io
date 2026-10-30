@@ -43,3 +43,12 @@ describe('séance du jour', () => {
     expect(suivant.themeId === 'gf-t1' ? suivant.chapitre.idx : Infinity).toBeGreaterThan(premier.chapitre.idx)
   })
 })
+
+// L’historique d’une autre filière est conservé mais ne dirige pas la séance.
+it('exclut les erreurs hors filière et les retrouve dans la filière d’origine', () => {
+  const s=vide(), q={q:'TVA',choices:['A','B'],answer:0}
+  s.erreurs=majCarnet([], {themeId:'gf-t1',type:'qcm',ratees:[q]}, '2026-10-18')
+  expect(composerSeance(s,{level:'premiere-stmg'},'2026-10-20').some(e=>e.id==='erreurs')).toBe(false)
+  expect(composerSeance(s,track,'2026-10-20').find(e=>e.id==='erreurs')?.themeId).toBe('gf-t1')
+  expect(s.erreurs).toHaveLength(1)
+})

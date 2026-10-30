@@ -12,10 +12,11 @@ const ERREURS_MAX = 8
 const REVISION_QUESTIONS = 8
 const REUSSI = 80
 
-function etapeErreurs(state, jour) {
+function etapeErreurs(state, track, jour) {
+  const allowed = new Set(realThemes(track).map(t=>t.themeId))
   const groupes = new Map()
   for (const e of erreursDues(state.erreurs, jour)) {
-    if (!ALL_CHAPTERS[e.themeId]) continue
+    if (!allowed.has(e.themeId) || !ALL_CHAPTERS[e.themeId]) continue
     const cle = `${e.themeId}|${e.type}`
     if (!groupes.has(cle)) groupes.set(cle, { themeId: e.themeId, type: e.type, questions: [] })
     groupes.get(cle).questions.push(e.q)
@@ -75,7 +76,7 @@ export function prochainExercice(state, track, themeDepart) {
 export function composerSeance(state, track, jour, themeDepart = null) {
   const avancer = prochainExercice(state, track, themeDepart || state.lastChapter?.chapterId)
   const etapes = [
-    etapeErreurs(state, jour),
+    etapeErreurs(state, track, jour),
     etapeRevision(state, track, jour, avancer?.themeId),
     avancer && {
       id: 'avancer', titre: 'Avancer dans le cours', detail: `${avancer.themeName} · ${avancer.chapitre.title}`, themeId: avancer.themeId, color: avancer.color,
