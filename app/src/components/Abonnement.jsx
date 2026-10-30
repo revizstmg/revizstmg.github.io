@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { useLang, usePublicText } from '../i18n.js'
+import { getSession } from '../auth.js'
 import { memoriserAbonnement } from '../data/acces.js'
 import { OFFRES, PERIODES, estActif, lireEtatPaiement, demarrerPaiement, ouvrirPortail, prixAffiche } from '../data/abonnement.js'
 
@@ -23,7 +24,9 @@ function AbonnementCompte() {
   const active = useRef(false)
   const [retry, setRetry] = useState(0)
   useEffect(() => { active.current = true; return () => { active.current = false } }, [])
-  const connecte = !!state.account?.id
+  const owner = state.account?.id
+  const belongs = () => active.current && owner && getSession()?.user?.id === owner
+  const connecte = !!owner
   const retour = params.get('paiement')
 
   useEffect(() => {
@@ -33,13 +36,13 @@ function AbonnementCompte() {
     const charger = async () => {
       try {
         const e = await lireEtatPaiement()
-        if (!vivant) return
+        if (!vivant || !belongs()) return
         setEtat(e)
         memoriserAbonnement(e.abonnement)
         // Au retour de Stripe, l'abonnement arrive par le webhook : on patiente un peu.
         if (retour === 'ok' && !estActif(e.abonnement) && essais++ < 6) next = setTimeout(charger, 2500)
       } catch (e) {
-        if (vivant) setEtat({ indisponible: true, code: e.message })
+        if (vivant && belongs()) setEtat({ indisponible: true, code: e.message })
       }
     }
     charger()
@@ -54,16 +57,18 @@ function AbonnementCompte() {
   })[code] || 'Le paiement n’a pas pu démarrer. Réessaie plus tard.'
 
   const payer = async (offre, periode) => {
+    if (!belongs()) return
     setErreur(''); setOccupe(true)
     try {
       const { url } = await demarrerPaiement(offre, periode, majeur)
-      if (active.current) window.location.assign(url)
-    } catch (e) { if (active.current) { setErreur(messageErreur(e.message)); setOccupe(false) } }
+      if (belongs()) window.location.assign(url)
+    } catch (e) { if (belongs()) { setErreur(messageErreur(e.message)); setOccupe(false) } }
   }
   const gerer = async () => {
+    if (!belongs()) return
     setErreur(''); setOccupe(true)
-    try { const { url } = await ouvrirPortail(); if (active.current) window.location.assign(url) }
-    catch (e) { if (active.current) { setErreur(messageErreur(e.message)); setOccupe(false) } }
+    try { const { url } = await ouvrirPortail(); if (belongs()) window.location.assign(url) }
+    catch (e) { if (belongs()) { setErreur(messageErreur(e.message)); setOccupe(false) } }
   }
 
   if (!connecte) return <section className="card p-5" aria-labelledby="abo-titre"><h2 id="abo-titre" className="font-display text-xl font-semibold">{tr('S’abonner')}</h2><p className="mt-2 text-sm">{tr('Connecte-toi avec ton compte pour choisir une offre.')}</p></section>

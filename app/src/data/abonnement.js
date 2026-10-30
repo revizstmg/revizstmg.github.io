@@ -21,12 +21,16 @@ async function appeler(corps) {
       })
       const data = await r.json().catch(() => ({}))
       if (!current()) throw new Error('login_required')
-      if (!r.ok) throw new Error(data.error || (r.status === 404 ? 'not_configured' : 'server_error'))
+      if (!r.ok) {
+        const error = new Error(data.error || (r.status === 404 ? 'not_configured' : 'server_error'))
+        error.status = r.status
+        throw error
+      }
       return data
     })
   } catch (error) {
     if (!current()) throw new Error('login_required')
-    if (['login_required','not_configured','server_error','majeur_requis','deja_abonne'].includes(error.message)) throw error
+    if (error.status || error.message === 'login_required') throw error
     throw new Error('network')
   }
 }
