@@ -81,7 +81,7 @@ function MesNotesForm() {
     <div className="animate-lux space-y-5">
       <header className="page-hero page-hero-compact">
         <h1 className="font-display text-3xl font-medium leading-tight">📝 Mes notes de classe</h1>
-        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Ajoute ta note et tes questions manquées, ou dépose ton sujet et ta copie. Le bilan expliqué et l’analyse de copie sont prévus dans Premium ; ils restent accessibles aux comptes connectés pendant le développement.</p>
+        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">Ajoute ta note et tes questions manquées, ou dépose ton sujet et ta copie. Cette page est réservée à Premium et Ultimate.</p>
       </header>
       <p className="text-sm"><Link to="/exemple-bilan" className="underline">Voir un exemple de bilan</Link> · <Link to="/offres" className="underline">Comparer les offres</Link></p>
       <hr className="rule-gold" />

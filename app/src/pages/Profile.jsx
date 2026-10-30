@@ -9,6 +9,7 @@ import { badgeById } from '../badges.js'
 import { Ring, ProgressBar, Icon } from '../components/ui.jsx'
 import { usePublicText, useT } from '../i18n.js'
 import { supprimerCompte, isSignedIn, getSession } from '../auth.js'
+import { resilierAvantSuppression } from '../data/abonnement.js'
 import { pushPossible, activerRappelsPush, desactiverRappelsPush } from '../push.js'
 import { InstallCard, AppBadge } from '../components/InstallApp.jsx'
 import { ProgressCurve, ThemeTimeBars } from '../components/StatsCharts.jsx'
@@ -78,6 +79,9 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
       if (state.account?.id) {
         if (!isSignedIn() || getSession()?.user?.id !== state.account.id) throw new Error('session_changed')
         await desactiverRappelsPush()
+        if (getSession()?.user?.id !== state.account.id) throw new Error('session_changed')
+        // Un abonnement actif est résilié d'abord : sans cela le prélèvement continuerait sur un compte supprimé.
+        await resilierAvantSuppression()
         if (getSession()?.user?.id !== state.account.id) throw new Error('session_changed')
         await supprimerCompte()
       }

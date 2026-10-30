@@ -1,3 +1,4 @@
+import PastillePremium from './PastillePremium.jsx'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useStore } from '../store.jsx'
@@ -69,7 +70,7 @@ export default function OutilsAccueil() {
           <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: 'color-mix(in srgb, var(--c-accent) 14%, transparent)' }} aria-hidden>{principal.icon}</span>
           <span className="min-w-0 flex-1">
             <span className="block text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--c-accent-fort)] dark:text-[var(--c-accent)]">Conseillé maintenant</span>
-            <span className="block font-semibold leading-tight">{principal.label}</span>
+            <span className="block font-semibold leading-tight">{principal.label}<PastillePremium to={principal.to} /></span>
             <span className="block text-xs text-slate-500 dark:text-slate-400">
               {conseil.id === 'bac-blanc' ? `J-${conseil.jours} : entraîne-toi dans les conditions de l’épreuve`
                 : conseil.id === 'revision' ? (conseil.dus > 1 ? `${conseil.dus} thèmes à revoir aujourd’hui` : 'Un thème à revoir aujourd’hui')
@@ -94,7 +95,7 @@ export default function OutilsAccueil() {
               <Link to={o.to} className="flex items-center gap-3 px-4 py-2 text-sm transition hover:bg-[color-mix(in_srgb,var(--c-ink)_5%,transparent)]">
                 <span className="w-6 shrink-0 text-center text-base" aria-hidden>{o.icon}</span>
                 <span className="min-w-0 flex-1">
-                  <span className="block font-medium leading-tight">{o.label}</span>
+                  <span className="block font-medium leading-tight">{o.label}<PastillePremium to={o.to} /></span>
                   {o.sub && <span className="block truncate text-xs text-slate-500 dark:text-slate-400">{o.sub}</span>}
                 </span>
               </Link>

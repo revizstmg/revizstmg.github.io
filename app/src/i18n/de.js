@@ -855,7 +855,7 @@ export default {
   "bulkPlaceholder": "Was ist die Hauptstadt von Frankreich?\n*Paris\nLyon\nMarseille\n= Paris ist die Hauptstadt.",
   "deleteAccount": "Mein Konto löschen",
   "deleteAccountHint": "Lösche dauerhaft deinen Fortschritt, deine Klasse und deine Beiträge, deine Freunde und deine Duelle, die Elternverfolgung und dein Verbindungskonto (einschließlich E-Mail-Adresse).",
-  "deleteAccountConfirm": "dein Konto und alle deine Daten dauerhaft löschen? Diese Aktion ist irreversibel.",
+  "deleteAccountConfirm": "dein Konto und alle deine Daten dauerhaft löschen? Ein laufendes Abo wird sofort gekündigt. Diese Aktion ist irreversibel.",
   "deleteAccountFailed": "Der Löschvorgang war nicht erfolgreich: Überprüfe deine Internetverbindung und versuche es erneut. dein Konto wurde nicht gelöscht.",
   "consentText": "Ich habe die Nutzungsbedingungen und Datenschutzbestimmungen gelesen und akzeptiere sie.",
   "readPrivacy": "Lesen",

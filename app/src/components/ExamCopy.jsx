@@ -1,3 +1,4 @@
+import { usePublicText } from '../i18n.js'
 import {messageAccesIA} from '../data/ia.js'
 import { useEffect, useRef, useState } from 'react'
 import { requestExam } from '../data/examenPersonnalise.js'
@@ -11,6 +12,7 @@ const readFile = file => new Promise((resolve, reject) => {
 })
 export default function ExamCopy({ draft, owner, lang, onGrade, onBusy }) {
  const m = copyMessages[lang] || copyMessages.fr
+ const tr = usePublicText()
  const [files, setFiles] = useState([])
  const [consent, setConsent] = useState(false)
  const [busy, setBusy] = useState(false)
@@ -39,7 +41,7 @@ export default function ExamCopy({ draft, owner, lang, onGrade, onBusy }) {
    const grade = await requestExam({ action: 'grade', prompt: draft.prompt, duration: draft.duration, courses: draft.courses.map(({ id, title, subject, level }) => ({ id, title, subject, level })), exam: draft.exam, files: attachments }, owner, ac.signal)
    if (mounted.current) { onGrade(grade); setFiles([]); setConsent(false) }
   } catch (e) {
-   if (mounted.current) setError(messageAccesIA(e.message) ? messageAccesIA(e.message) : e.message === 'invalid_files' ? m.invalidFiles : e.message === 'too_large' ? m.tooLarge : e.message === 'rate_limit' ? m.limit : e.message === 'login_required' ? m.session : e.message === 'grading_unavailable' ? m.unavailable : e.message === 'invalid_response' ? m.invalid : m.error)
+   if (mounted.current) setError(messageAccesIA(e.message) ? tr(messageAccesIA(e.message)) : e.message === 'invalid_files' ? m.invalidFiles : e.message === 'too_large' ? m.tooLarge : e.message === 'rate_limit' ? m.limit : e.message === 'login_required' ? m.session : e.message === 'grading_unavailable' ? m.unavailable : e.message === 'invalid_response' ? m.invalid : m.error)
   } finally {
    clearTimeout(timeout); locked.current = false
    if (mounted.current) { setBusy(false); onBusy(false) }

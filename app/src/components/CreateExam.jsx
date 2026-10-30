@@ -1,3 +1,4 @@
+import { usePublicText } from '../i18n.js'
 import {messageAccesIA} from '../data/ia.js'
 import ExamChapterPicker from './ExamChapterPicker.jsx'
 import ExamCopy from './ExamCopy.jsx'
@@ -24,6 +25,7 @@ function ExamCard({ title, duration, min, children }) {
 }
 function Creator({ owner, lang, onOpenChange }) {
   const m = examMessages[lang] || examMessages.fr
+  const tr = usePublicText()
   const [mode, setMode] = useState('auto')
   const [selected, setSelected] = useState([])
   const [prompt, setPrompt] = useState('')
@@ -55,7 +57,7 @@ function Creator({ owner, lang, onOpenChange }) {
   const failure = e => {
     const key = e.message
     if (key === 'not_configured') { setAvailable(false); setError(''); return }
-    setError(messageAccesIA(key) ? messageAccesIA(key) : key === 'out_of_scope' ? m.out : key === 'rate_limit' ? m.limit : key === 'login_required' ? m.session : key === 'not_configured' ? m.unavailable : key === 'invalid_response' ? m.invalid : ['too_large', 'invalid_request'].includes(key) ? m.tooLarge : m.error)
+    setError(messageAccesIA(key) ? tr(messageAccesIA(key)) : key === 'out_of_scope' ? m.out : key === 'rate_limit' ? m.limit : key === 'login_required' ? m.session : key === 'not_configured' ? m.unavailable : key === 'invalid_response' ? m.invalid : ['too_large', 'invalid_request'].includes(key) ? m.tooLarge : m.error)
   }
   const run = async action => {
     if (locked.current) return

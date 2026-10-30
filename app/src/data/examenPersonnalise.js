@@ -1,5 +1,5 @@
 import { checkGrade } from '../../../supabase/functions/examen-blanc/grading.js'
-import { reserverIA } from './ia.js'
+import { reserverIA, verifierIA } from './ia.js'
 import { SUBJECTS, chargerTout, themeChapters } from './index.js'
 import { SUPA_URL, SUPA_ANON } from '../supabase.js'
 import { getSession, getValidToken } from '../auth.js'
@@ -28,6 +28,8 @@ export async function examReady(signal) {
 export async function requestExam(body, accountId, signal) {
   const token = await getValidToken()
   if (!token || getSession()?.user?.id !== accountId) throw new Error('login_required')
+  // Le plan ne doit pas être gaspillé si la génération qui le suit serait refusée (quota du mois atteint).
+  if (body.action === 'plan') verifierIA('examen')
   // Seule la génération compte : le plan et la correction prolongent la même utilisation.
   const valider = reserverIA('examen', { suite: body.action === 'plan' || body.action === 'grade' })
   const r = await fetch(`${SUPA_URL}/functions/v1/examen-blanc`, { method: 'POST', headers: { apikey: SUPA_ANON, Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal })

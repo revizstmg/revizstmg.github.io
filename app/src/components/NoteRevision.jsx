@@ -51,7 +51,7 @@ export default function NoteRevision({subject,chapter,missed,owner,result,onResu
  }
  return <section className="space-y-3 rounded-xl border border-slate-300 p-4 dark:border-slate-600" aria-label={tr('Bilan du devoir')}>
   <p className="kicker">Ton prochain progrès</p><h3 className="font-display text-xl">Transformer ce devoir en entraînement</h3>
-  <p className="text-sm">Le bilan et l’analyse de copie sont prévus dans Premium. Ultimate ajoute les exercices générés et l’accompagnement. Ces outils restent accessibles aux comptes connectés pendant le développement.</p>
+  <p className="text-sm">Le bilan et l’analyse de copie sont inclus dans Premium (une utilisation par mois) et presque sans limite avec Ultimate.</p>
   <p className="text-sm"><Link to="/exemple-bilan" className="underline">Voir un exemple de bilan</Link> · <Link to="/offres" className="underline">Comparer les offres</Link></p>
   <details><summary className="cursor-pointer text-sm font-semibold">Déposer mon sujet et ma copie</summary><div className="mt-3 space-y-3">
    <p className="text-xs">PDF ou photos JPEG, PNG, WebP. Trois fichiers par dépôt, 6 Mo au total. Vérifie leur lisibilité : page entière, texte net, bonne lumière, sans reflet. Pour un PDF, vérifie qu’il s’ouvre sans mot de passe. Maximum 30 pages.</p>
