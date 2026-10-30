@@ -1,25 +1,10 @@
 # 📊 Statistiques de RévizSTMG
 
-Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **29 octobre 2026 à 12:16**.
+Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **30 octobre 2026 à 12:10**.
 
 ## 👥 Utilisation
 
-| | |
-|---|---|
-| Comptes | **15** (+4 en 7 jours) — 11 élèves, 4 professeurs |
-| Nouveaux comptes | 4 cette semaine · 5 en 30 jours |
-| Comptes actifs | 1 en 24 h · 6 en 7 jours · 7 en 30 jours |
-| Élèves par niveau | Terminale 9 · Première 2 |
-| Élèves par spécialité | Gestion et Finance 7 · Systèmes d’information de gestion 1 · Ressources humaines & Communication 1 |
-| Classes | 3 classes de professeurs · 2 élèves inscrits |
-| Quiz de classe | 0 · sessions en direct : 0 |
-| Amis | 1 joueurs · 0 défis (0 cette semaine) |
-| Suivi des parents | 0 élèves suivis (0 actifs cette semaine) |
-| Erreurs signalées | 0 à traiter · 0 reçues cette semaine |
-| Visites | 6 hier (23 pages vues) · 92 en 7 jours (413 pages vues) |
-| Écrans les plus vus (7 jours) | accueil 143 · revision 44 · matiere 42 · chapitre 35 · entree 33 · theme 26 · bac-blanc 25 · moi 17 · guide 9 · amis 8 · boutique 7 · classement 6 · classe 4 · defi 2 · badges 2 · formules 2 · programme 2 · introuvable 2 · cgu 1 · paquet 1 · methodo 1 · grand-oral 1 |
-
-> Un compte est « actif » quand sa progression a été synchronisée. Les visites sont comptées sans cookie ni identifiant (une visite = un onglet ouvert sur le site).
+Indisponible aujourd'hui : Supabase injoignable (fetch failed).
 
 ## 📚 Contenu
 
@@ -35,13 +20,14 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 
 - Tests du contenu et de la logique : ✅ réussis
 - Dernière CI sur main : ❌ —
-- Dernière mise en ligne réussie : ✅ 29 octobre 2026 à 11:55
+- Dernière mise en ligne réussie : ✅ 30 octobre 2026 à 09:06
 - Modifications de l'app ces 7 derniers jours : 56
 
 ## 📈 Évolution (14 derniers jours)
 
 | Date | Comptes | Actifs 7 j | Nouveaux 7 j | Visites la veille | Chapitres | Questions |
 |---|---|---|---|---|---|---|
+| 30 oct. | — | — | — | — | 870 | 19 687 |
 | 29 oct. | 15 | 6 | 4 | 6 | 870 | 19 687 |
 | 28 oct. | 15 | 6 | 4 | 2 | 870 | 19 687 |
 | 27 oct. | 15 | 7 | 4 | 0 | 870 | 19 698 |
@@ -55,5 +41,4 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 | 19 oct. | 11 | 2 | 1 | 3 | 806 | 27 332 |
 | 18 oct. | — | — | — | — | 806 | 83 194 |
 | 17 oct. | — | — | — | — | 806 | 83 194 |
-| 16 oct. | — | — | — | — | 806 | 83 194 |
 
