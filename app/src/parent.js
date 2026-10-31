@@ -47,7 +47,11 @@ function ordonner(owner, action) {
 // ÉLÈVE — publie / met à jour l'instantané lu par le parent.
 export function publishChildStats(snap) {
   const owner = deviceId()
-  return ordonner(owner, () => publier(snap))
+  return ordonner(owner, () => publier(snap)).catch(error => {
+    // Un changement de compte annule silencieusement cette ancienne publication.
+    if (deviceId() !== owner) return
+    throw error
+  })
 }
 async function publier(snap) {
   if (!PARENT_READY || !snap) return
