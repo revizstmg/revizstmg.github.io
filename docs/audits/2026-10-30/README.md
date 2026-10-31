@@ -22,7 +22,7 @@ Ces couvertures se recoupent : leurs nombres ne doivent pas être additionnés c
 2. **Retrait du partage parent pendant une publication.** Le client supprime le partage, mais ne rattrape pas un ancien POST terminé après le DELETE. L’ordre des requêtes et l’absence de suppression compensatoire sont reproduits ; la recréation d’une ligne est simulée, pas constatée en production. Corriger le séquencement et prévoir une protection serveur du consentement. Preuve : preuves/parent-consentement.json.
 3. **Disponibilité du créateur d’examen sans délai.** Une requête GET retenue laisse « Vérification » et le bouton d’analyse désactivé après cinq minutes simulées, sans réessai. Ajouter un délai d’arrêt et une reprise explicite. Preuve : dernier scénario de preuves/examens.spec.js ; examens-supplement.log : 4 passed.
 
-Les deux premiers constats sont distincts des anciens défauts de codes locaux corrigés. Ces trois cas ont été corrigés ensuite, à la demande du propriétaire, par #156 (c20e5b0a) et #157 (b4a27b34). La validation générale et la publication de ces nouvelles corrections sont suivies dans le journal de coordination. La campagne d’audit elle-même n’avait pas modifié le produit.
+Les deux premiers constats sont distincts des anciens défauts de codes locaux corrigés. Ces trois cas ont été corrigés ensuite, à la demande du propriétaire, par #156 (c20e5b0a) et #157 (b4a27b34). Livraison confirmée : CI 41198050177 réussie (688 tests unitaires UTC/Paris, 353 parcours), compilation 52334f12 et Pages 41199176704. Quatre contrôles sur l’adresse publique réussis avec réponses externes simulées. La campagne d’audit elle-même n’avait pas modifié le produit.
 
 ## Limites
 
