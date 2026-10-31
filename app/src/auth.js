@@ -273,7 +273,8 @@ export async function upsertProfile(patch) {
     body: JSON.stringify([row]),
   })
   if (!res.ok) throw new Error('profile ' + res.status)
-  const rows = await res.json().catch(() => [])
+  const rows = await withNetworkTimeout(() => res.json())
+  if (getSession()?.user?.id !== s.user.id) throw new Error('La session a changé. Reconnecte-toi.')
   return rows[0] || row
 }
 

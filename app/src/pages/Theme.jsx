@@ -34,7 +34,7 @@ const ongletDemande = (p) => (TABS.some((tb) => tb.id === p) ? p : 'chapitres')
 export default function Theme() {
   const { sid, tid } = useParams()
   const subject = getSubject(sid)
-  const theme = getChapter(tid)
+  const theme = subject?.chapters?.some(chapter => chapter.id === tid) ? getChapter(tid) : null
   const { state, setLastChapter, toggleFavorite, setNote } = useStore()
   const t = useT()
   const [searchParams] = useSearchParams()
@@ -43,7 +43,7 @@ export default function Theme() {
   const [etude, setEtude] = useState(null) // étude de documents du thème en cours
   const [openCats, setOpenCats] = useState({}) // catégories de chapitres dépliées
   useEffect(() => { setOpenCats({}) }, [tid]) // on repart d'un état neuf par thème
-  useThemeTimer(tid) // mesure le temps de révision passé sur ce thème
+  useThemeTimer(theme ? tid : null) // mesure le temps de révision passé sur ce thème
 
   useEffect(() => {
     if (theme) setLastChapter(sid, tid)

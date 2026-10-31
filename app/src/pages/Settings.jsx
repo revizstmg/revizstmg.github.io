@@ -2,7 +2,7 @@ import {useEffect,useRef,useState} from 'react'
 import {Link,Navigate,useSearchParams} from 'react-router-dom'
 import {useStore} from '../store.jsx'
 import {useT} from '../i18n.js'
-import {isSignedIn,upsertProfile,updatePassword} from '../auth.js'
+import {getSession,isSignedIn,upsertProfile,updatePassword} from '../auth.js'
 import {nomValide,motDePasseValide} from '../formulaires.js'
 import {settingsMessages} from '../i18n/settings.js'
 import NavigationTabs from '../components/NavigationTabs.jsx'
@@ -39,7 +39,7 @@ function SettingsContent(){
  },[view])
  if(!state.track)return <Navigate to="/" replace/>
  if(invalid)return <Navigate to="/parametres" replace/>
- const save=async(event)=>{event.preventDefault();setError('');setMessage('');if(!nomValide(first)||!nomValide(last,{obligatoire:false})){setError(m.identityError);return}if(state.account?.id&&!isSignedIn()){setError(m.login);return}setBusy(true);try{if(isSignedIn())await upsertProfile({name:`${first.trim()} ${last.trim()}`.trim(),photo:photo||null});setProfile({...state.profile,firstName:first.trim(),lastName:last.trim(),photo:photo||undefined});setMessage(m.saved)}catch{setError(m.offline)}finally{setBusy(false)}}
+ const save=async(event)=>{event.preventDefault();setError('');setMessage('');if(!nomValide(first)||!nomValide(last,{obligatoire:false})){setError(m.identityError);return}if(state.account?.id&&!isSignedIn()){setError(m.login);return}setBusy(true);try{if(isSignedIn())await upsertProfile({name:`${first.trim()} ${last.trim()}`.trim(),photo:photo||null});if(getSession()?.user?.id!==state.account?.id)return;setProfile({...state.profile,firstName:first.trim(),lastName:last.trim(),photo:photo||undefined});setMessage(m.saved)}catch{setError(m.offline)}finally{setBusy(false)}}
  const changePassword=async(event)=>{event.preventDefault();setError('');setMessage('');if(!motDePasseValide(password)){setError(m.passwordHelp);return}if(password!==confirmation){setError(m.mismatch);return}if(!isSignedIn()){setError(m.login);return}setBusy(true);try{await updatePassword(password);setPassword('');setConfirmation('');setMessage(m.changed)}catch(e){setError(e?.message||m.offline)}finally{setBusy(false)}}
  const choosePhoto=async(event)=>{const file=event.target.files?.[0];event.target.value='';if(!file)return;setError('');if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>5*1024*1024){setError(m.invalidPhoto);return}setPhotoBusy(true);let url;try{url=URL.createObjectURL(file);const image=new Image();image.src=url;await image.decode();const canvas=document.createElement('canvas');canvas.width=canvas.height=160;const ctx=canvas.getContext('2d');const scale=Math.max(160/image.width,160/image.height),w=image.width*scale,h=image.height*scale;ctx.drawImage(image,(160-w)/2,(160-h)/2,w,h);setPhoto(canvas.toDataURL('image/jpeg',.85))}catch{setError(m.invalidPhoto)}finally{if(url)URL.revokeObjectURL(url);setPhotoBusy(false)}}
  const linkTo=(g,l)=>`/parametres?rubrique=${g}${l?'&reglage='+l:''}`

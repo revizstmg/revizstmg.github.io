@@ -1204,7 +1204,6 @@
   "et les": "و",
   "définitions": "التعريفات",
   "1. Photographie ton cours 📷": "1. صوّر درسك 📷",
-  "Une ou plusieurs pages (jusqu’à 8). Cadre bien, à plat, avec de la lumière.": "صفحة واحدة أو أكثر (حتى 8). اضبط الإطار جيدًا والورقة مسطّحة وبإضاءة جيدة.",
   "📷 Ajouter une photo": "📷 إضافة صورة",
   "2. Vérifie le texte ✏️": "2. راجع النص ✏️",
   "Corrige les erreurs de lecture si besoin — ou saisis / colle directement ton cours ici (sans photo).": "صحّح أخطاء القراءة عند الحاجة — أو اكتب درسك أو الصقه هنا مباشرة (دون صورة).",
@@ -3190,5 +3189,7 @@
   "**Stripe** (paiement, reçus, portail « Gérer mon abonnement »), seulement si tu t’abonnes : il reçoit ton adresse e-mail, ton identifiant de compte et les informations de paiement, avec d’éventuels transferts hors de l’Union européenne encadrés par ses engagements contractuels.": "**Stripe** (الدفع والإيصالات وبوابة «إدارة اشتراكي»)، فقط إذا اشتركت: يتلقى عنوان بريدك الإلكتروني ومعرّف حسابك وبيانات الدفع، مع إمكانية نقل البيانات خارج الاتحاد الأوروبي بموجب التزاماته التعاقدية.",
   "Si tu as un abonnement, il est **résilié immédiatement** quand tu supprimes ton compte. Stripe conserve les données de paiement et les factures le temps exigé par la loi.": "إذا كان لديك اشتراك فإنه **يُلغى فورًا** عند حذف حسابك. تحتفظ Stripe ببيانات الدفع والفواتير للمدة التي يفرضها القانون.",
   "Les cours et les exercices de base sont gratuits, sans publicité. Le reste (bac blanc, sujets, révision, Grand Oral, boutique, classement…) demande Premium (9,99 € TTC par mois ou 90 € TTC par an) ou Ultimate (14,99 € TTC par mois ou 130 € TTC par an). Si ton compte a été créé avant le 30 octobre 2026, tout reste ouvert jusqu’au 30 novembre 2026. Voir les [[offres|/offres]].": "الدروس والتمارين الأساسية مجانية وبلا إعلانات. أما بقية الموقع (الامتحان التجريبي والمواضيع والمراجعة والامتحان الشفوي الكبير والمتجر والترتيب…) فيتطلب Premium (9,99 يورو شاملة الضريبة شهريًا أو 90 يورو شاملة الضريبة سنويًا) أو Ultimate (14,99 يورو شاملة الضريبة شهريًا أو 130 يورو شاملة الضريبة سنويًا). إذا أُنشئ حسابك قبل 30 أكتوبر 2026 فكل شيء يبقى مفتوحًا حتى 30 نوفمبر 2026. انظر [[الباقات|/offres]].",
-  "**Comptes créés avant le 30 octobre 2026.** Ces comptes gardent l’accès complet, aide par IA comprise, jusqu’au 30 novembre 2026 inclus, sans abonnement. Ensuite, ils reviennent à l’offre gratuite, sauf abonnement.": "**الحسابات المنشأة قبل 30 أكتوبر 2026.** تحتفظ هذه الحسابات بالوصول الكامل، بما فيه المساعدة بالذكاء الاصطناعي، حتى 30 نوفمبر 2026 شاملًا، دون اشتراك. بعد ذلك تعود إلى العرض المجاني ما لم يكن هناك اشتراك."
+  "**Comptes créés avant le 30 octobre 2026.** Ces comptes gardent l’accès complet, aide par IA comprise, jusqu’au 30 novembre 2026 inclus, sans abonnement. Ensuite, ils reviennent à l’offre gratuite, sauf abonnement.": "**الحسابات المنشأة قبل 30 أكتوبر 2026.** تحتفظ هذه الحسابات بالوصول الكامل، بما فيه المساعدة بالذكاء الاصطناعي، حتى 30 نوفمبر 2026 شاملًا، دون اشتراك. بعد ذلك تعود إلى العرض المجاني ما لم يكن هناك اشتراك.",
+  "Une ou plusieurs pages (jusqu’à 4). Cadre bien, à plat, avec de la lumière.": "صفحة واحدة أو أكثر (حتى 4). اضبط الإطار جيدًا والورقة مسطّحة وبإضاءة جيدة.",
+  "Tu peux sélectionner jusqu’à 4 pages. Ajoute les autres pages dans une nouvelle fiche.": "يمكنك اختيار حتى 4 صفحات. أضف الصفحات الأخرى إلى ورقة مراجعة جديدة."
 }
