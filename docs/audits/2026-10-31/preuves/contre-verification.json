@@ -1,0 +1,42 @@
+[
+  {
+    "test": "parent : retrait quand le corps de publication reste suspendu",
+    "status": "unexpected",
+    "results": [
+      {
+        "status": "failed",
+        "error": "Error: Le retrait doit pouvoir progresser sans attendre indéfiniment le corps JSON du POST\n\nexpect(received).toBeGreaterThan(expected)\n\nExpected: > 0\nReceived:   0"
+      }
+    ]
+  },
+  {
+    "test": "profil : corps de sauvegarde A tardif après passage à B",
+    "status": "unexpected",
+    "results": [
+      {
+        "status": "failed",
+        "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"Bob\"\nReceived: \"Ancien A\""
+      }
+    ]
+  },
+  {
+    "test": "audit2: mauvaise association matiere theme apres chargement",
+    "status": "unexpected",
+    "results": [
+      {
+        "status": "failed",
+        "error": "Error: expect(locator).toBeVisible() failed\n\nLocator: getByRole('heading', { name: 'Page introuvable' })\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 10000ms\n  - waiting for getByRole('heading', { name: 'Page introuvable' })\n"
+      }
+    ]
+  },
+  {
+    "test": "audit2: cinq photos selectionnees et nombre envoye au fournisseur",
+    "status": "unexpected",
+    "results": [
+      {
+        "status": "failed",
+        "error": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 5\nReceived: 4"
+      }
+    ]
+  }
+]
