@@ -1,0 +1,15 @@
+[
+  {
+    "body": [
+      {
+        "from_device": "00000000-0000-4000-8000-000000000002",
+        "from_name": "Léa Test",
+        "from_code": "D2KZ8F",
+        "to_device": "00000000-0000-4000-8000-000000000003",
+        "to_name": "C Audit",
+        "status": "pending"
+      }
+    ],
+    "authorization": "Bearer token-B"
+  }
+]

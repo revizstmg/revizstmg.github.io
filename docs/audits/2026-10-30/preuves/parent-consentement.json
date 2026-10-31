@@ -1,0 +1,9 @@
+{
+  "calls": [
+    "DELETE",
+    "POST",
+    "DELETE"
+  ],
+  "exists": true,
+  "consent": "false"
+}
