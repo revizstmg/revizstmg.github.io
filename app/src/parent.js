@@ -1,3 +1,4 @@
+import { withNetworkTimeout } from './networkTimeout.js'
 import { cleanVacancesSummary } from './data/vacancesState.js'
 // Espace parent (suivi parental) via Supabase, sur le même modèle « appareil +
 // code » que les amis : l'élève publie un instantané de ses stats sous un code
@@ -86,7 +87,7 @@ async function publier(snap) {
   const res = await send('POST', 'child_stats?on_conflict=device_id', [row], 'resolution=merge-duplicates,return=representation')
   // La base garde le premier code du compte : depuis un autre appareil, on
   // reprend ce code-là pour montrer à l'élève celui que ses parents connaissent.
-  const rows = await res.json().catch(() => [])
+  const rows = await withNetworkTimeout(() => res.json()).catch(() => [])
   const storedCode = rows?.[0]?.code
   if (storedCode && deviceId() === owner) saveAccountCode('parent', owner, storedCode)
 }

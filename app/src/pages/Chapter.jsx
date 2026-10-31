@@ -18,7 +18,7 @@ import { useT, useGameLabel } from '../i18n.js'
 export default function Chapter() {
   const { sid, tid, cidx } = useParams()
   const subject = getSubject(sid)
-  const theme = getChapter(tid)
+  const theme = subject?.chapters?.some(chapter => chapter.id === tid) ? getChapter(tid) : null
   const { state, saveDeck, setLastChapter } = useStore()
   const t = useT()
   const navigate = useNavigate()
@@ -26,7 +26,7 @@ export default function Chapter() {
   const [activeGame, setActiveGame] = useState(null)
   const [memoryOpen,setMemoryOpen]=useState(false)
   const [tab, setTab] = useState('cours') // Cours / Définitions / Exercices
-  useThemeTimer(tid) // mesure le temps de révision passé sur ce thème
+  useThemeTimer(theme ? tid : null) // mesure le temps de révision passé sur ce thème
   // Un jeu ouvert doit s'afficher depuis son début, pas depuis la position de la liste.
   useEffect(() => { if (activeGame) window.scrollTo(0, 0) }, [activeGame])
 

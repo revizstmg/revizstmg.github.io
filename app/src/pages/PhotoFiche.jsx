@@ -4,7 +4,7 @@ import { Navigate, Link } from 'react-router-dom'
 import { useStore, useStudyTimer } from '../store.jsx'
 import { buildFiche } from '../data/ficheAI.js'
 import { ocrImages, cleanOcrText } from '../ocr.js'
-import { analyzeWithVision } from '../ficheVision.js'
+import { analyzeWithVision, MAX_VISION_IMAGES } from '../ficheVision.js'
 import { useT, usePublicText } from '../i18n.js'
 
 // Petit titre de section de fiche.
@@ -72,6 +72,7 @@ export default function PhotoFiche() {
   const { state, saveFiche, removeFiche, saveDeck } = useStore()
   const t = useT(), tr = usePublicText()
   useStudyTimer()
+  const [photoError, setPhotoError] = useState('')
   const [photos, setPhotos] = useState([]) // { file, url }
   const [rawText, setRawText] = useState('')
   const [title, setTitle] = useState('')
@@ -87,8 +88,14 @@ export default function PhotoFiche() {
   const fiches = state.fiches || []
 
   const addPhotos = (files) => {
-    const arr = [...files].filter((f) => f.type?.startsWith('image/')).map((f) => ({ file: f, url: URL.createObjectURL(f) }))
-    setPhotos((p) => [...p, ...arr].slice(0, 8))
+    const images = [...files].filter((f) => f.type?.startsWith('image/'))
+    if (photos.length + images.length > MAX_VISION_IMAGES) {
+      setPhotoError('Tu peux sélectionner jusqu’à 4 pages. Ajoute les autres pages dans une nouvelle fiche.')
+      return
+    }
+    setPhotoError('')
+    const arr = images.map((file) => ({ file, url: URL.createObjectURL(file) }))
+    setPhotos((p) => [...p, ...arr])
   }
   const removePhoto = (i) => setPhotos((p) => { try { URL.revokeObjectURL(p[i]?.url) } catch { /* */ } return p.filter((_, k) => k !== i) })
 
@@ -187,7 +194,8 @@ export default function PhotoFiche() {
       {/* Étape 1 — Photo */}
       <section className="card card-lux p-5">
         <h2 className="mb-1 font-display text-lg font-semibold">1. Photographie ton cours 📷</h2>
-        <p className="mb-3 text-sm text-slate-500 dark:text-slate-400">Une ou plusieurs pages (jusqu’à 8). Cadre bien, à plat, avec de la lumière.</p>
+        <p className="mb-3 text-sm text-slate-500 dark:text-slate-400">Une ou plusieurs pages (jusqu’à 4). Cadre bien, à plat, avec de la lumière.</p>
+        {photoError && <p role="alert" className="mb-3 text-sm">{tr(photoError)}</p>}
         <input ref={fileRef} type="file" accept="image/*" capture="environment" multiple className="hidden" onChange={(e) => { addPhotos(e.target.files); e.target.value = '' }} />
         <button onClick={() => fileRef.current?.click()} className="btn-gold w-full !py-3.5 text-base">📷 Ajouter une photo</button>
         {photos.length > 0 && (

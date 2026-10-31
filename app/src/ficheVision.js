@@ -6,6 +6,7 @@ import { reserverIA } from './data/ia.js'
 import { SUPA_URL, SUPA_ANON, SUPA_READY } from './supabase.js'
 import { getValidToken } from './auth.js'
 
+export const MAX_VISION_IMAGES = 4
 export const VISION_READY = SUPA_READY
 
 // Réduit une image (File) en dataURL JPEG compressée : moins de poids à envoyer
@@ -33,10 +34,9 @@ export function fileToScaledDataURL(file, maxDim = 1600, quality = 0.82) {
 // Analyse les photos avec l'IA. Renvoie { title, questions, keyInfo, definitions }.
 // Lève une erreur (err.code) en cas d'échec (dont 'not_configured').
 export async function analyzeWithVision(files) {
+  if (files.length > MAX_VISION_IMAGES) { const e = new Error('too_many_images'); e.code = 'too_many_images'; throw e }
   const images = []
-  for (const f of files.slice(0, 4)) {
-    try { images.push(await fileToScaledDataURL(f)) } catch { /* image ignorée */ }
-  }
+  for (const f of files) images.push(await fileToScaledDataURL(f))
   if (!images.length) { const e = new Error('no_images'); e.code = 'no_images'; throw e }
 
   // Le serveur exige un compte abonné : il lit lui-même l'abonnement et le quota.
