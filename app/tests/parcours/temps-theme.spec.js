@@ -4,8 +4,9 @@ import { preparer, attendreAccueil, etat } from './eleve.js'
 test('une courte visite et une séance guidée sont attribuées au thème', async ({ page }) => {
  const errors = await preparer(page)
  await page.clock.install()
- await page.goto('./#/subject/gf/theme/gf-t1')
+ await page.goto('./#/subject/gestion-finance/theme/gf-t1')
  await attendreAccueil(page)
+ await expect(page.getByRole('heading',{level:1})).toContainText(/comptables/i)
  await page.clock.runFor(2500)
  await page.evaluate(() => { location.hash = '#/moi' })
  await expect.poll(async () => (await etat(page)).themeTime?.['gf-t1'] || 0).toBeGreaterThan(2)
