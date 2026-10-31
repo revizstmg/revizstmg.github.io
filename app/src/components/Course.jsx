@@ -302,7 +302,7 @@ export function PaginatedCourse({ sec, color, prevLabel, onPrev, themeId, subjec
               <div className="animate-lux space-y-6 text-[1.06rem] leading-relaxed">
                 {(list[page] || []).map((b, j) => <Block key={j} b={b} color={color} />)}
               </div>
-              <div className="mt-8 border-t border-slate-200 pt-3 text-end text-[11px] font-medium text-slate-400 dark:border-slate-700">{t('pageWord')} {page + 1} / {list.length}</div>
+              <div className="mt-8 border-t border-slate-200 pt-3 text-end text-[11px] font-medium dark:border-slate-700" style={{color: 'var(--c-ink)'}}>{t('pageWord')} {page + 1} / {list.length}</div>
             </div>
           </div>
           <div className="reader-actions shrink-0 border-t border-slate-300/60 px-4 py-3 dark:border-slate-800">
