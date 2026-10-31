@@ -53,7 +53,7 @@ describe('niveau d’accès', () => {
 
 describe('pages réservées', () => {
   it('cours, exercices, favoris, offres et pages légales restent gratuits', () => {
-    for (const p of ['/', '/accueil', '/vacances', '/parent', '/classe', '/cours', '/subject/gestion', '/subject/gestion/theme/t1/chapter/2', '/missions/a/b/1', '/favoris', '/programme', '/moi', '/parametres', '/offres', '/cgu', '/confidentialite', '/faq', '/guide', '/exemple-bilan']) {
+    for (const p of ['/', '/accueil', '/amis', '/boutique', '/vacances', '/parent', '/classe', '/cours', '/subject/gestion', '/subject/gestion/theme/t1/chapter/2', '/missions/a/b/1', '/favoris', '/programme', '/moi', '/parametres', '/offres', '/cgu', '/confidentialite', '/faq', '/guide', '/exemple-bilan']) {
       expect(estPagePayante(p), p).toBe(false)
     }
   })
@@ -115,7 +115,9 @@ describe('quotas des fonctions d’IA', () => {
 describe('adresses et rafraîchissement', () => {
   it('la casse, les « % » et les barres doublées ne contournent pas les pages payantes', async () => {
     const { estPagePayante, estPageAvecCompte } = await import('../src/data/acces.js')
-    for (const p of ['/Bac-Blanc', '/BAC-BLANC/', '/%62ac-blanc', '//bac-blanc', '/Revision/Deck/x', '/AMIS']) expect(estPagePayante(p), p).toBe(true)
+    for (const p of ['/Bac-Blanc', '/BAC-BLANC/', '/%62ac-blanc', '//bac-blanc', '/Revision/Deck/x']) expect(estPagePayante(p), p).toBe(true)
+    for (const p of ['/AMIS', '/%62outique', '//classe']) expect(estPagePayante(p), p).toBe(false)
+    expect(estPageAvecCompte('/AMIS')).toBe(true)
     expect(estPageAvecCompte('/Classement')).toBe(true)
     expect(estPagePayante('/Cours')).toBe(false)
     expect(estPagePayante('/%E0%A4%A')).toBe(false) // adresse mal encodée : pas d'erreur
