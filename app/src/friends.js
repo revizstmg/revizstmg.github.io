@@ -50,18 +50,23 @@ export async function findByCode(code) {
 
 // Envoie une demande. Retourne : 'sent' | 'self' | 'notfound' | 'exists' | 'accepted'
 export async function sendRequest(code, myName) {
+  const me = deviceId()
+  const assertOwner = () => { if (deviceId() !== me) throw new Error('La session a changé. Reconnecte-toi.') }
   const target = await findByCode(code)
+  assertOwner()
   if (!target) return 'notfound'
   if (target.device_id === deviceId()) return 'self'
-  const me = deviceId()
   const existing = await getJSON(rest(`friend_request?select=id,status,from_device,to_device&or=(and(from_device.eq.${enc(me)},to_device.eq.${enc(target.device_id)}),and(from_device.eq.${enc(target.device_id)},to_device.eq.${enc(me)}))&limit=2`))
+  assertOwner()
   if (existing.some(r => r.status === 'accepted')) return 'accepted'
   if (existing.some(r => r.status === 'pending')) return 'exists'
   // Un refus n’est pas une attente. Recréer la demande respecte aussi le
   // déclencheur qui réserve les changements de statut au destinataire.
   for (const row of existing) {
+    assertOwner()
     await send('DELETE', `friend_request?id=eq.${enc(row.id)}&status=eq.declined`, null, 'return=minimal')
   }
+  assertOwner()
   await send('POST', 'friend_request?on_conflict=from_device,to_device', [{
     from_device: me, from_name: String(myName || '').slice(0, 40), from_code: friendCode(),
     to_device: target.device_id, to_name: String(target.name || '').slice(0, 40), status: 'pending',

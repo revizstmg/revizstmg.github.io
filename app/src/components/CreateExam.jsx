@@ -46,7 +46,7 @@ function Creator({ owner, lang, onOpenChange }) {
   useEffect(() => {
     const ac = new AbortController()
     setAvailable(null)
-    examReady(ac.signal).then(setAvailable, () => { if (!ac.signal.aborted) setAvailable(false) })
+    examReady(ac.signal).then(value => { if (!ac.signal.aborted) setAvailable(value) }, () => { if (!ac.signal.aborted) setAvailable(false) })
     return () => ac.abort()
   }, [check])
   useEffect(() => {

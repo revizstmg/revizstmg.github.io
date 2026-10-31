@@ -32,8 +32,28 @@ export function normParentCode(s) {
   return String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12)
 }
 
+// Le retrait attend les publications en cours avant de supprimer l'instantané.
+const operations = new Map()
+function ordonner(owner, action) {
+  const next = (operations.get(owner) || Promise.resolve()).catch(() => {}).then(() => {
+    if (deviceId() !== owner) throw new Error('Session modifiée.')
+    return action()
+  })
+  operations.set(owner, next)
+  next.finally(() => { if (operations.get(owner) === next) operations.delete(owner) }).catch(() => {})
+  return next
+}
+
 // ÉLÈVE — publie / met à jour l'instantané lu par le parent.
-export async function publishChildStats(snap) {
+export function publishChildStats(snap) {
+  const owner = deviceId()
+  return ordonner(owner, () => publier(snap)).catch(error => {
+    // Un changement de compte annule silencieusement cette ancienne publication.
+    if (deviceId() !== owner) return
+    throw error
+  })
+}
+async function publier(snap) {
   if (!PARENT_READY || !snap) return
   const owner = deviceId()
   const code = parentCode()
@@ -75,7 +95,13 @@ export async function publishChildStats(snap) {
 // la suppression a abouti, pour pouvoir la retenter plus tard sinon.
 export async function deleteMyChildStats() {
   if (!PARENT_READY) return false
-  try { await send('DELETE', `child_stats?device_id=eq.${enc(deviceId())}`); return true } catch { return false }
+  const owner = deviceId()
+  try {
+    return await ordonner(owner, async () => {
+      await send('DELETE', `child_stats?device_id=eq.${enc(owner)}`)
+      return true
+    })
+  } catch { return false }
 }
 
 // ÉLÈVE — renouvelle son code : l'ancien ne donne plus rien, les parents devront

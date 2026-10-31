@@ -329,8 +329,9 @@ export function StoreProvider({ children }) {
   // fois ; le marqueur évite de le redemander à chaque ouverture).
   useEffect(() => {
     if (!PARENT_READY || !state.track || state.parentShare || !isSignedIn()) return
-    try { if (localStorage.getItem('stmg_parent_efface')) return } catch { return }
-    deleteMyChildStats().then((ok) => { try { if (ok) localStorage.setItem('stmg_parent_efface', '1') } catch { /* stockage indisponible */ } })
+    // Retenter aussi à la prochaine ouverture : un ancien marqueur global ne
+    // constitue pas une preuve de suppression pour ce compte.
+    deleteMyChildStats().catch(() => {})
   }, [state.track, state.parentShare])
 
   const evaluateBadges = useCallback((next) => {

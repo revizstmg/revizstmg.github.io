@@ -1,3 +1,4 @@
+import { withNetworkTimeout } from '../networkTimeout.js'
 import { checkGrade } from '../../../supabase/functions/examen-blanc/grading.js'
 import { reserverIA, verifierIA } from './ia.js'
 import { SUBJECTS, chargerTout, themeChapters } from './index.js'
@@ -21,9 +22,12 @@ export function toCourses(catalog, ids) {
   })
 }
 export async function examReady(signal) {
-  const r = await fetch(`${SUPA_URL}/functions/v1/examen-blanc`, { headers: { apikey: SUPA_ANON, Authorization: `Bearer ${SUPA_ANON}` }, signal })
-  if (!r.ok) return false
-  return (await r.json()).ready === true
+  return withNetworkTimeout(async timeoutSignal => {
+    const combined = AbortSignal.any([timeoutSignal, ...(signal ? [signal] : [])])
+    const r = await fetch(`${SUPA_URL}/functions/v1/examen-blanc`, { headers: { apikey: SUPA_ANON, Authorization: `Bearer ${SUPA_ANON}` }, signal: combined })
+    if (!r.ok) return false
+    return (await r.json()).ready === true
+  }, 10000)
 }
 export async function requestExam(body, accountId, signal) {
   const token = await getValidToken()
