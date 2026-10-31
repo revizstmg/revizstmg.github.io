@@ -15,13 +15,13 @@ import { lireEtatPaiement } from './abonnement.js'
 // Une seule liste : tout chemin qui commence par l'un de ces préfixes demande un abonnement.
 // Restent gratuits : accueil, cours, matières et chapitres, missions (exercices), favoris,
 // programme, profil, paramètres, offres, FAQ, guide, pages légales, la présentation des vacances
-// et les espaces classe et parent (réservés aux professeurs et aux parents, sans abonnement d'élève).
+// ainsi que la boutique et les espaces amis, classe et parent.
 export const PAGES_PAYANTES = [
   '/seance', '/parcours', '/mes-notes', '/badges', '/coach', '/coach-ia', '/revision',
   '/excellence-economique', '/bac-blanc', '/grand-oral', '/etude-de-gestion',
-  '/fiches-photo', '/defi', '/atelier-formules', '/methodo', '/boutique', '/classement', '/amis',
+  '/fiches-photo', '/defi', '/atelier-formules', '/methodo', '/classement',
 ]
-// Pages payantes qui demandent d'abord un compte : un visiteur sans compte voit l'invitation
+// Pages qui demandent d’abord un compte : un visiteur sans compte voit l’invitation
 // à en créer un (rendue par la page) plutôt que l'écran d'abonnement.
 export const PAGES_AVEC_COMPTE = ['/amis', '/classement']
 

@@ -8,7 +8,7 @@ test('compte gratuit : cours et exercices ouverts, le reste réservé aux abonn�
   const erreurs = await preparer(page, etatEleve(), { abonnement: null })
   await page.goto('./#/cours')
   await expect(page.getByRole('heading', { name: RESERVE })).toHaveCount(0)
-  for (const chemin of ['bac-blanc', 'revision', 'coach-ia', 'grand-oral', 'mes-notes', 'atelier-formules', 'boutique', 'classement']) {
+  for (const chemin of ['bac-blanc', 'revision', 'coach-ia', 'grand-oral', 'mes-notes', 'atelier-formules', 'classement']) {
     await page.goto(`./#/${chemin}`)
     await expect(page.getByRole('heading', { name: RESERVE }), chemin).toBeVisible()
   }
