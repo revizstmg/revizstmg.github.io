@@ -97,6 +97,7 @@ describe('contenu', () => {
         const dernierTexte = blocs.map((b) => b.t !== 'table').lastIndexOf(true)
         const auMilieu = blocs.filter((b, i) => b.t === 'table' && i < dernierTexte)
         expect.soft(auMilieu.length, `${id} « ${sec.h} »`).toBe(0)
+        expect.soft(blocs.filter((b, i) => b.t === 'table' && i > dernierTexte).length, `${id} « ${sec.h} » : un seul tableau final`).toBeLessThanOrEqual(1)
       }
     }
   })

@@ -104,7 +104,7 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
       for (const [id, value] of calls) if (now() - value.start > 3600000) calls.delete(id)
       // Abonnement et quota lus côté serveur : un navigateur modifié n'y change rien.
       const { id: fonction, suite } = fonctionIA(body)
-      const acces = await controleAcces({ env, fetcher, userId: user.id, creeLe: user.created_at, id: fonction, suite, maintenant: now() })
+      const acces = await controleAcces({ env, fetcher, userId: user.id, creeLe: user.created_at, id: fonction, suite, preuve: body.action !== 'plan', maintenant: now() })
       if (!acces.ok) return json({ error: acces.error }, acces.status)
       reservation = acces
       const system = body.action === 'excellence' ? SYSTEM.replace('Ne traite que les connaissances présentes dans les cours sélectionnés.', 'Appuie-toi sur le dossier officiel et le programme d’économie STMG.') : body.action === 'tutor' ? SYSTEM.replace('Écris en français.', "Réponds dans la langue de l'élève.") : SYSTEM

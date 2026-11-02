@@ -102,8 +102,21 @@ async function webhook(req: Request) {
     const ligne = ligneDepuisAbonnement(sub, userId, !evenement.livemode)
     if (ligne) {
       // Un autre abonnement encore actif est déjà enregistré : l'état d'un ancien ne l'écrase pas.
-      const existante = STATUTS_ACTIFS.includes(sub.status) ? null : await ligneDuCompte(userId)
-      if (existante?.stripe_subscription_id && existante.stripe_subscription_id !== sub.id && STATUTS_ACTIFS.includes(existante.statut)) return json({ recu: true, ignore: 'ancien_abonnement' })
+      const existante = await ligneDuCompte(userId)
+      const autreActive = existante?.stripe_subscription_id && existante.stripe_subscription_id !== sub.id && STATUTS_ACTIFS.includes(existante.statut)
+      if (autreActive && !STATUTS_ACTIFS.includes(sub.status)) return json({ recu: true, ignore: 'ancien_abonnement' })
+      if (autreActive) {
+        // Un second abonnement actif (deux onglets, session de paiement restée ouverte) ne remplace pas le
+        // premier : sinon l'un resterait facturé sans être suivi. Le premier est vérifié chez Stripe (la ligne
+        // pourrait être périmée) ; s'il est vraiment actif, le nouveau est résilié.
+        let premierActif = false
+        try { premierActif = STATUTS_ACTIFS.includes((await stripe(`/v1/subscriptions/${encodeURIComponent(existante.stripe_subscription_id)}`)).status) } catch { premierActif = false }
+        if (premierActif) {
+          await stripe(`/v1/subscriptions/${encodeURIComponent(sub.id)}`, 'DELETE')
+          console.warn(JSON.stringify({ event: 'abonnement_double_resilie', abonnement: sub.id, garde: existante.stripe_subscription_id, remboursement: 'a_verifier' }))
+          return json({ recu: true, ignore: 'second_abonnement' })
+        }
+      }
       try { await enregistrer(ligne) } catch (e) {
         // Compte supprimé entre-temps : on n'encaisse pas pour un compte qui n'existe plus.
         if ((e as Error).message === 'base_409') {
@@ -133,7 +146,10 @@ async function action(req: Request) {
   if (corps.action === 'etat') {
     // Seulement ce que le site affiche : pas les identifiants Stripe.
     const { offre, periode, statut, periode_fin, annulation_prevue, mode_test } = ligne || {} as Record<string, unknown>
-    return json({ mode: MODE_TEST ? 'test' : 'reel', abonnement: ligne ? { offre, periode, statut, periode_fin, annulation_prevue, mode_test } : null })
+    // Compteurs d'utilisation de l'IA du compte (export RGPD « Télécharger mes données »).
+    let usage: unknown[] = []
+    try { usage = (await base(`revizstmg_ia_usage?user_id=eq.${encodeURIComponent(u.id)}&select=fonction,periode,n&order=periode.desc&limit=200`)) || [] } catch { usage = [] }
+    return json({ mode: MODE_TEST ? 'test' : 'reel', abonnement: ligne ? { offre, periode, statut, periode_fin, annulation_prevue, mode_test } : null, usage })
   }
 
   // Client Stripe : créé une fois par compte, retenu en base.
@@ -150,9 +166,18 @@ async function action(req: Request) {
 
   // Avant la suppression d'un compte : résilie tout de suite l'abonnement (sinon le prélèvement continuerait).
   if (corps.action === 'resilier') {
-    if (!ligne?.stripe_subscription_id || !STATUTS_ACTIFS.includes(ligne.statut)) return json({ ok: true, aucun: true })
-    try { await stripe(`/v1/subscriptions/${encodeURIComponent(ligne.stripe_subscription_id)}`, 'DELETE') } catch (e) {
-      if (!String((e as Error).message).includes('resource_missing')) throw e
+    // Tous les abonnements actifs du client chez Stripe, pas seulement celui retenu en base.
+    const ids = new Set<string>()
+    if (ligne?.stripe_subscription_id && STATUTS_ACTIFS.includes(ligne.statut)) ids.add(ligne.stripe_subscription_id as string)
+    if (ligne?.stripe_customer_id) {
+      const liste = await stripe(`/v1/subscriptions?customer=${encodeURIComponent(ligne.stripe_customer_id)}&status=all&limit=10`)
+      for (const a of liste.data || []) if (STATUTS_ACTIFS.includes(a.status)) ids.add(a.id)
+    }
+    if (!ids.size) return json({ ok: true, aucun: true })
+    for (const id of ids) {
+      try { await stripe(`/v1/subscriptions/${encodeURIComponent(id)}`, 'DELETE') } catch (e) {
+        if (!String((e as Error).message).includes('resource_missing')) throw e
+      }
     }
     return json({ ok: true })
   }

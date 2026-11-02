@@ -9,7 +9,7 @@ import { badgeById } from '../badges.js'
 import { Ring, ProgressBar, Icon } from '../components/ui.jsx'
 import { usePublicText, useT } from '../i18n.js'
 import { supprimerCompte, isSignedIn, getSession } from '../auth.js'
-import { resilierAvantSuppression } from '../data/abonnement.js'
+import { resilierAvantSuppression, lireEtatPaiement } from '../data/abonnement.js'
 import { pushPossible, activerRappelsPush, desactiverRappelsPush } from '../push.js'
 import { InstallCard, AppBadge } from '../components/InstallApp.jsx'
 import { ProgressCurve, ThemeTimeBars } from '../components/StatsCharts.jsx'
@@ -21,8 +21,12 @@ import { estEnEssai, creerMonCompte } from '../components/CompteRequis.jsx'
 
 // Droit à la portabilité (RGPD) : tout ce que l'app garde sur cet appareil pour
 // l'élève, dans un fichier JSON lisible, sans passer par un e-mail.
-function telechargerMesDonnees(state) {
+async function telechargerMesDonnees(state) {
   const donnees = { application: 'RévizSTMG', exporte_le: new Date().toISOString(), donnees: state }
+  // Données gardées côté serveur (abonnement, compteurs d'utilisation de l'IA) : ajoutées si le compte en a.
+  if (state.account?.id) {
+    try { const etat = await lireEtatPaiement(); donnees.abonnement = etat.abonnement || null; donnees.utilisation_ia = etat.usage || [] } catch { /* paiements fermés ou hors ligne */ }
+  }
   const url = URL.createObjectURL(new Blob([JSON.stringify(donnees, null, 2)], { type: 'application/json' }))
   const a = document.createElement('a')
   a.href = url

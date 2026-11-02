@@ -6,7 +6,7 @@
 // - gratuit : aucune IA (402 « abonnement_requis »).
 // - Premium : chaque fonction une fois par mois (403 « quota_mensuel » ensuite) ; les
 //   étapes qui prolongent une utilisation (correction, discussion en cours) ont un petit
-//   plafond mensuel à part : on peut les forger sans l'étape initiale, mais leur total reste borné.
+//   plafond mensuel à part et ne passent qu'après l'étape initiale du mois (compteur lu en base).
 // - Ultimate : pas de quota mensuel.
 // - Tous : garde-fou de 60 demandes par jour (429 « rate_limit »), plus un plafond journalier
 //   par fonction pour les plus coûteuses (JOUR_PAR_FONCTION).
@@ -41,10 +41,11 @@ export function enGrace(creeLe, maintenant = Date.now()) {
   const c = Date.parse(creeLe)
   return Number.isFinite(c) && c < Date.parse(COMPTES_ANTERIEURS_A) && maintenant < Date.parse(GRACE_JUSQUA)
 }
-// Niveau d'un compte : son abonnement, sinon Ultimate pendant la période de grâce d'un ancien compte.
+// Niveau d'un compte : le meilleur de son abonnement et de la période de grâce d'un ancien compte
+// (Ultimate). Payer Premium pendant la grâce ne fait donc jamais perdre d'accès.
 export function niveauCompte(ligne, creeLe, maintenant = Date.now(), options) {
   const niveau = niveauDe(ligne, maintenant, options)
-  return niveau === 'gratuit' && enGrace(creeLe, maintenant) ? 'ultimate' : niveau
+  return niveau !== 'ultimate' && enGrace(creeLe, maintenant) ? 'ultimate' : niveau
 }
 
 // Fonction d'IA (FONCTIONS_IA du site) et caractère « suite » d'une requête d'examen-blanc.
@@ -65,7 +66,7 @@ const refus = (status, error) => ({ ok: false, status, error })
 // Réserve l'accès avant tout appel au fournisseur d'IA. Renvoie { ok: true, rendre } (à appeler
 // si l'appel échoue : l'utilisation n'est pas perdue) ou { ok: false, status, error }.
 // Sans clé de service ou si la base ne répond pas, l'accès est refusé : jamais d'IA gratuite par défaut.
-export async function reserverAccesIA({ env, fetcher = fetch, userId, creeLe, id, suite, maintenant = Date.now() }) {
+export async function reserverAccesIA({ env, fetcher = fetch, userId, creeLe, id, suite, preuve = false, maintenant = Date.now() }) {
   const base = env('SUPABASE_URL'), cle = env('SUPABASE_SERVICE_ROLE_KEY')
   if (!base || !cle) return refus(503, 'not_configured')
   const entetes = { apikey: cle, Authorization: `Bearer ${cle}`, 'Content-Type': 'application/json' }
@@ -92,13 +93,17 @@ export async function reserverAccesIA({ env, fetcher = fetch, userId, creeLe, id
     const mois = iso.slice(0, 7), jour = iso.slice(0, 10)
     if (quota != null) {
       const fonction = suite ? `${id}:suite` : id
+      if (suite && preuve) {
+        const l = await appeler(`revizstmg_ia_usage?user_id=eq.${encodeURIComponent(userId)}&fonction=eq.${encodeURIComponent(id)}&periode=eq.${mois}&select=n`)
+        if (!(Array.isArray(l) && l[0]?.n >= 1)) return refus(403, 'quota_mensuel')
+      }
       const max = suite ? (SUITES_PREMIUM[id] ?? SUITES_PAR_DEFAUT) : quota
       if (!(await reserver(fonction, mois, max))) return refus(403, 'quota_mensuel')
       prises.push([fonction, mois])
     }
-    if (!(await reserver('_jour', jour, LIMITE_IA_PAR_JOUR))) { await rendre(); return refus(429, 'rate_limit') }
-    prises.push(['_jour', jour])
+    // Le plafond de la fonction d'abord : un refus ici ne brûle pas les 60 demandes du jour des autres fonctions.
     if (JOUR_PAR_FONCTION[id] && !(await reserver(`${id}:jour`, jour, JOUR_PAR_FONCTION[id]))) { await rendre(); return refus(429, 'rate_limit') }
+    if (!(await reserver('_jour', jour, LIMITE_IA_PAR_JOUR))) { await rendre(); return refus(429, 'rate_limit') }
     return { ok: true, niveau, rendre }
   } catch {
     await rendre()

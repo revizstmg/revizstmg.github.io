@@ -1,3 +1,4 @@
+import { useNiveauAcces } from '../components/Reserve.jsx'
 import { TextePublic } from '../localisation/PublicText.jsx'
 import './CourseStudio.css'
 import { missionMessages } from '../i18n/missions.js'
@@ -21,6 +22,7 @@ export default function Chapter() {
   const theme = subject?.chapters?.some(chapter => chapter.id === tid) ? getChapter(tid) : null
   const { state, saveDeck, setLastChapter } = useStore()
   const t = useT()
+  const niveauAcces = useNiveauAcces()
   const navigate = useNavigate()
   const gameLabel = useGameLabel()
   const [activeGame, setActiveGame] = useState(null)
@@ -211,7 +213,7 @@ export default function Chapter() {
                 </button>
               </div>
               {saved && (
-                <Link to="/revision" className="mt-3 flex items-center justify-between gap-2 rounded-xl px-3 py-2 text-sm font-semibold" style={{ backgroundColor: color + '18', color }}>
+                <Link to={niveauAcces === 'gratuit' ? '/offres' : '/revision'} className="mt-3 flex items-center justify-between gap-2 rounded-xl px-3 py-2 text-sm font-semibold" style={{ backgroundColor: color + '18', color }}>
                   <span>📚 {t('deckSavedWhere')}</span><span aria-hidden>→</span>
                 </Link>
               )}

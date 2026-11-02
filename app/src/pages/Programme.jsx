@@ -5,6 +5,8 @@ import { dailyPlan, programmeThemes } from '../data/study.js'
 import { daysUntil, defaultBacDate } from '../data/srs.js'
 import { CALENDRIER, epreuvesAVenir, premiereEpreuve } from '../data/epreuves.js'
 import { useT, usePublicText } from '../i18n.js'
+import PastillePremium from '../components/PastillePremium.jsx'
+import { useNiveauAcces } from '../components/Reserve.jsx'
 
 const dateCourte = (d, lang = 'fr') => new Date(d + 'T00:00:00').toLocaleDateString(lang, { calendar: 'gregory', numberingSystem: 'latn', weekday: 'short', day: 'numeric', month: 'long' })
 
@@ -20,6 +22,7 @@ export default function Programme() {
 function ProgrammePage() {
   const { state, derived, setBacDate } = useStore()
   const t = useT(), tr = usePublicText()
+  const gratuit = useNiveauAcces() === 'gratuit'
   const navigate = useNavigate()
 
   const [editing, setEditing] = useState(!state.bacDate)
@@ -120,8 +123,8 @@ function ProgrammePage() {
           <div className="h-full rounded-full" style={{ width: `${masteredPct}%`, backgroundColor: 'var(--c-accent)' }} />
         </div>
         <div className="mt-4 grid grid-cols-2 gap-2">
-          <Link to="/revision" className="btn-ghost justify-center text-center">🧠 {t('smartRevision')}</Link>
-          <Link to="/bac-blanc" className="btn-ghost justify-center text-center">📝 {t('mockExam')}</Link>
+          <Link to={gratuit ? '/offres' : '/revision'} className="btn-ghost justify-center text-center">🧠 {t('smartRevision')}<PastillePremium to="/revision" /></Link>
+          <Link to={gratuit ? '/offres' : '/bac-blanc'} className="btn-ghost justify-center text-center">📝 {t('mockExam')}<PastillePremium to="/bac-blanc" /></Link>
         </div>
       </section>
     </div>
