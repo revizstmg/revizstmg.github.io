@@ -84,6 +84,7 @@ function AbonnementCompte() {
       <h2 id="abo-titre" className="font-display text-xl font-semibold">{tr('S’abonner')}</h2>
       {etat.mode === 'test' && <p role="status" className="rounded-xl border border-amber-700/40 p-3 text-sm"><b>{tr('Mode test.')}</b> {tr('Aucune vraie carte n’est débitée. Utilise la carte de test 4242 4242 4242 4242, une date future et un code à trois chiffres.')}</p>}
       {retour === 'ok' && <p role="status" className="text-sm font-semibold">{actif ? tr('Merci ! Ton abonnement est actif.') : tr('Merci ! Ton paiement est en cours de confirmation…')}</p>}
+      {retour === 'ok' && !actif && <p><button type="button" className="text-sm underline" onClick={() => { setEtat(null); setRetry(n => n + 1) }}>{tr('Vérifier à nouveau mon abonnement')}</button></p>}
       {retour === 'annule' && <p role="status" className="text-sm">{tr('Paiement annulé : rien n’a été débité.')}</p>}
       {actif ? (
         <div className="space-y-2 text-sm">

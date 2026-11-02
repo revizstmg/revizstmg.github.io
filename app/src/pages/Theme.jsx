@@ -11,6 +11,7 @@ import { ProgressBar, Stars } from '../components/ui.jsx'
 import { Rich } from '../components/ui.jsx'
 import { Essentiel, Resources, CourseText } from '../components/Course.jsx'
 import { DeckDownload } from '../components/DeckDownload.jsx'
+import { OutilReserve } from '../components/PastillePremium.jsx'
 import ThemeTest from '../games/ThemeTest.jsx'
 import Exam from '../games/Exam.jsx'
 import GameHost from '../games/GameHost.jsx'
@@ -223,11 +224,11 @@ export default function Theme() {
             </button>
           )}
           {themeExamSize(tid) >= 4 && (
-            <button onClick={() => setThemeExam(buildThemeExam(tid))} className="card group flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md">
+            <OutilReserve icone="📝" titre={t('themeExam')}><button onClick={() => setThemeExam(buildThemeExam(tid))} className="card group flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md">
               <span className="w-6 shrink-0 text-center text-lg" aria-hidden>📝</span>
               <span className="min-w-0 flex-1 font-semibold leading-snug">{t('themeExam')}</span>
               <span className="text-lg text-slate-300 transition group-hover:translate-x-0.5" aria-hidden>›</span>
-            </button>
+            </button></OutilReserve>
           )}
           {theme.essentiel?.length > 0 && (
             <Repli icone="🧠" titre={t('memoSheet')}><Essentiel items={theme.essentiel} color={color} nu /></Repli>
@@ -246,9 +247,9 @@ export default function Theme() {
           {theme.resources?.length > 0 && (
             <Repli icone="🎥" titre={t('goFurther')}><Resources items={theme.resources} nu /></Repli>
           )}
-          <DeckDownload deck={deckForTheme(tid)} color={color} label={t('downloadThemeDeck')} />
+          <OutilReserve icone="🃏" titre={t('downloadThemeDeck')}><DeckDownload deck={deckForTheme(tid)} color={color} label={t('downloadThemeDeck')} /></OutilReserve>
           {/* Notes personnelles de l'élève sur ce thème (sauvegardées & synchronisées) */}
-          <Repli icone="✏️" titre={t('myNotes')} ouvert={!!state.notes?.[tid]}>
+          <OutilReserve icone="✏️" titre={t('myNotes')}><Repli icone="✏️" titre={t('myNotes')} ouvert={!!state.notes?.[tid]}>
             <textarea
               value={state.notes?.[tid] || ''}
               onChange={(e) => setNote(tid, e.target.value)}
@@ -257,7 +258,7 @@ export default function Theme() {
               className="w-full resize-y rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm outline-none focus:border-[color:var(--c-accent)] dark:border-slate-700 dark:bg-slate-800"
             />
             <p className="mt-1.5 text-xs text-slate-400">💾 {t('myNotesHint')}</p>
-          </Repli>
+          </Repli></OutilReserve>
         </section>
       )}
 

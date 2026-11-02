@@ -125,3 +125,24 @@ test('offres : les prix sont affichés à tous, sans être connecté ni abonné'
   await expect(page.getByText('9,99 € TTC par mois ou 90 € TTC par an')).toBeVisible()
   await expect(page.getByText('14,99 € TTC par mois ou 130 € TTC par an')).toBeVisible()
 })
+
+test('onglet Outils d’un thème : bac blanc, paquet de flashcards et notes réservés aux abonnés', async ({ page }) => {
+  const erreurs = await preparer(page, etatEleve(), { abonnement: null })
+  await page.goto('./#/subject/gestion-finance/theme/gf-t1?tab=outils')
+  const lien = (nom) => page.getByRole('link', { name: nom })
+  await expect(lien(/Bac blanc de ce thème/i)).toBeVisible()
+  await expect(lien(/Flashcards de tout le thème/i)).toBeVisible()
+  await expect(lien(/Mes notes/i)).toBeVisible()
+  await expect(page.getByRole('textbox')).toHaveCount(0) // les notes personnelles ne sont plus proposées
+  await lien(/Bac blanc de ce thème/i).click()
+  await expect(page.getByRole('heading', { level: 1, name: 'Les offres, simplement' })).toBeVisible()
+  expect(erreurs).toEqual([])
+})
+
+test('abonné : l’onglet Outils d’un thème propose les notes personnelles', async ({ page }) => {
+  await preparer(page, etatEleve(), { abonnement: 'premium' })
+  await page.goto('./#/subject/gestion-finance/theme/gf-t1?tab=outils')
+  await expect(page.getByRole('link', { name: /Bac blanc de ce thème/i })).toHaveCount(0)
+  await expect(page.getByText('Mes notes').first()).toBeVisible()
+  await expect(page.getByRole('link', { name: /Mes notes/i })).toHaveCount(0)
+})

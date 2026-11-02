@@ -1,6 +1,6 @@
 {
- "date": "2026-10-31",
- "heure": "2026-10-31T10:43:02.866Z",
+ "date": "2026-11-02",
+ "heure": "2026-11-02T13:01:29.750Z",
  "utilisation": {
   "profs": 4,
   "eleves": 11,
@@ -10,34 +10,28 @@
    "premiere-stmg": 2,
    "terminale-stmg": 9
   },
-  "vues_7j": 255,
+  "vues_7j": 62,
   "actifs_1j": 0,
-  "actifs_7j": 4,
+  "actifs_7j": 1,
   "ecrans_7j": {
    "cgu": 1,
-   "moi": 12,
-   "amis": 6,
-   "defi": 2,
-   "guide": 10,
-   "theme": 12,
+   "moi": 1,
+   "amis": 2,
+   "guide": 8,
    "badges": 1,
-   "classe": 4,
-   "entree": 10,
-   "paquet": 1,
-   "accueil": 101,
-   "matiere": 20,
-   "methodo": 1,
-   "boutique": 7,
-   "chapitre": 11,
-   "revision": 29,
-   "bac-blanc": 22,
-   "classement": 5
+   "classe": 1,
+   "entree": 1,
+   "accueil": 29,
+   "matiere": 5,
+   "boutique": 1,
+   "revision": 10,
+   "bac-blanc": 2
   },
-  "vues_hier": 6,
+  "vues_hier": 0,
   "actifs_30j": 7,
   "defis_amis": 0,
-  "visites_7j": 51,
-  "nouveaux_7j": 1,
+  "visites_7j": 16,
+  "nouveaux_7j": 0,
   "specialites": {
    "sig": 1,
    "gestion-finance": 7,
@@ -46,7 +40,7 @@
   "joueurs_amis": 1,
   "nouveaux_30j": 5,
   "rappels_push": 0,
-  "visites_hier": 1,
+  "visites_hier": 0,
   "defis_amis_7j": 0,
   "sessions_live": 0,
   "quiz_de_classe": 0,
@@ -68,14 +62,14 @@
  },
  "publication": {
   "ci": {
-   "etat": "unknown",
-   "detail": "API GitHub inaccessible : CI non vérifiée"
+   "etat": "failure",
+   "date": "2026-10-31T13:19:00Z"
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-10-30T11:11:13Z"
+   "date": "2026-11-01T11:40:01Z"
   },
-  "modifications7j": 56
+  "modifications7j": 33
  },
  "tests": "success"
 }

@@ -18,6 +18,10 @@ function monde({ abonnement = null, refuserTest = false, creeLe = '2026-11-02T10
     const u = String(url)
     if (u.includes('/auth/v1/user')) return Response.json({ id: ID, created_at: creeLe })
     if (u.includes('/rest/v1/revizstmg_abonnements')) return base === 'ok' ? Response.json(abonnement ? [abonnement] : []) : new Response('x', { status: 500 })
+    if (u.includes('/rest/v1/revizstmg_ia_usage')) {
+      const q = new URL(u).searchParams, f = q.get('fonction').replace('eq.', ''), p = q.get('periode').replace('eq.', '')
+      return Response.json(compteur(f, p) ? [{ n: compteur(f, p) }] : [])
+    }
     if (u.includes('/rpc/revizstmg_ia_reserver')) {
       const { p_fonction: f, p_periode: p, p_max: max } = JSON.parse(init.body)
       if (compteur(f, p) >= max) return Response.json(false)
@@ -74,11 +78,15 @@ describe('contrôle d’accès de la fonction examen-blanc (IA)', () => {
     expect(m.compteur('tuteur', '2026-10')).toBe(1)
     expect((await m.suite()).status).toBe(403)
   })
-  it('Premium : on ne peut pas contourner en n’envoyant que des « suites »', async () => {
+  it('Premium : une « suite » forgée sans étape initiale du mois est refusée, sans appel au fournisseur', async () => {
     const m = monde({ abonnement: PREMIUM })
-    let acceptees = 0
-    for (let i = 0; i < 100; i++) if ((await m.suite()).status === 200) acceptees++
-    expect(acceptees).toBe(SUITES_PREMIUM.tuteur)
+    for (let i = 0; i < 5; i++) expect(await m.suite()).toEqual({ status: 403, corps: { error: 'quota_mensuel' } })
+    expect(m.appels.fournisseur).toBe(0)
+    expect(m.compteur('tuteur:suite', '2026-10')).toBe(0)
+  })
+  it('Premium qui paie pendant la période de grâce d’un ancien compte : jamais moins d’accès que sans abonnement', async () => {
+    const m = monde({ abonnement: PREMIUM, creeLe: '2026-09-01T10:00:00Z', maintenant: Date.UTC(2026, 10, 2, 12) })
+    for (let i = 0; i < 3; i++) expect((await m.nouvelleDiscussion()).status).toBe(200)
   })
   it('deux requêtes simultanées ne dépassent pas le quota', async () => {
     const m = monde({ abonnement: PREMIUM })
@@ -135,6 +143,26 @@ describe('abonnement de test et plafonds par fonction', () => {
     const essai = () => reserverAccesIA({ env, fetcher, userId: ID, creeLe: null, id: 'photo', suite: false, maintenant: MAINTENANT })
     for (let i = 0; i < JOUR_PAR_FONCTION.photo; i++) expect((await essai()).ok, `appel ${i + 1}`).toBe(true)
     expect(await essai()).toEqual({ ok: false, status: 429, error: 'rate_limit' })
+    // Le refus du plafond de la fonction ne consomme pas les 60 demandes du jour des autres fonctions.
+    expect(usage.get('_jour|2026-10-29')).toBe(JOUR_PAR_FONCTION.photo)
+  })
+  it('une suite qui demande une preuve (correction d’examen) exige l’étape initiale du mois', async () => {
+    const usage = new Map()
+    const fetcher = async (url, init = {}) => {
+      const u = String(url)
+      if (u.includes('revizstmg_abonnements')) return Response.json([{ ...PREMIUM, mode_test: false }])
+      if (u.includes('revizstmg_ia_usage')) { const n = usage.get('examen|2026-10') || 0; return Response.json(n ? [{ n }] : []) }
+      const { p_fonction: f, p_periode: p, p_max: max } = JSON.parse(init.body)
+      const k = `${f}|${p}`, n = usage.get(k) || 0
+      if (n >= max) return Response.json(false)
+      usage.set(k, n + 1); return Response.json(true)
+    }
+    const env = (k) => ({ SUPABASE_URL: 'https://fake', SUPABASE_SERVICE_ROLE_KEY: 'cle' })[k]
+    const noter = (preuve) => reserverAccesIA({ env, fetcher, userId: ID, creeLe: null, id: 'examen', suite: true, preuve, maintenant: MAINTENANT })
+    expect(await noter(true)).toEqual({ ok: false, status: 403, error: 'quota_mensuel' })
+    expect((await noter(false)).ok).toBe(true) // le plan d'un examen précède la génération : pas de preuve exigée
+    usage.set('examen|2026-10', 1) // génération déjà comptée ce mois-ci
+    expect((await noter(true)).ok).toBe(true)
   })
 })
 
