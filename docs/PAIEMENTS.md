@@ -58,6 +58,16 @@ Les comptes créés avant le 30 octobre 2026 (00:00 UTC) gardent, sans abonnemen
 - **Site** : adresses comparées sans casse ni encodage (`/Bac-Blanc` ne contourne plus l'écran), délai de 8 s sur la lecture de l'abonnement, relecture à l'ouverture d'une page réservée et bouton « Vérifier à nouveau mon abonnement » (webhook en retard), compteur mensuel par compte, pas de refus local tant que l'abonnement n'a jamais été lu, tolérance de trois jours hors ligne, repères « Premium » sur les liens réservés, entrée « Mon abonnement » dans le menu, prix sur la page des offres, textes devenus faux corrigés (FAQ, CGU, confidentialité, boutique, guide, descriptions publiques).
 - **À décider par le propriétaire / un juriste** : statut de l'éditeur (la mention « élèves, à titre non professionnel et non commercial » est incompatible avec la vente), TVA et « TTC », médiateur, remboursement au prorata et retrait de 14 jours (exécution immédiate d'un service numérique), `past_due` qui garde l'accès (régler Stripe pour annuler après échec des relances), accès des professeurs, pages `/badges`, `/coach`, `/coach-ia` et `/fiches-photo` aujourd'hui réservées.
 
+### Après les six agents testeurs (02/11/2026) : corrections
+Décisions du propriétaire : garder le meilleur niveau pendant la grâce, réserver aux abonnés les outils de l'onglet « Outils » d'un thème (bac blanc du thème, paquet de flashcards, notes), adapter les liens des pages gratuites, prouver l'étape initiale d'une suite.
+- **Grâce** : `niveauCompte` prend le meilleur de l'abonnement et de la grâce (un ancien compte qui paie Premium garde Ultimate jusqu'au 30/11).
+- **Suites** (message suivant du tuteur, correction d'un contrôle ou d'un examen) : acceptées seulement si l'étape initiale de la même fonction est comptée ce mois-ci (lecture de `revizstmg_ia_usage` côté serveur), en plus de leur petit plafond. Le plan d'un examen reste dispensé de cette preuve. Une discussion commencée un mois et poursuivie le suivant doit être recommencée.
+- **Plafonds journaliers** : celui de la fonction est réservé avant le compteur global `_jour`, un refus ne brûle donc plus les 60 demandes des autres fonctions.
+- **Double abonnement** (deux onglets, session de paiement restée ouverte) : le webhook résilie le second s'il y a déjà un abonnement actif chez Stripe (journal `abonnement_double_resilie`, remboursement du premier prélèvement à faire à la main dans Stripe) ; `resilier` annule tous les abonnements actifs du client ; les sessions Checkout expirent après 30 minutes.
+- **Export RGPD** : « Télécharger mes données » ajoute l'abonnement et les compteurs d'utilisation de l'IA (action `etat`).
+- **Repli « course » du contrôle** : le site ne compte plus l'utilisation du mois (le serveur la rend).
+- Pas de nouveau code d'erreur pour le plafond journalier : le message « patiente » du site reste, il se lève le lendemain.
+
 ## Passage en réel (à ne faire qu'après les points légaux)
 - Entreprise, mentions légales et conditions de vente validées par un juriste (droit de rétractation de 14 jours, contenu numérique
   fourni immédiatement, TVA, remboursements, abonnement des mineurs). Les textes ajoutés aux CGU sont **provisoires**.

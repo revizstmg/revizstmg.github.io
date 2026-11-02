@@ -49,6 +49,8 @@ export function parametresCheckout({ prixId, userId, email, clientId, siteUrl })
   p.set('success_url', `${siteUrl}/#/offres?paiement=ok`)
   p.set('cancel_url', `${siteUrl}/#/offres?paiement=annule`)
   p.set('locale', 'fr')
+  // La session expire vite : une session restée ouverte ne peut pas être payée longtemps après un autre abonnement.
+  p.set('expires_at', String(Math.floor(Date.now() / 1000) + 1800))
   p.set('billing_address_collection', 'auto')
   // Managed Payments (actif par défaut sur le compte) exige un code fiscal par produit et refuse custom_text :
   // on le désactive, le propriétaire reste le vendeur et les prix sont TTC.
