@@ -55,20 +55,74 @@ function formesAcceptees(a) {
   const brut = String(a)
   const formes = [brut]
   const paren = brut.match(/^(.*?)\s*\(([^()]{1,12})\)\s*\.?$/)
-  if (paren) formes.push(paren[1], paren[2])
+  if (paren) {
+    formes.push(paren[1])
+    // Le sigle entre parenthèses est une réponse seulement s'il a au moins deux
+    // caractères et n'est pas une simple date (« Lois de Nuremberg (1935) »).
+    const sigle = paren[2].trim()
+    if (sigle.length >= 2 && !/^[\d\s.,/-]+$/.test(sigle)) formes.push(sigle)
+  }
   for (const f of [...formes]) { const sans = f.replace(/\s+(ttc|ht)\s*$/i, ''); if (sans !== f) formes.push(sans) }
   return formes.filter((f) => f.trim())
 }
 
+// Valeur numérique d'une réponse chiffrée : « 240 € », « 2,00 € », « 10 % »,
+// « 240 euros », « 10 pour cent ». Retourne { n, unite } ou null.
+export function valeurNumerique(s) {
+  const t = String(s ?? '')
+    .toLowerCase()
+    .replace(/[\u2212\u2013]/g, '-')
+    .replace(/[\s\u00a0\u202f]+/g, ' ')
+    .trim()
+  const m = t.match(/^(-?\s?\d+(?: \d{3})*(?:[.,]\d+)?|-?\s?\d+(?:[.,]\d+)?)\s*(€|euros?|%|pour ?cent|pourcents?)?\s*\.?$/)
+  if (!m) return null
+  const n = parseFloat(m[1].replace(/\s/g, '').replace(',', '.'))
+  if (!Number.isFinite(n)) return null
+  const u = m[2] || ''
+  return { n, unite: !u ? '' : /€|euro/.test(u) ? 'eur' : 'pct' }
+}
+function memeValeur(saisie, attendu) {
+  const a = valeurNumerique(saisie)
+  const b = valeurNumerique(attendu)
+  if (!a || !b || a.n !== b.n) return false
+  return !a.unite || !b.unite || a.unite === b.unite
+}
+
 // Exercices de cours (saisie, texte à trous, cas) : « convention collective »
-// vaut « La convention collective », « mineure » vaut « 5. La mineure ».
-// Pas pour les langues, où l'article fait partie de la réponse.
+// vaut « La convention collective », « mineure » vaut « 5. La mineure »,
+// « 240 » ou « 240 euros » valent « 240 € ». Pas pour les langues, où
+// l'article fait partie de la réponse.
 export function answerMatchesCours(input, answer, alt = []) {
   if (answerMatches(input, answer, alt)) return true
   const n = formeCanonique(input)
   if (!n) return false
-  return [answer, ...alt].some((a) => formesAcceptees(a).some((f) => formeCanonique(f) === n))
+  const formes = [answer, ...alt].flatMap(formesAcceptees)
+  return formes.some((f) => formeCanonique(f) === n || memeValeur(input, f))
 }
+
+// Langues : les diacritiques font partie de la réponse (« está » ≠ « esta »,
+// « où » ≠ « ou »). Seules la casse, la ponctuation, l'apostrophe, la ligature
+// et les voyelles brèves de l'arabe sont tolérées.
+export function normalizeLangue(s) {
+  return String(s ?? '')
+    .normalize('NFC')
+    .toLowerCase()
+    .replace(/œ/g, 'oe')
+    .replace(/æ/g, 'ae')
+    .replace(/[\u064b-\u065f\u0670\u0640]/g, '')
+    .replace(/[’`´]/g, "'")
+    .replace(/[.,;:!?¡¿…«»"“”]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+export function answerMatchesLangue(input, answer, alt = []) {
+  const n = normalizeLangue(input)
+  if (!n) return false
+  return [answer, ...alt].some((a) => normalizeLangue(a) === n)
+}
+export const estJeuLangue = (game) => /^(?:p1-)?lng-/.test(String(game?.id || ''))
+// Correcteur adapté au jeu : strict sur les accents en langues, tolérant ailleurs.
+export const correcteurDe = (game) => (estJeuLangue(game) ? answerMatchesLangue : answerMatchesCours)
 
 // Mélange les propositions d'une question et recale l'indice de la bonne
 // réponse. Les QCM des études de documents sont écrits avec la bonne réponse

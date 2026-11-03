@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { answerMatchesCours, answerMatches } from '../src/games/common.jsx'
+import { answerMatchesCours, answerMatches, answerMatchesLangue, correcteurDe } from '../src/games/common.jsx'
 
 // Une réponse juste ne doit pas être refusée pour sa seule écriture.
 describe('correcteur de saisie des cours', () => {
@@ -11,6 +11,7 @@ describe('correcteur de saisie des cours', () => {
     ['5.5 %', '5,5 %'], ['2.5', '2,5'], ['2,00€', '2,00 €'],
     ['oeuvre', 'œuvre'], ['coeur', 'cœur'], ['au coeur', 'au cœur'],
     ['hors taxes', 'hors taxes (HT)'], ['HT', 'hors taxes (HT)'], ['plan comptable général', 'Plan comptable général (PCG)'],
+    ['240', '240 €'], ['240 euros', '240 €'], ['2 €', '2,00 €'], ['10', '10 %'], ['0,2', '0,20'], ['10 pour cent', '10 %'], ['−5', '-5 €'],
     ['1 058,40 €', '1 058,40 € TTC'], ['convention collective', 'La convention collective'],
   ]
   for (const [saisie, attendu] of ok) it(`accepte « ${saisie} » pour « ${attendu} »`, () => expect(answerMatchesCours(saisie, attendu)).toBe(true))
@@ -18,11 +19,27 @@ describe('correcteur de saisie des cours', () => {
   const non = [
     ['2 000 €', '3 000 €'], ['10 %', '12 %'], ['5,5 %', '5 %'], ['2 septembre 1945', '8 mai 1945'], ['septembre 1938', 'septembre 1939'],
     ['2 sept. 1945', '2 sept. 1944'], ['hors', 'hors taxes (HT)'], ['', '2 000 €'], ['1 000 €', '10 000 €'], ['100', '1 000'],
+    ['SEA)', 'SEO (SEA)'], ['1935', 'Lois de Nuremberg (1935)'], ['D', 'Dérivée (D)'], ['240 $', '240 €'], ['10 €', '10 %'], ['25', '2,5'],
   ]
   for (const [saisie, attendu] of non) it(`refuse « ${saisie} » pour « ${attendu} »`, () => expect(answerMatchesCours(saisie, attendu)).toBe(false))
 
   it('les langues restent strictes (l’article fait partie de la réponse), la ligature mise à part', () => {
     expect(answerMatches('le chat', 'chat')).toBe(false)
     expect(answerMatches('coeur', 'cœur')).toBe(true)
+  })
+
+  it('une date seule ne vaut pas le terme qui la contient', () => {
+    expect(answerMatchesCours('1935', 'Lois de Nuremberg (1935)')).toBe(false)
+    expect(answerMatchesCours('Lois de Nuremberg', 'Lois de Nuremberg (1935)')).toBe(true)
+  })
+
+  it('langues : les accents comptent, pas la casse ni la ponctuation', () => {
+    expect(answerMatchesLangue('esta', 'está')).toBe(false)
+    expect(answerMatchesLangue('ou', 'où')).toBe(false)
+    expect(answerMatchesLangue('e', 'è')).toBe(false)
+    expect(answerMatchesLangue('Está.', 'está')).toBe(true)
+    expect(answerMatchesLangue("l’uomo", "l'uomo")).toBe(true)
+    expect(correcteurDe({ id: 'lng-it-gram::0::sterm' })).toBe(answerMatchesLangue)
+    expect(correcteurDe({ id: 'gf-t1::0::strou' })).toBe(answerMatchesCours)
   })
 })

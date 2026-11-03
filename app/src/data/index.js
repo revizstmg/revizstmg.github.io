@@ -731,19 +731,41 @@ function sectionPairs(sec) {
 // « / » ou « ou », et l'acronyme entre parenthèses. Ainsi « PGI » seul est
 // accepté quand la réponse attendue est « PGI / ERP ». (On ne découpe jamais sur
 // « , » ni sur les chiffres pour ne pas casser les dates ou les nombres.)
+// Coupe au niveau supérieur seulement : jamais à l'intérieur d'une parenthèse,
+// ni au milieu d'une formule (« 1/x » : la barre n'est pas entourée d'espaces).
+function coupeHorsParentheses(raw) {
+  const parts = []
+  let prof = 0
+  let cur = ''
+  for (let i = 0; i < raw.length; i++) {
+    const c = raw[i]
+    if (c === '(') prof++
+    else if (c === ')') prof = Math.max(0, prof - 1)
+    if (!prof && c === '/' && /\s/.test(raw[i - 1] || '') && /\s/.test(raw[i + 1] || '')) { parts.push(cur); cur = ''; continue }
+    if (!prof && raw.slice(i, i + 4).toLowerCase() === ' ou ') { parts.push(cur); cur = ''; i += 3; continue }
+    cur += c
+  }
+  parts.push(cur)
+  return parts
+}
+const parentheseEquilibree = (v) => (v.match(/\(/g) || []).length === (v.match(/\)/g) || []).length && !/^[^(]*\)/.test(v)
 function termVariants(term) {
   const raw = String(term || '').trim()
   if (!raw) return []
+  const aDesLettres = /\p{L}/u.test(raw.replace(/\([^)]*\)/g, ''))
   const out = new Set()
   const push = (s) => {
     const v = String(s || '').replace(/\s+/g, ' ').replace(/[;,.]+$/, '').trim()
-    if (v && v.toLowerCase() !== raw.toLowerCase()) out.add(v)
+    if (!v || v.toLowerCase() === raw.toLowerCase()) return
+    if (!parentheseEquilibree(v) || v.length < 2) return // « SEA) », « D1) », une lettre seule
+    if (aDesLettres && (/^[\d\s.,/-]+$/.test(v) || isBareDate(v))) return // une date ou un nombre seul n'est pas le terme
+    out.add(v)
   }
   push(raw.replace(/^[\u2460-\u2473]\s*/, '')) // sans numéro cerclé (« ① Dégager la thèse »)
   push(raw.replace(/\s*\([^)]*\)/g, ' ')) // le terme sans ses parenthèses
-  for (const part of raw.split(/\s*(?:\/| ou )\s*/i)) {
+  for (const part of coupeHorsParentheses(raw)) {
     push(part.replace(/\s*\([^)]*\)/g, ' ')) // « PGI (ERP) » → « PGI »
-    const m = part.match(/\(([^)]+)\)/) // acronyme entre parenthèses → « ERP »
+    const m = part.match(/\(([^()]+)\)/) // acronyme entre parenthèses → « ERP »
     if (m) push(m[1])
   }
   return [...out]

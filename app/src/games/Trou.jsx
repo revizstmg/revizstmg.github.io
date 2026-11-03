@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from 'react'
-import { shuffle, Feedback, GameProgress, answerMatchesCours as answerMatches } from './common.jsx'
+import { shuffle, Feedback, GameProgress, correcteurDe } from './common.jsx'
 import { useT } from '../i18n.js'
 
 // Trous suivants d'une phrase à plusieurs trous : même mot masqué, on répète la saisie.
@@ -13,6 +13,7 @@ function BlancRepete({ valeur }) {
 
 export default function Trou({ game, color, onDone }) {
   const t = useT()
+  const answerMatches = correcteurDe(game)
   const items = useMemo(() => shuffle(game.questions), [game])
   const [i, setI] = useState(0)
   const [correct, setCorrect] = useState(0)
