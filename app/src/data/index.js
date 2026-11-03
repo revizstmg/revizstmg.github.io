@@ -502,14 +502,14 @@ export function datesCompatibles(d1, d2) {
 // (notion liée : elle serait aussi juste).
 function qcmFromPairs(pairs, id, title, exclut = null) {
   const answers = [...new Set(pairs.map((p) => p.a).filter((a) => a && a.length))]
-  if (answers.length < 2) return null
+  if (answers.length < 3) return null
   const questions = shuffle(pairs)
     .map((p) => {
       const distractors = shuffle(answers.filter((a) => a !== p.a && !(exclut && exclut(p, a)))).slice(0, 3)
       const choices = shuffle([p.a, ...distractors])
       return { q: p.q, choices, answer: choices.indexOf(p.a), explain: p.e || `${p.q} → ${p.a}`, drawSource: p.drawSource || p.q }
     })
-    .filter((q) => q.choices.length >= 2 && q.answer >= 0)
+    .filter((q) => q.choices.length >= 3 && q.answer >= 0) // jamais de QCM à 2 propositions
   return questions.length ? { id, type: 'qcm', title, icon: '❓', questions } : null
 }
 
@@ -525,7 +525,7 @@ function qcmFromPairs(pairs, id, title, exclut = null) {
 const echapperRegExp = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 const sansAccent = (t) => String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
 export function masquerMot(texte, terme) {
-  const re = new RegExp(`(?<![\\p{L}\\d])${echapperRegExp(terme)}(?![\\p{L}\\d])`, 'gu')
+  const re = new RegExp(`(?<![\\p{L}\\d])${echapperRegExp(terme)}(?![\\p{L}\\d])`, 'giu') // sans tenir compte de la casse : « Will » / « will »
   const n = (texte.match(re) || []).length
   if (!n || n > 2) return null
   const reste = texte.replace(re, ' ')
@@ -536,7 +536,11 @@ export function masquerMot(texte, terme) {
   // Même radical (au moins 6 lettres) dans la phrase : « convention » / « conventionnelle ».
   const radicaux = sansAccent(terme).split(/[^a-z0-9]+/).filter((w) => w.length >= 6).map((w) => w.slice(0, 6))
   if (radicaux.length) { const mots = sansAccent(reste).split(/[^a-z0-9]+/); if (radicaux.some((r) => mots.some((m) => m.length >= 6 && m.startsWith(r)))) return null }
-  return texte.replace(re, '____')
+  const masque = texte.replace(re, '____')
+  // La réponse (à l'accent près) ne doit plus apparaître en clair dans l'énoncé.
+  const mots = sansAccent(terme).trim()
+  if (mots && new RegExp(`(?<![a-z0-9])${echapperRegExp(mots)}(?![a-z0-9])`).test(sansAccent(masque))) return null
+  return masque
 }
 
 // Débuts de phrase qui renvoient à la phrase précédente : sans elle, le trou n'a pas de contexte.
@@ -882,9 +886,15 @@ function qcmMotManquant(trou, id, distractorPool = trou) {
   if (trou.length < 3) return null
   const pool = []
   for (const m of distractorPool.map((q) => q.answer)) if (!pool.some((x) => cleReponse(x) === cleReponse(m))) pool.push(m)
+  const nbMots = (m) => String(m).trim().split(/\s+/).length
   const questions = shuffle(trou).map((q) => {
+    // « les deux », « tous », « aucun » : réponse qui dépend d'une liste, pas un mot à trouver.
+    if (/^(?:les|tous|toutes)?\s*(?:deux|trois|quatre)$|^(?:tous|toutes|aucun|aucune|les deux)$|^(?:tous|toutes) les (?:deux|trois)$/.test(cleReponse(q.answer))) return null
     const dansLaPhrase = (m) => new RegExp(`(?<![\\p{L}\\d])${echapperRegExp(String(m))}(?![\\p{L}\\d])`, 'iu').test(q.text)
-    const proches = shuffle(pool.filter((m) => cleReponse(m) !== cleReponse(q.answer) && !notionsLiees(m, q.answer) && !dansLaPhrase(m)))
+    // Même nature : un groupe de plusieurs mots n'a pour distracteurs que des groupes de même longueur ;
+    // un mot seul n'a pas pour distracteur une longue expression.
+    const memeForme = (m) => nbMots(q.answer) > 1 ? nbMots(m) === nbMots(q.answer) : nbMots(m) <= 2
+    const proches = shuffle(pool.filter((m) => cleReponse(m) !== cleReponse(q.answer) && !notionsLiees(m, q.answer) && !dansLaPhrase(m) && memeForme(m)))
     const distracteurs = proches.slice(0, 3)
     if (distracteurs.length < 3) return null
     const choices = shuffle([q.answer, ...distracteurs])
