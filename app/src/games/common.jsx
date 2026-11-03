@@ -81,6 +81,14 @@ export function valeurNumerique(s) {
   const u = m[2] || ''
   return { n, unite: !u ? '' : /€|euro/.test(u) ? 'eur' : 'pct' }
 }
+// Saisie chiffrée stricte pour les calculs : « 7 000 », « 8,45 », « −5 », « 12 € »,
+// « 7.000 » (séparateur de milliers). « 3/4 » ou « 12 abc » ne sont pas des nombres.
+export function parseNombre(s) {
+  const t = String(s ?? '').replace(/[\s\u00a0\u202f]+/g, ' ').trim()
+  if (/^[+\-−]?\s?[1-9]\d{0,2}(\.\d{3})+(\s*(€|euros?|%))?$/.test(t)) return parseNombre(t.replace(/\./g, ''))
+  const v = valeurNumerique(t.replace(/^\+\s?/, ''))
+  return v ? v.n : null
+}
 function memeValeur(saisie, attendu) {
   const a = valeurNumerique(saisie)
   const b = valeurNumerique(attendu)
