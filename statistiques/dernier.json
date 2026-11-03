@@ -1,6 +1,6 @@
 {
- "date": "2026-11-02",
- "heure": "2026-11-02T13:01:29.750Z",
+ "date": "2026-11-03",
+ "heure": "2026-11-03T12:35:31.436Z",
  "utilisation": {
   "profs": 4,
   "eleves": 11,
@@ -10,7 +10,7 @@
    "premiere-stmg": 2,
    "terminale-stmg": 9
   },
-  "vues_7j": 62,
+  "vues_7j": 63,
   "actifs_1j": 0,
   "actifs_7j": 1,
   "ecrans_7j": {
@@ -24,13 +24,14 @@
    "accueil": 29,
    "matiere": 5,
    "boutique": 1,
+   "chapitre": 1,
    "revision": 10,
    "bac-blanc": 2
   },
-  "vues_hier": 0,
+  "vues_hier": 1,
   "actifs_30j": 7,
   "defis_amis": 0,
-  "visites_7j": 16,
+  "visites_7j": 17,
   "nouveaux_7j": 0,
   "specialites": {
    "sig": 1,
@@ -40,7 +41,7 @@
   "joueurs_amis": 1,
   "nouveaux_30j": 5,
   "rappels_push": 0,
-  "visites_hier": 0,
+  "visites_hier": 1,
   "defis_amis_7j": 0,
   "sessions_live": 0,
   "quiz_de_classe": 0,
@@ -56,20 +57,20 @@
   "premiere": 8,
   "themes": 110,
   "chapitres": 870,
-  "series": 4093,
-  "questions": 19687,
-  "flashcards": 2321
+  "series": 4088,
+  "questions": 19672,
+  "flashcards": 2315
  },
  "publication": {
   "ci": {
-   "etat": "failure",
-   "date": "2026-10-31T13:19:00Z"
+   "etat": "success",
+   "date": "2026-11-02T19:02:30Z"
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-11-01T11:40:01Z"
+   "date": "2026-11-02T19:03:36Z"
   },
-  "modifications7j": 33
+  "modifications7j": 32
  },
  "tests": "success"
 }
