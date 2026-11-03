@@ -2,6 +2,15 @@ import { useMemo, useRef, useState } from 'react'
 import { shuffle, Feedback, GameProgress, answerMatchesCours as answerMatches } from './common.jsx'
 import { useT } from '../i18n.js'
 
+// Trous suivants d'une phrase à plusieurs trous : même mot masqué, on répète la saisie.
+function BlancRepete({ valeur }) {
+  return (
+    <span className="mx-1 inline-block min-w-[3rem] border-b-2 border-slate-400 px-1 text-center font-semibold" role="img" aria-label={valeur.trim() ? valeur : '____'}>
+      {valeur.trim() || '____'}
+    </span>
+  )
+}
+
 export default function Trou({ game, color, onDone }) {
   const t = useT()
   const items = useMemo(() => shuffle(game.questions), [game])
@@ -11,7 +20,7 @@ export default function Trou({ game, color, onDone }) {
   const [checked, setChecked] = useState(false)
   const bilan = useRef({ ratees: [], reussies: [] }) // pour le carnet d'erreurs
   const q = items[i]
-  const [before, after] = useMemo(() => q.text.split(/_{2,}/), [q])
+  const [before, ...suite] = useMemo(() => q.text.split(/_{2,}/), [q])
   const ok = checked && answerMatches(val, q.answer, q.alt)
 
   const check = () => {
@@ -47,7 +56,12 @@ export default function Trou({ game, color, onDone }) {
           placeholder="…"
           aria-label={t('answerToComplete')}
         />
-        {after}
+        {suite.map((morceau, k) => (
+          <span key={k}>
+            {k > 0 && <BlancRepete valeur={val} />}
+            {morceau}
+          </span>
+        ))}
       </p>
 
       {!checked ? (

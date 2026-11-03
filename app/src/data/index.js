@@ -539,6 +539,9 @@ export function masquerMot(texte, terme) {
   return texte.replace(re, '____')
 }
 
+// Débuts de phrase qui renvoient à la phrase précédente : sans elle, le trou n'a pas de contexte.
+const DEBUT_ANAPHORIQUE = /^(?:comme\b|cela\b|ceci\b|celle[s]?\b|celui\b|ceux\b|il\b|elle\b|ils\b|elles\b|sa\b|son\b|ses\b|leur[s]?\b|c['’]est\b|ce\s+(?:qui|que|sont|dernier|derni[eè]re)\b|cette\b|cet\b|ces\b|on\s+(?:l['’]|y\b|en\b|les\b|la\b|le\b)|enfin\b|ensuite\b|puis\b|ainsi\b|donc\b|alors\b|or\b|mais\b|en\s+(?:effet|revanche|outre)\b|de\s+plus\b|par\s+(?:cons[ée]quent|ailleurs)\b|dans\s+(?:ce|ces|cette)\b|la\s+(?:seconde|premi[eè]re|derni[eè]re|deuxi[eè]me|troisi[eè]me)\b|le\s+(?:second|premier|dernier|deuxi[eè]me|troisi[eè]me)\b|les\s+(?:seconds|premiers|derniers|secondes|premi[eè]res)\b)/i
+
 function trouFromBold(sec, themeId) {
   const out = []
   const seen = new Set()
@@ -578,7 +581,7 @@ function trouFromBold(sec, themeId) {
       if (!text2) continue
       // « Comme idéal, elle… », « Cela… », « Sa valeur… » ne sont pas des
       // consignes autonomes. Garder le paragraphe jusqu'à la phrase interrogée.
-      if (/^(?:comme\b|cela\b|ceci\b|celle[s]?\b|celui\b|ceux\b|il\b|elle\b|ils\b|elles\b|sa\b|son\b|ses\b)/i.test(plain)) {
+      if (DEBUT_ANAPHORIQUE.test(plain)) {
         if (!si) continue
         text2 = masquerMot(sentences.slice(0, si).map(stripMd).join(' ') + ' ' + plain, term)
         if (!text2) continue
