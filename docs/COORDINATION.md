@@ -1691,3 +1691,7 @@ Prochaine action :
 
 ### FINALISATION-20261102-CODEX-QUATRE
 - Reprise après #161 de Claude : intégrer origin/main en conservant ses corrections et ses limites de déploiement Supabase. #159 est déjà dans la compilation 227bcef5 ; finaliser #160 (contraste et assertion de vrai cours), confirmer la publication, puis lancer les dix agents demandés sur une version gelée, par vagues de six maximum. Aucun changement des fonctions Supabase dans cette finalisation.
+
+### CORRECTIONS-20261103-CLAUDE-DIX-VERIFICATEURS
+- Demande : « Corrige tout » après dix agents vérificateurs (contenu, exercices, accès, IA, paiements, outils, social, comptes, traductions, accessibilité). Quatre branches (code, SQL, traductions, contenu) fusionnées dans claude/corrections-verif10.
+- Déploiements à faire après fusion, avec accord : examen-blanc, fiche-vision, revizstmg-paiement ; migration SQL après le site (voir docs/PAIEMENTS.md).
