@@ -33,6 +33,15 @@ export async function upsertMember({ classCode, name, photo, role, xp, streak, c
     'resolution=merge-duplicates,return=minimal')
 }
 
+// Inscrit l'élève comme membre sans toucher à une ligne existante (la lecture du
+// classement exige d'être membre de la classe).
+export async function ensureMember({ classCode, name, photo }) {
+  await send('POST', 'class_member?on_conflict=class_code,device_id', [{
+    class_code: normalizeCode(classCode), device_id: deviceId(), name: String(name || '').slice(0, 40),
+    photo: photo ? String(photo).slice(0, 40000) : null, role: 'eleve', week: isoWeekKey(), active_day: todayKey(),
+  }], 'resolution=ignore-duplicates,return=minimal')
+}
+
 export async function fetchMembers(classCode) {
   const cols = 'device_id,name,photo,role,group_id,xp,streak,courses_week,week,active_day,subjects,updated_at'
   return getJSON(rest(`class_member?select=${cols}&class_code=eq.${enc(normalizeCode(classCode))}&order=courses_week.desc,xp.desc&limit=300`))
@@ -83,17 +92,28 @@ export async function upsertMeta(classCode, patch) {
 }
 
 // --- Mur de la classe ------------------------------------------------------
+// Lecture par la fonction de la base : l'identifiant de l'auteur d'un message
+// anonyme n'est renvoyé qu'à cet auteur et au professeur. Avant l'application de
+// la migration (fonction absente, 404), on retombe sur la lecture directe.
 export async function fetchWall(classCode) {
-  return getJSON(rest(`class_wall?select=*&class_code=eq.${enc(normalizeCode(classCode))}&order=created_at.desc&limit=100`))
+  const cc = normalizeCode(classCode)
+  try {
+    return (await rpc('revizstmg_mur', { p_code: cc })) || []
+  } catch (error) {
+    if (error?.status !== 404) throw error
+    return getJSON(rest(`class_wall?select=*&class_code=eq.${enc(cc)}&order=created_at.desc&limit=100`))
+  }
 }
+const COLONNES_MUR = 'id,class_code,name,kind,text,chapter_label,answer,answered_by,reactions,is_anon,resolved,created_at'
 export async function postWall({ classCode, name, kind, text, chapterLabel, isAnon }) {
-  const res = await send('POST', 'class_wall', [{
+  const res = await send('POST', `class_wall?select=${COLONNES_MUR}`, [{
     class_code: normalizeCode(classCode), device_id: deviceId(), name: String(name || '').slice(0, 40),
     kind: kind || 'question', text: String(text || '').slice(0, 1000),
     chapter_label: String(chapterLabel || '').slice(0, 120), is_anon: !!isAnon,
   }], 'return=representation')
   const rows = await res.json().catch(() => [])
-  return rows[0]
+  // device_id n'est plus lisible en retour : c'est le sien, on le rajoute.
+  return rows[0] ? { ...rows[0], device_id: deviceId() } : rows[0]
 }
 export async function answerWall(id, answer, by) {
   await send('PATCH', `class_wall?id=eq.${enc(id)}`, { answer: String(answer || '').slice(0, 1000), answered_by: String(by || '').slice(0, 40) }, 'return=minimal')
