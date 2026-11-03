@@ -16,13 +16,20 @@ function focalisables(racine) {
   return [...racine.querySelectorAll(FOCALISABLES)].filter((el) => el.getClientRects().length > 0)
 }
 
+// Dernier et avant-dernier éléments ayant reçu le focus : un champ avec autoFocus prend le focus avant l'effet
+// ci-dessous, il faut alors restituer le focus à l'élément qui avait ouvert la fenêtre.
+let focusCourant = null, focusPrecedent = null
+if (typeof document !== 'undefined') {
+  document.addEventListener('focusin', (e) => { if (e.target !== focusCourant) { focusPrecedent = focusCourant; focusCourant = e.target } }, true)
+}
+
 export function useFenetreClavier(ref, onClose, actif = true, { focusSurRacine = false } = {}) {
   const fermer = useRef(onClose)
   fermer.current = onClose
   useEffect(() => {
     const racine = ref.current
     if (!actif || !racine) return
-    const avant = document.activeElement
+    const avant = racine.contains(document.activeElement) ? focusPrecedent : document.activeElement
     const entree = {}
     pile.push(entree)
     if (!racine.contains(document.activeElement)) {

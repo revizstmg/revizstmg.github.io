@@ -530,7 +530,7 @@ export default function Welcome() {
             {emailFaux && <p id="w-email-aide" className="welcome-aide erreur">{t('emailHint')}</p>}
             <label className="welcome-label" htmlFor="w-pass">{t('passwordField')}</label>
             <input id="w-pass" className="welcome-input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && step1Ok && !busy && submitForm()} placeholder="••••••••" autoComplete="current-password" maxLength={72} />
-            <button type="button" className="mt-2 text-left text-sm font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]" onClick={() => { setRecoverStep('request'); setErr(''); setInfo('') }}>{t('forgotPassword')}</button>
+            <button type="button" className="mt-2 text-left text-sm font-semibold text-[#84671b] hover:underline" onClick={() => { setRecoverStep('request'); setErr(''); setInfo('') }}>{t('forgotPassword')}</button>
             {err && <p className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
             {info && <p className="mt-3 text-sm font-semibold text-emerald-700">{info}</p>}
             <button type="button" className="welcome-cta" disabled={!step1Ok || busy} onClick={() => submitForm()}>{busy ? t('pleaseWait') : t('loginTab')}</button>
@@ -633,15 +633,15 @@ export default function Welcome() {
                 <div className="mt-3">
                   <label className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-300">
                     <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} className="mt-0.5 h-4 w-4 shrink-0" />
-                    <span>{t('consentText')}{' '}<button type="button" onClick={() => setShowPrivacy((v) => !v)} className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">{t('readPrivacy')}</button></span>
+                    <span>{t('consentText')}{' '}<button type="button" onClick={() => setShowPrivacy((v) => !v)} className="font-semibold text-[#84671b] underline">{t('readPrivacy')}</button></span>
                   </label>
                   {showPrivacy && (
                     <div className="mt-2 max-h-40 overflow-y-auto rounded-xl bg-black/5 p-3 text-xs leading-relaxed text-slate-600 dark:bg-white/5 dark:text-slate-300">
                       {t('privacySummary')}
                       {/* Textes complets, dans un nouvel onglet pour ne pas quitter l'inscription */}
                       <span className="mt-2 flex gap-3 font-semibold">
-                        <a href="./#/cgu" target="_blank" rel="noopener" className="text-[#84671b] underline dark:text-[#d9bd77]">{t('termsOfUse')}</a>
-                        <a href="./#/confidentialite" target="_blank" rel="noopener" className="text-[#84671b] underline dark:text-[#d9bd77]">{t('privacyPolicy')}</a>
+                        <a href="./#/cgu" target="_blank" rel="noopener" className="text-[#84671b] underline">{t('termsOfUse')}</a>
+                        <a href="./#/confidentialite" target="_blank" rel="noopener" className="text-[#84671b] underline">{t('privacyPolicy')}</a>
                       </span>
                     </div>
                   )}

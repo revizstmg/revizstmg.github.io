@@ -52,7 +52,7 @@ export default function ReminderScheduler() {
     const [hh, mm] = String(r.time || '18:00').split(':').map(Number)
     const dueMsFromNow = () => {
       const now = new Date()
-      const next = new Date(); next.setHours(hh || 18, mm || 0, 0, 0)
+      const next = new Date(); next.setHours(Number.isFinite(hh) ? hh : 18, Number.isFinite(mm) ? mm : 0, 0, 0)
       if (next <= now) next.setDate(next.getDate() + 1)
       return next - now
     }
@@ -67,7 +67,7 @@ export default function ReminderScheduler() {
     // Rattrapage à l'ouverture : l'heure est-elle déjà passée aujourd'hui ?
     const catchUp = () => {
       const now = new Date()
-      const todayAt = new Date(); todayAt.setHours(hh || 18, mm || 0, 0, 0)
+      const todayAt = new Date(); todayAt.setHours(Number.isFinite(hh) ? hh : 18, Number.isFinite(mm) ? mm : 0, 0, 0)
       if (now >= todayAt) fireOnce()
     }
 

@@ -145,8 +145,10 @@ export default function PhotoFiche() {
           ? MESSAGE_IA_INDISPONIBLE
           : messageAccesIA(code)
             ? messageAccesIA(code)
-          : code === 'login_required'
+          : code === 'login_required' || code === 'http_401'
             ? 'Connecte-toi avec ton compte pour analyser une photo.'
+          : code === 'timeout'
+            ? 'L’analyse prend trop de temps. Réessaie, ou utilise la lecture classique ci-dessous.'
           : code === 'rate_limit'
             ? 'La limite temporaire d’analyses est atteinte. Utilise la lecture sur cet appareil ou réessaie plus tard.'
           : code === 'network'

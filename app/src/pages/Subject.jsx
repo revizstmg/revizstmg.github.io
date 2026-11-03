@@ -7,6 +7,7 @@ import { useStore, chapterScore } from '../store.jsx'
 import { ProgressBar } from '../components/ui.jsx'
 import { CourseText } from '../components/Course.jsx'
 import { DeckDownload } from '../components/DeckDownload.jsx'
+import { OutilReserve } from '../components/PastillePremium.jsx'
 import { useT } from '../i18n.js'
 
 // « Thème 5 — Quel est le rôle du contrat ? » → numéro 5 dans la pastille,
@@ -72,7 +73,9 @@ export default function Subject() {
         })}
       </ol>
 
-      <DeckDownload deck={deckForSubject(sid, languageSubject && normalizeStudyLanguages(state.studyLanguages).length ? chapters.map(c => c.id) : null)} color={color} label={t('downloadSubjectDeck')} />
+      <OutilReserve icone="🃏" titre={t('downloadSubjectDeck')}>
+        <DeckDownload deck={deckForSubject(sid, languageSubject && normalizeStudyLanguages(state.studyLanguages).length ? chapters.map(c => c.id) : null)} color={color} label={t('downloadSubjectDeck')} />
+      </OutilReserve>
     </div>
   )
 }

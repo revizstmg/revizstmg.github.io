@@ -81,7 +81,7 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
       }
       return json(await probe)
     }
-    let requestAction=null, requestStep=null, reservation=null, reussi=false
+    let requestAction=null, requestStep=null, reservation=null, reussi=false, contenuRefuse=false
     try {
       const token = req.headers.get('authorization') || ''
       if (!token.startsWith('Bearer ')) return json({ error: 'login_required' }, 401)
@@ -104,7 +104,7 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
       for (const [id, value] of calls) if (now() - value.start > 3600000) calls.delete(id)
       // Abonnement et quota lus côté serveur : un navigateur modifié n'y change rien.
       const { id: fonction, suite } = fonctionIA(body)
-      const acces = await controleAcces({ env, fetcher, userId: user.id, creeLe: user.created_at, id: fonction, suite, preuve: body.action !== 'plan', maintenant: now() })
+      const acces = await controleAcces({ env, fetcher, userId: user.id, creeLe: user.created_at, id: fonction, suite, preuve: body.action !== 'plan', plan: body.action === 'plan', maintenant: now() })
       if (!acces.ok) return json({ error: acces.error }, acces.status)
       reservation = acces
       const system = body.action === 'excellence' ? SYSTEM.replace('Ne traite que les connaissances présentes dans les cours sélectionnés.', 'Appuie-toi sur le dossier officiel et le programme d’économie STMG.') : body.action === 'tutor' ? SYSTEM.replace('Écris en français.', "Réponds dans la langue de l'élève.") : SYSTEM
@@ -122,7 +122,7 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
           const error = await providerFailure(response)
           if (response.status===503 && body.action==='control' && body.step==='prepare') {
             const control=courseControl(body.course,body.previous)
-            if(control)return json({control,preparation:'course'})
+            if(control){reussi=true;return json({control,preparation:'course'})}
           }
           return json({error},response.status===429?429:502)
         }
@@ -146,7 +146,7 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
           const error = await providerFailure(response)
           if (response.status===503 && body.action==='control' && body.step==='prepare') {
             const control=courseControl(body.course,body.previous)
-            if(control)return json({control,preparation:'course'})
+            if(control){reussi=true;return json({control,preparation:'course'})}
           }
           return json({error},response.status===429?429:502)
         }
@@ -157,7 +157,7 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
           const error = await providerFailure(response)
           if (response.status===503 && body.action==='control' && body.step==='prepare') {
             const control=courseControl(body.course,body.previous)
-            if(control)return json({control,preparation:'course'})
+            if(control){reussi=true;return json({control,preparation:'course'})}
           }
           return json({error},response.status===429?429:502)
         }
@@ -166,10 +166,10 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
       let data, validationPhase='json'
       try {
         data = JSON.parse((result || '').trim().replace(/^```json\s*/i, '').replace(/```$/, ''))
-        if (data.error === 'out_of_scope') return json({ error: 'out_of_scope' }, 422)
+        if (data.error === 'out_of_scope') { contenuRefuse = true; return json({ error: 'out_of_scope' }, 422) }
         validationPhase='contract'
         data = body.action === 'practice' ? checkPracticeResult(data,body) : body.action === 'excellence' ? checkExcellenceResult(data,body.answer) : body.action === 'control' ? checkControlResult(data, body) : body.action === 'tutor' ? checkTutorReply(data) : body.action === 'study' ? checkStudyResult(data, body.courses) : body.action === 'plan' ? checkPlan(data, body.catalog) : body.action === 'grade' ? checkGrade(data, body.exam) : checkGeneratedExam(data, body.courses, body.duration)
-      } catch { console.warn(JSON.stringify({event:'exam_invalid_response',action:body.action,step:body.action==='control'?body.step:null,phase:validationPhase,hasFeedback:typeof data?.feedback==='string',criteriaCount:Array.isArray(data?.criteria)?data.criteria.length:null})); return json({ error: 'invalid_response' }, 502) }
+      } catch { contenuRefuse = true; console.warn(JSON.stringify({event:'exam_invalid_response',action:body.action,step:body.action==='control'?body.step:null,phase:validationPhase,hasFeedback:typeof data?.feedback==='string',criteriaCount:Array.isArray(data?.criteria)?data.criteria.length:null})); return json({ error: 'invalid_response' }, 502) }
       reussi = true
       return json(body.action === 'practice' ? {practice:data} : body.action === 'excellence' ? {excellence:data} : body.action === 'control' ? { control:data } : body.action === 'tutor' ? { tutor:data } : body.action === 'study' ? { study: data } : body.action === 'plan' ? { plan: data } : body.action === 'grade' ? { grade: data } : { exam: data })
     } catch (e) {
@@ -178,7 +178,7 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
       return json({ error }, 502)
     } finally {
       // L'utilisation réservée n'est pas perdue si le fournisseur ou la validation a échoué.
-      if (reservation && !reussi) await reservation.rendre()
+      if (reservation && !reussi) await (contenuRefuse && reservation.rendreSiPermis ? reservation.rendreSiPermis() : reservation.rendre())
     }
   }
 }

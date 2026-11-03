@@ -236,7 +236,8 @@ button, a { transition: transform 0.15s cubic-bezier(0.22, 0.68, 0.24, 1); }
 
 /* Anneau de focus clair au clavier (navigation intuitive + accessibilité). */
 :focus-visible {
-  outline: 2px solid color-mix(in srgb, var(--c-accent) 72%, transparent);
+  /* Contraste d'au moins 3:1 (WCAG 1.4.11), sans transparence. */
+  outline: 2px solid var(--c-accent-texte);
   outline-offset: 2px;
   border-radius: 6px;
 }
@@ -553,7 +554,7 @@ button, a { transition: transform 0.15s cubic-bezier(0.22, 0.68, 0.24, 1); }
   font-family: Georgia, serif;
 }
 .welcome-input::placeholder { color: #c9c3b8; }
-.welcome-input:focus { border-color: #c8a24e; }
+.welcome-input:focus { border-color: #84671b; outline: 2px solid #84671b; outline-offset: 2px; }
 .welcome-pill {
   border: 1px solid #e4ded2;
   background: #fff;

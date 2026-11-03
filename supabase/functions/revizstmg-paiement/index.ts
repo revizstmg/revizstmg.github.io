@@ -73,6 +73,24 @@ async function enregistrer(ligne: Record<string, unknown>) {
   })
 }
 
+// Rembourse le premier paiement d'un abonnement résilié parce qu'il était en trop (second abonnement ou compte
+// supprimé). Au mieux : sans paiement retrouvé ou en cas d'erreur, le journal demande une vérification manuelle.
+async function rembourserPremierPaiement(subId: string): Promise<boolean> {
+  try {
+    const s = await stripe(`/v1/subscriptions/${encodeURIComponent(subId)}`)
+    const facture = typeof s.latest_invoice === 'string' ? s.latest_invoice : s.latest_invoice?.id
+    if (!facture) return false
+    const f = await stripe(`/v1/invoices/${encodeURIComponent(facture)}`)
+    const paiement = typeof f.payment_intent === 'string' ? f.payment_intent : f.payment_intent?.id
+    const charge = typeof f.charge === 'string' ? f.charge : f.charge?.id
+    if (!paiement && !charge) return false
+    const p = new URLSearchParams(paiement ? { payment_intent: paiement } : { charge: charge as string })
+    p.set('reason', 'duplicate')
+    await stripe('/v1/refunds', 'POST', p, { 'Idempotency-Key': `rembourse-${subId}` })
+    return true
+  } catch { return false }
+}
+
 // ---- Webhook Stripe --------------------------------------------------------
 async function webhook(req: Request) {
   const corps = await req.text()
@@ -110,10 +128,15 @@ async function webhook(req: Request) {
         // premier : sinon l'un resterait facturé sans être suivi. Le premier est vérifié chez Stripe (la ligne
         // pourrait être périmée) ; s'il est vraiment actif, le nouveau est résilié.
         let premierActif = false
-        try { premierActif = STATUTS_ACTIFS.includes((await stripe(`/v1/subscriptions/${encodeURIComponent(existante.stripe_subscription_id)}`)).status) } catch { premierActif = false }
+        // Seul « introuvable » prouve que le premier n'existe plus ; toute autre erreur (délai, 5xx) relance
+        // l'exception : réponse 500, Stripe rejoue l'événement, et on n'écrase jamais un abonnement encore facturé.
+        try { premierActif = STATUTS_ACTIFS.includes((await stripe(`/v1/subscriptions/${encodeURIComponent(existante.stripe_subscription_id)}`)).status) } catch (e) {
+          if (!String((e as Error).message).includes('resource_missing')) throw e
+        }
         if (premierActif) {
           await stripe(`/v1/subscriptions/${encodeURIComponent(sub.id)}`, 'DELETE')
-          console.warn(JSON.stringify({ event: 'abonnement_double_resilie', abonnement: sub.id, garde: existante.stripe_subscription_id, remboursement: 'a_verifier' }))
+          const rembourse = await rembourserPremierPaiement(sub.id)
+          console.warn(JSON.stringify({ event: 'abonnement_double_resilie', abonnement: sub.id, garde: existante.stripe_subscription_id, remboursement: rembourse ? 'fait' : 'a_verifier' }))
           return json({ recu: true, ignore: 'second_abonnement' })
         }
       }
@@ -121,6 +144,8 @@ async function webhook(req: Request) {
         // Compte supprimé entre-temps : on n'encaisse pas pour un compte qui n'existe plus.
         if ((e as Error).message === 'base_409') {
           try { await stripe(`/v1/subscriptions/${encodeURIComponent(sub.id)}`, 'DELETE') } catch { /* déjà résilié */ }
+          const rembourse = await rembourserPremierPaiement(sub.id)
+          console.warn(JSON.stringify({ event: 'compte_supprime_paiement', abonnement: sub.id, remboursement: rembourse ? 'fait' : 'a_verifier' }))
           return json({ recu: true, ignore: 'compte_supprime' })
         }
         throw e
@@ -173,13 +198,21 @@ async function action(req: Request) {
       const liste = await stripe(`/v1/subscriptions?customer=${encodeURIComponent(ligne.stripe_customer_id)}&status=all&limit=10`)
       for (const a of liste.data || []) if (STATUTS_ACTIFS.includes(a.status)) ids.add(a.id)
     }
-    if (!ids.size) return json({ ok: true, aucun: true })
     for (const id of ids) {
       try { await stripe(`/v1/subscriptions/${encodeURIComponent(id)}`, 'DELETE') } catch (e) {
         if (!String((e as Error).message).includes('resource_missing')) throw e
       }
     }
-    return json({ ok: true })
+    // Compte supprimé : le client Stripe (adresse e-mail, identifiant du compte) l'est aussi ; Stripe garde
+    // lui-même les factures qu'il doit conserver. Au mieux : un échec ne bloque pas la suppression du compte.
+    if (ligne?.stripe_customer_id) {
+      try {
+        await stripe(`/v1/customers/${encodeURIComponent(ligne.stripe_customer_id)}`, 'DELETE')
+        // Si la suppression du compte échoue ensuite, la ligne ne pointe plus vers un client disparu.
+        try { await enregistrer({ user_id: u.id, stripe_customer_id: null, stripe_subscription_id: null, statut: 'aucun', offre: null, periode: null, periode_fin: null, annulation_prevue: false, updated_at: new Date().toISOString() }) } catch { /* la ligne part avec le compte */ }
+      } catch { /* déjà supprimé */ }
+    }
+    return json(ids.size ? { ok: true } : { ok: true, aucun: true })
   }
 
   if (corps.action === 'checkout') {
