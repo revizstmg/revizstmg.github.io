@@ -163,11 +163,12 @@ https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-ent
 https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-entreprendre/la-societe-contrat-de-societe-apports-affectio-societatis/
 https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-entreprendre/la-concurrence-concurrence-deloyale-ententes-abus-de-position/
 https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-entreprendre/les-partenariats-contrat-d-entreprise-sous-traitance-et-franchise/
-https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-entreprendre/cas-pratique-guide-choisir-une-forme-juridique-sas-et-responsabilite/
+https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-entreprendre/cas-pratique-guide-entreprise-individuelle-ou-societe-proteger-son/
 https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-entreprendre/choisir-une-forme-juridique-entreprise-individuelle-ou-societe/
 https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-entreprendre/proteger-le-patrimoine-de-l-entrepreneur-separation-des-patrimoines/
 https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-entreprendre/proteger-les-creations-brevet-marque-droit-d-auteur-inpi/
 https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-entreprendre/la-transmission-de-l-entreprise-cession-donation-succession/
+https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-entreprendre/cas-pratique-guide-choisir-une-forme-juridique-sas-et-responsabilite/
 https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-entreprendre/la-personnalite-juridique-personne-physique-personne-morale-patrimoine/
 https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-entreprendre/les-contrats-de-l-entreprise-bail-commercial-vente-franchise-sous/
 https://revizstmg.github.io/cours/terminale/droit/dans-quel-cadre-et-comment-entreprendre/la-protection-des-donnees-personnelles-rgpd-cnil-consentement/
@@ -510,7 +511,6 @@ https://revizstmg.github.io/cours/terminale/mercatique-marketing/la-mercatique-o
 https://revizstmg.github.io/cours/terminale/mercatique-marketing/la-mercatique-operationnelle-le-mix/exemple-des-montres-de-luxe-la-coherence-des-4p/
 https://revizstmg.github.io/cours/terminale/mercatique-marketing/la-mercatique-operationnelle-le-mix/le-marketing-mix-les-4p-de-la-mercatique-operationnelle/
 https://revizstmg.github.io/cours/terminale/mercatique-marketing/la-mercatique-operationnelle-le-mix/la-politique-de-prix-elasticite-ecremage-penetration-alignement/
-https://revizstmg.github.io/cours/terminale/mercatique-marketing/la-mercatique-operationnelle-le-mix/produit-distribution-et-communication-gamme-circuits-medias/
 https://revizstmg.github.io/cours/terminale/mercatique-marketing/la-mercatique-operationnelle-le-mix/etude-de-cas-guidee-lancer-un-cafe-haut-de-gamme-un-mix-coherent/
 https://revizstmg.github.io/cours/terminale/mercatique-marketing/la-mercatique-operationnelle-le-mix/la-politique-de-produit-gamme-marque-cycle-de-vie/
 https://revizstmg.github.io/cours/terminale/mercatique-marketing/la-mercatique-operationnelle-le-mix/la-politique-de-distribution-circuits-direct-court-long/
@@ -535,9 +535,6 @@ https://revizstmg.github.io/cours/terminale/ressources-humaines-communication/mo
 https://revizstmg.github.io/cours/terminale/ressources-humaines-communication/mobiliser-les-ressources-humaines/developper-les-competences-formation-tutorat-mobilite/
 https://revizstmg.github.io/cours/terminale/ressources-humaines-communication/mobiliser-les-ressources-humaines/remuneration-equitable-et-parcours-professionnel/
 https://revizstmg.github.io/cours/terminale/ressources-humaines-communication/mobiliser-les-ressources-humaines/etude-de-cas-guidee-turnover-et-demotivation-agir-sur-l-hygiene-et-la/
-https://revizstmg.github.io/cours/terminale/ressources-humaines-communication/mobiliser-les-ressources-humaines/les-theories-de-la-motivation/
-https://revizstmg.github.io/cours/terminale/ressources-humaines-communication/mobiliser-les-ressources-humaines/la-gpec-anticiper-les-emplois-et-les-competences/
-https://revizstmg.github.io/cours/terminale/ressources-humaines-communication/mobiliser-les-ressources-humaines/la-politique-de-remuneration-l-equite-interne-et-externe/
 https://revizstmg.github.io/cours/terminale/ressources-humaines-communication/cohesion-et-conflits/
 https://revizstmg.github.io/cours/terminale/ressources-humaines-communication/cohesion-et-conflits/la-cohesion-d-equipe-une-force-un-risque-de-conformisme/
 https://revizstmg.github.io/cours/terminale/ressources-humaines-communication/cohesion-et-conflits/les-conflits-sources-et-modes-de-resolution/
@@ -585,8 +582,6 @@ https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/le
 https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/le-langage-sql-interroger-la-base/
 https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/fonctions-d-agregation-et-jointures/
 https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/etude-de-cas-guidee-requetes-sur-une-table-produits-filtrer-trier/
-https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/sql-select-from-where-order-by/
-https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/les-bases-de-donnees-et-le-langage-sql/sql-agregation-et-jointures/
 https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/travail-collaboratif-et-intelligence-collective/
 https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/travail-collaboratif-et-intelligence-collective/outils-collaboratifs-et-intelligence-collective-coedition-cloud/
 https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/travail-collaboratif-et-intelligence-collective/le-numerique-transforme-le-travail-teletravail-agilite-droit-a-la/
@@ -601,12 +596,9 @@ https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/re
 https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/reseaux-securite-et-applications/le-phishing-et-le-rgpd-le-facteur-humain/
 https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/reseaux-securite-et-applications/exemple-un-mail-urgent-demande-un-mot-de-passe-reagir-au-phishing/
 https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/reseaux-securite-et-applications/les-reseaux-partager-des-ressources-protocoles-surface-d-attaque/
-https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/reseaux-securite-et-applications/la-securite-du-si-objectifs-dic-et-menaces-phishing-ransomware/
+https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/reseaux-securite-et-applications/la-securite-du-si-objectifs-dicp-et-menaces-phishing-ransomware/
 https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/reseaux-securite-et-applications/se-proteger-mots-de-passe-sauvegardes-pare-feu-rgpd/
 https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/reseaux-securite-et-applications/etude-de-cas-guidee-une-attaque-par-rancongiciel-restaurer-et-prevenir/
-https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/reseaux-securite-et-applications/reseaux-et-architecture-client-serveur/
-https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/reseaux-securite-et-applications/securite-dicp-et-menaces/
-https://revizstmg.github.io/cours/terminale/systemes-d-information-de-gestion/reseaux-securite-et-applications/se-proteger-rgpd/
 https://revizstmg.github.io/cours/premiere/sciences-de-gestion-et-numerique/
 https://revizstmg.github.io/cours/premiere/sciences-de-gestion-et-numerique/de-l-individu-a-l-acteur/
 https://revizstmg.github.io/cours/premiere/sciences-de-gestion-et-numerique/de-l-individu-a-l-acteur/l-organisation-un-collectif-humain/
