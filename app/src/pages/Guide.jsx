@@ -67,7 +67,7 @@ export default function Guide() {
         <div className="grid gap-3 sm:grid-cols-2">
           <div className="rounded-xl border border-slate-200 p-3 dark:border-slate-700">
             <p className="mb-1.5 flex items-center gap-2 font-semibold"><span aria-hidden>📱</span> iPhone</p>
-            <ol className="list-decimal space-y-1 pl-4">
+            <ol className="list-decimal space-y-1 ps-4">
               <li><TexteRiche texte="Ouvre le site dans **Safari**" /></li>
               <li><TexteRiche texte="Touche **Partager** (le carré avec la flèche ↑)" /></li>
               <li><TexteRiche texte="Choisis **« Sur l’écran d’accueil »**" /></li>
@@ -77,7 +77,7 @@ export default function Guide() {
           </div>
           <div className="rounded-xl border border-slate-200 p-3 dark:border-slate-700">
             <p className="mb-1.5 flex items-center gap-2 font-semibold"><span aria-hidden>🤖</span> Android</p>
-            <ol className="list-decimal space-y-1 pl-4">
+            <ol className="list-decimal space-y-1 ps-4">
               <li><TexteRiche texte="Ouvre le site dans **Chrome**" /></li>
               <li><TexteRiche texte="Touche le menu **⋮** (en haut à droite)" /></li>
               <li><TexteRiche texte="Choisis **« Installer l’application »**" /></li>
