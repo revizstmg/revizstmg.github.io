@@ -44,7 +44,7 @@ test('duel : score gardé si l’envoi échoue, puis renvoyé', async ({ page })
 
   // L'envoi échoue : le score reste là, et sur l'appareil.
   await expect(page.getByRole('heading', { name: 'Ton score n’est pas encore envoyé' })).toBeVisible()
-  const garde = await page.evaluate(() => JSON.parse(localStorage.getItem('stmg_duel_scores_attente') || '{}'))
+  const garde = await page.evaluate(() => { const k = Object.keys(localStorage).find((x) => x.startsWith('stmg_duel_scores_attente:')); return JSON.parse((k && localStorage.getItem(k)) || '{}') })
   expect(garde['duel-1'].correct).toBe(1)
   const points = garde['duel-1'].points
   expect(points).toBeGreaterThan(0)
@@ -61,6 +61,6 @@ test('duel : score gardé si l’envoi échoue, puis renvoyé', async ({ page })
   const dernier = envois.filter((e) => 'b_score' in e).pop()
   expect(dernier.b_score).toBe(points)
   expect(dernier.b_total).toBe(1)
-  expect(await page.evaluate(() => localStorage.getItem('stmg_duel_scores_attente'))).toBe('{}')
+  expect(await page.evaluate(() => { const k = Object.keys(localStorage).find((x) => x.startsWith('stmg_duel_scores_attente:')); return k ? localStorage.getItem(k) : '{}' })).toBe('{}')
   expect(erreurs).toEqual([])
 })

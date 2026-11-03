@@ -154,7 +154,7 @@ function Plan({ matieres, onTest, onModifier }) {
       <header className="page-hero page-hero-compact">
         <p className="kicker">🗺️ Mon parcours</p>
         <h1 className="mt-1 font-display text-[1.7rem] font-medium leading-tight">Ton plan, semaine par semaine</h1>
-        <p className="mt-2 text-sm">{`Objectif ${o.noteVisee} sur 20 · ${o.heuresSemaine} h par semaine · première épreuve ${plan.jours <= 0 ? 'aujourd’hui' : plan.jours === 1 ? 'dans 1 jour' : `dans ${plan.jours} jours`}`}</p>
+        <p className="mt-2 text-sm">{plan.jours <= 0 ? `Objectif ${o.noteVisee} sur 20 · ${o.heuresSemaine} h par semaine · première épreuve aujourd’hui` : plan.jours === 1 ? `Objectif ${o.noteVisee} sur 20 · ${o.heuresSemaine} h par semaine · première épreuve demain` : `Objectif ${o.noteVisee} sur 20 · ${o.heuresSemaine} h par semaine · première épreuve dans ${plan.jours} jours`}</p>
         <button type="button" onClick={onModifier} className="mt-3 underline">Modifier mes objectifs</button>
       </header>
 

@@ -62,7 +62,7 @@ export default function EtatSauvegarde() {
             <span aria-hidden>🔒</span>
             <strong>Non sauvegardé</strong>
             <span className="min-w-0 flex-1" style={{flexBasis:'15rem'}}>Ta session a expiré : ta progression reste sur cet appareil. Reconnecte-toi pour la sauvegarder sur ton compte.</span>
-            <button type="button" onClick={() => logout()} className="font-semibold underline">Me reconnecter</button>
+            <button type="button" onClick={() => logout()} className="font-semibold underline">Reconnecte-toi</button>
           </div>
         </div>
       )}
