@@ -181,13 +181,13 @@ export function InstallCard() {
   }
   return (
     <>
-      <div className="card card-lux flex items-center gap-3 p-4">
+      <div className="card card-lux flex flex-wrap items-center gap-3 p-4">
         <span className="shrink-0 overflow-hidden rounded-xl"><AppMark size={44} /></span>
-        <div className="min-w-0 flex-1">
+        <div className="min-w-0 flex-1 basis-24 [overflow-wrap:anywhere]">
           <h3 className="font-display font-semibold">{t('installApp')}</h3>
           <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">{t('installAppHint')}</p>
         </div>
-        <button onClick={() => setGuide(true)} className="shrink-0 rounded-xl px-3 py-2 text-sm font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: 'var(--c-accent-fort)' }}>
+        <button onClick={() => setGuide(true)} className="max-w-full shrink-0 rounded-xl px-3 py-2 text-sm font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: 'var(--c-accent-fort)' }}>
           {t('installBtn')}
         </button>
       </div>
