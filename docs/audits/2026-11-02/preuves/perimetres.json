@@ -1,0 +1,62 @@
+[
+  {
+    "id": "01",
+    "nom": "comptes",
+    "port": 4211,
+    "scope": "Inscription, connexion, Google redirection simulée, déconnexion, rôles, changement de compte, profil/photo/mot de passe, export/suppression, isolation des réponses tardives. Lecture des contrats auth/RLS, sans certification de la base réelle."
+  },
+  {
+    "id": "02",
+    "nom": "social",
+    "port": 4212,
+    "scope": "Classes professeur/élève, codes faux et vrais simulés, multi-classes, nom/groupes/mur/messages/quiz et reprise après erreur, amis demandes/acceptation/retrait/duels, classement. Gratuité classe/amis, sessions et erreurs."
+  },
+  {
+    "id": "03",
+    "nom": "recompenses",
+    "port": 4213,
+    "scope": "Boutique gratuite, achat/équipement/persistance, pièces insuffisantes, récompenses/niveaux/XP/quotidiens/hebdomadaires/badges/défis/missions, double collecte, mois offerts et conditions annoncées. Aucune vraie récompense commerciale attribuée."
+  },
+  {
+    "id": "04",
+    "nom": "premiere",
+    "port": 4214,
+    "scope": "Parcours Première : catalogue et cours/définitions/exercices, frontières matière/thème et exclusivité au chapitre, français/maths/SDGN, programme jusqu’au bac. Langues et cinq guides PDF, liens et mini-exercices échantillonnés, sans relecture exhaustive prétendue."
+  },
+  {
+    "id": "05",
+    "nom": "terminale",
+    "port": 4215,
+    "scope": "Parcours Terminale : catalogue, GF/TVA/management/droit/économie/maths/philo/histoire/spécialités, lecteur/définitions/exercices/variété et cohérence des routes. Favoris, sauvegarde/reprise et impression compacte GF/TVA échantillonnée. Aucun changement de contenu."
+  },
+  {
+    "id": "06",
+    "nom": "revision",
+    "port": 4216,
+    "scope": "Réviser fil/erreurs/acquis et filtres, flashcards retournement/glisser/audio/import-export/Unicode, formules catalogue/choix/correction/reprise, coach minuteur, parcours et vacances, progression/temps et changement de filière."
+  },
+  {
+    "id": "07",
+    "nom": "examens",
+    "port": 4217,
+    "scope": "Bac blanc Première/Terminale, annales PDF et maths, créateur de sujet et choix chapitres/durées, disponibilité/délais/annulation/reprise/quotas et dépôts de copie. Excellence économique grand lecteur/cop ie/barème/sessions. Fournisseurs IA simulés uniquement."
+  },
+  {
+    "id": "08",
+    "nom": "productions",
+    "port": 4218,
+    "scope": "Notes de classe, questions manquées/bilan personnalisé, photo/OCR/fiche et limite4/photos invalides, contrôle rédigé/tuteur et contexte des cours, Grand Oral et étude de gestion, sources/documents/micro et permission tardive, conservation des brouillons. IA simulée et micro synthétique."
+  },
+  {
+    "id": "09",
+    "nom": "mobile_accessibilite",
+    "port": 4219,
+    "scope": "Navigation mobile/desktop, burger/onglets tactiles/clavier, réglages groupés, petits écrans320/390 et paysage, lecteur agrandi/focus/Échap, contrastes et mouvement réduit. Échantillonnage langues FR/DE/AR et autres traductions d’interface, aucune certification de lecteur d’écran humain."
+  },
+  {
+    "id": "10",
+    "nom": "sauvegarde_horsligne",
+    "port": 4220,
+    "scope": "Sauvegarde locale/serveur simulé, déconnexion sans perte, conflits multi-onglets simulés, progression et temps, offline/PWA/rechargement et mise à jour, recherche sans résultat, liens morts internes/404, pages publiques/SEO/sitemap et chargement à froid échantillonné. Pas de mesure de trafic inventée. Suivi parent : code faux/valide simulé, liaison/révocation, consentement et état hors ligne, sans publication réelle."
+  }
+]

@@ -1,0 +1,200 @@
+{
+  "config": {
+    "configFile": "/workspace/work/audit10-20261102/wt-10/app/audit10-final.config.js",
+    "rootDir": "/workspace/work/audit10-20261102/wt-10/app/tests/parcours",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/workspace/work/audit10-20261102/preuves-10/final.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/workspace/work/audit10-20261102/preuves-10/final-traces",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/workspace/work/audit10-20261102/wt-10/app/tests/parcours",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "audit10-parent-loop.spec.js",
+      "file": "audit10-parent-loop.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "parent lié : lectures répétées sans action 1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1942,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:15:08.717Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "lectures-sans-action",
+                      "contentType": "application/json",
+                      "body": "eyJyZWFkcyI6MjgsImNhcCI6MjAsImxpbmtlZCI6IlBURVNUMjM0NTYifQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ef160db65d1e8c1cb51-6b6fb0816a99082dff3b",
+          "file": "audit10-parent-loop.spec.js",
+          "line": 3,
+          "column": 27
+        },
+        {
+          "title": "parent lié : lectures répétées sans action 2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2264,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:15:10.791Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "lectures-sans-action",
+                      "contentType": "application/json",
+                      "body": "eyJyZWFkcyI6MzQsImNhcCI6MjAsImxpbmtlZCI6IlBURVNUMjM0NTYifQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0ef160db65d1e8c1cb51-b18a5b5e0726cf7e60a4",
+          "file": "audit10-parent-loop.spec.js",
+          "line": 3,
+          "column": 27
+        }
+      ]
+    },
+    {
+      "title": "audit10-probes.spec.js",
+      "file": "audit10-probes.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "recherche sans résultat et repli cours",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1559,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-03T20:15:13.111Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a609b7618f0945df488d-55afdc0c05426f7e10ce",
+          "file": "audit10-probes.spec.js",
+          "line": 131,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-03T20:15:07.696Z",
+    "duration": 7071.251,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

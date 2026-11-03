@@ -1692,6 +1692,19 @@ Prochaine action :
 ### FINALISATION-20261102-CODEX-QUATRE
 - Reprise après #161 de Claude : intégrer origin/main en conservant ses corrections et ses limites de déploiement Supabase. #159 est déjà dans la compilation 227bcef5 ; finaliser #160 (contraste et assertion de vrai cours), confirmer la publication, puis lancer les dix agents demandés sur une version gelée, par vagues de six maximum. Aucun changement des fonctions Supabase dans cette finalisation.
 
+### LIVRAISON-20261102-CODEX-QUATRE
+- #160 fusionnée05bd1531 après intégration complète de #161 sans écraser Claude. CI41503625386 réussie :691 unitaires UTC/Paris et359 parcours navigateur, sans parcours ignoré. Compilation f0f70220, Pages41506196286 réussie ; index public identique, SHA-256 c0cb4337d48b30af6dd6e3fe3556fea854d8b8a7f5e2ae60e7f2089c4d8ea309.
+- Quatre contrôles publics supplémentaires réussis avec identités/réponses synthétiques : retrait parent au corps suspendu, profil tardif entre comptes, quatre photos et refus de tout lot supérieur, routes matière/thème et reprise. La sélection photo est explicitement limitée à4 ; aucune fonction Supabase redéployée par Codex. Les déploiements de fonctions mentionnés par Claude dans #161 restent hors de cette finalisation.
+
+### AUDIT-DIX-20261102-CODEX
+- Demande explicite après livraison : dix agents distincts et indépendants. Version gelée f0f70220, source05bd1531, compilation publique confirmée. Dix périmètres complémentaires avec passage transversal, worktrees et ports distincts, par vagues de six maximum. Aucun échange de conclusions entre agents, pas de correction produit pendant la campagne. Aucune donnée réelle ni appel fournisseur facturé. Couverture, preuves, erreurs d’outillage et intégrations non certifiées seront consignées sans imposer de quota de bugs.
+
+### AUDIT-DIX-20261103-CODEX-CLOTURE
+- Dix rapports terminés après reprise des quatre agents interrompus ; aucun lot achevé relancé. Sept constats distincts sur f0f70220 : OAuth% ; erreur duel cachée ; index de chapitre invalide modifiant le marqueur (doublon04/05 regroupé) ; résultat photo après reset ; attente photo ; Focus hors écran ; boucle de lecture parent. Les autres écarts d’outillage sont séparés. Rapports et preuves : docs/audits/2026-11-02/README.md.
+- #162 de Claude publiée pendant la fin de campagne : délai90s photo ajouté après la version auditée. Ne pas présenter ce constat ancien comme une panne certifiée de la nouvelle publication ; intégrer ses corrections sans les écraser. Aucun changement produit pendant ces audits, aucune mutation réelle. Documentation validée par git diff --check.
+
+### EPS-20261103-CODEX
+- Nouvelle demande : activités du bac, barèmes et entraînements adaptés. Académie/lycée demandés ; en attendant, cadre national français sourcé dans la note du20février2026 BO9, annexes CCF/ponctuel et programme national2019 toujours référencé par Éduscol2026.26 activités/familles nationales ; barèmes locaux CCF explicitement distincts des grilles ponctuelles, aucune note locale inventée. Périmètre prévu : espace EPS depuis Cours/menu, références PDF, critères et repères nationaux, séances adaptées aux choix de l’élève, validation dédiée après les audits gelés. Aucun déploiement Supabase nécessaire.
 ### CORRECTIONS-20261103-CLAUDE-DIX-VERIFICATEURS
 - Demande : « Corrige tout » après dix agents vérificateurs (contenu, exercices, accès, IA, paiements, outils, social, comptes, traductions, accessibilité). Quatre branches (code, SQL, traductions, contenu) fusionnées dans claude/corrections-verif10.
 - Déploiements à faire après fusion, avec accord : examen-blanc, fiche-vision, revizstmg-paiement ; migration SQL après le site (voir docs/PAIEMENTS.md).

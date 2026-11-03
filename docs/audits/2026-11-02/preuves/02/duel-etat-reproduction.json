@@ -1,0 +1,13 @@
+{
+  "writes": [
+    {
+      "m": "PATCH",
+      "body": {
+        "status": "live",
+        "updated_at": "2026-11-02T19:11:59.704Z"
+      }
+    }
+  ],
+  "duels": "🤝 AMIS\n\nAmis\n\nAjoute tes amis par code pour comparer vos progrès.\n\n🤝 Amis\n⚔️ Duels (1)\nDéfis reçus (1)\n⚔️\nNoé Synthétique te défie\nContrat synthétique\n▶ Relever\n✕\n⚔️ Nouveau duel\n\nQCM chronométré · 10 questions · des points selon ta rapidité.\n\nAjoute d’abord un ami pour le défier.\n\nHistorique des duels\nAucun duel pour l’instant - lance un défi !",
+  "amis": "🤝 AMIS\n\nAmis\n\nAjoute tes amis par code pour comparer vos progrès.\n\n🤝 Amis\n⚔️ Duels (1)\n\nTON CODE AMI\n\nLEA234\n\n📋 Copier le code\n\nPartage ce code : tes amis l’utilisent pour t’ajouter.\n\nAjouter un ami\nEnvoyer\n\nClassement momentanément indisponible. Réessaie plus tard.\nTa demande n’a pas été confirmée. Tu peux réessayer avec le même bouton.\n\nDemandes reçues (1)\nNS\nNoé Synthétique · NOE234\n✓ Accepter\n✕\nMes amis\nAucun ami pour l’instant - partage ton code !\n\nTes amis voient ton prénom, ta photo et ta progression (XP, série, cours de la semaine)."
+}

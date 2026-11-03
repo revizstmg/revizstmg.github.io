@@ -1,5 +1,7 @@
 # Nouvelle vérification par deux agents
 
+**Mise à jour du 2 novembre : les quatre constats ci-dessous sont corrigés et publiés par #159/#160.** Validation finale :691 unitaires UTC/Paris,359 parcours et4 contrôles publics réussis. [Bilan de livraison](../../CORRECTIONS-AUDIT-20261102.md). Les rapports ci-dessous décrivent la version ancienne auditée, pas de nouveaux défauts de la version publiée.
+
 Audit du 31 octobre 2026, après les correctifs #156 et #157. Version examinée : `a85d8102`, compilation publiée `52334f12`, source `b4a27b34`. L’index public correspond à cette compilation : SHA-256 `f396a12c41d50a4bfe36ccf5c7030ba42fb00033c727a0b58ac164bcbf21efe1`.
 
 Deux agents ont travaillé indépendamment, dans deux worktrees et avec des serveurs distincts. Chacun a couvert son périmètre principal et effectué un passage transversal. Aucun échange de conclusions entre eux avant remise des rapports ; le coordinateur a ensuite rejoué les quatre sondes. Aucun changement produit pendant cet audit.

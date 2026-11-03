@@ -1,0 +1,40 @@
+[
+  {
+    "phase": "sondes",
+    "test": "sonde photo : tout recommencer invalide la réponse précédente tardive",
+    "status": "failed",
+    "observed": {
+      "staleResultCount": 1,
+      "calls": 1
+    }
+  },
+  {
+    "phase": "sondes",
+    "test": "sonde photo : demande suspendue doit libérer le bouton après cinq minutes",
+    "status": "failed",
+    "observed": {
+      "busyAfterMs": 300001,
+      "busy": 1,
+      "calls": 1
+    }
+  },
+  {
+    "phase": "rejeu",
+    "test": "sonde photo : tout recommencer invalide la réponse précédente tardive",
+    "status": "failed",
+    "observed": {
+      "staleResultCount": 1,
+      "calls": 1
+    }
+  },
+  {
+    "phase": "rejeu",
+    "test": "sonde photo : demande suspendue doit libérer le bouton après cinq minutes",
+    "status": "failed",
+    "observed": {
+      "busyAfterMs": 300001,
+      "busy": 1,
+      "calls": 1
+    }
+  }
+]
