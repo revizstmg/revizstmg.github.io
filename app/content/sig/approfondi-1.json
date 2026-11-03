@@ -493,11 +493,11 @@
       ]
     },
     {
-      "h": "🔐 La sécurité du SI : objectifs DIC et menaces (phishing, ransomware)",
+      "h": "🔐 La sécurité du SI : objectifs DICP et menaces (phishing, ransomware)",
       "blocks": [
         {
           "t": "p",
-          "c": "Plus le SI est connecté, plus il est **vulnérable**. La sécurité vise trois objectifs fondamentaux, résumés par le triangle **DIC** (ou CIA). On y ajoute souvent la **preuve** (traçabilité : savoir qui a fait quoi), d’où le sigle **DICP** à quatre lettres."
+          "c": "Plus le SI est connecté, plus il est **vulnérable**. La sécurité vise quatre objectifs fondamentaux, résumés par le sigle **DICP** : **D**isponibilité, **I**ntégrité, **C**onfidentialité et **P**reuve (traçabilité : savoir qui a fait quoi). Le triangle DIC (ou CIA) n’en est que le noyau à trois lettres."
         },
         {
           "t": "p",
@@ -506,6 +506,10 @@
         {
           "t": "p",
           "c": "Le deuxième est l’**intégrité** : l’information ne doit être ni altérée ni falsifiée, qu’il s’agisse d’une erreur ou d’une modification volontaire. Le troisième est la **confidentialité** : seules les personnes autorisées doivent pouvoir accéder à l’information, ce qui suppose des identifiants et des droits d’accès bien gérés."
+        },
+        {
+          "t": "p",
+          "c": "Le quatrième objectif est la **preuve** (ou **traçabilité**) : on doit pouvoir savoir qui a fait quoi, et quand, dans le système. Elle est indispensable pour retrouver l’origine d’une erreur ou d’une fraude et pour comprendre une attaque après coup."
         },
         {
           "t": "p",
@@ -519,7 +523,7 @@
         {
           "t": "tip",
           "h": "À retenir",
-          "c": "Sécurité = **Disponibilité + Intégrité + Confidentialité (DIC)**. Menaces phares : **phishing** et **ransomware**. Le maillon faible est souvent **humain**."
+          "c": "Sécurité = **Disponibilité + Intégrité + Confidentialité + Preuve (DICP)**. Menaces phares : **phishing** et **ransomware**. Le maillon faible est souvent **humain**."
         },
         {
           "t": "table",
@@ -530,8 +534,8 @@
           ],
           "rows": [
             [
-              "DIC",
-              "Les trois objectifs de la sécurité du SI : disponibilité, intégrité, confidentialité"
+              "DICP",
+              "Les quatre objectifs de la sécurité du SI : disponibilité, intégrité, confidentialité, preuve"
             ],
             [
               "Disponibilité",
@@ -544,6 +548,10 @@
             [
               "Confidentialité",
               "Seules les personnes autorisées accèdent à l’information"
+            ],
+            [
+              "Preuve (traçabilité)",
+              "On sait qui a fait quoi, et quand, dans le système"
             ],
             [
               "Phishing (hameçonnage)",
@@ -610,7 +618,7 @@
         {
           "t": "tip",
           "h": "Méthode",
-          "c": "Identifier l’**attaque** et l’objectif DIC touché → **réagir** (isoler, restaurer, alerter) → **prévenir** par des mesures combinées (technique + humaine)."
+          "c": "Identifier l’**attaque** et l’objectif DICP touché → **réagir** (isoler, restaurer, alerter) → **prévenir** par des mesures combinées (technique + humaine)."
         }
       ]
     }

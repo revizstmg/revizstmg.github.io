@@ -195,7 +195,7 @@
             },
             {
               "t": "p",
-              "c": "**Règle** : un modal est toujours suivi de la **base verbale** (pas de « to », pas de « -s », pas de « -ed »)."
+              "c": "**Règle** : les modaux purs (can, may, must, should, would…) sont suivis de la **base verbale** sans « to », sans « -s » et sans « -ed ». Les expressions voisines **ought to** et **have to** gardent leur « to » : *You ought to rest.* ; *I have to work.*"
             },
             {
               "t": "table",
@@ -231,7 +231,7 @@
                 ],
                 [
                   "Modal + base verbale",
-                  "Jamais de to, de -s ni de -ed après un modal"
+                  "Pas de to, de -s ni de -ed après un modal pur (exceptions : ought to, have to)"
                 ]
               ]
             }
@@ -3014,7 +3014,7 @@
             },
             {
               "t": "p",
-              "c": "Au passé simple, beaucoup ont un radical irrégulier : *estuve* (estar), *tuve* (tener), *hube* (haber), *hice* (hacer), *dije* (decir), *pude* (poder), *puse* (poner), *quise* (querer), *supe* (saber), *vine* (venir), *traje* (traer), *conduje* (conducir). *Ser* et *ir* ont la même forme, *fui* ; *ver* donne *vi* et *dar* donne *di*, tandis que *salí*, *leí*, *oí* et *volví* restent réguliers. Côté participes, retiens *hecho*, *visto*, *dicho*, *puesto* et *vuelto* ; les autres sont réguliers, comme *sido*, *estado*, *tenido* ou *ido*."
+              "c": "Au passé simple, beaucoup ont un radical irrégulier : *estuve* (estar), *tuve* (tener), *hube* (haber), *hice* (hacer), *dije* (decir), *pude* (poder), *puse* (poner), *quise* (querer), *supe* (saber), *vine* (venir), *traje* (traer), *conduje* (conducir). *Ser* et *ir* ont la même forme, *fui* ; *ver* donne *vi* et *dar* donne *di*, tandis que *salí*, *leí*, *oí* et *volví* restent réguliers. Côté participes, retiens les irréguliers *hecho*, *visto*, *dicho*, *puesto*, *vuelto*, *escrito*, *abierto*, *roto* et *muerto* ; *sido*, *estado*, *tenido* ou *ido* sont réguliers."
             },
             {
               "t": "table",

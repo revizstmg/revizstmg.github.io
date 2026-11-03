@@ -77,7 +77,7 @@
         },
         {
           "t": "p",
-          "c": "Le nazisme se distingue par son **racisme** érigé en politique d’État : la « race aryenne » supérieure, l’antisémitisme au cœur du projet, la volonté d’un **espace vital** (Lebensraum) à conquérir à l’Est. Le stalinisme s’appuie sur la **lutte des classes** et la collectivisation forcée, au prix de famines (Holodomor) et des **purges** (Grande Terreur de 1937-1938)."
+          "c": "Le nazisme se distingue par son **racisme** érigé en politique d’État : la « race aryenne » supérieure, l’antisémitisme au cœur du projet, la volonté d’un **espace vital** (Lebensraum) à conquérir à l’Est. Le stalinisme s’appuie sur la **lutte des classes** et la collectivisation forcée, au prix de famines (Holodomor) et des **purges** (Grandes Purges de 1936-1938, dont la Grande Terreur de 1937-1938)."
         },
         {
           "t": "warning",
@@ -172,7 +172,7 @@
         },
         {
           "t": "p",
-          "c": "La **Shoah** est le génocide des Juifs d’Europe, planifié et industrialisé par le régime nazi. Après les persécutions (lois de Nuremberg 1935) et les ghettos, vient l’extermination : les fusillades de masse de la **Shoah par balles** (Einsatzgruppen), puis les **camps d’extermination** (Auschwitz-Birkenau, Treblinka…) décidés à la conférence de **Wannsee** (janvier 1942). Environ **6 millions** de Juifs sont assassinés, ainsi que les Tsiganes (génocide), et de nombreux autres groupes persécutés."
+          "c": "La **Shoah** est le génocide des Juifs d’Europe, planifié et industrialisé par le régime nazi. Après les persécutions (lois de Nuremberg 1935) et les ghettos, vient l’extermination : les fusillades de masse de la **Shoah par balles** (Einsatzgruppen), puis les **camps d’extermination** (Auschwitz-Birkenau, Treblinka…), dans le cadre de la « solution finale » coordonnée à la conférence de **Wannsee** (20 janvier 1942). Environ **6 millions** de Juifs sont assassinés, ainsi que les Tsiganes (génocide), et de nombreux autres groupes persécutés."
         },
         {
           "t": "warning",
@@ -643,7 +643,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "La France est une **puissance moyenne bien intégrée** à la mondialisation. Ses atouts : une grande **métropole mondiale**, **Paris** (fonctions de commandement, tourisme n°1 au monde), un vaste **domaine maritime** (2e ZEE mondiale grâce à l’outre-mer), des **firmes transnationales** (luxe, aéronautique, agroalimentaire), et son appartenance à l’**Union européenne**."
+          "c": "La France est une **puissance moyenne bien intégrée** à la mondialisation. Ses atouts : une grande **métropole mondiale**, **Paris** (fonctions de commandement, capitale d’un pays qui est la première destination touristique du monde), un vaste **domaine maritime** (2e ZEE mondiale grâce à l’outre-mer), des **firmes transnationales** (luxe, aéronautique, agroalimentaire), et son appartenance à l’**Union européenne**."
         },
         {
           "t": "p",

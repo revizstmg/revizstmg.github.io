@@ -269,6 +269,10 @@
               "c": "C’est ce qui rend le second degré très utile en gestion : il modélise un **bénéfice à maximiser** ou un **coût à minimiser**."
             },
             {
+              "t": "p",
+              "c": "On peut lire le sommet sur la **forme canonique** f(x) = a(x − α)² + β : le sommet est le point (α ; β), avec α = −b/(2a) et β = f(α). Quand le discriminant Δ est positif, la **forme factorisée** f(x) = a(x − x₁)(x − x₂) met en évidence les **racines** x₁ et x₂ ; par symétrie, α est le milieu de x₁ et x₂."
+            },
+            {
               "t": "example",
               "h": "Exemple",
               "c": "Un bénéfice B(x) = −2x² + 12x (en centaines d’€) est maximal au sommet, en x = 3 : B(3) = **18** → 1 800 € pour 3 unités."
@@ -360,7 +364,7 @@
             },
             {
               "t": "p",
-              "c": "Dérivées à connaître : (constante)’ = 0 ; (x²)’ = 2x ; **(ax² + bx + c)’ = 2ax + b**."
+              "c": "Dérivées à connaître : (constante)’ = 0 ; (x)’ = 1 ; (x²)’ = 2x ; (x³)’ = 3x² ; **(ax² + bx + c)’ = 2ax + b**. La dérivée d’une somme est la somme des dérivées, et (k·u)’ = k·u’ pour une constante k."
             },
             {
               "t": "figure",

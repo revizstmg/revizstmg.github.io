@@ -1426,19 +1426,30 @@
         {
           "id": "p1-fr-3-trou",
           "type": "trou",
-          "title": "Texte à trous — Vocabulaire littéraire",
+          "title": "Texte à trous — Le roman",
           "icon": "✏️",
           "questions": [
             {
-              "text": "Un vers de 12 syllabes s’appelle un ____.",
-              "answer": "alexandrin",
-              "explain": "8 = octosyllabe, 10 = décasyllabe, 12 = alexandrin."
+              "text": "Le début d’un roman est l’____.",
+              "answer": "incipit",
+              "explain": "La fin = le dénouement."
             },
             {
-              "text": "La répétition d’une voyelle est une ____.",
-              "answer": "assonance",
-              "explain": "Assonance = voyelle ; allitération = consonne."
-            },
+              "text": "La fin du roman, moment où l’intrigue se résout, est le ____.",
+              "answer": "dénouement",
+              "alt": [
+                "denouement"
+              ],
+              "explain": "Le dénouement est la fin du roman."
+            }
+          ]
+        },
+        {
+          "id": "p1-fr-3-trou-theatre",
+          "type": "trou",
+          "title": "Texte à trous — Le théâtre",
+          "icon": "✏️",
+          "questions": [
             {
               "text": "Les indications scéniques d’une pièce sont les ____.",
               "answer": "didascalies",
@@ -1448,14 +1459,73 @@
               "explain": "Elles précisent décor, gestes, ton."
             },
             {
+              "text": "Une phrase dite à part, que le public seul est censé entendre, est un ____.",
+              "answer": "aparté",
+              "alt": [
+                "aparte"
+              ],
+              "explain": "L’aparté est dit à part, pour le public seul."
+            }
+          ]
+        },
+        {
+          "id": "p1-fr-3-trou-versification",
+          "type": "trou",
+          "title": "Texte à trous — La versification",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "Un vers de 12 syllabes s’appelle un ____.",
+              "answer": "alexandrin",
+              "explain": "8 = octosyllabe, 10 = décasyllabe, 12 = alexandrin."
+            },
+            {
+              "text": "Une strophe de quatre vers est un ____.",
+              "answer": "quatrain",
+              "explain": "Un quatrain compte quatre vers, un tercet trois."
+            }
+          ]
+        },
+        {
+          "id": "p1-fr-3-trou-sonorites",
+          "type": "trou",
+          "title": "Texte à trous — Sonorités",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "La répétition d’une voyelle est une ____.",
+              "answer": "assonance",
+              "explain": "Assonance = voyelle ; allitération = consonne."
+            },
+            {
+              "text": "La répétition d’une consonne est une ____.",
+              "answer": "allitération",
+              "alt": [
+                "allitération",
+                "alliteration"
+              ],
+              "explain": "Allitération : répétition d’une consonne ; assonance : d’une voyelle."
+            }
+          ]
+        },
+        {
+          "id": "p1-fr-3-trou-idees",
+          "type": "trou",
+          "title": "Texte à trous — Argumenter",
+          "icon": "✏️",
+          "questions": [
+            {
               "text": "Convaincre s’adresse à la raison ; ____ s’adresse aux émotions.",
               "answer": "persuader",
               "explain": "Deux stratégies argumentatives."
             },
             {
-              "text": "Le début d’un roman est l’____.",
-              "answer": "incipit",
-              "explain": "La fin = le dénouement."
+              "text": "Démonter la thèse adverse, c’est la ____.",
+              "answer": "réfuter",
+              "alt": [
+                "refuter"
+              ],
+              "explain": "Réfuter, c’est démonter la thèse adverse."
             }
           ]
         },

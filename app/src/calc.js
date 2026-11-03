@@ -134,6 +134,40 @@ export const CALC = {
       )}/100) = ${round(cm, 4)}.\nTaux global = (CM − 1) × 100 = ${round(tg, 1)} %.`,
     }
   },
+  // Marché du travail (eco-t7) : population active = actifs occupés + chômeurs.
+  taux_chomage: () => {
+    const occupes = ri(18, 30) // millions
+    const chomeurs = ri(1, 4)
+    const active = occupes + chomeurs
+    const t = round((chomeurs / active) * 100, 1)
+    return {
+      prompt: `Un pays compte ${occupes} millions d'actifs occupés et ${chomeurs} millions de chômeurs.\nCalcule le taux de chômage (arrondi à 0,1 point).`,
+      answer: t, unit: '%', tolerance: 0.2,
+      explain: `Population active = ${occupes} + ${chomeurs} = ${active} millions.\nTaux de chômage = chômeurs ÷ population active × 100 = ${chomeurs} ÷ ${active} × 100 ≈ ${t} %.`,
+    }
+  },
+  taux_activite: () => {
+    const age = ri(36, 44) // population en âge de travailler, millions
+    const occupes = ri(20, Math.floor(age * 0.7))
+    const chomeurs = ri(1, 4)
+    const active = occupes + chomeurs
+    const t = round((active / age) * 100, 1)
+    return {
+      prompt: `Population en âge de travailler : ${age} millions ; actifs occupés : ${occupes} millions ; chômeurs : ${chomeurs} millions.\nCalcule le taux d'activité (arrondi à 0,1 point).`,
+      answer: t, unit: '%', tolerance: 0.2,
+      explain: `Population active = ${occupes} + ${chomeurs} = ${active} millions.\nTaux d'activité = population active ÷ population en âge de travailler × 100 = ${active} ÷ ${age} × 100 ≈ ${t} %.`,
+    }
+  },
+  taux_emploi: () => {
+    const age = ri(36, 44)
+    const occupes = ri(20, Math.floor(age * 0.7))
+    const t = round((occupes / age) * 100, 1)
+    return {
+      prompt: `Population en âge de travailler : ${age} millions ; actifs occupés : ${occupes} millions.\nCalcule le taux d'emploi (arrondi à 0,1 point).`,
+      answer: t, unit: '%', tolerance: 0.2,
+      explain: `Taux d'emploi = actifs occupés ÷ population en âge de travailler × 100 = ${occupes} ÷ ${age} × 100 ≈ ${t} %.`,
+    }
+  },
   suite_geo: () => {
     const u0 = ri(10, 40) * 1000
     const baisse = ri(5, 15)

@@ -891,9 +891,8 @@ function qcmMotManquant(trou, id, distractorPool = trou) {
     // « les deux », « tous », « aucun » : réponse qui dépend d'une liste, pas un mot à trouver.
     if (/^(?:les|tous|toutes)?\s*(?:deux|trois|quatre)$|^(?:tous|toutes|aucun|aucune|les deux)$|^(?:tous|toutes) les (?:deux|trois)$/.test(cleReponse(q.answer))) return null
     const dansLaPhrase = (m) => new RegExp(`(?<![\\p{L}\\d])${echapperRegExp(String(m))}(?![\\p{L}\\d])`, 'iu').test(q.text)
-    // Même nature : un groupe de plusieurs mots n'a pour distracteurs que des groupes de même longueur ;
-    // un mot seul n'a pas pour distracteur une longue expression.
-    const memeForme = (m) => nbMots(q.answer) > 1 ? nbMots(m) === nbMots(q.answer) : nbMots(m) <= 2
+    // Même nature : un mot seul n'a que des mots seuls pour distracteurs ; un groupe, des mots ou des groupes à peine plus longs.
+    const memeForme = (m) => nbMots(q.answer) > 1 ? nbMots(m) <= nbMots(q.answer) + 1 : nbMots(m) === 1
     const proches = shuffle(pool.filter((m) => cleReponse(m) !== cleReponse(q.answer) && !notionsLiees(m, q.answer) && !dansLaPhrase(m) && memeForme(m)))
     const distracteurs = proches.slice(0, 3)
     if (distracteurs.length < 3) return null

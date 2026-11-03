@@ -145,7 +145,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "Le **produit** se gère sur plusieurs plans : la **gamme** (ensemble des produits, largeur et profondeur), la **marque** (nom, logo, image), et le **cycle de vie**."
+          "c": "Le **produit** se gère sur plusieurs plans : la **gamme** (ensemble des produits, largeur et profondeur), la **marque** (nom, logo, image), et le **cycle de vie**. La marque crée de la valeur et fidélise."
         },
         {
           "t": "p",
@@ -201,7 +201,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "La **distribution** amène le produit au client via des **circuits** : **direct** (sans intermédiaire), **court** (un intermédiaire), **long** (plusieurs)."
+          "c": "La **distribution** amène le produit au client via des **circuits** : **direct** (sans intermédiaire), **court** (un intermédiaire), **long** (plusieurs). Dans un circuit court, l’intermédiaire est en général un détaillant ; dans un circuit long, il y en a plusieurs, typiquement un grossiste puis un détaillant. Plus le circuit est long, plus le produit peut être diffusé largement, mais plus chaque intermédiaire prend une marge."
         },
         {
           "t": "p",

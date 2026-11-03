@@ -77,7 +77,7 @@
         },
         {
           "t": "p",
-          "c": "Une compétence ne se résume donc **pas** à un diplôme : elle se **construit** et s’**entretient**. L’entreprise développe les compétences par la **formation**, le **tutorat**, la **mobilité** interne et l’**expérience**."
+          "c": "Une compétence ne se résume donc **pas** à un diplôme : elle se **construit** et s’**entretient**. L’entreprise développe les compétences par la **formation**, le **tutorat**, la **mobilité** interne, la **VAE** (validation des acquis de l’expérience) et l’**expérience**."
         },
         {
           "t": "p",
@@ -107,7 +107,7 @@
         },
         {
           "t": "p",
-          "c": "Une politique de rémunération doit être perçue comme **équitable** (en interne comme face au marché) : un sentiment d’injustice démotive fortement. Le **parcours professionnel** (évolution, promotions, mobilité) est également un levier majeur : il donne des perspectives et retient les talents."
+          "c": "Une politique de rémunération doit être perçue comme **équitable** (en interne comme face au marché) : l’**équité interne** compare les salaires au sein de l’entreprise, l’**équité externe** les compare à ceux du marché : un sentiment d’injustice démotive fortement. Le **parcours professionnel** (évolution, promotions, mobilité) est également un levier majeur : il donne des perspectives et retient les talents."
         },
         {
           "t": "tip",
@@ -140,7 +140,7 @@
             ],
             [
               "Équité",
-              "Rémunération jugée juste, en interne et face au marché"
+              "Rémunération jugée juste : équité interne (comparée aux collègues) et équité externe (comparée au marché)"
             ],
             [
               "Parcours professionnel",

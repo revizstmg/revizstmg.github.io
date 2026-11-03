@@ -277,14 +277,9 @@
         {
           "id": "gf-t1-trou",
           "type": "trou",
-          "title": "Texte à trous — Formules & principes",
+          "title": "Texte à trous — Amortissement et VNC",
           "icon": "✏️",
           "questions": [
-            {
-              "text": "TVA à décaisser = TVA collectée − TVA ___.",
-              "answer": "déductible",
-              "explain": "TVA à décaisser = TVA collectée − TVA déductible."
-            },
             {
               "text": "VNC = valeur d’origine − amortissements ___.",
               "answer": "cumulés",
@@ -300,11 +295,45 @@
                 "duree"
               ],
               "explain": "Taux linéaire = 1 / durée d’utilisation."
+            }
+          ]
+        },
+        {
+          "id": "gf-t1-trou-tva",
+          "type": "trou",
+          "title": "Texte à trous — Déclaration de TVA",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "TVA à décaisser = TVA collectée − TVA ___.",
+              "answer": "déductible",
+              "explain": "TVA à décaisser = TVA collectée − TVA déductible."
             },
+            {
+              "text": "L’entreprise établit sa déclaration de TVA sur le formulaire ___.",
+              "answer": "CA3",
+              "alt": [
+                "ca3"
+              ],
+              "explain": "La déclaration de TVA se fait sur le formulaire CA3."
+            }
+          ]
+        },
+        {
+          "id": "gf-t1-trou-principes",
+          "type": "trou",
+          "title": "Texte à trous — Principes comptables",
+          "icon": "✏️",
+          "questions": [
             {
               "text": "Le principe de ___ interdit de surévaluer l’actif de l’entreprise.",
               "answer": "prudence",
-              "explain": "Le principe de prudence : ne pas surévaluer l’actif."
+              "explain": "Le principe de prudence : anticiper les pertes probables, jamais les gains non réalisés."
+            },
+            {
+              "text": "La ___ des méthodes impose de garder les mêmes méthodes d’une année à l’autre.",
+              "answer": "permanence",
+              "explain": "La permanence des méthodes rend les comptes comparables."
             }
           ]
         },
