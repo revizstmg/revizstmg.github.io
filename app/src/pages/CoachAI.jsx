@@ -112,7 +112,7 @@ function CoachAIPage() {
                 <div className="text-[11px] leading-tight text-slate-500 dark:text-slate-400">{t('aiActiveDays')}</div>
               </div>
               <div className="rounded-xl bg-slate-50 p-2.5 dark:bg-slate-800/60">
-                <div className="text-lg font-bold" style={{ color: a.daysToBac != null && a.daysToBac <= 30 ? '#e11d48' : '#7c3aed' }}>{a.daysToBac != null ? 'J-' + a.daysToBac : '—'}</div>
+                <div className="text-lg font-bold" style={{ color: a.daysToBac != null && a.daysToBac <= 30 ? '#e11d48' : '#7c3aed' }}>{a.daysToBac != null && a.daysToBac >= 0 ? 'J-' + a.daysToBac : '—'}</div>
                 <div className="text-[11px] leading-tight text-slate-500 dark:text-slate-400">bac</div>
               </div>
             </div>
@@ -165,7 +165,7 @@ function CoachAIPage() {
             <div className="mb-2 flex flex-wrap items-center justify-between gap-2 px-1">
               <h2 className="font-display text-lg font-semibold">🗓️ {t('aiPlanTitle')}</h2>
               <label className="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
-                <span>{a.daysToBac != null ? t('aiBacIn').replace('{n}', a.daysToBac) : t('aiSetBac')}</span>
+                <span>{a.daysToBac != null && a.daysToBac >= 0 ? t('aiBacIn').replace('{n}', a.daysToBac) : t('aiSetBac')}</span>
                 <input type="date" value={state.bacDate || ''} onChange={(e) => setBacDate(e.target.value)} className="rounded-lg border border-slate-200 bg-white px-2 py-1 text-xs dark:border-slate-700 dark:bg-slate-800" />
               </label>
             </div>

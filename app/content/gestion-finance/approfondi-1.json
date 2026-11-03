@@ -1209,7 +1209,7 @@
             ],
             [
               "Rotation des stocks",
-              "Stock moyen ÷ achats × 360 (durée de stockage en jours)"
+              "Stock moyen ÷ coût d’achat des marchandises vendues × 360 (durée de stockage en jours)"
             ],
             [
               "Délai clients",

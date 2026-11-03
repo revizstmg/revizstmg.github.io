@@ -1,14 +1,7 @@
 import { useMemo, useRef, useState } from 'react'
-import { Feedback, GameProgress, useStopwatch } from './common.jsx'
+import { Feedback, GameProgress, useStopwatch, parseNombre as parseNum } from './common.jsx'
 import { makeCalcSet, makeCalcMix } from '../calc.js'
 import { useT } from '../i18n.js'
-
-// Analyse une saisie chiffrée à la française (« 7 000 », « 8,45 »).
-function parseNum(s) {
-  const clean = String(s).replace(/[€%\s]/g, '').replace(',', '.')
-  const n = parseFloat(clean)
-  return Number.isFinite(n) ? n : null
-}
 
 // Graphique (repère quadrillé) généré avec l'exercice : il change à chaque
 // nouveau tirage, donc la réponse à lire change aussi. Gère les droites

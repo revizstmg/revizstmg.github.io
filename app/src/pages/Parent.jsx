@@ -70,7 +70,7 @@ export default function Parent() {
       const row = await fetchChildByCode(c)
       if (row) setChild(row)
       else { setError(t('parentNotFound')); setChild(null) }
-    } catch { setError(t('parentNotFound')) }
+    } catch { setError(t('parentOffline')) }
     setLoading(false)
   }, [t])
 
@@ -85,7 +85,7 @@ export default function Parent() {
       const row = await fetchChildByCode(c)
       if (row) { setLinkedChild(c); setLinked(c); setChild(row); setCode('') }
       else setError(t('parentNotFound'))
-    } catch { setError(t('parentNotFound')) }
+    } catch { setError(t('parentOffline')) }
     setLoading(false)
   }
   const unlink = () => { setLinkedChild(''); setLinked(''); setChild(null) }

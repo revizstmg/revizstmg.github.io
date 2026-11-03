@@ -3,6 +3,7 @@ import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
 import ClassCodeForm from '../components/ClassCodeForm.jsx'
 import { Icon } from '../components/ui.jsx'
+import { ensureMember, leaveStudentClass } from '../classroom.js'
 import { submitScore, fetchRanking, fetchLeague, deviceId, normalizeCode, LEADERBOARD_READY } from '../leaderboard.js'
 
 const initialsOf = (name) => {
@@ -25,11 +26,13 @@ export default function Leaderboard() {
   const photo = state.profile?.photo || ''
   const courses = derived.weeklyCourses
   const classCode = state.classCode
+  const estProf = state.account?.role === 'prof'
 
   const load = useCallback(async () => {
     if (!classCode) return
     setStatus('loading')
     try {
+      if (!estProf) await ensureMember({ classCode, name, photo })
       await submitScore({ classCode, name, photo, courses })
       const data = await fetchRanking(classCode)
       setRows(data)
@@ -37,7 +40,7 @@ export default function Leaderboard() {
     } catch {
       setStatus('error')
     }
-  }, [classCode, name, photo, courses])
+  }, [classCode, name, photo, courses, estProf])
 
   useEffect(() => { load() }, [load])
 
@@ -45,14 +48,14 @@ export default function Leaderboard() {
     setLstatus('loading')
     try {
       // On (re)pousse d'abord son score pour apparaître dans la ligue.
-      if (classCode) { try { await submitScore({ classCode, name, photo, courses }) } catch { /* ignore */ } }
+      if (classCode) { try { if (!estProf) await ensureMember({ classCode, name, photo }); await submitScore({ classCode, name, photo, courses }) } catch { /* ignore */ } }
       const data = await fetchLeague()
       setLeague(data)
       setLstatus('ok')
     } catch {
       setLstatus('error')
     }
-  }, [classCode, name, photo, courses])
+  }, [classCode, name, photo, courses, estProf])
 
   useEffect(() => { if (view === 'league' && lstatus === 'idle') loadLeague() }, [view, lstatus, loadLeague])
 
@@ -161,7 +164,7 @@ export default function Leaderboard() {
           <p className="kicker">{t('classLabel')} · {classCode}</p>
           <h1 className="font-display text-3xl font-medium leading-tight">🏆 {t('weeklyRanking')}</h1>
         </div>
-        <button onClick={() => { setClassCode(''); setRows(null) }} className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('leaveClass')}</button>
+        <button onClick={async () => { try { if (!estProf) await leaveStudentClass(classCode, myId) } catch { setStatus('error'); return } setClassCode(''); setRows(null) }} className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('leaveClass')}</button>
       </header>
       <Tabs />
       <hr className="rule-gold" />

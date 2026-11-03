@@ -1705,3 +1705,6 @@ Prochaine action :
 
 ### EPS-20261103-CODEX
 - Nouvelle demande : activités du bac, barèmes et entraînements adaptés. Académie/lycée demandés ; en attendant, cadre national français sourcé dans la note du20février2026 BO9, annexes CCF/ponctuel et programme national2019 toujours référencé par Éduscol2026.26 activités/familles nationales ; barèmes locaux CCF explicitement distincts des grilles ponctuelles, aucune note locale inventée. Périmètre prévu : espace EPS depuis Cours/menu, références PDF, critères et repères nationaux, séances adaptées aux choix de l’élève, validation dédiée après les audits gelés. Aucun déploiement Supabase nécessaire.
+### CORRECTIONS-20261103-CLAUDE-DIX-VERIFICATEURS
+- Demande : « Corrige tout » après dix agents vérificateurs (contenu, exercices, accès, IA, paiements, outils, social, comptes, traductions, accessibilité). Quatre branches (code, SQL, traductions, contenu) fusionnées dans claude/corrections-verif10.
+- Déploiements à faire après fusion, avec accord : examen-blanc, fiche-vision, revizstmg-paiement ; migration SQL après le site (voir docs/PAIEMENTS.md).

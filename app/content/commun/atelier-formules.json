@@ -3367,13 +3367,13 @@
         "symbol": "a",
         "label": "Coût d’achat des marchandises vendues",
         "min": 100,
-        "max": 1000,
+        "max": 500,
         "step": 20
       },
       {
         "symbol": "b",
         "label": "Ventes de marchandises",
-        "min": 100,
+        "min": 600,
         "max": 1000,
         "step": 20
       }
@@ -4379,13 +4379,13 @@
         "symbol": "a",
         "label": "Seuil de rentabilité",
         "min": 100,
-        "max": 1000,
+        "max": 500,
         "step": 20
       },
       {
         "symbol": "b",
         "label": "Chiffre d’affaires",
-        "min": 100,
+        "min": 600,
         "max": 1000,
         "step": 20
       }
@@ -5060,7 +5060,7 @@
       {
         "symbol": "a",
         "label": "Recettes",
-        "min": 100,
+        "min": 600,
         "max": 1000,
         "step": 20
       },
@@ -5068,7 +5068,7 @@
         "symbol": "b",
         "label": "Coûts",
         "min": 100,
-        "max": 1000,
+        "max": 500,
         "step": 20
       }
     ],

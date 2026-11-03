@@ -341,7 +341,7 @@
         {
           "t": "list",
           "c": [
-            "**Le rapport interdécile** (D9/D1) : compare les 10 % les plus riches aux 10 % les plus pauvres.",
+            "**Le rapport interdécile** (D9/D1) : rapport entre le niveau de vie plancher des 10 % les plus aisés (D9) et le niveau de vie plafond des 10 % les plus modestes (D1).",
             "**L’indice de Gini** : varie de 0 (égalité parfaite) à 1 (inégalité maximale). Plus il est élevé, plus les inégalités sont fortes.",
             "**La courbe de Lorenz** : représente graphiquement la répartition des revenus."
           ]

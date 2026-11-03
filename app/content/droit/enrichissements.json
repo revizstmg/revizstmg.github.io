@@ -88,7 +88,7 @@
   "droit-t8": {
     "sections": [
       {
-        "h": "⚖️ Cas pratique guidé — choisir une forme juridique : SAS et responsabilité limitée",
+        "h": "⚖️ Cas pratique guidé — entreprise individuelle ou société : protéger son patrimoine",
         "group": "cas",
         "blocks": [
           {
@@ -99,9 +99,9 @@
           {
             "t": "list",
             "c": [
-              "**Règle** : en **entreprise individuelle**, l’entrepreneur et l’entreprise ne forment qu’une personne (patrimoine plus exposé). En **société** (SARL, SAS), la société est une **personne morale** distincte : le patrimoine est séparé et la responsabilité est **limitée aux apports**.",
-              "**Application** : pour protéger son patrimoine personnel, il faut séparer les patrimoines.",
-              "**Conclusion** : créer une **société à responsabilité limitée** (SARL/SAS) est la solution adaptée."
+              "**Règle** : depuis la loi du 14 février 2022, l’**entreprise individuelle** sépare de droit le patrimoine professionnel du patrimoine personnel ; l’entrepreneur et son entreprise restent toutefois une seule personne juridique. En **société** (SARL, SAS), la société est une **personne morale** distincte : les associés font des **apports**, peuvent ouvrir le capital à d’autres associés, et leur responsabilité est **limitée à leurs apports**.",
+              "**Application** : l’entrepreneur est déjà protégé en entreprise individuelle depuis 2022, mais la société lui apporte en plus une personne morale distincte, la possibilité de s’associer et d’ouvrir le capital, et une responsabilité limitée aux apports.",
+              "**Conclusion** : l’entreprise individuelle suffit pour une activité seul et simple ; une **société** (SARL/SAS) est préférable pour s’associer, ouvrir le capital et limiter la responsabilité aux apports."
             ]
           },
           {

@@ -502,14 +502,14 @@ export function datesCompatibles(d1, d2) {
 // (notion liée : elle serait aussi juste).
 function qcmFromPairs(pairs, id, title, exclut = null) {
   const answers = [...new Set(pairs.map((p) => p.a).filter((a) => a && a.length))]
-  if (answers.length < 2) return null
+  if (answers.length < 3) return null
   const questions = shuffle(pairs)
     .map((p) => {
       const distractors = shuffle(answers.filter((a) => a !== p.a && !(exclut && exclut(p, a)))).slice(0, 3)
       const choices = shuffle([p.a, ...distractors])
       return { q: p.q, choices, answer: choices.indexOf(p.a), explain: p.e || `${p.q} → ${p.a}`, drawSource: p.drawSource || p.q }
     })
-    .filter((q) => q.choices.length >= 2 && q.answer >= 0)
+    .filter((q) => q.choices.length >= 3 && q.answer >= 0) // jamais de QCM à 2 propositions
   return questions.length ? { id, type: 'qcm', title, icon: '❓', questions } : null
 }
 
@@ -525,7 +525,7 @@ function qcmFromPairs(pairs, id, title, exclut = null) {
 const echapperRegExp = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 const sansAccent = (t) => String(t).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
 export function masquerMot(texte, terme) {
-  const re = new RegExp(`(?<![\\p{L}\\d])${echapperRegExp(terme)}(?![\\p{L}\\d])`, 'gu')
+  const re = new RegExp(`(?<![\\p{L}\\d])${echapperRegExp(terme)}(?![\\p{L}\\d])`, 'giu') // sans tenir compte de la casse : « Will » / « will »
   const n = (texte.match(re) || []).length
   if (!n || n > 2) return null
   const reste = texte.replace(re, ' ')
@@ -536,8 +536,15 @@ export function masquerMot(texte, terme) {
   // Même radical (au moins 6 lettres) dans la phrase : « convention » / « conventionnelle ».
   const radicaux = sansAccent(terme).split(/[^a-z0-9]+/).filter((w) => w.length >= 6).map((w) => w.slice(0, 6))
   if (radicaux.length) { const mots = sansAccent(reste).split(/[^a-z0-9]+/); if (radicaux.some((r) => mots.some((m) => m.length >= 6 && m.startsWith(r)))) return null }
-  return texte.replace(re, '____')
+  const masque = texte.replace(re, '____')
+  // La réponse (à l'accent près) ne doit plus apparaître en clair dans l'énoncé.
+  const mots = sansAccent(terme).trim()
+  if (mots && new RegExp(`(?<![a-z0-9])${echapperRegExp(mots)}(?![a-z0-9])`).test(sansAccent(masque))) return null
+  return masque
 }
+
+// Débuts de phrase qui renvoient à la phrase précédente : sans elle, le trou n'a pas de contexte.
+const DEBUT_ANAPHORIQUE = /^(?:comme\b|cela\b|ceci\b|celle[s]?\b|celui\b|ceux\b|il\b|elle\b|ils\b|elles\b|sa\b|son\b|ses\b|leur[s]?\b|c['’]est\b|ce\s+(?:qui|que|sont|dernier|derni[eè]re)\b|cette\b|cet\b|ces\b|on\s+(?:l['’]|y\b|en\b|les\b|la\b|le\b)|enfin\b|ensuite\b|puis\b|ainsi\b|donc\b|alors\b|or\b|mais\b|en\s+(?:effet|revanche|outre)\b|de\s+plus\b|par\s+(?:cons[ée]quent|ailleurs)\b|dans\s+(?:ce|ces|cette)\b|la\s+(?:seconde|premi[eè]re|derni[eè]re|deuxi[eè]me|troisi[eè]me)\b|le\s+(?:second|premier|dernier|deuxi[eè]me|troisi[eè]me)\b|les\s+(?:seconds|premiers|derniers|secondes|premi[eè]res)\b)/i
 
 function trouFromBold(sec, themeId) {
   const out = []
@@ -578,7 +585,7 @@ function trouFromBold(sec, themeId) {
       if (!text2) continue
       // « Comme idéal, elle… », « Cela… », « Sa valeur… » ne sont pas des
       // consignes autonomes. Garder le paragraphe jusqu'à la phrase interrogée.
-      if (/^(?:comme\b|cela\b|ceci\b|celle[s]?\b|celui\b|ceux\b|il\b|elle\b|ils\b|elles\b|sa\b|son\b|ses\b)/i.test(plain)) {
+      if (DEBUT_ANAPHORIQUE.test(plain)) {
         if (!si) continue
         text2 = masquerMot(sentences.slice(0, si).map(stripMd).join(' ') + ' ' + plain, term)
         if (!text2) continue
@@ -728,19 +735,41 @@ function sectionPairs(sec) {
 // « / » ou « ou », et l'acronyme entre parenthèses. Ainsi « PGI » seul est
 // accepté quand la réponse attendue est « PGI / ERP ». (On ne découpe jamais sur
 // « , » ni sur les chiffres pour ne pas casser les dates ou les nombres.)
+// Coupe au niveau supérieur seulement : jamais à l'intérieur d'une parenthèse,
+// ni au milieu d'une formule (« 1/x » : la barre n'est pas entourée d'espaces).
+function coupeHorsParentheses(raw) {
+  const parts = []
+  let prof = 0
+  let cur = ''
+  for (let i = 0; i < raw.length; i++) {
+    const c = raw[i]
+    if (c === '(') prof++
+    else if (c === ')') prof = Math.max(0, prof - 1)
+    if (!prof && c === '/' && /\s/.test(raw[i - 1] || '') && /\s/.test(raw[i + 1] || '')) { parts.push(cur); cur = ''; continue }
+    if (!prof && raw.slice(i, i + 4).toLowerCase() === ' ou ') { parts.push(cur); cur = ''; i += 3; continue }
+    cur += c
+  }
+  parts.push(cur)
+  return parts
+}
+const parentheseEquilibree = (v) => (v.match(/\(/g) || []).length === (v.match(/\)/g) || []).length && !/^[^(]*\)/.test(v)
 function termVariants(term) {
   const raw = String(term || '').trim()
   if (!raw) return []
+  const aDesLettres = /\p{L}/u.test(raw.replace(/\([^)]*\)/g, ''))
   const out = new Set()
   const push = (s) => {
     const v = String(s || '').replace(/\s+/g, ' ').replace(/[;,.]+$/, '').trim()
-    if (v && v.toLowerCase() !== raw.toLowerCase()) out.add(v)
+    if (!v || v.toLowerCase() === raw.toLowerCase()) return
+    if (!parentheseEquilibree(v) || v.length < 2) return // « SEA) », « D1) », une lettre seule
+    if (aDesLettres && (/^[\d\s.,/-]+$/.test(v) || isBareDate(v))) return // une date ou un nombre seul n'est pas le terme
+    out.add(v)
   }
   push(raw.replace(/^[\u2460-\u2473]\s*/, '')) // sans numéro cerclé (« ① Dégager la thèse »)
   push(raw.replace(/\s*\([^)]*\)/g, ' ')) // le terme sans ses parenthèses
-  for (const part of raw.split(/\s*(?:\/| ou )\s*/i)) {
+  for (const part of coupeHorsParentheses(raw)) {
     push(part.replace(/\s*\([^)]*\)/g, ' ')) // « PGI (ERP) » → « PGI »
-    const m = part.match(/\(([^)]+)\)/) // acronyme entre parenthèses → « ERP »
+    const m = part.match(/\(([^()]+)\)/) // acronyme entre parenthèses → « ERP »
     if (m) push(m[1])
   }
   return [...out]
@@ -857,9 +886,14 @@ function qcmMotManquant(trou, id, distractorPool = trou) {
   if (trou.length < 3) return null
   const pool = []
   for (const m of distractorPool.map((q) => q.answer)) if (!pool.some((x) => cleReponse(x) === cleReponse(m))) pool.push(m)
+  const nbMots = (m) => String(m).trim().split(/\s+/).length
   const questions = shuffle(trou).map((q) => {
+    // « les deux », « tous », « aucun » : réponse qui dépend d'une liste, pas un mot à trouver.
+    if (/^(?:les|tous|toutes)?\s*(?:deux|trois|quatre)$|^(?:tous|toutes|aucun|aucune|les deux)$|^(?:tous|toutes) les (?:deux|trois)$/.test(cleReponse(q.answer))) return null
     const dansLaPhrase = (m) => new RegExp(`(?<![\\p{L}\\d])${echapperRegExp(String(m))}(?![\\p{L}\\d])`, 'iu').test(q.text)
-    const proches = shuffle(pool.filter((m) => cleReponse(m) !== cleReponse(q.answer) && !notionsLiees(m, q.answer) && !dansLaPhrase(m)))
+    // Même nature : un mot seul n'a que des mots seuls pour distracteurs ; un groupe, des mots ou des groupes à peine plus longs.
+    const memeForme = (m) => nbMots(q.answer) > 1 ? nbMots(m) <= nbMots(q.answer) + 1 : nbMots(m) === 1
+    const proches = shuffle(pool.filter((m) => cleReponse(m) !== cleReponse(q.answer) && !notionsLiees(m, q.answer) && !dansLaPhrase(m) && memeForme(m)))
     const distracteurs = proches.slice(0, 3)
     if (distracteurs.length < 3) return null
     const choices = shuffle([q.answer, ...distracteurs])

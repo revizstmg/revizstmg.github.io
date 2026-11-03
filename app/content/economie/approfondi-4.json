@@ -82,11 +82,15 @@
       "blocks": [
         {
           "t": "p",
-          "c": "Quatre mots reviennent sans cesse dans l’actualité économique. L’**inflation** est la **hausse générale et durable des prix**. Le **pouvoir d’achat** est **ce que le revenu permet d’acheter** : il recule quand les prix augmentent plus vite que les revenus."
+          "c": "Quelques mots reviennent sans cesse dans l’actualité économique. L’**inflation** est la **hausse générale et durable des prix**. Le **pouvoir d’achat** est **ce que le revenu permet d’acheter** : il recule quand les prix augmentent plus vite que les revenus."
         },
         {
           "t": "p",
           "c": "La **récession** est un **recul de l’activité**, mesurée par le PIB, sur plusieurs trimestres. La **relance** est une **politique de soutien de l’activité**, par des dépenses publiques ou des baisses d’impôts."
+        },
+        {
+          "t": "p",
+          "c": "D’autres mots servent à lire l’actualité. Le **taux directeur** est le **taux d’intérêt fixé par la banque centrale (BCE)** : il commande le coût du crédit. Le **déficit public** est la **situation où les dépenses de l’État dépassent ses recettes**, et la **dette publique** l’**ensemble de ses emprunts non encore remboursés**. Les **droits de douane** sont des **taxes sur les produits importés**."
         },
         {
           "t": "tip",
@@ -116,6 +120,22 @@
             [
               "Relance",
               "Politique de soutien de l’activité"
+            ],
+            [
+              "Taux directeur (BCE)",
+              "Taux d’intérêt fixé par la banque centrale, qui commande le coût du crédit"
+            ],
+            [
+              "Déficit public",
+              "Situation où les dépenses de l’État dépassent ses recettes"
+            ],
+            [
+              "Dette publique",
+              "Ensemble des emprunts de l’État non encore remboursés"
+            ],
+            [
+              "Droits de douane",
+              "Taxes sur les produits importés"
             ]
           ]
         }

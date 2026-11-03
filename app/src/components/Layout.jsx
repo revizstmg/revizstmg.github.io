@@ -27,6 +27,8 @@ import { BandeauCookies } from './BandeauCookies.jsx'
 import { BandeauEssai } from './CompteRequis.jsx'
 import EtatSauvegarde, { IndicateurSauvegarde } from './EtatSauvegarde.jsx'
 import { usePublicText, useT, useLang } from '../i18n.js'
+import { useNiveauAcces } from './Reserve.jsx'
+import { estPagePayante } from '../data/acces.js'
 import { useFocus } from '../focus.jsx'
 import { useInstall } from '../pwa.js'
 import { compterEcran } from '../mesure.js'
@@ -416,7 +418,9 @@ function Breadcrumb() {
   }, [pathname, t, publicText])
 
   // Titre de l'onglet : la page en cours, puis le nom du site.
-  const dernier = crumbs.length > 1 ? crumbs[crumbs.length - 1].label : ''
+  // Les pages sans fil d'Ariane (cours, séance…) ont un titre propre plutôt que le titre générique.
+  const TITRES_SANS_FIL = { '/cours': 'Cours', '/seance': 'Séance du jour', '/mes-notes': 'Mes notes de classe', '/vacances': 'Vacances', '/parcours': 'Parcours personnalisé', '/changer': 'Changer de niveau' }
+  const dernier = crumbs.length > 1 ? crumbs[crumbs.length - 1].label : (TITRES_SANS_FIL[pathname.replace(/\/+$/, '')] || '')
   useEffect(() => {
     document.title = cleanCopy(dernier ? `${dernier} - RévizSTMG` : 'Révision bac STMG | RévizSTMG')
   }, [dernier])
@@ -540,6 +544,8 @@ function BadgeToast() {
 // principales. L'onglet actif est déduit de l'URL courante.
 function BottomNav() {
   const t = useT()
+  const publicText = usePublicText()
+  const gratuit = useNiveauAcces() === 'gratuit'
   const { state } = useStore()
   const { pathname } = useLocation()
   // Onglets choisis par l'élève (personnalisables), nettoyés puis résolus vers
@@ -568,10 +574,11 @@ function BottomNav() {
               style={{ color: on ? 'var(--nav-actif)' : undefined }}
             >
               <span
-                className="tab-pill grid place-items-center rounded-full leading-none"
+                className="tab-pill relative grid place-items-center rounded-full leading-none"
                 style={{ padding: on ? '0.25rem 0.85rem' : '0.25rem 0.35rem', backgroundColor: on ? 'color-mix(in srgb, var(--c-accent) 16%, transparent)' : 'transparent' }}
               >
                 <span className="tab-icon text-[1.3rem] leading-none" style={{ transform: on ? 'translateY(-1px) scale(1.08)' : 'none' }} aria-hidden>{tab.icon}</span>
+                {gratuit && estPagePayante(tab.to) && <><span className="absolute -end-1 -top-1 text-[9px] leading-none" aria-hidden>🔒</span><span className="sr-only">{publicText('Réservé aux abonnés')}</span></>}
               </span>
               <span className={'max-w-full break-words text-center leading-tight '+(on ? '' : 'text-slate-500 dark:text-slate-400')} lang={state.lang}>{state.lang === 'de' ? ({reviseTab:'Üben',settings:'Optionen',mockExam:'Prüfungen'}[tab.labelKey] || t(tab.labelKey)) : t(tab.labelKey)}</span>
             </Link>

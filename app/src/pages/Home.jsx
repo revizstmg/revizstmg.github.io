@@ -1,3 +1,4 @@
+import PastillePremium from '../components/PastillePremium.jsx'
 import { Link, Navigate } from 'react-router-dom'
 import { getChapter } from '../data/index.js'
 import { subjectsForTrack, getLevel, getSpecialty } from '../data/tracks.js'
@@ -82,7 +83,7 @@ export default function Home() {
         </Link>
         <Link to="/revision" className="home-destination">
           <span className="home-destination-icon" aria-hidden>🧠</span>
-          <div><h2>{t('training')}</h2><p>{t('trainingDesc')}</p></div>
+          <div><h2>{t('training')}<PastillePremium to="/revision" /></h2><p>{t('trainingDesc')}</p></div>
           <span className="home-destination-arrow" aria-hidden>→</span>
         </Link>
         <Link to="/classe" className="home-destination">
@@ -100,7 +101,7 @@ export default function Home() {
           <div><strong>{state.streak?.count || 0}</strong><span>{t('streakDays')}</span></div>
         </div>
         <ProgressBar value={progress} color="var(--c-accent-texte)" />
-        <div className="home-progress-footer"><span>{t('level')} {derived.level} · {state.xp.toLocaleString(state.lang || 'fr')} XP</span><Link to="/badges">{t('badges')} →</Link></div>
+        <div className="home-progress-footer"><span>{t('level')} {derived.level} · {state.xp.toLocaleString(state.lang || 'fr')} XP</span><Link to="/badges">{t('badges')} →<PastillePremium to="/badges" /></Link></div>
         <details className="home-progress-explanation"><summary>Comprendre ma progression</summary><p>Chaque chapitre utilise jusqu’à trois de tes meilleurs exercices. La moyenne des chapitres donne la maîtrise du thème ; un meilleur résultat au test du thème peut la relever. Les XP et les séances de formules ne modifient pas cette maîtrise.</p></details>
       </section>
     </div>

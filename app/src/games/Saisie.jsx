@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from 'react'
-import { Feedback, GameProgress, useStopwatch, answerMatchesCours as answerMatches, normalize, shuffle } from './common.jsx'
+import { Feedback, GameProgress, useStopwatch, correcteurDe, normalize, shuffle } from './common.jsx'
 import MicButton from '../components/MicButton.jsx'
 import { useT } from '../i18n.js'
 
@@ -9,6 +9,7 @@ import { useT } from '../i18n.js'
 // ordre. game.questions = [{ prompt, answer, alt?, explain? }].
 export default function Saisie({ game, mode, color, onDone }) {
   const t = useT()
+  const answerMatches = correcteurDe(game)
   const set = useMemo(() => shuffle(game.questions || []).slice(0, game.count || 10), [game])
   const [i, setI] = useState(0)
   const [correct, setCorrect] = useState(0)

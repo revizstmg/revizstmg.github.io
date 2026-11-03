@@ -1210,28 +1210,12 @@
               "explain": "Le cloud : mêmes fichiers, à jour, accessibles partout."
             },
             {
-              "text": "La gestion électronique des documents se note ____ .",
-              "answer": "GED",
+              "text": "Plusieurs personnes modifient le même document en même temps : c’est la ____ .",
+              "answer": "coédition",
               "alt": [
-                "ged"
+                "coedition"
               ],
-              "explain": "La GED classe, indexe et retrouve les documents."
-            },
-            {
-              "text": "Automatiser le circuit de validation d’un document, c’est un ____ .",
-              "answer": "workflow",
-              "alt": [
-                "un workflow"
-              ],
-              "explain": "Le workflow gère le flux du document."
-            },
-            {
-              "text": "Une collaboration en différé (courriel, forum) est dite ____ .",
-              "answer": "asynchrone",
-              "alt": [
-                "asynchrone"
-              ],
-              "explain": "Synchrone = en même temps ; asynchrone = en différé."
+              "explain": "La coédition permet de modifier simultanément le même document."
             }
           ]
         },
@@ -1320,7 +1304,7 @@
           "blocks": [
             {
               "t": "p",
-              "c": "Protéger le SI, c’est garantir trois principes fondamentaux, résumés par **CID** (ou DIC) ; on y ajoute souvent la **preuve** (traçabilité), d’où **DICP**."
+              "c": "Protéger le SI, c’est garantir quatre principes fondamentaux, résumés par le sigle **DICP** : Disponibilité, Intégrité, Confidentialité et **Preuve** (traçabilité). Le triangle DIC (ou CID) n’en est que le noyau à trois lettres."
             },
             {
               "t": "table",
@@ -1344,6 +1328,11 @@
                   "**Disponibilité**",
                   "L’information est accessible quand on en a besoin",
                   "**Sauvegardes**, redondance, maintenance"
+                ],
+                [
+                  "**Preuve**",
+                  "On sait qui a fait quoi, et quand (traçabilité)",
+                  "Journaux de connexion, horodatage, authentification"
                 ]
               ]
             },
@@ -1636,36 +1625,17 @@
           "icon": "✏️",
           "questions": [
             {
-              "text": "Le langage qui structure une page web est le ____ .",
-              "answer": "HTML",
-              "alt": [
-                "html"
-              ],
-              "explain": "HTML = structure ; CSS = mise en forme."
+              "text": "Dans le modèle client-serveur, le client demande et le ____ fournit le service.",
+              "answer": "serveur",
+              "explain": "Modèle client-serveur : le client demande, le serveur fournit."
             },
             {
-              "text": "La mise en forme d’une page web se fait avec le ____ .",
-              "answer": "CSS",
+              "text": "Les règles communes de communication entre machines (HTTP, IP…) sont les ____ .",
+              "answer": "protocoles",
               "alt": [
-                "css"
+                "protocole"
               ],
-              "explain": "CSS : couleurs, polices, disposition."
-            },
-            {
-              "text": "Le numéro qui identifie une machine sur le réseau est l’adresse ____ .",
-              "answer": "IP",
-              "alt": [
-                "ip"
-              ],
-              "explain": "L’adresse IP identifie chaque machine."
-            },
-            {
-              "text": "Rendre des données illisibles sans la clé, c’est le ____ .",
-              "answer": "chiffrement",
-              "alt": [
-                "le chiffrement"
-              ],
-              "explain": "Le chiffrement protège la confidentialité (ex. HTTPS)."
+              "explain": "Un protocole est l’ensemble des règles communes de communication."
             }
           ]
         },

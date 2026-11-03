@@ -1,3 +1,4 @@
+import PastillePremium from '../components/PastillePremium.jsx'
 import StudyLanguages from '../components/StudyLanguages.jsx'
 import { nombre } from '../format.js'
 import OfflineStatus from '../components/OfflineStatus.jsx'
@@ -25,7 +26,7 @@ async function telechargerMesDonnees(state) {
   const donnees = { application: 'RévizSTMG', exporte_le: new Date().toISOString(), donnees: state }
   // Données gardées côté serveur (abonnement, compteurs d'utilisation de l'IA) : ajoutées si le compte en a.
   if (state.account?.id) {
-    try { const etat = await lireEtatPaiement(); donnees.abonnement = etat.abonnement || null; donnees.utilisation_ia = etat.usage || [] } catch { /* paiements fermés ou hors ligne */ }
+    try { const etat = await lireEtatPaiement(); donnees.abonnement = etat.abonnement || null; donnees.utilisation_ia = etat.usage || [] } catch { donnees.abonnement_indisponible = true /* paiements fermés ou hors ligne : le fichier le dit */ }
   }
   const url = URL.createObjectURL(new Blob([JSON.stringify(donnees, null, 2)], { type: 'application/json' }))
   const a = document.createElement('a')
@@ -202,7 +203,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
       <section hidden={role==='prof'}>
         <div className="mb-3 flex items-end justify-between px-1">
           <h2 className="font-display text-xl font-medium">{t('myBadges')}</h2>
-          <Link to="/badges" className="text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('seeAll')}</Link>
+          <Link to="/badges" className="text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('seeAll')}<PastillePremium to="/badges" /></Link>
         </div>
         {earnedBadges.length === 0 ? (
           <div className="card p-5 text-center text-sm text-slate-500 dark:text-slate-400">{t('noBadgeYet')}</div>
@@ -230,7 +231,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
         {role !== 'prof' && (
         <Link to="/mes-notes" className="card flex items-center gap-3 p-4 transition hover:-translate-y-0.5 hover:shadow-md">
           <span className="text-2xl" aria-hidden>📝</span>
-          <span><span className="block font-display font-semibold">Mes notes de classe</span><span className="block text-xs text-slate-500 dark:text-slate-400">{(state.notesClasse || []).length ? `${state.notesClasse.length} ${state.notesClasse.length > 1 ? 'notes' : 'note'} · ce qu’il faut améliorer` : 'Tes notes et ce qu’il faut améliorer'}</span></span>
+          <span><span className="block font-display font-semibold">Mes notes de classe<PastillePremium to="/mes-notes" /></span><span className="block text-xs text-slate-500 dark:text-slate-400">{(state.notesClasse || []).length ? `${state.notesClasse.length} ${state.notesClasse.length > 1 ? 'notes' : 'note'} · ce qu’il faut améliorer` : 'Tes notes et ce qu’il faut améliorer'}</span></span>
         </Link>
         )}
         {role === 'prof' ? (

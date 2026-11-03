@@ -19,8 +19,9 @@ function monde({ abonnement = null, refuserTest = false, creeLe = '2026-11-02T10
     if (u.includes('/auth/v1/user')) return Response.json({ id: ID, created_at: creeLe })
     if (u.includes('/rest/v1/revizstmg_abonnements')) return base === 'ok' ? Response.json(abonnement ? [abonnement] : []) : new Response('x', { status: 500 })
     if (u.includes('/rest/v1/revizstmg_ia_usage')) {
-      const q = new URL(u).searchParams, f = q.get('fonction').replace('eq.', ''), p = q.get('periode').replace('eq.', '')
-      return Response.json(compteur(f, p) ? [{ n: compteur(f, p) }] : [])
+      const q = new URL(u).searchParams, f = q.get('fonction').replace('eq.', '')
+      const periodes = q.get('periode').replace(/^(eq\.|in\.\()/, '').replace(/\)$/, '').split(',')
+      return Response.json(periodes.filter((p) => compteur(f, p)).map((p) => ({ n: compteur(f, p) })))
     }
     if (u.includes('/rpc/revizstmg_ia_reserver')) {
       const { p_fonction: f, p_periode: p, p_max: max } = JSON.parse(init.body)
@@ -46,9 +47,13 @@ function monde({ abonnement = null, refuserTest = false, creeLe = '2026-11-02T10
     const r = await handler(new Request('https://f/', { method: 'POST', headers: { authorization: 'Bearer jeton-long-pour-le-test' }, body: JSON.stringify({ action: 'tutor', course: cours, messages }) }))
     return { status: r.status, corps: await r.json() }
   }
+  const appeler = async (corps) => {
+    const r = await handler(new Request('https://f/', { method: 'POST', headers: { authorization: 'Bearer jeton-long-pour-le-test' }, body: JSON.stringify(corps) }))
+    return { status: r.status, corps: await r.json() }
+  }
   const nouvelleDiscussion = () => tuteur()
   const suite = () => tuteur([{ role: 'user', text: 'Q1' }, { role: 'assistant', text: 'R1' }, { role: 'user', text: 'Q2' }])
-  return { tuteur, nouvelleDiscussion, suite, usage, appels, compteur }
+  return { tuteur, appeler, nouvelleDiscussion, suite, usage, appels, compteur }
 }
 
 describe('contrôle d’accès de la fonction examen-blanc (IA)', () => {
@@ -102,6 +107,58 @@ describe('contrôle d’accès de la fonction examen-blanc (IA)', () => {
       // Le compteur journalier compte chaque tentative (un échec provoqué en boucle ne le contourne pas).
       expect(m.compteur('_jour', '2026-10-29'), fournisseur).toBe(1)
     }
+  })
+  it('hors sujet ou JSON invalide : l’utilisation du mois n’est rendue qu’une fois par jour et par fonction', async () => {
+    const m = monde({ abonnement: PREMIUM, fournisseur: 'invalide' })
+    expect((await m.nouvelleDiscussion()).status).toBe(502)
+    expect(m.compteur('tuteur', '2026-10')).toBe(0) // premier échec du jour : rendu
+    expect((await m.nouvelleDiscussion()).status).toBe(502)
+    expect(m.compteur('tuteur', '2026-10')).toBe(1) // deuxième : conservé
+    expect((await m.nouvelleDiscussion()).status).toBe(403) // quota atteint : plus d'appel au fournisseur
+    expect(m.appels.fournisseur).toBe(2)
+  })
+  it('Premium : le repli sans IA d’un contrôle compte comme l’étape initiale, la correction qui suit passe', async () => {
+    const m = monde({ abonnement: PREMIUM, fournisseur: 'panne' })
+    const cours = { id: 'c1', title: 'Cours', subject: 'Gestion', level: 'terminale', text: ['Une première idée assez longue pour être retenue par le repli pédagogique du cours.', 'Une deuxième idée assez longue pour être retenue par le repli pédagogique du cours.', 'Une troisième idée assez longue pour être retenue par le repli pédagogique du cours.', 'Une quatrième idée assez longue pour être retenue par le repli pédagogique du cours.'].join('\n') }
+    const r = await m.appeler({ action: 'control', step: 'prepare', course: cours })
+    expect(r.status).toBe(200)
+    expect(r.corps.preparation).toBe('course')
+    expect(m.compteur('controle', '2026-10')).toBe(1)
+  })
+  it('Premium : les plans d’examen ont leur propre plafond et n’épuisent pas les corrections', async () => {
+    const usage = new Map()
+    const fetcher = async (url, init = {}) => {
+      const u = String(url)
+      if (u.includes('revizstmg_abonnements')) return Response.json([{ ...PREMIUM, mode_test: false }])
+      const { p_fonction: f, p_periode: p, p_max: max } = JSON.parse(init.body)
+      const k = `${f}|${p}`, n = usage.get(k) || 0
+      if (n >= max) return Response.json(false)
+      usage.set(k, n + 1); return Response.json(true)
+    }
+    const env = (k) => ({ SUPABASE_URL: 'https://fake', SUPABASE_SERVICE_ROLE_KEY: 'cle' })[k]
+    const plan = () => reserverAccesIA({ env, fetcher, userId: ID, creeLe: null, id: 'examen', suite: true, plan: true, maintenant: MAINTENANT })
+    for (let i = 0; i < 12; i++) expect((await plan()).ok, `plan ${i + 1}`).toBe(true)
+    expect((await plan()).ok).toBe(false)
+    expect(usage.get('examen:suite|2026-10')).toBeUndefined() // aucune « suite » consommée par les plans
+  })
+  it('une suite à cheval sur deux mois passe avec l’étape initiale du mois précédent', async () => {
+    const usage = new Map([['examen|2026-10', 1]])
+    const fetcher = async (url, init = {}) => {
+      const u = String(url)
+      if (u.includes('revizstmg_abonnements')) return Response.json([{ ...PREMIUM, mode_test: false }])
+      if (u.includes('revizstmg_ia_usage')) {
+        const periodes = new URL(u).searchParams.get('periode').replace(/^in\.\(/, '').replace(/\)$/, '').split(',')
+        return Response.json(periodes.filter((p) => usage.get(`examen|${p}`)).map((p) => ({ n: usage.get(`examen|${p}`) })))
+      }
+      const { p_fonction: f, p_periode: p, p_max: max } = JSON.parse(init.body)
+      const k = `${f}|${p}`, n = usage.get(k) || 0
+      if (n >= max) return Response.json(false)
+      usage.set(k, n + 1); return Response.json(true)
+    }
+    const env = (k) => ({ SUPABASE_URL: 'https://fake', SUPABASE_SERVICE_ROLE_KEY: 'cle' })[k]
+    const corriger = (maintenant) => reserverAccesIA({ env, fetcher, userId: ID, creeLe: null, id: 'examen', suite: true, preuve: true, maintenant })
+    expect((await corriger(Date.UTC(2026, 10, 1, 8))).ok).toBe(true) // 1er novembre, étape initiale d'octobre
+    expect((await corriger(Date.UTC(2026, 11, 20, 8))).ok).toBe(false) // décembre : trop ancien
   })
   it('Ultimate : pas de quota mensuel, seulement le garde-fou journalier', async () => {
     const m = monde({ abonnement: ULTIMATE })

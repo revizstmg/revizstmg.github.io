@@ -1,17 +1,29 @@
 import { ALL_CHAPTERS, themeChapters, jeuxDuChapitre, exercicesParChapitre } from './index.js'
 import { subjectsForTrack } from './tracks.js'
 import { missionStatus } from './missionProgress.js'
+import { commun } from '../content/contenu.js'
 
 const RECOGNISE = ['qcm', 'vraifaux', 'association', 'tri', 'memory']
 const APPLY = ['calcul', 'caspratique', 'trou', 'saisie', 'sql', 'ordre', 'verbs', 'grammar']
-const playable = g => [...RECOGNISE, ...APPLY].includes(g.type) && (g.gen || g.gens?.length || g.questions?.length || g.pairs?.length || g.items?.length)
+// Les jeux « ordre » (steps) et « caspratique » (cases) sont jouables en mission : ils comptent dans APPLY.
+const playable = g => [...RECOGNISE, ...APPLY].includes(g.type) && (g.gen || g.gens?.length || g.questions?.length || g.pairs?.length || g.items?.length || g.steps?.length || g.cases?.length)
+// Nombre de questions qu'un jeu peut fournir (un générateur en fournit autant qu'on veut).
+const capacite = g => (g.gen || g.gens?.length) ? Infinity : Math.max(g.questions?.length || 0, g.pairs?.length || 0, g.items?.length || 0, g.steps?.length || 0, g.cases?.length || 0)
+// Une mission demande au moins 3 questions jouables dans le chapitre ; en dessous, elle tournerait en rond sur les mêmes 2 questions.
+export const QUESTIONS_MINIMUM_MISSION = 3
+const totalJouable = games => games.reduce((n, g) => n + capacite(g), 0)
+// Calculé d'avance (content/commun/missions-jouables.json, tests/missions.test.js) : l'accueil ne charge pas les cours.
+export function missionJouable(themeId, index) {
+  const t = commun('missions-jouables').themes[themeId]
+  return t ? t[index] === 1 : true
+}
 export const missionSubjects = track => subjectsForTrack(track).filter(s => !s.comingSoon && !s.resourceOnly && s.chapters?.length)
 export const missionUrl = target => '/missions/' + target.subjectId + '/' + target.themeId + '/' + target.index
 
 // L'accueil ne charge pas les cours : les effectifs légers suffisent.
 export function nextMissionTarget(state, position = null) {
   const candidates = missionSubjects(state.track).flatMap(subject => subject.chapters.flatMap(theme =>
-    exercicesParChapitre(theme.id).flatMap((count, index) => count ? [{subjectId: subject.id, subjectName: subject.short || subject.name, themeId: theme.id, themeName: theme.short || theme.name, index}] : [])))
+    exercicesParChapitre(theme.id).flatMap((count, index) => count && missionJouable(theme.id, index) ? [{subjectId: subject.id, subjectName: subject.short || subject.name, themeId: theme.id, themeName: theme.short || theme.name, index}] : [])))
   if (!candidates.length) return null
   const recent = candidates.find(t => t.themeId === position?.themeId && t.index === position?.chapterIndex)
     || candidates.find(t => t.themeId === state.lastChapter?.chapterId)
@@ -36,7 +48,7 @@ export function chapterMission(themeId, index) {
   const chapter = theme?.cours && themeChapters(theme)[index]
   if (!chapter) return null
   const games = jeuxDuChapitre(chapter, theme).filter(playable)
-  if (!games.length) return {chapter, games, rounds: []}
+  if (!games.length || totalJouable(games) < QUESTIONS_MINIMUM_MISSION) return {chapter, games, rounds: []}
   // « Comprendre » : le premier format de reconnaissance dans l'ordre de RECOGNISE (le QCM d'abord),
   // quel que soit l'ordre des jeux du chapitre.
   const understand = RECOGNISE.map(type => games.find(g=>g.type===type)).find(Boolean) || games[0]

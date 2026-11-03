@@ -1,15 +1,7 @@
 import { useMemo, useRef, useState } from 'react'
-import { Feedback, GameProgress, answerMatchesCours as answerMatches, normalize } from './common.jsx'
+import { Feedback, GameProgress, answerMatchesCours as answerMatches, normalize, parseNombre as parseNum } from './common.jsx'
 import MicButton from '../components/MicButton.jsx'
 import { useT } from '../i18n.js'
-
-// Extrait un nombre d'une saisie : « 3 300 € » → 3300, « 33,3 % » → 33.3.
-function parseNum(s) {
-  const v = String(s == null ? '' : s).replace(/[€%\s ]/g, '').replace(',', '.').replace(/[^0-9.\-−]/g, '').replace('−', '-')
-  if (!v || v === '-' || v === '.') return null
-  const n = parseFloat(v)
-  return Number.isFinite(n) ? n : null
-}
 
 // Vrai si la réponse saisie correspond (texte OU nombre tolérant).
 function matches(input, q) {

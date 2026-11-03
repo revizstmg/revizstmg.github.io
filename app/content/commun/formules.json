@@ -539,7 +539,7 @@
           },
           {
             "name": "Sécurité de l’information",
-            "f": "Disponibilité + Intégrité + Confidentialité (DIC)"
+            "f": "Disponibilité + Intégrité + Confidentialité + Preuve (DICP)"
           }
         ]
       }

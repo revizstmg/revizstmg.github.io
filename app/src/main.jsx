@@ -16,11 +16,16 @@ initPwa()
 // L'app est découpée en fichiers chargés à la demande. Si une mise à jour a
 // été publiée pendant qu'un élève avait l'app ouverte, un ancien fichier peut
 // manquer : on recharge une fois pour passer à la nouvelle version.
+// Un seul rechargement par page ouverte, même si le stockage de session est inutilisable (sans cette variable,
+// chaque échec rechargerait la page en boucle).
+let dejaRecharge = false
 window.addEventListener('vite:preloadError', (event) => {
+  if (dejaRecharge) return
   try {
     if (sessionStorage.getItem('revizstmg-recharge')) return
     sessionStorage.setItem('revizstmg-recharge', '1')
-  } catch { /* stockage indisponible : on recharge quand même une fois */ }
+  } catch { /* stockage indisponible : la variable ci-dessus limite à un rechargement */ }
+  dejaRecharge = true
   event.preventDefault()
   window.location.reload()
 })

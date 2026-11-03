@@ -361,38 +361,33 @@
           "icon": "✏️",
           "questions": [
             {
-              "text": "La reconnaissance officielle des compétences est la ____ .",
-              "answer": "qualification",
-              "alt": [
-                "la qualification"
-              ],
-              "explain": "Qualification = reconnaissance (diplôme, classification)."
-            },
+              "text": "Selon Herzberg, la reconnaissance est un facteur de ____ .",
+              "answer": "motivation",
+              "explain": "Herzberg distingue facteurs d’hygiène (évitent le mécontentement) et facteurs de motivation (donnent l’envie)."
+            }
+          ]
+        },
+        {
+          "id": "rh-t1-trou-gpec",
+          "type": "trou",
+          "title": "Texte à trous — Compétences et GPEC",
+          "icon": "✏️",
+          "questions": [
             {
               "text": "La gestion prévisionnelle des emplois et des compétences se nomme la ____ .",
               "answer": "GPEC",
               "alt": [
                 "gpec"
               ],
-              "explain": "Elle anticipe les besoins par recrutement, formation, mobilité."
+              "explain": "La GPEC anticipe les besoins futurs en emplois et en compétences."
             },
             {
-              "text": "Selon Herzberg, le salaire est un facteur d’____ .",
-              "answer": "hygiène",
+              "text": "Compétence = savoir + savoir-faire + savoir-____ .",
+              "answer": "être",
               "alt": [
-                "hygiene",
-                "l’hygiène"
+                "etre"
               ],
-              "explain": "Il évite l’insatisfaction mais ne motive pas durablement."
-            },
-            {
-              "text": "L’engagement durable du salarié envers son organisation est l’____ .",
-              "answer": "implication",
-              "alt": [
-                "l’implication",
-                "implication"
-              ],
-              "explain": "L’implication améliore la performance sociale."
+              "explain": "La compétence combine savoir, savoir-faire et savoir-être."
             }
           ]
         },
@@ -1173,22 +1168,6 @@
                 "le bruit"
               ],
               "explain": "Bruit matériel (brouhaha) ou sémantique (sens)."
-            },
-            {
-              "text": "Reformuler pour vérifier la compréhension relève de l’écoute ____ .",
-              "answer": "active",
-              "alt": [
-                "active"
-              ],
-              "explain": "Attention + empathie + reformulation."
-            },
-            {
-              "text": "S’appuyer sur la raison et les faits, c’est ____ .",
-              "answer": "convaincre",
-              "alt": [
-                "convaincre"
-              ],
-              "explain": "Convaincre = raison ; persuader = émotion."
             }
           ]
         }
@@ -1504,25 +1483,9 @@
         {
           "id": "rh-t4-trou",
           "type": "trou",
-          "title": "Texte à trous — Travail & climat",
+          "title": "Texte à trous — Climat social",
           "icon": "✏️",
           "questions": [
-            {
-              "text": "L’organisation scientifique du travail a été théorisée par ____ .",
-              "answer": "Taylor",
-              "alt": [
-                "taylor"
-              ],
-              "explain": "Taylor : division et parcellisation des tâches."
-            },
-            {
-              "text": "La qualité de vie au travail se note ____ .",
-              "answer": "QVT",
-              "alt": [
-                "qvt"
-              ],
-              "explain": "La QVT vise le bien-être et la performance."
-            },
             {
               "text": "Le taux de départs des salariés est le ____ .",
               "answer": "turnover",
@@ -1530,14 +1493,24 @@
                 "le turnover"
               ],
               "explain": "Turnover et absentéisme signalent le climat social."
+            }
+          ]
+        },
+        {
+          "id": "rh-t4-trou-cout",
+          "type": "trou",
+          "title": "Texte à trous — Coût du travail",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "Coût employeur = salaire brut + cotisations ____ .",
+              "answer": "patronales",
+              "explain": "Coût employeur = salaire brut + cotisations patronales."
             },
             {
-              "text": "Les échanges avec les représentants du personnel forment le ____ social.",
-              "answer": "dialogue",
-              "alt": [
-                "dialogue"
-              ],
-              "explain": "Le dialogue social (CSE) améliore le climat."
+              "text": "Salaire net = brut − cotisations ____ .",
+              "answer": "salariales",
+              "explain": "Salaire net = brut − cotisations salariales."
             }
           ]
         },

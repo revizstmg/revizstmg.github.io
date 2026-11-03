@@ -27,8 +27,8 @@ export default function ChapterControl({course}) {
    const valider=reserverIA('controle',{suite:step!=='prepare'});const response=await fetch(`${SUPA_URL}/functions/v1/examen-blanc`,{method:'POST',headers:{apikey:SUPA_ANON,Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(body),signal:ac.signal})
    const data=await response.json().catch(()=>({}))
    if(!response.ok)throw Error(data.error||(response.status===401?'login_required':'server_error'))
-   // Le repli « course » n'utilise pas l'IA : le serveur rend l'utilisation, le site ne la compte pas non plus.
-   if(data.preparation!=='course')valider()
+   // Le repli « course » compte comme l'étape initiale : la correction qui suit (IA) en dépend côté serveur.
+   valider()
    signal.throwIfAborted()
    return {control:checkControlResult(data.control,body),preparation:data.preparation==='course'?'course':''}
    },ac,step==='correct'?CONTROL_WAIT_MS:150000)

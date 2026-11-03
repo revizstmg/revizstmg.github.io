@@ -6,7 +6,7 @@
   "gf-t1-ordre": 18,
   "gf-t1-qcm": 4,
   "gf-t1-tri": 0,
-  "gf-t1-trou": 3,
+  "gf-t1-trou": 2,
   "gf-t1-vf": 1,
   "gf-t2-assoc": 3,
   "gf-t2-calc-caf": 10,
@@ -22,5 +22,7 @@
   "gf-t3-qcm": 0,
   "gf-t3-tri": 3,
   "gf-t3-trou": 5,
-  "gf-t3-vf": 1
+  "gf-t3-vf": 1,
+  "gf-t1-trou-tva": 17,
+  "gf-t1-trou-principes": 19
 }

@@ -307,10 +307,14 @@
         {
           "id": "eco-t7-calc",
           "type": "calcul",
-          "title": "Calcul express — Taux d’évolution",
+          "title": "Calcul express — Taux de chômage, d’activité et d’emploi",
           "icon": "⚡",
-          "gen": "taux_evolution",
-          "count": 5
+          "count": 5,
+          "gens": [
+            "taux_chomage",
+            "taux_activite",
+            "taux_emploi"
+          ]
         }
       ]
     },
@@ -647,40 +651,6 @@
             {
               "t": "p",
               "c": "La **transition écologique** et les questions d’énergie montrent la **tension entre croissance et soutenabilité** (thème 9). Enfin, l’**intelligence artificielle** nourrit un débat sur l’emploi et la croissance : elle **détruit et crée des emplois** et apporte des **gains de productivité**."
-            },
-            {
-              "t": "table",
-              "h": "Notions et définitions",
-              "head": [
-                "Notion",
-                "Définition"
-              ],
-              "rows": [
-                [
-                  "Inflation (actualité)",
-                  "Rôle de l’État et pouvoir d’achat"
-                ],
-                [
-                  "Taux de la BCE (actualité)",
-                  "Politique monétaire : freiner l’inflation, mais crédit plus cher"
-                ],
-                [
-                  "Chômage, SMIC (actualité)",
-                  "Formes de chômage et politiques de l’emploi (thème 7)"
-                ],
-                [
-                  "Déficit et dette (actualité)",
-                  "Limites de l’intervention de l’État (thème 6)"
-                ],
-                [
-                  "Droits de douane (actualité)",
-                  "Libre-échange ou protectionnisme (thème 8)"
-                ],
-                [
-                  "Transition écologique (actualité)",
-                  "Croissance et soutenabilité (thème 9)"
-                ]
-              ]
             }
           ]
         },
@@ -698,36 +668,6 @@
             {
               "t": "tip",
               "c": "Suis 5 min d’actu éco par semaine (journal, radio, podcast) et note **un fait par chapitre**. Le dictionnaire intégré 📖 t’aide pour un mot ou une phrase."
-            },
-            {
-              "t": "table",
-              "h": "Notions et définitions",
-              "head": [
-                "Notion",
-                "Définition"
-              ],
-              "rows": [
-                [
-                  "INSEE",
-                  "Chiffres officiels : inflation, chômage, croissance, pouvoir d’achat"
-                ],
-                [
-                  "Banque de France",
-                  "Monnaie, crédit, taux d’intérêt"
-                ],
-                [
-                  "Vie-publique / economie.gouv.fr",
-                  "Budget, déficit et dette publics, politiques de l’État"
-                ],
-                [
-                  "OMC",
-                  "Commerce international, droits de douane"
-                ],
-                [
-                  "ADEME",
-                  "Transition écologique, énergie, développement durable"
-                ]
-              ]
             }
           ]
         }
