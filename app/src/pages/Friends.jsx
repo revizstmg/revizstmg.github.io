@@ -23,13 +23,27 @@ const medal = (i) => (i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `
 // Score d'un duel joué dont l'envoi a échoué : gardé sur l'appareil pour le
 // renvoyer (l'envoi est idempotent : il réécrit le même score).
 const CLE_SCORES_EN_ATTENTE = 'stmg_duel_scores_attente'
+// Une clé par compte (comme le code ami) : deux comptes sur un même appareil ne
+// se renvoient pas leurs scores. L'ancienne clé commune reste lue (migration) ;
+// un score envoyé en est retiré aussi.
+const cleScores = () => `${CLE_SCORES_EN_ATTENTE}:${deviceId()}`
 function scoresEnAttente() {
-  try { return JSON.parse(localStorage.getItem(CLE_SCORES_EN_ATTENTE) || '{}') || {} } catch { return {} }
+  try {
+    const propres = JSON.parse(localStorage.getItem(cleScores()) || '{}') || {}
+    const anciens = JSON.parse(localStorage.getItem(CLE_SCORES_EN_ATTENTE) || '{}') || {}
+    return { ...anciens, ...propres }
+  } catch { return {} }
 }
 function garderScore(id, score) {
   const tous = scoresEnAttente()
   if (score) tous[id] = score; else delete tous[id]
-  try { localStorage.setItem(CLE_SCORES_EN_ATTENTE, JSON.stringify(tous)) } catch { /* stockage indisponible : le score reste à l'écran */ }
+  try { localStorage.setItem(cleScores(), JSON.stringify(tous)) } catch { /* stockage indisponible : le score reste à l'écran */ }
+  if (!score) {
+    try {
+      const anciens = JSON.parse(localStorage.getItem(CLE_SCORES_EN_ATTENTE) || '{}') || {}
+      if (id in anciens) { delete anciens[id]; localStorage.setItem(CLE_SCORES_EN_ATTENTE, JSON.stringify(anciens)) }
+    } catch { /* ancienne clé illisible : ignorée */ }
+  }
 }
 
 function resultFromDuel(d) {

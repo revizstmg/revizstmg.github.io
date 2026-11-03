@@ -65,7 +65,7 @@ async function ouvrir(page, role,extra={}) {
       }
       return json(server.quizzes)
     }
-    if(server.failOverview&&path.endsWith('/class_wall'))return json({message:'indisponible'},503)
+    if(server.failOverview&&(path.endsWith('/class_wall')||path.endsWith('/rpc/revizstmg_mur')))return json({message:'indisponible'},503)
     if (path.endsWith('/class_member')) {
       if (method === 'POST') { members.add(req.postDataJSON()[0].class_code); return json([]) }
       if (method === 'DELETE') {

@@ -3,6 +3,7 @@ import { useStore } from '../store.jsx'
 import { usePublicText } from '../i18n.js'
 import { creerMonCompte } from './CompteRequis.jsx'
 import { useFenetreClavier } from './clavier.js'
+import { getSession } from '../auth.js'
 
 // Fenêtre d'alerte : Échap revient en arrière (« Rester » / « Continuer »),
 // Tab reste dans la fenêtre, le focus revient ensuite où il était.
@@ -28,7 +29,7 @@ const ETATS_INDICATEUR = {
   echec: { icone: '⚠', texte: 'Non enregistré', titre: 'Tes derniers changements ne sont pas encore sur ton compte.', cls: 'text-amber-800 dark:text-amber-300' },
 }
 export function etatIndicateur(etat) {
-  if (etat === 'horsLigne' || etat === 'erreur') return 'echec'
+  if (etat === 'horsLigne' || etat === 'erreur' || etat === 'session') return 'echec'
   if (etat === 'attente' || etat === 'envoi') return 'attente'
   return 'ok'
 }
@@ -55,6 +56,16 @@ export default function EtatSauvegarde() {
   const { etat } = sauvegarde
   return (
     <>
+      {state.account?.id && (etat === 'session' || !getSession()) && (
+        <div role="alert" className="no-print border-b border-amber-200 bg-amber-50 px-4 py-2 text-sm text-amber-900 dark:border-amber-900/60 dark:bg-amber-950/40 dark:text-amber-100">
+          <div className="mx-auto flex max-w-4xl flex-wrap items-center gap-x-3 gap-y-1">
+            <span aria-hidden>🔒</span>
+            <strong>Non sauvegardé</strong>
+            <span className="min-w-0 flex-1" style={{flexBasis:'15rem'}}>Ta session a expiré : ta progression reste sur cet appareil. Reconnecte-toi pour la sauvegarder sur ton compte.</span>
+            <button type="button" onClick={() => logout()} className="font-semibold underline">Reconnecte-toi</button>
+          </div>
+        </div>
+      )}
       {(etat === 'horsLigne' || etat === 'erreur') && (
         <div role="status" className="no-print border-b border-amber-200 bg-amber-50 px-4 py-2 text-sm text-amber-900 dark:border-amber-900/60 dark:bg-amber-950/40 dark:text-amber-100">
           <div className="mx-auto flex max-w-4xl flex-wrap items-center gap-x-3 gap-y-1">

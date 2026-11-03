@@ -23,7 +23,7 @@ describe('outil conseillé sur l’accueil', () => {
   it('le bac dans moins de 30 jours : le bac blanc, avant tout le reste', () => {
     const srs = { 'gf-t1': { due: '2026-10-01' } }
     expect(outilConseille({ track: terminale, srs, bacDate: '2026-11-10' }, '2026-10-19')).toEqual({ id: 'bac-blanc', jours: 22 })
-    expect(outilConseille({ track: terminale }, '2027-06-01')).toEqual({ id: 'bac-blanc', jours: 15 })
+    expect(outilConseille({ track: terminale }, '2027-06-01')).toEqual({ id: 'bac-blanc', jours: 13 })
     expect(outilConseille({ track: terminale, bacDate: '2026-12-31' }, '2026-10-19').id).toBe('programme')
   })
   it('un bac passé ne fait plus conseiller le bac blanc', () => {

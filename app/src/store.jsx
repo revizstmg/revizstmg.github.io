@@ -598,6 +598,9 @@ export function StoreProvider({ children }) {
     await desactiverRappelsPush()
     if (getSession()?.user?.id !== session?.user?.id) return false
     signOut()
+    // La copie de secours garde l'identité et la progression du compte : elle ne doit pas survivre à la déconnexion.
+    try { localStorage.removeItem(KEY_SECOURS); localStorage.removeItem(KEY_ABIME) } catch { /* stockage indisponible */ }
+    dernierSecours = 0
     setRaw(withoutAccount(latestState.current))
     setNewBadges([])
     setDailyReward(null)

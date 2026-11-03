@@ -28,9 +28,9 @@ export default function Cgu() {
       </Section>
 
       <Section title="2. Accès au service">
-        <ul className="list-disc space-y-1 pl-5">
+        <ul className="list-disc space-y-1 ps-5">
           <li><TexteRiche texte={"Les cours et les exercices de base sont **gratuits**, sans publicité. Le reste du site est réservé aux abonnés (voir « Abonnements payants »)."} /></li>
-          <li><TexteRiche texte={"Elle s’essaie **sans compte** : la progression reste alors sur l’appareil. Un **compte**  (adresse e-mail et mot de passe, ou Google) sauvegarde ta progression, te permet de la retrouver sur plusieurs appareils et donne accès aux espaces partagés (classe, amis, classement, suivi parent) et au rappel envoyé même quand l’application est fermée. Les informations données doivent être exactes ; le mot de passe est personnel et ne doit pas être partagé."} /></li>
+          <li><TexteRiche texte={"L’application s’essaie **sans compte** : la progression reste alors sur l’appareil. Un **compte**  (adresse e-mail et mot de passe, ou connexion avec Google ou Apple) sauvegarde ta progression, te permet de la retrouver sur plusieurs appareils et donne accès aux espaces partagés (classe, amis, classement, suivi parent) et au rappel envoyé même quand l’application est fermée. Les informations données doivent être exactes ; le mot de passe est personnel et ne doit pas être partagé."} /></li>
           <li><TexteRiche texte={"Un abonnement payant demande un compte."} /></li>
           <li><TexteRiche texte={"Pour un élève mineur, l’utilisation suppose l’accord de l’établissement ou du représentant légal."} /></li>
           <li><TexteRiche texte={"Le service est fourni « en l’état ». Les éditeurs font de leur mieux pour qu’il reste disponible, sans pouvoir le garantir (maintenance, panne d’un hébergeur)."} /></li>
@@ -57,7 +57,7 @@ export default function Cgu() {
 
       <Section title="3. Règles de bonne conduite">
         <p><TexteRiche texte={"Dans les espaces partagés (classe, messages de classe, défis entre amis, classement, nom affiché) :"} /></p>
-        <ul className="list-disc space-y-1 pl-5">
+        <ul className="list-disc space-y-1 ps-5">
           <li><TexteRiche texte={"respecter les autres : aucun propos insultant, harcelant, discriminatoire ou illégal ;"} /></li>
           <li><TexteRiche texte={"ne pas publier d’informations personnelles sur quelqu’un d’autre, ni de photo sans son accord ;"} /></li>
           <li><TexteRiche texte={"ne pas envoyer de messages en masse (spam), ne pas tenter d’accéder aux données des autres ni de perturber le service."} /></li>
@@ -71,7 +71,7 @@ export default function Cgu() {
       </Section>
 
       <Section title="5. Fonctions qui s’appuient sur d’autres services">
-        <ul className="list-disc space-y-1 pl-5">
+        <ul className="list-disc space-y-1 ps-5">
           <li><TexteRiche texte={"**Fiche par photo** : la photo est envoyée à un service d’intelligence artificielle (Google Gemini ou Anthropic Claude) qui en tire une fiche. N’y mets pas d’informations personnelles."} /></li>
           <li><TexteRiche texte={"**Aides générées par IA dans les chapitres** (« Créer ma série », « Questions type de contrôle », tuteur de cours), « Excellence économique » et « Demande de révision » : à ta demande, le cours, tes questions, ton texte ou ta réponse sont envoyés à un service d’intelligence artificielle (Google Gemini ou Anthropic Claude). Une demande de révision peut inclure les fichiers que tu choisis. Un plafond quotidien local limite les clics répétés ; le serveur applique aussi ses limites. Les réponses de l’IA peuvent comporter des erreurs."} /></li>
           <li><TexteRiche texte={"**Traduction** de l’interface dans une autre langue que le français : les textes publics non intégrés sont envoyés au service MyMemory."} /></li>

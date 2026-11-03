@@ -134,10 +134,44 @@ export const CALC = {
       )}/100) = ${round(cm, 4)}.\nTaux global = (CM − 1) × 100 = ${round(tg, 1)} %.`,
     }
   },
+  // Marché du travail (eco-t7) : population active = actifs occupés + chômeurs.
+  taux_chomage: () => {
+    const occupes = ri(18, 30) // millions
+    const chomeurs = ri(1, 4)
+    const active = occupes + chomeurs
+    const t = round((chomeurs / active) * 100, 1)
+    return {
+      prompt: `Un pays compte ${occupes} millions d'actifs occupés et ${chomeurs} millions de chômeurs.\nCalcule le taux de chômage (arrondi à 0,1 point).`,
+      answer: t, unit: '%', tolerance: 0.2,
+      explain: `Population active = ${occupes} + ${chomeurs} = ${active} millions.\nTaux de chômage = chômeurs ÷ population active × 100 = ${chomeurs} ÷ ${active} × 100 ≈ ${t} %.`,
+    }
+  },
+  taux_activite: () => {
+    const age = ri(36, 44) // population en âge de travailler, millions
+    const occupes = ri(20, Math.floor(age * 0.7))
+    const chomeurs = ri(1, 4)
+    const active = occupes + chomeurs
+    const t = round((active / age) * 100, 1)
+    return {
+      prompt: `Population en âge de travailler : ${age} millions ; actifs occupés : ${occupes} millions ; chômeurs : ${chomeurs} millions.\nCalcule le taux d'activité (arrondi à 0,1 point).`,
+      answer: t, unit: '%', tolerance: 0.2,
+      explain: `Population active = ${occupes} + ${chomeurs} = ${active} millions.\nTaux d'activité = population active ÷ population en âge de travailler × 100 = ${active} ÷ ${age} × 100 ≈ ${t} %.`,
+    }
+  },
+  taux_emploi: () => {
+    const age = ri(36, 44)
+    const occupes = ri(20, Math.floor(age * 0.7))
+    const t = round((occupes / age) * 100, 1)
+    return {
+      prompt: `Population en âge de travailler : ${age} millions ; actifs occupés : ${occupes} millions.\nCalcule le taux d'emploi (arrondi à 0,1 point).`,
+      answer: t, unit: '%', tolerance: 0.2,
+      explain: `Taux d'emploi = actifs occupés ÷ population en âge de travailler × 100 = ${occupes} ÷ ${age} × 100 ≈ ${t} %.`,
+    }
+  },
   suite_geo: () => {
     const u0 = ri(10, 40) * 1000
     const baisse = ri(5, 15)
-    const q = 1 - baisse / 100
+    const q = round(1 - baisse / 100, 2)
     const n = ri(2, 5)
     const un = u0 * q ** n
     return {
@@ -155,19 +189,16 @@ export const CALC = {
   derivee_affine: () => {
     const a = ri(-5, 5) || 2
     const b = ri(-20, 40)
+    const c = ri(-10, 10)
     const x0 = ri(-6, 6)
     const d = 2 * a * x0 + b
+    const dx = `${2 * a}x${b === 0 ? '' : ' ' + signc(b)}`
     return {
-      prompt: `Soit f(x) = ${a}x² ${b >= 0 ? '+ ' + b : '− ' + -b}x + ${ri(
-        -10,
-        10,
-      )}.\nCalcule f'(${x0}).`,
+      prompt: `Soit f(x) = ${poly(a, b, c)}.\nCalcule f'(${x0}).`,
       answer: d,
       unit: '',
       tolerance: 0.01,
-      explain: `f'(x) = 2×${a}x ${b >= 0 ? '+ ' + b : '− ' + -b} = ${2 * a}x ${
-        b >= 0 ? '+ ' + b : '− ' + -b
-      }.\nf'(${x0}) = ${2 * a}×${x0} ${b >= 0 ? '+ ' + b : '− ' + -b} = ${d}.`,
+      explain: `f'(x) = 2×${a < 0 ? `(${a})` : a}x${b === 0 ? '' : ' ' + signc(b)} = ${dx}.\nf'(${x0}) = ${2 * a}×${x0 < 0 ? `(${x0})` : x0}${b === 0 ? '' : ' ' + signc(b)} = ${d}.`,
     }
   },
   optimisation: () => {
@@ -270,9 +301,9 @@ export const CALC = {
     const n = ri(3, 12)
     const un = u0 + n * r
     return {
-      prompt: `Suite arithmétique : u₀ = ${u0}, raison r = ${r}.\nCalcule le terme u_${n}.`,
+      prompt: `Suite arithmétique : u₀ = ${u0}, raison r = ${r < 0 ? '−' + -r : r}.\nCalcule le terme u_${n}.`,
       answer: un, unit: '', tolerance: 0.01,
-      explain: `u_n = u₀ + n × r = ${u0} + ${n} × ${r} = ${un}.`,
+      explain: `u_n = u₀ + n × r = ${u0} + ${n} × ${r < 0 ? `(−${-r})` : r} = ${un < 0 ? '−' + -un : un}.`,
     }
   },
   suite_geo_terme: () => {
@@ -309,7 +340,7 @@ export const CALC = {
     return {
       prompt: `Soit f(x) = ${poly(a, b, c)}.\nCalcule le discriminant Δ = b² − 4ac.`,
       answer: d, unit: '', tolerance: 0.01,
-      explain: `Δ = b² − 4ac = (${b})² − 4×${a}×(${c}) = ${b * b} − ${4 * a * c} = ${d}.`,
+      explain: `Δ = b² − 4ac = (${b})² − 4×${a}×(${c}) = ${b * b} ${4 * a * c >= 0 ? '− ' + 4 * a * c : '+ ' + -4 * a * c} = ${d}.`,
     }
   },
   sommet_abscisse: () => {
@@ -524,4 +555,16 @@ export function makeCalcMix(ids, count = 6) {
   }
   if (!gens.length) return []
   return Array.from({ length: count }, (_, k) => CALC[gens[k % gens.length]]())
+}
+
+// Mise en forme commune des générateurs : virgule décimale à la française dans
+// l'énoncé comme dans la correction, et jamais de « -0 » comme réponse.
+const virgule = (t) => (typeof t === 'string' ? t.replace(/(\d)\.(\d)/g, '$1,$2') : t)
+for (const id of Object.keys(CALC)) {
+  const gen = CALC[id]
+  CALC[id] = () => {
+    const q = gen()
+    if (Object.is(q.answer, -0)) q.answer = 0
+    return { ...q, prompt: virgule(q.prompt), explain: virgule(q.explain) }
+  }
 }

@@ -3,7 +3,7 @@ import { useLang, usePublicText } from '../i18n.js'
 import { useMemo, useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useStore, levelFromXp } from '../store.jsx'
-import { SHOP_ITEMS, SHOP_REWARDS, rewardProgress } from '../data/shop.js'
+import { SHOP_ITEMS, SHOP_REWARDS, rewardProgress, purchaseItem } from '../data/shop.js'
 
 const CATEGORIES = [{ id: 'all', name: 'Tout explorer', icon: '✦' }, { id: 'theme', name: 'Ambiances', icon: '🎨' }, { id: 'avatar', name: 'Avatars', icon: '🦊' }, { id: 'banner', name: 'Bannières', icon: '🌅' }, { id: 'title', name: 'Titres', icon: '🏷️' }, { id: 'boost', name: 'Objets utiles', icon: '🧊' }]
 const accent = { color: 'var(--c-accent-texte)' }
@@ -33,7 +33,7 @@ function ItemCard({ item, state, buy, equip, notify }) {
         <p className="mt-2 flex-1 text-xs leading-relaxed text-slate-600 dark:text-slate-400">{tr(item.desc || 'Une palette de couleurs pour réinventer ton espace.')}</p>
         {item.type === 'palette' && <div className="mt-3 flex gap-1.5" role="img" aria-label="Couleurs de l’ambiance">{Object.values(colors).map((c, i) => <span key={i} className="h-3 flex-1 rounded-full border border-black/10" style={{ background: c }} />)}</div>}
         <div className="mb-3 mt-4 flex items-center justify-between gap-1 text-xs"><strong>{item.rewardOnly ? 'Cadeau de niveau' : `🪙 ${number(item.price)}`}</strong>{item.type === 'consumable' && <span className="text-slate-500 dark:text-slate-400">{tr((item.quantity || 1) > 1 ? '{count} gels' : '{count} gel', { count: number(item.quantity || 1) })}</span>}</div>
-        {owned ? <button disabled={active} onClick={() => { equip(item); notify('{name} équipé.', item.name) }} className="btn-ghost w-full !min-h-0 !px-2 !py-2 text-xs ring-1 ring-slate-200 dark:ring-slate-700">{active ? '✓ Équipé' : 'Équiper'}</button> : <button disabled={locked || !affordable || item.rewardOnly} onClick={() => { buy(item); notify('{name} ajouté à tes objets.', item.name) }} className="btn-primary w-full !min-h-0 !px-2 !py-2 text-xs disabled:opacity-50">{item.rewardOnly ? 'Dans Récompenses' : locked ? `${number(item.minXp)} XP requis` : !affordable ? 'Pièces insuffisantes' : 'Obtenir'}</button>}
+        {owned ? <button disabled={active} onClick={() => { equip(item); notify('{name} équipé.', item.name) }} className="btn-ghost w-full !min-h-0 !px-2 !py-2 text-xs ring-1 ring-slate-200 dark:ring-slate-700">{active ? '✓ Équipé' : 'Équiper'}</button> : <button disabled={locked || !affordable || item.rewardOnly} onClick={() => { const accepte = purchaseItem(state, item.id) !== state; buy(item); if (accepte) notify('{name} ajouté à tes objets.', item.name) }} className="btn-primary w-full !min-h-0 !px-2 !py-2 text-xs disabled:opacity-50">{item.rewardOnly ? 'Dans Récompenses' : locked ? `${number(item.minXp)} XP requis` : !affordable ? 'Pièces insuffisantes' : 'Obtenir'}</button>}
       </div>
     </article>
   )

@@ -133,7 +133,7 @@ self.addEventListener('fetch', (event) => {
       event.respondWith(
         (async () => {
           const cache = await caches.open(FONT_CACHE)
-          const cached = await cache.match(req)
+          const cached = await cache.match(req, { ignoreVary: true })
           if (cached) return cached
           try {
             const fresh = await fetch(req)
@@ -175,11 +175,11 @@ self.addEventListener('fetch', (event) => {
           const cache = await caches.open(CACHE)
           const scopePath = new URL('./', self.location.href).pathname
           const publicPage = ['cours/','a-propos/','partager/'].some(p => url.pathname.startsWith(scopePath + p))
-          if(publicPage)return (await cache.match(req)) || new Response('<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hors ligne | RévizSTMG</title><main><h1>Cette fiche n’est pas encore disponible hors ligne</h1><p>Reconnecte-toi pour la lire, ou retrouve tes cours dans l’application.</p><a href="'+scopePath+'">Ouvrir RévizSTMG</a></main></html>',{status:503,headers:{'Content-Type':'text/html; charset=utf-8'}})
+          if(publicPage)return (await cache.match(req, { ignoreVary: true })) || new Response('<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hors ligne | RévizSTMG</title><main><h1>Cette fiche n’est pas encore disponible hors ligne</h1><p>Reconnecte-toi pour la lire, ou retrouve tes cours dans l’application.</p><a href="'+scopePath+'">Ouvrir RévizSTMG</a></main></html>',{status:503,headers:{'Content-Type':'text/html; charset=utf-8'}})
           return (
             (await cache.match('./index.html')) ||
             (await cache.match('./')) ||
-            (await cache.match(req)) ||
+            (await cache.match(req, { ignoreVary: true })) ||
             Response.error()
           )
         }
@@ -192,7 +192,8 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     (async () => {
       const cache = await caches.open(CACHE)
-      const cached = await cache.match(req)
+      // ignoreVary : un hébergeur qui envoie « Vary: Origin » ne doit pas faire manquer le cache hors ligne.
+      const cached = await cache.match(req, { ignoreVary: true })
       if (cached) return cached
       try {
         const fresh = await fetch(req)

@@ -62,9 +62,11 @@ export function niveauAcces() {
   const id = compteCourant()
   const s = lireStock()
   if (!id) return 'gratuit'
-  // Hors ligne, un renouvellement a pu avoir lieu sans qu'on le sache : on tolère trois jours de plus.
-  const maintenant = typeof navigator !== 'undefined' && navigator.onLine === false ? Date.now() - 3 * 86400000 : Date.now()
-  return niveauCompte(s && s.uid === id ? s.ligne : null, getSession()?.user?.created_at, maintenant)
+  // Hors ligne, un renouvellement a pu avoir lieu sans qu'on le sache : on tolère trois jours de plus pour
+  // l'abonnement, jamais pour la fin de la période de grâce (sa date est fixe).
+  const tolere = typeof navigator !== 'undefined' && navigator.onLine === false ? Date.now() - 3 * 86400000 : Date.now()
+  const niveau = niveauDe(s && s.uid === id ? s.ligne : null, tolere)
+  return niveau !== 'ultimate' && enGrace(getSession()?.user?.created_at) ? 'ultimate' : niveau
 }
 
 // Vrai quand l'abonnement de ce compte a déjà été lu sur le serveur (sinon « gratuit » n'est qu'une supposition).

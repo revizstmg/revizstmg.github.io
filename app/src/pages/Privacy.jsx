@@ -27,8 +27,9 @@ export default function Privacy() {
       </Section>
 
       <Section title="2. Données traitées">
-        <ul className="list-disc space-y-1 pl-5">
+        <ul className="list-disc space-y-1 ps-5">
           <li><TexteRiche texte={"**Identité & compte** : prénom, nom, adresse e-mail, mot de passe (stocké **haché**, jamais en clair)."} /></li>
+          <li><TexteRiche texte={"**Connexion avec Google ou Apple** (facultative) : si tu choisis « Continuer avec Google » ou « Continuer avec Apple », nous recevons de ce fournisseur ton adresse e-mail et ton nom ; nous n’enregistrons pas de mot de passe pour ce compte."} /></li>
           <li><TexteRiche texte={"**Photo de profil** : facultative, réduite localement avant envoi."} /></li>
           <li><TexteRiche texte={"**Scolarité** : niveau, spécialité, éventuel code de classe."} /></li>
           <li><TexteRiche texte={"**Progression pédagogique** : XP, scores, badges, favoris, séries, temps de révision, historique."} /></li>
@@ -45,7 +46,7 @@ export default function Privacy() {
       </Section>
 
       <Section title="3. Finalités &amp; bases légales">
-        <ul className="list-disc space-y-1 pl-5">
+        <ul className="list-disc space-y-1 ps-5">
           <li><TexteRiche texte={"**Fournir le service** (compte, sauvegarde et synchronisation de la progression, espace classe) — base légale : **exécution du contrat** / mesures précontractuelles."} /></li>
           <li><TexteRiche texte={"**Sécurité et prévention des abus** — base légale : **intérêt légitime**."} /></li>
           <li><TexteRiche texte={"**Éléments facultatifs** (photo, rappels, notifications) — base légale : **ton consentement**, retirable à tout moment."} /></li>
@@ -61,9 +62,10 @@ export default function Privacy() {
       </Section>
 
       <Section title="5. Hébergement, localisation &amp; sous-traitants">
-        <ul className="list-disc space-y-1 pl-5">
+        <ul className="list-disc space-y-1 ps-5">
           <li><TexteRiche texte={"**Supabase** (serveurs dans l'**Union européenne**, région de Paris) : comptes, progression, espaces partagés, et envoi des e-mails du service (confirmation d'inscription, nouveau mot de passe)."} /></li>
           <li><TexteRiche texte={"**Stripe** (paiement, reçus, portail « Gérer mon abonnement »), seulement si tu t’abonnes : il reçoit ton adresse e-mail, ton identifiant de compte et les informations de paiement, avec d’éventuels transferts hors de l’Union européenne encadrés par ses engagements contractuels."} /></li>
+          <li><TexteRiche texte={"**Google** ou **Apple**, seulement si tu te connectes avec « Continuer avec Google » ou « Continuer avec Apple » : le fournisseur choisi vérifie ton identité et nous transmet ton adresse e-mail et ton nom ; il sait que tu te connectes à RévizSTMG. Ses propres règles de confidentialité s’appliquent."} /></li>
           <li><TexteRiche texte={"**GitHub** (États-Unis) héberge le site : comme tout hébergeur, il reçoit ton adresse IP et garde des journaux techniques."} /></li>
           <li><TexteRiche texte={"**Google (Gemini)** ou **Anthropic (Claude)**, pour la « fiche par photo », la création d’examens blancs et les aides générées par IA dans les chapitres (séries d’exercices, questions de contrôle, tuteur de cours) : la photo, la demande ou les extraits de cours sont transmis pour analyse. La correction de copie utilise Google (Gemini), après ton accord pour chaque envoi de PDF ou de photos. Avec l'offre gratuite de Gemini, Google peut utiliser les contenus reçus pour améliorer ses services : masque ton nom et tes coordonnées avant tout envoi de photo ou de copie."} /></li>
           <li><TexteRiche texte={"**MyMemory** (Translated, Italie) traduit les textes publics qui ne sont pas déjà disponibles dans la langue choisie. Les modèles d’interface sont envoyés sans les noms, messages ni valeurs des champs : les données variables sont ajoutées sur ton appareil. Si tu utilises le dictionnaire, le texte que tu demandes volontairement de traduire est envoyé au service ; n’y saisis pas d’informations personnelles. Comme pour toute requête réseau, le prestataire reçoit techniquement l’adresse IP de la connexion. Les résultats sont mémorisés sur ton appareil."} /></li>
@@ -87,21 +89,18 @@ export default function Privacy() {
       </Section>
 
       <Section title="8. Sécurité">
-        <p>Les échanges sont <b>chiffrés en transit (HTTPS)</b>. Ton compte et ta progression sauvegardée sont
-        protégés par des règles de sécurité au niveau des lignes (<i>Row Level Security</i>) : <b>toi seul</b> y as
-        accès. Les mots de passe sont <b>hachés</b>. Pour les espaces partagés, voir la partie 6.</p>
+        <p><TexteRiche texte={"Les échanges sont **chiffrés en transit (HTTPS)**. Ton compte et ta progression sauvegardée sont protégés par des règles de sécurité au niveau des lignes (Row Level Security) : tu es **le seul** à y avoir accès. Les mots de passe sont **hachés**. Pour les espaces partagés, voir la partie 6."} /></p>
       </Section>
 
       <Section title="9. Tes droits">
         <p><TexteRiche texte={"Conformément au RGPD, tu disposes des droits d'**accès**, de **rectification**, d'**effacement**, de **limitation**, de **portabilité** et d'**opposition**, ainsi que du droit de **retirer ton consentement** à tout moment. En pratique :"} /></p>
-        <ul className="list-disc space-y-1 pl-5">
+        <ul className="list-disc space-y-1 ps-5">
           <li><TexteRiche texte={"**Accéder / rectifier** tes informations depuis « Mon espace » (profil et paramètres)."} /></li>
           <li><TexteRiche texte={"**Supprimer ton compte et tes données** depuis [[Mon espace|/moi]] (bouton « Supprimer mon compte »)."} /></li>
           <li><TexteRiche texte={"**Télécharger tes données** depuis [[Mon espace|/moi]] (bouton « Télécharger mes données »)."} /></li>
           <li><TexteRiche texte={"**Exercer un autre droit** : écris à [[revizstmg@gmail.com|mailto:revizstmg@gmail.com]]."} /></li>
         </ul>
-        <p>Nous répondons dans un délai maximal d'<b>un mois</b>. Tu peux aussi introduire une réclamation auprès
-        de la <b>CNIL</b> (<a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">www.cnil.fr</a>).</p>
+        <p><TexteRiche texte={"Nous répondons dans un délai maximal d'**un mois**. Tu peux aussi introduire une réclamation auprès de la **CNIL** :"} />{' '}<a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="font-semibold text-[#84671b] underline dark:text-[#d9bd77]">www.cnil.fr</a></p>
       </Section>
 
       <Section title="10. Élèves mineurs">

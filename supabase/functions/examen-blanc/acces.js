@@ -21,7 +21,9 @@ export const LIMITE_IA_PAR_JOUR = 60
 export const SUITES_PREMIUM = { tuteur: 20, controle: 3, examen: 6 }
 const SUITES_PAR_DEFAUT = 5
 // Plafond journalier par fonction (appels coûteux), en plus des 60 par jour toutes fonctions confondues.
-export const JOUR_PAR_FONCTION = { examen: 20, excellence: 10, etude: 15, photo: 15 }
+export const JOUR_PAR_FONCTION = { examen: 20, excellence: 10, etude: 15, photo: 15, serie: 20, controle: 20 }
+// Plans d'examen (étape préparatoire sans génération) : plafond mensuel à part, pour ne pas épuiser les corrections.
+export const PLANS_PREMIUM = 12
 const STATUTS_ACTIFS = ['active', 'trialing', 'past_due']
 
 // Même règle que estActif (revizstmg-paiement/logique.js) : statut actif et période non échue.
@@ -66,7 +68,7 @@ const refus = (status, error) => ({ ok: false, status, error })
 // Réserve l'accès avant tout appel au fournisseur d'IA. Renvoie { ok: true, rendre } (à appeler
 // si l'appel échoue : l'utilisation n'est pas perdue) ou { ok: false, status, error }.
 // Sans clé de service ou si la base ne répond pas, l'accès est refusé : jamais d'IA gratuite par défaut.
-export async function reserverAccesIA({ env, fetcher = fetch, userId, creeLe, id, suite, preuve = false, maintenant = Date.now() }) {
+export async function reserverAccesIA({ env, fetcher = fetch, userId, creeLe, id, suite, preuve = false, plan = false, maintenant = Date.now() }) {
   const base = env('SUPABASE_URL'), cle = env('SUPABASE_SERVICE_ROLE_KEY')
   if (!base || !cle) return refus(503, 'not_configured')
   const entetes = { apikey: cle, Authorization: `Bearer ${cle}`, 'Content-Type': 'application/json' }
@@ -92,19 +94,29 @@ export async function reserverAccesIA({ env, fetcher = fetch, userId, creeLe, id
     const iso = new Date(maintenant).toISOString()
     const mois = iso.slice(0, 7), jour = iso.slice(0, 10)
     if (quota != null) {
-      const fonction = suite ? `${id}:suite` : id
-      if (suite && preuve) {
-        const l = await appeler(`revizstmg_ia_usage?user_id=eq.${encodeURIComponent(userId)}&fonction=eq.${encodeURIComponent(id)}&periode=eq.${mois}&select=n`)
-        if (!(Array.isArray(l) && l[0]?.n >= 1)) return refus(403, 'quota_mensuel')
+      const fonction = plan ? `${id}:plan` : suite ? `${id}:suite` : id
+      if (suite && preuve && !plan) {
+        // L'étape initiale peut dater du mois précédent (sujet créé le 31, corrigé le 1er).
+        const precedent = new Date(Date.UTC(Number(mois.slice(0, 4)), Number(mois.slice(5, 7)) - 2, 1)).toISOString().slice(0, 7)
+        const l = await appeler(`revizstmg_ia_usage?user_id=eq.${encodeURIComponent(userId)}&fonction=eq.${encodeURIComponent(id)}&periode=in.(${mois},${precedent})&select=n`)
+        if (!(Array.isArray(l) && l.some((x) => x?.n >= 1))) return refus(403, 'quota_mensuel')
       }
-      const max = suite ? (SUITES_PREMIUM[id] ?? SUITES_PAR_DEFAUT) : quota
+      const max = plan ? PLANS_PREMIUM : suite ? (SUITES_PREMIUM[id] ?? SUITES_PAR_DEFAUT) : quota
       if (!(await reserver(fonction, mois, max))) return refus(403, 'quota_mensuel')
       prises.push([fonction, mois])
     }
     // Le plafond de la fonction d'abord : un refus ici ne brûle pas les 60 demandes du jour des autres fonctions.
     if (JOUR_PAR_FONCTION[id] && !(await reserver(`${id}:jour`, jour, JOUR_PAR_FONCTION[id]))) { await rendre(); return refus(429, 'rate_limit') }
     if (!(await reserver('_jour', jour, LIMITE_IA_PAR_JOUR))) { await rendre(); return refus(429, 'rate_limit') }
-    return { ok: true, niveau, rendre }
+    // Réponse du fournisseur inutilisable (hors sujet, JSON invalide) : l'utilisation du mois n'est rendue qu'une
+    // fois par jour et par fonction, pour qu'une consigne glissée dans un cours ne contourne pas le quota.
+    const rendreSiPermis = async () => {
+      if (!prises.some(([, p]) => p.length === 7)) return
+      let permis = false
+      try { permis = await reserver(`${id}:rendu`, jour, 1) } catch { permis = false }
+      if (permis) await rendre()
+    }
+    return { ok: true, niveau, rendre, rendreSiPermis }
   } catch {
     await rendre()
     return refus(502, 'server_error')

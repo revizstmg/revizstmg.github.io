@@ -74,7 +74,7 @@ function AbonnementCompte() {
 
   if (!connecte) return <section className="card p-5" aria-labelledby="abo-titre"><h2 id="abo-titre" className="font-display text-xl font-semibold">{tr('S’abonner')}</h2><p className="mt-2 text-sm">{tr('Connecte-toi avec ton compte pour choisir une offre.')}</p><p className="mt-3"><button type="button" className="btn-primary" onClick={creerMonCompte}>{tr('Créer mon compte')}</button></p></section>
   if (!etat) return <section className="card p-5" aria-busy="true"><p className="text-sm">{tr('Chargement des offres…')}</p></section>
-  if (etat.indisponible) return <section className="card p-5"><h2 className="font-display text-xl font-semibold">{tr('S’abonner')}</h2><p className="mt-2 text-sm">{tr(etat.code === 'network' ? messageErreur('network') : 'Les paiements ne sont pas encore ouverts. Rien ne sera débité tant que cette page ne propose pas de choisir une offre.')}</p><button type="button" className="btn-primary mt-3" onClick={() => { setEtat(null); setRetry(n => n + 1) }}>{tr('Réessayer')}</button></section>
+  if (etat.indisponible) return <section className="card p-5"><h2 className="font-display text-xl font-semibold">{tr('S’abonner')}</h2><p className="mt-2 text-sm">{tr(etat.code !== 'not_configured' ? messageErreur('network') : 'Les paiements ne sont pas encore ouverts. Rien ne sera débité tant que cette page ne propose pas de choisir une offre.')}</p><button type="button" className="btn-primary mt-3" onClick={() => { setEtat(null); setRetry(n => n + 1) }}>{tr('Réessayer')}</button></section>
 
   const ab = etat.abonnement
   const actif = estActif(ab)

@@ -50,8 +50,9 @@ export async function analyzeWithVision(files) {
       method: 'POST',
       headers: { apikey: SUPA_ANON, Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({ images }),
+      signal: AbortSignal.timeout(90000),
     })
-  } catch { const e = new Error('network'); e.code = 'network'; throw e }
+  } catch (err) { const e = new Error(err?.name === 'TimeoutError' ? 'timeout' : 'network'); e.code = e.message; throw e }
 
   const data = await res.json().catch(() => ({}))
   if (!res.ok || !data.fiche) {

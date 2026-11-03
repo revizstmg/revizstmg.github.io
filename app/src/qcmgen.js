@@ -17,8 +17,14 @@ const fr = (n, d = 2) => arrondi(n, d).toLocaleString('fr-FR', { maximumFraction
 const pct = (t, d = 2) => `${t > 0 ? '+' : t < 0 ? '−' : ''}${fr(Math.abs(t), d)}\u00a0%`
 
 // Assemble la question : bonne réponse + trois erreurs distinctes, mélangées.
+// Une baisse de 100 % ou plus (« −120 % », « Baissé de 150 % ») est impossible pour une valeur positive :
+// jamais proposée comme mauvaise réponse crédible.
+const baisseImpossible = (f) => {
+  const m = String(f).match(/^(?:−|Baissé de )\s?(\d+)(?:,\d+)?\u00a0?%/)
+  return !!m && Number(m[1]) >= 100
+}
 function question(r, q, bonne, fausses, explain) {
-  const autres = [...new Set(fausses.filter((f) => f && f !== bonne))].slice(0, 3)
+  const autres = [...new Set(fausses.filter((f) => f && f !== bonne && !baisseImpossible(f)))].slice(0, 3)
   if (autres.length < 3) return null
   const choices = [bonne, ...autres]
   for (let i = choices.length - 1; i > 0; i--) {
@@ -101,7 +107,7 @@ export const QCM_GEN = {
       r,
       `Un indice base 100 vaut ${i}. Cela signifie que la valeur a…`,
       sens(e),
-      [`Été multipliée par ${i}`, sens(-e), `Augmenté de ${i}\u00a0%`, `Baissé de ${i}\u00a0%`],
+      [`Été multipliée par ${i}`, sens(-e), `Augmenté de ${i}\u00a0%`, `Baissé de ${i}\u00a0%`, `Été divisée par ${i}`],
       `Indice ${i} : la valeur vaut ${fr(i / 100)} fois la valeur de référence, soit ${e > 0 ? 'une hausse' : 'une baisse'} de ${Math.abs(e)}\u00a0%.`,
     )
   },

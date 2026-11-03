@@ -68,6 +68,13 @@ Décisions du propriétaire : garder le meilleur niveau pendant la grâce, rése
 - **Repli « course » du contrôle** : le site ne compte plus l'utilisation du mois (le serveur la rend).
 - Pas de nouveau code d'erreur pour le plafond journalier : le message « patiente » du site reste, il se lève le lendemain.
 
+### Après les dix vérificateurs (03/11/2026) : corrections
+- **Quotas IA** : une suite accepte la preuve du mois courant ou du précédent ; les plans d'examen ont un plafond mensuel à part (12) ; plafonds journaliers ajoutés pour la série et le contrôle (20) ; une réponse inutilisable (hors sujet, JSON invalide) ne rend l'utilisation du mois qu'une fois par jour et par fonction ; le repli sans IA d'un contrôle compte comme l'étape initiale, la correction qui suit passe.
+- **Webhook Stripe** : si la lecture du premier abonnement échoue (hors « introuvable »), l'erreur est relancée (Stripe rejoue) au lieu d'écraser ; le second abonnement résilié est remboursé au mieux (journal `abonnement_double_resilie`, champ `remboursement`) ; `resilier` supprime aussi le client Stripe du compte.
+- **Migration** `20261102120000_revizstmg_securite_4_classe_mur_duels.sql` (mur de classe, anonymat via `revizstmg_mur`, membres, exclusion et classement, suppression d'un compte professeur, duels et demandes d'ami) : à appliquer APRÈS la mise en ligne du nouveau site (l'ancien client ne lit plus `class_wall` directement) ; testée sur Postgres local par `supabase/tests/lancer.sh`.
+- **Site** : bandeau de session expirée, copie de secours effacée à la déconnexion, correction des traductions et des textes d'offres, exercices et contenus (voir l'historique git).
+- **Reste à décider** (propriétaire) : mentions légales (« non commercial », rétractation, remboursement à la suppression, seuil d'âge), traductions à faire relire par des natifs, vouvoiement de ~350 chaînes de l'interface allemande.
+
 ## Passage en réel (à ne faire qu'après les points légaux)
 - Entreprise, mentions légales et conditions de vente validées par un juriste (droit de rétractation de 14 jours, contenu numérique
   fourni immédiatement, TVA, remboursements, abonnement des mineurs). Les textes ajoutés aux CGU sont **provisoires**.

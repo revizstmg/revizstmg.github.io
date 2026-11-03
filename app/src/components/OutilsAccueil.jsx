@@ -5,6 +5,7 @@ import { useStore } from '../store.jsx'
 import { useT, usePublicText } from '../i18n.js'
 import { subjectsForTrack } from '../data/tracks.js'
 import { todayKey, daysUntil, defaultBacDate } from '../data/srs.js'
+import { premiereEpreuve } from '../data/epreuves.js'
 
 // « Réviser & réussir » sur l'accueil : un seul outil mis en avant, celui qui sert
 // le plus maintenant, et les autres rangés dans « ta trousse », fermée par
@@ -19,7 +20,8 @@ const BAC_PROCHE = 30 // jours
 // 4. sinon → le programme jusqu'au bac et ses objectifs du jour.
 export function outilConseille(state, today = todayKey()) {
   const level = state?.track?.level
-  const bac = state?.bacDate || (level === 'terminale-stmg' ? defaultBacDate(new Date(`${today}T12:00:00`)) : null)
+  // Même date que le reste du site (Programme, Coach IA) : la première épreuve du calendrier officiel.
+  const bac = state?.bacDate || premiereEpreuve(level, today) || (level === 'terminale-stmg' ? defaultBacDate(new Date(`${today}T12:00:00`)) : null)
   const jours = daysUntil(bac, today)
   if (jours != null && jours >= 0 && jours <= BAC_PROCHE) return { id: 'bac-blanc', jours }
   const themes = new Set(subjectsForTrack(state?.track).flatMap((s) => (s.chapters || []).map((c) => c.id)))
