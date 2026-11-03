@@ -38,13 +38,19 @@ insert into class_member (class_code, device_id, name, role) values ('stmg-abcde
 insert into class_member (class_code, device_id, name, role, xp) values ('stmg-abcde', auth.uid()::text, 'A', 'eleve', 50)
   on conflict (class_code, device_id) do update set xp = excluded.xp;
 select compte($$select * from class_member where class_code = 'stmg-abcde'$$) = 2 as "A voit les 2 membres";
-select compte($$select * from class_wall where class_code = 'stmg-abcde'$$) = 1 as "A voit le mur";
+select compte($$select id from class_wall where class_code = 'stmg-abcde'$$) = 1 as "A voit le mur";
 select refus($$insert into class_wall (class_code, device_id, name, kind, text) values ('stmg-abcde', auth.uid()::text, 'A', 'announce', 'Fausse annonce')$$, 'A publie une annonce');
 insert into class_wall (class_code, device_id, name, kind, text) values ('stmg-abcde', auth.uid()::text, 'A', 'question', 'Comment calcule-t-on la TVA ?');
 select refus($$insert into class_wall (class_code, device_id, name, kind, text) values ('stmg-abcde', auth.uid()::text, 'A', 'question', 'Encore')$$, 'A poste deux fois en 15 s');
 update class_wall set reactions = '{"👏":1}' where kind = 'announce';
 select refus($$update class_wall set text = 'piraté' where kind = 'announce'$$, 'A modifie l''annonce du prof');
 select refus($$update class_wall set answer = 'réponse' where kind = 'question'$$, 'A répond à la place du prof');
+select refus($$update class_wall set kind = 'announce', name = 'M. Prof' where kind = 'question'$$, 'A (auteur) transforme sa question en fausse annonce du prof');
+select refus($$update class_wall set name = 'M. Prof' where kind = 'question'$$, 'A (auteur) change le nom affiché');
+select refus($$update class_wall set is_anon = true where kind = 'question'$$, 'A (auteur) change l''anonymat');
+select lignes($$update class_wall set text = 'Comment calcule-t-on la TVA collectée ?' where kind = 'question'$$) = 1 as "A modifie encore son propre texte";
+select refus($$update class_member set class_code = 'stmg-fghij' where device_id = auth.uid()::text$$, 'A change de classe par PATCH class_code');
+select refus($$update class_member set device_id = 'cccccccc-0000-4000-8000-000000000003' where device_id = auth.uid()::text$$, 'A change son device_id de membre');
 select lignes($$update class_meta set announcement = 'piraté'$$) = 0 as "A ne modifie pas les réglages";
 select refus($$insert into class_quiz (class_code, author_id, title, status) values ('stmg-abcde', auth.uid(), 'QCM A', 'approved')$$, 'A publie un QCM approuvé');
 insert into class_quiz (class_code, author_id, title, status) values ('stmg-abcde', auth.uid(), 'Proposition A', 'proposed');
@@ -56,7 +62,7 @@ insert into leaderboard (class_code, device_id, week, name, courses) values ('au
 -- Élève B, hors de la classe
 reset role; set role authenticated; set request.jwt.claims to :B;
 select compte($$select * from class_member where class_code = 'stmg-abcde'$$) = 0 as "B ne voit pas les membres";
-select compte($$select * from class_wall$$) = 0 as "B ne voit pas le mur";
+select compte($$select id from class_wall$$) = 0 as "B ne voit pas le mur";
 select compte($$select * from class_quiz_result$$) = 0 as "B ne voit pas les résultats";
 select compte($$select * from leaderboard$$) = 0 as "B ne voit pas le classement des autres";
 select string_agg(code, ',') as "ligue vue par B (codes masqués)" from revizstmg_ligue('2026-W42');
@@ -69,7 +75,7 @@ update class_duel set opponent_device = auth.uid()::text, opponent_name = 'B', o
 select compte($$select * from class_duel where status = 'done'$$) = 1 as "B a relevé le duel";
 select refus($$update class_duel set challenger_score = 0$$, 'B change le score de A');
 select lignes($$delete from class_wall where kind = 'question'$$) = 0 as "B n'efface pas le message de A";
-select compte($$select * from class_wall where kind = 'question'$$) = 1 as "le message de A est toujours là";
+select compte($$select id from class_wall where kind = 'question'$$) = 1 as "le message de A est toujours là";
 
 -- Amis
 reset role; set role authenticated; set request.jwt.claims to :A;
@@ -110,6 +116,41 @@ select refus($$select * from revizstmg_trouver_ami('AAAAAA')$$, 'anon cherche un
 insert into revizstmg_signalements (page, message) values ('/test', 'Une erreur dans la correction');
 select refus($$select * from revizstmg_signalements$$, 'anon relit les signalements');
 
+-- Anonymat du mur, classement et durcissements (B est encore membre)
+reset role;
+set session_replication_role = replica;
+insert into class_wall (class_code, device_id, name, kind, text, is_anon) values ('stmg-abcde', 'aaaaaaaa-0000-4000-8000-000000000001', 'A', 'question', 'Question anonyme de A', true);
+set session_replication_role = default;
+set role authenticated; set request.jwt.claims to :B;
+select (select count(*) from revizstmg_mur('stmg-abcde')) = 3 as "B lit le mur par la fonction";
+select (select device_id from revizstmg_mur('stmg-abcde') where text = 'Question anonyme de A') is null as "B ne voit pas l'auteur du message anonyme";
+select (select device_id from revizstmg_mur('stmg-abcde') where kind = 'announce') is not null as "B voit l'auteur d'un message non anonyme";
+select refus($$select device_id from class_wall$$, 'B lit device_id directement sur le mur');
+select compte($$select id, text, is_anon from class_wall$$) = 3 as "les autres colonnes du mur restent lisibles";
+reset role; set role authenticated; set request.jwt.claims to :A;
+select (select device_id from revizstmg_mur('stmg-abcde') where text = 'Question anonyme de A') = 'aaaaaaaa-0000-4000-8000-000000000001' as "A retrouve son message anonyme";
+select lignes($$delete from class_wall where text = 'Question anonyme de A'$$) = 1 as "A supprime son message anonyme";
+reset role; set role authenticated; set request.jwt.claims to :P;
+select (select count(*) from revizstmg_mur('stmg-abcde')) = 2 as "le prof lit le mur";
+reset role; set role authenticated; set request.jwt.claims to :A;
+select compte($$select * from revizstmg_mur('stmg-fghij')$$) = 0 as "A ne lit pas le mur d'une autre classe";
+reset role; set role anon; reset request.jwt.claims;
+select refus($$select * from revizstmg_mur('stmg-abcde')$$, 'anon lit le mur');
+reset role; set role authenticated; set request.jwt.claims to :B;
+-- Duels et demandes forgés
+select refus($$insert into friend_duel (a_device, a_name, b_device, b_name, status) values (auth.uid()::text, 'B', 'aaaaaaaa-0000-4000-8000-000000000001', 'A', 'done')$$, 'B crée un duel ami déjà terminé');
+select refus($$insert into friend_duel (a_device, a_name, b_device, b_name, status, b_score, b_done) values (auth.uid()::text, 'B', 'aaaaaaaa-0000-4000-8000-000000000001', 'A', 'pending', 5, true)$$, 'B crée un duel ami avec le score de A');
+select refus($$insert into friend_duel (a_device, a_name, b_device, b_name, status) values (auth.uid()::text, 'B', 'cccccccc-0000-4000-8000-000000000003', 'P', 'pending')$$, 'B défie quelqu''un qui n''est pas son ami');
+select refus($$insert into class_duel (class_code, challenger_device, challenger_name, status) values ('stmg-abcde', auth.uid()::text, 'B', 'done')$$, 'B crée un duel de classe déjà terminé');
+select refus($$insert into class_duel (class_code, challenger_device, challenger_name, status, opponent_device) values ('stmg-abcde', auth.uid()::text, 'B', 'open', 'aaaaaaaa-0000-4000-8000-000000000001')$$, 'B impose un adversaire à un duel de classe');
+insert into class_duel (class_code, challenger_device, challenger_name, status) values ('stmg-abcde', auth.uid()::text, 'B', 'open');
+insert into friend_request (from_device, from_name, from_code, to_device, to_name, status) values (auth.uid()::text, 'M. Inspecteur', 'XXXXXX', 'cccccccc-0000-4000-8000-000000000003', 'P', 'pending');
+select from_name = 'B' and from_code = 'BBBBBB' as "le nom de l'émetteur d'une demande vient du serveur" from friend_request where to_device = 'cccccccc-0000-4000-8000-000000000003';
+delete from friend_request where to_device = 'cccccccc-0000-4000-8000-000000000003';
+-- Classement
+insert into leaderboard (class_code, device_id, week, name, courses) values ('stmg-abcde', auth.uid()::text, '2026-W42', 'B', 3);
+select compte($$select * from leaderboard where class_code = 'stmg-abcde'$$) = 2 as "B (membre) lit le classement de la classe";
+
 -- Le prof exclut B
 reset role; set role authenticated; set request.jwt.claims to :P;
 insert into class_ban (class_code, device_id) values ('stmg-abcde', 'bbbbbbbb-0000-4000-8000-000000000002') on conflict do nothing;
@@ -117,6 +158,10 @@ delete from class_member where class_code = 'stmg-abcde' and device_id = 'bbbbbb
 select string_agg(label || '=' || total, ', ') as "ligue des classes du prof" from revizstmg_ligue_classe('stmg-abcde', '2026-W42');
 reset role; set role authenticated; set request.jwt.claims to :B;
 select refus($$insert into class_member (class_code, device_id, name) values ('stmg-abcde', auth.uid()::text, 'B')$$, 'B exclu revient');
+select compte($$select * from leaderboard where class_code = 'stmg-abcde'$$) = 0 as "B exclu ne lit plus le classement de la classe";
+select compte($$select * from leaderboard where device_id = auth.uid()::text$$) = 0 as "B exclu : sa ligne de classement a disparu";
+reset role;
+select (select count(*) from leaderboard where class_code = 'stmg-abcde' and device_id like 'bbbbbbbb%') = 0 as "exclusion : ligne de classement retirée";
 
 -- Ce que A a envoyé ou reçu, à effacer avec son compte (insertion directe, sans
 -- les déclencheurs de contrôle : seul compte ici le résultat de la suppression).
@@ -171,3 +216,18 @@ select public.refus('select public.revizstmg_ia_rendre(auth.uid(), ''tuteur'', '
 reset role; set role anon;
 select public.refus('select count(*) from public.revizstmg_ia_usage', 'visiteur : lecture des compteurs');
 reset role;
+
+-- Suppression du compte du professeur : ses classes sont vidées
+set role authenticated; set request.jwt.claims to :P;
+select revizstmg_supprimer_compte();
+reset role;
+select ok from (values
+  (((select count(*) from teacher_class) = 0), 'classes du prof supprimées'),
+  (((select count(*) from class_member where class_code in ('stmg-abcde','stmg-fghij')) = 0), 'membres de ses classes effacés'),
+  (((select count(*) from class_wall where class_code in ('stmg-abcde','stmg-fghij')) = 0), 'mur de ses classes effacé'),
+  (((select count(*) from class_quiz) = 0), 'QCM de ses classes effacés'),
+  (((select count(*) from class_quiz_result) = 0), 'résultats de QCM effacés'),
+  (((select count(*) from class_duel where class_code in ('stmg-abcde','stmg-fghij')) = 0), 'duels de ses classes effacés'),
+  (((select count(*) from leaderboard where class_code in ('stmg-abcde','stmg-fghij')) = 0), 'classement de ses classes effacé'),
+  (((select count(*) from leaderboard where class_code = 'autre-classe') = 0), 'ligne de A dans une autre classe : déjà effacée avec son compte')
+) as v(ok, verification);

@@ -9,7 +9,7 @@ set -e
 ICI=$(cd "$(dirname "$0")" && pwd)
 RACINE=$(dirname "$ICI")
 DOSSIER=${PGESSAI:-/var/tmp/revizstmg-pgtest}
-PORT=54329
+PORT=${PGPORT_ESSAI:-54329}
 BIN=$(ls -d /usr/lib/postgresql/*/bin | tail -1)
 if [ ! -d "$DOSSIER/data" ]; then
   mkdir -p "$DOSSIER" && chown postgres:postgres "$DOSSIER"
