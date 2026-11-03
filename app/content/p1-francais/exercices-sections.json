@@ -18,5 +18,9 @@
   "p1-fr-4-flash": 2,
   "p1-fr-4-ordre": 0,
   "p1-fr-4-qcm": 1,
-  "p1-fr-4-tri": 4
+  "p1-fr-4-tri": 4,
+  "p1-fr-3-trou-theatre": 2,
+  "p1-fr-3-trou-versification": 4,
+  "p1-fr-3-trou-sonorites": 5,
+  "p1-fr-3-trou-idees": 6
 }

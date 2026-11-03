@@ -441,66 +441,6 @@
       ]
     },
     {
-      "h": "📦 Produit, distribution et communication : gamme, circuits, médias",
-      "blocks": [
-        {
-          "t": "p",
-          "c": "La **politique de produit** gère la **gamme** (l’ensemble des produits), le **cycle de vie** (lancement → croissance → maturité → déclin) et la **marque** (nom, logo, image, promesse). La marque crée de la valeur et fidélise."
-        },
-        {
-          "t": "p",
-          "c": "La **politique de distribution** choisit les **circuits** pour amener le produit au client : circuit **direct** (du producteur au client, sans intermédiaire), **court** (un intermédiaire), **long** (plusieurs). L’intensité peut être **intensive** (partout), **sélective** (points choisis) ou **exclusive** (rares distributeurs)."
-        },
-        {
-          "t": "p",
-          "c": "La **politique de communication** fait connaître et aimer le produit. On distingue les moyens **média** (TV, radio, presse, affichage, internet) et **hors-média** (promotion des ventes, relations publiques, marketing direct, réseaux sociaux)."
-        },
-        {
-          "t": "p",
-          "c": "Un **circuit de distribution** se définit par le nombre d’intermédiaires entre le producteur et le consommateur. Dans un **circuit direct**, il n’y en a **aucun** : c’est la vente à la ferme ou sur le site internet du fabricant."
-        },
-        {
-          "t": "p",
-          "c": "Dans un **circuit court**, il y a **un seul intermédiaire**, en général un **détaillant** qui achète au producteur et revend au client. Dans un **circuit long**, il y a **plusieurs intermédiaires**, typiquement un **grossiste** puis un **détaillant**. Plus le circuit est long, plus le produit peut être diffusé largement, mais plus chaque intermédiaire prend une marge."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Produit (gamme, cycle de vie, marque) + Distribution (circuits, intensité) + Communication (média/hors-média). Chaque choix doit rester **cohérent** avec les trois autres P."
-        },
-        {
-          "t": "table",
-          "h": "Notions et définitions",
-          "head": [
-            "Notion",
-            "Définition"
-          ],
-          "rows": [
-            [
-              "Circuit direct",
-              "Aucun intermédiaire (vente à la ferme, site du fabricant)"
-            ],
-            [
-              "Circuit court",
-              "Un intermédiaire (producteur → détaillant)"
-            ],
-            [
-              "Circuit long",
-              "Plusieurs intermédiaires (producteur → grossiste → détaillant)"
-            ],
-            [
-              "Communication média",
-              "TV, radio, presse, affichage, internet"
-            ],
-            [
-              "Communication hors-média",
-              "Promotion des ventes, relations publiques, marketing direct, réseaux sociaux"
-            ]
-          ]
-        }
-      ]
-    },
-    {
       "h": "🛍️ Étude de cas guidée — lancer un café haut de gamme : un mix cohérent",
       "blocks": [
         {

@@ -39,3 +39,7 @@ test.each(['x067', 'x068', 'x161'])('%s : la probabilité affichée n’est jama
     expect(q.answer).toBeGreaterThan(0)
   }
 })
+
+test.each(['x087', 'x113', 'x132'])('%s : marge ou profit toujours positif', (id) => {
+  for (const q of tirer(id)) expect(q.answer).toBeGreaterThan(0)
+})

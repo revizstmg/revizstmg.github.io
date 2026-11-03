@@ -2,7 +2,9 @@ import {test,expect} from 'vitest'
 import {mergeMissions,updateMission,missionStatus,missionKey} from '../src/data/missionProgress.js'
 import {mergeProgress,chargeUtile} from '../src/progression.js'
 import {restoreAccountState} from '../src/store.jsx'
-import {chapterMission,nextMissionTarget,missionSubjects,bossResult} from '../src/data/missions.js'
+import {chapterMission,nextMissionTarget,missionSubjects,bossResult,missionJouable} from '../src/data/missions.js'
+import {writeFileSync} from 'node:fs'
+import {ALL_CHAPTERS,themeChapters} from '../src/data/index.js'
 import {chargerTout,chapitreDuJeu} from '../src/data/index.js'
 import {missionMessages} from '../src/i18n/missions.js'
 const track={level:'terminale-stmg',specialty:'gestion-finance'}
@@ -91,4 +93,23 @@ test('les six langues traduisent toutes les missions avec les mêmes variables',
    expect(vars(m[key]),key).toEqual(vars(missionMessages.fr[key]))
   }
  }
+})
+
+// content/commun/missions-jouables.json : 1 si la mission du chapitre a des manches. Mettre à jour : MAJ_MISSIONS=1 npx vitest run tests/missions.test.js
+test('missions-jouables.json est à jour et nextMissionTarget ne propose jamais un chapitre sans manche',async()=>{
+ await chargerTout()
+ const themes={}
+ for(const id of Object.keys(ALL_CHAPTERS).sort())themes[id]=themeChapters(ALL_CHAPTERS[id]).map((_,i)=>chapterMission(id,i)?.rounds.length?1:0)
+ if(process.env.MAJ_MISSIONS){
+  const lignes=Object.entries(themes).map(([id,n])=>`    ${JSON.stringify(id)}: ${JSON.stringify(n)}`)
+  writeFileSync(new URL('../content/commun/missions-jouables.json',import.meta.url),`{\n  "_": "Chapitres dont la mission a des manches (1) ou non (0) : au moins 3 questions jouables. Calculé : MAJ_MISSIONS=1 npx vitest run tests/missions.test.js",\n  "themes": {\n${lignes.join(',\n')}\n  }\n}\n`)
+ }
+ for(const id of Object.keys(themes))themes[id].forEach((v,i)=>expect(missionJouable(id,i),id+' ch'+i).toBe(v===1))
+ for(const t of [track,{level:'premiere-stmg'}]){
+  const next=nextMissionTarget({track:t,missions:{}})
+  expect(chapterMission(next.themeId,next.index).rounds.length).toBeGreaterThan(0)
+ }
+})
+test('p1-mgmt-t2 chapitre 0 : une mission vide n\'est pas proposée',()=>{
+ expect(chapterMission('p1-mgmt-t2',0).rounds.length>0).toBe(missionJouable('p1-mgmt-t2',0))
 })

@@ -102,6 +102,18 @@ describe('contenu', () => {
     }
   })
 
+  // Un tableau « Notions et définitions » définit des notions : ni renvoi à un chapitre,
+  // ni ligne d'« actualité » qui ne définit rien.
+  it('les tableaux de notions contiennent de vraies définitions', () => {
+    for (const [id, th] of Object.entries(C.ALL_CHAPTERS)) {
+      for (const sec of th.cours || []) {
+        for (const b of (sec.blocks || []).filter((x) => x.t === 'table' && x.h === 'Notions et définitions')) {
+          for (const [notion] of b.rows || []) expect.soft(String(notion), `${id} « ${sec.h} »`).not.toMatch(/\(actualité\)\s*$/)
+        }
+      }
+    }
+  })
+
   it('identifiants de thème uniques', () => {
     const ids = C.SUBJECTS.flatMap((s) => (s.chapters || []).map((c) => c.id))
     expect(new Set(ids).size).toBe(ids.length)

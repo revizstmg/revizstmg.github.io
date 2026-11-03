@@ -285,37 +285,59 @@
           "icon": "❓",
           "questions": [
             {
-              "q": "Après 1945, la France connaît d’abord une phase de…",
+              "q": "En quelle année est fondée la Ve République ?",
               "choices": [
-                "reconstruction",
-                "décolonisation achevée",
-                "récession totale",
-                "guerre civile"
+                "1946",
+                "1958",
+                "1962",
+                "1974"
               ],
-              "answer": 0,
-              "explain": "L’après-guerre est marqué par la reconstruction."
+              "answer": 1,
+              "explain": "En 1958, la crise algérienne ramène de Gaulle au pouvoir et la Ve République est fondée."
             },
             {
-              "q": "La France participe activement à…",
+              "q": "Depuis 1962, comment le président de la République est-il élu ?",
               "choices": [
-                "la construction européenne",
-                "la création de l’URSS",
-                "la colonisation de l’Amérique",
-                "la Guerre de Cent Ans"
+                "Par les députés",
+                "Par les maires",
+                "Au suffrage universel direct",
+                "Par tirage au sort"
               ],
-              "answer": 0,
-              "explain": "La France est un moteur de la construction européenne."
+              "answer": 2,
+              "explain": "En 1962, un référendum instaure l’élection du président au suffrage universel direct."
             },
             {
-              "q": "Ce thème est qualifié de…",
+              "q": "Quelle institution sociale est créée en 1945 ?",
               "choices": [
-                "thème conclusif",
-                "thème introductif",
-                "hors-programme",
-                "sujet d’étude facultatif"
+                "La Sécurité sociale",
+                "La CECA",
+                "L’assurance chômage",
+                "Le traité de Rome"
               ],
               "answer": 0,
-              "explain": "C’est le thème conclusif de la partie histoire."
+              "explain": "En 1945, la Sécurité sociale est créée, pilier de l’État-providence (l’assurance chômage s’y ajoute en 1958)."
+            },
+            {
+              "q": "Quel régime est proclamé en 1946 ?",
+              "choices": [
+                "La Ve République",
+                "La IVe République",
+                "Le Second Empire",
+                "La Commune"
+              ],
+              "answer": 1,
+              "explain": "La IVe République est proclamée en 1946."
+            },
+            {
+              "q": "Quel événement ramène de Gaulle au pouvoir en 1958 ?",
+              "choices": [
+                "Mai 1968",
+                "Le choc pétrolier",
+                "La crise algérienne",
+                "Le traité de Maastricht"
+              ],
+              "answer": 2,
+              "explain": "La crise algérienne de 1958 provoque l’effondrement de la IVe République et le retour de de Gaulle."
             }
           ]
         },
