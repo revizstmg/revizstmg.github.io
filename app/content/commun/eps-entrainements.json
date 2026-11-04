@@ -1,0 +1,1717 @@
+{
+  "avertissement": "Propositions d’entraînement RévizSTMG pour préparer l’épreuve d’EPS : elles ne remplacent ni le professeur d’EPS ni un avis médical. Arrête-toi en cas de douleur, de vertige ou de gêne respiratoire. Elles ne sont pas des documents officiels.",
+  "familles": {
+    "demi-fond": {
+      "champ": "ca1",
+      "nom": "Demi-fond",
+      "securite": "Échauffe-toi 15 min avant toute allure rapide ; arrête si douleur thoracique ou malaise.",
+      "carnet": "Note à chaque séance : distances, temps de chaque répétition, ressenti sur 10, récupération. Cherche des performances stables sur 2 tentatives sur 3.",
+      "roles": [
+        "Chronométreur et donneur d’allure",
+        "Observateur de la foulée (fréquence, posture)"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Allure d’épreuve en continu",
+            "duree": 35,
+            "contenu": [
+              "15 min d’échauffement : footing, gammes, 3 accélérations",
+              "12 min de course régulière à 80 % de ta vitesse d’épreuve, sans rien forcer",
+              "Étirements actifs, retour au calme 5 min"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Fractionné court 30-30",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 12 min",
+              "8 à 10 répétitions de 30 s à 95 % de ta vitesse d’épreuve, 30 s de trot entre chaque",
+              "Note ta vitesse à chaque répétition : elle doit rester stable"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Répétitions à allure cible",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 15 min",
+              "4 répétitions de [200@100] avec 1’30 de récupération",
+              "2 répétitions de [400@100] avec 2’30 de récupération",
+              "Retour au calme 8 min"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Travail technique de foulée",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 12 min",
+              "Gammes : montées de genoux, talons-fesses, griffé, 3 × 30 m",
+              "4 lignes droites de 80 m en relâchement, foulée ample",
+              "Un camarade filme ou observe : posture, bras, rythme (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          },
+          {
+            "titre": "Seuil prolongé",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 15 min",
+              "3 répétitions de 3 min à 90 % de ta vitesse d’épreuve, 1’30 de récupération",
+              "Retour au calme 8 min"
+            ],
+            "afl": "afl1"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Spécifique allure course",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 15 min",
+              "2 répétitions de [300@102] avec 3 min de récupération",
+              "1 répétition de [200@105] pour sentir la vitesse d’arrivée",
+              "Retour au calme"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Simulation et gestion de course",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 15 min",
+              "Course test sur une distance courte (moitié de l’épreuve) avec passages chronométrés",
+              "Compare le premier et le second tour : vise un écart inférieur à 2 s",
+              "Remplis ton carnet : stratégie, sensations, ajustements"
+            ],
+            "afl": "afl2"
+          }
+        ]
+      }
+    },
+    "haies": {
+      "champ": "ca1",
+      "nom": "Haies",
+      "securite": "Haies adaptées à la taille de chaque élève, couloirs libres, échauffement des ischio-jambiers obligatoire.",
+      "carnet": "Note le nombre de pas entre les haies, le temps aux deux dernières haies et ta jambe d’attaque.",
+      "roles": [
+        "Juge de la pose de pied et du nombre de pas",
+        "Chronométreur des temps intermédiaires"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Rythme entre les haies",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 15 min dont gammes de haies",
+              "Haies posées basses et rapprochées : 3 pas réguliers, 6 passages",
+              "Travail de la jambe d’attaque sans élan"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Départ et première haie",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 12 min",
+              "8 départs sur 15 m puis première haie",
+              "Repère la distance idéale de ton premier appui"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Enchaîner 4 haies",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 15 min",
+              "6 passages sur 4 haies à hauteur d’épreuve",
+              "Compare le temps au plat et sur les haies : ton indice technique"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Efficacité du passage",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 12 min",
+              "Passages de haie jambe d’attaque puis jambe d’élan, 6 de chaque",
+              "Un camarade observe l’appui après la haie (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Course complète",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 15 min",
+              "2 courses complètes avec récupération longue",
+              "Note le temps et l’écart avec ton plat"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 25,
+            "contenu": [
+              "Échauffement 12 min",
+              "3 départs lancés avec 3 haies à vitesse maximale",
+              "Arrête avant la fatigue"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "vitesse": {
+      "champ": "ca1",
+      "nom": "Sprint et relais",
+      "securite": "Échauffement progressif avec accélérations ; récupération complète entre les efforts maximaux.",
+      "carnet": "Note ton temps, ton nombre d’appuis, ta position de départ et la qualité des passages de témoin au relais.",
+      "roles": [
+        "Starter et chronométreur",
+        "Observateur du passage de témoin"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Position de départ et accélération",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 15 min",
+              "8 départs sur 20 m avec départ de ton choix",
+              "Pente de poussée et redressement progressif"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Lignes droites lancées",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 12 min",
+              "4 lancers de 30 m en accélération progressive",
+              "Relâchement du haut du corps"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Vitesse maximale",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 15 min",
+              "5 courses de 30 à 40 m à vitesse maximale, récupération 3 min",
+              "Note le temps de chaque course"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Passage de témoin",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 12 min",
+              "Répétitions à vitesse croissante entre 2 coureurs, zone de transmission marquée",
+              "Ajuste la marque de départ du receveur (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          },
+          {
+            "titre": "Vitesse prolongée",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 15 min",
+              "3 répétitions de 80 à 100 m à 95 %, 4 min de récupération"
+            ],
+            "afl": "afl1"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Course complète",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 15 min",
+              "2 courses sur la distance d’épreuve, récupération longue",
+              "Compare à ton temps de référence"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 25,
+            "contenu": [
+              "Échauffement 12 min",
+              "3 départs lancés à vitesse maximale",
+              "Arrête avant la fatigue"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "lancers": {
+      "champ": "ca1",
+      "nom": "Lancers",
+      "securite": "Zone de lancer dégagée, lancer sur ordre du professeur uniquement, aucune personne devant la ligne de lancer.",
+      "carnet": "Note la distance, l’angle de sortie, la vitesse d’élan et ton meilleur lancer sur 3.",
+      "roles": [
+        "Juge de la zone et de la mesure",
+        "Observateur de la technique (appuis, bras)"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Placement et équilibre",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 15 min avec épaules et hanches",
+              "Lancers lents depuis la position de départ, 10 par série",
+              "Corrige la position des pieds"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Transfert d’appuis",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 12 min",
+              "Lancers avec transfert du poids du corps arrière vers avant, 3 séries de 6"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Élan et vitesse",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 15 min",
+              "Lancers avec 3 pas d’élan, 3 séries de 5",
+              "Cherche l’accélération progressive sans perdre l’équilibre"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Explosivité du bas du corps",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 12 min",
+              "Sauts à pieds joints, bonds alternés, lancers de médecine-ball vers l’avant",
+              "3 séries de 6"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Observation en duo",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 12 min",
+              "Chaque élève lance 6 fois ; l’observateur note un critère unique par lancer (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Lancers de concours",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 15 min",
+              "3 essais comme à l’épreuve",
+              "Note le meilleur essai"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 25,
+            "contenu": [
+              "Échauffement 12 min",
+              "4 lancers à intensité maximale",
+              "Récupération complète"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "sauts": {
+      "champ": "ca1",
+      "nom": "Sauts",
+      "securite": "Aire de réception adaptée et contrôlée ; échauffement des chevilles et des genoux.",
+      "carnet": "Note la marque d’appel, la longueur ou la hauteur et le nombre d’essais.",
+      "roles": [
+        "Juge de l’appel et mesureur",
+        "Observateur de la course d’élan"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Course d’élan régulière",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 15 min",
+              "6 courses d’élan complètes sans sauter, tracer la marque d’appel"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Impulsion",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 12 min",
+              "Sauts avec 3 appuis, 8 répétitions",
+              "Hauteur ou longueur sans contrainte"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Élan et appel",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 15 min",
+              "8 sauts complets, marque d’appel ajustée",
+              "Compare les distances ou hauteurs"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Vitesse d’élan",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 12 min",
+              "4 courses lancées de 30 m",
+              "Relâche-toi en fin de course"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Observation en duo",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 12 min",
+              "Un camarade note le placement du dernier appui (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Concours",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 15 min",
+              "3 à 5 essais comme à l’épreuve"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 25,
+            "contenu": [
+              "Échauffement 12 min",
+              "3 sauts à intensité maximale"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "natation-vitesse": {
+      "champ": "ca1",
+      "nom": "Natation de vitesse",
+      "securite": "Toujours sous surveillance, ne jamais nager seul, éviter l’hyperventilation avant l’apnée.",
+      "carnet": "Note le temps de chaque 25 m, le nombre de coups de bras, la fréquence respiratoire.",
+      "roles": [
+        "Chronométreur au bord du bassin",
+        "Compteur de coups de bras"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Technique de nage",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 300 m facile",
+              "6 × 25 m en accentuant l’allongement, comptage des coups de bras",
+              "Coulée après le plongeon et les virages"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Départ et coulée",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 200 m",
+              "8 plongeons, coulées de 5 à 8 m",
+              "Note la distance de coulée"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Vitesse sur 25 m",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 300 m",
+              "6 × 25 m à vitesse élevée, 45 s de récupération",
+              "Note le temps et les coups de bras"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Nage à allure de course",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 300 m",
+              "4 × 50 m à allure de course, 1’30 de récupération"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Observation du coéquipier",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 200 m",
+              "Un camarade note le nombre de coups de bras et la qualité des virages (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Course complète",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 300 m",
+              "2 courses de 50 m, récupération longue"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 25,
+            "contenu": [
+              "Échauffement 200 m",
+              "3 × 25 m rapides",
+              "Récupération complète"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "escalade": {
+      "champ": "ca2",
+      "nom": "Escalade",
+      "securite": "Assurage vérifié par binôme à chaque voie (nœud, mousqueton, communication) ; descente contrôlée.",
+      "carnet": "Note la cotation des voies, le nombre de chutes, le temps de lecture et le projet choisi.",
+      "roles": [
+        "Assureur",
+        "Observateur (lecture de voie, placements)"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Lecture de voie",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 15 min",
+              "3 voies faciles : repère les prises avant de grimper",
+              "Décris à voix haute ton itinéraire"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Placement et équilibre",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 12 min",
+              "4 voies faciles en déplacements précis des pieds",
+              "Recherche le relâchement des bras"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Montée de niveau",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 15 min",
+              "4 voies d’un niveau juste au-dessus du tien",
+              "Compare tes choix avec ceux du binôme"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Lecture et enchaînement",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 12 min",
+              "3 voies lues d’abord depuis le sol",
+              "Grimpe sans modifier ton projet"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Rôle d’assureur",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 10 min",
+              "Alterner grimpeur et assureur, vérifications de sécurité à voix haute (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Voie de projet",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 15 min",
+              "1 voie de ton niveau d’épreuve avec lecture préalable",
+              "Régule pendant la grimpe"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 12 min",
+              "2 voies de ton niveau, bonne récupération"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "orientation": {
+      "champ": "ca2",
+      "nom": "Course d’orientation",
+      "securite": "Respecte les limites du terrain, ne pars jamais seul, signale chaque abandon.",
+      "carnet": "Note ton projet d’itinéraire, les balises trouvées, ton temps par balise, tes erreurs de lecture.",
+      "roles": [
+        "Binôme de sécurité",
+        "Observateur des choix d’itinéraire"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Lecture de carte",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Carte orientée, repères linéaires, parcours en ligne de 6 balises faciles"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Choix d’itinéraire",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Parcours avec choix de passage entre 2 balises : compare tes choix"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Score à temps limité",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Parcours à balises libres en 30 min",
+              "Choisis tes balises selon leur valeur et ta vitesse"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Précision d’approche",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Atteindre la balise avec une approche contrôlée, sans courir après"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Rôle de binôme",
+            "duree": 35,
+            "contenu": [
+              "Parcours à deux : un lit, l’autre observe puis on échange (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Parcours de ton niveau",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Parcours de ton niveau d’épreuve, projet écrit avant le départ"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 30,
+            "contenu": [
+              "Parcours court : concentration, gestion du temps"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "sauvetage": {
+      "champ": "ca2",
+      "nom": "Sauvetage aquatique",
+      "securite": "Toujours sous surveillance du professeur, matériel vérifié, ne jamais plonger sans autorisation.",
+      "carnet": "Note ton temps, la distance de remorquage, le choix du parcours et la qualité de la prise.",
+      "roles": [
+        "Surveillant du bassin",
+        "Observateur de la prise et du remorquage"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Immersion et déplacement",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 200 m",
+              "Sauts, immersions, nage tête hors de l’eau 25 m",
+              "Respiration contrôlée"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Prise et remorquage",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 200 m",
+              "Remorquage d’un mannequin ou d’un camarade en sécurité 15 m"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Parcours enchaîné",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 200 m",
+              "Parcours : nage, immersion, récupération d’un objet, remorquage",
+              "Choisis la difficulté selon tes ressources"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Vitesse en sécurité",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 200 m",
+              "Répétitions du parcours avec récupération complète"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Rôle de surveillant",
+            "duree": 35,
+            "contenu": [
+              "Alterne sauveteur et surveillant (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Parcours de référence",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 200 m",
+              "Parcours de ton niveau, choix annoncé avant le départ"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 25,
+            "contenu": [
+              "Échauffement 200 m",
+              "Un parcours court avec focus sur la prise"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "vtt": {
+      "champ": "ca2",
+      "nom": "VTT",
+      "securite": "Casque obligatoire, VTT vérifié (freins, pneus), respect du code de la route et du terrain.",
+      "carnet": "Note le tracé choisi, la difficulté, le temps et les chutes évitées.",
+      "roles": [
+        "Ouvreur / serre-file",
+        "Observateur des trajectoires"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Maîtrise du vélo",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Freinage progressif, virage, équilibre à faible vitesse"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Choix de trajectoire",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Parcours de slalom puis sections variées : choisis ta ligne"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Enchaîner des difficultés",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Boucle de 15 min avec montées, descentes et virages",
+              "Anticipe les passages difficiles"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Endurance technique",
+            "duree": 45,
+            "contenu": [
+              "Boucle de 20 min à allure régulière"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Rôle d’ouvreur",
+            "duree": 40,
+            "contenu": [
+              "Travail en binôme : l’ouvreur choisit la ligne, le suiveur observe (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Parcours de référence",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Itinéraire de ton niveau, projet annoncé avant le départ"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 30,
+            "contenu": [
+              "Boucle courte, aisance et concentration"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "danse": {
+      "champ": "ca3",
+      "nom": "Danse(s) et arts du cirque",
+      "securite": "Échauffe articulations et dos, espace dégagé, tenue adaptée.",
+      "carnet": "Note l’idée de ta chorégraphie, tes procédés de composition, tes retours de camarades.",
+      "roles": [
+        "Chorégraphe",
+        "Spectateur-observateur",
+        "Juge"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Recherche de matériaux",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 15 min",
+              "Explorations : espace, énergie, temps",
+              "Garde 3 idées de mouvement"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Premiers procédés de composition",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Unisson, canon, contraste, cumul : essaie-les sur ton matériau"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Structurer la chorégraphie",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Début, développement, fin",
+              "Précise les déplacements dans l’espace"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Interpréter",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Même chorégraphie avec des intentions différentes (douceur, force, humour)"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Retours de spectateurs",
+            "duree": 40,
+            "contenu": [
+              "Présentation à un groupe qui note ce qu’il comprend (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Répétition générale",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Présentation complète devant un public, avec ajustements"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 30,
+            "contenu": [
+              "Échauffement 10 min",
+              "Vérifier entrées, sorties et transitions"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "acrosport": {
+      "champ": "ca3",
+      "nom": "Acrosport",
+      "securite": "Parade obligatoire, tapis adaptés, pas de figure sans validation du professeur.",
+      "carnet": "Note les figures retenues, leur difficulté, les chutes ou hésitations.",
+      "roles": [
+        "Pareur",
+        "Juge",
+        "Chorégraphe de l’enchaînement"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Figures de base",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 15 min",
+              "Figures à deux puis à trois, placements des mains et des appuis"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Transitions",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Enchaîne deux figures avec transition fluide"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Composition",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Construire un enchaînement avec 4 figures de difficulté variée"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Qualité d’exécution",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Alignements, tenue de 3 secondes, stabilité"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Rôle de pareur et juge",
+            "duree": 40,
+            "contenu": [
+              "Alterner pareur, juge et acteur (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Enchaînement complet",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Deux passages avec temps de concertation"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 30,
+            "contenu": [
+              "Reprendre les éléments fragiles"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "gym": {
+      "champ": "ca3",
+      "nom": "Gymnastique sportive",
+      "securite": "Parade et tapis obligatoires, élément nouveau seulement validé par le professeur.",
+      "carnet": "Note les éléments de ton enchaînement, leur difficulté et tes fautes.",
+      "roles": [
+        "Pareur",
+        "Juge",
+        "Observateur"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Éléments de base",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 15 min",
+              "Roulades, équilibres, ATR, rondade selon ton niveau"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Liaison de deux éléments",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Enchaîner deux éléments avec continuité"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Composer l’enchaînement",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "4 à 6 éléments de difficulté variée selon le code"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Qualité d’exécution",
+            "duree": 40,
+            "contenu": [
+              "Alignements, tenue, rythme"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Rôle de juge",
+            "duree": 40,
+            "contenu": [
+              "Noter l’exécution et la difficulté d’un camarade (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Passages complets",
+            "duree": 40,
+            "contenu": [
+              "Deux passages avec correction"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 30,
+            "contenu": [
+              "Reprise des éléments fragiles"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "raquettes": {
+      "champ": "ca4",
+      "nom": "Sports de raquette",
+      "securite": "Échauffe épaules et poignets, espace de jeu dégagé, chaussures de salle propres.",
+      "carnet": "Note ton style de jeu, tes points gagnants, tes fautes directes, les points forts de ton adversaire.",
+      "roles": [
+        "Arbitre",
+        "Coach",
+        "Partenaire d’entraînement"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Placements et frappes de base",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 12 min",
+              "Échanges contrôlés, déplacement et retour au centre"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Construire le point",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Jeu de placement : écarter l’adversaire puis finir"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Variation des coups",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Alterner coups longs et courts, directions croisées"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Matches à thème",
+            "duree": 45,
+            "contenu": [
+              "Matches courts avec une consigne : par exemple gagner 3 points au filet"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Rôle d’arbitre et de coach",
+            "duree": 40,
+            "contenu": [
+              "Arbitrer puis coacher un camarade avec 2 conseils concrets (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Matches de référence",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Plusieurs oppositions équilibrées avec temps d’analyse entre les sets"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 30,
+            "contenu": [
+              "Échanges, jeu court, concentration"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "combat": {
+      "champ": "ca4",
+      "nom": "Sports de combat",
+      "securite": "Protections obligatoires, contrôle de la force, respect du partenaire, signal d’arrêt immédiat.",
+      "carnet": "Note tes techniques efficaces, ton projet de combat, les réussites du partenaire.",
+      "roles": [
+        "Arbitre",
+        "Coach",
+        "Partenaire d’entraînement"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Techniques de base",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 15 min",
+              "Gestes essentiels en situation contrôlée, sans opposition forte"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Garde et déplacement",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Gardes, déplacements, distance"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Combinaisons",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Deux à trois techniques enchaînées avec partenaire coopératif"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Opposition limitée",
+            "duree": 45,
+            "contenu": [
+              "Combats courts à règles aménagées"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Rôle d’arbitre et de coach",
+            "duree": 40,
+            "contenu": [
+              "Arbitrer et conseiller (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Combats de référence",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Plusieurs oppositions équilibrées"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 30,
+            "contenu": [
+              "Techniques déjà maîtrisées, relâchement"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "collectifs": {
+      "champ": "ca4",
+      "nom": "Sports collectifs",
+      "securite": "Échauffement complet, règles de sécurité sur les contacts, équipements adaptés.",
+      "carnet": "Note ton poste, tes actions décisives, ce que tu choisis de faire contre cette défense.",
+      "roles": [
+        "Arbitre",
+        "Coach",
+        "Partenaire d’entraînement"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Techniques individuelles",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 15 min",
+              "Passes, réceptions, tirs ou frappes selon le sport",
+              "Répétitions 3 × 6"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Jeu à effectif réduit",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "3 contre 3 avec consigne de progression"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Rapport de force",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Matches courts : repère le point faible de l’adversaire"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Systèmes de jeu",
+            "duree": 45,
+            "contenu": [
+              "Placements en attaque et en défense, 5 contre 5"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Rôle d’arbitre et de coach",
+            "duree": 40,
+            "contenu": [
+              "Arbitrer puis coacher à la mi-temps avec 2 consignes (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Rencontres de référence",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Plusieurs rencontres avec temps d’analyse"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Affûtage",
+            "duree": 30,
+            "contenu": [
+              "Situations d’attaque et de défense connues"
+            ],
+            "afl": "afl1"
+          }
+        ]
+      }
+    },
+    "course-duree": {
+      "champ": "ca5",
+      "nom": "Course en durée",
+      "securite": "Hydrate-toi, échauffe-toi, arrête et préviens si malaise ou douleur ; adapte l’allure à tes ressentis.",
+      "carnet": "Note durée, allure ou distance, fréquence cardiaque si disponible, ressenti sur 10, et les ajustements.",
+      "roles": [
+        "Partenaire d’allure",
+        "Observateur (indicateurs chiffrés)"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Endurance de base",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 10 min",
+              "20 min à allure confortable : tu dois pouvoir parler",
+              "Relève ton ressenti sur 10"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Projet d’entraînement",
+            "duree": 30,
+            "contenu": [
+              "Choisis un thème : endurance, perte de poids, tonification",
+              "Note tes paramètres : volume, intensité, récupération"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Endurance prolongée",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "30 à 35 min à allure régulière",
+              "Compare tes données avec la dernière séance"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Fractionné doux",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 15 min",
+              "6 × 2 min à allure soutenue, 1 min de marche ou trot",
+              "Régule selon tes ressentis"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Conseiller un partenaire",
+            "duree": 40,
+            "contenu": [
+              "Un camarade court, tu notes sa régularité, tu donnes un conseil chiffré (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Séance de référence",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Séance conforme à ton projet, paramètres annoncés",
+              "Régulation en cours"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Analyse et conception",
+            "duree": 30,
+            "contenu": [
+              "Analyse tes données, prépare la séance suivante"
+            ],
+            "afl": "afl2"
+          }
+        ]
+      }
+    },
+    "musculation": {
+      "champ": "ca5",
+      "nom": "Musculation",
+      "securite": "Charges adaptées, technique avant la charge, pareur pour les charges lourdes, échauffement obligatoire.",
+      "carnet": "Note exercice, charge, séries, répétitions, récupération et ressenti.",
+      "roles": [
+        "Pareur",
+        "Observateur de la gestuelle"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Technique de base",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Squat, poussée, tirage, gainage à charge légère",
+              "3 séries de 12 répétitions"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Projet d’entraînement",
+            "duree": 30,
+            "contenu": [
+              "Choisis un thème : tonification, force, endurance musculaire",
+              "Note tes paramètres"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Séance thème tonification",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "6 exercices, 3 × 12 à charge modérée, 1 min de récupération"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Séance thème force",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "4 exercices, 4 × 6 à charge plus lourde, 2 min de récupération"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Rôle de pareur et conseiller",
+            "duree": 40,
+            "contenu": [
+              "Observer, sécuriser, conseiller avec indicateurs (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Séance de référence",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Séance complète conforme à ton thème, régulée par ton ressenti"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Analyse et conception",
+            "duree": 30,
+            "contenu": [
+              "Analyse tes données, justifie ton projet"
+            ],
+            "afl": "afl2"
+          }
+        ]
+      }
+    },
+    "natation-duree": {
+      "champ": "ca5",
+      "nom": "Natation en durée",
+      "securite": "Surveillance du bassin, ne jamais nager seul, hydratation avant et après.",
+      "carnet": "Note durée, distance, nage, fréquence respiratoire et ressenti sur 10.",
+      "roles": [
+        "Observateur de la nage",
+        "Compteur de longueurs"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Endurance de base",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 200 m",
+              "15 min de nage régulière confortable"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Projet d’entraînement",
+            "duree": 30,
+            "contenu": [
+              "Choisis ton thème, note tes paramètres"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Endurance prolongée",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 300 m",
+              "20 à 25 min régulières",
+              "Compare ta distance à la séance précédente"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Séries courtes",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 300 m",
+              "8 × 50 m avec 20 s de récupération"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Conseiller un partenaire",
+            "duree": 40,
+            "contenu": [
+              "Observer la nage d’un camarade et lui donner un conseil chiffré (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Séance de référence",
+            "duree": 45,
+            "contenu": [
+              "Séance conforme à ton projet, régulée en cours"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Analyse et conception",
+            "duree": 30,
+            "contenu": [
+              "Analyse tes données, prépare la suite"
+            ],
+            "afl": "afl2"
+          }
+        ]
+      }
+    },
+    "step": {
+      "champ": "ca5",
+      "nom": "Step",
+      "securite": "Chaussures adaptées, step stable, hauteur adaptée à ta taille, posture du dos contrôlée.",
+      "carnet": "Note durée, rythme (battements par minute), hauteur du step, ressenti sur 10.",
+      "roles": [
+        "Observateur de la posture",
+        "Meneur de rythme"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Pas de base",
+            "duree": 35,
+            "contenu": [
+              "Échauffement 10 min",
+              "Pas de base à rythme lent, appuis et posture"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Projet d’entraînement",
+            "duree": 30,
+            "contenu": [
+              "Choisis ton thème, note tes paramètres"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Enchaînements",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Blocs de 4 pas enchaînés sur 20 min"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Intensité",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Alterner 2 min soutenues et 1 min plus calme"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Conseiller un partenaire",
+            "duree": 40,
+            "contenu": [
+              "Observer la posture et donner un conseil (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Séance de référence",
+            "duree": 45,
+            "contenu": [
+              "Séance conforme à ton projet, régulée en cours"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Analyse et conception",
+            "duree": 30,
+            "contenu": [
+              "Analyse tes données, prépare la suite"
+            ],
+            "afl": "afl2"
+          }
+        ]
+      }
+    },
+    "yoga": {
+      "champ": "ca5",
+      "nom": "Yoga",
+      "securite": "Va jusqu’à la gêne, jamais jusqu’à la douleur ; respiration continue ; pas de compétition.",
+      "carnet": "Note postures, durée, respiration, ressentis avant et après la séance.",
+      "roles": [
+        "Observateur de la posture",
+        "Guide de la respiration"
+      ],
+      "phases": {
+        "construire": [
+          {
+            "titre": "Postures et respiration",
+            "duree": 40,
+            "contenu": [
+              "Échauffement 10 min",
+              "Salutation au soleil lente, respiration abdominale"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Projet d’entraînement",
+            "duree": 30,
+            "contenu": [
+              "Choisis ton thème (détente, souplesse, force), note tes paramètres"
+            ],
+            "afl": "afl2"
+          }
+        ],
+        "developper": [
+          {
+            "titre": "Enchaînement de postures",
+            "duree": 45,
+            "contenu": [
+              "Échauffement 10 min",
+              "Suite de 8 postures tenues 30 à 60 s"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Souplesse",
+            "duree": 40,
+            "contenu": [
+              "Postures d’étirement avec respiration contrôlée"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Conseiller un partenaire",
+            "duree": 40,
+            "contenu": [
+              "Observer et donner un conseil sur l’alignement (rôle AFL3)"
+            ],
+            "afl": "afl3"
+          }
+        ],
+        "affuter": [
+          {
+            "titre": "Séance de référence",
+            "duree": 45,
+            "contenu": [
+              "Séance conforme à ton projet, régulée par tes ressentis"
+            ],
+            "afl": "afl1"
+          },
+          {
+            "titre": "Analyse et conception",
+            "duree": 30,
+            "contenu": [
+              "Analyse tes ressentis et prépare la suite"
+            ],
+            "afl": "afl2"
+          }
+        ]
+      }
+    }
+  }
+}

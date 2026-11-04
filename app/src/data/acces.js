@@ -19,7 +19,7 @@ import { lireEtatPaiement } from './abonnement.js'
 export const PAGES_PAYANTES = [
   '/seance', '/parcours', '/mes-notes', '/badges', '/coach', '/coach-ia', '/revision',
   '/excellence-economique', '/bac-blanc', '/grand-oral', '/etude-de-gestion',
-  '/fiches-photo', '/defi', '/atelier-formules', '/methodo', '/classement',
+  '/fiches-photo', '/defi', '/atelier-formules', '/methodo', '/sport-bac', '/classement',
 ]
 // Pages qui demandent d’abord un compte : un visiteur sans compte voit l’invitation
 // à en créer un (rendue par la page) plutôt que l'écran d'abonnement.

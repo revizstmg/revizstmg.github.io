@@ -210,6 +210,7 @@ export default {
   "myNotes": "Meine Notizen",
   "myNotesPlaceholder": "Schreibe hier Hinweise, Tipps und Punkte zum Wiederholen auf…",
   "myNotesHint": "Automatisch gespeichert und mit deinen Geräten synchronisiert.",
+  "sportBacTitle": "Sport im Abitur",
   "methodoTitle": "Testmethode",
   "methodoSub": "Das zu befolgende Verfahren und ein Beispiel für jede Art von Test.",
   "importPhoto": "Importiere ein Foto",

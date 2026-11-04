@@ -1708,3 +1708,9 @@ Prochaine action :
 ### CORRECTIONS-20261103-CLAUDE-DIX-VERIFICATEURS
 - Demande : « Corrige tout » après dix agents vérificateurs (contenu, exercices, accès, IA, paiements, outils, social, comptes, traductions, accessibilité). Quatre branches (code, SQL, traductions, contenu) fusionnées dans claude/corrections-verif10.
 - Déploiements à faire après fusion, avec accord : examen-blanc, fiche-vision, revizstmg-paiement ; migration SQL après le site (voir docs/PAIEMENTS.md).
+
+### SPORT-BAC-20261104-CLAUDE
+- Même demande que EPS-20261103-CODEX (activités du bac, barèmes, entraînements adaptés), traitée par Claude sur la branche claude/sport-bac car aucune branche EPS n’était publiée. Codex : ne pas refaire en double ; relire avant d’ajouter ou de remplacer.
+- Source : Annexe 1 (référentiel CCF EPS, bac général et technologique), BO n° 9 du 26 février 2026. Données dans app/content/commun/eps-bac.json (5 champs, AFL1/2/3 par degré, seuils nationaux du champ 1 seulement : les établissements construisent les autres barèmes — rien d’inventé) et eps-entrainements.json (21 familles d’activités, plans non officiels). Logique : app/src/data/epsBac.js ; page /sport-bac (Premium via PAGES_PAYANTES, texte français, data-no-translate sur chaque bloc).
+- Câblage : App.jsx, navTabs.js, SiteMobileMenu.jsx, contenu.js (exclusion de l’import automatique), i18n sportBacTitle ×6, mesure.js (compté comme « guide », aucune migration), pwa/404.html (route). Tests : tests/eps-bac.test.js (24) et tests/parcours/sport-bac.spec.js (3). Aucun déploiement Supabase, aucune migration.
+- À faire par un humain : relecture par un professeur d’EPS ; coefficient 6 issu d’une source secondaire (marqué comme tel dans le JSON) ; décision Premium ou gratuit.

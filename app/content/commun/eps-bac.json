@@ -1,0 +1,739 @@
+{
+  "source": {
+    "texte": "Annexe 1 – Référentiel national pour le contrôle en cours de formation (CCF) – Baccalauréat général et technologique, enseignement commun d’EPS",
+    "bo": "Bulletin officiel n° 9 du 26 février 2026",
+    "note": "Note de service du 20 février 2026 : Évaluation de l’éducation physique et sportive aux baccalauréats général et technologique",
+    "urlNote": "https://www.education.gouv.fr/bo/2026/Hebdo9/MENE2531948N",
+    "urlAnnexe": "https://www.education.gouv.fr/sites/default/files/document/Annexe%201%20%E2%80%93%20R%C3%A9f%C3%A9rentiel%20national%20pour%20le%20contr%C3%B4le%20en%20cours%20de%20formation%20(CCF)%20%E2%80%93%20Baccalaur%C3%A9at%20g%C3%A9n%C3%A9ral%20et%20technologique,%20enseignement%20commun%20d%E2%80%99%C3%A9ducation%20physique%20et%20sportive%20(EPS)-480509.pdf",
+    "limite": "L’équipe EPS de ton lycée choisit l’épreuve exacte de chaque activité et construit les barèmes locaux de part et d’autre des repères nationaux. Seuls les repères nationaux figurent ici : demande à ton professeur le référentiel de ton établissement."
+  },
+  "epreuve": {
+    "nombreEpreuves": 3,
+    "regle": "Trois épreuves en contrôle en cours de formation (CCF), qui relèvent obligatoirement de trois champs d’apprentissage distincts. Chaque épreuve est notée sur 20 et co-évaluée par deux professeurs d’EPS.",
+    "noteSur": 20,
+    "repartition": "AFL1 sur 12 points ; AFL2 et AFL3 sur 8 points au total, répartis au choix de l’élève : 4-4, 6-2 ou 2-6.",
+    "choixRepartition": [
+      [
+        4,
+        4
+      ],
+      [
+        6,
+        2
+      ],
+      [
+        2,
+        6
+      ]
+    ],
+    "coefficient": "6 (EPS, voie générale et technologique)",
+    "coefficientFiabilite": "Valeur relevée sur un site secondaire : à confirmer avec ton établissement.",
+    "specialite": "Une épreuve peut reposer sur une spécialité sportive (sportif de haut niveau, etc.) : elle reçoit 20/20 sous réserve de ne pas être l’unique note retenue au titre du CCF.",
+    "ponctuel": "Candidats individuels : examen ponctuel terminal (annexe 2 du même texte), deux épreuves au choix dans la liste de l’académie."
+  },
+  "degres": {
+    "fractions": [
+      {
+        "degre": 1,
+        "min": 0,
+        "max": 0.2083
+      },
+      {
+        "degre": 2,
+        "min": 0.25,
+        "max": 0.4583
+      },
+      {
+        "degre": 3,
+        "min": 0.5,
+        "max": 0.7083
+      },
+      {
+        "degre": 4,
+        "min": 0.75,
+        "max": 1
+      }
+    ],
+    "note": "Les degrés 1 à 4 du référentiel se traduisent en points : pour un élément noté sur 6, 0 à 1,25 (degré 1), 1,5 à 2,75 (degré 2), 3 à 4,25 (degré 3), 4,5 à 6 (degré 4). La même proportion est appliquée ici aux autres éléments, comme estimation."
+  },
+  "champs": [
+    {
+      "id": "ca1",
+      "numero": 1,
+      "icone": "🏃",
+      "titre": "Réaliser une performance motrice maximale mesurable à une échéance donnée",
+      "activites": "Courses, sauts, lancers, natation, etc.",
+      "afl1": {
+        "intitule": "S’engager pour produire une performance maximale à l’aide de techniques efficaces, en gérant les efforts musculaires et respiratoires nécessaires et en faisant le meilleur compromis entre l’accroissement de vitesse d’exécution et de précision.",
+        "elements": [
+          {
+            "id": "perf",
+            "nom": "La performance maximale",
+            "points": 6,
+            "criteres": [
+              "Le seuil médian (3/6) est fixé nationalement ; le reste du barème est construit par l’établissement.",
+              "Les degrés 1 à 4 se situent de part et d’autre du seuil : 0 à 1,25 – 1,5 à 2,75 – 3 à 4,25 – 4,5 à 6."
+            ]
+          },
+          {
+            "id": "technique",
+            "nom": "L’efficacité technique (indice technique chiffré)",
+            "points": 6,
+            "criteres": [
+              "Degré 1 : l’élève crée peu de vitesse, la conserve ou la transmet mal ; actions propulsives juxtaposées.",
+              "Degré 2 : il crée de la vitesse mais la conserve peu ; actions propulsives étriquées et incomplètes.",
+              "Degré 3 : il crée sa vitesse utile et la conserve ; actions propulsives coordonnées et continues.",
+              "Degré 4 : vitesse maximale utile ; actions propulsives coordonnées, complètes et orientées."
+            ]
+          }
+        ]
+      },
+      "afl2": {
+        "intitule": "S’entraîner, individuellement et collectivement, pour réaliser une performance (carnet d’entraînement ou outil de recueil de données).",
+        "degres": [
+          "Degré 1 – Entraînement inadapté : performances stables sur 1 tentative sur 4 ; choix, analyses et régulations inexistants ; préparation et récupération aléatoires ; élève isolé.",
+          "Degré 2 – Entraînement partiellement adapté : performances stables sur 1 tentative sur 3 ; régulations avec des repères externes simples ; préparation et récupération stéréotypées ; élève suiveur.",
+          "Degré 3 – Entraînement adapté : performances stables sur 2 tentatives sur 3 ; choix et régulations en adéquation avec ses ressources ; préparation et récupération adaptées à l’effort ; élève acteur.",
+          "Degré 4 – Entraînement optimisé : performances stables sur 3 tentatives sur 4 ; régulations ciblées pour soi et pour les autres ; élève moteur, partenaire d’entraînement."
+        ]
+      },
+      "afl3": {
+        "intitule": "Choisir et assumer les rôles qui permettent un fonctionnement collectif solidaire (au moins un rôle choisi parmi deux proposés).",
+        "degres": [
+          "Degré 1 – Engagement subi : connaît partiellement le règlement et l’applique mal ; informations prélevées et transmises de façon aléatoire.",
+          "Degré 2 – Engagement aléatoire : connaît le règlement et l’applique mais ne le fait pas respecter ; informations prélevées mais partiellement transmises.",
+          "Degré 3 – Engagement fonctionnel : connaît le règlement, l’applique et le fait respecter dans son rôle ; informations prélevées et transmises.",
+          "Degré 4 – Engagement solidaire : fait respecter le règlement, aide les autres à jouer leurs rôles et à prélever et transmettre des informations ciblées."
+        ]
+      },
+      "choix": "AFL1 : mode de nage, répartition des essais, type de départ, d’élan ou de virage. AFL3 : un rôle parmi deux (partenaire d’entraînement ou d’épreuve).",
+      "familles": [
+        {
+          "id": "demi-fond",
+          "nom": "Demi-fond",
+          "activites": [
+            "500 m",
+            "750 m",
+            "800 m",
+            "1 000 m",
+            "1 200 m",
+            "1 500 m",
+            "1’30",
+            "3’",
+            "4’30"
+          ]
+        },
+        {
+          "id": "haies",
+          "nom": "Haies",
+          "activites": [
+            "200 m haies (haies basses)",
+            "50 m haies (haies hautes)"
+          ]
+        },
+        {
+          "id": "vitesse",
+          "nom": "Sprint et relais",
+          "activites": [
+            "200 m",
+            "50 m",
+            "4 × 50 m"
+          ]
+        },
+        {
+          "id": "lancers",
+          "nom": "Lancers",
+          "activites": [
+            "Disque",
+            "Javelot",
+            "Poids"
+          ]
+        },
+        {
+          "id": "sauts",
+          "nom": "Sauts",
+          "activites": [
+            "Hauteur",
+            "Perche",
+            "Penta-bond",
+            "Triple saut",
+            "Longueur"
+          ]
+        },
+        {
+          "id": "natation-vitesse",
+          "nom": "Natation de vitesse",
+          "activites": [
+            "50 m crawl",
+            "50 m multi-nages ou autres nages"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca2",
+      "numero": 2,
+      "icone": "🧗",
+      "titre": "Adapter son déplacement à des environnements variés ou incertains",
+      "activites": "Escalade, course d’orientation, sauvetage aquatique, VTT",
+      "afl1": {
+        "intitule": "S’engager à l’aide d’une motricité spécifique pour réaliser en sécurité et à son meilleur niveau un itinéraire dans un contexte incertain.",
+        "elements": [
+          {
+            "id": "lire",
+            "nom": "Lire et analyser les caractéristiques du milieu pour choisir et conduire son itinéraire",
+            "points": 6,
+            "criteres": [
+              "Degré 1 : pas de lecture du milieu, choix aléatoire, abandon ou dépassement important du temps.",
+              "Degré 2 : lecture partielle, itinéraire peu approprié, régulations nécessaires pour terminer.",
+              "Degré 3 : lecture globale, itinéraire approprié réalisé en totalité dans le temps imparti sans changer de difficulté.",
+              "Degré 4 : lecture prédictive, itinéraire de niveau optimal, ajustements opportuns en cours de déplacement."
+            ]
+          },
+          {
+            "id": "adapter",
+            "nom": "Adapter son déplacement en fonction du milieu et de son projet d’itinéraire",
+            "points": 6,
+            "criteres": [
+              "Degré 1 : milieu subi, techniques peu efficaces.",
+              "Degré 2 : déplacement séquentiel ou discontinu, ajustements successifs.",
+              "Degré 3 : déplacement continu dans les zones de moyenne difficulté, techniques différenciées et enchaînées.",
+              "Degré 4 : déplacement fluide sur tout le parcours, techniques anticipées et ajustées aux variations du milieu."
+            ]
+          }
+        ],
+        "remarque": "Chaque élément est noté sur au moins 4 points. Les co-évaluateurs ajustent la note selon la difficulté de l’itinéraire (par exemple la cotation de la voie en escalade)."
+      },
+      "afl2": {
+        "intitule": "S’entraîner individuellement et collectivement pour se déplacer de manière efficiente et en toute sécurité.",
+        "degres": [
+          "Degré 1 – Entraînement inadapté : répétition et répartition des efforts insuffisantes ou aléatoires ; pas d’analyse de ses prestations.",
+          "Degré 2 – Entraînement partiellement adapté : gestion de l’effort peu appropriée au milieu ; identifie quelques éléments de sa prestation sans en tirer de régulation.",
+          "Degré 3 – Entraînement adapté : gestion des efforts appropriée ; analyse ses prestations et cible des éléments de progrès à court terme.",
+          "Degré 4 – Entraînement optimisé : régulation permanente des efforts ; objectifs concrets à court et moyen terme."
+        ]
+      },
+      "afl3": {
+        "intitule": "Coopérer pour réaliser un projet de déplacement, en toute sécurité.",
+        "degres": [
+          "Degré 1 : approximation dans les consignes et les rôles de sécurité ; élève centré sur sa propre pratique.",
+          "Degré 2 : applique les consignes et tient les rôles essentiels, parfois sans réactivité ni assurance.",
+          "Degré 3 : maîtrise les éléments et tient efficacement les rôles de sécurité dans des situations variées ; coopère aux analyses et décisions collectives.",
+          "Degré 4 : maîtrise les rôles et les conditions de sécurité ; aide les autres élèves et s’adapte aux ressources des partenaires."
+        ]
+      },
+      "choix": "AFL1 : difficulté de l’itinéraire, modalité individuelle ou collective. La répartition AFL2/AFL3 (minimum 2 points chacun) est annoncée avant le début de l’épreuve et ne change plus.",
+      "familles": [
+        {
+          "id": "escalade",
+          "nom": "Escalade",
+          "activites": [
+            "Voies de difficulté choisie"
+          ]
+        },
+        {
+          "id": "orientation",
+          "nom": "Course d’orientation",
+          "activites": [
+            "Parcours de balises de difficulté choisie"
+          ]
+        },
+        {
+          "id": "sauvetage",
+          "nom": "Sauvetage aquatique",
+          "activites": [
+            "Parcours de sauvetage en piscine"
+          ]
+        },
+        {
+          "id": "vtt",
+          "nom": "VTT",
+          "activites": [
+            "Itinéraire de difficulté choisie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca3",
+      "numero": 3,
+      "icone": "💃",
+      "titre": "Réaliser une prestation corporelle destinée à être vue et appréciée",
+      "activites": "Danse(s), arts du cirque, acrosport, gymnastique sportive",
+      "afl1": {
+        "intitule": "Composer et réaliser un enchaînement à visée esthétique ou acrobatique en combinant des formes corporelles codifiées, ou composer et interpréter une chorégraphie collective selon un projet artistique.",
+        "elements": [
+          {
+            "id": "forme",
+            "nom": "Réaliser et maîtriser des formes corporelles de plus en plus complexes (activités codifiées) ou s’engager pour interpréter (chorégraphie)",
+            "points": 6,
+            "criteres": [
+              "Degré 1 : exécution aléatoire, formes inadéquates, fautes, chutes ; engagement corporel timide.",
+              "Degré 2 : exécution globalement maîtrisée ; engagement inégal, présence intermittente.",
+              "Degré 3 : exécution maîtrisée et stabilisée, actions coordonnées ; réalisations précises.",
+              "Degré 4 : exécution dominée, actions combinées ; relation optimale entre engagement corporel et présence d’interprète."
+            ]
+          },
+          {
+            "id": "compo",
+            "nom": "Composer et présenter un enchaînement à visée esthétique ou acrobatique",
+            "points": 6,
+            "criteres": [
+              "Degré 1 : enchaînement morcelé, présentation désordonnée, attitude déconcentrée.",
+              "Degré 2 : enchaînement juxtaposé, uniforme, présentation parasitée.",
+              "Degré 3 : enchaînement organisé, présentation soignée, attitude concentrée.",
+              "Degré 4 : enchaînement rythmé et optimisé, présentation originale, attitude engagée."
+            ]
+          }
+        ],
+        "remarque": "Pour une chorégraphie collective : s’engager pour interpréter (engagement corporel, présence, qualité de réalisation) et composer et développer un propos artistique (propos, inventivité). Chaque élément est noté sur au moins 4 points ; pour les activités codifiées, la note est ajustée selon le niveau moyen de difficulté des éléments."
+      },
+      "afl2": {
+        "intitule": "Se préparer et s’engager, individuellement et collectivement, pour s’exprimer devant un public et susciter des émotions.",
+        "degres": [
+          "Degré 1 : engagement intermittent ou absent dans les phases de préparation, de recherche et de répétition ; travail inopérant, improductif ; peu d’attention aux autres.",
+          "Degré 2 : engagement modéré ; travail irrégulier, parfois opérant ; adhère au groupe.",
+          "Degré 3 : engagement impliqué ; travail qui développe et précise la composition ; coopère dans le groupe.",
+          "Degré 4 : engagement soutenu ; travail qui enrichit et valorise les points forts ; apporte une plus-value au groupe."
+        ]
+      },
+      "afl3": {
+        "intitule": "Choisir et assumer des rôles au service de la prestation collective (au moins un rôle choisi parmi deux proposés : spectateur, chorégraphe, juge, aide-parade).",
+        "degres": [
+          "Degré 1 : ne s’engage pas dans le rôle choisi ; contribue peu au fonctionnement du collectif.",
+          "Degré 2 : assure correctement le rôle choisi, avec hésitation et quelques erreurs ; participe au fonctionnement du collectif.",
+          "Degré 3 : assure le rôle choisi avec justesse ; favorise le fonctionnement du collectif.",
+          "Degré 4 : assure le rôle avec justesse et sait justifier son action ; acteur essentiel du fonctionnement du collectif."
+        ]
+      },
+      "choix": "AFL1 : choix de la composition présentée. AFL3 : un rôle parmi deux proposés.",
+      "familles": [
+        {
+          "id": "danse",
+          "nom": "Danse(s) et arts du cirque",
+          "activites": [
+            "Chorégraphie collective devant un public"
+          ]
+        },
+        {
+          "id": "acrosport",
+          "nom": "Acrosport",
+          "activites": [
+            "Enchaînement collectif codifié"
+          ]
+        },
+        {
+          "id": "gym",
+          "nom": "Gymnastique sportive",
+          "activites": [
+            "Enchaînement aux agrès (présentation individuelle possible)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca4",
+      "numero": 4,
+      "icone": "🏸",
+      "titre": "Conduire et maîtriser un affrontement collectif ou interindividuel pour gagner",
+      "activites": "Badminton, tennis de table, boxe française, judo, basket-ball, football, handball, rugby, volley-ball",
+      "afl1": {
+        "intitule": "S’engager pour gagner une rencontre en faisant des choix techniques et tactiques pertinents au regard de l’analyse du rapport de force.",
+        "elements": [
+          {
+            "id": "technique",
+            "nom": "S’engager et réaliser des actions techniques d’attaque et de défense en relation avec son projet de jeu",
+            "points": 6,
+            "criteres": [
+              "Degré 1 : peu de techniques maîtrisées, faible efficacité, passivité face à l’attaque.",
+              "Degré 2 : une ou deux techniques préférentielles, quelques occasions de marque, défense d’efficacité limitée.",
+              "Degré 3 : plusieurs techniques d’attaque ou de défense efficaces, création d’occasions de marque.",
+              "Degré 4 : variété de techniques efficaces, occasions nombreuses et diversifiées, opposition systématique."
+            ]
+          },
+          {
+            "id": "tactique",
+            "nom": "Faire des choix au regard de l’analyse du rapport de force",
+            "points": 6,
+            "criteres": [
+              "Degré 1 : forces et faiblesses non prises en compte ; adaptations aléatoires.",
+              "Degré 2 : projet sommaire ; quelques adaptations en cours de jeu.",
+              "Degré 3 : projet pertinent ; adaptations régulières ; choix stratégiques efficaces.",
+              "Degré 4 : plusieurs alternatives stratégiques ; adaptations permanentes."
+            ]
+          }
+        ],
+        "remarque": "Chaque élément est noté sur au moins 4 points ; les co-évaluateurs ajustent la note selon la proportion de rencontres gagnées."
+      },
+      "afl2": {
+        "intitule": "Se préparer et s’entraîner, individuellement ou collectivement, pour conduire et maîtriser un affrontement.",
+        "degres": [
+          "Degré 1 – Entraînement inadapté : faible engagement dans les phases de répétition.",
+          "Degré 2 – Entraînement partiellement adapté : engagement régulier ; a besoin d’être guidé dans ses choix d’exercices.",
+          "Degré 3 – Entraînement adapté : identifie un point fort ou un point faible et choisit des exercices adaptés.",
+          "Degré 4 – Entraînement optimisé : identifie plusieurs axes de progrès et choisit et ordonne des exercices adaptés."
+        ]
+      },
+      "afl3": {
+        "intitule": "Choisir et assumer un rôle qui permet un fonctionnement collectif solidaire : partenaire d’entraînement, arbitre ou coach.",
+        "degres": [
+          "Degré 1 : rôle assuré de manière inefficace et aléatoire ; ne contribue pas au collectif.",
+          "Degré 2 : rôle assuré avec hésitation et des erreurs ; participe au fonctionnement du collectif.",
+          "Degré 3 : rôle assuré avec sérieux et efficacité ; favorise le fonctionnement collectif dans le respect des règles.",
+          "Degré 4 : excelle dans son rôle, acteur essentiel du collectif, aide les autres à assumer leur rôle."
+        ]
+      },
+      "choix": "AFL1 : poste dans l’équipe, style de jeu en raquettes, situation d’évaluation. AFL3 : un rôle parmi deux (partenaire d’entraînement, arbitre ou coach).",
+      "familles": [
+        {
+          "id": "raquettes",
+          "nom": "Sports de raquette",
+          "activites": [
+            "Badminton",
+            "Tennis de table"
+          ]
+        },
+        {
+          "id": "combat",
+          "nom": "Sports de combat",
+          "activites": [
+            "Boxe française",
+            "Judo"
+          ]
+        },
+        {
+          "id": "collectifs",
+          "nom": "Sports collectifs",
+          "activites": [
+            "Basket-ball",
+            "Football",
+            "Handball",
+            "Rugby",
+            "Volley-ball"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ca5",
+      "numero": 5,
+      "icone": "🏋️",
+      "titre": "Réaliser une activité physique pour développer ses ressources et s’entretenir",
+      "activites": "Course en durée, musculation, natation en durée, step, yoga",
+      "afl1": {
+        "intitule": "S’engager pour obtenir les effets recherchés selon son projet personnel, en faisant des choix de paramètres d’entraînement cohérents avec le thème retenu.",
+        "elements": [
+          {
+            "id": "produire",
+            "nom": "Produire (réaliser sa séance d’entraînement)",
+            "points": 6,
+            "criteres": [
+              "Degré 1 : gestuelles non maîtrisées, erreurs répétées, matériel mal utilisé.",
+              "Degré 2 : dégradations observables de la gestuelle ; charge incohérente avec ses ressources.",
+              "Degré 3 : gestuelles efficaces ; charge adaptée à ses ressources et à l’effort poursuivi.",
+              "Degré 4 : gestuelle efficiente pour atteindre des zones d’effort intenses ou prolongées ; charge optimisée et régulée."
+            ]
+          },
+          {
+            "id": "analyser",
+            "nom": "Analyser (ressentis, données chiffrées, régulations)",
+            "points": 6,
+            "criteres": [
+              "Degré 1 : ressentis non identifiés, régulations absentes ou incohérentes.",
+              "Degré 2 : identification partielle des ressentis, régulations inadaptées aux indicateurs.",
+              "Degré 3 : identifie ses ressentis, relève des données chiffrées exploitables, régule ses paramètres.",
+              "Degré 4 : croise indicateurs chiffrés et ressentis ; régulation différée source de conception future."
+            ]
+          }
+        ],
+        "remarque": "Chaque élément est noté sur au moins 4 points. L’épreuve s’appuie sur un carnet de suivi et sur un thème d’entraînement motivé par un projet personnel."
+      },
+      "afl2": {
+        "intitule": "S’entraîner pour développer ses ressources et s’entretenir en fonction des effets recherchés (appui possible sur le carnet de suivi).",
+        "degres": [
+          "Degré 1 : choix non référencés et potentiellement dangereux ; séquence inadaptée à ses ressources.",
+          "Degré 2 : met en relation de façon incohérente les indicateurs et les effets recherchés ; reproduit un projet de façon stéréotypée.",
+          "Degré 3 : construit des séquences cohérentes à partir de paramètres simples ; conçoit de manière pertinente son projet d’entraînement.",
+          "Degré 4 : personnalise et régule les paramètres ; conçoit, régule et justifie son projet d’entraînement."
+        ]
+      },
+      "afl3": {
+        "intitule": "Coopérer pour faire progresser.",
+        "degres": [
+          "Degré 1 : agit seul et pour lui-même et/ou interagit dangereusement.",
+          "Degré 2 : collabore au niveau organisationnel ponctuellement et/ou de manière inadaptée.",
+          "Degré 3 : disponible et réactif pour observer et aider son partenaire à partir d’indicateurs simples.",
+          "Degré 4 : conseille un partenaire à partir d’indicateurs précis et pertinents."
+        ]
+      },
+      "choix": "AFL1 et AFL2 : projet et paramètres d’entraînement. AFL3 : modalités d’aide du ou des partenaires. La répartition AFL2/AFL3 (minimum 2 points chacun) est annoncée avant l’épreuve.",
+      "familles": [
+        {
+          "id": "course-duree",
+          "nom": "Course en durée",
+          "activites": [
+            "Course en durée"
+          ]
+        },
+        {
+          "id": "musculation",
+          "nom": "Musculation",
+          "activites": [
+            "Musculation"
+          ]
+        },
+        {
+          "id": "natation-duree",
+          "nom": "Natation en durée",
+          "activites": [
+            "Natation en durée"
+          ]
+        },
+        {
+          "id": "step",
+          "nom": "Step",
+          "activites": [
+            "Step"
+          ]
+        },
+        {
+          "id": "yoga",
+          "nom": "Yoga",
+          "activites": [
+            "Yoga"
+          ]
+        }
+      ]
+    }
+  ],
+  "seuilsCA1": {
+    "intitule": "Seuil de performance national médian : passage du degré 2 au degré 3 (3 points sur 6)",
+    "note": "Seuil de l’annexe officielle, « garçons » et « filles ». L’établissement construit le reste du barème de part et d’autre. Les épreuves en temps imparti (1’30, 3’, 4’30) donnent la distance parcourue.",
+    "lignes": [
+      {
+        "id": "d500",
+        "famille": "demi-fond",
+        "nom": "500 m",
+        "type": "temps",
+        "distance": 500,
+        "g": "1’52",
+        "f": "2’20",
+        "vg": 16.07,
+        "vf": 12.86
+      },
+      {
+        "id": "d750",
+        "famille": "demi-fond",
+        "nom": "750 m",
+        "type": "temps",
+        "distance": 750,
+        "g": "2’55",
+        "f": "3’40",
+        "vg": 15.43,
+        "vf": 12.27
+      },
+      {
+        "id": "d800",
+        "famille": "demi-fond",
+        "nom": "800 m",
+        "type": "temps",
+        "distance": 800,
+        "g": "3’08",
+        "f": "3’56",
+        "vg": 15.32,
+        "vf": 12.2
+      },
+      {
+        "id": "d1000",
+        "famille": "demi-fond",
+        "nom": "1 000 m",
+        "type": "temps",
+        "distance": 1000,
+        "g": "4’00",
+        "f": "4’59",
+        "vg": 15.0,
+        "vf": 12.04
+      },
+      {
+        "id": "d1200",
+        "famille": "demi-fond",
+        "nom": "1 200 m",
+        "type": "temps",
+        "distance": 1200,
+        "g": "4’55",
+        "f": "6’04",
+        "vg": 14.64,
+        "vf": 11.87
+      },
+      {
+        "id": "d1500",
+        "famille": "demi-fond",
+        "nom": "1 500 m",
+        "type": "temps",
+        "distance": 1500,
+        "g": "6’25",
+        "f": "7’50",
+        "vg": 14.03,
+        "vf": 11.49
+      },
+      {
+        "id": "t90",
+        "famille": "demi-fond",
+        "nom": "Course de 1’30",
+        "type": "distance",
+        "duree": 90,
+        "g": "425 m",
+        "f": "325 m",
+        "vg": 17.0,
+        "vf": 13.0
+      },
+      {
+        "id": "t180",
+        "famille": "demi-fond",
+        "nom": "Course de 3’",
+        "type": "distance",
+        "duree": 180,
+        "g": "770 m",
+        "f": "630 m",
+        "vg": 15.4,
+        "vf": 12.6
+      },
+      {
+        "id": "t270",
+        "famille": "demi-fond",
+        "nom": "Course de 4’30",
+        "type": "distance",
+        "duree": 270,
+        "g": "1 100 m",
+        "f": "915 m",
+        "vg": 14.67,
+        "vf": 12.2
+      },
+      {
+        "id": "h200",
+        "famille": "haies",
+        "nom": "200 m haies",
+        "detail": "Haies : garçons 76 cm, filles 65 cm",
+        "type": "temps",
+        "g": "35’’4",
+        "f": "42’’5"
+      },
+      {
+        "id": "h50",
+        "famille": "haies",
+        "nom": "50 m haies",
+        "detail": "Haies : garçons 84 cm, filles 76 cm",
+        "type": "temps",
+        "g": "9’’8",
+        "f": "11’’1"
+      },
+      {
+        "id": "s200",
+        "famille": "vitesse",
+        "nom": "Sprint long 200 m",
+        "type": "temps",
+        "g": "29’’2",
+        "f": "35’’"
+      },
+      {
+        "id": "s50",
+        "famille": "vitesse",
+        "nom": "Sprint court 50 m",
+        "type": "temps",
+        "g": "7’’4",
+        "f": "8’’5"
+      },
+      {
+        "id": "r4x50",
+        "famille": "vitesse",
+        "nom": "Relais court 4 × 50 m",
+        "type": "temps",
+        "g": "29’’2",
+        "f": "34’’7"
+      },
+      {
+        "id": "disque",
+        "famille": "lancers",
+        "nom": "Disque",
+        "detail": "Garçons 1,5 kg, filles 1 kg",
+        "type": "distance",
+        "g": "18,5 m",
+        "f": "12,5 m"
+      },
+      {
+        "id": "javelot",
+        "famille": "lancers",
+        "nom": "Javelot",
+        "detail": "Garçons 700 g, filles 500 g",
+        "type": "distance",
+        "g": "20,45 m",
+        "f": "13 m"
+      },
+      {
+        "id": "poids",
+        "famille": "lancers",
+        "nom": "Poids",
+        "detail": "Garçons 5 kg, filles 3 kg",
+        "type": "distance",
+        "g": "7,1 m",
+        "f": "6 m"
+      },
+      {
+        "id": "hauteur",
+        "famille": "sauts",
+        "nom": "Hauteur",
+        "type": "hauteur",
+        "g": "1,39 m",
+        "f": "1,14 m"
+      },
+      {
+        "id": "perche",
+        "famille": "sauts",
+        "nom": "Perche",
+        "type": "hauteur",
+        "g": "2,10 m",
+        "f": "1,6 m"
+      },
+      {
+        "id": "penta",
+        "famille": "sauts",
+        "nom": "Multi-bond : penta-bond",
+        "type": "distance",
+        "g": "12,5 m",
+        "f": "10,1 m"
+      },
+      {
+        "id": "triple",
+        "famille": "sauts",
+        "nom": "Multi-bond : triple saut",
+        "type": "distance",
+        "g": "9,4 m",
+        "f": "7,6 m"
+      },
+      {
+        "id": "longueur",
+        "famille": "sauts",
+        "nom": "Longueur",
+        "type": "distance",
+        "g": "3,9 m",
+        "f": "2,9 m"
+      },
+      {
+        "id": "crawl50",
+        "famille": "natation-vitesse",
+        "nom": "50 m crawl",
+        "type": "temps",
+        "g": "40’’",
+        "f": "53’’"
+      },
+      {
+        "id": "nages50",
+        "famille": "natation-vitesse",
+        "nom": "50 m multi-nages ou autres nages",
+        "type": "temps",
+        "g": "46’’",
+        "f": "57’’5"
+      }
+    ]
+  }
+}

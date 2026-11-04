@@ -37,6 +37,7 @@ const PhotoFiche = lazy(() => import('./pages/PhotoFiche.jsx'))
 const DailyChallenge = lazy(() => import('./pages/DailyChallenge.jsx'))
 const FormulaWorkshop = lazy(() => import('./pages/FormulaWorkshop.jsx'))
 const Methodo = lazy(() => import('./pages/Methodo.jsx'))
+const SportBac = lazy(() => import('./pages/SportBac.jsx'))
 const Shop = lazy(() => import('./pages/Shop.jsx'))
 const Privacy = lazy(() => import('./pages/Privacy.jsx'))
 const Cgu = lazy(() => import('./pages/Cgu.jsx'))
@@ -120,6 +121,7 @@ export default function App() {
         <Route path="/formules" element={<Navigate to="/atelier-formules" replace />} />
         <Route path="/atelier-formules" element={<FormulaWorkshop />} />
         <Route path="/methodo" element={<Methodo />} />
+        <Route path="/sport-bac" element={<SportBac />} />
         <Route path="/boutique" element={<Shop />} />
         <Route path="/confidentialite" element={<Privacy />} />
         <Route path="/cgu" element={<Cgu />} />

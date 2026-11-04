@@ -18,7 +18,8 @@ import { genVerbEN, genVerbES, genGrammarEN, genGrammarES } from '../data/langge
 // au lieu d'alourdir le démarrage.
 const COMMUN = import.meta.glob(['../../content/commun/*.json', '!../../content/commun/formules.json',
   '!../../content/commun/grand-oral.json', '!../../content/commun/etude-gestion.json', '!../../content/commun/outils-projet.json',
-  '!../../content/commun/methodo.json', '!../../content/commun/atelier-formules.json'], { eager: true, import: 'default' })
+  '!../../content/commun/methodo.json', '!../../content/commun/atelier-formules.json',
+  '!../../content/commun/eps-bac.json', '!../../content/commun/eps-entrainements.json'], { eager: true, import: 'default' })
 const FICHIERS = import.meta.glob(['../../content/*/*.json', '!../../content/commun/*.json'], { import: 'default' })
 
 export const ORDRE_MATIERES = INDEX.ordre
