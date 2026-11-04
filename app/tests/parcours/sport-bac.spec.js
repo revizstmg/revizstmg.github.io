@@ -5,6 +5,7 @@ import { preparer, etatEleve } from './eleve.js'
 test('sport au bac : champs, seuils, estimation de note et plan d’entraînement', async ({ page }) => {
   const erreurs = await preparer(page, etatEleve(), { abonnement: 'premium' })
   await page.goto('./#/sport-bac')
+  await page.getByRole('button', { name: 'Référentiel détaillé', exact: true }).click()
   await expect(page.getByRole('heading', { level: 1, name: 'Sport au bac' })).toBeVisible()
   await expect(page.getByText('Trois épreuves en contrôle en cours de formation')).toBeVisible()
   // Cinq champs d'apprentissage, détail du champ 4
@@ -38,6 +39,7 @@ test('sport au bac : accessible et sans débord à 320 px', async ({ page }) => 
   await page.setViewportSize({ width: 320, height: 700 })
   await preparer(page, etatEleve(), { abonnement: 'premium' })
   await page.goto('./#/sport-bac')
+  await page.getByRole('button', { name: 'Référentiel détaillé', exact: true }).click()
   await expect(page.getByRole('heading', { level: 1, name: 'Sport au bac' })).toBeVisible()
   expect((await new AxeBuilder({ page }).include('main').withTags(['wcag2a', 'wcag2aa']).analyze()).violations).toEqual([])
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)

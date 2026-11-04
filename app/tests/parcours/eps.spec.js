@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright'
 import {preparer,etatEleve} from './eleve.js'
 test('EPS : catalogue, filtres et entraînement adapté imprimable',async({page},info)=>{
  await preparer(page,etatEleve(),{abonnement:'premium'});await page.goto('/#/cours')
- await page.getByRole('link',{name:/Sport au bac/}).click();await page.getByRole('button',{name:/Les 26 activités/}).click()
+ await page.getByRole('link',{name:/Sport au bac/}).click();await page.getByRole('button',{name:'Référentiel détaillé',exact:true}).click();await page.getByRole('button',{name:/Les 26 activités/}).click()
  await expect(page.getByRole('heading',{name:'Prépare ton épreuve'})).toBeVisible()
  await expect(page.locator('.eps-activities button')).toHaveCount(26)
  await page.getByLabel('Rechercher une activité').fill('sauvetage');await expect(page.locator('.eps-activities button')).toHaveCount(1)
@@ -17,7 +17,7 @@ test('EPS : catalogue, filtres et entraînement adapté imprimable',async({page}
  await page.emulateMedia({media:'print'});await expect(page.locator('.eps-print')).toBeHidden();await expect(page.locator('.eps-plan')).toBeVisible();await page.pdf({path:info.outputPath('programme-eps.pdf'),format:'A4'})
 })
 test('EPS : barèmes ponctuels séparés du CCF et palier exact du 800 m',async({page})=>{
- await preparer(page,etatEleve(),{abonnement:'premium'});await page.goto('/#/sport-bac');await page.getByRole('button',{name:/Les 26 activités/}).click()
+ await preparer(page,etatEleve(),{abonnement:'premium'});await page.goto('/#/sport-bac');await page.getByRole('button',{name:'Référentiel détaillé',exact:true}).click();await page.getByRole('button',{name:/Les 26 activités/}).click()
  await page.getByText('Repères nationaux du CA 1',{exact:true}).click()
  await expect(page.getByRole('table')).toContainText('3 min 08 s')
  await page.getByRole('button',{name:'Examen ponctuel',exact:true}).click();await expect(page.locator('.eps-activities button')).toHaveCount(3)
@@ -29,14 +29,14 @@ test('EPS : barèmes ponctuels séparés du CCF et palier exact du 800 m',async(
  await expect(page.getByRole('link',{name:/Ouvrir le référentiel/})).toHaveAttribute('href','/eps/referentiel-ponctuel-2026.pdf')
 })
 test('EPS : petit écran, mode sombre et recherche vide',async({page})=>{
- await page.setViewportSize({width:320,height:568});await preparer(page,etatEleve({theme:'dark'}),{abonnement:'premium'});await page.goto('/#/sport-bac');await page.getByRole('button',{name:/Les 26 activités/}).click()
+ await page.setViewportSize({width:320,height:568});await preparer(page,etatEleve({theme:'dark'}),{abonnement:'premium'});await page.goto('/#/sport-bac');await page.getByRole('button',{name:'Référentiel détaillé',exact:true}).click();await page.getByRole('button',{name:/Les 26 activités/}).click()
  await page.getByLabel('Rechercher une activité').fill('introuvable');await expect(page.locator('.eps-page [role=status]')).toContainText('Aucune activité')
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
  await page.getByLabel('Rechercher une activité').fill('');await page.getByLabel('Champ d’apprentissage').selectOption('5');await expect(page.locator('.eps-activities button')).toHaveCount(5)
 })
 
 test('EPS : contrôles traduits hors ligne et contraste dans les deux thèmes',async({page},info)=>{
- await preparer(page,etatEleve({lang:'de'}),{abonnement:'premium'});await page.goto('/#/sport-bac');await page.getByRole('button',{name:/Les 26 activités/}).click()
+ await preparer(page,etatEleve({lang:'de'}),{abonnement:'premium'});await page.goto('/#/sport-bac');await page.getByRole('button',{name:'Ausführlicher Bewertungsrahmen',exact:true}).click();await page.getByRole('button',{name:/Les 26 activités/}).click()
  await expect(page.getByRole('heading',{name:'Bereite dich auf die Prüfung vor'})).toBeVisible()
  await expect(page.getByRole('button',{name:'Trainingsplan erstellen'})).toBeVisible()
  for(const dark of [false,true]){
