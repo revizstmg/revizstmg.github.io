@@ -444,9 +444,12 @@ button, a { transition: transform 0.15s cubic-bezier(0.22, 0.68, 0.24, 1); }
 .welcome-title {
   font-family: 'Cormorant Garamond', 'Didot', 'Bodoni MT', Georgia, 'Times New Roman', serif;
   font-weight: 300;
-  font-size: clamp(2.6rem, 11vw, 5.5rem);
+  font-size: clamp(2.2rem, 9vw, 5.5rem);
   line-height: 1.05;
   letter-spacing: 0.26em;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  hyphens: none;
   text-indent: 0.26em;
   margin-top: 1.1rem;
   opacity: 0;
@@ -485,7 +488,7 @@ button, a { transition: transform 0.15s cubic-bezier(0.22, 0.68, 0.24, 1); }
   animation: welcome-soft 1.2s ease-out 3s both;
 }
 @keyframes welcome-rise {
-  0% { opacity: 0; transform: translateY(16px); letter-spacing: 0.5em; filter: blur(6px); }
+  0% { opacity: 0; transform: translateY(16px); filter: blur(6px); }
   60% { opacity: 1; }
   100% { opacity: 1; transform: translateY(0); filter: blur(0); }
 }
