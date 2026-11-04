@@ -39,6 +39,23 @@ jobs:
           [[ "$EMPREINTE_ATTENDUE" =~ ^[0-9a-f]{64}$ ]]
           empreinte_reelle=$(sha256sum index.html | cut -d ' ' -f 1)
           test "$empreinte_reelle" = "$EMPREINTE_ATTENDUE"
+      - name: Inclure les PDF EPS vérifiés
+        run: |
+          python3 - <<'PYTHON'
+          import hashlib, json, pathlib, shutil
+          source = pathlib.Path('app/public/eps')
+          target = pathlib.Path('eps')
+          documents = json.loads(pathlib.Path('app/content/eps/sources.json').read_text())['documents']
+          assert len(documents) == 3
+          target.mkdir(exist_ok=True)
+          for document in documents:
+              name = document['file']
+              assert pathlib.Path(name).name == name and name.endswith('.pdf')
+              data = (source / name).read_bytes()
+              assert data.startswith(b'%PDF-')
+              assert hashlib.sha256(data).hexdigest() == document['sha256']
+              shutil.copyfile(source / name, target / name)
+          PYTHON
       - name: Préparer les fichiers Pages vérifiés
         uses: actions/upload-pages-artifact@v3
         with:
