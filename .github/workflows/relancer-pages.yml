@@ -9,7 +9,12 @@ on:
       empreinte_index:
         description: SHA-256 de l’index compilé déjà testé
         required: true
-        default: a501574700371f8e028e44a24435d8d8ef1552e57591cd48bd65f70a344e2484
+        default: c924cef174de0f546e68bd3d6d483732b7d3e00058655f324836eef8997be5a9
+        type: string
+
+      annuler_deploiement:
+        description: SHA exact d’un ancien déploiement Pages bloqué (facultatif)
+        required: false
         type: string
 
 permissions:
@@ -33,12 +38,26 @@ jobs:
       - uses: actions/checkout@v4
       - name: Vérifier la compilation attendue
         env:
-          EMPREINTE_ATTENDUE: ${{ inputs.empreinte_index || 'a501574700371f8e028e44a24435d8d8ef1552e57591cd48bd65f70a344e2484' }}
+          EMPREINTE_ATTENDUE: ${{ inputs.empreinte_index || 'c924cef174de0f546e68bd3d6d483732b7d3e00058655f324836eef8997be5a9' }}
         run: |
           set -eu
           [[ "$EMPREINTE_ATTENDUE" =~ ^[0-9a-f]{64}$ ]]
           empreinte_reelle=$(sha256sum index.html | cut -d ' ' -f 1)
           test "$empreinte_reelle" = "$EMPREINTE_ATTENDUE"
+      - name: Annuler uniquement l’ancien déploiement désigné
+        if: github.event_name == 'workflow_dispatch' && inputs.annuler_deploiement != ''
+        uses: actions/github-script@v7
+        env:
+          ANCIEN_DEPLOIEMENT: ${{ inputs.annuler_deploiement }}
+        with:
+          script: |
+            const previous = process.env.ANCIEN_DEPLOIEMENT;
+            if (!/^[a-f0-9]{40}$/.test(previous) || previous === context.sha) {
+              throw new Error('Identifiant ancien invalide ou identique à la version courante');
+            }
+            await github.request('POST /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel', {
+              ...context.repo, pages_deployment_id: previous
+            });
       - name: Inclure les PDF EPS vérifiés
         run: |
           python3 - <<'PYTHON'
