@@ -37,3 +37,9 @@ Alternative concrète : portail body, hauteur100dvh, zone intérieure défilable
 - Une sonde initiale de partage a utilisé browser.newPage au lieu d’un contexte explicite, interdit par axe ; corrigée avant la preuve finale. Les sondes micro ont ciblé des contrôles erronés et ne constituent aucune preuve de panne de dictée ; elles ne figurent pas parmi les défauts.
 - Pas de certification des RLS appliquées, OAuth réel, délivrabilité, permissions micro sur appareil, qualité de correction Gemini, paiement, push, exactitude exhaustive de tous les cours ou liens vidéo. Les simulations ne permettent pas ces conclusions.
 - Cet audit explore les parcours et les états ciblés ; il ne garantit pas l’absence de toute erreur sur tout appareil.
+
+### Complément après reprise de l’environnement
+
+Balayage léger terminé :34destinations valides à1280px sombre/français puis les mêmes34à320px sombre/arabe, y compris la vraie route `/subject/langues`.68vues vérifiées : zéro débordement horizontal et zéro exception collectée. Ce complément ne relance pas axe ni les suites interrompues ; il vérifie l’affichage et le chargement des vues principales, pas chaque action à l’intérieur. Résultats : `ux-preuves/scan-resume.json`, `resume.log`.
+
+Les sondes `.mjs` conservées sont à copier dans `app/` pour utiliser leurs imports relatifs ; elles supposent le serveur local de compilation au port4178 et Playwright installé. Elles bloquent les services externes via le préparateur existant.

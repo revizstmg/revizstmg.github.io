@@ -1758,3 +1758,5 @@ Prochaine action :
 - Audit indépendant demandé : parcours, clarté et ergonomie mobile/ordinateur sur source90c6a463. Comptes synthétiques, services externes bloqués ; aucune modification produit ni donnée réelle. Rapport et preuves dans le worktree audit/ux-complet-20261104.
 
 - Deux défauts UX documentés et prouvés : partage flashcards hors écran/clavier et Focus plein écran (constat antérieur encore présent). Quatre propositions ergonomiques séparées. Contrôles synthétiques et interruption de l’environnement explicités dans docs/audits/2026-11-04/UX-INDEPENDANT.md ; aucune correction applicative.
+
+- Complément après retour de l’environnement :68vues supplémentaires (34bureau sombre/français,34mobile sombre/arabe) sans débordement ni exception, contrôles légers uniquement. Preuves scan-resume.json ; suites interrompues non présentées comme réussies.
