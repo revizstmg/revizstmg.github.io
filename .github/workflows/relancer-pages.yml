@@ -1,0 +1,37 @@
+name: Relancer Pages vérifié
+
+on:
+  workflow_dispatch:
+    inputs:
+      empreinte_index:
+        description: SHA-256 de l’index compilé déjà testé
+        required: true
+        default: a501574700371f8e028e44a24435d8d8ef1552e57591cd48bd65f70a344e2484
+        type: string
+
+permissions:
+  contents: read
+  pages: write
+
+concurrency:
+  group: relancer-pages-verifie
+  cancel-in-progress: false
+
+jobs:
+  reconstruire:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vérifier la compilation attendue
+        env:
+          EMPREINTE_ATTENDUE: ${{ inputs.empreinte_index }}
+        run: |
+          set -eu
+          [[ "$EMPREINTE_ATTENDUE" =~ ^[0-9a-f]{64}$ ]]
+          empreinte_reelle=$(sha256sum index.html | cut -d ' ' -f 1)
+          test "$empreinte_reelle" = "$EMPREINTE_ATTENDUE"
+      - name: Reconstruire la version vérifiée
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "/repos/${{ github.repository }}/pages/builds"
