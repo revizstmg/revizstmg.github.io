@@ -1,6 +1,9 @@
 name: Relancer Pages vérifié
 
 on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/relancer-pages.yml]
   workflow_dispatch:
     inputs:
       empreinte_index:
@@ -19,13 +22,14 @@ concurrency:
 
 jobs:
   reconstruire:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - name: Vérifier la compilation attendue
         env:
-          EMPREINTE_ATTENDUE: ${{ inputs.empreinte_index }}
+          EMPREINTE_ATTENDUE: ${{ inputs.empreinte_index || 'a501574700371f8e028e44a24435d8d8ef1552e57591cd48bd65f70a344e2484' }}
         run: |
           set -eu
           [[ "$EMPREINTE_ATTENDUE" =~ ^[0-9a-f]{64}$ ]]
