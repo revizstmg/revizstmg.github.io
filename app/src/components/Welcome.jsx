@@ -365,7 +365,7 @@ export default function Welcome() {
       <div ref={helloPanel} className={`welcome-root no-print ${leaving ? 'is-leaving' : ''}`} role="dialog" aria-modal="true" aria-label={t('welcome')}>
         <button type="button" className="welcome-hello max-w-full min-w-0 !px-3 min-[375px]:!px-6" onClick={finish} aria-label={t('enterHint')}>
           <p className="welcome-kicker max-w-full break-words max-[374px]:!tracking-[0.2em] max-[374px]:!indent-[0.2em]">RévizSTMG</p>
-          <h1 className="welcome-title max-w-full break-words [hyphens:auto] max-[374px]:!text-[1.9rem] max-[374px]:!tracking-[0.08em] max-[374px]:!indent-[0.08em]">{t('welcome')}</h1>
+          <h1 className="welcome-title max-w-full whitespace-nowrap max-[374px]:!text-[1.9rem] max-[374px]:!tracking-[0.08em] max-[374px]:!indent-[0.08em]">{t('welcome')}</h1>
           {helloName && <p className="welcome-name">{helloName}</p>}
           <span className="welcome-rule" aria-hidden />
           <p className="welcome-hint">{t('enterHint')}</p>

@@ -13,6 +13,21 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
 
+    <!-- Premier affichage : le texte de secours (moteurs de recherche, sans JavaScript)
+         reste caché tant que l'app se charge, sinon il s'affiche sans mise en forme
+         avant « Bienvenue ». Si l'app ne démarre pas en 8 s, on le montre. -->
+    <script>
+      document.documentElement.classList.add('js')
+      setTimeout(function () {
+        if (document.querySelector('#root > .public-entry')) document.documentElement.classList.remove('js')
+      }, 8000)
+    </script>
+    <style>
+      html, body { background: #fbfaf7 }
+      @media (prefers-color-scheme: dark) { html, body { background: #1b1813 } }
+      .js #root > .public-entry { visibility: hidden }
+    </style>
+
     <title>Révision bac STMG | RévizSTMG</title>
     <meta name="description" content="Révise le bac STMG, en Première et en Terminale : cours clairs et exercices gratuits, matière par matière ; flashcards, bacs blancs et outils de révision avec Premium. Sans publicité." />
     <link rel="canonical" href="https://revizstmg.github.io/" />
