@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "catalogue": 26,
+  "seances": 8,
+  "palier800": 10,
+  "publicReads": 9,
+  "pdfs": [
+    {
+      "file": "referentiel-ccf-2026.pdf",
+      "status": 200,
+      "bytes": 412394,
+      "sha256": "8e26db9aee74ceb10b17ebd38bea1a9da2cb77a8bccfd018824181e9087c8e63"
+    },
+    {
+      "file": "referentiel-ponctuel-2026.pdf",
+      "status": 200,
+      "bytes": 166309,
+      "sha256": "bea01d14ddad74ce2aff09a50d2fb23d4372f0cfcaff156113e115d5ee5d5b50"
+    },
+    {
+      "file": "programme-eps-2019.pdf",
+      "status": 200,
+      "bytes": 292978,
+      "sha256": "6dfd563ac720e8a91f5a0b8a536cc9554d27da9984014351e0dd92c1f88d66fb"
+    }
+  ],
+  "errors": []
+}
