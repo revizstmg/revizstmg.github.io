@@ -1715,6 +1715,8 @@ Prochaine action :
 - Câblage : App.jsx, navTabs.js, SiteMobileMenu.jsx, contenu.js (exclusion de l’import automatique), i18n sportBacTitle ×6, mesure.js (compté comme « guide », aucune migration), pwa/404.html (route). Tests : tests/eps-bac.test.js (24) et tests/parcours/sport-bac.spec.js (3). Aucun déploiement Supabase, aucune migration.
 - À faire par un humain : relecture par un professeur d’EPS ; coefficient 6 issu d’une source secondaire (marqué comme tel dans le JSON) ; décision Premium ou gratuit.
 
+### SITEMAP-ECHEC-20261020-RETOUR
+- Retour après publication (consigné le 4 novembre 2026, d’après #46 du 20 octobre) : le propriétaire confirme que **les deux** entrées, sitemap.xml et sitemap.txt, restent en échec ; aucune action manuelle détectée. Le contournement texte n’a pas résolu le statut Google. Contrôle HTTP répété : les deux restent accessibles avec 200 et types MIME corrects. Rapport de diagnostic actualisé (docs/audits/2026-10-20/DIAGNOSTIC-SITEMAP.md) ; état du rapport robots.txt de Google demandé au propriétaire. Aucune nouvelle modification applicative justifiée à ce stade.
 ### RETRAIT-NOM-20261104-CLAUDE
 - Demande du propriétaire : retirer « Matys DONAT » de partout. Fait dans les sources : pied de page (Layout), mentions légales (Cgu), politique de confidentialité (responsable du traitement au singulier), pages publiques générées (à propos, partager, texte de secours, llms.txt, fiches), livres de traduction ×5, docs/DIFFUSION-RESSOURCES.md, tests associés. Les fichiers compilés à la racine se régénèrent au prochain déploiement ; les captures d’audit historiques (docs/audits/…) ne sont pas réécrites. Le texte juridique est maintenant au singulier : à faire relire.
 ### AFFICHAGE-ENTREE-20261104-CLAUDE
