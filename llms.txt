@@ -1,6 +1,6 @@
 # RévizSTMG
 
-> Cours publics de Première et Terminale STMG. Projet indépendant de deux élèves, sans certification professorale revendiquée.
+> Cours publics de Première et Terminale STMG. Projet indépendant d’un élève, sans certification professorale revendiquée.
 
 Les pages HTML de cours sont lisibles sans JavaScript et reprennent le contenu courant de l’application. Les exercices interactifs nécessitent JavaScript. Les sources et limites sont précisées dans chaque fiche et la page À propos.
 
