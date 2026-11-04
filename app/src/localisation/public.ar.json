@@ -3274,5 +3274,16 @@
   "Musculation": "تدريب القوة",
   "Natation en durée": "سباحة التحمل",
   "Step": "تمارين الخطوة",
-  "Yoga": "اليوغا"
+  "Yoga": "اليوغا",
+  "Choisis ton activité, comprends les critères et construis quatre semaines d’entraînement.": "اختر نشاطك وافهم المعايير وأنشئ برنامج تدريب لأربعة أسابيع.",
+  "Cadre national du bac général et technologique. En Première, ces séances servent à préparer la Terminale.": "الإطار الوطني للبكالوريا الفرنسية العامة والتكنولوجية. في السنة الأولى، تساعد هذه الحصص على الاستعداد للسنة النهائية.",
+  "L’AFL 1 compte pour 12 points ; les AFL 2 et 3 pour 8 points, répartis au choix en 4/4, 6/2 ou 2/6. Les critères sont nationaux, mais les grilles par activité sont adaptées par le lycée et validées dans l’académie. Demande ta grille à ton professeur.": "معيار AFL 1 من 12 نقطة، ومعيارا AFL 2 وAFL 3 معًا من 8 نقاط، توزع باختيارك 4/4 أو 6/2 أو 2/6. المعايير وطنية لكن المدرسة تكيّف جداول كل نشاط وتعتمدها السلطة التعليمية. اطلب جدولك من أستاذك.",
+  "Les points indiquent le maximum de chaque critère, pas une note déjà obtenue. Les degrés de maîtrise et les conditions complètes figurent dans le PDF officiel.": "تشير النقاط إلى الحد الأقصى لكل معيار وليست درجة حصلت عليها. توجد مستويات الإتقان والشروط الكاملة في ملف PDF الرسمي.",
+  "La préparation, l’entraînement et les rôles complémentaires font aussi partie de l’évaluation. La note exacte dépend de la grille de ton lycée.": "يشمل التقييم أيضًا الاستعداد والتدريب والأدوار المساندة. تعتمد الدرجة الدقيقة على جدول التقييم في مدرستك.",
+  "Ces valeurs correspondent uniquement au seuil médian de 3 points sur les 6 points de performance. Ce ne sont ni un barème complet ni une note sur 20. Les hauteurs et masses sont indiquées dans l’ordre garçons / filles.": "تمثل هذه القيم فقط العتبة الوسطية البالغة 3 نقاط من أصل 6 نقاط للأداء. ليست جدول تقييم كاملًا ولا درجة من 20. الارتفاعات والأوزان مرتبة للبنين ثم البنات.",
+  "La performance chronométrique compte pour 10 points. Le jury évalue séparément l’allure, l’échauffement et l’estimation du temps. Le calcul ci-dessous indique uniquement le palier atteint, sans interpolation.": "الأداء الزمني من 10 نقاط. تقيّم اللجنة توزيع السرعة والإحماء وتقدير الوقت كلًا على حدة. يحدد هذا الحساب العتبة المحققة فقط دون استيفاء قيم بينية.",
+  "Deux séances par semaine, avec au moins un jour de récupération entre elles. L’effort ressenti va de 0 (repos) à 10 (maximum). Reste à une intensité confortable ; les pauses font partie du temps prévu. Arrête en cas de douleur ou de malaise.": "حصتان أسبوعيًا مع يوم راحة واحد على الأقل بينهما. يتدرج الجهد المحسوس من 0 (راحة) إلى 10 (أقصى جهد). حافظ على شدة مريحة؛ فترات الراحة جزء من الوقت المخطط. توقف عند الشعور بألم أو توعك.",
+  "Proposition de préparation, à ajuster avec ton professeur. Elle ne garantit pas une note et ne remplace pas la pratique évaluée. Les séances ne sont pas enregistrées : imprime ton programme pour le garder.": "مقترح تحضير تضبطه مع أستاذك. لا يضمن درجة ولا يحل محل الممارسة الخاضعة للتقييم. الحصص لا تُحفظ: اطبع برنامجك للاحتفاظ به.",
+  "Références consultées le 3 novembre 2026. Le programme distingue cinq champs d’apprentissage ; les grilles locales complètent le cadre national.": "رُوجعت المراجع في 3 نوفمبر 2026. يميز البرنامج خمسة مجالات للتعلم، وتكمل الجداول المحلية الإطار الوطني.",
+  "🏃 EPS": "🏃 التربية البدنية"
 }
