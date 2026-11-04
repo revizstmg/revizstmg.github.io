@@ -17,7 +17,7 @@ export function cleanJsxText(value) {
     return out + (text ? text + (i !== last ? ' ' : '') : '')
   }, '')
 }
-const worthTranslating = (s) => /[\p{L}]{2}/u.test(s) && !/^(RévizSTMG|Réviz|Matys DONAT|Gabriel MERLIN|STMG|XP|SQL|PDF|PESTEL|SWOT|Gemini|Claude|Google|Apple|MyMemory|Premium|Ultimate|OK|EN|FR|ES|IT|AR)$/i.test(s.trim()) && !/^(https?:|mailto:)/i.test(s.trim()) && !/[\w.+-]+@[\w.-]+\.\w+/u.test(s)
+const worthTranslating = (s) => /[\p{L}]{2}/u.test(s) && !/^(RévizSTMG|Réviz|Gabriel MERLIN|STMG|XP|SQL|PDF|PESTEL|SWOT|Gemini|Claude|Google|Apple|MyMemory|Premium|Ultimate|OK|EN|FR|ES|IT|AR)$/i.test(s.trim()) && !/^(https?:|mailto:)/i.test(s.trim()) && !/[\w.+-]+@[\w.-]+\.\w+/u.test(s)
 export default function publicTranslations({ types: t }) {
   const model = (expr) => {
     if (t.isStringLiteral(expr) && worthTranslating(expr.value)) return { text: expr.value, values: [] }
