@@ -1,4 +1,4 @@
-name: Relancer Pages vérifié
+name: Publier Pages vérifié
 
 on:
   push:
@@ -15,6 +15,7 @@ on:
 permissions:
   contents: read
   pages: write
+  id-token: write
 
 concurrency:
   group: relancer-pages-verifie
@@ -24,7 +25,10 @@ jobs:
   reconstruire:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - name: Vérifier la compilation attendue
@@ -35,7 +39,10 @@ jobs:
           [[ "$EMPREINTE_ATTENDUE" =~ ^[0-9a-f]{64}$ ]]
           empreinte_reelle=$(sha256sum index.html | cut -d ' ' -f 1)
           test "$empreinte_reelle" = "$EMPREINTE_ATTENDUE"
-      - name: Reconstruire la version vérifiée
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh api --method POST "/repos/${{ github.repository }}/pages/builds"
+      - name: Préparer les fichiers Pages vérifiés
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Publier la version vérifiée
+        id: deployment
+        uses: actions/deploy-pages@v4
