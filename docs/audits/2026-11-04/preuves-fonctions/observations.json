@@ -1,0 +1,64 @@
+{
+  "source": "90c6a46357308624aa8b76f5046a7bc316bcb536",
+  "compiledIndexSha256": "c924cef174de0f546e68bd3d6d483732b7d3e00058655f324836eef8997be5a9",
+  "simulated": true,
+  "realExternalWrites": false,
+  "unit": {
+    "files": 3,
+    "passed": 34
+  },
+  "reprises": {
+    "passed": 2,
+    "cases": [
+      "Outils gratuit",
+      "Correction échouée conserve la réponse"
+    ]
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "observed": "RPC reads >= 12 without interaction",
+      "repetitions": 4,
+      "responsesCappedAt": 20
+    },
+    {
+      "id": "F02",
+      "observed": "stale photo result displayed after reset",
+      "repetitions": 2
+    },
+    {
+      "id": "F03",
+      "observed": "duel PATCH 503 error hidden in Duels, visible in Amis",
+      "repetitions": 2
+    },
+    {
+      "id": "F04",
+      "observed": "URIError with OAuth percent description",
+      "repetitions": 2
+    },
+    {
+      "id": "F05",
+      "before": {
+        "subjectId": "p1-sgn",
+        "chapterId": "p1-sgn-t1"
+      },
+      "after": {
+        "subjectId": "p1-sgn",
+        "chapterId": "p1-sgn-t2"
+      },
+      "invalidChapterIndex": -1
+    },
+    {
+      "id": "F06",
+      "observedCreationPosts": 2,
+      "expectedCreationPosts": 1,
+      "repetitions": 2,
+      "secondMethod": "Playwright locator.dblclick"
+    }
+  ],
+  "incomplete": [
+    "full browser suite interrupted",
+    "98-case targeted suite interrupted",
+    "first unit attempt no completed summary"
+  ]
+}

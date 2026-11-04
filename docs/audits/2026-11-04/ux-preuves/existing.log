@@ -1,0 +1,49 @@
+
+Running 42 tests using 3 workers
+
+(node:16277) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16291) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16280) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16291) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16280) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16277) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [audit] › tests/parcours/accessibilite.spec.js:38:1 › fenêtre ouverte et exercice en cours sans défaut détecté (45.0s)
+  ✓   4 [audit] › tests/parcours/bac-niveaux.spec.js:4:201 › quatre rubriques Bac blanc : premiere-stmg 390 (7.8s)
+  ✓   5 [audit] › tests/parcours/bac-niveaux.spec.js:4:201 › quatre rubriques Bac blanc : terminale-stmg 1280 (18.9s)
+  ✓   6 [audit] › tests/parcours/bac-niveaux.spec.js:4:201 › quatre rubriques Bac blanc : terminale-stmg 390 (15.9s)
+  ✘   7 [audit] › tests/parcours/cours-langues.spec.js:12:3 › langues : guides PDF, cinq langues, anciennes routes et mobile accessibles (1.7m)
+(node:18842) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18842) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   3 [audit] › tests/parcours/accessibilite.spec.js:19:3 › pages principales sans défaut d’accessibilité détecté : clair (3.4m)
+(node:19621) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19621) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   2 [audit] › tests/parcours/accessibilite.spec.js:19:3 › pages principales sans défaut d’accessibilité détecté : sombre (3.5m)
+(node:19723) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19723) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   8 [audit] › tests/parcours/cours-langues.spec.js:12:3 › p1-langues : guides PDF, cinq langues, anciennes routes et mobile accessibles (1.9m)
+(node:20415) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20415) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘   9 [audit] › tests/parcours/course-studio.spec.js:10:80 › cours, définitions et exercices harmonisés light 320 (1.6m)
+(node:20624) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20624) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  10 [audit] › tests/parcours/course-studio.spec.js:10:80 › cours, définitions et exercices harmonisés dark 390 (1.5m)
+(node:20701) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20701) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
