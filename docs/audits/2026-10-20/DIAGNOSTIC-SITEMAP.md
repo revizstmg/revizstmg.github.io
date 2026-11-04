@@ -39,11 +39,20 @@ une nouvelle soumission indépendamment de l’entrée XML en échec.
 Publication réalisée dans #44 : réponse publique 200 text/plain et contenu
 exact vérifiés, référence robots présente, ancien XML conservé. Recette main :
 293 tests unitaires et 152 parcours navigateur réussis (#39497302917).
-Prochaine étape : envoyer sitemap.txt dans Search Console. Le succès du rapport Google reste
-à constater par le propriétaire ; la présence du fichier seule ne le démontre pas.
-Si ce format est accepté, il peut rester comme entrée alternative. Si le refus
-persiste aussi, conserver le résultat de récupération détaillé de Search Console
-et vérifier les paramètres propres à la propriété avec son propriétaire.
+Le propriétaire a envoyé le texte et confirmé que **les deux fichiers**, XML
+et TXT, restent à l’état « Impossible de récupérer ». Le contournement n’a donc
+pas résolu le problème signalé. Il a également confirmé « Aucun problème détecté »
+dans Actions manuelles. Ne pas recommander de créer un troisième sitemap ou de
+renvoyer les deux en boucle.
+
+Un nouveau contrôle HTTP après ce retour confirme 200 pour les deux fichiers,
+avec leurs types MIME attendus et le contenu texte exact. La cause précise reste
+inconnue. Le prochain contrôle demandé porte sur le rapport robots.txt de Google :
+état d’exploration, date de vérification, problèmes, ou absence de données.
+Google peut conserver le contenu robots.txt en cache, notamment après une erreur
+de récupération ; cela reste une hypothèse, pas un défaut démontré ici.
+Le rapport permet de demander une nouvelle exploration en cas d’erreur ou de
+changement important. N’utiliser cette action qu’après lecture de son état.
 
 La PR #41 de Claude ajoute un sitemap XML complet des cours publics. Elle reste
 indépendante ; le fichier texte de secours ne contient que l’accueil existant.
@@ -55,4 +64,8 @@ Il n’est pas présenté comme l’inventaire des futures pages /cours/.
   https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
 - Google, diagnostic de récupération :
   https://support.google.com/webmasters/answer/7451001?hl=fr
+- Google, rapport robots.txt et demande de nouvelle exploration :
+  https://support.google.com/webmasters/answer/6062598?hl=fr
+- Google, cache et erreurs de récupération de robots.txt :
+  https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec?hl=fr
 - Schéma officiel : https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
