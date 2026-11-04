@@ -1,0 +1,72 @@
+{
+  "rect": {
+    "x": 12,
+    "y": 154,
+    "width": 820,
+    "height": 2320.015625,
+    "top": 154,
+    "right": 832,
+    "bottom": 2474.015625,
+    "left": 12
+  },
+  "scroll": 2320,
+  "height": 390,
+  "buttons": [
+    {
+      "name": "Quitter",
+      "rect": {
+        "x": 772,
+        "y": 170,
+        "width": 44,
+        "height": 44,
+        "top": 170,
+        "right": 816,
+        "bottom": 214,
+        "left": 772
+      },
+      "hit": true
+    },
+    {
+      "name": "Passer",
+      "rect": {
+        "x": 318,
+        "y": 1410,
+        "width": 48,
+        "height": 48,
+        "top": 1410,
+        "right": 366,
+        "bottom": 1458,
+        "left": 318
+      },
+      "hit": false
+    },
+    {
+      "name": "Jouer",
+      "rect": {
+        "x": 382,
+        "y": 1394,
+        "width": 80,
+        "height": 80,
+        "top": 1394,
+        "right": 462,
+        "bottom": 1474,
+        "left": 382
+      },
+      "hit": false
+    },
+    {
+      "name": "Réinitialiser",
+      "rect": {
+        "x": 478,
+        "y": 1410,
+        "width": 48,
+        "height": 48,
+        "top": 1410,
+        "right": 526,
+        "bottom": 1458,
+        "left": 478
+      },
+      "hit": false
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "guest",
+    "errors": [],
+    "view": {
+      "title": "Les offres, simplement",
+      "overflow": 0,
+      "height": 2078.296875,
+      "text": "CHOISIS TON ACCOMPAGNEMENT\n\nLes offres, simplement\n\nLes cours pour apprendre. Le bilan pour comprendre. L’entraînement pour progresser.\n\nLes cours et les exercices de base sont gratuits. Premium et Ultimate ouvrent le reste du site. Chaque aide par IA s’utilise une fois par mois avec Premium, presque sans limite avec Ultimate. Ces aides dépendent de services externes : leur état est indiqué au moment de les utiliser.\n\nAPPRENDRE LES BASES\n\nGratuit\n\n0 €, sans carte bancaire\n\nCours et exercices de base\nFavoris et suivi de progression\nBoutique, amis, classe et espace parent\n\nTOUT LE SITE POUR RÉVISER\n\nPremium\n\n9,99 € TTC par mois ou 90 € TTC par an\n\nTout le contenu gratuit\nBac blanc, sujets, révision et flashcards\nGrand Oral, étude de gestion, atelier de formules, notes, défis et classement\nChaque aide par IA : 1 utilisation par mois\n\nL’IA PRESQUE SANS LIMITE\n\nUltimate\n\n14,99 € TTC par mois ou 130 € TTC par an\n\nTout Premium\nAide par IA presque illimitée (60 demandes par jour au plus) : tuteur, séries personnalisées, corrections\nS’abonner\n\nConnecte-toi avec ton compte pour choisir une offre.\n\nCréer mon compte\n\nVoir un exemple de bilan\nPréparer mon bilan\n🔒 PREMIUM\nRÉSERVÉ AUX ABONNÉS\n\nLes analyses automatiques peuvent se tromper. Les notes sont des estimations expliquées ; aucune note future n’est garantie. Le cours et les indications du professeur restent les références.\n\nConditions d’utilisation · Confidentialité"
+    }
+  },
+  {
+    "name": "teacher",
+    "errors": [],
+    "view": {
+      "title": "Bonjour, Léa",
+      "overflow": 0,
+      "height": 786.796875,
+      "text": "ESPACE PROFESSEUR\n\nBonjour, Léa\n\nSuivez vos classes, repérez les élèves à relancer et préparez un quiz à projeter.\n\nMes classes\nGérer les classes →\n\nAucune classe pour l’instant.\n\nCréer une classe et donner son code aux élèves\nEn classe\n📊\nTableau de bord\nActivité et niveau par matière\n📝\nQuiz et direct\nCréer, assigner, projeter\n📖\nCours et exercices\nCe que voient vos élèves"
+    }
+  },
+  {
+    "name": "large",
+    "errors": [],
+    "view": {
+      "title": "Paramètres",
+      "overflow": 0,
+      "height": 1104.015625,
+      "text": "RÉVIZSTMG\n\nParamètres\n\nChoisis une rubrique pour retrouver tes réglages.\n\n👤\nMon compte\nProfil, photo et mot de passe.\n›\n🎨\nApparence\nThème, langue et onglets de navigation.\n›\n📚\nRévision\nLangues étudiées et date de mon bac.\n›\n🔔\nNotifications\nActiver et programmer mes rappels.\n›\n♿\nAccessibilité\nTaille du texte, contraste et confort de lecture.\n›\n🔒\nConfidentialité et données\nExporter, partager ou supprimer mes données.\n›\n📱\nApplication\nInstallation et disponibilité hors connexion.\n›\nMes progrès →"
+    }
+  },
+  {
+    "name": "revision",
+    "errors": [],
+    "view": {
+      "title": "Réviser",
+      "overflow": 0,
+      "height": 3200.09375,
+      "text": "RÉVIZSTMG · LE STUDIO DE RÉVISION\n\nRéviser\n\nRévise chaque jour.\n\nRetrouve le fil, renforce ce qui hésite et fais durer ce que tu sais. Ton espace pour passer du cours aux réflexes.\n\nthèmes travaillés\n0\nquestions à retravailler\n0\npaquets de cartes\n0\n\nTA PROCHAINE SÉANCE\n\nTa séance\n\nUne séance guidée à partir de tes erreurs, de tes révisions et des cours à poursuivre.\n\nLancer ma séance\n↗\nTa prochaine mission\nUne mission courte, à ton rythme.\n→\n\n☀️ Vacances STMG\n\nDeux semaines pour retravailler tes difficultés, à ton rythme.\n\nPréparer mes vacances\n\nÀ CHAQUE BESOIN, SA MÉTHODE\n\nChoisis ta révision\n01\nRÉVIZSTMG\nContinuer mes révisions\nContinuer mes révisions\n\nChoisis une matière et reprends au prochain exercice à travailler. Tu peux aussi choisir un chapitre.\n\nCommencer la séance\n↗\n02\nRÉVIZSTMG\nRevoir mes erreurs\n✓   ✓   ✓\nRevoir mes erreurs\n\nChoisis une matière ou un chapitre pour retravailler les questions que tu as ratées.\n\nRetravailler mes erreurs\n↗\n03\nRÉVIZSTMG\nAncrer mes connaissances\nAncrer mes connaissances\n\nMélange tes bonnes réponses et les exercices réussis dans un QCM de la matière ou du chapitre choisi.\n\nRéviser mes acquis\n↗\n🚀\nPrêt à commencer ?\n\nTu n’as encore rien commencé. Choisis une matière et lance ta première leçon.\n\n📚 Commencer un cours\n\nÀ TOI DE CHOISIR\n\nToutes les matières\n\nChoisis une matière, puis le chapitre que tu veux travailler.\n\nChoisir ma matière\n→\n\nTA BIBLIOTHÈQUE\n\nTes outils\n🃏 Mes flashcards\n\nAucun paquet pour l’instant. Enregistre-en un depuis un cours pour le retrouver ici.\n\n＋ Importer un paquet\nPrépare ton examen\n\nQuand tu te sens prêt, ret"
+    }
+  }
+]
