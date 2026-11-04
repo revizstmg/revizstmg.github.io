@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { lazy, Suspense, useMemo, useState } from 'react'
 import {
   EPS, CHAMPS, REPARTITIONS, estimerNote, moyenneEpreuves, lignesSeuil, ligneSeuil,
   positionSeuil, vitesseDemiFond, planEntrainement, familleDe, FAMILLES_ENTRAINEMENT, ENTRAINEMENTS, lireValeur,
@@ -6,13 +6,16 @@ import {
 
 // « Sport au bac » : les activités du contrôle en cours de formation d'EPS, leurs repères d'évaluation nationaux
 // (BO n° 9 du 26 février 2026), une estimation de note et des entraînements adaptés. Le texte reste en français.
+const Activites = lazy(() => import('./Eps.jsx'))
 const DEGRES = [1, 2, 3, 4]
 const NIVEAUX = { 'au-dessus': 'au-dessus du seuil national', 'au-seuil': 'proche du seuil national', 'en-dessous': 'en dessous du seuil national' }
 const AFL_LABEL = { afl1: 'AFL1 · performance', afl2: 'AFL2 · s’entraîner', afl3: 'AFL3 · rôles' }
 
 export default function SportBac() {
+  const [view, setView] = useState('reference')
   const [champId, setChampId] = useState('ca1')
   const champ = CHAMPS.find((c) => c.id === champId)
+  if (view === 'activities') return <div><button className="btn-secondary mb-4 no-print" onClick={() => setView('reference')}>← Référentiel CCF et estimation</button><Suspense fallback={<p>Chargement des activités…</p>}><Activites /></Suspense></div>
   return (
     <div className="animate-lux mx-auto max-w-3xl space-y-5" lang="fr" data-no-translate>
       <header className="page-hero page-hero-compact text-center">
@@ -21,6 +24,7 @@ export default function SportBac() {
         <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">Les activités du bac, comment elles sont notées et des entraînements pour progresser.</p>
       </header>
 
+      <button className="btn-primary w-full" onClick={() => setView('activities')}>Les 26 activités et l’examen ponctuel →</button>
       <Regle />
 
       <section aria-labelledby="sb-champs" className="space-y-3">

@@ -6,6 +6,7 @@ import { getChapter } from '../data/index.js'
 import { readPosition } from '../data/readingPosition.js'
 import { CourseText } from '../components/Course.jsx'
 import { ProgressBar } from '../components/ui.jsx'
+import PastillePremium from '../components/PastillePremium.jsx'
 import { useT } from '../i18n.js'
 
 // Onglet « Cours » de la barre du bas : reprendre la dernière fiche, puis
@@ -34,6 +35,7 @@ export default function Cours() {
           </span>
         </Link>
       )}
+      <Link to="/sport-bac" className="card flex items-center gap-4 p-4"><span aria-hidden>🏃</span><span><strong>{t('sportBacTitle')}<PastillePremium to="/sport-bac"/></strong><small className="block">{t('epsIntro')}</small></span><span aria-hidden>→</span></Link>
       <div className="subject-shelves grid grid-cols-2 gap-3 sm:grid-cols-3">
         {subjects.map((s) => {
           const pct = s.comingSoon ? 0 : subjectScore(state, s.id)

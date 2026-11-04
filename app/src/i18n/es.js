@@ -1,6 +1,7 @@
 // Libellés d'interface en espagnol, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  epsIntro: "Actividades, evaluación y entrenamiento",
   studyGerman: "Alemán",
   studyLanguagesTitle: "Los idiomas que estudias",
   studyLanguagesHelp: "Elige uno o varios idiomas. Puedes cambiarlos en los ajustes. Sin selección, se muestran todos los cursos disponibles.",

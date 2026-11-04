@@ -1,5 +1,6 @@
 // Deutsche Benutzeroberfläche, lokal geladen und offline verfügbar.
 export default {
+  epsIntro: "Aktivitäten, Bewertung und Training",
   "studyLanguagesTitle": "Deine Lernsprachen",
   "studyLanguagesHelp": "Wähle eine oder mehrere Sprachen. Du kannst die Auswahl in den Einstellungen ändern. Ohne Auswahl bleiben alle verfügbaren Materialien sichtbar.",
   "studyLanguagesHelpSettings": "Wähle eine oder mehrere Sprachen. Ohne Auswahl bleiben alle verfügbaren Materialien sichtbar.",
