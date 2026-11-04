@@ -23,7 +23,7 @@ export default function Privacy() {
       <p className="text-sm text-slate-600 dark:text-slate-300"><TexteRiche texte={"RévizSTMG est un outil de révision gamifié pour les élèves de STMG. Nous appliquons le principe de **minimisation** : nous ne collectons que les données strictement nécessaires, jamais à des fins publicitaires. **Aucune donnée n'est vendue, louée ou cédée**, et il n'y a **ni publicité, ni cookie de mesure d'audience, ni profilage commercial**. Cette page explique quelles données sont traitées, pourquoi, et comment tu gardes le contrôle."} /></p>
 
       <Section title="1. Responsable du traitement">
-        <p><TexteRiche texte={"RévizSTMG est édité par **Matys DONAT** et **Gabriel MERLIN**, responsables conjoints du traitement. Pour toute question relative à tes données ou pour exercer tes droits, écris à  [[revizstmg@gmail.com|mailto:revizstmg@gmail.com]]."} /></p>
+        <p><TexteRiche texte={"RévizSTMG est édité par **Gabriel MERLIN**, responsable du traitement. Pour toute question relative à tes données ou pour exercer tes droits, écris à  [[revizstmg@gmail.com|mailto:revizstmg@gmail.com]]."} /></p>
       </Section>
 
       <Section title="2. Données traitées">
@@ -112,7 +112,7 @@ export default function Privacy() {
       </Section>
 
       <Section title="12. Contact">
-        <p><TexteRiche texte={"Une question, une demande, un doute ? Écris à  [[revizstmg@gmail.com|mailto:revizstmg@gmail.com]]  ou parles-en à ton professeur. RévizSTMG est créé par **Matys DONAT** et **Gabriel MERLIN**."} /></p>
+        <p><TexteRiche texte={"Une question, une demande, un doute ? Écris à  [[revizstmg@gmail.com|mailto:revizstmg@gmail.com]]  ou parles-en à ton professeur. RévizSTMG est créé par **Gabriel MERLIN**."} /></p>
       </Section>
 
       <div className="pt-2">

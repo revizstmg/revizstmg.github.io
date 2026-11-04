@@ -17,14 +17,14 @@ Bonjour [Nom],
 
 Nous avons publié les cours de RévizSTMG en accès libre, avec une adresse par chapitre, les sources et un lien vers les exercices associés. Voici une fiche en lien avec [notion réellement étudiée] : [lien de la fiche].
 
-Nous sommes deux élèves, Matys Donat et Gabriel Merlin. Si ce support vous semble utile, vous pouvez le partager avec votre classe ou sur votre espace pédagogique. Vos corrections et réserves sont les bienvenues ; nous ne présentons pas le site comme validé par votre établissement.
+Ce projet est porté par un élève, Gabriel Merlin. Si ce support vous semble utile, vous pouvez le partager avec votre classe ou sur votre espace pédagogique. Vos corrections et réserves sont les bienvenues ; nous ne présentons pas le site comme validé par votre établissement.
 
 Merci pour votre regard,
 [L’auteur réel du message]
 
 ## Message pour une communauté
 
-Bonjour, je participe à RévizSTMG, un projet créé par deux élèves pour réviser la Première et la Terminale STMG. Cette fiche traite de [notion en lien avec le fil] : [lien]. Elle est lisible sans compte et propose des exercices dans l’application. Je suis lié au projet ; les retours et signalements d’erreurs nous aident à l’améliorer. Si les liens de ce type ne sont pas autorisés ici, je retire mon message.
+Bonjour, je participe à RévizSTMG, un projet créé par un élève pour réviser la Première et la Terminale STMG. Cette fiche traite de [notion en lien avec le fil] : [lien]. Elle est lisible sans compte et propose des exercices dans l’application. Je suis lié au projet ; les retours et signalements d’erreurs nous aident à l’améliorer. Si les liens de ce type ne sont pas autorisés ici, je retire mon message.
 
 Choisir une seule ressource pertinente. Respecter les règles locales, demander aux responsables si nécessaire et ne pas publier en masse. Ne pas demander à quelqu’un de produire un faux avis ou de prétendre avoir testé un cours.
 

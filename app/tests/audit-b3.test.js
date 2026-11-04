@@ -19,7 +19,7 @@ it('une phrase avec plusieurs espaces et un nom de matière canonique reste hors
   await loadPublicLocale(lang)
   expect(knownPublicText('Gestion & Finance',lang)).toBeTruthy()
   expect(knownPublicText('Gestion et Finance',lang)).toBe(knownPublicText('Gestion et finance',lang))
-  const p='**Éditeurs** : Matys DONAT et Gabriel MERLIN, élèves, à titre non professionnel et non commercial. Ils sont aussi responsables de la publication. Contact :  [[revizstmg@gmail.com|mailto:revizstmg@gmail.com]].'
+  const p='**Éditeur** : Gabriel MERLIN, élève, à titre non professionnel et non commercial, également responsable de la publication. Contact :  [[revizstmg@gmail.com|mailto:revizstmg@gmail.com]].'
   expect(knownPublicText(p,lang)).toBeTruthy()
  }
 })

@@ -328,7 +328,7 @@ export default function Layout({ children }) {
               <button onClick={() => window.dispatchEvent(new CustomEvent('stmg-open-a11y'))} className="hover:text-[color:var(--c-accent)] hover:underline">♿ {t('accessibility')}</button>
               <a href="mailto:revizstmg@gmail.com" className="hover:text-[color:var(--c-accent)] hover:underline">{t('contactUs')} · revizstmg@gmail.com</a>
             </nav>
-            <p className="text-xs text-slate-400">{t('createdBy')} <span className="font-semibold text-slate-500 dark:text-slate-300">Matys DONAT</span> &amp; <span className="font-semibold text-slate-500 dark:text-slate-300">Gabriel MERLIN</span></p>
+            <p className="text-xs text-slate-400">{t('createdBy')} <span className="font-semibold text-slate-500 dark:text-slate-300">Gabriel MERLIN</span></p>
             <p className="text-xs text-slate-400">© {new Date().getFullYear()} RévizSTMG</p>
           </div>
         </div>

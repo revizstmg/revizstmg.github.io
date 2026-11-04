@@ -18,7 +18,7 @@ export default function Cgu() {
       <p className="text-sm"><TexteRiche texte="Les traductions facilitent la lecture. La version française de ces conditions fait référence." /></p><hr className="rule-gold" /><LegalContents />
 
       <Section title="Mentions légales">
-        <p><TexteRiche texte={"**Éditeurs** : Matys DONAT et Gabriel MERLIN, élèves, à titre non professionnel et non commercial. Ils sont aussi responsables de la publication. Contact :  [[revizstmg@gmail.com|mailto:revizstmg@gmail.com]]."} /></p>
+        <p><TexteRiche texte={"**Éditeur** : Gabriel MERLIN, élève, à titre non professionnel et non commercial, également responsable de la publication. Contact :  [[revizstmg@gmail.com|mailto:revizstmg@gmail.com]]."} /></p>
         <p><TexteRiche texte={"**Hébergement du site** : GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis."} /></p>
         <p><TexteRiche texte={"**Hébergement des comptes et de la progression** : Supabase, serveurs situés dans l’Union européenne (région de Paris)."} /></p>
       </Section>
@@ -40,7 +40,7 @@ export default function Cgu() {
       <Section title="Boutique virtuelle et récompenses de progression">
         <p><TexteRiche texte={"Les pièces de la boutique sont gagnées dans l’application et n’ont aucune valeur monétaire. Elles ne s’achètent pas en euros. Les objets permanents restent dans la collection ; les gels de série sont consommés lorsqu’ils protègent une journée manquée."} /></p>
         <p><TexteRiche texte={"Les paliers sont récupérables une seule fois. Un mois Premium offert est proposé à partir de 20 000 XP (niveau 20) et de 20 tests de thèmes différents réussis à au moins 90 %. Un mois Ultimate offert est proposé à partir de 73 500 XP (niveau 30) et de 30 tests de thèmes différents réussis à au moins 95 %. Le meilleur résultat de chaque thème compte une seule fois."} /></p>
-        <p><TexteRiche texte={"Les offres Premium et Ultimate sont décrites dans la partie « Abonnements payants » et sur la page des [[offres|/offres]]. Réserver une récompense n’active pas un abonnement. Après vérification des résultats par les éditeurs, un mois offert peut être activé sur l’offre concernée. Un compte est nécessaire ; l’attribution est limitée à un mois par compte et par offre. Aucun paiement, aucune carte bancaire et aucun renouvellement automatique ne sont prévus pour ces mois offerts. Les XP affichés localement ne constituent pas, seuls, une validation."} /></p>
+        <p><TexteRiche texte={"Les offres Premium et Ultimate sont décrites dans la partie « Abonnements payants » et sur la page des [[offres|/offres]]. Réserver une récompense n’active pas un abonnement. Après vérification des résultats, un mois offert peut être activé sur l’offre concernée. Un compte est nécessaire ; l’attribution est limitée à un mois par compte et par offre. Aucun paiement, aucune carte bancaire et aucun renouvellement automatique ne sont prévus pour ces mois offerts. Les XP affichés localement ne constituent pas, seuls, une validation."} /></p>
         <p><TexteRiche texte={"Le lien « Préparer ma demande par e-mail » ouvre un brouillon dans la messagerie de l’utilisateur ; aucun message n’est envoyé automatiquement. Les demandes sont examinées à  [[revizstmg@gmail.com|mailto:revizstmg@gmail.com]]."} /></p>
       </Section>
 
