@@ -1,0 +1,201 @@
+{
+  "metrics": {
+    "escalade": {
+      "label": "Voies réussies sur 5 essais",
+      "kind": "count",
+      "min": 0,
+      "max": 5,
+      "higher": true,
+      "unit": "/5"
+    },
+    "orientation": {
+      "label": "Balises trouvées sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "sauvetage": {
+      "label": "Étapes du parcours maîtrisées sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "vtt": {
+      "label": "Passages maîtrisés sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "danse": {
+      "label": "Passages enchaînés sans oubli sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "cirque": {
+      "label": "Enchaînements maîtrisés sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "acrosport": {
+      "label": "Transitions stables sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "gymnastique": {
+      "label": "Éléments maîtrisés sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "badminton": {
+      "label": "Renvois dans la zone visée sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "tennis-table": {
+      "label": "Échanges dirigés réussis sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "boxe": {
+      "label": "Touches contrôlées réussies sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "judo": {
+      "label": "Situations techniques réussies sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "basket": {
+      "label": "Tirs réussis sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "football": {
+      "label": "Passes vers la cible réussies sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "handball": {
+      "label": "Passes en mouvement réussies sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "rugby": {
+      "label": "Passes en arrière maîtrisées sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "volley": {
+      "label": "Renvois dans la zone visée sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "musculation": {
+      "label": "Répétitions techniquement maîtrisées sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "yoga": {
+      "label": "Postures maîtrisées sur 10",
+      "kind": "count",
+      "min": 0,
+      "max": 10,
+      "higher": true,
+      "unit": "/10"
+    },
+    "course-duree": {
+      "label": "Course à allure confortable",
+      "kind": "minutes",
+      "min": 0.1,
+      "max": 120,
+      "higher": true,
+      "unit": "min"
+    },
+    "natation-duree": {
+      "label": "Nage continue à allure confortable",
+      "kind": "minutes",
+      "min": 0.1,
+      "max": 120,
+      "higher": true,
+      "unit": "min"
+    },
+    "step": {
+      "label": "Enchaînement à intensité confortable",
+      "kind": "minutes",
+      "min": 0.1,
+      "max": 120,
+      "higher": true,
+      "unit": "min"
+    }
+  },
+  "priorities": {
+    "technique": {
+      "title": "Poser les bases",
+      "advice": "Commence par rendre le geste fiable. Répète l’exercice à intensité confortable, avec des pauses, avant de rechercher une meilleure performance."
+    },
+    "regularite": {
+      "title": "Gagner en régularité",
+      "advice": "Garde les mêmes conditions de mesure. Compare plusieurs essais et modifie un seul critère technique à la fois."
+    },
+    "consolidation": {
+      "title": "Consolider les acquis",
+      "advice": "Privilégie une réalisation maîtrisée et reproductible. Profite de la séance pour améliorer ta préparation et ton rôle auprès des autres."
+    }
+  },
+  "session": [
+    "6 minutes de mise en route progressive et de mobilité, selon les consignes du professeur.",
+    "8 minutes de travail technique avec des pauses ; recherche d’abord une exécution propre.",
+    "6 minutes pour reprendre le même atelier et observer un seul critère. Les essais chronométrés et les situations à risque restent encadrés.",
+    "4 minutes de retour au calme et de bilan : résultat, ressenti et point à retravailler."
+  ],
+  "schedule": "Deux séances complémentaires courtes par semaine au total, en alternant les sports. Les consignes du professeur et la récupération restent prioritaires."
+}
