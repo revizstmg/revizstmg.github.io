@@ -1,0 +1,20 @@
+{
+  "checked": "2026-11-03",
+  "documents": [
+    {
+      "file": "referentiel-ccf-2026.pdf",
+      "url": "https://www.education.gouv.fr/sites/default/files/document/Annexe%201%20%E2%80%93%20R%C3%A9f%C3%A9rentiel%20national%20pour%20le%20contr%C3%B4le%20en%20cours%20de%20formation%20%28CCF%29%20%E2%80%93%20Baccalaur%C3%A9at%20g%C3%A9n%C3%A9ral%20et%20technologique%2C%20enseignement%20commun%20d%E2%80%99%C3%A9ducation%20physique%20et%20sportive%20%28EPS%29-480509.pdf",
+      "sha256": "8e26db9aee74ceb10b17ebd38bea1a9da2cb77a8bccfd018824181e9087c8e63"
+    },
+    {
+      "file": "referentiel-ponctuel-2026.pdf",
+      "url": "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20R%C3%A9f%C3%A9rentiel%20national%20pour%20l%E2%80%99examen%20ponctuel%20terminal%20%E2%80%93%20Baccalaur%C3%A9at%20g%C3%A9n%C3%A9ral%20et%20technologique%2C%20enseignement%20commun%20d%E2%80%99%C3%A9ducation%20physique%20et%20sportive%20%28EPS%29-480512.pdf",
+      "sha256": "bea01d14ddad74ce2aff09a50d2fb23d4372f0cfcaff156113e115d5ee5d5b50"
+    },
+    {
+      "file": "programme-eps-2019.pdf",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe574annexe11062919pdf-84864.pdf",
+      "sha256": "6dfd563ac720e8a91f5a0b8a536cc9554d27da9984014351e0dd92c1f88d66fb"
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "checked": "2026-11-03",
+  "bo": "https://www.education.gouv.fr/bo/2026/Hebdo9/MENE2531948N",
+  "programme": "https://eduscol.education.gouv.fr/5784/programmes-et-ressources-en-education-physique-et-sportive-eps-voie-gt",
+  "medians": [
+    {
+      "event": "500 m",
+      "boys": "1 min 52 s",
+      "girls": "2 min 20 s"
+    },
+    {
+      "event": "750 m",
+      "boys": "2 min 55 s",
+      "girls": "3 min 40 s"
+    },
+    {
+      "event": "800 m",
+      "boys": "3 min 08 s",
+      "girls": "3 min 56 s"
+    },
+    {
+      "event": "1 000 m",
+      "boys": "4 min 00 s",
+      "girls": "4 min 59 s"
+    },
+    {
+      "event": "1 200 m",
+      "boys": "4 min 55 s",
+      "girls": "6 min 04 s"
+    },
+    {
+      "event": "1 500 m",
+      "boys": "6 min 25 s",
+      "girls": "7 min 50 s"
+    },
+    {
+      "event": "Course 1 min 30 s",
+      "boys": "425 m",
+      "girls": "325 m"
+    },
+    {
+      "event": "Course 3 min",
+      "boys": "770 m",
+      "girls": "630 m"
+    },
+    {
+      "event": "Course 4 min 30 s",
+      "boys": "1 100 m",
+      "girls": "915 m"
+    },
+    {
+      "event": "200 m haies (76 / 65 cm)",
+      "boys": "35,4 s",
+      "girls": "42,5 s"
+    },
+    {
+      "event": "50 m haies (84 / 76 cm)",
+      "boys": "9,8 s",
+      "girls": "11,1 s"
+    },
+    {
+      "event": "200 m",
+      "boys": "29,2 s",
+      "girls": "35 s"
+    },
+    {
+      "event": "50 m",
+      "boys": "7,4 s",
+      "girls": "8,5 s"
+    },
+    {
+      "event": "Relais 4 × 50 m",
+      "boys": "29,2 s",
+      "girls": "34,7 s"
+    },
+    {
+      "event": "Disque (1,5 / 1 kg)",
+      "boys": "18,5 m",
+      "girls": "12,5 m"
+    },
+    {
+      "event": "Javelot (700 / 500 g)",
+      "boys": "20,45 m",
+      "girls": "13 m"
+    },
+    {
+      "event": "Poids (5 / 3 kg)",
+      "boys": "7,1 m",
+      "girls": "6 m"
+    },
+    {
+      "event": "Hauteur",
+      "boys": "1,39 m",
+      "girls": "1,14 m"
+    },
+    {
+      "event": "Perche",
+      "boys": "2,10 m",
+      "girls": "1,60 m"
+    },
+    {
+      "event": "Pentabond",
+      "boys": "12,5 m",
+      "girls": "10,1 m"
+    },
+    {
+      "event": "Triple saut",
+      "boys": "9,4 m",
+      "girls": "7,6 m"
+    },
+    {
+      "event": "Longueur",
+      "boys": "3,9 m",
+      "girls": "2,9 m"
+    },
+    {
+      "event": "50 m crawl",
+      "boys": "40 s",
+      "girls": "53 s"
+    },
+    {
+      "event": "50 m autres nages ou plusieurs nages",
+      "boys": "46 s",
+      "girls": "57,5 s"
+    }
+  ],
+  "performance800": [
+    {
+      "points": 0.5,
+      "girls": 289,
+      "boys": 230
+    },
+    {
+      "points": 1,
+      "girls": 283,
+      "boys": 225
+    },
+    {
+      "points": 1.5,
+      "girls": 277,
+      "boys": 220
+    },
+    {
+      "points": 2,
+      "girls": 271,
+      "boys": 215
+    },
+    {
+      "points": 2.5,
+      "girls": 265,
+      "boys": 210
+    },
+    {
+      "points": 3,
+      "girls": 259,
+      "boys": 205
+    },
+    {
+      "points": 3.5,
+      "girls": 253,
+      "boys": 200
+    },
+    {
+      "points": 4,
+      "girls": 247,
+      "boys": 195
+    },
+    {
+      "points": 4.5,
+      "girls": 241,
+      "boys": 190
+    },
+    {
+      "points": 5,
+      "girls": 235,
+      "boys": 185
+    },
+    {
+      "points": 5.5,
+      "girls": 231,
+      "boys": 181
+    },
+    {
+      "points": 6,
+      "girls": 227,
+      "boys": 177
+    },
+    {
+      "points": 6.5,
+      "girls": 224,
+      "boys": 173
+    },
+    {
+      "points": 7,
+      "girls": 221,
+      "boys": 170
+    },
+    {
+      "points": 7.5,
+      "girls": 218,
+      "boys": 167
+    },
+    {
+      "points": 8,
+      "girls": 215,
+      "boys": 164
+    },
+    {
+      "points": 8.5,
+      "girls": 212,
+      "boys": 161
+    },
+    {
+      "points": 9,
+      "girls": 209,
+      "boys": 158
+    },
+    {
+      "points": 9.5,
+      "girls": 206,
+      "boys": 155
+    },
+    {
+      "points": 10,
+      "girls": 203,
+      "boys": 152
+    }
+  ],
+  "ponctuel": {
+    "courses": [
+      [
+        "Performance chronométrique",
+        10
+      ],
+      [
+        "Gestion de l’allure",
+        4
+      ],
+      [
+        "Échauffement",
+        3
+      ],
+      [
+        "Estimation de sa performance",
+        3
+      ]
+    ],
+    "danse": [
+      [
+        "Engagement moteur",
+        6
+      ],
+      [
+        "Présence de l’interprète",
+        4
+      ],
+      [
+        "Projet artistique",
+        4
+      ],
+      [
+        "Échauffement et préparation",
+        3
+      ],
+      [
+        "Transformation avec intention",
+        3
+      ]
+    ],
+    "tennis-table": [
+      [
+        "Efficacité technique en attaque et en défense",
+        8
+      ],
+      [
+        "Choix tactiques et adaptation",
+        6
+      ],
+      [
+        "Préparation et rôles sociaux",
+        6
+      ]
+    ]
+  }
+}

@@ -3,7 +3,7 @@
 // les mêmes routes. Les liens vers d'autres sites sont vérifiés en ligne par
 // scripts/verifier-liens.mjs (workflow « Vérifier les liens »).
 import { describe, it, expect } from 'vitest'
-import { readFileSync, readdirSync, statSync } from 'node:fs'
+import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs'
 import { join, resolve, dirname, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { SUBJECTS, ALL_CHAPTERS } from '../src/data/index.js'
@@ -12,6 +12,11 @@ import { ECRANS, nomEcran } from '../src/mesure.js'
 
 const APP = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const SRC = join(APP, 'src')
+const PUBLIC = join(APP, 'public')
+const fichierPublic = chemin => {
+  const cible = resolve(PUBLIC, '.' + chemin)
+  return cible.startsWith(PUBLIC + '/') && existsSync(cible) && statSync(cible).isFile()
+}
 
 const fichiers = (dossier) => readdirSync(dossier).flatMap((f) => {
   const p = join(dossier, f)
@@ -45,7 +50,7 @@ describe('liens internes', () => {
     // Le fil d'Ariane fabrique `/${parts[0]}` pour les pages de PAGES_SIMPLES :
     // ce sont ses clés qui sont vérifiées.
     const aVerifier = tous.filter((c) => !(c.fichier.endsWith('Layout.jsx') && c.brut === '/${parts[0]}'))
-    const casses = aVerifier.filter((c) => !MOTIFS.some((m) => m.test(c.chemin)) && !PUBLIC_ROOTS.includes(c.chemin)).map((c) => `${c.fichier} : ${c.brut}`)
+    const casses = aVerifier.filter((c) => !MOTIFS.some((m) => m.test(c.chemin)) && !PUBLIC_ROOTS.includes(c.chemin) && !fichierPublic(c.chemin)).map((c) => `${c.fichier} : ${c.brut}`)
     expect(casses).toEqual([])
   })
 
