@@ -1,6 +1,8 @@
 // Libellés d'interface en arabe, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  duelSending: "جارٍ الإرسال…",
+  duelSendError: "لم يتم تأكيد الإرسال. نتيجتك محفوظة هنا؛ حاول مجددًا.",
   epsIntro: "الأنشطة والتقييم والتدريب",
   studyGerman: "الألمانية",
   studyLanguagesTitle: "اللغات التي تدرسها",

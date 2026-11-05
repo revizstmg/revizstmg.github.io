@@ -1,7 +1,7 @@
 import { cleanVacancesSummary } from '../data/vacancesState.js'
 import { nombre } from '../format.js'
 import { vacancesText } from '../i18n/vacances.js'
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useRef } from 'react'
 import { ProgressBar } from '../components/ui.jsx'
 import { fmtDuration } from '../components/StatsCharts.jsx'
 import { useT, useLang, usePublicText } from '../i18n.js'
@@ -63,32 +63,40 @@ export default function Parent() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
+  const generation = useRef(0)
+  useEffect(() => () => { generation.current++ }, [])
   const load = useCallback(async (c) => {
     if (!c) return
+    const id = ++generation.current
     setLoading(true); setError('')
     try {
       const row = await fetchChildByCode(c)
-      if (row) setChild(row)
-      else { setError(t('parentNotFound')); setChild(null) }
-    } catch { setError(t('parentOffline')) }
-    setLoading(false)
+      if (id !== generation.current) return
+      setChild(row || null)
+      if (!row) setError(t('parentNotFound'))
+    } catch { if (id === generation.current) setError(t('parentOffline')) }
+    finally { if (id === generation.current) setLoading(false) }
   }, [t])
-
-  // À l'ouverture : si un enfant est déjà relié, on charge ses stats.
-  useEffect(() => { if (linked) load(linked) }, [linked, load])
+  useEffect(() => {
+    if (linked) load(linked)
+    return () => { generation.current++ }
+  }, [linked, load])
 
   const doLink = async () => {
+    if (loading) return
     const c = normParentCode(code)
     if (c.length < 4) { setError(t('parentNotFound')); return }
+    const id = ++generation.current
     setLoading(true); setError('')
     try {
       const row = await fetchChildByCode(c)
+      if (id !== generation.current) return
       if (row) { setLinkedChild(c); setLinked(c); setChild(row); setCode('') }
       else setError(t('parentNotFound'))
-    } catch { setError(t('parentOffline')) }
-    setLoading(false)
+    } catch { if (id === generation.current) setError(t('parentOffline')) }
+    finally { if (id === generation.current) setLoading(false) }
   }
-  const unlink = () => { setLinkedChild(''); setLinked(''); setChild(null) }
+  const unlink = () => { generation.current++; setLinkedChild(''); setLinked(''); setChild(null); setLoading(false); setError('') }
 
   const bacDays = child?.bac_date ? daysUntil(child.bac_date) : null
 

@@ -5,7 +5,9 @@ import { chaptersForLanguages } from '../data/studyLanguages.js'
 import RevisionPath from '../components/RevisionPath.jsx'
 import './Revise.css'
 import { revisionMessages } from '../i18n/revision.js'
-import { useMemo, useState } from 'react'
+import { createPortal } from 'react-dom'
+import { useFenetreClavier } from '../components/clavier.js'
+import { useMemo, useState, useRef } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { reviewQueue } from '../data/study.js'
@@ -31,6 +33,9 @@ function RevisePage() {
   const [pathMode,setPathMode] = useState(null)
   const [audio, setAudio] = useState(null)
   const [shareCode, setShareCode] = useState('')
+  const [copyStatus, setCopyStatus] = useState('')
+  const shareDialog = useRef(null)
+  useFenetreClavier(shareDialog, () => setShareCode(''), !!shareCode)
   const [importCode, setImportCode] = useState('')
   const [importMsg, setImportMsg] = useState('')
   const [showImport, setShowImport] = useState(false)
@@ -57,9 +62,9 @@ function RevisePage() {
     const code = encodeDeck(deck)
     if (!code) return
     try { if (navigator.share) { await navigator.share({ title: deck.title, text: code }); return } } catch { /* annulé */ }
-    setShareCode(code)
+    setCopyStatus(''); setShareCode(code)
   }
-  const copyShare = async () => { try { await navigator.clipboard.writeText(shareCode) } catch { /* */ } }
+  const copyShare = async () => { try { await navigator.clipboard.writeText(shareCode); setCopyStatus(t('copied')) } catch { setCopyStatus(t('shareHint')); shareDialog.current?.querySelector('textarea')?.select() } }
   const doImport = () => {
     const deck = decodeDeck(importCode)
     if (!deck) { setImportMsg(t('importError')); return }
@@ -162,18 +167,19 @@ function RevisePage() {
       <section className="revision-bridge"><div><h2 className="font-display">{m.bridge}</h2><p>{m.bridgeHelp}</p></div><Link to="/bac-blanc" className="btn-gold">{m.bridgeAction} <span aria-hidden>↗</span></Link></section>
       {audio && <AudioReview items={audio.cards} color={audio.color || '#7c3aed'} title={audio.title} onClose={() => setAudio(null)} />}
 
-      {shareCode && (
-        <div className="fixed inset-0 z-50 flex items-start justify-center bg-slate-900/50 p-4 pt-16 backdrop-blur-sm" onClick={() => setShareCode('')}>
-          <div role="dialog" aria-modal="true" aria-label={t('shareDeck')} className="card w-full max-w-md p-5" onClick={(e) => e.stopPropagation()}>
+      {shareCode && createPortal(
+        <div className="fixed inset-0 z-50 flex items-start justify-center bg-slate-900/50 p-4 pt-16 backdrop-blur-sm overflow-y-auto" onClick={() => setShareCode('')}>
+          <div ref={shareDialog} role="dialog" aria-modal="true" aria-label={t('shareDeck')} className="card w-full max-w-md p-5" onClick={(e) => e.stopPropagation()}>
             <div className="mb-2 flex items-center justify-between">
               <span className="font-display text-lg font-semibold">📤 {t('shareDeck')}</span>
               <button onClick={() => setShareCode('')} className="grid h-8 w-8 place-items-center rounded-full text-slate-600 hover:text-slate-700 dark:hover:text-slate-200" aria-label={t('quit')}>✕</button>
             </div>
             <p className="mb-2 text-xs text-slate-500 dark:text-slate-300">{t('shareHint')}</p>
-            <textarea readOnly value={shareCode} onFocus={(e) => e.target.select()} rows={4} className="w-full resize-none rounded-xl border border-slate-200 bg-transparent p-3 font-mono text-xs outline-none dark:border-slate-700" />
+            <textarea aria-label={t('copyCode')} readOnly value={shareCode} onFocus={(e) => e.target.select()} rows={4} className="w-full resize-none rounded-xl border border-slate-200 bg-transparent p-3 font-mono text-xs outline-none dark:border-slate-700" />
             <button onClick={copyShare} className="btn-primary mt-3 w-full !min-h-0 !py-2 text-sm">📋 {t('copyCode')}</button>
+            {copyStatus && <p role="status" className="mt-2 text-sm">{copyStatus}</p>}
           </div>
-        </div>
+        </div>, document.body
       )}
     </div>
   )

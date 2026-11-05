@@ -226,7 +226,7 @@ export async function consumeOAuthRedirect() {
   const h = (window.location.hash || '').replace(/^#\/?/, '')
   const params = new URLSearchParams(h)
   const cleanHash = () => { try { history.replaceState(null, '', window.location.pathname + window.location.search) } catch { /* ignore */ } }
-  if (params.get('error')) { const e = params.get('error_description') || params.get('error'); cleanHash(); return { error: decodeURIComponent(e.replace(/\+/g, ' ')) } }
+  if (params.get('error')) { const e = params.get('error_description') || params.get('error'); cleanHash(); return { error: e } }
   const access_token = params.get('access_token')
   if (!access_token) return null
   const user = await getUser(access_token)

@@ -1,6 +1,8 @@
 // Libellés d'interface en italien, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  duelSending: "Invio in corso…",
+  duelSendError: "Invio non confermato. Il risultato è conservato qui; riprova.",
   epsIntro: "Attività, valutazione e allenamento",
   studyGerman: "Tedesco",
   studyLanguagesTitle: "Le lingue che studi",

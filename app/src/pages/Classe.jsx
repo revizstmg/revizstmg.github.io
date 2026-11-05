@@ -884,6 +884,9 @@ function DuelList({ classCode, name, t }) {
   const [quizzes, setQuizzes] = useState([])
   const [status, setStatus] = useState('loading')
   const [ctx, setCtx] = useState(null) // { quiz, duelId? } — play context
+  const sending = useRef(false)
+  const [transmission, setTransmission] = useState(null)
+  useEffect(() => { setTransmission(null) }, [ctx])
 
   const load = useCallback(async () => {
     setStatus('loading')
@@ -902,7 +905,7 @@ function DuelList({ classCode, name, t }) {
         <h2 className="font-display text-xl font-semibold">{t('pickQuizForDuel')}</h2>
         {quizzes.length === 0 && <Empty>{t('noQuizForDuel')}</Empty>}
         {quizzes.map((qz) => (
-          <button key={qz.id} onClick={() => { setCtx({ quiz: qz }); setView('play') }} className="card flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md">
+          <button key={qz.id} onClick={() => { setCtx({ quiz: qz, requestId: crypto.randomUUID() }); setView('play') }} className="card flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md">
             <span aria-hidden className="text-lg">📝</span>
             <span className="min-w-0 flex-1"><span className="block truncate font-semibold">{qz.title || t('quizUntitled')}</span><span className="block text-xs text-slate-400">{qz.questions.length} {t('questionsWord')}</span></span>
             <span className="text-slate-300" aria-hidden>›</span>
@@ -914,17 +917,24 @@ function DuelList({ classCode, name, t }) {
   if (view === 'play' && ctx) {
     const game = { questions: ctx.quiz.questions || [] }
     const onDone = async ({ correct, total }) => {
+      if (sending.current) return
+      sending.current = true
+      setTransmission({ correct, total, status: 'sending' })
       try {
         if (ctx.duelId) await acceptDuel({ id: ctx.duelId, name, score: correct, total })
-        else await createDuel({ classCode, quizId: ctx.quiz.id, quizTitle: ctx.quiz.title, name, score: correct, total })
-      } catch { alert(t('rankOffline')); return }
-      setCtx(null); setView('list')
+        else await createDuel({ requestId: ctx.requestId, classCode, quizId: ctx.quiz.id, quizTitle: ctx.quiz.title, name, score: correct, total })
+      } catch { setTransmission({ correct, total, status: 'error' }); return }
+      finally { sending.current = false }
+      setTransmission(null); setCtx(null); setView('list')
     }
     return (
       <div className="space-y-3">
-        <button onClick={() => { setCtx(null); setView('list') }} className="lien-retour">← {t('back')}</button>
+        <button disabled={transmission?.status === 'sending'} onClick={() => { setCtx(null); setView('list') }} className="lien-retour">← {t('back')}</button>
         <h2 className="font-display text-xl font-semibold">⚔️ {ctx.quiz.title || t('quizUntitled')}</h2>
-        <Qcm game={game} mode="training" color="var(--c-accent)" onDone={onDone} />
+        {transmission ? <section className="card space-y-3 p-5" aria-live="polite">
+          <p>{transmission.correct} / {transmission.total}</p>
+          {transmission.status === 'sending' ? <p>{t('duelSending')}</p> : <><p role="alert">{t('duelSendError')}</p><button className="btn-primary" onClick={() => onDone(transmission)}>{t('retry')}</button></>}
+        </section> : <Qcm game={game} mode="training" color="var(--c-accent)" onDone={onDone} />}
       </div>
     )
   }

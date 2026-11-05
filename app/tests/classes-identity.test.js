@@ -58,3 +58,14 @@ describe('noms de classe partagés',()=>{
   }
  })
 })
+
+test('duel : un réessai après réponse perdue réutilise la clé primaire et vérifie le résultat', async () => {
+  const {createDuel}=await import('../src/classroom.js')
+  const args={requestId:'00000000-0000-4000-8000-000000000003',classCode:'stmg-abc23',quizId:'quiz',name:'Test',score:1,total:2}
+  send.mockRejectedValue(Object.assign(new Error('duplicate'),{status:409}))
+  getJSON.mockImplementation(async()=>[{...send.mock.calls[0][2][0]}])
+  expect((await createDuel(args)).id).toBe(args.requestId)
+  expect(send.mock.calls[0][2][0].id).toBe(args.requestId)
+  getJSON.mockResolvedValue([{id:args.requestId,challenger_score:999}])
+  await expect(createDuel(args)).rejects.toThrow('duplicate')
+})

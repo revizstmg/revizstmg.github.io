@@ -1,6 +1,8 @@
 // Libellés d'interface en anglais, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  duelSending: "Sending…",
+  duelSendError: "Sending was not confirmed. Your result is kept here; try again.",
   epsIntro: "Activities, assessment and training",
   studyGerman: "German",
   studyLanguagesTitle: "Your study languages",

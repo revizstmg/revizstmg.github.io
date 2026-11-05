@@ -1,5 +1,7 @@
 // Deutsche Benutzeroberfläche, lokal geladen und offline verfügbar.
 export default {
+  duelSending: "Wird gesendet…",
+  duelSendError: "Das Senden wurde nicht bestätigt. Dein Ergebnis bleibt hier erhalten; versuche es erneut.",
   epsIntro: "Aktivitäten, Bewertung und Training",
   "studyLanguagesTitle": "Deine Lernsprachen",
   "studyLanguagesHelp": "Wähle eine oder mehrere Sprachen. Du kannst die Auswahl in den Einstellungen ändern. Ohne Auswahl bleiben alle verfügbaren Materialien sichtbar.",
