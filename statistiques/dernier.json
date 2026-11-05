@@ -1,6 +1,6 @@
 {
- "date": "2026-11-04",
- "heure": "2026-11-04T12:46:34.517Z",
+ "date": "2026-11-05",
+ "heure": "2026-11-05T12:56:16.595Z",
  "utilisation": {
   "profs": 4,
   "eleves": 11,
@@ -10,25 +10,23 @@
    "premiere-stmg": 2,
    "terminale-stmg": 9
   },
-  "vues_7j": 51,
+  "vues_7j": 60,
   "actifs_1j": 1,
   "actifs_7j": 1,
   "ecrans_7j": {
-   "moi": 1,
    "amis": 1,
-   "guide": 8,
-   "badges": 1,
-   "accueil": 25,
-   "matiere": 5,
+   "guide": 5,
+   "accueil": 33,
+   "matiere": 14,
    "boutique": 1,
    "chapitre": 1,
-   "revision": 6,
-   "bac-blanc": 2
+   "revision": 4,
+   "bac-blanc": 1
   },
-  "vues_hier": 0,
+  "vues_hier": 32,
   "actifs_30j": 7,
   "defis_amis": 0,
-  "visites_7j": 15,
+  "visites_7j": 25,
   "nouveaux_7j": 0,
   "specialites": {
    "sig": 1,
@@ -38,7 +36,7 @@
   "joueurs_amis": 1,
   "nouveaux_30j": 5,
   "rappels_push": 0,
-  "visites_hier": 0,
+  "visites_hier": 16,
   "defis_amis_7j": 0,
   "sessions_live": 0,
   "quiz_de_classe": 0,
@@ -65,9 +63,9 @@
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-11-04T09:50:25Z"
+   "date": "2026-11-04T16:58:47Z"
   },
-  "modifications7j": 27
+  "modifications7j": 36
  },
  "tests": "success"
 }

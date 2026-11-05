@@ -1,6 +1,6 @@
 # 📊 Statistiques de RévizSTMG
 
-Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **4 novembre 2026 à 13:46**.
+Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **5 novembre 2026 à 13:56**.
 
 ## 👥 Utilisation
 
@@ -16,8 +16,8 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 | Amis | 1 joueurs · 0 défis (0 cette semaine) |
 | Suivi des parents | 0 élèves suivis (0 actifs cette semaine) |
 | Erreurs signalées | 0 à traiter · 0 reçues cette semaine |
-| Visites | 0 hier (0 pages vues) · 15 en 7 jours (51 pages vues) |
-| Écrans les plus vus (7 jours) | accueil 25 · guide 8 · revision 6 · matiere 5 · bac-blanc 2 · moi 1 · amis 1 · badges 1 · boutique 1 · chapitre 1 |
+| Visites | 16 hier (32 pages vues) · 25 en 7 jours (60 pages vues) |
+| Écrans les plus vus (7 jours) | accueil 33 · matiere 14 · guide 5 · revision 4 · amis 1 · boutique 1 · chapitre 1 · bac-blanc 1 |
 
 > Un compte est « actif » quand sa progression a été synchronisée. Les visites sont comptées sans cookie ni identifiant (une visite = un onglet ouvert sur le site).
 
@@ -35,13 +35,14 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 
 - Tests du contenu et de la logique : ✅ réussis
 - Dernière CI sur main : ❌ —
-- Dernière mise en ligne réussie : ✅ 4 novembre 2026 à 10:50
-- Modifications de l'app ces 7 derniers jours : 27
+- Dernière mise en ligne réussie : ✅ 4 novembre 2026 à 17:58
+- Modifications de l'app ces 7 derniers jours : 36
 
 ## 📈 Évolution (14 derniers jours)
 
 | Date | Comptes | Actifs 7 j | Nouveaux 7 j | Visites la veille | Chapitres | Questions |
 |---|---|---|---|---|---|---|
+| 5 nov. | 15 | 1 | 0 | 16 | 862 | 19 181 |
 | 4 nov. | 15 | 1 | 0 | 0 | 862 | 19 181 |
 | 3 nov. | 15 | 1 | 0 | 1 | 870 | 19 672 |
 | 2 nov. | 15 | 1 | 0 | 0 | 870 | 19 687 |
@@ -55,5 +56,4 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 | 25 oct. | 14 | 6 | 3 | 21 | 870 | 20 449 |
 | 24 oct. | 14 | 5 | 3 | 23 | 870 | 20 449 |
 | 23 oct. | 13 | 4 | 3 | 24 | 870 | 20 449 |
-| 22 oct. | 11 | 2 | 1 | 24 | 806 | 26 755 |
 
