@@ -103,3 +103,15 @@ test('les espaces sociaux refusent un appel anonyme ; le suivi parent par code r
  await expect(network.rpc('revizstmg_ligue')).rejects.toMatchObject({status:401});expect(fetch).not.toHaveBeenCalled()
  expect(await network.rpc('revizstmg_stats_enfant',{p_code:'CODE-TEST'})).toEqual([]);expect(fetch).toHaveBeenCalledTimes(1)
 })
+
+for (const [description, expected] of [
+ ['Refus%20%C3%A0%20100%25', 'Refus à 100%'],
+ ['A%2BB+et+%25', 'A+B et %'],
+ ['Mauvais%ZZ', 'Mauvais%ZZ'],
+]) test(`OAuth : un seul décodage de ${description}`, async () => {
+  vi.stubGlobal('window', { location: { hash: `#error=access_denied&error_description=${description}`, pathname: '/', search: '' } })
+  const replaceState = vi.fn()
+  vi.stubGlobal('history', { replaceState })
+  expect(await api.consumeOAuthRedirect()).toEqual({ error: expected })
+  expect(replaceState).toHaveBeenCalledWith(null, '', '/')
+})

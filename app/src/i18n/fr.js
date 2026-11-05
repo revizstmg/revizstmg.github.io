@@ -1,5 +1,7 @@
 // Source française des libellés de l’interface.
 export default {
+  duelSending: "Transmission en cours…",
+  duelSendError: "Envoi non confirmé. Ton résultat est conservé ici ; réessaie.",
   epsIntro: "Activités, barèmes et entraînements",
   studyGerman: "Allemand",
   studyLanguagesTitle: "Tes langues étudiées",

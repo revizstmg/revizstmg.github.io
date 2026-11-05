@@ -312,6 +312,7 @@ function FriendsPage() {
         <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">{t('friendsSub')}</p>
       </header>
       <Tabs />
+      {msg && <p role={msg.kind === 'err' ? 'alert' : 'status'} className={`card p-3 text-sm ${msg.kind === 'ok' ? 'text-emerald-700 dark:text-emerald-400' : 'text-rose-700 dark:text-rose-400'}`}>{msg.text}{msg.kind === 'err' && <span className="mt-1 block">Ta demande n’a pas été confirmée. Tu peux réessayer avec le même bouton.</span>}</p>}
 
       {status === 'error' && <div className="card p-6 text-center text-sm text-slate-500 dark:text-slate-400">{t('rankOffline')}</div>}
 
@@ -331,7 +332,7 @@ function FriendsPage() {
                 className="flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2.5 font-display text-lg font-semibold uppercase tracking-widest outline-none focus:border-[color:var(--c-accent)] dark:border-slate-700 dark:bg-slate-800" aria-label={t('addFriend')} />
               <button onClick={add} disabled={busy || normFriendCode(input).length < 4} className="btn-primary shrink-0 disabled:opacity-40" style={{ backgroundColor: 'var(--c-accent-fort)' }}>{t('send')}</button>
             </div>
-            {msg && <p className={`mt-2 text-sm ${msg.kind === 'ok' ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-700 dark:text-rose-400'}`}>{msg.text}{msg.kind === 'err' && <span className="block mt-1">Ta demande n’a pas été confirmée. Tu peux réessayer avec le même bouton.</span>}</p>}
+
           </section>
 
           {reqs.length > 0 && (
@@ -460,7 +461,7 @@ function FriendsPage() {
                   <button onClick={() => launch(flow.friend)} disabled={busy || sel.size === 0} className="btn-primary flex-1 disabled:opacity-40" style={{ backgroundColor: 'var(--c-accent-fort)' }}>📨 {t('duelInviteBtn')} {sel.size > 0 ? `(${sel.size})` : ''}</button>
                   <button onClick={() => { setFlow(null); setSel(new Set()) }} className="btn-ghost">{t('cancel')}</button>
                 </div>
-                {msg && msg.kind === 'err' && <p className="text-sm text-rose-700 dark:text-rose-400">{msg.text}{msg.kind === 'err' && <span className="block mt-1">Ta demande n’a pas été confirmée. Tu peux réessayer avec le même bouton.</span>}</p>}
+
               </div>
             )}
           </section>

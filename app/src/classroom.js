@@ -183,14 +183,28 @@ export async function fetchQuizResults(quizId) {
 export async function fetchDuels(classCode) {
   return getJSON(rest(`class_duel?select=*&class_code=eq.${enc(normalizeCode(classCode))}&order=created_at.desc&limit=60`))
 }
-export async function createDuel({ classCode, quizId, quizTitle, name, score, total }) {
-  const res = await send('POST', 'class_duel', [{
+export async function createDuel({ requestId, classCode, quizId, quizTitle, name, score, total }) {
+  const payload = {
+    ...(requestId ? { id: requestId } : {}),
     class_code: normalizeCode(classCode), quiz_id: quizId, quiz_title: String(quizTitle || '').slice(0, 120),
     challenger_device: deviceId(), challenger_name: String(name || '').slice(0, 40),
     challenger_score: Math.round(score || 0), challenger_total: Math.round(total || 0), status: 'open',
-  }], 'return=representation')
-  const rows = await res.json().catch(() => [])
-  return rows[0]
+  }
+  try {
+    const res = await send('POST', 'class_duel', [payload], 'return=representation')
+    const rows = await res.json()
+    if (!rows[0]) throw new Error('duel_not_confirmed')
+    return rows[0]
+  } catch (error) {
+    // Une réponse perdue ne crée pas un second duel au réessai : même clé primaire.
+    // Un conflit ne vaut confirmation que si le résultat existant correspond.
+    if (requestId && error?.status === 409) {
+      const rows = await getJSON(rest(`class_duel?select=*&id=eq.${enc(requestId)}&limit=1`))
+      const row = rows?.[0]
+      if (row && ['id', 'class_code', 'quiz_id', 'challenger_device', 'challenger_score', 'challenger_total'].every(key => row[key] === payload[key])) return row
+    }
+    throw error
+  }
 }
 export async function acceptDuel({ id, name, score, total }) {
   await send('PATCH', `class_duel?id=eq.${enc(id)}&status=eq.open`, {

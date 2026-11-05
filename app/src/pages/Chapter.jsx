@@ -28,7 +28,6 @@ export default function Chapter() {
   const [activeGame, setActiveGame] = useState(null)
   const [memoryOpen,setMemoryOpen]=useState(false)
   const [tab, setTab] = useState('cours') // Cours / Définitions / Exercices
-  useThemeTimer(theme ? tid : null) // mesure le temps de révision passé sur ce thème
   // Un jeu ouvert doit s'afficher depuis son début, pas depuis la position de la liste.
   useEffect(() => { if (activeGame) window.scrollTo(0, 0) }, [activeGame])
 
@@ -36,7 +35,8 @@ export default function Chapter() {
   // qu'au changement de thème/chapitre, pas à chaque rendu. Une nouvelle visite
   // = un nouveau tirage → jamais exactement les mêmes exercices.
   const chapters = useMemo(() => (theme ? themeChapters(theme) : []), [theme, cidx]) // eslint-disable-line react-hooks/exhaustive-deps
-  const chapter = chapters[Number(cidx)] || null
+  const chapter = /^(0|[1-9]\d*)$/.test(cidx) ? chapters[Number(cidx)] || null : null
+  useThemeTimer(chapter ? tid : null)
   // Même numérotation que la liste du thème : par catégorie (cours, méthodes, études de cas).
   const catDe = (c) => (c?.section?.group || 'cours')
   const memeCategorie = chapters.filter((c) => catDe(c) === catDe(chapter))
@@ -50,7 +50,7 @@ export default function Chapter() {
   // Nouveau chapitre : on referme tout jeu ouvert, on revient à l'onglet Cours
   // et on remonte en haut.
   useEffect(() => {
-    if (subject && theme) setLastChapter(sid, tid)
+    if (subject && theme && chapter) setLastChapter(sid, tid)
     setActiveGame(null)
     setTab('cours')
     setMemoryOpen(false)

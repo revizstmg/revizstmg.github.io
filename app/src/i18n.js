@@ -3,7 +3,7 @@
 //   (traduits à la main ci-dessous).
 // - `useAutoTranslate(texte)` traduit un texte français à la volée via le
 //   moteur du dictionnaire (glossaire + service en ligne), avec cache.
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { useStore } from './store.jsx'
 import { translate } from './translate.js'
 import FR from './i18n/fr.js'
@@ -47,7 +47,7 @@ export function useT() {
     window.addEventListener('stmg-translation-retry', retry)
     return () => { abonnes.delete(maj); window.removeEventListener('stmg-translation-retry', retry) }
   }, [lang])
-  return (key) => (DICT[lang] && DICT[lang][key]) || FR[key] || key
+  return useCallback((key) => (DICT[lang] && DICT[lang][key]) || FR[key] || key, [lang, DICT[lang]])
 }
 
 // Libellé traduit d'un type de jeu (qcm, vraifaux, …).

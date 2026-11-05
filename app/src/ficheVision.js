@@ -33,15 +33,18 @@ export function fileToScaledDataURL(file, maxDim = 1600, quality = 0.82) {
 
 // Analyse les photos avec l'IA. Renvoie { title, questions, keyInfo, definitions }.
 // Lève une erreur (err.code) en cas d'échec (dont 'not_configured').
-export async function analyzeWithVision(files) {
+export async function analyzeWithVision(files, { signal } = {}) {
   if (files.length > MAX_VISION_IMAGES) { const e = new Error('too_many_images'); e.code = 'too_many_images'; throw e }
+  signal?.throwIfAborted()
   const images = []
   for (const f of files) images.push(await fileToScaledDataURL(f))
   if (!images.length) { const e = new Error('no_images'); e.code = 'no_images'; throw e }
 
+  signal?.throwIfAborted()
   // Le serveur exige un compte abonné : il lit lui-même l'abonnement et le quota.
   const token = await getValidToken()
   if (!token) { const e = new Error('login_required'); e.code = 'login_required'; throw e }
+  signal?.throwIfAborted()
   let valider
   try { valider = reserverIA('photo') } catch (err) { const e = new Error(err.message); e.code = err.message; throw e }
   let res
@@ -50,7 +53,7 @@ export async function analyzeWithVision(files) {
       method: 'POST',
       headers: { apikey: SUPA_ANON, Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({ images }),
-      signal: AbortSignal.timeout(90000),
+      signal: signal ? AbortSignal.any([signal, AbortSignal.timeout(90000)]) : AbortSignal.timeout(90000),
     })
   } catch (err) { const e = new Error(err?.name === 'TimeoutError' ? 'timeout' : 'network'); e.code = e.message; throw e }
 
@@ -60,6 +63,7 @@ export async function analyzeWithVision(files) {
     e.code = data?.error || (res.status === 404 ? 'not_configured' : `http_${res.status}`)
     throw e
   }
+  signal?.throwIfAborted()
   valider()
   return { fiche: data.fiche, provider: data.provider || 'ia' }
 }

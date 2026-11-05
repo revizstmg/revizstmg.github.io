@@ -1,6 +1,8 @@
 // Libellés d'interface en espagnol, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  duelSending: "Enviando…",
+  duelSendError: "El envío no se ha confirmado. Tu resultado se conserva aquí; inténtalo de nuevo.",
   epsIntro: "Actividades, evaluación y entrenamiento",
   studyGerman: "Alemán",
   studyLanguagesTitle: "Los idiomas que estudias",
