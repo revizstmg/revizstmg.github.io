@@ -24,7 +24,7 @@ test('changement de compte dans profil ouvert : formulaire suit B',async({page},
  await page.goto('./#/parametres?rubrique=compte&reglage=profil');await attendreAccueil(page)
  await expect(page.getByLabel('Prénom',{exact:true})).toHaveValue('Léa')
  await page.evaluate(B=>{const old=localStorage.getItem('stmg_session');localStorage.setItem('stmg_session',JSON.stringify({token:'token-B',refresh:'r',expires_at:9999999999,user:{id:B,email:'b@test.fr'}}));window.dispatchEvent(new StorageEvent('storage',{key:'stmg_session',oldValue:old,newValue:localStorage.getItem('stmg_session')}))},B)
- await expect.poll(async()=>(await etat(page)).profile.firstName).toBe('Bob')
+ await expect.poll(async()=>(await etat(page)).profile?.firstName).toBe('Bob')
  await page.goto('./#/parametres?rubrique=compte&reglage=profil');await attendreAccueil(page)
  await info.attach('identite-formulaire',{body:JSON.stringify({etat:await etat(page),prenomAffiche:await page.getByLabel('Prénom',{exact:true}).inputValue()}),contentType:'application/json'})
  await page.screenshot({path:info.outputPath('profil-changement-compte.png')})

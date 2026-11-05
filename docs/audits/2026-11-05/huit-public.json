@@ -1,0 +1,16 @@
+{
+  "source": "523c4ebb540c049d019032fe1f606eae1b68d60f",
+  "compilation": "79d4fa01e8c05addd7dc1d33fbaebce9368b37a9",
+  "url": "https://revizstmg.github.io/",
+  "http": 200,
+  "index_sha256": "4b4a47454744f0daa35ca924c4c26e90f34ff28ad39e1fc65dd3388219b0ec1b",
+  "ci_run": 42098945973,
+  "unitaires_utc": 764,
+  "unitaires_paris": 764,
+  "parcours_ci_directs": 391,
+  "parcours_ci_apres_reprise": 1,
+  "parcours_publics_distincts": 20,
+  "donnees": "comptes et réponses synthétiques, fichiers statiques publics réels",
+  "limite": "RLS, Stripe et corrections IA réels non certifiés ; aucun appel privé réel",
+  "incident_test": "attente du profil temporairement null : lecture sécurisée profile?.firstName, assertion finale Bob conservée, trois reprises locales et une publique réussies"
+}
