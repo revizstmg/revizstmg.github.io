@@ -39,3 +39,14 @@ Références consultées le 6 novembre 2026 :
 Les deux rapports sources sont dans `docs/audits/2026-11-06/`. Leurs constats décrivent l’état avant correction ; cette note suit la livraison. Huit tests ciblés vérifient notamment le contenu assemblé et le QCM ambigu. La suite générale, la compilation et la publication sont consignées au journal de coordination avec leurs résultats réels.
 
 Cette relecture n’est pas une certification de professeur ni une garantie d’absence de toute faute dans l’ensemble du site. Les anciens sujets du Prix vérifiés restent inchangés. Le nouveau sujet 2025-2026 sur l’épargne appartient au chantier distinct déjà préparé ; sa correction serveur demande un déploiement spécifique et n’est pas annoncée comme activée par ce lot.
+
+## Livraison vérifiée
+
+PR [#182](https://github.com/revizstmg/revizstmg.github.io/pull/182), source `87fa6e6dbdb66145e10d7b489a69cb1c5892152e`, compilation `2a42f9524dd9dae1af16ae6eb31708b154020fee`.
+
+- 772 tests unitaires locaux réussis, puis 772 en UTC et 772 à Paris sur GitHub.
+- Compilation et 392 parcours navigateur réussis dans la CI [42223595260](https://github.com/revizstmg/revizstmg.github.io/actions/runs/42223595260).
+- Deux index pédagogiques régénérés après les deux échecs initiaux ; aucun contrôle retiré.
+- Publication Pages réussie ; index et huit pages publiques distinctes comparés au commit compilé, HTTP 200 et empreintes identiques. Preuves : [economie-public.json](audits/2026-11-06/economie-public.json).
+
+La lecture des fichiers du commit compilé a remplacé le téléchargement direct de l’artefact, indisponible depuis cet environnement. Les services externes des tests navigateur sont simulés ; ces vérifications ne certifient pas le fonctionnement réel de Gemini ou de Supabase, qui n’ont pas été modifiés par ce lot.
