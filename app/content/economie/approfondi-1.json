@@ -153,7 +153,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "L’intervention de l’État a un **coût** et des **limites**. Les dépenses publiques se financent par l’**impôt** ou par l’**emprunt** ; ce dernier alimente le **déficit** (dépenses > recettes sur une année) puis la **dette publique** (accumulation des déficits passés)."
+          "c": "L’intervention publique a un **coût**. Un **déficit public** apparaît lorsque les dépenses des administrations publiques dépassent leurs recettes sur une année. L’**emprunt finance ce déficit** : il ne le crée pas par lui-même et ne constitue pas une recette réduisant le déficit. La **dette publique** est un stock d’engagements restant à rembourser ; sa variation dépend notamment du déficit et d’autres opérations financières."
         },
         {
           "t": "formula",
@@ -162,7 +162,7 @@
         {
           "t": "list",
           "c": [
-            "**Le poids de la dette** : plus elle est élevée, plus les intérêts pèsent, réduisant les marges pour d’autres dépenses. La dette d’aujourd’hui est un impôt de demain.",
+            "**La contrainte budgétaire** : l’endettement entraîne des remboursements et des charges d’intérêts. Il peut limiter les marges de manœuvre sur les dépenses et les prélèvements futurs ; ses effets dépendent aussi des taux d’intérêt, de la croissance et de l’usage des fonds empruntés.",
             "**L’effet d’éviction** : quand l’État emprunte beaucoup, il peut faire monter les taux et « évincer » l’investissement privé.",
             "**Les règles européennes** : le traité fixe des repères (déficit et dette encadrés) qui limitent la liberté budgétaire des États.",
             "**L’efficacité incertaine** : une relance peut « fuir » vers les importations plutôt que soutenir la production nationale."
@@ -215,7 +215,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "Mesurer le chômage suppose d’abord des **définitions précises**. La **population active** regroupe les personnes qui travaillent (**actifs occupés**) et celles qui cherchent un emploi (**chômeurs**). Les autres (étudiants, retraités, personnes au foyer) sont **inactifs**."
+          "c": "La **population active** regroupe les personnes **en emploi** et les **chômeurs au sens du BIT**. Pour être chômeur BIT, il faut être sans emploi, disponible dans les **deux semaines**, et avoir recherché activement un emploi dans les **quatre dernières semaines**, ou en avoir trouvé un qui commence dans les **trois mois**. Les autres personnes sont **inactives**. Être étudiant, retraité ou au foyer ne suffit pas à déterminer ce classement."
         },
         {
           "t": "formula",
@@ -232,12 +232,12 @@
         {
           "t": "warning",
           "h": "Piège",
-          "c": "Le taux de chômage se calcule sur la **population active**, **pas** sur la population totale ! Un étudiant ou un retraité n’entre pas dans le calcul."
+          "c": "Le **taux de chômage** se calcule sur la **population active**, pas sur la population totale. Un étudiant ou un retraité peut être actif occupé ou chômeur BIT s’il remplit les critères : c’est sa situation vis-à-vis de l’emploi qui compte, pas seulement son statut."
         },
         {
           "t": "tip",
           "h": "À distinguer",
-          "c": "Le **halo du chômage** regroupe des personnes sans emploi qui ne sont **pas comptées** comme chômeurs au sens strict (elles ne cherchent pas activement, ou ne sont pas disponibles immédiatement). Le chômage « officiel » ne recense donc pas toutes les personnes sans emploi qui souhaiteraient travailler."
+          "c": "Le **halo autour du chômage** regroupe des personnes sans emploi qui **souhaitent travailler** mais ne remplissent pas tous les critères pour être chômeurs BIT : elles ne recherchent pas activement un emploi ou ne sont pas disponibles dans les deux semaines. Toutes les personnes sans emploi ne sont donc ni chômeuses BIT ni nécessairement dans le halo."
         }
       ]
     },
@@ -570,20 +570,20 @@
       "blocks": [
         {
           "t": "p",
-          "c": "La **croissance économique** est l’augmentation **durable** de la production de richesses d’un pays. On la mesure par la variation du **PIB (Produit Intérieur Brut)**, qui additionne toute la **valeur ajoutée** produite sur le territoire pendant une année."
+          "c": "La **croissance économique** est l’augmentation durable de la production. Elle se mesure par la variation du **PIB en volume**, corrigé de l’effet des prix. Le PIB comprend les valeurs ajoutées des productions **marchande et non marchande**, augmentées des impôts sur les produits et diminuées des subventions sur les produits."
         },
         {
           "t": "formula",
-          "c": "Taux de croissance = ((PIB année N − PIB année N-1) ÷ PIB année N-1) × 100"
+          "c": "Taux de croissance = ((PIB en volume de l’année N − PIB en volume de l’année N−1) ÷ PIB en volume de l’année N−1) × 100"
         },
         {
           "t": "p",
-          "c": "Le PIB est un indicateur **puissant mais imparfait**. Il mesure ce qui se **vend**, mais ignore beaucoup de choses essentielles au bien-être — et compte parfois comme « richesse » ce qui n’en est pas."
+          "c": "Le PIB mesure la production **marchande et non marchande**, mais n’est pas un indicateur complet du bien-être. Les services publics non marchands sont évalués à partir de leurs coûts de production ; une activité gratuite n’est donc pas automatiquement exclue du PIB."
         },
         {
           "t": "list",
           "c": [
-            "Il **ignore** le travail non marchand (bénévolat, travail domestique) et la production **gratuite**.",
+            "Il ne comptabilise généralement pas le **travail domestique non rémunéré** ni les services bénévoles non valorisés dans les comptes, mais inclut la **production non marchande des administrations publiques**.",
             "Il **ne dit rien** des **inégalités** : un PIB qui augmente peut cacher une richesse captée par une minorité.",
             "Il **compte positivement** des activités néfastes : réparer les dégâts d’une catastrophe **augmente** le PIB.",
             "Il **ignore l’épuisement** des ressources et la **dégradation** de l’environnement."
@@ -758,7 +758,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "**Énoncé.** Le PIB d’un pays passe de 500 à 520 milliards € en un an, mais son empreinte écologique dépasse largement sa biocapacité et ses inégalités augmentent. Calculez la croissance et portez un jugement nuancé."
+          "c": "**Énoncé.** Le PIB en volume d’un pays passe de 500 à 520 milliards € en un an, mais son empreinte écologique dépasse largement sa biocapacité et ses inégalités augmentent. Calculez la croissance et portez un jugement nuancé."
         },
         {
           "t": "example",

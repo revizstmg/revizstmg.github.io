@@ -144,7 +144,7 @@
           },
           {
             "t": "warning",
-            "c": "Quand les **dépenses** dépassent les **recettes**, le budget est en **déficit**. Répété année après année, ce déficit s’accumule en **dette publique** — qu’il faudra rembourser et qui pèse sur les marges de manœuvre futures."
+            "c": "Quand les **dépenses** des administrations publiques dépassent leurs **recettes**, elles enregistrent un **déficit**. Les déficits contribuent à accroître la **dette publique**, mais son évolution dépend aussi d’autres opérations financières. Le remboursement et les intérêts peuvent limiter les marges de manœuvre futures."
           },
           {
             "t": "p",
@@ -183,7 +183,7 @@
               ],
               [
                 "Dette publique",
-                "Accumulation des déficits successifs de l’État"
+                "Stock des dettes des administrations publiques restant à rembourser, notamment État, administrations locales et Sécurité sociale"
               ]
             ]
           }
@@ -254,7 +254,7 @@
               ],
               [
                 "**Inactifs**",
-                "Ni en emploi ni au chômage (étudiants, retraités, au foyer)"
+                "Ni en emploi ni au chômage BIT ; par exemple un étudiant sans emploi ne recherchant pas de travail"
               ]
             ]
           },
@@ -534,22 +534,22 @@
   },
   "eco-t9": {
     "essentiel": [
-      "La croissance se mesure par le **PIB**, indicateur **limité** du bien-être.",
+      "La **croissance** se mesure par l’évolution du **PIB en volume**, corrigé de l’effet des prix ; le PIB reste un indicateur limité du bien-être.",
       "**Développement durable** = concilier **économique + social + environnemental**.",
-      "Instruments : économie **circulaire**, **collaborative**, taxation, quotas. (Thème surtout utile au **grand oral**.)"
+      "Instruments : économie **circulaire**, **collaborative**, taxation, quotas. Ce thème prépare l’écrit dès la **session 2027** et peut nourrir le **Grand oral**."
     ],
-    "intro": "La **croissance** est-elle toujours souhaitable ? Ce thème confronte le PIB à ses **limites** et introduit le **développement durable**. Il n’est pas évalué à l’écrit mais alimente le **grand oral**.",
+    "intro": "La **croissance** est-elle toujours souhaitable ? Ce thème confronte le PIB à ses limites et introduit le **développement durable**. Il fait partie du programme de Terminale et peut être mobilisé à l’**écrit du bac dès la session 2027**, ainsi qu’au **Grand oral**.",
     "cours": [
       {
         "h": "La croissance et ses limites",
         "blocks": [
           {
             "t": "p",
-            "c": "La **croissance économique** est l’augmentation durable de la production d’un pays, mesurée par l’évolution du **PIB** (produit intérieur brut = valeur des richesses créées sur un territoire en un an). Un taux de croissance positif signifie « on produit plus que l’an dernier »."
+            "c": "La **croissance économique** est l’augmentation durable de la production, mesurée par la variation du **PIB en volume**, corrigé de l’effet des prix. Une hausse du PIB en euros courants ne suffit pas à conclure : elle peut résulter de l’inflation."
           },
           {
             "t": "p",
-            "c": "Mais le PIB est un indicateur **limité du bien-être** : il ne dit rien des **inégalités** de répartition, ignore la dégradation de l’**environnement** (une marée noire peut même **augmenter** le PIB via les dépenses de dépollution !) et ne compte pas le **travail non marchand** (bénévolat, tâches domestiques)."
+            "c": "Le PIB inclut la production **marchande et non marchande**, mais reste un indicateur **limité du bien-être** : il ne décrit pas la répartition des revenus et ne retranche pas systématiquement les dégradations environnementales. Les dépenses de dépollution peuvent accroître la production mesurée, sans que le bien-être s’améliore. Il ne comptabilise généralement pas le **travail domestique non rémunéré** ni les services bénévoles non valorisés dans les comptes."
           },
           {
             "t": "example",
@@ -603,7 +603,7 @@
           },
           {
             "t": "tip",
-            "c": "Ce thème n’est pas évalué à l’écrit du bac, mais c’est une **mine de sujets pour le Grand Oral** (croissance verte, sobriété, transition écologique…)."
+            "c": "Ce thème prépare l’**écrit du bac dès la session 2027** et peut nourrir le **Grand oral** : croissance verte, sobriété, transition écologique. Ne pas le laisser de côté dans les révisions de droit et économie."
           }
         ]
       },
@@ -656,7 +656,7 @@
             "rows": [
               [
                 "Croissance économique",
-                "Augmentation durable de la production (mesurée par le PIB)"
+                "Augmentation durable de la production, mesurée par l’évolution du PIB en volume"
               ],
               [
                 "PIB",

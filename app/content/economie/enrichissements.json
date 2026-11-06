@@ -96,7 +96,7 @@
           {
             "t": "tip",
             "h": "Attention",
-            "c": "Un **inactif** (étudiant, retraité) n’est pas un chômeur : il ne fait pas partie de la population active."
+            "c": "Un **inactif** n’est ni en emploi ni chômeur BIT : il ne fait pas partie de la population active. Un étudiant ou un retraité peut toutefois être actif s’il travaille ou remplit les critères du chômage BIT."
           }
         ]
       }
@@ -152,7 +152,7 @@
           {
             "t": "tip",
             "h": "À distinguer",
-            "c": "PIB (richesse marchande) ≠ bien-être : il ignore les inégalités, l’environnement et le travail non rémunéré → d’où l’IDH."
+            "c": "Le **PIB** mesure la production marchande et non marchande, pas directement le bien-être : il ne décrit pas les inégalités, ne déduit pas tous les dégâts environnementaux et ne compte généralement pas le travail domestique non rémunéré. L’**IDH** apporte un éclairage complémentaire."
           }
         ]
       }

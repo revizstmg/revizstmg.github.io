@@ -36,7 +36,7 @@
     ],
     [
       "PIB",
-      "Somme des valeurs ajoutées produites dans un pays sur un an."
+      "Somme des valeurs ajoutées créées sur un territoire pendant une période, augmentée des impôts sur les produits et diminuée des subventions sur les produits."
     ],
     [
       "Facteurs de production",
@@ -48,7 +48,7 @@
     ],
     [
       "Croissance économique",
-      "Augmentation durable de la production (PIB)."
+      "Augmentation durable de la production, mesurée par l’évolution du PIB en volume, corrigé de l’effet des prix."
     ]
   ],
   "p1-eco-t3": [
@@ -84,7 +84,7 @@
     ],
     [
       "Autofinancement",
-      "Financement par les ressources propres de l’agent."
+      "Financement interne par les ressources dégagées par l’activité et conservées par l’agent, sans apport extérieur ni nouvel emprunt."
     ],
     [
       "Crédit",
@@ -96,7 +96,7 @@
     ],
     [
       "Action",
-      "Titre de propriété d’une part d’entreprise, donnant droit à un dividende."
+      "Titre de propriété d’une fraction du capital d’une société ; un dividende peut être versé si une distribution est décidée, sans garantie."
     ],
     [
       "Obligation",

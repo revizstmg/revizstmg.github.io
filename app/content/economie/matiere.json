@@ -129,7 +129,7 @@
             },
             {
               "front": "Dette publique",
-              "back": "Ensemble des emprunts accumulés par l’État."
+              "back": "Stock des dettes des administrations publiques restant à rembourser : État, administrations locales et administrations de sécurité sociale."
             }
           ]
         },
@@ -502,7 +502,7 @@
           "points": [
             "Instruments : économie circulaire, collaborative, taxation, quotas.",
             "Pauvreté absolue/relative, inégalités.",
-            "Remarque : ce thème n’est **pas évalué à l’écrit**, il alimente surtout le **grand oral**."
+            "Ce thème fait partie du programme de Terminale mobilisable à l’**écrit dès la session 2027**, ainsi qu’au **Grand oral**."
           ]
         }
       ],
@@ -603,9 +603,9 @@
               "explain": "Vrai : économique, social, environnemental."
             },
             {
-              "statement": "Le thème 9 est surtout utile pour le grand oral.",
+              "statement": "Le thème 9 peut être mobilisé à l’écrit du bac dès la session 2027.",
               "answer": true,
-              "explain": "Vrai : il n’est pas évalué à l’écrit mais alimente le grand oral."
+              "explain": "Vrai : la note de service du 11 septembre 2026, applicable à la session 2027, prévoit le programme de Terminale en vigueur pour l’épreuve de droit et économie."
             }
           ]
         }
