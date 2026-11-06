@@ -1,0 +1,95 @@
+{
+  "source": "79d4fa01e8c05addd7dc1d33fbaebce9368b37a9",
+  "date_reprise": "2026-11-06",
+  "donnees": "synthétiques, tout réseau privé simulé",
+  "sondes": [
+    {
+      "titre": "code ami : presse-papiers refusé pourtant Copié et exception",
+      "statut_sonde": "passed",
+      "preuves": {
+        "clipboard": {
+          "errors": [
+            "exception : clipboard-denied-synthetic"
+          ],
+          "button": "✓ Copié"
+        }
+      }
+    },
+    {
+      "titre": "prof : semaine périmée comptée et nouvel élève sans données jugé en difficulté",
+      "statut_sonde": "passed",
+      "preuves": {
+        "prof": {
+          "rows": [
+            {
+              "device_id": "00000000-0000-4000-8000-000000000002",
+              "name": "Ancienne semaine synthétique",
+              "role": "eleve",
+              "xp": 200,
+              "streak": 2,
+              "week": "2026-W01",
+              "courses_week": 12,
+              "active_day": "2026-01-03",
+              "subjects": {}
+            },
+            {
+              "device_id": "00000000-0000-4000-8000-000000000003",
+              "name": "Nouvel inscrit synthétique",
+              "role": "eleve",
+              "xp": 0,
+              "streak": 0,
+              "week": "2026-W45",
+              "courses_week": 0,
+              "active_day": "2026-11-06",
+              "subjects": {}
+            }
+          ],
+          "text": "ESPACE CLASSE\n\n👥\nClasse synthétique\n\nPartagez du travail, accompagnez vos élèves et suivez les progrès de votre classe.\n\nstmg-abc23 · 🧑‍🏫 Professeur · partage ce code avec ta classe\n\nClasse active\nClasse synthétique\nModifier le nom\nCréer une nouvelle classe\n\nCODE DE CLASSE\n\nstmg-abc23\n\nTransmets ce code à tes élèves pour qu’ils rejoignent cette classe.\n\nCopier\nMenu de la classe\nSuivi et gestion\n⌄\nSuivi et gestion\n📊 Tableau de bord\n⬇︎ Exporter CSV\n🖨 Imprimer / PDF\n2\nMEMBRES\n0%\nMOYENNE CLASSE\n0%\nMÉDIANE\n2\nDÉCROCHEURS\n🔥 Participation\n1/2 · 50%\n💡 Recommandations\n⚠️\nRelance 2 élève(s) en décrochage - un petit message peut tout changer.\n🎯\nPoint faible de la classe : Gestion et finance (0 %). Propose un QCM ou revois-le en cours.\n🔥\nSeulement 1/2 élèves ont travaillé cette semaine - lance un défi pour motiver la classe.\n⚠️ Élèves en décrochage (2)\n\nÀ relancer en priorité.\n\nAS\nAncienne semaine synthétique\nInactif\nil y a 307 j\nNI\nNouvel inscrit synthétique\nEn difficulté\naujourd’hui\n📈 Répartition des niveaux\n2\n0-25\n0\n25-50\n0\n50-75\n0\n75-100\n\n% moyenne classe\n\n🏆 Meilleurs élèves\n🥇\nAS\nAncienne semaine synthétique\n0%\n🥈\nNI\nNouvel inscrit synthétique\n0%\n🗺️ Carte des lacunes\n\nNiveau moyen par matière (rouge = à retravailler).\n\n💰\nGestion et finance\n0%\n🏢\nManagement (MSGN)\n0%\n⚖️\nDroit\n0%\n📈\nÉconomie\n0%\n🧮\nMathématiques\n0%\n🦉\nPhilosophie\n0%\n🗺️\nHistoire-Géographie\n0%\n\n🔴 Point faible : Gestion et finance (0%)\n\n👥 Suivi par élève\nDécrocheurs uniquement\nTrier :\nActivité\nMoyenne\nXP\nCours/sem.\nAS\nAncienne semaine synthétique\n🔥 2 · 12 cette sem. · vu il y a 307 j\n0%\nInactif\n›\nNI\nNouvel inscrit synthétique\n🔥 0 · 0 cette sem. · vu aujourd’hui\n0%\nEn difficulté\n›"
+        }
+      }
+    },
+    {
+      "titre": "duel de classe : quiz modifié joué et total différent du premier joueur",
+      "statut_sonde": "passed",
+      "preuves": {
+        "quiz-mutated": {
+          "old": {
+            "id": "duel-old",
+            "quiz_id": "quiz-edited",
+            "quiz_title": "Sujet initial de3questions",
+            "class_code": "stmg-abc23",
+            "challenger_device": "00000000-0000-4000-8000-000000000002",
+            "challenger_name": "Adversaire synthétique",
+            "challenger_score": 3,
+            "challenger_total": 3,
+            "status": "open"
+          },
+          "edited": {
+            "id": "quiz-edited",
+            "title": "Quiz modifié de1question",
+            "status": "published",
+            "questions": [
+              {
+                "q": "Question modifiée audit ?",
+                "choices": [
+                  "Oui correct",
+                  "Non"
+                ],
+                "answer": 0
+              }
+            ]
+          },
+          "writes": [
+            {
+              "opponent_device": "00000000-0000-4000-8000-000000000001",
+              "opponent_name": "Léa Test",
+              "opponent_score": 1,
+              "opponent_total": 1,
+              "status": "done"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
