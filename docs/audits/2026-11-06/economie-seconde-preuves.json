@@ -1,0 +1,537 @@
+{
+  "source_commit": "51a260055f654c01d1175437e7de41fe2fe327cc",
+  "chapitres_sondes": 94,
+  "sonde_complete_sha256": "9373067e0b4695feb92bb45b9b15612e9d8ce517588a1fd65b98a5da74133a19",
+  "limite": "Une réalisation générée par chapitre, pas tous les tirages ; aucun service réel appelé. Extraits pertinents de la sonde indépendante.",
+  "extraits": [
+    {
+      "id": "eco-t7",
+      "index": 0,
+      "title": "Le chômage au sens du BIT : taux de chômage et halo",
+      "section": {
+        "h": "Le chômage au sens du BIT : taux de chômage et halo",
+        "blocks": [
+          {
+            "t": "example",
+            "h": "Cas",
+            "c": "Trois personnes sans emploi : un étudiant qui ne cherche pas de travail, un retraité qui ne souhaite pas travailler et une femme de 30 ans qui postule activement depuis quatre semaines et est disponible dans les deux semaines. Laquelle est chômeuse au sens du BIT ?"
+          },
+          {
+            "t": "p",
+            "c": "Dans **cet exemple**, seule la troisième remplit les critères : être **sans emploi**, disponible dans les **deux semaines** et avoir recherché activement un emploi au cours des **quatre dernières semaines**. Une personne disponible ayant déjà trouvé un emploi qui commence dans les trois mois est aussi comptée. L’étudiant et le retraité décrits ici sont **inactifs** parce qu’ils ne remplissent pas ces critères, pas du seul fait de leur statut."
+          },
+          {
+            "t": "p",
+            "c": "On mesure la situation par le **taux de chômage** = chômeurs ÷ **population active** × 100 (la population active = actifs occupés + chômeurs). Attention : il ne se calcule **pas** sur toute la population."
+          },
+          {
+            "t": "tip",
+            "h": "Pourquoi ça compte",
+            "c": "Le **halo du chômage** regroupe des personnes sans emploi non comptées comme chômeurs (elles ne cherchent pas activement, ou ne sont pas disponibles) : le chiffre officiel **ne recense pas** toutes les personnes sans emploi qui souhaiteraient travailler."
+          }
+        ]
+      },
+      "games": [
+        {
+          "id": "eco-t7::0::trou0",
+          "type": "trou",
+          "title": "Texte à trous — ce chapitre",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "Dans ____, seule la troisième remplit les critères : être sans emploi, disponible dans les deux semaines et avoir recherché activement un emploi au cours des quatre dernières semaines.",
+              "answer": "cet exemple",
+              "alt": [],
+              "drawSource": "Dans cet exemple, seule la troisième remplit les critères : être sans emploi, disponible dans les deux semaines et avoir recherché activement un emploi au cours des quatre dernières semaines.",
+              "explain": "Le mot manquant : « cet exemple »."
+            }
+          ],
+          "questionCount": 3
+        }
+      ]
+    },
+    {
+      "id": "eco-t7",
+      "index": 9,
+      "title": "💶 MÉTHODE — Taux de chômage, taux d’activité et taux d’emploi",
+      "section": {
+        "h": "💶 MÉTHODE — Taux de chômage, taux d’activité et taux d’emploi",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Trois taux mesurent le marché du travail. Attention à ne **pas** les confondre : ils n’ont pas la même base de calcul."
+          },
+          {
+            "t": "formula",
+            "c": "Taux de chômage = Chômeurs ÷ Population active × 100\nTaux d’activité = Population active ÷ Population en âge de travailler × 100\nTaux d’emploi = Actifs occupés ÷ Population en âge de travailler × 100"
+          },
+          {
+            "t": "p",
+            "c": "Rappel : Population active = **actifs occupés + chômeurs**. Le **taux de chômage** se calcule sur la **population active** ; les taux d’**activité** et d’**emploi** se calculent sur la **population en âge de travailler** (15-64 ans)."
+          },
+          {
+            "t": "example",
+            "h": "Exemple chiffré",
+            "c": "Population 15-64 ans = 40 M ; actifs occupés = 25 M ; chômeurs = 3 M.\nPopulation active = 25 + 3 = 28 M.\nTaux de chômage = 3 ÷ 28 × 100 ≈ **10,7 %**.\nTaux d’activité = 28 ÷ 40 × 100 = **70 %**.\nTaux d’emploi = 25 ÷ 40 × 100 = **62,5 %**."
+          },
+          {
+            "t": "warning",
+            "h": "Piège",
+            "c": "Le **taux de chômage** ne se calcule PAS sur la population totale ni sur les 15-64 ans, mais sur la **population active**. Les trois taux ont des dénominateurs différents."
+          }
+        ],
+        "group": "methode"
+      },
+      "games": []
+    },
+    {
+      "id": "p1-eco-t4",
+      "index": 3,
+      "title": "Actions et obligations",
+      "section": {
+        "h": "Actions et obligations",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Sur le marché financier, on émet deux grands types de titres, très différents :"
+          },
+          {
+            "t": "p",
+            "c": "L’**action** est un **titre de propriété** représentant une fraction du capital d’une société. L’actionnaire peut recevoir un **dividende** si une distribution est décidée ; ce versement n’est **pas garanti**. Le cours de l’action peut baisser et l’actionnaire risque de perdre tout ou partie de son investissement."
+          },
+          {
+            "t": "p",
+            "c": "L’**obligation** est un **titre de dette** : elle correspond à un **prêt** fait à l’entreprise ou à l’État, et l’obligataire est un **créancier**. Elle rapporte un **intérêt fixé d’avance** et son **remboursement est prévu** : c’est un placement **plus sûr**."
+          },
+          {
+            "t": "warning",
+            "c": "Piège classique : **action = propriété**, **obligation = dette**. Acheter une action, c’est devenir **copropriétaire** ; acheter une obligation, c’est **prêter** de l’argent."
+          },
+          {
+            "t": "table",
+            "h": "Notions et définitions",
+            "head": [
+              "Notion",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Action",
+                "Titre de propriété ; dividende éventuel, non garanti ; risque de perte en capital"
+              ],
+              [
+                "Obligation",
+                "Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr"
+              ],
+              [
+                "Dividende",
+                "Part du bénéfice versée aux actionnaires"
+              ],
+              [
+                "Marché financier",
+                "Marché où s’échangent actions et obligations"
+              ]
+            ]
+          }
+        ]
+      },
+      "games": [
+        {
+          "id": "p1-eco-t4::3::qdef",
+          "type": "qcm",
+          "title": "QCM — les notions du chapitre",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Que signifie : « Action » ?",
+              "choices": [
+                "Part du bénéfice versée aux actionnaires",
+                "Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr",
+                "Marché où s’échangent actions et obligations",
+                "Titre de propriété ; dividende éventuel, non garanti ; risque de perte en capital"
+              ],
+              "answer": 3,
+              "explain": "Action → Titre de propriété ; dividende éventuel, non garanti ; risque de perte en capital",
+              "drawSource": "notion:action"
+            },
+            {
+              "q": "« Dividende » : quelle proposition est correcte ?",
+              "choices": [
+                "Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr",
+                "Titre de propriété ; dividende éventuel, non garanti ; risque de perte en capital",
+                "Part du bénéfice versée aux actionnaires",
+                "Marché où s’échangent actions et obligations"
+              ],
+              "answer": 2,
+              "explain": "Dividende → Part du bénéfice versée aux actionnaires",
+              "drawSource": "notion:dividende"
+            },
+            {
+              "q": "À quoi correspond « Marché financier » ?",
+              "choices": [
+                "Marché où s’échangent actions et obligations",
+                "Titre de propriété ; dividende éventuel, non garanti ; risque de perte en capital",
+                "Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr",
+                "Part du bénéfice versée aux actionnaires"
+              ],
+              "answer": 0,
+              "explain": "Marché financier → Marché où s’échangent actions et obligations",
+              "drawSource": "notion:marche financier"
+            },
+            {
+              "q": "Quelle est la bonne définition de « Obligation » ?",
+              "choices": [
+                "Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr",
+                "Part du bénéfice versée aux actionnaires",
+                "Titre de propriété ; dividende éventuel, non garanti ; risque de perte en capital",
+                "Marché où s’échangent actions et obligations"
+              ],
+              "answer": 0,
+              "explain": "Obligation → Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr",
+              "drawSource": "notion:obligation"
+            }
+          ],
+          "questionCount": 2
+        },
+        {
+          "id": "p1-eco-t4::3::vf",
+          "type": "vraifaux",
+          "title": "Vrai ou faux — les notions",
+          "icon": "⚖️",
+          "questions": [
+            {
+              "statement": "« Action » : Titre de propriété ; dividende éventuel, non garanti ; risque de perte en capital",
+              "answer": true,
+              "explain": "Exact. Action → Titre de propriété ; dividende éventuel, non garanti ; risque de perte en capital"
+            },
+            {
+              "statement": "« Obligation » : Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr",
+              "answer": true,
+              "explain": "Exact. Obligation → Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr"
+            },
+            {
+              "statement": "« Marché financier » : Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr",
+              "answer": false,
+              "explain": "Faux. Marché financier → Marché où s’échangent actions et obligations"
+            },
+            {
+              "statement": "« Dividende » : Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr",
+              "answer": false,
+              "explain": "Faux. Dividende → Part du bénéfice versée aux actionnaires"
+            }
+          ]
+        },
+        {
+          "id": "p1-eco-t4::3::sterm",
+          "type": "saisie",
+          "title": "Écris le terme — ce chapitre",
+          "icon": "🔤",
+          "questions": [
+            {
+              "prompt": "Quel terme correspond à cette définition ?\n« Titre de propriété ; dividende éventuel, non garanti ; risque de perte en capital »",
+              "answer": "Action",
+              "alt": [],
+              "explain": "Action : Titre de propriété ; dividende éventuel, non garanti ; risque de perte en capital"
+            },
+            {
+              "prompt": "Quel terme correspond à cette définition ?\n« Marché où s’échangent actions et obligations »",
+              "answer": "Marché financier",
+              "alt": [],
+              "explain": "Marché financier : Marché où s’échangent actions et obligations"
+            },
+            {
+              "prompt": "Quel terme correspond à cette définition ?\n« Part du bénéfice versée aux actionnaires »",
+              "answer": "Dividende",
+              "alt": [],
+              "explain": "Dividende : Part du bénéfice versée aux actionnaires"
+            },
+            {
+              "prompt": "Quel terme correspond à cette définition ?\n« Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr »",
+              "answer": "Obligation",
+              "alt": [],
+              "explain": "Obligation : Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr"
+            }
+          ],
+          "questionCount": 2
+        },
+        {
+          "id": "p1-eco-t4::3::assoc",
+          "type": "association",
+          "title": "Association — notions du chapitre",
+          "icon": "🔗",
+          "pairs": [
+            {
+              "left": "Dividende",
+              "right": "Part du bénéfice versée aux actionnaires"
+            },
+            {
+              "left": "Marché financier",
+              "right": "Marché où s’échangent actions et obligations"
+            },
+            {
+              "left": "Action",
+              "right": "Titre de propriété ; dividende éventuel, non garanti ; risque de perte en capital"
+            },
+            {
+              "left": "Obligation",
+              "right": "Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr"
+            }
+          ]
+        },
+        {
+          "id": "p1-eco-t4::3::memory",
+          "type": "memory",
+          "title": "Memory — notions du chapitre",
+          "icon": "🃏",
+          "pairs": [
+            {
+              "a": "Marché financier",
+              "b": "Marché où s’échangent actions et obligations"
+            },
+            {
+              "a": "Obligation",
+              "b": "Titre de dette ; rapporte un intérêt fixé d’avance ; plus…"
+            },
+            {
+              "a": "Dividende",
+              "b": "Part du bénéfice versée aux actionnaires"
+            },
+            {
+              "a": "Action",
+              "b": "Titre de propriété ; dividende éventuel, non garanti…"
+            }
+          ]
+        },
+        {
+          "id": "p1-eco-t4::3::trou0",
+          "type": "trou",
+          "title": "Texte à trous — ce chapitre",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "L’____ est un titre de propriété représentant une fraction du capital d’une société.",
+              "answer": "action",
+              "alt": [],
+              "drawSource": "L’action est un titre de propriété représentant une fraction du capital d’une société.",
+              "explain": "Le mot manquant : « action »."
+            },
+            {
+              "text": "L’action est un ____ représentant une fraction du capital d’une société.",
+              "answer": "titre de propriété",
+              "alt": [],
+              "drawSource": "L’action est un titre de propriété représentant une fraction du capital d’une société.",
+              "explain": "Le mot manquant : « titre de propriété »."
+            },
+            {
+              "text": "L’actionnaire peut recevoir un ____ si une distribution est décidée ; ce versement n’est pas garanti.",
+              "answer": "dividende",
+              "alt": [],
+              "drawSource": "L’actionnaire peut recevoir un dividende si une distribution est décidée ; ce versement n’est pas garanti.",
+              "explain": "Le mot manquant : « dividende »."
+            },
+            {
+              "text": "L’actionnaire peut recevoir un dividende si une distribution est décidée ; ce versement n’est ____.",
+              "answer": "pas garanti",
+              "alt": [],
+              "drawSource": "L’actionnaire peut recevoir un dividende si une distribution est décidée ; ce versement n’est pas garanti.",
+              "explain": "Le mot manquant : « pas garanti »."
+            }
+          ],
+          "questionCount": 2
+        },
+        {
+          "id": "p1-eco-t4::3::qtrou",
+          "type": "qcm",
+          "title": "QCM — le mot manquant",
+          "icon": "🧠",
+          "questions": [
+            {
+              "q": "Quel mot complète la phrase ?\nL’obligation est un titre de dette : elle correspond à un ____ fait à l’entreprise ou à l’État, et l’obligataire est un créancier.",
+              "choices": [
+                "copropriétaire",
+                "prêter",
+                "prêt",
+                "action"
+              ],
+              "answer": 2,
+              "explain": "Le mot manquant : « prêt ».",
+              "drawSource": "L’obligation est un titre de dette : elle correspond à un prêt fait à l’entreprise ou à l’État, et l’obligataire est un créancier.",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nL’obligation est un titre de dette : elle correspond à un prêt fait à l’entreprise ou à l’État, et l’obligataire est un créancier. Elle rapporte un intérêt fixé d’avance et son remboursement est prévu : c’est un placement ____.",
+              "choices": [
+                "plus sûr",
+                "dividende",
+                "titre de propriété",
+                "action"
+              ],
+              "answer": 0,
+              "explain": "Le mot manquant : « plus sûr ».",
+              "drawSource": "Elle rapporte un intérêt fixé d’avance et son remboursement est prévu : c’est un placement plus sûr.",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nAcheter une action, c’est devenir copropriétaire ; acheter une obligation, c’est ____ de l’argent.",
+              "choices": [
+                "dividende",
+                "prêter",
+                "prêt",
+                "créancier"
+              ],
+              "answer": 1,
+              "explain": "Le mot manquant : « prêter ».",
+              "drawSource": "Acheter une action, c’est devenir copropriétaire ; acheter une obligation, c’est prêter de l’argent.",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nL’obligation est un ____ : elle correspond à un prêt fait à l’entreprise ou à l’État, et l’obligataire est un créancier.",
+              "choices": [
+                "titre de dette",
+                "prêter",
+                "dividende",
+                "copropriétaire"
+              ],
+              "answer": 0,
+              "explain": "Le mot manquant : « titre de dette ».",
+              "drawSource": "L’obligation est un titre de dette : elle correspond à un prêt fait à l’entreprise ou à l’État, et l’obligataire est un créancier.",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nL’obligation est un titre de dette : elle correspond à un prêt fait à l’entreprise ou à l’État, et l’obligataire est un créancier. Elle rapporte un intérêt fixé d’avance et son ____ : c’est un placement plus sûr.",
+              "choices": [
+                "action",
+                "pas garanti",
+                "copropriétaire",
+                "remboursement est prévu"
+              ],
+              "answer": 3,
+              "explain": "Le mot manquant : « remboursement est prévu ».",
+              "drawSource": "Elle rapporte un intérêt fixé d’avance et son remboursement est prévu : c’est un placement plus sûr.",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nL’obligation est un titre de dette : elle correspond à un prêt fait à l’entreprise ou à l’État, et l’obligataire est un ____.",
+              "choices": [
+                "créancier",
+                "action",
+                "dividende",
+                "copropriétaire"
+              ],
+              "answer": 0,
+              "explain": "Le mot manquant : « créancier ».",
+              "drawSource": "L’obligation est un titre de dette : elle correspond à un prêt fait à l’entreprise ou à l’État, et l’obligataire est un créancier.",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nL’obligation est un titre de dette : elle correspond à un prêt fait à l’entreprise ou à l’État, et l’obligataire est un créancier. Elle rapporte un ____ et son remboursement est prévu : c’est un placement plus sûr.",
+              "choices": [
+                "intérêt fixé d’avance",
+                "pas garanti",
+                "titre de propriété",
+                "action"
+              ],
+              "answer": 0,
+              "explain": "Le mot manquant : « intérêt fixé d’avance ».",
+              "drawSource": "Elle rapporte un intérêt fixé d’avance et son remboursement est prévu : c’est un placement plus sûr.",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nAcheter une action, c’est devenir ____ ; acheter une obligation, c’est prêter de l’argent.",
+              "choices": [
+                "dividende",
+                "prêt",
+                "copropriétaire",
+                "créancier"
+              ],
+              "answer": 2,
+              "explain": "Le mot manquant : « copropriétaire ».",
+              "drawSource": "Acheter une action, c’est devenir copropriétaire ; acheter une obligation, c’est prêter de l’argent.",
+              "alt": []
+            }
+          ],
+          "questionCount": 2
+        },
+        {
+          "id": "p1-eco-t4::3::cards",
+          "type": "flashcard",
+          "title": "Flashcards — ce chapitre",
+          "icon": "🃏",
+          "cards": [
+            {
+              "front": "Action",
+              "back": "Titre de propriété ; dividende éventuel, non garanti ; risque de perte en capital"
+            },
+            {
+              "front": "Obligation",
+              "back": "Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr"
+            },
+            {
+              "front": "Dividende",
+              "back": "Part du bénéfice versée aux actionnaires"
+            },
+            {
+              "front": "Marché financier",
+              "back": "Marché où s’échangent actions et obligations"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p1-eco-t4",
+      "index": 4,
+      "title": "Le financement indirect (les banques)",
+      "section": {
+        "h": "Le financement indirect (les banques)",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Dans le financement **indirect** (ou intermédié), l’agent passe par un **intermédiaire** : la **banque**. Elle **collecte** l’épargne des uns et accorde des **crédits** aux autres, remboursés **avec intérêts**."
+          },
+          {
+            "t": "p",
+            "c": "C’est le mode de financement le plus courant pour les **ménages** (crédit immobilier, crédit conso) et les **petites entreprises**, qui n’ont pas accès facilement à la Bourse."
+          }
+        ]
+      },
+      "games": [
+        {
+          "id": "p1-eco-t4-tri",
+          "type": "tri",
+          "title": "Tri — Financement direct ou indirect ?",
+          "icon": "🗂️",
+          "instruction": "Classe chaque mode de financement.",
+          "categories": [
+            {
+              "id": "dir",
+              "label": "Direct (marché)"
+            },
+            {
+              "id": "ind",
+              "label": "Indirect (banque)"
+            }
+          ],
+          "items": [
+            {
+              "text": "Émettre des actions en Bourse",
+              "cat": "dir"
+            },
+            {
+              "text": "Un crédit bancaire",
+              "cat": "ind"
+            },
+            {
+              "text": "Émettre des obligations",
+              "cat": "dir"
+            },
+            {
+              "text": "Un emprunt auprès de sa banque",
+              "cat": "ind"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
