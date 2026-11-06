@@ -1804,3 +1804,4 @@ Prochaine action :
 
 ### CORRECTIONS-ECONOMIE-20261106
 - Demande : corriger toutes les fautes économiques relevées par deux audits indépendants. Branche dédiée depuis origin/main6538d65d, distincte des autres travaux en cours. Vérification des sources officielles, cours/exercices/corrigés et empreintes intentionnelles, tests puis diffusion. Aucune mutation Supabase ni modification du design.
+- Corrections source104c7e66, PR182 :13axes harmonisés dans15fichiers économiques, deux relectures de diffs sans nouvelle erreur de fond.17contrôles ciblés réussis ; première suite générale770/772, deux index pédagogiques dérivés à actualiser. Régénération via npm run chapitres et MAJ_MISSIONS=1 ; aucun contrôle retiré. Validation finale à suivre.
