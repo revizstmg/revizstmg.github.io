@@ -1,0 +1,405 @@
+[
+  {
+    "numero": 1,
+    "note": 9,
+    "titre": "Finaliser le cadre de vente",
+    "action": "Statut, conditions de vente, rétractation et remboursements avant tout encaissement réel.",
+    "nature": "Prérequis commercial",
+    "sources": [
+      "AC01"
+    ]
+  },
+  {
+    "numero": 2,
+    "note": 9,
+    "titre": "Faire une recette serveur réelle",
+    "action": "Vérifier droits entre comptes, versions déployées, quotas, paiements, webhooks et résiliation. Aucun défaut réel de ces services n’est affirmé par les simulations.",
+    "nature": "Vérification à effectuer",
+    "sources": [
+      "AC02"
+    ]
+  },
+  {
+    "numero": 3,
+    "note": 8,
+    "titre": "Annuler un export après changement de compte",
+    "action": "Un téléchargement demandé par A ne doit pas se terminer dans la session B.",
+    "nature": "Bug reproduit",
+    "sources": [
+      "AC03"
+    ]
+  },
+  {
+    "numero": 4,
+    "note": 8,
+    "titre": "Isoler les erreurs par chapitre",
+    "action": "Empêcher qu’un énoncé identique dans deux thèmes écrase ou fasse progresser la mauvaise erreur.",
+    "nature": "Bug reproduit",
+    "sources": [
+      "APP01"
+    ]
+  },
+  {
+    "numero": 5,
+    "note": 8,
+    "titre": "Vérifier les mois offerts côté serveur",
+    "action": "Contrôler éligibilité, unicité et attribution avant d’activer les réservations Premium ou Ultimate.",
+    "nature": "Prérequis commercial",
+    "sources": [
+      "S05"
+    ]
+  },
+  {
+    "numero": 6,
+    "note": 7,
+    "titre": "Compléter l’export des données",
+    "action": "Inclure les brouillons du compte, notamment examens et EPS, et annoncer les éléments manquants.",
+    "nature": "Limitation confirmée",
+    "sources": [
+      "AC04"
+    ]
+  },
+  {
+    "numero": 7,
+    "note": 7,
+    "titre": "Confirmer le partage parent",
+    "action": "Afficher en attente, publié ou échec et permettre de réessayer avant de présenter le code comme utilisable.",
+    "nature": "Bug reproduit",
+    "sources": [
+      "AC05"
+    ]
+  },
+  {
+    "numero": 8,
+    "note": 7,
+    "titre": "Distinguer absence de résultat et difficulté",
+    "action": "Afficher « Pas encore évalué » pour les nouveaux élèves et les matières non travaillées, chez le professeur comme chez le parent.",
+    "nature": "Bugs reproduits regroupés",
+    "sources": [
+      "AC06",
+      "S02"
+    ]
+  },
+  {
+    "numero": 9,
+    "note": 7,
+    "titre": "Corriger les statistiques hebdomadaires de classe",
+    "action": "Ne pas compter les activités d’une ancienne semaine dans la semaine courante.",
+    "nature": "Bug reproduit",
+    "sources": [
+      "S01"
+    ]
+  },
+  {
+    "numero": 10,
+    "note": 7,
+    "titre": "Imprimer les longues copies intégralement",
+    "action": "Rendre tout le texte du Prix à l’impression, avec pagination, au lieu du seul contenu visible du champ.",
+    "nature": "Bug reproduit",
+    "sources": [
+      "OUT01"
+    ]
+  },
+  {
+    "numero": 11,
+    "note": 7,
+    "titre": "Sauvegarder les réponses rédigées",
+    "action": "Restaurer le travail des questions type contrôle après navigation ou actualisation, par compte et chapitre.",
+    "nature": "Proposition fondée sur le code",
+    "sources": [
+      "OUT02"
+    ]
+  },
+  {
+    "numero": 12,
+    "note": 7,
+    "titre": "Afficher une leçon de langue à la fois",
+    "action": "Garder sommaire, reprise et écoute proches de la leçon plutôt que tous les exercices sur une page très longue.",
+    "nature": "Mesure et proposition ergonomique",
+    "sources": [
+      "APP02"
+    ]
+  },
+  {
+    "numero": 13,
+    "note": 7,
+    "titre": "Simplifier Réviser",
+    "action": "Mettre les trois méthodes et les flashcards en premier ; ranger missions, vacances et Bac blanc dans un accès secondaire.",
+    "nature": "Proposition ergonomique",
+    "sources": [
+      "UX-01"
+    ]
+  },
+  {
+    "numero": 14,
+    "note": 6,
+    "titre": "Conserver les réponses de langues",
+    "action": "Retrouver les saisies et la leçon active après rechargement, avec commande d’effacement.",
+    "nature": "Perte de saisie reproduite",
+    "sources": [
+      "APP03"
+    ]
+  },
+  {
+    "numero": 15,
+    "note": 6,
+    "titre": "Reprendre le parcours de révision",
+    "action": "Conserver méthode, matière, chapitre et séance ; rendre le retour du navigateur cohérent.",
+    "nature": "Propositions regroupées",
+    "sources": [
+      "APP04",
+      "UX-05"
+    ]
+  },
+  {
+    "numero": 16,
+    "note": 6,
+    "titre": "Suivre la couverture pédagogique",
+    "action": "Relier notions, compétences et activités ; dater les relectures réellement effectuées et citer les références pertinentes.",
+    "nature": "Proposition éditoriale",
+    "sources": [
+      "APP05"
+    ]
+  },
+  {
+    "numero": 17,
+    "note": 6,
+    "titre": "Garder la préparation d’examen",
+    "action": "Retrouver prompt, durée et chapitres avant la génération ; le sujet déjà généré possède une sauvegarde distincte.",
+    "nature": "Comportement reproduit",
+    "sources": [
+      "OUT03"
+    ]
+  },
+  {
+    "numero": 18,
+    "note": 6,
+    "titre": "Annuler une génération ou correction en attente",
+    "action": "Ajouter une commande visible conservant prompt et fichiers ; ne pas promettre l’annulation du coût serveur déjà engagé.",
+    "nature": "Proposition fonctionnelle",
+    "sources": [
+      "OUT04"
+    ]
+  },
+  {
+    "numero": 19,
+    "note": 6,
+    "titre": "Charger un catalogue léger pour les examens",
+    "action": "Sélectionner les chapitres à partir de leurs métadonnées, puis charger seulement les textes nécessaires.",
+    "nature": "Proposition de performance",
+    "sources": [
+      "OUT05"
+    ]
+  },
+  {
+    "numero": 20,
+    "note": 6,
+    "titre": "Joindre la grille EPS du professeur",
+    "action": "Garder les repères nationaux et permettre d’ajouter la grille locale sans inventer une note officielle.",
+    "nature": "Proposition pédagogique",
+    "sources": [
+      "OUT06"
+    ]
+  },
+  {
+    "numero": 21,
+    "note": 6,
+    "titre": "Réparer les liens de confidentialité",
+    "action": "Ouvrir directement les réglages Export, Suppression et Profil au lieu de l’ancien espace personnel.",
+    "nature": "Chemin trompeur reproduit",
+    "sources": [
+      "AC07"
+    ]
+  },
+  {
+    "numero": 22,
+    "note": 6,
+    "titre": "Annuler une suppression de flashcards",
+    "action": "Proposer « Paquet supprimé · Annuler » ou une confirmation courte avant suppression définitive.",
+    "nature": "Protection proposée, comportement mesuré",
+    "sources": [
+      "UX-02"
+    ]
+  },
+  {
+    "numero": 23,
+    "note": 6,
+    "titre": "Choisir les contenus hors ligne",
+    "action": "Télécharger les matières et guides souhaités, avec une option complète sur Wi-Fi et un état de disponibilité exact.",
+    "nature": "Proposition de performance",
+    "sources": [
+      "UX-03"
+    ]
+  },
+  {
+    "numero": 24,
+    "note": 6,
+    "titre": "Ajouter blocage et signalement",
+    "action": "Prévoir un recours simple en cas de sollicitations répétées, avec règles de modération et contrôles serveur. Aucun abus réel constaté.",
+    "nature": "Proposition fonctionnelle",
+    "sources": [
+      "S06"
+    ]
+  },
+  {
+    "numero": 25,
+    "note": 5,
+    "titre": "Indiquer la portée des sauvegardes",
+    "action": "Distinguer « Sur cet appareil » et « Synchronisé avec le compte » dans chaque outil.",
+    "nature": "Proposition de clarté",
+    "sources": [
+      "AC08"
+    ]
+  },
+  {
+    "numero": 26,
+    "note": 5,
+    "titre": "Montrer les lots d’erreurs restants",
+    "action": "Annoncer « 12 sur N » et proposer la série suivante sans réintroduire un carnet visuel ou trop de boutons.",
+    "nature": "Proposition de clarté",
+    "sources": [
+      "APP06"
+    ]
+  },
+  {
+    "numero": 27,
+    "note": 5,
+    "titre": "Suivre les progrès par formule",
+    "action": "Conserver un historique agrégé entre les séances et orienter vers les difficultés restantes.",
+    "nature": "Proposition pédagogique",
+    "sources": [
+      "APP07"
+    ]
+  },
+  {
+    "numero": 28,
+    "note": 5,
+    "titre": "Garder une explication du tuteur",
+    "action": "Permettre d’enregistrer volontairement une explication utile par chapitre, avec suppression.",
+    "nature": "Proposition fonctionnelle",
+    "sources": [
+      "OUT07"
+    ]
+  },
+  {
+    "numero": 29,
+    "note": 5,
+    "titre": "Prévisualiser les copies avant envoi",
+    "action": "Afficher miniatures des photos et aperçu PDF, zoom et ordre, sans transfert supplémentaire.",
+    "nature": "Proposition fonctionnelle",
+    "sources": [
+      "OUT08"
+    ]
+  },
+  {
+    "numero": 30,
+    "note": 5,
+    "titre": "Fiabiliser la copie des codes",
+    "action": "Attendre le succès réel du presse-papiers ; en cas de refus, annoncer l’échec et proposer une copie manuelle pour Amis et Parent.",
+    "nature": "Bug ami et amélioration parent regroupés",
+    "sources": [
+      "S03",
+      "AC10"
+    ]
+  },
+  {
+    "numero": 31,
+    "note": 5,
+    "titre": "Figer la version des quiz de duel",
+    "action": "Prévenir des épreuves différentes si le quiz est modifié côté données ; aucun éditeur existant ni panne normale du parcours n’a été observé.",
+    "nature": "Prévention, scénario API uniquement",
+    "sources": [
+      "S04"
+    ]
+  },
+  {
+    "numero": 32,
+    "note": 5,
+    "titre": "Préciser les messages d’erreur sociaux",
+    "action": "Parler de l’invitation, du duel ou du message concerné plutôt que d’un problème de classement générique.",
+    "nature": "Proposition de clarté",
+    "sources": [
+      "S07"
+    ]
+  },
+  {
+    "numero": 33,
+    "note": 5,
+    "titre": "Suspendre les rafraîchissements inutiles",
+    "action": "Ralentir ou arrêter les lectures de duels et Direct en arrière-plan ou hors ligne, puis reprendre au retour.",
+    "nature": "Proposition de performance",
+    "sources": [
+      "S08"
+    ]
+  },
+  {
+    "numero": 34,
+    "note": 5,
+    "titre": "Relier les récompenses à la prochaine action",
+    "action": "Proposer le thème, test ou objectif qui permet réellement de franchir le prochain palier.",
+    "nature": "Proposition d’engagement",
+    "sources": [
+      "S10"
+    ]
+  },
+  {
+    "numero": 35,
+    "note": 5,
+    "titre": "Comparer les offres d’un regard",
+    "action": "Présenter trois axes communs puis des détails dépliables, en conservant prix et limites exacts.",
+    "nature": "Proposition de présentation",
+    "sources": [
+      "UX-04"
+    ]
+  },
+  {
+    "numero": 36,
+    "note": 4,
+    "titre": "Clarifier le retrait d’un élève côté parent",
+    "action": "Expliquer que l’action retire le suivi de cet appareil, sans supprimer le compte élève ni son consentement.",
+    "nature": "Proposition de clarté",
+    "sources": [
+      "AC09"
+    ]
+  },
+  {
+    "numero": 37,
+    "note": 4,
+    "titre": "Télécharger son entraînement au Grand Oral",
+    "action": "Permettre un export volontaire de l’audio actuellement temporaire, sans mise en ligne automatique.",
+    "nature": "Proposition fonctionnelle",
+    "sources": [
+      "OUT09"
+    ]
+  },
+  {
+    "numero": 38,
+    "note": 4,
+    "titre": "Annoncer les résultats d’import aux lecteurs d’écran",
+    "action": "Ajouter un statut accessible pour la confirmation et une alerte associée aux erreurs.",
+    "nature": "Proposition d’accessibilité",
+    "sources": [
+      "UX-06"
+    ]
+  },
+  {
+    "numero": 39,
+    "note": 4,
+    "titre": "Préciser et prolonger l’historique des duels",
+    "action": "Annoncer la portée des 60 derniers duels et proposer de charger les précédents ou des agrégats distincts.",
+    "nature": "Limitation confirmée, proposition",
+    "sources": [
+      "S09"
+    ]
+  },
+  {
+    "numero": 40,
+    "note": 3,
+    "titre": "Compacter les illustrations sur téléphone",
+    "action": "Garder le style des feuilles de Réviser en réduisant leur hauteur sur petit écran.",
+    "nature": "Proposition esthétique",
+    "sources": [
+      "UX-07"
+    ]
+  }
+]
