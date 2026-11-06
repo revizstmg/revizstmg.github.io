@@ -19,7 +19,7 @@
       {
         "id": 3,
         "title": "Document 3 — Politique conjoncturelle",
-        "text": "À court terme, l’État mène une **politique conjoncturelle** :\n• la **politique budgétaire** (dépenses publiques, impôts) ;\n• la **politique monétaire** (taux d’intérêt, pilotée par la banque centrale).\nUne politique de **relance** stimule la demande (hausse des dépenses, baisse des taux) ; une politique de **rigueur** freine l’activité pour lutter contre l’inflation ou les déficits."
+        "text": "Les **politiques conjoncturelles** cherchent à agir à court terme sur l’activité, l’emploi et les prix. La **politique budgétaire** utilise les dépenses et les recettes publiques, dans le cadre du budget décidé par les pouvoirs publics. En zone euro, la **politique monétaire** est conduite par l’**Eurosystème** (BCE et banques centrales nationales), indépendant des gouvernements. Une hausse des dépenses publiques peut soutenir la demande ; une baisse des taux peut faciliter le financement. Ces décisions relèvent d’autorités différentes et leurs effets dépendent du contexte. Ces orientations expansionnistes correspondent à une **relance** ; des orientations **restrictives** cherchent au contraire à freiner la demande, notamment pour réduire les tensions inflationnistes."
       },
       {
         "id": 4,
@@ -222,7 +222,7 @@
         "doc": 1,
         "type": "redac",
         "q": "Un étudiant qui cherche un stage mais n’est pas disponible avant six mois est-il chômeur au sens du BIT ? Justifie.",
-        "answer": "Non : au sens du BIT, il faut être **sans emploi**, **en recherche active** ET **disponible immédiatement** (sous deux semaines). Comme l’étudiant n’est pas disponible avant six mois, l’un des trois critères manque : il n’est pas comptabilisé comme chômeur au sens du BIT."
+        "answer": "Non : au sens du BIT, il faut être **sans emploi**, **en recherche active** ET **disponible dans les deux semaines**. Comme l’étudiant n’est pas disponible avant six mois, l’un des trois critères manque : il n’est pas comptabilisé comme chômeur au sens du BIT."
       }
     ]
   },
@@ -348,7 +348,7 @@
       {
         "id": 1,
         "title": "Document 1 — Mesurer la croissance : le PIB",
-        "text": "La **croissance économique** est l’augmentation durable de la production, mesurée par le **PIB** (produit intérieur brut = somme des valeurs ajoutées). Le **taux de croissance** compare le PIB d’une année à l’autre. Le PIB par habitant sert d’indicateur de niveau de vie."
+        "text": "La **croissance économique** mesure l’augmentation durable de la production par la variation du **PIB en volume**, corrigé de l’effet des prix. Le PIB comprend les valeurs ajoutées marchandes et non marchandes, plus les impôts sur les produits, moins les subventions sur les produits. Le PIB par habitant renseigne sur la production moyenne par habitant, sans décrire à lui seul le bien-être ni la répartition des revenus."
       },
       {
         "id": 2,
@@ -377,7 +377,7 @@
           "les impôts"
         ],
         "answer": 0,
-        "explain": "PIB = somme des valeurs ajoutées."
+        "explain": "PIB = somme des valeurs ajoutées + impôts sur les produits − subventions sur les produits. La croissance réelle se mesure en volume."
       },
       {
         "doc": 2,

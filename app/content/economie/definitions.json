@@ -14,7 +14,7 @@
     ],
     [
       "Bien public",
-      "Bien non rival et non excluable, fourni par l’État (éclairage, défense)."
+      "Bien non rival et non excluable : sa consommation par une personne ne réduit pas celle des autres, et on ne peut en exclure les usagers. Sa définition ne dépend pas du statut public ou privé du producteur."
     ],
     [
       "Externalité",
@@ -92,11 +92,11 @@
   "eco-t9": [
     [
       "Croissance économique",
-      "Augmentation durable de la production, mesurée par le PIB."
+      "Augmentation durable de la production, mesurée par la variation du PIB en volume, corrigé de l’effet des prix."
     ],
     [
       "Produit intérieur brut (PIB)",
-      "Valeur de toutes les richesses produites dans un pays sur un an."
+      "Somme des valeurs ajoutées marchandes et non marchandes sur un territoire et une période, plus les impôts sur les produits, moins les subventions sur les produits."
     ],
     [
       "Développement",
@@ -112,7 +112,7 @@
     ],
     [
       "Développement soutenable",
-      "Croissance qui préserve les ressources pour les générations futures."
+      "Développement qui répond aux besoins présents sans compromettre la capacité des générations futures à répondre aux leurs ; il associe dimensions économique, sociale et environnementale."
     ],
     [
       "Capital naturel",
@@ -122,7 +122,7 @@
   "eco-actu": [
     [
       "Inflation",
-      "Hausse générale et durable des prix, qui réduit le pouvoir d’achat."
+      "Hausse générale et durable des prix. À revenu nominal inchangé, elle réduit le pouvoir d’achat ; l’effet dépend de l’évolution comparée des revenus et des prix."
     ],
     [
       "Pouvoir d’achat",
@@ -138,7 +138,7 @@
     ],
     [
       "Dette publique",
-      "Total des emprunts cumulés de l’État et des administrations."
+      "Stock des dettes des administrations publiques restant à rembourser à une date donnée, y compris l’État, les administrations locales et celles de sécurité sociale."
     ],
     [
       "Banque centrale",

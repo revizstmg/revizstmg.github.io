@@ -85,11 +85,11 @@
         {
           "t": "example",
           "h": "Cas",
-          "c": "Trois personnes sans emploi : un étudiant de terminale, un retraité, et une femme de 30 ans qui postule activement. Laquelle est « au chômage » au sens officiel ?"
+          "c": "Trois personnes sans emploi : un étudiant qui ne cherche pas de travail, un retraité qui ne souhaite pas travailler et une femme de 30 ans qui postule activement depuis quatre semaines et est disponible dans les deux semaines. Laquelle est chômeuse au sens du BIT ?"
         },
         {
           "t": "p",
-          "c": "Seulement la troisième. Pour être compté comme chômeur (au sens du BIT), il faut trois choses en même temps : être **sans emploi**, être **disponible** pour travailler, et **rechercher activement**. L’étudiant et le retraité sont **inactifs** : ils ne font pas partie de la population active."
+          "c": "Dans **cet exemple**, seule la troisième remplit les critères : être **sans emploi**, disponible dans les **deux semaines** et avoir recherché activement un emploi au cours des **quatre dernières semaines**. Une personne disponible ayant déjà trouvé un emploi qui commence dans les trois mois est aussi comptée. L’étudiant et le retraité décrits ici sont **inactifs** parce qu’ils ne remplissent pas ces critères, pas du seul fait de leur statut."
         },
         {
           "t": "p",
@@ -254,7 +254,7 @@
         },
         {
           "t": "p",
-          "c": "Pas sûr. Le **PIB** mesure la richesse marchande produite (la somme des **valeurs ajoutées**), pas le bien-être. On calcule sa croissance par : ((PIB_N − PIB_N-1) ÷ PIB_N-1) × 100."
+          "c": "Pas sûr. Le **PIB** mesure la production **marchande et non marchande**, pas le bien-être. Au prix du marché, c’est la somme des valeurs ajoutées + impôts sur les produits − subventions sur les produits. Le taux de croissance se calcule sur les PIB **en volume**, corrigés de l’effet des prix : ((PIB_N − PIB_N−1) ÷ PIB_N−1) × 100."
         },
         {
           "t": "list",

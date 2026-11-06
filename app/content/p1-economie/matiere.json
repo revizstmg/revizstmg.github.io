@@ -31,7 +31,7 @@
             },
             {
               "t": "p",
-              "c": "Un bien peut être **libre** (gratuit et abondant, comme l’air) ou **économique** (rare, il a un prix). L’économie ne s’intéresse qu’aux biens **économiques**."
+              "c": "Un bien **libre** est disponible en abondance relativement aux besoins, sans mobiliser de ressources de production pour se le procurer, comme l’air dans les situations ordinaires. Un bien **économique** est relativement rare et sa production ou son accès mobilise des ressources. Il peut être fourni gratuitement à l’usager : la gratuité ne supprime pas le coût de production ni la rareté."
             },
             {
               "t": "table",
@@ -55,7 +55,7 @@
                 ],
                 [
                   "Bien libre / économique",
-                  "Gratuit et abondant (l’air) / rare, il a un prix"
+                  "Libre : abondant relativement aux besoins / économique : rare, mobilise des ressources, même s’il est gratuit pour l’usager"
                 ]
               ]
             }
@@ -333,11 +333,11 @@
             },
             {
               "t": "p",
-              "c": "La **production marchande** est **vendue sur un marché** à un prix qui doit **couvrir ses coûts** : une baguette, une place de cinéma. La **production non marchande** est **fournie gratuitement**, ou presque, et **financée par les impôts et les cotisations** : l’école publique, la justice, l’éclairage public."
+              "c": "La **production marchande** est vendue à un **prix économiquement significatif**, qui influence les quantités offertes et demandées : une baguette, une place de cinéma. La **production non marchande** est fournie gratuitement ou à un prix économiquement non significatif : l’école publique, la justice. Elle est surtout réalisée par les administrations publiques et les institutions sans but lucratif, financées notamment par les prélèvements obligatoires, les dons et les cotisations."
             },
             {
               "t": "p",
-              "c": "La production non marchande (assurée surtout par les **administrations publiques**) est essentielle mais ne se vend pas : on la mesure par son **coût** de production."
+              "c": "La production **non marchande**, assurée surtout par les administrations publiques et les institutions sans but lucratif au service des ménages, contribue elle aussi au **PIB**. En l’absence d’un prix de marché significatif, on l’évalue à partir de ses **coûts de production**."
             },
             {
               "t": "table",
@@ -353,11 +353,11 @@
                 ],
                 [
                   "Production marchande",
-                  "Vendue sur un marché à un prix qui couvre ses coûts"
+                  "Vendue à un prix économiquement significatif"
                 ],
                 [
                   "Production non marchande",
-                  "Fournie gratuitement, financée par les impôts et cotisations"
+                  "Fournie gratuitement ou à un prix économiquement non significatif ; financement notamment public, dons et cotisations"
                 ]
               ]
             }
@@ -472,11 +472,11 @@
           "blocks": [
             {
               "t": "p",
-              "c": "Le **PIB** (Produit Intérieur Brut) mesure la richesse créée dans un **pays** pendant un **an**. C’est la **somme de toutes les valeurs ajoutées** produites sur le territoire."
+              "c": "Le **PIB** (Produit Intérieur Brut) mesure la richesse créée sur un **territoire** pendant une période, généralement un **an**. Il comprend les productions **marchande et non marchande**. Au prix du marché, il correspond à la **somme des valeurs ajoutées**, augmentée des **impôts sur les produits** et diminuée des **subventions sur les produits**."
             },
             {
               "t": "formula",
-              "c": "PIB = somme des valeurs ajoutées (produites sur un territoire, sur un an)"
+              "c": "PIB = somme des valeurs ajoutées + impôts sur les produits − subventions sur les produits (sur un territoire et une période donnés)"
             },
             {
               "t": "p",
@@ -489,7 +489,7 @@
           "blocks": [
             {
               "t": "p",
-              "c": "La **croissance économique** est l’**augmentation du PIB** dans le temps. On la mesure par le **taux de croissance** (variation du PIB en %)."
+              "c": "La **croissance économique** est l’augmentation durable de la production. Son **taux de croissance** mesure la variation du **PIB en volume**, c’est-à-dire corrigé de l’effet des prix : une hausse du PIB en euros courants peut simplement venir de l’inflation."
             },
             {
               "t": "p",
@@ -521,11 +521,11 @@
         }
       ],
       "essentiel": [
-        "Produire = créer biens/services ; production **marchande** (vendue) vs **non marchande** (gratuite, financée par l’impôt).",
+        "Produire = créer des biens ou services. Production **marchande** : prix économiquement significatif ; **non marchande** : gratuite ou à prix économiquement non significatif. Les deux contribuent au PIB.",
         "Deux **facteurs de production** : **travail** + **capital** (fixe / circulant) ; investir = augmenter le capital.",
         "La **productivité** (production / moyens) et le **progrès technique** sont les moteurs de la croissance.",
         "**Valeur ajoutée = production − consommations intermédiaires** ; elle est **répartie** entre salariés, État, banques, propriétaires.",
-        "**PIB = somme des valeurs ajoutées** d’un territoire sur un an ; la **croissance** = hausse du PIB.",
+        "**PIB = somme des valeurs ajoutées + impôts sur les produits − subventions sur les produits** ; la **croissance** mesure l’évolution du PIB **en volume**.",
         "Le PIB est **limité** : ni bien-être, ni inégalités, ni environnement, ni travail non rémunéré → **IDH**, développement durable."
       ],
       "resources": [
@@ -568,13 +568,13 @@
             {
               "q": "Le PIB est…",
               "choices": [
-                "la somme des valeurs ajoutées d’un territoire sur un an",
+                "la somme des valeurs ajoutées, augmentée des impôts et diminuée des subventions sur les produits",
                 "le total des salaires",
                 "le montant des impôts",
                 "le chiffre d’affaires mondial"
               ],
               "answer": 0,
-              "explain": "Le PIB agrège les VA produites sur un territoire."
+              "explain": "Le PIB inclut les valeurs ajoutées marchandes et non marchandes ; au prix du marché, on ajoute les impôts sur les produits et on retranche les subventions sur les produits."
             },
             {
               "q": "Une limite du PIB est qu’il ne mesure pas…",
@@ -607,9 +607,9 @@
           "icon": "⚡",
           "questions": [
             {
-              "statement": "Le PIB est la somme des valeurs ajoutées.",
+              "statement": "Le PIB inclut la valeur ajoutée de la production non marchande.",
               "answer": true,
-              "explain": "Vrai, sur un territoire et une année."
+              "explain": "Vrai : les services non marchands, par exemple l’enseignement public, sont inclus dans le PIB et évalués à partir de leurs coûts de production."
             },
             {
               "statement": "Le PIB mesure parfaitement le bien-être.",
@@ -635,7 +635,7 @@
             },
             {
               "front": "PIB",
-              "back": "Somme des valeurs ajoutées d’un territoire sur un an."
+              "back": "Somme des valeurs ajoutées marchandes et non marchandes sur un territoire et une période, plus les impôts sur les produits, moins les subventions sur les produits."
             },
             {
               "front": "Limites du PIB",
@@ -942,7 +942,7 @@
       "name": "Thème 4 — Comment les agents économiques se financent-ils ?",
       "short": "Le financement",
       "keywords": "besoin capacité de financement direct indirect marché financier actions obligations banque crédit banque centrale taux directeurs",
-      "intro": "Certains agents dépensent plus qu’ils ne gagnent (**besoin de financement**), d’autres épargnent (**capacité de financement**). Le système financier met les deux en relation.",
+      "intro": "Certains agents ont une **épargne inférieure à leurs dépenses d’investissement** : ils ont un **besoin de financement**. D’autres disposent d’une épargne supérieure à ces dépenses : ils ont une **capacité de financement**. Le système financier met ces agents en relation.",
       "cours": [
         {
           "h": "Besoin et capacité de financement",
@@ -953,11 +953,11 @@
             },
             {
               "t": "p",
-              "c": "Un agent est en **besoin de financement** quand ses **dépenses dépassent ses ressources** : il doit **trouver des fonds**. C’est souvent le cas des **entreprises** et de l’**État**. Il est en **capacité de financement** quand ses **ressources dépassent ses dépenses** : il lui reste de l’**épargne à placer**, ce qui est souvent le cas des **ménages**."
+              "c": "Dans un raisonnement simplifié hors transferts en capital, un agent a une **capacité de financement** lorsque son **épargne dépasse ses dépenses d’investissement**. Il a un **besoin de financement** lorsque son investissement dépasse son épargne. **Épargner ne suffit donc pas** à être en capacité : un ménage qui épargne 400 € et investit 1 000 € a un besoin de financement de 600 €."
             },
             {
               "t": "p",
-              "c": "Le **système financier** a pour rôle de **mettre en relation** ceux qui ont un besoin de financement avec ceux qui ont une capacité de financement (les épargnants)."
+              "c": "Le **système financier** met en relation les agents en **besoin de financement** et ceux qui disposent d’une **capacité de financement**, c’est-à-dire d’une épargne restant disponible après leurs dépenses d’investissement dans le modèle simplifié."
             },
             {
               "t": "table",
@@ -969,11 +969,11 @@
               "rows": [
                 [
                   "Besoin de financement",
-                  "Dépenses > ressources : il faut trouver des fonds (entreprises, État)"
+                  "Investissement supérieur à l’épargne disponible"
                 ],
                 [
                   "Capacité de financement",
-                  "Ressources > dépenses : épargne à placer (ménages)"
+                  "Épargne supérieure aux dépenses d’investissement"
                 ],
                 [
                   "Système financier",
@@ -1021,7 +1021,7 @@
             },
             {
               "t": "p",
-              "c": "L’**action** est un **titre de propriété** : elle représente une part de l’entreprise, et l’actionnaire en devient **copropriétaire**. Elle rapporte un **dividende**, dont le montant **varie** selon les résultats ; c’est un placement **risqué**, sans garantie."
+              "c": "L’**action** est un **titre de propriété** représentant une fraction du capital d’une société. L’actionnaire peut recevoir un **dividende** si une distribution est décidée ; ce versement n’est **pas garanti**. Le cours de l’action peut baisser et l’actionnaire risque de perdre tout ou partie de son investissement."
             },
             {
               "t": "p",
@@ -1041,7 +1041,7 @@
               "rows": [
                 [
                   "Action",
-                  "Titre de propriété ; rapporte un dividende variable ; risqué"
+                  "Titre de propriété ; dividende éventuel, non garanti ; risque de perte en capital"
                 ],
                 [
                   "Obligation",
@@ -1138,7 +1138,7 @@
         }
       ],
       "essentiel": [
-        "**Besoin** de financement (dépenses > ressources) vs **capacité** de financement (épargne) ; le système financier les met en relation.",
+        "Dans le modèle simplifié, **besoin de financement** si investissement > épargne ; **capacité de financement** si épargne > investissement. Le système financier met les agents en relation.",
         "Financement **interne** (autofinancement) vs **externe** ; externe = **direct** (marché) ou **indirect** (banque).",
         "Financement **direct** sur le **marché financier** (Bourse) : **actions** (propriété, dividende) vs **obligations** (dette, intérêt).",
         "Financement **indirect** = **crédit bancaire** (avec intérêts), le plus courant pour ménages et petites entreprises.",
@@ -1161,7 +1161,7 @@
           "icon": "❓",
           "questions": [
             {
-              "q": "Un agent qui épargne a une…",
+              "q": "Un agent épargne 1 000 € et investit 600 €. Il dispose d’une…",
               "choices": [
                 "capacité de financement",
                 "besoin de financement",
@@ -1169,7 +1169,7 @@
                 "obligation légale"
               ],
               "answer": 0,
-              "explain": "Capacité de financement = épargne disponible ; besoin = dépenses > ressources."
+              "explain": "Son épargne dépasse son investissement : il a une capacité de financement de 1 000 − 600 = 400 €. Le seul fait d’épargner ne suffit pas à conclure."
             },
             {
               "q": "Emprunter auprès d’une banque est un financement…",
@@ -1249,7 +1249,7 @@
           "cards": [
             {
               "front": "Besoin / capacité de financement",
-              "back": "Dépenser plus que gagner / épargner."
+              "back": "Dans le modèle simplifié : besoin si l’investissement dépasse l’épargne ; capacité si l’épargne dépasse l’investissement."
             },
             {
               "front": "Financement direct",

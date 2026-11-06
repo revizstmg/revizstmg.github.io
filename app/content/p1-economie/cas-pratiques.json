@@ -2,7 +2,7 @@
   "p1-eco-t2": [
     {
       "title": "Créer et mesurer la richesse",
-      "context": "Une entreprise a une production de 300 000 € et des consommations intermédiaires de 110 000 €. Par ailleurs, le PIB du pays passe de 2 500 milliards € à 2 550 milliards €.",
+      "context": "Une entreprise a une production de 300 000 € et des consommations intermédiaires de 110 000 €. Par ailleurs, le PIB en volume du pays passe de 2 500 milliards € à 2 550 milliards € (prix constants).",
       "questions": [
         {
           "q": "Calcule la valeur ajoutée de l’entreprise (en €).",
@@ -14,7 +14,7 @@
           "q": "Calcule le taux de croissance du PIB (en %).",
           "a": "2",
           "num": true,
-          "e": "Taux = (2 550 − 2 500) / 2 500 = 50 / 2 500 = 2 %."
+          "e": "Taux de croissance = ((2 550 − 2 500) / 2 500) × 100 = 2 %. Les PIB sont en volume : l’effet des prix est écarté."
         }
       ]
     }

@@ -90,7 +90,7 @@
         },
         {
           "t": "p",
-          "c": "D’autres mots servent à lire l’actualité. Le **taux directeur** est le **taux d’intérêt fixé par la banque centrale (BCE)** : il commande le coût du crédit. Le **déficit public** est la **situation où les dépenses de l’État dépassent ses recettes**, et la **dette publique** l’**ensemble de ses emprunts non encore remboursés**. Les **droits de douane** sont des **taxes sur les produits importés**."
+          "c": "Le **taux directeur** est fixé par la banque centrale : il influence les conditions de financement. Le **déficit public** est l’excès des dépenses sur les recettes de l’ensemble des administrations publiques, sur une année. La **dette publique** est leur stock de dettes restant à rembourser à une date donnée. Le périmètre comprend notamment l’État, les administrations locales et la Sécurité sociale. Les **droits de douane** sont des taxes sur les produits importés."
         },
         {
           "t": "tip",
@@ -127,11 +127,11 @@
             ],
             [
               "Déficit public",
-              "Situation où les dépenses de l’État dépassent ses recettes"
+              "Excès des dépenses sur les recettes des administrations publiques pendant une année"
             ],
             [
               "Dette publique",
-              "Ensemble des emprunts de l’État non encore remboursés"
+              "Stock des dettes des administrations publiques restant à rembourser à une date donnée"
             ],
             [
               "Droits de douane",

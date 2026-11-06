@@ -5,7 +5,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "En zone euro, la **monnaie** n’est pas gérée par les États mais par la **Banque centrale européenne (BCE)**, une institution **indépendante**. Son objectif principal est la **stabilité des prix** (une inflation proche de 2 %)."
+          "c": "En zone euro, la **politique monétaire** est conduite par l’**Eurosystème**, composé de la Banque centrale européenne et des banques centrales nationales des pays de la zone euro. Son objectif principal est la **stabilité des prix** : une inflation de **2 % à moyen terme**, avec une cible **symétrique** (les écarts à la baisse et à la hausse sont indésirables)."
         },
         {
           "t": "p",
@@ -98,7 +98,7 @@
         },
         {
           "t": "formula",
-          "c": "Déficit public = Dépenses publiques − Recettes publiques (sur une année)\nDette publique = accumulation des déficits passés (moins les excédents)"
+          "c": "Déficit public = dépenses publiques − recettes publiques (sur une année)\nDette publique = stock des dettes des administrations publiques restant à rembourser ; sa variation dépend notamment du déficit et d’autres opérations financières."
         },
         {
           "t": "p",
@@ -116,7 +116,7 @@
         {
           "t": "tip",
           "h": "À retenir",
-          "c": "Déficit = **flux** annuel (dépenses − recettes). Dette = **stock** (somme des déficits). On les rapporte au **PIB** (en %) pour comparer et juger de la soutenabilité."
+          "c": "Déficit = **flux** annuel (dépenses − recettes). Dette = **stock** de dettes restant à rembourser, pas la somme exacte de tous les déficits passés. On les rapporte au **PIB** pour comparer les ordres de grandeur."
         }
       ]
     }
@@ -392,12 +392,12 @@
         },
         {
           "t": "formula",
-          "c": "Taux de croissance = ((PIB_N − PIB_N-1) ÷ PIB_N-1) × 100\nPIB par habitant = PIB ÷ Population"
+          "c": "Taux de croissance = ((PIB en volume_N − PIB en volume_N−1) ÷ PIB en volume_N−1) × 100\nPIB par habitant = PIB ÷ Population"
         },
         {
           "t": "example",
           "h": "Exemple chiffré",
-          "c": "PIB : 500 Md€ (N-1) → 515 Md€ (N). Population : 10 M.\nTaux de croissance = ((515 − 500) ÷ 500) × 100 = **+ 3 %**.\nPIB par habitant (N) = 515 Md€ ÷ 10 M = **51 500 € / habitant**."
+          "c": "PIB en volume : 500 Md€ (N−1) → 515 Md€ (N). Population : 10 M.\nTaux de croissance = ((515 − 500) ÷ 500) × 100 = **+ 3 %**.\nPIB par habitant (N) = 515 Md€ ÷ 10 M = **51 500 € / habitant**."
         },
         {
           "t": "p",
@@ -406,7 +406,7 @@
         {
           "t": "tip",
           "h": "À retenir",
-          "c": "Taux de croissance = variation du PIB en %. **PIB par habitant** = PIB ÷ population (niveau de vie moyen). Toujours nuancer : le PIB **ignore** inégalités et environnement."
+          "c": "Taux de croissance = variation du PIB en volume, en %. **PIB par habitant** = PIB ÷ population (niveau de vie moyen). Toujours nuancer : le PIB **ignore** inégalités et environnement."
         }
       ]
     }
