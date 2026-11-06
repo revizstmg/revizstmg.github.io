@@ -1,0 +1,8 @@
+{
+  "source": "79d4fa01e8c05addd7dc1d33fbaebce9368b37a9",
+  "lot_initial": {"scenarios": 12, "reussis": 10, "depassements_non_certifies": 2},
+  "reprise_creation": {"date": "2026-11-06", "reussie": true, "scenario_secondes": 22.7, "lancement_secondes": 25.6},
+  "quota": "depassement initial sous charge, pas de reprise ni de panne produit certifiee",
+  "services": "simules, aucun appel IA ou paiement reel",
+  "produit_modifie": false
+}
