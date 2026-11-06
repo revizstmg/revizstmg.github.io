@@ -1,0 +1,29 @@
+SOURCE 79d4fa01
+Lot reprise5nov :14réussites,1échec temporaire acquis.
+  ✓   1 [telephone] › tests/parcours/audit-apprentissage.spec.js:3:1 › langues : longueur initiale et reprise des réponses (16.3s)
+  ✓   2 [telephone] › tests/parcours/flashcards-studio.spec.js:10:109 › vrai retournement opaque light 390 (15.6s)
+  ✓   3 [telephone] › tests/parcours/flashcards-studio.spec.js:10:109 › vrai retournement opaque dark 1280 (14.2s)
+  ✓   4 [telephone] › tests/parcours/flashcards-studio.spec.js:10:109 › vrai retournement opaque light 320 (11.7s)
+  ✓   5 [telephone] › tests/parcours/flashcards-studio.spec.js:65:1 › Bienvenue animé une fois par onglet et entrée immédiate au clic (17.1s)
+  ✓   6 [telephone] › tests/parcours/flashcards-studio.spec.js:81:1 › Bienvenue reste lisible avec mouvement réduit (5.5s)
+  ✓   7 [telephone] › tests/parcours/formules.spec.js:3:1 › choisir des formules, répondre et obtenir un bilan sans modifier la maîtrise (29.4s)
+  ✓   8 [telephone] › tests/parcours/formules.spec.js:79:1 › Première : uniquement les formules accessibles et anciens liens redirigés (3.4s)
+  ✓   9 [telephone] › tests/parcours/formules.spec.js:106:1 › catalogue étendu : filtrer, sélectionner et reprendre une séance longue (8.2s)
+  ✓  10 [telephone] › tests/parcours/practice-studio.spec.js:35:1 › séries originales : passages du cours, correction sourcée, nouvelle série et conservation locale (50.4s)
+  ✓  11 [telephone] › tests/parcours/practice-studio.spec.js:93:1 › erreur et annulation ne remplacent pas la série ni le cours local (18.4s)
+  ✓  13 [telephone] › tests/parcours/revision-parcours.spec.js:96:1 › erreurs par matière : toutes les erreurs choisies, aucune question extérieure (24.6s)
+  ✓  14 [telephone] › tests/parcours/revision-parcours.spec.js:132:1 › suivre le fil reprend le repère propre à la matière malgré une visite d’une autre matière (22.7s)
+  ✓  15 [telephone] › tests/parcours/revision-parcours.spec.js:170:1 › un QCM de toutes les matières attribue chaque résultat au bon thème (13.5s)
+  1 failed
+  14 passed (5.9m)
+
+Reprise isolée6nov :
+ using 1 worker
+
+(node:940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:940) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [telephone] › tests/parcours/revision-parcours.spec.js:29:1 › les acquis : matière et chapitre, QCM direct, bonnes réponses sauvegardées (8.0s)
+
+  1 passed (10.9s)

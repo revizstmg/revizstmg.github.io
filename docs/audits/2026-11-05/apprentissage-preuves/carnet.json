@@ -1,0 +1,69 @@
+{
+  "collision": {
+    "key": "qcm|Quelle est la bonne définition de « Structure fonctionnelle » ?",
+    "first": {
+      "subjectId": "management",
+      "themeId": "mgmt-t1",
+      "chapterIndex": 5
+    },
+    "second": {
+      "subjectId": "management",
+      "themeId": "mgmt-t2",
+      "chapterIndex": 7
+    }
+  },
+  "first": [
+    {
+      "id": "qcm|Quelle est la bonne définition de « Structure fonctionnelle » ?",
+      "themeId": "mgmt-t1",
+      "type": "qcm",
+      "q": {
+        "q": "Quelle est la bonne définition de « Structure fonctionnelle » ?",
+        "choices": [
+          "Réponse A",
+          "Réponse B"
+        ],
+        "answer": 0
+      },
+      "le": "2026-11-05",
+      "boite": 0,
+      "due": "2026-11-06"
+    }
+  ],
+  "afterSecondError": [
+    {
+      "id": "qcm|Quelle est la bonne définition de « Structure fonctionnelle » ?",
+      "themeId": "mgmt-t2",
+      "type": "qcm",
+      "q": {
+        "q": "Quelle est la bonne définition de « Structure fonctionnelle » ?",
+        "choices": [
+          "Réponse A",
+          "Réponse B"
+        ],
+        "answer": 0
+      },
+      "le": "2026-11-05",
+      "boite": 0,
+      "due": "2026-11-06"
+    }
+  ],
+  "afterSuccessInFirst": [
+    {
+      "id": "qcm|Quelle est la bonne définition de « Structure fonctionnelle » ?",
+      "themeId": "mgmt-t2",
+      "type": "qcm",
+      "q": {
+        "q": "Quelle est la bonne définition de « Structure fonctionnelle » ?",
+        "choices": [
+          "Réponse A",
+          "Réponse B"
+        ],
+        "answer": 0
+      },
+      "le": "2026-11-06",
+      "boite": 1,
+      "due": "2026-11-09"
+    }
+  ]
+}

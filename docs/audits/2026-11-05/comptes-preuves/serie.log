@@ -1,0 +1,34 @@
+[2m[WebServer] [22m(node:5809) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+[2m[WebServer] [22m(node:5822) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 21 tests using 1 worker
+
+(node:5850) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:5850) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [telephone] › tests/parcours/code-parent.spec.js:16:1 › renouveler le code parent : nouveau code de 10 caractères, ancien effacé (4.2s)
+  ✓   2 [telephone] › tests/parcours/oauth.spec.js:4:3 › retour Google : accueil et session conservée (compte existant) (4.1s)
+  ✓   3 [telephone] › tests/parcours/oauth.spec.js:4:3 › retour Google : accueil et session conservée (nouveau compte) (2.8s)
+  ✓   4 [telephone] › tests/parcours/oauth.spec.js:61:1 › un vrai lien inexistant garde sa page 404 (1.1s)
+  ✓   5 [telephone] › tests/parcours/paiement.spec.js:39:1 › paiements pas encore ouverts : aucune offre à choisir (1.3s)
+  ✓   6 [telephone] › tests/parcours/paiement.spec.js:53:1 › mode test : case obligatoire, puis paiement Premium mensuel envoyé à Stripe (2.4s)
+  ✓   7 [telephone] › tests/parcours/paiement.spec.js:86:1 › abonnement actif : offre, date et portail de gestion (2.8s)
+  ✓   8 [telephone] › tests/parcours/paiement.spec.js:120:1 › retour de Stripe : message de remerciement quand l’abonnement est confirmé (1.3s)
+  ✓   9 [telephone] › tests/parcours/paiement.spec.js:141:3 › page des offres accessible et sans débord à 320 px : light (3.2s)
+  ✓  10 [telephone] › tests/parcours/paiement.spec.js:141:3 › page des offres accessible et sans débord à 320 px : dark (4.2s)
+  ✓  11 [telephone] › tests/parcours/parametres-rubriques.spec.js:4:64 › paramètres par rubriques : light (6.4s)
+  ✓  12 [telephone] › tests/parcours/parametres-rubriques.spec.js:4:64 › paramètres par rubriques : dark (9.6s)
+  ✓  13 [telephone] › tests/parcours/parametres-rubriques.spec.js:87:1 › réglages de révision et de données séparés, ancien accès conservé (4.3s)
+  ✓  14 [telephone] › tests/parcours/parametres-rubriques.spec.js:130:106 › paramètres structurés traduits de (2.4s)
+  ✓  15 [telephone] › tests/parcours/parametres-rubriques.spec.js:130:106 › paramètres structurés traduits ar (25.5s)
+  ✓  16 [telephone] › tests/parcours/parametres-rubriques.spec.js:153:1 › apparence : modes explicites et réglage du système sans changer les autres préférences (10.2s)
+  ✓  17 [telephone] › tests/parcours/sauvegarde.spec.js:113:1 › une note écrite part sur le compte (33.3s)
+  ✓  18 [telephone] › tests/parcours/sauvegarde.spec.js:129:1 › hors ligne : « Non sauvegardé », puis envoi au retour du réseau (46.5s)
+  ✓  19 [telephone] › tests/parcours/sauvegarde.spec.js:150:1 › un autre appareil a écrit entre-temps : les deux progressions sont gardées (18.1s)
+  ✓  20 [telephone] › tests/parcours/sauvegarde.spec.js:197:1 › déconnexion : jamais sans sauvegarde, sauf si l’élève le choisit (35.9s)
+  ✓  21 [telephone] › tests/parcours/sauvegarde.spec.js:235:1 › déconnexion forcée hors ligne : l’élève est prévenu, puis déconnecté (50.0s)
+
+  21 passed (4.6m)

@@ -1,0 +1,161 @@
+{
+  "questions": 4010,
+  "duplicates": [
+    {
+      "key": "saisie|Quel terme correspond à cette définition ?\n« Stocks, créances clients »",
+      "first": {
+        "subjectId": "gestion-finance",
+        "themeId": "gf-t1",
+        "chapterIndex": 8
+      },
+      "second": {
+        "subjectId": "gestion-finance",
+        "themeId": "gf-t2",
+        "chapterIndex": 3
+      }
+    },
+    {
+      "key": "qcm|Quelle est la bonne définition de « Structure fonctionnelle » ?",
+      "first": {
+        "subjectId": "management",
+        "themeId": "mgmt-t1",
+        "chapterIndex": 5
+      },
+      "second": {
+        "subjectId": "management",
+        "themeId": "mgmt-t2",
+        "chapterIndex": 7
+      }
+    },
+    {
+      "key": "qcm|À quoi correspond « Structure matricielle » ?",
+      "first": {
+        "subjectId": "management",
+        "themeId": "mgmt-t1",
+        "chapterIndex": 5
+      },
+      "second": {
+        "subjectId": "management",
+        "themeId": "mgmt-t2",
+        "chapterIndex": 7
+      }
+    },
+    {
+      "key": "qcm|« Structure divisionnelle » : quelle proposition est correcte ?",
+      "first": {
+        "subjectId": "management",
+        "themeId": "mgmt-t1",
+        "chapterIndex": 5
+      },
+      "second": {
+        "subjectId": "management",
+        "themeId": "mgmt-t2",
+        "chapterIndex": 7
+      }
+    },
+    {
+      "key": "qcm|À quoi correspond « Différenciation » ?",
+      "first": {
+        "subjectId": "management",
+        "themeId": "mgmt-t1",
+        "chapterIndex": 3
+      },
+      "second": {
+        "subjectId": "management",
+        "themeId": "mgmt-t2",
+        "chapterIndex": 9
+      }
+    },
+    {
+      "key": "qcm|Que signifie : « Éco-conception » ?",
+      "first": {
+        "subjectId": "management",
+        "themeId": "mgmt-t1",
+        "chapterIndex": 4
+      },
+      "second": {
+        "subjectId": "management",
+        "themeId": "mgmt-t3",
+        "chapterIndex": 15
+      }
+    },
+    {
+      "key": "qcm|Que signifie : « Donnée » ?",
+      "first": {
+        "subjectId": "gestion-finance",
+        "themeId": "gf-t1",
+        "chapterIndex": 25
+      },
+      "second": {
+        "subjectId": "p1-sgn",
+        "themeId": "p1-sgn-t2",
+        "chapterIndex": 0
+      }
+    },
+    {
+      "key": "qcm|À quoi correspond « Traiter » ?",
+      "first": {
+        "subjectId": "gestion-finance",
+        "themeId": "gf-t1",
+        "chapterIndex": 25
+      },
+      "second": {
+        "subjectId": "p1-sgn",
+        "themeId": "p1-sgn-t2",
+        "chapterIndex": 3
+      }
+    },
+    {
+      "key": "qcm|Que signifie : « PGI (ERP) » ?",
+      "first": {
+        "subjectId": "gestion-finance",
+        "themeId": "gf-t1",
+        "chapterIndex": 25
+      },
+      "second": {
+        "subjectId": "p1-sgn",
+        "themeId": "p1-sgn-t2",
+        "chapterIndex": 5
+      }
+    },
+    {
+      "key": "saisie|Quel terme correspond à cette définition ?\n« Information accessible quand on en a besoin »",
+      "first": {
+        "subjectId": "gestion-finance",
+        "themeId": "gf-t1",
+        "chapterIndex": 24
+      },
+      "second": {
+        "subjectId": "p1-sgn",
+        "themeId": "p1-sgn-t2",
+        "chapterIndex": 8
+      }
+    },
+    {
+      "key": "qcm|Que signifie : « Donnée » ?",
+      "first": {
+        "subjectId": "gestion-finance",
+        "themeId": "gf-t1",
+        "chapterIndex": 25
+      },
+      "second": {
+        "subjectId": "p1-sgn",
+        "themeId": "p1-sgn-t2",
+        "chapterIndex": 10
+      }
+    },
+    {
+      "key": "saisie|Quel terme correspond à cette définition ?\n« Clients, fournisseurs, banques, État, collectivités, associations, riverains »",
+      "first": {
+        "subjectId": "management",
+        "themeId": "mgmt-t2",
+        "chapterIndex": 5
+      },
+      "second": {
+        "subjectId": "p1-sgn",
+        "themeId": "p1-sgn-t3",
+        "chapterIndex": 4
+      }
+    }
+  ]
+}

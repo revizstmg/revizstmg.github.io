@@ -1,0 +1,88 @@
+[2m[WebServer] [22m(node:8634) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+[2m[WebServer] [22m(node:8652) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 5 tests using 1 worker
+
+(node:8672) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8672) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [telephone] › audit-comptes-probes.spec.js:3:1 › parent sans exercices : statut des matières non évaluées (26.9s)
+(node:8801) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8801) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [telephone] › audit-comptes-probes.spec.js:39:1 › liens confidentialité vers les actions de données (7.3s)
+  ✓  3 [telephone] › audit-comptes-probes.spec.js:56:1 › export en attente puis changement de compte (5.3s)
+  ✓  4 [telephone] › audit-comptes-probes.spec.js:132:1 › export : les brouillons locaux distincts de la progression sont absents (3.2s)
+  ✓  5 [telephone] › audit-comptes-probes.spec.js:166:1 › partage parent refusé : code affiché sans erreur de publication (6.7s)
+
+
+  1) [telephone] › audit-comptes-probes.spec.js:3:1 › parent sans exercices : statut des matières non évaluées 
+
+    Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoContain[2m([22m[32mexpected[39m[2m) // indexOf[22m
+
+    Expected substring: [32m"À renforcer"[39m
+    Received string:    [31m"👨‍👩‍👧 ESPACE PARENT·[39m
+    [31mEspace parent·[39m
+    [31mSuivez la progression de révision de votre enfant, en toute simplicité.·[39m
+    [31m🎓·[39m
+    [31mÉlève nouveau·[39m
+    [31mDernière activité : à l’instant·[39m
+    [31m↻[39m
+    [31m🔥[39m
+    [31m0[39m
+    [31mSérie[39m
+    [31mjours de suite[39m
+    [31m⭐[39m
+    [31m0[39m
+    [31mNiveau[39m
+    [31m0 XP[39m
+    [31m⏱️[39m
+    [31m0 min[39m
+    [31mTemps de révision[39m
+    [31m🎯[39m
+    [31m0/5[39m
+    [31mObjectif semaine[39m
+    [31mthèmes[39m
+    [31m🏅[39m
+    [31m0[39m
+    [31mBadges[39m
+    [31m🧭 Synthèse de la semaine·[39m
+    [31mPeu d’activité cette semaine. Fixez ensemble un petit objectif quotidien pour garder le rythme.·[39m
+    [31m🎯 À RENFORCER·[39m
+    [31mManagement · 0%[39m
+    [31mDroit · 0%[39m
+    [31m📚 Progression par matière[39m
+    [31mManagement[39m
+    [31m0 min[39m
+    [31m0%[39m
+    [31mDroit[39m
+    [31m0 min[39m
+    [31m0%[39m
+    [31mRetirer ce compte"[39m
+
+      4 |  await preparer(page);await page.addInitScript(()=>localStorage.setItem('stmg_parent_link','PTEST23456'))
+      5 |  await page.route('**/rpc/revizstmg_stats_enfant',r=>r.fulfill({json:[{name:'Élève nouveau',xp:0,subjects:[{short:'Management',score:0,time:0},{short:'Droit',score:0,time:0}],courses_week:0,last_active:new Date().toISOString()}]}))
+    > 6 |  await page.goto('/#/parent');await expect(page.getByRole('heading',{name:/Synthèse/})).toBeVisible();const text=await page.locator('main').innerText();expect(text).toContain('À renforcer');expect(text).toContain('Management · 0%')
+        |                                                                                                                                                                      ^
+      7 |  await info.attach('parent-non-evalue',{body:JSON.stringify({text}),contentType:'application/json'})
+      8 | })
+      9 | test('liens confidentialité vers les actions de données',async({page})=>{
+        at /workspace/work/audit-comptes-20261105/app/audit-comptes-probes.spec.js:6:166
+
+    Error Context: test-results/audit-comptes-probes-paren-9de6a-t-des-matières-non-évaluées-telephone/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/audit-comptes-probes-paren-9de6a-t-des-matières-non-évaluées-telephone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/audit-comptes-probes-paren-9de6a-t-des-matières-non-évaluées-telephone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [telephone] › audit-comptes-probes.spec.js:3:1 › parent sans exercices : statut des matières non évaluées 
+  4 passed (1.1m)

@@ -1,0 +1,30 @@
+{
+  "base": "79d4fa01",
+  "reseau": "fournisseurs simulés uniquement",
+  "serie": {
+    "tests": 21,
+    "passed": 21,
+    "duration": "4.6m",
+    "log": "serie.log"
+  },
+  "microsondes": {
+    "initiales": {
+      "passed": 4,
+      "failed": 1,
+      "cause_echec": "casse du texte attendu, rendu uppercase",
+      "log": "microsondes-initiales.log"
+    },
+    "reprise_parent": {
+      "passed": 1,
+      "duration": "4.1s",
+      "log": "parent-reprise.log"
+    }
+  },
+  "constats": {
+    "AC03": "exportOwner reste A après transition de session A vers B",
+    "AC04": "sentinelles de brouillons examen et EPS absentes du JSON exporté",
+    "AC05": "POST enfant503, partage actif et code visible sans alerte",
+    "AC06": "matières à score0 non évaluées présentées à renforcer",
+    "AC07": "Privacy mène à /moi sans boutons de données visibles"
+  }
+}
