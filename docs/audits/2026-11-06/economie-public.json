@@ -1,0 +1,74 @@
+{
+  "date_utc": "2026-11-06T13:28:27.774715+00:00",
+  "index": {
+    "status": 200,
+    "sha256": "daf36858fb08b031c7edee296befc460fe8d58f0b990de3773a1432bdede77b7",
+    "conforme_compilation": true
+  },
+  "pages": [
+    {
+      "controle": "PIB Première",
+      "url": "https://revizstmg.github.io/cours/premiere/economie/comment-cree-t-on-des-richesses-et-comment-les-mesure-t-on/",
+      "status": 200,
+      "sha256": "17d12e2688ee3329cd252977ec91d97c6c9a64b445d0e222247c55f736962c3b",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Capacité de financement",
+      "url": "https://revizstmg.github.io/cours/premiere/economie/comment-les-agents-economiques-se-financent-ils/besoin-et-capacite-de-financement/",
+      "status": 200,
+      "sha256": "7f466924d719bd33f95d9d59f61812b8d0803603dedb2b6dcf734233536d38e7",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Biens économiques",
+      "url": "https://revizstmg.github.io/cours/premiere/economie/les-grandes-questions-economiques/les-besoins-les-biens-et-les-services/",
+      "status": 200,
+      "sha256": "5e56eaa06fb60b182c10ebae54c5f3eee1df0ec5509e14a534c7e333b7833ec3",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Emprunt et déficit",
+      "url": "https://revizstmg.github.io/cours/terminale/economie/le-role-de-l-etat/les-limites-de-l-intervention-dette-effet-d-eviction-regles/",
+      "status": 200,
+      "sha256": "96e22b0448f30c2b518f2ed9c531abe048a493d9944a9784e016552ff31c8f4d",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Chômage et statut",
+      "url": "https://revizstmg.github.io/cours/terminale/economie/emploi-et-chomage/mesurer-l-emploi-et-le-chomage-population-active-actifs-occupes/",
+      "status": 200,
+      "sha256": "804b5f0a7c92e00d2fed53a33473fa8f6e327c40a5d2b4cbe1c8a5fb31ff0ab3",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Thème 9 écrit 2027",
+      "url": "https://revizstmg.github.io/cours/terminale/economie/",
+      "status": 200,
+      "sha256": "db327b554a052d00aba76624ca0e961feff3652f3c2d062bada7b0957e4c8afb",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Politique monétaire",
+      "url": "https://revizstmg.github.io/cours/terminale/economie/le-role-de-l-etat/la-politique-monetaire-de-la-bce-taux-directeurs-et-stabilite-des-prix/",
+      "status": 200,
+      "sha256": "cb5c62b122c7f6235219bdb72818af357a6e7497d8226f8f485dfc7db23be3bc",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Production non marchande",
+      "url": "https://revizstmg.github.io/cours/terminale/economie/croissance-et-developpement-durable/la-croissance-economique-mesure-par-le-pib-et-limites/",
+      "status": 200,
+      "sha256": "411366763a4d38ba9edaa2bfd8897769b9de2527775b96190f7eec60fd96045c",
+      "conforme_compilation": true
+    }
+  ],
+  "source_commit": "87fa6e6dbdb66145e10d7b489a69cb1c5892152e",
+  "compiled_commit": "2a42f9524dd9dae1af16ae6eb31708b154020fee",
+  "ci_run": 42223595260,
+  "pages_run": 42225289684,
+  "unit_tests_utc": 772,
+  "unit_tests_paris": 772,
+  "browser_tests_passed": 392,
+  "external_services": "Aucune mutation Supabase ni correction IA réelle ; contrôles navigateur avec services simulés."
+}
