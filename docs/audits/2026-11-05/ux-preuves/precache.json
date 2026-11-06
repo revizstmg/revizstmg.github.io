@@ -1,0 +1,43 @@
+{
+  "scope": "liste PRECACHE seulement, tailles de fichiers non compressés sur disque, pas un débit réseau ni une mesure utilisateur",
+  "count": 148,
+  "bytes": 13299907,
+  "mib": 12.68,
+  "pdf_count": 5,
+  "pdf_bytes": 5283737,
+  "largest": [
+    {
+      "path": "./assets/guide-es-CBJS2dow.pdf",
+      "bytes": 1228760
+    },
+    {
+      "path": "./assets/guide-en-1OGnCk1Q.pdf",
+      "bytes": 1222950
+    },
+    {
+      "path": "./assets/guide-ar-CV-BH1p0.pdf",
+      "bytes": 1125645
+    },
+    {
+      "path": "./assets/guide-it-Kvakt_n8.pdf",
+      "bytes": 864301
+    },
+    {
+      "path": "./assets/guide-de-DE2SVaqX.pdf",
+      "bytes": 842081
+    },
+    {
+      "path": "./assets/index-BtKvX6RQ.js",
+      "bytes": 647635
+    },
+    {
+      "path": "./assets/public.de-BLchCDLO.js",
+      "bytes": 414804
+    },
+    {
+      "path": "./assets/public.ar-BjYVfkd3.js",
+      "bytes": 398758
+    }
+  ],
+  "index_sha256": "4b4a47454744f0daa35ca924c4c26e90f34ff28ad39e1fc65dd3388219b0ec1b"
+}

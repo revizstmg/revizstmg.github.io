@@ -1,0 +1,60 @@
+
+Running 18 tests using 1 worker
+
+(node:7013) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7013) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [telephone] › tests/parcours/mobile-confort.spec.js:15:3 › lecture agrandie : fermeture au pouce 320×568 (34.1s)
+  ✓   2 [telephone] › tests/parcours/mobile-confort.spec.js:15:3 › lecture agrandie : fermeture au pouce 390×844 (25.0s)
+  ✓   3 [telephone] › tests/parcours/mobile-confort.spec.js:15:3 › lecture agrandie : fermeture au pouce 844×390 (13.1s)
+  ✓   4 [telephone] › tests/parcours/mobile-confort.spec.js:63:3 › pages téléphone : grilles, navigation et formulaires light (39.9s)
+  ✓   5 [telephone] › tests/parcours/mobile-confort.spec.js:63:3 › pages téléphone : grilles, navigation et formulaires dark (47.4s)
+  ✓   6 [telephone] › tests/parcours/mobile-confort.spec.js:155:1 › ordinateur : outils du haut et fermeture du lecteur conservés (10.2s)
+  ✓   7 [telephone] › tests/parcours/navigation-mobile.spec.js:4:102 › menu principal à gauche, organisé et accessible light 320 (12.8s)
+  ✓   8 [telephone] › tests/parcours/navigation-mobile.spec.js:4:102 › menu principal à gauche, organisé et accessible dark 390 (14.0s)
+  ✓   9 [telephone] › tests/parcours/navigation-mobile.spec.js:4:102 › menu principal à gauche, organisé et accessible light 844 (38.6s)
+  ✓  10 [telephone] › tests/parcours/navigation-mobile.spec.js:80:1 › choisir et ordonner ses onglets dans le menu, sauvegarde et limites (23.2s)
+  ✘  11 [telephone] › tests/parcours/navigation-mobile.spec.js:178:125 › menu principal traduit de (44.1s)
+(node:9046) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9046) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  12 [telephone] › tests/parcours/navigation-mobile.spec.js:178:125 › menu principal traduit ar (7.5s)
+  ✓  13 [telephone] › tests/parcours/parametres-rubriques.spec.js:4:64 › paramètres par rubriques : light (50.1s)
+  ✓  14 [telephone] › tests/parcours/parametres-rubriques.spec.js:4:64 › paramètres par rubriques : dark (16.5s)
+  ✓  15 [telephone] › tests/parcours/parametres-rubriques.spec.js:87:1 › réglages de révision et de données séparés, ancien accès conservé (4.9s)
+  ✓  16 [telephone] › tests/parcours/parametres-rubriques.spec.js:130:106 › paramètres structurés traduits de (3.7s)
+  ✓  17 [telephone] › tests/parcours/parametres-rubriques.spec.js:130:106 › paramètres structurés traduits ar (2.3s)
+  ✓  18 [telephone] › tests/parcours/parametres-rubriques.spec.js:153:1 › apparence : modes explicites et réglage du système sans changer les autres préférences (6.3s)
+
+
+  1) [telephone] › tests/parcours/navigation-mobile.spec.js:178:125 › menu principal traduit de ────
+
+    TimeoutError: page.waitForFunction: Timeout 15000ms exceeded.
+
+       at eleve.js:61
+
+      59 | // L'écran « Bienvenue » s'affiche ~5 s à chaque ouverture pour un élève inscrit.
+      60 | export async function attendreAccueil(page) {
+    > 61 |   await page.waitForFunction(() => !document.querySelector('.welcome-cta, [class*="welcome"]') || document.body.style.overflow !== 'hidden', null, { timeout: 15000 })
+         |              ^
+      62 |   await page.waitForTimeout(300)
+      63 | }
+      64 |
+        at attendreAccueil (/workspace/work/audit-ux-20261105/app/tests/parcours/eleve.js:61:14)
+        at /workspace/work/audit-ux-20261105/app/tests/parcours/navigation-mobile.spec.js:65:88
+
+    Error Context: test-results/navigation-mobile-menu-principal-traduit-de-telephone/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/navigation-mobile-menu-principal-traduit-de-telephone/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/navigation-mobile-menu-principal-traduit-de-telephone/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [telephone] › tests/parcours/navigation-mobile.spec.js:178:125 › menu principal traduit de ─────
+  17 passed (7.4m)

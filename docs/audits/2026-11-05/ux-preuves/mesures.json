@@ -1,0 +1,26 @@
+{
+  "synthetic": true,
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "revision": {
+    "height": 2904.84375,
+    "actions": 14
+  },
+  "deleteTarget": {
+    "x": 302,
+    "y": 2604.898681640625,
+    "width": 44,
+    "height": 44
+  },
+  "deletion": {
+    "remaining": 0,
+    "confirms": 0,
+    "undoVisible": 0
+  },
+  "offers": {
+    "height": 1936.0311279296875,
+    "featureLines": 9
+  }
+}
