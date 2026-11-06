@@ -1,0 +1,13 @@
+{
+  "source": "79d4fa01",
+  "origine": "audit-apprentissage-reprise.log, sonde audit-apprentissage.spec.js",
+  "mesures": {
+    "height": 39214,
+    "width": 390,
+    "lesson": "",
+    "exercises": 120,
+    "fieldCount": 32,
+    "languageListenY": 37093.78125,
+    "afterReload": ""
+  }
+}
