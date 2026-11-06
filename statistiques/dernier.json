@@ -1,50 +1,8 @@
 {
- "date": "2026-11-05",
- "heure": "2026-11-05T12:56:16.595Z",
+ "date": "2026-11-06",
+ "heure": "2026-11-06T12:42:28.830Z",
  "utilisation": {
-  "profs": 4,
-  "eleves": 11,
-  "classes": 3,
-  "comptes": 15,
-  "niveaux": {
-   "premiere-stmg": 2,
-   "terminale-stmg": 9
-  },
-  "vues_7j": 60,
-  "actifs_1j": 1,
-  "actifs_7j": 1,
-  "ecrans_7j": {
-   "amis": 1,
-   "guide": 5,
-   "accueil": 33,
-   "matiere": 14,
-   "boutique": 1,
-   "chapitre": 1,
-   "revision": 4,
-   "bac-blanc": 1
-  },
-  "vues_hier": 32,
-  "actifs_30j": 7,
-  "defis_amis": 0,
-  "visites_7j": 25,
-  "nouveaux_7j": 0,
-  "specialites": {
-   "sig": 1,
-   "gestion-finance": 7,
-   "rh-communication": 1
-  },
-  "joueurs_amis": 1,
-  "nouveaux_30j": 5,
-  "rappels_push": 0,
-  "visites_hier": 16,
-  "defis_amis_7j": 0,
-  "sessions_live": 0,
-  "quiz_de_classe": 0,
-  "suivis_parents": 0,
-  "signalements_7j": 0,
-  "eleves_en_classe": 2,
-  "signalements_a_traiter": 0,
-  "suivis_parents_actifs_7j": 0
+  "erreur": "Supabase injoignable (fetch failed)"
  },
  "contenu": {
   "matieres": 19,
@@ -63,9 +21,9 @@
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-11-04T16:58:47Z"
+   "date": "2026-11-06T07:24:08Z"
   },
-  "modifications7j": 36
+  "modifications7j": 43
  },
  "tests": "success"
 }
