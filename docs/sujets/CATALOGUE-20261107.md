@@ -1,0 +1,23 @@
+# Sujets prêts : 7 novembre 2026
+
+Onze entraînements non officiels, accessibles depuis Bac blanc : huit dossiers de 60 minutes et trois versions de 120 minutes. Les données et organisations sont fictives. Les PDF ne sont pas présentés comme des annales ni des sujets de quatre heures.
+
+| Niveau | Sujet | Durée |
+| --- | --- | --- |
+| Première | Management : Cycléo, organiser et décider | 60 min |
+| Première | SGN : Atelier Lune, créer de la valeur | 60 min |
+| Première | Droit : une vente contestée | 60 min |
+| Première | Économie : le budget des ménages | 60 min |
+| Première | Droit et économie : les fondamentaux | 120 min |
+| Terminale | Management : Nova, stratégie et performance | 60 min |
+| Terminale | Droit : une commande non livrée | 60 min |
+| Terminale | Économie : emploi et politiques publiques | 60 min |
+| Terminale | Gestion-finance : ÉquiPro, calculer et décider | 60 min |
+| Terminale | Droit et économie : entraînement complet | 120 min |
+| Terminale | Management : bases et stratégie (révisions Première incluses) | 120 min |
+
+Les huit dossiers de base comportent quatre documents et six questions, dont deux sans document, pour20 points. Les trois versions de deux heures réunissent deux parties de10 points : huit documents et douze questions, critères de points divisés par deux. Le corrigé et le sujet sont des PDF séparés. Aucun appel au fournisseur ni réservation de quota pour leur téléchargement ; aucune nouvelle offre de correction automatique n’est introduite.
+
+Source éditoriale : `app/src/data/sujets/prets.json`. Chaque question renvoie à un identifiant réel du catalogue de cours. `catalogue.json` contient uniquement les informations de choix affichées, pour éviter de charger les131ko de dossiers avec la page. La compilation contrôle le contrat des sujets puis génère22 PDF dans `app/dist/sujets-prets/` ; seuls les fichiers compilés sont publiés par le workflow.
+
+Contrôles : séparation des niveaux, existence des chapitres, barème, volume et utilisation des documents, corrigés et critères, calculs de TVA/amortissement/FRNG/BFR/MCV/revenus/pouvoir d’achat, validité des22 PDF, téléchargement sans service de génération et sans consommation de quota, petit écran clair/sombre et traductions de l’interface. Les PDF restent en français, indiqué dans la page. Ces vérifications ne constituent pas une certification professorale.

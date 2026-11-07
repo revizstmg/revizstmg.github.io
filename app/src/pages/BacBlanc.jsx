@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { useStore, useStudyTimer } from '../store.jsx'
 import CreateExam from '../components/CreateExam.jsx'
+import ReadyExams from '../components/ReadyExams.jsx'
 import AnnalesBac from '../components/AnnalesBac.jsx'
 import './BacBlanc.css'
 import SujetMaths from '../games/SujetMaths.jsx'
@@ -33,6 +34,7 @@ function BacBlancPage() {
         <aside className="bac-hero-aside" aria-label="Préparer sa séance"><ol><li>Choisis ton épreuve et ouvre le PDF.</li><li>Prépare une copie et ton matériel.</li><li>Installe-toi au calme, comme le jour du bac.</li></ol></aside>
       </header>
       {premiere&&<p className="text-sm">Les annales de droit et de management portent sur le programme de Terminale. Tu peux les découvrir dès la Première.</p>}
+      <ReadyExams key={premiere ? 'premiere' : 'terminale'} level={premiere ? 'premiere' : 'terminale'} />
       <AnnalesBac>
         <div className="bac-preparation-column">
         <article className="bac-subject bac-subject-extra">

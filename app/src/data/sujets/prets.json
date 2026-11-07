@@ -1,0 +1,2172 @@
+[
+  {
+    "id": "premiere-management",
+    "level": "premiere",
+    "subject": "Management",
+    "summary": "Organisations, ressources, décisions et diagnostic.",
+    "duration": 60,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "p1-mgmt-t1::0",
+        "title": "L’organisation : un groupe, des ressources, un but commun",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-mgmt-t1::2",
+        "title": "Deux niveaux de management : stratégique et opérationnel",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-mgmt-t2::2",
+        "title": "Le diagnostic interne : ressources, compétences distinctives, forces et faiblesses",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-mgmt-t2::1",
+        "title": "Le diagnostic externe : macro-environnement (PESTEL) et micro-environnement",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-mgmt-t1::1",
+        "title": "Le management : fixer des objectifs, organiser, animer, contrôler",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-mgmt-t2::3",
+        "title": "La synthèse : la matrice SWOT",
+        "subject": "Management",
+        "level": "premiere"
+      }
+    ],
+    "exam": {
+      "title": "Cycléo : organiser et décider",
+      "instructions": "Entraînement non officiel de 60 minutes. Les quatre documents et leurs données sont fictifs. Consacrez environ 10 minutes à la lecture, 45 minutes aux réponses et 5 minutes à la relecture. Répondez sur une copie séparée. Les questions 5 et 6 mobilisent vos connaissances sans document. Calculatrice autorisée pour les sujets chiffrés ; les calculs et les unités doivent être présentés. Acceptez toute formulation équivalente justifiée dans le corrigé.",
+      "documents": [
+        {
+          "id": "d1",
+          "title": "Document 1 : Une organisation structurée (cas fictif)",
+          "text": "Cycléo SAS répare et vend des vélos dans une ville moyenne. Ses deux associés emploient huit salariés. Elle possède un atelier, dix postes de réparation et une marque déposée. Les mécaniciens partagent un logiciel de planning. L’entreprise veut réaliser un bénéfice pour financer son développement, tout en proposant des déplacements moins polluants. Les associés décident des orientations ; la responsable d’atelier répartit chaque matin le travail."
+        },
+        {
+          "id": "d2",
+          "title": "Document 2 : Deux décisions (cas fictif)",
+          "text": "Le 4 janvier, les associés votent l’ouverture d’un second atelier dans une autre ville : investissement de 180 000 euros, emprunt sur cinq ans et recrutement de quatre salariés. Le 12 janvier, la responsable décale deux réparations du matin à l’après-midi pour remplacer un mécanicien absent. Cette réorganisation utilise les ressources déjà disponibles et ne change pas les activités de Cycléo."
+        },
+        {
+          "id": "d3",
+          "title": "Document 3 : Les ressources internes (cas fictif)",
+          "text": "Les clients apprécient le diagnostic rapide de batteries électriques ; trois salariés ont suivi une formation rare dans la région. La marque est connue localement. En revanche, l’entreprise ne possède que 15 000 euros de trésorerie disponible et son atelier est trop petit pour stocker les vélos en attente. Le logiciel fonctionne correctement mais ne remplace pas le savoir-faire des techniciens."
+        },
+        {
+          "id": "d4",
+          "title": "Document 4 : Le marché local (cas fictif)",
+          "text": "Une aide municipale à l’achat de vélos favorise les demandes de réparation. Plusieurs entreprises voisines envisagent des flottes de vélos pour leurs salariés. Une chaîne nationale annonce toutefois un atelier à bas prix à proximité. Le coût des pièces importées augmente. Ces évolutions ne sont pas décidées par Cycléo : elles viennent de son environnement."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "chapterId": "p1-mgmt-t1::0",
+          "documentIds": [
+            "d1"
+          ],
+          "enonce": "Montrez que Cycléo est une organisation. Classez une ressource humaine et une ressource matérielle.",
+          "points": 3,
+          "correction": "Cycléo poursuit un but commun, coordonne une action collective et mobilise des ressources dans une structure : les associés décident, la responsable répartit le travail et les salariés réparent. Les mécaniciens sont une ressource humaine ; l’atelier ou les postes de réparation sont des ressources matérielles. Le logiciel est une ressource immatérielle, non une personne.",
+          "criteria": [
+            "But commun et coordination : 1 point.",
+            "Structure identifiée dans le cas : 1 point.",
+            "Deux ressources correctement classées : 1 point."
+          ]
+        },
+        {
+          "id": "q2",
+          "chapterId": "p1-mgmt-t1::2",
+          "documentIds": [
+            "d2"
+          ],
+          "enonce": "Distinguez la décision stratégique de la décision opérationnelle. Justifiez chaque classement avec deux indices.",
+          "points": 3,
+          "correction": "L’ouverture du second atelier est stratégique : elle engage durablement l’entreprise, mobilise un investissement important et modifie son implantation. Le déplacement de deux réparations est opérationnel : il règle une difficulté quotidienne à court terme avec des ressources existantes. La distinction repose sur l’horizon et la portée, pas seulement sur la personne qui décide.",
+          "criteria": [
+            "Classement des deux décisions : 1 point.",
+            "Deux indices pour la décision stratégique : 1 point.",
+            "Deux indices pour la décision opérationnelle : 1 point."
+          ]
+        },
+        {
+          "id": "q3",
+          "chapterId": "p1-mgmt-t2::2",
+          "documentIds": [
+            "d3"
+          ],
+          "enonce": "Présentez deux forces et deux faiblesses internes. Expliquez pourquoi la formation peut constituer une compétence distinctive.",
+          "points": 4,
+          "correction": "Forces : savoir-faire rare sur les batteries et notoriété locale. Faiblesses : faible trésorerie disponible et surface de stockage insuffisante. La compétence peut distinguer Cycléo des concurrents si elle permet un service valorisé et difficile à reproduire. La formation est un indice ; elle ne prouve pas à elle seule un avantage durable.",
+          "criteria": [
+            "Deux forces : 1 point.",
+            "Deux faiblesses : 1 point.",
+            "Lien formation, savoir-faire et service : 1 point.",
+            "Distinction conditionnelle par rapport aux concurrents : 1 point."
+          ]
+        },
+        {
+          "id": "q4",
+          "chapterId": "p1-mgmt-t2::1",
+          "documentIds": [
+            "d4"
+          ],
+          "enonce": "Identifiez deux opportunités et deux menaces externes. Expliquez une conséquence possible sur Cycléo.",
+          "points": 4,
+          "correction": "Opportunités : aide municipale et intérêt des employeurs pour les flottes. Menaces : arrivée d’une chaîne à bas prix et hausse du coût des pièces. Une flotte peut apporter des contrats réguliers ; la chaîne peut exercer une pression sur les prix ; la hausse des pièces peut réduire la marge si elle n’est pas répercutée. Toute conséquence cohérente est admise.",
+          "criteria": [
+            "Deux opportunités : 1 point.",
+            "Deux menaces : 1 point.",
+            "Caractère externe explicité : 1 point.",
+            "Conséquence argumentée : 1 point."
+          ]
+        },
+        {
+          "id": "q5",
+          "chapterId": "p1-mgmt-t1::1",
+          "documentIds": [],
+          "enonce": "Présentez trois fonctions du management et expliquez leur rôle.",
+          "points": 3,
+          "correction": "Fixer des objectifs donne une direction ; organiser répartit les ressources et les tâches ; animer mobilise les acteurs ; contrôler compare les résultats aux objectifs et permet des ajustements. Trois fonctions expliquées parmi ces quatre sont attendues.",
+          "criteria": [
+            "Une première fonction expliquée : 1 point.",
+            "Une deuxième fonction expliquée : 1 point.",
+            "Une troisième fonction expliquée : 1 point."
+          ]
+        },
+        {
+          "id": "q6",
+          "chapterId": "p1-mgmt-t2::3",
+          "documentIds": [],
+          "enonce": "Distinguez les dimensions internes et externes d’un diagnostic SWOT. Pourquoi ne suffit-il pas à prendre une décision ?",
+          "points": 3,
+          "correction": "Les forces et faiblesses concernent les caractéristiques internes ; les opportunités et menaces portent sur l’environnement. Le SWOT synthétise le diagnostic, mais il faut aussi hiérarchiser les enjeux, examiner les ressources, comparer les options et tenir compte des objectifs avant de décider.",
+          "criteria": [
+            "Interne correctement défini : 1 point.",
+            "Externe correctement défini : 1 point.",
+            "Limite et étape complémentaire : 1 point."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "premiere-gestion",
+    "level": "premiere",
+    "subject": "Sciences de gestion et numérique",
+    "summary": "Valeur ajoutée, performance et information.",
+    "duration": 60,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "p1-sgn-t3::3",
+        "title": "La valeur ajoutée",
+        "subject": "Sciences de gestion et numérique",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-sgn-t3::6",
+        "title": "La performance : efficacité et efficience",
+        "subject": "Sciences de gestion et numérique",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-sgn-t2::1",
+        "title": "Les caractéristiques et la qualité de l’information",
+        "subject": "Sciences de gestion et numérique",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-sgn-t3::8",
+        "title": "Les dimensions de la performance : commerciale, financière, sociale, environnementale",
+        "subject": "Sciences de gestion et numérique",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-sgn-t2::0",
+        "title": "De la donnée à la connaissance",
+        "subject": "Sciences de gestion et numérique",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-sgn-t3::7",
+        "title": "Mesurer la performance : indicateurs et tableau de bord",
+        "subject": "Sciences de gestion et numérique",
+        "level": "premiere"
+      }
+    ],
+    "exam": {
+      "title": "Atelier Lune : créer de la valeur",
+      "instructions": "Entraînement non officiel de 60 minutes. Les quatre documents et leurs données sont fictifs. Consacrez environ 10 minutes à la lecture, 45 minutes aux réponses et 5 minutes à la relecture. Répondez sur une copie séparée. Les questions 5 et 6 mobilisent vos connaissances sans document. Calculatrice autorisée pour les sujets chiffrés ; les calculs et les unités doivent être présentés. Acceptez toute formulation équivalente justifiée dans le corrigé.",
+      "documents": [
+        {
+          "id": "d1",
+          "title": "Document 1 : Une activité de production (cas fictif)",
+          "text": "Atelier Lune fabrique des sacs réutilisables. Pour l’année N, les ventes de sacs fabriqués s’élèvent à 120 000 euros hors taxes ; les stocks de produits finis n’ont pas varié. Le tissu, les accessoires et l’électricité achetés et consommés représentent 45 000 euros. Les prestations externes consommées, comme le transport et l’entretien, représentent 15 000 euros. Les salaires ne sont pas compris dans ces consommations intermédiaires."
+        },
+        {
+          "id": "d2",
+          "title": "Document 2 : Le pilotage de l’atelier (cas fictif)",
+          "text": "La responsable visait 1 000 sacs conformes en 500 heures de travail. L’équipe produit finalement 1 000 sacs conformes en 550 heures, avec les mêmes caractéristiques de qualité. Elle a donc atteint le volume prévu mais mobilisé davantage de temps. La responsable veut analyser les causes avant de modifier l’organisation ; elle ne conclut pas que les salariés ont volontairement ralenti."
+        },
+        {
+          "id": "d3",
+          "title": "Document 3 : Deux informations de gestion (cas fictif)",
+          "text": "Pour décider des achats de tissu de juin, la responsable reçoit une extraction du stock datée du 30 avril. Certains mouvements de mai n’y figurent pas. Elle reçoit aussi un inventaire physique validé le 31 mai, avec les quantités, les références et les écarts justifiés. Les deux fichiers sont lisibles, mais leur actualité et leur complétude sont différentes."
+        },
+        {
+          "id": "d4",
+          "title": "Document 4 : Un tableau de bord élargi (cas fictif)",
+          "text": "Le chiffre d’affaires augmente de 8 % par rapport à N-1. La proportion de sacs retournés pour défaut passe de 4 % à 2 %. L’absentéisme passe de 3 % à 6 % des heures théoriques. Les déchets textiles baissent de 15 % à production comparable. La direction souhaite examiner ces quatre évolutions sans résumer la réussite au seul chiffre d’affaires."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "chapterId": "p1-sgn-t3::3",
+          "documentIds": [
+            "d1"
+          ],
+          "enonce": "Calculez les consommations intermédiaires puis la valeur ajoutée. Interprétez le résultat.",
+          "points": 3,
+          "correction": "Consommations intermédiaires = 45 000 + 15 000 = 60 000 euros. Ici, la production vendue vaut 120 000 euros et il n’y a pas de variation de stock : valeur ajoutée = 120 000 - 60 000 = 60 000 euros. C’est la richesse créée par l’activité ; ce n’est pas le bénéfice, car il reste notamment à rémunérer le travail et les autres apporteurs.",
+          "criteria": [
+            "Consommations intermédiaires et formule : 1 point.",
+            "Valeur ajoutée de 60 000 euros : 1 point.",
+            "Interprétation distincte du bénéfice : 1 point."
+          ]
+        },
+        {
+          "id": "q2",
+          "chapterId": "p1-sgn-t3::6",
+          "documentIds": [
+            "d2"
+          ],
+          "enonce": "L’équipe est-elle efficace ? Est-elle aussi efficiente que prévu ? Justifiez en comparant les ressources utilisées.",
+          "points": 3,
+          "correction": "Elle est efficace sur l’objectif de volume et de qualité puisqu’elle livre les 1 000 sacs conformes attendus. Son efficience est inférieure au prévu : elle utilise 550 heures au lieu de 500 pour le même résultat. Le dépassement est de 50 heures, soit 10 %. Il faut rechercher les causes avant d’attribuer une responsabilité.",
+          "criteria": [
+            "Efficacité reliée à l’objectif atteint : 1 point.",
+            "Efficience reliée au rapport résultat/ressources : 1 point.",
+            "Comparaison 550/500 heures correctement interprétée : 1 point."
+          ]
+        },
+        {
+          "id": "q3",
+          "chapterId": "p1-sgn-t2::1",
+          "documentIds": [
+            "d3"
+          ],
+          "enonce": "Quel fichier choisir pour préparer les achats de juin ? Mobilisez deux critères de qualité de l’information et indiquez une vérification utile.",
+          "points": 4,
+          "correction": "L’inventaire validé du 31 mai est plus actuel et plus complet pour préparer juin. Il offre des références et des écarts justifiés, ce qui soutient sa fiabilité. Le fichier d’avril ignore des mouvements récents. Une vérification utile consiste à rapprocher l’inventaire des commandes en cours et des mouvements postérieurs au 31 mai ; le fichier seul ne donne pas toutes les sorties futures.",
+          "criteria": [
+            "Choix cohérent : 1 point.",
+            "Actualité expliquée : 1 point.",
+            "Complétude ou fiabilité expliquée : 1 point.",
+            "Vérification pertinente : 1 point."
+          ]
+        },
+        {
+          "id": "q4",
+          "chapterId": "p1-sgn-t3::8",
+          "documentIds": [
+            "d4"
+          ],
+          "enonce": "Analysez la performance commerciale, sociale et environnementale. Peut-on conclure à une amélioration générale sans réserve ?",
+          "points": 4,
+          "correction": "Les ventes progressent et les retours diminuent : indices commerciaux favorables. L’absentéisme double de 3 % à 6 %, ce qui constitue un signal social défavorable à expliquer. Les déchets baissent de 15 % à production comparable : indice environnemental favorable. La performance est multidimensionnelle ; les évolutions sont contrastées et ne prouvent pas que tout s’améliore.",
+          "criteria": [
+            "Dimension commerciale étayée : 1 point.",
+            "Dimension sociale nuancée : 1 point.",
+            "Dimension environnementale étayée : 1 point.",
+            "Conclusion globale argumentée : 1 point."
+          ]
+        },
+        {
+          "id": "q5",
+          "chapterId": "p1-sgn-t2::0",
+          "documentIds": [],
+          "enonce": "Distinguez donnée, information et connaissance à l’aide d’un exemple.",
+          "points": 3,
+          "correction": "Une donnée est un élément brut, par exemple le nombre 24. L’information donne un sens dans un contexte : 24 sacs restent en stock le 31 mai. Une connaissance résulte de l’interprétation et de l’expérience : savoir que ce stock ne couvrira pas les ventes prévues et comprendre pourquoi un réapprovisionnement est nécessaire.",
+          "criteria": [
+            "Donnée et exemple : 1 point.",
+            "Information contextualisée : 1 point.",
+            "Connaissance interprétée : 1 point."
+          ]
+        },
+        {
+          "id": "q6",
+          "chapterId": "p1-sgn-t3::7",
+          "documentIds": [],
+          "enonce": "Expliquez à quoi sert un tableau de bord et proposez deux caractéristiques d’un indicateur utile.",
+          "points": 3,
+          "correction": "Un tableau de bord rassemble un ensemble limité d’indicateurs pour suivre les objectifs et déclencher des actions. Un indicateur utile est pertinent pour l’objectif, mesurable, compréhensible, actualisé et comparable dans le temps. Deux caractéristiques expliquées suffisent ; accumuler des chiffres sans objectif ne suffit pas.",
+          "criteria": [
+            "Rôle de pilotage : 1 point.",
+            "Première caractéristique expliquée : 1 point.",
+            "Deuxième caractéristique expliquée : 1 point."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "premiere-droit",
+    "level": "premiere",
+    "subject": "Droit",
+    "summary": "Qualification, preuve, résolution du litige et patrimoine.",
+    "duration": 60,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "p1-droit-t2::0",
+        "title": "Le litige : demandeur, défendeur et prétentions",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-droit-t2::1",
+        "title": "La preuve : charge, objet et modes",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-droit-t2::4",
+        "title": "Les voies de recours et l’accord amiable",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-droit-t3::2",
+        "title": "Le patrimoine : actif, passif et principes",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-droit-t1::1",
+        "title": "Les caractères de la règle de droit",
+        "subject": "Droit",
+        "level": "premiere"
+      }
+    ],
+    "exam": {
+      "title": "Une vente contestée : litige et preuve",
+      "instructions": "Entraînement non officiel de 60 minutes. Les quatre documents et leurs données sont fictifs. Consacrez environ 10 minutes à la lecture, 45 minutes aux réponses et 5 minutes à la relecture. Répondez sur une copie séparée. Les questions 5 et 6 mobilisent vos connaissances sans document. Calculatrice autorisée pour les sujets chiffrés ; les calculs et les unités doivent être présentés. Acceptez toute formulation équivalente justifiée dans le corrigé.",
+      "documents": [
+        {
+          "id": "d1",
+          "title": "Document 1 : Les faits (cas fictif)",
+          "text": "Emma achète à titre privé un appareil photo d’occasion à Hugo pour 450 euros. Hugo encaisse le prix et promet de remettre l’appareil le 8 mai. Le 15 mai, Emma n’a rien reçu. Hugo répond qu’il l’a déjà remis en main propre le 8 mai, ce qu’Emma conteste. Emma réclame le remboursement ; Hugo demande le rejet de cette demande. Le sujet porte sur le litige et les preuves, pas sur les garanties de consommation."
+        },
+        {
+          "id": "d2",
+          "title": "Document 2 : Les pièces conservées (cas fictif)",
+          "text": "Emma possède une conversation dans laquelle Hugo confirme le prix et la date prévue de remise. Elle dispose d’un relevé bancaire attestant le virement de 450 euros. Aucun écrit ne constate la remise effective de l’appareil. Une amie affirme avoir entendu Hugo dire qu’il apporterait le colis plus tard. Chaque pièce doit être discutée : un virement prouve le paiement, pas automatiquement la non-livraison."
+        },
+        {
+          "id": "d3",
+          "title": "Document 3 : Le choix d’une résolution (cas fictif)",
+          "text": "Emma souhaite une solution rapide et peu coûteuse. Hugo accepte de rencontrer un conciliateur de justice. La conciliation est gratuite et recherche un accord amiable ; le conciliateur ne tranche pas comme un juge. Si aucun accord n’aboutit, une action peut relever du tribunal judiciaire, notamment par sa chambre de proximité selon l’organisation locale. Le montant et la nature du litige influencent la procédure."
+        },
+        {
+          "id": "d4",
+          "title": "Document 4 : Le patrimoine d’Emma (cas fictif)",
+          "text": "Pour cet exercice, Emma possède un vélo estimé à 300 euros, 600 euros sur son compte bancaire et une créance de remboursement de 450 euros, dont le bien-fondé reste contesté par Hugo. Elle doit aussi 200 euros à sa sœur. On vous demande de présenter séparément les éléments actifs et passifs déclarés, sans préjuger de la décision du juge sur la créance contestée."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "chapterId": "p1-droit-t2::0",
+          "documentIds": [
+            "d1"
+          ],
+          "enonce": "Qualifiez le litige : parties, faits juridiquement utiles et prétentions. Qui serait demandeur si Emma saisissait le juge ?",
+          "points": 3,
+          "correction": "Le litige oppose deux personnes physiques, Emma, acheteuse, et Hugo, vendeur. Il concerne une vente payée et une remise contestée. Emma demande le remboursement de 450 euros ; Hugo conteste et demande le rejet. Si Emma introduit l’action, elle est demanderesse et Hugo défendeur ; ces qualités procédurales ne désignent pas la personne qui a raison.",
+          "criteria": [
+            "Parties et faits qualifiés : 1 point.",
+            "Prétentions opposées : 1 point.",
+            "Demandeur et défendeur correctement identifiés : 1 point."
+          ]
+        },
+        {
+          "id": "q2",
+          "chapterId": "p1-droit-t2::1",
+          "documentIds": [
+            "d2"
+          ],
+          "enonce": "Présentez deux moyens de preuve et leurs limites. Le relevé bancaire suffit-il à prouver l’absence de remise ?",
+          "points": 3,
+          "correction": "La conversation écrite peut étayer les engagements initiaux ; le relevé bancaire établit le paiement ; le témoignage apporte un élément sur les propos rapportés. Le relevé ne démontre pas à lui seul l’absence de remise. Le juge apprécie les éléments produits et leur fiabilité ; il faut distinguer ce que chaque pièce établit réellement.",
+          "criteria": [
+            "Deux moyens de preuve identifiés : 1 point.",
+            "Portée et limites correctement discutées : 1 point.",
+            "Absence de preuve automatique de la non-remise : 1 point."
+          ]
+        },
+        {
+          "id": "q3",
+          "chapterId": "p1-droit-t2::4",
+          "documentIds": [
+            "d3"
+          ],
+          "enonce": "Expliquez l’intérêt et les limites de la conciliation. Distinguez le rôle du conciliateur de celui du juge.",
+          "points": 4,
+          "correction": "La conciliation vise un accord amiable, avec une démarche gratuite qui peut éviter un procès. Elle est adaptée à la volonté exprimée par les deux personnes. Le conciliateur aide à rechercher une solution mais n’impose pas une décision juridictionnelle. En cas d’échec, un recours au juge reste possible selon les conditions de procédure. Aucun résultat ni délai ne peut être garanti.",
+          "criteria": [
+            "Intérêt relié au cas : 1 point.",
+            "Accord amiable expliqué : 1 point.",
+            "Différence avec le rôle du juge : 1 point.",
+            "Limite et possibilité de recours : 1 point."
+          ]
+        },
+        {
+          "id": "q4",
+          "chapterId": "p1-droit-t3::2",
+          "documentIds": [
+            "d4"
+          ],
+          "enonce": "Classez les éléments actifs et passifs et calculez leur total déclaré. Pourquoi faut-il signaler le caractère contesté de la créance ?",
+          "points": 4,
+          "correction": "Actif déclaré : vélo 300, banque 600 et créance contestée 450, soit 1 350 euros. Passif : dette de 200 euros. Le solde net déclaré est 1 150 euros. La créance est un droit personnel et non un bien corporel ; son existence ou son montant peut dépendre de l’issue du litige. Les 450 euros ne doivent pas être présentés comme une rentrée d’argent déjà certaine.",
+          "criteria": [
+            "Classement actif : 1 point.",
+            "Passif et total net : 1 point.",
+            "Distinction créance/bien matériel : 1 point.",
+            "Réserve sur la créance contestée : 1 point."
+          ]
+        },
+        {
+          "id": "q5",
+          "chapterId": "p1-droit-t1::1",
+          "documentIds": [],
+          "enonce": "Présentez les caractères général, obligatoire et coercitif de la règle de droit.",
+          "points": 3,
+          "correction": "La règle est générale et impersonnelle : elle vise des catégories de situations. Elle est obligatoire pour les personnes auxquelles elle s’applique. Son respect peut être assuré par la puissance publique au moyen de sanctions prévues par le droit. La sanction n’est pas nécessairement une peine de prison ; elle peut notamment prendre la forme de réparation ou de nullité.",
+          "criteria": [
+            "Caractère général expliqué : 1 point.",
+            "Caractère obligatoire expliqué : 1 point.",
+            "Contrainte publique et sanction expliquées : 1 point."
+          ]
+        },
+        {
+          "id": "q6",
+          "chapterId": "p1-droit-t2::1",
+          "documentIds": [],
+          "enonce": "Énoncez le principe de la charge de la preuve en matière d’obligation, puis distinguez acte et fait juridiques.",
+          "points": 3,
+          "correction": "Celui qui réclame l’exécution d’une obligation doit la prouver ; celui qui se prétend libéré doit justifier le paiement ou le fait ayant éteint l’obligation. Un acte juridique est une manifestation de volonté destinée à produire des effets de droit ; un fait juridique est un événement ou agissement auquel la loi attache de tels effets indépendamment de cette intention.",
+          "criteria": [
+            "Principe et libération : 1 point.",
+            "Acte juridique défini : 1 point.",
+            "Fait juridique défini : 1 point."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "premiere-economie",
+    "level": "premiere",
+    "subject": "Économie",
+    "summary": "Revenus, redistribution, consommation et épargne.",
+    "duration": 60,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "p1-eco-t3::3",
+        "title": "Le revenu disponible",
+        "subject": "Économie",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-eco-t3::4",
+        "title": "Consommer ou épargner",
+        "subject": "Économie",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-eco-t3::5",
+        "title": "Pouvoir d’achat et patrimoine",
+        "subject": "Économie",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-eco-t3::2",
+        "title": "La redistribution et le rôle de l’État",
+        "subject": "Économie",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-eco-t3::1",
+        "title": "Les revenus primaires : du travail, du capital et mixtes",
+        "subject": "Économie",
+        "level": "premiere"
+      }
+    ],
+    "exam": {
+      "title": "Le budget des ménages",
+      "instructions": "Entraînement non officiel de 60 minutes. Les quatre documents et leurs données sont fictifs. Consacrez environ 10 minutes à la lecture, 45 minutes aux réponses et 5 minutes à la relecture. Répondez sur une copie séparée. Les questions 5 et 6 mobilisent vos connaissances sans document. Calculatrice autorisée pour les sujets chiffrés ; les calculs et les unités doivent être présentés. Acceptez toute formulation équivalente justifiée dans le corrigé.",
+      "documents": [
+        {
+          "id": "d1",
+          "title": "Document 1 : Un revenu disponible simplifié (cas fictif)",
+          "text": "Le ménage R reçoit chaque mois 2 800 euros de salaire net de cotisations sociales et 200 euros de revenus de la propriété. Il reçoit 250 euros de prestations sociales et paie 350 euros d’impôts directs. Aucun autre revenu ni prélèvement n’est retenu ici. Pour ce dossier simplifié : revenu disponible = revenus primaires nets de cotisations + prestations sociales - impôts directs."
+        },
+        {
+          "id": "d2",
+          "title": "Document 2 : L’arbitrage mensuel (cas fictif)",
+          "text": "Le revenu disponible mensuel du ménage est de 2 900 euros. Il consacre 2 465 euros à ses dépenses de consommation finale et ne finance pas cette consommation par un emprunt. Le reste du revenu est épargné. L’épargne peut rester disponible sur un compte ou financer un placement ; elle n’est pas nécessairement entièrement investie sur les marchés financiers."
+        },
+        {
+          "id": "d3",
+          "title": "Document 3 : L’évolution des prix et du revenu (cas fictif)",
+          "text": "Entre les années N et N+1, le revenu disponible nominal d’un autre ménage augmente de 4 %. L’indice des prix à la consommation augmente de 5 %. Pour raisonner exactement en indices, on compare le coefficient d’évolution du revenu, 1,04, à celui des prix, 1,05. L’évolution approximative peut se calculer par différence des taux, à condition de signaler qu’il s’agit d’une approximation."
+        },
+        {
+          "id": "d4",
+          "title": "Document 4 : Une mesure de redistribution (cas fictif)",
+          "text": "Une collectivité verse une aide de 120 euros par mois à certains ménages modestes, sous condition de ressources. Cette prestation est financée par les prélèvements obligatoires. Elle augmente les ressources disponibles des bénéficiaires mais son effet sur les inégalités dépend du ciblage, du financement et des autres revenus. Elle ne constitue pas la rémunération d’un facteur de production."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "chapterId": "p1-eco-t3::3",
+          "documentIds": [
+            "d1"
+          ],
+          "enonce": "Calculez le revenu primaire retenu puis le revenu disponible. Expliquez le passage de l’un à l’autre.",
+          "points": 3,
+          "correction": "Revenu primaire retenu = 2 800 + 200 = 3 000 euros. Revenu disponible = 3 000 + 250 - 350 = 2 900 euros. Les prestations s’ajoutent et les impôts directs se retranchent. Les cotisations sociales sont déjà déduites du salaire annoncé : ne pas les retirer une seconde fois.",
+          "criteria": [
+            "Revenu primaire de 3 000 euros : 1 point.",
+            "Calcul de 2 900 euros : 1 point.",
+            "Traitement des transferts et absence de double déduction : 1 point."
+          ]
+        },
+        {
+          "id": "q2",
+          "chapterId": "p1-eco-t3::4",
+          "documentIds": [
+            "d2"
+          ],
+          "enonce": "Calculez l’épargne et son taux dans le revenu disponible. Interprétez le résultat.",
+          "points": 3,
+          "correction": "Épargne = 2 900 - 2 465 = 435 euros. Taux d’épargne = 435 / 2 900 × 100 = 15 %. Sur 100 euros de revenu disponible, 15 ne sont pas consommés pendant le mois considéré. Le taux ne se calcule pas en divisant l’épargne par les seules dépenses de consommation.",
+          "criteria": [
+            "Épargne de 435 euros : 1 point.",
+            "Formule et taux de 15 % : 1 point.",
+            "Interprétation avec le bon dénominateur : 1 point."
+          ]
+        },
+        {
+          "id": "q3",
+          "chapterId": "p1-eco-t3::5",
+          "documentIds": [
+            "d3"
+          ],
+          "enonce": "Le pouvoir d’achat augmente-t-il ? Calculez son évolution exacte et donnez l’approximation par différence.",
+          "points": 4,
+          "correction": "Coefficient réel = 1,04 / 1,05 = 0,990476 environ. L’évolution du pouvoir d’achat est donc d’environ -0,95 %. L’approximation donne 4 % - 5 % = -1 %. Le revenu nominal augmente mais moins vite que les prix : le ménage peut acheter légèrement moins de biens et services avec ce revenu.",
+          "criteria": [
+            "Comparaison des coefficients : 1 point.",
+            "Résultat exact arrondi cohérent : 1 point.",
+            "Approximation présentée comme telle : 1 point.",
+            "Interprétation de la baisse : 1 point."
+          ]
+        },
+        {
+          "id": "q4",
+          "chapterId": "p1-eco-t3::2",
+          "documentIds": [
+            "d4"
+          ],
+          "enonce": "Caractérisez cette aide et expliquez son rôle redistributif. Présentez une limite à la conclusion selon laquelle elle supprime les inégalités.",
+          "points": 4,
+          "correction": "C’est une prestation sociale sous condition de ressources, et non un revenu primaire du travail ou du capital. Les prélèvements financent un transfert qui accroît les ressources de ménages ciblés et peut réduire les écarts de revenus disponibles. Une aide isolée ne supprime pas les inégalités : les montants, le financement, le non-recours et les écarts initiaux comptent.",
+          "criteria": [
+            "Prestation sociale identifiée : 1 point.",
+            "Distinction d’un revenu primaire : 1 point.",
+            "Mécanisme redistributif expliqué : 1 point.",
+            "Limite pertinente : 1 point."
+          ]
+        },
+        {
+          "id": "q5",
+          "chapterId": "p1-eco-t3::1",
+          "documentIds": [],
+          "enonce": "Distinguez revenus du travail, revenus du capital et revenus mixtes. Donnez un exemple de chaque.",
+          "points": 3,
+          "correction": "Les revenus du travail rémunèrent l’activité professionnelle, par exemple un salaire. Les revenus du capital rémunèrent la détention d’un patrimoine, par exemple intérêts ou loyers. Un revenu mixte rémunère à la fois le travail et le capital d’un indépendant, par exemple le revenu d’un artisan à son compte.",
+          "criteria": [
+            "Travail et exemple : 1 point.",
+            "Capital et exemple : 1 point.",
+            "Mixte et exemple : 1 point."
+          ]
+        },
+        {
+          "id": "q6",
+          "chapterId": "p1-eco-t3::4",
+          "documentIds": [],
+          "enonce": "Définissez l’épargne et expliquez deux motifs d’épargne distincts.",
+          "points": 3,
+          "correction": "L’épargne est la partie du revenu disponible non consacrée à la consommation finale pendant la période. Elle peut répondre à un motif de précaution face à un imprévu, à la préparation d’un projet comme l’achat d’un logement, ou à la constitution de ressources pour la retraite. Deux motifs expliqués sont attendus.",
+          "criteria": [
+            "Définition par rapport au revenu disponible : 1 point.",
+            "Premier motif expliqué : 1 point.",
+            "Second motif distinct expliqué : 1 point."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "terminale-management",
+    "level": "terminale",
+    "subject": "Management",
+    "summary": "Diagnostic, différenciation, ressources et RSE.",
+    "duration": 60,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "mgmt-t2::4",
+        "title": "Les choix stratégiques : spécialisation ou diversification, intégration ou externalisation",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "mgmt-t2::3",
+        "title": "Le diagnostic stratégique : SWOT et PESTEL",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "mgmt-t1::3",
+        "title": "La compétitivité : prix ou hors-prix, coûts ou différenciation",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "mgmt-t1::0",
+        "title": "La création de valeur : valeur ajoutée, chaîne de valeur et performance globale",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "mgmt-t1::1",
+        "title": "Ressources, compétences distinctives et avantage concurrentiel",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "mgmt-t3::0",
+        "title": "La RSE au cœur de la stratégie : performance globale et parties prenantes",
+        "subject": "Management",
+        "level": "terminale"
+      }
+    ],
+    "exam": {
+      "title": "Nova : stratégie et performance",
+      "instructions": "Entraînement non officiel de 60 minutes. Les quatre documents et leurs données sont fictifs. Consacrez environ 10 minutes à la lecture, 45 minutes aux réponses et 5 minutes à la relecture. Répondez sur une copie séparée. Les questions 5 et 6 mobilisent vos connaissances sans document. Calculatrice autorisée pour les sujets chiffrés ; les calculs et les unités doivent être présentés. Acceptez toute formulation équivalente justifiée dans le corrigé.",
+      "documents": [
+        {
+          "id": "d1",
+          "title": "Document 1 : La situation de Nova (cas fictif)",
+          "text": "Nova fabrique des gourdes réparables dans un unique atelier français. Son activité reste centrée sur les contenants réutilisables. Elle réalise les étapes de conception et d’assemblage ; une entreprise partenaire livre certains composants. La direction veut conserver une qualité élevée tout en augmentant ses ventes. Elle envisage d’élargir sa distribution, sans se lancer dans un autre métier."
+        },
+        {
+          "id": "d2",
+          "title": "Document 2 : Un diagnostic à construire (cas fictif)",
+          "text": "Nova possède un brevet sur un bouchon réparable, des techniciens expérimentés et une bonne réputation auprès des magasins spécialisés. Sa capacité de production est limitée et sa trésorerie faible. La demande de produits réparables progresse ; une chaîne de magasins propose un partenariat commercial. Des imitations moins chères apparaissent et le coût de certains composants augmente."
+        },
+        {
+          "id": "d3",
+          "title": "Document 3 : La proposition de valeur (cas fictif)",
+          "text": "Une gourde Nova est vendue 32 euros, contre environ 18 euros pour une gourde standard du marché étudié. Nova propose un bouchon remplaçable, des pièces disponibles séparément et un service de réparation. Les clients interrogés valorisent la durée d’usage, mais certains hésitent face au prix. Nova ne prétend donc pas être l’offre la moins chère et doit rendre sa différence crédible."
+        },
+        {
+          "id": "d4",
+          "title": "Document 4 : Des performances contrastées (cas fictif)",
+          "text": "Entre N-1 et N, le chiffre d’affaires de Nova passe de 500 000 à 550 000 euros ; les retours clients baissent de 5 % à 3 %. La consommation électrique par unité produite diminue de 12 %. En revanche, le taux de fréquence des accidents du travail augmente et plusieurs salariés signalent une surcharge. Les données ne permettent pas de conclure sur la rentabilité, faute d’information sur les coûts."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "chapterId": "mgmt-t2::4",
+          "documentIds": [
+            "d1"
+          ],
+          "enonce": "Nova se spécialise-t-elle ou se diversifie-t-elle ? Distinguez cette décision du choix de confier des composants à un partenaire.",
+          "points": 3,
+          "correction": "Nova reste spécialisée dans les contenants réutilisables : élargir les canaux de distribution ne suffit pas à caractériser une diversification dans un nouveau métier. Le recours au partenaire relève de l’externalisation de certaines activités. La spécialisation décrit le périmètre d’activité ; l’externalisation concerne la répartition de la réalisation entre l’entreprise et des tiers.",
+          "criteria": [
+            "Spécialisation justifiée : 1 point.",
+            "Externalisation identifiée : 1 point.",
+            "Deux dimensions distinguées : 1 point."
+          ]
+        },
+        {
+          "id": "q2",
+          "chapterId": "mgmt-t2::3",
+          "documentIds": [
+            "d2"
+          ],
+          "enonce": "Construisez une synthèse SWOT avec deux éléments dans chaque catégorie.",
+          "points": 3,
+          "correction": "Forces : brevet, expérience technique ou réputation. Faiblesses : capacité limitée et faible trésorerie. Opportunités : demande croissante de réparabilité et partenariat proposé. Menaces : imitations à bas prix et renchérissement des composants. Les éléments internes ne doivent pas être confondus avec l’environnement externe.",
+          "criteria": [
+            "Forces et faiblesses correctement classées : 1 point.",
+            "Opportunités et menaces correctement classées : 1 point.",
+            "Deux éléments par catégorie et distinction interne/externe : 1 point."
+          ]
+        },
+        {
+          "id": "q3",
+          "chapterId": "mgmt-t1::3",
+          "documentIds": [
+            "d3"
+          ],
+          "enonce": "Caractérisez l’avantage concurrentiel recherché. Présentez deux conditions pour qu’il soit défendable.",
+          "points": 4,
+          "correction": "Nova recherche une compétitivité hors-prix par différenciation : réparabilité, pièces détachées et service justifient un prix supérieur. La différence doit être valorisée par la clientèle et effectivement réalisée. Elle doit aussi être difficile à imiter ou régulièrement renouvelée, et rester économiquement soutenable. Un prix élevé n’est pas, à lui seul, une preuve d’avantage concurrentiel.",
+          "criteria": [
+            "Différenciation hors-prix identifiée : 1 point.",
+            "Deux caractéristiques du cas mobilisées : 1 point.",
+            "Valeur reconnue par le client : 1 point.",
+            "Protection ou soutenabilité argumentée : 1 point."
+          ]
+        },
+        {
+          "id": "q4",
+          "chapterId": "mgmt-t1::0",
+          "documentIds": [
+            "d4"
+          ],
+          "enonce": "Analysez la performance globale de Nova. Calculez l’évolution du chiffre d’affaires et discutez les limites des informations.",
+          "points": 4,
+          "correction": "Évolution du CA = (550 000 - 500 000) / 500 000 × 100 = 10 %. Les ventes et la qualité perçue évoluent favorablement ; l’électricité par unité diminue. Les accidents et la surcharge sont des signaux sociaux défavorables. La performance est contrastée. La hausse du CA ne suffit pas à prouver une hausse du bénéfice : les coûts ne sont pas connus.",
+          "criteria": [
+            "Calcul de 10 % : 1 point.",
+            "Lecture commerciale et environnementale : 1 point.",
+            "Lecture sociale : 1 point.",
+            "Limite sur rentabilité et conclusion nuancée : 1 point."
+          ]
+        },
+        {
+          "id": "q5",
+          "chapterId": "mgmt-t1::1",
+          "documentIds": [],
+          "enonce": "Distinguez ressource et compétence. Expliquez leur rôle dans l’avantage concurrentiel.",
+          "points": 3,
+          "correction": "Une ressource est un moyen détenu ou mobilisé : personnel, équipements, financement, marque ou brevet. Une compétence est une capacité à combiner et utiliser ces moyens pour agir. Des ressources et compétences utiles, rares et difficiles à imiter peuvent soutenir l’avantage concurrentiel, mais leur simple présence ne garantit pas la réussite.",
+          "criteria": [
+            "Ressource définie : 1 point.",
+            "Compétence définie : 1 point.",
+            "Lien argumenté avec la concurrence : 1 point."
+          ]
+        },
+        {
+          "id": "q6",
+          "chapterId": "mgmt-t3::0",
+          "documentIds": [],
+          "enonce": "Définissez la RSE et expliquez pourquoi une action environnementale ne suffit pas à la résumer.",
+          "points": 3,
+          "correction": "La responsabilité sociétale des entreprises intègre les enjeux sociaux, environnementaux et économiques dans les activités et les relations avec les parties prenantes. Réduire une pollution est utile mais ne dit pas tout des conditions de travail, de l’éthique ou des relations avec les partenaires. Une démarche cohérente doit prendre en compte plusieurs dimensions et les éventuels arbitrages.",
+          "criteria": [
+            "Définition : 1 point.",
+            "Dimension sociale ou parties prenantes : 1 point.",
+            "Argument de cohérence et limites : 1 point."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "terminale-droit",
+    "level": "terminale",
+    "subject": "Droit",
+    "summary": "Contrat, inexécution et responsabilité civile.",
+    "duration": 60,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "droit-t5::0",
+        "title": "La formation du contrat : offre, acceptation et force obligatoire",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "droit-t5::7",
+        "title": "Force obligatoire, effet relatif et sanctions de l’inexécution",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "droit-t6::7",
+        "title": "Responsabilité contractuelle ou délictuelle : un contrat lie-t-il les parties ?",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "droit-t6::4",
+        "title": "Les conditions de la responsabilité délictuelle : fait générateur, dommage, causalité",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "droit-t5::5",
+        "title": "Les conditions de validité : consentement, capacité, contenu licite et certain",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "droit-t6::3",
+        "title": "Responsabilité civile et responsabilité pénale : réparer ou punir",
+        "subject": "Droit",
+        "level": "terminale"
+      }
+    ],
+    "exam": {
+      "title": "Une commande non livrée",
+      "instructions": "Entraînement non officiel de 60 minutes. Les quatre documents et leurs données sont fictifs. Consacrez environ 10 minutes à la lecture, 45 minutes aux réponses et 5 minutes à la relecture. Répondez sur une copie séparée. Les questions 5 et 6 mobilisent vos connaissances sans document. Calculatrice autorisée pour les sujets chiffrés ; les calculs et les unités doivent être présentés. Acceptez toute formulation équivalente justifiée dans le corrigé.",
+      "documents": [
+        {
+          "id": "d1",
+          "title": "Document 1 : Une vente entre professionnels (cas fictif)",
+          "text": "La société Café du Parc commande à EquipPro une machine pour 3 000 euros hors taxes. Les parties ont accepté par écrit les caractéristiques et une livraison au 2 juin. Café du Parc paie le prix. Le 15 juin, EquipPro reconnaît par courriel que la machine n’a pas été livrée, faute d’organisation interne. Aucun événement de force majeure n’est invoqué. Les parties ont la capacité de contracter et leur consentement n’est pas contesté."
+        },
+        {
+          "id": "d2",
+          "title": "Document 2 : Les règles utiles (cas fictif)",
+          "text": "Règles de droit reformulées pour cet entraînement : les contrats légalement formés obligent ceux qui les ont conclus. Une partie qui subit l’inexécution peut, selon les conditions prévues par le Code civil, demander notamment l’exécution en nature, une réduction du prix, la résolution ou la réparation des conséquences. Les sanctions compatibles peuvent se cumuler ; la réparation suppose notamment un préjudice causalement lié. Références de cours : articles 1103, 1217 et 1231-1 du Code civil."
+        },
+        {
+          "id": "d3",
+          "title": "Document 3 : Un préjudice documenté (cas fictif)",
+          "text": "Après une mise en demeure restée sans effet, Café du Parc loue une machine de remplacement pendant dix jours pour 250 euros. La facture établit que cette location répond au retard de livraison. La société réclame aussi 5 000 euros au titre d’une perte de clientèle, mais ne produit aucun élément permettant d’en établir l’existence ou le montant. On ne vous demande pas de fixer une décision de justice."
+        },
+        {
+          "id": "d4",
+          "title": "Document 4 : Un autre événement, sans contrat (cas fictif)",
+          "text": "Lors d’une rencontre entre voisins, Raphaël renverse par négligence sa tasse de café sur l’ordinateur de Léa. Aucun contrat ne lie ces deux personnes pour cet événement. Raphaël reconnaît le geste imprudent et un témoin confirme que le liquide a endommagé l’ordinateur. Un devis de remise en état s’élève à 800 euros. Le sujet porte sur la responsabilité du fait personnel au titre de l’article 1240 du Code civil ; aucun fait ne permet de retenir un cas de force majeure ou une faute de Léa."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "chapterId": "droit-t5::0",
+          "documentIds": [
+            "d1"
+          ],
+          "enonce": "Identifiez les parties, leurs obligations principales et les éléments établissant la formation du contrat.",
+          "points": 3,
+          "correction": "Café du Parc est l’acheteur et EquipPro le vendeur. L’acheteur doit payer le prix et le vendeur délivrer la machine convenue. L’accord écrit sur la machine, ses caractéristiques, le prix et la livraison traduit la rencontre de l’offre et de l’acceptation. La capacité et le consentement ne sont pas contestés dans les faits : il n’y a pas lieu d’inventer un vice.",
+          "criteria": [
+            "Parties qualifiées : 1 point.",
+            "Obligations réciproques : 1 point.",
+            "Accord et formation reliés aux faits : 1 point."
+          ]
+        },
+        {
+          "id": "q2",
+          "chapterId": "droit-t5::7",
+          "documentIds": [
+            "d1",
+            "d2"
+          ],
+          "enonce": "Caractérisez l’inexécution et présentez deux sanctions juridiquement envisageables, sans affirmer leur automaticité.",
+          "points": 3,
+          "correction": "La machine n’est pas délivrée à la date convenue alors que le prix a été payé : c’est une inexécution de l’obligation de délivrance. L’acheteur peut notamment demander l’exécution en nature si ses conditions sont remplies, ou envisager la résolution selon les conditions légales, ainsi qu’une réparation d’un préjudice établi. Le choix et le cumul ne sont pas automatiques : il faut respecter les conditions propres à chaque sanction.",
+          "criteria": [
+            "Inexécution qualifiée : 1 point.",
+            "Deux sanctions cohérentes : 1 point.",
+            "Conditions et absence d’automaticité : 1 point."
+          ]
+        },
+        {
+          "id": "q3",
+          "chapterId": "droit-t6::7",
+          "documentIds": [
+            "d1",
+            "d3"
+          ],
+          "enonce": "Déterminez le régime de responsabilité pertinent pour le retard et analysez les deux préjudices demandés.",
+          "points": 4,
+          "correction": "L’acheteur et le vendeur sont liés par le contrat : la demande fondée sur le retard relève de la responsabilité contractuelle. L’inexécution est reconnue. Les 250 euros de location constituent une dépense établie et reliée au retard. La perte de clientèle de 5 000 euros n’est pas suffisamment étayée dans ce dossier ; elle ne peut être tenue pour démontrée simplement parce qu’elle est réclamée.",
+          "criteria": [
+            "Régime contractuel justifié : 1 point.",
+            "Manquement établi : 1 point.",
+            "Location : préjudice et causalité : 1 point.",
+            "Réserve justifiée sur les 5 000 euros : 1 point."
+          ]
+        },
+        {
+          "id": "q4",
+          "chapterId": "droit-t6::4",
+          "documentIds": [
+            "d4"
+          ],
+          "enonce": "Analysez la responsabilité du fait personnel en distinguant fait générateur, dommage et lien de causalité.",
+          "points": 4,
+          "correction": "Le geste imprudent de Raphaël constitue le fait fautif. Les dégâts à l’ordinateur sont un dommage matériel ; le devis de 800 euros est un élément d’évaluation. La reconnaissance du geste et le témoignage relient les dégâts au café renversé : lien de causalité. Aucun contrat ne lie Léa à Raphaël pour cet événement, ce qui oriente vers la responsabilité extracontractuelle du fait personnel. La réparation doit correspondre au préjudice établi, pas à une punition.",
+          "criteria": [
+            "Faute : 1 point.",
+            "Dommage caractérisé : 1 point.",
+            "Causalité : 1 point.",
+            "Régime et finalité réparatrice : 1 point."
+          ]
+        },
+        {
+          "id": "q5",
+          "chapterId": "droit-t5::5",
+          "documentIds": [],
+          "enonce": "Énoncez et expliquez les trois conditions générales de validité d’un contrat.",
+          "points": 3,
+          "correction": "Le consentement des parties doit exister et être exempt de vice ; les parties doivent avoir la capacité de contracter ; le contenu doit être licite et certain. La contrepartie et les règles particulières peuvent appeler d’autres contrôles selon les contrats, mais ne remplacent pas ces trois conditions générales de l’article 1128.",
+          "criteria": [
+            "Consentement : 1 point.",
+            "Capacité : 1 point.",
+            "Contenu licite et certain : 1 point."
+          ]
+        },
+        {
+          "id": "q6",
+          "chapterId": "droit-t6::3",
+          "documentIds": [],
+          "enonce": "Distinguez les finalités de la responsabilité civile et de la responsabilité pénale. Peuvent-elles concerner les mêmes faits ?",
+          "points": 3,
+          "correction": "La responsabilité civile vise à réparer un dommage subi par une victime. La responsabilité pénale vise à sanctionner une infraction et à protéger la société. Les mêmes faits peuvent engager les deux lorsque leurs conditions respectives sont réunies ; la réparation versée à une victime ne se confond pas avec l’amende payée au Trésor public.",
+          "criteria": [
+            "Finalité civile : 1 point.",
+            "Finalité pénale : 1 point.",
+            "Cumul possible et distinction des sommes : 1 point."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "terminale-economie",
+    "level": "terminale",
+    "subject": "Économie",
+    "summary": "Mesurer le chômage et discuter les politiques économiques.",
+    "duration": 60,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "eco-t7::0",
+        "title": "Le chômage au sens du BIT : taux de chômage et halo",
+        "subject": "Économie",
+        "level": "terminale"
+      },
+      {
+        "id": "eco-t7::4",
+        "title": "Les types de chômage : conjoncturel et structurel",
+        "subject": "Économie",
+        "level": "terminale"
+      },
+      {
+        "id": "eco-t6::6",
+        "title": "Les politiques économiques : budgétaire et monétaire, conjoncturelles et structurelles",
+        "subject": "Économie",
+        "level": "terminale"
+      },
+      {
+        "id": "eco-t6::9",
+        "title": "La politique monétaire de la BCE : taux directeurs et stabilité des prix",
+        "subject": "Économie",
+        "level": "terminale"
+      },
+      {
+        "id": "eco-t6::2",
+        "title": "Déficit et dette publics : le coût de l’intervention",
+        "subject": "Économie",
+        "level": "terminale"
+      }
+    ],
+    "exam": {
+      "title": "Emploi et politiques publiques",
+      "instructions": "Entraînement non officiel de 60 minutes. Les quatre documents et leurs données sont fictifs. Consacrez environ 10 minutes à la lecture, 45 minutes aux réponses et 5 minutes à la relecture. Répondez sur une copie séparée. Les questions 5 et 6 mobilisent vos connaissances sans document. Calculatrice autorisée pour les sujets chiffrés ; les calculs et les unités doivent être présentés. Acceptez toute formulation équivalente justifiée dans le corrigé.",
+      "documents": [
+        {
+          "id": "d1",
+          "title": "Document 1 : Une population, une période (cas fictif)",
+          "text": "Dans un territoire fictif, 96 000 personnes ont un emploi et 8 000 remplissent les critères de chômage du BIT. Parmi les personnes sans emploi, 4 000 autres souhaitent travailler mais ne sont pas disponibles dans les deux semaines ou n’ont pas effectué de recherche active récente. Elles ne sont pas incluses dans les 8 000 chômeurs BIT. Pour l’exercice, ces 4 000 personnes relèvent du halo autour du chômage."
+        },
+        {
+          "id": "d2",
+          "title": "Document 2 : Deux situations de chômage (cas fictif)",
+          "text": "Une usine réduit temporairement ses commandes à la suite d’un recul de la demande. Plusieurs salariés perdent leur emploi alors que leurs qualifications restent recherchées lorsque l’activité repart. Dans un autre bassin, des postes de maintenance numérique restent durablement vacants car les candidats disponibles ne possèdent pas les compétences attendues. Une formation est nécessaire pour rapprocher ces profils des postes."
+        },
+        {
+          "id": "d3",
+          "title": "Document 3 : Un programme d’investissement (cas fictif)",
+          "text": "Le gouvernement d’un pays fictif augmente de 1 milliard d’euros ses dépenses de rénovation d’écoles sans relever immédiatement les impôts. Les entreprises de bâtiment reçoivent davantage de commandes et embauchent si leurs capacités le permettent. Le déficit public peut augmenter à court terme ; la dette dépend aussi de son financement et des autres opérations. Aucun chiffre de multiplicateur n’est fourni."
+        },
+        {
+          "id": "d4",
+          "title": "Document 4 : Des taux directeurs plus élevés (cas fictif)",
+          "text": "Dans une union monétaire fictive, la banque centrale relève ses taux directeurs pour freiner une inflation élevée. Les banques rendent certains crédits plus coûteux ; des entreprises reportent des investissements et des ménages reportent des achats à crédit. La baisse de la demande peut atténuer les pressions sur les prix, avec un effet possible sur l’activité. Le mécanisme ne garantit pas un résultat immédiat."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "chapterId": "eco-t7::0",
+          "documentIds": [
+            "d1"
+          ],
+          "enonce": "Calculez la population active puis le taux de chômage BIT. Pourquoi les 4 000 autres personnes ne sont-elles pas incluses dans ce taux ?",
+          "points": 3,
+          "correction": "Population active = 96 000 personnes en emploi + 8 000 chômeurs BIT = 104 000. Taux de chômage = 8 000 / 104 000 × 100 ≈ 7,69 %. Les 4 000 personnes ne remplissent pas toutes les conditions BIT ; elles sont inactives au sens de cette mesure et ne font pas partie de ce dénominateur. Le halo montre une situation proche du chômage mais différente statistiquement.",
+          "criteria": [
+            "Population active : 1 point.",
+            "Formule et taux arrondi cohérent : 1 point.",
+            "Traitement du halo : 1 point."
+          ]
+        },
+        {
+          "id": "q2",
+          "chapterId": "eco-t7::4",
+          "documentIds": [
+            "d2"
+          ],
+          "enonce": "Distinguez les deux types de chômage et proposez une réponse adaptée à chacun, en précisant une limite.",
+          "points": 3,
+          "correction": "Le recul temporaire de la demande relève du chômage conjoncturel : une politique soutenant l’activité peut contribuer à le réduire. L’inadéquation durable des compétences relève du chômage structurel : formation et accompagnement de la mobilité peuvent aider. La relance ne crée pas immédiatement les compétences manquantes ; la formation ne suffit pas à rétablir une demande globale faible.",
+          "criteria": [
+            "Deux types correctement identifiés : 1 point.",
+            "Deux réponses adaptées : 1 point.",
+            "Limite argumentée : 1 point."
+          ]
+        },
+        {
+          "id": "q3",
+          "chapterId": "eco-t6::6",
+          "documentIds": [
+            "d3"
+          ],
+          "enonce": "Caractérisez l’orientation de cette politique budgétaire. Expliquez un mécanisme sur l’emploi et deux limites possibles.",
+          "points": 4,
+          "correction": "L’augmentation des dépenses publiques est une orientation budgétaire expansionniste. Les commandes peuvent accroître la production, les revenus puis l’emploi si les entreprises répondent à la demande. Limites possibles : augmentation du déficit, contraintes de financement, importations qui réduisent l’effet domestique, capacités de production ou de recrutement insuffisantes. On ne peut pas calculer précisément le nombre d’emplois sans données supplémentaires.",
+          "criteria": [
+            "Politique budgétaire et orientation : 1 point.",
+            "Chaîne causale jusqu’à l’emploi : 1 point.",
+            "Première limite expliquée : 1 point.",
+            "Seconde limite ou impossibilité de chiffrer justifiée : 1 point."
+          ]
+        },
+        {
+          "id": "q4",
+          "chapterId": "eco-t6::9",
+          "documentIds": [
+            "d4"
+          ],
+          "enonce": "Expliquez la transmission de la hausse des taux à la demande et aux prix. Présentez un arbitrage pour l’activité.",
+          "points": 4,
+          "correction": "La hausse des taux directeurs tend à renchérir le financement bancaire et le crédit. Des dépenses de consommation et d’investissement sont reportées. Une demande moins dynamique peut réduire les tensions inflationnistes. Elle peut aussi ralentir la production et l’emploi. La transmission prend du temps et dépend notamment des banques et de l’origine de l’inflation.",
+          "criteria": [
+            "Taux directeurs et crédit reliés : 1 point.",
+            "Effet sur consommation/investissement : 1 point.",
+            "Effet possible sur les prix : 1 point.",
+            "Arbitrage et limite : 1 point."
+          ]
+        },
+        {
+          "id": "q5",
+          "chapterId": "eco-t7::0",
+          "documentIds": [],
+          "enonce": "Énoncez les trois critères du chômage au sens du BIT.",
+          "points": 3,
+          "correction": "Pour les personnes en âge de travailler au sens de la statistique considérée : ne pas avoir d’emploi pendant la semaine de référence, être disponible pour travailler dans les deux semaines et avoir recherché activement un emploi au cours des quatre dernières semaines, ou avoir trouvé un emploi commençant dans moins de trois mois. Les trois conditions principales sont attendues ; ne pas réduire le chômage au simple souhait de travailler.",
+          "criteria": [
+            "Absence d’emploi sur la période de référence : 1 point.",
+            "Disponibilité : 1 point.",
+            "Recherche active ou emploi trouvé à début proche : 1 point."
+          ]
+        },
+        {
+          "id": "q6",
+          "chapterId": "eco-t6::2",
+          "documentIds": [],
+          "enonce": "Distinguez déficit public et dette publique. Pourquoi ne mesure-t-on pas la même chose ?",
+          "points": 3,
+          "correction": "Le déficit public est un flux sur une période : les dépenses publiques dépassent les recettes selon les conventions de comptabilité publique. La dette publique est un stock d’engagements financiers à une date. Des déficits peuvent alimenter la dette lorsqu’ils sont financés par emprunt, mais les deux grandeurs ne sont pas identiques et les variations de dette peuvent aussi dépendre d’autres ajustements.",
+          "criteria": [
+            "Déficit comme flux : 1 point.",
+            "Dette comme stock : 1 point.",
+            "Lien nuancé entre les deux : 1 point."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "terminale-gf",
+    "level": "terminale",
+    "subject": "Gestion et finance",
+    "summary": "TVA, amortissement, équilibre financier et rentabilité.",
+    "duration": 60,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "gf-t1::0",
+        "title": "La TVA : collectée, déductible, à décaisser",
+        "subject": "Gestion et finance",
+        "level": "terminale"
+      },
+      {
+        "id": "gf-t1::2",
+        "title": "Immobilisations, amortissement et valeur nette comptable",
+        "subject": "Gestion et finance",
+        "level": "terminale"
+      },
+      {
+        "id": "gf-t2::1",
+        "title": "L’équilibre financier : FRNG, BFR et trésorerie nette",
+        "subject": "Gestion et finance",
+        "level": "terminale"
+      },
+      {
+        "id": "gf-t3::0",
+        "title": "La marge sur coût variable et le seuil de rentabilité",
+        "subject": "Gestion et finance",
+        "level": "terminale"
+      }
+    ],
+    "exam": {
+      "title": "ÉquiPro : calculer et décider",
+      "instructions": "Entraînement non officiel de 60 minutes. Les quatre documents et leurs données sont fictifs. Consacrez environ 10 minutes à la lecture, 45 minutes aux réponses et 5 minutes à la relecture. Répondez sur une copie séparée. Les questions 5 et 6 mobilisent vos connaissances sans document. Calculatrice autorisée pour les sujets chiffrés ; les calculs et les unités doivent être présentés. Acceptez toute formulation équivalente justifiée dans le corrigé.",
+      "documents": [
+        {
+          "id": "d1",
+          "title": "Document 1 : La déclaration de TVA (cas fictif)",
+          "text": "En avril, ÉquiPro réalise uniquement des ventes de biens livrés sur la période, au taux normal de TVA de 20 %, pour 24 000 euros hors taxes. La TVA déductible du mois, déjà vérifiée comme déductible, est de 2 800 euros. Il n’y a ni crédit antérieur ni autre opération. Pour cet exercice, toutes les conditions d’exigibilité et de déduction sont remplies : aucun calcul d’encaissement n’est nécessaire."
+        },
+        {
+          "id": "d2",
+          "title": "Document 2 : Une machine amortissable (cas fictif)",
+          "text": "Une machine est achetée et mise en service le 1er janvier N pour un coût d’acquisition de 12 000 euros hors taxes récupérables. Sa durée d’utilisation est estimée à cinq ans et sa valeur résiduelle à zéro. L’amortissement est linéaire ; il n’existe ni dépréciation ni changement de plan. On utilise des exercices comptables coïncidant avec l’année civile."
+        },
+        {
+          "id": "d3",
+          "title": "Document 3 : Le bilan fonctionnel simplifié (cas fictif)",
+          "text": "À la date étudiée, les ressources stables sont de 150 000 euros et les emplois stables de 110 000 euros. L’actif circulant hors trésorerie est de 60 000 euros ; les dettes circulantes hors trésorerie sont de 35 000 euros. Le BFR hors exploitation est nul. La trésorerie active est de 18 000 euros et la trésorerie passive de 3 000 euros. Les valeurs sont déjà classées : il n’y a pas de retraitement à effectuer."
+        },
+        {
+          "id": "d4",
+          "title": "Document 4 : L’activité prévisionnelle (cas fictif)",
+          "text": "Le chiffre d’affaires prévisionnel est de 100 000 euros hors taxes. Les charges variables représentent 60 % du chiffre d’affaires ; les charges fixes sont de 30 000 euros. Le taux de charges variables et les charges fixes sont supposés constants dans la zone d’activité étudiée. Toutes les données concernent la même période ; aucun objectif de résultat n’est ajouté au seuil de rentabilité."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "chapterId": "gf-t1::0",
+          "documentIds": [
+            "d1"
+          ],
+          "enonce": "Calculez la TVA collectée et la TVA à décaisser. Distinguez le prix TTC des ventes du montant versé à l’État.",
+          "points": 3,
+          "correction": "TVA collectée = 24 000 × 20 % = 4 800 euros. TVA à décaisser = 4 800 - 2 800 = 2 000 euros. Les ventes TTC représentent 24 000 + 4 800 = 28 800 euros ; ce total n’est pas la TVA versée à l’État, puisque la taxe déductible vient réduire la taxe collectée.",
+          "criteria": [
+            "TVA collectée : 1 point.",
+            "TVA à décaisser : 1 point.",
+            "TTC et distinction de la taxe : 1 point."
+          ]
+        },
+        {
+          "id": "q2",
+          "chapterId": "gf-t1::2",
+          "documentIds": [
+            "d2"
+          ],
+          "enonce": "Calculez la dotation annuelle puis la valeur nette comptable au 31 décembre N+1.",
+          "points": 3,
+          "correction": "Base amortissable = 12 000 - 0 = 12 000 euros. Dotation annuelle linéaire = 12 000 / 5 = 2 400 euros, sans prorata puisque la mise en service intervient le 1er janvier. Après deux exercices, amortissements cumulés = 4 800 euros. VNC = 12 000 - 4 800 = 7 200 euros au 31 décembre N+1.",
+          "criteria": [
+            "Base et dotation de 2 400 euros : 1 point.",
+            "Deux années et cumul de 4 800 euros : 1 point.",
+            "VNC de 7 200 euros : 1 point."
+          ]
+        },
+        {
+          "id": "q3",
+          "chapterId": "gf-t2::1",
+          "documentIds": [
+            "d3"
+          ],
+          "enonce": "Calculez le FRNG, le BFR et la trésorerie nette, puis vérifiez cette dernière à partir des postes de trésorerie.",
+          "points": 4,
+          "correction": "FRNG = 150 000 - 110 000 = 40 000 euros. BFR = 60 000 - 35 000 = 25 000 euros. Trésorerie nette = FRNG - BFR = 15 000 euros. Vérification : trésorerie active 18 000 - trésorerie passive 3 000 = 15 000 euros. Le FRNG couvre ici le besoin de financement du cycle et laisse une trésorerie nette positive.",
+          "criteria": [
+            "FRNG : 1 point.",
+            "BFR : 1 point.",
+            "Trésorerie par différence : 1 point.",
+            "Vérification et interprétation : 1 point."
+          ]
+        },
+        {
+          "id": "q4",
+          "chapterId": "gf-t3::0",
+          "documentIds": [
+            "d4"
+          ],
+          "enonce": "Calculez la marge sur coût variable, son taux, le seuil de rentabilité et le résultat prévu.",
+          "points": 4,
+          "correction": "Charges variables = 100 000 × 60 % = 60 000 euros. MCV = 100 000 - 60 000 = 40 000 euros ; taux de MCV = 40 %. Seuil de rentabilité = 30 000 / 0,40 = 75 000 euros de CA HT. Résultat prévu = MCV - charges fixes = 10 000 euros. Le seuil correspond à un résultat nul, et non au CA qui maximise le bénéfice.",
+          "criteria": [
+            "MCV de 40 000 euros : 1 point.",
+            "Taux de MCV de 40 % : 1 point.",
+            "Seuil de 75 000 euros : 1 point.",
+            "Résultat de 10 000 euros et interprétation : 1 point."
+          ]
+        },
+        {
+          "id": "q5",
+          "chapterId": "gf-t1::0",
+          "documentIds": [],
+          "enonce": "Distinguez TVA collectée, TVA déductible et crédit de TVA.",
+          "points": 3,
+          "correction": "La TVA collectée est facturée aux clients pour le compte de l’État ; la TVA déductible sur les achats peut être récupérée si les conditions sont remplies. Si la TVA déductible dépasse la TVA collectée sur la période, la différence constitue un crédit de TVA, à reporter ou rembourser selon les règles applicables, et non une TVA négative à payer.",
+          "criteria": [
+            "Collectée : 1 point.",
+            "Déductible et conditions : 1 point.",
+            "Crédit correctement expliqué : 1 point."
+          ]
+        },
+        {
+          "id": "q6",
+          "chapterId": "gf-t2::1",
+          "documentIds": [],
+          "enonce": "Interprétez un FRNG positif. Pourquoi ne suffit-il pas à garantir une trésorerie nette positive ?",
+          "points": 3,
+          "correction": "Un FRNG positif indique que les ressources stables excèdent les emplois stables et peuvent financer une partie du cycle circulant. La trésorerie nette dépend aussi du BFR : TN = FRNG - BFR. Si le besoin dépasse le FRNG, la trésorerie est négative malgré un FRNG positif. Exemple : FRNG 20 000, BFR 30 000, TN -10 000 euros.",
+          "criteria": [
+            "Sens du FRNG positif : 1 point.",
+            "Relation avec le BFR : 1 point.",
+            "Conclusion ou exemple cohérent : 1 point."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "premiere-droit-economie",
+    "level": "premiere",
+    "subject": "Droit et économie",
+    "summary": "Litige, preuve, revenus et épargne.",
+    "duration": 120,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "p1-droit-t2::0",
+        "title": "Le litige : demandeur, défendeur et prétentions",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-droit-t2::1",
+        "title": "La preuve : charge, objet et modes",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-droit-t2::4",
+        "title": "Les voies de recours et l’accord amiable",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-droit-t3::2",
+        "title": "Le patrimoine : actif, passif et principes",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-droit-t1::1",
+        "title": "Les caractères de la règle de droit",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-eco-t3::3",
+        "title": "Le revenu disponible",
+        "subject": "Économie",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-eco-t3::4",
+        "title": "Consommer ou épargner",
+        "subject": "Économie",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-eco-t3::5",
+        "title": "Pouvoir d’achat et patrimoine",
+        "subject": "Économie",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-eco-t3::2",
+        "title": "La redistribution et le rôle de l’État",
+        "subject": "Économie",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-eco-t3::1",
+        "title": "Les revenus primaires : du travail, du capital et mixtes",
+        "subject": "Économie",
+        "level": "premiere"
+      }
+    ],
+    "exam": {
+      "title": "Droit et économie : les fondamentaux",
+      "instructions": "Entraînement non officiel de 120 minutes, en deux parties indépendantes de 10 points. Documents et données fictifs. Consacrez environ 60 minutes par partie. Répondez sur copie séparée. Les questions sans document mobilisent vos connaissances. Les critères de chaque partie sont adaptés à son barème de 10 points ; les réponses et les exigences restent identiques aux versions de 60 minutes. Calculatrice autorisée pour les questions chiffrées. Ce sujet ne reproduit pas le format officiel d’une épreuve de quatre heures.",
+      "documents": [
+        {
+          "id": "p1-d1",
+          "title": "Document 1 : Les faits (cas fictif)",
+          "text": "Emma achète à titre privé un appareil photo d’occasion à Hugo pour 450 euros. Hugo encaisse le prix et promet de remettre l’appareil le 8 mai. Le 15 mai, Emma n’a rien reçu. Hugo répond qu’il l’a déjà remis en main propre le 8 mai, ce qu’Emma conteste. Emma réclame le remboursement ; Hugo demande le rejet de cette demande. Le sujet porte sur le litige et les preuves, pas sur les garanties de consommation."
+        },
+        {
+          "id": "p1-d2",
+          "title": "Document 2 : Les pièces conservées (cas fictif)",
+          "text": "Emma possède une conversation dans laquelle Hugo confirme le prix et la date prévue de remise. Elle dispose d’un relevé bancaire attestant le virement de 450 euros. Aucun écrit ne constate la remise effective de l’appareil. Une amie affirme avoir entendu Hugo dire qu’il apporterait le colis plus tard. Chaque pièce doit être discutée : un virement prouve le paiement, pas automatiquement la non-livraison."
+        },
+        {
+          "id": "p1-d3",
+          "title": "Document 3 : Le choix d’une résolution (cas fictif)",
+          "text": "Emma souhaite une solution rapide et peu coûteuse. Hugo accepte de rencontrer un conciliateur de justice. La conciliation est gratuite et recherche un accord amiable ; le conciliateur ne tranche pas comme un juge. Si aucun accord n’aboutit, une action peut relever du tribunal judiciaire, notamment par sa chambre de proximité selon l’organisation locale. Le montant et la nature du litige influencent la procédure."
+        },
+        {
+          "id": "p1-d4",
+          "title": "Document 4 : Le patrimoine d’Emma (cas fictif)",
+          "text": "Pour cet exercice, Emma possède un vélo estimé à 300 euros, 600 euros sur son compte bancaire et une créance de remboursement de 450 euros, dont le bien-fondé reste contesté par Hugo. Elle doit aussi 200 euros à sa sœur. On vous demande de présenter séparément les éléments actifs et passifs déclarés, sans préjuger de la décision du juge sur la créance contestée."
+        },
+        {
+          "id": "p2-d1",
+          "title": "Document 1 : Un revenu disponible simplifié (cas fictif)",
+          "text": "Le ménage R reçoit chaque mois 2 800 euros de salaire net de cotisations sociales et 200 euros de revenus de la propriété. Il reçoit 250 euros de prestations sociales et paie 350 euros d’impôts directs. Aucun autre revenu ni prélèvement n’est retenu ici. Pour ce dossier simplifié : revenu disponible = revenus primaires nets de cotisations + prestations sociales - impôts directs."
+        },
+        {
+          "id": "p2-d2",
+          "title": "Document 2 : L’arbitrage mensuel (cas fictif)",
+          "text": "Le revenu disponible mensuel du ménage est de 2 900 euros. Il consacre 2 465 euros à ses dépenses de consommation finale et ne finance pas cette consommation par un emprunt. Le reste du revenu est épargné. L’épargne peut rester disponible sur un compte ou financer un placement ; elle n’est pas nécessairement entièrement investie sur les marchés financiers."
+        },
+        {
+          "id": "p2-d3",
+          "title": "Document 3 : L’évolution des prix et du revenu (cas fictif)",
+          "text": "Entre les années N et N+1, le revenu disponible nominal d’un autre ménage augmente de 4 %. L’indice des prix à la consommation augmente de 5 %. Pour raisonner exactement en indices, on compare le coefficient d’évolution du revenu, 1,04, à celui des prix, 1,05. L’évolution approximative peut se calculer par différence des taux, à condition de signaler qu’il s’agit d’une approximation."
+        },
+        {
+          "id": "p2-d4",
+          "title": "Document 4 : Une mesure de redistribution (cas fictif)",
+          "text": "Une collectivité verse une aide de 120 euros par mois à certains ménages modestes, sous condition de ressources. Cette prestation est financée par les prélèvements obligatoires. Elle augmente les ressources disponibles des bénéficiaires mais son effet sur les inégalités dépend du ciblage, du financement et des autres revenus. Elle ne constitue pas la rémunération d’un facteur de production."
+        }
+      ],
+      "questions": [
+        {
+          "id": "p1-q1",
+          "chapterId": "p1-droit-t2::0",
+          "documentIds": [
+            "p1-d1"
+          ],
+          "enonce": "Partie 1 : Qualifiez le litige : parties, faits juridiquement utiles et prétentions. Qui serait demandeur si Emma saisissait le juge ?",
+          "points": 1.5,
+          "correction": "Le litige oppose deux personnes physiques, Emma, acheteuse, et Hugo, vendeur. Il concerne une vente payée et une remise contestée. Emma demande le remboursement de 450 euros ; Hugo conteste et demande le rejet. Si Emma introduit l’action, elle est demanderesse et Hugo défendeur ; ces qualités procédurales ne désignent pas la personne qui a raison.",
+          "criteria": [
+            "Parties et faits qualifiés : 0,5 point.",
+            "Prétentions opposées : 0,5 point.",
+            "Demandeur et défendeur correctement identifiés : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q2",
+          "chapterId": "p1-droit-t2::1",
+          "documentIds": [
+            "p1-d2"
+          ],
+          "enonce": "Partie 1 : Présentez deux moyens de preuve et leurs limites. Le relevé bancaire suffit-il à prouver l’absence de remise ?",
+          "points": 1.5,
+          "correction": "La conversation écrite peut étayer les engagements initiaux ; le relevé bancaire établit le paiement ; le témoignage apporte un élément sur les propos rapportés. Le relevé ne démontre pas à lui seul l’absence de remise. Le juge apprécie les éléments produits et leur fiabilité ; il faut distinguer ce que chaque pièce établit réellement.",
+          "criteria": [
+            "Deux moyens de preuve identifiés : 0,5 point.",
+            "Portée et limites correctement discutées : 0,5 point.",
+            "Absence de preuve automatique de la non-remise : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q3",
+          "chapterId": "p1-droit-t2::4",
+          "documentIds": [
+            "p1-d3"
+          ],
+          "enonce": "Partie 1 : Expliquez l’intérêt et les limites de la conciliation. Distinguez le rôle du conciliateur de celui du juge.",
+          "points": 2.0,
+          "correction": "La conciliation vise un accord amiable, avec une démarche gratuite qui peut éviter un procès. Elle est adaptée à la volonté exprimée par les deux personnes. Le conciliateur aide à rechercher une solution mais n’impose pas une décision juridictionnelle. En cas d’échec, un recours au juge reste possible selon les conditions de procédure. Aucun résultat ni délai ne peut être garanti.",
+          "criteria": [
+            "Intérêt relié au cas : 0,5 point.",
+            "Accord amiable expliqué : 0,5 point.",
+            "Différence avec le rôle du juge : 0,5 point.",
+            "Limite et possibilité de recours : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q4",
+          "chapterId": "p1-droit-t3::2",
+          "documentIds": [
+            "p1-d4"
+          ],
+          "enonce": "Partie 1 : Classez les éléments actifs et passifs et calculez leur total déclaré. Pourquoi faut-il signaler le caractère contesté de la créance ?",
+          "points": 2.0,
+          "correction": "Actif déclaré : vélo 300, banque 600 et créance contestée 450, soit 1 350 euros. Passif : dette de 200 euros. Le solde net déclaré est 1 150 euros. La créance est un droit personnel et non un bien corporel ; son existence ou son montant peut dépendre de l’issue du litige. Les 450 euros ne doivent pas être présentés comme une rentrée d’argent déjà certaine.",
+          "criteria": [
+            "Classement actif : 0,5 point.",
+            "Passif et total net : 0,5 point.",
+            "Distinction créance/bien matériel : 0,5 point.",
+            "Réserve sur la créance contestée : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q5",
+          "chapterId": "p1-droit-t1::1",
+          "documentIds": [],
+          "enonce": "Partie 1 : Présentez les caractères général, obligatoire et coercitif de la règle de droit.",
+          "points": 1.5,
+          "correction": "La règle est générale et impersonnelle : elle vise des catégories de situations. Elle est obligatoire pour les personnes auxquelles elle s’applique. Son respect peut être assuré par la puissance publique au moyen de sanctions prévues par le droit. La sanction n’est pas nécessairement une peine de prison ; elle peut notamment prendre la forme de réparation ou de nullité.",
+          "criteria": [
+            "Caractère général expliqué : 0,5 point.",
+            "Caractère obligatoire expliqué : 0,5 point.",
+            "Contrainte publique et sanction expliquées : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q6",
+          "chapterId": "p1-droit-t2::1",
+          "documentIds": [],
+          "enonce": "Partie 1 : Énoncez le principe de la charge de la preuve en matière d’obligation, puis distinguez acte et fait juridiques.",
+          "points": 1.5,
+          "correction": "Celui qui réclame l’exécution d’une obligation doit la prouver ; celui qui se prétend libéré doit justifier le paiement ou le fait ayant éteint l’obligation. Un acte juridique est une manifestation de volonté destinée à produire des effets de droit ; un fait juridique est un événement ou agissement auquel la loi attache de tels effets indépendamment de cette intention.",
+          "criteria": [
+            "Principe et libération : 0,5 point.",
+            "Acte juridique défini : 0,5 point.",
+            "Fait juridique défini : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q1",
+          "chapterId": "p1-eco-t3::3",
+          "documentIds": [
+            "p2-d1"
+          ],
+          "enonce": "Partie 2 : Calculez le revenu primaire retenu puis le revenu disponible. Expliquez le passage de l’un à l’autre.",
+          "points": 1.5,
+          "correction": "Revenu primaire retenu = 2 800 + 200 = 3 000 euros. Revenu disponible = 3 000 + 250 - 350 = 2 900 euros. Les prestations s’ajoutent et les impôts directs se retranchent. Les cotisations sociales sont déjà déduites du salaire annoncé : ne pas les retirer une seconde fois.",
+          "criteria": [
+            "Revenu primaire de 3 000 euros : 0,5 point.",
+            "Calcul de 2 900 euros : 0,5 point.",
+            "Traitement des transferts et absence de double déduction : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q2",
+          "chapterId": "p1-eco-t3::4",
+          "documentIds": [
+            "p2-d2"
+          ],
+          "enonce": "Partie 2 : Calculez l’épargne et son taux dans le revenu disponible. Interprétez le résultat.",
+          "points": 1.5,
+          "correction": "Épargne = 2 900 - 2 465 = 435 euros. Taux d’épargne = 435 / 2 900 × 100 = 15 %. Sur 100 euros de revenu disponible, 15 ne sont pas consommés pendant le mois considéré. Le taux ne se calcule pas en divisant l’épargne par les seules dépenses de consommation.",
+          "criteria": [
+            "Épargne de 435 euros : 0,5 point.",
+            "Formule et taux de 15 % : 0,5 point.",
+            "Interprétation avec le bon dénominateur : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q3",
+          "chapterId": "p1-eco-t3::5",
+          "documentIds": [
+            "p2-d3"
+          ],
+          "enonce": "Partie 2 : Le pouvoir d’achat augmente-t-il ? Calculez son évolution exacte et donnez l’approximation par différence.",
+          "points": 2.0,
+          "correction": "Coefficient réel = 1,04 / 1,05 = 0,990476 environ. L’évolution du pouvoir d’achat est donc d’environ -0,95 %. L’approximation donne 4 % - 5 % = -1 %. Le revenu nominal augmente mais moins vite que les prix : le ménage peut acheter légèrement moins de biens et services avec ce revenu.",
+          "criteria": [
+            "Comparaison des coefficients : 0,5 point.",
+            "Résultat exact arrondi cohérent : 0,5 point.",
+            "Approximation présentée comme telle : 0,5 point.",
+            "Interprétation de la baisse : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q4",
+          "chapterId": "p1-eco-t3::2",
+          "documentIds": [
+            "p2-d4"
+          ],
+          "enonce": "Partie 2 : Caractérisez cette aide et expliquez son rôle redistributif. Présentez une limite à la conclusion selon laquelle elle supprime les inégalités.",
+          "points": 2.0,
+          "correction": "C’est une prestation sociale sous condition de ressources, et non un revenu primaire du travail ou du capital. Les prélèvements financent un transfert qui accroît les ressources de ménages ciblés et peut réduire les écarts de revenus disponibles. Une aide isolée ne supprime pas les inégalités : les montants, le financement, le non-recours et les écarts initiaux comptent.",
+          "criteria": [
+            "Prestation sociale identifiée : 0,5 point.",
+            "Distinction d’un revenu primaire : 0,5 point.",
+            "Mécanisme redistributif expliqué : 0,5 point.",
+            "Limite pertinente : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q5",
+          "chapterId": "p1-eco-t3::1",
+          "documentIds": [],
+          "enonce": "Partie 2 : Distinguez revenus du travail, revenus du capital et revenus mixtes. Donnez un exemple de chaque.",
+          "points": 1.5,
+          "correction": "Les revenus du travail rémunèrent l’activité professionnelle, par exemple un salaire. Les revenus du capital rémunèrent la détention d’un patrimoine, par exemple intérêts ou loyers. Un revenu mixte rémunère à la fois le travail et le capital d’un indépendant, par exemple le revenu d’un artisan à son compte.",
+          "criteria": [
+            "Travail et exemple : 0,5 point.",
+            "Capital et exemple : 0,5 point.",
+            "Mixte et exemple : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q6",
+          "chapterId": "p1-eco-t3::4",
+          "documentIds": [],
+          "enonce": "Partie 2 : Définissez l’épargne et expliquez deux motifs d’épargne distincts.",
+          "points": 1.5,
+          "correction": "L’épargne est la partie du revenu disponible non consacrée à la consommation finale pendant la période. Elle peut répondre à un motif de précaution face à un imprévu, à la préparation d’un projet comme l’achat d’un logement, ou à la constitution de ressources pour la retraite. Deux motifs expliqués sont attendus.",
+          "criteria": [
+            "Définition par rapport au revenu disponible : 0,5 point.",
+            "Premier motif expliqué : 0,5 point.",
+            "Second motif distinct expliqué : 0,5 point."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "terminale-droit-economie",
+    "level": "terminale",
+    "subject": "Droit et économie",
+    "summary": "Contrat, responsabilité, chômage et politiques publiques.",
+    "duration": 120,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "droit-t5::0",
+        "title": "La formation du contrat : offre, acceptation et force obligatoire",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "droit-t5::7",
+        "title": "Force obligatoire, effet relatif et sanctions de l’inexécution",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "droit-t6::7",
+        "title": "Responsabilité contractuelle ou délictuelle : un contrat lie-t-il les parties ?",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "droit-t6::4",
+        "title": "Les conditions de la responsabilité délictuelle : fait générateur, dommage, causalité",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "droit-t5::5",
+        "title": "Les conditions de validité : consentement, capacité, contenu licite et certain",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "droit-t6::3",
+        "title": "Responsabilité civile et responsabilité pénale : réparer ou punir",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "eco-t7::0",
+        "title": "Le chômage au sens du BIT : taux de chômage et halo",
+        "subject": "Économie",
+        "level": "terminale"
+      },
+      {
+        "id": "eco-t7::4",
+        "title": "Les types de chômage : conjoncturel et structurel",
+        "subject": "Économie",
+        "level": "terminale"
+      },
+      {
+        "id": "eco-t6::6",
+        "title": "Les politiques économiques : budgétaire et monétaire, conjoncturelles et structurelles",
+        "subject": "Économie",
+        "level": "terminale"
+      },
+      {
+        "id": "eco-t6::9",
+        "title": "La politique monétaire de la BCE : taux directeurs et stabilité des prix",
+        "subject": "Économie",
+        "level": "terminale"
+      },
+      {
+        "id": "eco-t6::2",
+        "title": "Déficit et dette publics : le coût de l’intervention",
+        "subject": "Économie",
+        "level": "terminale"
+      }
+    ],
+    "exam": {
+      "title": "Droit et économie : entraînement complet",
+      "instructions": "Entraînement non officiel de 120 minutes, en deux parties indépendantes de 10 points. Documents et données fictifs. Consacrez environ 60 minutes par partie. Répondez sur copie séparée. Les questions sans document mobilisent vos connaissances. Les critères de chaque partie sont adaptés à son barème de 10 points ; les réponses et les exigences restent identiques aux versions de 60 minutes. Calculatrice autorisée pour les questions chiffrées. Ce sujet ne reproduit pas le format officiel d’une épreuve de quatre heures.",
+      "documents": [
+        {
+          "id": "p1-d1",
+          "title": "Document 1 : Une vente entre professionnels (cas fictif)",
+          "text": "La société Café du Parc commande à EquipPro une machine pour 3 000 euros hors taxes. Les parties ont accepté par écrit les caractéristiques et une livraison au 2 juin. Café du Parc paie le prix. Le 15 juin, EquipPro reconnaît par courriel que la machine n’a pas été livrée, faute d’organisation interne. Aucun événement de force majeure n’est invoqué. Les parties ont la capacité de contracter et leur consentement n’est pas contesté."
+        },
+        {
+          "id": "p1-d2",
+          "title": "Document 2 : Les règles utiles (cas fictif)",
+          "text": "Règles de droit reformulées pour cet entraînement : les contrats légalement formés obligent ceux qui les ont conclus. Une partie qui subit l’inexécution peut, selon les conditions prévues par le Code civil, demander notamment l’exécution en nature, une réduction du prix, la résolution ou la réparation des conséquences. Les sanctions compatibles peuvent se cumuler ; la réparation suppose notamment un préjudice causalement lié. Références de cours : articles 1103, 1217 et 1231-1 du Code civil."
+        },
+        {
+          "id": "p1-d3",
+          "title": "Document 3 : Un préjudice documenté (cas fictif)",
+          "text": "Après une mise en demeure restée sans effet, Café du Parc loue une machine de remplacement pendant dix jours pour 250 euros. La facture établit que cette location répond au retard de livraison. La société réclame aussi 5 000 euros au titre d’une perte de clientèle, mais ne produit aucun élément permettant d’en établir l’existence ou le montant. On ne vous demande pas de fixer une décision de justice."
+        },
+        {
+          "id": "p1-d4",
+          "title": "Document 4 : Un autre événement, sans contrat (cas fictif)",
+          "text": "Lors d’une rencontre entre voisins, Raphaël renverse par négligence sa tasse de café sur l’ordinateur de Léa. Aucun contrat ne lie ces deux personnes pour cet événement. Raphaël reconnaît le geste imprudent et un témoin confirme que le liquide a endommagé l’ordinateur. Un devis de remise en état s’élève à 800 euros. Le sujet porte sur la responsabilité du fait personnel au titre de l’article 1240 du Code civil ; aucun fait ne permet de retenir un cas de force majeure ou une faute de Léa."
+        },
+        {
+          "id": "p2-d1",
+          "title": "Document 1 : Une population, une période (cas fictif)",
+          "text": "Dans un territoire fictif, 96 000 personnes ont un emploi et 8 000 remplissent les critères de chômage du BIT. Parmi les personnes sans emploi, 4 000 autres souhaitent travailler mais ne sont pas disponibles dans les deux semaines ou n’ont pas effectué de recherche active récente. Elles ne sont pas incluses dans les 8 000 chômeurs BIT. Pour l’exercice, ces 4 000 personnes relèvent du halo autour du chômage."
+        },
+        {
+          "id": "p2-d2",
+          "title": "Document 2 : Deux situations de chômage (cas fictif)",
+          "text": "Une usine réduit temporairement ses commandes à la suite d’un recul de la demande. Plusieurs salariés perdent leur emploi alors que leurs qualifications restent recherchées lorsque l’activité repart. Dans un autre bassin, des postes de maintenance numérique restent durablement vacants car les candidats disponibles ne possèdent pas les compétences attendues. Une formation est nécessaire pour rapprocher ces profils des postes."
+        },
+        {
+          "id": "p2-d3",
+          "title": "Document 3 : Un programme d’investissement (cas fictif)",
+          "text": "Le gouvernement d’un pays fictif augmente de 1 milliard d’euros ses dépenses de rénovation d’écoles sans relever immédiatement les impôts. Les entreprises de bâtiment reçoivent davantage de commandes et embauchent si leurs capacités le permettent. Le déficit public peut augmenter à court terme ; la dette dépend aussi de son financement et des autres opérations. Aucun chiffre de multiplicateur n’est fourni."
+        },
+        {
+          "id": "p2-d4",
+          "title": "Document 4 : Des taux directeurs plus élevés (cas fictif)",
+          "text": "Dans une union monétaire fictive, la banque centrale relève ses taux directeurs pour freiner une inflation élevée. Les banques rendent certains crédits plus coûteux ; des entreprises reportent des investissements et des ménages reportent des achats à crédit. La baisse de la demande peut atténuer les pressions sur les prix, avec un effet possible sur l’activité. Le mécanisme ne garantit pas un résultat immédiat."
+        }
+      ],
+      "questions": [
+        {
+          "id": "p1-q1",
+          "chapterId": "droit-t5::0",
+          "documentIds": [
+            "p1-d1"
+          ],
+          "enonce": "Partie 1 : Identifiez les parties, leurs obligations principales et les éléments établissant la formation du contrat.",
+          "points": 1.5,
+          "correction": "Café du Parc est l’acheteur et EquipPro le vendeur. L’acheteur doit payer le prix et le vendeur délivrer la machine convenue. L’accord écrit sur la machine, ses caractéristiques, le prix et la livraison traduit la rencontre de l’offre et de l’acceptation. La capacité et le consentement ne sont pas contestés dans les faits : il n’y a pas lieu d’inventer un vice.",
+          "criteria": [
+            "Parties qualifiées : 0,5 point.",
+            "Obligations réciproques : 0,5 point.",
+            "Accord et formation reliés aux faits : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q2",
+          "chapterId": "droit-t5::7",
+          "documentIds": [
+            "p1-d1",
+            "p1-d2"
+          ],
+          "enonce": "Partie 1 : Caractérisez l’inexécution et présentez deux sanctions juridiquement envisageables, sans affirmer leur automaticité.",
+          "points": 1.5,
+          "correction": "La machine n’est pas délivrée à la date convenue alors que le prix a été payé : c’est une inexécution de l’obligation de délivrance. L’acheteur peut notamment demander l’exécution en nature si ses conditions sont remplies, ou envisager la résolution selon les conditions légales, ainsi qu’une réparation d’un préjudice établi. Le choix et le cumul ne sont pas automatiques : il faut respecter les conditions propres à chaque sanction.",
+          "criteria": [
+            "Inexécution qualifiée : 0,5 point.",
+            "Deux sanctions cohérentes : 0,5 point.",
+            "Conditions et absence d’automaticité : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q3",
+          "chapterId": "droit-t6::7",
+          "documentIds": [
+            "p1-d1",
+            "p1-d3"
+          ],
+          "enonce": "Partie 1 : Déterminez le régime de responsabilité pertinent pour le retard et analysez les deux préjudices demandés.",
+          "points": 2.0,
+          "correction": "L’acheteur et le vendeur sont liés par le contrat : la demande fondée sur le retard relève de la responsabilité contractuelle. L’inexécution est reconnue. Les 250 euros de location constituent une dépense établie et reliée au retard. La perte de clientèle de 5 000 euros n’est pas suffisamment étayée dans ce dossier ; elle ne peut être tenue pour démontrée simplement parce qu’elle est réclamée.",
+          "criteria": [
+            "Régime contractuel justifié : 0,5 point.",
+            "Manquement établi : 0,5 point.",
+            "Location : préjudice et causalité : 0,5 point.",
+            "Réserve justifiée sur les 5 000 euros : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q4",
+          "chapterId": "droit-t6::4",
+          "documentIds": [
+            "p1-d4"
+          ],
+          "enonce": "Partie 1 : Analysez la responsabilité du fait personnel en distinguant fait générateur, dommage et lien de causalité.",
+          "points": 2.0,
+          "correction": "Le geste imprudent de Raphaël constitue le fait fautif. Les dégâts à l’ordinateur sont un dommage matériel ; le devis de 800 euros est un élément d’évaluation. La reconnaissance du geste et le témoignage relient les dégâts au café renversé : lien de causalité. Aucun contrat ne lie Léa à Raphaël pour cet événement, ce qui oriente vers la responsabilité extracontractuelle du fait personnel. La réparation doit correspondre au préjudice établi, pas à une punition.",
+          "criteria": [
+            "Faute : 0,5 point.",
+            "Dommage caractérisé : 0,5 point.",
+            "Causalité : 0,5 point.",
+            "Régime et finalité réparatrice : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q5",
+          "chapterId": "droit-t5::5",
+          "documentIds": [],
+          "enonce": "Partie 1 : Énoncez et expliquez les trois conditions générales de validité d’un contrat.",
+          "points": 1.5,
+          "correction": "Le consentement des parties doit exister et être exempt de vice ; les parties doivent avoir la capacité de contracter ; le contenu doit être licite et certain. La contrepartie et les règles particulières peuvent appeler d’autres contrôles selon les contrats, mais ne remplacent pas ces trois conditions générales de l’article 1128.",
+          "criteria": [
+            "Consentement : 0,5 point.",
+            "Capacité : 0,5 point.",
+            "Contenu licite et certain : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q6",
+          "chapterId": "droit-t6::3",
+          "documentIds": [],
+          "enonce": "Partie 1 : Distinguez les finalités de la responsabilité civile et de la responsabilité pénale. Peuvent-elles concerner les mêmes faits ?",
+          "points": 1.5,
+          "correction": "La responsabilité civile vise à réparer un dommage subi par une victime. La responsabilité pénale vise à sanctionner une infraction et à protéger la société. Les mêmes faits peuvent engager les deux lorsque leurs conditions respectives sont réunies ; la réparation versée à une victime ne se confond pas avec l’amende payée au Trésor public.",
+          "criteria": [
+            "Finalité civile : 0,5 point.",
+            "Finalité pénale : 0,5 point.",
+            "Cumul possible et distinction des sommes : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q1",
+          "chapterId": "eco-t7::0",
+          "documentIds": [
+            "p2-d1"
+          ],
+          "enonce": "Partie 2 : Calculez la population active puis le taux de chômage BIT. Pourquoi les 4 000 autres personnes ne sont-elles pas incluses dans ce taux ?",
+          "points": 1.5,
+          "correction": "Population active = 96 000 personnes en emploi + 8 000 chômeurs BIT = 104 000. Taux de chômage = 8 000 / 104 000 × 100 ≈ 7,69 %. Les 4 000 personnes ne remplissent pas toutes les conditions BIT ; elles sont inactives au sens de cette mesure et ne font pas partie de ce dénominateur. Le halo montre une situation proche du chômage mais différente statistiquement.",
+          "criteria": [
+            "Population active : 0,5 point.",
+            "Formule et taux arrondi cohérent : 0,5 point.",
+            "Traitement du halo : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q2",
+          "chapterId": "eco-t7::4",
+          "documentIds": [
+            "p2-d2"
+          ],
+          "enonce": "Partie 2 : Distinguez les deux types de chômage et proposez une réponse adaptée à chacun, en précisant une limite.",
+          "points": 1.5,
+          "correction": "Le recul temporaire de la demande relève du chômage conjoncturel : une politique soutenant l’activité peut contribuer à le réduire. L’inadéquation durable des compétences relève du chômage structurel : formation et accompagnement de la mobilité peuvent aider. La relance ne crée pas immédiatement les compétences manquantes ; la formation ne suffit pas à rétablir une demande globale faible.",
+          "criteria": [
+            "Deux types correctement identifiés : 0,5 point.",
+            "Deux réponses adaptées : 0,5 point.",
+            "Limite argumentée : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q3",
+          "chapterId": "eco-t6::6",
+          "documentIds": [
+            "p2-d3"
+          ],
+          "enonce": "Partie 2 : Caractérisez l’orientation de cette politique budgétaire. Expliquez un mécanisme sur l’emploi et deux limites possibles.",
+          "points": 2.0,
+          "correction": "L’augmentation des dépenses publiques est une orientation budgétaire expansionniste. Les commandes peuvent accroître la production, les revenus puis l’emploi si les entreprises répondent à la demande. Limites possibles : augmentation du déficit, contraintes de financement, importations qui réduisent l’effet domestique, capacités de production ou de recrutement insuffisantes. On ne peut pas calculer précisément le nombre d’emplois sans données supplémentaires.",
+          "criteria": [
+            "Politique budgétaire et orientation : 0,5 point.",
+            "Chaîne causale jusqu’à l’emploi : 0,5 point.",
+            "Première limite expliquée : 0,5 point.",
+            "Seconde limite ou impossibilité de chiffrer justifiée : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q4",
+          "chapterId": "eco-t6::9",
+          "documentIds": [
+            "p2-d4"
+          ],
+          "enonce": "Partie 2 : Expliquez la transmission de la hausse des taux à la demande et aux prix. Présentez un arbitrage pour l’activité.",
+          "points": 2.0,
+          "correction": "La hausse des taux directeurs tend à renchérir le financement bancaire et le crédit. Des dépenses de consommation et d’investissement sont reportées. Une demande moins dynamique peut réduire les tensions inflationnistes. Elle peut aussi ralentir la production et l’emploi. La transmission prend du temps et dépend notamment des banques et de l’origine de l’inflation.",
+          "criteria": [
+            "Taux directeurs et crédit reliés : 0,5 point.",
+            "Effet sur consommation/investissement : 0,5 point.",
+            "Effet possible sur les prix : 0,5 point.",
+            "Arbitrage et limite : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q5",
+          "chapterId": "eco-t7::0",
+          "documentIds": [],
+          "enonce": "Partie 2 : Énoncez les trois critères du chômage au sens du BIT.",
+          "points": 1.5,
+          "correction": "Pour les personnes en âge de travailler au sens de la statistique considérée : ne pas avoir d’emploi pendant la semaine de référence, être disponible pour travailler dans les deux semaines et avoir recherché activement un emploi au cours des quatre dernières semaines, ou avoir trouvé un emploi commençant dans moins de trois mois. Les trois conditions principales sont attendues ; ne pas réduire le chômage au simple souhait de travailler.",
+          "criteria": [
+            "Absence d’emploi sur la période de référence : 0,5 point.",
+            "Disponibilité : 0,5 point.",
+            "Recherche active ou emploi trouvé à début proche : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q6",
+          "chapterId": "eco-t6::2",
+          "documentIds": [],
+          "enonce": "Partie 2 : Distinguez déficit public et dette publique. Pourquoi ne mesure-t-on pas la même chose ?",
+          "points": 1.5,
+          "correction": "Le déficit public est un flux sur une période : les dépenses publiques dépassent les recettes selon les conventions de comptabilité publique. La dette publique est un stock d’engagements financiers à une date. Des déficits peuvent alimenter la dette lorsqu’ils sont financés par emprunt, mais les deux grandeurs ne sont pas identiques et les variations de dette peuvent aussi dépendre d’autres ajustements.",
+          "criteria": [
+            "Déficit comme flux : 0,5 point.",
+            "Dette comme stock : 0,5 point.",
+            "Lien nuancé entre les deux : 0,5 point."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "terminale-management-bilan",
+    "level": "terminale",
+    "subject": "Management",
+    "summary": "Réviser les notions de Première et leur mobilisation en Terminale.",
+    "duration": 120,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "p1-mgmt-t1::0",
+        "title": "L’organisation : un groupe, des ressources, un but commun",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-mgmt-t1::2",
+        "title": "Deux niveaux de management : stratégique et opérationnel",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-mgmt-t2::2",
+        "title": "Le diagnostic interne : ressources, compétences distinctives, forces et faiblesses",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-mgmt-t2::1",
+        "title": "Le diagnostic externe : macro-environnement (PESTEL) et micro-environnement",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-mgmt-t1::1",
+        "title": "Le management : fixer des objectifs, organiser, animer, contrôler",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-mgmt-t2::3",
+        "title": "La synthèse : la matrice SWOT",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "mgmt-t2::4",
+        "title": "Les choix stratégiques : spécialisation ou diversification, intégration ou externalisation",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "mgmt-t2::3",
+        "title": "Le diagnostic stratégique : SWOT et PESTEL",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "mgmt-t1::3",
+        "title": "La compétitivité : prix ou hors-prix, coûts ou différenciation",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "mgmt-t1::0",
+        "title": "La création de valeur : valeur ajoutée, chaîne de valeur et performance globale",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "mgmt-t1::1",
+        "title": "Ressources, compétences distinctives et avantage concurrentiel",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "mgmt-t3::0",
+        "title": "La RSE au cœur de la stratégie : performance globale et parties prenantes",
+        "subject": "Management",
+        "level": "terminale"
+      }
+    ],
+    "exam": {
+      "title": "Management : bases et stratégie",
+      "instructions": "Entraînement non officiel de 120 minutes, en deux parties indépendantes de 10 points. Documents et données fictifs. Consacrez environ 60 minutes par partie. Répondez sur copie séparée. Les questions sans document mobilisent vos connaissances. Les critères de chaque partie sont adaptés à son barème de 10 points ; les réponses et les exigences restent identiques aux versions de 60 minutes. Calculatrice autorisée pour les questions chiffrées. Ce sujet ne reproduit pas le format officiel d’une épreuve de quatre heures.",
+      "documents": [
+        {
+          "id": "p1-d1",
+          "title": "Document 1 : Une organisation structurée (cas fictif)",
+          "text": "Cycléo SAS répare et vend des vélos dans une ville moyenne. Ses deux associés emploient huit salariés. Elle possède un atelier, dix postes de réparation et une marque déposée. Les mécaniciens partagent un logiciel de planning. L’entreprise veut réaliser un bénéfice pour financer son développement, tout en proposant des déplacements moins polluants. Les associés décident des orientations ; la responsable d’atelier répartit chaque matin le travail."
+        },
+        {
+          "id": "p1-d2",
+          "title": "Document 2 : Deux décisions (cas fictif)",
+          "text": "Le 4 janvier, les associés votent l’ouverture d’un second atelier dans une autre ville : investissement de 180 000 euros, emprunt sur cinq ans et recrutement de quatre salariés. Le 12 janvier, la responsable décale deux réparations du matin à l’après-midi pour remplacer un mécanicien absent. Cette réorganisation utilise les ressources déjà disponibles et ne change pas les activités de Cycléo."
+        },
+        {
+          "id": "p1-d3",
+          "title": "Document 3 : Les ressources internes (cas fictif)",
+          "text": "Les clients apprécient le diagnostic rapide de batteries électriques ; trois salariés ont suivi une formation rare dans la région. La marque est connue localement. En revanche, l’entreprise ne possède que 15 000 euros de trésorerie disponible et son atelier est trop petit pour stocker les vélos en attente. Le logiciel fonctionne correctement mais ne remplace pas le savoir-faire des techniciens."
+        },
+        {
+          "id": "p1-d4",
+          "title": "Document 4 : Le marché local (cas fictif)",
+          "text": "Une aide municipale à l’achat de vélos favorise les demandes de réparation. Plusieurs entreprises voisines envisagent des flottes de vélos pour leurs salariés. Une chaîne nationale annonce toutefois un atelier à bas prix à proximité. Le coût des pièces importées augmente. Ces évolutions ne sont pas décidées par Cycléo : elles viennent de son environnement."
+        },
+        {
+          "id": "p2-d1",
+          "title": "Document 1 : La situation de Nova (cas fictif)",
+          "text": "Nova fabrique des gourdes réparables dans un unique atelier français. Son activité reste centrée sur les contenants réutilisables. Elle réalise les étapes de conception et d’assemblage ; une entreprise partenaire livre certains composants. La direction veut conserver une qualité élevée tout en augmentant ses ventes. Elle envisage d’élargir sa distribution, sans se lancer dans un autre métier."
+        },
+        {
+          "id": "p2-d2",
+          "title": "Document 2 : Un diagnostic à construire (cas fictif)",
+          "text": "Nova possède un brevet sur un bouchon réparable, des techniciens expérimentés et une bonne réputation auprès des magasins spécialisés. Sa capacité de production est limitée et sa trésorerie faible. La demande de produits réparables progresse ; une chaîne de magasins propose un partenariat commercial. Des imitations moins chères apparaissent et le coût de certains composants augmente."
+        },
+        {
+          "id": "p2-d3",
+          "title": "Document 3 : La proposition de valeur (cas fictif)",
+          "text": "Une gourde Nova est vendue 32 euros, contre environ 18 euros pour une gourde standard du marché étudié. Nova propose un bouchon remplaçable, des pièces disponibles séparément et un service de réparation. Les clients interrogés valorisent la durée d’usage, mais certains hésitent face au prix. Nova ne prétend donc pas être l’offre la moins chère et doit rendre sa différence crédible."
+        },
+        {
+          "id": "p2-d4",
+          "title": "Document 4 : Des performances contrastées (cas fictif)",
+          "text": "Entre N-1 et N, le chiffre d’affaires de Nova passe de 500 000 à 550 000 euros ; les retours clients baissent de 5 % à 3 %. La consommation électrique par unité produite diminue de 12 %. En revanche, le taux de fréquence des accidents du travail augmente et plusieurs salariés signalent une surcharge. Les données ne permettent pas de conclure sur la rentabilité, faute d’information sur les coûts."
+        }
+      ],
+      "questions": [
+        {
+          "id": "p1-q1",
+          "chapterId": "p1-mgmt-t1::0",
+          "documentIds": [
+            "p1-d1"
+          ],
+          "enonce": "Partie 1 : Montrez que Cycléo est une organisation. Classez une ressource humaine et une ressource matérielle.",
+          "points": 1.5,
+          "correction": "Cycléo poursuit un but commun, coordonne une action collective et mobilise des ressources dans une structure : les associés décident, la responsable répartit le travail et les salariés réparent. Les mécaniciens sont une ressource humaine ; l’atelier ou les postes de réparation sont des ressources matérielles. Le logiciel est une ressource immatérielle, non une personne.",
+          "criteria": [
+            "But commun et coordination : 0,5 point.",
+            "Structure identifiée dans le cas : 0,5 point.",
+            "Deux ressources correctement classées : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q2",
+          "chapterId": "p1-mgmt-t1::2",
+          "documentIds": [
+            "p1-d2"
+          ],
+          "enonce": "Partie 1 : Distinguez la décision stratégique de la décision opérationnelle. Justifiez chaque classement avec deux indices.",
+          "points": 1.5,
+          "correction": "L’ouverture du second atelier est stratégique : elle engage durablement l’entreprise, mobilise un investissement important et modifie son implantation. Le déplacement de deux réparations est opérationnel : il règle une difficulté quotidienne à court terme avec des ressources existantes. La distinction repose sur l’horizon et la portée, pas seulement sur la personne qui décide.",
+          "criteria": [
+            "Classement des deux décisions : 0,5 point.",
+            "Deux indices pour la décision stratégique : 0,5 point.",
+            "Deux indices pour la décision opérationnelle : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q3",
+          "chapterId": "p1-mgmt-t2::2",
+          "documentIds": [
+            "p1-d3"
+          ],
+          "enonce": "Partie 1 : Présentez deux forces et deux faiblesses internes. Expliquez pourquoi la formation peut constituer une compétence distinctive.",
+          "points": 2.0,
+          "correction": "Forces : savoir-faire rare sur les batteries et notoriété locale. Faiblesses : faible trésorerie disponible et surface de stockage insuffisante. La compétence peut distinguer Cycléo des concurrents si elle permet un service valorisé et difficile à reproduire. La formation est un indice ; elle ne prouve pas à elle seule un avantage durable.",
+          "criteria": [
+            "Deux forces : 0,5 point.",
+            "Deux faiblesses : 0,5 point.",
+            "Lien formation, savoir-faire et service : 0,5 point.",
+            "Distinction conditionnelle par rapport aux concurrents : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q4",
+          "chapterId": "p1-mgmt-t2::1",
+          "documentIds": [
+            "p1-d4"
+          ],
+          "enonce": "Partie 1 : Identifiez deux opportunités et deux menaces externes. Expliquez une conséquence possible sur Cycléo.",
+          "points": 2.0,
+          "correction": "Opportunités : aide municipale et intérêt des employeurs pour les flottes. Menaces : arrivée d’une chaîne à bas prix et hausse du coût des pièces. Une flotte peut apporter des contrats réguliers ; la chaîne peut exercer une pression sur les prix ; la hausse des pièces peut réduire la marge si elle n’est pas répercutée. Toute conséquence cohérente est admise.",
+          "criteria": [
+            "Deux opportunités : 0,5 point.",
+            "Deux menaces : 0,5 point.",
+            "Caractère externe explicité : 0,5 point.",
+            "Conséquence argumentée : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q5",
+          "chapterId": "p1-mgmt-t1::1",
+          "documentIds": [],
+          "enonce": "Partie 1 : Présentez trois fonctions du management et expliquez leur rôle.",
+          "points": 1.5,
+          "correction": "Fixer des objectifs donne une direction ; organiser répartit les ressources et les tâches ; animer mobilise les acteurs ; contrôler compare les résultats aux objectifs et permet des ajustements. Trois fonctions expliquées parmi ces quatre sont attendues.",
+          "criteria": [
+            "Une première fonction expliquée : 0,5 point.",
+            "Une deuxième fonction expliquée : 0,5 point.",
+            "Une troisième fonction expliquée : 0,5 point."
+          ]
+        },
+        {
+          "id": "p1-q6",
+          "chapterId": "p1-mgmt-t2::3",
+          "documentIds": [],
+          "enonce": "Partie 1 : Distinguez les dimensions internes et externes d’un diagnostic SWOT. Pourquoi ne suffit-il pas à prendre une décision ?",
+          "points": 1.5,
+          "correction": "Les forces et faiblesses concernent les caractéristiques internes ; les opportunités et menaces portent sur l’environnement. Le SWOT synthétise le diagnostic, mais il faut aussi hiérarchiser les enjeux, examiner les ressources, comparer les options et tenir compte des objectifs avant de décider.",
+          "criteria": [
+            "Interne correctement défini : 0,5 point.",
+            "Externe correctement défini : 0,5 point.",
+            "Limite et étape complémentaire : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q1",
+          "chapterId": "mgmt-t2::4",
+          "documentIds": [
+            "p2-d1"
+          ],
+          "enonce": "Partie 2 : Nova se spécialise-t-elle ou se diversifie-t-elle ? Distinguez cette décision du choix de confier des composants à un partenaire.",
+          "points": 1.5,
+          "correction": "Nova reste spécialisée dans les contenants réutilisables : élargir les canaux de distribution ne suffit pas à caractériser une diversification dans un nouveau métier. Le recours au partenaire relève de l’externalisation de certaines activités. La spécialisation décrit le périmètre d’activité ; l’externalisation concerne la répartition de la réalisation entre l’entreprise et des tiers.",
+          "criteria": [
+            "Spécialisation justifiée : 0,5 point.",
+            "Externalisation identifiée : 0,5 point.",
+            "Deux dimensions distinguées : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q2",
+          "chapterId": "mgmt-t2::3",
+          "documentIds": [
+            "p2-d2"
+          ],
+          "enonce": "Partie 2 : Construisez une synthèse SWOT avec deux éléments dans chaque catégorie.",
+          "points": 1.5,
+          "correction": "Forces : brevet, expérience technique ou réputation. Faiblesses : capacité limitée et faible trésorerie. Opportunités : demande croissante de réparabilité et partenariat proposé. Menaces : imitations à bas prix et renchérissement des composants. Les éléments internes ne doivent pas être confondus avec l’environnement externe.",
+          "criteria": [
+            "Forces et faiblesses correctement classées : 0,5 point.",
+            "Opportunités et menaces correctement classées : 0,5 point.",
+            "Deux éléments par catégorie et distinction interne/externe : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q3",
+          "chapterId": "mgmt-t1::3",
+          "documentIds": [
+            "p2-d3"
+          ],
+          "enonce": "Partie 2 : Caractérisez l’avantage concurrentiel recherché. Présentez deux conditions pour qu’il soit défendable.",
+          "points": 2.0,
+          "correction": "Nova recherche une compétitivité hors-prix par différenciation : réparabilité, pièces détachées et service justifient un prix supérieur. La différence doit être valorisée par la clientèle et effectivement réalisée. Elle doit aussi être difficile à imiter ou régulièrement renouvelée, et rester économiquement soutenable. Un prix élevé n’est pas, à lui seul, une preuve d’avantage concurrentiel.",
+          "criteria": [
+            "Différenciation hors-prix identifiée : 0,5 point.",
+            "Deux caractéristiques du cas mobilisées : 0,5 point.",
+            "Valeur reconnue par le client : 0,5 point.",
+            "Protection ou soutenabilité argumentée : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q4",
+          "chapterId": "mgmt-t1::0",
+          "documentIds": [
+            "p2-d4"
+          ],
+          "enonce": "Partie 2 : Analysez la performance globale de Nova. Calculez l’évolution du chiffre d’affaires et discutez les limites des informations.",
+          "points": 2.0,
+          "correction": "Évolution du CA = (550 000 - 500 000) / 500 000 × 100 = 10 %. Les ventes et la qualité perçue évoluent favorablement ; l’électricité par unité diminue. Les accidents et la surcharge sont des signaux sociaux défavorables. La performance est contrastée. La hausse du CA ne suffit pas à prouver une hausse du bénéfice : les coûts ne sont pas connus.",
+          "criteria": [
+            "Calcul de 10 % : 0,5 point.",
+            "Lecture commerciale et environnementale : 0,5 point.",
+            "Lecture sociale : 0,5 point.",
+            "Limite sur rentabilité et conclusion nuancée : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q5",
+          "chapterId": "mgmt-t1::1",
+          "documentIds": [],
+          "enonce": "Partie 2 : Distinguez ressource et compétence. Expliquez leur rôle dans l’avantage concurrentiel.",
+          "points": 1.5,
+          "correction": "Une ressource est un moyen détenu ou mobilisé : personnel, équipements, financement, marque ou brevet. Une compétence est une capacité à combiner et utiliser ces moyens pour agir. Des ressources et compétences utiles, rares et difficiles à imiter peuvent soutenir l’avantage concurrentiel, mais leur simple présence ne garantit pas la réussite.",
+          "criteria": [
+            "Ressource définie : 0,5 point.",
+            "Compétence définie : 0,5 point.",
+            "Lien argumenté avec la concurrence : 0,5 point."
+          ]
+        },
+        {
+          "id": "p2-q6",
+          "chapterId": "mgmt-t3::0",
+          "documentIds": [],
+          "enonce": "Partie 2 : Définissez la RSE et expliquez pourquoi une action environnementale ne suffit pas à la résumer.",
+          "points": 1.5,
+          "correction": "La responsabilité sociétale des entreprises intègre les enjeux sociaux, environnementaux et économiques dans les activités et les relations avec les parties prenantes. Réduire une pollution est utile mais ne dit pas tout des conditions de travail, de l’éthique ou des relations avec les partenaires. Une démarche cohérente doit prendre en compte plusieurs dimensions et les éventuels arbitrages.",
+          "criteria": [
+            "Définition : 0,5 point.",
+            "Dimension sociale ou parties prenantes : 0,5 point.",
+            "Argument de cohérence et limites : 0,5 point."
+          ]
+        }
+      ]
+    }
+  }
+]
