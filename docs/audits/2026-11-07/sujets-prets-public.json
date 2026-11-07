@@ -1,0 +1,156 @@
+[
+  {
+    "file": "sujets-prets/premiere-management-sujet.pdf",
+    "bytes": 7587,
+    "contentType": "application/pdf",
+    "sha256": "5162abd362d6f2536bbf0710f0d8fedf7101f1eef7691229519674dd06e16b83",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/premiere-management-corrige.pdf",
+    "bytes": 7819,
+    "contentType": "application/pdf",
+    "sha256": "6e53fbe339888dcb5f6c7b03e2ac721d7041782f66519cc2760b5757d131c4f3",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/premiere-gestion-sujet.pdf",
+    "bytes": 7617,
+    "contentType": "application/pdf",
+    "sha256": "de2fd8736e988ae371061ef0221f375420cf229fd6b281e9de25e8a330c348c9",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/premiere-gestion-corrige.pdf",
+    "bytes": 7915,
+    "contentType": "application/pdf",
+    "sha256": "4a7742af2f04ac722110c45c5c6315bb8de61fd286a077277a10a501f220598b",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/premiere-droit-sujet.pdf",
+    "bytes": 7584,
+    "contentType": "application/pdf",
+    "sha256": "51254cec88ec563686c2d3e517ea8e3ad8a2582cae52a07c8f76a35a407603c6",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/premiere-droit-corrige.pdf",
+    "bytes": 7923,
+    "contentType": "application/pdf",
+    "sha256": "ecb9e03106a9d763a838632e8a9e17ebc715d7b1897e608e0406ef95e239691b",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/premiere-economie-sujet.pdf",
+    "bytes": 7376,
+    "contentType": "application/pdf",
+    "sha256": "272dea21dbba9ee036a25c0f148ac319ffd147bf86ed309cc4c9400a0def9b5c",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/premiere-economie-corrige.pdf",
+    "bytes": 7524,
+    "contentType": "application/pdf",
+    "sha256": "78baf2499a6f09bfd3012ed62f947b6b4efe4e91b43db7f20b0057cdfdda3cec",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/terminale-management-sujet.pdf",
+    "bytes": 7682,
+    "contentType": "application/pdf",
+    "sha256": "e352c44cbec6b0fdf1f8cfad1971c7a12f7b8daa942bd837acf0808805c1e4be",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/terminale-management-corrige.pdf",
+    "bytes": 8050,
+    "contentType": "application/pdf",
+    "sha256": "6178608a83ddcaba91117072b2d38efa29026e3edf65e8429859b72ff36d6a05",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/terminale-droit-sujet.pdf",
+    "bytes": 7806,
+    "contentType": "application/pdf",
+    "sha256": "7409c46ef0a3cc4f76d68fc7cc010319fb108c2d08195c6c0fcd0cb967d14945",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/terminale-droit-corrige.pdf",
+    "bytes": 7995,
+    "contentType": "application/pdf",
+    "sha256": "c491d9dd795bbf48d8102f817d73ac4d008f6c015bd59e5dc31628b84ab5f879",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/terminale-economie-sujet.pdf",
+    "bytes": 7626,
+    "contentType": "application/pdf",
+    "sha256": "93eda8f7b37b8d73ab8ab931def9edf869ec6d0e3231e7b43832d23ff2dbbc66",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/terminale-economie-corrige.pdf",
+    "bytes": 8152,
+    "contentType": "application/pdf",
+    "sha256": "e42e1d32e51e92ea0db742f43f39cd29c3c579090606084bf500808b0b39c6ba",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/terminale-gf-sujet.pdf",
+    "bytes": 7460,
+    "contentType": "application/pdf",
+    "sha256": "314cdeb4c6c157c4747edb385cfd0e2bbe06d05d816c2ae28434ef04e209755a",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/terminale-gf-corrige.pdf",
+    "bytes": 7472,
+    "contentType": "application/pdf",
+    "sha256": "f978c63d7b009c3e2bec5513775365c8fed9666a039e8acf455eb8cc8338976c",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/premiere-droit-economie-sujet.pdf",
+    "bytes": 10714,
+    "contentType": "application/pdf",
+    "sha256": "909f3c954d4206f04932f1344944e43caa325798bab5314b819cdd429fc09b54",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/premiere-droit-economie-corrige.pdf",
+    "bytes": 11601,
+    "contentType": "application/pdf",
+    "sha256": "39ff7501703a421d9d8c8bef63ead49845eeccf46bc88862c5db9f6a86ed47fa",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/terminale-droit-economie-sujet.pdf",
+    "bytes": 11183,
+    "contentType": "application/pdf",
+    "sha256": "a80922fdf6e9bd6f4b2f0eab45bfde35acff6af93ece4bc5ed02ee224e57087d",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/terminale-droit-economie-corrige.pdf",
+    "bytes": 12290,
+    "contentType": "application/pdf",
+    "sha256": "f396c1dde86e67f5e5a1c620897221f01f14dd0d1a4e00107703e5641cb5a422",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/terminale-management-bilan-sujet.pdf",
+    "bytes": 10947,
+    "contentType": "application/pdf",
+    "sha256": "5f89a248b6b3104b0185ee2f0e9ef521b1f95cd4b369213744625c58ee0742a7",
+    "identique": true
+  },
+  {
+    "file": "sujets-prets/terminale-management-bilan-corrige.pdf",
+    "bytes": 11985,
+    "contentType": "application/pdf",
+    "sha256": "1f364e7f9d3ae2ea33cf12cbcbb8abdee8b864af6e798740ccbc3221e47a7e66",
+    "identique": true
+  }
+]
