@@ -1853,3 +1853,6 @@ Prochaine action :
 
 ### LIVRAISON-TARIFS-20261107
 - PR #191 fusionnée : source 4de56ff554a8158294fda73cf4daddab2314e19e ; compilation baea9934294c21aaa3dac6b0a8f46eb3853c33fe. CI main 42406451794 réussie : 798 tests UTC, 798 à Paris, compilation et 394 parcours navigateur. Vérification publique réussie : index.html, assets/index-BtV_2m_g.js et assets/Offers-CoBln7f4.js identiques octet par octet à la compilation ; grille Ultimate1999 et Go présente. Fonction paiement v9 contrôlée : tarifs alignés, toujours en mode test. Aucun paiement réel effectué pendant la validation.
+
+### CREATION-EXAMEN-503-20261107
+- Codex : diagnostiquer et corriger la création d’examen qui échoue après l’analyse. Journaux du 7 novembre : action generate, Gemini3.6/3.8 répondent503 ; aucune erreur de contrat relevée dans cette tentative. Vérifier les modèles accessibles, la stratégie de reprise et la conservation demande/quota. Branche fix/creation-examen-503-20261107 ; aucun changement de schéma ni de NAH.
