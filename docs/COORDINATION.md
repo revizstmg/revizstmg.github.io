@@ -1868,3 +1868,7 @@ Prochaine action :
 
 ### PAGINATION-SUJETS-PRETS-20261107
 - Complément à la même demande, branche fix/pagination-sujets-prets-20261107 : la relecture PDF a repéré un corrigé de gestion-finance sur4 pages, dont la dernière ne contenait que deux références aux cours. Les références des sujets prêts sont déplacées vers leur couverture et compactées ; le corrigé tient désormais sur3 pages sans retirer de contenu. Les examens personnalisés conservent leur mise en page. Contrôle PDF ciblé ajouté ; publier la version corrigée du catalogue.
+
+### LIVRAISON-SUJETS-PRETS-20261107
+- PR #194 et #195 fusionnées. Source finale ba746af33dad0a9e55e9382af1a076b3aa3f9b81 ; compilation24e5c642b60e1ffe97f9cb2077bb45ee1f6f4a41. CI42410854997 réussie :806 tests UTC,806 à Paris, compilation et399 parcours navigateur. L’exécution antérieure du catalogue avant pagination a été arrêtée au profit de cette version complète, sans suppression de contrôle.
+- Pages42411947206 réussi. Les22 PDF publics répondent et sont identiques octet par octet à la compilation ; preuve :docs/audits/2026-11-07/sujets-prets-public.json. L’interface Bac blanc publique est aussi identique au fichier compilé et contient le catalogue. Onze sujets prêts disponibles, avec corrigés séparés, sans appel IA pour les ouvrir. Aucun changement Supabase, abonnement, quota ou données NAH. Références compactées sur la couverture des sujets prêts ; les PDF courts font3 pages et les versions deux heures5 pages.
