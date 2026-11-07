@@ -43,6 +43,7 @@ for(const theme of ['light','dark'])test(`sujets prêts : lisibles et accessible
 test('sujets prêts : aperçu ordinateur',async({page},testInfo)=>{
  await page.setViewportSize({width:1280,height:900})
  await preparer(page,etatEleve())
+ await page.addInitScript(()=>localStorage.setItem('stmg_cookies_info','1'))
  await page.goto('./#/bac-blanc')
  const section=page.getByRole('region',{name:'Les sujets classiques'})
  await section.scrollIntoViewIfNeeded()
