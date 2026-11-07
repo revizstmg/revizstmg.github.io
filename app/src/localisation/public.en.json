@@ -3314,5 +3314,8 @@
   "{count} questions": "{count} questions",
   "Télécharger le sujet": "Download the paper",
   "Télécharger le corrigé": "Download the answer guide",
-  "Rédige sur une copie séparée. Le corrigé détaille le raisonnement et les points attendus.": "Write on a separate sheet. The answer guide explains the reasoning and marking criteria."
+  "Rédige sur une copie séparée. Le corrigé détaille le raisonnement et les points attendus.": "Write on a separate sheet. The answer guide explains the reasoning and marking criteria.",
+  "Deux sujets par matière. Choisis ton entraînement et ouvre le PDF, sans attendre.": "Two papers per subject. Choose your practice paper and open the PDF straight away.",
+  "Choisir une matière": "Choose a subject",
+  "Droit et économie": "Law and economics"
 }

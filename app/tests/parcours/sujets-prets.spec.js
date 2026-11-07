@@ -11,16 +11,20 @@ for(const level of ['premiere','terminale'])test(`sujets prêts ${level} : PDF i
  await page.goto('./#/bac-blanc')
  const section=page.getByRole('region',{name:'Les sujets classiques'})
  await expect(section).toBeVisible()
- const select=section.getByLabel('Choisir un sujet')
- await expect(select.locator('option')).toHaveCount(level==='premiere'?5:6)
- await select.selectOption(`${level}-droit-economie`)
+ const select=section.getByLabel('Choisir une matière')
+ await expect(select.locator('option')).toHaveCount(5)
+ for(const matiere of await select.locator('option').evaluateAll(options=>options.map(o=>o.value))){
+  await select.selectOption(matiere)
+  await expect(section.getByRole('article')).toHaveCount(2)
+ }
+ await select.selectOption('Droit et économie')
  await expect(section).toContainText('120 min')
  await expect(section).toContainText('8 documents')
  await expect(section).toContainText('12 questions')
  const quota=await page.evaluate(()=>localStorage.getItem('stmg_ia_mois'))
- for(const name of ['Télécharger le sujet','Télécharger le corrigé']){
+ for(const card of await section.getByRole('article').all())for(const name of ['Télécharger le sujet','Télécharger le corrigé']){
   const waiting=page.waitForEvent('download')
-  await section.getByRole('link',{name,exact:true}).click()
+  await card.getByRole('link',{name,exact:true}).click()
   const file=await waiting,stream=await file.createReadStream(),chunks=[]
   for await(const chunk of stream)chunks.push(chunk)
   expect(Buffer.concat(chunks).subarray(0,5).toString()).toBe('%PDF-')
@@ -47,5 +51,10 @@ test('sujets prêts : aperçu ordinateur',async({page},testInfo)=>{
  await page.goto('./#/bac-blanc')
  const section=page.getByRole('region',{name:'Les sujets classiques'})
  await section.scrollIntoViewIfNeeded()
+ const cards=section.getByRole('article')
+ await expect(cards).toHaveCount(2)
+ const a=await cards.nth(0).boundingBox(),b=await cards.nth(1).boundingBox()
+ expect(Math.abs(a.y-b.y)).toBeLessThan(2)
+ expect(b.x).toBeGreaterThan(a.x+a.width)
  await section.screenshot({path:testInfo.outputPath('sujets-prets-desktop.png')})
 })
