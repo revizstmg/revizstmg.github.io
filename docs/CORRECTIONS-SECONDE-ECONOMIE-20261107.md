@@ -31,3 +31,13 @@ Sources des deux rapports, vérifiées à nouveau pour les corrections principal
 - [PNUD, dimensions de l’IDH](https://hdr.undp.org/data-center/human-development-index).
 
 Les chiffres des cas pratiques et les PDF historiques ne sont pas réécrits. Les tests ne constituent pas une certification professorale exhaustive ; les résultats de validation et la diffusion sont consignés dans `docs/COORDINATION.md`.
+
+## Livraison vérifiée
+
+PR [#185](https://github.com/revizstmg/revizstmg.github.io/pull/185), source `3dff085822a9fd806315f61e4717b5f15f964ad1`, compilation `fa094850583268fd7a7b3bccf4a0c55b11bbf5de`.
+
+- 39 contrôles ciblés réussis ; 779 tests généraux locaux réussis.
+- CI [42351443674](https://github.com/revizstmg/revizstmg.github.io/actions/runs/42351443674) : 779 tests UTC, 779 à Paris, compilation et 392 parcours navigateur réussis, sans reprise signalée.
+- Diffusion Pages réussie. Index et douze contrôles publics sur onze URLs distinctes conformes aux fichiers compilés, HTTP 200 et empreintes identiques : [preuves](audits/2026-11-06/economie-seconde-public-corrige.json).
+
+Les deux fichiers de contenu actifs sont identifiés dans le précache du service worker, puis comparés aux fichiers publics : le tri est associé à la section 7 et le marqueur en gras « cet exemple » est absent. Les empreintes sont comparées au commit compilé déposé par la CI. Ces contrôles ne revendiquent pas une validation réelle des fournisseurs IA ou de Supabase ; ces services n’ont pas été modifiés dans ce lot.
