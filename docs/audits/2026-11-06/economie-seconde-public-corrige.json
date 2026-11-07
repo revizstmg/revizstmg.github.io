@@ -1,0 +1,103 @@
+{
+  "date_utc": "2026-11-07T07:42:04.249213+00:00",
+  "index": {
+    "status": 200,
+    "sha256": "429261b18c6fc51dea88c198f184bb71c13c30f322bfa6bc94203115e4717242",
+    "conforme_compilation": true
+  },
+  "controles": [
+    {
+      "controle": "Activité dissimulée dans le PIB",
+      "url": "https://revizstmg.github.io/cours/premiere/economie/comment-cree-t-on-des-richesses-et-comment-les-mesure-t-on/les-limites-du-pib/",
+      "status": 200,
+      "sha256": "e8c05fca50821048b2fe6a243c2dab45ffe7a60148e0c2539118192e5f55a84e",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Obligations et risques",
+      "url": "https://revizstmg.github.io/cours/premiere/economie/comment-les-agents-economiques-se-financent-ils/actions-et-obligations/",
+      "status": 200,
+      "sha256": "3f0c94f1982c8efecd37f77a260226a32dadabb0f1681cd39bf4267b690b6585",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Taux directeurs de dépôt",
+      "url": "https://revizstmg.github.io/cours/premiere/economie/comment-les-agents-economiques-se-financent-ils/la-banque-centrale-et-les-taux-directeurs/",
+      "status": 200,
+      "sha256": "7acc2152fb7d9cc263c0da0532bacda6d770f77df451c449de0aecdffdd35eef",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Facteur travail non salarié",
+      "url": "https://revizstmg.github.io/cours/premiere/economie/comment-cree-t-on-des-richesses-et-comment-les-mesure-t-on/les-facteurs-de-production/",
+      "status": 200,
+      "sha256": "7b77b4cad911af10450b84808daf89bf1418ff8f8b202f1f8d96bb2d52ee2a3f",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Investissement de remplacement",
+      "url": "https://revizstmg.github.io/cours/premiere/economie/comment-cree-t-on-des-richesses-et-comment-les-mesure-t-on/les-facteurs-de-production/",
+      "status": 200,
+      "sha256": "7b77b4cad911af10450b84808daf89bf1418ff8f8b202f1f8d96bb2d52ee2a3f",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "BIT et emploi déjà trouvé",
+      "url": "https://revizstmg.github.io/cours/terminale/economie/emploi-et-chomage/mesurer-l-emploi-et-le-chomage-population-active-actifs-occupes/",
+      "status": 200,
+      "sha256": "2f6852bbbe775a0587ad057c94718e3e591138c3fd686a1a48d604bd57d5b2b1",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Dénominateurs des taux",
+      "url": "https://revizstmg.github.io/cours/terminale/economie/emploi-et-chomage/methode-taux-de-chomage-taux-d-activite-et-taux-d-emploi/",
+      "status": 200,
+      "sha256": "01c0a2370a557d2a7b05a2351b64e7501bc3f4ad2125cc082986ffc9502943a1",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "IDH : dimensions et non addition",
+      "url": "https://revizstmg.github.io/cours/terminale/economie/croissance-et-developpement-durable/l-idh-et-les-indicateurs-alternatifs-au-pib/",
+      "status": 200,
+      "sha256": "a531b41bb812f1b73b3f9aba45977de0eb6098ddfff5ee30f946b5c05fcb1f26",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Dette et autres opérations",
+      "url": "https://revizstmg.github.io/cours/terminale/economie/le-role-de-l-etat/deficit-et-dette-publics-le-cout-de-l-intervention/",
+      "status": 200,
+      "sha256": "85215f114431b5e53efa369d69b23ae5d7cc099cdfb2cc93aa11094fe8518926",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Inflation et revenu",
+      "url": "https://revizstmg.github.io/cours/terminale/economie/le-role-de-l-etat/l-inflation-mesure-causes-et-effets-sur-le-pouvoir-d-achat/",
+      "status": 200,
+      "sha256": "730fc9fe5239a01e749962d55801fa26071835f845458e05ae356fb775ba5fac",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Tri dans la bonne section",
+      "url": "https://revizstmg.github.io/assets/contenu-p1-economie-uJlUqNVo.js",
+      "status": 200,
+      "sha256": "4d72950ca0a82d2a86281d38f9ed003e58ba38383b29ca02cc71154a90afaecf",
+      "conforme_compilation": true
+    },
+    {
+      "controle": "Texte à trous sans marqueur anaphorique",
+      "url": "https://revizstmg.github.io/assets/contenu-economie-BeuWzGhm.js",
+      "status": 200,
+      "sha256": "c376607352864923f19a20575c55836a35c1e64d4d8b6ca465e0980d14b93fd8",
+      "conforme_compilation": true
+    }
+  ],
+  "urls_distinctes": 11,
+  "source_commit": "3dff085822a9fd806315f61e4717b5f15f964ad1",
+  "compiled_commit": "fa094850583268fd7a7b3bccf4a0c55b11bbf5de",
+  "ci_run": 42351443674,
+  "pages_run": 42352316875,
+  "unit_tests_utc": 779,
+  "unit_tests_paris": 779,
+  "browser_tests_passed": 392,
+  "limite": "Contenus publics comparés au commit compilé ; tests navigateur avec services externes simulés. Aucune mutation Supabase ni correction IA réelle."
+}
