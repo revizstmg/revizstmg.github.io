@@ -3293,5 +3293,15 @@
   "f(x)=k×aˣ": "f(x)=k×aˣ",
   "Exponentielles et logarithme": "Funciones exponenciales y logaritmo",
   "Logarithme décimal": "Logaritmo decimal",
-  "log(10ⁿ)=n": "log(10ⁿ)=n"
+  "log(10ⁿ)=n": "log(10ⁿ)=n",
+  "{mois} TTC par mois, sans engagement": "{mois} impuestos incluidos al mes, sin permanencia",
+  "Pour les établissements scolaires": "Para centros educativos",
+  "Go lycée": "Go para centros",
+  "{eleve} par élève et par an + {lycee} par établissement et par an": "{eleve} por estudiante y año + {lycee} por centro y año",
+  "Licences réservées aux lycées. Aucun abonnement Go individuel. La durée, les accès et les conditions de facturation sont précisés au devis.": "Licencias reservadas a los centros educativos. Go no se vende como suscripción individual. La duración, los accesos y las condiciones de facturación se especifican en el presupuesto.",
+  "Demander une licence lycée": "Solicitar una licencia de centro",
+  "Dernière mise à jour : novembre 2026": "Última actualización: noviembre de 2026",
+  "Les cours, les exercices de base, la boutique, les amis, la classe et l’espace parent sont gratuits, sans publicité. Le reste (bac blanc, sujets, révision, Grand Oral, classement…) demande Premium ({premium} TTC par mois) ou Ultimate ({ultimate} TTC par mois), sans engagement. Go est réservé aux lycées, via une licence établissement. Si ton compte a été créé avant le 30 octobre 2026, tout reste ouvert jusqu’au 30 novembre 2026. Voir les [[offres|/offres]].": "Los cursos, ejercicios básicos, tienda, amigos, clases y espacio para familias son gratuitos y sin publicidad. El resto (exámenes de prueba, temas, repaso, Grand Oral, clasificaciones…) requiere Premium ({premium} impuestos incluidos al mes) o Ultimate ({ultimate} impuestos incluidos al mes), sin permanencia. Go está reservado a los centros mediante una licencia institucional. Si tu cuenta se creó antes del 30 de octubre de 2026, todo sigue disponible hasta el 30 de noviembre de 2026. Consulta las [[ofertas|/offres]].",
+  "**Offres.** Deux abonnements mensuels sans engagement sont proposés : **Premium** ({premium} TTC par mois) et **Ultimate** ({ultimate} TTC par mois). Les prix sont affichés toutes taxes comprises. Les abonnements annuels historiques restent gérables depuis le portail client.": "**Ofertas.** Se ofrecen dos suscripciones mensuales sin permanencia: **Premium** ({premium} impuestos incluidos al mes) y **Ultimate** ({ultimate} impuestos incluidos al mes). Los precios incluyen todos los impuestos. Las suscripciones anuales existentes se pueden seguir gestionando desde el portal de clientes.",
+  "**Go lycée.** Cette offre est réservée aux établissements scolaires, sur devis. Elle n’est pas vendue comme abonnement individuel. Les tarifs de licence sont présentés sur la page des [[offres|/offres]] ; la durée, les accès et les conditions de facturation sont précisés au devis.": "**Go para centros.** Esta oferta está reservada a los centros educativos, mediante presupuesto. No se vende como suscripción individual. Los precios de licencia figuran en la página de [[ofertas|/offres]]; la duración, los accesos y las condiciones de facturación se especifican en el presupuesto."
 }

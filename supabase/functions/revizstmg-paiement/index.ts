@@ -12,7 +12,8 @@
 //   STRIPE_SECRET_KEY (sk_test_… puis sk_live_…), STRIPE_WEBHOOK_SECRET (whsec_…),
 //   SITE_URL (facultatif, défaut https://revizstmg.github.io).
 // Sans STRIPE_SECRET_KEY, la fonction répond « not_configured » et le site cache les boutons.
-import { STATUTS_ACTIFS, cleDePrix, ligneDepuisAbonnement, parametresCheckout, verifierSignature } from './logique.js'
+import { OFFRES, OFFRE_GO, PERIODES, TARIFS_VERSION, STATUTS_ACTIFS, cleDePrix, ligneDepuisAbonnement, parametresCheckout, verifierSignature } from './logique.js'
+import { obtenirPrixStripe } from './prix.js'
 
 const env = (k: string) => Deno.env.get(k) || ''
 const URL_BASE = env('SUPABASE_URL')
@@ -25,7 +26,7 @@ const MODE_TEST = STRIPE.startsWith('sk_test_') || STRIPE.startsWith('rk_test_')
 
 const CORS = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
   'Access-Control-Allow-Headers': 'authorization, apikey, content-type, stripe-signature',
 }
 const json = (corps: unknown, status = 200) =>
@@ -225,9 +226,12 @@ async function action(req: Request) {
       const existants = await stripe(`/v1/subscriptions?customer=${encodeURIComponent(ligne.stripe_customer_id)}&status=all&limit=10`)
       if ((existants.data || []).some((a: any) => STATUTS_ACTIFS.includes(a.status))) return json({ error: 'deja_abonne' }, 409)
     }
-    const prix = await stripe(`/v1/prices?lookup_keys[]=${encodeURIComponent(cle)}&active=true&limit=1`)
-    const prixId = prix.data?.[0]?.id
-    if (!prixId) return json({ error: 'prix_introuvable' }, 503)
+    let prixId: string
+    try { prixId = await obtenirPrixStripe({ offre: corps.offre, periode: corps.periode, stripe }) }
+    catch (e) {
+      if (['prix_introuvable', 'prix_incoherent'].includes((e as Error).message)) return json({ error: 'prix_indisponible' }, 503)
+      throw e
+    }
     const session = await stripe('/v1/checkout/sessions', 'POST',
       parametresCheckout({ prixId, userId: u.id, clientId: await clientStripe(), siteUrl: SITE }))
     return json({ url: session.url })
@@ -244,6 +248,11 @@ async function action(req: Request) {
 
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS })
+  if (req.method === 'GET' && new URL(req.url).searchParams.get('check') === 'tarifs') return json({
+    version: TARIFS_VERSION, mode: !STRIPE ? 'non_configure' : MODE_TEST ? 'test' : 'reel',
+    periodes: PERIODES, premium: { mensuel: OFFRES.premium.mensuel.centimes },
+    ultimate: { mensuel: OFFRES.ultimate.mensuel.centimes }, go: OFFRE_GO,
+  })
   if (req.method !== 'POST') return json({ error: 'methode' }, 405)
   try {
     return req.headers.get('stripe-signature') ? await webhook(req) : await action(req)

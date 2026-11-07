@@ -122,8 +122,8 @@ test('offres : les prix sont affichés à tous, sans être connecté ni abonné'
   await preparer(page, etatEleve({ account: null }), { abonnement: null })
   await page.goto('./#/offres')
   await expect(page.getByText('0 €, sans carte bancaire')).toBeVisible()
-  await expect(page.getByText('9,99 € TTC par mois ou 90 € TTC par an')).toBeVisible()
-  await expect(page.getByText('14,99 € TTC par mois ou 130 € TTC par an')).toBeVisible()
+  await expect(page.getByText('9,99 € TTC par mois, sans engagement', { exact: true })).toBeVisible()
+  await expect(page.getByText('19,99 € TTC par mois, sans engagement')).toBeVisible()
 })
 
 test('onglet Outils d’un thème : bac blanc, paquet de flashcards et notes réservés aux abonnés', async ({ page }) => {

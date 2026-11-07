@@ -3,30 +3,35 @@
 // fonctions et par le site (affichage des prix), donc testable sans réseau.
 
 // Prix TTC en centimes. Source unique : le site affiche ces montants, Stripe les
-// facture via les « lookup_key » (un prix = une clé, modifiable sans toucher au code).
+// facture via les « lookup_key ». Une hausse crée un nouveau prix : les abonnements
+// existants ne sont jamais migrés automatiquement.
 export const OFFRES = {
   premium: {
     nom: 'Premium',
     mensuel: { cle: 'revizstmg_premium_mensuel', centimes: 999 },
-    annuel: { cle: 'revizstmg_premium_annuel', centimes: 9000 },
+    annuel: { cle: 'revizstmg_premium_annuel', centimes: 9000 }, // historique uniquement
   },
   ultimate: {
     nom: 'Ultimate',
-    mensuel: { cle: 'revizstmg_ultimate_mensuel', centimes: 1499 },
-    annuel: { cle: 'revizstmg_ultimate_annuel', centimes: 13000 },
+    mensuel: { cle: 'revizstmg_ultimate_mensuel_1999', centimes: 1999 },
+    annuel: { cle: 'revizstmg_ultimate_annuel', centimes: 13000 }, // historique uniquement
   },
 }
-export const PERIODES = ['mensuel', 'annuel']
+export const PERIODES = ['mensuel']
+export const TARIFS_VERSION = '2026-11-07'
+export const OFFRE_GO = { nom: 'Go lycée', eleveAnnuelCentimes: 2000, etablissementAnnuelCentimes: 50000 }
+export const ANCIENNES_CLES = { premium: 'revizstmg_premium_mensuel', ultimate: 'revizstmg_ultimate_mensuel' }
 
 export function cleDePrix(offre, periode) {
-  const p = OFFRES[offre]?.[periode]
+  const p = PERIODES.includes(periode) ? OFFRES[offre]?.[periode] : null
   return p ? p.cle : null
 }
 
 // Retrouve l'offre et la période à partir de la clé d'un prix Stripe.
 export function offreDeCle(cle) {
   for (const [offre, def] of Object.entries(OFFRES)) {
-    for (const periode of PERIODES) if (def[periode].cle === cle) return { offre, periode }
+    for (const periode of ['mensuel', 'annuel']) if (def[periode].cle === cle) return { offre, periode }
+    if (ANCIENNES_CLES[offre] === cle) return { offre, periode: 'mensuel' }
   }
   return null
 }

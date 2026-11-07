@@ -28,3 +28,5 @@
 .study-promise :is(a,button):focus-visible{outline-color:#fff7e7}
 @media(max-width:640px){.study-steps,.study-offer-grid{grid-template-columns:1fr}.study-actions{display:grid;grid-template-columns:1fr}.study-steps{gap:16px}.study-promise h2{max-width:none}.study-demo .study-link{width:100%}}
 @media print{.study-actions{display:none}.study-demo section{break-inside:auto}.study-exercise{break-inside:avoid}.study-demo details{display:block}}
+
+.study-school-offer{margin:24px 0;padding:clamp(16px,3vw,26px);border:1px solid var(--study-line);border-radius:12px;background:var(--c-card,#fffdf8);color:var(--study-ink)}
