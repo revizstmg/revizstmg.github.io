@@ -123,3 +123,7 @@ officiel vérifié par empreinte. Les cinq critères, citations et maxima sont
 validés côté serveur ; aucune note locale ne remplace une correction en échec.
 La copie reste sur l’appareil. Les journaux d’échec contiennent uniquement
 action, modèle et statut, jamais la rédaction, la clé ou une réponse brute.
+
+## Reprise de création après 503 (7 novembre 2026)
+
+Incident confirmé dans les journaux : analyse200, puis generate503 sur Flash3.6 et3.8. La génération conserve le modèle configuré en premier puis essaie Flash2.5, disponible dans le catalogue de la clé, avant les autres alternatives Flash. Elle ne répète plus un modèle saturé ; le délai global reste120s. Flash2.5 utilise un budget de réflexion de1024 jetons pour laisser le budget de sortie au sujet. Les erreurs403/429 ne déclenchent toujours aucun repli. Les autres actions conservent leur stratégie. Une seule réservation de quota couvre toute la tentative, rendue si tous les modèles échouent ; aucun faux sujet généré localement. La disponibilité des métadonnées ne garantit pas la réussite d’un appel réel.
