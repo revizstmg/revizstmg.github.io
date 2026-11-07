@@ -123,3 +123,7 @@ officiel vérifié par empreinte. Les cinq critères, citations et maxima sont
 validés côté serveur ; aucune note locale ne remplace une correction en échec.
 La copie reste sur l’appareil. Les journaux d’échec contiennent uniquement
 action, modèle et statut, jamais la rédaction, la clé ou une réponse brute.
+
+## Reprise de création et délais (7 novembre 2026)
+
+Incident confirmé : analyse200 puis generate503 sur Flash3.6/3.8. Un premier repli vers2.5 a échoué404 malgré sa présence dans le catalogue ; le modèle suivant a ensuite provoqué un arrêt WallClockTime du worker (HTTP546). La génération privilégie maintenant Flash3.5Lite (`EXAM_GENERATION_MODEL` permet de le remplacer), puis le modèle général configuré, puis Flash3.5. Réflexion LOW, sans répétition du modèle saturé. Chaque tentative est bornée à35s et leur ensemble à90s, pour rendre la main avant la limite du worker. Les autres actions et les contrats de qualité restent inchangés. Pas de repli sur403/429 ; une réservation unique couvre la tentative et est rendue si toutes les capacités échouent. Aucun sujet factice. La disponibilité des métadonnées ne garantit pas la génération réelle.

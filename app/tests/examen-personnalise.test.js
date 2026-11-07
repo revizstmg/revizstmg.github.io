@@ -135,7 +135,7 @@ test('diagnostic fournisseur : raisons contrôlées, aucun message brut journali
 
 test('Gemini : modèle actuel et repli borné si un ancien modèle renvoie 404', async () => {
  const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : url.includes('ancien') ? new Response('', { status: 404 }) : Response.json({ candidates: [{ content: { parts: [{ text: JSON.stringify(exam()) }] } }] }))
- const custom = k => k === 'EXAM_GEMINI_MODEL' ? ' models/ancien ' : env(k)
+ const custom = k => k === 'EXAM_GENERATION_MODEL' ? ' models/ancien ' : env(k)
  const r = await createHandler({acces:accesLibre, env: custom, fetcher })(request(input))
  expect(r.status).toBe(200)
  expect(fetcher.mock.calls[1][0]).toContain('/models/ancien:generateContent')
@@ -145,22 +145,22 @@ test('Gemini : modèle actuel et repli borné si un ancien modèle renvoie 404',
 test('Gemini : aucun repli en cas de quota ou de permissions', async () => {
  for (const status of [403, 429]) {
   const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : new Response('', { status }))
-  const custom = k => k === 'EXAM_GEMINI_MODEL' ? 'ancien' : env(k)
+  const custom = k => k === 'EXAM_GENERATION_MODEL' ? 'ancien' : env(k)
   await createHandler({acces:accesLibre, env: custom, fetcher })(request(input))
   expect(fetcher).toHaveBeenCalledTimes(2)
  }
 })
 
-test('Gemini indisponible : une reprise différée puis une alternative Flash, délai borné', async () => {
+test('Gemini indisponible : génération sur une autre capacité sans répéter le modèle saturé', async () => {
  const pause = vi.fn(async () => {})
- const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : url.includes('3.6') ? new Response('', { status: 503 }) : Response.json({ candidates: [{ content: { parts: [{ text: JSON.stringify(exam()) }] } }] }))
+ const fetcher = vi.fn(async url => url.includes('/auth/v1/user') ? Response.json({ id: 'user' }) : url.includes('flash-lite') ? new Response('', { status: 503 }) : Response.json({ candidates: [{ content: { parts: [{ text: JSON.stringify(exam()) }] } }] }))
  const r = await createHandler({acces:accesLibre, env, fetcher, pause })(request(input))
  expect(r.status).toBe(200)
- expect(fetcher).toHaveBeenCalledTimes(4)
- expect(pause).toHaveBeenCalledTimes(1)
- expect(pause).toHaveBeenCalledWith(2500)
- expect(fetcher.mock.calls[3][0]).toContain('gemini-3.8-flash')
- expect(fetcher.mock.calls[1][1].signal).toBe(fetcher.mock.calls[3][1].signal)
+ expect(fetcher).toHaveBeenCalledTimes(3)
+ expect(pause).not.toHaveBeenCalled()
+ expect(fetcher.mock.calls[2][0]).toContain('gemini-3.6-flash')
+ expect(fetcher.mock.calls[1][1].signal).not.toBe(fetcher.mock.calls[2][1].signal)
+ expect(JSON.parse(fetcher.mock.calls[2][1].body).generationConfig.thinkingConfig).toEqual({thinkingLevel:'LOW'})
 })
 test('Gemini indisponible partout : appels bornés, aucune réponse factice', async () => {
  const pause = vi.fn(async () => {})
@@ -169,7 +169,7 @@ test('Gemini indisponible partout : appels bornés, aucune réponse factice', as
  expect(r.status).toBe(502)
  expect(await r.json()).toEqual({ error: 'provider_unavailable' })
  expect(fetcher).toHaveBeenCalledTimes(4)
- expect(pause).toHaveBeenCalledTimes(1)
+ expect(pause).not.toHaveBeenCalled()
 })
 
 describe('Groq', () => {
@@ -270,4 +270,36 @@ describe('dossier et correction multimodale', () => {
 test('les cinq langues couvrent les libellés du dépôt de copie', async () => {
  const { copyMessages } = await import('../src/i18n/copies.js')
  for (const dict of Object.values(copyMessages)) { expect(Object.keys(dict)).toEqual(Object.keys(copyMessages.fr)); expect(Object.values(dict).every(Boolean)).toBe(true) }
+})
+
+test('génération : deuxième capacité saturée, troisième modèle borné et une seule réservation', async () => {
+ const rendre=vi.fn(async()=>{}),acces=vi.fn(async()=>({ok:true,rendre}))
+ const fetcher=vi.fn(async url=>url.includes('/auth/v1/user')?Response.json({id:'user'}):url.includes('3.5-flash:')?Response.json({candidates:[{content:{parts:[{text:JSON.stringify(exam())}]}}]}):new Response('',{status:503}))
+ const r=await createHandler({env,fetcher,acces})(request(input))
+ expect(r.status).toBe(200)
+ expect(fetcher.mock.calls.filter(c=>c[0].includes(':generateContent')).map(c=>c[0].match(/models\/(.+):/)[1])).toEqual(['gemini-3.5-flash-lite','gemini-3.6-flash','gemini-3.5-flash'])
+ expect(acces).toHaveBeenCalledTimes(1)
+ expect(rendre).not.toHaveBeenCalled()
+})
+test('génération : panne de tous les modèles, réservation rendue une seule fois', async () => {
+ const rendre=vi.fn(async()=>{}),acces=vi.fn(async()=>({ok:true,rendre}))
+ const fetcher=vi.fn(async url=>url.includes('/auth/v1/user')?Response.json({id:'user'}):new Response('',{status:503}))
+ const r=await createHandler({env,fetcher,acces})(request(input))
+ expect(r.status).toBe(502)
+ expect(await r.json()).toEqual({error:'provider_unavailable'})
+ expect(acces).toHaveBeenCalledTimes(1)
+ expect(rendre).toHaveBeenCalledTimes(1)
+})
+
+
+test('génération : une tentative bloquée bascule sans attendre la limite du worker', async()=>{
+ const timeout=vi.spyOn(AbortSignal,'timeout')
+ const fetcher=vi.fn(async url=>url.includes('/auth/v1/user')?Response.json({id:'user'}):url.includes('flash-lite')?Promise.reject(new DOMException('timeout','TimeoutError')):Response.json({candidates:[{content:{parts:[{text:JSON.stringify(exam())}]}}]}))
+ try {
+  const r=await createHandler({env,fetcher,acces:accesLibre})(request(input))
+  expect(r.status).toBe(200)
+  expect(fetcher).toHaveBeenCalledTimes(3)
+  expect(timeout).toHaveBeenCalledWith(90000)
+  expect(timeout).toHaveBeenCalledWith(35000)
+ } finally {timeout.mockRestore()}
 })

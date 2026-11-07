@@ -38,7 +38,12 @@ test('pas de distracteurs temporels équivalents sur plusieurs tirages',()=>{
  const t=C.ALL_CHAPTERS['hg-h3'];const ch=C.themeChapters(t).find(ch=>JSON.stringify(ch.section).includes('Les **années 1950-1960**'))
  expect(ch).toBeTruthy()
  for(let n=0;n<20;n++)avecGraine(String(n),()=>{
-  for(const g of C.jeuxDuChapitre(ch,t))for(const q of g.questions||[])if(q.choices&&q.choices.some(x=>/années 1950-1960/.test(x)))expect(q.choices).not.toContain('Trente Glorieuses')
+  for(const g of C.jeuxDuChapitre(ch,t))for(const q of g.questions||[])if(q.choices){
+   // Exclure une autre bonne formulation ; deux distracteurs faux n'en sont pas une.
+   const bonne=q.choices[q.answer]
+   if(/années 1950-1960/.test(bonne))expect(q.choices).not.toContain('Trente Glorieuses')
+   if(bonne==='Trente Glorieuses')expect(q.choices.some(x=>/années 1950-1960/.test(x))).toBe(false)
+  }
  })
 })
 test('programmes 2026-2027 : parcours et exercices correspondent au niveau',()=>{
