@@ -235,7 +235,7 @@
         "blocks": [
           {
             "t": "p",
-            "c": "Pour parler juste du chômage, il faut d’abord définir **qui compte dans quoi**. Au sens du **BIT** (Bureau international du travail), un **chômeur** est une personne sans emploi, **disponible** et qui **recherche activement** du travail."
+            "c": "Au sens du **BIT**, une personne de **15 ans ou plus** est au chômage si elle est **sans emploi** pendant la semaine de référence, **disponible dans les deux semaines**, et a recherché activement un emploi au cours des **quatre dernières semaines** ou en a déjà trouvé un commençant dans **moins de trois mois**."
           },
           {
             "t": "table",
@@ -250,11 +250,11 @@
               ],
               [
                 "**Chômeurs**",
-                "Sans emploi, disponibles et en recherche active"
+                "Sans emploi, disponibles sous deux semaines, en recherche active récente ou ayant trouvé un emploi commençant dans moins de trois mois"
               ],
               [
                 "**Inactifs**",
-                "Ni en emploi ni au chômage BIT ; par exemple un étudiant sans emploi ne recherchant pas de travail"
+                "Ni en emploi ni au chômage BIT ; par exemple un étudiant sans emploi qui ne souhaite pas travailler"
               ]
             ]
           },
@@ -338,7 +338,7 @@
               ],
               [
                 "Chômeur (BIT)",
-                "Personne sans emploi, disponible et en recherche active"
+                "Personne de 15 ans ou plus, sans emploi la semaine de référence, disponible sous deux semaines, ayant recherché un emploi dans les quatre dernières semaines ou en ayant trouvé un commençant dans moins de trois mois."
               ],
               [
                 "Taux de chômage",
@@ -664,7 +664,7 @@
               ],
               [
                 "IDH",
-                "Indice de développement humain (revenu + santé + éducation)"
+                "Indice de développement humain combinant santé, éducation et niveau de vie"
               ],
               [
                 "Développement durable",

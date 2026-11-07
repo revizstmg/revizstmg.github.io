@@ -46,12 +46,12 @@
         },
         {
           "t": "p",
-          "c": "Conséquences : l’inflation **érode le pouvoir d’achat** (surtout des revenus fixes), crée de l’**incertitude**, et peut nuire à la **compétitivité**. Mais une inflation **modérée** accompagne la croissance ; à l’inverse, la **déflation** (baisse des prix) pousse à reporter les achats et peut enfoncer l’économie dans la récession."
+          "c": "À revenu nominal inchangé, l’inflation **réduit le pouvoir d’achat** ; si le revenu progresse plus vite que les prix, celui-ci peut augmenter. Une forte inflation peut créer de l’incertitude et nuire à la compétitivité. Une inflation modérée peut accompagner la croissance. La **déflation**, baisse générale et durable des prix, peut encourager le report des achats et aggraver un ralentissement."
         },
         {
           "t": "tip",
           "h": "À retenir",
-          "c": "Inflation = hausse **générale et durable** des prix. Causes : **demande**, **coûts**, **monnaie**. Elle érode le **pouvoir d’achat**. La BCE la combat en **relevant ses taux**."
+          "c": "L’**inflation** est une hausse générale et durable des prix. Ses causes peuvent tenir à la demande, aux coûts ou aux conditions monétaires. Son effet sur le **pouvoir d’achat** dépend de l’évolution comparée des revenus et des prix. La BCE peut relever ses taux pour modérer les tensions inflationnistes."
         },
         {
           "t": "table",
@@ -197,7 +197,7 @@
         {
           "t": "warning",
           "h": "Piège",
-          "c": "Le **taux de chômage** ne se calcule PAS sur la population totale ni sur les 15-64 ans, mais sur la **population active**. Les trois taux ont des dénominateurs différents."
+          "c": "Le **taux de chômage** rapporte les chômeurs à la **population active** de la tranche d’âge retenue. Les taux **d’activité** et **d’emploi** utilisent tous deux la **population de cette tranche d’âge** comme dénominateur. À périmètre identique, seuls les numérateurs diffèrent entre activité et emploi : actifs pour le premier, personnes en emploi pour le second."
         }
       ]
     }

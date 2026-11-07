@@ -64,7 +64,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "Dépenser plus qu’on ne gagne creuse le **déficit** chaque année ; les déficits accumulés forment la **dette**. La France s’endette pour financer ces politiques, ce qui alimente un débat permanent : jusqu’où l’État peut-il intervenir sans fragiliser ses finances ?"
+          "c": "Lorsque les dépenses des administrations publiques dépassent leurs recettes sur une année, elles enregistrent un **déficit**. Les déficits contribuent généralement à accroître la **dette publique**, dont l’évolution dépend aussi d’autres opérations financières. Le financement de ces politiques suscite un débat sur les marges de manœuvre de l’État et la soutenabilité des finances publiques."
         },
         {
           "t": "p",
@@ -85,11 +85,11 @@
         {
           "t": "example",
           "h": "Cas",
-          "c": "Trois personnes sans emploi : un étudiant qui ne cherche pas de travail, un retraité qui ne souhaite pas travailler et une femme de 30 ans qui postule activement depuis quatre semaines et est disponible dans les deux semaines. Laquelle est chômeuse au sens du BIT ?"
+          "c": "Trois personnes sans emploi : un étudiant qui ne souhaite pas travailler, un retraité qui ne souhaite pas travailler et une femme de 30 ans qui postule activement depuis quatre semaines et est disponible dans les deux semaines. Laquelle est chômeuse au sens du BIT ?"
         },
         {
           "t": "p",
-          "c": "Dans **cet exemple**, seule la troisième remplit les critères : être **sans emploi**, disponible dans les **deux semaines** et avoir recherché activement un emploi au cours des **quatre dernières semaines**. Une personne disponible ayant déjà trouvé un emploi qui commence dans les trois mois est aussi comptée. L’étudiant et le retraité décrits ici sont **inactifs** parce qu’ils ne remplissent pas ces critères, pas du seul fait de leur statut."
+          "c": "Au sens du Bureau international du travail (**BIT**), une personne de **15 ans ou plus** est au chômage si elle est **sans emploi** pendant la semaine de référence, **disponible dans les deux semaines**, et a recherché activement un emploi au cours des **quatre dernières semaines** ou en a déjà trouvé un commençant dans **moins de trois mois**. Dans la situation décrite, seule la troisième personne remplit ces critères. L’étudiant et le retraité sont ici inactifs faute de les remplir, pas du seul fait de leur statut."
         },
         {
           "t": "p",
@@ -98,7 +98,7 @@
         {
           "t": "tip",
           "h": "Pourquoi ça compte",
-          "c": "Le **halo du chômage** regroupe des personnes sans emploi non comptées comme chômeurs (elles ne cherchent pas activement, ou ne sont pas disponibles) : le chiffre officiel **ne recense pas** toutes les personnes sans emploi qui souhaiteraient travailler."
+          "c": "Le **halo autour du chômage** regroupe des personnes sans emploi qui **souhaitent travailler**, mais ne remplissent pas tous les critères du chômage BIT. Il ne faut donc pas assimiler toutes les personnes sans emploi à des chômeurs, ni toutes les personnes sans recherche active au halo."
         }
       ]
     },
@@ -267,7 +267,7 @@
         {
           "t": "tip",
           "h": "Mesurer autrement",
-          "c": "On utilise aussi l’**IDH** (santé + éducation + revenu) pour parler de **développement**, et pas seulement de croissance. Croiser plusieurs indicateurs donne une image plus juste."
+          "c": "L’**IDH** combine trois dimensions : **santé**, **éducation** et **niveau de vie**. Il renseigne sur le **développement**, au-delà de la seule croissance. Croiser plusieurs indicateurs donne une image plus juste."
         }
       ]
     },

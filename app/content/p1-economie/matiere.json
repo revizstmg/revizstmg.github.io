@@ -118,7 +118,7 @@
             },
             {
               "t": "p",
-              "c": "Il combine des **facteurs de production** : le **travail** (les salariés) et le **capital** (machines, locaux). Il cherche la combinaison la plus **efficiente** (le meilleur résultat au moindre coût)."
+              "c": "Il combine des **facteurs de production** : le **travail** (activité humaine salariée ou non salariée) et le **capital fixe** (actifs productifs durables, comme les machines, locaux et logiciels). Il cherche une combinaison **efficiente**, adaptée à ses objectifs et à ses coûts."
             }
           ]
         },
@@ -372,11 +372,11 @@
             },
             {
               "t": "p",
-              "c": "Le **facteur travail** correspond à la **main-d’œuvre**, c’est-à-dire aux salariés ; on le mesure en **heures travaillées** et en **qualification**. Le **facteur capital** correspond aux **moyens matériels durables** de la production : les **machines**, les **bâtiments**, les **outils**, les **logiciels**."
+              "c": "Le **facteur travail** désigne l’activité humaine mobilisée dans la production, **salariée ou non salariée** ; sa quantité se mesure notamment en heures travaillées et sa qualité dépend des qualifications. Le **capital fixe** regroupe des actifs productifs durables, **corporels ou incorporels** : machines, bâtiments, outils et logiciels."
             },
             {
               "t": "p",
-              "c": "On distingue le **capital fixe** (machines, bâtiments, qui durent plusieurs cycles) du **capital circulant** (matières premières, consommées dans la production). Augmenter le stock de capital, c’est **investir**."
+              "c": "Le **capital fixe** est utilisé pendant plusieurs cycles de production, contrairement au **capital circulant**, comme les matières premières consommées dans la production. **Investir** consiste à acquérir, renouveler ou améliorer des actifs productifs durables. Le remplacement d’une machine usée est aussi un investissement, même si le stock de capital net n’augmente pas."
             },
             {
               "t": "table",
@@ -392,11 +392,11 @@
                 ],
                 [
                   "Facteur travail",
-                  "Main-d’œuvre (heures travaillées, qualification)"
+                  "Activité humaine salariée ou non salariée ; quantité d’heures et qualifications"
                 ],
                 [
                   "Facteur capital",
-                  "Moyens matériels durables (machines, bâtiments, logiciels)"
+                  "Actifs productifs durables corporels ou incorporels : machines, bâtiments, logiciels"
                 ],
                 [
                   "Capital fixe / circulant",
@@ -404,7 +404,7 @@
                 ],
                 [
                   "Investir",
-                  "Augmenter le stock de capital"
+                  "Acquérir, renouveler ou améliorer des actifs productifs durables, y compris par remplacement"
                 ]
               ]
             }
@@ -507,7 +507,7 @@
             {
               "t": "list",
               "c": [
-                "il ignore le **travail non rémunéré** (bénévolat, tâches domestiques) et l’**économie souterraine** ;",
+                "il ne comptabilise généralement pas les **services domestiques non rémunérés**. L’**activité dissimulée** n’est pas exclue par définition : les comptes nationaux l’estiment et l’intègrent, avec une incertitude de mesure ;",
                 "il ne dit rien des **inégalités** de répartition (un PIB élevé peut cacher de fortes inégalités) ;",
                 "il ne mesure pas le **bien-être** ni la qualité de vie ;",
                 "il **ignore les dégâts environnementaux** (une marée noire peut même faire monter le PIB via les dépenses de nettoyage !)."
@@ -1025,7 +1025,7 @@
             },
             {
               "t": "p",
-              "c": "L’**obligation** est un **titre de dette** : elle correspond à un **prêt** fait à l’entreprise ou à l’État, et l’obligataire est un **créancier**. Elle rapporte un **intérêt fixé d’avance** et son **remboursement est prévu** : c’est un placement **plus sûr**."
+              "c": "L’**obligation** est un **titre de dette** : son détenteur est un **créancier** de l’émetteur. Les conditions de rémunération et de remboursement sont prévues à l’émission. Le coupon peut être **fixe ou variable** ; certaines obligations sont indexées ou à coupon zéro. L’émetteur peut faire défaut et une revente avant l’échéance peut entraîner une **perte en capital** : ce placement n’est pas sans risque."
             },
             {
               "t": "warning",
@@ -1045,7 +1045,7 @@
                 ],
                 [
                   "Obligation",
-                  "Titre de dette ; rapporte un intérêt fixé d’avance ; plus sûr"
+                  "Titre de dette ; coupon fixe ou variable selon le contrat, parfois nul ; risques de défaut et de perte en capital"
                 ],
                 [
                   "Dividende",
@@ -1090,7 +1090,7 @@
           "blocks": [
             {
               "t": "p",
-              "c": "La **banque centrale** (la **BCE**, Banque Centrale Européenne, pour la zone euro) supervise les banques et pilote la **politique monétaire**. Son principal outil : les **taux directeurs**, le taux auquel les banques se refinancent auprès d’elle."
+              "c": "En zone euro, la **BCE** et les banques centrales nationales forment l’**Eurosystème**, qui conduit la **politique monétaire**. Les **taux directeurs** concernent les dépôts et les emprunts des banques auprès de la banque centrale : **facilité de dépôt**, opérations principales de **refinancement** et facilité de **prêt marginal**. Ils influencent les taux du marché et les conditions de financement de l’économie."
             },
             {
               "t": "p",
@@ -1118,7 +1118,7 @@
                 ],
                 [
                   "Taux directeur",
-                  "Taux auquel les banques se refinancent auprès de la banque centrale"
+                  "Taux fixés par la banque centrale pour les dépôts et les emprunts des banques auprès d’elle : dépôt, refinancement et prêt marginal"
                 ],
                 [
                   "Baisse des taux",

@@ -642,7 +642,7 @@
           "blocks": [
             {
               "t": "p",
-              "c": "Chaque grand sujet d’actualité se rattache à un chapitre du programme. L’**inflation** et la hausse des prix renvoient au **rôle de l’État** et au **pouvoir d’achat** : la hausse des prix réduit le pouvoir d’achat et appelle une réponse, par des aides ou par la politique monétaire. Les **taux d’intérêt de la BCE** renvoient au **financement** et à la **politique monétaire** : relever les taux freine l’inflation mais rend le crédit plus cher."
+              "c": "Chaque sujet d’actualité se rattache à un chapitre du programme. L’**inflation** renvoie au **rôle de l’État** et au **pouvoir d’achat** : à revenu nominal inchangé, la hausse des prix réduit le pouvoir d’achat ; l’effet réel dépend de l’évolution des revenus. Des aides publiques ou des décisions monétaires peuvent être envisagées selon le contexte. Les **taux directeurs de la BCE** influencent le financement : une hausse tend à freiner la demande et les tensions inflationnistes, mais rend généralement le crédit plus cher."
             },
             {
               "t": "p",
@@ -693,7 +693,7 @@
                 "la concurrence déloyale"
               ],
               "answer": 0,
-              "explain": "L’inflation réduit le pouvoir d’achat et appelle une réponse (aides, taux d’intérêt)."
+              "explain": "À revenu nominal inchangé, l’inflation réduit le pouvoir d’achat. L’évolution réelle dépend de celle des revenus et des prix ; aides budgétaires et décisions monétaires peuvent répondre à la situation selon le contexte."
             },
             {
               "q": "La BCE relève ses taux d’intérêt principalement pour…",

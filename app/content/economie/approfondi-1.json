@@ -215,7 +215,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "La **population active** regroupe les personnes **en emploi** et les **chômeurs au sens du BIT**. Pour être chômeur BIT, il faut être sans emploi, disponible dans les **deux semaines**, et avoir recherché activement un emploi dans les **quatre dernières semaines**, ou en avoir trouvé un qui commence dans les **trois mois**. Les autres personnes sont **inactives**. Être étudiant, retraité ou au foyer ne suffit pas à déterminer ce classement."
+          "c": "La **population active** regroupe les personnes **en emploi** et les **chômeurs au sens du BIT**. Au sens du **BIT**, une personne de **15 ans ou plus** est au chômage si elle est **sans emploi** pendant la semaine de référence, **disponible dans les deux semaines**, et a recherché activement un emploi au cours des **quatre dernières semaines** ou en a déjà trouvé un commençant dans **moins de trois mois**. Les autres personnes sont **inactives**. Être étudiant, retraité ou au foyer ne suffit pas à déterminer ce classement."
         },
         {
           "t": "formula",
@@ -223,7 +223,7 @@
         },
         {
           "t": "p",
-          "c": "Au sens du **BIT (Bureau International du Travail)**, est **chômeur** une personne qui, simultanément : est **sans emploi**, est **disponible** pour travailler, et **recherche activement** un emploi. Cette définition internationale permet de **comparer** les pays."
+          "c": "Au sens du **BIT**, une personne de **15 ans ou plus** est au chômage si elle est **sans emploi** pendant la semaine de référence, **disponible dans les deux semaines**, et a recherché activement un emploi au cours des **quatre dernières semaines** ou en a déjà trouvé un commençant dans **moins de trois mois**. Cette définition permet de comparer les pays à périmètre comparable."
         },
         {
           "t": "formula",
@@ -748,7 +748,7 @@
         {
           "t": "tip",
           "h": "À retenir",
-          "c": "IDH = **santé + éducation + revenu** (entre 0 et 1). Pour juger le développement, **croiser** PIB, IDH, empreinte écologique et inégalités."
+          "c": "L’**IDH** combine trois dimensions : **santé**, **éducation** et **niveau de vie**. Cet indice varie entre 0 et 1 ; il ne s’obtient pas en additionnant directement ces dimensions. Pour analyser le développement, croiser PIB, IDH, empreinte écologique et inégalités."
         }
       ]
     },
