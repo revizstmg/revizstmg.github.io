@@ -864,7 +864,7 @@
         {
           "id": "d4",
           "title": "Document 4 : Un autre événement, sans contrat (cas fictif)",
-          "text": "Le véhicule personnel de Léa, qui n’a aucun contrat avec EquipPro, est endommagé lorsqu’un dirigeant d’EquipPro manœuvre imprudemment sa propre voiture sur le parking. Un constat établit la manœuvre fautive et le lien avec les dégâts ; un devis de réparation s’élève à 800 euros. Pour ce cas simplifié, raisonner sur le fait personnel au titre de l’article 1240, sans appliquer un régime spécial d’accident de la circulation."
+          "text": "Lors d’une rencontre entre voisins, Raphaël renverse par négligence sa tasse de café sur l’ordinateur de Léa. Aucun contrat ne lie ces deux personnes pour cet événement. Raphaël reconnaît le geste imprudent et un témoin confirme que le liquide a endommagé l’ordinateur. Un devis de remise en état s’élève à 800 euros. Le sujet porte sur la responsabilité du fait personnel au titre de l’article 1240 du Code civil ; aucun fait ne permet de retenir un cas de force majeure ou une faute de Léa."
         }
       ],
       "questions": [
@@ -924,7 +924,7 @@
           ],
           "enonce": "Analysez la responsabilité du fait personnel en distinguant fait générateur, dommage et lien de causalité.",
           "points": 4,
-          "correction": "Dans le cadre simplifié imposé, la manœuvre imprudente est le fait fautif. Les dégâts au véhicule constituent le dommage matériel ; le devis de 800 euros est un élément d’évaluation. Le constat relie les dégâts à la manœuvre : lien de causalité. Aucun contrat ne lie Léa à l’auteur pour cet événement, ce qui oriente vers la responsabilité extracontractuelle. La réparation doit correspondre au préjudice établi, pas à une punition.",
+          "correction": "Le geste imprudent de Raphaël constitue le fait fautif. Les dégâts à l’ordinateur sont un dommage matériel ; le devis de 800 euros est un élément d’évaluation. La reconnaissance du geste et le témoignage relient les dégâts au café renversé : lien de causalité. Aucun contrat ne lie Léa à Raphaël pour cet événement, ce qui oriente vers la responsabilité extracontractuelle du fait personnel. La réparation doit correspondre au préjudice établi, pas à une punition.",
           "criteria": [
             "Faute : 1 point.",
             "Dommage caractérisé : 1 point.",
@@ -1658,7 +1658,7 @@
         {
           "id": "p1-d4",
           "title": "Document 4 : Un autre événement, sans contrat (cas fictif)",
-          "text": "Le véhicule personnel de Léa, qui n’a aucun contrat avec EquipPro, est endommagé lorsqu’un dirigeant d’EquipPro manœuvre imprudemment sa propre voiture sur le parking. Un constat établit la manœuvre fautive et le lien avec les dégâts ; un devis de réparation s’élève à 800 euros. Pour ce cas simplifié, raisonner sur le fait personnel au titre de l’article 1240, sans appliquer un régime spécial d’accident de la circulation."
+          "text": "Lors d’une rencontre entre voisins, Raphaël renverse par négligence sa tasse de café sur l’ordinateur de Léa. Aucun contrat ne lie ces deux personnes pour cet événement. Raphaël reconnaît le geste imprudent et un témoin confirme que le liquide a endommagé l’ordinateur. Un devis de remise en état s’élève à 800 euros. Le sujet porte sur la responsabilité du fait personnel au titre de l’article 1240 du Code civil ; aucun fait ne permet de retenir un cas de force majeure ou une faute de Léa."
         },
         {
           "id": "p2-d1",
@@ -1738,7 +1738,7 @@
           ],
           "enonce": "Partie 1 : Analysez la responsabilité du fait personnel en distinguant fait générateur, dommage et lien de causalité.",
           "points": 2.0,
-          "correction": "Dans le cadre simplifié imposé, la manœuvre imprudente est le fait fautif. Les dégâts au véhicule constituent le dommage matériel ; le devis de 800 euros est un élément d’évaluation. Le constat relie les dégâts à la manœuvre : lien de causalité. Aucun contrat ne lie Léa à l’auteur pour cet événement, ce qui oriente vers la responsabilité extracontractuelle. La réparation doit correspondre au préjudice établi, pas à une punition.",
+          "correction": "Le geste imprudent de Raphaël constitue le fait fautif. Les dégâts à l’ordinateur sont un dommage matériel ; le devis de 800 euros est un élément d’évaluation. La reconnaissance du geste et le témoignage relient les dégâts au café renversé : lien de causalité. Aucun contrat ne lie Léa à Raphaël pour cet événement, ce qui oriente vers la responsabilité extracontractuelle du fait personnel. La réparation doit correspondre au préjudice établi, pas à une punition.",
           "criteria": [
             "Faute : 0,5 point.",
             "Dommage caractérisé : 0,5 point.",
