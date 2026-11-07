@@ -1,3 +1,4 @@
+import {genererSujetsPrets} from './sujets-prets.mjs'
 // Génération statique adaptée du travail de Claude (#41), sur le contenu courant.
 import {mkdirSync,writeFileSync,rmSync,copyFileSync,readFileSync,readdirSync} from 'node:fs'
 import {fileURLToPath} from 'node:url'
@@ -29,3 +30,5 @@ html=html.replace('</head>',preloadFonts+'\n<style>.public-entry{max-width:850px
 writeFileSync(root,html)
 writeFileSync(join(DIST,'llms.txt'),`# RévizSTMG\n\n> Cours publics de Première et Terminale STMG. Projet indépendant d’un élève, sans certification professorale revendiquée.\n\nLes pages HTML de cours sont lisibles sans JavaScript et reprennent le contenu courant de l’application. Les exercices interactifs nécessitent JavaScript. Les sources et limites sont précisées dans chaque fiche et la page À propos.\n\n- [Tous les cours](${SITE}/cours/)\n- [Auteurs, méthode et sources](${SITE}/a-propos/)\n- [Sitemap](${SITE}/sitemap.xml)\n${matieres.map(m=>`- [${m.s.name} ${m.niveau}](${SITE}${m.chemin})`).join('\n')}\n- [Guides de langues](${SITE}/cours/langues/)\n`)
 console.log(`[pages-cours] ${pages.length} pages HTML publiques, sitemap XML/texte, guides PDF et llms.txt générés`)
+
+genererSujetsPrets(DIST)

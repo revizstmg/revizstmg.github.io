@@ -1,0 +1,112 @@
+[
+  {
+    "id": "premiere-management",
+    "level": "premiere",
+    "subject": "Management",
+    "summary": "Organisations, ressources, décisions et diagnostic.",
+    "duration": 60,
+    "title": "Cycléo : organiser et décider",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "premiere-gestion",
+    "level": "premiere",
+    "subject": "Sciences de gestion et numérique",
+    "summary": "Valeur ajoutée, performance et information.",
+    "duration": 60,
+    "title": "Atelier Lune : créer de la valeur",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "premiere-droit",
+    "level": "premiere",
+    "subject": "Droit",
+    "summary": "Qualification, preuve, résolution du litige et patrimoine.",
+    "duration": 60,
+    "title": "Une vente contestée : litige et preuve",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "premiere-economie",
+    "level": "premiere",
+    "subject": "Économie",
+    "summary": "Revenus, redistribution, consommation et épargne.",
+    "duration": 60,
+    "title": "Le budget des ménages",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "terminale-management",
+    "level": "terminale",
+    "subject": "Management",
+    "summary": "Diagnostic, différenciation, ressources et RSE.",
+    "duration": 60,
+    "title": "Nova : stratégie et performance",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "terminale-droit",
+    "level": "terminale",
+    "subject": "Droit",
+    "summary": "Contrat, inexécution et responsabilité civile.",
+    "duration": 60,
+    "title": "Une commande non livrée",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "terminale-economie",
+    "level": "terminale",
+    "subject": "Économie",
+    "summary": "Mesurer le chômage et discuter les politiques économiques.",
+    "duration": 60,
+    "title": "Emploi et politiques publiques",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "terminale-gf",
+    "level": "terminale",
+    "subject": "Gestion et finance",
+    "summary": "TVA, amortissement, équilibre financier et rentabilité.",
+    "duration": 60,
+    "title": "ÉquiPro : calculer et décider",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "premiere-droit-economie",
+    "level": "premiere",
+    "subject": "Droit et économie",
+    "summary": "Litige, preuve, revenus et épargne.",
+    "duration": 120,
+    "title": "Droit et économie : les fondamentaux",
+    "documents": 8,
+    "questions": 12
+  },
+  {
+    "id": "terminale-droit-economie",
+    "level": "terminale",
+    "subject": "Droit et économie",
+    "summary": "Contrat, responsabilité, chômage et politiques publiques.",
+    "duration": 120,
+    "title": "Droit et économie : entraînement complet",
+    "documents": 8,
+    "questions": 12
+  },
+  {
+    "id": "terminale-management-bilan",
+    "level": "terminale",
+    "subject": "Management",
+    "summary": "Réviser les notions de Première et leur mobilisation en Terminale.",
+    "duration": 120,
+    "title": "Management : bases et stratégie",
+    "documents": 8,
+    "questions": 12
+  }
+]

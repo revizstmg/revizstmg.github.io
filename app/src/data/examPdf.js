@@ -4,7 +4,7 @@ import { jsPDF } from 'jspdf'
 const clean = s => String(s ?? '').replace(/\*\*/g, '').replace(/[‐‑–—]/g, '-').replace(/\u00a0/g, ' ').replace(/→/g, ' : ')
 export function buildExamPdf(draft, correction = false) {
   const doc = new jsPDF({ unit: 'mm', format: 'a4', compress: true })
-  doc.setProperties({ title: `${correction ? 'Corrigé' : 'Sujet'} - ${draft.exam.title}`, author: 'RévizSTMG', subject: 'Examen blanc personnalisé - entraînement non officiel' })
+  doc.setProperties({ title: `${correction ? 'Corrigé' : 'Sujet'} - ${draft.exam.title}`, author: 'RévizSTMG', subject: draft.kind === 'ready' ? 'Sujet prêt - entraînement non officiel' : 'Examen blanc personnalisé - entraînement non officiel' })
   const left = 22, width = 166, bottom = 272
   let y = 25
   const page = () => { doc.addPage(); y = 24 }
@@ -19,13 +19,13 @@ export function buildExamPdf(draft, correction = false) {
   }
   const heading = value => { if (y > bottom - 25) page(); y += 5; text(value, 13, true, 4) }
   text('BACCALAURÉAT TECHNOLOGIQUE · STMG', 15, true)
-  text('EXAMEN BLANC PERSONNALISÉ', 11, true)
+  text(draft.kind === 'ready' ? 'SUJET D’ENTRAÎNEMENT' : 'EXAMEN BLANC PERSONNALISÉ', 11, true)
   y += 10
   text(correction ? 'ÉLÉMENTS DE CORRECTION' : 'SUJET', 20, true)
   text(draft.exam.title, 17, true)
   y += 8; rule()
   text(`Durée : ${draft.duration} minutes                  Barème : 20 points`, 12, true)
-  text('Entraînement RévizSTMG généré avec l’aide de l’IA. Document non officiel.', 10)
+  text(draft.kind === 'ready' ? 'Sujet préconçu RévizSTMG. Cas fictifs. Document non officiel.' : 'Entraînement RévizSTMG généré avec l’aide de l’IA. Document non officiel.', 10)
   if (correction) text('Proposition de correction et critères d’auto-évaluation. À vérifier avec le cours ; ne constitue pas un barème officiel.', 11)
   else {
     text('Répondez sur une copie séparée. Numérotez vos réponses et justifiez votre raisonnement à partir des documents et de vos connaissances.', 12)
