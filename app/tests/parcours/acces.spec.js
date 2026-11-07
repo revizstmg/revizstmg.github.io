@@ -122,7 +122,7 @@ test('offres : les prix sont affichés à tous, sans être connecté ni abonné'
   await preparer(page, etatEleve({ account: null }), { abonnement: null })
   await page.goto('./#/offres')
   await expect(page.getByText('0 €, sans carte bancaire')).toBeVisible()
-  await expect(page.getByText('9,99 € TTC par mois, sans engagement')).toBeVisible()
+  await expect(page.getByText('9,99 € TTC par mois, sans engagement', { exact: true })).toBeVisible()
   await expect(page.getByText('19,99 € TTC par mois, sans engagement')).toBeVisible()
 })
 
