@@ -1,25 +1,5 @@
 [
   {
-    "id": "premiere-management",
-    "level": "premiere",
-    "subject": "Management",
-    "summary": "Organisations, ressources, décisions et diagnostic.",
-    "duration": 60,
-    "title": "Cycléo : organiser et décider",
-    "documents": 4,
-    "questions": 6
-  },
-  {
-    "id": "premiere-gestion",
-    "level": "premiere",
-    "subject": "Sciences de gestion et numérique",
-    "summary": "Valeur ajoutée, performance et information.",
-    "duration": 60,
-    "title": "Atelier Lune : créer de la valeur",
-    "documents": 4,
-    "questions": 6
-  },
-  {
     "id": "premiere-droit",
     "level": "premiere",
     "subject": "Droit",
@@ -30,52 +10,12 @@
     "questions": 6
   },
   {
-    "id": "premiere-economie",
+    "id": "premiere-droit-2",
     "level": "premiere",
-    "subject": "Économie",
-    "summary": "Revenus, redistribution, consommation et épargne.",
-    "duration": 60,
-    "title": "Le budget des ménages",
-    "documents": 4,
-    "questions": 6
-  },
-  {
-    "id": "terminale-management",
-    "level": "terminale",
-    "subject": "Management",
-    "summary": "Diagnostic, différenciation, ressources et RSE.",
-    "duration": 60,
-    "title": "Nova : stratégie et performance",
-    "documents": 4,
-    "questions": 6
-  },
-  {
-    "id": "terminale-droit",
-    "level": "terminale",
     "subject": "Droit",
-    "summary": "Contrat, inexécution et responsabilité civile.",
+    "summary": "Personnalité juridique, patrimoine et propriété intellectuelle.",
     "duration": 60,
-    "title": "Une commande non livrée",
-    "documents": 4,
-    "questions": 6
-  },
-  {
-    "id": "terminale-economie",
-    "level": "terminale",
-    "subject": "Économie",
-    "summary": "Mesurer le chômage et discuter les politiques économiques.",
-    "duration": 60,
-    "title": "Emploi et politiques publiques",
-    "documents": 4,
-    "questions": 6
-  },
-  {
-    "id": "terminale-gf",
-    "level": "terminale",
-    "subject": "Gestion et finance",
-    "summary": "TVA, amortissement, équilibre financier et rentabilité.",
-    "duration": 60,
-    "title": "ÉquiPro : calculer et décider",
+    "title": "Studio Azur : personnes et créations",
     "documents": 4,
     "questions": 6
   },
@@ -90,6 +30,96 @@
     "questions": 12
   },
   {
+    "id": "premiere-droit-economie-2",
+    "level": "premiere",
+    "subject": "Droit et économie",
+    "summary": "Personnes, créations, financement et marché.",
+    "duration": 120,
+    "title": "Droit et économie : créer et financer",
+    "documents": 8,
+    "questions": 12
+  },
+  {
+    "id": "premiere-management",
+    "level": "premiere",
+    "subject": "Management",
+    "summary": "Organisations, ressources, décisions et diagnostic.",
+    "duration": 60,
+    "title": "Cycléo : organiser et décider",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "premiere-management-2",
+    "level": "premiere",
+    "subject": "Management",
+    "summary": "Différenciation, diversification et externalisation.",
+    "duration": 60,
+    "title": "Mosaïque : choisir sa stratégie",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "premiere-gestion",
+    "level": "premiere",
+    "subject": "Sciences de gestion et numérique",
+    "summary": "Valeur ajoutée, performance et information.",
+    "duration": 60,
+    "title": "Atelier Lune : créer de la valeur",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "premiere-gestion-2",
+    "level": "premiere",
+    "subject": "Sciences de gestion et numérique",
+    "summary": "Communication, PGI, sécurité et coopération.",
+    "duration": 60,
+    "title": "Relais : mieux travailler ensemble",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "premiere-economie",
+    "level": "premiere",
+    "subject": "Économie",
+    "summary": "Revenus, redistribution, consommation et épargne.",
+    "duration": 60,
+    "title": "Le budget des ménages",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "premiere-economie-2",
+    "level": "premiere",
+    "subject": "Économie",
+    "summary": "Financement, actions, obligations et prix d’équilibre.",
+    "duration": 60,
+    "title": "Financer et comprendre le marché",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "terminale-droit",
+    "level": "terminale",
+    "subject": "Droit",
+    "summary": "Contrat, inexécution et responsabilité civile.",
+    "duration": 60,
+    "title": "Une commande non livrée",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "terminale-droit-2",
+    "level": "terminale",
+    "subject": "Droit",
+    "summary": "Contrat de travail, subordination et rupture du CDI.",
+    "duration": 60,
+    "title": "Un emploi sous contrôle",
+    "documents": 4,
+    "questions": 6
+  },
+  {
     "id": "terminale-droit-economie",
     "level": "terminale",
     "subject": "Droit et économie",
@@ -100,6 +130,46 @@
     "questions": 12
   },
   {
+    "id": "terminale-droit-economie-2",
+    "level": "terminale",
+    "subject": "Droit et économie",
+    "summary": "Salariat, rupture, commerce et développement.",
+    "duration": 120,
+    "title": "Droit et économie : travail et échanges",
+    "documents": 8,
+    "questions": 12
+  },
+  {
+    "id": "terminale-gf",
+    "level": "terminale",
+    "subject": "Gestion et finance",
+    "summary": "TVA, amortissement, équilibre financier et rentabilité.",
+    "duration": 60,
+    "title": "ÉquiPro : calculer et décider",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "terminale-gf-2",
+    "level": "terminale",
+    "subject": "Gestion et finance",
+    "summary": "SIG, CAF, rentabilité et choix de financement.",
+    "duration": 60,
+    "title": "Lumen : financer son développement",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "terminale-management",
+    "level": "terminale",
+    "subject": "Management",
+    "summary": "Diagnostic, différenciation, ressources et RSE.",
+    "duration": 60,
+    "title": "Nova : stratégie et performance",
+    "documents": 4,
+    "questions": 6
+  },
+  {
     "id": "terminale-management-bilan",
     "level": "terminale",
     "subject": "Management",
@@ -108,5 +178,25 @@
     "title": "Management : bases et stratégie",
     "documents": 8,
     "questions": 12
+  },
+  {
+    "id": "terminale-economie",
+    "level": "terminale",
+    "subject": "Économie",
+    "summary": "Mesurer le chômage et discuter les politiques économiques.",
+    "duration": 60,
+    "title": "Emploi et politiques publiques",
+    "documents": 4,
+    "questions": 6
+  },
+  {
+    "id": "terminale-economie-2",
+    "level": "terminale",
+    "subject": "Économie",
+    "summary": "Commerce extérieur, croissance et externalités.",
+    "duration": 60,
+    "title": "Échanger et produire durablement",
+    "documents": 4,
+    "questions": 6
   }
 ]

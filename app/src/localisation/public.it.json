@@ -3313,5 +3313,8 @@
   "{count} questions": "{count} domande",
   "Télécharger le sujet": "Scarica la prova",
   "Télécharger le corrigé": "Scarica le soluzioni",
-  "Rédige sur une copie séparée. Le corrigé détaille le raisonnement et les points attendus.": "Scrivi su un foglio separato. Le soluzioni spiegano il ragionamento e i criteri di valutazione."
+  "Rédige sur une copie séparée. Le corrigé détaille le raisonnement et les points attendus.": "Scrivi su un foglio separato. Le soluzioni spiegano il ragionamento e i criteri di valutazione.",
+  "Deux sujets par matière. Choisis ton entraînement et ouvre le PDF, sans attendre.": "Due prove per materia. Scegli il tuo esercizio e apri subito il PDF.",
+  "Choisir une matière": "Scegli una materia",
+  "Droit et économie": "Diritto ed economia"
 }

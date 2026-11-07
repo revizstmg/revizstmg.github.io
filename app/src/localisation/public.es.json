@@ -3313,5 +3313,8 @@
   "{count} questions": "{count} preguntas",
   "Télécharger le sujet": "Descargar el examen",
   "Télécharger le corrigé": "Descargar las soluciones",
-  "Rédige sur une copie séparée. Le corrigé détaille le raisonnement et les points attendus.": "Responde en una hoja aparte. Las soluciones detallan el razonamiento y los criterios de puntuación."
+  "Rédige sur une copie séparée. Le corrigé détaille le raisonnement et les points attendus.": "Responde en una hoja aparte. Las soluciones detallan el razonamiento y los criterios de puntuación.",
+  "Deux sujets par matière. Choisis ton entraînement et ouvre le PDF, sans attendre.": "Dos exámenes por asignatura. Elige tu práctica y abre el PDF sin esperar.",
+  "Choisir une matière": "Elegir una asignatura",
+  "Droit et économie": "Derecho y economía"
 }

@@ -4194,5 +4194,8 @@
   "{count} questions": "{count} Fragen",
   "Télécharger le sujet": "Aufgaben herunterladen",
   "Télécharger le corrigé": "Lösungen herunterladen",
-  "Rédige sur une copie séparée. Le corrigé détaille le raisonnement et les points attendus.": "Schreibe auf ein separates Blatt. Der Lösungsvorschlag erläutert den Lösungsweg und die Bewertungskriterien."
+  "Rédige sur une copie séparée. Le corrigé détaille le raisonnement et les points attendus.": "Schreibe auf ein separates Blatt. Der Lösungsvorschlag erläutert den Lösungsweg und die Bewertungskriterien.",
+  "Deux sujets par matière. Choisis ton entraînement et ouvre le PDF, sans attendre.": "Zwei Aufgabenhefte pro Fach. Wähle dein Training und öffne das PDF sofort.",
+  "Choisir une matière": "Fach auswählen",
+  "Droit et économie": "Recht und Wirtschaft"
 }
