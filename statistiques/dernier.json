@@ -1,6 +1,6 @@
 {
- "date": "2026-11-06",
- "heure": "2026-11-06T12:42:28.830Z",
+ "date": "2026-11-07",
+ "heure": "2026-11-07T11:29:22.022Z",
  "utilisation": {
   "erreur": "Supabase injoignable (fetch failed)"
  },
@@ -10,8 +10,8 @@
   "premiere": 8,
   "themes": 110,
   "chapitres": 862,
-  "series": 3976,
-  "questions": 19181,
+  "series": 3978,
+  "questions": 19176,
   "flashcards": 2298
  },
  "publication": {
@@ -21,9 +21,9 @@
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-11-06T07:24:08Z"
+   "date": "2026-11-07T08:12:42Z"
   },
-  "modifications7j": 43
+  "modifications7j": 49
  },
  "tests": "success"
 }
