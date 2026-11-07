@@ -13,7 +13,7 @@
   <url><loc>https://revizstmg.github.io/cours/terminale/gestion-et-finance/appliquer-les-regles-comptables/le-role-de-la-comptabilite-comptes-pcg-et-normalisation/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/gestion-et-finance/appliquer-les-regles-comptables/le-mecanisme-de-la-tva-impot-indirect-paye-par-le-consommateur/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/gestion-et-finance/appliquer-les-regles-comptables/le-journal-enregistrer-une-operation-au-debit-et-au-credit/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/terminale/gestion-et-finance/appliquer-les-regles-comptables/amortissements-et-depreciations-pertes-de-valeur-irreversibles-ou/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/terminale/gestion-et-finance/appliquer-les-regles-comptables/amortissements-et-depreciations/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/gestion-et-finance/appliquer-les-regles-comptables/le-bilan-et-le-compte-de-resultat-patrimoine-charges-et-produits/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/gestion-et-finance/appliquer-les-regles-comptables/etude-de-cas-guidee-et-methode-calculer-et-commenter-un-resultat/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/gestion-et-finance/appliquer-les-regles-comptables/la-facture-remises-escompte-tva-et-net-a-payer/</loc></url>
@@ -249,9 +249,10 @@
   <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/suites-numeriques/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/suites-numeriques/arithmetique-ou-geometrique-raison-formule-et-croissance/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/suites-numeriques/pourcentage-constant-et-suite-geometrique-la-raison-q/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/suites-numeriques/exercice-type-guide-deux-placements-suite-arithmetique-ou-geometrique/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/suites-numeriques/exemple-comparaison-de-deux-effectifs-et-premier-depassement/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/suites-numeriques/les-suites-arithmetiques-et-geometriques-rang-et-recurrence/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/suites-numeriques/le-terme-general-u-et-la-somme-des-termes/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/suites-numeriques/exercice-type-guide-deux-placements-suite-arithmetique-ou-geometrique/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/suites-numeriques/sens-de-variation-d-une-suite-le-role-de-la-raison/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/suites-numeriques/interets-simples-et-interets-composes/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/suites-numeriques/somme-des-termes-d-une-suite-geometrique/</loc></url>
@@ -287,16 +288,12 @@
   <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/loi-binomiale/calculatrice-p-x-k-p-x-k-p-x-k/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/loi-binomiale/esperance-e-x-np-et-ecart-type/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/loi-binomiale/exercice-type-controle-qualite-au-moins-une-piece-defectueuse/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/loi-normale-et-estimation/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/loi-normale-et-estimation/la-loi-normale-moyenne-ecart-type-et-dispersion/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/loi-normale-et-estimation/estimation-et-intervalle-de-confiance/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/loi-normale-et-estimation/exemple-traite-sondage-frequence-observee-et-intervalle-de-confiance/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/loi-normale-et-estimation/la-loi-normale-la-courbe-en-cloche/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/loi-normale-et-estimation/exercice-type-guide-loi-normale-et-estimation-d-une-proportion/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/loi-normale-et-estimation/la-loi-normale-a-la-calculatrice/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/loi-normale-et-estimation/les-plages-68-95-99-7/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/loi-normale-et-estimation/l-intervalle-de-confiance-methode/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/loi-normale-et-estimation/exercice-type-sondage-un-resultat-non-significatif/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/chapitre-7-exponentielles-et-logarithme/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/chapitre-7-exponentielles-et-logarithme/fonctions-exponentielles-de-base-a/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/chapitre-7-exponentielles-et-logarithme/variations-des-exponentielles/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/chapitre-7-exponentielles-et-logarithme/logarithme-decimal/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/chapitre-7-exponentielles-et-logarithme/resoudre-une-equation-exponentielle/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/terminale/mathematiques/chapitre-7-exponentielles-et-logarithme/taux-moyen-et-durees/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/philosophie/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/philosophie/l-art/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/terminale/philosophie/l-art/l-art-oeuvre-et-objet-utile-beau-et-agreable/</loc></url>
@@ -766,15 +763,17 @@
   <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/second-degre-et-fonctions/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/second-degre-et-fonctions/la-parabole-et-le-sens-de-la-concavite/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/second-degre-et-fonctions/le-sommet-et-l-optimisation/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/second-degre-et-fonctions/exemple-traite-discriminant-racines-et-signe-d-un-trinome/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/second-degre-et-fonctions/racines-et-signe-sous-forme-factorisee/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/derivation/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/derivation/le-nombre-derive-et-la-tangente/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/derivation/signe-de-la-derivee-variations-et-extremum/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/derivation/exemple-traite-derivee-tableau-de-variations-et-minimum/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/statistiques-a-une-variable/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/statistiques-a-une-variable/les-indicateurs-de-position/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/statistiques-a-une-variable/les-indicateurs-de-dispersion-et-la-boite-a-moustaches/</loc></url>
-  <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/statistiques-a-une-variable/exemple-traite-moyenne-mediane-et-etendue-d-une-serie-de-notes/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/chapitre-5-statistiques-et-ajustement/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/chapitre-5-statistiques-et-ajustement/les-indicateurs-de-position/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/chapitre-5-statistiques-et-ajustement/les-indicateurs-de-dispersion-et-la-boite-a-moustaches/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/chapitre-5-statistiques-et-ajustement/deux-variables-et-point-moyen/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/chapitre-5-statistiques-et-ajustement/ajustement-affine-et-prevision/</loc></url>
+  <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/chapitre-5-statistiques-et-ajustement/exemple-traite-moyenne-mediane-et-etendue-d-une-serie-de-notes/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/probabilites/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/probabilites/probabilite-conditionnelle-et-arbre-pondere/</loc></url>
   <url><loc>https://revizstmg.github.io/cours/premiere/mathematiques/probabilites/independance-et-esperance/</loc></url>
