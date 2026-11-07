@@ -4166,5 +4166,13 @@
   "Deux séances par semaine, avec au moins un jour de récupération entre elles. L’effort ressenti va de 0 (repos) à 10 (maximum). Reste à une intensité confortable ; les pauses font partie du temps prévu. Arrête en cas de douleur ou de malaise.": "Zwei Einheiten pro Woche mit mindestens einem Erholungstag dazwischen. Das Belastungsgefühl reicht von 0 (Ruhe) bis 10 (Maximum). Bleibe bei angenehmer Intensität; Pausen gehören zur geplanten Zeit. Bei Schmerzen oder Unwohlsein aufhören.",
   "Proposition de préparation, à ajuster avec ton professeur. Elle ne garantit pas une note et ne remplace pas la pratique évaluée. Les séances ne sont pas enregistrées : imprime ton programme pour le garder.": "Ein Vorbereitungsvorschlag, den du mit deiner Lehrkraft anpasst. Er garantiert keine Note und ersetzt keine bewertete Praxis. Die Einheiten werden nicht gespeichert: Drucke deinen Plan aus, um ihn zu behalten.",
   "Références consultées le 3 novembre 2026. Le programme distingue cinq champs d’apprentissage ; les grilles locales complètent le cadre national.": "Quellen am 3. November 2026 geprüft. Der Lehrplan unterscheidet fünf Lernbereiche; lokale Raster ergänzen den nationalen Rahmen.",
-  "🏃 EPS": "🏃 Sport"
+  "🏃 EPS": "🏃 Sport",
+  "Besoin en fonds de roulement d’exploitation (BFRE)": "Betrieblicher Nettoumlaufmittelbedarf (BFRE)",
+  "PIB aux prix du marché": "BIP zu Marktpreisen",
+  "Somme des VA + Impôts sur les produits − Subventions sur les produits": "Summe der Bruttowertschöpfung + Gütersteuern − Gütersubventionen",
+  "Exponentielle : image": "Exponentialfunktion: Funktionswert",
+  "f(x)=k×aˣ": "f(x)=k×aˣ",
+  "Exponentielles et logarithme": "Exponentialfunktionen und Logarithmus",
+  "Logarithme décimal": "Zehnerlogarithmus",
+  "log(10ⁿ)=n": "log(10ⁿ)=n"
 }

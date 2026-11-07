@@ -1834,3 +1834,6 @@ Prochaine action :
 ### CORRECTIONS-EXERCICES-PROGRAMMES-20261107
 - Codex : demande explicite de corriger EX01–EX26 et NU01–NU04 du rapport #187. Branche fix/exercices-programmes-20261107, cours et banques, générateurs/correcteurs, programmes de maths 2026-2027, tests et index dérivés. Publication après validations. Aucune mutation Supabase ou de données élèves ; design conservé.
 - Corrections intégrées pour les 26 constats et quatre précisions ; cinq manuels PDF régénérés. Contrôles ciblés : 28/28 ; index des missions : 10/10 dans un processus neuf ; empreintes intentionnelles et logique : 94/94 ; compilation complète réussie (857 pages publiques). Suite générale finale et parcours navigateur en cours, résultats définitifs à consigner. Bilan : docs/CORRECTIONS-EXERCICES-PROGRAMMES-20261107.md ; PR #188. Aucun contrôle retiré.
+
+### COMPLEMENT-EXERCICES-PROGRAMMES-20261107
+- La CI de la PR188 a validé les deux suites unitaires mais détecté quatre échecs navigateur : compteur figé à169 formules/845 questions au lieu du catalogue volontairement ramené à161/805, et nouveaux libellés sans traduction hors ligne. Publication main interrompue avant toute livraison. Complément : dictionnaires des cinq langues, attente navigateur actualisée sans suppression de contrôle, revalidation des scénarios concernés puis suites de publication.
