@@ -198,5 +198,49 @@
     "title": "Échanger et produire durablement",
     "documents": 4,
     "questions": 6
+  },
+  {
+    "id": "revision-management-premiere-terminale-1",
+    "level": "terminale",
+    "subject": "Management",
+    "summary": "Organisation, valeur ajoutée, diagnostic, stratégie, production et RSE : des chapitres des deux années.",
+    "duration": 120,
+    "scope": "premiere-terminale",
+    "title": "Révision Première-Terminale 1 : Rivage, grandir durablement",
+    "documents": 8,
+    "questions": 10
+  },
+  {
+    "id": "revision-management-premiere-terminale-2",
+    "level": "terminale",
+    "subject": "Management",
+    "summary": "Finalités, décisions, numérique, structures, parties prenantes et économie circulaire.",
+    "duration": 120,
+    "scope": "premiere-terminale",
+    "title": "Révision Première-Terminale 2 : Passerelle, se transformer",
+    "documents": 8,
+    "questions": 10
+  },
+  {
+    "id": "revision-droit-economie-premiere-terminale-1",
+    "level": "terminale",
+    "subject": "Droit et économie",
+    "summary": "Personnes, contrats, revenu disponible, chômage, patrimoine, financement et politiques publiques.",
+    "duration": 120,
+    "scope": "premiere-terminale",
+    "title": "Révision Première-Terminale 1 : Maison Solis",
+    "documents": 8,
+    "questions": 10
+  },
+  {
+    "id": "revision-droit-economie-premiere-terminale-2",
+    "level": "terminale",
+    "subject": "Droit et économie",
+    "summary": "Propriété, salariat, marché, échanges, litige, rupture et développement.",
+    "duration": 120,
+    "scope": "premiere-terminale",
+    "title": "Révision Première-Terminale 2 : Atelier Horizon",
+    "documents": 8,
+    "questions": 10
   }
 ]
