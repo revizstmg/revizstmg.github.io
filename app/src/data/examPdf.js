@@ -18,6 +18,10 @@ export function buildExamPdf(draft, correction = false) {
     }
   }
   const heading = value => { if (y > bottom - 25) page(); y += 5; text(value, 13, true, 4) }
+  const scope = () => {
+  heading('Périmètre de révision')
+  for (const c of draft.courses) text(`${c.subject} - ${c.level === 'premiere' ? 'Première' : 'Terminale'} : ${c.title}`, draft.kind === 'ready' ? 9 : 10, false, draft.kind === 'ready' ? 0.5 : 3)
+  }
   text('BACCALAURÉAT TECHNOLOGIQUE · STMG', 15, true)
   text(draft.kind === 'ready' ? 'SUJET D’ENTRAÎNEMENT' : 'EXAMEN BLANC PERSONNALISÉ', 11, true)
   y += 10
@@ -34,6 +38,7 @@ export function buildExamPdf(draft, correction = false) {
     text('COMPOSITION DU SUJET', 12, true)
     text(`${draft.exam.questions.length} questions · ${draft.exam.documents.length} documents\nLe corrigé est fourni dans un fichier séparé.`, 11)
   }
+  if (draft.kind === 'ready') scope()
   page()
   heading(correction ? 'Proposition de corrigé et barème indicatif' : 'Travail à faire')
   if (correction) {
@@ -54,8 +59,7 @@ export function buildExamPdf(draft, correction = false) {
       for (const d of draft.exam.documents) { heading(d.title); text(d.text) }
     }
   }
-  heading('Périmètre de révision')
-  for (const c of draft.courses) text(`${c.subject} - ${c.level === 'premiere' ? 'Première' : 'Terminale'} : ${c.title}`, 10)
+  if (draft.kind !== 'ready') scope()
   const total = doc.getNumberOfPages()
   for (let i = 1; i <= total; i++) {
     doc.setPage(i); doc.setDrawColor(160); doc.line(left, 282, left + width, 282)
