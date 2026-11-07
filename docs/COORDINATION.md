@@ -1837,3 +1837,9 @@ Prochaine action :
 
 ### COMPLEMENT-EXERCICES-PROGRAMMES-20261107
 - La CI de la PR188 a validé les deux suites unitaires mais détecté quatre échecs navigateur : compteur figé à169 formules/845 questions au lieu du catalogue volontairement ramené à161/805, et nouveaux libellés sans traduction hors ligne. Publication main interrompue avant toute livraison. Complément : dictionnaires des cinq langues, attente navigateur actualisée sans suppression de contrôle, revalidation des scénarios concernés puis suites de publication.
+
+
+### LIVRAISON-EXERCICES-PROGRAMMES-20261107
+- PR #188 et complément #189 fusionnés : source finale 8fff5f15ac8a7c8949773b26623e04a3fbcbafe9, compilation 2a623b2b8920beb1c7876cbcd6136b25ebd3abff. Les 26 constats et quatre précisions de l’audit sont corrigés ; cinq manuels PDF régénérés, programmes/mathématiques et correcteurs harmonisés. Bilan : docs/CORRECTIONS-EXERCICES-PROGRAMMES-20261107.md.
+- Validation finale locale : 792 tests dans 84 fichiers ; 28 contrôles pédagogiques ciblés, 27 contrôles de traduction et six parcours de reprise Formules/Hors ligne réussis. La première CI avait signalé quatre échecs (ancien compteur et traductions manquantes) ; ils ont été corrigés, sans retrait de contrôle. CI main 42380729414 réussie : 792 tests UTC, 792 à Paris, compilation et 392 parcours navigateur réussis directement. Les services externes des parcours sont simulés ; aucun appel de correction réel.
+- Pages 42381922251 réussi ; 18 URLs publiques vérifiées HTTP 200, empreintes identiques à la compilation, dont cinq PDF et cinq dictionnaires. Preuves et script : docs/audits/2026-11-07/corrections-public.json et verifier-public-corrige.py. Aucune mutation Supabase/NAH ni donnée réelle d’élève ; design conservé. La correction des constats ne certifie pas individuellement toute sortie automatique future.

@@ -1,0 +1,134 @@
+{
+  "checkedAtUTC": "2026-11-07T14:31:34.658470+00:00",
+  "compiledCommit": "2a623b2b8920beb1c7876cbcd6136b25ebd3abff",
+  "checks": [
+    {
+      "url": "https://revizstmg.github.io/",
+      "status": 200,
+      "bytes": 7305,
+      "sha256": "91df634e529161f148c89dd0e68568765cdfba9b6358d09fa1590475c7682371",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/sw.js",
+      "status": 200,
+      "bytes": 13648,
+      "sha256": "ff1ee2be9dbda918ac99b08ea1db8e5f80fe4dd6aaaabbe8f0ccbd0f747b2633",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/manifest.webmanifest",
+      "status": 200,
+      "bytes": 788,
+      "sha256": "bb476eda885156c1e2cfc018b8f599109a069f547c542aa30ca661aab25ccbb7",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/assets/index-DWzdhlZ2.js",
+      "status": 200,
+      "bytes": 648016,
+      "sha256": "6c31fa9e2646ed94fb78256ce3072aed8a6bad4152602451f50d2320df88e7dc",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/assets/contenu-maths-CDUP3nVT.js",
+      "status": 200,
+      "bytes": 93258,
+      "sha256": "34f4637d1c8ae410e859048f32cb068c6abcff2a7cda387c9e0296da33cccccc",
+      "matchesPublishedCommit": true,
+      "mathC8Present": true,
+      "legacyMathC7Absent": true
+    },
+    {
+      "url": "https://revizstmg.github.io/assets/contenu-p1-maths-Dno2i-Sy.js",
+      "status": 200,
+      "bytes": 29641,
+      "sha256": "4bafe1bed48eaa5ff32d117c577975ab72408dc8167deb609b746a970611f779",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/assets/contenu-gestion-finance-BrLRF-BD.js",
+      "status": 200,
+      "bytes": 185581,
+      "sha256": "f00971e9f9e6bd0fd4acc6fb2aac94568609c119a40bcacbf2738b2ef37f7f4c",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/assets/public.de-Cdl7zKya.js",
+      "status": 200,
+      "bytes": 415333,
+      "sha256": "168ec12cff26529ae461f0c095df1da167e667736360f16565c0ca7eff983de7",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/assets/public.en-BTTDoDLp.js",
+      "status": 200,
+      "bytes": 328759,
+      "sha256": "6f7e9fdcbf8a52ac4d1ea80c87ae85eab7143c515b74d94d91ac81a15991fc34",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/assets/public.es-DjyNTXFp.js",
+      "status": 200,
+      "bytes": 342976,
+      "sha256": "28535e507e5d79e2ceae09484dd54d38e1443e78b958223ddeac78a04e2d6528",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/assets/public.it-DYVjmfo-.js",
+      "status": 200,
+      "bytes": 342322,
+      "sha256": "78f89089d2756e348d23af295427f401fd6cd8022a77bbd1f956f93d3cbb0572",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/assets/public.ar-DdCBrBQt.js",
+      "status": 200,
+      "bytes": 399459,
+      "sha256": "0c66a7952f117727c49c57aa7322e6e5548907f3682377b7aacf8704518c64de",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/cours/terminale/mathematiques/chapitre-7-exponentielles-et-logarithme/",
+      "status": 200,
+      "bytes": 5403,
+      "sha256": "07d91031184854c8631434d33131a065e81bf7d67a336d4f0c9dfb48d1dd67ce",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/cours/langues/guide-en.pdf",
+      "status": 200,
+      "bytes": 1223707,
+      "sha256": "73db8c0d6706b1a029e51922032c3e6b159b0165aa57171314bd766bd3f98207",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/cours/langues/guide-de.pdf",
+      "status": 200,
+      "bytes": 842359,
+      "sha256": "efedd00fd83715c432140057a262df4ba55c234305e07088e96a679e3ebd7493",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/cours/langues/guide-ar.pdf",
+      "status": 200,
+      "bytes": 1125768,
+      "sha256": "5fe4f02a6e234e17ff187e306911cc45ac08a46826681d67214f28e72cb868b9",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/cours/langues/guide-es.pdf",
+      "status": 200,
+      "bytes": 1228498,
+      "sha256": "48f3e3e1976532a961d2ad11184242b86ffed23aa746d120be8641e47ecd0d60",
+      "matchesPublishedCommit": true
+    },
+    {
+      "url": "https://revizstmg.github.io/cours/langues/guide-it.pdf",
+      "status": 200,
+      "bytes": 864551,
+      "sha256": "604b9e07f535b17c274a066eb6668de5d4a8f680af27bfc9d3a0eec7129901f3",
+      "matchesPublishedCommit": true
+    }
+  ]
+}
