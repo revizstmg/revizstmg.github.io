@@ -2,6 +2,7 @@ import { test, expect, beforeAll } from 'vitest'
 import { mkdtempSync, readdirSync, readFileSync, rmSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
+import { buildExamPdf } from '../src/data/examPdf.js'
 import sujets from '../src/data/sujets/prets.json'
 import { SUJETS_PRETS, sujetsPourNiveau } from '../src/data/sujetsPrets.js'
 import { checkGeneratedExam } from '../../supabase/functions/examen-blanc/contract.js'
@@ -58,4 +59,9 @@ test('compilation : vingt-deux PDF valides et distincts, dont les corrigés sép
    expect(a.equals(b)).toBe(false)
   }
  }finally{rmSync(dir,{recursive:true,force:true})}
+})
+
+test('le corrigé court de gestion-finance ne crée pas une page pour deux références',()=>{
+ const s=sujets.find(s=>s.id==='terminale-gf')
+ expect(buildExamPdf(s,true).getNumberOfPages()).toBeLessThanOrEqual(3)
 })
