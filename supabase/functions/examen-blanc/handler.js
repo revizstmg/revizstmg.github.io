@@ -114,10 +114,11 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
         ? `Analyse la demande et choisis les chapitres pertinents du catalogue, en respectant la matière ET le niveau demandés (Première et Terminale si les deux sont demandés). Maximum 24 chapitres, selon la durée. Ne choisis pas les premiers par défaut. Réponds {"summary":"périmètre choisi et limites", "chapterIds":["identifiants exacts"]}. Demande et catalogue :\n${JSON.stringify(body)}`
         : `Compose une véritable épreuve rédigée de ${body.duration} minutes, environ ${body.duration / 10} questions, plusieurs exercices progressifs et un dossier d'au moins ${documentTarget(body.duration)} documents d'application fictifs clairement étiquetés, jusqu'à 12. Varie les supports pertinents : contexte d'organisation, entretien, données chiffrées en texte structuré, extrait de contrat fictif, situation juridique ou note interne selon la matière. Chaque document doit apporter des informations distinctes, exploitables et suffisamment développées, pas une phrase de remplissage. Tous les documents doivent être exploités par les questions. Ajuste la longueur des documents et la complexité à la durée, pas seulement le nombre de questions. Aucun QCM. Au moins 20 % des questions (arrondi supérieur) portent sur les connaissances personnelles du cours, sans document : documentIds:[]. Au moins 50 % s'appuient sur les documents ; parmi elles, demande aussi de croiser analyse du document et connaissances du cours. Précise le travail attendu dans chaque énoncé. Chaque question porte UNIQUEMENT sur son chapitre source, dont tu donnes l'identifiant. N'invente pas de savoir hors des cours. Pour un cas fictif, fournis toutes les données nécessaires dans les documents, sans prétendre à une source réelle. Barème total EXACTEMENT 20 points. Tous les chapitres confirmés doivent être représentés si possible ; mentionne les limites dans les consignes. Corrigé détaillé, raisonnement, unités et critères d'auto-évaluation. Structure exacte : {"title":"titre", "instructions":"consignes", "documents":[{"id":"d1","title":"Document fictif…","text":"texte"}], "questions":[{"id":"q1","chapterId":"id exact", "documentIds":["d1"], "enonce":"Exercice 1 — …", "points":2,"correction":"réponse et démarche", "criteria":["critère"]}]}. Demande et cours :\n${JSON.stringify(body)}`
       const officialPdf=body.action==='excellence'?await excellencePdf(body.subjectId,fetcher):null
-      const providerWait = controlCorrection(body) ? 60000 : 120000
+      const providerWait = body.action === 'generate' ? 90000 : controlCorrection(body) ? 60000 : 120000
       let response, result
       if (groq) {
         response = await fetcher('https://api.groq.com/openai/v1/chat/completions', { method: 'POST', headers: { 'content-type': 'application/json', Authorization: `Bearer ${groq}` }, body: JSON.stringify({ model: groqModel(env), messages: [{ role: 'system', content: system }, { role: 'user', content: instruction }], temperature: 0.3, response_format: { type: 'json_object' }, max_completion_tokens: body.action === 'control' ? (controlCorrection(body) ? 3500 : 6000) : body.action === 'tutor' ? 2500 : body.action === 'plan' ? 3000 : 24000 }), signal: AbortSignal.timeout(providerWait) })
+
         if (!response.ok) {
           const error = await providerFailure(response)
           if (response.status===503 && body.action==='control' && body.step==='prepare') {
@@ -128,14 +129,21 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
         }
         const data = await response.json(); result = data.choices?.[0]?.message?.content
       } else if (gemini) {
-        // Une génération longue bascule immédiatement sur une autre capacité après503.
-        // Flash2.5 est accessible avec la clé actuelle et conserve le même contrat.
-        const models = [...new Set(body.action==='excellence'?['gemini-3.5-flash-lite','gemini-3.1-flash-lite']:body.action==='generate'?[geminiModel(env), 'gemini-2.5-flash', GEMINI_DEFAULT, GEMINI_ALTERNATIVE]:[geminiModel(env), GEMINI_DEFAULT, GEMINI_ALTERNATIVE])]
+        // La génération privilégie une capacité légère ; les métadonnées2.5 restent
+        // accessibles mais ses appels de génération ont renvoyé404 en production.
+        const models = [...new Set(body.action==='excellence'?['gemini-3.5-flash-lite','gemini-3.1-flash-lite']:body.action==='generate'?[(env('EXAM_GENERATION_MODEL') || 'gemini-3.5-flash-lite').trim().replace(/^models\//,''), geminiModel(env), 'gemini-3.5-flash']:[geminiModel(env), GEMINI_DEFAULT, GEMINI_ALTERNATIVE])]
         const signal = AbortSignal.timeout(providerWait)
         let retried = false
         for (const model of models) {
-          const send = () => fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-goog-api-key': gemini }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: [{ role: 'user', parts: [{ text: instruction }, ...(officialPdf?[{inlineData:officialPdf}]:['grade','study'].includes(body.action) ? body.files.map(file => ({ inlineData: file })) : [])] }], generationConfig: { ...(body.action==='practice'?{responseSchema:practiceSchema}:body.action==='excellence'?{responseSchema:excellenceSchema}:controlCorrection(body) ? {responseSchema:controlResponseSchema} : {}), ...(body.action==='generate'&&model==='gemini-2.5-flash'?{thinkingConfig:{thinkingBudget:1024}}:{}), ...(body.action==='practice'&&/^gemini-[3-9]/.test(model)?{thinkingConfig:{thinkingLevel:'LOW'}}:controlThinking(body,model)), temperature: 0.3, responseMimeType: 'application/json', maxOutputTokens: body.action === 'control' ? (controlCorrection(body) ? 3500 : 6000) : body.action === 'tutor' ? 3000 : body.action === 'study' ? 7000 : body.action === 'plan' ? 3000 : body.action === 'excellence' ? 4500 : body.action === 'practice' ? 9000 : body.action === 'grade' ? 18000 : 24000 } }), signal })
-          response = await send()
+          if (signal.aborted) throw new DOMException('Provider deadline', 'TimeoutError')
+          const attemptSignal = body.action === 'generate' ? AbortSignal.any([signal, AbortSignal.timeout(35000)]) : signal
+          const send = () => fetcher(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, { method: 'POST', headers: { 'content-type': 'application/json', 'x-goog-api-key': gemini }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents: [{ role: 'user', parts: [{ text: instruction }, ...(officialPdf?[{inlineData:officialPdf}]:['grade','study'].includes(body.action) ? body.files.map(file => ({ inlineData: file })) : [])] }], generationConfig: { ...(body.action==='practice'?{responseSchema:practiceSchema}:body.action==='excellence'?{responseSchema:excellenceSchema}:controlCorrection(body) ? {responseSchema:controlResponseSchema} : {}), ...(body.action==='generate'&&/^gemini-[3-9]/.test(model)?{thinkingConfig:{thinkingLevel:'LOW'}}:{}), ...(body.action==='practice'&&/^gemini-[3-9]/.test(model)?{thinkingConfig:{thinkingLevel:'LOW'}}:controlThinking(body,model)), temperature: 0.3, responseMimeType: 'application/json', maxOutputTokens: body.action === 'control' ? (controlCorrection(body) ? 3500 : 6000) : body.action === 'tutor' ? 3000 : body.action === 'study' ? 7000 : body.action === 'plan' ? 3000 : body.action === 'excellence' ? 4500 : body.action === 'practice' ? 9000 : body.action === 'grade' ? 18000 : 24000 } }), signal: attemptSignal })
+          try { response = await send() } catch (e) {
+            if (body.action !== 'generate' || !['TimeoutError','AbortError'].includes(e?.name) || signal.aborted) throw e
+            console.warn(JSON.stringify({event:'exam_provider_attempt',action:body.action,model,status:'timeout'}))
+            response = null
+            continue
+          }
           if(!response.ok)console.warn(JSON.stringify({event:'exam_provider_attempt',action:body.action,model,status:response.status}))
           if (response.status === 503 && body.action !== 'generate' && !retried) {
             retried = true
@@ -144,6 +152,7 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
           }
           if (![404, 503].includes(response.status)) break
         }
+        if (!response) throw new DOMException('Provider deadline', 'TimeoutError')
         if (!response.ok) {
           const error = await providerFailure(response)
           if (response.status===503 && body.action==='control' && body.step==='prepare') {
@@ -155,6 +164,7 @@ export function createHandler({ env, fetcher = fetch, now = Date.now, pause = ms
         const data = await response.json(); result = data.candidates?.[0]?.content?.parts?.map(p => p.text || '').join('')
       } else {
         response = await fetcher('https://api.anthropic.com/v1/messages', { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': anthropic, 'anthropic-version': '2023-06-01' }, body: JSON.stringify({ model: env('EXAM_ANTHROPIC_MODEL') || 'claude-sonnet-4-6', max_tokens: body.action === 'control' ? (controlCorrection(body) ? 3500 : 6000) : body.action === 'tutor' ? 2500 : body.action === 'plan' ? 3000 : 24000, system, messages: [{ role: 'user', content: instruction }] }), signal: AbortSignal.timeout(controlCorrection(body) ? 60000 : 140000) })
+
         if (!response.ok) {
           const error = await providerFailure(response)
           if (response.status===503 && body.action==='control' && body.step==='prepare') {
