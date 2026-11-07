@@ -1,0 +1,273 @@
+{
+  "source": "edc03a2cb0daf0021e07539ff1cca06405647bbe",
+  "seeds": 5,
+  "subjects": [
+    {
+      "subject": "gestion-finance",
+      "name": "Gestion et Finance",
+      "level": "terminale",
+      "themes": 3,
+      "sections": 64,
+      "rawDefs": 21,
+      "definitionsAfficheesDistinctes": 177,
+      "gameInspections": 1845,
+      "unitInspections": 9370,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "management",
+      "name": "Management (MSGN)",
+      "level": "terminale",
+      "themes": 3,
+      "sections": 42,
+      "rawDefs": 29,
+      "definitionsAfficheesDistinctes": 151,
+      "gameInspections": 1430,
+      "unitInspections": 8008,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "droit",
+      "name": "Droit",
+      "level": "terminale",
+      "themes": 4,
+      "sections": 54,
+      "rawDefs": 28,
+      "definitionsAfficheesDistinctes": 127,
+      "gameInspections": 1361,
+      "unitInspections": 5836,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "economie",
+      "name": "Économie",
+      "level": "terminale",
+      "themes": 5,
+      "sections": 53,
+      "rawDefs": 34,
+      "definitionsAfficheesDistinctes": 97,
+      "gameInspections": 1130,
+      "unitInspections": 4998,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "maths",
+      "name": "Mathématiques",
+      "level": "terminale",
+      "themes": 7,
+      "sections": 53,
+      "rawDefs": 42,
+      "definitionsAfficheesDistinctes": 44,
+      "gameInspections": 740,
+      "unitInspections": 2420,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "philosophie",
+      "name": "Philosophie",
+      "level": "terminale",
+      "themes": 8,
+      "sections": 87,
+      "rawDefs": 50,
+      "definitionsAfficheesDistinctes": 145,
+      "gameInspections": 1450,
+      "unitInspections": 7160,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "histoire-geo",
+      "name": "Histoire-Géographie",
+      "level": "terminale",
+      "themes": 6,
+      "sections": 87,
+      "rawDefs": 38,
+      "definitionsAfficheesDistinctes": 316,
+      "gameInspections": 2680,
+      "unitInspections": 14610,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "langues",
+      "name": "Langues (Allemand / Anglais / Espagnol / Italien / Arabe)",
+      "level": "terminale",
+      "themes": 18,
+      "sections": 75,
+      "rawDefs": 126,
+      "definitionsAfficheesDistinctes": 677,
+      "gameInspections": 2990,
+      "unitInspections": 18070,
+      "mode": "banques_heritees_langues"
+    },
+    {
+      "subject": "mercatique",
+      "name": "Mercatique (Marketing)",
+      "level": "terminale",
+      "themes": 4,
+      "sections": 38,
+      "rawDefs": 27,
+      "definitionsAfficheesDistinctes": 90,
+      "gameInspections": 1035,
+      "unitInspections": 4305,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "rh-communication",
+      "name": "Ressources humaines & Communication",
+      "level": "terminale",
+      "themes": 4,
+      "sections": 32,
+      "rawDefs": 27,
+      "definitionsAfficheesDistinctes": 74,
+      "gameInspections": 775,
+      "unitInspections": 3450,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "sig",
+      "name": "Systèmes d’information de gestion",
+      "level": "terminale",
+      "themes": 4,
+      "sections": 31,
+      "rawDefs": 26,
+      "definitionsAfficheesDistinctes": 73,
+      "gameInspections": 770,
+      "unitInspections": 3460,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "p1-sgn",
+      "name": "Sciences de gestion et numérique",
+      "level": "premiere",
+      "themes": 4,
+      "sections": 54,
+      "rawDefs": 26,
+      "definitionsAfficheesDistinctes": 144,
+      "gameInspections": 1520,
+      "unitInspections": 6869,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "p1-management",
+      "name": "Management",
+      "level": "premiere",
+      "themes": 3,
+      "sections": 17,
+      "rawDefs": 18,
+      "definitionsAfficheesDistinctes": 28,
+      "gameInspections": 270,
+      "unitInspections": 1210,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "p1-droit",
+      "name": "Droit",
+      "level": "premiere",
+      "themes": 4,
+      "sections": 19,
+      "rawDefs": 24,
+      "definitionsAfficheesDistinctes": 48,
+      "gameInspections": 485,
+      "unitInspections": 2181,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "p1-economie",
+      "name": "Économie",
+      "level": "premiere",
+      "themes": 5,
+      "sections": 41,
+      "rawDefs": 32,
+      "definitionsAfficheesDistinctes": 69,
+      "gameInspections": 685,
+      "unitInspections": 2855,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "p1-maths",
+      "name": "Mathématiques",
+      "level": "premiere",
+      "themes": 7,
+      "sections": 21,
+      "rawDefs": 42,
+      "definitionsAfficheesDistinctes": 13,
+      "gameInspections": 270,
+      "unitInspections": 475,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "p1-francais",
+      "name": "Français (EAF)",
+      "level": "premiere",
+      "themes": 4,
+      "sections": 31,
+      "rawDefs": 24,
+      "definitionsAfficheesDistinctes": 114,
+      "gameInspections": 930,
+      "unitInspections": 4675,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "p1-histoire-geo",
+      "name": "Histoire-Géographie",
+      "level": "premiere",
+      "themes": 6,
+      "sections": 27,
+      "rawDefs": 36,
+      "definitionsAfficheesDistinctes": 108,
+      "gameInspections": 715,
+      "unitInspections": 4095,
+      "mode": "cours_navigation"
+    },
+    {
+      "subject": "p1-langues",
+      "name": "Langues (Allemand / Anglais / Espagnol / Italien / Arabe)",
+      "level": "premiere",
+      "themes": 11,
+      "sections": 36,
+      "rawDefs": 90,
+      "definitionsAfficheesDistinctes": 123,
+      "gameInspections": 1050,
+      "unitInspections": 3590,
+      "mode": "banques_heritees_langues"
+    }
+  ],
+  "manuals": [
+    {
+      "lang": "en",
+      "lessons": 24,
+      "exercises": 110
+    },
+    {
+      "lang": "es",
+      "lessons": 25,
+      "exercises": 122
+    },
+    {
+      "lang": "de",
+      "lessons": 25,
+      "exercises": 100
+    },
+    {
+      "lang": "it",
+      "lessons": 26,
+      "exercises": 86
+    },
+    {
+      "lang": "ar",
+      "lessons": 26,
+      "exercises": 86
+    }
+  ],
+  "totals": {
+    "subjects": 19,
+    "themes": 110,
+    "sections": 862,
+    "rawDefinitions": 740,
+    "displayedDefinitionRows": 2650,
+    "gameInspections": 23371,
+    "questionInspections": 79372,
+    "rawQcm": 736,
+    "alerts": 15
+  },
+  "limits": "Contrôles structurels sur cinq réalisations par chapitre ; ne vaut pas validation sémantique ni exploration exhaustive de toutes les variantes."
+}
