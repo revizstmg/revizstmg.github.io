@@ -110,7 +110,7 @@
         },
         {
           "t": "p",
-          "c": "Le **taux réduit de 5,5 %** porte sur les biens de première nécessité : la plupart des **produits alimentaires**, les **livres** et certaines **dépenses d’énergie de base**. Le **taux particulier de 2,1 %**, enfin, s’applique aux **médicaments remboursés** par la Sécurité sociale et à la **presse**."
+          "c": "Le **taux réduit de 5,5 %** concerne notamment certains produits alimentaires et les livres. Certains réseaux de chaleur peuvent aussi en bénéficier sous conditions. En métropole, les abonnements et consommations de gaz et d’électricité sont à **20 % depuis le 1er août 2025**. Le **taux particulier de 2,1 %** concerne notamment les médicaments remboursables et la presse répondant aux conditions légales."
         },
         {
           "t": "example",
@@ -144,7 +144,7 @@
             ],
             [
               "Taux réduit (5,5 %)",
-              "Produits alimentaires, livres, énergie de base"
+              "Certains produits alimentaires et livres ; gaz et électricité à 20 % en métropole depuis août 2025"
             ],
             [
               "Taux particulier (2,1 %)",
@@ -187,15 +187,19 @@
       ]
     },
     {
-      "h": "🏭 Amortissements et dépréciations : pertes de valeur irréversibles ou réversibles",
+      "h": "🏭 Amortissements et dépréciations",
       "blocks": [
+        {
+          "t": "p",
+          "c": "Dans les calculs simplifiés de ce chapitre, la valeur résiduelle est supposée nulle et aucune dépréciation n’est constatée, sauf mention contraire. Le montant amortissable est en général la valeur brute diminuée de la valeur résiduelle significative et mesurable."
+        },
         {
           "t": "p",
           "c": "Une **immobilisation** (machine, véhicule, ordinateur) sert plusieurs années : il serait faux de compter tout son coût sur l’année d’achat. On répartit donc sa valeur sur sa **durée d’utilisation** grâce à l’**amortissement**. C’est une application directe du principe d’indépendance des exercices : chaque année « supporte » l’usure qui lui revient."
         },
         {
           "t": "p",
-          "c": "L’amortissement constate la **perte de valeur** irréversible d’un bien due à l’usage, au temps ou à l’obsolescence. C’est une **charge** (compte 6811) qui **ne correspond à aucune sortie d’argent** : c’est une charge dite **calculée** ou **non décaissée** (elle jouera un rôle clé dans le calcul de la CAF, thème 2)."
+          "c": "L’amortissement répartit systématiquement le montant amortissable d’un actif selon son utilisation, qui traduit la consommation de ses avantages économiques. C’est une **charge** (compte 6811) qui **ne correspond à aucune sortie d’argent** : c’est une charge dite **calculée** ou **non décaissée** (elle jouera un rôle clé dans le calcul de la CAF, thème 2)."
         },
         {
           "t": "formula",
@@ -217,7 +221,7 @@
         {
           "t": "warning",
           "h": "Ne pas confondre",
-          "c": "L’**amortissement** est une perte **définitive et prévisible** (usure). La **dépréciation** est une perte **réversible** (ex. un stock invendu qui perd de la valeur mais pourrait se revendre). Toutes deux respectent le principe de **prudence**."
+          "c": "L’**amortissement** répartit systématiquement le montant amortissable selon l’utilisation de l’actif. La **dépréciation** constate une valeur actuelle inférieure à sa valeur nette comptable ; une reprise est possible selon les règles applicables."
         },
         {
           "t": "table",
@@ -229,7 +233,7 @@
           "rows": [
             [
               "Amortissement",
-              "Constatation de la perte de valeur définitive et prévisible d’une immobilisation (usure)"
+              "Répartition systématique du montant amortissable d’un actif en fonction de son utilisation"
             ],
             [
               "Annuité (linéaire)",
@@ -579,6 +583,10 @@
       "blocks": [
         {
           "t": "p",
+          "c": "Dans les calculs simplifiés de ce chapitre, la valeur résiduelle est supposée nulle et aucune dépréciation n’est constatée, sauf mention contraire. Le montant amortissable est en général la valeur brute diminuée de la valeur résiduelle significative et mesurable."
+        },
+        {
+          "t": "p",
           "c": "Acquérir une **immobilisation** (machine, véhicule, matériel) n’est pas une charge mais un **investissement** : le bien entre à l’**actif** du bilan (classe 2) et se répartira dans le temps par l’**amortissement**."
         },
         {
@@ -609,6 +617,10 @@
     {
       "h": "🗓️ Les travaux d’inventaire : amortissements, dépréciations, stocks et régularisations",
       "blocks": [
+        {
+          "t": "p",
+          "c": "Dans les calculs simplifiés de ce chapitre, la valeur résiduelle est supposée nulle et aucune dépréciation n’est constatée, sauf mention contraire. Le montant amortissable est en général la valeur brute diminuée de la valeur résiduelle significative et mesurable."
+        },
         {
           "t": "p",
           "c": "À la **clôture** de l’exercice, avant d’établir le bilan et le compte de résultat, l’entreprise réalise les **travaux d’inventaire** : des écritures de **régularisation** qui garantissent que les comptes donnent une **image fidèle** de la réalité. Elles appliquent les principes de **prudence** et d’**indépendance des exercices**."
@@ -974,6 +986,10 @@
       "blocks": [
         {
           "t": "p",
+          "c": "Dans les calculs simplifiés de ce chapitre, la valeur résiduelle est supposée nulle et aucune dépréciation n’est constatée, sauf mention contraire. Le montant amortissable est en général la valeur brute diminuée de la valeur résiduelle significative et mesurable."
+        },
+        {
+          "t": "p",
           "c": "Amortir, c’est répartir le coût d’une immobilisation sur sa durée d’usage. En STMG, on utilise l’**amortissement linéaire** : la même somme (l’**annuité**) chaque année."
         },
         {
@@ -1004,7 +1020,7 @@
         {
           "t": "tip",
           "h": "Contrôle",
-          "c": "En fin de plan, le cumul des amortissements = valeur d’origine, et la **VNC = 0**. Si ce n’est pas le cas, il y a une erreur dans l’annuité ou la durée."
+          "c": "En l’absence de dépréciation, la VNC en fin de plan correspond à la **valeur résiduelle** retenue. Si celle-ci est nulle, les amortissements cumulés égalent la valeur brute et la VNC est nulle."
         },
         {
           "t": "table",
@@ -1028,7 +1044,7 @@
             ],
             [
               "VNC",
-              "Valeur d’origine − cumul ; égale à 0 en fin de plan"
+              "Valeur brute − amortissements cumulés − dépréciations ; nulle en fin de plan seulement si la valeur résiduelle est nulle"
             ]
           ]
         }
@@ -1039,6 +1055,10 @@
     {
       "h": "🏛️ Le bilan fonctionnel : emplois et ressources stables, cycle d’exploitation",
       "blocks": [
+        {
+          "t": "p",
+          "c": "Le BFR total additionne le **BFRE**, lié à l’exploitation, et le BFR hors exploitation. Les exemples limités aux stocks, clients et fournisseurs supposent le hors exploitation nul. Les concours bancaires courants relèvent de la trésorerie passive, pas des ressources stables."
+        },
         {
           "t": "p",
           "c": "Le bilan comptable classe les postes par **nature juridique**. Pour **analyser la santé financière**, on le réorganise en **bilan fonctionnel**, qui regroupe les postes par **fonction** : investir, financer, exploiter. L’idée est de vérifier une règle d’or : les emplois **durables** doivent être financés par des ressources **durables**."
@@ -1078,7 +1098,7 @@
             ],
             [
               "Ressources stables",
-              "Capitaux propres + amortissements + dettes financières"
+              "Capitaux propres + amortissements et dépréciations + provisions + dettes financières stables"
             ],
             [
               "Actif circulant d’exploitation",
@@ -1188,6 +1208,11 @@
           "c": "On ne demande jamais un ratio « pour le calcul » : on demande de **conclure**. Structure : « Le ratio vaut X. Cela signifie que… C’est donc (bon/inquiétant) car… »."
         },
         {
+          "t": "tip",
+          "h": "Interpréter",
+          "c": "Les seuils de 30 %, d’un ratio de 1 ou de quatre années sont des repères indicatifs, à contextualiser selon le secteur et les autres données. Ils ne sont pas des obligations légales universelles."
+        },
+        {
           "t": "table",
           "h": "Notions et définitions",
           "head": [
@@ -1265,7 +1290,7 @@
         },
         {
           "t": "p",
-          "c": "Les SIG se calculent en cascade. La **marge commerciale** est égale aux **ventes de marchandises moins le coût d’achat des marchandises vendues** : elle mesure la performance de l’activité de **négoce**, c’est-à-dire de revente. La **valeur ajoutée** est égale à la **production moins les consommations en provenance de tiers** : elle mesure la **richesse créée** par l’entreprise elle-même."
+          "c": "Les SIG se calculent en cascade. La **marge commerciale** est égale aux **ventes de marchandises moins le coût d’achat des marchandises vendues** : elle mesure la performance de l’activité de **négoce**, c’est-à-dire de revente. La **valeur ajoutée** est égale à la **marge commerciale plus la production de l’exercice moins les consommations en provenance de tiers** : elle mesure la **richesse créée** par l’entreprise elle-même."
         },
         {
           "t": "p",
@@ -1298,7 +1323,7 @@
             ],
             [
               "Valeur ajoutée",
-              "Production − consommations en provenance de tiers (richesse créée)"
+              "Marge commerciale + production de l’exercice − consommations en provenance de tiers"
             ],
             [
               "EBE",
@@ -1329,7 +1354,7 @@
         },
         {
           "t": "formula",
-          "c": "Valeur ajoutée = Production de l’exercice − Consommations en provenance de tiers"
+          "c": "Valeur ajoutée = Marge commerciale + Production de l’exercice − Consommations en provenance de tiers"
         },
         {
           "t": "p",
@@ -1457,11 +1482,15 @@
       "blocks": [
         {
           "t": "p",
+          "c": "La **CAF** mesure les ressources générées par l’activité. L’**autofinancement** est la part conservée après distribution : autofinancement = CAF − dividendes versés. Il n’implique pas d’intérêt versé à un prêteur, mais mobilise des ressources qui ont un coût d’opportunité."
+        },
+        {
+          "t": "p",
           "c": "Pour financer ses investissements, l’entreprise dispose de plusieurs sources, à combiner selon leur coût, leur disponibilité et le niveau de risque acceptable. On les classe en financement **interne** et **externe**."
         },
         {
           "t": "p",
-          "c": "L’**autofinancement**, permis par la **CAF** (capacité d’autofinancement), est un financement **interne** : il est **gratuit** et préserve l’**autonomie** de l’entreprise, mais il est **limité** au montant de la CAF. L’**augmentation de capital** est un financement **externe** par **fonds propres** : les associés apportent de l’argent qui **n’a pas à être remboursé**, mais l’arrivée de nouveaux associés **dilue le pouvoir** des anciens."
+          "c": "L’**autofinancement** est la **CAF diminuée des dividendes distribués**. Ce financement **interne** préserve l’**autonomie** et ne donne pas lieu à des intérêts versés à un prêteur, mais présente un coût d’opportunité et reste limité aux ressources conservées. L’**augmentation de capital** est un financement **externe** par **fonds propres** : les associés apportent de l’argent qui **n’a pas à être remboursé**, mais l’arrivée de nouveaux associés **dilue le pouvoir** des anciens."
         },
         {
           "t": "p",
@@ -1489,8 +1518,8 @@
           ],
           "rows": [
             [
-              "Autofinancement (CAF)",
-              "Financement interne : gratuit, autonome, mais limité par la CAF"
+              "Autofinancement (CAF conservée après distribution)",
+              "Ressources internes conservées : CAF moins dividendes distribués ; préserve l’autonomie, avec un coût d’opportunité"
             ],
             [
               "Augmentation de capital",
@@ -1525,7 +1554,7 @@
         },
         {
           "t": "p",
-          "c": "La **capacité de remboursement** rapporte les **dettes financières à la CAF** : elle indique combien d’années de CAF il faudrait pour rembourser les emprunts, et l’on recommande de rester **sous 4 ans**. La **solvabilité générale**, enfin, rapporte le **total de l’actif au total des dettes** : elle doit **impérativement être supérieure à 1**, sinon l’entreprise doit plus qu’elle ne possède."
+          "c": "La **capacité de remboursement** rapporte les **dettes financières à la CAF** : elle indique combien d’années de CAF il faudrait pour rembourser les emprunts, et l’on recommande de rester **sous 4 ans**. La **solvabilité générale**, enfin, rapporte le **total de l’actif au total des dettes** : un ratio supérieur à 1 indique que l’actif comptable dépasse les dettes, mais ce repère ne constitue pas une obligation légale universelle ni une garantie de paiement."
         },
         {
           "t": "p",
@@ -1540,6 +1569,11 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Liquidité = payer **à temps** (court terme) ; solvabilité = pouvoir **tout rembourser** (long terme). Toujours interpréter un ratio par rapport à un **repère** et à son **évolution**."
+        },
+        {
+          "t": "tip",
+          "h": "Interpréter",
+          "c": "Les seuils de 30 %, d’un ratio de 1 ou de quatre années sont des repères indicatifs, à contextualiser selon le secteur et les autres données. Ils ne sont pas des obligations légales universelles."
         },
         {
           "t": "table",
@@ -1571,7 +1605,7 @@
             ],
             [
               "Solvabilité générale",
-              "Total actif ÷ total des dettes (> 1 obligatoire)"
+              "Total actif ÷ total des dettes ; repère d’analyse, pas un seuil légal universel"
             ]
           ]
         }
@@ -1688,7 +1722,7 @@
         },
         {
           "t": "p",
-          "c": "Pour chaque ratio, retiens la formule et le sens du bon résultat. Le **taux de marge nette**, égal au **résultat net divisé par le chiffre d’affaires, multiplié par 100**, doit être **le plus élevé possible**. L’**autonomie financière**, égale aux **capitaux propres divisés par le total du bilan**, doit dépasser **30 %**. Le **taux d’endettement**, égal aux **dettes financières divisées par les capitaux propres**, doit rester **inférieur à 1**."
+          "c": "Pour chaque ratio, retiens la formule et le sens du bon résultat. Le **taux de marge nette**, égal au **résultat net divisé par le chiffre d’affaires, multiplié par 100**, doit être **le plus élevé possible**. L’**autonomie financière**, égale aux **capitaux propres divisés par le total du bilan**, est souvent comparée au repère indicatif de **30 %**, à adapter au secteur. Le **taux d’endettement**, égal aux **dettes financières divisées par les capitaux propres**, peut être comparé au repère indicatif de **1**, sans seuil universel."
         },
         {
           "t": "p",
@@ -1703,6 +1737,11 @@
           "t": "tip",
           "h": "À retenir",
           "c": "Toujours 3 temps : **formule → calcul (avec unité) → interprétation**. Un ratio calculé mais non commenté ne rapporte que la moitié des points."
+        },
+        {
+          "t": "tip",
+          "h": "Interpréter",
+          "c": "Les seuils de 30 %, d’un ratio de 1 ou de quatre années sont des repères indicatifs, à contextualiser selon le secteur et les autres données. Ils ne sont pas des obligations légales universelles."
         },
         {
           "t": "table",

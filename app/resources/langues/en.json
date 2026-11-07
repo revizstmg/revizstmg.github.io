@@ -1629,8 +1629,10 @@
       "prompt": "She ____ (work) here since 2020.",
       "choices": [],
       "answer": "has worked",
-      "explanation": "Present perfect + since : « has worked ».",
-      "alternatives": [],
+      "explanation": "Present perfect avec since : has worked ou has been working sont possibles ici. Le simple met en avant la situation ; le continu insiste sur la durée de l’activité.",
+      "alternatives": [
+        "has been working"
+      ],
       "context": "",
       "sourceQuestion": 0,
       "id": "en-ex-001"
@@ -3025,10 +3027,13 @@
       "type": "court",
       "prompt": "Transforme à la forme négative : He works on Sundays.",
       "answer": "He doesn't work on Sundays.",
-      "explanation": "Does porte la marque de troisième personne ; le verbe principal revient à la base work.",
+      "explanation": "He does not work on Sundays. et He doesn’t work on Sundays. sont équivalents ; le verbe principal reste à la base work.",
       "choices": [],
       "context": "",
-      "id": "en-ex-088"
+      "id": "en-ex-088",
+      "alternatives": [
+        "He does not work on Sundays."
+      ]
     },
     {
       "lessonId": "p1-langues-p1-lng-en-0",
@@ -3100,7 +3105,10 @@
       "explanation": "L’objet pluriel devient sujet : are + participe passé sold. Le complément by peut être omis si l’agent n’est pas utile.",
       "choices": [],
       "context": "",
-      "id": "en-ex-094"
+      "id": "en-ex-094",
+      "alternatives": [
+        "These products are sold."
+      ]
     },
     {
       "lessonId": "p1-langues-p1-lng-en-1",

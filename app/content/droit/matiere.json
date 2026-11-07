@@ -43,13 +43,13 @@
             {
               "q": "Un contrat est un accord de volontés qui a pour effet de…",
               "choices": [
-                "créer des obligations entre les parties",
+                "créer, modifier, transmettre ou éteindre des obligations",
                 "sanctionner une infraction pénale",
                 "réparer un dommage causé à un tiers",
                 "immatriculer une société"
               ],
               "answer": 0,
-              "explain": "Le contrat crée des obligations entre les parties (le contracter, payer, livrer…)."
+              "explain": "Le contrat peut créer, modifier, transmettre ou éteindre des obligations (article 1101 du Code civil)."
             },
             {
               "q": "Selon l’article 1128 du Code civil, la validité d’un contrat suppose…",
@@ -129,7 +129,7 @@
           "cards": [
             {
               "front": "Contrat",
-              "back": "Accord de volontés créant des obligations entre les parties."
+              "back": "Accord de volontés destiné à créer, modifier, transmettre ou éteindre des obligations (article 1101 du Code civil)."
             },
             {
               "front": "Formation du contrat",
@@ -751,7 +751,7 @@
               "explain": "L’affectio societatis est la volonté commune des associés de collaborer."
             },
             {
-              "q": "Dans une société commerciale, la responsabilité des associés est en principe…",
+              "q": "Dans une SARL ou une SAS, la responsabilité des associés est en principe…",
               "choices": [
                 "limitée à leurs apports",
                 "illimitée sur tout leur patrimoine",
@@ -759,7 +759,7 @@
                 "transférée à l’État"
               ],
               "answer": 0,
-              "explain": "La responsabilité est généralement limitée aux apports ; les bénéfices sont partagés au prorata."
+              "explain": "Dans une SARL ou une SAS, les associés répondent des dettes à hauteur de leurs apports. D’autres formes ont un régime différent : les associés de SNC répondent indéfiniment et solidairement des dettes sociales."
             },
             {
               "q": "Dénigrer un concurrent, l’imiter ou le parasiter constitue…",

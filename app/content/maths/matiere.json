@@ -851,126 +851,234 @@
       ]
     },
     {
-      "id": "math-c7",
-      "name": "Chapitre 7 — Loi normale et estimation",
-      "short": "Loi normale",
-      "keywords": "loi normale courbe en cloche moyenne écart-type intervalle de confiance estimation sondage",
+      "id": "math-c8",
+      "name": "Chapitre 7 : Exponentielles et logarithme",
+      "short": "Exponentielles",
+      "keywords": "exponentielle base logarithme décimal équation taux moyen",
       "cours": [
         {
-          "h": "Loi normale et estimation",
-          "points": [
-            "Loi normale : courbe en cloche symétrique autour de μ, dispersion réglée par σ.",
-            "Intervalle de confiance d’une proportion (niveau ~95 %). Applications : sondages, qualité."
+          "h": "Fonctions exponentielles de base a",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Pour a > 0, la **fonction exponentielle de base a** prolonge à tout réel x la suite géométrique aⁿ. On écrit f(x) = aˣ. Les valeurs de aˣ sont strictement positives ; a⁰ = 1. Une croissance composée peut ainsi être étudiée entre deux dates non entières."
+            },
+            {
+              "t": "p",
+              "c": "Les **propriétés des puissances** restent valables : aˣ⁺ʸ = aˣ × aʸ, aˣ⁻ʸ = aˣ / aʸ et (aˣ)ⁿ = aⁿˣ. On ne remplace pas une somme de puissances par une puissance de somme."
+            },
+            {
+              "t": "example",
+              "h": "Application corrigée",
+              "c": "Un capital de 1 000 € croît de 5 % par an : C(t)=1 000×1,05ᵗ. Après 2,5 ans, C(2,5)≈1 129,73 €. Le coefficient est 1,05, pas 0,05."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Exponentielle de base a",
+                  "Fonction x ↦ aˣ, définie sur ℝ pour a > 0"
+                ],
+                [
+                  "Puissance zéro",
+                  "Pour a > 0, a⁰ = 1"
+                ],
+                [
+                  "Produit de puissances de même base",
+                  "aˣ × aʸ = aˣ⁺ʸ"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Variations des exponentielles",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Si **a > 1**, aˣ est strictement croissante. Si **0 < a < 1**, elle est strictement décroissante. Pour a = 1, elle est constante. Multiplier par un coefficient négatif inverse les variations ; un coefficient nul donne une fonction constante."
+            },
+            {
+              "t": "p",
+              "c": "Pour f(x)=k aˣ, on étudie donc à la fois le signe de k et la position de a par rapport à 1. Un facteur annuel inférieur à 1 modélise une diminution composée, pas une diminution linéaire."
+            },
+            {
+              "t": "example",
+              "h": "Application corrigée",
+              "c": "La valeur V(t)=800×0,9ᵗ décroît : elle perd 10 % par période. En revanche −800×0,9ᵗ croît vers 0."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Base supérieure à 1",
+                  "aˣ est strictement croissante si a > 1"
+                ],
+                [
+                  "Base entre 0 et 1",
+                  "aˣ est strictement décroissante si 0 < a < 1"
+                ],
+                [
+                  "Coefficient négatif",
+                  "Multiplier une fonction par k < 0 inverse son sens de variation"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Logarithme décimal",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Pour b > 0, le **logarithme décimal** log(b) est l’unique réel x tel que 10ˣ=b. La fonction log est définie seulement sur les réels strictement positifs et est strictement croissante. Log(1)=0 et log(10)=1."
+            },
+            {
+              "t": "p",
+              "c": "Pour a,b > 0 : log(ab)=log(a)+log(b), log(a/b)=log(a)−log(b) et log(aⁿ)=n log(a). Ces règles concernent les produits et quotients ; log(a+b) n’est pas log(a)+log(b)."
+            },
+            {
+              "t": "example",
+              "h": "Application corrigée",
+              "c": "10ˣ=1 000 donne x=log(1 000)=3. Pour 10ˣ=25, x≈1,398 ; une valeur négative ou nulle ne possède pas de logarithme réel."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Logarithme décimal",
+                  "Pour b > 0, log(b) est la solution de 10ˣ=b"
+                ],
+                [
+                  "Logarithme d’un produit",
+                  "log(ab)=log(a)+log(b), pour a,b > 0"
+                ],
+                [
+                  "Logarithme d’une puissance",
+                  "log(aⁿ)=n log(a), pour a > 0"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Résoudre une équation exponentielle",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Avec a > 0, a ≠ 1 et b > 0, l’équation **aˣ=b** donne x=log(b)/log(a). Pour une inéquation, le sens de variation décide du sens de la comparaison. Avec a > 1, aˣ>b équivaut à x>log(b)/log(a) ; avec 0<a<1, le sens est inversé."
+            },
+            {
+              "t": "p",
+              "c": "Si x est un nombre entier de périodes, on cherche ensuite le premier entier satisfaisant l’inégalité. On vérifie cet entier et le précédent dans l’expression initiale, surtout pour une inégalité stricte."
+            },
+            {
+              "t": "example",
+              "h": "Application corrigée",
+              "c": "2ⁿ>10 : n>log(10)/log(2)≈3,322. Le premier entier est 4 : 2³=8≤10 et 2⁴=16>10."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Équation aˣ=b",
+                  "x=log(b)/log(a), pour a>0, a≠1, b>0"
+                ],
+                [
+                  "Seuil entier",
+                  "Premier rang entier qui satisfait l’inégalité, vérifié avec le rang précédent"
+                ],
+                [
+                  "Base décroissante",
+                  "Avec 0<a<1, le passage à l’exposant inverse le sens de l’inégalité"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Taux moyen et durées",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Le **coefficient multiplicateur moyen** sur n périodes est (Vf/Vi)^(1/n), pour Vi,Vf>0 et n>0. Le taux moyen en décimal est ce coefficient moins 1. Il ne s’agit pas de la moyenne arithmétique des taux successifs."
+            },
+            {
+              "t": "p",
+              "c": "Pour trouver une durée dans une évolution V(t)=V₀aᵗ, on isole d’abord aᵗ, puis on utilise le logarithme. Le résultat est une durée réelle ; on l’adapte à la question avant tout arrondi."
+            },
+            {
+              "t": "example",
+              "h": "Application corrigée",
+              "c": "Une valeur augmente de 21 % en 2 ans : CM moyen=√1,21=1,10, soit 10 % par an. Ajouter 10,5 % deux fois ne donne pas 21 %."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Coefficient moyen",
+                  "(Vf/Vi)^(1/n), pour des valeurs positives"
+                ],
+                [
+                  "Taux moyen",
+                  "Coefficient moyen moins 1, à multiplier par 100 pour un pourcentage"
+                ],
+                [
+                  "Durée composée",
+                  "Se calcule en isolant l’exponentielle puis avec des logarithmes"
+                ]
+              ]
+            }
           ]
         }
       ],
       "formulas": [
-        "Courbe en cloche : symétrique autour de la moyenne μ, dispersion σ"
+        "aˣ=b ⇔ x=log(b)/log(a), a>0, a≠1, b>0"
       ],
       "essentiel": [
-        "**Loi normale** : courbe **en cloche** symétrique autour de la moyenne **μ**.",
-        "**σ** (écart-type) règle la **dispersion** autour de μ.",
-        "**Intervalle de confiance** : estime une **proportion** (niveau ~95 %) — sondages, contrôle qualité."
+        "**Exponentielle** : f(x)=aˣ avec a>0.",
+        "**Logarithme décimal** : inverse de la puissance de 10.",
+        "**Seuil** : résoudre puis vérifier le premier entier convenable."
       ],
       "games": [
         {
-          "id": "math-c7-qcm",
-          "type": "qcm",
-          "title": "QCM — Loi normale & estimation",
-          "icon": "❓",
-          "questions": [
-            {
-              "q": "La courbe représentant une loi normale est…",
-              "choices": [
-                "Une courbe « en cloche » symétrique",
-                "Une droite",
-                "Une parabole",
-                "Une courbe croissante"
-              ],
-              "answer": 0,
-              "explain": "La loi normale a une densité en forme de cloche, symétrique autour de la moyenne μ."
-            },
-            {
-              "q": "Le paramètre σ (écart-type) d’une loi normale règle…",
-              "choices": [
-                "La dispersion autour de la moyenne",
-                "La position du centre",
-                "La hauteur maximale uniquement",
-                "Le nombre de valeurs"
-              ],
-              "answer": 0,
-              "explain": "μ fixe le centre ; σ mesure la dispersion : plus σ est grand, plus la cloche est étalée."
-            },
-            {
-              "q": "La courbe de la loi normale est symétrique par rapport à…",
-              "choices": [
-                "La moyenne μ",
-                "La valeur 0",
-                "L’écart-type σ",
-                "L’axe des abscisses"
-              ],
-              "answer": 0,
-              "explain": "Elle est symétrique autour de sa moyenne μ."
-            },
-            {
-              "q": "Un intervalle de confiance (au niveau ~95 %) a pour amplitude…",
-              "choices": [
-                "2/√n",
-                "1/n",
-                "√n",
-                "n/2"
-              ],
-              "answer": 0,
-              "explain": "Intervalle [f − 1/√n ; f + 1/√n] : son amplitude vaut 2/√n (plus n est grand, plus il est précis)."
-            },
-            {
-              "q": "Un intervalle de confiance sert à…",
-              "choices": [
-                "Estimer une proportion à partir d’un échantillon",
-                "Calculer une moyenne exacte",
-                "Trouver le maximum d’une fonction",
-                "Ordonner des données"
-              ],
-              "answer": 0,
-              "explain": "Il encadre la proportion inconnue de la population (sondages, contrôle qualité)."
-            }
-          ]
-        },
-        {
-          "id": "math-c7-calc-amp",
+          "id": "math-c8-calc-image",
           "type": "calcul",
-          "title": "Exercices — Amplitude de l’IC (2/√n)",
-          "icon": "✍️",
-          "gen": "amplitude_ic",
-          "count": 8
+          "title": "Calculer une exponentielle",
+          "gen": "image_exponentielle",
+          "icon": "🧮"
         },
         {
-          "id": "math-c7-calc-borne",
+          "id": "math-c8-calc-log",
           "type": "calcul",
-          "title": "Exercices — Borne de l’intervalle",
-          "icon": "✍️",
-          "gen": "borne_ic",
-          "count": 6
-        },
-        {
-          "id": "math-c7-flash",
-          "type": "flashcard",
-          "title": "Flashcards — Formules",
-          "icon": "🃏",
-          "cards": [
-            {
-              "front": "Loi normale",
-              "back": "Courbe en cloche symétrique autour de la moyenne μ."
-            },
-            {
-              "front": "μ et σ",
-              "back": "μ = moyenne (centre) ; σ = écart-type (dispersion)."
-            },
-            {
-              "front": "Intervalle de confiance",
-              "back": "[f − 1/√n ; f + 1/√n] ; amplitude = 2/√n."
-            }
-          ]
+          "title": "Calculer un logarithme",
+          "gen": "logarithme_decimal",
+          "icon": "🧮"
         }
       ]
     }

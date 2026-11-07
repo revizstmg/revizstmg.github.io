@@ -1794,7 +1794,8 @@
       "explanation": "La phrase nominale au présent ne nécessite pas de verbe être exprimé ; طالبة est féminin.",
       "choices": [],
       "context": "",
-      "id": "ar-ex-058"
+      "id": "ar-ex-058",
+      "selfAssessment": true
     },
     {
       "lessonId": "langues-lng-ar-gram-0",
@@ -1806,7 +1807,8 @@
       "explanation": "La forme masculine est طالب ; on n’ajoute pas automatiquement un équivalent de suis au présent.",
       "choices": [],
       "context": "",
-      "id": "ar-ex-059"
+      "id": "ar-ex-059",
+      "selfAssessment": true
     },
     {
       "lessonId": "langues-lng-ar-gram-1",
@@ -1986,7 +1988,8 @@
       "explanation": "Les deux mots interrogatifs portent sur des informations différentes : lieu et temps.",
       "choices": [],
       "context": "",
-      "id": "ar-ex-074"
+      "id": "ar-ex-074",
+      "selfAssessment": true
     },
     {
       "lessonId": null,
@@ -2065,12 +2068,13 @@
       "unit": "Atelier de transfert · Arabe",
       "origin": "RévizSTMG · exercices complémentaires",
       "type": "court",
-      "prompt": "Quel mot interrogatif signifie « qui » ?",
+      "prompt": "Quel mot interrogatif signifie « qui » ? Écris aussi la voyelle pour le distinguer de « de/depuis ».",
       "answer": "مَن",
       "explanation": "مَن interroge sur une personne. Le signe de voyelle aide à le distinguer de مِن qui signifie de/depuis.",
       "choices": [],
       "context": "",
-      "id": "ar-ex-081"
+      "id": "ar-ex-081",
+      "preserveDiacritics": true
     },
     {
       "lessonId": "langues-lng-ar-gram-2",

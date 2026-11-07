@@ -3,7 +3,7 @@
     "essentiel": [
       "La comptabilité en **partie double** : tout enregistrement respecte **débit = crédit**.",
       "**TVA à décaisser = TVA collectée − TVA déductible** ; si déductible > collectée → **crédit de TVA**.",
-      "**Amortissement** (perte définitive) ≠ **dépréciation** (réversible) ; **VNC = valeur d’origine − amortissements cumulés**.",
+      "**Amortissement** : allocation du montant amortissable selon l’utilisation. **Dépréciation** : perte de valeur actuelle. **VNC = valeur brute − amortissements − dépréciations**.",
       "Les **4 principes** comptables : prudence · indépendance des exercices · continuité · permanence des méthodes."
     ],
     "intro": "Tout part d'une idée simple : une entreprise doit **garder la trace de tout ce qu'elle achète, vend, possède et doit**. La comptabilité est le langage qui traduit chaque opération en chiffres, pour savoir si l'entreprise gagne de l'argent et si elle est en bonne santé. Ce premier thème pose les **règles du jeu** : comment enregistrer une opération, comment fonctionne la TVA, comment tenir compte de l'usure du matériel (l'amortissement) et quels grands principes garantissent une information honnête.",
@@ -161,7 +161,7 @@
           },
           {
             "t": "warning",
-            "c": "Ne confonds pas **amortissement** (perte de valeur **définitive**, ex. l'usure d'une machine) et **dépréciation** (perte de valeur **réversible**, ex. un stock qui pourrait se revendre plus tard)."
+            "c": "L’amortissement traduit la consommation des avantages économiques d’un actif ; la dépréciation compare sa valeur actuelle à sa VNC. Une éventuelle reprise de dépréciation suit les règles comptables applicables."
           },
           {
             "t": "p",
@@ -196,7 +196,7 @@
               ],
               [
                 "Dépréciation",
-                "Perte de valeur réversible (≠ amortissement, définitif)"
+                "Constatation d’une valeur actuelle inférieure à la VNC ; reprise possible selon les règles applicables"
               ],
               [
                 "VNC",
@@ -446,7 +446,7 @@
   },
   "gf-t3": {
     "essentiel": [
-      "Financements **internes** (autofinancement/CAF) vs **externes** (emprunt, augmentation de capital, subventions).",
+      "Financements **internes** (autofinancement, issu de la CAF après distribution) vs **externes** (emprunt, augmentation de capital, subventions).",
       "**MCV = CA − charges variables** ; **taux de MCV = MCV / CA**.",
       "**Seuil de rentabilité = charges fixes / taux de MCV** ; au seuil, le résultat est **nul** ; le **point mort** en est la date.",
       "**Réserve légale** : 5 % du bénéfice jusqu’à 10 % du capital."
@@ -468,7 +468,7 @@
             ],
             "rows": [
               [
-                "Autofinancement (la CAF)",
+                "Autofinancement (CAF moins dividendes)",
                 "Emprunt bancaire"
               ],
               [

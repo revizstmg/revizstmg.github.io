@@ -53,28 +53,20 @@
   ],
   "p1-math-c3": [
     [
-      "Fonction du second degré",
-      "Fonction de la forme f(x) = ax² + bx + c avec a ≠ 0."
-    ],
-    [
-      "Discriminant",
-      "Δ = b² − 4ac ; son signe donne le nombre de racines."
+      "Polynôme du second degré",
+      "Fonction f(x)=ax²+bx+c avec a≠0."
     ],
     [
       "Racine",
-      "Valeur de x annulant f(x) (solution de ax² + bx + c = 0)."
+      "Valeur qui annule le polynôme."
     ],
     [
-      "Parabole",
-      "Courbe représentative de la fonction du second degré."
+      "Forme factorisée",
+      "Écriture en produit dont les facteurs permettent de lire les racines."
     ],
     [
       "Sommet",
-      "Point extremum de la parabole, d’abscisse −b/2a."
-    ],
-    [
-      "Forme canonique",
-      "Écriture a(x − α)² + β mettant en évidence le sommet."
+      "Point où la parabole atteint son extremum ; ses coordonnées peuvent se lire graphiquement."
     ]
   ],
   "p1-math-c4": [

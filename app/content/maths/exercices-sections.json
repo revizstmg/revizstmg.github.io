@@ -24,7 +24,6 @@
   "math-c6-calc-esp": 1,
   "math-c6-calc-var": 1,
   "math-c6-flash": 0,
-  "math-c7-calc-amp": 1,
-  "math-c7-calc-borne": 1,
-  "math-c7-flash": 0
+  "math-c8-calc-image": 0,
+  "math-c8-calc-log": 2
 }

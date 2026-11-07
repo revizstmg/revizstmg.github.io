@@ -683,7 +683,7 @@
               "t": "list",
               "c": [
                 "**Spécialisation** : se concentrer sur **un seul métier / marché** pour y devenir performant.",
-                "**Diversification** : se développer sur **de nouveaux métiers ou marchés** pour répartir les risques et saisir des opportunités."
+                "**Diversification** : se développer sur **de nouveaux domaines d’activité stratégique (DAS)** pour répartir les risques et saisir des opportunités."
               ]
             },
             {
@@ -770,7 +770,7 @@
               "explain": "On mise sur la productivité et les volumes pour baisser les prix."
             },
             {
-              "q": "Se développer sur de nouveaux métiers ou marchés, c’est une stratégie de…",
+              "q": "Se développer dans de nouveaux domaines d’activité stratégique, c’est une stratégie de…",
               "choices": [
                 "diversification",
                 "spécialisation",

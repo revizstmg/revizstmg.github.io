@@ -9,6 +9,18 @@ const ri = (min, max, step = 1) =>
 const round = (n, d = 2) => Math.round(n * 10 ** d) / 10 ** d
 
 export const CALC = {
+  image_exponentielle: () => {
+    const base = ri(2, 5), x = ri(-2, 4), k = ri(1, 10)
+    const value = k * base ** x
+    return {prompt: `f(x) = ${k} × ${base}^x. Calcule f(${x}), arrondi au centime.`, answer: round(value,2), unit:'', tolerance:0.0049,
+      explain:`f(${x}) = ${k} × ${base}^(${x}) ≈ ${fmt(round(value,2))}.`}
+  },
+  logarithme_decimal: () => {
+    const n = ri(-3,5), b = 10 ** n
+    return {prompt:`Calcule log(${fmt(b)}), le logarithme décimal.`,answer:n,unit:'',tolerance:0.0049,
+      explain:`${fmt(b)} = 10^(${n}) ; par définition log(10^(${n})) = ${n}.`}
+  },
+
   // --- Gestion et Finance -------------------------------------------------
   tva: () => {
     const ventes = ri(40, 120) * 1000
@@ -44,10 +56,10 @@ export const CALC = {
     return {
       prompt: `CA = ${fmt(ca)} € ; charges variables = ${fmt(
         cv,
-      )} € ; charges fixes = ${fmt(cf)} €.\nCalcule le seuil de rentabilité (en €).`,
-      answer: sr,
+      )} € ; charges fixes = ${fmt(cf)} €.\nCalcule le seuil de rentabilité (en €, arrondi à l’euro).`,
+      answer: round(sr, 0),
       unit: '€',
-      tolerance: 200,
+      tolerance: 0.49,
       explain: `MCV = ${fmt(ca)} − ${fmt(cv)} = ${fmt(mcv)} €.\nTaux de MCV = ${fmt(
         mcv,
       )} / ${fmt(ca)} = ${round(tmcv, 3)}.\nSeuil = charges fixes / taux de MCV = ${fmt(
@@ -113,7 +125,7 @@ export const CALC = {
       )}.\nCalcule le taux d'évolution (en %, arrondi à 0,1).`,
       answer: round(t, 1),
       unit: '%',
-      tolerance: 0.2,
+      tolerance: 0.049,
       explain: `t = (V arrivée − V départ) / V départ = (${fmt(v2)} − ${fmt(
         v1,
       )}) / ${fmt(v1)} = ${round(t / 100, 4)} = ${round(t, 1)} %.`,
@@ -128,7 +140,7 @@ export const CALC = {
       prompt: `Une grandeur augmente de ${t1} % puis évolue de ${t2} %.\nQuel est le taux d'évolution global (en %, arrondi à 0,1) ?`,
       answer: round(tg, 1),
       unit: '%',
-      tolerance: 0.3,
+      tolerance: 0.049,
       explain: `CM global = (1 + ${t1}/100) × (1 ${t2 < 0 ? '−' : '+'} ${Math.abs(
         t2,
       )}/100) = ${round(cm, 4)}.\nTaux global = (CM − 1) × 100 = ${round(tg, 1)} %.`,
@@ -142,7 +154,7 @@ export const CALC = {
     const t = round((chomeurs / active) * 100, 1)
     return {
       prompt: `Un pays compte ${occupes} millions d'actifs occupés et ${chomeurs} millions de chômeurs.\nCalcule le taux de chômage (arrondi à 0,1 point).`,
-      answer: t, unit: '%', tolerance: 0.2,
+      answer: t, unit: '%', tolerance: 0.049,
       explain: `Population active = ${occupes} + ${chomeurs} = ${active} millions.\nTaux de chômage = chômeurs ÷ population active × 100 = ${chomeurs} ÷ ${active} × 100 ≈ ${t} %.`,
     }
   },
@@ -154,7 +166,7 @@ export const CALC = {
     const t = round((active / age) * 100, 1)
     return {
       prompt: `Population en âge de travailler : ${age} millions ; actifs occupés : ${occupes} millions ; chômeurs : ${chomeurs} millions.\nCalcule le taux d'activité (arrondi à 0,1 point).`,
-      answer: t, unit: '%', tolerance: 0.2,
+      answer: t, unit: '%', tolerance: 0.049,
       explain: `Population active = ${occupes} + ${chomeurs} = ${active} millions.\nTaux d'activité = population active ÷ population en âge de travailler × 100 = ${active} ÷ ${age} × 100 ≈ ${t} %.`,
     }
   },
@@ -164,7 +176,7 @@ export const CALC = {
     const t = round((occupes / age) * 100, 1)
     return {
       prompt: `Population en âge de travailler : ${age} millions ; actifs occupés : ${occupes} millions.\nCalcule le taux d'emploi (arrondi à 0,1 point).`,
-      answer: t, unit: '%', tolerance: 0.2,
+      answer: t, unit: '%', tolerance: 0.049,
       explain: `Taux d'emploi = actifs occupés ÷ population en âge de travailler × 100 = ${occupes} ÷ ${age} × 100 ≈ ${t} %.`,
     }
   },
@@ -242,7 +254,7 @@ export const CALC = {
       )} % de défauts.\nProbabilité qu'une pièce prise au hasard soit défectueuse ? (en %, arrondi 0,1)`,
       answer: round(res * 100, 1),
       unit: '%',
-      tolerance: 0.2,
+      tolerance: 0.049,
       explain: `P(D) = P(A)×${da} + P(B)×${db} = ${pa}×${da} + ${pb}×${db} = ${round(
         res,
         4,
@@ -257,7 +269,7 @@ export const CALC = {
     const res = round(v * (1 + t / 100), 2)
     return {
       prompt: `Une valeur de ${fmt(v)} € évolue de ${t} %.\nCalcule la nouvelle valeur (arrondi au centime).`,
-      answer: res, unit: '€', tolerance: 0.5,
+      answer: res, unit: '€', tolerance: 0.0049,
       explain: `Nouvelle valeur = ${fmt(v)} × (1 ${t < 0 ? '−' : '+'} ${Math.abs(t)}/100) = ${fmt(v)} × ${round(1 + t / 100, 3)} = ${fmt(res)} €.`,
     }
   },
@@ -267,7 +279,7 @@ export const CALC = {
     const indice = round((val / ref) * 100, 1)
     return {
       prompt: `Valeur de référence (base 100) : ${fmt(ref)}.\nValeur observée : ${fmt(val)}.\nCalcule l'indice (base 100, arrondi à 0,1).`,
-      answer: indice, unit: '', tolerance: 0.2,
+      answer: indice, unit: '', tolerance: 0.049,
       explain: `Indice = (valeur / référence) × 100 = (${fmt(val)} / ${fmt(ref)}) × 100 = ${indice}.`,
     }
   },
@@ -279,7 +291,7 @@ export const CALC = {
     const tM = round((cmM - 1) * 100, 1)
     return {
       prompt: `Sur ${n} ans, une grandeur augmente globalement de ${tg} %.\nCalcule le taux d'évolution annuel moyen (en %, arrondi 0,1).`,
-      answer: tM, unit: '%', tolerance: 0.2,
+      answer: tM, unit: '%', tolerance: 0.049,
       explain: `CM global = 1 + ${tg}/100 = ${round(cmG, 3)}.\nCM moyen = (CM global)^(1/${n}) = ${round(cmM, 4)}.\nTaux moyen = (CM moyen − 1) × 100 ≈ ${tM} %.`,
     }
   },
@@ -289,7 +301,7 @@ export const CALC = {
     const rec = round((1 / cm - 1) * 100, 1)
     return {
       prompt: `Un prix augmente de ${t} %.\nQuel taux d'évolution (en %, arrondi 0,1) annulerait exactement cette hausse (retour au prix initial) ?`,
-      answer: rec, unit: '%', tolerance: 0.2,
+      answer: rec, unit: '%', tolerance: 0.049,
       explain: `CM = 1 + ${t}/100 = ${round(cm, 3)}.\nCM réciproque = 1/${round(cm, 3)} = ${round(1 / cm, 4)}.\nTaux réciproque = (1/CM − 1) × 100 ≈ ${rec} % (c'est une baisse).`,
     }
   },

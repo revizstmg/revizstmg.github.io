@@ -801,10 +801,8 @@
             {
               "ask": "Affiche le nom des clients qui habitent à Lyon.",
               "answer": "SELECT nom FROM CLIENT WHERE ville = 'Lyon'",
-              "alt": [
-                "SELECT nom FROM CLIENT WHERE ville = \"Lyon\""
-              ],
-              "explain": "On filtre les lignes avec WHERE ville = \"Lyon\". Le texte est entre guillemets."
+              "alt": [],
+              "explain": "WHERE ville = 'Lyon' filtre la ville. Les chaînes de caractères sont entre apostrophes ; leur casse et leurs accents sont conservés."
             },
             {
               "ask": "Affiche toutes les colonnes des commandes dont le montant dépasse 100.",
@@ -823,7 +821,10 @@
             {
               "ask": "Compte le nombre total de clients.",
               "answer": "SELECT COUNT(*) FROM CLIENT",
-              "alt": [],
+              "alt": [
+                "SELECT COUNT(numCli) FROM CLIENT",
+                "SELECT COUNT(1) FROM CLIENT"
+              ],
               "explain": "La fonction COUNT(*) compte les enregistrements de la table CLIENT."
             }
           ]

@@ -270,7 +270,7 @@
             },
             {
               "t": "p",
-              "c": "On peut lire le sommet sur la **forme canonique** f(x) = a(x − α)² + β : le sommet est le point (α ; β), avec α = −b/(2a) et β = f(α). Quand le discriminant Δ est positif, la **forme factorisée** f(x) = a(x − x₁)(x − x₂) met en évidence les **racines** x₁ et x₂ ; par symétrie, α est le milieu de x₁ et x₂."
+              "c": "La **forme factorisée** f(x)=a(x−x₁)(x−x₂) permet de lire les racines. L’axe de symétrie passe au milieu des deux racines ; on peut aussi déterminer les éléments caractéristiques graphiquement ou avec un solveur. Aucune formule générale du sommet n’est exigée."
             },
             {
               "t": "example",
@@ -303,42 +303,22 @@
           "count": 8
         },
         {
-          "id": "p1-math-c3-calc-delta",
-          "type": "calcul",
-          "title": "Exercices — Discriminant Δ",
-          "icon": "✍️",
-          "gen": "discriminant",
-          "count": 6
-        },
-        {
-          "id": "p1-math-c3-calc-sommet",
-          "type": "calcul",
-          "title": "Exercices — Abscisse du sommet",
-          "icon": "✍️",
-          "gen": "sommet_abscisse",
-          "count": 6
-        },
-        {
           "id": "p1-math-c3-flash",
           "type": "flashcard",
           "title": "Flashcards — Formules",
           "icon": "🃏",
           "cards": [
             {
-              "front": "f(x) = ax² + bx + c",
-              "back": "Sa courbe est une parabole."
+              "front": "Forme factorisée",
+              "back": "Un produit de facteurs permet de lire les racines."
             },
             {
-              "front": "Discriminant",
-              "back": "Δ = b² − 4ac."
+              "front": "Produit nul",
+              "back": "Au moins un facteur est nul."
             },
             {
-              "front": "Abscisse du sommet",
-              "back": "α = −b / (2a)."
-            },
-            {
-              "front": "Signe de a",
-              "back": "a > 0 : minimum (∪) ; a < 0 : maximum (∩)."
+              "front": "Axe de symétrie",
+              "back": "Il passe au milieu des deux racines lorsqu’elles existent."
             }
           ]
         }
@@ -461,7 +441,7 @@
     },
     {
       "id": "p1-math-c5",
-      "name": "Chapitre 5 — Statistiques à une variable",
+      "name": "Chapitre 5 : Statistiques et ajustement",
       "short": "Statistiques",
       "keywords": "moyenne médiane quartiles étendue écart interquartile écart-type boîte à moustaches dispersion",
       "intro": "On résume une série de données par des **indicateurs** de position et de dispersion.",
@@ -503,12 +483,94 @@
               "c": "Le **diagramme en boîte** (boîte à moustaches) visualise min, Q1, médiane, Q3, max. Deux séries de même moyenne mais d’écarts-types différents n’ont pas la même **homogénéité**."
             }
           ]
+        },
+        {
+          "h": "Deux variables et point moyen",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Une **série à deux variables quantitatives** associe à chaque individu un couple (xᵢ,yᵢ). Le **nuage de points** représente ces couples ; il permet d’observer une tendance sans prouver une causalité."
+            },
+            {
+              "t": "p",
+              "c": "Le **point moyen** G a pour coordonnées la moyenne des abscisses et la moyenne des ordonnées. On calcule chaque moyenne sur tous les couples, sans mélanger les deux unités."
+            },
+            {
+              "t": "example",
+              "h": "Application corrigée",
+              "c": "Pour (1;2), (2;5), (3;5), x̄=2 et ȳ=4 ; G=(2;4). L’allure croissante du nuage ne suffit pas à établir une relation causale."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Couple de données",
+                  "Deux mesures quantitatives associées au même individu"
+                ],
+                [
+                  "Nuage de points",
+                  "Représentation des couples (xᵢ,yᵢ)"
+                ],
+                [
+                  "Point moyen",
+                  "Point G(x̄;ȳ), moyennes calculées séparément sur les x et les y"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Ajustement affine et prévision",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Un **ajustement affine** décrit la tendance d’un nuage par une droite y=ax+b. Il s’obtient graphiquement ou avec les outils de régression d’une calculatrice ou d’un tableur. Le modèle doit rester pertinent au regard du nuage."
+            },
+            {
+              "t": "p",
+              "c": "Une **interpolation** estime une valeur à l’intérieur de la plage observée. Une **extrapolation** utilise le modèle au-delà de cette plage ; elle demande davantage de prudence. Une corrélation ne prouve pas que x cause y."
+            },
+            {
+              "t": "example",
+              "h": "Application corrigée",
+              "c": "Si un modèle y=3x+2 est pertinent pour x de 1 à 10, la prévision pour x=6 est 20 (interpolation). Pour x=20, le modèle donne 62, mais cette extrapolation doit être discutée."
+            },
+            {
+              "t": "table",
+              "h": "Notions et définitions",
+              "head": [
+                "Notion",
+                "Définition"
+              ],
+              "rows": [
+                [
+                  "Ajustement affine",
+                  "Modélisation d’une tendance par y=ax+b"
+                ],
+                [
+                  "Interpolation",
+                  "Estimation à l’intérieur de la plage observée"
+                ],
+                [
+                  "Extrapolation",
+                  "Estimation au-delà de la plage observée, à interpréter avec prudence"
+                ]
+              ]
+            }
+          ]
         }
       ],
       "essentiel": [
         "Position : **moyenne**, **médiane**, **quartiles** Q1/Q3.",
         "Dispersion : **étendue**, **écart interquartile** (Q3 − Q1), **écart-type**.",
-        "La **boîte à moustaches** visualise min, Q1, médiane, Q3, max."
+        "La **boîte à moustaches** visualise min, Q1, médiane, Q3, max.",
+        "**Deux variables** : nuage de points et point moyen.",
+        "**Ajustement affine** : interpoler, extrapoler et discuter les limites."
       ],
       "resources": [
         {
