@@ -15,12 +15,15 @@ for(const level of ['premiere','terminale'])test(`sujets prêts ${level} : PDF i
  await expect(select.locator('option')).toHaveCount(5)
  for(const matiere of await select.locator('option').evaluateAll(options=>options.map(o=>o.value))){
   await select.selectOption(matiere)
-  await expect(section.getByRole('article')).toHaveCount(2)
+  await expect(section.getByRole('article')).toHaveCount(['Management','Droit et économie'].includes(matiere)?4:2)
  }
  await select.selectOption('Droit et économie')
  await expect(section).toContainText('120 min')
  await expect(section).toContainText('8 documents')
  await expect(section).toContainText('12 questions')
+ await expect(section.getByRole('heading',{name:'Révision Première-Terminale',exact:true})).toBeVisible()
+ await expect(section).toContainText('incluent des notions de Terminale')
+ await expect(section).toContainText('10 questions')
  const quota=await page.evaluate(()=>localStorage.getItem('stmg_ia_mois'))
  for(const card of await section.getByRole('article').all())for(const name of ['Télécharger le sujet','Télécharger le corrigé']){
   const waiting=page.waitForEvent('download')
@@ -52,7 +55,7 @@ test('sujets prêts : aperçu ordinateur',async({page},testInfo)=>{
  const section=page.getByRole('region',{name:'Les sujets classiques'})
  await section.scrollIntoViewIfNeeded()
  const cards=section.getByRole('article')
- await expect(cards).toHaveCount(2)
+ await expect(cards).toHaveCount(4)
  const a=await cards.nth(0).boundingBox(),b=await cards.nth(1).boundingBox()
  expect(Math.abs(a.y-b.y)).toBeLessThan(2)
  expect(b.x).toBeGreaterThan(a.x+a.width)

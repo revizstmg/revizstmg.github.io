@@ -3908,5 +3908,1105 @@
         }
       ]
     }
+  },
+  {
+    "id": "revision-management-premiere-terminale-1",
+    "level": "terminale",
+    "scope": "premiere-terminale",
+    "subject": "Management",
+    "summary": "Organisation, valeur ajoutée, diagnostic, stratégie, production et RSE : des chapitres des deux années.",
+    "duration": 120,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "p1-mgmt-t1::0",
+        "title": "L’organisation : un groupe, des ressources, un but commun",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "mgmt-t1::0",
+        "title": "La création de valeur : valeur ajoutée, chaîne de valeur et performance globale",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-mgmt-t2::3",
+        "title": "La synthèse : la matrice SWOT",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "mgmt-t1::3",
+        "title": "La compétitivité : prix ou hors-prix, coûts ou différenciation",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "mgmt-t1::6",
+        "title": "Organiser la production : flux poussé, flux tiré, juste-à-temps et qualité",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-mgmt-t3::2",
+        "title": "Les stratégies globales : spécialisation ou diversification",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "mgmt-t1::1",
+        "title": "Ressources, compétences distinctives et avantage concurrentiel",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-mgmt-t2::1",
+        "title": "Le diagnostic externe : macro-environnement (PESTEL) et micro-environnement",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "p1-mgmt-t1::1",
+        "title": "Le management : fixer des objectifs, organiser, animer, contrôler",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "mgmt-t3::0",
+        "title": "La RSE au cœur de la stratégie : performance globale et parties prenantes",
+        "subject": "Management",
+        "level": "terminale"
+      }
+    ],
+    "exam": {
+      "title": "Révision Première-Terminale 1 : Rivage, grandir durablement",
+      "instructions": "Révision des programmes de Première et Terminale : les contenus de Terminale sont inclus. Cas et données fictifs. Dix questions de 2 points, soit 20 points. Les questions 1 à 8 utilisent le dossier ; les questions 9 et 10 sont sans document. Lecture : 15 min ; rédaction : 95 min ; relecture : 10 min. Calculatrice autorisée. Sujet non officiel, distinct d’une épreuve complète de quatre heures.",
+      "documents": [
+        {
+          "id": "d1",
+          "title": "Document 1 : L’entreprise Rivage (cas fictif)",
+          "text": "Rivage fabrique des meubles réparables. Ses deux associés emploient quinze salariés et coordonnent le travail dans un atelier équipé de machines et d’un logiciel de commandes. Les ventes doivent financer la continuité de l’activité et rémunérer les apporteurs. La direction veut aussi limiter les déchets. L’existence d’un objectif environnemental ne suffit pas à faire de cette société une association : les faits décrivent une entreprise privée."
+        },
+        {
+          "id": "d2",
+          "title": "Document 2 : Une richesse à mesurer (cas fictif)",
+          "text": "Dans cet exercice simplifié, Rivage vend pour 400 000 euros hors taxes de meubles fabriqués pendant l’année. Il n’existe ni variation de stocks de produits finis, ni production immobilisée. Les biens et services achetés à des tiers et consommés pendant l’année représentent 150 000 euros. Les salaires de 120 000 euros ne sont pas inclus dans ces consommations intermédiaires. Toutes les données se rapportent à la même période."
+        },
+        {
+          "id": "d3",
+          "title": "Document 3 : Le diagnostic (cas fictif)",
+          "text": "Rivage dispose de techniciens expérimentés et de plans de meubles protégés, mais manque de trésorerie et d’espace de stockage. La demande de produits réparables progresse dans le marché étudié. Une nouvelle enseigne à bas prix prépare toutefois son arrivée. Les compétences et l’atelier appartiennent à l’organisation ; l’évolution des attentes et l’arrivée de concurrents ne dépendent pas de sa seule décision."
+        },
+        {
+          "id": "d4",
+          "title": "Document 4 : La proposition commerciale (cas fictif)",
+          "text": "Une table Rivage coûte 480 euros contre 290 euros pour un modèle standard comparable sur le marché fictif. L’entreprise propose des pièces remplaçables, un entretien et une fabrication personnalisée. Certains clients reconnaissent cette valeur supplémentaire ; d’autres privilégient le prix. La direction ne veut pas présenter son offre comme la moins chère et doit expliquer ce qui justifie l’écart."
+        },
+        {
+          "id": "d5",
+          "title": "Document 5 : Une production à organiser (cas fictif)",
+          "text": "Le responsable hésite entre produire de grands lots avant de connaître les commandes, en anticipant les ventes, et lancer l’assemblage après réception des commandes confirmées. Le premier mode risque d’accroître le stock ; le second peut allonger le délai client si les composants ne sont pas disponibles. Les fournisseurs n’ont pas tous des délais stables. Aucun mode ne supprime à lui seul l’incertitude."
+        },
+        {
+          "id": "d6",
+          "title": "Document 6 : Deux projets de développement (cas fictif)",
+          "text": "Le projet A consiste à ouvrir une deuxième boutique vendant les mêmes meubles et services de réparation. Le projet B consiste à lancer une activité distincte d’organisation d’événements, avec une nouvelle clientèle et des compétences propres. Pour cet exercice, B constitue explicitement un nouveau domaine d’activité. La direction doit tenir compte de ses moyens limités avant d’approuver plusieurs projets."
+        },
+        {
+          "id": "d7",
+          "title": "Document 7 : Une ressource et sa mobilisation (cas fictif)",
+          "text": "Rivage achète une machine de découpe disponible aussi pour ses concurrents. Sa valeur pour les clients dépend toutefois de la maîtrise des réglages, de la conception des pièces et de l’organisation de la maintenance. Un groupe de techniciens sait combiner ces éléments pour réparer rapidement des meubles anciens. La direction cherche à transmettre ce savoir-faire sans prétendre que l’achat d’une machine garantit un avantage durable."
+        },
+        {
+          "id": "d8",
+          "title": "Document 8 : L’environnement évolue (cas fictif)",
+          "text": "Une aide publique fictive soutient l’achat de mobilier durable par des collectivités. Une hausse du coût de l’énergie augmente en parallèle les dépenses de production du secteur. Les acheteurs publics demandent des informations vérifiables sur la réparabilité. Rivage ne peut décider ni du montant de l’aide ni du prix général de l’énergie ; elle peut en revanche adapter son offre et surveiller ces évolutions."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "chapterId": "p1-mgmt-t1::0",
+          "documentIds": [
+            "d1"
+          ],
+          "enonce": "Montrez que Rivage est une organisation et identifiez une ressource humaine et une ressource matérielle.",
+          "points": 2,
+          "correction": "Rivage structure une action collective autour d’objectifs et d’une répartition des tâches. Les associés, le responsable et les salariés coordonnent les moyens nécessaires à l’activité. Les techniciens sont une ressource humaine et les machines une ressource matérielle. Il s’agit d’une entreprise privée ; l’engagement environnemental ne transforme pas à lui seul sa nature juridique.",
+          "criteria": [
+            "But commun : 0,5 point.",
+            "Coordination et structure : 0,5 point.",
+            "Ressource humaine : 0,5 point.",
+            "Ressource matérielle : 0,5 point."
+          ]
+        },
+        {
+          "id": "q2",
+          "chapterId": "mgmt-t1::0",
+          "documentIds": [
+            "d2"
+          ],
+          "enonce": "Calculez la valeur ajoutée et expliquez pourquoi elle ne correspond pas au bénéfice.",
+          "points": 2,
+          "correction": "La production vendue est ici de 400 000 euros. La valeur ajoutée est donc de 400 000 - 150 000 = 250 000 euros. Les salaires ne sont pas une consommation intermédiaire à retrancher dans ce calcul. La richesse créée sert notamment à rémunérer le travail et les autres apporteurs ; d’autres charges restent à prendre en compte pour déterminer le résultat.",
+          "criteria": [
+            "Formule et périmètre : 0,5 point.",
+            "Résultat de 250 000 euros : 0,5 point.",
+            "Traitement des salaires : 0,5 point.",
+            "Distinction valeur ajoutée et bénéfice : 0,5 point."
+          ]
+        },
+        {
+          "id": "q3",
+          "chapterId": "p1-mgmt-t2::3",
+          "documentIds": [
+            "d3"
+          ],
+          "enonce": "Classez une force, une faiblesse, une opportunité et une menace dans une matrice SWOT.",
+          "points": 2,
+          "correction": "Une force est l’expérience des techniciens ou la protection des plans ; une faiblesse est la trésorerie réduite ou le manque de stockage. La demande croissante constitue une opportunité et l’arrivée de l’enseigne une menace. Les deux premières catégories sont internes, les deux dernières externes. Tout autre classement doit être étayé par les faits, sans transformer une évolution du marché en ressource détenue.",
+          "criteria": [
+            "Force justifiée : 0,5 point.",
+            "Faiblesse justifiée : 0,5 point.",
+            "Opportunité justifiée : 0,5 point.",
+            "Menace justifiée : 0,5 point."
+          ]
+        },
+        {
+          "id": "q4",
+          "chapterId": "mgmt-t1::3",
+          "documentIds": [
+            "d4"
+          ],
+          "enonce": "Caractérisez la compétitivité recherchée et expliquez deux conditions pour qu’elle soutienne la vente.",
+          "points": 2,
+          "correction": "Rivage recherche une compétitivité hors-prix par différenciation, fondée sur la personnalisation et la réparabilité plutôt que sur le prix le plus bas. La différence doit être perçue et valorisée par les clients, puis effectivement assurée. Elle doit aussi être économiquement soutenable. Le supplément de prix ne prouve pas à lui seul l’existence d’un avantage concurrentiel.",
+          "criteria": [
+            "Hors-prix et différenciation : 0,5 point.",
+            "Caractéristiques du cas : 0,5 point.",
+            "Valeur perçue par les clients : 0,5 point.",
+            "Réalité ou soutenabilité de la différence : 0,5 point."
+          ]
+        },
+        {
+          "id": "q5",
+          "chapterId": "mgmt-t1::6",
+          "documentIds": [
+            "d5"
+          ],
+          "enonce": "Distinguez les deux logiques de production et discutez un risque pour chacune.",
+          "points": 2,
+          "correction": "Produire par anticipation relève d’une logique de flux poussé, avec un risque de stock ou d’invendus si la prévision est erronée. Déclencher l’assemblage sur commande relève d’une logique de flux tiré, qui réduit certains stocks mais peut allonger le délai si les composants manquent. Le choix dépend notamment de la fiabilité de l’approvisionnement et des attentes des clients.",
+          "criteria": [
+            "Flux poussé identifié : 0,5 point.",
+            "Risque de stock : 0,5 point.",
+            "Flux tiré identifié : 0,5 point.",
+            "Risque de délai et condition de choix : 0,5 point."
+          ]
+        },
+        {
+          "id": "q6",
+          "chapterId": "p1-mgmt-t3::2",
+          "documentIds": [
+            "d6"
+          ],
+          "enonce": "Distinguez les projets A et B en termes de périmètre stratégique. Présentez un risque du projet B.",
+          "points": 2,
+          "correction": "Le projet A reste dans le domaine existant et correspond à une croissance dans une logique de spécialisation. Le projet B relève de la diversification puisqu’un nouveau domaine est explicitement défini dans les faits. Il peut apporter de nouvelles sources de revenus mais aussi disperser les moyens et exiger des compétences absentes. Une nouvelle implantation ne suffit pas à caractériser une diversification.",
+          "criteria": [
+            "Projet A et spécialisation : 0,5 point.",
+            "Projet B et nouveau domaine : 0,5 point.",
+            "Intérêt possible : 0,5 point.",
+            "Risque de dispersion ou de compétences : 0,5 point."
+          ]
+        },
+        {
+          "id": "q7",
+          "chapterId": "mgmt-t1::1",
+          "documentIds": [
+            "d7"
+          ],
+          "enonce": "Distinguez ressource et compétence et discutez le caractère distinctif du savoir-faire décrit.",
+          "points": 2,
+          "correction": "La machine est une ressource matérielle mobilisable. La compétence réside dans la capacité à combiner réglages, conception et maintenance pour rendre le service. Le savoir-faire peut être distinctif s’il permet une réparation valorisée et difficile à reproduire par les concurrents. L’équipement, disponible sur le marché, n’est pas en lui-même une preuve de rareté durable.",
+          "criteria": [
+            "Ressource identifiée : 0,5 point.",
+            "Compétence expliquée : 0,5 point.",
+            "Valeur apportée au service : 0,5 point.",
+            "Distinction conditionnelle face aux concurrents : 0,5 point."
+          ]
+        },
+        {
+          "id": "q8",
+          "chapterId": "p1-mgmt-t2::1",
+          "documentIds": [
+            "d8"
+          ],
+          "enonce": "Identifiez deux évolutions externes et rattachez-les à une dimension de l’analyse PESTEL.",
+          "points": 2,
+          "correction": "L’aide publique peut être rattachée à la dimension politique, ou économique si l’on explique son effet sur la demande. La hausse du coût de l’énergie relève ici d’une évolution économique affectant les coûts. Les exigences de réparabilité peuvent être discutées selon leur contenu, sans inventer une obligation légale. Deux rattachements expliqués et reliés aux faits sont attendus.",
+          "criteria": [
+            "Première évolution externe : 0,5 point.",
+            "Premier rattachement expliqué : 0,5 point.",
+            "Seconde évolution externe : 0,5 point.",
+            "Second rattachement expliqué : 0,5 point."
+          ]
+        },
+        {
+          "id": "q9",
+          "chapterId": "p1-mgmt-t1::1",
+          "documentIds": [],
+          "enonce": "Sans document, présentez les quatre fonctions classiques du management.",
+          "points": 2,
+          "correction": "Le management consiste notamment à fixer des objectifs pour orienter l’action, organiser les ressources et les tâches, animer les acteurs et contrôler les résultats obtenus. Le contrôle permet de repérer des écarts et de décider d’ajustements. Ces fonctions s’articulent : elles ne correspondent pas à quatre activités totalement indépendantes.",
+          "criteria": [
+            "Fixer des objectifs expliqué : 0,5 point.",
+            "Organiser expliqué : 0,5 point.",
+            "Animer expliqué : 0,5 point.",
+            "Contrôler expliqué : 0,5 point."
+          ]
+        },
+        {
+          "id": "q10",
+          "chapterId": "mgmt-t3::0",
+          "documentIds": [],
+          "enonce": "Sans document, expliquez la RSE et pourquoi une promesse écologique ne suffit pas à la démontrer.",
+          "points": 2,
+          "correction": "La RSE prend en compte des enjeux économiques, sociaux et environnementaux dans les activités et les relations avec les parties prenantes. Une promesse écologique doit être étayée par des actions et des résultats vérifiables ; elle ne résume pas les conditions de travail ou les relations avec les partenaires. L’évaluation doit donc examiner plusieurs dimensions et leurs éventuels arbitrages.",
+          "criteria": [
+            "Dimension économique : 0,5 point.",
+            "Dimension sociale : 0,5 point.",
+            "Dimension environnementale : 0,5 point.",
+            "Preuves et prise en compte des parties prenantes : 0,5 point."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "revision-management-premiere-terminale-2",
+    "level": "terminale",
+    "scope": "premiere-terminale",
+    "subject": "Management",
+    "summary": "Finalités, décisions, numérique, structures, parties prenantes et économie circulaire.",
+    "duration": 120,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "p1-mgmt-t1::3",
+        "title": "Les formes d’organisations : entreprises, organisations publiques, société civile",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "mgmt-t3::5",
+        "title": "La transformation numérique : données, nouveaux modèles économiques, relation client",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-mgmt-t1::2",
+        "title": "Deux niveaux de management : stratégique et opérationnel",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "mgmt-t1::5",
+        "title": "Les structures : fonctionnelle, divisionnelle, matricielle, plate",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-mgmt-t2::2",
+        "title": "Le diagnostic interne : ressources, compétences distinctives, forces et faiblesses",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "mgmt-t3::9",
+        "title": "Les parties prenantes : internes, externes et attentes divergentes",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-mgmt-t3::3",
+        "title": "Faire seul ou avec d’autres : intégration ou externalisation",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "mgmt-t3::15",
+        "title": "L’économie circulaire : éco-conception, réemploi, recyclage, fonctionnalité",
+        "subject": "Management",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-mgmt-t2::4",
+        "title": "Des finalités aux objectifs stratégiques",
+        "subject": "Management",
+        "level": "premiere"
+      },
+      {
+        "id": "mgmt-t3::1",
+        "title": "Greenwashing et mutations : des engagements prouvés, une organisation agile",
+        "subject": "Management",
+        "level": "terminale"
+      }
+    ],
+    "exam": {
+      "title": "Révision Première-Terminale 2 : Passerelle, se transformer",
+      "instructions": "Révision des programmes de Première et Terminale : les contenus de Terminale sont inclus. Cas et données fictifs. Dix questions de 2 points, soit 20 points. Les questions 1 à 8 utilisent le dossier ; les questions 9 et 10 sont sans document. Lecture : 15 min ; rédaction : 95 min ; relecture : 10 min. Calculatrice autorisée. Sujet non officiel, distinct d’une épreuve complète de quatre heures.",
+      "documents": [
+        {
+          "id": "d1",
+          "title": "Document 1 : Une association organisée (cas fictif)",
+          "text": "Passerelle est une association déclarée qui facilite l’accès à la culture. Elle mobilise des bénévoles et emploie trois salariés. Les cotisations, subventions et recettes de certains ateliers financent son activité. Les excédents éventuels sont conservés pour sa mission et ne sont pas distribués aux membres. Le fait de proposer un atelier payant ne suffit donc pas à caractériser une finalité lucrative."
+        },
+        {
+          "id": "d2",
+          "title": "Document 2 : Un service numérique (cas fictif)",
+          "text": "L’association remplace des inscriptions papier par un site permettant de réserver les ateliers et de consulter les places disponibles. Le projet modifie la relation avec les usagers, l’organisation des inscriptions et les informations utilisées pour programmer les séances. Des bénévoles restent disponibles pour les personnes peu à l’aise avec le numérique. Le site ne se réduit pas à une nouvelle affiche publicitaire."
+        },
+        {
+          "id": "d3",
+          "title": "Document 3 : Deux horizons de décision (cas fictif)",
+          "text": "Le conseil d’administration décide d’ouvrir une antenne dans un autre quartier sur trois ans, avec un budget et un recrutement à prévoir. Pour la séance de samedi, la coordinatrice change la salle à la suite d’un problème de chauffage. La première décision engage durablement le périmètre et les moyens ; la seconde adapte le fonctionnement courant à une contrainte ponctuelle."
+        },
+        {
+          "id": "d4",
+          "title": "Document 4 : Des activités différenciées (cas fictif)",
+          "text": "Pour gérer deux antennes, la direction compare une répartition des équipes par fonctions, comme communication et programmation, à une organisation par antenne avec un responsable local. La première peut favoriser l’expertise commune ; la seconde la réactivité locale. Un projet de coordination doit éviter que chaque antenne développe des procédures incompatibles. Aucune structure n’est automatiquement la meilleure dans toutes les situations."
+        },
+        {
+          "id": "d5",
+          "title": "Document 5 : Un diagnostic interne (cas fictif)",
+          "text": "Les bénévoles connaissent bien les publics et les salariés maîtrisent la programmation culturelle. L’association dispose d’une base de partenaires fidèles. Elle manque toutefois de temps pour actualiser ses procédures et dépend d’un nombre réduit de personnes pour le site. Ces éléments concernent des ressources et capacités internes, à distinguer des décisions des financeurs et des évolutions de fréquentation."
+        },
+        {
+          "id": "d6",
+          "title": "Document 6 : Des attentes divergentes (cas fictif)",
+          "text": "Les salariés souhaitent limiter les horaires tardifs ; certains usagers demandent davantage de séances en soirée. Le financeur public souhaite un accès large, tandis qu’un partenaire veut privilégier ses propres adhérents. Les décisions d’horaires et de tarification peuvent donc avantager certains groupes et en décevoir d’autres. La direction veut expliciter ses critères plutôt que promettre une satisfaction totale de toutes les attentes."
+        },
+        {
+          "id": "d7",
+          "title": "Document 7 : Une prestation confiée à un tiers (cas fictif)",
+          "text": "Passerelle envisage de confier la maintenance du site à un prestataire indépendant. Le contrat préciserait les interventions, les délais et l’accès aux données utiles. Cette option réduirait la dépendance à un bénévole unique, mais créerait aussi des exigences de suivi et de coordination. L’association conserverait la décision sur son offre d’ateliers et ne céderait pas automatiquement toutes ses responsabilités."
+        },
+        {
+          "id": "d8",
+          "title": "Document 8 : Des équipements utilisés plus longtemps (cas fictif)",
+          "text": "Pour les ateliers créatifs, l’association met en place une bibliothèque d’outils partagés. Elle prévoit l’entretien, la réparation et le réemploi de matériaux. Les objets en fin d’usage sont orientés vers des filières adaptées, mais le projet vise d’abord à éviter des achats et à prolonger l’utilisation. Le recyclage n’est pas présenté comme l’unique réponse à tous les déchets."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "chapterId": "p1-mgmt-t1::3",
+          "documentIds": [
+            "d1"
+          ],
+          "enonce": "Caractérisez la forme et la finalité de Passerelle. Pourquoi les recettes d’ateliers ne suffisent-elles pas à en faire une entreprise lucrative ?",
+          "points": 2,
+          "correction": "Passerelle relève des organisations de la société civile sous forme associative. Sa finalité est liée à une mission culturelle et non à la distribution d’un profit aux membres. Les recettes contribuent au financement de cette mission. Il faut distinguer la présence d’une activité payante et la finalité de l’organisation : un excédent conservé n’est pas, à lui seul, une distribution de bénéfice.",
+          "criteria": [
+            "Forme associative : 0,5 point.",
+            "Mission culturelle : 0,5 point.",
+            "Non-distribution aux membres : 0,5 point.",
+            "Distinction recettes et finalité lucrative : 0,5 point."
+          ]
+        },
+        {
+          "id": "q2",
+          "chapterId": "mgmt-t3::5",
+          "documentIds": [
+            "d2"
+          ],
+          "enonce": "Montrez que le projet constitue une transformation numérique de l’activité et présentez une condition d’accompagnement.",
+          "points": 2,
+          "correction": "Le site change les inscriptions, la disponibilité de l’information et la programmation des séances : il transforme des processus et la relation avec les usagers. L’accompagnement des publics peu à l’aise avec l’outil limite un risque d’exclusion. La formation des acteurs et la fiabilité des informations sont aussi utiles. Mettre un formulaire en ligne ne garantit pas, à lui seul, une amélioration du service.",
+          "criteria": [
+            "Modification d’un processus : 0,5 point.",
+            "Modification de la relation aux usagers : 0,5 point.",
+            "Usage de l’information : 0,5 point.",
+            "Condition humaine ou organisationnelle : 0,5 point."
+          ]
+        },
+        {
+          "id": "q3",
+          "chapterId": "p1-mgmt-t1::2",
+          "documentIds": [
+            "d3"
+          ],
+          "enonce": "Classez les deux décisions et justifiez chaque classement à partir de leur portée et de leur horizon.",
+          "points": 2,
+          "correction": "L’ouverture d’une antenne est une décision stratégique : elle engage plusieurs années, le périmètre de l’activité et des moyens importants. Le changement de salle est opérationnel : il résout une difficulté immédiate dans le cadre de l’activité existante. L’identité de la personne qui décide est un indice mais ne remplace pas l’analyse de la portée et de l’horizon.",
+          "criteria": [
+            "Décision stratégique identifiée : 0,5 point.",
+            "Portée et durée justifiées : 0,5 point.",
+            "Décision opérationnelle identifiée : 0,5 point.",
+            "Court terme et fonctionnement courant justifiés : 0,5 point."
+          ]
+        },
+        {
+          "id": "q4",
+          "chapterId": "mgmt-t1::5",
+          "documentIds": [
+            "d4"
+          ],
+          "enonce": "Distinguez l’organisation par fonctions de celle par antenne et discutez un avantage ou un risque de chacune.",
+          "points": 2,
+          "correction": "La structure fonctionnelle regroupe les activités selon les fonctions et peut favoriser une expertise commune, au risque de cloisonnements ou de lenteurs locales. Une logique divisionnelle par antenne attribue davantage de responsabilités à chaque unité et peut améliorer la réactivité, avec un risque de duplication ou de coordination insuffisante. Le choix doit tenir compte de la taille et des besoins, sans déduire une solution universelle.",
+          "criteria": [
+            "Logique fonctionnelle : 0,5 point.",
+            "Avantage ou risque fonctionnel : 0,5 point.",
+            "Logique par unités ou divisionnelle : 0,5 point.",
+            "Avantage ou risque de coordination : 0,5 point."
+          ]
+        },
+        {
+          "id": "q5",
+          "chapterId": "p1-mgmt-t2::2",
+          "documentIds": [
+            "d5"
+          ],
+          "enonce": "Présentez deux forces et deux faiblesses internes sans les confondre avec des évolutions externes.",
+          "points": 2,
+          "correction": "La connaissance des publics et l’expertise de programmation sont des forces, comme le réseau de partenaires fidèles. Le manque de temps pour les procédures et la dépendance à quelques personnes sont des faiblesses. Ces caractéristiques concernent les ressources et les capacités de Passerelle ; une évolution de subvention décidée à l’extérieur appartiendrait à un autre niveau d’analyse.",
+          "criteria": [
+            "Première force : 0,5 point.",
+            "Seconde force : 0,5 point.",
+            "Première faiblesse : 0,5 point.",
+            "Seconde faiblesse : 0,5 point."
+          ]
+        },
+        {
+          "id": "q6",
+          "chapterId": "mgmt-t3::9",
+          "documentIds": [
+            "d6"
+          ],
+          "enonce": "Identifiez deux parties prenantes internes et deux externes, puis expliquez un conflit d’attentes.",
+          "points": 2,
+          "correction": "Les salariés et les bénévoles sont des parties prenantes internes ; les usagers et le financeur public ou le partenaire sont externes. Les demandes de soirées peuvent entrer en tension avec les conditions de travail, et la priorité aux adhérents d’un partenaire avec l’accès large. La direction doit arbitrer en cohérence avec la mission ; elle ne peut pas garantir que toutes les attentes seront satisfaites simultanément.",
+          "criteria": [
+            "Deux acteurs internes : 0,5 point.",
+            "Deux acteurs externes : 0,5 point.",
+            "Conflit précisément relié aux faits : 0,5 point.",
+            "Arbitrage et cohérence de la mission : 0,5 point."
+          ]
+        },
+        {
+          "id": "q7",
+          "chapterId": "p1-mgmt-t3::3",
+          "documentIds": [
+            "d7"
+          ],
+          "enonce": "Caractérisez la décision de maintenance et expliquez un intérêt, un risque et une condition de suivi.",
+          "points": 2,
+          "correction": "Faire réaliser la maintenance par un tiers indépendant est une externalisation. Cela peut apporter une compétence spécialisée et réduire la dépendance à un bénévole. Le recours au prestataire crée aussi une dépendance contractuelle et des besoins de contrôle. Un périmètre clair, des délais et des accès adaptés sont nécessaires ; l’externalisation ne transfère pas automatiquement toutes les responsabilités.",
+          "criteria": [
+            "Externalisation identifiée : 0,5 point.",
+            "Intérêt expliqué : 0,5 point.",
+            "Risque expliqué : 0,5 point.",
+            "Condition de suivi pertinente : 0,5 point."
+          ]
+        },
+        {
+          "id": "q8",
+          "chapterId": "mgmt-t3::15",
+          "documentIds": [
+            "d8"
+          ],
+          "enonce": "Expliquez les leviers d’économie circulaire du projet et distinguez prolongation d’usage et recyclage.",
+          "points": 2,
+          "correction": "Le partage réduit certains achats ; l’entretien et la réparation prolongent la durée d’usage ; le réemploi donne une nouvelle utilisation à des objets ou matériaux. Le recyclage transforme des déchets en matière secondaire et intervient différemment. Une démarche circulaire ne se limite donc pas au recyclage : elle cherche aussi à prévenir la production de déchets et à préserver l’utilité des objets.",
+          "criteria": [
+            "Partage ou prévention : 0,5 point.",
+            "Réparation et prolongation : 0,5 point.",
+            "Réemploi correctement expliqué : 0,5 point.",
+            "Recyclage distingué : 0,5 point."
+          ]
+        },
+        {
+          "id": "q9",
+          "chapterId": "p1-mgmt-t2::4",
+          "documentIds": [],
+          "enonce": "Sans document, distinguez finalité et objectif stratégique et donnez un exemple d’objectif mesurable.",
+          "points": 2,
+          "correction": "La finalité est le but général ou la raison d’être de l’organisation. Un objectif stratégique traduit cette orientation en résultat de long terme à atteindre. Par exemple, accroître de 20 % la fréquentation d’un public identifié en trois ans apporte un indicateur et une échéance. Le choix doit rester cohérent avec la mission et les ressources ; l’exemple n’est pas une promesse de résultat.",
+          "criteria": [
+            "Finalité définie : 0,5 point.",
+            "Objectif stratégique distingué : 0,5 point.",
+            "Indicateur mesurable : 0,5 point.",
+            "Échéance et cohérence : 0,5 point."
+          ]
+        },
+        {
+          "id": "q10",
+          "chapterId": "mgmt-t3::1",
+          "documentIds": [],
+          "enonce": "Sans document, expliquez le greenwashing et présentez deux éléments permettant d’examiner une promesse environnementale.",
+          "points": 2,
+          "correction": "Le greenwashing consiste à donner une image environnementale trompeuse ou disproportionnée par rapport aux actions et impacts réels. On peut examiner un indicateur défini avec un périmètre et une période comparables, ainsi que des éléments vérifiables sur les actions réalisées. Une couleur verte, un slogan ou un résultat isolé ne suffisent pas à démontrer une démarche globale.",
+          "criteria": [
+            "Communication trompeuse ou disproportionnée : 0,5 point.",
+            "Écart avec les actions réelles : 0,5 point.",
+            "Indicateur avec périmètre : 0,5 point.",
+            "Preuve vérifiable ou limite d’un slogan : 0,5 point."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "revision-droit-economie-premiere-terminale-1",
+    "level": "terminale",
+    "scope": "premiere-terminale",
+    "subject": "Droit et économie",
+    "summary": "Personnes, contrats, revenu disponible, chômage, patrimoine, financement et politiques publiques.",
+    "duration": 120,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "p1-droit-t3::0",
+        "title": "La personnalité juridique : personnes physiques et morales, statut de l’animal",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "droit-t5::7",
+        "title": "Force obligatoire, effet relatif et sanctions de l’inexécution",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-eco-t3::3",
+        "title": "Le revenu disponible",
+        "subject": "Économie",
+        "level": "premiere"
+      },
+      {
+        "id": "eco-t7::0",
+        "title": "Le chômage au sens du BIT : taux de chômage et halo",
+        "subject": "Économie",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-droit-t3::2",
+        "title": "Le patrimoine : actif, passif et principes",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "droit-t6::7",
+        "title": "Responsabilité contractuelle ou délictuelle : un contrat lie-t-il les parties ?",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-eco-t4::1",
+        "title": "Financement interne et externe",
+        "subject": "Économie",
+        "level": "premiere"
+      },
+      {
+        "id": "eco-t6::6",
+        "title": "Les politiques économiques : budgétaire et monétaire, conjoncturelles et structurelles",
+        "subject": "Économie",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-droit-t2::1",
+        "title": "La preuve : charge, objet et modes",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "eco-t6::2",
+        "title": "Déficit et dette publics : le coût de l’intervention",
+        "subject": "Économie",
+        "level": "terminale"
+      }
+    ],
+    "exam": {
+      "title": "Révision Première-Terminale 1 : Maison Solis",
+      "instructions": "Révision des programmes de Première et Terminale : les contenus de Terminale sont inclus. Cas et données fictifs. Dix questions de 2 points, soit 20 points. Les questions 1 à 8 utilisent le dossier ; les questions 9 et 10 sont sans document. Lecture : 15 min ; rédaction : 95 min ; relecture : 10 min. Calculatrice autorisée. Sujet non officiel, distinct d’une épreuve complète de quatre heures.",
+      "documents": [
+        {
+          "id": "d1",
+          "title": "Document 1 : Qui contracte ? (cas fictif)",
+          "text": "Maison Solis est une société régulièrement immatriculée qui vend du mobilier. Elle signe une commande professionnelle en son nom et achète du matériel avec ses fonds. Nora, une associée, possède aussi un ordinateur personnel qu’elle n’a ni apporté ni vendu à la société. Le dossier distingue la personne morale de ses associés ; il ne présente ni caution personnelle ni confusion de patrimoines."
+        },
+        {
+          "id": "d2",
+          "title": "Document 2 : Une commande en retard (cas fictif)",
+          "text": "Maison Solis commande à Atelier Pro une machine pour 8 000 euros hors taxes, avec une livraison écrite au 2 mai. Le prix est payé. Le 15 mai, le vendeur reconnaît ne pas avoir livré en raison d’une mauvaise organisation interne. Aucun cas de force majeure n’est invoqué. Les parties sont capables et leur consentement n’est pas contesté. On raisonne sur l’obligation de délivrance dans cette vente entre professionnels."
+        },
+        {
+          "id": "d3",
+          "title": "Document 3 : Un budget familial simplifié (cas fictif)",
+          "text": "Le ménage de Nora perçoit 3 000 euros de revenus primaires déjà nets de cotisations sociales. Il reçoit 300 euros de prestations sociales et paie 400 euros d’impôts directs. Aucun autre transfert n’est retenu. Les dépenses de consommation finale sont de 2 320 euros sur le mois. Le revenu disponible se calcule ici en ajoutant les prestations aux revenus retenus et en retranchant les impôts directs, sans déduire deux fois les cotisations."
+        },
+        {
+          "id": "d4",
+          "title": "Document 4 : La situation de l’emploi (cas fictif)",
+          "text": "Dans le territoire fictif, 108 000 personnes occupent un emploi et 12 000 remplissent les conditions du chômage BIT. Une autre population souhaite travailler sans remplir toutes les conditions, mais n’est pas incluse dans ces 12 000 personnes. Les données portent sur la même période. Le taux de chômage doit être rapporté à la population active, et non à la seule population en emploi."
+        },
+        {
+          "id": "d5",
+          "title": "Document 5 : Le patrimoine déclaré (cas fictif)",
+          "text": "Pour le classement juridique demandé, la société possède 5 000 euros en banque, du matériel estimé à 12 000 euros et une créance client de 3 000 euros. Elle doit 6 000 euros à sa banque et 2 000 euros à un fournisseur. Les montants sont les valeurs retenues dans cet exercice simplifié. L’ordinateur personnel de Nora n’appartient pas au patrimoine social et ne doit pas être ajouté à ces actifs."
+        },
+        {
+          "id": "d6",
+          "title": "Document 6 : Un dommage à justifier (cas fictif)",
+          "text": "Après mise en demeure restée sans effet, Maison Solis loue une machine de remplacement pour 600 euros afin de poursuivre son activité pendant le retard de livraison. La facture et les dates établissent le lien avec ce retard. La société réclame aussi 10 000 euros pour une atteinte à son image sans document ni fait précis. On ne vous demande pas de fixer une décision judiciaire, mais de distinguer ce qui est étayé et ce qui ne l’est pas."
+        },
+        {
+          "id": "d7",
+          "title": "Document 7 : Financer un équipement (cas fictif)",
+          "text": "Une autre machine coûte 30 000 euros. Maison Solis peut utiliser 10 000 euros de ressources internes disponibles et cherche 20 000 euros à l’extérieur. Sa banque propose un prêt ; les associés envisagent aussi une augmentation de capital. Le taux, la durée et les garanties du prêt ne sont pas fournis. La décision ne peut donc pas reposer sur un calcul complet de coût qui manquerait au dossier."
+        },
+        {
+          "id": "d8",
+          "title": "Document 8 : Une dépense publique (cas fictif)",
+          "text": "Le gouvernement d’un pays fictif accroît ses dépenses de rénovation d’écoles de 500 millions d’euros sans augmenter immédiatement les impôts. Les entreprises peuvent recevoir davantage de commandes et recruter si leurs capacités le permettent. Le dossier n’indique pas de multiplicateur ni de nombre d’emplois. Le financement et les autres opérations influencent l’évolution du déficit et de la dette."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "chapterId": "p1-droit-t3::0",
+          "documentIds": [
+            "d1"
+          ],
+          "enonce": "Identifiez la personne morale et les personnes physiques et attribuez le matériel et l’ordinateur personnel à leur titulaire.",
+          "points": 2,
+          "correction": "Maison Solis est une personne morale distincte de ses associés, qui sont des personnes physiques. Le matériel acheté par la société lui appartient ; l’ordinateur que Nora n’a pas transféré demeure personnel. Être associée ne signifie pas détenir directement chaque actif social. Le dossier exclut les situations particulières qui pourraient modifier cette analyse patrimoniale.",
+          "criteria": [
+            "Personne morale identifiée : 0,5 point.",
+            "Personne physique identifiée : 0,5 point.",
+            "Matériel social correctement attribué : 0,5 point.",
+            "Ordinateur personnel correctement attribué : 0,5 point."
+          ]
+        },
+        {
+          "id": "q2",
+          "chapterId": "droit-t5::7",
+          "documentIds": [
+            "d2"
+          ],
+          "enonce": "Caractérisez l’inexécution et présentez deux sanctions possibles, en rappelant qu’elles ont des conditions.",
+          "points": 2,
+          "correction": "Le vendeur n’a pas délivré la machine à la date convenue alors que l’acheteur a payé. Cette inexécution peut ouvrir, selon les conditions légales, une demande d’exécution en nature, une résolution ou la réparation d’un préjudice établi. Deux sanctions pertinentes suffisent. Leur choix et leur éventuel cumul ne sont pas automatiques et doivent respecter les conditions propres à chaque mécanisme.",
+          "criteria": [
+            "Obligation de délivrance : 0,5 point.",
+            "Retard ou inexécution relié aux faits : 0,5 point.",
+            "Première sanction et condition : 0,5 point.",
+            "Seconde sanction et condition : 0,5 point."
+          ]
+        },
+        {
+          "id": "q3",
+          "chapterId": "p1-eco-t3::3",
+          "documentIds": [
+            "d3"
+          ],
+          "enonce": "Calculez le revenu disponible et expliquez le rôle des prestations, des impôts et des cotisations déjà déduites.",
+          "points": 2,
+          "correction": "Le revenu disponible est de 3 000 + 300 - 400 = 2 900 euros. Les prestations augmentent les ressources et les impôts directs les réduisent ; leur effet net est ici de -100 euros par rapport aux revenus primaires retenus. Les cotisations sont déjà déduites : les retrancher encore compterait deux fois le même prélèvement. Ce revenu peut ensuite être consacré à la consommation ou à l’épargne.",
+          "criteria": [
+            "Formule du revenu disponible : 0,5 point.",
+            "Résultat de 2 900 euros : 0,5 point.",
+            "Sens des prestations et impôts : 0,5 point.",
+            "Absence de double déduction : 0,5 point."
+          ]
+        },
+        {
+          "id": "q4",
+          "chapterId": "eco-t7::0",
+          "documentIds": [
+            "d4"
+          ],
+          "enonce": "Calculez la population active et le taux de chômage. Distinguez la population souhaitant travailler sans réunir tous les critères.",
+          "points": 2,
+          "correction": "La population active comprend les 108 000 personnes en emploi et les 12 000 chômeurs BIT, soit 120 000 personnes. Le taux est 12 000 / 120 000 × 100 = 10 %. Les personnes ne satisfaisant pas tous les critères ne doivent pas être ajoutées au numérateur ; selon leur situation, elles peuvent relever du halo autour du chômage. Le souhait de travailler ne suffit pas à lui seul au classement BIT.",
+          "criteria": [
+            "Population active de 120 000 : 0,5 point.",
+            "Formule du taux : 0,5 point.",
+            "Résultat de 10 % : 0,5 point.",
+            "Distinction avec le halo et les critères : 0,5 point."
+          ]
+        },
+        {
+          "id": "q5",
+          "chapterId": "p1-droit-t3::2",
+          "documentIds": [
+            "d5"
+          ],
+          "enonce": "Classez l’actif et le passif déclarés et calculez leur différence. Justifiez le traitement de l’ordinateur de Nora.",
+          "points": 2,
+          "correction": "L’actif déclaré est de 5 000 + 12 000 + 3 000 = 20 000 euros. Le passif est de 6 000 + 2 000 = 8 000 euros. La différence est de 12 000 euros. L’ordinateur de Nora reste hors de ce patrimoine car il n’a pas été transféré à la société. La créance est un droit personnel de la société, et non une somme déjà forcément encaissée.",
+          "criteria": [
+            "Actif de 20 000 euros : 0,5 point.",
+            "Passif de 8 000 euros : 0,5 point.",
+            "Différence de 12 000 euros : 0,5 point.",
+            "Séparation des patrimoines justifiée : 0,5 point."
+          ]
+        },
+        {
+          "id": "q6",
+          "chapterId": "droit-t6::7",
+          "documentIds": [
+            "d6"
+          ],
+          "enonce": "Déterminez le régime de responsabilité et comparez les deux préjudices demandés.",
+          "points": 2,
+          "correction": "Le retard concerne l’exécution du contrat liant l’acheteur et le vendeur : le régime contractuel est pertinent. Les 600 euros de location sont étayés et reliés au retard. L’atteinte à l’image de 10 000 euros n’est pas démontrée par sa seule affirmation. Une réparation suppose un préjudice établi et un lien causal ; le montant réclamé n’est pas automatiquement le montant qui serait retenu.",
+          "criteria": [
+            "Régime contractuel justifié : 0,5 point.",
+            "Location établie : 0,5 point.",
+            "Lien causal explicité : 0,5 point.",
+            "Réserve sur le dommage d’image : 0,5 point."
+          ]
+        },
+        {
+          "id": "q7",
+          "chapterId": "p1-eco-t4::1",
+          "documentIds": [
+            "d7"
+          ],
+          "enonce": "Distinguez le financement interne et les deux financements externes proposés. Calculez le besoin externe.",
+          "points": 2,
+          "correction": "Les 10 000 euros mobilisés par l’entreprise sont un financement interne. Le prêt et l’augmentation de capital sont des financements externes, de nature différente. Le besoin restant est de 30 000 - 10 000 = 20 000 euros. Un emprunt implique des remboursements selon ses conditions ; une augmentation de capital peut modifier la répartition du capital. Les coûts complets ne sont pas déductibles ici.",
+          "criteria": [
+            "Interne correctement identifié : 0,5 point.",
+            "Prêt externe identifié : 0,5 point.",
+            "Capital externe distingué : 0,5 point.",
+            "Besoin de 20 000 euros : 0,5 point."
+          ]
+        },
+        {
+          "id": "q8",
+          "chapterId": "eco-t6::6",
+          "documentIds": [
+            "d8"
+          ],
+          "enonce": "Caractérisez la politique envisagée et expliquez un mécanisme sur l’emploi et une limite.",
+          "points": 2,
+          "correction": "L’augmentation des dépenses publiques relève d’une politique budgétaire expansionniste. Les commandes peuvent soutenir la production, les revenus puis l’emploi si les entreprises peuvent répondre. Le déficit ou les contraintes de financement peuvent augmenter, et une partie de la demande peut bénéficier à des importations. Aucun nombre précis d’emplois ne peut être calculé sans données supplémentaires.",
+          "criteria": [
+            "Politique budgétaire : 0,5 point.",
+            "Orientation expansionniste : 0,5 point.",
+            "Chaîne de transmission à l’emploi : 0,5 point.",
+            "Limite ou impossibilité de chiffrer : 0,5 point."
+          ]
+        },
+        {
+          "id": "q9",
+          "chapterId": "p1-droit-t2::1",
+          "documentIds": [],
+          "enonce": "Sans document, exposez le principe de la charge de la preuve et distinguez ce qu’une pièce prouve de ce qu’elle ne prouve pas.",
+          "points": 2,
+          "correction": "Celui qui réclame l’exécution d’une obligation doit la prouver ; celui qui se prétend libéré doit justifier le paiement ou le fait qui a éteint son obligation. Chaque pièce a une portée limitée : un virement établit un paiement mais pas, à lui seul, la livraison d’un bien. L’analyse doit relier les preuves au fait juridiquement pertinent, en examinant leur fiabilité et leur cohérence.",
+          "criteria": [
+            "Preuve de l’obligation : 0,5 point.",
+            "Preuve de la libération : 0,5 point.",
+            "Portée concrète d’une pièce : 0,5 point.",
+            "Fiabilité ou lien avec le fait pertinent : 0,5 point."
+          ]
+        },
+        {
+          "id": "q10",
+          "chapterId": "eco-t6::2",
+          "documentIds": [],
+          "enonce": "Sans document, distinguez déficit et dette publics et expliquez le lien sans les confondre.",
+          "points": 2,
+          "correction": "Le déficit public est un flux sur une période lorsque les dépenses dépassent les recettes dans le cadre comptable considéré. La dette est un stock d’engagements financiers mesuré à une date. Un déficit financé par emprunt peut accroître la dette, mais les deux notions ne sont pas identiques et la variation de dette dépend aussi d’autres ajustements. Une comparaison exige des périodes et unités cohérentes.",
+          "criteria": [
+            "Déficit comme flux : 0,5 point.",
+            "Dette comme stock : 0,5 point.",
+            "Lien par le financement : 0,5 point.",
+            "Distinction et limites de la comparaison : 0,5 point."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "revision-droit-economie-premiere-terminale-2",
+    "level": "terminale",
+    "scope": "premiere-terminale",
+    "subject": "Droit et économie",
+    "summary": "Propriété, salariat, marché, échanges, litige, rupture et développement.",
+    "duration": 120,
+    "kind": "ready",
+    "courses": [
+      {
+        "id": "p1-droit-t4::1",
+        "title": "La propriété intellectuelle : marque, brevet, droit d’auteur",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "droit-t7::0",
+        "title": "Salarié ou indépendant : le lien de subordination et le faisceau d’indices",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-eco-t5::2",
+        "title": "Le prix d’équilibre",
+        "subject": "Économie",
+        "level": "premiere"
+      },
+      {
+        "id": "eco-t8::10",
+        "title": "MÉTHODE — Solde commercial, taux de couverture et taux d’ouverture",
+        "subject": "Économie",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-droit-t2::1",
+        "title": "La preuve : charge, objet et modes",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "droit-t7::1",
+        "title": "Le licenciement : cause réelle et sérieuse et procédure",
+        "subject": "Droit",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-eco-t4::4",
+        "title": "Le financement indirect (les banques)",
+        "subject": "Économie",
+        "level": "premiere"
+      },
+      {
+        "id": "eco-t9::3",
+        "title": "La croissance économique : mesure par le PIB et limites",
+        "subject": "Économie",
+        "level": "terminale"
+      },
+      {
+        "id": "p1-droit-t1::1",
+        "title": "Les caractères de la règle de droit",
+        "subject": "Droit",
+        "level": "premiere"
+      },
+      {
+        "id": "eco-t9::6",
+        "title": "L’IDH et les indicateurs alternatifs au PIB",
+        "subject": "Économie",
+        "level": "terminale"
+      }
+    ],
+    "exam": {
+      "title": "Révision Première-Terminale 2 : Atelier Horizon",
+      "instructions": "Révision des programmes de Première et Terminale : les contenus de Terminale sont inclus. Cas et données fictifs. Dix questions de 2 points, soit 20 points. Les questions 1 à 8 utilisent le dossier ; les questions 9 et 10 sont sans document. Lecture : 15 min ; rédaction : 95 min ; relecture : 10 min. Calculatrice autorisée. Sujet non officiel, distinct d’une épreuve complète de quatre heures.",
+      "documents": [
+        {
+          "id": "d1",
+          "title": "Document 1 : Une création et un signe (cas fictif)",
+          "text": "Atelier Horizon prépare une illustration originale pour ses supports et un nom destiné à distinguer ses services. L’illustration est réalisée par une créatrice identifiée ; les droits d’utilisation de l’atelier doivent être précisés. Le nom est envisagé comme marque pour certains services, après vérification de sa disponibilité. On ne vous demande pas de juger l’originalité d’une œuvre réelle ni la validité d’un dépôt déjà effectué."
+        },
+        {
+          "id": "d2",
+          "title": "Document 2 : Un travail présenté comme une prestation (cas fictif)",
+          "text": "L’atelier verse chaque mois une rémunération à Sami pour un travail réalisé personnellement. Un responsable impose les horaires, donne des consignes, contrôle leur exécution et peut sanctionner les manquements. Le contrat est intitulé prestation indépendante. La réalité du travail doit être examinée : le nom du contrat et la seule dépendance économique ne règlent pas automatiquement la qualification juridique."
+        },
+        {
+          "id": "d3",
+          "title": "Document 3 : Un marché simplifié (cas fictif)",
+          "text": "Sur le marché fictif d’un service, au prix de 15 euros la quantité offerte est de 40 et la quantité demandée de 80. Au prix de 20 euros, les deux quantités sont de 60. Au prix de 25 euros, l’offre est de 90 et la demande de 40. Les données correspondent à une même période, toutes choses égales par ailleurs. Le tableau discret suffit à identifier un équilibre, sans reconstruire une fonction continue."
+        },
+        {
+          "id": "d4",
+          "title": "Document 4 : Les échanges du pays (cas fictif)",
+          "text": "Le pays fictif Horizon exporte des biens pour 120 milliards d’euros et importe des biens pour 150 milliards sur l’année. Les échanges de services et les revenus internationaux ne sont pas fournis. Il faut donc limiter l’analyse au commerce de biens. Le déficit éventuel n’établit pas, à lui seul, l’ensemble de la situation de la balance des paiements ni la variation du bien-être des habitants."
+        },
+        {
+          "id": "d5",
+          "title": "Document 5 : Un différend sur une facture (cas fictif)",
+          "text": "L’atelier demande à un client le paiement d’une facture. Le client affirme avoir payé et produit un relevé bancaire mentionnant un virement dont le bénéficiaire doit être rapproché de l’atelier. Les échanges écrits et la facture sont conservés. Le différend porte sur l’existence du paiement libératoire, pas sur une décision de justice déjà rendue. Les parties envisagent d’abord une résolution amiable."
+        },
+        {
+          "id": "d6",
+          "title": "Document 6 : Une rupture de CDI (cas fictif)",
+          "text": "Dans une autre situation, une salariée en CDI reçoit une annonce de licenciement motivée uniquement par l’antipathie du dirigeant, sans fait professionnel précis ni motif économique indiqué. Une convocation à entretien est envoyée. Le dossier ne décrit pas une faute établie. La régularité de la procédure et la réalité du motif sont deux questions distinctes ; aucune indemnité ne peut être calculée avec ces seules données."
+        },
+        {
+          "id": "d7",
+          "title": "Document 7 : Le financement d’un projet (cas fictif)",
+          "text": "Un projet coûte 60 000 euros. L’atelier peut utiliser 20 000 euros de ressources internes. Une banque propose un prêt pour le solde ; une autre possibilité est l’émission d’actions nouvelles auprès d’investisseurs. Les données ne comprennent pas les taux, durées ou droits de vote détaillés. Le dossier demande de distinguer les mécanismes, non de promettre un rendement ou de déterminer un coût certain."
+        },
+        {
+          "id": "d8",
+          "title": "Document 8 : Produire davantage et mesurer autrement (cas fictif)",
+          "text": "Le PIB en volume d’un territoire fictif passe de 300 à 309 milliards entre deux années. Les données ne renseignent pas la répartition des revenus, la qualité des services de santé ou l’état du milieu naturel. La production en volume écarte l’effet direct de la variation des prix, mais ne décrit pas toutes les dimensions du développement. Une lecture critique ne consiste pas à dire que le PIB est inutile."
+        }
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "chapterId": "p1-droit-t4::1",
+          "documentIds": [
+            "d1"
+          ],
+          "enonce": "Distinguez le droit d’auteur et la marque, puis indiquez une précaution pour les droits d’utilisation de l’illustration.",
+          "points": 2,
+          "correction": "Une création originale peut être protégée par le droit d’auteur sans dépôt constitutif, sous réserve de pouvoir établir les droits. La marque distingue des produits ou services et repose sur un dépôt valable dans le périmètre retenu. Le dépôt d’un nom ne règle pas tous les droits sur l’illustration. L’atelier doit clarifier avec la créatrice les droits patrimoniaux d’utilisation dont il dispose.",
+          "criteria": [
+            "Originalité et droit d’auteur : 0,5 point.",
+            "Marque et dépôt : 0,5 point.",
+            "Protections distinguées : 0,5 point.",
+            "Droits d’utilisation à préciser : 0,5 point."
+          ]
+        },
+        {
+          "id": "q2",
+          "chapterId": "droit-t7::0",
+          "documentIds": [
+            "d2"
+          ],
+          "enonce": "Relevez les trois éléments du contrat de travail et expliquez la portée du titre prestation indépendante.",
+          "points": 2,
+          "correction": "Le travail personnel constitue la prestation et la somme mensuelle la rémunération. Les pouvoirs de donner des consignes, de contrôler et de sanctionner sont des indices de subordination juridique. La qualification dépend de la réalité de l’exécution et pas seulement du titre choisi. Ces faits justifient une analyse de requalification, sans présenter le dossier comme une décision juridictionnelle déjà acquise.",
+          "criteria": [
+            "Prestation : 0,5 point.",
+            "Rémunération : 0,5 point.",
+            "Subordination étayée : 0,5 point.",
+            "Primauté des faits et prudence sur la qualification : 0,5 point."
+          ]
+        },
+        {
+          "id": "q3",
+          "chapterId": "p1-eco-t5::2",
+          "documentIds": [
+            "d3"
+          ],
+          "enonce": "Identifiez le prix et la quantité d’équilibre et caractérisez les déséquilibres aux deux autres prix.",
+          "points": 2,
+          "correction": "Le prix d’équilibre du tableau est de 20 euros pour 60 unités, puisque l’offre égale la demande. À 15 euros, la demande dépasse l’offre de 40 unités. À 25 euros, l’offre dépasse la demande de 50 unités. Dans ce modèle, ces déséquilibres peuvent exercer des pressions sur le prix ; ils ne donnent pas à eux seuls une trajectoire instantanée et certaine du marché.",
+          "criteria": [
+            "Prix de 20 euros : 0,5 point.",
+            "Quantité de 60 unités : 0,5 point.",
+            "Excès de demande de 40 unités : 0,5 point.",
+            "Excès d’offre de 50 unités : 0,5 point."
+          ]
+        },
+        {
+          "id": "q4",
+          "chapterId": "eco-t8::10",
+          "documentIds": [
+            "d4"
+          ],
+          "enonce": "Calculez le solde commercial de biens et le taux de couverture et indiquez la limite du périmètre.",
+          "points": 2,
+          "correction": "Le solde est de 120 - 150 = -30 milliards d’euros : il s’agit d’un déficit commercial de biens. Le taux de couverture est 120 / 150 × 100 = 80 %. Les exportations de biens couvrent 80 % des importations de biens. Les services et autres flux internationaux manquent ; on ne peut pas décrire l’ensemble des comptes extérieurs ou conclure automatiquement à une baisse du niveau de vie.",
+          "criteria": [
+            "Formule du solde : 0,5 point.",
+            "Déficit de 30 milliards : 0,5 point.",
+            "Taux de couverture de 80 % : 0,5 point.",
+            "Limite biens et autres flux : 0,5 point."
+          ]
+        },
+        {
+          "id": "q5",
+          "chapterId": "p1-droit-t2::1",
+          "documentIds": [
+            "d5"
+          ],
+          "enonce": "Expliquez ce que doivent établir l’atelier et le client et discutez la portée du relevé bancaire.",
+          "points": 2,
+          "correction": "L’atelier qui réclame le paiement doit établir l’obligation ; le client qui se prétend libéré doit justifier un paiement ayant éteint cette obligation. Le relevé peut étayer un virement mais il faut vérifier bénéficiaire, montant et correspondance avec la dette. Une pièce ne dispense pas d’examiner le fait qu’elle prouve réellement et sa cohérence avec les autres éléments.",
+          "criteria": [
+            "Preuve de l’obligation : 0,5 point.",
+            "Preuve du paiement libératoire : 0,5 point.",
+            "Vérifications du relevé : 0,5 point.",
+            "Portée et cohérence discutées : 0,5 point."
+          ]
+        },
+        {
+          "id": "q6",
+          "chapterId": "droit-t7::1",
+          "documentIds": [
+            "d6"
+          ],
+          "enonce": "Analysez le motif annoncé et distinguez le contrôle du fond de celui de la procédure.",
+          "points": 2,
+          "correction": "Une simple antipathie ne suffit pas, sans faits professionnels objectifs ou motif économique, à établir une cause réelle et sérieuse dans les données fournies. La convocation à entretien ne transforme pas ce motif en cause valable. La procédure doit être examinée séparément du bien-fondé. La salariée peut contester selon les voies applicables ; le dossier ne permet pas d’inventer une indemnité.",
+          "criteria": [
+            "Motif insuffisamment étayé : 0,5 point.",
+            "Cause réelle et sérieuse discutée : 0,5 point.",
+            "Fond et procédure distingués : 0,5 point.",
+            "Contestation sans indemnité inventée : 0,5 point."
+          ]
+        },
+        {
+          "id": "q7",
+          "chapterId": "p1-eco-t4::4",
+          "documentIds": [
+            "d7"
+          ],
+          "enonce": "Distinguez le prêt bancaire et l’émission d’actions et calculez le besoin de financement externe.",
+          "points": 2,
+          "correction": "Le financement interne retenu est de 20 000 euros ; le besoin externe est 60 000 - 20 000 = 40 000 euros. Le prêt relève d’un financement bancaire indirect avec une dette envers l’établissement. L’émission d’actions apporte du capital par financement direct et peut modifier les droits des associés. Sans les conditions complètes, on ne peut pas établir le coût total ni une meilleure solution certaine.",
+          "criteria": [
+            "Besoin de 40 000 euros : 0,5 point.",
+            "Prêt et intermédiation bancaire : 0,5 point.",
+            "Actions et capital : 0,5 point.",
+            "Limite du calcul de coût ou droits modifiés : 0,5 point."
+          ]
+        },
+        {
+          "id": "q8",
+          "chapterId": "eco-t9::3",
+          "documentIds": [
+            "d8"
+          ],
+          "enonce": "Calculez le taux de croissance en volume et présentez trois dimensions qu’il ne suffit pas à mesurer.",
+          "points": 2,
+          "correction": "La croissance en volume est (309 - 300) / 300 × 100 = 3 %. La variation ne renseigne pas la répartition des revenus, ne résume pas les résultats sanitaires ou éducatifs et ne mesure pas à elle seule les dommages au patrimoine naturel. Le PIB reste utile pour la production ; il doit être complété pour analyser le développement et le bien-être.",
+          "criteria": [
+            "Croissance de 3 % : 0,5 point.",
+            "Répartition des revenus : 0,5 point.",
+            "Dimension sociale ou sanitaire : 0,5 point.",
+            "Dimension environnementale : 0,5 point."
+          ]
+        },
+        {
+          "id": "q9",
+          "chapterId": "p1-droit-t1::1",
+          "documentIds": [],
+          "enonce": "Sans document, exposez les caractères général, obligatoire et coercitif de la règle de droit et distinguez une sanction d’une punition pénale.",
+          "points": 2,
+          "correction": "La règle de droit est générale et impersonnelle ; elle est obligatoire pour les situations et personnes auxquelles elle s’applique. Son respect peut être assuré par la puissance publique à travers des sanctions. Celles-ci ne sont pas toutes pénales : une réparation ou une nullité n’a pas la même finalité qu’une peine. Il ne faut donc pas réduire toute contrainte juridique à l’emprisonnement.",
+          "criteria": [
+            "Général et impersonnel : 0,5 point.",
+            "Obligatoire : 0,5 point.",
+            "Contrainte publique : 0,5 point.",
+            "Diversité des sanctions : 0,5 point."
+          ]
+        },
+        {
+          "id": "q10",
+          "chapterId": "eco-t9::6",
+          "documentIds": [],
+          "enonce": "Sans document, présentez les trois dimensions de l’IDH et une limite de cet indicateur.",
+          "points": 2,
+          "correction": "L’IDH combine la santé à travers l’espérance de vie, l’éducation à travers des durées de scolarisation, et le niveau de vie à travers le revenu national brut par habitant en parité de pouvoir d’achat. Il complète l’étude de la production par des dimensions humaines. Il reste synthétique et ne rend pas compte à lui seul de toutes les inégalités ou de la soutenabilité écologique.",
+          "criteria": [
+            "Santé : 0,5 point.",
+            "Éducation : 0,5 point.",
+            "Niveau de vie : 0,5 point.",
+            "Limite ou complémentarité avec le PIB : 0,5 point."
+          ]
+        }
+      ]
+    }
   }
 ]
