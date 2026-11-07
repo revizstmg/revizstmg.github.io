@@ -1,0 +1,373 @@
+[
+  {
+    "id": "EX01",
+    "importance": 9,
+    "nature": "correcteur",
+    "titre": "Accents ignorés dans les manuels de langues",
+    "emplacement": "app/src/data/exercicesManuel.js, verifier ; resources/langues/es.json, es-ex-117",
+    "constat": "« Mi padre esta en casa. » est validé comme « Mi padre está en casa. ». Le manuel utilise answerMatches au lieu du correcteur de langues qui préserve les accents.",
+    "attendu": "Conserver les distinctions orthographiques qui portent la réponse ; ne pas confondre cette erreur avec les QCM, corrigés par choix exact.",
+    "sources": [
+      "LV-es"
+    ]
+  },
+  {
+    "id": "EX02",
+    "importance": 9,
+    "nature": "correcteur",
+    "titre": "Réponses anglaises recevables refusées",
+    "emplacement": "resources/langues/en.json, en-ex-001 / 088 / 094",
+    "constat": "has been working ; He does not work on Sundays. ; These products are sold. sont refusés. Le corrigé de 094 dit lui-même que le complément by peut être omis.",
+    "attendu": "Accepter les variantes correctes ou restreindre explicitement la consigne au temps/à la forme souhaités.",
+    "sources": [
+      "BC",
+      "LV-en"
+    ]
+  },
+  {
+    "id": "EX03",
+    "importance": 9,
+    "nature": "correcteur",
+    "titre": "Productions ouvertes notées par égalité de texte",
+    "emplacement": "resources/langues/de.json, de-ex-008 / 032 / 064 / 068 / 072 / 079 / 084 / 087 / 099 ; it.json it-ex-071",
+    "constat": "« Morgen arbeite ich. » répond à la demande d’une phrase au présent exprimant le futur, mais est refusé ; une demande de stage dans les finances est refusée au profit du modèle marketing. Treize réponses recevables, anglais compris, sont reproduites dans contre-exemples.json.",
+    "attendu": "Réserver le correcteur strict aux réponses fermées ; évaluer les productions comme telles ; enrichir les alternatives des transformations fermées.",
+    "sources": [
+      "LV-de",
+      "LV-it"
+    ]
+  },
+  {
+    "id": "EX04",
+    "importance": 8,
+    "nature": "correcteur",
+    "titre": "Tolérance numérique contraire à la précision demandée",
+    "emplacement": "app/src/calc.js ; app/src/games/Calcul.jsx",
+    "constat": "Un résultat attendu de 4 624,70 € au centime valide 4 625,10 €. Un taux attendu de 8,3 % valide 8,4 %. Le seuil accepte un écart de 100 €.",
+    "attendu": "Distinguer arrondi demandé, tolérance de saisie et estimation ; afficher explicitement une approximation si elle est voulue.",
+    "sources": [
+      "MAT1",
+      "MSGN"
+    ]
+  },
+  {
+    "id": "EX05",
+    "importance": 8,
+    "nature": "generation",
+    "titre": "Un résultat particulier devient une définition générale",
+    "emplacement": "app/src/data/index.js, sectionPairs/sectionExercises/sectionDefinitions ; math-c3 section 2",
+    "constat": "Le QCM demande « Que signifie Dérivée ? » et impose « f’(x) = 2x − 6 » ; la saisie inverse demande le terme correspondant à cette formule. Le polynôme de départ n’est pas dans la question.",
+    "attendu": "Conserver l’énoncé de l’exemple dans une question de calcul ; n’extraire comme définition qu’un énoncé général autonome.",
+    "sources": [
+      "MAT1"
+    ]
+  },
+  {
+    "id": "EX06",
+    "importance": 9,
+    "nature": "generation",
+    "titre": "L’astérisque SQL disparaît",
+    "emplacement": "app/src/data/index.js, stripMd ; app/content/sig/approfondi-1.json ; sig-t2::4::trou0",
+    "constat": "Le cours écrit SELECT * = toutes ; l’exercice devient « ____ : les colonnes à afficher (____ = toutes). » avec SELECT attendu dans les deux blancs.",
+    "attendu": "Préserver les opérateurs et le code lors du retrait du Markdown ; SELECT seul ne signifie pas toutes les colonnes.",
+    "sources": [
+      "SQL"
+    ]
+  },
+  {
+    "id": "EX07",
+    "importance": 8,
+    "nature": "generation",
+    "titre": "Distracteur chronologique également juste",
+    "emplacement": "hg-h3 section 6, jeu hg-h3::6::qtrou",
+    "constat": "« Les ____ voient naître la société de consommation » propose années 1950-1960 et Trente Glorieuses ; seul le premier est accepté. Les deux périodes rendent cette phrase recevable dans le contexte du cours.",
+    "attendu": "Écarter les réponses qui se recouvrent sémantiquement ; demander un repère qui distingue réellement les périodes.",
+    "sources": [
+      "HG2"
+    ]
+  },
+  {
+    "id": "EX08",
+    "importance": 8,
+    "nature": "definition",
+    "titre": "Croissante confondue avec strictement croissante",
+    "emplacement": "app/content/maths/approfondi-4.json, math-c2 section 5",
+    "constat": "La définition utilise > au lieu de ≥ ; le cours ajoute « décroissante sinon ». Une suite oscillante n’est ni croissante ni décroissante.",
+    "attendu": "Distinguer croissance large/stricte, suite constante et absence de monotonie ; corriger aussi les jeux dérivés.",
+    "sources": [
+      "MAT1",
+      "MAT2"
+    ]
+  },
+  {
+    "id": "EX09",
+    "importance": 9,
+    "nature": "calcul",
+    "titre": "Comparaison de suites : dépassement annoncé trop tôt",
+    "emplacement": "app/content/maths/enrichissements.json, math-c2",
+    "constat": "A(n)=500+40n ; B(n)=500×1,06ⁿ. Le texte annonce n=9. B(9)=844,74 < 860 et B(10)=895,42 < 900 ; B(11)=949,15 > 940.",
+    "attendu": "Le premier dépassement après n=0 a lieu à n=11.",
+    "sources": [
+      "MAT1"
+    ]
+  },
+  {
+    "id": "EX10",
+    "importance": 9,
+    "nature": "programme",
+    "titre": "Le discriminant est présenté comme attendu en Première",
+    "emplacement": "p1-math-c3 section 2 ; CALC.discriminant ; atelier x047/x048",
+    "constat": "Le programme de Première 2026 exclut explicitement la résolution par discriminant. Le site l’enseigne et l’entraîne sans indication de complément.",
+    "attendu": "Remplacer l’attendu par formes factorisées, racines évidentes, lecture graphique/solveur ; isoler un éventuel complément.",
+    "sources": [
+      "MAT1"
+    ]
+  },
+  {
+    "id": "EX11",
+    "importance": 9,
+    "nature": "programme",
+    "titre": "Loi normale et intervalle de confiance classés dans le programme",
+    "emplacement": "math-c7 ; CALC.amplitude_ic/borne_ic ; atelier x071 à x076 et x163",
+    "constat": "Le programme de Terminale technologique applicable en 2026-2027 ne comporte pas ces anciens attendus.",
+    "attendu": "Les sortir du parcours obligatoire et des calculs de maîtrise du programme ; ne pas les présenter comme nécessaires au bac STMG actuel.",
+    "sources": [
+      "MAT2",
+      "MAT-DATES"
+    ]
+  },
+  {
+    "id": "EX12",
+    "importance": 9,
+    "nature": "couverture",
+    "titre": "Attendus de mathématiques absents du corpus assemblé",
+    "emplacement": "app/content/p1-maths et maths, corpus assemblé",
+    "constat": "Pas de section dédiée aux séries quantitatives à deux variables/ajustement en Première 2026 ; pas de cours sur les fonctions exponentielles et le logarithme décimal dans le corpus Terminale. Le simple mot exponentielle au sujet des suites ne couvre pas ces fonctions.",
+    "attendu": "Compléter cours et exercices selon le niveau et le millésime, sans remplacer l’ajustement actuel de Terminale avant le changement applicable en 2027.",
+    "sources": [
+      "MAT1",
+      "MAT2",
+      "MAT-DATES"
+    ]
+  },
+  {
+    "id": "EX13",
+    "importance": 8,
+    "nature": "formule",
+    "titre": "Valeur ajoutée : formule générale incohérente",
+    "emplacement": "app/content/gestion-finance/approfondi-1.json, gf-t2 section 8",
+    "constat": "Le cours/exercice définit VA = production − consommations de tiers ; le QCM rédigé de la matière et l’atelier x088 ajoutent correctement la marge commerciale.",
+    "attendu": "Dans les SIG, intégrer marge commerciale + production de l’exercice ; préciser le cas exclusivement productif si l’on simplifie.",
+    "sources": [
+      "VA"
+    ]
+  },
+  {
+    "id": "EX14",
+    "importance": 8,
+    "nature": "definition",
+    "titre": "CAF et autofinancement confondus",
+    "emplacement": "gf-t2 section 13 ; gestion-finance/matiere.json ; intitulé Autofinancement (CAF)",
+    "constat": "La CAF est assimilée à l’autofinancement, alors que la distribution de dividendes peut les différencier.",
+    "attendu": "Présenter l’autofinancement comme la part conservée après distribution : CAF moins dividendes.",
+    "sources": [
+      "CAF"
+    ]
+  },
+  {
+    "id": "EX15",
+    "importance": 8,
+    "nature": "definition",
+    "titre": "Amortissement, dépréciation et valeur résiduelle",
+    "emplacement": "gf-t1 sections 7 / 23 ; atelier f19/f20",
+    "constat": "Amortissement défini comme perte de valeur définitive ; VNC nécessairement nulle en fin de plan ; annuité générale basée sur la valeur brute sans hypothèse de valeur résiduelle nulle.",
+    "attendu": "Définir l’amortissement par l’allocation du montant amortissable selon l’utilisation ; expliciter les hypothèses simplifiées des calculs.",
+    "sources": [
+      "PCG"
+    ]
+  },
+  {
+    "id": "EX16",
+    "importance": 6,
+    "nature": "precision",
+    "titre": "Exemple fiscal énergétique ambigu et daté",
+    "emplacement": "gf-t1 section 5, taux réduit 5,5 % : énergie de base",
+    "constat": "Cette catégorie imprécise peut faire apprendre un ancien taux pour gaz/électricité. Les abonnements de métropole sont à 20 % depuis août 2025. D’autres énergies peuvent relever de régimes distincts.",
+    "attendu": "Nommer précisément des produits/services et le territoire ; dater les exemples fiscaux.",
+    "sources": [
+      "TVA"
+    ]
+  },
+  {
+    "id": "EX17",
+    "importance": 7,
+    "nature": "precision",
+    "titre": "CA3 imposée sans préciser le régime",
+    "emplacement": "gf-t1-trou-tva, question 1",
+    "constat": "« L’entreprise établit sa déclaration de TVA sur le formulaire ___ » attend exclusivement CA3. En novembre 2026, le régime simplifié dispose encore de la CA12.",
+    "attendu": "Préciser régime réel normal dans l’énoncé ; tenir compte du changement annoncé pour 2027.",
+    "sources": [
+      "CA3"
+    ]
+  },
+  {
+    "id": "EX18",
+    "importance": 9,
+    "nature": "definition",
+    "titre": "Responsabilité limitée généralisée à toutes les sociétés commerciales",
+    "emplacement": "app/content/droit/matiere.json, chapters/3/games/0/questions/4 ; test du thème droit-t8",
+    "constat": "La réponse attendue est limitée aux apports pour « une société commerciale ». La SNC, commerciale, est un contre-exemple ; une autre question du site précise correctement SARL/SAS.",
+    "attendu": "Restreindre à SARL/SAS et harmoniser cours, banques et tests du thème.",
+    "sources": [
+      "DE2",
+      "SNC"
+    ]
+  },
+  {
+    "id": "EX19",
+    "importance": 7,
+    "nature": "precision",
+    "titre": "CDD : indemnité présentée comme automatique",
+    "emplacement": "app/content/droit/approfondi-1.json ; droit-t7 section 2",
+    "constat": "Le chapitre cite le CDD saisonnier puis affirme sans réserve le versement de la prime à la fin du CDD.",
+    "attendu": "Écrire en principe et présenter les exceptions utiles, notamment le contrat saisonnier.",
+    "sources": [
+      "CDD"
+    ]
+  },
+  {
+    "id": "EX20",
+    "importance": 7,
+    "nature": "definition",
+    "titre": "Définition du contrat réduite à la création d’obligations",
+    "emplacement": "app/content/droit/matiere.json, chapters/0/games/0/questions/0 ; banque du thème",
+    "constat": "Un accord qui éteint ou modifie des obligations est également un contrat ; l’explication actuelle le réduit à leur création.",
+    "attendu": "Reprendre les quatre effets de l’article 1101, sans exiger sa récitation littérale.",
+    "sources": [
+      "CC1101"
+    ]
+  },
+  {
+    "id": "EX21",
+    "importance": 8,
+    "nature": "definition",
+    "titre": "Diversification confondue avec tout nouveau marché",
+    "emplacement": "p1-mgmt-t3 section 2 ; mgmt-t2 sections 4 et 9 ; banques de QCM",
+    "constat": "Nouveaux métiers OU marchés est présenté comme diversification. Exporter le même produit dans un nouveau pays peut rester dans le même DAS.",
+    "attendu": "Distinguer nouveaux domaines d’activité et développement géographique/commercial au sein d’un DAS.",
+    "sources": [
+      "M1"
+    ]
+  },
+  {
+    "id": "EX22",
+    "importance": 8,
+    "nature": "definition",
+    "titre": "Spinoza réduit à la négation de la liberté",
+    "emplacement": "philo-methode section 5 ; philo-liberte section 3",
+    "constat": "« La liberté comme illusion » est validé en vrai/faux. Cela efface la distinction entre illusion du libre arbitre et liberté pensée à partir de la nécessité.",
+    "attendu": "Préciser la thèse et le sens des termes ; éviter d’en faire une formule universelle sur toute liberté.",
+    "sources": [
+      "SPINOZA",
+      "PHI"
+    ]
+  },
+  {
+    "id": "EX23",
+    "importance": 7,
+    "nature": "definition",
+    "titre": "Génocide défini trop étroitement",
+    "emplacement": "hg-h1 section 5",
+    "constat": "« Extermination volontaire et programmée d’un peuple » ne précise pas la destruction partielle et les groupes protégés ; la définition peut exclure des cas conventionnels.",
+    "attendu": "Distinguer intention de destruction, en tout ou partie, d’un groupe protégé et les actes constitutifs.",
+    "sources": [
+      "GENOCIDE"
+    ]
+  },
+  {
+    "id": "EX24",
+    "importance": 8,
+    "nature": "formule",
+    "titre": "Anciennes simplifications économiques encore dans l’atelier",
+    "emplacement": "app/content/commun/atelier-formules.json, x128 et x140",
+    "constat": "x128 assimile le PIB à la seule somme des VA ; x140 dit que la dette est le stock des déficits passés. Ces simplifications ont déjà été reprises ailleurs dans les cours.",
+    "attendu": "Préciser PIB aux prix de base ou ajouter impôts/subventions sur les produits ; mentionner les autres opérations affectant la dette.",
+    "sources": [
+      "PIB",
+      "DETTE"
+    ]
+  },
+  {
+    "id": "EX25",
+    "importance": 7,
+    "nature": "precision",
+    "titre": "Communication formelle limitée à l’écrit",
+    "emplacement": "rh-t3 section 3",
+    "constat": "« Officielle, écrite, hiérarchique » oublie la communication formelle orale et transversale. Le QCM de Première considère justement une réunion officielle comme formelle.",
+    "attendu": "Définir son cadre institutionnel/organisé sans rendre l’écrit ni la verticalité obligatoires.",
+    "sources": [
+      "SGN",
+      "MSGN"
+    ]
+  },
+  {
+    "id": "EX26",
+    "importance": 7,
+    "nature": "correcteur",
+    "titre": "SQL : comparaison textuelle qui change les littéraux",
+    "emplacement": "app/src/games/SqlQuery.jsx, sqlNorm/sqlMatches ; sig-t2-sql",
+    "constat": "La normalisation met toute la requête en minuscules, y compris Lyon dans une chaîne ; inversement une requête équivalente avec alias est refusée.",
+    "attendu": "Préserver le contenu des littéraux et annoncer les formes admises ou vérifier une requête dans un moteur local avec schéma et jeux de données de contrôle. Aucun essai contre une base réelle.",
+    "sources": [
+      "SQL-L"
+    ]
+  },
+  {
+    "id": "NU01",
+    "importance": 5,
+    "nature": "a_preciser",
+    "titre": "BFR et BFRE à distinguer",
+    "emplacement": "atelier f22 et gf-t2 section 3",
+    "constat": "Une formule ne contenant que l’exploitation est appelée BFR général. Elle suppose que le hors exploitation est nul.",
+    "attendu": "Expliciter cette hypothèse ou séparer BFRE et BFRHE.",
+    "sources": [
+      "MSGN"
+    ]
+  },
+  {
+    "id": "NU02",
+    "importance": 5,
+    "nature": "a_preciser",
+    "titre": "Seuils de ratios présentés comme obligations",
+    "emplacement": "gf-t2 sections 6 / 14 / 18 ; atelier x099/x103",
+    "constat": "« > 1 obligatoire » et les seuils 30 %, 4 ans ne sont pas des règles universelles de validité des comptes.",
+    "attendu": "Présenter des repères d’analyse contextualisés, pas des normes absolues.",
+    "sources": [
+      "MSGN"
+    ]
+  },
+  {
+    "id": "NU03",
+    "importance": 5,
+    "nature": "a_preciser",
+    "titre": "Les indicateurs sociaux ne prouvent pas une cause",
+    "emplacement": "rh-t4 sections 5 et 7",
+    "constat": "Absentéisme et départs sont directement associés à démotivation et malaise. Maladie, saisonnalité et autres causes existent.",
+    "attendu": "Les traiter comme signaux à interpréter avec plusieurs indicateurs.",
+    "sources": [
+      "MSGN"
+    ]
+  },
+  {
+    "id": "NU04",
+    "importance": 5,
+    "nature": "a_preciser",
+    "titre": "1962 : mode d’élection, pas premier scrutin direct",
+    "emplacement": "hg-h3 sections 1 / 8 / 15",
+    "constat": "Les repères compressés disent président élu en 1962 ; il s’agit de la réforme constitutionnelle.",
+    "attendu": "Distinguer réforme en 1962 et première élection selon cette règle en 1965.",
+    "sources": [
+      "PRESIDENT"
+    ]
+  }
+]

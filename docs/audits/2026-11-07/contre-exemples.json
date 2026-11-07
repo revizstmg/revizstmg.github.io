@@ -1,0 +1,741 @@
+{
+  "languages": [
+    {
+      "lang": "en",
+      "id": "en-ex-001",
+      "prompt": "She ____ (work) here since 2020.",
+      "answer": "has worked",
+      "input": "has been working",
+      "expected": true,
+      "actual": false,
+      "selfAssessed": false
+    },
+    {
+      "lang": "en",
+      "id": "en-ex-088",
+      "prompt": "Transforme à la forme négative : He works on Sundays.",
+      "answer": "He doesn't work on Sundays.",
+      "input": "He does not work on Sundays.",
+      "expected": true,
+      "actual": false,
+      "selfAssessed": false
+    },
+    {
+      "lang": "en",
+      "id": "en-ex-094",
+      "prompt": "Mets au passif : The company sells these products.",
+      "answer": "These products are sold by the company.",
+      "input": "These products are sold.",
+      "expected": true,
+      "actual": false,
+      "selfAssessed": false
+    },
+    {
+      "lang": "de",
+      "id": "de-ex-008",
+      "prompt": "Demande poliment de répéter en vouvoyant.",
+      "answer": "Können Sie das bitte wiederholen?",
+      "input": "Würden Sie das bitte wiederholen?",
+      "expected": true,
+      "actual": false,
+      "selfAssessed": false
+    },
+    {
+      "lang": "de",
+      "id": "de-ex-032",
+      "prompt": "Explique la forme der dans mit der Lehrerin.",
+      "answer": "Der est l’article féminin au datif.",
+      "input": "L’article défini féminin au datif.",
+      "expected": true,
+      "actual": false,
+      "selfAssessed": false
+    },
+    {
+      "lang": "de",
+      "id": "de-ex-064",
+      "prompt": "Donne une phrase correcte au présent exprimant le futur.",
+      "answer": "Morgen lerne ich Deutsch.",
+      "input": "Morgen arbeite ich.",
+      "expected": true,
+      "actual": false,
+      "selfAssessed": false
+    },
+    {
+      "lang": "de",
+      "id": "de-ex-068",
+      "prompt": "Relie : Ich lerne. Ich bin müde. avec obwohl.",
+      "answer": "Ich lerne, obwohl ich müde bin.",
+      "input": "Obwohl ich müde bin, lerne ich.",
+      "expected": true,
+      "actual": false,
+      "selfAssessed": false
+    },
+    {
+      "lang": "de",
+      "id": "de-ex-072",
+      "prompt": "Conseille de pratiquer régulièrement.",
+      "answer": "Du solltest regelmäßig üben.",
+      "input": "Du solltest regelmäßig Deutsch üben.",
+      "expected": true,
+      "actual": false,
+      "selfAssessed": false
+    },
+    {
+      "lang": "de",
+      "id": "de-ex-079",
+      "prompt": "Demande si tu peux payer par carte.",
+      "answer": "Kann ich mit Karte bezahlen?",
+      "input": "Darf ich mit Karte bezahlen?",
+      "expected": true,
+      "actual": false,
+      "selfAssessed": false
+    },
+    {
+      "lang": "de",
+      "id": "de-ex-084",
+      "prompt": "Rédige une demande de stage en une phrase avec un domaine.",
+      "answer": "Ich suche ein Praktikum im Bereich Marketing.",
+      "input": "Ich suche ein Praktikum im Bereich Finanzen.",
+      "expected": true,
+      "actual": false,
+      "selfAssessed": false
+    },
+    {
+      "lang": "de",
+      "id": "de-ex-087",
+      "prompt": "D’après le document, combien de personnes NordRad emploie-t-elle ?",
+      "answer": "50 Personen.",
+      "input": "50",
+      "expected": true,
+      "actual": false,
+      "selfAssessed": false
+    },
+    {
+      "lang": "de",
+      "id": "de-ex-099",
+      "prompt": "Écris une phrase annonçant que le document traite du marketing.",
+      "answer": "Das Dokument handelt von Marketing.",
+      "input": "Das Dokument behandelt Marketing.",
+      "expected": true,
+      "actual": false,
+      "selfAssessed": false
+    },
+    {
+      "lang": "it",
+      "id": "it-ex-071",
+      "prompt": "Corrige : Io è studente.",
+      "answer": "Io sono studente.",
+      "input": "Sono studente.",
+      "expected": true,
+      "actual": false,
+      "selfAssessed": false
+    },
+    {
+      "lang": "es",
+      "id": "es-ex-117",
+      "prompt": "Corrige : Mi padre es en casa.",
+      "answer": "Mi padre está en casa.",
+      "input": "Mi padre esta en casa.",
+      "expected": false,
+      "actual": true,
+      "selfAssessed": false
+    },
+    {
+      "lang": "es",
+      "id": "es-ex-006",
+      "prompt": "Ayer nosotros ____ (ir) al cine.",
+      "answer": "fuimos",
+      "input": "fuímos",
+      "expected": false,
+      "actual": true,
+      "selfAssessed": false
+    },
+    {
+      "lang": "ar",
+      "id": "ar-ex-081",
+      "prompt": "Quel mot interrogatif signifie « qui » ?",
+      "answer": "مَن",
+      "input": "مِن",
+      "expected": false,
+      "actual": false,
+      "selfAssessed": false
+    }
+  ],
+  "calculations": [
+    {
+      "id": "seuil",
+      "prompt": "CA = 450 000 € ; charges variables = 301 500 € ; charges fixes = 130 000 €.\nCalcule le seuil de rentabilité (en €).",
+      "answer": 393939.3939393939,
+      "unit": "€",
+      "tolerance": 200,
+      "explain": "MCV = 450 000 − 301 500 = 148 500 €.\nTaux de MCV = 148 500 / 450 000 = 0,33.\nSeuil = charges fixes / taux de MCV = 130 000 / 0,33 ≈ 393 939 €.",
+      "input": 394039.39,
+      "accepted": true
+    },
+    {
+      "id": "valeur_apres_evolution",
+      "prompt": "Une valeur de 4 490 € évolue de 3 %.\nCalcule la nouvelle valeur (arrondi au centime).",
+      "answer": 4624.7,
+      "unit": "€",
+      "tolerance": 0.5,
+      "explain": "Nouvelle valeur = 4 490 × (1 + 3/100) = 4 490 × 1,03 = 4 624,7 €.",
+      "input": 4625.1,
+      "accepted": true
+    },
+    {
+      "id": "taux_evolution",
+      "prompt": "Une valeur passe de 38 600 à 41 800.\nCalcule le taux d'évolution (en %, arrondi à 0,1).",
+      "answer": 8.3,
+      "unit": "%",
+      "tolerance": 0.2,
+      "explain": "t = (V arrivée − V départ) / V départ = (41 800 − 38 600) / 38 600 = 0,0829 = 8,3 %.",
+      "input": 8.4,
+      "accepted": true
+    }
+  ],
+  "emitted": [
+    {
+      "subject": "maths",
+      "theme": "math-c3",
+      "section": 2,
+      "title": "🧮 Exemple traité — dérivée, variations et coût minimal",
+      "game": "math-c3::2::qdef",
+      "type": "qcm",
+      "questions": [
+        {
+          "q": "Que signifie : « Dérivée » ?",
+          "choices": [
+            "f’(x) = 0 ⇔ x = 3. f’ < 0 avant 3 (coût décroissant), f’ > 0 après 3 (coût croissant) → minimum en x = 3, avec f(3) = 9 − 18 + 10 = 1 (soit 1 000 €)",
+            "f’(x) = 2x − 6",
+            "f’(1) = 2 − 6 = −4 et f(1) = 1 − 6 + 10 = 5, donc y = −4(x − 1) + 5 = −4x + 9"
+          ],
+          "answer": 1,
+          "explain": "Dérivée → f’(x) = 2x − 6",
+          "drawSource": "notion:derivee"
+        },
+        {
+          "q": "« Tangente en x = 1 » : quelle proposition est correcte ?",
+          "choices": [
+            "f’(x) = 0 ⇔ x = 3. f’ < 0 avant 3 (coût décroissant), f’ > 0 après 3 (coût croissant) → minimum en x = 3, avec f(3) = 9 − 18 + 10 = 1 (soit 1 000 €)",
+            "f’(1) = 2 − 6 = −4 et f(1) = 1 − 6 + 10 = 5, donc y = −4(x − 1) + 5 = −4x + 9",
+            "f’(x) = 2x − 6"
+          ],
+          "answer": 1,
+          "explain": "Tangente en x = 1 → f’(1) = 2 − 6 = −4 et f(1) = 1 − 6 + 10 = 5, donc y = −4(x − 1) + 5 = −4x + 9",
+          "drawSource": "notion:tangente en x = 1"
+        },
+        {
+          "q": "Quelle est la bonne définition de « Variations » ?",
+          "choices": [
+            "f’(x) = 2x − 6",
+            "f’(x) = 0 ⇔ x = 3. f’ < 0 avant 3 (coût décroissant), f’ > 0 après 3 (coût croissant) → minimum en x = 3, avec f(3) = 9 − 18 + 10 = 1 (soit 1 000 €)",
+            "f’(1) = 2 − 6 = −4 et f(1) = 1 − 6 + 10 = 5, donc y = −4(x − 1) + 5 = −4x + 9"
+          ],
+          "answer": 1,
+          "explain": "Variations → f’(x) = 0 ⇔ x = 3. f’ < 0 avant 3 (coût décroissant), f’ > 0 après 3 (coût croissant) → minimum en x = 3, avec f(3) = 9 − 18 + 10 = 1 (soit 1 000 €)",
+          "drawSource": "notion:variations"
+        }
+      ]
+    },
+    {
+      "subject": "maths",
+      "theme": "math-c3",
+      "section": 2,
+      "title": "🧮 Exemple traité — dérivée, variations et coût minimal",
+      "game": "math-c3::2::sterm",
+      "type": "saisie",
+      "questions": [
+        {
+          "prompt": "Quel terme correspond à cette définition ?\n« f’(x) = 2x − 6 »",
+          "answer": "Dérivée",
+          "alt": [],
+          "explain": "Dérivée : f’(x) = 2x − 6"
+        }
+      ]
+    },
+    {
+      "subject": "sig",
+      "theme": "sig-t2",
+      "section": 4,
+      "title": "🔍 Le langage SQL : interroger la base",
+      "game": "sig-t2::4::trou0",
+      "type": "trou",
+      "questions": [
+        {
+          "text": "____ : les colonnes à afficher (____ = toutes).",
+          "answer": "SELECT",
+          "alt": [],
+          "drawSource": "SELECT : les colonnes à afficher (SELECT = toutes).",
+          "explain": "Le mot manquant : « SELECT »."
+        }
+      ]
+    },
+    {
+      "subject": "droit",
+      "theme": "droit-t8",
+      "section": 1,
+      "title": "Forme juridique et patrimoine personnel : la responsabilité limitée aux apports",
+      "game": "droit-t8::1::qtrou",
+      "type": "qcm",
+      "questions": [
+        {
+          "q": "Quel mot complète la phrase ?\nDans une SARL ou une SAS, la société est une personne morale distincte : la responsabilité des associés est ____.",
+          "choices": [
+            "forme juridique",
+            "limitée à ses apports",
+            "engage",
+            "limitée à leurs apports"
+          ],
+          "answer": 3,
+          "explain": "Le mot manquant : « limitée à leurs apports ».",
+          "drawSource": "Dans une SARL ou une SAS, la société est une personne morale distincte : la responsabilité des associés est limitée à leurs apports.",
+          "alt": []
+        }
+      ]
+    },
+    {
+      "subject": "gestion-finance",
+      "theme": "gf-t1",
+      "section": 7,
+      "title": "🏭 Amortissements et dépréciations : pertes de valeur irréversibles ou réversibles",
+      "game": "gf-t1::7::qdef",
+      "type": "qcm",
+      "questions": [
+        {
+          "q": "« Dépréciation » : quelle proposition est correcte ?",
+          "choices": [
+            "Perte de valeur réversible (stock invendu)",
+            "Somme des annuités déjà enregistrées",
+            "Constatation de la perte de valeur définitive et prévisible d’une immobilisation (usure)"
+          ],
+          "answer": 0,
+          "explain": "Dépréciation → Perte de valeur réversible (stock invendu)",
+          "drawSource": "notion:depreciation"
+        },
+        {
+          "q": "Que signifie : « Amortissement » ?",
+          "choices": [
+            "Somme des annuités déjà enregistrées",
+            "Constatation de la perte de valeur définitive et prévisible d’une immobilisation (usure)",
+            "Perte de valeur réversible (stock invendu)"
+          ],
+          "answer": 1,
+          "explain": "Amortissement → Constatation de la perte de valeur définitive et prévisible d’une immobilisation (usure)",
+          "drawSource": "notion:amortissement"
+        },
+        {
+          "q": "Quelle est la bonne définition de « Cumul des amortissements » ?",
+          "choices": [
+            "Perte de valeur réversible (stock invendu)",
+            "Constatation de la perte de valeur définitive et prévisible d’une immobilisation (usure)",
+            "Somme des annuités déjà enregistrées"
+          ],
+          "answer": 2,
+          "explain": "Cumul des amortissements → Somme des annuités déjà enregistrées",
+          "drawSource": "notion:cumul des amortissements"
+        }
+      ]
+    },
+    {
+      "subject": "gestion-finance",
+      "theme": "gf-t1",
+      "section": 7,
+      "title": "🏭 Amortissements et dépréciations : pertes de valeur irréversibles ou réversibles",
+      "game": "gf-t1::7::vf",
+      "type": "vraifaux",
+      "questions": [
+        {
+          "statement": "« Prudence » : Constatation de la perte de valeur définitive et prévisible d’une immobilisation (usure)",
+          "answer": false,
+          "explain": "Faux. Prudence → Principe qui impose d’enregistrer les pertes probables"
+        },
+        {
+          "statement": "« Dépréciation » : Constatation de la perte de valeur définitive et prévisible d’une immobilisation (usure)",
+          "answer": false,
+          "explain": "Faux. Dépréciation → Perte de valeur réversible (stock invendu)"
+        },
+        {
+          "statement": "« Amortissement » : Constatation de la perte de valeur définitive et prévisible d’une immobilisation (usure)",
+          "answer": true,
+          "explain": "Exact. Amortissement → Constatation de la perte de valeur définitive et prévisible d’une immobilisation (usure)"
+        },
+        {
+          "statement": "« Valeur nette comptable (VNC) » : Constatation de la perte de valeur définitive et prévisible d’une immobilisation (usure)",
+          "answer": false,
+          "explain": "Faux. Valeur nette comptable (VNC) → Valeur d’origine − cumul des amortissements"
+        }
+      ]
+    },
+    {
+      "subject": "gestion-finance",
+      "theme": "gf-t1",
+      "section": 7,
+      "title": "🏭 Amortissements et dépréciations : pertes de valeur irréversibles ou réversibles",
+      "game": "gf-t1::7::sterm",
+      "type": "saisie",
+      "questions": [
+        {
+          "prompt": "Quel terme correspond à cette définition ?\n« Constatation de la perte de valeur définitive et prévisible d’une immobilisation (usure) »",
+          "answer": "Amortissement",
+          "alt": [],
+          "explain": "Amortissement : Constatation de la perte de valeur définitive et prévisible d’une immobilisation (usure)"
+        }
+      ]
+    },
+    {
+      "subject": "p1-management",
+      "theme": "p1-mgmt-t3",
+      "section": 2,
+      "title": "Les stratégies globales : spécialisation ou diversification",
+      "game": "p1-mgmt-t3::2::sterm",
+      "type": "saisie",
+      "questions": [
+        {
+          "prompt": "Quel terme correspond à cette définition ?\n« se développer sur de nouveaux métiers ou marchés pour répartir les risques et saisir des opportunités »",
+          "answer": "Diversification",
+          "alt": [],
+          "explain": "Diversification : se développer sur de nouveaux métiers ou marchés pour répartir les risques et saisir des opportunités"
+        }
+      ]
+    },
+    {
+      "subject": "p1-management",
+      "theme": "p1-mgmt-t3",
+      "section": 2,
+      "title": "Les stratégies globales : spécialisation ou diversification",
+      "game": "p1-mgmt-t3::2::trou0",
+      "type": "trou",
+      "questions": [
+        {
+          "text": "____ : se développer sur de nouveaux métiers ou marchés pour répartir les risques et saisir des opportunités.",
+          "answer": "Diversification",
+          "alt": [],
+          "drawSource": "Diversification : se développer sur de nouveaux métiers ou marchés pour répartir les risques et saisir des opportunités.",
+          "explain": "Le mot manquant : « Diversification »."
+        }
+      ]
+    },
+    {
+      "subject": "histoire-geo",
+      "theme": "hg-h3",
+      "section": 6,
+      "title": "Reconstruction et État-providence : plan Marshall, Sécurité sociale, consommation",
+      "game": "hg-h3::6::qdate",
+      "type": "qcm",
+      "questions": [
+        {
+          "q": "Que se passe-t-il en 1947 ?",
+          "choices": [
+            "Nationalisations (EDF-GDF, Banque de France)",
+            "Accords de Grenelle : forte hausse des salaires",
+            "GPRF ; nationalisations",
+            "Plan Monnet ; aide du plan Marshall dès 1948"
+          ],
+          "answer": 3,
+          "explain": "1947 : Plan Monnet ; aide du plan Marshall dès 1948",
+          "drawSource": "Que se passe-t-il en 1947 ?"
+        },
+        {
+          "q": "Que se passe-t-il en 1946 ?",
+          "choices": [
+            "Plan Monnet ; aide du plan Marshall dès 1948",
+            "Nationalisations (EDF-GDF, Banque de France)",
+            "Accords de Grenelle : forte hausse des salaires",
+            "Premier choc pétrolier : fin des Trente Glorieuses"
+          ],
+          "answer": 1,
+          "explain": "1946 : Nationalisations (EDF-GDF, Banque de France)",
+          "drawSource": "Que se passe-t-il en 1946 ?"
+        },
+        {
+          "q": "Que se passe-t-il en 1945 ?",
+          "choices": [
+            "Premier choc pétrolier : fin des Trente Glorieuses",
+            "Plan Monnet ; aide du plan Marshall dès 1948",
+            "Nationalisations (EDF-GDF, Banque de France)",
+            "Création de la Sécurité sociale ; nationalisation de Renault"
+          ],
+          "answer": 3,
+          "explain": "1945 : Création de la Sécurité sociale ; nationalisation de Renault",
+          "drawSource": "Que se passe-t-il en 1945 ?"
+        },
+        {
+          "q": "Que se passe-t-il en 1944 ?",
+          "choices": [
+            "GPRF ; nationalisations",
+            "Premier choc pétrolier : fin des Trente Glorieuses",
+            "Accords de Grenelle : forte hausse des salaires",
+            "Nationalisations (EDF-GDF, Banque de France)"
+          ],
+          "answer": 0,
+          "explain": "1944 : GPRF ; nationalisations",
+          "drawSource": "Que se passe-t-il en 1944 ?"
+        },
+        {
+          "q": "Que se passe-t-il en 1968 ?",
+          "choices": [
+            "GPRF ; nationalisations",
+            "Nationalisations (EDF-GDF, Banque de France)",
+            "Plan Monnet ; aide du plan Marshall dès 1948",
+            "Accords de Grenelle : forte hausse des salaires"
+          ],
+          "answer": 3,
+          "explain": "1968 : Accords de Grenelle : forte hausse des salaires",
+          "drawSource": "Que se passe-t-il en 1968 ?"
+        }
+      ]
+    },
+    {
+      "subject": "histoire-geo",
+      "theme": "hg-h3",
+      "section": 6,
+      "title": "Reconstruction et État-providence : plan Marshall, Sécurité sociale, consommation",
+      "game": "hg-h3::6::sdate",
+      "type": "saisie",
+      "questions": [
+        {
+          "prompt": "À quelle date : Nationalisations (EDF-GDF, Banque de France) ?",
+          "answer": "1946",
+          "explain": "Nationalisations (EDF-GDF, Banque de France) → 1946"
+        }
+      ]
+    },
+    {
+      "subject": "histoire-geo",
+      "theme": "hg-h3",
+      "section": 6,
+      "title": "Reconstruction et État-providence : plan Marshall, Sécurité sociale, consommation",
+      "game": "hg-h3::6::vfdate",
+      "type": "vraifaux",
+      "questions": [
+        {
+          "statement": "1946 : Nationalisations (EDF-GDF, Banque de France).",
+          "answer": true,
+          "explain": "Exact. 1946 : Nationalisations (EDF-GDF, Banque de France)."
+        }
+      ]
+    },
+    {
+      "subject": "histoire-geo",
+      "theme": "hg-h3",
+      "section": 6,
+      "title": "Reconstruction et État-providence : plan Marshall, Sécurité sociale, consommation",
+      "game": "hg-h3::6::strou",
+      "type": "saisie",
+      "questions": [
+        {
+          "prompt": "Complète par le mot exact :\nEn 1946, l’électricité et le gaz (EDF-GDF) ainsi que la ____ (loi du 2 décembre 1945, en vigueur le 1er janvier 1946) sont nationalisés ; le SMIG, salaire minimum, sera institué en 1950.",
+          "answer": "Banque de France",
+          "alt": [],
+          "explain": "Le mot manquant : « Banque de France ».",
+          "drawSource": "En 1946, l’électricité et le gaz (EDF-GDF) ainsi que la Banque de France (loi du 2 décembre 1945, en vigueur le 1er janvier 1946) sont nationalisés ; le SMIG, salaire minimum, sera institué en 1950."
+        },
+        {
+          "prompt": "Complète par le mot exact :\nEn 1946, l’électricité et le gaz (EDF-GDF) ainsi que la Banque de France (loi du 2 décembre 1945, en vigueur le 1er janvier 1946) sont nationalisés ; le ____, salaire minimum, sera institué en 1950.",
+          "answer": "SMIG",
+          "alt": [],
+          "explain": "Le mot manquant : « SMIG ».",
+          "drawSource": "En 1946, l’électricité et le gaz (EDF-GDF) ainsi que la Banque de France (loi du 2 décembre 1945, en vigueur le 1er janvier 1946) sont nationalisés ; le SMIG, salaire minimum, sera institué en 1950."
+        },
+        {
+          "prompt": "Complète par le mot exact :\nEn 1946, l’électricité et le gaz (____) ainsi que la Banque de France (loi du 2 décembre 1945, en vigueur le 1er janvier 1946) sont nationalisés ; le SMIG, salaire minimum, sera institué en 1950.",
+          "answer": "EDF-GDF",
+          "alt": [],
+          "explain": "Le mot manquant : « EDF-GDF ».",
+          "drawSource": "En 1946, l’électricité et le gaz (EDF-GDF) ainsi que la Banque de France (loi du 2 décembre 1945, en vigueur le 1er janvier 1946) sont nationalisés ; le SMIG, salaire minimum, sera institué en 1950."
+        }
+      ]
+    },
+    {
+      "subject": "histoire-geo",
+      "theme": "hg-h3",
+      "section": 6,
+      "title": "Reconstruction et État-providence : plan Marshall, Sécurité sociale, consommation",
+      "game": "hg-h3::6::qtrou",
+      "type": "qcm",
+      "questions": [
+        {
+          "q": "Quel mot complète la phrase ?\nLes ____ voient naître la société de consommation : automobile, électroménager, télévision.",
+          "choices": [
+            "nationalisations",
+            "Banque de France",
+            "années 1950-1960",
+            "Trente Glorieuses"
+          ],
+          "answer": 2,
+          "explain": "Le mot manquant : « années 1950-1960 ».",
+          "drawSource": "Les années 1950-1960 voient naître la société de consommation : automobile, électroménager, télévision.",
+          "alt": []
+        }
+      ]
+    },
+    {
+      "subject": "philosophie",
+      "theme": "philo-methode",
+      "section": 5,
+      "title": "👤 Galerie d’auteurs : une idée, une formule par philosophe",
+      "game": "philo-methode::5::qcas",
+      "type": "qcm",
+      "questions": [
+        {
+          "q": "Quelle notion correspond à cette définition ?\n« La liberté comme illusion (déterminisme) »",
+          "choices": [
+            "Sartre",
+            "Marx",
+            "Spinoza",
+            "Aristote"
+          ],
+          "answer": 2,
+          "explain": "Spinoza : La liberté comme illusion (déterminisme)",
+          "drawSource": "Quelle notion correspond à cette définition ?\n« La liberté comme illusion (déterminisme) »"
+        }
+      ]
+    },
+    {
+      "subject": "philosophie",
+      "theme": "philo-methode",
+      "section": 5,
+      "title": "👤 Galerie d’auteurs : une idée, une formule par philosophe",
+      "game": "philo-methode::5::vf1",
+      "type": "vraifaux",
+      "questions": [
+        {
+          "statement": "« Spinoza » : La liberté comme illusion (déterminisme)",
+          "answer": true,
+          "explain": "Exact. Spinoza → La liberté comme illusion (déterminisme)"
+        }
+      ]
+    },
+    {
+      "subject": "philosophie",
+      "theme": "philo-methode",
+      "section": 5,
+      "title": "👤 Galerie d’auteurs : une idée, une formule par philosophe",
+      "game": "philo-methode::5::sterm1",
+      "type": "saisie",
+      "questions": [
+        {
+          "prompt": "Quel terme correspond à cette définition ?\n« La liberté comme illusion (déterminisme) »",
+          "answer": "Spinoza",
+          "alt": [],
+          "explain": "Spinoza : La liberté comme illusion (déterminisme)"
+        }
+      ]
+    }
+  ],
+  "sql": [
+    {
+      "input": "SELECT nom FROM CLIENT WHERE ville = 'lyon'",
+      "answer": "SELECT nom FROM CLIENT WHERE ville = 'Lyon'",
+      "expected": false,
+      "actual": true,
+      "referenceResult": [
+        [
+          "A"
+        ]
+      ],
+      "inputResult": [
+        [
+          "B"
+        ]
+      ],
+      "offlineEngine": "SQLite en mémoire, deux clients, numCli clé primaire non nulle"
+    },
+    {
+      "input": "SELECT c.nom FROM CLIENT c WHERE c.ville = 'Lyon'",
+      "answer": "SELECT nom FROM CLIENT WHERE ville = 'Lyon'",
+      "expected": true,
+      "actual": false,
+      "referenceResult": [
+        [
+          "A"
+        ]
+      ],
+      "inputResult": [
+        [
+          "A"
+        ]
+      ],
+      "offlineEngine": "SQLite en mémoire, deux clients, numCli clé primaire non nulle"
+    },
+    {
+      "input": "SELECT COUNT(numCli) FROM CLIENT",
+      "answer": "SELECT COUNT(*) FROM CLIENT",
+      "expected": true,
+      "actual": false,
+      "referenceResult": [
+        [
+          2
+        ]
+      ],
+      "inputResult": [
+        [
+          2
+        ]
+      ],
+      "offlineEngine": "SQLite en mémoire, deux clients, numCli clé primaire non nulle"
+    }
+  ],
+  "sequence": [
+    {
+      "n": 0,
+      "A": 500,
+      "B": 500
+    },
+    {
+      "n": 1,
+      "A": 540,
+      "B": 530
+    },
+    {
+      "n": 2,
+      "A": 580,
+      "B": 561.8000000000001
+    },
+    {
+      "n": 3,
+      "A": 620,
+      "B": 595.508
+    },
+    {
+      "n": 4,
+      "A": 660,
+      "B": 631.2384800000002
+    },
+    {
+      "n": 5,
+      "A": 700,
+      "B": 669.1127888000001
+    },
+    {
+      "n": 6,
+      "A": 740,
+      "B": 709.2595561280002
+    },
+    {
+      "n": 7,
+      "A": 780,
+      "B": 751.8151294956803
+    },
+    {
+      "n": 8,
+      "A": 820,
+      "B": 796.9240372654211
+    },
+    {
+      "n": 9,
+      "A": 860,
+      "B": 844.7394795013464
+    },
+    {
+      "n": 10,
+      "A": 900,
+      "B": 895.4238482714273
+    },
+    {
+      "n": 11,
+      "A": 940,
+      "B": 949.149279167713
+    }
+  ]
+}

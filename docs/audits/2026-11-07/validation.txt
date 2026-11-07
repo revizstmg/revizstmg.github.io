@@ -1,0 +1,8 @@
+Audit source edc03a2cb0daf0021e07539ff1cca06405647bbe
+ Test Files  9 passed (9)
+      Tests  158 passed (158)
+   Start at  08:01:33 UTC (journal technique)
+   Duration  59.74s (transform 40.86s, setup 0ms, collect 2.20s, tests 55.36s, environment 1ms, prepare 591ms)
+
+
+{"languageCounterexamples":15,"calculationCounterexamples":3,"emittedGames":17,"sqlCounterexamples":3}

@@ -1,0 +1,146 @@
+{
+  "date": "2026-11-07",
+  "consultation": "Outil web. Les téléchargements directs des PDF ministériels ont renvoyé HTTP 403 ; aucun hash local de ces PDF n’est prétendu. Les pages/PDF cités ont été ouverts via l’outil web.",
+  "sources": {
+    "SGN": {
+      "titre": "SGN Première, BO 2019",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe646annexe31063606pdf-84600.pdf"
+    },
+    "M1": {
+      "titre": "Management Première, BO 2019",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe646annexe21063602pdf-84603.pdf"
+    },
+    "DE1": {
+      "titre": "Droit-économie Première, BO 2019",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe646annexe122-11063868pdf-84606.pdf"
+    },
+    "MSGN": {
+      "titre": "MSGN Terminale et quatre enseignements spécifiques, BO 2019",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe262annexe21159141pdf-84609.pdf"
+    },
+    "DE2": {
+      "titre": "Droit-économie Terminale, BO 2019",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe262annexe11159139pdf-84612.pdf"
+    },
+    "MAT1": {
+      "titre": "Mathématiques Première technologique, programme 2026, applicable depuis septembre 2026",
+      "url": "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%93%20Programme%20d%E2%80%99enseignement%20de%20math%C3%A9matiques%20de%20la%20classe%20de%20premi%C3%A8re%20de%20la%20voie%20technologique-515411.pdf"
+    },
+    "MAT2": {
+      "titre": "Mathématiques Terminale technologique, programme 2019, applicable en 2026-2027",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe242annexe1158914pdf-84153.pdf"
+    },
+    "MAT-DATES": {
+      "titre": "Calendrier des changements de programmes de mathématiques",
+      "url": "https://eduscol.education.gouv.fr/5817/programmes-et-ressources-en-mathematiques-voie-gt"
+    },
+    "HG1": {
+      "titre": "Histoire-géographie Première technologique, BO 2019",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe577annexe31062941pdf-83016.pdf"
+    },
+    "HG2": {
+      "titre": "Histoire-géographie Terminale technologique, BO 2019",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe243annexe21159174pdf-83019.pdf"
+    },
+    "FR": {
+      "titre": "Français Première, programme 2019 modifié en 2020",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/04annexe2francais1egtbomodifiepdf-69837.pdf"
+    },
+    "FR-EAF": {
+      "titre": "Définition des EAF, note du 11 septembre 2026",
+      "url": "https://www.education.gouv.fr/bo/2026/Special4/MENE2622658N"
+    },
+    "PHI": {
+      "titre": "Philosophie Terminale technologique, BO 2019",
+      "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe238annexe21159161pdf-83643.pdf"
+    },
+    "LV-DATES": {
+      "titre": "Langues étrangères, arrêté du 5 mai 2025, application Première/Terminale en 2026-2027",
+      "url": "https://www.education.gouv.fr/bo/2025/Hebdo22/MENE2504621A"
+    },
+    "LV-de": {
+      "titre": "Allemand lycée, programme 2025",
+      "url": "https://www.education.gouv.fr/sites/default/files/annexe-2-programme-d-allemand-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-441432.pdf"
+    },
+    "LV-en": {
+      "titre": "Anglais lycée, programme 2025",
+      "url": "https://www.education.gouv.fr/sites/default/files/annexe-4-programme-d-anglais-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440361.pdf"
+    },
+    "LV-ar": {
+      "titre": "Arabe lycée, programme 2025",
+      "url": "https://www.education.gouv.fr/sites/default/files/annexe-6-programme-d-arabe-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440367.pdf"
+    },
+    "LV-es": {
+      "titre": "Espagnol lycée, programme 2025",
+      "url": "https://www.education.gouv.fr/sites/default/files/annexe-10-programme-d-espagnol-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440376.pdf"
+    },
+    "LV-it": {
+      "titre": "Italien lycée, programme 2025",
+      "url": "https://www.education.gouv.fr/sites/default/files/annexe-14-programme-d-italien-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440388.pdf"
+    },
+    "PCG": {
+      "titre": "ANC, Plan comptable général consolidé au 1er janvier 2026, notamment articles 214-4 et 214-13",
+      "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+    },
+    "VA": {
+      "titre": "INSEE, valeur ajoutée des entreprises",
+      "url": "https://www.insee.fr/fr/metadonnees/definition/c2334"
+    },
+    "CAF": {
+      "titre": "Bpifrance Création, compte de résultat prévisionnel et autofinancement",
+      "url": "https://bpifrance-creation.fr/encyclopedie/previsions-financieres-business-plan/previsions-financieres/compte-resultat-dun-projet"
+    },
+    "TVA": {
+      "titre": "Ministère de l’Économie, taux de TVA du quotidien",
+      "url": "https://www.economie.gouv.fr/particuliers/impots-et-fiscalite/gerer-mes-autres-impots-et-taxes/tva-quels-sont-les-taux-de-votre-quotidien"
+    },
+    "CA3": {
+      "titre": "DGFIP, régimes et déclarations de TVA",
+      "url": "https://www.impots.gouv.fr/professionnel/les-regimes-dimposition-la-tva"
+    },
+    "CC1101": {
+      "titre": "Code civil, article 1101",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032040787"
+    },
+    "CDD": {
+      "titre": "Service Public, indemnité de fin de CDD et exceptions",
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F803"
+    },
+    "SQL": {
+      "titre": "PostgreSQL, interrogation des tables et SELECT *",
+      "url": "https://www.postgresql.org/docs/current/tutorial-select.html"
+    },
+    "SQL-L": {
+      "titre": "PostgreSQL, identifiants et constantes littérales",
+      "url": "https://www.postgresql.org/docs/current/sql-syntax-lexical.html"
+    },
+    "BC": {
+      "titre": "British Council, present perfect simple et continu",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/present-perfect-simple-continuous"
+    },
+    "SPINOZA": {
+      "titre": "Spinoza, Éthique, partie I, définition 7, traduction Saisset",
+      "url": "https://fr.wikisource.org/wiki/%C3%89thique/Partie_I"
+    },
+    "GENOCIDE": {
+      "titre": "ONU, définition conventionnelle du génocide",
+      "url": "https://www.un.org/fr/observances/genocide-prevention-day"
+    },
+    "PRESIDENT": {
+      "titre": "Ministère de l’Intérieur, révision de 1962 et première élection en 1965",
+      "url": "https://www.elections.interieur.gouv.fr/comprendre-elections/pour-qui-je-vote/president-de-republique"
+    },
+    "SNC": {
+      "titre": "Code de commerce, article L221-1",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006222461"
+    },
+    "PIB": {
+      "titre": "INSEE, produit intérieur brut aux prix du marché",
+      "url": "https://www.insee.fr/fr/metadonnees/definition/c1365"
+    },
+    "DETTE": {
+      "titre": "Eurostat, ajustements déficit-dette, janvier 2026",
+      "url": "https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20260122-1"
+    }
+  }
+}

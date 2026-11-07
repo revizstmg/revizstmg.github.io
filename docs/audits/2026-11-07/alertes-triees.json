@@ -1,0 +1,367 @@
+[
+  {
+    "kind": "distracteur_accepte_par_correcteur",
+    "subject": "langues",
+    "theme": "lng-es-voc",
+    "section": 1,
+    "seed": 1,
+    "game": "lng-es-voc::1::qdef0",
+    "type": "qcm",
+    "index": 1,
+    "question": {
+      "q": "« aprobar » : quelle proposition est correcte ?",
+      "choices": [
+        "apprendre",
+        "réussir (un examen)",
+        "la matière",
+        "l'examen"
+      ],
+      "answer": 1,
+      "explain": "aprobar → réussir (un examen)",
+      "drawSource": "notion:aprobar"
+    },
+    "distracteur": 3,
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "distracteur_accepte_par_correcteur",
+    "subject": "langues",
+    "theme": "lng-es-voc",
+    "section": 1,
+    "seed": 2,
+    "game": "lng-es-voc::1::qdef0",
+    "type": "qcm",
+    "index": 3,
+    "question": {
+      "q": "« aprobar » : quelle proposition est correcte ?",
+      "choices": [
+        "l'examen",
+        "la matière",
+        "réussir (un examen)",
+        "le diplôme"
+      ],
+      "answer": 2,
+      "explain": "aprobar → réussir (un examen)",
+      "drawSource": "notion:aprobar"
+    },
+    "distracteur": 0,
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "distracteur_accepte_par_correcteur",
+    "subject": "langues",
+    "theme": "lng-es-voc",
+    "section": 1,
+    "seed": 4,
+    "game": "lng-es-voc::1::qdef0",
+    "type": "qcm",
+    "index": 4,
+    "question": {
+      "q": "« aprobar » : quelle proposition est correcte ?",
+      "choices": [
+        "l'examen",
+        "l'élève",
+        "réussir (un examen)",
+        "l'école"
+      ],
+      "answer": 2,
+      "explain": "aprobar → réussir (un examen)",
+      "drawSource": "notion:aprobar"
+    },
+    "distracteur": 0,
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "choix_equivalents",
+    "subject": "langues",
+    "theme": "lng-it-gram",
+    "section": 0,
+    "seed": 0,
+    "game": "lng-it-gram-s1-qcm",
+    "type": "qcm",
+    "index": 2,
+    "question": {
+      "q": "Quelle forme signifie « est » ?",
+      "choices": [
+        "è",
+        "e",
+        "il"
+      ],
+      "answer": 0,
+      "explain": "È porte un accent ; e signifie et."
+    },
+    "indices": [
+      0,
+      1
+    ],
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "distracteur_accepte_par_correcteur",
+    "subject": "langues",
+    "theme": "lng-it-gram",
+    "section": 0,
+    "seed": 0,
+    "game": "lng-it-gram-s1-qcm",
+    "type": "qcm",
+    "index": 2,
+    "question": {
+      "q": "Quelle forme signifie « est » ?",
+      "choices": [
+        "è",
+        "e",
+        "il"
+      ],
+      "answer": 0,
+      "explain": "È porte un accent ; e signifie et."
+    },
+    "distracteur": 1,
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "choix_equivalents",
+    "subject": "langues",
+    "theme": "lng-it-gram",
+    "section": null,
+    "origin": "banque_theme",
+    "game": "lng-it-gram-s1-qcm",
+    "type": "qcm",
+    "index": 2,
+    "question": {
+      "q": "Quelle forme signifie « est » ?",
+      "choices": [
+        "è",
+        "e",
+        "il"
+      ],
+      "answer": 0,
+      "explain": "È porte un accent ; e signifie et."
+    },
+    "indices": [
+      0,
+      1
+    ],
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "distracteur_accepte_par_correcteur",
+    "subject": "langues",
+    "theme": "lng-it-gram",
+    "section": null,
+    "origin": "banque_theme",
+    "game": "lng-it-gram-s1-qcm",
+    "type": "qcm",
+    "index": 2,
+    "question": {
+      "q": "Quelle forme signifie « est » ?",
+      "choices": [
+        "è",
+        "e",
+        "il"
+      ],
+      "answer": 0,
+      "explain": "È porte un accent ; e signifie et."
+    },
+    "distracteur": 1,
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "choix_equivalents",
+    "subject": "p1-langues",
+    "theme": "lng-it-p1-gram",
+    "section": 0,
+    "seed": 0,
+    "game": "lng-it-p1-gram-s1-qcm",
+    "type": "qcm",
+    "index": 2,
+    "question": {
+      "q": "Quelle forme signifie « est » ?",
+      "choices": [
+        "è",
+        "e",
+        "il"
+      ],
+      "answer": 0,
+      "explain": "È porte un accent ; e signifie et."
+    },
+    "indices": [
+      0,
+      1
+    ],
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "distracteur_accepte_par_correcteur",
+    "subject": "p1-langues",
+    "theme": "lng-it-p1-gram",
+    "section": 0,
+    "seed": 0,
+    "game": "lng-it-p1-gram-s1-qcm",
+    "type": "qcm",
+    "index": 2,
+    "question": {
+      "q": "Quelle forme signifie « est » ?",
+      "choices": [
+        "è",
+        "e",
+        "il"
+      ],
+      "answer": 0,
+      "explain": "È porte un accent ; e signifie et."
+    },
+    "distracteur": 1,
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "choix_equivalents",
+    "subject": "p1-langues",
+    "theme": "lng-it-p1-gram",
+    "section": null,
+    "origin": "banque_theme",
+    "game": "lng-it-p1-gram-s1-qcm",
+    "type": "qcm",
+    "index": 2,
+    "question": {
+      "q": "Quelle forme signifie « est » ?",
+      "choices": [
+        "è",
+        "e",
+        "il"
+      ],
+      "answer": 0,
+      "explain": "È porte un accent ; e signifie et."
+    },
+    "indices": [
+      0,
+      1
+    ],
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "distracteur_accepte_par_correcteur",
+    "subject": "p1-langues",
+    "theme": "lng-it-p1-gram",
+    "section": null,
+    "origin": "banque_theme",
+    "game": "lng-it-p1-gram-s1-qcm",
+    "type": "qcm",
+    "index": 2,
+    "question": {
+      "q": "Quelle forme signifie « est » ?",
+      "choices": [
+        "è",
+        "e",
+        "il"
+      ],
+      "answer": 0,
+      "explain": "È porte un accent ; e signifie et."
+    },
+    "distracteur": 1,
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "choix_equivalents",
+    "subject": "langues",
+    "theme": "source",
+    "section": null,
+    "game": "langues/matiere.json/chapters/10/games/0/questions/2",
+    "type": "qcm",
+    "index": 0,
+    "question": {
+      "q": "Quelle forme signifie « est » ?",
+      "choices": [
+        "è",
+        "e",
+        "il"
+      ],
+      "answer": 0,
+      "explain": "È porte un accent ; e signifie et."
+    },
+    "indices": [
+      0,
+      1
+    ],
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "distracteur_accepte_par_correcteur",
+    "subject": "langues",
+    "theme": "source",
+    "section": null,
+    "game": "langues/matiere.json/chapters/10/games/0/questions/2",
+    "type": "qcm",
+    "index": 0,
+    "question": {
+      "q": "Quelle forme signifie « est » ?",
+      "choices": [
+        "è",
+        "e",
+        "il"
+      ],
+      "answer": 0,
+      "explain": "È porte un accent ; e signifie et."
+    },
+    "distracteur": 1,
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "choix_equivalents",
+    "subject": "p1-langues",
+    "theme": "source",
+    "section": null,
+    "game": "p1-langues/matiere.json/chapters/3/games/0/questions/2",
+    "type": "qcm",
+    "index": 0,
+    "question": {
+      "q": "Quelle forme signifie « est » ?",
+      "choices": [
+        "è",
+        "e",
+        "il"
+      ],
+      "answer": 0,
+      "explain": "È porte un accent ; e signifie et."
+    },
+    "indices": [
+      0,
+      1
+    ],
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  },
+  {
+    "kind": "distracteur_accepte_par_correcteur",
+    "subject": "p1-langues",
+    "theme": "source",
+    "section": null,
+    "game": "p1-langues/matiere.json/chapters/3/games/0/questions/2",
+    "type": "qcm",
+    "index": 0,
+    "question": {
+      "q": "Quelle forme signifie « est » ?",
+      "choices": [
+        "è",
+        "e",
+        "il"
+      ],
+      "answer": 0,
+      "explain": "È porte un accent ; e signifie et."
+    },
+    "distracteur": 1,
+    "statut": "ecarte_du_bilan_actif",
+    "motif": "Banque de langues héritée, non navigation des manuels ; normalisation de cours non pertinente pour ces choix QCM."
+  }
+]
