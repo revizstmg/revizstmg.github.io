@@ -124,7 +124,7 @@
       {
         "id": 1,
         "title": "Document 1 — Qui est chômeur ? (définition du BIT)",
-        "text": "Selon le Bureau international du travail (BIT), est **chômeur** toute personne qui, simultanément : est **sans emploi**, est **disponible** pour travailler, et **recherche activement** un emploi. Le **taux de chômage** = nombre de chômeurs / population active (actifs occupés + chômeurs)."
+        "text": "Au sens du **BIT**, une personne de **15 ans ou plus** est au chômage si elle est **sans emploi** pendant la semaine de référence, **disponible dans les deux semaines**, et a recherché activement un emploi au cours des **quatre dernières semaines** ou en a déjà trouvé un commençant dans **moins de trois mois**. Le **taux de chômage**, en pourcentage, rapporte le nombre de chômeurs à la population active (personnes en emploi et chômeurs), puis multiplie le quotient par 100."
       },
       {
         "id": 2,
@@ -145,15 +145,15 @@
     "questions": [
       {
         "doc": 1,
-        "q": "Au sens du BIT, un chômeur doit à la fois être sans emploi, disponible et…",
+        "q": "Une personne de 15 ans ou plus est sans emploi et disponible sous deux semaines. Pour être chômeuse BIT, elle doit aussi…",
         "choices": [
-          "rechercher activement un emploi",
+          "avoir recherché activement un emploi dans les quatre dernières semaines ou en avoir trouvé un commençant dans moins de trois mois",
           "avoir plus de 50 ans",
           "toucher une allocation",
           "être diplômé"
         ],
         "answer": 0,
-        "explain": "Les trois critères du BIT : sans emploi, disponible, en recherche active."
+        "explain": "La recherche active récente ou un emploi déjà trouvé commençant dans moins de trois mois satisfait le troisième critère. L’absence d’emploi et la disponibilité sous deux semaines restent nécessaires."
       },
       {
         "doc": 1,
@@ -222,7 +222,7 @@
         "doc": 1,
         "type": "redac",
         "q": "Un étudiant qui cherche un stage mais n’est pas disponible avant six mois est-il chômeur au sens du BIT ? Justifie.",
-        "answer": "Non : au sens du BIT, il faut être **sans emploi**, **en recherche active** ET **disponible dans les deux semaines**. Comme l’étudiant n’est pas disponible avant six mois, l’un des trois critères manque : il n’est pas comptabilisé comme chômeur au sens du BIT."
+        "answer": "Non : il n’est pas **disponible dans les deux semaines**, donc ne remplit pas les critères du chômage BIT. La recherche active récente, ou un emploi déjà trouvé commençant dans moins de trois mois, ne dispense pas du critère de disponibilité. Son statut d’étudiant ne suffit pas à le classer : c’est sa situation vis-à-vis de l’emploi qui compte."
       }
     ]
   },
