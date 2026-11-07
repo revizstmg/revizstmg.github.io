@@ -1938,7 +1938,10 @@
       "explanation": "Le verbe s’accorde avec io : sono. On peut aussi omettre io lorsque le contexte est clair.",
       "choices": [],
       "context": "",
-      "id": "it-ex-071"
+      "id": "it-ex-071",
+      "alternatives": [
+        "Sono studente."
+      ]
     },
     {
       "lessonId": "langues-lng-it-gram-2",

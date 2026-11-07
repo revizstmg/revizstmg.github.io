@@ -36,7 +36,7 @@ export const SUBJECTS = MATIERES
 // Un chapitre sans entrée dans LESSONS garde son cours d'origine.
 // Petit nettoyage markdown local (le module « shuffle/stripMd » plus bas n'est
 // pas encore défini à ce stade du fichier).
-function _strip(x) { return String(x || '').replace(/\*\*/g, '').replace(/\*/g, '').trim() }
+function _strip(x) { return stripMd(x) }
 
 // Catégorie d'un chapitre approfondi d'après son intitulé, pour le ranger dans
 // une section repliable de la page thème (méthodes de calcul, études de cas,
@@ -379,7 +379,7 @@ export function themeChapters(theme) {
 
 // Retire le markdown gras/italique pour un texte propre dans un exercice.
 function stripMd(s) {
-  return String(s || '').replace(/\*\*/g, '').replace(/\*/g, '').trim()
+  return String(s || '').replace(/\*\*([^*]+)\*\*/g, '$1').replace(/\*(\p{L}[^*\n]*?\p{L})\*/gu, '$1').trim()
 }
 
 // Découpe un texte en phrases sans couper après une abréviation (« art. 1103 »,
@@ -700,7 +700,8 @@ function sectionPairs(sec) {
   }
   // notion → définition à partir des puces « **terme** : définition ».
   const notionItems = []
-  for (const b of blocks) if (b.t === 'list' && Array.isArray(b.c)) notionItems.push(...b.c)
+  const exempleResolue = /exemple|exercice.*(?:traité|guidé)|cas pratique|étude de cas/i.test(sec.h || '')
+  for (const b of blocks) if (!exempleResolue && b.t === 'list' && Array.isArray(b.c)) notionItems.push(...b.c)
   if (Array.isArray(sec.points)) notionItems.push(...sec.points)
   for (const item of notionItems) {
     const s = String(item)

@@ -155,30 +155,66 @@
       "n = nombre d’épreuves, p = probabilité de succès d’une épreuve."
     ]
   ],
-  "math-c7": [
+  "math-c8": [
     [
-      "Loi normale",
-      "Loi continue en « cloche », symétrique autour de la moyenne μ."
+      "Exponentielle de base a",
+      "Fonction x ↦ aˣ, définie sur ℝ pour a > 0"
     ],
     [
-      "Espérance et écart-type",
-      "μ situe le centre, σ mesure la dispersion autour de μ."
+      "Puissance zéro",
+      "Pour a > 0, a⁰ = 1"
     ],
     [
-      "Intervalle de fluctuation",
-      "Intervalle où se situe une fréquence avec une probabilité donnée (souvent 95 %)."
+      "Produit de puissances de même base",
+      "aˣ × aʸ = aˣ⁺ʸ"
     ],
     [
-      "Intervalle de confiance",
-      "Fourchette estimant une proportion inconnue à partir d’un échantillon."
+      "Base supérieure à 1",
+      "aˣ est strictement croissante si a > 1"
     ],
     [
-      "Estimation",
-      "Approcher une proportion de la population à l’aide d’un échantillon."
+      "Base entre 0 et 1",
+      "aˣ est strictement décroissante si 0 < a < 1"
     ],
     [
-      "Loi normale centrée réduite",
-      "Loi normale de moyenne 0 et d’écart-type 1."
+      "Coefficient négatif",
+      "Multiplier une fonction par k < 0 inverse son sens de variation"
+    ],
+    [
+      "Logarithme décimal",
+      "Pour b > 0, log(b) est la solution de 10ˣ=b"
+    ],
+    [
+      "Logarithme d’un produit",
+      "log(ab)=log(a)+log(b), pour a,b > 0"
+    ],
+    [
+      "Logarithme d’une puissance",
+      "log(aⁿ)=n log(a), pour a > 0"
+    ],
+    [
+      "Équation aˣ=b",
+      "x=log(b)/log(a), pour a>0, a≠1, b>0"
+    ],
+    [
+      "Seuil entier",
+      "Premier rang entier qui satisfait l’inégalité, vérifié avec le rang précédent"
+    ],
+    [
+      "Base décroissante",
+      "Avec 0<a<1, le passage à l’exposant inverse le sens de l’inégalité"
+    ],
+    [
+      "Coefficient moyen",
+      "(Vf/Vi)^(1/n), pour des valeurs positives"
+    ],
+    [
+      "Taux moyen",
+      "Coefficient moyen moins 1, à multiplier par 100 pour un pourcentage"
+    ],
+    [
+      "Durée composée",
+      "Se calcule en isolant l’exponentielle puis avec des logarithmes"
     ]
   ]
 }

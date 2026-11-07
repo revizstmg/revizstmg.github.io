@@ -1,7 +1,7 @@
 // Exercices des manuels de langues (resources/langues/<langue>.json), jouables sur le site.
 // La numérotation et les corrigés sont ceux du PDF (scripts/guides-langues.mjs) :
 // les leçons dans l'ordre, puis les bilans par unité.
-import { answerMatches } from '../games/common.jsx'
+import { answerMatchesLangue } from '../games/common.jsx'
 
 export function ordonnerExercices(manuel) {
   const parLecon = new Map(manuel.lessons.map((l) => [l.id, manuel.exercises.filter((e) => e.lessonId === l.id)]))
@@ -20,11 +20,15 @@ export function ordonnerExercices(manuel) {
 
 // Une traduction ou une production admet plusieurs formulations justes (le PDF le dit) :
 // l'élève compare alors avec le corrigé et s'évalue lui-même.
-export const estLibre = (e) => e.type === 'production' || /^\s*Traduis/i.test(e.prompt)
+export const estLibre = (e) => e.type === 'production' || e.selfAssessment === true || /^\s*Traduis/i.test(e.prompt)
 
 export const sorteExercice = (e) => (e.type === 'production' ? 'production' : e.type === 'qcm' ? 'qcm' : estLibre(e) ? 'traduction' : 'mini')
 
 export function verifier(e, saisie) {
   if (e.type === 'qcm') return saisie === e.answer
-  return answerMatches(saisie, e.answer, e.alternatives || [])
+  if (e.preserveDiacritics) {
+    const vocalise = (s) => String(s ?? '').normalize('NFC').replace(/\s+/g, ' ').trim()
+    return [e.answer, ...(e.alternatives || [])].some((a) => vocalise(saisie) === vocalise(a))
+  }
+  return answerMatchesLangue(saisie, e.answer, e.alternatives || [])
 }

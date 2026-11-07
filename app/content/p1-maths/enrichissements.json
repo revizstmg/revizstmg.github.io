@@ -66,30 +66,38 @@
   "p1-math-c3": {
     "sections": [
       {
-        "h": "🧮 Exemple traité — discriminant, racines et signe d’un trinôme",
-        "group": "methode",
+        "h": "Racines et signe sous forme factorisée",
         "blocks": [
           {
-            "t": "example",
-            "h": "Énoncé",
-            "c": "Résous l’équation x² − 5x + 6 = 0, puis étudie le signe de f(x) = x² − 5x + 6."
-          },
-          {
             "t": "p",
-            "c": "**Résolution :**"
+            "c": "La **forme factorisée** f(x)=(x−2)(x−3) révèle les **racines** 2 et 3. Le produit est nul si l’un des facteurs est nul. Pour étudier le signe, on examine chaque facteur de part et d’autre des racines ; la recherche systématique par discriminant n’est pas un attendu du programme."
           },
           {
-            "t": "list",
-            "c": [
-              "**Discriminant** : Δ = b² − 4ac = (−5)² − 4 × 1 × 6 = 25 − 24 = **1** (> 0 → deux solutions).",
-              "**Racines** : x = (5 ± √1) / 2 → x₁ = (5 − 1)/2 = **2** et x₂ = (5 + 1)/2 = **3**.",
-              "**Signe** : a = 1 > 0, la parabole est « ouverte vers le haut » → f(x) > 0 à l’extérieur des racines (x < 2 ou x > 3), **négatif entre 2 et 3**."
+            "t": "example",
+            "h": "Application corrigée",
+            "c": "Pour (x−2)(x−3) : signe positif avant 2, négatif entre 2 et 3, positif après 3 ; la valeur est nulle aux deux racines. En développant, on retrouve x²−5x+6."
+          },
+          {
+            "t": "table",
+            "h": "Notions et définitions",
+            "head": [
+              "Notion",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "Racine",
+                "Valeur de x pour laquelle f(x)=0"
+              ],
+              [
+                "Produit nul",
+                "Un produit est nul si au moins un facteur est nul"
+              ],
+              [
+                "Forme factorisée",
+                "Écriture sous forme d’un produit qui permet de lire les racines"
+              ]
             ]
-          },
-          {
-            "t": "tip",
-            "h": "Astuce signe",
-            "c": "« Du signe de a à l’extérieur des racines, du signe opposé à l’intérieur. »"
           }
         ]
       }

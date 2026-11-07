@@ -47,7 +47,7 @@
           "points": [
             "**Immobilisation** (actif durable, classe 2) vs **charge** (consommée sur l’exercice, classe 6).",
             "Coût d’acquisition = prix d’achat HT − réductions + frais accessoires (transport, installation…).",
-            "**Amortissement** = constatation de la perte de valeur (usure, temps).",
+            "**Amortissement** = répartition systématique du montant amortissable selon l’utilisation de l’actif.",
             "Taux linéaire = 1 / durée ; annuité = base × taux (**prorata temporis** la 1re année).",
             "À la revente : prix de cession comparé à la VNC → plus ou moins-value."
           ],
@@ -58,7 +58,7 @@
           "points": [
             "Exercice comptable = 12 mois → résultat + situation à la clôture.",
             "**Inventaire** → écritures d’ajustement (stocks, amortissements, dépréciations, cessions).",
-            "**Dépréciation** = perte **réversible** (l’amortissement, lui, est définitif).",
+            "**Dépréciation** = constatation d’une valeur actuelle inférieure à la valeur nette comptable ; une reprise peut être possible.",
             "L’**annexe** explicite le bilan et le compte de résultat."
           ],
           "formula": "4 principes : prudence · indépendance des exercices · continuité de l’exploitation · permanence des méthodes"
@@ -164,7 +164,7 @@
             },
             {
               "front": "Dépréciation",
-              "back": "Perte de valeur réversible (contrairement à l’amortissement, définitif)."
+              "back": "Constatation d’une valeur actuelle inférieure à la VNC ; reprise possible selon les règles applicables."
             },
             {
               "front": "VNC",
@@ -310,12 +310,12 @@
               "explain": "TVA à décaisser = TVA collectée − TVA déductible."
             },
             {
-              "text": "L’entreprise établit sa déclaration de TVA sur le formulaire ___.",
+              "text": "Au régime réel normal, l’entreprise déclare sa TVA sur le formulaire ___.",
               "answer": "CA3",
               "alt": [
                 "ca3"
               ],
-              "explain": "La déclaration de TVA se fait sur le formulaire CA3."
+              "explain": "Au régime réel normal : CA3. Le régime simplifié utilise encore la CA12 en 2026 ; vérifier le régime applicable à la période étudiée."
             }
           ]
         },
@@ -367,7 +367,7 @@
             {
               "statement": "L’amortissement constate une perte de valeur réversible.",
               "answer": false,
-              "explain": "Faux : c’est la dépréciation qui est réversible ; l’amortissement est définitif."
+              "explain": "Faux : l’amortissement répartit le montant amortissable selon l’utilisation. Une dépréciation constate une valeur actuelle inférieure à la VNC et peut faire l’objet d’une reprise."
             },
             {
               "statement": "Une immobilisation est enregistrée en classe 2.",
@@ -714,7 +714,7 @@
         {
           "h": "Les modalités de financement",
           "points": [
-            "Financements **internes** : autofinancement (CAF), apports en compte courant d’associés.",
+            "Financements **internes** : autofinancement (CAF moins dividendes), apports en compte courant d’associés.",
             "Financements **externes** : emprunt bancaire, augmentation de capital, crowdfunding, subventions.",
             "Critères d’arbitrage : performances, endettement, coût, pouvoir des associés, attractivité du projet."
           ]
@@ -761,13 +761,13 @@
             {
               "q": "Lequel est un financement INTERNE ?",
               "choices": [
-                "L’autofinancement (CAF)",
+                "L’autofinancement (CAF moins dividendes)",
                 "L’emprunt bancaire",
                 "L’augmentation de capital",
                 "Le crowdfunding"
               ],
               "answer": 0,
-              "explain": "L’autofinancement (CAF) et les apports en compte courant sont internes ; emprunt, augmentation de capital et crowdfunding sont externes."
+              "explain": "L’autofinancement (CAF moins dividendes) et les apports en compte courant sont internes ; emprunt, augmentation de capital et crowdfunding sont externes."
             },
             {
               "q": "CA = 300 000 €, charges variables = 180 000 €. Quel est le taux de MCV ?",
@@ -874,7 +874,7 @@
           "pairs": [
             {
               "left": "Financement interne",
-              "right": "Autofinancement (CAF)"
+              "right": "Autofinancement (CAF conservée après distribution)"
             },
             {
               "left": "Financement externe",

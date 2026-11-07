@@ -862,7 +862,8 @@
       "choices": [],
       "answer": "Können Sie das bitte wiederholen?",
       "explanation": "Können Sie introduit la demande ; wiederholen reste à l’infinitif final.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-009",
@@ -1030,7 +1031,8 @@
       "choices": [],
       "answer": "Wo wohnst du?",
       "explanation": "Wo interroge sur le lieu ; wohnst est la forme avec du.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-021",
@@ -1198,7 +1200,8 @@
       "choices": [],
       "answer": "Der est l’article féminin au datif.",
       "explanation": "Mit impose le datif ; Lehrerin est féminin. Le cas explique la forme der.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-033",
@@ -1422,7 +1425,8 @@
       "choices": [],
       "answer": "Ich möchte einen Termin vereinbaren.",
       "explanation": "Möchte exprime le souhait ; Termin est masculin à l’accusatif.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-049",
@@ -1478,7 +1482,8 @@
       "choices": [],
       "answer": "Le parc est le lieu où la course se déroule.",
       "explanation": "Le mouvement a lieu dans le parc ; il ne suffit pas à imposer l’accusatif.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-053",
@@ -1646,7 +1651,8 @@
       "choices": [],
       "answer": "Morgen lerne ich Deutsch.",
       "explanation": "Morgen situe l’action dans le futur ; le présent suffit. D’autres phrases correctement situées sont possibles.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-065",
@@ -1702,7 +1708,8 @@
       "choices": [],
       "answer": "Ich lerne, obwohl ich müde bin.",
       "explanation": "Obwohl exprime la concession ; bin termine la subordonnée. Une inversion des propositions correctement construite est aussi possible.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-069",
@@ -1758,7 +1765,8 @@
       "choices": [],
       "answer": "Du solltest regelmäßig üben.",
       "explanation": "Solltest exprime le conseil. D’autres conseils grammaticalement corrects conviennent s’ils gardent le sens.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-073",
@@ -1814,7 +1822,8 @@
       "choices": [],
       "answer": "Le relatif est au datif féminin car helfen demande le datif.",
       "explanation": "Son genre vient de Frau et son cas de sa fonction après helfen.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-077",
@@ -1858,7 +1867,8 @@
       "choices": [],
       "answer": "Kann ich mit Karte bezahlen?",
       "explanation": "Kann ouvre la question oui/non ; bezahlen reste final.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-080",
@@ -1870,7 +1880,8 @@
       "choices": [],
       "answer": "Entschuldigung, wo ist der Bahnhof?",
       "explanation": "Entschuldigung introduit la demande ; Bahnhof est le sujet de ist. Une autre formule polie correcte convient.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-081",
@@ -1926,7 +1937,8 @@
       "choices": [],
       "answer": "Ich suche ein Praktikum im Bereich Marketing.",
       "explanation": "Modèle possible : précise le domaine qui t’intéresse et garde l’ordre sujet-verbe. D’autres domaines réels sont acceptables.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-085",
@@ -1970,7 +1982,12 @@
       "choices": [],
       "answer": "50 Personen.",
       "explanation": "Le document donne beschäftigt 50 Personen ; ce n’est pas un montant financier.",
-      "context": ""
+      "context": "",
+      "alternatives": [
+        "50",
+        "50 Personen",
+        "fünfzig Personen"
+      ]
     },
     {
       "id": "de-ex-088",
@@ -1982,7 +1999,8 @@
       "choices": [],
       "answer": "Non, une seule année est donnée.",
       "explanation": "Sans valeur antérieure comparable, on ne peut pas conclure à une hausse. Le chiffre 2025 seul ne décrit pas une évolution.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-089",
@@ -2038,7 +2056,8 @@
       "choices": [],
       "answer": "Ich finde das Angebot interessant, weil es eine Reparatur einschließt.",
       "explanation": "Modèle possible : l’avis est justifié par un service précis ; dans la subordonnée, einschließt est final. Un autre argument cohérent convient.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-093",
@@ -2094,7 +2113,8 @@
       "choices": [],
       "answer": "Non, ils n’ont pas encore été mesurés.",
       "explanation": "Le texte distingue le réemploi constaté et un résultat énergétique qui n’a pas été mesuré.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-097",
@@ -2138,7 +2158,8 @@
       "choices": [],
       "answer": "Das Dokument handelt von Marketing.",
       "explanation": "Handeln von sert à annoncer le thème ; ici Marketing est un nom de domaine sans article.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     },
     {
       "id": "de-ex-100",
@@ -2150,7 +2171,8 @@
       "choices": [],
       "answer": "Présenter le document, expliquer son idée, citer un exemple, donner un avis justifié.",
       "explanation": "Ce plan sépare contenu du document et opinion personnelle. D’autres plans structurés respectant ces éléments sont possibles.",
-      "context": ""
+      "context": "",
+      "selfAssessment": true
     }
   ],
   "edition": "Manuel approfondi · octobre 2026",

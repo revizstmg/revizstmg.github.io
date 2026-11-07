@@ -1,26 +1,8 @@
 import { useMemo, useState } from 'react'
-import { Feedback, GameProgress, normalize } from './common.jsx'
+import { Feedback, GameProgress } from './common.jsx'
 import { useT } from '../i18n.js'
 
-// Normalisation SQL tolérante : on accepte les différences de casse, de
-// guillemets (" ou '), d'espacement autour des virgules et des opérateurs,
-// et un point-virgule final facultatif. L'élève écrit un vrai SELECT.
-function sqlNorm(s) {
-  return normalize(s) // minuscules, accents retirés, ' unifiée, espaces réduits
-    .replace(/"/g, "'") // guillemets doubles → simples
-    .replace(/;+\s*$/g, '') // point-virgule final facultatif
-    .replace(/\s*,\s*/g, ', ') // « a ,b » → « a, b »
-    .replace(/\s*(<=|>=|<>|!=|=|<|>)\s*/g, ' $1 ') // espaces autour des opérateurs
-    .replace(/\(\s*\*\s*\)/g, '(*)') // count( * ) → count(*)
-    .replace(/\s+/g, ' ')
-    .trim()
-}
-
-function sqlMatches(input, answer, alt = []) {
-  const n = sqlNorm(input)
-  if (!n) return false
-  return [answer, ...alt].some((a) => sqlNorm(a) === n)
-}
+import { sqlMatches } from '../data/sqlAnswers.js'
 
 // Affiche le schéma des tables (colonnes, clé primaire 🔑, clé étrangère 🔗).
 function Schema({ schema }) {

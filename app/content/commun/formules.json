@@ -46,8 +46,7 @@
           },
           {
             "name": "Salaire net",
-            "f": "Salaire brut − Cotisations salariales",
-            "note": ""
+            "f": "Salaire brut − Cotisations salariales"
           },
           {
             "name": "Coût total employeur",
@@ -71,12 +70,12 @@
           {
             "name": "Taux d’amortissement linéaire",
             "f": "1 ÷ Durée d’utilisation",
-            "note": "5 ans → 20 %"
+            "note": "Résultat demandé en pourcentage : 1/durée × 100."
           },
           {
             "name": "Annuité d’amortissement",
             "f": "Valeur d’origine × Taux linéaire",
-            "note": "soit Valeur d’origine ÷ Durée"
+            "note": "Hypothèse : valeur résiduelle nulle et aucune dépréciation ; VNC nulle à la fin du plan dans ce cas uniquement."
           },
           {
             "name": "Annuité de la 1re année",
@@ -86,7 +85,7 @@
           {
             "name": "Valeur nette comptable (VNC)",
             "f": "Valeur d’origine − Cumul des amortissements",
-            "note": "VNC = 0 en fin de plan"
+            "note": "Hypothèse : valeur résiduelle nulle et aucune dépréciation ; VNC nulle à la fin du plan dans ce cas uniquement."
           }
         ]
       },
@@ -149,9 +148,9 @@
             "f": "Ressources stables − Emplois stables"
           },
           {
-            "name": "Besoin en fonds de roulement (BFR)",
+            "name": "Besoin en fonds de roulement d’exploitation (BFRE)",
             "f": "Actif circulant d’exploitation − Passif circulant d’exploitation",
-            "note": "soit (Stocks + Créances clients) − Dettes fournisseurs"
+            "note": "BFR = BFRE + BFR hors exploitation ; ici seul le cycle d’exploitation est considéré."
           },
           {
             "name": "Trésorerie nette",
@@ -180,7 +179,7 @@
           {
             "name": "Autonomie financière",
             "f": "Capitaux propres ÷ Total du bilan × 100",
-            "note": "rassurant au-dessus de 30 %"
+            "note": "Repère à interpréter selon le secteur, la période et les autres indicateurs ; aucun seuil légal universel."
           },
           {
             "name": "Taux d’endettement",
@@ -190,17 +189,17 @@
           {
             "name": "Capacité de remboursement",
             "f": "Dettes financières ÷ CAF",
-            "note": "en années, moins de 4 ans recommandé"
+            "note": "Repère à interpréter selon le secteur, la période et les autres indicateurs ; aucun seuil légal universel."
           },
           {
             "name": "Liquidité générale",
             "f": "Actif circulant ÷ Dettes à court terme",
-            "note": "supérieur à 1 souhaitable"
+            "note": "Repère à interpréter selon le secteur, la période et les autres indicateurs ; aucun seuil légal universel."
           },
           {
             "name": "Solvabilité générale",
             "f": "Total actif ÷ Total des dettes",
-            "note": "supérieur à 1 obligatoire"
+            "note": "Repère à interpréter selon le secteur, la période et les autres indicateurs ; aucun seuil légal universel."
           },
           {
             "name": "Rotation des stocks",
@@ -304,23 +303,19 @@
         "items": [
           {
             "name": "Dépréciation d’une créance",
-            "f": "Dépréciation = Créance HT × Risque de non-paiement",
-            "note": ""
+            "f": "Dépréciation = Créance HT × Risque de non-paiement"
           },
           {
             "name": "TVA à partir du TTC",
-            "f": "TVA = TTC × Taux ÷ (1 + Taux)",
-            "note": ""
+            "f": "TVA = TTC × Taux ÷ (1 + Taux)"
           },
           {
             "name": "Trésorerie active et passive",
-            "f": "Trésorerie nette = Trésorerie active − Trésorerie passive",
-            "note": ""
+            "f": "Trésorerie nette = Trésorerie active − Trésorerie passive"
           },
           {
             "name": "Stock moyen",
-            "f": "Stock moyen = (Stock initial + Stock final) ÷ 2",
-            "note": ""
+            "f": "Stock moyen = (Stock initial + Stock final) ÷ 2"
           }
         ]
       }
@@ -453,7 +448,7 @@
           },
           {
             "name": "Choix de périmètre",
-            "f": "Spécialisation (un seul métier) ou Diversification (nouveaux produits ou marchés)"
+            "f": "Spécialisation (un domaine d’activité stratégique) ou diversification (entrée dans un nouveau domaine d’activité stratégique)"
           },
           {
             "name": "Modalités de croissance",
@@ -662,11 +657,6 @@
             "f": "Production − Consommations intermédiaires"
           },
           {
-            "name": "PIB",
-            "f": "Somme des valeurs ajoutées",
-            "note": "sur un territoire, en un an"
-          },
-          {
             "name": "Taux de croissance du PIB",
             "f": "(PIB N − PIB N−1) ÷ PIB N−1 × 100"
           },
@@ -682,6 +672,11 @@
           {
             "name": "Profit",
             "f": "Recettes − Coûts"
+          },
+          {
+            "name": "PIB aux prix du marché",
+            "f": "Somme des VA + Impôts sur les produits − Subventions sur les produits",
+            "note": "sur un territoire, en un an"
           }
         ]
       },
@@ -759,7 +754,7 @@
           {
             "name": "Ratio de dette",
             "f": "Dette publique ÷ PIB × 100",
-            "note": "la dette est le stock des déficits passés"
+            "note": "la variation de dette dépend du déficit et d’autres opérations financières et ajustements"
           }
         ]
       },
@@ -889,12 +884,12 @@
           },
           {
             "name": "Variations d’une suite arithmétique",
-            "f": "r > 0 : croissante ; r < 0 : décroissante"
+            "f": "r > 0 : strictement croissante ; r < 0 : strictement décroissante ; r = 0 : constante"
           },
           {
             "name": "Variations d’une suite géométrique",
             "f": "q > 1 : croissante ; 0 < q < 1 : décroissante",
-            "note": "avec u₀ > 0"
+            "note": "Pour un premier terme strictement positif : q > 1, strictement croissante ; 0 < q < 1, strictement décroissante ; q = 1, constante."
           }
         ]
       },
@@ -907,50 +902,44 @@
             "note": "a ≠ 0, courbe : parabole"
           },
           {
-            "name": "Discriminant",
-            "f": "Δ = b² − 4ac",
-            "note": "Δ > 0 : 2 racines ; Δ = 0 : 1 ; Δ < 0 : aucune"
-          },
-          {
-            "name": "Racines (Δ > 0)",
-            "f": "x = (−b ± √Δ) ÷ (2a)"
-          },
-          {
-            "name": "Abscisse du sommet",
-            "f": "α = −b ÷ (2a)"
-          },
-          {
             "name": "Dérivée d’une constante",
-            "f": "(k)′ = 0"
+            "f": "(k)′ = 0",
+            "note": "On demande une valeur numérique de la dérivée, pas une expression littérale."
           },
           {
             "name": "Dérivée de x",
-            "f": "(x)′ = 1"
+            "f": "(x)′ = 1",
+            "note": "On demande une valeur numérique de la dérivée, pas une expression littérale."
           },
           {
             "name": "Dérivée de x²",
-            "f": "(x²)′ = 2x"
+            "f": "(x²)′ = 2x",
+            "note": "On demande une valeur numérique de la dérivée, pas une expression littérale."
           },
           {
             "name": "Dérivée de xⁿ",
-            "f": "(xⁿ)′ = n·xⁿ⁻¹"
+            "f": "(xⁿ)′ = n·xⁿ⁻¹",
+            "note": "On demande une valeur numérique de la dérivée, pas une expression littérale."
           },
           {
             "name": "Dérivée de 1/x",
             "f": "(1/x)′ = −1/x²",
-            "note": "x ≠ 0"
+            "note": "On demande une valeur numérique de la dérivée, pas une expression littérale."
           },
           {
             "name": "Dérivée d’un trinôme",
-            "f": "(ax² + bx + c)′ = 2ax + b"
+            "f": "(ax² + bx + c)′ = 2ax + b",
+            "note": "On demande une valeur numérique de la dérivée, pas une expression littérale."
           },
           {
             "name": "Dérivée d’une somme",
-            "f": "(u + v)′ = u′ + v′"
+            "f": "(u + v)′ = u′ + v′",
+            "note": "On demande une valeur numérique de la dérivée, pas une expression littérale."
           },
           {
             "name": "Dérivée de k·u",
-            "f": "(k·u)′ = k·u′"
+            "f": "(k·u)′ = k·u′",
+            "note": "On demande une valeur numérique de la dérivée, pas une expression littérale."
           },
           {
             "name": "Tangente au point d’abscisse a",
@@ -959,8 +948,8 @@
           },
           {
             "name": "Sens de variation",
-            "f": "f′ > 0 : croissante ; f′ < 0 : décroissante",
-            "note": "f′ s’annule en changeant de signe : extremum"
+            "f": "f′ ≥ 0 : croissante ; f′ ≤ 0 : décroissante",
+            "note": "La stricte monotonie demande une justification supplémentaire ; une fonction peut ne pas être monotone."
           }
         ]
       },
@@ -1023,7 +1012,7 @@
         ]
       },
       {
-        "title": "Loi binomiale, loi normale et estimation",
+        "title": "Loi binomiale",
         "items": [
           {
             "name": "Loi binomiale B(n ; p)",
@@ -1045,31 +1034,6 @@
           {
             "name": "Écart-type (loi binomiale)",
             "f": "σ(X) = √(n × p × (1 − p))"
-          },
-          {
-            "name": "Loi normale N(μ ; σ) : à 1 σ",
-            "f": "P(μ − σ ≤ X ≤ μ + σ) ≈ 0,68"
-          },
-          {
-            "name": "Loi normale N(μ ; σ) : à 2 σ",
-            "f": "P(μ − 2σ ≤ X ≤ μ + 2σ) ≈ 0,95"
-          },
-          {
-            "name": "Loi normale N(μ ; σ) : à 3 σ",
-            "f": "P(μ − 3σ ≤ X ≤ μ + 3σ) ≈ 0,997"
-          },
-          {
-            "name": "Symétrie de la loi normale",
-            "f": "P(X ≤ μ) = P(X ≥ μ) = 0,5"
-          },
-          {
-            "name": "Intervalle de confiance à 95 %",
-            "f": "[f − 1/√n ; f + 1/√n]",
-            "note": "f : fréquence observée, n : taille de l’échantillon"
-          },
-          {
-            "name": "Amplitude de l’intervalle",
-            "f": "2 ÷ √n"
           }
         ]
       },
@@ -1078,58 +1042,56 @@
         "items": [
           {
             "name": "Valeur de départ",
-            "f": "V départ = V arrivée ÷ CM",
-            "note": ""
+            "f": "V départ = V arrivée ÷ CM"
           },
           {
             "name": "Raison arithmétique",
-            "f": "r = uₙ₊₁ − uₙ",
-            "note": ""
+            "f": "r = uₙ₊₁ − uₙ"
           },
           {
             "name": "Raison géométrique",
-            "f": "q = uₙ₊₁ ÷ uₙ",
-            "note": ""
+            "f": "q = uₙ₊₁ ÷ uₙ"
           },
           {
             "name": "Suite arithmétique à partir de u₁",
-            "f": "uₙ = u₁ + (n − 1) × r",
-            "note": ""
+            "f": "uₙ = u₁ + (n − 1) × r"
           },
           {
             "name": "Suite géométrique à partir de u₁",
-            "f": "uₙ = u₁ × qⁿ⁻¹",
-            "note": ""
+            "f": "uₙ = u₁ × qⁿ⁻¹"
           },
           {
             "name": "Moyenne pondérée",
-            "f": "x̄ = Σ(nᵢ × xᵢ) ÷ Σnᵢ",
-            "note": ""
+            "f": "x̄ = Σ(nᵢ × xᵢ) ÷ Σnᵢ"
           },
           {
             "name": "Événement contraire",
-            "f": "P(Ā) = 1 − P(A)",
-            "note": ""
+            "f": "P(Ā) = 1 − P(A)"
           },
           {
             "name": "Équiprobabilité",
-            "f": "P(A) = Nombre d’issues favorables ÷ Nombre total d’issues",
-            "note": ""
+            "f": "P(A) = Nombre d’issues favorables ÷ Nombre total d’issues"
           },
           {
             "name": "Aucun succès (loi binomiale)",
-            "f": "P(X = 0) = (1 − p)ⁿ",
-            "note": ""
+            "f": "P(X = 0) = (1 − p)ⁿ"
           },
           {
             "name": "Au moins un succès",
-            "f": "P(X ≥ 1) = 1 − (1 − p)ⁿ",
-            "note": ""
+            "f": "P(X ≥ 1) = 1 − (1 − p)ⁿ"
+          }
+        ]
+      },
+      {
+        "title": "Exponentielles et logarithme",
+        "items": [
+          {
+            "name": "Exponentielle : image",
+            "f": "f(x)=k×aˣ"
           },
           {
-            "name": "Borne supérieure de confiance",
-            "f": "f + 1/√n",
-            "note": ""
+            "name": "Logarithme décimal",
+            "f": "log(10ⁿ)=n"
           }
         ]
       }

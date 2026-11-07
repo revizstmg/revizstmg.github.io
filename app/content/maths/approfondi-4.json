@@ -91,7 +91,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "Une suite est **croissante** si chaque terme est plus grand que le précédent, **décroissante** sinon. On le détermine avec la raison."
+          "c": "Une suite est **croissante** si uₙ₊₁ ≥ uₙ pour tout n, **décroissante** si uₙ₊₁ ≤ uₙ pour tout n. Une suite peut aussi être non monotone ; les inégalités strictes définissent la stricte monotonie. On le détermine avec la raison."
         },
         {
           "t": "p",
@@ -121,7 +121,7 @@
           "rows": [
             [
               "Suite croissante",
-              "Chaque terme est plus grand que le précédent : uₙ₊₁ > uₙ"
+              "Chaque terme est supérieur ou égal au précédent : uₙ₊₁ ≥ uₙ ; strictement croissante si >"
             ],
             [
               "Suite arithmétique : sens de variation",
@@ -546,122 +546,6 @@
           "t": "tip",
           "h": "Méthode",
           "c": "Écrire **X ~ B(n ; p)**, traduire la question, calculer à la **calculatrice**, interpréter."
-        }
-      ]
-    }
-  ],
-  "math-c7": [
-    {
-      "h": "🔔 La loi normale à la calculatrice",
-      "blocks": [
-        {
-          "t": "p",
-          "c": "La **loi normale N(μ ; σ)** modélise des grandeurs réparties autour d’une moyenne μ (courbe en cloche). Une probabilité P(a ≤ X ≤ b) = **aire sous la courbe**, calculée par **normalFRép(a, b, μ, σ)**."
-        },
-        {
-          "t": "p",
-          "c": "La courbe est **symétrique** autour de μ : P(X ≤ μ) = P(X ≥ μ) = 0,5."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Identifier **μ** (centre) et **σ** (dispersion), puis utiliser la calculatrice pour l’aire entre deux bornes."
-        }
-      ]
-    },
-    {
-      "h": "📏 Les plages 68 / 95 / 99,7 %",
-      "blocks": [
-        {
-          "t": "p",
-          "c": "Pour une variable X qui suit une loi normale de moyenne μ et d’écart type σ, trois « plages » donnent directement une probabilité. L’intervalle **[μ − σ ; μ + σ]** contient environ **68 %** des valeurs : sa probabilité vaut environ 0,68. L’intervalle **[μ − 2σ ; μ + 2σ]** en contient environ **95 %**, soit une probabilité d’environ 0,95. L’intervalle **[μ − 3σ ; μ + 3σ]** en contient environ **99,7 %**, soit 0,997."
-        },
-        {
-          "t": "p",
-          "c": "Pour utiliser ces plages, on commence toujours par repérer μ et σ, puis on regarde de combien d’écarts types les bornes s’éloignent de la moyenne. Si elles sont exactement à un, deux ou trois écarts types, la plage donne la réponse ; sinon, on passe par la calculatrice."
-        },
-        {
-          "t": "example",
-          "h": "Exemple",
-          "c": "X ~ N(250 ; 4). P(246 ≤ X ≤ 254) = P(μ−σ ≤ X ≤ μ+σ) ≈ **0,68** (68 % des paquets)."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Ces trois plages (68/95/99,7 %) sont à connaître par cœur : elles évitent parfois la calculatrice."
-        },
-        {
-          "t": "table",
-          "h": "Notions et définitions",
-          "head": [
-            "Notion",
-            "Définition"
-          ],
-          "rows": [
-            [
-              "Écart type σ",
-              "Mesure de la dispersion des valeurs autour de la moyenne μ"
-            ],
-            [
-              "Plage μ ± σ",
-              "Probabilité ≈ 0,68"
-            ],
-            [
-              "Plage μ ± 2σ",
-              "Probabilité ≈ 0,95"
-            ],
-            [
-              "Plage μ ± 3σ",
-              "Probabilité ≈ 0,997"
-            ]
-          ]
-        }
-      ]
-    },
-    {
-      "h": "🎯 L’intervalle de confiance — méthode",
-      "blocks": [
-        {
-          "t": "p",
-          "c": "Pour **estimer** une proportion inconnue à partir d’un échantillon (fréquence observée f, taille n), on donne un **intervalle de confiance à 95 %**."
-        },
-        {
-          "t": "formula",
-          "c": "IC 95 % = [ f − 1/√n ; f + 1/√n ]"
-        },
-        {
-          "t": "example",
-          "h": "Exemple",
-          "c": "n = 400, f = 0,60 : 1/√400 = 0,05 → IC = **[0,55 ; 0,65]**. On estime la proportion réelle entre 55 % et 65 %."
-        },
-        {
-          "t": "tip",
-          "h": "À retenir",
-          "c": "Amplitude = 2/√n : plus n est **grand**, plus l’intervalle est **précis**. Diviser l’amplitude par 2 ⇒ **× 4** l’échantillon."
-        }
-      ]
-    },
-    {
-      "h": "🧮 Exercice type — sondage : un résultat non significatif",
-      "group": "methode",
-      "blocks": [
-        {
-          "t": "p",
-          "c": "**Énoncé.** Sondage sur 625 personnes : 52 % favorables. Donner l’intervalle de confiance à 95 % et conclure."
-        },
-        {
-          "t": "example",
-          "h": "Résolution",
-          "c": "1/√625 = 1/25 = 0,04 → IC = [0,52 − 0,04 ; 0,52 + 0,04] = **[0,48 ; 0,56]**."
-        },
-        {
-          "t": "p",
-          "c": "**Conclusion.** L’intervalle **contient 50 %** : on ne peut pas affirmer que la majorité est favorable. Le résultat n’est **pas significatif**."
-        },
-        {
-          "t": "tip",
-          "h": "Méthode",
-          "c": "IC = f ± 1/√n, puis **interpréter** : l’intervalle franchit-il un seuil clé (50 %) ?"
         }
       ]
     }

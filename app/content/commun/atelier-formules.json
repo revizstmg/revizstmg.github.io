@@ -733,7 +733,7 @@
     "unit": "€",
     "terminale": true,
     "formula": "Valeur d’origine × Taux linéaire",
-    "note": "soit Valeur d’origine ÷ Durée",
+    "note": "Hypothèse : valeur résiduelle nulle et aucune dépréciation ; VNC nulle à la fin du plan dans ce cas uniquement.",
     "group": "Stocks et immobilisations",
     "course": "gf-t1",
     "coursePremiere": "gf-t1"
@@ -766,7 +766,7 @@
     "unit": "€",
     "terminale": true,
     "formula": "Valeur d’origine − Cumul des amortissements",
-    "note": "VNC = 0 en fin de plan",
+    "note": "Hypothèse : valeur résiduelle nulle et aucune dépréciation ; VNC nulle à la fin du plan dans ce cas uniquement.",
     "group": "Stocks et immobilisations",
     "course": "gf-t1",
     "coursePremiere": "gf-t1"
@@ -807,7 +807,7 @@
   {
     "id": "f22",
     "cat": "Gestion & Finance",
-    "name": "Besoin en fonds de roulement (BFR)",
+    "name": "Besoin en fonds de roulement d’exploitation (BFRE)",
     "inputs": [
       {
         "symbol": "a",
@@ -832,7 +832,7 @@
     "unit": "€",
     "terminale": true,
     "formula": "Actif circulant d’exploitation − Passif circulant d’exploitation",
-    "note": "soit (Stocks + Créances clients) − Dettes fournisseurs",
+    "note": "BFR = BFRE + BFR hors exploitation ; ici seul le cycle d’exploitation est considéré.",
     "group": "Équilibre financier",
     "course": "gf-t2",
     "coursePremiere": "gf-t2"
@@ -1743,155 +1743,6 @@
     "coursePremiere": "p1-math-c3"
   },
   {
-    "id": "x047",
-    "cat": "Mathématiques",
-    "name": "Discriminant",
-    "inputs": [
-      {
-        "symbol": "a",
-        "label": "Coefficient a (non nul)",
-        "min": 100,
-        "max": 1000,
-        "step": 20
-      },
-      {
-        "symbol": "b",
-        "label": "Coefficient b",
-        "min": 100,
-        "max": 1000,
-        "step": 20
-      },
-      {
-        "symbol": "c",
-        "label": "Coefficient c",
-        "min": 100,
-        "max": 1000,
-        "step": 20
-      }
-    ],
-    "expression": [
-      "-",
-      [
-        "pow",
-        "b",
-        2
-      ],
-      [
-        "*",
-        [
-          "*",
-          4,
-          "a"
-        ],
-        "c"
-      ]
-    ],
-    "unit": "",
-    "terminale": false,
-    "formula": "Δ = b² − 4ac",
-    "note": "Δ > 0 : 2 racines ; Δ = 0 : 1 ; Δ < 0 : aucune",
-    "group": "Second degré et dérivation",
-    "course": "p1-math-c3",
-    "coursePremiere": "p1-math-c3"
-  },
-  {
-    "id": "x048",
-    "cat": "Mathématiques",
-    "name": "Racines (Δ > 0)",
-    "inputs": [
-      {
-        "symbol": "a",
-        "label": "Coefficient a non nul",
-        "min": 1,
-        "max": 5,
-        "step": 1
-      },
-      {
-        "symbol": "b",
-        "label": "Coefficient b",
-        "min": -8,
-        "max": 8,
-        "step": 1
-      },
-      {
-        "symbol": "d",
-        "label": "Discriminant Δ strictement positif",
-        "min": 1,
-        "max": 100,
-        "step": 1
-      }
-    ],
-    "expression": [
-      "/",
-      [
-        "+",
-        [
-          "-",
-          0,
-          "b"
-        ],
-        [
-          "sqrt",
-          "d"
-        ]
-      ],
-      [
-        "*",
-        2,
-        "a"
-      ]
-    ],
-    "unit": "",
-    "terminale": false,
-    "formula": "x = (−b ± √Δ) ÷ (2a)",
-    "note": "",
-    "group": "Second degré et dérivation",
-    "course": "p1-math-c3",
-    "target": "Calculer la racine avec le signe + devant √Δ.",
-    "coursePremiere": "p1-math-c3"
-  },
-  {
-    "id": "x049",
-    "cat": "Mathématiques",
-    "name": "Abscisse du sommet",
-    "inputs": [
-      {
-        "symbol": "a",
-        "label": "Coefficient a non nul",
-        "min": 1,
-        "max": 8,
-        "step": 1
-      },
-      {
-        "symbol": "b",
-        "label": "Coefficient b",
-        "min": -20,
-        "max": 20,
-        "step": 1
-      }
-    ],
-    "expression": [
-      "/",
-      [
-        "-",
-        0,
-        "b"
-      ],
-      [
-        "*",
-        2,
-        "a"
-      ]
-    ],
-    "unit": "",
-    "terminale": false,
-    "formula": "α = −b ÷ (2a)",
-    "note": "",
-    "group": "Second degré et dérivation",
-    "course": "p1-math-c3",
-    "coursePremiere": "p1-math-c3"
-  },
-  {
     "id": "x050",
     "cat": "Mathématiques",
     "name": "Dérivée d’une constante",
@@ -2748,219 +2599,6 @@
     "group": "Loi binomiale, loi normale et estimation",
     "course": "math-c6",
     "coursePremiere": "math-c6",
-    "decimals": 4
-  },
-  {
-    "id": "x071",
-    "cat": "Mathématiques",
-    "name": "Loi normale N(μ ; σ) : à 1 σ",
-    "inputs": [
-      {
-        "symbol": "m",
-        "label": "Moyenne μ",
-        "min": 50,
-        "max": 200,
-        "step": 10
-      },
-      {
-        "symbol": "s",
-        "label": "Écart-type σ",
-        "min": 1,
-        "max": 10,
-        "step": 1
-      }
-    ],
-    "expression": [
-      "+",
-      "m",
-      [
-        "*",
-        1,
-        "s"
-      ]
-    ],
-    "unit": "",
-    "terminale": true,
-    "formula": "P(μ − σ ≤ X ≤ μ + σ) ≈ 0,68",
-    "note": "La borne inférieure est μ − 1σ. La formule rappelle la probabilité approximative de cet intervalle.",
-    "group": "Loi binomiale, loi normale et estimation",
-    "course": "math-c7",
-    "target": "Calculer la borne supérieure μ + 1σ de l’intervalle indiqué.",
-    "coursePremiere": "math-c7",
-    "decimals": 4
-  },
-  {
-    "id": "x072",
-    "cat": "Mathématiques",
-    "name": "Loi normale N(μ ; σ) : à 2 σ",
-    "inputs": [
-      {
-        "symbol": "m",
-        "label": "Moyenne μ",
-        "min": 50,
-        "max": 200,
-        "step": 10
-      },
-      {
-        "symbol": "s",
-        "label": "Écart-type σ",
-        "min": 1,
-        "max": 10,
-        "step": 1
-      }
-    ],
-    "expression": [
-      "+",
-      "m",
-      [
-        "*",
-        2,
-        "s"
-      ]
-    ],
-    "unit": "",
-    "terminale": true,
-    "formula": "P(μ − 2σ ≤ X ≤ μ + 2σ) ≈ 0,95",
-    "note": "La borne inférieure est μ − 2σ. La formule rappelle la probabilité approximative de cet intervalle.",
-    "group": "Loi binomiale, loi normale et estimation",
-    "course": "math-c7",
-    "target": "Calculer la borne supérieure μ + 2σ de l’intervalle indiqué.",
-    "coursePremiere": "math-c7",
-    "decimals": 4
-  },
-  {
-    "id": "x073",
-    "cat": "Mathématiques",
-    "name": "Loi normale N(μ ; σ) : à 3 σ",
-    "inputs": [
-      {
-        "symbol": "m",
-        "label": "Moyenne μ",
-        "min": 50,
-        "max": 200,
-        "step": 10
-      },
-      {
-        "symbol": "s",
-        "label": "Écart-type σ",
-        "min": 1,
-        "max": 10,
-        "step": 1
-      }
-    ],
-    "expression": [
-      "+",
-      "m",
-      [
-        "*",
-        3,
-        "s"
-      ]
-    ],
-    "unit": "",
-    "terminale": true,
-    "formula": "P(μ − 3σ ≤ X ≤ μ + 3σ) ≈ 0,997",
-    "note": "La borne inférieure est μ − 3σ. La formule rappelle la probabilité approximative de cet intervalle.",
-    "group": "Loi binomiale, loi normale et estimation",
-    "course": "math-c7",
-    "target": "Calculer la borne supérieure μ + 3σ de l’intervalle indiqué.",
-    "coursePremiere": "math-c7",
-    "decimals": 4
-  },
-  {
-    "id": "x074",
-    "cat": "Mathématiques",
-    "name": "Symétrie de la loi normale",
-    "inputs": [
-      {
-        "symbol": "m",
-        "label": "Moyenne μ",
-        "min": 20,
-        "max": 200,
-        "step": 10
-      }
-    ],
-    "expression": 0.5,
-    "unit": "",
-    "terminale": true,
-    "formula": "P(X ≤ μ) = P(X ≥ μ) = 0,5",
-    "note": "",
-    "group": "Loi binomiale, loi normale et estimation",
-    "course": "math-c7",
-    "target": "Calculer P(X ≤ μ), en décimal.",
-    "coursePremiere": "math-c7",
-    "decimals": 4
-  },
-  {
-    "id": "x075",
-    "cat": "Mathématiques",
-    "name": "Intervalle de confiance à 95 %",
-    "inputs": [
-      {
-        "symbol": "f",
-        "label": "Fréquence observée f",
-        "min": 0.4,
-        "max": 0.6,
-        "step": 0.05
-      },
-      {
-        "symbol": "n",
-        "label": "Taille de l’échantillon n",
-        "min": 100,
-        "max": 900,
-        "step": 100
-      }
-    ],
-    "expression": [
-      "-",
-      "f",
-      [
-        "/",
-        1,
-        [
-          "sqrt",
-          "n"
-        ]
-      ]
-    ],
-    "unit": "",
-    "terminale": true,
-    "formula": "[f − 1/√n ; f + 1/√n]",
-    "note": "Intervalle simplifié f ± 1/√n présenté dans le cours ; on demande la borne inférieure seulement.",
-    "group": "Loi binomiale, loi normale et estimation",
-    "course": "math-c7",
-    "target": "Calculer la borne inférieure de l’intervalle simplifié.",
-    "coursePremiere": "math-c7",
-    "decimals": 4
-  },
-  {
-    "id": "x076",
-    "cat": "Mathématiques",
-    "name": "Amplitude de l’intervalle",
-    "inputs": [
-      {
-        "symbol": "n",
-        "label": "Taille de l’échantillon n",
-        "min": 100,
-        "max": 2500,
-        "step": 100
-      }
-    ],
-    "expression": [
-      "/",
-      2,
-      [
-        "sqrt",
-        "n"
-      ]
-    ],
-    "unit": "",
-    "terminale": true,
-    "formula": "2 ÷ √n",
-    "note": "",
-    "group": "Loi binomiale, loi normale et estimation",
-    "course": "math-c7",
-    "coursePremiere": "math-c7",
     "decimals": 4
   },
   {
@@ -3919,7 +3557,7 @@
     "unit": "%",
     "terminale": true,
     "formula": "Capitaux propres ÷ Total du bilan × 100",
-    "note": "rassurant au-dessus de 30 %",
+    "note": "Repère à interpréter selon le secteur, la période et les autres indicateurs ; aucun seuil légal universel.",
     "group": "Rentabilité et ratios",
     "course": "gf-t2",
     "coursePremiere": "gf-t2"
@@ -3985,7 +3623,7 @@
     "unit": "années",
     "terminale": true,
     "formula": "Dettes financières ÷ CAF",
-    "note": "en années, moins de 4 ans recommandé",
+    "note": "Repère à interpréter selon le secteur, la période et les autres indicateurs ; aucun seuil légal universel.",
     "group": "Rentabilité et ratios",
     "course": "gf-t2",
     "coursePremiere": "gf-t2"
@@ -4018,7 +3656,7 @@
     "unit": "",
     "terminale": true,
     "formula": "Actif circulant ÷ Dettes à court terme",
-    "note": "supérieur à 1 souhaitable",
+    "note": "Repère à interpréter selon le secteur, la période et les autres indicateurs ; aucun seuil légal universel.",
     "group": "Rentabilité et ratios",
     "course": "gf-t2",
     "coursePremiere": "gf-t2"
@@ -4051,7 +3689,7 @@
     "unit": "",
     "terminale": true,
     "formula": "Total actif ÷ Total des dettes",
-    "note": "supérieur à 1 obligatoire",
+    "note": "Repère à interpréter selon le secteur, la période et les autres indicateurs ; aucun seuil légal universel.",
     "group": "Rentabilité et ratios",
     "course": "gf-t2",
     "coursePremiere": "gf-t2"
@@ -4904,7 +4542,7 @@
   {
     "id": "x128",
     "cat": "Économie",
-    "name": "PIB",
+    "name": "PIB aux prix du marché",
     "inputs": [
       {
         "symbol": "a",
@@ -4926,20 +4564,42 @@
         "min": 100,
         "max": 1000,
         "step": 20
+      },
+      {
+        "symbol": "i",
+        "label": "Impôts sur les produits",
+        "min": 10,
+        "max": 100,
+        "step": 10
+      },
+      {
+        "symbol": "s",
+        "label": "Subventions sur les produits",
+        "min": 0,
+        "max": 10,
+        "step": 1
       }
     ],
     "expression": [
-      "+",
+      "-",
       [
         "+",
-        "a",
-        "b"
+        [
+          "+",
+          [
+            "+",
+            "a",
+            "b"
+          ],
+          "c"
+        ],
+        "i"
       ],
-      "c"
+      "s"
     ],
     "unit": "€",
     "terminale": false,
-    "formula": "Somme des valeurs ajoutées",
+    "formula": "Somme des VA + Impôts sur les produits − Subventions sur les produits",
     "note": "sur un territoire, en un an",
     "group": "Production et croissance",
     "course": "p1-eco-t2",
@@ -5390,7 +5050,7 @@
     "unit": "%",
     "terminale": true,
     "formula": "Dette publique ÷ PIB × 100",
-    "note": "la dette est le stock des déficits passés",
+    "note": "la variation de dette dépend du déficit et d’autres opérations financières et ajustements",
     "group": "Finances publiques",
     "course": "eco-t6",
     "coursePremiere": "eco-t6"
@@ -6246,47 +5906,6 @@
     "decimals": 4
   },
   {
-    "id": "x163",
-    "cat": "Mathématiques",
-    "name": "Borne supérieure de confiance",
-    "inputs": [
-      {
-        "symbol": "f",
-        "label": "Fréquence observée",
-        "min": 0.4,
-        "max": 0.6,
-        "step": 0.05
-      },
-      {
-        "symbol": "n",
-        "label": "Taille de l’échantillon",
-        "min": 100,
-        "max": 900,
-        "step": 100
-      }
-    ],
-    "expression": [
-      "+",
-      "f",
-      [
-        "/",
-        1,
-        [
-          "sqrt",
-          "n"
-        ]
-      ]
-    ],
-    "unit": "",
-    "terminale": true,
-    "formula": "f + 1/√n",
-    "note": "",
-    "group": "Compléments des cours",
-    "course": "math-c7",
-    "coursePremiere": "math-c7",
-    "decimals": 4
-  },
-  {
     "id": "x164",
     "cat": "Gestion & Finance",
     "name": "Dépréciation d’une créance",
@@ -6499,5 +6118,71 @@
     "group": "Rémunération et indicateurs sociaux",
     "course": "gf-t1",
     "coursePremiere": "gf-t1"
+  },
+  {
+    "id": "x170",
+    "cat": "Mathématiques",
+    "name": "Exponentielle : image",
+    "formula": "f(x)=k×aˣ",
+    "expression": [
+      "*",
+      "k",
+      [
+        "pow",
+        "a",
+        "x"
+      ]
+    ],
+    "inputs": [
+      {
+        "symbol": "k",
+        "label": "Coefficient k",
+        "min": 1,
+        "max": 10,
+        "step": 1
+      },
+      {
+        "symbol": "a",
+        "label": "Base a strictement positive",
+        "min": 2,
+        "max": 5,
+        "step": 1
+      },
+      {
+        "symbol": "x",
+        "label": "Abscisse x",
+        "min": -2,
+        "max": 4,
+        "step": 1
+      }
+    ],
+    "unit": "",
+    "terminale": true,
+    "group": "Exponentielles et logarithme",
+    "course": "math-c8",
+    "coursePremiere": "math-c8",
+    "note": ""
+  },
+  {
+    "id": "x171",
+    "cat": "Mathématiques",
+    "name": "Logarithme décimal",
+    "formula": "log(10ⁿ)=n",
+    "expression": "n",
+    "inputs": [
+      {
+        "symbol": "n",
+        "label": "Exposant n : calculer log(10ⁿ)",
+        "min": -3,
+        "max": 5,
+        "step": 1
+      }
+    ],
+    "unit": "",
+    "terminale": true,
+    "group": "Exponentielles et logarithme",
+    "course": "math-c8",
+    "coursePremiere": "math-c8",
+    "note": ""
   }
 ]
