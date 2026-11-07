@@ -1,7 +1,16 @@
 # Paiements : abonnements Premium et Ultimate (Stripe, mode test)
 
 État au 28 octobre 2026 : **mode test uniquement**. Aucune vraie carte n'est débitée.
-Prix décidés par le propriétaire (TTC) : Premium 9,99 €/mois ou 90 €/an ; Ultimate 14,99 €/mois ou 130 €/an.
+## Grille validée le 7 novembre 2026
+
+- Premium : **9,99 € TTC/mois** ; Ultimate : **19,99 € TTC/mois**, sans engagement.
+- Go : exclusivement sur devis pour les lycées, **20 €/élève/an + 500 €/établissement/an**. Aucun achat Go individuel.
+- Les nouvelles souscriptions annuelles sont retirées. Les abonnements historiques (dont Ultimate à 14,99 €/mois et les anciens annuels) restent reconnus et gérables, sans migration automatique.
+- Le nouveau prix Ultimate utilise `revizstmg_ultimate_mensuel_1999`. À la première demande authentifiée de souscription, le serveur crée si nécessaire ce prix sur le produit existant, avec idempotence, sans transférer ni modifier les anciennes clés. Il vérifie montant, devise et périodicité avant Checkout ; une incohérence bloque l’achat.
+- `GET ?check=tarifs` expose uniquement la grille et le mode de paiement, sans création Stripe ni donnée personnelle.
+- Les droits d’accès et quotas IA ne sont pas modifiés par cette mise à jour.
+
+Les sections datées ci-dessous documentent aussi le fonctionnement historique.
 
 ## Architecture
 - **Stripe (test)** : produits `revizstmg_premium` et `revizstmg_ultimate`, quatre prix retrouvés par `lookup_key`

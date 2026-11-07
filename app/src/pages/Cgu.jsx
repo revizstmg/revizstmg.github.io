@@ -1,19 +1,23 @@
 import TexteRiche from '../components/TexteRiche.jsx'
 import LegalContents from '../components/LegalContents.jsx'
 import { Link } from 'react-router-dom'
+import { useLang } from '../i18n.js'
+import { OFFRES, prixAffiche } from '../data/abonnement.js'
 
 // Conditions générales d'utilisation et mentions légales. Rédigées en français,
 // comme la politique de confidentialité (Privacy.jsx). Accessibles depuis le
-// pied de page. Dernière mise à jour : octobre 2026.
+// pied de page. Dernière mise à jour : novembre 2026.
 const lien = 'font-semibold text-[#84671b] underline dark:text-[#d9bd77]'
 
 export default function Cgu() {
+  const lang = useLang()
+  const tarifs = { premium: prixAffiche(OFFRES.premium.mensuel.centimes, lang), ultimate: prixAffiche(OFFRES.ultimate.mensuel.centimes, lang) }
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">
       <header className="page-hero page-hero-compact">
         <p className="kicker"><TexteRiche texte={"RévizSTMG"} /></p>
         <h1 className="font-display text-3xl font-medium leading-tight"><TexteRiche texte={"Conditions d’utilisation & mentions légales"} /></h1>
-        <p className="mt-2 text-xs text-slate-500 dark:text-slate-400"><TexteRiche texte={"Dernière mise à jour : octobre 2026"} /></p>
+        <p className="mt-2 text-xs text-slate-500 dark:text-slate-400"><TexteRiche texte={"Dernière mise à jour : novembre 2026"} /></p>
       </header>
       <p className="text-sm"><TexteRiche texte="Les traductions facilitent la lecture. La version française de ces conditions fait référence." /></p><hr className="rule-gold" /><LegalContents />
 
@@ -45,7 +49,8 @@ export default function Cgu() {
       </Section>
 
       <Section title="Abonnements payants (version de test)">
-        <p><TexteRiche texte={"**Offres.** Deux abonnements existent : **Premium** (9,99 € TTC par mois ou 90 € TTC par an) et **Ultimate** (14,99 € TTC par mois ou 130 € TTC par an). Les prix sont affichés toutes taxes comprises."} /></p>
+        <p><TexteRiche texte={"**Offres.** Deux abonnements mensuels sans engagement sont proposés : **Premium** ({premium} TTC par mois) et **Ultimate** ({ultimate} TTC par mois). Les prix sont affichés toutes taxes comprises. Les abonnements annuels historiques restent gérables depuis le portail client."} valeurs={tarifs} /></p>
+        <p><TexteRiche texte={"**Go lycée.** Cette offre est réservée aux établissements scolaires, sur devis. Elle n’est pas vendue comme abonnement individuel. Les tarifs de licence sont présentés sur la page des [[offres|/offres]] ; la durée, les accès et les conditions de facturation sont précisés au devis."} /></p>
         <p><TexteRiche texte={"**Contenu des offres.** Les cours et les exercices de base sont gratuits. Premium donne accès au reste du site (bac blanc, sujets, outils de révision) et à chaque fonction d’intelligence artificielle une fois par mois ; Ultimate y ajoute une utilisation de l’intelligence artificielle presque illimitée, dans la limite d’un usage raisonnable."} /></p>
         <p><TexteRiche texte={"**Comptes créés avant le 30 octobre 2026.** Ces comptes gardent l’accès complet, aide par IA comprise, jusqu’au 30 novembre 2026 inclus, sans abonnement. Ensuite, ils reviennent à l’offre gratuite, sauf abonnement."} /></p>
         <p><TexteRiche texte={"**Aide par intelligence artificielle.** Avec Premium, chaque aide par IA s’utilise une fois par mois civil, et ses étapes de suite (messages suivants du tuteur, corrections) sont limitées. Avec Ultimate, il n’y a pas de quota mensuel, mais au plus 60 demandes par jour pour tous les comptes. Une utilisation n’est comptée que si l’aide a répondu."} /></p>

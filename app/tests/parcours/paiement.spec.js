@@ -36,7 +36,8 @@ test('mode test : case obligatoire, puis paiement Premium mensuel envoyé à Str
   await expect(page.getByText('Mode test.')).toBeVisible()
   const premium = page.getByRole('button', { name: /Mensuel : 9,99/ })
   await expect(premium).toBeDisabled()
-  await expect(page.getByRole('button', { name: /Annuel : 130 €/ })).toBeVisible()
+  await expect(page.getByRole('button', { name: /Mensuel : 19,99/ })).toBeVisible()
+  await expect(page.getByRole('button', { name: /Annuel/ })).toHaveCount(0)
   await page.getByRole('checkbox', { name: /18 ans/ }).check()
   await expect(premium).toBeEnabled()
   await premium.click()
@@ -80,3 +81,30 @@ for (const theme of ['light', 'dark']) {
     expect(erreurs).toEqual([])
   })
 }
+
+test('nouvelle grille : Go reste une licence lycée et les pages légales suivent les tarifs', async ({page}) => {
+  const erreurs=await preparer(page,etatEleve())
+  await page.goto('./#/offres')
+  const go=page.getByRole('region',{name:'Go lycée'})
+  await expect(go).toContainText('20 € par élève et par an + 500 € par établissement et par an')
+  await expect(go.getByRole('link',{name:'Demander une licence lycée'})).toHaveAttribute('href',/^mailto:/)
+  await expect(go.getByRole('button')).toHaveCount(0)
+  await page.goto('./#/cgu')
+  await expect(page.locator('main')).toContainText('19,99 € TTC par mois')
+  await expect(page.locator('main')).not.toContainText('130 € TTC par an')
+  await page.goto('./#/faq')
+  await expect(page.locator('main')).toContainText('19,99 € TTC par mois')
+  expect(erreurs).toEqual([])
+})
+
+
+test('Ultimate mensuel : nouvelle souscription au tarif affiché', async ({page}) => {
+  const erreurs=await preparer(page,etatEleve())
+  const appels=await simuler(page,{etat:{mode:'test',abonnement:null}})
+  await page.goto('./#/offres')
+  await page.getByRole('checkbox',{name:/18 ans/}).check()
+  await page.getByRole('button',{name:/Mensuel : 19,99/}).click()
+  await expect(page).toHaveURL(/checkout\.stripe\.test/)
+  expect(appels.find(a=>a.action==='checkout')).toEqual({action:'checkout',offre:'ultimate',periode:'mensuel',majeur:true})
+  expect(erreurs).toEqual([])
+})

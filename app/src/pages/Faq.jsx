@@ -1,11 +1,15 @@
 import { TextePublic } from '../localisation/PublicText.jsx'
 import { Link } from 'react-router-dom'
 import TexteRiche from '../components/TexteRiche.jsx'
+import { useLang } from '../i18n.js'
+import { OFFRES, prixAffiche } from '../data/abonnement.js'
 
 const CONTACT = 'revizstmg@gmail.com'
 
 // Foire aux questions. Rédigée en français (public : lycées français).
 export default function Faq() {
+  const lang = useLang()
+  const tarifs = { premium: prixAffiche(OFFRES.premium.mensuel.centimes, lang), ultimate: prixAffiche(OFFRES.ultimate.mensuel.centimes, lang) }
   const items = [
     ['Séance, mission, défi ou parcours ?', 'Une **séance** est un temps de révision. Une **mission** regroupe les étapes d’un chapitre. Un **défi** est un exercice avec une contrainte de temps. Un **parcours** organise les révisions sur plusieurs semaines. Le **programme** présente le calendrier. Une **série de jours** mesure la régularité ; une **série de questions** est un ensemble d’exercices.'],
     ['Le minuteur reste-t-il après un rechargement ?', 'Oui, dans le même onglet : la durée restante est conservée et le minuteur reprend en pause. Le temps passé avec le site fermé ne rapporte pas de points.'],
@@ -17,7 +21,7 @@ export default function Faq() {
     ["Comment changer ma photo ou l'apparence du site ?", "Ouvre **ton menu** (ton prénom ou ton initiale) → **« Personnaliser mon profil »** (couleurs, police, avatar, photo…). Cette fonction est réservée à l’application installée : installe RévizSTMG sur ton écran d’accueil pour l’utiliser."],
     ['Qui voit mes informations ?', "Dans ta classe, ton **prénom, ta photo et tes scores** sont visibles par tes camarades et ton professeur. Ton **e‑mail** sert uniquement à la connexion. Détails dans la [[Politique de confidentialité|/confidentialite]]."],
     ['Comment supprimer mon compte ?', "Va dans [[« Mon espace »|/moi]] → tout en bas → **« Supprimer mon compte »**. Ta progression, ta classe, tes amis, tes duels et le suivi parent sont effacés. Ton adresse e-mail de connexion est supprimée en même temps."],
-    ['Le site est‑il gratuit ?', "Les cours, les exercices de base, la boutique, les amis, la classe et l’espace parent sont gratuits, sans publicité. Le reste (bac blanc, sujets, révision, Grand Oral, classement…) demande Premium (9,99 € TTC par mois ou 90 € TTC par an) ou Ultimate (14,99 € TTC par mois ou 130 € TTC par an). Si ton compte a été créé avant le 30 octobre 2026, tout reste ouvert jusqu’au 30 novembre 2026. Voir les [[offres|/offres]]."],
+    ['Le site est‑il gratuit ?', "Les cours, les exercices de base, la boutique, les amis, la classe et l’espace parent sont gratuits, sans publicité. Le reste (bac blanc, sujets, révision, Grand Oral, classement…) demande Premium ({premium} TTC par mois) ou Ultimate ({ultimate} TTC par mois), sans engagement. Go est réservé aux lycées, via une licence établissement. Si ton compte a été créé avant le 30 octobre 2026, tout reste ouvert jusqu’au 30 novembre 2026. Voir les [[offres|/offres]]."],
   ]
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">
@@ -29,7 +33,7 @@ export default function Faq() {
       {items.map(([q, a], i) => (
         <section key={i} className="card p-5">
           <h2 className="mb-2 font-display text-lg font-semibold"><TextePublic text={q} /></h2>
-          <p className="text-sm text-slate-600 dark:text-slate-300"><TexteRiche texte={a} /></p>
+          <p className="text-sm text-slate-600 dark:text-slate-300"><TexteRiche texte={a} valeurs={tarifs} /></p>
         </section>
       ))}
       <div className="card card-lux p-5 text-center">

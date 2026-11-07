@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { OFFRES, cleDePrix, offreDeCle, parametresCheckout, ligneDepuisAbonnement, verifierSignature, estActif } from '../../supabase/functions/revizstmg-paiement/logique.js'
+import { OFFRES, OFFRE_GO, PERIODES, cleDePrix, offreDeCle, parametresCheckout, ligneDepuisAbonnement, verifierSignature, estActif } from '../../supabase/functions/revizstmg-paiement/logique.js'
 
 const hmac = async (secret, t, corps) => {
   const cle = await crypto.subtle.importKey('raw', new TextEncoder().encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign'])
@@ -10,19 +10,24 @@ describe('offres et prix', () => {
   it('les prix TTC décidés par le propriétaire', () => {
     expect(OFFRES.premium.mensuel.centimes).toBe(999)
     expect(OFFRES.premium.annuel.centimes).toBe(9000)
-    expect(OFFRES.ultimate.mensuel.centimes).toBe(1499)
+    expect(OFFRES.ultimate.mensuel.centimes).toBe(1999)
     expect(OFFRES.ultimate.annuel.centimes).toBe(13000)
   })
   it('chaque offre et période a une clé Stripe unique, retrouvée à l’envers', () => {
     const cles = []
-    for (const o of Object.keys(OFFRES)) for (const p of ['mensuel', 'annuel']) {
+    for (const o of Object.keys(OFFRES)) for (const p of PERIODES) {
       const c = cleDePrix(o, p)
       cles.push(c)
       expect(offreDeCle(c)).toEqual({ offre: o, periode: p })
     }
-    expect(new Set(cles).size).toBe(4)
+    expect(new Set(cles).size).toBe(2)
     expect(cleDePrix('gratuit', 'mensuel')).toBeNull()
     expect(cleDePrix('premium', 'hebdo')).toBeNull()
+    expect(cleDePrix('premium', 'annuel')).toBeNull()
+    expect(cleDePrix('go', 'mensuel')).toBeNull()
+    expect(offreDeCle('revizstmg_ultimate_mensuel')).toEqual({offre:'ultimate',periode:'mensuel'})
+    expect(offreDeCle('revizstmg_premium_annuel')).toEqual({offre:'premium',periode:'annuel'})
+    expect(OFFRE_GO).toMatchObject({eleveAnnuelCentimes:2000,etablissementAnnuelCentimes:50000})
   })
 })
 

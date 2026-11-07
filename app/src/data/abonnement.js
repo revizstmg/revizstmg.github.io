@@ -1,11 +1,11 @@
 // Abonnements Premium et Ultimate : appels à la fonction « revizstmg-paiement »
 // (Stripe Checkout). Les prix viennent du même fichier que le serveur.
-import { OFFRES, PERIODES, estActif } from '../../../supabase/functions/revizstmg-paiement/logique.js'
+import { OFFRES, OFFRE_GO, PERIODES, estActif } from '../../../supabase/functions/revizstmg-paiement/logique.js'
 import { SUPA_URL, SUPA_ANON } from '../supabase.js'
 import { withNetworkTimeout } from '../networkTimeout.js'
 import { getSession, getValidToken } from '../auth.js'
 
-export { OFFRES, PERIODES, estActif }
+export { OFFRES, OFFRE_GO, PERIODES, estActif }
 
 async function appeler(corps) {
   const owner = getSession()?.user?.id

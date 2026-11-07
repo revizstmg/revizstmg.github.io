@@ -4174,5 +4174,15 @@
   "f(x)=k×aˣ": "f(x)=k×aˣ",
   "Exponentielles et logarithme": "Exponentialfunktionen und Logarithmus",
   "Logarithme décimal": "Zehnerlogarithmus",
-  "log(10ⁿ)=n": "log(10ⁿ)=n"
+  "log(10ⁿ)=n": "log(10ⁿ)=n",
+  "{mois} TTC par mois, sans engagement": "{mois} inkl. Steuern pro Monat, ohne Mindestlaufzeit",
+  "Pour les établissements scolaires": "Für Schulen",
+  "Go lycée": "Go für Schulen",
+  "{eleve} par élève et par an + {lycee} par établissement et par an": "{eleve} pro Schüler und Jahr + {lycee} pro Schule und Jahr",
+  "Licences réservées aux lycées. Aucun abonnement Go individuel. La durée, les accès et les conditions de facturation sont précisés au devis.": "Lizenzen sind Schulen vorbehalten. Go wird nicht als Einzelabonnement verkauft. Laufzeit, Zugänge und Abrechnungsbedingungen stehen im Angebot.",
+  "Demander une licence lycée": "Schullizenz anfragen",
+  "Dernière mise à jour : novembre 2026": "Zuletzt aktualisiert: November 2026",
+  "Les cours, les exercices de base, la boutique, les amis, la classe et l’espace parent sont gratuits, sans publicité. Le reste (bac blanc, sujets, révision, Grand Oral, classement…) demande Premium ({premium} TTC par mois) ou Ultimate ({ultimate} TTC par mois), sans engagement. Go est réservé aux lycées, via une licence établissement. Si ton compte a été créé avant le 30 octobre 2026, tout reste ouvert jusqu’au 30 novembre 2026. Voir les [[offres|/offres]].": "Kurse, Grundübungen, Shop, Freunde, Klassen und Elternbereich sind kostenlos und werbefrei. Die übrigen Angebote (Probeprüfungen, Aufgaben, Wiederholung, Grand Oral, Ranglisten…) erfordern Premium ({premium} inkl. Steuern pro Monat) oder Ultimate ({ultimate} inkl. Steuern pro Monat), ohne Mindestlaufzeit. Go ist Schulen über eine Schullizenz vorbehalten. Wenn dein Konto vor dem 30. Oktober 2026 erstellt wurde, bleibt alles bis zum 30. November 2026 zugänglich. Siehe [[Angebote|/offres]].",
+  "**Offres.** Deux abonnements mensuels sans engagement sont proposés : **Premium** ({premium} TTC par mois) et **Ultimate** ({ultimate} TTC par mois). Les prix sont affichés toutes taxes comprises. Les abonnements annuels historiques restent gérables depuis le portail client.": "**Angebote.** Zwei monatliche Abonnements ohne Mindestlaufzeit stehen zur Verfügung: **Premium** ({premium} inkl. Steuern pro Monat) und **Ultimate** ({ultimate} inkl. Steuern pro Monat). Die Preise enthalten alle Steuern. Bestehende Jahresabonnements können weiterhin im Kundenportal verwaltet werden.",
+  "**Go lycée.** Cette offre est réservée aux établissements scolaires, sur devis. Elle n’est pas vendue comme abonnement individuel. Les tarifs de licence sont présentés sur la page des [[offres|/offres]] ; la durée, les accès et les conditions de facturation sont précisés au devis.": "**Go für Schulen.** Dieses Angebot ist Schulen vorbehalten und erfolgt auf Anfrage. Es wird nicht als Einzelabonnement verkauft. Die Lizenzpreise stehen auf der Seite [[Angebote|/offres]]; Laufzeit, Zugänge und Abrechnungsbedingungen werden im Angebot festgelegt."
 }
