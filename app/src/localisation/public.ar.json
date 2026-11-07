@@ -3285,5 +3285,13 @@
   "Deux séances par semaine, avec au moins un jour de récupération entre elles. L’effort ressenti va de 0 (repos) à 10 (maximum). Reste à une intensité confortable ; les pauses font partie du temps prévu. Arrête en cas de douleur ou de malaise.": "حصتان أسبوعيًا مع يوم راحة واحد على الأقل بينهما. يتدرج الجهد المحسوس من 0 (راحة) إلى 10 (أقصى جهد). حافظ على شدة مريحة؛ فترات الراحة جزء من الوقت المخطط. توقف عند الشعور بألم أو توعك.",
   "Proposition de préparation, à ajuster avec ton professeur. Elle ne garantit pas une note et ne remplace pas la pratique évaluée. Les séances ne sont pas enregistrées : imprime ton programme pour le garder.": "مقترح تحضير تضبطه مع أستاذك. لا يضمن درجة ولا يحل محل الممارسة الخاضعة للتقييم. الحصص لا تُحفظ: اطبع برنامجك للاحتفاظ به.",
   "Références consultées le 3 novembre 2026. Le programme distingue cinq champs d’apprentissage ; les grilles locales complètent le cadre national.": "رُوجعت المراجع في 3 نوفمبر 2026. يميز البرنامج خمسة مجالات للتعلم، وتكمل الجداول المحلية الإطار الوطني.",
-  "🏃 EPS": "🏃 التربية البدنية"
+  "🏃 EPS": "🏃 التربية البدنية",
+  "Besoin en fonds de roulement d’exploitation (BFRE)": "احتياج رأس المال العامل التشغيلي (BFRE)",
+  "PIB aux prix du marché": "الناتج المحلي الإجمالي بأسعار السوق",
+  "Somme des VA + Impôts sur les produits − Subventions sur les produits": "مجموع القيم المضافة الإجمالية + الضرائب على المنتجات − إعانات المنتجات",
+  "Exponentielle : image": "الدالة الأسية: حساب القيمة",
+  "f(x)=k×aˣ": "f(x)=k×aˣ",
+  "Exponentielles et logarithme": "الدوال الأسية واللوغاريتم",
+  "Logarithme décimal": "اللوغاريتم العشري",
+  "log(10ⁿ)=n": "log(10ⁿ)=n"
 }

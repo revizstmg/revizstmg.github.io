@@ -3286,5 +3286,13 @@
   "Deux séances par semaine, avec au moins un jour de récupération entre elles. L’effort ressenti va de 0 (repos) à 10 (maximum). Reste à une intensité confortable ; les pauses font partie du temps prévu. Arrête en cas de douleur ou de malaise.": "Two sessions per week, with at least one recovery day between them. Perceived effort runs from 0 (rest) to 10 (maximum). Stay at a comfortable intensity; breaks count towards the planned time. Stop if you feel pain or unwell.",
   "Proposition de préparation, à ajuster avec ton professeur. Elle ne garantit pas une note et ne remplace pas la pratique évaluée. Les séances ne sont pas enregistrées : imprime ton programme pour le garder.": "A preparation proposal to adjust with your teacher. It does not guarantee a mark or replace assessed practice. Sessions are not saved: print your programme to keep it.",
   "Références consultées le 3 novembre 2026. Le programme distingue cinq champs d’apprentissage ; les grilles locales complètent le cadre national.": "References checked on 3 November 2026. The curriculum has five learning fields; local grids supplement the national framework.",
-  "🏃 EPS": "🏃 PE"
+  "🏃 EPS": "🏃 PE",
+  "Besoin en fonds de roulement d’exploitation (BFRE)": "Operating working capital requirement (BFRE)",
+  "PIB aux prix du marché": "GDP at market prices",
+  "Somme des VA + Impôts sur les produits − Subventions sur les produits": "Sum of gross value added + Taxes on products − Subsidies on products",
+  "Exponentielle : image": "Exponential function: value",
+  "f(x)=k×aˣ": "f(x)=k×aˣ",
+  "Exponentielles et logarithme": "Exponential functions and logarithms",
+  "Logarithme décimal": "Base-10 logarithm",
+  "log(10ⁿ)=n": "log(10ⁿ)=n"
 }

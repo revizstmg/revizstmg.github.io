@@ -154,3 +154,10 @@ test('allemand : révision, examen et correction disposent de toutes leurs tradu
  expect((await api.translate('Ose prendre la parole.','fr','de')).text).toBe('Trau dich zu sprechen.')
  expect(fetch).not.toHaveBeenCalled()
 })
+
+test('les formules corrigées sont traduites hors ligne dans les cinq langues', () => {
+  const keys = ["Besoin en fonds de roulement d’exploitation (BFRE)", "PIB aux prix du marché", "Somme des VA + Impôts sur les produits − Subventions sur les produits", "Exponentielle : image", "f(x)=k×aˣ", "Exponentielles et logarithme", "Logarithme décimal", "log(10ⁿ)=n"]
+  for (const [lang, book] of Object.entries(books)) {
+    for (const key of keys) expect(book[key], `${lang}:${key}`).toBeTruthy()
+  }
+})
