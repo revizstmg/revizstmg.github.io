@@ -26,6 +26,7 @@ for (const [name, width, level] of [['mobile',390,'premiere-stmg'],['desktop',12
   expect(await page.evaluate(()=>document.documentElement.scrollWidth > innerWidth)).toBe(false)
   const primary=await page.locator('.home-main-action').boundingBox()
   expect(primary.y+primary.height).toBeLessThan(page.viewportSize().height-64)
+  if(name==='petit-mobile'){const cookie=await page.getByRole('region',{name:'Cookies'}).boundingBox();expect(primary.y+primary.height).toBeLessThan(cookie.y);expect(await page.locator('.home-main-action').evaluate(e=>{const b=e.getBoundingClientRect();return e.contains(document.elementFromPoint(b.x+b.width/2,b.y+b.height/2))})).toBe(true)}
   await page.getByRole('button',{name:'OK',exact:true}).click()
   expect((await new AxeBuilder({page}).include('main').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([])
   await page.screenshot({path:info.outputPath(`home-${name}.png`),fullPage:true})

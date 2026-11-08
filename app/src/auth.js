@@ -50,19 +50,21 @@ export function messageAuth(status, brut) {
 }
 
 async function gotrue(path, body) {
-  let res
-  try {
-    res = await fetch(`${SUPA_URL}/auth/v1/${path}`, {
-      method: 'POST',
-      headers: { apikey: SUPA_ANON, 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    })
-  } catch {
-    throw new Error('Pas de connexion : réessaie une fois en ligne.')
-  }
-  const data = await res.json().catch(() => ({}))
-  if (!res.ok) throw new Error(messageAuth(res.status, data.error_description || data.msg || data.message || data.error_code))
-  return data
+  return withNetworkTimeout(async signal => {
+    let res
+    try {
+      res = await fetch(`${SUPA_URL}/auth/v1/${path}`, {
+        signal, method: 'POST',
+        headers: { apikey: SUPA_ANON, 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      })
+    } catch {
+      throw new Error('Pas de connexion : réessaie une fois en ligne.')
+    }
+    const data = await res.json().catch(() => ({}))
+    if (!res.ok) throw new Error(messageAuth(res.status, data.error_description || data.msg || data.message || data.error_code))
+    return data
+  },15000)
 }
 
 // --- Rafraîchissement du jeton -------------------------------------------

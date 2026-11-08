@@ -511,7 +511,7 @@ export default function Welcome() {
                 <p id="w-newpass-aide" className={`welcome-aide ${motDePasseValide(newPass) ? 'ok' : ''}`}>{motDePasseValide(newPass) ? '✓ ' : ''}{t('passwordRule')}</p>
               </>
             )}
-            {err && <p className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
+            {err && <p role="alert" className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
             {info && <p className="mt-3 text-sm font-semibold text-emerald-700">{info}</p>}
             <button type="button" className="welcome-cta" disabled={busy || (recoverStep === 'request' ? !emailOk : (code.trim().length < 4 || !motDePasseValide(newPass)))} onClick={() => (recoverStep === 'request' ? sendReset() : doReset())}>
               {busy ? t('pleaseWait') : recoverStep === 'request' ? t('sendResetCode') : t('resetPassword')}
@@ -531,7 +531,7 @@ export default function Welcome() {
             <label className="welcome-label" htmlFor="w-pass">{t('passwordField')}</label>
             <input id="w-pass" className="welcome-input" type="password" value={password} onChange={(e) => setPassword(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && step1Ok && !busy && submitForm()} placeholder="••••••••" autoComplete="current-password" maxLength={72} />
             <button type="button" className="mt-2 text-left text-sm font-semibold text-[#84671b] hover:underline" onClick={() => { setRecoverStep('request'); setErr(''); setInfo('') }}>{t('forgotPassword')}</button>
-            {err && <p className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
+            {err && <p role="alert" className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
             {info && <p className="mt-3 text-sm font-semibold text-emerald-700">{info}</p>}
             <button type="button" className="welcome-cta" disabled={!step1Ok || busy} onClick={() => submitForm()}>{busy ? t('pleaseWait') : t('loginTab')}</button>
             {!step1Ok && <p className="welcome-aide">Renseigne une adresse e-mail valide et ton mot de passe pour continuer.</p>}
@@ -572,7 +572,7 @@ export default function Welcome() {
                       <label htmlFor="w-site">Laisser vide</label>
                       <input id="w-site" name="w-controle" type="text" tabIndex={-1} autoComplete="off" value={piege} onChange={(e) => setPiege(e.target.value)} />
                     </div>
-                    {err && <p className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
+                    {err && <p role="alert" className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
                     <button type="button" className="welcome-cta" disabled={!step1Ok} onClick={() => { setErr(''); setSignupStep(2) }}>{t('next')}</button>
                   </>
                 )}
@@ -646,7 +646,7 @@ export default function Welcome() {
                     </div>
                   )}
                 </div>
-                {err && <p className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
+                {err && <p role="alert" className="mt-3 text-sm font-semibold text-rose-600">{err}</p>}
                 {info && <p className="mt-3 text-sm font-semibold text-emerald-700">{info}</p>}
                 {!step3Ok && !busy && <p className="welcome-aide mt-3" role="status">Choisis ton niveau et accepte les conditions pour créer ton compte.</p>}
                 <div className="mt-3 flex gap-2">

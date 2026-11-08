@@ -31,7 +31,7 @@ async function play(page,phase,{one=false,wrong=false}={}){
 }
 test('vacances : parcours entier, reprise, bilans distincts et séances adaptatives',async({page},info)=>{
  test.setTimeout(180000)
- const errors=await preparer(page,etatEleve());await setup(page)
+ const errors=await preparer(page,etatEleve(),{abonnement:'ultimate'});await setup(page)
  await play(page,'initial',{one:true,wrong:true})
  await page.reload();await attendreAccueil(page)
  await page.getByRole('button',{name:'Reprendre mon bilan',exact:true}).click()
@@ -56,7 +56,7 @@ test('vacances : parcours entier, reprise, bilans distincts et séances adaptati
  await axe(page);expect(errors).toEqual([])
 })
 test('vacances : petit écran, sombre, allemand et liens vers les réglages parents',async({page})=>{
- const errors=await preparer(page,etatEleve({lang:'de'}))
+ const errors=await preparer(page,etatEleve({lang:'de'}),{abonnement:'ultimate'})
  await page.setViewportSize({width:320,height:740});await page.goto('./#/vacances');await attendreAccueil(page)
  await expect(page.getByRole('heading',{name:'STMG-Ferienlernen',exact:true})).toBeVisible()
  for(const dark of [false,true]){await page.evaluate(d=>document.documentElement.classList.toggle('dark',d),dark);await axe(page)}
@@ -66,7 +66,7 @@ test('vacances : petit écran, sombre, allemand et liens vers les réglages pare
  expect(errors).toEqual([])
 })
 test('vacances : aucun partage sans accord et résumé sans réponses privées après activation',async({page})=>{
- const errors=await preparer(page,etatEleve())
+ const errors=await preparer(page,etatEleve(),{abonnement:'ultimate'})
  const published=[]
  await page.route(/supabase\.co/,async route=>{
   const request=route.request(),url=new URL(request.url())
@@ -87,7 +87,7 @@ test('vacances : aucun partage sans accord et résumé sans réponses privées a
  await page.waitForTimeout(3300);expect(published.length).toBe(before);expect(errors).toEqual([])
 })
 test('vacances : entrée depuis Réviser, programme et remplacement volontaire',async({page})=>{
- const errors=await preparer(page,etatEleve())
+ const errors=await preparer(page,etatEleve(),{abonnement:'ultimate'})
  await page.goto('./#/revision');await attendreAccueil(page)
  await page.getByRole('link',{name:'Préparer mes vacances'}).click();await setup(page);await play(page,'initial')
  const old=(await etat(page)).parcours.vacances.id
@@ -103,8 +103,8 @@ test('vacances : présentation accessible aux parents sans compte ni filière',a
  const errors=await preparer(page,null)
  await page.goto('./#/vacances');await attendreAccueil(page)
  await expect(page.getByRole('heading',{name:'Vacances STMG',exact:true})).toBeVisible()
- await expect(page.getByRole('link',{name:'Essayer sans compte'})).toBeVisible()
- await expect(page.getByText('Ce parcours et son bilan sont accessibles pendant la phase de développement. Aucun paiement ni abonnement n’est ouvert ici.')).toBeVisible()
+ await expect(page.getByRole('link',{name:'Découvrir Ultimate'})).toBeVisible()
+ await expect(page.getByText('Ce parcours personnalisé est inclus dans Ultimate.')).toBeVisible()
  await axe(page);expect(errors).toEqual([])
 })
 

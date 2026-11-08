@@ -1,17 +1,26 @@
 // Chargé uniquement lors d’un téléchargement. Les corrigés ne figurent jamais
 // dans le PDF du sujet ; la copie est à rédiger sur papier, comme au bac.
 import { jsPDF } from 'jspdf'
-const clean = s => String(s ?? '').replace(/\*\*/g, '').replace(/[‐‑–—]/g, '-').replace(/[\u00a0\u202f]/g, ' ').replace(/→/g, ' : ').replace(/≈/g, ' soit environ ').replace(/≤/g, ' <= ').replace(/≥/g, ' >= ').replace(/−/g, '-').replace(/√/g, ' racine carrée de ').replace(/π/g, 'pi').replace(/∞/g, 'infini').replace(/≠/g, ' != ')
+import unicodeFont from '../../resources/fonts/DejaVuSans.base64.txt?raw'
+// Times reste utilisé pour le texte courant ; les notations et écritures non
+// WinAnsi utilisent une vraie police embarquée, sans suppression de symboles.
+const clean = s => String(s ?? '').replace(/\*\*/g, '').replace(/[‐‑–—]/g, '-').replace(/[\u00a0\u202f]/g, ' ').replace(/[\u{1D400}-\u{1D7FF}]/gu, c => c.normalize('NFKC'))
+const needsUnicode = s => /[^\t\r\n\x20-\x7e\xa0-\xff€‚ƒ„…†‡ˆ‰Š‹ŒŽ‘’“”•˜™š›œžŸ]/u.test(s)
+
 export function buildExamPdf(draft, correction = false) {
   const doc = new jsPDF({ unit: 'mm', format: 'a4', compress: true })
   doc.setProperties({ title: `${correction ? 'Corrigé' : 'Sujet'} - ${draft.exam.title}`, author: 'RévizSTMG', subject: draft.kind === 'ready' ? 'Sujet prêt - entraînement non officiel' : 'Examen blanc personnalisé - entraînement non officiel' })
   const left = 22, width = 166, bottom = 272
-  let y = 25
+  let y = 25, unicodeLoaded = false
   const page = () => { doc.addPage(); y = 24 }
   const rule = () => { doc.setDrawColor(35); doc.setLineWidth(0.3); doc.line(left, y, left + width, y); y += 7 }
   const text = (value, size = 11, bold = false, gap = 3) => {
     doc.setFont('times', bold ? 'bold' : 'normal'); doc.setFontSize(size); doc.setTextColor(20)
     for (const paragraph of clean(value).split('\n')) {
+      if (needsUnicode(paragraph)) {
+        if (!unicodeLoaded) {doc.addFileToVFS('DejaVuSans.ttf',unicodeFont);doc.addFont('DejaVuSans.ttf','Unicode','normal');unicodeLoaded=true}
+        doc.setFont('Unicode','normal')
+      } else doc.setFont('times',bold?'bold':'normal')
       const lines = doc.splitTextToSize(paragraph || ' ', width)
       for (const line of lines) { if (y + size * 0.4 > bottom) page(); doc.text(line, left, y); y += size * 0.43 }
       y += gap

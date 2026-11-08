@@ -1,7 +1,7 @@
 // Niveau d'accès d'un compte : gratuit, Premium ou Ultimate.
 //
 // - Gratuit : les cours et les exercices de base (voir PAGES_PAYANTES pour ce qui ne l'est pas).
-// - Premium : tout le reste du site, et chaque fonction d'IA une fois par mois.
+// - Premium : les outils de révision, et chaque fonction d'IA une fois par mois.
 // - Ultimate : comme Premium, avec l'IA presque illimitée (garde-fou journalier de ia.js).
 //
 // L'abonnement vient de la table revizstmg_abonnements (fonction revizstmg-paiement).
@@ -33,6 +33,8 @@ export function normaliserChemin(chemin) {
   return c.toLowerCase().replace(/\/{2,}/g, '/')
 }
 const sous = (liste, chemin) => { const c = normaliserChemin(chemin); return liste.some((p) => c === p || c.startsWith(`${p}/`)) }
+export const PAGES_ULTIMATE = ['/parcours','/vacances']
+export const estPageUltimate = chemin => sous(PAGES_ULTIMATE, chemin)
 export const estPagePayante = (chemin) => sous(PAGES_PAYANTES, chemin)
 export const estPageAvecCompte = (chemin) => sous(PAGES_AVEC_COMPTE, chemin)
 

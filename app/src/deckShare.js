@@ -5,7 +5,7 @@ const TAG = 'RSTMG1:'
 
 export function encodeDeck(deck) {
   try {
-    const payload = { t: deck.title || 'Flashcards', c: (deck.cards || []).map((c) => [c.front, c.back]) }
+    const payload = { ...(['fr','en','de','es','it','ar'].includes(deck.language)?{l:deck.language}:{}), t: deck.title || 'Flashcards', c: (deck.cards || []).map((c) => [c.front, c.back]) }
     return TAG + btoa(unescape(encodeURIComponent(JSON.stringify(payload))))
   } catch {
     return ''
@@ -23,7 +23,7 @@ export function decodeDeck(code) {
       .map((pair) => ({ front: String(pair?.[0] ?? ''), back: String(pair?.[1] ?? '') }))
       .filter((c) => c.front && c.back)
     if (!cards.length) return null
-    return { title: String(p.t || 'Flashcards').slice(0, 80), cards: cards.slice(0, 400) }
+    return { ...(['fr','en','de','es','it','ar'].includes(p.l)?{language:p.l}:{}), title: String(p.t || 'Flashcards').slice(0, 80), cards: cards.slice(0, 400) }
   } catch {
     return null
   }
