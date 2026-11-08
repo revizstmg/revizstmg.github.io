@@ -10,7 +10,7 @@ const response=()=>({total:20,feedback:'Des mécanismes justes mais une discussi
 const request=()=>new Request('https://test',{method:'POST',headers:{authorization:'Bearer fake'},body:JSON.stringify({action:'excellence',subjectId:'2022',answer})})
 const env=k=>({SUPABASE_URL:'https://fake',SUPABASE_ANON_KEY:'fake',GEMINI_API_KEY:'fake'})[k]
 test('documents locaux complets et empreintes des originaux, aucune ancienne année inventée',()=>{
- expect(EXCELLENCE_SUBJECTS.map(s=>s.id)).toEqual(['2024','2023','2022','2021'])
+ expect(EXCELLENCE_SUBJECTS.map(s=>s.id)).toEqual(['2025','2024','2023','2022','2021'])
  for(const s of EXCELLENCE_SUBJECTS){const pdf=readFileSync(new URL(`../public/excellence/${s.id}/sujet.pdf`,import.meta.url));expect(pdf.subarray(0,4).toString()).toBe('%PDF');expect(createHash('sha256').update(pdf).digest('hex')).toBe(s.sha256)
  const pages=JSON.parse(readFileSync(new URL(`../public/excellence/${s.id}/texte.json`,import.meta.url),'utf8'));expect(pages).toHaveLength(s.pages);expect(pages[0]).toContain(s.session)
  for(let i=1;i<=s.pages;i++)expect(readFileSync(new URL(`../public/excellence/${s.id}/${i}.jpg`,import.meta.url)).length).toBeGreaterThan(1000)

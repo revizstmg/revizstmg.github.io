@@ -12,3 +12,15 @@ test('la collection offerte est unique, permanente et sans crédit payant',()=>{
  const before={...state(),xp:12200,chapters:Object.fromEntries(Array.from({length:15},(_,i)=>['t'+i,{quiz:90}]))},next=collectReward(before,'collection-complete')
  expect(next.owned).toContain('av-fox');expect(next.owned).toContain('pal-nebuleuse');expect(next.coins).toBe(before.coins);expect(collectReward(next,'collection-complete')).toBe(next);expect(next.subscription).toBeUndefined()
 })
+test('le planning varie les tâches sur sept jours et lie le thème à son cours',()=>{
+ const kit=buildRewardKit(collectReward(state(),'kit-bac'),'kit-bac')
+ expect(new Set(kit.plan.slice(0,7).map(d=>d.steps.join(' '))).size).toBe(7)
+ expect(kit.plan[0].url).toMatch(/^https:\/\/revizstmg.github.io\/#\/subject\/[^/]+\/theme\//)
+})
+test('le PDF des kits embarque une police Unicode pour noms et questions',async()=>{
+ const {readFileSync}=await import('node:fs'),{buildRewardKitPdf}=await import('../src/data/rewardKit.js')
+ const kit=buildRewardKit(collectReward(state(),'kit-bac'),'kit-bac');kit.name='محمد';kit.cards=[{question:'x² ≈ 10',answer:'Réponse : 10'}]
+ const doc=await buildRewardKitPdf(kit,readFileSync(new URL('../resources/fonts/DejaVuSans.ttf',import.meta.url)).toString('base64'))
+ const pdf=Buffer.from(doc.output('arraybuffer')).toString('latin1')
+ expect(doc.getFont().fontName).toBe('DejaVu');expect(pdf).toContain('/FontFile2');expect(pdf).toContain('/ToUnicode')
+})

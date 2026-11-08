@@ -1,6 +1,15 @@
 // Métadonnées vérifiées sur les PDF officiels, pas de sujet produit par un modèle.
 export const EXCELLENCE_SUBJECTS = [
   {
+    "id": "2025",
+    "session": "2025-2026",
+    "title": "Le rôle de l’épargne",
+    "pages": 11,
+    "source": "https://www.banque-france.fr/system/files/2026-09/Sujet%20PEE%202025-2026%20VF.pdf",
+    "sourcePage": "https://www.banque-france.fr/fr/prix-de-lexcellence-economique-en-stmg-2025-2026",
+    "sha256": "38c56e2fb24b3a3615190cb816616792840a96af16af6bc219f2f71f42cf5f6d"
+  },
+  {
     "id": "2024",
     "session": "2024-2025",
     "title": "Le ralentissement de la productivité française",

@@ -115,3 +115,15 @@ test('calculs des révisions transversales : données, formules et résultats co
  expect((309-300)/300*100).toBe(3)
  expect(b.exam.questions[7].correction).toContain('3 %')
 })
+test('Rivage conserve dix questions et huit documents sur quatre pages au plus',()=>{
+ const s=sujets.find(s=>s.id==='revision-management-premiere-terminale-1')
+ expect(s.exam.questions).toHaveLength(10);expect(s.exam.documents).toHaveLength(8)
+ expect(buildExamPdf(s).getNumberOfPages()).toBeLessThanOrEqual(4)
+})
+test('les compilations signalent leurs reprises avant le téléchargement et dans le sujet',()=>{
+ for(const s of sujets.filter(s=>s.duration===120&&!s.scope)){
+  expect(s.summary).toMatch(/^Compilation/);expect(s.exam.instructions).toMatch(/^Compilation/)
+ }
+ expect(sujets.find(s=>s.id==='revision-management-premiere-terminale-1').exam.documents[4].text).toContain('120 tables')
+ expect(sujets.find(s=>s.id==='terminale-droit-2').exam.documents[1].text).not.toContain('associe une prestation')
+})

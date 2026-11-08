@@ -1,7 +1,7 @@
 // Chargé uniquement lors d’un téléchargement. Les corrigés ne figurent jamais
 // dans le PDF du sujet ; la copie est à rédiger sur papier, comme au bac.
 import { jsPDF } from 'jspdf'
-const clean = s => String(s ?? '').replace(/\*\*/g, '').replace(/[‐‑–—]/g, '-').replace(/\u00a0/g, ' ').replace(/→/g, ' : ')
+const clean = s => String(s ?? '').replace(/\*\*/g, '').replace(/[‐‑–—]/g, '-').replace(/[\u00a0\u202f]/g, ' ').replace(/→/g, ' : ').replace(/≈/g, ' soit environ ').replace(/≤/g, ' <= ').replace(/≥/g, ' >= ').replace(/−/g, '-')
 export function buildExamPdf(draft, correction = false) {
   const doc = new jsPDF({ unit: 'mm', format: 'a4', compress: true })
   doc.setProperties({ title: `${correction ? 'Corrigé' : 'Sujet'} - ${draft.exam.title}`, author: 'RévizSTMG', subject: draft.kind === 'ready' ? 'Sujet prêt - entraînement non officiel' : 'Examen blanc personnalisé - entraînement non officiel' })
@@ -17,7 +17,7 @@ export function buildExamPdf(draft, correction = false) {
       y += gap
     }
   }
-  const heading = value => { if (y > bottom - 25) page(); y += 5; text(value, 13, true, 4) }
+  const heading = value => { if (y > bottom - 25) page(); y += draft.kind === 'ready' ? 3 : 5; text(value, draft.kind === 'ready' ? 12 : 13, true, draft.kind === 'ready' ? 2 : 4) }
   const scope = () => {
   heading('Périmètre de révision')
   for (const c of draft.courses) text(`${c.subject} - ${c.level === 'premiere' ? 'Première' : 'Terminale'} : ${c.title}`, draft.kind === 'ready' ? 9 : 10, false, draft.kind === 'ready' ? 0.5 : 3)
@@ -55,7 +55,7 @@ export function buildExamPdf(draft, correction = false) {
       else text('Connaissances personnelles du cours - sans document.', 10)
     }
     if (draft.exam.documents.length) {
-      page(); heading('Dossier documentaire')
+      if (draft.kind !== 'ready' || y > bottom - 55) page(); heading('Dossier documentaire')
       for (const d of draft.exam.documents) { heading(d.title); text(d.text) }
     }
   }
