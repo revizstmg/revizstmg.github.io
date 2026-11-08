@@ -23,9 +23,12 @@ test('les six liens sont des PDF du ministère, sans URL fournie par un utilisat
  }
  expect(annaleUrl('inconnu')).toBeNull()
 })
-test('les symboles de comparaison des calculs restent lisibles avec la police PDF',()=>{
- const value={...draft,exam:{...draft.exam,questions:[{...draft.exam.questions[0],correction:'8 000 / 104 000 × 100 ≈ 7,69 % ; x ≤ 10 ; y ≥ 2 ; 5 − 3 = 2 ; √25 = 5 ; π ; ∞ ; x ≠ 0.'}]}}
- const doc=buildExamPdf(value,true),raw=Buffer.from(doc.output('arraybuffer')).toString('latin1')
- const decoded=[...raw.matchAll(/stream\r?\n([\s\S]*?)\r?\nendstream/g)].map(m=>{try{return inflateSync(Buffer.from(m[1],'latin1')).toString('latin1')}catch{return ''}}).join('\n')
- expect(decoded).toContain('soit environ');expect(decoded).toContain('7,69 %');expect(decoded).toContain('racine carr');expect(decoded).not.toContain('\x00')
+test('notations de calcul, statistiques et probabilités : police Unicode et tables de lecture complètes',()=>{
+ const notation='x̄ = ∑ xᵢ / n ; P(A ∩ B) ; P(A ∪ B) ; √25 = 5 ; π ; ∞ ; x ≠ 0 ; ≈ ; ≤ ; ≥'
+ const value={...draft,exam:{...draft.exam,documents:[{id:'d1',title:'Notations',text:notation}],questions:[{...draft.exam.questions[0],enonce:notation,correction:notation}]}}
+ for(const correction of [false,true]){
+  const doc=buildExamPdf(value,correction),raw=Buffer.from(doc.output('arraybuffer')).toString('latin1')
+  const maps=[...raw.matchAll(/stream\r?\n([\s\S]*?)\r?\nendstream/g)].map(m=>{try{return inflateSync(Buffer.from(m[1],'latin1')).toString('latin1')}catch{return ''}}).filter(s=>s.includes('begincmap')).join('\n')
+  expect(raw).toContain('/FontFile2');expect(maps).toContain('<2211>');expect(maps).toContain('<2229>');expect(maps).toContain('<222a>');expect(maps).toContain('<0304>');expect(maps).toContain('<1d62>')
+ }
 })

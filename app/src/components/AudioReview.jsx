@@ -1,15 +1,16 @@
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useFenetreClavier } from './clavier.js'
-import { useT, useLang } from '../i18n.js'
+import { useT, usePublicText } from '../i18n.js'
 
 // Révision audio mains-libres : lit à voix haute « terme … définition » pour
 // chaque carte, en enchaînant automatiquement. Lecture / pause / précédent /
 // suivant. Utilise la synthèse vocale de l'appareil (aucune donnée envoyée).
-export default function AudioReview({ items = [], color = '#7c3aed', title = '', onClose }) {
+export default function AudioReview({ items = [], color = '#7c3aed', title = '', contentLang = 'fr', onLanguageChange, onClose }) {
   const t = useT()
-  const lang = useLang()
-  const voiceLang = lang === 'de' ? 'de-DE' : lang === 'es' ? 'es-ES' : lang === 'en' ? 'en-US' : lang === 'it' ? 'it-IT' : lang === 'ar' ? 'ar-SA' : 'fr-FR'
+  const tr = usePublicText()
+  const [language,setLanguage] = useState(() => ['fr','en','de','es','it','ar'].includes(contentLang) ? contentLang : 'fr')
+  const voiceLang = {fr:'fr-FR',en:'en-US',de:'de-DE',es:'es-ES',it:'it-IT',ar:'ar-SA'}[language]
   const synth = typeof window !== 'undefined' ? window.speechSynthesis : null
 
   const [idx, setIdx] = useState(0)
@@ -76,6 +77,7 @@ export default function AudioReview({ items = [], color = '#7c3aed', title = '',
           <p className="py-6 text-center text-sm text-slate-500 dark:text-slate-400">{t('audioUnsupported')}</p>
         ) : (
           <>
+            <label className="mb-3 block text-sm">{tr('Langue de lecture')}<select className="ms-2 rounded border p-2" value={language} onChange={e=>{playingRef.current=false;cancel();setPlaying(false);setLanguage(e.target.value);onLanguageChange?.(e.target.value)}}>{[['fr','Français'],['en','English'],['de','Deutsch'],['es','Español'],['it','Italiano'],['ar','العربية']].map(([id,label])=><option key={id} value={id}>{label}</option>)}</select></label>
             <div className="mb-1 text-xs text-slate-400">{Math.min(idx + 1, items.length)} / {items.length}</div>
             <div className="rounded-2xl border-2 p-6 text-center" style={{ borderColor: color, background: color + '10' }}>
               <p className="text-lg font-bold">{card.front}</p>

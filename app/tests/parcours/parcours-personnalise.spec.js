@@ -9,7 +9,7 @@ const axe=async(page)=>{
 }
 
 test('parcours personnalisé : objectifs, test de positionnement, plan qui s’adapte',async({page},info)=>{
- const errors=await preparer(page,etatEleve())
+ const errors=await preparer(page,etatEleve(),{abonnement:'ultimate'})
  await page.goto('./#/parcours');await attendreAccueil(page)
  // 1. Objectifs
  await expect(page.getByRole('heading',{name:'Construisons ton parcours'})).toBeVisible()
@@ -55,7 +55,7 @@ test('parcours personnalisé : objectifs, test de positionnement, plan qui s’a
 test('parcours personnalisé : lisible sur petit écran, en sombre, et traduit hors ligne en allemand',async({page})=>{
  const requests=[]
  page.on('request',r=>{if(/mymemory|translate.googleapis/.test(r.url())) requests.push(r.url())})
- const errors=await preparer(page,etatEleve({lang:'de',parcours:{maj:1,objectifs:{noteVisee:12,heuresSemaine:5,difficiles:[]}}}))
+ const errors=await preparer(page,etatEleve({lang:'de',parcours:{maj:1,objectifs:{noteVisee:12,heuresSemaine:5,difficiles:[]}}}),{abonnement:'ultimate'})
  await page.setViewportSize({width:320,height:740})
  await page.goto('./#/parcours');await attendreAccueil(page)
  await expect(page.getByRole('heading',{name:'Dein Plan, Woche für Woche'})).toBeVisible()
@@ -69,7 +69,7 @@ test('parcours personnalisé : lisible sur petit écran, en sombre, et traduit h
 })
 
 test('accueil : le menu garde l’accès au parcours',async({page})=>{
- const errors=await preparer(page,etatEleve())
+ const errors=await preparer(page,etatEleve(),{abonnement:'ultimate'})
  await page.goto('./#/accueil');await attendreAccueil(page)
  await page.getByRole('button',{name:'Menu',exact:true}).click()
  await page.getByRole('dialog',{name:'Menu',exact:true}).getByText('Plus d’outils',{exact:true}).click()

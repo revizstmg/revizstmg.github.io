@@ -97,3 +97,8 @@ test('catalogue complet, paramètres cohérents aux bornes et accès à toutes l
   }
  }
 })
+test('les formules du programme Première renvoient à une référence de Première',()=>{
+ for(const f of formulasForTrack({level:'premiere-stmg'}))expect(f.coursePremiere,f.name).toMatch(/^p1-/)
+ expect(formulasForTrack({level:'premiere-stmg'}).some(f=>f.id==='f33')).toBe(false)
+ expect(formulasForTrack({level:'terminale-stmg',specialty:'gestion-finance'}).some(f=>f.id==='f33')).toBe(true)
+})

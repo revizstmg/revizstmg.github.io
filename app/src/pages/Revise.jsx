@@ -68,7 +68,7 @@ function RevisePage() {
   const doImport = () => {
     const deck = decodeDeck(importCode)
     if (!deck) { setImportMsg(t('importError')); return }
-    saveDeck({ id: `import-${Date.now()}`, title: deck.title, subjectId: null, themeId: null, color: '#7c3aed', cards: deck.cards })
+    saveDeck({ id: `import-${Date.now()}`, title: deck.title, language: deck.language || 'fr', subjectId: null, themeId: null, color: '#7c3aed', cards: deck.cards })
     setImportCode(''); setImportMsg(`✅ ${deck.title} (${deck.cards.length} ${t('cardsCount')})`)
   }
 
@@ -165,7 +165,7 @@ function RevisePage() {
 
       </aside></div>
       <section className="revision-bridge"><div><h2 className="font-display">{m.bridge}</h2><p>{m.bridgeHelp}</p></div><Link to="/bac-blanc" className="btn-gold">{m.bridgeAction} <span aria-hidden>↗</span></Link></section>
-      {audio && <AudioReview items={audio.cards} color={audio.color || '#7c3aed'} title={audio.title} onClose={() => setAudio(null)} />}
+      {audio && <AudioReview items={audio.cards} color={audio.color || '#7c3aed'} title={audio.title} contentLang={audio.language || 'fr'} onLanguageChange={language=>{const updated={...audio,language};setAudio(updated);saveDeck(updated)}} onClose={() => setAudio(null)} />}
 
       {shareCode && createPortal(
         <div className="fixed inset-0 z-50 flex items-start justify-center bg-slate-900/50 p-4 pt-16 backdrop-blur-sm overflow-y-auto" onClick={() => setShareCode('')}>

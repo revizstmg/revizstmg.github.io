@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import {usePublicText} from '../i18n.js'
-import {estPagePayante} from '../data/acces.js'
+import {estPagePayante,estPageUltimate} from '../data/acces.js'
 import {useNiveauAcces} from './Reserve.jsx'
 
 // Petit repère sur un lien vers une page réservée aux abonnés, pour un compte gratuit
@@ -8,8 +8,9 @@ import {useNiveauAcces} from './Reserve.jsx'
 export default function PastillePremium({to}){
   const tr=usePublicText()
   const niveau=useNiveauAcces()
-  if(niveau!=='gratuit'||!estPagePayante(to))return null
-  return <span className="ms-2 inline-flex shrink-0 items-center rounded-full border border-amber-700/40 px-1.5 text-[10px] font-semibold uppercase tracking-wide"><span aria-hidden>🔒 Premium</span><span className="sr-only">{tr('Réservé aux abonnés')}</span></span>
+  const ultimate=estPageUltimate(to)
+  if(niveau==='ultimate'||(niveau==='premium'&&!ultimate)||(!estPagePayante(to)&&!ultimate))return null
+  return <span className="ms-2 inline-flex shrink-0 items-center rounded-full border border-amber-700/40 px-1.5 text-[10px] font-semibold uppercase tracking-wide"><span aria-hidden>🔒 {ultimate?'Ultimate':'Premium'}</span><span className="sr-only">{tr(ultimate?'Réservé à Ultimate':'Réservé aux abonnés')}</span></span>
 }
 
 // Outil réservé aux abonnés, dans une page gratuite : pour un compte gratuit, une ligne qui mène aux offres

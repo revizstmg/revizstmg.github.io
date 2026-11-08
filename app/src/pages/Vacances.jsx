@@ -1,3 +1,4 @@
+import GardeAcces from '../components/Reserve.jsx'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useStore, useThemeTimer } from '../store.jsx'
@@ -15,9 +16,9 @@ export default function Vacances() {
  const {state} = useStore()
  if (!state.track) {
   const m=(key,values)=>vacancesText(state.lang,key,values)
-  return <div className="vacances-page space-y-6"><header className="vacances-hero"><h1 className="font-display">{m('title')}</h1><p>{m('intro')}</p><p>{m('scope')}</p></header><ParentInfo m={m} sharing={false}/><Link className="btn-primary" to="/changer">{m('try')}</Link></div>
+  return <div className="vacances-page space-y-6"><header className="vacances-hero"><h1 className="font-display">{m('title')}</h1><p>{m('intro')}</p><p>{m('scope')}</p></header><ParentInfo m={m} sharing={false}/><Link className="btn-primary" to="/offres">{m('try')}</Link></div>
  }
- return <VacancesPage key={`${state.account?.id || 'trial'}:${vacancesTrackKey(state.track)}`} />
+ return <GardeAcces minimum="ultimate"><VacancesPage key={`${state.account?.id || 'trial'}:${vacancesTrackKey(state.track)}`} /></GardeAcces>
 }
 function VacancesPage() {
  const {state,setParcours} = useStore(), m = (k,v) => vacancesText(state.lang,k,v)

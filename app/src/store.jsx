@@ -706,7 +706,7 @@ export function StoreProvider({ children }) {
     if (!deck || !deck.id || !Array.isArray(deck.cards) || !deck.cards.length) return
     setState((p) => {
       const rest = (p.savedDecks || []).filter((d) => d.id !== deck.id)
-      const entry = { id: deck.id, title: deck.title || 'Flashcards', subjectId: deck.subjectId || null, themeId: deck.themeId || null, color: deck.color || null, cards: deck.cards.map((c) => ({ front: c.front, back: c.back })), savedAt: Date.now() }
+      const entry = { id: deck.id, title: deck.title || 'Flashcards', language: ['fr','en','de','es','it','ar'].includes(deck.language) ? deck.language : 'fr', subjectId: deck.subjectId || null, themeId: deck.themeId || null, color: deck.color || null, cards: deck.cards.map((c) => ({ front: c.front, back: c.back })), savedAt: Date.now() }
       return { ...p, savedDecks: [entry, ...rest].slice(0, 60) }
     })
   }, [])

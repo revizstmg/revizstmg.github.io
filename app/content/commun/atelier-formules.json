@@ -1217,12 +1217,11 @@
       100
     ],
     "unit": "%",
-    "terminale": false,
+    "terminale": true,
     "formula": "Chômeurs ÷ Population active × 100",
     "note": "sur la population active, pas la population totale",
     "group": "Emploi et chômage",
-    "course": "eco-t7",
-    "coursePremiere": "eco-t7"
+    "course": "eco-t7"
   },
   {
     "id": "f34",

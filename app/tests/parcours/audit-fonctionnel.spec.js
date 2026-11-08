@@ -73,7 +73,7 @@ test('maths : copie et temps repris après quitter et actualiser, correction san
 
 test('vacances : confirmation même si le programme précédent appartient à une autre filière', async ({ page }) => {
   const previous = { id: 'ancien', trackKey: 'autre-filiere', initialAnswers: { q: 1 } }
-  const errors = await preparer(page, etatEleve({ parcours: { vacances: previous } }))
+  const errors = await preparer(page, etatEleve({ parcours: { vacances: previous } }), {abonnement:'ultimate'})
   await page.goto('./#/vacances'); await attendreAccueil(page)
   await page.getByRole('combobox', { name: 'Matière', exact: true }).selectOption('droit')
   for (let i = 1; i <= 3; i++) {

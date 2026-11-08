@@ -145,3 +145,8 @@ describe('adresses et rafraîchissement', () => {
     expect(() => reserverIA('serie')).not.toThrow()
   })
 })
+it('le parcours personnalisé est distinct des outils Premium',async()=>{
+ const {estPageUltimate}=await import('../src/data/acces.js')
+ expect(estPageUltimate('/parcours')).toBe(true);expect(estPageUltimate('/PARCOURS/')).toBe(true)
+ expect(estPageUltimate('/revision')).toBe(false);expect(estPagePayante('/cours')).toBe(false)
+})

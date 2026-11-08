@@ -8,7 +8,7 @@ export default function RewardVault({onCollection}){
  const {state,claimShopReward}=useStore(),tr=usePublicText()
  const rewards=SHOP_REWARDS.filter(r=>r.itemIds||r.collection),next=rewards.find(r=>!rewardProgress(state,r).claimed)
  return <section className="reward-vault" aria-labelledby="vault-title">
-  <div className="vault-heading"><div><p className="kicker">{tr('À gagner maintenant')}</p><h2 id="vault-title" className="font-display text-3xl">{tr('Des collections à gagner')}</h2><p>{tr('Des objets permanents pour ton profil, sans dépenser tes pièces.')}</p></div><Link to="/seance" className="btn-primary">{tr('Gagner des XP →')}</Link></div>
+  <div className="vault-heading"><div><p className="kicker">{tr('À gagner maintenant')}</p><h2 id="vault-title" className="font-display text-3xl">{tr('Des collections à gagner')}</h2><p>{tr('Des objets permanents pour ton profil, sans dépenser tes pièces.')}</p></div><Link to="/cours" className="btn-primary">{tr('Gagner des XP →')}</Link></div>
   <p className="vault-boundary">{tr('Les suivis pédagogiques personnalisés restent réservés à Ultimate.')}</p>
   {next&&<p className="vault-next">🎯 {tr('Ton prochain objectif :')} <strong>{tr(next.name)}</strong> · {rewardProgress(state,next).pct} % {tr('des conditions remplies')}</p>}
   <div className="vault-grid">{rewards.map((r,i)=>{

@@ -49,7 +49,7 @@ test('bilan : la page annonce qu’elle est réservée à Premium et Ultimate, s
 })
 
 test('parcours : valeurs courantes signalées, heures lisibles, manque expliqué (B-07)',async({page})=>{
- const errors=await preparer(page,etatEleve())
+ const errors=await preparer(page,etatEleve(),{abonnement:'ultimate'})
  await page.goto('./#/parcours');await attendreAccueil(page)
  await expect(page.getByText('Les choix déjà cochés sont des valeurs courantes : ajuste-les.')).toBeVisible()
  await page.getByRole('button',{name:'Voir mon parcours'}).click()
