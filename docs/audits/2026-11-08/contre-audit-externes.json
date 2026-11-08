@@ -1,0 +1,117 @@
+[
+  {
+    "url": "https://ecogestion.ac-besancon.fr/wp-content/uploads/sites/44/2024/12/Sujet-PEE-2024.pdf",
+    "firstAttempt": "curl: (28) Operation timed out after 30001 milliseconds with 737054 out of 950001 bytes received",
+    "status": 200,
+    "pages": 10,
+    "sha256": "e529b1f1af2f4544788314807ac7a16f87fc5921bfcaab1f5d4ea2f3daad7b9a"
+  },
+  {
+    "url": "https://eduscol.education.gouv.fr/sites/default/files/document/spe574annexe11062919pdf-84864.pdf",
+    "pages": 11,
+    "sha256": "6dfd563ac720e8a91f5a0b8a536cc9554d27da9984014351e0dd92c1f88d66fb",
+    "status": 200
+  },
+  {
+    "url": "https://www.ac-polynesie.pf/sites/ac_polynesie/files/2024-04/sujet-pee-2024-20397.pdf",
+    "pages": 11,
+    "sha256": "37e33931fb127650b5033e5ccb5d2622b27a6beb87444c499e3b8e6a50b1f6f7",
+    "status": 200
+  },
+  {
+    "url": "https://www.banque-france.fr/system/files/2024-10/sujet_pee_2021.pdf",
+    "pages": 12,
+    "sha256": "4aebe8d6501a5809d736b711adce945b875043a1ff22f42eed9346717e30c6fe",
+    "status": 200
+  },
+  {
+    "url": "https://www.banque-france.fr/system/files/2024-10/sujet_pee_2022.pdf",
+    "pages": 13,
+    "sha256": "b13ab81935f857f96b6ae28963535684e65c239c7392b3558e615117556e8001",
+    "status": 200
+  },
+  {
+    "url": "https://www.banque-france.fr/system/files/2026-09/Sujet%20PEE%202025-2026%20VF.pdf",
+    "pages": 11,
+    "sha256": "38c56e2fb24b3a3615190cb816616792840a96af16af6bc219f2f71f42cf5f6d",
+    "status": 200
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/annexe-14-programme-d-italien-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440388.pdf",
+    "pages": 39,
+    "sha256": "f94a06475d0e64484c0edbef35ea3282c753121108b147c4a30252315a6d1eb1",
+    "status": 200
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/annexe-6-programme-d-arabe-pour-les-classes-de-lyc-e-g-n-ral-et-technologique-440367.pdf",
+    "pages": 36,
+    "sha256": "bee2d2c25bc6a7bf21c16c6e0300e15a695ab88c38f5a4e04fa9074999b5fec8",
+    "status": 200
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/document/Annexe%201%20%E2%80%93%20R%C3%A9f%C3%A9rentiel%20national%20pour%20le%20contr%C3%B4le%20en%20cours%20de%20formation%20%28CCF%29%20%E2%80%93%20Baccalaur%C3%A9at%20g%C3%A9n%C3%A9ral%20et%20technologique%2C%20enseignement%20commun%20d%E2%80%99%C3%A9ducation%20physique%20et%20sportive%20%28EPS%29-480509.pdf",
+    "pages": 19,
+    "sha256": "8e26db9aee74ceb10b17ebd38bea1a9da2cb77a8bccfd018824181e9087c8e63",
+    "status": 200
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/document/Annexe%201%20%E2%80%93%20R%C3%A9f%C3%A9rentiel%20national%20pour%20le%20contr%C3%B4le%20en%20cours%20de%20formation%20(CCF)%20%E2%80%93%20Baccalaur%C3%A9at%20g%C3%A9n%C3%A9ral%20et%20technologique,%20enseignement%20commun%20d%E2%80%99%C3%A9ducation%20physique%20et%20sportive%20(EPS)-480509.pdf",
+    "pages": 19,
+    "sha256": "8e26db9aee74ceb10b17ebd38bea1a9da2cb77a8bccfd018824181e9087c8e63",
+    "status": 200
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20R%C3%A9f%C3%A9rentiel%20national%20pour%20l%E2%80%99examen%20ponctuel%20terminal%20%E2%80%93%20Baccalaur%C3%A9at%20g%C3%A9n%C3%A9ral%20et%20technologique%2C%20enseignement%20commun%20d%E2%80%99%C3%A9ducation%20physique%20et%20sportive%20%28EPS%29-480512.pdf",
+    "pages": 6,
+    "sha256": "bea01d14ddad74ce2aff09a50d2fb23d4372f0cfcaff156113e115d5ee5d5b50",
+    "status": 200
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/document/Sciences%20de%20gestion%20et%20num%C3%A9rique-235962.pdf",
+    "pages": 12,
+    "sha256": "f998bec9852312a14949d68a71769427167fbe8fac151c1901e3e52aad06240d",
+    "status": 200
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/document/baccalaureat-technologique-2026-sciences-et-technologies-du-management-et-de-la-gestion-droit-et.pdf",
+    "pages": 10,
+    "sha256": "2a546aec199330dd090d366f678958ab1e5c287874e7ca60ef25f6b92ffb607e",
+    "status": 200
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/document/baccalaureat-technologique-2026-sciences-et-technologies-du-management-et-de-la-gestion-droit-et_1.pdf",
+    "pages": 8,
+    "sha256": "e585c4d77cccfc7a556a5f9cbec1f8cf60e6f3831c969ebdb72757890f167644",
+    "status": 200
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/document/baccalaureat-technologique-2026-sciences-et-technologies-du-management-et-de-la-gestion-droit-et_2.pdf",
+    "pages": 8,
+    "sha256": "66756bab5831b8c76c1bfb4debbfd78c0b52e4990e9c141df9f9f5827e52eae0",
+    "status": 200
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/document/baccalaureat-technologique-2026-sciences-et-technologies-du-management-et-de-la-gestion-management.pdf",
+    "pages": 13,
+    "sha256": "66db7108668b6cac7b0f6811cac3220123849053492144033d274f69ebe5b105",
+    "status": 200
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/document/baccalaureat-technologique-2026-sciences-et-technologies-du-management-et-de-la-gestion-management_1.pdf",
+    "pages": 15,
+    "sha256": "797e1246d05c2d0eb55beabc677137e76f2b9f5c8bb38602d4ee60a98caf0a0e",
+    "status": 200
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/document/baccalaureat-technologique-2026-sciences-et-technologies-du-management-et-de-la-gestion-management_2.pdf",
+    "pages": 14,
+    "sha256": "27926949be929638840f0976594085697c7b6ca1c418c8fdf25b73d7e8dbe0c3",
+    "status": 200
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/document/bulletin-officiel-special-ndeg-4-du-17-septembre-2026-521113.pdf",
+    "pages": 185,
+    "sha256": "91bd6d6965649b0041baf74087b4e44290a89df2682850462b6ef27a498a558c",
+    "status": 200
+  }
+]

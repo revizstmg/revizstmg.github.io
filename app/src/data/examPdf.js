@@ -1,7 +1,7 @@
 // Chargé uniquement lors d’un téléchargement. Les corrigés ne figurent jamais
 // dans le PDF du sujet ; la copie est à rédiger sur papier, comme au bac.
 import { jsPDF } from 'jspdf'
-const clean = s => String(s ?? '').replace(/\*\*/g, '').replace(/[‐‑–—]/g, '-').replace(/[\u00a0\u202f]/g, ' ').replace(/→/g, ' : ').replace(/≈/g, ' soit environ ').replace(/≤/g, ' <= ').replace(/≥/g, ' >= ').replace(/−/g, '-')
+const clean = s => String(s ?? '').replace(/\*\*/g, '').replace(/[‐‑–—]/g, '-').replace(/[\u00a0\u202f]/g, ' ').replace(/→/g, ' : ').replace(/≈/g, ' soit environ ').replace(/≤/g, ' <= ').replace(/≥/g, ' >= ').replace(/−/g, '-').replace(/√/g, ' racine carrée de ').replace(/π/g, 'pi').replace(/∞/g, 'infini').replace(/≠/g, ' != ')
 export function buildExamPdf(draft, correction = false) {
   const doc = new jsPDF({ unit: 'mm', format: 'a4', compress: true })
   doc.setProperties({ title: `${correction ? 'Corrigé' : 'Sujet'} - ${draft.exam.title}`, author: 'RévizSTMG', subject: draft.kind === 'ready' ? 'Sujet prêt - entraînement non officiel' : 'Examen blanc personnalisé - entraînement non officiel' })
