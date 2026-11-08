@@ -321,7 +321,7 @@
     "id": "premiere-droit-economie",
     "level": "premiere",
     "subject": "Droit et économie",
-    "summary": "Litige, preuve, revenus et épargne.",
+    "summary": "Compilation : reprend « Une vente contestée : litige et preuve » et « Le budget des ménages ». Choisis un autre sujet si tu les as déjà faits.",
     "duration": 120,
     "kind": "ready",
     "courses": [
@@ -388,7 +388,7 @@
     ],
     "exam": {
       "title": "Droit et économie : les fondamentaux",
-      "instructions": "Entraînement non officiel de 120 minutes, en deux parties indépendantes de 10 points. Documents et données fictifs. Consacrez environ 60 minutes par partie. Répondez sur copie séparée. Les questions sans document mobilisent vos connaissances. Les critères de chaque partie sont adaptés à son barème de 10 points ; les réponses et les exigences restent identiques aux versions de 60 minutes. Calculatrice autorisée pour les questions chiffrées. Ce sujet ne reproduit pas le format officiel d’une épreuve de quatre heures.",
+      "instructions": "Compilation de deux sujets courts de la collection. Des questions et documents sont repris : si tu les as déjà faits, choisis plutôt une révision Première-Terminale pour découvrir un cas inédit. Entraînement non officiel de 120 minutes, en deux parties indépendantes de 10 points. Documents et données fictifs. Consacrez environ 60 minutes par partie. Répondez sur copie séparée. Les questions sans document mobilisent vos connaissances. Les critères de chaque partie sont adaptés à son barème de 10 points ; les réponses et les exigences restent identiques aux versions de 60 minutes. Calculatrice autorisée pour les questions chiffrées. Ce sujet ne reproduit pas le format officiel d’une épreuve de quatre heures.",
       "documents": [
         {
           "id": "p1-d1",
@@ -615,7 +615,7 @@
     "id": "premiere-droit-economie-2",
     "level": "premiere",
     "subject": "Droit et économie",
-    "summary": "Personnes, créations, financement et marché.",
+    "summary": "Compilation : reprend « Studio Azur : personnes et créations » et « Financer et comprendre le marché ». Choisis un autre sujet si tu les as déjà faits.",
     "duration": 120,
     "kind": "ready",
     "courses": [
@@ -694,7 +694,7 @@
     ],
     "exam": {
       "title": "Droit et économie : créer et financer",
-      "instructions": "Entraînement non officiel de 120 minutes, en deux parties indépendantes de 10 points. Documents et données fictifs. Consacrez environ 60 minutes par partie. Répondez sur copie séparée. Les questions sans document mobilisent vos connaissances. Les critères de chaque partie sont adaptés à son barème de 10 points ; les réponses et les exigences restent identiques aux versions de 60 minutes. Calculatrice autorisée pour les questions chiffrées. Ce sujet ne reproduit pas le format officiel d’une épreuve de quatre heures.",
+      "instructions": "Compilation de deux sujets courts de la collection. Des questions et documents sont repris : si tu les as déjà faits, choisis plutôt une révision Première-Terminale pour découvrir un cas inédit. Entraînement non officiel de 120 minutes, en deux parties indépendantes de 10 points. Documents et données fictifs. Consacrez environ 60 minutes par partie. Répondez sur copie séparée. Les questions sans document mobilisent vos connaissances. Les critères de chaque partie sont adaptés à son barème de 10 points ; les réponses et les exigences restent identiques aux versions de 60 minutes. Calculatrice autorisée pour les questions chiffrées. Ce sujet ne reproduit pas le format officiel d’une épreuve de quatre heures.",
       "documents": [
         {
           "id": "p1-d1",
@@ -2104,7 +2104,7 @@
         {
           "id": "d2",
           "title": "Document 2 : Les critères du salariat (cas fictif)",
-          "text": "Pour ce dossier, on retient qu’un contrat de travail associe une prestation de travail, une rémunération et un lien de subordination juridique. Ce dernier se caractérise notamment par le pouvoir de donner des ordres et directives, d’en contrôler l’exécution et de sanctionner les manquements. Travailler pour un seul client peut être un indice de dépendance économique mais ne prouve pas, à lui seul, la subordination juridique."
+          "text": "Extraits du dossier de Lina : le contrat est intitulé « prestation indépendante ». Un courriel fixe sa présence de 9 h à 17 h du lundi au vendredi. Le virement mensuel est de 1 700 euros. Chaque vendredi, le responsable vérifie les tâches réalisées ; une note annonce le retrait de missions en cas de refus des consignes. Lina ne facture actuellement aucun autre client. Elle conteste la qualification donnée à la relation et conserve les courriels et relevés bancaires."
         },
         {
           "id": "d3",
@@ -2213,7 +2213,7 @@
     "id": "terminale-droit-economie",
     "level": "terminale",
     "subject": "Droit et économie",
-    "summary": "Contrat, responsabilité, chômage et politiques publiques.",
+    "summary": "Compilation : reprend « Une commande non livrée » et « Emploi et politiques publiques ». Choisis un autre sujet si tu les as déjà faits.",
     "duration": 120,
     "kind": "ready",
     "courses": [
@@ -2286,7 +2286,7 @@
     ],
     "exam": {
       "title": "Droit et économie : entraînement complet",
-      "instructions": "Entraînement non officiel de 120 minutes, en deux parties indépendantes de 10 points. Documents et données fictifs. Consacrez environ 60 minutes par partie. Répondez sur copie séparée. Les questions sans document mobilisent vos connaissances. Les critères de chaque partie sont adaptés à son barème de 10 points ; les réponses et les exigences restent identiques aux versions de 60 minutes. Calculatrice autorisée pour les questions chiffrées. Ce sujet ne reproduit pas le format officiel d’une épreuve de quatre heures.",
+      "instructions": "Compilation de deux sujets courts de la collection. Des questions et documents sont repris : si tu les as déjà faits, choisis plutôt une révision Première-Terminale pour découvrir un cas inédit. Entraînement non officiel de 120 minutes, en deux parties indépendantes de 10 points. Documents et données fictifs. Consacrez environ 60 minutes par partie. Répondez sur copie séparée. Les questions sans document mobilisent vos connaissances. Les critères de chaque partie sont adaptés à son barème de 10 points ; les réponses et les exigences restent identiques aux versions de 60 minutes. Calculatrice autorisée pour les questions chiffrées. Ce sujet ne reproduit pas le format officiel d’une épreuve de quatre heures.",
       "documents": [
         {
           "id": "p1-d1",
@@ -2515,7 +2515,7 @@
     "id": "terminale-droit-economie-2",
     "level": "terminale",
     "subject": "Droit et économie",
-    "summary": "Salariat, rupture, commerce et développement.",
+    "summary": "Compilation : reprend « Un emploi sous contrôle » et « Échanger et produire durablement ». Choisis un autre sujet si tu les as déjà faits.",
     "duration": 120,
     "kind": "ready",
     "courses": [
@@ -2594,7 +2594,7 @@
     ],
     "exam": {
       "title": "Droit et économie : travail et échanges",
-      "instructions": "Entraînement non officiel de 120 minutes, en deux parties indépendantes de 10 points. Documents et données fictifs. Consacrez environ 60 minutes par partie. Répondez sur copie séparée. Les questions sans document mobilisent vos connaissances. Les critères de chaque partie sont adaptés à son barème de 10 points ; les réponses et les exigences restent identiques aux versions de 60 minutes. Calculatrice autorisée pour les questions chiffrées. Ce sujet ne reproduit pas le format officiel d’une épreuve de quatre heures.",
+      "instructions": "Compilation de deux sujets courts de la collection. Des questions et documents sont repris : si tu les as déjà faits, choisis plutôt une révision Première-Terminale pour découvrir un cas inédit. Entraînement non officiel de 120 minutes, en deux parties indépendantes de 10 points. Documents et données fictifs. Consacrez environ 60 minutes par partie. Répondez sur copie séparée. Les questions sans document mobilisent vos connaissances. Les critères de chaque partie sont adaptés à son barème de 10 points ; les réponses et les exigences restent identiques aux versions de 60 minutes. Calculatrice autorisée pour les questions chiffrées. Ce sujet ne reproduit pas le format officiel d’une épreuve de quatre heures.",
       "documents": [
         {
           "id": "p1-d1",
@@ -2604,7 +2604,7 @@
         {
           "id": "p1-d2",
           "title": "Document 2 : Les critères du salariat (cas fictif)",
-          "text": "Pour ce dossier, on retient qu’un contrat de travail associe une prestation de travail, une rémunération et un lien de subordination juridique. Ce dernier se caractérise notamment par le pouvoir de donner des ordres et directives, d’en contrôler l’exécution et de sanctionner les manquements. Travailler pour un seul client peut être un indice de dépendance économique mais ne prouve pas, à lui seul, la subordination juridique."
+          "text": "Extraits du dossier de Lina : le contrat est intitulé « prestation indépendante ». Un courriel fixe sa présence de 9 h à 17 h du lundi au vendredi. Le virement mensuel est de 1 700 euros. Chaque vendredi, le responsable vérifie les tâches réalisées ; une note annonce le retrait de missions en cas de refus des consignes. Lina ne facture actuellement aucun autre client. Elle conteste la qualification donnée à la relation et conserve les courriels et relevés bancaires."
         },
         {
           "id": "p1-d3",
@@ -3289,7 +3289,7 @@
     "id": "terminale-management-bilan",
     "level": "terminale",
     "subject": "Management",
-    "summary": "Réviser les notions de Première et leur mobilisation en Terminale.",
+    "summary": "Compilation : reprend « Cycléo : organiser et décider » et « Nova : stratégie et performance ». Choisis un autre sujet si tu les as déjà faits.",
     "duration": 120,
     "kind": "ready",
     "courses": [
@@ -3368,7 +3368,7 @@
     ],
     "exam": {
       "title": "Management : bases et stratégie",
-      "instructions": "Entraînement non officiel de 120 minutes, en deux parties indépendantes de 10 points. Documents et données fictifs. Consacrez environ 60 minutes par partie. Répondez sur copie séparée. Les questions sans document mobilisent vos connaissances. Les critères de chaque partie sont adaptés à son barème de 10 points ; les réponses et les exigences restent identiques aux versions de 60 minutes. Calculatrice autorisée pour les questions chiffrées. Ce sujet ne reproduit pas le format officiel d’une épreuve de quatre heures.",
+      "instructions": "Compilation de deux sujets courts de la collection. Des questions et documents sont repris : si tu les as déjà faits, choisis plutôt une révision Première-Terminale pour découvrir un cas inédit. Entraînement non officiel de 120 minutes, en deux parties indépendantes de 10 points. Documents et données fictifs. Consacrez environ 60 minutes par partie. Répondez sur copie séparée. Les questions sans document mobilisent vos connaissances. Les critères de chaque partie sont adaptés à son barème de 10 points ; les réponses et les exigences restent identiques aux versions de 60 minutes. Calculatrice autorisée pour les questions chiffrées. Ce sujet ne reproduit pas le format officiel d’une épreuve de quatre heures.",
       "documents": [
         {
           "id": "p1-d1",
@@ -3986,7 +3986,7 @@
         {
           "id": "d1",
           "title": "Document 1 : L’entreprise Rivage (cas fictif)",
-          "text": "Rivage fabrique des meubles réparables. Ses deux associés emploient quinze salariés et coordonnent le travail dans un atelier équipé de machines et d’un logiciel de commandes. Les ventes doivent financer la continuité de l’activité et rémunérer les apporteurs. La direction veut aussi limiter les déchets. L’existence d’un objectif environnemental ne suffit pas à faire de cette société une association : les faits décrivent une entreprise privée."
+          "text": "Rivage fabrique des meubles réparables. Deux associés ont constitué la société et quinze salariés travaillent dans un atelier équipé de machines et d’un logiciel de commandes. Les meubles sont vendus à des particuliers et à des entreprises. Chaque mois, les associés suivent les commandes, les coûts et la trésorerie. Le règlement de l’atelier prévoit de trier les chutes de bois et de suivre leur poids."
         },
         {
           "id": "d2",
@@ -3996,7 +3996,7 @@
         {
           "id": "d3",
           "title": "Document 3 : Le diagnostic (cas fictif)",
-          "text": "Rivage dispose de techniciens expérimentés et de plans de meubles protégés, mais manque de trésorerie et d’espace de stockage. La demande de produits réparables progresse dans le marché étudié. Une nouvelle enseigne à bas prix prépare toutefois son arrivée. Les compétences et l’atelier appartiennent à l’organisation ; l’évolution des attentes et l’arrivée de concurrents ne dépendent pas de sa seule décision."
+          "text": "Fiche de situation Rivage : huit techniciens ont plus de dix ans d’expérience et les plans de trois gammes sont protégés. Deux commandes ont été refusées faute de place dans l’atelier. Le découvert bancaire a atteint le plafond négocié. Une enquête de clients fait apparaître un intérêt croissant pour les meubles réparables. Une enseigne proposant des prix bas a annoncé son installation dans la même zone commerciale."
         },
         {
           "id": "d4",
@@ -4006,12 +4006,12 @@
         {
           "id": "d5",
           "title": "Document 5 : Une production à organiser (cas fictif)",
-          "text": "Le responsable hésite entre produire de grands lots avant de connaître les commandes, en anticipant les ventes, et lancer l’assemblage après réception des commandes confirmées. Le premier mode risque d’accroître le stock ; le second peut allonger le délai client si les composants ne sont pas disponibles. Les fournisseurs n’ont pas tous des délais stables. Aucun mode ne supprime à lui seul l’incertitude."
+          "text": "À la réunion de production, Ana propose de fabriquer 120 tables en janvier alors que 45 sont commandées. Elle s’appuie sur les ventes du printemps précédent. Malik propose de lancer chaque assemblage après validation du devis client. Le délai annoncé aux acheteurs est de trois semaines. Le bois arrive habituellement en dix jours, mais deux livraisons récentes ont pris vingt jours. L’atelier peut stocker au maximum 80 tables terminées."
         },
         {
           "id": "d6",
           "title": "Document 6 : Deux projets de développement (cas fictif)",
-          "text": "Le projet A consiste à ouvrir une deuxième boutique vendant les mêmes meubles et services de réparation. Le projet B consiste à lancer une activité distincte d’organisation d’événements, avec une nouvelle clientèle et des compétences propres. Pour cet exercice, B constitue explicitement un nouveau domaine d’activité. La direction doit tenir compte de ses moyens limités avant d’approuver plusieurs projets."
+          "text": "Deux fiches d’investissement sont examinées par Rivage. A prévoit une deuxième boutique : mêmes gammes de meubles, mêmes fournisseurs et réparations assurées par l’atelier actuel. B prévoit une agence organisant des événements pour des entreprises : recrutement d’organisateurs, location de salles et vente de prestations nouvelles. La banque demande de choisir un seul projet cette année ; aucun financement n’est encore accordé."
         },
         {
           "id": "d7",

@@ -23,3 +23,9 @@ test('les six liens sont des PDF du ministère, sans URL fournie par un utilisat
  }
  expect(annaleUrl('inconnu')).toBeNull()
 })
+test('les symboles de comparaison des calculs restent lisibles avec la police PDF',()=>{
+ const value={...draft,exam:{...draft.exam,questions:[{...draft.exam.questions[0],correction:'8 000 / 104 000 × 100 ≈ 7,69 % ; x ≤ 10 ; y ≥ 2 ; 5 − 3 = 2.'}]}}
+ const doc=buildExamPdf(value,true),raw=Buffer.from(doc.output('arraybuffer')).toString('latin1')
+ const decoded=[...raw.matchAll(/stream\r?\n([\s\S]*?)\r?\nendstream/g)].map(m=>{try{return inflateSync(Buffer.from(m[1],'latin1')).toString('latin1')}catch{return ''}}).join('\n')
+ expect(decoded).toContain('soit environ');expect(decoded).toContain('7,69 %');expect(decoded).not.toContain('\x00')
+})

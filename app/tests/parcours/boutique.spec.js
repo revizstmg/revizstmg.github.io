@@ -92,3 +92,15 @@ test('les mois offerts exigent les résultats et restent des réservations futur
   await page.screenshot({ path: testInfo.outputPath('shop-desktop.png'), fullPage: true })
   expect(erreurs).toEqual([])
 })
+
+test('kit PDF : téléchargement avec prénom arabe et police locale',async({page})=>{
+ const chapters=Object.fromEntries(Array.from({length:10},(_,i)=>[`theme-${i}`,{quiz:95,games:{}}]))
+ const erreurs=await ouvrir(page,{xp:6500,chapters,profile:{firstName:'محمد',lastName:''}})
+ const article=page.getByRole('article',{name:'Une semaine organisée',exact:true})
+ await article.getByRole('button',{name:'Débloquer mon lot',exact:true}).click()
+ const download=page.waitForEvent('download')
+ await article.getByRole('button',{name:'Télécharger mon kit PDF',exact:true}).click()
+ const file=await download;expect(file.suggestedFilename()).toBe('revizstmg-kit-semaine.pdf')
+ await expect((await import('node:fs/promises')).readFile(await file.path()).then(b=>b.subarray(0,5).toString())).resolves.toBe('%PDF-')
+ expect(erreurs).toEqual([])
+})

@@ -8,14 +8,14 @@ async function setup(page,state=etatEleve()){
  await page.addInitScript(()=>sessionStorage.setItem('stmg_fenetre_visite','aucune'))
  return errors
 }
-async function open(page){await page.goto('./#/excellence-economique');await attendreAccueil(page);await page.getByRole('button',{name:'Ouvrir le sujet',exact:true}).nth(2).click()}
+async function open(page){await page.goto('./#/excellence-economique');await attendreAccueil(page);await page.getByRole('button',{name:'Ouvrir le sujet',exact:true}).nth(3).click()}
 test('concours sur ordinateur : dossier intégral, défilement séparé, copie remise et correction contrôlée',async({page})=>{
  await page.setViewportSize({width:1280,height:900});const errors=await setup(page);let body
  await page.route('**/functions/v1/examen-blanc',route=>{body=route.request().postDataJSON();return route.fulfill({contentType:'application/json',body:JSON.stringify({excellence:result})})})
  await page.goto('./#/bac-blanc');await attendreAccueil(page);await page.getByRole('link',{name:'Choisir un sujet',exact:true}).click()
  await expect(page.getByRole('heading',{name:'Prix de l’excellence économique',exact:true})).toBeVisible()
- await expect(page.getByRole('button',{name:'Ouvrir le sujet',exact:true})).toHaveCount(4)
- await page.getByRole('button',{name:'Ouvrir le sujet',exact:true}).nth(2).click()
+ await expect(page.getByRole('button',{name:'Ouvrir le sujet',exact:true})).toHaveCount(5)
+ await page.getByRole('button',{name:'Ouvrir le sujet',exact:true}).nth(3).click()
  await expect(page.locator('#ex-documents img')).toHaveCount(13)
  await page.locator('.excellence-rubric summary').click()
  await expect(page.locator('.excellence-rubric li')).toHaveText(['Notions économiques : 5 points','Analyse des documents : 5 points','Argumentation : 5 points','Structure : 3 points','Expression : 2 points'])
@@ -72,5 +72,5 @@ test('allemand hors ligne : navigation du concours traduite et documents conserv
  await page.getByRole('button',{name:'Aufgabe öffnen',exact:true}).first().click()
  await expect(page.getByRole('button',{name:'Meinen Aufsatz beginnen',exact:true})).toBeVisible()
  await page.getByRole('button',{name:'Dokumente',exact:true}).click();await page.locator('#ex-documents summary').first().click()
- await expect(page.locator('#ex-documents details').first()).toContainText('SESSION 2024-2025')
+ await expect(page.locator('#ex-documents details').first()).toContainText('SESSION 2025-2026')
 })
