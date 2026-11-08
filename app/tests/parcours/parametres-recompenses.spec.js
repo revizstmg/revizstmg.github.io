@@ -34,10 +34,16 @@ test('appui prolongé tactile : déplacement, annulation et ordre conservé',asy
  const cancelHandle=page.getByRole('button',{name:'Déplacer Cours',exact:true});await cancelHandle.scrollIntoViewIfNeeded();const b=await cancelHandle.boundingBox();const saved=(await etat(page)).tabs;await client.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:b.x+b.width/2,y:b.y+b.height/2}]});await page.waitForTimeout(400);await client.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:b.x+b.width/2,y:b.y+b.height+35}]});await client.send('Input.dispatchTouchEvent',{type:'touchCancel',touchPoints:[]});expect((await etat(page)).tabs).toEqual(saved);expect(await page.locator('.navigation-tabs-editor li').evaluateAll(rows=>rows.map(row=>row.dataset.tabId))).toEqual(saved)
  await page.getByRole('button',{name:'Déplacer Cours',exact:true}).focus();await page.keyboard.press('ArrowDown');expect((await etat(page)).tabs[0]).toBe('revision')
 })
-test('récompense utile : collecte unique, vrai PDF et objets existants conservés',async({page})=>{
- const errors=await preparer(page,etatEleve({xp:6500,freezes:0,chapters:Object.fromEntries(Array.from({length:10},(_,i)=>['theme'+i,{quiz:90}]))}));await page.goto('./#/boutique');await attendreAccueil(page)
- const card=page.getByRole('article',{name:'Ton pack objectif bac',exact:true});await card.getByRole('button',{name:'Débloquer mon lot',exact:true}).click();expect((await etat(page)).freezes).toBe(5)
- const file=page.waitForEvent('download');await card.getByRole('button',{name:'Télécharger mon kit PDF',exact:true}).click();expect((await file).suggestedFilename()).toBe('revizstmg-kit-bac.pdf');await page.reload();await attendreAccueil(page);await expect(card.getByRole('button',{name:'Télécharger mon kit PDF',exact:true})).toBeVisible();expect((await etat(page)).freezes).toBe(5);expect(errors).toEqual([])
+test('récompense de profil : collecte unique, équipement et objets existants conservés',async({page})=>{
+ const errors=await preparer(page,etatEleve({xp:6500,freezes:0,owned:['av-fox'],chapters:Object.fromEntries(Array.from({length:10},(_,i)=>['theme'+i,{quiz:90}]))}));await page.goto('./#/boutique');await attendreAccueil(page)
+ const card=page.getByRole('article',{name:'Collection Prestige',exact:true});await card.getByRole('button',{name:'Débloquer mon lot',exact:true}).click();expect((await etat(page)).freezes).toBe(5)
+ expect((await etat(page)).owned).toEqual(expect.arrayContaining(['av-fox','av-griffon','pal-prestige','title-conquete']))
+ await expect(page.getByRole('button',{name:'Télécharger mon kit PDF',exact:true})).toHaveCount(0)
+ await card.getByRole('button',{name:'Choisir mes objets',exact:true}).click()
+ await page.getByRole('article',{name:'Prestige',exact:true}).getByRole('button',{name:'Équiper',exact:true}).click()
+ expect((await etat(page)).customTheme.accent).toBe('#8a651d')
+ await page.reload();await attendreAccueil(page);expect((await etat(page)).freezes).toBe(5)
+ expect((await etat(page)).owned).toContain('av-fox');expect((await etat(page)).customTheme.accent).toBe('#8a651d');expect(errors).toEqual([])
 })
 
 test('réviser : accès à toutes les matières à la place de la liste À réviser',async({page})=>{
