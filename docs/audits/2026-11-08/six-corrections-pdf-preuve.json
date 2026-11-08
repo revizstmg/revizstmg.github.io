@@ -1,0 +1,14 @@
+[
+  {
+    "file": "sujet",
+    "nul": 0,
+    "pages": 3,
+    "notations": true
+  },
+  {
+    "file": "corrige",
+    "nul": 0,
+    "pages": 2,
+    "notations": true
+  }
+]
