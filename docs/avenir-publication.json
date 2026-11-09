@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-11-09T16:07:28.085891+00:00",
+  "compiledRef": "57d1227eb2fd8b761408354ef323e9eab8c29e7a",
+  "sourceRef": "62d40d90c",
+  "featureSourceRef": "27e966da6",
+  "mergeRef": "80a06ba755c3c0a574e1c05ace20f1e7202f1253",
+  "workflow": 42647628856,
+  "assets": [
+    {
+      "file": "404.html",
+      "bytes": 3297,
+      "sha256": "8f30ce4a9709b1a4c144b71c975c246bc496cb9e5c76d6965e7764876d25b62f"
+    },
+    {
+      "file": "index.html",
+      "bytes": 7305,
+      "sha256": "2e6caf6f28a6dc03fd719deb62e8d2cc48d1c86e9aec08de5d96f10e7e6ee8e3"
+    },
+    {
+      "file": "assets/index-BSS_wj-Z.js",
+      "bytes": 652053,
+      "sha256": "87d357234962447ab9cf0ff17197a53ab90591ba9298431913851a35fba0a441"
+    },
+    {
+      "file": "assets/Avenir-BCqChBER.js",
+      "bytes": 20983,
+      "sha256": "cd3c84633cd57604a419382e019bfe4f32096b8224cc680bdc1f27066080b53c"
+    },
+    {
+      "file": "assets/Avenir-_CmpKGuA.css",
+      "bytes": 3092,
+      "sha256": "201ea5f0b2b12041437cf780ffa8d92db568400510f3ec2b0d1e15ffe931ab17"
+    },
+    {
+      "file": "assets/public.en-COQB3W57.js",
+      "bytes": 358210,
+      "sha256": "171435b26d3ca2b640cf216a154f694e944ae99d644849c9a983966d10923b35"
+    },
+    {
+      "file": "assets/public.es-CWn_Wftd.js",
+      "bytes": 373915,
+      "sha256": "aa101316321b1fc191101cc6f70cd184dccfe772d6321715a4d67d5d91bb2dbc"
+    },
+    {
+      "file": "assets/public.it-BqjrpAWE.js",
+      "bytes": 373035,
+      "sha256": "53ae9393e4f305d16dc7fa3bd044d58fdaa7928a1bceb2ff36c76c257d945646"
+    },
+    {
+      "file": "assets/public.de-BnJgRHXF.js",
+      "bytes": 447226,
+      "sha256": "522088ec55c222a5fed9e499c8ec4f1b12cc3faff92003c178801aaccf6806ba"
+    },
+    {
+      "file": "assets/public.ar-De2cwLrj.js",
+      "bytes": 434857,
+      "sha256": "eeb583ba60bdf564e8daf4893968587311f6a9ed27fcff07777fa05a14e9d03d"
+    }
+  ],
+  "pagesRun": 42650886162,
+  "pagesConclusion": "success",
+  "unitTestsUTC": 843,
+  "unitTestsParis": 843,
+  "browserTests": 417,
+  "publicSmoke": {
+    "checkedAt": "2026-11-09T16:09:07.400Z",
+    "url": "https://revizstmg.github.io/#/parcours-avenir",
+    "compte": "aucun, essai configuré via les écrans publics",
+    "viewport": "360x740",
+    "formulaire": true,
+    "reprise": true,
+    "debordement": false,
+    "pageErrors": [],
+    "reseau": "services externes bloqués"
+  }
+}
