@@ -30,6 +30,12 @@ for(const id of ['en','es','it','ar','de']) test(`guide ${id} : PDF original et 
  const pdf=readFileSync(new URL(`../resources/langues/guide-${id}.pdf`,import.meta.url))
  expect(pdf.subarray(0,5).toString()).toBe('%PDF-')
  expect(pdf.length).toBeGreaterThan(20000)
+ const structure=pdf.toString('latin1')
+ expect(structure).toMatch(/\/AcroForm/)
+ expect([...structure.matchAll(/\/T\(answer_/g)].length).toBe(guide.exercises.length)
+ expect([...structure.matchAll(/\/T\(review_/g)].length).toBe(guide.exercises.length)
+ expect(structure).not.toMatch(/\/JavaScript\b/)
+
 })
 test('les guides restent au catalogue mais leurs anciens exercices ne sont plus proposés dans les parcours',()=>{
  for(const track of [{level:'premiere-stmg'},{level:'terminale-stmg',specialty:'gestion-finance'}]) {

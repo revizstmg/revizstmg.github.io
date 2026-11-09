@@ -1,0 +1,3 @@
+
+# Les formulaires PDF sont des documents binaires, pas du texte.
+*.pdf binary

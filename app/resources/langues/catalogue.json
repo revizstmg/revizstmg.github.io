@@ -473,6 +473,11 @@
         "videoEvidence": true
       }
     ],
+    "interactive": {
+      "format": "AcroForm",
+      "answers": 110,
+      "review": 110
+    },
     "stats": {
       "lessons": 24,
       "exercises": 110,
@@ -808,6 +813,11 @@
         "videoEvidence": true
       }
     ],
+    "interactive": {
+      "format": "AcroForm",
+      "answers": 122,
+      "review": 122
+    },
     "stats": {
       "lessons": 25,
       "exercises": 122,
@@ -1287,6 +1297,11 @@
         "videoEvidence": true
       }
     ],
+    "interactive": {
+      "format": "AcroForm",
+      "answers": 86,
+      "review": 86
+    },
     "stats": {
       "lessons": 26,
       "exercises": 86,
@@ -1748,6 +1763,11 @@
         "videoEvidence": true
       }
     ],
+    "interactive": {
+      "format": "AcroForm",
+      "answers": 86,
+      "review": 86
+    },
     "stats": {
       "lessons": 26,
       "exercises": 86,
@@ -2047,6 +2067,11 @@
         "videoEvidence": true
       }
     ],
+    "interactive": {
+      "format": "AcroForm",
+      "answers": 100,
+      "review": 100
+    },
     "stats": {
       "lessons": 25,
       "exercises": 100,
