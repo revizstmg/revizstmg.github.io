@@ -1,0 +1,10 @@
+{
+  "stillPending": true,
+  "elapsed": 17001,
+  "calls": [
+    {
+      "url": "https://wyydagcjkbivtbuhbzon.supabase.co/rest/v1/class_group",
+      "method": "POST"
+    }
+  ]
+}

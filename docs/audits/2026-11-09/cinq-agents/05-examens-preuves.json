@@ -1,0 +1,40 @@
+{
+  "baseline": "c702938bb55b3456733cd7726951b67940fcd2f4",
+  "auditDate": "2026-11-09",
+  "browser": {
+    "recoveredPassed": 20,
+    "resumedPassed": 14,
+    "realAIRequests": 0,
+    "realDatabaseMutations": 0
+  },
+  "pdf": {
+    "files": 61,
+    "pages": 503,
+    "nul": 0,
+    "empty": 0,
+    "horizontalOverflow": 0
+  },
+  "E5-01": {
+    "serviceWorkers": "block",
+    "blockedAsset": "contenu-p1-langues-*.js",
+    "prompt": "Tester mes connaissances de management en terminale STMG",
+    "before": {
+      "moduleBlocked": true,
+      "buttonDisabled": true,
+      "posts": 0
+    },
+    "after181s": {
+      "moduleBlocked": true,
+      "buttonDisabled": true,
+      "posts": 0,
+      "alerts": [],
+      "statuses": [
+        "☁️Non sauvegardéPas de connexion : ta progression reste sur cet appareil et partira sur ton compte au retour du réseau.Réessayer",
+        "⏳ Recherche des chapitres dans les cours…"
+      ],
+      "prompt": "Tester mes connaissances de management en terminale STMG"
+    },
+    "serverAIObservedRequests": 0,
+    "type": "client preparation awaiting imported course content"
+  }
+}

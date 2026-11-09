@@ -1,0 +1,51 @@
+{
+  "before": {
+    "moduleBlocked": true,
+    "buttonDisabled": true,
+    "posts": 0
+  },
+  "after181s": {
+    "moduleBlocked": true,
+    "buttonDisabled": true,
+    "posts": 0,
+    "alerts": [],
+    "statuses": [
+      "☁️Non sauvegardéPas de connexion : ta progression reste sur cet appareil et partira sur ton compte au retour du réseau.Réessayer",
+      "⏳ Recherche des chapitres dans les cours…"
+    ],
+    "prompt": "Tester mes connaissances de management en terminale STMG"
+  },
+  "afterAbortModule": {
+    "buttonDisabled": true,
+    "alerts": []
+  },
+  "scripts": [
+    "http://127.0.0.1:4173/assets/contenu-gestion-finance-BrLRF-BD.js",
+    "http://127.0.0.1:4173/assets/contenu-management-BIrLIr25.js",
+    "http://127.0.0.1:4173/assets/contenu-droit-Up_wjTAP.js",
+    "http://127.0.0.1:4173/assets/contenu-economie-BeuWzGhm.js",
+    "http://127.0.0.1:4173/assets/contenu-maths-CDUP3nVT.js",
+    "http://127.0.0.1:4173/assets/contenu-philosophie-BWG6zJTZ.js",
+    "http://127.0.0.1:4173/assets/contenu-histoire-geo-B6oi2XQ4.js",
+    "http://127.0.0.1:4173/assets/contenu-langues-CQjLAKry.js",
+    "http://127.0.0.1:4173/assets/contenu-mercatique-DLSU2IHC.js",
+    "http://127.0.0.1:4173/assets/contenu-rh-communication-CGx7LeTz.js",
+    "http://127.0.0.1:4173/assets/contenu-sig-DyqSFxcE.js",
+    "http://127.0.0.1:4173/assets/contenu-p1-sgn-BiBpJMLq.js",
+    "http://127.0.0.1:4173/assets/contenu-p1-management-Bid8tG9T.js",
+    "http://127.0.0.1:4173/assets/contenu-p1-droit-Bim-LT19.js",
+    "http://127.0.0.1:4173/assets/contenu-p1-economie-uJlUqNVo.js",
+    "http://127.0.0.1:4173/assets/contenu-p1-maths-Dno2i-Sy.js",
+    "http://127.0.0.1:4173/assets/contenu-p1-francais-TkBj-YwT.js",
+    "http://127.0.0.1:4173/assets/contenu-p1-histoire-geo-BCbQs1aO.js",
+    "http://127.0.0.1:4173/assets/contenu-p1-langues-2HaY_p0K.js",
+    "http://127.0.0.1:4173/assets/contenu-gestion-finance-BrLRF-BD.js",
+    "http://127.0.0.1:4173/assets/contenu-management-BIrLIr25.js",
+    "http://127.0.0.1:4173/assets/contenu-droit-Up_wjTAP.js",
+    "http://127.0.0.1:4173/assets/contenu-economie-BeuWzGhm.js",
+    "http://127.0.0.1:4173/assets/contenu-maths-CDUP3nVT.js",
+    "http://127.0.0.1:4173/assets/contenu-philosophie-BWG6zJTZ.js",
+    "http://127.0.0.1:4173/assets/contenu-histoire-geo-B6oi2XQ4.js",
+    "http://127.0.0.1:4173/assets/contenu-langues-CQjLAKry.js"
+  ]
+}
