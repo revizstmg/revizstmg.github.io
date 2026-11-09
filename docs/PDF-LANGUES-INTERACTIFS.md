@@ -23,3 +23,9 @@ La vérification lit les cinq fichiers, compte les champs et leurs types, contr�
 504 champs de réponse et 504 cases de suivi au total. Les résultats détaillés sont dans le journal de coordination et les preuves de livraison.
 
 Les captures des deux parcours navigateur Langues restent complètes à l’échelle CSS : cela évite des images de plus de100000pixels en haute densité sans modifier les contrôles fonctionnels, WCAG ou de navigation. Les deux parcours sont réussis sur Première et Terminale.
+
+## Validation de livraison
+
+PR #214 fusionnée, source `c5ff38191`, fusion `a30f17692d5ebbf95d88b5e733f818a128d76a52`. Workflow [42686789652](https://github.com/revizstmg/revizstmg.github.io/actions/runs/42686789652) réussi :845 tests UTC,845 Paris et418 parcours navigateur, puis compilation et dépôt automatique `30019d7b87d8139a0fb2a9a59bad5e7dec0d2a98`. Aucun contrôle supprimé.
+
+Pages final [42689803165](https://github.com/revizstmg/revizstmg.github.io/actions/runs/42689803165) réussi. Les cinq PDF référencés par le module Langues actif ont été téléchargés, comparés octet par octet à la compilation, et leurs1008champs contrôlés. Les traductions et les modules publics sont également conformes. Le contrôle mobile public avec données fictives confirme les notes, leur désactivation/restauration et l’annonce du mode interactif. Preuves `docs/audits/2026-11-09/notes-pdf-publication.json`. Les guides déjà téléchargés doivent être téléchargés à nouveau pour obtenir les formulaires.
