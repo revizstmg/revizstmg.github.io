@@ -1,0 +1,126 @@
+{
+  "checkedAt": "2026-11-09T20:08:13.104008+00:00",
+  "compiledRef": "30019d7b87d8139a0fb2a9a59bad5e7dec0d2a98",
+  "sourceRef": "c5ff38191ec225dd96d942acd052582712eca4cf",
+  "mergeRef": "a30f17692d5ebbf95d88b5e733f818a128d76a52",
+  "workflow": 42686789652,
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 7305,
+      "sha256": "0c84cef57a622693f713267080159425647452f9dffca03be5a169ebf05f0c9a"
+    },
+    {
+      "file": "assets/index-BvH2-EFx.js",
+      "bytes": 652053,
+      "sha256": "9a6c443ef5de6d00cca4fb75e719b453706b876f9445039eba9058d96c4148d8"
+    },
+    {
+      "file": "assets/Avenir-BNf4M8uZ.js",
+      "bytes": 25274,
+      "sha256": "c3ab92fc5835c5803dc0d4dc8426fe5d3bd5f3fa03d5d207ff2684e2ae63b8c7"
+    },
+    {
+      "file": "assets/Avenir-kTg-JGE0.css",
+      "bytes": 3480,
+      "sha256": "7cbde9daec3461aca9fab4b42facff9129635343cbb3dd179757d1329f047be8"
+    },
+    {
+      "file": "assets/Languages-D54NzhX_.js",
+      "bytes": 79296,
+      "sha256": "dc46b17cbcf838b3fda35705d82cf2cd846431ce03ac317f015d8f7cb0e0cb8b"
+    },
+    {
+      "file": "assets/Languages-Be2IHY5S.css",
+      "bytes": 3500,
+      "sha256": "037524f43f8b6b471e2b8b2ae43bb3e767e8e7ca51efba1751ada19375f9f77b"
+    },
+    {
+      "file": "assets/public.en-DgbGf0Kj.js",
+      "bytes": 360446,
+      "sha256": "a74e2ee84356b052dad8775b8f31376d93c7b2d95541c117d9edd8b6de79663f"
+    },
+    {
+      "file": "assets/public.es-CYZl5LKq.js",
+      "bytes": 376297,
+      "sha256": "1c8a5ba7c805ac47e2df859fbd3259114698312d4b8a1e042130402dc1eabca3"
+    },
+    {
+      "file": "assets/public.it-pfLx57-w.js",
+      "bytes": 375343,
+      "sha256": "8fe375bc9ab1bd5a65ee8af3ec4d831670404bfb780428f22bc5ba5fcfe6bc45"
+    },
+    {
+      "file": "assets/public.de-CNyMPQn1.js",
+      "bytes": 449703,
+      "sha256": "249f4c8a5b1ad2fa877abb04a66a36042a6f1d5e55262128f7c1680efeb4120a"
+    },
+    {
+      "file": "assets/public.ar-Dez098I1.js",
+      "bytes": 437648,
+      "sha256": "c29e710f90c54125c582a89dc93244ae5a86df62ca20d61de3ef623a6054dbf7"
+    },
+    {
+      "file": "assets/guide-en-CzUfZh1o.pdf",
+      "bytes": 1282096,
+      "sha256": "224dd84fd72182d3a0c158dd53271fd38836b04a4b823e9ec001edf8b5e6c1c6",
+      "langue": "en",
+      "reponses": 110,
+      "casesSuivi": 110,
+      "pages": 56
+    },
+    {
+      "file": "assets/guide-es-BqFylxvE.pdf",
+      "bytes": 1294748,
+      "sha256": "8aef73298b35ae31f75f58a5c923598a7bdddedc62aa1cfd1ebfa5a5b3baaf88",
+      "langue": "es",
+      "reponses": 122,
+      "casesSuivi": 122,
+      "pages": 55
+    },
+    {
+      "file": "assets/guide-it-DbbfBjC_.pdf",
+      "bytes": 932472,
+      "sha256": "d6bf915488e2eb540f83a80e9906528a117d0ebcd64b212048b2eb613062eaaa",
+      "langue": "it",
+      "reponses": 86,
+      "casesSuivi": 86,
+      "pages": 49
+    },
+    {
+      "file": "assets/guide-de-DIlKC2Yp.pdf",
+      "bytes": 909129,
+      "sha256": "0426f60db19d558f0a34429a044301782acddac641b4f29f656273226d858f4d",
+      "langue": "de",
+      "reponses": 100,
+      "casesSuivi": 100,
+      "pages": 47
+    },
+    {
+      "file": "assets/guide-ar--VN9WzV_.pdf",
+      "bytes": 1184231,
+      "sha256": "9fff1b99a396af2276aa652c1b504b2e302a38dbe2f60db6be7c4c5764dda0ed",
+      "langue": "ar",
+      "reponses": 86,
+      "casesSuivi": 86,
+      "pages": 50
+    }
+  ],
+  "pagesRun": 42689803165,
+  "pagesConclusion": "success",
+  "unitTestsUTC": 845,
+  "unitTestsParis": 845,
+  "browserTests": 418,
+  "publicSmoke": {
+    "checkedAt": "2026-11-09T20:08:11.063Z",
+    "viewport": "360x740",
+    "profil": "fictif",
+    "services": "bloqués ou simulés ; aucun compte réel",
+    "importNotes": true,
+    "classementManuel": true,
+    "retourNotesSite": true,
+    "preferenceRelue": true,
+    "pdfInteractiviteAnnoncee": true,
+    "errors": []
+  }
+}
