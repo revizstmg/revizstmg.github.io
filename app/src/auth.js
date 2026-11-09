@@ -216,11 +216,12 @@ export function hasOAuthRedirect() {
   } catch { return false }
 }
 async function getUser(token) {
-  try {
-    const res = await fetch(`${SUPA_URL}/auth/v1/user`, { headers: { apikey: SUPA_ANON, Authorization: 'Bearer ' + token } })
-    if (!res.ok) return null
-    return await res.json().catch(() => null)
-  } catch { return null }
+  return withNetworkTimeout(async signal => {
+    const res = await fetch(`${SUPA_URL}/auth/v1/user`, { signal, headers: { apikey: SUPA_ANON, Authorization: 'Bearer ' + token } })
+    const data = await res.json().catch(() => null)
+    if (!res.ok || !data?.id) throw new Error('La connexion a échoué. Réessaie de te connecter.')
+    return data
+  })
 }
 // Consomme le retour OAuth : enregistre la session, nettoie l'URL. Renvoie
 // { ok, user } en cas de succès, { error } en cas d'échec, null si rien à faire.
@@ -231,10 +232,15 @@ export async function consumeOAuthRedirect() {
   if (params.get('error')) { const e = params.get('error_description') || params.get('error'); cleanHash(); return { error: e } }
   const access_token = params.get('access_token')
   if (!access_token) return null
-  const user = await getUser(access_token)
-  saveSession({ access_token, refresh_token: params.get('refresh_token'), expires_in: params.get('expires_in'), user })
+  // Retirer immédiatement les jetons de l'adresse, même si le fournisseur attend.
   cleanHash()
-  return { ok: true, user }
+  const previous = getSession()?.token
+  try {
+    const user = await getUser(access_token)
+    if (getSession()?.token !== previous) throw new Error('La session a changé. Reconnecte-toi.')
+    saveSession({ access_token, refresh_token: params.get('refresh_token'), expires_in: params.get('expires_in'), user })
+    return { ok: true, user }
+  } catch (error) { return { error: error.message || 'La connexion a échoué. Réessaie de te connecter.' } }
 }
 
 // Mot de passe oublié : envoie un e-mail de récupération (lien + code OTP selon
@@ -256,11 +262,11 @@ export async function verifyRecovery({ email, token }) {
 export async function updatePassword(password) {
   const s = getSession()
   if (!s?.token) throw new Error('no session')
-  const res = await withNetworkTimeout(signal=>authFetch(`${SUPA_URL}/auth/v1/user`, {
-    signal,method: 'PUT',
-    body: JSON.stringify({ password }),
-  }))
-  if (!res.ok) { const d = await res.json().catch(() => ({})); throw new Error(d.error_description || d.msg || d.message || `Erreur ${res.status}`) }
+  await withNetworkTimeout(async signal => {
+    const res = await authFetch(`${SUPA_URL}/auth/v1/user`, { signal, method: 'PUT', body: JSON.stringify({ password }) })
+    if (!res.ok) { const d = await res.json().catch(() => ({})); throw new Error(d.error_description || d.msg || d.message || `Erreur ${res.status}`) }
+    if (getSession()?.user?.id !== s.user?.id) throw new Error('La session a changé. Reconnecte-toi.')
+  })
   return true
 }
 
@@ -269,15 +275,17 @@ export async function upsertProfile(patch) {
   const s = getSession()
   if (!s?.token || !s.user?.id) throw new Error('no session')
   const row = { id: s.user.id, email: s.user.email, ...patch, updated_at: new Date().toISOString() }
-  const res = await authFetch(`${SUPA_URL}/rest/v1/profiles?on_conflict=id`, {
-    method: 'POST',
-    headers: { Prefer: 'resolution=merge-duplicates,return=representation' },
-    body: JSON.stringify([row]),
+  return withNetworkTimeout(async signal => {
+    const res = await authFetch(`${SUPA_URL}/rest/v1/profiles?on_conflict=id`, {
+      signal, method: 'POST',
+      headers: { Prefer: 'resolution=merge-duplicates,return=representation' },
+      body: JSON.stringify([row]),
+    })
+    if (!res.ok) throw new Error('profile ' + res.status)
+    const rows = await res.json()
+    if (getSession()?.user?.id !== s.user.id) throw new Error('La session a changé. Reconnecte-toi.')
+    return rows[0] || row
   })
-  if (!res.ok) throw new Error('profile ' + res.status)
-  const rows = await withNetworkTimeout(() => res.json())
-  if (getSession()?.user?.id !== s.user.id) throw new Error('La session a changé. Reconnecte-toi.')
-  return rows[0] || row
 }
 
 // Sauvegarde la progression (jsonb) sur la ligne profil de l'utilisateur connecté,

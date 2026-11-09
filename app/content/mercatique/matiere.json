@@ -415,20 +415,17 @@
           "icon": "✏️",
           "questions": [
             {
-              "text": "La façon subjective et sélective d’interpréter l’information s’appelle la ____ .",
-              "answer": "perception",
+              "text": "Acheter pour se faire plaisir correspond à un mobile ___.",
+              "answer": "hédoniste",
               "alt": [
-                "la perception"
+                "hedoniste"
               ],
-              "explain": "La perception filtre l’information selon les attentes de chacun."
+              "explain": "Le mobile hédoniste pousse à se faire plaisir."
             },
             {
-              "text": "Une opinion favorable ou défavorable envers un produit est une ____ .",
-              "answer": "attitude",
-              "alt": [
-                "une attitude"
-              ],
-              "explain": "L’attitude prédispose à l’achat ou au rejet."
+              "text": "Offrir un cadeau pour faire plaisir à autrui correspond à un mobile ___.",
+              "answer": "oblatif",
+              "explain": "Le mobile oblatif pousse à faire plaisir aux autres."
             },
             {
               "text": "La force qui pousse à l’achat est une ____ .",

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { nombre } from '../format.js'
 import { Navigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
@@ -88,6 +88,8 @@ function FriendsPage() {
   const [msg, setMsg] = useState(null)
   const [busy, setBusy] = useState(false)
   const [copied, setCopied] = useState(false)
+  const copyTimer = useRef(null)
+  useEffect(() => () => clearTimeout(copyTimer.current), [])
   const [flow, setFlow] = useState(null)
   const [sel, setSel] = useState(() => new Set())
 
@@ -145,7 +147,14 @@ function FriendsPage() {
   }
   const answer = async (id, ok) => { setBusy(true); try { await respond(id, ok); await load() } catch { setMsg({kind:'err',text:t('rankOffline')}) } setBusy(false) }
   const drop = async (dev) => { if (!confirm(t('friendRemoveConfirm'))) return; setBusy(true); try { await removeFriend(dev); await load() } catch { setMsg({kind:'err',text:t('rankOffline')}) } setBusy(false) }
-  const copy = () => { try { navigator.clipboard?.writeText(code); setCopied(true); setTimeout(() => setCopied(false), 1500) } catch { /* */ } }
+  const copy = async () => {
+    clearTimeout(copyTimer.current); setCopied(false); setMsg(null)
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('clipboard')
+      await navigator.clipboard.writeText(code)
+      setCopied(true); copyTimer.current = setTimeout(() => setCopied(false), 1500)
+    } catch { setMsg({ kind: 'err', copy: true, text: t('copyManual') }) }
+  }
 
   // ---- Duels (synchrone) ----
   const openSetup = (friend) => { setView('duels'); setSel(new Set()); setMsg(null); setFlow({ step: 'setup', friend }) }
@@ -312,7 +321,7 @@ function FriendsPage() {
         <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">{t('friendsSub')}</p>
       </header>
       <Tabs />
-      {msg && <p role={msg.kind === 'err' ? 'alert' : 'status'} className={`card p-3 text-sm ${msg.kind === 'ok' ? 'text-emerald-700 dark:text-emerald-400' : 'text-rose-700 dark:text-rose-400'}`}>{msg.text}{msg.kind === 'err' && <span className="mt-1 block">Ta demande n’a pas été confirmée. Tu peux réessayer avec le même bouton.</span>}</p>}
+      {msg && <p role={msg.kind === 'err' ? 'alert' : 'status'} className={`card p-3 text-sm ${msg.kind === 'ok' ? 'text-emerald-700 dark:text-emerald-400' : 'text-rose-700 dark:text-rose-400'}`}>{msg.text}{msg.kind === 'err' && !msg.copy && <span className="mt-1 block">Ta demande n’a pas été confirmée. Tu peux réessayer avec le même bouton.</span>}</p>}
 
       {status === 'error' && <div className="card p-6 text-center text-sm text-slate-500 dark:text-slate-400">{t('rankOffline')}</div>}
 

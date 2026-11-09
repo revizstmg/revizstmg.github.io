@@ -4,6 +4,8 @@ Référence examinée : `c702938bb55b3456733cd7726951b67940fcd2f4`. La source pr
 
 La première passe a été interrompue par une limite d'utilisation. Les résultats effectivement terminés ont été récupérés, puis cinq agents ont achevé leurs volets et recherché des cas supplémentaires. Les échecs de serveur local et les sondes non concluantes ne sont pas comptés comme des défauts du site.
 
+Les correctifs de ces constats sont décrits dans [le suivi des corrections](../corrections-neuf-defauts.md). Le journal de coordination précise leur état de publication. Cet audit conserve les observations de la version examinée.
+
 ## Neuf défauts confirmés, par priorité
 
 La note indique l'importance estimée, de 1 (mineur) à 10 (critique). Les scénarios de panne sont simulés : ils démontrent un défaut de reprise, pas une indisponibilité actuelle d'un service externe.
