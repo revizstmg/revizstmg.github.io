@@ -1,3 +1,4 @@
+import { lireNote } from '../notesClasse.js'
 // Repérage d'intérêts déclaré par l'élève, sans diagnostic ni prédiction d'admission.
 export const DOMAINES = [
  ['finance','Gestion et finance','Analyser, vérifier et organiser des chiffres.',[
@@ -42,12 +43,16 @@ export const ETAPES = [...DOMAINES.map(d=>({id:d.id,title:d.title,questions:d.qu
 export const TOTAL = ETAPES.reduce((n,s)=>n+s.questions.length,0)
 export function reponseValide(q,v){return q.options?Number.isInteger(v)&&v>=0&&v<q.options.length:v==='?'||Number.isInteger(v)&&v>=0&&v<=4}
 export function nettoyerReponses(raw){return Object.fromEntries(ETAPES.flatMap(s=>s.questions).filter(q=>reponseValide(q,raw?.[q.id])).map(q=>[q.id,raw[q.id]]))}
-export function bilanAvenir(raw){
+export function bilanAvenir(raw, notes = {}){
  const answers=nettoyerReponses(raw)
  return DOMAINES.map(d=>{
   const known=d.questions.filter(q=>typeof answers[q.id]==='number'),positifs=known.filter(q=>answers[q.id]>=3)
-  return {...d,known:known.length,positifs:positifs.map(q=>q.label),moyenne:known.length?known.reduce((s,q)=>s+answers[q.id],0)/known.length:0,explorable:known.length>=4&&positifs.length>=2}
- }).sort((a,b)=>Number(b.explorable)-Number(a.explorable)||b.moyenne-a.moyenne)
+  const scolaires = (MATIERES_DOMAINES[d.id] || []).filter(id=>Number.isFinite(notes[id]) && notes[id]>=0 && notes[id]<=20).map(id=>({id,note:notes[id]}))
+  const noteMoyenne = scolaires.length ? scolaires.reduce((n,r)=>n+r.note,0)/scolaires.length : null
+  const bonus = noteMoyenne===null?0:(noteMoyenne-10)/50
+  const moyenne = known.length?known.reduce((s,q)=>s+answers[q.id],0)/known.length:0
+  return {...d,notes:scolaires,noteMoyenne,bonus,indice:moyenne+bonus,known:known.length,positifs:positifs.map(q=>q.label),moyenne:known.length?known.reduce((s,q)=>s+answers[q.id],0)/known.length:0,explorable:known.length>=4&&positifs.length>=2}
+ }).sort((a,b)=>Number(b.explorable)-Number(a.explorable)||b.indice-a.indice)
 }
 export function conseilsContexte(a){
  const tips=[]
@@ -65,3 +70,32 @@ export function conseilsContexte(a){
 export const SOURCES = [
  ['Onisep : formations et métiers','https://www.onisep.fr/'],['Avenir(s) : explorer son orientation','https://avenirs.onisep.fr/'],['Parcoursup : formations et attendus','https://www.parcoursup.gouv.fr/'],['Les CROUS : aides et vie étudiante','https://www.lescrous.fr/'],
 ]
+
+// Pondération volontairement faible : les résultats ne ferment aucun domaine.
+export const MATIERES_DOMAINES = {
+ finance:['gestion-finance','sgn','maths','economie'], commerce:['mercatique','management','langues','maths'],
+ rh:['rh-communication','management','droit','francais','philosophie'], numerique:['sig','sgn','maths'],
+ droit:['droit','francais','philosophie'], economie:['economie','maths','histoire-geo'],
+ communication:['rh-communication','francais','langues','philosophie'], entreprendre:['management','sgn','gestion-finance','economie'],
+}
+export function notesPourAvenir(liste, overrides={}, allowedIds=null){
+ const groupes = new Map()
+ for(const n of Array.isArray(liste)?liste:[]){
+  if(!n || typeof n.note!=='number' || !Number.isFinite(n.note) || n.note<0 || n.note>20 || typeof n.matiere!=='string')continue
+  if(allowedIds && !allowedIds.includes(n.matiere))continue
+  const id=n.matiere.replace(/^p1-/,'')
+  if(!groupes.has(id))groupes.set(id,[])
+  groupes.get(id).push(n)
+ }
+ const notes=Object.fromEntries([...groupes].map(([id,rows])=>{
+  const last=rows.sort((a,b)=>String(b.date||'').localeCompare(String(a.date||''))||(b.ajouteLe||0)-(a.ajouteLe||0)).slice(0,5)
+  return [id,Math.round(last.reduce((n,r)=>n+r.note,0)/last.length*100)/100]
+ }))
+ for(const [id,raw] of Object.entries(overrides||{})){
+  if(!Object.values(MATIERES_DOMAINES).some(ids=>ids.includes(id)))continue
+  if(allowedIds && !allowedIds.some(raw=>raw.replace(/^p1-/, '')===id))continue
+  const note=lireNote(raw)
+  if(note===null)delete notes[id];else notes[id]=note
+ }
+ return notes
+}

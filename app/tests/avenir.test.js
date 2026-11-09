@@ -35,3 +35,22 @@ for(const lang of ['en','es','it','de','ar'])it(`questionnaire et conseils Aveni
  for(let i=0;i<4;i++)keys.push(...conseilsContexte({duree:i,alternance:i,mobilite:i,cout:i,cadre:i,maths:i,redaction:i}))
  for(const key of keys)expect(typeof book[key],`${lang}: ${key}`).toBe('string')
 })
+
+import {notesPourAvenir} from '../src/data/avenir.js'
+it('notes : zéro conservé, cinq plus récentes et niveau courant, saisie facultative',()=>{
+ const list=[...Array.from({length:6},(_,i)=>({matiere:'maths',note:i===0?20:0,date:`2026-10-${10+i}`})),{matiere:'p1-maths',note:20,date:'2026-11-01'},{matiere:'maths',note:30}]
+ expect(notesPourAvenir(list,{},['maths']).maths).toBe(0)
+ expect(notesPourAvenir(list,{maths:'12,5'},['maths']).maths).toBe(12.5)
+ expect(notesPourAvenir(list,{maths:''},['maths']).maths).toBeUndefined()
+ expect(notesPourAvenir(list,{maths:'invalide'},['maths']).maths).toBeUndefined()
+ expect(notesPourAvenir(list,{'gestion-finance':'20'},['maths'])['gestion-finance']).toBeUndefined()
+})
+it('les notes départagent des intérêts proches, sans créer ni supprimer une piste',()=>{
+ const a=Object.fromEntries(DOMAINES.flatMap(d=>d.questions.map(q=>[q.id,['finance','droit'].includes(d.id)?4:0])))
+ const rows=bilanAvenir(a,{'gestion-finance':0,sgn:0,maths:0,economie:0,droit:20,philosophie:20,francais:20})
+ expect(rows[0].id).toBe('droit');expect(rows.find(d=>d.id==='finance').explorable).toBe(true)
+ for(const d of rows)expect(Math.abs(d.bonus)).toBeLessThanOrEqual(.2)
+ expect(bilanAvenir({}, {droit:20}).some(d=>d.explorable)).toBe(false)
+ expect(bilanAvenir(a,{maths:80}).find(d=>d.id==='finance').bonus).toBe(0)
+ expect(bilanAvenir(a).every(d=>d.bonus===0)).toBe(true)
+})

@@ -24,11 +24,11 @@ for(const [sid,track] of [['langues',{level:'terminale-stmg',specialty:'gestion-
    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true)
    await page.evaluate(() => Promise.all(document.getAnimations().map(a => a.finished.catch(() => {}))))
    expect((await new AxeBuilder({page}).include('main').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([])
-   await page.screenshot({path:info.outputPath(`langues-${dark?'sombre':'clair'}.png`),fullPage:true})
+   await page.screenshot({path:info.outputPath(`langues-${dark?'sombre':'clair'}.png`),fullPage:true,scale:'css'})
   }
   await page.setViewportSize({width:1280,height:900})
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true)
-  await page.screenshot({path:info.outputPath('langues-ordinateur.png'),fullPage:true})
+  await page.screenshot({path:info.outputPath('langues-ordinateur.png'),fullPage:true,scale:'css'})
   const arabic=catalogue.find(g=>g.id==='ar')
   await page.locator('.language-video-library summary').click()
   await expect(page.locator('.language-video-list a')).toHaveCount(arabic.videos.length)

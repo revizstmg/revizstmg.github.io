@@ -3544,5 +3544,16 @@
   "Ces réponses ajustent les conseils pratiques. Elles ne modifient pas tes intérêts.": "هذه الإجابات تضبط النصائح العملية. إنهم لا يغيرون اهتماماتك.",
   "Continuer": "تابع",
   "À préciser": "سيتم تحديده",
-  "Le classement utilise la moyenne de tes réponses connues, de 0 à 4. Une piste est mise en avant avec au moins quatre réponses connues et deux réponses « Plutôt oui » ou « Beaucoup ». « Je ne sais pas encore » n’est pas un refus. En cas d’égalité, explore les pistes au même niveau.": "يعتمد الترتيب على متوسط إجاباتك المعروفة من 0 إلى 4. يُبرز المجال عند وجود أربع إجابات معروفة على الأقل، منها إجابتان على الأقل بدرجة 3 أو 4. لا تُعدّ إجابة «لا أعرف بعد» رفضًا. عند التعادل، تعامل مع المجالات بوصفها خيارات متكافئة للاستكشاف."
+  "Le classement utilise la moyenne de tes réponses connues, de 0 à 4. Une piste est mise en avant avec au moins quatre réponses connues et deux réponses « Plutôt oui » ou « Beaucoup ». « Je ne sais pas encore » n’est pas un refus. En cas d’égalité, explore les pistes au même niveau.": "يعتمد الترتيب على متوسط إجاباتك المعروفة من 0 إلى 4. يُبرز المجال عند وجود أربع إجابات معروفة على الأقل، منها إجابتان على الأقل بدرجة 3 أو 4. لا تُعدّ إجابة «لا أعرف بعد» رفضًا. عند التعادل، تعامل مع المجالات بوصفها خيارات متكافئة للاستكشاف.",
+  "Mes notes (facultatif)": "درجاتي (اختياري)",
+  "Les intérêts restent prioritaires. Les notes ajustent seulement les pistes proches, sans exclure un domaine. Elles ne prédisent pas une admission.": "تبقى اهتماماتك هي الأساس. تساعد الدرجات فقط في ترتيب المسارات المتقاربة، ولا تستبعد أي مجال ولا تتنبأ بالقبول.",
+  "Prendre mes notes en compte": "أخذ درجاتي في الحسبان",
+  "Le site propose la moyenne simple des cinq dernières notes saisies par matière dans ton niveau actuel. Tu peux la remplacer par ta moyenne de bulletin. Vide un champ pour ignorer cette matière.": "يقترح الموقع المتوسط الحسابي لآخر خمس درجات مسجلة لكل مادة في مستواك الدراسي الحالي. يمكنك استبداله بمتوسط كشف الدرجات. اترك الحقل فارغًا لعدم احتساب تلك المادة.",
+  "Indique une note de 0 à 20, ou laisse le champ vide.": "أدخل درجة من 0 إلى 20، أو اترك الحقل فارغًا.",
+  "Repères scolaires": "مؤشرات دراسية",
+  "PDF interactif : champs de réponse, choix de QCM et cases « À retravailler ». Télécharge le fichier et enregistre une copie dans un lecteur compatible pour conserver tes réponses.": "ملف PDF تفاعلي يتضمن حقول إجابة واختيارًا من متعدد وخانات لتحديد ما يحتاج إلى مراجعة. نزّل الملف واحفظ نسخة باستخدام قارئ PDF متوافق للاحتفاظ بإجاباتك.",
+  "Certaines bases méritent un accompagnement. Demande les attendus et les aides disponibles : cette piste reste à explorer.": "قد تحتاج بعض الأساسيات إلى دعم. اسأل عن المتطلبات والمساعدة المتاحة؛ يظل هذا المسار جديرًا بالاستكشاف.",
+  "Appuie-toi sur ces résultats pour comparer les attendus et préparer tes questions lors des portes ouvertes.": "استفد من هذه النتائج لمقارنة المتطلبات وإعداد أسئلتك للأيام المفتوحة.",
+  "Avec les notes activées, la moyenne des matières liées à chaque domaine ajoute ou retire au maximum 0,2 point au score d’intérêt, calculé de 0 à 4. Sans note pertinente, l’indice reste inchangé.": "عند تفعيل الدرجات، يضيف متوسط المواد المرتبطة بكل مجال أو يطرح بحد أقصى 0.2 نقطة من درجة الاهتمام الأصلية المحسوبة من 0 إلى 4. وإذا لم تتوفر درجة ذات صلة، فلا يتغير مؤشر الترتيب.",
+  "Reprendre les notes du site": "استخدام الدرجات المسجلة"
 }

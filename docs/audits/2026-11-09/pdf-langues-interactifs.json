@@ -1,0 +1,67 @@
+[
+  {
+    "reference": "c951c8c1fdb8a5aca66b91e0771fd778e3eb6fc7",
+    "langue": "en",
+    "pages": 56,
+    "reponses": 110,
+    "casesSuivi": 110,
+    "liensInternes": 252,
+    "texteAnterieurConserve": true,
+    "saisieRelue": "Réponse test : mañana, perché, Grüße.",
+    "choixRelu": "A",
+    "suiviRelu": "Yes",
+    "sha256": "224dd84fd72182d3a0c158dd53271fd38836b04a4b823e9ec001edf8b5e6c1c6"
+  },
+  {
+    "reference": "c951c8c1fdb8a5aca66b91e0771fd778e3eb6fc7",
+    "langue": "es",
+    "pages": 55,
+    "reponses": 122,
+    "casesSuivi": 122,
+    "liensInternes": 277,
+    "texteAnterieurConserve": true,
+    "saisieRelue": "Réponse test : mañana, perché, Grüße.",
+    "choixRelu": "A",
+    "suiviRelu": "Yes",
+    "sha256": "8aef73298b35ae31f75f58a5c923598a7bdddedc62aa1cfd1ebfa5a5b3baaf88"
+  },
+  {
+    "reference": "c951c8c1fdb8a5aca66b91e0771fd778e3eb6fc7",
+    "langue": "it",
+    "pages": 49,
+    "reponses": 86,
+    "casesSuivi": 86,
+    "liensInternes": 204,
+    "texteAnterieurConserve": true,
+    "saisieRelue": "Réponse test : mañana, perché, Grüße.",
+    "choixRelu": "A",
+    "suiviRelu": "Yes",
+    "sha256": "d6bf915488e2eb540f83a80e9906528a117d0ebcd64b212048b2eb613062eaaa"
+  },
+  {
+    "reference": "c951c8c1fdb8a5aca66b91e0771fd778e3eb6fc7",
+    "langue": "ar",
+    "pages": 50,
+    "reponses": 86,
+    "casesSuivi": 86,
+    "liensInternes": 203,
+    "texteAnterieurConserve": true,
+    "saisieRelue": "مرحبا بالعالم",
+    "choixRelu": "A",
+    "suiviRelu": "Yes",
+    "sha256": "9fff1b99a396af2276aa652c1b504b2e302a38dbe2f60db6be7c4c5764dda0ed"
+  },
+  {
+    "reference": "c951c8c1fdb8a5aca66b91e0771fd778e3eb6fc7",
+    "langue": "de",
+    "pages": 47,
+    "reponses": 100,
+    "casesSuivi": 100,
+    "liensInternes": 230,
+    "texteAnterieurConserve": true,
+    "saisieRelue": "Réponse test : mañana, perché, Grüße.",
+    "choixRelu": "A",
+    "suiviRelu": "Yes",
+    "sha256": "0426f60db19d558f0a34429a044301782acddac641b4f29f656273226d858f4d"
+  }
+]

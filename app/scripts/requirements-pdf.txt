@@ -1,0 +1,2 @@
+# Génération et vérification manuelles des formulaires des cinq guides.
+PyMuPDF==1.26.6
