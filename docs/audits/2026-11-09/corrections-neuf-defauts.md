@@ -27,3 +27,9 @@ Les rapports de `cinq-agents/` décrivent la version `c702938bb`. Cette interven
 - Empreinte actualisée et vérifiée pour les quatre thèmes voulus uniquement ; compilation réussie. La première suite complète a réussi 831 contrôles sur 832 et signalé l’index léger SIG devenu incohérent après le déplacement du jeu. L’index est régénéré par `npm run chapitres` : une seule valeur de SIG change. Les contrôles de chargement/contenu et la compilation sont repris avant publication. Les résultats finaux sont consignés dans le journal après leur achèvement.
 
 Les comptes, réponses réseau, voix et services IA sont simulés dans les tests. Aucun achat, envoi de copie réelle, changement de base ou donnée NAH. Les fichiers compilés à la racine ne sont pas modifiés à la main.
+
+## Validation complète sur GitHub
+
+La PR #209 est fusionnée : corrections `39927b595`, fusion `6cccaaed1`. Le workflow [42629978126](https://github.com/revizstmg/revizstmg.github.io/actions/runs/42629978126) a réussi : **832 tests en UTC, 832 à l’heure de Paris, 413 parcours navigateur**, puis compilation et publication automatique. Aucun contrôle supprimé. Version compilée : `fa47c17f0558993a89407825e9bad4190a425a3f`.
+
+GitHub Pages [42632573165](https://github.com/revizstmg/revizstmg.github.io/actions/runs/42632573165) a réussi. Après déploiement, l’index public, les quinze modules/styles du graphe actif contrôlés et les 61 PDF sont identiques octet par octet à la version compilée. Preuves : `corrections-publication.json`. Le premier contrôle, tenté pendant le déploiement, lisait encore l’ancien index ; le contrôle complet après réussite Pages est conforme.
