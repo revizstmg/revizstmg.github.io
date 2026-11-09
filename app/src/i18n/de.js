@@ -1,5 +1,6 @@
 // Deutsche Benutzeroberfläche, lokal geladen und offline verfügbar.
 export default {
+  parcoursAvenir: 'Zukunftswege',
   copyManual: "Kopieren fehlgeschlagen. Markiere deinen Code und kopiere ihn manuell.",
   duelSending: "Wird gesendet…",
   duelSendError: "Das Senden wurde nicht bestätigt. Dein Ergebnis bleibt hier erhalten; versuche es erneut.",

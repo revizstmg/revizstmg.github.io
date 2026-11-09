@@ -41,7 +41,7 @@ export function nomEcran(chemin) {
   // De même : la liste des matières (« Cours ») compte pour « matiere », et la
   // séance du jour et le parcours personnalisé pour « revision ».
   // Les pages explicatives rejoignent le compteur guide existant, sans donnée nouvelle.
-  if (['offres','exemple-bilan','sport-bac'].includes(p[0]) && p.length === 1) return 'guide'
+  if (['offres','exemple-bilan','sport-bac','parcours-avenir'].includes(p[0]) && p.length === 1) return 'guide'
   if (p[0] === 'cours' && p.length === 1) return 'matiere'
   if (p[0] === 'missions' && p.length === 4) return 'revision'
   if (['seance', 'parcours', 'vacances'].includes(p[0]) && p.length === 1) return 'revision'
