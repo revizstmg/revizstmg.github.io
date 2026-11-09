@@ -26,3 +26,12 @@ it('fusion indépendante du dossier Avenir, effacement conservé, révisions pr�
 it('orientation accessible, parcours de révision toujours Ultimate',()=>{
  expect(estPagePayante('/parcours-avenir')).toBe(false);expect(estPageUltimate('/parcours-avenir')).toBe(false);expect(estPageUltimate('/parcours')).toBe(true)
 })
+
+import {ECHELLE,SOURCES,CONTEXTE} from '../src/data/avenir.js'
+import {readFileSync} from 'node:fs'
+for(const lang of ['en','es','it','de','ar'])it(`questionnaire et conseils Avenir disponibles hors ligne en ${lang}`,()=>{
+ const book=JSON.parse(readFileSync(new URL(`../src/localisation/public.${lang}.json`,import.meta.url),'utf8'))
+ const keys=[...DOMAINES.flatMap(d=>[d.title,d.intro,d.vigilance,...d.questions.map(q=>q.label),...d.metiers]),...CONTEXTE.flatMap(q=>[q.label,...q.options]),...ECHELLE.map(o=>o.label),...SOURCES.map(s=>s[0])]
+ for(let i=0;i<4;i++)keys.push(...conseilsContexte({duree:i,alternance:i,mobilite:i,cout:i,cadre:i,maths:i,redaction:i}))
+ for(const key of keys)expect(typeof book[key],`${lang}: ${key}`).toBe('string')
+})

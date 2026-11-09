@@ -30,3 +30,9 @@ test('menu desktop : accès à Parcours Avenir',async({page})=>{
  await dialog.locator('summary').filter({hasText:/outils/i}).click();await dialog.getByRole('link',{name:/Parcours Avenir/}).click()
  await expect(page.getByRole('heading',{name:'Parcours Avenir',exact:true})).toBeVisible()
 })
+test('questionnaire anglais utilisable avec les services externes bloqués',async({page})=>{
+ await preparer(page,etatEleve({lang:'en'}),{abonnement:null});await page.goto('/#/parcours-avenir')
+ await page.getByRole('button',{name:'Start my questionnaire',exact:true}).click()
+ await expect(page.getByRole('heading',{name:'Accounting and finance',exact:true})).toBeVisible()
+ await expect(page.locator('fieldset').first()).toContainText('Understand how a company makes or loses money.')
+})
