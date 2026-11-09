@@ -1,6 +1,7 @@
 // Libellés d'interface en arabe, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  parcoursAvenir: 'المسار المستقبلي',
   copyManual: "تعذّر النسخ. حدّد الرمز لنسخه يدويًا.",
   duelSending: "جارٍ الإرسال…",
   duelSendError: "لم يتم تأكيد الإرسال. نتيجتك محفوظة هنا؛ حاول مجددًا.",

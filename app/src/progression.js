@@ -315,7 +315,8 @@ export function mergeProgress(a, b, maintenant = Date.now()) {
     const [vieux, recent] = (pb?.maj || 0) > (pa?.maj || 0) ? [pa, pb] : [pb, pa]
     const positionnement = { ...(vieux?.positionnement || {}) }
     for (const [id, r] of Object.entries(recent?.positionnement || {})) positionnement[id] = (positionnement[id]?.date || '') > (r?.date || '') ? positionnement[id] : r
-    out.parcours = { ...(vieux || {}), ...(recent || {}), positionnement, vacances: mergeVacances(pa?.vacances, pb?.vacances) }
+    out.parcours = { ...(vieux || {}), ...(recent || {}), positionnement, vacances: mergeVacances(pa?.vacances, pb?.vacances),
+      ...((pa?.avenir || pb?.avenir) ? { avenir: (pb?.avenir?.maj || 0) > (pa?.avenir?.maj || 0) ? pb.avenir : (pa?.avenir || pb?.avenir) } : {}) }
   }
 
   out._sync = meta

@@ -1,6 +1,7 @@
 // Libellés d'interface en italien, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  parcoursAvenir: 'Orientamento',
   copyManual: "Copia non riuscita. Seleziona il codice per copiarlo manualmente.",
   duelSending: "Invio in corso…",
   duelSendError: "Invio non confermato. Il risultato è conservato qui; riprova.",

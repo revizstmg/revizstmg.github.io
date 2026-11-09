@@ -1,5 +1,6 @@
 // Source française des libellés de l’interface.
 export default {
+  parcoursAvenir: 'Parcours Avenir',
   copyManual: "La copie a échoué. Sélectionne ton code pour le copier manuellement.",
   duelSending: "Transmission en cours…",
   duelSendError: "Envoi non confirmé. Ton résultat est conservé ici ; réessaie.",

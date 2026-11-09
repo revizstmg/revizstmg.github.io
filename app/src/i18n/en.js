@@ -1,6 +1,7 @@
 // Libellés d'interface en anglais, chargés seulement quand l'élève choisit
 // cette langue (voir src/i18n.js). Les clés absentes retombent sur le français.
 export default {
+  parcoursAvenir: 'Future pathways',
   copyManual: "Copy failed. Select your code to copy it manually.",
   duelSending: "Sending…",
   duelSendError: "Sending was not confirmed. Your result is kept here; try again.",

@@ -419,7 +419,7 @@ function Breadcrumb() {
 
   // Titre de l'onglet : la page en cours, puis le nom du site.
   // Les pages sans fil d'Ariane (cours, séance…) ont un titre propre plutôt que le titre générique.
-  const TITRES_SANS_FIL = { '/cours': 'Cours', '/seance': 'Séance du jour', '/mes-notes': 'Mes notes de classe', '/vacances': 'Vacances', '/parcours': 'Parcours personnalisé', '/changer': 'Changer de niveau' }
+  const TITRES_SANS_FIL = { '/parcours-avenir': 'Parcours Avenir', '/cours': 'Cours', '/seance': 'Séance du jour', '/mes-notes': 'Mes notes de classe', '/vacances': 'Vacances', '/parcours': 'Parcours personnalisé', '/changer': 'Changer de niveau' }
   const dernier = crumbs.length > 1 ? crumbs[crumbs.length - 1].label : (TITRES_SANS_FIL[pathname.replace(/\/+$/, '')] || '')
   useEffect(() => {
     document.title = cleanCopy(dernier ? `${dernier} - RévizSTMG` : 'Révision bac STMG | RévizSTMG')
