@@ -1,5 +1,6 @@
 // Deutsche Benutzeroberfläche, lokal geladen und offline verfügbar.
 export default {
+  copyManual: "Kopieren fehlgeschlagen. Markiere deinen Code und kopiere ihn manuell.",
   duelSending: "Wird gesendet…",
   duelSendError: "Das Senden wurde nicht bestätigt. Dein Ergebnis bleibt hier erhalten; versuche es erneut.",
   epsIntro: "Aktivitäten, Bewertung und Training",
@@ -165,7 +166,7 @@ export default {
   "pause": "Pause",
   "audioReview": "Mit Audio lernen",
   "audioUnsupported": "Die Sprachwiedergabe ist auf diesem Gerät nicht verfügbar.",
-  "audioHint": "Freihändig hören: Begriff und Definition werden wiederholt vorgelesen.",
+  "audioHint": "Freihändig hören: Auf jeden Begriff folgt seine Definition.",
   "weeklyGoal": "Ziel der Woche",
   "weeklyGoalHint": "Arbeite diese Woche an {n}-Kapiteln, um einen Bonus zu erhalten.",
   "weeklyClaim": "Sammle die Belohnung ein",

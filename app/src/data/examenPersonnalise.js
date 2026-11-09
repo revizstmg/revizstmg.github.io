@@ -7,7 +7,7 @@ import { getSession, getValidToken } from '../auth.js'
 import { checkExam, checkPlan, DURATIONS } from '../../../supabase/functions/examen-blanc/contract.js'
 export { DURATIONS }
 export async function examCatalog() {
-  await chargerTout()
+  await withNetworkTimeout(() => chargerTout(), 30000)
   return SUBJECTS.filter(s => !s.comingSoon).flatMap(s => (s.chapters || []).flatMap(theme => themeChapters(theme).map(ch => ({ id: ch.id, title: ch.title, subject: s.name, level: s.niveau === 'premiere' ? 'premiere' : 'terminale', subjectId: s.id, themeId: theme.id, idx: ch.idx, section: ch.section }))))
 }
 export function courseText(section) {

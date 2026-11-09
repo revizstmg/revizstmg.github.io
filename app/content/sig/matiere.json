@@ -350,12 +350,12 @@
           "icon": "✏️",
           "questions": [
             {
-              "text": "Une donnée brute mise en contexte devient une ____ .",
-              "answer": "information",
+              "text": "Conserver une commande dans une base de données relève de la fonction ___ du SI.",
+              "answer": "stocker",
               "alt": [
-                "une information"
+                "stockage"
               ],
-              "explain": "Donnée → information → connaissance."
+              "explain": "Stocker consiste à conserver les informations pour les retrouver plus tard."
             },
             {
               "text": "Le logiciel unique à base de données partagée est un ____ .",
@@ -377,12 +377,12 @@
               "explain": "Les 4 fonctions : collecter, mémoriser, traiter, diffuser."
             },
             {
-              "text": "Le support technique du SI (matériel + logiciels) est le système ____ .",
-              "answer": "informatique",
+              "text": "Calculer le montant d’une commande relève de la fonction ___ du SI.",
+              "answer": "traiter",
               "alt": [
-                "informatique"
+                "traitement"
               ],
-              "explain": "Le SI inclut aussi acteurs et procédures."
+              "explain": "Traiter consiste à transformer l’information, par exemple en calculant le total d’une commande."
             }
           ]
         },

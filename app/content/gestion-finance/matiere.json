@@ -951,9 +951,9 @@
               "explain": "Marge de sécurité = CA − seuil de rentabilité."
             },
             {
-              "text": "La réserve légale représente 5 % du bénéfice jusqu’à 10 % du ___.",
-              "answer": "capital",
-              "explain": "Réserve légale : 5 % du bénéfice jusqu’à 10 % du capital."
+              "text": "Le point mort exprime le seuil de rentabilité en nombre de ___ d’activité.",
+              "answer": "jours",
+              "explain": "Le point mort traduit le seuil de rentabilité en durée, exprimée en jours."
             }
           ]
         },

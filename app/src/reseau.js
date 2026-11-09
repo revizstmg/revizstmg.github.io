@@ -35,14 +35,19 @@ export async function getJSON(url) {
 
 export async function send(method, path, body, prefer) {
   await requireSession()
-  const res = await withNetworkTimeout(signal => authFetch(rest(path), {
-    signal,
-    method,
-    headers: prefer ? { Prefer: prefer } : {},
-    body: body ? JSON.stringify(body) : undefined,
-  }))
-  if (!res.ok) throw await erreur(res, method)
-  return res
+  const owner = getSession()?.user?.id
+  return withNetworkTimeout(async signal => {
+    const res = await authFetch(rest(path), {
+      signal, method,
+      headers: prefer ? { Prefer: prefer } : {},
+      body: body ? JSON.stringify(body) : undefined,
+    })
+    if (!res.ok) throw await erreur(res, method)
+    // Lire tout le corps sous la même échéance, avant de rendre la réponse.
+    const text = await res.text()
+    if (getSession()?.user?.id !== owner) throw new Error('La session a changé. Reconnecte-toi.')
+    return new Response(text || null, { status: res.status, statusText: res.statusText, headers: res.headers })
+  })
 }
 
 // Fonction de la base (/rest/v1/rpc/<nom>).

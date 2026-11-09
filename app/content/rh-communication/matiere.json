@@ -752,12 +752,9 @@
           "icon": "✏️",
           "questions": [
             {
-              "text": "Un conflit larvé, non exprimé ouvertement, est ____ .",
-              "answer": "latent",
-              "alt": [
-                "latent"
-              ],
-              "explain": "Latent = sourd ; ouvert = déclaré."
+              "text": "Le désaccord sur la répartition des tâches est un conflit d’___.",
+              "answer": "organisation",
+              "explain": "La source du conflit est ici l’organisation du travail, notamment la répartition des tâches."
             },
             {
               "text": "Quand un tiers aide sans imposer, c’est la ____ .",
@@ -778,12 +775,9 @@
               "explain": "L’arbitre tranche et impose."
             },
             {
-              "text": "Un excès de cohésion crée du ____ .",
-              "answer": "conformisme",
-              "alt": [
-                "conformisme"
-              ],
-              "explain": "Les avis divergents ne s’expriment plus."
+              "text": "Un conflit qui clarifie les rôles et fait progresser l’équipe peut être ___.",
+              "answer": "constructif",
+              "explain": "Bien géré, le conflit peut être constructif et clarifier les rôles."
             }
           ]
         },

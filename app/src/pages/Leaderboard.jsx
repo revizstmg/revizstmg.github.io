@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
 import ClassCodeForm from '../components/ClassCodeForm.jsx'
 import { Icon } from '../components/ui.jsx'
-import { ensureMember, leaveStudentClass } from '../classroom.js'
+import { ensureMember } from '../classroom.js'
 import { submitScore, fetchRanking, fetchLeague, deviceId, normalizeCode, LEADERBOARD_READY } from '../leaderboard.js'
 
 const initialsOf = (name) => {
@@ -15,6 +16,7 @@ const medal = (i) => (i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `
 export default function Leaderboard() {
   const { state, derived, setClassCode } = useStore()
   const t = useT()
+  const navigate = useNavigate()
   const [view, setView] = useState('class') // 'class' | 'league'
   const [rows, setRows] = useState(null)
   const [status, setStatus] = useState('idle') // idle | loading | ok | error
@@ -164,7 +166,7 @@ export default function Leaderboard() {
           <p className="kicker">{t('classLabel')} · {classCode}</p>
           <h1 className="font-display text-3xl font-medium leading-tight">🏆 {t('weeklyRanking')}</h1>
         </div>
-        <button onClick={async () => { try { if (!estProf) await leaveStudentClass(classCode, myId) } catch { setStatus('error'); return } setClassCode(''); setRows(null) }} className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('leaveClass')}</button>
+        <button onClick={() => navigate('/classe')} className="shrink-0 text-xs font-semibold text-[#84671b] hover:underline dark:text-[#d9bd77]">{t('leaveClass')}</button>
       </header>
       <Tabs />
       <hr className="rule-gold" />

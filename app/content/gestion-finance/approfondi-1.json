@@ -1903,7 +1903,7 @@
         {
           "t": "warning",
           "h": "Piège",
-          "c": "Le seuil se calcule avec le **taux** de MCV, pas avec la MCV en euros. Diviser les charges fixes par la marge en euros donne un **nombre d’unités**, pas un chiffre d’affaires — deux résultats différents à ne pas confondre."
+          "c": "Le seuil se calcule avec le **taux** de MCV, pas avec la MCV en euros. Diviser les charges fixes par la **marge sur coût variable unitaire** donne un seuil en **nombre d’unités**. Diviser les charges fixes par le **taux** de MCV donne un seuil en chiffre d’affaires."
         }
       ]
     },
