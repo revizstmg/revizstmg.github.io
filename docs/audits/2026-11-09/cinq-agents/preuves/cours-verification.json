@@ -1,0 +1,963 @@
+{
+  "out": {
+    "themes": 110,
+    "sections": 861,
+    "games": 4320,
+    "qcm": 5332,
+    "exactDuplicateChoices": [],
+    "blankMissing": [],
+    "answersNotInSection": [
+      {
+        "theme": "gf-t3",
+        "idx": 5,
+        "title": "🎯 Le seuil de rentabilité et le point mort",
+        "game": "gf-t3-trou",
+        "q": {
+          "text": "La réserve légale représente 5 % du bénéfice jusqu’à 10 % du ___.",
+          "answer": "capital",
+          "explain": "Réserve légale : 5 % du bénéfice jusqu’à 10 % du capital."
+        }
+      },
+      {
+        "theme": "lng-en-gram",
+        "idx": 0,
+        "title": "Le présent simple et le présent continu (be + V-ing)",
+        "game": "lng-en-present-trou",
+        "q": {
+          "text": "She usually ____ (go) to school by bus.",
+          "answer": "goes",
+          "explain": "Present simple, 3ᵉ personne : go → goes."
+        }
+      },
+      {
+        "theme": "lng-en-gram",
+        "idx": 0,
+        "title": "Le présent simple et le présent continu (be + V-ing)",
+        "game": "lng-en-present-trou",
+        "q": {
+          "text": "Look! They ____ (play) football right now.",
+          "answer": "are playing",
+          "explain": "Action en cours → present continuous : be + V-ing."
+        }
+      },
+      {
+        "theme": "lng-en-gram",
+        "idx": 0,
+        "title": "Le présent simple et le présent continu (be + V-ing)",
+        "game": "lng-en-present-trou",
+        "q": {
+          "text": "I ____ (not like) coffee.",
+          "answer": "don't like",
+          "alt": [
+            "do not like"
+          ],
+          "explain": "Négation au présent simple : don’t + base."
+        }
+      },
+      {
+        "theme": "lng-en-gram",
+        "idx": 0,
+        "title": "Le présent simple et le présent continu (be + V-ing)",
+        "game": "lng-en-present-trou",
+        "q": {
+          "text": "He ____ (watch) TV every evening.",
+          "answer": "watches",
+          "explain": "3ᵉ pers. d’un verbe en -ch : watch → watches."
+        }
+      },
+      {
+        "theme": "lng-en-gram",
+        "idx": 2,
+        "title": "Le past perfect et le futur : will, be going to, be + V-ing",
+        "game": "lng-en-future-trou",
+        "q": {
+          "text": "I think it ____ (rain) tomorrow.",
+          "answer": "will rain",
+          "explain": "Prévision → will + base."
+        }
+      },
+      {
+        "theme": "lng-en-gram",
+        "idx": 2,
+        "title": "Le past perfect et le futur : will, be going to, be + V-ing",
+        "game": "lng-en-future-trou",
+        "q": {
+          "text": "Look at those clouds, it ____ (rain).",
+          "answer": "is going to rain",
+          "explain": "Indice présent → be going to."
+        }
+      },
+      {
+        "theme": "lng-en-gram",
+        "idx": 2,
+        "title": "Le past perfect et le futur : will, be going to, be + V-ing",
+        "game": "lng-en-future-trou",
+        "q": {
+          "text": "By 2030, she ____ (finish) her studies.",
+          "answer": "will have finished",
+          "explain": "Future perfect : will have + PP."
+        }
+      },
+      {
+        "theme": "lng-en-gram",
+        "idx": 2,
+        "title": "Le past perfect et le futur : will, be going to, be + V-ing",
+        "game": "lng-en-future-trou",
+        "q": {
+          "text": "Before he arrived, they ____ (already / leave).",
+          "answer": "had already left",
+          "explain": "Plus-que-parfait : had + PP."
+        }
+      },
+      {
+        "theme": "lng-en-gram",
+        "idx": 4,
+        "title": "Les conditionnels (if) et la voix passive (be + participe passé)",
+        "game": "lng-en-cond-trou",
+        "q": {
+          "text": "If I had studied, I ____ (pass) the exam.",
+          "answer": "would have passed",
+          "explain": "Type 3 : would have + PP."
+        }
+      },
+      {
+        "theme": "lng-en-gram",
+        "idx": 4,
+        "title": "Les conditionnels (if) et la voix passive (be + participe passé)",
+        "game": "lng-en-cond-trou",
+        "q": {
+          "text": "English ____ (speak) all over the world. [passif]",
+          "answer": "is spoken",
+          "explain": "Passif présent : is + PP."
+        }
+      },
+      {
+        "theme": "lng-es-gram",
+        "idx": 2,
+        "title": "Le passé composé et le plus-que-parfait (haber + participe)",
+        "game": "lng-es-perfecto-trou",
+        "q": {
+          "text": "Hoy yo ____ (comer) paella. [perfecto]",
+          "answer": "he comido",
+          "explain": "Perfecto : he + participio (comido)."
+        }
+      },
+      {
+        "theme": "lng-es-gram",
+        "idx": 2,
+        "title": "Le passé composé et le plus-que-parfait (haber + participe)",
+        "game": "lng-es-perfecto-trou",
+        "q": {
+          "text": "Nosotros ____ (ver) esa película. [perfecto]",
+          "answer": "hemos visto",
+          "explain": "ver → visto : hemos visto."
+        }
+      },
+      {
+        "theme": "lng-es-gram",
+        "idx": 2,
+        "title": "Le passé composé et le plus-que-parfait (haber + participe)",
+        "game": "lng-es-perfecto-trou",
+        "q": {
+          "text": "Cuando llegué, ellos ya ____ (salir). [pluscuamperfecto]",
+          "answer": "habían salido",
+          "explain": "Pluscuamperfecto : habían + participio."
+        }
+      },
+      {
+        "theme": "lng-es-gram",
+        "idx": 3,
+        "title": "Le futur et le conditionnel : terminaisons et radicaux irréguliers",
+        "game": "lng-es-futuro-trou",
+        "q": {
+          "text": "Ellos ____ (tener) que estudiar. [futuro]",
+          "answer": "tendrán",
+          "explain": "Radical irrégulier tendr- : tendrán."
+        }
+      },
+      {
+        "theme": "lng-es-gram",
+        "idx": 3,
+        "title": "Le futur et le conditionnel : terminaisons et radicaux irréguliers",
+        "game": "lng-es-futuro-trou",
+        "q": {
+          "text": "Yo ____ (hacer) los deberes esta noche. [futuro]",
+          "answer": "haré",
+          "explain": "Radical har- : haré."
+        }
+      },
+      {
+        "theme": "lng-es-gram",
+        "idx": 3,
+        "title": "Le futur et le conditionnel : terminaisons et radicaux irréguliers",
+        "game": "lng-es-futuro-trou",
+        "q": {
+          "text": "Si tuviera dinero, ____ (viajar, yo). [condicional]",
+          "answer": "viajaría",
+          "explain": "Condicional : viajaría."
+        }
+      },
+      {
+        "theme": "lng-es-gram",
+        "idx": 3,
+        "title": "Le futur et le conditionnel : terminaisons et radicaux irréguliers",
+        "game": "lng-es-futuro-trou",
+        "q": {
+          "text": "¿____ (poder, tú) ayudarme? [condicional]",
+          "answer": "podrías",
+          "explain": "Radical podr- : podrías."
+        }
+      },
+      {
+        "theme": "mkg-t1",
+        "idx": 1,
+        "title": "Motivations et freins : le processus d’achat",
+        "game": "mkg-t1-trou",
+        "q": {
+          "text": "La façon subjective et sélective d’interpréter l’information s’appelle la ____ .",
+          "answer": "perception",
+          "alt": [
+            "la perception"
+          ],
+          "explain": "La perception filtre l’information selon les attentes de chacun."
+        }
+      },
+      {
+        "theme": "mkg-t1",
+        "idx": 1,
+        "title": "Motivations et freins : le processus d’achat",
+        "game": "mkg-t1-trou",
+        "q": {
+          "text": "Une opinion favorable ou défavorable envers un produit est une ____ .",
+          "answer": "attitude",
+          "alt": [
+            "une attitude"
+          ],
+          "explain": "L’attitude prédispose à l’achat ou au rejet."
+        }
+      },
+      {
+        "theme": "mkg-t2",
+        "idx": 3,
+        "title": "🎯 Le marché : offre, demande, environnement",
+        "game": "mkg-t2-trou",
+        "q": {
+          "text": "Un client potentiel non encore acheteur est un ____ .",
+          "answer": "prospect",
+          "alt": [
+            "un prospect"
+          ],
+          "explain": "Le prospect est une cible de conquête."
+        }
+      },
+      {
+        "theme": "mkg-t2",
+        "idx": 3,
+        "title": "🎯 Le marché : offre, demande, environnement",
+        "game": "mkg-t2-trou",
+        "q": {
+          "text": "La demande en ____ correspond au chiffre d’affaires (quantités × prix).",
+          "answer": "valeur",
+          "alt": [
+            "la valeur"
+          ],
+          "explain": "Valeur = CA ; volume = quantités."
+        }
+      },
+      {
+        "theme": "rh-t2",
+        "idx": 2,
+        "title": "🧑‍💼 Cas — la répartition des tâches : identifier la source du conflit",
+        "game": "rh-t2-trou",
+        "q": {
+          "text": "Un conflit larvé, non exprimé ouvertement, est ____ .",
+          "answer": "latent",
+          "alt": [
+            "latent"
+          ],
+          "explain": "Latent = sourd ; ouvert = déclaré."
+        }
+      },
+      {
+        "theme": "rh-t2",
+        "idx": 2,
+        "title": "🧑‍💼 Cas — la répartition des tâches : identifier la source du conflit",
+        "game": "rh-t2-trou",
+        "q": {
+          "text": "Un excès de cohésion crée du ____ .",
+          "answer": "conformisme",
+          "alt": [
+            "conformisme"
+          ],
+          "explain": "Les avis divergents ne s’expriment plus."
+        }
+      },
+      {
+        "theme": "rh-t3",
+        "idx": 4,
+        "title": "🔄 Le processus de communication : émetteur, canal, récepteur, feed-back, bruits",
+        "game": "rh-t3-trou",
+        "q": {
+          "text": "La réponse qui referme la boucle de communication est le ____ .",
+          "answer": "feedback",
+          "alt": [
+            "le feedback"
+          ],
+          "explain": "Le feedback est la rétroaction du récepteur."
+        }
+      },
+      {
+        "theme": "sig-t1",
+        "idx": 2,
+        "title": "💻 Exemple — une commande en ligne : stock, facturation, livraison et PGI",
+        "game": "sig-t1-trou",
+        "q": {
+          "text": "Saisir les données à la source relève de la fonction ____ du SI.",
+          "answer": "collecter",
+          "alt": [
+            "collecte",
+            "de collecte"
+          ],
+          "explain": "Les 4 fonctions : collecter, mémoriser, traiter, diffuser."
+        }
+      },
+      {
+        "theme": "sig-t1",
+        "idx": 2,
+        "title": "💻 Exemple — une commande en ligne : stock, facturation, livraison et PGI",
+        "game": "sig-t1-trou",
+        "q": {
+          "text": "Le support technique du SI (matériel + logiciels) est le système ____ .",
+          "answer": "informatique",
+          "alt": [
+            "informatique"
+          ],
+          "explain": "Le SI inclut aussi acteurs et procédures."
+        }
+      },
+      {
+        "theme": "p1-lng-en",
+        "idx": 0,
+        "title": "Les temps : prétérit ou present perfect",
+        "game": "p1-lng-en-trou",
+        "q": {
+          "text": "She ____ (work) here since 2020.",
+          "answer": "has worked",
+          "explain": "Present perfect + since : « has worked »."
+        }
+      },
+      {
+        "theme": "p1-lng-en",
+        "idx": 0,
+        "title": "Les temps : prétérit ou present perfect",
+        "game": "p1-lng-en-trou",
+        "q": {
+          "text": "They ____ (watch) TV when I arrived.",
+          "answer": "were watching",
+          "explain": "Past continuous : action en cours interrompue."
+        }
+      },
+      {
+        "theme": "p1-lng-en",
+        "idx": 0,
+        "title": "Les temps : prétérit ou present perfect",
+        "game": "p1-lng-en-trou",
+        "q": {
+          "text": "If it ____ (rain), we will cancel.",
+          "answer": "rains",
+          "explain": "Conditionnel type 1 : If + present."
+        }
+      },
+      {
+        "theme": "p1-lng-es",
+        "idx": 0,
+        "title": "Ser / Estar et les passés",
+        "game": "p1-lng-es-trou",
+        "q": {
+          "text": "Ayer nosotros ____ (ir) al cine.",
+          "answer": "fuimos",
+          "alt": [
+            "fuímos"
+          ],
+          "explain": "Indefinido (action datée) : « fuimos »."
+        }
+      },
+      {
+        "theme": "p1-lng-es",
+        "idx": 0,
+        "title": "Ser / Estar et les passés",
+        "game": "p1-lng-es-trou",
+        "q": {
+          "text": "Me ____ (gustar) las películas de acción.",
+          "answer": "gustan",
+          "explain": "Accord avec le pluriel : « gustan »."
+        }
+      }
+    ]
+  },
+  "details": {
+    "gf-t3": {
+      "idx": 5,
+      "title": "🎯 Le seuil de rentabilité et le point mort",
+      "section": {
+        "h": "🎯 Le seuil de rentabilité et le point mort",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Le **seuil de rentabilité (SR)** est le chiffre d’affaires **minimum** à réaliser pour que le résultat soit **nul** : ni bénéfice, ni perte. En dessous, l’entreprise perd de l’argent ; au-dessus, elle en gagne. C’est **le** repère de décision."
+          },
+          {
+            "t": "p",
+            "c": "Au seuil, la marge sur coût variable couvre **exactement** les charges fixes. On en déduit sa formule à partir du taux de MCV."
+          },
+          {
+            "t": "formula",
+            "c": "Seuil de rentabilité = Charges fixes ÷ Taux de marge sur coût variable"
+          },
+          {
+            "t": "example",
+            "h": "Calcul",
+            "c": "Charges fixes = 60 000 € ; taux de MCV = 40 % (= 0,40).\nSR = 60 000 ÷ 0,40 = **150 000 €** de chiffre d’affaires.\nVérification : MCV au seuil = 150 000 × 0,40 = 60 000 € = charges fixes → résultat nul. ✓"
+          },
+          {
+            "t": "p",
+            "c": "Le **point mort** est la même idée exprimée **en temps** : à quelle **date** de l’année le seuil est-il atteint ? On suppose une activité régulière sur 360 (ou 12 mois)."
+          },
+          {
+            "t": "formula",
+            "c": "Point mort = (Seuil de rentabilité ÷ Chiffre d’affaires annuel) × 360"
+          },
+          {
+            "t": "example",
+            "h": "Point mort",
+            "c": "CA annuel = 200 000 € ; SR = 150 000 €.\nPoint mort = 150 000 ÷ 200 000 × 360 = 270 jours ≈ **fin septembre**.\nL’entreprise couvre ses coûts fin septembre ; le bénéfice se fait sur le dernier trimestre."
+          },
+          {
+            "t": "warning",
+            "h": "Piège",
+            "c": "Le seuil se calcule avec le **taux** de MCV, pas avec la MCV en euros. Diviser les charges fixes par la marge en euros donne un **nombre d’unités**, pas un chiffre d’affaires — deux résultats différents à ne pas confondre."
+          }
+        ],
+        "group": "approf"
+      },
+      "games": [
+        {
+          "id": "gf-t3-calc-seuil",
+          "type": "calcul",
+          "title": "Calcul express — Seuil de rentabilité",
+          "icon": "⚡",
+          "gen": "seuil",
+          "count": 5
+        },
+        {
+          "id": "gf-t3-trou",
+          "type": "trou",
+          "title": "Texte à trous — Coûts & seuil",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "Seuil de rentabilité = charges fixes / taux de ___.",
+              "answer": "MCV",
+              "alt": [
+                "mcv",
+                "marge sur coût variable"
+              ],
+              "explain": "Seuil = charges fixes / taux de MCV."
+            },
+            {
+              "text": "Marge de sécurité = CA − seuil de ___.",
+              "answer": "rentabilité",
+              "explain": "Marge de sécurité = CA − seuil de rentabilité."
+            },
+            {
+              "text": "La réserve légale représente 5 % du bénéfice jusqu’à 10 % du ___.",
+              "answer": "capital",
+              "explain": "Réserve légale : 5 % du bénéfice jusqu’à 10 % du capital."
+            }
+          ]
+        },
+        {
+          "id": "gf-t3::5::trou0",
+          "type": "trou",
+          "title": "Texte à trous — ce chapitre",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "Le ____ est le chiffre d’affaires minimum à réaliser pour que le résultat soit nul : ni bénéfice, ni perte.",
+              "answer": "seuil de rentabilité (SR)",
+              "alt": [],
+              "drawSource": "Le seuil de rentabilité (SR) est le chiffre d’affaires minimum à réaliser pour que le résultat soit nul : ni bénéfice, ni perte.",
+              "explain": "Le mot manquant : « seuil de rentabilité (SR) »."
+            },
+            {
+              "text": "Le seuil de rentabilité (SR) est le chiffre d’affaires ____ à réaliser pour que le résultat soit nul : ni bénéfice, ni perte.",
+              "answer": "minimum",
+              "alt": [],
+              "drawSource": "Le seuil de rentabilité (SR) est le chiffre d’affaires minimum à réaliser pour que le résultat soit nul : ni bénéfice, ni perte.",
+              "explain": "Le mot manquant : « minimum »."
+            },
+            {
+              "text": "Le seuil de rentabilité (SR) est le chiffre d’affaires minimum à réaliser pour que le résultat soit ____ : ni bénéfice, ni perte.",
+              "answer": "nul",
+              "alt": [],
+              "drawSource": "Le seuil de rentabilité (SR) est le chiffre d’affaires minimum à réaliser pour que le résultat soit nul : ni bénéfice, ni perte.",
+              "explain": "Le mot manquant : « nul »."
+            },
+            {
+              "text": "Au seuil, la marge sur coût variable couvre ____ les charges fixes.",
+              "answer": "exactement",
+              "alt": [],
+              "drawSource": "Au seuil, la marge sur coût variable couvre exactement les charges fixes.",
+              "explain": "Le mot manquant : « exactement »."
+            }
+          ],
+          "questionCount": 2
+        },
+        {
+          "id": "gf-t3::5::strou",
+          "type": "saisie",
+          "title": "Complète — à écrire",
+          "icon": "✍️",
+          "questions": [
+            {
+              "prompt": "Complète par le mot exact :\nLe ____ est la même idée exprimée en temps : à quelle date de l’année le seuil est-il atteint ?",
+              "answer": "point mort",
+              "alt": [],
+              "explain": "Le mot manquant : « point mort ».",
+              "drawSource": "Le point mort est la même idée exprimée en temps : à quelle date de l’année le seuil est-il atteint ?"
+            },
+            {
+              "prompt": "Complète par le mot exact :\nLe point mort est la même idée exprimée en temps : à quelle ____ de l’année le seuil est-il atteint ?",
+              "answer": "date",
+              "alt": [],
+              "explain": "Le mot manquant : « date ».",
+              "drawSource": "Le point mort est la même idée exprimée en temps : à quelle date de l’année le seuil est-il atteint ?"
+            },
+            {
+              "prompt": "Complète par le mot exact :\nSR = 60 000 ÷ 0,40 = ____ de chiffre d’affaires.",
+              "answer": "150 000 €",
+              "alt": [],
+              "explain": "Le mot manquant : « 150 000 € ».",
+              "drawSource": "SR = 60 000 ÷ 0,40 = 150 000 € de chiffre d’affaires."
+            },
+            {
+              "prompt": "Complète par le mot exact :\nLe point mort est la même idée exprimée ____ : à quelle date de l’année le seuil est-il atteint ?",
+              "answer": "en temps",
+              "alt": [],
+              "explain": "Le mot manquant : « en temps ».",
+              "drawSource": "Le point mort est la même idée exprimée en temps : à quelle date de l’année le seuil est-il atteint ?"
+            }
+          ],
+          "questionCount": 2
+        },
+        {
+          "id": "gf-t3::5::qtrou",
+          "type": "qcm",
+          "title": "QCM — le mot manquant",
+          "icon": "🧠",
+          "questions": [
+            {
+              "q": "Quel mot complète la phrase ?\nDiviser les charges fixes par la marge en euros donne un ____, pas un chiffre d’affaires — deux résultats différents à ne pas confondre.",
+              "choices": [
+                "150 000 €",
+                "date",
+                "nombre d’unités",
+                "en temps"
+              ],
+              "answer": 2,
+              "explain": "Le mot manquant : « nombre d’unités ».",
+              "drawSource": "Diviser les charges fixes par la marge en euros donne un nombre d’unités, pas un chiffre d’affaires — deux résultats différents à ne pas confondre.",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nLe seuil se calcule avec le ____ de MCV, pas avec la MCV en euros.",
+              "choices": [
+                "taux",
+                "minimum",
+                "date",
+                "nul"
+              ],
+              "answer": 0,
+              "explain": "Le mot manquant : « taux ».",
+              "drawSource": "Le seuil se calcule avec le taux de MCV, pas avec la MCV en euros.",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nPoint mort = 150 000 ÷ 200 000 × 360 = 270 jours ≈ ____.",
+              "choices": [
+                "fin septembre",
+                "taux",
+                "date",
+                "en temps"
+              ],
+              "answer": 0,
+              "explain": "Le mot manquant : « fin septembre ».",
+              "drawSource": "Point mort = 150 000 ÷ 200 000 × 360 = 270 jours ≈ fin septembre.",
+              "alt": []
+            }
+          ],
+          "questionCount": 2
+        }
+      ]
+    },
+    "gf-t1": {
+      "idx": 17,
+      "title": "🧾 La déclaration de TVA : TVA à décaisser ou crédit de TVA",
+      "section": {
+        "h": "🧾 La déclaration de TVA : TVA à décaisser ou crédit de TVA",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "Chaque mois (ou trimestre), l’entreprise établit sa **déclaration de TVA** (formulaire **CA3**). Elle y récapitule la TVA **collectée** sur ses ventes et la TVA **déductible** sur ses achats et ses immobilisations, puis calcule ce qu’elle doit reverser."
+          },
+          {
+            "t": "formula",
+            "c": "TVA à décaisser = TVA collectée − TVA déductible (sur biens/services + sur immobilisations)"
+          },
+          {
+            "t": "list",
+            "c": [
+              "Si TVA collectée **>** TVA déductible → **TVA à décaisser** : l’entreprise **doit** de l’argent à l’État (compte 44551).",
+              "Si TVA déductible **>** TVA collectée → **crédit de TVA** : c’est l’État qui doit à l’entreprise (compte 44567). Le crédit est **reporté** sur la déclaration suivante ou **remboursé**."
+            ]
+          },
+          {
+            "t": "example",
+            "h": "Déclaration du mois",
+            "c": "TVA collectée 8 000 € ; TVA déductible sur achats 5 000 € ; TVA déductible sur une machine 1 500 €.\nTVA à décaisser = 8 000 − (5 000 + 1 500) = **1 500 €** à reverser à l’État."
+          },
+          {
+            "t": "tip",
+            "h": "À retenir",
+            "c": "La TVA déductible sur **immobilisations** (44562) se cumule avec celle sur les achats (44566). Un mois d’investissement important peut faire basculer l’entreprise en **crédit de TVA**."
+          }
+        ],
+        "group": "approf"
+      },
+      "games": [
+        {
+          "id": "gf-t1-trou-tva",
+          "type": "trou",
+          "title": "Texte à trous — Déclaration de TVA",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "TVA à décaisser = TVA collectée − TVA ___.",
+              "answer": "déductible",
+              "explain": "TVA à décaisser = TVA collectée − TVA déductible."
+            },
+            {
+              "text": "Au régime réel normal, l’entreprise déclare sa TVA sur le formulaire ___.",
+              "answer": "CA3",
+              "alt": [
+                "ca3"
+              ],
+              "explain": "Au régime réel normal : CA3. Le régime simplifié utilise encore la CA12 en 2026 ; vérifier le régime applicable à la période étudiée."
+            }
+          ]
+        },
+        {
+          "id": "gf-t1::17::trou0",
+          "type": "trou",
+          "title": "Texte à trous — ce chapitre",
+          "icon": "✏️",
+          "questions": [
+            {
+              "text": "Chaque mois (ou trimestre), l’entreprise établit sa ____ (formulaire CA3).",
+              "answer": "déclaration de TVA",
+              "alt": [],
+              "drawSource": "Chaque mois (ou trimestre), l’entreprise établit sa déclaration de TVA (formulaire CA3).",
+              "explain": "Le mot manquant : « déclaration de TVA »."
+            },
+            {
+              "text": "Chaque mois (ou trimestre), l’entreprise établit sa déclaration de TVA (formulaire ____).",
+              "answer": "CA3",
+              "alt": [],
+              "drawSource": "Chaque mois (ou trimestre), l’entreprise établit sa déclaration de TVA (formulaire CA3).",
+              "explain": "Le mot manquant : « CA3 »."
+            },
+            {
+              "text": "Chaque mois (ou trimestre), l’entreprise établit sa déclaration de TVA (formulaire CA3). Elle y récapitule la TVA ____ sur ses ventes et la TVA déductible sur ses achats et ses immobilisations, puis calcule ce qu’elle doit reverser.",
+              "answer": "collectée",
+              "alt": [],
+              "drawSource": "Elle y récapitule la TVA collectée sur ses ventes et la TVA déductible sur ses achats et ses immobilisations, puis calcule ce qu’elle doit reverser.",
+              "explain": "Le mot manquant : « collectée »."
+            },
+            {
+              "text": "Chaque mois (ou trimestre), l’entreprise établit sa déclaration de TVA (formulaire CA3). Elle y récapitule la TVA collectée sur ses ventes et la TVA ____ sur ses achats et ses immobilisations, puis calcule ce qu’elle doit reverser.",
+              "answer": "déductible",
+              "alt": [],
+              "drawSource": "Elle y récapitule la TVA collectée sur ses ventes et la TVA déductible sur ses achats et ses immobilisations, puis calcule ce qu’elle doit reverser.",
+              "explain": "Le mot manquant : « déductible »."
+            }
+          ],
+          "questionCount": 2
+        },
+        {
+          "id": "gf-t1::17::qtrou",
+          "type": "qcm",
+          "title": "QCM — le mot manquant",
+          "icon": "🧠",
+          "questions": [
+            {
+              "q": "Quel mot complète la phrase ?\nLa TVA déductible sur ____ (44562) se cumule avec celle sur les achats (44566).",
+              "choices": [
+                "doit",
+                "immobilisations",
+                "remboursé",
+                "CA3"
+              ],
+              "answer": 1,
+              "explain": "Le mot manquant : « immobilisations ».",
+              "drawSource": "La TVA déductible sur immobilisations (44562) se cumule avec celle sur les achats (44566).",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nLe crédit est reporté sur la déclaration suivante ou ____.",
+              "choices": [
+                "collectée",
+                "CA3",
+                "remboursé",
+                "déductible"
+              ],
+              "answer": 2,
+              "explain": "Le mot manquant : « remboursé ».",
+              "drawSource": "Le crédit est reporté sur la déclaration suivante ou remboursé.",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nSi TVA collectée > TVA déductible → TVA à décaisser : l’entreprise ____ de l’argent à l’État (compte 44551).",
+              "choices": [
+                "remboursé",
+                "CA3",
+                "doit",
+                "reporté"
+              ],
+              "answer": 2,
+              "explain": "Le mot manquant : « doit ».",
+              "drawSource": "Si TVA collectée > TVA déductible → TVA à décaisser : l’entreprise doit de l’argent à l’État (compte 44551).",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nUn mois d’investissement important peut faire basculer l’entreprise en ____.",
+              "choices": [
+                "déclaration de TVA",
+                "crédit de TVA",
+                "CA3",
+                "immobilisations"
+              ],
+              "answer": 1,
+              "explain": "Le mot manquant : « crédit de TVA ».",
+              "drawSource": "Un mois d’investissement important peut faire basculer l’entreprise en crédit de TVA.",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nSi TVA collectée > TVA déductible → ____ : l’entreprise doit de l’argent à l’État (compte 44551).",
+              "choices": [
+                "immobilisations",
+                "TVA à décaisser",
+                "crédit de TVA",
+                "CA3"
+              ],
+              "answer": 1,
+              "explain": "Le mot manquant : « TVA à décaisser ».",
+              "drawSource": "Si TVA collectée > TVA déductible → TVA à décaisser : l’entreprise doit de l’argent à l’État (compte 44551).",
+              "alt": []
+            },
+            {
+              "q": "Quel mot complète la phrase ?\nLe crédit est ____ sur la déclaration suivante ou remboursé.",
+              "choices": [
+                "collectée",
+                "reporté",
+                "doit",
+                "immobilisations"
+              ],
+              "answer": 1,
+              "explain": "Le mot manquant : « reporté ».",
+              "drawSource": "Le crédit est reporté sur la déclaration suivante ou remboursé.",
+              "alt": []
+            }
+          ],
+          "questionCount": 2
+        }
+      ]
+    },
+    "lng-it-gram": {
+      "idx": 0,
+      "title": "Prononciation, articles et accords",
+      "section": {
+        "h": "Prononciation, articles et accords",
+        "blocks": [
+          {
+            "t": "p",
+            "c": "L’italien distingue les consonnes simples et doubles : pala (pelle) et palla (ballon) ne se prononcent pas de la même façon. Devant e ou i, c se prononce comme « tch » et g comme « dj » ; ch et gh maintiennent les sons durs : chi, spaghetti. L’accent écrit distingue notamment e (et) de è (est)."
+          },
+          {
+            "t": "p",
+            "c": "L’article défini dépend du genre, du nombre et du début du mot : il libro → i libri ; lo studente → gli studenti ; l’amico → gli amici ; la casa → le case. Lo s’emploie notamment devant s + consonne et z. L’article indéfini donne un libro, uno studente, una casa, un’amica. Un amico n’a pas d’apostrophe, car un est masculin."
+          },
+          {
+            "t": "p",
+            "c": "Les noms en -o ont souvent un pluriel en -i, ceux en -a un pluriel en -e ; un nom en -e passe généralement à -i : studente → studenti. L’adjectif s’accorde : una casa nuova, due case nuove. Ces régularités ont des exceptions : apprends le genre avec le nom."
+          },
+          {
+            "t": "table",
+            "h": "Notions et définitions",
+            "head": [
+              "Notion",
+              "Définition"
+            ],
+            "rows": [
+              [
+                "il libro",
+                "Le livre ; pluriel i libri."
+              ],
+              [
+                "lo studente",
+                "L’élève ; pluriel gli studenti."
+              ],
+              [
+                "è",
+                "Est, forme de essere, avec accent."
+              ],
+              [
+                "e",
+                "Et, conjonction sans accent."
+              ]
+            ]
+          }
+        ]
+      },
+      "games": [
+        {
+          "id": "lng-it-gram-s1-qcm",
+          "type": "qcm",
+          "title": "Prononciation, articles et accords",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Quel groupe signifie « les élèves » ?",
+              "choices": [
+                "gli studenti",
+                "lo studenti",
+                "i studente"
+              ],
+              "answer": 0,
+              "explain": "Lo studente devient gli studenti."
+            },
+            {
+              "q": "Complète : due case…",
+              "choices": [
+                "nuove",
+                "nuovo",
+                "nuova"
+              ],
+              "answer": 0,
+              "explain": "Case est féminin pluriel : nuove."
+            },
+            {
+              "q": "Quelle forme signifie « est » ?",
+              "choices": [
+                "è",
+                "e",
+                "il"
+              ],
+              "answer": 0,
+              "explain": "È porte un accent ; e signifie et."
+            }
+          ],
+          "sectionOnly": true
+        },
+        {
+          "id": "lng-it-gram::0::qdef",
+          "type": "qcm",
+          "title": "QCM — les notions du chapitre",
+          "icon": "❓",
+          "questions": [
+            {
+              "q": "Que signifie : « il libro » ?",
+              "choices": [
+                "L’élève ; pluriel gli studenti.",
+                "Le livre ; pluriel i libri.",
+                "Est, forme de essere, avec accent."
+              ],
+              "answer": 1,
+              "explain": "il libro → Le livre ; pluriel i libri.",
+              "drawSource": "notion:il libro"
+            },
+            {
+              "q": "Quelle est la bonne définition de « lo studente » ?",
+              "choices": [
+                "Est, forme de essere, avec accent.",
+                "Le livre ; pluriel i libri.",
+                "L’élève ; pluriel gli studenti."
+              ],
+              "answer": 2,
+              "explain": "lo studente → L’élève ; pluriel gli studenti.",
+              "drawSource": "notion:lo studente"
+            },
+            {
+              "q": "« è » : quelle proposition est correcte ?",
+              "choices": [
+                "L’élève ; pluriel gli studenti.",
+                "Le livre ; pluriel i libri.",
+                "Est, forme de essere, avec accent."
+              ],
+              "answer": 2,
+              "explain": "è → Est, forme de essere, avec accent.",
+              "drawSource": "notion:e"
+            }
+          ],
+          "questionCount": 2
+        },
+        {
+          "id": "lng-it-gram::0::sterm",
+          "type": "saisie",
+          "title": "Écris le terme — ce chapitre",
+          "icon": "🔤",
+          "questions": [
+            {
+              "prompt": "Quel terme correspond à cette définition ?\n« Est, forme de essere, avec accent. »",
+              "answer": "è",
+              "alt": [],
+              "explain": "è : Est, forme de essere, avec accent."
+            },
+            {
+              "prompt": "Quel terme correspond à cette définition ?\n« Le livre ; pluriel i libri. »",
+              "answer": "il libro",
+              "alt": [],
+              "explain": "il libro : Le livre ; pluriel i libri."
+            },
+            {
+              "prompt": "Quel terme correspond à cette définition ?\n« L’élève ; pluriel gli studenti. »",
+              "answer": "lo studente",
+              "alt": [],
+              "explain": "lo studente : L’élève ; pluriel gli studenti."
+            }
+          ],
+          "questionCount": 2
+        },
+        {
+          "id": "lng-it-gram::0::assoc",
+          "type": "association",
+          "title": "Association — notions du chapitre",
+          "icon": "🔗",
+          "pairs": [
+            {
+              "left": "è",
+              "right": "Est, forme de essere, avec accent."
+            },
+            {
+              "left": "il libro",
+              "right": "Le livre ; pluriel i libri."
+            },
+            {
+              "left": "lo studente",
+              "right": "L’élève ; pluriel gli studenti."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,826 @@
+[
+  {
+    "theme": "gf-t3",
+    "idx": 5,
+    "title": "🎯 Le seuil de rentabilité et le point mort",
+    "section": {
+      "h": "🎯 Le seuil de rentabilité et le point mort",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **seuil de rentabilité (SR)** est le chiffre d’affaires **minimum** à réaliser pour que le résultat soit **nul** : ni bénéfice, ni perte. En dessous, l’entreprise perd de l’argent ; au-dessus, elle en gagne. C’est **le** repère de décision."
+        },
+        {
+          "t": "p",
+          "c": "Au seuil, la marge sur coût variable couvre **exactement** les charges fixes. On en déduit sa formule à partir du taux de MCV."
+        },
+        {
+          "t": "formula",
+          "c": "Seuil de rentabilité = Charges fixes ÷ Taux de marge sur coût variable"
+        },
+        {
+          "t": "example",
+          "h": "Calcul",
+          "c": "Charges fixes = 60 000 € ; taux de MCV = 40 % (= 0,40).\nSR = 60 000 ÷ 0,40 = **150 000 €** de chiffre d’affaires.\nVérification : MCV au seuil = 150 000 × 0,40 = 60 000 € = charges fixes → résultat nul. ✓"
+        },
+        {
+          "t": "p",
+          "c": "Le **point mort** est la même idée exprimée **en temps** : à quelle **date** de l’année le seuil est-il atteint ? On suppose une activité régulière sur 360 (ou 12 mois)."
+        },
+        {
+          "t": "formula",
+          "c": "Point mort = (Seuil de rentabilité ÷ Chiffre d’affaires annuel) × 360"
+        },
+        {
+          "t": "example",
+          "h": "Point mort",
+          "c": "CA annuel = 200 000 € ; SR = 150 000 €.\nPoint mort = 150 000 ÷ 200 000 × 360 = 270 jours ≈ **fin septembre**.\nL’entreprise couvre ses coûts fin septembre ; le bénéfice se fait sur le dernier trimestre."
+        },
+        {
+          "t": "warning",
+          "h": "Piège",
+          "c": "Le seuil se calcule avec le **taux** de MCV, pas avec la MCV en euros. Diviser les charges fixes par la marge en euros donne un **nombre d’unités**, pas un chiffre d’affaires — deux résultats différents à ne pas confondre."
+        }
+      ],
+      "group": "approf"
+    },
+    "manual": [
+      {
+        "id": "gf-t3-calc-seuil",
+        "type": "calcul",
+        "title": "Calcul express — Seuil de rentabilité",
+        "icon": "⚡",
+        "gen": "seuil",
+        "count": 5
+      },
+      {
+        "id": "gf-t3-trou",
+        "type": "trou",
+        "title": "Texte à trous — Coûts & seuil",
+        "icon": "✏️",
+        "questions": [
+          {
+            "text": "Seuil de rentabilité = charges fixes / taux de ___.",
+            "answer": "MCV",
+            "alt": [
+              "mcv",
+              "marge sur coût variable"
+            ],
+            "explain": "Seuil = charges fixes / taux de MCV."
+          },
+          {
+            "text": "Marge de sécurité = CA − seuil de ___.",
+            "answer": "rentabilité",
+            "explain": "Marge de sécurité = CA − seuil de rentabilité."
+          },
+          {
+            "text": "La réserve légale représente 5 % du bénéfice jusqu’à 10 % du ___.",
+            "answer": "capital",
+            "explain": "Réserve légale : 5 % du bénéfice jusqu’à 10 % du capital."
+          }
+        ]
+      }
+    ],
+    "otherSections": [
+      {
+        "idx": 0,
+        "title": "La marge sur coût variable et le seuil de rentabilité",
+        "text": "{\"h\":\"La marge sur coût variable et le seuil de rentabilité\",\"blocks\":[{\"t\":\"example\",\"h\":\"Cas\",\"c\":\"Un food-truck paie 1 500 €/mois de charges fixes (emplacement, assurance). Chaque burger lui rapporte 4 € une fois déduits les ingrédients. Combien doit-il en vendre pour ne pas perdre d’argent ?\"},{\"t\":\"p\",\"c\":\"Chaque burger vendu laisse **4 €** après avoir payé ses ingrédients : c’est la **marge sur coût variable (MCV)** unitaire. Cette marge sert d’abord à **couvrir les charges fixes**, puis à faire du bénéfice.\"},{\"t\":\"formula\",\"c\":\"Seuil (en quantité) = Charges fixes ÷ MCV unitaire = 1 500 ÷ 4 = 375 burgers\"},{\"t\":\"p\",\"c\":\"En dessous de **375 burgers/mois**, il **perd** de l’argent ; exactement à 375, il est à l’équilibre (résultat nul) ; au-delà, chaque burger rapporte **4 € de bénéfice net**. Ce point de bascule s’appelle le **seuil de rentabilité**.\"},{\"t\":\"example\",\"h\":\"Et pour gagner 800 € ?\",\"c\":\"Il faut couvrir les charges fixes **et** dégager 800 € : (1 500 + 800) ÷ 4 = **575 burgers**. Soit ~26 burgers par jour ouvré.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Au **seuil de rentabilité**, le résultat est **nul** : la marge sur coût variable couvre **exactement** les charges fixes. C’est le premier repère de toute décision.\"}]}"
+      },
+      {
+        "idx": 1,
+        "title": "Classer les charges pour décider",
+        "text": "{\"h\":\"Classer les charges pour décider\",\"blocks\":[{\"t\":\"p\",\"c\":\"Pour décider, on ne classe plus les charges par nature, mais selon leur **comportement face à l’activité**. Les **charges variables** montent avec le volume (plus de burgers = plus de pain, de viande) ; les **charges fixes** ne bougent pas à court terme (le loyer est le même qu’on vende 10 ou 1 000 burgers).\"},{\"t\":\"p\",\"c\":\"Si l’activité double, les **charges variables doublent** : les matières, les ingrédients et les emballages suivent le volume vendu. Les **charges fixes**, elles, **ne bougent pas** : le loyer, l’assurance et le salaire fixe restent les mêmes.\"},{\"t\":\"p\",\"c\":\"Comprendre cette différence permet de **décider** : baisser un prix pour vendre plus ? accepter une grosse commande à prix réduit ? Tant que le prix couvre le **coût variable**, chaque vente **contribue** aux charges fixes — même si elle paraît peu rentable. C’est le raisonnement « à la marge ».\"},{\"t\":\"p\",\"c\":\"Autre effet clé : plus on produit, plus on **dilue** les charges fixes sur un grand nombre d’unités → le coût unitaire baisse. C’est pourquoi le **volume** est si important dans les activités à fortes charges fixes.\"},{\"t\":\"warning\",\"h\":\"Piège\",\"c\":\"Un produit peut avoir une **marge positive** et l’entreprise **perdre** quand même, si le volume ne suffit pas à couvrir les **charges fixes**. Marge ≠ bénéfice tant que le seuil n’est pas franchi.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Charges variables\",\"Doublent si l’activité double (matières, ingrédients, emballages)\"],[\"Charges fixes\",\"Ne bougent pas à court terme (loyer, assurance, salaire fixe)\"],[\"Raisonnement à la marge\",\"Une vente dont le prix couvre le coût variable contribue aux charges fixes\"]]}]}"
+      },
+      {
+        "idx": 2,
+        "title": "🧮 Exemple traité — seuil de rentabilité",
+        "text": "{\"h\":\"🧮 Exemple traité — seuil de rentabilité\",\"group\":\"cas\",\"blocks\":[{\"t\":\"example\",\"h\":\"Énoncé\",\"c\":\"CA = 200 000 € ; charges variables = 120 000 € ; charges fixes = 50 000 €.\\n1) Calcule la marge sur coût variable et son taux.\\n2) Détermine le seuil de rentabilité.\\n3) Quel est le résultat ?\"},{\"t\":\"list\",\"c\":[\"**MCV** = CA − charges variables = 200 000 − 120 000 = **80 000 €** ; **taux de MCV** = 80 000 / 200 000 = **0,40**.\",\"**Seuil de rentabilité** = charges fixes / taux de MCV = 50 000 / 0,40 = **125 000 € de CA** (à partir de ce CA, l’entreprise couvre toutes ses charges).\",\"**Résultat** = MCV − charges fixes = 80 000 − 50 000 = **30 000 €**.\"]},{\"t\":\"tip\",\"h\":\"Au seuil\",\"c\":\"Au seuil de rentabilité, le résultat est **nul** (pas la marge) : la MCV couvre exactement les coûts fixes.\"}]}"
+      },
+      {
+        "idx": 3,
+        "title": "🔀 Charges fixes et charges variables",
+        "text": "{\"h\":\"🔀 Charges fixes et charges variables\",\"blocks\":[{\"t\":\"p\",\"c\":\"Pour décider (baisser un prix ? accepter une commande ? ouvrir le samedi ?), on ne raisonne plus par nature de charge, mais selon leur **comportement face à l’activité**. On distingue deux familles.\"},{\"t\":\"list\",\"c\":[\"**Charges variables** : elles **varient proportionnellement** au volume produit ou vendu (matières premières, marchandises, commissions sur ventes). Plus on produit, plus elles augmentent ; à zéro production, elles sont nulles.\",\"**Charges fixes** (ou de structure) : elles **restent stables** quel que soit le volume, dans une certaine limite (loyer, salaires fixes, assurances, amortissements). Il faut les payer même sans vendre.\"]},{\"t\":\"p\",\"c\":\"Le test le plus simple pour classer une charge est de se demander ce qui se passe **si l’activité double**. Les **charges variables doublent** elles aussi : les matières premières, les marchandises achetées, l’énergie consommée par les machines.\"},{\"t\":\"p\",\"c\":\"Les **charges fixes**, elles, **ne bougent pas** : le loyer, l’assurance ou le salaire du gérant restent identiques, que l’on vende peu ou beaucoup.\"},{\"t\":\"warning\",\"h\":\"Attention\",\"c\":\"Une charge fixe est fixe **par période**, pas « par unité » : ramenée à une unité, elle **diminue** quand on produit plus (on répartit le loyer sur davantage de produits). C’est tout l’intérêt de produire en volume : diluer les charges fixes.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Charges variables\",\"Varient proportionnellement à l’activité (matières, marchandises, énergie machine)\"],[\"Charges fixes (de structure)\",\"Stables quel que soit le volume (loyer, assurance, salaire du gérant)\"],[\"Charge fixe unitaire\",\"Diminue quand le volume augmente (on répartit la charge sur plus de produits)\"]]}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 4,
+        "title": "📈 La marge sur coût variable et le taux de MCV",
+        "text": "{\"h\":\"📈 La marge sur coût variable et le taux de MCV\",\"blocks\":[{\"t\":\"p\",\"c\":\"La **marge sur coût variable (MCV)** est ce qui reste du chiffre d’affaires **après avoir payé les charges variables**. C’est la contribution de chaque vente à la couverture des charges fixes… puis au bénéfice.\"},{\"t\":\"formula\",\"c\":\"Marge sur coût variable = Chiffre d’affaires − Charges variables\"},{\"t\":\"p\",\"c\":\"Le **taux de marge sur coût variable** exprime cette marge en pourcentage du chiffre d’affaires. Il est stable tant que la structure des coûts ne change pas — ce qui le rend très pratique pour les prévisions.\"},{\"t\":\"formula\",\"c\":\"Taux de MCV = (Marge sur coût variable ÷ Chiffre d’affaires) × 100\"},{\"t\":\"example\",\"h\":\"Exemple\",\"c\":\"CA = 200 000 € ; charges variables = 120 000 €.\\nMCV = 200 000 − 120 000 = 80 000 €.\\nTaux de MCV = 80 000 ÷ 200 000 × 100 = **40 %**.\\nInterprétation : chaque 100 € vendu dégage 40 € pour couvrir les charges fixes puis faire du bénéfice.\"},{\"t\":\"formula\",\"c\":\"Résultat = Marge sur coût variable − Charges fixes\"},{\"t\":\"tip\",\"h\":\"Vision « décision »\",\"c\":\"La MCV répond à : « cette vente supplémentaire rapporte-t-elle quelque chose ? ». Tant que le prix couvre le **coût variable**, la vente **contribue** aux charges fixes — même si, comptablement, elle semble peu rentable.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 5,
+        "title": "🎯 Le seuil de rentabilité et le point mort",
+        "text": "{\"h\":\"🎯 Le seuil de rentabilité et le point mort\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le **seuil de rentabilité (SR)** est le chiffre d’affaires **minimum** à réaliser pour que le résultat soit **nul** : ni bénéfice, ni perte. En dessous, l’entreprise perd de l’argent ; au-dessus, elle en gagne. C’est **le** repère de décision.\"},{\"t\":\"p\",\"c\":\"Au seuil, la marge sur coût variable couvre **exactement** les charges fixes. On en déduit sa formule à partir du taux de MCV.\"},{\"t\":\"formula\",\"c\":\"Seuil de rentabilité = Charges fixes ÷ Taux de marge sur coût variable\"},{\"t\":\"example\",\"h\":\"Calcul\",\"c\":\"Charges fixes = 60 000 € ; taux de MCV = 40 % (= 0,40).\\nSR = 60 000 ÷ 0,40 = **150 000 €** de chiffre d’affaires.\\nVérification : MCV au seuil = 150 000 × 0,40 = 60 000 € = charges fixes → résultat nul. ✓\"},{\"t\":\"p\",\"c\":\"Le **point mort** est la même idée exprimée **en temps** : à quelle **date** de l’année le seuil est-il atteint ? On suppose une activité régulière sur 360 (ou 12 mois).\"},{\"t\":\"formula\",\"c\":\"Point mort = (Seuil de rentabilité ÷ Chiffre d’affaires annuel) × 360\"},{\"t\":\"example\",\"h\":\"Point mort\",\"c\":\"CA annuel = 200 000 € ; SR = 150 000 €.\\nPoint mort = 150 000 ÷ 200 000 × 360 = 270 jours ≈ **fin septembre**.\\nL’entreprise couvre ses coûts fin septembre ; le bénéfice se fait sur le dernier trimestre.\"},{\"t\":\"warning\",\"h\":\"Piège\",\"c\":\"Le seuil se calcule avec le **taux** de MCV, pas avec la MCV en euros. Diviser les charges fixes par la marge en euros donne un **nombre d’unités**, pas un chiffre d’affaires — deux résultats différents à ne pas confondre.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 6,
+        "title": "🧩 Coût complet ou coût partiel : choisir le coût selon la décision",
+        "text": "{\"h\":\"🧩 Coût complet ou coût partiel : choisir le coût selon la décision\",\"blocks\":[{\"t\":\"p\",\"c\":\"Selon la décision, on choisit une **méthode de calcul de coûts** différente. Il n’existe pas de « bon » coût universel : le coût pertinent dépend de la question posée.\"},{\"t\":\"list\",\"c\":[\"**Coût complet** : on répartit **toutes** les charges (variables ET fixes) sur les produits. Utile pour **fixer un prix de vente** durable et vérifier qu’un produit est globalement rentable.\",\"**Coût partiel (coût variable)** : on ne retient que les charges **variables**. Utile pour une **décision ponctuelle** : accepter une commande exceptionnelle, un prix promotionnel, sous-traiter.\"]},{\"t\":\"example\",\"h\":\"Décision d’une commande exceptionnelle\",\"c\":\"Une commande est proposée à 18 €/unité. Coût complet = 22 €, coût variable = 15 €. Faut-il refuser ? Non : à 18 €, chaque unité dégage 18 − 15 = **3 € de marge** qui couvrent les charges fixes déjà payées. Tant que la structure n’est pas saturée, **accepter** améliore le résultat.\"},{\"t\":\"warning\",\"h\":\"Nuance\",\"c\":\"Ce raisonnement vaut pour une commande **ponctuelle**. Vendre **durablement** en dessous du coût complet finirait par ne plus couvrir les charges fixes : l’entreprise y perdrait.\"},{\"t\":\"tip\",\"h\":\"Réflexe\",\"c\":\"Décision de long terme ou fixation d’un tarif → **coût complet**. Décision ponctuelle « en plus » → **coût variable** et raisonnement à la marge.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 7,
+        "title": "🧮 Étude de cas guidée — food-truck",
+        "text": "{\"h\":\"🧮 Étude de cas guidée — food-truck\",\"blocks\":[{\"t\":\"p\",\"c\":\"**Énoncé.** Un food-truck vend des burgers à 8 € l’unité. Coût variable unitaire = 3 € (pain, viande, sauce, emballage). Charges fixes mensuelles = 4 000 € (location, salaire, assurance). Questions : marge unitaire, seuil en nombre de burgers, et burgers à vendre pour 2 000 € de bénéfice.\"},{\"t\":\"example\",\"h\":\"Étape 1 — Marge sur coût variable unitaire\",\"c\":\"MCV unitaire = 8 − 3 = **5 € par burger**.\"},{\"t\":\"example\",\"h\":\"Étape 2 — Seuil de rentabilité (en quantité)\",\"c\":\"Q seuil = Charges fixes ÷ MCV unitaire = 4 000 ÷ 5 = **800 burgers/mois**.\\nSoit environ 36 burgers par jour ouvré (800 ÷ 22 jours ouvrés).\"},{\"t\":\"example\",\"h\":\"Étape 3 — Objectif de bénéfice\",\"c\":\"Q = (Charges fixes + Bénéfice visé) ÷ MCV unitaire = (4 000 + 2 000) ÷ 5 = **1 200 burgers**.\"},{\"t\":\"p\",\"c\":\"**Commentaire.** Il faut vendre 800 burgers rien que pour ne pas perdre d’argent, et 1 200 pour gagner 2 000 €. **Leviers** : augmenter le prix (mais risque sur la demande), baisser le coût variable (négocier les achats), ou augmenter le volume (emplacement, communication). Baisser les charges fixes (loyer) ferait aussi chuter le seuil.\"},{\"t\":\"tip\",\"h\":\"Méthode « seuil en quantité »\",\"c\":\"Quand l’énoncé donne un **prix et un coût unitaires**, raisonner en **quantités** avec la MCV **unitaire**. Quand il donne des **totaux annuels**, raisonner en **euros** avec le **taux** de MCV.\"}],\"group\":\"cas\"}"
+      },
+      {
+        "idx": 8,
+        "title": "🏷️ Le coût complet : charges directes, charges indirectes et unité d’œuvre",
+        "text": "{\"h\":\"🏷️ Le coût complet : charges directes, charges indirectes et unité d’œuvre\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le **coût complet** d’un produit rassemble **toutes** les charges qu’il a occasionnées. On distingue les charges **directes** (affectées sans calcul à un produit : la matière première, la main-d’œuvre de fabrication) et les charges **indirectes** (communes à plusieurs produits : loyer, électricité, administration), qui demandent une **répartition**.\"},{\"t\":\"formula\",\"c\":\"Coût complet = Charges directes + Charges indirectes réparties\"},{\"t\":\"p\",\"c\":\"Les charges indirectes transitent par des **centres d’analyse** (approvisionnement, production, distribution). Chaque centre est mesuré par une **unité d’œuvre** (l’heure de main-d’œuvre, l’heure-machine, le nombre de produits) : on calcule un **coût d’unité d’œuvre**, puis on impute à chaque produit selon sa consommation.\"},{\"t\":\"formula\",\"c\":\"Coût d’unité d’œuvre = Total du centre ÷ Nombre d’unités d’œuvre\"},{\"t\":\"example\",\"h\":\"Répartition\",\"c\":\"Centre production : 30 000 € pour 1 500 heures-machine → coût de l’unité d’œuvre = 20 €/h. Un produit qui consomme 3 heures-machine supporte 3 × 20 = **60 €** de charges indirectes de production.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Le coût complet sert à **fixer un prix de vente** et à vérifier la rentabilité d’un produit. Sa difficulté vient de la **répartition** des charges indirectes via les centres d’analyse et les unités d’œuvre.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 9,
+        "title": "🔧 Le coût marginal et la décision",
+        "text": "{\"h\":\"🔧 Le coût marginal et la décision\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le **coût marginal** est le coût de **la dernière unité** (ou de la dernière série) produite. Il répond à une question de décision très précise : « **combien me coûte de produire une unité de plus** ? ». C’est souvent bien moins que le coût complet moyen, car les charges fixes sont déjà couvertes.\"},{\"t\":\"p\",\"c\":\"Tant que la **structure n’est pas saturée** (pas besoin d’une nouvelle machine, d’un local supplémentaire), produire une unité de plus ne coûte essentiellement que ses **charges variables**. C’est ce qui justifie d’accepter certaines commandes à prix réduit.\"},{\"t\":\"example\",\"h\":\"Décision\",\"c\":\"Une entreprise reçoit une commande supplémentaire à 30 €/unité. Son coût complet est de 38 €, mais son coût marginal (variable) n’est que de 22 €. Chaque unité rapporte 30 − 22 = **8 € de marge** supplémentaire : la commande est **rentable** à la marge, même vendue « à perte » par rapport au coût complet.\"},{\"t\":\"warning\",\"h\":\"La limite\",\"c\":\"Si la commande impose de **franchir un palier** (nouvelle machine, heures supplémentaires majorées), une **charge fixe** supplémentaire apparaît : le coût marginal grimpe, et la décision peut s’inverser. Toujours vérifier si la capacité est suffisante.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Décision ponctuelle « une unité/commande de plus » → raisonner au **coût marginal** (surtout variable), pas au coût complet moyen. Comparer le **prix proposé** au **coût marginal**.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 10,
+        "title": "🏭 Faire ou faire faire : produire soi-même ou sous-traiter",
+        "text": "{\"h\":\"🏭 Faire ou faire faire : produire soi-même ou sous-traiter\",\"blocks\":[{\"t\":\"p\",\"c\":\"La décision « **faire ou faire faire** » consiste à choisir entre **produire soi-même** un composant/service ou l’**acheter à l’extérieur** (sous-traitance, externalisation). C’est un arbitrage classique de gestion, à la fois **chiffré** et **stratégique**.\"},{\"t\":\"p\",\"c\":\"Sur le plan chiffré, on compare le **coût de production interne** (pertinent) au **prix d’achat externe**. Le piège : les **charges fixes** internes existent souvent **que l’on produise ou non** (le loyer, une machine déjà là). Il faut donc comparer le prix externe au **coût que l’on économiserait réellement** en arrêtant de produire (surtout les charges variables + charges fixes **spécifiques** évitables).\"},{\"t\":\"example\",\"h\":\"Comparaison\",\"c\":\"Produire en interne : 12 €/unité de charges variables + 4 €/unité de charges fixes (dont 3 € resteront même si on arrête). Prix d’achat externe : 15 €.\\nCoût réellement évité si on externalise = 12 + 1 = 13 € < 15 € → mieux vaut **continuer à produire**.\"},{\"t\":\"list\",\"c\":[\"**Faire (produire)** : garder la maîtrise, la qualité, le savoir-faire ; mais mobiliser des ressources.\",\"**Faire faire (sous-traiter)** : se recentrer sur son métier, réduire les coûts fixes ; mais dépendre d’un tiers et risquer une perte de compétence.\"]},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Ne comparer que les coûts **réellement évitables** au prix externe. Ajouter toujours l’analyse **qualitative** : qualité, délais, dépendance, stratégie.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 11,
+        "title": "📊 Le compte de résultat différentiel : marge sur coût variable et levier d’exploitation",
+        "text": "{\"h\":\"📊 Le compte de résultat différentiel : marge sur coût variable et levier d’exploitation\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le **compte de résultat différentiel** réorganise les charges par **comportement** (variables / fixes) plutôt que par nature, pour faire apparaître la **marge sur coût variable** et le **résultat**. C’est l’outil de synthèse du raisonnement « coûts pour décider ».\"},{\"t\":\"p\",\"c\":\"Prenons un exemple chiffré. L’entreprise réalise un **chiffre d’affaires de 200 000 €**, qui représente 100 %. Ses **charges variables** s’élèvent à **120 000 €**, soit **60 %** du chiffre d’affaires. La **marge sur coût variable** (MCV) est donc de 200 000 − 120 000 = **80 000 €**, soit **40 %** du chiffre d’affaires : c’est le **taux de MCV**.\"},{\"t\":\"p\",\"c\":\"On retire ensuite les **charges fixes**, de **60 000 €**, pour obtenir le **résultat** : 80 000 − 60 000 = **20 000 €** de bénéfice.\"},{\"t\":\"p\",\"c\":\"Sa force : le **taux de MCV** (ici 40 %) reste **stable** quand l’activité varie, ce qui permet de **prévoir** le résultat pour tout niveau de chiffre d’affaires et de retrouver immédiatement le **seuil de rentabilité** (charges fixes ÷ taux de MCV = 60 000 ÷ 0,40 = 150 000 €).\"},{\"t\":\"example\",\"h\":\"Prévision\",\"c\":\"Si le CA passe à 250 000 € : MCV = 250 000 × 40 % = 100 000 € ; résultat = 100 000 − 60 000 = **40 000 €**. On double le résultat avec +25 % de CA : c’est l’effet de **levier d’exploitation** (les charges fixes ne bougent pas).\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Le résultat différentiel met en évidence la **MCV** et son **taux**. Il relie directement coûts variables, seuil de rentabilité et prévision de résultat.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Compte de résultat différentiel\",\"Classe les charges en variables et fixes pour faire apparaître la MCV\"],[\"Marge sur coût variable (MCV)\",\"Chiffre d’affaires − charges variables\"],[\"Taux de MCV\",\"MCV ÷ CA (ici 40 %)\"],[\"Résultat\",\"MCV − charges fixes\"],[\"Seuil de rentabilité\",\"CA pour lequel le résultat est nul : charges fixes ÷ taux de MCV\"]]}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 12,
+        "title": "📅 La gestion budgétaire : budgets des ventes, de production et de trésorerie",
+        "text": "{\"h\":\"📅 La gestion budgétaire : budgets des ventes, de production et de trésorerie\",\"blocks\":[{\"t\":\"p\",\"c\":\"La **gestion budgétaire** consiste à **prévoir** l’activité future en chiffres, sous forme de **budgets**, pour piloter et anticiper. Prévoir permet d’éviter les mauvaises surprises (rupture de trésorerie, sur-stock) et de fixer des **objectifs**.\"},{\"t\":\"p\",\"c\":\"Les budgets s’enchaînent logiquement : tout part des **ventes** prévues, qui déterminent la **production**, puis les **approvisionnements**, et enfin la **trésorerie**.\"},{\"t\":\"list\",\"c\":[\"**Budget des ventes** : le point de départ (quantités × prix prévus).\",\"**Budget de production** : ce qu’il faut fabriquer pour servir les ventes (en tenant compte des stocks).\",\"**Budget des approvisionnements** : les achats de matières nécessaires.\",\"**Budget de trésorerie** : les encaissements et décaissements mois par mois, pour repérer à l’avance les périodes de tension.\"]},{\"t\":\"example\",\"h\":\"Utilité du budget de trésorerie\",\"c\":\"Un commerce saisonnier prévoit de faibles ventes en janvier-février. Le budget de trésorerie révèle un **solde négatif** ces mois-là : le gérant peut négocier **à l’avance** un découvert ou décaler des paiements, plutôt que de subir la crise.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Les budgets s’enchaînent : **ventes → production → approvisionnements → trésorerie**. Le budget de **trésorerie** est le plus décisif pour la survie à court terme.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 13,
+        "title": "🎯 L’analyse des écarts : comparer le prévu et le réalisé",
+        "text": "{\"h\":\"🎯 L’analyse des écarts : comparer le prévu et le réalisé\",\"blocks\":[{\"t\":\"p\",\"c\":\"Après avoir prévu (budgets), on **compare** au réel : c’est l’**analyse des écarts**, cœur du **contrôle de gestion**. Un écart mesure la différence entre ce qui était prévu et ce qui s’est réellement passé, pour **comprendre** et **réagir**.\"},{\"t\":\"formula\",\"c\":\"Écart = Réel − Prévu\"},{\"t\":\"list\",\"c\":[\"Écart **favorable** : le réel est meilleur que prévu (plus de ventes, moins de coûts).\",\"Écart **défavorable** : le réel est moins bon que prévu (moins de ventes, plus de coûts).\"]},{\"t\":\"p\",\"c\":\"Un écart sur le chiffre d’affaires peut venir d’un effet **quantité** (on a vendu plus/moins d’unités) ou d’un effet **prix** (on a vendu plus/moins cher). Décomposer l’écart permet d’en **identifier la cause** et d’agir sur le bon levier.\"},{\"t\":\"example\",\"h\":\"Interprétation\",\"c\":\"Ventes prévues 100 000 € ; réelles 92 000 € → écart = −8 000 € (**défavorable**). En analysant : les quantités ont chuté (concurrence ?) alors que les prix ont tenu. La réaction portera sur la **demande** (promotion, communication), pas sur les prix.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Analyser un écart = le **calculer** (réel − prévu), le **qualifier** (favorable/défavorable), en **chercher la cause** (effet quantité ou prix), puis **décider** d’une action corrective.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 14,
+        "title": "💡 Choisir un investissement : flux de trésorerie et délai de récupération",
+        "text": "{\"h\":\"💡 Choisir un investissement : flux de trésorerie et délai de récupération\",\"blocks\":[{\"t\":\"p\",\"c\":\"Investir, c’est engager de l’argent **aujourd’hui** pour des gains **futurs**. Pour décider, on compare le **coût de l’investissement** aux **flux de trésorerie** qu’il va rapporter. Un critère simple et très utilisé : le **délai de récupération** (payback).\"},{\"t\":\"p\",\"c\":\"Le **délai de récupération** est le temps nécessaire pour que les gains cumulés **remboursent** le montant investi. Plus il est **court**, moins l’investissement est risqué (on récupère vite sa mise).\"},{\"t\":\"example\",\"h\":\"Délai de récupération\",\"c\":\"Investissement 60 000 €, gains nets de 20 000 €/an.\\nAprès 3 ans : 3 × 20 000 = 60 000 € → le délai de récupération est de **3 ans**. Au-delà, l’investissement devient bénéficiaire.\"},{\"t\":\"p\",\"c\":\"Un investissement se juge aussi sur des critères **qualitatifs** : cohérence avec la stratégie, impact sur la qualité, sur l’emploi, sur l’environnement, et sur l’**image**. Un projet au délai un peu plus long peut être préférable s’il est stratégiquement décisif.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Délai de récupération = montant investi ÷ gain annuel (si les gains sont constants). Critère de **prudence** : un délai court = un risque plus faible. Toujours croiser avec l’analyse **qualitative**.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 15,
+        "title": "🧮 Étude de cas guidée — coût complet et prix de vente",
+        "text": "{\"h\":\"🧮 Étude de cas guidée — coût complet et prix de vente\",\"blocks\":[{\"t\":\"p\",\"c\":\"**Énoncé.** Un atelier fabrique un article. Charges directes : matières 14 €/unité, main-d’œuvre 10 €/unité. Charges indirectes : centre production 45 000 € pour 3 000 heures-machine ; chaque article consomme 0,5 heure-machine. Production : 2 000 articles. L’entreprise vise une marge de 25 % sur le coût de revient. Calculez le coût complet unitaire et le prix de vente.\"},{\"t\":\"example\",\"h\":\"Étape 1 — Charges indirectes par article\",\"c\":\"Coût de l’unité d’œuvre = 45 000 ÷ 3 000 = 15 €/heure-machine.\\nPar article (0,5 h) : 15 × 0,5 = **7,50 €**.\"},{\"t\":\"example\",\"h\":\"Étape 2 — Coût complet unitaire\",\"c\":\"Coût complet = charges directes + indirectes = (14 + 10) + 7,50 = **31,50 €** par article.\"},{\"t\":\"example\",\"h\":\"Étape 3 — Prix de vente\",\"c\":\"Marge de 25 % : prix = 31,50 × 1,25 = **39,375 €**, arrondi à **39,38 €** HT.\"},{\"t\":\"p\",\"c\":\"**Commentaire.** À 39,38 € HT, chaque article dégage 39,38 − 31,50 ≈ **7,88 €** de marge. Ce prix couvre **toutes** les charges (directes et indirectes) : il est **soutenable durablement**. Pour une commande ponctuelle en capacité disponible, l’entreprise pourrait toutefois accepter un prix plus bas, jusqu’au **coût marginal**.\"},{\"t\":\"tip\",\"h\":\"Méthode\",\"c\":\"1) Calculer le **coût d’unité d’œuvre** et imputer les charges **indirectes**. 2) Ajouter les charges **directes** → coût complet. 3) Appliquer la **marge** pour le prix. 4) **Commenter** : prix durable (coût complet) vs décision ponctuelle (coût marginal).\"}],\"group\":\"cas\"}"
+      },
+      {
+        "idx": 16,
+        "title": "🧮 MÉTHODE — Calculer un seuil de rentabilité",
+        "text": "{\"h\":\"🧮 MÉTHODE — Calculer un seuil de rentabilité\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le seuil de rentabilité est le chiffre d’affaires (ou le nombre d’unités) à atteindre pour un résultat **nul**. Deux façons de le calculer selon les données de l’énoncé.\"},{\"t\":\"formula\",\"c\":\"Taux de MCV = (CA − Charges variables) ÷ CA\\nSeuil (en €) = Charges fixes ÷ Taux de MCV\\nSeuil (en quantité) = Charges fixes ÷ Marge sur coût variable unitaire\"},{\"t\":\"list\",\"c\":[\"**Si l’énoncé donne des totaux annuels** (CA, charges variables, charges fixes) → calculer le **taux de MCV**, puis le seuil **en euros**.\",\"**Si l’énoncé donne un prix et un coût unitaires** → calculer la **MCV unitaire**, puis le seuil **en quantité**.\"]},{\"t\":\"example\",\"h\":\"Exemple en euros\",\"c\":\"CA 200 000 € ; charges variables 120 000 € ; charges fixes 60 000 €.\\n① MCV = 200 000 − 120 000 = 80 000 € → taux = 80 000 ÷ 200 000 = **0,40**.\\n② Seuil = 60 000 ÷ 0,40 = **150 000 €** de CA.\\nVérif : 150 000 × 0,40 = 60 000 = charges fixes → résultat nul ✓.\"},{\"t\":\"example\",\"h\":\"Exemple en quantité\",\"c\":\"Prix 8 €/burger ; coût variable 3 €/burger ; charges fixes 4 000 €/mois.\\n① MCV unitaire = 8 − 3 = **5 €**.\\n② Seuil = 4 000 ÷ 5 = **800 burgers/mois**.\"},{\"t\":\"p\",\"c\":\"Bonus — le **point mort** (la date où le seuil est atteint) : Point mort = Seuil ÷ CA annuel × 360. Ex. 150 000 ÷ 200 000 × 360 = 270 jours ≈ **fin septembre**.\"},{\"t\":\"warning\",\"h\":\"Piège\",\"c\":\"Seuil **en euros** → diviser par le **taux** de MCV. Seuil **en quantité** → diviser par la **MCV unitaire**. Ne pas mélanger les deux.\"}],\"group\":\"methode\"}"
+      },
+      {
+        "idx": 17,
+        "title": "🧮 MÉTHODE — Calculer marge, taux de marge et taux de marque",
+        "text": "{\"h\":\"🧮 MÉTHODE — Calculer marge, taux de marge et taux de marque\",\"blocks\":[{\"t\":\"p\",\"c\":\"Trois notions **souvent confondues**. La **marge** est un montant en euros ; le **taux de marge** et le **taux de marque** sont des pourcentages, mais calculés sur une base différente.\"},{\"t\":\"formula\",\"c\":\"Marge commerciale = Prix de vente HT − Coût d’achat HT\\nTaux de marge = Marge ÷ Coût d’achat × 100\\nTaux de marque = Marge ÷ Prix de vente × 100\"},{\"t\":\"example\",\"h\":\"Exemple déroulé\",\"c\":\"Coût d’achat 60 € HT ; prix de vente 100 € HT.\\nMarge = 100 − 60 = **40 €**.\\nTaux de marge = 40 ÷ 60 × 100 = **66,7 %** (par rapport au coût d’achat).\\nTaux de marque = 40 ÷ 100 × 100 = **40 %** (par rapport au prix de vente).\"},{\"t\":\"p\",\"c\":\"La différence de base explique tout : le **taux de marge** se rapporte au **coût** (« je gagne 66,7 % de ce que j’ai payé »), le **taux de marque** au **prix de vente** (« la marge représente 40 % du prix affiché »). Le taux de marge est **toujours supérieur** au taux de marque.\"},{\"t\":\"tip\",\"h\":\"Retrouver un prix\",\"c\":\"À partir du coût d’achat et d’un taux de marge : Prix de vente = Coût × (1 + taux de marge). Ex. 60 × 1,667 ≈ **100 €**.\"},{\"t\":\"warning\",\"h\":\"Piège classique\",\"c\":\"Ne pas confondre taux de **marge** (÷ coût d’achat) et taux de **marque** (÷ prix de vente). L’énoncé précise toujours lequel — lire attentivement.\"}],\"group\":\"methode\"}"
+      },
+      {
+        "idx": 18,
+        "title": "🧮 MÉTHODE — Calculer un coût complet",
+        "text": "{\"h\":\"🧮 MÉTHODE — Calculer un coût complet\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le coût complet additionne toutes les charges d’un produit : les **directes** (affectées sans calcul) et les **indirectes** (réparties via les centres d’analyse). Méthode en 3 temps.\"},{\"t\":\"list\",\"c\":[\"**Étape 1** — Recenser les charges **directes** (matières, main-d’œuvre directe).\",\"**Étape 2** — Répartir les charges **indirectes** : coût d’unité d’œuvre = total du centre ÷ nombre d’unités d’œuvre, puis imputer selon la consommation du produit.\",\"**Étape 3** — Additionner : coût complet = directes + indirectes imputées.\"]},{\"t\":\"example\",\"h\":\"Exemple déroulé\",\"c\":\"Directes : matières 14 €/u + main-d’œuvre 10 €/u = 24 €/u.\\nIndirectes : centre production 45 000 € pour 3 000 h-machine → coût d’unité d’œuvre = 45 000 ÷ 3 000 = **15 €/h**. Le produit consomme 0,5 h → 15 × 0,5 = **7,50 €**.\\nCoût complet = 24 + 7,50 = **31,50 €/u**.\"},{\"t\":\"p\",\"c\":\"Pour fixer le **prix de vente** : appliquer la marge visée. Ex. marge 25 % → 31,50 × 1,25 ≈ **39,38 € HT**.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"La difficulté est la **répartition** des charges indirectes : toujours passer par le **coût d’unité d’œuvre**. Le coût complet sert à fixer un **prix durable** ; pour une décision ponctuelle, revenir au **coût marginal**.\"}],\"group\":\"methode\"}"
+      }
+    ]
+  },
+  {
+    "theme": "mkg-t1",
+    "idx": 1,
+    "title": "Motivations et freins : le processus d’achat",
+    "section": {
+      "h": "Motivations et freins : le processus d’achat",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Face à un achat, deux forces s’opposent : les **motivations** (ou mobiles) qui **poussent**, et les **freins** qui **retiennent**. Le rôle du marketing est d’**augmenter les mobiles** et de **lever les freins** — d’où les garanties, les facilités de paiement, les essais gratuits, les avis clients."
+        },
+        {
+          "t": "p",
+          "c": "Les **mobiles** se rangent en trois familles. Le mobile **hédoniste** pousse à **se faire plaisir**. Le mobile **oblatif** pousse à **faire plaisir aux autres**, par exemple en offrant un cadeau. Le mobile d’**auto-expression** pousse à **montrer qui l’on est**, à travers les produits qu’on choisit."
+        },
+        {
+          "t": "p",
+          "c": "Face à eux, trois **freins** reviennent souvent. Le **prix** est un frein financier. La **peur de se tromper** traduit le **risque** perçu. La **culpabilité**, enfin, est une **inhibition** : on se retient d’acheter parce qu’on juge l’achat déraisonnable. Les garanties, les facilités de paiement et les avis clients servent justement à lever ces freins."
+        },
+        {
+          "t": "p",
+          "c": "L’achat se fait aussi en **étapes** : reconnaissance du besoin → recherche d’informations → évaluation → décision → **évaluation post-achat** (satisfaction ou regret). Un client satisfait revient et recommande ; un client déçu part et « fait du bruit »."
+        },
+        {
+          "t": "warning",
+          "h": "À ne pas inverser",
+          "c": "La **motivation** pousse à l’achat, le **frein** le retient. Ce sont deux notions **opposées** à ne pas confondre."
+        },
+        {
+          "t": "table",
+          "h": "Notions et définitions",
+          "head": [
+            "Notion",
+            "Définition"
+          ],
+          "rows": [
+            [
+              "Mobile hédoniste",
+              "Se faire plaisir"
+            ],
+            [
+              "Mobile oblatif",
+              "Faire plaisir aux autres"
+            ],
+            [
+              "Mobile d’auto-expression",
+              "Montrer qui l’on est"
+            ],
+            [
+              "Frein",
+              "Force qui retient l’achat : prix, peur de se tromper (risque), culpabilité (inhibition)"
+            ],
+            [
+              "Évaluation post-achat",
+              "Dernière étape du processus d’achat : satisfaction ou regret"
+            ]
+          ]
+        }
+      ]
+    },
+    "manual": [
+      {
+        "id": "mkg-t1-trou",
+        "type": "trou",
+        "title": "Texte à trous — Comportement du consommateur",
+        "icon": "✏️",
+        "questions": [
+          {
+            "text": "La façon subjective et sélective d’interpréter l’information s’appelle la ____ .",
+            "answer": "perception",
+            "alt": [
+              "la perception"
+            ],
+            "explain": "La perception filtre l’information selon les attentes de chacun."
+          },
+          {
+            "text": "Une opinion favorable ou défavorable envers un produit est une ____ .",
+            "answer": "attitude",
+            "alt": [
+              "une attitude"
+            ],
+            "explain": "L’attitude prédispose à l’achat ou au rejet."
+          },
+          {
+            "text": "La force qui pousse à l’achat est une ____ .",
+            "answer": "motivation",
+            "alt": [
+              "une motivation"
+            ],
+            "explain": "La motivation pousse ; le frein retient."
+          },
+          {
+            "text": "Une bonne expérience crée la ____ , qui mène à la fidélisation.",
+            "answer": "satisfaction",
+            "alt": [
+              "la satisfaction"
+            ],
+            "explain": "Satisfaction → fidélisation → recommandation."
+          }
+        ]
+      }
+    ],
+    "otherSections": [
+      {
+        "idx": 0,
+        "title": "La mercatique : satisfaire les besoins (Maslow) et l’image de soi",
+        "text": "{\"h\":\"La mercatique : satisfaire les besoins (Maslow) et l’image de soi\",\"blocks\":[{\"t\":\"example\",\"h\":\"Cas\",\"c\":\"À chaque sortie d’un nouvel iPhone, des clients campent devant les magasins et paient le prix fort, alors que leur ancien téléphone marche très bien.\"},{\"t\":\"p\",\"c\":\"Leur achat ne répond pas qu’à un besoin fonctionnel (téléphoner) : il touche l’**image de soi**, l’envie d’appartenir, d’être reconnu. La **mercatique** (marketing) est justement l’ensemble des actions pour **détecter, analyser et satisfaire** les besoins des consommateurs — elle part du client, pas du produit.\"},{\"t\":\"p\",\"c\":\"La pyramide de **Maslow** hiérarchise les besoins : physiologiques, sécurité, appartenance, estime, accomplissement. Un même produit peut en toucher plusieurs à la fois (un smartphone : communiquer **et** afficher un statut).\"},{\"t\":\"tip\",\"h\":\"Renversement\",\"c\":\"La mercatique part du **client** (« qu’est-ce qu’il veut ? »), pas du produit (« j’ai fabriqué, je cherche à vendre »).\"}]}"
+      },
+      {
+        "idx": 1,
+        "title": "Motivations et freins : le processus d’achat",
+        "text": "{\"h\":\"Motivations et freins : le processus d’achat\",\"blocks\":[{\"t\":\"p\",\"c\":\"Face à un achat, deux forces s’opposent : les **motivations** (ou mobiles) qui **poussent**, et les **freins** qui **retiennent**. Le rôle du marketing est d’**augmenter les mobiles** et de **lever les freins** — d’où les garanties, les facilités de paiement, les essais gratuits, les avis clients.\"},{\"t\":\"p\",\"c\":\"Les **mobiles** se rangent en trois familles. Le mobile **hédoniste** pousse à **se faire plaisir**. Le mobile **oblatif** pousse à **faire plaisir aux autres**, par exemple en offrant un cadeau. Le mobile d’**auto-expression** pousse à **montrer qui l’on est**, à travers les produits qu’on choisit.\"},{\"t\":\"p\",\"c\":\"Face à eux, trois **freins** reviennent souvent. Le **prix** est un frein financier. La **peur de se tromper** traduit le **risque** perçu. La **culpabilité**, enfin, est une **inhibition** : on se retient d’acheter parce qu’on juge l’achat déraisonnable. Les garanties, les facilités de paiement et les avis clients servent justement à lever ces freins.\"},{\"t\":\"p\",\"c\":\"L’achat se fait aussi en **étapes** : reconnaissance du besoin → recherche d’informations → évaluation → décision → **évaluation post-achat** (satisfaction ou regret). Un client satisfait revient et recommande ; un client déçu part et « fait du bruit ».\"},{\"t\":\"warning\",\"h\":\"À ne pas inverser\",\"c\":\"La **motivation** pousse à l’achat, le **frein** le retient. Ce sont deux notions **opposées** à ne pas confondre.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Mobile hédoniste\",\"Se faire plaisir\"],[\"Mobile oblatif\",\"Faire plaisir aux autres\"],[\"Mobile d’auto-expression\",\"Montrer qui l’on est\"],[\"Frein\",\"Force qui retient l’achat : prix, peur de se tromper (risque), culpabilité (inhibition)\"],[\"Évaluation post-achat\",\"Dernière étape du processus d’achat : satisfaction ou regret\"]]}]}"
+      },
+      {
+        "idx": 2,
+        "title": "Facteurs et types d’achat, études de marché et segmentation",
+        "text": "{\"h\":\"Facteurs et types d’achat, études de marché et segmentation\",\"blocks\":[{\"t\":\"p\",\"c\":\"Nos choix dépendent de facteurs **personnels** (perception, habitudes, personnalité, âge) et **socioculturels** (la culture, les proches, les groupes de référence, le milieu social). Deux personnes devant le même produit peuvent réagir de façon opposée : c’est pourquoi une marque doit connaître **qui** est en face.\"},{\"t\":\"p\",\"c\":\"On distingue aussi des **types d’achat** : **réfléchi** (une voiture, choix long), **impulsif** (en caisse, sans réflexion), **routinier** (les courses habituelles). Chaque type appelle une mercatique différente. Pour connaître tout cela, l’entreprise mène des **études** : **quantitatives** (combien ? par sondage) et **qualitatives** (pourquoi ? par entretiens).\"},{\"t\":\"tip\",\"h\":\"Vers la suite\",\"c\":\"Comprendre le consommateur mène naturellement à **découper** le marché en groupes homogènes : c’est la **segmentation**.\"}]}"
+      },
+      {
+        "idx": 3,
+        "title": "🛍️ Exemple — un smartphone haut de gamme : besoin, motivation, frein",
+        "text": "{\"h\":\"🛍️ Exemple — un smartphone haut de gamme : besoin, motivation, frein\",\"group\":\"cas\",\"blocks\":[{\"t\":\"example\",\"h\":\"Cas\",\"c\":\"Un client achète un smartphone haut de gamme d’une grande marque, plus cher que les autres.\"},{\"t\":\"list\",\"c\":[\"**Motivation** (pousse à l’achat) : besoin d’estime, image de soi (motivation d’auto-expression).\",\"**Frein** (retient) : le prix élevé (frein financier), la peur de se tromper (risque perçu).\",\"**Besoin** (Maslow) : ici un besoin d’**estime**, pas seulement un besoin fonctionnel.\"]},{\"t\":\"tip\",\"h\":\"Rôle du marketing\",\"c\":\"Le marketing cherche à renforcer les motivations et à lever les freins (garantie, facilités de paiement).\"}]}"
+      },
+      {
+        "idx": 4,
+        "title": "🧠 Besoins, mobiles et freins du consommateur",
+        "text": "{\"h\":\"🧠 Besoins, mobiles et freins du consommateur\",\"blocks\":[{\"t\":\"p\",\"c\":\"La **mercatique** (ou marketing) est l’ensemble des actions destinées à **détecter, analyser et satisfaire les besoins** des consommateurs, dans le but d’atteindre les objectifs de l’entreprise (vendre, fidéliser, se différencier). Tout part donc de la compréhension du **consommateur**.\"},{\"t\":\"p\",\"c\":\"Un **besoin** est une sensation de manque. **Maslow** les hiérarchise en une pyramide : besoins physiologiques, de sécurité, d’appartenance, d’estime, d’accomplissement. Un produit peut répondre à plusieurs niveaux à la fois (une voiture = se déplacer, mais aussi statut social).\"},{\"t\":\"p\",\"c\":\"Quatre notions décrivent ce qui se passe dans la tête du consommateur. Le **besoin** est une sensation de manque : dormir, se nourrir, appartenir à un groupe. La **motivation**, qu’on appelle aussi **mobile**, est la force qui **pousse** à acheter pour satisfaire ce besoin.\"},{\"t\":\"p\",\"c\":\"À l’inverse, le **frein** est la force qui **retient** d’acheter : la peur de se tromper, le risque perçu, un prix jugé trop élevé. Enfin, l’**attente** est ce que le client espère précisément du produit, par exemple une batterie qui tient toute la journée. Un achat a lieu quand les mobiles l’emportent sur les freins et que le produit semble répondre aux attentes.\"},{\"t\":\"p\",\"c\":\"Les **mobiles** d’achat sont classés : **hédonistes** (se faire plaisir), **oblatifs** (faire plaisir aux autres, offrir) et d’**auto-expression** (montrer qui l’on est). Les **freins** sont les **peurs** (risque perçu), les **inhibitions** (culpabilité) et les **risques** (financier, de performance).\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Un achat = équilibre entre **mobiles** (qui poussent) et **freins** (qui retiennent). Le rôle de la mercatique est de **renforcer les mobiles** et de **lever les freins** (essai gratuit, garantie, avis clients).\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Besoin\",\"Sensation de manque (dormir, se nourrir, appartenir) ; Maslow les classe en 5 niveaux\"],[\"Motivation / mobile\",\"Force qui pousse à l’achat (hédoniste, oblatif, auto-expression)\"],[\"Frein\",\"Force qui retient d’acheter (peur, risque, prix, inhibition)\"],[\"Attente\",\"Ce que le client espère précisément du produit\"]]}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 5,
+        "title": "🛒 Le processus d’achat en cinq étapes et ses facteurs",
+        "text": "{\"h\":\"🛒 Le processus d’achat en cinq étapes et ses facteurs\",\"blocks\":[{\"t\":\"p\",\"c\":\"L’achat n’est pas instantané : c’est un **processus** en plusieurs étapes que la mercatique cherche à accompagner à chaque instant.\"},{\"t\":\"list\",\"c\":[\"**1. Reconnaissance du besoin** : le consommateur prend conscience d’un manque.\",\"**2. Recherche d’informations** : avis, comparateurs, publicité, entourage.\",\"**3. Évaluation des solutions** : comparaison des offres selon des critères.\",\"**4. Décision d’achat** : le passage à l’acte.\",\"**5. Évaluation post-achat** : satisfaction ou regret → fidélité ou non.\"]},{\"t\":\"p\",\"c\":\"La décision est influencée par des **facteurs** : **individuels** (âge, personnalité, style de vie), **psychologiques** (perception, apprentissage) et **socioculturels** (famille, groupes de référence, culture, effets de mode). D’où le fait qu’« on n’achète pas tous de la même façon ».\"},{\"t\":\"p\",\"c\":\"On distingue aussi les **types d’achat** : **réfléchi** (voiture, choix long), **impulsif** (en caisse, sans réflexion), **routinier** (courses habituelles). Chaque type appelle une mercatique différente.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"La satisfaction **post-achat** est décisive : un client satisfait revient et recommande ; un client déçu part et « fait du bruit ». Fidéliser coûte moins cher que conquérir.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 6,
+        "title": "📊 Les études de marché : quantitatives ou qualitatives, primaires ou secondaires",
+        "text": "{\"h\":\"📊 Les études de marché : quantitatives ou qualitatives, primaires ou secondaires\",\"blocks\":[{\"t\":\"p\",\"c\":\"Pour connaître les consommateurs, l’entreprise réalise des **études de marché**. On les classe en deux grandes familles complémentaires.\"},{\"t\":\"p\",\"c\":\"L’**étude quantitative** répond à la question **« combien ? »** : elle cherche à **mesurer**. Elle repose sur un **sondage** ou un **questionnaire** passé auprès d’un **grand échantillon**, ce qui permet d’obtenir des chiffres représentatifs, comme la part des Français qui connaissent une marque.\"},{\"t\":\"p\",\"c\":\"L’**étude qualitative** répond à la question **« pourquoi ? »** : elle cherche à **comprendre** les motivations et les freins. Elle utilise des **entretiens individuels** approfondis et des **réunions de groupe** (focus groups), menés auprès d’un petit nombre de personnes. Les deux études se complètent : la qualitative fait apparaître des idées, la quantitative vérifie leur poids.\"},{\"t\":\"p\",\"c\":\"L’étude **quantitative** donne des chiffres représentatifs (part de marché, taux de notoriété) ; l’étude **qualitative** explore les motivations profondes et les freins. Les données peuvent être **primaires** (recueillies pour l’étude) ou **secondaires** (déjà existantes : INSEE, rapports).\"},{\"t\":\"p\",\"c\":\"Aujourd’hui, le **big data** et les traces numériques (historique d’achat, navigation) complètent ces études : l’entreprise connaît le consommateur « en temps réel ».\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Quanti = **mesurer** (combien) ; quali = **comprendre** (pourquoi). Les deux se complètent : on explore en quali, on valide en quanti.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Étude quantitative\",\"Mesure (« combien ? ») par sondage ou questionnaire sur un grand échantillon\"],[\"Étude qualitative\",\"Comprend (« pourquoi ? ») par entretiens et réunions de groupe\"],[\"Données primaires\",\"Données recueillies spécialement pour l’étude\"],[\"Données secondaires\",\"Données qui existent déjà (INSEE, rapports)\"]]}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 7,
+        "title": "🛍️ Étude de cas guidée — une nuit de queue : besoins, mobiles et freins",
+        "text": "{\"h\":\"🛍️ Étude de cas guidée — une nuit de queue : besoins, mobiles et freins\",\"blocks\":[{\"t\":\"p\",\"c\":\"**Énoncé.** Des clients font la queue toute une nuit pour acheter le dernier smartphone d’une grande marque. Analysez les besoins, mobiles et freins en jeu.\"},{\"t\":\"example\",\"h\":\"Étape 1 — Besoins\",\"c\":\"Besoin fonctionnel (communiquer) mais surtout besoins d’**estime** et d’**appartenance** (posséder l’objet à la mode, appartenir à la communauté de la marque).\"},{\"t\":\"example\",\"h\":\"Étape 2 — Mobiles\",\"c\":\"Mobile **hédoniste** (plaisir de la nouveauté), mobile d’**auto-expression** (montrer son statut, son appartenance à une « tribu » de fans).\"},{\"t\":\"example\",\"h\":\"Étape 3 — Freins\",\"c\":\"Frein **financier** (prix élevé) et **risque** (attente, rupture de stock), largement compensés ici par la force des mobiles et l’effet de rareté organisé.\"},{\"t\":\"p\",\"c\":\"**Commentaire.** La marque a transformé l’achat en **événement** : la file d’attente devient une preuve sociale qui renforce le désir. C’est une mercatique de la **désirabilité** qui joue sur l’image et l’appartenance bien plus que sur la fonction.\"},{\"t\":\"tip\",\"h\":\"Méthode\",\"c\":\"Pour analyser un achat : identifier le **besoin** (Maslow), les **mobiles**, les **freins**, puis montrer comment la mercatique **agit** dessus.\"}],\"group\":\"cas\"}"
+      },
+      {
+        "idx": 8,
+        "title": "🧾 Mémo — les notions clés du consommateur",
+        "text": "{\"h\":\"🧾 Mémo — les notions clés du consommateur\",\"blocks\":[{\"t\":\"p\",\"c\":\"Pour réviser, retiens ces quatre notions et leurs nuances. Le **besoin** est une sensation de manque ; Maslow les range en **cinq niveaux**, des besoins physiologiques jusqu’à l’accomplissement. La **motivation**, ou **mobile**, est la force qui pousse à l’achat : elle peut être **hédoniste** (se faire plaisir), **oblative** (faire plaisir aux autres) ou d’**auto-expression** (montrer qui l’on est).\"},{\"t\":\"p\",\"c\":\"Le **frein** est la force qui retient l’achat : une **peur**, un **risque** perçu ou une **inhibition** comme la culpabilité. L’**attente**, enfin, est ce que le client espère précisément obtenir du produit.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Un achat = équilibre **mobiles** (pousser) / **freins** (retenir). Le marketing renforce les uns et lève les autres.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Besoin\",\"Sensation de manque (Maslow : 5 niveaux)\"],[\"Motivation / mobile\",\"Force qui pousse à l’achat (hédoniste, oblatif, auto-expression)\"],[\"Frein\",\"Force qui retient (peur, risque, inhibition)\"],[\"Attente\",\"Ce que le client espère précisément\"]]}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 9,
+        "title": "🧑‍💼 Étude de cas — l’achat réfléchi d’une voiture électrique",
+        "text": "{\"h\":\"🧑‍💼 Étude de cas — l’achat réfléchi d’une voiture électrique\",\"blocks\":[{\"t\":\"p\",\"c\":\"**Énoncé.** Une cliente hésite longuement puis achète une voiture électrique plus chère qu’une thermique équivalente. Analysez.\"},{\"t\":\"example\",\"h\":\"Étape 1 — Besoins et mobiles\",\"c\":\"Besoin de mobilité, mais aussi d’**estime** et mobile **d’auto-expression** (image écologique, valeurs).\"},{\"t\":\"example\",\"h\":\"Étape 2 — Freins\",\"c\":\"Frein **financier** (prix élevé) et frein **risque** (autonomie, recharge), qui expliquent l’hésitation.\"},{\"t\":\"p\",\"c\":\"**Conclusion.** Le vendeur doit **lever les freins** (aides à l’achat, garantie batterie, démonstration de l’autonomie) et **renforcer les mobiles** (valeurs, économies à l’usage). C’est un **achat réfléchi**.\"},{\"t\":\"tip\",\"h\":\"Méthode\",\"c\":\"Identifier besoin → mobiles → freins → montrer comment la mercatique agit dessus.\"}],\"group\":\"cas\"}"
+      }
+    ]
+  },
+  {
+    "theme": "mkg-t2",
+    "idx": 3,
+    "title": "🎯 Le marché : offre, demande, environnement",
+    "section": {
+      "h": "🎯 Le marché : offre, demande, environnement",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Le **marché** est le lieu (physique ou non) de rencontre entre une **offre** (les entreprises qui vendent) et une **demande** (les clients qui achètent). L’analyser, c’est mesurer sa taille, sa structure et son évolution."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**La demande** : clients actuels + non-consommateurs relatifs (qui pourraient acheter) ; on écarte les non-consommateurs absolus (qui n’achèteront jamais).",
+            "**L’offre** : les concurrents (directs et indirects) et leur pouvoir de marché.",
+            "**L’environnement** : facteurs PESTEL (politique, économique, socioculturel, technologique, écologique, légal) qui influencent le marché."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "On mesure sa position par la **part de marché** : la place de l’entreprise sur son marché."
+        },
+        {
+          "t": "formula",
+          "c": "Part de marché (%) = (Ventes de l’entreprise ÷ Ventes totales du marché) × 100"
+        },
+        {
+          "t": "example",
+          "h": "Calcul",
+          "c": "Ventes de l’entreprise 3 M€ ; ventes totales du marché 25 M€.\nPart de marché = 3 ÷ 25 × 100 = **12 %**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "La demande ne se limite pas aux clients actuels : les **non-consommateurs relatifs** sont le potentiel de croissance. La **part de marché** situe l’entreprise face à ses concurrents."
+        }
+      ],
+      "group": "approf"
+    },
+    "manual": [
+      {
+        "id": "mkg-t2-trou",
+        "type": "trou",
+        "title": "Texte à trous — Le marché",
+        "icon": "✏️",
+        "questions": [
+          {
+            "text": "Un client potentiel non encore acheteur est un ____ .",
+            "answer": "prospect",
+            "alt": [
+              "un prospect"
+            ],
+            "explain": "Le prospect est une cible de conquête."
+          },
+          {
+            "text": "Les non-consommateurs ____ sont récupérables et deviennent une cible de croissance.",
+            "answer": "relatifs",
+            "alt": [
+              "relatif"
+            ],
+            "explain": "NCR = récupérables ; NCA = jamais clients."
+          },
+          {
+            "text": "La méthode qui analyse le macro-environnement se nomme ____ .",
+            "answer": "PESTEL",
+            "alt": [
+              "pestel"
+            ],
+            "explain": "Politique, Économique, Socio., Techno., Écolo., Légal."
+          },
+          {
+            "text": "La demande en ____ correspond au chiffre d’affaires (quantités × prix).",
+            "answer": "valeur",
+            "alt": [
+              "la valeur"
+            ],
+            "explain": "Valeur = CA ; volume = quantités."
+          }
+        ]
+      }
+    ],
+    "otherSections": [
+      {
+        "idx": 0,
+        "title": "Segmentation, ciblage, positionnement : la démarche SCP",
+        "text": "{\"h\":\"Segmentation, ciblage, positionnement : la démarche SCP\",\"blocks\":[{\"t\":\"example\",\"h\":\"Cas\",\"c\":\"Une montre à 20 € sur Vinted, une Rolex à 10 000 €, un menu à 8 € : trois offres, trois publics totalement différents.\"},{\"t\":\"p\",\"c\":\"Aucune marque ne peut plaire à tout le monde. Elle **découpe** donc le marché en groupes homogènes (la **segmentation**), en **choisit** un ou plusieurs (le **ciblage**), puis construit une **image** qui la distingue des concurrents (le **positionnement**). Trois étapes, dans cet ordre : c’est la démarche **SCP**.\"},{\"t\":\"p\",\"c\":\"Chaque étape répond à une question et produit un résultat. La **segmentation** répond à « comment découper ? » et donne des **segments homogènes**. Le **ciblage** répond à « qui viser ? » et désigne **la cible**.\"},{\"t\":\"p\",\"c\":\"Le **positionnement** répond à « quelle image ? » et donne au produit **une place dans l’esprit du client**. L’ordre compte : on ne peut pas choisir une image avant de savoir à qui l’on parle.\"},{\"t\":\"tip\",\"h\":\"Mémo\",\"c\":\"**S**egmenter (découper) → **C**ibler (choisir) → **P**ositionner (image voulue). Un bon positionnement est **clair, distinctif et crédible**.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Segmentation\",\"Découper le marché en segments homogènes\"],[\"Ciblage\",\"Choisir le ou les segments à viser : la cible\"],[\"Positionnement\",\"Image voulue, place dans l’esprit du client ; doit être clair, distinctif et crédible\"]]}]}"
+      },
+      {
+        "idx": 1,
+        "title": "Connaître son marché : non-consommateurs, part de marché, veille",
+        "text": "{\"h\":\"Connaître son marché : non-consommateurs, part de marché, veille\",\"blocks\":[{\"t\":\"p\",\"c\":\"Un marché est la rencontre d’une **offre** et d’une **demande**. Ce n’est pas que les clients actuels : il y a aussi les concurrents, et les **non-consommateurs relatifs** qu’on pourrait convaincre demain (le potentiel de croissance). Analyser tout cela (taille, tendances, parts de marché) évite de foncer à l’aveugle.\"},{\"t\":\"p\",\"c\":\"On situe sa position par la **part de marché** = ventes de l’entreprise ÷ ventes totales du marché × 100. Pour rester à jour, l’entreprise exerce une **veille** (surveillance continue de la concurrence et des tendances) et réalise des **études de marché** avant toute décision importante.\"},{\"t\":\"warning\",\"h\":\"Deux mesures à distinguer\",\"c\":\"La part de marché (en % du **marché total**) n’est pas la part de marché **relative** (comparée au **leader**).\"}]}"
+      },
+      {
+        "idx": 2,
+        "title": "🛍️ Exemple — une boisson énergisante : segmenter, cibler, positionner",
+        "text": "{\"h\":\"🛍️ Exemple — une boisson énergisante : segmenter, cibler, positionner\",\"group\":\"cas\",\"blocks\":[{\"t\":\"example\",\"h\":\"Cas\",\"c\":\"Une marque lance une nouvelle boisson énergisante.\"},{\"t\":\"list\",\"c\":[\"**Segmentation** : découper le marché (âge, mode de vie, sportifs…).\",\"**Ciblage** : choisir le segment « jeunes actifs sportifs ».\",\"**Positionnement** : l’image voulue (« énergie naturelle et saine ») pour se distinguer des concurrents.\"]},{\"t\":\"tip\",\"h\":\"3 étapes distinctes\",\"c\":\"Segmenter (découper) → cibler (choisir) → positionner (image). On ne les confond pas.\"}]}"
+      },
+      {
+        "idx": 3,
+        "title": "🎯 Le marché : offre, demande, environnement",
+        "text": "{\"h\":\"🎯 Le marché : offre, demande, environnement\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le **marché** est le lieu (physique ou non) de rencontre entre une **offre** (les entreprises qui vendent) et une **demande** (les clients qui achètent). L’analyser, c’est mesurer sa taille, sa structure et son évolution.\"},{\"t\":\"list\",\"c\":[\"**La demande** : clients actuels + non-consommateurs relatifs (qui pourraient acheter) ; on écarte les non-consommateurs absolus (qui n’achèteront jamais).\",\"**L’offre** : les concurrents (directs et indirects) et leur pouvoir de marché.\",\"**L’environnement** : facteurs PESTEL (politique, économique, socioculturel, technologique, écologique, légal) qui influencent le marché.\"]},{\"t\":\"p\",\"c\":\"On mesure sa position par la **part de marché** : la place de l’entreprise sur son marché.\"},{\"t\":\"formula\",\"c\":\"Part de marché (%) = (Ventes de l’entreprise ÷ Ventes totales du marché) × 100\"},{\"t\":\"example\",\"h\":\"Calcul\",\"c\":\"Ventes de l’entreprise 3 M€ ; ventes totales du marché 25 M€.\\nPart de marché = 3 ÷ 25 × 100 = **12 %**.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"La demande ne se limite pas aux clients actuels : les **non-consommateurs relatifs** sont le potentiel de croissance. La **part de marché** situe l’entreprise face à ses concurrents.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 4,
+        "title": "✂️ Segmenter, cibler, positionner (SCP)",
+        "text": "{\"h\":\"✂️ Segmenter, cibler, positionner (SCP)\",\"blocks\":[{\"t\":\"p\",\"c\":\"Une entreprise ne peut pas plaire à tout le monde. La démarche **SCP** structure son approche du marché en trois temps.\"},{\"t\":\"p\",\"c\":\"La **segmentation** répond à la question « comment découper le marché ? ». Elle aboutit à des **groupes homogènes** de consommateurs, les **segments**, qui se ressemblent par leur âge, leur revenu, leur style de vie ou leur usage du produit.\"},{\"t\":\"p\",\"c\":\"Le **ciblage** répond à la question « quel segment viser ? » : son résultat est la **cible**, c’est-à-dire le ou les segments que l’entreprise décide de conquérir. Le **positionnement**, enfin, répond à la question « quelle image donner ? » : il donne au produit une **place claire dans l’esprit du client**, différente de celle des concurrents.\"},{\"t\":\"p\",\"c\":\"La **segmentation** découpe le marché en groupes homogènes selon des critères (âge, revenu, style de vie, usage). Le **ciblage** choisit le ou les segments à conquérir. Le **positionnement** définit l’image et la place que l’on veut occuper dans l’esprit du client, par rapport aux concurrents.\"},{\"t\":\"example\",\"h\":\"Illustration\",\"c\":\"Vinted (occasion, budget serré, éco-responsable), Rolex (luxe, statut), McDo (rapide, familial, prix bas) ne visent **pas la même cible** et ont chacun un **positionnement** très distinct. C’est ce qui évite qu’ils se concurrencent frontalement.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"SCP = **Segmenter → Cibler → Positionner**. Un bon positionnement est **clair, distinctif et crédible** : il répond à « pourquoi me choisir plutôt qu’un autre ? ».\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Segmentation\",\"Découpage du marché en groupes homogènes de consommateurs (segments)\"],[\"Ciblage\",\"Choix du ou des segments à viser : la cible\"],[\"Positionnement\",\"Image et place que l’on veut occuper dans l’esprit du client, face aux concurrents\"],[\"Démarche SCP\",\"Segmenter, puis cibler, puis positionner\"]]}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 5,
+        "title": "🔎 La veille et l’étude de marché",
+        "text": "{\"h\":\"🔎 La veille et l’étude de marché\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le marché évolue en permanence : l’entreprise doit exercer une **veille** (surveillance continue de la concurrence, des tendances, des technologies) pour ne pas se faire dépasser. La veille alimente les décisions stratégiques.\"},{\"t\":\"p\",\"c\":\"Avant de lancer un produit ou d’entrer sur un marché, on réalise une **étude de marché** qui croise l’analyse de la **demande**, de l’**offre** et de l’**environnement**. Elle réduit le risque en vérifiant qu’il existe bien des clients prêts à acheter.\"},{\"t\":\"list\",\"c\":[\"Analyser la **demande** : qui, combien, quels besoins, quel budget ?\",\"Analyser l’**offre** : quels concurrents, à quels prix, quelle différenciation possible ?\",\"Analyser l’**environnement** : réglementation, tendances, technologies.\"]},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"La **veille** est continue ; l’**étude de marché** est ponctuelle (avant une décision). Toutes deux visent à **décider en connaissance de cause**, pas au hasard.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 6,
+        "title": "🛍️ Étude de cas guidée — viser tout le monde ou un segment : cible et positionnement",
+        "text": "{\"h\":\"🛍️ Étude de cas guidée — viser tout le monde ou un segment : cible et positionnement\",\"blocks\":[{\"t\":\"p\",\"c\":\"**Énoncé.** Une marque de vêtements veut lancer une nouvelle ligne. Elle hésite entre viser « tout le monde » ou un segment précis. Que recommander ?\"},{\"t\":\"example\",\"h\":\"Étape 1 — Segmentation\",\"c\":\"Découper le marché : par âge (ados / jeunes actifs / seniors), par style (sportif / chic / éco-responsable), par budget. On obtient des **segments homogènes**.\"},{\"t\":\"example\",\"h\":\"Étape 2 — Ciblage\",\"c\":\"Viser « tout le monde » dilue le message et le budget. Mieux vaut **cibler** un segment porteur (ex. jeunes actifs sensibles à l’éco-responsabilité) où la marque peut se différencier.\"},{\"t\":\"p\",\"c\":\"**Étape 3 — Positionnement.** Adopter un positionnement clair (« mode responsable et accessible ») et le décliner dans tout le mix (produit, prix, distribution, communication). **Recommandation** : cibler plutôt que s’éparpiller, car un positionnement fort attire une clientèle fidèle.\"},{\"t\":\"tip\",\"h\":\"Méthode\",\"c\":\"Toujours : **segmenter** (critères) → **cibler** (choix justifié) → **positionner** (image distinctive) → vérifier la **cohérence** avec le mix.\"}],\"group\":\"cas\"}"
+      },
+      {
+        "idx": 7,
+        "title": "📐 Calculer et interpréter une part de marché",
+        "text": "{\"h\":\"📐 Calculer et interpréter une part de marché\",\"blocks\":[{\"t\":\"formula\",\"c\":\"Part de marché (%) = Ventes de l’entreprise ÷ Ventes totales du marché × 100\"},{\"t\":\"example\",\"h\":\"Exemple\",\"c\":\"Ventes 4,5 M€ ; marché 30 M€ → 4,5 ÷ 30 × 100 = **15 %**. L’entreprise détient 15 % du marché.\"},{\"t\":\"p\",\"c\":\"La **part de marché relative** compare l’entreprise au **leader** : elle situe la position concurrentielle.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Part de marché = poids sur le marché total ; part **relative** = face au leader.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 8,
+        "title": "🧭 Le positionnement : la carte perceptuelle",
+        "text": "{\"h\":\"🧭 Le positionnement : la carte perceptuelle\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le **positionnement** est l’image que l’entreprise veut occuper dans l’esprit du client, par rapport aux concurrents. On le visualise avec une **carte perceptuelle** (deux axes, ex. prix et qualité).\"},{\"t\":\"p\",\"c\":\"Un bon positionnement est **clair, distinctif et crédible** : il répond à « pourquoi me choisir plutôt qu’un autre ? ». Il oriente ensuite tout le **mix**.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Positionner = choisir une **place distinctive**. La carte perceptuelle montre les espaces libres face aux concurrents.\"}],\"group\":\"approf\"}"
+      }
+    ]
+  },
+  {
+    "theme": "rh-t2",
+    "idx": 2,
+    "title": "🧑‍💼 Cas — la répartition des tâches : identifier la source du conflit",
+    "section": {
+      "h": "🧑‍💼 Cas — la répartition des tâches : identifier la source du conflit",
+      "group": "cas",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Situation",
+          "c": "Deux salariés se disputent en permanence sur la répartition des tâches."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Identifier la source** : ici un conflit d’**organisation** (répartition), pas seulement de personnes.",
+            "**Modes de résolution** : négociation directe, puis médiation (un tiers aide) ou arbitrage (un tiers tranche).",
+            "Bien géré, un conflit peut être **constructif** (il clarifie les rôles)."
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "À distinguer",
+          "c": "Médiation = le tiers aide à trouver un accord ; arbitrage = le tiers impose la solution."
+        }
+      ]
+    },
+    "manual": [
+      {
+        "id": "rh-t2-trou",
+        "type": "trou",
+        "title": "Texte à trous — Conflits & résolution",
+        "icon": "✏️",
+        "questions": [
+          {
+            "text": "Un conflit larvé, non exprimé ouvertement, est ____ .",
+            "answer": "latent",
+            "alt": [
+              "latent"
+            ],
+            "explain": "Latent = sourd ; ouvert = déclaré."
+          },
+          {
+            "text": "Quand un tiers aide sans imposer, c’est la ____ .",
+            "answer": "médiation",
+            "alt": [
+              "la médiation",
+              "mediation"
+            ],
+            "explain": "Le médiateur rapproche ; l’arbitre impose."
+          },
+          {
+            "text": "Quand un tiers impose sa décision, c’est l’____ .",
+            "answer": "arbitrage",
+            "alt": [
+              "l’arbitrage",
+              "arbitrage"
+            ],
+            "explain": "L’arbitre tranche et impose."
+          },
+          {
+            "text": "Un excès de cohésion crée du ____ .",
+            "answer": "conformisme",
+            "alt": [
+              "conformisme"
+            ],
+            "explain": "Les avis divergents ne s’expriment plus."
+          }
+        ]
+      }
+    ],
+    "otherSections": [
+      {
+        "idx": 0,
+        "title": "La cohésion d’équipe : une force, un risque de conformisme",
+        "text": "{\"h\":\"La cohésion d’équipe : une force, un risque de conformisme\",\"blocks\":[{\"t\":\"example\",\"h\":\"Cas\",\"c\":\"Une équipe de sport très soudée enchaîne les victoires. Mais à force de penser pareil, personne n’ose dire que la tactique ne marche plus.\"},{\"t\":\"p\",\"c\":\"La **cohésion** renforce la performance : on se fait confiance, on coopère. Mais son excès crée du **conformisme** (la « pensée de groupe ») où plus personne ne remet en cause le groupe. Un bon manager entretient la cohésion **sans** étouffer les avis différents. La **culture d’entreprise** (valeurs, rites, histoire partagés) nourrit cette cohésion et le sentiment d’appartenance.\"},{\"t\":\"tip\",\"h\":\"Nuance\",\"c\":\"La cohésion est une **force** ; le conformisme aveugle, un **risque**. Une bonne équipe reste soudée **ET** critique.\"}]}"
+      },
+      {
+        "idx": 1,
+        "title": "Les conflits : sources et modes de résolution",
+        "text": "{\"h\":\"Les conflits : sources et modes de résolution\",\"blocks\":[{\"t\":\"example\",\"h\":\"Cas\",\"c\":\"Deux collègues se disputent sans cesse sur « qui fait quoi ».\"},{\"t\":\"p\",\"c\":\"Souvent, la vraie cause n’est pas les personnes mais l’**organisation** (rôles mal définis). Les conflits ont des origines variées : d’**intérêts**, de **valeurs**, de **personnes**, de **pouvoir**. Bien géré, un conflit peut même être **constructif** : il oblige à clarifier.\"},{\"t\":\"p\",\"c\":\"Quatre modes de résolution existent, du plus subi au plus constructif. Avec le **recours hiérarchique**, **le chef tranche** : c’est rapide, mais la décision est imposée. Avec la **négociation**, **les parties cherchent elles-mêmes un accord**.\"},{\"t\":\"p\",\"c\":\"Avec la **médiation**, un **tiers neutre aide au dialogue**, sans décider à la place des parties. Avec l’**arbitrage**, un **tiers impose la solution**, que les parties s’engagent à respecter.\"},{\"t\":\"warning\",\"h\":\"À distinguer\",\"c\":\"Médiation = on **aide** à trouver un accord ; arbitrage = on **impose** la solution. La **négociation** gagnant-gagnant est souvent la plus durable.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Recours hiérarchique\",\"Le chef tranche\"],[\"Négociation\",\"Les parties cherchent un accord\"],[\"Médiation\",\"Un tiers neutre aide au dialogue\"],[\"Arbitrage\",\"Un tiers impose la solution\"]]}]}"
+      },
+      {
+        "idx": 2,
+        "title": "🧑‍💼 Cas — la répartition des tâches : identifier la source du conflit",
+        "text": "{\"h\":\"🧑‍💼 Cas — la répartition des tâches : identifier la source du conflit\",\"group\":\"cas\",\"blocks\":[{\"t\":\"example\",\"h\":\"Situation\",\"c\":\"Deux salariés se disputent en permanence sur la répartition des tâches.\"},{\"t\":\"list\",\"c\":[\"**Identifier la source** : ici un conflit d’**organisation** (répartition), pas seulement de personnes.\",\"**Modes de résolution** : négociation directe, puis médiation (un tiers aide) ou arbitrage (un tiers tranche).\",\"Bien géré, un conflit peut être **constructif** (il clarifie les rôles).\"]},{\"t\":\"tip\",\"h\":\"À distinguer\",\"c\":\"Médiation = le tiers aide à trouver un accord ; arbitrage = le tiers impose la solution.\"}]}"
+      },
+      {
+        "idx": 3,
+        "title": "🤝 Groupe, équipe et cohésion : le risque de la pensée de groupe",
+        "text": "{\"h\":\"🤝 Groupe, équipe et cohésion : le risque de la pensée de groupe\",\"blocks\":[{\"t\":\"p\",\"c\":\"Une organisation fonctionne par **groupes** et **équipes**. Un **groupe** est un ensemble de personnes en interaction ; une **équipe** est un groupe orienté vers un **objectif commun**, avec une complémentarité des rôles. La **cohésion** est la force qui unit ses membres.\"},{\"t\":\"p\",\"c\":\"Une équipe **cohésive** est plus performante : meilleure communication, entraide, motivation collective. Mais une cohésion **excessive** a ses dangers : le **conformisme** (on n’ose plus contredire) et la **pensée de groupe** (« groupthink »), qui étouffent l’esprit critique et mènent à de mauvaises décisions.\"},{\"t\":\"list\",\"c\":[\"Facteurs de cohésion : objectif partagé, communication, reconnaissance, taille raisonnable, réussite commune.\",\"Risques d’une cohésion excessive : conformisme, rejet des avis divergents, prise de risque irrationnelle.\"]},{\"t\":\"p\",\"c\":\"La **culture d’entreprise** (valeurs, rites, histoire, symboles partagés) renforce la cohésion et le sentiment d’appartenance. Elle donne une identité commune et guide les comportements.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"La cohésion est un atout **jusqu’à un certain point** : trop de cohésion tue le débat (conformisme, pensée de groupe). Une équipe performante sait rester **soudée ET critique**.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 4,
+        "title": "⚔️ Comprendre et gérer les conflits : négociation, médiation, arbitrage",
+        "text": "{\"h\":\"⚔️ Comprendre et gérer les conflits : négociation, médiation, arbitrage\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le **conflit** est une opposition entre des personnes ou des groupes. Il n’est pas forcément négatif : un conflit bien géré peut **révéler des problèmes** et faire progresser. Mal géré, il dégrade le climat et la performance.\"},{\"t\":\"p\",\"c\":\"On distingue quatre types de conflits selon leur origine. Le **conflit d’intérêts** naît d’objectifs ou d’avantages **incompatibles**, par exemple deux services qui se disputent le même budget. Le **conflit de valeurs** oppose des **visions** ou des **principes** différents sur ce qui est juste ou important.\"},{\"t\":\"p\",\"c\":\"Le **conflit de personnes** vient d’**incompatibilités relationnelles** entre individus. Le **conflit de pouvoir**, enfin, est une **lutte pour l’influence** ou pour le contrôle des ressources. Identifier le type de conflit est la première étape pour choisir le bon mode de résolution.\"},{\"t\":\"p\",\"c\":\"Plusieurs **modes de résolution** existent, du plus subi au plus constructif : le **recours hiérarchique** (le chef tranche), la **négociation** (les parties cherchent un accord), la **médiation** (un tiers neutre aide au dialogue), l’**arbitrage** (un tiers décide). La négociation « gagnant-gagnant » est souvent la plus durable.\"},{\"t\":\"example\",\"h\":\"Illustration\",\"c\":\"Deux services se disputent un budget (conflit d’intérêts). Le manager organise une **négociation** : chacun expose ses besoins, on cherche un compromis qui satisfait l’essentiel des deux → solution acceptée et durable, plutôt qu’une décision imposée mal vécue.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Un conflit peut être **constructif** s’il est géré. Privilégier la **négociation/médiation** (gagnant-gagnant) au recours hiérarchique, qui règle vite mais laisse des rancœurs.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Conflit\",\"Opposition entre des personnes ou des groupes\"],[\"Conflit d’intérêts\",\"Objectifs ou avantages incompatibles\"],[\"Conflit de valeurs\",\"Visions ou principes opposés\"],[\"Conflit de personnes\",\"Incompatibilités relationnelles\"],[\"Conflit de pouvoir\",\"Lutte pour l’influence ou les ressources\"],[\"Négociation\",\"Les parties cherchent elles-mêmes un accord\"],[\"Médiation\",\"Un tiers neutre aide les parties à dialoguer\"],[\"Arbitrage\",\"Un tiers décide et impose la solution\"]]}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 5,
+        "title": "🌐 La culture d’entreprise : valeurs, rites, symboles",
+        "text": "{\"h\":\"🌐 La culture d’entreprise : valeurs, rites, symboles\",\"blocks\":[{\"t\":\"p\",\"c\":\"La **culture d’entreprise** est l’ensemble des **valeurs, croyances, rites et symboles** partagés par les membres. Elle se transmet (histoire du fondateur, héros internes, rituels) et façonne les comportements « ici, on fait comme ça ».\"},{\"t\":\"list\",\"c\":[\"**Avantages** : sentiment d’appartenance, cohésion, repères communs, image externe.\",\"**Limites** : résistance au changement, exclusion de ceux qui ne « rentrent pas dans le moule ».\"]},{\"t\":\"p\",\"c\":\"La culture influence directement la **cohésion** et la **gestion des conflits** : une culture du dialogue prévient les tensions ; une culture rigide les aggrave. Le manager est un **relais** de la culture, mais aussi celui qui doit la faire **évoluer** quand elle freine l’adaptation.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"La culture d’entreprise **soude** mais peut **enfermer**. Une bonne culture favorise la cohésion **et** l’ouverture au changement.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 6,
+        "title": "🧑‍💼 Étude de cas guidée — un conflit ouvert : médiation et prévention",
+        "text": "{\"h\":\"🧑‍💼 Étude de cas guidée — un conflit ouvert : médiation et prévention\",\"blocks\":[{\"t\":\"p\",\"c\":\"**Énoncé.** Deux salariés d’une même équipe sont en conflit ouvert, ce qui perturbe tout le service. Le manager doit intervenir. Que faire ?\"},{\"t\":\"example\",\"h\":\"Étape 1 — Identifier le conflit\",\"c\":\"Déterminer sa nature : conflit de **personnes** ? d’**intérêts** ? de **valeurs** ? Ici, tension relationnelle qui déborde sur le travail collectif.\"},{\"t\":\"example\",\"h\":\"Étape 2 — Choisir le mode de résolution\",\"c\":\"Plutôt que d’imposer une sanction (recours hiérarchique), organiser une **médiation** : réunir les deux parties, faire exprimer les griefs, chercher un terrain d’entente.\"},{\"t\":\"p\",\"c\":\"**Étape 3 — Prévenir la rechute.** Clarifier les rôles, poser des règles de fonctionnement, restaurer la communication. **Commentaire** : un conflit traité par le dialogue renforce l’équipe ; ignoré ou mal tranché, il pourrit le climat et fait fuir les talents.\"},{\"t\":\"tip\",\"h\":\"Méthode\",\"c\":\"Conflit : 1) **identifier** sa nature, 2) choisir le **mode de résolution** adapté (négociation/médiation de préférence), 3) **prévenir** la rechute. Toujours viser un climat restauré.\"}],\"group\":\"cas\"}"
+      },
+      {
+        "idx": 7,
+        "title": "🤝 Groupe, équipe et culture d’entreprise",
+        "text": "{\"h\":\"🤝 Groupe, équipe et culture d’entreprise\",\"blocks\":[{\"t\":\"p\",\"c\":\"Une **équipe** est un groupe orienté vers un **objectif commun**, avec des rôles complémentaires. La **cohésion** l’unit ; la **culture d’entreprise** (valeurs, rites, histoire) renforce le sentiment d’appartenance.\"},{\"t\":\"warning\",\"h\":\"Limite\",\"c\":\"Une cohésion **excessive** crée du **conformisme** (pensée de groupe) : plus personne n’ose contredire, ce qui nuit aux décisions.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"La cohésion est une force **jusqu’à un point** ; une bonne équipe reste **soudée ET critique**.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 8,
+        "title": "⚔️ Typologie et résolution des conflits",
+        "text": "{\"h\":\"⚔️ Typologie et résolution des conflits\",\"blocks\":[{\"t\":\"p\",\"c\":\"Un conflit **d’intérêts** oppose des objectifs ou des avantages incompatibles. Un conflit **de valeurs** oppose des visions du monde. Un conflit **de personnes** naît d’incompatibilités relationnelles. Un conflit **de pouvoir** est une lutte d’influence.\"},{\"t\":\"p\",\"c\":\"Résolution, du plus subi au plus constructif : **recours hiérarchique** (le chef tranche), **négociation**, **médiation** (un tiers aide), **arbitrage** (un tiers décide).\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Privilégier la **négociation gagnant-gagnant** ; un conflit bien géré peut être **constructif**.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Conflit d’intérêts\",\"Objectifs ou avantages incompatibles\"],[\"Conflit de valeurs\",\"Visions opposées\"],[\"Conflit de personnes\",\"Incompatibilités relationnelles\"],[\"Conflit de pouvoir\",\"Lutte d’influence\"],[\"Médiation\",\"Un tiers aide à trouver un accord\"],[\"Arbitrage\",\"Un tiers décide\"]]}],\"group\":\"approf\"}"
+      }
+    ]
+  },
+  {
+    "theme": "rh-t3",
+    "idx": 4,
+    "title": "🔄 Le processus de communication : émetteur, canal, récepteur, feed-back, bruits",
+    "section": {
+      "h": "🔄 Le processus de communication : émetteur, canal, récepteur, feed-back, bruits",
+      "blocks": [
+        {
+          "t": "p",
+          "c": "Communiquer, c’est transmettre un **message** d’un **émetteur** à un **récepteur** via un **canal**, en attendant un **retour** (feed-back). À chaque étape, des **bruits** (parasites, malentendus) peuvent déformer le message."
+        },
+        {
+          "t": "list",
+          "c": [
+            "**Émetteur** → **message** (codé) → **canal** → **récepteur** (qui décode) → **feed-back**.",
+            "**Bruit** : tout ce qui perturbe (vocabulaire flou, mauvaise écoute, canal inadapté)."
+          ]
+        },
+        {
+          "t": "p",
+          "c": "Le choix du **canal** est stratégique : un mail pour une info simple, une réunion pour un sujet sensible, l’affichage pour une consigne générale. Un canal inadapté (ex. annoncer un licenciement par SMS) peut ruiner le message et blesser."
+        },
+        {
+          "t": "p",
+          "c": "Les **réseaux sociaux** ont bouleversé la communication externe : l’entreprise n’a plus le monopole de son image, les clients s’expriment, partagent, notent. La communication est devenue **interactive** et **immédiate**."
+        },
+        {
+          "t": "tip",
+          "h": "À retenir",
+          "c": "Communiquer efficacement = message **clair**, canal **adapté**, écoute du **feed-back**, et réduction des **bruits**. Le récepteur décode toujours à sa façon : vérifier qu’il a compris."
+        }
+      ],
+      "group": "approf"
+    },
+    "manual": [
+      {
+        "id": "rh-t3-ordre",
+        "type": "ordre",
+        "title": "Remise en ordre — Le schéma de communication",
+        "icon": "🔢",
+        "instruction": "Remets les éléments dans l’ordre de la communication.",
+        "steps": [
+          "Émetteur",
+          "Message",
+          "Canal",
+          "Récepteur",
+          "Feedback"
+        ],
+        "explain": "Émetteur → message → canal → récepteur → feedback."
+      },
+      {
+        "id": "rh-t3-trou",
+        "type": "trou",
+        "title": "Texte à trous — Communiquer",
+        "icon": "✏️",
+        "questions": [
+          {
+            "text": "La réponse qui referme la boucle de communication est le ____ .",
+            "answer": "feedback",
+            "alt": [
+              "le feedback"
+            ],
+            "explain": "Le feedback est la rétroaction du récepteur."
+          },
+          {
+            "text": "Ce qui parasite le message (matériel ou sémantique) est le ____ .",
+            "answer": "bruit",
+            "alt": [
+              "le bruit"
+            ],
+            "explain": "Bruit matériel (brouhaha) ou sémantique (sens)."
+          }
+        ]
+      }
+    ],
+    "otherSections": [
+      {
+        "idx": 0,
+        "title": "Le schéma de communication à l’épreuve du bad buzz",
+        "text": "{\"h\":\"Le schéma de communication à l’épreuve du bad buzz\",\"blocks\":[{\"t\":\"example\",\"h\":\"Cas\",\"c\":\"Une marque publie un message maladroit ; en quelques heures, les réseaux s’enflamment et l’image en prend un coup.\"},{\"t\":\"p\",\"c\":\"La communication suit toujours le même schéma : un **émetteur** envoie un **message** (codé) par un **canal** à un **récepteur** (qui décode), en attendant un **retour** (feedback). Quand ça échoue, c’est souvent à cause d’un **bruit** (mot mal choisi, mauvais canal, contexte).\"},{\"t\":\"p\",\"c\":\"Face à une crise (bad buzz), la règle est : **réagir vite**, être **transparent et honnête**, **assumer** et agir, **parler d’une seule voix**. Le **silence** et le **mensonge** sont les pires réactions : sur les réseaux, l’e-réputation se joue en quelques heures.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Communiquer efficacement = message **clair**, **canal adapté** au sujet (une réunion pour un sujet sensible, pas un SMS), écoute du **feedback**, réduction des **bruits**.\"}]}"
+      },
+      {
+        "idx": 1,
+        "title": "Communication interne et externe : une communication globale",
+        "text": "{\"h\":\"Communication interne et externe : une communication globale\",\"blocks\":[{\"t\":\"p\",\"c\":\"La communication **interne** (vers les salariés : notes, réunions, intranet) n’a ni la même cible ni les mêmes objectifs que la communication **externe** (vers les clients et partenaires : publicité, site, réseaux). Confondre les deux, c’est risquer le contresens.\"},{\"t\":\"p\",\"c\":\"Trois critères permettent de classer une communication. Selon le **destinataire**, elle est **interne**, tournée vers les salariés, ou **externe**, tournée vers le public, les clients et les partenaires. Selon l’**objet**, elle est **commerciale** quand elle cherche à vendre, ou **institutionnelle** quand elle travaille l’image de l’organisation.\"},{\"t\":\"p\",\"c\":\"Selon le **cadre**, elle est **formelle** quand elle est officielle, ou **informelle** quand elle circule de façon spontanée, comme la « radio couloir ».\"},{\"t\":\"tip\",\"h\":\"Cohérence\",\"c\":\"La **communication globale** vise la **cohérence** de tous ces messages : ce qu’on dit en interne, aux clients et au public ne doit pas se contredire.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Communication interne / externe\",\"Vers les salariés / vers le public, les clients et les partenaires\"],[\"Communication commerciale / institutionnelle\",\"Pour vendre / pour valoriser l’image\"],[\"Communication formelle / informelle\",\"Officielle / spontanée (« radio couloir »)\"],[\"Communication globale\",\"Cohérence de tous les messages de l’organisation\"]]}]}"
+      },
+      {
+        "idx": 2,
+        "title": "🧑‍💼 Exemple — une note de service mal comprise : bruit et feed-back",
+        "text": "{\"h\":\"🧑‍💼 Exemple — une note de service mal comprise : bruit et feed-back\",\"group\":\"cas\",\"blocks\":[{\"t\":\"example\",\"h\":\"Situation\",\"c\":\"Une note de service importante n’est pas comprise par les équipes.\"},{\"t\":\"list\",\"c\":[\"Schéma : **émetteur → message → canal → récepteur**. Ici, un **bruit** (jargon, mauvais canal) a gêné la compréhension.\",\"Améliorer : message clair, bon canal (réunion plutôt que mail ?), et un **retour** (feedback) pour vérifier.\",\"Distinguer communication **interne** (salariés) et **externe** (clients, partenaires).\"]},{\"t\":\"tip\",\"h\":\"Voir le schéma\",\"c\":\"Le « Schéma du thème » illustre l’émetteur, le message, le canal, le récepteur et le bruit.\"}]}"
+      },
+      {
+        "idx": 3,
+        "title": "📣 Les formes de communication",
+        "text": "{\"h\":\"📣 Les formes de communication\",\"blocks\":[{\"t\":\"p\",\"c\":\"La **communication** est l’ensemble des échanges d’informations au sein et autour de l’organisation. Bien communiquer est vital : cela mobilise les équipes, construit l’image et prévient les crises. On distingue plusieurs formes.\"},{\"t\":\"p\",\"c\":\"On classe les formes de communication selon trois critères. Selon le **destinataire**, la communication est **interne** quand elle s’adresse aux salariés, par une note, l’intranet ou une réunion, et **externe** quand elle vise les clients, les partenaires ou le grand public.\"},{\"t\":\"p\",\"c\":\"Selon son **objet**, elle est **commerciale** quand elle cherche à vendre un produit, comme une publicité, et **institutionnelle** quand elle valorise l’image de l’organisation elle-même. Selon son **cadre**, enfin, elle est **formelle** quand elle est officielle, écrite et passe par la hiérarchie, et **informelle** quand elle est spontanée, comme la « radio couloir ».\"},{\"t\":\"p\",\"c\":\"La **communication globale** cherche la **cohérence** entre tous ces messages : ce que l’entreprise dit en interne, à ses clients et au public ne doit pas se contredire. Une incohérence détruit la crédibilité.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Interne (salariés) ≠ externe (public) ; commerciale (vendre) ≠ institutionnelle (image). La **communication globale** vise la **cohérence** de tous les messages.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Communication interne\",\"Vers les salariés (note, intranet, réunion)\"],[\"Communication externe\",\"Vers les clients, partenaires et le public\"],[\"Communication commerciale\",\"Vise à vendre un produit\"],[\"Communication institutionnelle\",\"Vise à valoriser l’image de l’organisation\"],[\"Communication formelle\",\"Organisée dans le cadre institutionnel : orale ou écrite, verticale ou transversale\"],[\"Communication informelle\",\"Spontanée (« radio couloir »)\"],[\"Communication globale\",\"Cohérence de tous les messages de l’organisation\"]]}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 4,
+        "title": "🔄 Le processus de communication : émetteur, canal, récepteur, feed-back, bruits",
+        "text": "{\"h\":\"🔄 Le processus de communication : émetteur, canal, récepteur, feed-back, bruits\",\"blocks\":[{\"t\":\"p\",\"c\":\"Communiquer, c’est transmettre un **message** d’un **émetteur** à un **récepteur** via un **canal**, en attendant un **retour** (feed-back). À chaque étape, des **bruits** (parasites, malentendus) peuvent déformer le message.\"},{\"t\":\"list\",\"c\":[\"**Émetteur** → **message** (codé) → **canal** → **récepteur** (qui décode) → **feed-back**.\",\"**Bruit** : tout ce qui perturbe (vocabulaire flou, mauvaise écoute, canal inadapté).\"]},{\"t\":\"p\",\"c\":\"Le choix du **canal** est stratégique : un mail pour une info simple, une réunion pour un sujet sensible, l’affichage pour une consigne générale. Un canal inadapté (ex. annoncer un licenciement par SMS) peut ruiner le message et blesser.\"},{\"t\":\"p\",\"c\":\"Les **réseaux sociaux** ont bouleversé la communication externe : l’entreprise n’a plus le monopole de son image, les clients s’expriment, partagent, notent. La communication est devenue **interactive** et **immédiate**.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Communiquer efficacement = message **clair**, canal **adapté**, écoute du **feed-back**, et réduction des **bruits**. Le récepteur décode toujours à sa façon : vérifier qu’il a compris.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 5,
+        "title": "🚨 La communication de crise : réagir vite, être transparent, parler d’une voix",
+        "text": "{\"h\":\"🚨 La communication de crise : réagir vite, être transparent, parler d’une voix\",\"blocks\":[{\"t\":\"p\",\"c\":\"Une **crise** (accident, scandale, bad buzz) peut frapper toute organisation. La **communication de crise** vise à **limiter les dégâts** sur l’image et à restaurer la confiance. Mal gérée, une crise peut être fatale à la réputation.\"},{\"t\":\"list\",\"c\":[\"**Réagir vite** : le silence est interprété comme un aveu ou du mépris.\",\"**Être transparent et honnête** : reconnaître les faits, ne pas mentir (le mensonge, une fois découvert, aggrave tout).\",\"**Assumer et agir** : présenter des excuses si nécessaire, annoncer des mesures correctives.\",\"**Parler d’une seule voix** : un porte-parole identifié, un message cohérent.\"]},{\"t\":\"example\",\"h\":\"Bad buzz\",\"c\":\"Une marque fait l’objet d’une vague de critiques sur les réseaux sociaux. Si elle **ignore** ou supprime les commentaires → la colère enfle. Si elle **répond vite, reconnaît** le problème et **agit** → elle peut retourner la situation et même renforcer sa crédibilité.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Communication de crise = **vitesse + transparence + cohérence**. Le silence et le mensonge sont les pires réactions. L’e-réputation se joue en quelques heures.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 6,
+        "title": "🧑‍💼 Étude de cas guidée — annoncer une réorganisation : canal adapté et feed-back",
+        "text": "{\"h\":\"🧑‍💼 Étude de cas guidée — annoncer une réorganisation : canal adapté et feed-back\",\"blocks\":[{\"t\":\"p\",\"c\":\"**Énoncé.** Une entreprise doit annoncer à ses salariés une réorganisation importante. Comment communiquer efficacement ?\"},{\"t\":\"example\",\"h\":\"Étape 1 — Type et objectif\",\"c\":\"Communication **interne**, **formelle**, sur un sujet **sensible** : objectif = informer clairement, rassurer, éviter les rumeurs (« radio couloir »).\"},{\"t\":\"example\",\"h\":\"Étape 2 — Canal et message\",\"c\":\"Privilégier une **réunion** (canal riche, permet le dialogue) plutôt qu’un simple mail. Message **clair, honnête**, expliquant le pourquoi et les conséquences concrètes.\"},{\"t\":\"p\",\"c\":\"**Étape 3 — Feed-back.** Ouvrir un temps de **questions**, écouter les inquiétudes, prévoir un suivi. **Commentaire** : une réorganisation mal communiquée (par mail, sans explication) génère angoisse et rumeurs ; bien communiquée, elle limite la résistance au changement.\"},{\"t\":\"tip\",\"h\":\"Méthode\",\"c\":\"Identifier **type/objectif** → choisir le **canal adapté** (riche pour un sujet sensible) → soigner le **message** (clair, honnête) → organiser le **feed-back**.\"}],\"group\":\"cas\"}"
+      },
+      {
+        "idx": 7,
+        "title": "🧑‍💼 Étude de cas — communiquer un changement aux salariés : réunion et message clair",
+        "text": "{\"h\":\"🧑‍💼 Étude de cas — communiquer un changement aux salariés : réunion et message clair\",\"blocks\":[{\"t\":\"p\",\"c\":\"**Énoncé.** Une entreprise doit annoncer une réorganisation à ses salariés. Comment ?\"},{\"t\":\"example\",\"h\":\"Démarche\",\"c\":\"Communication **interne, formelle**, sujet **sensible** → privilégier une **réunion** (canal riche) plutôt qu’un mail ; message **clair et honnête** ; temps de **questions** (feedback).\"},{\"t\":\"p\",\"c\":\"**Conclusion.** Bien communiquée, la réorganisation limite l’angoisse et les rumeurs ; mal communiquée, elle crée de la résistance.\"},{\"t\":\"tip\",\"h\":\"Méthode\",\"c\":\"Type/objectif → canal adapté → message clair → feedback.\"}],\"group\":\"cas\"}"
+      }
+    ]
+  },
+  {
+    "theme": "sig-t1",
+    "idx": 2,
+    "title": "💻 Exemple — une commande en ligne : stock, facturation, livraison et PGI",
+    "section": {
+      "h": "💻 Exemple — une commande en ligne : stock, facturation, livraison et PGI",
+      "group": "cas",
+      "blocks": [
+        {
+          "t": "example",
+          "h": "Cas",
+          "c": "Un client passe commande sur un site : la commande, le stock, la facturation et la livraison doivent rester cohérents."
+        },
+        {
+          "t": "list",
+          "c": [
+            "Un **SI** collecte, stocke, traite et **diffuse** l’information entre les services.",
+            "Avec un **PGI/ERP** (base de données **unique**), la commande met à jour le stock, la compta et la logistique **sans ressaisie**.",
+            "Résultat : moins d’erreurs, information fiable et partagée en temps réel."
+          ]
+        },
+        {
+          "t": "tip",
+          "h": "Clé",
+          "c": "PGI = un seul logiciel, une seule base → l’information saisie une fois est disponible partout."
+        }
+      ]
+    },
+    "manual": [
+      {
+        "id": "sig-t1-trou",
+        "type": "trou",
+        "title": "Texte à trous — Le système d’information",
+        "icon": "✏️",
+        "questions": [
+          {
+            "text": "Une donnée brute mise en contexte devient une ____ .",
+            "answer": "information",
+            "alt": [
+              "une information"
+            ],
+            "explain": "Donnée → information → connaissance."
+          },
+          {
+            "text": "Le logiciel unique à base de données partagée est un ____ .",
+            "answer": "PGI",
+            "alt": [
+              "pgi",
+              "ERP",
+              "erp"
+            ],
+            "explain": "PGI (ERP) : modules intégrés, base unique."
+          },
+          {
+            "text": "Saisir les données à la source relève de la fonction ____ du SI.",
+            "answer": "collecter",
+            "alt": [
+              "collecte",
+              "de collecte"
+            ],
+            "explain": "Les 4 fonctions : collecter, mémoriser, traiter, diffuser."
+          },
+          {
+            "text": "Le support technique du SI (matériel + logiciels) est le système ____ .",
+            "answer": "informatique",
+            "alt": [
+              "informatique"
+            ],
+            "explain": "Le SI inclut aussi acteurs et procédures."
+          }
+        ]
+      }
+    ],
+    "otherSections": [
+      {
+        "idx": 0,
+        "title": "Le système d’information et le PGI : une saisie unique, en temps réel",
+        "text": "{\"h\":\"Le système d’information et le PGI : une saisie unique, en temps réel\",\"blocks\":[{\"t\":\"example\",\"h\":\"Cas\",\"c\":\"Tu commandes sur la borne : ta commande part en cuisine, décompte le stock d’ingrédients, alimente la caisse et la comptabilité, et remonte dans les statistiques du restaurant.\"},{\"t\":\"p\",\"c\":\"Tout cela est géré par le **système d’information (SI)** : l’ensemble des ressources (humaines, matérielles, logicielles) qui **collectent, stockent, traitent et diffusent** l’information. C’est le « système nerveux » de l’entreprise.\"},{\"t\":\"p\",\"c\":\"Dans une entreprise, ces quatre fonctions sont très concrètes. On **collecte** quand on saisit la commande d’un client. On **stocke** quand cette commande est enregistrée dans la base de données. On **traite** quand le système calcule le montant et édite la facture. On **diffuse** quand l’information est envoyée au bon service, par exemple à l’entrepôt pour préparer la livraison ou à la comptabilité pour suivre le paiement.\"},{\"t\":\"tip\",\"h\":\"Force du PGI\",\"c\":\"Avec un **PGI/ERP** (une seule base partagée), l’information saisie **une fois** est disponible partout : un logiciel unique, une base unique → **fiabilité** et **temps réel**.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Système d’information (SI)\",\"Ressources qui collectent, stockent, traitent et diffusent l’information\"],[\"Collecter\",\"Saisir l’information (la commande)\"],[\"Stocker\",\"L’enregistrer dans une base de données\"],[\"Traiter\",\"Calculer, éditer la facture\"],[\"Diffuser\",\"Envoyer l’information au bon service\"],[\"PGI (ERP)\",\"Progiciel de gestion intégré : un logiciel et une base de données uniques pour tous les services\"]]}]}"
+      },
+      {
+        "idx": 1,
+        "title": "Donnée, information, connaissance : de la donnée à la décision",
+        "text": "{\"h\":\"Donnée, information, connaissance : de la donnée à la décision\",\"blocks\":[{\"t\":\"p\",\"c\":\"Une **donnée** brute (« 3 », « 12 € ») ne dit rien seule. Remise dans son contexte, elle devient une **information** (« on a vendu 3 menus à 12 € le samedi »). Analysée, elle devient une **connaissance** utile pour décider (« le samedi soir marche fort → renforcer l’équipe »).\"},{\"t\":\"p\",\"c\":\"La finalité du SI est d’**aider à décider**, à tous les niveaux (opérationnel : suivre les stocks ; stratégique : tableaux de bord des dirigeants). Encore faut-il des données **fiables, à jour et sécurisées** : « garbage in, garbage out » — une donnée fausse mène à une mauvaise décision.\"},{\"t\":\"tip\",\"h\":\"Chaîne\",\"c\":\"Donnée → information → connaissance : chaque étape **ajoute du sens**. La qualité des données conditionne la qualité des décisions.\"}]}"
+      },
+      {
+        "idx": 2,
+        "title": "💻 Exemple — une commande en ligne : stock, facturation, livraison et PGI",
+        "text": "{\"h\":\"💻 Exemple — une commande en ligne : stock, facturation, livraison et PGI\",\"group\":\"cas\",\"blocks\":[{\"t\":\"example\",\"h\":\"Cas\",\"c\":\"Un client passe commande sur un site : la commande, le stock, la facturation et la livraison doivent rester cohérents.\"},{\"t\":\"list\",\"c\":[\"Un **SI** collecte, stocke, traite et **diffuse** l’information entre les services.\",\"Avec un **PGI/ERP** (base de données **unique**), la commande met à jour le stock, la compta et la logistique **sans ressaisie**.\",\"Résultat : moins d’erreurs, information fiable et partagée en temps réel.\"]},{\"t\":\"tip\",\"h\":\"Clé\",\"c\":\"PGI = un seul logiciel, une seule base → l’information saisie une fois est disponible partout.\"}]}"
+      },
+      {
+        "idx": 3,
+        "title": "💻 Le système d’information : collecter, stocker, traiter, diffuser",
+        "text": "{\"h\":\"💻 Le système d’information : collecter, stocker, traiter, diffuser\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le **système d’information (SI)** est l’ensemble des ressources (humaines, matérielles, logicielles) qui permettent de **collecter, stocker, traiter et diffuser** l’information dans une organisation. C’est le « système nerveux » de l’entreprise : sans lui, impossible de décider et de coordonner.\"},{\"t\":\"p\",\"c\":\"Le SI remplit quatre fonctions, qui s’enchaînent toujours dans le même ordre. Il commence par **collecter** l’information, c’est-à-dire la faire entrer dans le système : un vendeur saisit une commande, une caissière scanne un produit. Il doit ensuite la **stocker**, en l’enregistrant de façon durable, en général dans une base de données, pour pouvoir la retrouver plus tard.\"},{\"t\":\"p\",\"c\":\"Vient alors le **traitement** : le SI transforme l’information pour la rendre utile, par exemple en calculant le total d’une commande ou en éditant une facture. Enfin, il la **diffuse**, en la transmettant au bon service ou au client, au bon moment. Si l’une de ces fonctions est défaillante, toute la chaîne de décision en souffre.\"},{\"t\":\"p\",\"c\":\"Il faut distinguer **donnée**, **information** et **connaissance** : la **donnée** est un fait brut (« 42 »), l’**information** est une donnée mise en contexte (« 42 ventes aujourd’hui »), la **connaissance** est l’information interprétée pour décider (« les ventes montent, il faut réapprovisionner »).\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Le SI = **collecter → stocker → traiter → diffuser** l’information. Il transforme des **données** brutes en **information** utile puis en **connaissance** pour décider.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Système d’information (SI)\",\"Ressources humaines, matérielles et logicielles qui collectent, stockent, traitent et diffusent l’information\"],[\"Collecter\",\"Faire entrer l’information dans le SI (saisir une commande, scanner un produit)\"],[\"Stocker\",\"Enregistrer l’information durablement, dans une base de données\"],[\"Traiter\",\"Transformer l’information (calculer un total, éditer une facture)\"],[\"Diffuser\",\"Transmettre l’information au bon service ou au client\"]]}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 4,
+        "title": "📈 Le SI, outil d’aide à la décision : la bonne information au bon moment",
+        "text": "{\"h\":\"📈 Le SI, outil d’aide à la décision : la bonne information au bon moment\",\"blocks\":[{\"t\":\"p\",\"c\":\"La finalité du SI est d’**aider à la décision** à tous les niveaux. Un bon SI fournit la **bonne information**, à la **bonne personne**, au **bon moment**, sous une forme **exploitable**.\"},{\"t\":\"list\",\"c\":[\"Au niveau **opérationnel** : suivre les stocks, les commandes, la production au quotidien.\",\"Au niveau **stratégique** : tableaux de bord, analyses de tendances pour les dirigeants.\"]},{\"t\":\"p\",\"c\":\"Le **PGI (progiciel de gestion intégré)**, ou ERP, est un logiciel unique qui gère toutes les fonctions de l’entreprise (ventes, achats, stocks, comptabilité, RH) autour d’une **base de données commune**. Avantage : une **seule saisie** met à jour tous les services → cohérence et gain de temps ; inconvénient : coût et rigidité.\"},{\"t\":\"p\",\"c\":\"Un SI de **qualité** repose sur des données **fiables, à jour, complètes et sécurisées**. Une donnée fausse (« garbage in, garbage out ») mène à une mauvaise décision.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Un **PGI/ERP** centralise l’information dans une **base commune** : une saisie, tous les services à jour. La **qualité des données** conditionne la qualité des décisions.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 5,
+        "title": "🔗 Les processus : modéliser pour repérer les dysfonctionnements",
+        "text": "{\"h\":\"🔗 Les processus : modéliser pour repérer les dysfonctionnements\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le fonctionnement de l’organisation s’analyse en **processus** : une suite d’activités qui transforment des entrées en sorties (ex. le processus « traiter une commande » : réception → vérification stock → préparation → facturation → expédition).\"},{\"t\":\"p\",\"c\":\"On **représente** ces processus par des schémas (diagrammes de flux) qui montrent qui fait quoi, dans quel ordre, et quelles informations circulent. Cette modélisation aide à **repérer les dysfonctionnements** (étapes inutiles, ressaisies, goulots) et à **améliorer** l’organisation.\"},{\"t\":\"example\",\"h\":\"Illustration — une commande\",\"c\":\"Une commande McDo : saisie sur la borne (collecte) → transmission en cuisine (diffusion) → suivi de préparation (traitement) → encaissement (traitement) → mise à jour des stocks (stockage). Le SI relie tous ces maillons en temps réel.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"Un **processus** transforme des entrées en sorties via une suite d’activités. Le **modéliser** permet de repérer et corriger les dysfonctionnements.\"}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 6,
+        "title": "💻 Étude de cas guidée — données éclatées entre services : passer à un PGI",
+        "text": "{\"h\":\"💻 Étude de cas guidée — données éclatées entre services : passer à un PGI\",\"blocks\":[{\"t\":\"p\",\"c\":\"**Énoncé.** Un commerce constate des erreurs de stock (ruptures et sur-stocks) car chaque service (caisse, réserve, achats) tient ses propres tableaux. Analysez et proposez.\"},{\"t\":\"example\",\"h\":\"Étape 1 — Le problème\",\"c\":\"Des **données éclatées et non partagées** : chaque service a sa version, d’où des incohérences. Le SI ne remplit pas sa fonction de diffusion d’une information fiable et commune.\"},{\"t\":\"example\",\"h\":\"Étape 2 — Solution\",\"c\":\"Mettre en place un **PGI** (base de données commune) : une vente en caisse met à jour **automatiquement** le stock et alerte les achats. Une seule information, partagée, à jour.\"},{\"t\":\"p\",\"c\":\"**Commentaire.** Le PGI supprime les ressaisies et les incohérences, fiabilise les stocks et aide à décider (réapprovisionnement au bon moment). Coût et conduite du changement sont les principales limites à anticiper.\"},{\"t\":\"tip\",\"h\":\"Méthode\",\"c\":\"Repérer le **dysfonctionnement du SI** (données non partagées, ressaisies) → proposer une solution (PGI, base commune) → peser **avantages et limites**.\"}],\"group\":\"cas\"}"
+      },
+      {
+        "idx": 7,
+        "title": "💻 Composants et rôle du système d’information",
+        "text": "{\"h\":\"💻 Composants et rôle du système d’information\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le **système d’information (SI)** rassemble les ressources (humaines, matérielles, logicielles) qui **collectent, stockent, traitent et diffusent** l’information. C’est le « système nerveux » de l’organisation.\"},{\"t\":\"p\",\"c\":\"Chacune des quatre fonctions se reconnaît à un geste concret. **Collecter**, c’est faire entrer l’information, par exemple en saisissant une commande. **Stocker**, c’est la conserver de façon organisée, en général dans une base de données.\"},{\"t\":\"p\",\"c\":\"**Traiter**, c’est transformer l’information pour qu’elle serve : calculer un total, éditer un document comme une facture. **Diffuser**, enfin, c’est la transmettre au bon service ou à la bonne personne, pour qu’elle puisse agir ou décider.\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"SI = **collecter → stocker → traiter → diffuser** l’information.\"},{\"t\":\"table\",\"h\":\"Notions et définitions\",\"head\":[\"Notion\",\"Définition\"],\"rows\":[[\"Système d’information (SI)\",\"Ressources qui collectent, stockent, traitent et diffusent l’information\"],[\"Collecter\",\"Faire entrer l’information (saisir une commande)\"],[\"Stocker\",\"Conserver l’information (base de données)\"],[\"Traiter\",\"Calculer, éditer un document\"],[\"Diffuser\",\"Transmettre l’information au bon service\"]]}],\"group\":\"approf\"}"
+      },
+      {
+        "idx": 8,
+        "title": "📈 SI et aide à la décision (PGI) : base commune et qualité des données",
+        "text": "{\"h\":\"📈 SI et aide à la décision (PGI) : base commune et qualité des données\",\"blocks\":[{\"t\":\"p\",\"c\":\"Le SI aide à **décider** à tous les niveaux. Le **PGI (ERP)** est un logiciel unique autour d’une **base commune** : une saisie met à jour tous les services (fiabilité, temps réel).\"},{\"t\":\"p\",\"c\":\"On distingue **donnée** (fait brut) → **information** (donnée en contexte) → **connaissance** (information interprétée pour décider).\"},{\"t\":\"tip\",\"h\":\"À retenir\",\"c\":\"PGI = base **commune**, une saisie unique. La **qualité des données** conditionne la qualité des décisions.\"}],\"group\":\"approf\"}"
+      }
+    ]
+  }
+]

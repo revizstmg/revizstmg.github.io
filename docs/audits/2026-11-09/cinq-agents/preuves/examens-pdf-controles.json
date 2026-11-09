@@ -1,0 +1,490 @@
+[
+  {
+    "file": "sujets-prets/premiere-droit-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "cf935be93fde540d169ab1bef3ce871af8e8f031085eb4a56ef01b5bb8b985fe"
+  },
+  {
+    "file": "sujets-prets/premiere-droit-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "503eff79eba9cc8f1efcc2c0cd268d66253d366c6e9c9df96040e22b45f217ba"
+  },
+  {
+    "file": "sujets-prets/premiere-droit-2-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "563920b53f704afdd09bb497b29f7d60406ddec518658e3c24f93ccf2ea864dc"
+  },
+  {
+    "file": "sujets-prets/premiere-droit-2-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "b45a1d903463b36503dee8bdb8d876ff1a62756b4d48d8db8a686e4b314c1134"
+  },
+  {
+    "file": "sujets-prets/premiere-droit-economie-sujet.pdf",
+    "pages": 4,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "966aeb7c4c9f37ee576a12e528f3274a316a7ef6cc6767beb63df032af086abe"
+  },
+  {
+    "file": "sujets-prets/premiere-droit-economie-corrige.pdf",
+    "pages": 5,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "edd757538b6edbdec86a6917ad88c0713573b109fef3158dccbfebdd41619aa3"
+  },
+  {
+    "file": "sujets-prets/premiere-droit-economie-2-sujet.pdf",
+    "pages": 4,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "8abb3197d14f2175a74b22ad51f48fba080ae4fc6e75ed2c3837e7732ceca42c"
+  },
+  {
+    "file": "sujets-prets/premiere-droit-economie-2-corrige.pdf",
+    "pages": 5,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "9ea81d063bbc307be7c939100df100f2cc6bd0e51bd4b882a953fd88ac6d6f61"
+  },
+  {
+    "file": "sujets-prets/premiere-management-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "82b52c72d9c4517363eb1ad24f24ed49f79e8d00407b70f245f2877e52960779"
+  },
+  {
+    "file": "sujets-prets/premiere-management-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "6346f21ab3b29fd61cf759dbd9c56c08a69c8517288e7db76a6d33fe2b60d762"
+  },
+  {
+    "file": "sujets-prets/premiere-management-2-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "ebb07f46b525f80f34a3a3fefc61b8ea543c49a64fe5f8cb7ef0007c03f18736"
+  },
+  {
+    "file": "sujets-prets/premiere-management-2-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "cc40a774f6664557ee233dac25b45c49573bcadf2dcc1f54b6ffdfb920bb112a"
+  },
+  {
+    "file": "sujets-prets/premiere-gestion-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "2398dde0a580a433352fb7408c697f5b1061fb7406ea5325d2eec0998678f1ed"
+  },
+  {
+    "file": "sujets-prets/premiere-gestion-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "5ddba5b0af390a739ab022bf549150a268a7141a8b222d9184f51c339febf532"
+  },
+  {
+    "file": "sujets-prets/premiere-gestion-2-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "ac86c354369815fa1e0e59b8740ee599a9fafbfa8eeb7273b83fead093dd8501"
+  },
+  {
+    "file": "sujets-prets/premiere-gestion-2-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "2c0ab3bf08102a3bcdaa63639ba0ac2f52c7746c3afea12609631d0692947237"
+  },
+  {
+    "file": "sujets-prets/premiere-economie-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "881f99d7a00b212d8c9612ffe17bea969365ef955f49d75ad34c017e4db69251"
+  },
+  {
+    "file": "sujets-prets/premiere-economie-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "279151b332b49de3e7919649318bd2e411cb9e12ff7a04af826f5b88517a34f2"
+  },
+  {
+    "file": "sujets-prets/premiere-economie-2-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "149646d9524489c3b183d368918027058df8fec11ad63a1cb8fd9229a628622a"
+  },
+  {
+    "file": "sujets-prets/premiere-economie-2-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "8e78708edd452ba35c78d05c862f1dc40194d1ea0c1147d7e051ba63543dd884"
+  },
+  {
+    "file": "sujets-prets/terminale-droit-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "2e4e0991347bbf150d2be79db90ca041dec8ed93b65be1aaedcd75cab8c29462"
+  },
+  {
+    "file": "sujets-prets/terminale-droit-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "e540a25011456ae13dd7f478d054521b8c2f03b49b42b68ff80e064be26ef325"
+  },
+  {
+    "file": "sujets-prets/terminale-droit-2-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "4e58b6597a5ac0ac1554d0f8a419bda7375a304b71b7b0906653be86b4de5ce6"
+  },
+  {
+    "file": "sujets-prets/terminale-droit-2-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "c1baf3d658ef12ec50756c90e3b0c38f106c417b14d47505b3910060d077f4bd"
+  },
+  {
+    "file": "sujets-prets/terminale-droit-economie-sujet.pdf",
+    "pages": 4,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "989ea49c7bd22293ec3445e3ada01b7f20a66c428d6283a5bfbdcd62a4b2cfd0"
+  },
+  {
+    "file": "sujets-prets/terminale-droit-economie-corrige.pdf",
+    "pages": 5,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "99d187a6f5e91bb2cae328244435d2c91ae65b6248edcf294abecc14b225762f"
+  },
+  {
+    "file": "sujets-prets/terminale-droit-economie-2-sujet.pdf",
+    "pages": 4,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "24a09143088243cd2ddd5fb90df3e6e30ee03896ffa5dc72749fd74fb3a6dd9f"
+  },
+  {
+    "file": "sujets-prets/terminale-droit-economie-2-corrige.pdf",
+    "pages": 5,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "1bf8101adfea910dc628738dc4d2a948eee09e2f7660168d42807b4f967b1e24"
+  },
+  {
+    "file": "sujets-prets/terminale-gf-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "d626ba84c4fac35c8e1683851548d0b9af25ac6f1b3e770a196ac6f3d3192f5e"
+  },
+  {
+    "file": "sujets-prets/terminale-gf-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "09c9e83190f6e20a4abf0bc8a694d531b10be43f3d74c15a20a134883bd71956"
+  },
+  {
+    "file": "sujets-prets/terminale-gf-2-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "43010466de9ece1fc8ec553a9a074b32171703d5048c2c29be2129730dc2bef2"
+  },
+  {
+    "file": "sujets-prets/terminale-gf-2-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "f65b83f3c5300f47458a826d7f48991743745061cdfa9b8ac97fdc4ea8de3dbf"
+  },
+  {
+    "file": "sujets-prets/terminale-management-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "91c3f96cb298acc038debad51fb32d9bb77a69f84e9ab975f99ffad5200dafec"
+  },
+  {
+    "file": "sujets-prets/terminale-management-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "d4343f3ec893d23713e715ba314697c81f86ebad5a06e7b1a7c4518427750009"
+  },
+  {
+    "file": "sujets-prets/terminale-management-bilan-sujet.pdf",
+    "pages": 4,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "2f1aaeedbff33d6204cc8a588a646caba5f76d8c0ae60270d4cfb0485fefea4c"
+  },
+  {
+    "file": "sujets-prets/terminale-management-bilan-corrige.pdf",
+    "pages": 5,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "7b0a262ac358bf004b6fb42c21dd7a77452e023127e4fd81249a983109b2f4ba"
+  },
+  {
+    "file": "sujets-prets/terminale-economie-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "35e8bce609db8b2335b9a899c90ef3432ee824341c4f8dd1c9c6df3971179fd9"
+  },
+  {
+    "file": "sujets-prets/terminale-economie-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "3f2556b55ec7a09f5788bbc9bf5d1d97dc7953cd30ec39ec957d18c790d67210"
+  },
+  {
+    "file": "sujets-prets/terminale-economie-2-sujet.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "2f2531fb15fe39e31ccae23460ff0c3524fad5c1e5a05fb94ac8df702814cb87"
+  },
+  {
+    "file": "sujets-prets/terminale-economie-2-corrige.pdf",
+    "pages": 3,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "0a3e0a5d7bd7efa224a92fca54425cd41ca3a85bc0c7fac9d196358460f40277"
+  },
+  {
+    "file": "sujets-prets/revision-management-premiere-terminale-1-sujet.pdf",
+    "pages": 4,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "9a63abcecfcb714eb28b8b61999932828c80048db2f8c1c6a7e471b5ae73eddd"
+  },
+  {
+    "file": "sujets-prets/revision-management-premiere-terminale-1-corrige.pdf",
+    "pages": 5,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "0012b07b3c8845d5cb4eda72a08209f591f5c3b6e4d42493cd8a3be7e0423394"
+  },
+  {
+    "file": "sujets-prets/revision-management-premiere-terminale-2-sujet.pdf",
+    "pages": 4,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "b56e305f9f8733b2295c4305cef184dd553db392b70c7a0a2f3addb2604d8b16"
+  },
+  {
+    "file": "sujets-prets/revision-management-premiere-terminale-2-corrige.pdf",
+    "pages": 5,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "556330fdbad306edd199ecd892c0423b14c6d51de162d109fac432dffeacad92"
+  },
+  {
+    "file": "sujets-prets/revision-droit-economie-premiere-terminale-1-sujet.pdf",
+    "pages": 4,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "e3d57863ef1c965ff055cc6287111abdf3600f52b0c44c92c2b70cfac553c86d"
+  },
+  {
+    "file": "sujets-prets/revision-droit-economie-premiere-terminale-1-corrige.pdf",
+    "pages": 5,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "a281b4d83810af66557a540ea43ff05102487312b5ab4573b49182b854a52398"
+  },
+  {
+    "file": "sujets-prets/revision-droit-economie-premiere-terminale-2-sujet.pdf",
+    "pages": 4,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "dafa84c2f7eb588ff1e6b83560a62dace93799ed4c7675f4e17c6d8a3f554ef5"
+  },
+  {
+    "file": "sujets-prets/revision-droit-economie-premiere-terminale-2-corrige.pdf",
+    "pages": 5,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "f38815fa57e2ea940caea4245eb5a2add12d62c68766ce50a4ae061ada8a2ca7"
+  },
+  {
+    "file": "cours/langues/guide-en.pdf",
+    "pages": 51,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "a8d5069cfecf9a2defab1ded0174698f1ef82e967161e391adca6e9455ecc514"
+  },
+  {
+    "file": "cours/langues/guide-de.pdf",
+    "pages": 43,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "eb149abb418edcd235c799e51266b7823e4ace8d13f77fdd9579dc959bc3a9a9"
+  },
+  {
+    "file": "cours/langues/guide-es.pdf",
+    "pages": 51,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "37c06f93ca9d3ea2c3b911168e5e3170d51d4ca844b79c306e3dddf14900a6c9"
+  },
+  {
+    "file": "cours/langues/guide-it.pdf",
+    "pages": 47,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "d4313a98c753ab6b19e32b61074985455c42f99d02a73115595746b000040da9"
+  },
+  {
+    "file": "cours/langues/guide-ar.pdf",
+    "pages": 47,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "1dc8fcff025705e5e0bba0719c256133a25d4fe53af17e6f2ae1fb5821d59d00"
+  },
+  {
+    "file": "excellence/2025/sujet.pdf",
+    "pages": 11,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "38c56e2fb24b3a3615190cb816616792840a96af16af6bc219f2f71f42cf5f6d"
+  },
+  {
+    "file": "excellence/2024/sujet.pdf",
+    "pages": 10,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "e529b1f1af2f4544788314807ac7a16f87fc5921bfcaab1f5d4ea2f3daad7b9a"
+  },
+  {
+    "file": "excellence/2023/sujet.pdf",
+    "pages": 11,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "37e33931fb127650b5033e5ccb5d2622b27a6beb87444c499e3b8e6a50b1f6f7"
+  },
+  {
+    "file": "excellence/2022/sujet.pdf",
+    "pages": 13,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "b13ab81935f857f96b6ae28963535684e65c239c7392b3558e615117556e8001"
+  },
+  {
+    "file": "excellence/2021/sujet.pdf",
+    "pages": 12,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "4aebe8d6501a5809d736b711adce945b875043a1ff22f42eed9346717e30c6fe"
+  },
+  {
+    "file": "eps/referentiel-ccf-2026.pdf",
+    "pages": 19,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "8e26db9aee74ceb10b17ebd38bea1a9da2cb77a8bccfd018824181e9087c8e63"
+  },
+  {
+    "file": "eps/referentiel-ponctuel-2026.pdf",
+    "pages": 6,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "bea01d14ddad74ce2aff09a50d2fb23d4372f0cfcaff156113e115d5ee5d5b50"
+  },
+  {
+    "file": "eps/programme-eps-2019.pdf",
+    "pages": 11,
+    "nul": 0,
+    "empty": [],
+    "horizontalOverflow": [],
+    "sha256": "6dfd563ac720e8a91f5a0b8a536cc9554d27da9984014351e0dd92c1f88d66fb"
+  }
+]

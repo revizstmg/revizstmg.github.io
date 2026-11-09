@@ -1,0 +1,77 @@
+{
+  "frontLength": 455,
+  "before": {
+    "height": 568,
+    "dialog": {
+      "x": 16,
+      "y": 48,
+      "width": 288,
+      "height": 1031,
+      "top": 48,
+      "right": 304,
+      "bottom": 1079,
+      "left": 16
+    },
+    "button": {
+      "x": 132,
+      "y": 954,
+      "width": 56,
+      "height": 56,
+      "top": 954,
+      "right": 188,
+      "bottom": 1010,
+      "left": 132
+    },
+    "overflows": [
+      {
+        "overflow": "visible",
+        "client": 1029,
+        "scroll": 1029,
+        "top": 0
+      },
+      {
+        "overflow": "visible",
+        "client": 568,
+        "scroll": 1079,
+        "top": 0
+      }
+    ]
+  },
+  "after": {
+    "height": 568,
+    "dialog": {
+      "x": 16,
+      "y": 48,
+      "width": 288,
+      "height": 1031,
+      "top": 48,
+      "right": 304,
+      "bottom": 1079,
+      "left": 16
+    },
+    "button": {
+      "x": 132,
+      "y": 954,
+      "width": 56,
+      "height": 56,
+      "top": 954,
+      "right": 188,
+      "bottom": 1010,
+      "left": 132
+    },
+    "overflows": [
+      {
+        "overflow": "visible",
+        "client": 1029,
+        "scroll": 1029,
+        "top": 0
+      },
+      {
+        "overflow": "visible",
+        "client": 568,
+        "scroll": 1079,
+        "top": 0
+      }
+    ]
+  }
+}

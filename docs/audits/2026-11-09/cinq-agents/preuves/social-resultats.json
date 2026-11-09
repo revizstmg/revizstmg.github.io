@@ -1,0 +1,74 @@
+{
+  "classe": {
+    "buttons": [
+      "Changer de classe",
+      "\n        🏆 Ma classe",
+      "\n        🏟️ Ligue"
+    ],
+    "after": "",
+    "requests": [
+      {
+        "method": "DELETE",
+        "url": "https://wyydagcjkbivtbuhbzon.supabase.co/rest/v1/child_stats?device_id=eq.00000000-0000-4000-8000-000000000001",
+        "body": null
+      },
+      {
+        "method": "GET",
+        "url": "https://wyydagcjkbivtbuhbzon.supabase.co/rest/v1/profiles?id=eq.00000000-0000-4000-8000-000000000001&select=*",
+        "body": null
+      },
+      {
+        "method": "POST",
+        "url": "https://wyydagcjkbivtbuhbzon.supabase.co/rest/v1/class_member?on_conflict=class_code,device_id",
+        "body": "[{\"class_code\":\"test-classe\",\"device_id\":\"00000000-0000-4000-8000-000000000001\",\"name\":\"Léa Test\",\"photo\":null,\"role\":\"eleve\",\"week\":\"2026-W46\",\"active_day\":\"2026-11-09\"}]"
+      },
+      {
+        "method": "POST",
+        "url": "https://wyydagcjkbivtbuhbzon.supabase.co/rest/v1/leaderboard?on_conflict=class_code,device_id,week",
+        "body": "[{\"class_code\":\"test-classe\",\"device_id\":\"00000000-0000-4000-8000-000000000001\",\"week\":\"2026-W46\",\"name\":\"Léa Test\",\"photo\":null,\"courses\":0,\"updated_at\":\"2026-11-09T05:29:41.733Z\"}]"
+      },
+      {
+        "method": "GET",
+        "url": "https://wyydagcjkbivtbuhbzon.supabase.co/rest/v1/leaderboard?select=name,photo,courses,device_id,updated_at&class_code=eq.test-classe&week=eq.2026-W46&order=courses.desc,updated_at.asc&limit=100",
+        "body": null
+      },
+      {
+        "method": "POST",
+        "url": "https://wyydagcjkbivtbuhbzon.supabase.co/rest/v1/rpc/revizstmg_compter_vue",
+        "body": "{\"p_page\":\"classement\",\"p_visite\":true}"
+      },
+      {
+        "method": "PATCH",
+        "url": "https://wyydagcjkbivtbuhbzon.supabase.co/rest/v1/profiles?id=eq.00000000-0000-4000-8000-000000000001&progress-%3E_sync-%3E%3Erev=is.null&select=id",
+        "body": "{\"progress\":{\"missions\":{},\"xp\":0,\"streak\":{\"count\":1,\"last\":\"2026-11-09\"},\"badges\":[],\"chapters\":{},\"favorites\":[],\"lastChapter\":null,\"totalAnswers\":0,\"correctAnswers\":0,\"weekly\":{\"week\":null,\"done\":[]},\"srs\":{},\"bacDate\":null,\"coins\":0,\"owned\":[],\"freezes\":0,\"history\":{\"2026-11-09\":0},\"themeTime\":{},\"studyLanguages\":null,\"savedDecks\":[],\"dailyChallenge\":{\"last\":null,\"streak\":0,\"best\":0,\"lastBonus\":0},\"notes\":{},\"fiches\":[],\"grandOral\":{\"spec\":\"\",\"q1\":\"\",\"q2\":\"\",\"notes\":\"\",\"organisation\":\"\",\"sources\":[],\"analyse\":{},\"arguments\":[],\"maj\":0},\"erreurs\":[],\"etudeGestion\":{\"theme\":\"\",\"organisation\":\"\",\"problematique\":\"\",\"coches\":{},\"sources\":[],\"analyse\":{},\"arguments\":[],\"maj\":0},\"reussites\":[],\"shopRewards\":{},\"shopWalletUpdatedAt\":0,\"notesClasse\":[],\"parcours\":null,\"_sync\":{\"v\":1,\"rev\":1794202183533,\"appareil\":\"ytn466xdnj7p\",\"base\":{\"xp\":0,\"coins\":0,\"freezes\":0,\"totalAnswers\":0,\"correctAnswers\":0},\"versionBase\":0,\"compteurs\":{},\"items\":{},\"champs\":{}}},\"updated_at\":\"2026-11-09T05:29:43.534Z\"}"
+      },
+      {
+        "method": "GET",
+        "url": "https://wyydagcjkbivtbuhbzon.supabase.co/rest/v1/profiles?id=eq.00000000-0000-4000-8000-000000000001&select=*",
+        "body": null
+      },
+      {
+        "method": "PATCH",
+        "url": "https://wyydagcjkbivtbuhbzon.supabase.co/rest/v1/profiles?id=eq.00000000-0000-4000-8000-000000000001&progress-%3E_sync-%3E%3Erev=is.null&select=id",
+        "body": "{\"progress\":{\"missions\":{},\"xp\":0,\"streak\":{\"count\":1,\"last\":\"2026-11-09\"},\"badges\":[],\"chapters\":{},\"favorites\":[],\"lastChapter\":null,\"totalAnswers\":0,\"correctAnswers\":0,\"weekly\":{\"week\":null,\"done\":[]},\"srs\":{},\"bacDate\":null,\"coins\":0,\"owned\":[],\"freezes\":0,\"history\":{\"2026-11-09\":0},\"themeTime\":{},\"studyLanguages\":null,\"savedDecks\":[],\"dailyChallenge\":{\"last\":null,\"streak\":0,\"best\":0,\"lastBonus\":0},\"notes\":{},\"fiches\":[],\"grandOral\":{\"spec\":\"\",\"q1\":\"\",\"q2\":\"\",\"notes\":\"\",\"organisation\":\"\",\"sources\":[],\"analyse\":{},\"arguments\":[],\"maj\":0},\"erreurs\":[],\"etudeGestion\":{\"theme\":\"\",\"organisation\":\"\",\"problematique\":\"\",\"coches\":{},\"sources\":[],\"analyse\":{},\"arguments\":[],\"maj\":0},\"reussites\":[],\"shopRewards\":{},\"shopWalletUpdatedAt\":0,\"notesClasse\":[],\"parcours\":null,\"_sync\":{\"v\":1,\"rev\":1794202198620,\"appareil\":\"ytn466xdnj7p\",\"base\":{\"xp\":0,\"coins\":0,\"freezes\":0,\"totalAnswers\":0,\"correctAnswers\":0},\"versionBase\":0,\"compteurs\":{},\"items\":{},\"champs\":{}}},\"updated_at\":\"2026-11-09T05:29:58.620Z\"}"
+      },
+      {
+        "method": "GET",
+        "url": "https://wyydagcjkbivtbuhbzon.supabase.co/rest/v1/profiles?id=eq.00000000-0000-4000-8000-000000000001&select=*",
+        "body": null
+      },
+      {
+        "method": "DELETE",
+        "url": "https://wyydagcjkbivtbuhbzon.supabase.co/rest/v1/class_member?class_code=eq.test-classe&device_id=eq.00000000-0000-4000-8000-000000000001",
+        "body": null
+      }
+    ]
+  },
+  "clipboard": {
+    "text": "📋 Copier le code",
+    "attempted": true,
+    "errors": [
+      "Denied"
+    ]
+  }
+}

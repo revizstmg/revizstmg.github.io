@@ -1,0 +1,54 @@
+[
+  {
+    "name": "profil-serveur-silencieux",
+    "requests": 1,
+    "afterMs": 31000,
+    "waiting": 0,
+    "firstDisabled": true,
+    "alerts": [],
+    "main": "← Mon compte\n\nPARAMÈTRES\n\nMon profil\n\nModifier mon nom et ma photo.\n\nÉ\nPhoto de profil\nJPEG, PNG ou WebP, 5 Mo maximum.\nPrénom\nNom\n\nlea@test.fr\n\nUn instant…"
+  },
+  {
+    "name": "oauth-utilisateur-silencieux",
+    "requests": 1,
+    "afterMs": 31000,
+    "fragmentStillContainsAccessToken": true,
+    "savedSession": false,
+    "alerts": [],
+    "buttons": [
+      "Commencer à réviser",
+      "Mot de passe oublié ?",
+      "Un instant…",
+      "Pas encore de compte ? Créer un compte",
+      "Essayer sans compte"
+    ]
+  },
+  {
+    "name": "security-partial-error-body",
+    "afterMs": 31000,
+    "passwordDisabled": true,
+    "logoutDisabled": true,
+    "alerts": [],
+    "main": "← Mon compte\n\nPARAMÈTRES\n\nSécurité\n\nChanger mon mot de passe ou me déconnecter.\n\nNouveau mot de passe\n\n8 caractères minimum, avec des lettres et des chiffres.\n\nConfirmer le mot de passe\nUn instant…\nSe déconnecter"
+  },
+  {
+    "name": "axe-profil",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "name": "axe-securite",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "name": "axe-apparence",
+    "overflow": false,
+    "violations": []
+  },
+  {
+    "name": "axe-accessibilite",
+    "overflow": false,
+    "violations": []
+  }
+]
