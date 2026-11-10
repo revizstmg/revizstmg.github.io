@@ -1,8 +1,50 @@
 {
- "date": "2026-11-09",
- "heure": "2026-11-09T13:36:02.443Z",
+ "date": "2026-11-10",
+ "heure": "2026-11-10T13:14:29.155Z",
  "utilisation": {
-  "erreur": "Supabase injoignable (fetch failed)"
+  "profs": 4,
+  "eleves": 11,
+  "classes": 3,
+  "comptes": 15,
+  "niveaux": {
+   "premiere-stmg": 2,
+   "terminale-stmg": 9
+  },
+  "vues_7j": 80,
+  "actifs_1j": 1,
+  "actifs_7j": 2,
+  "ecrans_7j": {
+   "guide": 3,
+   "theme": 3,
+   "entree": 5,
+   "accueil": 33,
+   "matiere": 13,
+   "boutique": 2,
+   "revision": 4,
+   "bac-blanc": 17
+  },
+  "vues_hier": 14,
+  "actifs_30j": 8,
+  "defis_amis": 0,
+  "visites_7j": 31,
+  "nouveaux_7j": 0,
+  "specialites": {
+   "sig": 1,
+   "gestion-finance": 7,
+   "rh-communication": 1
+  },
+  "joueurs_amis": 1,
+  "nouveaux_30j": 5,
+  "rappels_push": 0,
+  "visites_hier": 4,
+  "defis_amis_7j": 0,
+  "sessions_live": 0,
+  "quiz_de_classe": 0,
+  "suivis_parents": 0,
+  "signalements_7j": 0,
+  "eleves_en_classe": 2,
+  "signalements_a_traiter": 0,
+  "suivis_parents_actifs_7j": 0
  },
  "contenu": {
   "matieres": 19,
@@ -21,9 +63,9 @@
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-11-09T05:35:51Z"
+   "date": "2026-11-09T20:07:48Z"
   },
-  "modifications7j": 83
+  "modifications7j": 82
  },
  "tests": "success"
 }
