@@ -1,6 +1,6 @@
 # 📊 Statistiques de RévizSTMG
 
-Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **12 novembre 2026 à 14:31**.
+Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **13 novembre 2026 à 13:49**.
 
 ## 👥 Utilisation
 
@@ -8,7 +8,7 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 |---|---|
 | Comptes | **15** — 11 élèves, 4 professeurs |
 | Nouveaux comptes | 0 cette semaine · 5 en 30 jours |
-| Comptes actifs | 1 en 24 h · 2 en 7 jours · 8 en 30 jours |
+| Comptes actifs | 0 en 24 h · 2 en 7 jours · 8 en 30 jours |
 | Élèves par niveau | Terminale 9 · Première 2 |
 | Élèves par spécialité | Gestion et Finance 7 · Systèmes d’information de gestion 1 · Ressources humaines & Communication 1 |
 | Classes | 3 classes de professeurs · 2 élèves inscrits |
@@ -16,8 +16,8 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 | Amis | 1 joueurs · 0 défis (0 cette semaine) |
 | Suivi des parents | 0 élèves suivis (0 actifs cette semaine) |
 | Erreurs signalées | 0 à traiter · 0 reçues cette semaine |
-| Visites | 3 hier (5 pages vues) · 20 en 7 jours (55 pages vues) |
-| Écrans les plus vus (7 jours) | bac-blanc 18 · accueil 16 · entree 8 · matiere 4 · theme 3 · revision 3 · boutique 2 · guide 1 |
+| Visites | 6 hier (6 pages vues) · 23 en 7 jours (52 pages vues) |
+| Écrans les plus vus (7 jours) | bac-blanc 18 · accueil 15 · entree 12 · revision 3 · boutique 2 · guide 1 · matiere 1 |
 
 > Un compte est « actif » quand sa progression a été synchronisée. Les visites sont comptées sans cookie ni identifiant (une visite = un onglet ouvert sur le site).
 
@@ -33,15 +33,16 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 
 ## ✅ Qualité et mise en ligne
 
-- Tests du contenu et de la logique : ✅ réussis
+- Tests du contenu et de la logique : ❌ en échec
 - Dernière CI sur main : ❌ —
-- Dernière mise en ligne réussie : ✅ 11 novembre 2026 à 13:24
+- Dernière mise en ligne réussie : ✅ 12 novembre 2026 à 14:32
 - Modifications de l'app ces 7 derniers jours : 81
 
 ## 📈 Évolution (14 derniers jours)
 
 | Date | Comptes | Actifs 7 j | Nouveaux 7 j | Visites la veille | Chapitres | Questions |
 |---|---|---|---|---|---|---|
+| 13 nov. | 15 | 2 | 0 | 6 | 861 | 18 848 |
 | 12 nov. | 15 | 2 | 0 | 3 | 861 | 18 848 |
 | 11 nov. | 15 | 2 | 0 | 2 | 861 | 18 848 |
 | 10 nov. | 15 | 2 | 0 | 4 | 861 | 18 848 |
@@ -55,5 +56,4 @@ Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mi
 | 2 nov. | 15 | 1 | 0 | 0 | 870 | 19 687 |
 | 1 nov. | — | — | — | — | 870 | 19 687 |
 | 31 oct. | 15 | 4 | 1 | 1 | 870 | 19 687 |
-| 30 oct. | — | — | — | — | 870 | 19 687 |
 
