@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-11-15T00:34:13.921025+00:00",
+  "compiledRef": "69580a749bf2cb696dca11e551142520246cca6b",
+  "sourceRef": "8873892bd",
+  "mergeRef": "57b59b6ad50bec2850fac03855d8db04ca2a4058",
+  "workflow": 43657180997,
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 7305,
+      "sha256": "6d98fe9df8280f45f832f9018bb79ae5b885955097f06f4e8258009ccaf9e3b9"
+    },
+    {
+      "file": "assets/index-D0yBFq7T.js",
+      "bytes": 652053,
+      "sha256": "8a77e879c88eff5057e8bdcabc51e13cbf6c6174a921f437c2f29dcd4bcf9183"
+    },
+    {
+      "file": "assets/Avenir-gjtSlHct.js",
+      "bytes": 46222,
+      "sha256": "7ec7ff2c0f1be6b171b95a2f868b45c1e9f31c2ec5edab911ea69e6e98536d1a"
+    },
+    {
+      "file": "assets/Avenir-DXke13C9.css",
+      "bytes": 4727,
+      "sha256": "deca6f96b64b5aba0d1927e5b81a9a04389c06bc1c9da4a2b8da1aeae9238298"
+    },
+    {
+      "file": "assets/public.en-CSqxpiAP.js",
+      "bytes": 382846,
+      "sha256": "02b3c576809404ec0ea49c68336d1e1c0b42c42246e01d933c87877cdfff04f8"
+    },
+    {
+      "file": "assets/public.es-D_iq-DUg.js",
+      "bytes": 399557,
+      "sha256": "b28fef144a65a4e13615fe6e5ac73ba25bd3ee78856689f03c768ba43058b7de"
+    },
+    {
+      "file": "assets/public.it-DecDZJ5z.js",
+      "bytes": 398602,
+      "sha256": "d42f1e886613315f7e8caefbb61b4e980de02e1e5feba787514b1303894eff8b"
+    },
+    {
+      "file": "assets/public.de-DvVFIhh0.js",
+      "bytes": 474353,
+      "sha256": "f03f73b207cdf08c8ccd9a0c541f5a7120e2d33e57eb07e353b527b293f56021"
+    },
+    {
+      "file": "assets/public.ar-hb-mOjd_.js",
+      "bytes": 464389,
+      "sha256": "43e21b71744c501636815bfc5054cc4606659c9f2ab92451d449b20433ef4c59"
+    }
+  ]
+}
