@@ -1,6 +1,6 @@
 {
- "date": "2026-11-14",
- "heure": "2026-11-14T11:56:21.720Z",
+ "date": "2026-11-15",
+ "heure": "2026-11-15T12:29:07.661Z",
  "utilisation": {
   "erreur": "Supabase injoignable (fetch failed)"
  },
@@ -21,9 +21,9 @@
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-11-13T12:50:37Z"
+   "date": "2026-11-15T00:35:13Z"
   },
-  "modifications7j": 75
+  "modifications7j": 30
  },
  "tests": "success"
 }
