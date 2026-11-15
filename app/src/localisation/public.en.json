@@ -3822,5 +3822,10 @@
   "BTS Gestion de la PME": "BTS SME Management",
   "BUT Gestion administrative et commerciale des organisations (GACO)": "GOAL Administrative and commercial management of organizations (GACO)",
   "Finance et commerce": "Finance and commerce",
-  "Parcours possibles": "Possible routes"
+  "Parcours possibles": "Possible routes",
+  "La lecture audio a échoué. Réessaie ou change la langue de lecture.": "Audio playback failed. Try again or change the reading language.",
+  "Formules masquées par le programme ou le niveau : {n}.": "Formulas hidden by the programme or level: {n}.",
+  "Afficher toute ma sélection": "Show my entire selection",
+  "La requête a expiré. Réessaie.": "The request timed out. Try again.",
+  "La requête a expiré.": "The request timed out."
 }

@@ -1,4 +1,4 @@
-import { FORMULA_PRACTICE } from './formulaPractice.js'
+import { FORMULA_PRACTICE, formulasForTrack } from './formulaPractice.js'
 const key = scope => `stmg_formula_session_v1:${scope}`
 export function readWorkshop(scope) {
   try {
@@ -15,6 +15,13 @@ export function readWorkshop(scope) {
     const results = Array.isArray(data.results) ? data.results.filter(r => r && typeof r.correct === 'boolean' && byId.has(r.formulaId)) : []
     return {...data, session, results, selected: data.selected.filter(id => byId.has(id))}
   } catch { return null }
+}
+// Une ancienne sélection hors classe est restaurée dans le programme complet.
+export function workshopFilters(saved, track) {
+  const ids = new Set(formulasForTrack(track).map(f => f.id))
+  const programme = ['track','all'].includes(saved?.programme) ? saved.programme :
+    (saved?.selected?.some(id => !ids.has(id)) ? 'all' : 'track')
+  return { programme, level: ['all','premiere','terminale'].includes(saved?.level) ? saved.level : 'all' }
 }
 export function saveWorkshop(scope, data) {
   try { localStorage.setItem(key(scope), JSON.stringify({...data, version:1})); return true } catch { return false }

@@ -3821,5 +3821,10 @@
   "BTS Gestion de la PME": "إدارة BTS للشركات الصغيرة والمتوسطة",
   "BUT Gestion administrative et commerciale des organisations (GACO)": "الهدف الإدارة الإدارية والتجارية للمنظمات (GACO)",
   "Finance et commerce": "التمويل والتجارة",
-  "Parcours possibles": "الطرق الممكنة"
+  "Parcours possibles": "الطرق الممكنة",
+  "La lecture audio a échoué. Réessaie ou change la langue de lecture.": "تعذّر تشغيل الصوت. حاول مجددًا أو غيّر لغة القراءة.",
+  "Formules masquées par le programme ou le niveau : {n}.": "الصيغ المخفية بسبب البرنامج أو المستوى: {n}.",
+  "Afficher toute ma sélection": "عرض جميع اختياراتي",
+  "La requête a expiré. Réessaie.": "انتهت مهلة الطلب. حاول مجددًا.",
+  "La requête a expiré.": "انتهت مهلة الطلب."
 }

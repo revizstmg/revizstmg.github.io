@@ -17,6 +17,7 @@ for (const status of [200, 401]) {
     let terminer
     vi.stubGlobal('fetch', vi.fn(() => new Promise((resolve) => { terminer = resolve })))
     const attente = api.refreshSession()
+    await Promise.resolve()
     localStorage.setItem('stmg_session', JSON.stringify(eleve))
     terminer(new Response(JSON.stringify({ access_token: 'prof-nouveau', refresh_token: 'prof-renouvele', user: prof.user }), { status }))
     expect(await attente).toBeNull()
@@ -28,6 +29,7 @@ test('une réponse tardive ne rouvre pas la session après déconnexion', async 
   const reponses = []
   vi.stubGlobal('fetch', vi.fn(() => new Promise((resolve) => { reponses.push(resolve) })))
   const attente = api.refreshSession()
+    await Promise.resolve()
   api.signOut()
   // La première requête est le renouvellement ; la seconde, la fermeture de session.
   reponses[0](new Response(JSON.stringify({ access_token: 'prof-nouveau', user: prof.user })))
@@ -59,6 +61,7 @@ test('une requête commencée par le professeur ne repart pas avec le jeton él�
   const fetch = vi.fn().mockImplementationOnce(() => new Promise((resolve) => { terminer = resolve })).mockResolvedValue(new Response('{}'))
   vi.stubGlobal('fetch', fetch)
   const attente = api.authFetch('https://test.invalid/profiles?id=eq.prof', { method: 'PATCH', body: '{}' })
+  await Promise.resolve()
   localStorage.setItem('stmg_session', JSON.stringify(eleve))
   terminer(new Response(JSON.stringify({ access_token: 'prof-nouveau', user: prof.user })))
   await expect(attente).rejects.toThrow(/session/i)

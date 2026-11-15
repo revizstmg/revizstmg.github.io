@@ -20,31 +20,7 @@ const initialsOf = (name) => {
 }
 const medal = (i) => (i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i + 1}`)
 
-// Score d'un duel joué dont l'envoi a échoué : gardé sur l'appareil pour le
-// renvoyer (l'envoi est idempotent : il réécrit le même score).
-const CLE_SCORES_EN_ATTENTE = 'stmg_duel_scores_attente'
-// Une clé par compte (comme le code ami) : deux comptes sur un même appareil ne
-// se renvoient pas leurs scores. L'ancienne clé commune reste lue (migration) ;
-// un score envoyé en est retiré aussi.
-const cleScores = () => `${CLE_SCORES_EN_ATTENTE}:${deviceId()}`
-function scoresEnAttente() {
-  try {
-    const propres = JSON.parse(localStorage.getItem(cleScores()) || '{}') || {}
-    const anciens = JSON.parse(localStorage.getItem(CLE_SCORES_EN_ATTENTE) || '{}') || {}
-    return { ...anciens, ...propres }
-  } catch { return {} }
-}
-function garderScore(id, score) {
-  const tous = scoresEnAttente()
-  if (score) tous[id] = score; else delete tous[id]
-  try { localStorage.setItem(cleScores(), JSON.stringify(tous)) } catch { /* stockage indisponible : le score reste à l'écran */ }
-  if (!score) {
-    try {
-      const anciens = JSON.parse(localStorage.getItem(CLE_SCORES_EN_ATTENTE) || '{}') || {}
-      if (id in anciens) { delete anciens[id]; localStorage.setItem(CLE_SCORES_EN_ATTENTE, JSON.stringify(anciens)) }
-    } catch { /* ancienne clé illisible : ignorée */ }
-  }
-}
+import {scoresEnAttente,garderScore} from '../data/duelScores.js'
 
 function resultFromDuel(d) {
   const o = duelOutcome(d)
@@ -190,22 +166,25 @@ function FriendsPage() {
   }
   const acceptInvite = async (d) => { setBusy(true); try { await acceptDuelInvite(d.id); setFlow({ step: 'play', duel: { ...d, status: 'live' }, side: 'b' }) } catch { setMsg({ kind: 'err', text: t('rankOffline') }) } setBusy(false) }
   const envoyerScore = async (d, points, correct) => {
+    if (deviceId() !== me) return
     setBusy(true)
     try {
       const fresh = await submitDuel(d, points, correct)
-      garderScore(d.id, null)
+      garderScore(me, d.id, null)
+      if (deviceId() !== me) return
       if (fresh && fresh.status === 'done') setFlow({ step: 'result', ...resultFromDuel(fresh) })
       else setFlow({ step: 'waitingResult', duelId: d.id })
       load()
     } catch {
-      garderScore(d.id, { points, correct })
+      garderScore(me, d.id, { points, correct })
+      if (deviceId() !== me) return
       setFlow({ step: 'envoiEchoue', duel: d, points, correct })
     }
     setBusy(false)
   }
   // Un score déjà joué mais pas encore envoyé : on le renvoie au lieu de rejouer.
   const playLive = (d) => {
-    const garde = scoresEnAttente()[d.id]
+    const garde = scoresEnAttente(me)[d.id]
     if (garde) setFlow({ step: 'envoiEchoue', duel: d, points: garde.points, correct: garde.correct })
     else setFlow({ step: 'play', duel: d, side: d.a_device === me ? 'a' : 'b' })
   }
