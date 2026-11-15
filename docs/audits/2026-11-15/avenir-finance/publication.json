@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-11-15T12:57:25.351923+00:00",
+  "compiledRef": "ac129e243a153f5c6de484bab5ce021e77c89a60",
+  "sourceRef": "1aae6fcce",
+  "mergeRef": "77673ed0d69746d3837e40da5f215cbd2ad99853",
+  "workflow": 43714780618,
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 7305,
+      "sha256": "2c5c490b6ba162c531fc76ff51a2deac213d4a7f3d0b654e8fd27a805e6c5435"
+    },
+    {
+      "file": "assets/index-l-YWR1-E.js",
+      "bytes": 652053,
+      "sha256": "c311c135650202e7ae671a26d18ad3522f07750be3f6bc14b8780f150c04e710"
+    },
+    {
+      "file": "assets/Avenir-C7u5ZyOg.js",
+      "bytes": 57587,
+      "sha256": "6c3a2f785595b34169a110fa3d34344da29b7df6457e1b94a6196ea628e96f46"
+    },
+    {
+      "file": "assets/Avenir-Dzul4oAQ.css",
+      "bytes": 4984,
+      "sha256": "172cc5218b23d471d92f6dfac74a6b3d48165be1246f809babb68e36854fb3d9"
+    },
+    {
+      "file": "assets/public.en-DalpB2Mg.js",
+      "bytes": 395958,
+      "sha256": "716152f269fe59d4eadb0a533c476f6b84d77fc273e46c52e604e480aeb9bb7b"
+    },
+    {
+      "file": "assets/public.es-CJYVUS5f.js",
+      "bytes": 413310,
+      "sha256": "3e31582d2be7ada28d821c59c1a3710d2a92058dac913c8d44bf70497d642f4e"
+    },
+    {
+      "file": "assets/public.it-CKBqCxrk.js",
+      "bytes": 412181,
+      "sha256": "1a478a778fcf85132d3d7e743d99a5860756f19c4db32f122fded1ce8c535591"
+    },
+    {
+      "file": "assets/public.de-CPYKmNCS.js",
+      "bytes": 488219,
+      "sha256": "f25e6428ec950a265815c9c00e7a51232e1abb7574b3640b297c2d32cfe5d81b"
+    },
+    {
+      "file": "assets/public.ar-C1M5dJc4.js",
+      "bytes": 480485,
+      "sha256": "b4bfe5bd6d41fdb0882750a1b090cc367c5c041a9f3ca2635c58eb7887861ae2"
+    }
+  ]
+}
