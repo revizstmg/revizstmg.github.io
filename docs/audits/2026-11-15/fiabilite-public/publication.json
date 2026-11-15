@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-11-15T15:30:35.683779+00:00",
+  "compiledRef": "8347153108807c4f81068e669ad123a245345875",
+  "sourceRef": "6e6b09b8d",
+  "mergeRef": "0cf69cc4592daf44b7f145b137c4ed6c7cca21a3",
+  "workflow": 43728688183,
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 7305,
+      "sha256": "d3795023a78b86e76fb41fea73d53d85bab3b5a8e578bd9f3f152d8181464ef9"
+    },
+    {
+      "file": "assets/index-BszRjWWt.js",
+      "bytes": 652593,
+      "sha256": "cbc1d6175ea5a5c41bcf2d366dc57309297629c5a4ad4fed4ba3feeff93d342a"
+    },
+    {
+      "file": "assets/Friends-5dXiCOK9.js",
+      "bytes": 32795,
+      "sha256": "fffc0ddb5b5b76656d39c2f251758e3edb49cafaadf5a108503e1b34b5a972db"
+    },
+    {
+      "file": "assets/FormulaWorkshop-DNdiWhTL.js",
+      "bytes": 87854,
+      "sha256": "db0b41f0db73ebca614f1b7e2aaad6961f8e8249aa72c3ef7259f567a305a88a"
+    },
+    {
+      "file": "assets/Revise-CPhUGSxE.js",
+      "bytes": 34628,
+      "sha256": "af4e99f49b599b8749eb495c1e8498ccfce5a506597e118c8c22df4596c84d14"
+    },
+    {
+      "file": "assets/Revise-FV-8syb1.css",
+      "bytes": 6204,
+      "sha256": "497dc105d1558bc27aff783179f5abc2962867d2e2743000b0611d18ab3d7468"
+    },
+    {
+      "file": "assets/public.en-D_k5cdB-.js",
+      "bytes": 396386,
+      "sha256": "9f244c8c67225b8e87798270454d9888d2a87116e3a3e6473a8f89093dd63927"
+    },
+    {
+      "file": "assets/public.es-v11VnV1a.js",
+      "bytes": 413821,
+      "sha256": "b7ca40b55a66a59fa57d43e807e9c8036cc6f4a5312ee29948f25814bffb41aa"
+    },
+    {
+      "file": "assets/public.it-DWx2xvt0.js",
+      "bytes": 412632,
+      "sha256": "a255f582ca443ea46f21846949a4541e532880193a9b756819aa8d04c87f8d32"
+    },
+    {
+      "file": "assets/public.de-w29B_UGJ.js",
+      "bytes": 488741,
+      "sha256": "6d459556bdd4413c806f595164be62be2913556c117b6c58070559237c1b5fba"
+    },
+    {
+      "file": "assets/public.ar-DVYTd35i.js",
+      "bytes": 481011,
+      "sha256": "3408316b435af01708daf2d2c5d94bb92b9e9836d86d2b7f05c8633267b04510"
+    }
+  ]
+}

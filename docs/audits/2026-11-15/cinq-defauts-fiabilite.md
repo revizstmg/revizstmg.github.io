@@ -25,3 +25,9 @@ Le renouvellement de session reçoit également une échéance complète : sans 
 Profils, réseau, duels et moteur vocal sont simulés. Aucun vrai OAuth Google/Apple, compte Supabase, paiement Stripe, appel IA, caméra/micro ou voix physique n’a été utilisé. Aucune mutation de schéma, RLS, secrets ou données Supabase/NAH. Les cours/exercices ne sont pas certifiés par ces tests ; leur relecture disciplinaire reste distincte.
 
 Documentation Supabase consultée : changelog du15novembre2026 (aucune évolution REST/Auth pertinente identifiée dans les entrées récentes), guide des sessions. Le correctif conserve l’identité de session comme garde des réponses tardives et ne change aucun mécanisme d’autorisation.
+
+## Livraison vérifiée
+
+PR [#220](https://github.com/revizstmg/revizstmg.github.io/pull/220), source `6e6b09b8d`, fusion `0cf69cc459`. La suite locale complète termine à866réussites. CI [43728688183](https://github.com/revizstmg/revizstmg.github.io/actions/runs/43728688183) :866réussites dans chaque fuseau,427parcours navigateur. Compilation publiée `8347153108807c4f81068e669ad123a245345875` et Pages [43730163922](https://github.com/revizstmg/revizstmg.github.io/actions/runs/43730163922) réussis.
+
+Comparaison des modules publics actifs (dont l’entrée qui contient Auth/store), des styles et des cinq catalogues avec la compilation : conformité octet par octet. Les8nouveaux scénarios passent également sur `https://revizstmg.github.io/`, avec profils et réponses simulés : en-têtes/corps de profil silencieux puis reconnexion, sauvegarde bloquée puis renvoi de la dernière modification, ancien score global non attribué, filtres restaurés et ancienne sélection récupérée, pannes vocales synchrones/asynchrones puis reprise. Les [preuves publiques](fiabilite-public/) conservent les limites : ce n’est pas une certification des serveurs d’authentification ou de la voix physique.

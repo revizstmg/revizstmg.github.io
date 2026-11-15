@@ -1,5 +1,7 @@
 # Trois audits indépendants du site
 
+Mise à jour du15novembre2026 : les cinq défauts ci-dessous ont été corrigés, publiés et revérifiés. Voir le [rapport de correction et les preuves](../../2026-11-15/cinq-defauts-fiabilite.md). Les constats d’origine sont conservés comme historique.
+
 Référence produit audité : `9eea90627` (compilation publiée `30019d7b8`). Les seuls changements de main intervenus pendant la reprise étaient des statistiques. Trois agents ont travaillé dans des copies distinctes, sans modifier le produit, les données réelles ou les contrôles.
 
 ## Défauts reproduits encore présents

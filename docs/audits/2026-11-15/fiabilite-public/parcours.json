@@ -1,0 +1,94 @@
+{
+  "baseURL": "https://revizstmg.github.io/",
+  "services": "Profils fictifs ; toutes les requêtes hors du site bloquées ou simulées. Aucun compte réel ni écriture de base.",
+  "stats": {
+    "startTime": "2026-11-15T15:30:38.296Z",
+    "duration": 17896.146,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "connexion : profil headers silencieux, formulaire récupérable et reprise",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 3187
+        }
+      ]
+    },
+    {
+      "title": "connexion : profil body silencieux, formulaire récupérable et reprise",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2052
+        }
+      ]
+    },
+    {
+      "title": "sauvegarde : corps bloqué, état échec, dernière modification renvoyée sans perte locale",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1311
+        }
+      ]
+    },
+    {
+      "title": "duel : ancien score global jamais repris par le second compte du même duel",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2079
+        }
+      ]
+    },
+    {
+      "title": "atelier : programme et niveau retrouvés ; sélection masquée rendue visible à la demande",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 2432
+        }
+      ]
+    },
+    {
+      "title": "atelier : ancienne sélection de Terminale sur un compte Première restaurée sans abandon",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1258
+        }
+      ]
+    },
+    {
+      "title": "audio : panne sync, arrêt expliqué et reprise",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1525
+        }
+      ]
+    },
+    {
+      "title": "audio : panne async, arrêt expliqué et reprise",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 1429
+        }
+      ]
+    }
+  ]
+}
