@@ -16,6 +16,7 @@ export default function AudioReview({ items = [], color = '#7c3aed', title = '',
   const [idx, setIdx] = useState(0)
   const [playing, setPlaying] = useState(false)
   const [side, setSide] = useState('front')
+  const [audioError, setAudioError] = useState(false)
   const panel = useRef(null), timer = useRef(null)
   const idxRef = useRef(0)
   const playingRef = useRef(false)
@@ -28,15 +29,20 @@ export default function AudioReview({ items = [], color = '#7c3aed', title = '',
   useFenetreClavier(panel, close)
   useEffect(() => () => { playingRef.current = false; cancel() }, []) // arrêt à la fermeture
 
+  const fail = () => {
+    playingRef.current = false; cancel(); setPlaying(false); setSide('front'); setAudioError(true)
+  }
   const speak = (text, onEnd) => {
     if (!synth) { onEnd?.(); return }
     const myGen = genRef.current
-    const u = new SpeechSynthesisUtterance(String(text || ''))
-    u.lang = voiceLang
-    u.rate = 0.95
-    u.onend = () => { if (genRef.current === myGen) onEnd?.() }
-    u.onerror = () => { if (genRef.current === myGen) onEnd?.() }
-    synth.speak(u)
+    try {
+      const u = new SpeechSynthesisUtterance(String(text || ''))
+      u.lang = voiceLang
+      u.rate = 0.95
+      u.onend = () => { if (genRef.current === myGen) onEnd?.() }
+      u.onerror = () => { if (genRef.current === myGen) fail() }
+      synth.speak(u)
+    } catch { if (genRef.current === myGen) fail() }
   }
 
   const playFrom = (i) => {
@@ -54,11 +60,11 @@ export default function AudioReview({ items = [], color = '#7c3aed', title = '',
     })
   }
 
-  const start = () => { if (!synth) return; cancel(); setPlaying(true); playingRef.current = true; playFrom(idxRef.current) }
+  const start = () => { if (!synth) return; cancel(); setAudioError(false); setPlaying(true); playingRef.current = true; playFrom(idxRef.current) }
   const pause = () => { setPlaying(false); playingRef.current = false; cancel() }
   const jump = (d) => {
     const ni = Math.min(items.length - 1, Math.max(0, idxRef.current + d))
-    cancel()
+    cancel(); setAudioError(false)
     if (playingRef.current) playFrom(ni)
     else { setIdx(ni); setSide('front') }
   }
@@ -77,13 +83,14 @@ export default function AudioReview({ items = [], color = '#7c3aed', title = '',
           <p className="py-6 text-center text-sm text-slate-500 dark:text-slate-400">{t('audioUnsupported')}</p>
         ) : (
           <>
-            <label className="mb-3 block text-sm">{tr('Langue de lecture')}<select className="ms-2 rounded border p-2" value={language} onChange={e=>{playingRef.current=false;cancel();setPlaying(false);setLanguage(e.target.value);onLanguageChange?.(e.target.value)}}>{[['fr','Français'],['en','English'],['de','Deutsch'],['es','Español'],['it','Italiano'],['ar','العربية']].map(([id,label])=><option key={id} value={id}>{label}</option>)}</select></label>
+            <label className="mb-3 block text-sm">{tr('Langue de lecture')}<select className="ms-2 rounded border p-2" value={language} onChange={e=>{playingRef.current=false;cancel();setPlaying(false);setAudioError(false);setSide('front');setLanguage(e.target.value);onLanguageChange?.(e.target.value)}}>{[['fr','Français'],['en','English'],['de','Deutsch'],['es','Español'],['it','Italiano'],['ar','العربية']].map(([id,label])=><option key={id} value={id}>{label}</option>)}</select></label>
             <div className="mb-1 text-xs text-slate-400">{Math.min(idx + 1, items.length)} / {items.length}</div>
             <div className="min-h-0 flex-1 overflow-y-auto break-words rounded-2xl border-2 p-4 text-center" style={{ borderColor: color, background: color + '10' }}>
               <p className="text-lg font-bold">{card.front}</p>
               {side === 'back' && <p className="mt-3 text-[15px] text-slate-700 dark:text-slate-200">{card.back}</p>}
             </div>
 
+            {audioError && <p role="alert" className="mt-3 text-sm">La lecture audio a échoué. Réessaie ou change la langue de lecture.</p>}
             <div className="mt-3 flex shrink-0 items-center justify-center gap-3">
               <button onClick={() => jump(-1)} disabled={idx === 0} className="grid h-11 w-11 place-items-center rounded-full text-lg disabled:opacity-30" style={{ boxShadow: 'inset 0 0 0 1px color-mix(in srgb, var(--c-accent) 30%, transparent)' }} aria-label={t('previous')}>⏮</button>
               <button onClick={() => (playing ? pause() : start())} className="grid h-14 w-14 place-items-center rounded-full text-2xl text-white shadow-lg" style={{ backgroundColor: color }} aria-label={playing ? t('pause') : t('play')}>

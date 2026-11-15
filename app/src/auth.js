@@ -76,28 +76,28 @@ export async function refreshSession() {
   const s = getSession()
   if (!s?.refresh) return null
   if (_refreshing && sameSession(_refreshing.session, s)) return _refreshing.promise
-  const p = (async () => {
+  const p = withNetworkTimeout(async signal => {
     let res
     try {
       res = await fetch(`${SUPA_URL}/auth/v1/token?grant_type=refresh_token`, {
-        method: 'POST',
+        signal, method: 'POST',
         headers: { apikey: SUPA_ANON, 'Content-Type': 'application/json' },
         body: JSON.stringify({ refresh_token: s.refresh }),
       })
     } catch {
-      return null // réseau indisponible : on garde la session, on réessaiera.
+      return null // réseau indisponible : conserver la session pour une reprise.
     }
-    if (!sameSession(s, getSession())) return null
+    if (signal.aborted || !sameSession(s, getSession())) return null
     if (res.ok) {
       const data = await res.json().catch(() => null)
-      if (!sameSession(s, getSession())) return null
+      if (signal.aborted || !sameSession(s, getSession())) return null
       if (data?.access_token) return saveSession(data)
       return null
     }
-    // 400/401 = refresh_token invalide/expiré : la session est terminée.
     if (res.status === 400 || res.status === 401) clearSession()
     return null
-  })()
+  },15000).catch(() => null)
+
   const pending = { session: s, promise: p }
   _refreshing = pending
   try { return await p } finally { if (_refreshing === pending) _refreshing = null }
@@ -121,6 +121,7 @@ export async function getValidToken() {
 export async function authFetch(url, opts = {}) {
   const owner = getSession()?.user?.id
   const assertOwner = () => {
+    if (opts.signal?.aborted) throw new Error('La requête a expiré. Réessaie.')
     if (getSession()?.user?.id !== owner) throw new Error('La session a changé. Reconnecte-toi.')
   }
   const token = await getValidToken()
@@ -298,30 +299,31 @@ export async function envoyerProgression(progress, attendu, { keepalive = false 
   if (!s?.token || !s.user?.id) return { ok: false, raison: 'session' }
   const body = JSON.stringify({ progress: progress || {}, updated_at: new Date().toISOString() })
   const version = attendu == null ? 'is.null' : `eq.${attendu}`
-  let res
   try {
-    res = await authFetch(`${SUPA_URL}/rest/v1/profiles?id=eq.${s.user.id}&progress->_sync->>rev=${version}&select=id`, {
-      method: 'PATCH',
-      // Envoi qui survit à la fermeture de la page (limité à 64 Ko par le navigateur).
-      keepalive: keepalive && body.length < 60000,
-      headers: { Prefer: 'return=representation' },
-      body,
-    })
+    return await withNetworkTimeout(async signal => {
+      const res = await authFetch(`${SUPA_URL}/rest/v1/profiles?id=eq.${s.user.id}&progress->_sync->>rev=${version}&select=id`, {
+        signal, method: 'PATCH',
+        keepalive: keepalive && body.length < 60000,
+        headers: { Prefer: 'return=representation' },
+        body,
+      })
+      if (!res.ok) return { ok: false, raison: 'serveur', status: res.status }
+      const rows = await res.json().catch(() => [])
+      if (signal.aborted) throw new Error('La requête a expiré.')
+      if (getSession()?.user?.id !== s.user.id) return { ok: false, raison: 'session' }
+      if (Array.isArray(rows) && rows.length) return { ok: true }
+      // Pas de ligne modifiée : relire la version pour résoudre un conflit.
+      const profil = await fetchProfile()
+      if (signal.aborted) throw new Error('La requête a expiré.')
+      if (getSession()?.user?.id !== s.user.id) return { ok: false, raison: 'session' }
+      if (!profil) return { ok: false, raison: 'profil' }
+      const rev = progress?._sync?.rev
+      if (rev != null && profil.progress?._sync?.rev === rev) return { ok: true }
+      return { ok: false, conflit: profil.progress || {} }
+    },15000)
   } catch (e) {
     return { ok: false, raison: /session/i.test(e?.message || '') ? 'session' : 'reseau' }
   }
-  if (!res.ok) return { ok: false, raison: 'serveur', status: res.status }
-  const rows = await res.json().catch(() => [])
-  if (Array.isArray(rows) && rows.length) return { ok: true }
-  // Aucune ligne modifiée : la copie du compte a changé, ou le profil manque.
-  let profil
-  try { profil = await fetchProfile() } catch (e) {
-    return { ok: false, raison: /session/i.test(e?.message || '') ? 'session' : 'reseau' }
-  }
-  if (!profil) return { ok: false, raison: 'profil' }
-  const rev = progress?._sync?.rev
-  if (rev != null && profil.progress?._sync?.rev === rev) return { ok: true }
-  return { ok: false, conflit: profil.progress || {} }
 }
 
 // RGPD : supprime le compte et tout ce que l'élève a publié (profil et
@@ -338,9 +340,11 @@ export async function supprimerCompte() {
 export async function fetchProfile() {
   const s = getSession()
   if (!s?.token || !s.user?.id) return null
-  const res = await authFetch(`${SUPA_URL}/rest/v1/profiles?id=eq.${s.user.id}&select=*`)
-  if (!res.ok) return null
-  const rows = await res.json().catch(() => [])
-  if (getSession()?.user?.id !== s.user.id) throw new Error('La session a changé. Reconnecte-toi.')
-  return rows[0] || null
+  return withNetworkTimeout(async signal => {
+    const res = await authFetch(`${SUPA_URL}/rest/v1/profiles?id=eq.${s.user.id}&select=*`, { signal })
+    if (!res.ok) return null
+    const rows = await res.json().catch(() => [])
+    if (getSession()?.user?.id !== s.user.id) throw new Error('La session a changé. Reconnecte-toi.')
+    return rows[0] || null
+  },15000)
 }

@@ -4700,5 +4700,10 @@
   "BTS Gestion de la PME": "BTS KMU-Management",
   "BUT Gestion administrative et commerciale des organisations (GACO)": "ZIEL Administratives und kommerzielles Management von Organisationen (GACO)",
   "Finance et commerce": "Finanzen und Handel",
-  "Parcours possibles": "Mögliche Routen"
+  "Parcours possibles": "Mögliche Routen",
+  "La lecture audio a échoué. Réessaie ou change la langue de lecture.": "Die Audiowiedergabe ist fehlgeschlagen. Versuche es erneut oder ändere die Vorlesesprache.",
+  "Formules masquées par le programme ou le niveau : {n}.": "Durch Lehrplan oder Stufe ausgeblendete Formeln: {n}.",
+  "Afficher toute ma sélection": "Meine gesamte Auswahl anzeigen",
+  "La requête a expiré. Réessaie.": "Die Anfrage hat das Zeitlimit überschritten. Versuche es erneut.",
+  "La requête a expiré.": "Die Anfrage hat das Zeitlimit überschritten."
 }

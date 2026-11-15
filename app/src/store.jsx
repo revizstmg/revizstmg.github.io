@@ -506,6 +506,7 @@ export function StoreProvider({ children }) {
       const rev = Math.max(Date.now(), (s._sync?.rev || 0) + 1, (vu || 0) + 1)
       charge._sync.rev = rev
       const r = await envoyerProgression(charge, vu, { keepalive })
+      if (latestState.current.account?.id !== s.account.id || !compteActif(s)) return 'local'
       if (r.ok) {
         const envoye = (p) => (p.account?.id === s.account.id ? apresEnvoi(p, rev, emp) : p)
         latestState.current = envoye(latestState.current)
@@ -530,7 +531,7 @@ export function StoreProvider({ children }) {
         tache.encore = false
         setSauvegarde((x) => (x.etat === 'envoi' ? x : { ...x, etat: 'envoi' }))
         try { etat = await envoyer(options) } catch { etat = 'erreur' }
-      } while (tache.encore && etat === 'ok')
+      } while (tache.encore && (etat === 'ok' || etat === 'local'))
       envoi.current = null
       setSauvegarde({ etat: etat === 'local' ? 'ok' : etat, le: Date.now() })
       // Nouvel essai automatique, de plus en plus espacé (15 s à 5 min).

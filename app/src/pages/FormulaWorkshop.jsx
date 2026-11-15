@@ -4,7 +4,7 @@ import { useStore } from '../store.jsx'
 import { usePublicText } from '../i18n.js'
 import { CourseText } from '../components/Course.jsx'
 import { useInfoCookiesLue } from '../components/BandeauCookies.jsx'
-import { readWorkshop, saveWorkshop, formulaCourse } from '../data/workshopSession.js'
+import { readWorkshop, saveWorkshop, formulaCourse, workshopFilters } from '../data/workshopSession.js'
 import { formulasForTrack, buildFormulaSession, checkFormulaAnswer, displayNumber } from '../data/formulaPractice.js'
 
 export default function FormulaWorkshop() {
@@ -14,17 +14,18 @@ export default function FormulaWorkshop() {
 }
 function Workshop({track, scope}) {
   const tr=usePublicText()
-  const [programme,setProgramme]=useState('track')
-  const [level,setLevel]=useState('all')
-  const formulas=formulasForTrack(track, programme==='all').filter(f=>level==='all'||(level==='premiere'?!f.terminale:!!f.terminale))
   const [initial] = useState(() => readWorkshop(scope))
+  const [programme,setProgramme]=useState(() => workshopFilters(initial,track).programme)
+  const [level,setLevel]=useState(() => workshopFilters(initial,track).level)
+  const formulas=formulasForTrack(track, programme==='all').filter(f=>level==='all'||(level==='premiere'?!f.terminale:!!f.terminale))
   const cookiesLues = useInfoCookiesLue()
   const [selected,setSelected]=useState(initial?.selected || []),[category,setCategory]=useState(''),[group,setGroup]=useState(''),[search,setSearch]=useState(''),[repeat,setRepeat]=useState(initial?.repeat || 2)
   const [session,setSession]=useState(initial?.session || null),[index,setIndex]=useState(initial?.index || 0),[answer,setAnswer]=useState(initial?.answer || ''),[feedback,setFeedback]=useState(initial?.feedback ?? null),[invalid,setInvalid]=useState(false),[finished,setFinished]=useState(initial?.finished || false)
   const [results,setResults]=useState(initial?.results || []),[hint,setHint]=useState(false),[paused,setPaused]=useState(!!initial?.session && !initial?.finished),[storageError,setStorageError]=useState(false)
   const score=results.filter(r=>r.correct).length
-  useEffect(()=>{setStorageError(!saveWorkshop(scope,{selected,repeat,session,index,feedback,finished,results,answer}))},[scope,selected,repeat,session,index,feedback,finished,results,answer])
+  useEffect(()=>{setStorageError(!saveWorkshop(scope,{programme,level,selected,repeat,session,index,feedback,finished,results,answer}))},[scope,programme,level,selected,repeat,session,index,feedback,finished,results,answer])
   const chosen=formulas.filter(f=>selected.includes(f.id))
+  const hiddenSelected=selected.length-chosen.length
   const sessionFormulas=[...new Map((session || []).map(q=>[q.formula.id,q.formula])).values()]
   const toggle=id=>setSelected(ids=>ids.includes(id)?ids.filter(x=>x!==id):[...ids,id])
   const begin=(fs)=>{if(!fs.length) return; setSession(buildFormulaSession(fs,fs.length*repeat));setIndex(0);setResults([]);setFinished(false);setFeedback(null);setAnswer('');setInvalid(false);setHint(false);setPaused(false)}
@@ -51,6 +52,7 @@ function Workshop({track, scope}) {
         <label className="text-sm"><span className="mb-1 block font-semibold">Rechercher une formule</span><input className="rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-amber-700 dark:border-slate-600 dark:bg-slate-800 w-full" type="search" value={search} onChange={e=>setSearch(e.target.value)} /></label>
         <label className="text-sm"><span className="mb-1 block font-semibold">Matière</span><select className="rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm outline-none focus-visible:ring-2 focus-visible:ring-amber-700 dark:border-slate-600 dark:bg-slate-800 w-full" value={category} onChange={e=>{setCategory(e.target.value);setGroup('')}}><option value="">{tr('Toutes les matières')}</option>{[...new Set(formulas.map(f=>f.cat))].map(cat=><option key={cat} value={cat}>{tr(cat)}</option>)}</select></label>
       </div>
+      {hiddenSelected>0 && <aside className="card p-4 text-sm" role="status"><p>{tr('Formules masquées par le programme ou le niveau : {n}.',{n:hiddenSelected})}</p><button className="btn mt-2" onClick={()=>{setProgramme('all');setLevel('all');setCategory('');setGroup('');setSearch('')}}>Afficher toute ma sélection</button></aside>}
       <section className="card space-y-4 p-5">
         <p className="text-sm text-slate-500 dark:text-slate-400">{tr('{visible} / {total} formules disponibles dans ce programme.',{visible:visible.length,total:formulas.length})}</p>
         <div className="flex flex-wrap items-center justify-between gap-2"><button className="btn text-xs" disabled={!visible.length} onClick={()=>setSelected(ids=>[...new Set([...ids,...visible.map(f=>f.id)])])}>{tr('Sélectionner les formules affichées')}</button><p><strong>{chosen.length}</strong> <span>{tr(chosen.length === 1 ? 'formule sélectionnée' : 'formules sélectionnées')}</span></p><button className="btn text-xs" disabled={!chosen.length} onClick={()=>setSelected([])}>Effacer la sélection</button></div>
