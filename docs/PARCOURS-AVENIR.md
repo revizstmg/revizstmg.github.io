@@ -45,3 +45,13 @@ Le bilan montre les matières retenues pour chaque piste et conseille de vérifi
 La mise à jour notes/PDF est fusionnée dans la PR #214 (`c5ff38191`, fusion `a30f17692`). CI complète [42686789652](https://github.com/revizstmg/revizstmg.github.io/actions/runs/42686789652) réussie :845 tests dans chaque fuseau,418 parcours navigateur. Le bouton de reprise des notes du site efface les seules moyennes manuelles, en conservant les intérêts et les notes de classe d’origine.
 
 Notes et PDF publiés et contrôlés sur la compilation `30019d7b8`, Pages final `42689803165` réussi. Le contrôle public utilise des notes fictives et bloque les services externes ; il confirme le classement et la reprise côté interface, pas une certification des services Auth/RLS réels inchangés. Voir `docs/audits/2026-11-09/notes-pdf-publication.json`.
+
+## Bilan global
+
+80 questions en12étapes :48activités d’intérêt,24questions complémentaires sur les méthodes/priorités/projet, et8questions de contexte. Les56anciennes réponses et les notes sont conservées. La reprise se fait par identifiant d’étape ou première question manquante ; un ancien bilan terminé est invité à compléter les nouvelles rubriques. La navigation directe ne permet pas de produire un bilan incomplet. Une fois toutes les réponses présentes, un bouton actualise le bilan immédiatement après une modification.
+
+La synthèse distingue intérêts, appuis déclarés et besoins, résultats scolaires, idées personnelles et conditions d’études. Quatre voies sont comparées (BTS, BUT, licence universitaire, CPGE ECT suivie d’études en école), sans classement d’admission. Les points de vigilance croisent les préférences de cadre, durée, alternance, mobilité et les repères scolaires. Les préférences ne servent pas à attribuer une personnalité. Les textes libres du projet restent du texte React privé, borné et sauvegardé dans le dossier habituel ; ils ne sont pas transmis au moteur de traduction ou à un service de génération.
+
+Quatre démarches adaptées sont cochables par l’élève, sans XP ni prétendre une validation extérieure. Les80réponses sont consultables ; l’impression du bilan utilise une copie statique des24préférences complémentaires, même si les rubriques interactives sont repliées. Les textes publics ont leur traduction hors ligne dans les cinq autres langues, avec conservation des noms de diplômes français et retouches des libellés principaux.
+
+Validation locale :30tests ciblés réussis,6parcours navigateur réussis, compilation et relecture indépendante des règles. Impression réelle vérifiée :24questions et24réponses complémentaires présentes. Les trois audits du reste du site sont distincts de la mise à jour et détaillés dans `docs/audits/2026-11-14/trois-agents/README.md`.

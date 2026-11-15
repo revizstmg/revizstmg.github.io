@@ -1,0 +1,1714 @@
+{
+  "config": {
+    "configFile": "/workspace/output/audit-global-20261109/agent1/playwright.config.mjs",
+    "rootDir": "/workspace/work/audit-global-20261109-1/app/tests/parcours",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "/workspace/output/audit-global-20261109/agent1/targeted-tests.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/workspace/output/audit-global-20261109/agent1/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/workspace/work/audit-global-20261109-1/app/tests/parcours",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "audit-huit-comptes.spec.js",
+      "file": "audit-huit-comptes.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "OAuth refus : description contenant un pourcentage littéral",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2042,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:57:32.677Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "resultat",
+                      "contentType": "application/json",
+                      "body": "eyJlcnJldXJzIjpbXSwidXJsIjoiaHR0cDovLzEyNy4wLjAuMTo0MjYxLyMvIiwidGV4dGUiOiJSw6l2aXpTVE1HXG4wXG5cblRPTiBQUk9DSEFJTiBDT05UUsOUTEVcblxuQ29tcHJlbmRzIHRlcyBlcnJldXJzLlxuUHLDqXBhcmUgdG9uIHByb2NoYWluIGNvbnRyw7RsZS5cblxuUGFycyBkZSB0b24gZGVybmllciBkZXZvaXIgcG91ciBzYXZvaXIgcXVvaSByZXZvaXIgZXQgY29tbWVudCB04oCZZW50cmHDrm5lci5cblxuTGFuY2VyIG1hIHPDqWFuY2UgZHUgam91clxuVm9pciB1biBleGVtcGxlIGRlIGJpbGFuXG5cblLDiVZJWlNUTUdcblxuUXXigJllc3QtY2UgcXVlIHR1IHZldXggcsOpdmlzZXIgP1xuXG5DaG9pc2lzIHRvbiBuaXZlYXUgcG91ciBjb21tZW5jZXIuXG5cbvCfk5hcblByZW1pw6hyZSBTVE1HXG5TY2llbmNlcyBkZSBnZXN0aW9uIGV0IG51bcOpcmlxdWUsIG1hbmFnZW1lbnQsIGRyb2l0LCDDqWNvbm9taWUuXG7ilrhcbvCfk5VcblRlcm1pbmFsZSBTVE1HXG5DaG9pc2lzIHRhIHNww6ljaWFsaXTDqS5cbuKWuFxu8J+RqOKAjfCfkanigI3wn5GnIEplIHN1aXMgdW4gcGFyZW50XG5cblR1IHBvdXJyYXMgY2hhbmdlciBkZSBuaXZlYXUgb3UgZGUgc3DDqWNpYWxpdMOpIMOgIHRvdXQgbW9tZW50LCBkZXB1aXMgbOKAmWFjY3VlaWwuXG5cblLDqXZpelNUTUdcbkNvdXJzIHNhbnMgaW5zY3JpcHRpb25cbsOAIHByb3Bvc1xuR3VpZGUgZGUgZMOpbWFycmFnZVxuUG9saXRpcXVlIGRlIGNvbmZpZGVudGlhbGl0w6lcbkNHVSBldCBtZW50aW9ucyBsw6lnYWxlc1xuTGVzIG9mZnJlc1xuRXhlbXBsZSBkZSBiaWxhblxuRkFRXG7imb8gQWNjZXNzaWJpbGl0w6lcbk5vdXMgY29udGFjdGVyIMK3IHJldml6c3RtZ0BnbWFpbC5jb21cblxuQ3LDqcOpIHBhciBHYWJyaWVsIE1FUkxJTlxuXG7CqSAyMDI2IFLDqXZpelNUTUdcblxu8J+NqlxuXG5BdWN1biBjb29raWUgcHVibGljaXRhaXJlIG5pIGRlIHN1aXZpLiBFbiBzYXZvaXIgcGx1c1xuXG5PS1xuXG5Sw4lWSVpTVE1HXG5cbkxpcmUgbGVzIGNvdXJzIHNhbnMgaW5zY3JpcHRpb25cblxuQ29tcHJlbmRzIHRlcyBlcnJldXJzLlxuUHLDqXBhcmUgdG9uIHByb2NoYWluIGNvbnRyw7RsZS5cblxuUGFycyBkZSB0b24gZGVybmllciBkZXZvaXIgcG91ciBzYXZvaXIgcXVvaSByZXZvaXIgZXQgY29tbWVudCB04oCZZW50cmHDrm5lci5cblxuQ09NTUVOQ0VSIMOAIFLDiVZJU0VSXG5cblZvaXIgdW4gZXhlbXBsZSBkZSBiaWxhbiDCtyBDb21wYXJlciBsZXMgb2ZmcmVzXG5cblNlIGNvbm5lY3RlclxuXG5Db25uZWN0ZS10b2kgcG91ciByZXRyb3V2ZXIgdGEgcHJvZ3Jlc3Npb24uXG5cbkNvbnRpbnVlciBhdmVjIEdvb2dsZVxub3VcbkFEUkVTU0UgRS1NQUlMXG5NT1QgREUgUEFTU0Vcbk1vdCBkZSAifQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "100b892aa4ec76e8df34-1a30097a84a01e7b0e21",
+          "file": "audit-huit-comptes.spec.js",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "profil échec serveur : données locales conservées et réessai",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1541,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:57:35.006Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "100b892aa4ec76e8df34-ee79d609b126d1a5abff",
+          "file": "audit-huit-comptes.spec.js",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "changement de compte dans profil ouvert : formulaire suit B",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7507,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:57:36.573Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "identite-formulaire",
+                      "contentType": "application/json",
+                      "body": "eyJldGF0Ijp7Im1pc3Npb25zIjp7fSwieHAiOjEwLCJzdHJlYWsiOnsiY291bnQiOjEsImxhc3QiOiIyMDI2LTExLTE0In0sImJhZGdlcyI6WyJ3ZWxjb21lIl0sImNoYXB0ZXJzIjp7fSwiZmF2b3JpdGVzIjpbXSwibGFzdENoYXB0ZXIiOm51bGwsInN0dWR5TGFuZ3VhZ2VzIjpudWxsLCJ0cmFjayI6eyJsZXZlbCI6InRlcm1pbmFsZS1zdG1nIiwic3BlY2lhbHR5IjpudWxsfSwicHJvZmlsZSI6eyJmaXJzdE5hbWUiOiJCb2IiLCJsYXN0TmFtZSI6Ik5vdXZlYXUifSwib25ib2FyZGVkIjp0cnVlLCJ0aGVtZSI6bnVsbCwiY3VzdG9tVGhlbWUiOm51bGwsImxhbmciOiJmciIsInRvdGFsQW5zd2VycyI6MCwiY29ycmVjdEFuc3dlcnMiOjAsIndlZWtseSI6eyJ3ZWVrIjpudWxsLCJkb25lIjpbXX0sImNsYXNzQ29kZSI6IiIsImFjY291bnQiOnsiaWQiOiIwMDAwMDAwMC0wMDAwLTQwMDAtODAwMC0wMDAwMDAwMDAwMDIiLCJlbWFpbCI6ImJAdGVzdC5mciIsInJvbGUiOiJlbGV2ZSJ9LCJ0ZWFjaGVyQ2xhc3NlcyI6W10sInNycyI6e30sImJhY0RhdGUiOm51bGwsImExMXkiOnsiZHlzIjpmYWxzZSwiY29udHJhc3QiOmZhbHNlLCJiaWciOmZhbHNlfSwicmVtaW5kZXIiOnsib24iOmZhbHNlLCJ0aW1lIjoiMTg6MDAifSwicGFyZW50U2hhcmUiOmZhbHNlLCJncmFuZE9yYWwiOnsic3BlYyI6IiIsInExIjoiIiwicTIiOiIiLCJub3RlcyI6IiIsIm9yZ2FuaXNhdGlvbiI6IiIsInNvdXJjZXMiOltdLCJhbmFseXNlIjp7fSwiYXJndW1lbnRzIjpbXSwibWFqIjowfSwicmV1c3NpdGVzIjpbXSwiZXJyZXVycyI6W10sImV0dWRlR2VzdGlvbiI6eyJ0aGVtZSI6IiIsIm9yZ2FuaXNhdGlvbiI6IiIsInByb2JsZW1hdGlxdWUiOiIiLCJjb2NoZXMiOnt9LCJzb3VyY2VzIjpbXSwiYW5hbHlzZSI6e30sImFyZ3VtZW50cyI6W10sIm1haiI6MH0sImV4YW1TZWVuIjp7fSwic2hvcFdhbGxldFVwZGF0ZWRBdCI6MTc5NDcwMDY1Nzg5MCwic2hvcFJld2FyZHMiOnt9LCJjb2lucyI6MTAsIm93bmVkIjpbXSwiZnJlZXplcyI6MCwidGFicyI6bnVsbCwiaGlzdG9yeSI6eyIyMDI2LTExLTE0IjoxMH0sInRoZW1lVGltZSI6e30sInNhdmVkRGVja3MiOltdLCJkYWlseUNoYWxsZW5nZSI6eyJsYXN0IjpudWxsLCJzdHJlYWsiOjAsImJlc3QiOjAsImxhc3RCb251cyI6MH0sIm5vdGVzIjp7fSwiZmljaGVzIjpbXSwibm90ZXNDbGFzc2UiOltdLCJwYXJjb3VycyI6bnVsbCwiX3N5bmMiOnsidiI6MSwicmV2IjowLCJ2dVNlcnZldXIiOm51bGwsImVtcHJlaW50ZSI6IiIsImJhc2UiOnsieHAiOjAsImNvaW5zIjowLCJmcmVlemVzIjowLCJ0b3RhbEFuc3dlcnMiOjAsImNvcnJlY3RBbnN3ZXJzIjowfSwidmVyc2lvbkJhc2UiOjAsImNvbXB0ZXVycyI6eyJ4cCI6eyI0Z3AyaHBuNGZsbGEiOlsxMCwwXX0sImNvaW5zIjp7IjRncDJocG40ZmxsYSI6WzEwLDBdfX0sIml0ZW1zIjp7fSwiY2hhbXBzIjp7fX19LCJwcmVub21BZmZpY2hlIjoiQm9iIn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "100b892aa4ec76e8df34-d7e333530f3ce8200c57",
+          "file": "audit-huit-comptes.spec.js",
+          "line": 63,
+          "column": 1
+        },
+        {
+          "title": "OAuth refus simple : message visible et connexion utilisable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1389,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:57:44.145Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "100b892aa4ec76e8df34-29084181df22b4a16947",
+          "file": "audit-huit-comptes.spec.js",
+          "line": 118,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "boutique.spec.js",
+      "file": "boutique.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "collections : achats, équipement, filtres et persistance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4923,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:57:33.611Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a7cd4db03b60df0ba58c-c52bc4c2580b87a8e0ac",
+          "file": "boutique.spec.js",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "pièces insuffisantes, raretés verrouillées, packs et cadeaux uniques",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6450,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:57:38.856Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a7cd4db03b60df0ba58c-4f0fd8486cc054cea6e7",
+          "file": "boutique.spec.js",
+          "line": 96,
+          "column": 1
+        },
+        {
+          "title": "les mois offerts exigent les résultats et restent des réservations futures",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6375,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:57:45.382Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a7cd4db03b60df0ba58c-f032477e799dc1946688",
+          "file": "boutique.spec.js",
+          "line": 152,
+          "column": 1
+        },
+        {
+          "title": "collection Envol : lot gratuit, objets équipables et aucun suivi PDF offert",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6057,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:57:51.789Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a7cd4db03b60df0ba58c-0ba0b1296d79d93032d3",
+          "file": "boutique.spec.js",
+          "line": 215,
+          "column": 1
+        },
+        {
+          "title": "ancien kit : échange conservé sans doubler les gels après reprise",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4792,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:57:57.950Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a7cd4db03b60df0ba58c-c7e469e26fbd800d62f1",
+          "file": "boutique.spec.js",
+          "line": 270,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "classes-multiples.spec.js",
+      "file": "classes-multiples.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "professeur : créer deux classes, basculer et retrouver les deux après rechargement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4297,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:57:45.986Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "143591bb4f90f3bf87e3-1ab6427228af6f98f7ca",
+          "file": "classes-multiples.spec.js",
+          "line": 175,
+          "column": 1
+        },
+        {
+          "title": "élève : rejoindre deux classes, changer, retrouver et quitter seulement la classe choisie",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8347,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:57:50.343Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "143591bb4f90f3bf87e3-34666e118b36f69c387a",
+          "file": "classes-multiples.spec.js",
+          "line": 219,
+          "column": 1
+        },
+        {
+          "title": "professeur : nom libre, erreur de renommage conservée, sauvegarde et rechargement",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5037,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:57:58.749Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "143591bb4f90f3bf87e3-ae810c0fa89ee55a005f",
+          "file": "classes-multiples.spec.js",
+          "line": 276,
+          "column": 1
+        },
+        {
+          "title": "espace classe lisible : prof light",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9407,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:03.848Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "143591bb4f90f3bf87e3-36e6a886cc5d5ed7577b",
+          "file": "classes-multiples.spec.js",
+          "line": 337,
+          "column": 69
+        },
+        {
+          "title": "espace classe lisible : eleve dark",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7338,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:13.302Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "143591bb4f90f3bf87e3-e1de7e539b9949b514d8",
+          "file": "classes-multiples.spec.js",
+          "line": 337,
+          "column": 69
+        },
+        {
+          "title": "professeur : suivi, groupes et réglages accessibles light",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7145,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:20.704Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "143591bb4f90f3bf87e3-933d8bfd6f5fe9e7d080",
+          "file": "classes-multiples.spec.js",
+          "line": 415,
+          "column": 40
+        },
+        {
+          "title": "professeur : suivi, groupes et réglages accessibles dark",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8607,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:27.870Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "143591bb4f90f3bf87e3-9f086885336750a7e777",
+          "file": "classes-multiples.spec.js",
+          "line": 415,
+          "column": 40
+        },
+        {
+          "title": "classe traduite hors ligne : de",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2986,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:36.491Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "143591bb4f90f3bf87e3-f3c4ca4be135470965bd",
+          "file": "classes-multiples.spec.js",
+          "line": 479,
+          "column": 96
+        },
+        {
+          "title": "classe traduite hors ligne : ar",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2012,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:39.570Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "143591bb4f90f3bf87e3-b51750647e5e1577a9f8",
+          "file": "classes-multiples.spec.js",
+          "line": 479,
+          "column": 96
+        },
+        {
+          "title": "professeur : groupe et annonce conservent la saisie après erreur, puis sont publiés",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3938,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:41.647Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "143591bb4f90f3bf87e3-2fce532cfaa273e406b9",
+          "file": "classes-multiples.spec.js",
+          "line": 503,
+          "column": 1
+        },
+        {
+          "title": "professeur : créer un quiz depuis la vue d’ensemble et conserver le brouillon après erreur",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3369,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:45.614Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "143591bb4f90f3bf87e3-b39f2fd7e81dab36b422",
+          "file": "classes-multiples.spec.js",
+          "line": 551,
+          "column": 1
+        },
+        {
+          "title": "menu de classe mobile complet, clavier et changement de taille : prof",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6827,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:49.044Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "143591bb4f90f3bf87e3-b194ec882445291ec063",
+          "file": "classes-multiples.spec.js",
+          "line": 599,
+          "column": 69
+        },
+        {
+          "title": "menu de classe mobile complet, clavier et changement de taille : eleve",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6046,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:55.906Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "143591bb4f90f3bf87e3-2cd5402abf9c2ab2ea24",
+          "file": "classes-multiples.spec.js",
+          "line": 599,
+          "column": 69
+        }
+      ]
+    },
+    {
+      "title": "code-parent.spec.js",
+      "file": "code-parent.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "renouveler le code parent : nouveau code de 10 caractères, ancien effacé",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2778,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:02.849Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1b7ef628e34c708beeae-070606c4a4af301ab6cf",
+          "file": "code-parent.spec.js",
+          "line": 16,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "comptes.spec.js",
+      "file": "comptes.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "restaurer le compte élève avec un ancien état professeur (rôle périmé)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2878,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:05.680Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1d833416e26c4c32258e-559c85f9b0d162341d8d",
+          "file": "comptes.spec.js",
+          "line": 94,
+          "column": 3
+        },
+        {
+          "title": "restaurer le compte élève avec un ancien état professeur (autre identité)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 8066,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:08.601Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1d833416e26c4c32258e-134341af1280ed98d07a",
+          "file": "comptes.spec.js",
+          "line": 94,
+          "column": 3
+        },
+        {
+          "title": "élève → déconnexion → professeur → déconnexion → élève sur le même PC",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 21187,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:16.743Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1d833416e26c4c32258e-de24d4d6470aff1362b1",
+          "file": "comptes.spec.js",
+          "line": 132,
+          "column": 1
+        },
+        {
+          "title": "première connexion après confirmation de l’e-mail : fin de l’inscription",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2524,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:37.966Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1d833416e26c4c32258e-f8260b53e6f5c8f23b84",
+          "file": "comptes.spec.js",
+          "line": 229,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "navigation-desktop.spec.js",
+      "file": "navigation-desktop.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "raccourcis hors accueil sur ordinateur : light",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5519,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:40.977Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e37716d9a35589615d09-869c98149cb15425b816",
+          "file": "navigation-desktop.spec.js",
+          "line": 4,
+          "column": 65
+        },
+        {
+          "title": "raccourcis hors accueil sur ordinateur : dark",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4353,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:46.515Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e37716d9a35589615d09-47fa3e74a9b6528bc9ba",
+          "file": "navigation-desktop.spec.js",
+          "line": 4,
+          "column": 65
+        },
+        {
+          "title": "menu burger ordinateur à gauche : light",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 8379,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:50.910Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e37716d9a35589615d09-e46c03d1f6efdccdfd7b",
+          "file": "navigation-desktop.spec.js",
+          "line": 54,
+          "column": 65
+        },
+        {
+          "title": "menu burger ordinateur à gauche : dark",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7096,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:58:59.365Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e37716d9a35589615d09-7b11d069229ecd9e9781",
+          "file": "navigation-desktop.spec.js",
+          "line": 54,
+          "column": 65
+        }
+      ]
+    },
+    {
+      "title": "navigation-mobile.spec.js",
+      "file": "navigation-mobile.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "menu principal à gauche, organisé et accessible light 320",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3847,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:02.097Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77e956df2eb08f3d17f-e775d65cdafe2303b148",
+          "file": "navigation-mobile.spec.js",
+          "line": 4,
+          "column": 102
+        },
+        {
+          "title": "menu principal à gauche, organisé et accessible dark 390",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4290,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:05.973Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77e956df2eb08f3d17f-1b3240403edd4d95f542",
+          "file": "navigation-mobile.spec.js",
+          "line": 4,
+          "column": 102
+        },
+        {
+          "title": "menu principal à gauche, organisé et accessible light 844",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3763,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:10.280Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77e956df2eb08f3d17f-3af4cccdab3438da5eda",
+          "file": "navigation-mobile.spec.js",
+          "line": 4,
+          "column": 102
+        },
+        {
+          "title": "choisir et ordonner ses onglets dans le menu, sauvegarde et limites",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5509,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:14.075Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77e956df2eb08f3d17f-455b72f7865e68e66d99",
+          "file": "navigation-mobile.spec.js",
+          "line": 80,
+          "column": 1
+        },
+        {
+          "title": "menu principal traduit de",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1803,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:19.649Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77e956df2eb08f3d17f-9eaf84a70ddb39f42eb8",
+          "file": "navigation-mobile.spec.js",
+          "line": 178,
+          "column": 125
+        },
+        {
+          "title": "menu principal traduit ar",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1586,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:21.478Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "b77e956df2eb08f3d17f-24bc267b57e6e81cf21a",
+          "file": "navigation-mobile.spec.js",
+          "line": 178,
+          "column": 125
+        }
+      ]
+    },
+    {
+      "title": "oauth.spec.js",
+      "file": "oauth.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "retour Google : accueil et session conservée (compte existant)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1288,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:06.574Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e82d91448dd0e702b777-be39d28aa57529869afb",
+          "file": "oauth.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "retour Google : accueil et session conservée (nouveau compte)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1429,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:07.898Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e82d91448dd0e702b777-7fe2ee0dac5ac6281cd7",
+          "file": "oauth.spec.js",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "un vrai lien inexistant garde sa page 404",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 717,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:09.390Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e82d91448dd0e702b777-2d825ffb235160b8a143",
+          "file": "oauth.spec.js",
+          "line": 61,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "parametres-rubriques.spec.js",
+      "file": "parametres-rubriques.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "paramètres par rubriques : light",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6196,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:10.242Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "157c85d59bf8d33b2d27-bf1757a3b0f675c51db3",
+          "file": "parametres-rubriques.spec.js",
+          "line": 4,
+          "column": 64
+        },
+        {
+          "title": "paramètres par rubriques : dark",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5768,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:16.483Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "157c85d59bf8d33b2d27-659037fe028c2b764cd4",
+          "file": "parametres-rubriques.spec.js",
+          "line": 4,
+          "column": 64
+        },
+        {
+          "title": "réglages de révision et de données séparés, ancien accès conservé",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2650,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:22.279Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "157c85d59bf8d33b2d27-bee83eefa82d258bbbbd",
+          "file": "parametres-rubriques.spec.js",
+          "line": 87,
+          "column": 1
+        },
+        {
+          "title": "paramètres structurés traduits de",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1208,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:24.962Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "157c85d59bf8d33b2d27-5b698c3a8875b02b36cb",
+          "file": "parametres-rubriques.spec.js",
+          "line": 130,
+          "column": 106
+        },
+        {
+          "title": "paramètres structurés traduits ar",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1063,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:26.190Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "157c85d59bf8d33b2d27-dc04a00a95394c2e9eba",
+          "file": "parametres-rubriques.spec.js",
+          "line": 130,
+          "column": 106
+        },
+        {
+          "title": "apparence : modes explicites et réglage du système sans changer les autres préférences",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 922,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-14T23:59:27.277Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "157c85d59bf8d33b2d27-75d53c0f3f150f292952",
+          "file": "parametres-rubriques.spec.js",
+          "line": 153,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-14T23:57:30.113Z",
+    "duration": 118233.922,
+    "expected": 46,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

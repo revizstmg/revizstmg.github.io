@@ -1,0 +1,23 @@
+
+> stmg-revision@1.0.0 test
+> vitest run --run tests/reading-position.test.js tests/temps-theme.test.js tests/formula-practice.test.js tests/formules-plages.test.js tests/question-sessions.test.js tests/revision-paths.test.js
+
+
+ RUN  v2.1.9 /workspace/work/audit-global-20261109-2/app
+
+ ✓ tests/revision-paths.test.js (10 tests) 2786ms
+   ✓ suivre le fil reste dans la matière et saute les exercices déjà réussis 349ms
+   ✓ les réussites à trous restent révisables après la répartition entre formats 1024ms
+ ✓ tests/formula-practice.test.js (8 tests) 2579ms
+   ✓ les tirages produisent des résultats finis, variés et des corrections numériques 2387ms
+ ✓ tests/temps-theme.test.js (6 tests) 7ms
+ ✓ tests/question-sessions.test.js (5 tests) 11ms
+ ✓ tests/formules-plages.test.js (18 tests) 2771ms
+   ✓ taux de croissance, absentéisme et ROI restent dans des ordres de grandeur réalistes 647ms
+ ✓ tests/reading-position.test.js (2 tests) 4ms
+
+ Test Files  6 passed (6)
+      Tests  49 passed (49)
+   Start at  23:52:54
+   Duration  12.04s (transform 66.58s, setup 0ms, collect 2.07s, tests 8.16s, environment 1ms, prepare 722ms)
+

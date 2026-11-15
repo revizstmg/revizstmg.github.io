@@ -1,0 +1,82 @@
+[
+  {
+    "case": "login_profile_silent",
+    "gets": 1,
+    "buttons": [
+      {
+        "text": "",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "disabled": false
+      },
+      {
+        "text": "FR",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "disabled": false
+      },
+      {
+        "text": "Lancer ma séance du jour",
+        "disabled": false
+      },
+      {
+        "text": "📘\nPremière STMG\nSciences de gestion et numérique, management, droit, économie.\n▸",
+        "disabled": false
+      },
+      {
+        "text": "📕\nTerminale STMG\nChoisis ta spécialité.\n▸",
+        "disabled": false
+      },
+      {
+        "text": "👨‍👩‍👧 Je suis un parent",
+        "disabled": false
+      },
+      {
+        "text": "♿ Accessibilité",
+        "disabled": false
+      },
+      {
+        "text": "OK",
+        "disabled": false
+      },
+      {
+        "text": "COMMENCER À RÉVISER",
+        "disabled": false
+      },
+      {
+        "text": "Mot de passe oublié ?",
+        "disabled": false
+      },
+      {
+        "text": "UN INSTANT…",
+        "disabled": true
+      },
+      {
+        "text": "Pas encore de compte ? Créer un compte",
+        "disabled": true
+      },
+      {
+        "text": "Essayer sans compte",
+        "disabled": true
+      }
+    ],
+    "text": "RévizSTMG\n0\nNiv. 1 · 0 XP\nFR\n\nTON PROCHAIN CONTRÔLE\n\nComprends tes erreurs.\nPrépare ton prochain contrôle.\n\nPars de ton dernier devoir pour savoir quoi revoir et comment t’entraîner.\n\nLancer ma séance du jour\nVoir un exemple de bilan\n\nRÉVIZSTMG\n\nQu’est-ce que tu veux réviser ?\n\nChoisis ton niveau pour commencer.\n\n📘\nPremière STMG\nSciences de gestion et numérique, management, droit, économie.\n▸\n📕\nTerminale STMG\nChoisis ta spécialité.\n▸\n👨‍👩‍👧 Je suis un parent\n\nTu pourras changer de niveau ou de spécialité à tout moment, depuis l’accueil.\n\nRévizSTMG\nCours sans inscription\nÀ propos\nGuide de démarrage\nPolitique de confidentialité\nCGU et mentions légales\nLes offres\nExemple de bilan\nFAQ\n♿ Accessibilité\nNous contacter · revizstmg@gmail.com\n\nCréé par Gabriel MERLIN\n\n© 2026 RévizSTMG\n\n🍪\n\nAucun cookie publicitaire ni de suivi. En savoir plus\n\nOK\n\nRÉVIZSTMG\n\nLire les cours sans inscription\n\nComprends tes erreurs.\nPrépare ton prochain contrôle.\n\nPars de ton dernier devoir pour savoir quoi revoir et comment t’entraîner.\n\nCOMMENCER À RÉVISER\n\nVoir un exemple de bilan · Comparer les offres\n\nSe connecter\n\nConnecte-toi pour retrouver ta progression.\n\nADRESSE E-MAIL\nMOT DE PASSE\nMot de passe oublié ?UN INSTANT…\nPas encore de compte ? Créer un compte\nEssayer sans compte"
+  },
+  {
+    "case": "save_body_silent",
+    "patches": 1,
+    "text": "←\nRévizSTMG\n⏳\nEn attente\n1\nNiv. 1 · 0 XP\nFR\nLT\n🧑‍🏫\nMa classe\n🤝\nAmis\n🛍️\nBoutique\n🏆\nClassement\nAccueil\n›\nParamètres\n← Révision\n\nPARAMÈTRES\n\nDate de mon bac\n\nSert au compte à rebours et au plan de révision\n\n📅\nDate de mon bac\nJ-214 · Sert au compte à rebours et au plan de révision\nRévizSTMG\nCours sans inscription\nÀ propos\nGuide de démarrage\nPolitique de confidentialité\nCGU et mentions légales\nLes offres\nExemple de bilan\nFAQ\n♿ Accessibilité\nNous contacter · revizstmg@gmail.com\n\nCréé par Gabriel MERLIN\n\n© 2026 RévizSTMG\n\n🏠\nAccueil\n📖\nCours\n🧠\nRéviser\n📝\nBac blanc\n⚙️\nParamètres\n🍪\n\nAucun cookie publicitaire ni de suivi. En savoir plus\n\nOK"
+  }
+]

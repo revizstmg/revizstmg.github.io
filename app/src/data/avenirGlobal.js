@@ -1,0 +1,63 @@
+// Préférences déclarées, sans typologie psychologique ni prédiction d'admission.
+const group=(id,title,rows)=>({id,title,questions:rows.map(([id,label,options,appui,besoin])=>({id,label,options,...(appui?{appui}:{}),...(besoin?{besoin}:{})}))})
+export const COMPLEMENTS = [
+ group('methodes','Ma façon de travailler',[
+  ['m_demarrer','Quand un travail demande plusieurs jours, comment commences-tu ?',['Je découpe les tâches et je fixe un premier objectif','Je démarre mieux avec un exemple ou une consigne détaillée','Je repousse souvent le début et je voudrais une méthode','Je ne sais pas encore'],'Découper un travail en étapes','Préparer une première tâche courte et une échéance'],
+  ['m_regulier','Comment répartis-tu ton travail personnel ?',['Je travaille régulièrement, même sans contrôle annoncé','Je travaille surtout quand une échéance approche','J’ai du mal à trouver un rythme et je veux être accompagné','Je ne sais pas encore'],'Maintenir un travail régulier','Construire un rythme de travail réaliste'],
+  ['m_autonomie','Face à une consigne nouvelle, que fais-tu le plus souvent ?',['Je cherche une première réponse puis je vérifie','J’avance avec une explication ou un exemple','J’attends souvent une aide pour savoir par où commencer','Je ne sais pas encore'],'Chercher puis vérifier une première réponse','Demander un exemple avant de travailler en autonomie'],
+  ['m_ecrit','Pour rédiger une réponse longue, où en es-tu ?',['Je prépare un plan et des arguments','J’y arrive avec une trame ou une relecture','J’ai besoin d’aide pour organiser et justifier mes idées','Je ne sais pas encore'],'Structurer une réponse écrite','S’entraîner à construire un plan et des arguments'],
+  ['m_oral','Pour expliquer un sujet à l’oral, qu’est-ce qui te correspond ?',['Je prépare les idées et je m’entraîne à les expliquer','J’ai besoin de notes et d’une répétition pour être à l’aise','Je voudrais être accompagné pour préparer une prise de parole','Je ne sais pas encore'],'Préparer et répéter une explication orale','Préparer une courte présentation avec un interlocuteur'],
+  ['m_erreurs','Après une erreur, comment reprends-tu le travail ?',['Je cherche la cause et je refais un exercice différent','Je relis le corrigé pour comprendre','Je ne sais pas toujours comment utiliser la correction','Je ne sais pas encore'],'Utiliser ses erreurs pour progresser','Transformer une correction en nouvel entraînement'],
+  ['m_equipe','Dans un travail collectif, que fais-tu spontanément ?',['Je clarifie mon rôle et je fais le point avec les autres','Je participe mieux quand les rôles sont déjà définis','J’ai besoin d’aide pour trouver ma place ou tenir les échéances','Je ne sais pas encore'],'Clarifier son rôle dans un groupe','Tester un rôle précis dans un projet collectif'],
+  ['m_aide','Quand tu bloques plusieurs fois sur un sujet, comment réagis-tu ?',['Je formule une question précise et je demande de l’aide','Je cherche une autre explication avant de demander','J’hésite à demander et j’aimerais identifier une personne ressource','Je ne sais pas encore'],'Formuler une demande d’aide précise','Identifier un enseignant ou un interlocuteur ressource'],
+ ]),
+ group('priorites','Mes priorités',[
+  ['v_utilite','Quelle contribution aimerais-tu surtout apporter dans ton futur travail ?',['Aider des personnes ou améliorer un service','Résoudre un problème ou fiabiliser une organisation','Créer ou développer un projet','Je dois encore le découvrir']],
+  ['v_contact','Quel type de relation aimerais-tu retrouver au quotidien ?',['Échanger avec des clients ou des usagers','Coopérer avec une équipe régulière','Alterner des échanges et des temps de travail seul','Je dois encore le découvrir']],
+  ['v_variete','Quel rythme d’activités t’attire le plus ?',['Des tâches variées et des projets successifs','Des missions suivies avec des repères stables','Un équilibre entre routine et nouveautés','Je dois encore le découvrir']],
+  ['v_decision','Quelle place aimerais-tu prendre dans les décisions ?',['Proposer des idées et prendre des initiatives','Appliquer et améliorer une méthode bien définie','Comprendre le fonctionnement avant de choisir mon rôle','Je dois encore le découvrir']],
+  ['v_cadre','Quel environnement de travail aimerais-tu découvrir ?',['Un bureau ou un service organisé','Le terrain, des déplacements ou des rencontres','Une alternance de travail sur écran et de situations concrètes','Je dois encore le découvrir']],
+  ['v_horaires','Quel point sur les horaires veux-tu examiner en priorité ?',['La régularité et la prévisibilité','La possibilité de varier selon les projets','La compatibilité avec ma vie personnelle et les transports','Je dois encore le découvrir']],
+  ['v_responsabilite','Quelle responsabilité aimerais-tu essayer ?',['Suivre un dossier avec précision jusqu’au résultat','Coordonner une petite équipe ou une action','Présenter une proposition et convaincre','Je dois encore le découvrir']],
+  ['v_choix','Pour choisir entre deux métiers intéressants, que veux-tu comparer d’abord ?',['Les activités réelles et leur utilité','Les conditions de travail et les possibilités d’évolution','Les compétences à acquérir et le parcours de formation','Je dois encore le découvrir']],
+ ]),
+ group('projet','Mon projet',[
+  ['p_avancement','Où en es-tu aujourd’hui dans ton orientation ?',['J’ai une idée assez précise à vérifier','J’hésite entre plusieurs pistes','Je commence à explorer sans idée arrêtée','Je ne sais pas encore']],
+  ['p_experience','Qu’est-ce qui t’a déjà permis de découvrir un métier ou un secteur ?',['Une expérience de stage, de travail ou de projet','Je n’ai pas encore eu d’expérience concrète','Une rencontre, une visite ou un témoignage','Je ne sais pas encore']],
+  ['p_formations','Quand tu regardes une formation, qu’as-tu déjà vérifié ?',['Son programme, ses attendus et ses modalités d’admission','Surtout son nom ou les métiers annoncés','J’ai commencé à comparer quelques fiches','Je ne sais pas encore']],
+  ['p_voie','Quelle approche voudrais-tu explorer en premier ?',['Une formation courte et professionnelle comme un BTS','Un parcours appliqué en trois ans comme un BUT','Une licence ou une prépa avec une poursuite d’études','Je ne sais pas encore']],
+  ['p_alternance','Concernant l’alternance, quelle démarche as-tu déjà faite ?',['J’ai regardé des offres et le rythme des formations','Je dois encore comprendre comment trouver un employeur','J’ai commencé à comparer alternance et formation initiale','Je ne sais pas encore']],
+  ['p_financement','Concernant le coût de tes études, où en es-tu ?',['J’ai commencé un budget et repéré des aides possibles','Je dois encore vérifier les frais et les aides','J’ai identifié des postes de dépense sans budget complet','Je ne sais pas encore']],
+  ['p_interlocuteur','Avec qui pourrais-tu discuter de ce bilan ?',['J’ai déjà identifié un enseignant ou un PsyEN','J’aimerais trouver un interlocuteur au lycée ou au CIO','J’en ai parlé à un proche et je veux un autre avis','Je ne sais pas encore']],
+  ['p_prochaine','Quelle démarche es-tu prêt à préparer maintenant ?',['Comparer des fiches de formation précises','Rencontrer un étudiant, un professionnel ou un conseiller','Préparer une porte ouverte ou une immersion','Je ne sais pas encore']],
+ ]),
+]
+export const VOIES_ETUDES=[
+ {id:'bts',title:'BTS',duree:'Généralement 2 ans après le bac',cadre:'Un cadre de classe structuré, des enseignements professionnels et des stages.',vigilance:'Vérifie les spécialités, le rythme, les frais et les possibilités d’alternance. Une poursuite d’études demande une nouvelle admission.'},
+ {id:'but',title:'BUT',duree:'Généralement 3 ans après le bac',cadre:'Des enseignements universitaires appliqués, des projets et des expériences professionnelles.',vigilance:'Vérifie les parcours proposés par chaque IUT, les attendus et l’année d’ouverture éventuelle de l’alternance.'},
+ {id:'licence',title:'Licence (université)',duree:'Généralement 3 ans après le bac',cadre:'Une formation universitaire avec un travail personnel important et des enseignements théoriques.',vigilance:'Compare le contenu réel, l’accompagnement et la place des mathématiques ou de la rédaction. La poursuite en master nécessite une candidature.'},
+ {id:'ect',title:'CPGE ECT',duree:'2 ans de prépa, puis une poursuite en école',cadre:'Une voie destinée aux bacheliers STMG, avec un travail intensif et encadré avant les concours des écoles de commerce.',vigilance:'Ce parcours ne se termine pas après les deux années de prépa. Vérifie les concours, les écoles accessibles et le coût de la poursuite d’études.'},
+]
+const pick=(q,answers)=>Number.isInteger(answers[q.id])?q.options[answers[q.id]]:null
+export function bilanGlobal(answers={},domaines=[],notes={},projectText={}){
+ const methodes=COMPLEMENTS[0].questions
+ const appuis=methodes.filter(q=>answers[q.id]===0).map(q=>q.appui)
+ const besoins=methodes.filter(q=>answers[q.id]===2).map(q=>q.besoin)
+ const profils=COMPLEMENTS.map(g=>({...g,reponses:g.questions.map(q=>({id:q.id,label:q.label,value:pick(q,answers)||'À compléter'})),inconnues:g.questions.filter(q=>answers[q.id]===3||answers[q.id]===undefined).length}))
+ const vigilances=[]
+ if(answers.cadre===0&&answers.p_voie===2)vigilances.push('Tu souhaites un suivi régulier et tu envisages une licence ou une prépa. Compare précisément leur encadrement, leur charge de travail et les aides disponibles : ces voies fonctionnent différemment.')
+ if(answers.alternance===0&&answers.p_alternance!==0)vigilances.push('L’alternance t’intéresse. Vérifie le rythme et les démarches de recherche d’employeur avant de retenir cette modalité.')
+ if(answers.mobilite===0)vigilances.push('La proximité compte pour toi. Vérifie les établissements et les transports possibles avant de restreindre ta liste.')
+ if(answers.duree===0)vigilances.push('Tu envisages environ deux ans d’études. Certaines pistes proposées se préparent en trois ans ou nécessitent une poursuite : compare bien les durées réelles.')
+ if(Object.values(notes).some(n=>Number.isFinite(n)&&n<10))vigilances.push('Certaines notes sont sous 10/20. Utilise-les pour préparer un accompagnement et comparer les attendus, sans écarter automatiquement une piste qui t’intéresse.')
+ if(profils.some(p=>p.inconnues>=4))vigilances.push('Plusieurs réponses restent à découvrir. Ce bilan est un point de départ : une rencontre ou une immersion peut t’aider à préciser ces choix.')
+ const ordre=answers.duree===2?['ect','licence','but','bts']:answers.duree===1?['but','licence','bts','ect']:['bts','but','licence','ect']
+ const voies=ordre.map(id=>VOIES_ETUDES.find(v=>v.id===id))
+ const actions=[
+  {id:'comparer',title:'Comparer trois formations',text:'Sur Parcoursup, relève le programme, les attendus, les critères d’examen, les frais et les possibilités de poursuite.',url:'https://www.parcoursup.gouv.fr/'},
+  {id:'echanger',title:'Préparer un échange',text:'Apporte ce bilan à ton professeur principal, à un PsyEN ou au CIO. Prépare les points qui restent incertains.',url:'https://www.onisep.fr/'},
+  answers.p_experience===1||answers.p_experience===3?{id:'immersion',title:'Découvrir une situation concrète',text:'Repère une porte ouverte, une immersion ou une rencontre métier. Prépare trois questions sur le quotidien et les compétences utilisées.',url:'https://avenirs.onisep.fr/'}:{id:'retour-experience',title:'Tirer parti de tes découvertes',text:'Note ce que tes expériences et tes rencontres t’ont appris : ce qui t’a plu, ce qui t’a moins plu et ce que tu veux vérifier.',url:'https://avenirs.onisep.fr/'},
+  answers.p_financement!==0?{id:'budget',title:'Vérifier le budget',text:'Compare les frais de formation, le logement et les transports. Repère les aides et vérifie leurs conditions.',url:'https://www.lescrous.fr/'}:{id:'preparer',title:'Préparer les compétences utiles',text:'Choisis une compétence à consolider et demande un exemple de travail attendu dans une formation qui t’intéresse.',url:'https://www.onisep.fr/'},
+ ]
+ return {appuis,besoins,profils,vigilances,voies,actions,domaines:domaines.filter(d=>d.explorable).slice(0,3),projectText:Object.fromEntries(['metier','formation','question'].map(k=>[k,typeof projectText?.[k]==='string'?projectText[k].slice(0,600):'']))}
+}

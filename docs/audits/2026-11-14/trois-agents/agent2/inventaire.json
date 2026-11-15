@@ -1,0 +1,3016 @@
+{
+  "subjects": [
+    {
+      "id": "gestion-finance",
+      "themes": 3,
+      "chapters": 64
+    },
+    {
+      "id": "management",
+      "themes": 3,
+      "chapters": 42
+    },
+    {
+      "id": "droit",
+      "themes": 4,
+      "chapters": 54
+    },
+    {
+      "id": "economie",
+      "themes": 5,
+      "chapters": 53
+    },
+    {
+      "id": "maths",
+      "themes": 7,
+      "chapters": 50
+    },
+    {
+      "id": "philosophie",
+      "themes": 8,
+      "chapters": 87
+    },
+    {
+      "id": "histoire-geo",
+      "themes": 6,
+      "chapters": 87
+    },
+    {
+      "id": "langues",
+      "themes": 18,
+      "chapters": 75
+    },
+    {
+      "id": "mercatique",
+      "themes": 4,
+      "chapters": 38
+    },
+    {
+      "id": "rh-communication",
+      "themes": 4,
+      "chapters": 32
+    },
+    {
+      "id": "sig",
+      "themes": 4,
+      "chapters": 31
+    },
+    {
+      "id": "p1-sgn",
+      "themes": 4,
+      "chapters": 54
+    },
+    {
+      "id": "p1-management",
+      "themes": 3,
+      "chapters": 17
+    },
+    {
+      "id": "p1-droit",
+      "themes": 4,
+      "chapters": 19
+    },
+    {
+      "id": "p1-economie",
+      "themes": 5,
+      "chapters": 41
+    },
+    {
+      "id": "p1-maths",
+      "themes": 7,
+      "chapters": 23
+    },
+    {
+      "id": "p1-francais",
+      "themes": 4,
+      "chapters": 31
+    },
+    {
+      "id": "p1-histoire-geo",
+      "themes": 6,
+      "chapters": 27
+    },
+    {
+      "id": "p1-langues",
+      "themes": 11,
+      "chapters": 36
+    }
+  ],
+  "games": 4321,
+  "chapters": 861,
+  "duplicateManual": [],
+  "empty": [
+    {
+      "sid": "maths",
+      "tid": "math-c1",
+      "idx": 6,
+      "title": "⚠️ Points de pourcentage ≠ pourcentage d’évolution"
+    },
+    {
+      "sid": "maths",
+      "tid": "math-c2",
+      "idx": 9,
+      "title": "🧮 Suites au tableur : formule de récurrence recopiée"
+    },
+    {
+      "sid": "maths",
+      "tid": "math-c3",
+      "idx": 2,
+      "title": "🧮 Exemple traité — dérivée, variations et coût minimal"
+    },
+    {
+      "sid": "maths",
+      "tid": "math-c3",
+      "idx": 5,
+      "title": "🏭 Optimiser un bénéfice ou un coût"
+    },
+    {
+      "sid": "maths",
+      "tid": "math-c4",
+      "idx": 4,
+      "title": "🧮 Régression linéaire à la calculatrice : obtenir a et b"
+    },
+    {
+      "sid": "maths",
+      "tid": "math-c5",
+      "idx": 1,
+      "title": "Indépendance : P(A ∩ B) = P(A) × P(B)"
+    },
+    {
+      "sid": "maths",
+      "tid": "math-c5",
+      "idx": 6,
+      "title": "🧮 Tableau croisé d’effectifs et probabilités"
+    },
+    {
+      "sid": "maths",
+      "tid": "math-c6",
+      "idx": 4,
+      "title": "🧮 Calculatrice : P(X = k), P(X ≤ k), P(X ≥ k)"
+    },
+    {
+      "sid": "maths",
+      "tid": "math-c6",
+      "idx": 5,
+      "title": "📊 Espérance E(X) = np et écart-type"
+    },
+    {
+      "sid": "maths",
+      "tid": "math-c6",
+      "idx": 6,
+      "title": "🧩 Exercice type — contrôle qualité : au moins une pièce défectueuse"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-justice",
+      "idx": 2,
+      "title": "🎓 Au bac : égalité ou équité, plan type et pièges"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-justice",
+      "idx": 5,
+      "title": "✍️ Dissertation guidée — « Est-il toujours juste d’obéir à la loi ? »"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-justice",
+      "idx": 10,
+      "title": "✍️ Deuxième dissertation guidée — « La justice se réduit-elle au respect des lois ? »"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-liberte",
+      "idx": 7,
+      "title": "⚔️ Les grandes thèses : libre arbitre (Descartes), illusion (Spinoza), autonomie (Kant), Sartre"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-liberte",
+      "idx": 10,
+      "title": "✍️ Deuxième dissertation guidée — « Sommes-nous responsables de ce que nous sommes ? »"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-nature",
+      "idx": 2,
+      "title": "🎓 Au bac : nature et culture, dominer la nature, plan type"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-nature",
+      "idx": 5,
+      "title": "✍️ Dissertation guidée — « L’homme doit-il dominer la nature ? »"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-nature",
+      "idx": 10,
+      "title": "✍️ Deuxième dissertation guidée — « La culture dénature-t-elle l’homme ? »"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-religion",
+      "idx": 2,
+      "title": "🎓 Au bac : croire et savoir, plan type et pièges"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-religion",
+      "idx": 5,
+      "title": "✍️ Dissertation guidée — « La foi est-elle contraire à la raison ? »"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-religion",
+      "idx": 10,
+      "title": "✍️ Deuxième dissertation guidée — « Croire, est-ce renoncer à la raison ? »"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-technique",
+      "idx": 5,
+      "title": "✍️ Dissertation guidée — « La technique nous libère-t-elle ? »"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-technique",
+      "idx": 10,
+      "title": "✍️ Deuxième dissertation guidée — « Le progrès technique rend-il l’homme meilleur ? »"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-verite",
+      "idx": 5,
+      "title": "✍️ Dissertation guidée — « Toutes les opinions se valent-elles ? »"
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-verite",
+      "idx": 10,
+      "title": "✍️ Deuxième dissertation guidée — « Peut-on douter de tout ? »"
+    },
+    {
+      "sid": "histoire-geo",
+      "tid": "hg-g2",
+      "idx": 0,
+      "title": "La métropolisation et les aires de puissance"
+    },
+    {
+      "sid": "histoire-geo",
+      "tid": "hg-g3",
+      "idx": 0,
+      "title": "Les atouts et les contrastes du territoire français"
+    },
+    {
+      "sid": "rh-communication",
+      "tid": "rh-t3",
+      "idx": 7,
+      "title": "🧑‍💼 Étude de cas — communiquer un changement aux salariés : réunion et message clair"
+    },
+    {
+      "sid": "sig",
+      "tid": "sig-t2",
+      "idx": 2,
+      "title": "💻 Exemple — les clients de Lyon : SELECT, WHERE, ORDER BY"
+    },
+    {
+      "sid": "sig",
+      "tid": "sig-t2",
+      "idx": 6,
+      "title": "💻 Étude de cas guidée — requêtes sur une table PRODUITS : filtrer, trier, regrouper"
+    },
+    {
+      "sid": "p1-sgn",
+      "tid": "p1-sgn-t3",
+      "idx": 0,
+      "title": "Qu’est-ce que la valeur ?"
+    },
+    {
+      "sid": "p1-sgn",
+      "tid": "p1-sgn-t3",
+      "idx": 3,
+      "title": "La valeur ajoutée"
+    },
+    {
+      "sid": "p1-management",
+      "tid": "p1-mgmt-t3",
+      "idx": 0,
+      "title": "L’avantage concurrentiel et la compétence distinctive"
+    },
+    {
+      "sid": "p1-droit",
+      "tid": "p1-droit-t1",
+      "idx": 1,
+      "title": "Les caractères de la règle de droit"
+    },
+    {
+      "sid": "p1-droit",
+      "tid": "p1-droit-t1",
+      "idx": 3,
+      "title": "Droit privé et droit public"
+    },
+    {
+      "sid": "p1-economie",
+      "tid": "p1-eco-t1",
+      "idx": 2,
+      "title": "Le coût d’opportunité"
+    },
+    {
+      "sid": "p1-economie",
+      "tid": "p1-eco-t3",
+      "idx": 0,
+      "title": "La répartition primaire des revenus"
+    },
+    {
+      "sid": "p1-economie",
+      "tid": "p1-eco-t5",
+      "idx": 4,
+      "title": "Le coût marginal et la décision du producteur"
+    },
+    {
+      "sid": "p1-maths",
+      "tid": "p1-math-c4",
+      "idx": 2,
+      "title": "🧮 Exemple traité — dérivée, tableau de variations et minimum"
+    },
+    {
+      "sid": "p1-francais",
+      "tid": "p1-fr-2",
+      "idx": 2,
+      "title": "La contraction : rédiger et respecter le quart"
+    },
+    {
+      "sid": "p1-histoire-geo",
+      "tid": "p1-hg-g2",
+      "idx": 0,
+      "title": "Des espaces productifs qui se recomposent"
+    },
+    {
+      "sid": "p1-histoire-geo",
+      "tid": "p1-hg-g2",
+      "idx": 1,
+      "title": "Une multiplicité d’acteurs"
+    },
+    {
+      "sid": "p1-histoire-geo",
+      "tid": "p1-hg-g3",
+      "idx": 1,
+      "title": "Des tensions dans l’usage des sols"
+    }
+  ],
+  "sample": [
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 0,
+      "title": "La TVA : collectée, déductible, à décaisser",
+      "games": [
+        {
+          "id": "gf-t1-tri",
+          "type": "tri"
+        },
+        {
+          "id": "gf-t1::0::qdef",
+          "type": "qcm",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::0::vf",
+          "type": "vraifaux",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::0::sterm",
+          "type": "saisie",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::0::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::0::memory",
+          "type": "memory"
+        },
+        {
+          "id": "gf-t1::0::trou0",
+          "type": "trou",
+          "count": 9
+        },
+        {
+          "id": "gf-t1::0::strou",
+          "type": "saisie",
+          "count": 7
+        },
+        {
+          "id": "gf-t1::0::qtrou",
+          "type": "qcm",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::0::cards",
+          "type": "flashcard",
+          "count": 4
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "Que signifie : « TVA collectée » ?",
+            "choices": [
+              "Collectée − déductible = ce qu’on reverse",
+              "Sur les ventes → dette envers l’État",
+              "Hors taxes / toutes taxes comprises (HT + TVA)",
+              "Sur les achats → créance sur l’État"
+            ],
+            "answer": 1,
+            "explain": "TVA collectée → Sur les ventes → dette envers l’État",
+            "drawSource": "notion:tva collectee"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "À quoi correspond « Prix HT / TTC » ?",
+            "choices": [
+              "Sur les ventes → dette envers l’État",
+              "Sur les achats → créance sur l’État",
+              "Hors taxes / toutes taxes comprises (HT + TVA)",
+              "Collectée − déductible = ce qu’on reverse"
+            ],
+            "answer": 2,
+            "explain": "Prix HT / TTC → Hors taxes / toutes taxes comprises (HT + TVA)",
+            "drawSource": "notion:prix ht / ttc"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "« TVA à décaisser » : quelle proposition est correcte ?",
+            "choices": [
+              "Collectée − déductible = ce qu’on reverse",
+              "Hors taxes / toutes taxes comprises (HT + TVA)",
+              "Sur les ventes → dette envers l’État",
+              "Sur les achats → créance sur l’État"
+            ],
+            "answer": 0,
+            "explain": "TVA à décaisser → Collectée − déductible = ce qu’on reverse",
+            "drawSource": "notion:tva a decaisser"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 1,
+      "title": "La comptabilité : image fidèle, plan comptable et partie double",
+      "games": [
+        {
+          "id": "gf-t1::1::qdef",
+          "type": "qcm",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::1::qcas",
+          "type": "qcm",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::1::vf",
+          "type": "vraifaux",
+          "count": 7
+        },
+        {
+          "id": "gf-t1::1::sterm",
+          "type": "saisie",
+          "count": 7
+        },
+        {
+          "id": "gf-t1::1::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::1::memory",
+          "type": "memory"
+        },
+        {
+          "id": "gf-t1::1::trou0",
+          "type": "trou",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::1::strou",
+          "type": "saisie",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::1::qtrou",
+          "type": "qcm",
+          "count": 7
+        },
+        {
+          "id": "gf-t1::1::cards",
+          "type": "flashcard",
+          "count": 7
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "Que signifie : « Image fidèle » ?",
+            "choices": [
+              "Chaque opération est notée au débit d’un compte et au crédit d’un autre, pour le même montant",
+              "Immobilisations (machines, locaux)",
+              "Objectif de la comptabilité : représenter fidèlement le patrimoine et le résultat",
+              "Financier (banque 512, caisse 53)"
+            ],
+            "answer": 2,
+            "explain": "Image fidèle → Objectif de la comptabilité : représenter fidèlement le patrimoine et le résultat",
+            "drawSource": "notion:image fidele"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "« Classe 5 » : quelle proposition est correcte ?",
+            "choices": [
+              "Objectif de la comptabilité : représenter fidèlement le patrimoine et le résultat",
+              "Immobilisations (machines, locaux)",
+              "Chaque opération est notée au débit d’un compte et au crédit d’un autre, pour le même montant",
+              "Financier (banque 512, caisse 53)"
+            ],
+            "answer": 3,
+            "explain": "Classe 5 → Financier (banque 512, caisse 53)",
+            "drawSource": "notion:classe 5"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Quelle est la bonne définition de « Classe 2 » ?",
+            "choices": [
+              "Financier (banque 512, caisse 53)",
+              "Objectif de la comptabilité : représenter fidèlement le patrimoine et le résultat",
+              "Immobilisations (machines, locaux)",
+              "Chaque opération est notée au débit d’un compte et au crédit d’un autre, pour le même montant"
+            ],
+            "answer": 2,
+            "explain": "Classe 2 → Immobilisations (machines, locaux)",
+            "drawSource": "notion:classe 2"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 2,
+      "title": "Immobilisations, amortissement et valeur nette comptable",
+      "games": [
+        {
+          "id": "gf-t1-trou",
+          "type": "trou",
+          "count": 2
+        },
+        {
+          "id": "gf-t1::2::qdef",
+          "type": "qcm",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::2::vf",
+          "type": "vraifaux",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::2::sterm",
+          "type": "saisie",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::2::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::2::memory",
+          "type": "memory"
+        },
+        {
+          "id": "gf-t1::2::trou0",
+          "type": "trou",
+          "count": 2
+        },
+        {
+          "id": "gf-t1::2::strou",
+          "type": "saisie",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::2::qtrou",
+          "type": "qcm",
+          "count": 9
+        },
+        {
+          "id": "gf-t1::2::cards",
+          "type": "flashcard",
+          "count": 4
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "VNC = valeur d’origine − amortissements ___.",
+            "answer": "cumulés",
+            "alt": [
+              "cumules"
+            ],
+            "explain": "VNC = valeur d’origine − amortissements cumulés."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Le taux d’amortissement linéaire est égal à 1 divisé par la ___ d’utilisation.",
+            "answer": "durée",
+            "alt": [
+              "duree"
+            ],
+            "explain": "Taux linéaire = 1 / durée d’utilisation."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "q": "À quoi correspond « Charge » ?",
+            "choices": [
+              "Bien durable utilisé plusieurs années (le four)",
+              "Charge annuelle sans sortie d’argent qui constate la perte de valeur",
+              "Valeur d’origine − amortissements cumulés",
+              "Consommation de l’année, enregistrée en une fois (la farine)"
+            ],
+            "answer": 3,
+            "explain": "Charge → Consommation de l’année, enregistrée en une fois (la farine)",
+            "drawSource": "notion:charge"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 3,
+      "title": "🧮 Exemple traité — TVA et enregistrement",
+      "games": [
+        {
+          "id": "gf-t1::3::trou0",
+          "type": "trou",
+          "count": 7
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "____ = 2 000 × 0,20 = 400 € ; TTC = 2 000 + 400 = 2 400 €.",
+            "answer": "TVA",
+            "alt": [],
+            "drawSource": "TVA = 2 000 × 0,20 = 400 € ; TTC = 2 000 + 400 = 2 400 €.",
+            "explain": "Le mot manquant : « TVA »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "TVA = 2 000 × 0,20 = 400 € ; ____ = 2 000 + 400 = 2 400 €.",
+            "answer": "TTC",
+            "alt": [],
+            "drawSource": "TVA = 2 000 × 0,20 = 400 € ; TTC = 2 000 + 400 = 2 400 €.",
+            "explain": "Le mot manquant : « TTC »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "TVA = 2 000 × 0,20 = 400 € ; TTC = 2 000 + 400 = ____.",
+            "answer": "2 400 €",
+            "alt": [],
+            "drawSource": "TVA = 2 000 × 0,20 = 400 € ; TTC = 2 000 + 400 = 2 400 €.",
+            "explain": "Le mot manquant : « 2 400 € »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 4,
+      "title": "📒 Le rôle de la comptabilité : comptes, PCG et normalisation",
+      "games": [
+        {
+          "id": "gf-t1::4::qdef",
+          "type": "qcm",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::4::qcas",
+          "type": "qcm",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::4::vf",
+          "type": "vraifaux",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::4::vf1",
+          "type": "vraifaux",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::4::sterm",
+          "type": "saisie",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::4::sterm1",
+          "type": "saisie",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::4::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::4::assoc1",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::4::memory",
+          "type": "memory"
+        },
+        {
+          "id": "gf-t1::4::trou0",
+          "type": "trou",
+          "count": 9
+        },
+        {
+          "id": "gf-t1::4::strou",
+          "type": "saisie",
+          "count": 10
+        },
+        {
+          "id": "gf-t1::4::qtrou",
+          "type": "qcm",
+          "count": 14
+        },
+        {
+          "id": "gf-t1::4::cards",
+          "type": "flashcard",
+          "count": 12
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "À quoi correspond « Classes 6 et 7 » ?",
+            "choices": [
+              "Tiers (401 Fournisseurs, 411 Clients, 44 État)",
+              "on n’anticipe jamais un gain, mais on enregistre immédiatement une perte probable (ex. un client qui risque de ne pas payer)",
+              "Référentiel commun qui fixe la liste des comptes et les règles d’enregistrement",
+              "Charges (607 Achats, 641 Salaires) et produits (707 Ventes de marchandises)"
+            ],
+            "answer": 3,
+            "explain": "Classes 6 et 7 → Charges (607 Achats, 641 Salaires) et produits (707 Ventes de marchandises)",
+            "drawSource": "notion:classes 6 et 7"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Que signifie : « Plan comptable général (PCG) » ?",
+            "choices": [
+              "on n’anticipe jamais un gain, mais on enregistre immédiatement une perte probable (ex. un client qui risque de ne pas payer)",
+              "Référentiel commun qui fixe la liste des comptes et les règles d’enregistrement",
+              "chaque année comptable ne supporte que les charges et produits qui la concernent (d’où les amortissements et les régularisations)",
+              "Charges (607 Achats, 641 Salaires) et produits (707 Ventes de marchandises)"
+            ],
+            "answer": 1,
+            "explain": "Plan comptable général (PCG) → Référentiel commun qui fixe la liste des comptes et les règles d’enregistrement",
+            "drawSource": "notion:plan comptable general (pcg)"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Que signifie : « Principe de prudence » ?",
+            "choices": [
+              "Immobilisations (213 Constructions, 215 Matériel)",
+              "Tiers (401 Fournisseurs, 411 Clients, 44 État)",
+              "Référentiel commun qui fixe la liste des comptes et les règles d’enregistrement",
+              "on n’anticipe jamais un gain, mais on enregistre immédiatement une perte probable (ex. un client qui risque de ne pas payer)"
+            ],
+            "answer": 3,
+            "explain": "Principe de prudence → on n’anticipe jamais un gain, mais on enregistre immédiatement une perte probable (ex. un client qui risque de ne pas payer)",
+            "drawSource": "notion:principe de prudence"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 5,
+      "title": "🧾 Le mécanisme de la TVA : impôt indirect payé par le consommateur",
+      "games": [
+        {
+          "id": "gf-t1::5::qdef",
+          "type": "qcm",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::5::qcas",
+          "type": "qcm",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::5::vf",
+          "type": "vraifaux",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::5::vf1",
+          "type": "vraifaux",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::5::sterm",
+          "type": "saisie",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::5::sterm1",
+          "type": "saisie",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::5::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::5::assoc1",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::5::memory",
+          "type": "memory"
+        },
+        {
+          "id": "gf-t1::5::trou0",
+          "type": "trou",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::5::strou",
+          "type": "saisie",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::5::qtrou",
+          "type": "qcm",
+          "count": 7
+        },
+        {
+          "id": "gf-t1::5::cards",
+          "type": "flashcard",
+          "count": 9
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "Quelle est la bonne définition de « Taux intermédiaire (10 %) » ?",
+            "choices": [
+              "Restauration, transport, travaux de rénovation",
+              "Médicaments remboursés, presse",
+              "ce que l’entreprise reverse réellement = TVA collectée − TVA déductible",
+              "la TVA que l’entreprise facture à ses clients sur ses ventes (compte 44571). C’est une dette envers l’État"
+            ],
+            "answer": 0,
+            "explain": "Taux intermédiaire (10 %) → Restauration, transport, travaux de rénovation",
+            "drawSource": "notion:taux intermediaire (10 %)"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Que signifie : « TVA » ?",
+            "choices": [
+              "Impôt indirect sur la consommation, supporté par le consommateur final",
+              "la TVA que l’entreprise facture à ses clients sur ses ventes (compte 44571). C’est une dette envers l’État",
+              "ce que l’entreprise reverse réellement = TVA collectée − TVA déductible",
+              "Médicaments remboursés, presse"
+            ],
+            "answer": 0,
+            "explain": "TVA → Impôt indirect sur la consommation, supporté par le consommateur final",
+            "drawSource": "notion:tva"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Que signifie : « TVA à décaisser » ?",
+            "choices": [
+              "ce que l’entreprise reverse réellement = TVA collectée − TVA déductible",
+              "Restauration, transport, travaux de rénovation",
+              "Médicaments remboursés, presse",
+              "la TVA que l’entreprise facture à ses clients sur ses ventes (compte 44571). C’est une dette envers l’État"
+            ],
+            "answer": 0,
+            "explain": "TVA à décaisser → ce que l’entreprise reverse réellement = TVA collectée − TVA déductible",
+            "drawSource": "notion:tva a decaisser"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 6,
+      "title": "✍️ Le journal : enregistrer une opération au débit et au crédit",
+      "games": [
+        {
+          "id": "gf-t1::6::trou0",
+          "type": "trou",
+          "count": 7
+        },
+        {
+          "id": "gf-t1::6::qtrou",
+          "type": "qcm",
+          "count": 5
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "Le ____ est le registre où l’on inscrit, jour après jour et dans l’ordre chronologique, toutes les écritures.",
+            "answer": "journal",
+            "alt": [],
+            "drawSource": "Le journal est le registre où l’on inscrit, jour après jour et dans l’ordre chronologique, toutes les écritures.",
+            "explain": "Le mot manquant : « journal »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Le journal est le registre où l’on inscrit, ____ et dans l’ordre chronologique, toutes les écritures.",
+            "answer": "jour après jour",
+            "alt": [],
+            "drawSource": "Le journal est le registre où l’on inscrit, jour après jour et dans l’ordre chronologique, toutes les écritures.",
+            "explain": "Le mot manquant : « jour après jour »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Chaque écriture comporte : une ____, les comptes débités puis crédités, les montants, et un libellé (l’explication).",
+            "answer": "date",
+            "alt": [],
+            "drawSource": "Chaque écriture comporte : une date, les comptes débités puis crédités, les montants, et un libellé (l’explication).",
+            "explain": "Le mot manquant : « date »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 7,
+      "title": "🏭 Amortissements et dépréciations",
+      "games": [
+        {
+          "id": "gf-t1::7::qdef",
+          "type": "qcm",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::7::qcas",
+          "type": "qcm",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::7::vf",
+          "type": "vraifaux",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::7::sterm",
+          "type": "saisie",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::7::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::7::memory",
+          "type": "memory"
+        },
+        {
+          "id": "gf-t1::7::trou0",
+          "type": "trou",
+          "count": 2
+        },
+        {
+          "id": "gf-t1::7::strou",
+          "type": "saisie",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::7::qtrou",
+          "type": "qcm",
+          "count": 7
+        },
+        {
+          "id": "gf-t1::7::cards",
+          "type": "flashcard",
+          "count": 6
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "« Dépréciation » : quelle proposition est correcte ?",
+            "choices": [
+              "Somme des annuités déjà enregistrées",
+              "Perte de valeur réversible (stock invendu)",
+              "Répartition systématique du montant amortissable d’un actif en fonction de son utilisation"
+            ],
+            "answer": 1,
+            "explain": "Dépréciation → Perte de valeur réversible (stock invendu)",
+            "drawSource": "notion:depreciation"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Que signifie : « Amortissement » ?",
+            "choices": [
+              "Somme des annuités déjà enregistrées",
+              "Perte de valeur réversible (stock invendu)",
+              "Répartition systématique du montant amortissable d’un actif en fonction de son utilisation"
+            ],
+            "answer": 2,
+            "explain": "Amortissement → Répartition systématique du montant amortissable d’un actif en fonction de son utilisation",
+            "drawSource": "notion:amortissement"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Quelle est la bonne définition de « Cumul des amortissements » ?",
+            "choices": [
+              "Répartition systématique du montant amortissable d’un actif en fonction de son utilisation",
+              "Somme des annuités déjà enregistrées",
+              "Perte de valeur réversible (stock invendu)"
+            ],
+            "answer": 1,
+            "explain": "Cumul des amortissements → Somme des annuités déjà enregistrées",
+            "drawSource": "notion:cumul des amortissements"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 8,
+      "title": "📊 Le bilan et le compte de résultat : patrimoine, charges et produits",
+      "games": [
+        {
+          "id": "gf-t1::8::qdef",
+          "type": "qcm",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::8::qcas",
+          "type": "qcm",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::8::vf",
+          "type": "vraifaux",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::8::vf1",
+          "type": "vraifaux",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::8::sterm",
+          "type": "saisie",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::8::sterm1",
+          "type": "saisie",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::8::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::8::assoc1",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::8::memory",
+          "type": "memory"
+        },
+        {
+          "id": "gf-t1::8::trou0",
+          "type": "trou",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::8::strou",
+          "type": "saisie",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::8::qtrou",
+          "type": "qcm",
+          "count": 8
+        },
+        {
+          "id": "gf-t1::8::cards",
+          "type": "flashcard",
+          "count": 8
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "« Capitaux propres » : quelle proposition est correcte ?",
+            "choices": [
+              "Dettes envers les fournisseurs, l’État",
+              "Stocks, créances clients",
+              "Photographie du patrimoine à une date : actif (emplois) = passif (ressources)",
+              "Capital et résultat"
+            ],
+            "answer": 3,
+            "explain": "Capitaux propres → Capital et résultat",
+            "drawSource": "notion:capitaux propres"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "À quoi correspond « Dettes d’exploitation » ?",
+            "choices": [
+              "Stocks, créances clients",
+              "Dettes envers les fournisseurs, l’État",
+              "Photographie du patrimoine à une date : actif (emplois) = passif (ressources)",
+              "Capital et résultat"
+            ],
+            "answer": 1,
+            "explain": "Dettes d’exploitation → Dettes envers les fournisseurs, l’État",
+            "drawSource": "notion:dettes d'exploitation"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Quelle est la bonne définition de « Actif circulant » ?",
+            "choices": [
+              "Photographie du patrimoine à une date : actif (emplois) = passif (ressources)",
+              "Capital et résultat",
+              "Dettes envers les fournisseurs, l’État",
+              "Stocks, créances clients"
+            ],
+            "answer": 3,
+            "explain": "Actif circulant → Stocks, créances clients",
+            "drawSource": "notion:actif circulant"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 9,
+      "title": "🧮 Étude de cas guidée et méthode — calculer et commenter un résultat",
+      "games": [
+        {
+          "id": "gf-t1::9::trou0",
+          "type": "trou",
+          "count": 2
+        },
+        {
+          "id": "gf-t1::9::strou",
+          "type": "saisie",
+          "count": 2
+        },
+        {
+          "id": "gf-t1::9::qtrou",
+          "type": "qcm",
+          "count": 5
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "Résultat = Produits − Charges = 480 000 − 390 000 = ____ → bénéfice.",
+            "answer": "90 000 €",
+            "alt": [],
+            "drawSource": "Résultat = Produits − Charges = 480 000 − 390 000 = 90 000 € → bénéfice.",
+            "explain": "Le mot manquant : « 90 000 € »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Étape 3 — Commentaire. L’entreprise est ____ : son activité couvre largement ses coûts.",
+            "answer": "bénéficiaire",
+            "alt": [],
+            "drawSource": "Étape 3 — Commentaire. L’entreprise est bénéficiaire : son activité couvre largement ses coûts.",
+            "explain": "Le mot manquant : « bénéficiaire »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "prompt": "Complète par le mot exact :\nLa dotation aux amortissements (20 000 €) est une charge ____ : le bénéfice réel en trésorerie est donc supérieur au résultat comptable.",
+            "answer": "non décaissée",
+            "alt": [],
+            "explain": "Le mot manquant : « non décaissée ».",
+            "drawSource": "La dotation aux amortissements (20 000 €) est une charge non décaissée : le bénéfice réel en trésorerie est donc supérieur au résultat comptable."
+          },
+          "game": "saisie"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 10,
+      "title": "🧾 La facture : remises, escompte, TVA et net à payer",
+      "games": [
+        {
+          "id": "gf-t1::10::qdef",
+          "type": "qcm",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::10::qcas",
+          "type": "qcm",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::10::vf",
+          "type": "vraifaux",
+          "count": 7
+        },
+        {
+          "id": "gf-t1::10::sterm",
+          "type": "saisie",
+          "count": 7
+        },
+        {
+          "id": "gf-t1::10::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::10::memory",
+          "type": "memory"
+        },
+        {
+          "id": "gf-t1::10::trou0",
+          "type": "trou",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::10::strou",
+          "type": "saisie",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::10::qtrou",
+          "type": "qcm",
+          "count": 8
+        },
+        {
+          "id": "gf-t1::10::cards",
+          "type": "flashcard",
+          "count": 7
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "À quoi correspond « Net à payer TTC » ?",
+            "choices": [
+              "Net financier + TVA",
+              "Réduction pour défaut de qualité, retard, non-conformité",
+              "Brut − (rabais + remise + ristourne)",
+              "Réduction sur le total des achats d’une période"
+            ],
+            "answer": 0,
+            "explain": "Net à payer TTC → Net financier + TVA",
+            "drawSource": "notion:net a payer ttc"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "« Net commercial » : quelle proposition est correcte ?",
+            "choices": [
+              "Net financier + TVA",
+              "Réduction pour défaut de qualité, retard, non-conformité",
+              "Réduction sur le total des achats d’une période",
+              "Brut − (rabais + remise + ristourne)"
+            ],
+            "answer": 3,
+            "explain": "Net commercial → Brut − (rabais + remise + ristourne)",
+            "drawSource": "notion:net commercial"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Que signifie : « Rabais » ?",
+            "choices": [
+              "Réduction pour défaut de qualité, retard, non-conformité",
+              "Réduction sur le total des achats d’une période",
+              "Net financier + TVA",
+              "Brut − (rabais + remise + ristourne)"
+            ],
+            "answer": 0,
+            "explain": "Rabais → Réduction pour défaut de qualité, retard, non-conformité",
+            "drawSource": "notion:rabais"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 11,
+      "title": "💳 Les règlements : encaisser une créance, payer une dette",
+      "games": [
+        {
+          "id": "gf-t1::11::qdef",
+          "type": "qcm",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::11::vf",
+          "type": "vraifaux",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::11::sterm",
+          "type": "saisie",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::11::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::11::memory",
+          "type": "memory"
+        },
+        {
+          "id": "gf-t1::11::trou0",
+          "type": "trou",
+          "count": 2
+        },
+        {
+          "id": "gf-t1::11::qtrou",
+          "type": "qcm",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::11::cards",
+          "type": "flashcard",
+          "count": 4
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "À quoi correspond « Règlement » ?",
+            "choices": [
+              "Débit 512 Banque / crédit 411 Clients",
+              "Débit 530 Caisse / crédit 707 Ventes et 44571 TVA collectée",
+              "Débit 401 Fournisseurs / crédit 512 Banque",
+              "Opération de trésorerie qui éteint une créance ou une dette, sans charge ni produit"
+            ],
+            "answer": 3,
+            "explain": "Règlement → Opération de trésorerie qui éteint une créance ou une dette, sans charge ni produit",
+            "drawSource": "notion:reglement"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "« Vente au comptant (espèces) » : quelle proposition est correcte ?",
+            "choices": [
+              "Opération de trésorerie qui éteint une créance ou une dette, sans charge ni produit",
+              "Débit 401 Fournisseurs / crédit 512 Banque",
+              "Débit 512 Banque / crédit 411 Clients",
+              "Débit 530 Caisse / crédit 707 Ventes et 44571 TVA collectée"
+            ],
+            "answer": 3,
+            "explain": "Vente au comptant (espèces) → Débit 530 Caisse / crédit 707 Ventes et 44571 TVA collectée",
+            "drawSource": "notion:vente au comptant (especes)"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Que signifie : « Encaissement d’un client » ?",
+            "choices": [
+              "Débit 512 Banque / crédit 411 Clients",
+              "Débit 401 Fournisseurs / crédit 512 Banque",
+              "Débit 530 Caisse / crédit 707 Ventes et 44571 TVA collectée",
+              "Opération de trésorerie qui éteint une créance ou une dette, sans charge ni produit"
+            ],
+            "answer": 0,
+            "explain": "Encaissement d’un client → Débit 512 Banque / crédit 411 Clients",
+            "drawSource": "notion:encaissement d'un client"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 12,
+      "title": "👷 Les charges de personnel : salaire brut, net et cotisations",
+      "games": [
+        {
+          "id": "gf-t1::12::trou0",
+          "type": "trou",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::12::qtrou",
+          "type": "qcm",
+          "count": 5
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "Les ____ sont souvent le premier poste de coût d’une entreprise de services.",
+            "answer": "charges de personnel",
+            "alt": [],
+            "drawSource": "Les charges de personnel sont souvent le premier poste de coût d’une entreprise de services.",
+            "explain": "Le mot manquant : « charges de personnel »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Le salaire versé au salarié (le ____) n’est qu’une partie du coût réel : s’y ajoutent les cotisations sociales (salariales et patronales).",
+            "answer": "net",
+            "alt": [],
+            "drawSource": "Le salaire versé au salarié (le net) n’est qu’une partie du coût réel : s’y ajoutent les cotisations sociales (salariales et patronales).",
+            "explain": "Le mot manquant : « net »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Le salaire versé au salarié (le net) n’est qu’une partie du coût réel : s’y ajoutent les ____ (salariales et patronales).",
+            "answer": "cotisations sociales",
+            "alt": [],
+            "drawSource": "Le salaire versé au salarié (le net) n’est qu’une partie du coût réel : s’y ajoutent les cotisations sociales (salariales et patronales).",
+            "explain": "Le mot manquant : « cotisations sociales »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 13,
+      "title": "📦 Les stocks : inventaire intermittent et variation de stock",
+      "games": [
+        {
+          "id": "gf-t1::13::trou0",
+          "type": "trou",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::13::strou",
+          "type": "saisie",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::13::qtrou",
+          "type": "qcm",
+          "count": 4
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "Les ____ (marchandises, matières premières, produits finis) représentent de l’argent « immobilisé » : ni vendu, ni disponible en caisse.",
+            "answer": "stocks",
+            "alt": [],
+            "drawSource": "Les stocks (marchandises, matières premières, produits finis) représentent de l’argent « immobilisé » : ni vendu, ni disponible en caisse.",
+            "explain": "Le mot manquant : « stocks »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "En comptabilité, dans la méthode dite de l’____ (au programme), les achats sont enregistrés en charges (607) tout au long de l’année.",
+            "answer": "inventaire intermittent",
+            "alt": [],
+            "drawSource": "En comptabilité, dans la méthode dite de l’inventaire intermittent (au programme), les achats sont enregistrés en charges (607) tout au long de l’année.",
+            "explain": "Le mot manquant : « inventaire intermittent »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "En comptabilité, dans la méthode dite de l’inventaire intermittent (au programme), les achats sont enregistrés en ____ (607) tout au long de l’année.",
+            "answer": "charges",
+            "alt": [],
+            "drawSource": "En comptabilité, dans la méthode dite de l’inventaire intermittent (au programme), les achats sont enregistrés en charges (607) tout au long de l’année.",
+            "explain": "Le mot manquant : « charges »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 14,
+      "title": "🏢 L’acquisition d’une immobilisation : coût d’acquisition et dotations",
+      "games": [
+        {
+          "id": "gf-t1::14::trou0",
+          "type": "trou",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::14::strou",
+          "type": "saisie",
+          "count": 2
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "Acquérir une ____ (machine, véhicule, matériel) n’est pas une charge mais un investissement : le bien entre à l’actif du bilan (classe 2) et se répartira dans le temps par l’amortissement.",
+            "answer": "immobilisation",
+            "alt": [],
+            "drawSource": "Acquérir une immobilisation (machine, véhicule, matériel) n’est pas une charge mais un investissement : le bien entre à l’actif du bilan (classe 2) et se répartira dans le temps par l’amortissement.",
+            "explain": "Le mot manquant : « immobilisation »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Acquérir une immobilisation (machine, véhicule, matériel) n’est pas une charge mais un ____ : le bien entre à l’actif du bilan (classe 2) et se répartira dans le temps par l’amortissement.",
+            "answer": "investissement",
+            "alt": [],
+            "drawSource": "Acquérir une immobilisation (machine, véhicule, matériel) n’est pas une charge mais un investissement : le bien entre à l’actif du bilan (classe 2) et se répartira dans le temps par l’amortissement.",
+            "explain": "Le mot manquant : « investissement »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Acquérir une immobilisation (machine, véhicule, matériel) n’est pas une charge mais un investissement : le bien entre à l’____ du bilan (classe 2) et se répartira dans le temps par l’amortissement.",
+            "answer": "actif",
+            "alt": [],
+            "drawSource": "Acquérir une immobilisation (machine, véhicule, matériel) n’est pas une charge mais un investissement : le bien entre à l’actif du bilan (classe 2) et se répartira dans le temps par l’amortissement.",
+            "explain": "Le mot manquant : « actif »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 15,
+      "title": "🗓️ Les travaux d’inventaire : amortissements, dépréciations, stocks et régularisations",
+      "games": [
+        {
+          "id": "gf-t1::15::qdef",
+          "type": "qcm",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::15::vf",
+          "type": "vraifaux",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::15::sterm",
+          "type": "saisie",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::15::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::15::trou0",
+          "type": "trou",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::15::qtrou",
+          "type": "qcm",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::15::cards",
+          "type": "flashcard",
+          "count": 4
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "Quelle est la bonne définition de « Les dépréciations » ?",
+            "choices": [
+              "ajuster le stock à sa valeur réelle constatée à l’inventaire",
+              "constater une perte de valeur probable et réversible (stocks, créances douteuses, titres)",
+              "constater l’usure des immobilisations (dotation compte 6811 / amortissement 28)",
+              "rattacher à l’exercice ce qui le concerne (charges à payer, produits à recevoir, charges constatées d’avance)"
+            ],
+            "answer": 1,
+            "explain": "Les dépréciations → constater une perte de valeur probable et réversible (stocks, créances douteuses, titres)",
+            "drawSource": "notion:depreciations"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "« La variation des stocks » : quelle proposition est correcte ?",
+            "choices": [
+              "rattacher à l’exercice ce qui le concerne (charges à payer, produits à recevoir, charges constatées d’avance)",
+              "constater une perte de valeur probable et réversible (stocks, créances douteuses, titres)",
+              "constater l’usure des immobilisations (dotation compte 6811 / amortissement 28)",
+              "ajuster le stock à sa valeur réelle constatée à l’inventaire"
+            ],
+            "answer": 3,
+            "explain": "La variation des stocks → ajuster le stock à sa valeur réelle constatée à l’inventaire",
+            "drawSource": "notion:variation des stocks"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Que signifie : « Les amortissements » ?",
+            "choices": [
+              "rattacher à l’exercice ce qui le concerne (charges à payer, produits à recevoir, charges constatées d’avance)",
+              "constater une perte de valeur probable et réversible (stocks, créances douteuses, titres)",
+              "constater l’usure des immobilisations (dotation compte 6811 / amortissement 28)",
+              "ajuster le stock à sa valeur réelle constatée à l’inventaire"
+            ],
+            "answer": 2,
+            "explain": "Les amortissements → constater l’usure des immobilisations (dotation compte 6811 / amortissement 28)",
+            "drawSource": "notion:amortissements"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 16,
+      "title": "📉 Les créances douteuses et leur dépréciation",
+      "games": [
+        {
+          "id": "gf-t1::16::trou0",
+          "type": "trou",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::16::strou",
+          "type": "saisie",
+          "count": 2
+        },
+        {
+          "id": "gf-t1::16::qtrou",
+          "type": "qcm",
+          "count": 6
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "Quand un client risque de ____ (difficultés, litige), le principe de prudence impose de constater cette perte probable sans attendre qu’elle soit certaine.",
+            "answer": "ne pas payer",
+            "alt": [],
+            "drawSource": "Quand un client risque de ne pas payer (difficultés, litige), le principe de prudence impose de constater cette perte probable sans attendre qu’elle soit certaine.",
+            "explain": "Le mot manquant : « ne pas payer »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Quand un client risque de ne pas payer (difficultés, litige), le principe de ____ impose de constater cette perte probable sans attendre qu’elle soit certaine.",
+            "answer": "prudence",
+            "alt": [],
+            "drawSource": "Quand un client risque de ne pas payer (difficultés, litige), le principe de prudence impose de constater cette perte probable sans attendre qu’elle soit certaine.",
+            "explain": "Le mot manquant : « prudence »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Quand un client risque de ne pas payer (difficultés, litige), le principe de prudence impose de constater cette perte ____ sans attendre qu’elle soit certaine.",
+            "answer": "probable",
+            "alt": [],
+            "drawSource": "Quand un client risque de ne pas payer (difficultés, litige), le principe de prudence impose de constater cette perte probable sans attendre qu’elle soit certaine.",
+            "explain": "Le mot manquant : « probable »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 17,
+      "title": "🧾 La déclaration de TVA : TVA à décaisser ou crédit de TVA",
+      "games": [
+        {
+          "id": "gf-t1-trou-tva",
+          "type": "trou",
+          "count": 2
+        },
+        {
+          "id": "gf-t1::17::trou0",
+          "type": "trou",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::17::qtrou",
+          "type": "qcm",
+          "count": 6
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "TVA à décaisser = TVA collectée − TVA ___.",
+            "answer": "déductible",
+            "explain": "TVA à décaisser = TVA collectée − TVA déductible."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Au régime réel normal, l’entreprise déclare sa TVA sur le formulaire ___.",
+            "answer": "CA3",
+            "alt": [
+              "ca3"
+            ],
+            "explain": "Au régime réel normal : CA3. Le régime simplifié utilise encore la CA12 en 2026 ; vérifier le régime applicable à la période étudiée."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Chaque mois (ou trimestre), l’entreprise établit sa ____ (formulaire CA3).",
+            "answer": "déclaration de TVA",
+            "alt": [],
+            "drawSource": "Chaque mois (ou trimestre), l’entreprise établit sa déclaration de TVA (formulaire CA3).",
+            "explain": "Le mot manquant : « déclaration de TVA »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 18,
+      "title": "📚 L’organisation comptable : de la pièce justificative à la balance et au bilan",
+      "games": [
+        {
+          "id": "gf-t1-ordre",
+          "type": "ordre"
+        },
+        {
+          "id": "gf-t1::18::qdef",
+          "type": "qcm",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::18::vf",
+          "type": "vraifaux",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::18::sterm",
+          "type": "saisie",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::18::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::18::memory",
+          "type": "memory"
+        },
+        {
+          "id": "gf-t1::18::trou0",
+          "type": "trou",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::18::strou",
+          "type": "saisie",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::18::qtrou",
+          "type": "qcm",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::18::cards",
+          "type": "flashcard",
+          "count": 5
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "« Grand livre » : quelle proposition est correcte ?",
+            "choices": [
+              "Liste de tous les comptes avec débits, crédits et soldes (contrôle)",
+              "Regroupe les écritures compte par compte",
+              "Preuve de l’opération (facture, relevé, bulletin de paie)",
+              "Enregistre les écritures dans l’ordre chronologique"
+            ],
+            "answer": 1,
+            "explain": "Grand livre → Regroupe les écritures compte par compte",
+            "drawSource": "notion:grand livre"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Quelle est la bonne définition de « Journal » ?",
+            "choices": [
+              "Enregistre les écritures dans l’ordre chronologique",
+              "Liste de tous les comptes avec débits, crédits et soldes (contrôle)",
+              "Preuve de l’opération (facture, relevé, bulletin de paie)",
+              "Bilan et compte de résultat, établis à la clôture"
+            ],
+            "answer": 0,
+            "explain": "Journal → Enregistre les écritures dans l’ordre chronologique",
+            "drawSource": "notion:journal"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Que signifie : « Pièce justificative » ?",
+            "choices": [
+              "Bilan et compte de résultat, établis à la clôture",
+              "Enregistre les écritures dans l’ordre chronologique",
+              "Liste de tous les comptes avec débits, crédits et soldes (contrôle)",
+              "Preuve de l’opération (facture, relevé, bulletin de paie)"
+            ],
+            "answer": 3,
+            "explain": "Pièce justificative → Preuve de l’opération (facture, relevé, bulletin de paie)",
+            "drawSource": "notion:piece justificative"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 19,
+      "title": "⚖️ Les principes comptables : prudence, permanence des méthodes, indépendance des exercices",
+      "games": [
+        {
+          "id": "gf-t1-trou-principes",
+          "type": "trou",
+          "count": 2
+        },
+        {
+          "id": "gf-t1::19::qdef",
+          "type": "qcm",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::19::qcas",
+          "type": "qcm",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::19::vf",
+          "type": "vraifaux",
+          "count": 7
+        },
+        {
+          "id": "gf-t1::19::sterm",
+          "type": "saisie",
+          "count": 7
+        },
+        {
+          "id": "gf-t1::19::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::19::memory",
+          "type": "memory"
+        },
+        {
+          "id": "gf-t1::19::trou0",
+          "type": "trou",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::19::qtrou",
+          "type": "qcm",
+          "count": 7
+        },
+        {
+          "id": "gf-t1::19::cards",
+          "type": "flashcard",
+          "count": 7
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "Le principe de ___ interdit de surévaluer l’actif de l’entreprise.",
+            "answer": "prudence",
+            "explain": "Le principe de prudence : anticiper les pertes probables, jamais les gains non réalisés."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "La ___ des méthodes impose de garder les mêmes méthodes d’une année à l’autre.",
+            "answer": "permanence",
+            "explain": "La permanence des méthodes rend les comptes comparables."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "q": "Que signifie : « Prudence » ?",
+            "choices": [
+              "Objectif des comptes : représenter fidèlement le patrimoine et le résultat",
+              "Anticiper les pertes probables, jamais les gains",
+              "Garder les mêmes méthodes d’un an à l’autre",
+              "Rattacher charges et produits au bon exercice"
+            ],
+            "answer": 1,
+            "explain": "Prudence → Anticiper les pertes probables, jamais les gains",
+            "drawSource": "notion:prudence"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 20,
+      "title": "🧮 Étude de cas guidée — un cycle d’achat complet",
+      "games": [
+        {
+          "id": "gf-t1::20::trou0",
+          "type": "trou",
+          "count": 6
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "Commentaire. L’achat (charge) est enregistré pour le ____ (1 900 €) ; l’escompte obtenu (19 €) est un produit financier enregistré à part ; la TVA déductible est une créance sur l’État ; le règlement solde simplement la dette fournisseur sans créer de charge.",
+            "answer": "net commercial",
+            "alt": [],
+            "drawSource": "Commentaire. L’achat (charge) est enregistré pour le net commercial (1 900 €) ; l’escompte obtenu (19 €) est un produit financier enregistré à part ; la TVA déductible est une créance sur l’État ; le règlement solde simplement la dette fournisseur sans créer de charge.",
+            "explain": "Le mot manquant : « net commercial »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Commentaire. L’achat (charge) est enregistré pour le net commercial (1 900 €) ; l’escompte obtenu (19 €) est un ____ enregistré à part ; la TVA déductible est une créance sur l’État ; le règlement solde simplement la dette fournisseur sans créer de charge.",
+            "answer": "produit financier",
+            "alt": [],
+            "drawSource": "Commentaire. L’achat (charge) est enregistré pour le net commercial (1 900 €) ; l’escompte obtenu (19 €) est un produit financier enregistré à part ; la TVA déductible est une créance sur l’État ; le règlement solde simplement la dette fournisseur sans créer de charge.",
+            "explain": "Le mot manquant : « produit financier »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Commentaire. L’achat (charge) est enregistré pour le net commercial (1 900 €) ; l’escompte obtenu (19 €) est un produit financier enregistré à part ; la TVA déductible est une ____ sur l’État ; le règlement solde simplement la dette fournisseur sans créer de charge.",
+            "answer": "créance",
+            "alt": [],
+            "drawSource": "Commentaire. L’achat (charge) est enregistré pour le net commercial (1 900 €) ; l’escompte obtenu (19 €) est un produit financier enregistré à part ; la TVA déductible est une créance sur l’État ; le règlement solde simplement la dette fournisseur sans créer de charge.",
+            "explain": "Le mot manquant : « créance »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 21,
+      "title": "🧮 MÉTHODE — Comment calculer la TVA, pas à pas",
+      "games": [
+        {
+          "id": "gf-t1-calc-tva",
+          "type": "calcul"
+        },
+        {
+          "id": "gf-t1::21::qdef",
+          "type": "qcm",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::21::qcas",
+          "type": "qcm",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::21::vf",
+          "type": "vraifaux",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::21::sterm",
+          "type": "saisie",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::21::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::21::memory",
+          "type": "memory"
+        },
+        {
+          "id": "gf-t1::21::trou0",
+          "type": "trou",
+          "count": 5
+        },
+        {
+          "id": "gf-t1::21::trou1",
+          "type": "trou",
+          "count": 3
+        },
+        {
+          "id": "gf-t1::21::strou",
+          "type": "saisie",
+          "count": 8
+        },
+        {
+          "id": "gf-t1::21::qtrou",
+          "type": "qcm",
+          "count": 11
+        },
+        {
+          "id": "gf-t1::21::cards",
+          "type": "flashcard",
+          "count": 6
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "Que signifie : « Coefficient TTC » ?",
+            "choices": [
+              "Coefficient 1,10",
+              "Coefficient 1,021",
+              "1 + taux de TVA : TTC = HT × coefficient ; HT = TTC ÷ coefficient"
+            ],
+            "answer": 2,
+            "explain": "Coefficient TTC → 1 + taux de TVA : TTC = HT × coefficient ; HT = TTC ÷ coefficient",
+            "drawSource": "notion:coefficient ttc"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "« TVA à 2,1 % » : quelle proposition est correcte ?",
+            "choices": [
+              "Coefficient 1,10",
+              "1 + taux de TVA : TTC = HT × coefficient ; HT = TTC ÷ coefficient",
+              "Coefficient 1,021"
+            ],
+            "answer": 2,
+            "explain": "TVA à 2,1 % → Coefficient 1,021",
+            "drawSource": "notion:tva a 2,1 %"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Quelle est la bonne définition de « TVA à 10 % » ?",
+            "choices": [
+              "1 + taux de TVA : TTC = HT × coefficient ; HT = TTC ÷ coefficient",
+              "Coefficient 1,021",
+              "Coefficient 1,10"
+            ],
+            "answer": 2,
+            "explain": "TVA à 10 % → Coefficient 1,10",
+            "drawSource": "notion:tva a 10 %"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 22,
+      "title": "🧮 MÉTHODE — Calculer le net à payer d’une facture",
+      "games": [
+        {
+          "id": "gf-t1::22::trou0",
+          "type": "trou",
+          "count": 3
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "Une facture se calcule ____ : d’abord les réductions commerciales, puis la réduction financière (escompte), puis la TVA.",
+            "answer": "dans un ordre précis",
+            "alt": [],
+            "drawSource": "Une facture se calcule dans un ordre précis : d’abord les réductions commerciales, puis la réduction financière (escompte), puis la TVA.",
+            "explain": "Le mot manquant : « dans un ordre précis »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Brut 1 000 € HT ; remise 10 % ; escompte 2 % ; TVA 20 %. ① Net commercial = 1 000 − (1 000 × 10 %) = 1 000 − 100 = 900 €. ② Escompte = 900 × 2 % = 18 € → Net financier = 900 − 18 = 882 €. ③ TVA = 882 × 0,20 = 176,40 €. ④ Net à payer = 882 + 176,40 = ____.",
+            "answer": "1 058,40 € TTC",
+            "alt": [],
+            "drawSource": "Brut 1 000 € HT ; remise 10 % ; escompte 2 % ; TVA 20 %. ① Net commercial = 1 000 − (1 000 × 10 %) = 1 000 − 100 = 900 €. ② Escompte = 900 × 2 % = 18 € → Net financier = 900 − 18 = 882 €. ③ TVA = 882 × 0,20 = 176,40 €. ④ Net à payer = 882 + 176,40 = 1 058,40 € TTC.",
+            "explain": "Le mot manquant : « 1 058,40 € TTC »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Le net à payer doit être ____ : légèrement supérieur au net financier (à cause de la TVA), et inférieur au brut + TVA (à cause des réductions).",
+            "answer": "cohérent",
+            "alt": [],
+            "drawSource": "Le net à payer doit être cohérent : légèrement supérieur au net financier (à cause de la TVA), et inférieur au brut + TVA (à cause des réductions).",
+            "explain": "Le mot manquant : « cohérent »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "gestion-finance",
+      "tid": "gf-t1",
+      "idx": 23,
+      "title": "🧮 MÉTHODE — Calculer un amortissement",
+      "games": [
+        {
+          "id": "gf-t1-calc-amo",
+          "type": "calcul"
+        },
+        {
+          "id": "gf-t1::23::qdef",
+          "type": "qcm",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::23::vf",
+          "type": "vraifaux",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::23::sterm",
+          "type": "saisie",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::23::assoc",
+          "type": "association"
+        },
+        {
+          "id": "gf-t1::23::memory",
+          "type": "memory"
+        },
+        {
+          "id": "gf-t1::23::trou0",
+          "type": "trou",
+          "count": 4
+        },
+        {
+          "id": "gf-t1::23::strou",
+          "type": "saisie",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::23::qtrou",
+          "type": "qcm",
+          "count": 6
+        },
+        {
+          "id": "gf-t1::23::cards",
+          "type": "flashcard",
+          "count": 4
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "Que signifie : « Valeur d’origine » ?",
+            "choices": [
+              "Valeur d’origine ÷ durée (22 000 ÷ 5 = 4 400 €)",
+              "Somme des annuités déjà passées",
+              "Prix d’achat HT + frais nécessaires à la mise en service (installation)",
+              "Valeur brute − amortissements cumulés − dépréciations ; nulle en fin de plan seulement si la valeur résiduelle est nulle"
+            ],
+            "answer": 2,
+            "explain": "Valeur d’origine → Prix d’achat HT + frais nécessaires à la mise en service (installation)",
+            "drawSource": "notion:valeur d'origine"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "« Cumul des amortissements » : quelle proposition est correcte ?",
+            "choices": [
+              "Valeur d’origine ÷ durée (22 000 ÷ 5 = 4 400 €)",
+              "Prix d’achat HT + frais nécessaires à la mise en service (installation)",
+              "Somme des annuités déjà passées",
+              "Valeur brute − amortissements cumulés − dépréciations ; nulle en fin de plan seulement si la valeur résiduelle est nulle"
+            ],
+            "answer": 2,
+            "explain": "Cumul des amortissements → Somme des annuités déjà passées",
+            "drawSource": "notion:cumul des amortissements"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "À quoi correspond « VNC » ?",
+            "choices": [
+              "Valeur d’origine ÷ durée (22 000 ÷ 5 = 4 400 €)",
+              "Prix d’achat HT + frais nécessaires à la mise en service (installation)",
+              "Somme des annuités déjà passées",
+              "Valeur brute − amortissements cumulés − dépréciations ; nulle en fin de plan seulement si la valeur résiduelle est nulle"
+            ],
+            "answer": 3,
+            "explain": "VNC → Valeur brute − amortissements cumulés − dépréciations ; nulle en fin de plan seulement si la valeur résiduelle est nulle",
+            "drawSource": "notion:vnc"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "droit",
+      "tid": "droit-t5",
+      "idx": 0,
+      "title": "La formation du contrat : offre, acceptation et force obligatoire",
+      "games": [
+        {
+          "id": "droit-t5::0::qdef",
+          "type": "qcm",
+          "count": 5
+        },
+        {
+          "id": "droit-t5::0::vf",
+          "type": "vraifaux",
+          "count": 5
+        },
+        {
+          "id": "droit-t5::0::sterm",
+          "type": "saisie",
+          "count": 5
+        },
+        {
+          "id": "droit-t5::0::assoc",
+          "type": "association"
+        },
+        {
+          "id": "droit-t5::0::memory",
+          "type": "memory"
+        },
+        {
+          "id": "droit-t5::0::trou0",
+          "type": "trou",
+          "count": 7
+        },
+        {
+          "id": "droit-t5::0::strou",
+          "type": "saisie",
+          "count": 3
+        },
+        {
+          "id": "droit-t5::0::cards",
+          "type": "flashcard",
+          "count": 5
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "Quelle est la bonne définition de « Contrat à titre onéreux » ?",
+            "choices": [
+              "Rencontre d’une offre et d’une acceptation",
+              "Le seul accord suffit, sans écrit",
+              "Chacun reçoit une contrepartie",
+              "Clauses non négociées (abonnement)"
+            ],
+            "answer": 2,
+            "explain": "Contrat à titre onéreux → Chacun reçoit une contrepartie",
+            "drawSource": "notion:contrat a titre onereux"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Que signifie : « Contrat synallagmatique » ?",
+            "choices": [
+              "Obligations réciproques (vente)",
+              "Le seul accord suffit, sans écrit",
+              "Clauses non négociées (abonnement)",
+              "Rencontre d’une offre et d’une acceptation"
+            ],
+            "answer": 0,
+            "explain": "Contrat synallagmatique → Obligations réciproques (vente)",
+            "drawSource": "notion:contrat synallagmatique"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "À quoi correspond « Contrat d’adhésion » ?",
+            "choices": [
+              "Obligations réciproques (vente)",
+              "Chacun reçoit une contrepartie",
+              "Clauses non négociées (abonnement)",
+              "Rencontre d’une offre et d’une acceptation"
+            ],
+            "answer": 2,
+            "explain": "Contrat d’adhésion → Clauses non négociées (abonnement)",
+            "drawSource": "notion:contrat d'adhesion"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "droit",
+      "tid": "droit-t5",
+      "idx": 1,
+      "title": "Le consentement vicié : le dol et la nullité du contrat",
+      "games": [
+        {
+          "id": "droit-t5::1::qdef",
+          "type": "qcm",
+          "count": 5
+        },
+        {
+          "id": "droit-t5::1::vf",
+          "type": "vraifaux",
+          "count": 5
+        },
+        {
+          "id": "droit-t5::1::sterm",
+          "type": "saisie",
+          "count": 4
+        },
+        {
+          "id": "droit-t5::1::assoc",
+          "type": "association"
+        },
+        {
+          "id": "droit-t5::1::memory",
+          "type": "memory"
+        },
+        {
+          "id": "droit-t5::1::trou0",
+          "type": "trou",
+          "count": 2
+        },
+        {
+          "id": "droit-t5::1::strou",
+          "type": "saisie",
+          "count": 2
+        },
+        {
+          "id": "droit-t5::1::qtrou",
+          "type": "qcm",
+          "count": 6
+        },
+        {
+          "id": "droit-t5::1::cards",
+          "type": "flashcard",
+          "count": 5
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "Que signifie : « Consentement libre et éclairé (art. 1128) » ?",
+            "choices": [
+              "Se tromper sur une qualité essentielle",
+              "Condition de validité du contrat",
+              "Être trompé par des manœuvres ; ouvre droit à la nullité et à des dommages-intérêts",
+              "Annulation du contrat par le juge"
+            ],
+            "answer": 1,
+            "explain": "Consentement libre et éclairé (art. 1128) → Condition de validité du contrat",
+            "drawSource": "notion:consentement libre et eclaire (art. 1128)"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Quelle est la bonne définition de « Erreur » ?",
+            "choices": [
+              "Consentir sous la contrainte",
+              "Condition de validité du contrat",
+              "Se tromper sur une qualité essentielle",
+              "Annulation du contrat par le juge"
+            ],
+            "answer": 2,
+            "explain": "Erreur → Se tromper sur une qualité essentielle",
+            "drawSource": "notion:erreur"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Que signifie : « Nullité » ?",
+            "choices": [
+              "Être trompé par des manœuvres ; ouvre droit à la nullité et à des dommages-intérêts",
+              "Annulation du contrat par le juge",
+              "Se tromper sur une qualité essentielle",
+              "Consentir sous la contrainte"
+            ],
+            "answer": 1,
+            "explain": "Nullité → Annulation du contrat par le juge",
+            "drawSource": "notion:nullite"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "economie",
+      "tid": "eco-t7",
+      "idx": 0,
+      "title": "Le chômage au sens du BIT : taux de chômage et halo",
+      "games": [
+        {
+          "id": "eco-t7::0::trou0",
+          "type": "trou",
+          "count": 5
+        },
+        {
+          "id": "eco-t7::0::strou",
+          "type": "saisie",
+          "count": 2
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "Au sens du Bureau international du travail (____), une personne de 15 ans ou plus est au chômage si elle est sans emploi pendant la semaine de référence, disponible dans les deux semaines, et a recherché activement un emploi au cours des quatre dernières semaines ou en a déjà trouvé un commençant dans moins de trois mois.",
+            "answer": "BIT",
+            "alt": [],
+            "drawSource": "Au sens du Bureau international du travail (BIT), une personne de 15 ans ou plus est au chômage si elle est sans emploi pendant la semaine de référence, disponible dans les deux semaines, et a recherché activement un emploi au cours des quatre dernières semaines ou en a déjà trouvé un commençant dans moins de trois mois.",
+            "explain": "Le mot manquant : « BIT »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Au sens du Bureau international du travail (BIT), une personne de ____ est au chômage si elle est sans emploi pendant la semaine de référence, disponible dans les deux semaines, et a recherché activement un emploi au cours des quatre dernières semaines ou en a déjà trouvé un commençant dans moins de trois mois.",
+            "answer": "15 ans ou plus",
+            "alt": [],
+            "drawSource": "Au sens du Bureau international du travail (BIT), une personne de 15 ans ou plus est au chômage si elle est sans emploi pendant la semaine de référence, disponible dans les deux semaines, et a recherché activement un emploi au cours des quatre dernières semaines ou en a déjà trouvé un commençant dans moins de trois mois.",
+            "explain": "Le mot manquant : « 15 ans ou plus »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Au sens du Bureau international du travail (BIT), une personne de 15 ans ou plus est au chômage si elle est sans emploi pendant la semaine de référence, disponible dans les deux semaines, et a recherché activement un emploi au cours des quatre dernières semaines ou en a déjà trouvé un commençant dans ____.",
+            "answer": "moins de trois mois",
+            "alt": [],
+            "drawSource": "Au sens du Bureau international du travail (BIT), une personne de 15 ans ou plus est au chômage si elle est sans emploi pendant la semaine de référence, disponible dans les deux semaines, et a recherché activement un emploi au cours des quatre dernières semaines ou en a déjà trouvé un commençant dans moins de trois mois.",
+            "explain": "Le mot manquant : « moins de trois mois »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "economie",
+      "tid": "eco-t7",
+      "idx": 1,
+      "title": "Types de chômage et politiques de l’emploi : relance ou formation",
+      "games": [
+        {
+          "id": "eco-t7::1::qdef",
+          "type": "qcm",
+          "count": 5
+        },
+        {
+          "id": "eco-t7::1::vf",
+          "type": "vraifaux",
+          "count": 5
+        },
+        {
+          "id": "eco-t7::1::sterm",
+          "type": "saisie",
+          "count": 5
+        },
+        {
+          "id": "eco-t7::1::assoc",
+          "type": "association"
+        },
+        {
+          "id": "eco-t7::1::memory",
+          "type": "memory"
+        },
+        {
+          "id": "eco-t7::1::trou0",
+          "type": "trou",
+          "count": 4
+        },
+        {
+          "id": "eco-t7::1::strou",
+          "type": "saisie",
+          "count": 6
+        },
+        {
+          "id": "eco-t7::1::qtrou",
+          "type": "qcm",
+          "count": 6
+        },
+        {
+          "id": "eco-t7::1::cards",
+          "type": "flashcard",
+          "count": 5
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "Que signifie : « Politiques passives de l’emploi » ?",
+            "choices": [
+              "Compétences inadaptées ; remède : formation",
+              "Transition entre deux emplois ; normal",
+              "Ralentissement (crise) ; remède : relance",
+              "Atténuent les conséquences (indemnisation)"
+            ],
+            "answer": 3,
+            "explain": "Politiques passives de l’emploi → Atténuent les conséquences (indemnisation)",
+            "drawSource": "notion:politiques passives de l'emploi"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "À quoi correspond « Politiques actives de l’emploi » ?",
+            "choices": [
+              "Agissent sur les causes (formation, aides à l’embauche)",
+              "Compétences inadaptées ; remède : formation",
+              "Transition entre deux emplois ; normal",
+              "Ralentissement (crise) ; remède : relance"
+            ],
+            "answer": 0,
+            "explain": "Politiques actives de l’emploi → Agissent sur les causes (formation, aides à l’embauche)",
+            "drawSource": "notion:politiques actives de l'emploi"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Quelle est la bonne définition de « Chômage structurel » ?",
+            "choices": [
+              "Compétences inadaptées ; remède : formation",
+              "Agissent sur les causes (formation, aides à l’embauche)",
+              "Ralentissement (crise) ; remède : relance",
+              "Atténuent les conséquences (indemnisation)"
+            ],
+            "answer": 0,
+            "explain": "Chômage structurel → Compétences inadaptées ; remède : formation",
+            "drawSource": "notion:chomage structurel"
+          },
+          "game": "qcm"
+        }
+      ]
+    },
+    {
+      "sid": "maths",
+      "tid": "math-c1",
+      "idx": 0,
+      "title": "📊 Taux d’évolution et coefficient multiplicateur",
+      "games": [
+        {
+          "id": "math-c1-calc-t",
+          "type": "calcul"
+        },
+        {
+          "id": "math-c1::0::sterm",
+          "type": "saisie",
+          "count": 2
+        },
+        {
+          "id": "math-c1::0::trou0",
+          "type": "trou",
+          "count": 3
+        },
+        {
+          "id": "math-c1::0::strou",
+          "type": "saisie",
+          "count": 4
+        },
+        {
+          "id": "math-c1::0::qtrou",
+          "type": "qcm",
+          "count": 5
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "prompt": "Quel terme correspond à cette définition ?\n« CM = 1 + t et V_f = V_i × CM (+20 % → 1,20 ; +5 % → 1,05 ; −30 % → 0,70 ; −100 % → 0) »",
+            "answer": "Coefficient multiplicateur (CM)",
+            "alt": [
+              "Coefficient multiplicateur",
+              "CM"
+            ],
+            "explain": "Coefficient multiplicateur (CM) : CM = 1 + t et V_f = V_i × CM (+20 % → 1,20 ; +5 % → 1,05 ; −30 % → 0,70 ; −100 % → 0)"
+          },
+          "game": "saisie"
+        },
+        {
+          "q": {
+            "prompt": "Quel terme correspond à cette définition ?\n« Variation relative : t = (V_f − V_i) ÷ V_i, écrite en décimal (+20 % → 0,20 ; −30 % → −0,30) »",
+            "answer": "Taux d’évolution t",
+            "alt": [],
+            "explain": "Taux d’évolution t : Variation relative : t = (V_f − V_i) ÷ V_i, écrite en décimal (+20 % → 0,20 ; −30 % → −0,30)"
+          },
+          "game": "saisie"
+        },
+        {
+          "q": {
+            "text": "Un ____ mesure une variation relative (en pourcentage) entre une valeur de départ (valeur initiale, Vᵢ) et une valeur d’arrivée (valeur finale, V_f).",
+            "answer": "taux d’évolution",
+            "alt": [],
+            "drawSource": "Un taux d’évolution mesure une variation relative (en pourcentage) entre une valeur de départ (valeur initiale, Vᵢ) et une valeur d’arrivée (valeur finale, V_f).",
+            "explain": "Le mot manquant : « taux d’évolution »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "maths",
+      "tid": "math-c1",
+      "idx": 1,
+      "title": "🔁 Évolutions successives et taux moyen",
+      "games": [
+        {
+          "id": "math-c1-calc-succ",
+          "type": "calcul"
+        },
+        {
+          "id": "math-c1-calc-moyen",
+          "type": "calcul"
+        },
+        {
+          "id": "math-c1::1::trou0",
+          "type": "trou",
+          "count": 3
+        },
+        {
+          "id": "math-c1::1::strou",
+          "type": "saisie",
+          "count": 2
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "Quand plusieurs évolutions ____, on ne les additionne pas : on multiplie leurs coefficients pour obtenir le coefficient global.",
+            "answer": "s’enchaînent",
+            "alt": [],
+            "drawSource": "Quand plusieurs évolutions s’enchaînent, on ne les additionne pas : on multiplie leurs coefficients pour obtenir le coefficient global.",
+            "explain": "Le mot manquant : « s’enchaînent »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Le ____ répond à la question : « quelle évolution identique, répétée n fois, donnerait le même résultat global ? ».",
+            "answer": "taux moyen",
+            "alt": [],
+            "drawSource": "Le taux moyen répond à la question : « quelle évolution identique, répétée n fois, donnerait le même résultat global ? ».",
+            "explain": "Le mot manquant : « taux moyen »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Le taux moyen répond à la question : « quelle évolution ____, répétée n fois, donnerait le même résultat global ? ».",
+            "answer": "identique",
+            "alt": [],
+            "drawSource": "Le taux moyen répond à la question : « quelle évolution identique, répétée n fois, donnerait le même résultat global ? ».",
+            "explain": "Le mot manquant : « identique »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-art",
+      "idx": 0,
+      "title": "🎨 L’art : œuvre et objet utile, beau et agréable",
+      "games": [
+        {
+          "id": "philo-art::0::trou0",
+          "type": "trou",
+          "count": 6
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "L’artisan fabrique des objets ____ en suivant un modèle ; l’artiste crée une œuvre singulière, qui vaut pour elle-même et non pour son usage.",
+            "answer": "utiles",
+            "alt": [],
+            "drawSource": "L’artisan fabrique des objets utiles en suivant un modèle ; l’artiste crée une œuvre singulière, qui vaut pour elle-même et non pour son usage.",
+            "explain": "Le mot manquant : « utiles »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "L’artisan fabrique des objets utiles en suivant un modèle ; l’artiste crée une œuvre ____, qui vaut pour elle-même et non pour son usage.",
+            "answer": "singulière",
+            "alt": [],
+            "drawSource": "L’artisan fabrique des objets utiles en suivant un modèle ; l’artiste crée une œuvre singulière, qui vaut pour elle-même et non pour son usage.",
+            "explain": "Le mot manquant : « singulière »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Beau / agréable : l’agréable ____ (un plat, une température) ; le beau prétend, lui, valoir au-delà de mon plaisir immédiat.",
+            "answer": "plaît aux sens",
+            "alt": [],
+            "drawSource": "Beau / agréable : l’agréable plaît aux sens (un plat, une température) ; le beau prétend, lui, valoir au-delà de mon plaisir immédiat.",
+            "explain": "Le mot manquant : « plaît aux sens »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "philosophie",
+      "tid": "philo-art",
+      "idx": 1,
+      "title": "🤔 Imiter ou révéler : Platon, Hegel et le goût selon Kant",
+      "games": [
+        {
+          "id": "philo-art::1::sterm",
+          "type": "saisie",
+          "count": 2
+        },
+        {
+          "id": "philo-art::1::trou0",
+          "type": "trou",
+          "count": 3
+        },
+        {
+          "id": "philo-art::1::strou",
+          "type": "saisie",
+          "count": 3
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "prompt": "Quel terme correspond à cette définition ?\n« l’art imite (et trompe) : pour Platon, l’art n’est qu’une copie de copie**, une illusion qui nous éloigne de la vérité »",
+            "answer": "**Thèse 1",
+            "alt": [],
+            "explain": "**Thèse 1 : l’art imite (et trompe) : pour Platon, l’art n’est qu’une copie de copie**, une illusion qui nous éloigne de la vérité"
+          },
+          "game": "saisie"
+        },
+        {
+          "q": {
+            "prompt": "Quel terme correspond à cette définition ?\n« l’art révèle : pour Hegel, l’œuvre manifeste l’esprit** ; elle dit une vérité sur l’homme que le réel brut ne montre pas »",
+            "answer": "**Thèse 2",
+            "alt": [],
+            "explain": "**Thèse 2 : l’art révèle : pour Hegel, l’œuvre manifeste l’esprit** ; elle dit une vérité sur l’homme que le réel brut ne montre pas"
+          },
+          "game": "saisie"
+        },
+        {
+          "q": {
+            "text": "On attend souvent de l’art qu’il ____ au réel.",
+            "answer": "ressemble",
+            "alt": [],
+            "drawSource": "On attend souvent de l’art qu’il ressemble au réel.",
+            "explain": "Le mot manquant : « ressemble »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "p1-sgn",
+      "tid": "p1-sgn-t1",
+      "idx": 0,
+      "title": "L’organisation, un collectif humain",
+      "games": [
+        {
+          "id": "p1-sgn-t1::0::trou0",
+          "type": "trou",
+          "count": 4
+        },
+        {
+          "id": "p1-sgn-t1::0::strou",
+          "type": "saisie",
+          "count": 5
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "text": "Une organisation (entreprise, association, administration) n’est pas seulement un organigramme, des machines ou des capitaux : c’est d’abord un ____ qui coopèrent pour atteindre un but commun.",
+            "answer": "ensemble d’êtres humains",
+            "alt": [],
+            "drawSource": "Une organisation (entreprise, association, administration) n’est pas seulement un organigramme, des machines ou des capitaux : c’est d’abord un ensemble d’êtres humains qui coopèrent pour atteindre un but commun.",
+            "explain": "Le mot manquant : « ensemble d’êtres humains »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Une organisation (entreprise, association, administration) n’est pas seulement un organigramme, des machines ou des capitaux : c’est d’abord un ensemble d’êtres humains qui coopèrent pour atteindre un ____.",
+            "answer": "but commun",
+            "alt": [],
+            "drawSource": "Une organisation (entreprise, association, administration) n’est pas seulement un organigramme, des machines ou des capitaux : c’est d’abord un ensemble d’êtres humains qui coopèrent pour atteindre un but commun.",
+            "explain": "Le mot manquant : « but commun »."
+          },
+          "game": "trou"
+        },
+        {
+          "q": {
+            "text": "Le management doit donc ____ pour transformer ce potentiel en performance collective.",
+            "answer": "connaître et comprendre l’individu",
+            "alt": [],
+            "drawSource": "Le management doit donc connaître et comprendre l’individu pour transformer ce potentiel en performance collective.",
+            "explain": "Le mot manquant : « connaître et comprendre l’individu »."
+          },
+          "game": "trou"
+        }
+      ]
+    },
+    {
+      "sid": "p1-sgn",
+      "tid": "p1-sgn-t1",
+      "idx": 1,
+      "title": "La personnalité de l’individu",
+      "games": [
+        {
+          "id": "p1-sgn-t1::1::qdef",
+          "type": "qcm",
+          "count": 3
+        },
+        {
+          "id": "p1-sgn-t1::1::qcas",
+          "type": "qcm",
+          "count": 3
+        },
+        {
+          "id": "p1-sgn-t1::1::vf",
+          "type": "vraifaux",
+          "count": 6
+        },
+        {
+          "id": "p1-sgn-t1::1::sterm",
+          "type": "saisie",
+          "count": 5
+        },
+        {
+          "id": "p1-sgn-t1::1::assoc",
+          "type": "association"
+        },
+        {
+          "id": "p1-sgn-t1::1::memory",
+          "type": "memory"
+        },
+        {
+          "id": "p1-sgn-t1::1::trou0",
+          "type": "trou",
+          "count": 4
+        },
+        {
+          "id": "p1-sgn-t1::1::strou",
+          "type": "saisie",
+          "count": 6
+        },
+        {
+          "id": "p1-sgn-t1::1::qtrou",
+          "type": "qcm",
+          "count": 6
+        },
+        {
+          "id": "p1-sgn-t1::1::cards",
+          "type": "flashcard",
+          "count": 6
+        }
+      ],
+      "questions": [
+        {
+          "q": {
+            "q": "Que signifie : « Personnalité » ?",
+            "choices": [
+              "Ensemble des traits de caractère, du tempérament, des valeurs et des besoins",
+              "Part liée au naturel, à la sensibilité",
+              "Ce que la personne cherche à satisfaire"
+            ],
+            "answer": 0,
+            "explain": "Personnalité → Ensemble des traits de caractère, du tempérament, des valeurs et des besoins",
+            "drawSource": "notion:personnalite"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "« Besoins » : quelle proposition est correcte ?",
+            "choices": [
+              "Ensemble des traits de caractère, du tempérament, des valeurs et des besoins",
+              "Ce que la personne cherche à satisfaire",
+              "Part liée au naturel, à la sensibilité"
+            ],
+            "answer": 1,
+            "explain": "Besoins → Ce que la personne cherche à satisfaire",
+            "drawSource": "notion:besoins"
+          },
+          "game": "qcm"
+        },
+        {
+          "q": {
+            "q": "Quelle est la bonne définition de « Tempérament » ?",
+            "choices": [
+              "Part liée au naturel, à la sensibilité",
+              "Ce que la personne cherche à satisfaire",
+              "Ensemble des traits de caractère, du tempérament, des valeurs et des besoins"
+            ],
+            "answer": 0,
+            "explain": "Tempérament → Part liée au naturel, à la sensibilité",
+            "drawSource": "notion:temperament"
+          },
+          "game": "qcm"
+        }
+      ]
+    }
+  ]
+}

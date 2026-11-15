@@ -2,8 +2,8 @@ import {it,expect} from 'vitest'
 import {DOMAINES,ETAPES,TOTAL,nettoyerReponses,bilanAvenir,conseilsContexte} from '../src/data/avenir.js'
 import {mergeProgress} from '../src/progression.js'
 import {estPagePayante,estPageUltimate} from '../src/data/acces.js'
-it('56 questions uniques réparties dans huit domaines et le contexte',()=>{
- const ids=ETAPES.flatMap(e=>e.questions.map(q=>q.id));expect(TOTAL).toBe(56);expect(new Set(ids).size).toBe(TOTAL);expect(DOMAINES).toHaveLength(8)
+it('80 questions uniques réparties en douze étapes complémentaires',()=>{
+ const ids=ETAPES.flatMap(e=>e.questions.map(q=>q.id));expect(TOTAL).toBe(80);expect(ETAPES).toHaveLength(12);expect(new Set(ids).size).toBe(TOTAL);expect(DOMAINES).toHaveLength(8)
  for(const d of DOMAINES){expect(d.questions).toHaveLength(6);expect(d.formations.length).toBeGreaterThan(0)}
 })
 it('nettoyage : zéro et inconnue valides, réponses invalides exclues',()=>{
@@ -53,4 +53,29 @@ it('les notes départagent des intérêts proches, sans créer ni supprimer une 
  expect(bilanAvenir({}, {droit:20}).some(d=>d.explorable)).toBe(false)
  expect(bilanAvenir(a,{maths:80}).find(d=>d.id==='finance').bonus).toBe(0)
  expect(bilanAvenir(a).every(d=>d.bonus===0)).toBe(true)
+})
+
+import {etapeReprise} from '../src/data/avenir.js'
+import {COMPLEMENTS,bilanGlobal,VOIES_ETUDES} from '../src/data/avenirGlobal.js'
+it('conserve les56anciennes réponses et reprend les nouvelles rubriques',()=>{
+ const old=Object.fromEntries(ETAPES.filter(s=>!COMPLEMENTS.some(g=>g.id===s.id)).flatMap(s=>s.questions.map(q=>[q.id,q.options?0:4])))
+ expect(Object.keys(old)).toHaveLength(56);expect(Object.keys(nettoyerReponses(old))).toHaveLength(56)
+ expect(ETAPES[etapeReprise({answers:old,finished:true,step:8})].id).toBe('methodes')
+ expect(ETAPES[etapeReprise({answers:old,stepId:'projet'})].id).toBe('projet')
+})
+it('bilan global : préférences, inconnues, voies et actions ne sont pas un diagnostic',()=>{
+ const unknown=Object.fromEntries(COMPLEMENTS.flatMap(g=>g.questions.map(q=>[q.id,3])))
+ const b=bilanGlobal(unknown,[],{}, {metier:'<b>Mon idée</b>'})
+ expect(b.appuis).toEqual([]);expect(b.besoins).toEqual([]);expect(b.profils.every(g=>g.inconnues===8)).toBe(true)
+ expect(b.domaines).toEqual([]);expect(b.voies).toHaveLength(4);expect(b.actions).toHaveLength(4)
+ expect(b.projectText.metier).toBe('<b>Mon idée</b>');expect(b.vigilances.length).toBeGreaterThan(0)
+ const a=bilanGlobal({cadre:0,p_voie:2,alternance:0,p_alternance:1,duree:0,m_regulier:2,p_financement:1},[],{maths:0})
+ expect(a.besoins).toContain('Construire un rythme de travail réaliste');expect(a.vigilances.length).toBeGreaterThanOrEqual(3)
+ expect(a.actions.some(x=>x.id==='budget')).toBe(true);expect(a.voies[0].id).toBe('bts')
+ expect(bilanGlobal({duree:2}).voies[0].id).toBe('ect')
+})
+for(const lang of ['en','es','it','de','ar'])it(`bilan global et nouvelles questions traduits hors ligne en ${lang}`,()=>{
+ const book=JSON.parse(readFileSync(new URL(`../src/localisation/public.${lang}.json`,import.meta.url),'utf8'))
+ const keys=[...COMPLEMENTS.flatMap(g=>[g.title,...g.questions.flatMap(q=>[q.label,...q.options,...(q.appui?[q.appui,q.besoin]:[])])]),...VOIES_ETUDES.flatMap(v=>[v.title,v.duree,v.cadre,v.vigilance])]
+ for(const k of keys)expect(typeof book[k],lang+': '+k).toBe('string')
 })

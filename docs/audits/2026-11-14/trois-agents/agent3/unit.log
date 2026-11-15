@@ -1,0 +1,180 @@
+file:///workspace/revizstmg.github.io/app/node_modules/vitest/dist/chunks/utils.C8RiOc4B.js:8
+    throw new Error(errorMsg);
+          ^
+
+Error: Vitest failed to access its internal state.
+
+One of the following is possible:
+- "vitest" is imported directly without running "vitest" command
+- "vitest" is imported inside "globalSetup" (to fix this, use "setupFiles" instead, because "globalSetup" runs in a different context)
+- Otherwise, it might be a Vitest bug. Please report it to https://github.com/vitest-dev/vitest/issues
+
+    at getWorkerState (file:///workspace/revizstmg.github.io/app/node_modules/vitest/dist/chunks/utils.C8RiOc4B.js:8:11)
+    at getCurrentEnvironment (file:///workspace/revizstmg.github.io/app/node_modules/vitest/dist/chunks/utils.C8RiOc4B.js:22:17)
+    at createExpect (file:///workspace/revizstmg.github.io/app/node_modules/vitest/dist/chunks/vi.DgezovHB.js:521:20)
+    at file:///workspace/revizstmg.github.io/app/node_modules/vitest/dist/chunks/vi.DgezovHB.js:566:22
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.19.0
+✖ tests/avenir.test.js (253.600083ms)
+node:internal/modules/esm/assert:99
+        throw new ERR_IMPORT_ATTRIBUTE_MISSING(url, 'type', validType);
+              ^
+
+TypeError [ERR_IMPORT_ATTRIBUTE_MISSING]: Module "file:///workspace/work/audit-global-20261109-3/app/content/eps/activites.json" needs an import attribute of "type: json"
+    at validateAttributes (node:internal/modules/esm/assert:99:15)
+    at defaultLoadSync (node:internal/modules/esm/load:163:3)
+    at #loadAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:802:12)
+    at #loadSync (node:internal/modules/esm/loader:834:53)
+    at ModuleLoader.load (node:internal/modules/esm/loader:783:26)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:494:31)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:560:36)
+    at afterResolve (node:internal/modules/esm/loader:607:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:613:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:163:33) {
+  code: 'ERR_IMPORT_ATTRIBUTE_MISSING'
+}
+
+Node.js v24.19.0
+✖ tests/eps-preparation.test.js (134.852659ms)
+node:internal/modules/esm/assert:99
+        throw new ERR_IMPORT_ATTRIBUTE_MISSING(url, 'type', validType);
+              ^
+
+TypeError [ERR_IMPORT_ATTRIBUTE_MISSING]: Module "file:///workspace/work/audit-global-20261109-3/app/content/commun/etude-gestion.json" needs an import attribute of "type: json"
+    at validateAttributes (node:internal/modules/esm/assert:99:15)
+    at defaultLoadSync (node:internal/modules/esm/load:163:3)
+    at #loadAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:802:12)
+    at #loadSync (node:internal/modules/esm/loader:834:53)
+    at ModuleLoader.load (node:internal/modules/esm/loader:783:26)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:494:31)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:560:36)
+    at afterResolve (node:internal/modules/esm/loader:607:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:613:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:163:33) {
+  code: 'ERR_IMPORT_ATTRIBUTE_MISSING'
+}
+
+Node.js v24.19.0
+✖ tests/etude-gestion.test.js (150.129021ms)
+node:internal/modules/esm/load:193
+    throw new ERR_UNSUPPORTED_ESM_URL_SCHEME(parsed, schemes);
+          ^
+
+Error [ERR_UNSUPPORTED_ESM_URL_SCHEME]: Only URLs with a scheme in: file, data, and node are supported by the default ESM loader. Received protocol 'virtual:'
+    at throwIfUnsupportedURLScheme (node:internal/modules/esm/load:193:11)
+    at defaultLoadSync (node:internal/modules/esm/load:146:3)
+    at #loadAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:802:12)
+    at #loadSync (node:internal/modules/esm/loader:834:53)
+    at ModuleLoader.load (node:internal/modules/esm/loader:783:26)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:494:31)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:560:36)
+    at afterResolve (node:internal/modules/esm/loader:607:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:613:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:163:33) {
+  code: 'ERR_UNSUPPORTED_ESM_URL_SCHEME'
+}
+
+Node.js v24.19.0
+✖ tests/examen-personnalise.test.js (159.286758ms)
+file:///workspace/revizstmg.github.io/app/node_modules/vitest/dist/chunks/utils.C8RiOc4B.js:8
+    throw new Error(errorMsg);
+          ^
+
+Error: Vitest failed to access its internal state.
+
+One of the following is possible:
+- "vitest" is imported directly without running "vitest" command
+- "vitest" is imported inside "globalSetup" (to fix this, use "setupFiles" instead, because "globalSetup" runs in a different context)
+- Otherwise, it might be a Vitest bug. Please report it to https://github.com/vitest-dev/vitest/issues
+
+    at getWorkerState (file:///workspace/revizstmg.github.io/app/node_modules/vitest/dist/chunks/utils.C8RiOc4B.js:8:11)
+    at getCurrentEnvironment (file:///workspace/revizstmg.github.io/app/node_modules/vitest/dist/chunks/utils.C8RiOc4B.js:22:17)
+    at createExpect (file:///workspace/revizstmg.github.io/app/node_modules/vitest/dist/chunks/vi.DgezovHB.js:521:20)
+    at file:///workspace/revizstmg.github.io/app/node_modules/vitest/dist/chunks/vi.DgezovHB.js:566:22
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.19.0
+✖ tests/excellence.test.js (252.440879ms)
+node:internal/modules/esm/assert:99
+        throw new ERR_IMPORT_ATTRIBUTE_MISSING(url, 'type', validType);
+              ^
+
+TypeError [ERR_IMPORT_ATTRIBUTE_MISSING]: Module "file:///workspace/work/audit-global-20261109-3/app/content/commun/grand-oral.json" needs an import attribute of "type: json"
+    at validateAttributes (node:internal/modules/esm/assert:99:15)
+    at defaultLoadSync (node:internal/modules/esm/load:163:3)
+    at #loadAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:802:12)
+    at #loadSync (node:internal/modules/esm/loader:834:53)
+    at ModuleLoader.load (node:internal/modules/esm/loader:783:26)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:494:31)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:560:36)
+    at afterResolve (node:internal/modules/esm/loader:607:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:613:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:163:33) {
+  code: 'ERR_IMPORT_ATTRIBUTE_MISSING'
+}
+
+Node.js v24.19.0
+✖ tests/grand-oral.test.js (131.04057ms)
+node:internal/modules/esm/load:193
+    throw new ERR_UNSUPPORTED_ESM_URL_SCHEME(parsed, schemes);
+          ^
+
+Error [ERR_UNSUPPORTED_ESM_URL_SCHEME]: Only URLs with a scheme in: file, data, and node are supported by the default ESM loader. Received protocol 'virtual:'
+    at throwIfUnsupportedURLScheme (node:internal/modules/esm/load:193:11)
+    at defaultLoadSync (node:internal/modules/esm/load:146:3)
+    at #loadAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:802:12)
+    at #loadSync (node:internal/modules/esm/loader:834:53)
+    at ModuleLoader.load (node:internal/modules/esm/loader:783:26)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:494:31)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:560:36)
+    at afterResolve (node:internal/modules/esm/loader:607:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:613:12)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:163:33) {
+  code: 'ERR_UNSUPPORTED_ESM_URL_SCHEME'
+}
+
+Node.js v24.19.0
+✖ tests/vacances.test.js (154.876463ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 0
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1256.428008
+
+✖ failing tests:
+
+test at tests/avenir.test.js:1:1
+✖ tests/avenir.test.js (253.600083ms)
+  'test failed'
+
+test at tests/eps-preparation.test.js:1:1
+✖ tests/eps-preparation.test.js (134.852659ms)
+  'test failed'
+
+test at tests/etude-gestion.test.js:1:1
+✖ tests/etude-gestion.test.js (150.129021ms)
+  'test failed'
+
+test at tests/examen-personnalise.test.js:1:1
+✖ tests/examen-personnalise.test.js (159.286758ms)
+  'test failed'
+
+test at tests/excellence.test.js:1:1
+✖ tests/excellence.test.js (252.440879ms)
+  'test failed'
+
+test at tests/grand-oral.test.js:1:1
+✖ tests/grand-oral.test.js (131.04057ms)
+  'test failed'
+
+test at tests/vacances.test.js:1:1
+✖ tests/vacances.test.js (154.876463ms)
+  'test failed'

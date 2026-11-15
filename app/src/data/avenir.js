@@ -1,3 +1,4 @@
+import {COMPLEMENTS} from './avenirGlobal.js'
 import { lireNote } from '../notesClasse.js'
 // Repérage d'intérêts déclaré par l'élève, sans diagnostic ni prédiction d'admission.
 export const DOMAINES = [
@@ -39,7 +40,7 @@ export const CONTEXTE = [
  ['maths','Comment abordes-tu actuellement les calculs et les données ?',['Je suis à l’aise','Je progresse avec des exemples','J’ai besoin d’un accompagnement','Je manque de recul']],
  ['redaction','Comment abordes-tu actuellement la lecture et la rédaction ?',['Je suis à l’aise','Je progresse avec une méthode','J’ai besoin d’un accompagnement','Je manque de recul']],
 ].map(([id,label,options])=>({id,label,options}))
-export const ETAPES = [...DOMAINES.map(d=>({id:d.id,title:d.title,questions:d.questions})),{id:'contexte',title:'Mes conditions d’études',questions:CONTEXTE}]
+export const ETAPES = [...DOMAINES.map(d=>({id:d.id,title:d.title,questions:d.questions})),...COMPLEMENTS,{id:'contexte',title:'Mes conditions d’études',questions:CONTEXTE}]
 export const TOTAL = ETAPES.reduce((n,s)=>n+s.questions.length,0)
 export function reponseValide(q,v){return q.options?Number.isInteger(v)&&v>=0&&v<q.options.length:v==='?'||Number.isInteger(v)&&v>=0&&v<=4}
 export function nettoyerReponses(raw){return Object.fromEntries(ETAPES.flatMap(s=>s.questions).filter(q=>reponseValide(q,raw?.[q.id])).map(q=>[q.id,raw[q.id]]))}
@@ -98,4 +99,12 @@ export function notesPourAvenir(liste, overrides={}, allowedIds=null){
   if(note===null)delete notes[id];else notes[id]=note
  }
  return notes
+}
+
+export function etapeReprise(saved={}){
+ const answers=nettoyerReponses(saved.answers)
+ const byId=ETAPES.findIndex(s=>s.id===saved.stepId)
+ if(byId>=0)return byId
+ const firstMissing=ETAPES.findIndex(s=>s.questions.some(q=>answers[q.id]===undefined))
+ return firstMissing>=0?firstMissing:0
 }

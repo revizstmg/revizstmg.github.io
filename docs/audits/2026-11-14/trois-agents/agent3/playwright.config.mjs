@@ -1,0 +1,1 @@
+export default {testDir:'/workspace/work/audit-global-20261109-3/app/tests/parcours',timeout:90000,expect:{timeout:10000},workers:1,reporter:'list',outputDir:'/workspace/output/audit-global-20261109/agent3/browser-results',use:{baseURL:'http://127.0.0.1:4263/',headless:true,trace:'retain-on-failure'},projects:[{name:'audit-chromium'}]}

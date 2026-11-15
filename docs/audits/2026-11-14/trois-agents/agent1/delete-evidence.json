@@ -1,0 +1,62 @@
+{
+  "calls": 0,
+  "text": "←\nRévizSTMG\n⚠\nNon enregistré\n1\nNiv. 1 · 0 XP\nFR\nLT\n🧑‍🏫\nMa classe\n🤝\nAmis\n🛍️\nBoutique\n🏆\nClassement\nAccueil\n›\nParamètres\n☁️\nNon sauvegardé\nLa sauvegarde sur ton compte a échoué. Ta progression reste sur cet appareil ; on réessaie tout seul.\nRéessayer\n← Confidentialité et données\n\nPARAMÈTRES\n\nSupprimer mon compte\n\nComprendre et confirmer la suppression de mon compte.\n\nZone sensible\n\nEfface définitivement ta progression, ta classe et tes contributions, tes amis et tes duels, le suivi parent et ton compte de connexion (adresse e-mail comprise).\n\n🗑️ Supprimer mon compte\nRévizSTMG\nCours sans inscription\nÀ propos\nGuide de démarrage\nPolitique de confidentialité\nCGU et mentions légales\nLes offres\nExemple de bilan\nFAQ\n♿ Accessibilité\nNous contacter · revizstmg@gmail.com\n\nCréé par Gabriel MERLIN\n\n© 2026 RévizSTMG\n\n🏠\nAccueil\n📖\nCours\n🧠\nRéviser\n📝\nBac blanc\n⚙️\nParamètres\n🍪\n\nAucun cookie publicitaire ni de suivi. En savoir plus\n\nOK",
+  "buttons": [
+    {
+      "text": "←",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "disabled": false
+    },
+    {
+      "text": "FR",
+      "disabled": false
+    },
+    {
+      "text": "LT",
+      "disabled": false
+    },
+    {
+      "text": "",
+      "disabled": false
+    },
+    {
+      "text": "Réessayer",
+      "disabled": false
+    },
+    {
+      "text": "Mes progrès",
+      "disabled": false
+    },
+    {
+      "text": "Personnaliser mon profil \n      🔒 AppliCouleurs, police, avatar, photo…",
+      "disabled": false
+    },
+    {
+      "text": "🗑️ Supprimer mon compte",
+      "disabled": false
+    },
+    {
+      "text": "♿ Accessibilité",
+      "disabled": false
+    },
+    {
+      "text": "OK",
+      "disabled": false
+    }
+  ]
+}

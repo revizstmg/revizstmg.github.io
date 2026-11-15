@@ -1,0 +1,100 @@
+
+ RUN  v2.1.9 /workspace/work/audit-global-20261109-3/app
+
+stderr | tests/examen-personnalise.test.js > fonction serveur sans appel réel > une erreur fournisseur ou une sortie hors chapitre ne devient pas un faux examen
+{"event":"exam_provider_attempt","action":"generate","model":"gemini-3.5-flash-lite","status":429}
+{"event":"exam_provider_failure","status":429,"code":"rate_limit"}
+{"event":"exam_invalid_response","action":"generate","step":null,"phase":"contract","hasFeedback":false,"criteriaCount":null}
+
+stderr | tests/examen-personnalise.test.js > diagnostic Gemini : refus fournisseur catégorisé sans recopier son message
+{"event":"exam_provider_failure","status":403,"code":"provider_permission"}
+{"event":"exam_provider_failure","status":404,"code":"provider_model_unavailable"}
+{"event":"exam_provider_failure","status":429,"code":"rate_limit"}
+{"event":"exam_provider_failure","status":400,"code":"provider_key_invalid"}
+
+stderr | tests/examen-personnalise.test.js > Gemini : modèle actuel et repli borné si un ancien modèle renvoie 404
+{"event":"exam_provider_attempt","action":"generate","model":"ancien","status":404}
+
+stderr | tests/examen-personnalise.test.js > Gemini : aucun repli en cas de quota ou de permissions
+{"event":"exam_provider_attempt","action":"generate","model":"ancien","status":403}
+{"event":"exam_provider_failure","status":403,"code":"provider_permission"}
+{"event":"exam_provider_attempt","action":"generate","model":"ancien","status":429}
+{"event":"exam_provider_failure","status":429,"code":"rate_limit"}
+
+stderr | tests/examen-personnalise.test.js > Gemini indisponible : génération sur une autre capacité sans répéter le modèle saturé
+{"event":"exam_provider_attempt","action":"generate","model":"gemini-3.5-flash-lite","status":503}
+
+stderr | tests/examen-personnalise.test.js > Gemini indisponible partout : appels bornés, aucune réponse factice
+{"event":"exam_provider_attempt","action":"generate","model":"gemini-3.5-flash-lite","status":503}
+{"event":"exam_provider_attempt","action":"generate","model":"gemini-3.6-flash","status":503}
+{"event":"exam_provider_attempt","action":"generate","model":"gemini-3.5-flash","status":503}
+{"event":"exam_provider_failure","status":503,"code":"provider_unavailable"}
+
+stderr | tests/examen-personnalise.test.js > Groq > ne contourne pas les quotas et rejette un sujet incomplet
+{"event":"exam_provider_failure","status":429,"code":"rate_limit"}
+{"event":"exam_invalid_response","action":"generate","step":null,"phase":"contract","hasFeedback":false,"criteriaCount":null}
+
+stderr | tests/examen-personnalise.test.js > dossier et correction multimodale > refuse format déguisé, excès de fichiers et copie hors barème avant génération
+{"event":"exam_invalid_request","code":"invalid_files"}
+{"event":"exam_invalid_request","code":"invalid_files"}
+{"event":"exam_invalid_request","code":"invalid_request"}
+
+stderr | tests/examen-personnalise.test.js > dossier et correction multimodale > rejette un dépassement de points, une question répétée et une copie sans correspondance sans lui donner de note
+{"event":"exam_invalid_response","action":"grade","step":null,"phase":"contract","hasFeedback":true,"criteriaCount":null}
+{"event":"exam_invalid_response","action":"grade","step":null,"phase":"contract","hasFeedback":true,"criteriaCount":null}
+{"event":"exam_invalid_response","action":"grade","step":null,"phase":"contract","hasFeedback":true,"criteriaCount":null}
+
+stderr | tests/examen-personnalise.test.js > dossier et correction multimodale > rejette les nouveaux sujets sans dossier ou sans questions de connaissances
+{"event":"exam_invalid_response","action":"generate","step":null,"phase":"contract","hasFeedback":false,"criteriaCount":null}
+{"event":"exam_invalid_response","action":"generate","step":null,"phase":"contract","hasFeedback":false,"criteriaCount":null}
+
+stderr | tests/examen-personnalise.test.js > génération : deuxième capacité saturée, troisième modèle borné et une seule réservation
+{"event":"exam_provider_attempt","action":"generate","model":"gemini-3.5-flash-lite","status":503}
+{"event":"exam_provider_attempt","action":"generate","model":"gemini-3.6-flash","status":503}
+
+stderr | tests/examen-personnalise.test.js > génération : panne de tous les modèles, réservation rendue une seule fois
+{"event":"exam_provider_attempt","action":"generate","model":"gemini-3.5-flash-lite","status":503}
+{"event":"exam_provider_attempt","action":"generate","model":"gemini-3.6-flash","status":503}
+{"event":"exam_provider_attempt","action":"generate","model":"gemini-3.5-flash","status":503}
+{"event":"exam_provider_failure","status":503,"code":"provider_unavailable"}
+
+stderr | tests/examen-personnalise.test.js > génération : une tentative bloquée bascule sans attendre la limite du worker
+{"event":"exam_provider_attempt","action":"generate","model":"gemini-3.5-flash-lite","status":"timeout"}
+
+ ✓ tests/examen-personnalise.test.js (36 tests) 18670ms
+   ✓ le catalogue couvre les deux niveaux de management avec le vrai texte des sections 18559ms
+stderr | tests/excellence.test.js > sans compte, sans Gemini ou sans dossier vérifiable : aucun appel de correction
+{"event":"exam_request_failure","code":"documents_unavailable","action":"excellence","step":null,"kind":"Error"}
+
+stderr | tests/excellence.test.js > Prix : panne transitoire puis repli Gemini, PDF et grille conservés, aucun résultat inventé
+{"event":"exam_provider_attempt","action":"excellence","model":"gemini-3.5-flash-lite","status":503}
+
+stderr | tests/excellence.test.js > Prix : panne transitoire puis repli Gemini, PDF et grille conservés, aucun résultat inventé
+{"event":"exam_provider_attempt","action":"excellence","model":"gemini-3.5-flash-lite","status":429}
+{"event":"exam_provider_failure","status":429,"code":"rate_limit"}
+
+stderr | tests/excellence.test.js > Prix : panne transitoire puis repli Gemini, PDF et grille conservés, aucun résultat inventé
+{"event":"exam_provider_attempt","action":"excellence","model":"gemini-3.5-flash-lite","status":403}
+{"event":"exam_provider_failure","status":403,"code":"provider_permission"}
+
+stderr | tests/excellence.test.js > Prix : panne sur les deux modèles, attente bornée et aucune note de remplacement
+{"event":"exam_provider_attempt","action":"excellence","model":"gemini-3.5-flash-lite","status":503}
+{"event":"exam_provider_attempt","action":"excellence","model":"gemini-3.1-flash-lite","status":503}
+{"event":"exam_provider_failure","status":503,"code":"provider_unavailable"}
+
+ ✓ tests/excellence.test.js (10 tests) 3553ms
+   ✓ correction authentifiée : PDF intact au modèle, copie traitée comme donnée, barème contrôlé 581ms
+   ✓ Prix : panne transitoire puis repli Gemini, PDF et grille conservés, aucun résultat inventé 1620ms
+   ✓ Prix : panne sur les deux modèles, attente bornée et aucune note de remplacement 672ms
+ ✓ tests/vacances.test.js (9 tests) 9232ms
+   ✓ propose une sélection réelle dans chacun des deux niveaux sans matière hors périmètre 6548ms
+ ✓ tests/grand-oral.test.js (9 tests) 18ms
+ ✓ tests/etude-gestion.test.js (7 tests) 21ms
+ ✓ tests/eps-preparation.test.js (7 tests) 81ms
+ ✓ tests/avenir.test.js (13 tests) 132ms
+
+ Test Files  7 passed (7)
+      Tests  91 passed (91)
+   Start at  23:55:57
+   Duration  43.96s (transform 78.41s, setup 0ms, collect 8.20s, tests 31.71s, environment 1ms, prepare 1.17s)
+
