@@ -37,6 +37,8 @@ export const VOIES_ETUDES=[
  {id:'but',title:'BUT',duree:'Généralement 3 ans après le bac',cadre:'Des enseignements universitaires appliqués, des projets et des expériences professionnelles.',vigilance:'Vérifie les parcours proposés par chaque IUT, les attendus et l’année d’ouverture éventuelle de l’alternance.'},
  {id:'licence',title:'Licence (université)',duree:'Généralement 3 ans après le bac',cadre:'Une formation universitaire avec un travail personnel important et des enseignements théoriques.',vigilance:'Compare le contenu réel, l’accompagnement et la place des mathématiques ou de la rédaction. La poursuite en master nécessite une candidature.'},
  {id:'ect',title:'CPGE ECT',duree:'2 ans de prépa, puis une poursuite en école',cadre:'Une voie destinée aux bacheliers STMG, avec un travail intensif et encadré avant les concours des écoles de commerce.',vigilance:'Ce parcours ne se termine pas après les deux années de prépa. Vérifie les concours, les écoles accessibles et le coût de la poursuite d’études.'},
+ {id:'dcg',title:'DCG',duree:'3 ans après le bac, grade de licence',cadre:'Une formation en comptabilité, droit, économie et gestion, accessible notamment aux bacheliers STMG.',vigilance:'Le DCG permet de travailler ou de candidater à une poursuite, notamment en DSCG. Il ne suffit pas pour devenir expert-comptable.'},
+ {id:'ecole',title:'École de commerce post-bac',duree:'3, 4 ou 5 ans selon le programme',cadre:'Des programmes de management avec stages, projets et spécialisations, dont les admissions doivent être vérifiées pour les STMG.',vigilance:'Compare le diplôme exact, le visa, le grade éventuel, les frais totaux et l’accès aux spécialisations. La reconnaissance de l’école ne suffit pas à qualifier tous ses diplômes.'},
 ]
 const pick=(q,answers)=>Number.isInteger(answers[q.id])?q.options[answers[q.id]]:null
 export function bilanGlobal(answers={},domaines=[],notes={},projectText={}){
@@ -51,7 +53,7 @@ export function bilanGlobal(answers={},domaines=[],notes={},projectText={}){
  if(answers.duree===0)vigilances.push('Tu envisages environ deux ans d’études. Certaines pistes proposées se préparent en trois ans ou nécessitent une poursuite : compare bien les durées réelles.')
  if(Object.values(notes).some(n=>Number.isFinite(n)&&n<10))vigilances.push('Certaines notes sont sous 10/20. Utilise-les pour préparer un accompagnement et comparer les attendus, sans écarter automatiquement une piste qui t’intéresse.')
  if(profils.some(p=>p.inconnues>=4))vigilances.push('Plusieurs réponses restent à découvrir. Ce bilan est un point de départ : une rencontre ou une immersion peut t’aider à préciser ces choix.')
- const ordre=answers.duree===2?['ect','licence','but','bts']:answers.duree===1?['but','licence','bts','ect']:['bts','but','licence','ect']
+ const ordre=answers.duree===2?['ect','ecole','licence','dcg','but','bts']:answers.duree===1?['but','dcg','licence','ecole','bts','ect']:['bts','but','dcg','licence','ect','ecole']
  const voies=ordre.map(id=>VOIES_ETUDES.find(v=>v.id===id))
  const actions=[
   {id:'comparer',title:'Comparer trois formations',text:'Sur Parcoursup, relève le programme, les attendus, les critères d’examen, les frais et les possibilités de poursuite.',url:'https://www.parcoursup.gouv.fr/'},
