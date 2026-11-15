@@ -1,0 +1,67 @@
+[
+  {
+    "fichier": "guide-en.pdf",
+    "pages": 56,
+    "champs": 220,
+    "liens": 305,
+    "pages_vides": 0,
+    "types": [
+      "CheckBox",
+      "ComboBox",
+      "Text"
+    ],
+    "relecture_champ": "Élève audit 123"
+  },
+  {
+    "fichier": "guide-de.pdf",
+    "pages": 47,
+    "champs": 200,
+    "liens": 261,
+    "pages_vides": 0,
+    "types": [
+      "CheckBox",
+      "ComboBox",
+      "Text"
+    ],
+    "relecture_champ": "Élève audit 123"
+  },
+  {
+    "fichier": "guide-es.pdf",
+    "pages": 55,
+    "champs": 244,
+    "liens": 312,
+    "pages_vides": 0,
+    "types": [
+      "CheckBox",
+      "ComboBox",
+      "Text"
+    ],
+    "relecture_champ": "Élève audit 123"
+  },
+  {
+    "fichier": "guide-ar.pdf",
+    "pages": 50,
+    "champs": 172,
+    "liens": 308,
+    "pages_vides": 0,
+    "types": [
+      "CheckBox",
+      "ComboBox",
+      "Text"
+    ],
+    "relecture_champ": "Élève audit 123"
+  },
+  {
+    "fichier": "guide-it.pdf",
+    "pages": 49,
+    "champs": 172,
+    "liens": 291,
+    "pages_vides": 0,
+    "types": [
+      "CheckBox",
+      "ComboBox",
+      "Text"
+    ],
+    "relecture_champ": "Élève audit 123"
+  }
+]

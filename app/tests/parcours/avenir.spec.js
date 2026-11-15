@@ -55,3 +55,27 @@ test('notes de classe et moyennes manuelles : classement réversible sans change
  expect((await etat(page)).notesClasse[0].note).toBe(18);expect((await etat(page)).parcours.avenir.answers).toEqual(answers)
  expect(errors).toEqual([])
 })
+
+test('ancien bilan56réponses : migration, garde des étapes, projet privé et suivi',async({page})=>{
+ const old=Object.fromEntries(ETAPES.filter(s=>!['methodes','priorites','projet'].includes(s.id)).flatMap(s=>s.questions.map(q=>[q.id,q.options?0:4])))
+ await preparer(page,etatEleve({parcours:{avenir:{answers:old,finished:true,step:8,maj:1}}}),{abonnement:null})
+ await page.goto('/#/parcours-avenir');await expect(page.getByText('Complète les nouvelles rubriques',{exact:false})).toBeVisible()
+ await page.getByRole('button',{name:'Reprendre mon questionnaire'}).click()
+ await expect(page.getByRole('heading',{name:'Ma façon de travailler',exact:true})).toBeVisible()
+ await page.getByLabel('Aller à une étape',{exact:true}).selectOption('11')
+ await page.getByRole('button',{name:'Voir mon bilan',exact:true}).click()
+ await expect(page.getByRole('heading',{name:'Ma façon de travailler',exact:true})).toBeVisible()
+ for(const id of ['methodes','priorites','projet']){
+  const index=ETAPES.findIndex(s=>s.id===id);await page.getByLabel('Aller à une étape',{exact:true}).selectOption(String(index))
+  for(const field of await page.locator('fieldset').all())await field.getByRole('radio').nth(0).check()
+ }
+ await page.getByLabel('Métier ou secteur à explorer',{exact:true}).fill('Projet personnel <test>')
+ await page.getByRole('button',{name:'Actualiser mon bilan',exact:true}).click()
+ await expect(page.getByRole('heading',{name:'Mon cap',exact:true})).toBeVisible()
+ await expect(page.getByText('Projet personnel <test>',{exact:true})).toBeVisible()
+ await page.getByRole('checkbox',{name:'Comparer trois formations',exact:true}).check()
+ await page.reload();await expect(page.getByRole('checkbox',{name:'Comparer trois formations',exact:true})).toBeChecked()
+ expect(Object.keys((await etat(page)).parcours.avenir.answers)).toHaveLength(80)
+ await page.getByRole('button',{name:'Préciser mon projet',exact:true}).click()
+ await expect(page.getByLabel('Métier ou secteur à explorer',{exact:true})).toHaveValue('Projet personnel <test>')
+})

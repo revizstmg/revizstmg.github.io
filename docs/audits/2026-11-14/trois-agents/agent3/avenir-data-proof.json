@@ -1,0 +1,14 @@
+{
+  "total": 80,
+  "etapes": 12,
+  "unique": 80,
+  "migration": 56,
+  "reprise": "methodes",
+  "voies": [
+    "bts",
+    "but",
+    "licence",
+    "ect"
+  ],
+  "unknownExcluded": true
+}

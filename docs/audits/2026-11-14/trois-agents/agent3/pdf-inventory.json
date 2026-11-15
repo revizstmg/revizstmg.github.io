@@ -1,0 +1,555 @@
+[
+  {
+    "file": "eps/referentiel-ponctuel-2026.pdf",
+    "pages": 6,
+    "encrypted": false,
+    "textChars": 15380,
+    "widgets": 0
+  },
+  {
+    "file": "eps/programme-eps-2019.pdf",
+    "pages": 11,
+    "encrypted": false,
+    "textChars": 32201,
+    "widgets": 0
+  },
+  {
+    "file": "eps/referentiel-ccf-2026.pdf",
+    "pages": 19,
+    "encrypted": false,
+    "textChars": 40121,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-gestion-2-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4359,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-droit-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4270,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/revision-droit-economie-premiere-terminale-1-corrige.pdf",
+    "pages": 5,
+    "encrypted": false,
+    "textChars": 8458,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-gestion-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4493,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/revision-management-premiere-terminale-2-corrige.pdf",
+    "pages": 5,
+    "encrypted": false,
+    "textChars": 8798,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-gf-2-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 5120,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/revision-management-premiere-terminale-1-corrige.pdf",
+    "pages": 5,
+    "encrypted": false,
+    "textChars": 8265,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-economie-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4286,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-management-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 5040,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-economie-2-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4833,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-management-2-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4527,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-droit-economie-2-sujet.pdf",
+    "pages": 4,
+    "encrypted": false,
+    "textChars": 8630,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-economie-2-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 5049,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-gf-2-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4628,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/revision-droit-economie-premiere-terminale-2-corrige.pdf",
+    "pages": 5,
+    "encrypted": false,
+    "textChars": 8201,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-economie-2-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4563,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-economie-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4486,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/revision-droit-economie-premiere-terminale-2-sujet.pdf",
+    "pages": 4,
+    "encrypted": false,
+    "textChars": 7345,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-droit-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4890,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-management-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4488,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-management-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4447,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-management-2-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 5125,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-droit-economie-sujet.pdf",
+    "pages": 4,
+    "encrypted": false,
+    "textChars": 8770,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-management-bilan-corrige.pdf",
+    "pages": 5,
+    "encrypted": false,
+    "textChars": 9589,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/revision-management-premiere-terminale-2-sujet.pdf",
+    "pages": 4,
+    "encrypted": false,
+    "textChars": 7669,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-management-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4768,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-droit-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4768,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-droit-2-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 5262,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-gf-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4203,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-droit-economie-2-corrige.pdf",
+    "pages": 5,
+    "encrypted": false,
+    "textChars": 9584,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-droit-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 5018,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-management-bilan-sujet.pdf",
+    "pages": 4,
+    "encrypted": false,
+    "textChars": 8313,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-economie-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4158,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-droit-2-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4481,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-gf-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4182,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-economie-2-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4240,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-droit-economie-2-sujet.pdf",
+    "pages": 4,
+    "encrypted": false,
+    "textChars": 8097,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/revision-droit-economie-premiere-terminale-1-sujet.pdf",
+    "pages": 4,
+    "encrypted": false,
+    "textChars": 7352,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-gestion-2-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 5043,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-droit-2-sujet.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4676,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-economie-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 5086,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-droit-economie-2-corrige.pdf",
+    "pages": 5,
+    "encrypted": false,
+    "textChars": 10105,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-droit-2-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4972,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-droit-economie-corrige.pdf",
+    "pages": 5,
+    "encrypted": false,
+    "textChars": 8841,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-gestion-corrige.pdf",
+    "pages": 3,
+    "encrypted": false,
+    "textChars": 4927,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/revision-management-premiere-terminale-1-sujet.pdf",
+    "pages": 4,
+    "encrypted": false,
+    "textChars": 7448,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/premiere-droit-economie-sujet.pdf",
+    "pages": 4,
+    "encrypted": false,
+    "textChars": 7812,
+    "widgets": 0
+  },
+  {
+    "file": "sujets-prets/terminale-droit-economie-corrige.pdf",
+    "pages": 5,
+    "encrypted": false,
+    "textChars": 9901,
+    "widgets": 0
+  },
+  {
+    "file": "assets/guide-en-CzUfZh1o.pdf",
+    "pages": 56,
+    "encrypted": false,
+    "textChars": 80768,
+    "widgets": 220
+  },
+  {
+    "file": "assets/guide-de-DIlKC2Yp.pdf",
+    "pages": 47,
+    "encrypted": false,
+    "textChars": 72934,
+    "widgets": 200
+  },
+  {
+    "file": "assets/guide-it-DbbfBjC_.pdf",
+    "pages": 49,
+    "encrypted": false,
+    "textChars": 88321,
+    "widgets": 172
+  },
+  {
+    "file": "assets/guide-es-BE0KXwMH.pdf",
+    "pages": 51,
+    "encrypted": false,
+    "textChars": 80283,
+    "widgets": 0
+  },
+  {
+    "file": "assets/guide-de-8igkDzX8.pdf",
+    "pages": 43,
+    "encrypted": false,
+    "textChars": 70599,
+    "widgets": 0
+  },
+  {
+    "file": "assets/guide-en-FYKQxeSh.pdf",
+    "pages": 51,
+    "encrypted": false,
+    "textChars": 78228,
+    "widgets": 0
+  },
+  {
+    "file": "assets/guide-ar--VN9WzV_.pdf",
+    "pages": 50,
+    "encrypted": false,
+    "textChars": 91873,
+    "widgets": 172
+  },
+  {
+    "file": "assets/guide-it-3IVDX1lb.pdf",
+    "pages": 47,
+    "encrypted": false,
+    "textChars": 86318,
+    "widgets": 0
+  },
+  {
+    "file": "assets/guide-ar-CYSwJ0Mj.pdf",
+    "pages": 47,
+    "encrypted": false,
+    "textChars": 89817,
+    "widgets": 0
+  },
+  {
+    "file": "assets/guide-es-BqFylxvE.pdf",
+    "pages": 55,
+    "encrypted": false,
+    "textChars": 82948,
+    "widgets": 244
+  },
+  {
+    "file": "app/resources/langues/guide-en.pdf",
+    "pages": 56,
+    "encrypted": false,
+    "textChars": 80768,
+    "widgets": 220
+  },
+  {
+    "file": "app/resources/langues/guide-de.pdf",
+    "pages": 47,
+    "encrypted": false,
+    "textChars": 72934,
+    "widgets": 200
+  },
+  {
+    "file": "app/resources/langues/guide-es.pdf",
+    "pages": 55,
+    "encrypted": false,
+    "textChars": 82948,
+    "widgets": 244
+  },
+  {
+    "file": "app/resources/langues/guide-ar.pdf",
+    "pages": 50,
+    "encrypted": false,
+    "textChars": 91873,
+    "widgets": 172
+  },
+  {
+    "file": "app/resources/langues/guide-it.pdf",
+    "pages": 49,
+    "encrypted": false,
+    "textChars": 88321,
+    "widgets": 172
+  },
+  {
+    "file": "excellence/2025/sujet.pdf",
+    "pages": 11,
+    "encrypted": false,
+    "textChars": 22529,
+    "widgets": 0
+  },
+  {
+    "file": "excellence/2023/sujet.pdf",
+    "pages": 11,
+    "encrypted": false,
+    "textChars": 28885,
+    "widgets": 0
+  },
+  {
+    "file": "excellence/2024/sujet.pdf",
+    "pages": 10,
+    "encrypted": false,
+    "textChars": 25175,
+    "widgets": 0
+  },
+  {
+    "file": "excellence/2022/sujet.pdf",
+    "pages": 13,
+    "encrypted": false,
+    "textChars": 36514,
+    "widgets": 0
+  },
+  {
+    "file": "excellence/2021/sujet.pdf",
+    "pages": 12,
+    "encrypted": false,
+    "textChars": 34487,
+    "widgets": 0
+  },
+  {
+    "file": "docs/audits/2026-10-19/RevizSTMG-audit-global-2026-10-19.pdf",
+    "pages": 19,
+    "encrypted": false,
+    "textChars": 35457,
+    "widgets": 0
+  },
+  {
+    "file": "docs/audits/2026-10-20/RevizSTMG-ameliorations-du-site-2026-10-20.pdf",
+    "pages": 89,
+    "encrypted": false,
+    "textChars": 309454,
+    "widgets": 0
+  },
+  {
+    "file": "docs/audits/2026-11-05/outils-preuves/copie-longue.pdf",
+    "pages": 1,
+    "encrypted": false,
+    "textChars": 919,
+    "widgets": 0
+  },
+  {
+    "file": "cours/langues/guide-en.pdf",
+    "pages": 56,
+    "encrypted": false,
+    "textChars": 80768,
+    "widgets": 220
+  },
+  {
+    "file": "cours/langues/guide-de.pdf",
+    "pages": 47,
+    "encrypted": false,
+    "textChars": 72934,
+    "widgets": 200
+  },
+  {
+    "file": "cours/langues/guide-es.pdf",
+    "pages": 55,
+    "encrypted": false,
+    "textChars": 82948,
+    "widgets": 244
+  },
+  {
+    "file": "cours/langues/guide-ar.pdf",
+    "pages": 50,
+    "encrypted": false,
+    "textChars": 91873,
+    "widgets": 172
+  },
+  {
+    "file": "cours/langues/guide-it.pdf",
+    "pages": 49,
+    "encrypted": false,
+    "textChars": 88321,
+    "widgets": 172
+  }
+]

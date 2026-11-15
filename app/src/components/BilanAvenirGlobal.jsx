@@ -1,0 +1,30 @@
+import {TextePublic} from '../localisation/PublicText.jsx'
+import {formaterNote} from '../notesClasse.js'
+import {bilanGlobal} from '../data/avenirGlobal.js'
+
+export default function BilanAvenirGlobal({answers,results,notes,matieres,lang,projectText,actions,onAction,onEdit}){
+ const global=bilanGlobal(answers,results,notes,projectText)
+ const projets=[['metier','Métier ou secteur à explorer'],['formation','Formation à vérifier'],['question','Question à poser à un conseiller']]
+ return <>
+  <section className="card p-6 avenir-overview"><p className="avenir-kicker">Vue d’ensemble</p><h2>Mon cap</h2><p>Voici ce que tes réponses permettent de préparer : des intérêts à explorer, des points d’appui déclarés, un cadre d’études et des démarches concrètes. Ce bilan reste évolutif.</p>
+   <div className="avenir-overview-grid"><div><h3>Mes intérêts</h3>{global.domaines.length?<ul>{global.domaines.map(d=><li key={d.id}><strong><TextePublic text={d.title}/></strong><p><TextePublic text={d.positifs[0]}/></p></li>)}</ul>:<p>Mes intérêts restent à explorer avec des exemples de métiers et des rencontres.</p>}</div>
+    <div><h3>Mes appuis déclarés</h3>{global.appuis.length?<ul>{global.appuis.map(t=><li key={t}><TextePublic text={t}/></li>)}</ul>:<p>Je peux repérer mes appuis à partir d’un travail réussi ou d’un retour d’enseignant.</p>}</div>
+    <div><h3>Ce qui peut m’aider</h3>{global.besoins.length?<ul>{global.besoins.map(t=><li key={t}><TextePublic text={t}/></li>)}</ul>:<p>Je peux tester ma façon de travailler dans une situation nouvelle et demander un retour.</p>}</div>
+    <div><h3>Mes résultats</h3>{Object.keys(notes).length?<ul>{Object.entries(notes).map(([id,n])=><li key={id}><TextePublic text={matieres.find(m=>m.id.replace(/^p1-/,'')===id)?.name||id}/> : {formaterNote(n,lang)}/20</li>)}</ul>:<p>Les notes ne sont pas utilisées dans ce bilan. Je peux compléter ce repère plus tard si je le souhaite.</p>}<p className="text-sm">Les notes sont des repères, pas une décision d’admission.</p></div>
+   </div><button className="btn-ghost no-print mt-4" onClick={()=>onEdit('methodes')}>Revoir ma façon de travailler</button>
+  </section>
+  <section className="card p-6"><h2>Mon projet actuel</h2><p>Les idées ci-dessous sont les tiennes : elles restent à vérifier avec les informations des formations et les rencontres.</p>
+   <dl>{projets.map(([key,label])=><div className="avenir-context" key={key}><dt><TextePublic text={label}/></dt><dd dir="auto">{global.projectText[key]||<TextePublic text="À préciser"/>}</dd></div>)}</dl>
+   <button className="btn-ghost no-print mt-4" onClick={()=>onEdit('projet')}>Préciser mon projet</button>
+  </section>
+  <section><h2>Les voies après STMG</h2><p>Compare ces quatre voies avec tes préférences de durée et d’encadrement. Leur ordre aide à commencer la comparaison ; il ne constitue pas un classement d’admission.</p>
+   <div className="avenir-paths">{global.voies.map(v=><article className="card p-5" key={v.id}><h3><TextePublic text={v.title}/></h3><p className="font-semibold"><TextePublic text={v.duree}/></p><p><TextePublic text={v.cadre}/></p><p className="text-sm"><TextePublic text={v.vigilance}/></p></article>)}</div>
+  </section>
+  <section className="card p-6"><h2>Les points à vérifier</h2>{global.vigilances.length?<ul>{global.vigilances.map(t=><li key={t}><TextePublic text={t}/></li>)}</ul>:<p>Aucun point particulier ne ressort de ce croisement. Vérifie quand même les attendus, le quotidien des études et les conditions concrètes de chaque formation.</p>}</section>
+  <section className="card p-6"><h2>Mes prochaines démarches</h2><p>Ce suivi est personnel : coche une démarche lorsque tu l’as réalisée, puis garde ce bilan pour ton prochain échange.</p><ol>{global.actions.map(a=><li key={a.id}><label className="avenir-action-check"><input type="checkbox" checked={actions?.[a.id]===true} onChange={e=>onAction(a.id,e.target.checked)}/><strong><TextePublic text={a.title}/></strong></label><p><TextePublic text={a.text}/></p><a className="underline" href={a.url} target="_blank" rel="noopener noreferrer">Consulter la source ↗</a></li>)}</ol></section>
+  <section className="card p-6"><h2>Mes préférences en détail</h2><p>Ces réponses décrivent des préférences actuelles, pas une personnalité définitive. Elles servent à préparer tes questions et tes expériences.</p>
+   <div className="avenir-print-profiles">{global.profils.map(g=><section key={g.id}><h3><TextePublic text={g.title}/></h3><dl>{g.reponses.map(q=><div className="avenir-context" key={q.id}><dt><TextePublic text={q.label}/></dt><dd><TextePublic text={q.value}/></dd></div>)}</dl></section>)}</div>
+   {global.profils.map(g=><details className="avenir-profile-details" key={g.id}><summary><TextePublic text={g.title}/></summary><dl>{g.reponses.map(q=><div className="avenir-context" key={q.id}><dt><TextePublic text={q.label}/></dt><dd><TextePublic text={q.value}/></dd></div>)}</dl><button className="btn-ghost no-print mt-3" onClick={()=>onEdit(g.id)}>Modifier cette partie</button></details>)}
+  </section>
+ </>
+}
