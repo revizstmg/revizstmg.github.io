@@ -1,0 +1,17 @@
+
+Running 8 tests using 1 worker
+
+(node:9325) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9325) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 ../../../output/fiabilite-public/fiabilite.spec.js:7:43 › connexion : profil headers silencieux, formulaire récupérable et reprise (3.2s)
+  ✓  2 ../../../output/fiabilite-public/fiabilite.spec.js:7:43 › connexion : profil body silencieux, formulaire récupérable et reprise (2.1s)
+  ✓  3 ../../../output/fiabilite-public/fiabilite.spec.js:17:5 › sauvegarde : corps bloqué, état échec, dernière modification renvoyée sans perte locale (1.3s)
+  ✓  4 ../../../output/fiabilite-public/fiabilite.spec.js:26:5 › duel : ancien score global jamais repris par le second compte du même duel (2.1s)
+  ✓  5 ../../../output/fiabilite-public/fiabilite.spec.js:35:5 › atelier : programme et niveau retrouvés ; sélection masquée rendue visible à la demande (2.4s)
+  ✓  6 ../../../output/fiabilite-public/fiabilite.spec.js:42:5 › atelier : ancienne sélection de Terminale sur un compte Première restaurée sans abandon (1.3s)
+  ✓  7 ../../../output/fiabilite-public/fiabilite.spec.js:46:40 › audio : panne sync, arrêt expliqué et reprise (1.5s)
+  ✓  8 ../../../output/fiabilite-public/fiabilite.spec.js:46:40 › audio : panne async, arrêt expliqué et reprise (1.4s)
+
+  8 passed (17.9s)
