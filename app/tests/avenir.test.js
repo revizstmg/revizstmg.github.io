@@ -67,7 +67,7 @@ it('bilan global : préférences, inconnues, voies et actions ne sont pas un dia
  const unknown=Object.fromEntries(COMPLEMENTS.flatMap(g=>g.questions.map(q=>[q.id,3])))
  const b=bilanGlobal(unknown,[],{}, {metier:'<b>Mon idée</b>'})
  expect(b.appuis).toEqual([]);expect(b.besoins).toEqual([]);expect(b.profils.every(g=>g.inconnues===8)).toBe(true)
- expect(b.domaines).toEqual([]);expect(b.voies).toHaveLength(4);expect(b.actions).toHaveLength(4)
+ expect(b.domaines).toEqual([]);expect(b.voies).toHaveLength(6);expect(b.actions).toHaveLength(4)
  expect(b.projectText.metier).toBe('<b>Mon idée</b>');expect(b.vigilances.length).toBeGreaterThan(0)
  const a=bilanGlobal({cadre:0,p_voie:2,alternance:0,p_alternance:1,duree:0,m_regulier:2,p_financement:1},[],{maths:0})
  expect(a.besoins).toContain('Construire un rythme de travail réaliste');expect(a.vigilances.length).toBeGreaterThanOrEqual(3)
@@ -78,4 +78,18 @@ for(const lang of ['en','es','it','de','ar'])it(`bilan global et nouvelles quest
  const book=JSON.parse(readFileSync(new URL(`../src/localisation/public.${lang}.json`,import.meta.url),'utf8'))
  const keys=[...COMPLEMENTS.flatMap(g=>[g.title,...g.questions.flatMap(q=>[q.label,...q.options,...(q.appui?[q.appui,q.besoin]:[])])]),...VOIES_ETUDES.flatMap(v=>[v.title,v.duree,v.cadre,v.vigilance])]
  for(const k of keys)expect(typeof book[k],lang+': '+k).toBe('string')
+})
+
+import {SECTEURS_FINANCE,ACCES_COMMERCE,SOURCES_FINANCE} from '../src/data/avenirFinance.js'
+it('finance et commerce : toutes les voies restent visibles quel que soit le niveau des notes',()=>{
+ for(const duree of [0,1,2,3]){
+  const b=bilanGlobal({duree},[],{maths:0})
+  expect(new Set(b.voies.map(v=>v.id))).toEqual(new Set(['bts','but','licence','ect','dcg','ecole']))
+ }
+ for(const row of [...SECTEURS_FINANCE,...ACCES_COMMERCE])expect(SOURCES_FINANCE[row.source]).toMatch(/^https:\/\//)
+ expect(ACCES_COMMERCE.find(v=>v.id==='parallele').verification).toContain('pas un accès automatique')
+})
+for(const lang of ['en','es','it','de','ar'])it(`pistes finance, ECT et commerce disponibles hors ligne en ${lang}`,()=>{
+ const book=JSON.parse(readFileSync(new URL(`../src/localisation/public.${lang}.json`,import.meta.url),'utf8'))
+ for(const row of [...SECTEURS_FINANCE,...ACCES_COMMERCE])for(const [key,value] of Object.entries(row))if(!['id','source'].includes(key))expect(typeof book[value],lang+': '+value).toBe('string')
 })
