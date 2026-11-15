@@ -1,0 +1,54 @@
+[
+  {
+    "key": "ect",
+    "url": "https://www.onisep.fr/formation/apres-le-bac-les-etudes-superieures/les-principales-filieres-d-etudes-superieures/les-cpge-classes-preparatoires-aux-grandes-ecoles/les-prepas-economiques-et-commerciales/la-prepa-ect-economique-et-commerciale-technologique",
+    "status": 200,
+    "finalUrl": "https://www.onisep.fr/formation/apres-le-bac-les-etudes-superieures/les-principales-filieres-d-etudes-superieures/les-cpge-classes-preparatoires-aux-grandes-ecoles/les-prepas-economiques-et-commerciales/la-prepa-ect-economique-et-commerciale-technologique"
+  },
+  {
+    "key": "commerce",
+    "url": "https://www.onisep.fr/formation/les-principaux-domaines-de-formation/les-ecoles-de-commerce/integrer-une-ecole-de-commerce",
+    "status": 200,
+    "finalUrl": "https://www.onisep.fr/formation/les-principaux-domaines-de-formation/les-ecoles-de-commerce/integrer-une-ecole-de-commerce"
+  },
+  {
+    "key": "dcg",
+    "url": "https://www.onisep.fr/formation/les-principaux-domaines-de-formation/la-filiere-expertise-comptable/le-dcg-diplome-de-comptabilite-et-de-gestion",
+    "status": 200,
+    "finalUrl": "https://www.onisep.fr/formation/les-principaux-domaines-de-formation/la-filiere-expertise-comptable/le-dcg-diplome-de-comptabilite-et-de-gestion"
+  },
+  {
+    "key": "diplomes",
+    "url": "https://www.enseignementsup-recherche.gouv.fr/fr/bo/2026/Hebdo10/ESRS2604539A",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "key": "banque",
+    "url": "https://www.onisep.fr/formation/apres-le-bac-les-etudes-superieures/apres-un-bac-techno/que-faire-apres-le-bac-stmg/les-bts-et-but-apres-le-bac-stmg",
+    "status": 200,
+    "finalUrl": "https://www.onisep.fr/formation/apres-le-bac-les-etudes-superieures/apres-un-bac-techno/que-faire-apres-le-bac-stmg/les-bts-et-but-apres-le-bac-stmg"
+  },
+  {
+    "key": "universite",
+    "url": "https://www.iae-france.fr/les-formations/choisir-une-formation/",
+    "status": 200,
+    "finalUrl": "https://www.iae-france.fr/les-formations/choisir-une-formation/"
+  },
+  {
+    "key": "patrimoine",
+    "url": "https://www.onisep.fr/ressources/univers-metier/metiers/gestionnaire-de-patrimoine",
+    "status": 200,
+    "finalUrl": "https://www.onisep.fr/ressources/univers-metier/metiers/gestionnaire-de-patrimoine"
+  },
+  {
+    "key": "marches",
+    "url": "https://www.onisep.fr/ressources/univers-metier/metiers/trader",
+    "status": 200,
+    "finalUrl": "https://www.onisep.fr/ressources/univers-metier/metiers/trader-operateur-operatrice-de-marche"
+  },
+  {
+    "key": "expertise",
+    "url": "https://www.enseignementsup-recherche.gouv.fr/fr/diplomes-comptables-superieurs-dcg-dscg-dec-49871",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]
