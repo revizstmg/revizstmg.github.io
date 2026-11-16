@@ -1,4 +1,6 @@
 # Audit indépendant Supabase et services
+
+> Statut du 16 novembre : Le défaut de rôle sur les annonces du mur est corrigé. Les autres recommandations et risques conditionnels restent distincts de ce lot. [Livraison et preuves](../../../2026-11-16/sept-correctifs/README.md). Le corps conserve les constats à la référence auditée.
 15 novembre 2026. Dépôt 08f6a79c6401b3dcb7369252aa809eb9c437fce7. Lecture seule ; aucune correction appliquée.
 
 ## Conclusion

@@ -1,5 +1,11 @@
 # Corrections des sept défauts
 
+**Livré et vérifié en ligne le 16 novembre 2026.** Les sept défauts initiaux, le ralentissement du Parcours et le remélange des réponses QCM sont corrigés. PR [#222](https://github.com/revizstmg/revizstmg.github.io/pull/222), [#223](https://github.com/revizstmg/revizstmg.github.io/pull/223) et [#224](https://github.com/revizstmg/revizstmg.github.io/pull/224).
+
+Validation finale : **877 tests UTC, 877 tests Paris et 431 parcours navigateur**, tous réussis sans échec, reprise ou contrôle ignoré dans ce dernier lot. [CI](https://github.com/revizstmg/revizstmg.github.io/actions/runs/43825562430). Compilation publiée `725f5e1a8a619e07ec09990a147a054c5d06e2a3`, [Pages réussi](https://github.com/revizstmg/revizstmg.github.io/actions/runs/43827306424). Les 15 fichiers publics comparés sont identiques à Git ; six scénarios sont validés sur l’interface publique avec profils fictifs et services tiers simulés : retrait parent, suppression silencieuse, changement de compte, stabilité du QCM, visite sans compte et CGU anglaises hors ligne. [Preuves CI et publication](ci-publication.json), [comparaisons publiques](public-verification.json), [six scénarios publics](public-browser.json).
+
+Les étapes et échecs intermédiaires ci-dessous sont conservés pour expliquer la validation ; ils ne décrivent pas l’état de la version livrée.
+
 Demande du propriétaire du16novembre2026 après l’audit de trois agents. Référence initiale08f6a79. Aucun cours, tarif ou droit d’abonnement changé.
 
 ## Changements
@@ -17,7 +23,7 @@ Complément mineur : échec du presse-papiers expliqué. Messages des correction
 ## Vérifications
 
 - 61 tests ciblés (authentification, statistiques/publication, rapport et traductions) réussis.
-- Compilation réussie. Les huit scénarios ciblés sont validés, dont les cinq reprises de l’audit initial. [Relevé](reprises.json). La validation générale et la publication restent à confirmer.
+- Compilation réussie. Les huit scénarios ciblés sont validés, dont les cinq reprises de l’audit initial. [Relevé](reprises.json). La validation générale et la publication ont depuis réussi, voir le bilan en tête.
 - Supabase : migration enregistrée, garde active. Six scénarios sur table temporaire avec le vrai déclencheur : annonce/usurpation de nom/réponse professeur/texte d’autrui refusés ; texte propre et réaction autorisés. Transaction annulée, table temporaire retirée. Aucun compte réel utilisé.
 - Lot initial d’audit :866tests unitaires réussis,422parcours réussis et5échecs. Ces résultats historiques ne sont pas présentés comme ceux du nouveau code.
 - La première reprise locale a montré un défaut du nouveau test (bouton avec émoji), corrigé sans toucher au produit. Le choix de matière du Parcours recalculait deux fois tous les exercices pour en compter les thèmes : remplacé par un parcours de métadonnées unique, sans changer les résultats. Test de non-régression vérifiant les comptes et l’absence de génération. Le parcours QCM garantira une réussite et une erreur à partir du vrai cours, au lieu de supposer que cinq tirages aléatoires donneront des XP.
@@ -28,7 +34,7 @@ Stripe reste en TEST ; aucune vente ni génération payante exercée. Les recomm
 
 ## Première validation générale
 
-La première CI PR222 a réussi871contrôles et échoué à initialiser les5contrôles des pages publiques : le nouvel état de retrait lisait `.status` sur une valeur nulle lorsque les deux identités étaient absentes. Garde corrigée avant publication. Aucun contrôle supprimé ni résultat initial réécrit ; nouvelle validation générale requise.
+La première CI PR222 a réussi871contrôles et échoué à initialiser les5contrôles des pages publiques : le nouvel état de retrait lisait `.status` sur une valeur nulle lorsque les deux identités étaient absentes. Garde corrigée avant publication. Aucun contrôle supprimé ni résultat initial réécrit ; nouvelle validation générale réalisée et réussie, voir le bilan en tête.
 
 ## Complément : propositions du QCM
 

@@ -1,5 +1,7 @@
 # Audit indépendant dépôt, documentation et publication
 
+> Statut du 16 novembre : Les quatre défauts de supervision et de documentation sont corrigés. [Livraison et preuves](../../../2026-11-16/sept-correctifs/README.md). Le corps conserve les constats à la référence auditée.
+
 15 novembre 2026. Lecture seule du produit et de GitHub. Référence source : `08f6a79c6401b3dcb7369252aa809eb9c437fce7` ; compilation publiée : `8347153108807c4f81068e669ad123a245345875`.
 
 ## Défauts confirmés
