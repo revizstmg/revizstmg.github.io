@@ -444,7 +444,7 @@ chaque table.
 progression est aussi enregistrée dans la colonne `progress` de la ligne `profiles`
 de l'élève, ce qui permet de la retrouver sur un autre appareil.
 
-**Tables utilisées par l'application (17) :**
+**Principales tables vérifiées lors de l’audit (21) :**
 - `profiles`
 - `leaderboard`
 - `friend_user`, `friend_request`, `friend_duel`
@@ -452,6 +452,9 @@ de l'élève, ce qui permet de la retrouver sur un autre appareil.
   `class_duel`, `class_group`, `class_ban`
 - `teacher_class`, `live_session`, `live_player`
 - `child_stats`
+- `revizstmg_abonnements`, `revizstmg_ia_usage`, `revizstmg_signalements`, `revizstmg_visites`
+
+Les fonctions de rappels utilisent aussi leurs tables techniques décrites dans `supabase/README.md`. Ce relevé est le périmètre vérifié, pas une certification de toutes les tables du projet partagé.
 
 **Schéma et sécurité :** les migrations versionnées sont dans `supabase/migrations/` ; certaines ont été appliquées manuellement et l’historique distant doit donc être confronté aux règles actives. L’audit du 15 novembre a vérifié les RLS sur 21 tables ciblées, sans accès social direct avec la seule clé publique. La marche à suivre est dans [supabase/README.md](supabase/README.md). La base reste partagée avec NAH : ne pas modifier ses tables.
 

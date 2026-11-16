@@ -15,8 +15,8 @@ https://revizstmg.github.io. Documentation complète : `README.md`.
 - La racine (`index.html`, `sw.js`, `manifest.webmanifest`, icônes) : la version
   compilée que sert GitHub Pages. Elle est générée par le workflow
   `.github/workflows/deploy.yml` : ne la modifiez jamais à la main.
-- `supabase/migrations/` : le schéma de la base ; `supabase/functions/fiche-vision/` :
-  la fonction « fiche par photo ».
+- `supabase/migrations/` : migrations versionnées de la base ; `supabase/functions/` :
+  examen blanc et accompagnement, paiement, rappels et fiche par photo.
 
 ## Commandes
 

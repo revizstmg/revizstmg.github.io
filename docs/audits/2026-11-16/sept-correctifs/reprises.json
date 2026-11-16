@@ -1,0 +1,9 @@
+{
+ "date":"2026-11-16",
+ "unitaires_cibles":61,
+ "reprise_finale":{"passed":7,"failed":1,"remaining_failure":"new cross-account test fixture assumed server enabled local consent"},
+ "cross_account_fixture_corrected":{"passed":1,"failed":0,"duration_seconds":10.9},
+ "confirmed_passing_cases":["duel retry score and same ID","parent revoke offline and online retry","silent account deletion timeout","Parcours B07","menu to Parcours","real course QCM success and error","ready exam desktop layout","late withdrawal response after account switch"],
+ "initial_audit_browser":{"passed":422,"failed":5},
+ "limitations":"Mocks only, no real account, payment, AI generation or real deletion. Initial failures retained. Full CI results recorded separately after completion."
+}

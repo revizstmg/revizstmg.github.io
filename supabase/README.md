@@ -113,7 +113,9 @@ NAH : `20260905070023_secure_exposed_tables_rls` (tables `config`, `admin_invite
    restent identiques.
 3. Ne jamais toucher aux tables de NAH.
 
-## Audit de sécurité (5 octobre 2026)
+## Audit de sécurité (5 octobre 2026, historique)
+
+> Les constats ci-dessous décrivent la situation du 5 octobre, avant le durcissement du 20 octobre. Ils ne décrivent pas les règles actives aujourd’hui. Voir les sections à jour en tête du document et le bilan du 16 novembre.
 
 Les recommandations de Supabase (« Security Advisor ») ne signalent **rien** sur les
 tables de RévizSTMG : leurs 123 constats concernent les fonctions et tables de NAH,

@@ -876,7 +876,7 @@ export function StoreProvider({ children }) {
     setReminder,
     setGrandOral,
     setParentShare,
-    parentRemovalStatus: parentRemoval?.owner === state.account?.id ? parentRemoval.status : 'pending',
+    parentRemovalStatus: parentRemoval && parentRemoval.owner === state.account?.id ? parentRemoval.status : 'pending',
     noterReponses,
     setEtudeGestion,
     setParcours,
