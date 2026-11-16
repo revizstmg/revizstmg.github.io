@@ -253,8 +253,12 @@ export function themesDuParcours(track) {
 // Matières proposées pour le positionnement et les « matières difficiles ».
 export function matieresDuParcours(track) {
   const vues = new Map()
-  for (const t of themesDuParcours(track)) if (!vues.has(t.subjectId)) vues.set(t.subjectId, { id: t.subjectId, nom: t.subjectName, color: t.color, themes: 0 })
-  for (const t of themesDuParcours(track)) vues.get(t.subjectId).themes++
+  // Lister les matières ne demande ni le découpage des chapitres, ni la
+  // génération de leurs exercices (coûteuse et sans rapport avec ces compteurs).
+  for (const t of realThemes(track).filter(t => ALL_CHAPTERS[t.themeId]?.cours)) {
+    if (!vues.has(t.subjectId)) vues.set(t.subjectId, { id: t.subjectId, nom: t.subjectName, color: t.color, themes: 0 })
+    vues.get(t.subjectId).themes++
+  }
   return [...vues.values()]
 }
 

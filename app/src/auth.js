@@ -332,9 +332,13 @@ export async function envoyerProgression(progress, attendu, { keepalive = false 
 export async function supprimerCompte() {
   const s = getSession()
   if (!s?.token) throw new Error('no session')
-  const res = await authFetch(`${SUPA_URL}/rest/v1/rpc/revizstmg_supprimer_compte`, { method: 'POST', body: '{}' })
-  if (!res.ok) throw new Error('suppression ' + res.status)
-  return true
+  return withNetworkTimeout(async signal => {
+    const res = await authFetch(`${SUPA_URL}/rest/v1/rpc/revizstmg_supprimer_compte`, { signal, method: 'POST', body: '{}' })
+    if (!res.ok) throw new Error('suppression ' + res.status)
+    await res.text()
+    if (signal.aborted || getSession()?.user?.id !== s.user.id) throw new Error('session_changed')
+    return true
+  }, 15000)
 }
 
 export async function fetchProfile() {

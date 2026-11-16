@@ -4705,5 +4705,9 @@
   "Formules masquées par le programme ou le niveau : {n}.": "Durch Lehrplan oder Stufe ausgeblendete Formeln: {n}.",
   "Afficher toute ma sélection": "Meine gesamte Auswahl anzeigen",
   "La requête a expiré. Réessaie.": "Die Anfrage hat das Zeitlimit überschritten. Versuche es erneut.",
-  "La requête a expiré.": "Die Anfrage hat das Zeitlimit überschritten."
+  "La requête a expiré.": "Die Anfrage hat das Zeitlimit überschritten.",
+  "Copie impossible. Sélectionne le code pour le copier manuellement.": "Kopieren fehlgeschlagen. Markiere den Code, um ihn manuell zu kopieren.",
+  "Partage désactivé sur cet appareil. Le retrait en ligne n’est pas encore confirmé ; il sera retenté automatiquement. L’ancien code peut encore donner accès à ta progression.": "Die Freigabe ist auf diesem Gerät deaktiviert. Die Entfernung im Internet ist noch nicht bestätigt und wird automatisch erneut versucht. Der alte Code kann weiterhin Zugriff auf deinen Lernfortschritt ermöglichen.",
+  "Réessayer le retrait": "Entfernung erneut versuchen",
+  "La suppression n’est pas confirmée. Vérifie ta connexion et ton compte avant de réessayer.": "Die Kontolöschung ist nicht bestätigt. Prüfe deine Verbindung und dein Konto, bevor du es erneut versuchst."
 }

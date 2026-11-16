@@ -1,0 +1,196 @@
+{
+  "sitemap": {
+    "urls": 858,
+    "unique": 858,
+    "missingLocal": [],
+    "hashRoutes": []
+  },
+  "serviceWorker": {
+    "precache": 148,
+    "missing": []
+  },
+  "publicFiles": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "d3795023a78b86e76fb41fea73d53d85bab3b5a8e578bd9f3f152d8181464ef9",
+      "bytes": 7305
+    },
+    {
+      "path": "404.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "8f30ce4a9709b1a4c144b71c975c246bc496cb9e5c76d6965e7764876d25b62f",
+      "bytes": 3297
+    },
+    {
+      "path": "sw.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "a1a37a051d3ccfe40aecec034275b5816959e391abbcec06bd3780eee2fcc623",
+      "bytes": 13640
+    },
+    {
+      "path": "manifest.webmanifest",
+      "status": 200,
+      "contentType": "application/manifest+json; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "bb476eda885156c1e2cfc018b8f599109a069f547c542aa30ca661aab25ccbb7",
+      "bytes": 788
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "069a6a4746d8fd2cf24e2781c90a3010d49e47a293b8f7a3e55b0552b56ef536",
+      "bytes": 327
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "matchesGit": true,
+      "sha256": "2afbd62e5f3f2e0f672cf6471706e31b234dc0569c646134296f9d704251b773",
+      "bytes": 139303
+    },
+    {
+      "path": "sitemap.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "8a2d47fbf701c6392f0ed9c1e911686a380eb3570a05baf791d9c0987311a5a5",
+      "bytes": 118432
+    },
+    {
+      "path": "llms.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "672530eb9e856597007e33f5bc5db613d93cfd2946ce3c9dc2c6619b50be2815",
+      "bytes": 2237
+    },
+    {
+      "path": "cours/index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "71d6988e14c5e4f5a2f6548b1973b21cc1e2cf034480807ec1fff7a00b4b5ee2",
+      "bytes": 5727
+    },
+    {
+      "path": "a-propos/index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "7e24698839770814332c07c94d188405eb17eee618913caa60d3535ffc3dc3e6",
+      "bytes": 5296
+    },
+    {
+      "path": "partager/index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "f7f8da269029355e065f2562a1ee2e7fd903a8e288917501e9976f466dfe3130",
+      "bytes": 3905
+    },
+    {
+      "path": "cours/terminale/gestion-et-finance/appliquer-les-regles-comptables/la-tva-collectee-deductible-a-decaisser/index.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "ffe92c1936e2d8c242edb49f9943aaf482bbf3a5eef33dc821ae3eb4815e6e6e",
+      "bytes": 10944
+    },
+    {
+      "path": "assets/index-BszRjWWt.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "cbc1d6175ea5a5c41bcf2d366dc57309297629c5a4ad4fed4ba3feeff93d342a",
+      "bytes": 652593
+    },
+    {
+      "path": "assets/Friends-5dXiCOK9.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "fffc0ddb5b5b76656d39c2f251758e3edb49cafaadf5a108503e1b34b5a972db",
+      "bytes": 32795
+    },
+    {
+      "path": "assets/FormulaWorkshop-DNdiWhTL.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "db0b41f0db73ebca614f1b7e2aaad6961f8e8249aa72c3ef7259f567a305a88a",
+      "bytes": 87854
+    },
+    {
+      "path": "assets/Revise-CPhUGSxE.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "af4e99f49b599b8749eb495c1e8498ccfce5a506597e118c8c22df4596c84d14",
+      "bytes": 34628
+    },
+    {
+      "path": "assets/Avenir-cImA47Q9.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "e3df79e2691fb98811ae743c4d3b403a2ff4fbd1c3fe5b4ec4872aa56d8bc1c4",
+      "bytes": 57587
+    },
+    {
+      "path": "assets/public.en-D_k5cdB-.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "9f244c8c67225b8e87798270454d9888d2a87116e3a3e6473a8f89093dd63927",
+      "bytes": 396386
+    },
+    {
+      "path": "assets/public.es-v11VnV1a.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "b7ca40b55a66a59fa57d43e807e9c8036cc6f4a5312ee29948f25814bffb41aa",
+      "bytes": 413821
+    },
+    {
+      "path": "assets/public.it-DWx2xvt0.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "a255f582ca443ea46f21846949a4541e532880193a9b756819aa8d04c87f8d32",
+      "bytes": 412632
+    },
+    {
+      "path": "assets/public.de-w29B_UGJ.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "6d459556bdd4413c806f595164be62be2913556c117b6c58070559237c1b5fba",
+      "bytes": 488741
+    },
+    {
+      "path": "assets/public.ar-DVYTd35i.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "matchesGit": true,
+      "sha256": "3408316b435af01708daf2d2c5d94bb92b9e9836d86d2b7f05c8633267b04510",
+      "bytes": 481011
+    }
+  ],
+  "courseMetadata": {
+    "pages": 855,
+    "issues": []
+  },
+  "sourceRef": "08f6a79c6401b3dcb7369252aa809eb9c437fce7",
+  "compiledRef": "8347153108807c4f81068e669ad123a245345875"
+}

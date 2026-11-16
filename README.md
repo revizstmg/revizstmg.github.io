@@ -1,5 +1,12 @@
 # RévizSTMG
 
+## État actuel et accès
+
+Cours et exercices de base, classes, amis, boutique et suivi parent sont gratuits. Les parcours de révision, flashcards et outils de préparation suivent la grille de [l’application](https://revizstmg.github.io/#/offres) ; l’accompagnement personnalisé et le tuteur suivent les droits Ultimate. Go concerne uniquement les établissements. Les règles faisant autorité sont `app/src/data/acces.js` et les contrôles serveur `supabase/functions/examen-blanc/acces.js` : un simple affichage client ne donne pas un droit serveur.
+
+Premium : 9,99 €/mois ; Ultimate : 19,99 €/mois ; Go : 20 €/élève/an + 500 €/établissement/an. Stripe est en TEST au dernier contrôle, sans vente réelle certifiée. Les lignes ci-dessous décrivent les fonctionnalités et leur historique ; l’état des services se vérifie séparément. Les cinq guides de langues remplacent les anciens cours de langues dans les parcours proposés. L’accueil privilégie la reprise, les cours, l’entraînement et la progression.
+
+
 Application de révision pour le bac STMG (Première et Terminale) : cours, exercices
 corrigés générés automatiquement, flashcards, bac blanc, coach IA, révision entre amis
 et en classe. Installable sur téléphone et utilisable hors ligne.
@@ -17,22 +24,14 @@ et en classe. Installable sur téléphone et utilisable hors ligne.
 > Ce document décrit l'application après la refonte d'octobre 2026 : mettez-le à
 > jour à chaque changement visible par l'élève.
 
-L’accueil conserve son bandeau sombre et or, avec les matières de la filière
-juste en dessous, en cases compactes : quatre colonnes sur ordinateur (deux
-lignes), deux colonnes sur téléphone, puis les outils : « Réviser & réussir » ne
-montre que l’outil conseillé à l’élève selon sa situation (bac proche, révisions
-du jour, chapitres à revoir, sinon le programme) ; les autres sont rangés dans
-« Ta trousse », qui se déplie à la demande (`components/OutilsAccueil.jsx`). Les cartes « Chaque séance compte » et
-« Ton coin à toi » regroupent progression et communauté. Un compte déjà
-configuré entre sans écran d’attente.
-La dernière fiche consultée est conservée sur cet appareil, séparément pour
-chaque compte, et accessible depuis « Reprendre ».
+L’accueil met en avant la reprise du dernier cours, l’entraînement, la progression et la classe. Le catalogue complet des matières est dans Cours. Le menu principal organise les autres outils sur téléphone et ordinateur ; les onglets favoris sont personnalisables. La dernière fiche consultée est mémorisée séparément par compte sur cet appareil. L’écran de bienvenue respecte le mouvement réduit.
 
 L’espace Réviser reprend la présentation éditoriale de Bac blanc : séance guidée et trois parcours par matière (suivre le fil, comprendre ses erreurs, ancrer ses connaissances). Les indicateurs À revoir aujourd’hui / À renforcer / Bien acquis et le carnet autonome sont retirés. La bibliothèque Les bons outils à portée de main garde uniquement les flashcards, avec lecture, écoute, partage et import. Les données de progression et les erreurs restent disponibles aux parcours adaptés.
 
 Le temps par thème conserve aussi les courtes visites, les séances guidées et le carnet d’erreurs. Les anciennes valeurs dépassant toute la durée d’existence du site sont archivées dans `themeTimeInvalid`, exclues des compteurs et des barres, et ne reviennent pas lors d’une fusion. Leur durée réelle n’est pas estimée ; seuls ces compteurs repartent de zéro. Les durées inférieures à une minute sont indiquées « < 1 min » ; l’arrière-plan et les longues suspensions ne gonflent pas le compteur.
 
-À l’inscription (et dans les réglages), l’élève peut sélectionner les langues étudiées : arabe, anglais, italien et espagnol. Ce choix multiple est distinct de la langue d’interface et synchronisé avec la progression. La bibliothèque Langues affiche les cours des langues sélectionnées ; sans choix, les cours existants restent visibles. L’arabe standard et l’italien disposent désormais de cours en Première et Terminale : grammaire, vocabulaire et ETLV, compréhension écrite, expression/médiation et six axes culturels propres à chaque niveau. Le choix filtre aussi les trois parcours de révision. Sources, périmètre et limites : [docs/COURS-LANGUES.md](docs/COURS-LANGUES.md).
+À l’inscription et dans les réglages, l’élève peut sélectionner arabe, anglais, italien, espagnol et allemand. Ce choix est distinct de la langue d’interface et synchronisé avec sa progression. La bibliothèque Langues propose les guides PDF interactifs, mini-exercices corrigés, conseils et liens vidéo des langues sélectionnées. Les anciens chapitres sont archivés et ne sont plus proposés dans les parcours. Sources et limites : [docs/COURS-LANGUES.md](docs/COURS-LANGUES.md).
+
 
 L’atelier de formules remplace les anciens espaces Révision express et Formulaire.
 Il propose un à cinq exercices par formule choisie, accepte les réponses avec
@@ -100,7 +99,7 @@ Les achats et réservations font partie de la
 progression synchronisée. Un titre équipé apparaît sur le profil, une bannière
 sur l’accueil.
 
-Premium et Ultimate restent des offres à définir. Le programme annonce un mois
+Premium est défini à 9,99 €/mois et Ultimate à 19,99 €/mois. Le paiement déployé reste en mode TEST ; ces tarifs ne signifient pas que les ventes réelles sont ouvertes. Go est une licence lycée : 20 €/élève/an et 500 €/établissement/an. Les droits et quotas sont contrôlés côté serveur, avec une grâce de développement datée dans `supabase/functions/examen-blanc/acces.js`. Le programme annonce un mois
 Premium offert au lancement avec 20 tests distincts à 90 % et 20 000 XP, un mois
 Ultimate avec 30 tests distincts à 95 % et 73 500 XP. La réservation locale ne
 constitue pas une attribution vérifiée ni un abonnement actif : une demande par
@@ -109,8 +108,8 @@ Aucun envoi automatique, carte bancaire ni renouvellement ; aucune fonctionnalit
 payante ou date de lancement inventée. La validation et l’activation commerciales
 ne sont pas automatisées côté client. Conditions détaillées dans les CGU.
 
-La traduction couvre FR/EN/ES/IT/AR. Toutes les clés de l’interface sont présentes
-pour les quatre langues étrangères ; 262 textes publics supplémentaires et le
+La traduction couvre FR/EN/ES/IT/AR/DE. Toutes les clés de l’interface sont présentes
+pour les cinq langues étrangères ; 262 textes publics supplémentaires et le
 catalogue complet de la boutique sont intégrés dans des fichiers chargés à la
 demande (`src/localisation/public.*.json`). La langue change les dates, nombres,
 libellés accessibles et le sens de lecture arabe sans modifier les identifiants,
@@ -143,14 +142,14 @@ ont pas besoin. Le passage de langue ne réutilise pas un ancien résultat.
 | Grand Oral | Pour la Terminale, le même accompagnement adapté à l'épreuve : règles de la session 2027 (20 min de préparation, 10 min de présentation, 10 min d'échange, coefficient 12), ce que le jury évalue, démarche, conseils, banque de questions ; les deux questions et le plan ; sources ; analyse de l'organisation ; arguments A-E-I rattachés à chaque question, notés avec une grille qui ajoute un critère d'oral ; chronomètre aux durées de l'épreuve, enregistrement et auto-évaluation sur les critères du jury ; export de la préparation (`content/commun/grand-oral.json`, `pages/GrandOral.jsx`). Les outils communs aux deux espaces sont dans `components/DossierProjet.jsx` et `content/commun/outils-projet.json`. |
 | Séance du jour | Un bouton sur l'accueil, et la première question est à l'écran : jusqu'à trois étapes enchaînées sans menu — les erreurs du carnet dues ce jour-là, un thème dont la révision est due (ou fragile), puis le prochain exercice du cours là où l'élève s'est arrêté (`src/data/seance.js`, `pages/Seance.jsx`). |
 | Navigation | Menus et fenêtres utilisables au clavier : Échap ferme, Tab reste dans la fenêtre, le focus revient sur le bouton qui l'a ouverte (`components/clavier.js`) ; dans un exercice en plein écran, Échap ne fait pas quitter. Barre du bas par défaut : Accueil · Cours · Réviser · Bac blanc · Moi (personnalisable ; pour un professeur : Accueil · Classe · Cours · Moi). Les exercices s'ouvrent en plein écran. Une seule fenêtre automatique par visite, dans cet ordre : information sur les cookies, récompense du jour (créditée dans tous les cas), invitation à installer l'app (`src/fenetres.js`). |
-| Révision | Flashcards et répétition espacée (planifiée d'après le résultat de chaque séance), carnet d'erreurs révisé question par question (une question ratée revient le lendemain, puis 3 et 7 jours plus tard ; elle sort après trois réussites espacées ; tous les modes l'alimentent : exercices, test du thème, bac blanc, défi, coach, sujets), « Refaire mes erreurs » en fin de série (sans compter dans la maîtrise), « Pourquoi ? » sous chaque correction (à quelle notion correspond la proposition choisie à tort, et le chapitre à revoir), défi du jour, sujets au format des épreuves écrites de spécialité (4 h) présentés en premier, QCM chronométré matière par matière (annoncé comme un QCM, pas comme le format de l'épreuve ; « toute la filière » reste possible), sujets d'entraînement à l'épreuve anticipée de mathématiques pour la Première (format du BO spécial n° 4 du 17 septembre 2026 : 2 h sans calculatrice, automatismes sur 6, trois exercices sur 14 ; nombres tirés au hasard et calculables de tête, copie rendue puis corrigée question par question ; le total ne compte que les résultats, pas la rédaction ni les 2 points de langue ; `src/data/sujetMaths.js`, `games/SujetMaths.jsx`), propositions des QCM d'études de documents mélangées à chaque partie (la bonne réponse était toujours « A »), programme avec les dates officielles des épreuves, atelier de formules : sélection par matière, barre « Générer mes exercices » toujours visible en bas de l'écran, 40 formules de calcul adaptées à la filière, exercices numériques renouvelés et corrections détaillées, méthodologie par épreuve. |
-| Mes notes de classe | L'élève saisit la note reçue en classe (sur 20, « 15,50 » accepté) ; la matière, puis le chapitre, se choisissent dans des menus tirés des cours de sa filière, avec « Toute la matière » pour un bac blanc. La page dit ce qu'il faut améliorer : chaque chapitre sous 10/20 et, dans chaque matière, le chapitre à la moyenne la plus basse. Notes privées (avec la progression du compte, jamais publiées), fusionnées entre appareils, comprises dans l'export et effacées avec le compte (`pages/MesNotes.jsx`, `src/notesClasse.js`). C'est la partie gratuite du document des offres ; « comment l'améliorer » (Premium) et les exercices par l'IA (Ultimate) restent à construire. |
-| IA | Coach IA qui analyse les résultats et propose un plan. Fiches créées à partir de photos de cours (fonction `fiche-vision`, pas encore déployée). |
+| Révision | Suivre le fil, comprendre ses erreurs et ancrer ses connaissances, par matière et chapitre facultatif. Bibliothèque de flashcards. Bac blanc : sujets officiels, entraînements PDF et créateur personnalisé avec dépôt de copie. Atelier de 169 formules avec valeurs renouvelées ; méthodologie et sujets de mathématiques pour la Première. Les anciens QCM chronométrés du bac blanc et le carnet autonome sont retirés ; les erreurs restent utilisées dans les parcours adaptés. |
+| Mes notes de classe | L'élève saisit la note reçue en classe (sur 20, « 15,50 » accepté) ; la matière, puis le chapitre, se choisissent dans des menus tirés des cours de sa filière, avec « Toute la matière » pour un bac blanc. La page dit ce qu'il faut améliorer : chaque chapitre sous 10/20 et, dans chaque matière, le chapitre à la moyenne la plus basse. Notes privées (avec la progression du compte, jamais publiées), fusionnées entre appareils, comprises dans l'export et effacées avec le compte (`pages/MesNotes.jsx`, `src/notesClasse.js`). La saisie reste gratuite ; les outils de bilan et d’entraînement suivent les droits des offres et les quotas serveur. |
+| IA | Coach IA qui analyse les résultats et propose un plan. Fiches créées à partir de photos de cours (fonction `fiche-vision`, déployée). |
 | Professeur et parent | Le professeur a son propre accueil : ses classes, le nombre d'élèves actifs et d'élèves à relancer, l'accès au tableau de bord, aux quiz et aux cours (`components/AccueilProf.jsx`). Un parent sans profil d'élève sur l'appareil n'a que l'espace parent : ni série, ni XP, ni menus d'élève. |
 | Social | Comptes élève et prof, classes (mur, quiz, duels, groupes), amis et duels, classement hebdomadaire et ligues, espace parent (seulement si l'élève active le partage ; code de 10 caractères tiré au hasard, que l'élève peut renouveler s'il a circulé). Un duel entre amis dont l'envoi du score échoue garde le score sur l'appareil et propose « Réessayer l'envoi ». Réservé aux comptes connectés : la base ne montre une classe qu'à ses membres et à son professeur (`supabase/README.md`). Essai sans compte possible (progression sur l'appareil, `components/CompteRequis.jsx`). |
 | Motivation | XP, niveaux, badges, série de jours, boutique de pièces, objectifs de la semaine (le bac blanc, le défi et le coach ne les remplissent pas). Maîtrise d'un thème : chaque chapitre compte ses 3 meilleurs exercices (tous s'il en a moins) ; le thème prend la moyenne de ses chapitres, ou le test du thème s'il est meilleur ; une réponse rédigée vide ne compte pas comme réussie. |
-| Confort | Application installable (PWA), hors ligne, rappels de révision (avec un compte, même téléphone fermé : `src/push.js`, fonction Edge `revizstmg-rappels`), bouton « Signaler une erreur » sous chaque exercice et chapitre, interface en français, anglais, espagnol, italien et arabe (les écrans récents sont traduits hors ligne dans `src/localisation/public.*.json`, vérifié par `tests/traductions.test.js` ; le reste passe par le service de traduction), réglages d'accessibilité (dys, contraste, lecture audio), écran de secours si une page plante. |
-| Données | « Télécharger mes données » (fichier JSON) et « Supprimer mon compte » dans Mon espace : la fonction `revizstmg_supprimer_compte` (appliquée le 19 octobre 2026) efface tout ce que l'élève a publié ou envoyé, puis son compte, adresse e-mail comprise ; l'application vide ensuite le stockage du navigateur (`supabase/README.md`). |
+| Confort | Application installable (PWA), hors ligne, rappels de révision (avec un compte, même téléphone fermé : `src/push.js`, fonction Edge `revizstmg-rappels`), bouton « Signaler une erreur » sous chaque exercice et chapitre, interface en français, anglais, espagnol, italien, arabe et allemand (les écrans récents sont traduits hors ligne dans `src/localisation/public.*.json`, vérifié par `tests/traductions.test.js` ; le reste passe par le service de traduction), réglages d'accessibilité (dys, contraste, lecture audio), écran de secours si une page plante. |
+| Données | « Télécharger mes données » (fichier JSON) et « Supprimer mon compte » dans Paramètres → Confidentialité et données : la fonction `revizstmg_supprimer_compte` (appliquée le 19 octobre 2026) efface tout ce que l'élève a publié ou envoyé, puis son compte, adresse e-mail comprise ; l'application vide ensuite le stockage du navigateur (`supabase/README.md`). |
 
 ## Démarrer
 
@@ -441,11 +440,11 @@ qu'elle partage avec le site NAH. Il est configuré dans `app/src/supabase.js`. 
 « anon » est publique par conception : la sécurité repose sur les règles RLS de
 chaque table.
 
-**Sans compte**, tout fonctionne en local dans le navigateur. **Avec un compte**, la
+**Sans compte**, les cours et les exercices de base s’essaient en local ; les outils réservés et espaces partagés appliquent leurs droits propres. **Avec un compte**, la
 progression est aussi enregistrée dans la colonne `progress` de la ligne `profiles`
 de l'élève, ce qui permet de la retrouver sur un autre appareil.
 
-**Tables utilisées par l'application (17) :**
+**Principales tables vérifiées lors de l’audit (21) :**
 - `profiles`
 - `leaderboard`
 - `friend_user`, `friend_request`, `friend_duel`
@@ -453,17 +452,13 @@ de l'élève, ce qui permet de la retrouver sur un autre appareil.
   `class_duel`, `class_group`, `class_ban`
 - `teacher_class`, `live_session`, `live_player`
 - `child_stats`
+- `revizstmg_abonnements`, `revizstmg_ia_usage`, `revizstmg_signalements`, `revizstmg_visites`
 
-**Schéma :** les migrations de ces tables sont dans `supabase/migrations/`, identiques
-à celles appliquées sur Supabase. La marche à suivre pour modifier la base et l'audit
-de sécurité sont dans `supabase/README.md`. **À corriger avant d'ouvrir l'application
-à des classes :** sauf `profiles`, ces tables sont lisibles et modifiables par
-n'importe qui possédant la clé publique.
+Les fonctions de rappels utilisent aussi leurs tables techniques décrites dans `supabase/README.md`. Ce relevé est le périmètre vérifié, pas une certification de toutes les tables du projet partagé.
 
-**Fonction `fiche-vision`** (`supabase/functions/fiche-vision/`) : elle transforme
-des photos de cours en fiche structurée avec Gemini (gratuit) ou Claude. Le code est
-prêt, mais **elle n'est pas encore déployée**. La marche à suivre est dans le README
-de son dossier.
+**Schéma et sécurité :** les migrations versionnées sont dans `supabase/migrations/` ; certaines ont été appliquées manuellement et l’historique distant doit donc être confronté aux règles actives. L’audit du 15 novembre a vérifié les RLS sur 21 tables ciblées, sans accès social direct avec la seule clé publique. La marche à suivre est dans [supabase/README.md](supabase/README.md). La base reste partagée avec NAH : ne pas modifier ses tables.
+
+**Services déployés :** `examen-blanc`, `revizstmg-paiement`, `revizstmg-rappels` et `fiche-vision`. Cette dernière prépare une fiche depuis des photos ; sa configuration effective et une génération réelle doivent être distinguées de la seule présence du déploiement. Ne jamais placer une clé fournisseur dans le client. Le paiement est en mode TEST au dernier contrôle ; une vente réelle nécessite la configuration et la vérification correspondantes.
 
 ## Limites connues (ce que la refonte doit régler)
 
@@ -486,14 +481,14 @@ Les acquis reposent sur les réponses réellement jouées, jamais sur toute une
 banque déduite d’un score de partie parfait.
 
 ### Questions manquées et entraînement après un devoir
-Dans Mes notes, la saisie gratuite conserve les questions manquées avec la note. Le bilan IA, les exercices ciblés et la lecture du sujet et de la copie (PDF/photos) sont accessibles aux comptes connectés pendant le développement. Toutes ces options sont prévues dans la future offre Ultimate. L’IA utilise uniquement les cours du chapitre choisi et signale une lecture impossible ou une compétence hors périmètre. Les fichiers ne sont pas sauvegardés dans la progression. Le bilan et les exercices sont conservés lors de l’ajout de la note, exportés et supprimés avec elle. Les réponses d’entraînement sont temporaires ; correction par comparaison, sans note automatique ni promesse de résultat.
+Dans Mes notes, la saisie gratuite conserve les questions manquées avec la note. Le bilan IA, les exercices ciblés et la lecture du sujet et de la copie (PDF/photos) sont implémentés et soumis aux droits Ultimate et quotas serveur, sous réserve de la grâce datée de développement. L’IA utilise uniquement les cours du chapitre choisi et signale une lecture impossible ou une compétence hors périmètre. Les fichiers ne sont pas sauvegardés dans la progression. Le bilan et les exercices sont conservés lors de l’ajout de la note, exportés et supprimés avec elle. Les réponses d’entraînement sont temporaires ; correction par comparaison, sans note automatique ni promesse de résultat.
 
-Les offres commerciales restent à développer : aucun paiement ni activation automatique n’est ajouté. La fonction vérifie un compte connecté non anonyme via Auth `/user`, mais ne réclame plus d’abonnement. Les limites de requêtes et du fournisseur restent actives.
+Le paiement et l’activation sont implémentés ; Stripe reste en mode TEST au dernier contrôle. La fonction vérifie le compte via Auth `/user`, puis applique les droits et quotas définis dans `supabase/functions/examen-blanc/acces.js`. Les limites du fournisseur restent actives.
 
 ### Tuteur de compréhension IA
 Chaque chapitre propose « Je n’ai pas compris ». L’élève discute du cours ou choisit une reformulation simple, un exemple concret ou une décomposition pas à pas. Le tuteur doit varier son approche et vérifier la compréhension par une petite question, sans attribuer de note. Aucun plafond total de reformulations : une conversation peut dépasser 50 échanges. L’écran conserve la discussion pendant la visite ; seuls les 19 derniers messages et le cours de la section ouverte sont transmis à chaque demande. La discussion est réinitialisée au changement de chapitre/compte et n’est pas enregistrée dans la progression.
 
-L’action serveur `tutor` est accessible à tout compte connecté pendant le développement, comme l’analyse des copies. Ces outils sont prévus dans la future offre Ultimate. Protection contre les rafales : 120 requêtes/heure par utilisateur et instance chaude, indépendante du quota d’examens ; il ne s’agit ni d’une limite totale de conversation ni d’un quota de facturation durable. Les limites du fournisseur restent applicables. Aucune donnée de classe, note ou copie n’est envoyée au tuteur.
+L’action serveur `tutor` suit les droits Ultimate et quotas, sous réserve de la grâce de développement datée dans `acces.js`. Protection contre les rafales : 120 requêtes/heure par utilisateur et instance chaude, indépendante du quota d’examens ; il ne s’agit ni d’une limite totale de conversation ni d’un quota de facturation durable. Les limites du fournisseur restent applicables. Aucune donnée de classe, note ou copie n’est envoyée au tuteur.
 
 ### Utilisation sur téléphone
 L’interface mobile conserve le style vert/crème/doré avec des cartes plus compactes, deux colonnes de matières, des boutons tactiles d’au moins 44 px et des champs de 16 px pour éviter le zoom automatique sur iPhone. Le menu devient un panneau défilant depuis le bas avec une fermeture accessible ; la navigation fixe reste présente sur les pages avec recherche automatique et se masque seulement lorsque le viewport indique l’ouverture du clavier.
@@ -508,12 +503,12 @@ Note indicative, sans XP ni incidence sur la maîtrise. Réponse et correction r
 La correction des questions rédigées utilise un raisonnement Gemini limité (niveau LOW pour les modèles Gemini 3 et suivants), des commentaires concis et 3 500 jetons de sortie maximum. Délai fournisseur de 60 secondes pour cette correction, inchangé pour la création. L’interface borne l’ensemble Auth + réseau + lecture du résultat à 75 secondes pour la correction (150 secondes pour la création), indépendamment du respect du signal d’annulation. Annuler l’attente rend la main immédiatement ; délai dépassé ou erreur conserve la réponse et permet de réessayer. Aucun faux corrigé de secours n’est affiché.
 
 ### Un accueil pour reprendre ses révisions
-L’accueil élève met en avant une séance et la reprise du dernier cours (chapitre et fiche enregistrés), avec un point de départ vers Cours pour les débutants. Le catalogue des matières reste sur la page Cours ; l’accueil propose Voir tous les cours. Présentation éditoriale vert profond/crème/doré, illustration légère en CSS, puis habitudes, objectifs, progression et communauté. Les petits écrans courts reçoivent une version compacte pour garder l’action principale immédiatement visible. L’accueil professeur conserve ses classes. Les textes sont disponibles hors ligne en FR/EN/ES/IT/AR.
+L’accueil élève met en avant une séance et la reprise du dernier cours (chapitre et fiche enregistrés), avec un point de départ vers Cours pour les débutants. Le catalogue des matières reste sur la page Cours ; l’accueil propose Voir tous les cours. Présentation éditoriale vert profond/crème/doré, illustration légère en CSS, puis habitudes, objectifs, progression et communauté. Les petits écrans courts reçoivent une version compacte pour garder l’action principale immédiatement visible. L’accueil professeur conserve ses classes. Les textes sont disponibles hors ligne en FR/EN/ES/IT/AR/DE.
 
 Le retour de connexion Google ouvre explicitement l’accueil après consommation du fragment OAuth. Les jetons sont nettoyés de l’adresse, la session reste disponible et un nouveau compte complète toujours son profil. Les vrais liens inexistants conservent leur page 404.
 
 ### Langues : manuels complets et vidéos
-Les matières Langues de Première et Terminale ouvrent un atelier avec quatre manuels PDF. Ils réunissent cours détaillés, règles et exemples, vocabulaire, compréhension de textes, mini-exercices et corrigés expliqués séparés. Les énoncés sont numérotés dans l’ordre de lecture ; sommaire, signets, liens vers les corrections et retours aux énoncés facilitent la navigation. Le contenu reste disponible hors connexion dans les PDF ; les vidéos demandent Internet.
+Les matières Langues de Première et Terminale ouvrent un atelier avec cinq manuels PDF : anglais, espagnol, italien, arabe et allemand. Ils réunissent cours détaillés, règles et exemples, vocabulaire, compréhension de textes, mini-exercices et corrigés expliqués séparés. Les énoncés sont numérotés dans l’ordre de lecture ; sommaire, signets, liens vers les corrections et retours aux énoncés facilitent la navigation. Le contenu reste disponible hors connexion dans les PDF ; les vidéos demandent Internet.
 
 | Manuel | Pages A4 | Leçons | Exercices corrigés | Pages vidéo |
 |---|---:|---:|---:|---:|
@@ -524,7 +519,7 @@ Les matières Langues de Première et Terminale ouvrent un atelier avec quatre m
 
 Les 176 pages vidéo ont été sélectionnées depuis les catalogues British Council, VideoEle, RAI Scuola et Al Jazeera Learning Arabic, puis contrôlées pour leur accessibilité et la présence d’un lecteur. Elles restent hébergées par leurs éditeurs et soumises à leurs conditions. La bibliothèque du site est repliée par défaut et filtrable par niveau, pour éviter une longue grille de boutons. Les niveaux affichés sont ceux des catalogues, sans promesse de certification.
 
-Les sources des manuels sont dans `app/resources/langues/{en,es,it,ar}.json`. Le générateur `cd app && node scripts/guides-langues.mjs` produit les quatre PDF avec signets et liens internes, ainsi qu’un catalogue léger pour l’interface : le texte complet des manuels n’est pas chargé par la page. Les anciens cours restent archivés pour conserver l’intégrité des résultats, mais ne sont plus proposés dans les parcours, la recherche ou les anciennes routes de cours. Aucun résultat utilisateur n’est supprimé.
+Les sources des manuels sont dans `app/resources/langues/{en,es,it,ar,de}.json`. Le générateur `cd app && node scripts/guides-langues.mjs` produit les cinq PDF avec signets et liens internes, ainsi qu’un catalogue léger pour l’interface : le texte complet des manuels n’est pas chargé par la page. Les anciens cours restent archivés pour conserver l’intégrité des résultats, mais ne sont plus proposés dans les parcours, la recherche ou les anciennes routes de cours. Aucun résultat utilisateur n’est supprimé.
 
 ## Cours publics
 

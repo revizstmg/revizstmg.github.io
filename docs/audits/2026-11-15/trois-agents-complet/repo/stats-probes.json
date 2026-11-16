@@ -1,0 +1,24 @@
+{
+  "githubBody": {
+    "requests": 1,
+    "signalAborted": true,
+    "settledAfter100ms": false,
+    "note": "Échéance accélérée à20ms ; corps json ne répond pas."
+  },
+  "supabaseHeaders": {
+    "requests": 1,
+    "hasAbortSignal": false,
+    "settledAfter100ms": false,
+    "note": "Requête bloquée simulée ; aucune base contactée."
+  },
+  "newDeploymentFailed": {
+    "givenLatestState": "failure",
+    "givenLatestAt": "2026-11-15T11:00:00Z",
+    "reported": {
+      "etat": "success",
+      "date": "2026-11-15T09:00:00Z"
+    },
+    "subject": "Rapport du 15/11/2026 · RévizSTMG · ✅ Rien à signaler",
+    "allClear": true
+  }
+}

@@ -3826,5 +3826,9 @@
   "Formules masquées par le programme ou le niveau : {n}.": "Fórmulas ocultas por el programa o el nivel: {n}.",
   "Afficher toute ma sélection": "Mostrar toda mi selección",
   "La requête a expiré. Réessaie.": "La solicitud ha agotado el tiempo de espera. Vuelve a intentarlo.",
-  "La requête a expiré.": "La solicitud ha agotado el tiempo de espera."
+  "La requête a expiré.": "La solicitud ha agotado el tiempo de espera.",
+  "Copie impossible. Sélectionne le code pour le copier manuellement.": "No se pudo copiar. Selecciona el código para copiarlo manualmente.",
+  "Partage désactivé sur cet appareil. Le retrait en ligne n’est pas encore confirmé ; il sera retenté automatiquement. L’ancien code peut encore donner accès à ta progression.": "El uso compartido está desactivado en este dispositivo. La retirada en línea aún no está confirmada y se volverá a intentar automáticamente. El código anterior podría seguir dando acceso a tu progreso.",
+  "Réessayer le retrait": "Reintentar la retirada",
+  "La suppression n’est pas confirmée. Vérifie ta connexion et ton compte avant de réessayer.": "La eliminación no está confirmada. Comprueba tu conexión y tu cuenta antes de volver a intentarlo."
 }

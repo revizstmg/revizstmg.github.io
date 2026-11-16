@@ -1,0 +1,508 @@
+{
+  "baseline": "08f6a79c6401b3dcb7369252aa809eb9c437fce7",
+  "scope": "PDF suivis du dépôt ; lisibilité technique et pages sans texte ni image. Ne valide pas le fond, les vidéos ou tous les lecteurs PDF.",
+  "files": 83,
+  "uniqueContents": 65,
+  "totalPhysicalPages": 1244,
+  "errors": [],
+  "pdf": [
+    {
+      "path": "app/public/eps/programme-eps-2019.pdf",
+      "sha256": "6dfd563ac720e8a91f5a0b8a536cc9554d27da9984014351e0dd92c1f88d66fb",
+      "pages": 11,
+      "emptyPages": []
+    },
+    {
+      "path": "app/public/eps/referentiel-ccf-2026.pdf",
+      "sha256": "8e26db9aee74ceb10b17ebd38bea1a9da2cb77a8bccfd018824181e9087c8e63",
+      "pages": 19,
+      "emptyPages": []
+    },
+    {
+      "path": "app/public/eps/referentiel-ponctuel-2026.pdf",
+      "sha256": "bea01d14ddad74ce2aff09a50d2fb23d4372f0cfcaff156113e115d5ee5d5b50",
+      "pages": 6,
+      "emptyPages": []
+    },
+    {
+      "path": "app/public/excellence/2021/sujet.pdf",
+      "sha256": "4aebe8d6501a5809d736b711adce945b875043a1ff22f42eed9346717e30c6fe",
+      "pages": 12,
+      "emptyPages": []
+    },
+    {
+      "path": "app/public/excellence/2022/sujet.pdf",
+      "sha256": "b13ab81935f857f96b6ae28963535684e65c239c7392b3558e615117556e8001",
+      "pages": 13,
+      "emptyPages": []
+    },
+    {
+      "path": "app/public/excellence/2023/sujet.pdf",
+      "sha256": "37e33931fb127650b5033e5ccb5d2622b27a6beb87444c499e3b8e6a50b1f6f7",
+      "pages": 11,
+      "emptyPages": []
+    },
+    {
+      "path": "app/public/excellence/2024/sujet.pdf",
+      "sha256": "e529b1f1af2f4544788314807ac7a16f87fc5921bfcaab1f5d4ea2f3daad7b9a",
+      "pages": 10,
+      "emptyPages": []
+    },
+    {
+      "path": "app/public/excellence/2025/sujet.pdf",
+      "sha256": "38c56e2fb24b3a3615190cb816616792840a96af16af6bc219f2f71f42cf5f6d",
+      "pages": 11,
+      "emptyPages": []
+    },
+    {
+      "path": "app/resources/langues/guide-ar.pdf",
+      "sha256": "9fff1b99a396af2276aa652c1b504b2e302a38dbe2f60db6be7c4c5764dda0ed",
+      "pages": 50,
+      "emptyPages": []
+    },
+    {
+      "path": "app/resources/langues/guide-de.pdf",
+      "sha256": "0426f60db19d558f0a34429a044301782acddac641b4f29f656273226d858f4d",
+      "pages": 47,
+      "emptyPages": []
+    },
+    {
+      "path": "app/resources/langues/guide-en.pdf",
+      "sha256": "224dd84fd72182d3a0c158dd53271fd38836b04a4b823e9ec001edf8b5e6c1c6",
+      "pages": 56,
+      "emptyPages": []
+    },
+    {
+      "path": "app/resources/langues/guide-es.pdf",
+      "sha256": "8aef73298b35ae31f75f58a5c923598a7bdddedc62aa1cfd1ebfa5a5b3baaf88",
+      "pages": 55,
+      "emptyPages": []
+    },
+    {
+      "path": "app/resources/langues/guide-it.pdf",
+      "sha256": "d6bf915488e2eb540f83a80e9906528a117d0ebcd64b212048b2eb613062eaaa",
+      "pages": 49,
+      "emptyPages": []
+    },
+    {
+      "path": "assets/guide-ar--VN9WzV_.pdf",
+      "sha256": "9fff1b99a396af2276aa652c1b504b2e302a38dbe2f60db6be7c4c5764dda0ed",
+      "pages": 50,
+      "emptyPages": []
+    },
+    {
+      "path": "assets/guide-de-DIlKC2Yp.pdf",
+      "sha256": "0426f60db19d558f0a34429a044301782acddac641b4f29f656273226d858f4d",
+      "pages": 47,
+      "emptyPages": []
+    },
+    {
+      "path": "assets/guide-en-CzUfZh1o.pdf",
+      "sha256": "224dd84fd72182d3a0c158dd53271fd38836b04a4b823e9ec001edf8b5e6c1c6",
+      "pages": 56,
+      "emptyPages": []
+    },
+    {
+      "path": "assets/guide-es-BqFylxvE.pdf",
+      "sha256": "8aef73298b35ae31f75f58a5c923598a7bdddedc62aa1cfd1ebfa5a5b3baaf88",
+      "pages": 55,
+      "emptyPages": []
+    },
+    {
+      "path": "assets/guide-it-DbbfBjC_.pdf",
+      "sha256": "d6bf915488e2eb540f83a80e9906528a117d0ebcd64b212048b2eb613062eaaa",
+      "pages": 49,
+      "emptyPages": []
+    },
+    {
+      "path": "cours/langues/guide-ar.pdf",
+      "sha256": "9fff1b99a396af2276aa652c1b504b2e302a38dbe2f60db6be7c4c5764dda0ed",
+      "pages": 50,
+      "emptyPages": []
+    },
+    {
+      "path": "cours/langues/guide-de.pdf",
+      "sha256": "0426f60db19d558f0a34429a044301782acddac641b4f29f656273226d858f4d",
+      "pages": 47,
+      "emptyPages": []
+    },
+    {
+      "path": "cours/langues/guide-en.pdf",
+      "sha256": "224dd84fd72182d3a0c158dd53271fd38836b04a4b823e9ec001edf8b5e6c1c6",
+      "pages": 56,
+      "emptyPages": []
+    },
+    {
+      "path": "cours/langues/guide-es.pdf",
+      "sha256": "8aef73298b35ae31f75f58a5c923598a7bdddedc62aa1cfd1ebfa5a5b3baaf88",
+      "pages": 55,
+      "emptyPages": []
+    },
+    {
+      "path": "cours/langues/guide-it.pdf",
+      "sha256": "d6bf915488e2eb540f83a80e9906528a117d0ebcd64b212048b2eb613062eaaa",
+      "pages": 49,
+      "emptyPages": []
+    },
+    {
+      "path": "docs/audits/2026-10-19/RevizSTMG-audit-global-2026-10-19.pdf",
+      "sha256": "b4cbc70791395641c953cc119c8b1202dfc1633ad6fd7c224cd86fb3fccbeb1a",
+      "pages": 19,
+      "emptyPages": []
+    },
+    {
+      "path": "docs/audits/2026-10-20/RevizSTMG-ameliorations-du-site-2026-10-20.pdf",
+      "sha256": "4c7caaff75a3c3fc0b897db33a5965f0090fa1e34b9fcd12371c8d9a2ce3ac70",
+      "pages": 89,
+      "emptyPages": []
+    },
+    {
+      "path": "docs/audits/2026-11-05/outils-preuves/copie-longue.pdf",
+      "sha256": "4230636d654d1e595a4847e75d6a8bba37aa3baba4050388dcbf2d01f20885cb",
+      "pages": 1,
+      "emptyPages": []
+    },
+    {
+      "path": "docs/audits/2026-11-14/trois-agents/agent3/avenir-final-print.pdf",
+      "sha256": "c7538a8bd62aa2d3e881cad596ccb1da1abf89c75daf77af45eddaa500091d74",
+      "pages": 7,
+      "emptyPages": []
+    },
+    {
+      "path": "eps/programme-eps-2019.pdf",
+      "sha256": "6dfd563ac720e8a91f5a0b8a536cc9554d27da9984014351e0dd92c1f88d66fb",
+      "pages": 11,
+      "emptyPages": []
+    },
+    {
+      "path": "eps/referentiel-ccf-2026.pdf",
+      "sha256": "8e26db9aee74ceb10b17ebd38bea1a9da2cb77a8bccfd018824181e9087c8e63",
+      "pages": 19,
+      "emptyPages": []
+    },
+    {
+      "path": "eps/referentiel-ponctuel-2026.pdf",
+      "sha256": "bea01d14ddad74ce2aff09a50d2fb23d4372f0cfcaff156113e115d5ee5d5b50",
+      "pages": 6,
+      "emptyPages": []
+    },
+    {
+      "path": "excellence/2021/sujet.pdf",
+      "sha256": "4aebe8d6501a5809d736b711adce945b875043a1ff22f42eed9346717e30c6fe",
+      "pages": 12,
+      "emptyPages": []
+    },
+    {
+      "path": "excellence/2022/sujet.pdf",
+      "sha256": "b13ab81935f857f96b6ae28963535684e65c239c7392b3558e615117556e8001",
+      "pages": 13,
+      "emptyPages": []
+    },
+    {
+      "path": "excellence/2023/sujet.pdf",
+      "sha256": "37e33931fb127650b5033e5ccb5d2622b27a6beb87444c499e3b8e6a50b1f6f7",
+      "pages": 11,
+      "emptyPages": []
+    },
+    {
+      "path": "excellence/2024/sujet.pdf",
+      "sha256": "e529b1f1af2f4544788314807ac7a16f87fc5921bfcaab1f5d4ea2f3daad7b9a",
+      "pages": 10,
+      "emptyPages": []
+    },
+    {
+      "path": "excellence/2025/sujet.pdf",
+      "sha256": "38c56e2fb24b3a3615190cb816616792840a96af16af6bc219f2f71f42cf5f6d",
+      "pages": 11,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-droit-2-corrige.pdf",
+      "sha256": "e9b0971dea7259d4352079999d6014e02b3fd060738a6454f5f792cb33e0a2cf",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-droit-2-sujet.pdf",
+      "sha256": "65a4c1d9ed208e16e14f58dfbb9a36490063595d8921735129bedd56a2c3dfa3",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-droit-corrige.pdf",
+      "sha256": "7d637ef3bad8c228253f1f003c6f719a4244383776bb6cd7302529458d12379d",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-droit-economie-2-corrige.pdf",
+      "sha256": "33b4b3d279b541e0f55e5b168445f8d084891eaa005238e3d1151490d7f05278",
+      "pages": 5,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-droit-economie-2-sujet.pdf",
+      "sha256": "959cb544760392b2b73614028f88fba8ed507344f51e95e7e3a6d276c858d8c8",
+      "pages": 4,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-droit-economie-corrige.pdf",
+      "sha256": "f17baf6490794cc967a3207f4b3b78907abff993e0e77b62aa4e27bf57a7728a",
+      "pages": 5,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-droit-economie-sujet.pdf",
+      "sha256": "adb442914f9489cccc7c0a6de8e6ce39364363f0cebed1fc8aefe9ac0ad5e13e",
+      "pages": 4,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-droit-sujet.pdf",
+      "sha256": "6931a4b4b3460a38f13aa9a422e157ef6a654545795cb0d13d304f3c9231413d",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-economie-2-corrige.pdf",
+      "sha256": "a28ed38f092a29d69ae90f0f5201b14df190c7ca87fcd28272a24db53e8d5bfc",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-economie-2-sujet.pdf",
+      "sha256": "1bf25f143cd90d00ffa61a22df85f6096adae80e390236d1e09e175b7b88404a",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-economie-corrige.pdf",
+      "sha256": "bcd0a077ea900405823f4b63dadeb3981f263bdb6c7d715e9a6e2140d859e3f7",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-economie-sujet.pdf",
+      "sha256": "b659e78cb76d5c98e05ee3c9663734156f52608868a885dad51d449f9f4a10e8",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-gestion-2-corrige.pdf",
+      "sha256": "d7d34e63e96c776c3e7283a091119864032a73c10b46c9262f8c9d78421401fc",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-gestion-2-sujet.pdf",
+      "sha256": "c29e7fbb8674d453cb8cbe29e5bca84204561a954aa8b21d58004a635c3ff2af",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-gestion-corrige.pdf",
+      "sha256": "89f7b6eb3b9917b67b99d4432ea4c2ce8bd46d2decb65c04f9d6abdb5f350132",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-gestion-sujet.pdf",
+      "sha256": "06581b43af9b9e9a7c8162e0cea50fc7087a3626cbcac6f900b4a812ce7381f4",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-management-2-corrige.pdf",
+      "sha256": "460468d7937fe6bfedba0a7b4bc6c46504f22bcb2e30521b0b617bb2f0d74e67",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-management-2-sujet.pdf",
+      "sha256": "5418bab284a370405ad9207aa46077ab4fdfd6a3e34b1cf78bc94854b95a3c9d",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-management-corrige.pdf",
+      "sha256": "219a2b65364186a07c550107d35af4bb4330aa9f4cc1b074a0b30991dc62ef0a",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/premiere-management-sujet.pdf",
+      "sha256": "f3784d6939c63c3e3b378f81ca4e68e36b5cea1f1b7cbf9f07004cafde3af8cd",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/revision-droit-economie-premiere-terminale-1-corrige.pdf",
+      "sha256": "babda1c451b076e11ccd81bee7346478a3ab37035e6a398602495583a997e165",
+      "pages": 5,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/revision-droit-economie-premiere-terminale-1-sujet.pdf",
+      "sha256": "509cb79bb7fd71b4770da50675492b757b5ac2d1848e20f680e1370c79097c2c",
+      "pages": 4,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/revision-droit-economie-premiere-terminale-2-corrige.pdf",
+      "sha256": "3d52f5a130106bf04392f85810723b6e564cc8cc00822994de32278b71fe2012",
+      "pages": 5,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/revision-droit-economie-premiere-terminale-2-sujet.pdf",
+      "sha256": "11dd7d5cb6c5b8d61f15e4e93b6b39ff02e17b8fc964e7fcb49b2fa4e3289bfe",
+      "pages": 4,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/revision-management-premiere-terminale-1-corrige.pdf",
+      "sha256": "1cc204a0f805d475b445f6411ae674dc9e80e8cf325f0bd1e7df4bc3d9cd96b3",
+      "pages": 5,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/revision-management-premiere-terminale-1-sujet.pdf",
+      "sha256": "22c1f16d6d1c9a82b4bc046901623d7f70050a00c7baf283a1c5d933eeacdc7b",
+      "pages": 4,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/revision-management-premiere-terminale-2-corrige.pdf",
+      "sha256": "b28b3f7d383f61940f862d1e8ce353748ae7d53c02c65c35f7628f3e595a6094",
+      "pages": 5,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/revision-management-premiere-terminale-2-sujet.pdf",
+      "sha256": "67779e7c566da098a5dac7baa4a726fe2c79b4cedb3705ef0b2472d0f82a64d2",
+      "pages": 4,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-droit-2-corrige.pdf",
+      "sha256": "3437bcfb3a3d95d428a10259ad8ed929d1dba66d4820f32bb1e712fee77cfa1e",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-droit-2-sujet.pdf",
+      "sha256": "00e8c1c6ebbff2a4d5d721490dfca5df66cd3d89705d299ad92d23c8810b193b",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-droit-corrige.pdf",
+      "sha256": "f88b8ebf63ad577df659eefbb918935245a6bf3c3e3b7934d881449fa14e34ee",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-droit-economie-2-corrige.pdf",
+      "sha256": "ec58ff24b585b2145471c4802d1a2ba02f6274af3e829853003177e09de6cc6b",
+      "pages": 5,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-droit-economie-2-sujet.pdf",
+      "sha256": "43be2cacf0cd4352b1a7b6c71f09e70ab5382294c9d0184fa3a97dcdcc6215b1",
+      "pages": 4,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-droit-economie-corrige.pdf",
+      "sha256": "39ddad349fee1450b4dd5bfb178822636ac85763d9f7086cf2b9872f0d14d309",
+      "pages": 5,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-droit-economie-sujet.pdf",
+      "sha256": "2528abd9a9b330cc830b69b4ad413a8edf310f1355c3de358741b41540d34b8d",
+      "pages": 4,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-droit-sujet.pdf",
+      "sha256": "28e1e9f3eba41f1fd762bfb75ade1c07ab7def4ffe20440f1cf1897f6d055d9e",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-economie-2-corrige.pdf",
+      "sha256": "26d093c88dec76723c6d9090bc31cef6da44d6804040f541515b0772e7a28cba",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-economie-2-sujet.pdf",
+      "sha256": "2c3b1c00853bc6f566abf113f7bda33748de05004217cc74b8d2d43abf8b164f",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-economie-corrige.pdf",
+      "sha256": "420ebb247a526044ca886733f2e1ea1cc29090da5fccdb8a2cbc1daa25c63eef",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-economie-sujet.pdf",
+      "sha256": "8efb5d6812c9f358a2e62252e06adc55fa5ee7f43bed6db0472441cb8584ee54",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-gf-2-corrige.pdf",
+      "sha256": "186afd3ea5c6f6fb3fa27cef8494db11dac1717df16efc2508561a8a63cdf5b1",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-gf-2-sujet.pdf",
+      "sha256": "a8dc54935c19aa2c6730dcadf593c8ad00092bb32c4e63e12d8f75c950107ace",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-gf-corrige.pdf",
+      "sha256": "13470a396e01322237aa704961b9151771f8fa8b0c5f2fbdfbd8cf44a3110ed8",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-gf-sujet.pdf",
+      "sha256": "fff966c4bbffd59c7a8093a2a197d97b635b70e80f961d314dd5a92f85c2c674",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-management-bilan-corrige.pdf",
+      "sha256": "564d59a38f37054fda89cebabf7b1d7f2a32602e410be701ac2099b381d2ec50",
+      "pages": 5,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-management-bilan-sujet.pdf",
+      "sha256": "a2586d721996aa044755d43895189bd7ed9f96bff29b59ff16bd2836b061340c",
+      "pages": 4,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-management-corrige.pdf",
+      "sha256": "f399439e496ec0c7e57da6f067b14000237ca4758845d964bc1d64b69998205e",
+      "pages": 3,
+      "emptyPages": []
+    },
+    {
+      "path": "sujets-prets/terminale-management-sujet.pdf",
+      "sha256": "758eabadb80aa34364cbdf13c0ddbe819d64f3596ddcadffc95357bf2954ef7a",
+      "pages": 3,
+      "emptyPages": []
+    }
+  ]
+}

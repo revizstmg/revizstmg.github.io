@@ -15,8 +15,8 @@ https://revizstmg.github.io. Documentation complète : `README.md`.
 - La racine (`index.html`, `sw.js`, `manifest.webmanifest`, icônes) : la version
   compilée que sert GitHub Pages. Elle est générée par le workflow
   `.github/workflows/deploy.yml` : ne la modifiez jamais à la main.
-- `supabase/migrations/` : le schéma de la base ; `supabase/functions/fiche-vision/` :
-  la fonction « fiche par photo ».
+- `supabase/migrations/` : migrations versionnées de la base ; `supabase/functions/` :
+  examen blanc et accompagnement, paiement, rappels et fiche par photo.
 
 ## Commandes
 
@@ -88,9 +88,11 @@ Consignes du propriétaire (24 octobre 2026) :
 - Le schéma est dans `supabase/migrations/`. Toute modification de la base passe par
   un nouveau fichier de migration, appliqué sur Supabase sous le même nom
   (`supabase/README.md`).
-- Sauf `profiles`, les tables sociales sont ouvertes à tous (`using (true)`) : n'y
-  ajoutez pas de données sensibles avant d'avoir appliqué les corrections de
-  l'audit (`supabase/README.md`).
+- Les règles sociales ouvertes décrites dans les anciennes notes ont été remplacées.
+  L’audit réel du15novembre2026 a vérifié RLS sur21tables ciblées. Vérifier les
+  règles actives et `supabase/README.md` avant toute modification : certaines
+  migrations historiques ont été appliquées manuellement.
+
 
 ## Rapport du matin
 

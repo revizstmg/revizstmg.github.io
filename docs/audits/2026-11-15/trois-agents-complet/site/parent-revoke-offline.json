@@ -1,0 +1,14 @@
+{
+  "initial": {
+    "deletes": 1,
+    "snapshot": true,
+    "checked": "false"
+  },
+  "after": {
+    "deletes": 1,
+    "snapshot": true,
+    "checked": "false",
+    "text": "← Confidentialité et données\n\nPARAMÈTRES\n\nSuivi parental\n\nGérer le partage de ma progression avec mes parents.\n\n👨‍👩‍👧 Suivi parental\n\nDésactivé : rien n’est partagé. Active-le pour obtenir un code à donner à tes parents ; ils verront ta progression (temps, série, matières) en lecture seule."
+  },
+  "errors": []
+}

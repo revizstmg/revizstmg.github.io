@@ -1,0 +1,740 @@
+[
+  {
+    "profile": "terminale-360",
+    "route": "/accueil",
+    "url": "#/accueil",
+    "title": "Bonsoir, Léa",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/cours",
+    "url": "#/cours",
+    "title": "Tes matières",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/revision",
+    "url": "#/revision",
+    "title": "Réviser",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/bac-blanc",
+    "url": "#/bac-blanc",
+    "title": "Bac blanc",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/moi",
+    "url": "#/moi",
+    "title": "Léa Test",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/parametres",
+    "url": "#/parametres",
+    "title": "Paramètres",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/classe",
+    "url": "#/classe",
+    "title": "👥 Rejoindre une classe",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/amis",
+    "url": "#/amis",
+    "title": "Amis",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/boutique",
+    "url": "#/boutique",
+    "title": "Révise. Débloque. Profite.",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/classement",
+    "url": "#/classement",
+    "title": "🏆 Classement de la semaine",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/parcours-avenir",
+    "url": "#/parcours-avenir",
+    "title": "Parcours Avenir",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/atelier-formules",
+    "url": "#/atelier-formules",
+    "title": "Atelier de formules",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/grand-oral",
+    "url": "#/grand-oral",
+    "title": "Grand Oral",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/etude-de-gestion",
+    "url": "#/etude-de-gestion",
+    "title": "",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/mes-notes",
+    "url": "#/mes-notes",
+    "title": "📝 Mes notes de classe",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/excellence-economique",
+    "url": "#/excellence-economique",
+    "title": "Prix de l’excellence économique",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/sport-bac",
+    "url": "#/sport-bac",
+    "title": "Sport au bac",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/programme",
+    "url": "#/programme",
+    "title": "Programme jusqu’au bac",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/favoris",
+    "url": "#/favoris",
+    "title": "⭐ Les favoris de Léa",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/methodo",
+    "url": "#/methodo",
+    "title": "Méthodo par épreuve",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/fiches-photo",
+    "url": "#/fiches-photo",
+    "title": "Ta fiche à partir d’une photo",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/vacances",
+    "url": "#/vacances",
+    "title": "Vacances STMG",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/offres",
+    "url": "#/offres",
+    "title": "Les offres, simplement",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/faq",
+    "url": "#/faq",
+    "title": "Foire aux questions",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/guide",
+    "url": "#/guide",
+    "title": "Bien commencer en 5 minutes",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/confidentialite",
+    "url": "#/confidentialite",
+    "title": "Confidentialité & protection des données",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/cgu",
+    "url": "#/cgu",
+    "title": "Conditions d’utilisation & mentions légales",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/subject/gestion-finance/theme/gf-t1",
+    "url": "#/subject/gestion-finance/theme/gf-t1",
+    "title": "Thème 1 - Appliquer les règles comptables",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/subject/gestion-finance/theme/gf-t1/chapter/0",
+    "url": "#/subject/gestion-finance/theme/gf-t1/chapter/0",
+    "title": "La TVA : collectée, déductible, à décaisser",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/subject/langues",
+    "url": "#/subject/langues",
+    "title": "Ose prendre la parole.",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/defi",
+    "url": "#/defi",
+    "title": "Défi du jour",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/badges",
+    "url": "#/badges",
+    "title": "🏅 Les badges de Léa",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/parcours",
+    "url": "#/parcours",
+    "title": "Construisons ton parcours",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-360",
+    "route": "/exemple-bilan",
+    "url": "#/exemple-bilan",
+    "title": "Du devoir au déclic",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/accueil",
+    "url": "#/accueil",
+    "title": "Bonsoir, Léa",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/cours",
+    "url": "#/cours",
+    "title": "Tes matières",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/revision",
+    "url": "#/revision",
+    "title": "Réviser",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/bac-blanc",
+    "url": "#/bac-blanc",
+    "title": "Bac blanc",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/moi",
+    "url": "#/moi",
+    "title": "Léa Test",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/parametres",
+    "url": "#/parametres",
+    "title": "Paramètres",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/classe",
+    "url": "#/classe",
+    "title": "👥 Rejoindre une classe",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/amis",
+    "url": "#/amis",
+    "title": "Amis",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/boutique",
+    "url": "#/boutique",
+    "title": "Révise. Débloque. Profite.",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/classement",
+    "url": "#/classement",
+    "title": "🏆 Classement de la semaine",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/parcours-avenir",
+    "url": "#/parcours-avenir",
+    "title": "Parcours Avenir",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/atelier-formules",
+    "url": "#/atelier-formules",
+    "title": "Atelier de formules",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/grand-oral",
+    "url": "#/grand-oral",
+    "title": "Grand Oral",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/etude-de-gestion",
+    "url": "#/etude-de-gestion",
+    "title": "",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/mes-notes",
+    "url": "#/mes-notes",
+    "title": "📝 Mes notes de classe",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/excellence-economique",
+    "url": "#/excellence-economique",
+    "title": "Prix de l’excellence économique",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/sport-bac",
+    "url": "#/sport-bac",
+    "title": "Sport au bac",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/programme",
+    "url": "#/programme",
+    "title": "Programme jusqu’au bac",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/favoris",
+    "url": "#/favoris",
+    "title": "⭐ Les favoris de Léa",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/methodo",
+    "url": "#/methodo",
+    "title": "Méthodo par épreuve",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/fiches-photo",
+    "url": "#/fiches-photo",
+    "title": "Ta fiche à partir d’une photo",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/vacances",
+    "url": "#/vacances",
+    "title": "Vacances STMG",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/offres",
+    "url": "#/offres",
+    "title": "Les offres, simplement",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/faq",
+    "url": "#/faq",
+    "title": "Foire aux questions",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/guide",
+    "url": "#/guide",
+    "title": "Bien commencer en 5 minutes",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/confidentialite",
+    "url": "#/confidentialite",
+    "title": "Confidentialité & protection des données",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/cgu",
+    "url": "#/cgu",
+    "title": "Conditions d’utilisation & mentions légales",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/subject/gestion-finance/theme/gf-t1",
+    "url": "#/subject/gestion-finance/theme/gf-t1",
+    "title": "Thème 1 - Appliquer les règles comptables",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/subject/gestion-finance/theme/gf-t1/chapter/0",
+    "url": "#/subject/gestion-finance/theme/gf-t1/chapter/0",
+    "title": "La TVA : collectée, déductible, à décaisser",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/subject/langues",
+    "url": "#/subject/langues",
+    "title": "Ose prendre la parole.",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/defi",
+    "url": "#/defi",
+    "title": "Défi du jour",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/badges",
+    "url": "#/badges",
+    "title": "🏅 Les badges de Léa",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/parcours",
+    "url": "#/parcours",
+    "title": "Construisons ton parcours",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "terminale-1440",
+    "route": "/exemple-bilan",
+    "url": "#/exemple-bilan",
+    "title": "Du devoir au déclic",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "premiere",
+    "route": "/accueil",
+    "url": "#/accueil",
+    "title": "Bonsoir, Léa",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "premiere",
+    "route": "/cours",
+    "url": "#/cours",
+    "title": "Tes matières",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "premiere",
+    "route": "/revision",
+    "url": "#/revision",
+    "title": "Réviser",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "premiere",
+    "route": "/bac-blanc",
+    "url": "#/bac-blanc",
+    "title": "Bac blanc",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "premiere",
+    "route": "/atelier-formules",
+    "url": "#/atelier-formules",
+    "title": "Atelier de formules",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "premiere",
+    "route": "/sport-bac",
+    "url": "#/sport-bac",
+    "title": "Sport au bac",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "premiere",
+    "route": "/parcours-avenir",
+    "url": "#/parcours-avenir",
+    "title": "Parcours Avenir",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "premiere",
+    "route": "/subject/p1-langues",
+    "url": "#/subject/p1-langues",
+    "title": "Ose prendre la parole.",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "prof",
+    "route": "/accueil",
+    "url": "#/accueil",
+    "title": "Bonjour, Léa",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "prof",
+    "route": "/classe",
+    "url": "#/classe",
+    "title": "Un espace pour apprendre ensemble.",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "prof",
+    "route": "/parametres",
+    "url": "#/parametres",
+    "title": "Paramètres",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "prof",
+    "route": "/boutique",
+    "url": "#/boutique",
+    "title": "Révise. Débloque. Profite.",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "parent",
+    "route": "/parent",
+    "url": "#/parent",
+    "title": "Espace parent",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  },
+  {
+    "profile": "parent",
+    "route": "/offres",
+    "url": "#/offres",
+    "title": "Les offres, simplement",
+    "overflow": false,
+    "notFound": 0,
+    "errors": []
+  }
+]

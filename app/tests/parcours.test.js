@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll } from 'vitest'
+import { describe, it, expect, beforeAll, vi } from 'vitest'
 import * as C from '../src/data/index.js'
 import { construirePlan, themesDuParcours, matieresDuParcours, maitriseTheme, cibleMaitrise, composerPositionnement, resultatPositionnement, echeances, lundiDe, avancementSemaine, OBJECTIFS_DEFAUT } from '../src/data/parcours.js'
 
@@ -8,6 +8,18 @@ const AUJOURDHUI = '2026-11-02' // un lundi
 let themes, themesP
 beforeAll(async () => { await C.chargerTout(); themes = themesDuParcours(TERM); themesP = themesDuParcours(PREM) })
 const etat = (extra = {}) => ({ chapters: {}, srs: {}, bacDate: null, parcours: { objectifs: { ...OBJECTIFS_DEFAUT } }, ...extra })
+
+it('le choix des matières garde ses comptes sans générer les exercices', () => {
+  const spy = vi.spyOn(C, 'themeChapters')
+  try {
+    for (const [track, expected] of [[TERM, themes], [PREM, themesP]]) {
+      const matieres = matieresDuParcours(track)
+      expect(matieres.reduce((n, m) => n + m.themes, 0)).toBe(expected.length)
+      expect(matieres.map(m => m.id)).toEqual([...new Set(expected.map(t => t.subjectId))])
+    }
+    expect(spy).not.toHaveBeenCalled()
+  } finally { spy.mockRestore() }
+})
 
 describe('cible de maîtrise', () => {
   it('croît avec la note visée et reste bornée', () => {

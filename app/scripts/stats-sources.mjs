@@ -8,6 +8,7 @@
 import * as C from '../src/data/index.js'
 import { SUPA_URL, SUPA_ANON } from '../src/supabase.js'
 import { avecGraine } from '../tests/outils.js'
+import { withNetworkTimeout } from '../src/networkTimeout.js'
 
 export const DEPOT = 'revizstmg/revizstmg.github.io'
 export const SUBJECTS = C.SUBJECTS
@@ -48,7 +49,9 @@ export async function contenu() {
 // ---- Utilisation (Supabase) ----
 export async function utilisation() {
   try {
+    return await withNetworkTimeout(async signal => {
     const r = await fetch(`${SUPA_URL}/rest/v1/rpc/revizstmg_statistiques`, {
+      signal,
       method: 'POST',
       headers: { apikey: SUPA_ANON, Authorization: `Bearer ${SUPA_ANON}`, 'Content-Type': 'application/json' },
       body: '{}',
@@ -56,6 +59,7 @@ export async function utilisation() {
     if (r.status === 404) return { erreur: 'la fonction de comptage revizstmg_statistiques() n’est pas encore installée dans la base' }
     if (!r.ok) return { erreur: `Supabase a répondu ${r.status}` }
     return await r.json()
+    })
   } catch (e) {
     return { erreur: `Supabase injoignable (${e.message})` }
   }
@@ -65,9 +69,11 @@ export async function utilisation() {
 async function github(chemin) {
   const headers = { Accept: 'application/vnd.github+json' }
   if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`
-  const r = await fetch(`https://api.github.com/repos/${DEPOT}${chemin}`, { headers, signal: AbortSignal.timeout(15000) })
-  if (!r.ok) throw new Error(`GitHub ${r.status}`)
-  return r.json()
+  return withNetworkTimeout(async signal => {
+    const r = await fetch(`https://api.github.com/repos/${DEPOT}${chemin}`, { headers, signal })
+    if (!r.ok) throw new Error(`GitHub ${r.status}`)
+    return await r.json()
+  })
 }
 
 export async function publication(maintenant = new Date()) {
@@ -79,13 +85,16 @@ export async function publication(maintenant = new Date()) {
     if (run) p.ci = { etat: run.conclusion, date: run.updated_at }
   } catch { p.ci = { etat: 'unknown', detail: 'API GitHub inaccessible : CI non vérifiée' } }
   try {
-    // Dernière mise en ligne réussie. Un déploiement remplacé par un plus récent
-    // est annulé et GitHub le note « error » : ce n'est pas une panne (la
-    // vérification de 6 h surveille les vraies pannes).
+    // La dernière tentative et la dernière version publiée sont deux faits
+    // différents. Seules les annulations explicitement identifiées sont sautées.
     for (const dep of await github('/deployments?per_page=10')) {
       const st = (await github(`/deployments/${dep.id}/statuses?per_page=1`))[0]
-      if (st?.state === 'success') { p.miseEnLigne = { etat: 'success', date: st.created_at }; break }
+      if (!st) { p.miseEnLigne ||= { etat: 'unknown', detail: 'Dernière tentative sans résultat' }; continue }
+      const cancelled = st.state === 'inactive' || (st.state === 'error' && /cancelled|canceled|superseded|annul|remplac/i.test(st.description || ''))
+      if (!cancelled) p.miseEnLigne ||= { etat: st.state, date: st.created_at }
+      if (st.state === 'success') { p.dernierePublication = { etat: 'success', date: st.created_at }; break }
     }
+    p.miseEnLigne ||= { etat: 'unknown', detail: 'Aucune tentative vérifiable' }
   } catch { p.miseEnLigne = { etat: 'unknown', detail: 'API GitHub inaccessible : publication non vérifiée' } }
   try {
     const depuis = new Date(maintenant - 7 * 864e5).toISOString()

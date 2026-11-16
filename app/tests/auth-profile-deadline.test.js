@@ -37,3 +37,12 @@ it('renouvellement silencieux : session conservée, verrou libéré et réponse 
  expect((await api.refreshSession()).token).toBe('nouveau')
  finish({access_token:'retard',user:session.user});await Promise.resolve();expect(api.getSession().token).toBe('nouveau')
 })
+for(const phase of ['headers','body'])it(`suppression compte ${phase} silencieux : échéance sans déconnexion ni succès tardif`,async()=>{
+ let signal,finish
+ vi.stubGlobal('fetch',vi.fn((_,o)=>{signal=o.signal;return phase==='headers'?new Promise(r=>{finish=r}):Promise.resolve({ok:true,text:()=>new Promise(r=>{finish=r})})}))
+ const pending=api.supprimerCompte();const failed=expect(pending).rejects.toThrow('Le serveur ne répond pas')
+ await vi.advanceTimersByTimeAsync(15001);await failed;expect(signal.aborted).toBe(true);expect(api.getSession()).toEqual(session)
+ finish(phase==='headers'?new Response(null,{status:204}):'');await Promise.resolve();expect(api.getSession()).toEqual(session)
+ vi.stubGlobal('fetch',vi.fn(async()=>new Response(null,{status:204})))
+ expect(await api.supprimerCompte()).toBe(true)
+})
