@@ -9,6 +9,8 @@ const PER_Q = 20 // secondes par question en mode Défi
 
 export default function Qcm({ game, mode, color, onDone }) {
   const t = useT(), tr=usePublicText()
+  // Une mise à jour du parent peut recréer l'enveloppe game. Le tirage ne
+  // change que pour une nouvelle liste, jamais au milieu d'une réponse.
   const questions = useMemo(
     () =>
       // Une question chiffrée (« gen ») est refaite avec de nouveaux nombres.
@@ -17,7 +19,7 @@ export default function Qcm({ game, mode, color, onDone }) {
         orig: q, // la question telle que jouée, pour le carnet d'erreurs
         choices: shuffle(q.choices.map((c, i) => ({ text: c, correct: i === q.answer }))),
       })),
-    [game],
+    [game.questions],
   )
   const [i, setI] = useState(0)
   const [correct, setCorrect] = useState(0)

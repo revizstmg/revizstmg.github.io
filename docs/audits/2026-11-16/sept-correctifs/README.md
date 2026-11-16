@@ -29,3 +29,9 @@ Stripe reste en TEST ; aucune vente ni génération payante exercée. Les recomm
 ## Première validation générale
 
 La première CI PR222 a réussi871contrôles et échoué à initialiser les5contrôles des pages publiques : le nouvel état de retrait lisait `.status` sur une valeur nulle lorsque les deux identités étaient absentes. Garde corrigée avant publication. Aucun contrôle supprimé ni résultat initial réécrit ; nouvelle validation générale requise.
+
+## Complément : propositions du QCM
+
+Le contrôle ciblé a confirmé un défaut supplémentaire lié au duel de l’audit : une mise à jour de progression recréait l’objet `game` dans le parent, puis remélangeait les propositions alors qu’une réponse était déjà enregistrée. Une réponse choisie pouvait ainsi sembler fausse après la mise à jour. Le tirage est maintenant mémorisé sur la liste de questions, qui est la véritable donnée utilisée, et non sur son enveloppe.
+
+Reproduction déterministe avant correction en échec ; test navigateur conservé après correction. Le contenu des questions, les réponses attendues et le renouvellement à la nouvelle partie ne sont pas modifiés. Les contrôles ciblés de mélange des réponses et de supervision réussissent (11 tests). Compilation réussie. Le workflow précédent est remplacé par une validation complète de cette version finale, sans publication intermédiaire annoncée.

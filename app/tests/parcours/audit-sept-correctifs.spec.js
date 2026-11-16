@@ -57,3 +57,15 @@ test('parent : réponse tardive du retrait A ne confirme ni ne désactive le par
  await expect(share).toHaveAttribute('aria-checked','true');release();await page.waitForTimeout(100)
  await expect(share).toHaveAttribute('aria-checked','true');await expect(page.locator('main')).not.toContainText('rien n’est partagé')
 })
+
+test('les propositions restent stables après une mise à jour de la page',async({page})=>{
+ await preparer(page,etatEleve({classCode:'stmg-abc23'}));await page.addInitScript(()=>Math.random=()=>0)
+ const quiz={id:'00000000-0000-4000-8000-000000000004',title:'Stabilité audit',status:'published',class_code:'stmg-abc23',questions:[{q:'Question synthétique ?',choices:['Oui correct','Non'],answer:0}]}
+ await page.route('https://*.supabase.co/rest/**',r=>r.fulfill({json:new URL(r.request().url()).pathname.endsWith('/class_quiz')?[quiz]:[]}))
+ await page.goto('./#/classe');await attendreAccueil(page);await page.locator('.class-menu-trigger').click();await page.getByRole('dialog').getByRole('button',{name:/Quiz et travail/}).click();await page.getByRole('button',{name:/Duels/}).click();await page.getByRole('button',{name:/Lancer un duel/}).click();await page.getByRole('button',{name:/Stabilité audit/}).click()
+ const choices=page.getByRole('button',{name:/^[A-D] (Oui correct|Non)/});await expect(choices).toHaveCount(2)
+ await page.getByRole('button',{name:/Oui correct/}).click();const before=await choices.allTextContents()
+ await page.evaluate(()=>{Math.random=()=>0.999;window.dispatchEvent(new CustomEvent('stmg-focus-done',{detail:{minutes:1}}))})
+ await expect.poll(()=>page.evaluate(()=>JSON.parse(localStorage.getItem('stmg_progress_v2')).xp)).toBeGreaterThan(0)
+ expect(await choices.allTextContents()).toEqual(before)
+})
