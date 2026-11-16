@@ -1,0 +1,9 @@
+{
+  "phase": "getSubscription",
+  "elapsedMs": 65000,
+  "rpcCalls": 0,
+  "busy": true,
+  "signedIn": true,
+  "body": "← Confidentialité et données\n\nPARAMÈTRES\n\nSupprimer mon compte\n\nComprendre et confirmer la suppression de mon compte.\n\nZone sensible\n\nEfface définitivement ta progression, ta classe et tes contributions, tes amis et tes duels, le suivi parent et ton compte de connexion (adresse e-mail comprise).\n\nUn instant…",
+  "expected": "Délai borné et reprise utilisable ; ne pas bloquer avant le RPC déjà borné."
+}
