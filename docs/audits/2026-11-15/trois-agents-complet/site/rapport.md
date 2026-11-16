@@ -1,5 +1,7 @@
 # Audit indépendant du site RévizSTMG
 
+> Statut du 16 novembre : Les deux défauts de retrait parent et de suppression sont corrigés. [Livraison et preuves](../../../2026-11-16/sept-correctifs/README.md). Le corps conserve les constats à la référence auditée.
+
 Date : 15 novembre 2026. Source : `08f6a79c6401b3dcb7369252aa809eb9c437fce7`. Compilation suivie testée : `8347153108807c4f81068e669ad123a245345875`.
 
 ## Résultat

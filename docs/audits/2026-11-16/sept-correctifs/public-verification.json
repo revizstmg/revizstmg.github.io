@@ -1,0 +1,96 @@
+{
+  "checkedAt": "2026-11-16T07:57:04.578428+00:00",
+  "gitRef": "725f5e1a8a619e07ec09990a147a054c5d06e2a3",
+  "files": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "8333db11d0b8b4818e983f4af15e923022480de4a2a2391b7eca91e3136af926"
+    },
+    {
+      "path": "sw.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "a27261408bf52b8f11ce65dfe1cb8e55555f3fa79aa24ee2836fcafc902d0a29"
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "2afbd62e5f3f2e0f672cf6471706e31b234dc0569c646134296f9d704251b773"
+    },
+    {
+      "path": "assets/index-kpvq8uAj.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "763eea2c13bbef1f035028910aad2aea6f68ab2ba3f20a6f238b534b0234c0ca"
+    },
+    {
+      "path": "assets/Profile-DSjl3oU8.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "5c9d45422579bc3dabfd351ba51421da2fdd5e21288d00281d213a219b29e4ca"
+    },
+    {
+      "path": "assets/Cgu-DsNS-O4Z.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "8e85f65ab01bc027d4d1fe9047ee6ec6bfb6acc92f8a8dfa36cb03a7e9daf701"
+    },
+    {
+      "path": "assets/Parcours-CTYRQvs1.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "7197eb7c834292463b98270f7509181fbbd4f851a678f10aea5d64958b9e5e56"
+    },
+    {
+      "path": "assets/Qcm-B45qE31X.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "08db21e4783540b8b6ef4dea9b916a3b2b5b71f0d8ac91a2d6a9323638002005"
+    },
+    {
+      "path": "assets/GameHost-Beir_q7q.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "0cb360d7e8eb0722ba9aba04330cb11ed8009d1df43e25febe242993fb6b54cc"
+    },
+    {
+      "path": "assets/public.en-XqtITxqM.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "d1e87cf1f759b360d496021576b121e8e1d321d300091e95071ed754d6dafe9f"
+    },
+    {
+      "path": "assets/public.es-t0X9pEXG.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "0eb3b83765a9fb435d4986d73617ceefcf005ca9f84eb5bdfbcd20a788b8a66a"
+    },
+    {
+      "path": "assets/public.it-ChhEo6ow.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "2340bcfd2b79769bad1c69ecc8cc3a67f44f8b1545c93a42256c4aeb96007a4a"
+    },
+    {
+      "path": "assets/public.ar-CFVWDq1X.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "f278d3c15c3c8ae36668e85c7f3206ece580f7e83eb12a9c79fe456b68672582"
+    },
+    {
+      "path": "assets/public.de-e_9PnxFw.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "aee312f40efad5e70e41fb237486616f600a38280fa1ce82fd459c477af973d3"
+    },
+    {
+      "path": "assets/index-KAyqczP6.css",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "e180d36351a0807408ffc68a4e1bf0e2dc86346a4c904e701fd8b14cad4ac5df"
+    }
+  ]
+}

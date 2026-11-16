@@ -1,0 +1,27 @@
+{
+  "source": "1140841371ee5e6ab6d461b45b10e497e91d02fa",
+  "ci": {
+    "id": 43825562430,
+    "url": "https://github.com/revizstmg/revizstmg.github.io/actions/runs/43825562430",
+    "conclusion": "success"
+  },
+  "unitTests": {
+    "UTC": 877,
+    "Europe/Paris": 877
+  },
+  "browserTests": {
+    "passed": 431,
+    "flaky": 0,
+    "failed": 0,
+    "skipped": 0
+  },
+  "publicCompilation": "725f5e1a8a619e07ec09990a147a054c5d06e2a3",
+  "publicFilesChecked": 15,
+  "publicMockScenariosPassed": 6,
+  "limits": "No real accounts, payments, billable AI or pedagogical certification. Public browser tests use synthetic profiles and mocked third-party services.",
+  "pages": {
+    "id": 43827306424,
+    "url": "https://github.com/revizstmg/revizstmg.github.io/actions/runs/43827306424",
+    "conclusion": "success"
+  }
+}
