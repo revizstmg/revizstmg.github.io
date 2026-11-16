@@ -35,3 +35,9 @@ La première CI PR222 a réussi871contrôles et échoué à initialiser les5cont
 Le contrôle ciblé a confirmé un défaut supplémentaire lié au duel de l’audit : une mise à jour de progression recréait l’objet `game` dans le parent, puis remélangeait les propositions alors qu’une réponse était déjà enregistrée. Une réponse choisie pouvait ainsi sembler fausse après la mise à jour. Le tirage est maintenant mémorisé sur la liste de questions, qui est la véritable donnée utilisée, et non sur son enveloppe.
 
 Reproduction déterministe avant correction en échec ; test navigateur conservé après correction. Le contenu des questions, les réponses attendues et le renouvellement à la nouvelle partie ne sont pas modifiés. Les contrôles ciblés de mélange des réponses et de supervision réussissent (11 tests). Compilation réussie. Le workflow précédent est remplacé par une validation complète de cette version finale, sans publication intermédiaire annoncée.
+
+## Complément : CGU hors ligne
+
+La suite générale43823068412 a validé876tests dans chaque fuseau. Côté navigateur :425réussites immédiates,1reprise validée et5échecs, tous dus à deux paragraphes des CGU absents des catalogues locaux. Ces textes publics tentaient donc d’utiliser le service de traduction ; aucun profil privé n’a été transmis. La publication a été bloquée.
+
+Les deux paragraphes sont maintenant intégrés en anglais, espagnol, italien, arabe et allemand. Un test unitaire parcourt tous les littéraux `texte` des CGU pour vérifier leur présence dans les cinq catalogues, au lieu de compter seulement sur les parcours navigateur. Les13tests de traduction ciblés réussissent. Le contrôle de temps attend désormais la persistance React de sa seconde mesure, comme il le faisait déjà pour la première, sans changer les assertions ni le calcul du temps.

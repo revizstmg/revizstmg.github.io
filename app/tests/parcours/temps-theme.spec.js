@@ -15,8 +15,10 @@ test('une courte visite et une séance guidée sont attribuées au thème', asyn
  await page.evaluate(() => { location.hash = '#/seance' })
  await expect(page.getByText(/Étape 1\//).first()).toBeVisible()
  await page.clock.runFor(31000)
+ // Le timer déclenche une mise à jour React puis sa persistance. Attendre le
+ // résultat observé, comme pour la première mesure, sans lire un ancien état.
+ await expect.poll(async () => Object.entries((await etat(page)).themeTime || {}).some(([id, sec]) => id !== '__study' && sec > (id === 'gf-t1' ? before : 0))).toBe(true)
  const after = (await etat(page)).themeTime
- expect(Object.entries(after).some(([id, sec]) => id !== '__study' && sec > (id === 'gf-t1' ? before : 0))).toBe(true)
  expect(after.__study || 0).toBe(0)
  expect(errors).toEqual([])
 })
