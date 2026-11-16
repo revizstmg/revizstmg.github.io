@@ -1,0 +1,2 @@
+import {defineConfig,devices} from '/workspace/work/fix-economie-audits/app/node_modules/@playwright/test/index.mjs'
+export default defineConfig({testDir:'/workspace/output/bugs-cibles-20261116',timeout:90000,expect:{timeout:10000},workers:1,retries:0,reporter:'list',use:{baseURL:'https://revizstmg.github.io/',trace:'retain-on-failure'},outputDir:'/workspace/output/bugs-cibles-20261116/test-results',projects:[{name:'telephone',use:{...devices['Pixel 7']}}]})

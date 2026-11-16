@@ -1,0 +1,10 @@
+
+Running 1 test using 1 worker
+
+(node:8240) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:8240) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [telephone] › ../../output/bugs-cibles-20261116/sondes.spec.js:48:5 › sonde ordre : résultat retardé après changement de compte (8.6s)
+
+  1 passed (10.6s)

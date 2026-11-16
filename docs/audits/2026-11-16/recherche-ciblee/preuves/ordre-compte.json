@@ -1,0 +1,20 @@
+{
+  "a": {
+    "account": "00000000-0000-4000-8000-000000000001",
+    "xp": 0
+  },
+  "before": {
+    "account": "00000000-0000-4000-8000-000000000002",
+    "xp": 10,
+    "games": {}
+  },
+  "after": {
+    "account": "00000000-0000-4000-8000-000000000002",
+    "xp": 60,
+    "games": {
+      "gf-t1-ordre": 100
+    }
+  },
+  "gameId": "gf-t1-ordre",
+  "expected": "Aucun résultat du compte A dans la progression B après changement de compte."
+}

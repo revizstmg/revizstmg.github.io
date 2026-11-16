@@ -1,0 +1,8 @@
+{
+  "n": 4,
+  "before": "« TVA collectée » : Sur les achats → créance sur l’État",
+  "after": "« Prix HT / TTC » : Hors taxes / toutes taxes comprises (HT + TVA)",
+  "changed": true,
+  "body": "← Quitter\n↻ Mes erreurs\nEntraînement\nQuestion 1 / 4\n\n« Prix HT / TTC » : Hors taxes / toutes taxes comprises (HT + TVA)\n\n✔ Vrai\n✘ Faux\n❌Pas tout à fait.Prix HT / TTC → Hors taxes / toutes taxes comprises (HT + TVA)\nPourquoi ?\nSuivant →\n⚑ Signaler une erreur dans cet exercice",
+  "expected": "La question déjà répondue reste identique pendant la reprise."
+}
