@@ -2002,3 +2002,9 @@ Prochaine action :
 
 ### CORRECTIONS-TROIS-BUGS-CIBLES-20261116
 - Codex : correction autorisée des trois bugs reproduits dans la recherche ciblée. Périmètre : résultat différé et identité du joueur (Ordre/GameHost), stabilité des reprises d’erreurs, attente des API de notifications avant suppression. Prévoir contrôles négatifs et positifs, compilation, CI et publication puis vérification publique. Aucun contenu pédagogique, tarif ou droit changé ; aucun compte réel, paiement, génération facturable ni mutation Supabase/NAH.
+
+### CORRECTIONS-TROIS-BUGS-CIBLES-20261116 : livraison
+- PR 228 fusionnée dans `402402c313d90ba6f62fb50939ef697a8458615d` : fin Ordre invalidée à la fermeture/changement d’identité, objet de reprise stable, désactivation push bornée globalement avec contrôle d’identité et de réponse tardive.
+- Validation : huit nouveaux tests unitaires ; sept parcours ciblés téléphone et sept ordinateur, quatre parcours précédents. CI 43891276463 : 885 tests UTC, 885 Paris, compilation et 438 parcours réussis. Aucun contrôle supprimé.
+- Publication automatique `6592783c46731d93f9f973841d7d8e90a07e232a` ; Pages 43893910668 réussi. Bilan et preuves : `docs/audits/2026-11-16/trois-bugs-corriges/README.md`. Aucun changement de schéma/configuration/données Supabase ou NAH.
+- Après Pages : 15 fichiers publics conformes à Git et sept parcours publics ciblés réussis avec comptes fictifs et services simulés. Les trois entrées du rapport de recherche sont désormais historiques et reliées au bilan de correction.

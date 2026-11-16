@@ -1,0 +1,15 @@
+[2m[WebServer] [22m(node:9368) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:9387) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9387) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [telephone] › tests/parcours/audit-sept-correctifs.spec.js:4:1 › parent : retrait en attente honnête puis repris au retour réseau sans republier (4.6s)
+  ✓  2 [telephone] › tests/parcours/audit-sept-correctifs.spec.js:51:1 › suppression compte : RPC silencieux, délai, message et bouton utilisable (2.2s)
+  ✓  3 [telephone] › tests/parcours/audit-sept-correctifs.spec.js:88:1 › parent : réponse tardive du retrait A ne confirme ni ne désactive le partage B (8.0s)
+  ✓  4 [telephone] › tests/parcours/audit-sept-correctifs.spec.js:158:1 › les propositions restent stables après une mise à jour de la page (3.0s)
+
+  4 passed (20.8s)
