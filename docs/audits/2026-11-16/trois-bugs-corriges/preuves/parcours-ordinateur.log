@@ -1,0 +1,18 @@
+[2m[WebServer] [22m(node:9802) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 1 worker
+
+(node:9821) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:9821) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [ordinateur] › tests/parcours/trois-bugs-cibles.spec.js:12:57 › suppression aboutit malgré push getSubscription silencieux (6.1s)
+  ✓  2 [ordinateur] › tests/parcours/trois-bugs-cibles.spec.js:12:57 › suppression aboutit malgré push unsubscribe silencieux (4.3s)
+  ✓  3 [ordinateur] › tests/parcours/trois-bugs-cibles.spec.js:60:1 › reprise Vrai/Faux : question et correction stables après mise à jour de progression (9.3s)
+  ✓  4 [ordinateur] › tests/parcours/trois-bugs-cibles.spec.js:121:1 › ordre : aucune note ni XP de A créditée à B après changement de compte (6.6s)
+  ✓  5 [ordinateur] › tests/parcours/trois-bugs-cibles.spec.js:198:36 › ordre : fin normale créditée une seule fois (8.2s)
+  ✓  6 [ordinateur] › tests/parcours/trois-bugs-cibles.spec.js:198:36 › ordre : sortie annule le résultat différé (6.3s)
+  ✓  7 [ordinateur] › tests/parcours/trois-bugs-cibles.spec.js:237:1 › suppression non confirmée par le serveur : session gardée et reprise disponible (2.6s)
+
+  7 passed (47.2s)

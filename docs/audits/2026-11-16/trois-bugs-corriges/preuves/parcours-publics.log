@@ -1,0 +1,16 @@
+
+Running 7 tests using 1 worker
+
+(node:10260) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:10260) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [telephone] › ../../../output/correctifs-trois-20261116/public/public.spec.js:5:58 › suppression aboutit malgré push getSubscription silencieux (2.9s)
+  ✓  2 [telephone] › ../../../output/correctifs-trois-20261116/public/public.spec.js:5:58 › suppression aboutit malgré push unsubscribe silencieux (2.2s)
+  ✓  3 [telephone] › ../../../output/correctifs-trois-20261116/public/public.spec.js:19:5 › reprise Vrai/Faux : question et correction stables après mise à jour de progression (8.5s)
+  ✓  4 [telephone] › ../../../output/correctifs-trois-20261116/public/public.spec.js:45:5 › ordre : aucune note ni XP de A créditée à B après changement de compte (11.6s)
+  ✓  5 [telephone] › ../../../output/correctifs-trois-20261116/public/public.spec.js:70:37 › ordre : fin normale créditée une seule fois (7.7s)
+  ✓  6 [telephone] › ../../../output/correctifs-trois-20261116/public/public.spec.js:70:37 › ordre : sortie annule le résultat différé (12.3s)
+  ✓  7 [telephone] › ../../../output/correctifs-trois-20261116/public/public.spec.js:85:5 › suppression non confirmée par le serveur : session gardée et reprise disponible (5.1s)
+
+  7 passed (53.2s)

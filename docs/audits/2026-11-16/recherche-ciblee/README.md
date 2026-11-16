@@ -1,5 +1,7 @@
 # Trois nouveaux bugs reproduits
 
+**Rapport historique :** ces trois régressions ont été corrigées dans la PR 228. Voir le [bilan des corrections et des validations](../trois-bugs-corriges/README.md).
+
 Recherche ciblée du 16 novembre 2026, demandée après les corrections précédentes. Référence : `60e6f519f3183fa40b50ca03c23bb488751b7e11` ; compilation du site public : `725f5e1a8a619e07ec09990a147a054c5d06e2a3`. Aucun changement du produit, de Supabase, de NAH ou des données réelles. Les essais utilisent l’interface publique, des profils fictifs et des réponses de services simulées. Les notes sur 10 expriment la priorité pratique, pas un score CVSS.
 
 ## 1. Résultat de Remise en ordre enregistré dans le compte suivant : 7/10
