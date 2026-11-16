@@ -1,0 +1,31 @@
+{
+  "scenario": "heure",
+  "account": "00000000-0000-4000-8000-000000000001",
+  "reminder": {
+    "on": true,
+    "time": "20:00"
+  },
+  "calls": [
+    {
+      "body": {
+        "p_endpoint": "https://push.test/synthetic",
+        "p_p256dh": "fake",
+        "p_auth": "fake",
+        "p_minute": 1200,
+        "p_fuseau": "UTC"
+      },
+      "auth": "Bearer jeton-fictif-parcours"
+    },
+    {
+      "body": {
+        "p_endpoint": "https://push.test/synthetic",
+        "p_p256dh": "fake",
+        "p_auth": "fake",
+        "p_minute": 1080,
+        "p_fuseau": "UTC"
+      },
+      "auth": "Bearer jeton-fictif-parcours"
+    }
+  ],
+  "message": "← Paramètres\n\nPARAMÈTRES\n\nNotifications\n\nActiver et programmer mes rappels.\n\n🔔 Rappels de révision\n⏰\n\nRappel quotidien\n\nUne notification douce « c’est l’heure de réviser ».\n\nHeure\nTester\n\nRappel activé, même téléphone fermé.\n\n💡 Avec un compte, le rappel arrive même téléphone fermé, seulement si tu n’as pas encore révisé ce jour-là. Sur iPhone, installe d’abord l’app sur l’écran d’accueil (iOS 16.4 ou plus)."
+}

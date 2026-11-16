@@ -1,0 +1,21 @@
+{
+  "scenario": "identite",
+  "account": "00000000-0000-4000-8000-000000000002",
+  "reminder": {
+    "on": false,
+    "time": "18:00"
+  },
+  "calls": [
+    {
+      "body": {
+        "p_endpoint": "https://push.test/synthetic",
+        "p_p256dh": "fake",
+        "p_auth": "fake",
+        "p_minute": 1080,
+        "p_fuseau": "UTC"
+      },
+      "auth": "Bearer jeton-B-fictif"
+    }
+  ],
+  "message": "Chargement du cours…"
+}
