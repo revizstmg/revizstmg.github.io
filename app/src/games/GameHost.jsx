@@ -3,6 +3,7 @@ import { drawQuestionSession, rememberQuestionSession } from '../data/questionSe
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useStore, starsFromScore } from '../store.jsx'
+import { getSession } from '../auth.js'
 import { chapitreDuJeu } from '../data/index.js'
 import { ContexteCorrection } from './common.jsx'
 import { Stars, Confetti, Icon, Rich } from '../components/ui.jsx'
@@ -93,6 +94,14 @@ function PleinEcran({ titre, children }) {
 // `suite` ({ label, onClick }) remplace « Terminé » en fin de série.
 export default function GameHost({ game, chapterId, color, quiz = false, onExit, modeInitial = null, suite = null, onResult = null, guided = false, hint = null, chapterIndex = null }) {
   const { state, recordResult, noterReponses } = useStore()
+  const joueur = useRef(state.account?.id || null)
+  const joueurCourant = useRef(state.account?.id || null)
+  joueurCourant.current = state.account?.id || null
+  const actif = useRef(true)
+  useEffect(() => {
+    actif.current = true
+    return () => { actif.current = false }
+  }, [])
   const t = useT()
   const [mode, setMode] = useState(NO_MODE.has(game.type) ? 'solo' : modeInitial)
   const [result, setResult] = useState(null)
@@ -107,10 +116,13 @@ export default function GameHost({ game, chapterId, color, quiz = false, onExit,
   const Comp = COMPONENTS[game.type]
   const tirage = useMemo(() => drawQuestionSession(game,state.account?.id), [game,runKey,state.account?.id])
   useEffect(() => rememberQuestionSession(tirage), [tirage])
-  const jeu = reprise ? { ...game, questions: reprise, count: reprise.length } : tirage
+  const jeu = useMemo(() => reprise ? { ...game, questions: reprise, count: reprise.length } : tirage, [game, reprise, tirage])
   const correction = { themeId: chapterId, idx: chapterIndex ?? chapitreDuJeu(chapterId, game.id) }
 
   const handleDone = ({ correct, total, timeBonus = 0, ratees, reussies }) => {
+    // Un ancien timer ne peut ni créditer le compte suivant, ni terminer un
+    // exercice fermé. La session est vérifiée même avant la restauration du store.
+    if (!actif.current || joueur.current !== joueurCourant.current || joueur.current !== (getSession()?.user?.id || null)) return
     if (guided && missionDone.current) return
     if (guided) missionDone.current = true
     const pct = total ? Math.round((correct / total) * 100) : 0

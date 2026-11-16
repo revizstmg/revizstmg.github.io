@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { shuffle, Feedback } from './common.jsx'
 import { useT } from '../i18n.js'
 
@@ -10,6 +10,8 @@ export default function Ordre({ game, color, onDone }) {
   const [placed, setPlaced] = useState([]) // ids placés dans l'ordre
   const [wrong, setWrong] = useState(null)
   const [mistakes, setMistakes] = useState(0)
+  const fin = useRef(null)
+  useEffect(() => () => clearTimeout(fin.current), [])
 
   const tap = (id) => {
     if (placed.includes(id)) return
@@ -17,7 +19,8 @@ export default function Ordre({ game, color, onDone }) {
       const np = [...placed, id]
       setPlaced(np)
       if (np.length === steps.length) {
-        setTimeout(() => onDone({ correct: steps.length, total: steps.length + mistakes }), 400)
+        clearTimeout(fin.current)
+        fin.current = setTimeout(() => onDone({ correct: steps.length, total: steps.length + mistakes }), 400)
       }
     } else {
       setMistakes((m) => m + 1)

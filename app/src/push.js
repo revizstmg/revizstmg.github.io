@@ -7,7 +7,8 @@
 // (supabase/README.md). Il faut un compte ; sur iPhone, l'app installée sur
 // l'écran d'accueil (iOS 16.4 ou plus).
 import { rpc } from './reseau.js'
-import { isSignedIn } from './auth.js'
+import { getSession, isSignedIn } from './auth.js'
+import { withNetworkTimeout } from './networkTimeout.js'
 
 export function pushPossible() {
   return typeof window !== 'undefined' && 'serviceWorker' in navigator && 'PushManager' in window && typeof Notification !== 'undefined'
@@ -39,15 +40,28 @@ export async function activerRappelsPush(heure) {
   return true
 }
 
-// Arrête les rappels sur cet appareil. Sans service worker actif (aperçu,
-// navigateur restreint), on n'attend pas plus de 3 s.
+// Arrêt local tenté sous une échéance globale : les API natives peuvent elles
+// aussi rester suspendues. Retourne un résultat, jamais une attente infinie.
+// La suppression du compte retire ses abonnements push côté serveur même si
+// le navigateur ne permet pas de terminer cette tentative locale.
 export async function desactiverRappelsPush() {
-  if (!pushPossible()) return
+  if (!pushPossible()) return true
+  const owner = getSession()?.user?.id || null
   try {
-    const reg = await Promise.race([navigator.serviceWorker.ready, new Promise((_, non) => setTimeout(() => non(new Error('sans service worker')), 3000))])
-    const abonnement = await reg.pushManager.getSubscription()
-    if (!abonnement) return
-    if (isSignedIn()) await rpc('revizstmg_push_desabonner', { p_endpoint: abonnement.endpoint }).catch(() => {})
-    await abonnement.unsubscribe()
-  } catch { /* pas d'abonnement */ }
+    return await withNetworkTimeout(async signal => {
+      const courant = () => !signal.aborted && (getSession()?.user?.id || null) === owner
+      const reg = await withNetworkTimeout(() => navigator.serviceWorker.ready, 3000)
+      if (!courant()) return false
+      const abonnement = await reg.pushManager.getSubscription()
+      if (!courant()) return false
+      if (!abonnement) return true
+      let serveur = true
+      if (isSignedIn()) {
+        try { await rpc('revizstmg_push_desabonner', { p_endpoint: abonnement.endpoint }) } catch { serveur = false }
+      }
+      if (!courant()) return false
+      const stopped = await abonnement.unsubscribe()
+      return courant() && stopped !== false && serveur
+    }, 6000)
+  } catch { return false }
 }
