@@ -161,3 +161,15 @@ test('les formules corrigées sont traduites hors ligne dans les cinq langues', 
     for (const key of keys) expect(book[key], `${lang}:${key}`).toBeTruthy()
   }
 })
+
+test('les paragraphes littéraux des CGU restent entièrement traduits hors ligne',()=>{
+ const ast=parse(readFileSync(new URL('pages/Cgu.jsx',root),'utf8'),{sourceType:'module',plugins:['jsx']})
+ const texts=new Set()
+ const walk=node=>{
+  if(!node||typeof node!=='object')return
+  if(node.type==='JSXAttribute'&&node.name.name==='texte'&&node.value?.expression?.type==='StringLiteral')texts.add(node.value.expression.value.replace(/\s+/g,' ').trim())
+  for(const v of Object.values(node))if(Array.isArray(v))v.forEach(walk);else if(v&&typeof v==='object')walk(v)
+ }
+ walk(ast);expect(texts.size).toBeGreaterThan(15)
+ for(const [lang,book]of Object.entries(books))for(const text of texts)expect(book[text],`${lang} : ${text}`).toBeTruthy()
+})
