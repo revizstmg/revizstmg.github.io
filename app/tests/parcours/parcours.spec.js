@@ -1,5 +1,6 @@
 // Parcours d'un élève dans la version compilée de l'app.
 import { test, expect } from '@playwright/test'
+import {readFileSync} from 'node:fs'
 import { preparer, attendreAccueil, etat, etatEleve } from './eleve.js'
 
 test('première visite : l’écran de connexion s’affiche', async ({ page }) => {
@@ -41,27 +42,23 @@ test('suivre un cours puis faire un QCM jusqu’au bout', async ({ page }) => {
   await expect(exercice).toContainText(/Question 1 \//)
 
   const xpAvant = (await etat(page)).xp || 0
-  // Les positions varient entre les parties : choisir toujours A peut donner
-  // zéro réussite même après plusieurs tirages. Les XP restent liés aux bonnes réponses.
-  for (let partie = 0; partie < 5; partie++) {
-    for (let i = 0; i < 40; i++) {
-      const choix = page.getByRole('button', { name: /^[A-D] /, disabled: false })
-      // Bouton pour avancer - jamais une proposition (« A … », « B … ») dont le
-      // texte contiendrait par hasard « résultat » ou « score ».
-      const suite = page.getByRole('button', { name: /^(?![A-D] ).*(suivant|suivante|résultat|score|terminer|continuer)/i, disabled: false })
-      if (await suite.count()) await suite.first().click()
-      else if (await choix.count()) await choix.nth(partie % await choix.count()).click()
-      else break
-    }
-    // Fin de partie : score affiché.
-    await expect(exercice).toContainText(/%|score|bravo|résultat/i)
-    await page.waitForTimeout(300)
-    const progress=await etat(page)
-    if ((progress.xp || 0) > xpAvant && (progress.erreurs || []).length > 0) break
-    await page.getByRole('button', { name: 'Rejouer' }).click()
-    const entrainement = page.getByRole('button', { name: /Entraînement/ })
-    if (await entrainement.count()) await entrainement.click()
+  // Vérifier une réussite ET une erreur sans supposer qu’un choix aléatoire
+  // tombera juste. L’énoncé et les propositions restent ceux du vrai cours.
+  const cours=JSON.parse(readFileSync(new URL('../../content/gestion-finance/cours-reels.json',import.meta.url),'utf8'))
+  const definitions=new Map(cours['gf-t1'][0].blocks.find(b=>b.t==='table').rows)
+  for(let i=0;i<40;i++){
+    const titre=await exercice.locator('h3').first().innerText()
+    const notion=titre.match(/« (.*?) »/)?.[1]
+    const attendu=definitions.get(notion)
+    expect(attendu,`Définition de la question réellement jouée : ${titre}`).toBeTruthy()
+    const choix=exercice.getByRole('button',{name:/^[A-D] /,disabled:false})
+    const labels=await choix.allTextContents(),correct=labels.findIndex(label=>label.includes(attendu))
+    expect(correct).toBeGreaterThanOrEqual(0)
+    await choix.nth(i===0?correct:(correct+1)%labels.length).click()
+    await exercice.getByRole('button',{name:/^(?![A-D] ).*(suivant|suivante|résultat|score|terminer|continuer)/i,disabled:false}).first().click()
+    if(await exercice.getByRole('button',{name:'Rejouer',exact:true}).count())break
   }
+  await expect(exercice.getByRole('button',{name:'Rejouer',exact:true})).toBeVisible()
   // XP gagnée.
   await expect.poll(async () => (await etat(page)).xp || 0).toBeGreaterThan(xpAvant)
   const ch = (await etat(page)).chapters?.['gf-t1']

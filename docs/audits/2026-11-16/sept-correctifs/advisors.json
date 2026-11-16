@@ -1,0 +1,8 @@
+{
+  "date": "2026-11-16",
+  "security_before": 4,
+  "security_after": 4,
+  "new_advisor_categories": [],
+  "unchanged_categories": ["anon_security_definer_function_executable", "auth_leaked_password_protection", "authenticated_security_definer_function_executable", "rls_enabled_no_policy"],
+  "scope": "Project shared with NAH; existing notices are not all specific to RévizSTMG. No claim of zero security notices or complete certification."
+}

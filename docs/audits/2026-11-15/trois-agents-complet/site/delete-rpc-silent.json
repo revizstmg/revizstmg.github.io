@@ -1,0 +1,14 @@
+{
+  "case": "delete_rpc_silent",
+  "rpcCalls": 1,
+  "after65000": {
+    "buttonDisabled": true,
+    "body": "← Confidentialité et données\n\nPARAMÈTRES\n\nSupprimer mon compte\n\nComprendre et confirmer la suppression de mon compte.\n\nZone sensible\n\nEfface définitivement ta progression, ta classe et tes contributions, tes amis et tes duels, le suivi parent et ton compte de connexion (adresse e-mail comprise).\n\nUn instant…",
+    "account": "00000000-0000-4000-8000-000000000001"
+  },
+  "errors": [],
+  "afterRelease": {
+    "url": "http://127.0.0.1:4281/",
+    "session": false
+  }
+}

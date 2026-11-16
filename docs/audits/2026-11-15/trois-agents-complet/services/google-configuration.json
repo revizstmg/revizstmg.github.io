@@ -1,0 +1,86 @@
+{
+  "checkedAt": "2026-11-15T17:33:57.973Z",
+  "checks": [
+    {
+      "path": "/auth/v1/settings",
+      "status": 200,
+      "ms": 905,
+      "result": {
+        "external": {
+          "anonymous_users": false,
+          "apple": false,
+          "azure": false,
+          "bitbucket": false,
+          "discord": false,
+          "facebook": false,
+          "snapchat": false,
+          "figma": false,
+          "fly": false,
+          "github": false,
+          "gitlab": false,
+          "google": true,
+          "keycloak": false,
+          "kakao": false,
+          "linkedin": false,
+          "linkedin_oidc": false,
+          "notion": false,
+          "spotify": false,
+          "slack": false,
+          "slack_oidc": false,
+          "workos": false,
+          "twitch": false,
+          "twitter": false,
+          "email": true,
+          "phone": false,
+          "zoom": false
+        },
+        "disable_signup": false
+      }
+    },
+    {
+      "path": "/functions/v1/examen-blanc?check=configuration",
+      "status": 200,
+      "ms": 511,
+      "result": {
+        "provider": "gemini"
+      }
+    },
+    {
+      "path": "/functions/v1/examen-blanc?check=provider",
+      "status": 200,
+      "ms": 273,
+      "result": {
+        "ready": true
+      }
+    },
+    {
+      "path": "/functions/v1/examen-blanc?check=models",
+      "status": 200,
+      "ms": 163,
+      "result": {
+        "ready": true,
+        "models": [
+          "gemini-2.5-flash",
+          "gemini-2.5-flash-lite",
+          "gemini-3.1-flash-lite",
+          "gemini-3.5-flash",
+          "gemini-3.5-flash-lite",
+          "gemini-3.6-flash",
+          "gemini-3.7-flash",
+          "gemini-3.8-flash"
+        ]
+      }
+    },
+    {
+      "path": "/auth/v1/authorize (Google)",
+      "result": {
+        "status": 302,
+        "destination": "https://accounts.google.com/o/oauth2/v2/auth",
+        "redirect_uri": "https://wyydagcjkbivtbuhbzon.supabase.co/auth/v1/callback",
+        "response_type": "code",
+        "prompt": "select_account",
+        "scope": "email profile"
+      }
+    }
+  ]
+}

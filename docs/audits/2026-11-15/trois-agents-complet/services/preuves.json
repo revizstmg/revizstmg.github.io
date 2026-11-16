@@ -1,0 +1,1467 @@
+{
+  "date": "2026-11-15",
+  "baseline": "08f6a79c6401b3dcb7369252aa809eb9c437fce7",
+  "project": {
+    "status": "ACTIVE_HEALTHY",
+    "region": "eu-west-3",
+    "postgres": "17.6.1.155"
+  },
+  "policies": [
+    {
+      "schemaname": "public",
+      "tablename": "child_stats",
+      "policyname": "cs_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "(device_id = (( SELECT auth.uid() AS uid))::text)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "child_stats",
+      "policyname": "cs_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "(device_id = (( SELECT auth.uid() AS uid))::text)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "child_stats",
+      "policyname": "cs_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "(device_id = (( SELECT auth.uid() AS uid))::text)",
+      "with_check": "(device_id = (( SELECT auth.uid() AS uid))::text)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "child_stats",
+      "policyname": "cs_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "(device_id = (( SELECT auth.uid() AS uid))::text)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_ban",
+      "policyname": "ban_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "revizstmg_prive.est_prof(class_code)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_ban",
+      "policyname": "ban_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "((device_id = (( SELECT auth.uid() AS uid))::text) OR revizstmg_prive.est_prof(class_code))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_ban",
+      "policyname": "ban_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "revizstmg_prive.est_prof(class_code)",
+      "with_check": "revizstmg_prive.est_prof(class_code)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_ban",
+      "policyname": "ban_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "revizstmg_prive.est_prof(class_code)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_duel",
+      "policyname": "duel_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "((challenger_device = (( SELECT auth.uid() AS uid))::text) AND revizstmg_prive.est_membre(class_code))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_duel",
+      "policyname": "duel_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "revizstmg_prive.est_membre(class_code)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_duel",
+      "policyname": "duel_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "revizstmg_prive.est_membre(class_code)",
+      "with_check": "revizstmg_prive.est_membre(class_code)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_duel",
+      "policyname": "duel_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "((challenger_device = (( SELECT auth.uid() AS uid))::text) OR revizstmg_prive.est_prof(class_code))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_group",
+      "policyname": "cg_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "revizstmg_prive.est_prof(class_code)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_group",
+      "policyname": "cg_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "revizstmg_prive.est_membre(class_code)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_group",
+      "policyname": "cg_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "revizstmg_prive.est_prof(class_code)",
+      "with_check": "revizstmg_prive.est_prof(class_code)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_group",
+      "policyname": "cg_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "revizstmg_prive.est_prof(class_code)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_member",
+      "policyname": "cm_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "((device_id = (( SELECT auth.uid() AS uid))::text) AND (NOT revizstmg_prive.est_exclu(class_code)) AND ((role <> 'prof'::text) OR revizstmg_prive.est_prof(class_code)))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_member",
+      "policyname": "cm_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "((device_id = (( SELECT auth.uid() AS uid))::text) OR revizstmg_prive.est_membre(class_code))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_member",
+      "policyname": "cm_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "((device_id = (( SELECT auth.uid() AS uid))::text) OR revizstmg_prive.est_prof(class_code))",
+      "with_check": "(((device_id = (( SELECT auth.uid() AS uid))::text) OR revizstmg_prive.est_prof(class_code)) AND ((role <> 'prof'::text) OR revizstmg_prive.est_prof(class_code)))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_member",
+      "policyname": "cm_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "((device_id = (( SELECT auth.uid() AS uid))::text) OR revizstmg_prive.est_prof(class_code))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_meta",
+      "policyname": "meta_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "revizstmg_prive.est_prof(class_code)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_meta",
+      "policyname": "meta_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "revizstmg_prive.est_membre(class_code)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_meta",
+      "policyname": "meta_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "revizstmg_prive.est_prof(class_code)",
+      "with_check": "revizstmg_prive.est_prof(class_code)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_meta",
+      "policyname": "meta_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "revizstmg_prive.est_prof(class_code)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_quiz",
+      "policyname": "quiz_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "(revizstmg_prive.est_membre(class_code) AND ((author_id IS NULL) OR (author_id = ( SELECT auth.uid() AS uid))) AND ((status = 'proposed'::text) OR revizstmg_prive.est_prof(class_code)))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_quiz",
+      "policyname": "quiz_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "revizstmg_prive.est_membre(class_code)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_quiz",
+      "policyname": "quiz_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "revizstmg_prive.est_prof(class_code)",
+      "with_check": "revizstmg_prive.est_prof(class_code)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_quiz",
+      "policyname": "quiz_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "revizstmg_prive.est_prof(class_code)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_quiz_result",
+      "policyname": "cqr_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "((device_id = (( SELECT auth.uid() AS uid))::text) AND revizstmg_prive.est_membre(revizstmg_prive.classe_du_quiz(quiz_id)))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_quiz_result",
+      "policyname": "cqr_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "revizstmg_prive.est_membre(revizstmg_prive.classe_du_quiz(quiz_id))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_quiz_result",
+      "policyname": "cqr_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "(device_id = (( SELECT auth.uid() AS uid))::text)",
+      "with_check": "((device_id = (( SELECT auth.uid() AS uid))::text) AND revizstmg_prive.est_membre(revizstmg_prive.classe_du_quiz(quiz_id)))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_quiz_result",
+      "policyname": "cqr_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "((device_id = (( SELECT auth.uid() AS uid))::text) OR revizstmg_prive.est_prof(revizstmg_prive.classe_du_quiz(quiz_id)))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_wall",
+      "policyname": "mur_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "((device_id = (( SELECT auth.uid() AS uid))::text) AND revizstmg_prive.est_membre(class_code) AND ((kind <> 'announce'::text) OR revizstmg_prive.est_prof(class_code)))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_wall",
+      "policyname": "mur_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "revizstmg_prive.est_membre(class_code)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_wall",
+      "policyname": "mur_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "revizstmg_prive.est_membre(class_code)",
+      "with_check": "revizstmg_prive.est_membre(class_code)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "class_wall",
+      "policyname": "mur_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "((device_id = (( SELECT auth.uid() AS uid))::text) OR revizstmg_prive.est_prof(class_code))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "friend_duel",
+      "policyname": "fd_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "((a_device = (( SELECT auth.uid() AS uid))::text) AND (b_device <> a_device))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "friend_duel",
+      "policyname": "fd_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "((a_device = (( SELECT auth.uid() AS uid))::text) OR (b_device = (( SELECT auth.uid() AS uid))::text))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "friend_duel",
+      "policyname": "fd_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "((a_device = (( SELECT auth.uid() AS uid))::text) OR (b_device = (( SELECT auth.uid() AS uid))::text))",
+      "with_check": "((a_device = (( SELECT auth.uid() AS uid))::text) OR (b_device = (( SELECT auth.uid() AS uid))::text))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "friend_duel",
+      "policyname": "fd_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "((a_device = (( SELECT auth.uid() AS uid))::text) OR (b_device = (( SELECT auth.uid() AS uid))::text))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "friend_request",
+      "policyname": "fr_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "((from_device = (( SELECT auth.uid() AS uid))::text) AND (to_device <> from_device) AND (status = 'pending'::text))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "friend_request",
+      "policyname": "fr_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "((from_device = (( SELECT auth.uid() AS uid))::text) OR (to_device = (( SELECT auth.uid() AS uid))::text))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "friend_request",
+      "policyname": "fr_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "((from_device = (( SELECT auth.uid() AS uid))::text) OR (to_device = (( SELECT auth.uid() AS uid))::text))",
+      "with_check": "((from_device = (( SELECT auth.uid() AS uid))::text) OR (to_device = (( SELECT auth.uid() AS uid))::text))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "friend_request",
+      "policyname": "fr_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "((from_device = (( SELECT auth.uid() AS uid))::text) OR (to_device = (( SELECT auth.uid() AS uid))::text))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "friend_user",
+      "policyname": "fu_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "(device_id = (( SELECT auth.uid() AS uid))::text)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "friend_user",
+      "policyname": "fu_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "((device_id = (( SELECT auth.uid() AS uid))::text) OR revizstmg_prive.est_ami(device_id))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "friend_user",
+      "policyname": "fu_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "(device_id = (( SELECT auth.uid() AS uid))::text)",
+      "with_check": "(device_id = (( SELECT auth.uid() AS uid))::text)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "friend_user",
+      "policyname": "fu_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "(device_id = (( SELECT auth.uid() AS uid))::text)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "leaderboard",
+      "policyname": "lb_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "((device_id = (( SELECT auth.uid() AS uid))::text) AND (NOT revizstmg_prive.est_exclu(class_code)))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "leaderboard",
+      "policyname": "lb_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "((device_id = (( SELECT auth.uid() AS uid))::text) OR revizstmg_prive.voit_classement(class_code))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "leaderboard",
+      "policyname": "lb_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "(device_id = (( SELECT auth.uid() AS uid))::text)",
+      "with_check": "(device_id = (( SELECT auth.uid() AS uid))::text)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "leaderboard",
+      "policyname": "lb_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "(device_id = (( SELECT auth.uid() AS uid))::text)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "live_player",
+      "policyname": "lp_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "((device_id = (( SELECT auth.uid() AS uid))::text) AND revizstmg_prive.est_membre(revizstmg_prive.classe_du_direct(session_id)))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "live_player",
+      "policyname": "lp_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "revizstmg_prive.est_membre(revizstmg_prive.classe_du_direct(session_id))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "live_player",
+      "policyname": "lp_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "(device_id = (( SELECT auth.uid() AS uid))::text)",
+      "with_check": "((device_id = (( SELECT auth.uid() AS uid))::text) AND revizstmg_prive.est_membre(revizstmg_prive.classe_du_direct(session_id)))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "live_player",
+      "policyname": "lp_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "((device_id = (( SELECT auth.uid() AS uid))::text) OR revizstmg_prive.est_prof(revizstmg_prive.classe_du_direct(session_id)))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "live_session",
+      "policyname": "ls_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "((host_device = (( SELECT auth.uid() AS uid))::text) AND revizstmg_prive.est_prof(class_code))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "live_session",
+      "policyname": "ls_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "revizstmg_prive.est_membre(class_code)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "live_session",
+      "policyname": "ls_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "revizstmg_prive.est_prof(class_code)",
+      "with_check": "revizstmg_prive.est_prof(class_code)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "live_session",
+      "policyname": "ls_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "revizstmg_prive.est_prof(class_code)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "profiles",
+      "policyname": "profiles_delete_own",
+      "roles": "{public}",
+      "cmd": "DELETE",
+      "qual": "(auth.uid() = id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "profiles",
+      "policyname": "profiles_insert_own",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "(auth.uid() = id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "profiles",
+      "policyname": "profiles_select_own",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "(auth.uid() = id)",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "profiles",
+      "policyname": "profiles_update_own",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "(auth.uid() = id)",
+      "with_check": "(auth.uid() = id)"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "revizstmg_abonnements",
+      "policyname": "lire_son_abonnement",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "(user_id = ( SELECT auth.uid() AS uid))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "revizstmg_ia_usage",
+      "policyname": "lire_son_usage_ia",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "(user_id = ( SELECT auth.uid() AS uid))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "revizstmg_signalements",
+      "policyname": "signaler",
+      "roles": "{anon,authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "((traite = false) AND ((auteur IS NULL) OR (auteur = ( SELECT auth.uid() AS uid))))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "teacher_class",
+      "policyname": "tc_ajouter",
+      "roles": "{authenticated}",
+      "cmd": "INSERT",
+      "qual": null,
+      "with_check": "(owner_id = ( SELECT auth.uid() AS uid))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "teacher_class",
+      "policyname": "tc_lire",
+      "roles": "{authenticated}",
+      "cmd": "SELECT",
+      "qual": "(owner_id = ( SELECT auth.uid() AS uid))",
+      "with_check": null
+    },
+    {
+      "schemaname": "public",
+      "tablename": "teacher_class",
+      "policyname": "tc_modifier",
+      "roles": "{authenticated}",
+      "cmd": "UPDATE",
+      "qual": "(owner_id = ( SELECT auth.uid() AS uid))",
+      "with_check": "(owner_id = ( SELECT auth.uid() AS uid))"
+    },
+    {
+      "schemaname": "public",
+      "tablename": "teacher_class",
+      "policyname": "tc_supprimer",
+      "roles": "{authenticated}",
+      "cmd": "DELETE",
+      "qual": "(owner_id = ( SELECT auth.uid() AS uid))",
+      "with_check": null
+    }
+  ],
+  "grants": [
+    {
+      "relname": "child_stats",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "class_ban",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "class_duel",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "class_group",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "class_member",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "class_meta",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "class_quiz",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "class_quiz_result",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "class_wall",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "friend_duel",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "friend_request",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "friend_user",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "leaderboard",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "live_player",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "live_session",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "profiles",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": true,
+      "anon_insert": true,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    },
+    {
+      "relname": "revizstmg_abonnements",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": false,
+      "reloptions": null
+    },
+    {
+      "relname": "revizstmg_ia_usage",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": false,
+      "reloptions": null
+    },
+    {
+      "relname": "revizstmg_signalements",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": true,
+      "auth_select": false,
+      "auth_update": false,
+      "reloptions": null
+    },
+    {
+      "relname": "revizstmg_visites",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": false,
+      "auth_update": false,
+      "reloptions": null
+    },
+    {
+      "relname": "teacher_class",
+      "relkind": "r",
+      "relrowsecurity": true,
+      "relforcerowsecurity": false,
+      "anon_select": false,
+      "anon_insert": false,
+      "auth_select": true,
+      "auth_update": true,
+      "reloptions": null
+    }
+  ],
+  "functions": [
+    {
+      "nspname": "public",
+      "proname": "revizstmg_classe",
+      "args": "p_code text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_compter_vue",
+      "args": "p_page text, p_visite boolean",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": true,
+      "auth_execute": true
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_ia_rendre",
+      "args": "p_user uuid, p_fonction text, p_periode text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=public"
+      ],
+      "anon_execute": false,
+      "auth_execute": false
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_ia_reserver",
+      "args": "p_user uuid, p_fonction text, p_periode text, p_max integer",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=public"
+      ],
+      "anon_execute": false,
+      "auth_execute": false
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_ligue",
+      "args": "p_semaine text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_ligue_classe",
+      "args": "p_code text, p_semaine text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_push_a_envoyer",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": false
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_push_abonner",
+      "args": "p_endpoint text, p_p256dh text, p_auth text, p_minute integer, p_fuseau text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_push_cle",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": true,
+      "auth_execute": true
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_push_cles",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": false
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_push_desabonner",
+      "args": "p_endpoint text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_push_enregistrer_cles",
+      "args": "p_publique text, p_privee text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": false
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_push_resultat",
+      "args": "p_endpoint text, p_statut integer",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": false
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_push_secret_ok",
+      "args": "p_secret text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": false
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_statistiques",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": true,
+      "auth_execute": true
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_stats_enfant",
+      "args": "p_code text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": true,
+      "auth_execute": true
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_supprimer_compte",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_trouver_ami",
+      "args": "p_code text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "classe_du_direct",
+      "args": "p_session uuid",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "classe_du_quiz",
+      "args": "p_quiz uuid",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "code_visible",
+      "args": "p_code text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "est_ami",
+      "args": "p_device text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "est_exclu",
+      "args": "p_code text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "est_membre",
+      "args": "p_code text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "est_prof",
+      "args": "p_code text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "garde_code",
+      "args": "",
+      "prosecdef": false,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "garde_demande_ami",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "garde_duel_ami",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "garde_duel_classe",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "garde_mur",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "limite_classes_prof",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "limite_demandes_ami",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "limite_duels_ami",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "limite_duels_classe",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "limite_mur",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "limite_quiz",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "limite_signalements",
+      "args": "",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": false
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "trop_d_envois",
+      "args": "p_nb bigint, p_max integer, p_quoi text",
+      "prosecdef": false,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "voit_classement",
+      "args": "p_code text",
+      "prosecdef": true,
+      "proconfig": [
+        "search_path=\"\""
+      ],
+      "anon_execute": false,
+      "auth_execute": true
+    }
+  ],
+  "triggers": [
+    {
+      "event_object_schema": "public",
+      "event_object_table": "child_stats",
+      "trigger_name": "revizstmg_garde_code",
+      "event_manipulation": "UPDATE",
+      "action_statement": "EXECUTE FUNCTION revizstmg_prive.garde_code()"
+    },
+    {
+      "event_object_schema": "public",
+      "event_object_table": "class_duel",
+      "trigger_name": "revizstmg_garde_duel_classe",
+      "event_manipulation": "UPDATE",
+      "action_statement": "EXECUTE FUNCTION revizstmg_prive.garde_duel_classe()"
+    },
+    {
+      "event_object_schema": "public",
+      "event_object_table": "class_duel",
+      "trigger_name": "revizstmg_limite_duels_classe",
+      "event_manipulation": "INSERT",
+      "action_statement": "EXECUTE FUNCTION revizstmg_prive.limite_duels_classe()"
+    },
+    {
+      "event_object_schema": "public",
+      "event_object_table": "class_quiz",
+      "trigger_name": "revizstmg_limite_quiz",
+      "event_manipulation": "INSERT",
+      "action_statement": "EXECUTE FUNCTION revizstmg_prive.limite_quiz()"
+    },
+    {
+      "event_object_schema": "public",
+      "event_object_table": "class_wall",
+      "trigger_name": "revizstmg_garde_mur",
+      "event_manipulation": "UPDATE",
+      "action_statement": "EXECUTE FUNCTION revizstmg_prive.garde_mur()"
+    },
+    {
+      "event_object_schema": "public",
+      "event_object_table": "class_wall",
+      "trigger_name": "revizstmg_limite_mur",
+      "event_manipulation": "INSERT",
+      "action_statement": "EXECUTE FUNCTION revizstmg_prive.limite_mur()"
+    },
+    {
+      "event_object_schema": "public",
+      "event_object_table": "friend_duel",
+      "trigger_name": "revizstmg_garde_duel_ami",
+      "event_manipulation": "UPDATE",
+      "action_statement": "EXECUTE FUNCTION revizstmg_prive.garde_duel_ami()"
+    },
+    {
+      "event_object_schema": "public",
+      "event_object_table": "friend_duel",
+      "trigger_name": "revizstmg_limite_duels_ami",
+      "event_manipulation": "INSERT",
+      "action_statement": "EXECUTE FUNCTION revizstmg_prive.limite_duels_ami()"
+    },
+    {
+      "event_object_schema": "public",
+      "event_object_table": "friend_request",
+      "trigger_name": "revizstmg_garde_demande_ami",
+      "event_manipulation": "UPDATE",
+      "action_statement": "EXECUTE FUNCTION revizstmg_prive.garde_demande_ami()"
+    },
+    {
+      "event_object_schema": "public",
+      "event_object_table": "friend_request",
+      "trigger_name": "revizstmg_limite_demandes_ami",
+      "event_manipulation": "INSERT",
+      "action_statement": "EXECUTE FUNCTION revizstmg_prive.limite_demandes_ami()"
+    },
+    {
+      "event_object_schema": "public",
+      "event_object_table": "friend_user",
+      "trigger_name": "revizstmg_garde_code",
+      "event_manipulation": "UPDATE",
+      "action_statement": "EXECUTE FUNCTION revizstmg_prive.garde_code()"
+    },
+    {
+      "event_object_schema": "public",
+      "event_object_table": "revizstmg_signalements",
+      "trigger_name": "revizstmg_limite_signalements",
+      "event_manipulation": "INSERT",
+      "action_statement": "EXECUTE FUNCTION revizstmg_prive.limite_signalements()"
+    },
+    {
+      "event_object_schema": "public",
+      "event_object_table": "teacher_class",
+      "trigger_name": "revizstmg_limite_classes_prof",
+      "event_manipulation": "INSERT",
+      "action_statement": "EXECUTE FUNCTION revizstmg_prive.limite_classes_prof()"
+    }
+  ],
+  "triggersEnabled": [
+    {
+      "table_name": "class_wall",
+      "tgname": "revizstmg_garde_mur",
+      "tgenabled": "O"
+    },
+    {
+      "table_name": "class_wall",
+      "tgname": "revizstmg_limite_mur",
+      "tgenabled": "O"
+    }
+  ],
+  "definitions": [
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "est_prof",
+      "definition": "CREATE OR REPLACE FUNCTION revizstmg_prive.est_prof(p_code text)\n RETURNS boolean\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\n  select exists (select 1 from public.teacher_class t where t.code = p_code and t.owner_id = auth.uid())\n$function$\n"
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "garde_demande_ami",
+      "definition": "CREATE OR REPLACE FUNCTION revizstmg_prive.garde_demande_ami()\n RETURNS trigger\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO ''\nAS $function$\ndeclare moi text := auth.uid()::text;\nbegin\n  if new.from_device is distinct from old.from_device or new.to_device is distinct from old.to_device\n     or new.created_at is distinct from old.created_at then\n    raise exception 'Demande : champ non modifiable.' using errcode = '42501';\n  end if;\n  if moi is not null and new.status is distinct from old.status and old.to_device <> moi then\n    raise exception 'Seul le destinataire répond à une demande.' using errcode = '42501';\n  end if;\n  return new;\nend $function$\n"
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "garde_duel_ami",
+      "definition": "CREATE OR REPLACE FUNCTION revizstmg_prive.garde_duel_ami()\n RETURNS trigger\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO ''\nAS $function$\ndeclare moi text := auth.uid()::text;\nbegin\n  if new.a_device is distinct from old.a_device or new.b_device is distinct from old.b_device\n     or new.a_code is distinct from old.a_code or new.a_name is distinct from old.a_name or new.b_name is distinct from old.b_name\n     or new.questions is distinct from old.questions or new.theme_id is distinct from old.theme_id\n     or new.chapter_label is distinct from old.chapter_label or new.created_at is distinct from old.created_at then\n    raise exception 'Duel : champ non modifiable.' using errcode = '42501';\n  end if;\n  if moi is null then return new; end if;\n  if moi = old.a_device and (new.b_score is distinct from old.b_score or new.b_total is distinct from old.b_total\n     or new.b_done is distinct from old.b_done) then\n    raise exception 'Duel : tu ne peux pas modifier le score de ton ami.' using errcode = '42501';\n  end if;\n  if moi = old.b_device and (new.a_score is distinct from old.a_score or new.a_total is distinct from old.a_total\n     or new.a_done is distinct from old.a_done) then\n    raise exception 'Duel : tu ne peux pas modifier le score de ton ami.' using errcode = '42501';\n  end if;\n  if new.status is distinct from old.status then\n    if not ((old.status = 'pending' and new.status = 'live' and moi = old.b_device)\n         or (old.status = 'live' and new.status = 'done' and new.a_done and new.b_done)) then\n      raise exception 'Duel : changement d''état non autorisé.' using errcode = '42501';\n    end if;\n  end if;\n  return new;\nend $function$\n"
+    },
+    {
+      "nspname": "revizstmg_prive",
+      "proname": "garde_mur",
+      "definition": "CREATE OR REPLACE FUNCTION revizstmg_prive.garde_mur()\n RETURNS trigger\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO ''\nAS $function$\ndeclare moi text := auth.uid()::text;\nbegin\n  if new.class_code is distinct from old.class_code or new.device_id is distinct from old.device_id\n     or new.created_at is distinct from old.created_at then\n    raise exception 'Message : champ non modifiable.' using errcode = '42501';\n  end if;\n  if moi is null or revizstmg_prive.est_prof(old.class_code) then return new; end if;\n  if new.answer is distinct from old.answer or new.answered_by is distinct from old.answered_by then\n    raise exception 'Seul le professeur répond aux questions du mur.' using errcode = '42501';\n  end if;\n  if old.device_id <> moi and (new.text is distinct from old.text or new.name is distinct from old.name\n     or new.kind is distinct from old.kind or new.is_anon is distinct from old.is_anon\n     or new.chapter_label is distinct from old.chapter_label or new.resolved is distinct from old.resolved) then\n    raise exception 'Seul l''auteur modifie son message.' using errcode = '42501';\n  end if;\n  return new;\nend $function$\n"
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_ia_reserver",
+      "definition": "CREATE OR REPLACE FUNCTION public.revizstmg_ia_reserver(p_user uuid, p_fonction text, p_periode text, p_max integer)\n RETURNS boolean\n LANGUAGE plpgsql\n SECURITY DEFINER\n SET search_path TO 'public'\nAS $function$\ndeclare v integer;\nbegin\n  if p_max is null or p_max < 1 then return false; end if;\n  insert into public.revizstmg_ia_usage (user_id, fonction, periode, n)\n    values (p_user, p_fonction, p_periode, 0)\n    on conflict (user_id, fonction, periode) do nothing;\n  update public.revizstmg_ia_usage\n     set n = n + 1, updated_at = now()\n   where user_id = p_user and fonction = p_fonction and periode = p_periode and n < p_max\n  returning n into v;\n  return v is not null;\nend;\n$function$\n"
+    },
+    {
+      "nspname": "public",
+      "proname": "revizstmg_stats_enfant",
+      "definition": "CREATE OR REPLACE FUNCTION public.revizstmg_stats_enfant(p_code text)\n RETURNS TABLE(code text, name text, xp integer, level integer, streak integer, courses_week integer, weekly_goal integer, total_time integer, bac_date text, badges integer, track text, subjects jsonb, last_active timestamp with time zone, updated_at timestamp with time zone)\n LANGUAGE sql\n STABLE SECURITY DEFINER\n SET search_path TO ''\nAS $function$\n  select c.code, c.name, c.xp, c.level, c.streak, c.courses_week, c.weekly_goal, c.total_time, c.bac_date,\n         c.badges, c.track, c.subjects, c.last_active, c.updated_at\n  from public.child_stats c where char_length(p_code) >= 4 and c.code = p_code\n  order by c.updated_at desc limit 1\n$function$\n"
+    }
+  ],
+  "storagePolicies": [],
+  "payment": {
+    "http": 200,
+    "mode": "test",
+    "premiumMonthlyCents": 999,
+    "ultimateMonthlyCents": 1999,
+    "goStudentAnnualCents": 2000,
+    "goSchoolAnnualCents": 50000
+  },
+  "vision": {
+    "version": 1,
+    "status": "ACTIVE",
+    "verify_jwt": false,
+    "defaultModel": "gemini-2.0-flash",
+    "environmentOverride": "not inspected"
+  }
+}

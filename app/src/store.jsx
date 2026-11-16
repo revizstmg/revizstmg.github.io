@@ -265,6 +265,7 @@ export function StoreProvider({ children }) {
   const setState = useCallback((maj) => setRaw((prev) => noter(prev, typeof maj === 'function' ? maj(prev) : maj)), [])
   const [newBadges, setNewBadges] = useState([]) // badges à célébrer
   const [dailyReward, setDailyReward] = useState(null) // récompense de connexion à célébrer
+  const [parentRemoval, setParentRemoval] = useState(null)
 
   // Persistance à chaque changement. Si l'appareil refuse (stockage plein), un
   // bandeau prévient l'élève (EtatSauvegarde.jsx) au lieu de perdre en silence.
@@ -319,20 +320,42 @@ export function StoreProvider({ children }) {
   // et facultatif — c'est ce que le parent relié consulte en lecture seule.
   // Rien n'est publié tant que l'élève n'a pas activé le partage (Mon espace).
   useEffect(() => {
-    if (!PARENT_READY || !state.track || !state.parentShare || !isSignedIn()) return
-    const id = setTimeout(() => { publishChildStats(buildChildSnapshot(state, deriveAll(state))).catch(() => {}) }, 3000)
+    if (!PARENT_READY || !state.track || !state.parentShare || !isSignedIn() || getSession()?.user?.id !== state.account?.id) return
+    const id = setTimeout(() => {
+      if (getSession()?.user?.id !== state.account?.id) return
+      publishChildStats(buildChildSnapshot(state, deriveAll(state))).catch(() => {})
+    }, 3000)
     return () => clearTimeout(id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.track, state.parentShare, state.xp, state.streak, state.chapters, state.themeTime, state.weekly, state.badges, state.bacDate, state.profile, state.parcours])
+  }, [state.account?.id, state.track, state.parentShare, state.xp, state.streak, state.chapters, state.themeTime, state.weekly, state.badges, state.bacDate, state.profile, state.parcours])
 
-  // Partage désactivé : on efface l'instantané déjà publié par cet appareil (une
-  // fois ; le marqueur évite de le redemander à chaque ouverture).
+  // Un consentement local désactivé ne prouve pas le retrait distant.
+  // Réessayer sans republier, et ignorer toute réponse d'une ancienne identité.
   useEffect(() => {
-    if (!PARENT_READY || !state.track || state.parentShare || !isSignedIn()) return
-    // Retenter aussi à la prochaine ouverture : un ancien marqueur global ne
-    // constitue pas une preuve de suppression pour ce compte.
-    deleteMyChildStats().catch(() => {})
-  }, [state.track, state.parentShare])
+    const owner = state.account?.id
+    if (!PARENT_READY || !state.track || state.parentShare || !isSignedIn() || getSession()?.user?.id !== owner) return
+    let cancelled = false, busy = false, confirmed = false
+    setParentRemoval({ owner, status: 'pending' })
+    const retry = async () => {
+      if (cancelled || busy || confirmed || getSession()?.user?.id !== owner) return
+      busy = true
+      const ok = await deleteMyChildStats().catch(() => false)
+      busy = false
+      if (cancelled || getSession()?.user?.id !== owner) return
+      confirmed = ok
+      setParentRemoval({ owner, status: ok ? 'confirmed' : 'pending' })
+    }
+    retry()
+    const timer = setInterval(retry, 30000)
+    window.addEventListener('online', retry)
+    window.addEventListener('stmg-parent-retry', retry)
+    return () => {
+      cancelled = true
+      clearInterval(timer)
+      window.removeEventListener('online', retry)
+      window.removeEventListener('stmg-parent-retry', retry)
+    }
+  }, [state.account?.id, state.track, state.parentShare])
 
   const evaluateBadges = useCallback((next) => {
     const derived = deriveAll(next)
@@ -821,6 +844,7 @@ export function StoreProvider({ children }) {
   const noterReponses = useCallback((r) => setState((p) => ({ ...p, erreurs: majCarnet(p.erreurs, r, todayKey()), reussites: updateSuccesses(p.reussites, r) })), [])
   const setParentShare = useCallback((on) => {
     try { if (on) localStorage.removeItem('stmg_parent_efface') } catch { /* stockage indisponible */ }
+    setParentRemoval(null)
     setState((p) => ({ ...p, parentShare: !!on }))
   }, [])
   // Bac blanc : mémorise les énoncés déjà tombés pour cette sélection, afin de
@@ -852,6 +876,7 @@ export function StoreProvider({ children }) {
     setReminder,
     setGrandOral,
     setParentShare,
+    parentRemovalStatus: parentRemoval?.owner === state.account?.id ? parentRemoval.status : 'pending',
     noterReponses,
     setEtudeGestion,
     setParcours,

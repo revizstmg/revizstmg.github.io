@@ -88,9 +88,11 @@ Consignes du propriétaire (24 octobre 2026) :
 - Le schéma est dans `supabase/migrations/`. Toute modification de la base passe par
   un nouveau fichier de migration, appliqué sur Supabase sous le même nom
   (`supabase/README.md`).
-- Sauf `profiles`, les tables sociales sont ouvertes à tous (`using (true)`) : n'y
-  ajoutez pas de données sensibles avant d'avoir appliqué les corrections de
-  l'audit (`supabase/README.md`).
+- Les règles sociales ouvertes décrites dans les anciennes notes ont été remplacées.
+  L’audit réel du15novembre2026 a vérifié RLS sur21tables ciblées. Vérifier les
+  règles actives et `supabase/README.md` avant toute modification : certaines
+  migrations historiques ont été appliquées manuellement.
+
 
 ## Rapport du matin
 

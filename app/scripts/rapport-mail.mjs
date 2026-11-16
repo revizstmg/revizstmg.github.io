@@ -24,6 +24,7 @@ import { tmpdir } from 'node:os'
 import { fileURLToPath } from 'node:url'
 import { contenu, publication, SUBJECTS } from './stats-sources.mjs'
 import { construireRapport } from './rapport.js'
+import { choisirEtatPublication } from './etat-publication.mjs'
 
 const RACINE = resolve(dirname(fileURLToPath(import.meta.url)), '../..')
 const args = process.argv.slice(2)
@@ -44,8 +45,8 @@ const rapport = construireRapport({
   // Si GitHub n'a pas répondu, l'état relevé par la routine elle-même.
   publication: {
     ...p,
-    ci: p.ci?.etat && p.ci.etat !== 'unknown' ? p.ci : verif?.ci || p.ci,
-    miseEnLigne: p.miseEnLigne?.etat && p.miseEnLigne.etat !== 'unknown' ? p.miseEnLigne : verif?.miseEnLigne || p.miseEnLigne,
+    ci: choisirEtatPublication(p.ci, verif?.ci),
+    miseEnLigne: choisirEtatPublication(p.miseEnLigne, verif?.miseEnLigne),
   },
   historique: lireJson(resolve(RACINE, 'statistiques/historique.json')) || [],
   nomMatiere: (id) => SUBJECTS.find((s) => s.id === id)?.name || id,

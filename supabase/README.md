@@ -5,8 +5,8 @@ site NAH (dépôt `Gabriel-Merlin/NAH`). Ce dossier contient ce qui concerne
 RévizSTMG uniquement.
 
 ```
-migrations/        l'historique des migrations des 18 tables de RévizSTMG
-functions/         la fonction « fiche-vision » (pas encore déployée)
+migrations/        migrations versionnées de RévizSTMG (dont historique manuel)
+functions/         examen-blanc, revizstmg-paiement, revizstmg-rappels, fiche-vision (déployées)
 ```
 
 ## Règles d'accès des tables sociales (appliquées le 20 octobre 2026)
@@ -26,6 +26,12 @@ Vérifié sur la vraie base juste après : 64 règles, toutes réservées aux co
 connectés, aucune ouverte à tous ; la clé publique seule ne lit plus aucune de ces
 tables (réponse 401) ; le parent lit toujours son enfant par le code
 (`revizstmg_stats_enfant`).
+
+## Mur : garde de rôle corrigée le 16 novembre 2026
+
+La migration `20261116065015_revizstmg_mur_annonces_professeur.sql` est appliquée et enregistrée sous ce nom/version. Elle rétablit uniquement la garde de genre, nom et anonymat prévue par la migration historique du 2 novembre, absente de la fonction réellement active lors de l’audit. Aucun autre volet de cette ancienne migration n’est implicitement déclaré appliqué.
+
+Les changements de genre, nom et anonymat d’un message sont réservés au professeur propriétaire de la classe. L’auteur peut modifier son texte ; les réactions des membres restent possibles. Essais exécutés sur une table temporaire avec le vrai déclencheur, puis transaction annulée ; aucune donnée réelle modifiée.
 
 ## Suppression complète du compte (appliquée le 19 octobre 2026)
 

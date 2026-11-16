@@ -3826,5 +3826,9 @@
   "Formules masquées par le programme ou le niveau : {n}.": "الصيغ المخفية بسبب البرنامج أو المستوى: {n}.",
   "Afficher toute ma sélection": "عرض جميع اختياراتي",
   "La requête a expiré. Réessaie.": "انتهت مهلة الطلب. حاول مجددًا.",
-  "La requête a expiré.": "انتهت مهلة الطلب."
+  "La requête a expiré.": "انتهت مهلة الطلب.",
+  "Copie impossible. Sélectionne le code pour le copier manuellement.": "تعذر النسخ. حدد الرمز لنسخه يدويًا.",
+  "Partage désactivé sur cet appareil. Le retrait en ligne n’est pas encore confirmé ; il sera retenté automatiquement. L’ancien code peut encore donner accès à ta progression.": "تم إيقاف المشاركة على هذا الجهاز. لم يتم تأكيد إزالتها عبر الإنترنت بعد، وستتم المحاولة تلقائيًا. قد يظل الرمز القديم يتيح الوصول إلى تقدمك.",
+  "Réessayer le retrait": "إعادة محاولة الإزالة",
+  "La suppression n’est pas confirmée. Vérifie ta connexion et ton compte avant de réessayer.": "لم يتم تأكيد الحذف. تحقق من اتصالك وحسابك قبل المحاولة مجددًا."
 }

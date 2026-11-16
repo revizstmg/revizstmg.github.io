@@ -28,12 +28,12 @@ export default function Cgu() {
       </Section>
 
       <Section title="1. Objet">
-        <p><TexteRiche texte={"Ces conditions encadrent l’utilisation de RévizSTMG, application de révision du bac STMG : cours et exercices de base gratuits, reste du site (flashcards, bacs blancs…) sur abonnement. Utiliser l’application vaut acceptation de ces conditions."} /></p>
+        <p><TexteRiche texte={"Ces conditions encadrent l’utilisation de RévizSTMG, application de révision du bac STMG. Les cours, exercices de base, classes, amis, boutique et suivi parent sont gratuits. Des outils de révision, de préparation aux examens et d’accompagnement sont proposés sur abonnement, selon le détail des offres. Utiliser l’application vaut acceptation de ces conditions."} /></p>
       </Section>
 
       <Section title="2. Accès au service">
         <ul className="list-disc space-y-1 ps-5">
-          <li><TexteRiche texte={"Les cours et les exercices de base sont **gratuits**, sans publicité. Le reste du site est réservé aux abonnés (voir « Abonnements payants »)."} /></li>
+          <li><TexteRiche texte={"Les cours, exercices de base et espaces classe, amis, boutique et suivi parent sont **gratuits**, sans publicité. Seuls les outils indiqués dans les offres nécessitent un abonnement (voir « Abonnements payants »)."} /></li>
           <li><TexteRiche texte={"L’application s’essaie **sans compte** : la progression reste alors sur l’appareil. Un **compte**  (adresse e-mail et mot de passe, ou connexion avec Google ou Apple) sauvegarde ta progression, te permet de la retrouver sur plusieurs appareils et donne accès aux espaces partagés (classe, amis, classement, suivi parent) et au rappel envoyé même quand l’application est fermée. Les informations données doivent être exactes ; le mot de passe est personnel et ne doit pas être partagé."} /></li>
           <li><TexteRiche texte={"Un abonnement payant demande un compte."} /></li>
           <li><TexteRiche texte={"Pour un élève mineur, l’utilisation suppose l’accord de l’établissement ou du représentant légal."} /></li>

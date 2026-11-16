@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-16",
+  "migration": "20261116065015_revizstmg_mur_annonces_professeur",
+  "project": "wyydagcjkbivtbuhbzon",
+  "applied": true,
+  "catalogue": {"role_guard_active":true,"migration_registered":true,"test_table_removed":true},
+  "temporary_table_tests": [
+    {"case":"own_message_to_announcement","expected":"42501","passed":true},
+    {"case":"own_name_impersonation","expected":"42501","passed":true},
+    {"case":"teacher_answer_from_student","expected":"42501","passed":true},
+    {"case":"other_author_text","expected":"42501","passed":true},
+    {"case":"own_text_edit","expected":"allowed","passed":true},
+    {"case":"other_message_reaction","expected":"allowed","passed":true}
+  ],
+  "method": "Real trigger attached to a temporary table, synthetic rows and JWT subject, transaction rolled back. No real account or business row changed. Teacher path preserved from prior definition, not exercised with a real teacher.",
+  "scope": "Only revizstmg_prive.garde_mur was replaced. No other November 2 migration changes implicitly applied."
+}
