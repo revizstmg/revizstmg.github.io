@@ -1,0 +1,38 @@
+{
+  "host": "https://revizstmg.github.io/",
+  "passed": 6,
+  "failed": 0,
+  "cases": [
+    {
+      "case": "parent : retrait en attente honnête puis repris au retour réseau sans republier",
+      "seconds": 3.9,
+      "passed": true
+    },
+    {
+      "case": "suppression compte : RPC silencieux, délai, message et bouton utilisable",
+      "seconds": 1.6,
+      "passed": true
+    },
+    {
+      "case": "parent : réponse tardive du retrait A ne confirme ni ne désactive le partage B",
+      "seconds": 7.9,
+      "passed": true
+    },
+    {
+      "case": "les propositions restent stables après une mise à jour de la page",
+      "seconds": 2.3,
+      "passed": true
+    },
+    {
+      "case": "première visite publique sans compte : connexion accessible",
+      "seconds": 0.527,
+      "passed": true
+    },
+    {
+      "case": "CGU publiques en anglais : paragraphes intégrés sans service de traduction",
+      "seconds": 1.4,
+      "passed": true
+    }
+  ],
+  "method": "Fresh browser contexts, synthetic profiles, mocked Supabase/third-party services. Only public site assets fetched from the real host. No real account or deletion."
+}
