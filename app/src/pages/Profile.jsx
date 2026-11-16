@@ -84,6 +84,8 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
     try {
       if (state.account?.id) {
         if (!isSignedIn() || getSession()?.user?.id !== state.account.id) throw new Error('session_changed')
+        // Tentative locale bornée : le RPC de suppression efface lui-même les
+        // abonnements push du compte. Une API navigateur en panne ne le bloque pas.
         await desactiverRappelsPush()
         if (getSession()?.user?.id !== state.account.id) throw new Error('session_changed')
         // Un abonnement actif est résilié d'abord : sans cela le prélèvement continuerait sur un compte supprimé.
