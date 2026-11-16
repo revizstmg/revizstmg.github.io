@@ -1,0 +1,12 @@
+
+Running 3 tests using 1 worker
+
+(node:11506) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:11506) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [telephone] › ../../../output/audit-rappels-20261116/sondes.spec.js:4:56 › activation tardive après arret (3.5s)
+  ✓  2 [telephone] › ../../../output/audit-rappels-20261116/sondes.spec.js:4:56 › activation tardive après identite (3.2s)
+  ✓  3 [telephone] › ../../../output/audit-rappels-20261116/sondes.spec.js:4:56 › activation tardive après heure (2.5s)
+
+  3 passed (11.2s)
