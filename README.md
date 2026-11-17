@@ -1,6 +1,6 @@
 # RévizSTMG
 
-Application de révision pour les élèves de Première et Terminale STMG, développée par Gabriel Merlin et Mathis. Cours, exercices, préparation aux épreuves, orientation et espaces de classe.
+Application de révision pour les élèves de Première et Terminale STMG, développée par Gabriel Merlin. Cours, exercices, préparation aux épreuves, orientation et espaces de classe.
 
 - **Application :** https://revizstmg.github.io
 - **Cours publics sans JavaScript :** https://revizstmg.github.io/cours/
@@ -100,7 +100,7 @@ Références : [`app/src/data/acces.js`](app/src/data/acces.js), [`app/src/compo
 
 ### Quotas IA et période de grâce
 
-La règle serveur est [`supabase/functions/examen-blanc/acces.js`](supabase/functions/examen-blanc/acces.js), dupliquée à l’identique dans `fiche-vision` et vérifiée par les tests.
+La règle serveur est [`supabase/functions/examen-blanc/acces.js`](supabase/functions/examen-blanc/acces.js), dupliquée à l’identique dans `fiche-vision` et vérifiée par les tests. **Attention :** ce sont les fichiers du dépôt. Au 17 novembre 2026, la fonction `fiche-vision` déployée sur Supabase est encore en version 1 (ancien `acces.js`) ; elle n’a pas été redéployée avec la règle actuelle, et sa mise à jour demande l’accord du propriétaire.
 
 - Gratuit : quota IA nul hors exception de grâce.
 - Premium : une utilisation initiale par fonction et par mois ; suites distinctes, sous conditions de preuve de l’étape initiale : tuteur 20, contrôle 3, examen 6 ; valeur de secours 5 pour les autres suites. Plans d’examen : plafond séparé de 12/mois.
@@ -234,7 +234,7 @@ La clé publique/anon est publique par conception ; la sécurité repose sur Aut
 
 Les 21 tables ciblées par l’audit du 15 novembre 2026 : `profiles`, `leaderboard`, `friend_user`, `friend_request`, `friend_duel`, `class_member`, `class_meta`, `class_wall`, `class_quiz`, `class_quiz_result`, `class_duel`, `class_group`, `class_ban`, `teacher_class`, `live_session`, `live_player`, `child_stats`, `revizstmg_abonnements`, `revizstmg_ia_usage`, `revizstmg_signalements`, `revizstmg_visites`. Ce relevé n’est pas un audit exhaustif de toutes les tables du projet.
 
-Les migrations versionnées ne suffisent pas à prouver l’état distant : certaines ont été appliquées manuellement. La garde professeur du mur a été corrigée par `20261116065015_revizstmg_mur_annonces_professeur.sql` ; validation sur table temporaire puis rollback, sans données métier modifiées.
+Les migrations versionnées ne suffisent pas à prouver l’état distant : certaines ont été appliquées manuellement. **Écart constaté le 17 novembre 2026 :** `20261102120000_revizstmg_securite_4_classe_mur_duels.sql` (mur, classement, duels, fonction `revizstmg_mur`) n’apparaît pas parmi les migrations appliquées en production, alors que la suivante, `20261116065015`, l’est. Le client retombe sur la lecture directe du mur tant que la fonction est absente. L’application de la première demande l’accord explicite du propriétaire. La garde professeur du mur a été corrigée par `20261116065015_revizstmg_mur_annonces_professeur.sql` ; validation sur table temporaire puis rollback, sans données métier modifiées.
 
 ### Export, suppression et partage
 
