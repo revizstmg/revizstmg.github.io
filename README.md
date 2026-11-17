@@ -134,7 +134,7 @@ app/
   content/             cours et couches pédagogiques JSON
   resources/langues/   sources des cinq manuels et exercices de langue
   scripts/             build du contenu, PDF, pages publiques, publication, rapports
-  pwa/                 modèles manifest, service worker, icônes et page404
+  pwa/                 modèles manifest, service worker, icônes et page 404
   src/
     App.jsx            routes, gardes et chargement des pages
     store.jsx          état, progression, sauvegarde et actions du compte
@@ -339,7 +339,7 @@ Références : [référencement](docs/REFERENCEMENT-COURS-PUBLICS.md), [diffusio
 - Les comptages d’utilisation proviennent de `revizstmg_statistiques()` ; les données agrégées ne sont pas un accès aux profils individuels.
 - Les écrans affichés sont mesurés par `app/src/mesure.js`, sans cookie ni identifiant dans ce compteur d’audience.
 - Le mail de rapport est généré par `app/scripts/rapport-mail.mjs` et `rapport.js`. La routine externe Claude et ses autorisations ne sont pas garanties par un workflow GitHub réussi.
-- Une panne GitHub/Supabase doit être marquée **non vérifiée**, pas transformée en zéro utilisateur, en date valide inventée ou en « Rien à signaler ». Au relevé du16novembre, la récupération d’utilisation Supabase a échoué ; les chiffres de contenu restaient disponibles séparément.
+- Une panne GitHub/Supabase doit être marquée **non vérifiée**, pas transformée en zéro utilisateur, en date valide inventée ou en « Rien à signaler ». Au relevé du 16 novembre, la récupération d’utilisation Supabase a échoué ; les chiffres de contenu restaient disponibles séparément.
 
 ## Maintenance et limites
 
