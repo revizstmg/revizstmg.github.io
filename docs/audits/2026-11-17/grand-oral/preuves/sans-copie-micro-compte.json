@@ -1,0 +1,15 @@
+{
+  "finished": false,
+  "cached": false,
+  "account": "00000000-0000-4000-8000-000000000002",
+  "state": "inactive",
+  "events": [
+    "rec-start",
+    "rec-stop",
+    "track-stop",
+    "track-stop"
+  ],
+  "revoked": [],
+  "audio": null,
+  "text": "Chargement du cours…"
+}
