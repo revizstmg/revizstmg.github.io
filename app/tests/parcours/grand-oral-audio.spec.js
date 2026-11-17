@@ -39,13 +39,18 @@ for(const [finished,cached] of [[false,true],[true,true],[false,false],[true,fal
   if(u.pathname.endsWith('/profiles')&&q.method()==='GET'&&u.searchParams.get('id')===`eq.${B}`)return r.fulfill({json:[{id:B,name:'Bob Audit',role:'eleve',level:'terminale-stmg',specialty:'gestion-finance',progress:etatEleve({profile:{firstName:'Bob',lastName:'Audit'},xp:500})}]})
   return r.fulfill({json:[]})
  })
- await page.evaluate(({B,progress,cached})=>{if(cached)localStorage.setItem('stmg_progress_v2',JSON.stringify(progress));const old=localStorage.getItem('stmg_session'),next=JSON.stringify({token:'jeton-B-fictif',refresh:'r',expires_at:9999999999,user:{id:B,email:'b@test.fr',created_at:'2026-10-01T00:00:00Z'}});localStorage.setItem('stmg_session',next);window.dispatchEvent(new StorageEvent('storage',{key:'stmg_session',oldValue:old,newValue:next}))},{B,cached,progress:etatEleve({account:{id:B,email:'b@test.fr',role:'eleve'},profile:{firstName:'Bob',lastName:'Audit'},xp:500})})
+ await page.evaluate(({B,progress,cached})=>{localStorage.setItem('stmg_acces',JSON.stringify({uid:B,ligne:{statut:'active',offre:'premium',periode_fin:'2999-01-01T00:00:00Z',mode_test:true},verifieLe:Date.now()}));if(cached)localStorage.setItem('stmg_progress_v2',JSON.stringify(progress));const old=localStorage.getItem('stmg_session'),next=JSON.stringify({token:'jeton-B-fictif',refresh:'r',expires_at:9999999999,user:{id:B,email:'b@test.fr',created_at:'2026-10-01T00:00:00Z'}});localStorage.setItem('stmg_session',next);window.dispatchEvent(new StorageEvent('storage',{key:'stmg_session',oldValue:old,newValue:next}))},{B,cached,progress:etatEleve({account:{id:B,email:'b@test.fr',role:'eleve'},profile:{firstName:'Bob',lastName:'Audit'},xp:500})})
  await expect.poll(async()=>(await etat(page)).account?.id).toBe(B)
  const report={finished,cached,account:(await etat(page)).account.id,...await page.evaluate(()=>({state:recorders[0].state,events:micEvents,revoked,audio:document.querySelector('audio')?.src||null}))}
  expect(report.events).toContain('track-stop');expect(report.state).toBe('inactive')
  if(finished)expect(report.revoked).toContain(audio)
  await expect(page.locator('audio')).toHaveCount(0)
  await expect(page.getByRole('button',{name:/^⏹ Arrêter$/})).toHaveCount(0)
+ if(cached){
+  await expect(page.getByRole('heading',{name:'Grand Oral',exact:true})).toBeVisible()
+  await page.getByRole('button',{name:/M'entraîner à l'oral/}).click()
+  await expect(page.getByRole('button',{name:/^⏺ Enregistrer$/})).toBeVisible()
+ }
 })
 
 test('fin native normale : minuteur arrêté et réécoute disponible',async({page})=>{
