@@ -264,6 +264,8 @@ La présence du code ou un déploiement réussi ne garantit pas une réponse fou
 - Les notes générées sont indicatives. Les critères/points et citations sont validés côté serveur selon l’action ; cela ne certifie pas la justesse pédagogique d’une réponse automatique.
 - Erreur, délai et annulation doivent rendre la main sans inventer un corrigé. Les limites ne sont pas identiques pour toutes les actions : consulter le client et l’action serveur concernés, plutôt qu’annoncer un délai unique pour toute l’IA.
 
+Dans Fiches photo, le brouillon, les résultats et les prévisualisations sont propres au compte ouvert. Changer de compte ou quitter la page libère les URL des images temporaires et invalide les analyses en attente. Les fiches explicitement enregistrées restent dans la progression de leur propriétaire ; une ancienne identité ne peut plus les enregistrer après la transition.
+
 ### Rappels
 
 `app/src/notify.js` gère permission et notification locale ; `app/src/push.js` inscrit l’appareil auprès des RPC `revizstmg_push_*`. La fonction périodique serveur est décrite dans `supabase/README.md`. iPhone : installation sur l’écran d’accueil et version compatible nécessaires.

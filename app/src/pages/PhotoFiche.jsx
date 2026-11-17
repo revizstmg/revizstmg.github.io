@@ -6,6 +6,7 @@ import { buildFiche } from '../data/ficheAI.js'
 import { ocrImages, cleanOcrText } from '../ocr.js'
 import { analyzeWithVision, MAX_VISION_IMAGES } from '../ficheVision.js'
 import { useT, usePublicText } from '../i18n.js'
+import { getSession } from '../auth.js'
 
 // Petit titre de section de fiche.
 function SecHead({ icon, children }) {
@@ -69,6 +70,12 @@ function FicheView({ fiche }) {
 }
 
 export default function PhotoFiche() {
+  const { state } = useStore()
+  if (!state.track) return <Navigate to="/" replace />
+  return <PhotoFicheCompte key={state.account?.id || 'trial'} />
+}
+
+function PhotoFicheCompte() {
   const { state, saveFiche, removeFiche, saveDeck } = useStore()
   const t = useT(), tr = usePublicText()
   useStudyTimer()
@@ -83,15 +90,26 @@ export default function PhotoFiche() {
   const [msg, setMsg] = useState('')
   const [openId, setOpenId] = useState(null)
   const fileRef = useRef(null)
+  const owner = useRef(state.account?.id || null)
+  const compteCourant = () => (getSession()?.user?.id || null) === owner.current
+  const photoUrls = useRef(new Set())
+  const libererPhoto = url => {
+    if (!photoUrls.current.delete(url)) return
+    try { URL.revokeObjectURL(url) } catch { /* URL déjà libérée */ }
+  }
+  const libererPhotos = () => { for (const url of photoUrls.current) libererPhoto(url) }
   const generation = useRef(0), controller = useRef(null)
   const invalidate = () => { generation.current++; controller.current?.abort(); controller.current = null; setAi({ status: 'idle', msg: '' }); setOcr({ status: 'idle', progress: 0, msg: '' }) }
-  useEffect(() => () => { generation.current++; controller.current?.abort() }, [state.account?.id])
-
-  if (!state.track) return <Navigate to="/" replace />
+  useEffect(() => () => {
+    generation.current++
+    controller.current?.abort()
+    libererPhotos()
+  }, [])
 
   const fiches = state.fiches || []
 
   const addPhotos = (files) => {
+    if (!compteCourant()) return
     const images = [...files].filter((f) => f.type?.startsWith('image/'))
     if (photos.length + images.length > MAX_VISION_IMAGES) {
       setPhotoError('Tu peux sélectionner jusqu’à 4 pages. Ajoute les autres pages dans une nouvelle fiche.')
@@ -99,21 +117,25 @@ export default function PhotoFiche() {
     }
     invalidate()
     setPhotoError('')
-    const arr = images.map((file) => ({ file, url: URL.createObjectURL(file) }))
+    const arr = images.map(file => {
+      const url = URL.createObjectURL(file)
+      photoUrls.current.add(url)
+      return { file, url }
+    })
     setPhotos((p) => [...p, ...arr])
   }
-  const removePhoto = (i) => { invalidate(); setPhotos((p) => { try { URL.revokeObjectURL(p[i]?.url) } catch { /* */ } return p.filter((_, k) => k !== i) }) }
+  const removePhoto = (i) => { invalidate(); setPhotos((p) => { libererPhoto(p[i]?.url); return p.filter((_, k) => k !== i) }) }
 
   const runOcr = async () => {
-    if (!photos.length) return
+    if (!compteCourant() || !photos.length) return
     invalidate()
     const id = generation.current
     setOcr({ status: 'running', progress: 0, msg: '' })
     try {
       const raw = await ocrImages(photos.map((p) => p.file), {
-        onProgress: (i, n, r) => id === generation.current && setOcr({ status: 'running', progress: Math.round(((i + r) / n) * 100), msg: '' }),
+        onProgress: (i, n, r) => id === generation.current && compteCourant() && setOcr({ status: 'running', progress: Math.round(((i + r) / n) * 100), msg: '' }),
       })
-      if (id !== generation.current) return
+      if (id !== generation.current || !compteCourant()) return
       // On ne garde que les lignes réellement lisibles (on jette les symboles/charabia).
       const { text, ratio } = cleanOcrText(raw)
       if (text && text.length >= 30) {
@@ -123,13 +145,14 @@ export default function PhotoFiche() {
         setOcr({ status: 'error', progress: 0, msg: 'La photo n’a pas pu être lue (texte trop petit, flou ou tableau). Rapproche-toi, mets de la lumière et reprends une photo bien nette — ou saisis le texte ci-dessous.' })
       }
     } catch {
-      if (id !== generation.current) return
+      if (id !== generation.current || !compteCourant()) return
       const off = typeof navigator !== 'undefined' && !navigator.onLine
       setOcr({ status: 'error', progress: 0, msg: off ? 'Lecture automatique indisponible hors ligne. Tu peux saisir ou coller ton texte ci-dessous.' : 'Lecture impossible cette fois. Saisis ou colle ton texte ci-dessous — la fiche se génère quand même.' })
     }
   }
 
   const generate = () => {
+    if (!compteCourant()) return
     invalidate()
     const f = buildFiche(rawText, { title })
     setFiche(f); setFicheSource(ocr.status === 'done' ? 'ocr' : 'texte'); setMsg(''); setOpenId(null)
@@ -138,21 +161,21 @@ export default function PhotoFiche() {
   // Analyse IA (vision) : lit la photo côté serveur (Claude) — gère tableaux,
   // petit texte, manuscrit. Retombe sur l'OCR si non configurée.
   const runVision = async () => {
-    if (!photos.length) return
+    if (!compteCourant() || !photos.length) return
     invalidate()
     const id = generation.current
     controller.current = new AbortController()
     setAi({ status: 'running', msg: '' }); setMsg(''); setOpenId(null)
     try {
       const { fiche: f } = await analyzeWithVision(photos.map((p) => p.file), { signal: controller.current.signal })
-      if (id !== generation.current) return
+      if (id !== generation.current || !compteCourant()) return
       const flashcards = (f.definitions || []).map((d) => ({ front: d.term, back: d.def }))
       const has = (f.questions?.length || f.keyInfo?.length || f.definitions?.length)
       setFiche({ title: (f.title || title || 'Ma fiche de révision'), empty: !has, questions: f.questions || [], keyInfo: f.keyInfo || [], definitions: f.definitions || [], flashcards })
       setFicheSource('ia')
       setAi({ status: 'done', msg: '' })
     } catch (e) {
-      if (id !== generation.current) return
+      if (id !== generation.current || !compteCourant()) return
       const code = e?.code
       setAi({
         status: 'error',
@@ -174,7 +197,7 @@ export default function PhotoFiche() {
   }
 
   const doSave = () => {
-    if (!fiche || fiche.empty) return
+    if (!compteCourant() || !fiche || fiche.empty) return
     const id = 'fiche-' + Date.now()
     saveFiche({
       id, title: fiche.title, createdAt: Date.now(), source: ficheSource === 'ia' ? 'ia' : photos.length ? 'photo' : 'texte',
@@ -185,6 +208,7 @@ export default function PhotoFiche() {
     setMsg('Fiche enregistrée ✅')
   }
   const makeDeck = (src) => {
+    if (!compteCourant()) return
     const cards = (src.flashcards || []).filter((c) => c.front && c.back)
     if (!cards.length) { setMsg('Pas assez de définitions pour des flashcards.'); return }
     saveDeck({ id: 'fichedeck-' + Date.now(), title: '📸 ' + (src.title || 'Fiche'), cards })
@@ -193,7 +217,7 @@ export default function PhotoFiche() {
 
   const reset = () => {
     invalidate()
-    photos.forEach((p) => { try { URL.revokeObjectURL(p.url) } catch { /* */ } })
+    libererPhotos()
     setPhotos([]); setRawText(''); setTitle(''); setFiche(null); setFicheSource(null); setOcr({ status: 'idle', progress: 0, msg: '' }); setAi({ status: 'idle', msg: '' }); setMsg('')
   }
 
