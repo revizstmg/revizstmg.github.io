@@ -1,5 +1,7 @@
 # Deux défauts des fiches photo
 
+**Rapport historique :** ces deux défauts sont corrigés et publiés par la PR239. Voir le [bilan de livraison](../fiches-photo-corrigees/README.md).
+
 Recherche ciblée du17novembre2026 sur `5a160b0bb` ; compilation publique `67bfcbc120c1e216a2d8e6f3f68b813a20a48d1f`. Aucun changement produit. Les corrections précédentes des rappels et de l’audio Grand Oral restent livrées ; ce rapport porte sur un autre composant et ses données. Priorités pratiques sur10, pas scores CVSS.
 
 ## 1. Brouillon et fiche de A réutilisables sous B : 7/10

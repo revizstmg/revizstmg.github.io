@@ -1,0 +1,22 @@
+[2m[WebServer] [22m(node:19362) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 11 tests using 1 worker
+
+(node:19381) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19381) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [telephone] › tests/parcours/audit-huit-photo.spec.js:17:1 › sonde photo : image corrompue bloque tout envoi du lot (2.9s)
+  ✓   2 [telephone] › tests/parcours/audit-huit-photo.spec.js:45:1 › sonde OCR synthétique : texte, fiche locale, enregistrement et reprise (3.0s)
+  ✓   3 [telephone] › tests/parcours/audit-huit-photo.spec.js:82:1 › sonde photo : tout recommencer invalide la réponse précédente tardive (2.5s)
+  ✓   4 [telephone] › tests/parcours/fiches-isolation.spec.js:22:37 › brouillon après changement de compte : copie B disponible (2.8s)
+  ✓   5 [telephone] › tests/parcours/fiches-isolation.spec.js:22:37 › brouillon après changement de compte : contrôle sans copie B (8.0s)
+  ✓   6 [telephone] › tests/parcours/fiches-isolation.spec.js:133:1 › quitter trois fois la page : chaque image temporaire est libérée (3.1s)
+  ✓   7 [telephone] › tests/parcours/fiches-isolation.spec.js:162:55 › contrôle : Retirer révoque bien l’image (1.4s)
+  ✓   8 [telephone] › tests/parcours/fiches-isolation.spec.js:162:55 › contrôle : Tout recommencer révoque bien l’image (1.4s)
+  ✓   9 [telephone] › tests/parcours/fiches-isolation.spec.js:181:1 › ajouter et retirer : les prévisualisations conservées restent lisibles (2.0s)
+  ✓  10 [telephone] › tests/parcours/fiches-isolation.spec.js:210:1 › ancienne session : un clic de sauvegarde ne modifie plus la progression (1.9s)
+  ✓  11 [telephone] › tests/parcours/fiches-isolation.spec.js:235:1 › réponse vision retardée après départ : aucune ancienne fiche ne revient (2.4s)
+
+  11 passed (34.8s)

@@ -1,0 +1,15 @@
+
+> stmg-revision@1.0.0 test
+> vitest run --run tests/hooks.test.js tests/fiche-vision-client.test.js
+
+
+ RUN  v2.1.9 /workspace/work/fix-economie-audits/app
+
+ ✓ tests/hooks.test.js (2 tests) 76ms
+ ✓ tests/fiche-vision-client.test.js (1 test) 5ms
+
+ Test Files  2 passed (2)
+      Tests  3 passed (3)
+   Start at  16:22:30
+   Duration  1.54s (transform 649ms, setup 0ms, collect 718ms, tests 81ms, environment 0ms, prepare 215ms)
+

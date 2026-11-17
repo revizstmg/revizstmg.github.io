@@ -1,0 +1,17 @@
+
+Running 8 tests using 1 worker
+
+(node:20337) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20337) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [telephone] › ../../../output/fix-fiches-20261117/public/fiches.spec.js:9:38 › brouillon après changement de compte : copie B disponible (2.8s)
+  ✓  2 [telephone] › ../../../output/fix-fiches-20261117/public/fiches.spec.js:9:38 › brouillon après changement de compte : contrôle sans copie B (7.8s)
+  ✓  3 [telephone] › ../../../output/fix-fiches-20261117/public/fiches.spec.js:34:5 › quitter trois fois la page : chaque image temporaire est libérée (2.6s)
+  ✓  4 [telephone] › ../../../output/fix-fiches-20261117/public/fiches.spec.js:44:56 › contrôle : Retirer révoque bien l’image (1.2s)
+  ✓  5 [telephone] › ../../../output/fix-fiches-20261117/public/fiches.spec.js:44:56 › contrôle : Tout recommencer révoque bien l’image (1.2s)
+  ✓  6 [telephone] › ../../../output/fix-fiches-20261117/public/fiches.spec.js:51:5 › ajouter et retirer : les prévisualisations conservées restent lisibles (1.5s)
+  ✓  7 [telephone] › ../../../output/fix-fiches-20261117/public/fiches.spec.js:67:5 › ancienne session : un clic de sauvegarde ne modifie plus la progression (1.2s)
+  ✓  8 [telephone] › ../../../output/fix-fiches-20261117/public/fiches.spec.js:75:5 › réponse vision retardée après départ : aucune ancienne fiche ne revient (2.1s)
+
+  8 passed (22.1s)

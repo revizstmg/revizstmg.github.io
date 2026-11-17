@@ -1,0 +1,19 @@
+[2m[WebServer] [22m(node:19646) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 1 worker
+
+(node:19665) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19665) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [ordinateur] › tests/parcours/fiches-isolation.spec.js:22:37 › brouillon après changement de compte : copie B disponible (3.4s)
+  ✓  2 [ordinateur] › tests/parcours/fiches-isolation.spec.js:22:37 › brouillon après changement de compte : contrôle sans copie B (8.8s)
+  ✓  3 [ordinateur] › tests/parcours/fiches-isolation.spec.js:133:1 › quitter trois fois la page : chaque image temporaire est libérée (2.8s)
+  ✓  4 [ordinateur] › tests/parcours/fiches-isolation.spec.js:162:55 › contrôle : Retirer révoque bien l’image (1.4s)
+  ✓  5 [ordinateur] › tests/parcours/fiches-isolation.spec.js:162:55 › contrôle : Tout recommencer révoque bien l’image (1.5s)
+  ✓  6 [ordinateur] › tests/parcours/fiches-isolation.spec.js:181:1 › ajouter et retirer : les prévisualisations conservées restent lisibles (2.1s)
+  ✓  7 [ordinateur] › tests/parcours/fiches-isolation.spec.js:210:1 › ancienne session : un clic de sauvegarde ne modifie plus la progression (1.9s)
+  ✓  8 [ordinateur] › tests/parcours/fiches-isolation.spec.js:235:1 › réponse vision retardée après départ : aucune ancienne fiche ne revient (2.5s)
+
+  8 passed (27.0s)
