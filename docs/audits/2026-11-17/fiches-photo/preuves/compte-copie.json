@@ -1,0 +1,34 @@
+{
+  "cached": true,
+  "account": "00000000-0000-4000-8000-000000000002",
+  "sourceImage": "blob:https://revizstmg.github.io/52d13087-9dd5-4f92-a723-41a0c792d146",
+  "raw": "DOSSIER PRIVÉ SYNTHÉTIQUE A. La performance financière mesure les résultats économiques obtenus. Rentabilité : les profits rapportés aux moyens engagés. Comment améliorer durablement cette performance financière ?",
+  "fiches": [
+    {
+      "id": "fiche-1794931543116",
+      "title": "DOSSIER_A_SYNTHETIQUE",
+      "createdAt": 1794931543116,
+      "source": "photo",
+      "text": "DOSSIER PRIVÉ SYNTHÉTIQUE A. La performance financière mesure les résultats économiques obtenus. Rentabilité : les profits rapportés aux moyens engagés. Comment améliorer durablement cette performance financière ?",
+      "sections": {
+        "questions": [
+          "Comment améliorer durablement cette performance financière ?"
+        ],
+        "definitions": [
+          {
+            "term": "Rentabilité",
+            "def": "Les profits rapportés aux moyens engagés"
+          }
+        ],
+        "keyInfo": []
+      },
+      "flashcards": [
+        {
+          "front": "Rentabilité",
+          "back": "Les profits rapportés aux moyens engagés"
+        }
+      ]
+    }
+  ],
+  "revoked": []
+}
