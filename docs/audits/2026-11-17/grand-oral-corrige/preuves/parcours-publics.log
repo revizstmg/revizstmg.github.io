@@ -1,0 +1,16 @@
+
+Running 7 tests using 1 worker
+
+(node:17728) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:17728) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [telephone] › ../../../output/fix-oral-20261117/public/oral.spec.js:19:5 › panne native : arrêt réel de l’interface, message puis nouvel essai normal (2.6s)
+  ✓  2 [telephone] › ../../../output/fix-oral-20261117/public/oral.spec.js:32:90 › audio isolé au changement de compte (copie B présente) : micro (2.2s)
+  ✓  3 [telephone] › ../../../output/fix-oral-20261117/public/oral.spec.js:32:90 › audio isolé au changement de compte (copie B présente) : réécoute (2.8s)
+  ✓  4 [telephone] › ../../../output/fix-oral-20261117/public/oral.spec.js:32:90 › audio isolé au changement de compte (sans copie B) : micro (1.9s)
+  ✓  5 [telephone] › ../../../output/fix-oral-20261117/public/oral.spec.js:32:90 › audio isolé au changement de compte (sans copie B) : réécoute (2.0s)
+  ✓  6 [telephone] › ../../../output/fix-oral-20261117/public/oral.spec.js:56:5 › fin native normale : minuteur arrêté et réécoute disponible (1.6s)
+  ✓  7 [telephone] › ../../../output/fix-oral-20261117/public/oral.spec.js:63:5 › arrêt natif qui lève : piste libérée et nouvel essai possible (1.7s)
+
+  7 passed (16.9s)

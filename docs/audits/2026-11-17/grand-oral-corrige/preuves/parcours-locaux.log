@@ -1,0 +1,27 @@
+[2m[WebServer] [22m(node:16297) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 16 tests using 1 worker
+
+(node:16316) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16316) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [telephone] › tests/parcours/audit-dix-correctifs.spec.js:42:1 › micro : permission arrivée après départ, flux arrêté sans enregistrement (2.2s)
+  ✓   2 [telephone] › tests/parcours/audit-dix-correctifs.spec.js:54:1 › micro : double clic pendant la permission, un seul flux et arrêt effectif (1.6s)
+  ✓   3 [telephone] › tests/parcours/audit-dix-correctifs.spec.js:117:1 › audio : Échap ferme, focus capturé et restitué au déclencheur (2.2s)
+  ✓   4 [telephone] › tests/parcours/audit-dix-correctifs.spec.js:135:1 › audio : fermer entre deux cartes annule la suivante (2.8s)
+  ✓   5 [telephone] › tests/parcours/audit-dix-correctifs.spec.js:147:1 › audio : Pause/Suivant/Jouer ne réactive pas un ancien délai (2.6s)
+  ✓   6 [telephone] › tests/parcours/audit-dix-correctifs.spec.js:167:1 › formules : reprise hors filtre, erreurs et redémarrage conservent les formules (3.3s)
+  ✓   7 [telephone] › tests/parcours/audit-dix-correctifs.spec.js:223:1 › paiement : la réponse de A après déconnexion ne redirige plus (1.9s)
+  ✓   8 [telephone] › tests/parcours/audit-dix-correctifs.spec.js:269:1 › abonnement : nouvelle identité, nouvelle offre et consentement remis à zéro (1.5s)
+  ✓   9 [telephone] › tests/parcours/audit-dix-correctifs.spec.js:327:1 › paiement : délai de chargement borné et bouton de reprise (1.0s)
+  ✓  10 [telephone] › tests/parcours/grand-oral-audio.spec.js:69:1 › panne native : arrêt réel de l’interface, message puis nouvel essai normal (2.1s)
+  ✓  11 [telephone] › tests/parcours/grand-oral-audio.spec.js:95:96 › audio isolé au changement de compte (copie B présente) : micro (2.1s)
+  ✓  12 [telephone] › tests/parcours/grand-oral-audio.spec.js:95:96 › audio isolé au changement de compte (copie B présente) : réécoute (2.3s)
+  ✓  13 [telephone] › tests/parcours/grand-oral-audio.spec.js:95:96 › audio isolé au changement de compte (sans copie B) : micro (2.0s)
+  ✓  14 [telephone] › tests/parcours/grand-oral-audio.spec.js:95:96 › audio isolé au changement de compte (sans copie B) : réécoute (2.3s)
+  ✓  15 [telephone] › tests/parcours/grand-oral-audio.spec.js:190:1 › fin native normale : minuteur arrêté et réécoute disponible (1.8s)
+  ✓  16 [telephone] › tests/parcours/grand-oral-audio.spec.js:204:1 › arrêt natif qui lève : piste libérée et nouvel essai possible (1.8s)
+
+  16 passed (37.5s)

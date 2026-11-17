@@ -1,0 +1,102 @@
+{
+  "checkedAt": "2026-11-17T10:42:13.208343+00:00",
+  "gitRef": "67bfcbc120c1e216a2d8e6f3f68b813a20a48d1f",
+  "files": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "9ccd7bbad196d2582e51461465c91198e7fd41b35c2bafae9d91aa47fff01bd9"
+    },
+    {
+      "path": "sw.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "ac0b9c557b63be653ef64c6547ad6eba019c689ed5e7c6e2d33eaeebec0794fd"
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "2afbd62e5f3f2e0f672cf6471706e31b234dc0569c646134296f9d704251b773"
+    },
+    {
+      "path": "assets/index-BKzPSXW5.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "a92239e966bf178244fdb2279fcf08d5acef3bdbecf476d015a7de36a4819324"
+    },
+    {
+      "path": "assets/GrandOral-D9yOTaeK.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "186774ce181aead7b2f886cba9a5db58752bb6db7ae1606a14c297db0759ef91"
+    },
+    {
+      "path": "assets/Profile-B56ylEUB.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "f5b80c29e136e4612e46066abc77c67848a4e4609680fda3616322e5a69a3cc9"
+    },
+    {
+      "path": "assets/Cgu-DnrjydPJ.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "bdbd8fb936448a3e09c5c68bcebc74dd7af4740b807bf4f0271da2310ae2aac3"
+    },
+    {
+      "path": "assets/Parcours-DOgtIfAz.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "00b2d460635d7c3b387b9e94f33acf3e4f7e4122321c49915e7b886f3f8484f5"
+    },
+    {
+      "path": "assets/Qcm-BlnXClIT.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "0c8a49399018493ea94339ac3b26791559c724af0bc71dd9372b7f9fc9db0550"
+    },
+    {
+      "path": "assets/GameHost-DL-ZPzlW.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "4d20d155f3eb8aad0eb6a3efe8fcf87709db4f2b07c2d2869086d97b508853f0"
+    },
+    {
+      "path": "assets/public.en-CN9-60-V.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "255b72ba050ccda2d738cb2eac45a094c2ccaf0143e8b6ba80faabd544393975"
+    },
+    {
+      "path": "assets/public.es-DEQMQZs7.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "7fa2e85d921ffb924b80759089456886b2bca9d9d4261a511afbe17fb6d4e8ee"
+    },
+    {
+      "path": "assets/public.it-DEyYDCyA.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "1a4a18d8c51bc5e82f37c511956150008c3a9650a7309aa43c77624da5ff50a9"
+    },
+    {
+      "path": "assets/public.ar-XiU_b2iI.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "a248ee11fc11c5780d32cf2dc9cb525b7ceda49405a476650c4d08d52c5b2a5e"
+    },
+    {
+      "path": "assets/public.de-Rc2X_Cl7.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "463e5bb793579cbb8f714097e742b1c21afc1c17a5603bf8c1ab3cefbc7fc57d"
+    },
+    {
+      "path": "assets/index-KAyqczP6.css",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "e180d36351a0807408ffc68a4e1bf0e2dc86346a4c904e701fd8b14cad4ac5df"
+    }
+  ]
+}

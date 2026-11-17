@@ -1,0 +1,15 @@
+[2m[WebServer] [22m(node:17302) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 1 worker
+
+(node:17320) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:17320) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [telephone] › tests/parcours/grand-oral-audio.spec.js:95:96 › audio isolé au changement de compte (copie B présente) : micro (3.2s)
+  ✓  2 [telephone] › tests/parcours/grand-oral-audio.spec.js:95:96 › audio isolé au changement de compte (copie B présente) : réécoute (2.8s)
+  ✓  3 [telephone] › tests/parcours/grand-oral-audio.spec.js:95:96 › audio isolé au changement de compte (sans copie B) : micro (2.2s)
+  ✓  4 [telephone] › tests/parcours/grand-oral-audio.spec.js:95:96 › audio isolé au changement de compte (sans copie B) : réécoute (2.2s)
+
+  4 passed (12.9s)
