@@ -61,7 +61,7 @@ function EtudeGestionPage() {
 
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-5">
-      <LevelToolNotice level="premiere-stmg">
+      <LevelToolNotice level="premiere-stmg" titre={t('egTitle')}>
       <header className="page-hero text-center">
         <p className="kicker">🔎 {t('egTitle')}</p>
         <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('egTitle')}</h1>
