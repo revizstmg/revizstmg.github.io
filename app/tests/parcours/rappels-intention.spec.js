@@ -33,3 +33,17 @@ for(const scenario of ['arret','identite','heure'])test(`rappels : activation ob
  else expect(calls).toHaveLength(0)
 
 })
+
+test('rappels : échec courant expliqué sans fausse confirmation push',async({page})=>{
+ await preparer(page)
+ await page.addInitScript(()=>{
+  Object.defineProperty(window,'Notification',{configurable:true,value:class{static permission='granted'}})
+  window.PushManager ||= function(){}
+ })
+ await page.route('https://*.supabase.co/rest/**',r=>r.fulfill({json:null}))
+ await page.goto('./#/parametres?rubrique=notifications');await attendreAccueil(page)
+ const sw=page.getByRole('switch',{name:/rappel/i});await sw.click()
+ await expect(sw).toHaveAttribute('aria-checked','true')
+ await expect(page.locator('main')).toContainText('Le rappel téléphone fermé n’a pas pu être activé ici')
+ await expect(page.locator('main')).not.toContainText('Rappel activé, même téléphone fermé.')
+})

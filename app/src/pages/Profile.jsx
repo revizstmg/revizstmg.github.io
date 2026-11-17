@@ -373,7 +373,7 @@ function ReminderCard({ t }) {
     try {
       const ok = await activerRappelsPush(heure, courant)
       if (!courant()) return
-      setMsg(ok ? 'Rappel activé, même téléphone fermé.' : '')
+      setMsg(ok ? 'Rappel activé, même téléphone fermé.' : 'Le rappel téléphone fermé n’a pas pu être activé ici : il arrivera quand l’app est ouverte.')
     } catch { if (!courant()) return; setMsg('Le rappel téléphone fermé n’a pas pu être activé ici : il arrivera quand l’app est ouverte.') }
   }
   const toggle = async () => {
