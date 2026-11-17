@@ -1,0 +1,21 @@
+[2m[WebServer] [22m(node:13034) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 10 tests using 1 worker
+
+(node:13053) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:13053) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [telephone] › tests/parcours/rappels-intention.spec.js:3:56 › rappels : activation obsolète refusée après arret (2.9s)
+  ✓   2 [telephone] › tests/parcours/rappels-intention.spec.js:3:56 › rappels : activation obsolète refusée après identite (2.5s)
+  ✓   3 [telephone] › tests/parcours/rappels-intention.spec.js:3:56 › rappels : activation obsolète refusée après heure (2.0s)
+  ✓   4 [telephone] › tests/parcours/trois-bugs-cibles.spec.js:12:57 › suppression aboutit malgré push getSubscription silencieux (2.0s)
+  ✓   5 [telephone] › tests/parcours/trois-bugs-cibles.spec.js:12:57 › suppression aboutit malgré push unsubscribe silencieux (1.9s)
+  ✓   6 [telephone] › tests/parcours/trois-bugs-cibles.spec.js:60:1 › reprise Vrai/Faux : question et correction stables après mise à jour de progression (4.7s)
+  ✓   7 [telephone] › tests/parcours/trois-bugs-cibles.spec.js:121:1 › ordre : aucune note ni XP de A créditée à B après changement de compte (4.6s)
+  ✓   8 [telephone] › tests/parcours/trois-bugs-cibles.spec.js:198:36 › ordre : fin normale créditée une seule fois (4.8s)
+  ✓   9 [telephone] › tests/parcours/trois-bugs-cibles.spec.js:198:36 › ordre : sortie annule le résultat différé (4.6s)
+  ✓  10 [telephone] › tests/parcours/trois-bugs-cibles.spec.js:237:1 › suppression non confirmée par le serveur : session gardée et reprise disponible (1.4s)
+
+  10 passed (34.7s)

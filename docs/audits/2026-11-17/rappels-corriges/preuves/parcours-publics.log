@@ -1,0 +1,13 @@
+
+Running 4 tests using 1 worker
+
+(node:14543) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14543) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [telephone] › ../../../output/fix-rappels-20261117/public/rappels.spec.js:3:56 › rappels : activation obsolète refusée après arret (2.6s)
+  ✓  2 [telephone] › ../../../output/fix-rappels-20261117/public/rappels.spec.js:3:56 › rappels : activation obsolète refusée après identite (2.0s)
+  ✓  3 [telephone] › ../../../output/fix-rappels-20261117/public/rappels.spec.js:3:56 › rappels : activation obsolète refusée après heure (1.7s)
+  ✓  4 [telephone] › ../../../output/fix-rappels-20261117/public/rappels.spec.js:37:5 › rappels : échec courant expliqué sans fausse confirmation push (1.6s)
+
+  4 passed (9.9s)

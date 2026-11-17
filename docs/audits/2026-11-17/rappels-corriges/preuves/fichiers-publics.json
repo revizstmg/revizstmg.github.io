@@ -1,0 +1,96 @@
+{
+  "checkedAt": "2026-11-17T07:01:56.534660+00:00",
+  "gitRef": "6e3b71fdf939cc2b1fb2cf4aef34a401cdc162b5",
+  "files": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "c6f52d3f05f3ea7827fe647bd5b2b7005307afa0c88ee4c8f722c1f4e4efc431"
+    },
+    {
+      "path": "sw.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "bfcee5820e134475024a992fcf48ca978f9a1080737533474c3a24892a01cbe0"
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "2afbd62e5f3f2e0f672cf6471706e31b234dc0569c646134296f9d704251b773"
+    },
+    {
+      "path": "assets/index-DA6H8bUh.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "bccb051b9501db503138ed657d2a6a828333e57916b6dbc59b9c9f64bf805c1f"
+    },
+    {
+      "path": "assets/Profile-B8dAaP0Y.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "c5a8a4317234c0b9c1cfb25c577c05c4ac725e58105fe79fbb264b77aa4da355"
+    },
+    {
+      "path": "assets/Cgu-DD-qUEiP.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "9fc1de62d4c51bb98758673b656a26b1670310afd4a0c9d5d0a2c2459734e190"
+    },
+    {
+      "path": "assets/Parcours-B6vnx_LN.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "7a28b90fabd6f4173ee30aeae1a02ad3663db4fbdabd37800c425ad61a95971b"
+    },
+    {
+      "path": "assets/Qcm-D0qkBW86.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "fc93cc402e1d3b3ab9345fe67804e9051e940ba7ab399968efc0c0a3fa3577b0"
+    },
+    {
+      "path": "assets/GameHost-BomIIuKj.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "673d0f3f80c9804b343ad2b4506d565adaa6412a0cdc3f843e7ab1e40485a967"
+    },
+    {
+      "path": "assets/public.en-XqtITxqM.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "d1e87cf1f759b360d496021576b121e8e1d321d300091e95071ed754d6dafe9f"
+    },
+    {
+      "path": "assets/public.es-t0X9pEXG.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "0eb3b83765a9fb435d4986d73617ceefcf005ca9f84eb5bdfbcd20a788b8a66a"
+    },
+    {
+      "path": "assets/public.it-ChhEo6ow.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "2340bcfd2b79769bad1c69ecc8cc3a67f44f8b1545c93a42256c4aeb96007a4a"
+    },
+    {
+      "path": "assets/public.ar-CFVWDq1X.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "f278d3c15c3c8ae36668e85c7f3206ece580f7e83eb12a9c79fe456b68672582"
+    },
+    {
+      "path": "assets/public.de-e_9PnxFw.js",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "aee312f40efad5e70e41fb237486616f600a38280fa1ce82fd459c477af973d3"
+    },
+    {
+      "path": "assets/index-KAyqczP6.css",
+      "status": 200,
+      "matchesGit": true,
+      "sha256": "e180d36351a0807408ffc68a4e1bf0e2dc86346a4c904e701fd8b14cad4ac5df"
+    }
+  ]
+}

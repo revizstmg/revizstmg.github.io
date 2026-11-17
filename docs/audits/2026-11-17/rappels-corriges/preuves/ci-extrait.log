@@ -1,0 +1,6 @@
+tests	Tests de la logique et du contenu	2026-11-17T06:46:53.2294191Z  Test Files  97 passed (97)
+tests	Tests de la logique et du contenu	2026-11-17T06:46:53.2304459Z       Tests  896 passed (896)
+tests	Tests de la logique à l'heure de Paris	2026-11-17T06:48:50.4684926Z  Test Files  97 passed (97)
+tests	Tests de la logique à l'heure de Paris	2026-11-17T06:48:50.4689928Z       Tests  896 passed (896)
+tests	Parcours dans le navigateur	2026-11-17T07:00:25.3690380Z   442 passed (10.7m)
+tests	Parcours dans le navigateur	2026-11-17T07:00:25.3725792Z ##[notice]  442 passed (10.7m)
