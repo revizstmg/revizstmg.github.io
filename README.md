@@ -60,6 +60,8 @@ Le carnet d’erreurs autonome et les indicateurs « À revoir aujourd’hui / �
 
 Références détaillées : [Prix de l’excellence](docs/PRIX-EXCELLENCE-ECONOMIQUE.md), [EPS](docs/EPS-TRIO.md), [bilan après devoir](docs/PARCOURS-BILAN.md). Les dates des épreuves sont centralisées dans `app/content/commun/epreuves.json`.
 
+L’enregistreur du Grand Oral garde la voix uniquement en mémoire sur l’appareil. Quitter la page ou changer de compte arrête le flux et supprime la réécoute. Une panne de capture arrête le compteur et affiche une erreur ; un nouvel essai reste possible, sans présenter un audio échoué comme une capture réussie.
+
 ### Classe, communauté et motivation
 
 - **Classes :** nom choisi par le professeur, code vérifié avant adhésion, mur, annonces, quiz, duels, groupes, direct et suivi professeur. Un code inconnu ou une panne ne doit pas inscrire l’élève localement comme si la vérification avait réussi.

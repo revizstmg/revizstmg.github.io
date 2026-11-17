@@ -67,7 +67,7 @@ export function noteAutoEval(notes) {
 export default function GrandOral() {
   const { state } = useStore()
   if (!state.track) return <Navigate to="/" replace />
-  return <GrandOralPage />
+  return <GrandOralPage key={state.account?.id || 'trial'} />
 }
 
 function GrandOralPage() {

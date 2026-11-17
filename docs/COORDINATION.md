@@ -2027,3 +2027,6 @@ Prochaine action :
 
 ### README-ECARTS-20261117-CLAUDE
 - Demande du propriétaire : relire le README et corriger les écarts. Corrigé : « Mathis » retiré de la ligne de présentation (même demande que le retrait du nom du second créateur) ; `fiche-vision` déployée en v1 (ancien `acces.js`) signalée ; migration `20261102120000` non appliquée en production signalée. Constat par lecture seule de Supabase (liste des fonctions et des migrations, existence de `revizstmg_mur`) ; aucune modification de la base ni des fonctions.
+
+### CORRECTIONS-GRAND-ORAL-AUDIO-20261117
+- Codex : correction autorisée des deux défauts de la PR235. Périmètre : isolation de la page/enregistreur par compte, arrêt et révocation à la transition ; fin native et panne MediaRecorder répercutées sur l’interface, le minuteur et le flux, avec reprise. Reproductions devenant non-régressions, contrôles d’enregistrement normal/permission tardive et traduction du message ajouté. Aucun contenu, prix, donnée/configuration Supabase/NAH, microphone réel ou service facturable utilisé. Publication après validation complète et vérification publique ; vérifier le numéro réel de chaque PR avant fusion.

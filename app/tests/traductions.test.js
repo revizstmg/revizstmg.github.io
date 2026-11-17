@@ -173,3 +173,7 @@ test('les paragraphes littéraux des CGU restent entièrement traduits hors lign
  walk(ast);expect(texts.size).toBeGreaterThan(15)
  for(const [lang,book]of Object.entries(books))for(const text of texts)expect(book[text],`${lang} : ${text}`).toBeTruthy()
 })
+
+test('la panne de l’enregistreur est expliquée hors ligne dans les cinq langues',()=>{
+  for (const book of Object.values(books)) expect(book['L’enregistrement a échoué. Réessaie ou vérifie ton microphone.']).toBeTruthy()
+})
