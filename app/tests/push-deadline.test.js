@@ -12,7 +12,7 @@ beforeEach(()=>{
  vi.stubGlobal('window',{PushManager:function(){}});vi.stubGlobal('Notification',{permission:'granted'})
  vi.stubGlobal('navigator',{serviceWorker:{ready:Promise.resolve({pushManager:manager})}})
 })
-afterEach(()=>{vi.useRealTimers();vi.unstubAllGlobals()})
+afterEach(async()=>{await vi.advanceTimersByTimeAsync(20001);vi.useRealTimers();vi.unstubAllGlobals()})
 for(const phase of ['ready','getSubscription','rpc','unsubscribe'])test(`arrêt push : ${phase} silencieux ne bloque pas l’appelant`,async()=>{
  if(phase==='ready')navigator.serviceWorker.ready=new Promise(()=>{})
  if(phase==='getSubscription')manager.getSubscription.mockImplementation(()=>new Promise(()=>{}))

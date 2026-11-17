@@ -1,530 +1,360 @@
 # RévizSTMG
 
-## État actuel et accès
+Application de révision pour les élèves de Première et Terminale STMG, développée par Gabriel Merlin et Mathis. Cours, exercices, préparation aux épreuves, orientation et espaces de classe.
 
-Cours et exercices de base, classes, amis, boutique et suivi parent sont gratuits. Les parcours de révision, flashcards et outils de préparation suivent la grille de [l’application](https://revizstmg.github.io/#/offres) ; l’accompagnement personnalisé et le tuteur suivent les droits Ultimate. Go concerne uniquement les établissements. Les règles faisant autorité sont `app/src/data/acces.js` et les contrôles serveur `supabase/functions/examen-blanc/acces.js` : un simple affichage client ne donne pas un droit serveur.
+- **Application :** https://revizstmg.github.io
+- **Cours publics sans JavaScript :** https://revizstmg.github.io/cours/
+- **Offres :** https://revizstmg.github.io/#/offres
+- **Source :** [`app/`](app/) ; **version publiée :** fichiers générés à la racine.
+- **État de cette documentation :** 17 novembre 2026. Les prix et droits ci-dessous décrivent le code versionné, pas une vérification en temps réel des secrets, de la facturation ou de tous les services distants.
 
-Premium : 9,99 €/mois ; Ultimate : 19,99 €/mois ; Go : 20 €/élève/an + 500 €/établissement/an. Stripe est en TEST au dernier contrôle, sans vente réelle certifiée. Les lignes ci-dessous décrivent les fonctionnalités et leur historique ; l’état des services se vérifie séparément. Les cinq guides de langues remplacent les anciens cours de langues dans les parcours proposés. L’accueil privilégie la reprise, les cours, l’entraînement et la progression.
+## Sommaire
 
+1. [Fonctionnalités](#fonctionnalités)
+2. [Offres et accès](#offres-et-accès)
+3. [Installer et développer](#installer-et-développer)
+4. [Architecture et fichiers](#architecture-et-fichiers)
+5. [Contenu pédagogique](#contenu-pédagogique)
+6. [Données, comptes et confidentialité](#données-comptes-et-confidentialité)
+7. [Fonctions IA et services](#fonctions-ia-et-services)
+8. [Langues, accessibilité et hors ligne](#langues-accessibilité-et-hors-ligne)
+9. [Tests](#tests)
+10. [Publication et référencement](#publication-et-référencement)
+11. [Statistiques et rapports](#statistiques-et-rapports)
+12. [Maintenance et limites](#maintenance-et-limites)
 
-Application de révision pour le bac STMG (Première et Terminale) : cours, exercices
-corrigés générés automatiquement, flashcards, bac blanc, coach IA, révision entre amis
-et en classe. Installable sur téléphone et utilisable hors ligne.
+## Fonctionnalités
 
-- **En ligne :** https://revizstmg.github.io
-- **Code source :** `app/`
-- **Version compilée :** les fichiers à la racine du dépôt (`index.html`, `sw.js`,
-  `manifest.webmanifest`, icônes). Le workflow de publication les régénère :
-  ne les modifiez jamais à la main.
+### Apprendre et réviser
 
-> Jusqu'en octobre 2026, l'application vivait dans le dépôt `Gabriel-Merlin/NAH`,
-> à côté du site du lycée contre le harcèlement. Elle a été déplacée ici avec tout
-> son historique. Les deux projets partagent encore le même projet Supabase.
->
-> Ce document décrit l'application après la refonte d'octobre 2026 : mettez-le à
-> jour à chaque changement visible par l'élève.
+| Espace | Fonctionnement | Source principale |
+|---|---|---|
+| Accueil | Reprise du dernier cours, accès aux cours et à l’entraînement, progression ; accueil distinct pour le professeur. | `app/src/pages/Home.jsx`, `app/src/components/AccueilProf.jsx` |
+| Cours | Matière, thème, chapitre, fiches, définitions et exercices ; lecture agrandie, favoris, impression et signalement d’erreur. | `app/src/pages/{Cours,Subject,Theme,Chapter}.jsx` |
+| Exercices | QCM, vrai/faux, trous, saisie, association, tri, ordre, calcul, memory, SQL et cas/documents selon le chapitre. Tirages courts à partir de banques, avec historique local des questions proposées. | `app/src/games/`, `app/src/data/questionSessions.js` |
+| Réviser | Suivre le fil, comprendre ses erreurs, ancrer ses connaissances ; choix de matière et chapitre facultatif. Les acquis se fondent sur les réponses réellement jouées. | `app/src/pages/Revise.jsx`, `app/src/data/study.js` |
+| Flashcards | Pile à retourner, glisser ou valider au clavier ; reprise des cartes ratées, paquets enregistrés, écoute, partage et import. | `app/src/components/PileCartes.jsx`, `app/src/pages/FlashcardsPage.jsx` |
+| Séance | Jusqu’à trois étapes enchaînées à partir des erreurs, révisions dues et prochain exercice. | `app/src/pages/Seance.jsx`, `app/src/data/seance.js` |
+| Atelier de formules | Filtres, sélection de formules, exercices chiffrés renouvelés et correction ; bilan distinct de la maîtrise des chapitres. | `app/src/pages/FormulaWorkshop.jsx`, [inventaire](docs/ATELIER-FORMULES.md) |
+| Notes de classe | Notes, matière/chapitre, questions manquées ; bilan et entraînement selon les droits de l’offre. Données privées. | `app/src/pages/MesNotes.jsx`, `app/src/notesClasse.js` |
+| Parcours personnalisé | Objectifs de note, temps disponible et programme de révision ; préparation des vacances. | `app/src/pages/{Parcours,Vacances}.jsx` |
+| Parcours Avenir | Questionnaire d’intérêts et de contexte, notes facultatives, bilan explicable et formations/métiers à explorer. | `app/src/pages/Avenir.jsx`, [documentation](docs/PARCOURS-AVENIR.md) |
 
-L’accueil met en avant la reprise du dernier cours, l’entraînement, la progression et la classe. Le catalogue complet des matières est dans Cours. Le menu principal organise les autres outils sur téléphone et ordinateur ; les onglets favoris sont personnalisables. La dernière fiche consultée est mémorisée séparément par compte sur cet appareil. L’écran de bienvenue respecte le mouvement réduit.
+Le carnet d’erreurs autonome et les indicateurs « À revoir aujourd’hui / À renforcer / Bien acquis » ne constituent plus des rubriques de Réviser. Les données d’erreurs restent exploitées par les parcours. La bibliothèque d’outils de Réviser se concentre sur les flashcards.
 
-L’espace Réviser reprend la présentation éditoriale de Bac blanc : séance guidée et trois parcours par matière (suivre le fil, comprendre ses erreurs, ancrer ses connaissances). Les indicateurs À revoir aujourd’hui / À renforcer / Bien acquis et le carnet autonome sont retirés. La bibliothèque Les bons outils à portée de main garde uniquement les flashcards, avec lecture, écoute, partage et import. Les données de progression et les erreurs restent disponibles aux parcours adaptés.
+**Orientation :** Parcours Avenir est distinct du parcours de révision Ultimate. Il ne prédit pas une admission et ne constitue pas un test psychométrique validé. Les intérêts restent prioritaires ; les notes apportent un ajustement limité. Les pistes couvrent notamment BTS, BUT, université, prépa ECT, écoles de commerce, finance et alternance, avec les conditions et limites présentées dans le dossier. Les réponses ne figurent pas dans le résumé partagé avec les parents.
 
-Le temps par thème conserve aussi les courtes visites, les séances guidées et le carnet d’erreurs. Les anciennes valeurs dépassant toute la durée d’existence du site sont archivées dans `themeTimeInvalid`, exclues des compteurs et des barres, et ne reviennent pas lors d’une fusion. Leur durée réelle n’est pas estimée ; seuls ces compteurs repartent de zéro. Les durées inférieures à une minute sont indiquées « < 1 min » ; l’arrière-plan et les longues suspensions ne gonflent pas le compteur.
+### Préparer les épreuves
 
-À l’inscription et dans les réglages, l’élève peut sélectionner arabe, anglais, italien, espagnol et allemand. Ce choix est distinct de la langue d’interface et synchronisé avec sa progression. La bibliothèque Langues propose les guides PDF interactifs, mini-exercices corrigés, conseils et liens vidéo des langues sélectionnées. Les anciens chapitres sont archivés et ne sont plus proposés dans les parcours. Sources et limites : [docs/COURS-LANGUES.md](docs/COURS-LANGUES.md).
-
-
-L’atelier de formules remplace les anciens espaces Révision express et Formulaire.
-Il propose un à cinq exercices par formule choisie, accepte les réponses avec
-virgule ou point et affiche un bilan local sans modifier la maîtrise des chapitres.
-Les anciennes adresses redirigent vers `/atelier-formules`.
-
-Le créateur d’examen blanc accepte une demande et une durée de 60, 120, 180 ou
-240 minutes. L’élève peut laisser l’IA choisir le programme ou sélectionner de
-1 à 24 chapitres, avec filtres de niveau / matière et recherche. En mode manuel,
-la vérification du périmètre ne nécessite pas d’appel IA d’analyse. Après
-confirmation, seuls les cours choisis sont envoyés à la génération Gemini.
-Les nouveaux sujets contiennent au moins 4/6/8/10 documents selon la durée,
-avec questions documentaires et connaissances personnelles du cours, et deux
-PDF séparés (sujet / corrigé). Les anciens sujets restent accessibles.
-
-Après rédaction sur papier, « Déposer ma copie » accepte un PDF ou des photos
-JPEG/PNG/WebP (6 fichiers, 6 Mio au total). Après accord de l’élève, Gemini lit
-la copie et propose une correction détaillée et une note indicative sur 20.
-Les points sont validés et additionnés côté serveur ; une réponse illisible
-empêche une note globale inventée. Les fichiers ne sont pas sauvegardés par le
-site ; le bilan reste sur cet appareil pour ce compte, sans modifier notes de
-classe, XP ou récompenses. Une vraie lecture manuscrite reste à vérifier avec
-l’élève ; les tests automatisés ne font aucun appel réel au fournisseur.
-
-Dans le lecteur de cours, la flèche après la dernière fiche revient à la
-première fiche du même chapitre, en lecture normale comme en plein écran.
-
-Pour rejoindre une classe (depuis Classe, Classement ou l'inscription), le code
-est vérifié auprès du serveur avant d'être enregistré. Un code inconnu ou une
-vérification indisponible laisse l'élève hors de la classe et affiche une erreur.
-
-Sur un PC partagé, le rôle est rechargé depuis le profil du compte connecté.
-La déconnexion efface l'identité, la classe et la progression locales après une
-sauvegarde ; une réponse tardive de l'ancien compte ne peut pas remplacer la session.
-
-La progression part sur le compte deux secondes après chaque changement, et
-tout de suite quand l'élève quitte l'application. La copie du compte n'est
-remplacée que si elle n'a pas changé depuis la dernière lecture ; sinon,
-l'application fusionne d'abord les deux (`src/progression.js`). Hors ligne ou en
-cas d'échec, un bandeau « Non sauvegardé » s'affiche et l'envoi reprend tout
-seul au retour du réseau. Dans l'en-tête, un indicateur dit en permanence où en
-est la sauvegarde : « Enregistré », « En attente » ou « Non enregistré »
-(`IndicateurSauvegarde`, `components/EtatSauvegarde.jsx`). Si la sauvegarde échoue au moment de se déconnecter,
-l'élève est prévenu et choisit ; la session est ensuite fermée sur le serveur.
-
-Fusion entre appareils : les pièces, les gels, l'XP et les réponses sont comptés
-appareil par appareil. Une dépense n'est jamais remboursée, et deux gains faits
-en même temps sur deux appareils comptent tous les deux. Les favoris, paquets,
-fiches, questions du carnet d'erreurs, notes, notes de classe, la date du bac et le point de
-reprise sont datés : la dernière modification l'emporte, suppression comprise.
-Le reste ne fait que progresser (meilleur score, union des badges). Une copie
-écrite par une ancienne version de l'application suit les anciennes règles.
-
-Les dates (« aujourd'hui », série, défi du jour, révision espacée, rappels) sont
-celles du calendrier de l'appareil, et non le jour UTC (`src/data/srs.js`).
-
-La boutique propose 50 articles (ambiances, avatars, bannières, titres, gels),
-avec recherche, filtres, tri et inventaire. Les achats existants sont conservés.
-Les niveaux sont prolongés : niveau 20 à 20 000 XP, niveau 30 à 73 500 XP.
-Les cadeaux de progression se récupèrent une fois ; les objets exclusifs restent
-équipables depuis l’inventaire. Le portefeuille se fusionne appareil par appareil (voir plus haut) : un achat
-n’est remboursé ni par une ancienne sauvegarde ni par un gain fait ailleurs au
-même moment. Le calcul reste fait sur l’appareil, pas par le serveur.
-Les achats et réservations font partie de la
-progression synchronisée. Un titre équipé apparaît sur le profil, une bannière
-sur l’accueil.
-
-Premium est défini à 9,99 €/mois et Ultimate à 19,99 €/mois. Le paiement déployé reste en mode TEST ; ces tarifs ne signifient pas que les ventes réelles sont ouvertes. Go est une licence lycée : 20 €/élève/an et 500 €/établissement/an. Les droits et quotas sont contrôlés côté serveur, avec une grâce de développement datée dans `supabase/functions/examen-blanc/acces.js`. Le programme annonce un mois
-Premium offert au lancement avec 20 tests distincts à 90 % et 20 000 XP, un mois
-Ultimate avec 30 tests distincts à 95 % et 73 500 XP. La réservation locale ne
-constitue pas une attribution vérifiée ni un abonnement actif : une demande par
-brouillon e-mail permet aux éditeurs de vérifier les résultats avant attribution.
-Aucun envoi automatique, carte bancaire ni renouvellement ; aucune fonctionnalité
-payante ou date de lancement inventée. La validation et l’activation commerciales
-ne sont pas automatisées côté client. Conditions détaillées dans les CGU.
-
-La traduction couvre FR/EN/ES/IT/AR/DE. Toutes les clés de l’interface sont présentes
-pour les cinq langues étrangères ; 262 textes publics supplémentaires et le
-catalogue complet de la boutique sont intégrés dans des fichiers chargés à la
-demande (`src/localisation/public.*.json`). La langue change les dates, nombres,
-libellés accessibles et le sens de lecture arabe sans modifier les identifiants,
-les achats ni les saisies.
-
-Le plugin Babel `scripts/plugin-traductions.mjs`, utilisé en développement,
-compilation et tests, prend en charge les littéraux publics du JSX oubliés par
-`useT`. Il conserve la propriété du DOM à React. Les variables interpolées sont
-remplacées par des marqueurs : les noms et saisies restent dans le navigateur.
-Les valeurs des champs, le code, les formules, les URL, les marques et les
-éléments `translate="no"` ne sont pas traduits. Les chaînes dynamiques publiques
-(catalogues, cours) sont explicitement annotées avec `usePublicText`, `TextePublic` ou
-`CourseText` ; ne jamais appliquer la traduction automatique à un message privé.
-
-Les textes publics non intégrés utilisent MyMemory avec cache, regroupement des
-demandes identiques, deux requêtes simultanées et découpage UTF-8. Une panne ou
-un quota affiche une information avec relance, au lieu de présenter une erreur
-comme une traduction. Ces compléments de contenu nécessitent une connexion et
-la disponibilité du service ; les traductions intégrées de la boutique n’en
-ont pas besoin. Le passage de langue ne réutilise pas un ancien résultat.
-
-## Ce que fait l'application
-
-| Domaine | Contenu |
+| Espace | Fonctionnement et limites |
 |---|---|
-| Matières | 11 matières de Terminale : tronc commun (management, droit, économie, maths, philosophie, histoire-géo, langues) et spécialités (gestion-finance, mercatique, RH & communication, SIG). Plus les matières de Première. |
-| Parcours | Matière → thème → chapitre, avec les onglets Cours, Définitions et Exercices. Chaque chapitre annonce son nombre d'exercices et de notions ; le cours se termine par un tableau « Notions et définitions ». |
-| Exercices | Une vingtaine de types : QCM, vrai/faux, texte à trous, saisie, tri, association, remise en ordre, calcul, memory, requêtes SQL, cas pratique, étude de documents, compréhension en langue… Le nombre d’exercices dépend des notions réellement présentes dans le chapitre. Ils sont tirés uniquement de son cours : notions et cas concrets en deux séries, vrai/faux, termes à écrire, association, memory, textes à trous, mot manquant, dates, quiz du chapitre mêlant toutes les formes (`sectionExercises`, `src/data/index.js`). |
-| Étude de gestion | Pour la Première : un espace qui accompagne le projet — consignes et règles officielles, démarche, liste du dossier ; les sources de l'élève avec leur fiabilité ; l'analyse de son organisation (tableau de caractérisation, diagnostic interne et externe, PESTEL) ; ses arguments construits avec la méthode A-E-I, reliés aux sources et notés avec une grille (note sur 20) ; blocs repliables pour alléger la lecture ; export du dossier en texte (`content/commun/etude-gestion.json`, `pages/EtudeGestion.jsx`). |
-| Grand Oral | Pour la Terminale, le même accompagnement adapté à l'épreuve : règles de la session 2027 (20 min de préparation, 10 min de présentation, 10 min d'échange, coefficient 12), ce que le jury évalue, démarche, conseils, banque de questions ; les deux questions et le plan ; sources ; analyse de l'organisation ; arguments A-E-I rattachés à chaque question, notés avec une grille qui ajoute un critère d'oral ; chronomètre aux durées de l'épreuve, enregistrement et auto-évaluation sur les critères du jury ; export de la préparation (`content/commun/grand-oral.json`, `pages/GrandOral.jsx`). Les outils communs aux deux espaces sont dans `components/DossierProjet.jsx` et `content/commun/outils-projet.json`. |
-| Séance du jour | Un bouton sur l'accueil, et la première question est à l'écran : jusqu'à trois étapes enchaînées sans menu — les erreurs du carnet dues ce jour-là, un thème dont la révision est due (ou fragile), puis le prochain exercice du cours là où l'élève s'est arrêté (`src/data/seance.js`, `pages/Seance.jsx`). |
-| Navigation | Menus et fenêtres utilisables au clavier : Échap ferme, Tab reste dans la fenêtre, le focus revient sur le bouton qui l'a ouverte (`components/clavier.js`) ; dans un exercice en plein écran, Échap ne fait pas quitter. Barre du bas par défaut : Accueil · Cours · Réviser · Bac blanc · Moi (personnalisable ; pour un professeur : Accueil · Classe · Cours · Moi). Les exercices s'ouvrent en plein écran. Une seule fenêtre automatique par visite, dans cet ordre : information sur les cookies, récompense du jour (créditée dans tous les cas), invitation à installer l'app (`src/fenetres.js`). |
-| Révision | Suivre le fil, comprendre ses erreurs et ancrer ses connaissances, par matière et chapitre facultatif. Bibliothèque de flashcards. Bac blanc : sujets officiels, entraînements PDF et créateur personnalisé avec dépôt de copie. Atelier de 169 formules avec valeurs renouvelées ; méthodologie et sujets de mathématiques pour la Première. Les anciens QCM chronométrés du bac blanc et le carnet autonome sont retirés ; les erreurs restent utilisées dans les parcours adaptés. |
-| Mes notes de classe | L'élève saisit la note reçue en classe (sur 20, « 15,50 » accepté) ; la matière, puis le chapitre, se choisissent dans des menus tirés des cours de sa filière, avec « Toute la matière » pour un bac blanc. La page dit ce qu'il faut améliorer : chaque chapitre sous 10/20 et, dans chaque matière, le chapitre à la moyenne la plus basse. Notes privées (avec la progression du compte, jamais publiées), fusionnées entre appareils, comprises dans l'export et effacées avec le compte (`pages/MesNotes.jsx`, `src/notesClasse.js`). La saisie reste gratuite ; les outils de bilan et d’entraînement suivent les droits des offres et les quotas serveur. |
-| IA | Coach IA qui analyse les résultats et propose un plan. Fiches créées à partir de photos de cours (fonction `fiche-vision`, déployée). |
-| Professeur et parent | Le professeur a son propre accueil : ses classes, le nombre d'élèves actifs et d'élèves à relancer, l'accès au tableau de bord, aux quiz et aux cours (`components/AccueilProf.jsx`). Un parent sans profil d'élève sur l'appareil n'a que l'espace parent : ni série, ni XP, ni menus d'élève. |
-| Social | Comptes élève et prof, classes (mur, quiz, duels, groupes), amis et duels, classement hebdomadaire et ligues, espace parent (seulement si l'élève active le partage ; code de 10 caractères tiré au hasard, que l'élève peut renouveler s'il a circulé). Un duel entre amis dont l'envoi du score échoue garde le score sur l'appareil et propose « Réessayer l'envoi ». Réservé aux comptes connectés : la base ne montre une classe qu'à ses membres et à son professeur (`supabase/README.md`). Essai sans compte possible (progression sur l'appareil, `components/CompteRequis.jsx`). |
-| Motivation | XP, niveaux, badges, série de jours, boutique de pièces, objectifs de la semaine (le bac blanc, le défi et le coach ne les remplissent pas). Maîtrise d'un thème : chaque chapitre compte ses 3 meilleurs exercices (tous s'il en a moins) ; le thème prend la moyenne de ses chapitres, ou le test du thème s'il est meilleur ; une réponse rédigée vide ne compte pas comme réussie. |
-| Confort | Application installable (PWA), hors ligne, rappels de révision (avec un compte, même téléphone fermé : `src/push.js`, fonction Edge `revizstmg-rappels`), bouton « Signaler une erreur » sous chaque exercice et chapitre, interface en français, anglais, espagnol, italien, arabe et allemand (les écrans récents sont traduits hors ligne dans `src/localisation/public.*.json`, vérifié par `tests/traductions.test.js` ; le reste passe par le service de traduction), réglages d'accessibilité (dys, contraste, lecture audio), écran de secours si une page plante. |
-| Données | « Télécharger mes données » (fichier JSON) et « Supprimer mon compte » dans Paramètres → Confidentialité et données : la fonction `revizstmg_supprimer_compte` (appliquée le 19 octobre 2026) efface tout ce que l'élève a publié ou envoyé, puis son compte, adresse e-mail comprise ; l'application vide ensuite le stockage du navigateur (`supabase/README.md`). |
+| Bac blanc | Annales officielles de droit/économie et de management, sujets d’entraînement prêts à utiliser et création personnalisée. Les PDF officiels et les créations RévizSTMG sont identifiés séparément. |
+| Première | Accès de découverte aux annales de Terminale ; carte d’entraînement à l’épreuve anticipée de mathématiques. Les sujets de mathématiques générés par l’application ne sont pas des annales officielles. |
+| Terminale | Accès au Prix de l’excellence économique, dossiers d’archives, documents et copie dans un espace de rédaction partagé à l’écran. |
+| Création d’examen | Demande libre, durée de 60, 120, 180 ou 240 minutes ; chapitres laissés au choix du modèle ou sélection manuelle de 1 à 24 chapitres. Le mode manuel vérifie le périmètre sans analyse IA préalable. Sujet et corrigé sont exportables séparément. |
+| Dépôt de copie | PDF ou photos JPEG/PNG/WebP, jusqu’à 6 fichiers et 6 Mio au total, après consentement. Correction indicative sur 20 ; une lecture impossible doit être signalée. |
+| Questions type de contrôle | Question rédigée liée au seul cours du chapitre, cinq critères d’un point et correction indicative sur 5 ; citations du cours, acquis et points à retravailler. Sans XP ni modification de maîtrise. |
+| Étude de gestion | Dossier de Première : organisation, sources et fiabilité, diagnostic, arguments et export. |
+| Grand Oral | Dossier de Terminale : questions, plan, sources, argumentation, minuteur, enregistrement et auto-évaluation. Les dates/règles officielles doivent être revérifiées à chaque session. |
+| EPS | Choix de trois activités, référentiels et préparation à partir de performances actuelles/visées. Les barèmes locaux et les AFL doivent être confirmés avec l’enseignant ; ne pas assimiler une fiche d’entraînement à une note officielle. |
 
-## Démarrer
+Références détaillées : [Prix de l’excellence](docs/PRIX-EXCELLENCE-ECONOMIQUE.md), [EPS](docs/EPS-TRIO.md), [bilan après devoir](docs/PARCOURS-BILAN.md). Les dates des épreuves sont centralisées dans `app/content/commun/epreuves.json`.
 
-Il faut Node.js 18 ou plus récent.
+### Classe, communauté et motivation
+
+- **Classes :** nom choisi par le professeur, code vérifié avant adhésion, mur, annonces, quiz, duels, groupes, direct et suivi professeur. Un code inconnu ou une panne ne doit pas inscrire l’élève localement comme si la vérification avait réussi.
+- **Amis et duels :** comptes connectés, demandes et défis ; reprise d’envoi du score après panne, sans attribuer un ancien score à un autre compte.
+- **Classement :** classement hebdomadaire et ligues ; accès distinct des classes/amis, voir la grille réelle ci-dessous.
+- **Parent :** consultation d’un résumé seulement avec partage activé par l’élève ; code aléatoire de 10 caractères, renouvelable et révocable. Pas d’accès automatique aux notes/copies ou conversations privées.
+- **Motivation :** XP, pièces, niveaux, badges, série, défis et objectifs hebdomadaires. La maîtrise utilise jusqu’aux trois meilleurs exercices de chaque chapitre, puis la moyenne du thème ou son test s’il est meilleur. XP et temps passé ne constituent pas une preuve de maîtrise.
+- **Boutique :** objets virtuels et avantages prévus par son catalogue, inventaire et équipement ; les récompenses commerciales réservées demandent une vérification des éditeurs, pas un abonnement automatiquement activé par le navigateur.
+- **Navigation :** menu sur téléphone et ordinateur, onglets favoris personnalisables, Paramètres organisé en rubriques et sous-rubriques.
+
+## Offres et accès
+
+### Prix versionnés
+
+Source unique : [`supabase/functions/revizstmg-paiement/logique.js`](supabase/functions/revizstmg-paiement/logique.js), importée par le client. Version tarifaire du 7 novembre 2026.
+
+| Offre | Prix dans le code | Distribution |
+|---|---:|---|
+| Premium | **9,99 € TTC/mois** | Individuelle |
+| Ultimate | **19,99 € TTC/mois** | Individuelle |
+| Go lycée | **20 €/élève/an + 500 €/établissement/an** | Établissements uniquement |
+
+Seul l’abonnement **mensuel** est proposé actuellement pour les particuliers (`PERIODES=['mensuel']`). Les anciens prix annuels présents dans la logique sont historiques ; ils ne constituent pas une offre annuelle ouverte. Une hausse ne migre pas automatiquement les contrats existants.
+
+**Paiements :** le dernier contrôle documenté était en mode Stripe TEST. Ce README ne certifie ni l’ouverture des paiements réels ni les valeurs actuelles des secrets distants. Procédure : [docs/PAIEMENTS.md](docs/PAIEMENTS.md). Go n’est pas une troisième souscription individuelle à acheter dans le parcours Premium/Ultimate.
+
+### Droits réellement appliqués
+
+Références : [`app/src/data/acces.js`](app/src/data/acces.js), [`app/src/components/Reserve.jsx`](app/src/components/Reserve.jsx) et les contrôles propres aux écrans. Le contenu statique public ne peut pas être rendu secret par une barrière React. Les droits IA sont revérifiés sur le serveur.
+
+| Niveau | Accès général |
+|---|---|
+| Sans abonnement | Accueil, cours et exercices de base, favoris, programme, paramètres, orientation Avenir, pages d’information ; classe/amis/parent/boutique selon leurs conditions de compte ou de partage. |
+| Premium et Ultimate | Séance, révision et paquets de flashcards, notes, badges, coach, bac blanc, Prix de l’excellence, préparation Grand Oral/étude de gestion, fiches-photo, défi, atelier, méthodologie, EPS et **classement**, selon `PAGES_PAYANTES`. |
+| Ultimate | En plus, parcours de révision et programme Vacances ; accompagnement personnalisé selon les contrôles de chaque action. |
+
+**Points à ne pas confondre :** les classes, amis et boutique ne demandent pas d’abonnement, mais le classement reste dans la liste payante du code actuel. Mes notes est également une route payante ; les anciens textes annonçant une saisie universellement gratuite ne décrivent donc pas la barrière de page actuelle. Le questionnaire Avenir gratuit n’est pas le parcours Ultimate.
+
+### Quotas IA et période de grâce
+
+La règle serveur est [`supabase/functions/examen-blanc/acces.js`](supabase/functions/examen-blanc/acces.js), dupliquée à l’identique dans `fiche-vision` et vérifiée par les tests.
+
+- Gratuit : quota IA nul hors exception de grâce.
+- Premium : une utilisation initiale par fonction et par mois ; suites distinctes, sous conditions de preuve de l’étape initiale : tuteur 20, contrôle 3, examen 6 ; valeur de secours 5 pour les autres suites. Plans d’examen : plafond séparé de 12/mois.
+- Ultimate : pas de quota mensuel, **sans promesse d’usage illimité**. Garde-fou commun 60 demandes/jour et plafonds journaliers par fonction coûteuse : examen 20, excellence 10, étude 15, photo 15, série 20, contrôle 20.
+- Les plafonds horaires en mémoire de certaines actions restent distincts des compteurs durables de facturation. Un quota serveur n’écarte pas les limites ou pannes du fournisseur.
+- Grâce : comptes créés **avant le 30 octobre 2026 à 00h00 UTC**, accès Ultimate jusqu’au **30 novembre 2026 à 23h59 UTC**. Ce n’est pas une gratuité permanente pour tous les comptes.
+- `ACCES_REFUSE_TEST=1` permet au serveur de refuser les abonnements de test à l’ouverture commerciale ; son état distant doit être vérifié lors du lancement.
+
+## Installer et développer
+
+Utiliser **Node.js 22**, comme la CI, et npm. Aucune clé privée fournisseur n’est nécessaire pour compiler l’interface ; les fonctions distantes ont leur propre configuration.
 
 ```bash
 cd app
-npm install
-npm run dev       # serveur de développement : http://localhost:5173 (pages sous /#/…)
-npm run build     # compile l'application dans app/dist/
-npm run preview   # sert la version compilée pour la vérifier
+npm ci
+npm run dev          # http://localhost:5173 ; routes sous /#/
+npm run build        # produit app/dist/
+npm run preview      # sert la compilation locale
 ```
 
-`npm run build` vide `app/dist/` avant d'y écrire, puis lance `pwa-postbuild.mjs`.
-`app/dist/` n'est pas versionné : c'est le workflow de publication qui recopie son
-contenu à la racine.
+Les dépendances et versions sont dans `app/package.json` et `app/package-lock.json`. Préférer `npm ci` pour reproduire le verrouillage. Les fonctions Edge ne sont pas lancées par Vite.
+
+Avant toute intervention : lire [AGENTS.md](AGENTS.md), [CLAUDE.md](CLAUDE.md) et [docs/COORDINATION.md](docs/COORDINATION.md), annoncer le périmètre dans ce journal, travailler sur une branche et y consigner les vérifications/références avant transmission.
+
+## Architecture et fichiers
+
+React 18, React Router 6 avec `HashRouter`, Vite 5 et Tailwind CSS 3. Les pages de l’application vivent sous `/#/...` ; les cours publics sont des pages HTML distinctes sous `/cours/...`.
+
+```text
+app/
+  content/             cours et couches pédagogiques JSON
+  resources/langues/   sources des cinq manuels et exercices de langue
+  scripts/             build du contenu, PDF, pages publiques, publication, rapports
+  pwa/                 modèles manifest, service worker, icônes et page404
+  src/
+    App.jsx            routes, gardes et chargement des pages
+    store.jsx          état, progression, sauvegarde et actions du compte
+    pages/             écrans de l’application
+    components/        composants partagés et présentation
+    games/             moteurs d’exercices, orchestrés par GameHost
+    content/           index léger et chargement des matières
+    data/              droits, filières, sujets, révision et autres moteurs
+    auth.js            session, Auth et requêtes authentifiées
+    reseau.js          accès REST/RPC avec délais et contrôles d’identité
+    progression.js     fusion entre appareils
+    push.js, notify.js  rappels serveur et notifications locales
+    i18n/, localisation/ langues et catalogues publics
+  tests/               tests unitaires et parcours Playwright
+supabase/
+  migrations/          historique versionné ; confronter aux migrations réellement appliquées
+  functions/           services Edge et logique partagée client/serveur
+.github/workflows/     validation, publication, liens et statistiques
+statistiques/          relevés datés, historique et synthèse
+assets/, index.html…   compilation publiée automatiquement, ne pas éditer à la main
+```
+
+### Chargement et compilation
+
+- `app/src/content/Contenu.jsx` charge la matière ou la filière avant l’usage du contenu complet. L’accueil, les menus, les scores et la recherche utilisent un index léger ; ne pas supposer que `SUBJECTS` contient déjà les cours complets au démarrage.
+- `app/src/data/index.js` assemble les couches et génère exercices, tests et flashcards. Les pages sont chargées à la demande avec `React.lazy`.
+- `npm run build` exécute Vite, `scripts/pages-cours.mjs`, puis `pwa-postbuild.mjs`. Il génère aussi les sujets/corrigés prêts à utiliser, les pages publiques et leurs ressources.
+- `app/dist/` est un résultat de compilation non versionné. Le workflow validé en copie le contenu à la racine via `app/scripts/publier.mjs`, en conservant les ressources nécessaires à la version précédente.
+- Documentation d’architecture complémentaire : [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). Les nombres de fichiers et anciennes pages cités dans des rapports historiques ne remplacent pas les routes courantes de `App.jsx`.
+
+## Contenu pédagogique
+
+### Périmètre et inventaire
+
+L’ordre source comporte 19 entrées : 11 de Terminale et 8 de Première, dans [`app/content/ordre.json`](app/content/ordre.json). Les langues sont proposées par la bibliothèque de manuels ; leurs anciennes données peuvent subsister dans le catalogue pour préserver les résultats historiques.
+
+Le relevé du **16 novembre 2026** dans [`statistiques/dernier.json`](statistiques/dernier.json) dénombre 110 thèmes, 861 chapitres, 3 890 séries, 18 848 questions et 2 256 flashcards. Ce sont des **comptages techniques datés**, pas des utilisateurs actifs, des contenus tous visibles pour une filière ni des exercices tous différents. Les archives peuvent contribuer à l’inventaire. Pour les chiffres à jour et leurs erreurs éventuelles : [statistiques/STATISTIQUES.md](statistiques/STATISTIQUES.md).
+
+### Modifier un cours
+
+Chaque matière a un `matiere.json` et ses couches : `cours-complets.json`, `cours-reels.json`, enrichissements, approfondissements, définitions, pièges, cas et études de documents selon la matière. Les objets de thème contiennent notamment `cours`, `formulas` et `games`.
+
+- Modifier les **sources JSON**, jamais les fichiers compilés.
+- Respecter la filière et les programmes officiels ; ne pas inventer une notion pour remplir un exercice.
+- Les cours de Terminale restent de Terminale ; les prérequis de Première peuvent servir aux exercices appropriés.
+- Les exercices, flashcards et mauvaises réponses d’un chapitre restent limités à **son cours**. Aucun remplissage depuis d’autres chapitres ou la banque entière de la matière.
+- Les jeux manuels doivent avoir un rattachement explicite valide dans `exercices-sections.json`. Les dossiers transversaux restent au niveau du thème.
+- Les textes à trous gardent une phrase complète et son contexte ; les variantes acceptées ne servent pas de mauvaises réponses. Sources : `content/commun/reponses-acceptees.json`, `notions-liees.json` et moteurs du contenu.
+- Les calculs utilisent `app/src/calc.js` et `qcmgen.js` ; leurs nombres peuvent être renouvelés. Une répétition reste possible si le chapitre a peu de notions, sans ajouter artificiellement du contenu extérieur.
+- La présentation du cours est rédigée ; le tableau « Notions et définitions » peut le terminer.
+
+Après une modification voulue :
+
+```bash
+cd app
+npm run chapitres     # recalcule le nombre d’exercices par chapitre
+npm test             # examine les différences, ne pas accepter aveuglément une empreinte
+npm run test:detail   # écrit le détail dans tests/.detail/
+# npm run test:maj    # seulement si le changement pédagogique a été voulu et vérifié
+npm run build
+npm run test:parcours
+```
+
+Une empreinte différente après un changement censé être purement technique exige une investigation. Les tests ne remplacent pas une relecture par un enseignant.
+
+### Langues
+
+Anglais, espagnol, italien, arabe standard et allemand : sélection à l’inscription et dans les réglages, indépendante de la langue de l’interface. Sources : `app/resources/langues/{en,es,it,ar,de}.json`.
+
+Les cinq guides PDF réunissent cours, vocabulaire, exemples, mini-exercices corrigés, signets, liens de correction et vidéos externes. Ils comportent des champs de réponse et de suivi remplissables ; l’enregistrement dépend d’un lecteur PDF compatible. Les vidéos nécessitent Internet et restent hébergées par leurs éditeurs. Les anciens cours de langues sont archivés, pas supprimés de l’historique des élèves.
+
+```bash
+cd app
+node scripts/guides-langues.mjs
+```
+
+Voir [PDF interactifs](docs/PDF-LANGUES-INTERACTIFS.md) et les [rapports de relecture](docs/RELECTURE-MANUELS-LANGUES-20261024.md). Les rapports anciens décrivent leur propre périmètre ; ne pas réutiliser un tableau de quatre langues comme inventaire des cinq manuels actuels.
+
+## Données, comptes et confidentialité
+
+### Comptes et sauvegarde
+
+- Essai sans compte : progression sur l’appareil. Les espaces partagés demandent leurs conditions de compte, rôle ou code parent.
+- Compte élève/professeur : Supabase Auth et table `profiles`, progression dans `profiles.progress`. Le rôle est rechargé depuis le profil ; une identité locale seule ne donne pas les droits de la base.
+- Sauvegarde différée d’environ 2 secondes après modification et tentative à la sortie. Un indicateur annonce l’état réel : enregistré, attente ou non enregistré. Panne/hors ligne : conservation locale et reprise, pas de faux succès.
+- Fusion optimiste entre appareils : versions de progression vérifiées avant remplacement, puis fusion en cas de concurrence. Les pièces/XP utilisent des contributions par appareil ; des données éditables et suppressions ont des dates propres. Voir `app/src/progression.js` et les tests de fusion.
+- Les réponses tardives ne doivent pas remplacer l’état d’un autre compte. Les résultats différés d’exercices sont protégés par l’identité du joueur et l’état monté de l’exercice.
+- Le temps d’étude est interrompu en arrière-plan et lors des longues suspensions. Les valeurs historiquement aberrantes sont archivées dans `themeTimeInvalid`, exclues des totaux ; aucune durée réelle n’est inventée pour les remplacer.
+
+### Supabase partagé
+
+Projet configuré : **`wyydagcjkbivtbuhbzon`**, dans `app/src/supabase.js`. Hébergement statique GitHub Pages et backend Supabase sont deux services distincts.
+
+Ce projet est historiquement partagé avec NAH. Malgré certaines notes historiques sur l’arrêt du site NAH, **ne pas considérer ses tables comme disponibles à la modification**. Lire [supabase/README.md](supabase/README.md), vérifier l’état actif et respecter les consignes d’autorisation avant toute mutation.
+
+La clé publique/anon est publique par conception ; la sécurité repose sur Auth, les rôles et les règles RLS, pas sur la dissimulation de cette clé. Aucune clé `service_role`, fournisseur IA ou secret Stripe ne doit apparaître dans le client, les commits, captures ou journaux.
+
+Les 21 tables ciblées par l’audit du 15 novembre 2026 : `profiles`, `leaderboard`, `friend_user`, `friend_request`, `friend_duel`, `class_member`, `class_meta`, `class_wall`, `class_quiz`, `class_quiz_result`, `class_duel`, `class_group`, `class_ban`, `teacher_class`, `live_session`, `live_player`, `child_stats`, `revizstmg_abonnements`, `revizstmg_ia_usage`, `revizstmg_signalements`, `revizstmg_visites`. Ce relevé n’est pas un audit exhaustif de toutes les tables du projet.
+
+Les migrations versionnées ne suffisent pas à prouver l’état distant : certaines ont été appliquées manuellement. La garde professeur du mur a été corrigée par `20261116065015_revizstmg_mur_annonces_professeur.sql` ; validation sur table temporaire puis rollback, sans données métier modifiées.
+
+### Export, suppression et partage
+
+Paramètres > Confidentialité et données : export JSON et suppression du compte. La résiliation éventuelle est traitée avant le RPC de suppression ; un échec ne doit pas être présenté comme une suppression réussie. Le RPC `revizstmg_supprimer_compte` supprime les données RévizSTMG visées par la migration, les abonnements push et le compte Auth, puis le navigateur est vidé après confirmation.
+
+Le partage parent n’est activé qu’avec l’accord de l’élève. Le retrait attendu ou échoué est présenté comme tel et repris au retour réseau. Consulter les [CGU](https://revizstmg.github.io/#/cgu) et la [confidentialité](https://revizstmg.github.io/#/confidentialite) pour les informations destinées aux utilisateurs.
+
+## Fonctions IA et services
+
+| Fonction Edge | Utilisation | Référence |
+|---|---|---|
+| `examen-blanc` | Analyse/création d’examen, corrections, questions rédigées, tuteur et accompagnements selon l’action. | `supabase/functions/examen-blanc/` |
+| `fiche-vision` | Fiche à partir de photos et contrôles d’accès propres. | `supabase/functions/fiche-vision/` |
+| `revizstmg-paiement` | État d’abonnement, Checkout, portail, résiliation et traitement des événements Stripe. | `supabase/functions/revizstmg-paiement/`, [paiements](docs/PAIEMENTS.md) |
+| `revizstmg-rappels` | Envoi push périodique aux appareils inscrits selon les conditions du rappel. | `supabase/functions/revizstmg-rappels/`, [backend](supabase/README.md) |
+
+La présence du code ou un déploiement réussi ne garantit pas une réponse fournisseur. Le modèle et les secrets **effectifs** dépendent de la configuration distante ; les journaux de versions précédentes ne prouvent pas un modèle actuel. Gemini est utilisé par les parcours décrits ; ne pas déduire un coût réel par action d’un tarif théorique sans mesurer les jetons, reprises et documents transmis.
+
+### Envoi et conservation
+
+- L’interface doit expliquer l’envoi au fournisseur et demander le consentement prévu avant une copie/photo.
+- La génération reçoit les extraits du périmètre sélectionné, pas la totalité arbitraire des cours. Le tuteur reçoit le chapitre ouvert et un historique récent, pas les notes ni la classe.
+- Les conversations du tuteur ne sont pas sauvegardées dans la progression ; elles sont réinitialisées au changement de chapitre/compte. Les bilans après devoir et sujets ont leur propre stockage/documentation.
+- Les fichiers de copie ne sont pas sauvegardés par le site dans la progression ; ne pas en déduire une absence de traitement/conservation chez le fournisseur. Les informations de confidentialité restent applicables.
+- Les notes générées sont indicatives. Les critères/points et citations sont validés côté serveur selon l’action ; cela ne certifie pas la justesse pédagogique d’une réponse automatique.
+- Erreur, délai et annulation doivent rendre la main sans inventer un corrigé. Les limites ne sont pas identiques pour toutes les actions : consulter le client et l’action serveur concernés, plutôt qu’annoncer un délai unique pour toute l’IA.
+
+### Rappels
+
+`app/src/notify.js` gère permission et notification locale ; `app/src/push.js` inscrit l’appareil auprès des RPC `revizstmg_push_*`. La fonction périodique serveur est décrite dans `supabase/README.md`. iPhone : installation sur l’écran d’accueil et version compatible nécessaires.
+
+Les intentions d’activation, d’arrêt et d’horaire doivent rester cohérentes avec le compte : une ancienne réponse ne doit ni réinscrire un rappel arrêté, ni confirmer l’ancien horaire, ni enregistrer la demande sous le compte suivant. Les contrôles de non-régression sont dans `app/tests/push-intention.test.js` et `app/tests/parcours/rappels-intention.spec.js`. Les API natives sont bornées ; une expiration n’est pas une preuve de désinscription réussie.
+
+## Langues, accessibilité et hors ligne
+
+Interface FR/EN/ES/IT/AR/DE ; catalogues dans `app/src/i18n/` et `app/src/localisation/public.*.json`. Le sens de lecture arabe, les libellés accessibles, les dates et les nombres suivent la langue. Les identifiants, saisies et achats ne changent pas.
+
+Les textes intégrés se traduisent hors ligne. Les compléments publics non intégrés peuvent utiliser MyMemory avec cache et regroupement ; ils demandent Internet. Ne jamais annoter une saisie privée ou un message de classe pour en faire une traduction publique. `scripts/plugin-traductions.mjs`, `useT`, `usePublicText`, `TextePublic` et `CourseText` assurent l’intégration à React.
+
+Règles d’interface :
+
+- Pas d’avis/chiffres inventés ; distinguer données réelles, exemples fictifs et contrôles non exécutés.
+- Aplats de couleur, boutons à coins discrets, émojis conservés, titres courts et aucune promotion trompeuse de l’IA.
+- Mouvement réduit respecté ; au maximum une animation décorative par session. Les minuteries fonctionnelles ne sont pas décoratives.
+- Accent texte : `var(--c-accent-texte)` ; fond avec texte blanc : `var(--c-accent-fort)` ; texte de matière : classe `texte-matiere` et variable `--mc`.
+- Fenêtres : Échap, gestion du focus et navigation clavier via `app/src/components/clavier.js`. Les contraintes d’une épreuve peuvent distinguer fermeture et abandon.
+- Réglages dys/contraste/audio et mise en page mobile ; les tests axe ne remplacent pas un test humain avec lecteur d’écran.
+
+**Hors ligne :** le service worker met en cache les ressources prévues par la compilation après une installation réussie. Les cours/exercices locaux et fichiers disponibles en cache restent utilisables ; connexion, classe/amis, synchronisation, paiement, IA, vidéos et traductions externes demandent le réseau. Une page publique jamais mise en cache n’est pas magiquement disponible hors ligne. Ne pas promettre « tout fonctionne hors ligne après une visite » si l’installation du cache a échoué.
 
 ## Tests
 
 ```bash
 cd app
-npm test              # logique et contenu (quelques secondes)
-npm run build && npm run test:parcours   # parcours dans un vrai navigateur (~3 min)
+npm test
+TZ=Europe/Paris npm test
+npm run build
+npm run test:parcours
+npm run test:detail
+# Exemple de contrôle ciblé :
+npm test -- --run tests/push-intention.test.js tests/push-deadline.test.js
 ```
 
-- **Contenu** (`tests/contenu.test.js`) : une empreinte de tout ce que voit l'élève,
-  thème par thème (cours assemblé, exercices générés, flashcards, définitions,
-  tests de thème, quiz). Le hasard des exercices est fixé, donc un même code donne
-  toujours la même empreinte. Si vous corrigez un cours exprès, mettez les
-  empreintes à jour avec `npm run test:maj`. Si l'empreinte change alors que vous
-  n'avez touché qu'au code, c'est que l'élève verra autre chose : cherchez pourquoi.
-  `EMPREINTE_DETAIL=1 npm test` (ou `npm run test:detail`, plus court) écrit le
-  détail de chaque thème dans `tests/.detail/` pour comparer deux versions.
-- **Logique** (`tests/logique.test.js`) : niveaux, scores (maîtrise d'un
-  thème : 3 exercices réussis par chapitre, ou le test du thème s'il est
-  meilleur ; chaque thème peut atteindre 100 %), fusion de la progression de l'appareil et du compte,
-  répétition espacée, récompenses, badges, calculs chiffrés, filières.
-- **Sauvegarde** : `tests/fusion.test.js` (deux appareils : suppressions,
-  notes, pièces, gels, XP, anciennes copies), `tests/sauvegarde.test.js` (envoi
-  conditionné à la version du compte), `tests/dates.test.js` (quatre fuseaux,
-  passages à l'heure d'été et d'hiver) et `tests/parcours/sauvegarde.spec.js`
-  (note envoyée, hors ligne, autre appareil, déconnexion).
-- **Règle des hooks** (`tests/hooks.test.js`) : aucun composant n'appelle un hook
-  React après un `if (…) return`, ce qui laisse un écran blanc quand la condition
-  change (par exemple à la déconnexion).
-- **Parcours** (`tests/parcours/`) : écran de connexion, accueil, un cours suivi
-  d'un QCM fait jusqu'au bout, les 25 pages de l'app, et chaque thème des 19
-  matières. Les parcours démarrent avec un élève fictif déjà inscrit et bloquent
-  tout accès extérieur : ils ne touchent jamais la vraie base Supabase.
-  `secours.spec.js` vérifie la déconnexion depuis chaque page réservée aux élèves
-  et l'écran de secours (`components/EcranSecours.jsx`) qui remplace une page
-  plantée sans emporter le reste du site.
-- **Accessibilité** (`tests/parcours/accessibilite.spec.js`) : axe-core (règles
-  WCAG 2.2 A et AA) sur 21 pages en clair et en sombre, une fenêtre ouverte et
-  un exercice en cours. Il ne remplace pas un essai avec un lecteur d'écran.
-  `tests/retours.test.js` vérifie que chaque « ← Retour / Quitter » utilise la
-  même classe `lien-retour`.
-- **Vitesse sur téléphone** : `node scripts/mesure-mobile.mjs <dist> [<autre dist>]`
-  compare des versions compilées sur un Pixel 7 émulé, processeur ralenti 4 fois
-  et 4G lente (`docs/audits/2026-10-20/PERFORMANCE-TELEPHONE.md`).
-
-## Mise en ligne
-
-Travaillez sur une branche, puis fusionnez dans `main`. Le workflow
-`.github/workflows/deploy.yml` se lance à chaque envoi qui touche `app/` :
-
-1. sur **toutes les branches** : tests de la logique et du contenu, compilation,
-   parcours dans le navigateur ;
-2. sur **`main` seulement**, et si tous les tests sont verts : la version compilée
-   et testée est copiée à la racine du dépôt, puis GitHub Pages republie le site.
-
-Un test qui échoue bloque donc la mise en ligne. Il n'y a aucun secret à
-configurer. Le réglage GitHub Pages est « Deploy from a branch », branche `main`,
-dossier `/`. Pour republier sans rien changer, lancez le workflow à la main depuis
-l'onglet Actions.
-
-## Statistiques
-
-[`statistiques/STATISTIQUES.md`](statistiques/STATISTIQUES.md) donne les chiffres
-principaux : utilisation (comptes, comptes actifs, niveaux et spécialités,
-classes, défis entre amis, suivi des parents), contenu (thèmes, chapitres,
-exercices, flashcards), tests, CI et mise en ligne, et l'évolution sur 14 jours.
-Le workflow `.github/workflows/statistiques.yml` le met à jour chaque matin à 6 h,
-heure de Paris (`app/scripts/statistiques.mjs`) ; `statistiques/historique.json`
-garde une ligne par jour. Les chiffres d'utilisation viennent de la fonction
-Supabase `revizstmg_statistiques()`, qui ne renvoie que des nombres agrégés.
-Pour une mise à jour immédiate, lancez le workflow à la main depuis l'onglet Actions.
-
-**Rapport par mail.** Chaque matin, la routine de vérification (Claude) contrôle le
-site puis envoie un rapport à revizstmg@gmail.com (objet « Rapport du JJ/MM/AAAA », rangé
-sous le libellé Gmail « Rapports Claude ») : la vérification (construction,
-tests, CI, mise en ligne, problèmes trouvés), les chiffres clés, un tableau
-analytique (valeur et écart sur 7 et 30 jours), la répartition des élèves et des
-graphiques d'évolution (comptes inscrits, comptes actifs, visites). Le HTML est
-produit par `app/scripts/rapport-mail.mjs` (rendu : `app/scripts/rapport.js`, testé
-par `tests/rapport.test.js`) à partir de `statistiques/dernier.json` (le relevé
-complet du workflow) et de `statistiques/historique.json`. Les comptes antérieurs
-au 12 octobre 2026 y sont reconstitués d'après leur date de création.
-La routine ne lance que des scripts npm (`npm run rapport -- --verif … --sortie …`
-pour le mail), autorisés sans demande dans `.claude/settings.json`.
-
-**Mesure d'audience.** `app/src/mesure.js` compte les écrans affichés (un compteur
-par jour et par écran, sans cookie ni identifiant) et le fichier de statistiques
-en donne les visites. Elle est active depuis le 12 octobre 2026 (table et
-fonctions : `supabase/migrations/20261012173929_revizstmg_statistiques.sql`).
-
-## Règles de l'interface
-
-- **Contraste (WCAG AA, 4,5:1).** Pour écrire en couleur d'accent :
-  `var(--c-accent-texte)` ; pour un fond sous du texte blanc : `var(--c-accent-fort)`.
-  Pour écrire dans la couleur d'une matière : classe `texte-matiere` et
-  `style={{ '--mc': couleur }}` (éclaircie en mode sombre). Les couleurs des
-  matières (`matiere.json`) sont choisies pour rester lisibles sous du texte blanc.
-- **Formulaires.** Les règles (e-mail, mot de passe, prénom, messages des espaces
-  partagés, pièges à robots) sont dans `app/src/formulaires.js`, testées par
-  `tests/formulaires.test.js`. Une erreur s'affiche sous le champ concerné.
-- **Liens.** `npm test` vérifie que chaque lien interne mène à une route
-  (`tests/liens.test.js`). Le workflow « Vérifier les liens » ouvre chaque lundi
-  les liens vers d'autres sites et échoue si l'un est cassé.
-- **Adresse inconnue.** Dans l'app, `pages/Introuvable.jsx` (avec un lien vers le
-  niveau qui existe encore). Hors de l'app, GitHub Pages sert `app/pwa/404.html`,
-  qui renvoie `revizstmg.github.io/cgu` vers `/#/cgu` ; sa liste de routes doit
-  suivre `App.jsx` (vérifié par le test des liens).
-
-## Comment c'est construit
-
-- **React 18**, **React Router 6** (`HashRouter`), **Tailwind CSS 3**, **Vite 5**.
-- **Chargement à la demande.** Le build produit `index.html` et un dossier
-  `assets/` de fichiers dont le nom change avec le contenu :
-  - le code commun de l'app (~590 Ko, ~200 Ko compressés), chargé au démarrage
-    avec un **index léger du contenu** (noms, couleurs, identifiants des thèmes et
-    des exercices), fabriqué à la compilation par `scripts/plugin-contenu.mjs` ;
-  - un fichier par page (`React.lazy` dans `App.jsx`) ;
-  - un fichier de contenu par matière (`contenu-droit-….js`, de 11 à 156 Ko),
-    chargé quand l'élève ouvre la matière.
-- **Qui charge quoi.** Le store, l'accueil, les menus, la recherche et les scores
-  n'ont besoin que de l'index léger (il porte aussi le chapitre de chaque
-  exercice rédigé) et de `content/commun/nombre-chapitres.json`, le nombre
-  d'exercices de chaque chapitre qui comptent pour la maîtrise. Ce fichier est
-  calculé : après avoir changé un cours ou des exercices, lancez
-  `npm run chapitres` (un test le signale sinon). Les pages d'une matière (matière, thème,
-  chapitre) attendent sa matière ; le bac blanc, le coach IA,
-  le défi du jour et les duels attendent les matières de la filière de l'élève. Ces
-  attentes passent par `src/content/Contenu.jsx`, qui affiche « Chargement du
-  cours… » le temps nécessaire.
-- **Hors ligne.** `pwa-postbuild.mjs` copie `app/pwa/` (manifest, service worker,
-  icônes) et écrit dans le service worker la liste de tous les fichiers compilés.
-  À l'installation, il les met tous en cache : après la première visite, toute
-  l'app marche sans réseau.
-- **Mises à jour.** Le service worker va d'abord chercher la page sur le réseau,
-  ce qui donne toujours la dernière version. Le script de publication garde en
-  ligne les fichiers de la version précédente, et l'app se recharge une fois si un
-  fichier d'une ancienne version manque (`main.jsx`).
-- Avec `base: './'` et le routage par `#`, le site fonctionne depuis n'importe quelle
-  adresse, sans configuration de serveur.
-
-## Arborescence
-
-```
-.github/workflows/deploy.yml   compile et publie à chaque modification de app/
-supabase/migrations/           migrations des 17 tables (voir supabase/README.md)
-supabase/functions/fiche-vision/   fonction « fiche par photo » (Gemini ou Claude)
-index.html, sw.js, …           version compilée servie par GitHub Pages (générée)
-app/
-  content/              le contenu pédagogique, en JSON (voir plus bas)
-  tests/                tests de la logique, du contenu et des parcours
-  scripts/              index léger du contenu, publication, inventaire du code
-  index.html            page d'entrée de Vite
-  vite.config.js        build vers app/dist (un fichier par page et par matière)
-  pwa-postbuild.mjs     ajoute manifest, service worker et icônes après le build
-  pwa/                  manifest.webmanifest, sw.js, icônes (gen-icons.mjs les régénère)
-  src/
-    main.jsx            démarrage
-    App.jsx             toutes les routes
-    store.jsx           état de l'élève : progression, XP, badges, série, réglages
-    pages/              28 écrans (accueil, matière, thème, chapitre, bac blanc, coach IA, amis…)
-    components/         mise en page, affichage des cours, outils transverses
-    games/              un composant par type d'exercice, orchestrés par GameHost.jsx
-    content/            lecture et chargement du contenu (contenu.js, Contenu.jsx)
-    data/               assemblage du contenu et moteurs (voir plus bas)
-    auth.js             comptes élève et prof (Supabase Auth + table profiles)
-    classroom.js        espace Classe
-    friends.js          amis et duels
-    leaderboard.js      classement hebdomadaire
-    parent.js           espace parent
-    ficheVision.js      appel de la fonction fiche-vision
-    ocr.js              lecture du texte d'une image (Tesseract, chargé à la demande)
-    i18n.js, translate.js   langues de l'interface et traduction du contenu
-    notify.js, pwa.js   rappels et installation
-```
-
-## Le contenu (`app/content/`)
-
-Le contenu pédagogique est en **JSON**, rangé par matière. On le corrige dans ces
-fichiers, sans toucher au code. Les tests de contenu (`npm test`) vérifient ensuite
-ce que l'élève verra.
-
-```
-content/
-  ordre.json                    ordre d'affichage des matières
-  <id-matière>/                 un dossier par matière : gestion-finance, droit,
-                                p1-maths (Première)…
-    matiere.json                la matière et ses thèmes de base
-    <couche>.json               une couche de contenu, indexée par id de thème
-  commun/                       formules, méthodologie, glossaire, boutique,
-                                définitions de secours par matière,
-                                réponses acceptées en plus du mot attendu
-                                (reponses-acceptees.json), notions liées à ne
-                                pas opposer dans un exercice (notions-liees.json),
-                                dates des épreuves de la session (epreuves.json)
-```
-
-**`matiere.json`** contient un `id`, un `name` et un tableau `chapters`. Chaque
-chapitre (un thème du programme) a :
-- `cours` : les sections du cours ;
-- `formulas` : les formules ;
-- `games` : les exercices écrits à la main.
-
-**Pour ajouter un chapitre**, ajoutez un objet dans `chapters`. Les exercices
-automatiques sont créés à partir du cours.
-
-**Les couches** enrichissent les thèmes au moment de l'assemblage. Une matière n'a
-que les couches qui la concernent.
-
-| Fichier | Rôle |
+| Contrôle | Ce qu’il vérifie |
 |---|---|
-| `cours-complets.json` | remplace le cours de base par un cours complet |
-| `cours-reels.json` | cours « par l'exemple réel » (remplace le corps du cours) |
-| `enrichissements.json` | exemples résolus et sections ajoutés à la fin |
-| `approfondi-1.json` à `approfondi-4.json` | cours approfondis, méthodes de calcul, études de cas |
-| `philo-longue-duree.json`, `histoire-approfondie.json`, `management-approfondi.json`, `sic-si.json` | cours détaillés propres à une matière |
-| `definitions.json` | définitions clés par thème |
-| `pieges.json` | erreurs fréquentes |
-| `cas-pratiques.json` | cas d'entreprise chiffrés |
-| `etudes-documents.json` | études de documents (droit, économie) : un dossier par thème, ouvert depuis l'onglet « Outils » du thème, hors de la maîtrise par chapitre (il porte sur plusieurs chapitres) |
-| `exercices-sections.json` | section du cours à laquelle chaque exercice est rattaché |
+| Contenu/empreintes | Cours assemblés, exercices et données visibles avec hasard fixé ; ne pas mettre à jour les empreintes pour masquer une régression. |
+| Logique/fusion | Scores, dates locales, filières, récompenses, suppression, concurrence entre appareils et identités. |
+| Accès/serveur | Droits, quotas, logique des corrections et contrats client/serveur, avec services simulés. |
+| Parcours Playwright | Navigation, exercices, formulaires, modes gratuits/payants, erreurs et reprises dans Chromium ; téléphone par défaut. |
+| Accessibilité | Contrôles axe sur les scénarios couverts, clavier, focus, clair/sombre et fenêtre d’exercice. |
+| Traductions/liens | Couverture des catalogues, routes internes, 404 et contenus récents. |
+| PDF | Génération, métadonnées, formulaires et liens selon les suites concernées. |
 
-Les exercices et flashcards d’un chapitre utilisent exclusivement sa section de
-cours, y compris pour les mauvaises réponses des QCM. Aucun complément depuis
-les autres chapitres, la banque du thème ou celle de la matière. Les jeux
-rédigés à la main doivent avoir un rattachement explicite valide dans
-`exercices-sections.json` ; les jeux couvrant plusieurs chapitres restent au
-niveau du thème. En sciences de gestion de Première, les anciens textes à trous
-transversaux ont aussi été découpés par chapitre. Les quatre entraînements de verbes et
-de grammaire EN/ES utilisent des banques limitées aux formes, règles et exemples
-explicités dans leur cours ; dix questions sont mélangées à chaque partie.
+Les parcours utilisent [`app/tests/parcours/eleve.js`](app/tests/parcours/eleve.js) pour installer des profils fictifs et **bloquer les services extérieurs**. Aucun essai automatisé ne doit modifier la vraie base, envoyer un mail/notification, déclencher un paiement réel ou consommer une génération facturée. Les sondes publiques doivent conserver ces protections.
 
-Les exercices de calcul désignent leur générateur par un nom (`"gen": "tva"`,
-voir `src/calc.js`), comme les exercices de langues générés (`"gen": "genVerbEN"`,
-voir `src/data/langgen.js`). Une question de QCM chiffrée peut aussi porter un
-`"gen"` (`"taux_evolution"`, `"raison_baisse"`…, voir `src/qcmgen.js`) : elle est
-refaite avec de nouveaux nombres à chaque partie, et le texte écrit sert de
-secours. Les calculs ne sont proposés dans un chapitre que si leur rattachement est
-explicite. Les calculs mêlés restent réservés au test du thème.
+Dernière validation générale **livrée avant ce chantier** : [CI 43891276463](https://github.com/revizstmg/revizstmg.github.io/actions/runs/43891276463),16 novembre 2026 : 885 tests unitaires en UTC, 885 à Paris et 438 parcours navigateur, compilation et Pages réussis. [Bilan et preuves](docs/audits/2026-11-16/trois-bugs-corriges/README.md). Ces nombres sont datés ; consulter Actions et le journal de coordination pour les validations plus récentes. Aucun total de tests n’est une garantie d’absence de bug ou une validation pédagogique exhaustive.
 
-### Le code qui s'en sert
+## Publication et référencement
 
-- `src/content/contenu.js` lit les fichiers JSON.
-- `src/data/index.js` assemble les thèmes (couches dans l'ordre, masquage des
-  prérequis de Première, dédoublonnage) et génère les exercices, flashcards,
-  définitions clés, tests de thème et quiz à partir du texte des cours.
-- Les autres fichiers de `src/data/` sont des moteurs :
+### Chaîne de livraison
 
-| Fichier | Rôle |
-|---|---|
-| `srs.js` | répétition espacée |
-| `epreuves.js` | dates des épreuves de la session (`content/commun/epreuves.json`, à mettre à jour chaque année d'après le Bulletin officiel) |
-| `sujetBac.js` | sujets au format des épreuves écrites de spécialité, composés à partir des études de documents et des cas pratiques |
-| `sujetMaths.js` | sujets d'entraînement à l'épreuve anticipée de mathématiques (Première), générés et corrigés |
-| `study.js` | file de révision, bac blanc |
-| `coachAI.js` | analyse des résultats |
-| `dailyChallenge.js` | défi du jour |
-| `rewards.js` | récompenses de connexion |
-| `langgen.js` | exercices de langues générés |
-| `tracks.js` | niveaux et spécialités proposés à l'entrée |
-| `keyterms.js`, `pieges.js`, `formulas.js`, `methodo.js`, `glossary.js`, `shop.js` | accès au contenu correspondant |
+1. Branche de travail et PR.
+2. Workflow [`Tester et publier`](.github/workflows/deploy.yml) déclenché par les changements `app/**`, certains changements de workflow, PR concernées ou lancement manuel.
+3. Sur la source concernée : `npm ci`, tests UTC et Paris, compilation, installation du navigateur, parcours.
+4. Sur `main` seulement et après réussite : publication de l’artefact testé à la racine, commit automatique puis demande de reconstruction GitHub Pages.
+5. Vérifier **la CI et le déploiement Pages**, puis les fichiers et comportements effectivement servis.
 
-### Règles de contenu
+GitHub Pages : branche `main`, dossier `/`. Ne jamais corriger directement `index.html`, `assets/`, `sw.js`, PDF ou cours publics générés à la racine. Une modification documentaire seule ne relance pas nécessairement la chaîne applicative. Pour republier sans changement source, lancer le workflow manuellement.
 
-- Les **cours de Terminale** ne contiennent que des notions de Terminale. Les notions
-  de Première servent uniquement à formuler des **exercices**.
-- **Aucune notion inventée** : tout doit correspondre au programme officiel de STMG.
+La compilation du client ne demande pas de secret privé ; le déploiement et l’usage des services Edge exigent leurs propres secrets/réglages. L’ancienne phrase « aucun secret à configurer » ne s’applique pas à l’ensemble du backend.
 
-## Comptes et données (Supabase)
+### Cours publics et SEO
 
-**Configuration.** L'application utilise le projet Supabase `wyydagcjkbivtbuhbzon`,
-qu'elle partage avec le site NAH. Il est configuré dans `app/src/supabase.js`. La clé
-« anon » est publique par conception : la sécurité repose sur les règles RLS de
-chaque table.
+Le build produit du HTML lisible sans JavaScript pour le catalogue et les fiches, avec métadonnées, URL canonique, liens internes, sources, `sitemap.xml`, `sitemap.txt` et `llms.txt`. Les URL publiques et les routes interactives `/#/...` remplissent des rôles différents. Une page accessible en HTTP 200 n’est pas nécessairement indexée, et une demande Search Console ne garantit ni indexation ni classement.
 
-**Sans compte**, les cours et les exercices de base s’essaient en local ; les outils réservés et espaces partagés appliquent leurs droits propres. **Avec un compte**, la
-progression est aussi enregistrée dans la colonne `progress` de la ligne `profiles`
-de l'élève, ce qui permet de la retrouver sur un autre appareil.
+Références : [référencement](docs/REFERENCEMENT-COURS-PUBLICS.md), [diffusion des ressources](docs/DIFFUSION-RESSOURCES.md), [méthode et sources](https://revizstmg.github.io/a-propos/). Toute nouvelle URL de production impose de revoir canoniques, sitemaps, OAuth/redirects, sources de PDF et configuration de paiement, sans modifier le domaine au seul niveau du README.
 
-**Principales tables vérifiées lors de l’audit (21) :**
-- `profiles`
-- `leaderboard`
-- `friend_user`, `friend_request`, `friend_duel`
-- `class_member`, `class_meta`, `class_wall`, `class_quiz`, `class_quiz_result`,
-  `class_duel`, `class_group`, `class_ban`
-- `teacher_class`, `live_session`, `live_player`
-- `child_stats`
-- `revizstmg_abonnements`, `revizstmg_ia_usage`, `revizstmg_signalements`, `revizstmg_visites`
+## Statistiques et rapports
 
-Les fonctions de rappels utilisent aussi leurs tables techniques décrites dans `supabase/README.md`. Ce relevé est le périmètre vérifié, pas une certification de toutes les tables du projet partagé.
+- [`statistiques/STATISTIQUES.md`](statistiques/STATISTIQUES.md) : synthèse ; `dernier.json` : relevé détaillé ; `historique.json` : historique.
+- Workflow [`Statistiques`](.github/workflows/statistiques.yml) : deux créneaux UTC, filtrés pour retenir 6h à Paris, et lancement manuel. L’exécution réelle peut être retardée par GitHub.
+- Les comptages d’utilisation proviennent de `revizstmg_statistiques()` ; les données agrégées ne sont pas un accès aux profils individuels.
+- Les écrans affichés sont mesurés par `app/src/mesure.js`, sans cookie ni identifiant dans ce compteur d’audience.
+- Le mail de rapport est généré par `app/scripts/rapport-mail.mjs` et `rapport.js`. La routine externe Claude et ses autorisations ne sont pas garanties par un workflow GitHub réussi.
+- Une panne GitHub/Supabase doit être marquée **non vérifiée**, pas transformée en zéro utilisateur, en date valide inventée ou en « Rien à signaler ». Au relevé du16novembre, la récupération d’utilisation Supabase a échoué ; les chiffres de contenu restaient disponibles séparément.
 
-**Schéma et sécurité :** les migrations versionnées sont dans `supabase/migrations/` ; certaines ont été appliquées manuellement et l’historique distant doit donc être confronté aux règles actives. L’audit du 15 novembre a vérifié les RLS sur 21 tables ciblées, sans accès social direct avec la seule clé publique. La marche à suivre est dans [supabase/README.md](supabase/README.md). La base reste partagée avec NAH : ne pas modifier ses tables.
+## Maintenance et limites
 
-**Services déployés :** `examen-blanc`, `revizstmg-paiement`, `revizstmg-rappels` et `fiche-vision`. Cette dernière prépare une fiche depuis des photos ; sa configuration effective et une génération réelle doivent être distinguées de la seule présence du déploiement. Ne jamais placer une clé fournisseur dans le client. Le paiement est en mode TEST au dernier contrôle ; une vente réelle nécessite la configuration et la vérification correspondantes.
+### Avant une mise en production commerciale
 
-## Limites connues (ce que la refonte doit régler)
+- Faire relire les cours, corrigés, barèmes et programmes par des enseignants ; tester avec des élèves réels et leur consentement.
+- Vérifier les services réellement configurés : Auth/OAuth, modèles/quota/budget IA, notification, paiement LIVE, webhook, résiliation et suppression.
+- Revoir la grille d’accès après la grâce, les mentions commerciales, la confidentialité et les conditions des récompenses. Ne pas annoncer une fonction gratuite si sa route la bloque.
+- Vérifier les référentiels/date de session, PDF officiels et liens externes ; aucune page historique ne fait autorité pour une nouvelle session.
+- Contrôler sauvegarde, erreurs, changements de compte et usage mobile avec les versions effectivement publiées.
 
-- RévizSTMG partage encore sa base Supabase avec NAH.
+### Maintenance courante
 
-Relecture des exercices de probabilités : le texte à trous du schéma de Bernoulli interroge les deux issues plutôt que le libellé générique « conditions », en conservant les autres hypothèses dans son contexte.
+Après une modification : périmètre dans le journal, vérifications adaptées, tests requis, compilation si le produit change, PR, suivi de publication et preuve publique. Ne supprimer aucun contrôle pour faire passer la CI ; ne pas déclarer un audit d’agents terminé si ceux-ci n’ont pas livré leurs résultats.
 
-L’atelier propose 169 formules de calcul de Première et Terminale : mathématiques, gestion-finance, économie, management, mercatique et RH. Vue complète ou par filière, filtres par matière/domaine, sélection en lot, exercices à valeurs renouvelées, correction détaillée et lien de cours explicite. Voir [l’inventaire](docs/ATELIER-FORMULES.md). Les probabilités concernées sont arrondies à quatre décimales ; les séances longues restent reprenables sur l’appareil.
+Le [journal de coordination](docs/COORDINATION.md) conserve les livraisons. Les [audits](docs/audits/) conservent des états historiques : lire le statut et les rapports de correction avant de présenter un ancien défaut comme encore ouvert. Les nouvelles corrections des rappels sont suivies dans l’entrée `CORRECTIONS-RAPPELS-20261117`.
 
-Réviser propose trois parcours avec un choix de matière et un chapitre facultatif : reprise au prochain exercice, erreurs filtrées (toutes, pas seulement celles dues) et QCM des acquis réparti entre les chapitres, dans une matière ou toutes les matières. Les bonnes réponses QCM/vrai-faux/textes à trous/saisie/calculs sont conservées dans la progression (2 000 dernières) ; les anciens exercices à 100 % complètent cet historique sans inventer les bonnes réponses des scores partiels. Les textes à trous/saisies sont convertis en QCM seulement si des choix relus du même chapitre existent. Les repères de lecture restent locaux et séparés par compte et matière.
-
-Les QCM et textes à trous des chapitres conservent désormais une banque de
-questions, avec des tirages courts renouvelés à chaque partie. Un historique
-local à l’onglet et au compte privilégie les questions non encore proposées.
-Les phrases sont réparties entre trous, saisie et QCM du mot manquant : une même
-phrase ne remplit plus trois exercices. Les autres mots en gras peuvent fournir
-des variantes, en conservant leur phrase entière. Pour un cours court, des
-répétitions restent possibles ; aucun contenu d’un autre chapitre n’est ajouté.
-Les acquis reposent sur les réponses réellement jouées, jamais sur toute une
-banque déduite d’un score de partie parfait.
-
-### Questions manquées et entraînement après un devoir
-Dans Mes notes, la saisie gratuite conserve les questions manquées avec la note. Le bilan IA, les exercices ciblés et la lecture du sujet et de la copie (PDF/photos) sont implémentés et soumis aux droits Ultimate et quotas serveur, sous réserve de la grâce datée de développement. L’IA utilise uniquement les cours du chapitre choisi et signale une lecture impossible ou une compétence hors périmètre. Les fichiers ne sont pas sauvegardés dans la progression. Le bilan et les exercices sont conservés lors de l’ajout de la note, exportés et supprimés avec elle. Les réponses d’entraînement sont temporaires ; correction par comparaison, sans note automatique ni promesse de résultat.
-
-Le paiement et l’activation sont implémentés ; Stripe reste en mode TEST au dernier contrôle. La fonction vérifie le compte via Auth `/user`, puis applique les droits et quotas définis dans `supabase/functions/examen-blanc/acces.js`. Les limites du fournisseur restent actives.
-
-### Tuteur de compréhension IA
-Chaque chapitre propose « Je n’ai pas compris ». L’élève discute du cours ou choisit une reformulation simple, un exemple concret ou une décomposition pas à pas. Le tuteur doit varier son approche et vérifier la compréhension par une petite question, sans attribuer de note. Aucun plafond total de reformulations : une conversation peut dépasser 50 échanges. L’écran conserve la discussion pendant la visite ; seuls les 19 derniers messages et le cours de la section ouverte sont transmis à chaque demande. La discussion est réinitialisée au changement de chapitre/compte et n’est pas enregistrée dans la progression.
-
-L’action serveur `tutor` suit les droits Ultimate et quotas, sous réserve de la grâce de développement datée dans `acces.js`. Protection contre les rafales : 120 requêtes/heure par utilisateur et instance chaude, indépendante du quota d’examens ; il ne s’agit ni d’une limite totale de conversation ni d’un quota de facturation durable. Les limites du fournisseur restent applicables. Aucune donnée de classe, note ou copie n’est envoyée au tuteur.
-
-### Utilisation sur téléphone
-L’interface mobile conserve le style vert/crème/doré avec des cartes plus compactes, deux colonnes de matières, des boutons tactiles d’au moins 44 px et des champs de 16 px pour éviter le zoom automatique sur iPhone. Le menu devient un panneau défilant depuis le bas avec une fermeture accessible ; la navigation fixe reste présente sur les pages avec recherche automatique et se masque seulement lorsque le viewport indique l’ouverture du clavier.
-
-Le lecteur agrandi suit la hauteur disponible (`dvh`) et les zones sûres de l’écran. La pagination et un grand bouton Fermer restent en bas, y compris en paysage. Le cours défile séparément, avec navigation au clavier et retour du focus à la fermeture. Les ajustements sont limités aux petits écrans ; le rendu imprimé conserve ses règles de pagination.
-
-### Questions type de contrôle
-Dans les exercices de chaque chapitre, une carte dédiée prépare une question rédigée à la fois, avec accès direct sous le cours. Le barème comporte cinq critères distincts d’un point, chacun ancré dans une citation exacte du seul cours associé. L’IA accepte les formulations équivalentes et attribue 0, 0,5 ou 1 par critère ; le serveur recalcule la note sur 5. Le bilan montre les acquis, les manques, les extraits du cours et un corrigé à révéler. L’élève peut retravailler sa réponse ou demander une question différente (cinq dernières questions transmises pour limiter les répétitions).
-
-Note indicative, sans XP ni incidence sur la maîtrise. Réponse et correction restent dans la page et disparaissent au départ/changement de compte ou chapitre ; aucune sauvegarde annoncée. Authentification obligatoire, 30 demandes de préparation/correction par heure et instance chaude (protection indicative, pas quota durable), contexte 30 000 caractères et réponse 8 000 caractères maximum. Aucun changement SQL, Storage ou des données NAH. Les citations assurent l’ancrage textuel ; la pertinence sémantique et la note restent soumises aux limites de l’IA.
-
-La correction des questions rédigées utilise un raisonnement Gemini limité (niveau LOW pour les modèles Gemini 3 et suivants), des commentaires concis et 3 500 jetons de sortie maximum. Délai fournisseur de 60 secondes pour cette correction, inchangé pour la création. L’interface borne l’ensemble Auth + réseau + lecture du résultat à 75 secondes pour la correction (150 secondes pour la création), indépendamment du respect du signal d’annulation. Annuler l’attente rend la main immédiatement ; délai dépassé ou erreur conserve la réponse et permet de réessayer. Aucun faux corrigé de secours n’est affiché.
-
-### Un accueil pour reprendre ses révisions
-L’accueil élève met en avant une séance et la reprise du dernier cours (chapitre et fiche enregistrés), avec un point de départ vers Cours pour les débutants. Le catalogue des matières reste sur la page Cours ; l’accueil propose Voir tous les cours. Présentation éditoriale vert profond/crème/doré, illustration légère en CSS, puis habitudes, objectifs, progression et communauté. Les petits écrans courts reçoivent une version compacte pour garder l’action principale immédiatement visible. L’accueil professeur conserve ses classes. Les textes sont disponibles hors ligne en FR/EN/ES/IT/AR/DE.
-
-Le retour de connexion Google ouvre explicitement l’accueil après consommation du fragment OAuth. Les jetons sont nettoyés de l’adresse, la session reste disponible et un nouveau compte complète toujours son profil. Les vrais liens inexistants conservent leur page 404.
-
-### Langues : manuels complets et vidéos
-Les matières Langues de Première et Terminale ouvrent un atelier avec cinq manuels PDF : anglais, espagnol, italien, arabe et allemand. Ils réunissent cours détaillés, règles et exemples, vocabulaire, compréhension de textes, mini-exercices et corrigés expliqués séparés. Les énoncés sont numérotés dans l’ordre de lecture ; sommaire, signets, liens vers les corrections et retours aux énoncés facilitent la navigation. Le contenu reste disponible hors connexion dans les PDF ; les vidéos demandent Internet.
-
-| Manuel | Pages A4 | Leçons | Exercices corrigés | Pages vidéo |
-|---|---:|---:|---:|---:|
-| Anglais | 50 | 24 | 110 | 50 |
-| Espagnol | 52 | 25 | 122 | 32 |
-| Italien | 46 | 26 | 86 | 48 |
-| Arabe standard | 46 | 26 | 86 | 46 |
-
-Les 176 pages vidéo ont été sélectionnées depuis les catalogues British Council, VideoEle, RAI Scuola et Al Jazeera Learning Arabic, puis contrôlées pour leur accessibilité et la présence d’un lecteur. Elles restent hébergées par leurs éditeurs et soumises à leurs conditions. La bibliothèque du site est repliée par défaut et filtrable par niveau, pour éviter une longue grille de boutons. Les niveaux affichés sont ceux des catalogues, sans promesse de certification.
-
-Les sources des manuels sont dans `app/resources/langues/{en,es,it,ar,de}.json`. Le générateur `cd app && node scripts/guides-langues.mjs` produit les cinq PDF avec signets et liens internes, ainsi qu’un catalogue léger pour l’interface : le texte complet des manuels n’est pas chargé par la page. Les anciens cours restent archivés pour conserver l’intégrité des résultats, mais ne sont plus proposés dans les parcours, la recherche ou les anciennes routes de cours. Aucun résultat utilisateur n’est supprimé.
-
-## Cours publics
-
-Les cours peuvent aussi être lus sans compte et sans JavaScript dans le [catalogue public](https://revizstmg.github.io/cours/). Voir la [méthode et les sources](https://revizstmg.github.io/a-propos/) et le [guide de partage](docs/DIFFUSION-RESSOURCES.md). Les pages HTML, les deux sitemaps et llms.txt sont générés à la compilation ; détails dans [REFERENCEMENT-COURS-PUBLICS.md](docs/REFERENCEMENT-COURS-PUBLICS.md).
-
-### Comprendre ses erreurs
-
-L’accueil propose un [exemple fictif de bilan](https://revizstmg.github.io/#/exemple-bilan) sans compte et le [comparatif des offres prévues](https://revizstmg.github.io/#/offres). Les outils restent accessibles pendant le développement, sans paiement ouvert. Le parcours réel passe par Mes notes de classe : questions manquées ou sujet/copie, bilan relié aux cours et entraînement. Limites, confidentialité du brouillon et vérifications dans [PARCOURS-BILAN.md](docs/PARCOURS-BILAN.md).
+Limites structurelles connues : backend historiquement partagé avec NAH, portefeuille et certaines récompenses calculés côté client, dépendance aux fournisseurs pour l’IA/vidéos/traduction externe, absence de certification pédagogique exhaustive. Une couverture automatisée élevée et des contrôles RLS datés réduisent les risques sans les supprimer.

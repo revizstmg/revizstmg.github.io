@@ -2,7 +2,7 @@ import PastillePremium from '../components/PastillePremium.jsx'
 import StudyLanguages from '../components/StudyLanguages.jsx'
 import { nombre } from '../format.js'
 import OfflineStatus from '../components/OfflineStatus.jsx'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Link, Navigate, useSearchParams } from 'react-router-dom'
 import { useStore, subjectScore, effacerDonneesAppareil, buildChildSnapshot } from '../store.jsx'
 import { trackLabel, trackIcon, subjectsForTrack } from '../data/tracks.js'
@@ -360,17 +360,21 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
 function ReminderCard({ t }) {
   const { state, setReminder } = useStore()
   const r = state.reminder || { on: false, time: '18:00' }
+  const demande = useRef(0)
   const [msg, setMsg] = useState('')
   if (!notifSupported()) return <div className="card p-4 text-sm text-slate-500 dark:text-slate-400">{t('notifUnsupported')}</div>
 
   // Avec un compte, le rappel passe aussi par une notification « push » : il
   // arrive même téléphone fermé (push.js).
   const brancherPush = async (heure) => {
+    const numero = ++demande.current, owner = getSession()?.user?.id
+    const courant = () => numero === demande.current && owner === getSession()?.user?.id
     if (!pushPossible() || !isSignedIn()) return
     try {
-      const ok = await activerRappelsPush(heure)
+      const ok = await activerRappelsPush(heure, courant)
+      if (!courant()) return
       setMsg(ok ? 'Rappel activé, même téléphone fermé.' : '')
-    } catch { setMsg('Le rappel téléphone fermé n’a pas pu être activé ici : il arrivera quand l’app est ouverte.') }
+    } catch { if (!courant()) return; setMsg('Le rappel téléphone fermé n’a pas pu être activé ici : il arrivera quand l’app est ouverte.') }
   }
   const toggle = async () => {
     if (!r.on) {
@@ -378,10 +382,10 @@ function ReminderCard({ t }) {
       if (perm !== 'granted') { setMsg(perm === 'denied' ? t('notifDenied') : t('notifUnsupported')); return }
       setReminder({ on: true }); setMsg('')
       brancherPush(r.time || '18:00')
-    } else { setReminder({ on: false }); setMsg(''); desactiverRappelsPush() }
+    } else { demande.current++; setReminder({ on: false }); setMsg(''); desactiverRappelsPush() }
   }
   const changerHeure = (heure) => {
-    setReminder({ time: heure })
+    setReminder({ time: heure }); setMsg('')
     brancherPush(heure)
   }
   const test = async () => {
