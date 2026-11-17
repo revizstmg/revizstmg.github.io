@@ -1,0 +1,15 @@
+
+> stmg-revision@1.0.0 test
+> vitest run --run tests/push-intention.test.js tests/push-deadline.test.js
+
+
+ RUN  v2.1.9 /workspace/work/fix-economie-audits/app
+
+ ✓ tests/push-intention.test.js (11 tests) 46ms
+ ✓ tests/push-deadline.test.js (8 tests) 20ms
+
+ Test Files  2 passed (2)
+      Tests  19 passed (19)
+   Start at  06:42:31
+   Duration  1.71s (transform 494ms, setup 0ms, collect 560ms, tests 66ms, environment 0ms, prepare 208ms)
+

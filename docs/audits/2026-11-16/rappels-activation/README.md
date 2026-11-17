@@ -1,5 +1,7 @@
 # Activations de rappel obsolètes
 
+**Rapport historique :** scénarios corrigés et publiés le 17 novembre 2026. Voir le [bilan de livraison](../../2026-11-17/rappels-corriges/README.md).
+
 Recherche ciblée du 16 novembre 2026 sur `63558b9e7` ; version publique compilée `6592783c46731d93f9f973841d7d8e90a07e232a`. Trois scénarios reproduits sur l’interface publique, autour d’une même absence d’invalidation des activations en cours. Ce ne sont pas trois causes indépendantes. Les priorités sur dix expriment l’impact pratique.
 
 ## Changement de compte : 7/10

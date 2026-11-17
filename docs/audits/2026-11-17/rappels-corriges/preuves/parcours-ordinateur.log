@@ -1,0 +1,14 @@
+[2m[WebServer] [22m(node:13350) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:13369) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:13369) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [ordinateur] › tests/parcours/rappels-intention.spec.js:3:56 › rappels : activation obsolète refusée après arret (2.5s)
+  ✓  2 [ordinateur] › tests/parcours/rappels-intention.spec.js:3:56 › rappels : activation obsolète refusée après identite (2.5s)
+  ✓  3 [ordinateur] › tests/parcours/rappels-intention.spec.js:3:56 › rappels : activation obsolète refusée après heure (1.8s)
+
+  3 passed (9.3s)
