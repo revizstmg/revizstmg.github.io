@@ -1,0 +1,14 @@
+
+Running 5 tests using 1 worker
+
+(node:15562) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:15562) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [telephone] › ../../../output/audit-oral-20261117/sondes.spec.js:20:5 › panne native : interface toujours en enregistrement après error puis stop (3.2s)
+  ✓  2 [telephone] › ../../../output/audit-oral-20261117/sondes.spec.js:27:90 › changement de compte (copie B présente) : micro (3.0s)
+  ✓  3 [telephone] › ../../../output/audit-oral-20261117/sondes.spec.js:27:90 › changement de compte (copie B présente) : réécoute (4.1s)
+  ✓  4 [telephone] › ../../../output/audit-oral-20261117/sondes.spec.js:27:90 › changement de compte (contrôle sans copie B) : micro (3.0s)
+  ✓  5 [telephone] › ../../../output/audit-oral-20261117/sondes.spec.js:27:90 › changement de compte (contrôle sans copie B) : réécoute (2.7s)
+
+  5 passed (17.9s)

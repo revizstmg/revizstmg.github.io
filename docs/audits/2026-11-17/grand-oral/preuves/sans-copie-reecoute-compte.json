@@ -1,0 +1,17 @@
+{
+  "finished": true,
+  "cached": false,
+  "account": "00000000-0000-4000-8000-000000000002",
+  "state": "inactive",
+  "events": [
+    "rec-start",
+    "rec-stop",
+    "track-stop",
+    "track-stop"
+  ],
+  "revoked": [
+    "blob:https://revizstmg.github.io/8f8b26b5-901f-4009-ae16-87174ef5c43a"
+  ],
+  "audio": null,
+  "text": "Chargement du cours…"
+}
