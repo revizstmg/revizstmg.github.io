@@ -17,11 +17,12 @@ export default function AudioRecorder() {
   const streamRef = useRef(null)
   const tickRef = useRef(null)
   const urlRef = useRef('')
+  const releaseRef = useRef(() => {})
 
   useEffect(() => { active.current = true; return () => {
     active.current = false; generation.current++; waiting.current = false
     try { recRef.current?.state === 'recording' && recRef.current.stop() } catch { /* */ }
-    try { streamRef.current?.getTracks().forEach((t) => t.stop()) } catch { /* */ }
+    releaseRef.current()
     if (urlRef.current) URL.revokeObjectURL(urlRef.current)
     clearInterval(tickRef.current)
   } }, [])
@@ -30,25 +31,50 @@ export default function AudioRecorder() {
     if (waiting.current || recRef.current?.state === 'recording') return
     waiting.current = true; setPending(true)
     const request = ++generation.current
-    let ownStream
+    let ownStream, releaseOwn = () => {}
     setError('')
     if (urlRef.current) { URL.revokeObjectURL(urlRef.current); urlRef.current = ''; setUrl('') }
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
       ownStream = stream
-      if (!active.current || request !== generation.current) { stream.getTracks().forEach(t => t.stop()); return }
+      let released = false
+      releaseOwn = () => {
+        if (released) return
+        released = true
+        try { stream.getTracks().forEach(t => t.stop()) } catch { /* flux déjà fermé */ }
+        if (streamRef.current === stream) streamRef.current = null
+      }
+      const current = () => active.current && request === generation.current
+      if (!current()) { releaseOwn(); return }
       streamRef.current = stream
+      releaseRef.current = releaseOwn
       const rec = new MediaRecorder(stream)
       const chunks = []
-      rec.ondataavailable = (e) => { if (e.data.size) chunks.push(e.data) }
+      let failed = false
+      rec.ondataavailable = e => { if (current() && !failed && e.data.size) chunks.push(e.data) }
+      rec.onerror = () => {
+        failed = true
+        releaseOwn()
+        if (!current()) return
+        clearInterval(tickRef.current)
+        setRecording(false)
+        setError('recordingFailed')
+        try { if (rec.state === 'recording') rec.stop() } catch { /* pistes déjà arrêtées */ }
+        if (recRef.current === rec) recRef.current = null
+      }
       rec.onstop = () => {
+        releaseOwn()
+        if (!current()) return
+        clearInterval(tickRef.current)
+        setRecording(false)
+        if (failed) return
         try {
-          if (!active.current || request !== generation.current) return
           const blob = new Blob(chunks, { type: rec.mimeType || 'audio/webm' })
+          if (!blob.size) { setError('recordingFailed'); return }
           const u = URL.createObjectURL(blob)
           urlRef.current = u
           setUrl(u)
-        } catch { /* */ } finally { stream.getTracks().forEach(t => t.stop()) }
+        } catch { setError('recordingFailed') }
       }
       rec.start()
       recRef.current = rec
@@ -56,8 +82,13 @@ export default function AudioRecorder() {
       setElapsed(0)
       tickRef.current = setInterval(() => setElapsed((e) => e + 1), 1000)
     } catch {
-      ownStream?.getTracks().forEach(t => t.stop())
-      if (active.current && request === generation.current) setError('micDenied')
+      releaseOwn()
+      if (active.current && request === generation.current) {
+        clearInterval(tickRef.current)
+        recRef.current = null
+        setRecording(false)
+        setError(ownStream ? 'recordingFailed' : 'micDenied')
+      }
     } finally {
       if (active.current && request === generation.current) { waiting.current = false; setPending(false) }
     }
@@ -66,7 +97,12 @@ export default function AudioRecorder() {
   const stop = () => {
     clearInterval(tickRef.current)
     setRecording(false)
-    try { recRef.current?.state === 'recording' && recRef.current.stop() } catch { /* */ }
+    try { recRef.current?.state === 'recording' && recRef.current.stop() } catch {
+      generation.current++
+      releaseRef.current()
+      recRef.current = null
+      setError('recordingFailed')
+    }
   }
 
   if (!supported) {
@@ -96,6 +132,8 @@ export default function AudioRecorder() {
       </div>
 
       {error === 'micDenied' && <p className="mt-3 text-xs font-semibold text-rose-600">Accès au micro refusé. Autorise le microphone pour t’enregistrer.</p>}
+
+      {error === 'recordingFailed' && <p role="alert" className="mt-3 text-xs font-semibold text-rose-600 dark:text-rose-400">L’enregistrement a échoué. Réessaie ou vérifie ton microphone.</p>}
 
       {url && !recording && (
         <div className="mt-4">
