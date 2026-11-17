@@ -1,0 +1,18 @@
+[2m[WebServer] [22m(node:16869) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 7 tests using 1 worker
+
+(node:16888) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16888) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [ordinateur] › tests/parcours/grand-oral-audio.spec.js:69:1 › panne native : arrêt réel de l’interface, message puis nouvel essai normal (4.2s)
+  ✓  2 [ordinateur] › tests/parcours/grand-oral-audio.spec.js:95:96 › audio isolé au changement de compte (copie B présente) : micro (8.1s)
+  ✓  3 [ordinateur] › tests/parcours/grand-oral-audio.spec.js:95:96 › audio isolé au changement de compte (copie B présente) : réécoute (3.2s)
+  ✓  4 [ordinateur] › tests/parcours/grand-oral-audio.spec.js:95:96 › audio isolé au changement de compte (sans copie B) : micro (2.5s)
+  ✓  5 [ordinateur] › tests/parcours/grand-oral-audio.spec.js:95:96 › audio isolé au changement de compte (sans copie B) : réécoute (2.3s)
+  ✓  6 [ordinateur] › tests/parcours/grand-oral-audio.spec.js:212:1 › fin native normale : minuteur arrêté et réécoute disponible (2.0s)
+  ✓  7 [ordinateur] › tests/parcours/grand-oral-audio.spec.js:226:1 › arrêt natif qui lève : piste libérée et nouvel essai possible (3.0s)
+
+  7 passed (28.2s)

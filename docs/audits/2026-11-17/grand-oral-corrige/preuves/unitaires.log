@@ -1,0 +1,20 @@
+
+> stmg-revision@1.0.0 test
+> vitest run --run tests/traductions.test.js tests/hooks.test.js
+
+
+ RUN  v2.1.9 /workspace/work/fix-economie-audits/app
+
+ ✓ tests/traductions.test.js (14 tests) 3569ms
+   ✓ toutes les clés d’interface existent dans chacune des cinq langues 561ms
+   ✓ noms, descriptions, cadeaux et variables de la boutique sont traduits hors ligne 505ms
+   ✓ la boutique ne dépend pas du réseau, les requêtes identiques sont regroupées et mises en cache 465ms
+   ✓ les écrans récents sont traduits hors ligne dans les cinq langues 799ms
+   ✓ allemand : révision, examen et correction disposent de toutes leurs traductions 815ms
+ ✓ tests/hooks.test.js (2 tests) 40ms
+
+ Test Files  2 passed (2)
+      Tests  16 passed (16)
+   Start at  10:20:40
+   Duration  5.56s (transform 2.05s, setup 0ms, collect 1.26s, tests 3.61s, environment 1ms, prepare 183ms)
+

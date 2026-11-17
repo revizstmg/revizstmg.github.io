@@ -1,5 +1,7 @@
 # Deux défauts du Grand Oral
 
+**Rapport historique :** ces deux défauts sont corrigés et publiés par la PR236. Voir le [bilan de livraison](../grand-oral-corrige/README.md).
+
 Recherche du17novembre2026 sur `ceaa5e8a7`, compilation publique `6e3b71fdf939cc2b1fb2cf4aef34a401cdc162b5`. Produit et services en lecture seule. Les priorités sur10 évaluent l’impact pratique, pas un score CVSS. Les défauts précédents des rappels/exercices ne sont pas recomptés.
 
 ## 1. Enregistrement ou réécoute conservés sous le compte suivant : 7/10
