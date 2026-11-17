@@ -133,7 +133,7 @@ export default function AudioRecorder() {
 
       {error === 'micDenied' && <p className="mt-3 text-xs font-semibold text-rose-600">Accès au micro refusé. Autorise le microphone pour t’enregistrer.</p>}
 
-      {error === 'recordingFailed' && <p role="alert" className="mt-3 text-xs font-semibold text-rose-600">L’enregistrement a échoué. Réessaie ou vérifie ton microphone.</p>}
+      {error === 'recordingFailed' && <p role="alert" className="mt-3 text-xs font-semibold text-rose-600 dark:text-rose-400">L’enregistrement a échoué. Réessaie ou vérifie ton microphone.</p>}
 
       {url && !recording && (
         <div className="mt-4">
