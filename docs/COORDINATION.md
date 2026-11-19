@@ -2051,6 +2051,6 @@ Prochaine action :
 - Limites : français seulement (en autre langue, le cours est traduit sans gras) ; pages publiques `/cours/...` inchangées. Outil : `npm run termes [-- matière nombre]` liste les gras fréquents sans définition. Garde-fous : `tests/termes.test.js`, `tests/parcours/termes-cliquables.spec.js`. Aucun changement Supabase.
 
 ### TERMES-TOUS-GRAS-20261119-CLAUDE
-- Demande du propriétaire : rendre cliquables tous les mots en gras. Fait : glossaire étendu de 1 216 à environ 3 400 définitions (toutes les matières, langues vivantes comprises : grammaire, connecteurs et vocabulaire avec la traduction française). Couverture mesurée : 9 209 gras sur 14 885 ont maintenant une définition (62 %, contre 37 % avant).
+- Demande du propriétaire : rendre cliquables tous les mots en gras. Fait : glossaire étendu de 1 216 à 2 237 entrées (toutes les matières, langues vivantes comprises : grammaire, connecteurs et vocabulaire avec la traduction française). Couverture mesurée : 9 209 gras sur 14 885 ont maintenant une définition (62 %, contre 37 % avant).
 - Reste non cliquable (38 %) : nombres, dates, formules, montants, intitulés d’étapes de méthode et gras d’emphase (« pas », « les deux », « automatiquement »…), qui n’ont pas de définition utile. Les dates et événements isolés d’histoire n’ont pas été définis un par un hors des repères principaux.
 - Définitions rédigées par Claude, non relues par un enseignant. Aucun changement Supabase, aucun changement de code (contenu seulement).
