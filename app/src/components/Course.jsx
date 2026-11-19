@@ -13,6 +13,7 @@ import { useStore } from '../store.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Rich } from './ui.jsx'
+import { useTermes } from './TermesContext.jsx'
 import Infographic from './Infographic.jsx'
 import { useLang, useAutoTranslate, useT } from '../i18n.js'
 import { sectionDefinitions } from '../data/index.js'
@@ -55,7 +56,8 @@ const strip = (s) => String(s || '').replace(/\*\*/g, '').replace(/\*/g, '')
 export function CourseText({ text, className = '' }) {
   const lang = useLang()
   const shown = useAutoTranslate(lang === 'fr' ? text : strip(text))
-  if (lang === 'fr') return <Rich text={canonicalPublicText(text)} className={className} />
+  const termes = useTermes()
+  if (lang === 'fr') return <Rich text={canonicalPublicText(text)} className={className} termes={termes} />
   return <span className={className} dir="auto" style={{unicodeBidi:"isolate"}}>{shown}</span>
 }
 

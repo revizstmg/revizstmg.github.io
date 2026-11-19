@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useAutoTranslate } from '../i18n.js'
+import Terme from './Terme.jsx'
+import { trouverDefinition } from '../data/termes.js'
 // Petits composants d'interface réutilisables.
 
 
@@ -34,13 +36,15 @@ export const Icon = {
 }
 
 // Rend le gras **ainsi** et l'italique *ainsi* présents dans les textes du cours.
-export function Rich({ text, className = '', translate = false }) {
+export function Rich({ text, className = '', translate = false, termes = null }) {
   const translated = useAutoTranslate(translate ? text : '')
   const parts = String(translate ? translated : text).split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g)
   return (
     <span className={className} dir={translate ? "auto" : "ltr"} lang={translate ? undefined : "fr"} style={{ unicodeBidi: "isolate" }}>
       {parts.map((p, i) => {
         if (p.startsWith('**') && p.endsWith('**')) {
+          const definition = termes ? trouverDefinition(termes, p.slice(2, -2)) : null
+          if (definition) return <Terme key={i} terme={p.slice(2, -2)} definition={definition} />
           return (
             <strong key={i} className="font-semibold text-slate-900 dark:text-white">
               {p.slice(2, -2)}

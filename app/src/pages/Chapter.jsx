@@ -14,9 +14,16 @@ import { useStore, useThemeTimer } from '../store.jsx'
 import { PaginatedCourse, CourseText, saveFiche } from '../components/Course.jsx'
 import GameHost from '../games/GameHost.jsx'
 import SignalerErreur from '../components/SignalerErreur.jsx'
+import { TermesProvider } from '../components/TermesContext.jsx'
 import { useT, useGameLabel } from '../i18n.js'
 
+// Les mots en gras du cours deviennent cliquables (définition) grâce au glossaire de la matière.
 export default function Chapter() {
+  const { sid } = useParams()
+  return <TermesProvider matiereId={sid}><ChapitreCours /></TermesProvider>
+}
+
+function ChapitreCours() {
   const { sid, tid, cidx } = useParams()
   const subject = getSubject(sid)
   const theme = subject?.chapters?.some(chapter => chapter.id === tid) ? getChapter(tid) : null
