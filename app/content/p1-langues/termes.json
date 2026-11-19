@@ -1,0 +1,15 @@
+{
+ "p1-langues": {
+  "comparatifs": "Comparatif anglais : -er pour les mots courts, « more » devant les mots longs.",
+  "compréhension|expression écrite|expression orale|médiation": "Compétences évaluées en langues : compréhension, expression écrite et orale, et médiation.",
+  "Conditionnels|conditionnel": "Phrases conditionnelles anglaises : type 0 (vérité générale), type 1 (possibilité réelle), type 2 (hypothèse irréelle présente), type 3 (regret sur le passé).",
+  "connecteurs": "Mots de liaison qui organisent un discours : opposition (however, sin embargo), cause (because, porque), conséquence (therefore, por lo tanto), addition (moreover), conclusion (in conclusion).",
+  "Futur": "Futur anglais : « will » + base verbale pour une décision ou une prévision, « going to » pour un projet ou une conséquence prévisible.",
+  "gustar": "Verbe espagnol « plaire » : « me gusta » + singulier, « me gustan » + pluriel ; la chose aimée est le sujet.",
+  "indefinido|imperfecto|indefinido vs imperfecto|datée|date précise|action en cours|description/habitude|habitude": "Passés de l’espagnol : le « indefinido » exprime une action terminée et datée ; l’« imperfecto » exprime une description, une habitude ou une action en cours.",
+  "Obligation|Modaux": "Obligation et modaux : « deber » et « tener que » en espagnol, « must », « have to », « should », « can », « may » en anglais expriment l’obligation, la permission, la possibilité ou le conseil.",
+  "present continuous|be + -ing": "Present continuous : temps anglais d’une action en cours, formé de « be » + verbe en -ing.",
+  "present simple|habitudes|vérité générale": "Present simple : temps anglais des habitudes et des vérités générales ; on ajoute -s à la troisième personne du singulier.",
+  "ser|Estar|ser vs estar|caractéristique permanente|identité|profession|état passager|lieu|heure": "En espagnol, « ser » exprime l’identité, la profession, l’origine et les caractéristiques permanentes ; « estar » exprime l’état passager et le lieu."
+ }
+}
