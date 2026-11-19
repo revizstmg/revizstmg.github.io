@@ -30,7 +30,7 @@ Application de révision pour les élèves de Première et Terminale STMG, déve
 | Espace | Fonctionnement | Source principale |
 |---|---|---|
 | Accueil | Reprise du dernier cours, accès aux cours et à l’entraînement, progression ; accueil distinct pour le professeur. | `app/src/pages/Home.jsx`, `app/src/components/AccueilProf.jsx` |
-| Cours | Matière, thème, chapitre, fiches, définitions et exercices ; lecture agrandie, favoris, impression et signalement d’erreur. | `app/src/pages/{Cours,Subject,Theme,Chapter}.jsx` |
+| Cours | Matière, thème, chapitre, fiches, définitions et exercices ; lecture agrandie, favoris, impression et signalement d’erreur. Les mots en gras techniques sont cliquables et ouvrent leur définition (glossaire `app/content/<matière>/termes.json` et `definitions.json`, français uniquement ; `npm run termes` liste les gras sans définition). | `app/src/pages/{Cours,Subject,Theme,Chapter}.jsx`, `app/src/components/Terme.jsx`, `app/src/data/termes.js` |
 | Exercices | QCM, vrai/faux, trous, saisie, association, tri, ordre, calcul, memory, SQL et cas/documents selon le chapitre. Tirages courts à partir de banques, avec historique local des questions proposées. | `app/src/games/`, `app/src/data/questionSessions.js` |
 | Réviser | Suivre le fil, comprendre ses erreurs, ancrer ses connaissances ; choix de matière et chapitre facultatif. Les acquis se fondent sur les réponses réellement jouées. | `app/src/pages/Revise.jsx`, `app/src/data/study.js` |
 | Flashcards | Pile à retourner, glisser ou valider au clavier ; reprise des cartes ratées, paquets enregistrés, écoute, partage et import. | `app/src/components/PileCartes.jsx`, `app/src/pages/FlashcardsPage.jsx` |

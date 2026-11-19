@@ -37,7 +37,7 @@ export function commun(nom) {
 export const NOMS_COUCHES = [
   'cours-complets', 'cours-reels', 'enrichissements', 'philo-longue-duree',
   'approfondi-1', 'approfondi-2', 'approfondi-3', 'approfondi-4', 'sic-si',
-  'histoire-approfondie', 'management-approfondi', 'definitions', 'pieges',
+  'histoire-approfondie', 'management-approfondi', 'definitions', 'termes', 'pieges',
   'cas-pratiques', 'etudes-documents', 'exercices-sections',
 ]
 export const COUCHES = Object.fromEntries(NOMS_COUCHES.map((n) => [n, {}]))

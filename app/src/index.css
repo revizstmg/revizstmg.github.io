@@ -823,3 +823,24 @@ html.dark .texte-matiere { color: color-mix(in srgb, var(--mc) 55%, #fff); }
   font-size: 0.75rem;
   line-height: 1rem;
 }
+
+/* --- Mots en gras cliquables dans les cours (définition d'un terme technique) --- */
+.terme-clic {
+  display: inline; padding: 0; margin: 0; border: 0; background: none; font: inherit; font-weight: 600;
+  cursor: help; text-align: inherit;
+  text-decoration: underline dotted; text-decoration-color: var(--c-accent-texte); text-decoration-thickness: 1.5px; text-underline-offset: 3px;
+}
+.terme-clic:hover { color: var(--c-accent-texte); }
+.terme-clic:focus-visible { outline: 2px solid var(--c-accent-fort); outline-offset: 2px; border-radius: 2px; }
+.terme-def {
+  position: fixed; z-index: 170; box-sizing: border-box; padding: 0.8rem 0.95rem 0.7rem;
+  background: var(--c-card); color: var(--c-ink); border: 1px solid color-mix(in srgb, var(--c-accent) 35%, transparent);
+  border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18); font-size: 0.875rem; line-height: 1.5; font-weight: 400; text-align: start;
+}
+.terme-def-titre { font-weight: 700; margin: 0 0 0.25rem; color: var(--c-accent-texte); }
+.terme-def-texte { margin: 0; }
+.terme-def-fermer {
+  display: block; margin: 0.55rem 0 0 auto; padding: 0.2rem 0.55rem; border: 1px solid color-mix(in srgb, var(--c-accent) 40%, transparent);
+  border-radius: 6px; background: none; color: var(--c-accent-texte); font-size: 0.78rem; cursor: pointer;
+}
+@media print { .terme-def { display: none; } .terme-clic { text-decoration: none; } }
