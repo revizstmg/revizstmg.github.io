@@ -98,7 +98,7 @@ test('les modes passent axe en clair et en sombre, sans débordement à 320 px',
   for (const dark of [false, true]) {
     await page.evaluate((d) => document.documentElement.classList.toggle('dark', d), dark)
     // Les cartes apparaissent en fondu : on mesure les contrastes une fois les animations finies.
-    await page.evaluate(() => Promise.all(document.getAnimations().map((a) => a.finished.catch(() => {}))))
+    await page.waitForFunction(() => document.getAnimations().every((a) => a.playState !== "running" || a.effect?.getComputedTiming().iterations === Infinity))
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true)
     expect((await new AxeBuilder({ page }).include('section[aria-labelledby="langues-modes"]').withTags(['wcag2a', 'wcag2aa']).analyze()).violations).toEqual([])
   }
