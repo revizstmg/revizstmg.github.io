@@ -844,3 +844,60 @@ html.dark .texte-matiere { color: color-mix(in srgb, var(--mc) 55%, #fff); }
   border-radius: 6px; background: none; color: var(--c-accent-texte); font-size: 0.78rem; cursor: pointer;
 }
 @media print { .terme-def { display: none; } .terme-clic { text-decoration: none; } }
+
+/* ---------------------------------------------------------------------------
+   Fiche PDF visuelle (FicheVisuelle.jsx) : première page, version « flemmard ».
+   Aplats, coins discrets ; à l'écran tout est masqué (print-only).
+--------------------------------------------------------------------------- */
+@media print {
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .fiche-visuelle { break-after: page; page-break-after: always; font-size: 12px; color: #111; }
+  .fiche-visuelle ~ .print-header { display: none !important; }
+  .fiche-bandeau { display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 8px; color: #fff; }
+  .fiche-bandeau-icone { font-size: 44px; line-height: 1; }
+  .fiche-bandeau-sur { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .95; }
+  .fiche-bandeau-titre { font-size: 22px; font-weight: 800; line-height: 1.15; margin: 2px 0; }
+  .fiche-bandeau-sous { font-size: 11px; opacity: .95; }
+  .fiche-flemme { margin: 8px 0 4px; padding: 6px 10px; background: #fff7cc; border: 2px dashed #d97706; border-radius: 6px; font-weight: 700; }
+  .fiche-zone { margin-top: 10px; break-inside: avoid; page-break-inside: avoid; }
+  .fiche-zone h2 { font-size: 15px; font-weight: 800; margin: 0 0 6px; }
+  .fiche-idees { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; }
+  .fiche-idees li { display: flex; gap: 8px; align-items: center; padding: 5px 9px; border-left: 5px solid; border-radius: 6px; }
+  .fiche-idees li span { font-size: 18px; }
+  .fiche-idees li p { margin: 0; font-size: 12.5px; font-weight: 600; }
+  .fiche-carte { max-height: 90mm; }
+  .fiche-formules p { margin: 0 0 4px; padding: 7px 10px; background: #fef08a; border: 2px solid #ca8a04; border-radius: 6px; font-weight: 700; font-size: 13px; }
+  .fiche-mots { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .fiche-mots li { border: 2px solid; border-radius: 6px; padding: 5px 7px; break-inside: avoid; }
+  .fiche-mots strong { display: inline-block; padding: 1px 6px; border-radius: 4px; margin-bottom: 3px; font-size: 12px; }
+  .fiche-mots span { display: block; font-size: 11px; line-height: 1.35; }
+  .fiche-cartes { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .fiche-carte-info { border-radius: 6px; padding: 6px 8px; border: 2px solid; break-inside: avoid; }
+  .fiche-carte-info b { display: block; font-size: 12px; margin-bottom: 2px; }
+  .fiche-carte-info p { margin: 0; font-size: 11px; line-height: 1.35; }
+  .fiche-piege { background: #fee2e2; border-color: #dc2626; }
+  .fiche-astuce { background: #dcfce7; border-color: #059669; }
+  .fiche-exemple { background: #dbeafe; border-color: #2563eb; }
+  .fiche-test { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 3px 12px; }
+  .fiche-test li { font-size: 12px; font-weight: 600; }
+
+  /* Encadrés du cours complet : couleurs franches à l'impression */
+  .course-callout { border-width: 2px !important; border-left-width: 6px !important; }
+  .course-example { background: #dbeafe !important; border-color: #2563eb !important; }
+  .course-tip { background: #dcfce7 !important; border-color: #059669 !important; }
+  .course-warning { background: #fef3c7 !important; border-color: #d97706 !important; }
+  .formula { background: #fef08a !important; border: 2px solid #ca8a04 !important; font-weight: 700; }
+  .course-callout p:first-child { font-size: 12px !important; }
+}
+
+/* Autres impressions : bilan Avenir et plans de sport au bac, en aplats colorés. */
+@media print {
+  .avenir-hero { background: #203e37 !important; color: #faf5e8 !important; padding: 14pt !important; border: 0 !important; border-radius: 6px !important; }
+  .avenir h2 { border-left: 6pt solid #d97706; background: #fef3c7; padding: 3pt 8pt; border-radius: 3px; }
+  .avenir .card { border: 1.5pt solid #203e37 !important; border-radius: 6px !important; }
+  .eps-plan h2, .eps-sheet h2 { background: #1d4ed8; color: #fff !important; padding: 5pt 9pt; border-radius: 4px; }
+  .eps-week h3, .eps-sheet-sport h3 { background: #dbeafe; border-left: 5pt solid #2563eb; padding: 3pt 7pt; border-radius: 3px; }
+  .eps-session, .eps-prep-session { border: 1.5pt solid #2563eb !important; border-radius: 6px !important; padding: 6pt !important; }
+  .eps-sheet-sport { border: 1.5pt solid #059669 !important; border-radius: 6px !important; }
+  table thead th { background: #e0e7ff !important; }
+}

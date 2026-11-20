@@ -40,7 +40,7 @@ for (const [nom, chemin, pleinEcran] of [
   })
 }
 
-test('impression TVA : toutes les fiches sur au plus deux feuilles A4', async ({ page }) => {
+test('impression TVA : toutes les fiches sur au plus deux feuilles A4, plus la page visuelle de tête', async ({ page }) => {
   await preparer(page)
   await page.goto('./#/subject/gestion-finance/theme/gf-t1/chapter/0')
   await attendreAccueil(page)
@@ -57,5 +57,7 @@ test('impression TVA : toutes les fiches sur au plus deux feuilles A4', async ({
   const pdf = await page.pdf({ preferCSSPageSize: true })
   const feuilles = pdf.toString('latin1').match(/\/Type\s*\/Page\b/g) || []
   expect(feuilles.length).toBeGreaterThan(0)
-  expect(feuilles.length).toBeLessThanOrEqual(2)
+  // La fiche visuelle (idées, carte mentale, mots à connaître) occupe sa propre feuille de tête.
+  const visuelle = await page.locator('.fiche-visuelle').count()
+  expect(feuilles.length).toBeLessThanOrEqual(2 + visuelle)
 })
