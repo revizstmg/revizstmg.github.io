@@ -55,7 +55,7 @@ test('parcours : valeurs courantes signalées, heures lisibles, manque expliqué
  await page.getByRole('button',{name:'Voir mon parcours'}).click()
  await expect(page.getByRole('heading',{name:'Ton plan ne couvre pas tout le programme'})).toBeVisible()
  // « 130 h 42 », pas « 130 h42 » ; jamais « trop chargé » quand c'est le temps qui manque.
- await expect(page.getByText(/Avec tes heures actuelles, tu couvres environ \d+ % du programme/)).toBeVisible()
+ await expect(page.getByText(/avec tes heures actuelles, ton plan couvre environ \d+ % du programme/)).toBeVisible()
  await expect(page.getByText(/Pour tout couvrir : environ \d+ h par semaine/)).toBeVisible()
  expect(await page.getByText('Ton plan est trop chargé').count()).toBe(0)
  expect(errors).toEqual([])

@@ -25,7 +25,7 @@
    "prompt": "Ihre Arbeit ist zu spät. Haben Sie eine Erklärung?",
    "options": [
     "Es tut mir leid, ich hatte ein Problem mit dem Laptop. Ich schicke sie heute Abend.",
-    "Entschuldigung, ich vergesse gestern.",
+    "Entschuldigung, ich vergesse gestern die Arbeit zu Hause, das ist nicht meine Schuld.",
     "Die Erklärung ist zu groß für meinen Morgen."
    ],
    "why": "Excuse, raison, solution. « Ich vergesse gestern » : mauvais temps, il faut « ich habe vergessen »."

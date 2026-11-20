@@ -33,7 +33,7 @@ test('langues : erreur récupérable et brouillons/corrections conservés entre 
   await first.fill('audit réponse')
   await first.locator('xpath=ancestor::li[1]').getByRole('button', { name: 'Vérifier', exact: true }).click()
   await expect(first).toBeDisabled()
-  await page.locator('#manuel-lecon').selectOption({ index: 2 })
+  await page.locator('#manuel-lecon').selectOption(await page.locator('#manuel-lecon option:not([disabled])').nth(2).getAttribute('value'))
   await expect(first).toHaveCount(0)
   await page.locator('#manuel-lecon').selectOption('')
   await expect(first).toHaveValue('audit réponse'); await expect(first).toBeDisabled()

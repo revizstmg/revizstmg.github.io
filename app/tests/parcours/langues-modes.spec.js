@@ -72,7 +72,7 @@ test('mise, survie et entretien : on joue, le résultat tombe, l’arabe garde l
     await page.getByRole('group', { name: 'Réponses' }).getByRole('button').first().click()
     await page.getByRole('button', { name: /Suivant|Voir mon résultat/ }).click()
   }
-  await expect(page.getByText(/Il te reste -?\d+ €/)).toBeVisible()
+  await expect(page.getByText(/Il te reste \d+ €|Tu es à découvert de \d+ €/)).toBeVisible()
   await page.getByRole('button', { name: 'Tous les modes' }).click()
   await page.getByRole('button', { name: /Entretien vexant/ }).click()
   for (let i = 0; i < 6; i++) {
@@ -97,6 +97,8 @@ test('les modes passent axe en clair et en sombre, sans débordement à 320 px',
   await jouerUneQuestion(page)
   for (const dark of [false, true]) {
     await page.evaluate((d) => document.documentElement.classList.toggle('dark', d), dark)
+    // Les cartes apparaissent en fondu : on mesure les contrastes une fois les animations finies.
+    await page.evaluate(() => Promise.all(document.getAnimations().map((a) => a.finished.catch(() => {}))))
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true)
     expect((await new AxeBuilder({ page }).include('section[aria-labelledby="langues-modes"]').withTags(['wcag2a', 'wcag2aa']).analyze()).violations).toEqual([])
   }

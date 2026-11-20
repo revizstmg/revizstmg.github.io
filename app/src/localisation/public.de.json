@@ -4764,5 +4764,10 @@
   "On te donne 5 formules au hasard, un exercice chacune.": "Du bekommst 5 zufällige Formeln, je eine Aufgabe.",
   "5 exercices au hasard": "5 zufällige Aufgaben",
   "Pas le temps d’un sujet complet ?": "Keine Zeit für eine ganze Prüfung?",
-  "Une séance express de questions, avec ton score tout de suite.": "Eine schnelle Fragenrunde, mit sofortigem Ergebnis."
+  "Une séance express de questions, avec ton score tout de suite.": "Eine schnelle Fragenrunde, mit sofortigem Ergebnis.",
+  "📖 Le jeu du chapitre : mémoriser les repères": "📖 Das Spiel des Kapitels: die Eckpunkte einprägen",
+  "Vacances STMG : deux semaines pour retravailler tes difficultés": "STMG-Ferien: zwei Wochen, um deine Schwächen aufzuarbeiten",
+  "(pas d’exercice en ligne)": "(keine Online-Übung)",
+  "On commence par l’essentiel : avec tes heures actuelles, ton plan couvre environ {v0} % du programme avant les épreuves.": "Wir beginnen mit dem Wesentlichen: Mit deinen aktuellen Stunden deckt dein Plan vor den Prüfungen etwa {v0} % des Stoffs ab.",
+  "Pour tout couvrir : environ {v0} h par semaine. Tu peux aussi garder ton rythme : une note un peu plus basse reste possible.": "Um alles abzudecken: etwa {v0} Std. pro Woche. Du kannst auch dein Tempo halten: eine etwas niedrigere Note bleibt möglich."
 }

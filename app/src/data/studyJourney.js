@@ -22,5 +22,5 @@ export const DEMO = {
 export const PLANS = [
   {id:'free',name:'Gratuit',intro:'Apprendre les bases',features:['Cours et exercices de base','Favoris et suivi de progression','Défi du jour et badges','Boutique, amis, classe et espace parent']},
   {id:'premium',name:'Premium',intro:'Les outils pour réviser',features:['Tout le contenu gratuit','Bac blanc, sujets, séance de révision et flashcards','Grand Oral, étude de gestion, atelier de formules, fiches photo, méthodo et sport au bac','Minuteur de travail, notes de classe et classement','Chaque aide par IA : 1 utilisation par mois']},
-  {id:'ultimate',name:'Ultimate',intro:'L’IA presque sans limite',features:['Tout Premium','Parcours et programmes personnalisés','Aide par IA presque illimitée (60 demandes par jour au plus) : tuteur, séries personnalisées, corrections']},
+  {id:'ultimate',name:'Ultimate',intro:'L’IA presque sans limite',features:['Tout Premium','Parcours et programmes personnalisés','Vacances STMG : deux semaines pour retravailler tes difficultés','Aide par IA presque illimitée (60 demandes par jour au plus) : tuteur, séries personnalisées, corrections']},
 ]

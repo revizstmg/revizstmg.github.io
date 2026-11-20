@@ -8,6 +8,9 @@ test('langues : les exercices du manuel se font sur le site, corrigés comme le 
  const errors=await preparer(page,etatEleve({track:{level:'premiere-stmg'},studyLanguages:['en']}))
  await page.goto('./#/subject/p1-langues');await attendreAccueil(page)
  await page.locator('.language-manual-exercises > summary').click()
+ // Par défaut seule la première leçon s'affiche (page plus courte) ; ce test parcourt tout le manuel.
+ await expect(page.getByLabel('Leçon')).toBeVisible()
+ await page.getByLabel('Leçon').selectOption('')
  await expect(page.getByRole('heading',{name:`${en.exercises.length} exercices à faire en ligne.`})).toBeVisible()
  // Exercice 1 : texte à trous, réponse « has worked ».
  const un=page.locator('#manuel-en-ex-001')
@@ -24,7 +27,7 @@ test('langues : les exercices du manuel se font sur le site, corrigés comme le 
  await qcm.getByRole('radio',{name:/went/}).click()
  await expect(qcm.getByText('✓ Juste')).toBeVisible()
  // Filtre par leçon.
- await page.getByLabel('Leçon').selectOption({index:2})
+ await page.getByLabel('Leçon').selectOption(await page.locator('#manuel-lecon option:not([disabled])').nth(2).getAttribute('value'))
  expect(await page.locator('[id^="manuel-en-ex-"]').count()).toBeLessThan(en.exercises.length)
  await page.getByLabel('Leçon').selectOption('')
  await page.evaluate(() => Promise.all(document.getAnimations().map(a => a.finished.catch(() => {}))))

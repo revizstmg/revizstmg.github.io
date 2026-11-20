@@ -11,11 +11,13 @@ test('un jeu ouvert survit au rechargement, le bouton Retour le ferme et « Joue
   await expect(page.locator('.chapter-memorisation')).toHaveAttribute('open', '')
   await expect(page.locator('[data-jeu]').first()).toBeVisible()
   await page.locator('[data-jouer-maintenant]').click()
-  await expect(page).toHaveURL(/\?jeu=/)
-  await expect(page.getByRole('button', { name: /Entraînement/ })).toBeVisible()
+  // « Jouer maintenant » lance la première question sans passer par le choix du mode.
+  await expect(page).toHaveURL(/\?jeu=.*mode=train|mode=train.*jeu=/)
+  await expect(page.locator('[data-exercice]')).toBeVisible()
+  await expect(page.getByRole('button', { name: /^Entraînement/ })).toHaveCount(0)
   await page.reload()
   await expect(page).toHaveURL(/\?jeu=/)
-  await expect(page.getByRole('button', { name: /Entraînement/ })).toBeVisible()
+  await expect(page.locator('[data-exercice]')).toBeVisible()
   // Retour du navigateur : on revient au chapitre, onglet Exercices compris.
   await page.goBack()
   await expect(page).not.toHaveURL(/\?jeu=/)

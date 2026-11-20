@@ -3885,5 +3885,10 @@
   "On te donne 5 formules au hasard, un exercice chacune.": "Te damos 5 fórmulas al azar, un ejercicio cada una.",
   "5 exercices au hasard": "5 ejercicios al azar",
   "Pas le temps d’un sujet complet ?": "¿No tienes tiempo para un examen completo?",
-  "Une séance express de questions, avec ton score tout de suite.": "Una sesión exprés de preguntas, con tu puntuación al instante."
+  "Une séance express de questions, avec ton score tout de suite.": "Una sesión exprés de preguntas, con tu puntuación al instante.",
+  "📖 Le jeu du chapitre : mémoriser les repères": "📖 El juego del capítulo: memorizar los puntos clave",
+  "Vacances STMG : deux semaines pour retravailler tes difficultés": "Vacaciones STMG: dos semanas para repasar tus dificultades",
+  "(pas d’exercice en ligne)": "(sin ejercicio en línea)",
+  "On commence par l’essentiel : avec tes heures actuelles, ton plan couvre environ {v0} % du programme avant les épreuves.": "Empezamos por lo esencial: con tus horas actuales, tu plan cubre aproximadamente un {v0} % del temario antes de los exámenes.",
+  "Pour tout couvrir : environ {v0} h par semaine. Tu peux aussi garder ton rythme : une note un peu plus basse reste possible.": "Para cubrirlo todo: unas {v0} h por semana. También puedes mantener tu ritmo: una nota algo más baja sigue siendo posible."
 }

@@ -164,8 +164,8 @@ function Plan({ matieres, onTest, onModifier }) {
           {plan.heuresConseillees
             ? (
               <>
-                <p className="mt-1 text-sm">{`Avec tes heures actuelles, tu couvres environ ${Math.round((plan.minutesPlacees / Math.max(1, plan.minutesTotal)) * 100)} % du programme avant les épreuves.`}</p>
-                <p className="mt-1 text-sm">{`Pour tout couvrir : environ ${heuresRondes(plan.heuresConseillees)} h par semaine. Sinon, garde ton rythme : on commence par l’essentiel, et une note un peu plus basse reste possible.`}</p>
+                <p className="mt-1 text-sm">{`On commence par l’essentiel : avec tes heures actuelles, ton plan couvre environ ${Math.round((plan.minutesPlacees / Math.max(1, plan.minutesTotal)) * 100)} % du programme avant les épreuves.`}</p>
+                <p className="mt-1 text-sm">{`Pour tout couvrir : environ ${heuresRondes(plan.heuresConseillees)} h par semaine. Tu peux aussi garder ton rythme : une note un peu plus basse reste possible.`}</p>
                 <button type="button" className="btn-primary mt-3" onClick={() => setParcours((avant) => ({ ...avant, objectifs: { ...avant.objectifs, heuresSemaine: plan.heuresConseillees } }))}>{`Passer à ${heuresRondes(plan.heuresConseillees)} h par semaine`}</button>
               </>
             )

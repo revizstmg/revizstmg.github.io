@@ -296,7 +296,7 @@ function ModeSurvie({ donnees, onFin }) {
       <p className="font-semibold">{s.titre}</p>
       <p className="text-sm">Tu pars avec {BUDGET_SURVIE} €. Tout ce qui reste à la fin est à toi.</p>
       <Parcours key={partie} etapes={s.etapes} depart={s.budget} valeur={(t, o) => t - o.cout} onFin={(reste) => onFin(Math.max(0, Math.round(reste / 10)), 10)}
-        resultat={(reste) => { const v = verdictSurvie(reste); return <div lang="fr" data-no-translate className="space-y-3" aria-live="polite"><p className="font-display text-3xl">Il te reste {reste} €</p><p><b>{v.titre}</b></p><p>{v.texte}</p><Rejouer onClick={() => setPartie((p) => p + 1)} /></div> }} />
+        resultat={(reste) => { const v = verdictSurvie(reste); return <div lang="fr" data-no-translate className="space-y-3" aria-live="polite"><p className="font-display text-3xl">{reste >= 0 ? `Il te reste ${reste} €` : `Tu es à découvert de ${-reste} €`}</p><p><b>{v.titre}</b></p><p>{v.texte}</p><Rejouer onClick={() => setPartie((p) => p + 1)} /></div> }} />
     </div>
   )
 }

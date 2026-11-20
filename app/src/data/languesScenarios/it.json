@@ -25,7 +25,7 @@
    "prompt": "La tua relazione è in ritardo. Hai una spiegazione?",
    "options": [
     "Mi dispiace, ho avuto un problema con il computer. La mando stasera.",
-    "Scusi, io dimentico ieri.",
+    "Scusi, io dimentico ieri la relazione a casa, non è colpa mia, professore.",
     "La spiegazione è troppo grande per la mia mattina."
    ],
    "why": "Excuse courte, raison, solution. « Dimentico ieri » mélange les temps."
@@ -182,7 +182,7 @@
    "prompt": "cmq ci vediamo dopo, ok?",
    "options": [
     "De toute façon on se voit plus tard, d'accord ?",
-    "Combien on se voit ensuite, ok ?",
+    "Combien de fois on se voit ensuite, d'accord, ok ?",
     "Comment on se voit après, ok ?"
    ],
    "why": "« Cmq » = comunque."
@@ -192,7 +192,7 @@
    "prompt": "tvb tantissimo",
    "options": [
     "Je t'aime beaucoup, vraiment.",
-    "Je te vois bientôt.",
+    "Je te vois bientôt, tu sais, à la sortie des cours.",
     "Je te voudrais beaucoup."
    ],
    "why": "« Tvb » = ti voglio bene."
@@ -203,7 +203,7 @@
    "options": [
     "Pourquoi tu ne réponds pas ?",
     "Parce que tu ne réponds pas.",
-    "Quand tu réponds ?"
+    "Quand est-ce que tu vas enfin me répondre, dis-moi ?"
    ],
    "why": "« Xké » = perché (pourquoi)."
   },

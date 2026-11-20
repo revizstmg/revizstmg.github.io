@@ -58,7 +58,7 @@ function ChapitreCours() {
   // notions de la section (disponibles partout, pas seulement dans l'app).
   const games = useMemo(() => jeuxAffiches(chapter, theme), [chapter, theme])
   const activeGame = useMemo(() => (jeuId ? games.find((g) => g.id === jeuId) || null : null), [jeuId, games])
-  const setActiveGame = (g) => { if (g) setParams({ jeu: g.id }); else setParams({}, { replace: true }) }
+  const setActiveGame = (g, mode = null) => { if (g) setParams(mode ? { jeu: g.id, mode } : { jeu: g.id }); else setParams({}, { replace: true }) }
   // Un jeu ouvert doit s'afficher depuis son début, pas depuis la position de la liste.
   useEffect(() => { if (activeGame) window.scrollTo(0, 0) }, [activeGame])
 
@@ -90,7 +90,7 @@ function ChapitreCours() {
   if (activeGame) {
     return (
       <div className="space-y-4">
-        <GameHost game={activeGame} chapterId={tid} color={color} onExit={() => {
+        <GameHost game={activeGame} chapterId={tid} color={color} modeInitial={params.get('mode') === 'train' ? 'train' : null} onExit={() => {
           // Au clavier, le focus revient sur l'exercice qu'on vient de quitter.
           const id = activeGame.id
           setActiveGame(null)
@@ -116,7 +116,7 @@ function ChapitreCours() {
         <div>{theme.name} — {chapter.title}{studentName ? ` · ${studentName}` : ''} · {printDate}</div>
       </div>
 
-      <nav className="chapter-trail no-print text-xs text-slate-500 dark:text-slate-400">
+      <nav className="chapter-trail no-print hidden text-xs text-slate-500 dark:text-slate-400 sm:block">
         <Link to={`/subject/${sid}`} className="hover:underline" style={{ color }}>{subject.name}</Link>
         <span className="mx-1">›</span>
         <Link to={`/subject/${sid}/theme/${tid}`} className="hover:underline" style={{ color }}>{theme.short || t('theme')}</Link>
@@ -208,7 +208,7 @@ function ChapitreCours() {
       {/* ONGLET EXERCICES (jamais imprimé) */}
       <div className={`${tab === 'exos' ? 'space-y-2.5' : 'hidden'} no-print`}>
         {games.length > 0 && (
-          <button type="button" data-jouer-maintenant className="btn-primary w-full" onClick={() => setActiveGame(games.find((g) => g.type === 'qcm') || games[0])}>
+          <button type="button" data-jouer-maintenant className="btn-primary w-full" onClick={() => setActiveGame(games.find((g) => g.type === 'qcm') || games[0], 'train')}>
             ⚡ <TextePublic text="Jouer maintenant" />
           </button>
         )}
@@ -245,7 +245,7 @@ function ChapitreCours() {
             </section>
           )
         })()}
-        <details className="chapter-memorisation" open={memoryOpen} onToggle={e=>setMemoryOpen(e.currentTarget.open)}><summary><TextePublic text="📖 Les {v0} jeux du chapitre : mémoriser les repères" values={[games.length]} /></summary><p className="mt-2 text-sm">Les jeux courts pour retenir les termes et les phrases du cours. Choisis un format plutôt que de tous les enchaîner.</p>
+        <details className="chapter-memorisation" open={memoryOpen} onToggle={e=>setMemoryOpen(e.currentTarget.open)}><summary>{games.length === 1 ? <TextePublic text="📖 Le jeu du chapitre : mémoriser les repères" /> : <TextePublic text="📖 Les {v0} jeux du chapitre : mémoriser les repères" values={[games.length]} />}</summary><p className="mt-2 text-sm">Les jeux courts pour retenir les termes et les phrases du cours. Choisis un format plutôt que de tous les enchaîner.</p>
         <h2 className="exercise-shelf-title font-display">{t('gamesOfChapter')}</h2>
         <div className="chapter-exercise-grid">{games.length > 0 ? games.map((g, gameIndex) => {
           const best = rec?.games?.[g.id]

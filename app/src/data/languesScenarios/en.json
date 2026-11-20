@@ -25,7 +25,7 @@
    "prompt": "Your report is late. Do you have an explanation?",
    "options": [
     "I'm sorry, I had a problem with my laptop. I can send it tonight.",
-    "Sorry, I forget it. It's not my fault.",
+    "Sorry, I forget it. It's not my fault, the weekend was really too short for that.",
     "Explanation is a very big word for my morning."
    ],
    "why": "Bonne réponse : excuse courte, raison crédible, solution. « I forget » est au présent, il faut « I forgot », et « not my fault » aggrave."
@@ -35,7 +35,7 @@
    "prompt": "Dude, who ate my pizza?? I'm literally shaking.",
    "options": [
     "I'm sorry, I ate it. I'll buy you another one.",
-    "I am eating it since yesterday.",
+    "I am eating it since yesterday, and honestly it was very good, you know.",
     "The pizza was in an economic crisis."
    ],
    "why": "Pour une action finie dans le passé, on utilise le prétérit : « I ate it ». « I am eating since » mélange tout."

@@ -95,11 +95,11 @@ describe('scénarios des modes de langues', () => {
       const longueur = (o) => (typeof o === 'string' ? o.length : o.t.length)
       for (const cle of ['snap', 'texto']) {
         const n = d[cle].filter((s) => longueur(s.options[0]) === Math.max(...s.options.map(longueur))).length
-        expect(n / d[cle].length, `${l}.${cle}`).toBeLessThanOrEqual(0.7)
+        expect(n / d[cle].length, `${l}.${cle}`).toBeLessThanOrEqual(0.5)
       }
       const q = d.entretien.questions
       const n = q.filter((x) => x.options.reduce((a, b) => (longueur(b) > longueur(a) ? b : a)).pts === 3).length
-      expect(n / q.length, `${l}.entretien`).toBeLessThanOrEqual(0.7)
+      expect(n / q.length, `${l}.entretien`).toBeLessThanOrEqual(0.5)
     })
     it(`${l} : survie et entretien ont des coûts et des notes cohérents`, () => {
       expect(d.survie.budget).toBe(100)
