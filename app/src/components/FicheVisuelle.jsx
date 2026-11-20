@@ -56,7 +56,7 @@ export default function FicheVisuelle({ section, glossaire, couleur, icone, mati
         <span className="fiche-bandeau-icone" aria-hidden>{icone || '📘'}</span>
         <div>
           <p className="fiche-bandeau-sur">{matiere} · {theme}</p>
-          <h1 className="fiche-bandeau-titre">{titre}</h1>
+          <p className="fiche-bandeau-titre">{titre}</p>
           <p className="fiche-bandeau-sous">{eleve ? `Fiche de ${eleve} · ` : ''}{date}</p>
         </div>
       </header>
