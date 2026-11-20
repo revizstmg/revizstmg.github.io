@@ -5,7 +5,10 @@ root=pathlib.Path(__file__).resolve().parents[2]
 parser=argparse.ArgumentParser();parser.add_argument('--sortie');args=parser.parse_args()
 rows=[]
 def words(doc):
-    return collections.Counter(unicodedata.normalize('NFKC',str(w[4])) for p in doc for w in p.get_text('words') if w[3]<p.rect.height-35)
+    # Les césures de mise en page ne changent pas le texte : un trait d'union suivi d'un retour
+    # à la ligne est recollé avant la comparaison, de la même façon des deux côtés.
+    texte=' '.join(unicodedata.normalize('NFKC',str(w[4])) for p in doc for w in p.get_text('words') if w[3]<p.rect.height-35)
+    return collections.Counter(re.sub(r'-\s+','-',texte).split())
 with tempfile.TemporaryDirectory() as temp:
  for lang in ['en','es','it','ar','de']:
     resource=root/'app/resources/langues';path=resource/f'guide-{lang}.pdf';source=json.loads((resource/f'{lang}.json').read_text());raw=path.read_bytes();doc=fitz.open(path)

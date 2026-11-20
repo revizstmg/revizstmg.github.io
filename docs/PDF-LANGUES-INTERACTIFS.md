@@ -16,6 +16,10 @@ python3 app/scripts/verifier-guides-interactifs.py --sortie /tmp/preuves-pdf.jso
 
 La génération HTML réserve des espaces à hauteur bornée. Le post-traitement PyMuPDF ajoute les formulaires, supprime les seuls repères techniques et conserve les liens. Les champs sont identifiés par l’identifiant stable de l’exercice et portent un libellé lisible. Les zones de réponse sont défilantes, sans agrandir chaque exercice en page séparée. PyMuPDF est une dépendance de génération manuelle uniquement ; ni l’application ni la compilation Pages ne l’exécutent. Git traite les PDF comme des binaires via `.gitattributes`.
 
+## Présentation
+
+Chaque guide a sa couleur (anglais bleu, espagnol rouge, italien vert, arabe violet, allemand ambre) : couverture en aplat avec drapeau, leçons à pastille numérotée, vocabulaire en cartes, exercices en cartes avec pastille de type, zones de réponse jaune pâle et corrigés en cartes vertes. Les styles sont dans `cssLudique` de `app/scripts/guides-langues.mjs`.
+
 ## Contrôles
 
 La vérification lit les cinq fichiers, compte les champs et leurs types, contrôle les réponses initiales vides, les choix proposés, les liens et leurs destinations, ainsi que le texte antérieur hors pieds de page. Elle remplit une copie temporaire, sélectionne une réponse et coche une case, enregistre puis relit les valeurs. Le document distribué reste inchangé. L’arabe et les caractères accentués sont inclus dans ce contrôle ; une page remplie en arabe est inspectée visuellement. Ces contrôles démontrent les formulaires standards et leur persistance, sans certifier chaque application de lecture disponible.
