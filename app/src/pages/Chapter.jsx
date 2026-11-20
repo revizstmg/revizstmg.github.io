@@ -14,7 +14,8 @@ import { useStore, useThemeTimer } from '../store.jsx'
 import { PaginatedCourse, CourseText, saveFiche } from '../components/Course.jsx'
 import GameHost from '../games/GameHost.jsx'
 import SignalerErreur from '../components/SignalerErreur.jsx'
-import { TermesProvider } from '../components/TermesContext.jsx'
+import { TermesProvider, useTermes } from '../components/TermesContext.jsx'
+import FicheVisuelle from '../components/FicheVisuelle.jsx'
 import { useT, useGameLabel } from '../i18n.js'
 
 // Les mots en gras du cours deviennent cliquables (définition) grâce au glossaire de la matière.
@@ -31,6 +32,7 @@ function ChapitreCours() {
   const t = useT()
   const niveauAcces = useNiveauAcces()
   const navigate = useNavigate()
+  const glossaire = useTermes()
   const gameLabel = useGameLabel()
   const [activeGame, setActiveGame] = useState(null)
   const [memoryOpen,setMemoryOpen]=useState(false)
@@ -97,6 +99,11 @@ function ChapitreCours() {
 
   return (
     <div className="chapter-page course-studio animate-lux space-y-4">
+      {(state.lang || 'fr') === 'fr' && (
+        <FicheVisuelle section={chapter.section} glossaire={glossaire} couleur={color} icone={subject.icon} matiere={subject.name}
+          theme={theme.short || theme.name} titre={chapter.title} eleve={studentName} date={printDate} />
+      )}
+
       {/* En-tête visible uniquement à l'impression (fiche de révision PDF) */}
       <div className="print-only print-header">
         <div className="print-title">RévizSTMG — {t('revisionSheet')}</div>
