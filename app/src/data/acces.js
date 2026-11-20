@@ -14,12 +14,13 @@ import { lireEtatPaiement } from './abonnement.js'
 
 // Une seule liste : tout chemin qui commence par l'un de ces préfixes demande un abonnement.
 // Restent gratuits : accueil, cours, matières et chapitres, missions (exercices), favoris,
-// programme, profil, paramètres, offres, FAQ, guide, pages légales, la présentation des vacances
+// programme, profil, paramètres, offres, FAQ, guide, pages légales, le défi du jour et les badges (les deux
+// rendez-vous qui donnent envie de revenir), la présentation des vacances
 // ainsi que la boutique et les espaces amis, classe et parent.
 export const PAGES_PAYANTES = [
-  '/seance', '/parcours', '/mes-notes', '/badges', '/coach', '/coach-ia', '/revision',
+  '/seance', '/parcours', '/mes-notes', '/coach', '/coach-ia', '/revision',
   '/excellence-economique', '/bac-blanc', '/grand-oral', '/etude-de-gestion',
-  '/fiches-photo', '/defi', '/atelier-formules', '/methodo', '/sport-bac', '/classement',
+  '/fiches-photo', '/atelier-formules', '/methodo', '/sport-bac', '/classement',
 ]
 // Pages qui demandent d’abord un compte : un visiteur sans compte voit l’invitation
 // à en créer un (rendue par la page) plutôt que l'écran d'abonnement.

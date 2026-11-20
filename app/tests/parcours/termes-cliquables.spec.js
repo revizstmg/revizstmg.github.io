@@ -69,11 +69,20 @@ test('un gras sans définition reste un gras (pas un bouton)', async ({ page }) 
   expect(await page.locator('main strong button, main button strong').count()).toBe(0)
 })
 
-test('dans le lecteur de cours plein écran, la définition passe devant et se lit', async ({ page }) => {
+test('un terme de la fiche ouvre sa définition sans ouvrir le lecteur ; dans le lecteur plein écran la définition passe devant', async ({ page }) => {
   await preparer(page, etatEleve())
   await page.setViewportSize({ width: 375, height: 667 })
   await ouvrirChapitre(page, 'droit/theme/droit-t8/chapter/1')
+  // Toucher un terme dans la fiche : la définition s'ouvre, le lecteur plein écran reste fermé.
   await (await termeALEcran(page)).click()
+  await expect(page.locator('.terme-def')).toBeVisible()
+  await expect(page.locator('.reader-full')).toHaveCount(0)
+  await page.keyboard.press('Escape')
+  await expect(page.locator('.terme-def')).toHaveCount(0)
+  // Le lecteur s'ouvre en touchant la fiche ailleurs ; un terme y ouvre sa définition devant lui.
+  await page.locator('.reader-a4').first().click({ position: { x: 6, y: 6 } })
+  await expect(page.locator('.reader-full')).toBeVisible()
+  await page.locator('.reader-full .terme-clic').first().click()
   const def = page.locator('.terme-def')
   await expect(def).toBeVisible()
   // L'élément au centre de la fenêtre est bien la définition (rien ne la recouvre).

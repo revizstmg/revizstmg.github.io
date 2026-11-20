@@ -46,9 +46,9 @@ test('parcours personnalisé : objectifs, test de positionnement, plan qui s’a
  await page.getByRole('button',{name:'Modifier mes objectifs'}).click()
  await page.getByLabel('Combien d’heures peux-tu réviser chaque semaine ?').selectOption('1')
  await page.getByRole('button',{name:'Enregistrer'}).click()
- await expect(page.getByRole('heading',{name:'Ton temps de révision ne suffit pas'})).toBeVisible()
+ await expect(page.getByRole('heading',{name:'Ton plan ne couvre pas tout le programme'})).toBeVisible()
  await page.getByRole('button',{name:/^Passer à .* h par semaine$/}).click()
- await expect(page.getByRole('heading',{name:'Ton temps de révision ne suffit pas'})).toHaveCount(0)
+ await expect(page.getByRole('heading',{name:'Ton plan ne couvre pas tout le programme'})).toHaveCount(0)
  expect(errors).toEqual([])
 })
 

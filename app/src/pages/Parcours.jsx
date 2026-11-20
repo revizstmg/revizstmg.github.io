@@ -160,11 +160,12 @@ function Plan({ matieres, onTest, onModifier }) {
 
       {!plan.faisable && (
         <section className="card border-amber-400 p-5" role="status" aria-labelledby="parcours-alerte">
-          <h2 id="parcours-alerte" className="font-display text-lg font-semibold">Ton temps de révision ne suffit pas</h2>
+          <h2 id="parcours-alerte" className="font-display text-lg font-semibold">Ton plan ne couvre pas tout le programme</h2>
           {plan.heuresConseillees
             ? (
               <>
-                <p className="mt-1 text-sm">{`Il manque environ ${Math.ceil(plan.manque / 60)} h pour atteindre ton objectif avant les épreuves. Il faudrait réviser environ ${heuresRondes(plan.heuresConseillees)} h par semaine, ou viser une note un peu plus basse.`}</p>
+                <p className="mt-1 text-sm">{`On commence par l’essentiel : avec tes heures actuelles, ton plan couvre environ ${Math.round((plan.minutesPlacees / Math.max(1, plan.minutesTotal)) * 100)} % du programme avant les épreuves.`}</p>
+                <p className="mt-1 text-sm">{`Pour tout couvrir : environ ${heuresRondes(plan.heuresConseillees)} h par semaine. Tu peux aussi garder ton rythme : une note un peu plus basse reste possible.`}</p>
                 <button type="button" className="btn-primary mt-3" onClick={() => setParcours((avant) => ({ ...avant, objectifs: { ...avant.objectifs, heuresSemaine: plan.heuresConseillees } }))}>{`Passer à ${heuresRondes(plan.heuresConseillees)} h par semaine`}</button>
               </>
             )

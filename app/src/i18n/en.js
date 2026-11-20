@@ -374,7 +374,7 @@ export default {
   unlocked: 'unlocked', earnedCheck: 'Earned ✓', resetProgress: 'Reset my progress',
   resetConfirm: 'Erase all your progress (XP, badges, scores) on this device?',
   noFavYet: 'No favorite chapter yet.',
-  addFavHint: 'Add some with the star ☆ on a chapter page.',
+  addFavHint: 'Add some with the star ☆ on a topic page.',
   removeFav: 'Remove from favorites', addFav: 'Add to favorites',
   autoTranslated: 'automatically translated',
   myPath: 'My path',

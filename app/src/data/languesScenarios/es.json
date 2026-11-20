@@ -1,0 +1,406 @@
+{
+ "snap": [
+  {
+   "intro": "Ton pote madrilène te demande si tu viens.",
+   "prompt": "¿Vienes esta noche o me vas a dejar plantado otra vez?",
+   "options": [
+    "Voy, te lo prometo. Perdona por lo de la última vez.",
+    "Yo vengo ayer, no problema, tú tranquilo que yo ya estaba ahí con todos.",
+    "Voy a la luna con tu primo."
+   ],
+   "why": "La bonne réponse répond à la question et s'excuse. « Yo vengo ayer » mélange présent et passé."
+  },
+  {
+   "intro": "Un mignon répond à ta story.",
+   "prompt": "Oye, ¿ese perro de tu historia es tuyo? ¡Qué guapo!",
+   "options": [
+    "Sí, es mío. Se llama Churro.",
+    "Sí, yo tengo diecinueve años y él cuatro patas.",
+    "Mi perro es una teoría económica."
+   ],
+   "why": "En espagnol, on répond à la question : « Sí, es mío. »"
+  },
+  {
+   "intro": "Ton prof veut une explication.",
+   "prompt": "Tu trabajo llega tarde. ¿Tienes una explicación?",
+   "options": [
+    "Lo siento, tuve un problema con el ordenador. Se lo mando esta noche.",
+    "Perdón, yo olvido ayer.",
+    "La explicación es muy grande para mi mañana."
+   ],
+   "why": "Excuse courte, raison crédible, solution. « Olvido ayer » ne marche pas : « olvidé »."
+  },
+  {
+   "intro": "Au restaurant à Madrid.",
+   "prompt": "¿Qué van a tomar?",
+   "options": [
+    "Una hamburguesa y un agua, por favor.",
+    "Yo querer hamburguesa y agua.",
+    "Quiero el número de teléfono del cocinero."
+   ],
+   "why": "On utilise « quiero » ou « una… por favor », pas l'infinitif."
+  },
+  {
+   "intro": "Dans le train, quelqu'un veut s'asseoir.",
+   "prompt": "Perdona, ¿está libre este asiento?",
+   "options": [
+    "Sí, siéntate. Está libre.",
+    "Sí, yo estoy libre desde tres horas.",
+    "Solo si me dices tu signo del zodiaco."
+   ],
+   "why": "On répond simplement : « Sí, está libre. »"
+  }
+ ],
+ "faux": [
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« éxito » veut dire…",
+   "options": [
+    "succès",
+    "sortie",
+    "exit",
+    "excès"
+   ],
+   "why": "« Éxito » = succès. La sortie se dit « salida »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« estoy embarazada » veut dire…",
+   "options": [
+    "je suis enceinte",
+    "je suis embarrassée",
+    "je suis fatiguée",
+    "je suis en retard"
+   ],
+   "why": "« Embarazada » = enceinte. Embarrassée se dit « avergonzada »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« largo » veut dire…",
+   "options": [
+    "long",
+    "large",
+    "grand",
+    "lent"
+   ],
+   "why": "« Largo » = long. Large se dit « ancho »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« estoy constipado » veut dire…",
+   "options": [
+    "je suis enrhumé",
+    "je suis constipé",
+    "je suis fatigué",
+    "je suis pressé"
+   ],
+   "why": "« Constipado » = enrhumé. Constipé se dit « estreñido »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« una librería » est…",
+   "options": [
+    "une librairie",
+    "une bibliothèque",
+    "un livre",
+    "une liberté"
+   ],
+   "why": "« Librería » = librairie. Bibliothèque = « biblioteca »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« la ropa » veut dire…",
+   "options": [
+    "les vêtements",
+    "la robe",
+    "la corde",
+    "la rose"
+   ],
+   "why": "« Ropa » = vêtements. La robe se dit « vestido »."
+  }
+ ],
+ "serie": [
+  {
+   "intro": "Deux amis ratent le dernier bus.",
+   "prompt": "Ya ____ el último autobús.",
+   "options": [
+    "pasó",
+    "pasa",
+    "pasando",
+    "pasado"
+   ],
+   "why": "Action terminée : « pasó » (passé simple)."
+  },
+  {
+   "intro": "Un mec cuisine pour la première fois.",
+   "prompt": "¡Qué ____ huele! ¿Está quemado?",
+   "options": [
+    "mal",
+    "malo",
+    "mala",
+    "malos"
+   ],
+   "why": "Après « huele », on utilise l'adverbe « mal »."
+  },
+  {
+   "intro": "Quelqu'un ment sur son âge.",
+   "prompt": "Dice que ____ veinte años.",
+   "options": [
+    "tiene",
+    "es",
+    "está",
+    "hace"
+   ],
+   "why": "En espagnol, on a l'âge : « tiene veinte años »."
+  },
+  {
+   "intro": "Une étudiante arrive en retard.",
+   "prompt": "Llego tarde ____ perdí el metro.",
+   "options": [
+    "porque",
+    "por qué",
+    "porqué",
+    "por que"
+   ],
+   "why": "« Porque » en un mot introduit la cause."
+  },
+  {
+   "intro": "Deux amis choisissent un film.",
+   "prompt": "¿Qué ____ ver esta noche?",
+   "options": [
+    "quieres",
+    "quieras",
+    "querer",
+    "quiere a"
+   ],
+   "why": "Avec « tú », on dit « quieres »."
+  }
+ ],
+ "texto": [
+  {
+   "intro": "Un pote est inquiet.",
+   "prompt": "q tal? xq no contestas a mis mensajes?",
+   "options": [
+    "Ça va ? Pourquoi tu ne réponds pas à mes messages ?",
+    "Quel temps fait-il ? Parce que tu ne réponds jamais à mes messages.",
+    "Qui es-tu exactement ? Je ne te connais pas du tout, désolé."
+   ],
+   "why": "« q » = qué, « xq » = porque ou por qué."
+  },
+  {
+   "intro": "Un ami fixe un rendez-vous.",
+   "prompt": "nos vemos x la tarde, vale?",
+   "options": [
+    "On se voit dans l'après-midi, d'accord ?",
+    "On se voit pour la tarte cet après-midi, valable pour tout le monde ?",
+    "On se voit hier soir, vraiment ? Je ne m'en souviens pas."
+   ],
+   "why": "« x » = por, « vale » = d'accord."
+  },
+  {
+   "intro": "Un message tendre.",
+   "prompt": "tqm, eres el mejor",
+   "options": [
+    "Je t'aime beaucoup, tu es le meilleur.",
+    "Je te déteste beaucoup, tu es le pire de la classe.",
+    "Je te demande beaucoup, tu es parti sans me le dire."
+   ],
+   "why": "« tqm » = te quiero mucho."
+  },
+  {
+   "intro": "Un ami est fauché.",
+   "prompt": "estoy sin pasta hasta fin de mes",
+   "options": [
+    "Je n'ai plus d'argent jusqu'à la fin du mois.",
+    "Je n'ai pas de pâtes jusqu'à la fin du mois, il faut en acheter.",
+    "Je suis sans aide de l'État jusqu'à la fin du mois, comme toujours."
+   ],
+   "why": "« Pasta » = argent en argot espagnol."
+  },
+  {
+   "intro": "Un ami est enthousiaste.",
+   "prompt": "¡qué guay, mola mucho!",
+   "options": [
+    "Trop bien, ça déchire !",
+    "Quel danger, ça mord beaucoup !",
+    "Quelle honte, c'est trop mou !"
+   ],
+   "why": "« Guay » et « molar » = être cool."
+  }
+ ],
+ "survie": {
+  "titre": "Madrid : 100 € pour tenir une journée",
+  "budget": 100,
+  "etapes": [
+   {
+    "scene": "Aéroport. Le chauffeur de taxi attend.",
+    "prompt": "¿A dónde va?",
+    "options": [
+     {
+      "t": "Al centro, por favor. ¿Cuánto cuesta más o menos?",
+      "cout": 20,
+      "w": "Tu demandes le prix : course normale."
+     },
+     {
+      "t": "Centro. Rápido.",
+      "cout": 35,
+      "w": "Il prend le chemin des écoliers."
+     },
+     {
+      "t": "Donde sea.",
+      "cout": 55,
+      "w": "Il roule, il roule, il adore ton idée."
+     }
+    ]
+   },
+   {
+    "scene": "Au restaurant, le serveur est pressé.",
+    "prompt": "¿Qué desea tomar?",
+    "options": [
+     {
+      "t": "El menú del día, por favor.",
+      "cout": 12,
+      "w": "Bonne question, bon repas."
+     },
+     {
+      "t": "Lo más caro de la carta.",
+      "cout": 45,
+      "w": "Tu commandes le plat le plus cher sans le savoir."
+     },
+     {
+      "t": "Un poco de todo.",
+      "cout": 38,
+      "w": "Il t'apporte tout, et l'addition aussi."
+     }
+    ]
+   },
+   {
+    "scene": "Dans la rue, un vendeur te tend une casquette.",
+    "prompt": "¡Solo cincuenta euros, amigo!",
+    "options": [
+     {
+      "t": "Es muy caro. ¿Puede hacerme un descuento?",
+      "cout": 20,
+      "w": "Tu négocies et tu gagnes."
+     },
+     {
+      "t": "Vale, cincuenta.",
+      "cout": 50,
+      "w": "Il adore ta façon d'accepter."
+     },
+     {
+      "t": "¿Cincuenta qué?",
+      "cout": 30,
+      "w": "Il hausse le prix pour ton temps."
+     }
+    ]
+   },
+   {
+    "scene": "Tu es perdu, il pleut.",
+    "prompt": "¿Puedo ayudarle?",
+    "options": [
+     {
+      "t": "Perdone, ¿cómo llego a la estación?",
+      "cout": 0,
+      "w": "Phrase simple, direction claire."
+     },
+     {
+      "t": "Yo perdido, estación dónde?",
+      "cout": 8,
+      "w": "Il comprend, tu offres un café."
+     },
+     {
+      "t": "¡Estación, estación!",
+      "cout": 15,
+      "w": "Il t'appelle un taxi."
+     }
+    ]
+   }
+  ]
+ },
+ "entretien": {
+  "poste": "Stage en commerce dans une entreprise de sport",
+  "questions": [
+   {
+    "prompt": "Cuéntame sobre ti.",
+    "options": [
+     {
+      "t": "Soy estudiante de comercio. Soy organizado y me gusta el trabajo en equipo.",
+      "pts": 3,
+      "w": "Court, positif, utile."
+     },
+     {
+      "t": "Pues... tengo dieciocho años. Me gusta dormir, jugar y no hacer absolutamente nada.",
+      "pts": 0,
+      "w": "Honnête, mais pas ce qu'on attend."
+     },
+     {
+      "t": "Está todo en mi currículum, así que puede leerlo usted mismo, creo.",
+      "pts": 1,
+      "w": "Le recruteur fait tout le travail."
+     }
+    ]
+   },
+   {
+    "prompt": "¿Por qué quiere hacer las prácticas aquí?",
+    "options": [
+     {
+      "t": "Quiero aprender cómo funciona una empresa real y ser útil al equipo.",
+      "pts": 3,
+      "w": "Motivation claire et utile."
+     },
+     {
+      "t": "Porque me lo pidió mi madre.",
+      "pts": 0,
+      "w": "Ta mère a des idées, pas toi."
+     },
+     {
+      "t": "Porque está cerca de mi casa.",
+      "pts": 1,
+      "w": "Pratique, pas très motivant."
+     }
+    ]
+   },
+   {
+    "prompt": "¿Cuál es su mayor defecto?",
+    "options": [
+     {
+      "t": "A veces soy perfeccionista, pero aprendo a priorizar.",
+      "pts": 3,
+      "w": "Un vrai défaut avec une solution."
+     },
+     {
+      "t": "Soy muy vago. Mis profesores pueden confirmarlo, lo dicen todos los años.",
+      "pts": 0,
+      "w": "La vérité, mais pas au bon moment."
+     },
+     {
+      "t": "De verdad no tengo defectos, soy perfecto en todo lo que hago en clase.",
+      "pts": 1,
+      "w": "Personne ne croit ça."
+     }
+    ]
+   },
+   {
+    "prompt": "¿Tiene alguna pregunta para nosotros?",
+    "options": [
+     {
+      "t": "Sí. ¿Cómo sería un día normal para un becario?",
+      "pts": 3,
+      "w": "Tu montres que tu veux venir."
+     },
+     {
+      "t": "¿Cuántos días de vacaciones tengo?",
+      "pts": 1,
+      "w": "Légitime, mais pas en premier."
+     },
+     {
+      "t": "No. Adiós.",
+      "pts": 0,
+      "w": "Tu t'en vas déjà ?"
+     }
+    ]
+   }
+  ]
+ }
+}

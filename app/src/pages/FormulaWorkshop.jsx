@@ -28,8 +28,10 @@ function Workshop({track, scope}) {
   const hiddenSelected=selected.length-chosen.length
   const sessionFormulas=[...new Map((session || []).map(q=>[q.formula.id,q.formula])).values()]
   const toggle=id=>setSelected(ids=>ids.includes(id)?ids.filter(x=>x!==id):[...ids,id])
-  const begin=(fs)=>{if(!fs.length) return; setSession(buildFormulaSession(fs,fs.length*repeat));setIndex(0);setResults([]);setFinished(false);setFeedback(null);setAnswer('');setInvalid(false);setHint(false);setPaused(false)}
+  const begin=(fs,rep=repeat)=>{if(!fs.length) return; setSession(buildFormulaSession(fs,fs.length*rep));setIndex(0);setResults([]);setFinished(false);setFeedback(null);setAnswer('');setInvalid(false);setHint(false);setPaused(false)}
   const start=()=>begin(chosen)
+  // Pour ne pas avoir à choisir : cinq formules au hasard, un exercice chacune.
+  const rapide=()=>begin([...formulas].sort(()=>Math.random()-.5).slice(0,5),1)
   const question=session?.[index]
   const visible=formulas.filter(f=>(!category || f.cat===category) && (!group || f.group===group) && (!search || `${f.name} ${f.formula} ${f.group} ${tr(f.name)}`.toLocaleLowerCase().includes(search.toLocaleLowerCase())))
   const submit=e=>{
@@ -45,6 +47,7 @@ function Workshop({track, scope}) {
     <header className="page-hero"><p className="kicker">Calcul et entraînement</p><h1 className="mt-1 font-display text-3xl font-medium">Atelier de formules</h1><p className="mt-2 text-sm text-slate-500 dark:text-slate-400">Choisis tes formules, puis entraîne-toi avec de nouvelles valeurs à chaque séance.</p></header>
     {storageError && <p role="alert" className="card p-3 text-sm">La séance ne peut pas être conservée sur cet appareil. Garde cette page ouverte pour continuer.</p>}
     {paused ? <section className="card space-y-4 p-5"><h2 className="font-display text-xl">Une séance t’attend</h2><p>Reprends avec les mêmes questions et tes réponses déjà enregistrées sur cet appareil.</p><div className="flex flex-wrap gap-3"><button className="btn-gold" onClick={()=>setPaused(false)}>Reprendre ma séance</button><button className="btn" onClick={()=>{setSession(null);setResults([]);setFeedback(null);setPaused(false)}}>Choisir une nouvelle séance</button></div></section> : !session ? <>
+      <section className="card flex flex-wrap items-center justify-between gap-3 p-4"><div><p className="font-semibold">Pas envie de choisir ?</p><p className="text-sm text-slate-500 dark:text-slate-400">On te donne 5 formules au hasard, un exercice chacune.</p></div><button type="button" className="btn-gold !min-h-11 disabled:opacity-50" disabled={!formulas.length} onClick={rapide}>5 exercices au hasard</button></section>
       <div className="card grid gap-3 p-4 sm:grid-cols-2">
         <label className="text-sm"><span className="mb-1 block font-semibold">{tr('Programme affiché')}</span><select className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm dark:border-slate-600 dark:bg-slate-800" value={programme} onChange={e=>{setProgramme(e.target.value);setCategory('');setGroup('')}}><option value="all">{tr('Toute la Première et Terminale STMG')}</option><option value="track">{tr('Ma classe et ma spécialité')}</option></select></label>
         <label className="text-sm"><span className="mb-1 block font-semibold">{tr('Domaine de calcul')}</span><select className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm dark:border-slate-600 dark:bg-slate-800" value={group} onChange={e=>setGroup(e.target.value)}><option value="">{tr('Tous les domaines')}</option>{[...new Set(formulas.filter(f=>!category || f.cat===category).map(f=>f.group))].map(g=><option key={g} value={g}>{tr(g)}</option>)}</select></label>

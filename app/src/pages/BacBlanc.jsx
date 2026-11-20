@@ -34,6 +34,7 @@ function BacBlancPage() {
         <aside className="bac-hero-aside" aria-label="Préparer sa séance"><ol><li>Choisis ton épreuve et ouvre le PDF.</li><li>Prépare une copie et ton matériel.</li><li>Installe-toi au calme, comme le jour du bac.</li></ol></aside>
       </header>
       {premiere&&<p className="text-sm">Les annales de droit et de management portent sur le programme de Terminale. Tu peux les découvrir dès la Première.</p>}
+      <Link to="/seance" className="card flex items-center justify-between gap-3 p-4"><span><strong className="block">Pas le temps d’un sujet complet ?</strong><span className="text-sm">Une séance express de questions, avec ton score tout de suite.</span></span><span aria-hidden="true">→</span></Link>
       <ReadyExams key={premiere ? 'premiere' : 'terminale'} level={premiere ? 'premiere' : 'terminale'} />
       <AnnalesBac>
         <div className="bac-preparation-column">

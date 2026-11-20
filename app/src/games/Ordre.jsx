@@ -5,7 +5,8 @@ import { useT } from '../i18n.js'
 // Remise en ordre : l'élève tape les étapes dans le bon ordre.
 export default function Ordre({ game, color, onDone }) {
   const t = useT()
-  const steps = game.steps
+  // Les textes viennent du cours : on retire le balisage du gras (**mot**) qui s'afficherait tel quel.
+  const steps = useMemo(() => game.steps.map((x) => String(x).replace(/\*\*/g, '')), [game])
   const pool = useMemo(() => shuffle(steps.map((text, id) => ({ id, text }))), [game])
   const [placed, setPlaced] = useState([]) // ids placés dans l'ordre
   const [wrong, setWrong] = useState(null)
@@ -31,7 +32,7 @@ export default function Ordre({ game, color, onDone }) {
 
   return (
     <div className="card p-5">
-      {game.instruction && <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">{game.instruction}</p>}
+      {game.instruction && <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">{String(game.instruction).replace(/\*\*/g, '')}</p>}
 
       <ol className="mb-4 space-y-2">
         {placed.map((id, pos) => (
@@ -66,7 +67,7 @@ export default function Ordre({ game, color, onDone }) {
       {mistakes > 0 && placed.length < steps.length && (
         <p className="mt-3 text-center text-xs text-slate-400">{t('errorsCount')} : {mistakes}</p>
       )}
-      {game.explain && placed.length === steps.length && <Feedback ok>{game.explain}</Feedback>}
+      {game.explain && placed.length === steps.length && <Feedback ok>{String(game.explain).replace(/\*\*/g, '')}</Feedback>}
     </div>
   )
 }

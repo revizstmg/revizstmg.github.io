@@ -23,7 +23,7 @@ import ReminderScheduler from './ReminderScheduler.jsx'
 import { useFenetreAutomatique } from '../fenetres.js'
 import { useFenetreClavier } from './clavier.js'
 import { InstallBanner } from './InstallApp.jsx'
-import { BandeauCookies } from './BandeauCookies.jsx'
+import { BandeauCookies, useInfoCookiesLue } from './BandeauCookies.jsx'
 import { BandeauEssai } from './CompteRequis.jsx'
 import EtatSauvegarde, { IndicateurSauvegarde } from './EtatSauvegarde.jsx'
 import { usePublicText, useT, useLang } from '../i18n.js'
@@ -510,7 +510,10 @@ function SearchOverlay({ onClose }) {
 
 function BadgeToast() {
   const { state, newBadges, dismissBadge } = useStore()
-  const current = newBadges[0]
+  // Le badge attend que l'information sur les cookies soit lue : à la première visite, ils se superposaient.
+  const cookiesLues = useInfoCookiesLue()
+  const tr = usePublicText()
+  const current = cookiesLues ? newBadges[0] : undefined
   useEffect(() => {
     if (!current) return
     const t = setTimeout(() => dismissBadge(current), 3000)
@@ -530,8 +533,8 @@ function BadgeToast() {
           <span className="text-3xl" aria-hidden>{b.icon}</span>
           <span>
             <span className="block text-xs uppercase tracking-wide text-amber-400 dark:text-amber-500">Badge débloqué !</span>
-            <span className="block font-bold">{b.name}</span>
-            <span className="block text-xs opacity-70">{b.desc}</span>
+            <span className="block font-bold">{tr(b.name)}</span>
+            <span className="block text-xs opacity-70">{tr(b.desc)}</span>
             <span className="mt-1 block text-xs underline">Fermer ✕</span>
           </span>
         </button>

@@ -13,6 +13,9 @@ const urls = {
   ar: new URL('../../resources/langues/ar.json', import.meta.url).href,
 }
 
+// Certains titres (allemand) commencent déjà par leur numéro (« 3 · Articles… ») : on ne le répète pas.
+const sansNumero = (t) => String(t).replace(/^\d+\s*·\s*/, '')
+
 function Sorte({ e }) {
   const s = sorteExercice(e)
   if (s === 'production') return <>Expression guidée</>
@@ -100,7 +103,7 @@ export default function ExercicesManuel({ langue, nomLangue }) {
     setCharge(null); setErreur(false); setGroupe('')
     fetch(urls[langue], { signal: controller.signal })
       .then(res => { if (!res.ok) throw new Error('manual_unavailable'); return res.json() })
-      .then(manuel => { ordonnerExercices(manuel); if (actif) setCharge({ langue, manuel }) })
+      .then(manuel => { const o = ordonnerExercices(manuel); if (actif) { setCharge({ langue, manuel }); setGroupe(o.groupes[0]?.id || '') } })
       .catch(() => { if (actif) setErreur(true) })
       .finally(() => clearTimeout(timeout))
     return () => { actif = false; clearTimeout(timeout); controller.abort() }
@@ -119,11 +122,17 @@ export default function ExercicesManuel({ langue, nomLangue }) {
       <label className="block text-sm font-semibold" htmlFor="manuel-lecon">Leçon</label>
       <select id="manuel-lecon" value={groupe} onChange={(ev) => setGroupe(ev.target.value)} className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 dark:border-slate-600 dark:bg-slate-900">
         <option value="">Toutes les leçons</option>
-        {ordre.groupes.map((g) => <option key={g.id} value={g.id}>{g.lecon ? `Leçon ${g.lecon}` : 'Bilan'} · {g.titre}</option>)}
+        {manuel.lessons.map((l, i) => {
+          const g = ordre.groupes.find((x) => x.id === l.id)
+          return g
+            ? <option key={g.id} value={g.id}>{`Leçon ${i + 1}`} · {sansNumero(g.titre)}</option>
+            : <option key={l.id} value={`sans-${l.id}`} disabled>{`Leçon ${i + 1}`} · {sansNumero(l.title)} (pas d’exercice en ligne)</option>
+        })}
+        {ordre.groupes.filter((g) => !g.lecon).map((g) => <option key={g.id} value={g.id}>Bilan · {sansNumero(g.titre)}</option>)}
       </select>
       {visibles.map((g) => (
         <div key={g.id} className="space-y-3">
-          <h3 className="font-display text-lg font-semibold" dir="auto">{g.lecon ? `Leçon ${g.lecon}` : <>Bilan</>} · <span translate="no">{g.titre}</span></h3>
+          <h3 className="font-display text-lg font-semibold" dir="auto">{g.lecon ? `Leçon ${g.lecon}` : <>Bilan</>} · <span translate="no">{sansNumero(g.titre)}</span></h3>
           <ol className="space-y-3">{g.exercices.map((e) => <Exercice key={e.id} e={e} numero={ordre.numeros.get(e.id)} valeur={brouillons[`${langue}:${e.id}`]} modifier={patch => modifier(`${langue}:${e.id}`, patch)} />)}</ol>
         </div>
       ))}

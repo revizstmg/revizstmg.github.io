@@ -6,7 +6,7 @@ test('accueil allégé, outils accessibles dans le menu', async ({ page }) => {
   const erreurs = await preparer(page, etatEleve({ favorites: ['gf-t1'] }))
   await page.goto('./#/accueil')
   await attendreAccueil(page)
-  await expect(page.locator('.home-destinations > a')).toHaveCount(3)
+  await expect(page.locator('.home-destinations > a')).toHaveCount(5)
   await expect(page.getByRole('heading', { name: 'Réviser & réussir' })).toHaveCount(0)
   await page.getByRole('button', { name: 'Menu', exact: true }).click()
   const menu = page.getByRole('dialog', { name: 'Menu', exact: true })

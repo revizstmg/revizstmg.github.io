@@ -19,7 +19,7 @@ test('allemand : langue étudiée indépendante, guide, affichage et préférenc
  await expect(page.getByRole('link',{name:'PDF-Handbuch öffnen ↗',exact:true})).toHaveAttribute('href',/guide-de.*pdf/)
  for(const dark of [false,true]){
   await page.evaluate(d=>document.documentElement.classList.toggle('dark',d),dark)
-  await page.evaluate(()=>Promise.all(document.getAnimations().map(a=>a.finished.catch(()=>{}))))
+  await page.waitForFunction(() => document.getAnimations().every((a) => a.playState !== "running" || a.effect?.getComputedTiming().iterations === Infinity))
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true)
   expect((await new AxeBuilder({page}).include('main').withTags(['wcag2a','wcag2aa']).analyze()).violations).toEqual([])
  }

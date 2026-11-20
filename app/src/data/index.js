@@ -12,6 +12,7 @@ import { ORDRE_MATIERES, MATIERES, COUCHES, commun, chargerFichiers, remplacerEn
 import { THEME_TERMS } from './keyterms.js'
 import { PIEGES } from './pieges.js'
 import { instancierQuestion } from '../qcmgen.js'
+import { glossaireDe, trouverDefinition } from './termes.js'
 
 const LESSONS = COUCHES['cours-complets']
 const COURS_REELS = COUCHES['cours-reels']
@@ -1146,6 +1147,42 @@ export function notionDuChoix(themeId, texte) {
   return null
 }
 
+const textesDe = (o, out = []) => {
+  if (typeof o === 'string') out.push(o)
+  else if (Array.isArray(o)) o.forEach((x) => textesDe(x, out))
+  else if (o && typeof o === 'object') Object.values(o).forEach((x) => textesDe(x, out))
+  return out
+}
+
+// Chapitre sans QCM : un jeu « de quoi parle-t-on ? » fabriqué avec les mots en gras du chapitre qui ont une
+// définition au glossaire de la matière. Les mauvaises réponses sont les autres termes du MÊME chapitre.
+export function qcmDesTermes(chapter, theme) {
+  const glossaire = glossaireDe(theme?.subjectId)
+  if (!glossaire?.size) return null
+  const collecter = (source) => {
+    const vus = new Map()
+    for (const t of textesDe(source)) {
+      for (const m of t.matchAll(/\*\*([^*]+)\*\*/g)) {
+        const terme = m[1].trim().replace(/[.:;,]+$/, '')
+        const def = trouverDefinition(glossaire, terme)
+        if (def && terme.length <= 40 && !vus.has(terme.toLowerCase()) && ![...vus.values()].some((v) => v.def === def)) vus.set(terme.toLowerCase(), { terme, def })
+      }
+    }
+    return [...vus.values()]
+  }
+  // Un chapitre très court n'a pas assez de termes : on complète avec ceux du thème (mieux que zéro exercice).
+  let items = collecter(chapter.section)
+  let duThemeEntier = false
+  if (items.length < 4) { items = collecter(theme.cours || []); duThemeEntier = true }
+  if (items.length < 4) return null
+  const questions = shuffle(items).slice(0, 8).map((it) => {
+    const autres = shuffle(items.filter((o) => o.def !== it.def)).slice(0, 3).map((o) => o.terme)
+    const choices = shuffle([it.terme, ...autres])
+    return { q: `De quoi parle-t-on ?\n${it.def}`, choices, answer: choices.indexOf(it.terme), explain: `${it.terme} : ${it.def}`, drawSource: it.terme }
+  })
+  return { id: `${theme.id}-termes-${chapter.idx}`, type: 'qcm', title: duThemeEntier ? 'QCM : de quoi parle-t-on ? (le thème)' : 'QCM : de quoi parle-t-on ?', icon: '📖', questions }
+}
+
 export function jeuxDuChapitre(chapter, theme) {
   if (!chapter) return []
   const base = chapter.games || []
@@ -1153,11 +1190,22 @@ export function jeuxDuChapitre(chapter, theme) {
   return fc ? [...base, fc] : base
 }
 
+// Ce que la page d'un chapitre propose : les jeux du chapitre, plus un QCM « de quoi parle-t-on ? » fabriqué
+// avec le glossaire quand le chapitre n'en a aucun (missions et index léger gardent jeuxDuChapitre tel quel).
+export function jeuxAffiches(chapter, theme) {
+  const jeux = jeuxDuChapitre(chapter, theme)
+  if (!chapter || jeux.some((g) => g.type === 'qcm')) return jeux
+  const termes = qcmDesTermes(chapter, theme)
+  if (!termes) return jeux
+  const fc = jeux.filter((g) => g.type === 'flashcard')
+  return [...jeux.filter((g) => g.type !== 'flashcard'), termes, ...fc]
+}
+
 // Ce qu'annonce la liste des chapitres : nombre d'exercices et de notions (les
 // lignes du tableau « Notions et définitions » qui termine le cours).
 export function comptesDuChapitre(chapter, theme, subjectId) {
   return {
-    exercices: jeuxDuChapitre(chapter, theme).length,
+    exercices: jeuxAffiches(chapter, theme).length,
     notions: sectionDefinitions(chapter.section, theme.id, subjectId, chapter.idx).defs.length,
   }
 }

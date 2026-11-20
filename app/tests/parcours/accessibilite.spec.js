@@ -27,6 +27,8 @@ for (const theme of ['light', 'dark']) {
       if (p === 'accueil') await attendreAccueil(page)
       await page.locator('main').waitFor()
       await page.waitForTimeout(400)
+      // Les listes apparaissent en fondu : on attend la fin des animations avant la mesure des contrastes.
+      await page.evaluate(() => Promise.all(document.getAnimations().map((a) => a.finished.catch(() => {}))))
       const d = await defauts(page)
       if (d.length) trouves[p] = d
     }

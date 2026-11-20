@@ -24,6 +24,7 @@ test('langues : erreur récupérable et brouillons/corrections conservés entre 
   let fail = true
   await page.route('**/assets/en-*.json', route => fail ? route.fulfill({ status: 503, body: 'unavailable' }) : route.continue())
   await page.goto('./#/subject/langues'); await attendreAccueil(page)
+  await page.locator('.language-manual-exercises > summary').click()
   await expect(page.getByRole('alert').filter({ hasText: 'Impossible de charger les exercices' })).toBeVisible()
   fail = false
   await page.locator('main').getByRole('button', { name: 'Réessayer', exact: true }).click()
@@ -32,7 +33,7 @@ test('langues : erreur récupérable et brouillons/corrections conservés entre 
   await first.fill('audit réponse')
   await first.locator('xpath=ancestor::li[1]').getByRole('button', { name: 'Vérifier', exact: true }).click()
   await expect(first).toBeDisabled()
-  await page.locator('#manuel-lecon').selectOption({ index: 2 })
+  await page.locator('#manuel-lecon').selectOption(await page.locator('#manuel-lecon option:not([disabled])').nth(2).getAttribute('value'))
   await expect(first).toHaveCount(0)
   await page.locator('#manuel-lecon').selectOption('')
   await expect(first).toHaveValue('audit réponse'); await expect(first).toBeDisabled()
