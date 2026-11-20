@@ -1,6 +1,6 @@
 {
- "date": "2026-11-19",
- "heure": "2026-11-19T14:06:37.067Z",
+ "date": "2026-11-20",
+ "heure": "2026-11-20T13:49:02.434Z",
  "utilisation": {
   "erreur": "Supabase injoignable (Le serveur ne répond pas. Vérifie ta connexion puis réessaie.)"
  },
@@ -16,18 +16,18 @@
  },
  "publication": {
   "ci": {
-   "etat": "unknown",
-   "detail": "API GitHub inaccessible : CI non vérifiée"
+   "etat": "success",
+   "date": "2026-11-20T10:01:57Z"
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-11-18T13:42:10Z"
+   "date": "2026-11-20T10:02:40Z"
   },
   "dernierePublication": {
    "etat": "success",
-   "date": "2026-11-18T13:42:10Z"
+   "date": "2026-11-20T10:02:40Z"
   },
-  "modifications7j": 56
+  "modifications7j": 58
  },
  "tests": "success"
 }
