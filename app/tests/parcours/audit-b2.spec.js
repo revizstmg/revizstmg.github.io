@@ -26,7 +26,6 @@ test('chapitre : numérotation de la liste, jeux visibles dès l’ouverture et 
   expect(entete).not.toMatch(/\/14\b/)
   await page.getByRole('button', { name: /Exercices/ }).click()
   await expect(page.locator('.chapter-memorisation summary')).toContainText(/Les \d+ jeux du chapitre/)
-  await page.locator('.chapter-memorisation summary').click()
   await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight))
   await page.locator('[data-jeu]').first().scrollIntoViewIfNeeded()
   await page.locator('[data-jeu]').first().click()

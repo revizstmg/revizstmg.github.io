@@ -363,7 +363,7 @@ export default {
   unlocked: 'débloqués', earnedCheck: 'Obtenu ✓', resetProgress: 'Réinitialiser ma progression',
   resetConfirm: 'Effacer toute ta progression (XP, badges, scores) sur cet appareil ?',
   noFavYet: 'Aucun chapitre en favori pour l’instant.',
-  addFavHint: 'Ajoute-en avec l’étoile ☆ sur une page de chapitre.',
+  addFavHint: 'Ajoute-en avec l’étoile ☆ sur une page de thème.',
   removeFav: 'Retirer des favoris', addFav: 'Ajouter aux favoris',
   autoTranslated: 'traduit automatiquement',
   translationPartial: 'Certains textes n’ont pas pu être traduits. Tu peux réessayer.',

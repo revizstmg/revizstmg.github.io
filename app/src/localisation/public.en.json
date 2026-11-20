@@ -3869,5 +3869,22 @@
   "Ton principal défi ?": "What is your main challenge?",
   "⏳ Je me déconcentre / je procrastine": "⏳ I lose focus / I procrastinate",
   "💨 J’oublie vite": "💨 I forget quickly",
-  "🎯 Je comprends mais je bloque à l’épreuve": "🎯 I understand but freeze at the exam"
+  "🎯 Je comprends mais je bloque à l’épreuve": "🎯 I understand but freeze at the exam",
+  "Jouer maintenant": "Play now",
+  "Défi du jour et badges": "Daily challenge and badges",
+  "Bac blanc, sujets, séance de révision et flashcards": "Mock exam, past papers, revision session and flashcards",
+  "Grand Oral, étude de gestion, atelier de formules, fiches photo, méthodo et sport au bac": "Grand Oral, management study, formula workshop, photo sheets, methods and sport for the exam",
+  "Minuteur de travail, notes de classe et classement": "Work timer, class marks and leaderboard",
+  "Le minuteur de travail et le classement de la semaine sont réservés à Premium.": "The work timer and the weekly leaderboard are reserved for Premium.",
+  "Ton plan ne couvre pas tout le programme": "Your plan does not cover the whole syllabus",
+  "Avec tes heures actuelles, tu couvres environ {v0} % du programme avant les épreuves.": "With your current hours, you cover about {v0} % of the syllabus before the exams.",
+  "Pour tout couvrir : environ {v0} h par semaine. Sinon, garde ton rythme : on commence par l’essentiel, et une note un peu plus basse reste possible.": "To cover everything: about {v0} h per week. Otherwise keep your pace: we start with the essentials, and a slightly lower mark is still possible.",
+  "Quelques questions rapides, une série à garder.": "A few quick questions, a streak to keep.",
+  "Réviser une langue": "Revise a language",
+  "Dix modes ludiques, sans cours à lire.": "Ten fun modes, no lesson to read.",
+  "Pas envie de choisir ?": "Don't feel like choosing?",
+  "On te donne 5 formules au hasard, un exercice chacune.": "We give you 5 random formulas, one exercise each.",
+  "5 exercices au hasard": "5 random exercises",
+  "Pas le temps d’un sujet complet ?": "No time for a full paper?",
+  "Une séance express de questions, avec ton score tout de suite.": "A quick question session, with your score right away."
 }

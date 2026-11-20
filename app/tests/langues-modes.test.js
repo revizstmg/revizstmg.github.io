@@ -91,6 +91,16 @@ describe('scénarios des modes de langues', () => {
       }
       expect(itemsScenario(d.snap, 6, 5)).toHaveLength(Math.min(6, d.snap.length))
     })
+    it(`${l} : la bonne réponse n’est pas toujours la plus longue (les flemmards l’ont remarqué)`, () => {
+      const longueur = (o) => (typeof o === 'string' ? o.length : o.t.length)
+      for (const cle of ['snap', 'texto']) {
+        const n = d[cle].filter((s) => longueur(s.options[0]) === Math.max(...s.options.map(longueur))).length
+        expect(n / d[cle].length, `${l}.${cle}`).toBeLessThanOrEqual(0.7)
+      }
+      const q = d.entretien.questions
+      const n = q.filter((x) => x.options.reduce((a, b) => (longueur(b) > longueur(a) ? b : a)).pts === 3).length
+      expect(n / q.length, `${l}.entretien`).toBeLessThanOrEqual(0.7)
+    })
     it(`${l} : survie et entretien ont des coûts et des notes cohérents`, () => {
       expect(d.survie.budget).toBe(100)
       expect(d.survie.etapes.length).toBeGreaterThanOrEqual(4)

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { useStore, useStudyTimer } from '../store.jsx'
 import { buildDailyChallenge } from '../data/dailyChallenge.js'
@@ -20,6 +20,9 @@ export default function DailyChallenge() {
   const [phase, setPhase] = useState('intro') // intro | run | result
   const [result, setResult] = useState(null)
   const accent = '#84671b' // or foncé : lisible sous du texte blanc
+
+  // Le résultat s'ouvre en haut de page (la question précédente était plus bas).
+  useEffect(() => { if (phase === 'result') window.scrollTo(0, 0) }, [phase])
 
   if (!state.track) return <Navigate to="/" replace />
 
@@ -77,7 +80,8 @@ export default function DailyChallenge() {
             🔥 {t('challengeStreak')} : {state.dailyChallenge?.streak || 0}
           </div>
         </div>
-        <button onClick={() => navigate('/accueil')} className="btn-gold w-full !py-3 text-sm">{t('done')}</button>
+        <button onClick={() => navigate('/cours')} className="btn-gold w-full !py-3 text-sm">{t('continueBtn')} · {t('coursTab')}</button>
+        <button onClick={() => navigate('/accueil')} className="btn-ghost w-full">{t('done')}</button>
       </div>
     )
   }

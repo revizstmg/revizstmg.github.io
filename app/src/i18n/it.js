@@ -374,7 +374,7 @@ export default {
   unlocked: 'sbloccati', earnedCheck: 'Ottenuto ✓', resetProgress: 'Reimposta i miei progressi',
   resetConfirm: 'Cancellare tutti i tuoi progressi (XP, badge, punteggi) su questo dispositivo?',
   noFavYet: 'Ancora nessun capitolo tra i preferiti.',
-  addFavHint: 'Aggiungine con la stella ☆ su una pagina di capitolo.',
+  addFavHint: 'Aggiungine con la stella ☆ su una pagina di tema.',
   removeFav: 'Rimuovi dai preferiti', addFav: 'Aggiungi ai preferiti',
   autoTranslated: 'tradotto automaticamente',
   myPath: 'Il mio percorso',

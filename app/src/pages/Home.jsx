@@ -81,6 +81,16 @@ export default function Home() {
           <div><h2>{t('coursTab')}</h2><p>Voir tous les cours</p></div>
           <span className="home-destination-arrow" aria-hidden>→</span>
         </Link>
+        <Link to="/defi" className="home-destination">
+          <span className="home-destination-icon" aria-hidden>🔥</span>
+          <div><h2>{t('dailyChallenge')}</h2><p>Quelques questions rapides, une série à garder.</p></div>
+          <span className="home-destination-arrow" aria-hidden>→</span>
+        </Link>
+        <Link to={state.track.level === 'premiere-stmg' ? '/subject/p1-langues' : '/subject/langues'} className="home-destination">
+          <span className="home-destination-icon" aria-hidden>🗣️</span>
+          <div><h2>Réviser une langue</h2><p>Dix modes ludiques, sans cours à lire.</p></div>
+          <span className="home-destination-arrow" aria-hidden>→</span>
+        </Link>
         <Link to="/revision" className="home-destination">
           <span className="home-destination-icon" aria-hidden>🧠</span>
           <div><h2>{t('training')}<PastillePremium to="/revision" /></h2><p>{t('trainingDesc')}</p></div>

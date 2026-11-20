@@ -90,6 +90,7 @@ export default function Guide() {
 
       <Step n={5} title="Révise partout">
         <TexteRiche texte="Une fois connecté, ta **progression se synchronise** automatiquement entre tous tes appareils. Les cours et exercices de base sont gratuits ; la révision intelligente, le bac blanc et le Grand Oral sont inclus dans Premium et Ultimate (voir les [[offres|/offres]]). Le minuteur fonctionne aussi dans le navigateur. La personnalisation du profil demande l’application installée." />
+        <TexteRiche texte="Le minuteur de travail et le classement de la semaine sont réservés à Premium." />
       </Step>
 
       {/* Code de classe */}

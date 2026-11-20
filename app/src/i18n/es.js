@@ -374,7 +374,7 @@ export default {
   unlocked: 'desbloqueadas', earnedCheck: 'Obtenida ✓', resetProgress: 'Reiniciar mi progreso',
   resetConfirm: '¿Borrar todo tu progreso (XP, insignias, puntuaciones) en este dispositivo?',
   noFavYet: 'Aún no hay ningún capítulo favorito.',
-  addFavHint: 'Añade con la estrella ☆ en una página de capítulo.',
+  addFavHint: 'Añade con la estrella ☆ en una página de tema.',
   removeFav: 'Quitar de favoritos', addFav: 'Añadir a favoritos',
   autoTranslated: 'traducido automáticamente',
   myPath: 'Mi recorrido',

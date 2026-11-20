@@ -1031,7 +1031,7 @@ export default {
   "resetProgress": "Setze meinen Fortschritt zurück",
   "resetConfirm": "Alle deine Fortschritte (XP, Abzeichen, Punkte) auf diesem Gerät löschen?",
   "noFavYet": "Noch keine Lieblingskapitel.",
-  "addFavHint": "Füge einige mit dem Stern ☆ auf einer Kapitelseite hinzu.",
+  "addFavHint": "Füge einige mit dem Stern ☆ auf einer Themenseite hinzu.",
   "removeFav": "Aus Favoriten entfernen",
   "addFav": "Zu Favoriten hinzufügen",
   "autoTranslated": "automatisch übersetzt",

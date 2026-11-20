@@ -12,7 +12,6 @@ for(const [theme,width] of [['light',320],['dark',390],['light',1280]])test('cou
  await page.getByRole('button',{name:'OK',exact:true}).click()
  for(const [name,selector] of [['Cours','.reader'],['Définitions','.definition-studio'],['Exercices','.chapter-exercise-grid']]){
   await page.getByRole('button',{name:new RegExp(name)}).first().click()
-  if(name==='Exercices')await page.locator('.chapter-memorisation summary').click()
   await expect(page.locator(selector)).toBeVisible()
   expect(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)).toBe(false)
   expect((await audit(page)).violations).toEqual([])

@@ -182,8 +182,8 @@
    "prompt": "hdl, bis später!",
    "options": [
     "Je t'aime bien, à plus tard !",
-    "Salut, à cet après-midi !",
-    "Je te hais, à bientôt."
+    "Salut, à cet après-midi, on se voit devant l'école !",
+    "Je te hais énormément, à bientôt quand même."
    ],
    "why": "« hdl » = hab dich lieb."
   },
@@ -192,8 +192,8 @@
    "prompt": "lg aus Köln",
    "options": [
     "Amitiés de Cologne.",
-    "Long voyage depuis Cologne.",
-    "Légère grippe à Cologne."
+    "Long voyage depuis Cologne, il faut beaucoup de temps.",
+    "Légère grippe à Cologne, je reste au lit toute la semaine."
    ],
    "why": "« lg » = liebe Grüße."
   },
@@ -202,8 +202,8 @@
    "prompt": "kp, was wir essen sollen",
    "options": [
     "Aucune idée de ce qu'on doit manger.",
-    "Que payer pour manger.",
-    "Kilo de pain à manger."
+    "Que payer pour manger ce soir, on ne sait pas encore.",
+    "Kilo de pain à manger avant la fin de la journée."
    ],
    "why": "« kp » = keine Ahnung."
   },
@@ -330,12 +330,12 @@
       "w": "Court, positif, utile."
      },
      {
-      "t": "Na ja... ich bin achtzehn. Ich schlafe gern.",
+      "t": "Na ja... ich bin achtzehn. Ich schlafe gern, spiele gern und mache am liebsten gar nichts.",
       "pts": 0,
       "w": "Honnête, mais pas attendu."
      },
      {
-      "t": "Das steht alles im Lebenslauf.",
+      "t": "Das steht alles im Lebenslauf, also können Sie es selbst lesen, glaube ich.",
       "pts": 1,
       "w": "Le recruteur fait tout."
      }
@@ -370,12 +370,12 @@
       "w": "Un défaut réel avec une solution."
      },
      {
-      "t": "Ich bin sehr faul.",
+      "t": "Ich bin sehr faul. Meine Lehrer können das bestätigen, sie sagen es jedes Jahr.",
       "pts": 0,
       "w": "La vérité, pas au bon moment."
      },
      {
-      "t": "Ich habe keine Schwächen.",
+      "t": "Ich habe wirklich keine Schwächen, ich bin in allem perfekt, was ich in der Schule mache.",
       "pts": 1,
       "w": "Personne ne croit ça."
      }

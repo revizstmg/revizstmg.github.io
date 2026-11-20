@@ -7,6 +7,7 @@ const en=JSON.parse(readFileSync(new URL('../../resources/langues/en.json',impor
 test('langues : les exercices du manuel se font sur le site, corrigés comme le PDF',async({page},info)=>{
  const errors=await preparer(page,etatEleve({track:{level:'premiere-stmg'},studyLanguages:['en']}))
  await page.goto('./#/subject/p1-langues');await attendreAccueil(page)
+ await page.locator('.language-manual-exercises > summary').click()
  await expect(page.getByRole('heading',{name:`${en.exercises.length} exercices à faire en ligne.`})).toBeVisible()
  // Exercice 1 : texte à trous, réponse « has worked ».
  const un=page.locator('#manuel-en-ex-001')

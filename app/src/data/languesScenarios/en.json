@@ -5,8 +5,8 @@
    "prompt": "Are you coming tonight or are you ghosting me again?",
    "options": [
     "I'll be there, promise. Sorry for last time.",
-    "I am coming to the bathroom of the moon.",
-    "No, I don't be agree."
+    "I am coming to the bathroom of the moon, with your cousin and a goat.",
+    "No, I don't be agree with you about the party, sorry."
    ],
    "why": "La bonne réponse répond à la question et s'excuse. La deuxième n'a aucun sens, et la troisième se trompe de verbe : on dit « I don't agree »."
   },
@@ -15,7 +15,7 @@
    "prompt": "hey, I saw your story. cute dog, is he yours?",
    "options": [
     "Yes, he's mine. His name is Biscuit.",
-    "Yes, I have 19 years and he has four legs.",
+    "Yes, I have 19 years and he has four legs, like all dogs.",
     "My dog is a very interesting economic theory."
    ],
    "why": "En anglais, l'âge se dit avec « be » : « I am 19 », pas « I have 19 years »."
@@ -289,8 +289,8 @@
    "prompt": "omg i'm so done with this group project, nobody's pulling their weight",
    "options": [
     "Je n'en peux plus de ce projet de groupe, personne ne fait sa part.",
-    "Mon groupe pèse très lourd.",
-    "Je suis fier de mon groupe."
+    "Mon groupe pèse très lourd, je ne peux plus le porter.",
+    "Je suis fier de mon groupe, tout le monde travaille énormément."
    ],
    "why": "« To pull one's weight » = faire sa part du travail. « I'm so done » = j'en ai assez."
   },
@@ -299,8 +299,8 @@
    "prompt": "gonna be late, lmk if u start without me",
    "options": [
     "Je serai en retard, dis-moi si vous commencez sans moi.",
-    "Je serai en retard, dis-moi si tu me manques.",
-    "Je ne viendrai pas du tout."
+    "Je serai en retard, dis-moi si tu me manques beaucoup.",
+    "Je ne viendrai pas du tout, ne m'attendez pas ce soir."
    ],
    "why": "« lmk » = let me know. « gonna » = going to."
   },
@@ -309,8 +309,8 @@
    "prompt": "ngl that was kinda fire 🔥",
    "options": [
     "Honnêtement, c'était plutôt génial.",
-    "Honnêtement, c'était dangereux.",
-    "Je ne sais pas, c'était nul."
+    "Honnêtement, c'était dangereux, il y avait presque un incendie.",
+    "Je ne sais pas, c'était nul, je suis parti avant la fin."
    ],
    "why": "« ngl » = not gonna lie (honnêtement). « Fire » = excellent."
   },
@@ -319,8 +319,8 @@
    "prompt": "can u pls stop leaving me on read",
    "options": [
     "Peux-tu arrêter de lire mes messages sans répondre ?",
-    "Peux-tu arrêter de partir sans me lire ?",
-    "Peux-tu me lire le message à voix haute ?"
+    "Peux-tu arrêter de partir sans me lire quand je te parle ?",
+    "Peux-tu me lire le message à voix haute, s'il te plaît ?"
    ],
    "why": "« Leave someone on read » = lire le message sans répondre."
   },
@@ -329,8 +329,8 @@
    "prompt": "brb, my phone's about to die",
    "options": [
     "Je reviens tout de suite, mon téléphone va s'éteindre.",
-    "Je reviens demain, mon téléphone est mort.",
-    "Je rappelle, mon téléphone a dix ans."
+    "Je reviens demain, mon téléphone est mort pour toujours.",
+    "Je rappelle plus tard, mon téléphone a presque dix ans."
    ],
    "why": "« brb » = be right back. « About to die » = sur le point de s'éteindre."
   },
@@ -339,8 +339,8 @@
    "prompt": "idk what to wear tbh, any ideas?",
    "options": [
     "Je ne sais pas quoi mettre, franchement, des idées ?",
-    "Je ne sais pas qui tu es, des idées ?",
-    "Je veux porter quelque chose de blanc."
+    "Je ne sais pas qui tu es, tu as des idées pour moi ?",
+    "Je veux porter quelque chose de blanc pour la soirée."
    ],
    "why": "« idk » = I don't know, « tbh » = to be honest."
   },
@@ -349,8 +349,8 @@
    "prompt": "that's so cringe, delete it",
    "options": [
     "C'est tellement gênant, efface-le.",
-    "C'est tellement drôle, garde-le.",
-    "C'est tellement beau, envoie-le."
+    "C'est tellement drôle, garde-le sur ton téléphone pour toujours.",
+    "C'est tellement beau, envoie-le à tout le monde maintenant."
    ],
    "why": "« Cringe » = honteux ou gênant à regarder."
   },
@@ -359,14 +359,14 @@
    "prompt": "i'm broke till payday, can we do something cheap?",
    "options": [
     "Je n'ai plus d'argent jusqu'à la paie, on peut faire un truc pas cher ?",
-    "Je suis cassé jusqu'à ce soir, on peut faire un truc cher ?",
-    "Je suis riche jusqu'à la paie."
+    "Je suis cassé jusqu'à ce soir, on peut faire un truc cher, genre restaurant ?",
+    "Je suis riche jusqu'à la paie, on peut faire un truc de luxe ?"
    ],
    "why": "« Broke » = fauché. « Payday » = jour de paie."
   }
  ],
  "survie": {
-  "titre": "Londres : 100 £ pour tenir une journée",
+  "titre": "Londres : 100 € pour tenir une journée",
   "budget": 100,
   "etapes": [
    {
@@ -488,12 +488,12 @@
       "w": "Court, positif, utile pour le poste."
      },
      {
-      "t": "Well... I'm 18? I like sleeping.",
+      "t": "Well... I'm 18, I guess? I like sleeping, gaming, and doing absolutely nothing.",
       "pts": 0,
       "w": "Honnête, mais ce n'est pas ce que le recruteur cherche."
      },
      {
-      "t": "My CV is on the table, read it.",
+      "t": "My CV is on the table over there, so you can just read it yourself, I think.",
       "pts": 1,
       "w": "Tu laisses le recruteur faire tout le travail."
      }
@@ -528,12 +528,12 @@
       "w": "Un défaut réel, avec une solution."
      },
      {
-      "t": "I'm lazy. Really lazy.",
+      "t": "I'm lazy. Really lazy. My teachers can confirm it, they say it every year.",
       "pts": 0,
       "w": "Tu as dit la vérité, mais pas au bon moment."
      },
      {
-      "t": "I have no weakness, I'm perfect.",
+      "t": "I really have no weakness, I'm honestly perfect at everything I do at school.",
       "pts": 1,
       "w": "Personne ne croit ça, et le recruteur encore moins."
      }
@@ -568,12 +568,12 @@
       "w": "Tu montres que tu veux vraiment venir."
      },
      {
-      "t": "How many days of holiday do I get?",
+      "t": "How many days of holiday do I get, and can I choose them freely in the summer?",
       "pts": 1,
       "w": "Question légitime, mais pas en premier."
      },
      {
-      "t": "No. Bye.",
+      "t": "No, I think it's all clear to me now, so thank you very much and goodbye.",
       "pts": 0,
       "w": "Tu t'en vas déjà ?"
      }

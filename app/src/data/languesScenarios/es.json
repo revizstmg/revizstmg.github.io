@@ -182,8 +182,8 @@
    "prompt": "q tal? xq no contestas a mis mensajes?",
    "options": [
     "Ça va ? Pourquoi tu ne réponds pas à mes messages ?",
-    "Quel temps ? Parce que tu ne réponds pas.",
-    "Qui es-tu ? Je ne te connais pas."
+    "Quel temps fait-il ? Parce que tu ne réponds jamais à mes messages.",
+    "Qui es-tu exactement ? Je ne te connais pas du tout, désolé."
    ],
    "why": "« q » = qué, « xq » = porque ou por qué."
   },
@@ -192,8 +192,8 @@
    "prompt": "nos vemos x la tarde, vale?",
    "options": [
     "On se voit dans l'après-midi, d'accord ?",
-    "On se voit pour la tarte, valable ?",
-    "On se voit hier soir, vraiment ?"
+    "On se voit pour la tarte cet après-midi, valable pour tout le monde ?",
+    "On se voit hier soir, vraiment ? Je ne m'en souviens pas."
    ],
    "why": "« x » = por, « vale » = d'accord."
   },
@@ -202,8 +202,8 @@
    "prompt": "tqm, eres el mejor",
    "options": [
     "Je t'aime beaucoup, tu es le meilleur.",
-    "Je te déteste, tu es le pire.",
-    "Je te demande, tu es parti."
+    "Je te déteste beaucoup, tu es le pire de la classe.",
+    "Je te demande beaucoup, tu es parti sans me le dire."
    ],
    "why": "« tqm » = te quiero mucho."
   },
@@ -212,8 +212,8 @@
    "prompt": "estoy sin pasta hasta fin de mes",
    "options": [
     "Je n'ai plus d'argent jusqu'à la fin du mois.",
-    "Je n'ai pas de pâtes jusqu'à la fin du mois.",
-    "Je suis sans aide jusqu'à la fin du mois."
+    "Je n'ai pas de pâtes jusqu'à la fin du mois, il faut en acheter.",
+    "Je suis sans aide de l'État jusqu'à la fin du mois, comme toujours."
    ],
    "why": "« Pasta » = argent en argot espagnol."
   },
@@ -330,12 +330,12 @@
       "w": "Court, positif, utile."
      },
      {
-      "t": "Pues... tengo dieciocho años. Me gusta dormir.",
+      "t": "Pues... tengo dieciocho años. Me gusta dormir, jugar y no hacer absolutamente nada.",
       "pts": 0,
       "w": "Honnête, mais pas ce qu'on attend."
      },
      {
-      "t": "Está todo en mi currículum.",
+      "t": "Está todo en mi currículum, así que puede leerlo usted mismo, creo.",
       "pts": 1,
       "w": "Le recruteur fait tout le travail."
      }
@@ -370,12 +370,12 @@
       "w": "Un vrai défaut avec une solution."
      },
      {
-      "t": "Soy muy vago.",
+      "t": "Soy muy vago. Mis profesores pueden confirmarlo, lo dicen todos los años.",
       "pts": 0,
       "w": "La vérité, mais pas au bon moment."
      },
      {
-      "t": "No tengo defectos.",
+      "t": "De verdad no tengo defectos, soy perfecto en todo lo que hago en clase.",
       "pts": 1,
       "w": "Personne ne croit ça."
      }

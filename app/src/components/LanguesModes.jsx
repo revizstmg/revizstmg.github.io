@@ -190,7 +190,7 @@ function ModePote({ langue, manuel, defi, onFin }) {
         <div lang="fr" data-no-translate className="space-y-2">
           <label htmlFor="code-pote" className="block text-sm font-semibold">Ton pote t’a envoyé un code ?</label>
           <div className="flex flex-wrap gap-2">
-            <input id="code-pote" value={saisie} onChange={(ev) => setSaisie(ev.target.value)} autoComplete="off" spellCheck={false} placeholder="en-1abc2d.4" className="min-w-0 flex-1 border border-slate-300 bg-white px-3 py-2 dark:border-slate-600 dark:bg-slate-900" style={{ borderRadius: 6 }} />
+            <input id="code-pote" value={saisie} onChange={(ev) => setSaisie(ev.target.value)} autoComplete="off" spellCheck={false} placeholder={`${langue}-1abc2d.4`} className="min-w-0 flex-1 border border-slate-300 bg-white px-3 py-2 dark:border-slate-600 dark:bg-slate-900" style={{ borderRadius: 6 }} />
             <button type="button" className="btn-ghost" onClick={rejoindre} disabled={!saisie.trim()}>Relever le défi</button>
           </div>
           {erreur && <p role="alert" className="text-sm text-rose-700 dark:text-rose-400">{erreur}</p>}

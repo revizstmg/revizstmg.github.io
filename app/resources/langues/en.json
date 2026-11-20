@@ -1837,7 +1837,7 @@
       "unit": "Anglais — Toutes les conjugaisons",
       "origin": "langues/lng-en-past-qcm",
       "type": "qcm",
-      "prompt": "Preterit de « to go » :",
+      "prompt": "Prétérit de « to go » :",
       "choices": [
         "going",
         "gone",

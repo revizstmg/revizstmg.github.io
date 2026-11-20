@@ -10,7 +10,7 @@ function bank(b){const lines=practiceUnits(b.course).map(u=>u.source);return {qu
 test('séries originales : passages du cours, correction sourcée, nouvelle série et conservation locale',async({page})=>{
  const requests=[];await start(page)
  await page.route('**/functions/v1/examen-blanc',route=>{const b=route.request().postDataJSON();requests.push(b);return route.fulfill({json:{practice:bank(b)}})})
- const studio=page.locator('[data-practice-studio]');await expect(page.locator('.chapter-memorisation')).not.toHaveAttribute('open','')
+ const studio=page.locator('[data-practice-studio]');await expect(page.locator('.chapter-memorisation')).toHaveAttribute('open','')
  await studio.getByRole('button',{name:'Créer ma série',exact:true}).click()
  await expect(studio.getByRole('heading',{level:3})).toContainText('Situation fictive')
  for(let n=0;n<requests[0].targets.length;n++){
@@ -28,6 +28,6 @@ test('erreur et annulation ne remplacent pas la série ni le cours local',async(
  await start(page);let count=0;await page.route('**/functions/v1/examen-blanc',route=>{count++;if(count>1)return;return route.fulfill({status:502,json:{error:'invalid_response'}})})
  const studio=page.locator('[data-practice-studio]');await studio.getByRole('button',{name:'Créer ma série',exact:true}).click();await expect(studio.getByRole('alert')).toContainText('manque de variété')
  await studio.getByRole('button',{name:'Créer ma série',exact:true}).click();await expect.poll(()=>count).toBe(2);await studio.getByRole('button',{name:'Annuler l’attente',exact:true}).click();await expect(studio.getByRole('alert')).toContainText('Attente annulée')
- await page.locator('.chapter-memorisation summary').click();await expect(page.locator('[data-jeu]').first()).toBeVisible()
+ await expect(page.locator('[data-jeu]').first()).toBeVisible()
  expect((await new AxeBuilder({page}).include('[data-practice-studio]').analyze()).violations).toEqual([])
 })

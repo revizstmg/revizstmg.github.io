@@ -330,12 +330,12 @@
       "w": "Court, positif, utile."
      },
      {
-      "t": "Beh... ho diciotto anni. Mi piace dormire.",
+      "t": "Beh... ho diciotto anni. Mi piace dormire, giocare e non fare assolutamente niente.",
       "pts": 0,
       "w": "Honnête, mais pas attendu."
      },
      {
-      "t": "È tutto nel mio curriculum.",
+      "t": "È tutto nel mio curriculum, quindi può leggerlo da solo, credo.",
       "pts": 1,
       "w": "Le recruteur fait tout."
      }
@@ -370,12 +370,12 @@
       "w": "Un défaut réel avec une solution."
      },
      {
-      "t": "Sono molto pigro.",
+      "t": "Sono molto pigro. I miei professori possono confermarlo, lo dicono ogni anno.",
       "pts": 0,
       "w": "La vérité, pas au bon moment."
      },
      {
-      "t": "Non ho difetti.",
+      "t": "Davvero non ho difetti, sono perfetto in tutto quello che faccio a scuola.",
       "pts": 1,
       "w": "Personne ne croit ça."
      }

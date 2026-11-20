@@ -22,7 +22,7 @@ test('« Ma séance du jour » : la première question est à l’écran', async
 
 test('fin de série : « Refaire mes erreurs » rejoue seulement les questions ratées', async ({ page }) => {
   const erreurs = await preparer(page)
-  await page.addInitScript(()=>{let seed=123456789;Math.random=()=>{seed=(Math.imul(1664525,seed)+1013904223)>>>0;return seed/4294967296}})
+  await page.addInitScript(()=>{let seed=2718281;Math.random=()=>{seed=(Math.imul(1664525,seed)+1013904223)>>>0;return seed/4294967296}})
   await page.goto('./')
   await attendreAccueil(page)
   await page.goto('./#/subject/gestion-finance/theme/gf-t1/chapter/0')

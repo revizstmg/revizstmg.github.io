@@ -6,10 +6,10 @@ import PracticeStudio from '../components/PracticeStudio.jsx'
 import ChapterControl from '../components/ChapterControl.jsx'
 import CourseTutor from '../components/CourseTutor.jsx'
 import { courseText } from '../data/examenPersonnalise.js'
-import { useEffect, useMemo, useState } from 'react'
-import { Link, useParams, useNavigate } from 'react-router-dom'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { Link, useParams, useNavigate, useSearchParams } from 'react-router-dom'
 import Introuvable from './Introuvable.jsx'
-import { getChapter, getSubject, themeChapters, jeuxDuChapitre, sectionDefinitions } from '../data/index.js'
+import { getChapter, getSubject, themeChapters, jeuxAffiches, sectionDefinitions } from '../data/index.js'
 import { useStore, useThemeTimer } from '../store.jsx'
 import { PaginatedCourse, CourseText, saveFiche } from '../components/Course.jsx'
 import GameHost from '../games/GameHost.jsx'
@@ -34,11 +34,13 @@ function ChapitreCours() {
   const navigate = useNavigate()
   const glossaire = useTermes()
   const gameLabel = useGameLabel()
-  const [activeGame, setActiveGame] = useState(null)
-  const [memoryOpen,setMemoryOpen]=useState(false)
-  const [tab, setTab] = useState('cours') // Cours / Définitions / Exercices
-  // Un jeu ouvert doit s'afficher depuis son début, pas depuis la position de la liste.
-  useEffect(() => { if (activeGame) window.scrollTo(0, 0) }, [activeGame])
+  // Le jeu ouvert vit dans l'adresse (?jeu=…) : le bouton Retour du navigateur le ferme, et un
+  // rechargement le rouvre (depuis son début) au lieu de renvoyer au haut du chapitre.
+  const [params, setParams] = useSearchParams()
+  const jeuId = params.get('jeu')
+  const [memoryOpen,setMemoryOpen]=useState(true)
+  const [tab, setTab] = useState(jeuId ? 'exos' : 'cours') // Cours / Définitions / Exercices
+  const premierRendu = useRef(true)
 
   // Génération stable par visite : on ne régénère (et re-mélange) les exercices
   // qu'au changement de thème/chapitre, pas à chaque rendu. Une nouvelle visite
@@ -54,16 +56,20 @@ function ChapitreCours() {
 
   // Jeux affichés : ceux du chapitre + des flashcards générées à partir des
   // notions de la section (disponibles partout, pas seulement dans l'app).
-  const games = useMemo(() => jeuxDuChapitre(chapter, theme), [chapter, theme])
+  const games = useMemo(() => jeuxAffiches(chapter, theme), [chapter, theme])
+  const activeGame = useMemo(() => (jeuId ? games.find((g) => g.id === jeuId) || null : null), [jeuId, games])
+  const setActiveGame = (g) => { if (g) setParams({ jeu: g.id }); else setParams({}, { replace: true }) }
+  // Un jeu ouvert doit s'afficher depuis son début, pas depuis la position de la liste.
+  useEffect(() => { if (activeGame) window.scrollTo(0, 0) }, [activeGame])
 
   // Nouveau chapitre : on referme tout jeu ouvert, on revient à l'onglet Cours
   // et on remonte en haut.
   useEffect(() => {
     if (subject && theme && chapter) setLastChapter(sid, tid)
-    setActiveGame(null)
-    setTab('cours')
-    setMemoryOpen(false)
-    window.scrollTo(0, 0)
+    // Au premier rendu, un jeu demandé par l'adresse reste ouvert ; ensuite, chapitre neuf = onglet Cours.
+    if (!(premierRendu.current && jeuId)) { setTab('cours'); window.scrollTo(0, 0) }
+    premierRendu.current = false
+    setMemoryOpen(true)
   }, [tid, cidx])
 
   if (!subject) return <Introuvable />
@@ -150,7 +156,7 @@ function ChapitreCours() {
             <button
               key={tb.id}
               onClick={() => setTab(tb.id)}
-              className={`flex-1 border-b-2 px-2 py-2.5 text-sm font-semibold transition ${tab === tb.id ? 'text-slate-900 dark:text-white' : 'border-transparent text-slate-400 hover:text-slate-600'}`}
+              className={`flex-1 border-b-2 px-2 py-2.5 text-sm font-semibold transition ${tab === tb.id ? 'text-slate-900 dark:text-white' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-300 dark:hover:text-white'}`}
               style={tab === tb.id ? { borderColor: color } : undefined}
               aria-current={tab === tb.id}
             >
@@ -201,6 +207,11 @@ function ChapitreCours() {
 
       {/* ONGLET EXERCICES (jamais imprimé) */}
       <div className={`${tab === 'exos' ? 'space-y-2.5' : 'hidden'} no-print`}>
+        {games.length > 0 && (
+          <button type="button" data-jouer-maintenant className="btn-primary w-full" onClick={() => setActiveGame(games.find((g) => g.type === 'qcm') || games[0])}>
+            ⚡ <TextePublic text="Jouer maintenant" />
+          </button>
+        )}
         <Link to={`/missions/${sid}/${tid}/${chapter.idx}`} className="chapter-challenge card flex items-center justify-between gap-3 p-5 font-semibold">
           <span>✦ {(missionMessages[state.lang] || missionMessages.fr).boss}</span><span aria-hidden>→</span>
         </Link>

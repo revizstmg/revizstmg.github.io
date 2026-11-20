@@ -3868,5 +3868,22 @@
   "Ton principal défi ?": "ما هو تحدّيك الرئيسي؟",
   "⏳ Je me déconcentre / je procrastine": "⏳ أفقد تركيزي / أسوّف",
   "💨 J’oublie vite": "💨 أنسى بسرعة",
-  "🎯 Je comprends mais je bloque à l’épreuve": "🎯 أفهم لكنني أتوقف في الامتحان"
+  "🎯 Je comprends mais je bloque à l’épreuve": "🎯 أفهم لكنني أتوقف في الامتحان",
+  "Jouer maintenant": "العب الآن",
+  "Défi du jour et badges": "تحدي اليوم والشارات",
+  "Bac blanc, sujets, séance de révision et flashcards": "امتحان تجريبي، مواضيع، حصة مراجعة وبطاقات",
+  "Grand Oral, étude de gestion, atelier de formules, fiches photo, méthodo et sport au bac": "الشفوي الكبير، دراسة التسيير، ورشة المعادلات، بطاقات الصور، المنهجية والرياضة في الباكالوريا",
+  "Minuteur de travail, notes de classe et classement": "مؤقت العمل، نقاط القسم والترتيب",
+  "Le minuteur de travail et le classement de la semaine sont réservés à Premium.": "مؤقت العمل والترتيب الأسبوعي مخصصان لباقة Premium.",
+  "Ton plan ne couvre pas tout le programme": "خطتك لا تغطي كل المنهج",
+  "Avec tes heures actuelles, tu couvres environ {v0} % du programme avant les épreuves.": "بساعاتك الحالية تغطي حوالي {v0} % من المنهج قبل الامتحانات.",
+  "Pour tout couvrir : environ {v0} h par semaine. Sinon, garde ton rythme : on commence par l’essentiel, et une note un peu plus basse reste possible.": "لتغطية كل شيء: حوالي {v0} س في الأسبوع. وإلا فحافظ على إيقاعك: نبدأ بالأساسي ويبقى معدل أقل قليلاً ممكنًا.",
+  "Quelques questions rapides, une série à garder.": "بضعة أسئلة سريعة وسلسلة تحافظ عليها.",
+  "Réviser une langue": "راجع لغة",
+  "Dix modes ludiques, sans cours à lire.": "عشرة أوضاع ممتعة بلا دروس للقراءة.",
+  "Pas envie de choisir ?": "لا تريد الاختيار؟",
+  "On te donne 5 formules au hasard, un exercice chacune.": "نعطيك 5 معادلات عشوائية، تمرين لكل واحدة.",
+  "5 exercices au hasard": "5 تمارين عشوائية",
+  "Pas le temps d’un sujet complet ?": "لا وقت لموضوع كامل؟",
+  "Une séance express de questions, avec ton score tout de suite.": "حصة أسئلة سريعة مع نتيجتك فورًا."
 }

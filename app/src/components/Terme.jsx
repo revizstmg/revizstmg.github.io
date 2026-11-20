@@ -47,9 +47,9 @@ export default function Terme({ terme, definition }) {
   return (
     <>
       <button ref={bouton} type="button" className="terme-clic text-slate-900 dark:text-white" aria-expanded={ouvert} aria-controls={ouvert ? id : undefined}
-        aria-haspopup="true" onClick={() => setOuvert((v) => !v)}>{terme}</button>
+        aria-haspopup="true" onClick={(e) => { e.stopPropagation(); setOuvert((v) => !v) }}>{terme}</button>
       {ouvert && createPortal(
-        <div ref={fenetre} id={id} role="dialog" aria-label={`Définition : ${terme}`} lang="fr" className="terme-def no-print"
+        <div ref={fenetre} id={id} role="dialog" aria-label={`Définition : ${terme}`} lang="fr" className="terme-def no-print" onClick={(e) => e.stopPropagation()}
           style={pos ? { left: pos.gauche, top: pos.haut, width: pos.largeur } : { left: 12, top: 0, width: 280, visibility: 'hidden' }}>
           <p className="terme-def-titre">{terme}</p>
           <p className="terme-def-texte">{definition}</p>

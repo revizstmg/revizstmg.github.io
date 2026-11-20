@@ -375,7 +375,7 @@ export default {
   unlocked: 'مفتوحة', earnedCheck: 'مكتسب ✓', resetProgress: 'إعادة ضبط تقدّمي',
   resetConfirm: 'مسح كل تقدّمك (الخبرة، الأوسمة، النتائج) على هذا الجهاز؟',
   noFavYet: 'لا فصول في المفضّلة بعد.',
-  addFavHint: 'أضفها بالنجمة ☆ في صفحة فصل.',
+  addFavHint: 'أضفها بالنجمة ☆ في صفحة موضوع.',
   removeFav: 'إزالة من المفضّلة', addFav: 'إضافة إلى المفضّلة',
   autoTranslated: 'مُترجَم تلقائيًا',
   myPath: 'مساري',
