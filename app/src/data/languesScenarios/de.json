@@ -1,0 +1,406 @@
+{
+ "snap": [
+  {
+   "intro": "Ton pote berlinois te demande si tu viens.",
+   "prompt": "Kommst du heute Abend oder lässt du mich wieder sitzen?",
+   "options": [
+    "Ich komme, versprochen. Tut mir leid wegen letztem Mal.",
+    "Ich kommen gestern Abend, kein Problem.",
+    "Ich komme mit deinem Cousin zum Mond."
+   ],
+   "why": "La bonne réponse répond et s'excuse. Le verbe doit être conjugué : « ich komme »."
+  },
+  {
+   "intro": "Un mignon répond à ta story.",
+   "prompt": "Ist der Hund auf deiner Story deiner? Der ist so süß!",
+   "options": [
+    "Ja, das ist meiner. Er heißt Keks.",
+    "Ja, ich habe neunzehn Jahre und er vier Beine.",
+    "Mein Hund ist eine wirtschaftliche Theorie."
+   ],
+   "why": "En allemand, l'âge se dit avec « sein » : « ich bin neunzehn »."
+  },
+  {
+   "intro": "Ton prof veut une explication.",
+   "prompt": "Ihre Arbeit ist zu spät. Haben Sie eine Erklärung?",
+   "options": [
+    "Es tut mir leid, ich hatte ein Problem mit dem Laptop. Ich schicke sie heute Abend.",
+    "Entschuldigung, ich vergesse gestern.",
+    "Die Erklärung ist zu groß für meinen Morgen."
+   ],
+   "why": "Excuse, raison, solution. « Ich vergesse gestern » : mauvais temps, il faut « ich habe vergessen »."
+  },
+  {
+   "intro": "Au restaurant à Berlin.",
+   "prompt": "Was darf es sein?",
+   "options": [
+    "Einen Burger und ein Wasser, bitte.",
+    "Ich wollen Burger und Wasser.",
+    "Ich möchte die Telefonnummer des Kochs."
+   ],
+   "why": "On dit « ich möchte » ou « einen… bitte », avec le verbe conjugué."
+  },
+  {
+   "intro": "Dans le train, quelqu'un veut s'asseoir.",
+   "prompt": "Entschuldigung, ist dieser Platz noch frei?",
+   "options": [
+    "Ja, setz dich. Er ist frei.",
+    "Ja, ich frei bin dieser Platz.",
+    "Nur wenn du mir dein Sternzeichen sagst."
+   ],
+   "why": "Le verbe est en deuxième position : « Er ist frei »."
+  }
+ ],
+ "faux": [
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« das Gift » veut dire…",
+   "options": [
+    "le poison",
+    "le cadeau",
+    "l'or",
+    "la colle"
+   ],
+   "why": "« Gift » = poison. Un cadeau se dit « Geschenk »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« bekommen » veut dire…",
+   "options": [
+    "recevoir",
+    "devenir",
+    "commencer",
+    "jeter"
+   ],
+   "why": "« Bekommen » = recevoir. Devenir = « werden »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« der Chef » est…",
+   "options": [
+    "le patron",
+    "le cuisinier",
+    "le chef d'orchestre",
+    "l'élève"
+   ],
+   "why": "« Chef » = patron. Le cuisinier se dit « Koch »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« also » veut dire…",
+   "options": [
+    "donc",
+    "aussi",
+    "jamais",
+    "pourtant"
+   ],
+   "why": "« Also » = donc. Aussi se dit « auch »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« der Rat » veut dire…",
+   "options": [
+    "le conseil",
+    "le rat",
+    "la route",
+    "la ration"
+   ],
+   "why": "« Rat » = conseil. Le rat se dit « die Ratte »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« die Art » veut dire…",
+   "options": [
+    "la sorte, la manière",
+    "l'art",
+    "l'âge",
+    "l'arbre"
+   ],
+   "why": "« Art » = sorte. L'art se dit « Kunst »."
+  }
+ ],
+ "serie": [
+  {
+   "intro": "Deux amis ratent le dernier bus.",
+   "prompt": "Der letzte Bus ____ schon weg.",
+   "options": [
+    "ist",
+    "hat",
+    "wird",
+    "sind"
+   ],
+   "why": "Avec « weg », on utilise « sein » : « ist weg »."
+  },
+  {
+   "intro": "Un mec cuisine pour la première fois.",
+   "prompt": "Das ____ komisch. Ist es verbrannt?",
+   "options": [
+    "riecht",
+    "rieche",
+    "riechen",
+    "riechst"
+   ],
+   "why": "Sujet « das » : « riecht » (3e personne)."
+  },
+  {
+   "intro": "Quelqu'un ment sur son âge.",
+   "prompt": "Er sagt, er ____ zwanzig Jahre alt.",
+   "options": [
+    "ist",
+    "hat",
+    "wird",
+    "macht"
+   ],
+   "why": "En allemand, l'âge se dit avec « sein » : « ist zwanzig »."
+  },
+  {
+   "intro": "Une étudiante arrive en retard.",
+   "prompt": "Ich bin zu spät, ____ ich die U-Bahn verpasst habe.",
+   "options": [
+    "weil",
+    "aber",
+    "oder",
+    "wenn"
+   ],
+   "why": "« Weil » introduit la cause, verbe à la fin."
+  },
+  {
+   "intro": "Deux amis choisissent un film.",
+   "prompt": "Was ____ du heute Abend sehen?",
+   "options": [
+    "willst",
+    "wollen",
+    "will",
+    "wollt"
+   ],
+   "why": "Avec « du », on dit « willst »."
+  }
+ ],
+ "texto": [
+  {
+   "intro": "Un message tendre.",
+   "prompt": "hdl, bis später!",
+   "options": [
+    "Je t'aime bien, à plus tard !",
+    "Salut, à cet après-midi !",
+    "Je te hais, à bientôt."
+   ],
+   "why": "« hdl » = hab dich lieb."
+  },
+  {
+   "intro": "Un message poli.",
+   "prompt": "lg aus Köln",
+   "options": [
+    "Amitiés de Cologne.",
+    "Long voyage depuis Cologne.",
+    "Légère grippe à Cologne."
+   ],
+   "why": "« lg » = liebe Grüße."
+  },
+  {
+   "intro": "Un ami sec.",
+   "prompt": "kp, was wir essen sollen",
+   "options": [
+    "Aucune idée de ce qu'on doit manger.",
+    "Que payer pour manger.",
+    "Kilo de pain à manger."
+   ],
+   "why": "« kp » = keine Ahnung."
+  },
+  {
+   "intro": "Un ami est fauché.",
+   "prompt": "bin pleite bis Monatsende",
+   "options": [
+    "Je suis fauché jusqu'à la fin du mois.",
+    "Je suis plein jusqu'à la fin du mois.",
+    "Je suis parti jusqu'à la fin du mois."
+   ],
+   "why": "« Pleite sein » = être fauché."
+  },
+  {
+   "intro": "Un ami est enthousiaste.",
+   "prompt": "mega krass, oder?",
+   "options": [
+    "Trop dingue, non ?",
+    "Très gras, non ?",
+    "Méga cru, ou ?"
+   ],
+   "why": "« Krass » = dingue, impressionnant."
+  }
+ ],
+ "survie": {
+  "titre": "Berlin : 100 € pour tenir une journée",
+  "budget": 100,
+  "etapes": [
+   {
+    "scene": "Aéroport. Le chauffeur de taxi attend.",
+    "prompt": "Wohin soll es gehen?",
+    "options": [
+     {
+      "t": "Ins Zentrum, bitte. Was kostet das ungefähr?",
+      "cout": 20,
+      "w": "Tu demandes le prix : course normale."
+     },
+     {
+      "t": "Zentrum. Schnell.",
+      "cout": 35,
+      "w": "Il prend le chemin des écoliers."
+     },
+     {
+      "t": "Egal wohin.",
+      "cout": 55,
+      "w": "Il roule, il roule, il adore ton idée."
+     }
+    ]
+   },
+   {
+    "scene": "Au restaurant, le serveur est pressé.",
+    "prompt": "Was möchten Sie bestellen?",
+    "options": [
+     {
+      "t": "Was empfehlen Sie, das nicht scharf ist?",
+      "cout": 12,
+      "w": "Bonne question, bon repas."
+     },
+     {
+      "t": "Das Teuerste auf der Karte.",
+      "cout": 45,
+      "w": "Tu commandes le plat le plus cher sans le savoir."
+     },
+     {
+      "t": "Von allem etwas.",
+      "cout": 38,
+      "w": "Il t'apporte tout, et l'addition aussi."
+     }
+    ]
+   },
+   {
+    "scene": "Dans la rue, un vendeur te tend une casquette.",
+    "prompt": "Nur fünfzig Euro, mein Freund!",
+    "options": [
+     {
+      "t": "Das ist zu teuer. Können Sie mir einen Rabatt geben?",
+      "cout": 20,
+      "w": "Tu négocies et tu gagnes."
+     },
+     {
+      "t": "Okay, fünfzig.",
+      "cout": 50,
+      "w": "Il adore ta façon d'accepter."
+     },
+     {
+      "t": "Fünfzig was?",
+      "cout": 30,
+      "w": "Il hausse le prix pour ton temps."
+     }
+    ]
+   },
+   {
+    "scene": "Tu es perdu, il pleut.",
+    "prompt": "Kann ich Ihnen helfen?",
+    "options": [
+     {
+      "t": "Entschuldigung, wie komme ich zum Bahnhof?",
+      "cout": 0,
+      "w": "Phrase simple, direction claire."
+     },
+     {
+      "t": "Ich verloren, Bahnhof wo?",
+      "cout": 8,
+      "w": "Il comprend, tu offres un café."
+     },
+     {
+      "t": "Bahnhof, Bahnhof!",
+      "cout": 15,
+      "w": "Il t'appelle un taxi."
+     }
+    ]
+   }
+  ]
+ },
+ "entretien": {
+  "poste": "Stage en commerce dans une entreprise de sport",
+  "questions": [
+   {
+    "prompt": "Erzählen Sie etwas über sich.",
+    "options": [
+     {
+      "t": "Ich bin Wirtschaftsstudent. Ich bin organisiert und arbeite gern im Team.",
+      "pts": 3,
+      "w": "Court, positif, utile."
+     },
+     {
+      "t": "Na ja... ich bin achtzehn. Ich schlafe gern.",
+      "pts": 0,
+      "w": "Honnête, mais pas attendu."
+     },
+     {
+      "t": "Das steht alles im Lebenslauf.",
+      "pts": 1,
+      "w": "Le recruteur fait tout."
+     }
+    ]
+   },
+   {
+    "prompt": "Warum möchten Sie das Praktikum hier machen?",
+    "options": [
+     {
+      "t": "Ich möchte lernen, wie ein echtes Unternehmen funktioniert, und dem Team helfen.",
+      "pts": 3,
+      "w": "Motivation claire."
+     },
+     {
+      "t": "Weil meine Mutter es wollte.",
+      "pts": 0,
+      "w": "Ta mère a des idées, pas toi."
+     },
+     {
+      "t": "Weil es nah bei meinem Haus ist.",
+      "pts": 1,
+      "w": "Pratique, peu motivant."
+     }
+    ]
+   },
+   {
+    "prompt": "Was ist Ihre größte Schwäche?",
+    "options": [
+     {
+      "t": "Manchmal bin ich Perfektionist, aber ich lerne, Prioritäten zu setzen.",
+      "pts": 3,
+      "w": "Un défaut réel avec une solution."
+     },
+     {
+      "t": "Ich bin sehr faul.",
+      "pts": 0,
+      "w": "La vérité, pas au bon moment."
+     },
+     {
+      "t": "Ich habe keine Schwächen.",
+      "pts": 1,
+      "w": "Personne ne croit ça."
+     }
+    ]
+   },
+   {
+    "prompt": "Haben Sie Fragen an uns?",
+    "options": [
+     {
+      "t": "Ja. Wie sieht ein normaler Tag für Praktikanten aus?",
+      "pts": 3,
+      "w": "Tu montres que tu veux venir."
+     },
+     {
+      "t": "Wie viele Urlaubstage habe ich?",
+      "pts": 1,
+      "w": "Légitime, mais pas en premier."
+     },
+     {
+      "t": "Nein. Tschüss.",
+      "pts": 0,
+      "w": "Tu t'en vas déjà ?"
+     }
+    ]
+   }
+  ]
+ }
+}

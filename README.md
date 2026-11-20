@@ -206,6 +206,8 @@ Une empreinte différente après un changement censé être purement technique e
 
 Anglais, espagnol, italien, arabe standard et allemand : sélection à l’inscription et dans les réglages, indépendante de la langue de l’interface. Sources : `app/resources/langues/{en,es,it,ar,de}.json`.
 
+Dix modes de révision sans cours à lire, sous la page de chaque langue (`app/src/components/LanguesModes.jsx`, logique dans `app/src/data/languesModes.js`) : test du pote (défi de 5 questions par code ou lien), réponds comme sur Snap, piège du faux ami, sous-titres de série, « j’ai 3 minutes », survie à l’étranger, mise en jeu, classement de la semaine, traduis ce texto, entretien vexant. Les questions viennent des QCM du manuel de la langue ou de scénarios écrits dans `app/src/data/languesScenarios/<langue>.json` (anglais, espagnol, italien, allemand ; pas encore l’arabe, faute de relecture par un arabophone). Les points de la semaine et la banque de la mise restent sur l’appareil ; chaque bonne réponse donne aussi de l’XP. Tests : `tests/langues-modes.test.js` et `tests/parcours/langues-modes.spec.js`.
+
 Les cinq guides PDF réunissent cours, vocabulaire, exemples, mini-exercices corrigés, signets, liens de correction et vidéos externes. Ils comportent des champs de réponse et de suivi remplissables ; l’enregistrement dépend d’un lecteur PDF compatible. Les vidéos nécessitent Internet et restent hébergées par leurs éditeurs. Les anciens cours de langues sont archivés, pas supprimés de l’historique des élèves.
 
 ```bash

@@ -1,0 +1,406 @@
+{
+ "snap": [
+  {
+   "intro": "Ton pote romain te demande si tu viens.",
+   "prompt": "Vieni stasera o mi pianti di nuovo?",
+   "options": [
+    "Vengo, giuro. Scusa per l'altra volta.",
+    "Io venire ieri sera, nessun problema.",
+    "Vengo sulla luna con tuo cugino."
+   ],
+   "why": "La bonne réponse répond et s'excuse. Pas d'infinitif en italien : « vengo »."
+  },
+  {
+   "intro": "Un mignon répond à ta story.",
+   "prompt": "Ma quel cane nelle tue storie è tuo? Che carino!",
+   "options": [
+    "Sì, è mio. Si chiama Biscotto.",
+    "Sì, io ho diciannove anni e lui quattro zampe.",
+    "Il mio cane è una teoria economica."
+   ],
+   "why": "On répond directement : « Sì, è mio. »"
+  },
+  {
+   "intro": "Ton prof veut une explication.",
+   "prompt": "La tua relazione è in ritardo. Hai una spiegazione?",
+   "options": [
+    "Mi dispiace, ho avuto un problema con il computer. La mando stasera.",
+    "Scusi, io dimentico ieri.",
+    "La spiegazione è troppo grande per la mia mattina."
+   ],
+   "why": "Excuse courte, raison, solution. « Dimentico ieri » mélange les temps."
+  },
+  {
+   "intro": "Au restaurant à Rome.",
+   "prompt": "Cosa prendete?",
+   "options": [
+    "Un hamburger e un'acqua, per favore.",
+    "Io volere hamburger e acqua.",
+    "Vorrei il numero del cuoco."
+   ],
+   "why": "On dit « vorrei » ou « un… per favore », pas l'infinitif."
+  },
+  {
+   "intro": "Dans le train, quelqu'un veut s'asseoir.",
+   "prompt": "Scusa, è libero questo posto?",
+   "options": [
+    "Sì, siediti pure. È libero.",
+    "Sì, io sono libero da tre ore.",
+    "Solo se mi dici il tuo segno zodiacale."
+   ],
+   "why": "Réponse simple : « Sì, è libero. »"
+  }
+ ],
+ "faux": [
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« la camera » veut dire…",
+   "options": [
+    "la chambre",
+    "la caméra",
+    "la camelote",
+    "la chambre à air"
+   ],
+   "why": "« Camera » = chambre. Une caméra se dit « telecamera »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« la libreria » est…",
+   "options": [
+    "la librairie",
+    "la bibliothèque",
+    "le livre",
+    "la liberté"
+   ],
+   "why": "« Libreria » = librairie. Bibliothèque = « biblioteca »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« il burro » veut dire…",
+   "options": [
+    "le beurre",
+    "l'âne",
+    "le bourreau",
+    "le bureau"
+   ],
+   "why": "« Burro » = beurre en italien. En espagnol, « burro » est l'âne."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« il cognome » veut dire…",
+   "options": [
+    "le nom de famille",
+    "la connaissance",
+    "le cognac",
+    "le prénom"
+   ],
+   "why": "« Cognome » = nom de famille. Le prénom = « nome »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« i parenti » veut dire…",
+   "options": [
+    "la famille élargie",
+    "père et mère",
+    "les voisins",
+    "les amis"
+   ],
+   "why": "« Parenti » = les proches de la famille. Père et mère = « genitori »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« la firma » veut dire…",
+   "options": [
+    "la signature",
+    "l'entreprise",
+    "la ferme",
+    "la fermeture"
+   ],
+   "why": "« Firma » = signature. Une entreprise se dit « azienda »."
+  }
+ ],
+ "serie": [
+  {
+   "intro": "Deux amis ratent le dernier bus.",
+   "prompt": "L'ultimo autobus ____ già passato.",
+   "options": [
+    "è",
+    "ha",
+    "sono",
+    "hanno"
+   ],
+   "why": "Avec « passare », on utilise « essere » : « è passato »."
+  },
+  {
+   "intro": "Un mec cuisine pour la première fois.",
+   "prompt": "Che ____ odore! È bruciato?",
+   "options": [
+    "cattivo",
+    "cattiva",
+    "male",
+    "mal"
+   ],
+   "why": "« Odore » est masculin : « cattivo odore »."
+  },
+  {
+   "intro": "Quelqu'un ment sur son âge.",
+   "prompt": "Dice che ____ vent'anni.",
+   "options": [
+    "ha",
+    "è",
+    "fa",
+    "sta"
+   ],
+   "why": "En italien, on a l'âge : « ha vent'anni »."
+  },
+  {
+   "intro": "Une étudiante arrive en retard.",
+   "prompt": "Sono in ritardo ____ ho perso la metro.",
+   "options": [
+    "perché",
+    "quindi",
+    "anche",
+    "mentre"
+   ],
+   "why": "« Perché » introduit la cause."
+  },
+  {
+   "intro": "Deux amis choisissent un film.",
+   "prompt": "Cosa ____ guardare stasera?",
+   "options": [
+    "vuoi",
+    "vuole",
+    "vorrai",
+    "volere"
+   ],
+   "why": "Avec « tu », on dit « vuoi »."
+  }
+ ],
+ "texto": [
+  {
+   "intro": "Un ami fixe un plan.",
+   "prompt": "cmq ci vediamo dopo, ok?",
+   "options": [
+    "De toute façon on se voit plus tard, d'accord ?",
+    "Combien on se voit ensuite, ok ?",
+    "Comment on se voit après, ok ?"
+   ],
+   "why": "« Cmq » = comunque."
+  },
+  {
+   "intro": "Un message tendre.",
+   "prompt": "tvb tantissimo",
+   "options": [
+    "Je t'aime beaucoup, vraiment.",
+    "Je te vois bientôt.",
+    "Je te voudrais beaucoup."
+   ],
+   "why": "« Tvb » = ti voglio bene."
+  },
+  {
+   "intro": "Un ami s'inquiète.",
+   "prompt": "xké non rispondi?",
+   "options": [
+    "Pourquoi tu ne réponds pas ?",
+    "Parce que tu ne réponds pas.",
+    "Quand tu réponds ?"
+   ],
+   "why": "« Xké » = perché (pourquoi)."
+  },
+  {
+   "intro": "Un ami est fauché.",
+   "prompt": "sono al verde fino a fine mese",
+   "options": [
+    "Je suis fauché jusqu'à la fin du mois.",
+    "Je suis écolo jusqu'à la fin du mois.",
+    "Je suis en vert jusqu'à la fin du mois."
+   ],
+   "why": "« Essere al verde » = ne plus avoir d'argent."
+  },
+  {
+   "intro": "Un ami est enthousiaste.",
+   "prompt": "che figata!",
+   "options": [
+    "Trop cool !",
+    "Quelle figure !",
+    "Quelle fatigue !"
+   ],
+   "why": "« Che figata » = trop bien, en argot."
+  }
+ ],
+ "survie": {
+  "titre": "Rome : 100 € pour tenir une journée",
+  "budget": 100,
+  "etapes": [
+   {
+    "scene": "Aéroport. Le chauffeur de taxi attend.",
+    "prompt": "Dove la porto?",
+    "options": [
+     {
+      "t": "In centro, per favore. Quanto costa più o meno?",
+      "cout": 20,
+      "w": "Tu demandes le prix : course normale."
+     },
+     {
+      "t": "Centro. Veloce.",
+      "cout": 35,
+      "w": "Il prend le chemin des écoliers."
+     },
+     {
+      "t": "Dove vuole.",
+      "cout": 55,
+      "w": "Il roule, il roule, il adore ton idée."
+     }
+    ]
+   },
+   {
+    "scene": "Au restaurant, le serveur est pressé.",
+    "prompt": "Cosa desidera?",
+    "options": [
+     {
+      "t": "Che cosa mi consiglia che non sia piccante?",
+      "cout": 12,
+      "w": "Bonne question, bon repas."
+     },
+     {
+      "t": "La cosa più cara del menù.",
+      "cout": 45,
+      "w": "Tu commandes le plat le plus cher sans le savoir."
+     },
+     {
+      "t": "Un po' di tutto.",
+      "cout": 38,
+      "w": "Il t'apporte tout, et l'addition aussi."
+     }
+    ]
+   },
+   {
+    "scene": "Dans la rue, un vendeur te tend une casquette.",
+    "prompt": "Solo cinquanta euro, amico!",
+    "options": [
+     {
+      "t": "È troppo caro. Può farmi uno sconto?",
+      "cout": 20,
+      "w": "Tu négocies et tu gagnes."
+     },
+     {
+      "t": "Va bene, cinquanta.",
+      "cout": 50,
+      "w": "Il adore ta façon d'accepter."
+     },
+     {
+      "t": "Cinquanta cosa?",
+      "cout": 30,
+      "w": "Il hausse le prix pour ton temps."
+     }
+    ]
+   },
+   {
+    "scene": "Tu es perdu, il pleut.",
+    "prompt": "Posso aiutarla?",
+    "options": [
+     {
+      "t": "Scusi, come arrivo alla stazione?",
+      "cout": 0,
+      "w": "Phrase simple, direction claire."
+     },
+     {
+      "t": "Io perso, stazione dove?",
+      "cout": 8,
+      "w": "Il comprend, tu offres un café."
+     },
+     {
+      "t": "Stazione, stazione!",
+      "cout": 15,
+      "w": "Il t'appelle un taxi."
+     }
+    ]
+   }
+  ]
+ },
+ "entretien": {
+  "poste": "Stage en commerce dans une entreprise de sport",
+  "questions": [
+   {
+    "prompt": "Mi parli di lei.",
+    "options": [
+     {
+      "t": "Sono studente di commercio. Sono organizzato e mi piace lavorare in squadra.",
+      "pts": 3,
+      "w": "Court, positif, utile."
+     },
+     {
+      "t": "Beh... ho diciotto anni. Mi piace dormire.",
+      "pts": 0,
+      "w": "Honnête, mais pas attendu."
+     },
+     {
+      "t": "È tutto nel mio curriculum.",
+      "pts": 1,
+      "w": "Le recruteur fait tout."
+     }
+    ]
+   },
+   {
+    "prompt": "Perché vuole fare lo stage qui?",
+    "options": [
+     {
+      "t": "Voglio imparare come funziona una vera azienda ed essere utile alla squadra.",
+      "pts": 3,
+      "w": "Motivation claire."
+     },
+     {
+      "t": "Perché me l'ha chiesto mia madre.",
+      "pts": 0,
+      "w": "Ta mère a des idées, pas toi."
+     },
+     {
+      "t": "Perché è vicino a casa mia.",
+      "pts": 1,
+      "w": "Pratique, peu motivant."
+     }
+    ]
+   },
+   {
+    "prompt": "Qual è il suo difetto più grande?",
+    "options": [
+     {
+      "t": "A volte sono perfezionista, ma sto imparando a dare le priorità.",
+      "pts": 3,
+      "w": "Un défaut réel avec une solution."
+     },
+     {
+      "t": "Sono molto pigro.",
+      "pts": 0,
+      "w": "La vérité, pas au bon moment."
+     },
+     {
+      "t": "Non ho difetti.",
+      "pts": 1,
+      "w": "Personne ne croit ça."
+     }
+    ]
+   },
+   {
+    "prompt": "Ha domande per noi?",
+    "options": [
+     {
+      "t": "Sì. Come sarebbe una giornata tipo per uno stagista?",
+      "pts": 3,
+      "w": "Tu montres que tu veux venir."
+     },
+     {
+      "t": "Quanti giorni di ferie ho?",
+      "pts": 1,
+      "w": "Légitime, mais pas en premier."
+     },
+     {
+      "t": "No. Arrivederci.",
+      "pts": 0,
+      "w": "Tu t'en vas déjà ?"
+     }
+    ]
+   }
+  ]
+ }
+}

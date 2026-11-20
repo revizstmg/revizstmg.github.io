@@ -1,0 +1,604 @@
+{
+ "snap": [
+  {
+   "intro": "Ton pote anglais te demande si tu viens à sa soirée.",
+   "prompt": "Are you coming tonight or are you ghosting me again?",
+   "options": [
+    "I'll be there, promise. Sorry for last time.",
+    "I am coming to the bathroom of the moon.",
+    "No, I don't be agree."
+   ],
+   "why": "La bonne réponse répond à la question et s'excuse. La deuxième n'a aucun sens, et la troisième se trompe de verbe : on dit « I don't agree »."
+  },
+  {
+   "intro": "Un inconnu mignon répond à ta story.",
+   "prompt": "hey, I saw your story. cute dog, is he yours?",
+   "options": [
+    "Yes, he's mine. His name is Biscuit.",
+    "Yes, I have 19 years and he has four legs.",
+    "My dog is a very interesting economic theory."
+   ],
+   "why": "En anglais, l'âge se dit avec « be » : « I am 19 », pas « I have 19 years »."
+  },
+  {
+   "intro": "Ta prof t'écrit parce que ton devoir n'est pas rendu.",
+   "prompt": "Your report is late. Do you have an explanation?",
+   "options": [
+    "I'm sorry, I had a problem with my laptop. I can send it tonight.",
+    "Sorry, I forget it. It's not my fault.",
+    "Explanation is a very big word for my morning."
+   ],
+   "why": "Bonne réponse : excuse courte, raison crédible, solution. « I forget » est au présent, il faut « I forgot », et « not my fault » aggrave."
+  },
+  {
+   "intro": "Ton colocataire a faim et il est fâché.",
+   "prompt": "Dude, who ate my pizza?? I'm literally shaking.",
+   "options": [
+    "I'm sorry, I ate it. I'll buy you another one.",
+    "I am eating it since yesterday.",
+    "The pizza was in an economic crisis."
+   ],
+   "why": "Pour une action finie dans le passé, on utilise le prétérit : « I ate it ». « I am eating since » mélange tout."
+  },
+  {
+   "intro": "Tu es au restaurant à Londres.",
+   "prompt": "Hi! Are you ready to order or do you need a few more minutes?",
+   "options": [
+    "I'll have the burger, please. And a water.",
+    "Yes, I am ready to ordering.",
+    "I want your phone number."
+   ],
+   "why": "Après « ready to », on met la base verbale. Et commander un burger marche mieux qu'un numéro de téléphone."
+  },
+  {
+   "intro": "Dans l'avion, quelqu'un veut s'asseoir.",
+   "prompt": "Excuse me, is this seat taken?",
+   "options": [
+    "No, go ahead. It's free.",
+    "Yes, I am taken since three hours.",
+    "Only if you tell me your zodiac sign."
+   ],
+   "why": "« Taken » parle de la place, pas de toi. « It's free » est la réponse naturelle."
+  },
+  {
+   "intro": "Un recruteur accepte ta demande sur LinkedIn.",
+   "prompt": "Thanks for connecting! What do you do?",
+   "options": [
+    "I'm a business student. I'm looking for an internship.",
+    "I am student of business since I am born.",
+    "I mostly do nothing but very professionally."
+   ],
+   "why": "On se présente simplement : « I'm a business student » et on dit ce qu'on cherche."
+  },
+  {
+   "intro": "Un ami fauché te demande de l'argent.",
+   "prompt": "can you lend me 20 bucks until friday? i'll pay you back",
+   "options": [
+    "Sure, but you pay me back on Friday, deal?",
+    "Borrow is when you give, lend is when I take.",
+    "I don't have, I am poor like a mouse church."
+   ],
+   "why": "« Lend » veut dire prêter, « borrow » emprunter. Et l'expression est « poor as a church mouse »."
+  }
+ ],
+ "faux": [
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« actually » veut dire…",
+   "options": [
+    "en fait",
+    "actuellement",
+    "autrefois",
+    "d'ailleurs"
+   ],
+   "why": "« Actually » veut dire « en fait ». Pour « actuellement », on dit « currently » ou « at the moment »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« a library » est…",
+   "options": [
+    "une bibliothèque",
+    "une librairie",
+    "un livre",
+    "une liberté"
+   ],
+   "why": "« Library » = bibliothèque. Une librairie, c'est « a bookshop » ou « bookstore »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« sensible » veut dire…",
+   "options": [
+    "raisonnable",
+    "sensible (qui pleure facilement)",
+    "sentimental",
+    "odorant"
+   ],
+   "why": "« Sensible » veut dire raisonnable. Pour « sensible », on dit « sensitive »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« eventually » veut dire…",
+   "options": [
+    "finalement, à la fin",
+    "éventuellement",
+    "évidemment",
+    "exceptionnellement"
+   ],
+   "why": "« Eventually » = finalement. Pour « éventuellement », on dit « possibly » ou « if necessary »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« to demand » veut dire…",
+   "options": [
+    "exiger",
+    "demander poliment",
+    "dire non",
+    "inventer"
+   ],
+   "why": "« Demand » est fort : exiger. Pour demander, on dit « to ask »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« to attend a meeting » veut dire…",
+   "options": [
+    "assister à une réunion",
+    "attendre une réunion",
+    "organiser une réunion",
+    "annuler une réunion"
+   ],
+   "why": "« To attend » = assister à. Pour « attendre », on dit « to wait for »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« to pretend » veut dire…",
+   "options": [
+    "faire semblant",
+    "prétendre sérieusement",
+    "retenir",
+    "planifier"
+   ],
+   "why": "« Pretend » = faire semblant. Pour « prétendre », on dit « to claim »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« sympathetic » veut dire…",
+   "options": [
+    "compatissant",
+    "sympathique",
+    "vexant",
+    "bavard"
+   ],
+   "why": "« Sympathetic » = compatissant. Sympathique se dit « nice » ou « friendly »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« location » veut dire…",
+   "options": [
+    "l'emplacement",
+    "la location d'une voiture",
+    "le locataire",
+    "l'allocation"
+   ],
+   "why": "« Location » = l'endroit. Louer se dit « rent » ou « hire »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« an injury » veut dire…",
+   "options": [
+    "une blessure",
+    "une injure",
+    "une assurance",
+    "une injection"
+   ],
+   "why": "« Injury » = blessure. Une injure, c'est « an insult »."
+  }
+ ],
+ "serie": [
+  {
+   "intro": "Un mec est coincé dans un ascenseur avec son ex.",
+   "prompt": "Okay, so this is ____ awkward.",
+   "options": [
+    "really",
+    "very much",
+    "a lot of",
+    "too many"
+   ],
+   "why": "On place « really » devant un adjectif. « Very much » et « a lot of » ne marchent pas ici."
+  },
+  {
+   "intro": "Un héros ouvre le frigo vide à 3 h du matin.",
+   "prompt": "I haven't eaten ____ yesterday.",
+   "options": [
+    "since",
+    "for",
+    "during",
+    "from"
+   ],
+   "why": "« Since » + un point dans le temps (yesterday). « For » va avec une durée."
+  },
+  {
+   "intro": "Deux colocs se disputent la télécommande.",
+   "prompt": "You ____ watch your show later. I was here first.",
+   "options": [
+    "can",
+    "must to",
+    "are",
+    "did"
+   ],
+   "why": "Après « can », on met la base verbale, sans « to »."
+  },
+  {
+   "intro": "Un étudiant découvre qu'il a rendu le mauvais fichier.",
+   "prompt": "Oh no. I ____ the wrong file.",
+   "options": [
+    "sent",
+    "send",
+    "sending",
+    "am sent"
+   ],
+   "why": "Action terminée dans le passé : prétérit, « sent »."
+  },
+  {
+   "intro": "Un pote jure qu'il a un plan génial.",
+   "prompt": "Trust me, I know what I'm ____.",
+   "options": [
+    "doing",
+    "do",
+    "done",
+    "did"
+   ],
+   "why": "Après « I'm », on met -ing : « I'm doing »."
+  },
+  {
+   "intro": "Une rupture par texto, tout le monde se tait.",
+   "prompt": "We need to talk. It's not you, it's ____.",
+   "options": [
+    "me",
+    "I",
+    "my",
+    "mine"
+   ],
+   "why": "Après « it's », on utilise le pronom complément : « me »."
+  },
+  {
+   "intro": "Un détective remarque ce que tout le monde rate.",
+   "prompt": "Wait. Who ____ the last cookie?",
+   "options": [
+    "took",
+    "taken",
+    "taking",
+    "take"
+   ],
+   "why": "Question au passé : « Who took… ? » sans auxiliaire."
+  },
+  {
+   "intro": "Un stagiaire parle à son boss pour la première fois.",
+   "prompt": "Sorry, I ____ hear you. Could you repeat?",
+   "options": [
+    "couldn't",
+    "didn't can",
+    "not could",
+    "am not"
+   ],
+   "why": "Pour dire qu'on n'y arrive pas dans le passé : « couldn't »."
+  }
+ ],
+ "texto": [
+  {
+   "intro": "Un pote se plaint de son projet de groupe.",
+   "prompt": "omg i'm so done with this group project, nobody's pulling their weight",
+   "options": [
+    "Je n'en peux plus de ce projet de groupe, personne ne fait sa part.",
+    "Mon groupe pèse très lourd.",
+    "Je suis fier de mon groupe."
+   ],
+   "why": "« To pull one's weight » = faire sa part du travail. « I'm so done » = j'en ai assez."
+  },
+  {
+   "intro": "Un ami prévient qu'il sera en retard.",
+   "prompt": "gonna be late, lmk if u start without me",
+   "options": [
+    "Je serai en retard, dis-moi si vous commencez sans moi.",
+    "Je serai en retard, dis-moi si tu me manques.",
+    "Je ne viendrai pas du tout."
+   ],
+   "why": "« lmk » = let me know. « gonna » = going to."
+  },
+  {
+   "intro": "Quelqu'un te dit ce qu'il pense de ta soirée.",
+   "prompt": "ngl that was kinda fire 🔥",
+   "options": [
+    "Honnêtement, c'était plutôt génial.",
+    "Honnêtement, c'était dangereux.",
+    "Je ne sais pas, c'était nul."
+   ],
+   "why": "« ngl » = not gonna lie (honnêtement). « Fire » = excellent."
+  },
+  {
+   "intro": "Quelqu'un te lit sans répondre.",
+   "prompt": "can u pls stop leaving me on read",
+   "options": [
+    "Peux-tu arrêter de lire mes messages sans répondre ?",
+    "Peux-tu arrêter de partir sans me lire ?",
+    "Peux-tu me lire le message à voix haute ?"
+   ],
+   "why": "« Leave someone on read » = lire le message sans répondre."
+  },
+  {
+   "intro": "Ton téléphone est presque à plat.",
+   "prompt": "brb, my phone's about to die",
+   "options": [
+    "Je reviens tout de suite, mon téléphone va s'éteindre.",
+    "Je reviens demain, mon téléphone est mort.",
+    "Je rappelle, mon téléphone a dix ans."
+   ],
+   "why": "« brb » = be right back. « About to die » = sur le point de s'éteindre."
+  },
+  {
+   "intro": "Une amie hésite sur sa tenue.",
+   "prompt": "idk what to wear tbh, any ideas?",
+   "options": [
+    "Je ne sais pas quoi mettre, franchement, des idées ?",
+    "Je ne sais pas qui tu es, des idées ?",
+    "Je veux porter quelque chose de blanc."
+   ],
+   "why": "« idk » = I don't know, « tbh » = to be honest."
+  },
+  {
+   "intro": "Un pote te dit de supprimer une photo.",
+   "prompt": "that's so cringe, delete it",
+   "options": [
+    "C'est tellement gênant, efface-le.",
+    "C'est tellement drôle, garde-le.",
+    "C'est tellement beau, envoie-le."
+   ],
+   "why": "« Cringe » = honteux ou gênant à regarder."
+  },
+  {
+   "intro": "Un ami n'a plus d'argent.",
+   "prompt": "i'm broke till payday, can we do something cheap?",
+   "options": [
+    "Je n'ai plus d'argent jusqu'à la paie, on peut faire un truc pas cher ?",
+    "Je suis cassé jusqu'à ce soir, on peut faire un truc cher ?",
+    "Je suis riche jusqu'à la paie."
+   ],
+   "why": "« Broke » = fauché. « Payday » = jour de paie."
+  }
+ ],
+ "survie": {
+  "titre": "Londres : 100 £ pour tenir une journée",
+  "budget": 100,
+  "etapes": [
+   {
+    "scene": "Aéroport. Le chauffeur de taxi attend.",
+    "prompt": "Where to?",
+    "options": [
+     {
+      "t": "To the city center, please. Is it a fixed price?",
+      "cout": 20,
+      "w": "Tu demandes le prix à l'avance : course normale."
+     },
+     {
+      "t": "City center. Fast.",
+      "cout": 35,
+      "w": "Il comprend « long chemin » : compteur plus gros."
+     },
+     {
+      "t": "Just drive.",
+      "cout": 55,
+      "w": "Il roule, il roule, il adore ton idée."
+     }
+    ]
+   },
+   {
+    "scene": "Au restaurant, le serveur est pressé.",
+    "prompt": "Are you ready to order?",
+    "options": [
+     {
+      "t": "What do you recommend that isn't spicy?",
+      "cout": 12,
+      "w": "Tu poses la bonne question et tu manges bien."
+     },
+     {
+      "t": "The spiciest thing. I'm very strong.",
+      "cout": 25,
+      "w": "Tu ne finis pas et tu recommandes un autre plat."
+     },
+     {
+      "t": "Same as that guy.",
+      "cout": 48,
+      "w": "Le gars mangeait du homard."
+     }
+    ]
+   },
+   {
+    "scene": "Dans la rue, un vendeur te tend une casquette.",
+    "prompt": "Special price for you, my friend. Only fifty!",
+    "options": [
+     {
+      "t": "That's too expensive. Can you do twenty?",
+      "cout": 20,
+      "w": "Tu négocies et tu gagnes."
+     },
+     {
+      "t": "Okay, sure. Fifty.",
+      "cout": 50,
+      "w": "Il adore ta façon d'accepter."
+     },
+     {
+      "t": "Fifty what? Dollars? Euros? Chickens?",
+      "cout": 30,
+      "w": "Il te vend une casquette, un autre prix, et ton temps."
+     }
+    ]
+   },
+   {
+    "scene": "Tu es perdu, il pleut.",
+    "prompt": "(Un passant s'arrête.) Can I help you?",
+    "options": [
+     {
+      "t": "Excuse me, how do I get to the station?",
+      "cout": 0,
+      "w": "Phrase simple, direction claire, aucun coût."
+     },
+     {
+      "t": "I am lost, you know where is the station?",
+      "cout": 5,
+      "w": "Il comprend et sourit, tu paies un café pour te réchauffer."
+     },
+     {
+      "t": "Station? Station? STATION!",
+      "cout": 15,
+      "w": "Il t'appelle un taxi."
+     }
+    ]
+   },
+   {
+    "scene": "À l'hôtel, tu arrives trop tôt.",
+    "prompt": "Your room isn't ready until three.",
+    "options": [
+     {
+      "t": "Could I leave my bag here until then?",
+      "cout": 0,
+      "w": "Poli et efficace."
+     },
+     {
+      "t": "I paid, give me my room now!",
+      "cout": 25,
+      "w": "Ils te facturent une nuit en plus pour t'apprendre le calme."
+     },
+     {
+      "t": "Okay.",
+      "cout": 15,
+      "w": "Tu attends trois heures et tu bois trois cafés."
+     }
+    ]
+   }
+  ]
+ },
+ "entretien": {
+  "poste": "Stage en commerce dans une entreprise de sport",
+  "questions": [
+   {
+    "prompt": "Tell me about yourself.",
+    "options": [
+     {
+      "t": "I'm a business student, curious and organized. I like sport and teamwork.",
+      "pts": 3,
+      "w": "Court, positif, utile pour le poste."
+     },
+     {
+      "t": "Well... I'm 18? I like sleeping.",
+      "pts": 0,
+      "w": "Honnête, mais ce n'est pas ce que le recruteur cherche."
+     },
+     {
+      "t": "My CV is on the table, read it.",
+      "pts": 1,
+      "w": "Tu laisses le recruteur faire tout le travail."
+     }
+    ]
+   },
+   {
+    "prompt": "Why do you want this internship?",
+    "options": [
+     {
+      "t": "I want to learn how a real company works and to be useful to your team.",
+      "pts": 3,
+      "w": "Motivation claire et utile."
+     },
+     {
+      "t": "My mother told me to find something.",
+      "pts": 0,
+      "w": "Ta mère a de bonnes idées, mais ce n'est pas la tienne."
+     },
+     {
+      "t": "Because it's near my house.",
+      "pts": 1,
+      "w": "Pratique, mais pas très motivant."
+     }
+    ]
+   },
+   {
+    "prompt": "What is your biggest weakness?",
+    "options": [
+     {
+      "t": "Sometimes I'm too perfectionist, so I'm learning to prioritize.",
+      "pts": 3,
+      "w": "Un défaut réel, avec une solution."
+     },
+     {
+      "t": "I'm lazy. Really lazy.",
+      "pts": 0,
+      "w": "Tu as dit la vérité, mais pas au bon moment."
+     },
+     {
+      "t": "I have no weakness, I'm perfect.",
+      "pts": 1,
+      "w": "Personne ne croit ça, et le recruteur encore moins."
+     }
+    ]
+   },
+   {
+    "prompt": "Can you work in a team?",
+    "options": [
+     {
+      "t": "Yes. At school we organized a project and I managed the schedule.",
+      "pts": 3,
+      "w": "Un exemple concret, c'est ce qui convainc."
+     },
+     {
+      "t": "I prefer to work alone, people are annoying.",
+      "pts": 0,
+      "w": "Un stage est une équipe."
+     },
+     {
+      "t": "Yes, if the others do the work.",
+      "pts": 1,
+      "w": "Drôle, mais le recruteur n'a pas ri."
+     }
+    ]
+   },
+   {
+    "prompt": "Do you have any questions for us?",
+    "options": [
+     {
+      "t": "Yes. What will a typical day look like for an intern?",
+      "pts": 3,
+      "w": "Tu montres que tu veux vraiment venir."
+     },
+     {
+      "t": "How many days of holiday do I get?",
+      "pts": 1,
+      "w": "Question légitime, mais pas en premier."
+     },
+     {
+      "t": "No. Bye.",
+      "pts": 0,
+      "w": "Tu t'en vas déjà ?"
+     }
+    ]
+   },
+   {
+    "prompt": "Your CV says you speak English fluently. Describe your weekend in three sentences.",
+    "options": [
+     {
+      "t": "On Saturday I played football with friends. Then we went to the cinema. On Sunday I studied for an exam.",
+      "pts": 3,
+      "w": "Trois phrases correctes, au prétérit."
+     },
+     {
+      "t": "Weekend is... how to say... party.",
+      "pts": 0,
+      "w": "Ce n'est pas « fluently »."
+     },
+     {
+      "t": "I speak fluently, but not now.",
+      "pts": 1,
+      "w": "Tu évites la question : le recruteur ne s’y trompe pas."
+     }
+    ]
+   }
+  ]
+ }
+}

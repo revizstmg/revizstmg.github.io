@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { useT, usePublicText } from '../i18n.js'
 import { useStore } from '../store.jsx'
 import { normalizeStudyLanguages } from '../data/studyLanguages.js'
@@ -9,6 +10,8 @@ import esPdf from '../../resources/langues/guide-es.pdf?url'
 import itPdf from '../../resources/langues/guide-it.pdf?url'
 import arPdf from '../../resources/langues/guide-ar.pdf?url'
 import ExercicesManuel from '../components/ExercicesManuel.jsx'
+import LanguesModes from '../components/LanguesModes.jsx'
+import { lireCode } from '../data/languesModes.js'
 import './Languages.css'
 const pdfs = {de:dePdf,en:enPdf,es:esPdf,it:itPdf,ar:arPdf}
 const guides = catalogue.map(g => ({...g,pdf:pdfs[g.id]}))
@@ -19,7 +22,10 @@ export default function Languages() {
  const publicText = usePublicText()
  const names = {de:t('studyGerman'),en:t('studyEnglish'),es:t('studySpanish'),it:t('studyItalian'),ar:t('studyArabic')}
  const selected = normalizeStudyLanguages(state.studyLanguages)
- const [language,setLanguage] = useState(selected[0] || 'en')
+ // Un défi reçu par lien (?defi=en-1abc.4) ouvre directement la bonne langue.
+ const [params] = useSearchParams()
+ const defi = lireCode(params.get('defi'))
+ const [language,setLanguage] = useState(defi && guides.some(g=>g.id===defi.langue) ? defi.langue : (selected[0] || 'en'))
  const [videoLevel,setVideoLevel] = useState('all')
  const guide = guides.find(g=>g.id===language) || guides[0]
  const levels = [...new Set(guide.videos.map(v=>v.level))]
@@ -31,6 +37,7 @@ export default function Languages() {
    <div className="language-cover" aria-hidden="true"><span>RÉVIZSTMG · LES GUIDES</span><strong>{names[guide.id]}</strong><span dir="auto">{guide.label}</span><i>Écouter.<br/>Parler.<br/>Recommencer.</i><span>Cours · exercices · corrigés</span></div>
    <div className="language-guide-copy"><p className="kicker">Ton compagnon de conversation</p><h2 id="language-guide-title" className="font-display text-3xl">Un guide complet, à ton rythme.</h2><p>{publicText(guide.intro)}</p><p>Des cours détaillés, des exemples et du vocabulaire, suivis de mini-exercices avec leurs corrigés expliqués. Un sommaire cliquable permet de retrouver les leçons et les réponses.</p><p>PDF interactif : champs de réponse, choix de QCM et cases « À retravailler ». Télécharge le fichier et enregistre une copie dans un lecteur compatible pour conserver tes réponses.</p><p className="font-semibold">{guide.stats.lessons} leçons · {guide.stats.exercises} exercices corrigés · {guide.stats.videos} vidéos</p><div className="language-pdf-actions"><a className="btn-primary" href={guide.pdf} target="_blank" rel="noopener noreferrer">Ouvrir le guide PDF ↗</a><a className="btn-secondary" href={guide.pdf} download={`RevizSTMG-guide-${guide.id}.pdf`}>Télécharger le PDF ↓</a></div><p className="text-sm">Guide en français avec exemples dans la langue étudiée. À lire sur écran ou à imprimer ; conserve-le sur ton appareil pour le consulter hors connexion.</p></div>
   </section>
+  <LanguesModes langue={language} nomLangue={names[guide.id]} defiTexte={params.get('defi') || ''} />
   <ExercicesManuel langue={language} nomLangue={names[guide.id]} />
   <section aria-labelledby="language-listen"><p className="kicker">Écouter pour mieux parler</p><h2 id="language-listen" className="font-display text-2xl">Des voix pour t’accompagner.</h2><div className="language-resources">{guide.resources.map((r,i)=><a key={r.url} className="card" href={r.url} target="_blank" rel="noopener noreferrer"><span className="kicker">{i===0?'Vidéos & écoute':'Pour aller plus loin'}</span><h3 className="font-display text-xl">{publicText(r.title)}</h3><p>{i===0?'Choisis une courte vidéo, écoute puis reprends une phrase à voix haute.':'Un complément pour vérifier, comprendre et pratiquer.'}</p><span className="font-semibold">Explorer la ressource ↗</span></a>)}</div><p className="mt-3 text-sm">Liens vers des sites externes : leurs conditions s’appliquent. Certaines activités peuvent demander un compte ou être payantes.</p></section>
   <details className="card p-5 language-video-library"><summary className="cursor-pointer font-semibold">Toute la bibliothèque vidéo · {guide.stats.videos} ressources</summary><p className="mt-3 text-sm">Des pages sélectionnées avec lecteur vidéo. Choisis un niveau, écoute un extrait puis résume-le avec tes propres mots. Les vidéos nécessitent une connexion Internet.</p><label className="mt-4 block font-semibold" htmlFor="language-video-level">Niveau des vidéos</label><select id="language-video-level" className="mt-2 w-full rounded-xl border p-3" style={{background:'var(--c-card)',color:'var(--c-ink)'}} value={videoLevel} onChange={e=>setVideoLevel(e.target.value)}><option value="all">Tous les niveaux</option>{levels.map(l=><option key={l} value={l}>{l}</option>)}</select><ul className="language-video-list">{videos.map(v=><li key={v.url}><a href={v.url} target="_blank" rel="noopener noreferrer"><span className="font-semibold" dir="auto">{v.title} ↗</span><span className="block text-sm">{v.provider} · {v.level}</span></a></li>)}</ul></details>
