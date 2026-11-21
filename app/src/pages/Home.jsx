@@ -61,7 +61,7 @@ export default function Home() {
         <div className="home-hello">
           {(photo || mono) && <span className="monogram home-avatar" aria-hidden>{photo ? <img src={photo} alt="" /> : mono}</span>}
           <div className="min-w-0 flex-1">
-            <p className="home-track">{tr(getLevel(state.track.level)?.name || '')}{state.track.level === 'terminale-stmg' && <> · {tr(getSpecialty(state.track.level, state.track.specialty)?.name || '')}</>}</p>
+            <p className="home-track">{tr(getLevel(state.track.level)?.name || '')}{state.track.level === 'terminale-stmg' && <> · {tr(getSpecialty(state.track.level, state.track.specialty)?.name || '')}</>} · <Link to="/changer" className="underline">{tr('Changer de niveau')}</Link></p>
             <h1 className="font-display">{greeting}{firstName ? <>, <span>{firstName}</span></> : ''}</h1>
             {dateLabel && <p className="home-date">{dateLabel}</p>}
           </div>

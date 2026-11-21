@@ -3,12 +3,13 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { LEVELS, trackLabel, trackIcon } from '../data/tracks.js'
-import { useT } from '../i18n.js'
+import { useT, usePublicText } from '../i18n.js'
 
 export default function Landing() {
   const { state, setTrack } = useStore()
   const navigate = useNavigate()
   const t = useT()
+  const tr = usePublicText()
   const [openLevel, setOpenLevel] = useState(
     state.track?.level === 'terminale-stmg' ? 'terminale-stmg' : null,
   )
@@ -20,7 +21,7 @@ export default function Landing() {
 
   return (
     <div className="animate-lux space-y-6 py-2">
-      <StudyPromise compact onStart={()=>{const area=document.getElementById('choisir-niveau');area?.scrollIntoView({block:'start'});area?.querySelector('button')?.focus({preventScroll:true})}}/>
+      {!state.track&&<StudyPromise compact onStart={()=>{const area=document.getElementById('choisir-niveau');area?.scrollIntoView({block:'start'});area?.querySelector('button')?.focus({preventScroll:true})}}/>}
       <header className="page-hero text-center">
         <p className="kicker">RévizSTMG</p>
         <h1 className="mt-1 font-display text-[2rem] font-medium leading-tight">
@@ -28,6 +29,7 @@ export default function Landing() {
         </h1>
         <span className="mx-auto mt-3 block h-px w-24 rounded-full" style={{ background: 'linear-gradient(90deg,transparent,#c8a24e,transparent)' }} />
         <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">{t('chooseLevel')}</p>
+        {state.track&&<p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{tr('Pas de panique : tu peux changer quand tu veux, tes points et tes badges restent avec toi. Ce menu est dans « Changer de niveau » (menu, ou en haut de l’accueil).')}</p>}
       </header>
 
       {state.track && (

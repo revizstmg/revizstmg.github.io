@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { readFileSync, readdirSync } from 'node:fs'
 import {
-  rng, melanger, normaliserItem, itemsManuel, itemsScenario, creerCode, lireCode, messageDefi, resoudreMise,
+  rng, melanger, normaliserItem, itemsManuel, enonceAutonome, qcmDuManuel, itemsScenario, creerCode, lireCode, messageDefi, resoudreMise,
   lundiDe, titreDeLaSemaine, verdictSurvie, verdictEntretien, etatSemaine, enregistrer, questionsPourMinutes, BANQUE_DEPART, QUESTIONS_DEFI,
 } from '../src/data/languesModes.js'
 
@@ -122,5 +122,22 @@ describe('scénarios des modes de langues', () => {
   }
   it('les manuels ont assez de QCM pour tirer des questions dans chaque langue, arabe compris', () => {
     for (const l of ['en', 'es', 'it', 'ar', 'de']) expect(itemsManuel(lire(l), 14, 9).length, l).toBe(14)
+  })
+})
+
+describe('corrections de l’audit : codes de défi et énoncés', () => {
+  it('accepte le message complet du pote, pas un score impossible ni une langue inconnue', () => {
+    expect(lireCode('J’ai fait 3/5 au test du pote. Fais mieux : code en-708snn.3')).toMatchObject({ langue: 'en', code: 'en-708snn', score: 3 })
+    expect(lireCode('en-1abc.9')).toBeNull()
+    expect(lireCode('fr-abc')).toBeNull()
+    expect(lireCode('rien du tout')).toBeNull()
+  })
+  it('un énoncé « dans cette fiche » devient autonome et un renvoi à un document absent est écarté', () => {
+    expect(enonceAutonome('Dans cette fiche, que signifie « legami » ?')).toBe('Que signifie « legami » ?')
+    const manuel = { exercises: [
+      { id: 'a', type: 'qcm', prompt: 'D’après le document NordRad, que fabrique l’entreprise ?', choices: ['x', 'y', 'z'], answer: 'x' },
+      { id: 'b', type: 'qcm', prompt: 'Dans cette fiche, que signifie « legami » ?', choices: ['liens', 'lames', 'lait'], answer: 'liens' },
+    ] }
+    expect(qcmDuManuel(manuel).map((e) => e.id)).toEqual(['b'])
   })
 })

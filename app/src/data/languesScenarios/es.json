@@ -11,7 +11,7 @@
    "why": "La bonne réponse répond à la question et s'excuse. « Yo vengo ayer » mélange présent et passé."
   },
   {
-   "intro": "Un mignon répond à ta story.",
+   "intro": "Un inconnu mignon répond à ta story.",
    "prompt": "Oye, ¿ese perro de tu historia es tuyo? ¡Qué guapo!",
    "options": [
     "Sí, es mío. Se llama Churro.",
@@ -49,6 +49,36 @@
     "Solo si me dices tu signo del zodiaco."
    ],
    "why": "On répond simplement : « Sí, está libre. »"
+  },
+  {
+   "intro": "Un camarade te propose de réviser ensemble.",
+   "prompt": "¿Quedamos mañana para repasar el examen?",
+   "options": [
+    "Vale, mañana después de clase me va bien. ¿Dónde quedamos?",
+    "Sí, yo soy de acuerdo, mañana voy a la clase de ti.",
+    "No, odio estudiar y odio los exámenes también."
+   ],
+   "why": "On dit « estoy de acuerdo », pas « soy de acuerdo »."
+  },
+  {
+   "intro": "Au café, le serveur arrive.",
+   "prompt": "Hola, ¿qué os pongo?",
+   "options": [
+    "Para mí un café con leche y para mi amigo un zumo de naranja, por favor.",
+    "Yo querer un café con leche y mi amigo un zumo.",
+    "Yo pongo un café y un zumo en la mesa."
+   ],
+   "why": "La première est polie et complète. « Yo querer » est à l'infinitif, et « pongo » veut dire que tu poses les verres."
+  },
+  {
+   "intro": "Ton correspondant te demande ton week-end.",
+   "prompt": "¿Qué hiciste el fin de semana?",
+   "options": [
+    "El sábado fui al cine con mis amigos y el domingo descansé.",
+    "El sábado voy al cine con mis amigos y el domingo descanso ayer.",
+    "No sé qué hice. Quizás nada, quizás todo."
+   ],
+   "why": "On raconte au passé : « fui », « descansé ». Mélanger présent et « ayer » est faux."
   }
  ],
  "faux": [
@@ -117,6 +147,39 @@
     "la rose"
    ],
    "why": "« Ropa » = vêtements. La robe se dit « vestido »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« la carpeta » veut dire…",
+   "options": [
+    "le classeur",
+    "la carpette",
+    "le tapis de table",
+    "la charpente"
+   ],
+   "why": "« Carpeta » = classeur, dossier. La carpette se dit « la alfombra »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« embarazada » veut dire…",
+   "options": [
+    "enceinte",
+    "embarrassée",
+    "épuisée",
+    "fiancée"
+   ],
+   "why": "« Embarazada » = enceinte. Embarrassée se dit « avergonzada »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« el éxito » veut dire…",
+   "options": [
+    "le succès",
+    "la sortie",
+    "l'exil",
+    "l'excès"
+   ],
+   "why": "« Éxito » = succès. La sortie se dit « la salida »."
   }
  ],
  "serie": [
@@ -226,6 +289,36 @@
     "Quelle honte, c'est trop mou !"
    ],
    "why": "« Guay » et « molar » = être cool."
+  },
+  {
+   "intro": "Un pote arrive en retard.",
+   "prompt": "llego tarde, guárdame un sitio porfa",
+   "options": [
+    "J'arrive en retard, garde-moi une place s'il te plaît.",
+    "Je suis tard, sauve-moi un site s'il te plaît.",
+    "J'arrive en avance, ne garde pas de place."
+   ],
+   "why": "« Llegar tarde » = arriver en retard. « Guardar un sitio » = garder une place. « Porfa » = por favor."
+  },
+  {
+   "intro": "Un pote veut changer l'heure.",
+   "prompt": "no me cuadra la hora, ¿podemos cambiarla?",
+   "options": [
+    "L'horaire ne me convient pas, on peut le changer ?",
+    "L'heure ne rentre pas dans mon carré, on peut la changer ?",
+    "L'horaire me convient très bien, on ne change rien."
+   ],
+   "why": "« Cuadrar » = convenir, tomber bien."
+  },
+  {
+   "intro": "Une pote parle de l'examen.",
+   "prompt": "qué fuerte lo del examen, ¿no?",
+   "options": [
+    "C'est dingue pour l'examen, non ?",
+    "Il est costaud, cet examen, il fait de la musculation.",
+    "Quel examen solide, non ?"
+   ],
+   "why": "« Qué fuerte » = c'est dingue, c'est incroyable."
   }
  ],
  "survie": {
@@ -335,7 +428,7 @@
       "w": "Honnête, mais pas ce qu'on attend."
      },
      {
-      "t": "Está todo en mi currículum, así que puede leerlo usted mismo, creo.",
+      "t": "Está todo en mi currículum, así que puedes leerlo tú mismo, creo.",
       "pts": 1,
       "w": "Le recruteur fait tout le travail."
      }
@@ -362,7 +455,7 @@
     ]
    },
    {
-    "prompt": "¿Cuál es su mayor defecto?",
+    "prompt": "¿Cuál es tu mayor defecto?",
     "options": [
      {
       "t": "A veces soy perfeccionista, pero aprendo a priorizar.",

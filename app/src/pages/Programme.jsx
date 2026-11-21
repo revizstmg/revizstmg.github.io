@@ -56,6 +56,7 @@ function ProgrammePage() {
             <p className="kicker" style={{ color: 'color-mix(in srgb, var(--c-accent) 62%, #fff)' }}>{t('examCountdown')}</p>
             <p className="my-1 font-display text-6xl font-extrabold" style={{ color: 'color-mix(in srgb, var(--c-accent) 55%, #fff)' }}>{dLeft > 0 ? `J-${dLeft}` : dLeft === 0 ? t('itsToday') : tr('Épreuve passée')}</p>
             <p className="text-xs text-[#d8cca8]">{new Date(state.bacDate + 'T00:00:00').toLocaleDateString(state.lang || 'fr', { calendar: 'gregory', numberingSystem: 'latn', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</p>
+            <p className="mt-1 text-xs text-[#d8cca8]">{tr('C’est ta date perso. Les épreuves officielles de la session 2027 sont listées plus bas.')}</p>
             <button onClick={() => { setDraft(state.bacDate); setEditing(true) }} className="mt-3 text-xs font-semibold underline" style={{ color: 'color-mix(in srgb, var(--c-accent) 60%, #fff)' }}>{t('editDate')}</button>
           </>
         ) : (

@@ -29,16 +29,24 @@ export function normaliserItem(src, r = Math.random, id = '') {
   return { id: src.id || id, intro: src.intro || null, prompt: src.prompt, options, ok: options.indexOf(bonne), why: src.why || '' }
 }
 
+// Un énoncé qui renvoie à un support qu'on ne voit pas dans le mode (« le document », « le texte »…) est écarté.
+const SUPPORT_ABSENT = /\ble document\b|\bl['’]exemple\b|\bce texte\b|\ble texte\b|\bci-dessus\b|\bci-dessous\b|\bl['’]extrait\b|\ble dialogue\b|\bce document\b/i
+// « Dans cette fiche, que signifie… » : la fiche n'est pas affichée, on garde simplement la question.
+export function enonceAutonome(prompt) {
+  const sans = String(prompt).replace(/^Dans cette fiche,\s*/i, '')
+  return sans === prompt ? sans : sans.charAt(0).toUpperCase() + sans.slice(1)
+}
+
 // QCM du manuel de la langue (exercices à choix, sans document à lire).
 export function qcmDuManuel(manuel) {
-  return (manuel?.exercises || []).filter((e) => e.type === 'qcm' && e.choices?.length >= 3 && e.choices.includes(e.answer) && !e.context)
+  return (manuel?.exercises || []).filter((e) => e.type === 'qcm' && e.choices?.length >= 3 && e.choices.includes(e.answer) && !e.context && !SUPPORT_ABSENT.test(enonceAutonome(e.prompt)))
 }
 
 export function itemsManuel(manuel, n, seed) {
   const r = rng(seed)
   return melanger(qcmDuManuel(manuel), r).slice(0, n).map((e) => {
     const options = melanger(e.choices, r)
-    return { id: e.id, intro: null, prompt: e.prompt, options, ok: options.indexOf(e.answer), why: e.explanation || '' }
+    return { id: e.id, intro: null, prompt: enonceAutonome(e.prompt), options, ok: options.indexOf(e.answer), why: e.explanation || '' }
   })
 }
 
@@ -52,10 +60,16 @@ export const QUESTIONS_DEFI = 5
 export function creerCode(langue, alea = Math.random) {
   return `${langue}-${Math.floor(alea() * 2 ** 30).toString(36)}`
 }
+// Langues qui ont un code de défi (le français n'est pas une langue à réviser ici).
+const LANGUES_DEFI = ['en', 'es', 'it', 'de', 'ar']
+// Accepte le code nu, un lien, ou tout le message du pote (« J'ai fait 3/5 … code en-708snn.3 »).
 export function lireCode(texte) {
-  const m = /^([a-z]{2})-([0-9a-z]{1,8})(?:\.(\d{1,2}))?$/.exec(String(texte || '').trim().toLowerCase())
-  if (!m) return null
-  return { langue: m[1], seed: parseInt(m[2], 36), code: `${m[1]}-${m[2]}`, score: m[3] === undefined ? null : Number(m[3]) }
+  const brut = String(texte || '').trim().toLowerCase()
+  const m = /(?:^|[^a-z0-9-])([a-z]{2})-([0-9a-z]{1,8})(?:\.(\d{1,2}))?(?![0-9a-z-])/.exec(brut)
+  if (!m || !LANGUES_DEFI.includes(m[1])) return null
+  const score = m[3] === undefined ? null : Number(m[3])
+  if (score !== null && score > QUESTIONS_DEFI) return null
+  return { langue: m[1], seed: parseInt(m[2], 36), code: `${m[1]}-${m[2]}`, score }
 }
 export function messageDefi(code, score) {
   return `J'ai fait ${score}/${QUESTIONS_DEFI} au test du pote. Fais mieux : code ${code}.${score}`

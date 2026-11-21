@@ -124,6 +124,8 @@ function Parcours({ etapes, valeur, onFin, resultat, depart = 0 }) {
   const fini = i >= etapes.length
   const etape = etapes[i]
   const options = useMemo(() => (etape ? melanger(etape.options) : []), [etape])
+  // La meilleure réponse : la moins chère (survie) ou celle qui rapporte le plus de points (entretien).
+  const meilleure = useMemo(() => (etape ? [...etape.options].sort((a, b) => (a.cout !== undefined ? a.cout - b.cout : b.pts - a.pts))[0] : null), [etape])
   useEffect(() => { if (choix !== null) suivant.current?.focus() }, [choix])
   useEffect(() => { if (fini && !envoye.current) { envoye.current = true; onFin?.(total) } }, [fini, total, onFin])
   if (fini) return resultat(total)
@@ -137,7 +139,7 @@ function Parcours({ etapes, valeur, onFin, resultat, depart = 0 }) {
         {options.map((o) => (
           <button key={o.t} type="button" disabled={!!choix} onClick={() => choisir(o)} dir="auto" translate="no"
             className={`border px-3 py-2.5 text-left ${choix === o ? 'border-slate-900 bg-slate-100 dark:border-white dark:bg-slate-800' : 'border-slate-300 bg-white hover:border-slate-500 dark:border-slate-600 dark:bg-slate-900'}`} style={{ borderRadius: 6 }}>
-            {o.t}
+            {o.t}{choix && o === meilleure && <span aria-label="meilleur choix"> ✓</span>}
           </button>
         ))}
       </div>
@@ -145,6 +147,7 @@ function Parcours({ etapes, valeur, onFin, resultat, depart = 0 }) {
         <div lang="fr" data-no-translate className="space-y-2 bg-slate-100 p-3 text-sm dark:bg-slate-800" style={{ borderRadius: 6 }} aria-live="polite">
           <p className="font-semibold">{choix.cout !== undefined ? (choix.cout === 0 ? 'Ça ne te coûte rien.' : `Ça te coûte ${choix.cout} €.`) : `${choix.pts} point${choix.pts > 1 ? 's' : ''} sur 3.`}</p>
           <p>{choix.w}</p>
+          {choix !== meilleure && <p><b>Le meilleur choix était :</b> <span dir="auto" translate="no">{meilleure.t}</span> ✓</p>}
           <button ref={suivant} type="button" className="btn-primary" onClick={() => { setChoix(null); setI((n) => n + 1) }}>{i + 1 >= etapes.length ? 'Voir mon résultat' : 'Suivant'}</button>
         </div>
       )}
@@ -328,6 +331,9 @@ export default function LanguesModes({ langue, nomLangue, defiTexte = '' }) {
   }, [addXp])
   const actif = MODES.find((m) => m.id === mode)
   const dispo = (m) => (m.source === 'scenario' ? !!sc.data?.[m.cle] : m.source === 'manuel' ? !!manuel : true)
+  // Titre honnête : en arabe, les scénarios écrits à la main n'existent pas encore, donc on annonce les modes vraiment prêts.
+  const nbPrets = MODES.filter(dispo).length
+  const titreModes = !sc.pret || !manuel ? `Des modes pour ${nomLangue}.` : nbPrets === MODES.length ? `Dix modes pour ${nomLangue}.` : `${nbPrets} modes prêts pour ${nomLangue}, les autres arrivent.`
   const rendu = () => {
     if (!actif) return null
     if (actif.source === 'manuel' && !manuel) return erreur ? <p lang="fr" data-no-translate role="alert">Le manuel de {nomLangue} n’a pas pu se charger. <button type="button" className="underline" onClick={recharger}>Réessayer</button></p> : <p lang="fr" data-no-translate aria-busy="true">Chargement…</p>
@@ -347,7 +353,7 @@ export default function LanguesModes({ langue, nomLangue, defiTexte = '' }) {
     <section aria-labelledby="langues-modes" className="space-y-4" lang="fr" data-no-translate>
       <div>
         <p className="kicker">Réviser sans en avoir l’air</p>
-        <h2 id="langues-modes" className="font-display text-2xl">Dix modes pour {nomLangue}.</h2>
+        <h2 id="langues-modes" className="font-display text-2xl">{titreModes}</h2>
         <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">Aucun cours à lire. Tu touches, tu réponds, tu te fais corriger. Chaque bonne réponse te rapporte des points.</p>
       </div>
       {!actif ? (

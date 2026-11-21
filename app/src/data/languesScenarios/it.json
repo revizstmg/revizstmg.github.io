@@ -11,7 +11,7 @@
    "why": "La bonne réponse répond et s'excuse. Pas d'infinitif en italien : « vengo »."
   },
   {
-   "intro": "Un mignon répond à ta story.",
+   "intro": "Un inconnu mignon répond à ta story.",
    "prompt": "Ma quel cane nelle tue storie è tuo? Che carino!",
    "options": [
     "Sì, è mio. Si chiama Biscotto.",
@@ -49,6 +49,36 @@
     "Solo se mi dici il tuo segno zodiacale."
    ],
    "why": "Réponse simple : « Sì, è libero. »"
+  },
+  {
+   "intro": "Ton correspondant t'invite à manger.",
+   "prompt": "Stasera mangiamo una pizza da me. Vieni?",
+   "options": [
+    "Volentieri, grazie! Porto io il dolce.",
+    "Sì, io sono vengo alle otto e mezza da te.",
+    "No grazie, non mangio mai con le persone."
+   ],
+   "why": "« Sono vengo » mélange deux verbes : on dit « vengo »."
+  },
+  {
+   "intro": "Dans le train, un contrôleur te parle.",
+   "prompt": "Buongiorno, il biglietto, per favore.",
+   "options": [
+    "Ecco il mio biglietto. Scusi, è valido anche per il ritorno?",
+    "Io ho un biglietto ma non lo trovo, è mangiato dal cane.",
+    "Ecco il biglietto, tu sei molto gentile con me."
+   ],
+   "why": "À un inconnu on dit « Lei » et « scusi », pas « tu »."
+  },
+  {
+   "intro": "Une copine te montre sa nouvelle coupe.",
+   "prompt": "Allora, ti piacciono i miei capelli nuovi?",
+   "options": [
+    "Mi piacciono moltissimo, ti stanno benissimo!",
+    "Mi piace i tuoi capelli, sono bella.",
+    "Non so, non guardo mai le persone."
+   ],
+   "why": "Les cheveux sont au pluriel : « mi piacciono i tuoi capelli »."
   }
  ],
  "faux": [
@@ -73,17 +103,6 @@
     "la liberté"
    ],
    "why": "« Libreria » = librairie. Bibliothèque = « biblioteca »."
-  },
-  {
-   "intro": "Faux ami classique",
-   "prompt": "« il burro » veut dire…",
-   "options": [
-    "le beurre",
-    "l'âne",
-    "le bourreau",
-    "le bureau"
-   ],
-   "why": "« Burro » = beurre en italien. En espagnol, « burro » est l'âne."
   },
   {
    "intro": "Faux ami classique",
@@ -117,6 +136,28 @@
     "la fermeture"
    ],
    "why": "« Firma » = signature. Une entreprise se dit « azienda »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« la fattoria » veut dire…",
+   "options": [
+    "la ferme",
+    "la factorerie",
+    "la fabrique",
+    "la facture"
+   ],
+   "why": "« Fattoria » = ferme. La facture se dit « la fattura »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« la mancia » veut dire…",
+   "options": [
+    "le pourboire",
+    "la manche (de chemise)",
+    "la mendicité",
+    "la nourriture"
+   ],
+   "why": "« Mancia » = pourboire. La manche se dit « la manica »."
   }
  ],
  "serie": [
@@ -226,6 +267,36 @@
     "Quelle fatigue !"
    ],
    "why": "« Che figata » = trop bien, en argot."
+  },
+  {
+   "intro": "Un pote arrive en retard.",
+   "prompt": "sono in ritardo, tienimi il posto per favore",
+   "options": [
+    "Je suis en retard, garde-moi ma place s'il te plaît.",
+    "Je suis en tard, tiens-moi le lieu s'il te plaît.",
+    "Je suis en avance, donne mon poste à quelqu'un d'autre."
+   ],
+   "why": "« In ritardo » = en retard. « Tenere il posto » = garder la place."
+  },
+  {
+   "intro": "Un pote donne rendez-vous.",
+   "prompt": "ci vediamo dopo, ho lezione fino alle 5",
+   "options": [
+    "On se voit plus tard, j'ai cours jusqu'à 17 h.",
+    "On se voit après, j'ai une leçon jusqu'à 5 heures du matin.",
+    "On ne se voit pas, j'ai cours à partir de 17 h."
+   ],
+   "why": "« Fino alle 5 » = jusqu'à 17 h dans une journée de cours."
+  },
+  {
+   "intro": "Une pote te remercie.",
+   "prompt": "figurati, nessun problema!",
+   "options": [
+    "Pas de souci, je t'en prie !",
+    "Imagine-toi, aucun problème !",
+    "Figure-toi que j'ai un problème !"
+   ],
+   "why": "« Figurati » = de rien, pas de souci. Ce n'est pas « imagine »."
   }
  ],
  "survie": {

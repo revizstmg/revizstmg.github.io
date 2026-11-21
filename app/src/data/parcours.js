@@ -105,6 +105,7 @@ export function resultatPositionnement({ reussies = [], ratees = [] }, today) {
 const ORDRE = { decouvrir: 0, consolider: 1, rappel: 2 }
 const CHAPITRES_PAR_SEANCE = 2 // une séance de découverte couvre deux chapitres (environ 36 minutes)
 const MINUTES_CONSOLIDATION = 30 // une séance de consolidation
+const MINUTES_COUPE_MIN = 10 // en dessous, on ne coupe pas une séance pour boucher un trou
 const MINUTES_MAX_LIGNE = 90 // au-delà, une même tâche s'affiche sur deux lignes
 
 // Les besoins d'un thème, découpés en séances courtes : l'élève voit « chapitres 3 à 4 », pas « 3 h 18 ».
@@ -211,7 +212,29 @@ export function construirePlan({ state, track, today, themes }) {
           // Le rappel ne passe qu'une fois le travail de fond fait, ou dans la toute dernière semaine.
           const rappelPossible = m.rappels.length && i >= m.dernier - (SEMAINES_RAPPEL - 1) && (!m.file.length || i === m.dernier)
           const seance = rappelPossible ? m.rappels[0] : m.file[0]
-          if (!seance || s.capacite - s.minutes < seance.minutes) continue
+          if (!seance) continue
+          const libre = s.capacite - s.minutes
+          if (libre < seance.minutes) {
+            // Une séance de fond qui ne tient pas en entier est coupée : on remplit le temps annoncé au lieu de le laisser vide.
+            if (rappelPossible || libre < MINUTES_COUPE_MIN) continue
+            if (seance.chapitres) {
+              // Découverte : on coupe par chapitres entiers, jamais au milieu d'un chapitre.
+              const n = seance.chapitres.a - seance.chapitres.de + 1
+              const parChapitre = seance.minutes / n
+              const k = Math.floor(libre / parChapitre)
+              if (k < 1 || k >= n) continue
+              const minutes = Math.round(parChapitre * k)
+              s.minutes += minutes
+              places.push({ ...seance, minutes, chapitres: { de: seance.chapitres.de, a: seance.chapitres.de + k - 1 } })
+              m.file[0] = { ...seance, minutes: seance.minutes - minutes, chapitres: { de: seance.chapitres.de + k, a: seance.chapitres.a } }
+            } else {
+              s.minutes += libre
+              places.push({ ...seance, minutes: libre })
+              m.file[0] = { ...seance, minutes: seance.minutes - libre }
+            }
+            place = true
+            continue
+          }
           s.minutes += seance.minutes
           places.push(seance)
           if (rappelPossible) m.rappels.shift(); else m.file.shift()
@@ -267,5 +290,5 @@ export function avancementSemaine(parcours, semaineCourante, today) {
   const lundi = lundiDe(today)
   const base = parcours?.semaine?.debut === lundi ? parcours.semaine.minutes : semaineCourante.minutes
   const prevu = Math.max(base, semaineCourante.minutes)
-  return { prevu, reste: semaineCourante.minutes, fait: Math.max(0, prevu - semaineCourante.minutes), pct: prevu ? Math.round((100 * Math.max(0, prevu - semaineCourante.minutes)) / prevu) : 100 }
+  return { prevu, reste: semaineCourante.minutes, fait: Math.max(0, prevu - semaineCourante.minutes), pct: prevu ? Math.round((100 * Math.max(0, prevu - semaineCourante.minutes)) / prevu) : 0 }
 }

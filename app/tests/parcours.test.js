@@ -86,6 +86,13 @@ describe('test de positionnement', () => {
 
 describe('plan semaine par semaine', () => {
   const plan = (o = {}, s = {}) => construirePlan({ state: etat({ parcours: { objectifs: { ...OBJECTIFS_DEFAUT, ...o } }, ...s }), track: TERM, today: AUJOURDHUI, themes })
+  it('remplit le temps annoncé : les semaines pleines sont presque entièrement utilisées', () => {
+    for (const heures of [1, 2, 4, 6, 10]) {
+      const p = plan({ heuresSemaine: heures })
+      const pleines = p.semaines.slice(1, 4)
+      for (const w of pleines) expect(w.minutes, `${heures} h`).toBeGreaterThanOrEqual(Math.round(heures * 60 * 0.9))
+    }
+  })
 
   it('couvre tous les thèmes, du lundi courant à la dernière épreuve, sans dépasser la capacité', () => {
     const p = plan({ heuresSemaine: 10 })

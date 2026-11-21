@@ -17,6 +17,7 @@ export default function PastillePremium({to}){
 // à la place de l'outil ; pour un abonné (ou pendant la période de grâce), l'outil lui-même.
 export function OutilReserve({icone,titre,children}){
   const niveau=useNiveauAcces()
+  const tr=usePublicText()
   if(niveau!=='gratuit')return children
-  return <Link to="/offres" className="card group flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md"><span className="w-6 shrink-0 text-center text-lg" aria-hidden>{icone}</span><span className="min-w-0 flex-1 font-semibold leading-snug">{titre}<PastillePremium to="/revision"/></span><span className="text-lg text-slate-300" aria-hidden>›</span></Link>
+  return <Link to="/offres" className="card group flex w-full items-center gap-3 p-4 text-left transition hover:-translate-y-0.5 hover:shadow-md"><span className="w-6 shrink-0 text-center text-lg" aria-hidden>{icone}</span><span className="min-w-0 flex-1 font-semibold leading-snug">{titre}<PastillePremium to="/revision"/><span className="block text-xs font-normal text-slate-600 dark:text-slate-300">{tr('Avec Premium. Touche pour voir ce que ça débloque.')}</span></span><span className="text-lg text-slate-300" aria-hidden>›</span></Link>
 }

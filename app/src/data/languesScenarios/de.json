@@ -11,7 +11,7 @@
    "why": "La bonne réponse répond et s'excuse. Le verbe doit être conjugué : « ich komme »."
   },
   {
-   "intro": "Un mignon répond à ta story.",
+   "intro": "Un inconnu mignon répond à ta story.",
    "prompt": "Ist der Hund auf deiner Story deiner? Der ist so süß!",
    "options": [
     "Ja, das ist meiner. Er heißt Keks.",
@@ -49,6 +49,36 @@
     "Nur wenn du mir dein Sternzeichen sagst."
    ],
    "why": "Le verbe est en deuxième position : « Er ist frei »."
+  },
+  {
+   "intro": "Ton correspondant te propose du vélo.",
+   "prompt": "Hast du Lust, morgen Fahrrad zu fahren?",
+   "options": [
+    "Ja, gern! Um wie viel Uhr treffen wir uns?",
+    "Ja, ich habe gern, ich fahre morgen mit dir Fahrrad gestern.",
+    "Nein, ich hasse dich und dein Fahrrad."
+   ],
+   "why": "On répond « Ja, gern ». « Gestern » (hier) ne va pas avec « morgen » (demain)."
+  },
+  {
+   "intro": "À la boulangerie, la vendeuse te sert.",
+   "prompt": "Guten Tag! Was darf es sein?",
+   "options": [
+    "Ich hätte gern zwei Brötchen und ein Stück Kuchen, bitte.",
+    "Ich will zwei Brötchen, schnell, ich habe keine Zeit.",
+    "Ich bin zwei Brötchen und ein Kuchen, danke."
+   ],
+   "why": "« Ich hätte gern… » est la formule polie. « Ich bin » veut dire « je suis »."
+  },
+  {
+   "intro": "Un professeur te demande pourquoi tu es en retard.",
+   "prompt": "Warum kommst du zu spät?",
+   "options": [
+    "Entschuldigung, mein Bus hatte Verspätung.",
+    "Weil ich gern schlafe und mein Bus ist mir egal.",
+    "Ich komme nicht zu spät, ich bin pünktlich zu spät."
+   ],
+   "why": "Une excuse courte et polie. Les deux autres réponses ne rassurent personne."
   }
  ],
  "faux": [
@@ -117,6 +147,28 @@
     "l'arbre"
    ],
    "why": "« Art » = sorte. L'art se dit « Kunst »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« das Gymnasium » veut dire…",
+   "options": [
+    "le lycée",
+    "la salle de sport",
+    "la gymnastique",
+    "le collège"
+   ],
+   "why": "« Gymnasium » = lycée. La salle de sport se dit « die Turnhalle »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« der Rock » veut dire…",
+   "options": [
+    "la jupe",
+    "le rock",
+    "le rocher",
+    "le manteau"
+   ],
+   "why": "« Rock » = jupe. La musique rock se dit aussi « Rockmusik »."
   }
  ],
  "serie": [
@@ -226,6 +278,36 @@
     "Méga cru, ou ?"
    ],
    "why": "« Krass » = dingue, impressionnant."
+  },
+  {
+   "intro": "Un pote arrive bientôt.",
+   "prompt": "bin gleich da, halt mir bitte einen Platz frei",
+   "options": [
+    "J'arrive tout de suite, garde-moi une place s'il te plaît.",
+    "Je suis égal là, tiens-moi un lieu libre s'il te plaît.",
+    "Je ne viens pas, garde ta place."
+   ],
+   "why": "« Gleich » = tout de suite, et non « égal »."
+  },
+  {
+   "intro": "Une pote signe son message.",
+   "prompt": "hab dich lieb, bis später!",
+   "options": [
+    "Je t'aime bien, à tout à l'heure !",
+    "J'ai ton lit, à plus tard !",
+    "Je t'aime d'amour, adieu pour toujours !"
+   ],
+   "why": "« Hab dich lieb » = je t'aime bien. « Bis später » = à tout à l'heure."
+  },
+  {
+   "intro": "Un pote réagit à une nouvelle.",
+   "prompt": "krass, das hätte ich nicht gedacht",
+   "options": [
+    "Dingue, je n'aurais jamais pensé ça.",
+    "Cruel, je n'ai pas pensé à ça.",
+    "Gras, je ne l'aurais pas pensé."
+   ],
+   "why": "« Krass » = dingue, incroyable en langage courant."
   }
  ],
  "survie": {

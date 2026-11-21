@@ -39,6 +39,19 @@ export function BandeauGrace(){
   return <p role="status" className="study-notice mb-4">{tr('Accès offert jusqu’au {date}. Ensuite, un abonnement Premium ou Ultimate sera nécessaire.',{date})} <Link to="/offres" className="underline">{tr('Voir les offres')}</Link></p>
 }
 
+// Ce que contient la page bloquée, en une ligne : l'élève sait ce qu'il débloque avant de cliquer sur « Voir les offres ».
+const CE_QUE_TU_DEBLOQUES = [
+  ['/revision', 'Ici, le site choisit les questions pour toi : tu n’as plus à chercher quoi réviser.'],
+  ['/seance', 'Ta séance du jour : la première question arrive dès que tu ouvres la page.'],
+  ['/bac-blanc', 'Un vrai sujet de bac, son corrigé et un barème pour savoir où tu en es.'],
+  ['/grand-oral', 'Un coach pour préparer ton Grand Oral sans stresser le jour J.'],
+  ['/mes-notes', 'Tu rentres tes notes de classe, le site te dit quoi revoir en premier.'],
+  ['/coach', 'Un coach qui te propose quoi faire maintenant, quand tu n’as pas d’idée.'],
+  ['/vacances', 'Un plan pour réviser pendant les vacances sans y passer tes journées.'],
+  ['/parcours', 'Un plan semaine par semaine, calé sur ton temps libre et la note que tu vises.'],
+]
+const ceQueTuDebloques = (pathname) => CE_QUE_TU_DEBLOQUES.find(([p]) => pathname === p || pathname.startsWith(p + '/'))?.[1] || null
+
 // Les pages hors cours et exercices de base demandent un abonnement (data/acces.js).
 export default function GardeAcces({children,minimum}){
   const {pathname}=useLocation()
@@ -60,7 +73,7 @@ export default function GardeAcces({children,minimum}){
     <section className="card mx-auto max-w-lg p-6 text-center" aria-labelledby="reserve-titre">
       <p className="text-4xl" aria-hidden>⭐</p>
       <h1 id="reserve-titre" className="mt-2 font-display text-2xl font-medium">{tr(ultimate?'Réservé à Ultimate':'Réservé aux abonnés')}</h1>
-      <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{ultimate?tr('Les parcours et programmes personnalisés sont inclus dans Ultimate. Tes données restent conservées.'):tr('Cette page est incluse dans Premium et Ultimate, à partir de {prix} TTC par mois. Les cours et les exercices de base restent gratuits.',{prix:prixAffiche(OFFRES.premium.mensuel.centimes,lang)})}</p>
+      {ceQueTuDebloques(pathname)&&<p className="mt-2 text-sm font-semibold">{tr(ceQueTuDebloques(pathname))}</p>}<p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{ultimate?tr(pathname.startsWith('/parcours')?'Les parcours et programmes personnalisés sont inclus dans Ultimate. Tes données restent conservées.':'Cette page est incluse dans Ultimate. Tes données restent conservées.'):tr('Cette page est incluse dans Premium et Ultimate, à partir de {prix} TTC par mois. Les cours et les exercices de base restent gratuits.',{prix:prixAffiche(OFFRES.premium.mensuel.centimes,lang)})}</p>
       <div className="mt-4 flex flex-wrap justify-center gap-3">
         <Link to="/offres" className="btn-primary inline-block">{tr('Voir les offres')}</Link>
         <Link to="/cours" className="btn-ghost inline-block">{tr('Retour aux cours')}</Link>

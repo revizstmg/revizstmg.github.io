@@ -1455,16 +1455,19 @@ export function shuffle(arr) {
 }
 
 // Recherche simple (chapitres + matières + intitulés de jeux/notions).
-export function search(query) {
-  const q = query.trim().toLowerCase()
+const sansAccents = (x) => String(x || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+// `idsMatieres` (facultatif) limite la recherche aux matières du niveau de l'élève.
+export function search(query, idsMatieres = null) {
+  const q = sansAccents(query.trim())
   if (!q) return []
   const res = []
   for (const s of SUBJECTS) {
-    if (s.name.toLowerCase().includes(q))
+    if (idsMatieres && !idsMatieres.includes(s.id)) continue
+    if (sansAccents(s.name).includes(q))
       res.push({ type: 'subject', id: s.id, label: s.name, sub: 'Matière', color: s.color })
     if (['langues','p1-langues'].includes(s.id)) continue
     for (const c of s.chapters) {
-      const hay = (c.name + ' ' + (c.short || '') + ' ' + (c.keywords || '')).toLowerCase()
+      const hay = sansAccents(c.name + ' ' + (c.short || '') + ' ' + (c.keywords || ''))
       if (hay.includes(q))
         res.push({
           type: 'chapter',

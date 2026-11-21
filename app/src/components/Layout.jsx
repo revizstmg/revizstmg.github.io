@@ -11,6 +11,7 @@ import { createPortal } from 'react-dom'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useStore, levelFromXp } from '../store.jsx'
 import { getSubject, getChapter, search } from '../data/index.js'
+import { subjectsForTrack } from '../data/tracks.js'
 import { ALL_TABS, resolveTabs } from '../navTabs.js'
 import { badgeById } from '../badges.js'
 import { Confetti, Icon } from './ui.jsx'
@@ -67,6 +68,7 @@ export default function Layout({ children }) {
   const [sessionMotion]=useState(claimSessionMotion)
   const { state, derived, setTheme, setLang, logout } = useStore()
   const t = useT()
+  const trSkip = usePublicText()
   const lang = useLang()
   const focus = useFocus()
   const { standalone } = useInstall() // masque le guide d'installation dans l'app installée
@@ -120,6 +122,7 @@ export default function Layout({ children }) {
 
   return (
     <div className="site-shell min-h-screen overflow-x-clip">
+      <button type="button" className="no-print sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-900 focus:shadow-lg" onClick={() => document.getElementById('contenu-principal')?.focus()}>{trSkip('Aller au contenu')}</button>
       <header
         className="mobile-site-header no-print sticky top-0 z-40 border-b backdrop-blur"
         style={{
@@ -306,7 +309,7 @@ export default function Layout({ children }) {
       <BandeauEssai />
       <EtatSauvegarde /><QuizOutboxStatus />
       <TranslationStatus />
-      <main className="site-main mx-auto max-w-4xl px-4 pb-16 pt-4">
+      <main id="contenu-principal" tabIndex={-1} className="site-main mx-auto max-w-4xl px-4 pb-16 pt-4 outline-none">
         <div key={pathname} className="page-enter">{children}</div>
       </main>
 
@@ -458,7 +461,9 @@ function SearchOverlay({ onClose }) {
   const [q, setQ] = useState('')
   const navigate = useNavigate()
   const t = useT()
-  const results = useMemo(() => search(q), [q])
+  const { state } = useStore()
+  const ids = useMemo(() => subjectsForTrack(state?.track).map((x) => x.id), [state?.track])
+  const results = useMemo(() => search(q, ids), [q, ids])
 
   const fenetre = useRef(null)
   useFenetreClavier(fenetre, onClose)
@@ -583,7 +588,7 @@ function BottomNav() {
                 <span className="tab-icon text-[1.3rem] leading-none" style={{ transform: on ? 'translateY(-1px) scale(1.08)' : 'none' }} aria-hidden>{tab.icon}</span>
                 {gratuit && estPagePayante(tab.to) && <><span className="absolute -end-1 -top-1 text-[9px] leading-none" aria-hidden>🔒</span><span className="sr-only">{publicText('Réservé aux abonnés')}</span></>}
               </span>
-              <span className={'max-w-full break-words text-center leading-tight '+(on ? '' : 'text-slate-500 dark:text-slate-400')} lang={state.lang}>{state.lang === 'de' ? ({reviseTab:'Üben',settings:'Optionen',mockExam:'Prüfungen'}[tab.labelKey] || t(tab.labelKey)) : t(tab.labelKey)}</span>
+              <span className={'max-w-full [overflow-wrap:normal] [hyphens:none] text-[length:clamp(8.5px,2.9vw,10px)] text-center leading-tight '+(on ? '' : 'text-slate-500 dark:text-slate-400')} lang={state.lang}>{state.lang === 'de' ? ({reviseTab:'Üben',settings:'Optionen',mockExam:'Prüfungen'}[tab.labelKey] || t(tab.labelKey)) : t(tab.labelKey)}</span>
             </Link>
           )
         })}
