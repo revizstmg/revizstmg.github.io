@@ -51,9 +51,9 @@
         "q": "La valeur d’échange d’un bien correspond à…",
         "choices": [
           "ce que l’on obtient contre lui : son prix",
-          "l’usage auquel il sert",
-          "sa durée de vie",
-          "son poids"
+          "l’usage auquel il sert pour celui qui l’achète",
+          "sa durée de vie moyenne avant remplacement",
+          "son poids et son volume sur le marché"
         ],
         "answer": 0,
         "explain": "Valeur d’échange = prix sur le marché ; valeur d’usage = utilité."
@@ -63,9 +63,9 @@
         "q": "D’après le document 3, le prix élevé du diamant s’explique d’abord par…",
         "choices": [
           "sa rareté (offre limitée, forte demande)",
-          "son utilité vitale",
-          "son abondance",
-          "son faible coût de transport"
+          "son utilité vitale pour les êtres humains",
+          "son abondance sur les marchés mondiaux",
+          "son faible coût de transport et de stockage"
         ],
         "answer": 0,
         "explain": "Le prix naît de l’offre et de la demande ; la rareté relative du diamant tire son prix vers le haut."
@@ -87,9 +87,9 @@
         "q": "Pourquoi l’eau a-t-elle une faible valeur d’échange selon le document 4 ?",
         "choices": [
           "son abondance rend l’utilité marginale de la dernière unité faible",
-          "elle est inutile",
-          "personne n’en veut",
-          "elle est interdite à la vente"
+          "elle est inutile pour la vie des habitants",
+          "personne n’en veut dans les pays développés",
+          "elle est interdite à la vente dans la plupart des pays"
         ],
         "answer": 0,
         "explain": "Abondante, la dernière unité consommée apporte peu : utilité marginale faible → prix bas."
@@ -166,9 +166,9 @@
         "q": "« Pour qui produire ? » est…",
         "choices": [
           "l’une des trois grandes questions économiques",
-          "une loi fiscale",
-          "un agent économique",
-          "un flux monétaire"
+          "une loi fiscale votée par le Parlement",
+          "un agent économique parmi les ménages",
+          "un flux monétaire entre deux secteurs"
         ],
         "answer": 0,
         "explain": "Que / comment / pour qui produire."
@@ -178,9 +178,9 @@
         "q": "Le coût d’opportunité d’un choix est…",
         "choices": [
           "la valeur de la meilleure option à laquelle on renonce",
-          "le prix d’achat en euros",
-          "un impôt",
-          "un salaire"
+          "le prix d’achat payé en euros au vendeur",
+          "un impôt payé à l’administration fiscale",
+          "un salaire versé en contrepartie du travail"
         ],
         "answer": 0,
         "explain": "Choisir, c’est renoncer : le coût est l’option abandonnée."
@@ -190,9 +190,9 @@
         "q": "Les administrations publiques ont notamment pour rôle de…",
         "choices": [
           "fournir des services non marchands et redistribuer",
-          "produire uniquement pour l’export",
-          "fixer les prix de tous les biens",
-          "remplacer les ménages"
+          "produire uniquement pour l’exportation vers l’étranger",
+          "fixer les prix de tous les biens du pays",
+          "remplacer les ménages dans leurs choix de consommation"
         ],
         "answer": 0,
         "explain": "Services non marchands, prélèvements, redistribution."
@@ -288,9 +288,9 @@
         "q": "La valeur ajoutée se calcule…",
         "choices": [
           "production − consommations intermédiaires",
-          "production + salaires",
-          "chiffre d’affaires + impôts",
-          "production × prix"
+          "production + salaires versés dans l’année",
+          "chiffre d’affaires + impôts payés à l’État",
+          "production × prix de vente moyen"
         ],
         "answer": 0,
         "explain": "VA = production − consommations intermédiaires."
@@ -300,9 +300,9 @@
         "q": "Le PIB d’un pays est…",
         "choices": [
           "la somme des valeurs ajoutées, plus les impôts sur les produits, moins les subventions sur les produits",
-          "le total des salaires seulement",
-          "la somme des importations",
-          "le montant des impôts"
+          "le total des salaires versés aux salariés, auquel on ajoute les profits des entreprises et les impôts",
+          "la somme des importations et des exportations de biens et de services de l’année",
+          "le montant total des impôts perçus par l’État, augmenté des subventions versées aux entreprises"
         ],
         "answer": 0,
         "explain": "Le PIB au prix du marché est égal à la somme des valeurs ajoutées marchandes et non marchandes, augmentée des impôts et diminuée des subventions sur les produits."
@@ -392,9 +392,9 @@
         "q": "La redistribution consiste à…",
         "choices": [
           "prélever des prélèvements obligatoires et verser des revenus de transfert",
-          "produire des biens",
-          "fixer les prix",
-          "créer de la monnaie"
+          "produire des biens et des services marchands pour les vendre sur les marchés",
+          "fixer les prix de vente de tous les biens et services de l’économie",
+          "créer de la monnaie par l’intermédiaire des banques commerciales et de la banque centrale"
         ],
         "answer": 0,
         "explain": "Elle corrige la répartition primaire."
@@ -404,8 +404,8 @@
         "q": "La formule du revenu disponible est…",
         "choices": [
           "revenus primaires − prélèvements obligatoires + revenus de transfert",
-          "revenus primaires + prélèvements obligatoires",
-          "salaires − TVA",
+          "revenus primaires + prélèvements obligatoires versés à l’État",
+          "salaires − TVA payée sur les achats de l’année",
           "consommation − épargne"
         ],
         "answer": 0,
@@ -416,9 +416,9 @@
         "q": "Le taux d’épargne, exprimé en pourcentage, se calcule…",
         "choices": [
           "(épargne / revenu disponible) × 100",
-          "consommation / revenu",
-          "revenu / dépenses",
-          "épargne × prix"
+          "consommation / revenu disponible × 100 au cours de l’année",
+          "revenu / dépenses de consommation du ménage",
+          "épargne × prix moyen des biens achetés"
         ],
         "answer": 0,
         "explain": "Taux d’épargne en % = (épargne / revenu disponible) × 100. Par exemple, 300 / 2 400 = 0,125, soit 12,5 %."
@@ -507,9 +507,9 @@
         "q": "L’autofinancement est un financement…",
         "choices": [
           "interne (ressources dégagées par l’activité et conservées)",
-          "externe direct",
-          "externe indirect",
-          "public"
+          "externe direct (apport des marchés financiers)",
+          "externe indirect (crédit accordé par une banque)",
+          "public (subvention de l’État à l’entreprise)"
         ],
         "answer": 0,
         "explain": "L’autofinancement mobilise des ressources internes dégagées par l’activité et non distribuées ; un apport d’un actionnaire est externe."
@@ -531,9 +531,9 @@
         "q": "Une action est…",
         "choices": [
           "une part de propriété de l’entreprise",
-          "un titre de dette",
-          "un crédit bancaire",
-          "un impôt"
+          "un titre de dette émis par l’entreprise",
+          "un crédit bancaire accordé à l’entreprise",
+          "un impôt payé par les actionnaires"
         ],
         "answer": 0,
         "explain": "Action = propriété ; obligation = dette."

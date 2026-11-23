@@ -1201,7 +1201,7 @@
       "unit": "Italien — Première · axes culturels",
       "origin": "p1-langues/lng-it-p1-culture-premiere-s1-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « legami » ?",
+      "prompt": "Que signifie « legami » ?",
       "choices": [
         "Échange.",
         "Liens.",
@@ -1237,7 +1237,7 @@
       "unit": "Italien — Première · axes culturels",
       "origin": "p1-langues/lng-it-p1-culture-premiere-s2-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « accessibile » ?",
+      "prompt": "Que signifie « accessibile » ?",
       "choices": [
         "Accessible.",
         "Participation.",
@@ -1273,7 +1273,7 @@
       "unit": "Italien — Première · axes culturels",
       "origin": "p1-langues/lng-it-p1-culture-premiere-s3-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « mettere in discussione » ?",
+      "prompt": "Que signifie « mettere in discussione » ?",
       "choices": [
         "Commanditaire d’une œuvre.",
         "Remettre en question.",
@@ -1309,7 +1309,7 @@
       "unit": "Italien — Première · axes culturels",
       "origin": "p1-langues/lng-it-p1-culture-premiere-s4-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « rischi » ?",
+      "prompt": "Que signifie « rischi » ?",
       "choices": [
         "Travailleur.",
         "Besoin.",
@@ -1345,7 +1345,7 @@
       "unit": "Italien — Première · axes culturels",
       "origin": "p1-langues/lng-it-p1-culture-premiere-s5-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « paesaggio » ?",
+      "prompt": "Que signifie « paesaggio » ?",
       "choices": [
         "Habitant.",
         "Protection, notamment d’un milieu ou d’un patrimoine.",
@@ -1381,7 +1381,7 @@
       "unit": "Italien — Première · axes culturels",
       "origin": "p1-langues/lng-it-p1-culture-premiere-s6-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « Risorgimento » ?",
+      "prompt": "Que signifie « Risorgimento » ?",
       "choices": [
         "Région.",
         "Unité.",
@@ -1525,7 +1525,7 @@
       "unit": "Italien — Terminale · axes culturels",
       "origin": "langues/lng-it-culture-terminale-s1-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « piazza » ?",
+      "prompt": "Que signifie « piazza » ?",
       "choices": [
         "Commerce.",
         "Place publique.",
@@ -1561,7 +1561,7 @@
       "unit": "Italien — Terminale · axes culturels",
       "origin": "langues/lng-it-culture-terminale-s2-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « memoria » ?",
+      "prompt": "Que signifie « memoria » ?",
       "choices": [
         "Mémoire.",
         "Plaque, notamment commémorative.",
@@ -1597,7 +1597,7 @@
       "unit": "Italien — Terminale · axes culturels",
       "origin": "langues/lng-it-culture-terminale-s3-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « punto di vista » ?",
+      "prompt": "Que signifie « punto di vista » ?",
       "choices": [
         "Point de vue.",
         "Personnage.",
@@ -1633,7 +1633,7 @@
       "unit": "Italien — Terminale · axes culturels",
       "origin": "langues/lng-it-culture-terminale-s4-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « fonte » ?",
+      "prompt": "Que signifie « fonte » ?",
       "choices": [
         "Nouvelle / information.",
         "Destinataire.",
@@ -1669,7 +1669,7 @@
       "unit": "Italien — Terminale · axes culturels",
       "origin": "langues/lng-it-culture-terminale-s5-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « responsabilità » ?",
+      "prompt": "Que signifie « responsabilità » ?",
       "choices": [
         "Consentement.",
         "Responsabilité.",
@@ -1705,7 +1705,7 @@
       "unit": "Italien — Terminale · axes culturels",
       "origin": "langues/lng-it-culture-terminale-s6-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « Repubblica » ?",
+      "prompt": "Que signifie « Repubblica » ?",
       "choices": [
         "Traité.",
         "Constitution.",

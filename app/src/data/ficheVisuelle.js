@@ -48,12 +48,32 @@ const texteDuBloc = (b) => (Array.isArray(b.c) ? b.c.join(' ') : String(b.c ?? '
 
 export function construireFiche(section, glossaire = null) {
   const blocs = blocsDe(section)
+  // Une idée doit se comprendre seule : on garde les phrases qui portent une notion en gras
+  // et on écarte celles qui commencent par un renvoi (« Non : », « Ici, », « Ce… »).
+  const RENVOI = /^(non|oui|ici|là|donc|mais|ce|cet|cette|ces|il|elle|ils|elles|on|alors|ainsi|puis|ensuite)\b/i
   const idees = []
+  const candidates = []
   for (const b of blocs) {
-    if ((b.t === 'p' || b.t === 'list') && idees.length < 5) {
-      const base = b.t === 'list' ? (Array.isArray(b.c) ? b.c[0] : b.c) : b.c
-      const idee = premiereIdee(base)
-      if (idee.length >= 25 && !idees.includes(idee)) idees.push(idee)
+    if (b.t !== 'p' && b.t !== 'list') continue
+    const textes = b.t === 'list' ? (Array.isArray(b.c) ? b.c : [b.c]) : [b.c]
+    for (const texte of textes) {
+      for (const phrase of String(texte ?? '').split(/(?<=[.!?])\s+/)) candidates.push(phrase)
+    }
+  }
+  for (const phrase of candidates) {
+    if (idees.length >= 5) break
+    const brut = String(phrase)
+    const nette = court(brut, 170)
+    if (!/\*\*/.test(brut) || nette.length < 35 || RENVOI.test(nette) || /^[«"“]/.test(nette) || idees.includes(nette)) continue
+    idees.push(nette)
+  }
+  if (idees.length < 3) {
+    for (const b of blocs) {
+      if ((b.t === 'p' || b.t === 'list') && idees.length < 5) {
+        const base = b.t === 'list' ? (Array.isArray(b.c) ? b.c[0] : b.c) : b.c
+        const idee = premiereIdee(base)
+        if (idee.length >= 25 && !RENVOI.test(idee) && !idees.includes(idee)) idees.push(idee)
+      }
     }
   }
   const vus = new Set()
@@ -66,15 +86,19 @@ export function construireFiche(section, glossaire = null) {
     if (def && mots.length < 8 && !mots.some((m) => m.definition === def)) mots.push({ terme: g.replace(/[.:;,]+$/, ''), definition: def })
   }
 
-  const branches = []
-  const pris = new Set()
-  for (const b of blocs) {
-    if ((b.t !== 'p' && b.t !== 'list') || branches.length >= 6) continue
-    const g = gras(texteDuBloc(b)).filter((x) => x.length >= 3 && x.length <= 40 && !pris.has(x.toLowerCase()))
-    if (!g.length) continue
-    const uniques = [...new Map(g.map((x) => [x.toLowerCase(), x])).values()]
-    uniques.slice(0, 3).forEach((x) => pris.add(x.toLowerCase()))
-    branches.push({ titre: uniques[0], feuilles: uniques.slice(1, 3) })
+  // Carte mentale honnête : chaque branche est une notion et sa feuille est sa définition.
+  let branches = mots.slice(0, 6).map((m) => ({ titre: m.terme, feuilles: [m.definition] }))
+  if (branches.length < 2) {
+    branches = []
+    const pris = new Set()
+    for (const b of blocs) {
+      if ((b.t !== 'p' && b.t !== 'list') || branches.length >= 6) continue
+      const g = gras(texteDuBloc(b)).filter((x) => x.length >= 3 && x.length <= 40 && !pris.has(x.toLowerCase()))
+      if (!g.length) continue
+      const uniques = [...new Map(g.map((x) => [x.toLowerCase(), x])).values()]
+      uniques.slice(0, 3).forEach((x) => pris.add(x.toLowerCase()))
+      branches.push({ titre: uniques[0], feuilles: [] })
+    }
   }
 
   const parType = (t) => blocs.filter((b) => b.t === t)
@@ -86,7 +110,7 @@ export function construireFiche(section, glossaire = null) {
     astuces: parType('tip').map((b) => ({ titre: sansGras(b.h || ''), texte: sansGras(b.c) })),
     exemples: parType('example').map((b) => ({ titre: sansGras(b.h || ''), texte: sansGras(b.c) })),
     formules: parType('formula').map((b) => sansGras(b.c)),
-    autotest: (mots.length ? mots.map((m) => m.terme) : tousLesGras.filter((x) => x.length <= 40)).slice(0, 5),
+    autotest: (mots.length ? mots.map((m) => m.terme) : tousLesGras.filter((x) => x.length <= 40)).slice(0, 6),
   }
 }
 

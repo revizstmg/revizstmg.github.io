@@ -148,9 +148,9 @@
         "q": "Une personne de 15 ans ou plus est sans emploi et disponible sous deux semaines. Pour être chômeuse BIT, elle doit aussi…",
         "choices": [
           "avoir recherché activement un emploi dans les quatre dernières semaines ou en avoir trouvé un commençant dans moins de trois mois",
-          "avoir plus de 50 ans",
-          "toucher une allocation",
-          "être diplômé"
+          "avoir plus de 50 ans, être inscrit comme demandeur d’emploi depuis plus d’un an et toucher une allocation",
+          "toucher une allocation chômage versée par France Travail et être inscrit depuis au moins douze mois consécutifs",
+          "être titulaire d’un diplôme de l’enseignement supérieur obtenu il y a moins de deux ans et chercher un stage"
         ],
         "answer": 0,
         "explain": "La recherche active récente ou un emploi déjà trouvé commençant dans moins de trois mois satisfait le troisième critère. L’absence d’emploi et la disponibilité sous deux semaines restent nécessaires."
@@ -196,9 +196,9 @@
         "q": "Alléger les cotisations sociales sur les bas salaires vise à…",
         "choices": [
           "réduire le coût du travail pour favoriser l’embauche",
-          "augmenter les impôts",
-          "réduire l’offre de travail",
-          "fermer des entreprises"
+          "augmenter les impôts payés par les entreprises",
+          "réduire l’offre de travail des salariés",
+          "fermer des entreprises peu rentables"
         ],
         "answer": 0,
         "explain": "On agit sur le coût du travail pour stimuler la demande de travail."
@@ -284,9 +284,9 @@
         "q": "Le libre-échange tend, pour les consommateurs, à…",
         "choices": [
           "faire baisser les prix et élargir le choix",
-          "augmenter tous les prix",
-          "supprimer la concurrence",
-          "interdire les importations"
+          "augmenter tous les prix des produits importés",
+          "supprimer la concurrence entre producteurs",
+          "interdire les importations de produits étrangers"
         ],
         "answer": 0,
         "explain": "Ouverture = plus de concurrence, prix plus bas, choix élargi."
@@ -296,9 +296,9 @@
         "q": "Une FMN qui répartit ses activités entre plusieurs pays organise…",
         "choices": [
           "une division internationale du travail",
-          "un monopole d’État",
-          "une autarcie",
-          "un quota"
+          "un monopole d’État sur la production",
+          "une autarcie économique du pays d’origine",
+          "un quota d’importation fixé par l’État"
         ],
         "answer": 0,
         "explain": "La DIT : chaque étape est réalisée là où c’est le plus avantageux."
@@ -308,9 +308,9 @@
         "q": "Le document 4 rappelle que le libre-échange…",
         "choices": [
           "fait aussi des perdants (emplois, industries)",
-          "ne profite à personne",
-          "supprime tout chômage",
-          "n’a aucun effet"
+          "ne profite à personne dans aucun pays",
+          "supprime tout chômage dans les pays riches",
+          "n’a aucun effet sur l’emploi ni sur les prix"
         ],
         "answer": 0,
         "explain": "Gains globaux mais perdants sectoriels : d’où les politiques d’accompagnement."
@@ -384,9 +384,9 @@
         "q": "Parmi les limites du PIB citées, il ignore…",
         "choices": [
           "la qualité de l’environnement et les inégalités",
-          "la production des entreprises",
-          "les exportations",
-          "la consommation"
+          "la production des entreprises installées en France",
+          "les exportations de biens et de services",
+          "la consommation finale des ménages résidents"
         ],
         "answer": 0,
         "explain": "Le PIB ne dit rien du bien-être, des inégalités ni de l’environnement."
@@ -396,9 +396,9 @@
         "q": "L’IDH prend notamment en compte…",
         "choices": [
           "la santé, l’éducation et le revenu",
-          "le seul PIB",
-          "la Bourse",
-          "la dette publique"
+          "le seul PIB par habitant du pays",
+          "le cours de la Bourse des entreprises",
+          "la dette publique de l’État"
         ],
         "answer": 0,
         "explain": "L’IDH combine espérance de vie, éducation et revenu."
@@ -420,9 +420,9 @@
         "q": "La taxe carbone est un instrument qui vise à…",
         "choices": [
           "réduire les émissions de gaz à effet de serre",
-          "augmenter la production polluante",
-          "supprimer l’impôt sur le revenu",
-          "financer les exportations"
+          "augmenter la production polluante des entreprises",
+          "supprimer l’impôt sur le revenu des ménages",
+          "financer les exportations des entreprises"
         ],
         "answer": 0,
         "explain": "Elle renchérit les activités émettrices pour les décourager."

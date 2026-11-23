@@ -72,9 +72,9 @@
         "q": "Dans la situation de Marc, le comportement du garagiste caractérise…",
         "choices": [
           "un dol (dissimulation d’une information déterminante)",
-          "une simple erreur de Marc",
-          "une violence",
-          "un cas de force majeure"
+          "une simple erreur d’appréciation de Marc sur le véhicule",
+          "une violence exercée par le garagiste sur Marc",
+          "un cas de force majeure empêchant le garagiste de parler"
         ],
         "answer": 0,
         "explain": "Le garagiste a sciemment caché l’accident : c’est un dol."
@@ -151,9 +151,9 @@
         "q": "La responsabilité civile vise avant tout à…",
         "choices": [
           "réparer le dommage de la victime",
-          "emprisonner l’auteur",
-          "percevoir un impôt",
-          "annuler un contrat"
+          "emprisonner l’auteur du dommage pour l’exemple",
+          "percevoir un impôt au profit de l’État",
+          "annuler le contrat qui a causé le dommage"
         ],
         "answer": 0,
         "explain": "La civile répare ; la pénale sanctionne."
@@ -163,9 +163,9 @@
         "q": "Les trois conditions de la responsabilité civile sont…",
         "choices": [
           "fait générateur, dommage, lien de causalité",
-          "faute, amende, peine",
-          "offre, acceptation, prix",
-          "salaire, contrat, subordination"
+          "faute, amende et peine prononcée par un juge",
+          "offre, acceptation et prix convenu entre les parties",
+          "salaire, contrat et lien de subordination juridique"
         ],
         "answer": 0,
         "explain": "Il faut un fait générateur, un dommage et un lien de causalité."
@@ -187,9 +187,9 @@
         "q": "La force majeure est un événement…",
         "choices": [
           "imprévisible, irrésistible et extérieur",
-          "prévu par le contrat",
-          "causé volontairement",
-          "sans conséquence"
+          "prévu par le contrat et connu des deux parties",
+          "causé volontairement par le débiteur lui-même",
+          "sans aucune conséquence sur l’exécution du contrat"
         ],
         "answer": 0,
         "explain": "C’est une cause étrangère exonératoire."
@@ -202,9 +202,9 @@
         "q": "Dans le cas du supermarché, le fait générateur est…",
         "choices": [
           "le sol mouillé laissé sans signalisation",
-          "la fracture du poignet",
-          "l’opération",
-          "l’arrêt de travail"
+          "la fracture du poignet subie par le client",
+          "l’opération chirurgicale qui a suivi la chute",
+          "l’arrêt de travail prescrit à la victime"
         ],
         "answer": 0,
         "explain": "Le fait générateur (la faute) est l’absence de signalisation ; la fracture est le dommage."
@@ -305,9 +305,9 @@
         "q": "La relation de Karim, malgré l’absence d’écrit, est…",
         "choices": [
           "un contrat de travail (subordination présente)",
-          "du bénévolat",
-          "un contrat commercial",
-          "nulle faute d’écrit"
+          "du bénévolat, car aucun écrit n’a été signé",
+          "un contrat commercial entre deux professionnels",
+          "un accord nul faute d’écrit signé par les parties"
         ],
         "answer": 0,
         "explain": "Prestation + rémunération + subordination = contrat de travail (un CDI, faute d’écrit fixant un terme)."
@@ -387,9 +387,9 @@
         "q": "Depuis la réforme de 2022, dans l’entreprise individuelle, le patrimoine personnel est…",
         "choices": [
           "séparé automatiquement du patrimoine professionnel et en principe protégé",
-          "toujours engagé pour toutes les dettes",
-          "transféré à une société",
-          "saisi par l’État"
+          "toujours engagé pour toutes les dettes de l’entrepreneur comme avant la réforme",
+          "transféré automatiquement à une société créée par l’entrepreneur",
+          "saisi en priorité par l’État pour payer les impôts de l’activité"
         ],
         "answer": 0,
         "explain": "Loi du 14 février 2022 : séparation automatique des patrimoines ; le patrimoine personnel est en principe protégé des dettes professionnelles."
@@ -438,9 +438,9 @@
         "q": "Diffuser de fausses rumeurs sur l’hygiène d’un concurrent constitue…",
         "choices": [
           "un dénigrement (concurrence déloyale)",
-          "une pratique loyale",
-          "une entente légale",
-          "un apport en société"
+          "une pratique loyale de concurrence entre entreprises",
+          "une entente légale autorisée entre deux entreprises",
+          "un apport en société fait par un des associés"
         ],
         "answer": 0,
         "explain": "Le dénigrement est un acte de concurrence déloyale."

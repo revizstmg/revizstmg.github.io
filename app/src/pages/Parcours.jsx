@@ -51,7 +51,7 @@ function ParcoursPage() {
         matieres={matieres}
         initial={{ ...OBJECTIFS_DEFAUT, ...(parcours.objectifs || {}) }}
         modification={configure}
-        onValider={(objectifs) => { setParcours((avant) => ({ ...avant, objectifs })); setEdition(false) }}
+        onValider={(objectifs) => { setParcours((avant) => ({ ...avant, objectifs, semaine: null })); setEdition(false) }}
         onAnnuler={configure ? () => setEdition(false) : null}
       />
     )
@@ -166,7 +166,7 @@ function Plan({ matieres, onTest, onModifier }) {
               <>
                 <p className="mt-1 text-sm">{`On commence par l’essentiel : avec tes heures actuelles, ton plan couvre environ ${Math.round((plan.minutesPlacees / Math.max(1, plan.minutesTotal)) * 100)} % du programme avant les épreuves.`}</p>
                 <p className="mt-1 text-sm">{`Pour tout couvrir : environ ${heuresRondes(plan.heuresConseillees)} h par semaine. Tu peux aussi garder ton rythme : une note un peu plus basse reste possible.`}</p>
-                <button type="button" className="btn-primary mt-3" onClick={() => setParcours((avant) => ({ ...avant, objectifs: { ...avant.objectifs, heuresSemaine: plan.heuresConseillees } }))}>{`Passer à ${heuresRondes(plan.heuresConseillees)} h par semaine`}</button>
+                <button type="button" className="btn-primary mt-3" onClick={() => setParcours((avant) => ({ ...avant, objectifs: { ...avant.objectifs, heuresSemaine: plan.heuresConseillees }, semaine: null }))}>{`Passer à ${heuresRondes(plan.heuresConseillees)} h par semaine`}</button>
               </>
             )
             : <p className="mt-1 text-sm">Même en révisant 20 h par semaine, ce plan ne tient pas avant les épreuves. Vise une note un peu plus basse ou retire une matière difficile.</p>}

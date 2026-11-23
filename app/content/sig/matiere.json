@@ -1082,9 +1082,9 @@
               "q": "La GED sert à…",
               "choices": [
                 "classer et retrouver les documents numériques",
-                "trier une base SQL",
-                "coder une application",
-                "sécuriser un réseau"
+                "trier les lignes d’une base de données SQL",
+                "coder une application web pour les clients",
+                "sécuriser un réseau contre les intrusions"
               ],
               "answer": 0,
               "explain": "GED = gestion électronique des documents."
@@ -1104,9 +1104,9 @@
               "q": "Le principal atout du cloud pour une équipe est…",
               "choices": [
                 "travailler sur le même fichier à jour",
-                "supprimer Internet",
-                "éviter toute sauvegarde",
-                "coder plus vite"
+                "se passer d’Internet pour travailler",
+                "éviter toute sauvegarde de ses fichiers",
+                "coder plus vite grâce aux serveurs distants"
               ],
               "answer": 0,
               "explain": "Un fichier unique partagé, accessible partout."
@@ -1115,9 +1115,9 @@
               "q": "Un wiki repose sur…",
               "choices": [
                 "la coécriture par une communauté",
-                "une base fermée",
-                "un seul auteur",
-                "un tableur privé"
+                "une base fermée réservée à l’administrateur",
+                "un seul auteur qui contrôle tous les contenus",
+                "un tableur privé partagé par e-mail"
               ],
               "answer": 0,
               "explain": "Le wiki est coécrit et corrigé collectivement."

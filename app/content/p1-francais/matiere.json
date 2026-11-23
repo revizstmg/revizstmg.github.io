@@ -220,9 +220,9 @@
               "q": "La problématique du commentaire est…",
               "choices": [
                 "la question centrale à laquelle il répond",
-                "le résumé du texte",
-                "la biographie de l’auteur",
-                "la liste des figures"
+                "le résumé du texte étudié en quelques lignes",
+                "la biographie de l’auteur du texte",
+                "la liste des figures de style relevées"
               ],
               "answer": 0,
               "explain": "Elle donne une direction à tout le devoir."
@@ -275,9 +275,9 @@
               "q": "L’introduction se compose, dans l’ordre, de…",
               "choices": [
                 "amorce, présentation, problématique, annonce du plan",
-                "plan, problématique, amorce",
-                "citation, résumé, avis",
-                "thèse, arguments, exemples"
+                "annonce du plan, problématique, présentation, amorce",
+                "citation, résumé du texte, avis personnel du candidat",
+                "thèse, arguments, exemples, conclusion"
               ],
               "answer": 0,
               "explain": "Les 4 mouvements de l’introduction du commentaire."
@@ -286,9 +286,9 @@
               "q": "Un plan à éviter absolument est le plan…",
               "choices": [
                 "« forme / fond » (ou « procédés / effets »)",
-                "en deux axes",
-                "en trois axes",
-                "progressif"
+                "en deux axes, avec une idée dominante par axe",
+                "en trois axes, avec des sous-parties détaillées",
+                "progressif, qui suit l’évolution du texte"
               ],
               "answer": 0,
               "explain": "On mêle toujours le fond et la forme dans chaque partie."
@@ -616,9 +616,9 @@
               "q": "Dans une contraction, on doit…",
               "choices": [
                 "garder l’ordre et le « je » de l’auteur",
-                "donner son avis",
-                "ajouter des exemples",
-                "commenter le texte"
+                "donner son avis personnel sur le sujet",
+                "ajouter des exemples tirés de ses lectures",
+                "commenter le texte avec des figures de style"
               ],
               "answer": 0,
               "explain": "Fidélité totale : on ne commente pas, on reformule."
@@ -638,9 +638,9 @@
               "q": "L’essai est…",
               "choices": [
                 "une réflexion argumentée et nuancée",
-                "un résumé",
-                "une dictée",
-                "une biographie"
+                "un résumé du texte en quelques lignes",
+                "une dictée corrigée par le professeur",
+                "une biographie de l’auteur étudié"
               ],
               "answer": 0,
               "explain": "On défend une thèse avec arguments et exemples."
@@ -1272,9 +1272,9 @@
               "q": "Les **didascalies** sont…",
               "choices": [
                 "les indications scéniques",
-                "les répliques",
-                "les rimes",
-                "les strophes"
+                "les répliques des personnages entre eux",
+                "les rimes à la fin des vers",
+                "les strophes d’un poème de quatre vers"
               ],
               "answer": 0,
               "explain": "Elles indiquent décor, gestes, ton (en italique)."
@@ -1942,9 +1942,9 @@
               "q": "La partie 1 de l’oral comprend…",
               "choices": [
                 "l’explication linéaire + une question de grammaire",
-                "la présentation d’œuvre",
-                "un débat",
-                "une dictée"
+                "la présentation d’une œuvre lue en classe",
+                "un débat avec l’examinateur sur un thème",
+                "une dictée suivie d’une question de grammaire"
               ],
               "answer": 0,
               "explain": "La partie 2 = présentation d’œuvre + entretien."
@@ -1953,9 +1953,9 @@
               "q": "L’explication linéaire suit le texte…",
               "choices": [
                 "dans l’ordre, au fil de la lecture",
-                "par un plan thématique",
-                "en le résumant",
-                "à l’envers"
+                "par un plan thématique en deux grandes parties",
+                "en le résumant en quelques lignes",
+                "à l’envers, de la dernière ligne à la première"
               ],
               "answer": 0,
               "explain": "Mouvement par mouvement, sans plaquer de plan."

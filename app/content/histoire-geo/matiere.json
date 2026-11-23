@@ -65,9 +65,9 @@
               "q": "Une « guerre d’anéantissement » vise…",
               "choices": [
                 "à détruire des populations entières, pas seulement des armées",
-                "uniquement les soldats ennemis",
-                "à conclure vite un armistice",
-                "à protéger les civils"
+                "uniquement les soldats ennemis sur le champ de bataille",
+                "à conclure rapidement un armistice avec l’adversaire",
+                "à protéger les civils des bombardements aériens"
               ],
               "answer": 0,
               "explain": "Elle confond front et arrière et prend pour cible les civils (violence de masse)."
@@ -445,9 +445,9 @@
               "q": "Suez, Panama et Malacca sont des…",
               "choices": [
                 "passages/routes maritimes stratégiques",
-                "façades atlantiques",
-                "câbles sous-marins",
-                "ports de pêche mineurs"
+                "façades atlantiques des grands ports européens",
+                "câbles sous-marins de transmission des données",
+                "ports de pêche mineurs de la mer du Nord"
               ],
               "answer": 0,
               "explain": "Ce sont de grands passages stratégiques du commerce maritime."
@@ -456,9 +456,9 @@
               "q": "Une zone de fortes rivalités géopolitiques maritimes est…",
               "choices": [
                 "la mer de Chine méridionale",
-                "le lac Léman",
-                "la mer d’Aral",
-                "la mer Morte"
+                "le lac Léman entre la France et la Suisse",
+                "la mer d’Aral en Asie centrale",
+                "la mer Morte au Proche-Orient"
               ],
               "answer": 0,
               "explain": "La mer de Chine méridionale concentre tensions et rivalités."
@@ -548,9 +548,9 @@
               "q": "La métropolisation désigne…",
               "choices": [
                 "la concentration des activités dans les grandes villes",
-                "la disparition des villes",
-                "l’exode vers les campagnes",
-                "la fermeture des ports"
+                "la disparition progressive des villes au profit des campagnes",
+                "l’exode des citadins vers les zones rurales",
+                "la fermeture des ports dans les grandes villes"
               ],
               "answer": 0,
               "explain": "La métropolisation concentre hommes et activités dans les métropoles."
@@ -559,9 +559,9 @@
               "q": "Les territoires « en marge » sont…",
               "choices": [
                 "faiblement intégrés à la mondialisation",
-                "les mieux connectés",
-                "toujours les plus riches",
-                "sans population"
+                "les territoires les mieux connectés au monde",
+                "toujours les plus riches du pays",
+                "des territoires sans population permanente"
               ],
               "answer": 0,
               "explain": "Ils sont peu intégrés, à l’écart des flux mondiaux."
@@ -570,9 +570,9 @@
               "q": "Parmi les acteurs de la mondialisation :",
               "choices": [
                 "les firmes multinationales et les États",
-                "uniquement les touristes",
-                "seulement les agriculteurs",
-                "aucun acteur humain"
+                "uniquement les touristes étrangers en visite",
+                "seulement les agriculteurs des pays pauvres",
+                "aucun acteur humain : seulement la nature"
               ],
               "answer": 0,
               "explain": "États, firmes multinationales et organisations structurent la mondialisation."
@@ -664,9 +664,9 @@
               "q": "Les territoires français présentent…",
               "choices": [
                 "des atouts mais aussi des inégalités régionales",
-                "une parfaite égalité partout",
-                "aucun atout",
-                "aucune ville"
+                "une parfaite égalité entre tous les territoires",
+                "aucun atout dans la compétition mondiale",
+                "aucune grande ville capable d’attirer des activités"
               ],
               "answer": 0,
               "explain": "Le territoire combine atouts, contrastes et inégalités régionales."
@@ -675,9 +675,9 @@
               "q": "La France s’inscrit dans…",
               "choices": [
                 "l'Union européenne et la mondialisation",
-                "un isolement complet",
-                "le seul continent américain",
-                "aucune organisation"
+                "un isolement complet, sans échanges avec l’extérieur",
+                "le seul continent américain et ses organisations",
+                "aucune organisation internationale ou régionale"
               ],
               "answer": 0,
               "explain": "Elle est intégrée à l’UE et à la mondialisation."

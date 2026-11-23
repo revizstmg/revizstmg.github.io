@@ -16,6 +16,10 @@ import './Languages.css'
 const pdfs = {de:dePdf,en:enPdf,es:esPdf,it:itPdf,ar:arPdf}
 const guides = catalogue.map(g => ({...g,pdf:pdfs[g.id]}))
 
+// La dernière langue choisie sur la page est retenue sur cet appareil (sinon on repartait toujours de l'anglais).
+const CLE_LANGUE='stmg_langue_hub'
+function derniereLangue(guides){try{const v=localStorage.getItem(CLE_LANGUE);return guides.some(g=>g.id===v)?v:null}catch{return null}}
+function retenirLangue(id){try{localStorage.setItem(CLE_LANGUE,id)}catch{/* stockage indisponible */}}
 export default function Languages() {
  const { state } = useStore()
  const t = useT()
@@ -25,14 +29,14 @@ export default function Languages() {
  // Un défi reçu par lien (?defi=en-1abc.4) ouvre directement la bonne langue.
  const [params] = useSearchParams()
  const defi = lireCode(params.get('defi'))
- const [language,setLanguage] = useState(defi && guides.some(g=>g.id===defi.langue) ? defi.langue : (selected[0] || 'en'))
+ const [language,setLanguage] = useState(defi && guides.some(g=>g.id===defi.langue) ? defi.langue : (derniereLangue(guides) || selected[0] || 'en'))
  const [videoLevel,setVideoLevel] = useState('all')
  const guide = guides.find(g=>g.id===language) || guides[0]
  const levels = [...new Set(guide.videos.map(v=>v.level))]
  const videos = guide.videos.filter(v=>videoLevel==='all'||v.level===videoLevel)
  return <div className="language-hub animate-lux space-y-6">
   <header className="page-hero"><p className="kicker">L’atelier des langues</p><h1 className="font-display text-4xl">Ose prendre la parole.</h1><p className="mt-3 max-w-xl">Des guides à garder, des voix à écouter et de petites habitudes pour te sentir plus à l’aise à l’oral.</p><p className="mt-3 text-sm">ETLV signifie enseignement technologique en langue vivante. Les premières leçons du guide posent les bases ; les exercices suivent les numéros des leçons du PDF.</p></header>
-  <nav aria-label="Choisir une langue" className="language-choices">{guides.map(g=><button key={g.id} type="button" aria-pressed={language===g.id} onClick={()=>{setLanguage(g.id);setVideoLevel('all')}}>{names[g.id]}<span dir="auto">{g.label}</span></button>)}</nav>
+  <nav aria-label="Choisir une langue" className="language-choices">{guides.map(g=><button key={g.id} type="button" aria-pressed={language===g.id} onClick={()=>{setLanguage(g.id);setVideoLevel('all');retenirLangue(g.id)}}>{names[g.id]}<span dir="auto">{g.label}</span></button>)}</nav>
   <LanguesModes langue={language} nomLangue={names[guide.id]} defiTexte={params.get('defi') || ''} />
   <section className="language-feature" aria-labelledby="language-guide-title">
    <div className="language-cover" aria-hidden="true"><span>RÉVIZSTMG · LES GUIDES</span><strong>{names[guide.id]}</strong><span dir="auto">{guide.label}</span><i>Écouter.<br/>Parler.<br/>Recommencer.</i><span>Cours · exercices · corrigés</span></div>

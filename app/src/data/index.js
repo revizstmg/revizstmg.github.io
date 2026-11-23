@@ -925,9 +925,36 @@ export function choicesForGap(chapter, question) {
 // beaucoup d'exercices ET du contenu varié (plusieurs formes de questions, cas
 // concrets). Chaque exercice a un id stable et distinct (pour la progression) ;
 // la banque complète permet un nouveau tirage à chaque partie, dans les limites du cours.
-function sectionExercises(sec, theme, idx) {
+// Notions d'un chapitre tirées du glossaire : ses mots en gras ayant une définition (jamais deux fois la même notion).
+const NOTIONS_VISEES = 12
+const EXERCICES_SUFFISANTS = 6 // en dessous, un chapitre est complété par le glossaire
+function completerParGlossaire(defPairs, sec, theme) {
+  if (defPairs.length >= NOTIONS_VISEES) return defPairs
+  const glossaire = glossaireDe(theme?.subjectId)
+  if (!glossaire?.size) return defPairs
+  const out = [...defPairs]
+  const vues = new Set(out.map((p) => _norm(p.term)))
+  const defsVues = new Set(out.map((p) => _norm(p.def)))
+  for (const t of textesDe(sec)) {
+    for (const m of t.matchAll(/\*\*([^*]+)\*\*/g)) {
+      if (out.length >= NOTIONS_VISEES) return out
+      const terme = m[1].trim().replace(/[.:;,]+$/, '')
+      if (terme.length < 3 || terme.length > 40 || /\d/.test(terme) || estEtapeMethode(terme)) continue
+      const def = trouverDefinition(glossaire, terme)
+      if (!def || def.length > 220 || vues.has(_norm(terme)) || defsVues.has(_norm(def))) continue
+      vues.add(_norm(terme)); defsVues.add(_norm(def))
+      out.push({ term: terme, def })
+    }
+  }
+  return out
+}
+
+function sectionExercises(sec, theme, idx, complete = false) {
   const base = `${theme.id}::${idx}`
-  const { datePairs, defPairs, widePairs, compareTables } = sectionPairs(sec)
+  const { datePairs, defPairs: defsDuCours, widePairs, compareTables } = sectionPairs(sec)
+  // Un chapitre dont le tableau de notions est maigre est complété par ses mots en gras qui ont une définition
+  // au glossaire de la matière : plus de notions, donc plus d'exercices (QCM, vrai/faux, association, saisie…).
+  const defPairs = complete ? completerParGlossaire(defsDuCours, sec, theme) : defsDuCours
   const richDefs = sectionDefPool(defPairs)
   const out = []
   const uniqEvents = [...new Set(datePairs.map((p) => p.e))]
@@ -1089,6 +1116,11 @@ function sectionExercises(sec, theme, idx) {
     })
   })
 
+  // Un chapitre pauvre en exercices est refait avec les notions du glossaire (les chapitres déjà bien fournis restent tels quels).
+  if (!complete && out.length < EXERCICES_SUFFISANTS) {
+    const plus = sectionExercises(sec, theme, idx, true)
+    if (plus.length > out.length) return plus
+  }
   return out.map(game => ['qcm','trou','saisie'].includes(game.type) ? {...game, questionCount:Math.min(game.type === 'trou' ? 6 : game.type === 'qcm' ? 8 : 10, Math.max(2,Math.ceil(new Set(game.questions.map(q=>q.drawSource || q.q || q.text || q.prompt)).size/2)))} : game)
 }
 
@@ -1455,16 +1487,19 @@ export function shuffle(arr) {
 }
 
 // Recherche simple (chapitres + matières + intitulés de jeux/notions).
-export function search(query) {
-  const q = query.trim().toLowerCase()
+const sansAccents = (x) => String(x || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+// `idsMatieres` (facultatif) limite la recherche aux matières du niveau de l'élève.
+export function search(query, idsMatieres = null) {
+  const q = sansAccents(query.trim())
   if (!q) return []
   const res = []
   for (const s of SUBJECTS) {
-    if (s.name.toLowerCase().includes(q))
+    if (idsMatieres && !idsMatieres.includes(s.id)) continue
+    if (sansAccents(s.name).includes(q))
       res.push({ type: 'subject', id: s.id, label: s.name, sub: 'Matière', color: s.color })
     if (['langues','p1-langues'].includes(s.id)) continue
     for (const c of s.chapters) {
-      const hay = (c.name + ' ' + (c.short || '') + ' ' + (c.keywords || '')).toLowerCase()
+      const hay = sansAccents(c.name + ' ' + (c.short || '') + ' ' + (c.keywords || ''))
       if (hay.includes(q))
         res.push({
           type: 'chapter',

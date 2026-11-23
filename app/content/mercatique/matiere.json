@@ -242,9 +242,9 @@
               "q": "La mercatique cherche avant tout à…",
               "choices": [
                 "connaître et satisfaire le consommateur",
-                "produire au moindre coût",
-                "tenir la comptabilité",
-                "recruter du personnel"
+                "produire au moindre coût possible",
+                "tenir la comptabilité de l’entreprise",
+                "recruter du personnel qualifié"
               ],
               "answer": 0,
               "explain": "La mercatique vise à connaître, influencer et satisfaire le consommateur."
@@ -308,9 +308,9 @@
               "q": "L’attitude désigne…",
               "choices": [
                 "une opinion favorable ou défavorable envers un produit",
-                "la place en rayon",
-                "le prix psychologique",
-                "un canal de distribution"
+                "la place du produit en rayon dans le magasin",
+                "le prix psychologique que le client accepte de payer",
+                "un canal de distribution utilisé par l’entreprise"
               ],
               "answer": 0,
               "explain": "L’attitude est une prédisposition (positive/négative) envers le produit."
@@ -680,9 +680,9 @@
               "q": "La part de marché se calcule…",
               "choices": [
                 "ventes de l’entreprise / ventes totales du marché",
-                "coûts / recettes",
-                "clients / salariés",
-                "prix / quantité"
+                "coûts de l’entreprise / recettes de l’entreprise",
+                "nombre de clients / nombre de salariés",
+                "prix de vente / quantité vendue sur le marché"
               ],
               "answer": 0,
               "explain": "Part de marché = ventes de l’entreprise ÷ ventes totales du marché (×100)."

@@ -1213,7 +1213,7 @@
       "unit": "Arabe — Première · axes culturels",
       "origin": "p1-langues/lng-ar-p1-culture-premiere-s1-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « الهوية » ?",
+      "prompt": "Que signifie « الهوية » ?",
       "choices": [
         "L’identité.",
         "L’échange.",
@@ -1249,7 +1249,7 @@
       "unit": "Arabe — Première · axes culturels",
       "origin": "p1-langues/lng-ar-p1-culture-premiere-s2-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « المشاركة » ?",
+      "prompt": "Que signifie « المشاركة » ?",
       "choices": [
         "L’inclusion / l’intégration.",
         "La participation.",
@@ -1285,7 +1285,7 @@
       "unit": "Arabe — Première · axes culturels",
       "origin": "p1-langues/lng-ar-p1-culture-premiere-s3-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « السلطة » ?",
+      "prompt": "Que signifie « السلطة » ?",
       "choices": [
         "L’art.",
         "L’artiste.",
@@ -1321,7 +1321,7 @@
       "unit": "Arabe — Première · axes culturels",
       "origin": "p1-langues/lng-ar-p1-culture-premiere-s4-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « البيانات » ?",
+      "prompt": "Que signifie « البيانات » ?",
       "choices": [
         "La responsabilité.",
         "L’innovation.",
@@ -1357,7 +1357,7 @@
       "unit": "Arabe — Première · axes culturels",
       "origin": "p1-langues/lng-ar-p1-culture-premiere-s5-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « الماء » ?",
+      "prompt": "Que signifie « الماء » ?",
       "choices": [
         "Les ressources.",
         "L’oasis.",
@@ -1393,7 +1393,7 @@
       "unit": "Arabe — Première · axes culturels",
       "origin": "p1-langues/lng-ar-p1-culture-premiere-s6-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « المتحف » ?",
+      "prompt": "Que signifie « المتحف » ?",
       "choices": [
         "Le palais.",
         "Le musée.",
@@ -1510,7 +1510,7 @@
       "answer": "Son coût est élevé.",
       "explanation": "لكن تكلفته مرتفعة signifie mais son coût est élevé.",
       "alternatives": [],
-      "context": "",
+      "context": "هذا المشروع جيد للمدينة، لكن تكلفته مرتفعة.",
       "sourceQuestion": 1,
       "id": "ar-ex-041"
     },
@@ -1537,7 +1537,7 @@
       "unit": "Arabe — Terminale · axes culturels",
       "origin": "langues/lng-ar-culture-terminale-s1-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « الفضاء العام » ?",
+      "prompt": "Que signifie « الفضاء العام » ?",
       "choices": [
         "La vie privée.",
         "L’espace public.",
@@ -1573,7 +1573,7 @@
       "unit": "Arabe — Terminale · axes culturels",
       "origin": "langues/lng-ar-culture-terminale-s2-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « الذاكرة » ?",
+      "prompt": "Que signifie « الذاكرة » ?",
       "choices": [
         "Les archives.",
         "La mémoire.",
@@ -1609,7 +1609,7 @@
       "unit": "Arabe — Terminale · axes culturels",
       "origin": "langues/lng-ar-culture-terminale-s3-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « الرواية » ?",
+      "prompt": "Que signifie « الرواية » ?",
       "choices": [
         "L’imagination / la fiction.",
         "Le roman.",
@@ -1645,7 +1645,7 @@
       "unit": "Arabe — Terminale · axes culturels",
       "origin": "langues/lng-ar-culture-terminale-s4-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « الجمهور » ?",
+      "prompt": "Que signifie « الجمهور » ?",
       "choices": [
         "Le public.",
         "La publicité / l’annonce.",
@@ -1681,7 +1681,7 @@
       "unit": "Arabe — Terminale · axes culturels",
       "origin": "langues/lng-ar-culture-terminale-s5-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « المواطنة » ?",
+      "prompt": "Que signifie « المواطنة » ?",
       "choices": [
         "La citoyenneté.",
         "La source.",
@@ -1717,7 +1717,7 @@
       "unit": "Arabe — Terminale · axes culturels",
       "origin": "langues/lng-ar-culture-terminale-s6-qcm",
       "type": "qcm",
-      "prompt": "Dans cette fiche, que signifie « الأدب » ?",
+      "prompt": "Que signifie « الأدب » ?",
       "choices": [
         "L’histoire.",
         "La chanson.",

@@ -32,11 +32,12 @@ function CarteMentale({ titre, branches, couleur }) {
             ))}
             {b.feuilles.map((f, k) => {
               const fy = y + (k - (b.feuilles.length - 1) / 2) * 34
+              const ls = lignes(f, 50, 2)
               return (
                 <g key={k}>
                   <path d={`M435 ${y} L 460 ${fy}`} stroke={FORTS[i % 6]} strokeWidth="2" fill="none" />
-                  <rect x="460" y={fy - 15} width="290" height="30" rx="6" fill="#fff" stroke={FORTS[i % 6]} strokeWidth="1.5" />
-                  <text x="472" y={fy + 5} fontSize="12" fill="#111">{court(f, 38)}</text>
+                  <rect x="460" y={fy - 22} width="296" height="44" rx="6" fill="#fff" stroke={FORTS[i % 6]} strokeWidth="1.5" />
+                  {ls.map((l, q) => <text key={q} x="468" y={fy + (q - (ls.length - 1) / 2) * 14 + 4} fontSize="11" fill="#111">{l}</text>)}
                 </g>
               )
             })}

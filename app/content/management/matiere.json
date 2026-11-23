@@ -86,9 +86,9 @@
               "q": "La finalité d’un service public est plutôt…",
               "choices": [
                 "non lucrative (intérêt général)",
-                "lucrative",
-                "spéculative",
-                "concurrentielle"
+                "lucrative, car il vend des services aux usagers",
+                "spéculative, pour dégager le plus de profit possible",
+                "concurrentielle, sur un marché libre"
               ],
               "answer": 0,
               "explain": "Les organisations publiques ont une finalité non lucrative d’intérêt général."
@@ -97,9 +97,9 @@
               "q": "La chaîne de valeur (Porter) désigne…",
               "choices": [
                 "l’enchaînement des activités qui créent de la valeur",
-                "la liste des fournisseurs",
-                "le bilan comptable",
-                "l’organigramme"
+                "la liste des fournisseurs de l’entreprise et de leurs prix",
+                "le bilan comptable d’une entreprise à la fin de l’année",
+                "l’organigramme hiérarchique de l’entreprise"
               ],
               "answer": 0,
               "explain": "La chaîne de valeur relie les activités (appro, production, marketing, service…) qui créent de la valeur pour le client."
@@ -156,7 +156,7 @@
             },
             {
               "id": "civ",
-              "label": "Société civile"
+              "label": "Association ou ONG (sans but lucratif)"
             }
           ],
           "items": [
@@ -389,9 +389,9 @@
               "q": "La « rationalité limitée » (Simon) signifie que le décideur choisit une solution…",
               "choices": [
                 "satisfaisante, pas forcément optimale",
-                "toujours optimale",
-                "au hasard",
-                "imposée par la loi"
+                "toujours optimale, après étude de toutes les options",
+                "choisie au hasard parmi les solutions possibles",
+                "imposée par la loi dans chaque secteur"
               ],
               "answer": 0,
               "explain": "Faute d’information et de temps complets, le décideur retient une solution satisfaisante."
@@ -625,9 +625,9 @@
               "q": "La critique sur l’empreinte carbone des batteries relève de la dimension…",
               "choices": [
                 "environnementale de la RSE",
-                "financière",
-                "juridique",
-                "commerciale"
+                "financière, car elle concerne le coût des batteries",
+                "juridique, car elle concerne un procès",
+                "commerciale, car elle concerne la publicité"
               ],
               "answer": 0,
               "explain": "C’est la dimension environnementale de la responsabilité sociétale."
@@ -658,9 +658,9 @@
               "q": "La performance globale combine les performances…",
               "choices": [
                 "économique, sociale et environnementale",
-                "commerciale et fiscale",
-                "locale et nationale",
-                "passée et future"
+                "commerciale et fiscale de l’entreprise",
+                "locale et nationale de l’entreprise",
+                "passée et future de l’entreprise"
               ],
               "answer": 0,
               "explain": "Performance globale = économique + sociale + environnementale (comme les 3 piliers)."
@@ -669,9 +669,9 @@
               "q": "Une coopérative, une mutuelle ou une association relèvent de…",
               "choices": [
                 "l’économie sociale et solidaire (ESS)",
-                "la finance de marché",
-                "l’État",
-                "la grande distribution"
+                "la finance de marché et des actionnaires",
+                "l’État et les administrations publiques",
+                "la grande distribution et ses centrales d’achat"
               ],
               "answer": 0,
               "explain": "L’ESS regroupe des organisations à finalité sociale et gouvernance démocratique."
@@ -680,9 +680,9 @@
               "q": "Le RGPD encadre…",
               "choices": [
                 "la protection des données personnelles",
-                "le calcul de la TVA",
-                "le droit des sociétés",
-                "la publicité télévisée"
+                "le calcul de la TVA collectée par l’entreprise",
+                "le droit des sociétés et des associés",
+                "la publicité à la télévision et à la radio"
               ],
               "answer": 0,
               "explain": "Le RGPD impose consentement, finalité précise et sécurité des données ; la CNIL veille au respect."

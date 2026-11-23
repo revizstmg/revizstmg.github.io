@@ -54,9 +54,9 @@
               "q": "La pollution est un exemple de…",
               "choices": [
                 "externalité (défaillance du marché)",
-                "bien collectif pur",
-                "redistribution",
-                "politique monétaire"
+                "bien collectif pur, accessible à tous sans rivalité",
+                "redistribution des revenus entre ménages",
+                "politique monétaire menée par la banque centrale"
               ],
               "answer": 0,
               "explain": "La pollution est une externalité négative, une défaillance du marché."
@@ -217,9 +217,9 @@
               "q": "Un chômeur « découragé » qui cesse de chercher…",
               "choices": [
                 "quitte la population active (baisse mécanique du taux de chômage)",
-                "devient automatiquement salarié",
-                "augmente le taux d’emploi",
-                "reste compté comme chômeur"
+                "devient automatiquement salarié dans une autre entreprise",
+                "augmente le taux d’emploi du pays où il vit",
+                "reste compté comme chômeur dans les statistiques officielles"
               ],
               "answer": 0,
               "explain": "En quittant la population active, il fait baisser mécaniquement le taux de chômage, sans amélioration réelle de l’emploi."

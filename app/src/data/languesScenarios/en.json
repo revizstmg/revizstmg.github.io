@@ -79,6 +79,36 @@
     "I don't have, I am poor like a mouse church."
    ],
    "why": "« Lend » veut dire prêter, « borrow » emprunter. Et l'expression est « poor as a church mouse »."
+  },
+  {
+   "intro": "Un collègue de stage te propose d'aller déjeuner.",
+   "prompt": "A few of us are grabbing lunch. Want to join?",
+   "options": [
+    "Sure, I'd love to. Where are you going?",
+    "Yes, I am agree, I come with you.",
+    "No, thanks. I don't like people."
+   ],
+   "why": "La bonne réponse accepte et pose une question. « I am agree » est faux : on dit « I agree »."
+  },
+  {
+   "intro": "Un camarade anglais te rend ton cahier.",
+   "prompt": "Here's your notebook. Sorry, I spilled some coffee on it.",
+   "options": [
+    "No worries, it happens. Thanks for bringing it back.",
+    "It is a catastrophe, you must buy me a new notebook now.",
+    "Thank you, I am agree, it is not important."
+   ],
+   "why": "Réponse simple et sympa. La deuxième est trop dure, la troisième répète l'erreur « I am agree »."
+  },
+  {
+   "intro": "Un prof te croise dans le couloir.",
+   "prompt": "Did you finish the homework for tomorrow?",
+   "options": [
+    "Almost. I just have one question left to do.",
+    "Yes, I have finished it yesterday evening at nine.",
+    "What homework? I never heard about it."
+   ],
+   "why": "Avec « yesterday », on utilise le prétérit : « I finished it yesterday evening »."
   }
  ],
  "faux": [
@@ -179,7 +209,7 @@
     "le locataire",
     "l'allocation"
    ],
-   "why": "« Location » = l'endroit. Louer se dit « rent » ou « hire »."
+   "why": "« Location » = l'emplacement, le lieu. Louer se dit « rent » ou « hire »."
   },
   {
    "intro": "Faux ami classique",
@@ -191,6 +221,28 @@
     "une injection"
    ],
    "why": "« Injury » = blessure. Une injure, c'est « an insult »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« library » veut dire…",
+   "options": [
+    "la bibliothèque",
+    "la librairie",
+    "le livre",
+    "la liberté"
+   ],
+   "why": "« Library » = bibliothèque. Librairie se dit « bookshop »."
+  },
+  {
+   "intro": "Faux ami classique",
+   "prompt": "« to attend » veut dire…",
+   "options": [
+    "assister à",
+    "attendre",
+    "s'occuper de",
+    "s'attacher à"
+   ],
+   "why": "« To attend » = assister à. Attendre se dit « to wait »."
   }
  ],
  "serie": [
@@ -363,6 +415,36 @@
     "Je suis riche jusqu'à la paie, on peut faire un truc de luxe ?"
    ],
    "why": "« Broke » = fauché. « Payday » = jour de paie."
+  },
+  {
+   "intro": "Un pote est en retard au cinéma.",
+   "prompt": "running late, save me a seat pls",
+   "options": [
+    "Je suis en retard, garde-moi une place s'il te plaît.",
+    "Je cours tard, sauve-moi un siège s'il te plaît.",
+    "Je suis très en avance, ne garde aucune place."
+   ],
+   "why": "« Running late » = être en retard. « To save a seat » = garder une place."
+  },
+  {
+   "intro": "Un pote annule un rendez-vous.",
+   "prompt": "can't make it tmrw, got a dentist appt",
+   "options": [
+    "Je ne peux pas venir demain, j'ai rendez-vous chez le dentiste.",
+    "Je ne viendrai pas demain, je dois faire un appartement.",
+    "Je viens demain, mais je passe chez le dentiste après."
+   ],
+   "why": "« Can't make it » = ne pas pouvoir venir. « Appt » = appointment, rendez-vous."
+  },
+  {
+   "intro": "Une pote commente une vidéo.",
+   "prompt": "this is so random lol",
+   "options": [
+    "C'est tellement bizarre, mdr.",
+    "C'est tellement au hasard, mdr.",
+    "C'est tellement rapide, mdr."
+   ],
+   "why": "En anglais courant, « random » veut dire bizarre, sorti de nulle part."
   }
  ],
  "survie": {
