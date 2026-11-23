@@ -75,7 +75,7 @@ function Detail({ id, onRetour }) {
   const chapitres = Object.entries(p.chapters || {})
   return (
     <div className="space-y-3" lang="fr" data-no-translate>
-      <button type="button" className="underline text-sm" onClick={onRetour}>← Retour à la liste</button>
+      <button type="button" className="lien-retour" onClick={onRetour}>← Retour à la liste</button>
       <section className="card p-4 space-y-1 text-sm">
         <h2 className="font-display text-xl font-semibold">{d.nom || '(sans nom)'}</h2>
         <p>{d.role === 'prof' ? 'Professeur' : 'Élève'} · {d.niveau}{d.specialite ? ` · ${d.specialite}` : ''} · {d.email}</p>

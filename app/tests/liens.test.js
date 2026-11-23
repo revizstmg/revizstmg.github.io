@@ -25,6 +25,8 @@ const fichiers = (dossier) => readdirSync(dossier).flatMap((f) => {
 
 const app = readFileSync(join(SRC, 'App.jsx'), 'utf8')
 const ROUTES = [...app.matchAll(/<Route path="([^"]+)"/g)].map((m) => m[1]).filter((p) => p !== '*')
+// /admin est une route réservée à deux comptes : ni comptée dans la mesure d'audience, ni redirigée par la page 404.
+const ROUTES_OUVERTES = ROUTES.filter((p) => p !== '/admin')
 const MOTIFS = ROUTES.map((r) => new RegExp('^' + r.replace(/:[A-Za-z]+/g, '[^/]+') + '$'))
 
 // Cibles écrites en dur : to="/…", to: '/…', navigate('/…'), href="./#/…".
@@ -66,7 +68,7 @@ describe('liens internes', () => {
     const page = readFileSync(join(APP, 'pwa/404.html'), 'utf8')
     const liste = page.match(/var ROUTES = \[([^\]]*)\]/)[1]
     const dans404 = [...liste.matchAll(/'([^']+)'/g)].map((m) => m[1]).sort()
-    const premiers = [...new Set(ROUTES.map((r) => r.split('/')[1]).filter(Boolean))].sort()
+    const premiers = [...new Set(ROUTES_OUVERTES.map((r) => r.split('/')[1]).filter(Boolean))].sort()
     expect(dans404).toEqual(premiers)
   })
 
@@ -82,7 +84,7 @@ describe('liens internes', () => {
 
   it('mesure d’audience : chaque route a un nom d’écran accepté par la base', () => {
     const exemple = (r) => r.replace(/:[A-Za-z]+/g, '1')
-    for (const r of ROUTES) {
+    for (const r of ROUTES_OUVERTES) {
       const nom = nomEcran(exemple(r))
       if (r === '/subject/:sid/chapter/:cid') { expect(nom).toBe(null); continue }
       expect(ECRANS, r).toContain(nom)
