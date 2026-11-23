@@ -225,9 +225,9 @@
               "q": "L’intéressement et la participation sont des…",
               "choices": [
                 "périphériques de rémunération",
-                "impôts",
-                "sanctions",
-                "charges fixes"
+                "impôts versés par l’entreprise à l’État",
+                "sanctions disciplinaires infligées aux salariés",
+                "charges fixes de l’entreprise chaque année"
               ],
               "answer": 0,
               "explain": "Ce sont des compléments (périphériques) au salaire de base."

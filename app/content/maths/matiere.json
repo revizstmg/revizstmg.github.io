@@ -70,9 +70,9 @@
               "q": "Pour deux évolutions successives, comment obtient-on l’évolution globale ?",
               "choices": [
                 "On multiplie les coefficients multiplicateurs",
-                "On additionne les deux taux",
-                "On fait la moyenne des taux",
-                "On soustrait les taux"
+                "On additionne les deux taux d’évolution",
+                "On fait la moyenne des deux taux",
+                "On soustrait le second taux du premier"
               ],
               "answer": 0,
               "explain": "CM global = produit des CM. On n’additionne JAMAIS les taux (+20 % puis +20 % ≠ +40 %)."
@@ -94,9 +94,9 @@
               "gen": "indice_base100",
               "choices": [
                 "Augmenté de 30 % depuis la référence",
-                "Été multipliée par 130",
-                "Baissé de 30 %",
-                "Augmenté de 130 %"
+                "Été multipliée par 130 depuis la référence",
+                "Baissé de 30 % depuis la référence",
+                "Augmenté de 130 % depuis la référence"
               ],
               "answer": 0,
               "explain": "Indice 130 pour une base 100 = +30 % par rapport à la valeur de référence."
@@ -350,9 +350,9 @@
               "q": "Le nombre dérivé f’(a) représente…",
               "choices": [
                 "Le coefficient directeur de la tangente en a",
-                "L’image de a par f",
-                "L’aire sous la courbe",
-                "La valeur maximale de f"
+                "L’image de a par la fonction f",
+                "L’aire sous la courbe entre 0 et a",
+                "La valeur maximale de f sur son ensemble de définition"
               ],
               "answer": 0,
               "explain": "f’(a) est le coefficient directeur (la pente) de la tangente à la courbe au point d’abscisse a."
@@ -644,9 +644,9 @@
               "q": "Pour trouver la probabilité d’un chemin (une suite de branches), on…",
               "choices": [
                 "Multiplie les probabilités le long des branches",
-                "Additionne les probabilités",
-                "Prend la plus grande",
-                "Divise par le nombre de branches"
+                "Additionne les probabilités le long des branches",
+                "Prend la plus grande probabilité du chemin",
+                "Divise par le nombre de branches de l’arbre"
               ],
               "answer": 0,
               "explain": "On multiplie le long d’un chemin ; on additionne les chemins qui mènent au même événement."
@@ -666,9 +666,9 @@
               "q": "La formule des probabilités totales sert à…",
               "choices": [
                 "Calculer P(B) en additionnant tous les chemins qui mènent à B",
-                "Calculer une moyenne",
-                "Vérifier l’indépendance",
-                "Trouver P(A) sachant B"
+                "Calculer une moyenne pondérée des issues possibles",
+                "Vérifier que deux événements sont indépendants",
+                "Trouver P(A) sachant B à partir d’un arbre pondéré"
               ],
               "answer": 0,
               "explain": "On somme les probabilités des différents chemins de l’arbre aboutissant à B."
@@ -755,9 +755,9 @@
               "q": "Une épreuve de Bernoulli est une expérience qui…",
               "choices": [
                 "N’a que deux issues : succès (p) et échec (1 − p)",
-                "A trois issues possibles",
-                "Se répète à l’infini",
-                "Donne toujours le même résultat"
+                "A trois issues possibles ou davantage selon le cas",
+                "Se répète à l’infini sans jamais s’arrêter",
+                "Donne toujours le même résultat à chaque fois"
               ],
               "answer": 0,
               "explain": "Bernoulli = deux issues seulement : succès de probabilité p, échec de probabilité 1 − p."
@@ -766,9 +766,9 @@
               "q": "Si X suit la loi binomiale B(n ; p), alors X compte…",
               "choices": [
                 "Le nombre de succès sur les n épreuves",
-                "La probabilité d’un succès",
-                "Le nombre d’épreuves",
-                "La moyenne des résultats"
+                "La probabilité d’un succès sur une épreuve",
+                "Le nombre d’épreuves du schéma de Bernoulli",
+                "La moyenne des résultats obtenus"
               ],
               "answer": 0,
               "explain": "X = nombre de succès obtenus en répétant n fois l’épreuve de Bernoulli."

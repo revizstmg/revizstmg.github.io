@@ -44,9 +44,9 @@
               "q": "Un contrat est un accord de volontés qui a pour effet de…",
               "choices": [
                 "créer, modifier, transmettre ou éteindre des obligations",
-                "sanctionner une infraction pénale",
-                "réparer un dommage causé à un tiers",
-                "immatriculer une société"
+                "sanctionner une infraction pénale commise par une partie au contrat",
+                "réparer un dommage causé à un tiers étranger au contrat",
+                "immatriculer une société au registre du commerce"
               ],
               "answer": 0,
               "explain": "Le contrat peut créer, modifier, transmettre ou éteindre des obligations (article 1101 du Code civil)."
@@ -55,9 +55,9 @@
               "q": "Selon l’article 1128 du Code civil, la validité d’un contrat suppose…",
               "choices": [
                 "le consentement, la capacité et un contenu licite et certain",
-                "un écrit signé et enregistré",
-                "la présence obligatoire d’un notaire",
-                "le versement d’un acompte"
+                "un écrit signé par les parties et enregistré auprès de l’administration",
+                "la présence obligatoire d’un notaire lors de la signature",
+                "le versement d’un acompte d’au moins dix pour cent du prix"
               ],
               "answer": 0,
               "explain": "Les trois conditions de validité sont : le consentement, la capacité et un contenu licite et certain."
@@ -99,9 +99,9 @@
               "q": "En cas d’inexécution du contrat, le créancier peut notamment demander…",
               "choices": [
                 "l’exécution forcée, la résolution ou des dommages et intérêts",
-                "une peine d’emprisonnement du débiteur",
-                "une amende pénale automatique",
-                "la dissolution d’une société"
+                "une peine d’emprisonnement prononcée contre le débiteur défaillant",
+                "une amende pénale automatique versée à l’État",
+                "la dissolution immédiate de la société du débiteur"
               ],
               "answer": 0,
               "explain": "Les sanctions civiles de l’inexécution sont l’exécution forcée, la résolution et/ou les dommages et intérêts."
@@ -300,9 +300,9 @@
               "q": "En l’absence de tout contrat entre l’auteur et la victime, la responsabilité civile est…",
               "choices": [
                 "délictuelle (extracontractuelle)",
-                "contractuelle",
-                "pénale",
-                "inexistante"
+                "contractuelle, car la victime a subi un dommage",
+                "pénale, car elle vise à punir l’auteur",
+                "inexistante, car il n’y a aucun contrat"
               ],
               "answer": 0,
               "explain": "Hors de tout contrat, la responsabilité civile est délictuelle (extracontractuelle)."
@@ -509,9 +509,9 @@
               "q": "Le critère déterminant du contrat de travail est…",
               "choices": [
                 "le lien de subordination juridique",
-                "la durée du travail",
-                "le lieu de travail",
-                "le montant du salaire"
+                "la durée du travail fixée par le contrat",
+                "le lieu de travail inscrit au contrat",
+                "le montant du salaire versé chaque mois"
               ],
               "answer": 0,
               "explain": "C’est le lien de subordination (ordres, contrôle, sanction) qui caractérise le contrat de travail."
@@ -520,9 +520,9 @@
               "q": "Une personne exécute un travail, est rémunérée et reçoit des ordres, sans contrat écrit. La relation est…",
               "choices": [
                 "un contrat de travail (présumé à durée indéterminée)",
-                "nulle faute d’écrit",
-                "un contrat commercial",
-                "du bénévolat"
+                "un accord nul faute d’écrit signé par les deux parties",
+                "un contrat commercial passé entre deux professionnels",
+                "du bénévolat, puisqu’aucun papier n’a été signé"
               ],
               "answer": 0,
               "explain": "La subordination caractérise un contrat de travail ; sans écrit fixant un terme, il est présumé à durée indéterminée (CDI)."
@@ -542,9 +542,9 @@
               "q": "Contrairement au CDI, le CDD doit obligatoirement…",
               "choices": [
                 "être établi par écrit et reposer sur un cas de recours prévu par la loi",
-                "durer au moins deux ans",
-                "être conclu sans aucun terme",
-                "être renouvelé indéfiniment"
+                "durer au moins deux ans et être renouvelé chaque année par tacite reconduction",
+                "être conclu sans aucun terme précis ni date de fin prévue",
+                "être renouvelé indéfiniment sans aucune limite fixée par la loi"
               ],
               "answer": 0,
               "explain": "Le CDD est écrit et motivé (cas de recours) ; à défaut, il peut être requalifié en CDI."
@@ -553,9 +553,9 @@
               "q": "Un licenciement n’est régulier que s’il repose sur…",
               "choices": [
                 "une cause réelle et sérieuse, avec respect d’une procédure",
-                "la seule volonté de l’employeur",
-                "une décision du salarié",
-                "un tirage au sort"
+                "la seule volonté de l’employeur, sans autre justification",
+                "une décision du salarié qui refuse de travailler le lundi",
+                "un tirage au sort entre les salariés de l’entreprise"
               ],
               "answer": 0,
               "explain": "Le licenciement, pour motif personnel ou économique, exige une cause réelle et sérieuse et une procédure."
@@ -564,9 +564,9 @@
               "q": "Parmi les sources du droit du travail figurent notamment…",
               "choices": [
                 "le Code du travail et les conventions collectives",
-                "le seul Code civil",
-                "les statuts de la société",
-                "le règlement européen sur la TVA"
+                "le seul Code civil, sans les conventions collectives",
+                "les statuts de la société et le règlement du syndic",
+                "le règlement européen sur la TVA intracommunautaire"
               ],
               "answer": 0,
               "explain": "Code du travail, conventions et accords collectifs, règlement intérieur et contrat encadrent la relation de travail."
@@ -710,9 +710,9 @@
               "q": "La liberté d’entreprendre permet…",
               "choices": [
                 "de créer et d’exercer librement une activité économique",
-                "de ne payer aucun impôt",
-                "de fixer seul le droit du travail",
-                "de contourner tout contrat"
+                "de ne payer aucun impôt sur l’activité exercée",
+                "de fixer seul le droit du travail applicable aux salariés",
+                "de contourner tout contrat signé avec un client"
               ],
               "answer": 0,
               "explain": "La liberté d’entreprendre (à valeur constitutionnelle) permet de créer et d’exercer une activité, dans le respect de la loi."
@@ -732,9 +732,9 @@
               "q": "L’EURL présente l’intérêt de…",
               "choices": [
                 "créer une personne morale qui protège le patrimoine du gérant",
-                "supprimer tout impôt",
-                "éviter tout écrit",
-                "réunir au moins cinq associés"
+                "supprimer tout impôt sur les bénéfices de l’entreprise",
+                "éviter tout écrit lors de la création de l’entreprise",
+                "réunir au moins cinq associés autour d’un projet commun"
               ],
               "answer": 0,
               "explain": "L’EURL est une société à associé unique : la personne morale distincte protège le patrimoine."
@@ -765,9 +765,9 @@
               "q": "Dénigrer un concurrent, l’imiter ou le parasiter constitue…",
               "choices": [
                 "une concurrence déloyale (action en responsabilité civile)",
-                "un exercice normal de la concurrence",
-                "une entente licite",
-                "une clause du contrat"
+                "un exercice normal de la concurrence entre entreprises",
+                "une entente licite entre concurrents sur les prix",
+                "une clause habituelle du contrat de distribution"
               ],
               "answer": 0,
               "explain": "La concurrence déloyale se prouve comme la responsabilité civile : fait générateur + préjudice + lien de causalité."

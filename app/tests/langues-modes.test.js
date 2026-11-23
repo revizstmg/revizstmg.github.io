@@ -70,8 +70,8 @@ describe('modes de langues : logique', () => {
 })
 
 describe('scénarios des modes de langues', () => {
-  it('quatre langues ont des scénarios, pas l’arabe (à faire relire par un natif)', () => {
-    expect(langues.sort()).toEqual(['de', 'en', 'es', 'it'])
+  it('cinq langues ont des scénarios ; l’arabe et le reste sont à faire relire par un natif', () => {
+    expect(langues.sort()).toEqual(['ar', 'de', 'en', 'es', 'it'])
   })
   for (const l of langues) {
     const d = JSON.parse(readFileSync(new URL(`${l}.json`, dossier), 'utf8'))

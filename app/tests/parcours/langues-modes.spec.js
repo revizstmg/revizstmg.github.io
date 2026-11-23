@@ -80,9 +80,9 @@ test('mise, survie et entretien : on joue, le résultat tombe, l’arabe garde l
     await page.getByRole('button', { name: /Suivant|Voir mon résultat/ }).click()
   }
   await expect(page.getByText(/^\d+ sur 18$/)).toBeVisible()
-  // L'arabe : les modes des scénarios sont marqués indisponibles, ceux du manuel marchent.
+  // L'arabe a désormais ses scénarios (à faire relire par un arabophone) : tous les modes sont ouverts.
   await page.getByRole('button', { name: /Arabe/ }).click()
-  await expect(page.getByRole('button', { name: /Entretien vexant/ })).toBeDisabled()
+  await expect(page.getByRole('button', { name: /Entretien vexant/ })).toBeEnabled()
   await page.getByRole('button', { name: /J’ai 3 minutes/ }).click()
   await page.getByRole('button', { name: /3 minutes · 8 questions/ }).click()
   await expect(page.getByText('Question 1 sur 8')).toBeVisible()

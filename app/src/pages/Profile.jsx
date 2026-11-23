@@ -19,6 +19,7 @@ import { ensurePermission, notify, notifSupported } from '../notify.js'
 import { parentCode, PARENT_READY, renouvelerCodeParent } from '../parent.js'
 import { daysUntil, todayKey } from '../data/srs.js'
 import { estEnEssai, creerMonCompte } from '../components/CompteRequis.jsx'
+import { useNiveauAcces } from '../components/Reserve.jsx'
 
 // Droit à la portabilité (RGPD) : tout ce que l'app garde sur cet appareil pour
 // l'élève, dans un fichier JSON lisible, sans passer par un e-mail.
@@ -52,6 +53,7 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
   const [codeCopied, setCodeCopied] = useState(false)
   const [codeMsg, setCodeMsg] = useState('')
   const [, setCodeVersion] = useState(0)
+  const niveauAcces = useNiveauAcces()
   if (!state.track) return <Navigate to="/" replace />
 
   // Nouveau code parent : l'ancien ne donne plus rien (code partagé par erreur…).
@@ -74,6 +76,8 @@ export default function Profile({settingsOnly=false,settingsSection=null}) {
   const deleteAccount = async () => {
     if (busy) return
     if (!confirm(state.account?.id ? t('deleteAccountConfirm') : tr('Effacer toutes les données de cet appareil ?'))) return
+    // Un abonnement payant est résilié en même temps que le compte : une seconde confirmation, pour ne pas le perdre sans l'avoir voulu.
+    if (state.account?.id && niveauAcces !== 'gratuit' && !confirm(tr('Ton abonnement payant sera résilié tout de suite. Tu confirmes une dernière fois ?'))) return
     setBusy(true)
     let deletionRequested = false
     // La base efface tout ce que l'app a publié ou envoyé pour cet élève

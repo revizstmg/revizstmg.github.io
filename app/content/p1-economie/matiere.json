@@ -547,9 +547,9 @@
               "q": "La valeur ajoutée se calcule…",
               "choices": [
                 "production − consommations intermédiaires",
-                "production + impôts",
-                "salaires + profit",
-                "CA − TVA"
+                "production + salaires versés dans l’année",
+                "chiffre d’affaires + impôts payés à l’État",
+                "production × prix de vente moyen"
               ],
               "answer": 0,
               "explain": "VA = valeur de la production − consommations intermédiaires."
@@ -569,9 +569,9 @@
               "q": "Le PIB est…",
               "choices": [
                 "la somme des valeurs ajoutées, augmentée des impôts et diminuée des subventions sur les produits",
-                "le total des salaires",
-                "le montant des impôts",
-                "le chiffre d’affaires mondial"
+                "le total des salaires versés aux salariés, auquel on ajoute les profits des entreprises et les impôts",
+                "la somme des importations et des exportations de biens et de services de l’année",
+                "le montant total des impôts perçus par l’État, augmenté des subventions versées aux entreprises"
               ],
               "answer": 0,
               "explain": "Le PIB inclut les valeurs ajoutées marchandes et non marchandes ; au prix du marché, on ajoute les impôts sur les produits et on retranche les subventions sur les produits."
@@ -580,9 +580,9 @@
               "q": "Une limite du PIB est qu’il ne mesure pas…",
               "choices": [
                 "le bien-être ni les inégalités",
-                "la production",
-                "la croissance",
-                "les échanges"
+                "la production des entreprises du pays",
+                "la croissance économique d’une année",
+                "les échanges de biens avec l’étranger"
               ],
               "answer": 0,
               "explain": "Il ignore bien-être, inégalités, environnement, travail non rémunéré."
@@ -841,9 +841,9 @@
               "q": "La redistribution consiste à…",
               "choices": [
                 "prélever des prélèvements obligatoires et verser des revenus de transfert",
-                "produire des biens",
-                "fixer les prix",
-                "créer de la monnaie"
+                "produire des biens et des services marchands pour les vendre sur les marchés",
+                "fixer les prix de vente de tous les biens et services de l’économie",
+                "créer de la monnaie par l’intermédiaire des banques commerciales et de la banque centrale"
               ],
               "answer": 0,
               "explain": "Elle corrige la répartition primaire pour réduire les inégalités."
@@ -852,9 +852,9 @@
               "q": "La formule du revenu disponible est…",
               "choices": [
                 "revenus primaires − prélèvements obligatoires + revenus de transfert",
-                "revenus primaires + prélèvements obligatoires",
-                "salaires − TVA",
-                "consommation + épargne − impôts"
+                "revenus primaires + prélèvements obligatoires versés à l’État",
+                "salaires − TVA payée sur les achats de l’année",
+                "consommation + épargne − impôts de l’année"
               ],
               "answer": 0,
               "explain": "Revenu disponible = revenus primaires − prélèvements obligatoires (impôts, cotisations) + revenus de transfert (prestations)."
@@ -1175,9 +1175,9 @@
               "q": "Emprunter auprès d’une banque est un financement…",
               "choices": [
                 "indirect (intermédié)",
-                "direct",
-                "interne",
-                "gratuit"
+                "direct, sans aucune intermédiation bancaire",
+                "interne, car l’argent vient de l’entreprise",
+                "gratuit, car la banque ne facture aucun intérêt"
               ],
               "answer": 0,
               "explain": "La banque est l’intermédiaire ; le marché financier = direct."
@@ -1186,9 +1186,9 @@
               "q": "Une action est…",
               "choices": [
                 "un titre de propriété d’une entreprise",
-                "un titre de dette",
-                "un crédit bancaire",
-                "un impôt"
+                "un titre de dette émis par une entreprise",
+                "un crédit bancaire accordé à une entreprise",
+                "un impôt versé par les actionnaires"
               ],
               "answer": 0,
               "explain": "Action = part de propriété ; obligation = titre de dette."
@@ -1525,9 +1525,9 @@
               "q": "Le prix d’équilibre est celui pour lequel…",
               "choices": [
                 "la quantité offerte = la quantité demandée",
-                "l’offre est nulle",
-                "la demande est infinie",
-                "le vendeur perd de l’argent"
+                "l’offre est nulle quelle que soit la demande",
+                "la demande est infinie pour ce bien",
+                "le vendeur perd de l’argent sur chaque vente"
               ],
               "answer": 0,
               "explain": "À l’équilibre, offre et demande s’égalisent."
@@ -1547,9 +1547,9 @@
               "q": "L’élasticité-prix de la demande mesure…",
               "choices": [
                 "la sensibilité de la demande au prix",
-                "le coût d’une unité",
-                "le nombre de vendeurs",
-                "la marge"
+                "le coût de fabrication d’une unité supplémentaire",
+                "le nombre de vendeurs présents sur le marché",
+                "la marge dégagée par le vendeur"
               ],
               "answer": 0,
               "explain": "Forte sensibilité = demande élastique ; faible = peu élastique."

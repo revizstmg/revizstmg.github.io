@@ -547,9 +547,9 @@
               "q": "Le texte proclamant liberté et égalité en 1789 est…",
               "choices": [
                 "la Déclaration des droits de l’homme et du citoyen",
-                "le Code civil",
-                "la Constitution de 1958",
-                "le traité de Rome"
+                "le Code civil, rédigé sous Napoléon Bonaparte",
+                "la Constitution de 1958 de la Ve République",
+                "le traité de Rome signé par six pays européens"
               ],
               "answer": 0,
               "explain": "La DDHC de 1789."
@@ -1423,9 +1423,9 @@
               "q": "La métropolisation désigne…",
               "choices": [
                 "la concentration des populations et activités dans les grandes villes",
-                "l’exode vers les campagnes",
-                "la disparition des villes",
-                "la fin de la mondialisation"
+                "l’exode des citadins vers les campagnes, avec le départ des habitants des grandes villes",
+                "la disparition progressive des villes françaises au profit des zones rurales",
+                "la fin de la mondialisation et un repli des grandes villes sur elles-mêmes"
               ],
               "answer": 0,
               "explain": "Concentration des hommes, activités et fonctions de commandement."
@@ -1434,9 +1434,9 @@
               "q": "On dit ce processus « différencié » car…",
               "choices": [
                 "il ne touche pas tous les territoires de la même façon",
-                "il est identique partout",
-                "il concerne seulement Paris",
-                "il ne crée aucune inégalité"
+                "il est identique partout sur le territoire national",
+                "il concerne seulement la région parisienne",
+                "il ne crée aucune inégalité entre les territoires"
               ],
               "answer": 0,
               "explain": "Certaines métropoles dominent, d’autres espaces sont en marge."
@@ -1549,9 +1549,9 @@
               "q": "Les espaces productifs se recomposent surtout sous l’effet de…",
               "choices": [
                 "la mondialisation et du numérique",
-                "la météo",
-                "la monarchie",
-                "la démographie seule"
+                "la météo et les variations du climat",
+                "la monarchie et le retour des rois",
+                "la démographie seule, sans autre cause"
               ],
               "answer": 0,
               "explain": "Mondialisation et numérique réorganisent la production."

@@ -1,4 +1,5 @@
 import {test,expect} from '@playwright/test'
+import {readFileSync} from 'node:fs'
 import AxeBuilder from '@axe-core/playwright'
 import {preparer,etatEleve,etat,attendreAccueil} from './eleve.js'
 const route='./#/missions/gestion-finance/gf-t1/0'
@@ -30,7 +31,12 @@ test('une série conserve son résultat, sans bonus de mission ni déblocage arb
  const notions=[['TVA à décaisser','Collectée − déductible = ce qu’on reverse'],['TVA déductible','Sur les achats → créance sur l’État'],['TVA collectée','Sur les ventes → dette envers l’État'],['HT / TTC','Hors taxes / toutes taxes comprises (HT + TVA)']]
  for(let i=0;i<total;i++){
   const question=await exercice.getByRole('heading',{level:3}).innerText()
-  const notion=notions.find(([term,definition])=>question.includes(term)||question.includes(definition))
+  // Les notions du tableau du chapitre, puis celles que le glossaire de la matière ajoute (mots en gras du chapitre).
+  const duGlossaire=()=>{const terme=/«\s*([^»]+?)\s*»/.exec(question)?.[1];if(!terme)return null
+   const glossaire=Object.values(JSON.parse(readFileSync(new URL('../../content/gestion-finance/termes.json',import.meta.url),'utf8')))[0]
+   const norme=x=>x.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[’‘]/g,"'").toLowerCase().trim()
+   const cle=Object.keys(glossaire).find(k=>k.split('|').some(x=>norme(x)===norme(terme)));return cle?[terme,glossaire[cle].slice(0,30)]:null}
+  const notion=notions.find(([term,definition])=>question.includes(term)||question.includes(definition))||duGlossaire()
   expect(notion,question).toBeTruthy()
   const choices=page.getByRole('button',{name:/^[A-D] /,disabled:false})
   const answer=(await choices.allTextContents()).findIndex(text=>text.includes(notion[1])||text.includes(notion[0]))

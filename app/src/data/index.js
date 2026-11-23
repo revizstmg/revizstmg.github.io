@@ -925,9 +925,35 @@ export function choicesForGap(chapter, question) {
 // beaucoup d'exercices ET du contenu varié (plusieurs formes de questions, cas
 // concrets). Chaque exercice a un id stable et distinct (pour la progression) ;
 // la banque complète permet un nouveau tirage à chaque partie, dans les limites du cours.
+// Notions d'un chapitre tirées du glossaire : ses mots en gras ayant une définition (jamais deux fois la même notion).
+const NOTIONS_VISEES = 12
+function completerParGlossaire(defPairs, sec, theme) {
+  if (defPairs.length >= NOTIONS_VISEES) return defPairs
+  const glossaire = glossaireDe(theme?.subjectId)
+  if (!glossaire?.size) return defPairs
+  const out = [...defPairs]
+  const vues = new Set(out.map((p) => _norm(p.term)))
+  const defsVues = new Set(out.map((p) => _norm(p.def)))
+  for (const t of textesDe(sec)) {
+    for (const m of t.matchAll(/\*\*([^*]+)\*\*/g)) {
+      if (out.length >= NOTIONS_VISEES) return out
+      const terme = m[1].trim().replace(/[.:;,]+$/, '')
+      if (terme.length < 3 || terme.length > 40 || /\d/.test(terme) || estEtapeMethode(terme)) continue
+      const def = trouverDefinition(glossaire, terme)
+      if (!def || def.length > 220 || vues.has(_norm(terme)) || defsVues.has(_norm(def))) continue
+      vues.add(_norm(terme)); defsVues.add(_norm(def))
+      out.push({ term: terme, def })
+    }
+  }
+  return out
+}
+
 function sectionExercises(sec, theme, idx) {
   const base = `${theme.id}::${idx}`
-  const { datePairs, defPairs, widePairs, compareTables } = sectionPairs(sec)
+  const { datePairs, defPairs: defsDuCours, widePairs, compareTables } = sectionPairs(sec)
+  // Un chapitre dont le tableau de notions est maigre est complété par ses mots en gras qui ont une définition
+  // au glossaire de la matière : plus de notions, donc plus d'exercices (QCM, vrai/faux, association, saisie…).
+  const defPairs = completerParGlossaire(defsDuCours, sec, theme)
   const richDefs = sectionDefPool(defPairs)
   const out = []
   const uniqEvents = [...new Set(datePairs.map((p) => p.e))]

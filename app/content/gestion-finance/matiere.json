@@ -80,9 +80,9 @@
               "q": "Que produit le système d’information comptable (SIC) ?",
               "choices": [
                 "Une image fidèle du patrimoine, de la situation financière et du résultat",
-                "Uniquement la fiche de paie des salariés",
-                "Le plan marketing de l’entreprise",
-                "La liste des clients mécontents"
+                "Uniquement la fiche de paie des salariés et leurs congés payés de l’année",
+                "Le plan marketing de l’entreprise et le budget de communication",
+                "La liste des clients mécontents et des réclamations reçues dans l’année"
               ],
               "answer": 0,
               "explain": "Le SIC produit une image fidèle du patrimoine, de la situation financière et du résultat (art. 121-1 du PCG)."
@@ -91,9 +91,9 @@
               "q": "Que signifie un PGI (ou ERP) ?",
               "choices": [
                 "Un logiciel unique reposant sur une base de données unique",
-                "Un impôt sur les sociétés",
-                "Une norme européenne de TVA",
-                "Un type de facture d’avoir"
+                "Un impôt sur les sociétés payé chaque année au Trésor public",
+                "Une norme européenne de TVA applicable aux échanges entre pays",
+                "Un type de facture d’avoir émise après un retour de marchandises"
               ],
               "answer": 0,
               "explain": "Le PGI/ERP est un logiciel unique à base de données unique, ce qui fiabilise l’information."
@@ -463,9 +463,9 @@
               "q": "Comment calcule-t-on la valeur ajoutée (VA) ?",
               "choices": [
                 "Marge commerciale + production − consommations en provenance des tiers",
-                "Chiffre d’affaires − impôt sur les bénéfices",
-                "EBE + dotations aux amortissements",
-                "Résultat net + dividendes"
+                "Chiffre d’affaires − impôt sur les bénéfices et charges de personnel",
+                "EBE + dotations aux amortissements et provisions de l’exercice",
+                "Résultat net + dividendes versés aux associés de l’entreprise"
               ],
               "answer": 0,
               "explain": "VA = marge commerciale + production − consommations en provenance des tiers."
@@ -518,9 +518,9 @@
               "q": "Que représente la CAF ?",
               "choices": [
                 "La ressource dégagée par l’activité (pour investir, rembourser, distribuer)",
-                "Le montant de la TVA à reverser",
-                "Le total des dettes fournisseurs",
-                "Le chiffre d’affaires hors taxes"
+                "Le montant de la TVA à reverser à l’administration fiscale chaque mois",
+                "Le total des dettes fournisseurs à régler dans les trente jours",
+                "Le chiffre d’affaires hors taxes réalisé sur l’ensemble de l’exercice"
               ],
               "answer": 0,
               "explain": "La CAF est la ressource interne dégagée par l’activité."
@@ -762,9 +762,9 @@
               "q": "Lequel est un financement INTERNE ?",
               "choices": [
                 "L’autofinancement (CAF moins dividendes)",
-                "L’emprunt bancaire",
-                "L’augmentation de capital",
-                "Le crowdfunding"
+                "L’emprunt bancaire contracté auprès d’un établissement de crédit",
+                "L’augmentation de capital par de nouveaux associés",
+                "Le crowdfunding auprès de nombreux petits investisseurs"
               ],
               "answer": 0,
               "explain": "L’autofinancement (CAF moins dividendes) et les apports en compte courant sont internes ; emprunt, augmentation de capital et crowdfunding sont externes."
@@ -806,9 +806,9 @@
               "q": "Le « point mort » désigne…",
               "choices": [
                 "La date à laquelle le seuil de rentabilité est atteint",
-                "Le montant des charges fixes",
-                "La perte maximale supportable",
-                "Le coût de la dernière unité produite"
+                "Le montant des charges fixes supportées sur la période",
+                "La perte maximale que l’entreprise peut supporter",
+                "Le coût de la dernière unité produite par l’entreprise"
               ],
               "answer": 0,
               "explain": "Le point mort est la date d’atteinte du seuil de rentabilité."

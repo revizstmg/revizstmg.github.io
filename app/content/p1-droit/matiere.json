@@ -176,9 +176,9 @@
               "q": "Ce qui distingue une règle de droit d’une règle morale, c’est…",
               "choices": [
                 "son caractère coercitif (la sanction de l’État)",
-                "sa longueur",
-                "son ancienneté",
-                "sa langue"
+                "sa longueur et le nombre d’articles qu’elle contient",
+                "son ancienneté dans la tradition de la société",
+                "la langue officielle dans laquelle elle est rédigée"
               ],
               "answer": 0,
               "explain": "La règle morale relève de la conscience : elle n’est pas assortie de la contrainte étatique."
@@ -220,9 +220,9 @@
               "q": "La QPC permet à un justiciable de…",
               "choices": [
                 "contester une loi qu’il juge contraire à la Constitution",
-                "écrire une nouvelle loi",
-                "juger un crime",
-                "signer un contrat"
+                "écrire une nouvelle loi à la place du Parlement",
+                "juger un crime devant la cour d’assises",
+                "signer un contrat avec l’administration publique"
               ],
               "answer": 0,
               "explain": "La Question Prioritaire de Constitutionnalité conduit au Conseil constitutionnel."
@@ -549,9 +549,9 @@
               "q": "Une preuve parfaite se définit par le fait que…",
               "choices": [
                 "sa valeur est fixée par la loi et s’impose au juge",
-                "c’est n’importe quel écrit",
-                "c’est un simple témoignage",
-                "le juge peut l’ignorer"
+                "c’est n’importe quel écrit produit par une partie",
+                "c’est un simple témoignage recueilli par le juge",
+                "le juge peut l’ignorer s’il n’est pas convaincu"
               ],
               "answer": 0,
               "explain": "Acte authentique, acte sous signature privée, aveu, serment : le juge doit les admettre."
@@ -560,9 +560,9 @@
               "q": "Un témoignage ou un indice est une preuve…",
               "choices": [
                 "imparfaite (libre appréciation du juge)",
-                "parfaite",
-                "interdite",
-                "authentique"
+                "parfaite : sa valeur est fixée par la loi",
+                "interdite devant un tribunal civil",
+                "authentique, établie par un notaire"
               ],
               "answer": 0,
               "explain": "Les preuves imparfaites sont appréciées librement par le juge (intime conviction)."
@@ -582,9 +582,9 @@
               "q": "La Cour de cassation…",
               "choices": [
                 "vérifie la bonne application du droit (sans rejuger les faits)",
-                "rejuge entièrement l’affaire",
-                "écrit les lois",
-                "gère l’administration"
+                "rejuge entièrement l’affaire en réexaminant tous les faits",
+                "écrit les lois que le Parlement doit ensuite voter",
+                "gère l’administration et les services de l’État"
               ],
               "answer": 0,
               "explain": "Elle contrôle le droit ; l’appel, lui, rejuge les faits."
@@ -854,9 +854,9 @@
               "q": "La personnalité juridique est l’aptitude à…",
               "choices": [
                 "être titulaire de droits et d’obligations",
-                "voter une loi",
-                "juger un litige",
-                "produire des biens"
+                "voter une loi au Parlement chaque année",
+                "juger un litige entre deux justiciables",
+                "produire des biens et services marchands"
               ],
               "answer": 0,
               "explain": "Elle fait de l’être un sujet de droit."
@@ -898,9 +898,9 @@
               "q": "Depuis 2015, l’animal est reconnu comme…",
               "choices": [
                 "un être vivant doué de sensibilité",
-                "une personne morale",
-                "une personne physique",
-                "un majeur protégé"
+                "une personne morale dotée de droits propres",
+                "une personne physique comme un être humain",
+                "un majeur protégé par un juge des tutelles"
               ],
               "answer": 0,
               "explain": "Il reste néanmoins soumis pour l’essentiel au régime des biens."
@@ -920,9 +920,9 @@
               "q": "Le patrimoine comprend…",
               "choices": [
                 "les droits et obligations évaluables en argent (actif et passif)",
-                "seulement les revenus",
-                "les opinions",
-                "la nationalité"
+                "seulement les revenus que la personne perçoit chaque mois",
+                "les opinions et les convictions de la personne",
+                "la nationalité et l’ensemble des droits civiques"
               ],
               "answer": 0,
               "explain": "Actif (biens) + passif (dettes), évaluables en argent."
@@ -1169,9 +1169,9 @@
               "q": "Une marque protège…",
               "choices": [
                 "un signe distinctif, avec un monopole d’exploitation",
-                "une invention technique uniquement",
-                "une œuvre littéraire",
-                "un salaire"
+                "une invention technique uniquement, pendant vingt ans",
+                "une œuvre littéraire pendant la vie de son auteur",
+                "un salaire versé en contrepartie du travail fourni"
               ],
               "answer": 0,
               "explain": "La marque (propriété industrielle) donne un monopole d’exploitation ; le brevet protège l’invention."

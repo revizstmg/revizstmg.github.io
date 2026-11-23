@@ -57,9 +57,9 @@
         "q": "Un témoignage est une preuve…",
         "choices": [
           "imparfaite (libre appréciation du juge)",
-          "parfaite",
-          "qui s’impose au juge",
-          "authentique"
+          "parfaite : elle s’impose toujours au juge",
+          "qui s’impose au juge dans tous les cas",
+          "authentique, c’est-à-dire établie par un officier public"
         ],
         "answer": 0,
         "explain": "Les preuves imparfaites sont librement appréciées."
@@ -85,9 +85,9 @@
         "q": "Grâce à sa reconnaissance de dette signée, Sophie dispose…",
         "choices": [
           "d’une preuve parfaite (acte sous signature privée)",
-          "d’un simple témoignage",
-          "d’aucune preuve",
-          "d’un aveu de sa part"
+          "d’un simple témoignage que le juge apprécie librement",
+          "d’aucune preuve, car rien n’a été écrit devant notaire",
+          "d’un aveu écrit de la part de son débiteur"
         ],
         "answer": 0,
         "explain": "Un écrit signé par le débiteur est un acte sous signature privée : preuve parfaite."
@@ -161,9 +161,9 @@
         "q": "Ce qui distingue une règle de droit d’une règle morale, c’est…",
         "choices": [
           "son caractère coercitif (la sanction de l’État)",
-          "sa longueur",
-          "son ancienneté",
-          "sa langue"
+          "sa longueur et le nombre d’articles qu’elle contient",
+          "son ancienneté dans la tradition de la société",
+          "la langue officielle dans laquelle elle est rédigée"
         ],
         "answer": 0,
         "explain": "La morale relève de la conscience : elle n’est pas assortie de la contrainte étatique."
@@ -185,9 +185,9 @@
         "q": "La QPC permet à un justiciable de…",
         "choices": [
           "contester une loi qu’il juge contraire à la Constitution",
-          "écrire une nouvelle loi",
-          "juger un crime",
-          "signer un contrat"
+          "écrire une nouvelle loi à la place du Parlement",
+          "juger un crime devant la cour d’assises",
+          "signer un contrat avec l’administration publique"
         ],
         "answer": 0,
         "explain": "Question Prioritaire de Constitutionnalité (depuis 2010)."
@@ -200,9 +200,9 @@
         "q": "L’arrêté du maire est illégal car…",
         "choices": [
           "une norme inférieure doit respecter la loi et la Constitution",
-          "un maire ne peut jamais prendre d’arrêté",
-          "la manifestation est interdite partout",
-          "l’arrêté est trop court"
+          "un maire ne peut jamais prendre d’arrêté en matière de sécurité",
+          "la manifestation est interdite partout en France par la loi",
+          "l’arrêté est trop court pour avoir une valeur juridique"
         ],
         "answer": 0,
         "explain": "L’arrêté (règlement) ne peut contredire la Constitution, norme supérieure."
@@ -267,9 +267,9 @@
         "q": "La personnalité juridique est l’aptitude à…",
         "choices": [
           "être titulaire de droits et d’obligations",
-          "voter une loi",
-          "juger un litige",
-          "produire des biens"
+          "voter une loi au Parlement chaque année",
+          "juger un litige entre deux justiciables",
+          "produire des biens et services marchands"
         ],
         "answer": 0,
         "explain": "Elle fait de l’être un sujet de droit."
@@ -318,9 +318,9 @@
         "q": "L’achat du scooter par Tom peut être remis en cause car…",
         "choices": [
           "mineur, il n’a pas la pleine capacité d’exercice pour un tel acte",
-          "un mineur n’a aucun droit",
-          "le scooter est trop cher pour exister",
-          "les parents sont incapables"
+          "un mineur n’a aucun droit et ne peut jamais rien acheter seul",
+          "le scooter est trop cher pour être vendu à un adolescent",
+          "ses parents sont incapables de gérer l’argent de la famille"
         ],
         "answer": 0,
         "explain": "Le mineur doit être représenté pour les actes importants."
@@ -433,9 +433,9 @@
         "q": "Un voisin qui cause un bruit excessif et permanent…",
         "choices": [
           "dépasse les limites du droit de propriété (trouble anormal)",
-          "exerce normalement sa propriété",
-          "commet une contrefaçon",
-          "exerce son fructus"
+          "exerce normalement sa propriété comme tout propriétaire",
+          "commet une contrefaçon au détriment de son voisin",
+          "exerce son fructus, c’est-à-dire le droit de jouir du bien"
         ],
         "answer": 0,
         "explain": "Le trouble anormal du voisinage est une limite au droit de propriété."

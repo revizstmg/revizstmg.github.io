@@ -171,9 +171,9 @@
               "q": "Une organisation se définit comme…",
               "choices": [
                 "un groupe d’individus pilotant des ressources vers un but commun, voué à durer",
-                "un logo, un slogan et une couleur",
-                "un impôt, une TVA et une marge",
-                "un juge, une loi et une preuve"
+                "un logo, un slogan et une couleur choisis pour marquer l’entreprise auprès de ses clients",
+                "un impôt, une TVA et une marge qui définissent le résultat de l’entreprise chaque année",
+                "un juge, une loi et une preuve qui permettent de régler un litige devant un tribunal"
               ],
               "answer": 0,
               "explain": "Des individus coordonnent des ressources, dans une structure dotée d’un statut juridique, vers un but commun et dans la durée."
@@ -204,9 +204,9 @@
               "q": "La finalité d’une organisation publique est…",
               "choices": [
                 "l’intérêt général (service public)",
-                "le profit",
-                "la spéculation",
-                "la publicité"
+                "le profit réalisé par le service",
+                "la spéculation sur les marchés",
+                "la publicité auprès des usagers"
               ],
               "answer": 0,
               "explain": "Les organisations publiques rendent un service public, financé par l’impôt."
@@ -215,9 +215,9 @@
               "q": "Une association relève des organisations…",
               "choices": [
                 "de la société civile (non lucratives)",
-                "privées lucratives",
-                "publiques",
-                "multinationales"
+                "privées lucratives vendant des produits",
+                "publiques gérées par l’État",
+                "multinationales cotées en Bourse"
               ],
               "answer": 0,
               "explain": "Associations, ONG, syndicats, mutuelles = société civile, non lucratives."
@@ -521,9 +521,9 @@
               "q": "La matrice SWOT réunit…",
               "choices": [
                 "forces/faiblesses (interne) et opportunités/menaces (externe)",
-                "seulement les forces",
-                "les seules données comptables",
-                "les concurrents uniquement"
+                "seulement les forces internes de l’entreprise et ses atouts",
+                "les seules données comptables du dernier exercice",
+                "les concurrents directs uniquement, classés par taille"
               ],
               "answer": 0,
               "explain": "SWOT = synthèse du diagnostic interne et externe."
@@ -740,9 +740,9 @@
               "q": "Un avantage concurrentiel est un atout qui permet…",
               "choices": [
                 "de se distinguer durablement des concurrents",
-                "de payer moins d’impôts",
-                "d’éviter tout contrat",
-                "de fixer la loi"
+                "de payer moins d’impôts que ses concurrents",
+                "d’éviter tout contrat avec les clients",
+                "de fixer seul la loi sur le marché"
               ],
               "answer": 0,
               "explain": "Il rend l’organisation préférable aux yeux des clients, dans la durée."
@@ -795,9 +795,9 @@
               "q": "Un DAS (Domaine d’Activité Stratégique) est…",
               "choices": [
                 "un sous-ensemble homogène d’activités avec une stratégie propre",
-                "un impôt sur les sociétés",
-                "un service public",
-                "un type de contrat"
+                "un impôt sur les sociétés payé chaque année à l’État",
+                "un service public géré par une collectivité locale",
+                "un type de contrat conclu avec un fournisseur"
               ],
               "answer": 0,
               "explain": "On peut définir une stratégie spécifique pour chaque DAS."

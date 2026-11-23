@@ -1163,9 +1163,9 @@
               "q": "La **perception** d’une situation est…",
               "choices": [
                 "subjective et sélective (propre à chacun)",
-                "toujours identique pour tous",
-                "une donnée comptable",
-                "un contrat"
+                "toujours identique pour tous les acteurs",
+                "une donnée comptable mesurable par l’entreprise",
+                "un contrat signé entre deux personnes"
               ],
               "answer": 0,
               "explain": "La perception sélectionne et interprète : deux personnes perçoivent différemment un même événement."
@@ -1196,9 +1196,9 @@
               "q": "Dans le schéma de la communication, la réponse du récepteur s’appelle…",
               "choices": [
                 "le feedback (rétroaction)",
-                "le canal",
-                "le code",
-                "le bruit"
+                "le canal choisi pour transmettre le message",
+                "le code utilisé par l’émetteur",
+                "le bruit qui perturbe la communication"
               ],
               "answer": 0,
               "explain": "Le feedback est la rétroaction : le récepteur devient à son tour émetteur."
@@ -1240,9 +1240,9 @@
               "q": "Le **travail réel** désigne…",
               "choices": [
                 "ce que le salarié fait vraiment, en s’adaptant",
-                "la consigne officielle donnée",
-                "le salaire versé",
-                "l’organigramme"
+                "la consigne officielle donnée par l’employeur",
+                "le salaire versé chaque mois au salarié",
+                "l’organigramme de l’entreprise et ses services"
               ],
               "answer": 0,
               "explain": "Travail prescrit = ce qui est demandé ; travail réel = ce qui est réellement fait."
@@ -1251,9 +1251,9 @@
               "q": "La **qualification** se distingue de la compétence car elle est…",
               "choices": [
                 "la reconnaissance officielle (diplôme, classification)",
-                "le savoir-faire réel",
-                "une émotion",
-                "un canal de communication"
+                "le savoir-faire réel mis en œuvre sur le poste",
+                "une émotion ressentie par le salarié au travail",
+                "un canal de communication interne à l’entreprise"
               ],
               "answer": 0,
               "explain": "On peut être compétent sans être qualifié : la qualification reconnaît officiellement le niveau."
@@ -1262,9 +1262,9 @@
               "q": "La **rétribution** est plus large que la rémunération car elle inclut…",
               "choices": [
                 "la reconnaissance et les conditions de travail",
-                "seulement le salaire de base",
-                "uniquement les primes",
-                "les cotisations sociales"
+                "seulement le salaire de base prévu au contrat",
+                "uniquement les primes versées en fin d’année",
+                "les cotisations sociales payées à l’État"
               ],
               "answer": 0,
               "explain": "Rétribution = rémunération (argent) + éléments non financiers (reconnaissance, carrière, ambiance)."
@@ -1284,9 +1284,9 @@
               "q": "Selon **Herzberg**, augmenter le salaire…",
               "choices": [
                 "évite l’insatisfaction mais ne motive pas durablement",
-                "suffit toujours à motiver",
-                "démotive systématiquement",
-                "n’a aucun effet"
+                "suffit toujours à motiver durablement les salariés",
+                "démotive systématiquement les équipes concernées",
+                "n’a aucun effet sur la satisfaction des salariés"
               ],
               "answer": 0,
               "explain": "Le salaire est un facteur d’hygiène ; la vraie motivation vient de l’intérêt du travail et de la reconnaissance."
@@ -1317,9 +1317,9 @@
               "q": "Le mode de résolution de conflit le plus **constructif** est…",
               "choices": [
                 "la coopération (solution qui satisfait tout le monde)",
-                "l’évitement",
-                "l’imposition par la force",
-                "le silence"
+                "l’évitement, qui consiste à fuir le désaccord",
+                "l’imposition par la force de la décision d’un seul",
+                "le silence, qui laisse le conflit s’installer"
               ],
               "answer": 0,
               "explain": "La coopération cherche ensemble une solution gagnant-gagnant."
@@ -1328,9 +1328,9 @@
               "q": "Selon **Lewin**, le style de leadership le plus favorable à la motivation est…",
               "choices": [
                 "démocratique (participatif)",
-                "autoritaire",
-                "laisser-faire",
-                "aucun"
+                "autoritaire, avec des ordres venant d’en haut",
+                "laisser-faire, sans aucune consigne du chef",
+                "aucun style n’est plus favorable qu’un autre"
               ],
               "answer": 0,
               "explain": "Le style démocratique associe le groupe aux décisions : meilleur pour la cohésion et la motivation."

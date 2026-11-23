@@ -1954,7 +1954,7 @@
       ],
       "answer": "Fahrräder",
       "explanation": "Le texte dit stellt Fahrräder her : elle fabrique des vélos.",
-      "context": ""
+      "context": "Die Firma NordRad hat ihren Sitz in Hamburg. Sie stellt Fahrräder her und verkauft sie online. Sie beschäftigt 50 Personen. 2025 beträgt ihr Umsatz vier Millionen Euro. Der Gewinn beträgt zweihunderttausend Euro."
     },
     {
       "id": "de-ex-086",
@@ -1982,7 +1982,7 @@
       "choices": [],
       "answer": "50 Personen.",
       "explanation": "Le document donne beschäftigt 50 Personen ; ce n’est pas un montant financier.",
-      "context": "",
+      "context": "Die Firma NordRad hat ihren Sitz in Hamburg. Sie stellt Fahrräder her und verkauft sie online. Sie beschäftigt 50 Personen. 2025 beträgt ihr Umsatz vier Millionen Euro. Der Gewinn beträgt zweihunderttausend Euro.",
       "alternatives": [
         "50",
         "50 Personen",
@@ -2089,7 +2089,7 @@
       ],
       "answer": "Elle répare d’anciens ordinateurs.",
       "explanation": "Repariert alte Computer décrit l’action réelle ; la consommation n’est pas encore mesurée.",
-      "context": ""
+      "context": "Die Schule repariert alte Computer. Wie viel Strom sie dadurch spart, wurde noch nicht gemessen."
     },
     {
       "id": "de-ex-095",
@@ -2154,7 +2154,7 @@
       "unit": "Lire un document et préparer un oral",
       "origin": "revizstmg/allemand",
       "type": "court",
-      "prompt": "Écris une phrase annonçant que le document traite du marketing.",
+      "prompt": "Écris une phrase annonçant que ton document traite du marketing.",
       "choices": [],
       "answer": "Das Dokument handelt von Marketing.",
       "explanation": "Handeln von sert à annoncer le thème ; ici Marketing est un nom de domaine sans article.",

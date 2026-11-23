@@ -163,9 +163,9 @@
               "q": "La distinction « art / artisanat » oppose…",
               "choices": [
                 "une œuvre singulière / un objet utile reproduit",
-                "le beau / le laid",
-                "le vrai / le faux",
-                "la cause / la fin"
+                "le beau / le laid, selon le goût de chacun",
+                "le vrai / le faux, selon la démonstration",
+                "la cause / la fin, selon l’intention de l’artiste"
               ],
               "answer": 0,
               "explain": "L’artisan reproduit de l’utile ; l’artiste crée du singulier."
@@ -185,9 +185,9 @@
               "q": "Pour Kant, « c’est beau » signifie…",
               "choices": [
                 "un jugement subjectif qui prétend valoir pour tous",
-                "exactement « ça me plaît »",
-                "une vérité démontrable",
-                "une simple mode"
+                "exactement « ça me plaît », comme une préférence personnelle",
+                "une vérité démontrable par la science",
+                "une simple mode que suit la société du moment"
               ],
               "answer": 0,
               "explain": "Universalité sans concept du jugement de goût."
@@ -383,9 +383,9 @@
               "q": "« Légal / légitime » oppose…",
               "choices": [
                 "conforme à la loi / conforme à la justice",
-                "le vrai / le faux",
-                "le beau / le laid",
-                "la cause / la fin"
+                "le vrai / le faux, selon la démonstration",
+                "le beau / le laid, selon le goût de chacun",
+                "la cause / la fin, selon l’intention de l’auteur"
               ],
               "answer": 0,
               "explain": "Une loi peut être légale sans être légitime."
@@ -405,9 +405,9 @@
               "q": "La désobéissance civile, c’est…",
               "choices": [
                 "enfreindre publiquement une loi jugée injuste",
-                "voler discrètement",
-                "ignorer toutes les règles",
-                "faire la loi soi-même"
+                "voler discrètement pour protester sans se faire voir",
+                "ignorer toutes les règles de la vie sociale",
+                "faire la loi soi-même à la place de l’État"
               ],
               "answer": 0,
               "explain": "Un acte public au nom d’une justice supérieure."
@@ -614,9 +614,9 @@
               "q": "Spinoza explique que nous nous croyons libres parce que…",
               "choices": [
                 "nous ignorons les causes qui nous déterminent",
-                "nous sommes réellement sans cause",
-                "la liberté n’existe pas du tout",
-                "Dieu le veut"
+                "nous sommes réellement sans cause et libres de tout",
+                "la liberté n’existe pas du tout, même en apparence",
+                "Dieu le veut et nous donne la liberté"
               ],
               "answer": 0,
               "explain": "La pierre lancée se croirait libre de tomber."
@@ -636,9 +636,9 @@
               "q": "Pour Montesquieu, la liberté…",
               "choices": [
                 "consiste à faire ce que les lois permettent",
-                "est l’absence de toute loi",
-                "appartient au plus fort",
-                "est impossible"
+                "est l’absence de toute loi et de toute contrainte",
+                "appartient au plus fort dans la société",
+                "est impossible dès qu’il existe un État"
               ],
               "answer": 0,
               "explain": "Sans loi, c’est la liberté du plus fort qui écrase les autres."
@@ -845,9 +845,9 @@
               "q": "Dire « c’est naturel donc c’est bien » est…",
               "choices": [
                 "un sophisme (confondre fait et valeur)",
-                "une démonstration valable",
-                "une loi scientifique",
-                "un repère"
+                "une démonstration valable en raisonnement moral",
+                "une loi scientifique établie par l’expérience",
+                "un repère classique de la dissertation"
               ],
               "answer": 0,
               "explain": "C’est le sophisme naturaliste."
@@ -856,9 +856,9 @@
               "q": "Le principe responsabilité de Jonas concerne…",
               "choices": [
                 "les générations futures et l’environnement",
-                "les seuls contrats commerciaux",
-                "la logique pure",
-                "le beau"
+                "les seuls contrats commerciaux entre entreprises",
+                "la logique pure et les règles du raisonnement",
+                "le beau et le jugement de goût en art"
               ],
               "answer": 0,
               "explain": "Notre puissance technique crée des devoirs nouveaux."
@@ -1043,9 +1043,9 @@
               "q": "La distinction « croire / savoir » sépare…",
               "choices": [
                 "adhérer sans preuve / tenir pour vrai avec preuve",
-                "le beau / le laid",
-                "le légal / le légitime",
-                "la cause / la fin"
+                "le beau / le laid, selon le goût de chacun",
+                "le légal / le légitime, selon la loi du pays",
+                "la cause / la fin, selon l’intention de l’auteur"
               ],
               "answer": 0,
               "explain": "Croire = foi ; savoir = preuve."
@@ -1263,9 +1263,9 @@
               "q": "La technique se définit d’abord comme…",
               "choices": [
                 "des procédés efficaces pour transformer la nature",
-                "la recherche du beau",
-                "la recherche du vrai",
-                "une croyance"
+                "la recherche du beau à travers les œuvres d’art",
+                "la recherche du vrai par la démonstration",
+                "une croyance transmise par la tradition"
               ],
               "answer": 0,
               "explain": "Elle vise l’utile (≠ art, ≠ science)."
@@ -1516,9 +1516,9 @@
               "q": "Peut-on tout démontrer ?",
               "choices": [
                 "Non : toute démonstration part d’axiomes indémontrables",
-                "Oui, toujours",
-                "Seulement en histoire",
-                "Cela ne veut rien dire"
+                "Oui, toujours, avec assez de temps et de rigueur",
+                "Seulement en histoire et en sciences humaines",
+                "Cela ne veut rien dire pour un philosophe"
               ],
               "answer": 0,
               "explain": "Leibniz : vérités de raison / vérités de fait."
@@ -1864,9 +1864,9 @@
               "q": "Le cœur de l’introduction d’une dissertation, c’est…",
               "choices": [
                 "problématiser (dégager le paradoxe)",
-                "donner la conclusion",
-                "réciter le cours",
-                "citer dix auteurs"
+                "donner la conclusion dès le début",
+                "réciter le cours appris par cœur",
+                "citer dix auteurs différents sans lien"
               ],
               "answer": 0,
               "explain": "Après avoir défini les termes, on problématise."
@@ -1908,9 +1908,9 @@
               "q": "Le « dépassement » (3ᵉ partie) consiste à…",
               "choices": [
                 "résoudre la tension par une idée plus juste",
-                "répéter la thèse",
-                "abandonner le sujet",
-                "donner un avis sans argument"
+                "répéter la thèse de la première partie",
+                "abandonner le sujet par manque d’idées",
+                "donner un avis personnel sans argument"
               ],
               "answer": 0,
               "explain": "Il articule thèse et antithèse."
