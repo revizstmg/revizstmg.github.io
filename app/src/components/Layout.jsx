@@ -12,6 +12,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useStore, levelFromXp } from '../store.jsx'
 import { getSubject, getChapter, search } from '../data/index.js'
 import { subjectsForTrack } from '../data/tracks.js'
+import { estAdminProbable } from '../admin.js'
 import { ALL_TABS, resolveTabs } from '../navTabs.js'
 import { badgeById } from '../badges.js'
 import { Confetti, Icon } from './ui.jsx'
@@ -268,6 +269,11 @@ export default function Layout({ children }) {
                     <Link to="/parametres" onClick={() => setProfileOpen(false)} className="flex w-full items-center gap-2 px-3 py-2.5 text-start text-sm hover:bg-slate-100 dark:hover:bg-slate-800">
                       <span aria-hidden>⚙️</span> {t('meTab')}
                     </Link>
+                    {estAdminProbable() && (
+                      <Link to="/admin" onClick={() => setProfileOpen(false)} className="flex w-full items-center gap-2 px-3 py-2.5 text-start text-sm hover:bg-slate-100 dark:hover:bg-slate-800">
+                        <span aria-hidden>🛠️</span> {trSkip('Administration')}
+                      </Link>
+                    )}
                     <button onClick={() => { setProfileOpen(false); setCustOpen(true) }} className="flex w-full items-center gap-2 px-3 py-2.5 text-start text-sm hover:bg-slate-100 dark:hover:bg-slate-800">
                       <span aria-hidden>🎨</span> {t('customizeProfile')}
                     </button>

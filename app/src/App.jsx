@@ -12,6 +12,7 @@ import { Chargement, ContenuMatiere, ContenuFiliere } from './content/Contenu.js
 // Chaque page est un fichier compilé à part, chargé quand on l'ouvre.
 const ExampleStudy = lazy(() => import('./pages/ExampleStudy.jsx'))
 const Offers = lazy(() => import('./pages/Offers.jsx'))
+const Admin = lazy(() => import('./pages/Admin.jsx'))
 const Landing = lazy(() => import('./pages/Landing.jsx'))
 const Home = lazy(() => import('./pages/Home.jsx'))
 const Subject = lazy(() => import('./pages/Subject.jsx'))
@@ -111,6 +112,7 @@ export default function App() {
         <Route path="/revision" element={<Revise />} />
         <Route path="/revision/deck/:deckId" element={<FlashcardsPage />} />
         <Route path="/parent" element={<Parent />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/excellence-economique" element={<Excellence />} />
         <Route path="/bac-blanc" element={<ContenuFiliere><BacBlanc /></ContenuFiliere>} />
         <Route path="/programme" element={<Programme />} />
