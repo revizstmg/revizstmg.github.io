@@ -2091,3 +2091,8 @@ Prochaine action :
 - Profil : une seconde confirmation avant la suppression d'un compte avec abonnement payant. Boutique : message « Mes objets » tenant compte des gels.
 - Non traité : doublons entre `matiere.json` et `etudes-documents.json` (non gênants à l'usage), import de données, confirmation d'achat en boutique, kits imprimables (`rewardKit.js` non branché), relecture par un enseignant et par des natifs.
 
+### MENU-ADMIN-20261123-CLAUDE
+- Demande du propriétaire : un menu admin que seuls `donatmatys972@gmail.com` et `gabriel.merlin2872@icloud.com` voient. Fait : page `/#/admin` (`src/pages/Admin.jsx`, `src/admin.js`) avec aperçu (comptes, inscriptions, visites), liste des comptes et détail d'un compte (temps par thème, XP par jour, chapitres et exercices), abonnements et IA, signalements, classes, vie sociale. Lien « Administration » dans le menu, visible seulement pour ces deux adresses.
+- Sécurité : la protection est dans la base, pas dans le bouton. Migration `20261123110000_revizstmg_admin_lecture.sql` (appliquée le 23/11/2026, additive, lecture seule, aucune table modifiée) : les fonctions refusent (42501) tout compte autre que ces deux e-mails confirmés et l'accès anonyme. E-mails masqués ; notes, Grand Oral, étude de gestion et fiches jamais renvoyés. Tests : `supabase/tests/admin.sql` (base locale jetable), `tests/admin.test.js`, `tests/parcours/admin.spec.js`.
+- Limites : la base ne garde que la dernière synchronisation de chaque compte, pas un journal des actions ; aucune table NAH touchée.
+

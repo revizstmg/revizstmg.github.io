@@ -33,6 +33,18 @@ La migration `20261116065015_revizstmg_mur_annonces_professeur.sql` est appliqu�
 
 Les changements de genre, nom et anonymat d’un message sont réservés au professeur propriétaire de la classe. L’auteur peut modifier son texte ; les réactions des membres restent possibles. Essais exécutés sur une table temporaire avec le vrai déclencheur, puis transaction annulée ; aucune donnée réelle modifiée.
 
+## Menu administrateur (appliqué le 23 novembre 2026)
+
+`migrations/20261123110000_revizstmg_admin_lecture.sql` : fonctions de **lecture seule**
+`revizstmg_admin_apercu`, `_comptes`, `_compte(id)` et `_divers`, réservées aux deux comptes
+`donatmatys972@gmail.com` et `gabriel.merlin2872@icloud.com` (adresse confirmée, test dans
+`revizstmg_est_admin`). Tout autre compte, et l'accès anonyme, reçoit l'erreur 42501. Les e-mails sont
+masqués et les notes de classe, le Grand Oral, l'étude de gestion et les fiches ne sont jamais renvoyés.
+Aucune table n'est modifiée. Le lien « Administration » du site (`src/admin.js`, `src/pages/Admin.jsx`,
+route `/admin`) n'est qu'un confort : la protection est dans la base. Test : `supabase/tests/admin.sql`.
+Pour changer les administrateurs, modifier la liste dans `revizstmg_est_admin` (nouvelle migration) et
+`ADMINS` dans `src/admin.js`.
+
 ## Suppression complète du compte (appliquée le 19 octobre 2026)
 
 `migrations/20261019075848_revizstmg_suppression_compte.sql` :

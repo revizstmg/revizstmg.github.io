@@ -29,3 +29,5 @@ insert into public.profiles (id, role, name) values ('aaaaaaaa-0000-4000-8000-00
 SQL
 $P -d essai -f "$ICI/regles-acces.sql" 2>&1 | grep -E "^ ?(ok refus|t$|f$)|ERROR|ACCEPTÉ" | sort | uniq -c
 echo "Scénarios terminés (une erreur arrête le script ; « f » signale une vérification ratée)."
+# Menu administrateur : seuls les deux e-mails confirmés lisent, tous les autres reçoivent « refus 42501 ».
+$P -d essai -A -t -f "$ICI/admin.sql" 2>&1 | grep -E "ACCEPTÉ|refus|ERROR"
