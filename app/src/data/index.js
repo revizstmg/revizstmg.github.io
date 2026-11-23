@@ -927,6 +927,7 @@ export function choicesForGap(chapter, question) {
 // la banque complète permet un nouveau tirage à chaque partie, dans les limites du cours.
 // Notions d'un chapitre tirées du glossaire : ses mots en gras ayant une définition (jamais deux fois la même notion).
 const NOTIONS_VISEES = 12
+const EXERCICES_SUFFISANTS = 6 // en dessous, un chapitre est complété par le glossaire
 function completerParGlossaire(defPairs, sec, theme) {
   if (defPairs.length >= NOTIONS_VISEES) return defPairs
   const glossaire = glossaireDe(theme?.subjectId)
@@ -948,12 +949,12 @@ function completerParGlossaire(defPairs, sec, theme) {
   return out
 }
 
-function sectionExercises(sec, theme, idx) {
+function sectionExercises(sec, theme, idx, complete = false) {
   const base = `${theme.id}::${idx}`
   const { datePairs, defPairs: defsDuCours, widePairs, compareTables } = sectionPairs(sec)
   // Un chapitre dont le tableau de notions est maigre est complété par ses mots en gras qui ont une définition
   // au glossaire de la matière : plus de notions, donc plus d'exercices (QCM, vrai/faux, association, saisie…).
-  const defPairs = completerParGlossaire(defsDuCours, sec, theme)
+  const defPairs = complete ? completerParGlossaire(defsDuCours, sec, theme) : defsDuCours
   const richDefs = sectionDefPool(defPairs)
   const out = []
   const uniqEvents = [...new Set(datePairs.map((p) => p.e))]
@@ -1115,6 +1116,11 @@ function sectionExercises(sec, theme, idx) {
     })
   })
 
+  // Un chapitre pauvre en exercices est refait avec les notions du glossaire (les chapitres déjà bien fournis restent tels quels).
+  if (!complete && out.length < EXERCICES_SUFFISANTS) {
+    const plus = sectionExercises(sec, theme, idx, true)
+    if (plus.length > out.length) return plus
+  }
   return out.map(game => ['qcm','trou','saisie'].includes(game.type) ? {...game, questionCount:Math.min(game.type === 'trou' ? 6 : game.type === 'qcm' ? 8 : 10, Math.max(2,Math.ceil(new Set(game.questions.map(q=>q.drawSource || q.q || q.text || q.prompt)).size/2)))} : game)
 }
 
