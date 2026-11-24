@@ -3911,5 +3911,9 @@
   "Administration": "Administration",
   "Traducteur": "Translator",
   "Les comptes créés avant le 30 octobre 2026 gardent l’accès complet jusqu’au 30 novembre 2026. Les cours et les exercices de base restent gratuits pour tous.": "Accounts created before 30 October 2026 keep full access until 30 November 2026. Courses and basic exercises stay free for everyone.",
-  "Durée de stockage (rotation des stocks en jours)": "Storage period (inventory turnover in days)"
+  "Durée de stockage (rotation des stocks en jours)": "Storage period (inventory turnover in days)",
+  "Un point de cours par écran": "One course point per screen",
+  "Touche pour revoir le terme": "Tap to see the term again",
+  "Bravo ! +{v0} XP.": "Well done! +{v0} XP.",
+  "↑ Fais glisser pour continuer": "↑ Swipe up to continue"
 }

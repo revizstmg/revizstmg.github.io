@@ -45,6 +45,7 @@ export function nomEcran(chemin) {
   if (p[0] === 'cours' && p.length === 1) return 'matiere'
   if (p[0] === 'missions' && p.length === 4) return 'revision'
   if (['seance', 'parcours', 'vacances'].includes(p[0]) && p.length === 1) return 'revision'
+  if (p[0] === 'scroll') return 'revision'
   return p.length === 1 && ECRANS.includes(p[0]) ? p[0] : 'introuvable'
 }
 

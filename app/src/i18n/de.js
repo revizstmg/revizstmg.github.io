@@ -216,6 +216,7 @@ export default {
   "myNotesPlaceholder": "Schreibe hier Hinweise, Tipps und Punkte zum Wiederholen auf…",
   "myNotesHint": "Automatisch gespeichert und mit deinen Geräten synchronisiert.",
   "sportBacTitle": "Sport im Abitur",
+  "scrollMode": "Scroll-Modus",
   "methodoTitle": "Testmethode",
   "methodoSub": "Das zu befolgende Verfahren und ein Beispiel für jede Art von Test.",
   "importPhoto": "Importiere ein Foto",

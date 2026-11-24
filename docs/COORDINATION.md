@@ -2112,3 +2112,7 @@ Prochaine action :
 ## VERIF-3-AGENTS (24/11/2026)
 - Retours de 2 élèves et 1 prof : ~35 corrections de contenu (glossaire, formules, rotation des stocks, compte courant d'associé…), Traducteur lisible sur téléphone, loupe de recherche visible sur mobile, spécialité non présélectionnée, phrase des offres corrigée (comptes créés avant le 30/10).
 - Reste (src/) : onglet Définitions vide, « 1 cas pratiques », arrondis de calc.js, récompense du Défi du jour à 0 bonne réponse, vérifier le calendrier bac 2027.
+
+## MODE-SCROLL (24/11/2026)
+- Nouveau « Mode Scroll » (`/scroll`, `/scroll/:sid/:tid`) : cours en cartes, flashcards à retourner et questions éclair, une par écran (snap vertical), gratuit pour tous. Cartes construites depuis le cours par `src/data/scroll.js` (rien d'inventé). Entrées : accueil (trousse), menu mobile, recherche.
+- Page rendue dans un portail (`document.body`) : `.page-enter` a un transform qui casse `position: fixed`.

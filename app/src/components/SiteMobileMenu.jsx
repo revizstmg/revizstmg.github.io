@@ -16,7 +16,7 @@ import './SiteMobileMenu.css'
 export function outils(state){
  const niveau=state?.track?.level,prof=state?.account?.role==='prof'
  if(prof)return ['methodo','programme','favoris']
- return ['avenir','formules','methodo','sportbac','parcours','programme','defi','coach','coachia',niveau==='premiere-stmg'?'etudegestion':'grandoral','badges','favoris']
+ return ['scroll','avenir','formules','methodo','sportbac','parcours','programme','defi','coach','coachia',niveau==='premiere-stmg'?'etudegestion':'grandoral','badges','favoris']
 }
 export default function SiteMobileMenu(props){
  const [open,setOpen]=useState(false),t=useT()

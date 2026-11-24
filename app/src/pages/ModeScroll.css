@@ -1,0 +1,18 @@
+/* Mode Scroll : un contenu par écran, défilement vertical qui « claque » sur chaque carte. */
+.scroll-flux { position: fixed; inset: 0; z-index: 70; display: flex; flex-direction: column; background: var(--c-fond, #fff); }
+:root.dark .scroll-flux { background: #0b1220; }
+.scroll-haut { display: flex; align-items: center; gap: .75rem; padding: max(.6rem, env(safe-area-inset-top)) .9rem .5rem; }
+.scroll-barre { height: 4px; flex: 1; border-radius: 9999px; background: rgb(148 163 184 / .35); overflow: hidden; }
+.scroll-barre > span { display: block; height: 100%; background: var(--c-accent); transition: width .2s; }
+.scroll-liste { flex: 1; min-height: 0; overflow-y: auto; scroll-snap-type: y mandatory; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.scroll-carte { height: 100%; min-height: 100%; scroll-snap-align: start; scroll-snap-stop: always; display: flex; flex-direction: column; justify-content: center; gap: 1rem; padding: 1.2rem 1.4rem max(1.4rem, env(safe-area-inset-bottom)); box-sizing: border-box; }
+.scroll-puce { align-self: flex-start; border-radius: 9999px; padding: .2rem .7rem; font-size: .75rem; font-weight: 700; letter-spacing: .04em; background: color-mix(in srgb, var(--c-accent) 16%, transparent); }
+.scroll-texte { font-size: clamp(1.15rem, 4.8vw, 1.55rem); line-height: 1.5; font-weight: 500; }
+.scroll-formule { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: clamp(1.05rem, 4.4vw, 1.35rem); border-radius: 1rem; padding: 1rem; background: color-mix(in srgb, var(--c-accent) 10%, transparent); }
+.scroll-choix { display: grid; gap: .6rem; }
+.scroll-choix button { text-align: start; border-radius: 1rem; border: 2px solid rgb(148 163 184 / .5); padding: .85rem 1rem; font-size: 1.05rem; min-height: 3rem; }
+.scroll-choix button[data-etat="bon"] { border-color: #16a34a; background: rgb(22 163 74 / .14); }
+.scroll-choix button[data-etat="faux"] { border-color: #dc2626; background: rgb(220 38 38 / .12); }
+.scroll-flash { width: 100%; text-align: center; border-radius: 1.5rem; border: 2px solid rgb(148 163 184 / .5); padding: 2.2rem 1.2rem; min-height: 40%; display: grid; place-items: center; font-size: clamp(1.2rem, 5vw, 1.6rem); font-weight: 600; }
+.scroll-indice { align-self: center; font-size: .8rem; opacity: .6; }
+@media (prefers-reduced-motion: reduce) { .scroll-liste { scroll-behavior: auto; } .scroll-barre > span { transition: none; } }
