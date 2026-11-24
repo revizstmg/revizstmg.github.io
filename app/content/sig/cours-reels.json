@@ -157,7 +157,7 @@
         {
           "t": "warning",
           "h": "Pièges classiques",
-          "c": "WHERE filtre **avant** regroupement, HAVING **après** un GROUP BY. Et sans condition de **jointure** entre deux tables, on obtient toutes les combinaisons (produit cartésien). Ne pas oublier le **point-virgule** et les **guillemets** autour du texte."
+          "c": "WHERE filtre **avant** regroupement, HAVING **après** un GROUP BY. Et sans condition de **jointure** entre deux tables, on obtient toutes les combinaisons (produit cartésien). Ne pas oublier le **point-virgule** et les **apostrophes** autour du texte."
         }
       ]
     }

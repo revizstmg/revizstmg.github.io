@@ -38,7 +38,7 @@
           {
             "t": "example",
             "h": "Deux années de suite",
-            "c": "+12 % puis +5 %.\nCM global = 1,12 × 1,05 = 1,176 → **+17,6 %** au total.\nTaux moyen annuel : CM = √1,176 ≈ 1,0845 → environ **+8,45 % par an**."
+            "c": "+12 % puis +5 %.\nCM global = 1,12 × 1,05 = 1,176 → **+17,6 %** au total.\nTaux moyen annuel : CM = √1,176 ≈ 1,0844 → environ **+8,44 % par an**."
           },
           {
             "t": "warning",
@@ -497,7 +497,7 @@
           {
             "t": "example",
             "h": "Application corrigée",
-            "c": "Une valeur augmente de 21 % en 2 ans : CM moyen=√1,21=1,10, soit 10 % par an. Ajouter 10,5 % deux fois ne donne pas 21 %."
+            "c": "Une valeur augmente de 21 % en 2 ans : CM moyen=√1,21=1,10, soit 10 % par an. Le taux moyen n’est pas 21 ÷ 2 = 10,5 % : en appliquant deux fois +10,5 %, on obtient 1,105² ≈ 1,221, soit +22,1 %."
           },
           {
             "t": "table",

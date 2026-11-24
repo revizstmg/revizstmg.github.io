@@ -353,7 +353,10 @@
               "text": "Conserver une commande dans une base de données relève de la fonction ___ du SI.",
               "answer": "stocker",
               "alt": [
-                "stockage"
+                "stockage",
+                "mémoriser",
+                "mémorisation",
+                "la mémorisation"
               ],
               "explain": "Stocker consiste à conserver les informations pour les retrouver plus tard."
             },
@@ -509,7 +512,7 @@
             {
               "t": "example",
               "h": "Exemple lu pas à pas",
-              "c": "`SELECT nom, ville FROM CLIENT WHERE ville = \"Lyon\" ORDER BY nom ;` → affiche le **nom** et la **ville** des clients **de Lyon**, triés **par nom** croissant."
+              "c": "`SELECT nom, ville FROM CLIENT WHERE ville = 'Lyon' ORDER BY nom ;` → affiche le **nom** et la **ville** des clients **de Lyon**, triés **par nom** croissant."
             },
             {
               "t": "p",
@@ -517,7 +520,7 @@
             },
             {
               "t": "warning",
-              "c": "En SQL, on entoure le **texte** de guillemets (`\"Lyon\"`), jamais les **nombres**. Et n’oublie pas le **point-virgule** final qui termine la requête."
+              "c": "En SQL, on entoure le **texte** d’apostrophes (`'Lyon'`), jamais les **nombres**. Et n’oublie pas le **point-virgule** final qui termine la requête."
             }
           ]
         },
@@ -709,9 +712,9 @@
               "explain": "Vrai : il regroupe avant COUNT, SUM, AVG…"
             },
             {
-              "statement": "Le texte doit être entouré de guillemets dans une condition SQL.",
+              "statement": "Le texte doit être entouré d’apostrophes (`'Lyon'`) dans une condition SQL.",
               "answer": true,
-              "explain": "Vrai : ex. WHERE ville = \"Lyon\"."
+              "explain": "Vrai : ex. WHERE ville = 'Lyon'."
             }
           ]
         },

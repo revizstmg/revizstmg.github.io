@@ -263,7 +263,7 @@
             {
               "statement": "Une entreprise privée a toujours une finalité lucrative.",
               "answer": false,
-              "explain": "Souvent, mais elle peut aussi intégrer une dimension sociétale (RSE)."
+              "explain": "Souvent, mais pas toujours : les entreprises de l’économie sociale et solidaire (coopératives, mutuelles) ont une lucrativité limitée, et toute entreprise peut aussi intégrer une dimension sociétale (RSE)."
             },
             {
               "statement": "Un brevet est une ressource immatérielle.",

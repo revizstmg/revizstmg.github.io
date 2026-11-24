@@ -5,7 +5,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "Le **canal de Suez** (Égypte) relie la Méditerranée à la mer Rouge : il évite le contournement de l’Afrique et fait gagner des milliers de kilomètres. Environ **12 % du commerce mondial** y transite (environ **30 % du trafic mondial de conteneurs**)."
+          "c": "Le **canal de Suez** (Égypte) relie la Méditerranée à la mer Rouge : il évite le contournement de l’Afrique et fait gagner des milliers de kilomètres. Environ **12 % du commerce mondial** y transitait avant la baisse du trafic provoquée par les attaques en mer Rouge depuis fin 2023 (environ **30 % du trafic mondial de conteneurs**)."
         },
         {
           "t": "p",
@@ -24,7 +24,7 @@
         {
           "t": "list",
           "c": [
-            "**≈ 80 %** du commerce mondial de marchandises passe par la mer.",
+            "**≈ 80 %** du commerce mondial de marchandises (en volume) passe par la mer.",
             "La **conteneurisation** a standardisé et abaissé les coûts du transport.",
             "Les **hubs** mondiaux : Shanghai, Singapour, Rotterdam.",
             "Les **câbles sous-marins** portent l’essentiel des données d’Internet."
@@ -110,7 +110,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "La **Triade**, formée par l’**Amérique du Nord**, l’**Europe** et l’**Asie de l’Est**, regroupe les **pôles dominants** de la mondialisation. Les **pays émergents**, souvent regroupés sous le sigle **BRICS** (Brésil, Russie, Inde, Chine, Afrique du Sud), connaissent une **montée en puissance rapide**."
+          "c": "La **Triade**, formée par l’**Amérique du Nord**, l’**Europe** et l’**Asie de l’Est**, regroupe les **pôles dominants** de la mondialisation. Les **pays émergents**, souvent regroupés sous le sigle **BRICS** (Brésil, Russie, Inde, Chine, Afrique du Sud, élargis depuis 2024 aux « BRICS+ »), connaissent une **montée en puissance rapide**."
         },
         {
           "t": "p",

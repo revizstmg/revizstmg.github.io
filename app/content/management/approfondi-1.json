@@ -26,7 +26,7 @@
               "Organisation publique",
               "Servir l’intérêt général",
               "Impôts, redevances",
-              "Hôpital, mairie, Pôle emploi"
+              "Hôpital, mairie, France Travail"
             ],
             [
               "OSBL / association",
@@ -262,7 +262,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "À partir du diagnostic, l’organisation choisit une **stratégie** : une orientation de long terme pour construire un **avantage concurrentiel** durable. Michael **Porter** a formalisé deux grandes stratégies « génériques »."
+          "c": "À partir du diagnostic, l’organisation choisit une **stratégie** : une orientation de long terme pour construire un **avantage concurrentiel** durable. Michael **Porter** a formalisé trois stratégies « génériques » : la domination par les coûts, la différenciation et la focalisation (viser un segment précis)."
         },
         {
           "t": "list",

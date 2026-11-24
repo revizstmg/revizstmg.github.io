@@ -519,7 +519,7 @@
       "blocks": [
         {
           "t": "p",
-          "c": "Les **mers et océans** couvrent 71 % de la planète et sont devenus le **cœur de la mondialisation** : environ **80 % du commerce mondial** de marchandises transite par la mer, dans des porte-conteneurs géants. Ils fournissent aussi des ressources (pêche, énergie, minerais) et sont traversés par les **câbles sous-marins** qui portent l’essentiel d’Internet."
+          "c": "Les **mers et océans** couvrent 71 % de la planète et sont devenus le **cœur de la mondialisation** : environ **80 % du commerce mondial** de marchandises (en volume ; environ 70 % en valeur) transite par la mer, dans des porte-conteneurs géants. Ils fournissent aussi des ressources (pêche, énergie, minerais) et sont traversés par les **câbles sous-marins** qui portent l’essentiel d’Internet."
         },
         {
           "t": "list",
