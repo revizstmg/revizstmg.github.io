@@ -2103,3 +2103,12 @@ Prochaine action :
 - À vérifier avec le BO (confiance faible des relecteurs) : variance de la loi binomiale en Terminale, ratio d'indépendance financière, formule du revenu disponible, McGregor et droit social en RH-communication, algorithmique en maths de Terminale, manuels de langues (en, es, de, it, ar non relus intégralement).
 - Non traité : ajouts de contenu (Maslow détaillé, exemples par P du marketing, bloc de droit social), recherche par chapitre et par terme, liens vers « Programme » et « Mon parcours ».
 
+
+## NAVIGATION-ADMIN-ABONNEMENTS (24/11/2026)
+- Recherche : mots multiples, « 4 P », pages du site (programme, parcours, bac blanc, offres…) ; « Dictionnaire » devient « Traducteur » ; phrase sur l'accès gratuit jusqu'au 30/11/2026 sur /offres.
+- Menu admin : onglets Aperçu / Comptes (filtres rôle, niveau, offre, tri) / Abonnements et IA / Signalements / Classes ; changement d'offre d'un compte.
+- Migration `20261124100000_revizstmg_admin_abonnements.sql` : NON APPLIQUÉE, en attente de l'accord explicite du propriétaire (l'interface fonctionne sans, l'aperçu enrichi et le changement d'offre attendent la migration).
+
+## VERIF-3-AGENTS (24/11/2026)
+- Retours de 2 élèves et 1 prof : ~35 corrections de contenu (glossaire, formules, rotation des stocks, compte courant d'associé…), Traducteur lisible sur téléphone, loupe de recherche visible sur mobile, spécialité non présélectionnée, phrase des offres corrigée (comptes créés avant le 30/10).
+- Reste (src/) : onglet Définitions vide, « 1 cas pratiques », arrondis de calc.js, récompense du Défi du jour à 0 bonne réponse, vérifier le calendrier bac 2027.

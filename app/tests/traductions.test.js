@@ -83,7 +83,7 @@ test('la boutique ne dépend pas du réseau, les requêtes identiques sont regro
   const fetch = vi.fn().mockResolvedValue(response('Translated test'))
   vi.stubGlobal('fetch', fetch)
   expect((await api.translate('Tes efforts ont du style.', 'fr', 'en')).text).toBe('Your effort. Your style.')
-  expect((await api.translate('Dictionnaire', 'fr', 'en')).text).toBe('Dictionary')
+  expect((await api.translate('Traducteur', 'fr', 'en')).text).toBe('Translator')
   expect(fetch).not.toHaveBeenCalled()
   await Promise.all(Array.from({ length: 8 }, () => api.translate('Texte public de test sans équivalent', 'fr', 'en')))
   expect(fetch).toHaveBeenCalledTimes(1)

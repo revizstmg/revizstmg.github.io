@@ -44,6 +44,37 @@
               "c": "Évolution réciproque : après +25 % (×1,25), pour revenir il faut ×(1/1,25) = 0,80, soit **−20 %** (et non −25 %)."
             }
           ]
+        },
+        {
+          "h": "Taux moyen et indice base 100",
+          "blocks": [
+            {
+              "t": "p",
+              "c": "Pour résumer plusieurs évolutions successives par une seule évolution identique chaque période, on calcule le **taux moyen** : on prend la racine n-ième du CM global (n = nombre de périodes)."
+            },
+            {
+              "t": "formula",
+              "c": "CM moyen = (CM global)^(1/n) · t moyen = CM moyen − 1"
+            },
+            {
+              "t": "example",
+              "h": "Exemple",
+              "c": "Un prix augmente de 58 % en 4 ans : CM global = 1,58 → CM moyen = 1,58^(1/4) ≈ 1,121 → **+12,1 % par an** en moyenne."
+            },
+            {
+              "t": "p",
+              "c": "L’**indice base 100** compare une valeur à une valeur de référence ramenée à 100 : l’écart à 100 donne directement l’évolution en pourcentage."
+            },
+            {
+              "t": "formula",
+              "c": "Indice = (valeur / valeur de référence) × 100"
+            },
+            {
+              "t": "example",
+              "h": "Exemple",
+              "c": "Un chiffre d’affaires de 270 000 € pour une référence de 150 000 € → indice 180 : **+80 %** par rapport à la référence."
+            }
+          ]
         }
       ],
       "essentiel": [
@@ -138,16 +169,16 @@
           "blocks": [
             {
               "t": "p",
-              "c": "Dans une suite **arithmétique**, on passe d’un terme au suivant en **ajoutant** toujours le même nombre, la **raison r** : u_{n+1} = u_n + r."
+              "c": "Dans une suite **arithmétique**, on passe d’un terme au suivant en **ajoutant** toujours le même nombre, la **raison r** : uₙ₊₁ = uₙ + r."
             },
             {
               "t": "formula",
-              "c": "Terme général : u_n = u_0 + n × r — croissance **linéaire**."
+              "c": "Terme général : uₙ = u₀ + n × r — croissance linéaire."
             },
             {
               "t": "example",
               "h": "Exemple",
-              "c": "Un salaire de 1 500 € augmente de 50 €/an : c’est arithmétique (r = 50). Au bout de 4 ans : u_4 = 1 500 + 4 × 50 = **1 700 €**."
+              "c": "Un salaire de 1 500 € augmente de 50 €/an : c’est arithmétique (r = 50). Au bout de 4 ans : u₄ = 1 500 + 4 × 50 = **1 700 €**."
             }
           ]
         },
@@ -156,24 +187,24 @@
           "blocks": [
             {
               "t": "p",
-              "c": "Dans une suite **géométrique**, on passe d’un terme au suivant en **multipliant** toujours par le même nombre, la **raison q** : u_{n+1} = u_n × q."
+              "c": "Dans une suite **géométrique**, on passe d’un terme au suivant en **multipliant** toujours par le même nombre, la **raison q** : uₙ₊₁ = uₙ × q."
             },
             {
               "t": "formula",
-              "c": "Terme général : u_n = u_0 × q^n — croissance **exponentielle**."
+              "c": "Terme général : uₙ = u₀ × qⁿ — croissance exponentielle."
             },
             {
               "t": "example",
               "h": "Exemple",
-              "c": "Capital de 1 000 € placé à 3 %/an → q = 1,03 : u_5 = 1 000 × 1,03⁵ ≈ **1 159 €**. Astuce : toute évolution en **% fixe** donne une suite **géométrique** (q = 1 + t)."
+              "c": "Capital de 1 000 € placé à 3 %/an → q = 1,03 : u₅ = 1 000 × 1,03⁵ ≈ **1 159 €**. Astuce : toute évolution en **% fixe** donne une suite **géométrique** (q = 1 + t, avec t en écriture décimale : 3 % → t = 0,03)."
             }
           ]
         }
       ],
       "essentiel": [
-        "Arithmétique : **u_n = u_0 + n·r** (linéaire).",
-        "Géométrique : **u_n = u_0 × q^n** (exponentielle).",
-        "Évolution en % constant → suite **géométrique** (q = 1 + t)."
+        "Arithmétique : **uₙ = u₀ + n·r** (linéaire).",
+        "Géométrique : **uₙ = u₀ × qⁿ** (exponentielle).",
+        "Évolution en % constant → suite **géométrique** (q = 1 + t, t en écriture décimale : 3 % → 0,03)."
       ],
       "resources": [
         {
@@ -216,15 +247,15 @@
           "cards": [
             {
               "front": "Suite arithmétique",
-              "back": "On ajoute la raison r : u_n = u_0 + n·r."
+              "back": "On ajoute la raison r : uₙ = u₀ + n·r."
             },
             {
               "front": "Suite géométrique",
-              "back": "On multiplie par la raison q : u_n = u_0 × q^n."
+              "back": "On multiplie par la raison q : uₙ = u₀ × qⁿ."
             },
             {
               "front": "Placement à t %",
-              "back": "Suite géométrique de raison q = 1 + t."
+              "back": "Suite géométrique de raison q = 1 + t (t en écriture décimale : 3 % → 0,03)."
             }
           ]
         }

@@ -16,6 +16,20 @@ describe('recherche', () => {
   })
 })
 
+describe('recherche : pages du site et mots d’élève', () => {
+  it('trouve les pages cachées avec les mots d’un élève', () => {
+    const page = (q) => C.search(q).filter((r) => r.type === 'page').map((r) => r.to)
+    expect(page('date bac')).toContain('/programme')
+    expect(page('épreuves anticipées')).toContain('/programme')
+    expect(page('mon plan semaine')).toContain('/parcours')
+    expect(page('prix premium')).toContain('/offres')
+  })
+  it('« marketing mix » et « 4 P » mènent au thème du plan de marchéage', () => {
+    expect(C.search('marketing mix').some((r) => r.id === 'mkg-t3')).toBe(true)
+    expect(C.search('4 P').some((r) => r.id === 'mkg-t3')).toBe(true)
+  })
+})
+
 describe('menu des outils', () => {
   it('Terminale : Grand Oral sans étude de gestion ; Première : l’inverse ; prof : pas d’outils d’élève', () => {
     expect(outils({ track: { level: 'terminale-stmg' } })).toContain('grandoral')

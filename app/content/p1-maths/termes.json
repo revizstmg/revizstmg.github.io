@@ -2,7 +2,7 @@
  "p1-maths": {
   "arbre pondéré": "Arbre pondéré : les probabilités des branches issues d’un même nœud somment à 1 ; on multiplie le long d’un chemin et on additionne les chemins.",
   "arithmétique|suite arithmétique": "Suite dans laquelle on passe d’un terme au suivant en ajoutant toujours le même nombre r, appelé raison.",
-  "boîte à moustaches|diagramme en boîte|deux moitiés|dispersion|étalées|symétrique|indicateurs|position|homogénéité": "Boîte à moustaches : représente la médiane, les quartiles et les extrêmes d’une série, et montre sa dispersion.",
+  "boîte à moustaches|diagramme en boîte|deux moitiés|dispersion|étalées|indicateurs|position|homogénéité": "Boîte à moustaches : représente la médiane, les quartiles et les extrêmes d’une série, et montre sa dispersion.",
   "boucles": "Instructions d’un programme qui répètent plusieurs fois une même suite d’actions.",
   "croissante": "Une fonction ou une suite croissante ne diminue jamais : plus la variable augmente, plus les valeurs augmentent (ou restent égales).",
   "décroissante": "Une fonction ou une suite décroissante n’augmente jamais : plus la variable augmente, plus les valeurs diminuent (ou restent égales).",
@@ -17,7 +17,7 @@
   "listes": "Collections ordonnées de valeurs, utilisées en programmation pour traiter plusieurs données.",
   "maximum": "Plus grande valeur prise par une fonction sur un intervalle.",
   "minimum": "Plus petite valeur prise par une fonction sur un intervalle.",
-  "multiplie|multiplie les CM": "Suite géométrique : on passe d’un terme au suivant en multipliant toujours par la même raison ; elle correspond à une évolution à pourcentage constant (intérêts composés).",
+  "multiplient les CM|en pourcentage constant|intérêts composés": "Suite géométrique : on passe d’un terme au suivant en multipliant toujours par la même raison ; elle correspond à une évolution à pourcentage constant (intérêts composés).",
   "nuage de points|point moyen|ajustement affine": "Statistiques à deux variables : le nuage de points se résume par une droite d’ajustement ; la corrélation ne prouve pas la causalité ; l’extrapolation est d’autant moins fiable qu’on s’éloigne des données.",
   "optimisation|optimiser": "Recherche de la valeur qui rend une grandeur maximale (bénéfice) ou minimale (coût).",
   "parabole": "Courbe représentative d’une fonction du second degré.",

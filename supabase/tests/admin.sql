@@ -29,3 +29,16 @@ select pg_temp.essai('élève ordinaire (comptes)', 'authenticated', 'aaaaaaaa-0
 select pg_temp.essai('anonyme', 'anon', '', 'select public.revizstmg_admin_apercu()');
 select pg_temp.essai('anonyme (est_admin)', 'anon', '', 'select public.revizstmg_est_admin()');
 select pg_temp.essai('élève : garde directe', 'authenticated', 'aaaaaaaa-0000-4000-8000-000000000001', 'select public.revizstmg_admin_garde()');
+
+-- Changement d'abonnement : réservé aux administrateurs, offre validée, jamais de rétrogradation d'un vrai abonnement Stripe.
+select pg_temp.essai('élève : changer d''offre', 'authenticated', 'aaaaaaaa-0000-4000-8000-000000000001', $$select public.revizstmg_admin_abonnement('dddddddd-0000-4000-8000-000000000004','ultimate',30)$$);
+select pg_temp.essai('anonyme : changer d''offre', 'anon', '', $$select public.revizstmg_admin_abonnement('dddddddd-0000-4000-8000-000000000004','ultimate',30)$$);
+select pg_temp.essai('admin : offre inconnue', 'authenticated', 'dddddddd-0000-4000-8000-000000000004', $$select public.revizstmg_admin_abonnement('dddddddd-0000-4000-8000-000000000004','diamant',30)$$);
+select pg_temp.essai('admin : compte inconnu', 'authenticated', 'dddddddd-0000-4000-8000-000000000004', $$select public.revizstmg_admin_abonnement('99999999-0000-4000-8000-000000000009','premium',30)$$);
+select pg_temp.essai('admin : ultimate 30 jours', 'authenticated', 'dddddddd-0000-4000-8000-000000000004', $$select public.revizstmg_admin_abonnement('dddddddd-0000-4000-8000-000000000004','ultimate',30)$$);
+select 'ligne offerte : ' || offre || '/' || statut || '/' || mode_test from public.revizstmg_abonnements where user_id = 'dddddddd-0000-4000-8000-000000000004';
+select pg_temp.essai('admin : retour au gratuit', 'authenticated', 'dddddddd-0000-4000-8000-000000000004', $$select public.revizstmg_admin_abonnement('dddddddd-0000-4000-8000-000000000004','gratuit')$$);
+update public.revizstmg_abonnements set stripe_subscription_id='sub_x', statut='active', offre='premium' where user_id = 'dddddddd-0000-4000-8000-000000000004';
+select pg_temp.essai('admin : rétrograder un vrai abonnement Stripe', 'authenticated', 'dddddddd-0000-4000-8000-000000000004', $$select public.revizstmg_admin_abonnement('dddddddd-0000-4000-8000-000000000004','gratuit')$$);
+select pg_temp.essai('admin : aperçu enrichi', 'authenticated', 'dddddddd-0000-4000-8000-000000000004', 'select public.revizstmg_admin_apercu()');
+select pg_temp.essai('admin : comptes enrichis', 'authenticated', 'dddddddd-0000-4000-8000-000000000004', 'select public.revizstmg_admin_comptes()');

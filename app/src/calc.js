@@ -251,7 +251,7 @@ export const CALC = {
         da * 100,
       )} % de défauts ; machine B (${Math.round(pb * 100)} %) : ${Math.round(
         db * 100,
-      )} % de défauts.\nProbabilité qu'une pièce prise au hasard soit défectueuse ? (en %, arrondi 0,1)`,
+      )} % de défauts.\nProbabilité qu'une pièce prise au hasard soit défectueuse ? (en %, arrondi à 0,1)`,
       answer: round(res * 100, 1),
       unit: '%',
       tolerance: 0.049,
@@ -290,7 +290,7 @@ export const CALC = {
     const cmM = cmG ** (1 / n)
     const tM = round((cmM - 1) * 100, 1)
     return {
-      prompt: `Sur ${n} ans, une grandeur augmente globalement de ${tg} %.\nCalcule le taux d'évolution annuel moyen (en %, arrondi 0,1).`,
+      prompt: `Sur ${n} ans, une grandeur augmente globalement de ${tg} %.\nCalcule le taux d'évolution annuel moyen (en %, arrondi à 0,1).`,
       answer: tM, unit: '%', tolerance: 0.049,
       explain: `CM global = 1 + ${tg}/100 = ${round(cmG, 3)}.\nCM moyen = (CM global)^(1/${n}) = ${round(cmM, 4)}.\nTaux moyen = (CM moyen − 1) × 100 ≈ ${tM} %.`,
     }
@@ -300,7 +300,7 @@ export const CALC = {
     const cm = 1 + t / 100
     const rec = round((1 / cm - 1) * 100, 1)
     return {
-      prompt: `Un prix augmente de ${t} %.\nQuel taux d'évolution (en %, arrondi 0,1) annulerait exactement cette hausse (retour au prix initial) ?`,
+      prompt: `Un prix augmente de ${t} %.\nQuel taux d'évolution (en %, arrondi à 0,1) annulerait exactement cette hausse (retour au prix initial) ?`,
       answer: rec, unit: '%', tolerance: 0.049,
       explain: `CM = 1 + ${t}/100 = ${round(cm, 3)}.\nCM réciproque = 1/${round(cm, 3)} = ${round(1 / cm, 4)}.\nTaux réciproque = (1/CM − 1) × 100 ≈ ${rec} % (c'est une baisse).`,
     }

@@ -186,6 +186,9 @@ export default function Layout({ children }) {
 
           {/* Contrôles complets : uniquement sur écran large. Sur mobile/app, tout
               est regroupé dans le menu burger (voir plus bas). */}
+          <button type="button" className="grid h-9 w-9 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800 sm:hidden" onClick={() => setSearchOpen(true)} aria-label={t('search')} title={t('search')}>
+            <Icon.Search />
+          </button>
           <div className="desktop-header-tools hidden items-center gap-1 sm:flex">
           {!parentSeul && (
           <Link to="/coach" className="grid h-9 w-9 place-items-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800" aria-label={t('coach')} title={t('coach')}>
@@ -476,7 +479,7 @@ function SearchOverlay({ onClose }) {
 
   const go = (r) => {
     onClose()
-    navigate(r.type === 'subject' ? `/subject/${r.id}` : `/subject/${r.subjectId}/theme/${r.id}`)
+    navigate(r.type === 'page' ? r.to : r.type === 'subject' ? `/subject/${r.id}` : `/subject/${r.subjectId}/theme/${r.id}`)
   }
 
   return (

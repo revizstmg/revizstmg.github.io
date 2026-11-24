@@ -2,9 +2,12 @@ import { useEffect, useState } from 'react'
 import Introuvable from './Introuvable.jsx'
 import { appelAdmin, duree, dateFr, estAdminProbable } from '../admin.js'
 
-// Menu administrateur (lecture seule) pour les deux comptes autorisés. Tout vient de fonctions de la base qui
+// Menu administrateur pour les deux comptes autorisés (lecture, et changement d'offre d'un compte). Tout vient de fonctions de la base qui
 // vérifient l'e-mail du compte : si l'appel est refusé, la page se comporte comme une adresse inconnue.
-const ONGLETS = [['apercu', 'Aperçu'], ['comptes', 'Comptes'], ['abos', 'Abonnements et IA'], ['divers', 'Signalements et classes']]
+const ONGLETS = [['apercu', 'Aperçu'], ['comptes', 'Comptes'], ['abos', 'Abonnements et IA'], ['signalements', 'Signalements'], ['classes', 'Classes et vie sociale']]
+const OFFRES = [['gratuit', 'Gratuit'], ['premium', 'Premium'], ['ultimate', 'Ultimate']]
+const DUREES = [['30', '30 jours'], ['90', '3 mois'], ['365', '1 an'], ['', 'Sans date de fin']]
+const nomOffre = (o) => (OFFRES.find(([k]) => k === o) || [0, o || 'Gratuit'])[1]
 
 const Carte = ({ titre, valeur, sous }) => (
   <div className="card p-3 text-center" lang="fr" data-no-translate>
@@ -38,6 +41,11 @@ function Apercu({ donnees }) {
         <Carte titre="Nouveaux (7 jours)" valeur={c.nouveaux_7j} />
         <Carte titre="Actifs (7 jours)" valeur={c.actifs_7j} />
         <Carte titre="Niveaux" valeur={`${c.terminale} / ${c.premiere}`} sous="Terminale / Première" />
+        {c.nouveaux_24h !== undefined && <Carte titre="Nouveaux (24 h)" valeur={c.nouveaux_24h} />}
+        {c.actifs_24h !== undefined && <Carte titre="Actifs (24 h)" valeur={c.actifs_24h} />}
+        {donnees.offres && <Carte titre="Abonnés actifs" valeur={(donnees.offres.premium || 0) + (donnees.offres.ultimate || 0)} sous={`${donnees.offres.premium} Premium · ${donnees.offres.ultimate} Ultimate`} />}
+        {donnees.offres && <Carte titre="Payants / offerts" valeur={`${donnees.offres.reels} / ${donnees.offres.offerts}`} sous="Stripe / par un admin" />}
+        {donnees.signalements_ouverts !== undefined && <Carte titre="Signalements à traiter" valeur={donnees.signalements_ouverts} />}
       </div>
       <section className="card p-4">
         <h2 className="font-display text-lg font-semibold">Visites par jour (30 jours)</h2>
@@ -56,6 +64,46 @@ function Apercu({ donnees }) {
         <Barres lignes={donnees.specialites || []} cle="specialite" valeur="n" />
       </section>
     </div>
+  )
+}
+
+function ChangerOffre({ id, nom, abonnement }) {
+  const [offre, setOffre] = useState('premium')
+  const [jours, setJours] = useState('30')
+  const [etat, setEtat] = useState(null)
+  const [courant, setCourant] = useState(abonnement)
+  const actif = courant && courant.offre && ['active', 'trialing', 'past_due'].includes(courant.statut) && (!courant.periode_fin || new Date(courant.periode_fin) > Date.now() - 86400000)
+  const appliquer = async () => {
+    const msg = offre === 'gratuit' ? `Remettre ${nom || 'ce compte'} en offre gratuite ?` : `Donner l’offre ${nomOffre(offre)} à ${nom || 'ce compte'}${jours ? ` pour ${DUREES.find(([k]) => k === jours)[1]}` : ' sans date de fin'} ?`
+    if (!window.confirm(msg)) return
+    setEtat({ attente: true })
+    const r = await appelAdmin('revizstmg_admin_abonnement', { p_id: id, p_offre: offre, p_jours: offre === 'gratuit' || !jours ? null : Number(jours) })
+    if (r.ok) { setCourant(r.data); setEtat({ ok: `Offre ${nomOffre(offre)} enregistrée.` }) }
+    else setEtat({ erreur: /abonnement_stripe_actif/.test(r.erreur || '') ? 'Ce compte a un vrai abonnement Stripe actif : résilie-le d’abord dans Stripe.' : r.refuse ? 'Accès refusé.' : `Échec : ${r.erreur || 'erreur inconnue'}` })
+  }
+  return (
+    <section className="card p-4 space-y-2 text-sm" lang="fr" data-no-translate>
+      <h3 className="font-semibold">Abonnement</h3>
+      <p>Actuellement : <b>{actif ? nomOffre(courant.offre) : 'Gratuit'}</b>{actif && courant.periode_fin ? ` jusqu’au ${dateFr(courant.periode_fin)}` : ''}{actif && !courant.periode_fin ? ' (sans fin)' : ''}</p>
+      <div className="flex flex-wrap items-end gap-2">
+        <label className="block">Passer à
+          <select value={offre} onChange={(e) => setOffre(e.target.value)} className="ml-1 rounded border border-slate-300 bg-white px-2 py-1 dark:border-slate-600 dark:bg-slate-800">
+            {OFFRES.map(([k, n]) => <option key={k} value={k}>{n}</option>)}
+          </select>
+        </label>
+        {offre !== 'gratuit' && (
+          <label className="block">Durée
+            <select value={jours} onChange={(e) => setJours(e.target.value)} className="ml-1 rounded border border-slate-300 bg-white px-2 py-1 dark:border-slate-600 dark:bg-slate-800">
+              {DUREES.map(([k, n]) => <option key={k} value={k}>{n}</option>)}
+            </select>
+          </label>
+        )}
+        <button type="button" onClick={appliquer} disabled={etat?.attente} className="rounded-full bg-slate-900 px-4 py-1.5 font-semibold text-white disabled:opacity-50 dark:bg-white dark:text-slate-900">Appliquer</button>
+      </div>
+      {etat?.ok && <p role="status">{etat.ok}</p>}
+      {etat?.erreur && <p role="alert">{etat.erreur}</p>}
+      <p className="text-xs">Un abonnement donné ici ne passe pas par Stripe : aucun paiement n’est demandé ni prélevé.</p>
+    </section>
   )
 }
 
@@ -86,6 +134,7 @@ function Detail({ id, onRetour }) {
         <p>Favoris : {(p.favorites || []).join(', ') || '—'}</p>
         {d.abonnement && <p>Abonnement : {d.abonnement.offre} / {d.abonnement.periode} / {d.abonnement.statut}{d.abonnement.mode_test ? ' (test)' : ''}</p>}
       </section>
+      <ChangerOffre id={d.id} nom={d.nom} abonnement={d.abonnement} />
       <section className="card p-4">
         <h3 className="font-semibold">Temps passé par thème</h3>
         {temps.length ? <ul className="text-sm">{temps.map(([k, v]) => <li key={k}>{k} : {duree(v)}</li>)}</ul> : <p className="text-sm">Aucun.</p>}
@@ -103,10 +152,14 @@ function Detail({ id, onRetour }) {
   )
 }
 
-function Comptes() {
+function Comptes({ offreInitiale = '' }) {
   const [etat, setEtat] = useState({ charge: false })
   const [voir, setVoir] = useState(null)
   const [recherche, setRecherche] = useState('')
+  const [role, setRole] = useState('')
+  const [niveau, setNiveau] = useState('')
+  const [offre, setOffre] = useState(offreInitiale)
+  const [tri, setTri] = useState('recent')
   useEffect(() => {
     let vivant = true
     appelAdmin('revizstmg_admin_comptes').then((r) => { if (vivant) setEtat({ charge: true, ...r }) })
@@ -116,17 +169,29 @@ function Comptes() {
   if (!etat.charge) return <p className="text-sm" role="status" lang="fr" data-no-translate>Chargement…</p>
   if (!etat.ok) return <p className="text-sm" role="alert" lang="fr" data-no-translate>Erreur : {etat.erreur}</p>
   const q = recherche.trim().toLowerCase()
-  const lignes = (etat.data || []).filter((c) => !q || `${c.nom} ${c.email} ${c.specialite} ${c.niveau}`.toLowerCase().includes(q))
+  const offreDe = (c) => c.offre || 'gratuit'
+  const tris = { recent: (a, b) => (a.cree < b.cree ? 1 : -1), actif: (a, b) => ((a.maj || '') < (b.maj || '') ? 1 : -1), xp: (a, b) => (b.xp || 0) - (a.xp || 0), temps: (a, b) => (b.temps_s || 0) - (a.temps_s || 0) }
+  const lignes = (etat.data || [])
+    .filter((c) => (!q || `${c.nom} ${c.email} ${c.specialite} ${c.niveau}`.toLowerCase().includes(q)) && (!role || c.role === role) && (!niveau || c.niveau === niveau)
+      && (!offre || (offre === 'payant' ? offreDe(c) !== 'gratuit' : offreDe(c) === offre)))
+    .sort(tris[tri])
+  const sel = 'rounded border border-slate-300 bg-white px-2 py-1 text-sm dark:border-slate-600 dark:bg-slate-800'
   return (
     <div className="space-y-3" lang="fr" data-no-translate>
       <label className="block text-sm font-semibold" htmlFor="admin-recherche">Chercher un compte</label>
       <input id="admin-recherche" value={recherche} onChange={(e) => setRecherche(e.target.value)} className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 dark:border-slate-600 dark:bg-slate-800" />
-      <p className="text-xs">{lignes.length} compte(s), du plus récent au plus ancien.</p>
+      <div className="flex flex-wrap gap-2">
+        <label className="text-xs font-semibold">Rôle <select value={role} onChange={(e) => setRole(e.target.value)} className={sel}><option value="">Tous</option><option value="eleve">Élèves</option><option value="prof">Profs</option></select></label>
+        <label className="text-xs font-semibold">Niveau <select value={niveau} onChange={(e) => setNiveau(e.target.value)} className={sel}><option value="">Tous</option><option value="terminale-stmg">Terminale</option><option value="premiere-stmg">Première</option></select></label>
+        <label className="text-xs font-semibold">Offre <select value={offre} onChange={(e) => setOffre(e.target.value)} className={sel}><option value="">Toutes</option><option value="payant">Abonnés (tous)</option><option value="premium">Premium</option><option value="ultimate">Ultimate</option><option value="gratuit">Gratuit</option></select></label>
+        <label className="text-xs font-semibold">Trier par <select value={tri} onChange={(e) => setTri(e.target.value)} className={sel}><option value="recent">Inscription récente</option><option value="actif">Dernière activité</option><option value="xp">XP</option><option value="temps">Temps passé</option></select></label>
+      </div>
+      <p className="text-xs">{lignes.length} compte(s) sur {(etat.data || []).length}.</p>
       <ul className="space-y-2">
         {lignes.map((c) => (
           <li key={c.id}>
             <button type="button" onClick={() => setVoir(c.id)} className="card w-full p-3 text-left text-sm">
-              <span className="block font-semibold">{c.nom || '(sans nom)'} <span className="font-normal">· {c.role === 'prof' ? 'prof' : 'élève'} · {c.niveau === 'premiere-stmg' ? 'Première' : 'Terminale'}{c.specialite ? ` · ${c.specialite}` : ''}</span></span>
+              <span className="block font-semibold">{c.nom || '(sans nom)'} {c.offre && c.offre !== 'gratuit' && <span className="rounded-full bg-amber-200 px-2 text-xs text-amber-950">{nomOffre(c.offre)}{c.offre_offerte ? ' · offert' : ''}</span>} <span className="font-normal">· {c.role === 'prof' ? 'prof' : 'élève'} · {c.niveau === 'premiere-stmg' ? 'Première' : 'Terminale'}{c.specialite ? ` · ${c.specialite}` : ''}</span></span>
               <span className="block">Inscrit {dateFr(c.cree)} · synchro {dateFr(c.maj)} · {c.email}</span>
               <span className="block">{c.xp ?? 0} XP · série {c.serie ?? 0} · {c.reponses ?? 0} réponses · {c.exercices} exercice(s) · {c.chapitres} chapitre(s) · {duree(c.temps_s)} · {c.jours_actifs} jour(s) actif(s)</span>
             </button>
@@ -159,16 +224,22 @@ function Divers({ section }) {
       </div>
     )
   }
+  if (section === 'classes') {
+    return (
+      <div className="space-y-3" lang="fr" data-no-translate>
+        <section className="card p-4 text-sm"><h2 className="font-display text-lg font-semibold">Classes</h2>
+          {d.classes.length ? <ul>{d.classes.map((c) => <li key={c.code}>{c.nom || c.code} ({c.code}) · {c.matiere || '—'} · prof {c.prof || '—'} · {c.membres} membre(s) · créée {dateFr(c.cree)}</li>)}</ul> : <p>Aucune classe.</p>}
+        </section>
+        <section className="card p-4 text-sm"><h2 className="font-display text-lg font-semibold">Vie sociale</h2>
+          <p>{d.social.amis} profils d’amis · {d.social.demandes} demandes · {d.social.classement} lignes de classement · {d.social.membres_classe} membres de classe</p>
+        </section>
+      </div>
+    )
+  }
   return (
     <div className="space-y-3" lang="fr" data-no-translate>
       <section className="card p-4 text-sm"><h2 className="font-display text-lg font-semibold">Signalements d’erreurs</h2>
         {d.signalements.length ? <ul className="space-y-2">{d.signalements.map((s) => <li key={s.id}><b>{dateFr(s.cree)}</b> · {s.auteur || '—'} · {s.page} {s.theme || ''} {s.exercice || ''} · {s.categorie}{s.traite ? ' · traité' : ''}<br />{s.message}</li>)}</ul> : <p>Aucun signalement.</p>}
-      </section>
-      <section className="card p-4 text-sm"><h2 className="font-display text-lg font-semibold">Classes</h2>
-        {d.classes.length ? <ul>{d.classes.map((c) => <li key={c.code}>{c.nom || c.code} ({c.code}) · {c.matiere || '—'} · prof {c.prof || '—'} · {c.membres} membre(s) · créée {dateFr(c.cree)}</li>)}</ul> : <p>Aucune classe.</p>}
-      </section>
-      <section className="card p-4 text-sm"><h2 className="font-display text-lg font-semibold">Vie sociale</h2>
-        <p>{d.social.amis} profils d’amis · {d.social.demandes} demandes · {d.social.classement} lignes de classement · {d.social.membres_classe} membres de classe</p>
       </section>
     </div>
   )
@@ -194,7 +265,7 @@ export default function Admin() {
       <header className="page-hero page-hero-compact">
         <p className="kicker">Administration</p>
         <h1 className="mt-1 font-display text-[1.7rem] font-medium leading-tight">Tableau de bord</h1>
-        <p className="mt-1 text-sm">Lecture seule. Les e-mails sont masqués et les notes, le Grand Oral et les fiches ne sont jamais affichés.</p>
+        <p className="mt-1 text-sm">Les e-mails sont masqués et les notes, le Grand Oral et les fiches ne sont jamais affichés. Seul le changement d’offre d’un compte modifie des données.</p>
       </header>
       {acces === 'verif' && <p className="text-sm" role="status" lang="fr" data-no-translate>Vérification de ton accès…</p>}
       {acces === 'erreur' && <p className="text-sm" role="alert" lang="fr" data-no-translate>Impossible de charger les données (réseau ou base). Réessaie dans un instant.</p>}
@@ -207,7 +278,8 @@ export default function Admin() {
           </nav>
           {onglet === 'apercu' && apercu && <Apercu donnees={apercu} />}
           {onglet === 'comptes' && <Comptes />}
-          {(onglet === 'abos' || onglet === 'divers') && <Divers section={onglet} />}
+          {onglet === 'abos' && <><Comptes offreInitiale="payant" /><Divers section="abos" /></>}
+          {(onglet === 'signalements' || onglet === 'classes') && <Divers section={onglet} />}
         </>
       )}
     </div>

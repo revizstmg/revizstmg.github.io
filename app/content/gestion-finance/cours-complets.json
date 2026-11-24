@@ -372,10 +372,10 @@
           {
             "t": "list",
             "c": [
-              "**Rotation des stocks** = (stock moyen / coût d'achat des marchandises vendues) × 360.",
+              "**Rotation des stocks** = coût d'achat des marchandises vendues / stock moyen (nombre de fois) ; **durée de stockage** = (stock moyen / coût d'achat des marchandises vendues) × 360 (en jours).",
               "**Délai clients** = (créances clients TTC / CA TTC) × 360 — combien de jours pour être payé.",
               "**Délai fournisseurs** = (dettes fournisseurs TTC / achats TTC) × 360.",
-              "**Indépendance financière** = dettes financières / capitaux propres.",
+              "**Autonomie (indépendance) financière** = capitaux propres / total du bilan ; **taux d'endettement** = dettes financières / capitaux propres.",
               "**Capacité de remboursement** = dettes financières / CAF (idéalement < 3-4 ans)."
             ]
           },
@@ -472,8 +472,8 @@
                 "Emprunt bancaire"
               ],
               [
-                "Apports en compte courant d'associés",
-                "Augmentation de capital"
+                "—",
+                "Augmentation de capital, apports en compte courant d'associés"
               ],
               [
                 "—",

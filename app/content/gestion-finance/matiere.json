@@ -436,10 +436,10 @@
         {
           "h": "Les ratios",
           "points": [
-            "Rotation des stocks = (stock moyen / coût d’achat des marchandises vendues) × 360.",
+            "Rotation des stocks = coût d’achat des marchandises vendues / stock moyen (nombre de fois) ; durée de stockage = (stock moyen / coût d’achat des marchandises vendues) × 360 (en jours).",
             "Délai clients = (créances clients TTC / CA TTC) × 360.",
             "Délai fournisseurs = (dettes fournisseurs TTC / achats TTC) × 360.",
-            "Indépendance financière = dettes financières / capitaux propres.",
+            "Autonomie (indépendance) financière = capitaux propres / total du bilan ; taux d’endettement = dettes financières / capitaux propres.",
             "Capacité de remboursement = dettes financières / CAF (idéalement < 3-4 ans).",
             "Limites : analyse statique, sensible aux choix comptables → comparer dans le temps et l’espace."
           ]
@@ -603,7 +603,7 @@
             },
             {
               "front": "Indépendance financière",
-              "back": "Ratio = dettes financières / capitaux propres."
+              "back": "Autonomie financière = capitaux propres / total du bilan : plus elle est élevée, plus l’entreprise est indépendante des banques. (Dettes financières / capitaux propres = taux d’endettement.)"
             },
             {
               "front": "Capacité de remboursement",
@@ -714,8 +714,8 @@
         {
           "h": "Les modalités de financement",
           "points": [
-            "Financements **internes** : autofinancement (CAF moins dividendes), apports en compte courant d’associés.",
-            "Financements **externes** : emprunt bancaire, augmentation de capital, crowdfunding, subventions.",
+            "Financements **internes** : autofinancement (CAF moins dividendes).",
+            "Financements **externes** : emprunt bancaire, augmentation de capital, apports en compte courant d’associés, crowdfunding, subventions.",
             "Critères d’arbitrage : performances, endettement, coût, pouvoir des associés, attractivité du projet."
           ]
         },
@@ -767,7 +767,7 @@
                 "Le crowdfunding auprès de nombreux petits investisseurs"
               ],
               "answer": 0,
-              "explain": "L’autofinancement (CAF moins dividendes) et les apports en compte courant sont internes ; emprunt, augmentation de capital et crowdfunding sont externes."
+              "explain": "Seul l’autofinancement (CAF moins dividendes) est interne ; emprunt, augmentation de capital, apports en compte courant d’associés et crowdfunding viennent de l’extérieur de l’entreprise."
             },
             {
               "q": "CA = 300 000 €, charges variables = 180 000 €. Quel est le taux de MCV ?",
