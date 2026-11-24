@@ -44,6 +44,7 @@ export default function OutilsAccueil() {
   const level = state.track?.level
   const nbFavoris = (state.favorites || []).length
   const outils = [
+    { id: 'scroll', to: '/scroll', icon: '📱', label: t('scrollMode'), sub: tr('Un point de cours par écran') },
     { id: 'revision', to: '/revision', icon: '🧠', label: t('smartRevision'), sub: t('priorityList') },
     { id: 'bac-blanc', to: '/bac-blanc', icon: '📝', label: t('mockExam'), sub: '/20 · ⏱' },
     { id: 'programme', to: '/programme', icon: '📅', label: t('studyPlan'), sub: t('todayGoals') },

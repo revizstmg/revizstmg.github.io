@@ -1,0 +1,60 @@
+import { test, expect } from '@playwright/test'
+import { preparer, etatEleve } from './eleve.js'
+
+// Mode Scroll : un contenu par écran, ouvert à tous (aucun abonnement requis).
+test('choisir un thème, faire défiler, retourner une flashcard et répondre à une question', async ({ page }) => {
+  const erreurs = await preparer(page, etatEleve(), { abonnement: null })
+  await page.goto('./#/scroll')
+  await expect(page.getByRole('heading', { name: 'Révise en faisant défiler' })).toBeVisible()
+  await page.locator('summary', { hasText: 'Gestion' }).first().click()
+  await page.getByRole('link').filter({ hasText: /./ }).locator('visible=true').nth(0).waitFor()
+  await page.locator('a[href^="#/scroll/gestion-finance/"]').first().click()
+  const flux = page.getByRole('region', { name: 'Mode Scroll' })
+  await expect(flux).toBeVisible()
+  await expect(flux.getByText('📘 L’essentiel').first()).toBeVisible()
+  const cartes = flux.locator('.scroll-carte')
+  expect(await cartes.count()).toBeGreaterThan(5)
+  // défiler jusqu'à la première flashcard et la retourner
+  const flash = flux.locator('button.scroll-flash').first()
+  await flash.scrollIntoViewIfNeeded()
+  await flash.click()
+  await expect(flash).toHaveAttribute('aria-pressed', 'true')
+  // défiler jusqu'à la première question, y répondre
+  const choix = flux.locator('.scroll-choix button').first()
+  await choix.scrollIntoViewIfNeeded()
+  await choix.click()
+  await expect(flux.getByRole('status').first()).toBeVisible()
+  await page.screenshot({ path: '/tmp/claude-0/-home-user-NAH/b00c6cf6-33b6-5d76-a12d-45338d0a337c/scratchpad/scroll-qcm.png' })
+  await flux.getByRole('button', { name: 'Fermer le mode scroll' }).click()
+  await expect(page.getByRole('heading', { name: 'Révise en faisant défiler' })).toBeVisible()
+  expect(erreurs).toEqual([])
+})
+
+test('formats ludiques : compléter le cours, A ou B, remettre dans l’ordre, associer, mot mélangé', async ({ page }) => {
+  const erreurs = await preparer(page, etatEleve(), { abonnement: null })
+  await page.goto('./#/scroll/gestion-finance/gf-t2')
+  const flux = page.getByRole('region', { name: 'Mode Scroll' })
+  await expect(flux).toBeVisible()
+  const sd = '/tmp/claude-0/-home-user-NAH/b00c6cf6-33b6-5d76-a12d-45338d0a337c/scratchpad'
+  // À compléter : on touche un mot, le trou se remplit et on voit le verdict
+  const trou = flux.locator('.scroll-carte[data-genre="trou"]').first()
+  await trou.scrollIntoViewIfNeeded()
+  await trou.locator('.scroll-mots button').first().click()
+  await expect(trou.locator('.scroll-trou').first()).not.toHaveAttribute('data-etat', 'vide')
+  await page.screenshot({ path: `${sd}/scroll-trou.png` })
+  // Associer : trois paires à relier
+  const paires = flux.locator('.scroll-carte[data-genre="paires"]').first()
+  await paires.scrollIntoViewIfNeeded()
+  await page.screenshot({ path: `${sd}/scroll-paires.png` })
+  // Mot mélangé : on rend la main avec « Je sèche »
+  const mot = flux.locator('.scroll-carte[data-genre="mot"]').first()
+  await mot.scrollIntoViewIfNeeded()
+  await page.screenshot({ path: `${sd}/scroll-mot.png` })
+  await mot.getByRole('button', { name: 'Je sèche' }).click()
+  await expect(mot.getByRole('status')).toContainText('Le mot était')
+  // Remettre dans l'ordre : on joue les étapes dans le bon ordre (la bonne se reconnaît à la fin)
+  const ordre = flux.locator('.scroll-carte[data-genre="ordre"]').first()
+  await ordre.scrollIntoViewIfNeeded()
+  await page.screenshot({ path: `${sd}/scroll-ordre.png` })
+  expect(erreurs).toEqual([])
+})

@@ -3910,5 +3910,16 @@
   "Administration": "Amministrazione",
   "Traducteur": "Traduttore",
   "Les comptes créés avant le 30 octobre 2026 gardent l’accès complet jusqu’au 30 novembre 2026. Les cours et les exercices de base restent gratuits pour tous.": "Gli account creati prima del 30 ottobre 2026 mantengono l’accesso completo fino al 30 novembre 2026. I corsi e gli esercizi di base restano gratuiti per tutti.",
-  "Durée de stockage (rotation des stocks en jours)": "Durata di giacenza (rotazione delle scorte in giorni)"
+  "Durée de stockage (rotation des stocks en jours)": "Durata di giacenza (rotazione delle scorte in giorni)",
+  "Un point de cours par écran": "Un punto del corso per schermata",
+  "Touche pour revoir le terme": "Tocca per rivedere il termine",
+  "Bravo ! +{v0} XP.": "Bravo! +{v0} XP.",
+  "↑ Fais glisser pour continuer": "↑ Scorri verso l’alto per continuare",
+  "Effacer": "Cancella",
+  "Le mot manquant :": "La parola mancante:",
+  "Lettres": "Lettere",
+  "Sans faute !": "Senza errori!",
+  "Touche dans l’ordre.": "Tocca in ordine.",
+  "{v0} erreur{v1} en route.": "{v0} errore{v1} lungo il percorso.",
+  "{v0} erreur{v1}.": "{v0} errore{v1}."
 }

@@ -1188,20 +1188,31 @@ const textesDe = (o, out = []) => {
 
 // Chapitre sans QCM : un jeu « de quoi parle-t-on ? » fabriqué avec les mots en gras du chapitre qui ont une
 // définition au glossaire de la matière. Les mauvaises réponses sont les autres termes du MÊME chapitre.
+// Termes en gras d'une source de cours qui ont une définition dans le glossaire de la matière.
+function collecterTermes(glossaire, source) {
+  const vus = new Map()
+  for (const t of textesDe(source)) {
+    for (const m of t.matchAll(/\*\*([^*]+)\*\*/g)) {
+      const terme = m[1].trim().replace(/[.:;,]+$/, '')
+      const def = trouverDefinition(glossaire, terme)
+      if (def && terme.length <= 40 && !vus.has(terme.toLowerCase()) && ![...vus.values()].some((v) => v.def === def)) vus.set(terme.toLowerCase(), { terme, def })
+    }
+  }
+  return [...vus.values()]
+}
+
+// Termes de vocabulaire d'un chapitre (ou, s'il en a trop peu, du thème entier) avec leur définition.
+export function termesDuChapitre(chapter, theme) {
+  const glossaire = glossaireDe(theme?.subjectId)
+  if (!glossaire?.size) return []
+  const items = collecterTermes(glossaire, chapter.section)
+  return items.length >= 4 ? items : collecterTermes(glossaire, theme.cours || [])
+}
+
 export function qcmDesTermes(chapter, theme) {
   const glossaire = glossaireDe(theme?.subjectId)
   if (!glossaire?.size) return null
-  const collecter = (source) => {
-    const vus = new Map()
-    for (const t of textesDe(source)) {
-      for (const m of t.matchAll(/\*\*([^*]+)\*\*/g)) {
-        const terme = m[1].trim().replace(/[.:;,]+$/, '')
-        const def = trouverDefinition(glossaire, terme)
-        if (def && terme.length <= 40 && !vus.has(terme.toLowerCase()) && ![...vus.values()].some((v) => v.def === def)) vus.set(terme.toLowerCase(), { terme, def })
-      }
-    }
-    return [...vus.values()]
-  }
+  const collecter = (source) => collecterTermes(glossaire, source)
   // Un chapitre très court n'a pas assez de termes : on complète avec ceux du thème (mieux que zéro exercice).
   let items = collecter(chapter.section)
   let duThemeEntier = false
@@ -1494,6 +1505,7 @@ const sansAccents = (x) => String(x || '').normalize('NFD').replace(/[\u0300-\u0
 const PAGES_RECHERCHE = [
   { to: '/programme', label: 'Programme jusqu’au bac : les dates des épreuves', mots: 'dates epreuves bac examen calendrier convocation anticipees anticipee jour j compte a rebours planning' },
   { to: '/parcours', label: 'Mon parcours : mon plan semaine par semaine', mots: 'parcours plan planning semaine temps heures objectifs quoi reviser programme personnalise' },
+  { to: '/scroll', label: 'Mode Scroll : réviser en faisant défiler', mots: 'scroll tiktok vertical cartes flemme rapide telephone defiler swipe flashcards' },
   { to: '/seance', label: 'Ma séance du jour', mots: 'seance jour reviser rapide questions quotidien express' },
   { to: '/bac-blanc', label: 'Bac blanc : sujets et corrigés', mots: 'bac blanc sujet sujets corrige corriges annales pdf examen entrainement' },
   { to: '/grand-oral', label: 'Grand Oral : préparer l’épreuve', mots: 'grand oral epreuve jury projet orientation questions' },

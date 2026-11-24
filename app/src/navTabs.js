@@ -8,6 +8,7 @@ export const ALL_TABS = {
   coachia: { icon: '🤖', labelKey: 'coachAI', to: '/coach-ia', match: ['/coach-ia'] },
   defi: { icon: '⚡', labelKey: 'dailyChallenge', to: '/defi', match: ['/defi'] },
   formules: { icon: '📐', labelKey: 'formulaWorkshop', to: '/atelier-formules', match: ['/atelier-formules', '/formules', '/express'] },
+  scroll: { icon: '📱', labelKey: 'scrollMode', to: '/scroll', match: ['/scroll'] },
   sportbac: { icon: '🏅', labelKey: 'sportBacTitle', to: '/sport-bac', match: ['/sport-bac'] },
   methodo: { icon: '🧭', labelKey: 'methodoTitle', to: '/methodo', match: ['/methodo'] },
   boutique: { icon: '🛍️', labelKey: 'shop', to: '/boutique', match: ['/boutique'] },
