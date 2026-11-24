@@ -751,6 +751,7 @@ https://revizstmg.github.io/cours/premiere/mathematiques/
 https://revizstmg.github.io/cours/premiere/mathematiques/information-chiffree/
 https://revizstmg.github.io/cours/premiere/mathematiques/information-chiffree/proportion-et-taux-d-evolution/
 https://revizstmg.github.io/cours/premiere/mathematiques/information-chiffree/evolutions-successives-et-reciproque/
+https://revizstmg.github.io/cours/premiere/mathematiques/information-chiffree/taux-moyen-et-indice-base-100/
 https://revizstmg.github.io/cours/premiere/mathematiques/information-chiffree/exemple-traite-proportion-d-un-sous-ensemble-et-evolutions-successives/
 https://revizstmg.github.io/cours/premiere/mathematiques/suites-numeriques/
 https://revizstmg.github.io/cours/premiere/mathematiques/suites-numeriques/la-suite-arithmetique/
