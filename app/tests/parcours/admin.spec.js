@@ -40,3 +40,28 @@ test('une adresse autorisée mais refusée par la base ne montre rien non plus',
   await expect(page.getByRole('heading', { name: 'Tableau de bord' })).toHaveCount(0)
   await expect(page.getByText('Visites par jour (30 jours)')).toHaveCount(0)
 })
+
+test('un administrateur change l’offre d’un compte depuis sa fiche', async ({ page }) => {
+  await preparer(page, etatEleve())
+  await page.addInitScript((x) => localStorage.setItem('stmg_session', JSON.stringify(x)), session('gabriel.merlin2872@icloud.com'))
+  const corps = []
+  const compte = { id: 'c1', role: 'eleve', nom: 'Élève Test', email: 'él***@x.fr', niveau: 'terminale-stmg', specialite: 'rh-communication', cree: '2026-11-19T10:00:00Z', maj: '2026-11-20T10:00:00Z', offre: 'gratuit', xp: 10, exercices: 1, chapitres: 1, jours_actifs: 1, temps_s: 60 }
+  await page.route('**/rest/v1/rpc/revizstmg_admin_*', (route) => {
+    const fn = route.request().url().split('/rpc/')[1]
+    const json = (b) => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(b) })
+    if (fn === 'revizstmg_admin_apercu') return json({ ...apercu, offres: { premium: 1, ultimate: 2, reels: 1, offerts: 2 }, signalements_ouverts: 3 })
+    if (fn === 'revizstmg_admin_comptes') return json([compte])
+    if (fn === 'revizstmg_admin_compte') return json({ ...compte, progression: {}, abonnement: null, ia: [] })
+    if (fn === 'revizstmg_admin_abonnement') { corps.push(JSON.parse(route.request().postData())); return json({ offre: 'ultimate', periode: 'mensuel', statut: 'active', periode_fin: '2026-12-24T10:00:00Z', mode_test: false }) }
+    return json({})
+  })
+  page.on('dialog', (d) => d.accept())
+  await page.goto('./#/admin')
+  await expect(page.getByText('Abonnés actifs')).toBeVisible()
+  await page.getByRole('button', { name: 'Comptes', exact: true }).click()
+  await page.getByRole('button', { name: /Élève Test/ }).click()
+  await page.getByLabel('Passer à').selectOption('ultimate')
+  await page.getByRole('button', { name: 'Appliquer' }).click()
+  await expect(page.getByText('Offre Ultimate enregistrée.')).toBeVisible()
+  expect(corps).toEqual([{ p_id: 'c1', p_offre: 'ultimate', p_jours: 30 }])
+})

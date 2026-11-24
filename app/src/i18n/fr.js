@@ -21,7 +21,7 @@ export default {
   classActionFailed: "Impossible de mettre à jour tes classes. Vérifie ta connexion et réessaie.",
   formulaWorkshop: 'Atelier de formules',
   // en-tête / navigation
-  search: 'Rechercher un chapitre', dictionary: 'Dictionnaire', language: 'Langue',
+  search: 'Rechercher un chapitre', dictionary: 'Traducteur', language: 'Langue',
   mySpace: 'Mon espace', light: 'Passer en mode clair', dark: 'Passer en mode sombre',
   home: 'Accueil', theme: 'Thème', chapter: 'Chapitre', level: 'Niveau', levelShort: 'Niv.',
   streakDays: 'j de suite', streakTitle: 'Jours de révision consécutifs', xpTitle: 'Niveau et points d’expérience',

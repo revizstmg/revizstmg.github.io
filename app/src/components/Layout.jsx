@@ -476,7 +476,7 @@ function SearchOverlay({ onClose }) {
 
   const go = (r) => {
     onClose()
-    navigate(r.type === 'subject' ? `/subject/${r.id}` : `/subject/${r.subjectId}/theme/${r.id}`)
+    navigate(r.type === 'page' ? r.to : r.type === 'subject' ? `/subject/${r.id}` : `/subject/${r.subjectId}/theme/${r.id}`)
   }
 
   return (

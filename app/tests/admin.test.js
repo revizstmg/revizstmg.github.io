@@ -21,6 +21,14 @@ describe('menu administrateur', () => {
     // les textes personnels ne sortent jamais
     for (const cle of ['notesClasse', 'grandOral', 'etudeGestion', 'fiches']) expect(sql).toContain(`'${cle}'`)
   })
+  it('la migration de changement d’offre est gardée, validée et n’annule jamais un vrai abonnement Stripe', () => {
+    const sql = readFileSync(new URL('../../supabase/migrations/20261124100000_revizstmg_admin_abonnements.sql', import.meta.url), 'utf8')
+    expect(sql).toContain('perform public.revizstmg_admin_garde()')
+    expect(sql).toMatch(/revoke all on function public\.revizstmg_admin_abonnement\(uuid, text, integer\) from public, anon, authenticated/)
+    expect(sql).not.toMatch(/grant execute[^;]*to anon/)
+    expect(sql).toContain("p_offre not in ('gratuit', 'premium', 'ultimate')")
+    expect(sql).toContain('abonnement_stripe_actif')
+  })
   it('affiche les durées lisiblement', () => {
     expect(duree(201.4)).toBe('3 min 21 s')
     expect(duree(70)).toBe('1 min 10 s')

@@ -1488,19 +1488,41 @@ export function shuffle(arr) {
 
 // Recherche simple (chapitres + matières + intitulés de jeux/notions).
 const sansAccents = (x) => String(x || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+
+// Pages de l'app qu'un élève cherche avec ses mots à lui (« date bac », « plan », « prix »…) : sans cette liste,
+// la recherche ne connaît que les matières et les thèmes, et ces pages restent cachées dans le menu.
+const PAGES_RECHERCHE = [
+  { to: '/programme', label: 'Programme jusqu’au bac : les dates des épreuves', mots: 'dates epreuves bac examen calendrier convocation anticipees anticipee jour j compte a rebours planning' },
+  { to: '/parcours', label: 'Mon parcours : mon plan semaine par semaine', mots: 'parcours plan planning semaine temps heures objectifs quoi reviser programme personnalise' },
+  { to: '/seance', label: 'Ma séance du jour', mots: 'seance jour reviser rapide questions quotidien express' },
+  { to: '/bac-blanc', label: 'Bac blanc : sujets et corrigés', mots: 'bac blanc sujet sujets corrige corriges annales pdf examen entrainement' },
+  { to: '/grand-oral', label: 'Grand Oral : préparer l’épreuve', mots: 'grand oral epreuve jury projet orientation questions' },
+  { to: '/sport-bac', label: 'Sport au bac : épreuve et référentiel', mots: 'sport eps epreuve ccf referentiel bareme notes' },
+  { to: '/atelier-formules', label: 'Atelier de formules', mots: 'formule formules calcul calculs aide memoire' },
+  { to: '/offres', label: 'Les offres : gratuit, Premium, Ultimate', mots: 'offre offres prix tarif abonnement abonner premium ultimate gratuit payant paiement' },
+  { to: '/changer', label: 'Changer de niveau', mots: 'changer niveau premiere terminale specialite filiere' },
+  { to: '/classement', label: 'Classement de la semaine', mots: 'classement ligue points classe amis rang' },
+  { to: '/faq', label: 'Questions fréquentes', mots: 'faq aide question questions aide probleme contact' },
+]
+// « 4 p » et « 4P » doivent se valoir ; chaque mot de la recherche doit se retrouver (dans n'importe quel ordre).
+const motsDe = (q) => sansAccents(q).replace(/\b(\d)\s+([a-z])\b/g, '$1$2').split(/[\s,;]+/).filter((m) => m.length > 0)
 // `idsMatieres` (facultatif) limite la recherche aux matières du niveau de l'élève.
 export function search(query, idsMatieres = null) {
-  const q = sansAccents(query.trim())
-  if (!q) return []
+  const mots = motsDe(query.trim())
+  if (!mots.length) return []
+  const tous = (hay) => mots.every((m) => hay.includes(m))
   const res = []
+  for (const p of PAGES_RECHERCHE) {
+    if (tous(sansAccents(`${p.label} ${p.mots}`))) res.push({ type: 'page', id: p.to, to: p.to, label: p.label, sub: 'Page du site', color: '#c8a24e' })
+  }
   for (const s of SUBJECTS) {
     if (idsMatieres && !idsMatieres.includes(s.id)) continue
-    if (sansAccents(s.name).includes(q))
+    if (tous(sansAccents(s.name)))
       res.push({ type: 'subject', id: s.id, label: s.name, sub: 'Matière', color: s.color })
     if (['langues','p1-langues'].includes(s.id)) continue
     for (const c of s.chapters) {
-      const hay = sansAccents(c.name + ' ' + (c.short || '') + ' ' + (c.keywords || ''))
-      if (hay.includes(q))
+      const hay = sansAccents(`${c.name} ${c.short || ''} ${c.keywords || ''} ${s.name}`)
+      if (tous(hay))
         res.push({
           type: 'chapter',
           id: c.id,
