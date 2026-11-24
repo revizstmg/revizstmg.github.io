@@ -13,21 +13,24 @@ describe('mode scroll', () => {
   it('chaque thème donne un flux de cartes valides, avec cours, flashcards et questions', async () => {
     await chargerTout()
     let avecFlash = 0, avecQcm = 0
+    const tailles = []
     for (const id of Object.keys(ALL_CHAPTERS)) {
       const flux = construireFlux(id)
       if (!(ALL_CHAPTERS[id].cours || []).length) continue
       expect(flux.length, id).toBeGreaterThan(0)
-      expect(flux.length).toBeLessThanOrEqual(90)
+      expect(flux.length).toBeLessThanOrEqual(100)
       for (const c of flux) {
         if (c.type === 'flash') { expect(c.recto && c.verso).toBeTruthy(); }
         else if (c.type === 'qcm') { expect(c.choix.length).toBeGreaterThanOrEqual(2); expect(c.bonne).toBeLessThan(c.choix.length) }
         else expect(c.texte.length, id).toBeGreaterThan(5)
         expect((String(c.texte || '').match(/\*\*/g) || []).length % 2, id).toBe(0)
       }
+      tailles.push(flux.length)
       if (flux.some((c) => c.type === 'flash')) avecFlash++
       if (flux.some((c) => c.type === 'qcm')) avecQcm++
     }
     expect(avecFlash).toBeGreaterThan(30)
     expect(avecQcm).toBeGreaterThan(30)
+    expect(tailles.filter((n) => n >= 80).length).toBeGreaterThan(tailles.length / 2)
   })
 })

@@ -69,7 +69,7 @@ function Carte({ c, onBonne }) {
       )}
       {c.type === 'qcm' && (
         <>
-          <p className="scroll-texte"><CourseText text={c.q} /></p>
+          <p className="scroll-texte whitespace-pre-line"><CourseText text={c.q} /></p>
           <div className="scroll-choix" role="group" aria-label="Réponses">
             {c.choix.map((ch, i) => (
               <button

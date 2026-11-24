@@ -1,10 +1,10 @@
 // Mode Scroll : un chapitre ou un thème transformé en cartes courtes, une par écran, qu'on fait défiler
 // vers le haut. Les cartes de cours viennent du cours lui-même (rien n'est inventé) ; une flashcard revient
 // toutes les trois cartes et une question éclair toutes les sept.
-import { ALL_CHAPTERS, themeChapters, flashcardsForSection, buildQuiz } from './index.js'
+import { ALL_CHAPTERS, themeChapters, flashcardsForSection, buildQuiz, qcmDesTermes } from './index.js'
 
-const MAX_CARTES = 90
-const PAR_SECTION = 6
+const MAX_CARTES = 100
+const PAR_SECTION = 10
 const LONGUEUR = 230
 
 // Coupe un paragraphe en morceaux de ~230 caractères, à la fin d'une phrase, sans casser un passage en gras.
@@ -34,8 +34,8 @@ function cartesDeSection(sec, chapitre) {
   const ajouter = (c) => { if (cartes.length < PAR_SECTION) cartes.push({ ...c, chapitre }) }
   for (const b of sec?.blocks || []) {
     if (cartes.length >= PAR_SECTION) break
-    if (b.t === 'p') for (const m of decouper(b.c).slice(0, 2)) ajouter({ type: 'cours', texte: m })
-    else if (b.t === 'list') for (const it of (b.c || []).slice(0, 2)) ajouter({ type: 'cours', texte: reduire(String(it)) })
+    if (b.t === 'p') for (const m of decouper(b.c).slice(0, 3)) ajouter({ type: 'cours', texte: m })
+    else if (b.t === 'list') for (const it of (b.c || []).slice(0, 4)) ajouter({ type: 'cours', texte: reduire(String(it)) })
     else if (b.t === 'formula') ajouter({ type: 'formule', texte: String(b.c || '') })
     else if (b.t === 'warning') ajouter({ type: 'piege', texte: reduire(String(b.c || '')) })
     else if (b.t === 'tip') ajouter({ type: 'astuce', texte: reduire(String(b.c || '')) })
@@ -44,32 +44,49 @@ function cartesDeSection(sec, chapitre) {
   return cartes.filter((c) => c.texte && c.texte.trim())
 }
 
-// Les cartes d'un thème, dans l'ordre : cours, avec une flashcard toutes les trois cartes, puis une question éclair
-// toutes les sept. `hasard` permet de rendre le mélange des questions reproductible dans les tests.
+const versQcm = (q, chapitre) => ({ type: 'qcm', q: q.q, choix: q.choices, bonne: q.answer, explication: q.explain || '', chapitre })
+const qcmValide = (q) => q?.q && Array.isArray(q.choices) && q.choices.length >= 2 && Number.isInteger(q.answer) && q.answer < q.choices.length
+
+// Mélange d'un chapitre : deux cartes de cours, une flashcard, puis (un tour sur deux) une question éclair.
+function melanger(cours, fiches, questions) {
+  const out = []
+  const c = [...cours], f = [...fiches], q = [...questions]
+  let tour = 0
+  while (c.length || f.length || q.length) {
+    out.push(...c.splice(0, 2))
+    if (f.length) out.push(f.shift())
+    if (tour % 2 === 1 || !c.length) { if (q.length) out.push(q.shift()) }
+    tour++
+  }
+  return out
+}
+
+// Les cartes d'un thème (une centaine au plus), chapitre après chapitre : le cours d'abord, avec flashcards et
+// questions éclair intercalées. Les questions du thème entier (QCM, vrai/faux) sont réparties entre les chapitres.
+// Au-delà de `max`, on retire d'abord les cartes de cours en trop, puis les questions, puis les flashcards,
+// dans le chapitre le plus chargé : tous les chapitres restent représentés.
 export function construireFlux(themeId, { max = MAX_CARTES } = {}) {
   const theme = ALL_CHAPTERS[themeId]
   if (!theme) return []
-  const flux = []
-  for (const ch of themeChapters(theme)) {
+  const chapitres = themeChapters(theme)
+  const blocs = chapitres.map((ch) => {
     const nom = ch.title || theme.short || theme.name
     const cours = cartesDeSection(ch.section, nom)
-    const fiches = (flashcardsForSection(ch.section, theme, ch.idx)?.cards || []).slice(0, 3).map((c) => ({ type: 'flash', recto: c.front, verso: c.back, chapitre: nom }))
-    cours.forEach((c, i) => {
-      flux.push(c)
-      if ((i + 1) % 3 === 0 && fiches.length) flux.push(fiches.shift())
-    })
-    flux.push(...fiches.slice(0, 1))
+    const fiches = (flashcardsForSection(ch.section, theme, ch.idx)?.cards || []).slice(0, 8).map((x) => ({ type: 'flash', recto: x.front, verso: x.back, chapitre: nom }))
+    const questions = (qcmDesTermes(ch, theme)?.questions || []).filter(qcmValide).slice(0, 8).map((x) => versQcm(x, nom))
+    return { cours, fiches, questions }
+  })
+  const pool = buildQuiz(themeId).filter(qcmValide).map((x) => versQcm(x, theme.short || theme.name))
+  pool.forEach((q, i) => blocs[i % Math.max(1, blocs.length)]?.questions.push(q))
+  const total = () => blocs.reduce((n, b) => n + b.cours.length + b.fiches.length + b.questions.length, 0)
+  const lourd = () => blocs.reduce((m, b) => (b.cours.length + b.fiches.length + b.questions.length > m.n ? { b, n: b.cours.length + b.fiches.length + b.questions.length } : m), { b: null, n: 0 }).b
+  while (total() > max) {
+    const b = lourd()
+    if (b.cours.length > 3) b.cours.pop()
+    else if (b.questions.length > 1) b.questions.pop()
+    else if (b.fiches.length > 1) b.fiches.pop()
+    else if (b.cours.length > 1) b.cours.pop()
+    else break
   }
-  const qcm = buildQuiz(themeId)
-    .filter((q) => q?.q && Array.isArray(q.choices) && q.choices.length >= 2)
-    .map((q) => ({ type: 'qcm', q: q.q, choix: q.choices, bonne: q.answer, explication: q.explain || '', chapitre: theme.short || theme.name }))
-  const mixte = []
-  let n = 0
-  for (const c of flux) {
-    mixte.push(c)
-    n++
-    if (n % 7 === 0 && qcm.length) mixte.push(qcm.shift())
-  }
-  mixte.push(...qcm)
-  return mixte.slice(0, max)
+  return blocs.flatMap((b) => melanger(b.cours, b.fiches, b.questions))
 }
