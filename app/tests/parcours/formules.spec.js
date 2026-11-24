@@ -58,7 +58,7 @@ test('catalogue étendu : filtrer, sélectionner et reprendre une séance longue
  await expect(page.getByRole('checkbox')).toHaveCount(161)
  await page.getByRole('combobox',{name:/^Matière/}).selectOption('Gestion & Finance')
  await page.getByLabel('Domaine de calcul').selectOption('Rentabilité et ratios')
- await expect(page.getByRole('checkbox',{name:/Rotation des stocks/})).toBeVisible()
+ await expect(page.getByRole("checkbox",{name:/rotation des stocks/i})).toBeVisible()
  await page.getByLabel('Rechercher une formule').fill('Délai clients')
  await expect(page.getByRole('checkbox')).toHaveCount(1)
  await page.getByRole('button',{name:'Sélectionner les formules affichées'}).click()
