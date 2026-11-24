@@ -1,6 +1,6 @@
 {
- "date": "2026-11-23",
- "heure": "2026-11-23T15:39:33.340Z",
+ "date": "2026-11-24",
+ "heure": "2026-11-24T15:31:36.766Z",
  "utilisation": {
   "erreur": "Supabase injoignable (Le serveur ne répond pas. Vérifie ta connexion puis réessaie.)"
  },
@@ -9,9 +9,9 @@
   "terminale": 11,
   "premiere": 8,
   "themes": 110,
-  "chapitres": 861,
-  "series": 5754,
-  "questions": 27589,
+  "chapitres": 862,
+  "series": 5747,
+  "questions": 27524,
   "flashcards": 2256
  },
  "publication": {
@@ -21,13 +21,13 @@
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-11-23T08:17:29Z"
+   "date": "2026-11-24T15:24:23Z"
   },
   "dernierePublication": {
    "etat": "success",
-   "date": "2026-11-23T08:17:29Z"
+   "date": "2026-11-24T15:24:23Z"
   },
-  "modifications7j": 31
+  "modifications7j": 19
  },
  "tests": "success"
 }
