@@ -32,14 +32,19 @@
             },
             {
               "t": "p",
-              "c": "Dans un **État de droit**, la puissance publique elle-même est **soumise au droit** : personne n’est au-dessus de la loi. Deux principes structurants s’y rattachent :"
+              "c": "Dans un **État de droit**, la puissance publique elle-même est **soumise au droit** : personne n’est au-dessus de la loi. Trois principes structurants s’y rattachent :"
             },
             {
               "t": "list",
               "c": [
-                "la **laïcité** : l’État est neutre en matière religieuse et garantit la liberté de conscience ;",
-                "l’**ordre public** : l’ensemble des règles essentielles (sécurité, salubrité, tranquillité, dignité) auxquelles on ne peut pas déroger par contrat."
+                "la **hiérarchie des normes** : la Constitution prime sur les traités, les lois et les règlements ;",
+                "la **séparation des pouvoirs** : le législatif, l’exécutif et le judiciaire s’équilibrent ;",
+                "les **droits fondamentaux**, garantis par un juge indépendant qui contrôle l’action de l’État."
               ]
+            },
+            {
+              "t": "p",
+              "c": "Deux notions voisines sont à ne pas confondre avec ces principes : la **laïcité** (l’État est neutre en matière religieuse et garantit la liberté de conscience) et l’**ordre public** (règles essentielles — sécurité, salubrité, tranquillité, dignité — auxquelles on ne peut pas déroger par contrat)."
             }
           ]
         },
@@ -135,7 +140,7 @@
         }
       ],
       "essentiel": [
-        "Fonctions du droit : **organiser, pacifier, protéger, sanctionner** ; dans l’**État de droit**, l’État est soumis au droit (+ **laïcité**, **ordre public**).",
+        "Fonctions du droit : **organiser, pacifier, protéger, sanctionner** ; dans l’**État de droit**, l’État est soumis au droit (hiérarchie des normes, séparation des pouvoirs, droits fondamentaux ; notions voisines : **laïcité**, **ordre public**).",
         "Règle de droit = **générale, impersonnelle, obligatoire, coercitive** (contrainte / sanction de l’État) (≠ règle morale/religieuse).",
         "Sources : **Constitution > traités/UE > lois > règlements** (+ jurisprudence, coutume) ; contrôle par le **Conseil constitutionnel** et la **QPC**.",
         "**Droit privé** (particuliers) vs **droit public** (État)."

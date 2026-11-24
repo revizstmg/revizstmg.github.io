@@ -52,12 +52,12 @@ export default function Dictionary({ onClose }) {
   const LangPicker = ({ value, onChange, label }) => (
     <div className="flex-1" role="group" aria-label={label}>
       <span className="mb-1 block text-[0.65rem] font-semibold uppercase tracking-wide text-slate-400">{label}</span>
-      <div className="flex gap-1">
+      <div className="flex flex-wrap gap-1">
         {Object.entries(LANGS).map(([code, name]) => (
           <button
             key={code}
             onClick={() => onChange(code)}
-            className={`flex-1 rounded-lg px-2 py-1.5 text-xs font-semibold transition ${value === code ? 'bg-violet-600 text-white' : 'bg-slate-100 text-slate-500 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400'}`}
+            className={`min-w-[3.5rem] flex-1 rounded-lg px-2 py-1.5 text-xs font-semibold transition ${value === code ? 'bg-violet-600 text-white' : 'bg-slate-100 text-slate-500 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400'}`}
           >
             {name}
           </button>
@@ -71,13 +71,13 @@ export default function Dictionary({ onClose }) {
       <div ref={fenetre} role="dialog" aria-modal="true" aria-labelledby="titre-dictionnaire" className="card w-full max-w-lg animate-pop-in p-4" onClick={(e) => e.stopPropagation()}>
         <div className="mb-3 flex items-center gap-2">
           <Icon.Book size={18} />
-          <h2 id="titre-dictionnaire" className="font-display text-lg font-semibold">Dictionnaire</h2>
+          <h2 id="titre-dictionnaire" className="font-display text-lg font-semibold">Traducteur</h2>
           <button onClick={onClose} className="ml-auto text-slate-400 hover:text-slate-600" aria-label="Fermer">✕</button>
         </div>
 
-        <div className="flex items-end gap-2">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-end">
           <LangPicker value={source} onChange={setSource} label="De" />
-          <button onClick={swap} className="mb-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Inverser les langues" title="Inverser">
+          <button onClick={swap} className="mb-0.5 grid h-9 w-9 shrink-0 place-items-center self-center sm:self-auto rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Inverser les langues" title="Inverser">
             <Icon.Swap size={18} />
           </button>
           <LangPicker value={target} onChange={setTarget} label="Vers" />

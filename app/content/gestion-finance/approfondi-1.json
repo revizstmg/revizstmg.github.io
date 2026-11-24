@@ -1191,7 +1191,7 @@
         },
         {
           "t": "p",
-          "c": "Deux ratios mesurent la **rotation**. La **rotation des stocks**, égale au **stock moyen divisé par les achats, multiplié par 360**, donne la **durée de stockage en jours**. Le **délai clients**, égal aux **créances divisées par le chiffre d’affaires TTC, multiplié par 360**, donne le **délai moyen de paiement** des clients. Enfin, la **rentabilité commerciale**, égale au **résultat divisé par le chiffre d’affaires, multiplié par 100**, donne la **marge nette** en pourcentage."
+          "c": "Deux ratios mesurent la **rotation**. La **durée de stockage**, égale au **stock moyen divisé par le coût d’achat des marchandises vendues, multiplié par 360**, se lit en **jours** (la **rotation des stocks** est l’inverse : le nombre de fois où le stock se renouvelle). Le **délai clients**, égal aux **créances divisées par le chiffre d’affaires TTC, multiplié par 360**, donne le **délai moyen de paiement** des clients. Enfin, la **rentabilité commerciale**, égale au **résultat divisé par le chiffre d’affaires, multiplié par 100**, donne la **marge nette** en pourcentage."
         },
         {
           "t": "p",
@@ -1233,8 +1233,8 @@
               "Dettes financières ÷ capitaux propres (idéal < 1)"
             ],
             [
-              "Rotation des stocks",
-              "Stock moyen ÷ coût d’achat des marchandises vendues × 360 (durée de stockage en jours)"
+              "Durée de stockage (rotation des stocks en jours)",
+              "Stock moyen ÷ coût d’achat des marchandises vendues × 360 (jours) ; rotation = coût d’achat des marchandises vendues ÷ stock moyen (fois)"
             ],
             [
               "Délai clients",

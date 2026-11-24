@@ -124,8 +124,8 @@ function ProgrammePage() {
           <div className="h-full rounded-full" style={{ width: `${masteredPct}%`, backgroundColor: 'var(--c-accent)' }} />
         </div>
         <div className="mt-4 grid grid-cols-2 gap-2">
-          <Link to={gratuit ? '/offres' : '/revision'} className="btn-ghost justify-center text-center">🧠 {t('smartRevision')}<PastillePremium to="/revision" /></Link>
-          <Link to={gratuit ? '/offres' : '/bac-blanc'} className="btn-ghost justify-center text-center">📝 {t('mockExam')}<PastillePremium to="/bac-blanc" /></Link>
+          <Link to={gratuit ? '/offres' : '/revision'} className="btn-ghost flex-wrap justify-center text-center">🧠 {t('smartRevision')}<PastillePremium to="/revision" /></Link>
+          <Link to={gratuit ? '/offres' : '/bac-blanc'} className="btn-ghost flex-wrap justify-center text-center">📝 {t('mockExam')}<PastillePremium to="/bac-blanc" /></Link>
         </div>
       </section>
     </div>

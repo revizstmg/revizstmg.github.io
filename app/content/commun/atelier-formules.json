@@ -3696,7 +3696,7 @@
   {
     "id": "x104",
     "cat": "Gestion & Finance",
-    "name": "Rotation des stocks",
+    "name": "Durée de stockage (rotation des stocks en jours)",
     "inputs": [
       {
         "symbol": "a",

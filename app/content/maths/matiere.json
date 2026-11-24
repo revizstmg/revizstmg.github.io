@@ -81,7 +81,7 @@
               "q": "Une hausse de 20 % suivie d’une baisse de 20 %, cela donne au total…",
               "gen": "evolutions_successives",
               "choices": [
-                "Une baisse d’environ 4 %",
+                "Une baisse de 4 %",
                 "Aucun changement",
                 "Une hausse de 4 %",
                 "Une baisse de 40 %"
@@ -186,19 +186,19 @@
         {
           "h": "Arithmétique ou géométrique : raison, formule et croissance",
           "points": [
-            "Arithmétique (on ajoute la raison r) : u_n = u_0 + n·r (croissance linéaire).",
-            "Géométrique (on multiplie par la raison q) : u_n = u_0 × q^n (croissance exponentielle).",
+            "Arithmétique (on ajoute la raison r) : uₙ = u₀ + n·r (croissance linéaire).",
+            "Géométrique (on multiplie par la raison q) : uₙ = u₀ × qⁿ (croissance exponentielle).",
             "Sens de variation, comparaison, calcul de termes au tableur."
           ]
         }
       ],
       "formulas": [
-        "Arithmétique : u_n = u_0 + n·r",
-        "Géométrique : u_n = u_0 × q^n"
+        "Arithmétique : uₙ = u₀ + n·r",
+        "Géométrique : uₙ = u₀ × qⁿ"
       ],
       "essentiel": [
-        "Suite **arithmétique** : on ajoute la raison r → u_n = u_0 + n·r (croissance **linéaire**).",
-        "Suite **géométrique** : on multiplie par la raison q → u_n = u_0 × q^n (croissance **exponentielle**).",
+        "Suite **arithmétique** : on ajoute la raison r → uₙ = u₀ + n·r (croissance **linéaire**).",
+        "Suite **géométrique** : on multiplie par la raison q → uₙ = u₀ × qⁿ (croissance **exponentielle**).",
         "Hausse/baisse de p % ⇒ raison **q = 1 ± p/100** (ex. −8 % → q = 0,92)."
       ],
       "games": [
@@ -217,7 +217,7 @@
                 "Élevant au carré"
               ],
               "answer": 0,
-              "explain": "Suite arithmétique : u_(n+1) = u_n + r (on ajoute r). Croissance linéaire."
+              "explain": "Suite arithmétique : uₙ₊₁ = uₙ + r (on ajoute r). Croissance linéaire."
             },
             {
               "q": "Dans une suite GÉOMÉTRIQUE, on passe d’un terme au suivant en…",
@@ -228,7 +228,7 @@
                 "Ajoutant n"
               ],
               "answer": 0,
-              "explain": "Suite géométrique : u_(n+1) = u_n × q. Croissance exponentielle."
+              "explain": "Suite géométrique : uₙ₊₁ = uₙ × q. Croissance exponentielle."
             },
             {
               "q": "Une augmentation de 5 % chaque année se modélise par une suite géométrique de raison…",
@@ -257,13 +257,13 @@
             {
               "q": "Le terme général d’une suite arithmétique de premier terme u₀ et de raison r est…",
               "choices": [
-                "u_n = u₀ + n·r",
-                "u_n = u₀ × r^n",
-                "u_n = u₀ + r^n",
-                "u_n = n·u₀"
+                "uₙ = u₀ + n·r",
+                "uₙ = u₀ × rⁿ",
+                "uₙ = u₀ + rⁿ",
+                "uₙ = n·u₀"
               ],
               "answer": 0,
-              "explain": "Arithmétique : u_n = u₀ + n·r. (Géométrique : u_n = u₀ × q^n.)"
+              "explain": "Arithmétique : uₙ = u₀ + n·r. (Géométrique : uₙ = u₀ × qⁿ.)"
             }
           ]
         },
@@ -299,11 +299,11 @@
           "cards": [
             {
               "front": "Suite arithmétique",
-              "back": "On ajoute la raison r : u_n = u_0 + n·r."
+              "back": "On ajoute la raison r : uₙ = u₀ + n·r."
             },
             {
               "front": "Suite géométrique",
-              "back": "On multiplie par la raison q : u_n = u_0 × q^n."
+              "back": "On multiplie par la raison q : uₙ = u₀ × qⁿ."
             },
             {
               "front": "Baisse de p %",

@@ -163,7 +163,7 @@
         },
         {
           "t": "formula",
-          "c": "Géométrique (q ≠ 1) : S = u₀ × (1 − q^n) ÷ (1 − q)   (n = nombre de termes)"
+          "c": "Géométrique (q ≠ 1) : S = u₀ × (1 − qⁿ) ÷ (1 − q)   (n = nombre de termes)"
         },
         {
           "t": "example",

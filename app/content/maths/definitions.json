@@ -106,7 +106,7 @@
   "math-c5": [
     [
       "Probabilité conditionnelle",
-      "Probabilité de A sachant B : P_B(A) = P(A∩B) / P(B)."
+      "Probabilité de B sachant A : P_A(B) = P(A∩B) / P(A)."
     ],
     [
       "Événements indépendants",

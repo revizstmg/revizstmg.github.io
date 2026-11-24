@@ -202,9 +202,9 @@
             "note": "Repère à interpréter selon le secteur, la période et les autres indicateurs ; aucun seuil légal universel."
           },
           {
-            "name": "Rotation des stocks",
+            "name": "Durée de stockage (rotation des stocks en jours)",
             "f": "Stock moyen ÷ Coût d’achat des marchandises vendues × 360",
-            "note": "en jours"
+            "note": "en jours ; la rotation en nombre de fois = coût d’achat des marchandises vendues ÷ stock moyen"
           },
           {
             "name": "Délai clients",

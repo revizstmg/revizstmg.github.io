@@ -192,7 +192,7 @@ export default function Welcome() {
     setLevel(l.id)
     setChosen({}); setLastPick(null)
     if (!l.specialties) setSpecialty(null)
-    else setSpecialty((s) => s || l.specialties.find((sp) => sp.available)?.id || null)
+    else setSpecialty((s) => s || null)
   }
 
   const draftTrack = level ? { level, specialty: needsSpecialty ? specialty : null } : null

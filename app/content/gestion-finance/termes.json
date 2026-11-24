@@ -3,7 +3,7 @@
   "Achats (601)": "Compte 601 : achats de matières premières, enregistrés en charges.",
   "actif": "Ensemble de ce que possède l’entreprise (immobilisations, stocks, créances, trésorerie).",
   "actif circulant|actif circulant d’exploitation|actif immobilisé": "Actif circulant : éléments qui tournent rapidement (stocks, créances, trésorerie) ; actif immobilisé : biens durables utilisés plusieurs années.",
-  "actionnaire|apporteurs de capitaux|prêteurs|dilue le pouvoir": "Personnes qui financent l’entreprise : actionnaires par apports de capital, prêteurs par emprunt.",
+  "actionnaire|apporteurs de capitaux|prêteurs": "Personnes qui financent l’entreprise : actionnaires par apports de capital, prêteurs par emprunt.",
   "amortissement linéaire|plan d’amortissement|répartit le montant amortissable|valeur résiduelle|valeur d’origine|amortit": "Amortissement linéaire : répartition égale de la valeur d’un bien sur sa durée d’utilisation ; le plan d’amortissement détaille les annuités.",
   "DICP": "DICP : disponibilité, intégrité, confidentialité, preuve : les quatre critères de sécurité d’un système d’information.",
   "amortissements|amortissement|dotations aux amortissements": "Constatation de la perte de valeur d’une immobilisation due à l’usage, au temps ou au progrès technique, étalée sur sa durée d’utilisation.",
@@ -78,7 +78,7 @@
   "dématérialisation|dématérialisé": "Remplacement des documents papier par des documents numériques.",
   "dépréciation": "Constatation d’une perte de valeur probable d’un actif (stock, créance, immobilisation), sans sortie d’argent.",
   "dette|dettes financières": "Sommes que l’entreprise doit rembourser, notamment aux banques (emprunts).",
-  "dilue|dilution": "Réduction de la part de chaque associé dans le capital lorsqu’il y a de nouveaux associés ou de nouvelles parts.",
+  "dilue|dilution|dilue le pouvoir": "Réduction de la part de chaque associé dans le capital lorsqu’il y a de nouveaux associés ou de nouvelles parts.",
   "dividendes": "Part des bénéfices distribuée aux associés.",
   "documents de synthèse": "Documents de fin d’exercice qui résument les comptes : bilan, compte de résultat et annexe.",
   "dotation aux amortissements|dotations": "Charge annuelle qui constate la perte de valeur d’une immobilisation.",
@@ -86,11 +86,11 @@
   "EBE|excédent brut d’exploitation": "Excédent brut d’exploitation : ressource tirée de l’activité d’exploitation avant amortissements, charges financières et impôts ; il mesure la performance économique.",
   "écritures d'ajustement|travaux d’inventaire|régularisation|Les régularisations|clôture": "Écritures passées en fin d’exercice pour que les comptes reflètent la réalité de l’exercice (amortissements, stocks, charges à payer).",
   "éditer la balance": "Tableau qui récapitule les soldes de tous les comptes et vérifie l’égalité entre débit et crédit.",
-  "effet de levier": "Mécanisme par lequel l’endettement augmente la rentabilité des capitaux propres, tant que le coût de l’emprunt reste inférieur à la rentabilité économique.",
+  "effet de levier|taux d’intérêt inférieur": "Mécanisme par lequel l’endettement augmente la rentabilité des capitaux propres, tant que le coût de l’emprunt reste inférieur à la rentabilité économique.",
   "Effet de levier POSITIF": "L’emprunt améliore la rentabilité des capitaux propres quand le coût de la dette est inférieur à la rentabilité économique.",
   "emplois durables": "Emplois à long terme des ressources de l’entreprise, principalement les immobilisations.",
   "emplois stables|ressources stables|emplois|ressources": "Emplois stables : biens durables (immobilisations) ; ressources stables : capitaux propres et dettes à long terme qui les financent.",
-  "emprunt|emprunt bancaire|tout rembourser|taux d’intérêt inférieur": "Somme prêtée par une banque que l’entreprise rembourse avec des intérêts.",
+  "emprunt|emprunt bancaire|tout rembourser": "Somme prêtée par une banque que l’entreprise rembourse avec des intérêts.",
   "encaisser|en caisse": "Recevoir de l’argent (paiement client) ; l’argent en caisse est la monnaie disponible dans l’entreprise.",
   "escompte|réduction financière": "Réduction accordée pour un paiement anticipé, qui s’ajoute aux réductions commerciales sans les remplacer.",
   "expert-comptable": "Professionnel qui établit, présente et conseille sur les comptes des entreprises.",
@@ -187,6 +187,6 @@
   "valeur ajoutée|VA|richesse créée": "Richesse créée par l’entreprise : production moins consommations intermédiaires.",
   "valeur d’achat": "Prix d’achat d’un bien, à partir duquel on calcule notamment une marge ou un amortissement.",
   "valeur nette comptable": "Valeur d’origine d’une immobilisation diminuée des amortissements cumulés.",
-  "variation de stock": "Différence entre le stock final et le stock initial, enregistrée en comptabilité."
+  "variation de stock": "Écart entre le stock final et le stock initial. Pour les achats (compte 603), la variation de stocks s’écrit stock initial − stock final : positive, c’est une charge ; négative, un produit."
  }
 }
