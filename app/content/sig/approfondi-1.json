@@ -222,7 +222,7 @@
         {
           "t": "tip",
           "h": "À retenir",
-          "c": "Structure de base : **SELECT** (quoi) **FROM** (où) **WHERE** (quelle condition) **ORDER BY** (quel tri). Ne pas oublier le **point-virgule** final et les **guillemets** autour du texte."
+          "c": "Structure de base : **SELECT** (quoi) **FROM** (où) **WHERE** (quelle condition) **ORDER BY** (quel tri). Ne pas oublier le **point-virgule** final et les **apostrophes** autour du texte."
         }
       ]
     },
@@ -321,7 +321,7 @@
         {
           "t": "tip",
           "h": "Méthode",
-          "c": "Traduire la question en SQL : **quoi** afficher (SELECT), **où** (FROM), **quelle condition** (WHERE), **quel tri/regroupement** (ORDER BY / GROUP BY). Vérifier guillemets et point-virgule."
+          "c": "Traduire la question en SQL : **quoi** afficher (SELECT), **où** (FROM), **quelle condition** (WHERE), **quel tri/regroupement** (ORDER BY / GROUP BY). Vérifier apostrophes et point-virgule."
         }
       ]
     }

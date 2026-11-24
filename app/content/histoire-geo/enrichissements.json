@@ -117,7 +117,7 @@
           {
             "t": "list",
             "c": [
-              "**Maritimisation** : environ **80 % du commerce mondial** de marchandises transite par la mer, grâce à la **conteneurisation** (standardisation des boîtes → transport massif et bon marché).",
+              "**Maritimisation** : environ **80 % du commerce mondial** de marchandises (en volume ; environ 70 % en valeur) transite par la mer, grâce à la **conteneurisation** (standardisation des boîtes → transport massif et bon marché).",
               "**Routes stratégiques** et points de passage (« détroits » et canaux) : **Suez, Panama, Malacca, Ormuz, Gibraltar** — leur contrôle est un enjeu géopolitique majeur.",
               "**Façades maritimes** majeures : Asie de l’Est, Northern Range (Europe du Nord-Ouest), côtes américaines.",
               "**Ressources** : pêche, hydrocarbures offshore, **câbles sous-marins** (99 % des données mondiales), énergies marines.",
@@ -133,7 +133,7 @@
           {
             "t": "example",
             "h": "Situation",
-            "c": "Le canal de Suez (Égypte) relie la Méditerranée à la mer Rouge. Environ 12 % du commerce mondial (environ 30 % du trafic de conteneurs) y transite. En mars 2021, l’échouage d’un porte-conteneurs géant (Ever Given) l’a bloqué plusieurs jours."
+            "c": "Le canal de Suez (Égypte) relie la Méditerranée à la mer Rouge. Environ 12 % du commerce mondial (environ 30 % du trafic de conteneurs) y transitait avant la baisse du trafic provoquée par les attaques en mer Rouge depuis fin 2023. En mars 2021, l’échouage d’un porte-conteneurs géant (Ever Given) l’a bloqué plusieurs jours."
           },
           {
             "t": "list",

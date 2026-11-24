@@ -666,7 +666,7 @@
               "q": "La formule des probabilités totales sert à…",
               "choices": [
                 "Calculer P(B) en additionnant tous les chemins qui mènent à B",
-                "Calculer une moyenne pondérée des issues possibles",
+                "Calculer l’espérance",
                 "Vérifier que deux événements sont indépendants",
                 "Trouver P(A) sachant B à partir d’un arbre pondéré"
               ],
@@ -1030,7 +1030,7 @@
             {
               "t": "example",
               "h": "Application corrigée",
-              "c": "Une valeur augmente de 21 % en 2 ans : CM moyen=√1,21=1,10, soit 10 % par an. Ajouter 10,5 % deux fois ne donne pas 21 %."
+              "c": "Une valeur augmente de 21 % en 2 ans : CM moyen=√1,21=1,10, soit 10 % par an. Le taux moyen n’est pas 21 ÷ 2 = 10,5 % : en appliquant deux fois +10,5 %, on obtient 1,105² ≈ 1,221, soit +22,1 %."
             },
             {
               "t": "table",

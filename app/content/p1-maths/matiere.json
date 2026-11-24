@@ -275,7 +275,7 @@
             {
               "t": "example",
               "h": "Exemple",
-              "c": "Un bénéfice B(x) = −2x² + 12x (en centaines d’€) est maximal au sommet, en x = 3 : B(3) = **18** → 1 800 € pour 3 unités."
+              "c": "Un bénéfice B(x) = −2x² + 12x = −2x(x − 6) (en centaines d’€) s’annule en 0 et en 6 : le sommet est au milieu des deux racines, en x = (0 + 6) ÷ 2 = 3, et B(3) = **18** → 1 800 € pour 3 unités."
             }
           ]
         }

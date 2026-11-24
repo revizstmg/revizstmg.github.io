@@ -8,7 +8,7 @@
           {
             "t": "example",
             "h": "Énoncé",
-            "c": "Dans un lycée de 750 élèves, 60 % sont des filles, et 25 % des filles sont en STMG.\n1) Combien de filles ?\n2) Combien de filles en STMG ?\n3) Un article à 40 € subit +5 % puis −5 %. Prix final ?"
+            "c": "Dans un lycée de 750 élèves, 60 % sont des filles, et 20 % des filles sont en STMG.\n1) Combien de filles ?\n2) Combien de filles en STMG ?\n3) Un article à 40 € subit +5 % puis −5 %. Prix final ?"
           },
           {
             "t": "p",
@@ -18,7 +18,7 @@
             "t": "list",
             "c": [
               "**Filles** : 750 × 0,60 = **450 filles**.",
-              "**Filles en STMG** : 450 × 0,25 = **112,5** → on arrondit à **112 ou 113** (pourcentage d’un sous-ensemble).",
+              "**Filles en STMG** : 450 × 0,20 = **90 filles**.",
               "**Prix final** : 40 × 1,05 × 0,95 = 40 × 0,9975 = **39,90 €** (une hausse puis une baisse du même taux ne se compensent pas exactement)."
             ]
           },
