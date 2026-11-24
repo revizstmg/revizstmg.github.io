@@ -350,7 +350,7 @@ export default {
   category: 'Catégorie', wasYourAnswerCorrect: 'Ta réponse était-elle correcte ?', iMastered: 'Je maîtrisais',
   // test du thème
   fullEvalOn: 'Une évaluation complète sur', qcmQuestionsSuffix: 'questions de QCM',
-  writtenQuestionsSuffix: 'questions à rédiger', caseStudiesSuffix: 'cas pratiques à analyser',
+  writtenQuestionsSuffix: 'questions à rédiger', caseStudiesSuffix: 'cas pratique(s) à analyser',
   selfEvalNote1: 'Les questions rédigées se corrigent en auto-évaluation : tu rédiges ta réponse, puis tu affiches le corrigé et tu t’évalues honnêtement.',
   startTest: 'Commencer le test', back: 'Retour', part1Qcm: 'Partie 1 · QCM', part2Written: 'Partie 2 · À rédiger',
   themeTestDone: 'Test du thème terminé', succeeded: 'réussies',
