@@ -2116,3 +2116,4 @@ Prochaine action :
 ## MODE-SCROLL (24/11/2026)
 - Nouveau « Mode Scroll » (`/scroll`, `/scroll/:sid/:tid`) : cours en cartes, flashcards à retourner et questions éclair, une par écran (snap vertical), gratuit pour tous. Cartes construites depuis le cours par `src/data/scroll.js` (rien d'inventé). Entrées : accueil (trousse), menu mobile, recherche.
 - Page rendue dans un portail (`document.body`) : `.page-enter` a un transform qui casse `position: fixed`.
+- Mode Scroll, formats ludiques : « À compléter » (terme de vocabulaire du cours à replacer, 4 propositions), « A ou B ? » (tri), « Remets dans l'ordre », « Associe » (3 paires), « Mot mélangé » (lettres + définition), série de bonnes réponses 🔥, score final, passage automatique à la carte suivante. Répartition d'un thème de ~100 cartes : cours 42 %, à compléter 14 %, jeux 14 %, flashcards 10 %, questions 20 %.

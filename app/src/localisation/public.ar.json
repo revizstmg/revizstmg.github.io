@@ -3914,5 +3914,12 @@
   "Un point de cours par écran": "نقطة من الدرس في كل شاشة",
   "Touche pour revoir le terme": "المس لرؤية المصطلح مجددًا",
   "Bravo ! +{v0} XP.": "أحسنت! +{v0} XP.",
-  "↑ Fais glisser pour continuer": "↑ اسحب لأعلى للمتابعة"
+  "↑ Fais glisser pour continuer": "↑ اسحب لأعلى للمتابعة",
+  "Effacer": "مسح",
+  "Le mot manquant :": "الكلمة الناقصة:",
+  "Lettres": "الحروف",
+  "Sans faute !": "بلا أخطاء!",
+  "Touche dans l’ordre.": "المس بالترتيب.",
+  "{v0} erreur{v1} en route.": "{v0} خطأ{v1} في الطريق.",
+  "{v0} erreur{v1}.": "{v0} خطأ{v1}."
 }

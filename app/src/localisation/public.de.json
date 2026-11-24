@@ -4793,5 +4793,12 @@
   "Un point de cours par écran": "Ein Kurspunkt pro Bildschirm",
   "Touche pour revoir le terme": "Tippen, um den Begriff erneut zu sehen",
   "Bravo ! +{v0} XP.": "Bravo! +{v0} XP.",
-  "↑ Fais glisser pour continuer": "↑ Nach oben wischen, um fortzufahren"
+  "↑ Fais glisser pour continuer": "↑ Nach oben wischen, um fortzufahren",
+  "Effacer": "Löschen",
+  "Le mot manquant :": "Das fehlende Wort:",
+  "Lettres": "Buchstaben",
+  "Sans faute !": "Fehlerfrei!",
+  "Touche dans l’ordre.": "In der richtigen Reihenfolge antippen.",
+  "{v0} erreur{v1} en route.": "{v0} Fehler{v1} unterwegs.",
+  "{v0} erreur{v1}.": "{v0} Fehler{v1}."
 }

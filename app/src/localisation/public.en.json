@@ -3915,5 +3915,12 @@
   "Un point de cours par écran": "One course point per screen",
   "Touche pour revoir le terme": "Tap to see the term again",
   "Bravo ! +{v0} XP.": "Well done! +{v0} XP.",
-  "↑ Fais glisser pour continuer": "↑ Swipe up to continue"
+  "↑ Fais glisser pour continuer": "↑ Swipe up to continue",
+  "Effacer": "Clear",
+  "Le mot manquant :": "The missing word:",
+  "Lettres": "Letters",
+  "Sans faute !": "No mistakes!",
+  "Touche dans l’ordre.": "Tap in order.",
+  "{v0} erreur{v1} en route.": "{v0} mistake{v1} along the way.",
+  "{v0} erreur{v1}.": "{v0} mistake{v1}."
 }

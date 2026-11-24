@@ -3914,5 +3914,12 @@
   "Un point de cours par écran": "Un punto del curso por pantalla",
   "Touche pour revoir le terme": "Toca para ver el término de nuevo",
   "Bravo ! +{v0} XP.": "¡Bravo! +{v0} XP.",
-  "↑ Fais glisser pour continuer": "↑ Desliza hacia arriba para continuar"
+  "↑ Fais glisser pour continuer": "↑ Desliza hacia arriba para continuar",
+  "Effacer": "Borrar",
+  "Le mot manquant :": "La palabra que faltaba:",
+  "Lettres": "Letras",
+  "Sans faute !": "¡Sin errores!",
+  "Touche dans l’ordre.": "Toca en orden.",
+  "{v0} erreur{v1} en route.": "{v0} error{v1} por el camino.",
+  "{v0} erreur{v1}.": "{v0} error{v1}."
 }
