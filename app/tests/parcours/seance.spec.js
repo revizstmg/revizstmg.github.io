@@ -53,14 +53,14 @@ test('fin de série : « Refaire mes erreurs » rejoue seulement les questions r
   expect(erreurs).toEqual([])
 })
 
-test('barre du bas : Accueil, Cours, Réviser, Bac blanc, Moi', async ({ page }) => {
+test('barre du bas : Accueil, Cours, Réviser, Scroll, Moi', async ({ page }) => {
   const erreurs = await preparer(page)
   await page.setViewportSize({ width: 390, height: 800 })
   await page.goto('./#/accueil')
   await attendreAccueil(page)
   await page.getByRole('button', { name: 'OK', exact: true }).click() // information cookies
   const barre = page.locator('nav.fixed.bottom-0')
-  await expect(barre.getByRole('link')).toHaveText([/Accueil/, /Cours/, /Réviser/, /Bac blanc/, /Paramètres/])
+  await expect(barre.getByRole('link')).toHaveText([/Accueil/, /Cours/, /Réviser/, /Scroll/, /Paramètres/])
   await barre.getByRole('link', { name: /Cours/ }).click()
   await expect(page).toHaveURL(/#\/cours$/)
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Tes matières')
