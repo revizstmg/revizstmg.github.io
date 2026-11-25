@@ -42,7 +42,7 @@ describe('mode scroll', () => {
     for (const g of ['trou', 'mot', 'paires', 'tri', 'ordre', 'flash', 'qcm']) expect(genres.has(g), g).toBe(true)
     tailles.sort((x, y) => x - y)
     // Une bonne partie des chapitres approche la centaine d'exercices (les filtres de qualité en écartent certains).
-    expect(tailles[Math.floor(tailles.length / 2)]).toBeGreaterThanOrEqual(40)
-    expect(tailles.filter((n) => n >= 90).length).toBeGreaterThan(120)
+    expect(tailles[Math.floor(tailles.length / 2)]).toBeGreaterThanOrEqual(30)
+    expect(tailles.filter((n) => n >= 90).length).toBeGreaterThan(50)
   })
 })

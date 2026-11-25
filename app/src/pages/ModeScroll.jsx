@@ -182,7 +182,7 @@ function Mot({ c, fini }) {
       <div className="scroll-mots" role="group" aria-label="Lettres">
         {lettres.map((x) => <button key={x.i} type="button" disabled={pose.includes(x) || gagne || revele} onClick={() => poser(x)}>{x.l}</button>)}
       </div>
-      {!gagne && !revele && <div className="flex gap-3"><button type="button" className="btn-ghost" onClick={() => setPose([])}>Effacer</button><button type="button" className="btn-ghost" onClick={() => { setRevele(true); fini(false) }}>Je sèche</button></div>}
+      {!gagne && !revele && <div className="flex gap-3"><button type="button" className="btn-ghost" onClick={() => setPose((p) => p.slice(0, -1))}>Annuler</button><button type="button" className="btn-ghost" onClick={() => setPose([])}>Effacer</button><button type="button" className="btn-ghost" onClick={() => { setRevele(true); fini(false) }}>Je sèche</button></div>}
       {(gagne || revele) && <Feedback ok={gagne && !revele}>{gagne ? '' : <>Le mot était <b>{c.mot}</b>.</>}</Feedback>}
     </>
   )
@@ -273,6 +273,7 @@ export function FluxScroll() {
   const cartes = useMemo(() => (chapitre ? exercicesDuChapitre(tid, chapitre.idx) : []), [chapitre, tid])
   const [index, setIndex] = useState(0)
   const [jeu, setJeu] = useState({ bonnes: 0, essais: 0, serie: 0, meilleure: 0 })
+  const [tour, setTour] = useState(0)
   const liste = useRef(null)
   const faits = useRef(new Set())
   useEffect(() => {
@@ -285,6 +286,7 @@ export function FluxScroll() {
   if (!state.track) return <Navigate to="/" replace />
   if (!theme || theme.subjectId !== sid || !chapitre) return <Introuvable />
   const total = cartes.length + 1
+  const jouables = cartes.filter((c) => ['qcm', 'trou', 'tri', 'ordre', 'paires', 'mot'].includes(c.type)).length
   const onScroll = (e) => {
     const h = e.currentTarget.clientHeight || 1
     setIndex(Math.min(total - 1, Math.round(e.currentTarget.scrollTop / h)))
@@ -296,27 +298,28 @@ export function FluxScroll() {
     vibrer(ok)
     if (ok) addXp(XP_PAR_TYPE[type] || XP_BONNE_REPONSE)
     setJeu((j) => { const serie = ok ? j.serie + 1 : 0; return { bonnes: j.bonnes + (ok ? 1 : 0), essais: j.essais + 1, serie, meilleure: Math.max(j.meilleure, serie) } })
-    if (ok) setTimeout(() => liste.current?.scrollBy({ top: liste.current.clientHeight, behavior: 'smooth' }), 1300)
+    // Passage automatique à la carte suivante, sauf si l'élève a déjà fait défiler lui-même entre-temps.
+    if (ok) setTimeout(() => { const l = liste.current; if (l && Math.round(l.scrollTop / (l.clientHeight || 1)) === i) l.scrollBy({ top: l.clientHeight, behavior: 'smooth' }) }, 1300)
   }
   const suivant = chapitres.find((c) => c.idx === chapitre.idx + 1)
   const fermer = () => navigate(`/scroll/${sid}/${tid}`)
   return createPortal(
     <div className="scroll-flux" role="region" aria-label="Mode Scroll" lang="fr" data-no-translate>
       <div className="scroll-haut">
-        <button type="button" onClick={fermer} aria-label="Fermer le mode scroll" className="grid h-10 w-10 place-items-center rounded-full text-xl">✕</button>
+        <button type="button" onClick={fermer} aria-label="Fermer le mode scroll" className="grid h-12 w-12 place-items-center rounded-full text-xl">✕</button>
         <div className="scroll-barre" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={index + 1} aria-label="Avancement"><span style={{ width: `${((index + 1) / total) * 100}%` }} /></div>
         {jeu.serie >= 2 && <span className="scroll-serie" aria-label={`Série de ${jeu.serie} bonnes réponses`}>🔥 ×{jeu.serie}</span>}
         <span className="text-xs tabular-nums">{index + 1} / {total}</span>
       </div>
       <div className="scroll-liste" ref={liste} onScroll={onScroll} tabIndex={0}>
-        {cartes.map((c, i) => <Carte key={i} c={c} fini={verdict(i, c.type)} />)}
+        {cartes.map((c, i) => <Carte key={`${tour}-${i}`} c={c} fini={verdict(i, c.type)} />)}
         <section className="scroll-carte items-center text-center" aria-label="Fin">
-          <p className="text-5xl" aria-hidden>{jeu.essais && jeu.bonnes / jeu.essais >= 0.7 ? '🏆' : '🎉'}</p>
+          <p className="text-5xl" aria-hidden>{jeu.essais >= jouables * 0.6 && jeu.bonnes / Math.max(1, jeu.essais) >= 0.7 ? '🏆' : '🎉'}</p>
           <h2 className="font-display text-2xl font-semibold">Chapitre terminé</h2>
           <p className="text-sm"><CourseText text={chapitre.titre} /></p>
-          {jeu.essais > 0 && <p className="scroll-texte">{jeu.bonnes} bonne{jeu.bonnes > 1 ? 's' : ''} réponse{jeu.bonnes > 1 ? 's' : ''} sur {jeu.essais} · meilleure série 🔥 ×{jeu.meilleure}</p>}
+          {jeu.essais > 0 && <p className="scroll-texte">{jeu.bonnes} bonne{jeu.bonnes > 1 ? 's' : ''} réponse{jeu.bonnes > 1 ? 's' : ''} sur {jeu.essais} jouée{jeu.essais > 1 ? 's' : ''}{jouables > jeu.essais ? ` · ${jouables - jeu.essais} passée${jouables - jeu.essais > 1 ? 's' : ''}` : ''} · meilleure série 🔥 ×{jeu.meilleure}</p>}
           <div className="flex flex-wrap justify-center gap-3">
-            <button type="button" className="btn-primary" onClick={() => liste.current?.scrollTo({ top: 0 })}>Recommencer</button>
+            <button type="button" className="btn-primary" onClick={() => { faits.current = new Set(); setJeu({ bonnes: 0, essais: 0, serie: 0, meilleure: 0 }); setTour((t) => t + 1); liste.current?.scrollTo({ top: 0 }) }}>Recommencer</button>
             {suivant && <Link to={`/scroll/${sid}/${tid}/${suivant.idx}`} className="btn-primary">Chapitre suivant</Link>}
             <Link to={`/subject/${sid}/theme/${tid}/chapter/${chapitre.idx}`} className="btn-ghost">Voir le cours</Link>
             <Link to={`/scroll/${sid}/${tid}`} className="btn-ghost">Autre chapitre</Link>

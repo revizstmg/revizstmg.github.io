@@ -172,7 +172,7 @@ const sansTerme = (def, terme) => String(def || '').replace(new RegExp(`^${terme
 function jeuxDuGlossaire(termes, titre) {
   const motsM = [], qcm = []
   const vusQ = new Set()
-  const ajouter = (c) => { const k = norm(c.q).replace(/[«»"“”]/g, ''); if (!vusQ.has(k)) { vusQ.add(k); qcm.push(c) } }
+  const ajouterGlobal = (c) => { const k = norm(c.q).replace(/[«»"“”]/g, ''); if (!vusQ.has(k)) { vusQ.add(k); qcm.push(c) } }
   const radicalTitre = mots(titre).map((m) => radical(m))
   for (const t of melange(termes)) {
     const def = sansTerme(t.def, t.terme)
@@ -185,6 +185,8 @@ function jeuxDuGlossaire(termes, titre) {
     if (def.length < 20) continue
     const autres = melange(termes.filter((o) => o.def !== t.def && recouvrement(o.terme, t.terme) < 0.5 && !norm(o.terme).includes(norm(t.terme)) && !norm(t.terme).includes(norm(o.terme))))
     const faux = autres.find((o) => recouvrement(sansTerme(o.def, o.terme), def) < 0.5 && !citeLeTerme(o.def, t.terme))
+    const parTerme = []
+    const ajouter = (c) => parTerme.push(c)
     const defLong = coupe(def, 170)
     if (defLong) ajouter({ type: 'qcm', q: `Vrai ou faux ?\n${t.terme} : ${defLong}`, choix: ['Vrai', 'Faux'], bonne: 0, explication: `${t.terme} : ${t.def}` })
     const fauxLong = faux && coupe(sansTerme(faux.def, faux.terme), 170)
@@ -201,8 +203,31 @@ function jeuxDuGlossaire(termes, titre) {
         if (distinctes) { const defs4 = melange(courtes); ajouter({ type: 'qcm', q: `Que signifie « ${t.terme} » ?`, choix: defs4, bonne: defs4.indexOf(courtes[0]), explication: `${t.terme} : ${t.def}` }) }
       }
     }
+    // Au plus trois questions par terme (même notion, formes différentes) : on ne rabâche pas.
+    for (const c of melange(parTerme).slice(0, 3)) ajouterGlobal(c)
   }
-  return { mots: motsM, qcm }
+  // « Associe » : trois mots-vedettes à relier à leur définition courte.
+  const paires = []
+  const candidats = melange(termes.map((t) => ({ g: sansMd(t.terme), d: propositionCourte(sansTerme(t.def, t.terme), 70) })).filter((p) => p.d && p.g.length <= 32 && !citeLeTerme(p.d, p.g)))
+  const groupe = []
+  for (const p of candidats) {
+    if (groupe.every((q) => recouvrement(q.d, p.d) < 0.5 && recouvrement(q.g, p.g) < 0.5)) groupe.push(p)
+    if (groupe.length === 3) { paires.push({ type: 'paires', paires: groupe.map((x) => ({ g: x.g, d: x.d })) }); groupe.length = 0 }
+  }
+  return { mots: motsM, qcm, paires: paires.slice(0, 6) }
+}
+
+// Marques Markdown mal appariées (« **C », « Intelligence** ») : on les retire plutôt que de les afficher.
+const nettoyerTexte = (t) => { const x = String(t ?? ''); return (x.match(/\*\*/g) || []).length % 2 ? x.replace(/\*+/g, '') : x }
+const sansVerdict = (t) => String(t || '').replace(/^\s*(?:exact|vrai|faux|oui|non|correct)\s*[.:!,–-]\s*/i, '')
+function nettoyer(c) {
+  const o = { ...c }
+  for (const k of ['texte', 'q', 'recto', 'verso', 'indice', 'consigne']) if (k in o) o[k] = nettoyerTexte(o[k])
+  if ('explication' in o) o.explication = nettoyerTexte(sansVerdict(o.explication))
+  if (o.choix) o.choix = o.choix.map(nettoyerTexte)
+  if (o.etapes) o.etapes = o.etapes.map(nettoyerTexte)
+  if (o.paires) o.paires = o.paires.map((p) => ({ g: nettoyerTexte(p.g), d: nettoyerTexte(p.d) }))
+  return o
 }
 
 // Les genres sont étalés régulièrement sur toute la longueur : deux cartes du même genre se suivent le moins possible.
@@ -259,7 +284,7 @@ export function construireFlux(themeId, idx, { max = MAX_CARTES, souple = false 
   const piles = {
     trou: melange([...ecrits.trou, ...trousDuCours(ch.section, pool, nom, vus, souple)]),
     qcm: melange([...ecrits.qcm, ...gloss.qcm]),
-    jeu: melange([...ecrits.ordre, ...ecrits.paires, ...ecrits.tri, ...gloss.mots]),
+    jeu: melange([...ecrits.ordre, ...ecrits.paires, ...ecrits.tri, ...gloss.paires, ...gloss.mots]),
     flash: melange(flash),
   }
   // Water-filling : le genre le moins fourni garde tout, le reste se partage la place.
@@ -275,7 +300,10 @@ export function construireFlux(themeId, idx, { max = MAX_CARTES, souple = false 
     }
   }
   for (const g of Object.keys(piles)) piles[g] = piles[g].slice(0, quotas[g] ?? piles[g].length)
-  const cartes = melanger(piles).map((c) => ({ ...c, chapitre: nom }))
+  // Les questions ne dépassent pas la moitié du chapitre : on veut de la variété.
+  const autres = piles.trou.length + piles.jeu.length + piles.flash.length
+  piles.qcm = piles.qcm.slice(0, Math.max(autres + 5, 12))
+  const cartes = melanger(piles).map((c) => nettoyer({ ...c, chapitre: nom }))
   // Chapitre pauvre : on réessaie avec des filtres de forme assouplis (la casse et la phrase restent contrôlées).
   return cartes.length < PLANCHER && !souple ? (() => { const r = construireFlux(themeId, idx, { max, souple: true }); return r.length > cartes.length ? r : cartes })() : cartes
 }
