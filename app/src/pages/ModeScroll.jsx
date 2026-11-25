@@ -5,7 +5,7 @@ import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { subjectsForTrack } from '../data/tracks.js'
 import { getChapter } from '../data/index.js'
-import { construireFlux, chapitresDuTheme } from '../data/scroll.js'
+import { exercicesDuChapitre, chapitresDuTheme } from '../data/scroll.js'
 import { CourseText } from '../components/Course.jsx'
 import Introuvable from './Introuvable.jsx'
 
@@ -237,7 +237,7 @@ export function ChapitresScroll() {
   const { sid, tid } = useParams()
   const { state } = useStore()
   const theme = getChapter(tid)
-  const chapitres = useMemo(() => (theme && theme.subjectId === sid ? chapitresDuTheme(tid).map((c) => ({ ...c, n: construireFlux(tid, c.idx).length })) : []), [theme, sid, tid])
+  const chapitres = useMemo(() => (theme && theme.subjectId === sid ? chapitresDuTheme(tid).map((c) => ({ ...c, n: exercicesDuChapitre(tid, c.idx).length })) : []), [theme, sid, tid])
   if (!state.track) return <Navigate to="/" replace />
   if (!theme || theme.subjectId !== sid) return <Introuvable />
   return (
@@ -270,7 +270,7 @@ export function FluxScroll() {
   const theme = getChapter(tid)
   const chapitres = useMemo(() => (theme && theme.subjectId === sid ? chapitresDuTheme(tid) : []), [theme, sid, tid])
   const chapitre = chapitres.find((c) => String(c.idx) === String(cidx))
-  const cartes = useMemo(() => (chapitre ? construireFlux(tid, chapitre.idx) : []), [chapitre, tid])
+  const cartes = useMemo(() => (chapitre ? exercicesDuChapitre(tid, chapitre.idx) : []), [chapitre, tid])
   const [index, setIndex] = useState(0)
   const [jeu, setJeu] = useState({ bonnes: 0, essais: 0, serie: 0, meilleure: 0 })
   const liste = useRef(null)

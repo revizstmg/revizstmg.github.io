@@ -50,3 +50,20 @@ export function trouverDefinition(glossaire, brut) {
   if (glossaire.has(k + 's')) return glossaire.get(k + 's')
   return null
 }
+
+// Mots-vedettes d'une matière : le premier terme de chaque entrée de termes.json (les autres formes de la clé sont
+// des variantes, parfois de simples fragments de phrase) et les titres des définitions clés écrites par thème.
+// Les exercices fabriqués automatiquement n'utilisent que ceux-là pour poser une définition.
+const PRINCIPAUX = new Map()
+export function termesPrincipaux(matiereId) {
+  if (PRINCIPAUX.has(matiereId)) return PRINCIPAUX.get(matiereId)
+  const out = new Set()
+  for (const cles of Object.keys(COUCHES.termes?.[matiereId] || {})) {
+    const k = cleTerme(cles.split('|')[0])
+    if (k) out.add(k)
+  }
+  const matiere = MATIERES.find((m) => m.id === matiereId)
+  for (const t of matiere?.chapters || []) for (const item of COUCHES.definitions?.[t.id] || []) if (Array.isArray(item) && item[0]) out.add(cleTerme(item[0]))
+  if (out.size) PRINCIPAUX.set(matiereId, out)
+  return out
+}
