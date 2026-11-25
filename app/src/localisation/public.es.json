@@ -3921,5 +3921,7 @@
   "Sans faute !": "¡Sin errores!",
   "Touche dans l’ordre.": "Toca en orden.",
   "{v0} erreur{v1} en route.": "{v0} error{v1} por el camino.",
-  "{v0} erreur{v1}.": "{v0} error{v1}."
+  "{v0} erreur{v1}.": "{v0} error{v1}.",
+  "Valider": "Validar",
+  "Il fallait trouver": "Había que encontrar"
 }

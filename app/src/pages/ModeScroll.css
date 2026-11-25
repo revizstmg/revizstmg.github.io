@@ -44,3 +44,9 @@
 @keyframes scroll-secoue { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
 [data-secoue="1"] { animation: scroll-secoue .35s ease; border-color: #dc2626 !important; }
 @media (prefers-reduced-motion: reduce) { [data-secoue="1"], .scroll-serie { animation: none; } }
+
+.scroll-saisie { flex: 1; min-width: 0; border-radius: 1rem; border: 2px solid rgb(148 163 184 / .6); padding: .85rem 1rem; font-size: 1.25rem; background: transparent; }
+.scroll-saisie[data-etat="bon"] { border-color: #16a34a; background: rgb(22 163 74 / .14); }
+.scroll-saisie[data-etat="faux"] { border-color: #dc2626; background: rgb(220 38 38 / .12); }
+.scroll-tri { min-width: 0; overflow-wrap: anywhere; white-space: normal; }
+.scroll-tri-grille > * { min-width: 0; }

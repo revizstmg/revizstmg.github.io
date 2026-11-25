@@ -25,8 +25,9 @@ describe('mode scroll', () => {
         tailles.push(flux.length)
         for (const c of flux) {
           genres.add(c.type)
-          expect(['trou', 'qcm', 'tri', 'ordre', 'paires', 'mot', 'flash'], `${id}:${i}`).toContain(c.type)
+          expect(['trou', 'qcm', 'tri', 'ordre', 'paires', 'mot', 'flash', 'calcul'], `${id}:${i}`).toContain(c.type)
           if (c.type === 'flash') expect(c.recto && c.verso).toBeTruthy()
+          else if (c.type === 'calcul') { expect(c.prompt).toBeTruthy(); expect(Number.isFinite(c.reponse)).toBe(true) }
           else if (c.type === 'qcm') { expect(c.choix.length).toBeGreaterThanOrEqual(2); expect(c.bonne).toBeLessThan(c.choix.length); expect(c.q).toBeTruthy() }
           else if (c.type === 'trou') { checkTrou(c); expect(c.texte).toContain('____'); expect(c.choix.length).toBe(4); expect(new Set(c.choix).size).toBe(4); expect(c.bonne).toBeLessThan(4) }
           else if (c.type === 'tri') { expect(c.categories.length).toBe(2); expect(c.categories.some((x) => x.id === c.bonne)).toBe(true) }
@@ -39,7 +40,7 @@ describe('mode scroll', () => {
     }
     // Moins de 1 % des trous ont un piège de casse différente ou déjà présent dans la phrase.
     expect(checkTrou.mauvais / checkTrou.total).toBeLessThan(0.01)
-    for (const g of ['trou', 'mot', 'paires', 'tri', 'ordre', 'flash', 'qcm']) expect(genres.has(g), g).toBe(true)
+    for (const g of ['trou', 'mot', 'paires', 'tri', 'ordre', 'flash', 'qcm', 'calcul']) expect(genres.has(g), g).toBe(true)
     tailles.sort((x, y) => x - y)
     // Une bonne partie des chapitres approche la centaine d'exercices (les filtres de qualité en écartent certains).
     expect(tailles[Math.floor(tailles.length / 2)]).toBeGreaterThanOrEqual(30)

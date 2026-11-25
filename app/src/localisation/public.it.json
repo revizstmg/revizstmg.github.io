@@ -3921,5 +3921,7 @@
   "Sans faute !": "Senza errori!",
   "Touche dans l’ordre.": "Tocca in ordine.",
   "{v0} erreur{v1} en route.": "{v0} errore{v1} lungo il percorso.",
-  "{v0} erreur{v1}.": "{v0} errore{v1}."
+  "{v0} erreur{v1}.": "{v0} errore{v1}.",
+  "Valider": "Conferma",
+  "Il fallait trouver": "Bisognava trovare"
 }

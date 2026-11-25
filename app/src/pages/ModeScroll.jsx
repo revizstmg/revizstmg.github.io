@@ -3,6 +3,7 @@ import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useStore } from '../store.jsx'
+import { parseNombre } from '../games/common.jsx'
 import { subjectsForTrack } from '../data/tracks.js'
 import { getChapter } from '../data/index.js'
 import { exercicesDuChapitre, chapitresDuTheme } from '../data/scroll.js'
@@ -12,10 +13,10 @@ import Introuvable from './Introuvable.jsx'
 // Scroll : les exercices d'un chapitre, un par écran, pour s'entraîner d'un pouce sur téléphone.
 // Ouvert à tous, sans compte ni abonnement.
 const PUCES = {
-  flash: '🃏 Flashcard', qcm: '⚡ Question éclair', trou: '✏️ À compléter', tri: '🗂️ A ou B ?', ordre: '🔢 Remets dans l’ordre', paires: '🔗 Associe', mot: '🔤 Mot mélangé',
+  flash: '🃏 Flashcard', qcm: '⚡ Question éclair', calcul: '🧮 Calcul', trou: '✏️ À compléter', tri: '🗂️ A ou B ?', ordre: '🔢 Remets dans l’ordre', paires: '🔗 Associe', mot: '🔤 Mot mélangé',
 }
 const XP_BONNE_REPONSE = 3
-const XP_PAR_TYPE = { qcm: 3, trou: 3, tri: 3, mot: 4, ordre: 5, paires: 5 }
+const XP_PAR_TYPE = { qcm: 3, trou: 3, tri: 3, mot: 4, ordre: 5, paires: 5, calcul: 5 }
 const melange = (a) => { const t = [...a]; for (let i = t.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [t[i], t[j]] = [t[j], t[i]] } return t }
 const vibrer = (ok) => { try { navigator.vibrate?.(ok ? 12 : [30, 40, 30]) } catch { /* pas de vibreur */ } }
 
@@ -82,6 +83,36 @@ function Trou({ c, fini }) {
   )
 }
 
+function Calcul({ c, fini }) {
+  const [val, setVal] = useState('')
+  const [verifie, setVerifie] = useState(false)
+  const num = parseNombre(val)
+  const ok = verifie && num !== null && Math.abs(num - c.reponse) <= c.tolerance
+  const valider = () => { if (verifie || !val.trim()) return; setVerifie(true); fini(num !== null && Math.abs(num - c.reponse) <= c.tolerance) }
+  return (
+    <>
+      <p className="scroll-texte whitespace-pre-line">{c.prompt}</p>
+      <form className="flex items-center gap-2" onSubmit={(e) => { e.preventDefault(); valider() }}>
+        <input
+          value={val}
+          onChange={(e) => setVal(e.target.value)}
+          disabled={verifie}
+          autoComplete="off"
+          autoCapitalize="off"
+          autoCorrect="off"
+          aria-label="Ta réponse"
+          placeholder="Ta réponse"
+          className="scroll-saisie"
+          data-etat={verifie ? (ok ? 'bon' : 'faux') : undefined}
+        />
+        {c.unite && <span className="text-lg font-semibold" aria-hidden>{c.unite}</span>}
+        <button type="submit" className="btn-primary" disabled={verifie || !val.trim()}>Valider</button>
+      </form>
+      {verifie && <Feedback ok={ok}>{ok ? '' : <>Il fallait trouver <b>{String(c.reponse).replace('.', ',')}{c.unite ? ` ${c.unite}` : ''}</b>. </>}{c.explication}</Feedback>}
+    </>
+  )
+}
+
 function Tri({ c, fini }) {
   const [choisi, setChoisi] = useState(null)
   const ok = choisi === c.bonne
@@ -89,7 +120,7 @@ function Tri({ c, fini }) {
     <>
       <p className="text-sm opacity-80">{c.consigne}</p>
       <p className="scroll-flash" style={{ minHeight: '28%' }}><span>{c.texte}</span></p>
-      <div className="grid grid-cols-2 gap-3" role="group" aria-label="Catégories">
+      <div className="scroll-tri-grille grid grid-cols-2 gap-3" role="group" aria-label="Catégories">
         {c.categories.map((cat, i) => (
           <button key={cat.id} type="button" disabled={choisi !== null} className="scroll-tri" data-cote={i} data-etat={choisi === null ? undefined : cat.id === c.bonne ? 'bon' : cat.id === choisi ? 'faux' : undefined} onClick={() => { setChoisi(cat.id); fini(cat.id === c.bonne) }}>{cat.label}</button>
         ))}
@@ -153,7 +184,7 @@ function Paires({ c, fini }) {
 
 function Mot({ c, fini }) {
   const lettres = useMemo(() => {
-    const base = c.mot.split('').map((l, i) => ({ l, i }))
+    const base = c.mot.toLowerCase().split('').map((l, i) => ({ l, i }))
     let m = melange(base)
     if (m.every((x, k) => x.i === k)) m = m.reverse()
     return m
@@ -223,6 +254,7 @@ function Carte({ c, fini }) {
         </>
       )}
       {c.type === 'trou' && <Trou c={c} fini={fini} />}
+      {c.type === 'calcul' && <Calcul c={c} fini={fini} />}
       {c.type === 'tri' && <Tri c={c} fini={fini} />}
       {c.type === 'ordre' && <Ordre c={c} fini={fini} />}
       {c.type === 'paires' && <Paires c={c} fini={fini} />}
@@ -286,7 +318,7 @@ export function FluxScroll() {
   if (!state.track) return <Navigate to="/" replace />
   if (!theme || theme.subjectId !== sid || !chapitre) return <Introuvable />
   const total = cartes.length + 1
-  const jouables = cartes.filter((c) => ['qcm', 'trou', 'tri', 'ordre', 'paires', 'mot'].includes(c.type)).length
+  const jouables = cartes.filter((c) => ['qcm', 'trou', 'tri', 'ordre', 'paires', 'mot', 'calcul'].includes(c.type)).length
   const onScroll = (e) => {
     const h = e.currentTarget.clientHeight || 1
     setIndex(Math.min(total - 1, Math.round(e.currentTarget.scrollTop / h)))
@@ -307,9 +339,9 @@ export function FluxScroll() {
     <div className="scroll-flux" role="region" aria-label="Mode Scroll" lang="fr" data-no-translate>
       <div className="scroll-haut">
         <button type="button" onClick={fermer} aria-label="Fermer le mode scroll" className="grid h-12 w-12 place-items-center rounded-full text-xl">✕</button>
-        <div className="scroll-barre" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={index + 1} aria-label="Avancement"><span style={{ width: `${((index + 1) / total) * 100}%` }} /></div>
+        <div className="scroll-barre" role="progressbar" aria-valuemin={0} aria-valuemax={cartes.length} aria-valuenow={Math.min(index + 1, cartes.length)} aria-label="Avancement"><span style={{ width: `${(Math.min(index + 1, cartes.length) / Math.max(1, cartes.length)) * 100}%` }} /></div>
         {jeu.serie >= 2 && <span className="scroll-serie" aria-label={`Série de ${jeu.serie} bonnes réponses`}>🔥 ×{jeu.serie}</span>}
-        <span className="text-xs tabular-nums">{index + 1} / {total}</span>
+        <span className="text-xs tabular-nums">{Math.min(index + 1, cartes.length)} / {cartes.length}</span>
       </div>
       <div className="scroll-liste" ref={liste} onScroll={onScroll} tabIndex={0}>
         {cartes.map((c, i) => <Carte key={`${tour}-${i}`} c={c} fini={verdict(i, c.type)} />)}

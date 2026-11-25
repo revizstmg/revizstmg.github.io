@@ -60,3 +60,15 @@ test('formats ludiques : compléter le cours, A ou B, remettre dans l’ordre, a
   await page.screenshot({ path: `${sd}/scroll-ordre.png` })
   expect(erreurs).toEqual([])
 })
+
+test('calcul : une saisie chiffrée est corrigée avec l’explication', async ({ page }) => {
+  const erreurs = await preparer(page, etatEleve(), { abonnement: null })
+  await page.goto('./#/scroll/gestion-finance/gf-t1/2')
+  const flux = page.getByRole('region', { name: 'Mode Scroll' })
+  const carte = flux.locator('.scroll-carte[data-genre="calcul"]').first()
+  await carte.scrollIntoViewIfNeeded()
+  await carte.getByLabel('Ta réponse').fill('1')
+  await carte.getByRole('button', { name: 'Valider' }).click()
+  await expect(carte.getByRole('status')).toContainText('Il fallait trouver')
+  expect(erreurs).toEqual([])
+})
