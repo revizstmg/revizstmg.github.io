@@ -39,31 +39,43 @@ function coupe(texte, n = 140) {
   const t = String(texte || '').trim()
   if (t.length <= n) return t
   const i = Math.max(t.lastIndexOf(', ', n), t.lastIndexOf(' ; ', n), t.lastIndexOf(' : ', n), t.lastIndexOf('. ', n))
-  return i >= 45 ? `${t.slice(0, i).replace(/[,;:]$/, '')}…` : null
+  if (i < 45) return null
+  const morceau = t.slice(0, i).replace(/[,;:]$/, '')
+  // Une parenthèse restée ouverte ferait une phrase bancale : on renonce à la carte.
+  return (morceau.match(/\(/g) || []).length === (morceau.match(/\)/g) || []).length ? `${morceau}…` : null
+}
+// Première proposition d'une définition (jusqu'à la première virgule, point-virgule ou deux-points), sans « … » :
+// les quatre choix d'une carte sont ainsi traités de la même façon.
+function propositionCourte(texte, n = 110) {
+  const t = String(texte || '').trim().replace(/[.]$/, '')
+  const m = t.slice(35).search(/[,;:]| \(/)
+  const coupee = m >= 0 ? t.slice(0, 35 + m) : t
+  return coupee.length >= 15 && coupee.length <= n && (coupee.match(/\(/g) || []).length === (coupee.match(/\)/g) || []).length ? coupee : null
 }
 const radical = (mot) => norm(mot).slice(0, Math.max(4, Math.min(norm(mot).length - 2, 6)))
 // La définition cite-t-elle déjà le terme demandé (ou un mot de même radical) ?
 const citeLeTerme = (def, terme) => { const d = norm(def); return mots(terme).filter((m) => m.length >= 5).some((m) => d.includes(radical(m))) }
 
-const MOTS_OUTILS = new Set(['jamais', 'comment', 'pourquoi', 'toujours', 'souvent', 'aussi', 'alors', 'donc', 'cela', 'chaque', 'toute', 'toutes', 'tous', 'tout', 'sans', 'avec', 'pour', 'dans', 'entre', 'sous', 'plus', 'moins', 'tres', 'mais', 'quand', 'lorsque', 'parce', 'puisque', 'ainsi', 'encore', 'deja', 'peut', 'sont', 'etre', 'avoir', 'fait', 'faire', 'doit', 'peuvent', 'selon', 'depuis', 'pendant', 'toi', 'not', 'the', 'and'])
+const MOTS_OUTILS = new Set(['jamais', 'comment', 'pourquoi', 'toujours', 'souvent', 'aussi', 'alors', 'donc', 'cela', 'chaque', 'toute', 'toutes', 'tous', 'tout', 'sans', 'avec', 'pour', 'dans', 'entre', 'sous', 'plus', 'moins', 'tres', 'mais', 'quand', 'lorsque', 'parce', 'puisque', 'ainsi', 'encore', 'deja', 'peut', 'sont', 'etre', 'avoir', 'fait', 'faire', 'doit', 'peuvent', 'selon', 'depuis', 'pendant', 'toi', 'not', 'the', 'and', 'exemple', 'quoi', 'afficher', 'quel', 'quelle', 'quels', 'quelles', 'voici', 'voila'])
 
 // Un piège de trou est valable s'il ressemble à la bonne réponse (même casse, même nombre de mots, même nombre
 // grammatical, même type de première lettre après une élision) et n'apparaît pas dans la phrase.
-function piegeValable(rep, p, phrase, avantTrou) {
+function piegeValable(rep, p, phrase, avantTrou, souple = false) {
   const r = rep.trim(), x = p.trim()
   if (!x || norm(x) === norm(r) || norm(r).includes(norm(x)) || norm(x).includes(norm(r))) return false
   if (/^\p{Lu}/u.test(r) !== /^\p{Lu}/u.test(x)) return false
   const nr = r.split(/\s+/).length, nx = x.split(/\s+/).length
-  if (Math.abs(nr - nx) > 1 || nx > 4) return false
-  if (x.length < r.length * 0.5 || x.length > r.length * 2 + 3) return false
+  if (!souple && (Math.abs(nr - nx) > 1 || nx > 4)) return false
+  if (nx > 6 || (nr === 1) !== (nx === 1) && !souple) return false
+  if (!souple && (x.length < r.length * 0.5 || x.length > r.length * 2 + 3)) return false
   if (norm(phrase).includes(norm(x))) return false
   if (/\d/.test(r) !== /\d/.test(x)) return false
   if (/['’]$/.test(avantTrou) && /^[aeiouyhàâéèêëîïôûù]/i.test(r) !== /^[aeiouyhàâéèêëîïôûù]/i.test(x)) return false
   if (/(?:^|\s)(?:les|des|ces|mes|ses|nos|vos|leurs|aux)\s*$/i.test(avantTrou) && /[sx]$/i.test(r) !== /[sx]$/i.test(x)) return false
   return true
 }
-function troisPieges(rep, candidats, phrase, avantTrou) {
-  const v = melange([...new Set(candidats)]).filter((p) => piegeValable(rep, p, phrase, avantTrou))
+function troisPieges(rep, candidats, phrase, avantTrou, souple = false) {
+  const v = melange([...new Set(candidats)]).filter((p) => piegeValable(rep, p, phrase, avantTrou, souple))
   const out = []
   for (const p of v) if (out.length < 3 && !out.some((o) => recouvrement(o, p) >= 0.6)) out.push(p)
   return out.length === 3 ? out : null
@@ -73,18 +85,23 @@ const GRAS = /\*\*([^*]+)\*\*/g
 const termesGras = (texte) => [...String(texte || '').matchAll(GRAS)].map((m) => m[1].trim().replace(/[.:;,]+$/, '')).filter((t) => t.length >= 4 && t.length <= 32 && !/\d/.test(t) && t.split(/\s+/).length <= 3)
 
 // Les phrases complètes du chapitre : majuscule au début, ponctuation finale (pas de puces coupées).
+// Début de phrase qui annonce un verbe ou un sujet à accorder : la réponse serait une forme conjuguée.
+const AVANT_VERBE = /(?:^|\s)(?:il|elle|ils|elles|on|qui|ne|n['’]|se|s['’]|nous|vous|je|j['’]|peut|peuvent|doit|doivent|va|vont|a|ont|est|sont|sera|seront|fait|font)\s*$/i
+const CONSIGNE = /^(?:associer|relier|classer|compl[ée]ter|cocher|choisir|d[ée]crire|rep[ée]rer|indiquer|remettre|ordonner|citer|calculer|rep[ée]rez|associe|classe)\b/i
+
 export function phrasesDuChapitre(sec) {
   const textes = []
   for (const b of sec?.blocks || []) {
     if (['p', 'tip', 'warning', 'example'].includes(b.t) && b.c) textes.push(String(b.c))
     else if (b.t === 'list' && Array.isArray(b.c)) textes.push(...b.c.map(String))
   }
-  return textes.flatMap((t) => t.split(/(?<=[.!?…])\s+/)).map((x) => x.trim()).filter((x) => x.length >= 40 && /^[\p{Lu}\d«"“]/u.test(x) && /[.!?…»"”]$/.test(x))
+  return textes.flatMap((t) => t.split(/(?<=[.!?…])\s+/)).map((x) => x.trim()).filter((x) => x.length >= 40 && /^[\p{Lu}\d«"“]/u.test(x) && /[.!?…»"”]$/.test(x) && !CONSIGNE.test(x))
 }
 
 // « À compléter » : une phrase du cours dont on retire un terme de vocabulaire (en gras dans le cours).
-function trousDuCours(sec, pool, titre, vus) {
+function trousDuCours(sec, pool, titre, vus, souple = false) {
   const { vedettes, gras } = pool
+  const dejaMasques = [...vus]
   const out = []
   const nbParTerme = new Map()
   const motsTitre = new Set(mots(titre))
@@ -95,20 +112,23 @@ function trousDuCours(sec, pool, titre, vus) {
       const k = norm(terme)
       if (MOTS_OUTILS.has(k) || mots(terme).every((m) => motsTitre.has(m)) || (nbParTerme.get(k) || 0) >= 2) continue
       const masque = masquerMot(plain, terme)
-      if (!masque || masque.length < 35 || vus.has(norm(masque))) continue
+      if (!masque || masque.length < 35 || vus.has(norm(masque)) || vus.has(`phrase:${norm(plain)}`)) continue
+      // Même phrase déjà posée par un jeu écrit à la main (avec un autre mot masqué) : on ne la repose pas.
+      if (dejaMasques.some((d) => !d.startsWith('phrase:') && recouvrement(d, masque) >= 0.85)) continue
       const avant = masque.split('____')[0]
-      const pieges = troisPieges(terme, vedettes, plain, avant) || troisPieges(terme, gras, plain, avant)
+      if (AVANT_VERBE.test(avant)) continue
+      const pieges = troisPieges(terme, vedettes, plain, avant, souple) || troisPieges(terme, gras, plain, avant, souple)
       if (!pieges) continue
       const choix = melange([terme, ...pieges])
       out.push({ type: 'trou', texte: masque, choix, bonne: choix.indexOf(terme), explication: plain })
-      vus.add(norm(masque)); nbParTerme.set(k, (nbParTerme.get(k) || 0) + 1)
+      vus.add(norm(masque)); vus.add(`phrase:${norm(plain)}`); nbParTerme.set(k, (nbParTerme.get(k) || 0) + 1)
       break
     }
   }
   return out
 }
 
-function jeuxEcrits(ch, vus) {
+function jeuxEcrits(ch, vus, souple = false) {
   const trou = [], tri = [], ordre = [], paires = [], qcm = []
   const reponsesChapitre = (ch.games || []).filter((g) => g.type === 'trou').flatMap((g) => (g.questions || []).map((q) => String(q.answer || '').trim())).filter(Boolean)
   for (const g of ch.games || []) {
@@ -119,7 +139,8 @@ function jeuxEcrits(ch, vus) {
         const texte = sansMd(q.text).replace(/_{3,}/g, '____')
         if (!q.text || !rep || !/____/.test(texte) || rep.length > 30 || MOTS_OUTILS.has(norm(rep)) || vus.has(norm(texte))) continue
         const avant = texte.split('____')[0]
-        const pieges = troisPieges(rep, dujeu, texte.replace('____', ' '), avant) || troisPieges(rep, reponsesChapitre, texte.replace('____', ' '), avant)
+        if (AVANT_VERBE.test(avant)) continue
+        const pieges = troisPieges(rep, dujeu, texte.replace('____', ' '), avant, souple) || troisPieges(rep, reponsesChapitre, texte.replace('____', ' '), avant, souple)
         if (!pieges) continue
         const choix = melange([rep, ...pieges])
         trou.push({ type: 'trou', texte, choix, bonne: choix.indexOf(rep), explication: sansMd(q.explain || '') })
@@ -148,12 +169,15 @@ const sansTerme = (def, terme) => String(def || '').replace(new RegExp(`^${terme
 
 // Exercices tirés du glossaire (mots-vedettes seulement) : mot mélangé, vrai/faux (une définition juste et une fausse),
 // « de quoi parle-t-on ? » (définition → terme) et « que signifie… ? » (terme → définition).
-function jeuxDuGlossaire(termes) {
+function jeuxDuGlossaire(termes, titre) {
   const motsM = [], qcm = []
+  const vusQ = new Set()
+  const ajouter = (c) => { const k = norm(c.q).replace(/[«»"“”]/g, ''); if (!vusQ.has(k)) { vusQ.add(k); qcm.push(c) } }
+  const radicalTitre = mots(titre).map((m) => radical(m))
   for (const t of melange(termes)) {
     const def = sansTerme(t.def, t.terme)
     const motUnique = sansMd(t.terme).trim()
-    if (/^[A-Za-zÀ-ÿ]{5,12}$/.test(motUnique) && !MOTS_OUTILS.has(norm(motUnique))) {
+    if (/^[A-Za-zÀ-ÿ]{5,12}$/.test(motUnique) && !MOTS_OUTILS.has(norm(motUnique)) && !radicalTitre.includes(radical(motUnique)) && !/(?:ons|ez|ent|ais|ait|ant|ons|ées?|ées|ir|er)$/.test(norm(motUnique))) {
       const r = radical(motUnique)
       const indice = def.replace(new RegExp(`[\\p{L}]*${r}[\\p{L}]*`, 'giu'), '…')
       if (indice.length >= 25 && !norm(indice).includes(r)) motsM.push({ type: 'mot', mot: motUnique, indice: coupe(indice, 200) || indice.slice(0, 200) })
@@ -162,19 +186,19 @@ function jeuxDuGlossaire(termes) {
     const autres = melange(termes.filter((o) => o.def !== t.def && recouvrement(o.terme, t.terme) < 0.5 && !norm(o.terme).includes(norm(t.terme)) && !norm(t.terme).includes(norm(o.terme))))
     const faux = autres.find((o) => recouvrement(sansTerme(o.def, o.terme), def) < 0.5 && !citeLeTerme(o.def, t.terme))
     const defLong = coupe(def, 170)
-    if (defLong) qcm.push({ type: 'qcm', q: `Vrai ou faux ?\n${t.terme} : ${defLong}`, choix: ['Vrai', 'Faux'], bonne: 0, explication: `${t.terme} : ${t.def}` })
+    if (defLong) ajouter({ type: 'qcm', q: `Vrai ou faux ?\n${t.terme} : ${defLong}`, choix: ['Vrai', 'Faux'], bonne: 0, explication: `${t.terme} : ${t.def}` })
     const fauxLong = faux && coupe(sansTerme(faux.def, faux.terme), 170)
-    if (fauxLong) qcm.push({ type: 'qcm', q: `Vrai ou faux ?\n${t.terme} : ${fauxLong}`, choix: ['Vrai', 'Faux'], bonne: 1, explication: `${t.terme} : ${t.def}` })
+    if (fauxLong) ajouter({ type: 'qcm', q: `Vrai ou faux ?\n${t.terme} : ${fauxLong}`, choix: ['Vrai', 'Faux'], bonne: 1, explication: `${t.terme} : ${t.def}` })
     if (autres.length >= 3 && defLong && !citeLeTerme(def, t.terme)) {
       const pieges = []
       for (const o of autres) if (pieges.length < 3 && !pieges.some((p) => recouvrement(p.terme, o.terme) >= 0.5)) pieges.push(o)
       if (pieges.length === 3) {
         const termes4 = melange([t.terme, ...pieges.map((o) => o.terme)])
-        qcm.push({ type: 'qcm', q: `De quoi parle-t-on ?\n${defLong}`, choix: termes4, bonne: termes4.indexOf(t.terme), explication: `${t.terme} : ${t.def}` })
+        ajouter({ type: 'qcm', q: `De quoi parle-t-on ?\n${defLong}`, choix: termes4, bonne: termes4.indexOf(t.terme), explication: `${t.terme} : ${t.def}` })
         const brutes = [def, ...pieges.map((o) => sansTerme(o.def, o.terme))]
-        const courtes = brutes.map((d) => coupe(d, 120))
+        const courtes = brutes.map((d) => propositionCourte(d))
         const distinctes = courtes.every((c, i) => c && courtes.every((d, j) => i === j || recouvrement(c, d) < 0.6))
-        if (distinctes) { const defs4 = melange(courtes); qcm.push({ type: 'qcm', q: `Que signifie « ${t.terme} » ?`, choix: defs4, bonne: defs4.indexOf(courtes[0]), explication: `${t.terme} : ${t.def}` }) }
+        if (distinctes) { const defs4 = melange(courtes); ajouter({ type: 'qcm', q: `Que signifie « ${t.terme} » ?`, choix: defs4, bonne: defs4.indexOf(courtes[0]), explication: `${t.terme} : ${t.def}` }) }
       }
     }
   }
@@ -190,6 +214,7 @@ function melanger(piles) {
 }
 
 // Répartition visée pour un chapitre de 100 cartes ; une part que le chapitre ne remplit pas profite aux autres genres.
+const PLANCHER = 30
 const PARTS = { trou: 0.26, qcm: 0.3, jeu: 0.2, flash: 0.24 }
 
 // Ce qui ne dépend que du thème (mots-vedettes de chaque chapitre, pièges possibles) est calculé une seule fois.
@@ -198,7 +223,7 @@ function contexteTheme(theme, tous) {
   const cache = CONTEXTES.get(theme.id)
   if (cache && cache.n === tous.length) return cache
   const principaux = termesPrincipaux(theme.subjectId)
-  const parChapitre = tous.map((c) => termesDuChapitre(c, theme).filter((t) => principaux.has(cleTerme(t.terme)) && t.def))
+  const parChapitre = tous.map((c) => termesDuChapitre(c, theme).filter((t) => principaux.has(cleTerme(t.terme)) && t.def && t.def.length <= 260 && !/[+=/]/.test(t.terme) && t.terme.split(/\s+/).length <= 4))
   const ctx = {
     n: tous.length,
     parChapitre,
@@ -212,7 +237,7 @@ function contexteTheme(theme, tous) {
   return ctx
 }
 
-export function construireFlux(themeId, idx, { max = MAX_CARTES } = {}) {
+export function construireFlux(themeId, idx, { max = MAX_CARTES, souple = false } = {}) {
   const theme = ALL_CHAPTERS[themeId]
   const tous = chapitresDe(theme)
   const ch = tous[Number(idx)]
@@ -221,8 +246,8 @@ export function construireFlux(themeId, idx, { max = MAX_CARTES } = {}) {
   const { parChapitre, pool } = contexteTheme(theme, tous)
   const termes = parChapitre[Number(idx)]
   const vus = new Set()
-  const ecrits = jeuxEcrits(ch, vus)
-  const gloss = jeuxDuGlossaire(termes)
+  const ecrits = jeuxEcrits(ch, vus, souple)
+  const gloss = jeuxDuGlossaire(termes, nom)
   const flashs = (flashcardsForSection(ch.section, theme, ch.idx)?.cards || []).map((x) => ({ type: 'flash', recto: sansMd(x.front), verso: sansMd(x.back) }))
   const flashTermes = termes.map((t) => ({ type: 'flash', recto: sansMd(t.terme), verso: sansTerme(t.def, t.terme) }))
   const vusFlash = new Set()
@@ -232,7 +257,7 @@ export function construireFlux(themeId, idx, { max = MAX_CARTES } = {}) {
     vusFlash.add(k); return true
   })
   const piles = {
-    trou: melange([...ecrits.trou, ...trousDuCours(ch.section, pool, nom, vus)]),
+    trou: melange([...ecrits.trou, ...trousDuCours(ch.section, pool, nom, vus, souple)]),
     qcm: melange([...ecrits.qcm, ...gloss.qcm]),
     jeu: melange([...ecrits.ordre, ...ecrits.paires, ...ecrits.tri, ...gloss.mots]),
     flash: melange(flash),
@@ -250,7 +275,9 @@ export function construireFlux(themeId, idx, { max = MAX_CARTES } = {}) {
     }
   }
   for (const g of Object.keys(piles)) piles[g] = piles[g].slice(0, quotas[g] ?? piles[g].length)
-  return melanger(piles).map((c) => ({ ...c, chapitre: nom }))
+  const cartes = melanger(piles).map((c) => ({ ...c, chapitre: nom }))
+  // Chapitre pauvre : on réessaie avec des filtres de forme assouplis (la casse et la phrase restent contrôlées).
+  return cartes.length < PLANCHER && !souple ? (() => { const r = construireFlux(themeId, idx, { max, souple: true }); return r.length > cartes.length ? r : cartes })() : cartes
 }
 
 // Chapitres d'un thème, pour la page de choix.
