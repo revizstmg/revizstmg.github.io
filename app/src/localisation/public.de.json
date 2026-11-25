@@ -4802,5 +4802,11 @@
   "{v0} erreur{v1} en route.": "{v0} Fehler{v1} unterwegs.",
   "{v0} erreur{v1}.": "{v0} Fehler{v1}.",
   "Valider": "Prüfen",
-  "Il fallait trouver": "Gesucht war"
+  "Il fallait trouver": "Gesucht war",
+  "Imagine…": "Stell dir vor…",
+  "Mini-défi :": "Mini-Challenge:",
+  "Réponse :": "Antwort:",
+  "Vrai ou faux ?": "Wahr oder falsch?",
+  "Trouve l’erreur :": "Finde den Fehler:",
+  "À toi de calculer :": "Du bist dran mit Rechnen:"
 }

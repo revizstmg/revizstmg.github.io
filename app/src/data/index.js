@@ -17,6 +17,7 @@ import { glossaireDe, trouverDefinition } from './termes.js'
 const LESSONS = COUCHES['cours-complets']
 const COURS_REELS = COUCHES['cours-reels']
 const ENRICH = COUCHES.enrichissements
+const LUDIQUES = COUCHES['cours-ludiques']
 const PHILO_LONG = COUCHES['philo-longue-duree']
 const APPROF = COUCHES['approfondi-1']
 const APPROF2 = COUCHES['approfondi-2']
@@ -239,6 +240,16 @@ function assemblerTheme(c) {
   if (hookHeads.size && Array.isArray(c.cours) && c.cours.length > 1) {
     const isHook = (s) => !s.group && hookHeads.has(s.h)
     c.cours = [...c.cours.filter(isHook), ...c.cours.filter((s) => !isHook(s))]
+  }
+  // Version « ludique » du cours (content/<matière>/cours-ludiques.json) : mêmes sections, dans le même ordre, réécrites
+  // avec une accroche concrète et un mini-défi. Elle remplace le texte section par section ; les jeux écrits à la main
+  // restent rattachés à leur section, qui garde sa place. Si le nombre de sections ne correspond plus (le cours de base
+  // a changé), la version ludique est ignorée plutôt que mal alignée.
+  const ludique = LUDIQUES[c.id]
+  if (ludique?.sections?.length && Array.isArray(c.cours) && ludique.sections.length === c.cours.length) {
+    c.cours = c.cours.map((sec, i) => ({ ...sec, ...ludique.sections[i], group: sec.group }))
+    if (ludique.intro) c.intro = ludique.intro
+    if (ludique.essentiel?.length) c.essentiel = ludique.essentiel
   }
   // Filet universel « cours clair » : toute page de thème s'ouvre sur une intro
   // et se referme sur un mémo « L'essentiel », même sans cours rédigé à la main.

@@ -3923,5 +3923,11 @@
   "{v0} erreur{v1} en route.": "{v0} errore{v1} lungo il percorso.",
   "{v0} erreur{v1}.": "{v0} errore{v1}.",
   "Valider": "Conferma",
-  "Il fallait trouver": "Bisognava trovare"
+  "Il fallait trouver": "Bisognava trovare",
+  "Imagine…": "Immagina…",
+  "Mini-défi :": "Mini-sfida:",
+  "Réponse :": "Risposta:",
+  "Vrai ou faux ?": "Vero o falso?",
+  "Trouve l’erreur :": "Trova l’errore:",
+  "À toi de calculer :": "Tocca a te calcolare:"
 }

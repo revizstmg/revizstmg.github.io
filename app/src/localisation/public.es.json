@@ -3923,5 +3923,11 @@
   "{v0} erreur{v1} en route.": "{v0} error{v1} por el camino.",
   "{v0} erreur{v1}.": "{v0} error{v1}.",
   "Valider": "Validar",
-  "Il fallait trouver": "Había que encontrar"
+  "Il fallait trouver": "Había que encontrar",
+  "Imagine…": "Imagina…",
+  "Mini-défi :": "Minirreto:",
+  "Réponse :": "Respuesta:",
+  "Vrai ou faux ?": "¿Verdadero o falso?",
+  "Trouve l’erreur :": "Encuentra el error:",
+  "À toi de calculer :": "Te toca calcular:"
 }

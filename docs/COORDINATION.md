@@ -2123,3 +2123,9 @@ Prochaine action :
 - Barre du bas par défaut : Accueil, Cours, Réviser, Scroll, Paramètres (le Bac blanc y est remplacé ; il reste dans le menu et sur l'accueil). Les élèves qui ont personnalisé leurs onglets gardent les leurs.
 - En-tête mobile : menu burger et recherche descendus (22 px du haut au lieu de ~9) et agrandis à 48 px, plus faciles à toucher d'une main.
 - Scroll, retours de 2 élèves flemmards et du prof : cartes de calcul (générateurs « Calcul express », saisie chiffrée corrigée), phrases à trous plus propres (une par phrase source, abréviations « ex. » protégées, pas de formules), termes du glossaire refusés (verbes, fragments), compteur N/N exact, boutons A/B qui se replient. Reste : volume (médiane ~35 exercices par chapitre), variété (questions ~54 %), « Réviser » verrouillé dans la barre du bas, reprise du chapitre après fermeture.
+
+## COURS-LUDIQUES (25/11/2026) — pilote mercatique
+- Nouvelle couche `content/<matière>/cours-ludiques.json` : `{ "<thème>": { "intro", "sections": [ … ] } }`. Elle remplace le texte du cours SECTION PAR SECTION (même nombre, même ordre : les exercices écrits à la main sont rattachés à la section par son numéro) ; ignorée si le nombre de sections ne correspond plus. `group`, `essentiel` d'origine conservés.
+- Nouveaux blocs : `accroche` (début de section, situation concrète) et `defi` (mini-défi à ouvrir ; `kind` : question | vf | erreur | calcul).
+- Règles de rédaction : accroche en tête, defi en dernier, tableau seulement juste avant le defi, mots en gras de l'original conservés, ≤ 170 % de la longueur d'origine, aucun fait inventé.
+- Mercatique (38 sections) réécrite en deux passes avec relecture d'un agent prof (1re : 14/20 justesse, 13/20 ludique). Autres matières : à faire après validation du style.

@@ -3923,5 +3923,11 @@
   "{v0} erreur{v1} en route.": "{v0} خطأ{v1} في الطريق.",
   "{v0} erreur{v1}.": "{v0} خطأ{v1}.",
   "Valider": "تحقق",
-  "Il fallait trouver": "كان الجواب"
+  "Il fallait trouver": "كان الجواب",
+  "Imagine…": "تخيّل…",
+  "Mini-défi :": "تحدٍّ صغير:",
+  "Réponse :": "الإجابة:",
+  "Vrai ou faux ?": "صحيح أم خطأ؟",
+  "Trouve l’erreur :": "اعثر على الخطأ:",
+  "À toi de calculer :": "دورك في الحساب:"
 }

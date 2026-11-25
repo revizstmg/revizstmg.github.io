@@ -93,7 +93,8 @@ describe('contenu', () => {
   it('aucun tableau au milieu d’un chapitre', () => {
     for (const [id, th] of Object.entries(C.ALL_CHAPTERS)) {
       for (const sec of th.cours || []) {
-        const blocs = sec.blocks || []
+        // Le mini-défi des cours ludiques clôt la section : il ne compte pas comme du texte qui suivrait le tableau.
+        const blocs = (sec.blocks || []).filter((b) => b.t !== 'defi')
         const dernierTexte = blocs.map((b) => b.t !== 'table').lastIndexOf(true)
         const auMilieu = blocs.filter((b, i) => b.t === 'table' && i < dernierTexte)
         expect.soft(auMilieu.length, `${id} « ${sec.h} »`).toBe(0)

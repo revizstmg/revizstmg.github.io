@@ -3924,5 +3924,11 @@
   "{v0} erreur{v1} en route.": "{v0} mistake{v1} along the way.",
   "{v0} erreur{v1}.": "{v0} mistake{v1}.",
   "Valider": "Check",
-  "Il fallait trouver": "The answer was"
+  "Il fallait trouver": "The answer was",
+  "Imagine…": "Imagine…",
+  "Mini-défi :": "Mini-challenge:",
+  "Réponse :": "Answer:",
+  "Vrai ou faux ?": "True or false?",
+  "Trouve l’erreur :": "Find the mistake:",
+  "À toi de calculer :": "Your turn to calculate:"
 }
