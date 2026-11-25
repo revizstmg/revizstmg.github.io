@@ -25,10 +25,12 @@
   .site-main .page-hero { padding: 22px 20px; border-radius: 20px; }
   .site-main .page-hero h1 { font-size: clamp(1.7rem, 6.5vw, 2rem); line-height: 1.12; }
   .site-main .page-hero p { font-size: 14px; line-height: 1.65; }
-  .mobile-header-row { min-height: 60px; padding: 8px 12px; gap: 6px; }
+  /* Menu et recherche plus bas et plus larges : le haut de l'écran est difficile à atteindre d'une main. */
+  .mobile-header-row { min-height: 76px; padding: 22px 12px 6px; gap: 6px; }
+  .mobile-header-row .site-menu-toggle { width: 48px; height: 48px; }
   .mobile-header-row > a { min-width: 0; }
   .mobile-header-row > a:first-of-type { font-size: 1.5rem; }
-  .mobile-header-row > button, .mobile-menu-trigger > button { min-width: 44px; min-height: 44px; }
+  .mobile-header-row > button, .mobile-menu-trigger > button { min-width: 48px; min-height: 48px; }
   .desktop-header-tools { display: none !important; }
   .mobile-menu-trigger { display: block !important; }
   .mobile-breadcrumb ol { flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; padding: 4px 12px; scrollbar-width: thin; }

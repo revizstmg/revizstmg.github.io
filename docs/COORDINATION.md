@@ -2121,3 +2121,4 @@ Prochaine action :
 ## SCROLL-EXERCICES (25/11/2026)
 - Le Scroll ne contient plus de cours : uniquement des exercices (à compléter, mot mélangé, A ou B, ordre, associer, questions éclair, vrai/faux, flashcards), jusqu'à 100 par chapitre. L'élève choisit matière → thème → chapitre (`/scroll`, `/scroll/:sid/:tid`, `/scroll/:sid/:tid/:cidx`).
 - Barre du bas par défaut : Accueil, Cours, Réviser, Scroll, Paramètres (le Bac blanc y est remplacé ; il reste dans le menu et sur l'accueil). Les élèves qui ont personnalisé leurs onglets gardent les leurs.
+- En-tête mobile : menu burger et recherche descendus (22 px du haut au lieu de ~9) et agrandis à 48 px, plus faciles à toucher d'une main.
