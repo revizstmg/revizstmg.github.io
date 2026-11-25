@@ -2117,3 +2117,7 @@ Prochaine action :
 - Nouveau « Mode Scroll » (`/scroll`, `/scroll/:sid/:tid`) : cours en cartes, flashcards à retourner et questions éclair, une par écran (snap vertical), gratuit pour tous. Cartes construites depuis le cours par `src/data/scroll.js` (rien d'inventé). Entrées : accueil (trousse), menu mobile, recherche.
 - Page rendue dans un portail (`document.body`) : `.page-enter` a un transform qui casse `position: fixed`.
 - Mode Scroll, formats ludiques : « À compléter » (terme de vocabulaire du cours à replacer, 4 propositions), « A ou B ? » (tri), « Remets dans l'ordre », « Associe » (3 paires), « Mot mélangé » (lettres + définition), série de bonnes réponses 🔥, score final, passage automatique à la carte suivante. Répartition d'un thème de ~100 cartes : cours 42 %, à compléter 14 %, jeux 14 %, flashcards 10 %, questions 20 %.
+
+## SCROLL-EXERCICES (25/11/2026)
+- Le Scroll ne contient plus de cours : uniquement des exercices (à compléter, mot mélangé, A ou B, ordre, associer, questions éclair, vrai/faux, flashcards), jusqu'à 100 par chapitre. L'élève choisit matière → thème → chapitre (`/scroll`, `/scroll/:sid/:tid`, `/scroll/:sid/:tid/:cidx`).
+- Barre du bas par défaut : Accueil, Cours, Réviser, Scroll, Paramètres (le Bac blanc y est remplacé ; il reste dans le menu et sur l'accueil). Les élèves qui ont personnalisé leurs onglets gardent les leurs.

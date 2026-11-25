@@ -39,7 +39,7 @@ test('choisir et ordonner ses onglets dans le menu, sauvegarde et limites',async
  await editor.getByRole('button',{name:'Retirer Réviser',exact:true}).click()
  await editor.getByLabel('Ajouter un onglet',{exact:true}).selectOption('amis')
  await editor.getByRole('button',{name:'Monter Amis',exact:true}).click()
- const expected=['accueil','cours','bacblanc','amis','profil']
+ const expected=['accueil','cours','scroll','amis','profil']
  expect((await etat(page)).tabs).toEqual(expected)
  expect(await editor.locator('li').evaluateAll(els=>els.map(el=>el.dataset.tabId))).toEqual(expected)
  await page.waitForFunction(()=>document.getAnimations().every(a=>a.playState!=='running'||a.effect?.getComputedTiming().iterations===Infinity))
@@ -48,7 +48,7 @@ test('choisir et ordonner ses onglets dans le menu, sauvegarde et limites',async
  await expect(page.locator('.mobile-bottom-nav')).toContainText('Amis')
  await page.reload();await attendreAccueil(page);expect((await etat(page)).tabs).toEqual(expected)
  await page.getByRole('button',{name:'Menu',exact:true}).click();await menu.getByRole('button',{name:'Choisir mes onglets',exact:true}).click()
- for(const name of ['Accueil','Cours','Bac blanc'])await editor.getByRole('button',{name:'Retirer '+name,exact:true}).click()
+ for(const name of ['Accueil','Cours','Scroll'])await editor.getByRole('button',{name:'Retirer '+name,exact:true}).click()
  await expect(editor.locator('li')).toHaveCount(2)
  await expect(editor.getByRole('button',{name:/^Retirer /}).first()).toBeDisabled()
  await editor.getByRole('button',{name:'Rétablir les onglets par défaut',exact:true}).click()

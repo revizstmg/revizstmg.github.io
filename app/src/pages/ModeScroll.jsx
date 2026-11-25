@@ -5,15 +5,14 @@ import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { subjectsForTrack } from '../data/tracks.js'
 import { getChapter } from '../data/index.js'
-import { construireFlux } from '../data/scroll.js'
+import { construireFlux, chapitresDuTheme } from '../data/scroll.js'
 import { CourseText } from '../components/Course.jsx'
 import Introuvable from './Introuvable.jsx'
 
-// Mode Scroll : le cours en cartes courtes, une par écran, pour réviser d'un pouce sur téléphone.
+// Scroll : les exercices d'un chapitre, un par écran, pour s'entraîner d'un pouce sur téléphone.
 // Ouvert à tous, sans compte ni abonnement.
 const PUCES = {
-  cours: '📘 L’essentiel', formule: '🧮 Formule', piege: '⚠️ Piège', astuce: '💡 Astuce', exemple: '🔎 Exemple', flash: '🃏 Flashcard', qcm: '⚡ Question éclair',
-  trou: '✏️ À compléter', tri: '🗂️ A ou B ?', ordre: '🔢 Remets dans l’ordre', paires: '🔗 Associe', mot: '🔤 Mot mélangé',
+  flash: '🃏 Flashcard', qcm: '⚡ Question éclair', trou: '✏️ À compléter', tri: '🗂️ A ou B ?', ordre: '🔢 Remets dans l’ordre', paires: '🔗 Associe', mot: '🔤 Mot mélangé',
 }
 const XP_BONNE_REPONSE = 3
 const XP_PAR_TYPE = { qcm: 3, trou: 3, tri: 3, mot: 4, ordre: 5, paires: 5 }
@@ -28,9 +27,9 @@ export default function ModeScroll() {
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-4 py-2" lang="fr" data-no-translate>
       <header className="page-hero page-hero-compact text-center">
-        <p className="kicker">📱 Mode Scroll</p>
-        <h1 className="mt-1 font-display text-[1.7rem] font-medium leading-tight">Révise en faisant défiler</h1>
-        <p className="mt-2 text-sm">Un point de cours, une flashcard ou une question par écran. Fais glisser vers le haut : pas besoin de chercher quoi lire.</p>
+        <p className="kicker">📱 Scroll</p>
+        <h1 className="mt-1 font-display text-[1.7rem] font-medium leading-tight">Des exercices en faisant défiler</h1>
+        <p className="mt-2 text-sm">Choisis un chapitre : un exercice par écran, que tu fais d’un pouce. Compléter une phrase, remettre dans l’ordre, associer, mot mélangé, questions éclair…</p>
       </header>
       <div className="space-y-2">
         {matieres.map((s) => (
@@ -228,26 +227,50 @@ function Carte({ c, fini }) {
       {c.type === 'ordre' && <Ordre c={c} fini={fini} />}
       {c.type === 'paires' && <Paires c={c} fini={fini} />}
       {c.type === 'mot' && <Mot c={c} fini={fini} />}
-      {c.type === 'formule' && <p className="scroll-formule"><CourseText text={c.texte} /></p>}
-      {c.type === 'exemple' && (
-        <>
-          <p className="font-display text-lg font-semibold"><CourseText text={c.titre} /></p>
-          <p className="scroll-texte whitespace-pre-line"><CourseText text={c.texte} /></p>
-        </>
-      )}
-      {['cours', 'piege', 'astuce'].includes(c.type) && <p className="scroll-texte"><CourseText text={c.texte} /></p>}
       <p className="scroll-indice" aria-hidden>↑ Fais glisser pour continuer</p>
     </section>
   )
 }
 
-// Le fil de cartes d'un thème.
-export function FluxScroll() {
+// Choix du chapitre d'un thème.
+export function ChapitresScroll() {
   const { sid, tid } = useParams()
+  const { state } = useStore()
+  const theme = getChapter(tid)
+  const chapitres = useMemo(() => (theme && theme.subjectId === sid ? chapitresDuTheme(tid).map((c) => ({ ...c, n: construireFlux(tid, c.idx).length })) : []), [theme, sid, tid])
+  if (!state.track) return <Navigate to="/" replace />
+  if (!theme || theme.subjectId !== sid) return <Introuvable />
+  return (
+    <div className="animate-lux mx-auto max-w-2xl space-y-4 py-2" lang="fr" data-no-translate>
+      <Link to="/scroll" className="lien-retour">← Tous les thèmes</Link>
+      <header className="page-hero page-hero-compact text-center">
+        <p className="kicker">📱 Scroll</p>
+        <h1 className="mt-1 font-display text-[1.5rem] font-medium leading-tight"><CourseText text={theme.short || theme.name} /></h1>
+        <p className="mt-2 text-sm">Choisis ton chapitre.</p>
+      </header>
+      <ul className="space-y-2">
+        {chapitres.map((c) => (
+          <li key={c.idx}>
+            <Link to={`/scroll/${sid}/${tid}/${c.idx}`} className="card flex items-center gap-3 p-3 text-sm">
+              <span className="min-w-0 flex-1 font-semibold"><CourseText text={c.titre} /></span>
+              <span className="shrink-0 text-xs">{c.n} exercice{c.n > 1 ? 's' : ''}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+// Les exercices d'un chapitre, un par écran.
+export function FluxScroll() {
+  const { sid, tid, cidx } = useParams()
   const { state, addXp } = useStore()
   const navigate = useNavigate()
   const theme = getChapter(tid)
-  const cartes = useMemo(() => (theme && theme.subjectId === sid ? construireFlux(tid) : []), [theme, sid, tid])
+  const chapitres = useMemo(() => (theme && theme.subjectId === sid ? chapitresDuTheme(tid) : []), [theme, sid, tid])
+  const chapitre = chapitres.find((c) => String(c.idx) === String(cidx))
+  const cartes = useMemo(() => (chapitre ? construireFlux(tid, chapitre.idx) : []), [chapitre, tid])
   const [index, setIndex] = useState(0)
   const [jeu, setJeu] = useState({ bonnes: 0, essais: 0, serie: 0, meilleure: 0 })
   const liste = useRef(null)
@@ -260,7 +283,7 @@ export function FluxScroll() {
     return () => { document.body.style.overflow = avant }
   }, [])
   if (!state.track) return <Navigate to="/" replace />
-  if (!theme || theme.subjectId !== sid) return <Introuvable />
+  if (!theme || theme.subjectId !== sid || !chapitre) return <Introuvable />
   const total = cartes.length + 1
   const onScroll = (e) => {
     const h = e.currentTarget.clientHeight || 1
@@ -275,7 +298,8 @@ export function FluxScroll() {
     setJeu((j) => { const serie = ok ? j.serie + 1 : 0; return { bonnes: j.bonnes + (ok ? 1 : 0), essais: j.essais + 1, serie, meilleure: Math.max(j.meilleure, serie) } })
     if (ok) setTimeout(() => liste.current?.scrollBy({ top: liste.current.clientHeight, behavior: 'smooth' }), 1300)
   }
-  const fermer = () => navigate('/scroll')
+  const suivant = chapitres.find((c) => c.idx === chapitre.idx + 1)
+  const fermer = () => navigate(`/scroll/${sid}/${tid}`)
   return createPortal(
     <div className="scroll-flux" role="region" aria-label="Mode Scroll" lang="fr" data-no-translate>
       <div className="scroll-haut">
@@ -288,13 +312,14 @@ export function FluxScroll() {
         {cartes.map((c, i) => <Carte key={i} c={c} fini={verdict(i, c.type)} />)}
         <section className="scroll-carte items-center text-center" aria-label="Fin">
           <p className="text-5xl" aria-hidden>{jeu.essais && jeu.bonnes / jeu.essais >= 0.7 ? '🏆' : '🎉'}</p>
-          <h2 className="font-display text-2xl font-semibold">Thème terminé</h2>
-          <p className="text-sm"><CourseText text={theme.short || theme.name} /></p>
+          <h2 className="font-display text-2xl font-semibold">Chapitre terminé</h2>
+          <p className="text-sm"><CourseText text={chapitre.titre} /></p>
           {jeu.essais > 0 && <p className="scroll-texte">{jeu.bonnes} bonne{jeu.bonnes > 1 ? 's' : ''} réponse{jeu.bonnes > 1 ? 's' : ''} sur {jeu.essais} · meilleure série 🔥 ×{jeu.meilleure}</p>}
           <div className="flex flex-wrap justify-center gap-3">
             <button type="button" className="btn-primary" onClick={() => liste.current?.scrollTo({ top: 0 })}>Recommencer</button>
-            <Link to={`/subject/${sid}/theme/${tid}`} className="btn-ghost">Voir le cours complet</Link>
-            <Link to="/scroll" className="btn-ghost">Autre thème</Link>
+            {suivant && <Link to={`/scroll/${sid}/${tid}/${suivant.idx}`} className="btn-primary">Chapitre suivant</Link>}
+            <Link to={`/subject/${sid}/theme/${tid}/chapter/${chapitre.idx}`} className="btn-ghost">Voir le cours</Link>
+            <Link to={`/scroll/${sid}/${tid}`} className="btn-ghost">Autre chapitre</Link>
           </div>
         </section>
       </div>

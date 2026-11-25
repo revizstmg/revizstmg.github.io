@@ -14,6 +14,7 @@ const ExampleStudy = lazy(() => import('./pages/ExampleStudy.jsx'))
 const Offers = lazy(() => import('./pages/Offers.jsx'))
 const Admin = lazy(() => import('./pages/Admin.jsx'))
 const ModeScroll = lazy(() => import('./pages/ModeScroll.jsx'))
+const ChapitresScroll = lazy(() => import('./pages/ModeScroll.jsx').then((m) => ({ default: m.ChapitresScroll })))
 const FluxScroll = lazy(() => import('./pages/ModeScroll.jsx').then((m) => ({ default: m.FluxScroll })))
 const Landing = lazy(() => import('./pages/Landing.jsx'))
 const Home = lazy(() => import('./pages/Home.jsx'))
@@ -116,7 +117,8 @@ export default function App() {
         <Route path="/parent" element={<Parent />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/scroll" element={<ModeScroll />} />
-        <Route path="/scroll/:sid/:tid" element={<ContenuMatiere><FluxScroll /></ContenuMatiere>} />
+        <Route path="/scroll/:sid/:tid" element={<ContenuMatiere><ChapitresScroll /></ContenuMatiere>} />
+        <Route path="/scroll/:sid/:tid/:cidx" element={<ContenuMatiere><FluxScroll /></ContenuMatiere>} />
         <Route path="/excellence-economique" element={<Excellence />} />
         <Route path="/bac-blanc" element={<ContenuFiliere><BacBlanc /></ContenuFiliere>} />
         <Route path="/programme" element={<Programme />} />
