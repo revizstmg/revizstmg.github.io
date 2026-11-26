@@ -136,7 +136,7 @@ function Detail({ id, onRetour }) {
   const chapitres = Object.entries(p.chapters || {})
   return (
     <div lang="fr" data-no-translate>
-      <button type="button" className="adm-retour" onClick={onRetour}>← Retour à la liste</button>
+      <button type="button" className="lien-retour adm-retour" onClick={onRetour}>← Retour à la liste</button>
       <section className="adm-bloc" style={{ marginTop: 0 }}>
         <h2>{d.nom || '(sans nom)'}</h2>
         <dl className="adm-fiche">
