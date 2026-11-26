@@ -156,8 +156,8 @@
      {
       "t": "defi",
       "kind": "qcm",
-      "q": "Hugo compare longuement trois canapés pendant des semaines avant d’acheter. Quel type d’achat ?\nA) Impulsif\nB) Réfléchi\nC) Routinier",
-      "a": "B) Réfléchi : le choix est long et pesé.",
+      "q": "Hugo compare longuement trois canapés pendant des semaines avant d’acheter. Quel type d’achat ?\nA) Réfléchi\nB) Impulsif\nC) Routinier",
+      "a": "A) Réfléchi : le choix est long et pesé.",
       "explain": "Impulsif = sans réflexion ; routinier = habituel."
      }
     ]
@@ -1091,8 +1091,8 @@
      {
       "t": "defi",
       "kind": "intrus",
-      "q": "Pour une montre de luxe, trouve l’intrus :\nA) finitions soignées\nB) prix élevé\nC) boutiques exclusives\nD) discounter et pub « −50 % »",
-      "a": "D : discounter et pub « −50 % » contredisent le luxe.",
+      "q": "Pour une montre de luxe, trouve l’intrus :\nA) finitions soignées\nB) discounter et pub « −50 % »\nC) prix élevé\nD) boutiques exclusives",
+      "a": "B : discounter et pub « −50 % » contredisent le luxe.",
       "explain": "Un P discount casse l’image."
      }
     ]
@@ -1262,7 +1262,7 @@
       "t": "list",
       "c": [
        "**Produit** : café d’origine, torréfaction artisanale, packaging soigné, marque évocatrice.",
-       "**Prix** : élevé, cohérent avec le positionnement premium, dans une logique d’**écrémage** sans baisse prévue.",
+       "**Prix** : élevé, cohérent avec le **positionnement** premium.",
        "**Distribution** : **sélective** (épiceries fines, boutique, site propre), pas de grande distribution discount.",
        "**Communication** : storytelling sur l’origine et le savoir-faire, réseaux sociaux esthétiques, dégustations."
       ]
@@ -1279,8 +1279,8 @@
      {
       "t": "defi",
       "kind": "qcm",
-      "q": "Quelle intensité de distribution pour Altitude ?\nA) intensive\nB) sélective\nC) exclusive",
-      "a": "B : des points de vente choisis (épiceries fines, boutique, site propre), pas la grande distribution discount.",
+      "q": "Quelle intensité de distribution pour Altitude ?\nA) exclusive\nB) intensive\nC) sélective",
+      "a": "C : des points de vente choisis (épiceries fines, boutique, site propre), pas la grande distribution discount.",
       "explain": "Le positionnement premium exige des points de vente capables de valoriser le produit."
      }
     ]
@@ -1374,7 +1374,7 @@
       "t": "accroche",
       "emoji": "💶",
       "h": "Chiffre fictif",
-      "c": "Un paquet de café sort de la torréfaction à 12 € et arrive en rayon à 20 €. Où sont passés les 8 € ? Chez les intermédiaires du circuit."
+      "c": "Un paquet de café sort de la torréfaction à 12 € ; le grossiste le revend 16 €, l’épicier 20 € HT. Où sont passés les 8 € ? Dans les marges des deux intermédiaires du circuit."
      },
      {
       "t": "p",
@@ -1431,8 +1431,8 @@
      {
       "t": "defi",
       "kind": "qcm",
-      "q": "Un producteur vend ses fraises à un supermarché, qui les revend aux clients. Quel circuit ?\nA) direct\nB) court\nC) long",
-      "a": "B : un seul intermédiaire, le supermarché (détaillant).",
+      "q": "Un producteur vend ses fraises à un supermarché, qui les revend aux clients. Quel circuit ?\nA) court\nB) direct\nC) long",
+      "a": "A : un seul intermédiaire, le supermarché (détaillant).",
       "explain": "Direct = zéro intermédiaire ; long = plusieurs (grossiste puis détaillant)."
      }
     ]
@@ -1580,8 +1580,8 @@
      {
       "t": "defi",
       "kind": "qcm",
-      "q": "Un client demande à Nova Shop de supprimer ses données personnelles. Quel droit exerce-t-il ?\nA) la minimisation\nB) le droit à l’effacement\nC) la finalité",
-      "a": "B : le droit à l’effacement (RGPD).",
+      "q": "Un client demande à Nova Shop de supprimer ses données personnelles. Quel droit exerce-t-il ?\nA) la minimisation\nB) la finalité\nC) le droit à l’effacement",
+      "a": "C : le droit à l’effacement (RGPD).",
       "explain": "Il permet de demander la suppression de ses données, sauf obligation légale de conservation."
      }
     ]
@@ -1778,8 +1778,8 @@
      {
       "t": "defi",
       "kind": "intrus",
-      "q": "Parmi ces éléments du ciblage par les données, trouve l’intrus (celui qui n’est pas une limite) :\nA) atteinte à la vie privée\nB) sentiment de surveillance\nC) risque juridique si le RGPD n’est pas respecté\nD) meilleure expérience client grâce à la personnalisation",
-      "a": "D : c’est un avantage. Les trois autres sont des limites et des risques.",
+      "q": "Parmi ces éléments du ciblage par les données, trouve l’intrus (celui qui n’est pas une limite) :\nA) meilleure expérience client grâce à la personnalisation\nB) atteinte à la vie privée\nC) sentiment de surveillance\nD) risque juridique si le RGPD n’est pas respecté",
+      "a": "A : c’est un avantage. Les trois autres sont des limites et des risques.",
       "explain": "Il faut peser avantages et limites, puis recommander un usage responsable."
      }
     ]
@@ -1836,7 +1836,7 @@
       "t": "list",
       "c": [
        "**Finalité** : pour quel but précis ?",
-       "**Consentement** : la personne a-t-elle accepté ?",
+       "**Base légale** : sur quel fondement collecter ? (**consentement**, contrat, obligation légale…)",
        "**Minimisation** : ne collecter que le nécessaire.",
        "**Droits** : quels droits la personne garde-t-elle (accès, rectification, effacement, opposition) ?"
       ]
@@ -1844,7 +1844,7 @@
      {
       "t": "tip",
       "h": "À retenir",
-      "c": "FCMD : Finalité, Consentement, Minimisation, Droits. Atout **et** responsabilité : usage **transparent et consenti** = confiance ; sinon, sanctions."
+      "c": "FBMD : Finalité, Base légale, Minimisation, Droits. Atout **et** responsabilité : usage **transparent** et fondé en droit = confiance ; sinon, sanctions."
      },
      {
       "t": "defi",
