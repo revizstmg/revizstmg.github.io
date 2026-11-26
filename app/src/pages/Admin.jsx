@@ -65,6 +65,7 @@ function Apercu({ donnees, aller }) {
       </div>
       <section className="adm-bloc">
         <h2>Visites par jour (30 jours)</h2>
+        <p className="adm-doux" style={{ marginBottom: 8 }}>La barre montre les visites ; le nombre de pages vues est indiqué à gauche.</p>
         {donnees.visites_par_jour?.length ? <Barres lignes={donnees.visites_par_jour} cle="jour" valeur="visites" libelle={(l) => `${l.jour.slice(8, 10)}/${l.jour.slice(5, 7)} · ${l.vues} vues`} /> : <p>Aucune visite.</p>}
       </section>
       <section className="adm-bloc">
@@ -90,7 +91,8 @@ function ChangerOffre({ id, nom, abonnement }) {
   const [courant, setCourant] = useState(abonnement)
   const actif = courant && courant.offre && ['active', 'trialing', 'past_due'].includes(courant.statut) && (!courant.periode_fin || new Date(courant.periode_fin) > Date.now() - JOUR)
   const appliquer = async () => {
-    const msg = offre === 'gratuit' ? `Remettre ${nom || 'ce compte'} en offre gratuite ?` : `Donner l’offre ${nomOffre(offre)} à ${nom || 'ce compte'}${jours ? ` pour ${DUREES.find(([k]) => k === jours)[1]}` : ' sans date de fin'} ?`
+    const fin = jours ? ` (jusqu’au ${new Date(Date.now() + Number(jours) * JOUR).toLocaleDateString('fr-FR')})` : ''
+    const msg = offre === 'gratuit' ? `Remettre ${nom || 'ce compte'} en offre gratuite ?` : `Donner l’offre ${nomOffre(offre)} à ${nom || 'ce compte'}${jours ? ` pour ${DUREES.find(([k]) => k === jours)[1]}${fin}` : ' sans date de fin'} ?`
     if (!window.confirm(msg)) return
     setEtat({ attente: true })
     const r = await appelAdmin('revizstmg_admin_abonnement', { p_id: id, p_offre: offre, p_jours: offre === 'gratuit' || !jours ? null : Number(jours) })

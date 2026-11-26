@@ -59,8 +59,8 @@ const citeLeTerme = (def, terme) => { const d = norm(def); return mots(terme).fi
 
 // Mots-vedettes qui ne sont pas des notions à retenir seules : verbes, adjectifs, fragments (« trois TVA », « non écrites »).
 const TERME_REFUSE = /^(?:non |classe \d|trois |deux |quatre |cinq |\d)|(?:ner|ser|ter|cer)$/i
-const TERMES_REFUSES = new Set(['dilue', 'stratégique', 'tactique', 'opérationnel', 'stratégiques'])
-const termeAcceptable = (t) => !TERME_REFUSE.test(t.trim()) && !TERMES_REFUSES.has(norm(t).trim())
+const TERMES_REFUSES = new Set(['dilue', 'stratégique', 'tactique', 'opérationnel', 'stratégiques', 'annule', 'multiplie leurs coefficients', 'multiplie', 'argumente', 'sanctionner', 'rapporte', 'poussent'])
+const termeAcceptable = (t) => /^\p{L}/u.test(t.trim()) && !TERME_REFUSE.test(t.trim()) && !TERMES_REFUSES.has(norm(t).trim())
 
 const MOTS_OUTILS = new Set(['jamais', 'comment', 'pourquoi', 'toujours', 'souvent', 'aussi', 'alors', 'donc', 'cela', 'chaque', 'toute', 'toutes', 'tous', 'tout', 'sans', 'avec', 'pour', 'dans', 'entre', 'sous', 'plus', 'moins', 'tres', 'mais', 'quand', 'lorsque', 'parce', 'puisque', 'ainsi', 'encore', 'deja', 'peut', 'sont', 'etre', 'avoir', 'fait', 'faire', 'doit', 'peuvent', 'selon', 'depuis', 'pendant', 'toi', 'not', 'the', 'and', 'exemple', 'quoi', 'afficher', 'quel', 'quelle', 'quels', 'quelles', 'voici', 'voila'])
 
@@ -155,6 +155,8 @@ function jeuxEcrits(ch, vus, souple = false, calculsSupp = []) {
         const rep = String(q.answer || '').trim()
         const texte = sansMd(q.text).replace(/_{3,}/g, '____')
         if (!q.text || !rep || !/____/.test(texte) || rep.length > 30 || MOTS_OUTILS.has(norm(rep)) || vus.has(norm(texte))) continue
+        // Même phrase déjà posée avec un autre mot masqué : la 2e carte donnerait la réponse de la 1re.
+        if ([...vus].some((d) => !d.startsWith('phrase:') && recouvrement(d, texte) >= 0.85)) continue
         const avant = texte.split('____')[0]
         if (AVANT_VERBE.test(avant)) continue
         const pieges = troisPieges(rep, dujeu, texte.replace('____', ' '), avant, souple) || troisPieges(rep, reponsesChapitre, texte.replace('____', ' '), avant, souple)

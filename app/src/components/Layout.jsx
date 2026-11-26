@@ -10,7 +10,7 @@ import { lazy, Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useStore, levelFromXp } from '../store.jsx'
-import { getSubject, getChapter, search } from '../data/index.js'
+import { getSubject, getChapter, search, chargerMatieres } from '../data/index.js'
 import { subjectsForTrack } from '../data/tracks.js'
 import { estAdminProbable } from '../admin.js'
 import { ALL_TABS, resolveTabs } from '../navTabs.js'
@@ -172,10 +172,10 @@ export default function Layout({ children }) {
           {!parentSeul && <IndicateurSauvegarde />}
 
           {!parentSeul && (
-          <div className="flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400" title={t('streakTitle')}>
+          <Link to="/defi" className="flex min-h-[44px] min-w-[44px] items-center justify-center gap-1 rounded-full px-2 text-sm text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-800" title={t('streakTitle')} aria-label={`${t('streakTitle')} : ${state.streak.count} ${t('streakDays')}`}>
             <Icon.Flame size={15} />
-            <span aria-label={`${state.streak.count} ${t('streakDays')}`}>{state.streak.count}</span>
-          </div>
+            <span>{state.streak.count}</span>
+          </Link>
           )}
 
           {!parentSeul && (
@@ -472,14 +472,17 @@ function SearchOverlay({ onClose }) {
   const t = useT()
   const { state } = useStore()
   const ids = useMemo(() => subjectsForTrack(state?.track).map((x) => x.id), [state?.track])
-  const results = useMemo(() => search(q, ids), [q, ids])
+  // Les sections de cours ne sont cherchées que dans les matières chargées : on charge celles du niveau à l'ouverture.
+  const [charge, setCharge] = useState(0)
+  useEffect(() => { let vivant = true; chargerMatieres(ids).then(() => { if (vivant) setCharge((n) => n + 1) }).catch(() => {}); return () => { vivant = false } }, [ids])
+  const results = useMemo(() => search(q, ids), [q, ids, charge]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const fenetre = useRef(null)
   useFenetreClavier(fenetre, onClose)
 
   const go = (r) => {
     onClose()
-    navigate(r.type === 'page' ? r.to : r.type === 'subject' ? `/subject/${r.id}` : `/subject/${r.subjectId}/theme/${r.id}`)
+    navigate(r.type === 'page' ? r.to : r.type === 'section' ? `/subject/${r.subjectId}/theme/${r.themeId}/chapter/${r.idx}` : r.type === 'subject' ? `/subject/${r.id}` : `/subject/${r.subjectId}/theme/${r.id}`)
   }
 
   return (

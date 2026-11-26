@@ -2125,3 +2125,7 @@ Prochaine action :
 - Barre du bas par défaut : Accueil, Cours, Réviser, Scroll, Paramètres (le Bac blanc y est remplacé ; il reste dans le menu et sur l'accueil). Les élèves qui ont personnalisé leurs onglets gardent les leurs.
 - En-tête mobile : menu burger et recherche descendus (22 px du haut au lieu de ~9) et agrandis à 48 px, plus faciles à toucher d'une main.
 - Scroll, retours de 2 élèves flemmards et du prof : cartes de calcul (générateurs « Calcul express », saisie chiffrée corrigée), phrases à trous plus propres (une par phrase source, abréviations « ex. » protégées, pas de formules), termes du glossaire refusés (verbes, fragments), compteur N/N exact, boutons A/B qui se replient. Reste : volume (médiane ~35 exercices par chapitre), variété (questions ~54 %), « Réviser » verrouillé dans la barre du bas, reprise du chapitre après fermeture.
+
+## AMELIORATIONS-2 (26/11/2026)
+- Professeur : bouton « Je suis professeur » sur l'écran de connexion et dans « Essayer sans compte » ; accueil prof charge les classes à froid ; tuiles « Tableau de bord » / « Quiz et direct » ouvrent `/classe?vue=suivi|quiz` ; menu et page Cours sans éléments d'élève (revision, bac blanc, classement, boutique, changer de niveau, espace parent, Sport au bac, barres de progression).
+- Recherche : trouve aussi les sections de cours des matières chargées (« Maslow »). Série 🔥 de l'en-tête touchable (mène au défi du jour). Scroll : calcul accepte l'unité écrite (« 100,7 points »). Admin : légende des visites, confirmation avec date de fin, onglets plus compacts.

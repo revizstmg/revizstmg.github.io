@@ -3923,5 +3923,9 @@
   "{v0} erreur{v1} en route.": "{v0} error{v1} por el camino.",
   "{v0} erreur{v1}.": "{v0} error{v1}.",
   "Valider": "Validar",
-  "Il fallait trouver": "Había que encontrar"
+  "Il fallait trouver": "Había que encontrar",
+  "Les matières de vos élèves": "Las materias de tus alumnos",
+  "🧑‍🏫 Je suis professeur : créer mon espace classe": "🧑‍🏫 Soy profesor: crear mi espacio de clase",
+  "🧑‍🏫 Tu es professeur ? Crée ton espace classe": "🧑‍🏫 ¿Eres profesor? Crea tu espacio de clase",
+  "Chargement de tes classes…": "Cargando tus clases…"
 }

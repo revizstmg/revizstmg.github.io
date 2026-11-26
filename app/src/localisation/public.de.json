@@ -4802,5 +4802,9 @@
   "{v0} erreur{v1} en route.": "{v0} Fehler{v1} unterwegs.",
   "{v0} erreur{v1}.": "{v0} Fehler{v1}.",
   "Valider": "Prüfen",
-  "Il fallait trouver": "Gesucht war"
+  "Il fallait trouver": "Gesucht war",
+  "Les matières de vos élèves": "Die Fächer Ihrer Schüler",
+  "🧑‍🏫 Je suis professeur : créer mon espace classe": "🧑‍🏫 Ich bin Lehrkraft: meinen Klassenraum erstellen",
+  "🧑‍🏫 Tu es professeur ? Crée ton espace classe": "🧑‍🏫 Sind Sie Lehrkraft? Erstellen Sie Ihren Klassenraum",
+  "Chargement de tes classes…": "Ihre Klassen werden geladen…"
 }
