@@ -3,20 +3,20 @@ import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useStore } from '../store.jsx'
+import { parseNombre } from '../games/common.jsx'
 import { subjectsForTrack } from '../data/tracks.js'
 import { getChapter } from '../data/index.js'
-import { construireFlux } from '../data/scroll.js'
+import { exercicesDuChapitre, chapitresDuTheme } from '../data/scroll.js'
 import { CourseText } from '../components/Course.jsx'
 import Introuvable from './Introuvable.jsx'
 
-// Mode Scroll : le cours en cartes courtes, une par écran, pour réviser d'un pouce sur téléphone.
+// Scroll : les exercices d'un chapitre, un par écran, pour s'entraîner d'un pouce sur téléphone.
 // Ouvert à tous, sans compte ni abonnement.
 const PUCES = {
-  cours: '📘 L’essentiel', formule: '🧮 Formule', piege: '⚠️ Piège', astuce: '💡 Astuce', exemple: '🔎 Exemple', flash: '🃏 Flashcard', qcm: '⚡ Question éclair',
-  trou: '✏️ À compléter', tri: '🗂️ A ou B ?', ordre: '🔢 Remets dans l’ordre', paires: '🔗 Associe', mot: '🔤 Mot mélangé',
+  flash: '🃏 Flashcard', qcm: '⚡ Question éclair', calcul: '🧮 Calcul', trou: '✏️ À compléter', tri: '🗂️ A ou B ?', ordre: '🔢 Remets dans l’ordre', paires: '🔗 Associe', mot: '🔤 Mot mélangé',
 }
 const XP_BONNE_REPONSE = 3
-const XP_PAR_TYPE = { qcm: 3, trou: 3, tri: 3, mot: 4, ordre: 5, paires: 5 }
+const XP_PAR_TYPE = { qcm: 3, trou: 3, tri: 3, mot: 4, ordre: 5, paires: 5, calcul: 5 }
 const melange = (a) => { const t = [...a]; for (let i = t.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [t[i], t[j]] = [t[j], t[i]] } return t }
 const vibrer = (ok) => { try { navigator.vibrate?.(ok ? 12 : [30, 40, 30]) } catch { /* pas de vibreur */ } }
 
@@ -28,9 +28,9 @@ export default function ModeScroll() {
   return (
     <div className="animate-lux mx-auto max-w-2xl space-y-4 py-2" lang="fr" data-no-translate>
       <header className="page-hero page-hero-compact text-center">
-        <p className="kicker">📱 Mode Scroll</p>
-        <h1 className="mt-1 font-display text-[1.7rem] font-medium leading-tight">Révise en faisant défiler</h1>
-        <p className="mt-2 text-sm">Un point de cours, une flashcard ou une question par écran. Fais glisser vers le haut : pas besoin de chercher quoi lire.</p>
+        <p className="kicker">📱 Scroll</p>
+        <h1 className="mt-1 font-display text-[1.7rem] font-medium leading-tight">Des exercices en faisant défiler</h1>
+        <p className="mt-2 text-sm">Choisis un chapitre : un exercice par écran, que tu fais d’un pouce. Compléter une phrase, remettre dans l’ordre, associer, mot mélangé, questions éclair…</p>
       </header>
       <div className="space-y-2">
         {matieres.map((s) => (
@@ -83,6 +83,36 @@ function Trou({ c, fini }) {
   )
 }
 
+function Calcul({ c, fini }) {
+  const [val, setVal] = useState('')
+  const [verifie, setVerifie] = useState(false)
+  const num = parseNombre(val)
+  const ok = verifie && num !== null && Math.abs(num - c.reponse) <= c.tolerance
+  const valider = () => { if (verifie || !val.trim()) return; setVerifie(true); fini(num !== null && Math.abs(num - c.reponse) <= c.tolerance) }
+  return (
+    <>
+      <p className="scroll-texte whitespace-pre-line">{c.prompt}</p>
+      <form className="flex items-center gap-2" onSubmit={(e) => { e.preventDefault(); valider() }}>
+        <input
+          value={val}
+          onChange={(e) => setVal(e.target.value)}
+          disabled={verifie}
+          autoComplete="off"
+          autoCapitalize="off"
+          autoCorrect="off"
+          aria-label="Ta réponse"
+          placeholder="Ta réponse"
+          className="scroll-saisie"
+          data-etat={verifie ? (ok ? 'bon' : 'faux') : undefined}
+        />
+        {c.unite && <span className="text-lg font-semibold" aria-hidden>{c.unite}</span>}
+        <button type="submit" className="btn-primary" disabled={verifie || !val.trim()}>Valider</button>
+      </form>
+      {verifie && <Feedback ok={ok}>{ok ? '' : <>Il fallait trouver <b>{String(c.reponse).replace('.', ',')}{c.unite ? ` ${c.unite}` : ''}</b>. </>}{c.explication}</Feedback>}
+    </>
+  )
+}
+
 function Tri({ c, fini }) {
   const [choisi, setChoisi] = useState(null)
   const ok = choisi === c.bonne
@@ -90,7 +120,7 @@ function Tri({ c, fini }) {
     <>
       <p className="text-sm opacity-80">{c.consigne}</p>
       <p className="scroll-flash" style={{ minHeight: '28%' }}><span>{c.texte}</span></p>
-      <div className="grid grid-cols-2 gap-3" role="group" aria-label="Catégories">
+      <div className="scroll-tri-grille grid grid-cols-2 gap-3" role="group" aria-label="Catégories">
         {c.categories.map((cat, i) => (
           <button key={cat.id} type="button" disabled={choisi !== null} className="scroll-tri" data-cote={i} data-etat={choisi === null ? undefined : cat.id === c.bonne ? 'bon' : cat.id === choisi ? 'faux' : undefined} onClick={() => { setChoisi(cat.id); fini(cat.id === c.bonne) }}>{cat.label}</button>
         ))}
@@ -154,7 +184,7 @@ function Paires({ c, fini }) {
 
 function Mot({ c, fini }) {
   const lettres = useMemo(() => {
-    const base = c.mot.split('').map((l, i) => ({ l, i }))
+    const base = c.mot.toLowerCase().split('').map((l, i) => ({ l, i }))
     let m = melange(base)
     if (m.every((x, k) => x.i === k)) m = m.reverse()
     return m
@@ -183,7 +213,7 @@ function Mot({ c, fini }) {
       <div className="scroll-mots" role="group" aria-label="Lettres">
         {lettres.map((x) => <button key={x.i} type="button" disabled={pose.includes(x) || gagne || revele} onClick={() => poser(x)}>{x.l}</button>)}
       </div>
-      {!gagne && !revele && <div className="flex gap-3"><button type="button" className="btn-ghost" onClick={() => setPose([])}>Effacer</button><button type="button" className="btn-ghost" onClick={() => { setRevele(true); fini(false) }}>Je sèche</button></div>}
+      {!gagne && !revele && <div className="flex gap-3"><button type="button" className="btn-ghost" onClick={() => setPose((p) => p.slice(0, -1))}>Annuler</button><button type="button" className="btn-ghost" onClick={() => setPose([])}>Effacer</button><button type="button" className="btn-ghost" onClick={() => { setRevele(true); fini(false) }}>Je sèche</button></div>}
       {(gagne || revele) && <Feedback ok={gagne && !revele}>{gagne ? '' : <>Le mot était <b>{c.mot}</b>.</>}</Feedback>}
     </>
   )
@@ -224,32 +254,58 @@ function Carte({ c, fini }) {
         </>
       )}
       {c.type === 'trou' && <Trou c={c} fini={fini} />}
+      {c.type === 'calcul' && <Calcul c={c} fini={fini} />}
       {c.type === 'tri' && <Tri c={c} fini={fini} />}
       {c.type === 'ordre' && <Ordre c={c} fini={fini} />}
       {c.type === 'paires' && <Paires c={c} fini={fini} />}
       {c.type === 'mot' && <Mot c={c} fini={fini} />}
-      {c.type === 'formule' && <p className="scroll-formule"><CourseText text={c.texte} /></p>}
-      {c.type === 'exemple' && (
-        <>
-          <p className="font-display text-lg font-semibold"><CourseText text={c.titre} /></p>
-          <p className="scroll-texte whitespace-pre-line"><CourseText text={c.texte} /></p>
-        </>
-      )}
-      {['cours', 'piege', 'astuce'].includes(c.type) && <p className="scroll-texte"><CourseText text={c.texte} /></p>}
       <p className="scroll-indice" aria-hidden>↑ Fais glisser pour continuer</p>
     </section>
   )
 }
 
-// Le fil de cartes d'un thème.
-export function FluxScroll() {
+// Choix du chapitre d'un thème.
+export function ChapitresScroll() {
   const { sid, tid } = useParams()
+  const { state } = useStore()
+  const theme = getChapter(tid)
+  const chapitres = useMemo(() => (theme && theme.subjectId === sid ? chapitresDuTheme(tid).map((c) => ({ ...c, n: exercicesDuChapitre(tid, c.idx).length })) : []), [theme, sid, tid])
+  if (!state.track) return <Navigate to="/" replace />
+  if (!theme || theme.subjectId !== sid) return <Introuvable />
+  return (
+    <div className="animate-lux mx-auto max-w-2xl space-y-4 py-2" lang="fr" data-no-translate>
+      <Link to="/scroll" className="lien-retour">← Tous les thèmes</Link>
+      <header className="page-hero page-hero-compact text-center">
+        <p className="kicker">📱 Scroll</p>
+        <h1 className="mt-1 font-display text-[1.5rem] font-medium leading-tight"><CourseText text={theme.short || theme.name} /></h1>
+        <p className="mt-2 text-sm">Choisis ton chapitre.</p>
+      </header>
+      <ul className="space-y-2">
+        {chapitres.map((c) => (
+          <li key={c.idx}>
+            <Link to={`/scroll/${sid}/${tid}/${c.idx}`} className="card flex items-center gap-3 p-3 text-sm">
+              <span className="min-w-0 flex-1 font-semibold"><CourseText text={c.titre} /></span>
+              <span className="shrink-0 text-xs">{c.n} exercice{c.n > 1 ? 's' : ''}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+// Les exercices d'un chapitre, un par écran.
+export function FluxScroll() {
+  const { sid, tid, cidx } = useParams()
   const { state, addXp } = useStore()
   const navigate = useNavigate()
   const theme = getChapter(tid)
-  const cartes = useMemo(() => (theme && theme.subjectId === sid ? construireFlux(tid) : []), [theme, sid, tid])
+  const chapitres = useMemo(() => (theme && theme.subjectId === sid ? chapitresDuTheme(tid) : []), [theme, sid, tid])
+  const chapitre = chapitres.find((c) => String(c.idx) === String(cidx))
+  const cartes = useMemo(() => (chapitre ? exercicesDuChapitre(tid, chapitre.idx) : []), [chapitre, tid])
   const [index, setIndex] = useState(0)
   const [jeu, setJeu] = useState({ bonnes: 0, essais: 0, serie: 0, meilleure: 0 })
+  const [tour, setTour] = useState(0)
   const liste = useRef(null)
   const faits = useRef(new Set())
   useEffect(() => {
@@ -260,8 +316,9 @@ export function FluxScroll() {
     return () => { document.body.style.overflow = avant }
   }, [])
   if (!state.track) return <Navigate to="/" replace />
-  if (!theme || theme.subjectId !== sid) return <Introuvable />
+  if (!theme || theme.subjectId !== sid || !chapitre) return <Introuvable />
   const total = cartes.length + 1
+  const jouables = cartes.filter((c) => ['qcm', 'trou', 'tri', 'ordre', 'paires', 'mot', 'calcul'].includes(c.type)).length
   const onScroll = (e) => {
     const h = e.currentTarget.clientHeight || 1
     setIndex(Math.min(total - 1, Math.round(e.currentTarget.scrollTop / h)))
@@ -273,28 +330,31 @@ export function FluxScroll() {
     vibrer(ok)
     if (ok) addXp(XP_PAR_TYPE[type] || XP_BONNE_REPONSE)
     setJeu((j) => { const serie = ok ? j.serie + 1 : 0; return { bonnes: j.bonnes + (ok ? 1 : 0), essais: j.essais + 1, serie, meilleure: Math.max(j.meilleure, serie) } })
-    if (ok) setTimeout(() => liste.current?.scrollBy({ top: liste.current.clientHeight, behavior: 'smooth' }), 1300)
+    // Passage automatique à la carte suivante, sauf si l'élève a déjà fait défiler lui-même entre-temps.
+    if (ok) setTimeout(() => { const l = liste.current; if (l && Math.round(l.scrollTop / (l.clientHeight || 1)) === i) l.scrollBy({ top: l.clientHeight, behavior: 'smooth' }) }, 1300)
   }
-  const fermer = () => navigate('/scroll')
+  const suivant = chapitres.find((c) => c.idx === chapitre.idx + 1)
+  const fermer = () => navigate(`/scroll/${sid}/${tid}`)
   return createPortal(
     <div className="scroll-flux" role="region" aria-label="Mode Scroll" lang="fr" data-no-translate>
       <div className="scroll-haut">
-        <button type="button" onClick={fermer} aria-label="Fermer le mode scroll" className="grid h-10 w-10 place-items-center rounded-full text-xl">✕</button>
-        <div className="scroll-barre" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={index + 1} aria-label="Avancement"><span style={{ width: `${((index + 1) / total) * 100}%` }} /></div>
+        <button type="button" onClick={fermer} aria-label="Fermer le mode scroll" className="grid h-12 w-12 place-items-center rounded-full text-xl">✕</button>
+        <div className="scroll-barre" role="progressbar" aria-valuemin={0} aria-valuemax={cartes.length} aria-valuenow={Math.min(index + 1, cartes.length)} aria-label="Avancement"><span style={{ width: `${(Math.min(index + 1, cartes.length) / Math.max(1, cartes.length)) * 100}%` }} /></div>
         {jeu.serie >= 2 && <span className="scroll-serie" aria-label={`Série de ${jeu.serie} bonnes réponses`}>🔥 ×{jeu.serie}</span>}
-        <span className="text-xs tabular-nums">{index + 1} / {total}</span>
+        <span className="text-xs tabular-nums">{Math.min(index + 1, cartes.length)} / {cartes.length}</span>
       </div>
       <div className="scroll-liste" ref={liste} onScroll={onScroll} tabIndex={0}>
-        {cartes.map((c, i) => <Carte key={i} c={c} fini={verdict(i, c.type)} />)}
+        {cartes.map((c, i) => <Carte key={`${tour}-${i}`} c={c} fini={verdict(i, c.type)} />)}
         <section className="scroll-carte items-center text-center" aria-label="Fin">
-          <p className="text-5xl" aria-hidden>{jeu.essais && jeu.bonnes / jeu.essais >= 0.7 ? '🏆' : '🎉'}</p>
-          <h2 className="font-display text-2xl font-semibold">Thème terminé</h2>
-          <p className="text-sm"><CourseText text={theme.short || theme.name} /></p>
-          {jeu.essais > 0 && <p className="scroll-texte">{jeu.bonnes} bonne{jeu.bonnes > 1 ? 's' : ''} réponse{jeu.bonnes > 1 ? 's' : ''} sur {jeu.essais} · meilleure série 🔥 ×{jeu.meilleure}</p>}
+          <p className="text-5xl" aria-hidden>{jeu.essais >= jouables * 0.6 && jeu.bonnes / Math.max(1, jeu.essais) >= 0.7 ? '🏆' : '🎉'}</p>
+          <h2 className="font-display text-2xl font-semibold">Chapitre terminé</h2>
+          <p className="text-sm"><CourseText text={chapitre.titre} /></p>
+          {jeu.essais > 0 && <p className="scroll-texte">{jeu.bonnes} bonne{jeu.bonnes > 1 ? 's' : ''} réponse{jeu.bonnes > 1 ? 's' : ''} sur {jeu.essais} jouée{jeu.essais > 1 ? 's' : ''}{jouables > jeu.essais ? ` · ${jouables - jeu.essais} passée${jouables - jeu.essais > 1 ? 's' : ''}` : ''} · meilleure série 🔥 ×{jeu.meilleure}</p>}
           <div className="flex flex-wrap justify-center gap-3">
-            <button type="button" className="btn-primary" onClick={() => liste.current?.scrollTo({ top: 0 })}>Recommencer</button>
-            <Link to={`/subject/${sid}/theme/${tid}`} className="btn-ghost">Voir le cours complet</Link>
-            <Link to="/scroll" className="btn-ghost">Autre thème</Link>
+            <button type="button" className="btn-primary" onClick={() => { faits.current = new Set(); setJeu({ bonnes: 0, essais: 0, serie: 0, meilleure: 0 }); setTour((t) => t + 1); liste.current?.scrollTo({ top: 0 }) }}>Recommencer</button>
+            {suivant && <Link to={`/scroll/${sid}/${tid}/${suivant.idx}`} className="btn-primary">Chapitre suivant</Link>}
+            <Link to={`/subject/${sid}/theme/${tid}/chapter/${chapitre.idx}`} className="btn-ghost">Voir le cours</Link>
+            <Link to={`/scroll/${sid}/${tid}`} className="btn-ghost">Autre chapitre</Link>
           </div>
         </section>
       </div>

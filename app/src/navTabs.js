@@ -30,9 +30,9 @@ export const ALL_TABS = {
 // Ordre proposé dans l'éditeur.
 export const TAB_ORDER = Object.keys(ALL_TABS)
 
-// Sélection par défaut : le cours, la révision et le bac blanc, à un toucher.
+// Sélection par défaut : le cours, la révision et le scroll (exercices un par écran), à un toucher.
 // Boutique, amis et classement restent sur l'accueil et dans le menu.
-export const DEFAULT_TABS = ['accueil', 'cours', 'revision', 'bacblanc', 'profil']
+export const DEFAULT_TABS = ['accueil', 'cours', 'revision', 'scroll', 'profil']
 
 // Professeur : ses classes et les cours, sans les outils de révision d'un élève.
 export const DEFAULT_TABS_PROF = ['accueil', 'classe', 'cours', 'profil']
