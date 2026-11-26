@@ -2117,3 +2117,6 @@ Prochaine action :
 - Nouveau « Mode Scroll » (`/scroll`, `/scroll/:sid/:tid`) : cours en cartes, flashcards à retourner et questions éclair, une par écran (snap vertical), gratuit pour tous. Cartes construites depuis le cours par `src/data/scroll.js` (rien d'inventé). Entrées : accueil (trousse), menu mobile, recherche.
 - Page rendue dans un portail (`document.body`) : `.page-enter` a un transform qui casse `position: fixed`.
 - Mode Scroll, formats ludiques : « À compléter » (terme de vocabulaire du cours à replacer, 4 propositions), « A ou B ? » (tri), « Remets dans l'ordre », « Associe » (3 paires), « Mot mélangé » (lettres + définition), série de bonnes réponses 🔥, score final, passage automatique à la carte suivante. Répartition d'un thème de ~100 cartes : cours 42 %, à compléter 14 %, jeux 14 %, flashcards 10 %, questions 20 %.
+
+## ADMIN-LISIBLE (26/11/2026)
+- Tableau de bord administrateur refait pour la lisibilité : fond blanc, texte noir, chiffres sans empattement (le serif ancien affichait « ɪ8 »), contraste élevé quel que soit le thème. Chaque chiffre de l'aperçu est un bouton qui ouvre la liste des comptes filtrée (rôle, niveau, période, offre, spécialité) ; filtres repliables avec puces de filtres actifs ; signalements filtrables (à traiter) ; fiches en liste « libellé / valeur ».
