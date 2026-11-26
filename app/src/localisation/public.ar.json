@@ -3924,7 +3924,10 @@
   "{v0} erreur{v1}.": "{v0} خطأ{v1}.",
   "Valider": "تحقق",
   "Il fallait trouver": "كان الجواب",
-<<<<<<< HEAD
+  "Les matières de vos élèves": "مواد طلابك",
+  "🧑‍🏫 Je suis professeur : créer mon espace classe": "🧑‍🏫 أنا أستاذ: إنشاء فضاء قسمي",
+  "🧑‍🏫 Tu es professeur ? Crée ton espace classe": "🧑‍🏫 هل أنت أستاذ؟ أنشئ فضاء قسمك",
+  "Chargement de tes classes…": "جارٍ تحميل أقسامك…",
   "Imagine…": "تخيّل…",
   "Mini-défi :": "تحدٍّ صغير:",
   "Réponse :": "الإجابة:",
@@ -3934,10 +3937,4 @@
   "QCM :": "اختبار:",
   "Trouve l’intrus :": "اعثر على الدخيل:",
   "Classe-les :": "صنّفها:"
-=======
-  "Les matières de vos élèves": "مواد طلابك",
-  "🧑‍🏫 Je suis professeur : créer mon espace classe": "🧑‍🏫 أنا أستاذ: إنشاء فضاء قسمي",
-  "🧑‍🏫 Tu es professeur ? Crée ton espace classe": "🧑‍🏫 هل أنت أستاذ؟ أنشئ فضاء قسمك",
-  "Chargement de tes classes…": "جارٍ تحميل أقسامك…"
->>>>>>> origin/main
 }

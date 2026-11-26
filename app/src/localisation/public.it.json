@@ -3924,7 +3924,10 @@
   "{v0} erreur{v1}.": "{v0} errore{v1}.",
   "Valider": "Conferma",
   "Il fallait trouver": "Bisognava trovare",
-<<<<<<< HEAD
+  "Les matières de vos élèves": "Le materie dei tuoi studenti",
+  "🧑‍🏫 Je suis professeur : créer mon espace classe": "🧑‍🏫 Sono un insegnante: crea il mio spazio classe",
+  "🧑‍🏫 Tu es professeur ? Crée ton espace classe": "🧑‍🏫 Sei un insegnante? Crea il tuo spazio classe",
+  "Chargement de tes classes…": "Caricamento delle tue classi…",
   "Imagine…": "Immagina…",
   "Mini-défi :": "Mini-sfida:",
   "Réponse :": "Risposta:",
@@ -3934,10 +3937,4 @@
   "QCM :": "Quiz:",
   "Trouve l’intrus :": "Trova l’intruso:",
   "Classe-les :": "Classificali:"
-=======
-  "Les matières de vos élèves": "Le materie dei tuoi studenti",
-  "🧑‍🏫 Je suis professeur : créer mon espace classe": "🧑‍🏫 Sono un insegnante: crea il mio spazio classe",
-  "🧑‍🏫 Tu es professeur ? Crée ton espace classe": "🧑‍🏫 Sei un insegnante? Crea il tuo spazio classe",
-  "Chargement de tes classes…": "Caricamento delle tue classi…"
->>>>>>> origin/main
 }

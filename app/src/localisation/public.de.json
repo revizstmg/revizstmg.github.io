@@ -4803,7 +4803,10 @@
   "{v0} erreur{v1}.": "{v0} Fehler{v1}.",
   "Valider": "Prüfen",
   "Il fallait trouver": "Gesucht war",
-<<<<<<< HEAD
+  "Les matières de vos élèves": "Die Fächer Ihrer Schüler",
+  "🧑‍🏫 Je suis professeur : créer mon espace classe": "🧑‍🏫 Ich bin Lehrkraft: meinen Klassenraum erstellen",
+  "🧑‍🏫 Tu es professeur ? Crée ton espace classe": "🧑‍🏫 Sind Sie Lehrkraft? Erstellen Sie Ihren Klassenraum",
+  "Chargement de tes classes…": "Ihre Klassen werden geladen…",
   "Imagine…": "Stell dir vor…",
   "Mini-défi :": "Mini-Challenge:",
   "Réponse :": "Antwort:",
@@ -4813,10 +4816,4 @@
   "QCM :": "Quiz:",
   "Trouve l’intrus :": "Finde den Außenseiter:",
   "Classe-les :": "Ordne sie zu:"
-=======
-  "Les matières de vos élèves": "Die Fächer Ihrer Schüler",
-  "🧑‍🏫 Je suis professeur : créer mon espace classe": "🧑‍🏫 Ich bin Lehrkraft: meinen Klassenraum erstellen",
-  "🧑‍🏫 Tu es professeur ? Crée ton espace classe": "🧑‍🏫 Sind Sie Lehrkraft? Erstellen Sie Ihren Klassenraum",
-  "Chargement de tes classes…": "Ihre Klassen werden geladen…"
->>>>>>> origin/main
 }

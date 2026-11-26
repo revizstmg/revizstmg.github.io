@@ -3924,7 +3924,10 @@
   "{v0} erreur{v1}.": "{v0} error{v1}.",
   "Valider": "Validar",
   "Il fallait trouver": "Había que encontrar",
-<<<<<<< HEAD
+  "Les matières de vos élèves": "Las materias de tus alumnos",
+  "🧑‍🏫 Je suis professeur : créer mon espace classe": "🧑‍🏫 Soy profesor: crear mi espacio de clase",
+  "🧑‍🏫 Tu es professeur ? Crée ton espace classe": "🧑‍🏫 ¿Eres profesor? Crea tu espacio de clase",
+  "Chargement de tes classes…": "Cargando tus clases…",
   "Imagine…": "Imagina…",
   "Mini-défi :": "Minirreto:",
   "Réponse :": "Respuesta:",
@@ -3934,10 +3937,4 @@
   "QCM :": "Test:",
   "Trouve l’intrus :": "Encuentra el intruso:",
   "Classe-les :": "Clasifícalos:"
-=======
-  "Les matières de vos élèves": "Las materias de tus alumnos",
-  "🧑‍🏫 Je suis professeur : créer mon espace classe": "🧑‍🏫 Soy profesor: crear mi espacio de clase",
-  "🧑‍🏫 Tu es professeur ? Crée ton espace classe": "🧑‍🏫 ¿Eres profesor? Crea tu espacio de clase",
-  "Chargement de tes classes…": "Cargando tus clases…"
->>>>>>> origin/main
 }
