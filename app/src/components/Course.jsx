@@ -475,7 +475,7 @@ function Frise({ title, events = [] }) {
 const DEFI_GENRES = { vf: ['✅❌', 'Vrai ou faux ?'], erreur: ['🕵️', 'Trouve l’erreur :'], calcul: ['🧮', 'À toi de calculer :'], qcm: ['❓', 'QCM :'], intrus: ['🔍', 'Trouve l’intrus :'], classement: ['🗂️', 'Classe-les :'] }
 
 // Le genre du défi est déjà affiché devant la question : on retire son écho en début de question (« Vrai ou faux : … »).
-const sansEcho = (q) => String(q || '').replace(/^\s*(?:vrai ou faux|trouve l['’]erreur|trouve l['’]intrus|qcm|classe[- ]les|[àa] toi de calculer)\s*[?:]\s*/i, '')
+const sansEcho = (q) => String(q || '').replace(/^\s*(?:vrai ou faux|(?:trouve|rep[èe]re|corrige|rep[eé]rez) l['’](?:erreur|intrus)|qcm|classe[- ]les|[àa] toi de calculer)\s*[?:]\s*/i, '')
 
 export function Block({ b, color }) {
   switch (b.t) {
