@@ -70,3 +70,9 @@
 
 .adm .adm-deplier { margin-top: 12px; border: 2px solid #cbd5e1; border-radius: 12px; padding: 4px 12px 10px; background: #f8fafc; }
 .adm .adm-deplier > summary { cursor: pointer; font-weight: 800; padding: 10px 0; min-height: 44px; }
+
+.adm .adm-fixe { cursor: default; }
+.adm .adm-fixe::after { content: none; }
+.adm .adm-fixe:hover { border-color: #cbd5e1; background: #f1f5f9; }
+.adm .adm-defile { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.adm .adm-defile table { min-width: 520px; }

@@ -59,8 +59,9 @@ function Apercu({ donnees, aller }) {
         <Kpi titre="Actifs (7 jours)" valeur={c.actifs_7j} onClick={() => aller('comptes', { periode: 'maj7' })} />
         {c.actifs_24h !== undefined && <Kpi titre="Actifs (24 h)" valeur={c.actifs_24h} onClick={() => aller('comptes', { periode: 'maj1' })} />}
         {o && <Kpi titre="Abonnés actifs" valeur={(o.premium || 0) + (o.ultimate || 0)} sous={`${o.premium} Premium · ${o.ultimate} Ultimate`} onClick={() => aller('abos', { offre: 'payant' })} />}
-        {o && <Kpi titre="Payants / offerts" valeur={`${o.reels} / ${o.offerts}`} sous="Stripe / par un admin" onClick={() => aller('abos', { offre: 'payant' })} />}
-        {donnees.signalements_ouverts !== undefined && <Kpi titre="Signalements à traiter" valeur={donnees.signalements_ouverts} onClick={() => aller('signalements')} />}
+        {o && <Kpi titre="Abonnés Stripe" valeur={o.reels} sous="Ils paient" onClick={() => aller('abos', { offre: 'payant', origine: 'stripe' })} />}
+        {o && <Kpi titre="Abonnés offerts" valeur={o.offerts} sous="Donnés par un admin" onClick={() => aller('abos', { offre: 'payant', origine: 'offert' })} />}
+        {donnees.signalements_ouverts !== undefined && <Kpi titre="Signalements à traiter" valeur={donnees.signalements_ouverts} onClick={() => aller('signalements', { ouverts: true })} />}
       </div>
       <section className="adm-bloc">
         <h2>Visites par jour (30 jours)</h2>
@@ -180,8 +181,9 @@ function Comptes({ filtreInitial = {}, onFiltre }) {
   const [etat, setEtat] = useState({ charge: false })
   const [voir, setVoir] = useState(null)
   const [recherche, setRecherche] = useState('')
-  const [f, setF] = useState({ role: '', niveau: '', offre: '', periode: '', specialite: '', ...filtreInitial })
+  const [f, setF] = useState({ role: '', niveau: '', offre: '', periode: '', specialite: '', origine: '', ...filtreInitial })
   const [tri, setTri] = useState('recent')
+  const [filtresOuverts, setFiltresOuverts] = useState(Object.values(filtreInitial).some(Boolean))
   useEffect(() => {
     let vivant = true
     appelAdmin('revizstmg_admin_comptes').then((r) => { if (vivant) setEtat({ charge: true, ...r }) })
@@ -195,6 +197,7 @@ function Comptes({ filtreInitial = {}, onFiltre }) {
       .filter((c) => (!q || `${c.nom} ${c.email} ${c.specialite} ${c.niveau}`.toLowerCase().includes(q))
         && (!f.role || c.role === f.role) && (!f.niveau || c.niveau === f.niveau) && (!f.specialite || (c.specialite || c.niveau || 'inconnu') === f.specialite)
         && (!f.offre || (f.offre === 'payant' ? offreDe(c) !== 'gratuit' : offreDe(c) === f.offre))
+        && (!f.origine || (offreDe(c) !== 'gratuit' && (f.origine === 'offert' ? !!c.offre_offerte : !c.offre_offerte)))
         && (!f.periode || (f.periode === 'cree1' ? dansLes(c.cree, 1) : f.periode === 'cree7' ? dansLes(c.cree, 7) : f.periode === 'maj1' ? dansLes(c.maj, 1) : dansLes(c.maj, 7))))
       .sort(tris[tri])
   }, [etat.data, recherche, f, tri])
@@ -202,13 +205,13 @@ function Comptes({ filtreInitial = {}, onFiltre }) {
   if (!etat.charge) return <p role="status" lang="fr" data-no-translate>Chargement…</p>
   if (!etat.ok) return <p role="alert" className="adm-erreur" lang="fr" data-no-translate>Erreur : {etat.erreur}</p>
   const actifs = Object.entries(f).filter(([, v]) => v)
-  const libelleFiltre = (k, v) => ({ role: v === 'prof' ? 'Professeurs' : 'Élèves', niveau: NIVEAUX[v] || v, offre: v === 'payant' ? 'Abonnés' : nomOffre(v), periode: (PERIODES.find(([x]) => x === v) || [0, v])[1], specialite: `Spécialité : ${v}` })[k]
+  const libelleFiltre = (k, v) => ({ role: v === 'prof' ? 'Professeurs' : 'Élèves', niveau: NIVEAUX[v] || v, offre: v === 'payant' ? 'Abonnés' : nomOffre(v), periode: (PERIODES.find(([x]) => x === v) || [0, v])[1], specialite: `Spécialité : ${v}`, origine: v === 'offert' ? 'Offerts par un admin' : 'Payés via Stripe' })[k]
   const set = (k) => (e) => { setF((x) => ({ ...x, [k]: e.target.value })); onFiltre?.() }
   return (
     <div lang="fr" data-no-translate>
       <label className="adm-doux" htmlFor="admin-recherche" style={{ fontWeight: 700 }}>Chercher un compte</label>
       <input id="admin-recherche" value={recherche} onChange={(e) => setRecherche(e.target.value)} className="adm-champ" placeholder="Nom, e-mail, spécialité…" />
-      <details className="adm-deplier" open={actifs.length > 0 || undefined}>
+      <details className="adm-deplier" open={filtresOuverts} onToggle={(e) => setFiltresOuverts(e.currentTarget.open)}>
         <summary>Filtres et tri</summary>
       <div className="adm-filtres">
         <label>Rôle <select value={f.role} onChange={set('role')}><option value="">Tous</option><option value="eleve">Élèves</option><option value="prof">Profs</option></select></label>
@@ -221,7 +224,7 @@ function Comptes({ filtreInitial = {}, onFiltre }) {
       {actifs.length > 0 && (
         <div className="adm-puces" aria-label="Filtres actifs">
           {actifs.map(([k, v]) => <span key={k} className="adm-puce">{libelleFiltre(k, v)}</span>)}
-          <button type="button" className="adm-lien" onClick={() => setF({ role: '', niveau: '', offre: '', periode: '', specialite: '' })}>Tout effacer</button>
+          <button type="button" className="adm-lien" onClick={() => setF({ role: '', niveau: '', offre: '', periode: '', specialite: '', origine: '' })}>Tout effacer</button>
         </div>
       )}
       <p><b>{lignes.length}</b> compte(s) sur {(etat.data || []).length}</p>
@@ -241,9 +244,9 @@ function Comptes({ filtreInitial = {}, onFiltre }) {
   )
 }
 
-function Divers({ section }) {
+function Divers({ section, ouvertsInitial = false }) {
   const [etat, setEtat] = useState({ charge: false })
-  const [seulementOuverts, setSeulementOuverts] = useState(false)
+  const [seulementOuverts, setSeulementOuverts] = useState(ouvertsInitial)
   useEffect(() => {
     let vivant = true
     appelAdmin('revizstmg_admin_divers').then((r) => { if (vivant) setEtat({ charge: true, ...r }) })
@@ -256,7 +259,7 @@ function Divers({ section }) {
     return (
       <section className="adm-bloc" lang="fr" data-no-translate>
         <h2>Usage de l’IA</h2>
-        {d.ia.length ? <table><thead><tr><th>Compte</th><th>Fonction</th><th>Période</th><th>Usages</th></tr></thead><tbody>{d.ia.map((a, i) => <tr key={i}><td>{a.nom || '—'}</td><td>{a.fonction}</td><td>{a.periode}</td><td><b>{a.n}</b></td></tr>)}</tbody></table> : <p>Aucun usage.</p>}
+        {d.ia.length ? <div className="adm-defile"><table><thead><tr><th>Compte</th><th>Fonction</th><th>Période</th><th>Usages</th></tr></thead><tbody>{d.ia.map((a, i) => <tr key={i}><td>{a.nom || '—'}</td><td>{a.fonction}</td><td>{a.periode}</td><td><b>{a.n}</b></td></tr>)}</tbody></table></div> : <p>Aucun usage.</p>}
       </section>
     )
   }
@@ -265,15 +268,15 @@ function Divers({ section }) {
       <div lang="fr" data-no-translate>
         <section className="adm-bloc" style={{ marginTop: 0 }}>
           <h2>Classes</h2>
-          {d.classes.length ? <table><thead><tr><th>Classe</th><th>Matière</th><th>Prof</th><th>Membres</th><th>Créée</th></tr></thead><tbody>{d.classes.map((c) => <tr key={c.code}><td><b>{c.nom || c.code}</b> ({c.code})</td><td>{c.matiere || '—'}</td><td>{c.prof || '—'}</td><td><b>{c.membres}</b></td><td>{dateFr(c.cree)}</td></tr>)}</tbody></table> : <p>Aucune classe.</p>}
+          {d.classes.length ? <div className="adm-defile"><table><thead><tr><th>Classe</th><th>Matière</th><th>Prof</th><th>Membres</th><th>Créée</th></tr></thead><tbody>{d.classes.map((c) => <tr key={c.code}><td><b>{c.nom || c.code}</b> ({c.code})</td><td>{c.matiere || '—'}</td><td>{c.prof || '—'}</td><td><b>{c.membres}</b></td><td>{dateFr(c.cree)}</td></tr>)}</tbody></table></div> : <p>Aucune classe.</p>}
         </section>
         <section className="adm-bloc">
           <h2>Vie sociale</h2>
           <div className="adm-grille">
-            <div className="adm-kpi" style={{ cursor: 'default' }}><span className="adm-nombre">{d.social.amis}</span><span className="adm-titre">Profils d’amis</span></div>
-            <div className="adm-kpi" style={{ cursor: 'default' }}><span className="adm-nombre">{d.social.demandes}</span><span className="adm-titre">Demandes</span></div>
-            <div className="adm-kpi" style={{ cursor: 'default' }}><span className="adm-nombre">{d.social.classement}</span><span className="adm-titre">Lignes de classement</span></div>
-            <div className="adm-kpi" style={{ cursor: 'default' }}><span className="adm-nombre">{d.social.membres_classe}</span><span className="adm-titre">Membres de classe</span></div>
+            <div className="adm-kpi adm-fixe"><span className="adm-nombre">{d.social.amis}</span><span className="adm-titre">Profils d’amis</span></div>
+            <div className="adm-kpi adm-fixe"><span className="adm-nombre">{d.social.demandes}</span><span className="adm-titre">Demandes</span></div>
+            <div className="adm-kpi adm-fixe"><span className="adm-nombre">{d.social.classement}</span><span className="adm-titre">Lignes de classement</span></div>
+            <div className="adm-kpi adm-fixe"><span className="adm-nombre">{d.social.membres_classe}</span><span className="adm-titre">Membres de classe</span></div>
           </div>
         </section>
       </div>
@@ -337,7 +340,7 @@ export default function Admin() {
           {nav.onglet === 'apercu' && apercu && <Apercu donnees={apercu} aller={aller} />}
           {nav.onglet === 'comptes' && <Comptes key={nav.cle} filtreInitial={nav.filtre} />}
           {nav.onglet === 'abos' && <><h2>Comptes abonnés</h2><Comptes key={nav.cle} filtreInitial={{ offre: 'payant', ...nav.filtre }} /><div style={{ marginTop: 16 }}><Divers section="abos" /></div></>}
-          {(nav.onglet === 'signalements' || nav.onglet === 'classes') && <Divers section={nav.onglet} />}
+          {(nav.onglet === 'signalements' || nav.onglet === 'classes') && <Divers key={nav.cle} section={nav.onglet} ouvertsInitial={!!nav.filtre.ouverts} />}
         </>
       )}
     </div>
