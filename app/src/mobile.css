@@ -26,7 +26,7 @@
   .site-main .page-hero h1 { font-size: clamp(1.7rem, 6.5vw, 2rem); line-height: 1.12; }
   .site-main .page-hero p { font-size: 14px; line-height: 1.65; }
   /* Menu et recherche plus bas et plus larges : le haut de l'écran est difficile à atteindre d'une main. */
-  .mobile-header-row { min-height: 76px; padding: 22px 12px 6px; gap: 6px; }
+  .mobile-header-row { min-height: 80px; padding: 28px 12px 6px; gap: 6px; }
   .mobile-header-row .site-menu-toggle { width: 48px; height: 48px; }
   .mobile-header-row > a { min-width: 0; }
   .mobile-header-row > a:first-of-type { font-size: 1.5rem; }
@@ -92,6 +92,8 @@
   .site-main .bac-subject-body { padding: 20px; }
   .site-main .bac-creator .bac-preview { height: 180px; min-height: 0; }
   .site-shell:has(.mobile-bottom-nav) .mobile-cookie-notice { bottom: 64px; }
+  /* La bannière « Installe l'appli » ne doit pas recouvrir la barre d'onglets. */
+  body:has(.mobile-bottom-nav) .mobile-install-banner { bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
   .mobile-cookie-notice button { min-width: 48px; min-height: 44px; }
   .mobile-keyboard-open :is(.mobile-bottom-nav, .mobile-cookie-notice) { display: none; }
 }
@@ -102,4 +104,13 @@
   .reader-close-mobile { width: auto; min-width: 100px; }
   .reader-full-heading { min-height: 26px; padding-block: 3px; }
   .mobile-menu-panel { max-height: calc(100dvh - 20px - env(safe-area-inset-top, 0px)); }
+}
+
+/* Appli installée (écran d'accueil du téléphone) : la barre d'état est tout en haut et le pouce n'y arrive pas, le menu, la série
+   et la recherche descendent encore d'un cran. */
+@media screen and (max-width: 1023px) and (display-mode: standalone) {
+  .mobile-header-row { min-height: 92px; padding-top: 40px; }
+}
+@media screen and (max-width: 1023px) and (max-height: 500px) {
+  .mobile-header-row { min-height: 48px; padding-top: 2px; }
 }

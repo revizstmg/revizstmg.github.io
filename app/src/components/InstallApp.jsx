@@ -219,7 +219,7 @@ export function InstallBanner() {
   return (
     <>
       {show && (
-        <div className="no-print fixed inset-x-0 bottom-0 z-[60] px-3 pt-3" role="dialog" aria-label={t('installApp')} style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}>
+        <div className="mobile-install-banner no-print fixed inset-x-0 bottom-0 z-[60] px-3 pt-3" role="dialog" aria-label={t('installApp')} style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}>
           <div className="mx-auto flex max-w-md items-center gap-3 rounded-2xl border p-3 shadow-xl"
             style={{ backgroundColor: 'color-mix(in srgb, var(--c-bg) 94%, var(--c-accent) 6%)', borderColor: 'color-mix(in srgb, var(--c-accent) 30%, transparent)' }}>
             <span className="shrink-0 overflow-hidden rounded-xl"><AppMark size={40} /></span>
