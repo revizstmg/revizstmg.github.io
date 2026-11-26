@@ -31,7 +31,7 @@ describe('cours ludiques', () => {
           for (const b of sec.blocks) {
             expect(AUTORISES.has(b.t), `${where} bloc ${b.t}`).toBe(true)
             if (b.t === 'accroche') { expect(b.c?.length, where).toBeGreaterThan(40); expect(b.c.length, where).toBeLessThan(420) }
-            if (b.t === 'defi') { expect(b.q?.length, where).toBeGreaterThan(10); expect(b.a?.length, where).toBeGreaterThan(1); expect([undefined, 'vf', 'erreur', 'calcul', 'question'], where).toContain(b.kind) }
+            if (b.t === 'defi') { expect(b.q?.length, where).toBeGreaterThan(10); expect(b.a?.length, where).toBeGreaterThan(1); expect([undefined, 'vf', 'erreur', 'calcul', 'question', 'qcm', 'intrus', 'classement'], where).toContain(b.kind) }
             for (const v of [b.c, b.q, b.a, b.explain].flat()) if (typeof v === 'string') expect((v.match(/\*\*/g) || []).length % 2, where).toBe(0)
           }
           const gras = sec.blocks.flatMap((b) => [b.c].flat()).filter((x) => typeof x === 'string').join(' ').match(/\*\*[^*]+\*\*/g) || []

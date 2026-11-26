@@ -9,7 +9,7 @@
       "t": "accroche",
       "emoji": "🤔",
       "h": "Question qui pique",
-      "c": "Pourquoi campe-t-on devant un magasin pour un téléphone, alors que l’ancien marche très bien ? Réponse : image de soi, Maslow, mercatique."
+      "c": "Pourquoi campe-t-on devant un magasin pour un téléphone, alors que l’ancien marche très bien ? Ce n’est pas (seulement) un téléphone qu’on achète : alors quoi ?"
      },
      {
       "t": "example",
@@ -37,9 +37,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Vrai ou faux : s’offrir une 4e paire de baskets de marque pour être admiré répond surtout à un besoin physiologique.",
-      "a": "Faux : c’est surtout un besoin d’estime (image de soi), avec l’appartenance.",
-      "explain": "Se chausser est déjà acquis : l’achat vise un niveau plus haut."
+      "q": "Vrai ou faux : un même smartphone peut répondre à la fois à un besoin fonctionnel et à un besoin d’estime.",
+      "a": "Vrai : il sert à communiquer et à afficher un statut.",
+      "explain": "Un produit peut toucher plusieurs niveaux de la pyramide de Maslow."
      }
     ]
    },
@@ -50,7 +50,7 @@
       "t": "accroche",
       "emoji": "🎒",
       "h": "Mini-histoire",
-      "c": "Tu rêves de ces baskets à 150 €. Mais tu as peur de t’être trompé de pointure, et tu culpabilises de dépenser autant. Une force te pousse, d’autres te retiennent : le cours t’explique qui gagne et comment un vendeur malin fait pencher la balance."
+      "c": "Tu rêves de ces baskets à 150 €. Mais tu as peur de t’être trompé de pointure, et tu culpabilises de dépenser autant. Une force te pousse, d’autres te retiennent : qui gagne ?"
      },
      {
       "t": "p",
@@ -133,7 +133,7 @@
      },
      {
       "t": "p",
-      "c": "Nos choix dépendent de facteurs **personnels** (perception, habitudes, personnalité, âge) et **socioculturels** (la culture, les proches, les groupes de référence, le milieu social) : une marque doit connaître **qui** est en face."
+      "c": "Nos choix dépendent de facteurs **personnels** (ou individuels : âge, personnalité, style de vie, habitudes), **psychologiques** (perception, apprentissage) et **socioculturels** (la culture, les proches, les groupes de référence, le milieu social) : une marque doit connaître **qui** est en face."
      },
      {
       "t": "p",
@@ -141,12 +141,12 @@
      },
      {
       "t": "p",
-      "c": "Pour connaître tout cela, l’entreprise mène des **études** : **quantitatives** (combien ? par sondage) et **qualitatives** (pourquoi ? par entretiens). Comprendre le consommateur mène ensuite à **découper** le marché en groupes homogènes : c’est la **segmentation**."
+      "c": "Pour connaître tout cela, l’entreprise mène des **études** : **quantitatives** (combien ? par sondage) et **qualitatives** (pourquoi ? par entretiens). On peut ensuite **découper** le marché en groupes homogènes : c’est la **segmentation**."
      },
      {
       "t": "tip",
       "h": "Mnémo",
-      "c": "R-I-R : Réfléchi = je pèse, Impulsif = je craque, Routinier = j’ai mes habitudes."
+      "c": "R-I-R : Réfléchi = je pèse, Impulsif = je cède, Routinier = j’ai mes habitudes."
      },
      {
       "t": "example",
@@ -155,46 +155,46 @@
      },
      {
       "t": "defi",
-      "kind": "vf",
-      "q": "Vrai ou faux : un achat routinier et un achat réfléchi appellent exactement la même mercatique.",
-      "a": "Faux : chaque type d’achat appelle une mercatique différente.",
-      "explain": "On rassure et on informe pour un achat réfléchi ; on rend visible pour un achat routinier."
+      "kind": "qcm",
+      "q": "Hugo compare longuement trois canapés pendant des semaines avant d’acheter. Quel type d’achat ?\nA) Impulsif\nB) Réfléchi\nC) Routinier",
+      "a": "B) Réfléchi : le choix est long et pesé.",
+      "explain": "Impulsif = sans réflexion ; routinier = habituel."
      }
     ]
    },
    {
-    "h": "📱 Exemple — un smartphone haut de gamme : besoin, motivation, frein",
+    "h": "⌚ Exemple — un produit haut de gamme (montre connectée) : besoin, motivation, frein",
     "blocks": [
      {
       "t": "accroche",
       "emoji": "💸",
-      "h": "Défi lancé",
-      "c": "Un smartphone plus cher que les autres, et pourtant il se vend. Trouve ce qui pousse, ce qui retient, et quel besoin se cache derrière."
+      "h": "Mini-histoire",
+      "c": "Une montre connectée plus chère que les autres, et pourtant elle se vend. Pourquoi ?"
      },
      {
       "t": "example",
       "h": "Cas",
-      "c": "Un client achète un smartphone haut de gamme d’une grande marque, plus cher que les autres."
+      "c": "Un client achète une montre connectée haut de gamme d’une grande marque, plus chère que les autres."
      },
      {
       "t": "list",
       "c": [
-       "**Motivation** (pousse à l’achat) : besoin d’estime, image de soi (motivation d’auto-expression).",
-       "**Frein** (retient) : le prix élevé (frein financier), la peur de se tromper (risque perçu).",
+       "**Motivation** : besoin d’estime, image de soi (auto-expression).",
+       "**Frein** : prix élevé (frein financier), peur de se tromper (risque perçu).",
        "**Besoin** (Maslow) : ici un besoin d’**estime**, pas seulement un besoin fonctionnel."
       ]
      },
      {
       "t": "tip",
       "h": "Rôle du marketing",
-      "c": "Le marketing cherche à renforcer les motivations et à lever les freins (garantie, facilités de paiement)."
+      "c": "Renforcer les motivations, lever les freins (garantie, paiement échelonné)."
      },
      {
       "t": "defi",
-      "kind": "question",
-      "q": "Cite une action de la marque qui lève la peur de se tromper.",
-      "a": "Une garantie, un essai gratuit, un « satisfait ou remboursé » ou des avis clients (une seule réponse suffit).",
-      "explain": "Ces actions réduisent le risque perçu, donc le frein."
+      "kind": "intrus",
+      "q": "Trouve l’intrus : (1) prix élevé, (2) peur de se tromper, (3) culpabilité, (4) plaisir de la nouveauté.",
+      "a": "(4) : c’est un mobile hédoniste ; les trois autres sont des freins.",
+      "explain": "Prix, peur de se tromper et culpabilité retiennent l’achat."
      }
     ]
    },
@@ -226,7 +226,7 @@
      },
      {
       "t": "p",
-      "c": "Les **mobiles** sont **hédonistes** (se faire plaisir), **oblatifs** (faire plaisir aux autres, offrir) ou d’**auto-expression** (montrer qui l’on est). Les **freins** sont les **peurs** (risque perçu), les **inhibitions** (culpabilité) et les **risques** (financier, de performance)."
+      "c": "Les **mobiles** sont **hédonistes** (se faire plaisir), **oblatifs** (faire plaisir aux autres, offrir) ou d’**auto-expression** (montrer qui l’on est). Les **freins** se rangent en trois familles : le prix (frein financier), les **peurs** de se tromper (les **risques** perçus, par exemple de performance) et les **inhibitions** (culpabilité)."
      },
      {
       "t": "p",
@@ -284,7 +284,7 @@
       "t": "accroche",
       "emoji": "🎧",
       "h": "Mini-histoire",
-      "c": "Ton casque audio grésille. Tu lis les avis, tu compares, tu craques… puis tu te demandes si tu ne vas pas le regretter. Sans le savoir, tu viens de jouer un scénario en cinq actes."
+      "c": "Ton casque audio grésille. Tu lis les avis, tu compares, tu te décides… puis tu te demandes si tu ne vas pas le regretter. Un scénario en cinq actes."
      },
      {
       "t": "p",
@@ -302,7 +302,7 @@
      },
      {
       "t": "p",
-      "c": "La décision est influencée par des **facteurs** : **individuels** (âge, personnalité, style de vie), **psychologiques** (perception, apprentissage) et **socioculturels** (famille, groupes de référence, culture, effets de mode). D’où le fait qu’« on n’achète pas tous de la même façon »."
+      "c": "La décision est influencée par des **facteurs** : **individuels** ou personnels (âge, personnalité, style de vie, habitudes), **psychologiques** (perception, apprentissage) et **socioculturels** (famille, groupes de référence, culture, effets de mode). D’où le fait qu’« on n’achète pas tous de la même façon »."
      },
      {
       "t": "p",
@@ -391,8 +391,8 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Vrai ou faux : pour une étude, les chiffres déjà publiés par l’INSEE sont des données primaires.",
-      "a": "Faux : ce sont des données secondaires (elles existent déjà).",
+      "q": "Vrai ou faux : pour une étude de marché, des chiffres de l’INSEE déjà publiés sont des données secondaires.",
+      "a": "Vrai : elles existent déjà, elles n’ont pas été recueillies spécialement pour l’étude.",
       "explain": "Les données primaires sont recueillies spécialement pour l’étude (sondage, entretiens)."
      }
     ]
@@ -403,8 +403,8 @@
      {
       "t": "accroche",
       "emoji": "🌧️",
-      "h": "Défi lancé",
-      "c": "Minuit, il pleut, des dizaines de personnes font la queue pour un smartphone qu’elles pourraient commander demain depuis leur canapé. Avant de lire la suite, devine : besoins ? mobiles ? freins ?"
+      "h": "Scène",
+      "c": "Minuit, il pleut, des dizaines de personnes font la queue pour un smartphone qu’elles pourraient commander demain depuis leur canapé. Besoins, mobiles, freins : qu’est-ce qui se joue ?"
      },
      {
       "t": "p",
@@ -423,7 +423,7 @@
      {
       "t": "example",
       "h": "Étape 3 — Freins",
-      "c": "Frein **financier** (prix élevé) et **risque** (longue file, rupture de stock), largement compensés par la force des mobiles et l’effet de rareté organisé."
+      "c": "Frein **financier** (prix élevé) et **risque** perçu (peur de rater l’achat : longue file, rupture de stock), largement compensés par la force des mobiles et l’effet de rareté organisé."
      },
      {
       "t": "p",
@@ -449,8 +449,8 @@
      {
       "t": "accroche",
       "emoji": "⏱️",
-      "h": "Défi lancé",
-      "c": "Veille d’examen : tu as 30 secondes pour te rappeler quatre notions et leurs nuances. Besoin, mobile, frein, attente : voici le résumé de poche, avec un exemple pour ne plus les confondre."
+      "h": "Chrono",
+      "c": "Veille d’examen : tu as 30 secondes pour te rappeler quatre notions et leurs nuances. Besoin, mobile, frein, attente : voici le résumé de poche, avec un exemple."
      },
      {
       "t": "p",
@@ -458,7 +458,7 @@
      },
      {
       "t": "p",
-      "c": "Le **frein** est la force qui retient l’achat : une **peur**, un **risque** perçu ou une **inhibition** comme la culpabilité. L’**attente**, enfin, est ce que le client espère précisément obtenir du produit."
+      "c": "Le **frein** est la force qui retient l’achat : le prix (frein financier), la **peur** de se tromper (**risque** perçu) ou une **inhibition** (la culpabilité). L’**attente**, enfin, est ce que le client espère précisément obtenir du produit."
      },
      {
       "t": "tip",
@@ -498,10 +498,10 @@
      },
      {
       "t": "defi",
-      "kind": "erreur",
-      "q": "Un élève écrit : « L’attente, c’est la force qui pousse le client à acheter. » Trouve l’erreur.",
-      "a": "Ce qui pousse à acheter, c’est la motivation (le mobile) ; l’attente est ce que le client espère précisément du produit.",
-      "explain": "Ne confonds pas la force qui pousse (mobile) avec ce qu’on espère obtenir (attente)."
+      "kind": "classement",
+      "q": "Classe ces quatre éléments en mobiles ou en freins : (a) faire plaisir à un ami, (b) prix jugé trop élevé, (c) montrer qui l’on est, (d) peur de se tromper.",
+      "a": "Mobiles : (a) oblatif et (c) auto-expression. Freins : (b) prix (financier) et (d) peur de se tromper (risque perçu).",
+      "explain": "Les mobiles poussent à l’achat, les freins le retiennent."
      }
     ]
    },
@@ -526,7 +526,7 @@
      {
       "t": "example",
       "h": "Étape 2 — Freins",
-      "c": "Frein **financier** (prix élevé) et frein **risque** (autonomie, recharge), qui expliquent l’hésitation."
+      "c": "Frein **financier** (prix élevé) et frein **risque** (peur de manquer d’autonomie ou de recharge : risque perçu), qui expliquent l’hésitation."
      },
      {
       "t": "p",
@@ -540,9 +540,9 @@
      {
       "t": "defi",
       "kind": "question",
-      "q": "Quelle action du vendeur lève le frein « peur de manquer d’autonomie » ?",
+      "q": "Quelle action du vendeur lève la peur de manquer d’autonomie ?",
       "a": "Une démonstration ou un essai longue durée de l’autonomie.",
-      "explain": "On réduit le risque perçu en prouvant ce qui inquiète ; la garantie batterie répond plutôt au risque de panne."
+      "explain": "On réduit le risque perçu en prouvant ce qui inquiète."
      }
     ]
    }
@@ -602,10 +602,10 @@
      },
      {
       "t": "defi",
-      "kind": "vf",
-      "q": "Vrai ou faux : une marque peut choisir son positionnement avant de savoir quelle cible elle vise.",
-      "a": "Faux : l’ordre est segmenter, puis cibler, puis positionner.",
-      "explain": "On ne peut pas choisir une image avant de savoir à qui l’on parle."
+      "kind": "erreur",
+      "q": "« On positionne d’abord, puis on cible, puis on segmente. » Trouve l’erreur.",
+      "a": "L’ordre est faux : on segmente d’abord, puis on cible, puis on positionne.",
+      "explain": "On ne choisit pas une image avant de savoir à qui l’on parle."
      }
     ]
    },
@@ -616,7 +616,7 @@
       "t": "accroche",
       "emoji": "🥪",
       "h": "Question qui pique",
-      "c": "Tu ouvres un snack : combien de clients ? Qui vend déjà quoi ? Fonce à l’aveugle, et tu perds. Voici comment regarder ton terrain."
+      "c": "Tu ouvres un snack : combien de clients ? Qui vend déjà quoi ? Foncer sans regarder, c’est risqué. Voici comment regarder ton terrain."
      },
      {
       "t": "p",
@@ -639,9 +639,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Vrai ou faux : un non-consommateur relatif est quelqu’un qui n’achètera jamais le produit.",
-      "a": "Faux : c’est quelqu’un qui n’achète pas encore mais qu’on pourrait convaincre.",
-      "explain": "Il est le potentiel de croissance ; l’autre est un non-consommateur absolu."
+      "q": "Vrai ou faux : un non-consommateur relatif peut devenir un client demain.",
+      "a": "Vrai : on pourrait le convaincre, c’est le potentiel de croissance.",
+      "explain": "Le non-consommateur absolu, lui, n’achètera jamais."
      }
     ]
    },
@@ -699,7 +699,7 @@
       "c": [
        "**La demande** : clients actuels + non-consommateurs relatifs (qui pourraient acheter) ; on écarte les non-consommateurs absolus (qui n’achèteront jamais).",
        "**L’offre** : les concurrents (directs et indirects) et leur pouvoir de marché.",
-       "**L’environnement** : facteurs PESTEL (politique, économique, socioculturel, technologique, écologique, légal) qui influencent le marché."
+       "**L’environnement** : micro (clients, concurrents, fournisseurs) et macro (facteurs PESTEL : politique, économique, socioculturel, technologique, écologique, légal) qui influencent le marché."
       ]
      },
      {
@@ -788,10 +788,10 @@
      },
      {
       "t": "defi",
-      "kind": "erreur",
-      "q": "« Segmenter, c’est choisir les clients que l’on veut viser. » Trouve l’erreur.",
-      "a": "Choisir les segments à viser, c’est cibler ; segmenter, c’est découper le marché en groupes homogènes.",
-      "explain": "Segmenter vient en premier (découper), cibler en second (choisir)."
+      "kind": "qcm",
+      "q": "Quelle étape de la démarche SCP répond à la question « quelle image donner au produit ? »\nA) La segmentation\nB) Le ciblage\nC) Le positionnement",
+      "a": "C) Le positionnement : il donne une place claire dans l’esprit du client.",
+      "explain": "La segmentation découpe ; le ciblage choisit."
      }
     ]
    },
@@ -802,7 +802,7 @@
       "t": "accroche",
       "emoji": "📰",
       "h": "Mini-histoire",
-      "c": "Un concurrent lance un produit révolutionnaire et tu l’apprends par ton cousin. Trop tard ! Pour éviter cela, on surveille en continu (veille) et on enquête avant un gros projet (étude de marché)."
+      "c": "Un concurrent lance un produit révolutionnaire et tu l’apprends par ton cousin. Trop tard ! D’où la veille, et l’étude de marché avant un gros projet."
      },
      {
       "t": "p",
@@ -810,7 +810,7 @@
      },
      {
       "t": "p",
-      "c": "Avant de lancer un produit ou d’entrer sur un marché, on réalise une **étude de marché** qui croise l’analyse de la **demande**, de l’**offre** et de l’**environnement**. Elle réduit le risque en vérifiant qu’il existe bien des clients prêts à acheter."
+      "c": "Avant de lancer un produit ou d’entrer sur un marché, on réalise une **étude de marché** qui croise l’analyse de la **demande**, de l’**offre** et de l’**environnement**. Elle réduit le risque : y a-t-il des clients prêts à acheter ?"
      },
      {
       "t": "list",
@@ -823,19 +823,19 @@
      {
       "t": "tip",
       "h": "À retenir",
-      "c": "Veille = Vigie permanente (continue) ; étude de marché = ponctuelle, avant une décision. Toutes deux visent à **décider en connaissance de cause**, pas au hasard."
+      "c": "Veille = Vigie permanente ; étude de marché = ponctuelle. Toutes deux visent à **décider en connaissance de cause**, pas au hasard."
      },
      {
       "t": "example",
       "h": "Fil rouge",
-      "c": "Zénergy suit chaque semaine les nouveautés de ses rivaux (veille) et commande un sondage avant d’entrer dans un nouveau pays (étude de marché)."
+      "c": "Zénergy suit les nouveautés de ses rivaux (veille)."
      },
      {
       "t": "defi",
-      "kind": "question",
-      "q": "Avant de décider d’entrer dans un nouveau pays, Zénergy teste la demande locale par un sondage. Veille ou étude de marché ?",
-      "a": "Une étude de marché.",
-      "explain": "Elle est ponctuelle et précède une décision précise ; la veille, elle, est permanente."
+      "kind": "classement",
+      "q": "Classe ces actions en veille (continue) ou étude de marché (ponctuelle) : (1) suivre chaque semaine les nouveautés des rivaux, (2) faire un sondage avant d’entrer dans un nouveau pays, (3) surveiller les évolutions technologiques, (4) mesurer la demande avant un lancement.",
+      "a": "Veille : (1) et (3). Étude de marché : (2) et (4).",
+      "explain": "Veille = permanente ; étude = avant une décision."
      }
     ]
    },
@@ -887,7 +887,7 @@
       "t": "accroche",
       "emoji": "📊",
       "h": "Question qui pique",
-      "c": "Ton snack vend 4,5 M€ sur un marché de 30 M€. Bon ou mauvais score ? Un chiffre seul ne dit rien : compare au leader."
+      "c": "Ton snack vend 4,5 M€ sur un marché de 30 M€. Bon ou mauvais score ?"
      },
      {
       "t": "formula",
@@ -896,23 +896,22 @@
      {
       "t": "example",
       "h": "Exemple",
-      "c": "Ventes 4,5 M€ ; marché 30 M€ → 4,5 ÷ 30 × 100 = **15 %** du marché."
+      "c": "4,5 ÷ 30 × 100 = **15 %**. Leader à 30 % : 15 ÷ 30 = 0,5."
+     },
+     {
+      "t": "formula",
+      "c": "Part de marché relative = part de marché de l’entreprise ÷ part de marché du leader"
      },
      {
       "t": "p",
-      "c": "La **part de marché relative** compare l’entreprise au **leader** : elle situe la position concurrentielle. Si le leader vend 9 M€, on a 4,5 ÷ 9 = 0,5 : l’entreprise pèse la moitié du leader."
-     },
-     {
-      "t": "tip",
-      "h": "À retenir",
-      "c": "Part de marché = poids sur le marché total ; part **relative** = face au leader."
+      "c": "La **part de marché relative** compare l’entreprise au **leader** ; elle est dite **relative** car elle situe sa position concurrentielle : 1 = c’est le leader ; moins de 1 = tu es derrière lui (0,4 = 40 % de sa part). Si on la calcule par rapport au principal concurrent, un résultat supérieur à 1 signale un leader."
      },
      {
       "t": "defi",
       "kind": "calcul",
-      "q": "Ventes de 2 M€ sur un marché de 25 M€ : quelle part de marché ?",
-      "a": "8 %.",
-      "explain": "2 ÷ 25 × 100 = 8."
+      "q": "Part de marché de 12 %, leader à 30 % : quelle part de marché relative ?",
+      "a": "0,4.",
+      "explain": "12 ÷ 30 = 0,4 : 40 % du leader."
      }
     ]
    },
@@ -923,7 +922,7 @@
       "t": "accroche",
       "emoji": "🗺️",
       "h": "Défi lancé",
-      "c": "Deux axes (prix, qualité), trois marques : où y a-t-il de la place pour la tienne ?"
+      "c": "Deux axes (prix, qualité), deux marques déjà en place… et la tienne : où te placer ?"
      },
      {
       "t": "p",
@@ -936,14 +935,14 @@
      {
       "t": "example",
       "h": "Fil rouge",
-      "c": "A : cher, qualité haute. B : bas prix, qualité moyenne. Zénergy vise la case vide « prix moyen, qualité haute »."
+      "c": "A : cher, qualité haute. B : bas prix, qualité moyenne. Zénergy (la tienne) vise la case vide « prix moyen, qualité haute »."
      },
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Vrai ou faux : une carte perceptuelle montre où les clients perçoivent chaque marque sur deux critères, comme le prix et la qualité.",
-      "a": "Vrai : et les espaces libres s’en déduisent.",
-      "explain": "Elle sert à choisir une place distinctive."
+      "q": "Vrai ou faux : une case vide sur la carte perceptuelle est forcément une opportunité.",
+      "a": "Faux : il faut aussi qu’il existe une demande pour cette place.",
+      "explain": "Une place libre peut l’être faute de clients."
      }
     ]
    }
@@ -959,7 +958,7 @@
       "t": "accroche",
       "emoji": "💬",
       "h": "Dialogue",
-      "c": "— Altitude, notre café premium à 24 € le paquet : on le met où ? — Au rayon promos du hard-discount, avec une pub « −50 % » ! — Stop. Qu’est-ce qui cloche ? Réponse dans la section."
+      "c": "— Altitude, notre café premium à 20 € le paquet : on le met où ?\n— Au rayon promos du hard-discount, avec une pub « −50 % » !\n— Stop. Qu’est-ce qui ne va pas ? Réponse dans la section."
      },
      {
       "t": "p",
@@ -981,7 +980,7 @@
      {
       "t": "example",
       "h": "Fil rouge : Altitude",
-      "c": "Altitude est une marque fictive de café premium. Produit : café d’origine. Prix : 24 € le paquet. Distribution : épiceries fines. Communication : histoire de la plantation. Les quatre P racontent la même histoire. Le café d’Altitude en promo « −50 % » au hard-discount, lui, ruinerait l’image."
+      "c": "Altitude est une marque fictive de café premium. Produit : café d’origine. Prix : 20 € le paquet. Distribution : épiceries fines. Communication : histoire de la plantation. Les quatre P racontent la même histoire. Le café d’Altitude en promo « −50 % » au hard-discount, lui, ruinerait l’image."
      },
      {
       "t": "tip",
@@ -1034,19 +1033,19 @@
       "t": "accroche",
       "emoji": "🤔",
       "h": "Question qui pique",
-      "c": "Pourquoi un café vendu 3 € semble douteux, alors que le même vendu 24 € fait rêver ? Le prix ne fait pas que payer : il parle. Tu vas voir ce qu’il dit."
+      "c": "Un café à 3 € semble douteux, le même à 20 € fait rêver. Le prix parle !"
      },
      {
       "t": "p",
-      "c": "Le prix est le seul P qui **rapporte** de l’argent (les autres en coûtent). Il envoie aussi un **signal** de qualité : trop bas, il fait douter ; trop haut, il fait fuir."
+      "c": "Le prix est le seul P qui **rapporte** de l’argent (les autres en coûtent). Il envoie un **signal** de qualité : trop bas, il fait douter ; trop haut, il fait fuir."
      },
      {
       "t": "p",
-      "c": "On le fixe en croisant trois éléments : le **coût** (il doit être couvert), la **demande** (ce que le client accepte de payer) et la **concurrence**."
+      "c": "On le fixe selon le **coût** (à couvrir), la **demande** (ce que le client paie) et la **concurrence** (CDC)."
      },
      {
       "t": "p",
-      "c": "Au lancement, trois stratégies : l’**écrémage** (prix élevé, image premium), la **pénétration** (prix bas pour conquérir vite un large marché) ou l’**alignement** (se caler sur le marché). L’**élasticité-prix** mesure la sensibilité de la demande au prix."
+      "c": "Au lancement : **écrémage** (prix élevé, image premium), **pénétration** (prix bas, conquête rapide), **alignement** (calé sur le marché). L’**élasticité-prix** mesure la sensibilité de la demande au prix."
      },
      {
       "t": "formula",
@@ -1059,24 +1058,14 @@
      {
       "t": "example",
       "h": "Altitude",
-      "c": "Altitude achète un paquet 8 € HT et le vend 10 € HT. Marge : 10 − 8 = 2 €. Taux de marge : 2 ÷ 8 = 25 %. Taux de marque : 2 ÷ 10 = 20 %."
-     },
-     {
-      "t": "warning",
-      "h": "Piège de calcul",
-      "c": "Ne confonds pas le taux de **marge** (calculé sur le **coût d’achat**) et le taux de **marque** (calculé sur le **prix de vente**)."
-     },
-     {
-      "t": "tip",
-      "h": "Mnémo",
-      "c": "Prix = CDC : Coût, Demande, Concurrence. Et la marque s’affiche sur le prix de vente : taux de marque, base = prix de vente."
+      "c": "Un épicier fin a un **coût d’achat** de 16 € HT par paquet Altitude et un **prix de vente** de 20 € HT. Marge : 4 €. Taux de **marge** : 4 ÷ 16 = 25 %. Taux de **marque** : 4 ÷ 20 = 20 %. Deux bases !"
      },
      {
       "t": "defi",
       "kind": "calcul",
-      "q": "Une boutique achète un article 50 € HT et le vend 80 € HT. Calcule la marge en euros, le taux de marge et le taux de marque.",
-      "a": "Marge = 30 € ; taux de marge = 30 ÷ 50 = 60 % ; taux de marque = 30 ÷ 80 = 37,5 %.",
-      "explain": "Le taux de marge a pour base le coût d’achat (50) ; le taux de marque a pour base le prix de vente (80)."
+      "q": "Un article acheté 50 € HT est vendu 80 € HT. Calcule la marge, le taux de marge, le taux de marque.",
+      "a": "Marge 30 € ; taux de marge 30 ÷ 50 = 60 % ; taux de marque 30 ÷ 80 = 37,5 %.",
+      "explain": "Bases : 50 et 80."
      }
     ]
    },
@@ -1087,21 +1076,12 @@
       "t": "accroche",
       "emoji": "🎯",
       "h": "Défi",
-      "c": "Montre de luxe à 8 000 €, en vente dans un supermarché avec une pub « −50 % » : trouve en dix secondes ce qui cloche. Vérifie avec la liste."
+      "c": "Montre de luxe à 8 000 € au supermarché, pub « −50 % » : qu’est-ce qui détonne ?"
      },
      {
       "t": "example",
       "h": "Chronos (marque fictive)",
-      "c": "Une marque de montres de luxe, cousine d’Altitude."
-     },
-     {
-      "t": "list",
-      "c": [
-       "**Produit** : haut de gamme, finitions soignées.",
-       "**Prix** : élevé, cohérent avec l’image.",
-       "**Distribution** : boutiques sélectives, voire exclusives, pas de supermarché.",
-       "**Communication** : magazines haut de gamme, ambassadeurs."
-      ]
+      "c": "Montres de luxe : **produit** haut de gamme, **prix** élevé, **distribution** en boutiques exclusives (très peu de points de vente), **communication** par magazines haut de gamme et ambassadeurs."
      },
      {
       "t": "tip",
@@ -1110,10 +1090,10 @@
      },
      {
       "t": "defi",
-      "kind": "question",
-      "q": "Une montre de luxe est vendue −50 % chez un discounter. Quels P contredisent son positionnement ?",
-      "a": "Le prix (−50 %), la distribution (discounter) et la communication (promotion). Seul le produit reste luxueux.",
-      "explain": "Un seul P discount suffit à casser l’image des trois autres."
+      "kind": "intrus",
+      "q": "Pour une montre de luxe, trouve l’intrus :\nA) finitions soignées\nB) prix élevé\nC) boutiques exclusives\nD) discounter et pub « −50 % »",
+      "a": "D : discounter et pub « −50 % » contredisent le luxe.",
+      "explain": "Un P discount casse l’image."
      }
     ]
    },
@@ -1185,9 +1165,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Vrai ou faux : si le produit est excellent, le prix, la distribution et la communication peuvent être décidés indépendamment.",
-      "a": "Faux : les 4P doivent être cohérents entre eux et avec le positionnement.",
-      "explain": "Un excellent produit mal placé, mal tarifé ou mal présenté perd son image."
+      "q": "Vrai ou faux : pour un café premium à prix élevé, une distribution en épiceries fines et une communication haut de gamme sont cohérentes.",
+      "a": "Vrai : les 4P servent le même positionnement premium.",
+      "explain": "Prix, distribution et communication prolongent l’image du produit."
      }
     ]
    },
@@ -1228,7 +1208,7 @@
      {
       "t": "tip",
       "h": "À retenir",
-      "c": "Prix = coût + demande + concurrence. Écrémage (haut, image) vs pénétration (bas, volume). Le prix reste **cohérent** avec le positionnement."
+      "c": "Le prix tient compte du coût, de la demande et de la concurrence. Écrémage (haut, image) vs pénétration (bas, volume). Il reste **cohérent** avec le positionnement."
      },
      {
       "t": "table",
@@ -1258,10 +1238,10 @@
      },
      {
       "t": "defi",
-      "kind": "vf",
-      "q": "Vrai ou faux : sur un marché très concurrentiel où les produits se ressemblent, l’écrémage est le choix logique.",
-      "a": "Faux : c’est l’alignement (se caler sur le prix du marché).",
-      "explain": "L’écrémage convient à un produit innovant ou premium, pas à un marché banalisé."
+      "kind": "calcul",
+      "q": "Le prix d’un yaourt monte de 10 % et les ventes baissent de 30 %. Calcule l’élasticité-prix : la demande est-elle élastique ou inélastique ?",
+      "a": "−30 ÷ +10 = −3, soit une valeur absolue de 3 (supérieure à 1) : demande élastique.",
+      "explain": "Les ventes réagissent plus que le prix : la demande est sensible au prix."
      }
     ]
    },
@@ -1282,7 +1262,7 @@
       "t": "list",
       "c": [
        "**Produit** : café d’origine, torréfaction artisanale, packaging soigné, marque évocatrice.",
-       "**Prix** : **écrémage** (prix élevé), cohérent avec le positionnement premium.",
+       "**Prix** : élevé, cohérent avec le positionnement premium, dans une logique d’**écrémage** sans baisse prévue.",
        "**Distribution** : **sélective** (épiceries fines, boutique, site propre), pas de grande distribution discount.",
        "**Communication** : storytelling sur l’origine et le savoir-faire, réseaux sociaux esthétiques, dégustations."
       ]
@@ -1297,41 +1277,10 @@
       "c": "Décliner les **4P** en veillant à leur **cohérence** avec le **positionnement**. Justifier chaque choix."
      },
      {
-      "t": "table",
-      "h": "Le mix d’Altitude",
-      "head": [
-       "P",
-       "Choix",
-       "Pourquoi"
-      ],
-      "rows": [
-       [
-        "Produit",
-        "Café d’origine, torréfaction artisanale",
-        "Qualité visible"
-       ],
-       [
-        "Prix",
-        "Élevé (écrémage)",
-        "Cohérent avec le premium"
-       ],
-       [
-        "Distribution",
-        "Épiceries fines, boutique, site propre",
-        "Points de vente choisis"
-       ],
-       [
-        "Communication",
-        "Storytelling, réseaux, dégustations",
-        "Raconte l’origine"
-       ]
-      ]
-     },
-     {
       "t": "defi",
-      "kind": "question",
-      "q": "Quelle intensité de distribution pour Altitude, et pourquoi ?",
-      "a": "Sélective : des points de vente choisis (épiceries fines, boutique, site propre), pas la grande distribution discount.",
+      "kind": "qcm",
+      "q": "Quelle intensité de distribution pour Altitude ?\nA) intensive\nB) sélective\nC) exclusive",
+      "a": "B : des points de vente choisis (épiceries fines, boutique, site propre), pas la grande distribution discount.",
       "explain": "Le positionnement premium exige des points de vente capables de valoriser le produit."
      }
     ]
@@ -1373,7 +1322,7 @@
      {
       "t": "tip",
       "h": "Mnémo",
-      "c": "LCMD : Lancement, Croissance, Maturité, Déclin. Un produit **naît, grandit, mûrit et décline**."
+      "c": "LCMD : Lancer, Croître, Mûrir, Décliner (Lancement, Croissance, Maturité, Déclin). Un produit **naît, grandit, mûrit et décline**."
      },
      {
       "t": "table",
@@ -1411,10 +1360,10 @@
      },
      {
       "t": "defi",
-      "kind": "calcul",
-      "q": "Altitude ajoute une ligne « thés » avec 4 références, en plus de ses 3 lignes de café à 4 références chacune. Quelles sont la largeur et la profondeur de sa gamme ?",
-      "a": "Largeur : 4 lignes. Profondeur : 4 références par ligne.",
-      "explain": "La largeur compte les lignes (3 + 1), la profondeur compte les références par ligne."
+      "kind": "question",
+      "q": "Les ventes des capsules Altitude sont stables et les concurrents nombreux. Dans quelle phase du cycle de vie est-on, et quels enjeux ?",
+      "a": "Maturité : fidéliser les clients et se différencier des concurrents.",
+      "explain": "Les ventes plafonnent : on ne conquiert plus, on retient et on se distingue."
      }
     ]
    },
@@ -1425,7 +1374,7 @@
       "t": "accroche",
       "emoji": "💶",
       "h": "Chiffre fictif",
-      "c": "Un paquet de café sort de la torréfaction à 6 € et arrive en rayon à 10 €. Où sont passés les 4 € ? Chez les intermédiaires du circuit. Voyons comment."
+      "c": "Un paquet de café sort de la torréfaction à 12 € et arrive en rayon à 20 €. Où sont passés les 8 € ? Chez les intermédiaires du circuit."
      },
      {
       "t": "p",
@@ -1433,7 +1382,7 @@
      },
      {
       "t": "p",
-      "c": "Plus il y a d’intermédiaires, plus chacun ajoute sa marge, donc plus le prix final tend à monter. En contrepartie, le produit peut être diffusé plus largement."
+      "c": "Plus il y a d’intermédiaires, plus il y a de marges successives, donc plus le prix final tend à monter. En contrepartie, le produit peut être diffusé plus largement."
      },
      {
       "t": "example",
@@ -1481,9 +1430,9 @@
      },
      {
       "t": "defi",
-      "kind": "question",
-      "q": "Un producteur vend ses fraises à un supermarché, qui les revend aux clients. Circuit direct, court ou long ?",
-      "a": "Court : un seul intermédiaire, le supermarché (détaillant).",
+      "kind": "qcm",
+      "q": "Un producteur vend ses fraises à un supermarché, qui les revend aux clients. Quel circuit ?\nA) direct\nB) court\nC) long",
+      "a": "B : un seul intermédiaire, le supermarché (détaillant).",
       "explain": "Direct = zéro intermédiaire ; long = plusieurs (grossiste puis détaillant)."
      }
     ]
@@ -1495,11 +1444,11 @@
       "t": "accroche",
       "emoji": "🎬",
       "h": "Dialogue",
-      "c": "— Une pub à la TV ou une vidéo d’influenceur ? — Les deux, mais ce ne sont pas les mêmes outils. Lesquels sont média ? Réponse ci-dessous."
+      "c": "— TV ou influenceur ?\n— Les deux, mais pas les mêmes outils.\n— Lequel est média ?"
      },
      {
       "t": "p",
-      "c": "La **communication** fait connaître et aimer le produit. Le **média** repose sur l’achat d’un espace publicitaire : TV, radio, presse, affichage, internet (pub en ligne payante). Le **hors-média** regroupe les autres actions : promotion des ventes, relations publiques, marketing direct, réseaux sociaux, influence."
+      "c": "La **communication** fait connaître et aimer le produit. **Média** : achat d’espace publicitaire (TV, radio, presse, affichage, internet payant). **Hors-média** : promotion des ventes, relations publiques, marketing direct, contenus sur les **réseaux sociaux**, **influence**."
      },
      {
       "t": "p",
@@ -1508,13 +1457,13 @@
      {
       "t": "tip",
       "h": "Mnémo",
-      "c": "Média = on achète un espace pub. Hors-média = on agit autrement (promo, RP, direct, influence). **Réseaux sociaux** et **influence** pèsent souvent plus que la pub classique."
+      "c": "Média : espace acheté. Hors-média : actions sans achat d’espace. Pub payante sur un réseau social = média ; contenu d’un influenceur partenaire = hors-média."
      },
      {
       "t": "defi",
       "kind": "erreur",
       "q": "Repère l’erreur : « Une publicité payante à la TV est du hors-média, car elle vise le grand public. »",
-      "a": "Erreur : la TV est un média, car on achète un espace publicitaire. Le hors-média regroupe promotion, relations publiques, marketing direct, réseaux sociaux, influence.",
+      "a": "Erreur : la TV est un média, car on achète un espace publicitaire.",
       "explain": "Le critère n’est pas la taille du public mais l’achat d’espace publicitaire."
      }
     ]
@@ -1539,11 +1488,11 @@
      },
      {
       "t": "p",
-      "c": "Mais elles ne s’utilisent pas librement : le **RGPD** exige une **base légale** pour chaque traitement. Pour la prospection par e-mail auprès de prospects (personnes qui ne sont pas encore clientes) ou pour les cookies publicitaires, c’est le **consentement**."
+      "c": "Mais elles ne s’utilisent pas librement : le **RGPD** exige une **base légale** pour chaque traitement. Pour la prospection par e-mail auprès de prospects particuliers (personnes qui ne sont pas encore clientes) ou pour les cookies publicitaires, c’est le **consentement**."
      },
      {
       "t": "p",
-      "c": "Exception : pour ses propres clients et des produits analogues, l’envoi est admis sans consentement préalable, avec un droit de s’opposer. Dans tous les cas, le client peut faire **effacer** ses données."
+      "c": "Exception : pour ses propres clients et des produits analogues, l’envoi est admis sans consentement préalable, avec un droit de s’opposer. Le client peut faire **effacer** ses données, sauf obligation légale de les conserver (facturation, comptabilité)."
      },
      {
       "t": "p",
@@ -1561,8 +1510,8 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Vrai ou faux : Nova Shop peut envoyer des e-mails de prospection à des internautes qui ne sont pas ses clients, sans leur demander leur accord.",
-      "a": "Faux : pour des prospects, le consentement est requis.",
+      "q": "Vrai ou faux : pour envoyer de la prospection par e-mail à des particuliers qui ne sont pas encore ses clients, Nova Shop doit d’abord obtenir leur consentement.",
+      "a": "Vrai : pour des prospects, le consentement est requis.",
       "explain": "L’exception sans consentement préalable ne concerne que les clients, pour des produits analogues, avec droit d’opposition."
      }
     ]
@@ -1574,19 +1523,19 @@
       "t": "accroche",
       "emoji": "🤔",
       "h": "Question qui pique",
-      "c": "Un paquet vert, une feuille dessinée, la mention « 100 % naturel », mais zéro preuve. Bon coup de com ou mensonge ? Le cours donne le mot juste, et le risque."
+      "c": "Un paquet vert, une feuille, « 100 % naturel »… zéro preuve. Coup de com ou mensonge ?"
      },
      {
       "t": "p",
-      "c": "La mercatique **responsable** (ou durable) intègre l’environnement et l’éthique dans l’offre : éco-conception, transparence, circuits courts. Elle répond à une attente forte des consommateurs et peut devenir un **avantage concurrentiel**."
+      "c": "La mercatique **responsable** (ou durable) intègre l’environnement et l’éthique dans l’offre : éco-conception, transparence, circuits courts. Elle répond à une attente forte des consommateurs : un **avantage concurrentiel**."
      },
      {
       "t": "p",
-      "c": "Gare au **greenwashing** (écoblanchiment) : afficher un discours « écolo » sans changer ses pratiques. Les consommateurs, les ONG et la loi le repèrent de mieux en mieux, et la sanction est une **perte de confiance** durable."
+      "c": "Gare au **greenwashing** (écoblanchiment) : afficher un discours « écolo » sans changer ses pratiques. Les consommateurs, les ONG et la loi le repèrent de mieux en mieux, et la sanction est d’abord une **perte de confiance** durable."
      },
      {
       "t": "p",
-      "c": "L’**e-réputation** (avis, bad buzz) se surveille de près."
+      "c": "L’**e-réputation**, image d’une marque sur internet (avis, bad buzz), se surveille."
      },
      {
       "t": "warning",
@@ -1596,8 +1545,8 @@
      {
       "t": "defi",
       "kind": "erreur",
-      "q": "Repère l’erreur : « Nova Shop affiche « 100 % éco » sur ses paquets sans rien changer à sa production : c’est de la mercatique responsable. »",
-      "a": "Erreur : c’est du greenwashing. Un discours écologique sans changement de pratiques est repéré, puis sanctionné par une perte de confiance durable.",
+      "q": "Repère l’erreur : « Nova Shop affiche « 100 % éco » sur ses boîtes sans rien changer à sa production : c’est de la mercatique responsable. »",
+      "a": "Erreur : c’est du greenwashing, sanctionné par une perte de confiance durable.",
       "explain": "La mercatique responsable suppose un argument vrai et prouvé."
      }
     ]
@@ -1626,14 +1575,14 @@
      {
       "t": "tip",
       "h": "Éthique",
-      "c": "La donnée personnelle n’est pas une marchandise comme une autre : la loi protège le consommateur. Autre piège du même site : le **greenwashing**. Un argument « écologique » doit être vrai et prouvé."
+      "c": "La donnée personnelle n’est pas une marchandise comme une autre : la loi protège le consommateur."
      },
      {
       "t": "defi",
-      "kind": "question",
-      "q": "Un client demande à Nova Shop de supprimer toutes ses données. Quel droit exerce-t-il ?",
-      "a": "Le droit à l’effacement (RGPD).",
-      "explain": "Le droit à l’effacement permet de demander la suppression de ses données personnelles."
+      "kind": "qcm",
+      "q": "Un client demande à Nova Shop de supprimer ses données personnelles. Quel droit exerce-t-il ?\nA) la minimisation\nB) le droit à l’effacement\nC) la finalité",
+      "a": "B : le droit à l’effacement (RGPD).",
+      "explain": "Il permet de demander la suppression de ses données, sauf obligation légale de conservation."
      }
     ]
    },
@@ -1668,6 +1617,11 @@
       "c": "panier moyen = chiffre d’affaires ÷ nombre de commandes"
      },
      {
+      "t": "example",
+      "h": "Verdict",
+      "c": "500 visiteurs, 20 acheteurs : 20 ÷ 500 = 4 %. Sur 100 visiteurs, 4 achètent : plutôt une réussite."
+     },
+     {
       "t": "p",
       "c": "La puissance du numérique soulève des **enjeux** : protection de la **vie privée**, encadrée par le **RGPD** (consentement, droit à l’effacement), et risque de **manipulation**. La donnée est un atout **et** une responsabilité."
      },
@@ -1679,8 +1633,8 @@
      {
       "t": "defi",
       "kind": "calcul",
-      "q": "Nova Shop reçoit 500 visiteurs. 20 achètent, pour 1 000 € de chiffre d’affaires. Calcule le taux de conversion et le panier moyen.",
-      "a": "Taux de conversion : 20 ÷ 500 × 100 = 4 %. Panier moyen : 1 000 ÷ 20 = 50 €.",
+      "q": "Un autre jour, Nova Shop compte 800 visiteurs et 24 acheteurs, pour 1 200 € de chiffre d’affaires. Calcule le taux de conversion et le panier moyen.",
+      "a": "Taux de conversion : 24 ÷ 800 × 100 = 3 %. Panier moyen : 1 200 ÷ 24 = 50 €.",
       "explain": "Le taux de conversion rapporte les acheteurs aux visiteurs ; le panier moyen rapporte le CA aux commandes."
      }
     ]
@@ -1712,12 +1666,12 @@
      },
      {
       "t": "p",
-      "c": "L’**e-réputation** (image sur internet : avis, commentaires, bad buzz) se **surveille** et se **cultive** : l’entreprise doit y répondre. Un bad buzz détruit des années d’efforts en quelques heures."
+      "c": "L’**e-réputation** (image sur internet : avis, commentaires, bad buzz) est centrale : l’entreprise doit la **surveiller** et y répondre. Un bad buzz peut détruire des années d’efforts en quelques heures."
      },
      {
       "t": "tip",
       "h": "À retenir",
-      "c": "Mercatique durable **sincère** = avantage concurrentiel ; **greenwashing** = risque de réputation. Mnémo : **P**reuves, **T**ransparence, **C**ohérence (PTC)."
+      "c": "Mercatique durable **sincère** = avantage concurrentiel ; **greenwashing** = risque de réputation. L’e-réputation se **surveille** et se **cultive**. Mnémo : **P**reuves, **T**ransparence, **C**ohérence (PTC)."
      },
      {
       "t": "table",
@@ -1746,7 +1700,7 @@
       "kind": "question",
       "q": "Une marque vante un t-shirt « vert » sans aucune preuve, cache la pollution du reste de sa production et ne reconnaît aucune limite. Quels signes d’une démarche sincère lui manquent ?",
       "a": "Les trois : engagements mesurés et prouvés, transparence sur ses limites, cohérence sur toute l’activité.",
-      "explain": "Le slogan sans preuve manque de preuves ; cacher la pollution manque de transparence et de cohérence."
+      "explain": "Pas de preuve : engagements non prouvés. Aucune limite reconnue : manque de transparence. Pollution du reste de l’activité : manque de cohérence."
      }
     ]
    },
@@ -1757,11 +1711,11 @@
       "t": "accroche",
       "emoji": "💬",
       "h": "Dialogue",
-      "c": "— Tu l’as acheté où, ce sac ? — Repéré sur Instagram, essayé en boutique, commandé sur l’appli. — Donc… un seul achat, trois canaux ! Comment appelle-t-on ça ?"
+      "c": "— Tu l’as acheté où, ce sac ?\n— Repéré sur Instagram, essayé en boutique, commandé sur l’appli.\n— Donc… un seul achat, trois canaux ! Comment appelle-t-on ça ?"
      },
      {
       "t": "p",
-      "c": "Le parcours d’achat est **omnicanal** : le client passe d’un canal à l’autre (magasin, site, application, réseaux sociaux) sans rupture. L’entreprise doit offrir une **expérience fluide** sur tous les canaux."
+      "c": "Ce parcours s’appelle **omnicanal** : le client passe d’un canal à l’autre (magasin, site, application, réseaux sociaux) sans rupture. L’entreprise doit offrir une **expérience fluide** sur tous les canaux."
      },
      {
       "t": "list",
@@ -1782,10 +1736,10 @@
      },
      {
       "t": "defi",
-      "kind": "question",
-      "q": "Karim consulte des baskets sur le site de Nova Shop, puis va les acheter en magasin. Quel terme désigne ce parcours ?",
-      "a": "Web-to-store.",
-      "explain": "Il cherche en ligne puis achète en magasin ; l’inverse s’appelle store-to-web."
+      "kind": "classement",
+      "q": "Classe ces parcours en web-to-store ou store-to-web :\n1) Karim consulte des baskets sur le site, puis les achète en magasin.\n2) Léa voit un sac en magasin, puis le commande en ligne.\n3) Sam repère un manteau sur l’appli, puis l’achète en boutique.\n4) Inès essaie une veste en boutique, puis la commande sur le site.",
+      "a": "Web-to-store : 1 et 3 (chercher en ligne, acheter en magasin). Store-to-web : 2 et 4 (voir en magasin, acheter en ligne).",
+      "explain": "Le canal de l’achat tranche : magasin = web-to-store, en ligne = store-to-web."
      }
     ]
    },
@@ -1823,9 +1777,9 @@
      },
      {
       "t": "defi",
-      "kind": "erreur",
-      "q": "Repère l’erreur : « Cibler grâce aux données n’a que des avantages : aucune limite ni aucun risque, puisque le client reçoit une meilleure expérience. »",
-      "a": "Erreur : il y a des limites et des risques : atteinte à la vie privée, sentiment de surveillance, risque juridique si le RGPD n’est pas respecté.",
+      "kind": "intrus",
+      "q": "Parmi ces éléments du ciblage par les données, trouve l’intrus (celui qui n’est pas une limite) :\nA) atteinte à la vie privée\nB) sentiment de surveillance\nC) risque juridique si le RGPD n’est pas respecté\nD) meilleure expérience client grâce à la personnalisation",
+      "a": "D : c’est un avantage. Les trois autres sont des limites et des risques.",
       "explain": "Il faut peser avantages et limites, puis recommander un usage responsable."
      }
     ]
@@ -1837,7 +1791,7 @@
       "t": "accroche",
       "emoji": "🤔",
       "h": "Question qui pique",
-      "c": "Ta boutique est géniale, mais introuvable sur internet. Faut-il attendre que Google la remarque, ou payer ? Les deux options existent, et portent un nom."
+      "c": "Ta boutique est introuvable sur internet. Attendre ou payer pour être vue ?"
      },
      {
       "t": "p",
@@ -1846,43 +1800,22 @@
      {
       "t": "list",
       "c": [
-       "**Référencement** : être visible sur les moteurs de recherche. SEO = naturel (gratuit, par la qualité du contenu) ; SEA = payant (annonces sponsorisées).",
-       "**Réseaux sociaux** : communauté, contenu, influence.",
+       "**Référencement** : être visible sur les moteurs de recherche. SEO (Search Engine Optimization) : naturel, sans payer d’espace. SEA (Search Engine Advertising) : payant, annonces sponsorisées.",
+       "**Réseaux sociaux** : communauté, influence.",
        "**E-mailing / marketing direct** : messages ciblés."
       ]
      },
      {
       "t": "tip",
       "h": "À retenir",
-      "c": "Digital = **ciblage** + **mesure** + **interactivité**. SEO = « Organique », SEA = « Argent ». Le parcours client est **omnicanal**."
-     },
-     {
-      "t": "table",
-      "h": "SEO ou SEA ?",
-      "head": [
-       "",
-       "SEO",
-       "SEA"
-      ],
-      "rows": [
-       [
-        "Nature",
-        "Référencement naturel",
-        "Référencement payant"
-       ],
-       [
-        "Principe",
-        "Optimiser son site",
-        "Annonces sponsorisées"
-       ]
-      ]
+      "c": "Digital = **ciblage** + **mesure** + **interactivité**. SEO = Organique, SEA = Argent. Parcours **omnicanal**."
      },
      {
       "t": "defi",
       "kind": "question",
       "q": "Une boutique paie pour que son annonce apparaisse en haut des résultats d’un moteur de recherche. SEO ou SEA ?",
       "a": "SEA : référencement payant (annonce sponsorisée).",
-      "explain": "Le SEO est naturel et gratuit, le SEA est payant."
+      "explain": "SEO : naturel. SEA : payant."
      }
     ]
    },
@@ -1893,7 +1826,7 @@
       "t": "accroche",
       "emoji": "🎯",
       "h": "Défi lancé",
-      "c": "Une appli lampe torche réclame tous tes contacts. Étrange ? Tu as quatre questions à poser pour le prouver : trouve-les dans la section."
+      "c": "Une appli lampe torche réclame tous tes contacts : étrange ?"
      },
      {
       "t": "p",
@@ -1905,24 +1838,20 @@
        "**Finalité** : pour quel but précis ?",
        "**Consentement** : la personne a-t-elle accepté ?",
        "**Minimisation** : ne collecter que le nécessaire.",
-       "**Droits** : accès, rectification, effacement, opposition."
+       "**Droits** : quels droits la personne garde-t-elle (accès, rectification, effacement, opposition) ?"
       ]
-     },
-     {
-      "t": "p",
-      "c": "En France, la CNIL contrôle le respect de ces règles."
      },
      {
       "t": "tip",
       "h": "À retenir",
-      "c": "Mnémo FCMD : Finalité, Consentement, Minimisation, Droits. Data = atout **et** responsabilité : un usage **transparent et consenti** renforce la confiance ; le non-respect du RGPD expose à des sanctions."
+      "c": "FCMD : Finalité, Consentement, Minimisation, Droits. Atout **et** responsabilité : usage **transparent et consenti** = confiance ; sinon, sanctions."
      },
      {
       "t": "defi",
       "kind": "erreur",
-      "q": "Repère l’erreur : « Le RGPD autorise à collecter un maximum de données dès que le client a donné son consentement : on verra plus tard à quoi elles serviront. »",
-      "a": "Erreur : la collecte doit avoir une finalité précise et se limiter au nécessaire (minimisation).",
-      "explain": "Le consentement ne dispense ni de la finalité ni de la minimisation."
+      "q": "Repère l’erreur : « Avec le consentement du client, le RGPD permet de collecter n’importe quelles données. »",
+      "a": "Erreur : même avec le consentement, on ne collecte que le nécessaire (minimisation).",
+      "explain": "Le consentement ne donne pas carte blanche."
      }
     ]
    },
@@ -1933,7 +1862,7 @@
       "t": "accroche",
       "emoji": "📖",
       "h": "Mini-histoire",
-      "c": "Nova Shop est accusée de « fast fashion ». Elle prépare une campagne verte avec un slogan brillant. Suffira-t-il ? Réponse dans l’analyse."
+      "c": "Nova Shop (baskets et vêtements) est accusée de « fast fashion ». Un slogan vert brillant suffira-t-il ?"
      },
      {
       "t": "p",
@@ -1942,7 +1871,7 @@
      {
       "t": "example",
       "h": "Analyse",
-      "c": "Risque de **greenwashing** si la communication verte n’est pas suivie d’actes. Il faut des **preuves** : matières recyclées, reprise des vêtements, transparence, label."
+      "c": "Risque de **greenwashing** si la communication verte n’est pas suivie d’actes. Il faut des **preuves** (label, matières recyclées certifiées, reprise des vêtements, rapport chiffré) et de la transparence."
      },
      {
       "t": "p",
@@ -1957,8 +1886,8 @@
       "t": "defi",
       "kind": "vf",
       "q": "Vrai ou faux : pour redorer l’image d’une marque, une campagne verte avec un bon slogan suffit.",
-      "a": "Faux : sans actes ni preuves (label vérifiable, matières recyclées certifiées, rapport chiffré), c’est du greenwashing et la confiance est détruite.",
-      "explain": "Une démarche sincère se prouve ; un greenwashing découvert détruit la confiance."
+      "a": "Faux : sans actes ni preuves (label vérifiable, matières recyclées certifiées, rapport chiffré), c’est du greenwashing.",
+      "explain": "Un greenwashing découvert détruit la confiance."
      }
     ]
    }

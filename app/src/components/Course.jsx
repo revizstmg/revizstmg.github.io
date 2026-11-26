@@ -472,7 +472,10 @@ function Frise({ title, events = [] }) {
 }
 
 // Genres de mini-défi : question (par défaut), vrai/faux, trouve l'erreur, calcul.
-const DEFI_GENRES = { vf: ['✅❌', 'Vrai ou faux ?'], erreur: ['🕵️', 'Trouve l’erreur :'], calcul: ['🧮', 'À toi de calculer :'] }
+const DEFI_GENRES = { vf: ['✅❌', 'Vrai ou faux ?'], erreur: ['🕵️', 'Trouve l’erreur :'], calcul: ['🧮', 'À toi de calculer :'], qcm: ['❓', 'QCM :'], intrus: ['🔍', 'Trouve l’intrus :'], classement: ['🗂️', 'Classe-les :'] }
+
+// Le genre du défi est déjà affiché devant la question : on retire son écho en début de question (« Vrai ou faux : … »).
+const sansEcho = (q) => String(q || '').replace(/^\s*(?:vrai ou faux|trouve l['’]erreur|trouve l['’]intrus|qcm|classe[- ]les|[àa] toi de calculer)\s*[?:]\s*/i, '')
 
 export function Block({ b, color }) {
   switch (b.t) {
@@ -519,7 +522,7 @@ export function Block({ b, color }) {
       // Mini-défi : on cherche d'abord, on ouvre la réponse ensuite.
       return (
         <details className="course-callout course-defi group rounded-2xl border-2 border-dashed border-violet-400 bg-violet-50 p-4 dark:border-violet-500 dark:bg-violet-950/30">
-          <summary className="cursor-pointer text-sm font-bold text-violet-800 dark:text-violet-200">{DEFI_GENRES[b.kind]?.[0] || '🎯'} {DEFI_GENRES[b.kind]?.[1] || 'Mini-défi :'} <CourseText text={b.q} /></summary>
+          <summary className="cursor-pointer text-sm font-bold text-violet-800 dark:text-violet-200">{DEFI_GENRES[b.kind]?.[0] || '🎯'} {DEFI_GENRES[b.kind]?.[1] || 'Mini-défi :'} <span className="whitespace-pre-line"><CourseText text={sansEcho(b.q)} /></span></summary>
           <div className="mt-3 border-t border-violet-300 pt-3 text-sm leading-relaxed text-slate-700 dark:text-slate-200">
             <p><b>Réponse : </b><CourseText text={b.a} /></p>
             {b.explain && <p className="mt-1 whitespace-pre-line"><CourseText text={b.explain} /></p>}
