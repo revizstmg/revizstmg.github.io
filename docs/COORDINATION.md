@@ -2131,3 +2131,6 @@ Prochaine action :
 - Nouveaux blocs : `accroche` (début de section, situation concrète) et `defi` (mini-défi à ouvrir ; `kind` : question | vf | erreur | calcul).
 - Règles de rédaction : accroche en tête, defi en dernier, tableau seulement juste avant le defi, mots en gras de l'original conservés, ≤ 170 % de la longueur d'origine, aucun fait inventé.
 - Mercatique (38 sections) réécrite en deux passes avec relecture d'un agent prof (1re : 14/20 justesse, 13/20 ludique). Autres matières : à faire après validation du style.
+## AMELIORATIONS-2 (26/11/2026)
+- Professeur : bouton « Je suis professeur » sur l'écran de connexion et dans « Essayer sans compte » ; accueil prof charge les classes à froid ; tuiles « Tableau de bord » / « Quiz et direct » ouvrent `/classe?vue=suivi|quiz` ; menu et page Cours sans éléments d'élève (revision, bac blanc, classement, boutique, changer de niveau, espace parent, Sport au bac, barres de progression).
+- Recherche : trouve aussi les sections de cours des matières chargées (« Maslow »). Série 🔥 de l'en-tête touchable (mène au défi du jour). Scroll : calcul accepte l'unité écrite (« 100,7 points »). Admin : légende des visites, confirmation avec date de fin, onglets plus compacts.

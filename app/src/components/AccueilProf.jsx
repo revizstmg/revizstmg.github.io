@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useStore } from '../store.jsx'
-import { fetchMembers } from '../classroom.js'
+import { fetchMembers, fetchTeacherClasses } from '../classroom.js'
 import { todayKey, daysBetween } from '../data/srs.js'
 
 // Accueil du professeur : ses classes et les élèves à relancer, plutôt que
@@ -45,9 +45,19 @@ function CarteClasse({ classe, active, ouvrir }) {
 }
 
 export default function AccueilProf() {
-  const { state, setClassCode } = useStore()
+  const { state, setClassCode, setTeacherClasses } = useStore()
   const navigate = useNavigate()
   const classes = state.teacherClasses || []
+  const [chargement, setChargement] = useState(false)
+  const compte = state.account?.id
+  // À froid (nouvel appareil, rechargement), les classes ne sont pas encore connues : on les charge ici au lieu d'annoncer « Aucune classe ».
+  useEffect(() => {
+    if (!compte || state.teacherClasses?.length) return undefined
+    let vivant = true
+    setChargement(true)
+    fetchTeacherClasses(compte).then((rows) => { if (vivant && rows?.length) { setTeacherClasses(rows.map((c) => ({ code: c.code, label: c.label }))); if (!state.classCode) setClassCode(rows[0].code) } }).catch(() => {}).finally(() => { if (vivant) setChargement(false) })
+    return () => { vivant = false }
+  }, [compte]) // eslint-disable-line react-hooks/exhaustive-deps
   const prenom = state.profile?.firstName?.trim() || ''
   const ouvrir = (code) => { setClassCode(code); navigate('/classe') }
   return (
@@ -69,7 +79,7 @@ export default function AccueilProf() {
           </ul>
         ) : (
           <div className="card space-y-2 p-5 text-sm text-slate-500 dark:text-slate-400">
-            <p>Aucune classe pour l’instant.</p>
+            <p>{chargement ? 'Chargement de tes classes…' : 'Aucune classe pour l’instant.'}</p>
             <Link to="/classe" className="inline-block font-semibold text-[var(--c-accent-texte)] underline">Créer une classe et donner son code aux élèves</Link>
           </div>
         )}
@@ -78,8 +88,8 @@ export default function AccueilProf() {
       <section aria-labelledby="titre-outils-prof" className="space-y-3">
         <h2 id="titre-outils-prof" className="px-1 font-display text-lg font-semibold">En classe</h2>
         <div className="grid gap-3 sm:grid-cols-3">
-          <Link to="/classe" className="card p-4 transition hover:-translate-y-0.5 hover:shadow-md"><span className="text-xl" aria-hidden>📊</span><span className="mt-1 block font-semibold">Tableau de bord</span><span className="block text-xs text-slate-500 dark:text-slate-400">Activité et niveau par matière</span></Link>
-          <Link to="/classe" className="card p-4 transition hover:-translate-y-0.5 hover:shadow-md"><span className="text-xl" aria-hidden>📝</span><span className="mt-1 block font-semibold">Quiz et direct</span><span className="block text-xs text-slate-500 dark:text-slate-400">Créer, assigner, projeter</span></Link>
+          <Link to="/classe?vue=suivi" className="card p-4 transition hover:-translate-y-0.5 hover:shadow-md"><span className="text-xl" aria-hidden>📊</span><span className="mt-1 block font-semibold">Tableau de bord</span><span className="block text-xs text-slate-500 dark:text-slate-400">Activité et niveau par matière</span></Link>
+          <Link to="/classe?vue=quiz" className="card p-4 transition hover:-translate-y-0.5 hover:shadow-md"><span className="text-xl" aria-hidden>📝</span><span className="mt-1 block font-semibold">Quiz et direct</span><span className="block text-xs text-slate-500 dark:text-slate-400">Créer, assigner, projeter</span></Link>
           <Link to="/cours" className="card p-4 transition hover:-translate-y-0.5 hover:shadow-md"><span className="text-xl" aria-hidden>📖</span><span className="mt-1 block font-semibold">Cours et exercices</span><span className="block text-xs text-slate-500 dark:text-slate-400">Ce que voient vos élèves</span></Link>
         </div>
       </section>

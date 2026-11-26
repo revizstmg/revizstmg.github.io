@@ -3925,6 +3925,7 @@
   "{v0} erreur{v1}.": "{v0} mistake{v1}.",
   "Valider": "Check",
   "Il fallait trouver": "The answer was",
+<<<<<<< HEAD
   "Imagine…": "Imagine…",
   "Mini-défi :": "Mini-challenge:",
   "Réponse :": "Answer:",
@@ -3934,4 +3935,10 @@
   "QCM :": "Quiz:",
   "Trouve l’intrus :": "Spot the odd one out:",
   "Classe-les :": "Sort them:"
+=======
+  "Les matières de vos élèves": "Your students' subjects",
+  "🧑‍🏫 Je suis professeur : créer mon espace classe": "🧑‍🏫 I'm a teacher: create my class space",
+  "🧑‍🏫 Tu es professeur ? Crée ton espace classe": "🧑‍🏫 Are you a teacher? Create your class space",
+  "Chargement de tes classes…": "Loading your classes…"
+>>>>>>> origin/main
 }

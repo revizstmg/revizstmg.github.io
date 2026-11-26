@@ -11,7 +11,7 @@
 .adm :focus-visible { outline: 3px solid #1d4ed8; outline-offset: 2px; }
 .adm .adm-entete { display: grid; gap: 4px; padding-bottom: 12px; border-bottom: 2px solid #e2e8f0; margin-bottom: 14px; }
 .adm .adm-onglets { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-.adm .adm-onglet { border: 2px solid #94a3b8; background: #f8fafc; border-radius: 12px; padding: 10px 14px; font-weight: 700; font-size: 16px; min-height: 46px; cursor: pointer; }
+.adm .adm-onglet { border: 2px solid #94a3b8; background: #f8fafc; border-radius: 12px; padding: 8px 10px; font-weight: 700; font-size: 15px; min-height: 46px; cursor: pointer; }
 .adm .adm-onglet[aria-pressed="true"] { background: #0f172a; border-color: #0f172a; color: #ffffff; }
 .adm .adm-grille { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 @media (min-width: 640px) { .adm .adm-grille { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

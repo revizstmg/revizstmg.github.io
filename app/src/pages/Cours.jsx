@@ -7,13 +7,15 @@ import { readPosition } from '../data/readingPosition.js'
 import { CourseText } from '../components/Course.jsx'
 import { ProgressBar } from '../components/ui.jsx'
 import PastillePremium from '../components/PastillePremium.jsx'
-import { useT } from '../i18n.js'
+import { useT, usePublicText } from '../i18n.js'
 
 // Onglet « Cours » de la barre du bas : reprendre la dernière fiche, puis
 // toutes les matières de la filière avec leur maîtrise.
 export default function Cours() {
   const { state } = useStore()
   const t = useT()
+  const tr = usePublicText()
+  const prof = state.account?.role === 'prof' // vue enseignant : le cours tel que le voient les élèves, sans progression ni outils d'élève
   if (!state.track) return <Navigate to="/" replace />
   const subjects = subjectsForTrack(state.track)
   const position = readPosition(state.account?.id)
@@ -22,7 +24,7 @@ export default function Cours() {
     <div className="study-library course-library animate-lux space-y-6">
       <header className="page-hero page-hero-compact text-center">
         <p className="kicker">📖 {t('coursTab')}</p>
-        <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{t('mySubjects')}</h1>
+        <h1 className="mt-1 font-display text-[1.9rem] font-medium leading-tight">{prof ? tr('Les matières de vos élèves') : t('mySubjects')}</h1>
         <span className="mx-auto mt-3 block h-px w-24 rounded-full" style={{ background: 'linear-gradient(90deg,transparent,#c8a24e,transparent)' }} />
       </header>
       {fiche && (
@@ -35,7 +37,7 @@ export default function Cours() {
           </span>
         </Link>
       )}
-      <Link to="/sport-bac" className="card flex items-center gap-4 p-4"><span aria-hidden>🏃</span><span><strong>{t('sportBacTitle')}<PastillePremium to="/sport-bac"/></strong><small className="block">{t('epsIntro')}</small></span><span aria-hidden>→</span></Link>
+      {!prof && <Link to="/sport-bac" className="card flex items-center gap-4 p-4"><span aria-hidden>🏃</span><span><strong>{t('sportBacTitle')}<PastillePremium to="/sport-bac"/></strong><small className="block">{t('epsIntro')}</small></span><span aria-hidden>→</span></Link>}
       <div className="subject-shelves grid grid-cols-2 gap-3 sm:grid-cols-3">
         {subjects.map((s) => {
           const pct = s.comingSoon ? 0 : subjectScore(state, s.id)
@@ -44,7 +46,7 @@ export default function Cours() {
               <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl text-xl" style={{ backgroundColor: s.color + '22' }} aria-hidden>{s.icon || '📘'}</span>
               <span className="block font-display text-sm font-semibold leading-tight"><CourseText text={s.short || s.name} /></span>
               <span className="flex justify-between text-xs text-slate-500 dark:text-slate-400"><span>{s.resourceOnly ? 'Guides PDF · vidéos · conseils' : <>{s.chapters.length} {t('themesCount')}</>}</span><span>{s.resourceOnly ? '' : s.comingSoon ? t('comingSoon') : `${pct}%`}</span></span>
-              {!s.comingSoon && !s.resourceOnly && <ProgressBar value={pct} color={s.color} />}
+              {!prof && !s.comingSoon && !s.resourceOnly && <ProgressBar value={pct} color={s.color} />}
             </>
           )
           return s.comingSoon

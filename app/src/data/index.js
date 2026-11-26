@@ -1556,6 +1556,16 @@ export function search(query, idsMatieres = null) {
         })
     }
   }
+  // Sections de cours des matières déjà chargées (« Maslow » trouve la section qui en parle, pas seulement le thème).
+  for (const c of Object.values(ALL_CHAPTERS)) {
+    if (res.length >= 12) break
+    if (idsMatieres && !idsMatieres.includes(c.subjectId)) continue
+    ;(c.cours || []).forEach((sec, i) => {
+      if (res.length >= 12 || !sec?.h) return
+      const titre = stripMd(String(sec.h))
+      if (tous(sansAccents(titre))) res.push({ type: 'section', id: `${c.id}::${i}`, themeId: c.id, idx: i, subjectId: c.subjectId, label: titre, sub: `${c.short || c.name} › chapitre`, color: c.color })
+    })
+  }
   return res.slice(0, 12)
 }
 
