@@ -2126,6 +2126,11 @@ Prochaine action :
 - En-tête mobile : menu burger et recherche descendus (22 px du haut au lieu de ~9) et agrandis à 48 px, plus faciles à toucher d'une main.
 - Scroll, retours de 2 élèves flemmards et du prof : cartes de calcul (générateurs « Calcul express », saisie chiffrée corrigée), phrases à trous plus propres (une par phrase source, abréviations « ex. » protégées, pas de formules), termes du glossaire refusés (verbes, fragments), compteur N/N exact, boutons A/B qui se replient. Reste : volume (médiane ~35 exercices par chapitre), variété (questions ~54 %), « Réviser » verrouillé dans la barre du bas, reprise du chapitre après fermeture.
 
+## COURS-LUDIQUES (25/11/2026) — pilote mercatique
+- Nouvelle couche `content/<matière>/cours-ludiques.json` : `{ "<thème>": { "intro", "sections": [ … ] } }`. Elle remplace le texte du cours SECTION PAR SECTION (même nombre, même ordre : les exercices écrits à la main sont rattachés à la section par son numéro) ; ignorée si le nombre de sections ne correspond plus. `group`, `essentiel` d'origine conservés.
+- Nouveaux blocs : `accroche` (début de section, situation concrète) et `defi` (mini-défi à ouvrir ; `kind` : question | vf | erreur | calcul).
+- Règles de rédaction : accroche en tête, defi en dernier, tableau seulement juste avant le defi, mots en gras de l'original conservés, ≤ 170 % de la longueur d'origine, aucun fait inventé.
+- Mercatique (38 sections) réécrite en deux passes avec relecture d'un agent prof (1re : 14/20 justesse, 13/20 ludique). Autres matières : à faire après validation du style.
 ## AMELIORATIONS-2 (26/11/2026)
 - Professeur : bouton « Je suis professeur » sur l'écran de connexion et dans « Essayer sans compte » ; accueil prof charge les classes à froid ; tuiles « Tableau de bord » / « Quiz et direct » ouvrent `/classe?vue=suivi|quiz` ; menu et page Cours sans éléments d'élève (revision, bac blanc, classement, boutique, changer de niveau, espace parent, Sport au bac, barres de progression).
 - Recherche : trouve aussi les sections de cours des matières chargées (« Maslow »). Série 🔥 de l'en-tête touchable (mène au défi du jour). Scroll : calcul accepte l'unité écrite (« 100,7 points »). Admin : légende des visites, confirmation avec date de fin, onglets plus compacts.

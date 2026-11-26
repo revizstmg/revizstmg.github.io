@@ -471,6 +471,12 @@ function Frise({ title, events = [] }) {
   )
 }
 
+// Genres de mini-défi : question (par défaut), vrai/faux, trouve l'erreur, calcul.
+const DEFI_GENRES = { vf: ['✅❌', 'Vrai ou faux ?'], erreur: ['🕵️', 'Trouve l’erreur :'], calcul: ['🧮', 'À toi de calculer :'], qcm: ['❓', 'QCM :'], intrus: ['🔍', 'Trouve l’intrus :'], classement: ['🗂️', 'Classe-les :'] }
+
+// Le genre du défi est déjà affiché devant la question : on retire son écho en début de question (« Vrai ou faux : … »).
+const sansEcho = (q) => String(q || '').replace(/^\s*(?:vrai ou faux|(?:trouve|rep[èe]re|corrige|rep[eé]rez) l['’](?:erreur|intrus)|qcm|classe[- ]les|[àa] toi de calculer)\s*[?:]\s*/i, '')
+
 export function Block({ b, color }) {
   switch (b.t) {
     case 'p':
@@ -503,6 +509,25 @@ export function Block({ b, color }) {
           <p className="mb-1 text-xs font-bold uppercase tracking-wide text-amber-700 dark:text-amber-300">⚠️ <CourseText text={b.h || 'Piège à éviter'} /></p>
           <p className="whitespace-pre-line text-sm leading-relaxed text-slate-700 dark:text-slate-200"><CourseText text={b.c} /></p>
         </div>
+      )
+    case 'accroche':
+      // Début de chapitre : une situation concrète qui donne envie de comprendre ce qui suit.
+      return (
+        <div className="course-callout course-accroche rounded-2xl border-2 p-4" style={{ borderColor: color, background: `color-mix(in srgb, ${color} 8%, transparent)` }}>
+          <p className="mb-1 text-xs font-bold uppercase tracking-wide" style={{ color }}>{b.emoji || '🎬'} {b.h || 'Imagine…'}</p>
+          <p className="whitespace-pre-line text-[15px] font-medium leading-relaxed text-slate-800 dark:text-slate-100"><CourseText text={b.c} /></p>
+        </div>
+      )
+    case 'defi':
+      // Mini-défi : on cherche d'abord, on ouvre la réponse ensuite.
+      return (
+        <details onClick={(e) => e.stopPropagation()} className="course-callout course-defi group rounded-2xl border-2 border-dashed border-violet-400 bg-violet-50 p-4 dark:border-violet-500 dark:bg-violet-950/30">
+          <summary className="cursor-pointer text-sm font-bold text-violet-800 dark:text-violet-200">{DEFI_GENRES[b.kind]?.[0] || '🎯'} {DEFI_GENRES[b.kind]?.[1] || 'Mini-défi :'} <span className="whitespace-pre-line"><CourseText text={sansEcho(b.q)} /></span></summary>
+          <div className="mt-3 border-t border-violet-300 pt-3 text-sm leading-relaxed text-slate-700 dark:text-slate-200">
+            <p><b>Réponse : </b><CourseText text={b.a} /></p>
+            {b.explain && <p className="mt-1 whitespace-pre-line"><CourseText text={b.explain} /></p>}
+          </div>
+        </details>
       )
     case 'table':
       return (
