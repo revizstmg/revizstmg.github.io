@@ -3923,5 +3923,9 @@
   "{v0} erreur{v1} en route.": "{v0} خطأ{v1} في الطريق.",
   "{v0} erreur{v1}.": "{v0} خطأ{v1}.",
   "Valider": "تحقق",
-  "Il fallait trouver": "كان الجواب"
+  "Il fallait trouver": "كان الجواب",
+  "Les matières de vos élèves": "مواد طلابك",
+  "🧑‍🏫 Je suis professeur : créer mon espace classe": "🧑‍🏫 أنا أستاذ: إنشاء فضاء قسمي",
+  "🧑‍🏫 Tu es professeur ? Crée ton espace classe": "🧑‍🏫 هل أنت أستاذ؟ أنشئ فضاء قسمك",
+  "Chargement de tes classes…": "جارٍ تحميل أقسامك…"
 }

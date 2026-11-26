@@ -450,6 +450,8 @@ export default function Welcome() {
   const step3Ok = consent && (isProf ? (!!chosenLevel?.available && taught.length > 0 && nClasses >= 1) : (!!chosenLevel?.available && specialtyOk))
   const goLogin = () => { setAuthMode('login'); setOauthNew(false); setSignupStep(1); setErr(''); setInfo(''); setRecoverStep(null) }
   const goCreate = () => { setAuthMode('create'); setSignupStep(1); setErr(''); setInfo(''); setRecoverStep(null); debutInscription.current = Date.now() }
+  // Un enseignant arrive directement sur l'inscription « Professeur » (classes, suivi des élèves), sans chercher le choix à l'étape 1.
+  const goCreateProf = () => { setEssai(false); setRole('prof'); goCreate() }
   const backBtn = 'rounded-2xl border border-slate-300 px-5 text-sm font-semibold text-slate-600 transition hover:bg-slate-100 dark:border-slate-600 dark:text-slate-300 dark:hover:bg-slate-800'
   const stepDots = (
     <div className="mb-1 mt-2 flex items-center justify-center gap-1.5" aria-hidden>
@@ -493,6 +495,7 @@ export default function Welcome() {
             <StudyLanguages value={studyLanguages} onChange={setStudyLanguages} />
             <button type="button" className="welcome-cta" disabled={!essaiOk} onClick={commencerEssai}>Commencer mes révisions sans compte</button>
             {!essaiOk && <p className="welcome-aide" role="status">Indique ton prénom et choisis ton niveau pour commencer.</p>}
+            <button type="button" className="welcome-skip" onClick={goCreateProf}>🧑‍🏫 Tu es professeur ? Crée ton espace classe</button>
             <button type="button" className="welcome-skip" onClick={() => setEssai(false)}>{t('backToLogin')}</button>
           </>
         ) : recoverStep ? (
@@ -537,6 +540,7 @@ export default function Welcome() {
             {!step1Ok && <p className="welcome-aide">Renseigne une adresse e-mail valide et ton mot de passe pour continuer.</p>}
             <button type="button" className="welcome-skip" disabled={busy} onClick={goCreate}>{t('noAccountYet')}</button>
             <button type="button" className="welcome-skip !mt-5 !rounded-xl !border !border-slate-400 !px-4 !py-3 !font-semibold" disabled={busy} onClick={() => { setEssai(true); setErr(''); setInfo('') }}>Essayer sans compte</button>
+            <button type="button" className="welcome-skip !mt-3 !rounded-xl !border !border-slate-400 !px-4 !py-3 !font-semibold" disabled={busy} onClick={goCreateProf}>🧑‍🏫 Je suis professeur : créer mon espace classe</button>
           </>
         ) : (
           /* ---------- Inscription en étapes ---------- */

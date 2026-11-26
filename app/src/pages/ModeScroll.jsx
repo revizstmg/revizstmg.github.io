@@ -86,13 +86,14 @@ function Trou({ c, fini }) {
 function Calcul({ c, fini }) {
   const [val, setVal] = useState('')
   const [verifie, setVerifie] = useState(false)
-  const num = parseNombre(val)
+  // On accepte une unité écrite à la suite du nombre (« 100,7 points », « 12 € », « 8 % »).
+  const num = parseNombre(val.replace(/\s*(?:points?|pts?|€|euros?|%|jours?|ans?|unités?|km|kg|m)\s*\.?$/i, ''))
   const ok = verifie && num !== null && Math.abs(num - c.reponse) <= c.tolerance
   const valider = () => { if (verifie || !val.trim()) return; setVerifie(true); fini(num !== null && Math.abs(num - c.reponse) <= c.tolerance) }
   return (
     <>
       <p className="scroll-texte whitespace-pre-line">{c.prompt}</p>
-      <form className="flex items-center gap-2" onSubmit={(e) => { e.preventDefault(); valider() }}>
+      <form className="flex flex-wrap items-center gap-2" onSubmit={(e) => { e.preventDefault(); valider() }}>
         <input
           value={val}
           onChange={(e) => setVal(e.target.value)}
@@ -105,8 +106,8 @@ function Calcul({ c, fini }) {
           className="scroll-saisie"
           data-etat={verifie ? (ok ? 'bon' : 'faux') : undefined}
         />
-        {c.unite && <span className="text-lg font-semibold" aria-hidden>{c.unite}</span>}
-        <button type="submit" className="btn-primary" disabled={verifie || !val.trim()}>Valider</button>
+        {c.unite && <span className="shrink-0 whitespace-nowrap text-lg font-semibold" aria-hidden>{c.unite}</span>}
+        <button type="submit" className="btn-primary w-full" disabled={verifie || !val.trim()}>Valider</button>
       </form>
       {verifie && <Feedback ok={ok}>{ok ? '' : <>Il fallait trouver <b>{String(c.reponse).replace('.', ',')}{c.unite ? ` ${c.unite}` : ''}</b>. </>}{c.explication}</Feedback>}
     </>

@@ -3924,5 +3924,9 @@
   "{v0} erreur{v1} en route.": "{v0} mistake{v1} along the way.",
   "{v0} erreur{v1}.": "{v0} mistake{v1}.",
   "Valider": "Check",
-  "Il fallait trouver": "The answer was"
+  "Il fallait trouver": "The answer was",
+  "Les matières de vos élèves": "Your students' subjects",
+  "🧑‍🏫 Je suis professeur : créer mon espace classe": "🧑‍🏫 I'm a teacher: create my class space",
+  "🧑‍🏫 Tu es professeur ? Crée ton espace classe": "🧑‍🏫 Are you a teacher? Create your class space",
+  "Chargement de tes classes…": "Loading your classes…"
 }

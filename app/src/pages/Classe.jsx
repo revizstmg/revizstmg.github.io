@@ -56,7 +56,8 @@ export default function Classe() {
   const myName = `${state.profile?.firstName || ''} ${state.profile?.lastName || ''}`.trim() || t('roleStudent')
   const photo = state.profile?.photo || ''
   const teacherClasses = state.teacherClasses || []
-  const [tab, setTab] = useState('overview')
+  // ?vue=suivi ou ?vue=quiz (liens de l'accueil professeur) ouvrent directement la bonne section.
+  const [tab, setTab] = useState(() => { try { return ({ suivi: 'prof', quiz: 'quiz' })[new URLSearchParams(window.location.hash.split('?')[1] || '').get('vue')] || 'overview' } catch { return 'overview' } })
   const [profSection,setProfSection]=useState('board')
   const [identity,setIdentity]=useState(null)
   const [quizCreate,setQuizCreate]=useState(false)
