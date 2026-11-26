@@ -521,7 +521,7 @@ export function Block({ b, color }) {
     case 'defi':
       // Mini-défi : on cherche d'abord, on ouvre la réponse ensuite.
       return (
-        <details className="course-callout course-defi group rounded-2xl border-2 border-dashed border-violet-400 bg-violet-50 p-4 dark:border-violet-500 dark:bg-violet-950/30">
+        <details onClick={(e) => e.stopPropagation()} className="course-callout course-defi group rounded-2xl border-2 border-dashed border-violet-400 bg-violet-50 p-4 dark:border-violet-500 dark:bg-violet-950/30">
           <summary className="cursor-pointer text-sm font-bold text-violet-800 dark:text-violet-200">{DEFI_GENRES[b.kind]?.[0] || '🎯'} {DEFI_GENRES[b.kind]?.[1] || 'Mini-défi :'} <span className="whitespace-pre-line"><CourseText text={sansEcho(b.q)} /></span></summary>
           <div className="mt-3 border-t border-violet-300 pt-3 text-sm leading-relaxed text-slate-700 dark:text-slate-200">
             <p><b>Réponse : </b><CourseText text={b.a} /></p>
