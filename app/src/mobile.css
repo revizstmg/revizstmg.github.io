@@ -92,6 +92,8 @@
   .site-main .bac-subject-body { padding: 20px; }
   .site-main .bac-creator .bac-preview { height: 180px; min-height: 0; }
   .site-shell:has(.mobile-bottom-nav) .mobile-cookie-notice { bottom: 64px; }
+  /* La bannière « Installe l'appli » ne doit pas recouvrir la barre d'onglets. */
+  body:has(.mobile-bottom-nav) .mobile-install-banner { bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
   .mobile-cookie-notice button { min-width: 48px; min-height: 44px; }
   .mobile-keyboard-open :is(.mobile-bottom-nav, .mobile-cookie-notice) { display: none; }
 }
