@@ -4800,5 +4800,7 @@
   "Sans faute !": "Fehlerfrei!",
   "Touche dans l’ordre.": "In der richtigen Reihenfolge antippen.",
   "{v0} erreur{v1} en route.": "{v0} Fehler{v1} unterwegs.",
-  "{v0} erreur{v1}.": "{v0} Fehler{v1}."
+  "{v0} erreur{v1}.": "{v0} Fehler{v1}.",
+  "Valider": "Prüfen",
+  "Il fallait trouver": "Gesucht war"
 }

@@ -3922,5 +3922,7 @@
   "Sans faute !": "No mistakes!",
   "Touche dans l’ordre.": "Tap in order.",
   "{v0} erreur{v1} en route.": "{v0} mistake{v1} along the way.",
-  "{v0} erreur{v1}.": "{v0} mistake{v1}."
+  "{v0} erreur{v1}.": "{v0} mistake{v1}.",
+  "Valider": "Check",
+  "Il fallait trouver": "The answer was"
 }

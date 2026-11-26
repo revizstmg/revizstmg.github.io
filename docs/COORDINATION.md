@@ -2120,3 +2120,8 @@ Prochaine action :
 
 ## ADMIN-LISIBLE (26/11/2026)
 - Tableau de bord administrateur refait pour la lisibilité : fond blanc, texte noir, chiffres sans empattement (le serif ancien affichait « ɪ8 »), contraste élevé quel que soit le thème. Chaque chiffre de l'aperçu est un bouton qui ouvre la liste des comptes filtrée (rôle, niveau, période, offre, spécialité) ; filtres repliables avec puces de filtres actifs ; signalements filtrables (à traiter) ; fiches en liste « libellé / valeur ».
+## SCROLL-EXERCICES (25/11/2026)
+- Le Scroll ne contient plus de cours : uniquement des exercices (à compléter, mot mélangé, A ou B, ordre, associer, questions éclair, vrai/faux, flashcards), jusqu'à 100 par chapitre. L'élève choisit matière → thème → chapitre (`/scroll`, `/scroll/:sid/:tid`, `/scroll/:sid/:tid/:cidx`).
+- Barre du bas par défaut : Accueil, Cours, Réviser, Scroll, Paramètres (le Bac blanc y est remplacé ; il reste dans le menu et sur l'accueil). Les élèves qui ont personnalisé leurs onglets gardent les leurs.
+- En-tête mobile : menu burger et recherche descendus (22 px du haut au lieu de ~9) et agrandis à 48 px, plus faciles à toucher d'une main.
+- Scroll, retours de 2 élèves flemmards et du prof : cartes de calcul (générateurs « Calcul express », saisie chiffrée corrigée), phrases à trous plus propres (une par phrase source, abréviations « ex. » protégées, pas de formules), termes du glossaire refusés (verbes, fragments), compteur N/N exact, boutons A/B qui se replient. Reste : volume (médiane ~35 exercices par chapitre), variété (questions ~54 %), « Réviser » verrouillé dans la barre du bas, reprise du chapitre après fermeture.

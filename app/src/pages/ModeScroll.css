@@ -5,7 +5,7 @@
 .scroll-barre { height: 4px; flex: 1; border-radius: 9999px; background: rgb(148 163 184 / .35); overflow: hidden; }
 .scroll-barre > span { display: block; height: 100%; background: var(--c-accent); transition: width .2s; }
 .scroll-liste { flex: 1; min-height: 0; overflow-y: auto; scroll-snap-type: y mandatory; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
-.scroll-carte { height: 100%; min-height: 100%; scroll-snap-align: start; scroll-snap-stop: always; display: flex; flex-direction: column; justify-content: center; gap: 1rem; padding: 1.2rem 1.4rem max(1.4rem, env(safe-area-inset-bottom)); box-sizing: border-box; }
+.scroll-carte { height: 100%; min-height: 100%; scroll-snap-align: start; scroll-snap-stop: always; display: flex; flex-direction: column; justify-content: safe center; overflow-y: auto; gap: 1rem; padding: 1.2rem 1.4rem max(1.4rem, env(safe-area-inset-bottom)); box-sizing: border-box; }
 .scroll-puce { align-self: flex-start; border-radius: 9999px; padding: .2rem .7rem; font-size: .75rem; font-weight: 700; letter-spacing: .04em; background: color-mix(in srgb, var(--c-accent) 16%, transparent); }
 .scroll-texte { font-size: clamp(1.15rem, 4.8vw, 1.55rem); line-height: 1.5; font-weight: 500; }
 .scroll-formule { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: clamp(1.05rem, 4.4vw, 1.35rem); border-radius: 1rem; padding: 1rem; background: color-mix(in srgb, var(--c-accent) 10%, transparent); }
@@ -44,3 +44,9 @@
 @keyframes scroll-secoue { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
 [data-secoue="1"] { animation: scroll-secoue .35s ease; border-color: #dc2626 !important; }
 @media (prefers-reduced-motion: reduce) { [data-secoue="1"], .scroll-serie { animation: none; } }
+
+.scroll-saisie { flex: 1; min-width: 0; border-radius: 1rem; border: 2px solid rgb(148 163 184 / .6); padding: .85rem 1rem; font-size: 1.25rem; background: transparent; }
+.scroll-saisie[data-etat="bon"] { border-color: #16a34a; background: rgb(22 163 74 / .14); }
+.scroll-saisie[data-etat="faux"] { border-color: #dc2626; background: rgb(220 38 38 / .12); }
+.scroll-tri { min-width: 0; overflow-wrap: anywhere; white-space: normal; }
+.scroll-tri-grille > * { min-width: 0; }

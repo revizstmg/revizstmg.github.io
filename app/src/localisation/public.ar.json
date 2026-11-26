@@ -3921,5 +3921,7 @@
   "Sans faute !": "بلا أخطاء!",
   "Touche dans l’ordre.": "المس بالترتيب.",
   "{v0} erreur{v1} en route.": "{v0} خطأ{v1} في الطريق.",
-  "{v0} erreur{v1}.": "{v0} خطأ{v1}."
+  "{v0} erreur{v1}.": "{v0} خطأ{v1}.",
+  "Valider": "تحقق",
+  "Il fallait trouver": "كان الجواب"
 }
