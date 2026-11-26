@@ -65,3 +65,27 @@ test('un administrateur change l’offre d’un compte depuis sa fiche', async (
   await expect(page.getByText('Offre Ultimate enregistrée.')).toBeVisible()
   expect(corps).toEqual([{ p_id: 'c1', p_offre: 'ultimate', p_jours: 30 }])
 })
+
+test('chaque chiffre de l’aperçu est cliquable et ouvre la liste filtrée', async ({ page }) => {
+  await preparer(page, etatEleve())
+  await page.addInitScript((x) => localStorage.setItem('stmg_session', JSON.stringify(x)), session('gabriel.merlin2872@icloud.com'))
+  const il = (j) => new Date(Date.now() - j * 86400000).toISOString()
+  const comptes = [
+    { id: 'n1', role: 'eleve', nom: 'Nouvelle Inscrite', email: 'no***@x.fr', niveau: 'terminale-stmg', specialite: 'rh-communication', cree: il(2), maj: il(1), offre: 'gratuit', xp: 5, exercices: 0, chapitres: 0, jours_actifs: 1, temps_s: 10 },
+    { id: 'v1', role: 'prof', nom: 'Vieux Prof', email: 'vi***@x.fr', niveau: 'premiere-stmg', specialite: null, cree: il(60), maj: il(40), offre: 'premium', xp: 50, exercices: 3, chapitres: 2, jours_actifs: 4, temps_s: 600 },
+  ]
+  await page.route('**/rest/v1/rpc/revizstmg_admin_*', (route) => {
+    const fn = route.request().url().split('/rpc/')[1]
+    const json = (b) => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(b) })
+    if (fn === 'revizstmg_admin_apercu') return json({ ...apercu, offres: { premium: 1, ultimate: 0, reels: 0, offerts: 1 } })
+    if (fn === 'revizstmg_admin_comptes') return json(comptes)
+    return json({})
+  })
+  await page.goto('./#/admin')
+  await page.getByRole('button', { name: /Nouveaux \(7 jours\)/ }).click()
+  await expect(page.getByText('Nouvelle Inscrite')).toBeVisible()
+  await expect(page.getByText('Vieux Prof')).toHaveCount(0)
+  await expect(page.locator('.adm-puce', { hasText: 'Inscrits depuis 7 jours' })).toBeVisible()
+  await page.getByRole('button', { name: 'Tout effacer' }).click()
+  await expect(page.getByText('Vieux Prof')).toBeVisible()
+})
