@@ -801,9 +801,12 @@ function isCleanTerm(term) {
 
 // Abrège une définition pour l'association sans finir sur un mot vide (article,
 // préposition) : « …au crédit d'un autre, pour un… » → « …au crédit d'un autre… ».
-function shortenDef(def, max = 90) {
+function shortenDef(def, max = 130) {
   const d = String(def || '')
   if (d.length <= max) return d
+  // Une définition coupée net dans une phrase perd son sens : on garde plutôt la première phrase quand elle tient.
+  const phrase = d.split(/(?<=[.;])\s/)[0].replace(/[.;]$/, '')
+  if (phrase.length >= 25 && phrase.length <= max) return phrase
   let s = d.slice(0, max - 2).replace(/\s\S*$/, '')
   s = s.replace(/[\s,;:.–—-]+(l’|d’|de|des|du|le|la|les|un|une|à|au|aux|et|ou|en|pour|sur|dans|par|avec|qui|que|se|sa|son|ses|ce|cet|cette|leur)$/i, '')
   return s.replace(/[\s,;:–—-]+$/, '') + '…'

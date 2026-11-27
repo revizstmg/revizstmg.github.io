@@ -28,7 +28,8 @@ export default function Saisie({ game, mode, color, onDone }) {
     if (answerMatches(val, q.answer, q.alt || [])) setCorrect((c) => c + 1)
   }
   const next = () => {
-    bilan.current[ok ? 'reussies' : 'ratees'].push(q)
+    // Réponse révélée sans avoir été saisie : la question compte comme ratée (carnet d'erreurs).
+    bilan.current[ok && !revealed ? 'reussies' : 'ratees'].push(q)
     if (i + 1 >= set.length) {
       const timeBonus = Math.max(0, set.length * 8 - elapsed)
       onDone({ correct, total: set.length, timeBonus, ...bilan.current })
@@ -78,7 +79,9 @@ export default function Saisie({ game, mode, color, onDone }) {
       </div>
       {!checked ? (
         <div className="mt-4 flex gap-2">
-          <button onClick={check} disabled={val.trim() === ''} className="btn-primary flex-1 disabled:opacity-40" style={{ backgroundColor: color }}>{t('check')}</button>
+          {revealed
+            ? <button onClick={next} data-suivant-apres-reponse className="btn-primary flex-1" style={{ backgroundColor: color }}>{i + 1 >= set.length ? t('seeScore') : `${t('next')} →`}</button>
+            : <button onClick={check} disabled={val.trim() === ''} className="btn-primary flex-1 disabled:opacity-40" style={{ backgroundColor: color }}>{t('check')}</button>}
           {!revealed && <button onClick={() => setRevealed(true)} className="btn-ghost shrink-0">{t('showAnswer')}</button>}
         </div>
       ) : (
