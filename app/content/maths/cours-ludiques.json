@@ -1,0 +1,2217 @@
+{
+ "math-c1": {
+  "intro": "En gestion, presque tout se mesure en **variations** : un chiffre d’affaires qui monte, un prix qui chute, un effectif qui bouge. Ce chapitre te donne les outils pour manier ces variations sans te faire piéger : **taux d’évolution**, **coefficient multiplicateur**, évolutions **successives** et **moyennes**.",
+  "sections": [
+   {
+    "h": "📊 Taux d’évolution et coefficient multiplicateur",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🤔",
+      "h": "Question qui pique",
+      "c": "Ton jeu préféré passe de 80 € à 100 €. Un pote hurle : « +20 % ! ». Un autre dit : « +25 % ». Qui a raison, et comment le prouver en deux lignes de calcul ?"
+     },
+     {
+      "t": "p",
+      "c": "Un **taux d’évolution** mesure une variation **relative** (en pourcentage) entre une valeur de départ (**valeur initiale**, Vᵢ) et une valeur d’arrivée (**valeur finale**, V_f). C’est l’outil de base pour comparer des évolutions de tailles différentes."
+     },
+     {
+      "t": "formula",
+      "c": "Taux d’évolution : t = (V_f − V_i) ÷ V_i   (à convertir en %)"
+     },
+     {
+      "t": "p",
+      "c": "À chaque taux correspond un **coefficient multiplicateur (CM)** : le nombre par lequel on multiplie la valeur initiale pour obtenir la valeur finale. C’est souvent **plus rapide et plus sûr** que de manipuler les pourcentages."
+     },
+     {
+      "t": "formula",
+      "c": "CM = 1 + t   et   V_f = V_i × CM   donc   CM = V_f ÷ V_i"
+     },
+     {
+      "t": "list",
+      "c": [
+       "Une **hausse de 20 %** (t = +0,20) donne un **coefficient multiplicateur de 1,20** ; une **hausse de 5 %** (t = +0,05) donne **1,05**.",
+       "Une **baisse de 30 %** (t = −0,30) donne CM = 1 − 0,30 = **0,70** : il reste 70 % de la valeur de départ.",
+       "Une **baisse de 100 %** (t = −1) donne CM = **0** : la valeur disparaît entièrement."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Règle de lecture",
+      "c": "Un coefficient **supérieur à 1** traduit une hausse ; un coefficient **compris entre 0 et 1** traduit une baisse ; un taux ne peut jamais descendre sous −100 %."
+     },
+     {
+      "t": "example",
+      "h": "Le jeu à 100 €",
+      "c": "Un prix passe de 80 € à 100 €. CM = 100 ÷ 80 = 1,25 → t = 1,25 − 1 = 0,25 = **+ 25 %**. Le deuxième pote avait raison !"
+     },
+     {
+      "t": "warning",
+      "h": "Piège",
+      "c": "Une hausse de 20 % suivie d’une baisse de 20 % ne ramène **pas** au prix de départ : 1,20 × 0,80 = 0,96, soit **− 4 %** au total. Les pourcentages ne s’additionnent pas, les coefficients se **multiplient**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Taux d’évolution t",
+        "Variation relative : t = (V_f − V_i) ÷ V_i, écrite en décimal (+20 % → 0,20 ; −30 % → −0,30)"
+       ],
+       [
+        "Coefficient multiplicateur (CM)",
+        "CM = 1 + t et V_f = V_i × CM (+20 % → 1,20 ; +5 % → 1,05 ; −30 % → 0,70 ; −100 % → 0)"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Un abonnement passe de 8 € à 10 €. Quel est son coefficient multiplicateur ?\nA) 1,25\nB) 1,20\nC) 0,80",
+      "a": "A) 1,25 : CM = 10 ÷ 8 = 1,25.",
+      "explain": "CM = valeur finale ÷ valeur initiale. 1,25 correspond à une hausse de 25 %."
+     }
+    ]
+   },
+   {
+    "h": "🔁 Évolutions successives et taux moyen",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📱",
+      "h": "Mini-histoire",
+      "c": "Ta chaîne gagne 10 % d’abonnés en janvier, puis 30 % en février. Ta cousine conclut : « Ça fait +40 % ! ». Ton compteur, lui, affiche un autre chiffre. Lequel ?"
+     },
+     {
+      "t": "p",
+      "c": "Quand plusieurs évolutions **s’enchaînent**, on ne les additionne pas : on **multiplie leurs coefficients** pour obtenir le **coefficient global**."
+     },
+     {
+      "t": "formula",
+      "c": "CM global = CM₁ × CM₂ × … × CMₙ"
+     },
+     {
+      "t": "example",
+      "h": "Évolutions successives",
+      "c": "Un chiffre d’affaires augmente de 10 % puis de 30 %.\nCM global = 1,10 × 1,30 = 1,43 → soit une hausse **globale de + 43 %** (et non +40 %)."
+     },
+     {
+      "t": "p",
+      "c": "Le **taux moyen** répond à la question : « quelle évolution **identique**, répétée n fois, donnerait le même résultat global ? ». On cherche le coefficient moyen dont la puissance n-ième égale le coefficient global."
+     },
+     {
+      "t": "formula",
+      "c": "CM moyen = (CM global)^(1/n)   puis   t moyen = CM moyen − 1"
+     },
+     {
+      "t": "example",
+      "h": "Taux moyen",
+      "c": "Une population croît de 44 % en 2 ans. CM global = 1,44.\nCM moyen = 1,44^(1/2) = √1,44 = 1,20 → t moyen = **+ 20 % par an**.\nVérification : 1,20 × 1,20 = 1,44. ✓"
+     },
+     {
+      "t": "warning",
+      "h": "Piège",
+      "c": "Le taux moyen n’est **pas** la moyenne arithmétique des taux ! Pour +10 % puis +30 %, le taux moyen n’est pas 20 % : c’est √(1,10×1,30) − 1 ≈ **+ 19,6 %**."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Une élève écrit : « Après +10 % puis +30 %, l’évolution globale est de +40 %. »",
+      "a": "Faux : on multiplie les CM, 1,10 × 1,30 = 1,43, soit + 43 %.",
+      "explain": "Les taux ne s’additionnent pas : on passe toujours par les coefficients."
+     }
+    ]
+   },
+   {
+    "h": "↩️ Taux réciproque et indice base 100",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎒",
+      "h": "Défi lancé",
+      "c": "Un sac passe de 100 € à 125 €. Le magasin veut revenir au prix de départ. Il annonce « −25 % ». Sera-ce suffisant ? Spoiler : non, et l’indice base 100 va t’aider à comparer proprement."
+     },
+     {
+      "t": "p",
+      "c": "Le **taux réciproque** est l’évolution qui **annule** une évolution donnée (pour revenir à la valeur de départ). Son coefficient est l’**inverse** du coefficient de départ."
+     },
+     {
+      "t": "formula",
+      "c": "CM réciproque = 1 ÷ CM   puis   t réciproque = CM réciproque − 1"
+     },
+     {
+      "t": "example",
+      "h": "Taux réciproque",
+      "c": "Un prix a augmenté de 25 % (CM = 1,25). Pour revenir au prix initial, il faut le multiplier par 1 ÷ 1,25 = 0,80, soit une baisse de **− 20 %** (et non −25 %)."
+     },
+     {
+      "t": "p",
+      "c": "Les **indices** permettent de suivre et comparer des évolutions en fixant une valeur de référence à **100**. L’indice se calcule par proportionnalité avec la valeur de référence."
+     },
+     {
+      "t": "formula",
+      "c": "Indice = (Valeur ÷ Valeur de référence) × 100"
+     },
+     {
+      "t": "example",
+      "h": "Indice base 100",
+      "c": "Base 2020 : un prix de 40 € en 2020 (indice 100) passe à 46 € en 2024.\nIndice 2024 = (46 ÷ 40) × 100 = 115 → le prix a augmenté de **15 %** entre 2020 et 2024."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Un indice supérieur à 100 = hausse ; inférieur à 100 = baisse. L’écart de l’indice à 100 donne **directement** le pourcentage d’évolution depuis la base."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Après une hausse de 25 %, il faut une baisse de 20 % pour revenir à la valeur de départ.",
+      "a": "Vrai : 1 ÷ 1,25 = 0,80, soit − 20 %.",
+      "explain": "Le taux réciproque a pour coefficient l’inverse du CM de départ."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Exemple traité — taux d’évolution, coefficient et indice base 100",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "💼",
+      "h": "Chiffre fictif",
+      "c": "Le chiffre d’affaires de la start-up MiamBox passe de 80 000 € à 92 000 €, puis encore +15 %. Les investisseurs veulent trois chiffres : le taux, l’évolution globale, l’indice."
+     },
+     {
+      "t": "example",
+      "h": "Énoncé",
+      "c": "CA : 80 000 € en 2023, 92 000 € en 2024.\n1) Taux d’évolution 2023 → 2024 ?\n2) Puis +15 % en 2025 : évolution globale 2023 → 2025 ?\n3) Indice base 100 (base 2023) du CA 2024 ?"
+     },
+     {
+      "t": "p",
+      "c": "**Résolution, étape par étape :**"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Taux** : t = (92 000 − 80 000) / 80 000 = **0,15 = +15 %**.",
+       "**Coefficient multiplicateur** : CM = 1 + 0,15 = **1,15**.",
+       "**Évolution globale** : CM global = 1,15 × 1,15 = **1,3225**, soit **+32,25 %** (et pas +30 %).",
+       "**Indice** : (92 000 / 80 000) × 100 = **115**, ce qui confirme +15 %."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Toujours passer par le coefficient multiplicateur (CM = 1 + t) pour enchaîner des évolutions : source d’erreur n°1 au bac."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Le CA d’une boutique passe de 50 000 € à 57 500 €. Calcule le taux d’évolution et l’indice base 100 (base : 50 000 €).",
+      "a": "t = 7 500 ÷ 50 000 = 0,15 = +15 % ; indice = 57 500 ÷ 50 000 × 100 = 115.",
+      "explain": "Un indice de 115 signifie +15 % depuis la base."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Exercice type guidé — évolutions successives et taux moyen",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏠",
+      "h": "Mini-histoire",
+      "c": "Tu cherches un studio. Le propriétaire a augmenté le loyer de 4 % puis de 6 %. Il jure : « Seulement 10 % en deux ans ! ». Vérifions son calcul, centime par centime."
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Le loyer d’un studio est de 500 € en 2022. Il augmente de 4 % en 2023, puis de 6 % en 2024. Calculer le loyer en 2024, l’évolution globale et le taux annuel moyen."
+     },
+     {
+      "t": "example",
+      "h": "Étape 1 — Loyer 2024",
+      "c": "CM = 1,04 × 1,06 = 1,1024.\nLoyer 2024 = 500 × 1,1024 = **551,20 €**."
+     },
+     {
+      "t": "example",
+      "h": "Étape 2 — Évolution globale",
+      "c": "CM global = 1,1024 → t global = 0,1024 = **+ 10,24 %** entre 2022 et 2024."
+     },
+     {
+      "t": "example",
+      "h": "Étape 3 — Taux annuel moyen",
+      "c": "CM moyen = 1,1024^(1/2) = √1,1024 ≈ 1,04995.\nt moyen ≈ **+ 5,0 % par an**."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode « informations chiffrées »",
+      "c": "1) Traduire chaque évolution en **coefficient** (1 + t). 2) **Multiplier** les coefficients. 3) Taux moyen : **racine n-ième** du coefficient global. 4) **Vérifier** l’ordre de grandeur et convertir en %."
+     },
+     {
+      "t": "warning",
+      "h": "Erreurs qui coûtent des points",
+      "c": "Additionner les pourcentages, oublier de repasser du coefficient au taux (CM − 1), ou confondre taux moyen et moyenne des taux."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Un prix augmente de 10 % puis de 20 %. Quel est le coefficient global ?\nA) 1,30\nB) 1,32\nC) 1,12",
+      "a": "B) 1,32 : 1,10 × 1,20 = 1,32, soit +32 %.",
+      "explain": "On multiplie les coefficients : additionner donnerait 1,30, une erreur classique."
+     }
+    ]
+   },
+   {
+    "h": "🔢 Appliquer un pourcentage et calculer une proportion",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🛍️",
+      "h": "Dialogue",
+      "c": "— « Le sweat est à 80 €, mais −30 % ! »\n— « Je paie combien ? »\n— « Euh… 30 €, non ? »\nAide ce vendeur étourdi à trouver la bonne réponse."
+     },
+     {
+      "t": "p",
+      "c": "Prendre **x % d’une valeur V**, c’est multiplier V par x/100. C’est le calcul le plus courant : remises, TVA, part d’un total."
+     },
+     {
+      "t": "formula",
+      "c": "x % de V = V × (x ÷ 100)"
+     },
+     {
+      "t": "example",
+      "h": "Remise",
+      "c": "Une remise de 30 % sur 80 € : 80 × 30/100 = **24 €** de remise, soit un prix de 80 − 24 = **56 €**."
+     },
+     {
+      "t": "p",
+      "c": "Pour retrouver **quel pourcentage** représente une partie d’un tout : **partie ÷ tout × 100**."
+     },
+     {
+      "t": "example",
+      "h": "Retrouver un %",
+      "c": "Sur 250 élèves, 40 sont en GF : 40 ÷ 250 × 100 = **16 %**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Prendre un % → **× (x/100)**. Retrouver un % → partie ÷ tout × 100. Ne pas confondre la remise (en €) et le prix final."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Une remise de 30 % sur un article à 80 € laisse un prix final de 56 €.",
+      "a": "Vrai : 80 × 0,30 = 24 € de remise, et 80 − 24 = 56 €.",
+      "explain": "La remise (24 €) et le prix payé (56 €) sont deux nombres différents."
+     }
+    ]
+   },
+   {
+    "h": "⚠️ Points de pourcentage ≠ pourcentage d’évolution",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📰",
+      "h": "Question qui pique",
+      "c": "Le taux de chômage d’une ville passe de 8 % à 10 %. Le journal titre « +2 % ». Un prof de maths, lui, grince des dents. Pourquoi ?"
+     },
+     {
+      "t": "p",
+      "c": "Deux façons très différentes de comparer des pourcentages, et un piège classique du bac."
+     },
+     {
+      "t": "list",
+      "c": [
+       "Passer de **8 % à 10 %**, c’est **+2 points de pourcentage** (10 − 8).",
+       "Mais en **évolution**, c’est +2/8 × 100 = **+25 %** (le taux a augmenté d’un quart)."
+      ]
+     },
+     {
+      "t": "warning",
+      "h": "Le piège",
+      "c": "Un taux de chômage qui passe de 8 % à 10 % a augmenté de **2 points**, pas de « 2 % ». Toujours préciser « points » ou « % d’évolution »."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Différence de deux pourcentages = **points**. Évolution relative entre eux = **taux d’évolution** (÷ valeur de départ)."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un journal écrit : « Le taux de chômage passe de 8 % à 10 % : il a augmenté de 2 %. »",
+      "a": "Il a augmenté de 2 points de pourcentage, soit +25 % en évolution relative.",
+      "explain": "On confond la différence de deux taux (points) avec leur évolution relative (÷ 8)."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Exercices variés — hausse puis baisse, taux moyen, indice",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "⚡",
+      "h": "Défi lancé",
+      "c": "Trois mini-défis express : une hausse puis une baisse, une population qui grandit, un indice qui grimpe. Prêt à utiliser le même réflexe pour les trois ?"
+     },
+     {
+      "t": "example",
+      "h": "Évolutions successives",
+      "c": "Un prix augmente de 20 % puis baisse de 20 %. CM = 1,20 × 0,80 = 0,96 → **− 4 %** au total (pas 0 %)."
+     },
+     {
+      "t": "example",
+      "h": "Taux moyen",
+      "c": "Une population croît de 21 % en 3 ans. CM moyen = 1,21^(1/3) ≈ 1,0656 → **+ 6,56 % par an**."
+     },
+     {
+      "t": "example",
+      "h": "Indice base 100",
+      "c": "Base 2020 (indice 100), un chiffre d’affaires vaut 128 en 2024 : il a augmenté de **28 %** depuis 2020."
+     },
+     {
+      "t": "tip",
+      "h": "Réflexe",
+      "c": "Traduire chaque évolution en **coefficient** (1 + t), multiplier pour l’effet global, racine n-ième pour le taux moyen."
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe en hausse ou baisse selon le coefficient multiplicateur : 1,08 ; 0,95 ; 1,30 ; 0,50.",
+      "a": "Hausse : 1,08 et 1,30. Baisse : 0,95 et 0,50.",
+      "explain": "CM > 1 : hausse ; CM entre 0 et 1 : baisse."
+     }
+    ]
+   }
+  ]
+ },
+ "math-c2": {
+  "intro": "Une **suite** est une liste de nombres qui se suivent selon une règle. En STMG, elles modélisent des évolutions : un capital qui grossit, une machine qui perd de la valeur. Deux modèles à distinguer absolument : **arithmétique** (on ajoute) et **géométrique** (on multiplie).",
+  "sections": [
+   {
+    "h": "⚖️ Arithmétique ou géométrique : raison, formule et croissance",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "💰",
+      "h": "Question qui pique",
+      "c": "Deux amis économisent. Zoé met 20 € de côté chaque mois. Hugo voit son livret grossir de 5 % chaque mois. Qui sera le plus riche dans longtemps, et pourquoi ?"
+     },
+     {
+      "t": "p",
+      "c": "Les deux types de suites se comparent sur trois points. D’abord, pour **passer d’un terme à l’autre**, on **ajoute la raison r** dans une suite arithmétique, alors qu’on **multiplie par la raison q** dans une suite géométrique."
+     },
+     {
+      "t": "p",
+      "c": "Ensuite, la **formule explicite** donne directement le terme de rang n sans calculer tous les précédents : **uₙ = u₀ + n × r** (arithmétique) et **uₙ = u₀ × qⁿ** (géométrique)."
+     },
+     {
+      "t": "p",
+      "c": "Enfin, la **croissance** est **linéaire** dans le premier cas (points alignés) et **exponentielle** dans le second : pour q > 1, l’écart entre deux termes consécutifs grandit de plus en plus vite."
+     },
+     {
+      "t": "tip",
+      "h": "Mémo",
+      "c": "Arithmétique : on **ajoute** (escalier régulier). Géométrique : on **multiplie** (toboggan qui accélère)."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Suite arithmétique",
+        "On ajoute la raison r ; uₙ = u₀ + n × r ; croissance linéaire"
+       ],
+       [
+        "Suite géométrique",
+        "On multiplie par la raison q ; uₙ = u₀ × qⁿ ; croissance exponentielle"
+       ],
+       [
+        "Formule explicite",
+        "Formule qui donne uₙ directement en fonction de n"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Une suite passe de 3 à 6 puis 12 puis 24. De quel type est-elle ?\nA) Géométrique de raison 2\nB) Arithmétique de raison 3\nC) Ni l’un ni l’autre",
+      "a": "A) Géométrique de raison 2 : on multiplie toujours par 2.",
+      "explain": "6 ÷ 3 = 12 ÷ 6 = 24 ÷ 12 = 2 : le rapport est constant, donc la suite est géométrique."
+     }
+    ]
+   },
+   {
+    "h": "📉 Pourcentage constant et suite géométrique : la raison q",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🛵",
+      "h": "Chiffre fictif",
+      "c": "Ton scooter coûte 20 000 € neuf et perd 8 % de sa valeur chaque année. Combien vaut-il après 3 ans ?"
+     },
+     {
+      "t": "p",
+      "c": "Une évolution en **pourcentage constant** donne une suite **géométrique** : la raison est le coefficient multiplicateur."
+     },
+     {
+      "t": "example",
+      "h": "Une machine qui se déprécie",
+      "c": "Une machine de 20 000 € perd 8 % par an.\n→ Suite géométrique de raison q = 1 − 0,08 = **0,92**, avec u₀ = 20 000.\nuₙ = 20 000 × 0,92ⁿ.\nAu bout de 3 ans : u₃ = 20 000 × 0,92³ ≈ **15 574 €**."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Une valeur de 1 000 € perd 10 % par an. Donne la raison q et la valeur après 2 ans.",
+      "a": "q = 0,90 ; u₂ = 1 000 × 0,9² = 810 €.",
+      "explain": "Baisse de 10 % : q = 1 − 0,10 = 0,90, puis u₂ = u₀ × q²."
+     }
+    ]
+   },
+   {
+    "h": "🥊 Exemple : comparaison de deux effectifs et premier dépassement",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏁",
+      "h": "Défi lancé",
+      "c": "Une asso compte 500 membres. Scénario A : +40 membres par an. Scénario B : +6 % par an. À 5 ans, A mène. Mais B peut-il finir par le rattraper ?"
+     },
+     {
+      "t": "example",
+      "h": "Énoncé",
+      "c": "Une association compte 500 membres en 2024.\nScénario A : elle gagne 40 membres chaque année.\nScénario B : elle progresse de 6 % chaque année.\nCombien de membres dans 5 ans dans chaque scénario ?"
+     },
+     {
+      "t": "p",
+      "c": "**Résolution :**"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Scénario A — suite arithmétique** de premier terme u₀ = 500 et de raison r = 40 : uₙ = 500 + 40n. Pour n = 5 : u₅ = 500 + 40 × 5 = **700 membres**.",
+       "**Scénario B — suite géométrique** de raison q = 1,06 : uₙ = 500 × 1,06ⁿ. Pour n = 5 : u₅ = 500 × 1,06⁵ = 500 × 1,3382 ≈ **669 membres**.",
+       "Après 5 ans A (700) dépasse B (669), mais la suite **géométrique**, de premier terme positif et de raison supérieure à 1, finit par dépasser l’arithmétique : B₁₀ ≈ 895 < A₁₀ = 900 ; B₁₁ ≈ 949 > A₁₁ = 940, donc dès n = 11."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Repère",
+      "c": "Hausse de p % ⇒ q = 1 + p/100 ; baisse de p % ⇒ q = 1 − p/100. « On ajoute » = arithmétique ; « on multiplie / en % » = géométrique."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Dans ce scénario, la suite géométrique (+6 % par an) dépasse la suite arithmétique (+40 membres par an) dès la 11ᵉ année.",
+      "a": "Vrai : à n = 11, B ≈ 949 contre A = 940.",
+      "explain": "À n = 10 on avait encore B ≈ 895 < A = 900."
+     }
+    ]
+   },
+   {
+    "h": "🔢 Les suites arithmétiques et géométriques : rang et récurrence",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📱",
+      "h": "Mini-histoire",
+      "c": "Un jeu mobile te donne 50 pièces par jour. Un autre double ta cagnotte chaque jour. Au début, le premier gagne. Pour comprendre pourquoi ça change, il faut parler de rang et de récurrence."
+     },
+     {
+      "t": "p",
+      "c": "Une **suite** (uₙ) est une liste ordonnée de nombres, où chaque terme porte un **rang** n. On la définit souvent par **récurrence** : on donne le premier terme et une règle pour passer d’un terme au suivant."
+     },
+     {
+      "t": "p",
+      "c": "Dans une **suite arithmétique**, on **ajoute** toujours le même nombre, la **raison r** : **uₙ₊₁ = uₙ + r**. C’est une évolution **constante en valeur**, comme une épargne qui augmente de 50 € chaque mois."
+     },
+     {
+      "t": "p",
+      "c": "Dans une **suite géométrique**, on **multiplie** toujours par le même nombre, la **raison q** : **uₙ₊₁ = uₙ × q**. C’est une évolution **en pourcentage constant** : un loyer qui augmente de 3 % par an se multiplie chaque année par q = 1,03."
+     },
+     {
+      "t": "list",
+      "c": [
+       "Arithmétique : on **ajoute toujours le même nombre** → croissance **linéaire**.",
+       "Géométrique : on **multiplie toujours par le même nombre** → croissance **exponentielle**."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Reconnaître",
+      "c": "Différence constante entre termes consécutifs → **arithmétique** (raison r = uₙ₊₁ − uₙ). Rapport constant → **géométrique** (raison q = uₙ₊₁ ÷ uₙ)."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Suite",
+        "Liste ordonnée de nombres (uₙ), chaque terme portant un rang n"
+       ],
+       [
+        "Récurrence",
+        "Définition d’une suite par son premier terme et la règle qui donne le terme suivant"
+       ],
+       [
+        "Suite arithmétique",
+        "On ajoute la raison r : uₙ₊₁ = uₙ + r (évolution constante, + 50 €/mois)"
+       ],
+       [
+        "Suite géométrique",
+        "On multiplie par la raison q : uₙ₊₁ = uₙ × q (évolution en %, + 3 %/an → q = 1,03)"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe en arithmétique ou géométrique : un loyer qui monte de 3 % par an ; une épargne qui gagne 50 € par mois ; un prix qui baisse de 8 % par an ; un abonnement qui coûte 2 € de plus chaque mois.",
+      "a": "Arithmétique : épargne +50 € par mois, abonnement +2 € par mois. Géométrique : loyer +3 % par an, prix −8 % par an.",
+      "explain": "Montant fixe ajouté : arithmétique. Pourcentage constant : géométrique."
+     }
+    ]
+   },
+   {
+    "h": "📐 Le terme général uₙ et la somme des termes",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "⚡",
+      "h": "Défi lancé",
+      "c": "Tu veux connaître le 100ᵉ terme d’une suite sans écrire les 99 premiers. Impossible ? Pas du tout : il existe une formule express."
+     },
+     {
+      "t": "p",
+      "c": "Le **terme général** donne uₙ **directement** en fonction de n, sans calculer tous les termes précédents. Indispensable pour un terme lointain (le 20ᵉ, le 100ᵉ)."
+     },
+     {
+      "t": "formula",
+      "c": "Arithmétique : uₙ = u₀ + n × r   (ou uₙ = u₁ + (n−1) × r)"
+     },
+     {
+      "t": "formula",
+      "c": "Géométrique : uₙ = u₀ × qⁿ   (ou uₙ = u₁ × q^(n−1))"
+     },
+     {
+      "t": "example",
+      "h": "Calcul d’un terme",
+      "c": "Arithmétique u₀ = 200, r = 15 : u₁₀ = 200 + 10 × 15 = **350**.\nGéométrique u₀ = 200, q = 1,05 : u₁₀ = 200 × 1,05¹⁰ ≈ **325,8**."
+     },
+     {
+      "t": "p",
+      "c": "On sait aussi **additionner** les premiers termes. Pour une suite géométrique de raison q ≠ 1, la somme des n premiers termes sert à calculer un capital ou un cumul de ventes."
+     },
+     {
+      "t": "formula",
+      "c": "Somme géométrique : S = u₀ × (1 − q^(n)) ÷ (1 − q)   (n = nombre de termes)"
+     },
+     {
+      "t": "warning",
+      "h": "Attention aux rangs",
+      "c": "Bien repérer si la suite commence à u₀ ou u₁ : cela change le « n » dans la formule. Compter le **nombre de pas** depuis le premier terme."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève calcule le terme u₁₀ d’une suite géométrique avec u₀ = 200 et q = 1,05 ainsi : u₁₀ = 200 + 10 × 1,05.",
+      "a": "On multiplie au lieu d’ajouter : u₁₀ = 200 × 1,05¹⁰ ≈ 325,8.",
+      "explain": "uₙ = u₀ + n × r est la formule arithmétique ; en géométrique on utilise uₙ = u₀ × qⁿ."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Exercice type guidé — deux placements : suite arithmétique ou géométrique",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏦",
+      "h": "Mini-histoire",
+      "c": "Deux banques te proposent chacune 1 000 €. La première ajoute 60 € par an. La seconde ajoute 5 % par an. Laquelle choisir pour 10 ans, et pour 30 ans ?"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Deux placements de 1 000 €. Placement A : + 60 € chaque année. Placement B : + 5 % chaque année. Comparer leur valeur au bout de 10 ans."
+     },
+     {
+      "t": "example",
+      "h": "Étape 1 — Modéliser",
+      "c": "Placement A → suite **arithmétique** : a₀ = 1000, r = 60.\nPlacement B → suite **géométrique** : b₀ = 1000, q = 1,05."
+     },
+     {
+      "t": "example",
+      "h": "Étape 2 — Valeur à 10 ans",
+      "c": "A : a₁₀ = 1000 + 10 × 60 = **1 600 €**.\nB : b₁₀ = 1000 × 1,05¹⁰ ≈ 1000 × 1,6289 ≈ **1 628,90 €**."
+     },
+     {
+      "t": "p",
+      "c": "**Étape 3 — Interprétation.** Sur 10 ans, B dépasse légèrement A. Surtout, l’écart **s’accentue avec le temps** : la croissance en pourcentage finit par l’emporter. C’est la puissance des **intérêts composés**."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode « suites »",
+      "c": "1) **Identifier** le type. 2) Écrire la **récurrence** et le **terme général**. 3) Calculer avec la formule. 4) **Comparer/interpréter** en une phrase."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Pourquoi le placement à +5 % par an finit-il toujours par dépasser le placement à +60 € par an ?",
+      "a": "Parce que la croissance en pourcentage (géométrique) s’accélère, alors que l’ajout d’un montant fixe (arithmétique) reste régulier.",
+      "explain": "C’est l’effet des intérêts composés : on touche des intérêts sur les intérêts."
+     }
+    ]
+   },
+   {
+    "h": "🔼 Sens de variation d’une suite : le rôle de la raison",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎮",
+      "h": "Dialogue",
+      "c": "— « Mon score monte ou il descend ? »\n— « Regarde le signe de la raison ! »\n— « Et si on multiplie ? »\n— « Compare q à 1. »"
+     },
+     {
+      "t": "p",
+      "c": "Une suite est **croissante** si uₙ₊₁ ≥ uₙ pour tout n, **décroissante** si uₙ₊₁ ≤ uₙ pour tout n. Les inégalités strictes définissent la stricte monotonie."
+     },
+     {
+      "t": "p",
+      "c": "Pour une **suite arithmétique** de raison **r**, tout se lit sur le signe : si **r > 0**, la suite est **croissante** ; si **r < 0**, elle est **décroissante** ; si r = 0, elle est constante."
+     },
+     {
+      "t": "p",
+      "c": "Pour une **suite géométrique** avec u₀ > 0, on compare q à 1 : si **q > 1**, elle est croissante ; si **0 < q < 1**, elle est décroissante ; si q = 1, elle est constante."
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "uₙ₊₁ = uₙ + 15 (r = 15 > 0) → **croissante**. vₙ₊₁ = 0,9·vₙ (q = 0,9 < 1, v₀ > 0) → **décroissante**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Arithmétique : le signe de r décide. Géométrique (termes positifs) : q > 1 croît, q < 1 décroît."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Suite croissante",
+        "Chaque terme est supérieur ou égal au précédent : uₙ₊₁ ≥ uₙ ; strictement croissante si >"
+       ],
+       [
+        "Suite arithmétique : sens de variation",
+        "Croissante si r > 0, décroissante si r < 0"
+       ],
+       [
+        "Suite géométrique (u₀ > 0) : sens de variation",
+        "Croissante si q > 1, décroissante si 0 < q < 1"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Une suite géométrique a u₀ = 50 et q = 0,8. Quelle est sa variation ?\nA) Croissante\nB) Constante\nC) Décroissante",
+      "a": "C) Décroissante : 0 < q < 1 et u₀ > 0.",
+      "explain": "Chaque terme vaut 80 % du précédent : 50, 40, 32, …"
+     }
+    ]
+   },
+   {
+    "h": "💶 Intérêts simples et intérêts composés",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏦",
+      "h": "Question qui pique",
+      "c": "Tu places 1 000 €. Banque Simple te verse 40 € chaque année. Banque Composée te verse 4 % chaque année, mais sur le capital qui grossit. Laquelle gagne après 10 ans ?"
+     },
+     {
+      "t": "p",
+      "c": "Un placement modélise une suite. Avec des **intérêts simples**, on ajoute chaque année le même montant : suite **arithmétique**. Avec des **intérêts composés**, on multiplie chaque année par le même coefficient : suite **géométrique**."
+     },
+     {
+      "t": "example",
+      "h": "Comparaison sur 1 000 €",
+      "c": "Simples à 40 €/an (arithmétique) : après 10 ans → 1 000 + 400 = **1 400 €**.\nComposés à 4 %/an (géométrique) : 1 000 × 1,04¹⁰ ≈ **1 480 €**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Intérêts **simples** → suite **arithmétique** ; intérêts **composés** (en %) → suite **géométrique**. Sur la durée, le composé l’emporte."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Avec des intérêts composés, la valeur d’un placement suit une suite géométrique.",
+      "a": "Vrai : on multiplie chaque année par le même coefficient.",
+      "explain": "Les intérêts simples, eux, forment une suite arithmétique."
+     }
+    ]
+   },
+   {
+    "h": "➕ Somme des termes d’une suite géométrique",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🛒",
+      "h": "Chiffre fictif",
+      "c": "Un commerçant vend 200 articles le premier mois, puis 5 % de plus chaque mois. Combien en vend-il au total sur 10 mois ?"
+     },
+     {
+      "t": "p",
+      "c": "On sait additionner les premiers termes d’une suite, utile pour un cumul (ventes, remboursements)."
+     },
+     {
+      "t": "formula",
+      "c": "Géométrique (q ≠ 1) : S = u₀ × (1 − qⁿ) ÷ (1 − q)   (n = nombre de termes)"
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "u₀ = 200, q = 1,05, 10 termes : S = 200 × (1 − 1,05¹⁰) ÷ (1 − 1,05) ≈ 200 × 12,578 = **2 515,6**."
+     },
+     {
+      "t": "tip",
+      "h": "Astuce",
+      "c": "Bien compter le **nombre de termes** n (du premier au dernier inclus)."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Avec u₀ = 100 et q = 2, calcule la somme des 4 premiers termes.",
+      "a": "S = 100 × (1 − 2⁴) ÷ (1 − 2) = 100 × 15 = 1 500.",
+      "explain": "On vérifie : 100 + 200 + 400 + 800 = 1 500."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Suites au tableur : formule de récurrence recopiée",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📊",
+      "h": "Défi lancé",
+      "c": "Tu dois afficher 30 termes d’une suite sans les taper un à un. Le tableur le fait pour toi, avec une seule formule bien placée."
+     },
+     {
+      "t": "p",
+      "c": "Au tableur, une suite définie par récurrence se construit avec une **formule recopiée vers le bas**. Si u₀ est en B2, on écrit en B3 la relation de récurrence en fonction de B2."
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "Suite uₙ₊₁ = 1,05·uₙ + 10 : en B3, saisir « =1,05*B2+10 » puis recopier vers le bas. La colonne affiche tous les termes."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Le tableur calcule les termes de proche en proche : une **formule** en fonction de la cellule du dessus, puis **recopie**."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Si u₀ est en B2 et uₙ₊₁ = 2·uₙ, quelle formule saisir en B3 ?\nA) =2*B3\nB) =2*B2\nC) =2+B2",
+      "a": "B) =2*B2 : on part de la cellule du dessus.",
+      "explain": "Il suffit ensuite de recopier la formule vers le bas."
+     }
+    ]
+   }
+  ]
+ },
+ "math-c3": {
+  "intro": "La **dérivation** est l’outil pour étudier comment une fonction **varie** et trouver ses **maximums** (bénéfice maximal) ou **minimums** (coût minimal). C’est l’application phare des maths en gestion : l’**optimisation**.",
+  "sections": [
+   {
+    "h": "📈 Nombre dérivé et tangente",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🚴",
+      "h": "Mini-histoire",
+      "c": "Tu fais du vélo sur une route vallonnée. À un endroit précis, ton compteur de pente affiche « +8 % ». Comment les maths mesurent-elles la pente d’une courbe en un seul point ?"
+     },
+     {
+      "t": "p",
+      "c": "Le **nombre dérivé** de f en a, noté **f ′(a)**, est le **coefficient directeur de la tangente** à la courbe au point d’abscisse a. Autrement dit, il mesure la **pente** de la courbe à cet endroit : la vitesse à laquelle f varie autour de a."
+     },
+     {
+      "t": "p",
+      "c": "La **tangente** est la droite qui « épouse » la courbe au point A(a ; f(a)). Son équation se déduit directement du nombre dérivé."
+     },
+     {
+      "t": "formula",
+      "c": "Équation de la tangente en a : y = f ′(a) × (x − a) + f(a)"
+     },
+     {
+      "t": "p",
+      "c": "La **fonction dérivée** f ′ associe à chaque x le nombre dérivé en ce point. On la calcule avec des **formules** à connaître par cœur."
+     },
+     {
+      "t": "list",
+      "c": [
+       "La dérivée d’une **constante** k est **0** ; celle de **x** est **1** ; celle de **x²** est **2x**.",
+       "Plus généralement, celle de **xⁿ** est **n·xⁿ⁻¹** : l’exposant descend devant x et on retire 1 à l’exposant (x³ donne 3x²).",
+       "La dérivée de **1/x** est **−1/x²**, pour x différent de 0.",
+       "La dérivée de **k·u(x)** est **k·u′(x)** : par exemple, celle de 3x² est 3 × 2x = 6x, et celle de −5x est −5."
+      ]
+     },
+     {
+      "t": "example",
+      "h": "Calcul",
+      "c": "f(x) = 3x² − 5x + 2. Alors f ′(x) = 6x − 5.\nEn a = 1 : f ′(1) = 1 (pente) et f(1) = 0 → tangente : y = 1(x − 1) + 0 = **x − 1**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Fonction dérivée f ′",
+        "Fonction qui associe à chaque x le nombre dérivé f ′(x), pente de la tangente en ce point"
+       ],
+       [
+        "Dérivée d’une constante k",
+        "0"
+       ],
+       [
+        "Dérivée de x",
+        "1"
+       ],
+       [
+        "Dérivée de 1/x",
+        "−1/x²"
+       ],
+       [
+        "Dérivée de k·u",
+        "k·u′"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quelle est la dérivée de f(x) = 3x² ?\nA) 3x\nB) 6x\nC) 6x²",
+      "a": "B) 6x : on fait descendre l’exposant, 3 × 2x = 6x.",
+      "explain": "La dérivée de x² est 2x, et le facteur 3 reste devant."
+     }
+    ]
+   },
+   {
+    "h": "📉 Du signe de la dérivée aux variations",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🛒",
+      "h": "Chiffre fictif",
+      "c": "Une boutique en ligne modélise son bénéfice par f(x) = −x² + 4x, où x est la quantité vendue. Comment trouver la quantité qui rapporte le plus, sans tester toutes les valeurs ?"
+     },
+     {
+      "t": "p",
+      "c": "La dérivée est l’outil roi pour étudier les **variations** d’une fonction. La règle fondamentale relie le **signe de f ′** au sens de variation de f."
+     },
+     {
+      "t": "list",
+      "c": [
+       "Si **f ′(x) > 0** sur un intervalle → f est **croissante**.",
+       "Si **f ′(x) < 0** sur un intervalle → f est **décroissante**.",
+       "Si **f ′(x) = 0** et que f ′ **change de signe** → f admet un **extremum** (maximum ou minimum)."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Étudier les variations, c’est donc : calculer f ′, **étudier son signe**, puis dresser le **tableau de variations**. Un maximum correspond à un passage de f ′ du **positif au négatif** ; un minimum, du **négatif au positif**."
+     },
+     {
+      "t": "example",
+      "h": "Optimisation",
+      "c": "f(x) = −x² + 4x. f ′(x) = −2x + 4. f ′(x) = 0 pour x = 2. f ′ passe de + à − → **maximum** en x = 2.\nBénéfice maximal : f(2) = −4 + 8 = **4**."
+     },
+     {
+      "t": "tip",
+      "h": "Lien avec la gestion",
+      "c": "Pour **optimiser**, on cherche la quantité qui **maximise le bénéfice** ou **minimise le coût**, là où f ′ s’annule en changeant de signe."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Si f ′ passe du positif au négatif en x = 2, alors f admet un maximum en x = 2.",
+      "a": "Vrai : f croît puis décroît, donc 2 est un maximum.",
+      "explain": "Un minimum correspondrait à un passage du négatif au positif."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Exemple traité — dérivée, variations et coût minimal",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏭",
+      "h": "Défi lancé",
+      "c": "Une usine veut produire au coût le plus bas. Son coût (en milliers d’€) vaut f(x) = x² − 6x + 10 pour x tonnes. À toi de trouver la quantité idéale !"
+     },
+     {
+      "t": "example",
+      "h": "Énoncé",
+      "c": "f(x) = x² − 6x + 10 (coût en milliers d’€, x en tonnes).\n1) Calcule f’(x).\n2) Étudie les variations et trouve la quantité qui minimise le coût.\n3) Donne l’équation de la tangente en x = 1."
+     },
+     {
+      "t": "p",
+      "c": "**Résolution :**"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Dérivée** : f’(x) = 2x − 6.",
+       "**Variations** : f’(x) = 0 ⇔ x = 3. f’ < 0 avant 3, f’ > 0 après → **minimum en x = 3**, avec f(3) = 9 − 18 + 10 = **1** (soit 1 000 €).",
+       "**Tangente en x = 1** : f’(1) = 2 − 6 = −4 et f(1) = 1 − 6 + 10 = 5, donc y = −4(x − 1) + 5 = **−4x + 9**."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Optimiser",
+      "c": "Minimiser un coût / maximiser un bénéfice = chercher où f’ s’annule EN CHANGEANT DE SIGNE."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Soit g(x) = x² − 4x + 7. Calcule g′(x), puis le minimum de g.",
+      "a": "g′(x) = 2x − 4, nulle en x = 2 ; g(2) = 4 − 8 + 7 = 3, c’est le minimum.",
+      "explain": "g′ passe du négatif au positif en x = 2 : c’est un minimum."
+     }
+    ]
+   },
+   {
+    "h": "📐 Les formules de dérivation : fonctions usuelles, somme, produit par un réel",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧩",
+      "h": "Défi lancé",
+      "c": "Cinq formules à retenir et tu dérives presque tout ce que tu croises en STMG. Mais attention : une seule petite erreur de signe, et c’est le drame."
+     },
+     {
+      "t": "p",
+      "c": "La **dérivée** f ′ se calcule avec des formules à connaître et des règles d’opérations."
+     },
+     {
+      "t": "p",
+      "c": "Une **constante** k a pour dérivée **0**, **x** a pour dérivée **1**, **x²** a pour dérivée **2x**. Pour une puissance : la dérivée de **xⁿ** est **n·xⁿ⁻¹** (x³ → 3x², x⁴ → 4x³). Enfin la dérivée de **1/x** est **−1/x²** (pour x ≠ 0)."
+     },
+     {
+      "t": "p",
+      "c": "On dérive une somme terme à terme, et un nombre placé devant une fonction reste devant sa dérivée. Avec f(x) = 4x³ − 2x + 7, on obtient f ′(x) = 4 × 3x² − 2 × 1 + 0 = 12x² − 2."
+     },
+     {
+      "t": "formula",
+      "c": "(u + v)′ = u′ + v′     (k·u)′ = k·u′"
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "f(x) = 3x² − 5x + 2 → f ′(x) = 3·(2x) − 5·(1) + 0 = **6x − 5**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "On dérive **terme par terme** : chaque puissance descend son exposant (n·xⁿ⁻¹), une constante disparaît."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Dérivée d’une constante k",
+        "0"
+       ],
+       [
+        "Dérivée de x",
+        "1"
+       ],
+       [
+        "Dérivée de 1/x",
+        "−1/x²"
+       ],
+       [
+        "Dérivée d’une somme",
+        "(u + v)′ = u′ + v′"
+       ],
+       [
+        "Dérivée d’un produit par un réel",
+        "(k·u)′ = k·u′"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve la formule fausse :\nA) (x²)′ = 2x\nB) (k)′ = 0\nC) (1/x)′ = 1/x²\nD) (x³)′ = 3x²",
+      "a": "C) (1/x)′ = 1/x² est fausse : la dérivée de 1/x est −1/x².",
+      "explain": "Il ne faut pas oublier le signe moins devant 1/x²."
+     }
+    ]
+   },
+   {
+    "h": "📊 Étudier une fonction : la méthode complète",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎤",
+      "h": "Mini-histoire",
+      "c": "Camille doit présenter l’étude d’une fonction à l’oral. Elle panique : par où commencer ? Bonne nouvelle : la recette est toujours la même, en quatre étapes."
+     },
+     {
+      "t": "p",
+      "c": "Étudier les variations d’une fonction suit toujours les mêmes étapes."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**1.** Calculer f ′(x).",
+       "**2.** Résoudre f ′(x) = 0 et étudier son **signe**.",
+       "**3.** En déduire le **tableau de variations** (f croît quand f ′ > 0).",
+       "**4.** Repérer les **extremums** (là où f ′ change de signe)."
+      ]
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "f(x) = −x² + 4x → f ′(x) = −2x + 4, nulle en x = 2. f ′ passe de + à − → **maximum** en x = 2, f(2) = 4."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Le **signe de f ′** donne les variations : + = croissante, − = décroissante. Un **maximum** = passage de + à −."
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe selon que f est croissante ou décroissante sur l’intervalle étudié : f′ = 5 ; f′ = −2 ; f′ = 0,3 ; f′ = −7.",
+      "a": "Croissante : f′ = 5 et f′ = 0,3. Décroissante : f′ = −2 et f′ = −7.",
+      "explain": "Si f′ > 0, f est croissante ; si f′ < 0, elle est décroissante."
+     }
+    ]
+   },
+   {
+    "h": "🏭 Optimiser un bénéfice ou un coût",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🍰",
+      "h": "Question qui pique",
+      "c": "Combien de gâteaux vendre pour gagner le plus ? Trop peu, tu rates des ventes ; trop, les coûts explosent. La dérivée trouve le meilleur compromis."
+     },
+     {
+      "t": "p",
+      "c": "La dérivée sert à **optimiser** en gestion : trouver la quantité qui **maximise le bénéfice** ou **minimise le coût**."
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "Bénéfice B(x) = −2x² + 40x − 120. B ′(x) = −4x + 40 = 0 → x = 10. Maximum en x = 10 : B(10) = −200 + 400 − 120 = **80**."
+     },
+     {
+      "t": "tip",
+      "h": "Réflexe",
+      "c": "Chercher où **f ′ s’annule en changeant de signe**. Toujours donner la valeur optimale **et** le résultat correspondant."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « B(x) = −2x² + 40x − 120, donc B′(x) = −2x + 40, et le maximum est en x = 20. »",
+      "a": "B′(x) = −4x + 40 (la dérivée de −2x² est −4x), nulle en x = 10.",
+      "explain": "On dérive −2x² en −2 × 2x = −4x ; on obtient alors le maximum en x = 10."
+     }
+    ]
+   },
+   {
+    "h": "👀 Lecture graphique : signe de f ′ et tangentes",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔎",
+      "h": "Dialogue",
+      "c": "— « Sur cette courbe, f′ est positive ou négative ? »\n— « Je la regarde monter. »\n— « Et au sommet ? »\n— « La tangente est plate : f′ = 0. »"
+     },
+     {
+      "t": "p",
+      "c": "Sans calcul, une courbe se lit : là où elle **monte**, f ′ > 0 ; là où elle **descend**, f ′ < 0 ; à un **sommet** ou un **creux**, f ′ = 0."
+     },
+     {
+      "t": "p",
+      "c": "Le **nombre dérivé f ′(a)** est le **coefficient directeur de la tangente** au point d’abscisse a. Une tangente horizontale ⇒ f ′(a) = 0."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Tangente **montante** → f ′(a) > 0 ; **horizontale** → f ′(a) = 0 ; **descendante** → f ′(a) < 0."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "En un point où la tangente à la courbe est horizontale, que vaut le nombre dérivé ?\nA) 0\nB) 1\nC) −1",
+      "a": "A) 0 : une tangente horizontale a un coefficient directeur nul.",
+      "explain": "Le nombre dérivé est la pente de la tangente."
+     }
+    ]
+   }
+  ]
+ },
+ "math-c4": {
+  "intro": "Comment relier deux données, comme un budget de pub et un chiffre d’affaires ? Avec un **nuage de points** et une **droite d’ajustement**, tu peux modéliser, prévoir… et surtout garder l’esprit critique sur ce que ces prévisions valent.",
+  "sections": [
+   {
+    "h": "☁️ Nuage de points et ajustement affine",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📱",
+      "h": "Question qui pique",
+      "c": "Plus tu postes de vidéos, plus ton compte grossit… vraiment ? Pour vérifier, tu notes pour chaque mois le nombre de vidéos et le nombre d’abonnés gagnés. Comment résumer ces points par une seule droite ?"
+     },
+     {
+      "t": "p",
+      "c": "On étudie le **lien entre deux variables** (par exemple : le budget publicitaire et le chiffre d’affaires). Chaque couple (xᵢ ; yᵢ) donne un **point** ; l’ensemble forme un **nuage de points**."
+     },
+     {
+      "t": "p",
+      "c": "Si les points sont **approximativement alignés**, on les résume par une **droite d’ajustement** (ou droite de régression) d’équation **y = a x + b**, obtenue par la méthode des **moindres carrés** (à la calculatrice en STMG). Elle permet de **modéliser** la relation et de **prévoir**."
+     },
+     {
+      "t": "p",
+      "c": "Cette droite passe toujours par le **point moyen G** du nuage, de coordonnées les moyennes de x et de y."
+     },
+     {
+      "t": "formula",
+      "c": "Point moyen : G ( x̄ ; ȳ )   où x̄ et ȳ sont les moyennes"
+     },
+     {
+      "t": "tip",
+      "h": "Avec la calculatrice",
+      "c": "On saisit les données dans deux listes, puis on lance la **régression linéaire** (a x + b) : elle donne **a** (pente) et **b** (ordonnée à l’origine)."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Dans l’équation y = a x + b d’une droite d’ajustement, que représente a ?\nA) L’ordonnée à l’origine\nB) Le point moyen\nC) La pente de la droite",
+      "a": "C) La pente de la droite.",
+      "explain": "L’ordonnée à l’origine est b, et le point moyen G a pour coordonnées les moyennes de x et de y."
+     }
+    ]
+   },
+   {
+    "h": "🔮 Interpoler, extrapoler et interpréter",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎯",
+      "h": "Défi lancé",
+      "c": "Ta droite est tracée à partir de données entre 0 et 30 k€ de pub. Un ami te demande : « Et avec 1 000 k€ ? » Peux-tu lui répondre avec la même confiance ?"
+     },
+     {
+      "t": "p",
+      "c": "Une fois l’équation **y = a x + b** obtenue, on l’utilise pour **estimer** une valeur de y correspondant à une valeur de x. Deux situations."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Interpolation** : estimer une valeur **à l’intérieur** de la plage des données observées. Généralement **fiable**.",
+       "**Extrapolation** : estimer une valeur **au-delà** des données observées (prévoir le futur). **Plus risquée** : on suppose que la tendance se poursuit."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Le **coefficient a** est la variation de y quand x **augmente de 1**. Le **coefficient b** est la valeur de y quand x = 0. Toujours donner le **sens réel** de ces nombres dans le contexte."
+     },
+     {
+      "t": "example",
+      "h": "Prévision",
+      "c": "Ajustement CA = 2,5 x + 40 (x = budget pub en k€, CA en k€).\nPour x = 20 : CA ≈ 2,5 × 20 + 40 = **90 k€**.\nInterprétation de a = 2,5 : chaque 1 000 € de pub supplémentaire rapporte **2 500 €** de CA."
+     },
+     {
+      "t": "warning",
+      "h": "Piège",
+      "c": "L’ajustement n’est valable **que si les points sont bien alignés**. Extrapoler très loin (x = 1000 alors que les données vont jusqu’à 30) donne un résultat **peu fiable**."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Avec CA = 2,5 x + 40 (x et CA en k€), estime le CA pour x = 24. Est-ce une interpolation (données jusqu’à 30) ?",
+      "a": "CA ≈ 2,5 × 24 + 40 = 100 k€ ; oui, 24 est dans la plage observée.",
+      "explain": "24 est inférieur à 30 : on reste à l’intérieur des données."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Exercice type guidé — ajustement affine et prévision par extrapolation",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📺",
+      "h": "Chiffre fictif",
+      "c": "Un service de streaming compte x années après son lancement y milliers d’abonnés. La calculatrice donne y = 8x + 25. Que prévoir pour la 12ᵉ année ?"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** On relève le nombre d’abonnés y (en milliers) d’un service selon l’année de rang x. La calculatrice donne l’ajustement affine y = 8x + 25. Prévoir le nombre d’abonnés pour x = 12 et interpréter la pente."
+     },
+     {
+      "t": "example",
+      "h": "Étape 1 — Prévision",
+      "c": "Pour x = 12 : y = 8 × 12 + 25 = 96 + 25 = **121 milliers d’abonnés**."
+     },
+     {
+      "t": "example",
+      "h": "Étape 2 — Interprétation de a",
+      "c": "a = 8 : chaque année, le service gagne en moyenne **8 000 abonnés**."
+     },
+     {
+      "t": "p",
+      "c": "**Étape 3 — Regard critique.** La prévision suppose que la **tendance linéaire se poursuit**. Si x = 12 dépasse largement les données observées, c’est une **extrapolation** : prudence (saturation possible du marché)."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode « stats 2 variables »",
+      "c": "1) Tracer le nuage, vérifier l’**alignement**. 2) Obtenir **y = a x + b** à la calculatrice. 3) **Remplacer** x. 4) **Interpréter** a et b, et signaler si l’on **extrapole**."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Avec l’ajustement y = 8x + 25, la prévision pour x = 12 est de 121 milliers d’abonnés.",
+      "a": "Vrai : 8 × 12 + 25 = 121.",
+      "explain": "Mais c’est une extrapolation si les données observées s’arrêtent bien avant x = 12."
+     }
+    ]
+   },
+   {
+    "h": "📈 Le point moyen G et la droite des moindres carrés",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🖊️",
+      "h": "Mini-histoire",
+      "c": "Maya trace une droite au feutre à travers son nuage de points. Son prof glisse : « Elle doit passer par un point précis. » Lequel ?"
+     },
+     {
+      "t": "p",
+      "c": "Pour un nuage de points (xᵢ ; yᵢ), le **point moyen G** a pour coordonnées les moyennes : G(x̄ ; ȳ). La **droite d’ajustement** (moindres carrés) passe toujours par G."
+     },
+     {
+      "t": "formula",
+      "c": "Droite d’ajustement : y = a·x + b   (a et b donnés par la calculatrice)"
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "La droite d’ajustement modélise le lien entre x et y **si les points sont bien alignés**. Elle passe par le **point moyen G**."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève affirme : « La droite d’ajustement passe toujours par l’origine du repère. »",
+      "a": "Faux : elle passe toujours par le point moyen G(x̄ ; ȳ), pas forcément par l’origine.",
+      "explain": "L’ordonnée à l’origine b peut valoir n’importe quel nombre."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Régression linéaire à la calculatrice : obtenir a et b",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔢",
+      "h": "Défi lancé",
+      "c": "Ta calculatrice donne a et b en quelques secondes, à condition d’enchaîner les bonnes étapes."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**1.** Saisir les données dans deux listes (L1 = x, L2 = y).",
+       "**2.** Choisir la **régression linéaire** (ax + b).",
+       "**3.** Lire **a** (pente) et **b** (ordonnée à l’origine).",
+       "**4.** Écrire l’équation y = a·x + b."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Astuce",
+      "c": "Arrondir a et b selon l’énoncé (souvent 2 ou 3 décimales). Vérifier l’ordre de grandeur avec un point du nuage."
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus parmi les étapes :\nA) Saisir x dans L1 et y dans L2\nB) Choisir la régression linéaire\nC) Lire a et b\nD) Calculer la médiane de y",
+      "a": "D) Calculer la médiane de y : elle n’intervient pas ici.",
+      "explain": "On saisit, on choisit la régression, on lit a et b."
+     }
+    ]
+   },
+   {
+    "h": "⚠️ Corrélation n’est pas causalité",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🍦",
+      "h": "Question qui pique",
+      "c": "L’été, les ventes de glaces et les noyades grimpent en même temps. Faut-il interdire les glaces pour sauver des vies ?"
+     },
+     {
+      "t": "p",
+      "c": "Deux variables peuvent évoluer ensemble sans que l’une **cause** l’autre : c’est le piège de la **corrélation ≠ causalité**."
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "Les ventes de glaces et les noyades augmentent l’été **ensemble** : la vraie cause commune est la **chaleur**, pas un lien direct."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Un ajustement montre une **relation statistique**, pas forcément une **cause**. Rester prudent dans l’interprétation."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Deux variables qui évoluent ensemble n’ont pas forcément de lien de cause à effet.",
+      "a": "Vrai : la corrélation n’est pas une causalité.",
+      "explain": "Une cause commune (comme la chaleur) peut expliquer les deux évolutions."
+     }
+    ]
+   }
+  ]
+ },
+ "math-c5": {
+  "intro": "Une information change parfois tes chances : c’est la **probabilité conditionnelle**. Avec l’**arbre pondéré**, la formule des **probabilités totales** et l’**indépendance**, tu vas apprendre à raisonner sur le hasard avec méthode.",
+  "sections": [
+   {
+    "h": "🌳 Probabilité conditionnelle et arbre pondéré",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🌳",
+      "h": "Mini-histoire",
+      "c": "Dans ta classe, 60 % des élèves font de l’anglais renforcé, et 30 % d’entre eux font aussi de l’espagnol. Tu croises un élève au hasard : quelle chance qu’il fasse les deux ? Un arbre va te l’apprendre."
+     },
+     {
+      "t": "p",
+      "c": "Une **probabilité conditionnelle** est la probabilité d’un événement B **sachant que** l’événement A est déjà réalisé. On la note **P_A(B)** (« probabilité de B sachant A »). Une information (A) modifie la probabilité de B."
+     },
+     {
+      "t": "formula",
+      "c": "P_A(B) = P(A ∩ B) ÷ P(A)   (avec P(A) ≠ 0)"
+     },
+     {
+      "t": "p",
+      "c": "L’**arbre pondéré** est l’outil visuel central. Chaque **branche** porte une probabilité. Deux **règles d’or** permettent de tout calculer."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Règle du produit** : la probabilité d’un **chemin** (une suite de branches) est le **produit** des probabilités rencontrées le long du chemin.",
+       "**Règle de la somme** : la somme des probabilités des branches **partant d’un même nœud** vaut **1**."
+      ]
+     },
+     {
+      "t": "example",
+      "h": "Lecture d’un chemin",
+      "c": "Si P(A) = 0,6 et P_A(B) = 0,3, alors P(A ∩ B) = P(A) × P_A(B) = 0,6 × 0,3 = **0,18** (produit le long du chemin A puis B)."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Sur un arbre : on **multiplie** le long d’un chemin, on **additionne** les chemins qui mènent au même résultat. Les branches issues d’un nœud somment à 1."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Si P(A) = 0,6 et P_A(B) = 0,3, que vaut P(A ∩ B) ?\nA) 0,18\nB) 0,9\nC) 0,3",
+      "a": "A) 0,18 : on multiplie 0,6 × 0,3 le long du chemin.",
+      "explain": "Additionner 0,6 et 0,3 donnerait 0,9 : c’est l’erreur classique."
+     }
+    ]
+   },
+   {
+    "h": "☔ Indépendance : P(A ∩ B) = P(A) × P(B)",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🌧️",
+      "h": "Question qui pique",
+      "c": "Qu’il pleuve ou non, ta chance d’avoir cours reste la même. Comment le prouver en maths ?"
+     },
+     {
+      "t": "p",
+      "c": "Deux événements A et B sont **indépendants** si la réalisation de l’un **ne change pas** la probabilité de l’autre :"
+     },
+     {
+      "t": "formula",
+      "c": "A et B indépendants ⇔ P(A ∩ B) = P(A) × P(B)"
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "P(A) = 0,5 ; P(B) = 0,4 ; P(A ∩ B) = 0,2. A et B sont indépendants.",
+      "a": "Vrai : 0,5 × 0,4 = 0,2.",
+      "explain": "Le produit égale P(A ∩ B)."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Exercice type guidé — arbre pondéré et probabilité conditionnelle",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎓",
+      "h": "Chiffre fictif",
+      "c": "Dans une classe, 70 % des élèves sont en spé Gestion. 80 % d’entre eux vont au tutorat, contre 40 % des autres. Un élève tutoré frappe à ta porte : a-t-il des chances d’être en Gestion ?"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** 70 % des élèves sont en spé Gestion (G), les autres en autre spé (Ḡ). 80 % des « G » sont inscrits à un tutorat, contre 40 % des « Ḡ ». On choisit un élève au hasard."
+     },
+     {
+      "t": "example",
+      "h": "Étape 1 — Arbre",
+      "c": "P(G) = 0,7 ; P_G(T) = 0,8 ; P(Ḡ) = 0,3 ; P_Ḡ(T) = 0,4 (T = « inscrit au tutorat »)."
+     },
+     {
+      "t": "example",
+      "h": "Étape 2 — G ET tutorat",
+      "c": "P(G ∩ T) = 0,7 × 0,8 = **0,56** (produit le long du chemin)."
+     },
+     {
+      "t": "example",
+      "h": "Étape 3 — Probabilités totales",
+      "c": "P(T) = 0,7 × 0,8 + 0,3 × 0,4 = 0,56 + 0,12 = **0,68**."
+     },
+     {
+      "t": "example",
+      "h": "Étape 4 — Probabilité inversée",
+      "c": "Sachant qu’un élève est au tutorat, probabilité qu’il soit en G :\nP_T(G) = P(G ∩ T) ÷ P(T) = 0,56 ÷ 0,68 ≈ **0,82**."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode « probas »",
+      "c": "1) **Construire l’arbre**. 2) **Produit** le long des chemins. 3) **Somme** des chemins pour un événement. 4) Pour « remonter », diviser l’intersection par la probabilité totale."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Avec le même arbre, calcule P(Ḡ ∩ T).",
+      "a": "P(Ḡ ∩ T) = 0,3 × 0,4 = 0,12.",
+      "explain": "On multiplie le long du chemin Ḡ puis T ; on vérifie : 0,56 + 0,12 = 0,68."
+     }
+    ]
+   },
+   {
+    "h": "➕ Formule des probabilités totales",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏭",
+      "h": "Défi lancé",
+      "c": "Une usine a deux machines. Comment calculer la chance qu’une pièce prise au hasard soit défectueuse, sachant que chaque machine a son propre taux de défauts ?"
+     },
+     {
+      "t": "p",
+      "c": "Quand un événement B peut être atteint par **plusieurs chemins** (via A ou via son contraire Ā), sa probabilité est la **somme** des probabilités de ces chemins : c’est la **formule des probabilités totales**."
+     },
+     {
+      "t": "formula",
+      "c": "P(B) = P(A ∩ B) + P(Ā ∩ B) = P(A)×P_A(B) + P(Ā)×P_Ā(B)"
+     },
+     {
+      "t": "p",
+      "c": "Concrètement, on **repère tous les chemins de l’arbre qui aboutissent à B**, on calcule la probabilité de chacun (produit), puis on les **additionne**. C’est la question la plus fréquente au bac sur ce chapitre."
+     },
+     {
+      "t": "example",
+      "h": "Application",
+      "c": "Une usine a 2 machines. A fabrique 60 % des pièces avec 2 % de défauts ; l’autre (Ā) 40 % avec 5 % de défauts.\nP(défaut) = 0,60 × 0,02 + 0,40 × 0,05 = 0,012 + 0,020 = **0,032** (soit 3,2 %)."
+     },
+     {
+      "t": "p",
+      "c": "On peut ensuite « **remonter** » l’arbre : sachant qu’une pièce est défectueuse, quelle est la probabilité qu’elle vienne de A ? P_défaut(A) = P(A ∩ défaut) ÷ P(défaut) = 0,012 ÷ 0,032 = **0,375**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Probabilités totales = **somme de tous les chemins** menant à l’événement. Pour remonter à la cause : P_B(A) = P(A ∩ B) ÷ P(B)."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Sachant qu’une pièce est défectueuse, quelle est la probabilité qu’elle vienne de la machine Ā ?",
+      "a": "P(Ā ∩ défaut) ÷ P(défaut) = 0,020 ÷ 0,032 = 0,625.",
+      "explain": "On vérifie : 0,375 + 0,625 = 1, car la pièce vient forcément de A ou de Ā."
+     }
+    ]
+   },
+   {
+    "h": "🔗 Indépendance de deux événements",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🚌",
+      "h": "Dialogue",
+      "c": "— « Il a plu, donc mon bus sera en retard ! »\n— « Tu es sûr que l’un influence l’autre ? »\n— « Euh… »\nTester l’indépendance, c’est un vrai calcul, pas une impression."
+     },
+     {
+      "t": "p",
+      "c": "Deux événements sont **indépendants** lorsque la réalisation de l’un **ne change pas** la probabilité de l’autre. Savoir que A s’est produit n’apporte alors aucune information sur B."
+     },
+     {
+      "t": "formula",
+      "c": "A et B indépendants  ⇔  P(A ∩ B) = P(A) × P(B)   ⇔  P_A(B) = P(B)"
+     },
+     {
+      "t": "example",
+      "h": "Test d’indépendance",
+      "c": "P(A) = 0,5 ; P(B) = 0,4 ; P(A ∩ B) = 0,2.\nP(A) × P(B) = 0,5 × 0,4 = 0,2 = P(A ∩ B) → A et B sont **indépendants**.\nSi l’on avait trouvé P(A ∩ B) ≠ 0,2, ils seraient **dépendants**."
+     },
+     {
+      "t": "warning",
+      "h": "Ne pas confondre",
+      "c": "**Indépendants** (P(A∩B) = P(A)×P(B)) ≠ **incompatibles** (P(A∩B) = 0, ils ne peuvent se produire ensemble). Deux événements incompatibles de probabilités non nulles sont au contraire **dépendants** !"
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Pour prouver l’indépendance, **comparer** P(A ∩ B) avec le **produit** P(A) × P(B). Égalité → indépendants."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « A et B sont incompatibles, avec P(A) et P(B) non nuls : donc ils sont indépendants. »",
+      "a": "Faux : incompatibles avec des probabilités non nulles signifie dépendants, car P(A ∩ B) = 0 ≠ P(A) × P(B).",
+      "explain": "Le produit P(A) × P(B) est non nul, alors que P(A ∩ B) vaut 0."
+     }
+    ]
+   },
+   {
+    "h": "🌳 Construire et lire un arbre pondéré",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🗺️",
+      "h": "Défi lancé",
+      "c": "Un arbre pondéré, c’est une carte au trésor : chaque branche porte un nombre, chaque chemin mène à un résultat. Sauras-tu la lire sans te perdre ?"
+     },
+     {
+      "t": "p",
+      "c": "L’**arbre pondéré** représente une expérience en plusieurs étapes. Chaque branche porte une probabilité ; les branches d’un même nœud somment à **1**."
+     },
+     {
+      "t": "formula",
+      "c": "Probabilité d’un chemin = produit des probabilités le long du chemin"
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "P(A) = 0,6 et P_A(B) = 0,3 → P(A ∩ B) = 0,6 × 0,3 = **0,18**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "On **multiplie** le long d’un chemin, on **additionne** les chemins menant au même résultat."
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe : on multiplie ou on additionne ? La probabilité d’un chemin ; la probabilité d’un événement atteint par plusieurs chemins.",
+      "a": "On multiplie : la probabilité d’un chemin. On additionne : la probabilité d’un événement atteint par plusieurs chemins.",
+      "explain": "Produit le long d’un chemin, somme entre les chemins."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Tableau croisé d’effectifs et probabilités",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🛍️",
+      "h": "Chiffre fictif",
+      "c": "Sur 200 clients d’un magasin, 120 sont satisfaits, dont 90 fidèles. Un client satisfait est choisi : quelle chance qu’il soit fidèle ?"
+     },
+     {
+      "t": "p",
+      "c": "Un **tableau croisé d’effectifs** permet de lire directement des probabilités : on divise l’effectif concerné par l’effectif total (ou par un total de ligne/colonne pour une probabilité conditionnelle)."
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "Sur 200 clients, 120 satisfaits dont 90 fidèles. P(fidèle sachant satisfait) = 90 ÷ 120 = **0,75**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Probabilité conditionnelle depuis un tableau = effectif de l’intersection ÷ **effectif du sous-groupe** (pas le total)."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Sur 200 clients, 120 sont satisfaits dont 90 fidèles. Que vaut P(fidèle sachant satisfait) ?\nA) 90 ÷ 200\nB) 90 ÷ 120\nC) 120 ÷ 200",
+      "a": "B) 90 ÷ 120 = 0,75 : on divise par l’effectif du sous-groupe des satisfaits.",
+      "explain": "Diviser par 200 donnerait P(fidèle et satisfait), pas la probabilité conditionnelle."
+     }
+    ]
+   }
+  ]
+ },
+ "math-c6": {
+  "intro": "Achète ou n’achète pas, conforme ou défectueux, face ou pile : les situations à **deux issues** sont partout. En les répétant, on obtient un **schéma de Bernoulli**, et la **loi binomiale** t’aide à calculer des probabilités et une **espérance**.",
+  "sections": [
+   {
+    "h": "🎯 L’épreuve et le schéma de Bernoulli",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🛒",
+      "h": "Défi lancé",
+      "c": "Un client entre dans ta boutique : il achète ou il n’achète pas. Pas de troisième option. Si tu répètes la scène 100 fois, comment compter proprement les achats ?"
+     },
+     {
+      "t": "p",
+      "c": "Une **épreuve de Bernoulli** est une expérience à **deux issues** seulement : le **succès** (probabilité p) et l’**échec** (probabilité 1 − p). Exemples : pile ou face, une pièce « conforme ou défectueuse », un client « qui achète ou non »."
+     },
+     {
+      "t": "p",
+      "c": "Un **schéma de Bernoulli** consiste à **répéter n fois**, de façon **identique et indépendante**, la même épreuve de Bernoulli. C’est la situation modélisée par la loi binomiale."
+     },
+     {
+      "t": "list",
+      "c": [
+       "Les conditions à vérifier : (1) chaque épreuve n’a que **deux issues** ; (2) les épreuves sont **indépendantes** ; (3) la probabilité de succès **p reste constante** ; (4) on répète **n fois**.",
+       "La variable aléatoire **X** compte alors le **nombre de succès** parmi les n épreuves."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Avant d’utiliser la loi binomiale, **justifier** que l’on est bien dans un schéma de Bernoulli : n répétitions **indépendantes**, **deux issues**, **p constant**. Souvent la première question notée."
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve la condition qui n’est PAS exigée pour un schéma de Bernoulli :\nA) Deux issues par épreuve\nB) Épreuves indépendantes\nC) Probabilité de succès constante\nD) Probabilité de succès égale à 0,5",
+      "a": "D) Probabilité de succès égale à 0,5 : p peut être n’importe quelle valeur, l’essentiel est qu’elle reste constante.",
+      "explain": "Il faut seulement deux issues, l’indépendance et un p constant."
+     }
+    ]
+   },
+   {
+    "h": "📊 La loi binomiale B(n ; p)",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🪙",
+      "h": "Chiffre fictif",
+      "c": "Un youtubeur lance 50 fois une pièce pour un défi. Combien de « face » peut-il espérer en moyenne ? Et quelle est la chance d’en avoir exactement 25 ?"
+     },
+     {
+      "t": "p",
+      "c": "Si X compte le nombre de succès dans un schéma de Bernoulli à **n** épreuves de probabilité de succès **p**, alors X suit la **loi binomiale de paramètres n et p**, notée **X ~ B(n ; p)**."
+     },
+     {
+      "t": "formula",
+      "c": "P(X = k) = C(n, k) × pᵏ × (1 − p)ⁿ⁻ᵏ   pour k = 0, 1, …, n"
+     },
+     {
+      "t": "p",
+      "c": "Le coefficient **C(n, k)** (« combinaison de k parmi n ») compte le nombre de façons d’obtenir k succès parmi n épreuves. En STMG, on calcule **P(X = k)**, **P(X ≤ k)** et **P(X ≥ k)** à la **calculatrice** (binomFdp / binomFRép)."
+     },
+     {
+      "t": "p",
+      "c": "L’**espérance** E(X) donne le nombre **moyen** de succès attendu sur un grand nombre de répétitions."
+     },
+     {
+      "t": "formula",
+      "c": "Espérance : E(X) = n × p     Écart-type : σ(X) = √( n × p × (1 − p) )"
+     },
+     {
+      "t": "example",
+      "h": "Espérance",
+      "c": "On lance 50 fois une pièce (p = 0,5). Nombre moyen de « face » : E(X) = 50 × 0,5 = **25**."
+     },
+     {
+      "t": "warning",
+      "h": "Traduire les énoncés",
+      "c": "« au moins k succès » → P(X ≥ k) = 1 − P(X ≤ k − 1). « au plus k » → P(X ≤ k). « exactement k » → P(X = k)."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Pour X ~ B(40 ; 0,25), calcule l’espérance et l’écart-type (arrondi à 0,01).",
+      "a": "E(X) = 40 × 0,25 = 10 ; σ(X) = √(40 × 0,25 × 0,75) = √7,5 ≈ 2,74.",
+      "explain": "On applique E(X) = n × p puis σ(X) = √( n × p × (1 − p) )."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Exercice type guidé — loi binomiale : P(X = 0), P(X ≥ 1) et espérance",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔧",
+      "h": "Mini-histoire",
+      "c": "Dans une usine de pièces, 5 % sortent défectueuses. Un contrôleur prélève 20 pièces. Quelle chance qu’aucune ne soit défectueuse ? Et qu’au moins une le soit ?"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Une machine produit des pièces dont **5 %** sont défectueuses. On prélève **n = 20** pièces (production assez grande pour supposer l’indépendance). X = nombre de pièces défectueuses."
+     },
+     {
+      "t": "example",
+      "h": "Étape 1 — Modéliser",
+      "c": "Deux issues, n = 20 répétitions indépendantes, p = 0,05 constant → **X ~ B(20 ; 0,05)**."
+     },
+     {
+      "t": "example",
+      "h": "Étape 2 — Espérance",
+      "c": "E(X) = n × p = 20 × 0,05 = **1** pièce défectueuse en moyenne par échantillon."
+     },
+     {
+      "t": "example",
+      "h": "Étape 3 — Une probabilité (calculatrice)",
+      "c": "P(X = 0) = 0,95²⁰ ≈ **0,358** : environ 36 % des échantillons ne contiennent **aucune** pièce défectueuse.\nP(X ≥ 1) = 1 − P(X = 0) ≈ 1 − 0,358 = **0,642**."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode « binomiale »",
+      "c": "1) **Vérifier** les conditions et écrire **X ~ B(n ; p)**. 2) **Traduire** la question. 3) **Calculatrice**. 4) Donner **E(X) = np** si demandé et **interpréter**."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Pour X ~ B(20 ; 0,05), la probabilité d’avoir au moins une pièce défectueuse vaut environ 0,642.",
+      "a": "Vrai : P(X ≥ 1) = 1 − P(X = 0) ≈ 1 − 0,358 = 0,642.",
+      "explain": "« Au moins une » se calcule avec l’événement contraire."
+     }
+    ]
+   },
+   {
+    "h": "🎯 Reconnaître un schéma de Bernoulli",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔴",
+      "h": "Question qui pique",
+      "c": "On tire 10 boules rouges ou vertes dans une urne de 12 boules, sans remise. Peut-on utiliser la loi binomiale pour compter les rouges ?"
+     },
+     {
+      "t": "p",
+      "c": "On peut utiliser la loi binomiale si l’expérience est un **schéma de Bernoulli** : n répétitions **identiques et indépendantes** d’une épreuve à **deux issues**, avec une probabilité de succès **p constante**."
+     },
+     {
+      "t": "p",
+      "c": "La variable X compte alors le **nombre de succès** : X suit **B(n ; p)**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Justifier **4 points** : deux issues, n répétitions, indépendance, p constant."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « Je tire 10 boules sans remise dans une urne de 12 boules ; le nombre de rouges suit B(10 ; p). »",
+      "a": "Faux : sans remise, la probabilité de succès change à chaque tirage, donc p n’est pas constant.",
+      "explain": "Les épreuves ne sont ni identiques ni indépendantes, le schéma de Bernoulli n’est pas respecté."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Calculatrice : P(X = k), P(X ≤ k), P(X ≥ k)",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔢",
+      "h": "Défi lancé",
+      "c": "Ta calculatrice sait tout calculer, mais elle ne devine pas la question. À toi de choisir la bonne fonction."
+     },
+     {
+      "t": "formula",
+      "c": "P(X = k) = C(n, k) · pᵏ · (1 − p)ⁿ⁻ᵏ"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**P(X = k)** : binomFdp(n, p, k).",
+       "**P(X ≤ k)** : binomFRép(n, p, k).",
+       "**P(X ≥ k)** = 1 − P(X ≤ k − 1)."
+      ]
+     },
+     {
+      "t": "warning",
+      "h": "Traduire l’énoncé",
+      "c": "« au moins k » → P(X ≥ k) = 1 − P(X ≤ k−1). « au plus k » → P(X ≤ k). « exactement k » → P(X = k)."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Comment écrire « au moins 3 succès » avec la fonction cumulée ?\nA) P(X ≤ 3)\nB) 1 − P(X ≤ 2)\nC) 1 − P(X ≤ 3)",
+      "a": "B) 1 − P(X ≤ 2) : P(X ≥ 3) = 1 − P(X ≤ 3 − 1).",
+      "explain": "On retire du total les cas « 0, 1 ou 2 succès »."
+     }
+    ]
+   },
+   {
+    "h": "📊 Espérance E(X) = np et écart-type",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🪙",
+      "h": "Défi lancé",
+      "c": "50 lancers de pièce : combien de « face » en moyenne, et de combien ce score varie-t-il ?"
+     },
+     {
+      "t": "formula",
+      "c": "E(X) = n·p     σ(X) = √( n·p·(1 − p) )"
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "B(50 ; 0,5) : E(X) = **25**. σ = √(50×0,5×0,5) = √12,5 ≈ 3,54."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "E(X) = np est le nombre **moyen** de succès attendu sur un grand nombre de répétitions."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Pour X ~ B(50 ; 0,5), l’espérance est 25 et l’écart-type vaut environ 3,54.",
+      "a": "Vrai : E(X) = 50 × 0,5 = 25 et σ = √12,5 ≈ 3,54.",
+      "explain": "On applique E(X) = n·p et σ(X) = √( n·p·(1 − p) )."
+     }
+    ]
+   },
+   {
+    "h": "🧩 Exercice type — contrôle qualité : au moins une pièce défectueuse",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔍",
+      "h": "Mini-histoire",
+      "c": "Un contrôleur qualité dit : « Sur 20 pièces, ce serait étonnant qu’aucune ne soit défectueuse. » Est-ce si étonnant avec 5 % de défauts ?"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** 5 % des pièces sont défectueuses ; on prélève 20 pièces (indépendance). X = nombre de défectueuses."
+     },
+     {
+      "t": "example",
+      "h": "Résolution",
+      "c": "X ~ B(20 ; 0,05). E(X) = 20 × 0,05 = **1**. P(X = 0) = 0,95²⁰ ≈ **0,358**. P(X ≥ 1) = 1 − 0,358 = **0,642**."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Écrire **X ~ B(n ; p)**, traduire la question, calculer à la **calculatrice**, interpréter."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Pourquoi calcule-t-on P(X ≥ 1) avec 1 − P(X = 0) ?",
+      "a": "« Au moins une » est le contraire de « aucune » : P(X ≥ 1) = 1 − P(X = 0).",
+      "explain": "C’est plus rapide que d’additionner P(X = 1) + … + P(X = 20)."
+     }
+    ]
+   }
+  ]
+ },
+ "math-c8": {
+  "intro": "Quand une valeur évolue en pourcentage sur de longues durées, les **exponentielles** prennent le relais des suites. Avec le **logarithme décimal**, tu sauras même répondre à « combien de temps faut-il pour… ? ».",
+  "sections": [
+   {
+    "h": "🚀 Fonctions exponentielles de base a",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "⏳",
+      "h": "Question qui pique",
+      "c": "Un capital de 1 000 € croît de 5 % par an. Que vaut-il au bout de 2 ans et demi ? Les suites s’arrêtent aux années entières… mais pas les exponentielles."
+     },
+     {
+      "t": "p",
+      "c": "Pour a > 0, la **fonction exponentielle de base a** prolonge à tout réel x la suite géométrique aⁿ. On écrit f(x) = aˣ. Les valeurs de aˣ sont strictement positives ; a⁰ = 1. Une croissance composée peut ainsi être étudiée entre deux dates non entières."
+     },
+     {
+      "t": "p",
+      "c": "Les **propriétés des puissances** restent valables : aˣ⁺ʸ = aˣ × aʸ, aˣ⁻ʸ = aˣ / aʸ et (aˣ)ⁿ = aⁿˣ. On ne remplace pas une somme de puissances par une puissance de somme."
+     },
+     {
+      "t": "example",
+      "h": "Application corrigée",
+      "c": "Un capital de 1 000 € croît de 5 % par an : C(t)=1 000×1,05ᵗ. Après 2,5 ans, C(2,5)≈1 129,73 €. Le coefficient est 1,05, pas 0,05."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Exponentielle de base a",
+        "Fonction x ↦ aˣ, définie sur ℝ pour a > 0"
+       ],
+       [
+        "Puissance zéro",
+        "Pour a > 0, a⁰ = 1"
+       ],
+       [
+        "Produit de puissances de même base",
+        "aˣ × aʸ = aˣ⁺ʸ"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Pour a > 0, que vaut a⁰ ?\nA) 0\nB) 1\nC) a",
+      "a": "B) 1 : pour tout a > 0, a⁰ = 1.",
+      "explain": "C’est la valeur de départ d’une exponentielle : f(0) = 1."
+     }
+    ]
+   },
+   {
+    "h": "📈 Variations des exponentielles",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📱",
+      "h": "Mini-histoire",
+      "c": "Ton smartphone perd 10 % de sa valeur chaque année, ton épargne gagne 5 %. Deux exponentielles, deux directions. Qui décide du sens ? La base a."
+     },
+     {
+      "t": "p",
+      "c": "Si **a > 1**, aˣ est strictement croissante. Si **0 < a < 1**, elle est strictement décroissante. Pour a = 1, elle est constante. Multiplier par un coefficient négatif inverse les variations ; un coefficient nul donne une fonction constante."
+     },
+     {
+      "t": "p",
+      "c": "Pour f(x)=k aˣ, on étudie donc à la fois le signe de k et la position de a par rapport à 1. Un facteur annuel inférieur à 1 modélise une diminution composée, pas une diminution linéaire."
+     },
+     {
+      "t": "example",
+      "h": "Application corrigée",
+      "c": "La valeur V(t)=800×0,9ᵗ décroît : elle perd 10 % par période. En revanche −800×0,9ᵗ croît vers 0."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Base supérieure à 1",
+        "aˣ est strictement croissante si a > 1"
+       ],
+       [
+        "Base entre 0 et 1",
+        "aˣ est strictement décroissante si 0 < a < 1"
+       ],
+       [
+        "Coefficient négatif",
+        "Multiplier une fonction par k < 0 inverse son sens de variation"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "La valeur V(t) = 800 × 0,9ᵗ décroît : elle perd 10 % par période.",
+      "a": "Vrai : la base 0,9 est comprise entre 0 et 1.",
+      "explain": "Un facteur inférieur à 1 modélise une diminution composée."
+     }
+    ]
+   },
+   {
+    "h": "🔟 Logarithme décimal",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔟",
+      "h": "Défi lancé",
+      "c": "À quelle puissance faut-il élever 10 pour obtenir 1 000 ? Facile : 3. Et pour 25 ? Là, il faut une fonction spéciale : le logarithme."
+     },
+     {
+      "t": "p",
+      "c": "Pour b > 0, le **logarithme décimal** log(b) est l’unique réel x tel que 10ˣ=b. La fonction log est définie seulement sur les réels strictement positifs et est strictement croissante. Log(1)=0 et log(10)=1."
+     },
+     {
+      "t": "p",
+      "c": "Pour a,b > 0 : **log(ab)=log(a)+log(b)**, log(a/b)=log(a)−log(b) et log(aⁿ)=n log(a). Ces règles concernent les produits et quotients ; log(a+b) n’est pas log(a)+log(b)."
+     },
+     {
+      "t": "example",
+      "h": "Application corrigée",
+      "c": "10ˣ=1 000 donne **x=log(1 000)=3**. Pour 10ˣ=25, x≈1,398 ; une valeur négative ou nulle ne possède pas de logarithme réel."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Logarithme décimal",
+        "Pour b > 0, log(b) est la solution de 10ˣ=b"
+       ],
+       [
+        "Logarithme d’un produit",
+        "log(ab)=log(a)+log(b), pour a,b > 0"
+       ],
+       [
+        "Logarithme d’une puissance",
+        "log(aⁿ)=n log(a), pour a > 0"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Calcule log(8) + log(125) sans calculatrice.",
+      "a": "log(8) + log(125) = log(8 × 125) = log(1 000) = 3.",
+      "explain": "log(ab) = log(a) + log(b), et 10³ = 1 000."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Résoudre une équation exponentielle",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📈",
+      "h": "Mini-histoire",
+      "c": "Tes abonnés doublent chaque semaine. À partir de quelle semaine dépasses-tu 10 fois ton nombre de départ ? Résous 2ⁿ > 10, puis vérifie à la main."
+     },
+     {
+      "t": "p",
+      "c": "Avec a > 0, a ≠ 1 et b > 0, l’équation **aˣ=b** donne **x=log(b)/log(a)**. Pour une inéquation, le sens de variation décide du sens de la comparaison. Avec a > 1, aˣ>b équivaut à x>log(b)/log(a) ; avec 0<a<1, le sens est inversé."
+     },
+     {
+      "t": "p",
+      "c": "Si x est un nombre entier de périodes, on cherche ensuite le premier entier satisfaisant l’inégalité. On vérifie cet entier et le précédent dans l’expression initiale, surtout pour une inégalité stricte."
+     },
+     {
+      "t": "example",
+      "h": "Application corrigée",
+      "c": "2ⁿ>10 : n>log(10)/log(2)≈3,322. Le premier entier est **4** : 2³=8≤10 et 2⁴=16>10."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Équation aˣ=b",
+        "x=log(b)/log(a), pour a>0, a≠1, b>0"
+       ],
+       [
+        "Seuil entier",
+        "Premier rang entier qui satisfait l’inégalité, vérifié avec le rang précédent"
+       ],
+       [
+        "Base décroissante",
+        "Avec 0<a<1, le passage à l’exposant inverse le sens de l’inégalité"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Pour 2ⁿ > 10, un élève trouve n > 3,322 et répond « le premier entier est 3 ».",
+      "a": "Faux : 2³ = 8 ≤ 10, donc il faut n = 4 (2⁴ = 16 > 10).",
+      "explain": "On vérifie toujours l’entier trouvé et le précédent dans l’inégalité initiale."
+     }
+    ]
+   },
+   {
+    "h": "⏱️ Taux moyen et durées",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🤨",
+      "h": "Chiffre fictif",
+      "c": "Une valeur grimpe de 21 % en 2 ans. Ton ami annonce un taux moyen de 10,5 % par an, car 21 ÷ 2 = 10,5. Les maths ne sont pas d’accord."
+     },
+     {
+      "t": "p",
+      "c": "Le **coefficient multiplicateur moyen** sur n périodes est (Vf/Vi)^(1/n), pour Vi,Vf>0 et n>0. Le taux moyen en décimal est ce coefficient moins 1. Il ne s’agit pas de la **moyenne arithmétique** des taux successifs."
+     },
+     {
+      "t": "p",
+      "c": "Pour trouver une durée dans une évolution V(t)=V₀aᵗ, on isole d’abord aᵗ, puis on utilise le logarithme. Le résultat est une durée réelle ; on l’adapte à la question avant tout arrondi."
+     },
+     {
+      "t": "example",
+      "h": "Application corrigée",
+      "c": "Une valeur augmente de 21 % en 2 ans : CM moyen=√1,21=1,10, soit **10 % par an**. Le taux moyen n’est pas 21 ÷ 2 = 10,5 % : en appliquant deux fois +10,5 %, on obtient 1,105² ≈ 1,221, soit +22,1 %."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Coefficient moyen",
+        "(Vf/Vi)^(1/n), pour des valeurs positives"
+       ],
+       [
+        "Taux moyen",
+        "Coefficient moyen moins 1, à multiplier par 100 pour un pourcentage"
+       ],
+       [
+        "Durée composée",
+        "Se calcule en isolant l’exponentielle puis avec des logarithmes"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Pourquoi le taux moyen d’une hausse de 21 % en 2 ans n’est-il pas 10,5 % par an ?",
+      "a": "Parce qu’on multiplie les coefficients : CM moyen = √1,21 = 1,10, soit 10 % par an ; deux fois +10,5 % donneraient +22,1 %.",
+      "explain": "Le taux moyen n’est pas la moyenne arithmétique des taux."
+     }
+    ]
+   }
+  ]
+ }
+}

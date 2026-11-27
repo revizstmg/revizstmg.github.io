@@ -12,12 +12,12 @@ const vue = (theme, idx) => avecGraine('isolation', () => {
 describe('exercices limités au chapitre lu', () => {
   it('la personnalité ne pose aucune question sur le reste du thème', () => {
     const th = C.ALL_CHAPTERS['p1-sgn-t1']
-    const ch = C.themeChapters(th).find((c) => c.title === 'La personnalité de l’individu')
+    const ch = C.themeChapters(th).find((c) => c.title.includes('La personnalité de l’individu'))
     const jeux = C.jeuxDuChapitre(ch, th)
     expect(jeux.length).toBeGreaterThan(5)
     expect(JSON.stringify(jeux)).toContain('Tempérament')
     expect(JSON.stringify(jeux)).not.toMatch(/Maslow|Herzberg|Qualification|Capital humain|Communication formelle|Leadership|Cotisations/i)
-    const notions = ch.section.blocks.at(-1).rows.map(([t]) => t)
+    const notions = ch.section.blocks.findLast((b) => b.t === 'table').rows.map(([t]) => t)
     for (const c of jeux.find((g) => g.type === 'flashcard').cards) expect(notions).toContain(c.front)
   })
 

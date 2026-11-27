@@ -1,0 +1,918 @@
+{
+ "p1-math-c1": {
+  "intro": "Pourcentages, **taux d’évolution**, **coefficient multiplicateur**, **taux moyen** et **indice base 100** : les outils de la vie courante et de la gestion. Ici, on apprend à ne plus se faire piéger par les hausses suivies de baisses.",
+  "sections": [
+   {
+    "h": "Proportion et taux d’évolution",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "⏱️",
+      "h": "Défi lancé",
+      "c": "Un prix passe de 200 € à 250 €. Dis-moi en 10 secondes : de combien de % a-t-il augmenté ?"
+     },
+     {
+      "t": "p",
+      "c": "Une **proportion** = partie / tout (× 100 pour un pourcentage). Ex. 15 filles sur 30 → 50 %."
+     },
+     {
+      "t": "formula",
+      "c": "t = (Valeur d’arrivée − Valeur de départ) / Valeur de départ · CM = 1 + t"
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "Un prix passe de 200 € à 250 € → t = 50/200 = **+25 %** (CM = 1,25)."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Un prix qui passe de 40 € à 50 € a augmenté de 25 %.",
+      "a": "Vrai : t = 10/40 = 0,25, soit +25 %.",
+      "explain": "CM = 50/40 = 1,25."
+     }
+    ]
+   },
+   {
+    "h": "Évolutions successives et réciproque",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🤔",
+      "h": "Question qui pique",
+      "c": "+20 % puis −10 % : ça fait +10 % au total ? Spoiler : non."
+     },
+     {
+      "t": "p",
+      "c": "Pour enchaîner des évolutions, on **multiplie les CM** (jamais additionner les taux !). Ex. +20 % puis −10 % → 1,20 × 0,90 = 1,08 = **+8 %**."
+     },
+     {
+      "t": "warning",
+      "h": "Évolution réciproque",
+      "c": "Après +25 % (×1,25), pour revenir il faut ×(1/1,25) = 0,80, soit **−20 %** (et non −25 %)."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Un prix augmente de 50 % puis baisse de 50 %. Quelle est l’évolution globale ?",
+      "a": "CM = 1,50 × 0,50 = 0,75, soit −25 %.",
+      "explain": "On multiplie les CM."
+     }
+    ]
+   },
+   {
+    "h": "Taux moyen et indice base 100",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📱",
+      "h": "Mini-histoire",
+      "c": "Ton forfait a augmenté de 58 % en 4 ans. Ton père dit : « Ça fait 14,5 % par an. » Toi, tu sens que la racine 4ᵉ a son mot à dire."
+     },
+     {
+      "t": "p",
+      "c": "Pour résumer plusieurs évolutions successives par une seule évolution identique chaque période, on calcule le **taux moyen** : on prend la racine n-ième du CM global (n = nombre de périodes)."
+     },
+     {
+      "t": "formula",
+      "c": "CM moyen = (CM global)^(1/n) · t moyen = CM moyen − 1"
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "Un prix augmente de 58 % en 4 ans : CM global = 1,58 → CM moyen = 1,58^(1/4) ≈ 1,121 → **+12,1 % par an** en moyenne."
+     },
+     {
+      "t": "p",
+      "c": "L’**indice base 100** compare une valeur à une valeur de référence ramenée à 100 : l’écart à 100 donne directement l’évolution en pourcentage."
+     },
+     {
+      "t": "formula",
+      "c": "Indice = (valeur / valeur de référence) × 100"
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "Un chiffre d’affaires de 270 000 € pour une référence de 150 000 € → indice 180 : **+80 %** par rapport à la référence."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "La référence vaut 50 € (indice 100) et une valeur vaut 45 €. Quel est son indice ?\nA) 110\nB) 90\nC) 95",
+      "a": "B) 90 : (45 ÷ 50) × 100 = 90.",
+      "explain": "Un indice inférieur à 100 traduit une baisse, ici de 10 %."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Exemple traité — proportion d’un sous-ensemble et évolutions successives",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏫",
+      "h": "Chiffre fictif",
+      "c": "Dans un lycée de 750 élèves, 60 % sont des filles et 20 % d’entre elles sont en STMG. Combien en STMG ?"
+     },
+     {
+      "t": "example",
+      "h": "Énoncé",
+      "c": "Dans un lycée de 750 élèves, 60 % sont des filles, et 20 % des filles sont en STMG.\n1) Combien de filles ?\n2) Combien de filles en STMG ?\n3) Un article à 40 € subit +5 % puis −5 %. Prix final ?"
+     },
+     {
+      "t": "p",
+      "c": "**Résolution :**"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Filles** : 750 × 0,60 = **450 filles**.",
+       "**Filles en STMG** : 450 × 0,20 = **90 filles**.",
+       "**Prix final** : 40 × 1,05 × 0,95 = 40 × 0,9975 = **39,90 €** (hausse puis baisse du même taux ne se compensent pas)."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Prendre un pourcentage = multiplier par t/100. « Pourcentage de pourcentage » = on multiplie les coefficients."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève dit : « Avec +5 % puis −5 %, l’article à 40 € revient à 40 €. »",
+      "a": "Faux : 40 × 1,05 × 0,95 = 39,90 €.",
+      "explain": "1,05 × 0,95 = 0,9975, soit un peu moins que 1."
+     }
+    ]
+   }
+  ]
+ },
+ "p1-math-c2": {
+  "intro": "Deux façons de faire grandir un nombre : **ajouter** toujours la même chose (suite **arithmétique**) ou **multiplier** par le même coefficient (suite **géométrique**). Ces deux modèles décrivent salaires, loyers et placements.",
+  "sections": [
+   {
+    "h": "La suite arithmétique",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "💼",
+      "h": "Mini-histoire",
+      "c": "Ton salaire de départ est de 1 500 €, avec +50 € garantis chaque année. Quel sera-t-il dans 4 ans ? Pas besoin de calculer chaque année."
+     },
+     {
+      "t": "p",
+      "c": "Dans une suite **arithmétique**, on passe d’un terme au suivant en **ajoutant** toujours le même nombre, la **raison r** : uₙ₊₁ = uₙ + r."
+     },
+     {
+      "t": "formula",
+      "c": "Terme général : uₙ = u₀ + n × r — croissance linéaire."
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "Un salaire de 1 500 € augmente de 50 €/an : c’est arithmétique (r = 50). Au bout de 4 ans : u₄ = 1 500 + 4 × 50 = **1 700 €**."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Une suite arithmétique a u₀ = 100 et r = 30. Calcule u₁₀.",
+      "a": "u₁₀ = 100 + 10 × 30 = 400.",
+      "explain": "On applique uₙ = u₀ + n × r."
+     }
+    ]
+   },
+   {
+    "h": "La suite géométrique",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "💶",
+      "h": "Question qui pique",
+      "c": "Tu places 1 000 € à 3 % par an. Chaque année, tu gagnes plus que l’année précédente. Pourquoi ?"
+     },
+     {
+      "t": "p",
+      "c": "Dans une suite **géométrique**, on passe d’un terme au suivant en **multipliant** toujours par le même nombre, la **raison q** : uₙ₊₁ = uₙ × q."
+     },
+     {
+      "t": "formula",
+      "c": "Terme général : uₙ = u₀ × qⁿ — croissance exponentielle."
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "Capital de 1 000 € placé à 3 %/an → q = 1,03 : u₅ = 1 000 × 1,03⁵ ≈ **1 159 €**. Astuce : toute évolution en **% fixe** donne une suite **géométrique** (q = 1 + t, avec t en écriture décimale : 3 % → t = 0,03)."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Un capital placé à 3 % par an suit une suite géométrique de raison 1,03.",
+      "a": "Vrai : q = 1 + 0,03 = 1,03.",
+      "explain": "Une évolution en pourcentage fixe est toujours géométrique."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Exemple traité — intérêts composés : une suite géométrique",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏦",
+      "h": "Chiffre fictif",
+      "c": "Tu places 2 000 € à 3 % par an, intérêts composés. Que vaut ton capital après 1 an, 2 ans, n années ?"
+     },
+     {
+      "t": "example",
+      "h": "Énoncé",
+      "c": "Un capital de 2 000 € est placé à 3 % par an (intérêts composés).\n1) Quelle est la nature de la suite (Cₙ) des capitaux ?\n2) Calcule C₁ et C₂.\n3) Exprime Cₙ."
+     },
+     {
+      "t": "p",
+      "c": "**Résolution :**"
+     },
+     {
+      "t": "list",
+      "c": [
+       "Chaque année on **multiplie** par 1,03 → suite **géométrique** de raison q = 1,03, C₀ = 2 000.",
+       "C₁ = 2 000 × 1,03 = **2 060 €** ; C₂ = 2 060 × 1,03 = **2 121,80 €**.",
+       "Terme général : **Cₙ = 2 000 × 1,03ⁿ**."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Repère",
+      "c": "Intérêts composés, croissance en % → suite géométrique. Ajout d’un montant fixe → suite arithmétique."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Un capital de 1 000 € est placé à 3 % par an. Que vaut-il après 2 ans ?\nA) 1 060 €\nB) 1 060,90 €\nC) 1 090 €",
+      "a": "B) 1 060,90 € : 1 000 × 1,03² = 1 000 × 1,0609.",
+      "explain": "Les intérêts de la 2ᵉ année portent aussi sur ceux de la 1ʳᵉ."
+     }
+    ]
+   }
+  ]
+ },
+ "p1-math-c3": {
+  "intro": "La **parabole** décrit un bénéfice qui monte puis redescend, ou un coût qui passe par un minimum. Avec la **forme factorisée**, tu lis les racines et le sommet sans formule compliquée.",
+  "sections": [
+   {
+    "h": "La parabole et le sens de la concavité",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "⚽",
+      "h": "Question qui pique",
+      "c": "Un ballon lancé en l’air monte, atteint un sommet, puis redescend. Quelle courbe dessine-t-il, et comment savoir si elle est tournée vers le haut ou vers le bas ?"
+     },
+     {
+      "t": "p",
+      "c": "La fonction du **second degré** s’écrit f(x) = ax² + bx + c (avec a ≠ 0) et sa courbe est une **parabole**."
+     },
+     {
+      "t": "list",
+      "c": [
+       "Si **a > 0** : parabole tournée vers le haut (∪), la fonction admet un **minimum**.",
+       "Si **a < 0** : parabole tournée vers le bas (∩), la fonction admet un **maximum**."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "La courbe est **symétrique** par rapport à l’axe vertical qui passe par le sommet."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Pour f(x) = −3x² + 5x + 1, que peut-on dire ?\nA) La parabole a un minimum\nB) La parabole a un maximum\nC) La courbe est une droite",
+      "a": "B) La parabole a un maximum : a = −3 < 0, elle est tournée vers le bas.",
+      "explain": "Le signe de a donne le sens de la parabole."
+     }
+    ]
+   },
+   {
+    "h": "Le sommet et l’optimisation",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🥐",
+      "h": "Chiffre fictif",
+      "c": "Une boulangerie modélise son bénéfice par B(x) = −2x² + 12x. À quelle quantité x ce bénéfice est-il maximal ? Réponse sans formule compliquée."
+     },
+     {
+      "t": "p",
+      "c": "Le **sommet** de la parabole est le point où la fonction atteint son **extremum** (maximum si a < 0, minimum si a > 0)."
+     },
+     {
+      "t": "p",
+      "c": "C’est ce qui rend le second degré très utile en gestion : il modélise un **bénéfice à maximiser** ou un **coût à minimiser**."
+     },
+     {
+      "t": "p",
+      "c": "La **forme factorisée** f(x)=a(x−x₁)(x−x₂) permet de lire les racines. L’axe de symétrie passe au milieu des deux racines ; on peut aussi déterminer les éléments caractéristiques graphiquement ou avec un solveur. Aucune formule générale du sommet n’est exigée."
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "Un bénéfice B(x) = −2x² + 12x = −2x(x − 6) (en centaines d’€) s’annule en 0 et en 6 : le sommet est au milieu des deux racines, en x = (0 + 6) ÷ 2 = 3, et B(3) = **18** → 1 800 € pour 3 unités."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Soit f(x) = −x(x − 8). Donne les racines, le sommet et la valeur du maximum.",
+      "a": "Racines 0 et 8 ; sommet en x = (0 + 8) ÷ 2 = 4 ; f(4) = −4 × (−4) = 16.",
+      "explain": "Le sommet est au milieu des deux racines, et a < 0 donne un maximum."
+     }
+    ]
+   },
+   {
+    "h": "Racines et signe sous forme factorisée",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🗝️",
+      "h": "Dialogue",
+      "c": "— « Le produit vaut zéro. »\n— « Donc ?… »\n— « Donc l’un des facteurs vaut zéro ! »\nC’est LA phrase qui débloque les racines."
+     },
+     {
+      "t": "p",
+      "c": "La **forme factorisée** f(x)=(x−2)(x−3) révèle les **racines** 2 et 3. Le produit est nul si l’un des facteurs est nul. Pour étudier le signe, on examine chaque facteur de part et d’autre des racines ; la recherche systématique par discriminant n’est pas un attendu du programme."
+     },
+     {
+      "t": "example",
+      "h": "Application corrigée",
+      "c": "Pour (x−2)(x−3) : signe positif avant 2, négatif entre 2 et 3, positif après 3 ; la valeur est nulle aux deux racines. En développant, on retrouve x²−5x+6."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Racine",
+        "Valeur de x pour laquelle f(x)=0"
+       ],
+       [
+        "Produit nul",
+        "Un produit est nul si au moins un facteur est nul"
+       ],
+       [
+        "Forme factorisée",
+        "Écriture sous forme d’un produit qui permet de lire les racines"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève affirme : « (x−2)(x−3) est positif pour tout x compris entre 2 et 3. »",
+      "a": "Faux : entre 2 et 3, x − 2 est positif et x − 3 négatif, donc le produit est négatif.",
+      "explain": "Le produit est positif avant 2 et après 3."
+     }
+    ]
+   }
+  ]
+ },
+ "p1-math-c4": {
+  "intro": "Le **nombre dérivé** mesure la pente d’une courbe en un point, et le signe de la dérivée indique les variations. C’est l’outil pour trouver le meilleur bénéfice ou le plus petit coût.",
+  "sections": [
+   {
+    "h": "Le nombre dérivé et la tangente",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "⛰️",
+      "h": "Mini-histoire",
+      "c": "Sur une route de montagne, un panneau indique « pente 8 % ». Le nombre dérivé fait pareil pour une courbe, mais en un point précis."
+     },
+     {
+      "t": "p",
+      "c": "Le **nombre dérivé** f’(a) est le **coefficient directeur de la tangente** à la courbe au point d’abscisse a : il mesure la « pente » de la courbe en ce point."
+     },
+     {
+      "t": "formula",
+      "c": "Équation de la tangente en a : y = f’(a)(x − a) + f(a)."
+     },
+     {
+      "t": "p",
+      "c": "Dérivées à connaître : (constante)’ = 0 ; (x)’ = 1 ; (x²)’ = 2x ; (x³)’ = 3x² ; **(ax² + bx + c)’ = 2ax + b**. La dérivée d’une somme est la somme des dérivées, et (k·u)’ = k·u’ pour une constante k."
+     },
+     {
+      "t": "figure",
+      "name": "derivee"
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quelle est la dérivée de 5x² + 3x + 2 ?\nA) 10x + 3\nB) 5x + 3\nC) 10x + 2",
+      "a": "A) 10x + 3 : (ax² + bx + c)’ = 2ax + b avec a = 5, b = 3.",
+      "explain": "La constante 2 disparaît à la dérivation."
+     }
+    ]
+   },
+   {
+    "h": "Signe de la dérivée, variations et extremum",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📈",
+      "h": "Défi lancé",
+      "c": "Une fonction monte puis descend : où est son sommet ? Le signe de la dérivée te le dit sans dessiner la courbe."
+     },
+     {
+      "t": "list",
+      "c": [
+       "f’(x) > 0 sur un intervalle → f est **croissante** ;",
+       "f’(x) < 0 sur un intervalle → f est **décroissante** ;",
+       "f’(x) = 0 en **changeant de signe** → la fonction atteint un **extremum** (max ou min)."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "C’est l’outil de l’**optimisation** : on cherche où la dérivée s’annule pour trouver un maximum (bénéfice) ou un minimum (coût)."
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "f(x) = −2x² + 12x → f’(x) = −4x + 12, qui s’annule en x = 3. La dérivée passe du + au −, donc **maximum** : f(3) = **18**."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Soit f(x) = −x² + 6x. Calcule f’(x), puis le maximum de f.",
+      "a": "f’(x) = −2x + 6, nulle en x = 3 ; f(3) = −9 + 18 = 9.",
+      "explain": "f’ passe du + au − : c’est un maximum."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Exemple traité — dérivée, tableau de variations et minimum",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎯",
+      "h": "Défi lancé",
+      "c": "Soit f(x) = 2x² − 8x + 3. Quel est son plus petit résultat possible ? La dérivée te guide en trois étapes."
+     },
+     {
+      "t": "example",
+      "h": "Énoncé",
+      "c": "Soit f(x) = 2x² − 8x + 3.\n1) Calcule f’(x).\n2) Dresse le tableau de variations.\n3) Quel est le minimum de f ?"
+     },
+     {
+      "t": "p",
+      "c": "**Résolution :**"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Dérivée** : f’(x) = 4x − 8.",
+       "**Signe** : f’(x) = 0 ⇔ x = 2 ; f’ < 0 avant 2, f’ > 0 après → f décroît puis croît.",
+       "**Minimum** en x = 2 : f(2) = 8 − 16 + 3 = **−5**."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Lien",
+      "c": "Le sommet d’une parabole correspond à f’(x) = 0 : dérivation et second degré racontent la même histoire."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève dit : « f(x) = 2x² − 8x + 3 a un maximum en x = 2, car f’(2) = 0. »",
+      "a": "Faux : f’ passe de − à + en x = 2, donc c’est un minimum, égal à −5.",
+      "explain": "f’(x) = 0 ne suffit pas : il faut regarder le changement de signe."
+     }
+    ]
+   }
+  ]
+ },
+ "p1-math-c5": {
+  "intro": "Pour résumer une série, on utilise des indicateurs de **position** et de **dispersion**. Pour deux variables, le **nuage de points** et l’**ajustement affine** permettent de prévoir, avec prudence.",
+  "sections": [
+   {
+    "h": "Les indicateurs de position",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📊",
+      "h": "Question qui pique",
+      "c": "Dans ta classe, la moyenne est 12. Est-ce que la moitié des élèves est au-dessus de 12 ? Pas forcément… et c’est la médiane qui le sait."
+     },
+     {
+      "t": "p",
+      "c": "Les indicateurs de **position** résument « où se situe » la série :"
+     },
+     {
+      "t": "list",
+      "c": [
+       "la **moyenne** = somme des valeurs / effectif ;",
+       "la **médiane** partage la série ordonnée en **deux moitiés** (50 % en dessous, 50 % au-dessus) ;",
+       "les **quartiles** Q1 et Q3 délimitent les 25 % les plus bas et les 25 % les plus hauts."
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe en position ou dispersion : moyenne, étendue, médiane, écart-type.",
+      "a": "Position : moyenne, médiane. Dispersion : étendue, écart-type.",
+      "explain": "La position dit où se situe la série, la dispersion dit à quel point elle est étalée."
+     }
+    ]
+   },
+   {
+    "h": "Les indicateurs de dispersion et la boîte à moustaches",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📏",
+      "h": "Défi lancé",
+      "c": "Deux classes ont la même moyenne : 12. Dans l’une, tout le monde est proche de 12. Dans l’autre, les notes vont de 2 à 20. Comment le mesurer ?"
+     },
+     {
+      "t": "p",
+      "c": "Les indicateurs de **dispersion** mesurent à quel point les valeurs sont **étalées** :"
+     },
+     {
+      "t": "list",
+      "c": [
+       "l’**étendue** = max − min ;",
+       "l’**écart interquartile** = Q3 − Q1 (dispersion des 50 % centraux) ;",
+       "l’**écart-type** mesure la dispersion autour de la moyenne."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Le **diagramme en boîte** (boîte à moustaches) visualise min, Q1, médiane, Q3, max. Deux séries de même moyenne mais d’écarts-types différents n’ont pas la même **homogénéité**."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quelle formule donne l’écart interquartile ?\nA) max − min\nB) Q3 − Q1\nC) Q1 − Q3",
+      "a": "B) Q3 − Q1 : il mesure la dispersion des 50 % centraux.",
+      "explain": "max − min est l’étendue."
+     }
+    ]
+   },
+   {
+    "h": "Deux variables et point moyen",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📚",
+      "h": "Mini-histoire",
+      "c": "Pour chaque élève, on note les heures de révision et la note obtenue. Deux colonnes, des points dans un repère… et un point très particulier qui les résume."
+     },
+     {
+      "t": "p",
+      "c": "Une **série à deux variables quantitatives** associe à chaque individu un couple (xᵢ,yᵢ). Le **nuage de points** représente ces couples ; il permet d’observer une tendance sans prouver une causalité."
+     },
+     {
+      "t": "p",
+      "c": "Le **point moyen** G a pour coordonnées la moyenne des abscisses et la moyenne des ordonnées. On calcule chaque moyenne sur tous les couples, sans mélanger les deux unités."
+     },
+     {
+      "t": "example",
+      "h": "Application corrigée",
+      "c": "Pour (1;2), (2;5), (3;5), x̄=2 et ȳ=4 ; G=(2;4). L’allure croissante du nuage ne suffit pas à établir une relation causale."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Couple de données",
+        "Deux mesures quantitatives associées au même individu"
+       ],
+       [
+        "Nuage de points",
+        "Représentation des couples (xᵢ,yᵢ)"
+       ],
+       [
+        "Point moyen",
+        "Point G(x̄;ȳ), moyennes calculées séparément sur les x et les y"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Pour les points (1;3), (3;5), (5;10), calcule les coordonnées du point moyen G.",
+      "a": "x̄ = (1 + 3 + 5) ÷ 3 = 3 ; ȳ = (3 + 5 + 10) ÷ 3 = 6 ; G = (3 ; 6).",
+      "explain": "On calcule la moyenne des x et la moyenne des y séparément."
+     }
+    ]
+   },
+   {
+    "h": "Ajustement affine et prévision",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔮",
+      "h": "Défi lancé",
+      "c": "Ton nuage de points a une tendance. Peux-tu prévoir une valeur dans la zone observée ? Et bien au-delà ? Les deux situations n’ont pas le même niveau de confiance."
+     },
+     {
+      "t": "p",
+      "c": "Un **ajustement affine** décrit la tendance d’un nuage par une droite y=ax+b. Il s’obtient graphiquement ou avec les outils de régression d’une calculatrice ou d’un tableur. Le modèle doit rester pertinent au regard du nuage."
+     },
+     {
+      "t": "p",
+      "c": "Une **interpolation** estime une valeur à l’intérieur de la plage observée. Une **extrapolation** utilise le modèle au-delà de cette plage ; elle demande davantage de prudence. Une corrélation ne prouve pas que x cause y."
+     },
+     {
+      "t": "example",
+      "h": "Application corrigée",
+      "c": "Si un modèle y=3x+2 est pertinent pour x de 1 à 10, la prévision pour x=6 est 20 (interpolation). Pour x=20, le modèle donne 62, mais cette extrapolation doit être discutée."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Ajustement affine",
+        "Modélisation d’une tendance par y=ax+b"
+       ],
+       [
+        "Interpolation",
+        "Estimation à l’intérieur de la plage observée"
+       ],
+       [
+        "Extrapolation",
+        "Estimation au-delà de la plage observée, à interpréter avec prudence"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « Le nuage monte, donc x est la cause de y. »",
+      "a": "Faux : une corrélation ne prouve pas une relation de cause à effet.",
+      "explain": "Un nuage permet d’observer une tendance, sans prouver de causalité."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Exemple traité — moyenne, médiane et étendue d’une série de notes",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📝",
+      "h": "Chiffre fictif",
+      "c": "Les notes de Sam : 8, 10, 12, 12, 13, 15, 18. Sa moyenne, sa médiane, son étendue : trois indicateurs, trois points de vue."
+     },
+     {
+      "t": "example",
+      "h": "Énoncé",
+      "c": "Notes d’un élève : 8 · 10 · 12 · 12 · 13 · 15 · 18.\n1) Calcule la moyenne.\n2) Donne la médiane.\n3) Que dit l’étendue ?"
+     },
+     {
+      "t": "p",
+      "c": "**Résolution :**"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Moyenne** : (8+10+12+12+13+15+18) / 7 = 88 / 7 ≈ **12,6**.",
+       "**Médiane** : 7 valeurs ordonnées → la 4ᵉ valeur = **12**.",
+       "**Étendue** : 18 − 8 = **10** (écart entre la meilleure et la moins bonne note)."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Moyenne ≠ médiane",
+      "c": "La médiane est peu sensible aux valeurs extrêmes, la moyenne l’est beaucoup : une très mauvaise note tire la moyenne vers le bas, pas la médiane."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Si la note 18 est remplacée par 2, la médiane de la série reste égale à 12.",
+      "a": "Vrai : la série ordonnée 2, 8, 10, 12, 12, 13, 15 a toujours 12 pour 4ᵉ valeur.",
+      "explain": "La médiane résiste aux valeurs extrêmes, contrairement à la moyenne."
+     }
+    ]
+   }
+  ]
+ },
+ "p1-math-c6": {
+  "intro": "Le hasard a ses règles : **probabilité conditionnelle**, **arbre pondéré**, **indépendance** et **espérance**. Un jeu de 32 cartes devient un laboratoire pour comprendre intersection et réunion.",
+  "sections": [
+   {
+    "h": "Probabilité conditionnelle et arbre pondéré",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🌳",
+      "h": "Mini-histoire",
+      "c": "60 % des élèves font anglais ; parmi eux, 30 % font aussi espagnol. Quelle part de la classe fait les deux ? Un arbre dessine la réponse."
+     },
+     {
+      "t": "formula",
+      "c": "Probabilité de B sachant A : P_A(B) = P(A ∩ B) / P(A)."
+     },
+     {
+      "t": "p",
+      "c": "On visualise la situation avec un **arbre pondéré** : on **multiplie** les probabilités le long des branches, et la **somme** des branches partant d’un même nœud vaut **1**."
+     },
+     {
+      "t": "example",
+      "h": "Exemple",
+      "c": "60 % des élèves font anglais ; parmi eux, 30 % font aussi espagnol → P(anglais ∩ espagnol) = 0,60 × 0,30 = **0,18**."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Si P(A) = 0,5 et P_A(B) = 0,4, que vaut P(A ∩ B) ?\nA) 0,9\nB) 0,2\nC) 0,4",
+      "a": "B) 0,2 : on multiplie 0,5 × 0,4 le long du chemin.",
+      "explain": "Additionner donnerait 0,9, une erreur classique."
+     }
+    ]
+   },
+   {
+    "h": "Indépendance et espérance",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎲",
+      "h": "Défi lancé",
+      "c": "Un jeu te rapporte 0 € avec la probabilité 0,7 et 10 € avec la probabilité 0,3. Combien gagnes-tu en moyenne par partie ?"
+     },
+     {
+      "t": "formula",
+      "c": "A et B indépendants ⇔ P(A ∩ B) = P(A) × P(B)."
+     },
+     {
+      "t": "p",
+      "c": "Deux événements sont **indépendants** quand la réalisation de l’un ne change pas la probabilité de l’autre. Une **variable aléatoire** prend des valeurs selon le hasard ; son **espérance** E(X) = somme des (valeur × probabilité) est la « moyenne » attendue sur un grand nombre de répétitions."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Dans ce jeu (0 € avec la probabilité 0,7 ; 10 € avec la probabilité 0,3), calcule l’espérance E(X).",
+      "a": "E(X) = 0 × 0,7 + 10 × 0,3 = 3 €.",
+      "explain": "On additionne valeur × probabilité pour chaque issue."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Exemple traité — un jeu de 32 cartes : intersection et réunion",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🃏",
+      "h": "Défi lancé",
+      "c": "Dans un jeu de 32 cartes, tire un roi OU un cœur : le roi de cœur compte-t-il deux fois ? Voyons la formule qui évite ce piège."
+     },
+     {
+      "t": "example",
+      "h": "Énoncé",
+      "c": "On tire une carte dans un jeu de 32 cartes.\nA = « tirer un roi », B = « tirer un cœur ».\n1) P(A) et P(B) ?\n2) P(A ∩ B) ?\n3) P(A ∪ B) ?"
+     },
+     {
+      "t": "p",
+      "c": "**Résolution :**"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**P(A)** = 4/32 = 1/8 (4 rois) ; **P(B)** = 8/32 = 1/4 (8 cœurs).",
+       "**P(A ∩ B)** = 1/32 (un seul roi de cœur).",
+       "**P(A ∪ B)** = P(A) + P(B) − P(A ∩ B) = 4/32 + 8/32 − 1/32 = **11/32**."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Formule clé",
+      "c": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) : on retire l’intersection comptée deux fois."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève calcule : « P(A ∪ B) = 4/32 + 8/32 = 12/32. »",
+      "a": "Faux : il faut retirer P(A ∩ B) = 1/32, d’où 11/32.",
+      "explain": "Le roi de cœur est compté deux fois si on additionne seulement."
+     }
+    ]
+   }
+  ]
+ },
+ "p1-math-c7": {
+  "intro": "Python te permet d’automatiser les calculs : **variables**, **conditions**, **boucles**, **fonctions** et **listes**. Tu vas même programmer des intérêts composés en quelques lignes.",
+  "sections": [
+   {
+    "h": "Variables, conditions et boucles",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "💻",
+      "h": "Défi lancé",
+      "c": "Un programme doit répéter une action 10 fois, ou jusqu’à ce qu’une condition change. Quels outils choisir ?"
+     },
+     {
+      "t": "list",
+      "c": [
+       "Les **variables** stockent une valeur (`x = 5`) ;",
+       "les **conditions** (`if / else`) permettent de faire un **choix** selon qu’une condition est vraie ou fausse ;",
+       "les **boucles** répètent des instructions : `for` (nombre de répétitions **connu**), `while` (tant qu’une condition reste vraie)."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Mémo",
+      "c": "`if` pour choisir, `for` ou `while` pour répéter."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quelle boucle choisir quand on connaît le nombre de répétitions ?\nA) while\nB) for\nC) if",
+      "a": "B) for : on répète un nombre connu de fois.",
+      "explain": "while sert quand on répète tant qu’une condition reste vraie."
+     }
+    ]
+   },
+   {
+    "h": "Fonctions, listes et applications",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🤖",
+      "h": "Question qui pique",
+      "c": "Calculer 100 termes d’une suite à la main ? Non merci. Les fonctions et les listes font le travail en quelques lignes."
+     },
+     {
+      "t": "list",
+      "c": [
+       "les **fonctions** (`def`) regroupent des instructions réutilisables ;",
+       "les **listes** stockent plusieurs valeurs dans une seule variable."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Applications concrètes : **simuler** une expérience aléatoire, calculer les termes d’une **suite**, automatiser un **calcul répétitif**."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Une liste permet de stocker plusieurs valeurs dans une seule variable.",
+      "a": "Vrai : c’est le rôle d’une liste.",
+      "explain": "Une fonction, elle, regroupe des instructions réutilisables."
+     }
+    ]
+   },
+   {
+    "h": "🐍 Exemple traité — une fonction Python pour les intérêts composés (boucle for)",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🐍",
+      "h": "Chiffre fictif",
+      "c": "Un capital de 2 000 € est placé à 3 % par an. Un petit programme Python peut te donner le résultat après n’importe quel nombre d’années."
+     },
+     {
+      "t": "example",
+      "h": "Énoncé",
+      "c": "On veut une fonction qui calcule le capital après n années à 3 % (intérêts composés), à partir d’un capital de départ."
+     },
+     {
+      "t": "p",
+      "c": "**Programme commenté :**"
+     },
+     {
+      "t": "formula",
+      "c": "def capital(depart, annees):\n    c = depart\n    for i in range(annees):\n        c = c * 1.03      # +3 % chaque année\n    return round(c, 2)\n\nprint(capital(2000, 2))   # affiche 2121.8"
+     },
+     {
+      "t": "list",
+      "c": [
+       "La **boucle for** répète l’opération `annees` fois.",
+       "La **variable c** est mise à jour à chaque tour (accumulation).",
+       "`round(c, 2)` arrondit à 2 décimales ; `range(n)` compte de 0 à n − 1."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Lien maths ↔ Python",
+      "c": "Cette boucle calcule exactement une suite géométrique : Python automatise le calcul des termes."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Que renvoie capital(1000, 1) avec ce programme ?",
+      "a": "1030.0 : le capital est multiplié une seule fois par 1.03.",
+      "explain": "La boucle ne tourne qu’une fois : 1000 × 1.03 = 1030."
+     }
+    ]
+   }
+  ]
+ }
+}

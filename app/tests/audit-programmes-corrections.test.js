@@ -35,7 +35,7 @@ test('SQL : l’astérisque est conservé dans les questions tirées du cours',(
  expect(sql).not.toContain('SELECT = toutes')
 })
 test('pas de distracteurs temporels équivalents sur plusieurs tirages',()=>{
- const t=C.ALL_CHAPTERS['hg-h3'];const ch=C.themeChapters(t).find(ch=>JSON.stringify(ch.section).includes('Les **années 1950-1960**'))
+ const t=C.ALL_CHAPTERS['hg-h3'];const ch=C.themeChapters(t).find(ch=>JSON.stringify(ch.section).includes('1950-1960'))
  expect(ch).toBeTruthy()
  for(let n=0;n<20;n++)avecGraine(String(n),()=>{
   for(const g of C.jeuxDuChapitre(ch,t))for(const q of g.questions||[])if(q.choices){
