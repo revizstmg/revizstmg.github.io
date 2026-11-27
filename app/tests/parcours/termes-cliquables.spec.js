@@ -80,7 +80,7 @@ test('un terme de la fiche ouvre sa définition sans ouvrir le lecteur ; dans le
   await page.keyboard.press('Escape')
   await expect(page.locator('.terme-def')).toHaveCount(0)
   // Le lecteur s'ouvre en touchant la fiche ailleurs ; un terme y ouvre sa définition devant lui.
-  await page.locator('.reader-a4').first().click({ position: { x: 6, y: 6 } })
+  await page.locator('.reader-a4').first().click({ position: { x: 6, y: 320 } })
   await expect(page.locator('.reader-full')).toBeVisible()
   await page.locator('.reader-full .terme-clic').first().click()
   const def = page.locator('.terme-def')

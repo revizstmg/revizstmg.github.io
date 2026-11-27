@@ -517,7 +517,7 @@ export function Block({ b, color }) {
       // Début de chapitre : une situation concrète qui donne envie de comprendre ce qui suit.
       return (
         <div className="course-callout course-accroche rounded-2xl border-2 p-4" style={{ borderColor: color, background: `color-mix(in srgb, ${color} 8%, transparent)` }}>
-          <p className="mb-1 text-xs font-bold uppercase tracking-wide" style={{ color: 'var(--c-accent-texte)' }}>{b.emoji || '🎬'} {b.h || 'Imagine…'}</p>
+          <p className="mb-1 text-xs font-bold uppercase tracking-wide text-slate-600 dark:text-slate-300">{b.emoji || '🎬'} {b.h || 'Imagine…'}</p>
           <p className="whitespace-pre-line text-[15px] font-medium leading-relaxed text-slate-800 dark:text-slate-100"><CourseText text={b.c} /></p>
         </div>
       )
