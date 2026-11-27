@@ -249,6 +249,7 @@ function Comptes({ filtreInitial = {}, onFiltre }) {
 function Divers({ section, ouvertsInitial = false }) {
   const [etat, setEtat] = useState({ charge: false })
   const [seulementOuverts, setSeulementOuverts] = useState(ouvertsInitial)
+  const [erreurSig, setErreurSig] = useState('')
   useEffect(() => {
     let vivant = true
     appelAdmin('revizstmg_admin_divers').then((r) => { if (vivant) setEtat({ charge: true, ...r }) })
@@ -284,6 +285,13 @@ function Divers({ section, ouvertsInitial = false }) {
       </div>
     )
   }
+  const basculer = async (s) => {
+    const traite = !s.traite
+    const r = await appelAdmin('revizstmg_admin_signalement_traite', { p_id: s.id, p_traite: traite })
+    if (!r.ok) { setErreurSig(r.erreur || 'Échec'); return }
+    setErreurSig('')
+    setEtat((e) => ({ ...e, data: { ...e.data, signalements: e.data.signalements.map((x) => (x.id === s.id ? { ...x, traite } : x)) } }))
+  }
   const liste = d.signalements.filter((s) => !seulementOuverts || !s.traite)
   return (
     <section className="adm-bloc" style={{ marginTop: 0 }} lang="fr" data-no-translate>
@@ -292,6 +300,7 @@ function Divers({ section, ouvertsInitial = false }) {
         <button type="button" className="adm-onglet" aria-pressed={seulementOuverts} onClick={() => setSeulementOuverts((v) => !v)}>{seulementOuverts ? 'Seulement à traiter' : 'Tous'}</button>
         <span><b>{liste.length}</b> signalement(s)</span>
       </div>
+      {erreurSig && <p role="alert" className="adm-erreur">Erreur : {erreurSig}</p>}
       {liste.length ? (
         <ul className="adm-liste">
           {liste.map((s) => (
@@ -299,6 +308,7 @@ function Divers({ section, ouvertsInitial = false }) {
               <span className="adm-etat">{s.traite ? '✅ Traité' : '🟠 À traiter'} · {dateFr(s.cree)} · {s.auteur || 'anonyme'}</span>
               <span className="adm-meta">{s.page} {s.theme || ''} {s.exercice || ''} · {s.categorie}</span>
               <span className="adm-message">{s.message}</span>
+              <button type="button" className="adm-onglet" onClick={() => basculer(s)}>{s.traite ? 'Rouvrir' : '✅ Marquer traité'}</button>
             </li>
           ))}
         </ul>

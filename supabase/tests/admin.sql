@@ -42,3 +42,11 @@ update public.revizstmg_abonnements set stripe_subscription_id='sub_x', statut='
 select pg_temp.essai('admin : rétrograder un vrai abonnement Stripe', 'authenticated', 'dddddddd-0000-4000-8000-000000000004', $$select public.revizstmg_admin_abonnement('dddddddd-0000-4000-8000-000000000004','gratuit')$$);
 select pg_temp.essai('admin : aperçu enrichi', 'authenticated', 'dddddddd-0000-4000-8000-000000000004', 'select public.revizstmg_admin_apercu()');
 select pg_temp.essai('admin : comptes enrichis', 'authenticated', 'dddddddd-0000-4000-8000-000000000004', 'select public.revizstmg_admin_comptes()');
+
+-- Signalement : seuls les administrateurs peuvent le marquer traité.
+insert into public.revizstmg_signalements (id, page, message) values ('99999999-0000-4000-8000-0000000000aa', 'test', 'message de test') on conflict do nothing;
+select pg_temp.essai('élève : marquer traité', 'authenticated', 'aaaaaaaa-0000-4000-8000-000000000001', $$select public.revizstmg_admin_signalement_traite('99999999-0000-4000-8000-0000000000aa', true)$$);
+select pg_temp.essai('anonyme : marquer traité', 'anon', '', $$select public.revizstmg_admin_signalement_traite('99999999-0000-4000-8000-0000000000aa', true)$$);
+select pg_temp.essai('admin : signalement inconnu', 'authenticated', 'dddddddd-0000-4000-8000-000000000004', $$select public.revizstmg_admin_signalement_traite('99999999-0000-4000-8000-0000000000bb', true)$$);
+select pg_temp.essai('admin : marquer traité', 'authenticated', 'dddddddd-0000-4000-8000-000000000004', $$select public.revizstmg_admin_signalement_traite('99999999-0000-4000-8000-0000000000aa', true)$$);
+select 'traité : ' || traite from public.revizstmg_signalements where id = '99999999-0000-4000-8000-0000000000aa';
