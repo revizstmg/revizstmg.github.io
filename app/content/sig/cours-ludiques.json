@@ -1,0 +1,1559 @@
+{
+ "sig-t1": {
+  "intro": "Tu tapes ta commande sur une borne et, en un éclair, la cuisine, le stock et la caisse sont au courant. Magie ? Non : système d’information ! Découvre comment l’information est collectée, rangée, calculée et envoyée, et pourquoi le PGI évite de tout ressaisir.",
+  "sections": [
+   {
+    "h": "🧠 Le système d’information et le PGI : une saisie unique, en temps réel",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🍔",
+      "h": "Mini-histoire",
+      "c": "Tu tapes ton menu sur la borne du fast-food. Trois secondes plus tard, la cuisine lance ton burger, le stock de pain baisse et la caisse sait que tu as payé. Qui a prévenu tout ce monde ?"
+     },
+     {
+      "t": "p",
+      "c": "Le **système d’information (SI)** est le « système nerveux » de l’entreprise : l’ensemble des ressources (humaines, matérielles, logicielles) qui **collectent, stockent, traitent et diffusent** l’information."
+     },
+     {
+      "t": "list",
+      "c": [
+       "On **collecte** quand on saisit la commande d’un client.",
+       "On **stocke** quand elle est enregistrée dans la base de données.",
+       "On **traite** quand le système calcule le montant et édite la facture.",
+       "On **diffuse** quand l’information part au bon service (entrepôt, comptabilité)."
+      ]
+     },
+     {
+      "t": "example",
+      "h": "Fil rouge : Burger Zap",
+      "c": "Léa commande 2 menus à 9 € sur la borne (collecte). La commande entre dans la base (stockage), le système calcule 2 × 9 = 18 € et édite le ticket (traitement), puis l’envoie en cuisine et à la compta (diffusion)."
+     },
+     {
+      "t": "tip",
+      "h": "Force du PGI",
+      "c": "Avec un **PGI/ERP** (une seule base partagée), l’information saisie **une fois** est disponible partout : un logiciel unique, une base unique = **fiabilité** et **temps réel**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Système d’information (SI)",
+        "Ressources qui collectent, stockent, traitent et diffusent l’information"
+       ],
+       [
+        "Collecter",
+        "Saisir l’information (la commande)"
+       ],
+       [
+        "Stocker",
+        "L’enregistrer dans une base de données"
+       ],
+       [
+        "Traiter",
+        "Calculer, éditer la facture"
+       ],
+       [
+        "Diffuser",
+        "Envoyer l’information au bon service"
+       ],
+       [
+        "PGI (ERP)",
+        "Progiciel de gestion intégré : un logiciel et une base de données uniques pour tous les services"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Sur la borne, ta commande est enregistrée dans la base de données. Quelle fonction du SI est-ce ?",
+      "a": "Stocker.",
+      "explain": "Collecter, c’est saisir la commande ; stocker, c’est l’enregistrer dans la base de données."
+     }
+    ]
+   },
+   {
+    "h": "🔎 Donnée, information, connaissance : de la donnée à la décision",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔢",
+      "h": "Chiffre fictif",
+      "c": "« 3 » et « 12 € » : ces deux chiffres tout seuls ne servent à rien. Ajoute « menus » et « samedi » et soudain, le patron sait quoi faire. Comment ?"
+     },
+     {
+      "t": "p",
+      "c": "Une **donnée** est brute (« 3 », « 12 € ») : seule, elle ne dit rien. Remise dans son contexte, elle devient une **information** (« on a vendu 3 menus à 12 € le samedi »). Analysée, elle devient une **connaissance** utile pour décider (« le samedi soir marche fort → renforcer l’équipe »)."
+     },
+     {
+      "t": "p",
+      "c": "La finalité du SI est d’**aider à décider**, à tous les niveaux : opérationnel (suivre les stocks) ou stratégique (tableaux de bord des dirigeants). Encore faut-il des données **fiables, à jour et sécurisées**."
+     },
+     {
+      "t": "warning",
+      "h": "Garbage in, garbage out",
+      "c": "Une donnée fausse mène à une mauvaise décision : « garbage in, garbage out »."
+     },
+     {
+      "t": "tip",
+      "h": "Chaîne",
+      "c": "Donnée → information → connaissance : chaque étape **ajoute du sens**. La qualité des données conditionne la qualité des décisions."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Une donnée mise dans son contexte devient une information.",
+      "a": "Vrai : « 3 » devient « 3 menus vendus le samedi ».",
+      "explain": "C’est le contexte qui donne du sens à la donnée brute."
+     }
+    ]
+   },
+   {
+    "h": "💻 Exemple — une commande en ligne : stock, facturation, livraison et PGI",
+    "group": "cas",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "💬",
+      "h": "Dialogue",
+      "c": "— « Pourquoi plus de stock ? »\n— « Et ma facture ? »\nUne commande, quatre services : tout doit rester cohérent."
+     },
+     {
+      "t": "example",
+      "h": "Cas",
+      "c": "Un client passe commande sur un site : la commande, le stock, la facturation et la livraison doivent rester cohérents."
+     },
+     {
+      "t": "list",
+      "c": [
+       "Un **SI** collecte, stocke, traite et **diffuse** l’information entre les services.",
+       "Avec un **PGI/ERP** (base de données **unique**), la commande met à jour le stock, la compta et la logistique **sans ressaisie**.",
+       "Résultat : moins d’erreurs, information fiable en temps réel."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Clé",
+      "c": "PGI = un seul logiciel, une seule base → l’information saisie une fois est disponible partout."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Dans un PGI/ERP, pourquoi aucune ressaisie entre services ?\nA) Chaque service a sa base\nB) Les employés s’écrivent\nC) La base de données est unique",
+      "a": "C) La base de données est unique.",
+      "explain": "Une base unique évite ressaisies et incohérences."
+     }
+    ]
+   },
+   {
+    "h": "💻 Le système d’information : collecter, stocker, traiter, diffuser",
+    "group": "approf",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎬",
+      "h": "Défi lancé",
+      "c": "Quatre verbes, toujours dans le même ordre, font tourner toute l’entreprise : saisir, ranger, calculer, envoyer. Saurais-tu les retrouver dans une simple vente en caisse ?"
+     },
+     {
+      "t": "p",
+      "c": "Le **système d’information (SI)** est l’ensemble des ressources (humaines, matérielles, logicielles) qui permettent de **collecter, stocker, traiter et diffuser** l’information. Sans lui, impossible de décider et de coordonner."
+     },
+     {
+      "t": "p",
+      "c": "Les quatre fonctions s’enchaînent toujours dans le même ordre. Première fonction, **collecter** : la caissière scanne un produit. On doit ensuite **stocker** : enregistrer durablement, en général dans une base de données. Vient le **traitement** : calculer le total, éditer une facture. Enfin, le SI **diffuse** : il transmet l’information au bon service ou au client, au bon moment."
+     },
+     {
+      "t": "p",
+      "c": "Ne confonds pas : la **donnée** est un fait brut (« 42 »), l’**information** est une donnée mise en contexte (« 42 ventes aujourd’hui »), la **connaissance** est l’information interprétée pour décider (« les ventes montent, il faut réapprovisionner »)."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Le SI = **collecter → stocker → traiter → diffuser** l’information. Il transforme des **données** brutes en **information** utile puis en **connaissance** pour décider."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Système d’information (SI)",
+        "Ressources humaines, matérielles et logicielles qui collectent, stockent, traitent et diffusent l’information"
+       ],
+       [
+        "Collecter",
+        "Faire entrer l’information dans le SI (saisir une commande, scanner un produit)"
+       ],
+       [
+        "Stocker",
+        "Enregistrer l’information durablement, dans une base de données"
+       ],
+       [
+        "Traiter",
+        "Transformer l’information (calculer un total, éditer une facture)"
+       ],
+       [
+        "Diffuser",
+        "Transmettre l’information au bon service ou au client"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe ces quatre actions en « collecter » ou « diffuser » : (a) un vendeur saisit une commande, (b) envoyer la facture au client, (c) une caissière scanne un produit, (d) transmettre la commande à l’entrepôt.",
+      "a": "Collecter : (a) et (c). Diffuser : (b) et (d).",
+      "explain": "Collecter = faire entrer l’information dans le SI ; diffuser = la transmettre au bon destinataire."
+     }
+    ]
+   },
+   {
+    "h": "📈 Le SI, outil d’aide à la décision : la bonne information au bon moment",
+    "group": "approf",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧭",
+      "h": "Question qui pique",
+      "c": "Le patron de Burger Zap doit décider : embaucher pour le samedi soir ou non ? Avec quelles informations, venant de qui, et pour quand ?"
+     },
+     {
+      "t": "p",
+      "c": "La finalité du SI est d’**aider à la décision** à tous les niveaux. Un bon SI fournit la **bonne information**, à la **bonne personne**, au **bon moment**, sous une forme **exploitable**."
+     },
+     {
+      "t": "list",
+      "c": [
+       "Au niveau **opérationnel** : suivre les stocks, les commandes, la production au quotidien.",
+       "Au niveau **stratégique** : tableaux de bord, analyses de tendances pour les dirigeants."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Le **PGI (progiciel de gestion intégré)**, ou ERP, est un logiciel unique qui gère toutes les fonctions de l’entreprise (ventes, achats, stocks, comptabilité, RH) autour d’une **base de données commune**. Avantage : une **seule saisie** met à jour tous les services. Inconvénient : coût et rigidité."
+     },
+     {
+      "t": "warning",
+      "h": "Garbage in, garbage out",
+      "c": "Un SI de **qualité** repose sur des données **fiables, à jour, complètes et sécurisées**. Une donnée fausse mène à une mauvaise décision."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Un **PGI/ERP** centralise l’information dans une **base commune** : une saisie, tous les services à jour. La **qualité des données** conditionne la qualité des décisions."
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus parmi les qualités attendues des données d’un SI :\nA) Fiables\nB) Éclatées entre services\nC) À jour\nD) Sécurisées",
+      "a": "B) Éclatées entre services.",
+      "explain": "Des données éclatées entre services sont un défaut ; les trois autres sont des qualités attendues."
+     }
+    ]
+   },
+   {
+    "h": "🔗 Les processus : modéliser pour repérer les dysfonctionnements",
+    "group": "approf",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🗺️",
+      "h": "Mini-histoire",
+      "c": "À Burger Zap, une commande met 12 minutes à sortir. Personne ne sait pourquoi. Le gérant dessine alors toutes les étapes sur un grand papier… et trouve le coupable."
+     },
+     {
+      "t": "p",
+      "c": "Le fonctionnement de l’organisation s’analyse en **processus** : une suite d’activités qui transforment des entrées en sorties (ex. « traiter une commande » : réception → vérification stock → préparation → facturation → expédition)."
+     },
+     {
+      "t": "p",
+      "c": "On **représente** ces processus par des schémas (diagrammes de flux) : qui fait quoi, dans quel ordre, quelles informations circulent. Cela aide à **repérer les dysfonctionnements** (étapes inutiles, ressaisies, goulots) et à **améliorer** l’organisation."
+     },
+     {
+      "t": "example",
+      "h": "Illustration — une commande Burger Zap",
+      "c": "Saisie sur la borne (collecte) → transmission en cuisine (diffusion) → suivi de préparation (traitement) → encaissement (traitement) → mise à jour des stocks (stockage). Le SI relie tous ces maillons en temps réel."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Un **processus** transforme des entrées en sorties via une suite d’activités. Le **modéliser** permet de repérer et corriger les dysfonctionnements."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « Modéliser un processus sert à ajouter des étapes inutiles. » Trouve l’erreur.",
+      "a": "Au contraire : modéliser sert à repérer les étapes inutiles, les ressaisies et les goulots.",
+      "explain": "Le schéma du processus montre où l’organisation perd du temps, pour l’améliorer."
+     }
+    ]
+   },
+   {
+    "h": "💻 Étude de cas guidée — données éclatées entre services : passer à un PGI",
+    "group": "cas",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🕵️",
+      "h": "Défi lancé",
+      "c": "Enquête : dans un commerce, la caisse dit « 5 en stock », la réserve dit « 2 », les achats disent « 9 ». Un seul de ces services a raison… ou aucun. À toi de trouver pourquoi."
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Un commerce constate des erreurs de stock (ruptures et sur-stocks) car chaque service (caisse, réserve, achats) tient ses propres tableaux. Analysez et proposez."
+     },
+     {
+      "t": "example",
+      "h": "Étape 1 — Le problème",
+      "c": "Des **données éclatées et non partagées** : chaque service a sa version, d’où des incohérences. Le SI ne remplit pas sa fonction de diffusion d’une information fiable et commune."
+     },
+     {
+      "t": "example",
+      "h": "Étape 2 — Solution",
+      "c": "Mettre en place un **PGI** (base de données commune) : une vente en caisse met à jour **automatiquement** le stock et alerte les achats. Une seule information, partagée, à jour."
+     },
+     {
+      "t": "p",
+      "c": "**Commentaire.** Le PGI supprime les ressaisies et les incohérences, fiabilise les stocks et aide à décider (réapprovisionnement au bon moment). Coût et conduite du changement sont les principales limites à anticiper."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Repérer le **dysfonctionnement du SI** (données non partagées, ressaisies) → proposer une solution (PGI, base commune) → peser **avantages et limites**."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Pourquoi les stocks de ce commerce sont-ils faux ?\nA) Chaque service tient ses propres tableaux : les données ne sont pas partagées\nB) Le PGI est trop rapide\nC) Les clients saisissent eux-mêmes les stocks",
+      "a": "A) Chaque service tient ses propres tableaux : les données ne sont pas partagées.",
+      "explain": "Des données éclatées créent des incohérences ; un PGI avec base commune les supprime."
+     }
+    ]
+   },
+   {
+    "h": "💻 Composants et rôle du système d’information",
+    "group": "approf",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏃",
+      "h": "Défi lancé",
+      "c": "Quatre gestes pour quatre fonctions : saisir, conserver, calculer, transmettre. Dans une pizzeria, associe chaque geste à la bonne fonction du SI avant la fin du service !"
+     },
+     {
+      "t": "p",
+      "c": "Le **système d’information (SI)** rassemble les ressources (humaines, matérielles, logicielles) qui **collectent, stockent, traitent et diffusent** l’information. C’est le « système nerveux » de l’organisation."
+     },
+     {
+      "t": "p",
+      "c": "**Collecter**, c’est faire entrer l’information, par exemple en saisissant une commande. **Stocker**, c’est la conserver de façon organisée, en général dans une base de données."
+     },
+     {
+      "t": "p",
+      "c": "**Traiter**, c’est transformer l’information pour qu’elle serve : calculer un total, éditer un document comme une facture. **Diffuser**, c’est la transmettre au bon service ou à la bonne personne, pour qu’elle puisse agir ou décider."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "SI = **collecter → stocker → traiter → diffuser** l’information."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Système d’information (SI)",
+        "Ressources qui collectent, stockent, traitent et diffusent l’information"
+       ],
+       [
+        "Collecter",
+        "Faire entrer l’information (saisir une commande)"
+       ],
+       [
+        "Stocker",
+        "Conserver l’information (base de données)"
+       ],
+       [
+        "Traiter",
+        "Calculer, éditer un document"
+       ],
+       [
+        "Diffuser",
+        "Transmettre l’information au bon service"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Calculer un total et éditer une facture, c’est collecter l’information.",
+      "a": "Faux : c’est traiter l’information.",
+      "explain": "Collecter = faire entrer l’information ; traiter = la transformer (calculer, éditer)."
+     }
+    ]
+   },
+   {
+    "h": "📈 SI et aide à la décision (PGI) : base commune et qualité des données",
+    "group": "approf",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎯",
+      "h": "Question qui pique",
+      "c": "Une seule saisie, et tous les services sont à jour. Magique ? Non : c’est le PGI."
+     },
+     {
+      "t": "p",
+      "c": "Le SI aide à **décider**. Le **PGI (ERP)** est un logiciel unique autour d’une **base commune** : une saisie met à jour tous les services."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Chaîne : **donnée** (fait brut) → **information** (en contexte) → **connaissance** (pour décider). PGI = base **commune**, une saisie unique ; la **qualité des données** fait la qualité des décisions."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Quelle est la différence entre une donnée et une information ?",
+      "a": "La donnée est un fait brut ; l’information est une donnée mise en contexte.",
+      "explain": "« 42 » est une donnée ; « 42 ventes aujourd’hui » est une information."
+     }
+    ]
+   }
+  ]
+ },
+ "sig-t2": {
+  "intro": "Comment une appli retrouve-t-elle la playlist de Léa parmi des millions de titres ? Grâce à une base de données relationnelle et à un langage qui lui parle : le SQL. Ici, tu apprends à lire et à écrire tes premières requêtes, comme un pro.",
+  "sections": [
+   {
+    "h": "🗄️ La base de données relationnelle : tables, clés primaires et étrangères",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎵",
+      "h": "Dialogue",
+      "c": "— « Montre-moi les chansons de la playlist de Léa. »\n— « Parmi des millions de titres, avec un simple tableur ? »\nComment l’appli retrouve ça en un clin d’œil ?"
+     },
+     {
+      "t": "example",
+      "h": "Cas",
+      "c": "Une appli musicale doit relier des millions d’utilisateurs, de titres et de playlists, et retrouver instantanément « les chansons de la playlist de Léa »."
+     },
+     {
+      "t": "p",
+      "c": "Impossible avec un simple tableur. On utilise une **base de données relationnelle** : des **tables** (utilisateurs, titres, playlists) reliées entre elles par des **clés**. C’est ce qui évite de tout réécrire et garde les données cohérentes."
+     },
+     {
+      "t": "p",
+      "c": "Une **table** est un tableau de données sur un même sujet, comme CLIENTS. Un **enregistrement** est une ligne : un client précis. Un **champ** est une colonne : une caractéristique comme le nom ou la ville."
+     },
+     {
+      "t": "p",
+      "c": "La **clé primaire** est l’identifiant unique de chaque ligne : aucune autre ligne n’a la même valeur. La **clé étrangère** est le lien vers une autre table : elle reprend la clé primaire de cette autre table."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Base relationnelle = **tables** liées par des **clés**. Clé **primaire** = identifiant unique ; clé **étrangère** = lien vers une autre table. Astuce : la clé étrangère vient d’une autre table, comme une étrangère vient d’ailleurs."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Base de données relationnelle",
+        "Ensemble de tables reliées entre elles par des clés"
+       ],
+       [
+        "Table",
+        "Tableau de données sur un même sujet (ex. CLIENTS)"
+       ],
+       [
+        "Enregistrement",
+        "Une ligne (un client précis)"
+       ],
+       [
+        "Champ",
+        "Une colonne (nom, ville…)"
+       ],
+       [
+        "Clé primaire",
+        "Identifiant unique de la ligne"
+       ],
+       [
+        "Clé étrangère",
+        "Lien vers une autre table"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Dans la table COMMANDES, le champ id_client reprend l’identifiant de la table CLIENTS. De quel type de clé s’agit-il ?\nA) Clé primaire de COMMANDES\nB) Clé étrangère\nC) Un simple champ de tri",
+      "a": "B) Clé étrangère.",
+      "explain": "Un champ qui reprend la clé primaire d’une autre table est une clé étrangère."
+     }
+    ]
+   },
+   {
+    "h": "🔍 Interroger la base en SQL : requêtes, calculs et jointures",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🤖",
+      "h": "Défi lancé",
+      "c": "Tu veux la liste des clients de Lyon, classés de A à Z. Tu peux le demander à la base, mais seulement dans sa langue : le SQL. Premier mot à apprendre ?"
+     },
+     {
+      "t": "p",
+      "c": "Pour interroger la base, on écrit une **requête** en langage **SQL**. La structure de base : choisir les colonnes (**SELECT**), la table (**FROM**), filtrer (**WHERE**), trier (**ORDER BY**)."
+     },
+     {
+      "t": "example",
+      "h": "Requête",
+      "c": "Nom et ville des clients de Lyon, triés par nom :\nSELECT nom, ville\nFROM CLIENTS\nWHERE ville = 'Lyon'\nORDER BY nom ;"
+     },
+     {
+      "t": "p",
+      "c": "On peut aussi **calculer** avec les fonctions d’agrégation (COUNT, SUM, AVG…) et **croiser** deux tables par une **jointure** (égalité des clés). Ex. : `SELECT COUNT(*) FROM CLIENTS WHERE ville = 'Lyon'` compte les clients lyonnais."
+     },
+     {
+      "t": "tip",
+      "h": "Lis-la comme une phrase",
+      "c": "SELECT = je veux quoi, FROM = dans quelle table, WHERE = sous quelle condition, ORDER BY = trié comment."
+     },
+     {
+      "t": "warning",
+      "h": "Pièges classiques",
+      "c": "WHERE filtre **avant** regroupement, HAVING **après** un GROUP BY. Et sans condition de **jointure** entre deux tables, on obtient toutes les combinaisons (produit cartésien). Ne pas oublier le **point-virgule** et les **apostrophes** autour du texte."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « HAVING filtre les lignes avant le regroupement GROUP BY. » Trouve l’erreur.",
+      "a": "C’est WHERE qui filtre avant le regroupement ; HAVING filtre après un GROUP BY.",
+      "explain": "WHERE agit sur les lignes avant regroupement, HAVING sur les groupes déjà formés."
+     }
+    ]
+   },
+   {
+    "h": "💻 Exemple — les clients de Lyon : SELECT, WHERE, ORDER BY",
+    "group": "cas",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🚀",
+      "h": "Mini-histoire",
+      "c": "Le service commercial veut écrire aux clients lyonnais, dans l’ordre alphabétique. Une requête de quatre lignes suffit."
+     },
+     {
+      "t": "example",
+      "h": "Besoin",
+      "c": "Table Client(id_client, nom, ville). On veut le nom des clients de Lyon, classés par ordre alphabétique."
+     },
+     {
+      "t": "formula",
+      "c": "SELECT nom\nFROM Client\nWHERE ville = 'Lyon'\nORDER BY nom ;"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**SELECT** choisit les colonnes ; **FROM** la table ; **WHERE** filtre les lignes ; **ORDER BY** trie.",
+       "Pour compter : SELECT COUNT(*) FROM Client WHERE ville = 'Lyon' ;"
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Piège",
+      "c": "WHERE filtre AVANT regroupement, HAVING filtre APRÈS un GROUP BY. Et n’oublie jamais la condition de jointure entre deux tables."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Sur 12 clients, 5 vivent à Lyon. Que renvoie SELECT COUNT(*) FROM Client WHERE ville = 'Lyon' ; ?",
+      "a": "5.",
+      "explain": "COUNT(*) compte les lignes qui passent le filtre WHERE."
+     }
+    ]
+   },
+   {
+    "h": "🗄️ Le modèle relationnel : clé primaire, clé étrangère, relations",
+    "group": "approf",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📇",
+      "h": "Question qui pique",
+      "c": "Dans une base, pourquoi deux clients qui s’appellent tous les deux Martin ne sont-ils jamais confondus ? Et comment une commande sait-elle à quel client elle appartient ?"
+     },
+     {
+      "t": "p",
+      "c": "Une **base de données** organise et stocke l’information de façon structurée pour la retrouver facilement. Le modèle le plus répandu est le **modèle relationnel** : les données sont rangées dans des **tables** (comme des tableaux)."
+     },
+     {
+      "t": "p",
+      "c": "Une **table**, aussi appelée **relation**, est un tableau consacré à un seul sujet (CLIENTS). Chaque **enregistrement**, ou ligne, est un élément précis : un client donné. Chaque **champ**, ou colonne, décrit une caractéristique commune : le nom, la ville, l’adresse e-mail."
+     },
+     {
+      "t": "p",
+      "c": "La **clé primaire** est l’identifiant **unique** de chaque enregistrement, par exemple id_client : deux lignes ne peuvent jamais avoir la même valeur. La **clé étrangère** est un champ qui reprend la clé primaire d’une autre table : elle crée les **relations** entre les tables."
+     },
+     {
+      "t": "example",
+      "h": "Fil rouge",
+      "c": "La table COMMANDES contient id_client (clé étrangère) qui pointe vers la table CLIENTS : inutile de répéter le nom du client à chaque commande. C’est ce qui évite de tout répéter."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Base relationnelle = **tables** liées par des **clés**. Clé **primaire** = identifiant unique ; clé **étrangère** = lien vers une autre table."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Table (relation)",
+        "Tableau de données sur un même sujet (ex. CLIENTS)"
+       ],
+       [
+        "Enregistrement (ligne)",
+        "Un élément précis de la table (ex. un client)"
+       ],
+       [
+        "Champ (colonne)",
+        "Une caractéristique des enregistrements (nom, ville, e-mail)"
+       ],
+       [
+        "Clé primaire",
+        "Identifiant unique de chaque enregistrement (ex. id_client)"
+       ],
+       [
+        "Clé étrangère",
+        "Champ qui reprend la clé primaire d’une autre table et crée le lien entre les tables"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "La clé étrangère d’une table reprend la clé primaire d’une autre table.",
+      "a": "Vrai : c’est ce qui crée le lien entre les deux tables.",
+      "explain": "Exemple : id_client dans COMMANDES reprend la clé primaire id_client de CLIENTS."
+     }
+    ]
+   },
+   {
+    "h": "🔍 Le langage SQL : interroger la base",
+    "group": "approf",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🗣️",
+      "h": "Défi lancé",
+      "c": "Une base de données ne comprend ni le français ni l’anglais courant. Elle comprend une phrase très stricte en quatre morceaux. Retrouve-les !"
+     },
+     {
+      "t": "p",
+      "c": "Le **SQL (Structured Query Language)** est le langage qui permet de **poser des questions** à une base de données (« requêtes »). La requête de base sélectionne des colonnes, dans une table, selon une condition."
+     },
+     {
+      "t": "formula",
+      "c": "SELECT colonnes\nFROM table\nWHERE condition\nORDER BY colonne ;"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**SELECT** : les colonnes à afficher (SELECT * = toutes).",
+       "**FROM** : la table concernée.",
+       "**WHERE** : la condition de filtrage (=, <, >, AND, OR, LIKE).",
+       "**ORDER BY** : le tri (ASC croissant, DESC décroissant)."
+      ]
+     },
+     {
+      "t": "example",
+      "h": "Requête simple",
+      "c": "Afficher le nom et la ville des clients de Paris, triés par nom :\nSELECT nom, ville\nFROM CLIENTS\nWHERE ville = 'Paris'\nORDER BY nom ;"
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Structure de base : **SELECT** (quoi) **FROM** (où) **WHERE** (quelle condition) **ORDER BY** (quel tri). Ne pas oublier le **point-virgule** final et les **apostrophes** autour du texte."
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Parmi ces éléments, lequel ne sert pas à écrire une condition dans WHERE ?\nA) =\nB) LIKE\nC) AND\nD) ASC",
+      "a": "D) ASC.",
+      "explain": "ASC sert à trier (ORDER BY) ; =, LIKE et AND s’utilisent dans une condition WHERE."
+     }
+    ]
+   },
+   {
+    "h": "🧮 Fonctions d’agrégation et jointures",
+    "group": "approf",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧮",
+      "h": "Question qui pique",
+      "c": "Combien de clients ? Quel chiffre d’affaires ? Quel panier moyen ? Qui a acheté quoi ? Compter à la main 10 000 lignes ? Non merci : le SQL calcule à ta place."
+     },
+     {
+      "t": "p",
+      "c": "Le SQL permet de **calculer** sur des ensembles de lignes grâce aux **fonctions d’agrégation**, et de **croiser** plusieurs tables avec les **jointures**."
+     },
+     {
+      "t": "p",
+      "c": "**COUNT()** compte le nombre de lignes : combien de clients habitent à Paris. **SUM()** additionne une colonne numérique, par exemple les montants pour obtenir le chiffre d’affaires total."
+     },
+     {
+      "t": "p",
+      "c": "**AVG()** calcule la moyenne d’une colonne, comme le panier moyen. **MAX()** et **MIN()** renvoient la plus grande et la plus petite valeur. Une fonction d’agrégation renvoie un seul résultat pour tout un ensemble de lignes."
+     },
+     {
+      "t": "example",
+      "h": "Agrégation",
+      "c": "Chiffre d’affaires total des commandes :\nSELECT SUM(montant) FROM COMMANDES ;\nNombre de clients parisiens :\nSELECT COUNT(*) FROM CLIENTS WHERE ville = 'Paris' ;"
+     },
+     {
+      "t": "p",
+      "c": "La **jointure** relie deux tables via leur clé commune pour combiner leurs informations. On précise l’égalité des clés dans le WHERE (ou avec JOIN … ON)."
+     },
+     {
+      "t": "example",
+      "h": "Jointure",
+      "c": "Nom du client et montant de ses commandes :\nSELECT CLIENTS.nom, COMMANDES.montant\nFROM CLIENTS, COMMANDES\nWHERE CLIENTS.id_client = COMMANDES.id_client ;"
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Agrégation = **calculer** (COUNT, SUM, AVG…). Jointure = **croiser** deux tables via leur **clé commune**. Souvent combinées avec GROUP BY pour des totaux par catégorie."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Fonction d’agrégation",
+        "Fonction SQL qui calcule un seul résultat à partir d’un ensemble de lignes"
+       ],
+       [
+        "COUNT()",
+        "Compte le nombre de lignes"
+       ],
+       [
+        "SUM()",
+        "Additionne les valeurs d’une colonne"
+       ],
+       [
+        "AVG()",
+        "Calcule la moyenne d’une colonne"
+       ],
+       [
+        "MAX() / MIN()",
+        "Renvoie la valeur maximale / minimale d’une colonne"
+       ],
+       [
+        "Jointure",
+        "Requête qui croise plusieurs tables grâce à la clé étrangère"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe ces besoins en « fonction d’agrégation » ou « jointure » : (a) obtenir le chiffre d’affaires total, (b) afficher le nom du client avec le montant de ses commandes, (c) connaître le panier moyen, (d) relier CLIENTS et COMMANDES par id_client.",
+      "a": "Fonction d’agrégation : (a) et (c). Jointure : (b) et (d).",
+      "explain": "Agrégation = un résultat calculé sur plusieurs lignes ; jointure = croiser deux tables via leur clé."
+     }
+    ]
+   },
+   {
+    "h": "💻 Étude de cas guidée — requêtes sur une table PRODUITS : filtrer, trier, regrouper",
+    "group": "cas",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🛒",
+      "h": "Défi lancé",
+      "c": "Le gérant de la boutique te donne trois missions : les produits bon marché, le nombre de boissons, le prix moyen par catégorie. Trois questions, trois requêtes : à toi de jouer !"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Base avec une table PRODUITS(id_produit, nom, prix, categorie). Écrire les requêtes demandées."
+     },
+     {
+      "t": "example",
+      "h": "Q1 — Produits de moins de 10 €, triés par prix",
+      "c": "SELECT nom, prix\nFROM PRODUITS\nWHERE prix < 10\nORDER BY prix ASC ;"
+     },
+     {
+      "t": "example",
+      "h": "Q2 — Nombre de produits dans la catégorie « Boissons »",
+      "c": "SELECT COUNT(*)\nFROM PRODUITS\nWHERE categorie = 'Boissons' ;"
+     },
+     {
+      "t": "example",
+      "h": "Q3 — Prix moyen des produits par catégorie",
+      "c": "SELECT categorie, AVG(prix)\nFROM PRODUITS\nGROUP BY categorie ;"
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Traduire la question en SQL : **quoi** afficher (SELECT), **où** (FROM), **quelle condition** (WHERE), **quel tri/regroupement** (ORDER BY / GROUP BY). Vérifier apostrophes et point-virgule."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Écris la requête qui affiche le nom des produits de la catégorie « Boissons ».",
+      "a": "SELECT nom FROM PRODUITS WHERE categorie = 'Boissons' ;",
+      "explain": "SELECT choisit nom, FROM la table PRODUITS, WHERE filtre sur la catégorie (texte entre apostrophes)."
+     }
+    ]
+   }
+  ]
+ },
+ "sig-t3": {
+  "intro": "Imagine un dossier écrit à trois, depuis trois villes, sans jamais s’écraser le travail. Dans ce thème, tu découvres les outils qui rendent ça possible, l’intelligence collective qui en naît, et les nouvelles règles du jeu du travail numérique.",
+  "sections": [
+   {
+    "h": "☁️ Outils collaboratifs et intelligence collective : coédition, cloud, modération",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🌍",
+      "h": "Question qui pique",
+      "c": "À 21 h, tu corriges une faute sur une page Wikipédia. À 21 h 01, un inconnu à l’autre bout du monde modifie la même page. Ton travail a-t-il disparu ?"
+     },
+     {
+      "t": "example",
+      "h": "Cas",
+      "c": "Un article de Wikipédia est modifié par des milliers de contributeurs, partout dans le monde, sans que le travail des uns efface celui des autres."
+     },
+     {
+      "t": "p",
+      "c": "Le secret : des outils **collaboratifs**. Un espace **partagé**, la **coédition** (plusieurs personnes modifient en même temps) et surtout un **historique des versions** qui garde la trace de chaque modification et permet de revenir en arrière. Ils reposent souvent sur le **cloud** (serveurs distants accessibles via Internet)."
+     },
+     {
+      "t": "p",
+      "c": "Résultat : l’**intelligence collective**. Un groupe produit, ensemble, **plus** que la somme des individus. Mais sans **règles** ni **modération**, le risque de désinformation guette."
+     },
+     {
+      "t": "tip",
+      "h": "Bon réflexe",
+      "c": "Dès qu’on partage, on définit les **droits d’accès** : qui peut lire, qui peut modifier. Le cloud pose aussi des enjeux de **sécurité** et de **dépendance**."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Grâce à l’historique des versions, on peut garder la trace de chaque modification et revenir en arrière.",
+      "a": "Vrai",
+      "explain": "C’est le rôle de l’historique des versions : personne n’écrase le travail des autres."
+     }
+    ]
+   },
+   {
+    "h": "⚡ Le numérique transforme le travail : télétravail, agilité, droit à la déconnexion",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📱",
+      "h": "Dialogue",
+      "c": "— « Tu peux me renvoyer le fichier ? »\n— « Il est 22 h 30, dimanche ! »\n— « Oui mais c’est urgent… »\nQuand le travail te suit partout, qui te protège ?"
+     },
+     {
+      "t": "p",
+      "c": "Messageries, cloud, visioconférence, **télétravail** : on travaille plus vite, à distance, en continu. Des organisations plus **agiles** et flexibles apparaissent."
+     },
+     {
+      "t": "p",
+      "c": "Côté **opportunités** : plus de **flexibilité**, un **gain de temps**, la possibilité de **collaborer à distance**, et l’**automatisation des tâches** répétitives qui libère du temps pour un travail plus utile."
+     },
+     {
+      "t": "p",
+      "c": "Côté **risques**, c’est l’envers de la médaille : la **frontière entre vie professionnelle et vie personnelle** se brouille, le travail à distance peut créer de l’**isolement** et une **perte de lien** avec l’équipe, et la masse de messages entraîne une **surcharge d’informations** et des enjeux de **sécurité**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Le numérique offre **flexibilité et efficacité** mais exige de nouvelles **compétences** et un **droit à la déconnexion** pour protéger les salariés."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Télétravail",
+        "Travail hors des locaux de l’employeur grâce aux outils numériques"
+       ],
+       [
+        "Organisation agile",
+        "Organisation flexible, qui s’adapte vite grâce au numérique"
+       ],
+       [
+        "Opportunités du numérique",
+        "Flexibilité, gain de temps, collaboration à distance, automatisation"
+       ],
+       [
+        "Risques du numérique",
+        "Vie pro/perso brouillée, isolement, surcharge d’informations, sécurité"
+       ],
+       [
+        "Droit à la déconnexion",
+        "Droit de ne pas être joignable en dehors du temps de travail"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quel droit protège le salarié qui ne veut pas répondre aux messages le soir ?\nA) Le droit à la déconnexion\nB) Le droit à la coédition\nC) Le droit à l’historique",
+      "a": "A) Le droit à la déconnexion",
+      "explain": "Le droit à la déconnexion est le droit de ne pas être joignable en dehors du temps de travail."
+     }
+    ]
+   },
+   {
+    "h": "💻 Exemple — un dossier à trois, à distance : espace partagé et versions",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📁",
+      "h": "Défi lancé",
+      "c": "Léa, Sam et Inès, dans trois villes, rendent un dossier vendredi. Comment éviter vingt versions par mail ?"
+     },
+     {
+      "t": "example",
+      "h": "Cas",
+      "c": "Léa, Sam et Inès rédigent un dossier ensemble, à distance."
+     },
+     {
+      "t": "list",
+      "c": [
+       "Un **espace partagé** (cloud) permet d’écrire à plusieurs sur le même document.",
+       "L’**historique des versions** évite de perdre le travail ou de s’écraser mutuellement.",
+       "Le **numérique** transforme l’organisation : plus de collaboration, mais des enjeux (droits d’accès, sécurité)."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Bon réflexe",
+      "c": "Définir qui peut lire / modifier (droits d’accès) est essentiel dès qu’on partage."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Sam affirme : « Avec un espace partagé, inutile de gérer les droits d’accès, tout le monde fait ce qu’il veut. » Trouve l’erreur.",
+      "a": "Il faut définir les droits d’accès.",
+      "explain": "Ils sont essentiels dès qu’on partage."
+     }
+    ]
+   },
+   {
+    "h": "🤝 Le travail collaboratif : partager, coéditer, communiquer",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "⚽",
+      "h": "Mini-histoire",
+      "c": "Une équipe de foot où chacun joue dans son coin, sans parler ni se passer le ballon, ne gagne jamais. Au travail, c’est pareil : il faut s’organiser pour jouer collectif."
+     },
+     {
+      "t": "p",
+      "c": "Le **travail collaboratif**, c’est travailler **ensemble**, à plusieurs, sur un objectif commun, grâce à des **outils numériques** qui permettent de partager, coéditer et communiquer à distance et en temps réel."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Partage de fichiers** : cloud (Drive, espaces partagés) accessibles partout.",
+       "**Coédition** : plusieurs personnes modifient le même document simultanément.",
+       "**Communication** : messagerie, visioconférence, espaces de discussion.",
+       "**Gestion de projet** : agendas partagés, tableaux de tâches, suivi."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Ces outils reposent souvent sur le **cloud** (informatique « en nuage ») : données et applications sont hébergées sur des serveurs distants, accessibles via internet. Avantages : accessibilité, mise à jour automatique, pas d’installation. Limites : dépendance à la connexion et au prestataire, questions de **sécurité**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Travail collaboratif = **partager, coéditer, communiquer** grâce au numérique (souvent via le **cloud**). Efficace, mais avec des enjeux de sécurité et de dépendance."
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Quel est l’intrus parmi ces outils du travail collaboratif ?\nA) Le partage de fichiers\nB) La coédition\nC) La visioconférence\nD) Le travail en solitaire sans aucun partage",
+      "a": "D) Le travail en solitaire sans aucun partage",
+      "explain": "Les trois autres permettent de partager, coéditer ou communiquer ; le travail isolé n’a rien de collaboratif."
+     }
+    ]
+   },
+   {
+    "h": "🧠 L’intelligence collective : conditions de réussite et risques",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧩",
+      "h": "Chiffre fictif",
+      "c": "Sur un puzzle de 5 000 pièces, tu mettrais des semaines. À 50 personnes, un après-midi suffit. Pourquoi le groupe fait-il mieux que la somme de chacun ?"
+     },
+     {
+      "t": "p",
+      "c": "L’**intelligence collective** est la capacité d’un groupe à produire, ensemble, plus et mieux que la somme des individus. Le numérique la démultiplie en connectant des contributeurs du monde entier."
+     },
+     {
+      "t": "example",
+      "h": "Illustration — Wikipédia",
+      "c": "Wikipédia est écrite et corrigée par des **millions de contributeurs** bénévoles. Aucun individu ne pourrait produire une telle encyclopédie : c’est l’**intelligence collective**, organisée par des outils numériques et des règles communes."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Conditions de réussite** : objectif partagé, règles claires, outils adaptés, diversité des contributeurs, modération.",
+       "**Risques** : désinformation, contributions de mauvaise qualité, conflits, besoin de **contrôle** et de **validation**."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Pour l’entreprise, cela donne le **crowdsourcing** (faire appel à la foule), les plateformes d’idées internes, les communautés de clients. Bien encadrée, elle stimule l’**innovation**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Intelligence collective = le groupe produit **plus que la somme** des individus, grâce au numérique. Elle exige des **règles** et une **modération** pour rester fiable."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Cite deux conditions de réussite de l’intelligence collective.",
+      "a": "Par exemple : un objectif partagé et des règles claires (ou des outils adaptés, la diversité des contributeurs, la modération).",
+      "explain": "Sans règles ni modération, le groupe risque la désinformation et les conflits."
+     }
+    ]
+   },
+   {
+    "h": "🔄 La transformation numérique du travail : télétravail et conduite du changement",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏠",
+      "h": "Mini-histoire",
+      "c": "Maya passe de 2 heures de transport par jour à zéro grâce au télétravail. Mais le soir, elle répond encore aux mails, et ses collègues lui manquent. Gain ou perte ?"
+     },
+     {
+      "t": "p",
+      "c": "Le numérique **transforme** en profondeur l’organisation du travail : **télétravail**, flexibilité des horaires et des lieux, automatisation des tâches répétitives, nouveaux métiers."
+     },
+     {
+      "t": "p",
+      "c": "Les **opportunités** : de la **flexibilité**, on peut **gagner du temps** (moins de trajets), **collaborer à distance** grâce aux outils partagés et à la visio, **automatise les tâches pénibles** ou répétitives, et avoir un **accès à l’information partout**, à tout moment."
+     },
+     {
+      "t": "p",
+      "c": "Les **risques** répondent presque point par point : la **frontière entre vie professionnelle et vie personnelle** se brouille ; le travail à distance crée de l’**isolement** et une **perte de lien social** ; l’automatisation peut faire **disparaître certains emplois** ; l’accès permanent à l’information entraîne une **surcharge informationnelle** et des problèmes de **sécurité** des données."
+     },
+     {
+      "t": "p",
+      "c": "D’où le besoin de **compétences numériques** et d’une **conduite du changement** : accompagner, former, préserver le lien social et le **droit à la déconnexion**. Subie, la transformation fragilise ; anticipée, elle est une opportunité."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "La transformation numérique offre **flexibilité et efficacité** mais brouille les frontières et exige de nouvelles compétences. Le **droit à la déconnexion** protège l’équilibre des salariés."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Télétravail",
+        "Travail effectué hors des locaux de l’employeur grâce aux outils numériques"
+       ],
+       [
+        "Opportunités du numérique",
+        "Flexibilité, gain de temps, collaboration à distance, automatisation des tâches pénibles, information accessible partout"
+       ],
+       [
+        "Risques du numérique",
+        "Frontière vie pro/perso brouillée, isolement, disparition d’emplois, surcharge informationnelle, sécurité"
+       ],
+       [
+        "Droit à la déconnexion",
+        "Droit du salarié de ne pas être joignable en dehors de son temps de travail"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Le télétravail peut créer de l’isolement et une perte de lien social.",
+      "a": "Vrai",
+      "explain": "C’est l’un des risques du numérique, qui appelle une conduite du changement."
+     }
+    ]
+   },
+   {
+    "h": "🏭 Étude de cas guidée — une PME multisite : plateforme collaborative et accompagnement",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📧",
+      "h": "Dialogue",
+      "c": "— « Quelle est la bonne version du devis ? »\n— « Celle du mail de mardi… ou de jeudi ? »\nDans cette PME répartie sur plusieurs sites, personne ne sait plus. À toi de la sauver !"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Une PME dont les équipes sont réparties sur plusieurs sites peine à coordonner ses projets (versions de fichiers multiples, mails perdus). Que proposer ?"
+     },
+     {
+      "t": "example",
+      "h": "Étape 1 — Le problème",
+      "c": "Absence d’outils collaboratifs : fichiers en plusieurs versions, information éparpillée, coordination difficile entre sites distants."
+     },
+     {
+      "t": "example",
+      "h": "Étape 2 — Solution",
+      "c": "Déployer une **plateforme collaborative** (cloud partagé + coédition + gestion de tâches + visioconférence) : un seul document à jour, un suivi de projet commun, une communication centralisée."
+     },
+     {
+      "t": "p",
+      "c": "**Commentaire.** Les gains : fin des versions multiples, collaboration en temps réel, meilleure coordination. À anticiper : la **formation** des équipes, la **sécurité** des données (cloud) et l’**accompagnement du changement**."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Repérer le **problème de coordination** → proposer des **outils collaboratifs** adaptés → peser **bénéfices** (temps réel, cohérence) et **limites** (sécurité, formation)."
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe ces éléments en deux catégories, « Bénéfices » ou « À anticiper » : un seul document à jour ; la formation des équipes ; la collaboration en temps réel ; la sécurité des données dans le cloud.",
+      "a": "Bénéfices : un seul document à jour, la collaboration en temps réel. À anticiper : la formation des équipes, la sécurité des données dans le cloud.",
+      "explain": "Une plateforme collaborative apporte des gains, mais demande formation, sécurité et accompagnement du changement."
+     }
+    ]
+   },
+   {
+    "h": "🤝 Outils collaboratifs et cloud : coédition, versions, droits d’accès",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔑",
+      "h": "Question qui pique",
+      "c": "Un document dans le cloud, accessible partout. Pratique… mais qui peut le modifier ?"
+     },
+     {
+      "t": "p",
+      "c": "Les outils **collaboratifs** : partage de fichiers, **coédition**, **historique des versions**, messagerie, visio. Ils reposent souvent sur le **cloud** (serveurs distants via Internet)."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Cloud = accessibilité et mise à jour automatique, mais enjeux de **sécurité** et de **dépendance**. Définir les **droits d’accès**."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quel est un avantage du cloud ?\nA) Il supprime tout risque de sécurité\nB) Il fonctionne sans aucune connexion\nC) Il offre accessibilité et mise à jour automatique",
+      "a": "C) Il offre accessibilité et mise à jour automatique",
+      "explain": "Le cloud dépend de la connexion et pose des enjeux de sécurité."
+     }
+    ]
+   }
+  ]
+ },
+ "sig-t4": {
+  "intro": "Un clic de travers et un hôpital entier se retrouve paralysé. Dans ce thème, tu apprends comment circulent les informations sur un réseau, comment les protéger (DICP, RGPD) et comment s’organise une application.",
+  "sections": [
+   {
+    "h": "🔒 Rançongiciels et sécurité du SI : les critères DICP",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏥",
+      "h": "Mini-histoire",
+      "c": "Un matin, tous les écrans d’un hôpital affichent : « Vos données sont chiffrées, payez ou tout est perdu. » Dossiers inaccessibles, blocs opératoires ralentis. Que s’est-il passé ?"
+     },
+     {
+      "t": "example",
+      "h": "Cas réel",
+      "c": "Plusieurs hôpitaux français ont été paralysés par des rançongiciels (ransomwares) : des pirates chiffrent les données et exigent une rançon. Résultat : blocs opératoires ralentis, dossiers inaccessibles."
+     },
+     {
+      "t": "p",
+      "c": "La sécurité d’un système d’information vise quatre objectifs (**DICP**) : que l’information reste **Disponible**, **Intègre** (non altérée), **Confidentielle** et **traçable** (Preuve). Une attaque peut viser n’importe lequel, avec des conséquences parfois vitales."
+     },
+     {
+      "t": "p",
+      "c": "La **disponibilité** garantit que l’information est accessible quand on en a besoin : un rançongiciel qui bloque les ordinateurs d’un hôpital s’attaque d’abord à elle. L’**intégrité** garantit qu’elle n’est ni altérée ni falsifiée."
+     },
+     {
+      "t": "p",
+      "c": "La **confidentialité** garantit qu’elle reste réservée aux personnes autorisées (données médicales ou bancaires). La **preuve**, ou **traçabilité**, garantit qu’on sait qui a fait quoi, ce qui permet de comprendre une attaque après coup."
+     },
+     {
+      "t": "tip",
+      "h": "Bases de défense",
+      "c": "Sauvegardes régulières (et hors ligne), mises à jour, pare-feu/antivirus, droits d’accès stricts, **sensibilisation** : les fondamentaux qui limitent les dégâts. Ne **jamais payer** la rançon : restaurer depuis les sauvegardes."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "DICP",
+        "Disponibilité, intégrité, confidentialité, preuve"
+       ],
+       [
+        "Disponibilité",
+        "Information accessible quand on en a besoin"
+       ],
+       [
+        "Intégrité",
+        "Information non altérée, non falsifiée"
+       ],
+       [
+        "Confidentialité",
+        "Information réservée aux personnes autorisées"
+       ],
+       [
+        "Preuve (traçabilité)",
+        "On sait qui a fait quoi"
+       ],
+       [
+        "Rançongiciel (ransomware)",
+        "Logiciel malveillant qui chiffre les données et exige une rançon"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Un rançongiciel bloque les ordinateurs d’un hôpital. Quel critère de sécurité est d’abord atteint ?\nA) La confidentialité\nB) La disponibilité\nC) La preuve",
+      "a": "B) La disponibilité",
+      "explain": "Les données chiffrées ne sont plus accessibles quand on en a besoin : c’est la disponibilité."
+     }
+    ]
+   },
+   {
+    "h": "🎣 Le phishing et le RGPD : le facteur humain",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📧",
+      "h": "Défi lancé",
+      "c": "Tu reçois : « URGENT : votre banque bloque votre compte, confirmez votre mot de passe ici ! » Ton doigt hésite au-dessus du lien. Clique, ou pas ?"
+     },
+     {
+      "t": "example",
+      "h": "Cas",
+      "c": "Un salarié reçoit un mail « urgent » imitant sa banque, lui demandant son mot de passe. Il clique…"
+     },
+     {
+      "t": "p",
+      "c": "C’est de l’**hameçonnage (phishing)** : la technique la plus courante, car elle vise l’**utilisateur**, pas la machine. C’est souvent la porte d’entrée d’un **ransomware**. Aucun antivirus ne remplace la vigilance : on ne communique **jamais** un mot de passe par mail, et on **vérifie l’expéditeur**."
+     },
+     {
+      "t": "p",
+      "c": "La protection des **données personnelles** est aussi une obligation légale. Le **RGPD** exige que chaque traitement repose sur une **base légale** (le consentement de la personne, un contrat, une obligation légale, l’intérêt légitime…), une **finalité** précise, la **minimisation**, la **sécurité** et le respect des **droits** des personnes (accès, rectification, effacement)."
+     },
+     {
+      "t": "p",
+      "c": "Son non-respect expose à de lourdes **sanctions** (CNIL)."
+     },
+     {
+      "t": "warning",
+      "h": "À retenir",
+      "c": "La sécurité n’est pas que technique : le **comportement humain** est la **première protection**. La meilleure défense combine technique **et** vigilance."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Le phishing vise l’utilisateur plutôt que la machine, et aucun antivirus ne remplace la vigilance.",
+      "a": "Vrai",
+      "explain": "C’est pourquoi on ne donne jamais son mot de passe par mail et on vérifie l’expéditeur."
+     }
+    ]
+   },
+   {
+    "h": "💻 Exemple — un mail « urgent » demande un mot de passe : réagir au phishing",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🚨",
+      "h": "Dialogue",
+      "c": "— « Léa, donne-moi ton mot de passe, vite ! »\n— « Bizarre… d’habitude il dit bonjour. »\nBon instinct, Léa. Pourquoi ?"
+     },
+     {
+      "t": "example",
+      "h": "Cas",
+      "c": "Un employé reçoit un mail « urgent » lui demandant son mot de passe."
+     },
+     {
+      "t": "list",
+      "c": [
+       "C’est une tentative d’**hameçonnage (phishing)** : on ne donne **jamais** son mot de passe par mail.",
+       "La sécurité repose sur la **DICP** : Disponibilité, Intégrité, Confidentialité, Preuve (traçabilité).",
+       "Mesures : mot de passe **fort**, **sauvegardes** régulières, droits d’accès, sensibilisation."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "La sécurité n’est pas que technique : la vigilance humaine est la première protection."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un employé dit : « Si le mail vient de ma banque, je peux répondre avec mon mot de passe. » Trouve l’erreur.",
+      "a": "On ne donne jamais son mot de passe par mail.",
+      "explain": "C’est typique du phishing."
+     }
+    ]
+   },
+   {
+    "h": "🌐 Les réseaux : partager des ressources, protocoles, surface d’attaque",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🍽️",
+      "h": "Mini-histoire",
+      "c": "Au restaurant, tu commandes : le serveur transmet à la cuisine puis te rapporte ton plat. Ce scénario, ton téléphone le joue des milliers de fois par jour sur Internet."
+     },
+     {
+      "t": "p",
+      "c": "Un **réseau** relie des ordinateurs pour qu’ils **communiquent** et **partagent** des ressources (fichiers, imprimantes, accès internet). Sans réseau, pas de SI moderne, pas de travail collaboratif, pas d’internet."
+     },
+     {
+      "t": "p",
+      "c": "L’architecture la plus courante est le modèle **client-serveur** : des postes **clients** (ordinateurs, téléphones) envoient des requêtes à un **serveur** (une machine puissante) qui les traite et renvoie les réponses. Internet en est l’exemple géant."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Client** : demande un service (afficher une page, ouvrir un fichier).",
+       "**Serveur** : fournit le service (héberge le site, la base, les fichiers).",
+       "**Protocole** : les règles communes de communication (HTTP, IP…)."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Modèle **client-serveur** : le client **demande**, le serveur **fournit**. Un réseau permet de **partager** ressources et informations, mais élargit aussi la **surface d’attaque**."
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe ces éléments en deux catégories, « Client » ou « Serveur » : un smartphone qui demande une page ; la machine qui héberge le site ; un ordinateur qui ouvre un fichier distant ; la machine qui renvoie la réponse.",
+      "a": "Client : le smartphone qui demande une page, l’ordinateur qui ouvre un fichier distant. Serveur : la machine qui héberge le site, celle qui renvoie la réponse.",
+      "explain": "Le client demande un service, le serveur le fournit."
+     }
+    ]
+   },
+   {
+    "h": "🔐 La sécurité du SI : objectifs DICP et menaces (phishing, ransomware)",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏰",
+      "h": "Question qui pique",
+      "c": "Un château avec quatre portes : si une seule reste ouverte, il est vulnérable. En sécurité informatique, ces quatre portes ont un sigle. Lequel ?"
+     },
+     {
+      "t": "p",
+      "c": "Plus le SI est connecté, plus il est **vulnérable**. Quatre objectifs, un sigle : **DICP** = **D**isponibilité, **I**ntégrité, **C**onfidentialité, **P**reuve (traçabilité : savoir qui a fait quoi). Le triangle DIC (ou CIA) n’en est que le noyau à trois lettres."
+     },
+     {
+      "t": "p",
+      "c": "La **disponibilité** : l’information est accessible au moment voulu (une panne de serveur ou une attaque qui bloque le site d’une enseigne y porte atteinte). L’**intégrité** : ni altérée ni falsifiée, par erreur ou volontairement."
+     },
+     {
+      "t": "p",
+      "c": "La **confidentialité** : seules les personnes autorisées y accèdent, grâce à des identifiants et des droits d’accès bien gérés. La **preuve** (ou **traçabilité**) : on sait qui a fait quoi, et quand, ce qui aide à retrouver l’origine d’une erreur, d’une fraude ou d’une attaque."
+     },
+     {
+      "t": "p",
+      "c": "Les **menaces** : **phishing** (hameçonnage : faux message pour voler des identifiants), **ransomware** (rançongiciel : chiffre les données et exige une rançon), **malwares** (virus), vol de données, pannes. « La faille, c’est souvent l’**humain** » : un clic imprudent suffit."
+     },
+     {
+      "t": "example",
+      "h": "Illustration",
+      "c": "Un hôpital paralysé par un **ransomware** : ses données sont chiffrées, les soins perturbés. L’attaque a souvent commencé par un simple **e-mail de phishing** ouvert par un employé."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Sécurité = **Disponibilité + Intégrité + Confidentialité + Preuve (DICP)**. Menaces phares : **phishing** et **ransomware**. Le maillon faible est souvent **humain**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "DICP",
+        "Les quatre objectifs de la sécurité du SI : disponibilité, intégrité, confidentialité, preuve"
+       ],
+       [
+        "Disponibilité",
+        "L’information est accessible quand on en a besoin"
+       ],
+       [
+        "Intégrité",
+        "L’information n’est ni altérée ni falsifiée"
+       ],
+       [
+        "Confidentialité",
+        "Seules les personnes autorisées accèdent à l’information"
+       ],
+       [
+        "Preuve (traçabilité)",
+        "On sait qui a fait quoi, et quand, dans le système"
+       ],
+       [
+        "Phishing (hameçonnage)",
+        "Faux message qui cherche à voler des identifiants"
+       ],
+       [
+        "Ransomware (rançongiciel)",
+        "Logiciel qui chiffre les données et exige une rançon"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Quel est l’intrus parmi les objectifs de la sécurité du SI (DICP) ?\nA) La disponibilité\nB) La rapidité\nC) L’intégrité\nD) La confidentialité",
+      "a": "B) La rapidité",
+      "explain": "DICP = disponibilité, intégrité, confidentialité, preuve : la rapidité n’en fait pas partie."
+     }
+    ]
+   },
+   {
+    "h": "🛡️ Se protéger : mots de passe, sauvegardes, pare-feu, RGPD",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧱",
+      "h": "Défi lancé",
+      "c": "Un seul verrou sur ta porte ne suffit pas : alarme, serrure, voisins vigilants… En informatique aussi, c’est le cumul des protections qui fait la force. Lesquelles retenir ?"
+     },
+     {
+      "t": "p",
+      "c": "Face aux menaces, l’organisation met en place des **mesures de protection** techniques et humaines. Aucune n’est suffisante seule : c’est leur **combinaison** qui protège."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Mots de passe forts** et authentification à deux facteurs.",
+       "**Sauvegardes régulières** (pour restaurer après une attaque ou une panne).",
+       "**Pare-feu** et **antivirus** à jour.",
+       "**Mises à jour** des logiciels (corriger les failles).",
+       "**Sensibilisation** des utilisateurs (reconnaître un phishing).",
+       "**Gestion des droits d’accès** (chacun n’accède qu’à ce qui le concerne)."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Le **RGPD (Règlement Général sur la Protection des Données)** encadre le traitement des **données personnelles** en Europe. Il impose : le **consentement**, la **finalité** (n’utiliser les données que dans le but annoncé), la **minimisation** (ne collecter que le nécessaire), la **sécurité**, et les **droits** des personnes (accès, rectification, effacement). Son non-respect expose à de lourdes **sanctions**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Se protéger = **combiner** sauvegardes, mots de passe, pare-feu, mises à jour et **sensibilisation**. Le **RGPD** exige que chaque traitement repose sur une **base légale** (le consentement de la personne, un contrat, une obligation légale, l’intérêt légitime…), une **finalité** précise, la **minimisation**, la **sécurité** et le respect des **droits** des personnes."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Que signifie la minimisation dans le RGPD ?\nA) Réduire la taille des fichiers\nB) Supprimer toutes les données chaque jour\nC) Ne collecter que le nécessaire",
+      "a": "C) Ne collecter que le nécessaire",
+      "explain": "La minimisation consiste à ne collecter que les données nécessaires à la finalité annoncée."
+     }
+    ]
+   },
+   {
+    "h": "🚑 Étude de cas guidée — une attaque par rançongiciel : restaurer et prévenir",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "💥",
+      "h": "Mini-histoire",
+      "c": "Lundi, 9 h : un salarié clique sur un lien « colis en attente ». À 9 h 05, les fichiers de l’entreprise sont chiffrés et un message réclame une rançon. À toi de gérer la crise."
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Une entreprise a subi une attaque : un salarié a cliqué sur un lien frauduleux, des données ont été chiffrées et une rançon est réclamée. Analysez et proposez un plan de prévention."
+     },
+     {
+      "t": "example",
+      "h": "Étape 1 — Identifier l’attaque",
+      "c": "Un **ransomware**, déclenché par un **phishing** (le lien frauduleux). Les objectifs de sécurité touchés : **disponibilité** (données inaccessibles) et potentiellement **confidentialité**."
+     },
+     {
+      "t": "example",
+      "h": "Étape 2 — Réagir",
+      "c": "Isoler les machines infectées, ne pas payer la rançon (aucune garantie), **restaurer** à partir des **sauvegardes**, prévenir la CNIL si des données personnelles sont concernées (RGPD)."
+     },
+     {
+      "t": "p",
+      "c": "**Étape 3 — Prévention.** Sauvegardes régulières et **hors ligne**, mises à jour, pare-feu/antivirus, mots de passe forts, gestion des droits, et surtout **sensibilisation** des salariés au phishing. **Commentaire** : la meilleure défense combine **technique** et **humain**, car la faille initiale est presque toujours humaine."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Identifier l’**attaque** et l’objectif DICP touché → **réagir** (isoler, restaurer, alerter) → **prévenir** par des mesures combinées (technique + humaine)."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Face à un rançongiciel, que faire au lieu de payer la rançon ?",
+      "a": "Isoler les machines infectées et restaurer les données à partir des sauvegardes.",
+      "explain": "Payer ne garantit rien ; des sauvegardes régulières et hors ligne permettent de repartir."
+     }
+    ]
+   }
+  ]
+ }
+}
