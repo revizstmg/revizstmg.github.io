@@ -116,6 +116,16 @@ export function trackIcon(track) {
 
 // Les anciens chapitres de langues restent archivés pour les historiques.
 // L’offre actuelle est un espace de ressources sans exercices de cours.
+// Un professeur n'a pas de spécialité : il voit toutes les matières de son niveau, spécialités comprises.
+const SPECIALITES_TERMINALE = ['gestion-finance', 'mercatique', 'rh-communication', 'sig']
+export function subjectsForProf(track) {
+  const base = subjectsForTrack(track)
+  if (!track || track.level !== 'terminale-stmg') return base
+  const vus = new Set(base.map((s) => s.id))
+  const extra = SPECIALITES_TERMINALE.flatMap((specialty) => subjectsForTrack({ ...track, specialty })).filter((s) => !vus.has(s.id) && vus.add(s.id))
+  return [...base, ...extra]
+}
+
 export function subjectsForTrack(track) {
   return trackSubjects(track).map(s => ['langues','p1-langues'].includes(s.id)
     ? { ...s, chapters: [], resourceOnly: true } : s)

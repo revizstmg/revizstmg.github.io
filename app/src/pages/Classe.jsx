@@ -78,8 +78,11 @@ export default function Classe() {
   const memberWrite = useRef(Promise.resolve())
   const activeAccount = useRef(accountId)
   activeAccount.current = accountId
+  const premierRendu = useRef(true)
   useEffect(() => {
-    setStudentClasses([]);setJoining(false);setTab('overview');setCreating(false);setLeaving(false);setClassError('');setMetaError(false)
+    // Au premier rendu, l'onglet vient de l'adresse (?vue=suivi|quiz) : on ne le remet pas sur « Vue d'ensemble ».
+    const initial = premierRendu.current; premierRendu.current = false
+    setStudentClasses([]);setJoining(false);if (!initial) setTab('overview');setCreating(false);setLeaving(false);setClassError('');setMetaError(false)
   }, [accountId])
   const sameAccount = () => activeAccount.current === accountId && getSession()?.user?.id === accountId
   const join = (code) => {

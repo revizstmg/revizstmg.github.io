@@ -1,7 +1,7 @@
 import './CourseStudio.css'
 import { Link, Navigate } from 'react-router-dom'
 import { useStore, subjectScore } from '../store.jsx'
-import { subjectsForTrack } from '../data/tracks.js'
+import { subjectsForTrack, subjectsForProf } from '../data/tracks.js'
 import { getChapter } from '../data/index.js'
 import { readPosition } from '../data/readingPosition.js'
 import { CourseText } from '../components/Course.jsx'
@@ -17,7 +17,7 @@ export default function Cours() {
   const tr = usePublicText()
   const prof = state.account?.role === 'prof' // vue enseignant : le cours tel que le voient les élèves, sans progression ni outils d'élève
   if (!state.track) return <Navigate to="/" replace />
-  const subjects = subjectsForTrack(state.track)
+  const subjects = prof ? subjectsForProf(state.track) : subjectsForTrack(state.track)
   const position = readPosition(state.account?.id)
   const fiche = position && subjects.some((s) => s.id === position.subjectId) ? getChapter(position.themeId) : null
   return (
