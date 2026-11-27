@@ -57,9 +57,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un salarié peut être bien payé et satisfait sans pour autant être motivé.",
-      "a": "Vrai : le salaire est un facteur d’hygiène.",
-      "explain": "Le salaire évite le mécontentement mais ne donne pas, à lui seul, l’envie de s’investir."
+      "q": "Pour Herzberg, le salaire est un facteur de motivation : un salarié bien payé est donc forcément motivé.",
+      "a": "Faux",
+      "explain": "Pour Herzberg, le salaire est un facteur d’hygiène : il évite le mécontentement mais ne suffit pas à motiver durablement."
      }
     ]
    },
@@ -387,9 +387,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une cohésion excessive peut conduire au conformisme et à la pensée de groupe.",
-      "a": "Vrai : plus personne n’ose remettre le groupe en cause.",
-      "explain": "La cohésion est une force, mais son excès étouffe les avis différents."
+      "q": "Quand la cohésion devient excessive, le groupe peut cesser de remettre en cause une tactique qui ne marche plus.",
+      "a": "Vrai",
+      "explain": "La cohésion est une force, mais son excès crée du conformisme (pensée de groupe)."
      }
     ]
    },
@@ -651,9 +651,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une culture d’entreprise rigide peut aggraver les tensions entre les salariés.",
-      "a": "Vrai : une culture du dialogue prévient les tensions, une culture rigide les aggrave.",
-      "explain": "La culture influence directement la cohésion et la gestion des conflits."
+      "q": "Une culture d’entreprise rigide prévient les tensions, alors qu’une culture du dialogue les aggrave.",
+      "a": "Faux",
+      "explain": "C’est l’inverse : une culture du dialogue prévient les tensions, une culture rigide les aggrave."
      }
     ]
    },
@@ -922,9 +922,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Dans une note de service mal comprise, du jargon ou un canal inadapté peuvent jouer le rôle de bruit.",
-      "a": "Vrai : le bruit regroupe tout ce qui perturbe la compréhension.",
-      "explain": "Un retour (feedback) permet de vérifier que le message est bien passé."
+      "q": "Dans le schéma de communication, le feed-back permet à l’émetteur de vérifier que le message a bien été compris.",
+      "a": "Vrai",
+      "explain": "Le retour complète le schéma émetteur, message, canal, récepteur, où le bruit perturbe la compréhension."
      }
     ]
    },
@@ -1085,9 +1085,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Face à un bad buzz, répondre vite, reconnaître le problème et agir peut renforcer la crédibilité d’une marque.",
-      "a": "Vrai : c’est la bonne stratégie de communication de crise.",
-      "explain": "Ignorer ou supprimer les commentaires fait au contraire enfler la colère."
+      "q": "Face à un bad buzz, le plus sûr est de supprimer les commentaires et d’attendre que la colère retombe.",
+      "a": "Faux",
+      "explain": "Ignorer ou supprimer les commentaires fait enfler la colère ; il faut répondre vite, reconnaître le problème et agir."
      }
     ]
    },
@@ -1235,9 +1235,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un manager peut suivre le climat social comme un tableau de bord, avec plusieurs indicateurs.",
-      "a": "Vrai : turnover, absentéisme, conflits, accidents, enquêtes de satisfaction.",
-      "explain": "C’est un faisceau d’indicateurs, pas un seul chiffre."
+      "q": "Pour juger du climat social, un manager croise plusieurs indicateurs : turnover, absentéisme, conflits, accidents du travail.",
+      "a": "Vrai",
+      "explain": "Le climat social est un faisceau d’indicateurs, pas un seul chiffre."
      }
     ]
    },
@@ -1566,9 +1566,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le coût du travail pour l’employeur est bien supérieur au salaire net versé au salarié.",
-      "a": "Vrai : il s’agit du salaire brut plus les charges patronales.",
-      "explain": "Les cotisations patronales s’ajoutent au brut."
+      "q": "Le coût du travail supporté par l’employeur correspond au salaire net perçu par le salarié.",
+      "a": "Faux",
+      "explain": "Le coût du travail (brut + charges patronales) dépasse largement le salaire net perçu."
      }
     ]
    }

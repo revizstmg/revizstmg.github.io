@@ -83,9 +83,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La rareté oblige chaque agent économique à faire des choix.",
-      "a": "Vrai : ressources limitées, besoins illimités : il faut arbitrer.",
-      "explain": "Ménages, entreprises et État sont tous soumis à une contrainte de ressources."
+      "q": "La **rareté** ne concerne que les ménages : l’État, lui, n’a aucune contrainte de ressources.",
+      "a": "Faux",
+      "explain": "Les besoins sont illimités et les ressources rares pour tous : un ménage avec un budget limité, une entreprise avec des moyens limités et l’État avec un budget contraint doivent tous arbitrer."
      }
     ]
    },
@@ -272,9 +272,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "À chaque flux réel correspond un flux monétaire de sens inverse.",
-      "a": "Vrai : un bien livré appelle un paiement en sens inverse.",
-      "explain": "Le travail fourni par les ménages correspond par exemple au salaire versé par les entreprises."
+      "q": "Quand une entreprise livre un bien à un ménage, un paiement circule en sens inverse.",
+      "a": "Vrai",
+      "explain": "À chaque **flux réel** correspond un **flux monétaire** de sens inverse."
      }
     ]
    },
@@ -365,9 +365,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La production non marchande contribue elle aussi au PIB.",
-      "a": "Vrai : on l’évalue à partir de ses coûts de production.",
-      "explain": "Faute de prix de marché significatif, ce sont les coûts de production qui servent de mesure."
+      "q": "La **production marchande** est celle qui est fournie gratuitement ou à un prix non significatif, comme l’école publique.",
+      "a": "Faux",
+      "explain": "La production marchande est vendue à un prix économiquement significatif (qui couvre au moins la moitié des coûts) ; l’école publique relève de la production non marchande."
      }
     ]
    },
@@ -574,9 +574,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une marée noire peut faire monter le PIB via les dépenses de nettoyage.",
-      "a": "Vrai : le PIB ignore les dégâts environnementaux.",
-      "explain": "Les dépenses de nettoyage sont de la production comptée, alors que la dégradation n’est pas déduite."
+      "q": "Après une marée noire, les dépenses de nettoyage peuvent faire augmenter le **PIB**, alors que les dégâts pour l’environnement ne sont pas déduits.",
+      "a": "Vrai",
+      "explain": "Le PIB ignore les dégâts environnementaux : le nettoyage est de la production comptée."
      }
     ]
    },
@@ -641,9 +641,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Les revenus primaires sont perçus avant toute intervention de l’État.",
-      "a": "Vrai : ils rémunèrent la participation à la production.",
-      "explain": "La redistribution, qui vient de l’État, intervient ensuite."
+      "q": "Les **revenus primaires** sont ceux que l’on perçoit après l’intervention de l’État, grâce à la redistribution.",
+      "a": "Faux",
+      "explain": "Les revenus primaires rémunèrent la participation à la production et sont perçus avant toute intervention de l’État."
      }
     ]
    },
@@ -823,9 +823,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le patrimoine est un stock, alors que le revenu est un flux.",
-      "a": "Vrai : le patrimoine est accumulé, le revenu est perçu sur une période.",
-      "explain": "On peut avoir un gros patrimoine avec un faible revenu, et inversement."
+      "q": "Un ménage peut posséder un **patrimoine** important tout en ayant un revenu faible.",
+      "a": "Vrai",
+      "explain": "Le patrimoine est un stock, le revenu un flux : on peut avoir un gros patrimoine et un faible revenu, et inversement."
      }
     ]
    },
@@ -967,9 +967,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "L’autofinancement permet de se financer sans s’endetter.",
-      "a": "Vrai : l’entreprise utilise ses propres bénéfices mis en réserve.",
-      "explain": "Revers : ses moyens sont limités à ce qu’elle a épargné."
+      "q": "Une entreprise qui pratique l’**autofinancement** emprunte l’argent dont elle a besoin auprès d’une banque.",
+      "a": "Faux",
+      "explain": "L’autofinancement utilise ses propres bénéfices mis en réserve, sans dette. S’adresser à une banque ou au marché financier relève du financement externe."
      }
     ]
    },
@@ -1232,9 +1232,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un marché peut être totalement dématérialisé, comme une plateforme en ligne.",
-      "a": "Vrai : un marché n’est pas forcément un lieu physique.",
-      "explain": "L’essentiel est la rencontre entre une offre et une demande autour d’un prix."
+      "q": "Acheter une casquette en édition limitée sur une appli relève bien d’un **marché**, même sans lieu physique.",
+      "a": "Vrai",
+      "explain": "Un marché est la rencontre d’une offre et d’une demande autour d’un prix, qu’il soit concret ou dématérialisé."
      }
     ]
    },
@@ -1513,9 +1513,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Les brevets peuvent constituer une barrière à l’entrée qui protège les acteurs en place.",
-      "a": "Vrai : ils empêchent de nouveaux concurrents d’arriver.",
-      "explain": "Coûts d’investissement, réglementation et notoriété d’une marque en sont d’autres exemples."
+      "q": "Les **asymétries d’information** désignent des obstacles, comme les brevets ou des coûts d’investissement très élevés, qui empêchent de nouveaux concurrents d’arriver.",
+      "a": "Faux",
+      "explain": "Ces obstacles sont les **barrières à l’entrée**. Il y a asymétrie d’information quand une partie en sait plus que l’autre, comme le vendeur d’une voiture d’occasion."
      }
     ]
    },

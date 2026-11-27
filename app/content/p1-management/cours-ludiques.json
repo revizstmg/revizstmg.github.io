@@ -33,9 +33,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une organisation cherche à durer dans le temps : c’est sa pérennité.",
-      "a": "Vrai : la volonté de durer fait partie de ses caractéristiques.",
-      "explain": "Les autres : but commun, ressources pilotées, structure hiérarchisée, statut juridique."
+      "q": "Seule une entreprise est une **organisation** : une mairie ou une association n’en sont pas.",
+      "a": "Faux",
+      "explain": "Une organisation peut être une entreprise, une association ou une administration : elle a un but commun, des ressources pilotées, une structure hiérarchisée et un statut juridique."
      }
     ]
    },
@@ -314,9 +314,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une marque et des brevets sont des ressources immatérielles.",
-      "a": "Vrai : la marque, le savoir-faire et les brevets sont des ressources immatérielles.",
-      "explain": "Les ressources peuvent être financières, humaines, matérielles et immatérielles."
+      "q": "Les **compétences distinctives** d’une organisation désignent l’ensemble de ses ressources financières, humaines, matérielles et immatérielles.",
+      "a": "Faux",
+      "explain": "Ce sont les ressources. Les compétences distinctives sont ce que l’organisation sait faire mieux que ses concurrents."
      }
     ]
    },
@@ -372,9 +372,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un objectif stratégique doit être cohérent avec la finalité de l’organisation.",
-      "a": "Vrai : le diagnostic sert à fixer des objectifs cohérents avec la finalité.",
-      "explain": "Ils guideront ensuite les choix stratégiques."
+      "q": "Pour une association, développer son action est un objectif stratégique cohérent avec sa finalité.",
+      "a": "Vrai",
+      "explain": "Les objectifs stratégiques doivent être cohérents avec la finalité de l’organisation et guideront ensuite les choix stratégiques."
      }
     ]
    },
@@ -474,9 +474,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un avantage concurrentiel repose souvent sur une compétence distinctive.",
-      "a": "Vrai : elle est repérée au diagnostic interne.",
-      "explain": "Elle distingue durablement des concurrents."
+      "q": "Si une marque est préférée alors que les produits se ressemblent, c’est qu’elle bénéficie d’un **avantage concurrentiel**.",
+      "a": "Vrai",
+      "explain": "L’avantage concurrentiel distingue durablement l’organisation de ses concurrents ; il repose souvent sur une compétence distinctive."
      }
     ]
    },

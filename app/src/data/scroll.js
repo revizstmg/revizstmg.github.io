@@ -278,7 +278,7 @@ function contexteTheme(theme, tous) {
   const cache = CONTEXTES.get(theme.id)
   if (cache && cache.n === tous.length) return cache
   const principaux = termesPrincipaux(theme.subjectId)
-  const parChapitre = tous.map((c) => termesDuChapitre(c, theme).filter((t) => principaux.has(cleTerme(t.terme)) && t.def && termeAcceptable(t.terme) && t.def.length <= 260 && !/[+=/]/.test(t.terme) && t.terme.split(/\s+/).length <= 4))
+  const parChapitre = tous.map((c) => termesDuChapitre(c, theme, { sansTheme: true }).filter((t) => principaux.has(cleTerme(t.terme)) && t.def && termeAcceptable(t.terme) && t.def.length <= 260 && !/[+=/]/.test(t.terme) && t.terme.split(/\s+/).length <= 4))
   const ctx = {
     n: tous.length,
     parChapitre,
@@ -299,7 +299,10 @@ export function construireFlux(themeId, idx, { max = MAX_CARTES, souple = false 
   if (!theme || !ch) return []
   const nom = ch.title || theme.short || theme.name
   const { parChapitre, pool } = contexteTheme(theme, tous)
-  const termes = parChapitre[Number(idx)]
+  // Un chapitre qui n'atteint pas le plancher (2e passage « souple ») complète son glossaire avec les termes du thème.
+  const termes = souple
+    ? termesDuChapitre(ch, theme).filter((t) => termesPrincipaux(theme.subjectId).has(cleTerme(t.terme)) && t.def && termeAcceptable(t.terme) && t.def.length <= 260 && !/[+=/]/.test(t.terme) && t.terme.split(/\s+/).length <= 4)
+    : parChapitre[Number(idx)]
   const vus = new Set()
   const ecrits = jeuxEcrits(ch, vus, souple, calculsDuSujet(ch, theme))
   const gloss = jeuxDuGlossaire(termes, nom)

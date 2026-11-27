@@ -27,9 +27,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un prix qui passe de 40 € à 50 € a augmenté de 25 %.",
-      "a": "Vrai : t = 10/40 = 0,25, soit +25 %.",
-      "explain": "CM = 50/40 = 1,25."
+      "q": "Un prix qui passe de 40 € à 50 € a augmenté de 10 %.",
+      "a": "Faux",
+      "explain": "Le taux d’évolution se calcule par rapport à la valeur de départ : t = (50 − 40) ÷ 40 = 0,25, soit +25 %."
      }
     ]
    },
@@ -205,9 +205,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un capital placé à 3 % par an suit une suite géométrique de raison 1,03.",
-      "a": "Vrai : q = 1 + 0,03 = 1,03.",
-      "explain": "Une évolution en pourcentage fixe est toujours géométrique."
+      "q": "Pour un capital qui augmente de 3 % par an, on passe d’une année à la suivante en multipliant par 1,03.",
+      "a": "Vrai",
+      "explain": "Une évolution en pourcentage fixe est géométrique, de raison q = 1 + 0,03 = 1,03."
      }
     ]
    },
@@ -696,9 +696,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Si la note 18 est remplacée par 2, la médiane de la série reste égale à 12.",
-      "a": "Vrai : la série ordonnée 2, 8, 10, 12, 12, 13, 15 a toujours 12 pour 4ᵉ valeur.",
-      "explain": "La médiane résiste aux valeurs extrêmes, contrairement à la moyenne."
+      "q": "Si la note 18 est remplacée par 2, la médiane de la série diminue fortement.",
+      "a": "Faux",
+      "explain": "La série ordonnée 2, 8, 10, 12, 12, 13, 15 a toujours 12 pour médiane ; c’est la moyenne, pas la médiane, qui est tirée vers le bas."
      }
     ]
    }
@@ -863,9 +863,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une liste permet de stocker plusieurs valeurs dans une seule variable.",
-      "a": "Vrai : c’est le rôle d’une liste.",
-      "explain": "Une fonction, elle, regroupe des instructions réutilisables."
+      "q": "Une fonction définie avec `def` permet de réutiliser les mêmes instructions à plusieurs reprises.",
+      "a": "Vrai",
+      "explain": "Une fonction regroupe des instructions réutilisables ; une liste, elle, stocke plusieurs valeurs."
      }
     ]
    },

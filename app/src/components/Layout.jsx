@@ -501,8 +501,8 @@ function SearchOverlay({ onClose }) {
           <button onClick={onClose} className="text-slate-400 hover:text-slate-600" aria-label={t('quit')}>✕</button>
         </div>
         <ul className="mt-2 max-h-72 overflow-y-auto">
-          {q && results.length === 0 && (
-            <li className="px-3 py-6 text-center text-sm text-slate-600 dark:text-slate-300"><p>Aucun résultat pour « {q} ».</p><p className="mt-2">Essaie un mot plus court ou parcours les matières.</p><Link to="/cours" onClick={onClose} className="mt-3 inline-block font-semibold underline">Voir les cours</Link></li>
+          {q.trim() && results.length === 0 && (
+            <li className="px-3 py-6 text-center text-sm text-slate-600 dark:text-slate-300"><p>Aucun résultat pour « {q.trim()} ».</p><p className="mt-2">{q.trim().length < 4 ? 'Essaie le nom complet de la matière ou du chapitre, ou parcours les matières.' : 'Essaie un mot plus court ou parcours les matières.'}</p><Link to="/cours" onClick={onClose} className="mt-3 inline-block font-semibold underline">Voir les cours</Link></li>
           )}
           {results.map((r) => (
             <li key={r.type + r.id}>

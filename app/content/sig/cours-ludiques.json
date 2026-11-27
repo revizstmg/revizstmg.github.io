@@ -107,9 +107,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une donnée mise dans son contexte devient une information.",
-      "a": "Vrai : « 3 » devient « 3 menus vendus le samedi ».",
-      "explain": "C’est le contexte qui donne du sens à la donnée brute."
+      "q": "Le chiffre « 3 » seul est une **donnée** ; « 3 menus vendus le samedi » est une **information**.",
+      "a": "Vrai",
+      "explain": "Remise dans son contexte, la donnée brute prend un sens."
      }
     ]
    },
@@ -658,9 +658,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La clé étrangère d’une table reprend la clé primaire d’une autre table.",
-      "a": "Vrai : c’est ce qui crée le lien entre les deux tables.",
-      "explain": "Exemple : id_client dans COMMANDES reprend la clé primaire id_client de CLIENTS."
+      "q": "La **clé primaire** est un champ qui reprend la clé étrangère d’une autre table pour créer le lien entre les deux tables.",
+      "a": "Faux",
+      "explain": "C’est la clé étrangère qui reprend la clé primaire d’une autre table. La clé primaire est l’identifiant unique de chaque enregistrement."
      }
     ]
    },
@@ -872,9 +872,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Grâce à l’historique des versions, on peut garder la trace de chaque modification et revenir en arrière.",
+      "q": "Dans un outil collaboratif, l’**historique des versions** permet de revenir à une version antérieure d’un document.",
       "a": "Vrai",
-      "explain": "C’est le rôle de l’historique des versions : personne n’écrase le travail des autres."
+      "explain": "Il garde la trace de chaque modification et permet de revenir en arrière."
      }
     ]
    },
@@ -1121,9 +1121,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le télétravail peut créer de l’isolement et une perte de lien social.",
-      "a": "Vrai",
-      "explain": "C’est l’un des risques du numérique, qui appelle une conduite du changement."
+      "q": "Le numérique ne présente que des opportunités pour le travail : il n’a aucun risque pour l’emploi ni pour la vie personnelle.",
+      "a": "Faux",
+      "explain": "Les risques existent : frontière vie professionnelle/personnelle brouillée, isolement, disparition de certains emplois, surcharge informationnelle."
      }
     ]
    },
@@ -1308,9 +1308,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le phishing vise l’utilisateur plutôt que la machine, et aucun antivirus ne remplace la vigilance.",
+      "q": "Face à un mail « urgent » qui imite sa banque et réclame un mot de passe, le salarié doit vérifier l’expéditeur et ne jamais le communiquer par mail.",
       "a": "Vrai",
-      "explain": "C’est pourquoi on ne donne jamais son mot de passe par mail et on vérifie l’expéditeur."
+      "explain": "Le phishing vise l’utilisateur : le comportement humain est la première protection."
      }
     ]
    },

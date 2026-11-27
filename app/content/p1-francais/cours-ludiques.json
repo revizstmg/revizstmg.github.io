@@ -119,9 +119,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "« Un éloge paradoxal » est un bon axe, alors que « la nature » n’est qu’un simple thème.",
-      "a": "Vrai : le premier est une idée d’interprétation, le second se contente de lister le contenu.",
-      "explain": "Un axe doit répondre à la problématique, pas seulement nommer un sujet."
+      "q": "Dans un commentaire, « la nature » est un bon axe, alors qu’« un éloge paradoxal » n’est qu’un simple thème.",
+      "a": "Faux",
+      "explain": "C’est l’inverse : « un éloge paradoxal » est une idée d’interprétation, donc un bon axe, tandis que « la nature » n’est qu’un thème qui se contente de lister le contenu du texte."
      }
     ]
    },
@@ -345,9 +345,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Dans une contraction, on supprime les exemples et les répétitions.",
-      "a": "Vrai : on garde la thèse, les idées principales et leur ordre.",
-      "explain": "Les exemples, illustrations, répétitions, digressions et avis personnels disparaissent."
+      "q": "Une contraction de texte consiste à réduire le texte à la moitié de sa longueur.",
+      "a": "Faux",
+      "explain": "La contraction réduit le texte au quart (¼) de sa longueur, sans le trahir."
      }
     ]
    },
@@ -527,9 +527,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Dans l’introduction d’un essai, on reformule la question et on annonce le plan.",
-      "a": "Vrai : l’introduction amène le sujet, reformule la question et annonce le plan.",
-      "explain": "Reformuler la question montre qu’on l’a bien comprise."
+      "q": "La conclusion d’un essai répond clairement à la question posée, de façon nuancée, et peut ouvrir sur autre chose.",
+      "a": "Vrai",
+      "explain": "L’introduction, elle, amène le sujet, reformule la question et annonce le plan."
      }
     ]
    },
@@ -770,9 +770,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un aparté est une phrase que seul le public est censé entendre.",
-      "a": "Vrai : c’est une phrase dite à part.",
-      "explain": "Le personnage la prononce sur scène, mais les autres personnages sont censés ne pas l’entendre."
+      "q": "Un aparté est le discours d’un personnage seul en scène, qui se parle à lui-même.",
+      "a": "Faux",
+      "explain": "Cette définition est celle du monologue ; l’aparté est une phrase dite à part, que le public seul est censé entendre."
      }
     ]
    },
@@ -991,9 +991,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Persuader, c’est emporter l’adhésion par les émotions.",
-      "a": "Vrai : convaincre passe par la raison, persuader par les émotions.",
-      "explain": "Convaincre = logique et preuves ; persuader = émotions."
+      "q": "Pour convaincre, on s’appuie sur la raison, les preuves et la logique ; pour persuader, on touche les émotions.",
+      "a": "Vrai",
+      "explain": "Convaincre s’adresse à la raison, persuader aux émotions ; réfuter, c’est démonter la thèse adverse."
      }
     ]
    },
@@ -1273,9 +1273,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "L’explication linéaire suit le texte dans l’ordre, mouvement par mouvement.",
-      "a": "Vrai : on explique au fil de la lecture, sans plaquer un plan thématique.",
-      "explain": "Chaque remarque associe une citation, un procédé et un effet."
+      "q": "Dans une explication linéaire, on plaque un plan thématique sur le texte sans se soucier de son ordre.",
+      "a": "Faux",
+      "explain": "L’explication linéaire suit le texte dans l’ordre, mouvement par mouvement, sans plaquer de plan thématique."
      }
     ]
    },
@@ -1633,9 +1633,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "À l’oral, la lecture à voix haute doit soigner le rythme et la ponctuation.",
-      "a": "Vrai : la lecture fait partie de la première partie de l’épreuve.",
-      "explain": "La lecture est suivie de l’explication linéaire puis de la question de grammaire."
+      "q": "L’épreuve orale enchaîne la lecture à voix haute, l’explication linéaire, la question de grammaire et l’entretien sur une œuvre.",
+      "a": "Vrai",
+      "explain": "La lecture à voix haute doit soigner le rythme et la ponctuation."
      }
     ]
    }

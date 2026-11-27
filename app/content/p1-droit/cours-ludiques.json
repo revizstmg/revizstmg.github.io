@@ -85,9 +85,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une règle morale n’est pas sanctionnée par l’État.",
-      "a": "Vrai : seule la règle de droit est assortie de la contrainte étatique.",
-      "explain": "La morale relève de la conscience, la règle religieuse de la croyance : l’État ne les sanctionne pas."
+      "q": "La règle de droit se distingue de la règle morale par la contrainte de l’État qui l’accompagne.",
+      "a": "Vrai",
+      "explain": "C’est son caractère **coercitif** qui la distingue : la règle morale relève de la conscience et n’est pas sanctionnée par l’État."
      }
     ]
    },
@@ -369,9 +369,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le témoignage est une preuve imparfaite, laissée à la libre appréciation du juge.",
-      "a": "Vrai : le juge forge son intime conviction.",
-      "explain": "Les preuves parfaites (acte authentique, acte sous signature privée, aveu judiciaire, serment) s’imposent au juge ; le témoignage, l’indice et la présomption non."
+      "q": "Le témoignage est une preuve parfaite, qui s’impose au juge.",
+      "a": "Faux",
+      "explain": "Le témoignage est une preuve **imparfaite**, laissée à la libre appréciation du juge ; les preuves parfaites sont l’acte authentique, l’acte sous signature privée, l’aveu judiciaire et le serment."
      }
     ]
    },
@@ -729,9 +729,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le patrimoine d’une société est distinct de celui de ses associés.",
-      "a": "Vrai : la société est une personne morale, avec son patrimoine propre.",
-      "explain": "Une personne morale a un patrimoine distinct de celui de ses membres."
+      "q": "En créant une société, la jeune femme de 25 ans crée une **personne morale** dont le patrimoine reste distinct du sien.",
+      "a": "Vrai",
+      "explain": "La société a sa propre existence juridique et un patrimoine distinct de celui de ses associés."
      }
     ]
    }
@@ -878,9 +878,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Les droits de la personnalité sont inaliénables : on ne peut pas les vendre.",
-      "a": "Vrai : ce sont des droits extrapatrimoniaux, attachés à la personne.",
-      "explain": "Ils sont aussi insaisissables et imprescriptibles."
+      "q": "Les droits de la personnalité, comme le droit à l’image, sont des droits **patrimoniaux** que l’on peut vendre.",
+      "a": "Faux",
+      "explain": "Ce sont des droits **extrapatrimoniaux**, inaliénables (on ne peut pas les vendre), insaisissables et imprescriptibles."
      }
     ]
    },

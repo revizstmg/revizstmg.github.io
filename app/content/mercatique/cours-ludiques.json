@@ -37,9 +37,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Vrai ou faux : un même smartphone peut répondre à la fois à un besoin fonctionnel et à un besoin d’estime.",
-      "a": "Vrai : il sert à communiquer et à afficher un statut.",
-      "explain": "Un produit peut toucher plusieurs niveaux de la pyramide de Maslow."
+      "q": "Un client qui campe devant un magasin pour le dernier smartphone achète aussi une **image de soi**, pas seulement un outil pour téléphoner.",
+      "a": "Vrai",
+      "explain": "Un même produit peut toucher plusieurs niveaux de la pyramide de Maslow : communiquer et afficher un statut."
      }
     ]
    },
@@ -391,9 +391,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Vrai ou faux : pour une étude de marché, des chiffres de l’INSEE déjà publiés sont des données secondaires.",
-      "a": "Vrai : elles existent déjà, elles n’ont pas été recueillies spécialement pour l’étude.",
-      "explain": "Les données primaires sont recueillies spécialement pour l’étude (sondage, entretiens)."
+      "q": "Pour une étude de marché, des chiffres de l’**INSEE** déjà publiés sont des données primaires.",
+      "a": "Faux",
+      "explain": "Ce sont des données secondaires : elles existent déjà. Les données primaires sont recueillies spécialement pour l’étude."
      }
     ]
    },
@@ -639,9 +639,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Vrai ou faux : un non-consommateur relatif peut devenir un client demain.",
-      "a": "Vrai : on pourrait le convaincre, c’est le potentiel de croissance.",
-      "explain": "Le non-consommateur absolu, lui, n’achètera jamais."
+      "q": "Les **non-consommateurs relatifs** font partie du potentiel de croissance d’un marché : on pourrait les convaincre demain.",
+      "a": "Vrai",
+      "explain": "Un marché comprend aussi les concurrents et ces non-consommateurs relatifs."
      }
     ]
    },
@@ -940,9 +940,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Vrai ou faux : une case vide sur la carte perceptuelle est forcément une opportunité.",
-      "a": "Faux : il faut aussi qu’il existe une demande pour cette place.",
-      "explain": "Une place libre peut l’être faute de clients."
+      "q": "Sur une carte perceptuelle, une case vide est forcément une opportunité pour l’entreprise.",
+      "a": "Faux",
+      "explain": "Une place libre peut l’être faute de clients : il faut aussi qu’il existe une demande pour cette place."
      }
     ]
    }
@@ -1165,9 +1165,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Vrai ou faux : pour un café premium à prix élevé, une distribution en épiceries fines et une communication haut de gamme sont cohérentes.",
-      "a": "Vrai : les 4P servent le même positionnement premium.",
-      "explain": "Prix, distribution et communication prolongent l’image du produit."
+      "q": "Le deuxième P du marketing mix, **Price**, concerne les circuits de distribution, les points de vente et la logistique.",
+      "a": "Faux",
+      "explain": "Ce sont des éléments de **Place** (distribution). Le prix porte sur le niveau, la stratégie et les réductions."
      }
     ]
    },
@@ -1510,9 +1510,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Vrai ou faux : pour envoyer de la prospection par e-mail à des particuliers qui ne sont pas encore ses clients, Nova Shop doit d’abord obtenir leur consentement.",
-      "a": "Vrai : pour des prospects, le consentement est requis.",
-      "explain": "L’exception sans consentement préalable ne concerne que les clients, pour des produits analogues, avec droit d’opposition."
+      "q": "Pour des particuliers qui ne sont pas encore clients, la prospection par e-mail nécessite leur **consentement** préalable.",
+      "a": "Vrai",
+      "explain": "L’exception sans consentement ne concerne que les clients, pour des produits analogues, avec droit de s’opposer."
      }
     ]
    },
@@ -1885,9 +1885,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Vrai ou faux : pour redorer l’image d’une marque, une campagne verte avec un bon slogan suffit.",
-      "a": "Faux : sans actes ni preuves (label vérifiable, matières recyclées certifiées, rapport chiffré), c’est du greenwashing.",
-      "explain": "Un greenwashing découvert détruit la confiance."
+      "q": "Pour redorer l’image d’une marque accusée de fast fashion, une campagne verte avec un bon slogan suffit.",
+      "a": "Faux",
+      "explain": "Sans actes ni preuves (label, matières recyclées certifiées, rapport chiffré), c’est du greenwashing, qui détruit la confiance une fois découvert."
      }
     ]
    }

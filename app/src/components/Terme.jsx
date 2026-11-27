@@ -46,8 +46,10 @@ export default function Terme({ terme, definition }) {
 
   return (
     <>
-      <button ref={bouton} type="button" className="terme-clic text-slate-900 dark:text-white" aria-expanded={ouvert} aria-controls={ouvert ? id : undefined}
-        aria-haspopup="true" onClick={(e) => { e.stopPropagation(); setOuvert((v) => !v) }}>{terme}</button>
+      {/* <span role="button"> et non <button> : un vrai bouton est un bloc en ligne qui ne se coupe pas et laisse des trous dans le paragraphe */}
+      <span ref={bouton} role="button" tabIndex={0} className="terme-clic text-slate-900 dark:text-white" aria-expanded={ouvert} aria-controls={ouvert ? id : undefined}
+        aria-haspopup="true" onClick={(e) => { e.stopPropagation(); setOuvert((v) => !v) }}
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.stopPropagation(); setOuvert((v) => !v) } }}>{terme}</span>
       {ouvert && createPortal(
         <div ref={fenetre} id={id} role="dialog" aria-label={`Définition : ${terme}`} lang="fr" className="terme-def no-print" onClick={(e) => e.stopPropagation()}
           style={pos ? { left: pos.gauche, top: pos.haut, width: pos.largeur } : { left: 12, top: 0, width: 280, visibility: 'hidden' }}>

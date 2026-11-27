@@ -236,9 +236,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un four acheté 12 000 € et utilisé 6 ans (valeur résiduelle supposée nulle) est amorti de 2 000 € par an, sans nouvelle sortie d’argent.",
+      "q": "Un four acheté 12 000 € et amorti sur 6 ans, sans valeur résiduelle, a une valeur nette comptable de 8 000 € à la fin de la deuxième année.",
       "a": "Vrai",
-      "explain": "12 000 ÷ 6 = 2 000 € par an ; l’argent est sorti une seule fois, à l’achat."
+      "explain": "Chaque année, la dotation est de 2 000 € : 12 000 → 10 000 → 8 000."
      }
     ]
    },
@@ -950,9 +950,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Avec un salaire brut de 2 000 € et des cotisations patronales d’environ 42 %, le coût total pour l’employeur est de 2 840 €.",
-      "a": "Vrai",
-      "explain": "2 000 × 42 % = 840 ; 2 000 + 840 = 2 840 €."
+      "q": "Pour un salaire brut de 2 000 €, le coût total pour l’employeur est égal au salaire net, soit 1 560 €.",
+      "a": "Faux",
+      "explain": "Le net (1 560 €) est le brut moins les cotisations salariales. Le coût total employeur est le brut plus les cotisations patronales : 2 000 + 840 = 2 840 €."
      }
     ]
    },
@@ -1325,9 +1325,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le principe de prudence impose d’anticiper les pertes probables, mais pas les gains qui ne sont pas encore réalisés.",
+      "q": "Le principe de la **permanence des méthodes** interdit de changer de méthode comptable chaque année pour embellir les comptes.",
       "a": "Vrai",
-      "explain": "C’est l’asymétrie de la prudence : pertes probables prises en compte, gains seulement une fois réalisés."
+      "explain": "Garder les mêmes méthodes d’une année à l’autre rend les comptes comparables."
      }
     ]
    },
@@ -1890,9 +1890,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le SIC est le sous-système du système d’information dédié à la comptabilité.",
+      "q": "Dans un **PGI**, une vente saisie en caisse met à jour le stock et génère l’écriture comptable sans ressaisie.",
       "a": "Vrai",
-      "explain": "Le SI couvre tous les services de l’organisation ; le SIC en est la partie comptable."
+      "explain": "Le PGI repose sur une base de données unique : une information saisie une seule fois est disponible partout."
      }
     ]
    }
@@ -2098,9 +2098,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Dans le bilan fonctionnel, les emplois stables sont les immobilisations prises pour leur valeur brute.",
+      "q": "Dans le bilan fonctionnel, les amortissements s’ajoutent aux ressources stables.",
       "a": "Vrai",
-      "explain": "On raisonne en valeur brute à l’actif et on ajoute les amortissements aux ressources stables."
+      "explain": "On raisonne en valeur brute à l’actif, et les amortissements sont de l’argent « gardé » pour renouveler les machines."
      }
     ]
    },
@@ -2269,9 +2269,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un taux d’endettement de 1,8 signifie que l’entreprise a 1,80 € de dettes financières pour 1 € de capitaux propres.",
-      "a": "Vrai",
-      "explain": "Taux d’endettement = dettes financières ÷ capitaux propres."
+      "q": "Le **taux d’endettement** rapporte les dettes financières au total du passif.",
+      "a": "Faux",
+      "explain": "Il rapporte les dettes financières aux capitaux propres. C’est l’autonomie financière qui rapporte les capitaux propres au total du passif."
      }
     ]
    },
@@ -2732,9 +2732,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Avec 120 000 € de dettes financières et 40 000 € de CAF, la capacité de remboursement est de 3 ans.",
-      "a": "Vrai",
-      "explain": "120 000 ÷ 40 000 = 3 ans, sous le repère de 4 ans."
+      "q": "La **liquidité** mesure la capacité à rembourser l’ensemble des dettes, y compris en cas de cessation d’activité, alors que la **solvabilité** mesure le paiement des dettes à court terme.",
+      "a": "Faux",
+      "explain": "C’est l’inverse : la liquidité est la capacité à payer ses dettes à court terme ; la solvabilité, celle de rembourser l’ensemble de ses dettes."
      }
     ]
    },
@@ -3058,9 +3058,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Si l’activité double, les charges variables doublent alors que les charges fixes restent les mêmes à court terme.",
+      "q": "Un loyer reste le même que l’on vende 10 ou 1 000 baguettes, alors que la farine consommée augmente avec le volume.",
       "a": "Vrai",
-      "explain": "C’est le critère de classement : comportement face à l’activité."
+      "explain": "Le loyer est une charge fixe ; la farine est une charge variable : on classe les charges selon leur comportement face à l’activité."
      }
     ]
    },
@@ -3251,9 +3251,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Avec 90 000 € de charges fixes et un taux de MCV de 30 %, le seuil de rentabilité est de 300 000 € de chiffre d’affaires.",
-      "a": "Vrai",
-      "explain": "90 000 ÷ 0,30 = 300 000 €."
+      "q": "Avec 90 000 € de charges fixes et un taux de MCV de 30 %, le seuil de rentabilité est de 27 000 € de chiffre d’affaires.",
+      "a": "Faux",
+      "explain": "Seuil de rentabilité = charges fixes ÷ taux de MCV = 90 000 ÷ 0,30 = 300 000 €."
      }
     ]
    },
@@ -3635,9 +3635,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Ventes prévues 50 000 € ; ventes réelles 56 000 € : l’écart de +6 000 € est favorable.",
+      "q": "Des ventes prévues de 100 000 € et réalisées de 92 000 € donnent un écart de −8 000 €, défavorable.",
       "a": "Vrai",
-      "explain": "Écart = réel − prévu = +6 000 € ; plus de ventes que prévu est favorable."
+      "explain": "Écart = réel − prévu ; un réel moins bon que prévu est un écart défavorable."
      }
     ]
    },

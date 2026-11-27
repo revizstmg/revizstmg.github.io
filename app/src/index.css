@@ -904,3 +904,6 @@ html.dark .texte-matiere { color: color-mix(in srgb, var(--mc) 55%, #fff); }
   .eps-sheet-sport { border: 1.5pt solid #059669 !important; border-radius: 6px !important; }
   table thead th { background: #e0e7ff !important; }
 }
+
+/* Chiffres « sur la ligne » (lining) : la police d'affichage dessine des chiffres elzéviriens (1 → I, 0 → O) illisibles dans les statistiques. */
+.font-display { font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1; }
