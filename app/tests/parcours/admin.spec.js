@@ -89,3 +89,22 @@ test('chaque chiffre de l’aperçu est cliquable et ouvre la liste filtrée', a
   await page.getByRole('button', { name: 'Tout effacer' }).click()
   await expect(page.getByText('Vieux Prof')).toBeVisible()
 })
+
+test('un administrateur marque un signalement comme traité', async ({ page }) => {
+  await preparer(page, etatEleve())
+  await page.addInitScript((x) => localStorage.setItem('stmg_session', JSON.stringify(x)), session('gabriel.merlin2872@icloud.com'))
+  const corps = []
+  await page.route('**/rest/v1/rpc/revizstmg_admin_*', (route) => {
+    const fn = route.request().url().split('/rpc/')[1]
+    const json = (b) => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(b) })
+    if (fn === 'revizstmg_admin_apercu') return json({ ...apercu, offres: { premium: 0, ultimate: 0, reels: 0, offerts: 0 }, signalements_ouverts: 1 })
+    if (fn === 'revizstmg_admin_divers') return json({ ia: [], classes: [], social: { amis: 0, demandes: 0, classement: 0, membres_classe: 0 }, signalements: [{ id: 's1', traite: false, cree: '2026-11-20T10:00:00Z', auteur: 'Élève', page: 'cours', categorie: 'erreur', message: 'Faute dans le cours' }] })
+    if (fn === 'revizstmg_admin_signalement_traite') { corps.push(JSON.parse(route.request().postData())); return json({ id: 's1', traite: true }) }
+    return json({})
+  })
+  await page.goto('./#/admin')
+  await page.getByRole('button', { name: 'Signalements', exact: true }).click()
+  await page.getByRole('button', { name: /Marquer traité/ }).click()
+  await expect(page.getByText('✅ Traité')).toBeVisible()
+  expect(corps).toEqual([{ p_id: 's1', p_traite: true }])
+})
