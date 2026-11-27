@@ -104,14 +104,14 @@ exports[`contenu > chaque thème : cours, exercices, flashcards, définitions, t
   "philo-religion": "418ee14cdcc3f8a6",
   "philo-technique": "109b92e055e4d4c3",
   "philo-verite": "253a5999809e7a53",
-  "rh-t1": "2314a0e4231e3c17",
-  "rh-t2": "61489f35150b12bc",
-  "rh-t3": "012d49b1c53d272b",
-  "rh-t4": "ec9947ec80cf8825",
-  "sig-t1": "020484c60c2a04a0",
-  "sig-t2": "47d253b003503d21",
-  "sig-t3": "ab61648ff37dae17",
-  "sig-t4": "4d27613e6cbf3cae",
+  "rh-t1": "fe3efe76b43c1c6a",
+  "rh-t2": "5d1fb790c6121d43",
+  "rh-t3": "b8492e77dce344f6",
+  "rh-t4": "1aeed658c0b98f28",
+  "sig-t1": "6d049014b994f144",
+  "sig-t2": "21a562cde0e16350",
+  "sig-t3": "9ca6ada6c62fdaf5",
+  "sig-t4": "17b34e22c8334a3b",
 }
 `;
 
@@ -1451,7 +1451,7 @@ exports[`contenu > paquets de flashcards par matière 1`] = `
   "p1-maths": "b5ea8d8cf5ae033a",
   "p1-sgn": "e223ce28878144cd",
   "philosophie": "69cd614528abb287",
-  "rh-communication": "736d0405f34fcd7d",
+  "rh-communication": "2c76c0c878f0e349",
   "sig": "e76852f07108f0ba",
 }
 `;
