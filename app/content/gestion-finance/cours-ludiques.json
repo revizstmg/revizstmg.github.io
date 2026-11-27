@@ -410,7 +410,7 @@
      },
      {
       "t": "p",
-      "c": "Le **taux réduit de 5,5 %** concerne notamment certains produits alimentaires et les livres. Certains réseaux de chaleur peuvent aussi en bénéficier sous conditions. En métropole, les abonnements et consommations de gaz et d’électricité sont à 20 % depuis le 1er août 2025. Le **taux particulier de 2,1 %** concerne notamment les médicaments remboursables et la presse répondant aux conditions légales."
+      "c": "Le **taux réduit de 5,5 %** concerne notamment certains produits alimentaires et les livres. Certains réseaux de chaleur peuvent aussi en bénéficier sous conditions. En métropole, les abonnements de gaz et d’électricité ne bénéficient plus du taux réduit : ils sont à **20 % depuis le 1er août 2025**. Le **taux particulier de 2,1 %** concerne notamment les médicaments remboursables et la presse répondant aux conditions légales."
      },
      {
       "t": "example",
@@ -444,7 +444,7 @@
        ],
        [
         "Taux réduit (5,5 %)",
-        "Certains produits alimentaires et livres ; gaz et électricité à 20 % en métropole depuis août 2025"
+        "Certains produits alimentaires et livres"
        ],
        [
         "Taux particulier (2,1 %)",
@@ -1669,7 +1669,7 @@
      },
      {
       "t": "p",
-      "c": "L’information comptable doit être **protégée**. La **sécurité du SIC** repose sur quatre exigences, faciles à retenir par leurs initiales **DICP**."
+      "c": "L’information comptable doit être **protégée**. La **sécurité du SIC** repose sur quatre exigences, faciles à retenir par leurs initiales **DICP** (D, I, C et P comme **preuve**, c’est-à-dire la **traçabilité**)."
      },
      {
       "t": "list",

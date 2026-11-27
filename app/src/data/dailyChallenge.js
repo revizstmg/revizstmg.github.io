@@ -50,6 +50,7 @@ export function buildDailyChallenge(track, dateKey, n = 6) {
   return chosen.map((q0) => {
     const q = instancierQuestion(q0, rnd)
     const order = seededShuffle(q.choices.map((_, i) => i), rnd)
-    return { q: q.q, choices: order.map((i) => q.choices[i]), answer: order.indexOf(q.answer), explain: q.explain, themeId: q.themeId }
+    const nu = (x) => (typeof x === 'string' ? x.replace(/\*\*/g, '') : x) // pas d'astérisques de gras dans le défi du jour
+    return { q: nu(q.q), choices: order.map((i) => nu(q.choices[i])), answer: order.indexOf(q.answer), explain: nu(q.explain), themeId: q.themeId }
   })
 }

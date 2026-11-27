@@ -6,7 +6,12 @@
 
 const ri = (min, max, step = 1) =>
   (Math.floor(Math.random() * ((max - min) / step + 1)) * step + min)
-const round = (n, d = 2) => Math.round(n * 10 ** d) / 10 ** d
+// Arrondi « scolaire » : une valeur à …5 est arrondie vers le haut en valeur absolue (−4,45 → −4,5 ; 22,85 → 22,9),
+// avec une marge pour les erreurs de calcul en virgule flottante (22,85 × 10 = 228,49999…).
+const round = (n, d = 2) => {
+  const f = 10 ** d
+  return (Math.sign(n) * Math.round(Math.abs(n) * f + 1e-9)) / f
+}
 
 export const CALC = {
   image_exponentielle: () => {

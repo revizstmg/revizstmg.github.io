@@ -1548,7 +1548,7 @@ export function search(query, idsMatieres = null) {
   }
   for (const s of SUBJECTS) {
     if (idsMatieres && !idsMatieres.includes(s.id)) continue
-    if (tous(sansAccents(s.name)))
+    if (tous(sansAccents(`${s.name} ${s.short || ''} ${/sgn/.test(s.id) ? 'SGN' : ''}`)))
       res.push({ type: 'subject', id: s.id, label: s.name, sub: 'Matière', color: s.color })
     if (['langues','p1-langues'].includes(s.id)) continue
     for (const c of s.chapters) {

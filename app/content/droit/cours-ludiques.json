@@ -698,7 +698,7 @@
      },
      {
       "t": "defi",
-      "kind": "calcul",
+      "kind": "question",
       "q": "Dans un cas pratique, combien d’étapes la méthode compte-t-elle (faits, qualification, problème de droit, majeure, mineure, conclusion) ?",
       "a": "6 étapes.",
       "explain": "Faits, qualification, problème de droit, majeure, mineure, conclusion : six étapes."
@@ -1801,7 +1801,7 @@
      },
      {
       "t": "defi",
-      "kind": "calcul",
+      "kind": "question",
       "q": "La méthode d’analyse d’une rupture (initiative, motif, fond, forme, sanction) compte combien d’étapes en tout ?",
       "a": "5 étapes.",
       "explain": "Initiative, motif, fond, forme, sanction : cinq étapes à parcourir dans l’ordre."
