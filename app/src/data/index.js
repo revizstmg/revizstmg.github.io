@@ -12,7 +12,7 @@ import { ORDRE_MATIERES, MATIERES, COUCHES, commun, chargerFichiers, remplacerEn
 import { THEME_TERMS } from './keyterms.js'
 import { PIEGES } from './pieges.js'
 import { instancierQuestion } from '../qcmgen.js'
-import { glossaireDe, trouverDefinition } from './termes.js'
+import { glossaireDe, trouverDefinition, termesPrincipaux, cleTerme } from './termes.js'
 
 const LESSONS = COUCHES['cours-complets']
 const COURS_REELS = COUCHES['cours-reels']
@@ -943,6 +943,7 @@ function completerParGlossaire(defPairs, sec, theme) {
   if (defPairs.length >= NOTIONS_VISEES) return defPairs
   const glossaire = glossaireDe(theme?.subjectId)
   if (!glossaire?.size) return defPairs
+  const principaux = termesPrincipaux(theme?.subjectId)
   const out = [...defPairs]
   const vues = new Set(out.map((p) => _norm(p.term)))
   const defsVues = new Set(out.map((p) => _norm(p.def)))
@@ -951,6 +952,9 @@ function completerParGlossaire(defPairs, sec, theme) {
       if (out.length >= NOTIONS_VISEES) return out
       const terme = m[1].trim().replace(/[.:;,]+$/, '')
       if (terme.length < 3 || terme.length > 40 || /\d/.test(terme) || estEtapeMethode(terme)) continue
+      // Un mot en gras n'est une « notion » d'exercice que s'il est le terme principal d'une entrée du glossaire
+      // (pas une variante comme « rapporte » ou « signal », qui rendrait la réponse attendue absurde).
+      if (principaux.size && !principaux.has(cleTerme(terme))) continue
       const def = trouverDefinition(glossaire, terme)
       if (!def || def.length > 220 || vues.has(_norm(terme)) || defsVues.has(_norm(def))) continue
       vues.add(_norm(terme)); defsVues.add(_norm(def))
@@ -1200,11 +1204,12 @@ const textesDe = (o, out = []) => {
 // Chapitre sans QCM : un jeu « de quoi parle-t-on ? » fabriqué avec les mots en gras du chapitre qui ont une
 // définition au glossaire de la matière. Les mauvaises réponses sont les autres termes du MÊME chapitre.
 // Termes en gras d'une source de cours qui ont une définition dans le glossaire de la matière.
-function collecterTermes(glossaire, source) {
+function collecterTermes(glossaire, source, principaux) {
   const vus = new Map()
   for (const t of textesDe(source)) {
     for (const m of t.matchAll(/\*\*([^*]+)\*\*/g)) {
       const terme = m[1].trim().replace(/[.:;,]+$/, '')
+      if (principaux?.size && !principaux.has(cleTerme(terme))) continue
       const def = trouverDefinition(glossaire, terme)
       if (def && terme.length <= 40 && !vus.has(terme.toLowerCase()) && ![...vus.values()].some((v) => v.def === def)) vus.set(terme.toLowerCase(), { terme, def })
     }
@@ -1216,14 +1221,16 @@ function collecterTermes(glossaire, source) {
 export function termesDuChapitre(chapter, theme) {
   const glossaire = glossaireDe(theme?.subjectId)
   if (!glossaire?.size) return []
-  const items = collecterTermes(glossaire, chapter.section)
-  return items.length >= 4 ? items : collecterTermes(glossaire, theme.cours || [])
+  const principaux = termesPrincipaux(theme?.subjectId)
+  const items = collecterTermes(glossaire, chapter.section, principaux)
+  return items.length >= 4 ? items : collecterTermes(glossaire, theme.cours || [], principaux)
 }
 
 export function qcmDesTermes(chapter, theme) {
   const glossaire = glossaireDe(theme?.subjectId)
   if (!glossaire?.size) return null
-  const collecter = (source) => collecterTermes(glossaire, source)
+  const principaux = termesPrincipaux(theme?.subjectId)
+  const collecter = (source) => collecterTermes(glossaire, source, principaux)
   // Un chapitre très court n'a pas assez de termes : on complète avec ceux du thème (mieux que zéro exercice).
   let items = collecter(chapter.section)
   let duThemeEntier = false
