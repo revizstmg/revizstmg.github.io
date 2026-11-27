@@ -3938,5 +3938,9 @@
   "QCM :": "Quiz:",
   "Trouve l’intrus :": "Spot the odd one out:",
   "Classe-les :": "Sort them:",
-  "Essaie le nom complet de la matière ou du chapitre, ou parcours les matières.": "Try the full name of the subject or chapter, or browse subjects."
+  "Essaie le nom complet de la matière ou du chapitre, ou parcours les matières.": "Try the full name of the subject or chapter, or browse subjects.",
+  "{n} exercices de plus avec Premium": "{n} more exercises with Premium",
+  "L’offre gratuite donne accès aux cours et à 2 exercices par chapitre.": "The free plan includes the courses and 2 exercises per chapter.",
+  "Les comptes créés avant le 30 octobre 2026 gardent l’accès complet jusqu’au 30 novembre 2026. Les cours restent gratuits pour tous, avec 2 exercices par chapitre et un mode Scroll limité.": "Accounts created before 30 October 2026 keep full access until 30 November 2026. Courses stay free for everyone, with 2 exercises per chapter and a limited Scroll mode.",
+  "Les cours sont gratuits, avec 2 exercices par chapitre et un mode Scroll limité. Premium ouvre les outils de révision. Ultimate ajoute les parcours et programmes personnalisés. Chaque aide par IA s’utilise une fois par mois avec Premium, presque sans limite avec Ultimate. Ces aides dépendent de services externes : leur état est indiqué au moment de les utiliser.": "Courses are free, with 2 exercises per chapter and a limited Scroll mode. Premium unlocks revision tools. Ultimate adds personalised study paths and programmes. Each AI tool can be used once a month with Premium, almost without limits with Ultimate. These tools depend on external services: their availability is shown when you use them."
 }

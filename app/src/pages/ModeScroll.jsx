@@ -9,6 +9,8 @@ import { getChapter } from '../data/index.js'
 import { exercicesDuChapitre, chapitresDuTheme } from '../data/scroll.js'
 import { CourseText } from '../components/Course.jsx'
 import Introuvable from './Introuvable.jsx'
+import { useNiveauAcces } from '../components/Reserve.jsx'
+import { LIMITE_SCROLL_GRATUIT } from '../data/acces.js'
 
 // Scroll : les exercices d'un chapitre, un par écran, pour s'entraîner d'un pouce sur téléphone.
 // Ouvert à tous, sans compte ni abonnement.
@@ -269,6 +271,7 @@ function Carte({ c, fini }) {
 export function ChapitresScroll() {
   const { sid, tid } = useParams()
   const { state } = useStore()
+  const gratuit = useNiveauAcces() === 'gratuit'
   const theme = getChapter(tid)
   const chapitres = useMemo(() => (theme && theme.subjectId === sid ? chapitresDuTheme(tid).map((c) => ({ ...c, n: exercicesDuChapitre(tid, c.idx).length })) : []), [theme, sid, tid])
   if (!state.track) return <Navigate to="/" replace />
@@ -281,12 +284,13 @@ export function ChapitresScroll() {
         <h1 className="mt-1 font-display text-[1.5rem] font-medium leading-tight"><CourseText text={theme.short || theme.name} /></h1>
         <p className="mt-2 text-sm">Choisis ton chapitre.</p>
       </header>
+      {gratuit && <Link to="/offres" data-scroll-gratuit className="card block p-3 text-sm font-semibold">🔒 Offre gratuite : {LIMITE_SCROLL_GRATUIT} cartes par chapitre. Découvre Premium pour tout débloquer →</Link>}
       <ul className="space-y-2">
         {chapitres.map((c) => (
           <li key={c.idx}>
             <Link to={`/scroll/${sid}/${tid}/${c.idx}`} className="card flex items-center gap-3 p-3 text-sm">
               <span className="min-w-0 flex-1 font-semibold"><CourseText text={c.titre} /></span>
-              <span className="shrink-0 text-xs">{c.n} exercice{c.n > 1 ? 's' : ''}</span>
+              <span className="shrink-0 text-xs">{gratuit ? `${Math.min(c.n, LIMITE_SCROLL_GRATUIT)} sur ${c.n}` : `${c.n} exercice${c.n > 1 ? 's' : ''}`}</span>
             </Link>
           </li>
         ))}
@@ -303,7 +307,11 @@ export function FluxScroll() {
   const theme = getChapter(tid)
   const chapitres = useMemo(() => (theme && theme.subjectId === sid ? chapitresDuTheme(tid) : []), [theme, sid, tid])
   const chapitre = chapitres.find((c) => String(c.idx) === String(cidx))
-  const cartes = useMemo(() => (chapitre ? exercicesDuChapitre(tid, chapitre.idx) : []), [chapitre, tid])
+  const niveau = useNiveauAcces()
+  const gratuit = niveau === 'gratuit'
+  const cartesTout = useMemo(() => (chapitre ? exercicesDuChapitre(tid, chapitre.idx) : []), [chapitre, tid])
+  // Offre gratuite : un mode Scroll très limité (quelques cartes par chapitre).
+  const cartes = useMemo(() => (gratuit ? cartesTout.slice(0, LIMITE_SCROLL_GRATUIT) : cartesTout), [cartesTout, gratuit])
   const [index, setIndex] = useState(0)
   const [jeu, setJeu] = useState({ bonnes: 0, essais: 0, serie: 0, meilleure: 0 })
   const [tour, setTour] = useState(0)
@@ -353,6 +361,7 @@ export function FluxScroll() {
           {jeu.essais > 0 && <p className="scroll-texte">{jeu.bonnes} bonne{jeu.bonnes > 1 ? 's' : ''} réponse{jeu.bonnes > 1 ? 's' : ''} sur {jeu.essais} jouée{jeu.essais > 1 ? 's' : ''}{jouables > jeu.essais ? ` · ${jouables - jeu.essais} passée${jouables - jeu.essais > 1 ? 's' : ''}` : ''} · meilleure série 🔥 ×{jeu.meilleure}</p>}
           <div className="flex flex-wrap justify-center gap-3">
             <button type="button" className="btn-primary" onClick={() => { faits.current = new Set(); setJeu({ bonnes: 0, essais: 0, serie: 0, meilleure: 0 }); setTour((t) => t + 1); liste.current?.scrollTo({ top: 0 }) }}>Recommencer</button>
+            {gratuit && cartesTout.length > cartes.length && <Link to="/offres" data-scroll-limite className="btn-primary">🔒 Débloquer les {cartesTout.length - cartes.length} autres cartes</Link>}
             {suivant && <Link to={`/scroll/${sid}/${tid}/${suivant.idx}`} className="btn-primary">Chapitre suivant</Link>}
             <Link to={`/subject/${sid}/theme/${tid}/chapter/${chapitre.idx}`} className="btn-ghost">Voir le cours</Link>
             <Link to={`/scroll/${sid}/${tid}`} className="btn-ghost">Autre chapitre</Link>
