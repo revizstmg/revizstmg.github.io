@@ -117,9 +117,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La personnalité se construit tout au long de la vie par la socialisation, primaire puis secondaire.",
-      "a": "Vrai : elle n’est pas figée.",
-      "explain": "La socialisation primaire (famille, école) puis secondaire (travail, groupes) façonne l’individu, y compris en milieu professionnel."
+      "q": "La **personnalité** est figée dès l’enfance : la socialisation primaire (famille, école) la fixe définitivement.",
+      "a": "Faux",
+      "explain": "Elle se construit tout au long de la vie : socialisation primaire, puis secondaire (travail, groupes, expériences adultes). Elle n’est donc pas figée."
      }
     ]
    },
@@ -277,9 +277,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un stress chronique, causé par exemple par une surcharge ou un manque de reconnaissance, nuit à la santé et à la performance.",
-      "a": "Vrai : on parle de risques psychosociaux (RPS).",
-      "explain": "Un stress ponctuel peut mobiliser, mais un stress chronique dégrade la santé et la performance."
+      "q": "Réguler les émotions des salariés (charge réaliste, écoute, reconnaissance) est un enjeu de performance et pas seulement de confort.",
+      "a": "Vrai",
+      "explain": "Un salarié stressé par des délais intenables communique mal, fait des erreurs et peut s’arrêter : la qualité et la performance en pâtissent."
      }
     ]
    },
@@ -783,9 +783,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un vendeur souriant, patient et ponctuel illustre le savoir-être.",
-      "a": "Vrai : ce sont des attitudes relationnelles.",
-      "explain": "Le savoir-être désigne le comportement et les attitudes relationnelles."
+      "q": "Un vendeur qui sait se servir du logiciel de caisse et encaisser fait preuve de **savoir-faire**.",
+      "a": "Vrai",
+      "explain": "Le savoir-faire est la pratique, les gestes techniques et la méthode."
      }
     ]
    },
@@ -1137,9 +1137,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un merci sincère ou une responsabilité confiée sont des marques de reconnaissance qui ne coûtent pas forcément d’argent.",
-      "a": "Vrai.",
-      "explain": "Ce sont même des facteurs de motivation au sens de Herzberg."
+      "q": "La **QVT** désigne le degré d’attachement et d’engagement d’un salarié envers l’organisation.",
+      "a": "Faux",
+      "explain": "C’est l’implication. La QVT (qualité de vie au travail) regroupe les conditions, l’ambiance, l’équilibre vie pro/perso et le sens du travail."
      }
     ]
    },
@@ -1388,9 +1388,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Léa devient un acteur de l’organisation par ce qu’elle fait (son rôle) et par ses compétences.",
-      "a": "Vrai.",
-      "explain": "On ne réduit pas une personne à son statut : c’est par son rôle et ses compétences qu’elle agit."
+      "q": "Le **statut** de Léa (salariée, serveuse) désigne sa position dans l’organisation, alors que son **rôle** est le comportement attendu d’elle.",
+      "a": "Vrai",
+      "explain": "Le statut est la position dans l’organisation ; le rôle est le comportement attendu (accueillir, servir, conseiller)."
      }
     ]
    }
@@ -1488,9 +1488,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une information juste mais trop tardive est inutile pour décider.",
-      "a": "Vrai : elle doit être disponible à temps.",
-      "explain": "Exactitude, pertinence, disponibilité à temps, complétude et clarté font la qualité d’une information."
+      "q": "Une information exacte est toujours de bonne qualité, même si elle arrive trop tard pour décider.",
+      "a": "Faux",
+      "explain": "Juste mais trop tardive, une information est inutile : elle doit aussi être pertinente, disponible à temps, complète et compréhensible."
      }
     ]
    },
@@ -1618,9 +1618,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une base de données évite la redondance : l’information est saisie une seule fois et partagée.",
-      "a": "Vrai.",
-      "explain": "C’est ce qui garantit la cohérence des informations dans toute l’organisation."
+      "q": "Noter l’adresse d’un client à trois endroits avec trois orthographes est un risque de **redondance** que la base de données évite.",
+      "a": "Vrai",
+      "explain": "L’information est saisie une seule fois et partagée, ce qui garantit la cohérence."
      }
     ]
    },
@@ -1708,9 +1708,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Grâce au cloud, plusieurs personnes peuvent travailler en même temps sur un même document, à distance.",
-      "a": "Vrai.",
-      "explain": "Le travail collaboratif centralise l’information et accélère la coordination."
+      "q": "Dans le **travail collaboratif**, plusieurs personnes ne peuvent pas modifier le même document en même temps : il faut passer à tour de rôle.",
+      "a": "Faux",
+      "explain": "On travaille à plusieurs sur un même document en même temps, et l’information est centralisée et accessible partout, à distance."
      }
     ]
    },
@@ -1923,9 +1923,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un prix trop bas peut réduire la marge et faire douter de la qualité.",
-      "a": "Vrai.",
-      "explain": "Fixer un prix est un arbitrage stratégique : trop élevé, on perd des clients ; trop bas, on perd de la marge."
+      "q": "La **valeur marchande** d’un bien est le prix qu’un client accepte de payer pour l’obtenir.",
+      "a": "Vrai",
+      "explain": "Sur un marché, ce prix résulte de la rencontre entre l’offre et la demande."
      }
     ]
    },
@@ -2129,9 +2129,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une organisation peut être efficace sans être efficient.",
-      "a": "Vrai : elle atteint son objectif, mais en gaspillant des moyens.",
-      "explain": "L’efficacité répond à « ai-je réussi ? » ; l’efficience à « à quel prix, avec quels moyens ? »."
+      "q": "Une organisation **efficiente** est une organisation qui atteint son objectif, quel que soit le coût des moyens employés.",
+      "a": "Faux",
+      "explain": "C’est l’efficacité. L’efficience consiste à atteindre l’objectif au moindre coût, avec le moins de moyens possible."
      }
     ]
    },
@@ -2320,9 +2320,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une commande qui doit partir vendredi illustre le temps vu comme une contrainte.",
-      "a": "Vrai : un délai s’impose.",
-      "explain": "Quand le temps peut être organisé, c’est une ressource ; quand des délais s’imposent, c’est une contrainte."
+      "q": "Le temps n’est qu’une **ressource** : les délais et les échéances qui s’imposent n’en font pas une contrainte.",
+      "a": "Faux",
+      "explain": "Le temps a une double nature : ressource (on peut l’organiser et le planifier) et contrainte (des délais s’imposent)."
      }
     ]
    },
@@ -2611,9 +2611,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Ne rien risquer, c’est aussi renoncer à toute opportunité.",
-      "a": "Vrai.",
-      "explain": "Toute prise de risque maîtrisée est aussi une opportunité : tout est question d’arbitrage risque / rendement."
+      "q": "Pour une entreprise qui hésite à lancer une boutique en ligne, ne rien faire est aussi un risque : celui d’être dépassée par ses concurrents.",
+      "a": "Vrai",
+      "explain": "Toute prise de risque maîtrisée est aussi une opportunité, et ne rien risquer, c’est renoncer à des opportunités."
      }
     ]
    },
@@ -2711,9 +2711,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Dans une décision d’investissement, on cherche à réduire le risque, pas à le supprimer.",
-      "a": "Vrai.",
-      "explain": "Toute décision de gestion se prend dans l’incertitude."
+      "q": "Dans une décision d’investissement, le coût est certain aujourd’hui alors que le gain est différé et incertain.",
+      "a": "Vrai",
+      "explain": "Décider, c’est arbitrer entre un coût certain aujourd’hui et un gain incertain demain."
      }
     ]
    }

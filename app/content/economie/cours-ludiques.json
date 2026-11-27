@@ -61,9 +61,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le chômage des jeunes ou le SMIC peuvent servir d’exemples d’actualité pour illustrer les politiques de l’emploi (thème 7).",
-      "a": "Vrai",
-      "explain": "Ces sujets se rattachent aux formes de chômage et aux politiques de l’emploi."
+      "q": "Quand la **BCE** relève ses taux directeurs, le crédit devient en général moins cher et la demande est stimulée.",
+      "a": "Faux",
+      "explain": "Une hausse des **taux directeurs** tend à freiner la demande et les tensions inflationnistes, mais elle rend généralement le crédit plus cher."
      }
     ]
    },
@@ -346,9 +346,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le bouclier tarifaire protège le pouvoir d’achat, mais son coût peut creuser le déficit.",
+      "q": "Plafonner les prix de l’énergie protège le pouvoir d’achat des ménages, mais pèse sur les finances publiques.",
       "a": "Vrai",
-      "explain": "C’est la structure attendue : un avantage (pouvoir d’achat) et une limite (coût pour le déficit)."
+      "explain": "C’est le schéma attendu : un avantage (pouvoir d’achat) et une limite (le coût creuse le déficit)."
      }
     ]
    }
@@ -383,9 +383,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Même dans une économie de marché, l’État a un rôle économique, car le marché connaît parfois des défaillances.",
-      "a": "Vrai",
-      "explain": "Biens publics, externalités, asymétries d’information et monopoles justifient l’intervention de l’État."
+      "q": "Dans une économie de marché, l’État n’a aucun **rôle économique**, car le marché règle seul tous les problèmes.",
+      "a": "Faux",
+      "explain": "Le marché connaît des **défaillances** (biens publics, externalités, asymétries d’information, monopoles) : l’État peut alors soutenir l’activité."
      }
     ]
    },
@@ -781,9 +781,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le bouclier tarifaire relève surtout des fonctions de stabilisation et de répartition, mais son coût creuse le déficit.",
+      "q": "Plafonner les prix de l’énergie relève surtout de la **stabilisation** et de la **répartition**, mais coûte plusieurs milliards et peut retarder les économies d’énergie.",
       "a": "Vrai",
-      "explain": "Il soutient le pouvoir d’achat des ménages, mais son coût pèse sur le déficit et la dette."
+      "explain": "La mesure soutient le pouvoir d’achat, mais son coût creuse le déficit et la dette, et le prix ne joue plus son rôle de signal."
      }
     ]
    },
@@ -981,9 +981,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un étudiant sans emploi qui ne souhaite pas travailler et ne cherche pas d’emploi n’est pas chômeur au sens du BIT.",
-      "a": "Vrai",
-      "explain": "Il ne recherche pas activement un emploi : il ne remplit pas les critères du chômage BIT."
+      "q": "Une personne sans emploi qui souhaite travailler est chômeuse au sens du **BIT**, même si elle ne cherche pas activement un emploi.",
+      "a": "Faux",
+      "explain": "Pour être chômeur au sens du BIT, il faut être sans emploi, disponible dans les deux semaines et avoir recherché activement un emploi au cours des quatre dernières semaines. Sans recherche active, on relève au mieux du halo autour du chômage."
      }
     ]
    },
@@ -1280,9 +1280,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Sur le marché du travail, l’offre de travail vient des salariés et la demande de travail vient des entreprises.",
+      "q": "Sur le marché du travail, un salarié qui cherche un emploi se place du côté de l’**offre**.",
       "a": "Vrai",
-      "explain": "C’est l’inverse du marché des biens : les travailleurs offrent leur travail, les entreprises le demandent."
+      "explain": "Les salariés offrent leur travail et les entreprises le demandent : c’est l’inverse du marché des biens."
      }
     ]
    },
@@ -1744,9 +1744,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une firme multinationale implante des filiales dans plusieurs pays pour optimiser ses coûts.",
-      "a": "Vrai : elle localise chaque étape là où c’est le plus avantageux.",
-      "explain": "Main-d’œuvre, fiscalité et proximité des marchés guident ses choix : c’est la logique des chaînes de valeur mondiales."
+      "q": "Une **firme multinationale** peut faire coudre ses sacs dans un pays et gérer son design depuis un autre pour réduire ses coûts.",
+      "a": "Vrai",
+      "explain": "Elle localise chaque étape là où c’est le plus avantageux (main-d’œuvre, fiscalité, proximité des marchés) : c’est la logique des chaînes de valeur mondiales."
      }
     ]
    },
@@ -1915,9 +1915,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un PIB qui augmente ne garantit pas que la population vive mieux.",
-      "a": "Vrai : le PIB ne dit rien des inégalités ni de la pollution.",
-      "explain": "Le PIB mesure la production, pas le bien-être ; l’IDH ou d’autres indicateurs complètent l’analyse."
+      "q": "Un pays dont le **PIB** double peut pourtant connaître davantage d’inégalités et de pollution.",
+      "a": "Vrai",
+      "explain": "Le PIB mesure la production, pas le bien-être : il ne dit rien des inégalités ni de la pollution."
      }
     ]
    },
@@ -2244,9 +2244,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La croissance intensive repose sur des gains de productivité plutôt que sur plus de facteurs de production.",
-      "a": "Vrai : elle produit plus en utilisant mieux les facteurs.",
-      "explain": "La croissance extensive, elle, augmente la quantité de facteurs utilisés."
+      "q": "La croissance **extensive** repose sur des gains de productivité, alors que la croissance **intensive** consiste à utiliser plus de facteurs de production.",
+      "a": "Faux",
+      "explain": "C’est l’inverse : la croissance extensive utilise plus de facteurs (main-d’œuvre, machines) ; la croissance intensive vient de gains de productivité, moteur durable."
      }
     ]
    },

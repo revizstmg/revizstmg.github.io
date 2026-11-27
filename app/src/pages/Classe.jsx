@@ -9,7 +9,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useStore } from '../store.jsx'
 import { useT } from '../i18n.js'
-import { subjectsForTrack } from '../data/tracks.js'
+import { subjectsForTrack, subjectsForProf } from '../data/tracks.js'
 import Qcm from '../games/Qcm.jsx'
 import LiveSection from '../components/LiveMode.jsx'
 import {
@@ -1205,7 +1205,11 @@ function ProfDashboard({ classCode, track, t }) {
   useEffect(() => { load() }, [load])
 
   const students = (members || []).filter((m) => m.role !== 'prof')
-  const trackSubjects = (track ? subjectsForTrack(track) : []).filter((s) => s && !s.comingSoon && s.chapters?.length)
+  // Matières de la classe : toutes celles du niveau (spécialités comprises), réduites à celles que des élèves ont réellement
+  // travaillées : une matière sans aucune activité ne fait ni baisser la moyenne ni passer pour un « point faible ».
+  const toutesMatieres = (track ? subjectsForProf(track) : []).filter((s) => s && !s.comingSoon && s.chapters?.length)
+  const matieresTravaillees = toutesMatieres.filter((s) => students.some((m) => Number(m.subjects?.[s.id] || 0) > 0))
+  const trackSubjects = matieresTravaillees.length ? matieresTravaillees : toutesMatieres
   const subjAvg = (sid) => students.length ? Math.round(students.reduce((a, m) => a + Number(m.subjects?.[sid] || 0), 0) / students.length) : 0
   const memberAvg = (m) => trackSubjects.length ? Math.round(trackSubjects.reduce((a, s) => a + Number(m.subjects?.[s.id] || 0), 0) / trackSubjects.length) : 0
   const isAtRisk = (m) => daysSinceDay(m.active_day) > 7 || m.courses_week === 0 || memberAvg(m) < 25

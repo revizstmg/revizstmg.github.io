@@ -222,9 +222,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Deux produits qui n’ont ni les mêmes marchés ni les mêmes concurrents relèvent de deux DAS différents.",
-      "a": "Vrai",
-      "explain": "Un DAS regroupe des activités aux mêmes marchés, concurrents et facteurs clés de succès."
+      "q": "Un **DAS** correspond à un simple produit : chaque produit vendu par l’organisation forme un domaine d’activité stratégique.",
+      "a": "Faux",
+      "explain": "Un DAS n’est pas un simple produit : c’est un ensemble homogène d’activités aux mêmes marchés, concurrents et facteurs clés de succès."
      }
     ]
    },
@@ -728,9 +728,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Selon Simon, le décideur choisit souvent une solution satisfaisante plutôt que parfaite, car il manque d’information et de temps.",
-      "a": "Vrai",
-      "explain": "C’est la rationalité limitée."
+      "q": "Selon Simon, le décideur dispose de toute l’information et retient toujours la meilleure solution possible.",
+      "a": "Faux",
+      "explain": "Avec la **rationalité limitée**, le décideur n’a jamais toute l’information ni le temps de trouver la solution parfaite : il choisit une solution satisfaisante."
      }
     ]
    },
@@ -1073,9 +1073,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Selon Herzberg, une hausse de salaire évite l’insatisfaction mais ne suffit pas à motiver vraiment.",
+      "q": "Selon **Herzberg**, augmenter les salaires peut faire cesser les plaintes sans redonner de motivation.",
       "a": "Vrai",
-      "explain": "Le salaire est un facteur d’hygiène ; reconnaissance et responsabilités sont des facteurs de motivation."
+      "explain": "Le salaire est un facteur d’hygiène ; la reconnaissance et les responsabilités sont des facteurs de motivation."
      }
     ]
    },
@@ -1360,9 +1360,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un avantage concurrentiel n’est durable que s’il est difficile à imiter.",
+      "q": "Une recette que n’importe quel concurrent peut copier en une semaine ne procure pas d’avantage concurrentiel durable.",
       "a": "Vrai",
-      "explain": "Un avantage facile à copier disparaît vite."
+      "explain": "Pour être durable, un avantage doit être difficile à imiter."
      }
     ]
    },
@@ -1563,9 +1563,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une alliance permet de coopérer sans fusionner, mais rend les partenaires dépendants les uns des autres.",
-      "a": "Vrai",
-      "explain": "C’est son avantage (partage des risques) et sa limite (dépendance)."
+      "q": "La **croissance externe** consiste à se développer par ses propres moyens, ce qui la rend maîtrisée mais lente.",
+      "a": "Faux",
+      "explain": "C’est la croissance interne. La croissance externe consiste à racheter une entreprise ou à fusionner : elle est rapide, mais coûteuse et risquée."
      }
     ]
    },
@@ -1676,9 +1676,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une mutation peut être à la fois une menace et une opportunité.",
-      "a": "Vrai : tout dépend de la capacité de l’organisation à l’anticiper.",
-      "explain": "Qui la subit y voit une menace ; qui l’anticipe y voit une opportunité, d’où l’intérêt de l’agilité."
+      "q": "Une transition numérique ou écologique peut être une opportunité pour l’organisation qui l’anticipe.",
+      "a": "Vrai",
+      "explain": "Chaque mutation est une menace pour qui la subit et une opportunité pour qui l’anticipe, d’où l’importance de l’agilité."
      }
     ]
    },
@@ -2077,9 +2077,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le phygital combine le magasin physique et le numérique.",
-      "a": "Vrai : c’est l’association des deux canaux de vente.",
-      "explain": "Le e-commerce, lui, désigne seulement la vente en ligne."
+      "q": "Le **phygital** désigne la vente uniquement en ligne, sans magasin physique.",
+      "a": "Faux",
+      "explain": "Le phygital combine le magasin physique et le numérique ; la vente uniquement en ligne relève du e-commerce."
      }
     ]
    },
@@ -2554,9 +2554,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La gouvernance partenariale cherche à équilibrer les intérêts de toutes les parties prenantes.",
-      "a": "Vrai : elle prolonge la logique de la RSE.",
-      "explain": "La gouvernance actionnariale, elle, donne la priorité aux actionnaires."
+      "q": "Une organisation qui tient compte des salariés, des clients et de la société autant que de ses actionnaires adopte une gouvernance **partenariale**.",
+      "a": "Vrai",
+      "explain": "La gouvernance actionnariale donne la priorité aux actionnaires ; la partenariale équilibre les intérêts de toutes les parties prenantes."
      }
     ]
    },

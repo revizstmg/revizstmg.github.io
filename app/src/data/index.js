@@ -1218,12 +1218,13 @@ function collecterTermes(glossaire, source, principaux) {
 }
 
 // Termes de vocabulaire d'un chapitre (ou, s'il en a trop peu, du thème entier) avec leur définition.
-export function termesDuChapitre(chapter, theme) {
+export function termesDuChapitre(chapter, theme, { sansTheme = false } = {}) {
   const glossaire = glossaireDe(theme?.subjectId)
   if (!glossaire?.size) return []
   const principaux = termesPrincipaux(theme?.subjectId)
   const items = collecterTermes(glossaire, chapter.section, principaux)
-  return items.length >= 4 ? items : collecterTermes(glossaire, theme.cours || [], principaux)
+  // sansTheme : Scroll ne complète jamais avec les termes des autres chapitres (le fil doit rester dans le chapitre choisi).
+  return items.length >= 4 || sansTheme ? items : collecterTermes(glossaire, theme.cours || [], principaux)
 }
 
 export function qcmDesTermes(chapter, theme) {

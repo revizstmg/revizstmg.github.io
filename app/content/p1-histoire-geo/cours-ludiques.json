@@ -48,9 +48,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La métropolisation accentue les inégalités entre territoires, à toutes les échelles.",
-      "a": "Vrai : à l’échelle mondiale, nationale et locale.",
-      "explain": "Certaines métropoles dominent, d’autres espaces restent en marge."
+      "q": "La **métropolisation** touche toutes les villes de la même façon.",
+      "a": "Faux",
+      "explain": "Le processus est **différencié** : certaines métropoles dominent tandis que d’autres espaces restent en marge."
      }
     ]
    },
@@ -118,9 +118,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La tertiarisation, c’est la place croissante des services.",
-      "a": "Vrai.",
-      "explain": "Les services prennent une place de plus en plus grande."
+      "q": "Sous l’effet de la mondialisation, l’**industrie** se réorganise, par exemple par des délocalisations.",
+      "a": "Vrai",
+      "explain": "L’industrie se réorganise (délocalisations, technopôles) ; les services progressent par la tertiarisation."
      }
     ]
    },
@@ -212,9 +212,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Les espaces ruraux ne sont plus seulement agricoles.",
-      "a": "Vrai : ils ont aussi des fonctions résidentielle, touristique, écologique et économique.",
-      "explain": "Ils remplissent plusieurs fonctions à la fois."
+      "q": "Pour un espace rural, se **périurbaniser** signifie voir son agriculture se moderniser.",
+      "a": "Faux",
+      "explain": "La périurbanisation désigne l’extension de l’habitat pavillonnaire autour des villes, pas la modernisation agricole."
      }
     ]
    },
@@ -436,9 +436,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le 22 septembre 1792, la Ire République est proclamée.",
-      "a": "Vrai : c’est l’an I.",
-      "explain": "La monarchie est tombée le 10 août 1792 ; la République est proclamée peu après."
+      "q": "Le 10 août 1792, la Ire République est proclamée.",
+      "a": "Faux",
+      "explain": "Le 10 août 1792, c’est la prise des Tuileries et la chute de la monarchie ; la Ire République est proclamée le 22 septembre 1792."
      }
     ]
    },
@@ -888,9 +888,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Robespierre est arrêté le 9 Thermidor (27 juillet 1794) et guillotiné le lendemain.",
-      "a": "Vrai : la Terreur prend fin.",
-      "explain": "Il est arrêté le 27 juillet et guillotiné le 28 juillet 1794."
+      "q": "La chute de Robespierre au 9 Thermidor met fin à la Terreur.",
+      "a": "Vrai",
+      "explain": "Robespierre est arrêté le 27 juillet 1794 et guillotiné le 28 : la Terreur prend fin."
      }
     ]
    },
@@ -1082,9 +1082,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le 27 avril 1848, l’esclavage est aboli, grâce à Victor Schœlcher.",
-      "a": "Vrai : c’est l’une des grandes mesures de la IIe République.",
-      "explain": "La IIe République établit aussi le suffrage universel masculin."
+      "q": "L’esclavage est aboli le 27 avril 1848 sous l’impulsion de Louis-Napoléon Bonaparte.",
+      "a": "Faux",
+      "explain": "L’abolition est due à Victor Schœlcher ; Louis-Napoléon Bonaparte n’est élu président que le 10 décembre 1848."
      }
     ]
    },
@@ -1619,9 +1619,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La loi de sûreté générale de 1858 est le symbole de l’Empire autoritaire.",
-      "a": "Vrai : elle permet d’interner, exiler ou déporter sans jugement.",
-      "explain": "Elle est adoptée le 19 février et promulguée le 27 février 1858, après l’attentat d’Orsini."
+      "q": "Après l’attentat d’Orsini contre Napoléon III en 1858, le régime durcit la répression.",
+      "a": "Vrai",
+      "explain": "La loi de sûreté générale permet d’interner, exiler ou déporter sans jugement : c’est le symbole de l’Empire autoritaire."
      }
     ]
    },

@@ -921,6 +921,9 @@ export function StoreProvider({ children }) {
   return <StoreCtx.Provider value={value}>{children}</StoreCtx.Provider>
 }
 
+// Comme useStore, mais renvoie null hors du fournisseur (pages de cours statiques, tests de rendu).
+export function useStoreOptional() { return useContext(StoreCtx) }
+
 export function useStore() {
   const ctx = useContext(StoreCtx)
   if (!ctx) throw new Error('useStore doit être utilisé dans <StoreProvider>')

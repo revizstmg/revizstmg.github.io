@@ -55,9 +55,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Les câbles sous-marins font transiter les données mondiales.",
-      "a": "Vrai.",
-      "explain": "Elles passent par le fond des océans."
+      "q": "Les câbles sous-marins servent surtout à transporter le pétrole d’un continent à l’autre.",
+      "a": "Faux",
+      "explain": "Les câbles sous-marins font transiter les données mondiales (internet, communications), ce qui en fait un enjeu stratégique."
      }
     ]
    },
@@ -224,9 +224,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un bon croquis comporte toujours un titre, une légende organisée, une orientation et une échelle.",
-      "a": "Vrai : ce sont les quatre éléments de base d’un bon croquis.",
-      "explain": "Les figurés restent simples : points, flèches, aplats."
+      "q": "Un croquis sans titre ni légende organisée par thèmes est incomplet : il lui faut aussi une orientation et une échelle.",
+      "a": "Vrai",
+      "explain": "Un bon croquis a toujours un titre, une légende organisée, une orientation et une échelle, avec des figurés simples."
      }
     ]
    },
@@ -410,9 +410,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Les firmes multinationales choisissent où s’implanter et façonnent ainsi les inégalités entre territoires.",
-      "a": "Vrai : elles font partie des acteurs qui façonnent ces inégalités.",
-      "explain": "Les États et les organisations internationales aussi."
+      "q": "Dans la mondialisation, les firmes multinationales n’ont aucun rôle dans les inégalités entre territoires : seuls les États décident où s’implantent les activités.",
+      "a": "Faux",
+      "explain": "Les FMN choisissent où s’implanter et, avec les États et les organisations internationales, façonnent les inégalités entre territoires."
      }
     ]
    },
@@ -542,9 +542,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un graphique se décrit (tendance, écarts, pics) avant d’être expliqué, avec des chiffres tirés du document.",
-      "a": "Vrai : on décrit d’abord, on explique ensuite.",
-      "explain": "Les chiffres du document rendent la réponse précise."
+      "q": "Face à plusieurs documents, il ne suffit pas de les lire un par un : il faut les confronter pour répondre à la question.",
+      "a": "Vrai",
+      "explain": "On identifie, on prélève, puis on croise les documents ; un graphique se décrit avant d’être expliqué."
      }
     ]
    },
@@ -808,9 +808,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La France est membre fondateur de l’Union européenne et siège de façon permanente au Conseil de sécurité de l’ONU.",
-      "a": "Vrai : ce sont deux de ses atouts de puissance.",
-      "explain": "Elle est aussi le 2ᵉ domaine maritime mondial."
+      "q": "Grâce à ses territoires ultramarins, la France possède le 1er domaine maritime mondial.",
+      "a": "Faux",
+      "explain": "La France possède le 2ᵉ domaine maritime mondial, grâce à ses territoires ultramarins."
      }
     ]
    },
@@ -967,9 +967,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Paris est la seule métropole française de rang mondial.",
-      "a": "Vrai : elle connecte la France à la mondialisation.",
-      "explain": "Mais elle concentre aussi les richesses, d’où des déséquilibres."
+      "q": "Paris est la porte d’entrée de la France dans la mondialisation, tout en créant des déséquilibres territoriaux.",
+      "a": "Vrai",
+      "explain": "Métropole mondiale (sièges, bourse, tourisme, Roissy), elle concentre aussi les richesses au détriment du reste du territoire."
      }
     ]
    },
@@ -1300,9 +1300,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le stalinisme se réclame de l’égalité, mais une nouvelle classe de privilégiés, la nomenklatura, dirige le pays.",
-      "a": "Vrai : l’idéologie affichée ne correspond pas à la réalité vécue.",
-      "explain": "La population subit pénuries et terreur."
+      "q": "Sous le stalinisme, l’égalité affichée par l’idéologie correspond à la réalité vécue : il n’existe pas de classe privilégiée.",
+      "a": "Faux",
+      "explain": "Le stalinisme se réclame de l’égalité, mais une nouvelle classe de privilégiés, la nomenklatura, dirige le pays, tandis que la population subit pénuries et terreur."
      }
     ]
    },
@@ -1931,9 +1931,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le nazisme se distingue par un racisme biologique et un antisémitisme d’État qui mènera au génocide.",
-      "a": "Vrai : c’est ce qui le distingue des deux autres régimes.",
-      "explain": "Le stalinisme repose, lui, sur la terreur de masse (Grandes Purges, goulag)."
+      "q": "Le stalinisme se distingue par un racisme biologique et un antisémitisme d’État qui mèneront au génocide.",
+      "a": "Faux",
+      "explain": "C’est le nazisme qui se distingue par un racisme biologique et un antisémitisme d’État menant au génocide ; le stalinisme repose sur la terreur de masse (Grandes Purges, goulag)."
      }
     ]
    },
@@ -2159,9 +2159,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le régime de Vichy participe aux arrestations et déportations des Juifs en France.",
-      "a": "Vrai.",
-      "explain": "Bilan de la Shoah : environ 6 millions de Juifs assassinés."
+      "q": "En France, le régime de Vichy a pris part aux arrestations et aux déportations de Juifs.",
+      "a": "Vrai",
+      "explain": "Le bilan de la Shoah est d’environ 6 millions de Juifs assassinés."
      }
     ]
    },
@@ -2352,9 +2352,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "En 1928, Staline lance le premier plan quinquennal : une industrialisation à marche forcée.",
-      "a": "Vrai.",
-      "explain": "La collectivisation forcée suit de 1929 à 1933."
+      "q": "En 1928, Staline lance la collectivisation forcée des campagnes, avant tout plan quinquennal.",
+      "a": "Faux",
+      "explain": "En 1928, Staline lance le premier plan quinquennal ; la collectivisation forcée suit de 1929 à 1933."
      }
     ]
    },
@@ -2831,9 +2831,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La conférence de Wannsee, le 20 janvier 1942, coordonne la « solution finale ».",
-      "a": "Vrai.",
-      "explain": "Elle organise l’extermination des Juifs d’Europe."
+      "q": "Le 20 janvier 1942, la conférence de Wannsee coordonne la « solution finale » visant les Juifs d’Europe.",
+      "a": "Vrai",
+      "explain": "Cette conférence s’inscrit dans l’extermination planifiée des Juifs d’Europe."
      }
     ]
    },
@@ -3087,9 +3087,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La construction du mur de Berlin, en 1961, vise à stopper la fuite des Allemands de l’Est vers l’Ouest.",
-      "a": "Vrai : c’est la RDA qui le construit pour arrêter cette fuite.",
-      "explain": "Le mur devient le symbole de la division du monde ; il tombe en 1989."
+      "q": "La construction du mur de Berlin, en 1961, marque la fin de la Guerre froide.",
+      "a": "Faux",
+      "explain": "Le mur (1961) n’est pas la fin de la Guerre froide mais son symbole le plus fort ; c’est sa chute, en 1989, qui annonce la fin."
      }
     ]
    },
@@ -3600,9 +3600,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "En 1946, à Fulton, Churchill dénonce le « rideau de fer » qui coupe l’Europe en deux.",
-      "a": "Vrai : le discours de Fulton date du 5 mars 1946.",
-      "explain": "En 1947, les États-Unis répondent par l’endiguement (doctrine Truman) et le plan Marshall ; l’URSS par la doctrine Jdanov."
+      "q": "C’est Churchill qui dénonce le « rideau de fer » dans son discours de Fulton, le 5 mars 1946.",
+      "a": "Vrai",
+      "explain": "La doctrine Truman (endiguement) ne vient qu’en mars 1947."
      }
     ]
    },
@@ -3928,9 +3928,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "L’Allemagne est réunifiée le 3 octobre 1990, avant la disparition de l’URSS.",
-      "a": "Vrai : la réunification précède de plus d’un an l’éclatement de l’URSS (25 décembre 1991).",
-      "explain": "Le mur tombe le 9 novembre 1989, l’Allemagne est réunifiée le 3 octobre 1990, puis l’URSS disparaît fin 1991."
+      "q": "L’Allemagne est réunifiée en 1991, après l’éclatement de l’URSS.",
+      "a": "Faux",
+      "explain": "L’Allemagne est réunifiée le 3 octobre 1990, plus d’un an avant l’éclatement de l’URSS (25 décembre 1991)."
      }
     ]
    },
@@ -4260,9 +4260,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Après 1991, le monde passe d’un moment unipolaire à un monde multipolaire.",
-      "a": "Vrai : les États-Unis sont d’abord seule superpuissance, puis de nouvelles puissances comme la Chine émergent.",
-      "explain": "Le monde bipolaire (1947-1991) laisse place à un moment unipolaire puis à un monde multipolaire."
+      "q": "Dans les années 1990, les États-Unis sont seule superpuissance, avant que la Chine et d’autres pôles ne contestent cette domination.",
+      "a": "Vrai",
+      "explain": "Le moment unipolaire laisse la place à un monde multipolaire."
      }
     ]
    },
@@ -4510,9 +4510,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La Ve République, fondée en 1958, donne un rôle central au président de la République.",
-      "a": "Vrai : c’est la grande différence avec la IVe République, régime parlementaire et instable.",
-      "explain": "L’élection du président au suffrage universel direct, décidée en 1962, renforce encore sa légitimité."
+      "q": "Contrairement à la IVe République, parlementaire et instable, la Ve République donne un rôle central au président.",
+      "a": "Vrai",
+      "explain": "Le basculement se fait en 1958, sur fond de guerre d’Algérie."
      }
     ]
    },
@@ -4924,9 +4924,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La Sécurité sociale est créée en 1945, à la Libération.",
-      "a": "Vrai : c’est l’une des grandes réformes de l’après-guerre, avec le droit de vote des femmes (1944).",
-      "explain": "Le programme du CNR inspire ces réformes de 1944-1946."
+      "q": "Le SMIG, salaire minimum, est institué en 1945, en même temps que la Sécurité sociale.",
+      "a": "Faux",
+      "explain": "La Sécurité sociale est créée en 1945 ; le SMIG n’est institué qu’en 1950."
      }
     ]
    },
@@ -5248,9 +5248,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La première alternance gauche/droite sous la Ve République a lieu en 1981.",
-      "a": "Vrai : c’est l’élection de François Mitterrand.",
-      "explain": "La frise place l’alternance en 1981, après la réforme du suffrage universel direct (1962)."
+      "q": "L’élection de François Mitterrand en 1981 est la première alternance de la Ve République et la première victoire de la gauche.",
+      "a": "Vrai",
+      "explain": "Elle intervient après la réforme du suffrage universel direct (1962) et s’inscrit dans la démocratisation de la vie politique."
      }
     ]
    },

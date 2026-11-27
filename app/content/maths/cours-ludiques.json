@@ -169,9 +169,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Après une hausse de 25 %, il faut une baisse de 20 % pour revenir à la valeur de départ.",
-      "a": "Vrai : 1 ÷ 1,25 = 0,80, soit − 20 %.",
-      "explain": "Le taux réciproque a pour coefficient l’inverse du CM de départ."
+      "q": "Après une hausse de 25 %, il suffit d’une baisse de 25 % pour revenir à la valeur de départ.",
+      "a": "Faux",
+      "explain": "Le taux réciproque a pour coefficient 1 ÷ 1,25 = 0,80 : il faut une baisse de **20 %**, et non de 25 %."
      }
     ]
    },
@@ -302,9 +302,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une remise de 30 % sur un article à 80 € laisse un prix final de 56 €.",
-      "a": "Vrai : 80 × 0,30 = 24 € de remise, et 80 − 24 = 56 €.",
-      "explain": "La remise (24 €) et le prix payé (56 €) sont deux nombres différents."
+      "q": "Un article à 80 € soldé de 30 % coûte 56 €, car la remise vaut 24 € et non 30 €.",
+      "a": "Vrai",
+      "explain": "30 % de 80 € = 24 € est la remise ; le prix payé est 80 − 24 = 56 €."
      }
     ]
    },
@@ -508,9 +508,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Dans ce scénario, la suite géométrique (+6 % par an) dépasse la suite arithmétique (+40 membres par an) dès la 11ᵉ année.",
-      "a": "Vrai : à n = 11, B ≈ 949 contre A = 940.",
-      "explain": "À n = 10 on avait encore B ≈ 895 < A = 900."
+      "q": "Dans ce scénario, la suite géométrique (+6 % par an) dépasse la suite arithmétique (+40 membres par an) dès la 10ᵉ année.",
+      "a": "Faux",
+      "explain": "À n = 10, B ≈ 895 reste inférieur à A = 900 ; le dépassement a lieu à n = 11 (B ≈ 949 contre A = 940)."
      }
     ]
    },
@@ -759,9 +759,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Avec des intérêts composés, la valeur d’un placement suit une suite géométrique.",
-      "a": "Vrai : on multiplie chaque année par le même coefficient.",
-      "explain": "Les intérêts simples, eux, forment une suite arithmétique."
+      "q": "Sur 1 000 €, des intérêts composés à 4 % par an rapportent plus au bout de 10 ans que des intérêts simples de 40 € par an.",
+      "a": "Vrai",
+      "explain": "Après 10 ans : environ 1 480 € en intérêts composés (suite géométrique) contre 1 400 € en intérêts simples (suite arithmétique)."
      }
     ]
    },
@@ -954,9 +954,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Si f ′ passe du positif au négatif en x = 2, alors f admet un maximum en x = 2.",
-      "a": "Vrai : f croît puis décroît, donc 2 est un maximum.",
-      "explain": "Un minimum correspondrait à un passage du négatif au positif."
+      "q": "Si f ′(x) = 0 en x = 2, alors f admet forcément un extremum en x = 2.",
+      "a": "Faux",
+      "explain": "Il faut aussi que f ′ **change de signe** en x = 2 : c’est ce changement qui donne un maximum (de + à −) ou un minimum (de − à +)."
      }
     ]
    },
@@ -1300,9 +1300,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Avec l’ajustement y = 8x + 25, la prévision pour x = 12 est de 121 milliers d’abonnés.",
-      "a": "Vrai : 8 × 12 + 25 = 121.",
-      "explain": "Mais c’est une extrapolation si les données observées s’arrêtent bien avant x = 12."
+      "q": "Avec l’ajustement y = 8x + 25 (y en milliers d’abonnés), le service gagne en moyenne 8 000 abonnés par an.",
+      "a": "Vrai",
+      "explain": "La pente a = 8 signifie 8 milliers d’abonnés supplémentaires chaque année en moyenne."
      }
     ]
    },
@@ -1395,9 +1395,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Deux variables qui évoluent ensemble n’ont pas forcément de lien de cause à effet.",
-      "a": "Vrai : la corrélation n’est pas une causalité.",
-      "explain": "Une cause commune (comme la chaleur) peut expliquer les deux évolutions."
+      "q": "Puisque les ventes de glaces et les noyades augmentent ensemble l’été, on peut conclure que les glaces provoquent les noyades.",
+      "a": "Faux",
+      "explain": "Une corrélation n’est pas une **causalité** : c’est une cause commune, la chaleur, qui explique les deux évolutions."
      }
     ]
    }
@@ -1473,9 +1473,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "P(A) = 0,5 ; P(B) = 0,4 ; P(A ∩ B) = 0,2. A et B sont indépendants.",
-      "a": "Vrai : 0,5 × 0,4 = 0,2.",
-      "explain": "Le produit égale P(A ∩ B)."
+      "q": "Si P(A) = 0,5, P(B) = 0,4 et P(A ∩ B) = 0,1, alors A et B sont indépendants.",
+      "a": "Faux",
+      "explain": "L’indépendance exige P(A ∩ B) = P(A) × P(B) = 0,5 × 0,4 = 0,2, et non 0,1."
      }
     ]
    },
@@ -1806,9 +1806,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Pour X ~ B(20 ; 0,05), la probabilité d’avoir au moins une pièce défectueuse vaut environ 0,642.",
-      "a": "Vrai : P(X ≥ 1) = 1 − P(X = 0) ≈ 1 − 0,358 = 0,642.",
-      "explain": "« Au moins une » se calcule avec l’événement contraire."
+      "q": "Pour X ~ B(20 ; 0,05), environ 36 % des échantillons ne contiennent aucune pièce défectueuse.",
+      "a": "Vrai",
+      "explain": "P(X = 0) = 0,95²⁰ ≈ 0,358, d’où P(X ≥ 1) ≈ 0,642 par l’événement contraire."
      }
     ]
    },
@@ -1904,9 +1904,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Pour X ~ B(50 ; 0,5), l’espérance est 25 et l’écart-type vaut environ 3,54.",
-      "a": "Vrai : E(X) = 50 × 0,5 = 25 et σ = √12,5 ≈ 3,54.",
-      "explain": "On applique E(X) = n·p et σ(X) = √( n·p·(1 − p) )."
+      "q": "Pour X ~ B(50 ; 0,5), l’espérance est 25 et l’écart-type vaut environ 12,5.",
+      "a": "Faux",
+      "explain": "σ = √(n·p·(1 − p)) = √12,5 ≈ 3,54 ; 12,5 est la valeur sous la racine, pas l’écart-type."
      }
     ]
    },
@@ -2047,9 +2047,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La valeur V(t) = 800 × 0,9ᵗ décroît : elle perd 10 % par période.",
-      "a": "Vrai : la base 0,9 est comprise entre 0 et 1.",
-      "explain": "Un facteur inférieur à 1 modélise une diminution composée."
+      "q": "La fonction t ↦ −800 × 0,9ᵗ est croissante.",
+      "a": "Vrai",
+      "explain": "Multiplier par un coefficient négatif inverse les variations : 800 × 0,9ᵗ décroît, donc −800 × 0,9ᵗ croît vers 0."
      }
     ]
    },

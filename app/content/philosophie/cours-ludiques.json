@@ -67,9 +67,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Pour Kant, dire « c’est beau », ce n’est pas seulement dire « ça me plaît ».",
-      "a": "Vrai : le jugement de goût est subjectif mais prétend valoir pour tous.",
-      "explain": "L’agréable ne vaut que pour moi ; le beau prétend à l’universalité, sans concept."
+      "q": "Pour Kant, dire « c’est beau » revient simplement à dire « ça me plaît », sans prétendre valoir pour les autres.",
+      "a": "Faux",
+      "explain": "Pour Kant, dire « c’est beau » n’est pas dire « ça me plaît » : le jugement de goût est subjectif mais prétend valoir pour tous (universalité sans concept)."
      }
     ]
    },
@@ -246,9 +246,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Dans la dissertation guidée, la partie III soutient qu’une chose peut être belle et utile, mais que sa beauté ne vient pas de son utilité.",
-      "a": "Vrai : c’est le dépassement du plan.",
-      "explain": "Le beau et l’utile ne s’opposent pas terme à terme, mais la beauté ne naît pas de l’utilité."
+      "q": "Dans la dissertation guidée, la partie III admet qu’un objet puisse être beau et utile, sans que sa beauté naisse de son utilité.",
+      "a": "Vrai",
+      "explain": "Le dépassement distingue la coexistence du beau et de l’utile de l’origine de la beauté, qui ne vient pas de l’utilité."
      }
     ]
    },
@@ -383,9 +383,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Pour Klee, l’art vaut parce qu’il fait apparaître ce que l’œil ordinaire ne perçoit pas, et non parce qu’il ressemble.",
-      "a": "Vrai : « L’art ne reproduit pas le visible, il rend visible. »",
-      "explain": "C’est un renversement de la position de Platon, pour qui l’image est éloignée du vrai."
+      "q": "Pour Klee, comme pour Platon, l’art vaut d’abord par sa ressemblance avec le visible.",
+      "a": "Faux",
+      "explain": "Klee renverse Platon : « L’art ne reproduit pas le visible, il rend visible » ; l’art vaut en faisant apparaître ce que l’œil ordinaire ne perçoit pas."
      }
     ]
    },
@@ -490,9 +490,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La ségrégation en vigueur en 1955 était légale, mais illégitime.",
-      "a": "Vrai : elle était conforme à la loi, mais contraire à la justice.",
-      "explain": "Légal = conforme à la loi ; légitime = conforme à la justice."
+      "q": "Une action conforme à la loi est forcément légitime.",
+      "a": "Faux",
+      "explain": "Est légal ce qui est conforme à la loi, légitime ce qui est conforme à la justice : la ségrégation était légale mais illégitime."
      }
     ]
    },
@@ -692,9 +692,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Selon le plan guidé, la désobéissance civile n’est pas de l’anarchie : elle respecte encore l’idée de loi.",
-      "a": "Vrai : elle enfreint publiquement une loi injuste, en acceptant la sanction, pour appeler à une loi meilleure.",
-      "explain": "C’est le dépassement de l’opposition entre obéir et désobéir."
+      "q": "Dans le plan guidé, désobéir publiquement à une loi injuste en acceptant la sanction reste une façon de respecter l’idée de loi.",
+      "a": "Vrai",
+      "explain": "La désobéissance civile n’est pas de l’anarchie : elle en appelle à une loi meilleure."
      }
     ]
    },
@@ -824,9 +824,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Pour Rousseau, la force peut contraindre, mais elle n’oblige pas moralement.",
-      "a": "Vrai : dès qu’elle faiblit, l’obéissance cesse.",
-      "explain": "Une autorité durable a besoin de légitimité, non de simple puissance."
+      "q": "Pour Rousseau, la force suffit à fonder une obéissance durable : le plus fort reste toujours assez fort pour être le maître.",
+      "a": "Faux",
+      "explain": "Pour Rousseau, le plus fort n’est jamais assez fort pour être toujours le maître s’il ne transforme sa force en droit ; une autorité durable a besoin de légitimité, non de simple puissance."
      }
     ]
    },
@@ -927,9 +927,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Pour Kant, la liberté n’est pas faire n’importe quoi au gré de ses envies : c’est l’autonomie, se donner à soi-même sa propre loi.",
-      "a": "Vrai : faire n’importe quoi, c’est la licence.",
-      "explain": "La licence suit les envies ; l’autonomie se donne sa propre loi."
+      "q": "Distinguer liberté et licence, c’est opposer l’autonomie kantienne, qui se donne sa loi, au simple fait de suivre ses envies.",
+      "a": "Vrai",
+      "explain": "La licence suit les envies ; l’autonomie consiste à se donner à soi-même sa propre loi."
      }
     ]
    },
@@ -1098,9 +1098,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Dans Le Meilleur des mondes d’Huxley, la servitude passe par le divertissement et le plaisir.",
-      "a": "Vrai : la population aime sa servitude.",
-      "explain": "Orwell montre l’asservissement par la terreur ; Huxley, par le divertissement."
+      "q": "Dans *1984*, Orwell décrit une population divertie et droguée au plaisir qui aime sa servitude.",
+      "a": "Faux",
+      "explain": "Cette servitude par le divertissement est celle du *Meilleur des mondes* de Huxley ; chez Orwell, l’État totalitaire asservit par la terreur et le contrôle des pensées."
      }
     ]
    },
@@ -1221,9 +1221,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Pour Descartes, le libre arbitre est une évidence intérieure et « la principale perfection de l’homme ».",
-      "a": "Vrai : je fais l’expérience directe de pouvoir dire oui ou non.",
-      "explain": "Spinoza lui répond que cette liberté est une illusion née de l’ignorance des causes."
+      "q": "Pour Descartes, la liberté est une illusion née de l’ignorance des causes de nos désirs.",
+      "a": "Faux",
+      "explain": "Cette thèse est celle de Spinoza ; pour Descartes, le libre arbitre est une évidence intérieure, « la principale perfection de l’homme »."
      }
     ]
    },
@@ -1538,9 +1538,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Dans un plan progressif, chaque partie doit faire avancer la réflexion, et non juxtaposer des avis.",
-      "a": "Vrai : thèse, antithèse, dépassement.",
-      "explain": "Un plan qui juxtapose des avis n’avance pas."
+      "q": "En dissertation, une conclusion qui répond simplement « ça dépend » est tout à fait satisfaisante.",
+      "a": "Faux",
+      "explain": "Il faut répondre clairement au problème posé, surtout pas « ça dépend » sans plus."
      }
     ]
    },
@@ -1807,9 +1807,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une bonne problématique n’est pas une simple reformulation du sujet : elle tient en une question précise.",
-      "a": "Vrai : elle annonce déjà le plan.",
-      "explain": "Elle naît de la tension entre la réponse spontanée et l’objection."
+      "q": "Pour problématiser, on oppose une objection à la réponse spontanée, et la tension entre les deux fait naître le problème.",
+      "a": "Vrai",
+      "explain": "Problématiser, c’est faire jaillir la tension entre la réponse évidente et l’objection qui la fragilise."
      }
     ]
    },
@@ -2015,9 +2015,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Pour le sujet « L’homme doit-il dominer la nature ? », la partie III du plan type s’appuie sur Jonas et la responsabilité.",
-      "a": "Vrai : I. maîtrise (Descartes), II. dangers, III. responsabilité (Jonas).",
-      "explain": "C’est le plan type en trois temps : thèse, objection, dépassement."
+      "q": "Pour « L’homme doit-il dominer la nature ? », la partie III du plan type s’appuie sur Descartes et la maîtrise de la nature.",
+      "a": "Faux",
+      "explain": "Descartes et la maîtrise servent la partie I ; la partie III développe une responsabilité nouvelle envers la nature (Jonas)."
      }
     ]
    },
@@ -2217,9 +2217,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "« C’est naturel, donc c’est bien » est un sophisme naturaliste.",
-      "a": "Vrai : on passe du fait à la valeur.",
-      "explain": "La nature décrit ce qui est, elle ne dit pas ce qui doit être."
+      "q": "Conclure qu’une chose est bonne parce qu’elle est naturelle revient à passer illégitimement du fait à la valeur.",
+      "a": "Vrai",
+      "explain": "C’est le sophisme naturaliste : la nature décrit ce qui est, non ce qui doit être."
      }
     ]
    },
@@ -2358,9 +2358,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Dans le dépassement (III), la culture peut accomplir l’homme ou le pervertir selon l’usage.",
-      "a": "Vrai : tout dépend de ce qu’on en fait.",
-      "explain": "Le problème n’est pas la culture en soi, mais une culture qui trahit ce qu’il y a de meilleur dans l’humain."
+      "q": "Dans le dépassement, la culture dénature toujours l’homme, quel que soit l’usage qu’on en fait.",
+      "a": "Faux",
+      "explain": "Dans le dépassement, la culture ne dénature pas l’homme : elle l’accomplit ou le pervertit selon l’usage."
      }
     ]
    }
@@ -2460,9 +2460,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Pour « La foi est-elle contraire à la raison ? », il faut nuancer plutôt que poser « religion = obscurantisme ».",
-      "a": "Vrai : le sujet demande de nuancer.",
-      "explain": "Le repère croire / savoir évite de juger la foi avec les critères de la science."
+      "q": "Pour « La foi est-elle contraire à la raison ? », le repère croire / savoir empêche de juger la foi avec les critères de la science.",
+      "a": "Vrai",
+      "explain": "On évite ainsi le piège « religion = obscurantisme, science = vérité » et l’on nuance."
      }
     ]
    },
@@ -2704,9 +2704,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Pour Durkheim, on peut étudier la fonction sociale de la religion sans se prononcer sur la vérité des croyances.",
-      "a": "Vrai : la religion soude le groupe, indépendamment de sa vérité.",
-      "explain": "Durkheim adopte une approche sociologique : lien social, identité, rituel partagé."
+      "q": "Pour Durkheim, la religion est avant tout une illusion née du désir infantile de protection paternelle.",
+      "a": "Faux",
+      "explain": "Cette thèse est celle de Freud ; Durkheim voit dans la religion un fait social qui soude le groupe, indépendamment de sa vérité."
      }
     ]
    },
@@ -2802,9 +2802,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Selon ce plan, une foi qui accepte le doute et le dialogue ne renonce pas à la raison.",
-      "a": "Vrai : elle en est une autre forme.",
-      "explain": "Seule la croyance qui refuse de se penser (le fanatisme) s’oppose à la raison."
+      "q": "Selon ce plan, toute croyance, même ouverte au doute et au dialogue, renonce à la raison.",
+      "a": "Faux",
+      "explain": "Selon le plan, seule la croyance qui refuse de se penser (le fanatisme) s’oppose à la raison ; une foi qui accepte le doute et le dialogue n’y renonce pas."
      }
     ]
    }
@@ -2904,8 +2904,8 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le progrès technique entraîne automatiquement le progrès humain : c’est l’un des pièges de ce sujet.",
-      "a": "Vrai : c’est bien un piège à éviter.",
+      "q": "Croire que le progrès technique entraîne automatiquement le progrès humain est un piège à éviter dans ce sujet.",
+      "a": "Vrai",
       "explain": "La technique donne des moyens ; le progrès humain dépend des fins et de l’usage."
      }
     ]
@@ -3144,9 +3144,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Selon Hegel, c’est l’esclave, en travaillant, qui accède à la conscience de soi.",
-      "a": "Vrai : le maître, purement consommateur, reste dépendant.",
-      "explain": "Le travail humanise et libère celui qui transforme le monde."
+      "q": "Chez Hegel, c’est en transformant la nature par son travail que l’esclave se transforme lui-même et accède à la conscience de soi.",
+      "a": "Vrai",
+      "explain": "Transformer la nature, c’est se transformer soi-même."
      }
     ]
    },
@@ -3242,9 +3242,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La technique donne des moyens mais ne fixe pas les fins.",
-      "a": "Vrai : l’usage relève de la morale et de la politique.",
-      "explain": "Plus de pouvoir n’implique pas plus de sagesse : la technique ne rend pas meilleur par elle-même."
+      "q": "Dans la partie III, la technique fixe elle-même les fins que l’homme doit poursuivre.",
+      "a": "Faux",
+      "explain": "La technique donne des moyens ; elle ne fixe pas les fins, dont l’usage relève de la morale et de la politique."
      }
     ]
    }
@@ -3344,9 +3344,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "« À chacun sa vérité » confond le goût et la vérité.",
-      "a": "Vrai : le goût est subjectif, la vérité prétend valoir pour tous.",
-      "explain": "Le relativisme efface la différence entre ce qui plaît et ce qui est vrai."
+      "q": "Pour le repère opinion / savoir, une opinion devient vraie quand un grand nombre de personnes y croient.",
+      "a": "Faux",
+      "explain": "Une vérité ne dépend pas du nombre de gens qui y croient."
      }
     ]
    },
@@ -3553,9 +3553,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "On peut être certain d’une chose et pourtant se tromper.",
-      "a": "Vrai : la certitude est une conviction subjective, donc faillible.",
-      "explain": "La vérité est l’accord avec l’objet ; la certitude n’est qu’un état de conviction."
+      "q": "Quelqu’un de très sûr de lui peut avoir tort, car la certitude relève de la conviction subjective et non de l’accord avec l’objet.",
+      "a": "Vrai",
+      "explain": "La vérité est l’accord du jugement avec son objet ; la certitude n’est qu’une conviction."
      }
     ]
    },
@@ -3659,9 +3659,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Pour Popper, une théorie scientifique tient tant qu’elle n’est pas réfutée.",
-      "a": "Vrai : sa vérité est provisoire et rectifiable.",
-      "explain": "Cette révisabilité fait la fiabilité de la science, sans relativisme."
+      "q": "Pour Popper, la science reste fiable parce qu’une théorie n’est conservée que tant qu’aucune épreuve ne la réfute.",
+      "a": "Vrai",
+      "explain": "Sa vérité est provisoire et rectifiable, sans relativisme."
      }
     ]
    },

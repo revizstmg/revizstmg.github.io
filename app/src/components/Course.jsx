@@ -2,7 +2,7 @@ import '../pages/CourseStudio.css'
 import { canonicalPublicText } from '../localisation/catalogue.js'
 import { useFenetreClavier } from './clavier.js'
 import { readPosition, savePosition } from '../data/readingPosition.js'
-import { useStore } from '../store.jsx'
+import { useStore, useStoreOptional } from '../store.jsx'
 // Affichage d'un cours « complet » : introduction, sections avec paragraphes,
 // exemples travaillés, encadrés méthode / piège, tableaux, formules et
 // ressources (vidéos, sites officiels). Rétro-compatible avec l'ancien format
@@ -480,6 +480,63 @@ const sansEcho = (q) => String(q || '')
   .replace(/^\s*(?:trouve|rep[èe]re) l['’]intrus\s+(?=parmi)/i, '') // « Trouve l’intrus parmi… » : le genre est déjà devant
   .replace(/\s*(?:trouve|rep[èe]re) l['’]erreur\s*\.?\s*$/i, '') // consigne répétée en fin de question
 
+
+// Mini-défi interactif : QCM, intrus et vrai/faux se répondent d'un toucher (retour immédiat, +2 XP la première fois) ;
+// les autres genres (question, erreur, calcul, classement) gardent la réponse à ouvrir.
+function optionsDuDefi(b) {
+  if (b.kind === 'vf') return { stem: b.q, options: [{ k: 'V', l: 'Vrai' }, { k: 'F', l: 'Faux' }], bonne: /^\s*v/i.test(b.a || '') ? 'V' : 'F' }
+  if (b.kind !== 'qcm' && b.kind !== 'intrus') return null
+  const lignes = String(b.q || '').split('\n')
+  const options = []
+  const reste = []
+  for (const l of lignes) { const m = l.match(/^\s*([A-D])\)\s*(.+)$/); if (m) options.push({ k: m[1], l: m[2] }); else reste.push(l) }
+  const bonne = (String(b.a || '').trim().match(/^([A-D])\b/) || [])[1]
+  if (options.length < 2 || !bonne) return null
+  return { stem: reste.join('\n').trim(), options, bonne }
+}
+
+function cleDefi(b) { return 'defi:' + String(b.q || '').slice(0, 60) }
+
+function DefiInteractif({ b, o }) {
+  const store = useStoreOptional()
+  const [choisi, setChoisi] = useState(null)
+  const fini = choisi !== null
+  const juste = fini && choisi === o.bonne
+  const repondre = (k) => {
+    if (fini) return
+    setChoisi(k)
+    if (k !== o.bonne || !store?.addXp) return
+    try {
+      const deja = JSON.parse(localStorage.getItem('stmg_defis_faits') || '[]')
+      if (!deja.includes(cleDefi(b))) { store.addXp(2); localStorage.setItem('stmg_defis_faits', JSON.stringify([...deja, cleDefi(b)].slice(-800))) }
+    } catch { store.addXp(2) }
+  }
+  return (
+    <div onClick={(e) => e.stopPropagation()} data-defi={b.kind} className="course-callout course-defi rounded-2xl border-2 border-dashed border-violet-400 bg-violet-50 p-4 dark:border-violet-500 dark:bg-violet-950/30">
+      <p className="text-sm font-bold text-violet-800 dark:text-violet-200">{DEFI_GENRES[b.kind]?.[0] || '🎯'} {DEFI_GENRES[b.kind]?.[1] || 'Mini-défi :'} <span className="whitespace-pre-line"><CourseText text={sansEcho(o.stem)} /></span></p>
+      <div className="mt-3 flex flex-col gap-2" role="group" aria-label="Réponses">
+        {o.options.map((x) => {
+          const etat = !fini ? '' : x.k === o.bonne ? 'border-emerald-600 bg-emerald-100 text-emerald-900 dark:bg-emerald-900/40 dark:text-emerald-100' : x.k === choisi ? 'border-rose-600 bg-rose-100 text-rose-900 dark:bg-rose-900/40 dark:text-rose-100' : 'opacity-60'
+          return (
+            <button key={x.k} type="button" disabled={fini} onClick={() => repondre(x.k)} data-choix={x.k}
+              className={`rounded-xl border-2 border-violet-300 bg-white px-3 py-2 text-left text-sm font-medium text-slate-800 dark:border-violet-600 dark:bg-slate-900 dark:text-slate-100 ${etat}`}>
+              {b.kind === 'vf' ? x.l : <><b>{x.k})</b> <CourseText text={x.l} /></>}
+            </button>
+          )
+        })}
+      </div>
+      {!fini && <p className="mt-2 hidden text-sm print:block"><b>Réponse : </b><CourseText text={b.a} />{b.explain ? ' ' : ''}{b.explain ? <CourseText text={b.explain} /> : null}</p>}
+      {fini && (
+        <div role="status" className="mt-3 border-t border-violet-300 pt-3 text-sm leading-relaxed text-slate-700 dark:text-slate-200">
+          <p><b>{juste ? 'Bien joué ! ' : 'Pas tout à fait. '}</b>Réponse : <CourseText text={b.a} /></p>
+          {b.explain && <p className="mt-1 whitespace-pre-line"><CourseText text={b.explain} /></p>}
+          {juste && <p className="mt-1 text-xs text-violet-700 dark:text-violet-300">+2 XP la première fois</p>}
+        </div>
+      )}
+    </div>
+  )
+}
+
 export function Block({ b, color }) {
   switch (b.t) {
     case 'p':
@@ -521,8 +578,10 @@ export function Block({ b, color }) {
           <p className="whitespace-pre-line text-[15px] font-medium leading-relaxed text-slate-800 dark:text-slate-100"><CourseText text={b.c} /></p>
         </div>
       )
-    case 'defi':
-      // Mini-défi : on cherche d'abord, on ouvre la réponse ensuite.
+    case 'defi': {
+      // Mini-défi : QCM, intrus et vrai/faux se répondent d'un toucher ; les autres genres gardent la réponse à ouvrir.
+      const o = optionsDuDefi(b)
+      if (o) return <DefiInteractif b={b} o={o} />
       return (
         <details onClick={(e) => e.stopPropagation()} className="course-callout course-defi group rounded-2xl border-2 border-dashed border-violet-400 bg-violet-50 p-4 dark:border-violet-500 dark:bg-violet-950/30">
           <summary className="cursor-pointer text-sm font-bold text-violet-800 dark:text-violet-200">{DEFI_GENRES[b.kind]?.[0] || '🎯'} {DEFI_GENRES[b.kind]?.[1] || 'Mini-défi :'} <span className="whitespace-pre-line"><CourseText text={sansEcho(b.q)} /></span></summary>
@@ -532,6 +591,7 @@ export function Block({ b, color }) {
           </div>
         </details>
       )
+    }
     case 'table':
       return (
         <div className="overflow-x-auto">

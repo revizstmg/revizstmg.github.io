@@ -71,9 +71,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un contrat peut être valablement formé par un simple clic, sans écrit signé.",
-      "a": "Vrai : le contrat est consensuel.",
-      "explain": "Le seul accord (offre + acceptation) suffit à former le contrat ; l’écrit sert surtout de preuve."
+      "q": "Un contrat n’est valablement formé que s’il est constaté par un **écrit** signé des deux parties.",
+      "a": "Faux",
+      "explain": "Le contrat est **consensuel** : le seul accord (offre + acceptation) suffit, même par un simple clic. L’écrit sert surtout de preuve."
      }
     ]
    },
@@ -342,9 +342,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un contrat dont le contenu est illicite peut être annulé, même si les deux parties étaient majeures et d’accord.",
-      "a": "Vrai : il manque la condition de contenu licite.",
-      "explain": "L’accord des parties ne suffit pas : consentement, capacité et contenu licite et certain doivent être réunis."
+      "q": "Un contrat qui ne respecte pas l’une des trois conditions de l’article 1128 (consentement, capacité, contenu licite et certain) peut être annulé.",
+      "a": "Vrai",
+      "explain": "Si l’une des trois conditions manque, le contrat est exposé à la **nullité**."
      }
     ]
    },
@@ -507,9 +507,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Dans l’affaire du téléphone, la conclusion est que Léa peut demander la nullité de la vente.",
-      "a": "Vrai : les éléments du dol sont réunis.",
-      "explain": "Manœuvre ou dissimulation, caractère déterminant et intention de tromper : le dol permet de demander la nullité."
+      "q": "Dans l’affaire du téléphone « neuf » en réalité reconditionné, Léa peut seulement demander des dommages-intérêts, mais pas la **nullité** de la vente.",
+      "a": "Faux",
+      "explain": "Les éléments du **dol** sont réunis : Léa peut demander la nullité de la vente et la restitution du prix, en plus de dommages-intérêts."
      }
     ]
    },
@@ -656,9 +656,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un écrit électronique a la même valeur qu’un écrit papier.",
-      "a": "Vrai.",
-      "explain": "L’écrit et la signature électroniques sont reconnus juridiquement, comme leurs équivalents papier."
+      "q": "Grâce à la règle du **double clic**, l’acheteur en ligne peut vérifier et corriger sa commande avant de la confirmer.",
+      "a": "Vrai",
+      "explain": "Un premier clic pour commander, un second pour confirmer : l’acheteur contrôle sa commande avant que le contrat soit formé."
      }
     ]
    },
@@ -807,9 +807,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le maître d’un chien qui mord un passant peut devoir réparer le dommage même s’il n’a commis aucune négligence.",
-      "a": "Vrai : il répond du fait de son animal.",
-      "explain": "Dans le régime du fait des animaux, la victime prouve la garde, le dommage et le lien de causalité, pas une faute."
+      "q": "Le maître d’un chien qui mord un passant n’est responsable que si la victime prouve qu’il a été **négligent**.",
+      "a": "Faux",
+      "explain": "Pour le **fait des animaux** (art. 1243), le maître répond sans faute : la victime prouve seulement la garde, le dommage et le lien de causalité."
      }
     ]
    },
@@ -1086,9 +1086,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un employeur peut être civilement responsable du dommage causé par son salarié pendant son travail, sans avoir commis lui-même de faute.",
-      "a": "Vrai : c’est la responsabilité du fait d’autrui.",
-      "explain": "L’employeur répond de son salarié sans faute de sa part ; la victime n’a pas à prouver une faute de l’employeur."
+      "q": "Un pot de fleurs tombe d’un balcon sans que son propriétaire l’ait lancé : celui-ci peut quand même voir sa responsabilité engagée en tant que gardien de la chose.",
+      "a": "Vrai",
+      "explain": "C’est le régime du **fait des choses** (art. 1242, alinéa 1) : on répond des dommages causés par une chose dont on a la garde, sans avoir à commettre de faute."
      }
     ]
    },
@@ -1223,9 +1223,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Le producteur d’un produit défectueux est responsable de plein droit, sans que la victime ait à prouver sa faute.",
-      "a": "Vrai.",
-      "explain": "La victime prouve le dommage, le défaut et le lien de causalité, mais pas une faute du producteur."
+      "q": "Pour être indemnisée d’un dommage causé par un **produit défectueux**, la victime doit prouver que le producteur a commis une faute.",
+      "a": "Faux",
+      "explain": "Le producteur est responsable **de plein droit** : la victime prouve seulement le dommage, le défaut et le lien de causalité, pas une faute."
      }
     ]
    },
@@ -1348,9 +1348,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Pour savoir si quelqu’un est salarié, le juge regarde la réalité de la relation, pas seulement le titre du contrat.",
-      "a": "Vrai : il recherche un faisceau d’indices.",
-      "explain": "Ordres, contrôle, horaires imposés : ces indices révèlent un éventuel lien de subordination, quel que soit le nom du contrat."
+      "q": "Un chauffeur de plateforme présenté comme « indépendant » peut être reconnu **salarié** s’il travaille en réalité sous les ordres de la plateforme.",
+      "a": "Vrai",
+      "explain": "Le juge recherche un **lien de subordination** par un faisceau d’indices (ordres, contrôle, sanctions), quel que soit le titre du contrat."
      }
     ]
    },
@@ -1575,9 +1575,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La rupture conventionnelle repose sur l’accord des deux parties et sa convention est homologuée par l’administration.",
-      "a": "Vrai.",
-      "explain": "Les deux parties s’accordent et signent une convention, que l’administration homologue en vérifiant le libre accord du salarié."
+      "q": "Un licenciement sans **cause réelle et sérieuse** n’est pas abusif dès lors que la procédure (entretien préalable, lettre) a été respectée.",
+      "a": "Faux",
+      "explain": "Fond **et** forme doivent être réunis : sans cause réelle et sérieuse, le licenciement est abusif même si la procédure a été respectée."
      }
     ]
    },
@@ -1760,9 +1760,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Un salarié peut exercer son droit de retrait face à un danger grave et imminent, sans être sanctionné.",
-      "a": "Vrai.",
-      "explain": "Face à un danger grave et imminent, il peut cesser le travail sans sanction."
+      "q": "L’**obligation de sécurité** de l’employeur couvre la santé physique et aussi la santé mentale des salariés.",
+      "a": "Vrai",
+      "explain": "L’employeur doit protéger la santé **physique et mentale** : il prévient notamment les risques psychosociaux (stress, harcèlement, burn-out)."
      }
     ]
    },
@@ -2008,9 +2008,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Une marque déposée à l’INPI est protégée 10 ans, renouvelables.",
-      "a": "Vrai : 10 ans renouvelables après dépôt à l’INPI.",
-      "explain": "Le brevet dure 20 ans ; le droit d’auteur dure toute la vie de l’auteur et 70 ans après, sans dépôt."
+      "q": "Une **marque** déposée à l’INPI est protégée **20 ans**, comme un brevet.",
+      "a": "Faux",
+      "explain": "La marque est protégée **10 ans renouvelables** ; c’est le brevet qui dure 20 ans."
      }
     ]
    },
@@ -2196,9 +2196,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Depuis la loi du 14 février 2022, l’entreprise individuelle sépare de droit le patrimoine professionnel du patrimoine personnel.",
-      "a": "Vrai, mais l’entrepreneur et son entreprise restent une seule personne juridique.",
-      "explain": "La société, elle, crée une personne morale distincte."
+      "q": "En société (SARL, SAS), la responsabilité des associés est limitée à leurs **apports**.",
+      "a": "Vrai",
+      "explain": "La société est une personne morale distincte : les associés ne risquent que leurs apports."
      }
     ]
    },
@@ -2436,9 +2436,9 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "Dans une entreprise individuelle comme dans une société, on transmet des parts ou des actions.",
-      "a": "Faux : on transmet des parts ou actions dans une société ; en entreprise individuelle, c’est le patrimoine professionnel lui-même qui est transmis.",
-      "explain": "Dans une société, la personne morale continue d’exister ; l’entreprise individuelle n’a pas de parts à céder."
+      "q": "Dans une société comme dans une entreprise individuelle, la transmission se fait en cédant des **parts** ou des **actions**.",
+      "a": "Faux",
+      "explain": "Seule la société se transmet par cession de parts ou d’actions (la personne morale continue) ; en entreprise individuelle, c’est le patrimoine professionnel lui-même qui est transmis."
      }
     ]
    },
@@ -2649,8 +2649,8 @@
      {
       "t": "defi",
       "kind": "vf",
-      "q": "La minimisation consiste à ne recueillir que les données nécessaires.",
-      "a": "Vrai : on ne collecte que ce qui est nécessaire au but annoncé.",
+      "q": "Selon le principe de **minimisation** du RGPD, une entreprise ne doit recueillir que les données nécessaires à un but précis et annoncé.",
+      "a": "Vrai",
       "explain": "Minimisation et finalité vont ensemble : un but précis, des données strictement utiles."
      }
     ]
