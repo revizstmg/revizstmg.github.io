@@ -1332,7 +1332,8 @@ function hasHandDefinitions(sec) {
 // skip = true si la section possède déjà son tableau de définitions.
 // Tableau « Notions et définitions » écrit à la main à la fin d'un chapitre.
 export function tableauDefinitionsFinal(sec) {
-  const blocks = sec?.blocks || []
+  // Dans un cours ludique, le tableau est juste avant le mini-défi final : on ignore ce défi.
+  const blocks = (sec?.blocks || []).filter((x, i, tous) => !(x.t === 'defi' && i === tous.length - 1))
   const b = blocks[blocks.length - 1]
   if (b?.t !== 'table' || (b.head || []).length !== 2) return null
   return twoColKind(b.head) === 'def' ? b : null

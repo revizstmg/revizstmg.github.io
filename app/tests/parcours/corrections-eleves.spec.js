@@ -37,7 +37,7 @@ test('le défi du jour et les badges s’ouvrent avec un compte gratuit, pas le 
 
 test('un chapitre qui n’avait aucun exercice propose maintenant un QCM', async ({ page }) => {
   const erreurs = await preparer(page, etatEleve({ track: { level: 'premiere-stmg' } }))
-  await page.goto('./#/subject/p1-droit/theme/p1-droit-t1/chapter/1')
+  await page.goto('./#/subject/p1-droit/theme/p1-droit-t1/chapter/3')
   await attendreAccueil(page)
   await page.getByRole('button', { name: /Exercices/ }).click()
   await expect(page.getByRole('button', { name: /de quoi parle-t-on/i }).first()).toBeVisible()
