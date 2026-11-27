@@ -63,6 +63,9 @@ function formesAcceptees(a) {
     if (sigle.length >= 2 && !/^[\d\s.,/-]+$/.test(sigle)) formes.push(sigle)
   }
   for (const f of [...formes]) { const sans = f.replace(/\s+(ttc|ht)\s*$/i, ''); if (sans !== f) formes.push(sans) }
+  // Terme composé avec trait d'union (« élasticité-prix ») : le premier mot, assez long pour être précis, suffit (« élasticité »).
+  const compose = brut.trim().match(/^([^-\s]{6,})-[^-\s]+$/)
+  if (compose) formes.push(compose[1])
   return formes.filter((f) => f.trim())
 }
 
