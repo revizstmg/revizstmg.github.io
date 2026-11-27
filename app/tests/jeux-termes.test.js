@@ -7,7 +7,7 @@ beforeAll(async () => { for (const s of SUJETS) await C.chargerMatiere(s) })
 describe('chapitres sans exercice : un QCM fabriqué avec le glossaire', () => {
   it('les chapitres qui n’avaient aucun jeu en ont un maintenant, sans toucher aux missions', () => {
     const th = C.ALL_CHAPTERS['p1-droit-t1']
-    const ch = C.themeChapters(th)[1]
+    const ch = C.themeChapters(th)[3]
     expect(C.jeuxDuChapitre(ch, th).filter((g) => g.type === 'qcm')).toHaveLength(0)
     const affiches = C.jeuxAffiches(ch, th)
     const qcm = affiches.find((g) => g.type === 'qcm')

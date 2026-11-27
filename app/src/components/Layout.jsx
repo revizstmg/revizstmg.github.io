@@ -11,7 +11,7 @@ import { createPortal } from 'react-dom'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useStore, levelFromXp } from '../store.jsx'
 import { getSubject, getChapter, search, chargerMatieres } from '../data/index.js'
-import { subjectsForTrack } from '../data/tracks.js'
+import { subjectsForTrack, subjectsForProf } from '../data/tracks.js'
 import { estAdminProbable } from '../admin.js'
 import { ALL_TABS, resolveTabs } from '../navTabs.js'
 import { badgeById } from '../badges.js'
@@ -471,7 +471,7 @@ function SearchOverlay({ onClose }) {
   const navigate = useNavigate()
   const t = useT()
   const { state } = useStore()
-  const ids = useMemo(() => subjectsForTrack(state?.track).map((x) => x.id), [state?.track])
+  const ids = useMemo(() => (state?.account?.role === 'prof' ? subjectsForProf(state?.track) : subjectsForTrack(state?.track)).map((x) => x.id), [state?.track, state?.account?.role])
   // Les sections de cours ne sont cherchées que dans les matières chargées : on charge celles du niveau à l'ouverture.
   const [charge, setCharge] = useState(0)
   useEffect(() => { let vivant = true; chargerMatieres(ids).then(() => { if (vivant) setCharge((n) => n + 1) }).catch(() => {}); return () => { vivant = false } }, [ids])

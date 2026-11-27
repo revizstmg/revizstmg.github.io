@@ -776,6 +776,9 @@ html.dark .frise-label { color: #d4ccbd; }
   .chapter-page dd { font-size: 11pt; line-height: 1.35; orphans: 2; widows: 2; }
   /* Encadrés plus sobres sur papier, sans dépendre du thème sombre de l'écran. */
   .reader-print-page > .border-l-4 { padding: 8px 10px; background: #fff !important; break-inside: avoid; }
+  /* Les mini-défis imprimés montrent leur réponse (le <details> est fermé à l'écran). */
+  .reader-print-page .course-defi::details-content { content-visibility: visible; display: block; }
+  .reader-print-page .course-defi { break-inside: avoid; }
   .reader-print-page p, .reader-print-page li, .reader-print-page th,
   .reader-print-page td, .chapter-page dd { color: #111 !important; }
   .reader-print-page > .border-l-4 p:first-child { font-size: 10pt; }

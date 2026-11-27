@@ -1,0 +1,2702 @@
+{
+ "droit-t5": {
+  "intro": "Le **contrat** est au cœur de la vie économique : acheter, louer, travailler, tout passe par des accords. Dans ce thème, tu découvres **comment un contrat se forme**, quand il est **valable**, quelles **obligations** il crée et ce qui se passe **s’il n’est pas respecté**. Le consommateur y bénéficie d’une protection renforcée.",
+  "sections": [
+   {
+    "h": "🎟️ La formation du contrat : offre, acceptation et force obligatoire",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎤",
+      "h": "Mini-histoire",
+      "c": "Inès clique sur « J’accepte » pour une place de concert. Pas de notaire, pas de stylo, pas de papier. Pourtant, quelques secondes plus tard, elle doit payer et le site doit lui fournir sa place. Que s’est-il passé ?"
+     },
+     {
+      "t": "p",
+      "c": "Le site te fait une **offre** (la place, à un prix), et tu l’**acceptes**. À cet instant, un **contrat** naît : le Code civil le définit comme un **accord de volontés** destiné à créer des **obligations**."
+     },
+     {
+      "t": "p",
+      "c": "Deux piliers, hérités de la Révolution : l’**autonomie de la volonté** (on ne s’engage que parce qu’on l’a voulu) et la **force obligatoire** (une fois conclu, le contrat s’impose comme une loi privée : « le contrat tient lieu de loi » à ceux qui l’ont conclu)."
+     },
+     {
+      "t": "warning",
+      "h": "Pas de coup de tête",
+      "c": "On ne peut pas se rétracter sur un caprice. La loi prévoit des exceptions, comme les 14 jours de rétractation pour la plupart des achats à distance, mais pas pour un billet de concert à date fixe : les activités de loisirs datées en sont exclues."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Synallagmatique** : les obligations sont **réciproques** (tu paies, le vendeur fournit la place).",
+       "**À titre onéreux** : **chacun reçoit une contrepartie**.",
+       "**Consensuel** : le **seul accord** suffit, sans écrit.",
+       "**D’adhésion** : tu acceptes des **conditions générales que tu n’as pas négociées**, comme pour un abonnement."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "L’idée à retenir",
+      "c": "Un contrat, ce n’est pas forcément un gros document signé : c’est la rencontre de deux volontés (offre + acceptation). Un clic, une poignée de main, un ticket de caisse… peuvent suffire. L’écrit sert surtout de **preuve**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Contrat synallagmatique",
+        "Obligations réciproques (vente)"
+       ],
+       [
+        "Contrat à titre onéreux",
+        "Chacun reçoit une contrepartie"
+       ],
+       [
+        "Contrat consensuel",
+        "Le seul accord suffit, sans écrit"
+       ],
+       [
+        "Contrat d’adhésion",
+        "Clauses non négociées (abonnement)"
+       ],
+       [
+        "Formation du contrat",
+        "Rencontre d’une offre et d’une acceptation"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Un contrat peut être valablement formé par un simple clic, sans écrit signé.",
+      "a": "Vrai : le contrat est consensuel.",
+      "explain": "Le seul accord (offre + acceptation) suffit à former le contrat ; l’écrit sert surtout de preuve."
+     }
+    ]
+   },
+   {
+    "h": "🕵️ Le consentement vicié : le dol et la nullité du contrat",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "⌚",
+      "h": "Question qui pique",
+      "c": "Tu achètes sur une petite annonce une montre « Rolex authentique ». Une fois payée, tu découvres que c’est une contrefaçon. Tu as dit « oui »… mais voulais-tu vraiment acheter une fausse montre ?"
+     },
+     {
+      "t": "p",
+      "c": "Non : ton accord a été obtenu par une **tromperie**. Ton consentement est « vicié » et tu peux demander au juge d’**annuler** le contrat. Un contrat exige en effet un consentement **libre et éclairé** (art. 1128)."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Erreur** : se tromper sur une qualité essentielle (croire acheter un original).",
+       "**Dol** : être trompé par des manœuvres de l’autre partie (un vendeur qui cache un défaut grave).",
+       "**Violence** : consentir sous la contrainte (signer sous la menace)."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Ici, le vendeur a menti volontairement : c’est un **dol**, « une erreur provoquée ». Il suppose une **intention de tromper** : il permet la **nullité** du contrat **et** des dommages-intérêts."
+     },
+     {
+      "t": "warning",
+      "h": "Nullité ≠ résiliation",
+      "c": "Annuler pour vice, c’est effacer le contrat depuis le début, comme s’il n’avait jamais existé. Ce n’est pas « résilier » (arrêter pour l’avenir un contrat valable). Et une simple erreur sur la **valeur** ne suffit pas."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Consentement libre et éclairé (art. 1128)",
+        "Condition de validité du contrat"
+       ],
+       [
+        "Erreur",
+        "Se tromper sur une qualité essentielle"
+       ],
+       [
+        "Dol",
+        "Être trompé par des manœuvres ; ouvre droit à la nullité et à des dommages-intérêts"
+       ],
+       [
+        "Violence",
+        "Consentir sous la contrainte"
+       ],
+       [
+        "Nullité",
+        "Annulation du contrat par le juge"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Un vendeur cache volontairement un défaut grave pour conclure la vente. Quel vice du consentement ?\nA) Le dol\nB) La violence\nC) L’erreur spontanée",
+      "a": "A) Le dol.",
+      "explain": "Le vendeur trompe volontairement par des manœuvres : c’est une erreur provoquée, donc un dol."
+     }
+    ]
+   },
+   {
+    "h": "🛵 La capacité juridique du mineur et les trois conditions de validité",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🛵",
+      "h": "Mini-histoire",
+      "c": "Un lycéen de 16 ans achète seul, à crédit, un scooter à 2 000 €. Ses parents découvrent la facture. Le vendeur sera-t-il payé ? Pas si sûr…"
+     },
+     {
+      "t": "p",
+      "c": "Un mineur n’a pas la **capacité juridique** pour s’engager seul sur un tel achat. La **capacité** est la règle, l’**incapacité** l’exception (mineurs, majeurs sous tutelle ou curatelle)."
+     },
+     {
+      "t": "p",
+      "c": "Un contrat n’est solide que si **trois conditions** sont réunies **en même temps** (art. 1128) : le **consentement**, la **capacité** et un **contenu licite et certain**. Si une seule manque, un juge peut l’**annuler**."
+     },
+     {
+      "t": "warning",
+      "h": "Nuance",
+      "c": "Un mineur peut valablement conclure les **actes de la vie courante** (acheter du pain, un ticket de bus) : seuls les engagements importants posent problème."
+     },
+     {
+      "t": "tip",
+      "h": "Réflexe bac",
+      "c": "Devant un cas, coche les 3 conditions : **Consentement – Capacité – Contenu licite**. Si une case manque, le contrat est **annulable**."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « Un mineur ne peut jamais rien acheter seul, tous ses contrats sont nuls. » Trouve l’erreur.",
+      "a": "Un mineur peut conclure seul les actes de la vie courante (pain, ticket de bus).",
+      "explain": "Seuls les engagements importants sont fragiles ; la capacité est la règle, l’incapacité l’exception."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ Cas pratique — capacité du mineur et nullité du contrat",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🚗",
+      "h": "Défi lancé",
+      "c": "Un mineur de 16 ans achète seul, à crédit, une voiture. Le vendeur exige le paiement. Peux-tu dérouler la solution en trois temps, comme un vrai juriste ?"
+     },
+     {
+      "t": "example",
+      "h": "Situation",
+      "c": "Un mineur de 16 ans achète seul, à crédit, une voiture. Le vendeur exige le paiement : le contrat est-il valable ?"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Règle de droit (majeure)** : un contrat n’est valable que si les conditions sont réunies : consentement, **capacité juridique**, contenu licite et certain.",
+       "**Faits et application (mineure)** : l’acheteur est **mineur**, donc juridiquement **incapable** de conclure seul un tel contrat ; une condition de validité (la capacité) manque.",
+       "**Conclusion** : le contrat encourt la **nullité** (il peut être annulé)."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Cas pratique = **syllogisme** : règle de droit (majeure) → faits qualifiés et application (mineure) → conclusion. C’est la structure attendue au bac."
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Range ces étapes d’un cas pratique en « règle » ou « faits » : (a) « un contrat exige la capacité », (b) « l’acheteur a 16 ans », (c) « le consentement doit être libre et éclairé », (d) « le vendeur a livré la voiture ».",
+      "a": "Règle : (a) et (c). Faits : (b) et (d).",
+      "explain": "La majeure énonce la règle de droit ; la mineure expose les faits et les confronte à cette règle."
+     }
+    ]
+   },
+   {
+    "h": "📜 Le contrat : accord de volontés, force obligatoire et classifications",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "💬",
+      "h": "Dialogue",
+      "c": "— « Tu m’as dit oui ! »\n— « Oui, mais je n’ai rien signé. »\n— « Peu importe : un oui à une offre peut suffire à t’engager. »\nVrai ou pas ? Le cours tranche."
+     },
+     {
+      "t": "p",
+      "c": "Le **contrat** est un **accord de volontés** entre deux ou plusieurs personnes destiné à créer des **obligations** (art. 1101 du Code civil). C’est la source d’obligations la plus courante de la vie économique : achat, location, travail, prêt."
+     },
+     {
+      "t": "p",
+      "c": "Deux principes hérités de la Révolution : l’**autonomie de la volonté** (on ne s’engage que parce qu’on l’a voulu) et la **force obligatoire** (art. 1103) : « les contrats légalement formés tiennent lieu de loi à ceux qui les ont faits »."
+     },
+     {
+      "t": "p",
+      "c": "Quatre critères de classement. Selon les **obligations** : **synallagmatique** (les parties s’obligent **réciproquement**, comme dans une vente) ou **unilatéral** (**une seule partie** s’oblige, comme une donation). Selon le **but** : **à titre onéreux** (chacun reçoit une **contrepartie**) ou **à titre gratuit** (l’un donne sans rien recevoir)."
+     },
+     {
+      "t": "p",
+      "c": "Selon la **forme** : **consensuel** (le **seul accord** suffit) ou **solennel** (une **forme particulière est exigée**, comme l’**acte notarié** pour une donation ou un contrat de mariage). Selon la **négociation** : **de gré à gré** (clauses discutées) ou **d’adhésion** (clauses **non négociables**, fixées à l’avance, comme un abonnement téléphonique)."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "La plupart des contrats sont **consensuels** : ils se forment par le seul **échange des consentements**, sans écrit obligatoire. L’écrit sert alors surtout de **preuve**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Force obligatoire (art. 1103)",
+        "Le contrat légalement formé tient lieu de loi à ceux qui l’ont fait"
+       ],
+       [
+        "Contrat synallagmatique",
+        "Obligations réciproques (vente)"
+       ],
+       [
+        "Contrat unilatéral",
+        "Une seule partie s’oblige (donation)"
+       ],
+       [
+        "Contrat à titre onéreux",
+        "Chacun reçoit une contrepartie"
+       ],
+       [
+        "Contrat à titre gratuit",
+        "Sans contrepartie"
+       ],
+       [
+        "Contrat consensuel",
+        "Le seul accord suffit"
+       ],
+       [
+        "Contrat solennel",
+        "Une forme est exigée pour la validité (acte notarié)"
+       ],
+       [
+        "Contrat de gré à gré",
+        "Clauses négociées entre les parties"
+       ],
+       [
+        "Contrat d’adhésion",
+        "Clauses non négociables, acceptées en bloc (abonnement)"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus parmi ces critères de classement des contrats :\nA) Synallagmatique ou unilatéral\nB) À titre onéreux ou à titre gratuit\nC) Consensuel ou solennel\nD) Civil ou pénal",
+      "a": "D) Civil ou pénal.",
+      "explain": "Civil ou pénal distingue deux responsabilités, pas des contrats ; les trois autres sont des classifications de contrats."
+     }
+    ]
+   },
+   {
+    "h": "✅ Les conditions de validité : consentement, capacité, contenu licite et certain",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "✅",
+      "h": "Chiffre fictif",
+      "c": "Trois cases à cocher, pas une de moins : si l’une reste vide, ton contrat peut tomber. Un enfant de 12 ans achète un bien coûteux, un vendeur propose un produit interdit… lesquelles des 3 cases manquent ?"
+     },
+     {
+      "t": "p",
+      "c": "Depuis la réforme de 2016, l’article **1128** du Code civil pose **trois conditions** de validité. Si l’une manque, le contrat peut être **annulé** (nullité) : on considère qu’il n’a jamais existé, et chacun restitue ce qu’il a reçu."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Le consentement** : **libre et éclairé** (donné en connaissance de cause, sans contrainte).",
+       "**La capacité juridique** de contracter : être **majeur** et **non protégé** (mineurs et majeurs sous tutelle ou curatelle ont une capacité limitée).",
+       "**Un contenu licite et certain** : un objet **possible, déterminé et conforme à la loi** et à l’ordre public (on ne peut pas vendre de la drogue ou un organe)."
+      ]
+     },
+     {
+      "t": "example",
+      "h": "Application",
+      "c": "Une vente d’un produit interdit est **nulle** pour contenu **illicite**. Un contrat signé par un enfant de 12 ans pour un achat important est **annulable** pour incapacité."
+     },
+     {
+      "t": "warning",
+      "h": "Piège fréquent",
+      "c": "La **capacité** est la règle, l’**incapacité** l’exception : un mineur peut valablement conclure les **actes de la vie courante** (pain, ticket de bus)."
+     },
+     {
+      "t": "tip",
+      "h": "Mémo",
+      "c": "**Consentement – Capacité – Contenu licite**. Si l’une manque → **nullité** du contrat."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Un contrat dont le contenu est illicite peut être annulé, même si les deux parties étaient majeures et d’accord.",
+      "a": "Vrai : il manque la condition de contenu licite.",
+      "explain": "L’accord des parties ne suffit pas : consentement, capacité et contenu licite et certain doivent être réunis."
+     }
+    ]
+   },
+   {
+    "h": "⚠️ Les vices du consentement : erreur, dol, violence",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎭",
+      "h": "Question qui pique",
+      "c": "Nina signe un contrat parce qu’on la menace. Léo achète une copie en croyant acheter un original. Karim est trompé par un vendeur qui cache un défaut. Trois situations, trois vices différents : sauras-tu les nommer ?"
+     },
+     {
+      "t": "p",
+      "c": "Le consentement doit être **intègre**. S’il a été « faussé », on parle de **vice du consentement** : le contrat est alors **annulable** à la demande de la victime (art. 1130 et suivants)."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Erreur** : se tromper sur une **qualité essentielle** de la prestation (acheter une copie en croyant acheter un original).",
+       "**Dol** : être trompé par des manœuvres de l’autre partie (mensonge, mise en scène, ou simple silence sur une information décisive, comme un défaut grave caché).",
+       "**Violence** : consentir sous la contrainte **physique**, **morale** ou **économique** (signer sous la menace)."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Pour entraîner la nullité, le vice doit être **déterminant** : sans lui, la victime **n’aurait pas contracté** (ou à d’autres conditions). Le **dol** suppose une **intention de tromper** : il vicie le consentement **et** constitue une faute ouvrant droit à des dommages-intérêts."
+     },
+     {
+      "t": "example",
+      "h": "Erreur vs dol",
+      "c": "Si l’acheteur se trompe tout seul → **erreur**. Si le vendeur l’a **volontairement induit en erreur** → **dol**, « une erreur provoquée »."
+     },
+     {
+      "t": "warning",
+      "h": "Attention",
+      "c": "Une simple **erreur sur la valeur** (avoir payé trop cher) ou sur un **motif personnel** n’est en principe pas une cause de nullité. Seule l’erreur sur une **qualité essentielle** compte."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Vice du consentement",
+        "Consentement faussé qui rend le contrat annulable à la demande de la victime"
+       ],
+       [
+        "Erreur",
+        "Se tromper sur une qualité essentielle (acheter une copie en croyant acheter un original)"
+       ],
+       [
+        "Dol",
+        "Être trompé par des manœuvres de l’autre partie (défaut grave caché)"
+       ],
+       [
+        "Violence",
+        "Consentir sous la contrainte physique, morale ou économique"
+       ],
+       [
+        "Vice déterminant",
+        "Sans lui, la victime n’aurait pas contracté"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Théo a payé un jeu vidéo 20 € de plus que son prix habituel, sans que personne ne le trompe. Peut-il demander la nullité pour erreur ?",
+      "a": "En principe non : une erreur sur la valeur n’est pas une erreur sur une qualité essentielle.",
+      "explain": "Seule l’erreur sur une qualité essentielle peut entraîner la nullité."
+     }
+    ]
+   },
+   {
+    "h": "🔗 Force obligatoire, effet relatif et sanctions de l’inexécution",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔧",
+      "h": "Mini-histoire",
+      "c": "Une graphiste promet un logo pour vendredi. Vendredi, rien. Le client peut-il attendre en silence, ne plus payer, tout annuler ? Le droit lui offre toute une boîte à outils."
+     },
+     {
+      "t": "p",
+      "c": "Un contrat valablement formé produit des **effets** : il **oblige** les parties (force obligatoire) et **n’engage qu’elles** (effet relatif : il ne crée d’obligation ni ne nuit aux tiers). Elles doivent l’exécuter **de bonne foi** (art. 1104)."
+     },
+     {
+      "t": "p",
+      "c": "Si une partie **n’exécute pas** son obligation (inexécution totale, partielle ou tardive), la victime dispose de plusieurs **sanctions**, qu’elle peut parfois cumuler."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**L’exécution forcée** : contraindre le débiteur à tenir son engagement.",
+       "**La résolution** : anéantir le contrat et revenir à la situation antérieure.",
+       "**La réduction du prix** : payer moins si la prestation est incomplète.",
+       "**Les dommages-intérêts** : obtenir réparation du préjudice subi.",
+       "**L’exception d’inexécution** : refuser d’exécuter tant que l’autre n’exécute pas."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Le débiteur peut s’exonérer en prouvant un cas de **force majeure** (art. 1218) : un événement **échappant à son contrôle**, **imprévisible** lors de la conclusion du contrat et **irrésistible**, qui empêche l’exécution. Il est alors libéré sans devoir de dommages-intérêts."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Inexécution = choix de sanctions pour le créancier. Force majeure = cause d’**exonération** pour le débiteur."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Un client refuse de payer tant que le prestataire n’a pas livré. De quelle sanction s’agit-il ?\nA) La résolution\nB) La clause pénale\nC) L’exception d’inexécution",
+      "a": "C) L’exception d’inexécution.",
+      "explain": "Elle permet de refuser d’exécuter sa propre obligation tant que l’autre partie n’exécute pas la sienne."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ Cas pratique guidé — la méthode du syllogisme : majeure, mineure, conclusion",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📱",
+      "h": "Défi lancé",
+      "c": "Léa commande un téléphone « neuf, sous garantie ». Elle reçoit un appareil reconditionné et rayé, que le vendeur savait tel. Peut-elle annuler la vente ? À toi de raisonner : règle, faits, conclusion."
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Léa achète en ligne un téléphone décrit comme « neuf, sous garantie ». À la réception, l’appareil est visiblement reconditionné et rayé. Le vendeur le savait. Léa peut-elle annuler la vente ?"
+     },
+     {
+      "t": "p",
+      "c": "Le **syllogisme juridique** suit trois temps : la **majeure** (la règle de droit), la **mineure** (les faits qualifiés juridiquement et confrontés à la règle), la **conclusion** (la solution)."
+     },
+     {
+      "t": "example",
+      "h": "Majeure — la règle",
+      "c": "Le contrat exige un consentement **libre et éclairé** (art. 1128). Le **dol** (art. 1137) est une manœuvre ou une dissimulation volontaire d’une information déterminante par un contractant, qui provoque l’erreur de l’autre. Il rend le contrat **annulable** et ouvre droit à des dommages-intérêts."
+     },
+     {
+      "t": "example",
+      "h": "Mineure — les faits",
+      "c": "Le vendeur a décrit un appareil « neuf » alors qu’il le savait reconditionné et abîmé : il a **volontairement dissimulé** une information déterminante. Sans cette tromperie, Léa n’aurait pas acheté."
+     },
+     {
+      "t": "example",
+      "h": "Conclusion",
+      "c": "Les éléments du **dol** sont réunis (manœuvre + caractère déterminant + intention de tromper). Léa peut demander la **nullité** de la vente et la **restitution** du prix, ainsi que des **dommages-intérêts**."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "1) **qualifier** les faits, 2) énoncer la **règle** (article, principe), 3) **appliquer** aux faits, 4) **conclure** clairement. Jamais de conclusion sans la règle qui la fonde."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Dans l’affaire du téléphone, la conclusion est que Léa peut demander la nullité de la vente.",
+      "a": "Vrai : les éléments du dol sont réunis.",
+      "explain": "Manœuvre ou dissimulation, caractère déterminant et intention de tromper : le dol permet de demander la nullité."
+     }
+    ]
+   },
+   {
+    "h": "🧾 Les clauses particulières et les clauses abusives",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📜",
+      "h": "Question qui pique",
+      "c": "« En cas de retard, vous paierez 100 € par jour. » Tu as lu ça en tout petit dans un contrat. Est-ce légal ? Tout dépend de la nature de la clause… et de son équilibre."
+     },
+     {
+      "t": "p",
+      "c": "Un contrat peut contenir des **clauses particulières** qui aménagent les droits et obligations des parties. Quatre reviennent souvent."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Clause pénale** : fixe **à l’avance le montant de l’indemnité** due si une partie n’exécute pas son obligation.",
+       "**Clause résolutoire** : prévoit la **rupture automatique du contrat** en cas de manquement, sans passer par le juge.",
+       "**Clause limitative de responsabilité** : **plafonne la réparation** due par la partie fautive.",
+       "**Clause de confidentialité** : **interdit de divulguer** certaines informations échangées."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Ces clauses sont valables tant qu’elles respectent l’**ordre public** et ne créent pas de **déséquilibre significatif** (surtout dans les contrats d’adhésion et de consommation, où une clause **abusive** est réputée non écrite). Le juge peut **réviser** une clause pénale manifestement excessive."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Les clauses aménagent le contrat mais ne peuvent pas violer l’**ordre public** ni être **abusives**. Une clause abusive est **réputée non écrite**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Clause pénale",
+        "Fixe à l’avance l’indemnité due en cas d’inexécution"
+       ],
+       [
+        "Clause résolutoire",
+        "Prévoit la rupture automatique en cas de manquement"
+       ],
+       [
+        "Clause limitative de responsabilité",
+        "Plafonne la réparation due"
+       ],
+       [
+        "Clause de confidentialité",
+        "Interdit de divulguer certaines informations"
+       ],
+       [
+        "Clause abusive",
+        "Clause qui crée un déséquilibre significatif ; réputée non écrite"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus parmi ces clauses particulières :\nA) Clause pénale\nB) Clause résolutoire\nC) Clause de confidentialité\nD) Clause de tutelle",
+      "a": "D) Clause de tutelle.",
+      "explain": "La tutelle protège un majeur incapable ; ce n’est pas une clause particulière de contrat."
+     }
+    ]
+   },
+   {
+    "h": "🛒 Le contrat de consommation : information, rétractation, garantie de conformité",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🛍️",
+      "h": "Mini-histoire",
+      "c": "Samir commande des écouteurs en ligne. Au déballage, il change d’avis. Il pense qu’il est coincé. En fait, la loi protège le consommateur face au professionnel."
+     },
+     {
+      "t": "p",
+      "c": "Quand un **professionnel** contracte avec un **consommateur** (particulier), le droit protège la partie **faible**. Le Code de la consommation ajoute des règles au droit commun."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Obligation d’information** précontractuelle : prix, caractéristiques, garanties.",
+       "**Droit de rétractation** : 14 jours pour renoncer à un achat à distance (en ligne) ou hors établissement, sans motif.",
+       "**Protection contre les clauses abusives** : celles qui créent un déséquilibre significatif sont écartées.",
+       "**Garantie légale de conformité** : le bien doit être conforme et fonctionner."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Ces règles rééquilibrent une relation par nature inégale : le professionnel connaît le produit et rédige le contrat, le consommateur subit des conditions non négociées (contrat d’**adhésion**). Le **droit de rétractation** est la protection la plus emblématique."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Contrat pro/consommateur = **protection renforcée** : information, **14 jours de rétractation** (achat à distance), clauses abusives écartées, garantie de conformité."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Combien de jours de rétractation, sans motif, pour un achat à distance (en ligne) ?",
+      "a": "14 jours.",
+      "explain": "Le droit de rétractation de 14 jours vaut pour un achat à distance ou hors établissement."
+     }
+    ]
+   },
+   {
+    "h": "🌐 Le contrat électronique : double clic, confirmation, signature électronique",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🖱️",
+      "h": "Défi lancé",
+      "c": "Tu commandes des baskets en ligne et tu cliques trop vite : mauvaise taille ! Heureusement, la loi t’oblige à pouvoir vérifier ta commande avant de valider."
+     },
+     {
+      "t": "p",
+      "c": "Le **contrat électronique** (achat en ligne) obéit au droit commun **et** à des règles propres, car le consentement se donne à distance. La loi encadre sa **formation** pour protéger l’acheteur."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Le « double clic »** : l’acheteur vérifie et corrige sa commande avant de confirmer (un premier clic pour commander, un second pour confirmer).",
+       "**Information claire** sur le prix total, les frais, le droit de rétractation avant validation.",
+       "**Confirmation** de la commande par le vendeur (récapitulatif)."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Le contrat est **formé** dès la confirmation de la commande par l’acheteur (le second clic). L’écrit électronique a la **même valeur** qu’un écrit papier, et la **signature électronique** est reconnue juridiquement."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Contrat en ligne = règle du **double clic** (vérifier puis confirmer). L’écrit et la signature **électroniques** ont la même valeur que le papier."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Un écrit électronique a la même valeur qu’un écrit papier.",
+      "a": "Vrai.",
+      "explain": "L’écrit et la signature électroniques sont reconnus juridiquement, comme leurs équivalents papier."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ MÉTHODE — Résoudre un cas pratique : faits, qualification, problème de droit, syllogisme",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧭",
+      "h": "Question qui pique",
+      "c": "Un correcteur lit : « L’acheteur a raison, c’est évident. » Note : zéro pointé. Pourquoi ? Parce qu’en droit, une réponse « au feeling » ne vaut rien sans règle."
+     },
+     {
+      "t": "p",
+      "c": "Résoudre un cas pratique suit le **syllogisme juridique**. Jamais de réponse « au feeling » : il faut **fonder** la solution sur une règle."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**1. Les faits** : résumer les faits utiles, écarter l’inutile.",
+       "**2. La qualification juridique** : traduire les faits en termes de droit (« ceci est un dol »).",
+       "**3. Le problème de droit** : formuler la question juridique posée.",
+       "**4. La majeure** : énoncer la règle applicable (article, principe).",
+       "**5. La mineure** : appliquer la règle aux faits.",
+       "**6. La conclusion** : répondre clairement au problème."
+      ]
+     },
+     {
+      "t": "example",
+      "h": "Exemple express",
+      "c": "Un vendeur cache un défaut grave. Qualification : **dol**. Majeure : le dol (art. 1137) vicie le consentement et rend le contrat **annulable**. Mineure : dissimulation d’une info déterminante. Conclusion : l’acheteur peut demander la **nullité** + dommages-intérêts."
+     },
+     {
+      "t": "warning",
+      "h": "Erreur fréquente",
+      "c": "Donner la conclusion **sans** énoncer la règle de droit. Une réponse juridique doit toujours s’appuyer sur un **fondement** (article ou principe)."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Dans un cas pratique, combien d’étapes la méthode compte-t-elle (faits, qualification, problème de droit, majeure, mineure, conclusion) ?",
+      "a": "6 étapes.",
+      "explain": "Faits, qualification, problème de droit, majeure, mineure, conclusion : six étapes."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ Cas pratique guidé — l’inexécution : résolution, dommages-intérêts, exception d’inexécution",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "💻",
+      "h": "Mini-histoire",
+      "c": "Un prestataire livre un site web avec deux mois de retard, plein de bugs, malgré les relances. Le client veut « tout arrêter » et être indemnisé. Il a plusieurs options."
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Un prestataire livre un site internet avec deux mois de retard et de nombreux bugs, malgré les relances. Le client veut « tout arrêter » et être indemnisé. Que peut-il faire ?"
+     },
+     {
+      "t": "example",
+      "h": "Majeure — la règle",
+      "c": "En cas d’**inexécution** (totale, partielle ou tardive), le créancier dispose de sanctions : exécution forcée, **résolution**, réduction du prix, **dommages-intérêts** (art. 1217). Il peut aussi opposer l’**exception d’inexécution**."
+     },
+     {
+      "t": "example",
+      "h": "Mineure — les faits",
+      "c": "Retard + bugs malgré les relances : inexécution **caractérisée**, imputable au prestataire (pas de force majeure)."
+     },
+     {
+      "t": "example",
+      "h": "Conclusion",
+      "c": "Le client peut demander la **résolution** du contrat (l’anéantir et se faire rembourser) et/ou des **dommages-intérêts** (retard, perte d’exploitation). Il pouvait aussi suspendre son paiement (exception d’inexécution)."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "**Qualifier** l’inexécution → énoncer les **sanctions** possibles → **appliquer** aux faits → **conclure** sur le choix le plus adapté."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Le client veut anéantir le contrat et revenir à la situation antérieure. Quelle sanction ?\nA) La réduction du prix\nB) La résolution\nC) L’exécution forcée",
+      "a": "B) La résolution.",
+      "explain": "La résolution anéantit le contrat ; l’exécution forcée, au contraire, impose de le tenir."
+     }
+    ]
+   }
+  ]
+ },
+ "droit-t6": {
+  "intro": "Quand un dommage est causé à autrui, le droit organise sa **réparation** (responsabilité civile) ou sa **sanction** (responsabilité pénale). Dans ce thème, tu apprends à repérer **quel dommage** est réparable, **quel régime** s’applique et comment un responsable peut **s’exonérer**.",
+  "sections": [
+   {
+    "h": "🐕 La responsabilité civile : réparer le dommage causé à autrui",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🐕",
+      "h": "Question qui pique",
+      "c": "Le chien mal tenu d’un voisin mord un passant, qui doit aller à l’hôpital. Qui paie les soins : le chien, le passant, ou son maître ?"
+     },
+     {
+      "t": "p",
+      "c": "Le maître du chien. Sa **responsabilité civile** est engagée si **trois éléments cumulatifs** sont réunis : un **fait générateur** (le chien a mordu), un **dommage** (la blessure) et un **lien de causalité** entre les deux. Alors il doit **réparer**, c’est-à-dire indemniser la victime."
+     },
+     {
+      "t": "p",
+      "c": "Ici, le fait générateur est le **fait d’un animal placé sous la garde** de son maître. Le dommage est la **blessure** (un **préjudice corporel**). Et c’est bien **la morsure qui a causé la blessure** : le lien de causalité est évident."
+     },
+     {
+      "t": "p",
+      "c": "Le maître répond même **sans faute** (fait des animaux, art. 1243, proche du fait des choses) : la victime n’a pas à prouver une négligence. La réparation vise à la **replacer** dans l’état où elle serait sans le dommage (réparation intégrale)."
+     },
+     {
+      "t": "tip",
+      "h": "La règle des 3",
+      "c": "Fait générateur + dommage + lien de causalité. S’il en manque un seul (par ex. aucun dommage réel), il n’y a **pas** de responsabilité civile."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Fait générateur",
+        "Fait à l’origine du dommage (faute, chose, animal, fait d’autrui)"
+       ],
+       [
+        "Dommage (préjudice)",
+        "Atteinte subie par la victime (corporelle, matérielle, morale)"
+       ],
+       [
+        "Lien de causalité",
+        "Le fait générateur a causé le dommage"
+       ],
+       [
+        "Réparation intégrale",
+        "Replacer la victime dans l’état où elle serait sans le dommage"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Le maître d’un chien qui mord un passant peut devoir réparer le dommage même s’il n’a commis aucune négligence.",
+      "a": "Vrai : il répond du fait de son animal.",
+      "explain": "Dans le régime du fait des animaux, la victime prouve la garde, le dommage et le lien de causalité, pas une faute."
+     }
+    ]
+   },
+   {
+    "h": "🚨 Indemniser la victime ou punir l’auteur : civil ou pénal",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🚨",
+      "h": "Mini-histoire",
+      "c": "Un conducteur ivre renverse un piéton. Quelques mois plus tard, il passe devant deux juges différents. L’un veut le punir, l’autre veut que la victime soit indemnisée. Pourquoi deux ?"
+     },
+     {
+      "t": "p",
+      "c": "Devant le juge **pénal**, la société le sanctionne (amende, retrait de permis, voire prison) : le but est de **punir** un comportement interdit. Devant le juge **civil**, il doit **indemniser** le piéton : le but est de **réparer** le préjudice."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Civile** : c’est **la victime qui agit** devant le juge civil, elle obtient des **dommages-intérêts** et c’est **elle qui est indemnisée**.",
+       "**Pénale** : c’est le **ministère public qui agit, au nom de la société** ; la sanction est une **amende** ou une peine de **prison**, et c’est **la société** dont l’ordre est protégé."
+      ]
+     },
+     {
+      "t": "warning",
+      "h": "Ne confonds pas",
+      "c": "Responsabilité **civile** = réparer (de l’argent pour la victime). Responsabilité **pénale** = punir (une peine au nom de la société). Un même acte peut relever **des deux** en même temps."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Responsabilité civile",
+        "Réparer : la victime agit et reçoit des dommages-intérêts"
+       ],
+       [
+        "Responsabilité pénale",
+        "Punir : le ministère public agit au nom de la société (amende, prison)"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe ces éléments en « civile » ou « pénale » : (a) dommages-intérêts, (b) prison, (c) la victime saisit le juge, (d) le ministère public poursuit.",
+      "a": "Civile : (a) et (c). Pénale : (b) et (d).",
+      "explain": "La responsabilité civile répare au profit de la victime ; la pénale punit au nom de la société."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ Cas pratique guidé — responsabilité du fait des choses et garde",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🍾",
+      "h": "Défi lancé",
+      "c": "Dans un supermarché, une bouteille explose sur le rayon et blesse un client au visage. Le magasin est-il responsable, même sans avoir rien fait de mal ? À toi de dérouler la méthode."
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Dans un supermarché, une bouteille explose sur le rayon et blesse un client au visage. Le client réclame réparation. Le supermarché est-il responsable ?"
+     },
+     {
+      "t": "example",
+      "h": "Majeure — la règle",
+      "c": "La responsabilité du **fait des choses** (art. 1242 al.1) rend responsable le **gardien** d’une chose (celui qui en a l’usage, la direction et le contrôle) des dommages qu’elle cause. Trois conditions : fait de la chose, dommage, lien de causalité. Aucune faute n’a à être prouvée."
+     },
+     {
+      "t": "example",
+      "h": "Mineure — les faits",
+      "c": "La bouteille était sous la **garde** du supermarché ; elle a explosé (fait de la chose) ; le client a été blessé au visage (dommage corporel) ; la blessure résulte directement de l’explosion (lien de causalité)."
+     },
+     {
+      "t": "example",
+      "h": "Conclusion",
+      "c": "Les conditions sont réunies. Le supermarché, **gardien**, est **civilement responsable** et doit **réparer** le préjudice (via son assurance), au titre des préjudices matériel, corporel et moral."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Identifier d’abord le **régime** (personnel ? des choses ? d’autrui ?), puis dérouler le **syllogisme** : règle → faits → conclusion. Vérifier les **trois conditions**."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Qui est le « gardien » d’une chose ?\nA) Celui qui l’a fabriquée\nB) Celui qui en a l’usage, la direction et le contrôle\nC) Celui qui l’a vendue",
+      "a": "B) Celui qui en a l’usage, la direction et le contrôle.",
+      "explain": "Le gardien est celui qui a l’usage, la direction et le contrôle de la chose."
+     }
+    ]
+   },
+   {
+    "h": "🎯 Responsabilité civile et responsabilité pénale : réparer ou punir",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "⚔️",
+      "h": "Dialogue",
+      "c": "— « Il a grillé un feu rouge et blessé un piéton. Il va en prison ? »\n— « Peut-être. Mais le piéton, qui le rembourse ? »\n— « Deux questions, deux responsabilités ! »"
+     },
+     {
+      "t": "p",
+      "c": "Être **responsable**, c’est devoir **répondre** de ses actes devant la justice. Le droit distingue deux responsabilités, aux buts opposés, qui peuvent se cumuler pour un même fait."
+     },
+     {
+      "t": "p",
+      "c": "La **responsabilité civile** a pour **but** de **réparer le dommage** subi par la victime : c’est **la victime qui agit**, en saisissant le **juge civil**, en général le **tribunal judiciaire**. La **sanction** : des **dommages-intérêts** (une somme d’argent), et c’est **la victime qui en bénéficie**."
+     },
+     {
+      "t": "p",
+      "c": "La **responsabilité pénale** a pour **but** de **punir l’auteur d’une infraction**. Le **ministère public** agit **au nom de la société**. La **sanction** est une **peine** (amende, prison), au bénéfice de **la société**, jugée par une **juridiction pénale** : tribunal de police, tribunal correctionnel ou cour d’assises selon la gravité."
+     },
+     {
+      "t": "example",
+      "h": "Les deux à la fois",
+      "c": "Un conducteur qui blesse un piéton en grillant un feu rouge est **pénalement** responsable (il a commis une infraction) **et civilement** responsable (il doit réparer le préjudice)."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Civil = **réparer** (payer la victime). Pénal = **punir** (sanction au nom de la société)."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Responsabilité civile",
+        "Obligation de réparer le dommage causé à la victime (dommages-intérêts, juge civil)"
+       ],
+       [
+        "Responsabilité pénale",
+        "Obligation de répondre d’une infraction devant la société (peine, juge pénal)"
+       ],
+       [
+        "Ministère public",
+        "Magistrats qui poursuivent l’auteur d’une infraction au nom de la société"
+       ],
+       [
+        "Dommages-intérêts",
+        "Somme d’argent versée à la victime pour réparer son préjudice"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « En responsabilité pénale, c’est la victime qui reçoit les dommages-intérêts. » Trouve l’erreur.",
+      "a": "La responsabilité pénale punit au nom de la société ; les dommages-intérêts relèvent de la responsabilité civile.",
+      "explain": "Le bénéficiaire du pénal est la société ; l’indemnisation de la victime relève du civil."
+     }
+    ]
+   },
+   {
+    "h": "🧩 Les conditions de la responsabilité délictuelle : fait générateur, dommage, causalité",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧽",
+      "h": "Mini-histoire",
+      "c": "Un commerçant lave son sol et ne met aucun panneau. Un client glisse et se casse le poignet. Le commerçant se défend : « Je ne l’ai pas poussé ! » A-t-il raison ?"
+     },
+     {
+      "t": "p",
+      "c": "La responsabilité civile **délictuelle** (hors contrat) suppose **trois conditions cumulatives** (art. 1240 : « tout fait quelconque de l’homme qui cause à autrui un dommage oblige celui par la faute duquel il est arrivé à le réparer »)."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Un fait générateur** : une **faute** (imprudence, négligence, acte volontaire), le fait d’une **chose** sous sa garde, ou le fait d’**autrui**.",
+       "**Un dommage** (ou préjudice) : matériel (un bien détruit), corporel (une blessure) ou moral (une souffrance).",
+       "**Un lien de causalité** : le dommage est **la conséquence** du fait générateur."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Ces conditions sont **cumulatives** : s’il en manque une, la responsabilité n’est pas engagée. Sans dommage, pas de réparation ; sans lien de causalité, on ne peut imputer le dommage à la personne poursuivie."
+     },
+     {
+      "t": "example",
+      "h": "Application",
+      "c": "Sol mouillé sans signalisation (fait/faute) ; un client glisse et se casse le poignet (dommage) ; la chute est due au sol glissant (lien de causalité). Les trois conditions sont réunies → responsabilité engagée."
+     },
+     {
+      "t": "tip",
+      "h": "Mémo",
+      "c": "**Fait générateur – Dommage – Lien de causalité** : un tableau à cocher pour chaque cas pratique."
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus parmi les conditions de la responsabilité délictuelle :\nA) Un fait générateur\nB) Un dommage\nC) Un contrat écrit\nD) Un lien de causalité",
+      "a": "C) Un contrat écrit.",
+      "explain": "La responsabilité délictuelle s’applique hors contrat : un contrat écrit n’est pas une de ses conditions."
+     }
+    ]
+   },
+   {
+    "h": "🚗 Les régimes de responsabilité : fait personnel, fait des choses, fait d’autrui",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🌺",
+      "h": "Question qui pique",
+      "c": "Un pot de fleurs tombe de ton balcon sur un passant. Tu ne l’as pas lancé, tu dormais. Es-tu quand même responsable ? Tout dépend du régime applicable."
+     },
+     {
+      "t": "p",
+      "c": "Le fait générateur prend quatre formes, soit quatre **régimes** de responsabilité civile : fait personnel, fait des choses, fait des animaux, fait d’autrui."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Fait personnel** (art. 1240) : on répond de **sa propre faute**. Si je casse la vitrine de mon voisin, je répare.",
+       "**Fait des choses** (art. 1242, alinéa 1) : on répond des dommages causés par **une chose dont on a la garde** (un pot de fleurs tombé du balcon, une branche d’arbre sur la voiture du voisin).",
+       "**Fait des animaux** (art. 1243) : le propriétaire de l’animal, ou celui qui l’utilise, répond des dommages qu’il cause.",
+       "**Fait d’autrui** : on répond des dommages causés par **une personne dont on a la charge** (les **parents pour leur enfant mineur**, l’**employeur pour son salarié**)."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Le fait des **choses** et le fait d’**autrui** sont souvent **sans faute** (dits objectifs) : la victime prouve la garde de la chose ou le lien (parent/enfant, employeur/salarié), pas une faute. Cela **facilite** l’indemnisation."
+     },
+     {
+      "t": "example",
+      "h": "Fait d’autrui",
+      "c": "Un livreur salarié brise la vitrine d’un commerçant en manœuvrant son diable pendant sa tournée : l’**employeur** est civilement responsable et devra indemniser, même sans faute de sa part."
+     },
+     {
+      "t": "warning",
+      "h": "Nuance",
+      "c": "La responsabilité **des parents** suppose que l’enfant soit **mineur** et **cohabite** avec eux. Elle est très difficile à écarter : protection forte pour les victimes."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Fait personnel (art. 1240)",
+        "Responsabilité pour sa propre faute"
+       ],
+       [
+        "Fait des choses (art. 1242 al. 1)",
+        "Responsabilité pour une chose sous sa garde"
+       ],
+       [
+        "Fait des animaux (art. 1243)",
+        "Responsabilité du propriétaire ou de l’utilisateur d’un animal"
+       ],
+       [
+        "Fait d’autrui",
+        "Responsabilité pour une personne dont on répond (parents, employeur)"
+       ],
+       [
+        "Responsabilité sans faute (objective)",
+        "La victime n’a pas à prouver une faute, seulement la garde ou le lien"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Un employeur peut être civilement responsable du dommage causé par son salarié pendant son travail, sans avoir commis lui-même de faute.",
+      "a": "Vrai : c’est la responsabilité du fait d’autrui.",
+      "explain": "L’employeur répond de son salarié sans faute de sa part ; la victime n’a pas à prouver une faute de l’employeur."
+     }
+    ]
+   },
+   {
+    "h": "💶 La réparation intégrale : dommage certain, direct, personnel et assurance",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "💶",
+      "h": "Chiffre fictif",
+      "c": "Après un accident, Mathis réclame le remboursement de ses frais médicaux, de son incapacité et de sa souffrance. Peut-il aussi demander « un petit bonus » ? Non : la réparation n’est ni plus, ni moins."
+     },
+     {
+      "t": "p",
+      "c": "La finalité est la **réparation intégrale** : replacer la victime dans l’état où elle serait si le dommage ne s’était pas produit, ni plus, ni moins. Elle prend le plus souvent la forme de **dommages-intérêts**."
+     },
+     {
+      "t": "p",
+      "c": "Le dommage réparable doit être **certain** (pas seulement hypothétique), **direct** (conséquence du fait) et **personnel** (subi par celui qui demande réparation). On indemnise les préjudices **matériels**, **corporels** et **moraux**."
+     },
+     {
+      "t": "example",
+      "h": "Réparation",
+      "c": "La victime obtient : le remboursement des frais médicaux (matériel), l’indemnisation de son incapacité (corporel) et une somme pour la souffrance endurée (moral)."
+     },
+     {
+      "t": "p",
+      "c": "L’**assurance** de responsabilité (ex. responsabilité civile, obligatoire pour un véhicule) prend en charge l’indemnisation à la place de l’auteur. Elle **mutualise** le risque et garantit que la victime sera indemnisée même si l’auteur est insolvable."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Objectif = **réparer intégralement**, pas enrichir la victime ni punir l’auteur (ça, c’est le pénal)."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Un dommage réparable doit être :\nA) Certain, direct et personnel\nB) Hypothétique et indirect\nC) Subi par un tiers",
+      "a": "A) Certain, direct et personnel.",
+      "explain": "Le dommage doit être certain (pas hypothétique), direct (conséquence du fait) et personnel (subi par le demandeur)."
+     }
+    ]
+   },
+   {
+    "h": "🧩 Responsabilité contractuelle ou délictuelle : un contrat lie-t-il les parties ?",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📦",
+      "h": "Mini-histoire",
+      "c": "Un transporteur livre ta commande avec trois jours de retard. Plus tard, un passant est blessé par un pot de fleurs. Deux dommages, mais pas le même régime. Lequel est lequel ?"
+     },
+     {
+      "t": "p",
+      "c": "La responsabilité civile a **deux régimes**, selon qu’un contrat lie ou non les parties. Le distinguer est le premier réflexe d’un cas pratique."
+     },
+     {
+      "t": "p",
+      "c": "La **responsabilité contractuelle** suppose qu’**un contrat lie les parties** : elle naît de l’**inexécution d’une obligation prévue par ce contrat** (**articles 1231 et suivants**). Exemple : un transporteur livre en retard."
+     },
+     {
+      "t": "p",
+      "c": "La **responsabilité délictuelle**, ou extra-contractuelle, s’applique quand **aucun contrat** ne lie la victime et l’auteur. Elle naît d’une **faute**, du **fait d’une chose** ou du **fait d’autrui** (**articles 1240 et suivants**). Exemple : un passant blessé par un pot de fleurs."
+     },
+     {
+      "t": "p",
+      "c": "Dans les deux cas, il faut **un dommage, un fait générateur et un lien de causalité**. La différence tient à la **source** de l’obligation violée : le contrat, ou la loi générale « ne pas nuire à autrui »."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Contrat entre les parties → **contractuelle**. Pas de contrat → **délictuelle**. À vérifier **en premier**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Responsabilité contractuelle",
+        "Un contrat lie les parties ; inexécution d’une obligation du contrat (art. 1231 et s.)"
+       ],
+       [
+        "Responsabilité délictuelle",
+        "Aucun contrat ; faute, chose ou fait d’autrui (art. 1240 et s.)"
+       ],
+       [
+        "Conditions de la responsabilité civile",
+        "Un dommage, un fait générateur et un lien de causalité"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Une entreprise de déménagement casse ton armoire alors que tu as signé un contrat avec elle. Quelle responsabilité ?",
+      "a": "La responsabilité contractuelle.",
+      "explain": "Un contrat lie les parties : le dommage vient de l’inexécution d’une obligation prévue par ce contrat."
+     }
+    ]
+   },
+   {
+    "h": "🏭 Les produits défectueux : responsabilité de plein droit du producteur",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔥",
+      "h": "Question qui pique",
+      "c": "Un appareil électroménager prend feu à cause d’un défaut de fabrication. La victime doit-elle prouver que le fabricant a été négligent ?"
+     },
+     {
+      "t": "p",
+      "c": "Un régime spécial protège les victimes d’un **produit défectueux** (art. 1245 et s.). Un produit est **défectueux** lorsqu’il n’offre pas la **sécurité** à laquelle on peut légitimement s’attendre."
+     },
+     {
+      "t": "p",
+      "c": "Le **producteur** est responsable **de plein droit** du dommage causé par un défaut de son produit, même **sans faute** de sa part. La victime prouve seulement le **dommage**, le **défaut** et le **lien de causalité**. C’est une protection très forte du consommateur."
+     },
+     {
+      "t": "example",
+      "h": "Application",
+      "c": "Le fabricant d’un appareil qui cause un incendie à cause d’un défaut de fabrication est responsable **de plein droit** : la victime n’a pas à prouver une faute."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Produit défectueux = manque de **sécurité** attendue. **Producteur** responsable **sans faute**. La victime prouve défaut + dommage + lien de causalité."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Le producteur d’un produit défectueux est responsable de plein droit, sans que la victime ait à prouver sa faute.",
+      "a": "Vrai.",
+      "explain": "La victime prouve le dommage, le défaut et le lien de causalité, mais pas une faute du producteur."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ MÉTHODE — Caractériser une responsabilité civile : régime, conditions, exonération",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📋",
+      "h": "Défi lancé",
+      "c": "Un chien mord un passant. En cinq cases à cocher, peux-tu établir qui est responsable, et vérifier si quelqu’un peut s’en sortir ?"
+     },
+     {
+      "t": "p",
+      "c": "Pour établir une responsabilité civile, vérifie **méthodiquement** ses conditions, comme une **liste à cocher**."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**1. Quel régime ?** Contractuel (contrat) ou délictuel (pas de contrat) ?",
+       "**2. Le fait générateur** : une faute ? le fait d’une chose (art. 1242) ? le fait d’autrui (parents, employeur) ?",
+       "**3. Le dommage** : matériel, corporel ou moral ? **Certain, direct et personnel** ?",
+       "**4. Le lien de causalité** : le dommage découle-t-il du fait générateur ?",
+       "**5. Une exonération ?** Force majeure, faute de la victime ?"
+      ]
+     },
+     {
+      "t": "example",
+      "h": "Exemple express",
+      "c": "Un chien mord un passant. Régime : délictuel. Fait générateur : **fait d’une chose/animal** sous la garde du maître (art. 1243). Dommage : corporel. Lien : la blessure vient de la morsure. → Le **gardien** (maître) est responsable, sauf force majeure."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Identifie le **régime**, vérifie les **3 conditions** (fait générateur, dommage, lien), puis cherche une éventuelle **exonération**."
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Dans la liste de la méthode, combien de points faut-il vérifier au total (régime, fait générateur, dommage, lien, exonération) ?",
+      "a": "5 points.",
+      "explain": "Régime, fait générateur, dommage, lien de causalité, exonération : cinq points."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ Cas pratique guidé — responsabilité de l’employeur du fait de son salarié",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📦",
+      "h": "Mini-histoire",
+      "c": "Un livreur manœuvre son diable chargé de colis et brise la vitrine d’une boutique voisine. Le commerçant n’a aucun contrat avec l’entreprise du livreur. Qui doit payer ?"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Un livreur, salarié d’une entreprise, manœuvre son diable chargé de colis sur le trottoir et brise la vitrine d’une boutique voisine pendant sa tournée. Le commerçant, qui n’a aucun contrat avec l’entreprise, réclame réparation. Qui est responsable ?"
+     },
+     {
+      "t": "example",
+      "h": "Majeure — la règle",
+      "c": "La responsabilité du **fait d’autrui** rend l’**employeur (commettant)** responsable des dommages causés par son **salarié (préposé)** dans l’exercice de ses fonctions (art. 1242 al. 5). C’est une responsabilité **sans faute** de l’employeur."
+     },
+     {
+      "t": "example",
+      "h": "Mineure — les faits",
+      "c": "Le dommage a été causé par le salarié pendant sa tournée, donc **dans l’exercice de ses fonctions**. Le lien employeur/préposé et le rattachement au travail sont établis."
+     },
+     {
+      "t": "example",
+      "h": "Conclusion",
+      "c": "L’**employeur** est civilement responsable et doit **réparer** le préjudice du commerçant (via son assurance). La victime est ainsi assurée d’être indemnisée, même si le salarié est insolvable."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Identifier le **régime** (fait d’autrui : employeur/salarié) → vérifier le rattachement aux **fonctions** → conclure sur l’**employeur** et le rôle de l’**assurance**."
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus parmi les relations qui engagent la responsabilité du fait d’autrui :\nA) Parent et enfant mineur\nB) Employeur et salarié\nC) Voisin et voisin\nD) Commettant et préposé",
+      "a": "C) Voisin et voisin.",
+      "explain": "Parent/enfant, employeur/salarié et commettant/préposé sont des liens de responsabilité du fait d’autrui ; deux voisins n’ont pas ce lien."
+     }
+    ]
+   }
+  ]
+ },
+ "droit-t7": {
+  "intro": "Le droit du travail est un **droit protecteur du salarié**. Dans ce thème, tu vois comment la relation de travail s’organise autour d’un critère décisif, le **lien de subordination**, puis comment le droit encadre le contrat, sa **rupture** et les **libertés** du salarié.",
+  "sections": [
+   {
+    "h": "🚕 Salarié ou indépendant : le lien de subordination et le faisceau d’indices",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🚕",
+      "h": "Question qui pique",
+      "c": "Officiellement, un chauffeur de plateforme est « indépendant ». Mais il ne fixe pas ses prix, ne choisit pas librement ses courses et peut être déconnecté. Est-il vraiment son propre patron ?"
+     },
+     {
+      "t": "example",
+      "h": "Cas réel",
+      "c": "En 2020, la Cour de cassation a examiné la situation d’un chauffeur Uber. Officiellement « indépendant », il ne fixait pas ses prix, ne choisissait pas librement ses courses, et pouvait être déconnecté par la plateforme."
+     },
+     {
+      "t": "p",
+      "c": "Les juges ont estimé qu’il travaillait en réalité sous les ordres d’Uber : il y avait un **lien de subordination**. C’est ce lien qui fait le **contrat de travail**, peu importe le nom écrit sur le papier. Le chauffeur a été reconnu **salarié**, avec les protections qui vont avec (congés, sécurité sociale…)."
+     },
+     {
+      "t": "p",
+      "c": "Le **contrat de travail** repose sur trois éléments : une **prestation de travail**, une **rémunération**, et surtout un **lien de subordination** : le pouvoir de l’employeur de donner des ordres, de contrôler et de sanctionner. Le travailleur **indépendant**, lui, organise librement son activité."
+     },
+     {
+      "t": "tip",
+      "h": "Le critère clé",
+      "c": "Ce qui distingue un salarié d’un indépendant, ce n’est pas le **titre** du contrat mais la **réalité** : le **lien de subordination**. Le juge le recherche par un **faisceau d’indices** (ordres, contrôle, horaires imposés)."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Pour savoir si quelqu’un est salarié, le juge regarde la réalité de la relation, pas seulement le titre du contrat.",
+      "a": "Vrai : il recherche un faisceau d’indices.",
+      "explain": "Ordres, contrôle, horaires imposés : ces indices révèlent un éventuel lien de subordination, quel que soit le nom du contrat."
+     }
+    ]
+   },
+   {
+    "h": "🚪 Le licenciement : cause réelle et sérieuse et procédure",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "😒",
+      "h": "Mini-histoire",
+      "c": "« Je te licencie parce que le chef ne t’apprécie pas. » Ça sonne comme une raison, mais est-ce légal ? Le droit du travail exige bien mieux qu’une simple antipathie."
+     },
+     {
+      "t": "p",
+      "c": "Un licenciement doit reposer sur une **cause réelle et sérieuse** : « réelle » = fondée sur des faits **exacts et vérifiables** ; « sérieuse » = assez **grave** pour justifier la rupture (fautes répétées, difficultés économiques réelles…). Une simple antipathie ne suffit pas."
+     },
+     {
+      "t": "p",
+      "c": "L’employeur doit aussi respecter une **procédure** : convocation à un entretien préalable, entretien, puis notification écrite et **motivée**."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Fond** manquant (pas de cause réelle et sérieuse) : licenciement **abusif** → dommages-intérêts encadrés par un barème.",
+       "**Forme** non respectée (cause réelle et sérieuse, mais procédure bafouée) : licenciement seulement **irrégulier** → indemnité d’au plus un mois de salaire."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Licenciement abusif → le salarié saisit le **conseil de prud’hommes** et obtient des **dommages-intérêts**. Il faut contrôler **deux niveaux** : le fond ET la forme."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Un licenciement a une cause réelle et sérieuse, mais l’employeur n’a convoqué aucun entretien préalable. Il est :\nA) Irrégulier\nB) Abusif\nC) Une rupture conventionnelle",
+      "a": "A) Irrégulier.",
+      "explain": "Le fond est valable, seule la procédure (la forme) a été bafouée : licenciement irrégulier, avec une indemnité d’au plus un mois de salaire."
+     }
+    ]
+   },
+   {
+    "h": "📄 CDI, CDD, intérim : la règle, l’exception et la requalification",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔁",
+      "h": "Défi lancé",
+      "c": "Sara enchaîne les contrats courts depuis deux ans. Le CDD est-il fait pour ça ? Retrouve la règle, l’exception… et la sanction pour l’employeur."
+     },
+     {
+      "t": "p",
+      "c": "Le **CDI (contrat à durée indéterminée)** est le contrat **de droit commun** : c’est la **règle**. Sans terme fixé, il offre la plus grande stabilité. Toute embauche est présumée en CDI sauf preuve du recours légal à un autre contrat."
+     },
+     {
+      "t": "p",
+      "c": "Le **CDD (contrat à durée déterminée)** est l’**exception** : possible seulement dans des **cas limités** prévus par la loi, pour une **tâche précise et temporaire**. Il ne peut avoir pour objet de pourvoir durablement un emploi lié à l’activité normale de l’entreprise."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Cas de recours au CDD** : remplacement d’un salarié absent, accroissement temporaire d’activité, emploi saisonnier.",
+       "**Formalisme strict** : le CDD doit être **écrit**, préciser son **motif** et son **terme**. Un CDD conclu sans écrit est **requalifié en CDI**.",
+       "**Fin du CDD** : une indemnité est due en principe, avec des exceptions, notamment pour les CDD saisonniers."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "L’**intérim** (travail temporaire) fait intervenir **trois acteurs** : le salarié, l’entreprise de travail temporaire (son employeur) et l’entreprise utilisatrice (où il travaille). Mêmes logiques de **cas de recours limités** que le CDD."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "CDI = **principe**, CDD/intérim = **exception encadrée**. Un CDD sans motif légal ou sans écrit est **requalifié en CDI**."
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus parmi les cas de recours au CDD :\nA) Remplacement d’un salarié absent\nB) Accroissement temporaire d’activité\nC) Emploi saisonnier\nD) Pourvoir durablement un poste permanent",
+      "a": "D) Pourvoir durablement un poste permanent.",
+      "explain": "Un CDD ne peut pas pourvoir durablement un emploi lié à l’activité normale de l’entreprise ; les trois autres sont des cas de recours."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ Cas pratique — licenciement pour antipathie : la cause réelle et sérieuse",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧑‍💼",
+      "h": "Mini-histoire",
+      "c": "Un salarié en CDI reçoit sa lettre : « Votre responsable ne vous apprécie pas. » Il se demande s’il a une chance de contester. Dérouler règle, faits, conclusion va l’aider."
+     },
+     {
+      "t": "example",
+      "h": "Situation",
+      "c": "Un salarié en CDI est licencié au motif que « son responsable ne l’apprécie pas ». Ce licenciement est-il régulier ?"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Règle** : tout licenciement doit reposer sur une **cause réelle et sérieuse** (motif objectif, vérifiable et suffisamment grave).",
+       "**Faits** : le motif invoqué est une simple **antipathie**, ni objective ni sérieuse.",
+       "**Application** : la cause réelle et sérieuse fait défaut.",
+       "**Conclusion** : le licenciement est **sans cause réelle et sérieuse** (abusif) → le salarié peut obtenir des indemnités."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Repère",
+      "c": "Le CDI est la norme ; le CDD est l’exception, encadrée et motivée. La rupture suit des procédures strictes."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « Un licenciement pour antipathie est régulier si l’employeur envoie une lettre écrite. » Trouve l’erreur.",
+      "a": "Une lettre ne suffit pas : l’antipathie n’est pas une cause réelle et sérieuse.",
+      "explain": "Le motif doit être objectif, vérifiable et suffisamment grave ; sans cela le licenciement est abusif."
+     }
+    ]
+   },
+   {
+    "h": "🤝 Le contrat de travail : prestation, rémunération, subordination",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🤝",
+      "h": "Question qui pique",
+      "c": "Tu proposes tes services à une entreprise : elle te dicte tes horaires, contrôle ton travail et te paie. Peu importe le titre du contrat : de quoi s’agit-il ?"
+     },
+     {
+      "t": "p",
+      "c": "Le **contrat de travail** est la convention par laquelle une personne (le **salarié**) met son activité au service d’une autre (l’**employeur**), sous sa **subordination**, en échange d’une **rémunération**. Trois éléments : une **prestation de travail**, une **rémunération** et un **lien de subordination**."
+     },
+     {
+      "t": "p",
+      "c": "Le **lien de subordination** est le **critère décisif** : le pouvoir de l’employeur de **donner des ordres**, d’en **contrôler** l’exécution et de **sanctionner** les manquements. Il distingue le salarié du travailleur **indépendant**, qui organise librement son travail."
+     },
+     {
+      "t": "example",
+      "h": "Salarié ou indépendant ? (l’affaire Uber)",
+      "c": "La Cour de cassation a requalifié en contrat de travail la relation d’un chauffeur avec sa plateforme : celle-ci fixait les tarifs, imposait un itinéraire, contrôlait et pouvait désactiver le compte. Ce **faisceau d’indices** révélait un **lien de subordination**, donc un vrai salariat malgré l’étiquette « indépendant »."
+     },
+     {
+      "t": "warning",
+      "h": "Piège",
+      "c": "Ce n’est **pas le nom** donné au contrat qui compte, mais la **réalité** de la relation. Le juge cherche le lien de subordination par un **faisceau d’indices**."
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe ces éléments en « indice de subordination » ou « indice d’indépendance » : (a) horaires imposés, (b) choix libre de ses clients, (c) contrôle du travail par le donneur d’ordre, (d) fixation de ses propres tarifs.",
+      "a": "Subordination : (a) et (c). Indépendance : (b) et (d).",
+      "explain": "Ordres, horaires imposés et contrôle sont des indices de subordination ; la liberté d’organisation et de tarifs, des indices d’indépendance."
+     }
+    ]
+   },
+   {
+    "h": "🚪 La rupture du CDI : démission, licenciement, rupture conventionnelle",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🚪",
+      "h": "Dialogue",
+      "c": "— « Je démissionne ! » (dit dans un accès de colère)\n— « Tu en es sûr ? »\n— « Euh… non. »\nUne démission doit être claire. Et quelles autres portes de sortie existent pour un CDI ?"
+     },
+     {
+      "t": "p",
+      "c": "Un CDI peut être rompu de plusieurs façons, selon qui prend l’initiative. La rupture est **encadrée** pour protéger le salarié."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Démission** : à l’initiative **du salarié**, avec une **volonté claire et non équivoque** de partir (une démission donnée sous le coup de la colère peut être contestée).",
+       "**Licenciement** : à l’initiative **de l’employeur**, avec une **cause réelle et sérieuse** et une **procédure** (entretien préalable, lettre).",
+       "**Rupture conventionnelle** : **accord des deux parties**, avec une **convention** fixant les conditions du départ, **homologuée par l’administration**, qui vérifie que l’accord du salarié est libre."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "« Réelle » = faits **exacts et vérifiables** ; « sérieuse » = suffisamment **grave** pour justifier la rupture. Le licenciement est pour motif **personnel** (lié au salarié : faute, insuffisance) ou **économique** (lié à l’entreprise : difficultés, mutation technologique)."
+     },
+     {
+      "t": "p",
+      "c": "Sans cause réelle et sérieuse (fond), le licenciement est **abusif** et ouvre droit à des **dommages-intérêts** ; avec un simple vice de procédure (forme), il est **irrégulier** : indemnité d’au plus un mois de salaire."
+     },
+     {
+      "t": "warning",
+      "h": "Piège",
+      "c": "Un licenciement sans **cause réelle et sérieuse** est **abusif**, même si la procédure a été respectée. Fond **et** forme doivent être réunis."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Démission",
+        "Rupture du CDI à l’initiative du salarié (volonté claire et non équivoque)"
+       ],
+       [
+        "Licenciement",
+        "Rupture à l’initiative de l’employeur (cause réelle et sérieuse + procédure)"
+       ],
+       [
+        "Rupture conventionnelle",
+        "Rupture d’un commun accord, convention homologuée par l’administration"
+       ],
+       [
+        "Cause réelle et sérieuse",
+        "Motif fondé sur des faits exacts et vérifiables, assez grave pour justifier la rupture"
+       ],
+       [
+        "Licenciement pour motif personnel / économique",
+        "Lié au salarié (faute, insuffisance) / lié à l’entreprise (difficultés)"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "La rupture conventionnelle repose sur l’accord des deux parties et sa convention est homologuée par l’administration.",
+      "a": "Vrai.",
+      "explain": "Les deux parties s’accordent et signent une convention, que l’administration homologue en vérifiant le libre accord du salarié."
+     }
+    ]
+   },
+   {
+    "h": "🛡️ Les droits collectifs : convention collective, représentants du personnel, syndicats, grève",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🛡️",
+      "h": "Question qui pique",
+      "c": "Seul face à son employeur, un salarié pèse peu. Mais s’il peut compter sur une convention collective, des élus et des syndicats, la balance se rééquilibre. Comment ?"
+     },
+     {
+      "t": "p",
+      "c": "Le salarié n’est pas seul : le droit du travail organise sa **protection collective**. Ses droits forment une **hiérarchie** (Constitution, lois, conventions collectives, contrat), avec un principe protecteur : la norme inférieure ne peut être **moins favorable** que la supérieure (principe de faveur, sauf exceptions)."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**La convention collective** : accord négocié par branche ou entreprise qui adapte le Code du travail, le plus souvent en l’améliorant (salaires minima, congés, primes).",
+       "**Représentants du personnel** : élus au CSE (comité social et économique), ils défendent les salariés et sont consultés sur les décisions importantes.",
+       "**Les syndicats** : ils négocient, informent et peuvent appeler à la **grève**, droit à valeur constitutionnelle."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Ces mécanismes rééquilibrent une relation par nature **inégalitaire** (le salarié est subordonné) et garantissent des conditions de travail dignes et une voix collective."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Le droit du travail est un droit **protecteur** et **d’ordre public social** : en principe, on n’y déroge que dans un sens **plus favorable** au salarié (principe de faveur). Mais la loi admet des exceptions : un accord collectif peut parfois prévoir une règle moins favorable que la règle légale applicable par défaut (ex. : majoration des heures supplémentaires d’au moins 10 % au lieu de 25 %), et depuis les réformes de 2016-2017, l’accord d’entreprise prime sur l’accord de branche dans de nombreux domaines."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Quel organe, élu par les salariés, est consulté sur les décisions importantes de l’entreprise ?",
+      "a": "Le CSE (comité social et économique).",
+      "explain": "Les représentants du personnel élus au CSE défendent les intérêts des salariés et sont consultés sur les décisions importantes."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ Cas pratique guidé — licenciement par SMS : le fond et la procédure",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📱",
+      "h": "Mini-histoire",
+      "c": "Un lundi matin, une salariée reçoit un SMS : « Tu es licenciée, tu ne me plais plus. » Pas d’entretien, pas de lettre. Elle conteste. Qu’en dit le droit ?"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Un employeur licencie une salariée par un simple SMS, sans entretien, au motif qu’« elle ne lui plaît plus ». La salariée conteste. Que dit le droit ?"
+     },
+     {
+      "t": "example",
+      "h": "Majeure — la règle",
+      "c": "Tout licenciement exige une **cause réelle et sérieuse** (faits exacts, vérifiables et suffisamment graves) et une **procédure** (convocation, entretien préalable, notification écrite et motivée). Sans cause, le licenciement est **abusif** (dommages-intérêts) ; un simple vice de procédure le rend **irrégulier** (indemnité d’au plus un mois de salaire)."
+     },
+     {
+      "t": "example",
+      "h": "Mineure — les faits",
+      "c": "Le motif (« elle ne me plaît plus ») n’est **ni réel ni sérieux** : aucun fait objectif. De plus, la procédure n’a **pas** été respectée (SMS, pas d’entretien préalable, pas de notification motivée)."
+     },
+     {
+      "t": "example",
+      "h": "Conclusion",
+      "c": "Le licenciement est **abusif** (absence de cause réelle et sérieuse **et** vice de procédure). La salariée peut saisir le **conseil de prud’hommes** et obtenir des **dommages-intérêts**."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Contrôler **deux niveaux** : le **fond** (cause existante et sérieuse ?) et la **forme** (procédure suivie ?). Conclure sur le tribunal compétent (**prud’hommes**)."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Un SMS pour un motif vague, sans entretien. Quel juge la salariée peut-elle saisir ?\nA) Le tribunal de police\nB) La cour d’assises\nC) Le conseil de prud’hommes",
+      "a": "C) Le conseil de prud’hommes.",
+      "explain": "Le conseil de prud’hommes est compétent pour les litiges individuels nés du contrat de travail, comme un licenciement contesté."
+     }
+    ]
+   },
+   {
+    "h": "⏱️ Le temps de travail : durée légale, heures supplémentaires, repos",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "⏱️",
+      "h": "Chiffre fictif",
+      "c": "Yanis travaille 39 heures cette semaine. Son employeur dit : « 35 heures, c’est le maximum, donc tu ne devrais pas dépasser. » Faux ! Mais alors, que se passe-t-il au-delà de 35 h ?"
+     },
+     {
+      "t": "p",
+      "c": "Le droit du travail encadre le **temps de travail** pour protéger la santé du salarié. Les repères de base sont fixés par la loi, puis adaptés par les conventions collectives."
+     },
+     {
+      "t": "p",
+      "c": "La **durée légale** est de **35 heures par semaine**. Ce n’est pas un maximum : au-delà, ce sont des **heures supplémentaires**, **majorées**. À défaut d’accord collectif, la majoration est de **25 %** pour les premières heures puis de **50 %** ; un accord peut prévoir un autre taux, mais jamais **inférieur à 10 %**."
+     },
+     {
+      "t": "p",
+      "c": "Il existe des **durées maximales** à ne pas dépasser : **10 heures par jour** et **48 heures par semaine**. Le salarié a droit à un **repos minimum de 11 heures consécutives** entre deux journées de travail."
+     },
+     {
+      "t": "p",
+      "c": "Le droit impose aussi des **repos** obligatoires (quotidien, hebdomadaire, congés payés) et un **droit à la déconnexion** à l’ère numérique."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Durée **légale** = 35 h (pas un maximum). Au-delà, ce sont des **heures supplémentaires majorées**. La loi impose des **plafonds** et des **repos** pour protéger la santé."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Durée légale",
+        "35 heures par semaine (seuil de déclenchement des heures supplémentaires)"
+       ],
+       [
+        "Heures supplémentaires",
+        "Heures au-delà de 35 h, majorées (25 % puis 50 % ; au moins 10 % par accord)"
+       ],
+       [
+        "Durées maximales",
+        "10 h par jour, 48 h par semaine"
+       ],
+       [
+        "Repos quotidien",
+        "11 heures consécutives minimum entre deux journées"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus parmi ces repères du temps de travail :\nA) 35 heures par semaine (durée légale)\nB) 48 heures par semaine (durée maximale)\nC) 11 heures de repos quotidien\nD) 20 heures de repos par jour",
+      "a": "D) 20 heures de repos par jour.",
+      "explain": "Le repos quotidien minimum est de 11 heures consécutives ; les autres chiffres sont des repères du cours."
+     }
+    ]
+   },
+   {
+    "h": "🦺 Santé et sécurité : obligation de sécurité, prévention, droit de retrait",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧯",
+      "h": "Défi lancé",
+      "c": "Une odeur de gaz envahit l’atelier. Que doit faire l’employeur ? Et le salarié peut-il quitter son poste sans être sanctionné ? Le cours te donne les deux réponses."
+     },
+     {
+      "t": "p",
+      "c": "L’employeur a une **obligation de sécurité** envers ses salariés : il doit prendre les mesures nécessaires pour **protéger leur santé physique et mentale**. C’est une **obligation de moyens renforcée** : il doit prendre toutes les mesures de prévention prévues par la loi, et n’échappe à sa responsabilité que s’il prouve les avoir prises."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Prévention des risques** : évaluer les risques (document unique), former, équiper.",
+       "**Risques psychosociaux** : prévenir le stress, le harcèlement, le burn-out.",
+       "**Accidents du travail et maladies professionnelles** : pris en charge par la Sécurité sociale (indemnisation forfaitaire, sans prouver de faute de l’employeur) ; en cas de **faute inexcusable** de l’employeur, indemnisation complémentaire possible."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Le salarié dispose d’un **droit de retrait** : il peut cesser le travail face à un **danger grave et imminent**, sans être sanctionné. La **médecine du travail** et le **CSE** veillent aussi à la sécurité."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "L’employeur a une **obligation de sécurité** (santé physique ET mentale). Le salarié a un **droit de retrait** face à un danger grave et imminent."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Un salarié peut exercer son droit de retrait face à un danger grave et imminent, sans être sanctionné.",
+      "a": "Vrai.",
+      "explain": "Face à un danger grave et imminent, il peut cesser le travail sans sanction."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ MÉTHODE — Analyser une rupture : initiative, motif, fond, forme, sanction",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧩",
+      "h": "Défi lancé",
+      "c": "Une rupture de contrat, cinq questions : qui, pourquoi, fond, forme, sanction. Réponds dans l’ordre et le cas pratique devient un jeu."
+     },
+     {
+      "t": "p",
+      "c": "Face à une rupture, procède par étapes : identifier **qui** rompt, **comment**, et si les **conditions** sont réunies."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**1. Qui prend l’initiative ?** Salarié (démission), employeur (licenciement), ou les deux (rupture conventionnelle) ?",
+       "**2. Le motif** (si licenciement) : personnel (faute, insuffisance) ou économique ?",
+       "**3. Le fond** : la cause est-elle **réelle et sérieuse** ?",
+       "**4. La forme** : la **procédure** a-t-elle été respectée (convocation, entretien, notification écrite motivée) ?",
+       "**5. La sanction** : fond manquant → **abusif** → dommages-intérêts (prud’hommes) ; forme seule manquante → **irrégulier** → indemnité d’au plus un mois de salaire."
+      ]
+     },
+     {
+      "t": "example",
+      "h": "Exemple express",
+      "c": "Licenciement par SMS pour un motif vague. Fond : pas de cause réelle et sérieuse. Forme : procédure non respectée. → Licenciement **abusif**, saisine du **conseil de prud’hommes**, dommages-intérêts."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Contrôler **deux niveaux** : le **fond** ET la **forme**. Tribunal compétent : les **prud’hommes**."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "La méthode d’analyse d’une rupture (initiative, motif, fond, forme, sanction) compte combien d’étapes en tout ?",
+      "a": "5 étapes.",
+      "explain": "Initiative, motif, fond, forme, sanction : cinq étapes à parcourir dans l’ordre."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ Cas pratique guidé — CDD successifs sur un poste permanent : la requalification en CDI",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔄",
+      "h": "Mini-histoire",
+      "c": "Mélanie enchaîne depuis deux ans des CDD successifs sur le même poste, lié à l’activité normale et permanente de l’entreprise. Chaque fois, « c’est provisoire ». Peut-elle obtenir un CDI ?"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Une salariée enchaîne depuis deux ans des CDD successifs pour occuper le même poste, lié à l’activité normale et permanente de l’entreprise. Peut-elle obtenir un CDI ?"
+     },
+     {
+      "t": "example",
+      "h": "Majeure — la règle",
+      "c": "Le **CDI est la règle**, le **CDD l’exception**, réservé à une tâche **précise et temporaire** (remplacement, accroissement temporaire, saisonnier). Un CDD ne peut pourvoir durablement un emploi lié à l’**activité normale et permanente**. Un CDD qui le fait est **requalifié en CDI**."
+     },
+     {
+      "t": "example",
+      "h": "Mineure — les faits",
+      "c": "Les CDD successifs occupent depuis deux ans un poste **permanent** : le recours au CDD est **détourné** de son objet légal."
+     },
+     {
+      "t": "example",
+      "h": "Conclusion",
+      "c": "La salariée peut demander au **conseil de prud’hommes** la **requalification en CDI** (avec une indemnité de requalification). La relation est réputée à durée indéterminée depuis le premier CDD irrégulier."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Vérifier si le CDD respecte un **cas de recours** légal et une **tâche temporaire**. S’il pourvoit un emploi **permanent** → **requalification en CDI**."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Des CDD successifs occupent un poste permanent. Que peut demander la salariée ?\nA) La requalification en CDI\nB) La rupture conventionnelle obligatoire\nC) La requalification en intérim",
+      "a": "A) La requalification en CDI.",
+      "explain": "Un CDD qui pourvoit durablement un emploi permanent peut être requalifié en CDI par le conseil de prud’hommes."
+     }
+    ]
+   }
+  ]
+ },
+ "droit-t8": {
+  "intro": "Entreprendre est une **liberté**, mais elle s’exerce dans un cadre juridique. Choisir sa **structure** change tout pour ton **patrimoine** et ta **responsabilité**, et l’aventure se joue aussi face à la **concurrence** et avec des **partenaires**. À toi de jouer, Léa et ses amis t’accompagnent !",
+  "sections": [
+   {
+    "h": "🐱 La personnalité juridique et le statut de l’animal",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🐱",
+      "h": "Question qui pique",
+      "c": "Le couturier Karl Lagerfeld adorait sa chatte Choupette et avait déclaré vouloir lui laisser une partie de sa fortune. Juridiquement… c’est impossible. Pourquoi ?"
+     },
+     {
+      "t": "p",
+      "c": "En droit, seule une **personne** peut posséder un **patrimoine** et hériter. Elle est **physique** (un être humain) ou **morale** (une société, une association)."
+     },
+     {
+      "t": "p",
+      "c": "Un animal n’est pas une personne juridique : c’est un **être vivant doué de sensibilité** (art. 515-14 du Code civil), **soumis au régime des biens**. Il ne peut donc ni être propriétaire ni hériter."
+     },
+     {
+      "t": "p",
+      "c": "On ne peut donc pas léguer directement à un chat : on lègue à une **personne** (ou à une fondation) en la chargeant de s’occuper de l’animal. Choupette vit dans le luxe grâce à des humains, pas en son nom propre."
+     },
+     {
+      "t": "tip",
+      "h": "La notion cachée",
+      "c": "Cette histoire illustre la **personnalité juridique** : avoir des droits (posséder, hériter, contracter) suppose d’être une personne, physique ou morale."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Pourquoi Choupette ne peut-elle pas hériter directement de Lagerfeld ?",
+      "a": "Parce qu’un animal n’est pas une personne juridique : il est soumis au régime des biens.",
+      "explain": "Seule une personne, physique ou morale, peut posséder un patrimoine et hériter ; on lègue donc à un humain chargé de s’en occuper."
+     }
+    ]
+   },
+   {
+    "h": "🏠 Forme juridique et patrimoine personnel : la responsabilité limitée aux apports",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "👗",
+      "h": "Mini-histoire",
+      "c": "Léa lance sa marque de vêtements. Si l’affaire échoue et accumule des dettes, risque-t-elle de perdre sa maison personnelle ? Tout va dépendre d’un choix de départ."
+     },
+     {
+      "t": "p",
+      "c": "Tout dépend de la **forme juridique** : **entreprise individuelle** ou **société**. En entreprise individuelle, l’entrepreneur et l’entreprise ne forment qu’une seule personne juridique ; la résidence principale est insaisissable de droit par les créanciers professionnels depuis 2015, et la loi de 2022 **sépare de droit le patrimoine professionnel du patrimoine personnel** : les créanciers professionnels ne peuvent saisir que les biens utiles à l’activité."
+     },
+     {
+      "t": "p",
+      "c": "En créant une **société** (**SARL**, **SAS**), Léa donne naissance à une **personne morale** distincte : les patrimoines sont séparés et sa responsabilité est en principe **limitée à ses apports**. Les associés d’une SARL ou d’une SAS suivent la même logique : responsabilité **limitée à leurs apports**."
+     },
+     {
+      "t": "warning",
+      "h": "La limite",
+      "c": "La protection n’est jamais absolue : une **caution personnelle** demandée par la banque, ou une **faute de gestion** grave, peut faire tomber la barrière et engager les biens personnels du dirigeant."
+     },
+     {
+      "t": "tip",
+      "h": "Le bon réflexe",
+      "c": "Choisir une forme juridique, c’est d’abord choisir comment on **engage** (ou on **protège**) son patrimoine."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Entreprise individuelle (depuis 2022)",
+        "Patrimoine professionnel séparé du patrimoine personnel"
+       ],
+       [
+        "SARL / SAS",
+        "Responsabilité limitée aux apports (personne morale)"
+       ],
+       [
+        "Caution personnelle",
+        "Engagement du dirigeant à payer sur ses biens si la société ne paie pas"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Léa a créé une SARL qui fait faillite. Que risque-t-elle en principe ?\nA) Perdre uniquement ses apports\nB) Perdre tous ses biens personnels\nC) Perdre seulement sa résidence principale",
+      "a": "A) Perdre uniquement ses apports.",
+      "explain": "En société, la responsabilité est en principe limitée aux apports ; une caution personnelle ou une faute de gestion grave peuvent faire exception."
+     }
+    ]
+   },
+   {
+    "h": "💡 La propriété intellectuelle : marque, droit d’auteur et contrefaçon",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎨",
+      "h": "Défi lancé",
+      "c": "Léa crée un logo original et un nom de marque. Un concurrent les copie. Peut-elle réagir, et à quelle condition ?"
+     },
+     {
+      "t": "p",
+      "c": "Oui : Léa peut agir en **contrefaçon** si elle a **déposé sa marque** à l’INPI. La **propriété industrielle** (marque, brevet, dessin) donne un **monopole d’exploitation**. Le **droit d’auteur**, lui, protège les œuvres **automatiquement**, sans dépôt."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Une invention technique** : on dépose un **brevet** à l’INPI ; protection de **20 ans**.",
+       "**Un nom ou un logo** : on dépose une **marque** à l’INPI ; protection de **10 ans renouvelables**.",
+       "**Une œuvre** (texte, musique, site) : **droit d’auteur**, sans dépôt, pendant **toute la vie de l’auteur et 70 ans après**."
+      ]
+     },
+     {
+      "t": "warning",
+      "h": "Attention",
+      "c": "Une **idée** seule ne se protège pas : c’est sa **mise en forme** (invention, marque, œuvre) qui est protégeable. Sans **dépôt**, un nom se défend beaucoup plus difficilement : protéger, c’est anticiper."
+     },
+     {
+      "t": "tip",
+      "h": "Pour retenir",
+      "c": "Invention = brevet ; nom ou logo = marque ; œuvre = droit d’auteur."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Brevet",
+        "Invention technique, dépôt INPI, 20 ans"
+       ],
+       [
+        "Marque",
+        "Nom, logo, dépôt INPI, 10 ans renouvelables"
+       ],
+       [
+        "Droit d’auteur",
+        "Œuvre de l’esprit, protection automatique, vie + 70 ans"
+       ],
+       [
+        "Contrefaçon",
+        "Copie d’une création protégée sans autorisation"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Une marque déposée à l’INPI est protégée 10 ans, renouvelables.",
+      "a": "Vrai : 10 ans renouvelables après dépôt à l’INPI.",
+      "explain": "Le brevet dure 20 ans ; le droit d’auteur dure toute la vie de l’auteur et 70 ans après, sans dépôt."
+     }
+    ]
+   },
+   {
+    "h": "🧍 La liberté d’entreprendre et l’entreprise individuelle : deux patrimoines séparés",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "💬",
+      "h": "Dialogue",
+      "c": "— Léa : Je me lance seule, mais si ça tourne mal, je perds ma voiture et mon épargne ?\n— Le conseiller : Depuis 2022, en principe non. Voyons pourquoi."
+     },
+     {
+      "t": "p",
+      "c": "La **liberté d’entreprendre** (à valeur constitutionnelle) et la **liberté du commerce et de l’industrie** permettent à chacun de créer et d’exercer une activité économique. La forme la plus simple est l’**entreprise individuelle** : il n’y a **pas** de nouvelle personne juridique."
+     },
+     {
+      "t": "p",
+      "c": "**Depuis la réforme de 2022** (loi du **14 février 2022** en faveur de l’activité professionnelle indépendante, **statut unique** en vigueur le **15 mai 2022**), le **patrimoine professionnel** (les biens utiles à l’activité) et le **patrimoine personnel** sont **séparés de plein droit**. Le patrimoine personnel est ainsi, **par principe, protégé** des créanciers professionnels, sans démarche particulière."
+     },
+     {
+      "t": "warning",
+      "h": "Évolution à connaître (2019 → 2022)",
+      "c": "**Avant 2022**, par le **principe d’unicité du patrimoine**, l’entrepreneur individuel répondait des dettes de son activité sur **tout son patrimoine**, à l’exception de sa **résidence principale**, insaisissable de droit par les créanciers professionnels depuis 2015 ; pour protéger ses autres biens, il devait faire une **déclaration d’insaisissabilité** ou créer une **EIRL** (patrimoine d’affectation). **Depuis 2022, cette séparation est automatique** : c’est une évolution récente, souvent attendue dans les cas pratiques."
+     },
+     {
+      "t": "p",
+      "c": "L’**EURL** (entreprise unipersonnelle à responsabilité limitée) reste une autre option : c’est une **société à associé unique**, donc une **personne morale** distincte, dont la **responsabilité est limitée aux apports**."
+     },
+     {
+      "t": "example",
+      "h": "Léa hésite : entreprise individuelle ou EURL ?",
+      "c": "Léa ouvre un salon de coiffure et emprunte 40 000 €. \n→ En **entreprise individuelle**, depuis la réforme de **2022**, son **patrimoine personnel** (voiture, épargne) est **en principe protégé** : les créanciers professionnels ne peuvent en principe saisir que le **patrimoine professionnel** (sauf renonciation de Léa pour un engagement précis). \n→ En **EURL**, une **personne morale** distincte est créée : sa responsabilité est **limitée à ses apports**. Les deux protègent son patrimoine personnel, mais l’EURL impose plus de formalisme (statuts, comptes)."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « Depuis 2022, l’entrepreneur individuel doit faire une déclaration d’insaisissabilité pour protéger son patrimoine personnel. » Trouve l’erreur.",
+      "a": "Depuis 2022, la séparation des patrimoines est automatique ; la déclaration d’insaisissabilité concernait la situation d’avant 2022.",
+      "explain": "Avant 2022 (unicité du patrimoine), il fallait des démarches (déclaration d’insaisissabilité, EIRL) ; depuis la loi du 14 février 2022, la séparation est de plein droit."
+     }
+    ]
+   },
+   {
+    "h": "🤝 La société : contrat de société, apports, affectio societatis",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🥖",
+      "h": "Mini-histoire",
+      "c": "Trois amis mettent chacun de l’argent, du matériel ou leur savoir-faire dans une boulangerie. Quand cet ensemble devient-il une vraie société, et pas un simple coup de main entre copains ?"
+     },
+     {
+      "t": "p",
+      "c": "La **société** naît d’un **contrat de société** (article **1832** du Code civil) : plusieurs associés **affectent à une entreprise commune des biens ou leur industrie en vue de partager le bénéfice** ou de profiter de l’économie qui en résulte. Trois éléments clés :"
+     },
+     {
+      "t": "list",
+      "c": [
+       "l’**apport** de chaque associé (en argent, en nature ou en industrie) ;",
+       "l’**affectio societatis** : la volonté commune de collaborer ;",
+       "la vocation à **partager les bénéfices** (au prorata des apports) et à **contribuer aux pertes**."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Généralement, la **responsabilité des associés est limitée à leurs apports**. Les décisions relèvent d’**organes de gestion courante** (dirigeants) ou d’**organes délibératifs** (assemblées). La **société coopérative (SCOP)** est une forme particulière, porteuse d’une **éthique coopérative** (économie sociale et solidaire)."
+     },
+     {
+      "t": "tip",
+      "h": "Moyen mnémotechnique",
+      "c": "Les trois éléments clés : apport + volonté de collaborer + partage des bénéfices et des pertes."
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe en « apport » ou « partage » : (a) mettre 5 000 € en argent, (b) offrir son savoir-faire (en industrie), (c) se partager le bénéfice au prorata des apports, (d) contribuer aux pertes.",
+      "a": "Apport : (a) et (b). Partage : (c) et (d).",
+      "explain": "L’apport peut être en argent, en nature ou en industrie ; la société vise aussi à partager les bénéfices et à contribuer aux pertes."
+     }
+    ]
+   },
+   {
+    "h": "⚔️ La concurrence : concurrence déloyale, ententes, abus de position dominante",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🥐",
+      "h": "Question qui pique",
+      "c": "Un boulanger répand la rumeur que le pain de son voisin rend malade, puis copie son enseigne pour semer la confusion. Est-ce de bonne guerre ?"
+     },
+     {
+      "t": "p",
+      "c": "La **libre concurrence** découle de la liberté du commerce et de l’industrie : produire et vendre librement, sans monopole. Elle est toutefois **encadrée** pour éviter les comportements déloyaux ou anti-concurrentiels."
+     },
+     {
+      "t": "p",
+      "c": "La **concurrence déloyale** engage la **responsabilité civile** de son auteur. Le **fait générateur** est un comportement déloyal : **parasitisme, dénigrement, imitation, désorganisation**. La victime doit aussi établir un **préjudice** (perte de clientèle, baisse de notoriété) et un **lien de causalité** : c’est l’**action en concurrence déloyale**."
+     },
+     {
+      "t": "p",
+      "c": "Certaines pratiques sont spécifiquement interdites : l’**entente** (accord faussant la concurrence) et l’**abus de position dominante**. L’**Autorité de la concurrence** veille au respect des règles en France ; au niveau européen, les **articles 101 et 102 du TFUE** s’appliquent."
+     },
+     {
+      "t": "example",
+      "h": "Le concurrent dénigré",
+      "c": "Un commerçant diffuse de fausses rumeurs affirmant que les produits d’un concurrent sont dangereux, et copie son enseigne. \n→ Ce sont des actes de **concurrence déloyale** (**dénigrement** et **imitation**). Le concurrent lésé engage une **action en concurrence déloyale** fondée sur la **responsabilité civile** : il doit prouver le **fait générateur**, le **préjudice** (perte de clientèle) et le **lien de causalité**, pour obtenir réparation."
+     },
+     {
+      "t": "tip",
+      "h": "Sigle",
+      "c": "Les quatre faits déloyaux : Parasitisme, Dénigrement, Imitation, Désorganisation. Pour agir : fait générateur + préjudice + lien de causalité."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Un commerçant copie l’enseigne d’un concurrent pour créer la confusion. De quoi s’agit-il ?\nA) Une entente\nB) Un abus de position dominante\nC) Une imitation, forme de concurrence déloyale",
+      "a": "C) Une imitation, forme de concurrence déloyale.",
+      "explain": "L’imitation est l’un des comportements de concurrence déloyale ; l’entente et l’abus de position dominante sont d’autres pratiques interdites."
+     }
+    ]
+   },
+   {
+    "h": "🔗 Les partenariats : contrat d’entreprise, sous-traitance et franchise",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🍕",
+      "h": "Question qui pique",
+      "c": "Une pizzeria porte l’enseigne d’une grande chaîne sans en être l’employée. Comment deux entreprises peuvent-elles travailler ensemble sans que l’une commande l’autre ?"
+     },
+     {
+      "t": "p",
+      "c": "Une entreprise peut organiser son activité en contractant avec des **partenaires**, sans créer de lien de subordination :"
+     },
+     {
+      "t": "list",
+      "c": [
+       "le **contrat d’entreprise** : un entrepreneur s’engage, en toute indépendance, à réaliser un travail pour un client moyennant un prix ; dans la **sous-traitance**, il confie, sous sa responsabilité, l’exécution de tout ou partie de ce contrat à un **sous-traitant** ;",
+       "le **contrat de franchise** : un **franchisé** / une **franchisée** exploite le concept, la marque et le savoir-faire d’un **franchiseur** / d’une **franchiseuse**, en échange d’une redevance."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "À ne pas confondre",
+      "c": "Ces partenariats se distinguent du **contrat de travail** : il n’y a **pas de lien de subordination** entre les entreprises partenaires."
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus : quel contrat suppose un lien de subordination ?\nA) Le contrat de travail\nB) Le contrat d’entreprise\nC) La sous-traitance\nD) La franchise",
+      "a": "A) Le contrat de travail.",
+      "explain": "Les trois autres lient des entreprises partenaires, sans lien de subordination."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ Cas pratique guidé — entreprise individuelle ou société : protéger son patrimoine",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧑‍💼",
+      "h": "Défi lancé",
+      "c": "Un entrepreneur veut lancer son activité tout en protégeant son patrimoine personnel en cas de dettes. Que lui conseiller ?"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Règle** : depuis la loi du 14 février 2022, l’**entreprise individuelle** sépare de droit le patrimoine professionnel du patrimoine personnel ; l’entrepreneur et son entreprise restent toutefois une seule personne juridique. En **société** (SARL, SAS), la société est une **personne morale** distincte : les associés font des **apports**, peuvent ouvrir le capital à d’autres associés, et leur responsabilité est **limitée à leurs apports**.",
+       "**Application** : l’entrepreneur est déjà protégé en entreprise individuelle depuis 2022, mais la société lui apporte en plus une personne morale distincte, la possibilité de s’associer et d’ouvrir le capital, et une responsabilité limitée aux apports.",
+       "**Conclusion** : l’entreprise individuelle suffit pour une activité seul et simple ; une **société** (SARL/SAS) est préférable pour s’associer, ouvrir le capital et limiter la responsabilité aux apports."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "La **propriété industrielle** (brevet, marque) protège l’innovation ; ne la confonds pas avec le droit d’auteur."
+     },
+     {
+      "t": "p",
+      "c": "Le cas pratique se lit en trois temps : la règle, son application aux faits, puis la conclusion."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Depuis la loi du 14 février 2022, l’entreprise individuelle sépare de droit le patrimoine professionnel du patrimoine personnel.",
+      "a": "Vrai, mais l’entrepreneur et son entreprise restent une seule personne juridique.",
+      "explain": "La société, elle, crée une personne morale distincte."
+     }
+    ]
+   },
+   {
+    "h": "🏗️ Choisir une forme juridique : entreprise individuelle ou société",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧩",
+      "h": "Question qui pique",
+      "c": "Léa veut se lancer seule ; Tom et Mia veulent s’associer et chercher des investisseurs. EI, EURL, SARL, SAS, SA : le même sigle pour tous ? Évidemment non."
+     },
+     {
+      "t": "p",
+      "c": "Entreprendre suppose de choisir un **cadre juridique**. La première grande distinction oppose l’**entreprise individuelle** (l’entrepreneur et l’entreprise ne font qu’un) et la **société** (une **personne morale** distincte, dotée de son propre patrimoine)."
+     },
+     {
+      "t": "p",
+      "c": "L’**entreprise individuelle** (EI) ne compte qu’**une personne**, l’entrepreneur. Depuis 2022, sa responsabilité est **limitée à son patrimoine professionnel**, séparé de son patrimoine personnel : c’est la forme la plus simple pour **se lancer seul**. L’**EURL** permet aussi d’entreprendre seul, mais **en société** : l’associé unique ne risque que ses **apports**."
+     },
+     {
+      "t": "p",
+      "c": "La **SARL** réunit **de 2 à 100 associés**, dont la responsabilité est **limitée aux apports** : c’est la forme classique de la **PME familiale**. La **SAS**, ou **SASU** si elle n’a qu’un associé, accepte **un ou plusieurs associés** et laisse une grande **souplesse** d’organisation, ce qui facilite les **levées de fonds**. La **SA** exige au moins **2 actionnaires**, ou **7 si elle est cotée en Bourse**, et convient aux **grandes entreprises**. Dans toutes ces sociétés, la responsabilité des associés est limitée à leurs apports."
+     },
+     {
+      "t": "p",
+      "c": "Le choix dépend de plusieurs critères : le **nombre d’associés**, le **capital** disponible, l’étendue de la **responsabilité** souhaitée, le **régime fiscal et social** du dirigeant, et les **perspectives de croissance** (une SAS facilite l’entrée d’investisseurs)."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "La **société** crée une **personne morale** distincte : elle a son nom, son patrimoine, sa responsabilité. C’est ce qui **protège** le patrimoine personnel des associés (responsabilité limitée aux apports)."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Entreprise individuelle (EI)",
+        "Un entrepreneur ; responsabilité limitée au patrimoine professionnel (2022)"
+       ],
+       [
+        "EURL",
+        "Société à un associé, responsabilité limitée aux apports"
+       ],
+       [
+        "SARL",
+        "2 à 100 associés, responsabilité limitée aux apports (PME familiale)"
+       ],
+       [
+        "SAS / SASU",
+        "Un ou plusieurs associés, grande souplesse, levée de fonds facilitée"
+       ],
+       [
+        "SA",
+        "2 actionnaires minimum (7 si cotée), grandes entreprises"
+       ],
+       [
+        "Responsabilité limitée aux apports",
+        "L’associé ne peut perdre que ce qu’il a apporté à la société"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Quelle forme de société accepte un ou plusieurs associés, offre une grande souplesse et facilite les levées de fonds ?",
+      "a": "La SAS (ou SASU s’il n’y a qu’un associé).",
+      "explain": "La SARL est la forme classique de la PME familiale (2 à 100 associés) ; la SA convient aux grandes entreprises."
+     }
+    ]
+   },
+   {
+    "h": "🏠 Protéger le patrimoine de l’entrepreneur : séparation des patrimoines, caution",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏦",
+      "h": "Mini-histoire",
+      "c": "Ton cousin gère une SARL qui fait faillite. La banque frappe à sa porte : a-t-elle le droit de viser sa maison, ses comptes, ses économies ?"
+     },
+     {
+      "t": "p",
+      "c": "Le grand risque de l’entrepreneur est que ses créanciers professionnels saisissent ses **biens personnels** (sa maison, ses comptes) en cas de dettes. Le droit a progressivement renforcé sa **protection**."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**La responsabilité limitée** en société : les associés ne perdent, au maximum, que leurs **apports**. Le patrimoine personnel est à l’abri (sauf faute de gestion ou caution personnelle).",
+       "**La séparation des patrimoines** de l’entrepreneur individuel : depuis 2022, le patrimoine **personnel** de l’entrepreneur individuel est de droit **séparé** de son patrimoine **professionnel** et protégé des créanciers professionnels.",
+       "**L’insaisissabilité de la résidence principale** de l’entrepreneur individuel, protégée de droit."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Cette protection n’est jamais absolue. Une **caution personnelle** demandée par la banque, ou une **faute de gestion** grave, peut faire tomber la barrière et engager le patrimoine personnel du dirigeant."
+     },
+     {
+      "t": "example",
+      "h": "Illustration",
+      "c": "Un gérant de SARL dont l’entreprise fait faillite ne perd en principe que son apport au capital ; mais s’il s’est porté **caution** d’un emprunt de la société, la banque pourra se retourner contre **ses biens personnels**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "La protection du patrimoine repose sur deux idées : la **personnalité morale** de la société et la **séparation des patrimoines**. Mais **caution** et **faute de gestion** en sont les limites."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Pourquoi la banque peut-elle viser les biens personnels du gérant de la SARL en faillite ?\nA) Parce que la SARL n’a pas de personnalité morale\nB) Parce qu’il s’est porté caution personnelle de l’emprunt\nC) Parce que la responsabilité en SARL n’est jamais limitée",
+      "a": "B) Parce qu’il s’est porté caution personnelle de l’emprunt.",
+      "explain": "La caution personnelle est l’une des limites à la protection du patrimoine ; la SARL est bien une personne morale à responsabilité limitée aux apports."
+     }
+    ]
+   },
+   {
+    "h": "💡 Protéger les créations : brevet, marque, droit d’auteur (INPI)",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧪",
+      "h": "Défi lancé",
+      "c": "Une inventrice crée un procédé, un nom de marque et un site web. Trois créations, trois protections différentes : saurais-tu les associer ?"
+     },
+     {
+      "t": "p",
+      "c": "Une idée seule ne se protège pas ; mais sa **mise en forme** (invention, marque, œuvre) peut faire l’objet d’un **droit de propriété intellectuelle**, qui confère à son titulaire un **monopole d’exploitation** temporaire."
+     },
+     {
+      "t": "list",
+      "c": [
+       "Le **brevet** protège une **invention technique** pendant **20 ans**, à condition d’avoir été **déposé à l’INPI**.",
+       "La **marque** protège un **signe distinctif** (nom, logo) pendant **10 ans renouvelables** indéfiniment, après **dépôt à l’INPI**.",
+       "Le **droit d’auteur** protège une **œuvre de l’esprit** (texte, musique, logiciel) pendant **toute la vie de l’auteur et 70 ans après sa mort**, sans **aucune formalité**.",
+       "Les **dessins et modèles** protègent **l’apparence d’un produit** pendant **5 ans**, renouvelables jusqu’à **25 ans**, après dépôt à l’INPI."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "La **propriété industrielle** (brevet, marque, dessins) nécessite un **dépôt** auprès de l’**INPI**. Le **droit d’auteur** naît **automatiquement** dès la création. La contrefaçon (copier sans autorisation) est un **délit** sanctionné civilement et pénalement."
+     },
+     {
+      "t": "example",
+      "h": "Application",
+      "c": "Une créatrice qui invente un procédé technique dépose un **brevet** (20 ans de monopole) ; elle protège le nom de sa marque par un dépôt à l’INPI (**marque**) ; le texte de son site est protégé d’office par le **droit d’auteur**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Idée = non protégeable. **Invention → brevet ; nom/logo → marque ; œuvre → droit d’auteur (automatique)**. Le dépôt à l’INPI conditionne la propriété industrielle."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Propriété intellectuelle",
+        "Droits qui donnent un monopole d’exploitation temporaire sur une création"
+       ],
+       [
+        "Brevet",
+        "Protège une invention technique, 20 ans, dépôt à l’INPI"
+       ],
+       [
+        "Marque",
+        "Protège un signe distinctif (nom, logo), 10 ans renouvelables, dépôt à l’INPI"
+       ],
+       [
+        "Droit d’auteur",
+        "Protège une œuvre de l’esprit, vie de l’auteur + 70 ans, sans formalité"
+       ],
+       [
+        "Dessins et modèles",
+        "Protègent l’apparence d’un produit, 5 ans renouvelables jusqu’à 25"
+       ],
+       [
+        "Contrefaçon",
+        "Reproduire ou utiliser une création protégée sans autorisation"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « Pour être protégé par le droit d’auteur, un texte doit être déposé à l’INPI. » Trouve l’erreur.",
+      "a": "Le droit d’auteur naît automatiquement dès la création, sans formalité ni dépôt.",
+      "explain": "Le dépôt à l’INPI concerne la propriété industrielle (brevet, marque, dessins et modèles)."
+     }
+    ]
+   },
+   {
+    "h": "🔄 La transmission de l’entreprise : cession, donation, succession",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "👵",
+      "h": "Mini-histoire",
+      "c": "Mme Dupont a fondé sa boulangerie il y a quarante ans. Elle prend sa retraite : que devient l’entreprise, et comment la passer à quelqu’un d’autre ?"
+     },
+     {
+      "t": "p",
+      "c": "Une entreprise a une vie qui peut dépasser celle de son fondateur : elle peut être **transmise**, par vente, par donation ou par **succession** (au décès). Le droit organise cette continuité pour préserver l’activité et les emplois."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**La cession (vente)** : le fonds de commerce ou les parts sociales sont vendus à un repreneur. Elle obéit à un formalisme protecteur (information des salariés, publicité).",
+       "**La donation** : transmission à titre gratuit, souvent aux enfants, avec des dispositifs fiscaux d’allègement (pacte Dutreil).",
+       "**La succession** : au décès, l’entreprise entre dans le patrimoine transmis aux héritiers selon les règles du droit des successions."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "La forme juridique influence la transmission : dans une **société**, on transmet des **parts** ou **actions** (plus simple, la personne morale continue) ; dans une **entreprise individuelle**, c’est le patrimoine professionnel lui-même qui est transmis."
+     },
+     {
+      "t": "example",
+      "h": "Illustration (Lagerfeld)",
+      "c": "La question « la chatte Choupette peut-elle hériter ? » illustre les règles de succession : en droit français, un **animal** ne peut pas être héritier (il n’a pas la personnalité juridique) ; on peut en revanche charger un héritier de s’en occuper via un **legs**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Transmettre une **société** = céder des parts/actions (la personne morale survit). Anticiper la transmission (donation, pacte) évite qu’une succession subie ne mette en péril l’entreprise."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Dans une entreprise individuelle comme dans une société, on transmet des parts ou des actions.",
+      "a": "Faux : on transmet des parts ou actions dans une société ; en entreprise individuelle, c’est le patrimoine professionnel lui-même qui est transmis.",
+      "explain": "Dans une société, la personne morale continue d’exister ; l’entreprise individuelle n’a pas de parts à céder."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ Cas pratique guidé — choisir une forme juridique : SAS et responsabilité limitée",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🚀",
+      "h": "Défi lancé",
+      "c": "Trois amis veulent créer ensemble une start-up ambitieuse, espèrent lever des fonds auprès d’investisseurs, et veulent tous protéger leur patrimoine personnel. Quelle forme leur conseiller ?"
+     },
+     {
+      "t": "p",
+      "c": "Lis d’abord l’**Énoncé.** : qui veut quoi ? Puis déroule la méthode : majeure (les critères), mineure (les faits), conclusion."
+     },
+     {
+      "t": "example",
+      "h": "Majeure — les critères",
+      "c": "Le choix d’une forme juridique dépend du **nombre d’associés**, de la **responsabilité** (limitée ou non), de la **souplesse** de fonctionnement et de la capacité à **accueillir des investisseurs**."
+     },
+     {
+      "t": "example",
+      "h": "Mineure — les faits",
+      "c": "Ils sont **plusieurs** (exclut EI et EURL), veulent une **responsabilité limitée** (exclut certaines formes risquées), et surtout veulent **lever des fonds** et rester **souples** dans l’organisation."
+     },
+     {
+      "t": "example",
+      "h": "Conclusion",
+      "c": "La **SAS (société par actions simplifiée)** est la mieux adaptée : responsabilité **limitée aux apports** (patrimoine protégé), **grande souplesse** statutaire, et **facilité d’entrée d’investisseurs** au capital. La SARL, plus rigide, conviendrait moins à un projet cherchant des fonds."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Lister les **besoins** de l’entrepreneur → les **traduire** en critères juridiques → **comparer** les formes → **recommander** en justifiant par chaque critère. Ne jamais donner une forme sans expliquer **pourquoi**."
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe en « critère de choix » ou « fait du cas » : (a) la souplesse de fonctionnement, (b) le nombre d’associés, (c) ils veulent lever des fonds auprès d’investisseurs, (d) ils sont trois amis.",
+      "a": "Critère de choix : (a) et (b). Fait du cas : (c) et (d).",
+      "explain": "La majeure pose les critères généraux ; la mineure y confronte les faits propres à la situation."
+     }
+    ]
+   },
+   {
+    "h": "🏛️ La personnalité juridique : personne physique, personne morale, patrimoine",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🤖",
+      "h": "Question qui pique",
+      "c": "Ton robot aspirateur peut-il signer un contrat ? Ton chat peut-il hériter ? Pour le droit, tout se joue sur une question : est-ce une personne ?"
+     },
+     {
+      "t": "p",
+      "c": "Le droit ne reconnaît de droits et d’obligations qu’aux **personnes juridiques**. Il en existe deux sortes, distinction fondamentale pour comprendre l’entreprise."
+     },
+     {
+      "t": "p",
+      "c": "La **personne physique** est un **être humain** : un entrepreneur individuel, par exemple, exerce son activité en tant que personne physique. La **personne morale** est un **groupement doté de la personnalité juridique** : une société, une association ou une commune."
+     },
+     {
+      "t": "p",
+      "c": "Comme une personne physique, la personne morale peut être titulaire de droits et d’obligations : signer des contrats, posséder des biens, agir en justice. Elle a sa propre **identité** : un nom (dénomination sociale), un **patrimoine** distinct de celui de ses associés, un domicile (siège social). Cette autonomie **protège** le patrimoine personnel des associés (responsabilité limitée aux apports)."
+     },
+     {
+      "t": "p",
+      "c": "Un **animal**, un **robot** ou une **idée** n’ont **pas** la personnalité juridique : ils ne peuvent ni posséder, ni hériter, ni être responsables (d’où la question « la chatte de Lagerfeld peut-elle hériter ? » : non)."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Personne **physique** (humain) vs **morale** (société, association). La personne morale a un **patrimoine propre** → elle protège le patrimoine des associés."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Personnalité juridique",
+        "Aptitude à être titulaire de droits et d’obligations"
+       ],
+       [
+        "Personne physique",
+        "Un être humain (entrepreneur individuel)"
+       ],
+       [
+        "Personne morale",
+        "Groupement doté de la personnalité juridique (société, association, commune)"
+       ],
+       [
+        "Patrimoine",
+        "Ensemble des biens et des dettes d’une personne"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus parmi ces personnes juridiques :\nA) Une commune\nB) Une association\nC) Un robot\nD) Une société",
+      "a": "C) Un robot.",
+      "explain": "Une commune, une association et une société sont des personnes morales ; un robot n’a pas la personnalité juridique."
+     }
+    ]
+   },
+   {
+    "h": "📑 Les contrats de l’entreprise : bail commercial, vente, franchise, sous-traitance",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "💬",
+      "h": "Dialogue",
+      "c": "— Léa : Je veux ouvrir ma boutique, mais je n’ai pas de local.\n— Son conseiller : Tu loueras un local avec un contrat adapté, le bail commercial."
+     },
+     {
+      "t": "p",
+      "c": "Pour exercer, l’entreprise conclut de nombreux **contrats** spécifiques, encadrés par le droit des affaires."
+     },
+     {
+      "t": "p",
+      "c": "Le **bail commercial** permet de **louer un local** pour y **exploiter un fonds de commerce**. Le **contrat de vente commerciale** organise la **vente de marchandises entre professionnels**."
+     },
+     {
+      "t": "p",
+      "c": "Le **contrat de franchise** permet à un commerçant indépendant d’**exploiter l’enseigne et le savoir-faire** d’un réseau, en échange d’une redevance. Le **contrat de sous-traitance** permet à une entreprise de **confier à un autre entrepreneur**, **sous sa propre responsabilité**, l’exécution de tout ou partie d’un contrat qu’elle a conclu avec un client."
+     },
+     {
+      "t": "p",
+      "c": "Le **bail commercial** offre une protection forte au commerçant (droit au renouvellement, durée minimale de 9 ans) car son **fonds de commerce** dépend de l’emplacement. Ces contrats obéissent au droit commun **et** à des règles spéciales du Code de commerce."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "L’entreprise vit par ses **contrats** (bail commercial, vente, franchise, sous-traitance). Le **bail commercial** protège le commerçant (durée, renouvellement)."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Bail commercial",
+        "Location d’un local pour exploiter un fonds de commerce (9 ans minimum)"
+       ],
+       [
+        "Vente commerciale",
+        "Vente de marchandises entre professionnels"
+       ],
+       [
+        "Franchise",
+        "Exploitation de l’enseigne et du savoir-faire d’un réseau"
+       ],
+       [
+        "Sous-traitance",
+        "Confier à un autre entrepreneur, sous sa responsabilité, l’exécution d’un contrat"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quel contrat permet de louer un local pour y exploiter un fonds de commerce ?\nA) Le bail commercial\nB) Le contrat de franchise\nC) Le contrat de vente commerciale",
+      "a": "A) Le bail commercial.",
+      "explain": "La franchise concerne l’enseigne et le savoir-faire ; la vente commerciale concerne des marchandises entre professionnels."
+     }
+    ]
+   },
+   {
+    "h": "🔒 La protection des données personnelles : RGPD, CNIL, consentement",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📱",
+      "h": "Question qui pique",
+      "c": "Une appli de livraison te demande ton adresse, ta date de naissance et ta position en continu. Que doit-elle respecter pour traiter tes données ?"
+     },
+     {
+      "t": "p",
+      "c": "Toute entreprise qui traite des **données personnelles** (clients, salariés) doit respecter le **RGPD** (Règlement Général sur la Protection des Données). C’est une obligation juridique majeure, sanctionnée par la **CNIL**."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Finalité** : ne collecter les données que pour un but précis et annoncé.",
+       "**Minimisation** : ne recueillir que les données **nécessaires**.",
+       "**Consentement** : obtenir l’accord de la personne (sauf autre base légale).",
+       "**Sécurité** : protéger les données contre les fuites.",
+       "**Droits des personnes** : accès, rectification, effacement (« droit à l’oubli »)."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Le non-respect du RGPD expose à de **lourdes sanctions** financières et à une atteinte à la réputation. La protection des données est donc à la fois une **obligation légale** et un enjeu de **confiance**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Traiter des données personnelles = respecter le **RGPD** : finalité, minimisation, consentement, sécurité, droits des personnes. Gendarme : la **CNIL**."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "La minimisation consiste à ne recueillir que les données nécessaires.",
+      "a": "Vrai : on ne collecte que ce qui est nécessaire au but annoncé.",
+      "explain": "Minimisation et finalité vont ensemble : un but précis, des données strictement utiles."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ Cas pratique guidé — brevet, marque ou droit d’auteur : protéger chaque création",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🕵️",
+      "h": "Défi lancé",
+      "c": "Une entrepreneure a inventé un procédé technique innovant, créé un nom de marque original et rédigé le contenu de son site. Un concurrent copie tout. Comment se protège-t-elle ?"
+     },
+     {
+      "t": "p",
+      "c": "Lis d’abord l’**Énoncé.** : quelles créations ? Puis applique la méthode : règle, faits, conclusion."
+     },
+     {
+      "t": "example",
+      "h": "Majeure — la règle",
+      "c": "La **propriété intellectuelle** protège les créations. **Brevet** (INPI, 20 ans) pour une **invention technique** ; **marque** (INPI, 10 ans renouvelables) pour un **signe distinctif** ; **droit d’auteur** (automatique) pour une **œuvre** (texte, site). Copier sans autorisation = **contrefaçon** (délit)."
+     },
+     {
+      "t": "example",
+      "h": "Mineure — les faits",
+      "c": "Procédé technique → protégeable par **brevet** (s’il a été déposé). Nom de marque → protégé par le **dépôt de marque**. Contenu du site → protégé d’office par le **droit d’auteur**."
+     },
+     {
+      "t": "example",
+      "h": "Conclusion",
+      "c": "Elle peut agir en **contrefaçon** contre le concurrent pour obtenir la cessation de la copie et des **dommages-intérêts** — à condition d’avoir **déposé** brevet et marque à l’INPI (le droit d’auteur, lui, est automatique)."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Associer chaque création à son **titre** : invention → brevet, nom → marque, œuvre → droit d’auteur. Le **dépôt INPI** conditionne la propriété industrielle. Sanction de la copie : la **contrefaçon**."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Quelle protection couvre automatiquement le contenu du site, sans dépôt ?",
+      "a": "Le droit d’auteur.",
+      "explain": "Le brevet et la marque exigent un dépôt à l’INPI ; le droit d’auteur naît dès la création de l’œuvre."
+     }
+    ]
+   }
+  ]
+ }
+}

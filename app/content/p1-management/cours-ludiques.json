@@ -1,0 +1,667 @@
+{
+ "p1-mgmt-t1": {
+  "intro": "Une **organisation** naît du besoin de **structurer une action collective**. Le **management** est l’art de la **conduire** pour qu’elle atteigne ses buts et **dure**. On découvre aussi les grandes **formes** d’organisations et leurs **finalités**.",
+  "sections": [
+   {
+    "h": "L’organisation : un groupe, des ressources, un but commun",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "⚽",
+      "h": "Question qui pique",
+      "c": "Une équipe de foot, une mairie, une boulangerie : ces trois-là ont-elles quelque chose en commun ? Oui, et ça s’appelle une organisation."
+     },
+     {
+      "t": "p",
+      "c": "Une organisation est un **groupe d’individus** qui met en commun et **pilote des ressources**, autour d’un **but commun**, et qui est **voué à durer** dans le temps. On la reconnaît à plusieurs caractéristiques :"
+     },
+     {
+      "t": "list",
+      "c": [
+       "un **but commun** (le projet collectif qui réunit les membres),",
+       "des **ressources pilotées** (humaines, matérielles, financières, immatérielles),",
+       "une **structure hiérarchisée** (répartition des rôles, des pouvoirs et des responsabilités),",
+       "un **statut juridique** (entreprise, association, administration…),",
+       "la volonté de **durer** dans le temps (la **pérennité**)."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Une organisation, ce sont des **individus** qui **coordonnent des ressources** vers un **but commun**, dans une **structure** dotée d’un **statut juridique**."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Une organisation cherche à durer dans le temps : c’est sa pérennité.",
+      "a": "Vrai : la volonté de durer fait partie de ses caractéristiques.",
+      "explain": "Les autres : but commun, ressources pilotées, structure hiérarchisée, statut juridique."
+     }
+    ]
+   },
+   {
+    "h": "Le management : fixer des objectifs, organiser, animer, contrôler",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎬",
+      "h": "Mini-histoire",
+      "c": "Dans un tournage, quelqu’un fixe le but, répartit les rôles, motive l’équipe et vérifie la copie finale. Ce quelqu’un-là, c’est le manager."
+     },
+     {
+      "t": "p",
+      "c": "Le management est la **conduite de l’action collective** dans un environnement en perpétuel changement (numérique, écologie, attentes sociales). Manager, c’est **fixer des objectifs**, **organiser les ressources**, **animer les équipes** et **contrôler les résultats**, pour assurer :"
+     },
+     {
+      "t": "list",
+      "c": [
+       "la **performance** : atteindre les objectifs fixés (efficacité + efficience) ;",
+       "la **pérennité** : permettre à l’organisation de durer."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Moyen mnémotechnique",
+      "c": "Quatre verbes : fixer, organiser, animer, contrôler."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quel verbe NE fait PAS partie des actions du manager ?\nA) Fixer des objectifs\nB) Contrôler les résultats\nC) Ignorer les équipes",
+      "a": "C) Ignorer les équipes : le manager anime les équipes.",
+      "explain": "Manager, c’est fixer, organiser, animer et contrôler."
+     }
+    ]
+   },
+   {
+    "h": "Deux niveaux de management : stratégique et opérationnel",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧭",
+      "h": "Défi lancé",
+      "c": "Le directeur décide d’ouvrir une filiale. Le chef d’équipe fait le planning de la semaine. Qui fait quoi, et sur quelle durée ?"
+     },
+     {
+      "t": "p",
+      "c": "Le **management stratégique** porte sur le **long terme** et relève de la **direction générale** : ouvrir une filiale, lancer une nouvelle activité. Le **management opérationnel** porte sur le **court terme** et relève de l’**encadrement intermédiaire** : organiser les plannings, gérer un stock."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Les deux sont complémentaires : la **stratégie fixe le cap**, l’**opérationnel le met en pratique**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Management stratégique",
+        "Long terme, direction générale (ouvrir une filiale)"
+       ],
+       [
+        "Management opérationnel",
+        "Court terme, encadrement intermédiaire (plannings, stock)"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe en stratégique ou opérationnel : ouvrir une filiale, organiser les plannings, gérer un stock, lancer une nouvelle activité.",
+      "a": "Stratégique : ouvrir une filiale, lancer une nouvelle activité. Opérationnel : organiser les plannings, gérer un stock.",
+      "explain": "Le stratégique relève du long terme et de la direction ; l’opérationnel, du court terme."
+     }
+    ]
+   },
+   {
+    "h": "Les formes d’organisations : entreprises, organisations publiques, société civile",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏙️",
+      "h": "Question qui pique",
+      "c": "Boulangerie, hôpital, association de quartier : trois organisations, trois raisons d’être différentes. Lesquelles ?"
+     },
+     {
+      "t": "p",
+      "c": "Les organisations se distinguent surtout par leur **finalité** (leur raison d’être). On en distingue **trois grandes formes** :"
+     },
+     {
+      "t": "list",
+      "c": [
+       "Les **entreprises privées** : finalité **lucrative**, elle cherche le **profit** tout en intégrant la **RSE** (boulangerie, start-up, multinationale).",
+       "Les **organisations publiques** : elles poursuivent l’**intérêt général** par un **service public**, souvent non marchand, financé par l’**impôt** (mairie, hôpital, lycée, police).",
+       "Les **organisations de la société civile** : finalité **non lucrative**, un **objet social** (association, ONG, syndicat, mutuelle) ; son enjeu est de **pérenniser leurs ressources** (bénévoles, cotisations, subventions, dons)."
+      ]
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Parties prenantes** : tous ceux qui ont un intérêt dans l’organisation (salariés, clients, actionnaires, État, fournisseurs, riverains…).",
+       "**Champ d’action** : local, national ou international ; **marchand** ou **non marchand**.",
+       "La **performance** se mesure selon la **finalité** : un profit pour l’entreprise, un service rendu pour l’organisation publique."
+      ]
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Finalité",
+        "Raison d’être d’une organisation"
+       ],
+       [
+        "Entreprise privée",
+        "Finalité lucrative (profit) + RSE"
+       ],
+       [
+        "Organisation publique",
+        "Intérêt général, service public (mairie, hôpital, lycée)"
+       ],
+       [
+        "Organisation de la société civile",
+        "Non lucrative, objet social (association, ONG, syndicat, mutuelle)"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus :\nA) Une mairie\nB) Un hôpital public\nC) Une association de quartier\nD) Un lycée public",
+      "a": "C) Une association de quartier : c’est une organisation de la société civile, pas une organisation publique.",
+      "explain": "Mairie, hôpital et lycée rendent un service public au nom de l’intérêt général."
+     }
+    ]
+   },
+   {
+    "h": "💼 Exemple traité — une association sportive : type, finalité, ressources",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏀",
+      "h": "Dialogue",
+      "c": "— On organise des tournois gratuits, on vit de cotisations et d’une subvention.\n— Alors vous êtes une entreprise ?\n— Non ! On ne cherche pas le profit."
+     },
+     {
+      "t": "example",
+      "h": "Cas",
+      "c": "Une association sportive de quartier organise des tournois gratuits, financés par les cotisations et une subvention de la mairie."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Type d’organisation** : c’est une **organisation à but non lucratif** (association), pas une entreprise (elle ne cherche pas le profit).",
+       "**Finalité** (raison d’être durable) : proposer une activité sportive accessible à tous.",
+       "**Objectif** (précis, mesurable) : « organiser 4 tournois cette année ». On ne confond pas finalité et objectif.",
+       "**Ressources** : humaines (bénévoles), financières (cotisations, subvention), matérielles (terrain)."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Piège classique",
+      "c": "Finalité = pourquoi l’organisation existe (durable) ; objectif = un but précis, chiffré et daté."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « La finalité de l’association est d’organiser 4 tournois cette année. » Trouve l’erreur.",
+      "a": "C’est un objectif (précis, chiffré, daté), pas la finalité ; la finalité est de proposer une activité sportive accessible à tous.",
+      "explain": "La finalité est la raison d’être durable ; l’objectif est un but précis."
+     }
+    ]
+   }
+  ]
+ },
+ "p1-mgmt-t2": {
+  "intro": "Pour atteindre ses finalités, une organisation met en place une **stratégie**. Avant de décider, elle réalise un **diagnostic stratégique** : se connaître (interne) et connaître son environnement (externe). Ce diagnostic débouche sur la **fixation des objectifs**.",
+  "sections": [
+   {
+    "h": "La démarche stratégique",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🗺️",
+      "h": "Défi lancé",
+      "c": "Road trip : carte, destination, départ, correction de route. Une stratégie suit la même logique."
+     },
+     {
+      "t": "p",
+      "c": "La démarche stratégique enchaîne plusieurs étapes : (1) **diagnostic stratégique** (interne + externe), (2) **fixation des objectifs** en cohérence avec les **finalités**, (3) **mise en œuvre**, (4) **contrôle** des résultats et **ajustement**. C’est un processus permanent."
+     },
+     {
+      "t": "tip",
+      "h": "Astuce",
+      "c": "Un cycle : on recommence."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Cite dans l’ordre les quatre étapes de la démarche stratégique.",
+      "a": "Diagnostic, objectifs, mise en œuvre, contrôle et ajustement.",
+      "explain": "C’est un processus permanent."
+     }
+    ]
+   },
+   {
+    "h": "Le diagnostic externe : macro-environnement (PESTEL) et micro-environnement",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🌦️",
+      "h": "Question qui pique",
+      "c": "Tu ne peux pas empêcher la pluie, mais tu peux choisir ton parapluie. Quelles forces s’imposent à toutes les entreprises, et lesquelles sont plus proches ?"
+     },
+     {
+      "t": "p",
+      "c": "Le **macro-environnement** regroupe les grandes forces générales qui s’imposent à **toutes** les organisations et sur lesquelles une entreprise seule **n’a pas de prise**. On l’analyse avec la méthode **PESTEL** :"
+     },
+     {
+      "t": "figure",
+      "name": "pestel"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**P**olitique · **É**conomique · **S**ocioculturel · **T**echnologique · **É**cologique · **L**égal."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Le **micro-environnement** regroupe les **acteurs proches** en relation directe avec l’organisation : les **concurrents** actuels, les **clients**, les **fournisseurs**, les **nouveaux entrants** potentiels et les **produits de substitution**. Le diagnostic externe fait ressortir des **opportunités** (favorables) et des **menaces** (défavorables)."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quel élément relève du micro-environnement ?\nA) Une nouvelle loi\nB) Un concurrent direct\nC) Une innovation technologique générale",
+      "a": "B) Un concurrent direct : acteur proche en relation directe avec l’organisation.",
+      "explain": "Loi et technologie appartiennent au macro-environnement (PESTEL)."
+     }
+    ]
+   },
+   {
+    "h": "Le diagnostic interne : ressources, compétences distinctives, forces et faiblesses",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔍",
+      "h": "Défi lancé",
+      "c": "Avant un match, un entraîneur fait l’inventaire : qui est en forme, qui sait faire quoi mieux que les adversaires ? C’est un diagnostic interne."
+     },
+     {
+      "t": "p",
+      "c": "Le **diagnostic interne** analyse ce que l’organisation possède et sait faire :"
+     },
+     {
+      "t": "list",
+      "c": [
+       "ses **ressources** : financières, humaines, matérielles et immatérielles (marque, savoir-faire, brevets…) ;",
+       "ses **compétences distinctives** : ce qu’elle sait faire **mieux** que ses concurrents."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Il révèle les **forces** (atouts) et les **faiblesses** (points faibles) de l’organisation."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Une marque et des brevets sont des ressources immatérielles.",
+      "a": "Vrai : la marque, le savoir-faire et les brevets sont des ressources immatérielles.",
+      "explain": "Les ressources peuvent être financières, humaines, matérielles et immatérielles."
+     }
+    ]
+   },
+   {
+    "h": "La synthèse : la matrice SWOT",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧩",
+      "h": "Mini-histoire",
+      "c": "Ce que ton équipe fait bien ou mal, et ce qui l’aide ou la menace dehors : range tout dans un tableau."
+     },
+     {
+      "t": "p",
+      "c": "On réunit les résultats des deux diagnostics dans une matrice **SWOT** : **Forces / Faiblesses** (issues du diagnostic **interne**) et **Opportunités / Menaces** (issues du diagnostic **externe**)."
+     },
+     {
+      "t": "figure",
+      "name": "swot"
+     },
+     {
+      "t": "tip",
+      "h": "Astuce",
+      "c": "F et F : dedans ; O et M : dehors."
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe en interne ou externe : forces, menaces, faiblesses, opportunités.",
+      "a": "Interne : forces, faiblesses. Externe : menaces, opportunités.",
+      "explain": "Le SWOT croise les deux diagnostics."
+     }
+    ]
+   },
+   {
+    "h": "Des finalités aux objectifs stratégiques",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎯",
+      "h": "Question qui pique",
+      "c": "Ta classe veut gagner le tournoi inter-lycées. Faut-il viser tout de suite la victoire, ou d’abord s’appuyer sur ses meilleurs joueurs ?"
+     },
+     {
+      "t": "p",
+      "c": "Le diagnostic permet de fixer des **objectifs stratégiques** cohérents avec la **finalité** de l’organisation (ex. conquérir un nouveau marché, améliorer un service public, développer l’action d’une association). Ces objectifs guideront ensuite les **choix stratégiques** (thème 3)."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Un bon objectif s’appuie sur les **forces** de l’organisation pour saisir une **opportunité**, ou pour réduire une **faiblesse** face à une **menace**."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Un objectif stratégique doit être cohérent avec la finalité de l’organisation.",
+      "a": "Vrai : le diagnostic sert à fixer des objectifs cohérents avec la finalité.",
+      "explain": "Ils guideront ensuite les choix stratégiques."
+     }
+    ]
+   },
+   {
+    "h": "💼 Exemple traité — des boulangeries face à une grande enseigne : le SWOT",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🥖",
+      "h": "Mini-histoire",
+      "c": "Une chaîne de boulangeries du coin voit s’installer une grande enseigne en face. Faut-il paniquer ? Un SWOT permet d’y voir clair."
+     },
+     {
+      "t": "example",
+      "h": "Cas",
+      "c": "Une petite chaîne de boulangeries locales bien connue veut se développer face à l’arrivée d’une grande enseigne."
+     },
+     {
+      "t": "p",
+      "c": "**Interne** : les **forces** sont la **notoriété locale**, la **qualité** des produits et le **savoir-faire** ; les **faiblesses**, le **manque de moyens financiers** et une **faible présence numérique**."
+     },
+     {
+      "t": "p",
+      "c": "**Externe** : les **opportunités** viennent du **goût croissant pour le « fait maison »** et pour les **circuits courts** ; les **menaces**, de la **concurrence de la grande enseigne** et de la **hausse du coût des matières premières**."
+     },
+     {
+      "t": "p",
+      "c": "Le **diagnostic interne** (forces/faiblesses) porte sur l’entreprise ; le **diagnostic externe** (opportunités/menaces) sur son environnement. Croiser les deux = le **SWOT**."
+     },
+     {
+      "t": "tip",
+      "h": "Décision",
+      "c": "La stratégie consiste à s’appuyer sur les forces pour saisir les opportunités et se protéger des menaces."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Forces",
+        "Notoriété locale, qualité, savoir-faire"
+       ],
+       [
+        "Faiblesses",
+        "Peu de moyens financiers, peu digitalisée"
+       ],
+       [
+        "Opportunités",
+        "Goût pour le « fait maison », circuits courts"
+       ],
+       [
+        "Menaces",
+        "Concurrence de la grande enseigne, hausse du coût des matières"
+       ],
+       [
+        "SWOT",
+        "Croisement du diagnostic interne et du diagnostic externe"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus parmi les forces de la chaîne :\nA) La notoriété locale\nB) La qualité des produits\nC) La concurrence de la grande enseigne\nD) Le savoir-faire",
+      "a": "C) La concurrence de la grande enseigne : c’est une menace externe.",
+      "explain": "Les forces sont internes ; la concurrence relève de l’environnement."
+     }
+    ]
+   }
+  ]
+ },
+ "p1-mgmt-t3": {
+  "intro": "Une fois le diagnostic posé et les objectifs fixés, l’organisation doit faire des **choix stratégiques** pour se donner un **avantage concurrentiel** durable. Ces choix diffèrent selon la **finalité** de l’organisation.",
+  "sections": [
+   {
+    "h": "L’avantage concurrentiel et la compétence distinctive",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🥇",
+      "h": "Question qui pique",
+      "c": "Pourquoi préfères-tu une marque à une autre quand les produits se ressemblent ? Il y a un petit plus."
+     },
+     {
+      "t": "p",
+      "c": "L’objectif d’une stratégie est d’obtenir un **avantage concurrentiel** : un atout qui permet à l’organisation de se distinguer **durablement** de ses concurrents et d’être préférée par les clients. Il repose souvent sur une **compétence distinctive** identifiée lors du diagnostic interne."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Compétence distinctive → avantage durable."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Un avantage concurrentiel repose souvent sur une compétence distinctive.",
+      "a": "Vrai : elle est repérée au diagnostic interne.",
+      "explain": "Elle distingue durablement des concurrents."
+     }
+    ]
+   },
+   {
+    "h": "Les stratégies de domaine : coûts ou différenciation",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🛒",
+      "h": "Défi lancé",
+      "c": "Une enseigne discount et une marque de luxe vendent des vêtements. Pourquoi ne jouent-elles pas du tout le même jeu ?"
+     },
+     {
+      "t": "p",
+      "c": "Pour un domaine d’activité donné, l’organisation choisit **comment** affronter la concurrence :"
+     },
+     {
+      "t": "list",
+      "c": [
+       "La **domination par les coûts** : proposer des **prix plus bas** grâce aux **économies d’échelle** et à la **productivité** (stratégie d’une enseigne discount).",
+       "La **différenciation** : proposer une **offre perçue comme unique**, par sa **qualité**, son **image**, son **innovation** ou son **service** (marque de luxe ou haut de gamme)."
+      ]
+     },
+     {
+      "t": "warning",
+      "h": "Piège classique",
+      "c": "On choisit son terrain : il est difficile d’être à la fois **le moins cher** et **le plus différencié**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Domination par les coûts",
+        "Prix plus bas grâce aux économies d’échelle et à la productivité"
+       ],
+       [
+        "Différenciation",
+        "Offre perçue comme unique (qualité, image, innovation, service)"
+       ],
+       [
+        "Économies d’échelle",
+        "Baisse du coût unitaire quand le volume produit augmente"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe en coûts ou différenciation : prix bas, image de luxe, économies d’échelle, innovation.",
+      "a": "Coûts : prix bas, économies d’échelle. Différenciation : image de luxe, innovation.",
+      "explain": "La différenciation vise une offre perçue comme unique, pas le prix le plus bas."
+     }
+    ]
+   },
+   {
+    "h": "Les stratégies globales : spécialisation ou diversification",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🍔",
+      "h": "Mini-histoire",
+      "c": "Un restaurant ne fait que des burgers. Un autre ajoute des sushis, des pizzas et une livraison de courses. Deux façons de grandir."
+     },
+     {
+      "t": "p",
+      "c": "À l’échelle de toute l’organisation, deux grandes orientations :"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Spécialisation** : se concentrer sur **un seul métier / marché** pour y devenir performant.",
+       "**Diversification** : se développer sur **de nouveaux domaines d’activité stratégique (DAS)** pour répartir les risques et saisir des opportunités."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Un **DAS** (Domaine d’Activité Stratégique) est un sous-ensemble homogène d’activités pour lequel on peut définir une stratégie propre."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Que permet surtout la diversification ?\nA) Se concentrer sur un seul métier\nB) Supprimer la concurrence\nC) Répartir les risques sur plusieurs DAS",
+      "a": "C) Répartir les risques sur plusieurs DAS.",
+      "explain": "La spécialisation, à l’inverse, concentre l’organisation sur un seul métier."
+     }
+    ]
+   },
+   {
+    "h": "Faire seul ou avec d’autres : intégration ou externalisation",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🍕",
+      "h": "Question qui pique",
+      "c": "Ta pizzeria fait sa pâte, ou l’achète prête ? « Faire » ou « faire faire » ?"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Intégration** : réaliser soi-même une activité (la « faire »), pour la maîtriser.",
+       "**Externalisation** : confier une activité à un partenaire extérieur (la « faire faire », ex. **sous-traitance**), pour se recentrer sur son cœur de métier."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Astuce",
+      "c": "Intégration = faire soi-même ; externalisation = faire faire."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Qu’est-ce que l’externalisation et quel est son intérêt ?",
+      "a": "Confier une activité à un partenaire (sous-traitance) pour se recentrer sur son cœur de métier.",
+      "explain": "L’intégration, c’est la faire soi-même."
+     }
+    ]
+   },
+   {
+    "h": "Les choix des organisations publiques et de la société civile",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏛️",
+      "h": "Défi lancé",
+      "c": "Une mairie améliore ses services, une association élargit son action. Leur boussole n’est pas le profit : laquelle ?"
+     },
+     {
+      "t": "p",
+      "c": "Les **organisations publiques** et de la **société civile** font elles aussi des choix stratégiques, mais tournés vers leur **finalité** (intérêt général, objet social) : développer de **nouveaux services**, **mutualiser** des moyens, nouer des **partenariats**, moderniser leur fonctionnement. La logique n’est pas le profit mais le **service rendu**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Autre logique : le **service rendu**."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "La logique stratégique d’une organisation publique est avant tout le profit.",
+      "a": "Faux : sa logique est le service rendu, tourné vers l’intérêt général.",
+      "explain": "Ce n’est pas le profit."
+     }
+    ]
+   },
+   {
+    "h": "💼 Exemple traité — un fabricant de vélos : coûts ou différenciation",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🚲",
+      "h": "Dialogue",
+      "c": "— On baisse nos prix pour vendre plus ?\n— Ou on mise sur des vélos haut de gamme personnalisés ?\n— Et si on se mettait aussi aux trottinettes ?"
+     },
+     {
+      "t": "example",
+      "h": "Cas",
+      "c": "Un fabricant de vélos hésite : baisser ses prix pour vendre plus, ou proposer des vélos haut de gamme personnalisés."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Domination par les coûts** : prix bas grâce à des coûts réduits (volumes, standardisation) → viser un large marché.",
+       "**Différenciation** : une offre unique (qualité, design, personnalisation) que le client accepte de payer plus cher.",
+       "**Spécialisation** (rester sur les vélos) vs **diversification** (proposer aussi des trottinettes) : question de périmètre d’activité."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "À justifier",
+      "c": "Il n’y a pas de « bonne » réponse universelle : le choix dépend des ressources de l’entreprise et de son marché."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « Le fabricant doit forcément choisir les prix bas, c’est la seule bonne stratégie. » Trouve l’erreur.",
+      "a": "Il n’y a pas de bonne réponse universelle : le choix dépend des ressources de l’entreprise et de son marché.",
+      "explain": "Domination par les coûts et différenciation sont deux options à justifier."
+     }
+    ]
+   }
+  ]
+ }
+}

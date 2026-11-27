@@ -20,6 +20,8 @@ for(const size of [{width:320,height:568},{width:390,height:844},{width:844,heig
   await dialog.locator('.reader-full-scroll').evaluate(el=>el.scrollTop=el.scrollHeight)
   await expect(close).toBeInViewport()
   await expect(dialog.getByRole('button',{name:'Suivant',exact:true})).toBeVisible()
+  // Le contraste se mesure une fois les fondus d'ouverture terminés (en cours de fondu, le texte est mélangé au fond).
+  await page.waitForFunction(()=>document.getAnimations().every(a=>a.playState!=='running'||a.effect?.getComputedTiming().iterations===Infinity))
   expect((await new AxeBuilder({page}).include('.reader-full').analyze()).violations).toEqual([])
   if(size.width===390)await page.screenshot({path:testInfo.outputPath('mobile-lecteur.png')})
   await close.click();await expect(dialog).toHaveCount(0)

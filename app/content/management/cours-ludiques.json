@@ -1,0 +1,2685 @@
+{
+ "mgmt-t1": {
+  "intro": "Prêt à piloter une organisation ? Avant de diriger, découvre comment elle crée de la valeur, avec quelles ressources, et comment elle résiste à la concurrence. Direction : l’atelier de Vélozen !",
+  "sections": [
+   {
+    "h": "🎯 La création de valeur : valeur ajoutée, chaîne de valeur et performance globale",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🚲",
+      "h": "Chiffre fictif",
+      "c": "Vélozen vend ses vélos 500 000 € sur l’année, mais a acheté 320 000 € de pièces, d’énergie et de services extérieurs. Combien de richesse a-t-elle vraiment créée ?"
+     },
+     {
+      "t": "p",
+      "c": "L’organisation transforme des ressources en biens ou services qui ont **plus de valeur** pour le client que ce qu’ils ont coûté : c’est la **création de valeur**. Elle conditionne sa survie et son développement."
+     },
+     {
+      "t": "p",
+      "c": "La **valeur ajoutée** mesure cette richesse : valeur de la production moins valeur des consommations achetées à l’extérieur (matières, énergie, services). Elle sert à **rémunérer les acteurs** (salariés, État via les impôts, apporteurs de capitaux) et à **investir**."
+     },
+     {
+      "t": "p",
+      "c": "Pour Michael **Porter**, la **chaîne de valeur** est l’ensemble des **activités** (approvisionnement, production, logistique, marketing, service…) qui créent de la valeur pour le client. Elle montre les activités les plus créatrices de valeur, celles à améliorer, à internaliser ou à externaliser."
+     },
+     {
+      "t": "example",
+      "h": "Chez Vélozen",
+      "c": "Achat des composants → assemblage → contrôle qualité → distribution → service après-vente. Chaque maillon ajoute de la valeur : un SAV excellent justifie un prix plus élevé."
+     },
+     {
+      "t": "p",
+      "c": "La **performance globale** combine trois dimensions parfois en tension. L’**économique et financière** : rentabilité, chiffre d’affaires, profit, part de marché. La **sociale** : conditions de travail, motivation, faible turnover, climat social. L’**environnementale** : empreinte écologique, économies d’énergie, éco-conception."
+     },
+     {
+      "t": "p",
+      "c": "Une organisation rentable à court terme peut dégrader sa performance sociale ou environnementale. Il faut concilier les trois pour être durable : c’est la logique de la RSE (thème 3)."
+     },
+     {
+      "t": "warning",
+      "h": "À ne pas confondre",
+      "c": "La valeur ajoutée n’est ni le chiffre d’affaires (total des ventes) ni le bénéfice (ce qui reste après toutes les charges). Une forte VA peut coexister avec un faible bénéfice si les charges de personnel et financières sont élevées."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "L’organisation crée de la valeur ; valeur ajoutée = valeur de la production − consommations externes. Chaîne de valeur (Porter) = activités créatrices de valeur. Performance globale = économique + sociale + environnementale."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Performance globale",
+        "Combinaison des performances économique, sociale et environnementale"
+       ],
+       [
+        "Performance économique / financière",
+        "Rentabilité, chiffre d’affaires, profit, part de marché"
+       ],
+       [
+        "Performance sociale",
+        "Conditions de travail, motivation, faible turnover, climat social"
+       ],
+       [
+        "Performance environnementale",
+        "Empreinte écologique, économies d’énergie, éco-conception"
+       ],
+       [
+        "Valeur ajoutée",
+        "Richesse créée par l’organisation"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "calcul",
+      "q": "Vélozen réalise une production de 500 000 € et achète 320 000 € de consommations externes. Quelle est sa valeur ajoutée ?",
+      "a": "180 000 € (500 000 − 320 000).",
+      "explain": "VA = valeur de la production − valeur des consommations externes."
+     }
+    ]
+   },
+   {
+    "h": "🧩 Ressources, compétences distinctives et avantage concurrentiel",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🍳",
+      "h": "Mini-histoire",
+      "c": "Deux restaurants ont exactement la même cuisine équipée. L’un affiche complet tous les soirs, l’autre est vide. Qu’est-ce qui change, puisque le four est identique ?"
+     },
+     {
+      "t": "p",
+      "c": "Pour produire, une organisation mobilise des **ressources** (les moyens dont elle dispose) et développe des **compétences**. Les combiner bien, c’est ce qui crée de la valeur et la distingue des concurrents."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Ressources humaines** : salariés, dirigeants, bénévoles et leurs qualifications.",
+       "**Ressources financières** : capitaux, trésorerie, capacité d’emprunt.",
+       "**Ressources matérielles** : locaux, machines, matières premières, équipements.",
+       "**Ressources immatérielles** : marque, image, brevets, savoir-faire, réputation, données.",
+       "**Ressources technologiques** : outils numériques, procédés, innovations."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Les ressources immatérielles pèsent de plus en plus : une marque forte, des brevets ou un savoir-faire unique valent parfois plus que les usines, car ils sont difficiles à copier."
+     },
+     {
+      "t": "p",
+      "c": "Une **compétence** est la capacité à **combiner et utiliser** des ressources pour agir efficacement. Les compétences stratégiques, rares et difficiles à imiter, sont dites **distinctives** (cœur de compétence) : elles fondent l’**avantage concurrentiel**."
+     },
+     {
+      "t": "example",
+      "h": "Ressource vs compétence",
+      "c": "Le chef talentueux du premier restaurant crée des plats uniques : c’est sa compétence distinctive qui fait la réussite, pas le four."
+     },
+     {
+      "t": "warning",
+      "h": "Piège à éviter",
+      "c": "Ressource = le moyen (machine, salarié, capital). Compétence = le savoir-faire qui permet d’en tirer parti."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Ressources : humaines, financières, matérielles, immatérielles, technologiques ; les immatérielles sont clés ; les compétences distinctives fondent l’avantage concurrentiel."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Ressources",
+        "Moyens dont dispose l’organisation"
+       ],
+       [
+        "Ressources humaines",
+        "Salariés, dirigeants, bénévoles et leurs qualifications"
+       ],
+       [
+        "Ressources financières",
+        "Capitaux, trésorerie, capacité d’emprunt"
+       ],
+       [
+        "Ressources matérielles",
+        "Locaux, machines, matières premières, équipements"
+       ],
+       [
+        "Ressources immatérielles",
+        "Marque, image, brevets, savoir-faire, réputation, données"
+       ],
+       [
+        "Ressources technologiques",
+        "Outils numériques, procédés, innovations"
+       ],
+       [
+        "Compétence distinctive",
+        "Savoir-faire que l’organisation maîtrise mieux que ses concurrents"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Une entreprise possède un excellent brevet mais ne sait pas l’exploiter. Que manque-t-il ?\nA) Une ressource financière\nB) Une compétence\nC) Un DAS",
+      "a": "B) Une compétence : le brevet est une ressource immatérielle ; la compétence permet de la combiner et de l’utiliser.",
+      "explain": "Ressource = moyen ; compétence = capacité à l’utiliser efficacement."
+     }
+    ]
+   },
+   {
+    "h": "🗺️ Le périmètre d’activité : métier, mission et DAS",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎮",
+      "h": "Question qui pique",
+      "c": "Un studio vend des jeux vidéo, des figurines et des vêtements de marque. Faut-il une seule stratégie pour tout, ou une par activité ?"
+     },
+     {
+      "t": "p",
+      "c": "Le **périmètre d’activité** : définir ce qu’elle fait et jusqu’où elle veut aller (quels marchés, produits, clients) ? Le **métier** est le savoir-faire principal. La **mission** exprime à qui et à quels besoins l’organisation répond."
+     },
+     {
+      "t": "example",
+      "h": "Métier et mission",
+      "c": "Decathlon : concevoir et vendre des articles de sport accessibles (métier) pour rendre le sport accessible au plus grand nombre (mission)."
+     },
+     {
+      "t": "p",
+      "c": "Quand l’organisation exerce plusieurs activités, on les découpe en **Domaines d’Activité Stratégique (DAS)** : activités qui partagent les mêmes marchés, concurrents et facteurs clés de succès. Chaque DAS peut avoir sa propre stratégie, ce qui permet d’allouer les ressources : investir dans les domaines porteurs, se retirer des domaines en déclin (elle cède ce qui ne rapporte plus)."
+     },
+     {
+      "t": "example",
+      "h": "Les DAS d’un groupe",
+      "c": "Bic : stylos, briquets, rasoirs. Chaque domaine a ses concurrents et sa stratégie, même si le savoir-faire (production de masse d’objets simples) est commun."
+     },
+     {
+      "t": "p",
+      "c": "Le périmètre n’est pas figé : l’organisation choisit la **spécialisation** ou la **diversification** (thème 2), peut l’**élargir** ou se **recentrer** sur son cœur de métier en cédant ce qui est peu rentable ou éloigné de sa mission."
+     },
+     {
+      "t": "warning",
+      "h": "Piège de vocabulaire",
+      "c": "Un DAS n’est pas un simple produit : c’est un ensemble homogène d’activités. Deux produits aux marchés et concurrents distincts = deux DAS."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Métier = savoir-faire ; mission = à qui / à quel besoin ; DAS = ensembles homogènes pour piloter la stratégie."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Deux produits qui n’ont ni les mêmes marchés ni les mêmes concurrents relèvent de deux DAS différents.",
+      "a": "Vrai",
+      "explain": "Un DAS regroupe des activités aux mêmes marchés, concurrents et facteurs clés de succès."
+     }
+    ]
+   },
+   {
+    "h": "⚔️ La compétitivité : prix ou hors-prix, coûts ou différenciation",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🛒",
+      "h": "Défi lancé",
+      "c": "Lidl vend moins cher, Apple vend plus cher, et les deux font des clients heureux. Comment deux stratégies opposées peuvent-elles réussir ?"
+     },
+     {
+      "t": "p",
+      "c": "Pour durer, l’organisation doit être compétitive : la **compétitivité** est la capacité à faire face à la concurrence et à conserver ou gagner des parts de marché. Il existe **deux grandes formes**, deux façons de séduire le client."
+     },
+     {
+      "t": "p",
+      "c": "La **compétitivité-prix** consiste à proposer un prix plus bas (**proposer un prix plus bas** que les concurrents) : hard discount, low cost, production en grande série. Elle suppose de **maîtriser ses coûts** (économies d’échelle, productivité, achats)."
+     },
+     {
+      "t": "p",
+      "c": "La **compétitivité hors-prix** consiste à se démarquer autrement que par le prix : qualité, innovation, image de marque, délais, service, design. Elle repose sur la **différenciation** : offrir ce que le client valorise et ne trouve pas ailleurs."
+     },
+     {
+      "t": "p",
+      "c": "Un **avantage concurrentiel** est un atout que les concurrents ne peuvent pas facilement copier : une supériorité durable. Selon Porter, il vient des **coûts**, de la différenciation ou de la **focalisation** (se concentrer sur un segment précis : une niche)."
+     },
+     {
+      "t": "example",
+      "h": "Deux stratégies gagnantes",
+      "c": "Lidl gagne par les coûts (prix bas, gammes courtes). Apple gagne par la différenciation (design, image, écosystème). À l’inverse, un fabricant qui vise seulement les cyclistes urbains haut de gamme occupe une niche."
+     },
+     {
+      "t": "p",
+      "c": "Aucun avantage n’est définitif : les concurrents imitent, la technologie évolue. Il faut innover et s’adapter en permanence."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Compétitivité-prix (coûts, prix bas) vs hors-prix (qualité, innovation, image). Avantage concurrentiel : coûts, différenciation ou focalisation."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Compétitivité",
+        "Capacité à affronter la concurrence et à gagner des clients"
+       ],
+       [
+        "Compétitivité-prix",
+        "Prix plus bas que les concurrents (low cost, grande série)"
+       ],
+       [
+        "Compétitivité hors-prix",
+        "Qualité, innovation, image, délais, service, design"
+       ],
+       [
+        "Différenciation",
+        "Offrir ce que le client valorise et ne trouve pas ailleurs"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe ces atouts en Compétitivité-prix / Compétitivité hors-prix : prix bas par la grande série ; design reconnu ; délais courts ; économies d’échelle.",
+      "a": "Compétitivité-prix : prix bas par la grande série ; économies d’échelle. Hors-prix : design reconnu ; délais courts.",
+      "explain": "Le prix et la maîtrise des coûts relèvent de la compétitivité-prix ; qualité, design, délais et image relèvent du hors-prix."
+     }
+    ]
+   },
+   {
+    "h": "🔧 Produire durablement : innovation, faire ou faire faire, éco-conception",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📱",
+      "h": "Question qui pique",
+      "c": "Un smartphone devient obsolète en deux ans, une loi change et les clients exigent du vert. Comment une entreprise peut-elle produire sans se faire écraser ?"
+     },
+     {
+      "t": "p",
+      "c": "L’organisation subit des **contraintes** : économiques (coûts, concurrence, pouvoir d’achat), juridiques (réglementation, normes, droit du travail), technologiques (rythme de l’innovation, obsolescence), environnementales et sociales (limiter la pollution, attentes des salariés et de la société)."
+     },
+     {
+      "t": "p",
+      "c": "L’**innovation** est un levier essentiel : nouveau produit (**innovation de produit**), nouvelle façon de produire (**innovation de procédé**), nouveau modèle économique ou nouvelle organisation : toute nouveauté. Elle renouvelle l’avantage concurrentiel."
+     },
+     {
+      "t": "p",
+      "c": "Autre arbitrage, « **faire ou faire faire** ». **Intégrer**, c’est faire soi-même : contrôle, maîtrise de la qualité et du savoir-faire, mais coût élevé, structure rigide, investissements lourds. **Externaliser** (externalisation / sous-traitance), c’est faire faire : souplesse, ça réduit les coûts, permet de se recentrer sur son cœur de métier, mais crée dépendance, perte de contrôle et risque social."
+     },
+     {
+      "t": "example",
+      "h": "Produire durablement",
+      "c": "Un fabricant de vélos choisit l’éco-conception (matériaux recyclables), relocalise une partie de sa production pour réduire les transports et réemploie les batteries : production et environnement sont conciliés."
+     },
+     {
+      "t": "p",
+      "c": "L’organisation doit enfin **s’adapter** (clients, numérique, transition écologique) : l’adaptation et l’agilité deviennent des compétences clés."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Contraintes (éco, juridiques, techno, environnementales) → innover → intégrer ou externaliser → produire durablement."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Contraintes économiques",
+        "Coûts, concurrence, pouvoir d’achat des clients"
+       ],
+       [
+        "Contraintes juridiques",
+        "Réglementation, normes, droit du travail"
+       ],
+       [
+        "Contraintes technologiques",
+        "Rythme de l’innovation, obsolescence"
+       ],
+       [
+        "Contraintes environnementales et sociales",
+        "Limiter la pollution, attentes des salariés et de la société"
+       ],
+       [
+        "Innovation de produit / de procédé",
+        "Nouveau produit / nouvelle façon de produire"
+       ],
+       [
+        "Faire ou faire faire",
+        "Arbitrage entre intégrer une activité et l’externaliser"
+       ],
+       [
+        "Intégrer",
+        "Contrôle, maîtrise de la qualité / coût, rigidité, investissements lourds"
+       ],
+       [
+        "Externaliser (sous-traiter)",
+        "Souplesse, coûts réduits, recentrage / dépendance, perte de contrôle"
+       ],
+       [
+        "Éco-conception",
+        "Concevoir un produit en réduisant son impact environnemental"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Quelle proposition n’est PAS un avantage de l’externalisation ?\nA) Souplesse\nB) Coûts réduits\nC) Recentrage sur le cœur de métier\nD) Contrôle total de l’activité",
+      "a": "D) Contrôle total de l’activité : c’est un avantage de l’intégration ; externaliser entraîne au contraire une perte de contrôle.",
+      "explain": "Externaliser = souplesse, coûts réduits, recentrage / dépendance et perte de contrôle."
+     }
+    ]
+   },
+   {
+    "h": "⚙️ Les structures : fonctionnelle, divisionnelle, matricielle, plate",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏢",
+      "h": "Dialogue",
+      "c": "— Je dépends du chef des ventes ET du chef de projet !\n— Alors, tu es dans quel type de structure ?"
+     },
+     {
+      "t": "p",
+      "c": "La **structure** définit comment le travail est **réparti** et **coordonné** : qui fait quoi, qui commande qui. On la représente par un **organigramme**."
+     },
+     {
+      "t": "p",
+      "c": "La **structure fonctionnelle** découpe par grande fonction (production, vente, RH) : elle favorise la spécialisation mais crée un **cloisonnement entre services**. La **structure divisionnelle** découpe par produit, par zone géographique ou par marché : chaque division fonctionne presque comme une entreprise, avec des **doublons** et des coûts supplémentaires."
+     },
+     {
+      "t": "p",
+      "c": "La **structure matricielle** croise les fonctions et les projets : double hiérarchie, source de souplesse mais aussi de **conflits**."
+     },
+     {
+      "t": "p",
+      "c": "Le choix dépend de la taille, de l’activité et de la stratégie. Petite entreprise : structure simple, le dirigeant décide de tout. Grande entreprise diversifiée : structure divisionnelle. Organisations agiles : structures **plates** (moins de niveaux hiérarchiques) pour décider plus vite."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Fonctionnelle = par métier ; divisionnelle = par produit/marché ; matricielle = les deux. La structure doit servir la stratégie."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Structure",
+        "Répartition et coordination du travail, représentée par un organigramme"
+       ],
+       [
+        "Structure fonctionnelle",
+        "Découpage par fonction / cloisonnement entre services"
+       ],
+       [
+        "Structure divisionnelle",
+        "Découpage par produit, zone ou marché / doublons, coûts"
+       ],
+       [
+        "Structure matricielle",
+        "Croise fonctions et projets / double hiérarchie, conflits"
+       ],
+       [
+        "Structure plate",
+        "Peu de niveaux hiérarchiques, pour décider plus vite"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Dans quelle structure un salarié dépend-il à la fois d’un chef de service et d’un chef de projet ?\nA) Fonctionnelle\nB) Divisionnelle\nC) Matricielle",
+      "a": "C) Matricielle : elle croise fonctions et projets, d’où la double hiérarchie.",
+      "explain": "Cette double hiérarchie apporte de la souplesse mais génère des conflits."
+     }
+    ]
+   },
+   {
+    "h": "🏭 Organiser la production : flux poussé, flux tiré, juste-à-temps et qualité",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🍕",
+      "h": "Mini-histoire",
+      "c": "Une pizzeria prépare 200 pizzas d’avance « au cas où », puis en jette 60. Sa voisine ne cuit qu’à la commande. Qui perd le moins ?"
+     },
+     {
+      "t": "p",
+      "c": "Selon les quantités et la standardisation, l’organisation choisit comment produire : la production est **unitaire** (sur mesure), en **série** (lots identiques) ou **en continu** (flux ininterrompu, ex. raffinerie)."
+     },
+     {
+      "t": "p",
+      "c": "En **flux poussé**, on produit d’abord puis on stocke en attendant les commandes (risque de sur-stock). En **flux tiré** (tiré / juste-à-temps), on ne produit qu’à la commande : moins de stocks, mais plus de tension sur les délais et les fournisseurs."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Juste-à-temps (JAT)** : la bonne quantité, au bon moment → stocks minimaux, moins de gaspillage.",
+       "**Qualité** : viser le « zéro défaut » (amélioration continue), car un défaut coûte cher.",
+       "**Productivité** : produire plus avec autant de ressources → compétitivité."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Poussé = produire puis vendre (stocks). Tiré / JAT = produire à la commande. Le JAT réduit les coûts mais accroît la dépendance aux fournisseurs."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Pourquoi le juste-à-temps rend-il l’entreprise plus dépendante de ses fournisseurs ?",
+      "a": "Parce qu’avec très peu de stocks, une livraison en retard ou une rupture bloque aussitôt la production.",
+      "explain": "Moins de stocks = moins de marge de sécurité face aux aléas des fournisseurs."
+     }
+    ]
+   },
+   {
+    "h": "💼 Étude de cas guidée — juste-à-temps, structure plate et performance",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🕵️",
+      "h": "Défi lancé",
+      "c": "Stocks qui débordent, décisions qui mettent trois semaines à descendre l’escalier hiérarchique : à toi de jouer en consultant stratégique !"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Une entreprise industrielle veut réduire ses coûts et améliorer sa réactivité. Ses stocks sont élevés et sa structure très hiérarchique ralentit les décisions. Que recommander ?"
+     },
+     {
+      "t": "example",
+      "h": "Étape 1 — Diagnostic",
+      "c": "Stocks élevés → coûts d’immobilisation et risque d’invendus (flux poussé). Structure très hiérarchique → décisions lentes, faible réactivité."
+     },
+     {
+      "t": "example",
+      "h": "Étape 2 — Leviers",
+      "c": "Passer en **flux tiré / juste-à-temps** pour réduire les stocks ; **aplatir** la structure pour décider plus vite ; suivre des **indicateurs** (rotation des stocks, délais)."
+     },
+     {
+      "t": "p",
+      "c": "**Commentaire.** Ces choix améliorent l’**efficience** (moins de coûts) et l’**efficacité** (meilleure réactivité). Limites : le JAT rend vulnérable à une rupture fournisseur ; l’aplatissement exige plus d’autonomie des équipes."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Diagnostiquer (ressources, structure, production) → proposer des leviers cohérents → peser avantages et risques → relier à la performance globale."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « Passer au juste-à-temps supprime tout risque de rupture fournisseur ». Repère l’erreur.",
+      "a": "Le JAT ne supprime pas ce risque : il l’augmente, car il y a très peu de stocks.",
+      "explain": "Le JAT réduit les coûts de stockage mais rend l’entreprise plus vulnérable."
+     }
+    ]
+   }
+  ]
+ },
+ "mgmt-t2": {
+  "intro": "Une organisation, ce sont des acteurs aux intérêts parfois divergents : à toi de diagnostiquer, décider et mobiliser. Au programme, les outils stars du bac : SWOT, choix stratégiques et théories de la motivation.",
+  "sections": [
+   {
+    "h": "La stratégie : un choix de long terme pour un avantage concurrentiel",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📼",
+      "h": "Question qui pique",
+      "c": "En 2000, un géant de la location de DVD refuse de racheter un petit service en ligne. Dix ans plus tard, le géant a disparu et le petit domine le monde. Que s’est-il passé ?"
+     },
+     {
+      "t": "example",
+      "h": "Cas réel",
+      "c": "En 2000, Blockbuster a refusé de racheter le petit Netflix. Dix ans plus tard, Blockbuster faisait faillite, tandis que Netflix, passé au streaming, devenait un leader mondial."
+     },
+     {
+      "t": "p",
+      "c": "La différence ? La **stratégie** : Netflix a anticipé Internet et bâti un **avantage concurrentiel** difficile à copier (technologie, données, catalogue). Blockbuster, prisonnier de ses magasins (coûts fixes), n’a pas su se réinventer. Une bonne stratégie engage sur le **long terme**."
+     },
+     {
+      "t": "p",
+      "c": "Michael **Porter** distingue trois stratégies génériques : la **domination par les coûts** (prix le plus bas grâce aux volumes), la **différenciation** (offre perçue comme unique, payée plus cher) et la **focalisation** (cibler un segment précis par les coûts ou la différenciation)."
+     },
+     {
+      "t": "warning",
+      "h": "Piège",
+      "c": "Vouloir « le prix le plus bas ET le plus haut de gamme » est intenable : il faut **choisir**."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quelle stratégie de Porter consiste à proposer une offre perçue comme unique, que le client paie plus cher ?\nA) La différenciation\nB) La domination par les coûts\nC) La focalisation",
+      "a": "A) La différenciation.",
+      "explain": "Coûts = prix le plus bas ; différenciation = offre unique payée plus cher ; focalisation = segment précis."
+     }
+    ]
+   },
+   {
+    "h": "Le diagnostic : forces, faiblesses, opportunités, menaces",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧴",
+      "h": "Mini-histoire",
+      "c": "Une petite marque bio doit décider si elle se lance dans de nouvelles gammes. Avant, elle dresse la liste de ce qu’elle maîtrise, puis de ce qui se passe autour d’elle."
+     },
+     {
+      "t": "p",
+      "c": "Avant de décider, on fait un **diagnostic** : à l’**intérieur**, ses **forces** et ses **faiblesses** (ce qu’on maîtrise) ; à l’**extérieur**, les **opportunités** et les **menaces** du marché (ce qu’on subit). Croiser les deux, c’est la matrice **SWOT**."
+     },
+     {
+      "t": "p",
+      "c": "On croise deux axes : interne ou externe, positif ou négatif. Interne positif = forces ; interne négatif = faiblesses ; externe positif = opportunités ; externe négatif = menaces."
+     },
+     {
+      "t": "example",
+      "h": "Illustration",
+      "c": "Petite marque bio : force = image authentique ; faiblesse = peu de moyens ; opportunité = mode du « naturel » ; menace = arrivée des grands groupes."
+     },
+     {
+      "t": "tip",
+      "h": "Avantage durable",
+      "c": "Une ressource ne donne un avantage concurrentiel que si elle est **rare et difficile à imiter** (réputation, savoir-faire unique). Ne confonds pas interne (forces/faiblesses) et externe (opportunités/menaces)."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Forces",
+        "Interne et positif"
+       ],
+       [
+        "Faiblesses",
+        "Interne et négatif"
+       ],
+       [
+        "Opportunités",
+        "Externe et positif"
+       ],
+       [
+        "Menaces",
+        "Externe et négatif"
+       ],
+       [
+        "Matrice SWOT",
+        "Croisement du diagnostic interne et du diagnostic externe"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe en Interne / Externe : image authentique de la marque ; arrivée de grands groupes ; peu de moyens financiers ; mode du « naturel ».",
+      "a": "Interne : image authentique ; peu de moyens financiers. Externe : arrivée de grands groupes ; mode du « naturel ».",
+      "explain": "Forces et faiblesses dépendent de l’organisation ; opportunités et menaces viennent de l’environnement."
+     }
+    ]
+   },
+   {
+    "h": "🧭 La décision : niveaux, processus IMC et rationalité limitée (Simon)",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🛒",
+      "h": "Dialogue",
+      "c": "— Je commande les fournitures du bureau : je décide seul.\n— Et la direction qui rachète un concurrent ?\n— Là, c’est une autre échelle !"
+     },
+     {
+      "t": "p",
+      "c": "Manager, c’est avant tout **décider** : comprendre comment on décide est essentiel, des décisions les plus stratégiques (ouvrir une usine) aux plus quotidiennes (commander des fournitures). On distingue **trois niveaux de décision**."
+     },
+     {
+      "t": "list",
+      "c": [
+       "Décisions **stratégiques** : direction générale, long terme (plusieurs années) : lancer un nouveau marché, racheter un concurrent.",
+       "**Décisions tactiques** (de gestion) : encadrement intermédiaire, moyen terme (quelques mois) : fixer un budget, recruter une équipe.",
+       "Décisions opérationnelles : personnel d’exécution, court terme (la journée) : planifier une tournée, passer une commande."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Les décisions stratégiques engagent l’avenir et sont difficiles à défaire ; les opérationnelles sont répétitives et réversibles."
+     },
+     {
+      "t": "p",
+      "c": "Herbert **Simon** a modélisé le **processus de décision** (modèle **Simon (IMC)**) en trois étapes :"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**I — Intelligence** : identifier le problème, recueillir l’information.",
+       "**M — Modélisation** : imaginer les solutions, évaluer leurs conséquences.",
+       "**C — Choix** : sélectionner, mettre en œuvre, contrôler."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Simon ajoute la **rationalité limitée** : le décideur n’a jamais toute l’information ni le temps de trouver la solution parfaite, il choisit une solution **satisfaisante**, pas forcément optimale."
+     },
+     {
+      "t": "example",
+      "h": "La rationalité limitée",
+      "c": "Un dirigeant doit choisir un fournisseur en une semaine. Il n’en compare pas 300 : il en étudie 5 et retient celui qui convient « assez bien »."
+     },
+     {
+      "t": "warning",
+      "h": "Piège fréquent",
+      "c": "Une bonne décision n’est pas forcément « la meilleure possible » : à cause de la rationalité limitée, on vise une solution satisfaisante."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Décision stratégique",
+        "Direction générale, long terme (lancer un marché, racheter un concurrent)"
+       ],
+       [
+        "Décision tactique / de gestion",
+        "Encadrement intermédiaire, moyen terme (budget, recrutement)"
+       ],
+       [
+        "Décision opérationnelle",
+        "Personnel d’exécution, court terme (tournée, commande)"
+       ],
+       [
+        "Processus IMC (Simon)",
+        "Intelligence, modélisation, choix : les étapes de la décision"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Selon Simon, le décideur choisit souvent une solution satisfaisante plutôt que parfaite, car il manque d’information et de temps.",
+      "a": "Vrai",
+      "explain": "C’est la rationalité limitée."
+     }
+    ]
+   },
+   {
+    "h": "🔍 Le diagnostic stratégique : SWOT et PESTEL",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🚲",
+      "h": "Chiffre fictif",
+      "c": "Colibri-Bike, fabricant fictif de vélos électriques, liste 4 atouts et 4 risques. Mais attention : certains viennent de l’atelier, d’autres du monde extérieur."
+     },
+     {
+      "t": "p",
+      "c": "Avant de choisir une stratégie, on réalise un **diagnostic stratégique** (état des lieux interne et externe). Le diagnostic a **deux volets**. Le diagnostic interne analyse les ressources et les compétences : forces et faiblesses. Le **diagnostic externe** analyse le marché, la concurrence et l’environnement : opportunités et menaces."
+     },
+     {
+      "t": "p",
+      "c": "Synthèse dans la matrice **SWOT** (Strengths, Weaknesses, Opportunities, Threats). Les forces (*Strengths*) et faiblesses (*Weaknesses*) dépendent de l’organisation ; les opportunités (*Opportunities*) et menaces (*Threats*) s’imposent à elle."
+     },
+     {
+      "t": "p",
+      "c": "L’outil **PESTEL** passe en revue le macro-environnement externe :"
+     },
+     {
+      "t": "list",
+      "c": [
+       "**P**olitique · **É**conomique",
+       "**S**ocioculturel · **T**echnologique",
+       "**E**nvironnemental · **L**égal"
+      ]
+     },
+     {
+      "t": "example",
+      "h": "Un diagnostic complet",
+      "c": "Vélos électriques : force = savoir-faire et image ; faiblesse = dépendance à un seul produit ; opportunité (PESTEL) = essor de la mobilité douce et aides publiques ; menace = concurrence asiatique et hausse du prix des batteries."
+     },
+     {
+      "t": "p",
+      "c": "Le diagnostic débouche sur les **facteurs clés de succès (FCS)** : ce qu’il faut absolument maîtriser pour réussir (innovation, délais, prix)."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Interne → forces/faiblesses ; externe → opportunités/menaces ; SWOT = synthèse ; PESTEL = 6 facteurs externes."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Diagnostic interne",
+        "Ressources et compétences → forces et faiblesses"
+       ],
+       [
+        "Diagnostic externe",
+        "Marché, concurrence, environnement → opportunités et menaces"
+       ],
+       [
+        "SWOT",
+        "Strengths, Weaknesses, Opportunities, Threats"
+       ],
+       [
+        "Diagnostic stratégique",
+        "État des lieux interne (ressources, compétences) et externe (environnement)"
+       ],
+       [
+        "SWOT (FFOM)",
+        "Forces, faiblesses (interne) ; opportunités, menaces (externe)"
+       ],
+       [
+        "Forces / faiblesses",
+        "Éléments internes positifs / négatifs"
+       ],
+       [
+        "Opportunités / menaces",
+        "Éléments externes positifs / négatifs"
+       ],
+       [
+        "PESTEL",
+        "Analyse du macro-environnement : politique, économique, socioculturel, technologique, écologique, légal"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Quelle proposition ne fait PAS partie de PESTEL ?\nA) Politique\nB) Structure\nC) Légal\nD) Technologique",
+      "a": "B) Structure : PESTEL = politique, économique, socioculturel, technologique, environnemental (écologique), légal.",
+      "explain": "PESTEL analyse l’environnement externe, pas la structure interne."
+     }
+    ]
+   },
+   {
+    "h": "♟️ Les choix stratégiques : spécialisation ou diversification, intégration ou externalisation",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧭",
+      "h": "Défi lancé",
+      "c": "Rester sur un seul produit, en ajouter dix, fabriquer soi-même ou sous-traiter, grandir seul ou racheter ? Chaque choix engage l’avenir."
+     },
+     {
+      "t": "p",
+      "c": "Après le diagnostic, l’organisation fait des **choix stratégiques** : sur quels domaines, et comment. Premier choix : se spécialiser (se concentrer sur un seul métier : expertise, économies d’échelle, mais organisation dépendante d’un seul marché) ou **diversifier** (ajouter de nouveaux produits ou de nouveaux marchés : répartit le risque, mais peut disperser les ressources)."
+     },
+     {
+      "t": "p",
+      "c": "Deuxième choix : l’**avantage concurrentiel** selon Porter, par les coûts, la différenciation ou la focalisation."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Domination par les coûts** : produire moins cher pour proposer un prix bas.",
+       "**Différenciation** : se différencier par une offre unique (qualité, innovation, image), payée plus cher."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Troisième choix, « faire ou faire faire » : **intégrer** (réaliser soi-même) ou **externaliser** (confier à des sous-traitants pour se recentrer sur son cœur de métier)."
+     },
+     {
+      "t": "p",
+      "c": "Enfin le mode de développement : **croissance interne** (organique, par ses propres moyens : ouvrir des magasins, embaucher), **croissance externe** (rachat ou fusion) ou **internationalisation** (exporter, ouvrir des filiales)."
+     },
+     {
+      "t": "example",
+      "h": "Enchaîner les choix",
+      "c": "Colibri-Bike se spécialise dans le vélo, se différencie par le haut de gamme, externalise l’assemblage des pièces standard et grandit par croissance externe en rachetant une marque étrangère. Une stratégie cohérente combine ces choix."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Spécialisation / diversification ; coûts / différenciation ; intégration / externalisation ; interne / externe / internationalisation."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Spécialisation",
+        "Un seul métier : expertise, économies d’échelle / dépendance à un marché"
+       ],
+       [
+        "Diversification",
+        "Nouveaux domaines d’activité stratégique : risques répartis / risque de dispersion"
+       ],
+       [
+        "Croissance interne (organique)",
+        "Par ses propres moyens (ouvrir des magasins, embaucher)"
+       ],
+       [
+        "Croissance externe",
+        "Par rachat ou fusion (racheter un concurrent)"
+       ],
+       [
+        "Internationalisation",
+        "S’implanter à l’étranger (exporter, ouvrir des filiales)"
+       ],
+       [
+        "Avantage concurrentiel (Porter)",
+        "Domination par les coûts ou différenciation"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « La croissance interne consiste à racheter un concurrent ». Repère l’erreur.",
+      "a": "Racheter un concurrent, c’est la croissance externe ; la croissance interne se fait par ses propres moyens (ouvrir des magasins, embaucher).",
+      "explain": "Interne (organique) = moyens propres ; externe = rachat ou fusion."
+     }
+    ]
+   },
+   {
+    "h": "👑 Pouvoir, autorité et gouvernance : arbitrer entre les parties prenantes",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎓",
+      "h": "Question qui pique",
+      "c": "Dans ta classe, le délégué n’a aucun titre officiel mais tout le monde l’écoute. Le prof a le titre, mais pas toujours l’écoute. Qui a le vrai pouvoir ?"
+     },
+     {
+      "t": "p",
+      "c": "Dans une organisation, la question est : qui commande, et au nom de quoi ? Le **pouvoir** est la capacité d’un acteur à **imposer sa volonté** et à influencer les autres. L’**autorité** est un pouvoir **reconnu comme légitime** (statut, compétence ou charisme)."
+     },
+     {
+      "t": "example",
+      "h": "Pouvoir et autorité",
+      "c": "Un chef d’équipe a de l’autorité grâce à sa fonction. Un collègue expérimenté sans titre peut avoir un vrai pouvoir d’influence grâce à sa compétence reconnue."
+     },
+     {
+      "t": "p",
+      "c": "La **gouvernance** désigne les règles et mécanismes qui organisent la direction et le contrôle : qui dirige, comment les dirigeants sont contrôlés, comment sont prises les grandes décisions (conseil d’administration, assemblée des actionnaires…)."
+     },
+     {
+      "t": "p",
+      "c": "Les **parties prenantes** (stakeholders) ont chacune des attentes. **Internes** : dirigeants, salariés, actionnaires, représentants du personnel. **Externes** : clients, fournisseurs, banques, État, collectivités, associations, riverains."
+     },
+     {
+      "t": "p",
+      "c": "Leurs intérêts sont souvent **divergents** (profit, conditions de travail, prix bas, environnement), d’où des conflits d’intérêts : le management doit arbitrer et gérer les **contre-pouvoirs** (syndicats, associations, médias)."
+     },
+     {
+      "t": "warning",
+      "h": "Piège à éviter",
+      "c": "Les parties prenantes ne se réduisent pas aux seuls actionnaires : ce sont tous les acteurs concernés, internes et externes."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Pouvoir = imposer ; autorité = pouvoir légitime ; gouvernance = règles de direction et contrôle."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Parties prenantes internes",
+        "Dirigeants, salariés, actionnaires, représentants du personnel"
+       ],
+       [
+        "Parties prenantes externes",
+        "Clients, fournisseurs, banques, État, collectivités, associations, riverains"
+       ],
+       [
+        "Contre-pouvoirs",
+        "Syndicats, associations, médias qui limitent le pouvoir des dirigeants"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Un salarié sans titre influence les décisions grâce à sa compétence reconnue. Il a surtout :\nA) De l’autorité statutaire\nB) Un contre-pouvoir syndical\nC) Un pouvoir d’influence",
+      "a": "C) Un pouvoir d’influence : fondé sur la compétence, pas sur la hiérarchie.",
+      "explain": "L’autorité statutaire vient de la fonction ; ici le pouvoir vient de l’expertise."
+     }
+    ]
+   },
+   {
+    "h": "🗣️ Styles de direction (Likert) et motivation (Maslow, Herzberg)",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎯",
+      "h": "Défi lancé",
+      "c": "Deux chefs, deux équipes : l’un décide seul et contrôle tout, l’autre fait voter son équipe. Et si l’augmentation de salaire ne suffisait pas à motiver ?"
+     },
+     {
+      "t": "p",
+      "c": "Diriger, c’est adopter un **style de direction** et savoir **motiver** : de là dépend la **performance sociale**. Rensis **Likert** distingue quatre styles de direction selon la participation des salariés."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Autoritaire** : décide seul, impose, contrôle.",
+       "**Paternaliste** : autorité forte mais bienveillante, récompenses et sanctions.",
+       "**Consultatif** : consulte les équipes avant de décider.",
+       "**Participatif** : décisions prises en groupe, forte implication."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Le style est lié à la **centralisation** (décisions au sommet) ou à la **décentralisation** (décisions déléguées aux équipes)."
+     },
+     {
+      "t": "p",
+      "c": "La **motivation** est ce qui pousse à agir et à s’impliquer. Pour **Maslow** : pyramide de besoins, des besoins physiologiques à l’accomplissement. Pour **Herzberg** : les facteurs d’hygiène (salaire, conditions de travail) évitent l’insatisfaction ; les facteurs de motivation (reconnaissance, responsabilités) motivent vraiment. Pour **McGregor** : théorie X (l’individu fuit le travail, il faut le contrôler) ; théorie Y (il aime se réaliser → autonomie)."
+     },
+     {
+      "t": "example",
+      "h": "Motiver au-delà du salaire",
+      "c": "L’entreprise augmente les salaires (hygiène) : les plaintes cessent, mais la motivation reste faible. Avec plus de responsabilités et de reconnaissance, l’implication repart."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Likert : 4 styles. Maslow, Herzberg, McGregor. La motivation nourrit la cohésion et la performance sociale."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Style autoritaire",
+        "Le dirigeant décide seul, impose, contrôle"
+       ],
+       [
+        "Style paternaliste",
+        "Autorité forte mais bienveillante, récompenses et sanctions"
+       ],
+       [
+        "Style consultatif",
+        "Le dirigeant consulte avant de décider"
+       ],
+       [
+        "Style participatif",
+        "Décisions prises en groupe, forte implication"
+       ],
+       [
+        "Centralisation / décentralisation",
+        "Décisions concentrées au sommet / déléguées aux équipes"
+       ],
+       [
+        "Motivation",
+        "Ce qui pousse un individu à agir et à s’impliquer"
+       ],
+       [
+        "Maslow",
+        "Pyramide des besoins, du physiologique à l’accomplissement"
+       ],
+       [
+        "Herzberg",
+        "Facteurs d’hygiène (évitent l’insatisfaction) / facteurs de motivation (motivent)"
+       ],
+       [
+        "McGregor",
+        "Théorie X (fuit le travail → contrôle) / théorie Y (aime se réaliser → autonomie)"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Selon Herzberg, une hausse de salaire évite l’insatisfaction mais ne suffit pas à motiver vraiment.",
+      "a": "Vrai",
+      "explain": "Le salaire est un facteur d’hygiène ; reconnaissance et responsabilités sont des facteurs de motivation."
+     }
+    ]
+   },
+   {
+    "h": "🏗️ Structure et coordination : organigramme et mécanismes de Mintzberg",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏗️",
+      "h": "Mini-histoire",
+      "c": "Une start-up de dix personnes n’a besoin d’aucun organigramme. À cinq cents salariés, personne ne sait plus qui décide quoi. Que faut-il mettre en place ?"
+     },
+     {
+      "t": "p",
+      "c": "Une organisation doit se **structurer** : la structure divise le travail et répartit le pouvoir, puis il faut **coordonner**. On la représente par un **organigramme**. **Fonctionnelle** : par grandes fonctions, pour les petites et moyennes organisations. **Divisionnelle** : par produits, marchés ou zones, pour les grandes organisations diversifiées. **Matricielle** : croise les fonctions et les projets, pour les organisations complexes en gestion de projet."
+     },
+     {
+      "t": "p",
+      "c": "Henry **Mintzberg** : l’**ajustement mutuel** (communication directe), la **supervision directe** (un chef donne des ordres) et la **standardisation** (procédés, résultats ou qualifications)."
+     },
+     {
+      "t": "p",
+      "c": "Ce qui soude aussi une organisation, c’est sa **culture** : valeurs, croyances et pratiques partagées. Une culture forte renforce la **cohésion**. Les **conflits** bien gérés (négociation, médiation) peuvent être constructifs ; mal gérés, ils paralysent."
+     },
+     {
+      "t": "example",
+      "h": "La culture qui fédère",
+      "c": "Chez Decathlon, la culture du sport et de la responsabilité (employés autonomes, appelés « coéquipiers ») crée une forte cohésion et coordonne les comportements mieux que de longues procédures."
+     },
+     {
+      "t": "p",
+      "c": "Pour Alfred **Chandler**, « **la structure suit la stratégie** » : elle évolue avec la stratégie. En grandissant, une start-up fonctionnelle passe à une structure divisionnelle pour rester pilotable."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Structure : fonctionnelle / divisionnelle / matricielle. Mintzberg : les mécanismes de coordination. Culture et conflits. Chandler : la structure suit la stratégie."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Organigramme",
+        "Représentation graphique de la structure"
+       ],
+       [
+        "Structure fonctionnelle",
+        "Par grandes fonctions (PME)"
+       ],
+       [
+        "Structure divisionnelle",
+        "Par produits, marchés ou zones (grandes organisations diversifiées)"
+       ],
+       [
+        "Structure matricielle",
+        "Croisement fonctions × projets (organisations complexes)"
+       ],
+       [
+        "Mécanismes de coordination (Mintzberg)",
+        "Ajustement mutuel, supervision directe, standardisation"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Pourquoi une start-up qui grandit et se diversifie passe-t-elle souvent d’une structure fonctionnelle à une structure divisionnelle ?",
+      "a": "Parce que, selon Chandler, la structure suit la stratégie : avec plus de produits ou de marchés, il faut une division par produit ou par marché pour rester pilotable.",
+      "explain": "Quand la stratégie change, la structure doit s’adapter."
+     }
+    ]
+   },
+   {
+    "h": "💼 Exemple traité — diagnostic d’une marque bio et avantage concurrentiel",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧼",
+      "h": "Mini-histoire",
+      "c": "Une marque de cosmétiques bio, réputée pour sa qualité, voit débarquer les géants du « naturel ». Garder la tête froide : on fait un SWOT !"
+     },
+     {
+      "t": "example",
+      "h": "Cas",
+      "c": "Une marque de cosmétiques bio, reconnue pour sa qualité, fait face à l’arrivée de grands groupes sur le marché du « naturel »."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Diagnostic interne** — forces : image « bio » forte, savoir-faire ; faiblesses : petite taille, budget limité.",
+       "**Diagnostic externe** — opportunités : marché du naturel en croissance ; menaces : grands concurrents, matières premières plus chères.",
+       "**Avantage concurrentiel** : sa réputation « bio authentique » est **rare et difficile à imiter** → à protéger et à mettre en avant."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "SWOT",
+      "c": "Interne = forces/faiblesses ; externe = opportunités/menaces. Une ressource devient un avantage seulement si elle est rare et difficile à copier."
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trois de ces éléments sont internes à la marque. Lequel est l’intrus ?\nA) Image « bio » forte\nB) Savoir-faire\nC) Petite taille\nD) Grands concurrents",
+      "a": "D) Grands concurrents : élément externe (menace) ; les trois autres sont internes (forces ou faiblesses).",
+      "explain": "Interne = forces/faiblesses ; externe = opportunités/menaces."
+     }
+    ]
+   },
+   {
+    "h": "♟️ Les grandes stratégies : coûts, différenciation, spécialisation ou diversification",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🥇",
+      "h": "Question qui pique",
+      "c": "Lidl, Apple, une épicerie spécialisée, un groupe aux dix activités : quatre entreprises, quatre façons de se positionner. Laquelle choisir ?"
+     },
+     {
+      "t": "p",
+      "c": "À partir du diagnostic, l’organisation choisit une **stratégie** : une orientation de long terme pour un **avantage concurrentiel** durable. Porter en formalise trois : domination par les coûts, différenciation, focalisation (viser un segment précis)."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Domination par les coûts** : prix le plus bas grâce à des coûts maîtrisés (volumes, productivité). Exemples : Lidl, Ryanair. Risque : la guerre des prix.",
+       "**Différenciation** : offre perçue comme unique (qualité, image, innovation, service), payée plus cher. Exemples : Apple, un restaurant étoilé. Risque : l’imitation."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "S’ajoutent des choix de **périmètre** : **spécialisation** (un seul métier, un seul marché : expertise et image claire, mais tout repose sur un seul marché) ou **diversification** (nouveaux produits/marchés : répartit les risques, mais peut mener à la dispersion et à la perte de cohérence)."
+     },
+     {
+      "t": "p",
+      "c": "L’**intégration** maîtrise la filière, en amont (fournisseurs) ou en aval (distribution), mais alourdit l’organisation et augmente les coûts fixes. L’**externalisation** permet de se recentrer et de réduire les coûts, au prix d’une dépendance envers les sous-traitants."
+     },
+     {
+      "t": "warning",
+      "h": "Piège",
+      "c": "Vouloir « le prix le plus bas ET le plus haut de gamme » est en général intenable : c’est l’« enlisement dans la voie médiane » dénoncé par Porter. Il faut choisir."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Spécialisation",
+        "Un seul métier : expertise, image forte / tout repose sur un seul marché"
+       ],
+       [
+        "Diversification",
+        "Nouveaux domaines d’activité stratégique : répartition des risques / dispersion"
+       ],
+       [
+        "Intégration",
+        "Maîtriser la filière (amont/aval) / lourdeur, coûts fixes"
+       ],
+       [
+        "Externalisation",
+        "Confier une activité à un tiers : recentrage, coûts réduits / dépendance"
+       ],
+       [
+        "Enlisement dans la voie médiane (Porter)",
+        "Vouloir à la fois le prix le plus bas et le haut de gamme"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quel est le risque principal de la spécialisation ?\nA) La dispersion des moyens\nB) La dépendance à un seul marché\nC) La guerre des prix",
+      "a": "B) La dépendance à un seul marché : tout repose sur lui.",
+      "explain": "La dispersion est le risque de la diversification."
+     }
+    ]
+   },
+   {
+    "h": "👥 Décision et pouvoir : acteurs, styles de direction et rationalité limitée",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🗳️",
+      "h": "Dialogue",
+      "c": "— Alors, on décide ensemble ?\n— Non, je décide seul. Mais je récompense ta fidélité.\n— C’est quel style de direction, déjà ?"
+     },
+     {
+      "t": "p",
+      "c": "Une décision engage des **acteurs** aux intérêts variés. Le **pouvoir** est la capacité à influencer les décisions : formel (hiérarchie) ou informel (expertise, contrôle d’une information ou d’une ressource rare)."
+     },
+     {
+      "t": "p",
+      "c": "Rensis **Likert** distingue quatre styles, du plus fermé au plus ouvert : l’**autoritaire** décide seul, impose et ne consulte pas ; le **paternaliste** décide aussi seul mais récompense la fidélité et se montre bienveillant ; le **consultatif** demande l’avis avant de décider, tout en gardant la décision finale ; le **participatif** associe les équipes à la décision elle-même."
+     },
+     {
+      "t": "p",
+      "c": "La décision est rarement parfaitement rationnelle : Herbert **Simon** parle de **rationalité limitée**. Faute de temps, d’information et de calcul, le décideur retient une solution **satisfaisante** plutôt qu’optimale."
+     },
+     {
+      "t": "tip",
+      "h": "À mobiliser",
+      "c": "Relier le style de direction au contexte : l’autoritaire va vite en situation de crise ; le participatif mobilise et innove mais prend du temps."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Style autoritaire",
+        "Décide seul, impose, ne consulte pas"
+       ],
+       [
+        "Style paternaliste",
+        "Décide seul mais récompense la fidélité"
+       ],
+       [
+        "Style consultatif",
+        "Demande l’avis avant de décider"
+       ],
+       [
+        "Style participatif",
+        "Associe les équipes à la décision"
+       ],
+       [
+        "Rationalité limitée (Simon)",
+        "Faute de temps, d’information et de calcul, le décideur retient une solution satisfaisante"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe ces styles en « Décide seul » / « Associe les équipes » : autoritaire ; paternaliste ; consultatif ; participatif.",
+      "a": "Décide seul : autoritaire, paternaliste. Associe les équipes : consultatif (avis demandé), participatif (décision partagée).",
+      "explain": "Le consultatif demande l’avis mais garde la décision finale ; le participatif partage la décision."
+     }
+    ]
+   },
+   {
+    "h": "💡 L’avantage concurrentiel durable : ressources rares, compétences distinctives",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🔒",
+      "h": "Défi lancé",
+      "c": "Ta recette secrète de cookies est géniale. Mais si le concurrent la copie en une semaine, ton avantage tient-il longtemps ?"
+     },
+     {
+      "t": "p",
+      "c": "L’**avantage concurrentiel** permet de surpasser durablement ses rivales : coût plus bas ou valeur supérieure perçue. Pour être **durable**, il doit être difficile à imiter."
+     },
+     {
+      "t": "p",
+      "c": "L’approche par les ressources et compétences : un avantage solide repose souvent sur des ressources **rares, précieuses, difficiles à copier et non substituables** (savoir-faire unique, marque puissante, réseau, données) : ce sont les **compétences distinctives**."
+     },
+     {
+      "t": "example",
+      "h": "Netflix vs Blockbuster",
+      "c": "Netflix a bâti un avantage sur le streaming, ses données (algorithme de recommandation) et sa production propre. Blockbuster, prisonnier de ses magasins (coûts fixes), n’a pas su se réinventer."
+     },
+     {
+      "t": "p",
+      "c": "Aucun avantage n’est définitif : les concurrents imitent, les technologies changent. Il faut innover en continu."
+     },
+     {
+      "t": "tip",
+      "h": "Réflexe",
+      "c": "« Qu’est-ce que cette entreprise fait que les autres ne peuvent pas facilement copier ? »"
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Un avantage concurrentiel n’est durable que s’il est difficile à imiter.",
+      "a": "Vrai",
+      "explain": "Un avantage facile à copier disparaît vite."
+     }
+    ]
+   },
+   {
+    "h": "💼 Étude de cas guidée — diagnostic, différenciation et risque du mono-produit",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "☕",
+      "h": "Mini-histoire",
+      "c": "Colibri, chaîne fictive de cafés de spécialité, cartonne. Mais un géant ouvre en face et le prix du café grimpe. Que lui conseiller ?"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Une chaîne de cafés de spécialité connaît un fort succès (produits premium, clientèle fidèle) mais fait face à l’arrivée de grands groupes et à la hausse du prix du café. Réalisez un mini-SWOT et recommandez une stratégie."
+     },
+     {
+      "t": "example",
+      "h": "Étape 1 — SWOT",
+      "c": "Forces : qualité, image premium, clientèle fidèle. Faiblesses : coûts élevés, dépendance à un produit. Opportunités : engouement pour le « bien consommer ». Menaces : concurrence des grands groupes, flambée du prix des matières."
+     },
+     {
+      "t": "example",
+      "h": "Étape 2 — Choix stratégique",
+      "c": "Sa force est la **différenciation**. Une guerre des prix contre les grands groupes serait perdante : consolider la différenciation (traçabilité, service, ambiance)."
+     },
+     {
+      "t": "p",
+      "c": "**Étape 3 — Recommandation argumentée.** Renforcer l’avantage difficile à imiter (relation client, origine du café), fidéliser (programme, communauté), sécuriser l’approvisionnement (contrats longs avec les producteurs). La spécialisation est cohérente avec l’image, mais impose de maîtriser le **risque de mono-produit**."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Toujours relier la stratégie recommandée aux forces du diagnostic. Une reco « hors-sol », non justifiée par le SWOT, ne rapporte pas de points."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Pour Colibri, un élève recommande de casser les prix pour rivaliser avec les grands groupes. Repère l’erreur.",
+      "a": "Colibri est fort en différenciation (qualité, image) : une guerre des prix serait perdante ; il faut consolider la différenciation.",
+      "explain": "La stratégie recommandée doit s’appuyer sur les forces du diagnostic."
+     }
+    ]
+   },
+   {
+    "h": "🧭 Les niveaux de décision d’Ansoff : stratégique, tactique, opérationnelle",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🪜",
+      "h": "Question qui pique",
+      "c": "Lancer un produit à l’international, recruter un vendeur, établir le planning de la semaine : ces trois décisions ont-elles le même poids ?"
+     },
+     {
+      "t": "p",
+      "c": "**Igor Ansoff** distingue trois niveaux, du plus engageant au plus quotidien. La **décision stratégique** porte sur le long terme et engage toute l’organisation (se lancer à l’international). La **décision tactique**, appelée aussi **administrative**, porte sur le moyen terme et organise les ressources (recruter, réorganiser un service). La **décision opérationnelle** porte sur le court terme et concerne le quotidien (plannings de la semaine)."
+     },
+     {
+      "t": "p",
+      "c": "Herbert **Simon** : la décision est rarement parfaitement rationnelle. Temps, information et capacités de calcul sont limités, le décideur choisit une solution **satisfaisante**, pas optimale (**rationalité limitée**). Le **système d’information** aide en fournissant les bonnes données."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Stratégique (rare, engageante, dirigeants) → tactique (organiser) → opérationnelle (quotidienne). La rationalité est limitée."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Décision stratégique",
+        "Long terme, engage toute l’organisation (se lancer à l’international)"
+       ],
+       [
+        "Décision tactique (administrative)",
+        "Moyen terme, organise les ressources (recruter, réorganiser)"
+       ],
+       [
+        "Décision opérationnelle",
+        "Court terme, quotidien (plannings de la semaine)"
+       ],
+       [
+        "Rationalité limitée (Simon)",
+        "Le décideur choisit une solution satisfaisante, pas optimale"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Établir les plannings de la semaine est une décision :\nA) Opérationnelle\nB) Stratégique\nC) Tactique",
+      "a": "A) Opérationnelle : court terme, quotidien.",
+      "explain": "Stratégique = long terme ; tactique = moyen terme, organisation des ressources."
+     }
+    ]
+   },
+   {
+    "h": "👑 Pouvoir formel, pouvoir informel et contre-pouvoirs",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "💻",
+      "h": "Mini-histoire",
+      "c": "Dans une entreprise, un seul technicien connaît le vieux logiciel de paie. Il n’est pas chef, mais la direction ne décide rien sans lui."
+     },
+     {
+      "t": "p",
+      "c": "Le **pouvoir** est la capacité à influencer les décisions et le comportement des autres. **Formel** : lié à la position hiérarchique, au statut. **Informel** : lié à l’expertise, au contrôle d’une information ou d’une ressource rare, au charisme."
+     },
+     {
+      "t": "example",
+      "h": "Illustration",
+      "c": "Un expert informatique détient un pouvoir informel important s’il est le seul à maîtriser un système clé : il influence des décisions bien au-delà de sa position hiérarchique."
+     },
+     {
+      "t": "p",
+      "c": "Des **contre-pouvoirs** équilibrent la direction : syndicats et représentants du personnel (CSE), actionnaires, État (lois), ONG et opinion, clients. Ils empêchent les abus et obligent à tenir compte des parties prenantes."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Formel (hiérarchie) ≠ informel (expertise, information). Les contre-pouvoirs équilibrent les dirigeants."
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trois propositions sont des contre-pouvoirs. Laquelle est l’intrus ?\nA) Les syndicats\nB) Les actionnaires\nC) Le pouvoir hiérarchique du dirigeant\nD) Les ONG",
+      "a": "C) Le pouvoir hiérarchique du dirigeant : c’est le pouvoir formel de la direction, que les contre-pouvoirs viennent équilibrer.",
+      "explain": "Les contre-pouvoirs limitent le pouvoir de la direction."
+     }
+    ]
+   },
+   {
+    "h": "♟️ Les modalités de développement : croissance interne, externe et alliances",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🚀",
+      "h": "Défi lancé",
+      "c": "Grandir vite : racheter un concurrent, ouvrir cinq boutiques ou s’allier avec un partenaire ? Trois routes, trois risques différents."
+     },
+     {
+      "t": "p",
+      "c": "Le choix de la **modalité de développement** dépend des moyens, de la rapidité voulue et du risque accepté."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Croissance interne** : se développer par ses propres moyens (ouvrir des sites, embaucher, investir). Maîtrisée, mais lente.",
+       "**Croissance externe** : racheter une autre entreprise ou fusionner. Rapide, mais coûteuse et risquée (intégrer deux organisations).",
+       "**Alliance / partenariat** : coopérer sans fusionner. Les partenaires partagent les risques, mais deviennent dépendants."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "L’**intégration** maîtrise la filière en amont (fournisseurs) ou en aval (distribution) ; l’**externalisation** confie une activité à un tiers pour se recentrer sur son métier. Chaque choix modifie le périmètre."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Interne (soi-même, lent), externe (rachat, rapide/risqué), alliance (coopérer)."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Croissance interne",
+        "Par ses propres moyens : maîtrisée mais lente"
+       ],
+       [
+        "Croissance externe",
+        "Rachat ou fusion : rapide mais coûteuse et risquée"
+       ],
+       [
+        "Alliance / partenariat",
+        "Coopérer sans fusionner : partage des risques mais dépendance"
+       ],
+       [
+        "Intégration amont / aval",
+        "Maîtriser les fournisseurs / la distribution"
+       ],
+       [
+        "Externalisation",
+        "Confier une activité à un tiers pour se recentrer"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Une alliance permet de coopérer sans fusionner, mais rend les partenaires dépendants les uns des autres.",
+      "a": "Vrai",
+      "explain": "C’est son avantage (partage des risques) et sa limite (dépendance)."
+     }
+    ]
+   },
+   {
+    "h": "💼 Étude de cas guidée — croissance externe, acteurs et pouvoirs",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🤝",
+      "h": "Dialogue",
+      "c": "— Je veux racheter ce concurrent !\n— Les salariés et l’actionnaire principal s’y opposent.\n— Alors j’ai un petit problème de pouvoir…"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Le dirigeant d’une PME veut racheter un concurrent pour grandir vite, mais les salariés et un actionnaire important s’y opposent. Analysez."
+     },
+     {
+      "t": "example",
+      "h": "Étape 1 — Nature de la décision",
+      "c": "Rachat d’un concurrent = décision stratégique (long terme, engage toute l’entreprise) et modalité de croissance externe."
+     },
+     {
+      "t": "example",
+      "h": "Étape 2 — Acteurs et pouvoir",
+      "c": "Le dirigeant a le pouvoir formel, mais l’actionnaire important (contre-pouvoir financier) et les salariés (contre-pouvoir social) peuvent bloquer ou freiner."
+     },
+     {
+      "t": "p",
+      "c": "**Commentaire.** La croissance externe est rapide mais risquée (coût, intégration des équipes, endettement). Il faut négocier avec les contre-pouvoirs (rassurer l’actionnaire sur la rentabilité, les salariés sur l’emploi). Les ignorer expose à l’échec."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Qualifier la décision (niveau, modalité) → identifier acteurs et pouvoirs → montrer l’arbitrage → conclure sur les conditions de réussite."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Pourquoi le dirigeant doit-il négocier malgré son pouvoir formel ?",
+      "a": "Parce que l’actionnaire et les salariés sont des contre-pouvoirs capables de bloquer ou de freiner la décision ; ignorer leurs attentes expose le projet à l’échec.",
+      "explain": "Le pouvoir formel ne suffit pas : il faut aussi arbitrer entre les parties prenantes."
+     }
+    ]
+   }
+  ]
+ },
+ "mgmt-t3": {
+  "intro": "Une organisation n’évolue pas dans le vide : elle est **responsable** de son impact sur la société et l’environnement (la **RSE**) et bouleversée par le **numérique**. Deux thèmes quasi systématiques au bac : prépare-toi à les traiter en jouant.",
+  "sections": [
+   {
+    "h": "La RSE au cœur de la stratégie : performance globale et parties prenantes",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "👕",
+      "h": "Question qui pique",
+      "c": "Ton sweat préféré est vendu par une marque qui reverse ses bénéfices à la lutte climatique. Simple coup de com’ ou vraie stratégie ?"
+     },
+     {
+      "t": "example",
+      "h": "Cas réel",
+      "c": "En 2022, le fondateur de la marque de vêtements Patagonia a transféré la propriété de son entreprise à une structure dédiée à la lutte climatique : désormais, les bénéfices financent la protection de l’environnement."
+     },
+     {
+      "t": "p",
+      "c": "C’est une forme forte de **RSE** (responsabilité sociétale) : intégrer **volontairement** les enjeux sociaux et écologiques **au cœur** de la stratégie, pas comme un simple habillage. Elle applique à l’entreprise le **développement durable** et ses **trois piliers** (économique, social, environnemental)."
+     },
+     {
+      "t": "p",
+      "c": "La RSE n’est pas de la charité : elle nourrit la **performance globale** (image, fidélité des clients et des salariés, réduction des risques) et peut devenir un **avantage concurrentiel**. Elle suppose de prendre au sérieux **toutes** les **parties prenantes** (salariés, clients, riverains, ONG…), pas seulement les actionnaires."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Pourquoi la RSE n’est-elle pas de la simple charité ?",
+      "a": "Parce qu’elle nourrit la performance globale (image, fidélité, réduction des risques) et peut devenir un avantage concurrentiel.",
+      "explain": "Elle est intégrée au cœur de la stratégie, pas ajoutée comme un habillage."
+     }
+    ]
+   },
+   {
+    "h": "Greenwashing et mutations : des engagements prouvés, une organisation agile",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎭",
+      "h": "Mini-histoire",
+      "c": "Une marque colle un logo vert et le mot « éco » sur toutes ses boîtes. Dans l’usine, rien ne change. Un jour, une ONG s’en aperçoit…"
+     },
+     {
+      "t": "example",
+      "h": "Cas",
+      "c": "Une marque colle un logo « vert » et le mot « éco » sur ses produits, sans rien changer à sa production polluante."
+     },
+     {
+      "t": "p",
+      "c": "C’est du **greenwashing** (écoblanchiment) : communiquer « responsable » sans l’être. Les consommateurs, les ONG et la loi y sont de plus en plus attentifs ; le risque, c’est une **perte de confiance durable**. La parade : des engagements **prouvés** (labels, reporting extra-financier, norme ISO 26000)."
+     },
+     {
+      "t": "p",
+      "c": "Les organisations font aussi face à de profondes **mutations** : transition **numérique**, transition **écologique**, nouvelles attentes sociales. Chacune est à la fois une **menace** (pour qui la subit) et une **opportunité** (pour qui l’anticipe) : d’où l’importance de l’**agilité**."
+     },
+     {
+      "t": "warning",
+      "h": "Le numérique aussi",
+      "c": "Le numérique est une **opportunité** (productivité, nouveaux services) **et** un risque (cyberattaques, dépendance, impact écologique des data centers) : à nuancer."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Une mutation peut être à la fois une menace et une opportunité.",
+      "a": "Vrai : tout dépend de la capacité de l’organisation à l’anticiper.",
+      "explain": "Qui la subit y voit une menace ; qui l’anticipe y voit une opportunité, d’où l’intérêt de l’agilité."
+     }
+    ]
+   },
+   {
+    "h": "🌍 RSE et développement durable : trois piliers, ISO 26000 et rapport RSE",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏭",
+      "h": "Défi lancé",
+      "c": "Ton lycée voudrait être « responsable ». Faut-il seulement trier les déchets, ou voir plus large ? Tu as trois dimensions à concilier pour répondre."
+     },
+     {
+      "t": "p",
+      "c": "Une organisation ne vit pas isolée : son activité a des effets sur la **société** et l’**environnement**. On attend d’elle qu’elle soit **responsable**. C’est tout l’enjeu de la **Responsabilité Sociétale des Entreprises (RSE)**."
+     },
+     {
+      "t": "p",
+      "c": "La **RSE** est l’intégration **volontaire**, par une organisation, des préoccupations **sociales** et **environnementales** dans son activité et ses relations avec ses parties prenantes. C’est le **développement durable** mis en pratique à l’échelle de l’organisation."
+     },
+     {
+      "t": "p",
+      "c": "Le **développement durable** est un développement qui « **répond aux besoins du présent sans compromettre la capacité des générations futures à répondre aux leurs** » (rapport Brundtland, 1987). Il repose sur **trois piliers** à concilier."
+     },
+     {
+      "t": "list",
+      "c": [
+       "Pilier **économique** : **assurer la rentabilité et la pérennité** (rester rentable, investir, créer des emplois).",
+       "Pilier **social** : **prendre soin des personnes** (bonnes conditions de travail, égalité, formation).",
+       "Pilier **environnemental** : **préserver la planète** (réduire les émissions, recycler, éco-concevoir)."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "La RSE dépasse le simple respect de la loi : c’est une démarche **volontaire**. Des référentiels comme la norme **ISO 26000** guident les organisations, et beaucoup publient un **rapport RSE** pour rendre compte de leurs engagements."
+     },
+     {
+      "t": "example",
+      "h": "Fil rouge : Cyclo’Vert",
+      "c": "Un fabricant de vélos (fictif), critiqué pour l’empreinte carbone de ses batteries, met en place le **recyclage** et le **réemploi** des batteries, choisit des fournisseurs responsables et communique de façon transparente. Il concilie ainsi économique, social et environnemental."
+     },
+     {
+      "t": "p",
+      "c": "La RSE est de plus en plus **encadrée par la loi** : les grandes entreprises doivent publier une **déclaration de performance extra-financière** (leurs impacts sociaux et environnementaux). Elle n’est donc plus seulement volontaire."
+     },
+     {
+      "t": "example",
+      "h": "Un atout, pas seulement un coût",
+      "c": "Une marque engagée (produits durables, transparence, conditions de travail exemplaires) attire des **clients** et des **talents** sensibles à ces valeurs. La responsabilité devient un levier de **compétitivité hors-prix** et d’attractivité."
+     },
+     {
+      "t": "warning",
+      "h": "Piège à éviter",
+      "c": "La RSE ne se limite **pas** à l’environnement : elle concilie **trois** dimensions. Et attention au **greenwashing** : afficher une image « verte » sans agir réellement."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "**RSE** = intégration volontaire (et de plus en plus encadrée) des enjeux **sociaux et environnementaux**. Elle applique le **développement durable** et ses **3 piliers**. Référentiel : **ISO 26000**. Atout : image, talents."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Développement durable",
+        "Répond aux besoins du présent sans compromettre ceux des générations futures (Brundtland, 1987)"
+       ],
+       [
+        "Pilier économique",
+        "Rentabilité et pérennité (investir, créer des emplois)"
+       ],
+       [
+        "Pilier social",
+        "Prendre soin des personnes (conditions de travail, égalité, formation)"
+       ],
+       [
+        "Pilier environnemental",
+        "Préserver la planète (réduire les émissions, recycler)"
+       ],
+       [
+        "RSE",
+        "Responsabilité sociétale des entreprises : démarche volontaire au-delà de la loi"
+       ],
+       [
+        "ISO 26000",
+        "Norme internationale qui guide les démarches de RSE"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quel pilier du développement durable vise à « préserver la planète » ?\nA) Le pilier environnemental\nB) Le pilier social\nC) Le pilier économique",
+      "a": "A) Le pilier environnemental.",
+      "explain": "Le social prend soin des personnes, l’économique assure la rentabilité et la pérennité."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ Performance globale : externalités, éthique et intérêt collectif",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏆",
+      "h": "Question qui pique",
+      "c": "Une entreprise gagne des millions, mais sa fumée enfume tout le quartier. Est-elle vraiment « performante » ?"
+     },
+     {
+      "t": "p",
+      "c": "Longtemps, on a jugé une organisation uniquement à sa **performance financière**. Aujourd’hui, on lui demande d’être performante **globalement** : la réussite économique ne doit pas se faire au détriment de la société ni de la planète."
+     },
+     {
+      "t": "p",
+      "c": "La **performance globale** combine trois performances indissociables, en écho aux piliers du développement durable."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Économique** : **rentabilité**, **profit**, **pérennité**.",
+       "**Sociale** : **bien-être des salariés**, **égalité**, **faible turnover**.",
+       "**Environnementale** : **réduction de l’empreinte écologique**."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "L’activité produit aussi des **externalités** : des effets, positifs ou négatifs, sur des tiers qui ne sont pas dans l’échange marchand. Une usine qui pollue crée une externalité **négative** (supportée par la collectivité) ; une entreprise qui forme des jeunes, une externalité **positive**."
+     },
+     {
+      "t": "p",
+      "c": "Question centrale : l’**intérêt individuel** (le profit) est-il compatible avec l’**intérêt collectif** (le bien commun) ? La RSE et la performance globale répondent : concilier les deux plutôt que les opposer."
+     },
+     {
+      "t": "p",
+      "c": "Cela suppose une **éthique** : l’ensemble des **valeurs morales** qui guident les comportements (honnêteté, respect, équité). Chaque profession a aussi sa **déontologie** : des règles de bonne conduite propres à un métier (ex. le secret professionnel)."
+     },
+     {
+      "t": "example",
+      "h": "Éthique et déontologie",
+      "c": "Un expert-comptable doit respecter une **déontologie** (indépendance, secret professionnel) : ce sont les règles de sa profession. Au-delà, refuser de maquiller des comptes relève de l’**éthique** personnelle. Les deux protègent l’intérêt collectif."
+     },
+     {
+      "t": "p",
+      "c": "Concilier les attentes des **parties prenantes** est un **arbitrage** permanent : ce qui satisfait les uns peut mécontenter les autres. Les **actionnaires** veulent de la **rentabilité** et des **dividendes** ; les **salariés**, un **salaire**, de **bonnes conditions** et du **sens** ; les **clients**, de la **qualité**, un bon **prix** et du **service**."
+     },
+     {
+      "t": "p",
+      "c": "La **société**, et au-delà **la planète**, attendent des **emplois locaux** et le **respect de l’environnement**. Ces attentes divergent souvent : le management doit arbitrer."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "**Performance globale** = économique + sociale + environnementale. L’activité génère des **externalités**. Enjeu : concilier **intérêt individuel** et **intérêt collectif** en **arbitrant**, grâce à l’**éthique** (valeurs) et à la **déontologie** (règles d’un métier)."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Performance économique",
+        "Rentabilité, profit, pérennité"
+       ],
+       [
+        "Performance sociale",
+        "Bien-être des salariés, égalité, faible turnover"
+       ],
+       [
+        "Performance environnementale",
+        "Réduction de l’empreinte écologique"
+       ],
+       [
+        "Externalité",
+        "Effet positif ou négatif d’une activité sur des tiers, hors de l’échange marchand"
+       ],
+       [
+        "Actionnaires",
+        "Rentabilité, dividendes"
+       ],
+       [
+        "Salariés",
+        "Salaire, bonnes conditions, sens du travail"
+       ],
+       [
+        "Clients",
+        "Qualité, prix, service"
+       ],
+       [
+        "Société et planète",
+        "Emplois locaux, respect de l’environnement"
+       ],
+       [
+        "Éthique",
+        "Valeurs morales qui guident l’action"
+       ],
+       [
+        "Déontologie",
+        "Règles propres à un métier"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe en éthique ou déontologie : le secret professionnel de l’expert-comptable, l’honnêteté comme valeur personnelle, les règles de bonne conduite d’un métier, le refus de maquiller des comptes par conviction.",
+      "a": "Déontologie : secret professionnel, règles de bonne conduite d’un métier. Éthique : honnêteté comme valeur personnelle, refus de maquiller des comptes par conviction.",
+      "explain": "La déontologie, ce sont les règles d’un métier ; l’éthique, ce sont des valeurs morales."
+     }
+    ]
+   },
+   {
+    "h": "🤝 L’économie sociale et solidaire : finalité sociale, gouvernance démocratique, lucrativité limitée",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "⚽",
+      "h": "Mini-histoire",
+      "c": "Le club de foot de ton quartier ne distribue aucun bénéfice, élit son bureau en assemblée et réinvestit tout dans le terrain. Quel genre d’organisation est-ce ?"
+     },
+     {
+      "t": "p",
+      "c": "Toutes les organisations ne cherchent pas d’abord le profit. Un ensemble d’organisations place l’**humain et la solidarité** au cœur de son projet : c’est l’**économie sociale et solidaire (ESS)**."
+     },
+     {
+      "t": "p",
+      "c": "L’**ESS** regroupe les organisations qui exercent une activité économique avec une **finalité sociale** prioritaire sur le profit. Elles réinvestissent leurs excédents dans le projet et fonctionnent souvent de façon **démocratique** (une personne = une voix)."
+     },
+     {
+      "t": "list",
+      "c": [
+       "Les **associations** : un **but non lucratif**, souvent d’**intérêt général**.",
+       "Les **coopératives** : **détenues et gérées par leurs membres** (salariés ou clients).",
+       "Les **mutuelles** : la **solidarité entre leurs adhérents** (**santé**, **assurance**).",
+       "Les **fondations** : elles **financent une cause d’intérêt général** grâce à des fonds confiés."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Principes communs : une **finalité sociale** (l’utilité plutôt que le profit), une **gouvernance démocratique**, une **lucrativité limitée** et une **gestion autonome**."
+     },
+     {
+      "t": "example",
+      "h": "Une coopérative",
+      "c": "Dans une coopérative agricole, ce sont les **agriculteurs adhérents** qui possèdent et dirigent l’organisation : ils décident ensemble (une voix chacun) et se partagent les services, pas seulement des dividendes. La finalité est l’intérêt de ses membres."
+     },
+     {
+      "t": "p",
+      "c": "L’ESS montre qu’une organisation peut être **économiquement viable** tout en poursuivant un **but social** : elle concilie intérêt individuel et intérêt collectif."
+     },
+     {
+      "t": "p",
+      "c": "Elle pèse un **poids réel** dans l’économie française : environ **10 % de l’emploi**, dans des secteurs variés (banque, assurance, santé, culture, sport, aide à la personne)."
+     },
+     {
+      "t": "example",
+      "h": "Une mutuelle",
+      "c": "Une **mutuelle santé** appartient à ses **adhérents** : ses excédents servent à améliorer les remboursements et les services, pas à rémunérer des actionnaires. La solidarité passe avant le profit."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "**ESS** = finalité sociale prioritaire : **associations, coopératives, mutuelles, fondations** (≈ 10 % de l’emploi). Principes : utilité sociale, **gouvernance démocratique** (1 personne = 1 voix), **lucrativité limitée**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "ESS",
+        "Économie sociale et solidaire : activité économique à finalité sociale prioritaire"
+       ],
+       [
+        "Association",
+        "But non lucratif, souvent d’intérêt général"
+       ],
+       [
+        "Coopérative",
+        "Détenue et gérée par ses membres (salariés, clients…)"
+       ],
+       [
+        "Mutuelle",
+        "Solidarité entre adhérents (santé, assurance)"
+       ],
+       [
+        "Fondation",
+        "Financement d’une cause d’intérêt général"
+       ],
+       [
+        "Lucrativité limitée",
+        "Les excédents sont réinvestis dans le projet plutôt que distribués"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus parmi les formes de l’ESS :\nA) Les associations\nB) Les mutuelles\nC) Les coopératives\nD) Les multinationales cotées",
+      "a": "D) Les multinationales cotées : elles cherchent d’abord le profit.",
+      "explain": "L’ESS regroupe associations, coopératives, mutuelles et fondations."
+     }
+    ]
+   },
+   {
+    "h": "💻 La transformation numérique : données, nouveaux modèles économiques, relation client",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📱",
+      "h": "Défi lancé",
+      "c": "Ta boutique de baskets préférée vend en magasin, en ligne, et te recommande des modèles d’après tes clics. Que s’est-il passé dans les coulisses ?"
+     },
+     {
+      "t": "p",
+      "c": "Le **numérique** bouleverse en profondeur le fonctionnement des organisations et leurs relations avec la société. Cette **transformation numérique** est un grand enjeu du management contemporain."
+     },
+     {
+      "t": "p",
+      "c": "Il fait apparaître de **nouveaux modèles économiques** : plateformes (mise en relation), abonnement, gratuité financée par la publicité, économie collaborative. Il modifie la façon de produire, de vendre et de communiquer."
+     },
+     {
+      "t": "list",
+      "c": [
+       "Hier on vendait **uniquement en magasin** ; aujourd’hui aussi **en ligne** (**e-commerce**), et on combine les deux dans le **phygital**.",
+       "Hier la communication était **descendante** ; aujourd’hui elle passe par les **réseaux sociaux**, l’**interaction** et les **avis clients**.",
+       "Hier on décidait **à l’intuition** ; aujourd’hui les décisions sont **guidées par les données** (*data*)."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Au cœur de la transformation : les **données (data)**. Les organisations collectent d’énormes quantités d’informations (clients, ventes, comportements) pour **mieux décider**, personnaliser l’offre et gagner en efficacité. La donnée devient une **ressource stratégique**."
+     },
+     {
+      "t": "p",
+      "c": "Le numérique transforme la **relation client** : personnalisation, service en continu, communautés en ligne, co-création. Le client devient acteur (avis, partages) et l’organisation doit soigner son **e-réputation**."
+     },
+     {
+      "t": "example",
+      "h": "La donnée au service de la décision",
+      "c": "Un site de vente analyse les achats de ses clients pour recommander des produits, ajuster ses stocks et cibler ses promotions. Grâce aux **données**, il décide plus finement et vend davantage."
+     },
+     {
+      "t": "p",
+      "c": "Cette transformation exige d’**investir** (outils, formation) et de **conduire le changement** : **accompagner le changement** des salariés, faire évoluer les métiers. Toutes les organisations ne partent pas à égalité."
+     },
+     {
+      "t": "p",
+      "c": "Le numérique abaisse aussi les **barrières à l’entrée** : une petite structure peut toucher le monde entier via une plateforme. Mais la concurrence devient **mondiale** et de nouveaux acteurs peuvent bousculer un marché très vite."
+     },
+     {
+      "t": "example",
+      "h": "Un nouveau modèle économique",
+      "c": "Une marque vend en **direct en ligne** (sans intermédiaire), récolte les **données** de ses clients et ajuste son offre en temps réel. Elle capte plus de valeur, mais s’expose à une concurrence venue du monde entier."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "**Transformation numérique** : nouveaux **modèles** (plateformes, abonnement, vente directe…), **donnée (data)** au centre des décisions, **relation client** transformée. Elle ouvre des marchés mais **mondialise la concurrence**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "E-commerce",
+        "Vente en ligne"
+       ],
+       [
+        "Phygital",
+        "Combinaison du magasin physique et du numérique"
+       ],
+       [
+        "Data (données)",
+        "Informations collectées et analysées pour décider : ressource stratégique"
+       ],
+       [
+        "Plateforme",
+        "Modèle économique de mise en relation"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Le phygital combine le magasin physique et le numérique.",
+      "a": "Vrai : c’est l’association des deux canaux de vente.",
+      "explain": "Le e-commerce, lui, désigne seulement la vente en ligne."
+     }
+    ]
+   },
+   {
+    "h": "🔐 Les risques du numérique : cybersécurité, RGPD et intelligence artificielle",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🕵️",
+      "h": "Mini-histoire",
+      "c": "Un lundi matin, tous les ordinateurs d’une PME affichent : « Vos fichiers sont chiffrés, payez ou perdez tout. » Qui est responsable, et que fallait-il faire avant ?"
+     },
+     {
+      "t": "p",
+      "c": "La transformation numérique n’apporte pas que des opportunités : elle crée aussi des **risques** et des **responsabilités** nouvelles."
+     },
+     {
+      "t": "p",
+      "c": "**Cybersécurité** : en dépendant de systèmes d’information, les organisations deviennent vulnérables aux **cyberattaques** (piratage, rançongiciels, vol de données). Face à elles : **sécuriser ses systèmes**, **sauvegarder** ses données et **former son personnel**."
+     },
+     {
+      "t": "p",
+      "c": "**Protection des données personnelles** : le **RGPD** (Règlement général sur la protection des données) impose de les collecter de façon **loyale**, avec le **consentement** des personnes, pour une **finalité précise**, et de les **sécuriser**. La **CNIL** veille au respect de ces règles. L’organisation doit donc **respecter le RGPD**."
+     },
+     {
+      "t": "p",
+      "c": "**Automatisation et IA** : l’**automatisation** et l’**intelligence artificielle** transforment les emplois. Certaines tâches disparaissent, d’autres apparaissent : il faut **accompagner les salariés**, **faire évoluer les métiers**, **former** et **reconvertir**, ce qui rejoint la responsabilité **sociale**."
+     },
+     {
+      "t": "p",
+      "c": "**Fracture numérique** : l’organisation doit veiller à **ne pas exclure les publics éloignés du numérique**. Et le numérique pose des questions d’**éthique** : usage des données, transparence des algorithmes, vie privée, impact environnemental (pollution numérique)."
+     },
+     {
+      "t": "warning",
+      "h": "Piège à éviter",
+      "c": "Le numérique n’est pas que positif : il crée des **risques** (cyberattaques, atteintes à la vie privée, exclusion). Une bonne copie montre **et** les opportunités **et** les risques, et relie ces derniers à la **RSE**."
+     },
+     {
+      "t": "p",
+      "c": "La sécurité n’est pas seulement **technique** : la principale faille est souvent **humaine** (mot de passe faible, hameçonnage, clé USB piégée). D’où l’importance de **former** et de sensibiliser les salariés."
+     },
+     {
+      "t": "example",
+      "h": "Une cyberattaque",
+      "c": "Une entreprise victime d’un **rançongiciel** voit ses données chiffrées et son activité paralysée plusieurs jours, jusqu’à payer une rançon. Des **sauvegardes** régulières et la **formation** du personnel auraient fortement limité les dégâts."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Enjeux du numérique : **cybersécurité** (faille souvent **humaine**), **protection des données** (RGPD, CNIL), **automatisation/IA**, **fracture numérique** et **éthique**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Cybersécurité",
+        "Protection des systèmes : sécuriser, sauvegarder, former"
+       ],
+       [
+        "RGPD",
+        "Règlement qui protège les données personnelles (consentement, finalité, sécurité)"
+       ],
+       [
+        "CNIL",
+        "Autorité qui veille au respect des règles sur les données personnelles"
+       ],
+       [
+        "Fracture numérique",
+        "Inégalité d’accès ou d’usage du numérique"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève écrit : « Pour se protéger des cyberattaques, il suffit d’installer un antivirus. » Trouve l’erreur.",
+      "a": "La faille est souvent humaine : il faut aussi former et sensibiliser le personnel et sauvegarder les données.",
+      "explain": "La sécurité n’est pas seulement technique ; mot de passe faible ou hameçonnage restent des failles courantes."
+     }
+    ]
+   },
+   {
+    "h": "🧑‍💻 Les mutations du travail : télétravail, qualité de vie au travail, ubérisation",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏠",
+      "h": "Dialogue",
+      "c": "— Je télétravaille deux jours par semaine, c’est génial !\n— Tu ne te sens pas un peu seul ?\n— Si… et je n’arrive plus à déconnecter le soir."
+     },
+     {
+      "t": "p",
+      "c": "Le numérique et les nouvelles attentes sociales transforment aussi le **travail** lui-même et les **modes de vie**. Le management doit accompagner ces mutations pour rester attractif et performant."
+     },
+     {
+      "t": "p",
+      "c": "Le **télétravail** s’est fortement développé grâce aux outils numériques. Ses **atouts** : **autonomie** et **flexibilité**, moins de **trajets** pour **gagner du temps**, **économies de locaux** pour l’organisation."
+     },
+     {
+      "t": "p",
+      "c": "Ses **risques** : l’**isolement** et la **perte de lien social**, une **frontière floue entre vie professionnelle et vie personnelle**, et une **cohésion d’équipe plus difficile** à entretenir."
+     },
+     {
+      "t": "p",
+      "c": "De nouvelles **formes d’organisation du travail** apparaissent : équipes autonomes, management par projet, horaires flexibles, coworking. On cherche à donner plus de **sens** et d’**autonomie**."
+     },
+     {
+      "t": "p",
+      "c": "La **qualité de vie au travail (QVT)** devient un enjeu majeur : bien-être, prévention des risques psychosociaux (stress, burn-out), reconnaissance. Un salarié épanoui est plus impliqué : la QVT rejoint la **performance sociale** et la **RSE**."
+     },
+     {
+      "t": "p",
+      "c": "Autre réalité : l’**ubérisation** (travail à la demande via des plateformes), qui interroge le statut des travailleurs et la protection sociale. Les modes de **consommation** évoluent aussi (consommation responsable, seconde main, économie du partage)."
+     },
+     {
+      "t": "example",
+      "h": "Accompagner la mutation",
+      "c": "Une entreprise met en place le télétravail deux jours par semaine, des horaires souples et un droit à la déconnexion. Elle répond aux attentes des salariés tout en préservant la cohésion : une contrainte devient un atout d’attractivité."
+     },
+     {
+      "t": "p",
+      "c": "Ces mutations obligent le management à **repenser son attractivité** : sens du travail, autonomie et équilibre des temps de vie sont devenus des critères de choix décisifs, notamment pour les jeunes diplômés."
+     },
+     {
+      "t": "example",
+      "h": "La marque employeur",
+      "c": "Pour attirer les talents, une entreprise met en avant sa **flexibilité** (télétravail, horaires souples), ses **valeurs** et sa **QVT**. Le management des ressources humaines devient un véritable **argument de recrutement**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "**Télétravail** (autonomie mais isolement), nouvelles **organisations**, **QVT**, **ubérisation**. Bien accompagnées, ces mutations servent la **performance sociale** et l’**attractivité** (marque employeur)."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Télétravail",
+        "Travail hors des locaux de l’employeur grâce au numérique"
+       ],
+       [
+        "Atouts du télétravail",
+        "Autonomie, flexibilité, moins de trajets, économies de locaux"
+       ],
+       [
+        "Risques du télétravail",
+        "Isolement, frontière vie pro/perso floue, cohésion plus difficile"
+       ],
+       [
+        "Qualité de vie au travail (QVT)",
+        "Conditions qui permettent aux salariés de bien travailler et de trouver du sens"
+       ],
+       [
+        "Ubérisation",
+        "Remplacement de salariés par des travailleurs indépendants via des plateformes"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Lequel est un risque du télétravail ?\nA) Les économies de locaux\nB) Moins de trajets\nC) La frontière floue entre vie pro et vie perso",
+      "a": "C) La frontière floue entre vie pro et vie perso.",
+      "explain": "Les économies de locaux et les trajets réduits sont des atouts."
+     }
+    ]
+   },
+   {
+    "h": "💼 Exemple traité — délocaliser la production : arbitrer entre parties prenantes",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "✈️",
+      "h": "Défi lancé",
+      "c": "Ton patron te demande : « Et si on produisait à l’étranger pour baisser les coûts ? » Qui sera content, qui sera furieux, et que doit dire un bon manager ?"
+     },
+     {
+      "t": "example",
+      "h": "Cas",
+      "c": "Une entreprise textile envisage de délocaliser sa production pour réduire ses coûts."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Parties prenantes** : salariés (emploi menacé), actionnaires (rentabilité), clients (prix, éthique), territoire (fermeture d’usine).",
+       "La **RSE** invite à intégrer les enjeux **sociaux et environnementaux** à la décision, pas seulement le coût.",
+       "Le **numérique** est une opportunité (productivité) **et** un risque (cybersécurité, dépendance) : à nuancer."
+      ]
+     },
+     {
+      "t": "tip",
+      "h": "Nuance attendue",
+      "c": "La RSE n’est pas de la philanthropie : c’est une stratégie qui concilie performance économique et responsabilité."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Quelles parties prenantes sont touchées par une délocalisation et avec quelles attentes ?",
+      "a": "Salariés (emploi), actionnaires (rentabilité), clients (prix, éthique), territoire (maintien de l’usine).",
+      "explain": "Le manager doit arbitrer entre ces attentes divergentes."
+     }
+    ]
+   },
+   {
+    "h": "🤝 Les parties prenantes : internes, externes et attentes divergentes",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🍕",
+      "h": "Mini-histoire",
+      "c": "Dans une pizzeria, le patron veut des marges, les livreurs des salaires, les clients des prix bas et les voisins moins de bruit. Impossible de contenter tout le monde ?"
+     },
+     {
+      "t": "p",
+      "c": "Une organisation est au centre d’un réseau de **parties prenantes** dont les attentes sont souvent **divergentes**. Les concilier est un exercice permanent d’arbitrage."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Actionnaires** : **rentabilité**, **dividendes**, hausse de la **valeur** de leurs actions.",
+       "**Salariés** : bon **salaire**, bonnes **conditions de travail**, **sécurité de leur emploi**.",
+       "**Clients** : **qualité**, **prix juste**, bon **service**.",
+       "**Fournisseurs** : être **payés à temps**, **relation durable**.",
+       "**État** et **collectivités** : **impôts**, **respect des lois**, **emplois locaux**.",
+       "**Riverains** et **ONG** : **respect de l’environnement**, **transparence**."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "On distingue les parties prenantes **internes** (salariés, dirigeants, actionnaires) et **externes** (clients, fournisseurs, État, société civile). Un bon management **hiérarchise** les attentes selon leur **pouvoir** et leur **importance**, sans négliger celles qui semblent faibles mais peuvent nuire à la réputation."
+     },
+     {
+      "t": "example",
+      "h": "Conflit d’attentes",
+      "c": "Fermer une usine pour restaurer la rentabilité (attente des actionnaires) détruit des emplois (attente des salariés et de la collectivité). Le manager doit **arbitrer** et assumer un choix, souvent en cherchant un compromis (reclassement, plan social)."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "La RSE, c’est prendre au sérieux les attentes de **toutes** les parties prenantes, pas seulement celles des actionnaires."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Partie prenante",
+        "Acteur concerné par l’activité de l’organisation et qui peut l’influencer"
+       ],
+       [
+        "Actionnaires",
+        "Rentabilité, dividendes, valeur"
+       ],
+       [
+        "Salariés",
+        "Salaire, conditions de travail, sécurité de l’emploi"
+       ],
+       [
+        "Clients",
+        "Qualité, prix juste, service"
+       ],
+       [
+        "Fournisseurs",
+        "Paiement à temps, relation durable"
+       ],
+       [
+        "État / collectivités",
+        "Impôts, respect des lois, emploi local"
+       ],
+       [
+        "Riverains / ONG",
+        "Respect de l’environnement, transparence"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "classement",
+      "q": "Classe en partie prenante interne ou externe : salariés, clients, dirigeants, fournisseurs, actionnaires, État.",
+      "a": "Internes : salariés, dirigeants, actionnaires. Externes : clients, fournisseurs, État.",
+      "explain": "Les parties prenantes externes sont les acteurs extérieurs à l’organisation (clients, fournisseurs, État, société civile)."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ Éthique des affaires, charte éthique et création de valeur partagée",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🍫",
+      "h": "Question qui pique",
+      "c": "Une marque de chocolat aide ses producteurs de cacao à mieux cultiver. Philanthropie, ou bon calcul ? Les deux, peut-être…"
+     },
+     {
+      "t": "p",
+      "c": "L’**éthique** des affaires désigne les principes moraux qui guident les décisions au-delà de la loi : honnêteté, respect, responsabilité. Une **charte éthique** formalise ces engagements. Le manquement (corruption, greenwashing, conditions de travail indignes) expose à un lourd risque de **réputation**."
+     },
+     {
+      "t": "p",
+      "c": "La **gouvernance** désigne les mécanismes qui encadrent la direction : qui décide, qui contrôle, au nom de qui ? Une bonne gouvernance vise à **équilibrer les pouvoirs** (conseil d’administration, assemblée des actionnaires, comités) et à rendre des comptes de façon **transparente**."
+     },
+     {
+      "t": "p",
+      "c": "La **création de valeur partagée** (Porter et Kramer) : l’entreprise peut être **rentable ET utile à la société** en même temps. En résolvant un problème social ou environnemental, elle crée de nouveaux marchés et réduit ses risques : la RSE devient une **source de valeur**."
+     },
+     {
+      "t": "example",
+      "h": "Illustration",
+      "c": "Une entreprise qui aide ses fournisseurs agricoles à mieux produire améliore la **qualité** de sa matière première (valeur pour elle) tout en augmentant les **revenus** des producteurs (valeur pour la société) : c’est de la valeur partagée."
+     },
+     {
+      "t": "tip",
+      "h": "Nuance à connaître",
+      "c": "Le **greenwashing** (écoblanchiment) est l’inverse de la RSE sincère : communiquer sur des engagements verts sans les tenir. C’est un risque **éthique et réputationnel** majeur."
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "Selon la création de valeur partagée, la RSE est forcément un coût qui réduit la rentabilité.",
+      "a": "Faux : en résolvant un problème social ou environnemental, l’entreprise crée de nouveaux marchés et réduit ses risques.",
+      "explain": "La RSE devient alors une source de valeur, pas un simple coût."
+     }
+    ]
+   },
+   {
+    "h": "🌱 Les mutations numérique, écologique et sociale : menace ou opportunité",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🌊",
+      "h": "Question qui pique",
+      "c": "Face à une vague, certains construisent un mur, d’autres une planche de surf. Que font les organisations face aux grandes mutations ?"
+     },
+     {
+      "t": "p",
+      "c": "Les organisations font face à des **mutations** profondes qui bousculent leurs modèles. Les anticiper est un enjeu stratégique majeur ; les subir peut être fatal."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Transition numérique** : automatisation, données, IA, plateformes. Elle transforme les métiers, les relations client et parfois le modèle économique entier.",
+       "**Transition écologique** : réglementations, attentes des consommateurs, raréfaction des ressources. Elle impose de repenser la production (économie circulaire, sobriété).",
+       "**Mutations sociales** : quête de sens au travail, télétravail, exigences de diversité et d’inclusion."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Face à elles, l’organisation doit faire preuve d’**agilité** : s’adapter rapidement, innover, faire évoluer sa structure. Les organisations trop rigides (fortes hiérarchies, procédures lourdes) résistent mal au changement."
+     },
+     {
+      "t": "example",
+      "h": "Illustration — Patagonia",
+      "c": "La marque a fait de la protection de l’environnement le cœur de sa stratégie (produits durables, réparation, engagement du fondateur à « donner » l’entreprise à la cause climatique). L’écologie devient un **avantage concurrentiel** et une preuve de RSE sincère."
+     },
+     {
+      "t": "tip",
+      "h": "Réflexe bac",
+      "c": "Une mutation est à la fois une **menace** (pour qui la subit) et une **opportunité** (pour qui l’anticipe). Toujours montrer les deux faces."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quelle qualité aide une organisation à s’adapter vite aux mutations ?\nA) La rigidité\nB) L’agilité\nC) Les procédures lourdes",
+      "a": "B) L’agilité.",
+      "explain": "Les organisations trop rigides résistent mal au changement."
+     }
+    ]
+   },
+   {
+    "h": "💼 Étude de cas guidée — sous-traitance, réputation et démarche RSE",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "📣",
+      "h": "Mini-histoire",
+      "c": "Une ONG publie une enquête : les sous-traitants d’une marque de vêtements travaillent dans de mauvaises conditions. Les clients boycottent. Que doit faire la marque ?"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Une entreprise textile est accusée par une ONG de faire travailler des sous-traitants dans de mauvaises conditions. Ses ventes baissent. Analysez la situation et proposez une démarche RSE."
+     },
+     {
+      "t": "example",
+      "h": "Étape 1 — Le problème",
+      "c": "Un manquement **éthique et sociétal** (conditions de travail) devient un **risque de réputation** : l’ONG et les consommateurs (parties prenantes) sanctionnent l’entreprise par la baisse des ventes."
+     },
+     {
+      "t": "example",
+      "h": "Étape 2 — Les parties prenantes en jeu",
+      "c": "ONG (alerte), consommateurs (boycott), salariés des sous-traitants (victimes), actionnaires (baisse de valeur). Attentes contradictoires : coûts bas vs conditions dignes."
+     },
+     {
+      "t": "p",
+      "c": "**Étape 3 — Démarche RSE proposée.** Auditer et sélectionner les sous-traitants sur des critères sociaux, publier un **rapport RSE transparent**, obtenir un **label** (ex. commerce équitable), et communiquer honnêtement (sans greenwashing). Ces actions relèvent du **pilier social** et visent à **restaurer la confiance**, donc, à terme, la performance commerciale."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Relier : problème → parties prenantes concernées → notion (RSE, éthique, développement durable) → **actions concrètes** → effet attendu sur la performance globale."
+     },
+     {
+      "t": "defi",
+      "kind": "erreur",
+      "q": "Un élève répond : « Pour sortir de la crise, la marque doit simplement faire une campagne de pub très verte. » Trouve l’erreur.",
+      "a": "Ce serait du greenwashing : il faut des actions concrètes et prouvées (audit des sous-traitants, rapport RSE, label).",
+      "explain": "La confiance se restaure par des engagements vérifiables, pas par la communication seule."
+     }
+    ]
+   },
+   {
+    "h": "⚖️ La gouvernance : actionnariale ou partenariale",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🎮",
+      "h": "Défi lancé",
+      "c": "Dans ton club de jeu vidéo, soit le trésorier décide seul de tout, soit tous les membres comptent dans les choix. Quel mode de direction préfères-tu ?"
+     },
+     {
+      "t": "p",
+      "c": "La **gouvernance** désigne l’ensemble des mécanismes qui organisent la **direction** et le **contrôle** de l’entreprise : qui décide, au nom de qui, et qui vérifie. Deux conceptions s’opposent."
+     },
+     {
+      "t": "p",
+      "c": "La **gouvernance actionnariale** donne la **priorité aux actionnaires** : sa logique est de **maximiser la valeur** pour les propriétaires. La **gouvernance partenariale** prend en compte **toutes les parties prenantes** : sa logique est d’**équilibrer les intérêts** des actionnaires, des salariés, des clients et de la société."
+     },
+     {
+      "t": "p",
+      "c": "La gouvernance actionnariale met la rentabilité et le dividende au premier plan. La partenariale (cohérente avec la RSE) cherche à concilier les attentes de **toutes** les parties prenantes. De bons mécanismes (conseil d’administration, comités, transparence) **équilibrent les pouvoirs** et évitent les dérives."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Gouvernance **actionnariale** (priorité aux propriétaires) vs **partenariale** (toutes les parties prenantes). La seconde prolonge la logique **RSE**."
+     },
+     {
+      "t": "table",
+      "h": "Notions et définitions",
+      "head": [
+       "Notion",
+       "Définition"
+      ],
+      "rows": [
+       [
+        "Gouvernance",
+        "Mécanismes qui organisent la direction et le contrôle de l’entreprise"
+       ],
+       [
+        "Gouvernance actionnariale",
+        "Priorité aux actionnaires : maximiser la valeur pour les propriétaires"
+       ],
+       [
+        "Gouvernance partenariale",
+        "Toutes les parties prenantes : équilibrer les intérêts"
+       ]
+      ]
+     },
+     {
+      "t": "defi",
+      "kind": "vf",
+      "q": "La gouvernance partenariale cherche à équilibrer les intérêts de toutes les parties prenantes.",
+      "a": "Vrai : elle prolonge la logique de la RSE.",
+      "explain": "La gouvernance actionnariale, elle, donne la priorité aux actionnaires."
+     }
+    ]
+   },
+   {
+    "h": "📜 Normes, labels et reporting extra-financier : rendre la RSE crédible",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🏷️",
+      "h": "Question qui pique",
+      "c": "Deux marques affirment « nous sommes éthiques ». Comment savoir laquelle dit vrai, avec de simples slogans ?"
+     },
+     {
+      "t": "p",
+      "c": "Pour rendre la RSE **crédible** et **comparable**, il existe des **normes**, des **labels** et des obligations de **reporting** (rendre compte). Ils permettent de distinguer les engagements réels du **greenwashing**."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**ISO 26000** : norme internationale qui définit les lignes directrices de la responsabilité sociétale (mais elle ne se « certifie » pas).",
+       "**Labels** (commerce équitable, bio, RSE sectoriels) : garantissent le respect d’un cahier des charges par un tiers.",
+       "**Reporting extra-financier** : les grandes entreprises publient un rapport sur leurs impacts sociaux et environnementaux."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Ces dispositifs répondent à une exigence de **transparence** : les parties prenantes (clients, ONG, investisseurs) veulent des preuves, pas des slogans. Un label reconnu est un **avantage concurrentiel** ; un engagement non tenu, un **risque de réputation**."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Normes (**ISO 26000**), **labels** et **reporting** rendent la RSE vérifiable : parade au **greenwashing** et source de confiance."
+     },
+     {
+      "t": "defi",
+      "kind": "question",
+      "q": "Pourquoi la norme ISO 26000 ne peut-elle pas être « certifiée » ?",
+      "a": "Parce qu’elle donne des lignes directrices sur la responsabilité sociétale, pas un référentiel à certifier.",
+      "explain": "Elle guide la démarche RSE ; les labels, eux, garantissent un cahier des charges par un tiers."
+     }
+    ]
+   },
+   {
+    "h": "♻️ L’économie circulaire : éco-conception, réemploi, recyclage, fonctionnalité",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "👟",
+      "h": "Défi lancé",
+      "c": "Tes baskets sont usées. Les jeter ? Les réparer ? Les recycler ? Les louer au lieu de les acheter ? Chaque réponse correspond à un modèle économique."
+     },
+     {
+      "t": "p",
+      "c": "Face aux limites écologiques, les organisations font évoluer leur **modèle économique**. L’**économie circulaire** s’oppose au modèle linéaire « extraire → produire → jeter » : elle vise à **réduire, réutiliser, réparer, recycler** pour limiter le gaspillage des ressources."
+     },
+     {
+      "t": "list",
+      "c": [
+       "**Éco-conception** : concevoir des produits durables, réparables, recyclables.",
+       "**Réemploi et réparation** : allonger la durée de vie (seconde main, pièces détachées).",
+       "**Recyclage** : réintroduire la matière dans un nouveau cycle de production.",
+       "**Économie de la fonctionnalité** : vendre l’usage plutôt que le bien (louer plutôt que posséder)."
+      ]
+     },
+     {
+      "t": "p",
+      "c": "Ces modèles transforment la **création de valeur** : la performance environnementale devient un **avantage concurrentiel** et une réponse aux attentes des consommateurs et de la réglementation."
+     },
+     {
+      "t": "tip",
+      "h": "À retenir",
+      "c": "Économie **circulaire** (réduire, réutiliser, réparer, recycler) contre modèle **linéaire** (jeter). Elle allie performance **économique** et **environnementale**."
+     },
+     {
+      "t": "defi",
+      "kind": "intrus",
+      "q": "Trouve l’intrus parmi les piliers de l’économie circulaire :\nA) L’éco-conception\nB) Le recyclage\nC) Le jetable à usage unique\nD) L’économie de la fonctionnalité",
+      "a": "C) Le jetable à usage unique : il relève du modèle linéaire.",
+      "explain": "L’économie circulaire vise à réduire, réutiliser, réparer et recycler."
+     }
+    ]
+   },
+   {
+    "h": "♻️ Étude de cas guidée — passer à l’économie circulaire sans greenwashing",
+    "blocks": [
+     {
+      "t": "accroche",
+      "emoji": "🧵",
+      "h": "Mini-histoire",
+      "c": "Une enseigne de mode lance une collection « 100 % verte » mais continue de produire en masse. Les internautes enquêtent… Comment rebondir pour de vrai ?"
+     },
+     {
+      "t": "p",
+      "c": "**Énoncé.** Une entreprise de mode « fast fashion » subit des critiques sur son impact environnemental et social. Ses ventes stagnent. Proposez une évolution de son modèle."
+     },
+     {
+      "t": "example",
+      "h": "Étape 1 — Le problème",
+      "c": "Modèle **linéaire** très polluant + manquements sociaux → **risque de réputation** et perte de clients sensibles à la RSE. Gouvernance jusqu’ici purement **actionnariale**."
+     },
+     {
+      "t": "example",
+      "h": "Étape 2 — Évolution proposée",
+      "c": "Basculer vers l’**économie circulaire** (éco-conception, reprise et recyclage, seconde main), viser un **label**, publier un **reporting** sincère, et adopter une gouvernance plus **partenariale**."
+     },
+     {
+      "t": "p",
+      "c": "**Commentaire.** Ces choix transforment une **menace** (critiques, réglementation) en **opportunité** (différenciation, fidélité, nouveaux marchés). Attention au **greenwashing** : les engagements doivent être **prouvés**, sous peine d’aggraver la crise de réputation."
+     },
+     {
+      "t": "tip",
+      "h": "Méthode",
+      "c": "Relier : problème → attentes des **parties prenantes** → **modèle** (économie circulaire) et **gouvernance** → preuves (labels, reporting) → effet sur la **performance globale**."
+     },
+     {
+      "t": "defi",
+      "kind": "qcm",
+      "q": "Quelle action est la plus crédible pour éviter le greenwashing ?\nA) Un slogan vert sur les étiquettes\nB) Une campagne d’affichage\nC) Un label et un reporting sincère",
+      "a": "C) Un label et un reporting sincère.",
+      "explain": "Les engagements doivent être prouvés, pas seulement annoncés."
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -215,7 +215,7 @@ function Mot({ c, fini }) {
         {lettres.map((x) => <button key={x.i} type="button" disabled={pose.includes(x) || gagne || revele} onClick={() => poser(x)}>{x.l}</button>)}
       </div>
       {!gagne && !revele && <div className="flex gap-3"><button type="button" className="btn-ghost" onClick={() => setPose((p) => p.slice(0, -1))}>Annuler</button><button type="button" className="btn-ghost" onClick={() => setPose([])}>Effacer</button><button type="button" className="btn-ghost" onClick={() => { setRevele(true); fini(false) }}>Je sèche</button></div>}
-      {(gagne || revele) && <Feedback ok={gagne && !revele}>{gagne ? '' : <>Le mot était <b>{c.mot}</b>.</>}</Feedback>}
+      {(gagne || revele) && <Feedback ok={gagne && !revele && !erreur}>{gagne ? (erreur ? 'Trouvé, mais après une erreur : la carte compte comme ratée. ' : '') : <>Le mot était <b>{c.mot}</b>.</>}</Feedback>}
     </>
   )
 }

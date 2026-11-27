@@ -475,7 +475,10 @@ function Frise({ title, events = [] }) {
 const DEFI_GENRES = { vf: ['✅❌', 'Vrai ou faux ?'], erreur: ['🕵️', 'Trouve l’erreur :'], calcul: ['🧮', 'À toi de calculer :'], qcm: ['❓', 'QCM :'], intrus: ['🔍', 'Trouve l’intrus :'], classement: ['🗂️', 'Classe-les :'] }
 
 // Le genre du défi est déjà affiché devant la question : on retire son écho en début de question (« Vrai ou faux : … »).
-const sansEcho = (q) => String(q || '').replace(/^\s*(?:vrai ou faux|(?:trouve|rep[èe]re|corrige|rep[eé]rez) l['’](?:erreur|intrus)|qcm|classe[- ]les|[àa] toi de calculer)\s*[?:]\s*/i, '')
+const sansEcho = (q) => String(q || '')
+  .replace(/^\s*(?:vrai ou faux|(?:trouve|rep[èe]re|corrige|rep[eé]rez) l['’](?:erreur|intrus)|qcm|classe[- ]les|[àa] toi de calculer)\s*[?:]\s*/i, '')
+  .replace(/^\s*(?:trouve|rep[èe]re) l['’]intrus\s+(?=parmi)/i, '') // « Trouve l’intrus parmi… » : le genre est déjà devant
+  .replace(/\s*(?:trouve|rep[èe]re) l['’]erreur\s*\.?\s*$/i, '') // consigne répétée en fin de question
 
 export function Block({ b, color }) {
   switch (b.t) {
@@ -514,7 +517,7 @@ export function Block({ b, color }) {
       // Début de chapitre : une situation concrète qui donne envie de comprendre ce qui suit.
       return (
         <div className="course-callout course-accroche rounded-2xl border-2 p-4" style={{ borderColor: color, background: `color-mix(in srgb, ${color} 8%, transparent)` }}>
-          <p className="mb-1 text-xs font-bold uppercase tracking-wide" style={{ color }}>{b.emoji || '🎬'} {b.h || 'Imagine…'}</p>
+          <p className="mb-1 text-xs font-bold uppercase tracking-wide text-slate-600 dark:text-slate-300">{b.emoji || '🎬'} {b.h || 'Imagine…'}</p>
           <p className="whitespace-pre-line text-[15px] font-medium leading-relaxed text-slate-800 dark:text-slate-100"><CourseText text={b.c} /></p>
         </div>
       )
