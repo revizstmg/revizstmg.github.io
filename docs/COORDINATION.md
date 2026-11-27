@@ -2134,3 +2134,8 @@ Prochaine action :
 ## AMELIORATIONS-2 (26/11/2026)
 - Professeur : bouton « Je suis professeur » sur l'écran de connexion et dans « Essayer sans compte » ; accueil prof charge les classes à froid ; tuiles « Tableau de bord » / « Quiz et direct » ouvrent `/classe?vue=suivi|quiz` ; menu et page Cours sans éléments d'élève (revision, bac blanc, classement, boutique, changer de niveau, espace parent, Sport au bac, barres de progression).
 - Recherche : trouve aussi les sections de cours des matières chargées (« Maslow »). Série 🔥 de l'en-tête touchable (mène au défi du jour). Scroll : calcul accepte l'unité écrite (« 100,7 points »). Admin : légende des visites, confirmation avec date de fin, onglets plus compacts.
+
+## Offre gratuite resserrée (novembre 2026)
+- Gratuit : les cours, **2 exercices par chapitre** (`LIMITE_EXOS_GRATUIT`, `app/src/data/acces.js`, appliqué dans `pages/Chapter.jsx`) et un **mode Scroll très limité** (`LIMITE_SCROLL_GRATUIT` = 6 cartes par chapitre, `pages/ModeScroll.jsx`).
+- Désormais réservés aux abonnés : les missions (`/missions` ajouté à `PAGES_PAYANTES`), le test du thème, le téléchargement des paquets de flashcards.
+- Le contrôle est côté navigateur (le contenu statique est public) ; les quotas IA restent refaits côté serveur.

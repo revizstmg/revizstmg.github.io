@@ -53,12 +53,12 @@ describe('niveau d’accès', () => {
 
 describe('pages réservées', () => {
   it('cours, exercices, favoris, offres et pages légales restent gratuits', () => {
-    for (const p of ['/', '/accueil', '/amis', '/boutique', '/defi', '/badges', '/vacances', '/parent', '/classe', '/cours', '/subject/gestion', '/subject/gestion/theme/t1/chapter/2', '/missions/a/b/1', '/favoris', '/programme', '/moi', '/parametres', '/offres', '/cgu', '/confidentialite', '/faq', '/guide', '/exemple-bilan']) {
+    for (const p of ['/', '/accueil', '/amis', '/boutique', '/defi', '/badges', '/vacances', '/parent', '/classe', '/cours', '/subject/gestion', '/subject/gestion/theme/t1/chapter/2', '/favoris', '/programme', '/moi', '/parametres', '/offres', '/cgu', '/confidentialite', '/faq', '/guide', '/exemple-bilan']) {
       expect(estPagePayante(p), p).toBe(false)
     }
   })
-  it('le bac blanc, les sujets et les outils de révision demandent un abonnement', () => {
-    for (const p of ['/bac-blanc', '/revision', '/revision/deck/x', '/coach-ia', '/grand-oral', '/mes-notes', '/atelier-formules', '/fiches-photo', '/etude-de-gestion', '/seance', '/parcours', '/coach', '/sport-bac', '/methodo']) {
+  it('le bac blanc, les missions, les sujets et les outils de révision demandent un abonnement', () => {
+    for (const p of ['/bac-blanc', '/revision', '/revision/deck/x', '/coach-ia', '/grand-oral', '/mes-notes', '/atelier-formules', '/fiches-photo', '/etude-de-gestion', '/seance', '/parcours', '/coach', '/sport-bac', '/methodo', '/missions/a/b/1']) {
       expect(estPagePayante(p), p).toBe(true)
     }
     expect(PAGES_PAYANTES.every((p) => p.startsWith('/'))).toBe(true)

@@ -1,6 +1,7 @@
 // Niveau d'accès d'un compte : gratuit, Premium ou Ultimate.
 //
-// - Gratuit : les cours et les exercices de base (voir PAGES_PAYANTES pour ce qui ne l'est pas).
+// - Gratuit : les cours, au plus LIMITE_EXOS_GRATUIT exercices par chapitre et un mode Scroll très limité (LIMITE_SCROLL_GRATUIT cartes
+//   par chapitre) ; voir PAGES_PAYANTES pour le reste.
 // - Premium : les outils de révision, et chaque fonction d'IA une fois par mois.
 // - Ultimate : comme Premium, avec l'IA presque illimitée (garde-fou journalier de ia.js).
 //
@@ -13,15 +14,19 @@ import { getSession, isSignedIn } from '../auth.js'
 import { lireEtatPaiement } from './abonnement.js'
 
 // Une seule liste : tout chemin qui commence par l'un de ces préfixes demande un abonnement.
-// Restent gratuits : accueil, cours, matières et chapitres, missions (exercices), favoris,
+// Restent gratuits : accueil, cours, matières et chapitres (avec leurs 2 exercices), favoris,
 // programme, profil, paramètres, offres, FAQ, guide, pages légales, le défi du jour et les badges (les deux
 // rendez-vous qui donnent envie de revenir), la présentation des vacances
 // ainsi que la boutique et les espaces amis, classe et parent.
 export const PAGES_PAYANTES = [
-  '/seance', '/parcours', '/mes-notes', '/coach', '/coach-ia', '/revision',
+  '/missions', '/seance', '/parcours', '/mes-notes', '/coach', '/coach-ia', '/revision',
   '/excellence-economique', '/bac-blanc', '/grand-oral', '/etude-de-gestion',
   '/fiches-photo', '/atelier-formules', '/methodo', '/sport-bac', '/classement',
 ]
+// Offre gratuite : exercices visibles par chapitre et cartes du mode Scroll par chapitre.
+export const LIMITE_EXOS_GRATUIT = 2
+export const LIMITE_SCROLL_GRATUIT = 6
+
 // Pages qui demandent d’abord un compte : un visiteur sans compte voit l’invitation
 // à en créer un (rendue par la page) plutôt que l'écran d'abonnement.
 export const PAGES_AVEC_COMPTE = ['/amis', '/classement']

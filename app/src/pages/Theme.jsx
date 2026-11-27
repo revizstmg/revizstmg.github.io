@@ -262,7 +262,7 @@ export default function Theme() {
         </section>
       )}
 
-      {tab === 'test' && <ThemeTest theme={theme} color={color} onExit={() => setTab('chapitres')} />}
+      {tab === 'test' && <OutilReserve icone="🏁" titre="Test du thème"><ThemeTest theme={theme} color={color} onExit={() => setTab('chapitres')} /></OutilReserve>}
 
       {tab === 'progression' && <ProgressionTab theme={theme} rec={rec} color={color} score={score} />}
     </div>

@@ -1,4 +1,6 @@
 import { useNiveauAcces } from '../components/Reserve.jsx'
+import { OutilReserve } from '../components/PastillePremium.jsx'
+import { LIMITE_EXOS_GRATUIT } from '../data/acces.js'
 import { TextePublic } from '../localisation/PublicText.jsx'
 import './CourseStudio.css'
 import { missionMessages } from '../i18n/missions.js'
@@ -16,7 +18,7 @@ import GameHost from '../games/GameHost.jsx'
 import SignalerErreur from '../components/SignalerErreur.jsx'
 import { TermesProvider, useTermes } from '../components/TermesContext.jsx'
 import FicheVisuelle from '../components/FicheVisuelle.jsx'
-import { useT, useGameLabel } from '../i18n.js'
+import { useT, useGameLabel, usePublicText } from '../i18n.js'
 
 // Les mots en gras du cours deviennent cliquables (définition) grâce au glossaire de la matière.
 export default function Chapter() {
@@ -56,7 +58,20 @@ function ChapitreCours() {
 
   // Jeux affichés : ceux du chapitre + des flashcards générées à partir des
   // notions de la section (disponibles partout, pas seulement dans l'app).
-  const games = useMemo(() => jeuxAffiches(chapter, theme), [chapter, theme])
+  const gamesTous = useMemo(() => jeuxAffiches(chapter, theme), [chapter, theme])
+  // Offre gratuite : au plus LIMITE_EXOS_GRATUIT exercices par chapitre (un QCM d'abord, puis un jeu d'un autre genre).
+  const gratuit = niveauAcces === 'gratuit'
+  const games = useMemo(() => {
+    if (!gratuit) return gamesTous
+    const choisis = []
+    const premier = gamesTous.find((g) => g.type === 'qcm') || gamesTous[0]
+    if (premier) choisis.push(premier)
+    const autre = gamesTous.find((g) => g !== premier && g.type !== premier?.type && g.type !== 'flashcard') || gamesTous.find((g) => g !== premier)
+    if (autre) choisis.push(autre)
+    return choisis.slice(0, LIMITE_EXOS_GRATUIT)
+  }, [gamesTous, gratuit])
+  const exosCaches = Math.max(0, gamesTous.length - games.length)
+  const trPublic = usePublicText()
   const activeGame = useMemo(() => (jeuId ? games.find((g) => g.id === jeuId) || null : null), [jeuId, games])
   const setActiveGame = (g, mode = null) => { if (g) setParams(mode ? { jeu: g.id, mode } : { jeu: g.id }); else setParams({}, { replace: true }) }
   // Un jeu ouvert doit s'afficher depuis son début, pas depuis la position de la liste.
@@ -212,12 +227,14 @@ function ChapitreCours() {
             ⚡ <TextePublic text="Jouer maintenant" />
           </button>
         )}
-        <Link to={`/missions/${sid}/${tid}/${chapter.idx}`} className="chapter-challenge card flex items-center justify-between gap-3 p-5 font-semibold">
-          <span>✦ {(missionMessages[state.lang] || missionMessages.fr).boss}</span><span aria-hidden>→</span>
-        </Link>
+        <OutilReserve icone="✦" titre={(missionMessages[state.lang] || missionMessages.fr).boss}>
+          <Link to={`/missions/${sid}/${tid}/${chapter.idx}`} className="chapter-challenge card flex items-center justify-between gap-3 p-5 font-semibold">
+            <span>✦ {(missionMessages[state.lang] || missionMessages.fr).boss}</span><span aria-hidden>→</span>
+          </Link>
+        </OutilReserve>
         <PracticeStudio course={{id:chapter.id,title:chapter.title,subject:subject.name,level:subject.niveau==='premiere'?'premiere':'terminale',text:courseText(chapter.section)}} themeId={tid} index={chapter.idx} color={color}/>
         {(() => {
-          const deck = games.find((g) => g.type === 'flashcard')
+          const deck = gratuit ? null : games.find((g) => g.type === 'flashcard')
           if (!deck) return null
           const saved = (state.savedDecks || []).some((d) => d.id === deck.id)
           return (
@@ -270,6 +287,13 @@ function ChapitreCours() {
             </button>
           )
         }) : <p className="card p-5 text-center text-sm text-slate-500 dark:text-slate-400">{t('gamesOfChapter')} —</p>}</div>
+        {gratuit && exosCaches > 0 && (
+          <Link to="/offres" data-exos-verrouilles className="card flex items-center gap-3 p-4 font-semibold">
+            <span aria-hidden>🔒</span>
+            <span className="min-w-0 flex-1">{trPublic('{n} exercices de plus avec Premium', { n: exosCaches })}<small className="block font-normal text-slate-600 dark:text-slate-300">{trPublic('L’offre gratuite donne accès aux cours et à 2 exercices par chapitre.')}</small></span>
+            <span aria-hidden>›</span>
+          </Link>
+        )}
         </details>
         <ChapterControl key={`${state.account?.id || 'trial'}:${chapter.id}`} course={{id:chapter.id,title:chapter.title,subject:subject.name,level:subject.niveau==='premiere'?'premiere':'terminale',text:courseText(chapter.section)}} />
       </div>
