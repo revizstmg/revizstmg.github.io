@@ -1,6 +1,6 @@
 # 📊 Statistiques de RévizSTMG
 
-Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **26 novembre 2026 à 15:42**.
+Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **27 novembre 2026 à 15:39**.
 
 ## 👥 Utilisation
 
@@ -13,20 +13,21 @@ Indisponible aujourd'hui : Supabase injoignable (Le serveur ne répond pas. Vér
 | Matières | 19 (11 en Terminale, 8 en Première) |
 | Thèmes | 110 |
 | Chapitres de cours | 862 |
-| Séries d'exercices | 5 747 (27 524 questions) |
-| Flashcards | 2 256 |
+| Séries d'exercices | 5 359 (25 459 questions) |
+| Flashcards | 2 430 |
 
 ## ✅ Qualité et mise en ligne
 
 - Tests du contenu et de la logique : ✅ réussis
 - Dernière CI sur main : ❌ —
-- Dernière mise en ligne réussie : ✅ 26 novembre 2026 à 15:01
-- Modifications de l'app ces 7 derniers jours : 34
+- Dernière mise en ligne réussie : ✅ 27 novembre 2026 à 14:47
+- Modifications de l'app ces 7 derniers jours : 47
 
 ## 📈 Évolution (14 derniers jours)
 
 | Date | Comptes | Actifs 7 j | Nouveaux 7 j | Visites la veille | Chapitres | Questions |
 |---|---|---|---|---|---|---|
+| 27 nov. | — | — | — | — | 862 | 25 459 |
 | 26 nov. | — | — | — | — | 862 | 27 524 |
 | 25 nov. | — | — | — | — | 862 | 27 524 |
 | 24 nov. | — | — | — | — | 862 | 27 524 |
@@ -40,5 +41,4 @@ Indisponible aujourd'hui : Supabase injoignable (Le serveur ne répond pas. Vér
 | 16 nov. | — | — | — | — | 861 | 18 848 |
 | 15 nov. | — | — | — | — | 861 | 18 848 |
 | 14 nov. | — | — | — | — | 861 | 18 848 |
-| 13 nov. | 15 | 2 | 0 | 6 | 861 | 18 848 |
 
