@@ -1,6 +1,6 @@
 {
- "date": "2026-11-27",
- "heure": "2026-11-27T14:39:14.398Z",
+ "date": "2026-11-28",
+ "heure": "2026-11-28T13:52:26.068Z",
  "utilisation": {
   "erreur": "Supabase injoignable (Le serveur ne répond pas. Vérifie ta connexion puis réessaie.)"
  },
@@ -21,13 +21,13 @@
   },
   "miseEnLigne": {
    "etat": "success",
-   "date": "2026-11-27T13:47:14Z"
+   "date": "2026-11-28T12:55:11Z"
   },
   "dernierePublication": {
    "etat": "success",
-   "date": "2026-11-27T13:47:14Z"
+   "date": "2026-11-28T12:55:11Z"
   },
-  "modifications7j": 47
+  "modifications7j": 46
  },
  "tests": "success"
 }

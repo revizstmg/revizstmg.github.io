@@ -1,6 +1,6 @@
 # 📊 Statistiques de RévizSTMG
 
-Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **27 novembre 2026 à 15:39**.
+Mises à jour automatiquement chaque matin à 6 h (heure de Paris). Dernière mise à jour : **28 novembre 2026 à 14:52**.
 
 ## 👥 Utilisation
 
@@ -20,13 +20,14 @@ Indisponible aujourd'hui : Supabase injoignable (Le serveur ne répond pas. Vér
 
 - Tests du contenu et de la logique : ✅ réussis
 - Dernière CI sur main : ❌ —
-- Dernière mise en ligne réussie : ✅ 27 novembre 2026 à 14:47
-- Modifications de l'app ces 7 derniers jours : 47
+- Dernière mise en ligne réussie : ✅ 28 novembre 2026 à 13:55
+- Modifications de l'app ces 7 derniers jours : 46
 
 ## 📈 Évolution (14 derniers jours)
 
 | Date | Comptes | Actifs 7 j | Nouveaux 7 j | Visites la veille | Chapitres | Questions |
 |---|---|---|---|---|---|---|
+| 28 nov. | — | — | — | — | 862 | 25 459 |
 | 27 nov. | — | — | — | — | 862 | 25 459 |
 | 26 nov. | — | — | — | — | 862 | 27 524 |
 | 25 nov. | — | — | — | — | 862 | 27 524 |
@@ -40,5 +41,4 @@ Indisponible aujourd'hui : Supabase injoignable (Le serveur ne répond pas. Vér
 | 17 nov. | — | — | — | — | 861 | 18 848 |
 | 16 nov. | — | — | — | — | 861 | 18 848 |
 | 15 nov. | — | — | — | — | 861 | 18 848 |
-| 14 nov. | — | — | — | — | 861 | 18 848 |
 
