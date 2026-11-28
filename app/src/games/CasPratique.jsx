@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from 'react'
-import { Feedback, GameProgress, answerMatchesCours as answerMatches, normalize, parseNombre as parseNum } from './common.jsx'
+import { Feedback, GameProgress, BoutonMoins, answerMatchesCours as answerMatches, normalize, parseNombre as parseNum } from './common.jsx'
 import MicButton from '../components/MicButton.jsx'
 import { useT } from '../i18n.js'
 
@@ -73,6 +73,7 @@ export default function CasPratique({ game, color, onDone }) {
 
       <p className="mb-3 whitespace-pre-line text-[15px] font-semibold leading-relaxed">{q.q}</p>
       <div className="flex items-stretch gap-2">
+        {q.num && <BoutonMoins val={val} setVal={setVal} disabled={checked} />}
         <input
           ref={inputRef}
           value={val}

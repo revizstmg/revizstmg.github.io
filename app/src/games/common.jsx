@@ -180,6 +180,26 @@ export const ContexteCorrection = createContext(null)
 // correspond la proposition choisie à tort (`choisi`), et un lien vers le
 // chapitre du cours (ouvert à côté, pour ne pas perdre la série). `themeId`
 // remplace le thème du contexte (modes qui mélangent les thèmes).
+// Le clavier numérique des téléphones (inputMode « decimal ») n'a pas de signe moins : ce bouton ajoute ou retire le « − » en tête
+// de la saisie (taux d'évolution négatif, solution d'équation, dérivée…). Le signe est le vrai moins « − », compris par parseNombre.
+export function BoutonMoins({ val, setVal, disabled, className = '' }) {
+  const negatif = /^\s*[-−–]/.test(val)
+  return (
+    <button
+      type="button"
+      disabled={disabled}
+      data-moins
+      aria-pressed={negatif}
+      aria-label="Signe moins"
+      title="Signe moins"
+      // onMouseDown : le champ garde le focus (le clavier reste ouvert).
+      onMouseDown={(e) => e.preventDefault()}
+      onClick={() => setVal(negatif ? val.replace(/^\s*[-−–]\s*/, '') : `−${val.trimStart()}`)}
+      className={`grid min-w-[3rem] place-items-center rounded-xl border-2 border-violet-300 bg-white px-3 text-xl font-bold text-slate-700 disabled:opacity-40 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 ${className}`}
+    >−</button>
+  )
+}
+
 export function Feedback({ ok, children, choisi, themeId }) {
   const t = useT()
   const ctx = useContext(ContexteCorrection)

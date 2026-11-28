@@ -3,7 +3,7 @@ import { Fragment, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import { useStore } from '../store.jsx'
-import { parseNombre } from '../games/common.jsx'
+import { parseNombre, BoutonMoins } from '../games/common.jsx'
 import { subjectsForTrack } from '../data/tracks.js'
 import { getChapter } from '../data/index.js'
 import { exercicesDuChapitre, chapitresDuTheme } from '../data/scroll.js'
@@ -96,6 +96,7 @@ function Calcul({ c, fini }) {
     <>
       <p className="scroll-texte whitespace-pre-line">{c.prompt}</p>
       <form className="flex flex-wrap items-center gap-2" onSubmit={(e) => { e.preventDefault(); valider() }}>
+        <BoutonMoins val={val} setVal={setVal} disabled={verifie} className="scroll-moins py-2" />
         <input
           value={val}
           onChange={(e) => setVal(e.target.value)}

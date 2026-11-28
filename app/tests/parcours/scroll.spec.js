@@ -95,3 +95,19 @@ test('offre gratuite : deux exercices par chapitre, le reste est réservé aux a
   await expect(page.locator('[data-exos-verrouilles]')).toBeVisible()
   expect(erreurs).toEqual([])
 })
+
+// Le clavier numérique des téléphones n'a pas de signe moins : un bouton « − » l'écrit dans la réponse.
+test('calcul : le bouton moins écrit et retire le signe', async ({ page }) => {
+  const erreurs = await preparer(page, etatEleve())
+  await page.goto('./#/scroll/gestion-finance/gf-t1/2')
+  const flux = page.getByRole('region', { name: 'Mode Scroll' })
+  const carte = flux.locator('.scroll-carte[data-genre="calcul"]').first()
+  await carte.scrollIntoViewIfNeeded()
+  const champ = carte.getByLabel('Ta réponse')
+  await champ.fill('4,5')
+  await carte.getByRole('button', { name: 'Signe moins' }).click()
+  await expect(champ).toHaveValue('−4,5')
+  await carte.getByRole('button', { name: 'Signe moins' }).click()
+  await expect(champ).toHaveValue('4,5')
+  expect(erreurs).toEqual([])
+})

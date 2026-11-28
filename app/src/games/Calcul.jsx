@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from 'react'
-import { Feedback, GameProgress, useStopwatch, parseNombre as parseNum } from './common.jsx'
+import { Feedback, GameProgress, useStopwatch, BoutonMoins, parseNombre as parseNum } from './common.jsx'
 import { makeCalcSet, makeCalcMix } from '../calc.js'
 import { useT } from '../i18n.js'
 
@@ -73,6 +73,7 @@ export default function Calcul({ game, mode, color, onDone }) {
       {q.figure && <Figure fig={q.figure} color={color} />}
       <p className="mb-4 whitespace-pre-line text-[15px] font-medium leading-relaxed">{String(q.prompt).replace(/(\d)\.(\d)/g, '$1,$2')}</p>
       <div className="flex items-stretch gap-2">
+        <BoutonMoins val={val} setVal={setVal} disabled={checked} />
         <input
           value={val}
           onChange={(e) => setVal(e.target.value)}
